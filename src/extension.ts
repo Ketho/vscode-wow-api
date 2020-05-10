@@ -18,16 +18,17 @@ for (let system in FunctionDocumentation) {
 		let markdown = new vscode.MarkdownString()
 		if (funcValue.arg) {
 			for (let arg of funcValue.arg) {
-				markdown.appendMarkdown(`@arg \`${arg.name}\` : ${arg.type}  \n`)
+				markdown.appendMarkdown(`*@arg* \`${arg.name}\` : ${arg.type}  \n`)
 			}
 		}
 		if (funcValue.ret) {
 			for (let ret of funcValue.ret) {
-				markdown.appendMarkdown(`@ret \`${ret.name}\` : ${ret.type}  \n`)
+				markdown.appendMarkdown(`*@ret* \`${ret.name}\` : ${ret.type}  \n`)
 			}
 		}
 		// funcRet = (funcRet == "") ? "nil" : funcRet
 		const item = new vscode.CompletionItem(funcName, vscode.CompletionItemKind.Method)
+		item.detail = "(function)"
 		item.documentation = markdown
 		items.push(item)
 	}
