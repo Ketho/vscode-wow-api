@@ -4,4 +4,4 @@ Shows [API Documentation](https://github.com/Gethe/wow-ui-source/tree/live/AddOn
 ### Features
 * Currently it only supports code completion for Blizzard documented API functions
 
-![](https://i.imgur.com/Fl6IW3S.png)
+![](https://i.imgur.com/4v5HE8y.png)
