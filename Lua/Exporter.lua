@@ -30,10 +30,14 @@ local function ExportSystemFunctions()
 		if system.Namespace and #system.Functions>0 then
 			file:write(format("\t%s: {\n", system.Namespace))
 			for _, func in ipairs(system.Functions) do
-				file:write(format('\t\t%s: {\n', func.Name))
-				file:write(GetFunctionParams(func))
-				file:write("\n")
-				file:write("\t\t},\n")
+				if func.Arguments or func.Returns then
+					file:write(format('\t\t%s: {\n', func.Name))
+					file:write(GetFunctionParams(func))
+					file:write("\n")
+					file:write("\t\t},\n")
+				else
+					file:write(format('\t\t%s: {},\n', func.Name))
+				end
 			end
 			file:write(format("\t},\n"))
 		end

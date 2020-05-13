@@ -170,9 +170,7 @@ const systemFunctions : SystemInterface = {
 		},
 	},
 	C_AlliedRaces: {
-		ClearAlliedRaceDetailsGiver: {
-
-		},
+		ClearAlliedRaceDetailsGiver: {},
 		GetAllRacialAbilitiesFromID: {
 			arg: [
 				{name: "raceID", type: "number"},
@@ -196,9 +194,7 @@ const systemFunctions : SystemInterface = {
 				{name: "animaNodes", type: "table"},
 			],
 		},
-		OpenAnimaDiversionUI: {
-
-		},
+		OpenAnimaDiversionUI: {},
 		SelectAnimaNode: {
 			arg: [
 				{name: "talentID", type: "number"},
@@ -294,15 +290,9 @@ const systemFunctions : SystemInterface = {
 				{name: "canRespec", type: "bool"},
 			],
 		},
-		Clear: {
-
-		},
-		ClearForgeCamera: {
-
-		},
-		ConfirmRespec: {
-
-		},
+		Clear: {},
+		ClearForgeCamera: {},
+		ConfirmRespec: {},
 		DoesEquippedArtifactHaveAnyRelicsSlotted: {
 			ret: [
 				{name: "hasAnyRelicsSlotted", type: "bool"},
@@ -683,9 +673,7 @@ const systemFunctions : SystemInterface = {
 				{name: "artifactAppearanceID", type: "number"},
 			],
 		},
-		SetForgeCamera: {
-
-		},
+		SetForgeCamera: {},
 		SetForgeRotation: {
 			arg: [
 				{name: "forgeRotationX", type: "number"},
@@ -738,15 +726,9 @@ const systemFunctions : SystemInterface = {
 				{name: "ownedAuctionID", type: "number"},
 			],
 		},
-		CancelCommoditiesPurchase: {
-
-		},
-		CancelSell: {
-
-		},
-		CloseAuctionHouse: {
-
-		},
+		CancelCommoditiesPurchase: {},
+		CancelSell: {},
+		CloseAuctionHouse: {},
 		ConfirmCommoditiesPurchase: {
 			arg: [
 				{name: "itemID", type: "number"},
@@ -1169,12 +1151,8 @@ const systemFunctions : SystemInterface = {
 				{name: "itemKey", type: "ItemKey"},
 			],
 		},
-		ReplicateItems: {
-
-		},
-		RequestMoreBrowseResults: {
-
-		},
+		ReplicateItems: {},
+		RequestMoreBrowseResults: {},
 		RequestMoreCommoditySearchResults: {
 			arg: [
 				{name: "itemID", type: "number"},
@@ -1244,9 +1222,7 @@ const systemFunctions : SystemInterface = {
 				{name: "canSelect", type: "bool"},
 			],
 		},
-		CloseAzeriteEmpoweredItemRespec: {
-
-		},
+		CloseAzeriteEmpoweredItemRespec: {},
 		ConfirmAzeriteEmpoweredItemRespec: {
 			arg: [
 				{name: "azeriteEmpoweredItemLocation", type: "table"},
@@ -1408,12 +1384,8 @@ const systemFunctions : SystemInterface = {
 				{name: "canOpen", type: "bool"},
 			],
 		},
-		ClearPendingActivationEssence: {
-
-		},
-		CloseForge: {
-
-		},
+		ClearPendingActivationEssence: {},
+		CloseForge: {},
 		GetEssenceHyperlink: {
 			arg: [
 				{name: "essenceID", type: "number"},
@@ -1660,9 +1632,7 @@ const systemFunctions : SystemInterface = {
 				{name: "value", type: "string"},
 			],
 		},
-		ResetTestCVars: {
-
-		},
+		ResetTestCVars: {},
 		SetCVar: {
 			arg: [
 				{name: "name", type: "string"},
@@ -1686,9 +1656,7 @@ const systemFunctions : SystemInterface = {
 		},
 	},
 	C_Calendar: {
-		AddEvent: {
-
-		},
+		AddEvent: {},
 		AreNamesReady: {
 			ret: [
 				{name: "ready", type: "bool"},
@@ -1704,9 +1672,7 @@ const systemFunctions : SystemInterface = {
 				{name: "canSendInvite", type: "bool"},
 			],
 		},
-		CloseEvent: {
-
-		},
+		CloseEvent: {},
 		ContextMenuEventCanComplain: {
 			arg: [
 				{name: "offsetMonths", type: "number"},
@@ -1742,12 +1708,8 @@ const systemFunctions : SystemInterface = {
 				{name: "exists", type: "bool"},
 			],
 		},
-		ContextMenuEventComplain: {
-
-		},
-		ContextMenuEventCopy: {
-
-		},
+		ContextMenuEventComplain: {},
+		ContextMenuEventCopy: {},
 		ContextMenuEventGetCalendarType: {
 			ret: [
 				{name: "calendarType", type: "string"},
@@ -1759,29 +1721,17 @@ const systemFunctions : SystemInterface = {
 				{name: "monthDay", type: "number"},
 			],
 		},
-		ContextMenuEventRemove: {
-
-		},
-		ContextMenuEventSignUp: {
-
-		},
+		ContextMenuEventRemove: {},
+		ContextMenuEventSignUp: {},
 		ContextMenuGetEventIndex: {
 			ret: [
 				{name: "info", type: "CalendarEventIndexInfo"},
 			],
 		},
-		ContextMenuInviteAvailable: {
-
-		},
-		ContextMenuInviteDecline: {
-
-		},
-		ContextMenuInviteRemove: {
-
-		},
-		ContextMenuInviteTentative: {
-
-		},
+		ContextMenuInviteAvailable: {},
+		ContextMenuInviteDecline: {},
+		ContextMenuInviteRemove: {},
+		ContextMenuInviteTentative: {},
 		ContextMenuSelectEvent: {
 			arg: [
 				{name: "offsetMonths", type: "number"},
@@ -1789,40 +1739,24 @@ const systemFunctions : SystemInterface = {
 				{name: "eventIndex", type: "number"},
 			],
 		},
-		CreateCommunitySignUpEvent: {
-
-		},
-		CreateGuildAnnouncementEvent: {
-
-		},
-		CreateGuildSignUpEvent: {
-
-		},
-		CreatePlayerEvent: {
-
-		},
-		EventAvailable: {
-
-		},
+		CreateCommunitySignUpEvent: {},
+		CreateGuildAnnouncementEvent: {},
+		CreateGuildSignUpEvent: {},
+		CreatePlayerEvent: {},
+		EventAvailable: {},
 		EventCanEdit: {
 			ret: [
 				{name: "canEdit", type: "bool"},
 			],
 		},
-		EventClearAutoApprove: {
-
-		},
-		EventClearLocked: {
-
-		},
+		EventClearAutoApprove: {},
+		EventClearLocked: {},
 		EventClearModerator: {
 			arg: [
 				{name: "inviteIndex", type: "number"},
 			],
 		},
-		EventDecline: {
-
-		},
+		EventDecline: {},
 		EventGetCalendarType: {
 			ret: [
 				{name: "calendarType", type: "string"},
@@ -1916,9 +1850,7 @@ const systemFunctions : SystemInterface = {
 				{name: "inviteIndex", type: "number"},
 			],
 		},
-		EventSetAutoApprove: {
-
-		},
+		EventSetAutoApprove: {},
 		EventSetClubId: {
 			arg: [
 				{name: "clubId", type: "string"},
@@ -1942,9 +1874,7 @@ const systemFunctions : SystemInterface = {
 				{name: "status", type: "CalendarStatus"},
 			],
 		},
-		EventSetLocked: {
-
-		},
+		EventSetLocked: {},
 		EventSetModerator: {
 			arg: [
 				{name: "inviteIndex", type: "number"},
@@ -1971,18 +1901,14 @@ const systemFunctions : SystemInterface = {
 				{name: "typeIndex", type: "CalendarEventType"},
 			],
 		},
-		EventSignUp: {
-
-		},
+		EventSignUp: {},
 		EventSortInvites: {
 			arg: [
 				{name: "criterion", type: "string"},
 				{name: "reverse", type: "bool"},
 			],
 		},
-		EventTentative: {
-
-		},
+		EventTentative: {},
 		GetClubCalendarEvents: {
 			arg: [
 				{name: "clubId", type: "string"},
@@ -2145,9 +2071,7 @@ const systemFunctions : SystemInterface = {
 				{name: "maxRankOrder", type: "number"},
 			],
 		},
-		OpenCalendar: {
-
-		},
+		OpenCalendar: {},
 		OpenEvent: {
 			arg: [
 				{name: "offsetMonths", type: "number"},
@@ -2158,9 +2082,7 @@ const systemFunctions : SystemInterface = {
 				{name: "success", type: "bool"},
 			],
 		},
-		RemoveEvent: {
-
-		},
+		RemoveEvent: {},
 		SetAbsMonth: {
 			arg: [
 				{name: "month", type: "number"},
@@ -2177,17 +2099,11 @@ const systemFunctions : SystemInterface = {
 				{name: "clubId", type: "string"},
 			],
 		},
-		UpdateEvent: {
-
-		},
+		UpdateEvent: {},
 	},
 	C_ChallengeMode: {
-		ClearKeystone: {
-
-		},
-		CloseKeystoneFrame: {
-
-		},
+		ClearKeystone: {},
+		CloseKeystoneFrame: {},
 		GetActiveChallengeMapID: {
 			ret: [
 				{name: "mapChallengeModeID", type: "number"},
@@ -2284,15 +2200,9 @@ const systemFunctions : SystemInterface = {
 				{name: "mapChallengeModeID", type: "number"},
 			],
 		},
-		Reset: {
-
-		},
-		SetKeystoneTooltip: {
-
-		},
-		SlotKeystone: {
-
-		},
+		Reset: {},
+		SetKeystoneTooltip: {},
+		SlotKeystone: {},
 		StartChallengeMode: {
 			ret: [
 				{name: "success", type: "bool"},
@@ -2382,9 +2292,7 @@ const systemFunctions : SystemInterface = {
 				{name: "output", type: "string"},
 			],
 		},
-		ResetDefaultZoneChannels: {
-
-		},
+		ResetDefaultZoneChannels: {},
 		SendAddonMessage: {
 			arg: [
 				{name: "prefix", type: "string"},
@@ -2415,9 +2323,7 @@ const systemFunctions : SystemInterface = {
 		},
 	},
 	C_ChromieTime: {
-		CloseUI: {
-
-		},
+		CloseUI: {},
 		GetChromieTimeExpansionOptions: {
 			ret: [
 				{name: "expansionOptions", type: "table"},
@@ -2475,12 +2381,8 @@ const systemFunctions : SystemInterface = {
 				{name: "canResolve", type: "bool"},
 			],
 		},
-		ClearAutoAdvanceStreamViewMarker: {
-
-		},
-		ClearClubPresenceSubscription: {
-
-		},
+		ClearAutoAdvanceStreamViewMarker: {},
+		ClearClubPresenceSubscription: {},
 		CompareBattleNetDisplayName: {
 			arg: [
 				{name: "clubId", type: "string"},
@@ -2572,9 +2474,7 @@ const systemFunctions : SystemInterface = {
 				{name: "leadersAndModeratorsOnly", type: "bool"},
 			],
 		},
-		Flush: {
-
-		},
+		Flush: {},
 		FocusStream: {
 			arg: [
 				{name: "clubId", type: "string"},
@@ -3002,18 +2902,10 @@ const systemFunctions : SystemInterface = {
 				{name: "clubFinderGUID", type: "string"},
 			],
 		},
-		CheckAllPlayerApplicantSettings: {
-
-		},
-		ClearAllFinderCache: {
-
-		},
-		ClearClubApplicantsCache: {
-
-		},
-		ClearClubFinderPostingsCache: {
-
-		},
+		CheckAllPlayerApplicantSettings: {},
+		ClearAllFinderCache: {},
+		ClearClubApplicantsCache: {},
+		ClearClubFinderPostingsCache: {},
 		DoesPlayerBelongToClubFromClubGUID: {
 			arg: [
 				{name: "clubFinderGUID", type: "string"},
@@ -3236,12 +3128,8 @@ const systemFunctions : SystemInterface = {
 				{name: "success", type: "bool"},
 			],
 		},
-		RequestSubscribedClubPostingIDs: {
-
-		},
-		ResetClubPostingMapCache: {
-
-		},
+		RequestSubscribedClubPostingIDs: {},
+		ResetClubPostingMapCache: {},
 		RespondToApplicant: {
 			arg: [
 				{name: "clubFinderGUID", type: "string"},
@@ -3339,23 +3227,15 @@ const systemFunctions : SystemInterface = {
 				{name: "canUseCommentatorCheats", type: "bool"},
 			],
 		},
-		ClearCameraTarget: {
-
-		},
-		ClearFollowTarget: {
-
-		},
+		ClearCameraTarget: {},
+		ClearFollowTarget: {},
 		ClearLookAtTarget: {
 			arg: [
 				{name: "lookAtIndex", type: "number"},
 			],
 		},
-		EnterInstance: {
-
-		},
-		ExitInstance: {
-
-		},
+		EnterInstance: {},
+		ExitInstance: {},
 		FollowPlayer: {
 			arg: [
 				{name: "factionIndex", type: "number"},
@@ -3368,9 +3248,7 @@ const systemFunctions : SystemInterface = {
 				{name: "token", type: "string"},
 			],
 		},
-		ForceFollowTransition: {
-
-		},
+		ForceFollowTransition: {},
 		GetAdditionalCameraWeight: {
 			ret: [
 				{name: "teamIndex", type: "number"},
@@ -3762,9 +3640,7 @@ const systemFunctions : SystemInterface = {
 				{name: "lookAtIndex", type: "number"},
 			],
 		},
-		RemoveAllOverrideNames: {
-
-		},
+		RemoveAllOverrideNames: {},
 		RemovePlayerOverrideName: {
 			arg: [
 				{name: "originalPlayerName", type: "string"},
@@ -3776,12 +3652,8 @@ const systemFunctions : SystemInterface = {
 				{name: "playerIndex", type: "number"},
 			],
 		},
-		ResetFoVTarget: {
-
-		},
-		ResetTrackedAuras: {
-
-		},
+		ResetFoVTarget: {},
+		ResetTrackedAuras: {},
 		SetAdditionalCameraWeight: {
 			arg: [
 				{name: "teamIndex", type: "number"},
@@ -3960,9 +3832,7 @@ const systemFunctions : SystemInterface = {
 				{name: "useSmartCamera", type: "bool"},
 			],
 		},
-		SnapCameraLookAtPoint: {
-
-		},
+		SnapCameraLookAtPoint: {},
 		StartWargame: {
 			arg: [
 				{name: "listID", type: "number"},
@@ -3972,26 +3842,16 @@ const systemFunctions : SystemInterface = {
 				{name: "teamTwoCaptain", type: "string"},
 			],
 		},
-		SwapTeamSides: {
-
-		},
-		ToggleCheats: {
-
-		},
+		SwapTeamSides: {},
+		ToggleCheats: {},
 		UpdateMapInfo: {
 			arg: [
 				{name: "targetPlayer", type: "string"},
 			],
 		},
-		UpdatePlayerInfo: {
-
-		},
-		ZoomIn: {
-
-		},
-		ZoomOut: {
-
-		},
+		UpdatePlayerInfo: {},
+		ZoomIn: {},
+		ZoomOut: {},
 	},
 	C_ConfigurationWarnings: {
 		GetConfigurationWarningSeen: {
@@ -4055,9 +3915,7 @@ const systemFunctions : SystemInterface = {
 		},
 	},
 	C_ContributionCollector: {
-		Close: {
-
-		},
+		Close: {},
 		Contribute: {
 			arg: [
 				{name: "contributionID", type: "number"},
@@ -4196,14 +4054,10 @@ const systemFunctions : SystemInterface = {
 		},
 	},
 	C_CovenantCallings: {
-		RequestCallings: {
-
-		},
+		RequestCallings: {},
 	},
 	C_CovenantPreview: {
-		CloseFromUI: {
-
-		},
+		CloseFromUI: {},
 		GetCovenantInfoForPlayerChoiceResponseID: {
 			arg: [
 				{name: "playerChoiceResponseID", type: "number"},
@@ -4214,9 +4068,7 @@ const systemFunctions : SystemInterface = {
 		},
 	},
 	C_CovenantSanctumUI: {
-		EndInteraction: {
-
-		},
+		EndInteraction: {},
 		GetFeatures: {
 			ret: [
 				{name: "features", type: "table"},
@@ -4396,9 +4248,7 @@ const systemFunctions : SystemInterface = {
 		},
 	},
 	C_Cursor: {
-		DropCursorCommunitiesStream: {
-
-		},
+		DropCursorCommunitiesStream: {},
 		GetCursorCommunitiesStream: {
 			ret: [
 				{name: "clubId", type: "string"},
@@ -4573,9 +4423,7 @@ const systemFunctions : SystemInterface = {
 				{name: "canUseEquipmentSets", type: "bool"},
 			],
 		},
-		ClearIgnoredSlotsForSave: {
-
-		},
+		ClearIgnoredSlotsForSave: {},
 		CreateEquipmentSet: {
 			arg: [
 				{name: "equipmentSetName", type: "string"},
@@ -4911,9 +4759,7 @@ const systemFunctions : SystemInterface = {
 				{name: "whoToUi", type: "bool"},
 			],
 		},
-		ShowFriends: {
-
-		},
+		ShowFriends: {},
 		SortWho: {
 			arg: [
 				{name: "sorting", type: "string"},
@@ -5153,9 +4999,7 @@ const systemFunctions : SystemInterface = {
 				{name: "permissions", type: "table"},
 			],
 		},
-		GuildRoster: {
-
-		},
+		GuildRoster: {},
 		IsGuildOfficer: {
 			ret: [
 				{name: "isOfficer", type: "bool"},
@@ -5272,9 +5116,7 @@ const systemFunctions : SystemInterface = {
 		},
 	},
 	C_IslandsQueue: {
-		CloseIslandsQueueScreen: {
-
-		},
+		CloseIslandsQueueScreen: {},
 		GetIslandDifficultyInfo: {
 			ret: [
 				{name: "islandDifficultyInfo", type: "table"},
@@ -5526,12 +5368,8 @@ const systemFunctions : SystemInterface = {
 		},
 	},
 	C_ItemInteraction: {
-		ClearPendingItem: {
-
-		},
-		CloseUI: {
-
-		},
+		ClearPendingItem: {},
+		CloseUI: {},
 		GetItemInteractionInfo: {
 			ret: [
 				{name: "info", type: "ItemInteractionFrameInfo"},
@@ -5542,18 +5380,10 @@ const systemFunctions : SystemInterface = {
 				{name: "spellId", type: "number"},
 			],
 		},
-		InitializeFrame: {
-
-		},
-		PerformItemInteraction: {
-
-		},
-		Reset: {
-
-		},
-		SetCorruptionReforgerItemTooltip: {
-
-		},
+		InitializeFrame: {},
+		PerformItemInteraction: {},
+		Reset: {},
+		SetCorruptionReforgerItemTooltip: {},
 		SetPendingItem: {
 			arg: [
 				{name: "item", type: "table"},
@@ -5564,9 +5394,7 @@ const systemFunctions : SystemInterface = {
 		},
 	},
 	C_ItemSocketInfo: {
-		CompleteSocketing: {
-
-		},
+		CompleteSocketing: {},
 	},
 	C_ItemUpgrade: {
 		GetItemHyperlink: {
@@ -5647,18 +5475,10 @@ const systemFunctions : SystemInterface = {
 				{name: "canCreate", type: "bool"},
 			],
 		},
-		ClearApplicationTextFields: {
-
-		},
-		ClearCreationTextFields: {
-
-		},
-		ClearSearchTextFields: {
-
-		},
-		CopyActiveEntryInfoToCreationFields: {
-
-		},
+		ClearApplicationTextFields: {},
+		ClearCreationTextFields: {},
+		ClearSearchTextFields: {},
+		CopyActiveEntryInfoToCreationFields: {},
 		GetActiveEntryInfo: {
 			ret: [
 				{name: "entryData", type: "LfgEntryData"},
@@ -5861,12 +5681,8 @@ const systemFunctions : SystemInterface = {
 		},
 	},
 	C_Map: {
-		ClearUserWaypoint: {
-
-		},
-		CloseWorldMapInteraction: {
-
-		},
+		ClearUserWaypoint: {},
+		CloseWorldMapInteraction: {},
 		GetAreaInfo: {
 			arg: [
 				{name: "areaID", type: "number"},
@@ -6181,12 +5997,8 @@ const systemFunctions : SystemInterface = {
 				{name: "mountID", type: "number"},
 			],
 		},
-		ClearRecentFanfares: {
-
-		},
-		Dismiss: {
-
-		},
+		ClearRecentFanfares: {},
+		Dismiss: {},
 		GetAppliedMountEquipmentID: {
 			ret: [
 				{name: "itemID", type: "number"},
@@ -6510,15 +6322,9 @@ const systemFunctions : SystemInterface = {
 				{name: "weeklyRewardAvailable", type: "bool"},
 			],
 		},
-		RequestCurrentAffixes: {
-
-		},
-		RequestMapInfo: {
-
-		},
-		RequestRewards: {
-
-		},
+		RequestCurrentAffixes: {},
+		RequestMapInfo: {},
+		RequestRewards: {},
 	},
 	C_PaperDollInfo: {
 		GetArmorEffectiveness: {
@@ -6594,9 +6400,7 @@ const systemFunctions : SystemInterface = {
 				{name: "allowedToInvite", type: "bool"},
 			],
 		},
-		ConfirmConvertToRaid: {
-
-		},
+		ConfirmConvertToRaid: {},
 		ConfirmInviteTravelPass: {
 			arg: [
 				{name: "targetName", type: "string"},
@@ -6621,12 +6425,8 @@ const systemFunctions : SystemInterface = {
 				{name: "dps", type: "bool"},
 			],
 		},
-		ConvertToParty: {
-
-		},
-		ConvertToRaid: {
-
-		},
+		ConvertToParty: {},
+		ConvertToRaid: {},
 		GetActiveCategories: {
 			ret: [
 				{name: "categories", type: "table"},
@@ -7235,9 +7035,7 @@ const systemFunctions : SystemInterface = {
 				{name: "warModeEnabled", type: "bool"},
 			],
 		},
-		JoinBrawl: {
-
-		},
+		JoinBrawl: {},
 		RequestCrowdControlSpell: {
 			arg: [
 				{name: "playerToken", type: "string"},
@@ -7248,9 +7046,7 @@ const systemFunctions : SystemInterface = {
 				{name: "warModeDesired", type: "bool"},
 			],
 		},
-		ToggleWarMode: {
-
-		},
+		ToggleWarMode: {},
 	},
 	C_QuestLine: {
 		GetAvailableQuestLines: {
@@ -7293,9 +7089,7 @@ const systemFunctions : SystemInterface = {
 		},
 	},
 	C_QuestLog: {
-		AbandonQuest: {
-
-		},
+		AbandonQuest: {},
 		AddQuestWatch: {
 			arg: [
 				{name: "questID", type: "number"},
@@ -7800,9 +7594,7 @@ const systemFunctions : SystemInterface = {
 				{name: "questID", type: "number"},
 			],
 		},
-		SetAbandonQuest: {
-
-		},
+		SetAbandonQuest: {},
 		SetMapForQuestPOIs: {
 			arg: [
 				{name: "uiMapID", type: "number"},
@@ -7821,9 +7613,7 @@ const systemFunctions : SystemInterface = {
 				{name: "shouldShow", type: "bool"},
 			],
 		},
-		SortQuestWatches: {
-
-		},
+		SortQuestWatches: {},
 	},
 	C_QuestSession: {
 		CanStart: {
@@ -7871,12 +7661,8 @@ const systemFunctions : SystemInterface = {
 				{name: "hasPendingCommand", type: "bool"},
 			],
 		},
-		RequestSessionStart: {
-
-		},
-		RequestSessionStop: {
-
-		},
+		RequestSessionStart: {},
+		RequestSessionStop: {},
 		SendSessionBeginResponse: {
 			arg: [
 				{name: "beginSession", type: "bool"},
@@ -8084,12 +7870,8 @@ const systemFunctions : SystemInterface = {
 				{name: "playerLocation", type: "table"},
 			],
 		},
-		ReportServerLag: {
-
-		},
-		ReportStuckInCombat: {
-
-		},
+		ReportServerLag: {},
+		ReportStuckInCombat: {},
 		SendReportPlayer: {
 			arg: [
 				{name: "token", type: "number"},
@@ -8159,9 +7941,7 @@ const systemFunctions : SystemInterface = {
 		},
 	},
 	C_ScrappingMachineUI: {
-		CloseScrappingMachine: {
-
-		},
+		CloseScrappingMachine: {},
 		DropPendingScrapItemFromCursor: {
 			arg: [
 				{name: "index", type: "number"},
@@ -8190,28 +7970,20 @@ const systemFunctions : SystemInterface = {
 				{name: "hasScrappableItems", type: "bool"},
 			],
 		},
-		RemoveAllScrapItems: {
-
-		},
-		RemoveCurrentScrappingItem: {
-
-		},
+		RemoveAllScrapItems: {},
+		RemoveCurrentScrappingItem: {},
 		RemoveItemToScrap: {
 			arg: [
 				{name: "index", type: "number"},
 			],
 		},
-		ScrapItems: {
-
-		},
+		ScrapItems: {},
 		SetScrappingMachine: {
 			arg: [
 				{name: "gameObject", type: "string"},
 			],
 		},
-		ValidateScrappingList: {
-
-		},
+		ValidateScrappingList: {},
 	},
 	C_ScriptedAnimations: {
 		GetAllScriptedAnimationEffects: {
@@ -8271,15 +8043,9 @@ const systemFunctions : SystemInterface = {
 				{name: "isEnabled", type: "bool"},
 			],
 		},
-		TwitterCheckStatus: {
-
-		},
-		TwitterConnect: {
-
-		},
-		TwitterDisconnect: {
-
-		},
+		TwitterCheckStatus: {},
+		TwitterConnect: {},
+		TwitterDisconnect: {},
 		TwitterGetMSTillCanPost: {
 			ret: [
 				{name: "msTimeLeft", type: "number"},
@@ -8519,17 +8285,13 @@ const systemFunctions : SystemInterface = {
 		},
 	},
 	C_SplashScreen: {
-		AcknowledgeSplash: {
-
-		},
+		AcknowledgeSplash: {},
 		CanViewSplashScreen: {
 			ret: [
 				{name: "canView", type: "bool"},
 			],
 		},
-		RequestLatestSplashScreen: {
-
-		},
+		RequestLatestSplashScreen: {},
 	},
 	C_StorePublic: {
 		DoesGroupHavePurchaseableProducts: {
@@ -8552,12 +8314,8 @@ const systemFunctions : SystemInterface = {
 		},
 	},
 	C_SummonInfo: {
-		CancelSummon: {
-
-		},
-		ConfirmSummon: {
-
-		},
+		CancelSummon: {},
+		ConfirmSummon: {},
 		GetSummonConfirmAreaName: {
 			ret: [
 				{name: "areaName", type: "string"},
@@ -8810,9 +8568,7 @@ const systemFunctions : SystemInterface = {
 		},
 	},
 	C_TransmogSets: {
-		ClearLatestSource: {
-
-		},
+		ClearLatestSource: {},
 		ClearNewSource: {
 			arg: [
 				{name: "sourceID", type: "number"},
@@ -8952,9 +8708,7 @@ const systemFunctions : SystemInterface = {
 		},
 	},
 	C_UI: {
-		Reload: {
-
-		},
+		Reload: {},
 	},
 	C_ModelInfo: {
 		AddActiveModelScene: {
@@ -9290,9 +9044,7 @@ const systemFunctions : SystemInterface = {
 				{name: "channelID", type: "number"},
 			],
 		},
-		EndLocalCapture: {
-
-		},
+		EndLocalCapture: {},
 		GetActiveChannelID: {
 			ret: [
 				{name: "channelID", type: "number"},
@@ -9543,9 +9295,7 @@ const systemFunctions : SystemInterface = {
 				{name: "status", type: "VoiceChatStatusCode"},
 			],
 		},
-		MarkChannelsDiscovered: {
-
-		},
+		MarkChannelsDiscovered: {},
 		RequestJoinAndActivateCommunityStreamChannel: {
 			arg: [
 				{name: "clubId", type: "string"},
@@ -9632,17 +9382,13 @@ const systemFunctions : SystemInterface = {
 				{name: "shouldDiscoverChannels", type: "bool"},
 			],
 		},
-		ToggleDeafened: {
-
-		},
+		ToggleDeafened: {},
 		ToggleMemberMuted: {
 			arg: [
 				{name: "playerLocation", type: "table"},
 			],
 		},
-		ToggleMuted: {
-
-		},
+		ToggleMuted: {},
 	},
 	C_CampaignInfo: {
 		GetAvailableCampaigns: {
