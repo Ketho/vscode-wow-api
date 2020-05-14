@@ -2,7 +2,8 @@ import * as vscode from "vscode"
 const FunctionDocumentation = require("./data/functions").systemFunctions
 
 let namespaceSet : vscode.CompletionItem[] = []
-let namespaceMap = new Map()
+let namespaceMapCompletion = new Map()
+let namespaceMapHover = new Map()
 
 for (let system in FunctionDocumentation) {
 	let item_system = new vscode.CompletionItem(system, vscode.CompletionItemKind.Variable)
@@ -32,13 +33,14 @@ for (let system in FunctionDocumentation) {
 		item.documentation = markdown
 		items.push(item)
 	}
-	namespaceMap.set(system, items)
+	namespaceMapCompletion.set(system, items)
+	namespaceMapHover.set(system, new vscode.Hover(system+" test"))
 }
 
 export function activate(context: vscode.ExtensionContext) {
 	console.log("loaded")
 
-	const items = vscode.languages.registerCompletionItemProvider(
+	const completion = vscode.languages.registerCompletionItemProvider(
 		"lua",
 		{
 			provideCompletionItems(document: vscode.TextDocument, position: vscode.Position) {
@@ -48,8 +50,8 @@ export function activate(context: vscode.ExtensionContext) {
 				if (lastWord.includes(".")) {
 					// match "foo" in "foo.bar"
 					let found = lastWord.match(/(.*?)\./)
-					if (found != null && namespaceMap.has(found[1])) {
-						return namespaceMap.get(found[1])
+					if (found != null && namespaceMapCompletion.has(found[1])) {
+						return namespaceMapCompletion.get(found[1])
 					}
 				}
 				else if (lastWord.toLowerCase().startsWith("c_")) {
@@ -60,5 +62,18 @@ export function activate(context: vscode.ExtensionContext) {
 		"."
 	)
 
-	context.subscriptions.push(items)
+    const hover = vscode.languages.registerHoverProvider(
+		"lua",
+		{
+			provideHover(document: vscode.TextDocument, position: vscode.Position) {
+				const range = document.getWordRangeAtPosition(position)
+				const word = document.getText(range)
+				if (word.startsWith("C_") && namespaceMapHover.has(word)) {
+					return namespaceMapHover.get(word)
+				}
+			}
+        }
+    )
+
+    context.subscriptions.push(completion, hover)
 }

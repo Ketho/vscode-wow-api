@@ -1,4 +1,4 @@
-interface LuaType {
+interface Param {
 	name: string,
 	type: string,
 	nilable?: boolean,
@@ -7,8 +7,8 @@ interface LuaType {
 interface SystemInterface {
 	[key: string]: {
 		[key: string]: {
-			arg?: LuaType[],
-			ret?: LuaType[],
+			arg?: Param[],
+			ret?: Param[],
 			desc?: string,
 		}
 	}
