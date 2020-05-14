@@ -49,7 +49,7 @@ export function activate(context: vscode.ExtensionContext) {
 				let lastWord = linePrefix.split(/[^\w\.]/).slice(-1)[0]
 				if (lastWord.includes(".")) {
 					// match "foo" in "foo.bar"
-					let found = lastWord.match(/(.*?)\./)
+					let found = lastWord.match(/(.*)\./)
 					if (found != null && namespaceMapCompletion.has(found[1])) {
 						return namespaceMapCompletion.get(found[1])
 					}
@@ -73,7 +73,28 @@ export function activate(context: vscode.ExtensionContext) {
 				}
 			}
         }
+	)
+
+	const signature = vscode.languages.registerSignatureHelpProvider(
+		"lua",
+		{
+			provideSignatureHelp(document: vscode.TextDocument, position: vscode.Position) {
+				console.log("test signature")
+				const sigHelp = new vscode.SignatureHelp()
+				sigHelp.activeParameter = 0
+				sigHelp.activeSignature = 0
+				sigHelp.signatures = [
+					new vscode.SignatureInformation("hello"),
+					new vscode.SignatureInformation("test"),
+				]
+				return sigHelp
+			}
+		},
+		{
+            triggerCharacters: ['('],
+            retriggerCharacters: [',']
+        }
     )
 
-    context.subscriptions.push(completion, hover)
+    context.subscriptions.push(completion, hover, signature)
 }
