@@ -1,5 +1,5 @@
-## vscode-wow-api
-Shows [API Documentation](https://github.com/Gethe/wow-ui-source/tree/live/AddOns/Blizzard_APIDocumentation) in VSCode (WIP)  
+## vscode-wow-api (WIP)
+Shows [API Documentation](https://github.com/Gethe/wow-ui-source/tree/live/AddOns/Blizzard_APIDocumentation) in VSCode
 This should be compatible with the Sumneko [Lua Language Server](https://github.com/sumneko/lua-language-server) since it only provides API completion for now.
 
 ### Features
