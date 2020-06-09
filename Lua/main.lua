@@ -15,3 +15,16 @@ toc:close()
 
 require "Lua/MissingDocumentation"
 require "Lua/Exporter"
+require "Lua/EmmyLua"
+require "Lua/Test"
+
+local OUTPUT = "./Emmy/Systems/%s.lua"
+
+for _, system in ipairs(APIDocumentation.systems) do
+	local path = OUTPUT:format(system.Namespace or system.Name)
+	local systemText = Emmy:GetSystem(system)
+	WriteFile(path, systemText)
+end
+
+local events = Emmy:GetEvents()
+WriteFile("./Emmy/Events.lua", events)

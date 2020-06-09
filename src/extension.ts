@@ -39,6 +39,7 @@ for (let system in FunctionDocumentation) {
 
 export function activate(context: vscode.ExtensionContext) {
 	console.log("loaded")
+	// vscode.workspace.onDidChangeTextDocument(function(e: vscode.TextDocumentChangeEvent) { console.log(e.contentChanges); });
 
 	const completion = vscode.languages.registerCompletionItemProvider(
 		"lua",
