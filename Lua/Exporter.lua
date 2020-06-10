@@ -15,13 +15,13 @@ function m:ExportSystems(fs)
 			WriteFile(path, systemText)
 		end
 	end
-	print("Finished exporting systems!")
+	print("Finished exporting systems")
 end
 
 function m:ExportEvents(path)
 	local events = Emmy:GetEvents()
 	WriteFile(path, events)
-	print("Finished exporting events!")
+	print("Finished exporting events")
 end
 
 return m
