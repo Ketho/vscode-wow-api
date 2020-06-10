@@ -49,16 +49,7 @@ local Missing =
 			},
 		},
 		-- placeholders
-		{Name = "GarrisonTalentTreeInfo", Type = "Structure", Fields = {}},
-		{Name = "ItemLevelTier", Type = "Structure", Fields = {}},
-		{Name = "OptionalReagentInfo", Type = "Structure", Fields = {}},
-		{Name = "QueueSpecificInfo", Type = "Structure", Fields = {}},
-		{Name = "RuneforgeLegendaryCraftDescription", Type = "Structure", Fields = {}},
-		{Name = "RuneforgePower", Type = "Structure", Fields = {}},
-		-- 9.0.1 (34615)
-		{Name = "CharacterAlternateFormData", Type = "Structure", Fields = {}},
-		{Name = "SoulbindConduitType", Type = "Structure", Fields = {}},
-		{Name = "SoulbindNodeState", Type = "Structure", Fields = {}},
+		{ Name = "QueueSpecificInfo", Type = "Structure", Fields = {} },
 	},
 }
 
