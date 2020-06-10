@@ -27,6 +27,6 @@ function Emmy:GetSystem(system)
 		for _, func in pairs(system.Functions) do
 			tinsert(tbl, self:GetFunction(func))
 		end
+		return table.concat(tbl, "\n\n").."\n"
 	end
-	return table.concat(tbl, "\n\n").."\n"
 end

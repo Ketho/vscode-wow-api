@@ -11,7 +11,9 @@ function m:ExportSystems(fs)
 	for _, system in ipairs(APIDocumentation.systems) do
 		local path = fs:format(system.Namespace or system.Name)
 		local systemText = Emmy:GetSystem(system)
-		WriteFile(path, systemText)
+		if systemText then
+			WriteFile(path, systemText)
+		end
 	end
 	print("Finished exporting systems!")
 end
