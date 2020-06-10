@@ -1,6 +1,6 @@
 local function TestFunction(name)
 	for _, func in ipairs(APIDocumentation.functions) do
-		local fullName = GetFullName(func)
+		local fullName = Util:GetFullName(func)
 		if fullName == name then
 			print(Emmy:GetFunction(func))
 			break
@@ -11,7 +11,7 @@ end
 local function TestSystem(name)
 	for _, system in ipairs(APIDocumentation.systems) do
 		if system.Namespace == name then
-			WriteFile(OUTPUT:format(system.Namespace), Emmy:GetSystem(system))
+			-- WriteFile(OUTPUT:format(system.Namespace), Emmy:GetSystem(system))
 			break
 		end
 	end
