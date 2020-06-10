@@ -1,33 +1,40 @@
-local param_fs = "\t\t{ %s },"
--- local param_fs = "\t\t'{ %s }',"
-local fields = {
-	"Name",
-	"Type",
-	"InnerType", -- optional
-	"Mixin", -- optional
-	"Nilable", -- boolean
-}
-
-local function GetEventParam(param)
-	local tbl = {}
-	for _, paramKey in pairs(fields) do
-		local paramValue = param[paramKey]
-		if paramValue ~= nil then
-			if type(paramValue) == "string" then
-				paramValue = format('"%s"', paramValue)
+local function HasMiddleOptionals(paramTbl)
+	local optional
+	for _, param in ipairs(paramTbl) do
+		if param.Nilable then
+			optional = true
+		else
+			if optional then
+				return true
 			end
-			tinsert(tbl, format("%s = %s", paramKey, paramValue))
 		end
 	end
-	return param_fs:format(table.concat(tbl, ", "))
 end
 
-local function GetEventPayload(payload)
+local function GetSignature(paramTbl)
 	local tbl = {}
-	for _, param in ipairs(payload) do
-		tinsert(tbl, GetEventParam(param))
+	if HasMiddleOptionals(paramTbl) then
+		for _, param in ipairs(paramTbl) do
+			local name = param.Name
+			if param:IsOptional() then
+				name = format("[%s]", name)
+			end
+			tinsert(tbl, name)
+		end
+		return table.concat(tbl, ", ")
+	else
+		local optionalFound
+		for _, param in ipairs(paramTbl) do
+			local name = param.Name
+			if param:IsOptional() and not optionalFound then
+				optionalFound = true
+				name = format("[%s", name)
+			end
+			tinsert(tbl, name)
+		end
+		local str = table.concat(tbl, ", ")
+		return optionalFound and str:gsub(", %[", " [, ").."]" or str
 	end
-	return table.concat(tbl, "\n")
 end
 
 function Emmy:GetEvents()
@@ -37,13 +44,8 @@ function Emmy:GetEvents()
 	local tbl = {}
 	tinsert(tbl, "Event = {")
 	for _, event in ipairs(APIDocumentation.events) do
-		if event.Payload then
-			tinsert(tbl, format("\t%s = {", event.LiteralName))
-			tinsert(tbl, GetEventPayload(event.Payload))
-			tinsert(tbl, "\t},")
-		else
-			tinsert(tbl, format("\t%s = true,", event.LiteralName))
-		end
+		local signature = event.Payload and GetSignature(event.Payload) or ""
+		tinsert(tbl, format('\t%s = "%s",', event.LiteralName, signature))
 	end
 	tinsert(tbl, "}\n")
 	return table.concat(tbl, "\n")
