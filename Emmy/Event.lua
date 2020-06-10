@@ -1,3 +1,4 @@
+-- not sure how to go about listing events in emmylua
 Event = {
 	ACHIEVEMENT_EARNED = "achievementID, optional alreadyEarned",
 	ACHIEVEMENT_PLAYER_NAME = "achievementID",

@@ -1,6 +1,3 @@
-
-
-
 function Emmy:GetFunction(func)
 	local tbl = {}
 	if func.Arguments then

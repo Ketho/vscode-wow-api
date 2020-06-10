@@ -1,4 +1,3 @@
-
 function Emmy:GetEvents()
 	local tbl = {}
 	tinsert(tbl, "Event = {")

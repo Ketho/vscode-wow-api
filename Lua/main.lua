@@ -1,7 +1,7 @@
 local FrameXML = require("Lua/FrameXML/FrameXML")
 FrameXML:LoadApiDocs("Lua/FrameXML")
 
-require "Lua/util"
+require "Lua/Util"
 require "Lua/EmmyLua/EmmyLua"
 require "Lua/Tests/Tests"
 
