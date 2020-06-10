@@ -38,7 +38,7 @@ function C_PvP.GetActiveMatchBracket() end
 ---[Documentation](https://wow.gamepedia.com/API_C_PvP.GetActiveMatchDuration)
 function C_PvP.GetActiveMatchDuration() end
 
----@return PvpMatchState state
+---@return PvPMatchState state
 ---[Documentation](https://wow.gamepedia.com/API_C_PvP.GetActiveMatchState)
 function C_PvP.GetActiveMatchState() end
 

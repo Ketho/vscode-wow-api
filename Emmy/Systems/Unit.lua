@@ -4,6 +4,11 @@ Unit = {}
 ---[Documentation](https://wow.gamepedia.com/API_GetNegativeCorruptionEffectInfo)
 function GetNegativeCorruptionEffectInfo() end
 
+---@param unit string
+---@return table pointIndices
+---[Documentation](https://wow.gamepedia.com/API_GetUnitChargedPowerPoints)
+function GetUnitChargedPowerPoints(unit) end
+
 ---@param unitToken string
 ---@return UnitPowerBarInfo info
 ---[Documentation](https://wow.gamepedia.com/API_GetUnitPowerBarInfo)
@@ -143,7 +148,7 @@ function UnitPowerDisplayMod(powerType) end
 function UnitPowerMax(unitToken, powerType, unmodified) end
 
 ---@param unit string
----@return PvpUnitClassification classification
+---@return PvPUnitClassification classification
 ---[Documentation](https://wow.gamepedia.com/API_UnitPvpClassification)
 function UnitPvpClassification(unit) end
 

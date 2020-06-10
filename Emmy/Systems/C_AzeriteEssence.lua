@@ -64,6 +64,10 @@ function C_AzeriteEssence.GetMilestones() end
 ---[Documentation](https://wow.gamepedia.com/API_C_AzeriteEssence.GetNumUnlockedEssences)
 function C_AzeriteEssence.GetNumUnlockedEssences() end
 
+---@return number numUsableEssences
+---[Documentation](https://wow.gamepedia.com/API_C_AzeriteEssence.GetNumUsableEssences)
+function C_AzeriteEssence.GetNumUsableEssences() end
+
 ---@return number essenceID
 ---[Documentation](https://wow.gamepedia.com/API_C_AzeriteEssence.GetPendingActivationEssence)
 function C_AzeriteEssence.GetPendingActivationEssence() end

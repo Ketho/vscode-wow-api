@@ -38,6 +38,10 @@ function C_PartyInfo.ConvertToParty() end
 ---[Documentation](https://wow.gamepedia.com/API_C_PartyInfo.ConvertToRaid)
 function C_PartyInfo.ConvertToRaid() end
 
+---@param seconds number
+---[Documentation](https://wow.gamepedia.com/API_C_PartyInfo.DoCountdown)
+function C_PartyInfo.DoCountdown(seconds) end
+
 ---@return table categories
 ---[Documentation](https://wow.gamepedia.com/API_C_PartyInfo.GetActiveCategories)
 function C_PartyInfo.GetActiveCategories() end

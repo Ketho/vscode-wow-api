@@ -8,9 +8,9 @@ C_Garrison = {}
 function C_Garrison.AddFollowerToMission(missionID, followerID, boardIndex) end
 
 ---@param autoCombatSpellID number
----@return AutoCombatSpellInfo spellInfo
----[Documentation](https://wow.gamepedia.com/API_C_Garrison.GetAutoCombatSpellInfo)
-function C_Garrison.GetAutoCombatSpellInfo(autoCombatSpellID) end
+---@return string spellName
+---[Documentation](https://wow.gamepedia.com/API_C_Garrison.GetAutoCombatSpellName)
+function C_Garrison.GetAutoCombatSpellName(autoCombatSpellID) end
 
 ---@return number currentGarrTalentTreeFriendshipFactionID
 ---[Documentation](https://wow.gamepedia.com/API_C_Garrison.GetCurrentGarrTalentTreeFriendshipFactionID)
@@ -104,6 +104,10 @@ function C_Garrison.IsEnvironmentCountered(missionID) end
 ---@return string failureString
 ---[Documentation](https://wow.gamepedia.com/API_C_Garrison.IsTalentConditionMet)
 function C_Garrison.IsTalentConditionMet(talentID) end
+
+---@param missionID number
+---[Documentation](https://wow.gamepedia.com/API_C_Garrison.RegenerateCombatLog)
+function C_Garrison.RegenerateCombatLog(missionID) end
 
 ---@param garrFollowerID string
 ---[Documentation](https://wow.gamepedia.com/API_C_Garrison.RushHealFollower)

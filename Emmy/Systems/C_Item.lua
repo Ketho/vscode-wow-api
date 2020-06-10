@@ -91,6 +91,11 @@ function C_Item.GetStackCount(itemLocation) end
 function C_Item.IsBound(itemLocation) end
 
 ---@param itemLoc table
+---@return boolean isCorruptable
+---[Documentation](https://wow.gamepedia.com/API_C_Item.IsItemCorruptable)
+function C_Item.IsItemCorruptable(itemLoc) end
+
+---@param itemLoc table
 ---@return boolean isCorrupted
 ---[Documentation](https://wow.gamepedia.com/API_C_Item.IsItemCorrupted)
 function C_Item.IsItemCorrupted(itemLoc) end

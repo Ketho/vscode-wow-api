@@ -135,6 +135,12 @@ function C_Map.GetMapPosFromWorldPos(continentID, worldPosition, overrideUiMapID
 function C_Map.GetMapRectOnMap(uiMapID, topUiMapID) end
 
 ---@param uiMapID number
+---@return number width
+---@return number height
+---[Documentation](https://wow.gamepedia.com/API_C_Map.GetMapWorldSize)
+function C_Map.GetMapWorldSize(uiMapID) end
+
+---@param uiMapID number
 ---@param unitToken string
 ---@return table position
 ---[Documentation](https://wow.gamepedia.com/API_C_Map.GetPlayerMapPosition)

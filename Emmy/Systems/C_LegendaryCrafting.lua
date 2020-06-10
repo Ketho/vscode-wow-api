@@ -6,6 +6,9 @@ C_LegendaryCrafting = {}
 ---[Documentation](https://wow.gamepedia.com/API_C_LegendaryCrafting.CanCraftRuneforgeLegendary)
 function C_LegendaryCrafting.CanCraftRuneforgeLegendary(description) end
 
+---[Documentation](https://wow.gamepedia.com/API_C_LegendaryCrafting.CloseRuneforgeInteraction)
+function C_LegendaryCrafting.CloseRuneforgeInteraction() end
+
 ---@param description RuneforgeLegendaryCraftDescription
 ---[Documentation](https://wow.gamepedia.com/API_C_LegendaryCrafting.CraftRuneforgeLegendary)
 function C_LegendaryCrafting.CraftRuneforgeLegendary(description) end

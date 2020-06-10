@@ -240,6 +240,11 @@ function C_QuestLog.IsPushableQuest(questID) end
 function C_QuestLog.IsQuestBounty(questID) end
 
 ---@param questID number
+---@return boolean isCalling
+---[Documentation](https://wow.gamepedia.com/API_C_QuestLog.IsQuestCalling)
+function C_QuestLog.IsQuestCalling(questID) end
+
+---@param questID number
 ---@param bountyQuestID number
 ---@return boolean isCriteriaForBounty
 ---[Documentation](https://wow.gamepedia.com/API_C_QuestLog.IsQuestCriteriaForBounty)

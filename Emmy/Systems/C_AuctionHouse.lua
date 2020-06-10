@@ -107,6 +107,11 @@ function C_AuctionHouse.GetItemKeyFromItem(item) end
 function C_AuctionHouse.GetItemKeyInfo(itemKey, restrictQualityToFilter) end
 
 ---@param itemKey ItemKey
+---@return number requiredLevel
+---[Documentation](https://wow.gamepedia.com/API_C_AuctionHouse.GetItemKeyRequiredLevel)
+function C_AuctionHouse.GetItemKeyRequiredLevel(itemKey) end
+
+---@param itemKey ItemKey
 ---@param itemSearchResultIndex number
 ---@return ItemSearchResultInfo result
 ---[Documentation](https://wow.gamepedia.com/API_C_AuctionHouse.GetItemSearchResultInfo)
@@ -347,6 +352,11 @@ function C_AuctionHouse.RequestMoreCommoditySearchResults(itemID) end
 ---@return boolean hasFullResults
 ---[Documentation](https://wow.gamepedia.com/API_C_AuctionHouse.RequestMoreItemSearchResults)
 function C_AuctionHouse.RequestMoreItemSearchResults(itemKey) end
+
+---@param auctionID number
+---@return string bidderName
+---[Documentation](https://wow.gamepedia.com/API_C_AuctionHouse.RequestOwnedAuctionBidderInfo)
+function C_AuctionHouse.RequestOwnedAuctionBidderInfo(auctionID) end
 
 ---@param sorts table
 ---[Documentation](https://wow.gamepedia.com/API_C_AuctionHouse.SearchForFavorites)
