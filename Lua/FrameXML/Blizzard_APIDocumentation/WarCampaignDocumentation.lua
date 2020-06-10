@@ -7,15 +7,6 @@ local WarCampaign =
 	Functions =
 	{
 		{
-			Name = "GetAvailableCampaigns",
-			Type = "Function",
-
-			Returns =
-			{
-				{ Name = "campaignIDs", Type = "table", InnerType = "number", Nilable = false },
-			},
-		},
-		{
 			Name = "GetCampaignChapterInfo",
 			Type = "Function",
 
@@ -44,59 +35,21 @@ local WarCampaign =
 			},
 		},
 		{
-			Name = "GetChapterIDs",
+			Name = "GetCurrentCampaignChapterID",
 			Type = "Function",
-
-			Arguments =
-			{
-				{ Name = "campaignID", Type = "number", Nilable = false },
-			},
 
 			Returns =
 			{
-				{ Name = "chapterIDs", Type = "table", InnerType = "number", Nilable = true },
+				{ Name = "campaignChapterID", Type = "number", Nilable = true },
 			},
 		},
 		{
-			Name = "GetCurrentChapterID",
+			Name = "GetCurrentCampaignID",
 			Type = "Function",
-
-			Arguments =
-			{
-				{ Name = "campaignID", Type = "number", Nilable = false },
-			},
 
 			Returns =
 			{
-				{ Name = "currentChapterID", Type = "number", Nilable = true },
-			},
-		},
-		{
-			Name = "GetFailureReason",
-			Type = "Function",
-
-			Arguments =
-			{
-				{ Name = "campaignID", Type = "number", Nilable = false },
-			},
-
-			Returns =
-			{
-				{ Name = "failureReason", Type = "CampaignFailureReason", Nilable = true },
-			},
-		},
-		{
-			Name = "GetState",
-			Type = "Function",
-
-			Arguments =
-			{
-				{ Name = "campaignID", Type = "number", Nilable = false },
-			},
-
-			Returns =
-			{
-				{ Name = "state", Type = "CampaignState", Nilable = false },
+				{ Name = "campaignID", Type = "number", Nilable = true },
 			},
 		},
 		{
@@ -122,20 +75,6 @@ local WarCampaign =
 	Tables =
 	{
 		{
-			Name = "CampaignState",
-			Type = "Enumeration",
-			NumValues = 4,
-			MinValue = 0,
-			MaxValue = 3,
-			Fields =
-			{
-				{ Name = "Invalid", Type = "CampaignState", EnumValue = 0 },
-				{ Name = "Complete", Type = "CampaignState", EnumValue = 1 },
-				{ Name = "InProgress", Type = "CampaignState", EnumValue = 2 },
-				{ Name = "Stalled", Type = "CampaignState", EnumValue = 3 },
-			},
-		},
-		{
 			Name = "CampaignChapterInfo",
 			Type = "Structure",
 			Fields =
@@ -143,17 +82,6 @@ local WarCampaign =
 				{ Name = "name", Type = "string", Nilable = false },
 				{ Name = "description", Type = "string", Nilable = false },
 				{ Name = "rewardQuestID", Type = "number", Nilable = false },
-				{ Name = "orderIndex", Type = "number", Nilable = false },
-			},
-		},
-		{
-			Name = "CampaignFailureReason",
-			Type = "Structure",
-			Fields =
-			{
-				{ Name = "text", Type = "string", Nilable = false },
-				{ Name = "questID", Type = "number", Nilable = true },
-				{ Name = "mapID", Type = "number", Nilable = true },
 			},
 		},
 		{
@@ -163,8 +91,11 @@ local WarCampaign =
 			{
 				{ Name = "name", Type = "string", Nilable = false },
 				{ Name = "description", Type = "string", Nilable = false },
-				{ Name = "uiTextureKit", Type = "string", Nilable = false },
-				{ Name = "isWarCampaign", Type = "bool", Nilable = false },
+				{ Name = "uiTextureKitID", Type = "number", Nilable = false },
+				{ Name = "visibilityConditionMatched", Type = "bool", Nilable = false },
+				{ Name = "playerConditionFailedReason", Type = "string", Nilable = true },
+				{ Name = "complete", Type = "bool", Nilable = false },
+				{ Name = "overrideStepActive", Type = "bool", Nilable = false },
 			},
 		},
 	},

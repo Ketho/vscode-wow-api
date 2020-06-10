@@ -25,16 +25,6 @@ local PvpInfo =
 			},
 		},
 		{
-			Name = "CanPlayerUseRatedPVPUI",
-			Type = "Function",
-
-			Returns =
-			{
-				{ Name = "canUse", Type = "bool", Nilable = false },
-				{ Name = "failureReason", Type = "string", Nilable = false },
-			},
-		},
-		{
 			Name = "CanToggleWarMode",
 			Type = "Function",
 
@@ -99,7 +89,7 @@ local PvpInfo =
 
 			Returns =
 			{
-				{ Name = "state", Type = "PvPMatchState", Nilable = false },
+				{ Name = "state", Type = "PvpMatchState", Nilable = false },
 			},
 		},
 		{
@@ -167,21 +157,6 @@ local PvpInfo =
 			},
 		},
 		{
-			Name = "GetBattlefieldVehicleInfo",
-			Type = "Function",
-
-			Arguments =
-			{
-				{ Name = "vehicleIndex", Type = "number", Nilable = false },
-				{ Name = "uiMapID", Type = "number", Nilable = false },
-			},
-
-			Returns =
-			{
-				{ Name = "info", Type = "BattlefieldVehicleInfo", Nilable = false },
-			},
-		},
-		{
 			Name = "GetBrawlRewards",
 			Type = "Function",
 
@@ -225,20 +200,6 @@ local PvpInfo =
 			Returns =
 			{
 				{ Name = "info", Type = "HonorRewardInfo", Nilable = true },
-			},
-		},
-		{
-			Name = "GetLevelUpBattlegrounds",
-			Type = "Function",
-
-			Arguments =
-			{
-				{ Name = "level", Type = "number", Nilable = false },
-			},
-
-			Returns =
-			{
-				{ Name = "battlefields", Type = "table", InnerType = "LevelUpBattlegroundInfo", Nilable = false },
 			},
 		},
 		{
@@ -920,16 +881,16 @@ local PvpInfo =
 			},
 		},
 		{
-			Name = "PvPMatchState",
+			Name = "PvpMatchState",
 			Type = "Enumeration",
 			NumValues = 3,
 			MinValue = 0,
 			MaxValue = 2,
 			Fields =
 			{
-				{ Name = "Inactive", Type = "PvPMatchState", EnumValue = 0 },
-				{ Name = "Active", Type = "PvPMatchState", EnumValue = 1 },
-				{ Name = "Complete", Type = "PvPMatchState", EnumValue = 2 },
+				{ Name = "Inactive", Type = "PvpMatchState", EnumValue = 0 },
+				{ Name = "Active", Type = "PvpMatchState", EnumValue = 1 },
+				{ Name = "Complete", Type = "PvpMatchState", EnumValue = 2 },
 			},
 		},
 		{
@@ -950,24 +911,6 @@ local PvpInfo =
 				{ Name = "name", Type = "string", Nilable = false },
 				{ Name = "texture", Type = "number", Nilable = false },
 				{ Name = "quantity", Type = "number", Nilable = false },
-			},
-		},
-		{
-			Name = "BattlefieldVehicleInfo",
-			Type = "Structure",
-			Fields =
-			{
-				{ Name = "x", Type = "number", Nilable = false },
-				{ Name = "y", Type = "number", Nilable = false },
-				{ Name = "name", Type = "string", Nilable = false },
-				{ Name = "isOccupied", Type = "bool", Nilable = false },
-				{ Name = "atlas", Type = "string", Nilable = false },
-				{ Name = "textureWidth", Type = "number", Nilable = false },
-				{ Name = "textureHeight", Type = "number", Nilable = false },
-				{ Name = "facing", Type = "number", Nilable = false },
-				{ Name = "isPlayer", Type = "bool", Nilable = false },
-				{ Name = "isAlive", Type = "bool", Nilable = false },
-				{ Name = "shouldDrawBelowPlayerBlips", Type = "bool", Nilable = false },
 			},
 		},
 		{
@@ -995,17 +938,6 @@ local PvpInfo =
 			},
 		},
 		{
-			Name = "LevelUpBattlegroundInfo",
-			Type = "Structure",
-			Fields =
-			{
-				{ Name = "id", Type = "number", Nilable = false },
-				{ Name = "icon", Type = "number", Nilable = false },
-				{ Name = "name", Type = "string", Nilable = false },
-				{ Name = "isEpic", Type = "bool", Nilable = false },
-			},
-		},
-		{
 			Name = "MatchPVPStatColumn",
 			Type = "Structure",
 			Fields =
@@ -1029,6 +961,31 @@ local PvpInfo =
 				{ Name = "timeLeftUntilNextChange", Type = "number", Nilable = false },
 				{ Name = "brawlType", Type = "BrawlType", Nilable = false },
 				{ Name = "mapNames", Type = "table", InnerType = "string", Nilable = false },
+			},
+		},
+		{
+			Name = "PvpScalingData",
+			Type = "Structure",
+			Fields =
+			{
+				{ Name = "scalingDataID", Type = "number", Nilable = false },
+				{ Name = "specializationID", Type = "number", Nilable = false },
+				{ Name = "name", Type = "string", Nilable = false },
+				{ Name = "value", Type = "number", Nilable = false },
+			},
+		},
+		{
+			Name = "PvpTierInfo",
+			Type = "Structure",
+			Fields =
+			{
+				{ Name = "name", Type = "string", Nilable = false },
+				{ Name = "descendRating", Type = "number", Nilable = false },
+				{ Name = "ascendRating", Type = "number", Nilable = false },
+				{ Name = "descendTier", Type = "number", Nilable = false },
+				{ Name = "ascendTier", Type = "number", Nilable = false },
+				{ Name = "pvpTierEnum", Type = "number", Nilable = false },
+				{ Name = "tierIconID", Type = "number", Nilable = false },
 			},
 		},
 		{
@@ -1069,17 +1026,6 @@ local PvpInfo =
 				{ Name = "specID", Type = "number", Nilable = false },
 				{ Name = "sex", Type = "number", Nilable = false },
 				{ Name = "isUpgraded", Type = "bool", Nilable = false },
-			},
-		},
-		{
-			Name = "PvpScalingData",
-			Type = "Structure",
-			Fields =
-			{
-				{ Name = "scalingDataID", Type = "number", Nilable = false },
-				{ Name = "specializationID", Type = "number", Nilable = false },
-				{ Name = "name", Type = "string", Nilable = false },
-				{ Name = "value", Type = "number", Nilable = false },
 			},
 		},
 		{
@@ -1131,20 +1077,6 @@ local PvpInfo =
 				{ Name = "rating", Type = "number", Nilable = false },
 				{ Name = "ratingNew", Type = "number", Nilable = false },
 				{ Name = "ratingMMR", Type = "number", Nilable = false },
-			},
-		},
-		{
-			Name = "PvpTierInfo",
-			Type = "Structure",
-			Fields =
-			{
-				{ Name = "name", Type = "string", Nilable = false },
-				{ Name = "descendRating", Type = "number", Nilable = false },
-				{ Name = "ascendRating", Type = "number", Nilable = false },
-				{ Name = "descendTier", Type = "number", Nilable = false },
-				{ Name = "ascendTier", Type = "number", Nilable = false },
-				{ Name = "pvpTierEnum", Type = "number", Nilable = false },
-				{ Name = "tierIconID", Type = "number", Nilable = false },
 			},
 		},
 		{

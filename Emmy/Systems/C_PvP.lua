@@ -8,11 +8,6 @@ function C_PvP.CanDisplayDeaths() end
 ---[Documentation](https://wow.gamepedia.com/API_C_PvP.CanDisplayHonorableKills)
 function C_PvP.CanDisplayHonorableKills() end
 
----@return boolean canUse
----@return string failureReason
----[Documentation](https://wow.gamepedia.com/API_C_PvP.CanPlayerUseRatedPVPUI)
-function C_PvP.CanPlayerUseRatedPVPUI() end
-
 ---@param toggle boolean
 ---@return boolean canTogglePvP
 ---[Documentation](https://wow.gamepedia.com/API_C_PvP.CanToggleWarMode)
@@ -38,7 +33,7 @@ function C_PvP.GetActiveMatchBracket() end
 ---[Documentation](https://wow.gamepedia.com/API_C_PvP.GetActiveMatchDuration)
 function C_PvP.GetActiveMatchDuration() end
 
----@return PvPMatchState state
+---@return PvpMatchState state
 ---[Documentation](https://wow.gamepedia.com/API_C_PvP.GetActiveMatchState)
 function C_PvP.GetActiveMatchState() end
 
@@ -72,12 +67,6 @@ function C_PvP.GetArenaSkirmishRewards() end
 ---[Documentation](https://wow.gamepedia.com/API_C_PvP.GetAvailableBrawlInfo)
 function C_PvP.GetAvailableBrawlInfo() end
 
----@param vehicleIndex number
----@param uiMapID number
----@return BattlefieldVehicleInfo info
----[Documentation](https://wow.gamepedia.com/API_C_PvP.GetBattlefieldVehicleInfo)
-function C_PvP.GetBattlefieldVehicleInfo(vehicleIndex, uiMapID) end
-
 ---@param brawlType BrawlType
 ---@return number honor
 ---@return number experience
@@ -96,11 +85,6 @@ function C_PvP.GetGlobalPvpScalingInfoForSpecID(specializationID) end
 ---@return HonorRewardInfo info
 ---[Documentation](https://wow.gamepedia.com/API_C_PvP.GetHonorRewardInfo)
 function C_PvP.GetHonorRewardInfo(honorLevel) end
-
----@param level number
----@return table battlefields
----[Documentation](https://wow.gamepedia.com/API_C_PvP.GetLevelUpBattlegrounds)
-function C_PvP.GetLevelUpBattlegrounds(level) end
 
 ---@param pvpStatID number
 ---@return MatchPVPStatColumn info

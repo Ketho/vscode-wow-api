@@ -147,9 +147,9 @@ local UIModelInfo =
 		{
 			Name = "ModelSceneType",
 			Type = "Enumeration",
-			NumValues = 20,
+			NumValues = 18,
 			MinValue = 0,
-			MaxValue = 19,
+			MaxValue = 17,
 			Fields =
 			{
 				{ Name = "MountJournal", Type = "ModelSceneType", EnumValue = 0 },
@@ -162,16 +162,14 @@ local UIModelInfo =
 				{ Name = "ArtifactTier2SlamEffect", Type = "ModelSceneType", EnumValue = 7 },
 				{ Name = "CommentatorVictoryFanfare", Type = "ModelSceneType", EnumValue = 8 },
 				{ Name = "ArtifactRelicTalentEffect", Type = "ModelSceneType", EnumValue = 9 },
-				{ Name = "PvPWarModeOrb", Type = "ModelSceneType", EnumValue = 10 },
-				{ Name = "PvPWarModeFire", Type = "ModelSceneType", EnumValue = 11 },
+				{ Name = "PvpWarModeOrb", Type = "ModelSceneType", EnumValue = 10 },
+				{ Name = "PvpWarModeFire", Type = "ModelSceneType", EnumValue = 11 },
 				{ Name = "PartyPose", Type = "ModelSceneType", EnumValue = 12 },
 				{ Name = "AzeriteItemLevelUpToast", Type = "ModelSceneType", EnumValue = 13 },
 				{ Name = "AzeritePowers", Type = "ModelSceneType", EnumValue = 14 },
 				{ Name = "AzeriteRewardGlow", Type = "ModelSceneType", EnumValue = 15 },
 				{ Name = "HeartOfAzeroth", Type = "ModelSceneType", EnumValue = 16 },
 				{ Name = "WorldMapThreat", Type = "ModelSceneType", EnumValue = 17 },
-				{ Name = "Soulbinds", Type = "ModelSceneType", EnumValue = 18 },
-				{ Name = "JailersTowerAnimaGlow", Type = "ModelSceneType", EnumValue = 19 },
 			},
 		},
 		{

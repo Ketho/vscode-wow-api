@@ -16,20 +16,6 @@ local SpellBook =
 			},
 		},
 		{
-			Name = "GetSkillLineIndexByID",
-			Type = "Function",
-
-			Arguments =
-			{
-				{ Name = "skillLineID", Type = "number", Nilable = false },
-			},
-
-			Returns =
-			{
-				{ Name = "skillIndex", Type = "number", Nilable = true },
-			},
-		},
-		{
 			Name = "IsSpellDisabled",
 			Type = "Function",
 

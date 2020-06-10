@@ -15,20 +15,6 @@ local Unit =
 			},
 		},
 		{
-			Name = "GetUnitChargedPowerPoints",
-			Type = "Function",
-
-			Arguments =
-			{
-				{ Name = "unit", Type = "string", Nilable = false },
-			},
-
-			Returns =
-			{
-				{ Name = "pointIndices", Type = "table", InnerType = "number", Nilable = false },
-			},
-		},
-		{
 			Name = "GetUnitPowerBarInfo",
 			Type = "Function",
 
@@ -288,20 +274,6 @@ local Unit =
 			},
 		},
 		{
-			Name = "UnitNameplateShowsWidgetsOnly",
-			Type = "Function",
-
-			Arguments =
-			{
-				{ Name = "unit", Type = "string", Nilable = false },
-			},
-
-			Returns =
-			{
-				{ Name = "nameplateShowsWidgetsOnly", Type = "bool", Nilable = false },
-			},
-		},
-		{
 			Name = "UnitPower",
 			Type = "Function",
 
@@ -372,35 +344,7 @@ local Unit =
 
 			Returns =
 			{
-				{ Name = "classification", Type = "PvPUnitClassification", Nilable = true },
-			},
-		},
-		{
-			Name = "UnitQuestTrivialLevelRange",
-			Type = "Function",
-
-			Arguments =
-			{
-				{ Name = "unit", Type = "string", Nilable = false },
-			},
-
-			Returns =
-			{
-				{ Name = "levelRange", Type = "number", Nilable = false },
-			},
-		},
-		{
-			Name = "UnitQuestTrivialLevelRangeScaling",
-			Type = "Function",
-
-			Arguments =
-			{
-				{ Name = "unit", Type = "string", Nilable = false },
-			},
-
-			Returns =
-			{
-				{ Name = "levelRange", Type = "number", Nilable = false },
+				{ Name = "classification", Type = "PvpUnitClassification", Nilable = true },
 			},
 		},
 		{
@@ -1005,6 +949,15 @@ local Unit =
 			},
 		},
 		{
+			Name = "UnitHealthFrequent",
+			Type = "Event",
+			LiteralName = "UNIT_HEALTH_FREQUENT",
+			Payload =
+			{
+				{ Name = "unitTarget", Type = "string", Nilable = false },
+			},
+		},
+		{
 			Name = "UnitInventoryChanged",
 			Type = "Event",
 			LiteralName = "UNIT_INVENTORY_CHANGED",
@@ -1148,15 +1101,6 @@ local Unit =
 			{
 				{ Name = "unitTarget", Type = "string", Nilable = false },
 				{ Name = "powerType", Type = "string", Nilable = false },
-			},
-		},
-		{
-			Name = "UnitPowerPointCharge",
-			Type = "Event",
-			LiteralName = "UNIT_POWER_POINT_CHARGE",
-			Payload =
-			{
-				{ Name = "unitTarget", Type = "string", Nilable = false },
 			},
 		},
 		{
@@ -1449,24 +1393,24 @@ local Unit =
 			},
 		},
 		{
-			Name = "PvPUnitClassification",
+			Name = "PvpUnitClassification",
 			Type = "Enumeration",
 			NumValues = 11,
 			MinValue = 0,
 			MaxValue = 10,
 			Fields =
 			{
-				{ Name = "FlagCarrierHorde", Type = "PvPUnitClassification", EnumValue = 0 },
-				{ Name = "FlagCarrierAlliance", Type = "PvPUnitClassification", EnumValue = 1 },
-				{ Name = "FlagCarrierNeutral", Type = "PvPUnitClassification", EnumValue = 2 },
-				{ Name = "CartRunnerHorde", Type = "PvPUnitClassification", EnumValue = 3 },
-				{ Name = "CartRunnerAlliance", Type = "PvPUnitClassification", EnumValue = 4 },
-				{ Name = "AssassinHorde", Type = "PvPUnitClassification", EnumValue = 5 },
-				{ Name = "AssassinAlliance", Type = "PvPUnitClassification", EnumValue = 6 },
-				{ Name = "OrbCarrierBlue", Type = "PvPUnitClassification", EnumValue = 7 },
-				{ Name = "OrbCarrierGreen", Type = "PvPUnitClassification", EnumValue = 8 },
-				{ Name = "OrbCarrierOrange", Type = "PvPUnitClassification", EnumValue = 9 },
-				{ Name = "OrbCarrierPurple", Type = "PvPUnitClassification", EnumValue = 10 },
+				{ Name = "FlagCarrierHorde", Type = "PvpUnitClassification", EnumValue = 0 },
+				{ Name = "FlagCarrierAlliance", Type = "PvpUnitClassification", EnumValue = 1 },
+				{ Name = "FlagCarrierNeutral", Type = "PvpUnitClassification", EnumValue = 2 },
+				{ Name = "CartRunnerHorde", Type = "PvpUnitClassification", EnumValue = 3 },
+				{ Name = "CartRunnerAlliance", Type = "PvpUnitClassification", EnumValue = 4 },
+				{ Name = "AssassinHorde", Type = "PvpUnitClassification", EnumValue = 5 },
+				{ Name = "AssassinAlliance", Type = "PvpUnitClassification", EnumValue = 6 },
+				{ Name = "OrbCarrierBlue", Type = "PvpUnitClassification", EnumValue = 7 },
+				{ Name = "OrbCarrierGreen", Type = "PvpUnitClassification", EnumValue = 8 },
+				{ Name = "OrbCarrierOrange", Type = "PvpUnitClassification", EnumValue = 9 },
+				{ Name = "OrbCarrierPurple", Type = "PvpUnitClassification", EnumValue = 10 },
 			},
 		},
 		{

@@ -1,20 +1,5 @@
 C_SpecializationInfo = {}
 
----@return boolean canUse
----@return string failureReason
----[Documentation](https://wow.gamepedia.com/API_C_SpecializationInfo.CanPlayerUsePVPTalentUI)
-function C_SpecializationInfo.CanPlayerUsePVPTalentUI() end
-
----@return boolean canUse
----@return string failureReason
----[Documentation](https://wow.gamepedia.com/API_C_SpecializationInfo.CanPlayerUseTalentSpecUI)
-function C_SpecializationInfo.CanPlayerUseTalentSpecUI() end
-
----@return boolean canUse
----@return string failureReason
----[Documentation](https://wow.gamepedia.com/API_C_SpecializationInfo.CanPlayerUseTalentUI)
-function C_SpecializationInfo.CanPlayerUseTalentUI() end
-
 ---@return table selectedPvpTalentIDs
 ---[Documentation](https://wow.gamepedia.com/API_C_SpecializationInfo.GetAllSelectedPvpTalentIDs)
 function C_SpecializationInfo.GetAllSelectedPvpTalentIDs() end

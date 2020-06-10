@@ -22,9 +22,10 @@ function GetClientDisplayExpansionLevel() end
 function GetExpansionDisplayInfo(expansionLevel) end
 
 ---@param playerLevel number
+---@param useLegacy boolean
 ---@return number expansionLevel
 ---[Documentation](https://wow.gamepedia.com/API_GetExpansionForLevel)
-function GetExpansionForLevel(playerLevel) end
+function GetExpansionForLevel(playerLevel, useLegacy) end
 
 ---@return number expansionLevel
 ---[Documentation](https://wow.gamepedia.com/API_GetExpansionLevel)
@@ -36,17 +37,10 @@ function GetExpansionLevel() end
 function GetExpansionTrialInfo() end
 
 ---@param expansionLevel number
+---@param useModernLevelMapping boolean
 ---@return number maxLevel
 ---[Documentation](https://wow.gamepedia.com/API_GetMaxLevelForExpansionLevel)
-function GetMaxLevelForExpansionLevel(expansionLevel) end
-
----@return number maxLevel
----[Documentation](https://wow.gamepedia.com/API_GetMaxLevelForLatestExpansion)
-function GetMaxLevelForLatestExpansion() end
-
----@return number maxLevel
----[Documentation](https://wow.gamepedia.com/API_GetMaxLevelForPlayerExpansion)
-function GetMaxLevelForPlayerExpansion() end
+function GetMaxLevelForExpansionLevel(expansionLevel, useModernLevelMapping) end
 
 ---@return number expansionLevel
 ---[Documentation](https://wow.gamepedia.com/API_GetMaximumExpansionLevel)

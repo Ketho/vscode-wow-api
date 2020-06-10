@@ -16,11 +16,6 @@ function C_QuestLine.GetQuestLineInfo(questID, uiMapID) end
 ---[Documentation](https://wow.gamepedia.com/API_C_QuestLine.GetQuestLineQuests)
 function C_QuestLine.GetQuestLineQuests(questLineID) end
 
----@param questLineID number
----@return boolean isComplete
----[Documentation](https://wow.gamepedia.com/API_C_QuestLine.IsComplete)
-function C_QuestLine.IsComplete(questLineID) end
-
 ---@param uiMapID number
 ---[Documentation](https://wow.gamepedia.com/API_C_QuestLine.RequestQuestLinesForMap)
 function C_QuestLine.RequestQuestLinesForMap(uiMapID) end

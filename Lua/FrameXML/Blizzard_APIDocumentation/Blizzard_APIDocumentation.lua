@@ -13,8 +13,6 @@ function APIDocumentationMixin:OnLoad()
 		CopyAPI = 2,
 		OpenDump = 3,
 	};
-
-	DEFAULT_CHAT_FRAME:SetMaxLines(2000);
 end
 
 function APIDocumentationMixin:HandleSlashCommand(command)

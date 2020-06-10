@@ -4,11 +4,6 @@ Unit = {}
 ---[Documentation](https://wow.gamepedia.com/API_GetNegativeCorruptionEffectInfo)
 function GetNegativeCorruptionEffectInfo() end
 
----@param unit string
----@return table pointIndices
----[Documentation](https://wow.gamepedia.com/API_GetUnitChargedPowerPoints)
-function GetUnitChargedPowerPoints(unit) end
-
 ---@param unitToken string
 ---@return UnitPowerBarInfo info
 ---[Documentation](https://wow.gamepedia.com/API_GetUnitPowerBarInfo)
@@ -118,11 +113,6 @@ function UnitIsWarModeDesired(unit) end
 ---[Documentation](https://wow.gamepedia.com/API_UnitIsWarModePhased)
 function UnitIsWarModePhased(unit) end
 
----@param unit string
----@return boolean nameplateShowsWidgetsOnly
----[Documentation](https://wow.gamepedia.com/API_UnitNameplateShowsWidgetsOnly)
-function UnitNameplateShowsWidgetsOnly(unit) end
-
 ---@param unitToken string
 ---@param powerType PowerType
 ---@param unmodified boolean
@@ -148,19 +138,9 @@ function UnitPowerDisplayMod(powerType) end
 function UnitPowerMax(unitToken, powerType, unmodified) end
 
 ---@param unit string
----@return PvPUnitClassification classification
+---@return PvpUnitClassification classification
 ---[Documentation](https://wow.gamepedia.com/API_UnitPvpClassification)
 function UnitPvpClassification(unit) end
-
----@param unit string
----@return number levelRange
----[Documentation](https://wow.gamepedia.com/API_UnitQuestTrivialLevelRange)
-function UnitQuestTrivialLevelRange(unit) end
-
----@param unit string
----@return number levelRange
----[Documentation](https://wow.gamepedia.com/API_UnitQuestTrivialLevelRangeScaling)
-function UnitQuestTrivialLevelRangeScaling(unit) end
 
 ---@param unit string
 ---@return number sex

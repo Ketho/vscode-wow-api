@@ -35,11 +35,6 @@ local ItemSocketInfo =
 			LiteralName = "SOCKET_INFO_FAILURE",
 		},
 		{
-			Name = "SocketInfoRefundableConfirm",
-			Type = "Event",
-			LiteralName = "SOCKET_INFO_REFUNDABLE_CONFIRM",
-		},
-		{
 			Name = "SocketInfoSuccess",
 			Type = "Event",
 			LiteralName = "SOCKET_INFO_SUCCESS",

@@ -197,6 +197,11 @@ local Loot =
 			},
 		},
 		{
+			Name = "LootJournalListUpdate",
+			Type = "Event",
+			LiteralName = "LOOT_JOURNAL_LIST_UPDATE",
+		},
+		{
 			Name = "LootOpened",
 			Type = "Event",
 			LiteralName = "LOOT_OPENED",

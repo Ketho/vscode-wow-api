@@ -105,7 +105,7 @@ local ItemInteractionUI =
 			Type = "Structure",
 			Fields =
 			{
-				{ Name = "textureKit", Type = "string", Nilable = false },
+				{ Name = "textureKitID", Type = "number", Nilable = false },
 				{ Name = "openSoundKitID", Type = "number", Nilable = false },
 				{ Name = "closeSoundKitID", Type = "number", Nilable = false },
 				{ Name = "titleText", Type = "string", Nilable = false },

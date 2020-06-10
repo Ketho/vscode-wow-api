@@ -1,8 +1,5 @@
 C_Map = {}
 
----[Documentation](https://wow.gamepedia.com/API_C_Map.ClearUserWaypoint)
-function C_Map.ClearUserWaypoint() end
-
 ---[Documentation](https://wow.gamepedia.com/API_C_Map.CloseWorldMapInteraction)
 function C_Map.CloseWorldMapInteraction() end
 
@@ -135,34 +132,10 @@ function C_Map.GetMapPosFromWorldPos(continentID, worldPosition, overrideUiMapID
 function C_Map.GetMapRectOnMap(uiMapID, topUiMapID) end
 
 ---@param uiMapID number
----@return number width
----@return number height
----[Documentation](https://wow.gamepedia.com/API_C_Map.GetMapWorldSize)
-function C_Map.GetMapWorldSize(uiMapID) end
-
----@param uiMapID number
 ---@param unitToken string
 ---@return table position
 ---[Documentation](https://wow.gamepedia.com/API_C_Map.GetPlayerMapPosition)
 function C_Map.GetPlayerMapPosition(uiMapID, unitToken) end
-
----@return table point
----[Documentation](https://wow.gamepedia.com/API_C_Map.GetUserWaypoint)
-function C_Map.GetUserWaypoint() end
-
----@param hyperlink string
----@return table point
----[Documentation](https://wow.gamepedia.com/API_C_Map.GetUserWaypointFromHyperlink)
-function C_Map.GetUserWaypointFromHyperlink(hyperlink) end
-
----@return string hyperlink
----[Documentation](https://wow.gamepedia.com/API_C_Map.GetUserWaypointHyperlink)
-function C_Map.GetUserWaypointHyperlink() end
-
----@param uiMapID number
----@return table mapPosition
----[Documentation](https://wow.gamepedia.com/API_C_Map.GetUserWaypointPositionForMap)
-function C_Map.GetUserWaypointPositionForMap(uiMapID) end
 
 ---@param uiMapID number
 ---@param mapPosition table
@@ -170,10 +143,6 @@ function C_Map.GetUserWaypointPositionForMap(uiMapID) end
 ---@return table worldPosition
 ---[Documentation](https://wow.gamepedia.com/API_C_Map.GetWorldPosFromMapPos)
 function C_Map.GetWorldPosFromMapPos(uiMapID, mapPosition) end
-
----@return boolean hasUserWaypoint
----[Documentation](https://wow.gamepedia.com/API_C_Map.HasUserWaypoint)
-function C_Map.HasUserWaypoint() end
 
 ---@param uiMapID number
 ---@return boolean hasArt
@@ -183,7 +152,3 @@ function C_Map.MapHasArt(uiMapID) end
 ---@param uiMapID number
 ---[Documentation](https://wow.gamepedia.com/API_C_Map.RequestPreloadMap)
 function C_Map.RequestPreloadMap(uiMapID) end
-
----@param point table
----[Documentation](https://wow.gamepedia.com/API_C_Map.SetUserWaypoint)
-function C_Map.SetUserWaypoint(point) end

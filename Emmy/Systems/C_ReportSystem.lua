@@ -20,9 +20,6 @@ function C_ReportSystem.OpenReportPlayerDialog(reportType, playerName, playerLoc
 ---[Documentation](https://wow.gamepedia.com/API_C_ReportSystem.ReportServerLag)
 function C_ReportSystem.ReportServerLag() end
 
----[Documentation](https://wow.gamepedia.com/API_C_ReportSystem.ReportStuckInCombat)
-function C_ReportSystem.ReportStuckInCombat() end
-
 ---@param token number
 ---@param comment string
 ---[Documentation](https://wow.gamepedia.com/API_C_ReportSystem.SendReportPlayer)

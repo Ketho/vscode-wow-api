@@ -6,6 +6,11 @@ C_TaskQuest = {}
 function C_TaskQuest.DoesMapShowTaskQuestObjectives(uiMapID) end
 
 ---@param questID number
+---@return number distanceSquared
+---[Documentation](https://wow.gamepedia.com/API_C_TaskQuest.GetDistanceSqToQuest)
+function C_TaskQuest.GetDistanceSqToQuest(questID) end
+
+---@param questID number
 ---@return string questTitle
 ---@return number factionID
 ---@return boolean capped

@@ -424,7 +424,7 @@ local Calendar =
 			Arguments =
 			{
 				{ Name = "eventIndex", Type = "number", Nilable = false },
-				{ Name = "status", Type = "CalendarStatus", Nilable = false },
+				{ Name = "status", Type = "number", Nilable = false },
 			},
 		},
 		{
@@ -1018,7 +1018,7 @@ local Calendar =
 			Type = "Structure",
 			Fields =
 			{
-				{ Name = "status", Type = "CalendarStatus", Nilable = false },
+				{ Name = "optionIndex", Type = "number", Nilable = false },
 				{ Name = "statusString", Type = "string", Nilable = false },
 			},
 		},

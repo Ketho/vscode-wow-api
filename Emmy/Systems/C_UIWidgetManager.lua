@@ -106,24 +106,7 @@ function C_UIWidgetManager.GetTextureAndTextVisualizationInfo(widgetID) end
 ---[Documentation](https://wow.gamepedia.com/API_C_UIWidgetManager.GetTopCenterWidgetSetID)
 function C_UIWidgetManager.GetTopCenterWidgetSetID() end
 
----@param widgetSetID number
----@return UIWidgetLayoutDirection layoutDirection
----[Documentation](https://wow.gamepedia.com/API_C_UIWidgetManager.GetWidgetLayoutDirectionFromWidgetSetID)
-function C_UIWidgetManager.GetWidgetLayoutDirectionFromWidgetSetID(widgetSetID) end
-
 ---@param widgetID number
 ---@return ZoneControlVisualizationInfo widgetInfo
 ---[Documentation](https://wow.gamepedia.com/API_C_UIWidgetManager.GetZoneControlVisualizationInfo)
 function C_UIWidgetManager.GetZoneControlVisualizationInfo(widgetID) end
-
----@param unitToken string
----[Documentation](https://wow.gamepedia.com/API_C_UIWidgetManager.RegisterUnitForWidgetUpdates)
-function C_UIWidgetManager.RegisterUnitForWidgetUpdates(unitToken) end
-
----@param unit string
----[Documentation](https://wow.gamepedia.com/API_C_UIWidgetManager.SetProcessingUnit)
-function C_UIWidgetManager.SetProcessingUnit(unit) end
-
----@param unitToken string
----[Documentation](https://wow.gamepedia.com/API_C_UIWidgetManager.UnregisterUnitForWidgetUpdates)
-function C_UIWidgetManager.UnregisterUnitForWidgetUpdates(unitToken) end

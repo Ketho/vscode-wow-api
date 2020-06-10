@@ -205,7 +205,7 @@ function C_Calendar.EventSetDate(month, monthDay, year) end
 function C_Calendar.EventSetDescription(description) end
 
 ---@param eventIndex number
----@param status CalendarStatus
+---@param status number
 ---[Documentation](https://wow.gamepedia.com/API_C_Calendar.EventSetInviteStatus)
 function C_Calendar.EventSetInviteStatus(eventIndex, status) end
 
