@@ -45,6 +45,7 @@ function C_ModelInfo.GetModelSceneCameraInfoByID(modelSceneCameraID) end
 function C_ModelInfo.GetModelSceneInfoByID(modelSceneID) end
 
 ---@class UI_MODEL_SCENE_INFO_UPDATED
+---[Documentation](https://wow.gamepedia.com/UI_MODEL_SCENE_INFO_UPDATED)
 local UI_MODEL_SCENE_INFO_UPDATED = {}
 
 ---@class ItemTryOnReason

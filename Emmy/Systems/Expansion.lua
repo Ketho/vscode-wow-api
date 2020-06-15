@@ -68,9 +68,11 @@ function IsTrialAccount() end
 function IsVeteranTrialAccount() end
 
 ---@class MAX_EXPANSION_LEVEL_UPDATED
+---[Documentation](https://wow.gamepedia.com/MAX_EXPANSION_LEVEL_UPDATED)
 local MAX_EXPANSION_LEVEL_UPDATED = {}
 
 ---@class MIN_EXPANSION_LEVEL_UPDATED
+---[Documentation](https://wow.gamepedia.com/MIN_EXPANSION_LEVEL_UPDATED)
 local MIN_EXPANSION_LEVEL_UPDATED = {}
 
 ---@class ExpansionDisplayInfo

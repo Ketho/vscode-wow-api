@@ -61,20 +61,24 @@ function C_Social.TwitterGetMSTillCanPost() end
 function C_Social.TwitterPostMessage(message) end
 
 ---@class SOCIAL_ITEM_RECEIVED
+---[Documentation](https://wow.gamepedia.com/SOCIAL_ITEM_RECEIVED)
 local SOCIAL_ITEM_RECEIVED = {}
 
 ---@class TWITTER_LINK_RESULT
 ---@field isLinked boolean
 ---@field screenName string
 ---@field error string
+---[Documentation](https://wow.gamepedia.com/TWITTER_LINK_RESULT)
 local TWITTER_LINK_RESULT = {}
 
 ---@class TWITTER_POST_RESULT
 ---@field result number
+---[Documentation](https://wow.gamepedia.com/TWITTER_POST_RESULT)
 local TWITTER_POST_RESULT = {}
 
 ---@class TWITTER_STATUS_UPDATE
 ---@field isTwitterEnabled boolean
 ---@field isLinked boolean
 ---@field screenName string
+---[Documentation](https://wow.gamepedia.com/TWITTER_STATUS_UPDATE)
 local TWITTER_STATUS_UPDATE = {}

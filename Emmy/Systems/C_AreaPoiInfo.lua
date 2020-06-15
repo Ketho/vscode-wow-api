@@ -24,6 +24,7 @@ function C_AreaPoiInfo.GetAreaPOISecondsLeft(areaPoiID) end
 function C_AreaPoiInfo.IsAreaPOITimed(areaPoiID) end
 
 ---@class AREA_POIS_UPDATED
+---[Documentation](https://wow.gamepedia.com/AREA_POIS_UPDATED)
 local AREA_POIS_UPDATED = {}
 
 ---@class AreaPOIInfo

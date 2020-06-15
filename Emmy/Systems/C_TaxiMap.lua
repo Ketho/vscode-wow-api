@@ -18,10 +18,12 @@ function C_TaxiMap.GetTaxiNodesForMap(uiMapID) end
 function C_TaxiMap.ShouldMapShowTaxiNodes(uiMapID) end
 
 ---@class TAXIMAP_CLOSED
+---[Documentation](https://wow.gamepedia.com/TAXIMAP_CLOSED)
 local TAXIMAP_CLOSED = {}
 
 ---@class TAXIMAP_OPENED
 ---@field system number
+---[Documentation](https://wow.gamepedia.com/TAXIMAP_OPENED)
 local TAXIMAP_OPENED = {}
 
 ---@class FlightPathFaction

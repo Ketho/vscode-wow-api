@@ -97,25 +97,31 @@ function C_ContributionCollector.IsAwaitingRewardQuestData(contributionID) end
 ---@field result ContributionResult
 ---@field name string
 ---@field contributionID number
+---[Documentation](https://wow.gamepedia.com/CONTRIBUTION_CHANGED)
 local CONTRIBUTION_CHANGED = {}
 
 ---@class CONTRIBUTION_COLLECTOR_CLOSE
+---[Documentation](https://wow.gamepedia.com/CONTRIBUTION_COLLECTOR_CLOSE)
 local CONTRIBUTION_COLLECTOR_CLOSE = {}
 
 ---@class CONTRIBUTION_COLLECTOR_OPEN
+---[Documentation](https://wow.gamepedia.com/CONTRIBUTION_COLLECTOR_OPEN)
 local CONTRIBUTION_COLLECTOR_OPEN = {}
 
 ---@class CONTRIBUTION_COLLECTOR_PENDING
 ---@field contributionID number
 ---@field isPending boolean
 ---@field result number
+---[Documentation](https://wow.gamepedia.com/CONTRIBUTION_COLLECTOR_PENDING)
 local CONTRIBUTION_COLLECTOR_PENDING = {}
 
 ---@class CONTRIBUTION_COLLECTOR_UPDATE
+---[Documentation](https://wow.gamepedia.com/CONTRIBUTION_COLLECTOR_UPDATE)
 local CONTRIBUTION_COLLECTOR_UPDATE = {}
 
 ---@class CONTRIBUTION_COLLECTOR_UPDATE_SINGLE
 ---@field contributionID number
+---[Documentation](https://wow.gamepedia.com/CONTRIBUTION_COLLECTOR_UPDATE_SINGLE)
 local CONTRIBUTION_COLLECTOR_UPDATE_SINGLE = {}
 
 ---@class ContributionAppearanceFlags

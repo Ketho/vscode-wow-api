@@ -61,15 +61,18 @@ function C_LFGList.SetSearchToQuestID(questID) end
 
 ---@class LFG_LIST_ACTIVE_ENTRY_UPDATE
 ---@field created boolean
+---[Documentation](https://wow.gamepedia.com/LFG_LIST_ACTIVE_ENTRY_UPDATE)
 local LFG_LIST_ACTIVE_ENTRY_UPDATE = {}
 
 ---@class LFG_LIST_APPLICANT_LIST_UPDATED
 ---@field newPendingEntry boolean
 ---@field newPendingEntryWithData boolean
+---[Documentation](https://wow.gamepedia.com/LFG_LIST_APPLICANT_LIST_UPDATED)
 local LFG_LIST_APPLICANT_LIST_UPDATED = {}
 
 ---@class LFG_LIST_APPLICANT_UPDATED
 ---@field applicantID number
+---[Documentation](https://wow.gamepedia.com/LFG_LIST_APPLICANT_UPDATED)
 local LFG_LIST_APPLICANT_UPDATED = {}
 
 ---@class LFG_LIST_APPLICATION_STATUS_UPDATED
@@ -77,34 +80,43 @@ local LFG_LIST_APPLICANT_UPDATED = {}
 ---@field newStatus string
 ---@field oldStatus string
 ---@field groupName string
+---[Documentation](https://wow.gamepedia.com/LFG_LIST_APPLICATION_STATUS_UPDATED)
 local LFG_LIST_APPLICATION_STATUS_UPDATED = {}
 
 ---@class LFG_LIST_AVAILABILITY_UPDATE
+---[Documentation](https://wow.gamepedia.com/LFG_LIST_AVAILABILITY_UPDATE)
 local LFG_LIST_AVAILABILITY_UPDATE = {}
 
 ---@class LFG_LIST_ENTRY_CREATION_FAILED
+---[Documentation](https://wow.gamepedia.com/LFG_LIST_ENTRY_CREATION_FAILED)
 local LFG_LIST_ENTRY_CREATION_FAILED = {}
 
 ---@class LFG_LIST_ENTRY_EXPIRED_TIMEOUT
+---[Documentation](https://wow.gamepedia.com/LFG_LIST_ENTRY_EXPIRED_TIMEOUT)
 local LFG_LIST_ENTRY_EXPIRED_TIMEOUT = {}
 
 ---@class LFG_LIST_ENTRY_EXPIRED_TOO_MANY_PLAYERS
+---[Documentation](https://wow.gamepedia.com/LFG_LIST_ENTRY_EXPIRED_TOO_MANY_PLAYERS)
 local LFG_LIST_ENTRY_EXPIRED_TOO_MANY_PLAYERS = {}
 
 ---@class LFG_LIST_JOINED_GROUP
 ---@field searchResultID number
 ---@field groupName string
+---[Documentation](https://wow.gamepedia.com/LFG_LIST_JOINED_GROUP)
 local LFG_LIST_JOINED_GROUP = {}
 
 ---@class LFG_LIST_SEARCH_FAILED
 ---@field reason string
+---[Documentation](https://wow.gamepedia.com/LFG_LIST_SEARCH_FAILED)
 local LFG_LIST_SEARCH_FAILED = {}
 
 ---@class LFG_LIST_SEARCH_RESULT_UPDATED
 ---@field searchResultID number
+---[Documentation](https://wow.gamepedia.com/LFG_LIST_SEARCH_RESULT_UPDATED)
 local LFG_LIST_SEARCH_RESULT_UPDATED = {}
 
 ---@class LFG_LIST_SEARCH_RESULTS_RECEIVED
+---[Documentation](https://wow.gamepedia.com/LFG_LIST_SEARCH_RESULTS_RECEIVED)
 local LFG_LIST_SEARCH_RESULTS_RECEIVED = {}
 
 ---@class LfgApplicantData

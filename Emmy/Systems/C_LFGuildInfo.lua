@@ -6,20 +6,26 @@ C_LFGuildInfo = {}
 function C_LFGuildInfo.GetRecruitingGuildTabardInfo(index) end
 
 ---@class LF_GUILD_BROWSE_UPDATED
+---[Documentation](https://wow.gamepedia.com/LF_GUILD_BROWSE_UPDATED)
 local LF_GUILD_BROWSE_UPDATED = {}
 
 ---@class LF_GUILD_MEMBERSHIP_LIST_CHANGED
+---[Documentation](https://wow.gamepedia.com/LF_GUILD_MEMBERSHIP_LIST_CHANGED)
 local LF_GUILD_MEMBERSHIP_LIST_CHANGED = {}
 
 ---@class LF_GUILD_MEMBERSHIP_LIST_UPDATED
 ---@field numApplicationsRemaining number
+---[Documentation](https://wow.gamepedia.com/LF_GUILD_MEMBERSHIP_LIST_UPDATED)
 local LF_GUILD_MEMBERSHIP_LIST_UPDATED = {}
 
 ---@class LF_GUILD_POST_UPDATED
+---[Documentation](https://wow.gamepedia.com/LF_GUILD_POST_UPDATED)
 local LF_GUILD_POST_UPDATED = {}
 
 ---@class LF_GUILD_RECRUIT_LIST_CHANGED
+---[Documentation](https://wow.gamepedia.com/LF_GUILD_RECRUIT_LIST_CHANGED)
 local LF_GUILD_RECRUIT_LIST_CHANGED = {}
 
 ---@class LF_GUILD_RECRUITS_UPDATED
+---[Documentation](https://wow.gamepedia.com/LF_GUILD_RECRUITS_UPDATED)
 local LF_GUILD_RECRUITS_UPDATED = {}

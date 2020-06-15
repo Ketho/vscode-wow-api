@@ -25,48 +25,62 @@ function C_DeathInfo.GetSelfResurrectOptions() end
 function C_DeathInfo.UseSelfResurrectOption(optionType, id) end
 
 ---@class AREA_SPIRIT_HEALER_IN_RANGE
+---[Documentation](https://wow.gamepedia.com/AREA_SPIRIT_HEALER_IN_RANGE)
 local AREA_SPIRIT_HEALER_IN_RANGE = {}
 
 ---@class AREA_SPIRIT_HEALER_OUT_OF_RANGE
+---[Documentation](https://wow.gamepedia.com/AREA_SPIRIT_HEALER_OUT_OF_RANGE)
 local AREA_SPIRIT_HEALER_OUT_OF_RANGE = {}
 
 ---@class CEMETERY_PREFERENCE_UPDATED
+---[Documentation](https://wow.gamepedia.com/CEMETERY_PREFERENCE_UPDATED)
 local CEMETERY_PREFERENCE_UPDATED = {}
 
 ---@class CONFIRM_XP_LOSS
+---[Documentation](https://wow.gamepedia.com/CONFIRM_XP_LOSS)
 local CONFIRM_XP_LOSS = {}
 
 ---@class CORPSE_IN_INSTANCE
+---[Documentation](https://wow.gamepedia.com/CORPSE_IN_INSTANCE)
 local CORPSE_IN_INSTANCE = {}
 
 ---@class CORPSE_IN_RANGE
+---[Documentation](https://wow.gamepedia.com/CORPSE_IN_RANGE)
 local CORPSE_IN_RANGE = {}
 
 ---@class CORPSE_OUT_OF_RANGE
+---[Documentation](https://wow.gamepedia.com/CORPSE_OUT_OF_RANGE)
 local CORPSE_OUT_OF_RANGE = {}
 
 ---@class PLAYER_ALIVE
+---[Documentation](https://wow.gamepedia.com/PLAYER_ALIVE)
 local PLAYER_ALIVE = {}
 
 ---@class PLAYER_DEAD
+---[Documentation](https://wow.gamepedia.com/PLAYER_DEAD)
 local PLAYER_DEAD = {}
 
 ---@class PLAYER_SKINNED
 ---@field hasFreeRepop number
+---[Documentation](https://wow.gamepedia.com/PLAYER_SKINNED)
 local PLAYER_SKINNED = {}
 
 ---@class PLAYER_UNGHOST
+---[Documentation](https://wow.gamepedia.com/PLAYER_UNGHOST)
 local PLAYER_UNGHOST = {}
 
 ---@class REQUEST_CEMETERY_LIST_RESPONSE
 ---@field isGossipTriggered boolean
+---[Documentation](https://wow.gamepedia.com/REQUEST_CEMETERY_LIST_RESPONSE)
 local REQUEST_CEMETERY_LIST_RESPONSE = {}
 
 ---@class RESURRECT_REQUEST
 ---@field inviter string
+---[Documentation](https://wow.gamepedia.com/RESURRECT_REQUEST)
 local RESURRECT_REQUEST = {}
 
 ---@class SELF_RES_SPELL_CHANGED
+---[Documentation](https://wow.gamepedia.com/SELF_RES_SPELL_CHANGED)
 local SELF_RES_SPELL_CHANGED = {}
 
 ---@class SelfResurrectOptionType

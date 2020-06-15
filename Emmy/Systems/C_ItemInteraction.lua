@@ -32,13 +32,16 @@ function C_ItemInteraction.SetCorruptionReforgerItemTooltip() end
 function C_ItemInteraction.SetPendingItem(item) end
 
 ---@class ITEM_INTERACTION_CLOSE
+---[Documentation](https://wow.gamepedia.com/ITEM_INTERACTION_CLOSE)
 local ITEM_INTERACTION_CLOSE = {}
 
 ---@class ITEM_INTERACTION_ITEM_SELECTION_UPDATED
 ---@field itemLocation ItemLocationMixin
+---[Documentation](https://wow.gamepedia.com/ITEM_INTERACTION_ITEM_SELECTION_UPDATED)
 local ITEM_INTERACTION_ITEM_SELECTION_UPDATED = {}
 
 ---@class ITEM_INTERACTION_OPEN
+---[Documentation](https://wow.gamepedia.com/ITEM_INTERACTION_OPEN)
 local ITEM_INTERACTION_OPEN = {}
 
 ---@class ItemInteractionFrameType

@@ -23,9 +23,11 @@ function C_VignetteInfo.GetVignettes() end
 ---@class VIGNETTE_MINIMAP_UPDATED
 ---@field vignetteGUID string
 ---@field onMinimap boolean
+---[Documentation](https://wow.gamepedia.com/VIGNETTE_MINIMAP_UPDATED)
 local VIGNETTE_MINIMAP_UPDATED = {}
 
 ---@class VIGNETTES_UPDATED
+---[Documentation](https://wow.gamepedia.com/VIGNETTES_UPDATED)
 local VIGNETTES_UPDATED = {}
 
 ---@class VignetteType

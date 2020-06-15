@@ -52,11 +52,13 @@ function C_SocialQueue.RequestToJoin(groupGUID, applyAsTank, applyAsHealer, appl
 function C_SocialQueue.SignalToastDisplayed(groupGUID, priority) end
 
 ---@class SOCIAL_QUEUE_CONFIG_UPDATED
+---[Documentation](https://wow.gamepedia.com/SOCIAL_QUEUE_CONFIG_UPDATED)
 local SOCIAL_QUEUE_CONFIG_UPDATED = {}
 
 ---@class SOCIAL_QUEUE_UPDATE
 ---@field groupGUID string
 ---@field numAddedItems number
+---[Documentation](https://wow.gamepedia.com/SOCIAL_QUEUE_UPDATE)
 local SOCIAL_QUEUE_UPDATE = {}
 
 ---@class SocialQueueConfig

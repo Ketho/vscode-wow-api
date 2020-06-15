@@ -6,6 +6,7 @@ C_WowEntitlementInfo = {}
 ---@field name string
 ---@field payloadID number
 ---@field showFancyToast boolean
+---[Documentation](https://wow.gamepedia.com/ENTITLEMENT_DELIVERED)
 local ENTITLEMENT_DELIVERED = {}
 
 ---@class RAF_ENTITLEMENT_DELIVERED
@@ -14,6 +15,7 @@ local ENTITLEMENT_DELIVERED = {}
 ---@field name string
 ---@field payloadID number
 ---@field showFancyToast boolean
+---[Documentation](https://wow.gamepedia.com/RAF_ENTITLEMENT_DELIVERED)
 local RAF_ENTITLEMENT_DELIVERED = {}
 
 ---@class WoWEntitlementType

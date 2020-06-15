@@ -394,53 +394,66 @@ function C_Calendar.UpdateEvent() end
 
 ---@class CALENDAR_ACTION_PENDING
 ---@field pending boolean
+---[Documentation](https://wow.gamepedia.com/CALENDAR_ACTION_PENDING)
 local CALENDAR_ACTION_PENDING = {}
 
 ---@class CALENDAR_CLOSE_EVENT
+---[Documentation](https://wow.gamepedia.com/CALENDAR_CLOSE_EVENT)
 local CALENDAR_CLOSE_EVENT = {}
 
 ---@class CALENDAR_EVENT_ALARM
 ---@field title string
 ---@field hour number
 ---@field minute number
+---[Documentation](https://wow.gamepedia.com/CALENDAR_EVENT_ALARM)
 local CALENDAR_EVENT_ALARM = {}
 
 ---@class CALENDAR_NEW_EVENT
 ---@field isCopy boolean
+---[Documentation](https://wow.gamepedia.com/CALENDAR_NEW_EVENT)
 local CALENDAR_NEW_EVENT = {}
 
 ---@class CALENDAR_OPEN_EVENT
 ---@field calendarType string
+---[Documentation](https://wow.gamepedia.com/CALENDAR_OPEN_EVENT)
 local CALENDAR_OPEN_EVENT = {}
 
 ---@class CALENDAR_UPDATE_ERROR
 ---@field errorReason string
+---[Documentation](https://wow.gamepedia.com/CALENDAR_UPDATE_ERROR)
 local CALENDAR_UPDATE_ERROR = {}
 
 ---@class CALENDAR_UPDATE_ERROR_WITH_COUNT
 ---@field errorReason string
 ---@field count number
+---[Documentation](https://wow.gamepedia.com/CALENDAR_UPDATE_ERROR_WITH_COUNT)
 local CALENDAR_UPDATE_ERROR_WITH_COUNT = {}
 
 ---@class CALENDAR_UPDATE_ERROR_WITH_PLAYER_NAME
 ---@field errorReason string
 ---@field playerName string
+---[Documentation](https://wow.gamepedia.com/CALENDAR_UPDATE_ERROR_WITH_PLAYER_NAME)
 local CALENDAR_UPDATE_ERROR_WITH_PLAYER_NAME = {}
 
 ---@class CALENDAR_UPDATE_EVENT
+---[Documentation](https://wow.gamepedia.com/CALENDAR_UPDATE_EVENT)
 local CALENDAR_UPDATE_EVENT = {}
 
 ---@class CALENDAR_UPDATE_EVENT_LIST
+---[Documentation](https://wow.gamepedia.com/CALENDAR_UPDATE_EVENT_LIST)
 local CALENDAR_UPDATE_EVENT_LIST = {}
 
 ---@class CALENDAR_UPDATE_GUILD_EVENTS
+---[Documentation](https://wow.gamepedia.com/CALENDAR_UPDATE_GUILD_EVENTS)
 local CALENDAR_UPDATE_GUILD_EVENTS = {}
 
 ---@class CALENDAR_UPDATE_INVITE_LIST
 ---@field hasCompleteList boolean
+---[Documentation](https://wow.gamepedia.com/CALENDAR_UPDATE_INVITE_LIST)
 local CALENDAR_UPDATE_INVITE_LIST = {}
 
 ---@class CALENDAR_UPDATE_PENDING_INVITES
+---[Documentation](https://wow.gamepedia.com/CALENDAR_UPDATE_PENDING_INVITES)
 local CALENDAR_UPDATE_PENDING_INVITES = {}
 
 ---@class CalendarDayEvent

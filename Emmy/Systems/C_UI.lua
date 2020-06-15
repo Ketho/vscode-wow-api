@@ -4,4 +4,5 @@ C_UI = {}
 function C_UI.Reload() end
 
 ---@class UI_SCALE_CHANGED
+---[Documentation](https://wow.gamepedia.com/UI_SCALE_CHANGED)
 local UI_SCALE_CHANGED = {}

@@ -4,6 +4,8 @@ require "Lua/EmmyLua/Events"
 require "Lua/EmmyLua/Tables"
 require "Lua/EmmyLua/Fields"
 
+Emmy.fs_doc = "---[Documentation](https://wow.gamepedia.com/%s)"
+
 local types = {
 	bool = "boolean",
 }

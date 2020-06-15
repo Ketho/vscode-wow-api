@@ -539,21 +539,26 @@ function C_Commentator.ZoomIn() end
 function C_Commentator.ZoomOut() end
 
 ---@class COMMENTATOR_ENTER_WORLD
+---[Documentation](https://wow.gamepedia.com/COMMENTATOR_ENTER_WORLD)
 local COMMENTATOR_ENTER_WORLD = {}
 
 ---@class COMMENTATOR_IMMEDIATE_FOV_UPDATE
 ---@field fov number
+---[Documentation](https://wow.gamepedia.com/COMMENTATOR_IMMEDIATE_FOV_UPDATE)
 local COMMENTATOR_IMMEDIATE_FOV_UPDATE = {}
 
 ---@class COMMENTATOR_MAP_UPDATE
+---[Documentation](https://wow.gamepedia.com/COMMENTATOR_MAP_UPDATE)
 local COMMENTATOR_MAP_UPDATE = {}
 
 ---@class COMMENTATOR_PLAYER_NAME_OVERRIDE_UPDATE
 ---@field nameToOverride string
 ---@field overrideName string
+---[Documentation](https://wow.gamepedia.com/COMMENTATOR_PLAYER_NAME_OVERRIDE_UPDATE)
 local COMMENTATOR_PLAYER_NAME_OVERRIDE_UPDATE = {}
 
 ---@class COMMENTATOR_PLAYER_UPDATE
+---[Documentation](https://wow.gamepedia.com/COMMENTATOR_PLAYER_UPDATE)
 local COMMENTATOR_PLAYER_UPDATE = {}
 
 ---@class TrackedSpellCategory

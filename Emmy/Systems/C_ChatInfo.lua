@@ -77,6 +77,7 @@ function C_ChatInfo.SendAddonMessageLogged(prefix, message, chatType, target) en
 function C_ChatInfo.SwapChatChannelsByChannelIndex(firstChannelIndex, secondChannelIndex) end
 
 ---@class ALTERNATIVE_DEFAULT_LANGUAGE_CHANGED
+---[Documentation](https://wow.gamepedia.com/ALTERNATIVE_DEFAULT_LANGUAGE_CHANGED)
 local ALTERNATIVE_DEFAULT_LANGUAGE_CHANGED = {}
 
 ---@class BN_CHAT_MSG_ADDON
@@ -84,37 +85,45 @@ local ALTERNATIVE_DEFAULT_LANGUAGE_CHANGED = {}
 ---@field text string
 ---@field channel string
 ---@field senderID number
+---[Documentation](https://wow.gamepedia.com/BN_CHAT_MSG_ADDON)
 local BN_CHAT_MSG_ADDON = {}
 
 ---@class CHANNEL_COUNT_UPDATE
 ---@field displayIndex number
 ---@field count number
+---[Documentation](https://wow.gamepedia.com/CHANNEL_COUNT_UPDATE)
 local CHANNEL_COUNT_UPDATE = {}
 
 ---@class CHANNEL_FLAGS_UPDATED
 ---@field displayIndex number
+---[Documentation](https://wow.gamepedia.com/CHANNEL_FLAGS_UPDATED)
 local CHANNEL_FLAGS_UPDATED = {}
 
 ---@class CHANNEL_INVITE_REQUEST
 ---@field channelID string
 ---@field name string
+---[Documentation](https://wow.gamepedia.com/CHANNEL_INVITE_REQUEST)
 local CHANNEL_INVITE_REQUEST = {}
 
 ---@class CHANNEL_LEFT
 ---@field chatChannelID number
 ---@field name string
+---[Documentation](https://wow.gamepedia.com/CHANNEL_LEFT)
 local CHANNEL_LEFT = {}
 
 ---@class CHANNEL_PASSWORD_REQUEST
 ---@field channelID string
+---[Documentation](https://wow.gamepedia.com/CHANNEL_PASSWORD_REQUEST)
 local CHANNEL_PASSWORD_REQUEST = {}
 
 ---@class CHANNEL_ROSTER_UPDATE
 ---@field displayIndex number
 ---@field count number
+---[Documentation](https://wow.gamepedia.com/CHANNEL_ROSTER_UPDATE)
 local CHANNEL_ROSTER_UPDATE = {}
 
 ---@class CHANNEL_UI_UPDATE
+---[Documentation](https://wow.gamepedia.com/CHANNEL_UI_UPDATE)
 local CHANNEL_UI_UPDATE = {}
 
 ---@class CHAT_COMBAT_MSG_ARENA_POINTS_GAIN
@@ -135,6 +144,7 @@ local CHANNEL_UI_UPDATE = {}
 ---@field isSubtitle boolean
 ---@field hideSenderInLetterbox boolean
 ---@field supressRaidIcons boolean
+---[Documentation](https://wow.gamepedia.com/CHAT_COMBAT_MSG_ARENA_POINTS_GAIN)
 local CHAT_COMBAT_MSG_ARENA_POINTS_GAIN = {}
 
 ---@class CHAT_MSG_ACHIEVEMENT
@@ -155,6 +165,7 @@ local CHAT_COMBAT_MSG_ARENA_POINTS_GAIN = {}
 ---@field isSubtitle boolean
 ---@field hideSenderInLetterbox boolean
 ---@field supressRaidIcons boolean
+---[Documentation](https://wow.gamepedia.com/CHAT_MSG_ACHIEVEMENT)
 local CHAT_MSG_ACHIEVEMENT = {}
 
 ---@class CHAT_MSG_ADDON
@@ -167,6 +178,7 @@ local CHAT_MSG_ACHIEVEMENT = {}
 ---@field localID number
 ---@field name string
 ---@field instanceID number
+---[Documentation](https://wow.gamepedia.com/CHAT_MSG_ADDON)
 local CHAT_MSG_ADDON = {}
 
 ---@class CHAT_MSG_ADDON_LOGGED
@@ -179,6 +191,7 @@ local CHAT_MSG_ADDON = {}
 ---@field localID number
 ---@field name string
 ---@field instanceID number
+---[Documentation](https://wow.gamepedia.com/CHAT_MSG_ADDON_LOGGED)
 local CHAT_MSG_ADDON_LOGGED = {}
 
 ---@class CHAT_MSG_AFK
@@ -199,6 +212,7 @@ local CHAT_MSG_ADDON_LOGGED = {}
 ---@field isSubtitle boolean
 ---@field hideSenderInLetterbox boolean
 ---@field supressRaidIcons boolean
+---[Documentation](https://wow.gamepedia.com/CHAT_MSG_AFK)
 local CHAT_MSG_AFK = {}
 
 ---@class CHAT_MSG_BG_SYSTEM_ALLIANCE
@@ -219,6 +233,7 @@ local CHAT_MSG_AFK = {}
 ---@field isSubtitle boolean
 ---@field hideSenderInLetterbox boolean
 ---@field supressRaidIcons boolean
+---[Documentation](https://wow.gamepedia.com/CHAT_MSG_BG_SYSTEM_ALLIANCE)
 local CHAT_MSG_BG_SYSTEM_ALLIANCE = {}
 
 ---@class CHAT_MSG_BG_SYSTEM_HORDE
@@ -239,6 +254,7 @@ local CHAT_MSG_BG_SYSTEM_ALLIANCE = {}
 ---@field isSubtitle boolean
 ---@field hideSenderInLetterbox boolean
 ---@field supressRaidIcons boolean
+---[Documentation](https://wow.gamepedia.com/CHAT_MSG_BG_SYSTEM_HORDE)
 local CHAT_MSG_BG_SYSTEM_HORDE = {}
 
 ---@class CHAT_MSG_BG_SYSTEM_NEUTRAL
@@ -259,6 +275,7 @@ local CHAT_MSG_BG_SYSTEM_HORDE = {}
 ---@field isSubtitle boolean
 ---@field hideSenderInLetterbox boolean
 ---@field supressRaidIcons boolean
+---[Documentation](https://wow.gamepedia.com/CHAT_MSG_BG_SYSTEM_NEUTRAL)
 local CHAT_MSG_BG_SYSTEM_NEUTRAL = {}
 
 ---@class CHAT_MSG_BN
@@ -279,6 +296,7 @@ local CHAT_MSG_BG_SYSTEM_NEUTRAL = {}
 ---@field isSubtitle boolean
 ---@field hideSenderInLetterbox boolean
 ---@field supressRaidIcons boolean
+---[Documentation](https://wow.gamepedia.com/CHAT_MSG_BN)
 local CHAT_MSG_BN = {}
 
 ---@class CHAT_MSG_BN_INLINE_TOAST_ALERT
@@ -299,6 +317,7 @@ local CHAT_MSG_BN = {}
 ---@field isSubtitle boolean
 ---@field hideSenderInLetterbox boolean
 ---@field supressRaidIcons boolean
+---[Documentation](https://wow.gamepedia.com/CHAT_MSG_BN_INLINE_TOAST_ALERT)
 local CHAT_MSG_BN_INLINE_TOAST_ALERT = {}
 
 ---@class CHAT_MSG_BN_INLINE_TOAST_BROADCAST
@@ -319,6 +338,7 @@ local CHAT_MSG_BN_INLINE_TOAST_ALERT = {}
 ---@field isSubtitle boolean
 ---@field hideSenderInLetterbox boolean
 ---@field supressRaidIcons boolean
+---[Documentation](https://wow.gamepedia.com/CHAT_MSG_BN_INLINE_TOAST_BROADCAST)
 local CHAT_MSG_BN_INLINE_TOAST_BROADCAST = {}
 
 ---@class CHAT_MSG_BN_INLINE_TOAST_BROADCAST_INFORM
@@ -339,6 +359,7 @@ local CHAT_MSG_BN_INLINE_TOAST_BROADCAST = {}
 ---@field isSubtitle boolean
 ---@field hideSenderInLetterbox boolean
 ---@field supressRaidIcons boolean
+---[Documentation](https://wow.gamepedia.com/CHAT_MSG_BN_INLINE_TOAST_BROADCAST_INFORM)
 local CHAT_MSG_BN_INLINE_TOAST_BROADCAST_INFORM = {}
 
 ---@class CHAT_MSG_BN_INLINE_TOAST_CONVERSATION
@@ -359,6 +380,7 @@ local CHAT_MSG_BN_INLINE_TOAST_BROADCAST_INFORM = {}
 ---@field isSubtitle boolean
 ---@field hideSenderInLetterbox boolean
 ---@field supressRaidIcons boolean
+---[Documentation](https://wow.gamepedia.com/CHAT_MSG_BN_INLINE_TOAST_CONVERSATION)
 local CHAT_MSG_BN_INLINE_TOAST_CONVERSATION = {}
 
 ---@class CHAT_MSG_BN_WHISPER
@@ -379,6 +401,7 @@ local CHAT_MSG_BN_INLINE_TOAST_CONVERSATION = {}
 ---@field isSubtitle boolean
 ---@field hideSenderInLetterbox boolean
 ---@field supressRaidIcons boolean
+---[Documentation](https://wow.gamepedia.com/CHAT_MSG_BN_WHISPER)
 local CHAT_MSG_BN_WHISPER = {}
 
 ---@class CHAT_MSG_BN_WHISPER_INFORM
@@ -399,6 +422,7 @@ local CHAT_MSG_BN_WHISPER = {}
 ---@field isSubtitle boolean
 ---@field hideSenderInLetterbox boolean
 ---@field supressRaidIcons boolean
+---[Documentation](https://wow.gamepedia.com/CHAT_MSG_BN_WHISPER_INFORM)
 local CHAT_MSG_BN_WHISPER_INFORM = {}
 
 ---@class CHAT_MSG_BN_WHISPER_PLAYER_OFFLINE
@@ -419,6 +443,7 @@ local CHAT_MSG_BN_WHISPER_INFORM = {}
 ---@field isSubtitle boolean
 ---@field hideSenderInLetterbox boolean
 ---@field supressRaidIcons boolean
+---[Documentation](https://wow.gamepedia.com/CHAT_MSG_BN_WHISPER_PLAYER_OFFLINE)
 local CHAT_MSG_BN_WHISPER_PLAYER_OFFLINE = {}
 
 ---@class CHAT_MSG_CHANNEL
@@ -439,6 +464,7 @@ local CHAT_MSG_BN_WHISPER_PLAYER_OFFLINE = {}
 ---@field isSubtitle boolean
 ---@field hideSenderInLetterbox boolean
 ---@field supressRaidIcons boolean
+---[Documentation](https://wow.gamepedia.com/CHAT_MSG_CHANNEL)
 local CHAT_MSG_CHANNEL = {}
 
 ---@class CHAT_MSG_CHANNEL_JOIN
@@ -459,6 +485,7 @@ local CHAT_MSG_CHANNEL = {}
 ---@field isSubtitle boolean
 ---@field hideSenderInLetterbox boolean
 ---@field supressRaidIcons boolean
+---[Documentation](https://wow.gamepedia.com/CHAT_MSG_CHANNEL_JOIN)
 local CHAT_MSG_CHANNEL_JOIN = {}
 
 ---@class CHAT_MSG_CHANNEL_LEAVE
@@ -479,6 +506,7 @@ local CHAT_MSG_CHANNEL_JOIN = {}
 ---@field isSubtitle boolean
 ---@field hideSenderInLetterbox boolean
 ---@field supressRaidIcons boolean
+---[Documentation](https://wow.gamepedia.com/CHAT_MSG_CHANNEL_LEAVE)
 local CHAT_MSG_CHANNEL_LEAVE = {}
 
 ---@class CHAT_MSG_CHANNEL_LIST
@@ -499,6 +527,7 @@ local CHAT_MSG_CHANNEL_LEAVE = {}
 ---@field isSubtitle boolean
 ---@field hideSenderInLetterbox boolean
 ---@field supressRaidIcons boolean
+---[Documentation](https://wow.gamepedia.com/CHAT_MSG_CHANNEL_LIST)
 local CHAT_MSG_CHANNEL_LIST = {}
 
 ---@class CHAT_MSG_CHANNEL_NOTICE
@@ -519,6 +548,7 @@ local CHAT_MSG_CHANNEL_LIST = {}
 ---@field isSubtitle boolean
 ---@field hideSenderInLetterbox boolean
 ---@field supressRaidIcons boolean
+---[Documentation](https://wow.gamepedia.com/CHAT_MSG_CHANNEL_NOTICE)
 local CHAT_MSG_CHANNEL_NOTICE = {}
 
 ---@class CHAT_MSG_CHANNEL_NOTICE_USER
@@ -539,6 +569,7 @@ local CHAT_MSG_CHANNEL_NOTICE = {}
 ---@field isSubtitle boolean
 ---@field hideSenderInLetterbox boolean
 ---@field supressRaidIcons boolean
+---[Documentation](https://wow.gamepedia.com/CHAT_MSG_CHANNEL_NOTICE_USER)
 local CHAT_MSG_CHANNEL_NOTICE_USER = {}
 
 ---@class CHAT_MSG_COMBAT_FACTION_CHANGE
@@ -559,6 +590,7 @@ local CHAT_MSG_CHANNEL_NOTICE_USER = {}
 ---@field isSubtitle boolean
 ---@field hideSenderInLetterbox boolean
 ---@field supressRaidIcons boolean
+---[Documentation](https://wow.gamepedia.com/CHAT_MSG_COMBAT_FACTION_CHANGE)
 local CHAT_MSG_COMBAT_FACTION_CHANGE = {}
 
 ---@class CHAT_MSG_COMBAT_HONOR_GAIN
@@ -579,6 +611,7 @@ local CHAT_MSG_COMBAT_FACTION_CHANGE = {}
 ---@field isSubtitle boolean
 ---@field hideSenderInLetterbox boolean
 ---@field supressRaidIcons boolean
+---[Documentation](https://wow.gamepedia.com/CHAT_MSG_COMBAT_HONOR_GAIN)
 local CHAT_MSG_COMBAT_HONOR_GAIN = {}
 
 ---@class CHAT_MSG_COMBAT_MISC_INFO
@@ -599,6 +632,7 @@ local CHAT_MSG_COMBAT_HONOR_GAIN = {}
 ---@field isSubtitle boolean
 ---@field hideSenderInLetterbox boolean
 ---@field supressRaidIcons boolean
+---[Documentation](https://wow.gamepedia.com/CHAT_MSG_COMBAT_MISC_INFO)
 local CHAT_MSG_COMBAT_MISC_INFO = {}
 
 ---@class CHAT_MSG_COMBAT_XP_GAIN
@@ -619,6 +653,7 @@ local CHAT_MSG_COMBAT_MISC_INFO = {}
 ---@field isSubtitle boolean
 ---@field hideSenderInLetterbox boolean
 ---@field supressRaidIcons boolean
+---[Documentation](https://wow.gamepedia.com/CHAT_MSG_COMBAT_XP_GAIN)
 local CHAT_MSG_COMBAT_XP_GAIN = {}
 
 ---@class CHAT_MSG_COMMUNITIES_CHANNEL
@@ -639,6 +674,7 @@ local CHAT_MSG_COMBAT_XP_GAIN = {}
 ---@field isSubtitle boolean
 ---@field hideSenderInLetterbox boolean
 ---@field supressRaidIcons boolean
+---[Documentation](https://wow.gamepedia.com/CHAT_MSG_COMMUNITIES_CHANNEL)
 local CHAT_MSG_COMMUNITIES_CHANNEL = {}
 
 ---@class CHAT_MSG_CURRENCY
@@ -659,6 +695,7 @@ local CHAT_MSG_COMMUNITIES_CHANNEL = {}
 ---@field isSubtitle boolean
 ---@field hideSenderInLetterbox boolean
 ---@field supressRaidIcons boolean
+---[Documentation](https://wow.gamepedia.com/CHAT_MSG_CURRENCY)
 local CHAT_MSG_CURRENCY = {}
 
 ---@class CHAT_MSG_DND
@@ -679,6 +716,7 @@ local CHAT_MSG_CURRENCY = {}
 ---@field isSubtitle boolean
 ---@field hideSenderInLetterbox boolean
 ---@field supressRaidIcons boolean
+---[Documentation](https://wow.gamepedia.com/CHAT_MSG_DND)
 local CHAT_MSG_DND = {}
 
 ---@class CHAT_MSG_EMOTE
@@ -699,6 +737,7 @@ local CHAT_MSG_DND = {}
 ---@field isSubtitle boolean
 ---@field hideSenderInLetterbox boolean
 ---@field supressRaidIcons boolean
+---[Documentation](https://wow.gamepedia.com/CHAT_MSG_EMOTE)
 local CHAT_MSG_EMOTE = {}
 
 ---@class CHAT_MSG_FILTERED
@@ -719,6 +758,7 @@ local CHAT_MSG_EMOTE = {}
 ---@field isSubtitle boolean
 ---@field hideSenderInLetterbox boolean
 ---@field supressRaidIcons boolean
+---[Documentation](https://wow.gamepedia.com/CHAT_MSG_FILTERED)
 local CHAT_MSG_FILTERED = {}
 
 ---@class CHAT_MSG_GUILD
@@ -739,6 +779,7 @@ local CHAT_MSG_FILTERED = {}
 ---@field isSubtitle boolean
 ---@field hideSenderInLetterbox boolean
 ---@field supressRaidIcons boolean
+---[Documentation](https://wow.gamepedia.com/CHAT_MSG_GUILD)
 local CHAT_MSG_GUILD = {}
 
 ---@class CHAT_MSG_GUILD_ACHIEVEMENT
@@ -759,6 +800,7 @@ local CHAT_MSG_GUILD = {}
 ---@field isSubtitle boolean
 ---@field hideSenderInLetterbox boolean
 ---@field supressRaidIcons boolean
+---[Documentation](https://wow.gamepedia.com/CHAT_MSG_GUILD_ACHIEVEMENT)
 local CHAT_MSG_GUILD_ACHIEVEMENT = {}
 
 ---@class CHAT_MSG_GUILD_ITEM_LOOTED
@@ -779,6 +821,7 @@ local CHAT_MSG_GUILD_ACHIEVEMENT = {}
 ---@field isSubtitle boolean
 ---@field hideSenderInLetterbox boolean
 ---@field supressRaidIcons boolean
+---[Documentation](https://wow.gamepedia.com/CHAT_MSG_GUILD_ITEM_LOOTED)
 local CHAT_MSG_GUILD_ITEM_LOOTED = {}
 
 ---@class CHAT_MSG_IGNORED
@@ -799,6 +842,7 @@ local CHAT_MSG_GUILD_ITEM_LOOTED = {}
 ---@field isSubtitle boolean
 ---@field hideSenderInLetterbox boolean
 ---@field supressRaidIcons boolean
+---[Documentation](https://wow.gamepedia.com/CHAT_MSG_IGNORED)
 local CHAT_MSG_IGNORED = {}
 
 ---@class CHAT_MSG_INSTANCE_CHAT
@@ -819,6 +863,7 @@ local CHAT_MSG_IGNORED = {}
 ---@field isSubtitle boolean
 ---@field hideSenderInLetterbox boolean
 ---@field supressRaidIcons boolean
+---[Documentation](https://wow.gamepedia.com/CHAT_MSG_INSTANCE_CHAT)
 local CHAT_MSG_INSTANCE_CHAT = {}
 
 ---@class CHAT_MSG_INSTANCE_CHAT_LEADER
@@ -839,6 +884,7 @@ local CHAT_MSG_INSTANCE_CHAT = {}
 ---@field isSubtitle boolean
 ---@field hideSenderInLetterbox boolean
 ---@field supressRaidIcons boolean
+---[Documentation](https://wow.gamepedia.com/CHAT_MSG_INSTANCE_CHAT_LEADER)
 local CHAT_MSG_INSTANCE_CHAT_LEADER = {}
 
 ---@class CHAT_MSG_LOOT
@@ -859,6 +905,7 @@ local CHAT_MSG_INSTANCE_CHAT_LEADER = {}
 ---@field isSubtitle boolean
 ---@field hideSenderInLetterbox boolean
 ---@field supressRaidIcons boolean
+---[Documentation](https://wow.gamepedia.com/CHAT_MSG_LOOT)
 local CHAT_MSG_LOOT = {}
 
 ---@class CHAT_MSG_MONEY
@@ -879,6 +926,7 @@ local CHAT_MSG_LOOT = {}
 ---@field isSubtitle boolean
 ---@field hideSenderInLetterbox boolean
 ---@field supressRaidIcons boolean
+---[Documentation](https://wow.gamepedia.com/CHAT_MSG_MONEY)
 local CHAT_MSG_MONEY = {}
 
 ---@class CHAT_MSG_MONSTER_EMOTE
@@ -899,6 +947,7 @@ local CHAT_MSG_MONEY = {}
 ---@field isSubtitle boolean
 ---@field hideSenderInLetterbox boolean
 ---@field supressRaidIcons boolean
+---[Documentation](https://wow.gamepedia.com/CHAT_MSG_MONSTER_EMOTE)
 local CHAT_MSG_MONSTER_EMOTE = {}
 
 ---@class CHAT_MSG_MONSTER_PARTY
@@ -919,6 +968,7 @@ local CHAT_MSG_MONSTER_EMOTE = {}
 ---@field isSubtitle boolean
 ---@field hideSenderInLetterbox boolean
 ---@field supressRaidIcons boolean
+---[Documentation](https://wow.gamepedia.com/CHAT_MSG_MONSTER_PARTY)
 local CHAT_MSG_MONSTER_PARTY = {}
 
 ---@class CHAT_MSG_MONSTER_SAY
@@ -939,6 +989,7 @@ local CHAT_MSG_MONSTER_PARTY = {}
 ---@field isSubtitle boolean
 ---@field hideSenderInLetterbox boolean
 ---@field supressRaidIcons boolean
+---[Documentation](https://wow.gamepedia.com/CHAT_MSG_MONSTER_SAY)
 local CHAT_MSG_MONSTER_SAY = {}
 
 ---@class CHAT_MSG_MONSTER_WHISPER
@@ -959,6 +1010,7 @@ local CHAT_MSG_MONSTER_SAY = {}
 ---@field isSubtitle boolean
 ---@field hideSenderInLetterbox boolean
 ---@field supressRaidIcons boolean
+---[Documentation](https://wow.gamepedia.com/CHAT_MSG_MONSTER_WHISPER)
 local CHAT_MSG_MONSTER_WHISPER = {}
 
 ---@class CHAT_MSG_MONSTER_YELL
@@ -979,6 +1031,7 @@ local CHAT_MSG_MONSTER_WHISPER = {}
 ---@field isSubtitle boolean
 ---@field hideSenderInLetterbox boolean
 ---@field supressRaidIcons boolean
+---[Documentation](https://wow.gamepedia.com/CHAT_MSG_MONSTER_YELL)
 local CHAT_MSG_MONSTER_YELL = {}
 
 ---@class CHAT_MSG_OFFICER
@@ -999,6 +1052,7 @@ local CHAT_MSG_MONSTER_YELL = {}
 ---@field isSubtitle boolean
 ---@field hideSenderInLetterbox boolean
 ---@field supressRaidIcons boolean
+---[Documentation](https://wow.gamepedia.com/CHAT_MSG_OFFICER)
 local CHAT_MSG_OFFICER = {}
 
 ---@class CHAT_MSG_OPENING
@@ -1019,6 +1073,7 @@ local CHAT_MSG_OFFICER = {}
 ---@field isSubtitle boolean
 ---@field hideSenderInLetterbox boolean
 ---@field supressRaidIcons boolean
+---[Documentation](https://wow.gamepedia.com/CHAT_MSG_OPENING)
 local CHAT_MSG_OPENING = {}
 
 ---@class CHAT_MSG_PARTY
@@ -1039,6 +1094,7 @@ local CHAT_MSG_OPENING = {}
 ---@field isSubtitle boolean
 ---@field hideSenderInLetterbox boolean
 ---@field supressRaidIcons boolean
+---[Documentation](https://wow.gamepedia.com/CHAT_MSG_PARTY)
 local CHAT_MSG_PARTY = {}
 
 ---@class CHAT_MSG_PARTY_LEADER
@@ -1059,6 +1115,7 @@ local CHAT_MSG_PARTY = {}
 ---@field isSubtitle boolean
 ---@field hideSenderInLetterbox boolean
 ---@field supressRaidIcons boolean
+---[Documentation](https://wow.gamepedia.com/CHAT_MSG_PARTY_LEADER)
 local CHAT_MSG_PARTY_LEADER = {}
 
 ---@class CHAT_MSG_PET_BATTLE_COMBAT_LOG
@@ -1079,6 +1136,7 @@ local CHAT_MSG_PARTY_LEADER = {}
 ---@field isSubtitle boolean
 ---@field hideSenderInLetterbox boolean
 ---@field supressRaidIcons boolean
+---[Documentation](https://wow.gamepedia.com/CHAT_MSG_PET_BATTLE_COMBAT_LOG)
 local CHAT_MSG_PET_BATTLE_COMBAT_LOG = {}
 
 ---@class CHAT_MSG_PET_BATTLE_INFO
@@ -1099,6 +1157,7 @@ local CHAT_MSG_PET_BATTLE_COMBAT_LOG = {}
 ---@field isSubtitle boolean
 ---@field hideSenderInLetterbox boolean
 ---@field supressRaidIcons boolean
+---[Documentation](https://wow.gamepedia.com/CHAT_MSG_PET_BATTLE_INFO)
 local CHAT_MSG_PET_BATTLE_INFO = {}
 
 ---@class CHAT_MSG_PET_INFO
@@ -1119,6 +1178,7 @@ local CHAT_MSG_PET_BATTLE_INFO = {}
 ---@field isSubtitle boolean
 ---@field hideSenderInLetterbox boolean
 ---@field supressRaidIcons boolean
+---[Documentation](https://wow.gamepedia.com/CHAT_MSG_PET_INFO)
 local CHAT_MSG_PET_INFO = {}
 
 ---@class CHAT_MSG_RAID
@@ -1139,6 +1199,7 @@ local CHAT_MSG_PET_INFO = {}
 ---@field isSubtitle boolean
 ---@field hideSenderInLetterbox boolean
 ---@field supressRaidIcons boolean
+---[Documentation](https://wow.gamepedia.com/CHAT_MSG_RAID)
 local CHAT_MSG_RAID = {}
 
 ---@class CHAT_MSG_RAID_BOSS_EMOTE
@@ -1159,6 +1220,7 @@ local CHAT_MSG_RAID = {}
 ---@field isSubtitle boolean
 ---@field hideSenderInLetterbox boolean
 ---@field supressRaidIcons boolean
+---[Documentation](https://wow.gamepedia.com/CHAT_MSG_RAID_BOSS_EMOTE)
 local CHAT_MSG_RAID_BOSS_EMOTE = {}
 
 ---@class CHAT_MSG_RAID_BOSS_WHISPER
@@ -1179,6 +1241,7 @@ local CHAT_MSG_RAID_BOSS_EMOTE = {}
 ---@field isSubtitle boolean
 ---@field hideSenderInLetterbox boolean
 ---@field supressRaidIcons boolean
+---[Documentation](https://wow.gamepedia.com/CHAT_MSG_RAID_BOSS_WHISPER)
 local CHAT_MSG_RAID_BOSS_WHISPER = {}
 
 ---@class CHAT_MSG_RAID_LEADER
@@ -1199,6 +1262,7 @@ local CHAT_MSG_RAID_BOSS_WHISPER = {}
 ---@field isSubtitle boolean
 ---@field hideSenderInLetterbox boolean
 ---@field supressRaidIcons boolean
+---[Documentation](https://wow.gamepedia.com/CHAT_MSG_RAID_LEADER)
 local CHAT_MSG_RAID_LEADER = {}
 
 ---@class CHAT_MSG_RAID_WARNING
@@ -1219,6 +1283,7 @@ local CHAT_MSG_RAID_LEADER = {}
 ---@field isSubtitle boolean
 ---@field hideSenderInLetterbox boolean
 ---@field supressRaidIcons boolean
+---[Documentation](https://wow.gamepedia.com/CHAT_MSG_RAID_WARNING)
 local CHAT_MSG_RAID_WARNING = {}
 
 ---@class CHAT_MSG_RESTRICTED
@@ -1239,6 +1304,7 @@ local CHAT_MSG_RAID_WARNING = {}
 ---@field isSubtitle boolean
 ---@field hideSenderInLetterbox boolean
 ---@field supressRaidIcons boolean
+---[Documentation](https://wow.gamepedia.com/CHAT_MSG_RESTRICTED)
 local CHAT_MSG_RESTRICTED = {}
 
 ---@class CHAT_MSG_SAY
@@ -1259,6 +1325,7 @@ local CHAT_MSG_RESTRICTED = {}
 ---@field isSubtitle boolean
 ---@field hideSenderInLetterbox boolean
 ---@field supressRaidIcons boolean
+---[Documentation](https://wow.gamepedia.com/CHAT_MSG_SAY)
 local CHAT_MSG_SAY = {}
 
 ---@class CHAT_MSG_SKILL
@@ -1279,6 +1346,7 @@ local CHAT_MSG_SAY = {}
 ---@field isSubtitle boolean
 ---@field hideSenderInLetterbox boolean
 ---@field supressRaidIcons boolean
+---[Documentation](https://wow.gamepedia.com/CHAT_MSG_SKILL)
 local CHAT_MSG_SKILL = {}
 
 ---@class CHAT_MSG_SYSTEM
@@ -1299,6 +1367,7 @@ local CHAT_MSG_SKILL = {}
 ---@field isSubtitle boolean
 ---@field hideSenderInLetterbox boolean
 ---@field supressRaidIcons boolean
+---[Documentation](https://wow.gamepedia.com/CHAT_MSG_SYSTEM)
 local CHAT_MSG_SYSTEM = {}
 
 ---@class CHAT_MSG_TARGETICONS
@@ -1319,6 +1388,7 @@ local CHAT_MSG_SYSTEM = {}
 ---@field isSubtitle boolean
 ---@field hideSenderInLetterbox boolean
 ---@field supressRaidIcons boolean
+---[Documentation](https://wow.gamepedia.com/CHAT_MSG_TARGETICONS)
 local CHAT_MSG_TARGETICONS = {}
 
 ---@class CHAT_MSG_TEXT_EMOTE
@@ -1339,6 +1409,7 @@ local CHAT_MSG_TARGETICONS = {}
 ---@field isSubtitle boolean
 ---@field hideSenderInLetterbox boolean
 ---@field supressRaidIcons boolean
+---[Documentation](https://wow.gamepedia.com/CHAT_MSG_TEXT_EMOTE)
 local CHAT_MSG_TEXT_EMOTE = {}
 
 ---@class CHAT_MSG_TRADESKILLS
@@ -1359,6 +1430,7 @@ local CHAT_MSG_TEXT_EMOTE = {}
 ---@field isSubtitle boolean
 ---@field hideSenderInLetterbox boolean
 ---@field supressRaidIcons boolean
+---[Documentation](https://wow.gamepedia.com/CHAT_MSG_TRADESKILLS)
 local CHAT_MSG_TRADESKILLS = {}
 
 ---@class CHAT_MSG_WHISPER
@@ -1379,6 +1451,7 @@ local CHAT_MSG_TRADESKILLS = {}
 ---@field isSubtitle boolean
 ---@field hideSenderInLetterbox boolean
 ---@field supressRaidIcons boolean
+---[Documentation](https://wow.gamepedia.com/CHAT_MSG_WHISPER)
 local CHAT_MSG_WHISPER = {}
 
 ---@class CHAT_MSG_WHISPER_INFORM
@@ -1399,6 +1472,7 @@ local CHAT_MSG_WHISPER = {}
 ---@field isSubtitle boolean
 ---@field hideSenderInLetterbox boolean
 ---@field supressRaidIcons boolean
+---[Documentation](https://wow.gamepedia.com/CHAT_MSG_WHISPER_INFORM)
 local CHAT_MSG_WHISPER_INFORM = {}
 
 ---@class CHAT_MSG_YELL
@@ -1419,19 +1493,24 @@ local CHAT_MSG_WHISPER_INFORM = {}
 ---@field isSubtitle boolean
 ---@field hideSenderInLetterbox boolean
 ---@field supressRaidIcons boolean
+---[Documentation](https://wow.gamepedia.com/CHAT_MSG_YELL)
 local CHAT_MSG_YELL = {}
 
 ---@class CHAT_SERVER_DISCONNECTED
 ---@field isInitialMessage boolean
+---[Documentation](https://wow.gamepedia.com/CHAT_SERVER_DISCONNECTED)
 local CHAT_SERVER_DISCONNECTED = {}
 
 ---@class CHAT_SERVER_RECONNECTED
+---[Documentation](https://wow.gamepedia.com/CHAT_SERVER_RECONNECTED)
 local CHAT_SERVER_RECONNECTED = {}
 
 ---@class CLEAR_BOSS_EMOTES
+---[Documentation](https://wow.gamepedia.com/CLEAR_BOSS_EMOTES)
 local CLEAR_BOSS_EMOTES = {}
 
 ---@class LANGUAGE_LIST_CHANGED
+---[Documentation](https://wow.gamepedia.com/LANGUAGE_LIST_CHANGED)
 local LANGUAGE_LIST_CHANGED = {}
 
 ---@class QUEST_BOSS_EMOTE
@@ -1439,6 +1518,7 @@ local LANGUAGE_LIST_CHANGED = {}
 ---@field playerName string
 ---@field displayTime number
 ---@field enableBossEmoteWarningSound boolean
+---[Documentation](https://wow.gamepedia.com/QUEST_BOSS_EMOTE)
 local QUEST_BOSS_EMOTE = {}
 
 ---@class RAID_BOSS_EMOTE
@@ -1446,6 +1526,7 @@ local QUEST_BOSS_EMOTE = {}
 ---@field playerName string
 ---@field displayTime number
 ---@field enableBossEmoteWarningSound boolean
+---[Documentation](https://wow.gamepedia.com/RAID_BOSS_EMOTE)
 local RAID_BOSS_EMOTE = {}
 
 ---@class RAID_BOSS_WHISPER
@@ -1453,6 +1534,7 @@ local RAID_BOSS_EMOTE = {}
 ---@field playerName string
 ---@field displayTime number
 ---@field enableBossEmoteWarningSound boolean
+---[Documentation](https://wow.gamepedia.com/RAID_BOSS_WHISPER)
 local RAID_BOSS_WHISPER = {}
 
 ---@class RAID_INSTANCE_WELCOME
@@ -1460,6 +1542,7 @@ local RAID_BOSS_WHISPER = {}
 ---@field timeLeft number
 ---@field locked number
 ---@field extended number
+---[Documentation](https://wow.gamepedia.com/RAID_INSTANCE_WELCOME)
 local RAID_INSTANCE_WELCOME = {}
 
 ---@class UPDATE_CHAT_COLOR
@@ -1467,15 +1550,19 @@ local RAID_INSTANCE_WELCOME = {}
 ---@field r number
 ---@field g number
 ---@field b number
+---[Documentation](https://wow.gamepedia.com/UPDATE_CHAT_COLOR)
 local UPDATE_CHAT_COLOR = {}
 
 ---@class UPDATE_CHAT_COLOR_NAME_BY_CLASS
 ---@field name string
 ---@field colorNameByClass boolean
+---[Documentation](https://wow.gamepedia.com/UPDATE_CHAT_COLOR_NAME_BY_CLASS)
 local UPDATE_CHAT_COLOR_NAME_BY_CLASS = {}
 
 ---@class UPDATE_CHAT_WINDOWS
+---[Documentation](https://wow.gamepedia.com/UPDATE_CHAT_WINDOWS)
 local UPDATE_CHAT_WINDOWS = {}
 
 ---@class UPDATE_FLOATING_CHAT_WINDOWS
+---[Documentation](https://wow.gamepedia.com/UPDATE_FLOATING_CHAT_WINDOWS)
 local UPDATE_FLOATING_CHAT_WINDOWS = {}

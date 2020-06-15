@@ -42,6 +42,7 @@ function C_AzeriteItem.IsAzeriteItemByID(itemInfo) end
 ---@field azeriteItemLocation ItemLocationMixin
 ---@field oldExperienceAmount number
 ---@field newExperienceAmount number
+---[Documentation](https://wow.gamepedia.com/AZERITE_ITEM_EXPERIENCE_CHANGED)
 local AZERITE_ITEM_EXPERIENCE_CHANGED = {}
 
 ---@class AZERITE_ITEM_POWER_LEVEL_CHANGED
@@ -49,6 +50,7 @@ local AZERITE_ITEM_EXPERIENCE_CHANGED = {}
 ---@field oldPowerLevel number
 ---@field newPowerLevel number
 ---@field unlockedEmpoweredItemsInfo UnlockedAzeriteEmpoweredItems[]
+---[Documentation](https://wow.gamepedia.com/AZERITE_ITEM_POWER_LEVEL_CHANGED)
 local AZERITE_ITEM_POWER_LEVEL_CHANGED = {}
 
 ---@class UnlockedAzeriteEmpoweredItems

@@ -72,18 +72,21 @@ function C_MythicPlus.RequestMapInfo() end
 function C_MythicPlus.RequestRewards() end
 
 ---@class MYTHIC_PLUS_CURRENT_AFFIX_UPDATE
+---[Documentation](https://wow.gamepedia.com/MYTHIC_PLUS_CURRENT_AFFIX_UPDATE)
 local MYTHIC_PLUS_CURRENT_AFFIX_UPDATE = {}
 
 ---@class MYTHIC_PLUS_NEW_SEASON_RECORD
 ---@field mapChallengeModeID number
 ---@field completionMilliseconds number
 ---@field level number
+---[Documentation](https://wow.gamepedia.com/MYTHIC_PLUS_NEW_SEASON_RECORD)
 local MYTHIC_PLUS_NEW_SEASON_RECORD = {}
 
 ---@class MYTHIC_PLUS_NEW_WEEKLY_RECORD
 ---@field mapChallengeModeID number
 ---@field completionMilliseconds number
 ---@field level number
+---[Documentation](https://wow.gamepedia.com/MYTHIC_PLUS_NEW_WEEKLY_RECORD)
 local MYTHIC_PLUS_NEW_WEEKLY_RECORD = {}
 
 ---@class MapSeasonBestInfo

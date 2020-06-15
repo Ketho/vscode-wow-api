@@ -45,17 +45,22 @@ function C_ScrappingMachineUI.SetScrappingMachine(gameObject) end
 function C_ScrappingMachineUI.ValidateScrappingList() end
 
 ---@class SCRAPPING_MACHINE_CLOSE
+---[Documentation](https://wow.gamepedia.com/SCRAPPING_MACHINE_CLOSE)
 local SCRAPPING_MACHINE_CLOSE = {}
 
 ---@class SCRAPPING_MACHINE_ITEM_REMOVED_OR_CANCELLED
 ---@field index number
+---[Documentation](https://wow.gamepedia.com/SCRAPPING_MACHINE_ITEM_REMOVED_OR_CANCELLED)
 local SCRAPPING_MACHINE_ITEM_REMOVED_OR_CANCELLED = {}
 
 ---@class SCRAPPING_MACHINE_PENDING_ITEM_CHANGED
+---[Documentation](https://wow.gamepedia.com/SCRAPPING_MACHINE_PENDING_ITEM_CHANGED)
 local SCRAPPING_MACHINE_PENDING_ITEM_CHANGED = {}
 
 ---@class SCRAPPING_MACHINE_SCRAPPING_FINISHED
+---[Documentation](https://wow.gamepedia.com/SCRAPPING_MACHINE_SCRAPPING_FINISHED)
 local SCRAPPING_MACHINE_SCRAPPING_FINISHED = {}
 
 ---@class SCRAPPING_MACHINE_SHOW
+---[Documentation](https://wow.gamepedia.com/SCRAPPING_MACHINE_SHOW)
 local SCRAPPING_MACHINE_SHOW = {}

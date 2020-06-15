@@ -6,4 +6,5 @@ C_IslandsInfo = {}
 ---@field factionIndex number
 ---@field gainedBy string
 ---@field gainedFrom string
+---[Documentation](https://wow.gamepedia.com/ISLAND_AZERITE_GAIN)
 local ISLAND_AZERITE_GAIN = {}

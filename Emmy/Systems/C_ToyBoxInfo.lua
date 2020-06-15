@@ -11,10 +11,12 @@ function C_ToyBoxInfo.NeedsFanfare(itemID) end
 
 ---@class NEW_TOY_ADDED
 ---@field itemID number
+---[Documentation](https://wow.gamepedia.com/NEW_TOY_ADDED)
 local NEW_TOY_ADDED = {}
 
 ---@class TOYS_UPDATED
 ---@field itemID number
 ---@field isNew boolean
 ---@field hasFanfare boolean
+---[Documentation](https://wow.gamepedia.com/TOYS_UPDATED)
 local TOYS_UPDATED = {}

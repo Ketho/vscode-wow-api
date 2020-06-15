@@ -6,6 +6,7 @@ function Emmy:GetEvent(event)
 			tinsert(tbl, self:GetField("field", arg))
 		end
 	end
+	tinsert(tbl, self.fs_doc:format(event.LiteralName))
 	tinsert(tbl, format("local %s = {}", event.LiteralName))
 	return table.concat(tbl, "\n")
 end

@@ -112,10 +112,12 @@ function C_UIWidgetManager.GetTopCenterWidgetSetID() end
 function C_UIWidgetManager.GetZoneControlVisualizationInfo(widgetID) end
 
 ---@class UPDATE_ALL_UI_WIDGETS
+---[Documentation](https://wow.gamepedia.com/UPDATE_ALL_UI_WIDGETS)
 local UPDATE_ALL_UI_WIDGETS = {}
 
 ---@class UPDATE_UI_WIDGET
 ---@field widgetInfo UIWidgetInfo
+---[Documentation](https://wow.gamepedia.com/UPDATE_UI_WIDGET)
 local UPDATE_UI_WIDGET = {}
 
 ---@class CaptureBarWidgetFillDirectionType

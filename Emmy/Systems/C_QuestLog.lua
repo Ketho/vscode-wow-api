@@ -145,22 +145,27 @@ function C_QuestLog.ShouldShowQuestRewards(questID) end
 ---@class QUEST_ACCEPTED
 ---@field questIndex number
 ---@field questId number
+---[Documentation](https://wow.gamepedia.com/QUEST_ACCEPTED)
 local QUEST_ACCEPTED = {}
 
 ---@class QUEST_AUTOCOMPLETE
 ---@field questId number
+---[Documentation](https://wow.gamepedia.com/QUEST_AUTOCOMPLETE)
 local QUEST_AUTOCOMPLETE = {}
 
 ---@class QUEST_COMPLETE
+---[Documentation](https://wow.gamepedia.com/QUEST_COMPLETE)
 local QUEST_COMPLETE = {}
 
 ---@class QUEST_DATA_LOAD_RESULT
 ---@field questID number
 ---@field success boolean
+---[Documentation](https://wow.gamepedia.com/QUEST_DATA_LOAD_RESULT)
 local QUEST_DATA_LOAD_RESULT = {}
 
 ---@class QUEST_DETAIL
 ---@field questStartItemID number
+---[Documentation](https://wow.gamepedia.com/QUEST_DETAIL)
 local QUEST_DETAIL = {}
 
 ---@class QUEST_LOG_CRITERIA_UPDATE
@@ -169,52 +174,65 @@ local QUEST_DETAIL = {}
 ---@field description string
 ---@field numFulfilled number
 ---@field numRequired number
+---[Documentation](https://wow.gamepedia.com/QUEST_LOG_CRITERIA_UPDATE)
 local QUEST_LOG_CRITERIA_UPDATE = {}
 
 ---@class QUEST_LOG_UPDATE
+---[Documentation](https://wow.gamepedia.com/QUEST_LOG_UPDATE)
 local QUEST_LOG_UPDATE = {}
 
 ---@class QUEST_POI_UPDATE
+---[Documentation](https://wow.gamepedia.com/QUEST_POI_UPDATE)
 local QUEST_POI_UPDATE = {}
 
 ---@class QUEST_REMOVED
 ---@field questID number
 ---@field wasReplayQuest boolean
+---[Documentation](https://wow.gamepedia.com/QUEST_REMOVED)
 local QUEST_REMOVED = {}
 
 ---@class QUEST_TURNED_IN
 ---@field questID number
 ---@field xpReward number
 ---@field moneyReward number
+---[Documentation](https://wow.gamepedia.com/QUEST_TURNED_IN)
 local QUEST_TURNED_IN = {}
 
 ---@class QUEST_WATCH_LIST_CHANGED
 ---@field questID number
 ---@field added boolean
+---[Documentation](https://wow.gamepedia.com/QUEST_WATCH_LIST_CHANGED)
 local QUEST_WATCH_LIST_CHANGED = {}
 
 ---@class QUEST_WATCH_UPDATE
 ---@field questIndex number
+---[Documentation](https://wow.gamepedia.com/QUEST_WATCH_UPDATE)
 local QUEST_WATCH_UPDATE = {}
 
 ---@class QUESTLINE_UPDATE
 ---@field requestRequired boolean
+---[Documentation](https://wow.gamepedia.com/QUESTLINE_UPDATE)
 local QUESTLINE_UPDATE = {}
 
 ---@class SUPER_TRACKED_QUEST_CHANGED
+---[Documentation](https://wow.gamepedia.com/SUPER_TRACKED_QUEST_CHANGED)
 local SUPER_TRACKED_QUEST_CHANGED = {}
 
 ---@class TASK_PROGRESS_UPDATE
+---[Documentation](https://wow.gamepedia.com/TASK_PROGRESS_UPDATE)
 local TASK_PROGRESS_UPDATE = {}
 
 ---@class TREASURE_PICKER_CACHE_FLUSH
+---[Documentation](https://wow.gamepedia.com/TREASURE_PICKER_CACHE_FLUSH)
 local TREASURE_PICKER_CACHE_FLUSH = {}
 
 ---@class WAYPOINT_UPDATE
+---[Documentation](https://wow.gamepedia.com/WAYPOINT_UPDATE)
 local WAYPOINT_UPDATE = {}
 
 ---@class WORLD_QUEST_COMPLETED_BY_SPELL
 ---@field questID number
+---[Documentation](https://wow.gamepedia.com/WORLD_QUEST_COMPLETED_BY_SPELL)
 local WORLD_QUEST_COMPLETED_BY_SPELL = {}
 
 ---@class QuestTag

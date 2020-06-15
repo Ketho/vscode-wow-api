@@ -150,16 +150,20 @@ function C_Item.UnlockItem(itemLocation) end
 function C_Item.UnlockItemByGUID(itemGUID) end
 
 ---@class ACTION_WILL_BIND_ITEM
+---[Documentation](https://wow.gamepedia.com/ACTION_WILL_BIND_ITEM)
 local ACTION_WILL_BIND_ITEM = {}
 
 ---@class BIND_ENCHANT
+---[Documentation](https://wow.gamepedia.com/BIND_ENCHANT)
 local BIND_ENCHANT = {}
 
 ---@class CHARACTER_ITEM_FIXUP_NOTIFICATION
 ---@field fixupVersion number
+---[Documentation](https://wow.gamepedia.com/CHARACTER_ITEM_FIXUP_NOTIFICATION)
 local CHARACTER_ITEM_FIXUP_NOTIFICATION = {}
 
 ---@class CONFIRM_BEFORE_USE
+---[Documentation](https://wow.gamepedia.com/CONFIRM_BEFORE_USE)
 local CONFIRM_BEFORE_USE = {}
 
 ---@class DELETE_ITEM_CONFIRM
@@ -167,40 +171,49 @@ local CONFIRM_BEFORE_USE = {}
 ---@field qualityID number
 ---@field bonding number
 ---@field questWarn number
+---[Documentation](https://wow.gamepedia.com/DELETE_ITEM_CONFIRM)
 local DELETE_ITEM_CONFIRM = {}
 
 ---@class END_BOUND_TRADEABLE
 ---@field reason string
+---[Documentation](https://wow.gamepedia.com/END_BOUND_TRADEABLE)
 local END_BOUND_TRADEABLE = {}
 
 ---@class GET_ITEM_INFO_RECEIVED
 ---@field itemID number
 ---@field success boolean
+---[Documentation](https://wow.gamepedia.com/GET_ITEM_INFO_RECEIVED)
 local GET_ITEM_INFO_RECEIVED = {}
 
 ---@class ITEM_DATA_LOAD_RESULT
 ---@field itemID number
 ---@field success boolean
+---[Documentation](https://wow.gamepedia.com/ITEM_DATA_LOAD_RESULT)
 local ITEM_DATA_LOAD_RESULT = {}
 
 ---@class MERCHANT_CONFIRM_TRADE_TIMER_REMOVAL
 ---@field itemLink string
+---[Documentation](https://wow.gamepedia.com/MERCHANT_CONFIRM_TRADE_TIMER_REMOVAL)
 local MERCHANT_CONFIRM_TRADE_TIMER_REMOVAL = {}
 
 ---@class REPLACE_ENCHANT
 ---@field existingStr string
 ---@field replacementStr string
+---[Documentation](https://wow.gamepedia.com/REPLACE_ENCHANT)
 local REPLACE_ENCHANT = {}
 
 ---@class TRADE_REPLACE_ENCHANT
 ---@field existing string
 ---@field replacement string
+---[Documentation](https://wow.gamepedia.com/TRADE_REPLACE_ENCHANT)
 local TRADE_REPLACE_ENCHANT = {}
 
 ---@class USE_BIND_CONFIRM
+---[Documentation](https://wow.gamepedia.com/USE_BIND_CONFIRM)
 local USE_BIND_CONFIRM = {}
 
 ---@class USE_NO_REFUND_CONFIRM
+---[Documentation](https://wow.gamepedia.com/USE_NO_REFUND_CONFIRM)
 local USE_NO_REFUND_CONFIRM = {}
 
 ---@class InventoryType

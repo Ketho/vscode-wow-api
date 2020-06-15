@@ -52,18 +52,22 @@ function C_RecruitAFriend.RequestUpdatedRecruitmentInfo() end
 
 ---@class RAF_INFO_UPDATED
 ---@field info RafInfo
+---[Documentation](https://wow.gamepedia.com/RAF_INFO_UPDATED)
 local RAF_INFO_UPDATED = {}
 
 ---@class RAF_RECRUITING_ENABLED_STATUS
 ---@field enabled boolean
+---[Documentation](https://wow.gamepedia.com/RAF_RECRUITING_ENABLED_STATUS)
 local RAF_RECRUITING_ENABLED_STATUS = {}
 
 ---@class RAF_SYSTEM_ENABLED_STATUS
 ---@field enabled boolean
+---[Documentation](https://wow.gamepedia.com/RAF_SYSTEM_ENABLED_STATUS)
 local RAF_SYSTEM_ENABLED_STATUS = {}
 
 ---@class RAF_SYSTEM_INFO_UPDATED
 ---@field systemInfo RafSystemInfo
+---[Documentation](https://wow.gamepedia.com/RAF_SYSTEM_INFO_UPDATED)
 local RAF_SYSTEM_INFO_UPDATED = {}
 
 ---@class RafRecruitActivityState

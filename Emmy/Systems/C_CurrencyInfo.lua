@@ -49,9 +49,11 @@ function C_CurrencyInfo.IsCurrencyContainer(currencyID, quantity) end
 ---@field quantityChange number
 ---@field quantityGainSource number
 ---@field quantityLostSource number
+---[Documentation](https://wow.gamepedia.com/CURRENCY_DISPLAY_UPDATE)
 local CURRENCY_DISPLAY_UPDATE = {}
 
 ---@class PLAYER_MONEY
+---[Documentation](https://wow.gamepedia.com/PLAYER_MONEY)
 local PLAYER_MONEY = {}
 
 ---@class CurrencyDisplayInfo

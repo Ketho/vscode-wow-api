@@ -5,18 +5,23 @@ C_VideoOptions = {}
 function C_VideoOptions.GetGxAdapterInfo() end
 
 ---@class DISPLAY_SIZE_CHANGED
+---[Documentation](https://wow.gamepedia.com/DISPLAY_SIZE_CHANGED)
 local DISPLAY_SIZE_CHANGED = {}
 
 ---@class GLUE_SCREENSHOT_FAILED
+---[Documentation](https://wow.gamepedia.com/GLUE_SCREENSHOT_FAILED)
 local GLUE_SCREENSHOT_FAILED = {}
 
 ---@class SCREENSHOT_FAILED
+---[Documentation](https://wow.gamepedia.com/SCREENSHOT_FAILED)
 local SCREENSHOT_FAILED = {}
 
 ---@class SCREENSHOT_STARTED
+---[Documentation](https://wow.gamepedia.com/SCREENSHOT_STARTED)
 local SCREENSHOT_STARTED = {}
 
 ---@class SCREENSHOT_SUCCEEDED
+---[Documentation](https://wow.gamepedia.com/SCREENSHOT_SUCCEEDED)
 local SCREENSHOT_SUCCEEDED = {}
 
 ---@class GxAdapterInfoDetails

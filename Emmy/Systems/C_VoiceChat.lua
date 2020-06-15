@@ -292,33 +292,41 @@ function C_VoiceChat.ToggleMemberMuted(playerLocation) end
 function C_VoiceChat.ToggleMuted() end
 
 ---@class VOICE_CHAT_ACTIVE_INPUT_DEVICE_UPDATED
+---[Documentation](https://wow.gamepedia.com/VOICE_CHAT_ACTIVE_INPUT_DEVICE_UPDATED)
 local VOICE_CHAT_ACTIVE_INPUT_DEVICE_UPDATED = {}
 
 ---@class VOICE_CHAT_ACTIVE_OUTPUT_DEVICE_UPDATED
+---[Documentation](https://wow.gamepedia.com/VOICE_CHAT_ACTIVE_OUTPUT_DEVICE_UPDATED)
 local VOICE_CHAT_ACTIVE_OUTPUT_DEVICE_UPDATED = {}
 
 ---@class VOICE_CHAT_AUDIO_CAPTURE_ENERGY
 ---@field isSpeaking boolean
 ---@field energy number
+---[Documentation](https://wow.gamepedia.com/VOICE_CHAT_AUDIO_CAPTURE_ENERGY)
 local VOICE_CHAT_AUDIO_CAPTURE_ENERGY = {}
 
 ---@class VOICE_CHAT_AUDIO_CAPTURE_STARTED
+---[Documentation](https://wow.gamepedia.com/VOICE_CHAT_AUDIO_CAPTURE_STARTED)
 local VOICE_CHAT_AUDIO_CAPTURE_STARTED = {}
 
 ---@class VOICE_CHAT_AUDIO_CAPTURE_STOPPED
+---[Documentation](https://wow.gamepedia.com/VOICE_CHAT_AUDIO_CAPTURE_STOPPED)
 local VOICE_CHAT_AUDIO_CAPTURE_STOPPED = {}
 
 ---@class VOICE_CHAT_CHANNEL_ACTIVATED
 ---@field channelID number
+---[Documentation](https://wow.gamepedia.com/VOICE_CHAT_CHANNEL_ACTIVATED)
 local VOICE_CHAT_CHANNEL_ACTIVATED = {}
 
 ---@class VOICE_CHAT_CHANNEL_DEACTIVATED
 ---@field channelID number
+---[Documentation](https://wow.gamepedia.com/VOICE_CHAT_CHANNEL_DEACTIVATED)
 local VOICE_CHAT_CHANNEL_DEACTIVATED = {}
 
 ---@class VOICE_CHAT_CHANNEL_DISPLAY_NAME_CHANGED
 ---@field channelID number
 ---@field channelDisplayName string
+---[Documentation](https://wow.gamepedia.com/VOICE_CHAT_CHANNEL_DISPLAY_NAME_CHANGED)
 local VOICE_CHAT_CHANNEL_DISPLAY_NAME_CHANGED = {}
 
 ---@class VOICE_CHAT_CHANNEL_JOINED
@@ -327,121 +335,146 @@ local VOICE_CHAT_CHANNEL_DISPLAY_NAME_CHANGED = {}
 ---@field channelType ChatChannelType
 ---@field clubId string
 ---@field streamId string
+---[Documentation](https://wow.gamepedia.com/VOICE_CHAT_CHANNEL_JOINED)
 local VOICE_CHAT_CHANNEL_JOINED = {}
 
 ---@class VOICE_CHAT_CHANNEL_MEMBER_ACTIVE_STATE_CHANGED
 ---@field memberID number
 ---@field channelID number
 ---@field isActive boolean
+---[Documentation](https://wow.gamepedia.com/VOICE_CHAT_CHANNEL_MEMBER_ACTIVE_STATE_CHANGED)
 local VOICE_CHAT_CHANNEL_MEMBER_ACTIVE_STATE_CHANGED = {}
 
 ---@class VOICE_CHAT_CHANNEL_MEMBER_ADDED
 ---@field memberID number
 ---@field channelID number
+---[Documentation](https://wow.gamepedia.com/VOICE_CHAT_CHANNEL_MEMBER_ADDED)
 local VOICE_CHAT_CHANNEL_MEMBER_ADDED = {}
 
 ---@class VOICE_CHAT_CHANNEL_MEMBER_ENERGY_CHANGED
 ---@field memberID number
 ---@field channelID number
 ---@field speakingEnergy number
+---[Documentation](https://wow.gamepedia.com/VOICE_CHAT_CHANNEL_MEMBER_ENERGY_CHANGED)
 local VOICE_CHAT_CHANNEL_MEMBER_ENERGY_CHANGED = {}
 
 ---@class VOICE_CHAT_CHANNEL_MEMBER_GUID_UPDATED
 ---@field memberID number
 ---@field channelID number
+---[Documentation](https://wow.gamepedia.com/VOICE_CHAT_CHANNEL_MEMBER_GUID_UPDATED)
 local VOICE_CHAT_CHANNEL_MEMBER_GUID_UPDATED = {}
 
 ---@class VOICE_CHAT_CHANNEL_MEMBER_MUTE_FOR_ALL_CHANGED
 ---@field memberID number
 ---@field channelID number
 ---@field isMutedForAll boolean
+---[Documentation](https://wow.gamepedia.com/VOICE_CHAT_CHANNEL_MEMBER_MUTE_FOR_ALL_CHANGED)
 local VOICE_CHAT_CHANNEL_MEMBER_MUTE_FOR_ALL_CHANGED = {}
 
 ---@class VOICE_CHAT_CHANNEL_MEMBER_MUTE_FOR_ME_CHANGED
 ---@field memberID number
 ---@field channelID number
 ---@field isMutedForMe boolean
+---[Documentation](https://wow.gamepedia.com/VOICE_CHAT_CHANNEL_MEMBER_MUTE_FOR_ME_CHANGED)
 local VOICE_CHAT_CHANNEL_MEMBER_MUTE_FOR_ME_CHANGED = {}
 
 ---@class VOICE_CHAT_CHANNEL_MEMBER_REMOVED
 ---@field memberID number
 ---@field channelID number
+---[Documentation](https://wow.gamepedia.com/VOICE_CHAT_CHANNEL_MEMBER_REMOVED)
 local VOICE_CHAT_CHANNEL_MEMBER_REMOVED = {}
 
 ---@class VOICE_CHAT_CHANNEL_MEMBER_SILENCED_CHANGED
 ---@field memberID number
 ---@field channelID number
 ---@field isSilenced boolean
+---[Documentation](https://wow.gamepedia.com/VOICE_CHAT_CHANNEL_MEMBER_SILENCED_CHANGED)
 local VOICE_CHAT_CHANNEL_MEMBER_SILENCED_CHANGED = {}
 
 ---@class VOICE_CHAT_CHANNEL_MEMBER_SPEAKING_STATE_CHANGED
 ---@field memberID number
 ---@field channelID number
 ---@field isSpeaking boolean
+---[Documentation](https://wow.gamepedia.com/VOICE_CHAT_CHANNEL_MEMBER_SPEAKING_STATE_CHANGED)
 local VOICE_CHAT_CHANNEL_MEMBER_SPEAKING_STATE_CHANGED = {}
 
 ---@class VOICE_CHAT_CHANNEL_MEMBER_VOLUME_CHANGED
 ---@field memberID number
 ---@field channelID number
 ---@field volume number
+---[Documentation](https://wow.gamepedia.com/VOICE_CHAT_CHANNEL_MEMBER_VOLUME_CHANGED)
 local VOICE_CHAT_CHANNEL_MEMBER_VOLUME_CHANGED = {}
 
 ---@class VOICE_CHAT_CHANNEL_MUTE_STATE_CHANGED
 ---@field channelID number
 ---@field isMuted boolean
+---[Documentation](https://wow.gamepedia.com/VOICE_CHAT_CHANNEL_MUTE_STATE_CHANGED)
 local VOICE_CHAT_CHANNEL_MUTE_STATE_CHANGED = {}
 
 ---@class VOICE_CHAT_CHANNEL_PTT_CHANGED
 ---@field channelID number
 ---@field pushToTalkSetting string
+---[Documentation](https://wow.gamepedia.com/VOICE_CHAT_CHANNEL_PTT_CHANGED)
 local VOICE_CHAT_CHANNEL_PTT_CHANGED = {}
 
 ---@class VOICE_CHAT_CHANNEL_REMOVED
 ---@field channelID number
+---[Documentation](https://wow.gamepedia.com/VOICE_CHAT_CHANNEL_REMOVED)
 local VOICE_CHAT_CHANNEL_REMOVED = {}
 
 ---@class VOICE_CHAT_CHANNEL_TRANSMIT_CHANGED
 ---@field channelID number
 ---@field isTransmitting boolean
+---[Documentation](https://wow.gamepedia.com/VOICE_CHAT_CHANNEL_TRANSMIT_CHANGED)
 local VOICE_CHAT_CHANNEL_TRANSMIT_CHANGED = {}
 
 ---@class VOICE_CHAT_CHANNEL_VOLUME_CHANGED
 ---@field channelID number
 ---@field volume number
+---[Documentation](https://wow.gamepedia.com/VOICE_CHAT_CHANNEL_VOLUME_CHANGED)
 local VOICE_CHAT_CHANNEL_VOLUME_CHANGED = {}
 
 ---@class VOICE_CHAT_COMMUNICATION_MODE_CHANGED
 ---@field communicationMode CommunicationMode
+---[Documentation](https://wow.gamepedia.com/VOICE_CHAT_COMMUNICATION_MODE_CHANGED)
 local VOICE_CHAT_COMMUNICATION_MODE_CHANGED = {}
 
 ---@class VOICE_CHAT_CONNECTION_SUCCESS
+---[Documentation](https://wow.gamepedia.com/VOICE_CHAT_CONNECTION_SUCCESS)
 local VOICE_CHAT_CONNECTION_SUCCESS = {}
 
 ---@class VOICE_CHAT_DEAFENED_CHANGED
 ---@field isDeafened boolean
+---[Documentation](https://wow.gamepedia.com/VOICE_CHAT_DEAFENED_CHANGED)
 local VOICE_CHAT_DEAFENED_CHANGED = {}
 
 ---@class VOICE_CHAT_ERROR
 ---@field platformCode number
 ---@field statusCode VoiceChatStatusCode
+---[Documentation](https://wow.gamepedia.com/VOICE_CHAT_ERROR)
 local VOICE_CHAT_ERROR = {}
 
 ---@class VOICE_CHAT_INPUT_DEVICES_UPDATED
+---[Documentation](https://wow.gamepedia.com/VOICE_CHAT_INPUT_DEVICES_UPDATED)
 local VOICE_CHAT_INPUT_DEVICES_UPDATED = {}
 
 ---@class VOICE_CHAT_LOGIN
 ---@field status VoiceChatStatusCode
+---[Documentation](https://wow.gamepedia.com/VOICE_CHAT_LOGIN)
 local VOICE_CHAT_LOGIN = {}
 
 ---@class VOICE_CHAT_LOGOUT
 ---@field status VoiceChatStatusCode
+---[Documentation](https://wow.gamepedia.com/VOICE_CHAT_LOGOUT)
 local VOICE_CHAT_LOGOUT = {}
 
 ---@class VOICE_CHAT_MUTED_CHANGED
 ---@field isMuted boolean
+---[Documentation](https://wow.gamepedia.com/VOICE_CHAT_MUTED_CHANGED)
 local VOICE_CHAT_MUTED_CHANGED = {}
 
 ---@class VOICE_CHAT_OUTPUT_DEVICES_UPDATED
+---[Documentation](https://wow.gamepedia.com/VOICE_CHAT_OUTPUT_DEVICES_UPDATED)
 local VOICE_CHAT_OUTPUT_DEVICES_UPDATED = {}
 
 ---@class VOICE_CHAT_PENDING_CHANNEL_JOIN_STATE
@@ -449,14 +482,17 @@ local VOICE_CHAT_OUTPUT_DEVICES_UPDATED = {}
 ---@field clubId string
 ---@field streamId string
 ---@field pendingJoin boolean
+---[Documentation](https://wow.gamepedia.com/VOICE_CHAT_PENDING_CHANNEL_JOIN_STATE)
 local VOICE_CHAT_PENDING_CHANNEL_JOIN_STATE = {}
 
 ---@class VOICE_CHAT_PTT_BUTTON_PRESSED_STATE_CHANGED
 ---@field isPressed boolean
+---[Documentation](https://wow.gamepedia.com/VOICE_CHAT_PTT_BUTTON_PRESSED_STATE_CHANGED)
 local VOICE_CHAT_PTT_BUTTON_PRESSED_STATE_CHANGED = {}
 
 ---@class VOICE_CHAT_SILENCED_CHANGED
 ---@field isSilenced boolean
+---[Documentation](https://wow.gamepedia.com/VOICE_CHAT_SILENCED_CHANGED)
 local VOICE_CHAT_SILENCED_CHANGED = {}
 
 ---@class CommunicationMode
