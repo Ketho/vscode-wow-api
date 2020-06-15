@@ -285,116 +285,116 @@ function C_PvP.SetWarModeDesired(warModeDesired) end
 ---[Documentation](https://wow.gamepedia.com/API_C_PvP.ToggleWarMode)
 function C_PvP.ToggleWarMode() end
 
----@class ARENA_OPPONENT_UPDATE : Event
+---@class ARENA_OPPONENT_UPDATE
 ---@field unitToken string
 ---@field updateReason string
 local ARENA_OPPONENT_UPDATE = {}
 
----@class ARENA_PREP_OPPONENT_SPECIALIZATIONS : Event
+---@class ARENA_PREP_OPPONENT_SPECIALIZATIONS
 local ARENA_PREP_OPPONENT_SPECIALIZATIONS = {}
 
----@class ARENA_SEASON_WORLD_STATE : Event
+---@class ARENA_SEASON_WORLD_STATE
 local ARENA_SEASON_WORLD_STATE = {}
 
----@class BATTLEFIELD_QUEUE_TIMEOUT : Event
+---@class BATTLEFIELD_QUEUE_TIMEOUT
 local BATTLEFIELD_QUEUE_TIMEOUT = {}
 
----@class BATTLEFIELDS_CLOSED : Event
+---@class BATTLEFIELDS_CLOSED
 local BATTLEFIELDS_CLOSED = {}
 
----@class BATTLEFIELDS_SHOW : Event
+---@class BATTLEFIELDS_SHOW
 ---@field isArena boolean
 ---@field battleMasterListID number
 local BATTLEFIELDS_SHOW = {}
 
----@class BATTLEGROUND_OBJECTIVES_UPDATE : Event
+---@class BATTLEGROUND_OBJECTIVES_UPDATE
 local BATTLEGROUND_OBJECTIVES_UPDATE = {}
 
----@class BATTLEGROUND_POINTS_UPDATE : Event
+---@class BATTLEGROUND_POINTS_UPDATE
 local BATTLEGROUND_POINTS_UPDATE = {}
 
----@class GDF_SIM_COMPLETE : Event
+---@class GDF_SIM_COMPLETE
 local GDF_SIM_COMPLETE = {}
 
----@class HONOR_LEVEL_UPDATE : Event
+---@class HONOR_LEVEL_UPDATE
 ---@field isHigherLevel boolean
 local HONOR_LEVEL_UPDATE = {}
 
----@class NOTIFY_PVP_AFK_RESULT : Event
+---@class NOTIFY_PVP_AFK_RESULT
 ---@field offender string
 ---@field numBlackMarksOnOffender number
 ---@field numPlayersIHaveReported number
 local NOTIFY_PVP_AFK_RESULT = {}
 
----@class PLAYER_ENTERING_BATTLEGROUND : Event
+---@class PLAYER_ENTERING_BATTLEGROUND
 local PLAYER_ENTERING_BATTLEGROUND = {}
 
----@class POST_MATCH_CURRENCY_REWARD_UPDATE : Event
+---@class POST_MATCH_CURRENCY_REWARD_UPDATE
 ---@field reward PVPPostMatchCurrencyReward
 local POST_MATCH_CURRENCY_REWARD_UPDATE = {}
 
----@class POST_MATCH_ITEM_REWARD_UPDATE : Event
+---@class POST_MATCH_ITEM_REWARD_UPDATE
 local POST_MATCH_ITEM_REWARD_UPDATE = {}
 
----@class PVP_BRAWL_INFO_UPDATED : Event
+---@class PVP_BRAWL_INFO_UPDATED
 local PVP_BRAWL_INFO_UPDATED = {}
 
----@class PVP_MATCH_ACTIVE : Event
+---@class PVP_MATCH_ACTIVE
 local PVP_MATCH_ACTIVE = {}
 
----@class PVP_MATCH_COMPLETE : Event
+---@class PVP_MATCH_COMPLETE
 ---@field winner number
 ---@field duration number
 local PVP_MATCH_COMPLETE = {}
 
----@class PVP_MATCH_INACTIVE : Event
+---@class PVP_MATCH_INACTIVE
 local PVP_MATCH_INACTIVE = {}
 
----@class PVP_RATED_STATS_UPDATE : Event
+---@class PVP_RATED_STATS_UPDATE
 local PVP_RATED_STATS_UPDATE = {}
 
----@class PVP_REWARDS_UPDATE : Event
+---@class PVP_REWARDS_UPDATE
 local PVP_REWARDS_UPDATE = {}
 
----@class PVP_ROLE_UPDATE : Event
+---@class PVP_ROLE_UPDATE
 local PVP_ROLE_UPDATE = {}
 
----@class PVP_SPECIAL_EVENT_INFO_UPDATED : Event
+---@class PVP_SPECIAL_EVENT_INFO_UPDATED
 local PVP_SPECIAL_EVENT_INFO_UPDATED = {}
 
----@class PVP_TYPES_ENABLED : Event
+---@class PVP_TYPES_ENABLED
 ---@field wargameBattlegrounds boolean
 ---@field ratedBattlegrounds boolean
 ---@field ratedArenas boolean
 local PVP_TYPES_ENABLED = {}
 
----@class PVP_VEHICLE_INFO_UPDATED : Event
+---@class PVP_VEHICLE_INFO_UPDATED
 local PVP_VEHICLE_INFO_UPDATED = {}
 
----@class PVP_WORLDSTATE_UPDATE : Event
+---@class PVP_WORLDSTATE_UPDATE
 local PVP_WORLDSTATE_UPDATE = {}
 
----@class PVPQUEUE_ANYWHERE_SHOW : Event
+---@class PVPQUEUE_ANYWHERE_SHOW
 local PVPQUEUE_ANYWHERE_SHOW = {}
 
----@class PVPQUEUE_ANYWHERE_UPDATE_AVAILABLE : Event
+---@class PVPQUEUE_ANYWHERE_UPDATE_AVAILABLE
 local PVPQUEUE_ANYWHERE_UPDATE_AVAILABLE = {}
 
----@class UPDATE_ACTIVE_BATTLEFIELD : Event
+---@class UPDATE_ACTIVE_BATTLEFIELD
 local UPDATE_ACTIVE_BATTLEFIELD = {}
 
----@class UPDATE_BATTLEFIELD_SCORE : Event
+---@class UPDATE_BATTLEFIELD_SCORE
 local UPDATE_BATTLEFIELD_SCORE = {}
 
----@class UPDATE_BATTLEFIELD_STATUS : Event
+---@class UPDATE_BATTLEFIELD_STATUS
 ---@field battleFieldIndex number
 local UPDATE_BATTLEFIELD_STATUS = {}
 
----@class WAR_MODE_STATUS_UPDATE : Event
+---@class WAR_MODE_STATUS_UPDATE
 ---@field warModeEnabled boolean
 local WAR_MODE_STATUS_UPDATE = {}
 
----@class WARGAME_REQUESTED : Event
+---@class WARGAME_REQUESTED
 ---@field opposingPartyMemberName string
 ---@field battlegroundName string
 ---@field timeoutSeconds number

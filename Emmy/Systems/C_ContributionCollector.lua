@@ -92,29 +92,29 @@ function C_ContributionCollector.HasPendingContribution(contributionID) end
 ---[Documentation](https://wow.gamepedia.com/API_C_ContributionCollector.IsAwaitingRewardQuestData)
 function C_ContributionCollector.IsAwaitingRewardQuestData(contributionID) end
 
----@class CONTRIBUTION_CHANGED : Event
+---@class CONTRIBUTION_CHANGED
 ---@field state ContributionState
 ---@field result ContributionResult
 ---@field name string
 ---@field contributionID number
 local CONTRIBUTION_CHANGED = {}
 
----@class CONTRIBUTION_COLLECTOR_CLOSE : Event
+---@class CONTRIBUTION_COLLECTOR_CLOSE
 local CONTRIBUTION_COLLECTOR_CLOSE = {}
 
----@class CONTRIBUTION_COLLECTOR_OPEN : Event
+---@class CONTRIBUTION_COLLECTOR_OPEN
 local CONTRIBUTION_COLLECTOR_OPEN = {}
 
----@class CONTRIBUTION_COLLECTOR_PENDING : Event
+---@class CONTRIBUTION_COLLECTOR_PENDING
 ---@field contributionID number
 ---@field isPending boolean
 ---@field result number
 local CONTRIBUTION_COLLECTOR_PENDING = {}
 
----@class CONTRIBUTION_COLLECTOR_UPDATE : Event
+---@class CONTRIBUTION_COLLECTOR_UPDATE
 local CONTRIBUTION_COLLECTOR_UPDATE = {}
 
----@class CONTRIBUTION_COLLECTOR_UPDATE_SINGLE : Event
+---@class CONTRIBUTION_COLLECTOR_UPDATE_SINGLE
 ---@field contributionID number
 local CONTRIBUTION_COLLECTOR_UPDATE_SINGLE = {}
 

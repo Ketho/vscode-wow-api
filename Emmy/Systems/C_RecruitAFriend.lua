@@ -50,19 +50,19 @@ function C_RecruitAFriend.RemoveRAFRecruit(wowAccountGUID) end
 ---[Documentation](https://wow.gamepedia.com/API_C_RecruitAFriend.RequestUpdatedRecruitmentInfo)
 function C_RecruitAFriend.RequestUpdatedRecruitmentInfo() end
 
----@class RAF_INFO_UPDATED : Event
+---@class RAF_INFO_UPDATED
 ---@field info RafInfo
 local RAF_INFO_UPDATED = {}
 
----@class RAF_RECRUITING_ENABLED_STATUS : Event
+---@class RAF_RECRUITING_ENABLED_STATUS
 ---@field enabled boolean
 local RAF_RECRUITING_ENABLED_STATUS = {}
 
----@class RAF_SYSTEM_ENABLED_STATUS : Event
+---@class RAF_SYSTEM_ENABLED_STATUS
 ---@field enabled boolean
 local RAF_SYSTEM_ENABLED_STATUS = {}
 
----@class RAF_SYSTEM_INFO_UPDATED : Event
+---@class RAF_SYSTEM_INFO_UPDATED
 ---@field systemInfo RafSystemInfo
 local RAF_SYSTEM_INFO_UPDATED = {}
 

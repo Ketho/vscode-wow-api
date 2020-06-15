@@ -1,11 +1,11 @@
 C_CombatLog = {}
 
----@class COMBAT_LOG_EVENT : Event
+---@class COMBAT_LOG_EVENT
 local COMBAT_LOG_EVENT = {}
 
----@class COMBAT_LOG_EVENT_UNFILTERED : Event
+---@class COMBAT_LOG_EVENT_UNFILTERED
 local COMBAT_LOG_EVENT_UNFILTERED = {}
 
----@class COMBAT_TEXT_UPDATE : Event
+---@class COMBAT_TEXT_UPDATE
 ---@field combatTextType string
 local COMBAT_TEXT_UPDATE = {}

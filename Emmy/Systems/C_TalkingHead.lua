@@ -1,7 +1,7 @@
 C_TalkingHead = {}
 
----@class TALKINGHEAD_CLOSE : Event
+---@class TALKINGHEAD_CLOSE
 local TALKINGHEAD_CLOSE = {}
 
----@class TALKINGHEAD_REQUESTED : Event
+---@class TALKINGHEAD_REQUESTED
 local TALKINGHEAD_REQUESTED = {}

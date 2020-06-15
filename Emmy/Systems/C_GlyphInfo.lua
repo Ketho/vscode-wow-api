@@ -1,12 +1,12 @@
 C_GlyphInfo = {}
 
----@class ACTIVATE_GLYPH : Event
+---@class ACTIVATE_GLYPH
 ---@field spellSlot number
 local ACTIVATE_GLYPH = {}
 
----@class CANCEL_GLYPH_CAST : Event
+---@class CANCEL_GLYPH_CAST
 local CANCEL_GLYPH_CAST = {}
 
----@class USE_GLYPH : Event
+---@class USE_GLYPH
 ---@field spellSlot number
 local USE_GLYPH = {}

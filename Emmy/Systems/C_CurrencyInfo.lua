@@ -43,7 +43,7 @@ function C_CurrencyInfo.GetWarResourcesCurrencyID() end
 ---[Documentation](https://wow.gamepedia.com/API_C_CurrencyInfo.IsCurrencyContainer)
 function C_CurrencyInfo.IsCurrencyContainer(currencyID, quantity) end
 
----@class CURRENCY_DISPLAY_UPDATE : Event
+---@class CURRENCY_DISPLAY_UPDATE
 ---@field currencyType number
 ---@field quantity number
 ---@field quantityChange number
@@ -51,7 +51,7 @@ function C_CurrencyInfo.IsCurrencyContainer(currencyID, quantity) end
 ---@field quantityLostSource number
 local CURRENCY_DISPLAY_UPDATE = {}
 
----@class PLAYER_MONEY : Event
+---@class PLAYER_MONEY
 local PLAYER_MONEY = {}
 
 ---@class CurrencyDisplayInfo

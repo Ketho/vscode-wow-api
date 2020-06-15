@@ -1,7 +1,7 @@
 C_LoadingScreen = {}
 
----@class LOADING_SCREEN_DISABLED : Event
+---@class LOADING_SCREEN_DISABLED
 local LOADING_SCREEN_DISABLED = {}
 
----@class LOADING_SCREEN_ENABLED : Event
+---@class LOADING_SCREEN_ENABLED
 local LOADING_SCREEN_ENABLED = {}

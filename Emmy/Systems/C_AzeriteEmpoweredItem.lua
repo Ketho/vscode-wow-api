@@ -97,18 +97,18 @@ function C_AzeriteEmpoweredItem.SelectPower(azeriteEmpoweredItemLocation, powerI
 ---[Documentation](https://wow.gamepedia.com/API_C_AzeriteEmpoweredItem.SetHasBeenViewed)
 function C_AzeriteEmpoweredItem.SetHasBeenViewed(azeriteEmpoweredItemLocation) end
 
----@class AZERITE_EMPOWERED_ITEM_EQUIPPED_STATUS_CHANGED : Event
+---@class AZERITE_EMPOWERED_ITEM_EQUIPPED_STATUS_CHANGED
 ---@field isHeartEquipped boolean
 local AZERITE_EMPOWERED_ITEM_EQUIPPED_STATUS_CHANGED = {}
 
----@class AZERITE_EMPOWERED_ITEM_SELECTION_UPDATED : Event
+---@class AZERITE_EMPOWERED_ITEM_SELECTION_UPDATED
 ---@field azeriteEmpoweredItemLocation ItemLocationMixin
 local AZERITE_EMPOWERED_ITEM_SELECTION_UPDATED = {}
 
----@class RESPEC_AZERITE_EMPOWERED_ITEM_CLOSED : Event
+---@class RESPEC_AZERITE_EMPOWERED_ITEM_CLOSED
 local RESPEC_AZERITE_EMPOWERED_ITEM_CLOSED = {}
 
----@class RESPEC_AZERITE_EMPOWERED_ITEM_OPENED : Event
+---@class RESPEC_AZERITE_EMPOWERED_ITEM_OPENED
 local RESPEC_AZERITE_EMPOWERED_ITEM_OPENED = {}
 
 ---@class AzeritePowerLevel

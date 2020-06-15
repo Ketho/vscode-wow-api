@@ -1,6 +1,6 @@
 function Emmy:GetEvent(event)
 	local tbl = {}
-	tinsert(tbl, format("---@class %s : Event", event.LiteralName))
+	tinsert(tbl, format("---@class %s", event.LiteralName))
 	if event.Payload then
 		for _, arg in pairs(event.Payload) do
 			tinsert(tbl, self:GetField("field", arg))
@@ -54,10 +54,13 @@ function Emmy:GetEvents()
 		return a.LiteralName < b.LiteralName
 	end)
 	local tbl = {}
+	tinsert(tbl, "---@class Event")
 	tinsert(tbl, "Event = {")
 	for _, event in ipairs(APIDocumentation.events) do
-		local signature = event.Payload and GetSignature(event.Payload) or ""
-		tinsert(tbl, format('\t%s = "%s",', event.LiteralName, signature))
+		tinsert(tbl, format("\t---@type %s", event.LiteralName))
+		tinsert(tbl, format("\t%s = {},", event.LiteralName))
+		-- local signature = event.Payload and GetSignature(event.Payload) or ""
+		-- tinsert(tbl, format('\t%s = "%s",', event.LiteralName, signature))
 	end
 	tinsert(tbl, "}\n")
 	return table.concat(tbl, "\n")

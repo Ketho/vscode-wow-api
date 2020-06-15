@@ -23,10 +23,10 @@ function C_IslandsQueue.QueueForIsland(difficultyID) end
 ---[Documentation](https://wow.gamepedia.com/API_C_IslandsQueue.RequestPreloadRewardData)
 function C_IslandsQueue.RequestPreloadRewardData(questId) end
 
----@class ISLANDS_QUEUE_CLOSE : Event
+---@class ISLANDS_QUEUE_CLOSE
 local ISLANDS_QUEUE_CLOSE = {}
 
----@class ISLANDS_QUEUE_OPEN : Event
+---@class ISLANDS_QUEUE_OPEN
 local ISLANDS_QUEUE_OPEN = {}
 
 ---@class IslandsQueueDifficultyInfo

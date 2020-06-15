@@ -14,7 +14,7 @@ function C_Spell.IsSpellDataCached(spellID) end
 ---[Documentation](https://wow.gamepedia.com/API_C_Spell.RequestLoadSpellData)
 function C_Spell.RequestLoadSpellData(spellID) end
 
----@class SPELL_DATA_LOAD_RESULT : Event
+---@class SPELL_DATA_LOAD_RESULT
 ---@field spellID number
 ---@field success boolean
 local SPELL_DATA_LOAD_RESULT = {}

@@ -10,7 +10,7 @@ function C_FogOfWar.GetFogOfWarForMap(uiMapID) end
 ---[Documentation](https://wow.gamepedia.com/API_C_FogOfWar.GetFogOfWarInfo)
 function C_FogOfWar.GetFogOfWarInfo(fogOfWarID) end
 
----@class FOG_OF_WAR_UPDATED : Event
+---@class FOG_OF_WAR_UPDATED
 local FOG_OF_WAR_UPDATED = {}
 
 ---@class FogOfWarInfo

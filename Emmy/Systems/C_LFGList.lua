@@ -59,52 +59,52 @@ function C_LFGList.SetSearchToActivity(activityID) end
 ---[Documentation](https://wow.gamepedia.com/API_C_LFGList.SetSearchToQuestID)
 function C_LFGList.SetSearchToQuestID(questID) end
 
----@class LFG_LIST_ACTIVE_ENTRY_UPDATE : Event
+---@class LFG_LIST_ACTIVE_ENTRY_UPDATE
 ---@field created boolean
 local LFG_LIST_ACTIVE_ENTRY_UPDATE = {}
 
----@class LFG_LIST_APPLICANT_LIST_UPDATED : Event
+---@class LFG_LIST_APPLICANT_LIST_UPDATED
 ---@field newPendingEntry boolean
 ---@field newPendingEntryWithData boolean
 local LFG_LIST_APPLICANT_LIST_UPDATED = {}
 
----@class LFG_LIST_APPLICANT_UPDATED : Event
+---@class LFG_LIST_APPLICANT_UPDATED
 ---@field applicantID number
 local LFG_LIST_APPLICANT_UPDATED = {}
 
----@class LFG_LIST_APPLICATION_STATUS_UPDATED : Event
+---@class LFG_LIST_APPLICATION_STATUS_UPDATED
 ---@field searchResultID number
 ---@field newStatus string
 ---@field oldStatus string
 ---@field groupName string
 local LFG_LIST_APPLICATION_STATUS_UPDATED = {}
 
----@class LFG_LIST_AVAILABILITY_UPDATE : Event
+---@class LFG_LIST_AVAILABILITY_UPDATE
 local LFG_LIST_AVAILABILITY_UPDATE = {}
 
----@class LFG_LIST_ENTRY_CREATION_FAILED : Event
+---@class LFG_LIST_ENTRY_CREATION_FAILED
 local LFG_LIST_ENTRY_CREATION_FAILED = {}
 
----@class LFG_LIST_ENTRY_EXPIRED_TIMEOUT : Event
+---@class LFG_LIST_ENTRY_EXPIRED_TIMEOUT
 local LFG_LIST_ENTRY_EXPIRED_TIMEOUT = {}
 
----@class LFG_LIST_ENTRY_EXPIRED_TOO_MANY_PLAYERS : Event
+---@class LFG_LIST_ENTRY_EXPIRED_TOO_MANY_PLAYERS
 local LFG_LIST_ENTRY_EXPIRED_TOO_MANY_PLAYERS = {}
 
----@class LFG_LIST_JOINED_GROUP : Event
+---@class LFG_LIST_JOINED_GROUP
 ---@field searchResultID number
 ---@field groupName string
 local LFG_LIST_JOINED_GROUP = {}
 
----@class LFG_LIST_SEARCH_FAILED : Event
+---@class LFG_LIST_SEARCH_FAILED
 ---@field reason string
 local LFG_LIST_SEARCH_FAILED = {}
 
----@class LFG_LIST_SEARCH_RESULT_UPDATED : Event
+---@class LFG_LIST_SEARCH_RESULT_UPDATED
 ---@field searchResultID number
 local LFG_LIST_SEARCH_RESULT_UPDATED = {}
 
----@class LFG_LIST_SEARCH_RESULTS_RECEIVED : Event
+---@class LFG_LIST_SEARCH_RESULTS_RECEIVED
 local LFG_LIST_SEARCH_RESULTS_RECEIVED = {}
 
 ---@class LfgApplicantData

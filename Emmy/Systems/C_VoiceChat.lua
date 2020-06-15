@@ -291,37 +291,37 @@ function C_VoiceChat.ToggleMemberMuted(playerLocation) end
 ---[Documentation](https://wow.gamepedia.com/API_C_VoiceChat.ToggleMuted)
 function C_VoiceChat.ToggleMuted() end
 
----@class VOICE_CHAT_ACTIVE_INPUT_DEVICE_UPDATED : Event
+---@class VOICE_CHAT_ACTIVE_INPUT_DEVICE_UPDATED
 local VOICE_CHAT_ACTIVE_INPUT_DEVICE_UPDATED = {}
 
----@class VOICE_CHAT_ACTIVE_OUTPUT_DEVICE_UPDATED : Event
+---@class VOICE_CHAT_ACTIVE_OUTPUT_DEVICE_UPDATED
 local VOICE_CHAT_ACTIVE_OUTPUT_DEVICE_UPDATED = {}
 
----@class VOICE_CHAT_AUDIO_CAPTURE_ENERGY : Event
+---@class VOICE_CHAT_AUDIO_CAPTURE_ENERGY
 ---@field isSpeaking boolean
 ---@field energy number
 local VOICE_CHAT_AUDIO_CAPTURE_ENERGY = {}
 
----@class VOICE_CHAT_AUDIO_CAPTURE_STARTED : Event
+---@class VOICE_CHAT_AUDIO_CAPTURE_STARTED
 local VOICE_CHAT_AUDIO_CAPTURE_STARTED = {}
 
----@class VOICE_CHAT_AUDIO_CAPTURE_STOPPED : Event
+---@class VOICE_CHAT_AUDIO_CAPTURE_STOPPED
 local VOICE_CHAT_AUDIO_CAPTURE_STOPPED = {}
 
----@class VOICE_CHAT_CHANNEL_ACTIVATED : Event
+---@class VOICE_CHAT_CHANNEL_ACTIVATED
 ---@field channelID number
 local VOICE_CHAT_CHANNEL_ACTIVATED = {}
 
----@class VOICE_CHAT_CHANNEL_DEACTIVATED : Event
+---@class VOICE_CHAT_CHANNEL_DEACTIVATED
 ---@field channelID number
 local VOICE_CHAT_CHANNEL_DEACTIVATED = {}
 
----@class VOICE_CHAT_CHANNEL_DISPLAY_NAME_CHANGED : Event
+---@class VOICE_CHAT_CHANNEL_DISPLAY_NAME_CHANGED
 ---@field channelID number
 ---@field channelDisplayName string
 local VOICE_CHAT_CHANNEL_DISPLAY_NAME_CHANGED = {}
 
----@class VOICE_CHAT_CHANNEL_JOINED : Event
+---@class VOICE_CHAT_CHANNEL_JOINED
 ---@field status VoiceChatStatusCode
 ---@field channelID number
 ---@field channelType ChatChannelType
@@ -329,133 +329,133 @@ local VOICE_CHAT_CHANNEL_DISPLAY_NAME_CHANGED = {}
 ---@field streamId string
 local VOICE_CHAT_CHANNEL_JOINED = {}
 
----@class VOICE_CHAT_CHANNEL_MEMBER_ACTIVE_STATE_CHANGED : Event
+---@class VOICE_CHAT_CHANNEL_MEMBER_ACTIVE_STATE_CHANGED
 ---@field memberID number
 ---@field channelID number
 ---@field isActive boolean
 local VOICE_CHAT_CHANNEL_MEMBER_ACTIVE_STATE_CHANGED = {}
 
----@class VOICE_CHAT_CHANNEL_MEMBER_ADDED : Event
+---@class VOICE_CHAT_CHANNEL_MEMBER_ADDED
 ---@field memberID number
 ---@field channelID number
 local VOICE_CHAT_CHANNEL_MEMBER_ADDED = {}
 
----@class VOICE_CHAT_CHANNEL_MEMBER_ENERGY_CHANGED : Event
+---@class VOICE_CHAT_CHANNEL_MEMBER_ENERGY_CHANGED
 ---@field memberID number
 ---@field channelID number
 ---@field speakingEnergy number
 local VOICE_CHAT_CHANNEL_MEMBER_ENERGY_CHANGED = {}
 
----@class VOICE_CHAT_CHANNEL_MEMBER_GUID_UPDATED : Event
+---@class VOICE_CHAT_CHANNEL_MEMBER_GUID_UPDATED
 ---@field memberID number
 ---@field channelID number
 local VOICE_CHAT_CHANNEL_MEMBER_GUID_UPDATED = {}
 
----@class VOICE_CHAT_CHANNEL_MEMBER_MUTE_FOR_ALL_CHANGED : Event
+---@class VOICE_CHAT_CHANNEL_MEMBER_MUTE_FOR_ALL_CHANGED
 ---@field memberID number
 ---@field channelID number
 ---@field isMutedForAll boolean
 local VOICE_CHAT_CHANNEL_MEMBER_MUTE_FOR_ALL_CHANGED = {}
 
----@class VOICE_CHAT_CHANNEL_MEMBER_MUTE_FOR_ME_CHANGED : Event
+---@class VOICE_CHAT_CHANNEL_MEMBER_MUTE_FOR_ME_CHANGED
 ---@field memberID number
 ---@field channelID number
 ---@field isMutedForMe boolean
 local VOICE_CHAT_CHANNEL_MEMBER_MUTE_FOR_ME_CHANGED = {}
 
----@class VOICE_CHAT_CHANNEL_MEMBER_REMOVED : Event
+---@class VOICE_CHAT_CHANNEL_MEMBER_REMOVED
 ---@field memberID number
 ---@field channelID number
 local VOICE_CHAT_CHANNEL_MEMBER_REMOVED = {}
 
----@class VOICE_CHAT_CHANNEL_MEMBER_SILENCED_CHANGED : Event
+---@class VOICE_CHAT_CHANNEL_MEMBER_SILENCED_CHANGED
 ---@field memberID number
 ---@field channelID number
 ---@field isSilenced boolean
 local VOICE_CHAT_CHANNEL_MEMBER_SILENCED_CHANGED = {}
 
----@class VOICE_CHAT_CHANNEL_MEMBER_SPEAKING_STATE_CHANGED : Event
+---@class VOICE_CHAT_CHANNEL_MEMBER_SPEAKING_STATE_CHANGED
 ---@field memberID number
 ---@field channelID number
 ---@field isSpeaking boolean
 local VOICE_CHAT_CHANNEL_MEMBER_SPEAKING_STATE_CHANGED = {}
 
----@class VOICE_CHAT_CHANNEL_MEMBER_VOLUME_CHANGED : Event
+---@class VOICE_CHAT_CHANNEL_MEMBER_VOLUME_CHANGED
 ---@field memberID number
 ---@field channelID number
 ---@field volume number
 local VOICE_CHAT_CHANNEL_MEMBER_VOLUME_CHANGED = {}
 
----@class VOICE_CHAT_CHANNEL_MUTE_STATE_CHANGED : Event
+---@class VOICE_CHAT_CHANNEL_MUTE_STATE_CHANGED
 ---@field channelID number
 ---@field isMuted boolean
 local VOICE_CHAT_CHANNEL_MUTE_STATE_CHANGED = {}
 
----@class VOICE_CHAT_CHANNEL_PTT_CHANGED : Event
+---@class VOICE_CHAT_CHANNEL_PTT_CHANGED
 ---@field channelID number
 ---@field pushToTalkSetting string
 local VOICE_CHAT_CHANNEL_PTT_CHANGED = {}
 
----@class VOICE_CHAT_CHANNEL_REMOVED : Event
+---@class VOICE_CHAT_CHANNEL_REMOVED
 ---@field channelID number
 local VOICE_CHAT_CHANNEL_REMOVED = {}
 
----@class VOICE_CHAT_CHANNEL_TRANSMIT_CHANGED : Event
+---@class VOICE_CHAT_CHANNEL_TRANSMIT_CHANGED
 ---@field channelID number
 ---@field isTransmitting boolean
 local VOICE_CHAT_CHANNEL_TRANSMIT_CHANGED = {}
 
----@class VOICE_CHAT_CHANNEL_VOLUME_CHANGED : Event
+---@class VOICE_CHAT_CHANNEL_VOLUME_CHANGED
 ---@field channelID number
 ---@field volume number
 local VOICE_CHAT_CHANNEL_VOLUME_CHANGED = {}
 
----@class VOICE_CHAT_COMMUNICATION_MODE_CHANGED : Event
+---@class VOICE_CHAT_COMMUNICATION_MODE_CHANGED
 ---@field communicationMode CommunicationMode
 local VOICE_CHAT_COMMUNICATION_MODE_CHANGED = {}
 
----@class VOICE_CHAT_CONNECTION_SUCCESS : Event
+---@class VOICE_CHAT_CONNECTION_SUCCESS
 local VOICE_CHAT_CONNECTION_SUCCESS = {}
 
----@class VOICE_CHAT_DEAFENED_CHANGED : Event
+---@class VOICE_CHAT_DEAFENED_CHANGED
 ---@field isDeafened boolean
 local VOICE_CHAT_DEAFENED_CHANGED = {}
 
----@class VOICE_CHAT_ERROR : Event
+---@class VOICE_CHAT_ERROR
 ---@field platformCode number
 ---@field statusCode VoiceChatStatusCode
 local VOICE_CHAT_ERROR = {}
 
----@class VOICE_CHAT_INPUT_DEVICES_UPDATED : Event
+---@class VOICE_CHAT_INPUT_DEVICES_UPDATED
 local VOICE_CHAT_INPUT_DEVICES_UPDATED = {}
 
----@class VOICE_CHAT_LOGIN : Event
+---@class VOICE_CHAT_LOGIN
 ---@field status VoiceChatStatusCode
 local VOICE_CHAT_LOGIN = {}
 
----@class VOICE_CHAT_LOGOUT : Event
+---@class VOICE_CHAT_LOGOUT
 ---@field status VoiceChatStatusCode
 local VOICE_CHAT_LOGOUT = {}
 
----@class VOICE_CHAT_MUTED_CHANGED : Event
+---@class VOICE_CHAT_MUTED_CHANGED
 ---@field isMuted boolean
 local VOICE_CHAT_MUTED_CHANGED = {}
 
----@class VOICE_CHAT_OUTPUT_DEVICES_UPDATED : Event
+---@class VOICE_CHAT_OUTPUT_DEVICES_UPDATED
 local VOICE_CHAT_OUTPUT_DEVICES_UPDATED = {}
 
----@class VOICE_CHAT_PENDING_CHANNEL_JOIN_STATE : Event
+---@class VOICE_CHAT_PENDING_CHANNEL_JOIN_STATE
 ---@field channelType ChatChannelType
 ---@field clubId string
 ---@field streamId string
 ---@field pendingJoin boolean
 local VOICE_CHAT_PENDING_CHANNEL_JOIN_STATE = {}
 
----@class VOICE_CHAT_PTT_BUTTON_PRESSED_STATE_CHANGED : Event
+---@class VOICE_CHAT_PTT_BUTTON_PRESSED_STATE_CHANGED
 ---@field isPressed boolean
 local VOICE_CHAT_PTT_BUTTON_PRESSED_STATE_CHANGED = {}
 
----@class VOICE_CHAT_SILENCED_CHANGED : Event
+---@class VOICE_CHAT_SILENCED_CHANGED
 ---@field isSilenced boolean
 local VOICE_CHAT_SILENCED_CHANGED = {}
 

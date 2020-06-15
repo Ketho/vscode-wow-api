@@ -14,46 +14,46 @@ function C_Mail.HasInboxMoney(inboxIndex) end
 ---[Documentation](https://wow.gamepedia.com/API_C_Mail.IsCommandPending)
 function C_Mail.IsCommandPending() end
 
----@class CLOSE_INBOX_ITEM : Event
+---@class CLOSE_INBOX_ITEM
 ---@field mailIndex number
 local CLOSE_INBOX_ITEM = {}
 
----@class MAIL_CLOSED : Event
+---@class MAIL_CLOSED
 local MAIL_CLOSED = {}
 
----@class MAIL_FAILED : Event
+---@class MAIL_FAILED
 ---@field itemID number
 local MAIL_FAILED = {}
 
----@class MAIL_INBOX_UPDATE : Event
+---@class MAIL_INBOX_UPDATE
 local MAIL_INBOX_UPDATE = {}
 
----@class MAIL_LOCK_SEND_ITEMS : Event
+---@class MAIL_LOCK_SEND_ITEMS
 ---@field attachSlot number
 ---@field itemLink string
 local MAIL_LOCK_SEND_ITEMS = {}
 
----@class MAIL_SEND_INFO_UPDATE : Event
+---@class MAIL_SEND_INFO_UPDATE
 local MAIL_SEND_INFO_UPDATE = {}
 
----@class MAIL_SEND_SUCCESS : Event
+---@class MAIL_SEND_SUCCESS
 local MAIL_SEND_SUCCESS = {}
 
----@class MAIL_SHOW : Event
+---@class MAIL_SHOW
 local MAIL_SHOW = {}
 
----@class MAIL_SUCCESS : Event
+---@class MAIL_SUCCESS
 ---@field itemID number
 local MAIL_SUCCESS = {}
 
----@class MAIL_UNLOCK_SEND_ITEMS : Event
+---@class MAIL_UNLOCK_SEND_ITEMS
 local MAIL_UNLOCK_SEND_ITEMS = {}
 
----@class SEND_MAIL_COD_CHANGED : Event
+---@class SEND_MAIL_COD_CHANGED
 local SEND_MAIL_COD_CHANGED = {}
 
----@class SEND_MAIL_MONEY_CHANGED : Event
+---@class SEND_MAIL_MONEY_CHANGED
 local SEND_MAIL_MONEY_CHANGED = {}
 
----@class UPDATE_PENDING_MAIL : Event
+---@class UPDATE_PENDING_MAIL
 local UPDATE_PENDING_MAIL = {}

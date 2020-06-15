@@ -245,54 +245,54 @@ function C_ClubFinder.SetRecruitmentSettings(index, checked) end
 ---[Documentation](https://wow.gamepedia.com/API_C_ClubFinder.ShouldShowClubFinder)
 function C_ClubFinder.ShouldShowClubFinder() end
 
----@class CLUB_FINDER_APPLICANT_INVITE_RECIEVED : Event
+---@class CLUB_FINDER_APPLICANT_INVITE_RECIEVED
 ---@field clubFinderGUIDs string[]
 local CLUB_FINDER_APPLICANT_INVITE_RECIEVED = {}
 
----@class CLUB_FINDER_APPLICATIONS_UPDATED : Event
+---@class CLUB_FINDER_APPLICATIONS_UPDATED
 ---@field type ClubFinderRequestType
 ---@field clubFinderGUIDs string[]
 local CLUB_FINDER_APPLICATIONS_UPDATED = {}
 
----@class CLUB_FINDER_CLUB_LIST_RETURNED : Event
+---@class CLUB_FINDER_CLUB_LIST_RETURNED
 ---@field type ClubFinderRequestType
 local CLUB_FINDER_CLUB_LIST_RETURNED = {}
 
----@class CLUB_FINDER_CLUB_REPORTED : Event
+---@class CLUB_FINDER_CLUB_REPORTED
 ---@field type ClubFinderRequestType
 ---@field clubFinderGUID string
 local CLUB_FINDER_CLUB_REPORTED = {}
 
----@class CLUB_FINDER_COMMUNITY_OFFLINE_JOIN : Event
+---@class CLUB_FINDER_COMMUNITY_OFFLINE_JOIN
 ---@field clubId string
 local CLUB_FINDER_COMMUNITY_OFFLINE_JOIN = {}
 
----@class CLUB_FINDER_ENABLED_OR_DISABLED : Event
+---@class CLUB_FINDER_ENABLED_OR_DISABLED
 local CLUB_FINDER_ENABLED_OR_DISABLED = {}
 
----@class CLUB_FINDER_LINKED_CLUB_RETURNED : Event
+---@class CLUB_FINDER_LINKED_CLUB_RETURNED
 ---@field clubInfo RecruitingClubInfo
 local CLUB_FINDER_LINKED_CLUB_RETURNED = {}
 
----@class CLUB_FINDER_MEMBERSHIP_LIST_CHANGED : Event
+---@class CLUB_FINDER_MEMBERSHIP_LIST_CHANGED
 local CLUB_FINDER_MEMBERSHIP_LIST_CHANGED = {}
 
----@class CLUB_FINDER_PLAYER_PENDING_LIST_RECIEVED : Event
+---@class CLUB_FINDER_PLAYER_PENDING_LIST_RECIEVED
 ---@field type ClubFinderRequestType
 local CLUB_FINDER_PLAYER_PENDING_LIST_RECIEVED = {}
 
----@class CLUB_FINDER_POST_UPDATED : Event
+---@class CLUB_FINDER_POST_UPDATED
 ---@field clubFinderGUIDs string[]
 local CLUB_FINDER_POST_UPDATED = {}
 
----@class CLUB_FINDER_RECRUIT_LIST_CHANGED : Event
+---@class CLUB_FINDER_RECRUIT_LIST_CHANGED
 local CLUB_FINDER_RECRUIT_LIST_CHANGED = {}
 
----@class CLUB_FINDER_RECRUITMENT_POST_RETURNED : Event
+---@class CLUB_FINDER_RECRUITMENT_POST_RETURNED
 ---@field type ClubFinderRequestType
 local CLUB_FINDER_RECRUITMENT_POST_RETURNED = {}
 
----@class CLUB_FINDER_RECRUITS_UPDATED : Event
+---@class CLUB_FINDER_RECRUITS_UPDATED
 ---@field type ClubFinderRequestType
 local CLUB_FINDER_RECRUITS_UPDATED = {}
 

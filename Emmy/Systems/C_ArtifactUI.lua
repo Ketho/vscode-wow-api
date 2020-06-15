@@ -354,42 +354,42 @@ function C_ArtifactUI.SetPreviewAppearance(artifactAppearanceID) end
 ---[Documentation](https://wow.gamepedia.com/API_C_ArtifactUI.ShouldSuppressForgeRotation)
 function C_ArtifactUI.ShouldSuppressForgeRotation() end
 
----@class ARTIFACT_CLOSE : Event
+---@class ARTIFACT_CLOSE
 local ARTIFACT_CLOSE = {}
 
----@class ARTIFACT_ENDGAME_REFUND : Event
+---@class ARTIFACT_ENDGAME_REFUND
 ---@field numRefundedPowers number
 ---@field refundedTier number
 ---@field bagOrSlotIndex number
 ---@field slotIndex number
 local ARTIFACT_ENDGAME_REFUND = {}
 
----@class ARTIFACT_RELIC_FORGE_CLOSE : Event
+---@class ARTIFACT_RELIC_FORGE_CLOSE
 local ARTIFACT_RELIC_FORGE_CLOSE = {}
 
----@class ARTIFACT_RELIC_FORGE_PREVIEW_RELIC_CHANGED : Event
+---@class ARTIFACT_RELIC_FORGE_PREVIEW_RELIC_CHANGED
 local ARTIFACT_RELIC_FORGE_PREVIEW_RELIC_CHANGED = {}
 
----@class ARTIFACT_RELIC_FORGE_UPDATE : Event
+---@class ARTIFACT_RELIC_FORGE_UPDATE
 local ARTIFACT_RELIC_FORGE_UPDATE = {}
 
----@class ARTIFACT_RELIC_INFO_RECEIVED : Event
+---@class ARTIFACT_RELIC_INFO_RECEIVED
 local ARTIFACT_RELIC_INFO_RECEIVED = {}
 
----@class ARTIFACT_RESPEC_PROMPT : Event
+---@class ARTIFACT_RESPEC_PROMPT
 local ARTIFACT_RESPEC_PROMPT = {}
 
----@class ARTIFACT_TIER_CHANGED : Event
+---@class ARTIFACT_TIER_CHANGED
 ---@field newTier number
 ---@field bagOrSlotIndex number
 ---@field slotIndex number
 local ARTIFACT_TIER_CHANGED = {}
 
----@class ARTIFACT_UPDATE : Event
+---@class ARTIFACT_UPDATE
 ---@field newItem boolean
 local ARTIFACT_UPDATE = {}
 
----@class ARTIFACT_XP_UPDATE : Event
+---@class ARTIFACT_XP_UPDATE
 local ARTIFACT_XP_UPDATE = {}
 
 ---@class ArtifactArtInfo

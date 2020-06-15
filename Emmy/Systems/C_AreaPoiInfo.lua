@@ -23,7 +23,7 @@ function C_AreaPoiInfo.GetAreaPOISecondsLeft(areaPoiID) end
 ---This statically determines if the POI is timed, GetAreaPOITimeLeft retrieves the value from the server and may return nothing for long intervals
 function C_AreaPoiInfo.IsAreaPOITimed(areaPoiID) end
 
----@class AREA_POIS_UPDATED : Event
+---@class AREA_POIS_UPDATED
 local AREA_POIS_UPDATED = {}
 
 ---@class AreaPOIInfo

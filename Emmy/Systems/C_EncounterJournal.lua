@@ -39,11 +39,11 @@ function C_EncounterJournal.SetPreviewMythicPlusLevel(level) end
 ---[Documentation](https://wow.gamepedia.com/API_C_EncounterJournal.SetPreviewPvpTier)
 function C_EncounterJournal.SetPreviewPvpTier(tier) end
 
----@class EJ_DIFFICULTY_UPDATE : Event
+---@class EJ_DIFFICULTY_UPDATE
 ---@field difficultyID number
 local EJ_DIFFICULTY_UPDATE = {}
 
----@class EJ_LOOT_DATA_RECIEVED : Event
+---@class EJ_LOOT_DATA_RECIEVED
 ---@field itemID number
 local EJ_LOOT_DATA_RECIEVED = {}
 

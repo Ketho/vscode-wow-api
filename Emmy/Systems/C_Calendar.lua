@@ -392,55 +392,55 @@ function C_Calendar.SetNextClubId(clubId) end
 ---[Documentation](https://wow.gamepedia.com/API_C_Calendar.UpdateEvent)
 function C_Calendar.UpdateEvent() end
 
----@class CALENDAR_ACTION_PENDING : Event
+---@class CALENDAR_ACTION_PENDING
 ---@field pending boolean
 local CALENDAR_ACTION_PENDING = {}
 
----@class CALENDAR_CLOSE_EVENT : Event
+---@class CALENDAR_CLOSE_EVENT
 local CALENDAR_CLOSE_EVENT = {}
 
----@class CALENDAR_EVENT_ALARM : Event
+---@class CALENDAR_EVENT_ALARM
 ---@field title string
 ---@field hour number
 ---@field minute number
 local CALENDAR_EVENT_ALARM = {}
 
----@class CALENDAR_NEW_EVENT : Event
+---@class CALENDAR_NEW_EVENT
 ---@field isCopy boolean
 local CALENDAR_NEW_EVENT = {}
 
----@class CALENDAR_OPEN_EVENT : Event
+---@class CALENDAR_OPEN_EVENT
 ---@field calendarType string
 local CALENDAR_OPEN_EVENT = {}
 
----@class CALENDAR_UPDATE_ERROR : Event
+---@class CALENDAR_UPDATE_ERROR
 ---@field errorReason string
 local CALENDAR_UPDATE_ERROR = {}
 
----@class CALENDAR_UPDATE_ERROR_WITH_COUNT : Event
+---@class CALENDAR_UPDATE_ERROR_WITH_COUNT
 ---@field errorReason string
 ---@field count number
 local CALENDAR_UPDATE_ERROR_WITH_COUNT = {}
 
----@class CALENDAR_UPDATE_ERROR_WITH_PLAYER_NAME : Event
+---@class CALENDAR_UPDATE_ERROR_WITH_PLAYER_NAME
 ---@field errorReason string
 ---@field playerName string
 local CALENDAR_UPDATE_ERROR_WITH_PLAYER_NAME = {}
 
----@class CALENDAR_UPDATE_EVENT : Event
+---@class CALENDAR_UPDATE_EVENT
 local CALENDAR_UPDATE_EVENT = {}
 
----@class CALENDAR_UPDATE_EVENT_LIST : Event
+---@class CALENDAR_UPDATE_EVENT_LIST
 local CALENDAR_UPDATE_EVENT_LIST = {}
 
----@class CALENDAR_UPDATE_GUILD_EVENTS : Event
+---@class CALENDAR_UPDATE_GUILD_EVENTS
 local CALENDAR_UPDATE_GUILD_EVENTS = {}
 
----@class CALENDAR_UPDATE_INVITE_LIST : Event
+---@class CALENDAR_UPDATE_INVITE_LIST
 ---@field hasCompleteList boolean
 local CALENDAR_UPDATE_INVITE_LIST = {}
 
----@class CALENDAR_UPDATE_PENDING_INVITES : Event
+---@class CALENDAR_UPDATE_PENDING_INVITES
 local CALENDAR_UPDATE_PENDING_INVITES = {}
 
 ---@class CalendarDayEvent

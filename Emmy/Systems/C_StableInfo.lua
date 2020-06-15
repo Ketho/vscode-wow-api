@@ -1,13 +1,13 @@
 C_StableInfo = {}
 
----@class PET_STABLE_CLOSED : Event
+---@class PET_STABLE_CLOSED
 local PET_STABLE_CLOSED = {}
 
----@class PET_STABLE_SHOW : Event
+---@class PET_STABLE_SHOW
 local PET_STABLE_SHOW = {}
 
----@class PET_STABLE_UPDATE : Event
+---@class PET_STABLE_UPDATE
 local PET_STABLE_UPDATE = {}
 
----@class PET_STABLE_UPDATE_PAPERDOLL : Event
+---@class PET_STABLE_UPDATE_PAPERDOLL
 local PET_STABLE_UPDATE_PAPERDOLL = {}

@@ -1,10 +1,10 @@
 C_HeirloomInfo = {}
 
----@class HEIRLOOM_UPGRADE_TARGETING_CHANGED : Event
+---@class HEIRLOOM_UPGRADE_TARGETING_CHANGED
 ---@field pendingHeirloomUpgradeSpellcast boolean
 local HEIRLOOM_UPGRADE_TARGETING_CHANGED = {}
 
----@class HEIRLOOMS_UPDATED : Event
+---@class HEIRLOOMS_UPDATED
 ---@field itemID number
 ---@field updateReason string
 ---@field hideUntilLearned boolean

@@ -89,7 +89,7 @@ function C_PartyInfo.LeaveParty(category) end
 ---Attempt to request an invite into the target party, requires confirmation in some cases (e.g. there is a party sync in progress).
 function C_PartyInfo.RequestInviteFromUnit(targetName, tank, healer, dps) end
 
----@class BNET_REQUEST_INVITE_CONFIRMATION : Event
+---@class BNET_REQUEST_INVITE_CONFIRMATION
 ---@field gameAccountID number
 ---@field questSessionActive boolean
 ---@field tank boolean
@@ -97,62 +97,62 @@ function C_PartyInfo.RequestInviteFromUnit(targetName, tank, healer, dps) end
 ---@field dps boolean
 local BNET_REQUEST_INVITE_CONFIRMATION = {}
 
----@class CONVERT_TO_RAID_CONFIRMATION : Event
+---@class CONVERT_TO_RAID_CONFIRMATION
 local CONVERT_TO_RAID_CONFIRMATION = {}
 
----@class ENTERED_DIFFERENT_INSTANCE_FROM_PARTY : Event
+---@class ENTERED_DIFFERENT_INSTANCE_FROM_PARTY
 local ENTERED_DIFFERENT_INSTANCE_FROM_PARTY = {}
 
----@class GROUP_FORMED : Event
+---@class GROUP_FORMED
 ---@field category number
 ---@field partyGUID string
 local GROUP_FORMED = {}
 
----@class GROUP_INVITE_CONFIRMATION : Event
+---@class GROUP_INVITE_CONFIRMATION
 local GROUP_INVITE_CONFIRMATION = {}
 
----@class GROUP_JOINED : Event
+---@class GROUP_JOINED
 ---@field category number
 ---@field partyGUID string
 local GROUP_JOINED = {}
 
----@class GROUP_LEFT : Event
+---@class GROUP_LEFT
 ---@field category number
 ---@field partyGUID string
 local GROUP_LEFT = {}
 
----@class GROUP_ROSTER_UPDATE : Event
+---@class GROUP_ROSTER_UPDATE
 local GROUP_ROSTER_UPDATE = {}
 
----@class INSTANCE_BOOT_START : Event
+---@class INSTANCE_BOOT_START
 local INSTANCE_BOOT_START = {}
 
----@class INSTANCE_BOOT_STOP : Event
+---@class INSTANCE_BOOT_STOP
 local INSTANCE_BOOT_STOP = {}
 
----@class INSTANCE_GROUP_SIZE_CHANGED : Event
+---@class INSTANCE_GROUP_SIZE_CHANGED
 local INSTANCE_GROUP_SIZE_CHANGED = {}
 
----@class INVITE_TO_PARTY_CONFIRMATION : Event
+---@class INVITE_TO_PARTY_CONFIRMATION
 ---@field targetName string
 ---@field willConvertToRaid boolean
 ---@field questSessionActive boolean
 local INVITE_TO_PARTY_CONFIRMATION = {}
 
----@class INVITE_TRAVEL_PASS_CONFIRMATION : Event
+---@class INVITE_TRAVEL_PASS_CONFIRMATION
 ---@field targetName string
 ---@field targetGUID string
 ---@field willConvertToRaid boolean
 ---@field questSessionActive boolean
 local INVITE_TRAVEL_PASS_CONFIRMATION = {}
 
----@class LEAVE_PARTY_CONFIRMATION : Event
+---@class LEAVE_PARTY_CONFIRMATION
 local LEAVE_PARTY_CONFIRMATION = {}
 
----@class PARTY_INVITE_CANCEL : Event
+---@class PARTY_INVITE_CANCEL
 local PARTY_INVITE_CANCEL = {}
 
----@class PARTY_INVITE_REQUEST : Event
+---@class PARTY_INVITE_REQUEST
 ---@field name string
 ---@field isTank boolean
 ---@field isHealer boolean
@@ -163,47 +163,47 @@ local PARTY_INVITE_CANCEL = {}
 ---@field questSessionActive boolean
 local PARTY_INVITE_REQUEST = {}
 
----@class PARTY_LEADER_CHANGED : Event
+---@class PARTY_LEADER_CHANGED
 local PARTY_LEADER_CHANGED = {}
 
----@class PARTY_LFG_RESTRICTED : Event
+---@class PARTY_LFG_RESTRICTED
 local PARTY_LFG_RESTRICTED = {}
 
----@class PARTY_LOOT_METHOD_CHANGED : Event
+---@class PARTY_LOOT_METHOD_CHANGED
 local PARTY_LOOT_METHOD_CHANGED = {}
 
----@class PARTY_MEMBER_DISABLE : Event
+---@class PARTY_MEMBER_DISABLE
 ---@field unitTarget string
 local PARTY_MEMBER_DISABLE = {}
 
----@class PARTY_MEMBER_ENABLE : Event
+---@class PARTY_MEMBER_ENABLE
 ---@field unitTarget string
 local PARTY_MEMBER_ENABLE = {}
 
----@class PLAYER_DIFFICULTY_CHANGED : Event
+---@class PLAYER_DIFFICULTY_CHANGED
 local PLAYER_DIFFICULTY_CHANGED = {}
 
----@class PLAYER_ROLES_ASSIGNED : Event
+---@class PLAYER_ROLES_ASSIGNED
 local PLAYER_ROLES_ASSIGNED = {}
 
----@class RAID_ROSTER_UPDATE : Event
+---@class RAID_ROSTER_UPDATE
 local RAID_ROSTER_UPDATE = {}
 
----@class READY_CHECK : Event
+---@class READY_CHECK
 ---@field initiatorName string
 ---@field readyCheckTimeLeft number
 local READY_CHECK = {}
 
----@class READY_CHECK_CONFIRM : Event
+---@class READY_CHECK_CONFIRM
 ---@field unitTarget string
 ---@field isReady boolean
 local READY_CHECK_CONFIRM = {}
 
----@class READY_CHECK_FINISHED : Event
+---@class READY_CHECK_FINISHED
 ---@field preempted boolean
 local READY_CHECK_FINISHED = {}
 
----@class REQUEST_INVITE_CONFIRMATION : Event
+---@class REQUEST_INVITE_CONFIRMATION
 ---@field targetName string
 ---@field partyLevelLink number
 ---@field questSessionActive boolean
@@ -212,18 +212,18 @@ local READY_CHECK_FINISHED = {}
 ---@field dps boolean
 local REQUEST_INVITE_CONFIRMATION = {}
 
----@class ROLE_CHANGED_INFORM : Event
+---@class ROLE_CHANGED_INFORM
 ---@field changedName string
 ---@field fromName string
 ---@field oldRole string
 ---@field newRole string
 local ROLE_CHANGED_INFORM = {}
 
----@class ROLE_POLL_BEGIN : Event
+---@class ROLE_POLL_BEGIN
 ---@field fromName string
 local ROLE_POLL_BEGIN = {}
 
----@class VOTE_KICK_REASON_NEEDED : Event
+---@class VOTE_KICK_REASON_NEEDED
 ---@field name string
 ---@field resultGUID string
 local VOTE_KICK_REASON_NEEDED = {}

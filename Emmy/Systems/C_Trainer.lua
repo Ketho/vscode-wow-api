@@ -1,16 +1,16 @@
 C_Trainer = {}
 
----@class TRAINER_CLOSED : Event
+---@class TRAINER_CLOSED
 local TRAINER_CLOSED = {}
 
----@class TRAINER_DESCRIPTION_UPDATE : Event
+---@class TRAINER_DESCRIPTION_UPDATE
 local TRAINER_DESCRIPTION_UPDATE = {}
 
----@class TRAINER_SERVICE_INFO_NAME_UPDATE : Event
+---@class TRAINER_SERVICE_INFO_NAME_UPDATE
 local TRAINER_SERVICE_INFO_NAME_UPDATE = {}
 
----@class TRAINER_SHOW : Event
+---@class TRAINER_SHOW
 local TRAINER_SHOW = {}
 
----@class TRAINER_UPDATE : Event
+---@class TRAINER_UPDATE
 local TRAINER_UPDATE = {}

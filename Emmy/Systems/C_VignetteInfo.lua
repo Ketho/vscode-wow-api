@@ -20,12 +20,12 @@ function C_VignetteInfo.GetVignettePosition(vignetteGUID, uiMapID) end
 ---[Documentation](https://wow.gamepedia.com/API_C_VignetteInfo.GetVignettes)
 function C_VignetteInfo.GetVignettes() end
 
----@class VIGNETTE_MINIMAP_UPDATED : Event
+---@class VIGNETTE_MINIMAP_UPDATED
 ---@field vignetteGUID string
 ---@field onMinimap boolean
 local VIGNETTE_MINIMAP_UPDATED = {}
 
----@class VIGNETTES_UPDATED : Event
+---@class VIGNETTES_UPDATED
 local VIGNETTES_UPDATED = {}
 
 ---@class VignetteType

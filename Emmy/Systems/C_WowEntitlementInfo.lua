@@ -1,6 +1,6 @@
 C_WowEntitlementInfo = {}
 
----@class ENTITLEMENT_DELIVERED : Event
+---@class ENTITLEMENT_DELIVERED
 ---@field entitlementType WoWEntitlementType
 ---@field textureID number
 ---@field name string
@@ -8,7 +8,7 @@ C_WowEntitlementInfo = {}
 ---@field showFancyToast boolean
 local ENTITLEMENT_DELIVERED = {}
 
----@class RAF_ENTITLEMENT_DELIVERED : Event
+---@class RAF_ENTITLEMENT_DELIVERED
 ---@field entitlementType WoWEntitlementType
 ---@field textureID number
 ---@field name string

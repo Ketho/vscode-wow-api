@@ -15,108 +15,108 @@ function C_LFGInfo.GetRoleCheckDifficultyDetails() end
 ---[Documentation](https://wow.gamepedia.com/API_C_LFGInfo.HideNameFromUI)
 function C_LFGInfo.HideNameFromUI(dungeonID) end
 
----@class ISLAND_COMPLETED : Event
+---@class ISLAND_COMPLETED
 ---@field mapID number
 ---@field winner number
 local ISLAND_COMPLETED = {}
 
----@class LFG_BONUS_FACTION_ID_UPDATED : Event
+---@class LFG_BONUS_FACTION_ID_UPDATED
 local LFG_BONUS_FACTION_ID_UPDATED = {}
 
----@class LFG_BOOT_PROPOSAL_UPDATE : Event
+---@class LFG_BOOT_PROPOSAL_UPDATE
 local LFG_BOOT_PROPOSAL_UPDATE = {}
 
----@class LFG_COMPLETION_REWARD : Event
+---@class LFG_COMPLETION_REWARD
 local LFG_COMPLETION_REWARD = {}
 
----@class LFG_INVALID_ERROR_MESSAGE : Event
+---@class LFG_INVALID_ERROR_MESSAGE
 ---@field reason number
 ---@field subReason1 number
 ---@field subReason2 number
 local LFG_INVALID_ERROR_MESSAGE = {}
 
----@class LFG_LOCK_INFO_RECEIVED : Event
+---@class LFG_LOCK_INFO_RECEIVED
 local LFG_LOCK_INFO_RECEIVED = {}
 
----@class LFG_OFFER_CONTINUE : Event
+---@class LFG_OFFER_CONTINUE
 ---@field name string
 ---@field lfgDungeonsID number
 ---@field typeID number
 local LFG_OFFER_CONTINUE = {}
 
----@class LFG_OPEN_FROM_GOSSIP : Event
+---@class LFG_OPEN_FROM_GOSSIP
 ---@field dungeonID number
 local LFG_OPEN_FROM_GOSSIP = {}
 
----@class LFG_PROPOSAL_DONE : Event
+---@class LFG_PROPOSAL_DONE
 local LFG_PROPOSAL_DONE = {}
 
----@class LFG_PROPOSAL_FAILED : Event
+---@class LFG_PROPOSAL_FAILED
 local LFG_PROPOSAL_FAILED = {}
 
----@class LFG_PROPOSAL_SHOW : Event
+---@class LFG_PROPOSAL_SHOW
 local LFG_PROPOSAL_SHOW = {}
 
----@class LFG_PROPOSAL_SUCCEEDED : Event
+---@class LFG_PROPOSAL_SUCCEEDED
 local LFG_PROPOSAL_SUCCEEDED = {}
 
----@class LFG_PROPOSAL_UPDATE : Event
+---@class LFG_PROPOSAL_UPDATE
 local LFG_PROPOSAL_UPDATE = {}
 
----@class LFG_QUEUE_STATUS_UPDATE : Event
+---@class LFG_QUEUE_STATUS_UPDATE
 local LFG_QUEUE_STATUS_UPDATE = {}
 
----@class LFG_READY_CHECK_DECLINED : Event
+---@class LFG_READY_CHECK_DECLINED
 ---@field name string
 local LFG_READY_CHECK_DECLINED = {}
 
----@class LFG_READY_CHECK_HIDE : Event
+---@class LFG_READY_CHECK_HIDE
 local LFG_READY_CHECK_HIDE = {}
 
----@class LFG_READY_CHECK_PLAYER_IS_READY : Event
+---@class LFG_READY_CHECK_PLAYER_IS_READY
 ---@field name string
 local LFG_READY_CHECK_PLAYER_IS_READY = {}
 
----@class LFG_READY_CHECK_SHOW : Event
+---@class LFG_READY_CHECK_SHOW
 ---@field isRequeue boolean
 local LFG_READY_CHECK_SHOW = {}
 
----@class LFG_READY_CHECK_UPDATE : Event
+---@class LFG_READY_CHECK_UPDATE
 local LFG_READY_CHECK_UPDATE = {}
 
----@class LFG_ROLE_CHECK_DECLINED : Event
+---@class LFG_ROLE_CHECK_DECLINED
 local LFG_ROLE_CHECK_DECLINED = {}
 
----@class LFG_ROLE_CHECK_HIDE : Event
+---@class LFG_ROLE_CHECK_HIDE
 local LFG_ROLE_CHECK_HIDE = {}
 
----@class LFG_ROLE_CHECK_ROLE_CHOSEN : Event
+---@class LFG_ROLE_CHECK_ROLE_CHOSEN
 ---@field name string
 ---@field isTank boolean
 ---@field isHealer boolean
 ---@field isDamage boolean
 local LFG_ROLE_CHECK_ROLE_CHOSEN = {}
 
----@class LFG_ROLE_CHECK_SHOW : Event
+---@class LFG_ROLE_CHECK_SHOW
 ---@field isRequeue boolean
 local LFG_ROLE_CHECK_SHOW = {}
 
----@class LFG_ROLE_CHECK_UPDATE : Event
+---@class LFG_ROLE_CHECK_UPDATE
 local LFG_ROLE_CHECK_UPDATE = {}
 
----@class LFG_ROLE_UPDATE : Event
+---@class LFG_ROLE_UPDATE
 local LFG_ROLE_UPDATE = {}
 
----@class LFG_UPDATE : Event
+---@class LFG_UPDATE
 local LFG_UPDATE = {}
 
----@class LFG_UPDATE_RANDOM_INFO : Event
+---@class LFG_UPDATE_RANDOM_INFO
 local LFG_UPDATE_RANDOM_INFO = {}
 
----@class UPDATE_LFG_LIST : Event
+---@class UPDATE_LFG_LIST
 local UPDATE_LFG_LIST = {}
 
----@class WARFRONT_COMPLETED : Event
+---@class WARFRONT_COMPLETED
 ---@field mapID number
 ---@field winner number
 local WARFRONT_COMPLETED = {}

@@ -9,10 +9,10 @@ function C_QuestChoice.GetQuestChoiceInfo() end
 ---[Documentation](https://wow.gamepedia.com/API_C_QuestChoice.GetQuestChoiceOptionInfo)
 function C_QuestChoice.GetQuestChoiceOptionInfo(optionIndex) end
 
----@class QUEST_CHOICE_CLOSE : Event
+---@class QUEST_CHOICE_CLOSE
 local QUEST_CHOICE_CLOSE = {}
 
----@class QUEST_CHOICE_UPDATE : Event
+---@class QUEST_CHOICE_UPDATE
 local QUEST_CHOICE_UPDATE = {}
 
 ---@class QuestChoiceInfo

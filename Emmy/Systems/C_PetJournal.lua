@@ -34,59 +34,59 @@ function C_PetJournal.PetIsSummonable(battlePetGUID) end
 ---[Documentation](https://wow.gamepedia.com/API_C_PetJournal.PetUsesRandomDisplay)
 function C_PetJournal.PetUsesRandomDisplay(speciesID) end
 
----@class BATTLEPET_FORCE_NAME_DECLENSION : Event
+---@class BATTLEPET_FORCE_NAME_DECLENSION
 ---@field name string
 ---@field battlePetGUID string
 local BATTLEPET_FORCE_NAME_DECLENSION = {}
 
----@class COMPANION_LEARNED : Event
+---@class COMPANION_LEARNED
 local COMPANION_LEARNED = {}
 
----@class COMPANION_UNLEARNED : Event
+---@class COMPANION_UNLEARNED
 local COMPANION_UNLEARNED = {}
 
----@class COMPANION_UPDATE : Event
+---@class COMPANION_UPDATE
 ---@field companionType string
 local COMPANION_UPDATE = {}
 
----@class NEW_PET_ADDED : Event
+---@class NEW_PET_ADDED
 ---@field battlePetGUID string
 local NEW_PET_ADDED = {}
 
----@class PET_JOURNAL_AUTO_SLOTTED_PET : Event
+---@class PET_JOURNAL_AUTO_SLOTTED_PET
 ---@field slotIndex number
 ---@field battlePetGUID string
 local PET_JOURNAL_AUTO_SLOTTED_PET = {}
 
----@class PET_JOURNAL_CAGE_FAILED : Event
+---@class PET_JOURNAL_CAGE_FAILED
 local PET_JOURNAL_CAGE_FAILED = {}
 
----@class PET_JOURNAL_LIST_UPDATE : Event
+---@class PET_JOURNAL_LIST_UPDATE
 local PET_JOURNAL_LIST_UPDATE = {}
 
----@class PET_JOURNAL_NEW_BATTLE_SLOT : Event
+---@class PET_JOURNAL_NEW_BATTLE_SLOT
 local PET_JOURNAL_NEW_BATTLE_SLOT = {}
 
----@class PET_JOURNAL_PET_DELETED : Event
+---@class PET_JOURNAL_PET_DELETED
 ---@field battlePetGUID string
 local PET_JOURNAL_PET_DELETED = {}
 
----@class PET_JOURNAL_PET_RESTORED : Event
+---@class PET_JOURNAL_PET_RESTORED
 ---@field battlePetGUID string
 local PET_JOURNAL_PET_RESTORED = {}
 
----@class PET_JOURNAL_PET_REVOKED : Event
+---@class PET_JOURNAL_PET_REVOKED
 ---@field battlePetGUID string
 local PET_JOURNAL_PET_REVOKED = {}
 
----@class PET_JOURNAL_PETS_HEALED : Event
+---@class PET_JOURNAL_PETS_HEALED
 local PET_JOURNAL_PETS_HEALED = {}
 
----@class PET_JOURNAL_TRAP_LEVEL_SET : Event
+---@class PET_JOURNAL_TRAP_LEVEL_SET
 ---@field trapLevel number
 local PET_JOURNAL_TRAP_LEVEL_SET = {}
 
----@class UPDATE_SUMMONPETS_ACTION : Event
+---@class UPDATE_SUMMONPETS_ACTION
 local UPDATE_SUMMONPETS_ACTION = {}
 
 ---@class PetJournalError

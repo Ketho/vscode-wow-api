@@ -67,42 +67,42 @@ function C_ActionBar.ShouldOverrideBarShowManaBar() end
 ---[Documentation](https://wow.gamepedia.com/API_C_ActionBar.ToggleAutoCastPetAction)
 function C_ActionBar.ToggleAutoCastPetAction(slotID) end
 
----@class ACTIONBAR_HIDEGRID : Event
+---@class ACTIONBAR_HIDEGRID
 local ACTIONBAR_HIDEGRID = {}
 
----@class ACTIONBAR_PAGE_CHANGED : Event
+---@class ACTIONBAR_PAGE_CHANGED
 local ACTIONBAR_PAGE_CHANGED = {}
 
----@class ACTIONBAR_SHOW_BOTTOMLEFT : Event
+---@class ACTIONBAR_SHOW_BOTTOMLEFT
 local ACTIONBAR_SHOW_BOTTOMLEFT = {}
 
----@class ACTIONBAR_SHOWGRID : Event
+---@class ACTIONBAR_SHOWGRID
 local ACTIONBAR_SHOWGRID = {}
 
----@class ACTIONBAR_SLOT_CHANGED : Event
+---@class ACTIONBAR_SLOT_CHANGED
 ---@field slot number
 local ACTIONBAR_SLOT_CHANGED = {}
 
----@class ACTIONBAR_UPDATE_COOLDOWN : Event
+---@class ACTIONBAR_UPDATE_COOLDOWN
 local ACTIONBAR_UPDATE_COOLDOWN = {}
 
----@class ACTIONBAR_UPDATE_STATE : Event
+---@class ACTIONBAR_UPDATE_STATE
 local ACTIONBAR_UPDATE_STATE = {}
 
----@class ACTIONBAR_UPDATE_USABLE : Event
+---@class ACTIONBAR_UPDATE_USABLE
 local ACTIONBAR_UPDATE_USABLE = {}
 
----@class PET_BAR_UPDATE : Event
+---@class PET_BAR_UPDATE
 local PET_BAR_UPDATE = {}
 
----@class UPDATE_BONUS_ACTIONBAR : Event
+---@class UPDATE_BONUS_ACTIONBAR
 local UPDATE_BONUS_ACTIONBAR = {}
 
----@class UPDATE_EXTRA_ACTIONBAR : Event
+---@class UPDATE_EXTRA_ACTIONBAR
 local UPDATE_EXTRA_ACTIONBAR = {}
 
----@class UPDATE_MULTI_CAST_ACTIONBAR : Event
+---@class UPDATE_MULTI_CAST_ACTIONBAR
 local UPDATE_MULTI_CAST_ACTIONBAR = {}
 
----@class UPDATE_OVERRIDE_ACTIONBAR : Event
+---@class UPDATE_OVERRIDE_ACTIONBAR
 local UPDATE_OVERRIDE_ACTIONBAR = {}

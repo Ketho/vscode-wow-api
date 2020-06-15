@@ -51,31 +51,31 @@ function C_QuestSession.SendSessionBeginResponse(beginSession) end
 ---[Documentation](https://wow.gamepedia.com/API_C_QuestSession.SetQuestIsSuperTracked)
 function C_QuestSession.SetQuestIsSuperTracked(questID, superTrack) end
 
----@class QUEST_SESSION_CREATED : Event
+---@class QUEST_SESSION_CREATED
 local QUEST_SESSION_CREATED = {}
 
----@class QUEST_SESSION_DESTROYED : Event
+---@class QUEST_SESSION_DESTROYED
 local QUEST_SESSION_DESTROYED = {}
 
----@class QUEST_SESSION_ENABLED_STATE_CHANGED : Event
+---@class QUEST_SESSION_ENABLED_STATE_CHANGED
 ---@field enabled boolean
 local QUEST_SESSION_ENABLED_STATE_CHANGED = {}
 
----@class QUEST_SESSION_JOINED : Event
+---@class QUEST_SESSION_JOINED
 local QUEST_SESSION_JOINED = {}
 
----@class QUEST_SESSION_LEFT : Event
+---@class QUEST_SESSION_LEFT
 local QUEST_SESSION_LEFT = {}
 
----@class QUEST_SESSION_MEMBER_CONFIRM : Event
+---@class QUEST_SESSION_MEMBER_CONFIRM
 local QUEST_SESSION_MEMBER_CONFIRM = {}
 
----@class QUEST_SESSION_MEMBER_START_RESPONSE : Event
+---@class QUEST_SESSION_MEMBER_START_RESPONSE
 ---@field guid string
 ---@field response boolean
 local QUEST_SESSION_MEMBER_START_RESPONSE = {}
 
----@class QUEST_SESSION_NOTIFICATION : Event
+---@class QUEST_SESSION_NOTIFICATION
 ---@field result QuestSessionResult
 ---@field guid string
 local QUEST_SESSION_NOTIFICATION = {}

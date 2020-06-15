@@ -1,1212 +1,2423 @@
+---@class Event
 Event = {
-	ACHIEVEMENT_EARNED = "achievementID [, alreadyEarned]",
-	ACHIEVEMENT_PLAYER_NAME = "achievementID",
-	ACHIEVEMENT_SEARCH_UPDATED = "",
-	ACTIONBAR_HIDEGRID = "",
-	ACTIONBAR_PAGE_CHANGED = "",
-	ACTIONBAR_SHOWGRID = "",
-	ACTIONBAR_SHOW_BOTTOMLEFT = "",
-	ACTIONBAR_SLOT_CHANGED = "slot",
-	ACTIONBAR_UPDATE_COOLDOWN = "",
-	ACTIONBAR_UPDATE_STATE = "",
-	ACTIONBAR_UPDATE_USABLE = "",
-	ACTION_WILL_BIND_ITEM = "",
-	ACTIVATE_GLYPH = "spellSlot",
-	ACTIVE_TALENT_GROUP_CHANGED = "curr, prev",
-	ADDONS_UNLOADING = "closingClient",
-	ADDON_ACTION_BLOCKED = "isTainted, function",
-	ADDON_ACTION_FORBIDDEN = "isTainted, function",
-	ADDON_LOADED = "addOnName",
-	ADVENTURE_MAP_CLOSE = "",
-	ADVENTURE_MAP_OPEN = "followerTypeID",
-	ADVENTURE_MAP_QUEST_UPDATE = "questID",
-	ADVENTURE_MAP_UPDATE_INSETS = "",
-	ADVENTURE_MAP_UPDATE_POIS = "",
-	AJ_DUNGEON_ACTION = "lfgDungeonID",
-	AJ_OPEN = "",
-	AJ_PVE_LFG_ACTION = "",
-	AJ_PVP_ACTION = "battleMasterListID",
-	AJ_PVP_LFG_ACTION = "",
-	AJ_PVP_RBG_ACTION = "",
-	AJ_PVP_SKIRMISH_ACTION = "",
-	AJ_QUEST_LOG_OPEN = "questID, uiMapID",
-	AJ_RAID_ACTION = "lfgDungeonID",
-	AJ_REFRESH_DISPLAY = "",
-	AJ_REWARD_DATA_RECEIVED = "",
-	ALLIED_RACE_CLOSE = "",
-	ALLIED_RACE_OPEN = "raceID",
-	ALTERNATIVE_DEFAULT_LANGUAGE_CHANGED = "",
-	ARCHAEOLOGY_CLOSED = "",
-	ARCHAEOLOGY_FIND_COMPLETE = "numFindsCompleted, totalFinds, researchBranchID",
-	ARCHAEOLOGY_SURVEY_CAST = "numFindsCompleted, totalFinds, researchBranchID, successfulFind",
-	ARCHAEOLOGY_TOGGLE = "",
-	AREA_POIS_UPDATED = "",
-	AREA_SPIRIT_HEALER_IN_RANGE = "",
-	AREA_SPIRIT_HEALER_OUT_OF_RANGE = "",
-	ARENA_COOLDOWNS_UPDATE = "unitTarget",
-	ARENA_CROWD_CONTROL_SPELL_UPDATE = "unitTarget, spellID",
-	ARENA_OPPONENT_UPDATE = "unitToken, updateReason",
-	ARENA_PREP_OPPONENT_SPECIALIZATIONS = "",
-	ARENA_SEASON_WORLD_STATE = "",
-	ARTIFACT_CLOSE = "",
-	ARTIFACT_DIGSITE_COMPLETE = "researchBranchID",
-	ARTIFACT_ENDGAME_REFUND = "numRefundedPowers, refundedTier, bagOrSlotIndex [, slotIndex]",
-	ARTIFACT_RELIC_FORGE_CLOSE = "",
-	ARTIFACT_RELIC_FORGE_PREVIEW_RELIC_CHANGED = "",
-	ARTIFACT_RELIC_FORGE_UPDATE = "",
-	ARTIFACT_RELIC_INFO_RECEIVED = "",
-	ARTIFACT_RESPEC_PROMPT = "",
-	ARTIFACT_TIER_CHANGED = "newTier, bagOrSlotIndex [, slotIndex]",
-	ARTIFACT_UPDATE = "newItem",
-	ARTIFACT_XP_UPDATE = "",
-	AUCTION_CANCELED = "auctionID",
-	AUCTION_HOUSE_AUCTION_CREATED = "auctionID",
-	AUCTION_HOUSE_BROWSE_FAILURE = "",
-	AUCTION_HOUSE_BROWSE_RESULTS_ADDED = "addedBrowseResults",
-	AUCTION_HOUSE_BROWSE_RESULTS_UPDATED = "",
-	AUCTION_HOUSE_CLOSED = "",
-	AUCTION_HOUSE_DISABLED = "",
-	AUCTION_HOUSE_FAVORITES_UPDATED = "",
-	AUCTION_HOUSE_NEW_BID_RECEIVED = "auctionID",
-	AUCTION_HOUSE_NEW_RESULTS_RECEIVED = "[itemKey]",
-	AUCTION_HOUSE_SCRIPT_DEPRECATED = "",
-	AUCTION_HOUSE_SHOW = "",
-	AUCTION_HOUSE_THROTTLED_MESSAGE_DROPPED = "",
-	AUCTION_HOUSE_THROTTLED_MESSAGE_QUEUED = "",
-	AUCTION_HOUSE_THROTTLED_MESSAGE_RESPONSE_RECEIVED = "",
-	AUCTION_HOUSE_THROTTLED_MESSAGE_SENT = "",
-	AUCTION_HOUSE_THROTTLED_SPECIFIC_SEARCH_READY = "",
-	AUCTION_HOUSE_THROTTLED_SYSTEM_READY = "",
-	AUCTION_MULTISELL_FAILURE = "",
-	AUCTION_MULTISELL_START = "numRepetitions",
-	AUCTION_MULTISELL_UPDATE = "createdCount, totalToCreate",
-	AUTOFOLLOW_BEGIN = "name",
-	AUTOFOLLOW_END = "",
-	AVATAR_LIST_UPDATED = "clubType",
-	AVOIDANCE_UPDATE = "",
-	AZERITE_EMPOWERED_ITEM_EQUIPPED_STATUS_CHANGED = "isHeartEquipped",
-	AZERITE_EMPOWERED_ITEM_LOOTED = "itemLink",
-	AZERITE_EMPOWERED_ITEM_SELECTION_UPDATED = "azeriteEmpoweredItemLocation",
-	AZERITE_ESSENCE_ACTIVATED = "slot, essenceID",
-	AZERITE_ESSENCE_ACTIVATION_FAILED = "slot, essenceID",
-	AZERITE_ESSENCE_CHANGED = "essenceID, newRank",
-	AZERITE_ESSENCE_FORGE_CLOSE = "",
-	AZERITE_ESSENCE_FORGE_OPEN = "",
-	AZERITE_ESSENCE_MILESTONE_UNLOCKED = "milestoneID",
-	AZERITE_ESSENCE_UPDATE = "",
-	AZERITE_ITEM_EXPERIENCE_CHANGED = "azeriteItemLocation, oldExperienceAmount, newExperienceAmount",
-	AZERITE_ITEM_POWER_LEVEL_CHANGED = "azeriteItemLocation, oldPowerLevel, newPowerLevel, unlockedEmpoweredItemsInfo",
-	BAG_CLOSED = "bagID",
-	BAG_NEW_ITEMS_UPDATED = "",
-	BAG_OPEN = "bagID",
-	BAG_OVERFLOW_WITH_FULL_INVENTORY = "",
-	BAG_SLOT_FLAGS_UPDATED = "slot",
-	BAG_UPDATE = "bagID",
-	BAG_UPDATE_COOLDOWN = "",
-	BAG_UPDATE_DELAYED = "",
-	BANKFRAME_CLOSED = "",
-	BANKFRAME_OPENED = "",
-	BANK_BAG_SLOT_FLAGS_UPDATED = "slot",
-	BARBER_SHOP_APPEARANCE_APPLIED = "",
-	BARBER_SHOP_CLOSE = "",
-	BARBER_SHOP_COST_UPDATE = "",
-	BARBER_SHOP_OPEN = "",
-	BARBER_SHOP_SUCCESS = "",
-	BATTLEFIELDS_CLOSED = "",
-	BATTLEFIELDS_SHOW = "[isArena, battleMasterListID]",
-	BATTLEFIELD_QUEUE_TIMEOUT = "",
-	BATTLEGROUND_OBJECTIVES_UPDATE = "",
-	BATTLEGROUND_POINTS_UPDATE = "",
-	BATTLEPET_FORCE_NAME_DECLENSION = "name, battlePetGUID",
-	BATTLETAG_INVITE_SHOW = "name",
-	BATTLE_PET_CURSOR_CLEAR = "",
-	BIDS_UPDATED = "",
-	BID_ADDED = "bidID",
-	BIND_ENCHANT = "",
-	BLACK_MARKET_BID_RESULT = "marketID, resultCode",
-	BLACK_MARKET_CLOSE = "",
-	BLACK_MARKET_ITEM_UPDATE = "",
-	BLACK_MARKET_OPEN = "",
-	BLACK_MARKET_OUTBID = "marketID, itemID",
-	BLACK_MARKET_UNAVAILABLE = "",
-	BLACK_MARKET_WON = "marketID, itemID",
-	BNET_REQUEST_INVITE_CONFIRMATION = "gameAccountID, questSessionActive, tank, healer, dps",
-	BN_BLOCK_FAILED_TOO_MANY = "blockType",
-	BN_BLOCK_LIST_UPDATED = "",
-	BN_CHAT_MSG_ADDON = "prefix, text, channel, senderID",
-	BN_CHAT_WHISPER_UNDELIVERABLE = "senderID",
-	BN_CONNECTED = "[suppressNotification]",
-	BN_CUSTOM_MESSAGE_CHANGED = "[id]",
-	BN_CUSTOM_MESSAGE_LOADED = "",
-	BN_DISCONNECTED = "result [, suppressNotification]",
-	BN_FRIEND_ACCOUNT_OFFLINE = "friendId [, isCompanionApp]",
-	BN_FRIEND_ACCOUNT_ONLINE = "friendId [, isCompanionApp]",
-	BN_FRIEND_INFO_CHANGED = "[friendIndex]",
-	BN_FRIEND_INVITE_ADDED = "accountID",
-	BN_FRIEND_INVITE_LIST_INITIALIZED = "listSize",
-	BN_FRIEND_INVITE_REMOVED = "",
-	BN_FRIEND_LIST_SIZE_CHANGED = "[accountID]",
-	BN_INFO_CHANGED = "",
-	BN_REQUEST_FOF_SUCCEEDED = "",
-	BONUS_ROLL_ACTIVATE = "",
-	BONUS_ROLL_DEACTIVATE = "",
-	BONUS_ROLL_FAILED = "",
-	BONUS_ROLL_RESULT = "typeIdentifier, itemLink, quantity, specID, sex, personalLootToast, [currencyID], isSecondaryResult, corrupted",
-	BONUS_ROLL_STARTED = "",
-	BOSS_KILL = "encounterID, encounterName",
-	CALENDAR_ACTION_PENDING = "pending",
-	CALENDAR_CLOSE_EVENT = "",
-	CALENDAR_EVENT_ALARM = "title, hour, minute",
-	CALENDAR_NEW_EVENT = "isCopy",
-	CALENDAR_OPEN_EVENT = "calendarType",
-	CALENDAR_UPDATE_ERROR = "errorReason",
-	CALENDAR_UPDATE_ERROR_WITH_COUNT = "errorReason, count",
-	CALENDAR_UPDATE_ERROR_WITH_PLAYER_NAME = "errorReason, playerName",
-	CALENDAR_UPDATE_EVENT = "",
-	CALENDAR_UPDATE_EVENT_LIST = "",
-	CALENDAR_UPDATE_GUILD_EVENTS = "",
-	CALENDAR_UPDATE_INVITE_LIST = "[hasCompleteList]",
-	CALENDAR_UPDATE_PENDING_INVITES = "",
-	CANCEL_GLYPH_CAST = "",
-	CANCEL_LOOT_ROLL = "rollID",
-	CANCEL_SUMMON = "",
-	CAPTUREFRAMES_FAILED = "",
-	CAPTUREFRAMES_SUCCEEDED = "",
-	CEMETERY_PREFERENCE_UPDATED = "",
-	CHALLENGE_MODE_COMPLETED = "",
-	CHALLENGE_MODE_DEATH_COUNT_UPDATED = "",
-	CHALLENGE_MODE_KEYSTONE_RECEPTABLE_OPEN = "",
-	CHALLENGE_MODE_KEYSTONE_SLOTTED = "keystoneID",
-	CHALLENGE_MODE_LEADERS_UPDATE = "",
-	CHALLENGE_MODE_MAPS_UPDATE = "",
-	CHALLENGE_MODE_MEMBER_INFO_UPDATED = "",
-	CHALLENGE_MODE_RESET = "mapID",
-	CHALLENGE_MODE_START = "mapID",
-	CHANNEL_COUNT_UPDATE = "displayIndex, count",
-	CHANNEL_FLAGS_UPDATED = "displayIndex",
-	CHANNEL_INVITE_REQUEST = "channelID, name",
-	CHANNEL_LEFT = "chatChannelID, name",
-	CHANNEL_PASSWORD_REQUEST = "channelID",
-	CHANNEL_ROSTER_UPDATE = "displayIndex, count",
-	CHANNEL_UI_UPDATE = "",
-	CHARACTER_ITEM_FIXUP_NOTIFICATION = "fixupVersion",
-	CHARACTER_POINTS_CHANGED = "change",
-	CHARACTER_UPGRADE_SPELL_TIER_SET = "tierIndex",
-	CHAT_COMBAT_MSG_ARENA_POINTS_GAIN = "text, playerName, languageName, channelName, playerName2, specialFlags, zoneChannelID, channelIndex, channelBaseName, unused, lineID, guid, bnSenderID, isMobile, isSubtitle, hideSenderInLetterbox, supressRaidIcons",
-	CHAT_MSG_ACHIEVEMENT = "text, playerName, languageName, channelName, playerName2, specialFlags, zoneChannelID, channelIndex, channelBaseName, unused, lineID, guid, bnSenderID, isMobile, isSubtitle, hideSenderInLetterbox, supressRaidIcons",
-	CHAT_MSG_ADDON = "prefix, text, channel, sender, target, zoneChannelID, localID, name, instanceID",
-	CHAT_MSG_ADDON_LOGGED = "prefix, text, channel, sender, target, zoneChannelID, localID, name, instanceID",
-	CHAT_MSG_AFK = "text, playerName, languageName, channelName, playerName2, specialFlags, zoneChannelID, channelIndex, channelBaseName, unused, lineID, guid, bnSenderID, isMobile, isSubtitle, hideSenderInLetterbox, supressRaidIcons",
-	CHAT_MSG_BG_SYSTEM_ALLIANCE = "text, playerName, languageName, channelName, playerName2, specialFlags, zoneChannelID, channelIndex, channelBaseName, unused, lineID, guid, bnSenderID, isMobile, isSubtitle, hideSenderInLetterbox, supressRaidIcons",
-	CHAT_MSG_BG_SYSTEM_HORDE = "text, playerName, languageName, channelName, playerName2, specialFlags, zoneChannelID, channelIndex, channelBaseName, unused, lineID, guid, bnSenderID, isMobile, isSubtitle, hideSenderInLetterbox, supressRaidIcons",
-	CHAT_MSG_BG_SYSTEM_NEUTRAL = "text, playerName, languageName, channelName, playerName2, specialFlags, zoneChannelID, channelIndex, channelBaseName, unused, lineID, guid, bnSenderID, isMobile, isSubtitle, hideSenderInLetterbox, supressRaidIcons",
-	CHAT_MSG_BN = "text, playerName, languageName, channelName, playerName2, specialFlags, zoneChannelID, channelIndex, channelBaseName, unused, lineID, guid, bnSenderID, isMobile, isSubtitle, hideSenderInLetterbox, supressRaidIcons",
-	CHAT_MSG_BN_INLINE_TOAST_ALERT = "text, playerName, languageName, channelName, playerName2, specialFlags, zoneChannelID, channelIndex, channelBaseName, unused, lineID, guid, bnSenderID, isMobile, isSubtitle, hideSenderInLetterbox, supressRaidIcons",
-	CHAT_MSG_BN_INLINE_TOAST_BROADCAST = "text, playerName, languageName, channelName, playerName2, specialFlags, zoneChannelID, channelIndex, channelBaseName, unused, lineID, guid, bnSenderID, isMobile, isSubtitle, hideSenderInLetterbox, supressRaidIcons",
-	CHAT_MSG_BN_INLINE_TOAST_BROADCAST_INFORM = "text, playerName, languageName, channelName, playerName2, specialFlags, zoneChannelID, channelIndex, channelBaseName, unused, lineID, guid, bnSenderID, isMobile, isSubtitle, hideSenderInLetterbox, supressRaidIcons",
-	CHAT_MSG_BN_INLINE_TOAST_CONVERSATION = "text, playerName, languageName, channelName, playerName2, specialFlags, zoneChannelID, channelIndex, channelBaseName, unused, lineID, guid, bnSenderID, isMobile, isSubtitle, hideSenderInLetterbox, supressRaidIcons",
-	CHAT_MSG_BN_WHISPER = "text, playerName, languageName, channelName, playerName2, specialFlags, zoneChannelID, channelIndex, channelBaseName, unused, lineID, guid, bnSenderID, isMobile, isSubtitle, hideSenderInLetterbox, supressRaidIcons",
-	CHAT_MSG_BN_WHISPER_INFORM = "text, playerName, languageName, channelName, playerName2, specialFlags, zoneChannelID, channelIndex, channelBaseName, unused, lineID, guid, bnSenderID, isMobile, isSubtitle, hideSenderInLetterbox, supressRaidIcons",
-	CHAT_MSG_BN_WHISPER_PLAYER_OFFLINE = "text, playerName, languageName, channelName, playerName2, specialFlags, zoneChannelID, channelIndex, channelBaseName, unused, lineID, guid, bnSenderID, isMobile, isSubtitle, hideSenderInLetterbox, supressRaidIcons",
-	CHAT_MSG_CHANNEL = "text, playerName, languageName, channelName, playerName2, specialFlags, zoneChannelID, channelIndex, channelBaseName, unused, lineID, guid, bnSenderID, isMobile, isSubtitle, hideSenderInLetterbox, supressRaidIcons",
-	CHAT_MSG_CHANNEL_JOIN = "text, playerName, languageName, channelName, playerName2, specialFlags, zoneChannelID, channelIndex, channelBaseName, unused, lineID, guid, bnSenderID, isMobile, isSubtitle, hideSenderInLetterbox, supressRaidIcons",
-	CHAT_MSG_CHANNEL_LEAVE = "text, playerName, languageName, channelName, playerName2, specialFlags, zoneChannelID, channelIndex, channelBaseName, unused, lineID, guid, bnSenderID, isMobile, isSubtitle, hideSenderInLetterbox, supressRaidIcons",
-	CHAT_MSG_CHANNEL_LIST = "text, playerName, languageName, channelName, playerName2, specialFlags, zoneChannelID, channelIndex, channelBaseName, unused, lineID, guid, bnSenderID, isMobile, isSubtitle, hideSenderInLetterbox, supressRaidIcons",
-	CHAT_MSG_CHANNEL_NOTICE = "text, playerName, languageName, channelName, playerName2, specialFlags, zoneChannelID, channelIndex, channelBaseName, unused, lineID, guid, bnSenderID, isMobile, isSubtitle, hideSenderInLetterbox, supressRaidIcons",
-	CHAT_MSG_CHANNEL_NOTICE_USER = "text, playerName, languageName, channelName, playerName2, specialFlags, zoneChannelID, channelIndex, channelBaseName, unused, lineID, guid, bnSenderID, isMobile, isSubtitle, hideSenderInLetterbox, supressRaidIcons",
-	CHAT_MSG_COMBAT_FACTION_CHANGE = "text, playerName, languageName, channelName, playerName2, specialFlags, zoneChannelID, channelIndex, channelBaseName, unused, lineID, guid, bnSenderID, isMobile, isSubtitle, hideSenderInLetterbox, supressRaidIcons",
-	CHAT_MSG_COMBAT_HONOR_GAIN = "text, playerName, languageName, channelName, playerName2, specialFlags, zoneChannelID, channelIndex, channelBaseName, unused, lineID, guid, bnSenderID, isMobile, isSubtitle, hideSenderInLetterbox, supressRaidIcons",
-	CHAT_MSG_COMBAT_MISC_INFO = "text, playerName, languageName, channelName, playerName2, specialFlags, zoneChannelID, channelIndex, channelBaseName, unused, lineID, guid, bnSenderID, isMobile, isSubtitle, hideSenderInLetterbox, supressRaidIcons",
-	CHAT_MSG_COMBAT_XP_GAIN = "text, playerName, languageName, channelName, playerName2, specialFlags, zoneChannelID, channelIndex, channelBaseName, unused, lineID, guid, bnSenderID, isMobile, isSubtitle, hideSenderInLetterbox, supressRaidIcons",
-	CHAT_MSG_COMMUNITIES_CHANNEL = "text, playerName, languageName, channelName, playerName2, specialFlags, zoneChannelID, channelIndex, channelBaseName, unused, lineID, guid, bnSenderID, isMobile, isSubtitle, hideSenderInLetterbox, supressRaidIcons",
-	CHAT_MSG_CURRENCY = "text, playerName, languageName, channelName, playerName2, specialFlags, zoneChannelID, channelIndex, channelBaseName, unused, lineID, guid, bnSenderID, isMobile, isSubtitle, hideSenderInLetterbox, supressRaidIcons",
-	CHAT_MSG_DND = "text, playerName, languageName, channelName, playerName2, specialFlags, zoneChannelID, channelIndex, channelBaseName, unused, lineID, guid, bnSenderID, isMobile, isSubtitle, hideSenderInLetterbox, supressRaidIcons",
-	CHAT_MSG_EMOTE = "text, playerName, languageName, channelName, playerName2, specialFlags, zoneChannelID, channelIndex, channelBaseName, unused, lineID, guid, bnSenderID, isMobile, isSubtitle, hideSenderInLetterbox, supressRaidIcons",
-	CHAT_MSG_FILTERED = "text, playerName, languageName, channelName, playerName2, specialFlags, zoneChannelID, channelIndex, channelBaseName, unused, lineID, guid, bnSenderID, isMobile, isSubtitle, hideSenderInLetterbox, supressRaidIcons",
-	CHAT_MSG_GUILD = "text, playerName, languageName, channelName, playerName2, specialFlags, zoneChannelID, channelIndex, channelBaseName, unused, lineID, guid, bnSenderID, isMobile, isSubtitle, hideSenderInLetterbox, supressRaidIcons",
-	CHAT_MSG_GUILD_ACHIEVEMENT = "text, playerName, languageName, channelName, playerName2, specialFlags, zoneChannelID, channelIndex, channelBaseName, unused, lineID, guid, bnSenderID, isMobile, isSubtitle, hideSenderInLetterbox, supressRaidIcons",
-	CHAT_MSG_GUILD_ITEM_LOOTED = "text, playerName, languageName, channelName, playerName2, specialFlags, zoneChannelID, channelIndex, channelBaseName, unused, lineID, guid, bnSenderID, isMobile, isSubtitle, hideSenderInLetterbox, supressRaidIcons",
-	CHAT_MSG_IGNORED = "text, playerName, languageName, channelName, playerName2, specialFlags, zoneChannelID, channelIndex, channelBaseName, unused, lineID, guid, bnSenderID, isMobile, isSubtitle, hideSenderInLetterbox, supressRaidIcons",
-	CHAT_MSG_INSTANCE_CHAT = "text, playerName, languageName, channelName, playerName2, specialFlags, zoneChannelID, channelIndex, channelBaseName, unused, lineID, guid, bnSenderID, isMobile, isSubtitle, hideSenderInLetterbox, supressRaidIcons",
-	CHAT_MSG_INSTANCE_CHAT_LEADER = "text, playerName, languageName, channelName, playerName2, specialFlags, zoneChannelID, channelIndex, channelBaseName, unused, lineID, guid, bnSenderID, isMobile, isSubtitle, hideSenderInLetterbox, supressRaidIcons",
-	CHAT_MSG_LOOT = "text, playerName, languageName, channelName, playerName2, specialFlags, zoneChannelID, channelIndex, channelBaseName, unused, lineID, guid, bnSenderID, isMobile, isSubtitle, hideSenderInLetterbox, supressRaidIcons",
-	CHAT_MSG_MONEY = "text, playerName, languageName, channelName, playerName2, specialFlags, zoneChannelID, channelIndex, channelBaseName, unused, lineID, guid, bnSenderID, isMobile, isSubtitle, hideSenderInLetterbox, supressRaidIcons",
-	CHAT_MSG_MONSTER_EMOTE = "text, playerName, languageName, channelName, playerName2, specialFlags, zoneChannelID, channelIndex, channelBaseName, unused, lineID, guid, bnSenderID, isMobile, isSubtitle, hideSenderInLetterbox, supressRaidIcons",
-	CHAT_MSG_MONSTER_PARTY = "text, playerName, languageName, channelName, playerName2, specialFlags, zoneChannelID, channelIndex, channelBaseName, unused, lineID, guid, bnSenderID, isMobile, isSubtitle, hideSenderInLetterbox, supressRaidIcons",
-	CHAT_MSG_MONSTER_SAY = "text, playerName, languageName, channelName, playerName2, specialFlags, zoneChannelID, channelIndex, channelBaseName, unused, lineID, guid, bnSenderID, isMobile, isSubtitle, hideSenderInLetterbox, supressRaidIcons",
-	CHAT_MSG_MONSTER_WHISPER = "text, playerName, languageName, channelName, playerName2, specialFlags, zoneChannelID, channelIndex, channelBaseName, unused, lineID, guid, bnSenderID, isMobile, isSubtitle, hideSenderInLetterbox, supressRaidIcons",
-	CHAT_MSG_MONSTER_YELL = "text, playerName, languageName, channelName, playerName2, specialFlags, zoneChannelID, channelIndex, channelBaseName, unused, lineID, guid, bnSenderID, isMobile, isSubtitle, hideSenderInLetterbox, supressRaidIcons",
-	CHAT_MSG_OFFICER = "text, playerName, languageName, channelName, playerName2, specialFlags, zoneChannelID, channelIndex, channelBaseName, unused, lineID, guid, bnSenderID, isMobile, isSubtitle, hideSenderInLetterbox, supressRaidIcons",
-	CHAT_MSG_OPENING = "text, playerName, languageName, channelName, playerName2, specialFlags, zoneChannelID, channelIndex, channelBaseName, unused, lineID, guid, bnSenderID, isMobile, isSubtitle, hideSenderInLetterbox, supressRaidIcons",
-	CHAT_MSG_PARTY = "text, playerName, languageName, channelName, playerName2, specialFlags, zoneChannelID, channelIndex, channelBaseName, unused, lineID, guid, bnSenderID, isMobile, isSubtitle, hideSenderInLetterbox, supressRaidIcons",
-	CHAT_MSG_PARTY_LEADER = "text, playerName, languageName, channelName, playerName2, specialFlags, zoneChannelID, channelIndex, channelBaseName, unused, lineID, guid, bnSenderID, isMobile, isSubtitle, hideSenderInLetterbox, supressRaidIcons",
-	CHAT_MSG_PET_BATTLE_COMBAT_LOG = "text, playerName, languageName, channelName, playerName2, specialFlags, zoneChannelID, channelIndex, channelBaseName, unused, lineID, guid, bnSenderID, isMobile, isSubtitle, hideSenderInLetterbox, supressRaidIcons",
-	CHAT_MSG_PET_BATTLE_INFO = "text, playerName, languageName, channelName, playerName2, specialFlags, zoneChannelID, channelIndex, channelBaseName, unused, lineID, guid, bnSenderID, isMobile, isSubtitle, hideSenderInLetterbox, supressRaidIcons",
-	CHAT_MSG_PET_INFO = "text, playerName, languageName, channelName, playerName2, specialFlags, zoneChannelID, channelIndex, channelBaseName, unused, lineID, guid, bnSenderID, isMobile, isSubtitle, hideSenderInLetterbox, supressRaidIcons",
-	CHAT_MSG_RAID = "text, playerName, languageName, channelName, playerName2, specialFlags, zoneChannelID, channelIndex, channelBaseName, unused, lineID, guid, bnSenderID, isMobile, isSubtitle, hideSenderInLetterbox, supressRaidIcons",
-	CHAT_MSG_RAID_BOSS_EMOTE = "text, playerName, languageName, channelName, playerName2, specialFlags, zoneChannelID, channelIndex, channelBaseName, unused, lineID, guid, bnSenderID, isMobile, isSubtitle, hideSenderInLetterbox, supressRaidIcons",
-	CHAT_MSG_RAID_BOSS_WHISPER = "text, playerName, languageName, channelName, playerName2, specialFlags, zoneChannelID, channelIndex, channelBaseName, unused, lineID, guid, bnSenderID, isMobile, isSubtitle, hideSenderInLetterbox, supressRaidIcons",
-	CHAT_MSG_RAID_LEADER = "text, playerName, languageName, channelName, playerName2, specialFlags, zoneChannelID, channelIndex, channelBaseName, unused, lineID, guid, bnSenderID, isMobile, isSubtitle, hideSenderInLetterbox, supressRaidIcons",
-	CHAT_MSG_RAID_WARNING = "text, playerName, languageName, channelName, playerName2, specialFlags, zoneChannelID, channelIndex, channelBaseName, unused, lineID, guid, bnSenderID, isMobile, isSubtitle, hideSenderInLetterbox, supressRaidIcons",
-	CHAT_MSG_RESTRICTED = "text, playerName, languageName, channelName, playerName2, specialFlags, zoneChannelID, channelIndex, channelBaseName, unused, lineID, guid, bnSenderID, isMobile, isSubtitle, hideSenderInLetterbox, supressRaidIcons",
-	CHAT_MSG_SAY = "text, playerName, languageName, channelName, playerName2, specialFlags, zoneChannelID, channelIndex, channelBaseName, unused, lineID, guid, bnSenderID, isMobile, isSubtitle, hideSenderInLetterbox, supressRaidIcons",
-	CHAT_MSG_SKILL = "text, playerName, languageName, channelName, playerName2, specialFlags, zoneChannelID, channelIndex, channelBaseName, unused, lineID, guid, bnSenderID, isMobile, isSubtitle, hideSenderInLetterbox, supressRaidIcons",
-	CHAT_MSG_SYSTEM = "text, playerName, languageName, channelName, playerName2, specialFlags, zoneChannelID, channelIndex, channelBaseName, unused, lineID, guid, bnSenderID, isMobile, isSubtitle, hideSenderInLetterbox, supressRaidIcons",
-	CHAT_MSG_TARGETICONS = "text, playerName, languageName, channelName, playerName2, specialFlags, zoneChannelID, channelIndex, channelBaseName, unused, lineID, guid, bnSenderID, isMobile, isSubtitle, hideSenderInLetterbox, supressRaidIcons",
-	CHAT_MSG_TEXT_EMOTE = "text, playerName, languageName, channelName, playerName2, specialFlags, zoneChannelID, channelIndex, channelBaseName, unused, lineID, guid, bnSenderID, isMobile, isSubtitle, hideSenderInLetterbox, supressRaidIcons",
-	CHAT_MSG_TRADESKILLS = "text, playerName, languageName, channelName, playerName2, specialFlags, zoneChannelID, channelIndex, channelBaseName, unused, lineID, guid, bnSenderID, isMobile, isSubtitle, hideSenderInLetterbox, supressRaidIcons",
-	CHAT_MSG_WHISPER = "text, playerName, languageName, channelName, playerName2, specialFlags, zoneChannelID, channelIndex, channelBaseName, unused, lineID, guid, bnSenderID, isMobile, isSubtitle, hideSenderInLetterbox, supressRaidIcons",
-	CHAT_MSG_WHISPER_INFORM = "text, playerName, languageName, channelName, playerName2, specialFlags, zoneChannelID, channelIndex, channelBaseName, unused, lineID, guid, bnSenderID, isMobile, isSubtitle, hideSenderInLetterbox, supressRaidIcons",
-	CHAT_MSG_YELL = "text, playerName, languageName, channelName, playerName2, specialFlags, zoneChannelID, channelIndex, channelBaseName, unused, lineID, guid, bnSenderID, isMobile, isSubtitle, hideSenderInLetterbox, supressRaidIcons",
-	CHAT_SERVER_DISCONNECTED = "[isInitialMessage]",
-	CHAT_SERVER_RECONNECTED = "",
-	CINEMATIC_START = "canBeCancelled",
-	CINEMATIC_STOP = "",
-	CLASS_TRIAL_TIMER_START = "",
-	CLASS_TRIAL_UPGRADE_COMPLETE = "",
-	CLEAR_BOSS_EMOTES = "",
-	CLOSE_INBOX_ITEM = "mailIndex",
-	CLOSE_TABARD_FRAME = "",
-	CLUB_ADDED = "clubId",
-	CLUB_ERROR = "action, error, clubType",
-	CLUB_FINDER_APPLICANT_INVITE_RECIEVED = "clubFinderGUIDs",
-	CLUB_FINDER_APPLICATIONS_UPDATED = "type, clubFinderGUIDs",
-	CLUB_FINDER_CLUB_LIST_RETURNED = "type",
-	CLUB_FINDER_CLUB_REPORTED = "type, clubFinderGUID",
-	CLUB_FINDER_COMMUNITY_OFFLINE_JOIN = "clubId",
-	CLUB_FINDER_ENABLED_OR_DISABLED = "",
-	CLUB_FINDER_LINKED_CLUB_RETURNED = "clubInfo",
-	CLUB_FINDER_MEMBERSHIP_LIST_CHANGED = "",
-	CLUB_FINDER_PLAYER_PENDING_LIST_RECIEVED = "type",
-	CLUB_FINDER_POST_UPDATED = "clubFinderGUIDs",
-	CLUB_FINDER_RECRUITMENT_POST_RETURNED = "type",
-	CLUB_FINDER_RECRUITS_UPDATED = "type",
-	CLUB_FINDER_RECRUIT_LIST_CHANGED = "",
-	CLUB_INVITATIONS_RECEIVED_FOR_CLUB = "clubId",
-	CLUB_INVITATION_ADDED_FOR_SELF = "invitation",
-	CLUB_INVITATION_REMOVED_FOR_SELF = "invitationId",
-	CLUB_MEMBER_ADDED = "clubId, memberId",
-	CLUB_MEMBER_PRESENCE_UPDATED = "clubId, memberId, presence",
-	CLUB_MEMBER_REMOVED = "clubId, memberId",
-	CLUB_MEMBER_ROLE_UPDATED = "clubId, memberId, roleId",
-	CLUB_MEMBER_UPDATED = "clubId, memberId",
-	CLUB_MESSAGE_ADDED = "clubId, streamId, messageId",
-	CLUB_MESSAGE_HISTORY_RECEIVED = "clubId, streamId, downloadedRange, contiguousRange",
-	CLUB_MESSAGE_UPDATED = "clubId, streamId, messageId",
-	CLUB_REMOVED = "clubId",
-	CLUB_REMOVED_MESSAGE = "clubName, clubRemovedReason",
-	CLUB_SELF_MEMBER_ROLE_UPDATED = "clubId, roleId",
-	CLUB_STREAMS_LOADED = "clubId",
-	CLUB_STREAM_ADDED = "clubId, streamId",
-	CLUB_STREAM_REMOVED = "clubId, streamId",
-	CLUB_STREAM_SUBSCRIBED = "clubId, streamId",
-	CLUB_STREAM_UNSUBSCRIBED = "clubId, streamId",
-	CLUB_STREAM_UPDATED = "clubId, streamId",
-	CLUB_TICKETS_RECEIVED = "clubId",
-	CLUB_TICKET_CREATED = "clubId, ticketInfo",
-	CLUB_TICKET_RECEIVED = "ticket",
-	CLUB_UPDATED = "clubId",
-	COMBAT_LOG_EVENT = "",
-	COMBAT_LOG_EVENT_UNFILTERED = "",
-	COMBAT_RATING_UPDATE = "",
-	COMBAT_TEXT_UPDATE = "combatTextType",
-	COMMENTATOR_ENTER_WORLD = "",
-	COMMENTATOR_IMMEDIATE_FOV_UPDATE = "fov",
-	COMMENTATOR_MAP_UPDATE = "",
-	COMMENTATOR_PLAYER_NAME_OVERRIDE_UPDATE = "nameToOverride [, overrideName]",
-	COMMENTATOR_PLAYER_UPDATE = "",
-	COMMODITY_PRICE_UNAVAILABLE = "",
-	COMMODITY_PRICE_UPDATED = "updatedUnitPrice, updatedTotalPrice",
-	COMMODITY_PURCHASED = "itemID, quantity",
-	COMMODITY_PURCHASE_FAILED = "",
-	COMMODITY_PURCHASE_SUCCEEDED = "",
-	COMMODITY_SEARCH_RESULTS_ADDED = "itemID",
-	COMMODITY_SEARCH_RESULTS_UPDATED = "itemID",
-	COMMUNITIES_STREAM_CURSOR_CLEAR = "",
-	COMPACT_UNIT_FRAME_PROFILES_LOADED = "",
-	COMPANION_LEARNED = "",
-	COMPANION_UNLEARNED = "",
-	COMPANION_UPDATE = "[companionType]",
-	CONFIRM_BEFORE_USE = "",
-	CONFIRM_BINDER = "areaName",
-	CONFIRM_DISENCHANT_ROLL = "rollID, rollType",
-	CONFIRM_LOOT_ROLL = "rollID, rollType, confirmReason",
-	CONFIRM_SUMMON = "summonReason, skippingStartExperience",
-	CONFIRM_TALENT_WIPE = "cost, respecType",
-	CONFIRM_XP_LOSS = "",
-	CONSOLE_CLEAR = "",
-	CONSOLE_COLORS_CHANGED = "",
-	CONSOLE_FONT_SIZE_CHANGED = "",
-	CONSOLE_LOG = "message",
-	CONSOLE_MESSAGE = "message, colorType",
-	CONTRIBUTION_CHANGED = "state, result, name, contributionID",
-	CONTRIBUTION_COLLECTOR_CLOSE = "",
-	CONTRIBUTION_COLLECTOR_OPEN = "",
-	CONTRIBUTION_COLLECTOR_PENDING = "contributionID, isPending, result",
-	CONTRIBUTION_COLLECTOR_UPDATE = "",
-	CONTRIBUTION_COLLECTOR_UPDATE_SINGLE = "contributionID",
-	CONVERT_TO_RAID_CONFIRMATION = "",
-	CORPSE_IN_INSTANCE = "",
-	CORPSE_IN_RANGE = "",
-	CORPSE_OUT_OF_RANGE = "",
-	CRITERIA_COMPLETE = "criteriaID",
-	CRITERIA_EARNED = "achievementID, description",
-	CRITERIA_UPDATE = "",
-	CURRENCY_DISPLAY_UPDATE = "[currencyType, quantity, quantityChange, quantityGainSource, quantityLostSource]",
-	CURRENT_SPELL_CAST_CHANGED = "cancelledCast",
-	CURSOR_UPDATE = "",
-	CVAR_UPDATE = "eventName, value",
-	DELETE_ITEM_CONFIRM = "itemName, qualityID, bonding, questWarn",
-	DISABLE_DECLINE_GUILD_INVITE = "",
-	DISABLE_LOW_LEVEL_RAID = "",
-	DISABLE_TAXI_BENCHMARK = "",
-	DISABLE_XP_GAIN = "",
-	DISPLAY_SIZE_CHANGED = "",
-	DUEL_FINISHED = "",
-	DUEL_INBOUNDS = "",
-	DUEL_OUTOFBOUNDS = "",
-	DUEL_REQUESTED = "playerName",
-	DYNAMIC_GOSSIP_POI_UPDATED = "",
-	EJ_DIFFICULTY_UPDATE = "difficultyID",
-	EJ_LOOT_DATA_RECIEVED = "[itemID]",
-	ENABLE_DECLINE_GUILD_INVITE = "",
-	ENABLE_LOW_LEVEL_RAID = "",
-	ENABLE_TAXI_BENCHMARK = "",
-	ENABLE_XP_GAIN = "",
-	ENCOUNTER_END = "encounterID, encounterName, difficultyID, groupSize, success",
-	ENCOUNTER_LOOT_RECEIVED = "encounterID, itemID, itemLink, quantity, itemName, fileName",
-	ENCOUNTER_START = "encounterID, encounterName, difficultyID, groupSize",
-	END_BOUND_TRADEABLE = "reason",
-	ENTERED_DIFFERENT_INSTANCE_FROM_PARTY = "",
-	ENTITLEMENT_DELIVERED = "entitlementType, textureID, name, [payloadID], showFancyToast",
-	EQUIPMENT_SETS_CHANGED = "",
-	EQUIPMENT_SWAP_FINISHED = "result [, setID]",
-	EQUIPMENT_SWAP_PENDING = "",
-	EQUIP_BIND_CONFIRM = "slot",
-	EQUIP_BIND_TRADEABLE_CONFIRM = "slot",
-	EXECUTE_CHAT_LINE = "chatLine",
-	EXTRA_BROWSE_INFO_RECEIVED = "itemID",
-	FOG_OF_WAR_UPDATED = "",
-	FORBIDDEN_NAME_PLATE_CREATED = "namePlateFrame",
-	FORBIDDEN_NAME_PLATE_UNIT_ADDED = "unitToken",
-	FORBIDDEN_NAME_PLATE_UNIT_REMOVED = "unitToken",
-	FRIENDLIST_UPDATE = "",
-	GARRISON_ARCHITECT_CLOSED = "",
-	GARRISON_ARCHITECT_OPENED = "followerTypeID",
-	GARRISON_BUILDING_ACTIVATABLE = "buildingName, garrisonType",
-	GARRISON_BUILDING_ACTIVATED = "garrisonPlotInstanceID, garrisonBuildingID",
-	GARRISON_BUILDING_ERROR = "",
-	GARRISON_BUILDING_LIST_UPDATE = "categoryID",
-	GARRISON_BUILDING_PLACED = "garrisonPlotInstanceID, newPlacement",
-	GARRISON_BUILDING_REMOVED = "garrPlotInstanceID, garrBuildingID",
-	GARRISON_BUILDING_UPDATE = "garrisonBuildingID [, garrPlotInstanceID]",
-	GARRISON_FOLLOWER_ADDED = "followerDbID, followerName, followerClassName, followerLevel, followerQuality, isUpgraded, texturePrefix, followerTypeID",
-	GARRISON_FOLLOWER_CATEGORIES_UPDATED = "",
-	GARRISON_FOLLOWER_DURABILITY_CHANGED = "garrFollowerTypeID, followerDbID, followerDurability",
-	GARRISON_FOLLOWER_LIST_UPDATE = "followerTypeID",
-	GARRISON_FOLLOWER_REMOVED = "followerTypeID",
-	GARRISON_FOLLOWER_UPGRADED = "followerDbID",
-	GARRISON_FOLLOWER_XP_CHANGED = "garrFollowerTypeID, followerDbID, xpChange, oldFollowerXp, oldFollowerLevel, oldFollowerQuality",
-	GARRISON_HIDE_LANDING_PAGE = "",
-	GARRISON_INVASION_AVAILABLE = "",
-	GARRISON_INVASION_UNAVAILABLE = "",
-	GARRISON_LANDINGPAGE_SHIPMENTS = "",
-	GARRISON_MISSION_AREA_BONUS_ADDED = "garrisonMissonBonusAbilityID",
-	GARRISON_MISSION_BONUS_ROLL_COMPLETE = "missionID, success",
-	GARRISON_MISSION_BONUS_ROLL_LOOT = "itemID, quantity",
-	GARRISON_MISSION_COMPLETE_RESPONSE = "missionID, canComplete, success, bonusRollSuccess, followerDeaths",
-	GARRISON_MISSION_FINISHED = "followerTypeID, missionID",
-	GARRISON_MISSION_LIST_UPDATE = "garrFollowerTypeID",
-	GARRISON_MISSION_NPC_CLOSED = "",
-	GARRISON_MISSION_NPC_OPENED = "followerTypeID",
-	GARRISON_MISSION_REWARD_INFO = "missionID, followerDbID",
-	GARRISON_MISSION_STARTED = "garrFollowerTypeID, missionID",
-	GARRISON_MONUMENT_CLOSE_UI = "",
-	GARRISON_MONUMENT_LIST_LOADED = "success",
-	GARRISON_MONUMENT_REPLACED = "success",
-	GARRISON_MONUMENT_SELECTED_TROPHY_ID_LOADED = "success",
-	GARRISON_MONUMENT_SHOW_UI = "",
-	GARRISON_RANDOM_MISSION_ADDED = "followerTypeID, missionID",
-	GARRISON_RECALL_PORTAL_LAST_USED_TIME = "success, recallPortalLastUsedTime",
-	GARRISON_RECALL_PORTAL_USED = "success",
-	GARRISON_RECRUITMENT_FOLLOWERS_GENERATED = "",
-	GARRISON_RECRUITMENT_NPC_CLOSED = "",
-	GARRISON_RECRUITMENT_NPC_OPENED = "followerTypeID",
-	GARRISON_RECRUITMENT_READY = "",
-	GARRISON_RECRUIT_FOLLOWER_RESULT = "",
-	GARRISON_SHIPMENT_RECEIVED = "",
-	GARRISON_SHIPYARD_NPC_CLOSED = "",
-	GARRISON_SHIPYARD_NPC_OPENED = "followerTypeID",
-	GARRISON_SHOW_LANDING_PAGE = "",
-	GARRISON_TALENT_COMPLETE = "garrTypeID, doAlert",
-	GARRISON_TALENT_NPC_CLOSED = "",
-	GARRISON_TALENT_NPC_OPENED = "garrisonTypeID, garrisonTalentTreeID",
-	GARRISON_TALENT_UPDATE = "garrTypeID",
-	GARRISON_TRADESKILL_NPC_CLOSED = "",
-	GARRISON_UPDATE = "",
-	GARRISON_UPGRADEABLE_RESULT = "garrisonUpgradeable",
-	GARRISON_USE_PARTY_GARRISON_CHANGED = "",
-	GDF_SIM_COMPLETE = "",
-	GENERIC_ERROR = "errorMessage",
-	GET_ITEM_INFO_RECEIVED = "itemID, success",
-	GLOBAL_MOUSE_DOWN = "button",
-	GLOBAL_MOUSE_UP = "button",
-	GLUE_CONSOLE_LOG = "message",
-	GLUE_SCREENSHOT_FAILED = "",
-	GM_PLAYER_INFO = "name, info",
-	GOSSIP_CLOSED = "",
-	GOSSIP_CONFIRM = "gossipIndex, text, cost",
-	GOSSIP_CONFIRM_CANCEL = "",
-	GOSSIP_ENTER_CODE = "gossipIndex",
-	GOSSIP_SHOW = "",
-	GROUP_FORMED = "category, partyGUID",
-	GROUP_INVITE_CONFIRMATION = "",
-	GROUP_JOINED = "category, partyGUID",
-	GROUP_LEFT = "category, partyGUID",
-	GROUP_ROSTER_UPDATE = "",
-	GUILDBANKBAGSLOTS_CHANGED = "",
-	GUILDBANKFRAME_CLOSED = "",
-	GUILDBANKFRAME_OPENED = "",
-	GUILDBANKLOG_UPDATE = "",
-	GUILDBANK_ITEM_LOCK_CHANGED = "",
-	GUILDBANK_TEXT_CHANGED = "guildBankTab",
-	GUILDBANK_UPDATE_MONEY = "",
-	GUILDBANK_UPDATE_TABS = "",
-	GUILDBANK_UPDATE_TEXT = "guildBankTab",
-	GUILDBANK_UPDATE_WITHDRAWMONEY = "",
-	GUILDTABARD_UPDATE = "",
-	GUILD_CHALLENGE_COMPLETED = "challengeType, currentCount, maxCount, goldAwarded",
-	GUILD_CHALLENGE_UPDATED = "",
-	GUILD_EVENT_LOG_UPDATE = "",
-	GUILD_INVITE_CANCEL = "",
-	GUILD_INVITE_REQUEST = "inviter, guildName, guildAchievementPoints, oldGuildName [, isNewGuild, tabardInfo]",
-	GUILD_MOTD = "motdText",
-	GUILD_NEWS_UPDATE = "",
-	GUILD_PARTY_STATE_UPDATED = "inGuildParty",
-	GUILD_RANKS_UPDATE = "",
-	GUILD_RECIPE_KNOWN_BY_MEMBERS = "",
-	GUILD_REGISTRAR_CLOSED = "",
-	GUILD_REGISTRAR_SHOW = "",
-	GUILD_RENAME_REQUIRED = "flagSet",
-	GUILD_REWARDS_LIST = "",
-	GUILD_ROSTER_UPDATE = "canRequestRosterUpdate",
-	GUILD_TRADESKILL_UPDATE = "",
-	HEARTHSTONE_BOUND = "",
-	HEIRLOOMS_UPDATED = "[itemID, updateReason, hideUntilLearned]",
-	HEIRLOOM_UPGRADE_TARGETING_CHANGED = "pendingHeirloomUpgradeSpellcast",
-	HIDE_SUBTITLE = "",
-	HONOR_LEVEL_UPDATE = "isHigherLevel",
-	HONOR_XP_UPDATE = "unitTarget",
-	IGNORELIST_UPDATE = "",
-	INCOMING_RESURRECT_CHANGED = "unitTarget",
-	INCOMING_SUMMON_CHANGED = "unitTarget",
-	INITIAL_CLUBS_LOADED = "",
-	INITIAL_HOTFIXES_APPLIED = "",
-	INSPECT_ACHIEVEMENT_READY = "guid",
-	INSPECT_HONOR_UPDATE = "",
-	INSPECT_READY = "inspecteeGUID",
-	INSTANCE_BOOT_START = "",
-	INSTANCE_BOOT_STOP = "",
-	INSTANCE_ENCOUNTER_ADD_TIMER = "timeRemaining",
-	INSTANCE_ENCOUNTER_ENGAGE_UNIT = "",
-	INSTANCE_ENCOUNTER_OBJECTIVE_COMPLETE = "objectiveID",
-	INSTANCE_ENCOUNTER_OBJECTIVE_START = "objectiveID, objectiveProgress",
-	INSTANCE_ENCOUNTER_OBJECTIVE_UPDATE = "objectiveID, objectiveProgress",
-	INSTANCE_GROUP_SIZE_CHANGED = "",
-	INSTANCE_LOCK_START = "",
-	INSTANCE_LOCK_STOP = "",
-	INSTANCE_LOCK_WARNING = "",
-	INVENTORY_SEARCH_UPDATE = "",
-	INVITE_TO_PARTY_CONFIRMATION = "targetName, willConvertToRaid, questSessionActive",
-	INVITE_TRAVEL_PASS_CONFIRMATION = "targetName, targetGUID, willConvertToRaid, questSessionActive",
-	ISLANDS_QUEUE_CLOSE = "",
-	ISLANDS_QUEUE_OPEN = "",
-	ISLAND_AZERITE_GAIN = "amount, gainedByPlayer, factionIndex, gainedBy, gainedFrom",
-	ISLAND_COMPLETED = "mapID, winner",
-	ITEM_DATA_LOAD_RESULT = "itemID, success",
-	ITEM_INTERACTION_CLOSE = "",
-	ITEM_INTERACTION_ITEM_SELECTION_UPDATED = "[itemLocation]",
-	ITEM_INTERACTION_OPEN = "",
-	ITEM_KEY_ITEM_INFO_RECEIVED = "itemID",
-	ITEM_LOCKED = "bagOrSlotIndex [, slotIndex]",
-	ITEM_LOCK_CHANGED = "bagOrSlotIndex [, slotIndex]",
-	ITEM_PURCHASED = "itemID",
-	ITEM_PUSH = "bagSlot, iconFileID",
-	ITEM_RESTORATION_BUTTON_STATUS = "",
-	ITEM_SEARCH_RESULTS_ADDED = "itemKey",
-	ITEM_SEARCH_RESULTS_UPDATED = "itemKey [, newAuctionID]",
-	ITEM_TEXT_BEGIN = "",
-	ITEM_TEXT_CLOSED = "",
-	ITEM_TEXT_READY = "",
-	ITEM_TEXT_TRANSLATION = "delay",
-	ITEM_UNLOCKED = "bagOrSlotIndex [, slotIndex]",
-	ITEM_UPGRADE_MASTER_CLOSED = "",
-	ITEM_UPGRADE_MASTER_OPENED = "",
-	ITEM_UPGRADE_MASTER_SET_ITEM = "",
-	ITEM_UPGRADE_MASTER_UPDATE = "",
-	KNOWLEDGE_BASE_ARTICLE_LOAD_FAILURE = "",
-	KNOWLEDGE_BASE_ARTICLE_LOAD_SUCCESS = "",
-	KNOWLEDGE_BASE_QUERY_LOAD_FAILURE = "",
-	KNOWLEDGE_BASE_QUERY_LOAD_SUCCESS = "",
-	KNOWLEDGE_BASE_SERVER_MESSAGE = "",
-	KNOWLEDGE_BASE_SETUP_LOAD_FAILURE = "",
-	KNOWLEDGE_BASE_SETUP_LOAD_SUCCESS = "",
-	KNOWLEDGE_BASE_SYSTEM_MOTD_UPDATED = "",
-	KNOWN_TITLES_UPDATE = "unitTarget",
-	LANGUAGE_LIST_CHANGED = "",
-	LEARNED_SPELL_IN_TAB = "spellID, skillInfoIndex, isGuildPerkSpell",
-	LEAVE_PARTY_CONFIRMATION = "",
-	LFG_BONUS_FACTION_ID_UPDATED = "",
-	LFG_BOOT_PROPOSAL_UPDATE = "",
-	LFG_COMPLETION_REWARD = "",
-	LFG_INVALID_ERROR_MESSAGE = "reason, subReason1, subReason2",
-	LFG_LIST_ACTIVE_ENTRY_UPDATE = "[created]",
-	LFG_LIST_APPLICANT_LIST_UPDATED = "[newPendingEntry, newPendingEntryWithData]",
-	LFG_LIST_APPLICANT_UPDATED = "applicantID",
-	LFG_LIST_APPLICATION_STATUS_UPDATED = "searchResultID, newStatus, oldStatus, groupName",
-	LFG_LIST_AVAILABILITY_UPDATE = "",
-	LFG_LIST_ENTRY_CREATION_FAILED = "",
-	LFG_LIST_ENTRY_EXPIRED_TIMEOUT = "",
-	LFG_LIST_ENTRY_EXPIRED_TOO_MANY_PLAYERS = "",
-	LFG_LIST_JOINED_GROUP = "searchResultID, groupName",
-	LFG_LIST_SEARCH_FAILED = "[reason]",
-	LFG_LIST_SEARCH_RESULTS_RECEIVED = "",
-	LFG_LIST_SEARCH_RESULT_UPDATED = "searchResultID",
-	LFG_LOCK_INFO_RECEIVED = "",
-	LFG_OFFER_CONTINUE = "name, lfgDungeonsID, typeID",
-	LFG_OPEN_FROM_GOSSIP = "dungeonID",
-	LFG_PROPOSAL_DONE = "",
-	LFG_PROPOSAL_FAILED = "",
-	LFG_PROPOSAL_SHOW = "",
-	LFG_PROPOSAL_SUCCEEDED = "",
-	LFG_PROPOSAL_UPDATE = "",
-	LFG_QUEUE_STATUS_UPDATE = "",
-	LFG_READY_CHECK_DECLINED = "name",
-	LFG_READY_CHECK_HIDE = "",
-	LFG_READY_CHECK_PLAYER_IS_READY = "name",
-	LFG_READY_CHECK_SHOW = "isRequeue",
-	LFG_READY_CHECK_UPDATE = "",
-	LFG_ROLE_CHECK_DECLINED = "",
-	LFG_ROLE_CHECK_HIDE = "",
-	LFG_ROLE_CHECK_ROLE_CHOSEN = "name, isTank, isHealer, isDamage",
-	LFG_ROLE_CHECK_SHOW = "isRequeue",
-	LFG_ROLE_CHECK_UPDATE = "",
-	LFG_ROLE_UPDATE = "",
-	LFG_UPDATE = "",
-	LFG_UPDATE_RANDOM_INFO = "",
-	LF_GUILD_BROWSE_UPDATED = "",
-	LF_GUILD_MEMBERSHIP_LIST_CHANGED = "",
-	LF_GUILD_MEMBERSHIP_LIST_UPDATED = "numApplicationsRemaining",
-	LF_GUILD_POST_UPDATED = "",
-	LF_GUILD_RECRUITS_UPDATED = "",
-	LF_GUILD_RECRUIT_LIST_CHANGED = "",
-	LIFESTEAL_UPDATE = "",
-	LOADING_SCREEN_DISABLED = "",
-	LOADING_SCREEN_ENABLED = "",
-	LOCALPLAYER_PET_RENAMED = "",
-	LOC_RESULT = "result",
-	LOGOUT_CANCEL = "",
-	LOOT_BIND_CONFIRM = "lootSlot",
-	LOOT_CLOSED = "",
-	LOOT_HISTORY_AUTO_SHOW = "rollID, isMasterLoot",
-	LOOT_HISTORY_FULL_UPDATE = "",
-	LOOT_HISTORY_ROLL_CHANGED = "historyIndex, playerIndex",
-	LOOT_HISTORY_ROLL_COMPLETE = "",
-	LOOT_ITEM_AVAILABLE = "itemTooltip, lootHandle",
-	LOOT_ITEM_ROLL_WON = "itemLink, rollQuantity, rollType, roll, upgraded",
-	LOOT_JOURNAL_LIST_UPDATE = "",
-	LOOT_OPENED = "autoLoot, isFromItem",
-	LOOT_READY = "autoloot",
-	LOOT_ROLLS_COMPLETE = "lootHandle",
-	LOOT_SLOT_CHANGED = "lootSlot",
-	LOOT_SLOT_CLEARED = "lootSlot",
-	LOSS_OF_CONTROL_ADDED = "effectIndex",
-	LOSS_OF_CONTROL_UPDATE = "",
-	LUA_WARNING = "warnType, warningText",
-	MACRO_ACTION_BLOCKED = "function",
-	MACRO_ACTION_FORBIDDEN = "function",
-	MAIL_CLOSED = "",
-	MAIL_FAILED = "[itemID]",
-	MAIL_INBOX_UPDATE = "",
-	MAIL_LOCK_SEND_ITEMS = "attachSlot, itemLink",
-	MAIL_SEND_INFO_UPDATE = "",
-	MAIL_SEND_SUCCESS = "",
-	MAIL_SHOW = "",
-	MAIL_SUCCESS = "[itemID]",
-	MAIL_UNLOCK_SEND_ITEMS = "",
-	MAP_EXPLORATION_UPDATED = "",
-	MASTERY_UPDATE = "",
-	MAX_EXPANSION_LEVEL_UPDATED = "",
-	MAX_SPELL_START_RECOVERY_OFFSET_CHANGED = "clampedNewQueueWindowMs",
-	MERCHANT_CLOSED = "",
-	MERCHANT_CONFIRM_TRADE_TIMER_REMOVAL = "itemLink",
-	MERCHANT_FILTER_ITEM_UPDATE = "itemID",
-	MERCHANT_SHOW = "",
-	MERCHANT_UPDATE = "",
-	MINIMAP_PING = "unitTarget, y, x",
-	MINIMAP_UPDATE_TRACKING = "",
-	MINIMAP_UPDATE_ZOOM = "",
-	MIN_EXPANSION_LEVEL_UPDATED = "",
-	MIRROR_TIMER_PAUSE = "timerName, paused",
-	MIRROR_TIMER_START = "timerName, value, maxValue, scale, paused, timerLabel",
-	MIRROR_TIMER_STOP = "timerName",
-	MODIFIER_STATE_CHANGED = "key, down",
-	MOUNT_CURSOR_CLEAR = "",
-	MOUNT_EQUIPMENT_APPLY_RESULT = "success",
-	MOUNT_JOURNAL_SEARCH_UPDATED = "",
-	MOUNT_JOURNAL_USABILITY_CHANGED = "",
-	MUTELIST_UPDATE = "",
-	MYTHIC_PLUS_CURRENT_AFFIX_UPDATE = "",
-	MYTHIC_PLUS_NEW_SEASON_RECORD = "mapChallengeModeID, completionMilliseconds, level",
-	MYTHIC_PLUS_NEW_WEEKLY_RECORD = "mapChallengeModeID, completionMilliseconds, level",
-	NAME_PLATE_CREATED = "namePlateFrame",
-	NAME_PLATE_UNIT_ADDED = "unitToken",
-	NAME_PLATE_UNIT_REMOVED = "unitToken",
-	NEUTRAL_FACTION_SELECT_RESULT = "success",
-	NEW_MOUNT_ADDED = "mountID",
-	NEW_PET_ADDED = "battlePetGUID",
-	NEW_RECIPE_LEARNED = "spellID",
-	NEW_TOY_ADDED = "itemID",
-	NEW_WMO_CHUNK = "",
-	NOTIFY_PVP_AFK_RESULT = "offender, numBlackMarksOnOffender, numPlayersIHaveReported",
-	NPE_TUTORIAL_UPDATE = "",
-	OBJECT_ENTERED_AOI = "guid",
-	OBJECT_LEFT_AOI = "guid",
-	OBLITERUM_FORGE_CLOSE = "",
-	OBLITERUM_FORGE_PENDING_ITEM_CHANGED = "",
-	OBLITERUM_FORGE_SHOW = "",
-	OPEN_MASTER_LOOT_LIST = "",
-	OPEN_REPORT_PLAYER = "token, reportType, playerName",
-	OPEN_TABARD_FRAME = "",
-	OWNED_AUCTIONS_UPDATED = "",
-	PARTY_INVITE_CANCEL = "",
-	PARTY_INVITE_REQUEST = "name, isTank, isHealer, isDamage, isNativeRealm, allowMultipleRoles, inviterGUID, questSessionActive",
-	PARTY_LEADER_CHANGED = "",
-	PARTY_LFG_RESTRICTED = "",
-	PARTY_LOOT_METHOD_CHANGED = "",
-	PARTY_MEMBER_DISABLE = "unitTarget",
-	PARTY_MEMBER_ENABLE = "unitTarget",
-	PENDING_AZERITE_ESSENCE_CHANGED = "[essenceID]",
-	PETITION_CLOSED = "",
-	PETITION_SHOW = "",
-	PET_ATTACK_START = "",
-	PET_ATTACK_STOP = "",
-	PET_BAR_HIDEGRID = "",
-	PET_BAR_SHOWGRID = "",
-	PET_BAR_UPDATE = "",
-	PET_BAR_UPDATE_COOLDOWN = "",
-	PET_BAR_UPDATE_USABLE = "",
-	PET_BATTLE_ABILITY_CHANGED = "owner, petIndex, abilityID",
-	PET_BATTLE_ACTION_SELECTED = "",
-	PET_BATTLE_AURA_APPLIED = "owner, petIndex, auraInstanceID",
-	PET_BATTLE_AURA_CANCELED = "owner, petIndex, auraInstanceID",
-	PET_BATTLE_AURA_CHANGED = "owner, petIndex, auraInstanceID",
-	PET_BATTLE_CAPTURED = "owner, petIndex",
-	PET_BATTLE_CLOSE = "",
-	PET_BATTLE_FINAL_ROUND = "owner",
-	PET_BATTLE_HEALTH_CHANGED = "owner, petIndex, healthChange",
-	PET_BATTLE_LEVEL_CHANGED = "owner, petIndex, newLevel",
-	PET_BATTLE_LOOT_RECEIVED = "typeIdentifier, itemLink, quantity",
-	PET_BATTLE_MAX_HEALTH_CHANGED = "owner, petIndex, healthChange",
-	PET_BATTLE_OPENING_DONE = "",
-	PET_BATTLE_OPENING_START = "",
-	PET_BATTLE_OVER = "",
-	PET_BATTLE_OVERRIDE_ABILITY = "abilityIndex",
-	PET_BATTLE_PET_CHANGED = "owner",
-	PET_BATTLE_PET_ROUND_PLAYBACK_COMPLETE = "roundNumber",
-	PET_BATTLE_PET_ROUND_RESULTS = "roundNumber",
-	PET_BATTLE_PET_TYPE_CHANGED = "owner, petIndex, stateValue",
-	PET_BATTLE_PVP_DUEL_REQUESTED = "fullName",
-	PET_BATTLE_PVP_DUEL_REQUEST_CANCEL = "",
-	PET_BATTLE_QUEUE_PROPOSAL_ACCEPTED = "",
-	PET_BATTLE_QUEUE_PROPOSAL_DECLINED = "",
-	PET_BATTLE_QUEUE_PROPOSE_MATCH = "",
-	PET_BATTLE_QUEUE_STATUS = "",
-	PET_BATTLE_XP_CHANGED = "owner, petIndex, xpChange",
-	PET_DISMISS_START = "delay",
-	PET_FORCE_NAME_DECLENSION = "name [, declinedName1, declinedName2, declinedName3, declinedName4, declinedName5]",
-	PET_JOURNAL_AUTO_SLOTTED_PET = "slotIndex, battlePetGUID",
-	PET_JOURNAL_CAGE_FAILED = "",
-	PET_JOURNAL_LIST_UPDATE = "",
-	PET_JOURNAL_NEW_BATTLE_SLOT = "",
-	PET_JOURNAL_PETS_HEALED = "",
-	PET_JOURNAL_PET_DELETED = "battlePetGUID",
-	PET_JOURNAL_PET_RESTORED = "battlePetGUID",
-	PET_JOURNAL_PET_REVOKED = "battlePetGUID",
-	PET_JOURNAL_TRAP_LEVEL_SET = "trapLevel",
-	PET_SPECIALIZATION_CHANGED = "",
-	PET_SPELL_POWER_UPDATE = "",
-	PET_STABLE_CLOSED = "",
-	PET_STABLE_SHOW = "",
-	PET_STABLE_UPDATE = "",
-	PET_STABLE_UPDATE_PAPERDOLL = "",
-	PET_UI_CLOSE = "",
-	PET_UI_UPDATE = "",
-	PLAYERBANKBAGSLOTS_CHANGED = "",
-	PLAYERBANKSLOTS_CHANGED = "slot",
-	PLAYERREAGENTBANKSLOTS_CHANGED = "slot",
-	PLAYER_ALIVE = "",
-	PLAYER_AVG_ITEM_LEVEL_UPDATE = "",
-	PLAYER_CAMPING = "",
-	PLAYER_CONTROL_GAINED = "",
-	PLAYER_CONTROL_LOST = "",
-	PLAYER_DAMAGE_DONE_MODS = "unitTarget",
-	PLAYER_DEAD = "",
-	PLAYER_DIFFICULTY_CHANGED = "",
-	PLAYER_ENTERING_BATTLEGROUND = "",
-	PLAYER_ENTERING_WORLD = "isInitialLogin, isReloadingUi",
-	PLAYER_ENTER_COMBAT = "",
-	PLAYER_EQUIPMENT_CHANGED = "equipmentSlot, hasCurrent",
-	PLAYER_FARSIGHT_FOCUS_CHANGED = "",
-	PLAYER_FLAGS_CHANGED = "unitTarget",
-	PLAYER_FOCUS_CHANGED = "",
-	PLAYER_GAINS_VEHICLE_DATA = "unitTarget, vehicleUIIndicatorID",
-	PLAYER_GUILD_UPDATE = "unitTarget",
-	PLAYER_LEARN_PVP_TALENT_FAILED = "",
-	PLAYER_LEARN_TALENT_FAILED = "",
-	PLAYER_LEAVE_COMBAT = "",
-	PLAYER_LEAVING_WORLD = "",
-	PLAYER_LEVEL_CHANGED = "oldLevel, newLevel",
-	PLAYER_LEVEL_UP = "level, healthDelta, powerDelta, numNewTalents, numNewPvpTalentSlots, strengthDelta, agilityDelta, staminaDelta, intellectDelta",
-	PLAYER_LOGIN = "",
-	PLAYER_LOGOUT = "",
-	PLAYER_LOOT_SPEC_UPDATED = "",
-	PLAYER_LOSES_VEHICLE_DATA = "unitTarget",
-	PLAYER_MONEY = "",
-	PLAYER_MOUNT_DISPLAY_CHANGED = "",
-	PLAYER_PVP_KILLS_CHANGED = "unitTarget",
-	PLAYER_PVP_RANK_CHANGED = "unitTarget",
-	PLAYER_PVP_TALENT_UPDATE = "",
-	PLAYER_QUITING = "",
-	PLAYER_REGEN_DISABLED = "",
-	PLAYER_REGEN_ENABLED = "",
-	PLAYER_REPORT_SUBMITTED = "invitedByGUID",
-	PLAYER_ROLES_ASSIGNED = "",
-	PLAYER_SKINNED = "hasFreeRepop",
-	PLAYER_SPECIALIZATION_CHANGED = "unitTarget",
-	PLAYER_STARTED_LOOKING = "",
-	PLAYER_STARTED_MOVING = "",
-	PLAYER_STARTED_TURNING = "",
-	PLAYER_STOPPED_LOOKING = "",
-	PLAYER_STOPPED_MOVING = "",
-	PLAYER_STOPPED_TURNING = "",
-	PLAYER_TALENT_UPDATE = "",
-	PLAYER_TARGET_CHANGED = "",
-	PLAYER_TOTEM_UPDATE = "totemSlot",
-	PLAYER_TRADE_CURRENCY = "",
-	PLAYER_TRADE_MONEY = "",
-	PLAYER_TRIAL_XP_UPDATE = "unitTarget",
-	PLAYER_UNGHOST = "",
-	PLAYER_UPDATE_RESTING = "",
-	PLAYER_XP_UPDATE = "unitTarget",
-	PLAY_MOVIE = "movieID",
-	PORTRAITS_UPDATED = "",
-	POST_MATCH_CURRENCY_REWARD_UPDATE = "reward",
-	POST_MATCH_ITEM_REWARD_UPDATE = "",
-	PROVING_GROUNDS_SCORE_UPDATE = "points",
-	PVPQUEUE_ANYWHERE_SHOW = "",
-	PVPQUEUE_ANYWHERE_UPDATE_AVAILABLE = "",
-	PVP_BRAWL_INFO_UPDATED = "",
-	PVP_MATCH_ACTIVE = "",
-	PVP_MATCH_COMPLETE = "winner, duration",
-	PVP_MATCH_INACTIVE = "",
-	PVP_POWER_UPDATE = "",
-	PVP_RATED_STATS_UPDATE = "",
-	PVP_REWARDS_UPDATE = "",
-	PVP_ROLE_UPDATE = "",
-	PVP_SPECIAL_EVENT_INFO_UPDATED = "",
-	PVP_TIMER_UPDATE = "unitTarget",
-	PVP_TYPES_ENABLED = "wargameBattlegrounds, ratedBattlegrounds, ratedArenas",
-	PVP_VEHICLE_INFO_UPDATED = "",
-	PVP_WORLDSTATE_UPDATE = "",
-	QUESTLINE_UPDATE = "requestRequired",
-	QUEST_ACCEPTED = "questIndex, questId",
-	QUEST_ACCEPT_CONFIRM = "name, questTitle",
-	QUEST_AUTOCOMPLETE = "questId",
-	QUEST_BOSS_EMOTE = "text, playerName, displayTime, enableBossEmoteWarningSound",
-	QUEST_CHOICE_CLOSE = "",
-	QUEST_CHOICE_UPDATE = "",
-	QUEST_COMPLETE = "",
-	QUEST_CURRENCY_LOOT_RECEIVED = "questID, currencyId, quantity",
-	QUEST_DATA_LOAD_RESULT = "questID, success",
-	QUEST_DETAIL = "[questStartItemID]",
-	QUEST_FINISHED = "",
-	QUEST_GREETING = "",
-	QUEST_ITEM_UPDATE = "",
-	QUEST_LOG_CRITERIA_UPDATE = "questID, specificTreeID, description, numFulfilled, numRequired",
-	QUEST_LOG_UPDATE = "",
-	QUEST_LOOT_RECEIVED = "questID, itemLink, quantity",
-	QUEST_POI_UPDATE = "",
-	QUEST_PROGRESS = "",
-	QUEST_REMOVED = "questID, wasReplayQuest",
-	QUEST_SESSION_CREATED = "",
-	QUEST_SESSION_DESTROYED = "",
-	QUEST_SESSION_ENABLED_STATE_CHANGED = "enabled",
-	QUEST_SESSION_JOINED = "",
-	QUEST_SESSION_LEFT = "",
-	QUEST_SESSION_MEMBER_CONFIRM = "",
-	QUEST_SESSION_MEMBER_START_RESPONSE = "guid, response",
-	QUEST_SESSION_NOTIFICATION = "result, guid",
-	QUEST_TURNED_IN = "questID, xpReward, moneyReward",
-	QUEST_WATCH_LIST_CHANGED = "[questID, added]",
-	QUEST_WATCH_UPDATE = "questIndex",
-	QUICK_TICKET_SYSTEM_STATUS = "",
-	QUICK_TICKET_THROTTLE_CHANGED = "",
-	RAF_ENTITLEMENT_DELIVERED = "entitlementType, textureID, name, [payloadID], showFancyToast",
-	RAF_INFO_UPDATED = "info",
-	RAF_RECRUITING_ENABLED_STATUS = "enabled",
-	RAF_SYSTEM_ENABLED_STATUS = "enabled",
-	RAF_SYSTEM_INFO_UPDATED = "systemInfo",
-	RAID_BOSS_EMOTE = "text, playerName, displayTime, enableBossEmoteWarningSound",
-	RAID_BOSS_WHISPER = "text, playerName, displayTime, enableBossEmoteWarningSound",
-	RAID_INSTANCE_WELCOME = "mapname, timeLeft, locked, extended",
-	RAID_ROSTER_UPDATE = "",
-	RAID_TARGET_UPDATE = "",
-	RAISED_AS_GHOUL = "",
-	READY_CHECK = "initiatorName, readyCheckTimeLeft",
-	READY_CHECK_CONFIRM = "unitTarget, isReady",
-	READY_CHECK_FINISHED = "preempted",
-	REAGENTBANK_PURCHASED = "",
-	REAGENTBANK_UPDATE = "",
-	RECEIVED_ACHIEVEMENT_LIST = "",
-	RECEIVED_ACHIEVEMENT_MEMBER_LIST = "achievementID",
-	REPLACE_ENCHANT = "existingStr, replacementStr",
-	REPLICATE_ITEM_LIST_UPDATE = "",
-	REPORT_PLAYER_RESULT = "success",
-	REQUEST_CEMETERY_LIST_RESPONSE = "isGossipTriggered",
-	REQUEST_INVITE_CONFIRMATION = "targetName, partyLevelLink, questSessionActive [, tank, healer, dps]",
-	REQUIRED_GUILD_RENAME_RESULT = "success",
-	RESEARCH_ARTIFACT_COMPLETE = "name",
-	RESEARCH_ARTIFACT_DIG_SITE_UPDATED = "",
-	RESEARCH_ARTIFACT_HISTORY_READY = "",
-	RESEARCH_ARTIFACT_UPDATE = "",
-	RESPEC_AZERITE_EMPOWERED_ITEM_CLOSED = "",
-	RESPEC_AZERITE_EMPOWERED_ITEM_OPENED = "",
-	RESURRECT_REQUEST = "inviter",
-	ROLE_CHANGED_INFORM = "changedName, fromName, oldRole, newRole",
-	ROLE_POLL_BEGIN = "fromName",
-	RUNE_POWER_UPDATE = "runeIndex [, added]",
-	SAVED_VARIABLES_TOO_LARGE = "addOnName",
-	SCENARIO_BONUS_OBJECTIVE_COMPLETE = "bonusObjectiveID",
-	SCENARIO_BONUS_VISIBILITY_UPDATE = "",
-	SCENARIO_COMPLETED = "[questID, xp, money]",
-	SCENARIO_CRITERIA_SHOW_STATE_UPDATE = "show",
-	SCENARIO_CRITERIA_UPDATE = "criteriaID",
-	SCENARIO_POI_UPDATE = "",
-	SCENARIO_SPELL_UPDATE = "",
-	SCENARIO_UPDATE = "[newStep]",
-	SCRAPPING_MACHINE_CLOSE = "",
-	SCRAPPING_MACHINE_ITEM_REMOVED_OR_CANCELLED = "index",
-	SCRAPPING_MACHINE_PENDING_ITEM_CHANGED = "",
-	SCRAPPING_MACHINE_SCRAPPING_FINISHED = "",
-	SCRAPPING_MACHINE_SHOW = "",
-	SCREENSHOT_FAILED = "",
-	SCREENSHOT_STARTED = "",
-	SCREENSHOT_SUCCEEDED = "",
-	SEARCH_DB_LOADED = "",
-	SECURE_TRANSFER_CANCEL = "",
-	SECURE_TRANSFER_CONFIRM_SEND_MAIL = "",
-	SECURE_TRANSFER_CONFIRM_TRADE_ACCEPT = "",
-	SELF_RES_SPELL_CHANGED = "",
-	SEND_MAIL_COD_CHANGED = "",
-	SEND_MAIL_MONEY_CHANGED = "",
-	SHIPMENT_CRAFTER_CLOSED = "",
-	SHIPMENT_CRAFTER_INFO = "success, shipmentCount, maxShipments, ownedShipments, plotInstanceID",
-	SHIPMENT_CRAFTER_OPENED = "charShipmentContainerID",
-	SHIPMENT_CRAFTER_REAGENT_UPDATE = "",
-	SHIPMENT_UPDATE = "[shipmentStarted, hasAttachedFollower]",
-	SHOW_FACTION_SELECT_UI = "",
-	SHOW_LOOT_TOAST = "typeIdentifier, itemLink, quantity, specID, sex, personalLootToast, toastMethod, lessAwesome, upgraded, corrupted",
-	SHOW_LOOT_TOAST_LEGENDARY_LOOTED = "itemLink",
-	SHOW_LOOT_TOAST_UPGRADE = "itemLink, quantity, specID, sex, baseQuality, personalLootToast, lessAwesome",
-	SHOW_PVP_FACTION_LOOT_TOAST = "typeIdentifier, itemLink, quantity, specID, sex, personalLootToast, lessAwesome",
-	SHOW_RATED_PVP_REWARD_TOAST = "typeIdentifier, itemLink, quantity, specID, sex, personalLootToast, lessAwesome",
-	SIMPLE_BROWSER_WEB_ERROR = "errorCode",
-	SIMPLE_BROWSER_WEB_PROXY_FAILED = "",
-	SIMPLE_CHECKOUT_CLOSED = "",
-	SKILL_LINES_CHANGED = "",
-	SOCIAL_ITEM_RECEIVED = "",
-	SOCIAL_QUEUE_CONFIG_UPDATED = "",
-	SOCIAL_QUEUE_UPDATE = "groupGUID [, numAddedItems]",
-	SOCKET_INFO_ACCEPT = "",
-	SOCKET_INFO_BIND_CONFIRM = "",
-	SOCKET_INFO_CLOSE = "",
-	SOCKET_INFO_FAILURE = "",
-	SOCKET_INFO_SUCCESS = "",
-	SOCKET_INFO_UPDATE = "",
-	SOUNDKIT_FINISHED = "soundHandle",
-	SOUND_DEVICE_UPDATE = "",
-	SPEC_INVOLUNTARILY_CHANGED = "isPet",
-	SPEED_UPDATE = "",
-	SPELLS_CHANGED = "",
-	SPELL_ACTIVATION_OVERLAY_GLOW_HIDE = "spellID",
-	SPELL_ACTIVATION_OVERLAY_GLOW_SHOW = "spellID",
-	SPELL_ACTIVATION_OVERLAY_HIDE = "[spellID]",
-	SPELL_ACTIVATION_OVERLAY_SHOW = "spellID, overlayFileDataID, locationName, scale, r, g, b",
-	SPELL_CONFIRMATION_PROMPT = "spellID, effectValue, message, duration, currencyTypesID, currencyCost, currentDifficulty",
-	SPELL_CONFIRMATION_TIMEOUT = "spellID, effectValue",
-	SPELL_DATA_LOAD_RESULT = "spellID, success",
-	SPELL_FLYOUT_UPDATE = "[flyoutID, spellID, isLearned]",
-	SPELL_POWER_CHANGED = "",
-	SPELL_PUSHED_TO_ACTIONBAR = "spellID, slot, page",
-	SPELL_TEXT_UPDATE = "spellID",
-	SPELL_UPDATE_CHARGES = "",
-	SPELL_UPDATE_COOLDOWN = "",
-	SPELL_UPDATE_ICON = "",
-	SPELL_UPDATE_USABLE = "",
-	START_AUTOREPEAT_SPELL = "",
-	START_LOOT_ROLL = "rollID, rollTime [, lootHandle]",
-	START_TIMER = "timerType, timeRemaining, totalTime",
-	STOP_AUTOREPEAT_SPELL = "",
-	STREAMING_ICON = "streamingStatus",
-	STREAM_VIEW_MARKER_UPDATED = "clubId, streamId [, lastReadTime]",
-	STURDINESS_UPDATE = "",
-	SUPER_TRACKED_QUEST_CHANGED = "",
-	SYSMSG = "string, r, g, b",
-	TABARD_CANSAVE_CHANGED = "",
-	TABARD_SAVE_PENDING = "",
-	TALENTS_INVOLUNTARILY_RESET = "isPetTalents",
-	TALKINGHEAD_CLOSE = "",
-	TALKINGHEAD_REQUESTED = "",
-	TASK_PROGRESS_UPDATE = "",
-	TAXIMAP_CLOSED = "",
-	TAXIMAP_OPENED = "system",
-	TIME_PLAYED_MSG = "totalTimePlayed, timePlayedThisLevel",
-	TOGGLE_CONSOLE = "[showConsole]",
-	TOKEN_AUCTION_SOLD = "",
-	TOKEN_BUY_CONFIRM_REQUIRED = "",
-	TOKEN_BUY_RESULT = "result",
-	TOKEN_CAN_VETERAN_BUY_UPDATE = "result",
-	TOKEN_DISTRIBUTIONS_UPDATED = "result",
-	TOKEN_MARKET_PRICE_UPDATED = "result",
-	TOKEN_REDEEM_BALANCE_UPDATED = "",
-	TOKEN_REDEEM_CONFIRM_REQUIRED = "choiceType",
-	TOKEN_REDEEM_FRAME_SHOW = "",
-	TOKEN_REDEEM_GAME_TIME_UPDATED = "",
-	TOKEN_REDEEM_RESULT = "result, choiceType",
-	TOKEN_SELL_CONFIRMED = "",
-	TOKEN_SELL_CONFIRM_REQUIRED = "",
-	TOKEN_SELL_RESULT = "result",
-	TOKEN_STATUS_CHANGED = "",
-	TOYS_UPDATED = "[itemID, isNew, hasFanfare]",
-	TRACKED_ACHIEVEMENT_LIST_CHANGED = "[achievementID, added]",
-	TRACKED_ACHIEVEMENT_UPDATE = "achievementID [, criteriaID, elapsed, duration]",
-	TRADE_ACCEPT_UPDATE = "playerAccepted, targetAccepted",
-	TRADE_CLOSED = "",
-	TRADE_CURRENCY_CHANGED = "",
-	TRADE_MONEY_CHANGED = "",
-	TRADE_PLAYER_ITEM_CHANGED = "tradeSlotIndex",
-	TRADE_POTENTIAL_BIND_ENCHANT = "canBecomeBoundForTrade",
-	TRADE_POTENTIAL_REMOVE_TRANSMOG = "itemLink, tradeSlotIndex",
-	TRADE_REPLACE_ENCHANT = "existing, replacement",
-	TRADE_REQUEST = "name",
-	TRADE_REQUEST_CANCEL = "",
-	TRADE_SHOW = "",
-	TRADE_SKILL_CLOSE = "",
-	TRADE_SKILL_DATA_SOURCE_CHANGED = "",
-	TRADE_SKILL_DATA_SOURCE_CHANGING = "",
-	TRADE_SKILL_DETAILS_UPDATE = "",
-	TRADE_SKILL_LIST_UPDATE = "",
-	TRADE_SKILL_NAME_UPDATE = "",
-	TRADE_SKILL_SHOW = "",
-	TRADE_TARGET_ITEM_CHANGED = "tradeSlotIndex",
-	TRADE_UPDATE = "",
-	TRAINER_CLOSED = "",
-	TRAINER_DESCRIPTION_UPDATE = "",
-	TRAINER_SERVICE_INFO_NAME_UPDATE = "",
-	TRAINER_SHOW = "",
-	TRAINER_UPDATE = "",
-	TRANSMOGRIFY_CLOSE = "",
-	TRANSMOGRIFY_ITEM_UPDATE = "",
-	TRANSMOGRIFY_OPEN = "",
-	TRANSMOGRIFY_SUCCESS = "invSlot, transmogType",
-	TRANSMOGRIFY_UPDATE = "[slotID, transmogType, action]",
-	TRANSMOG_COLLECTION_CAMERA_UPDATE = "",
-	TRANSMOG_COLLECTION_ITEM_UPDATE = "",
-	TRANSMOG_COLLECTION_SOURCE_ADDED = "itemModifiedAppearanceID",
-	TRANSMOG_COLLECTION_SOURCE_REMOVED = "itemModifiedAppearanceID",
-	TRANSMOG_COLLECTION_UPDATED = "[collectionIndex, modID, itemAppearanceID, reason]",
-	TRANSMOG_OUTFITS_CHANGED = "",
-	TRANSMOG_SEARCH_UPDATED = "searchType [, collectionType]",
-	TRANSMOG_SETS_UPDATE_FAVORITE = "",
-	TRANSMOG_SOURCE_COLLECTABILITY_UPDATE = "itemModifiedAppearanceID, collectable",
-	TREASURE_PICKER_CACHE_FLUSH = "",
-	TRIAL_CAP_REACHED_MONEY = "",
-	TUTORIAL_HIGHLIGHT_SPELL = "spellID, tutorialGlobalStringTag",
-	TUTORIAL_TRIGGER = "tutorialIndex, forceShow",
-	TUTORIAL_UNHIGHLIGHT_SPELL = "",
-	TWITTER_LINK_RESULT = "isLinked, screenName, error",
-	TWITTER_POST_RESULT = "result",
-	TWITTER_STATUS_UPDATE = "isTwitterEnabled, isLinked, screenName",
-	UI_ERROR_MESSAGE = "errorType, message",
-	UI_INFO_MESSAGE = "errorType, message",
-	UI_MODEL_SCENE_INFO_UPDATED = "",
-	UI_SCALE_CHANGED = "",
-	UNIT_ABSORB_AMOUNT_CHANGED = "unitTarget",
-	UNIT_ATTACK = "unitTarget",
-	UNIT_ATTACK_POWER = "unitTarget",
-	UNIT_ATTACK_SPEED = "unitTarget",
-	UNIT_AURA = "unitTarget",
-	UNIT_CHEAT_TOGGLE_EVENT = "",
-	UNIT_CLASSIFICATION_CHANGED = "unitTarget",
-	UNIT_COMBAT = "unitTarget, event, flagText, amount, schoolMask",
-	UNIT_CONNECTION = "unitTarget, isConnected",
-	UNIT_DAMAGE = "unitTarget",
-	UNIT_DEFENSE = "unitTarget",
-	UNIT_DISPLAYPOWER = "unitTarget",
-	UNIT_ENTERED_VEHICLE = "unitTarget, showVehicleFrame, isControlSeat, vehicleUIIndicatorID, vehicleGUID, mayChooseExit, hasPitch",
-	UNIT_ENTERING_VEHICLE = "unitTarget, showVehicleFrame, isControlSeat, vehicleUIIndicatorID, vehicleGUID, mayChooseExit, hasPitch",
-	UNIT_EXITED_VEHICLE = "unitTarget",
-	UNIT_EXITING_VEHICLE = "unitTarget",
-	UNIT_FACTION = "unitTarget",
-	UNIT_FLAGS = "unitTarget",
-	UNIT_HEALTH = "unitTarget",
-	UNIT_HEALTH_FREQUENT = "unitTarget",
-	UNIT_HEAL_ABSORB_AMOUNT_CHANGED = "unitTarget",
-	UNIT_HEAL_PREDICTION = "unitTarget",
-	UNIT_INVENTORY_CHANGED = "unitTarget",
-	UNIT_LEVEL = "unitTarget",
-	UNIT_MANA = "unitTarget",
-	UNIT_MAXHEALTH = "unitTarget",
-	UNIT_MAXPOWER = "unitTarget, powerType",
-	UNIT_MODEL_CHANGED = "unitTarget",
-	UNIT_NAME_UPDATE = "unitTarget",
-	UNIT_OTHER_PARTY_CHANGED = "unitTarget",
-	UNIT_PET = "unitTarget",
-	UNIT_PET_EXPERIENCE = "unitTarget",
-	UNIT_PHASE = "unitTarget",
-	UNIT_PORTRAIT_UPDATE = "unitTarget",
-	UNIT_POWER_BAR_HIDE = "unitTarget",
-	UNIT_POWER_BAR_SHOW = "unitTarget",
-	UNIT_POWER_BAR_TIMER_UPDATE = "unitTarget",
-	UNIT_POWER_FREQUENT = "unitTarget, powerType",
-	UNIT_POWER_UPDATE = "unitTarget, powerType",
-	UNIT_QUEST_LOG_CHANGED = "unitTarget",
-	UNIT_RANGEDDAMAGE = "unitTarget",
-	UNIT_RANGED_ATTACK_POWER = "unitTarget",
-	UNIT_RESISTANCES = "unitTarget",
-	UNIT_SPELLCAST_CHANNEL_START = "unitTarget, castGUID, spellID",
-	UNIT_SPELLCAST_CHANNEL_STOP = "unitTarget, castGUID, spellID",
-	UNIT_SPELLCAST_CHANNEL_UPDATE = "unitTarget, castGUID, spellID",
-	UNIT_SPELLCAST_DELAYED = "unitTarget, castGUID, spellID",
-	UNIT_SPELLCAST_FAILED = "unitTarget, castGUID, spellID",
-	UNIT_SPELLCAST_FAILED_QUIET = "unitTarget, castGUID, spellID",
-	UNIT_SPELLCAST_INTERRUPTED = "unitTarget, castGUID, spellID",
-	UNIT_SPELLCAST_INTERRUPTIBLE = "unitTarget",
-	UNIT_SPELLCAST_NOT_INTERRUPTIBLE = "unitTarget",
-	UNIT_SPELLCAST_SENT = "unit, target, castGUID, spellID",
-	UNIT_SPELLCAST_START = "unitTarget, castGUID, spellID",
-	UNIT_SPELLCAST_STOP = "unitTarget, castGUID, spellID",
-	UNIT_SPELLCAST_SUCCEEDED = "unitTarget, castGUID, spellID",
-	UNIT_SPELL_HASTE = "unitTarget",
-	UNIT_STATS = "unitTarget",
-	UNIT_TARGET = "unitTarget",
-	UNIT_TARGETABLE_CHANGED = "unitTarget",
-	UNIT_THREAT_LIST_UPDATE = "unitTarget",
-	UNIT_THREAT_SITUATION_UPDATE = "unitTarget",
-	UPDATE_ACTIVE_BATTLEFIELD = "",
-	UPDATE_ALL_UI_WIDGETS = "",
-	UPDATE_BATTLEFIELD_SCORE = "",
-	UPDATE_BATTLEFIELD_STATUS = "battleFieldIndex",
-	UPDATE_BINDINGS = "",
-	UPDATE_BONUS_ACTIONBAR = "",
-	UPDATE_CHAT_COLOR = "name, r, g, b",
-	UPDATE_CHAT_COLOR_NAME_BY_CLASS = "name, colorNameByClass",
-	UPDATE_CHAT_WINDOWS = "",
-	UPDATE_EXHAUSTION = "",
-	UPDATE_EXTRA_ACTIONBAR = "",
-	UPDATE_FACTION = "",
-	UPDATE_FLOATING_CHAT_WINDOWS = "",
-	UPDATE_INSTANCE_INFO = "",
-	UPDATE_INVENTORY_ALERTS = "",
-	UPDATE_INVENTORY_DURABILITY = "",
-	UPDATE_LFG_LIST = "",
-	UPDATE_MACROS = "",
-	UPDATE_MASTER_LOOT_LIST = "",
-	UPDATE_MOUSEOVER_UNIT = "",
-	UPDATE_MULTI_CAST_ACTIONBAR = "",
-	UPDATE_OVERRIDE_ACTIONBAR = "",
-	UPDATE_PENDING_MAIL = "",
-	UPDATE_POSSESS_BAR = "",
-	UPDATE_SHAPESHIFT_COOLDOWN = "",
-	UPDATE_SHAPESHIFT_FORM = "",
-	UPDATE_SHAPESHIFT_FORMS = "",
-	UPDATE_SHAPESHIFT_USABLE = "",
-	UPDATE_STEALTH = "",
-	UPDATE_SUMMONPETS_ACTION = "",
-	UPDATE_TRADESKILL_RECAST = "",
-	UPDATE_UI_WIDGET = "widgetInfo",
-	UPDATE_VEHICLE_ACTIONBAR = "",
-	UPDATE_WEB_TICKET = "hasTicket [, numTickets, ticketStatus, caseIndex, waitTimeMinutes, waitMessage]",
-	USE_BIND_CONFIRM = "",
-	USE_GLYPH = "spellSlot",
-	USE_NO_REFUND_CONFIRM = "",
-	VARIABLES_LOADED = "",
-	VEHICLE_ANGLE_SHOW = "[shouldShow]",
-	VEHICLE_ANGLE_UPDATE = "normalizedPitch, radians",
-	VEHICLE_PASSENGERS_CHANGED = "",
-	VEHICLE_POWER_SHOW = "[shouldShow]",
-	VEHICLE_UPDATE = "",
-	VIGNETTES_UPDATED = "",
-	VIGNETTE_MINIMAP_UPDATED = "vignetteGUID, onMinimap",
-	VOICE_CHAT_ACTIVE_INPUT_DEVICE_UPDATED = "",
-	VOICE_CHAT_ACTIVE_OUTPUT_DEVICE_UPDATED = "",
-	VOICE_CHAT_AUDIO_CAPTURE_ENERGY = "isSpeaking, energy",
-	VOICE_CHAT_AUDIO_CAPTURE_STARTED = "",
-	VOICE_CHAT_AUDIO_CAPTURE_STOPPED = "",
-	VOICE_CHAT_CHANNEL_ACTIVATED = "channelID",
-	VOICE_CHAT_CHANNEL_DEACTIVATED = "channelID",
-	VOICE_CHAT_CHANNEL_DISPLAY_NAME_CHANGED = "channelID, channelDisplayName",
-	VOICE_CHAT_CHANNEL_JOINED = "status, channelID, channelType [, clubId, streamId]",
-	VOICE_CHAT_CHANNEL_MEMBER_ACTIVE_STATE_CHANGED = "memberID, channelID, isActive",
-	VOICE_CHAT_CHANNEL_MEMBER_ADDED = "memberID, channelID",
-	VOICE_CHAT_CHANNEL_MEMBER_ENERGY_CHANGED = "memberID, channelID, speakingEnergy",
-	VOICE_CHAT_CHANNEL_MEMBER_GUID_UPDATED = "memberID, channelID",
-	VOICE_CHAT_CHANNEL_MEMBER_MUTE_FOR_ALL_CHANGED = "memberID, channelID, isMutedForAll",
-	VOICE_CHAT_CHANNEL_MEMBER_MUTE_FOR_ME_CHANGED = "memberID, channelID, isMutedForMe",
-	VOICE_CHAT_CHANNEL_MEMBER_REMOVED = "memberID, channelID",
-	VOICE_CHAT_CHANNEL_MEMBER_SILENCED_CHANGED = "memberID, channelID, isSilenced",
-	VOICE_CHAT_CHANNEL_MEMBER_SPEAKING_STATE_CHANGED = "memberID, channelID, isSpeaking",
-	VOICE_CHAT_CHANNEL_MEMBER_VOLUME_CHANGED = "memberID, channelID, volume",
-	VOICE_CHAT_CHANNEL_MUTE_STATE_CHANGED = "channelID, isMuted",
-	VOICE_CHAT_CHANNEL_PTT_CHANGED = "channelID, pushToTalkSetting",
-	VOICE_CHAT_CHANNEL_REMOVED = "channelID",
-	VOICE_CHAT_CHANNEL_TRANSMIT_CHANGED = "channelID, isTransmitting",
-	VOICE_CHAT_CHANNEL_VOLUME_CHANGED = "channelID, volume",
-	VOICE_CHAT_COMMUNICATION_MODE_CHANGED = "communicationMode",
-	VOICE_CHAT_CONNECTION_SUCCESS = "",
-	VOICE_CHAT_DEAFENED_CHANGED = "isDeafened",
-	VOICE_CHAT_ERROR = "platformCode, statusCode",
-	VOICE_CHAT_INPUT_DEVICES_UPDATED = "",
-	VOICE_CHAT_LOGIN = "status",
-	VOICE_CHAT_LOGOUT = "status",
-	VOICE_CHAT_MUTED_CHANGED = "isMuted",
-	VOICE_CHAT_OUTPUT_DEVICES_UPDATED = "",
-	VOICE_CHAT_PENDING_CHANNEL_JOIN_STATE = "channelType, [clubId], [streamId], pendingJoin",
-	VOICE_CHAT_PTT_BUTTON_PRESSED_STATE_CHANGED = "isPressed",
-	VOICE_CHAT_SILENCED_CHANGED = "isSilenced",
-	VOID_DEPOSIT_WARNING = "slot, link",
-	VOID_STORAGE_CLOSE = "",
-	VOID_STORAGE_CONTENTS_UPDATE = "",
-	VOID_STORAGE_DEPOSIT_UPDATE = "slot",
-	VOID_STORAGE_OPEN = "",
-	VOID_STORAGE_UPDATE = "",
-	VOID_TRANSFER_DONE = "",
-	VOID_TRANSFER_SUCCESS = "",
-	VOTE_KICK_REASON_NEEDED = "name, resultGUID",
-	WARFRONT_COMPLETED = "mapID, winner",
-	WARGAME_REQUESTED = "opposingPartyMemberName, battlegroundName, timeoutSeconds, tournamentRules",
-	WAR_MODE_STATUS_UPDATE = "warModeEnabled",
-	WAYPOINT_UPDATE = "",
-	WEAR_EQUIPMENT_SET = "setID",
-	WHO_LIST_UPDATE = "",
-	WORLD_MAP_CLOSE = "",
-	WORLD_MAP_OPEN = "uiMapID",
-	WORLD_QUEST_COMPLETED_BY_SPELL = "questID",
-	WORLD_STATE_TIMER_START = "timerID",
-	WORLD_STATE_TIMER_STOP = "timerID",
-	WOW_MOUSE_NOT_FOUND = "",
-	ZONE_CHANGED = "",
-	ZONE_CHANGED_INDOORS = "",
-	ZONE_CHANGED_NEW_AREA = "",
+	---@type ACHIEVEMENT_EARNED
+	ACHIEVEMENT_EARNED = {},
+	---@type ACHIEVEMENT_PLAYER_NAME
+	ACHIEVEMENT_PLAYER_NAME = {},
+	---@type ACHIEVEMENT_SEARCH_UPDATED
+	ACHIEVEMENT_SEARCH_UPDATED = {},
+	---@type ACTIONBAR_HIDEGRID
+	ACTIONBAR_HIDEGRID = {},
+	---@type ACTIONBAR_PAGE_CHANGED
+	ACTIONBAR_PAGE_CHANGED = {},
+	---@type ACTIONBAR_SHOWGRID
+	ACTIONBAR_SHOWGRID = {},
+	---@type ACTIONBAR_SHOW_BOTTOMLEFT
+	ACTIONBAR_SHOW_BOTTOMLEFT = {},
+	---@type ACTIONBAR_SLOT_CHANGED
+	ACTIONBAR_SLOT_CHANGED = {},
+	---@type ACTIONBAR_UPDATE_COOLDOWN
+	ACTIONBAR_UPDATE_COOLDOWN = {},
+	---@type ACTIONBAR_UPDATE_STATE
+	ACTIONBAR_UPDATE_STATE = {},
+	---@type ACTIONBAR_UPDATE_USABLE
+	ACTIONBAR_UPDATE_USABLE = {},
+	---@type ACTION_WILL_BIND_ITEM
+	ACTION_WILL_BIND_ITEM = {},
+	---@type ACTIVATE_GLYPH
+	ACTIVATE_GLYPH = {},
+	---@type ACTIVE_TALENT_GROUP_CHANGED
+	ACTIVE_TALENT_GROUP_CHANGED = {},
+	---@type ADDONS_UNLOADING
+	ADDONS_UNLOADING = {},
+	---@type ADDON_ACTION_BLOCKED
+	ADDON_ACTION_BLOCKED = {},
+	---@type ADDON_ACTION_FORBIDDEN
+	ADDON_ACTION_FORBIDDEN = {},
+	---@type ADDON_LOADED
+	ADDON_LOADED = {},
+	---@type ADVENTURE_MAP_CLOSE
+	ADVENTURE_MAP_CLOSE = {},
+	---@type ADVENTURE_MAP_OPEN
+	ADVENTURE_MAP_OPEN = {},
+	---@type ADVENTURE_MAP_QUEST_UPDATE
+	ADVENTURE_MAP_QUEST_UPDATE = {},
+	---@type ADVENTURE_MAP_UPDATE_INSETS
+	ADVENTURE_MAP_UPDATE_INSETS = {},
+	---@type ADVENTURE_MAP_UPDATE_POIS
+	ADVENTURE_MAP_UPDATE_POIS = {},
+	---@type AJ_DUNGEON_ACTION
+	AJ_DUNGEON_ACTION = {},
+	---@type AJ_OPEN
+	AJ_OPEN = {},
+	---@type AJ_PVE_LFG_ACTION
+	AJ_PVE_LFG_ACTION = {},
+	---@type AJ_PVP_ACTION
+	AJ_PVP_ACTION = {},
+	---@type AJ_PVP_LFG_ACTION
+	AJ_PVP_LFG_ACTION = {},
+	---@type AJ_PVP_RBG_ACTION
+	AJ_PVP_RBG_ACTION = {},
+	---@type AJ_PVP_SKIRMISH_ACTION
+	AJ_PVP_SKIRMISH_ACTION = {},
+	---@type AJ_QUEST_LOG_OPEN
+	AJ_QUEST_LOG_OPEN = {},
+	---@type AJ_RAID_ACTION
+	AJ_RAID_ACTION = {},
+	---@type AJ_REFRESH_DISPLAY
+	AJ_REFRESH_DISPLAY = {},
+	---@type AJ_REWARD_DATA_RECEIVED
+	AJ_REWARD_DATA_RECEIVED = {},
+	---@type ALLIED_RACE_CLOSE
+	ALLIED_RACE_CLOSE = {},
+	---@type ALLIED_RACE_OPEN
+	ALLIED_RACE_OPEN = {},
+	---@type ALTERNATIVE_DEFAULT_LANGUAGE_CHANGED
+	ALTERNATIVE_DEFAULT_LANGUAGE_CHANGED = {},
+	---@type ARCHAEOLOGY_CLOSED
+	ARCHAEOLOGY_CLOSED = {},
+	---@type ARCHAEOLOGY_FIND_COMPLETE
+	ARCHAEOLOGY_FIND_COMPLETE = {},
+	---@type ARCHAEOLOGY_SURVEY_CAST
+	ARCHAEOLOGY_SURVEY_CAST = {},
+	---@type ARCHAEOLOGY_TOGGLE
+	ARCHAEOLOGY_TOGGLE = {},
+	---@type AREA_POIS_UPDATED
+	AREA_POIS_UPDATED = {},
+	---@type AREA_SPIRIT_HEALER_IN_RANGE
+	AREA_SPIRIT_HEALER_IN_RANGE = {},
+	---@type AREA_SPIRIT_HEALER_OUT_OF_RANGE
+	AREA_SPIRIT_HEALER_OUT_OF_RANGE = {},
+	---@type ARENA_COOLDOWNS_UPDATE
+	ARENA_COOLDOWNS_UPDATE = {},
+	---@type ARENA_CROWD_CONTROL_SPELL_UPDATE
+	ARENA_CROWD_CONTROL_SPELL_UPDATE = {},
+	---@type ARENA_OPPONENT_UPDATE
+	ARENA_OPPONENT_UPDATE = {},
+	---@type ARENA_PREP_OPPONENT_SPECIALIZATIONS
+	ARENA_PREP_OPPONENT_SPECIALIZATIONS = {},
+	---@type ARENA_SEASON_WORLD_STATE
+	ARENA_SEASON_WORLD_STATE = {},
+	---@type ARTIFACT_CLOSE
+	ARTIFACT_CLOSE = {},
+	---@type ARTIFACT_DIGSITE_COMPLETE
+	ARTIFACT_DIGSITE_COMPLETE = {},
+	---@type ARTIFACT_ENDGAME_REFUND
+	ARTIFACT_ENDGAME_REFUND = {},
+	---@type ARTIFACT_RELIC_FORGE_CLOSE
+	ARTIFACT_RELIC_FORGE_CLOSE = {},
+	---@type ARTIFACT_RELIC_FORGE_PREVIEW_RELIC_CHANGED
+	ARTIFACT_RELIC_FORGE_PREVIEW_RELIC_CHANGED = {},
+	---@type ARTIFACT_RELIC_FORGE_UPDATE
+	ARTIFACT_RELIC_FORGE_UPDATE = {},
+	---@type ARTIFACT_RELIC_INFO_RECEIVED
+	ARTIFACT_RELIC_INFO_RECEIVED = {},
+	---@type ARTIFACT_RESPEC_PROMPT
+	ARTIFACT_RESPEC_PROMPT = {},
+	---@type ARTIFACT_TIER_CHANGED
+	ARTIFACT_TIER_CHANGED = {},
+	---@type ARTIFACT_UPDATE
+	ARTIFACT_UPDATE = {},
+	---@type ARTIFACT_XP_UPDATE
+	ARTIFACT_XP_UPDATE = {},
+	---@type AUCTION_CANCELED
+	AUCTION_CANCELED = {},
+	---@type AUCTION_HOUSE_AUCTION_CREATED
+	AUCTION_HOUSE_AUCTION_CREATED = {},
+	---@type AUCTION_HOUSE_BROWSE_FAILURE
+	AUCTION_HOUSE_BROWSE_FAILURE = {},
+	---@type AUCTION_HOUSE_BROWSE_RESULTS_ADDED
+	AUCTION_HOUSE_BROWSE_RESULTS_ADDED = {},
+	---@type AUCTION_HOUSE_BROWSE_RESULTS_UPDATED
+	AUCTION_HOUSE_BROWSE_RESULTS_UPDATED = {},
+	---@type AUCTION_HOUSE_CLOSED
+	AUCTION_HOUSE_CLOSED = {},
+	---@type AUCTION_HOUSE_DISABLED
+	AUCTION_HOUSE_DISABLED = {},
+	---@type AUCTION_HOUSE_FAVORITES_UPDATED
+	AUCTION_HOUSE_FAVORITES_UPDATED = {},
+	---@type AUCTION_HOUSE_NEW_BID_RECEIVED
+	AUCTION_HOUSE_NEW_BID_RECEIVED = {},
+	---@type AUCTION_HOUSE_NEW_RESULTS_RECEIVED
+	AUCTION_HOUSE_NEW_RESULTS_RECEIVED = {},
+	---@type AUCTION_HOUSE_SCRIPT_DEPRECATED
+	AUCTION_HOUSE_SCRIPT_DEPRECATED = {},
+	---@type AUCTION_HOUSE_SHOW
+	AUCTION_HOUSE_SHOW = {},
+	---@type AUCTION_HOUSE_THROTTLED_MESSAGE_DROPPED
+	AUCTION_HOUSE_THROTTLED_MESSAGE_DROPPED = {},
+	---@type AUCTION_HOUSE_THROTTLED_MESSAGE_QUEUED
+	AUCTION_HOUSE_THROTTLED_MESSAGE_QUEUED = {},
+	---@type AUCTION_HOUSE_THROTTLED_MESSAGE_RESPONSE_RECEIVED
+	AUCTION_HOUSE_THROTTLED_MESSAGE_RESPONSE_RECEIVED = {},
+	---@type AUCTION_HOUSE_THROTTLED_MESSAGE_SENT
+	AUCTION_HOUSE_THROTTLED_MESSAGE_SENT = {},
+	---@type AUCTION_HOUSE_THROTTLED_SPECIFIC_SEARCH_READY
+	AUCTION_HOUSE_THROTTLED_SPECIFIC_SEARCH_READY = {},
+	---@type AUCTION_HOUSE_THROTTLED_SYSTEM_READY
+	AUCTION_HOUSE_THROTTLED_SYSTEM_READY = {},
+	---@type AUCTION_MULTISELL_FAILURE
+	AUCTION_MULTISELL_FAILURE = {},
+	---@type AUCTION_MULTISELL_START
+	AUCTION_MULTISELL_START = {},
+	---@type AUCTION_MULTISELL_UPDATE
+	AUCTION_MULTISELL_UPDATE = {},
+	---@type AUTOFOLLOW_BEGIN
+	AUTOFOLLOW_BEGIN = {},
+	---@type AUTOFOLLOW_END
+	AUTOFOLLOW_END = {},
+	---@type AVATAR_LIST_UPDATED
+	AVATAR_LIST_UPDATED = {},
+	---@type AVOIDANCE_UPDATE
+	AVOIDANCE_UPDATE = {},
+	---@type AZERITE_EMPOWERED_ITEM_EQUIPPED_STATUS_CHANGED
+	AZERITE_EMPOWERED_ITEM_EQUIPPED_STATUS_CHANGED = {},
+	---@type AZERITE_EMPOWERED_ITEM_LOOTED
+	AZERITE_EMPOWERED_ITEM_LOOTED = {},
+	---@type AZERITE_EMPOWERED_ITEM_SELECTION_UPDATED
+	AZERITE_EMPOWERED_ITEM_SELECTION_UPDATED = {},
+	---@type AZERITE_ESSENCE_ACTIVATED
+	AZERITE_ESSENCE_ACTIVATED = {},
+	---@type AZERITE_ESSENCE_ACTIVATION_FAILED
+	AZERITE_ESSENCE_ACTIVATION_FAILED = {},
+	---@type AZERITE_ESSENCE_CHANGED
+	AZERITE_ESSENCE_CHANGED = {},
+	---@type AZERITE_ESSENCE_FORGE_CLOSE
+	AZERITE_ESSENCE_FORGE_CLOSE = {},
+	---@type AZERITE_ESSENCE_FORGE_OPEN
+	AZERITE_ESSENCE_FORGE_OPEN = {},
+	---@type AZERITE_ESSENCE_MILESTONE_UNLOCKED
+	AZERITE_ESSENCE_MILESTONE_UNLOCKED = {},
+	---@type AZERITE_ESSENCE_UPDATE
+	AZERITE_ESSENCE_UPDATE = {},
+	---@type AZERITE_ITEM_EXPERIENCE_CHANGED
+	AZERITE_ITEM_EXPERIENCE_CHANGED = {},
+	---@type AZERITE_ITEM_POWER_LEVEL_CHANGED
+	AZERITE_ITEM_POWER_LEVEL_CHANGED = {},
+	---@type BAG_CLOSED
+	BAG_CLOSED = {},
+	---@type BAG_NEW_ITEMS_UPDATED
+	BAG_NEW_ITEMS_UPDATED = {},
+	---@type BAG_OPEN
+	BAG_OPEN = {},
+	---@type BAG_OVERFLOW_WITH_FULL_INVENTORY
+	BAG_OVERFLOW_WITH_FULL_INVENTORY = {},
+	---@type BAG_SLOT_FLAGS_UPDATED
+	BAG_SLOT_FLAGS_UPDATED = {},
+	---@type BAG_UPDATE
+	BAG_UPDATE = {},
+	---@type BAG_UPDATE_COOLDOWN
+	BAG_UPDATE_COOLDOWN = {},
+	---@type BAG_UPDATE_DELAYED
+	BAG_UPDATE_DELAYED = {},
+	---@type BANKFRAME_CLOSED
+	BANKFRAME_CLOSED = {},
+	---@type BANKFRAME_OPENED
+	BANKFRAME_OPENED = {},
+	---@type BANK_BAG_SLOT_FLAGS_UPDATED
+	BANK_BAG_SLOT_FLAGS_UPDATED = {},
+	---@type BARBER_SHOP_APPEARANCE_APPLIED
+	BARBER_SHOP_APPEARANCE_APPLIED = {},
+	---@type BARBER_SHOP_CLOSE
+	BARBER_SHOP_CLOSE = {},
+	---@type BARBER_SHOP_COST_UPDATE
+	BARBER_SHOP_COST_UPDATE = {},
+	---@type BARBER_SHOP_OPEN
+	BARBER_SHOP_OPEN = {},
+	---@type BARBER_SHOP_SUCCESS
+	BARBER_SHOP_SUCCESS = {},
+	---@type BATTLEFIELDS_CLOSED
+	BATTLEFIELDS_CLOSED = {},
+	---@type BATTLEFIELDS_SHOW
+	BATTLEFIELDS_SHOW = {},
+	---@type BATTLEFIELD_QUEUE_TIMEOUT
+	BATTLEFIELD_QUEUE_TIMEOUT = {},
+	---@type BATTLEGROUND_OBJECTIVES_UPDATE
+	BATTLEGROUND_OBJECTIVES_UPDATE = {},
+	---@type BATTLEGROUND_POINTS_UPDATE
+	BATTLEGROUND_POINTS_UPDATE = {},
+	---@type BATTLEPET_FORCE_NAME_DECLENSION
+	BATTLEPET_FORCE_NAME_DECLENSION = {},
+	---@type BATTLETAG_INVITE_SHOW
+	BATTLETAG_INVITE_SHOW = {},
+	---@type BATTLE_PET_CURSOR_CLEAR
+	BATTLE_PET_CURSOR_CLEAR = {},
+	---@type BIDS_UPDATED
+	BIDS_UPDATED = {},
+	---@type BID_ADDED
+	BID_ADDED = {},
+	---@type BIND_ENCHANT
+	BIND_ENCHANT = {},
+	---@type BLACK_MARKET_BID_RESULT
+	BLACK_MARKET_BID_RESULT = {},
+	---@type BLACK_MARKET_CLOSE
+	BLACK_MARKET_CLOSE = {},
+	---@type BLACK_MARKET_ITEM_UPDATE
+	BLACK_MARKET_ITEM_UPDATE = {},
+	---@type BLACK_MARKET_OPEN
+	BLACK_MARKET_OPEN = {},
+	---@type BLACK_MARKET_OUTBID
+	BLACK_MARKET_OUTBID = {},
+	---@type BLACK_MARKET_UNAVAILABLE
+	BLACK_MARKET_UNAVAILABLE = {},
+	---@type BLACK_MARKET_WON
+	BLACK_MARKET_WON = {},
+	---@type BNET_REQUEST_INVITE_CONFIRMATION
+	BNET_REQUEST_INVITE_CONFIRMATION = {},
+	---@type BN_BLOCK_FAILED_TOO_MANY
+	BN_BLOCK_FAILED_TOO_MANY = {},
+	---@type BN_BLOCK_LIST_UPDATED
+	BN_BLOCK_LIST_UPDATED = {},
+	---@type BN_CHAT_MSG_ADDON
+	BN_CHAT_MSG_ADDON = {},
+	---@type BN_CHAT_WHISPER_UNDELIVERABLE
+	BN_CHAT_WHISPER_UNDELIVERABLE = {},
+	---@type BN_CONNECTED
+	BN_CONNECTED = {},
+	---@type BN_CUSTOM_MESSAGE_CHANGED
+	BN_CUSTOM_MESSAGE_CHANGED = {},
+	---@type BN_CUSTOM_MESSAGE_LOADED
+	BN_CUSTOM_MESSAGE_LOADED = {},
+	---@type BN_DISCONNECTED
+	BN_DISCONNECTED = {},
+	---@type BN_FRIEND_ACCOUNT_OFFLINE
+	BN_FRIEND_ACCOUNT_OFFLINE = {},
+	---@type BN_FRIEND_ACCOUNT_ONLINE
+	BN_FRIEND_ACCOUNT_ONLINE = {},
+	---@type BN_FRIEND_INFO_CHANGED
+	BN_FRIEND_INFO_CHANGED = {},
+	---@type BN_FRIEND_INVITE_ADDED
+	BN_FRIEND_INVITE_ADDED = {},
+	---@type BN_FRIEND_INVITE_LIST_INITIALIZED
+	BN_FRIEND_INVITE_LIST_INITIALIZED = {},
+	---@type BN_FRIEND_INVITE_REMOVED
+	BN_FRIEND_INVITE_REMOVED = {},
+	---@type BN_FRIEND_LIST_SIZE_CHANGED
+	BN_FRIEND_LIST_SIZE_CHANGED = {},
+	---@type BN_INFO_CHANGED
+	BN_INFO_CHANGED = {},
+	---@type BN_REQUEST_FOF_SUCCEEDED
+	BN_REQUEST_FOF_SUCCEEDED = {},
+	---@type BONUS_ROLL_ACTIVATE
+	BONUS_ROLL_ACTIVATE = {},
+	---@type BONUS_ROLL_DEACTIVATE
+	BONUS_ROLL_DEACTIVATE = {},
+	---@type BONUS_ROLL_FAILED
+	BONUS_ROLL_FAILED = {},
+	---@type BONUS_ROLL_RESULT
+	BONUS_ROLL_RESULT = {},
+	---@type BONUS_ROLL_STARTED
+	BONUS_ROLL_STARTED = {},
+	---@type BOSS_KILL
+	BOSS_KILL = {},
+	---@type CALENDAR_ACTION_PENDING
+	CALENDAR_ACTION_PENDING = {},
+	---@type CALENDAR_CLOSE_EVENT
+	CALENDAR_CLOSE_EVENT = {},
+	---@type CALENDAR_EVENT_ALARM
+	CALENDAR_EVENT_ALARM = {},
+	---@type CALENDAR_NEW_EVENT
+	CALENDAR_NEW_EVENT = {},
+	---@type CALENDAR_OPEN_EVENT
+	CALENDAR_OPEN_EVENT = {},
+	---@type CALENDAR_UPDATE_ERROR
+	CALENDAR_UPDATE_ERROR = {},
+	---@type CALENDAR_UPDATE_ERROR_WITH_COUNT
+	CALENDAR_UPDATE_ERROR_WITH_COUNT = {},
+	---@type CALENDAR_UPDATE_ERROR_WITH_PLAYER_NAME
+	CALENDAR_UPDATE_ERROR_WITH_PLAYER_NAME = {},
+	---@type CALENDAR_UPDATE_EVENT
+	CALENDAR_UPDATE_EVENT = {},
+	---@type CALENDAR_UPDATE_EVENT_LIST
+	CALENDAR_UPDATE_EVENT_LIST = {},
+	---@type CALENDAR_UPDATE_GUILD_EVENTS
+	CALENDAR_UPDATE_GUILD_EVENTS = {},
+	---@type CALENDAR_UPDATE_INVITE_LIST
+	CALENDAR_UPDATE_INVITE_LIST = {},
+	---@type CALENDAR_UPDATE_PENDING_INVITES
+	CALENDAR_UPDATE_PENDING_INVITES = {},
+	---@type CANCEL_GLYPH_CAST
+	CANCEL_GLYPH_CAST = {},
+	---@type CANCEL_LOOT_ROLL
+	CANCEL_LOOT_ROLL = {},
+	---@type CANCEL_SUMMON
+	CANCEL_SUMMON = {},
+	---@type CAPTUREFRAMES_FAILED
+	CAPTUREFRAMES_FAILED = {},
+	---@type CAPTUREFRAMES_SUCCEEDED
+	CAPTUREFRAMES_SUCCEEDED = {},
+	---@type CEMETERY_PREFERENCE_UPDATED
+	CEMETERY_PREFERENCE_UPDATED = {},
+	---@type CHALLENGE_MODE_COMPLETED
+	CHALLENGE_MODE_COMPLETED = {},
+	---@type CHALLENGE_MODE_DEATH_COUNT_UPDATED
+	CHALLENGE_MODE_DEATH_COUNT_UPDATED = {},
+	---@type CHALLENGE_MODE_KEYSTONE_RECEPTABLE_OPEN
+	CHALLENGE_MODE_KEYSTONE_RECEPTABLE_OPEN = {},
+	---@type CHALLENGE_MODE_KEYSTONE_SLOTTED
+	CHALLENGE_MODE_KEYSTONE_SLOTTED = {},
+	---@type CHALLENGE_MODE_LEADERS_UPDATE
+	CHALLENGE_MODE_LEADERS_UPDATE = {},
+	---@type CHALLENGE_MODE_MAPS_UPDATE
+	CHALLENGE_MODE_MAPS_UPDATE = {},
+	---@type CHALLENGE_MODE_MEMBER_INFO_UPDATED
+	CHALLENGE_MODE_MEMBER_INFO_UPDATED = {},
+	---@type CHALLENGE_MODE_RESET
+	CHALLENGE_MODE_RESET = {},
+	---@type CHALLENGE_MODE_START
+	CHALLENGE_MODE_START = {},
+	---@type CHANNEL_COUNT_UPDATE
+	CHANNEL_COUNT_UPDATE = {},
+	---@type CHANNEL_FLAGS_UPDATED
+	CHANNEL_FLAGS_UPDATED = {},
+	---@type CHANNEL_INVITE_REQUEST
+	CHANNEL_INVITE_REQUEST = {},
+	---@type CHANNEL_LEFT
+	CHANNEL_LEFT = {},
+	---@type CHANNEL_PASSWORD_REQUEST
+	CHANNEL_PASSWORD_REQUEST = {},
+	---@type CHANNEL_ROSTER_UPDATE
+	CHANNEL_ROSTER_UPDATE = {},
+	---@type CHANNEL_UI_UPDATE
+	CHANNEL_UI_UPDATE = {},
+	---@type CHARACTER_ITEM_FIXUP_NOTIFICATION
+	CHARACTER_ITEM_FIXUP_NOTIFICATION = {},
+	---@type CHARACTER_POINTS_CHANGED
+	CHARACTER_POINTS_CHANGED = {},
+	---@type CHARACTER_UPGRADE_SPELL_TIER_SET
+	CHARACTER_UPGRADE_SPELL_TIER_SET = {},
+	---@type CHAT_COMBAT_MSG_ARENA_POINTS_GAIN
+	CHAT_COMBAT_MSG_ARENA_POINTS_GAIN = {},
+	---@type CHAT_MSG_ACHIEVEMENT
+	CHAT_MSG_ACHIEVEMENT = {},
+	---@type CHAT_MSG_ADDON
+	CHAT_MSG_ADDON = {},
+	---@type CHAT_MSG_ADDON_LOGGED
+	CHAT_MSG_ADDON_LOGGED = {},
+	---@type CHAT_MSG_AFK
+	CHAT_MSG_AFK = {},
+	---@type CHAT_MSG_BG_SYSTEM_ALLIANCE
+	CHAT_MSG_BG_SYSTEM_ALLIANCE = {},
+	---@type CHAT_MSG_BG_SYSTEM_HORDE
+	CHAT_MSG_BG_SYSTEM_HORDE = {},
+	---@type CHAT_MSG_BG_SYSTEM_NEUTRAL
+	CHAT_MSG_BG_SYSTEM_NEUTRAL = {},
+	---@type CHAT_MSG_BN
+	CHAT_MSG_BN = {},
+	---@type CHAT_MSG_BN_INLINE_TOAST_ALERT
+	CHAT_MSG_BN_INLINE_TOAST_ALERT = {},
+	---@type CHAT_MSG_BN_INLINE_TOAST_BROADCAST
+	CHAT_MSG_BN_INLINE_TOAST_BROADCAST = {},
+	---@type CHAT_MSG_BN_INLINE_TOAST_BROADCAST_INFORM
+	CHAT_MSG_BN_INLINE_TOAST_BROADCAST_INFORM = {},
+	---@type CHAT_MSG_BN_INLINE_TOAST_CONVERSATION
+	CHAT_MSG_BN_INLINE_TOAST_CONVERSATION = {},
+	---@type CHAT_MSG_BN_WHISPER
+	CHAT_MSG_BN_WHISPER = {},
+	---@type CHAT_MSG_BN_WHISPER_INFORM
+	CHAT_MSG_BN_WHISPER_INFORM = {},
+	---@type CHAT_MSG_BN_WHISPER_PLAYER_OFFLINE
+	CHAT_MSG_BN_WHISPER_PLAYER_OFFLINE = {},
+	---@type CHAT_MSG_CHANNEL
+	CHAT_MSG_CHANNEL = {},
+	---@type CHAT_MSG_CHANNEL_JOIN
+	CHAT_MSG_CHANNEL_JOIN = {},
+	---@type CHAT_MSG_CHANNEL_LEAVE
+	CHAT_MSG_CHANNEL_LEAVE = {},
+	---@type CHAT_MSG_CHANNEL_LIST
+	CHAT_MSG_CHANNEL_LIST = {},
+	---@type CHAT_MSG_CHANNEL_NOTICE
+	CHAT_MSG_CHANNEL_NOTICE = {},
+	---@type CHAT_MSG_CHANNEL_NOTICE_USER
+	CHAT_MSG_CHANNEL_NOTICE_USER = {},
+	---@type CHAT_MSG_COMBAT_FACTION_CHANGE
+	CHAT_MSG_COMBAT_FACTION_CHANGE = {},
+	---@type CHAT_MSG_COMBAT_HONOR_GAIN
+	CHAT_MSG_COMBAT_HONOR_GAIN = {},
+	---@type CHAT_MSG_COMBAT_MISC_INFO
+	CHAT_MSG_COMBAT_MISC_INFO = {},
+	---@type CHAT_MSG_COMBAT_XP_GAIN
+	CHAT_MSG_COMBAT_XP_GAIN = {},
+	---@type CHAT_MSG_COMMUNITIES_CHANNEL
+	CHAT_MSG_COMMUNITIES_CHANNEL = {},
+	---@type CHAT_MSG_CURRENCY
+	CHAT_MSG_CURRENCY = {},
+	---@type CHAT_MSG_DND
+	CHAT_MSG_DND = {},
+	---@type CHAT_MSG_EMOTE
+	CHAT_MSG_EMOTE = {},
+	---@type CHAT_MSG_FILTERED
+	CHAT_MSG_FILTERED = {},
+	---@type CHAT_MSG_GUILD
+	CHAT_MSG_GUILD = {},
+	---@type CHAT_MSG_GUILD_ACHIEVEMENT
+	CHAT_MSG_GUILD_ACHIEVEMENT = {},
+	---@type CHAT_MSG_GUILD_ITEM_LOOTED
+	CHAT_MSG_GUILD_ITEM_LOOTED = {},
+	---@type CHAT_MSG_IGNORED
+	CHAT_MSG_IGNORED = {},
+	---@type CHAT_MSG_INSTANCE_CHAT
+	CHAT_MSG_INSTANCE_CHAT = {},
+	---@type CHAT_MSG_INSTANCE_CHAT_LEADER
+	CHAT_MSG_INSTANCE_CHAT_LEADER = {},
+	---@type CHAT_MSG_LOOT
+	CHAT_MSG_LOOT = {},
+	---@type CHAT_MSG_MONEY
+	CHAT_MSG_MONEY = {},
+	---@type CHAT_MSG_MONSTER_EMOTE
+	CHAT_MSG_MONSTER_EMOTE = {},
+	---@type CHAT_MSG_MONSTER_PARTY
+	CHAT_MSG_MONSTER_PARTY = {},
+	---@type CHAT_MSG_MONSTER_SAY
+	CHAT_MSG_MONSTER_SAY = {},
+	---@type CHAT_MSG_MONSTER_WHISPER
+	CHAT_MSG_MONSTER_WHISPER = {},
+	---@type CHAT_MSG_MONSTER_YELL
+	CHAT_MSG_MONSTER_YELL = {},
+	---@type CHAT_MSG_OFFICER
+	CHAT_MSG_OFFICER = {},
+	---@type CHAT_MSG_OPENING
+	CHAT_MSG_OPENING = {},
+	---@type CHAT_MSG_PARTY
+	CHAT_MSG_PARTY = {},
+	---@type CHAT_MSG_PARTY_LEADER
+	CHAT_MSG_PARTY_LEADER = {},
+	---@type CHAT_MSG_PET_BATTLE_COMBAT_LOG
+	CHAT_MSG_PET_BATTLE_COMBAT_LOG = {},
+	---@type CHAT_MSG_PET_BATTLE_INFO
+	CHAT_MSG_PET_BATTLE_INFO = {},
+	---@type CHAT_MSG_PET_INFO
+	CHAT_MSG_PET_INFO = {},
+	---@type CHAT_MSG_RAID
+	CHAT_MSG_RAID = {},
+	---@type CHAT_MSG_RAID_BOSS_EMOTE
+	CHAT_MSG_RAID_BOSS_EMOTE = {},
+	---@type CHAT_MSG_RAID_BOSS_WHISPER
+	CHAT_MSG_RAID_BOSS_WHISPER = {},
+	---@type CHAT_MSG_RAID_LEADER
+	CHAT_MSG_RAID_LEADER = {},
+	---@type CHAT_MSG_RAID_WARNING
+	CHAT_MSG_RAID_WARNING = {},
+	---@type CHAT_MSG_RESTRICTED
+	CHAT_MSG_RESTRICTED = {},
+	---@type CHAT_MSG_SAY
+	CHAT_MSG_SAY = {},
+	---@type CHAT_MSG_SKILL
+	CHAT_MSG_SKILL = {},
+	---@type CHAT_MSG_SYSTEM
+	CHAT_MSG_SYSTEM = {},
+	---@type CHAT_MSG_TARGETICONS
+	CHAT_MSG_TARGETICONS = {},
+	---@type CHAT_MSG_TEXT_EMOTE
+	CHAT_MSG_TEXT_EMOTE = {},
+	---@type CHAT_MSG_TRADESKILLS
+	CHAT_MSG_TRADESKILLS = {},
+	---@type CHAT_MSG_WHISPER
+	CHAT_MSG_WHISPER = {},
+	---@type CHAT_MSG_WHISPER_INFORM
+	CHAT_MSG_WHISPER_INFORM = {},
+	---@type CHAT_MSG_YELL
+	CHAT_MSG_YELL = {},
+	---@type CHAT_SERVER_DISCONNECTED
+	CHAT_SERVER_DISCONNECTED = {},
+	---@type CHAT_SERVER_RECONNECTED
+	CHAT_SERVER_RECONNECTED = {},
+	---@type CINEMATIC_START
+	CINEMATIC_START = {},
+	---@type CINEMATIC_STOP
+	CINEMATIC_STOP = {},
+	---@type CLASS_TRIAL_TIMER_START
+	CLASS_TRIAL_TIMER_START = {},
+	---@type CLASS_TRIAL_UPGRADE_COMPLETE
+	CLASS_TRIAL_UPGRADE_COMPLETE = {},
+	---@type CLEAR_BOSS_EMOTES
+	CLEAR_BOSS_EMOTES = {},
+	---@type CLOSE_INBOX_ITEM
+	CLOSE_INBOX_ITEM = {},
+	---@type CLOSE_TABARD_FRAME
+	CLOSE_TABARD_FRAME = {},
+	---@type CLUB_ADDED
+	CLUB_ADDED = {},
+	---@type CLUB_ERROR
+	CLUB_ERROR = {},
+	---@type CLUB_FINDER_APPLICANT_INVITE_RECIEVED
+	CLUB_FINDER_APPLICANT_INVITE_RECIEVED = {},
+	---@type CLUB_FINDER_APPLICATIONS_UPDATED
+	CLUB_FINDER_APPLICATIONS_UPDATED = {},
+	---@type CLUB_FINDER_CLUB_LIST_RETURNED
+	CLUB_FINDER_CLUB_LIST_RETURNED = {},
+	---@type CLUB_FINDER_CLUB_REPORTED
+	CLUB_FINDER_CLUB_REPORTED = {},
+	---@type CLUB_FINDER_COMMUNITY_OFFLINE_JOIN
+	CLUB_FINDER_COMMUNITY_OFFLINE_JOIN = {},
+	---@type CLUB_FINDER_ENABLED_OR_DISABLED
+	CLUB_FINDER_ENABLED_OR_DISABLED = {},
+	---@type CLUB_FINDER_LINKED_CLUB_RETURNED
+	CLUB_FINDER_LINKED_CLUB_RETURNED = {},
+	---@type CLUB_FINDER_MEMBERSHIP_LIST_CHANGED
+	CLUB_FINDER_MEMBERSHIP_LIST_CHANGED = {},
+	---@type CLUB_FINDER_PLAYER_PENDING_LIST_RECIEVED
+	CLUB_FINDER_PLAYER_PENDING_LIST_RECIEVED = {},
+	---@type CLUB_FINDER_POST_UPDATED
+	CLUB_FINDER_POST_UPDATED = {},
+	---@type CLUB_FINDER_RECRUITMENT_POST_RETURNED
+	CLUB_FINDER_RECRUITMENT_POST_RETURNED = {},
+	---@type CLUB_FINDER_RECRUITS_UPDATED
+	CLUB_FINDER_RECRUITS_UPDATED = {},
+	---@type CLUB_FINDER_RECRUIT_LIST_CHANGED
+	CLUB_FINDER_RECRUIT_LIST_CHANGED = {},
+	---@type CLUB_INVITATIONS_RECEIVED_FOR_CLUB
+	CLUB_INVITATIONS_RECEIVED_FOR_CLUB = {},
+	---@type CLUB_INVITATION_ADDED_FOR_SELF
+	CLUB_INVITATION_ADDED_FOR_SELF = {},
+	---@type CLUB_INVITATION_REMOVED_FOR_SELF
+	CLUB_INVITATION_REMOVED_FOR_SELF = {},
+	---@type CLUB_MEMBER_ADDED
+	CLUB_MEMBER_ADDED = {},
+	---@type CLUB_MEMBER_PRESENCE_UPDATED
+	CLUB_MEMBER_PRESENCE_UPDATED = {},
+	---@type CLUB_MEMBER_REMOVED
+	CLUB_MEMBER_REMOVED = {},
+	---@type CLUB_MEMBER_ROLE_UPDATED
+	CLUB_MEMBER_ROLE_UPDATED = {},
+	---@type CLUB_MEMBER_UPDATED
+	CLUB_MEMBER_UPDATED = {},
+	---@type CLUB_MESSAGE_ADDED
+	CLUB_MESSAGE_ADDED = {},
+	---@type CLUB_MESSAGE_HISTORY_RECEIVED
+	CLUB_MESSAGE_HISTORY_RECEIVED = {},
+	---@type CLUB_MESSAGE_UPDATED
+	CLUB_MESSAGE_UPDATED = {},
+	---@type CLUB_REMOVED
+	CLUB_REMOVED = {},
+	---@type CLUB_REMOVED_MESSAGE
+	CLUB_REMOVED_MESSAGE = {},
+	---@type CLUB_SELF_MEMBER_ROLE_UPDATED
+	CLUB_SELF_MEMBER_ROLE_UPDATED = {},
+	---@type CLUB_STREAMS_LOADED
+	CLUB_STREAMS_LOADED = {},
+	---@type CLUB_STREAM_ADDED
+	CLUB_STREAM_ADDED = {},
+	---@type CLUB_STREAM_REMOVED
+	CLUB_STREAM_REMOVED = {},
+	---@type CLUB_STREAM_SUBSCRIBED
+	CLUB_STREAM_SUBSCRIBED = {},
+	---@type CLUB_STREAM_UNSUBSCRIBED
+	CLUB_STREAM_UNSUBSCRIBED = {},
+	---@type CLUB_STREAM_UPDATED
+	CLUB_STREAM_UPDATED = {},
+	---@type CLUB_TICKETS_RECEIVED
+	CLUB_TICKETS_RECEIVED = {},
+	---@type CLUB_TICKET_CREATED
+	CLUB_TICKET_CREATED = {},
+	---@type CLUB_TICKET_RECEIVED
+	CLUB_TICKET_RECEIVED = {},
+	---@type CLUB_UPDATED
+	CLUB_UPDATED = {},
+	---@type COMBAT_LOG_EVENT
+	COMBAT_LOG_EVENT = {},
+	---@type COMBAT_LOG_EVENT_UNFILTERED
+	COMBAT_LOG_EVENT_UNFILTERED = {},
+	---@type COMBAT_RATING_UPDATE
+	COMBAT_RATING_UPDATE = {},
+	---@type COMBAT_TEXT_UPDATE
+	COMBAT_TEXT_UPDATE = {},
+	---@type COMMENTATOR_ENTER_WORLD
+	COMMENTATOR_ENTER_WORLD = {},
+	---@type COMMENTATOR_IMMEDIATE_FOV_UPDATE
+	COMMENTATOR_IMMEDIATE_FOV_UPDATE = {},
+	---@type COMMENTATOR_MAP_UPDATE
+	COMMENTATOR_MAP_UPDATE = {},
+	---@type COMMENTATOR_PLAYER_NAME_OVERRIDE_UPDATE
+	COMMENTATOR_PLAYER_NAME_OVERRIDE_UPDATE = {},
+	---@type COMMENTATOR_PLAYER_UPDATE
+	COMMENTATOR_PLAYER_UPDATE = {},
+	---@type COMMODITY_PRICE_UNAVAILABLE
+	COMMODITY_PRICE_UNAVAILABLE = {},
+	---@type COMMODITY_PRICE_UPDATED
+	COMMODITY_PRICE_UPDATED = {},
+	---@type COMMODITY_PURCHASED
+	COMMODITY_PURCHASED = {},
+	---@type COMMODITY_PURCHASE_FAILED
+	COMMODITY_PURCHASE_FAILED = {},
+	---@type COMMODITY_PURCHASE_SUCCEEDED
+	COMMODITY_PURCHASE_SUCCEEDED = {},
+	---@type COMMODITY_SEARCH_RESULTS_ADDED
+	COMMODITY_SEARCH_RESULTS_ADDED = {},
+	---@type COMMODITY_SEARCH_RESULTS_UPDATED
+	COMMODITY_SEARCH_RESULTS_UPDATED = {},
+	---@type COMMUNITIES_STREAM_CURSOR_CLEAR
+	COMMUNITIES_STREAM_CURSOR_CLEAR = {},
+	---@type COMPACT_UNIT_FRAME_PROFILES_LOADED
+	COMPACT_UNIT_FRAME_PROFILES_LOADED = {},
+	---@type COMPANION_LEARNED
+	COMPANION_LEARNED = {},
+	---@type COMPANION_UNLEARNED
+	COMPANION_UNLEARNED = {},
+	---@type COMPANION_UPDATE
+	COMPANION_UPDATE = {},
+	---@type CONFIRM_BEFORE_USE
+	CONFIRM_BEFORE_USE = {},
+	---@type CONFIRM_BINDER
+	CONFIRM_BINDER = {},
+	---@type CONFIRM_DISENCHANT_ROLL
+	CONFIRM_DISENCHANT_ROLL = {},
+	---@type CONFIRM_LOOT_ROLL
+	CONFIRM_LOOT_ROLL = {},
+	---@type CONFIRM_SUMMON
+	CONFIRM_SUMMON = {},
+	---@type CONFIRM_TALENT_WIPE
+	CONFIRM_TALENT_WIPE = {},
+	---@type CONFIRM_XP_LOSS
+	CONFIRM_XP_LOSS = {},
+	---@type CONSOLE_CLEAR
+	CONSOLE_CLEAR = {},
+	---@type CONSOLE_COLORS_CHANGED
+	CONSOLE_COLORS_CHANGED = {},
+	---@type CONSOLE_FONT_SIZE_CHANGED
+	CONSOLE_FONT_SIZE_CHANGED = {},
+	---@type CONSOLE_LOG
+	CONSOLE_LOG = {},
+	---@type CONSOLE_MESSAGE
+	CONSOLE_MESSAGE = {},
+	---@type CONTRIBUTION_CHANGED
+	CONTRIBUTION_CHANGED = {},
+	---@type CONTRIBUTION_COLLECTOR_CLOSE
+	CONTRIBUTION_COLLECTOR_CLOSE = {},
+	---@type CONTRIBUTION_COLLECTOR_OPEN
+	CONTRIBUTION_COLLECTOR_OPEN = {},
+	---@type CONTRIBUTION_COLLECTOR_PENDING
+	CONTRIBUTION_COLLECTOR_PENDING = {},
+	---@type CONTRIBUTION_COLLECTOR_UPDATE
+	CONTRIBUTION_COLLECTOR_UPDATE = {},
+	---@type CONTRIBUTION_COLLECTOR_UPDATE_SINGLE
+	CONTRIBUTION_COLLECTOR_UPDATE_SINGLE = {},
+	---@type CONVERT_TO_RAID_CONFIRMATION
+	CONVERT_TO_RAID_CONFIRMATION = {},
+	---@type CORPSE_IN_INSTANCE
+	CORPSE_IN_INSTANCE = {},
+	---@type CORPSE_IN_RANGE
+	CORPSE_IN_RANGE = {},
+	---@type CORPSE_OUT_OF_RANGE
+	CORPSE_OUT_OF_RANGE = {},
+	---@type CRITERIA_COMPLETE
+	CRITERIA_COMPLETE = {},
+	---@type CRITERIA_EARNED
+	CRITERIA_EARNED = {},
+	---@type CRITERIA_UPDATE
+	CRITERIA_UPDATE = {},
+	---@type CURRENCY_DISPLAY_UPDATE
+	CURRENCY_DISPLAY_UPDATE = {},
+	---@type CURRENT_SPELL_CAST_CHANGED
+	CURRENT_SPELL_CAST_CHANGED = {},
+	---@type CURSOR_UPDATE
+	CURSOR_UPDATE = {},
+	---@type CVAR_UPDATE
+	CVAR_UPDATE = {},
+	---@type DELETE_ITEM_CONFIRM
+	DELETE_ITEM_CONFIRM = {},
+	---@type DISABLE_DECLINE_GUILD_INVITE
+	DISABLE_DECLINE_GUILD_INVITE = {},
+	---@type DISABLE_LOW_LEVEL_RAID
+	DISABLE_LOW_LEVEL_RAID = {},
+	---@type DISABLE_TAXI_BENCHMARK
+	DISABLE_TAXI_BENCHMARK = {},
+	---@type DISABLE_XP_GAIN
+	DISABLE_XP_GAIN = {},
+	---@type DISPLAY_SIZE_CHANGED
+	DISPLAY_SIZE_CHANGED = {},
+	---@type DUEL_FINISHED
+	DUEL_FINISHED = {},
+	---@type DUEL_INBOUNDS
+	DUEL_INBOUNDS = {},
+	---@type DUEL_OUTOFBOUNDS
+	DUEL_OUTOFBOUNDS = {},
+	---@type DUEL_REQUESTED
+	DUEL_REQUESTED = {},
+	---@type DYNAMIC_GOSSIP_POI_UPDATED
+	DYNAMIC_GOSSIP_POI_UPDATED = {},
+	---@type EJ_DIFFICULTY_UPDATE
+	EJ_DIFFICULTY_UPDATE = {},
+	---@type EJ_LOOT_DATA_RECIEVED
+	EJ_LOOT_DATA_RECIEVED = {},
+	---@type ENABLE_DECLINE_GUILD_INVITE
+	ENABLE_DECLINE_GUILD_INVITE = {},
+	---@type ENABLE_LOW_LEVEL_RAID
+	ENABLE_LOW_LEVEL_RAID = {},
+	---@type ENABLE_TAXI_BENCHMARK
+	ENABLE_TAXI_BENCHMARK = {},
+	---@type ENABLE_XP_GAIN
+	ENABLE_XP_GAIN = {},
+	---@type ENCOUNTER_END
+	ENCOUNTER_END = {},
+	---@type ENCOUNTER_LOOT_RECEIVED
+	ENCOUNTER_LOOT_RECEIVED = {},
+	---@type ENCOUNTER_START
+	ENCOUNTER_START = {},
+	---@type END_BOUND_TRADEABLE
+	END_BOUND_TRADEABLE = {},
+	---@type ENTERED_DIFFERENT_INSTANCE_FROM_PARTY
+	ENTERED_DIFFERENT_INSTANCE_FROM_PARTY = {},
+	---@type ENTITLEMENT_DELIVERED
+	ENTITLEMENT_DELIVERED = {},
+	---@type EQUIPMENT_SETS_CHANGED
+	EQUIPMENT_SETS_CHANGED = {},
+	---@type EQUIPMENT_SWAP_FINISHED
+	EQUIPMENT_SWAP_FINISHED = {},
+	---@type EQUIPMENT_SWAP_PENDING
+	EQUIPMENT_SWAP_PENDING = {},
+	---@type EQUIP_BIND_CONFIRM
+	EQUIP_BIND_CONFIRM = {},
+	---@type EQUIP_BIND_TRADEABLE_CONFIRM
+	EQUIP_BIND_TRADEABLE_CONFIRM = {},
+	---@type EXECUTE_CHAT_LINE
+	EXECUTE_CHAT_LINE = {},
+	---@type EXTRA_BROWSE_INFO_RECEIVED
+	EXTRA_BROWSE_INFO_RECEIVED = {},
+	---@type FOG_OF_WAR_UPDATED
+	FOG_OF_WAR_UPDATED = {},
+	---@type FORBIDDEN_NAME_PLATE_CREATED
+	FORBIDDEN_NAME_PLATE_CREATED = {},
+	---@type FORBIDDEN_NAME_PLATE_UNIT_ADDED
+	FORBIDDEN_NAME_PLATE_UNIT_ADDED = {},
+	---@type FORBIDDEN_NAME_PLATE_UNIT_REMOVED
+	FORBIDDEN_NAME_PLATE_UNIT_REMOVED = {},
+	---@type FRIENDLIST_UPDATE
+	FRIENDLIST_UPDATE = {},
+	---@type GARRISON_ARCHITECT_CLOSED
+	GARRISON_ARCHITECT_CLOSED = {},
+	---@type GARRISON_ARCHITECT_OPENED
+	GARRISON_ARCHITECT_OPENED = {},
+	---@type GARRISON_BUILDING_ACTIVATABLE
+	GARRISON_BUILDING_ACTIVATABLE = {},
+	---@type GARRISON_BUILDING_ACTIVATED
+	GARRISON_BUILDING_ACTIVATED = {},
+	---@type GARRISON_BUILDING_ERROR
+	GARRISON_BUILDING_ERROR = {},
+	---@type GARRISON_BUILDING_LIST_UPDATE
+	GARRISON_BUILDING_LIST_UPDATE = {},
+	---@type GARRISON_BUILDING_PLACED
+	GARRISON_BUILDING_PLACED = {},
+	---@type GARRISON_BUILDING_REMOVED
+	GARRISON_BUILDING_REMOVED = {},
+	---@type GARRISON_BUILDING_UPDATE
+	GARRISON_BUILDING_UPDATE = {},
+	---@type GARRISON_FOLLOWER_ADDED
+	GARRISON_FOLLOWER_ADDED = {},
+	---@type GARRISON_FOLLOWER_CATEGORIES_UPDATED
+	GARRISON_FOLLOWER_CATEGORIES_UPDATED = {},
+	---@type GARRISON_FOLLOWER_DURABILITY_CHANGED
+	GARRISON_FOLLOWER_DURABILITY_CHANGED = {},
+	---@type GARRISON_FOLLOWER_LIST_UPDATE
+	GARRISON_FOLLOWER_LIST_UPDATE = {},
+	---@type GARRISON_FOLLOWER_REMOVED
+	GARRISON_FOLLOWER_REMOVED = {},
+	---@type GARRISON_FOLLOWER_UPGRADED
+	GARRISON_FOLLOWER_UPGRADED = {},
+	---@type GARRISON_FOLLOWER_XP_CHANGED
+	GARRISON_FOLLOWER_XP_CHANGED = {},
+	---@type GARRISON_HIDE_LANDING_PAGE
+	GARRISON_HIDE_LANDING_PAGE = {},
+	---@type GARRISON_INVASION_AVAILABLE
+	GARRISON_INVASION_AVAILABLE = {},
+	---@type GARRISON_INVASION_UNAVAILABLE
+	GARRISON_INVASION_UNAVAILABLE = {},
+	---@type GARRISON_LANDINGPAGE_SHIPMENTS
+	GARRISON_LANDINGPAGE_SHIPMENTS = {},
+	---@type GARRISON_MISSION_AREA_BONUS_ADDED
+	GARRISON_MISSION_AREA_BONUS_ADDED = {},
+	---@type GARRISON_MISSION_BONUS_ROLL_COMPLETE
+	GARRISON_MISSION_BONUS_ROLL_COMPLETE = {},
+	---@type GARRISON_MISSION_BONUS_ROLL_LOOT
+	GARRISON_MISSION_BONUS_ROLL_LOOT = {},
+	---@type GARRISON_MISSION_COMPLETE_RESPONSE
+	GARRISON_MISSION_COMPLETE_RESPONSE = {},
+	---@type GARRISON_MISSION_FINISHED
+	GARRISON_MISSION_FINISHED = {},
+	---@type GARRISON_MISSION_LIST_UPDATE
+	GARRISON_MISSION_LIST_UPDATE = {},
+	---@type GARRISON_MISSION_NPC_CLOSED
+	GARRISON_MISSION_NPC_CLOSED = {},
+	---@type GARRISON_MISSION_NPC_OPENED
+	GARRISON_MISSION_NPC_OPENED = {},
+	---@type GARRISON_MISSION_REWARD_INFO
+	GARRISON_MISSION_REWARD_INFO = {},
+	---@type GARRISON_MISSION_STARTED
+	GARRISON_MISSION_STARTED = {},
+	---@type GARRISON_MONUMENT_CLOSE_UI
+	GARRISON_MONUMENT_CLOSE_UI = {},
+	---@type GARRISON_MONUMENT_LIST_LOADED
+	GARRISON_MONUMENT_LIST_LOADED = {},
+	---@type GARRISON_MONUMENT_REPLACED
+	GARRISON_MONUMENT_REPLACED = {},
+	---@type GARRISON_MONUMENT_SELECTED_TROPHY_ID_LOADED
+	GARRISON_MONUMENT_SELECTED_TROPHY_ID_LOADED = {},
+	---@type GARRISON_MONUMENT_SHOW_UI
+	GARRISON_MONUMENT_SHOW_UI = {},
+	---@type GARRISON_RANDOM_MISSION_ADDED
+	GARRISON_RANDOM_MISSION_ADDED = {},
+	---@type GARRISON_RECALL_PORTAL_LAST_USED_TIME
+	GARRISON_RECALL_PORTAL_LAST_USED_TIME = {},
+	---@type GARRISON_RECALL_PORTAL_USED
+	GARRISON_RECALL_PORTAL_USED = {},
+	---@type GARRISON_RECRUITMENT_FOLLOWERS_GENERATED
+	GARRISON_RECRUITMENT_FOLLOWERS_GENERATED = {},
+	---@type GARRISON_RECRUITMENT_NPC_CLOSED
+	GARRISON_RECRUITMENT_NPC_CLOSED = {},
+	---@type GARRISON_RECRUITMENT_NPC_OPENED
+	GARRISON_RECRUITMENT_NPC_OPENED = {},
+	---@type GARRISON_RECRUITMENT_READY
+	GARRISON_RECRUITMENT_READY = {},
+	---@type GARRISON_RECRUIT_FOLLOWER_RESULT
+	GARRISON_RECRUIT_FOLLOWER_RESULT = {},
+	---@type GARRISON_SHIPMENT_RECEIVED
+	GARRISON_SHIPMENT_RECEIVED = {},
+	---@type GARRISON_SHIPYARD_NPC_CLOSED
+	GARRISON_SHIPYARD_NPC_CLOSED = {},
+	---@type GARRISON_SHIPYARD_NPC_OPENED
+	GARRISON_SHIPYARD_NPC_OPENED = {},
+	---@type GARRISON_SHOW_LANDING_PAGE
+	GARRISON_SHOW_LANDING_PAGE = {},
+	---@type GARRISON_TALENT_COMPLETE
+	GARRISON_TALENT_COMPLETE = {},
+	---@type GARRISON_TALENT_NPC_CLOSED
+	GARRISON_TALENT_NPC_CLOSED = {},
+	---@type GARRISON_TALENT_NPC_OPENED
+	GARRISON_TALENT_NPC_OPENED = {},
+	---@type GARRISON_TALENT_UPDATE
+	GARRISON_TALENT_UPDATE = {},
+	---@type GARRISON_TRADESKILL_NPC_CLOSED
+	GARRISON_TRADESKILL_NPC_CLOSED = {},
+	---@type GARRISON_UPDATE
+	GARRISON_UPDATE = {},
+	---@type GARRISON_UPGRADEABLE_RESULT
+	GARRISON_UPGRADEABLE_RESULT = {},
+	---@type GARRISON_USE_PARTY_GARRISON_CHANGED
+	GARRISON_USE_PARTY_GARRISON_CHANGED = {},
+	---@type GDF_SIM_COMPLETE
+	GDF_SIM_COMPLETE = {},
+	---@type GENERIC_ERROR
+	GENERIC_ERROR = {},
+	---@type GET_ITEM_INFO_RECEIVED
+	GET_ITEM_INFO_RECEIVED = {},
+	---@type GLOBAL_MOUSE_DOWN
+	GLOBAL_MOUSE_DOWN = {},
+	---@type GLOBAL_MOUSE_UP
+	GLOBAL_MOUSE_UP = {},
+	---@type GLUE_CONSOLE_LOG
+	GLUE_CONSOLE_LOG = {},
+	---@type GLUE_SCREENSHOT_FAILED
+	GLUE_SCREENSHOT_FAILED = {},
+	---@type GM_PLAYER_INFO
+	GM_PLAYER_INFO = {},
+	---@type GOSSIP_CLOSED
+	GOSSIP_CLOSED = {},
+	---@type GOSSIP_CONFIRM
+	GOSSIP_CONFIRM = {},
+	---@type GOSSIP_CONFIRM_CANCEL
+	GOSSIP_CONFIRM_CANCEL = {},
+	---@type GOSSIP_ENTER_CODE
+	GOSSIP_ENTER_CODE = {},
+	---@type GOSSIP_SHOW
+	GOSSIP_SHOW = {},
+	---@type GROUP_FORMED
+	GROUP_FORMED = {},
+	---@type GROUP_INVITE_CONFIRMATION
+	GROUP_INVITE_CONFIRMATION = {},
+	---@type GROUP_JOINED
+	GROUP_JOINED = {},
+	---@type GROUP_LEFT
+	GROUP_LEFT = {},
+	---@type GROUP_ROSTER_UPDATE
+	GROUP_ROSTER_UPDATE = {},
+	---@type GUILDBANKBAGSLOTS_CHANGED
+	GUILDBANKBAGSLOTS_CHANGED = {},
+	---@type GUILDBANKFRAME_CLOSED
+	GUILDBANKFRAME_CLOSED = {},
+	---@type GUILDBANKFRAME_OPENED
+	GUILDBANKFRAME_OPENED = {},
+	---@type GUILDBANKLOG_UPDATE
+	GUILDBANKLOG_UPDATE = {},
+	---@type GUILDBANK_ITEM_LOCK_CHANGED
+	GUILDBANK_ITEM_LOCK_CHANGED = {},
+	---@type GUILDBANK_TEXT_CHANGED
+	GUILDBANK_TEXT_CHANGED = {},
+	---@type GUILDBANK_UPDATE_MONEY
+	GUILDBANK_UPDATE_MONEY = {},
+	---@type GUILDBANK_UPDATE_TABS
+	GUILDBANK_UPDATE_TABS = {},
+	---@type GUILDBANK_UPDATE_TEXT
+	GUILDBANK_UPDATE_TEXT = {},
+	---@type GUILDBANK_UPDATE_WITHDRAWMONEY
+	GUILDBANK_UPDATE_WITHDRAWMONEY = {},
+	---@type GUILDTABARD_UPDATE
+	GUILDTABARD_UPDATE = {},
+	---@type GUILD_CHALLENGE_COMPLETED
+	GUILD_CHALLENGE_COMPLETED = {},
+	---@type GUILD_CHALLENGE_UPDATED
+	GUILD_CHALLENGE_UPDATED = {},
+	---@type GUILD_EVENT_LOG_UPDATE
+	GUILD_EVENT_LOG_UPDATE = {},
+	---@type GUILD_INVITE_CANCEL
+	GUILD_INVITE_CANCEL = {},
+	---@type GUILD_INVITE_REQUEST
+	GUILD_INVITE_REQUEST = {},
+	---@type GUILD_MOTD
+	GUILD_MOTD = {},
+	---@type GUILD_NEWS_UPDATE
+	GUILD_NEWS_UPDATE = {},
+	---@type GUILD_PARTY_STATE_UPDATED
+	GUILD_PARTY_STATE_UPDATED = {},
+	---@type GUILD_RANKS_UPDATE
+	GUILD_RANKS_UPDATE = {},
+	---@type GUILD_RECIPE_KNOWN_BY_MEMBERS
+	GUILD_RECIPE_KNOWN_BY_MEMBERS = {},
+	---@type GUILD_REGISTRAR_CLOSED
+	GUILD_REGISTRAR_CLOSED = {},
+	---@type GUILD_REGISTRAR_SHOW
+	GUILD_REGISTRAR_SHOW = {},
+	---@type GUILD_RENAME_REQUIRED
+	GUILD_RENAME_REQUIRED = {},
+	---@type GUILD_REWARDS_LIST
+	GUILD_REWARDS_LIST = {},
+	---@type GUILD_ROSTER_UPDATE
+	GUILD_ROSTER_UPDATE = {},
+	---@type GUILD_TRADESKILL_UPDATE
+	GUILD_TRADESKILL_UPDATE = {},
+	---@type HEARTHSTONE_BOUND
+	HEARTHSTONE_BOUND = {},
+	---@type HEIRLOOMS_UPDATED
+	HEIRLOOMS_UPDATED = {},
+	---@type HEIRLOOM_UPGRADE_TARGETING_CHANGED
+	HEIRLOOM_UPGRADE_TARGETING_CHANGED = {},
+	---@type HIDE_SUBTITLE
+	HIDE_SUBTITLE = {},
+	---@type HONOR_LEVEL_UPDATE
+	HONOR_LEVEL_UPDATE = {},
+	---@type HONOR_XP_UPDATE
+	HONOR_XP_UPDATE = {},
+	---@type IGNORELIST_UPDATE
+	IGNORELIST_UPDATE = {},
+	---@type INCOMING_RESURRECT_CHANGED
+	INCOMING_RESURRECT_CHANGED = {},
+	---@type INCOMING_SUMMON_CHANGED
+	INCOMING_SUMMON_CHANGED = {},
+	---@type INITIAL_CLUBS_LOADED
+	INITIAL_CLUBS_LOADED = {},
+	---@type INITIAL_HOTFIXES_APPLIED
+	INITIAL_HOTFIXES_APPLIED = {},
+	---@type INSPECT_ACHIEVEMENT_READY
+	INSPECT_ACHIEVEMENT_READY = {},
+	---@type INSPECT_HONOR_UPDATE
+	INSPECT_HONOR_UPDATE = {},
+	---@type INSPECT_READY
+	INSPECT_READY = {},
+	---@type INSTANCE_BOOT_START
+	INSTANCE_BOOT_START = {},
+	---@type INSTANCE_BOOT_STOP
+	INSTANCE_BOOT_STOP = {},
+	---@type INSTANCE_ENCOUNTER_ADD_TIMER
+	INSTANCE_ENCOUNTER_ADD_TIMER = {},
+	---@type INSTANCE_ENCOUNTER_ENGAGE_UNIT
+	INSTANCE_ENCOUNTER_ENGAGE_UNIT = {},
+	---@type INSTANCE_ENCOUNTER_OBJECTIVE_COMPLETE
+	INSTANCE_ENCOUNTER_OBJECTIVE_COMPLETE = {},
+	---@type INSTANCE_ENCOUNTER_OBJECTIVE_START
+	INSTANCE_ENCOUNTER_OBJECTIVE_START = {},
+	---@type INSTANCE_ENCOUNTER_OBJECTIVE_UPDATE
+	INSTANCE_ENCOUNTER_OBJECTIVE_UPDATE = {},
+	---@type INSTANCE_GROUP_SIZE_CHANGED
+	INSTANCE_GROUP_SIZE_CHANGED = {},
+	---@type INSTANCE_LOCK_START
+	INSTANCE_LOCK_START = {},
+	---@type INSTANCE_LOCK_STOP
+	INSTANCE_LOCK_STOP = {},
+	---@type INSTANCE_LOCK_WARNING
+	INSTANCE_LOCK_WARNING = {},
+	---@type INVENTORY_SEARCH_UPDATE
+	INVENTORY_SEARCH_UPDATE = {},
+	---@type INVITE_TO_PARTY_CONFIRMATION
+	INVITE_TO_PARTY_CONFIRMATION = {},
+	---@type INVITE_TRAVEL_PASS_CONFIRMATION
+	INVITE_TRAVEL_PASS_CONFIRMATION = {},
+	---@type ISLANDS_QUEUE_CLOSE
+	ISLANDS_QUEUE_CLOSE = {},
+	---@type ISLANDS_QUEUE_OPEN
+	ISLANDS_QUEUE_OPEN = {},
+	---@type ISLAND_AZERITE_GAIN
+	ISLAND_AZERITE_GAIN = {},
+	---@type ISLAND_COMPLETED
+	ISLAND_COMPLETED = {},
+	---@type ITEM_DATA_LOAD_RESULT
+	ITEM_DATA_LOAD_RESULT = {},
+	---@type ITEM_INTERACTION_CLOSE
+	ITEM_INTERACTION_CLOSE = {},
+	---@type ITEM_INTERACTION_ITEM_SELECTION_UPDATED
+	ITEM_INTERACTION_ITEM_SELECTION_UPDATED = {},
+	---@type ITEM_INTERACTION_OPEN
+	ITEM_INTERACTION_OPEN = {},
+	---@type ITEM_KEY_ITEM_INFO_RECEIVED
+	ITEM_KEY_ITEM_INFO_RECEIVED = {},
+	---@type ITEM_LOCKED
+	ITEM_LOCKED = {},
+	---@type ITEM_LOCK_CHANGED
+	ITEM_LOCK_CHANGED = {},
+	---@type ITEM_PURCHASED
+	ITEM_PURCHASED = {},
+	---@type ITEM_PUSH
+	ITEM_PUSH = {},
+	---@type ITEM_RESTORATION_BUTTON_STATUS
+	ITEM_RESTORATION_BUTTON_STATUS = {},
+	---@type ITEM_SEARCH_RESULTS_ADDED
+	ITEM_SEARCH_RESULTS_ADDED = {},
+	---@type ITEM_SEARCH_RESULTS_UPDATED
+	ITEM_SEARCH_RESULTS_UPDATED = {},
+	---@type ITEM_TEXT_BEGIN
+	ITEM_TEXT_BEGIN = {},
+	---@type ITEM_TEXT_CLOSED
+	ITEM_TEXT_CLOSED = {},
+	---@type ITEM_TEXT_READY
+	ITEM_TEXT_READY = {},
+	---@type ITEM_TEXT_TRANSLATION
+	ITEM_TEXT_TRANSLATION = {},
+	---@type ITEM_UNLOCKED
+	ITEM_UNLOCKED = {},
+	---@type ITEM_UPGRADE_MASTER_CLOSED
+	ITEM_UPGRADE_MASTER_CLOSED = {},
+	---@type ITEM_UPGRADE_MASTER_OPENED
+	ITEM_UPGRADE_MASTER_OPENED = {},
+	---@type ITEM_UPGRADE_MASTER_SET_ITEM
+	ITEM_UPGRADE_MASTER_SET_ITEM = {},
+	---@type ITEM_UPGRADE_MASTER_UPDATE
+	ITEM_UPGRADE_MASTER_UPDATE = {},
+	---@type KNOWLEDGE_BASE_ARTICLE_LOAD_FAILURE
+	KNOWLEDGE_BASE_ARTICLE_LOAD_FAILURE = {},
+	---@type KNOWLEDGE_BASE_ARTICLE_LOAD_SUCCESS
+	KNOWLEDGE_BASE_ARTICLE_LOAD_SUCCESS = {},
+	---@type KNOWLEDGE_BASE_QUERY_LOAD_FAILURE
+	KNOWLEDGE_BASE_QUERY_LOAD_FAILURE = {},
+	---@type KNOWLEDGE_BASE_QUERY_LOAD_SUCCESS
+	KNOWLEDGE_BASE_QUERY_LOAD_SUCCESS = {},
+	---@type KNOWLEDGE_BASE_SERVER_MESSAGE
+	KNOWLEDGE_BASE_SERVER_MESSAGE = {},
+	---@type KNOWLEDGE_BASE_SETUP_LOAD_FAILURE
+	KNOWLEDGE_BASE_SETUP_LOAD_FAILURE = {},
+	---@type KNOWLEDGE_BASE_SETUP_LOAD_SUCCESS
+	KNOWLEDGE_BASE_SETUP_LOAD_SUCCESS = {},
+	---@type KNOWLEDGE_BASE_SYSTEM_MOTD_UPDATED
+	KNOWLEDGE_BASE_SYSTEM_MOTD_UPDATED = {},
+	---@type KNOWN_TITLES_UPDATE
+	KNOWN_TITLES_UPDATE = {},
+	---@type LANGUAGE_LIST_CHANGED
+	LANGUAGE_LIST_CHANGED = {},
+	---@type LEARNED_SPELL_IN_TAB
+	LEARNED_SPELL_IN_TAB = {},
+	---@type LEAVE_PARTY_CONFIRMATION
+	LEAVE_PARTY_CONFIRMATION = {},
+	---@type LFG_BONUS_FACTION_ID_UPDATED
+	LFG_BONUS_FACTION_ID_UPDATED = {},
+	---@type LFG_BOOT_PROPOSAL_UPDATE
+	LFG_BOOT_PROPOSAL_UPDATE = {},
+	---@type LFG_COMPLETION_REWARD
+	LFG_COMPLETION_REWARD = {},
+	---@type LFG_INVALID_ERROR_MESSAGE
+	LFG_INVALID_ERROR_MESSAGE = {},
+	---@type LFG_LIST_ACTIVE_ENTRY_UPDATE
+	LFG_LIST_ACTIVE_ENTRY_UPDATE = {},
+	---@type LFG_LIST_APPLICANT_LIST_UPDATED
+	LFG_LIST_APPLICANT_LIST_UPDATED = {},
+	---@type LFG_LIST_APPLICANT_UPDATED
+	LFG_LIST_APPLICANT_UPDATED = {},
+	---@type LFG_LIST_APPLICATION_STATUS_UPDATED
+	LFG_LIST_APPLICATION_STATUS_UPDATED = {},
+	---@type LFG_LIST_AVAILABILITY_UPDATE
+	LFG_LIST_AVAILABILITY_UPDATE = {},
+	---@type LFG_LIST_ENTRY_CREATION_FAILED
+	LFG_LIST_ENTRY_CREATION_FAILED = {},
+	---@type LFG_LIST_ENTRY_EXPIRED_TIMEOUT
+	LFG_LIST_ENTRY_EXPIRED_TIMEOUT = {},
+	---@type LFG_LIST_ENTRY_EXPIRED_TOO_MANY_PLAYERS
+	LFG_LIST_ENTRY_EXPIRED_TOO_MANY_PLAYERS = {},
+	---@type LFG_LIST_JOINED_GROUP
+	LFG_LIST_JOINED_GROUP = {},
+	---@type LFG_LIST_SEARCH_FAILED
+	LFG_LIST_SEARCH_FAILED = {},
+	---@type LFG_LIST_SEARCH_RESULTS_RECEIVED
+	LFG_LIST_SEARCH_RESULTS_RECEIVED = {},
+	---@type LFG_LIST_SEARCH_RESULT_UPDATED
+	LFG_LIST_SEARCH_RESULT_UPDATED = {},
+	---@type LFG_LOCK_INFO_RECEIVED
+	LFG_LOCK_INFO_RECEIVED = {},
+	---@type LFG_OFFER_CONTINUE
+	LFG_OFFER_CONTINUE = {},
+	---@type LFG_OPEN_FROM_GOSSIP
+	LFG_OPEN_FROM_GOSSIP = {},
+	---@type LFG_PROPOSAL_DONE
+	LFG_PROPOSAL_DONE = {},
+	---@type LFG_PROPOSAL_FAILED
+	LFG_PROPOSAL_FAILED = {},
+	---@type LFG_PROPOSAL_SHOW
+	LFG_PROPOSAL_SHOW = {},
+	---@type LFG_PROPOSAL_SUCCEEDED
+	LFG_PROPOSAL_SUCCEEDED = {},
+	---@type LFG_PROPOSAL_UPDATE
+	LFG_PROPOSAL_UPDATE = {},
+	---@type LFG_QUEUE_STATUS_UPDATE
+	LFG_QUEUE_STATUS_UPDATE = {},
+	---@type LFG_READY_CHECK_DECLINED
+	LFG_READY_CHECK_DECLINED = {},
+	---@type LFG_READY_CHECK_HIDE
+	LFG_READY_CHECK_HIDE = {},
+	---@type LFG_READY_CHECK_PLAYER_IS_READY
+	LFG_READY_CHECK_PLAYER_IS_READY = {},
+	---@type LFG_READY_CHECK_SHOW
+	LFG_READY_CHECK_SHOW = {},
+	---@type LFG_READY_CHECK_UPDATE
+	LFG_READY_CHECK_UPDATE = {},
+	---@type LFG_ROLE_CHECK_DECLINED
+	LFG_ROLE_CHECK_DECLINED = {},
+	---@type LFG_ROLE_CHECK_HIDE
+	LFG_ROLE_CHECK_HIDE = {},
+	---@type LFG_ROLE_CHECK_ROLE_CHOSEN
+	LFG_ROLE_CHECK_ROLE_CHOSEN = {},
+	---@type LFG_ROLE_CHECK_SHOW
+	LFG_ROLE_CHECK_SHOW = {},
+	---@type LFG_ROLE_CHECK_UPDATE
+	LFG_ROLE_CHECK_UPDATE = {},
+	---@type LFG_ROLE_UPDATE
+	LFG_ROLE_UPDATE = {},
+	---@type LFG_UPDATE
+	LFG_UPDATE = {},
+	---@type LFG_UPDATE_RANDOM_INFO
+	LFG_UPDATE_RANDOM_INFO = {},
+	---@type LF_GUILD_BROWSE_UPDATED
+	LF_GUILD_BROWSE_UPDATED = {},
+	---@type LF_GUILD_MEMBERSHIP_LIST_CHANGED
+	LF_GUILD_MEMBERSHIP_LIST_CHANGED = {},
+	---@type LF_GUILD_MEMBERSHIP_LIST_UPDATED
+	LF_GUILD_MEMBERSHIP_LIST_UPDATED = {},
+	---@type LF_GUILD_POST_UPDATED
+	LF_GUILD_POST_UPDATED = {},
+	---@type LF_GUILD_RECRUITS_UPDATED
+	LF_GUILD_RECRUITS_UPDATED = {},
+	---@type LF_GUILD_RECRUIT_LIST_CHANGED
+	LF_GUILD_RECRUIT_LIST_CHANGED = {},
+	---@type LIFESTEAL_UPDATE
+	LIFESTEAL_UPDATE = {},
+	---@type LOADING_SCREEN_DISABLED
+	LOADING_SCREEN_DISABLED = {},
+	---@type LOADING_SCREEN_ENABLED
+	LOADING_SCREEN_ENABLED = {},
+	---@type LOCALPLAYER_PET_RENAMED
+	LOCALPLAYER_PET_RENAMED = {},
+	---@type LOC_RESULT
+	LOC_RESULT = {},
+	---@type LOGOUT_CANCEL
+	LOGOUT_CANCEL = {},
+	---@type LOOT_BIND_CONFIRM
+	LOOT_BIND_CONFIRM = {},
+	---@type LOOT_CLOSED
+	LOOT_CLOSED = {},
+	---@type LOOT_HISTORY_AUTO_SHOW
+	LOOT_HISTORY_AUTO_SHOW = {},
+	---@type LOOT_HISTORY_FULL_UPDATE
+	LOOT_HISTORY_FULL_UPDATE = {},
+	---@type LOOT_HISTORY_ROLL_CHANGED
+	LOOT_HISTORY_ROLL_CHANGED = {},
+	---@type LOOT_HISTORY_ROLL_COMPLETE
+	LOOT_HISTORY_ROLL_COMPLETE = {},
+	---@type LOOT_ITEM_AVAILABLE
+	LOOT_ITEM_AVAILABLE = {},
+	---@type LOOT_ITEM_ROLL_WON
+	LOOT_ITEM_ROLL_WON = {},
+	---@type LOOT_JOURNAL_LIST_UPDATE
+	LOOT_JOURNAL_LIST_UPDATE = {},
+	---@type LOOT_OPENED
+	LOOT_OPENED = {},
+	---@type LOOT_READY
+	LOOT_READY = {},
+	---@type LOOT_ROLLS_COMPLETE
+	LOOT_ROLLS_COMPLETE = {},
+	---@type LOOT_SLOT_CHANGED
+	LOOT_SLOT_CHANGED = {},
+	---@type LOOT_SLOT_CLEARED
+	LOOT_SLOT_CLEARED = {},
+	---@type LOSS_OF_CONTROL_ADDED
+	LOSS_OF_CONTROL_ADDED = {},
+	---@type LOSS_OF_CONTROL_UPDATE
+	LOSS_OF_CONTROL_UPDATE = {},
+	---@type LUA_WARNING
+	LUA_WARNING = {},
+	---@type MACRO_ACTION_BLOCKED
+	MACRO_ACTION_BLOCKED = {},
+	---@type MACRO_ACTION_FORBIDDEN
+	MACRO_ACTION_FORBIDDEN = {},
+	---@type MAIL_CLOSED
+	MAIL_CLOSED = {},
+	---@type MAIL_FAILED
+	MAIL_FAILED = {},
+	---@type MAIL_INBOX_UPDATE
+	MAIL_INBOX_UPDATE = {},
+	---@type MAIL_LOCK_SEND_ITEMS
+	MAIL_LOCK_SEND_ITEMS = {},
+	---@type MAIL_SEND_INFO_UPDATE
+	MAIL_SEND_INFO_UPDATE = {},
+	---@type MAIL_SEND_SUCCESS
+	MAIL_SEND_SUCCESS = {},
+	---@type MAIL_SHOW
+	MAIL_SHOW = {},
+	---@type MAIL_SUCCESS
+	MAIL_SUCCESS = {},
+	---@type MAIL_UNLOCK_SEND_ITEMS
+	MAIL_UNLOCK_SEND_ITEMS = {},
+	---@type MAP_EXPLORATION_UPDATED
+	MAP_EXPLORATION_UPDATED = {},
+	---@type MASTERY_UPDATE
+	MASTERY_UPDATE = {},
+	---@type MAX_EXPANSION_LEVEL_UPDATED
+	MAX_EXPANSION_LEVEL_UPDATED = {},
+	---@type MAX_SPELL_START_RECOVERY_OFFSET_CHANGED
+	MAX_SPELL_START_RECOVERY_OFFSET_CHANGED = {},
+	---@type MERCHANT_CLOSED
+	MERCHANT_CLOSED = {},
+	---@type MERCHANT_CONFIRM_TRADE_TIMER_REMOVAL
+	MERCHANT_CONFIRM_TRADE_TIMER_REMOVAL = {},
+	---@type MERCHANT_FILTER_ITEM_UPDATE
+	MERCHANT_FILTER_ITEM_UPDATE = {},
+	---@type MERCHANT_SHOW
+	MERCHANT_SHOW = {},
+	---@type MERCHANT_UPDATE
+	MERCHANT_UPDATE = {},
+	---@type MINIMAP_PING
+	MINIMAP_PING = {},
+	---@type MINIMAP_UPDATE_TRACKING
+	MINIMAP_UPDATE_TRACKING = {},
+	---@type MINIMAP_UPDATE_ZOOM
+	MINIMAP_UPDATE_ZOOM = {},
+	---@type MIN_EXPANSION_LEVEL_UPDATED
+	MIN_EXPANSION_LEVEL_UPDATED = {},
+	---@type MIRROR_TIMER_PAUSE
+	MIRROR_TIMER_PAUSE = {},
+	---@type MIRROR_TIMER_START
+	MIRROR_TIMER_START = {},
+	---@type MIRROR_TIMER_STOP
+	MIRROR_TIMER_STOP = {},
+	---@type MODIFIER_STATE_CHANGED
+	MODIFIER_STATE_CHANGED = {},
+	---@type MOUNT_CURSOR_CLEAR
+	MOUNT_CURSOR_CLEAR = {},
+	---@type MOUNT_EQUIPMENT_APPLY_RESULT
+	MOUNT_EQUIPMENT_APPLY_RESULT = {},
+	---@type MOUNT_JOURNAL_SEARCH_UPDATED
+	MOUNT_JOURNAL_SEARCH_UPDATED = {},
+	---@type MOUNT_JOURNAL_USABILITY_CHANGED
+	MOUNT_JOURNAL_USABILITY_CHANGED = {},
+	---@type MUTELIST_UPDATE
+	MUTELIST_UPDATE = {},
+	---@type MYTHIC_PLUS_CURRENT_AFFIX_UPDATE
+	MYTHIC_PLUS_CURRENT_AFFIX_UPDATE = {},
+	---@type MYTHIC_PLUS_NEW_SEASON_RECORD
+	MYTHIC_PLUS_NEW_SEASON_RECORD = {},
+	---@type MYTHIC_PLUS_NEW_WEEKLY_RECORD
+	MYTHIC_PLUS_NEW_WEEKLY_RECORD = {},
+	---@type NAME_PLATE_CREATED
+	NAME_PLATE_CREATED = {},
+	---@type NAME_PLATE_UNIT_ADDED
+	NAME_PLATE_UNIT_ADDED = {},
+	---@type NAME_PLATE_UNIT_REMOVED
+	NAME_PLATE_UNIT_REMOVED = {},
+	---@type NEUTRAL_FACTION_SELECT_RESULT
+	NEUTRAL_FACTION_SELECT_RESULT = {},
+	---@type NEW_MOUNT_ADDED
+	NEW_MOUNT_ADDED = {},
+	---@type NEW_PET_ADDED
+	NEW_PET_ADDED = {},
+	---@type NEW_RECIPE_LEARNED
+	NEW_RECIPE_LEARNED = {},
+	---@type NEW_TOY_ADDED
+	NEW_TOY_ADDED = {},
+	---@type NEW_WMO_CHUNK
+	NEW_WMO_CHUNK = {},
+	---@type NOTIFY_PVP_AFK_RESULT
+	NOTIFY_PVP_AFK_RESULT = {},
+	---@type NPE_TUTORIAL_UPDATE
+	NPE_TUTORIAL_UPDATE = {},
+	---@type OBJECT_ENTERED_AOI
+	OBJECT_ENTERED_AOI = {},
+	---@type OBJECT_LEFT_AOI
+	OBJECT_LEFT_AOI = {},
+	---@type OBLITERUM_FORGE_CLOSE
+	OBLITERUM_FORGE_CLOSE = {},
+	---@type OBLITERUM_FORGE_PENDING_ITEM_CHANGED
+	OBLITERUM_FORGE_PENDING_ITEM_CHANGED = {},
+	---@type OBLITERUM_FORGE_SHOW
+	OBLITERUM_FORGE_SHOW = {},
+	---@type OPEN_MASTER_LOOT_LIST
+	OPEN_MASTER_LOOT_LIST = {},
+	---@type OPEN_REPORT_PLAYER
+	OPEN_REPORT_PLAYER = {},
+	---@type OPEN_TABARD_FRAME
+	OPEN_TABARD_FRAME = {},
+	---@type OWNED_AUCTIONS_UPDATED
+	OWNED_AUCTIONS_UPDATED = {},
+	---@type PARTY_INVITE_CANCEL
+	PARTY_INVITE_CANCEL = {},
+	---@type PARTY_INVITE_REQUEST
+	PARTY_INVITE_REQUEST = {},
+	---@type PARTY_LEADER_CHANGED
+	PARTY_LEADER_CHANGED = {},
+	---@type PARTY_LFG_RESTRICTED
+	PARTY_LFG_RESTRICTED = {},
+	---@type PARTY_LOOT_METHOD_CHANGED
+	PARTY_LOOT_METHOD_CHANGED = {},
+	---@type PARTY_MEMBER_DISABLE
+	PARTY_MEMBER_DISABLE = {},
+	---@type PARTY_MEMBER_ENABLE
+	PARTY_MEMBER_ENABLE = {},
+	---@type PENDING_AZERITE_ESSENCE_CHANGED
+	PENDING_AZERITE_ESSENCE_CHANGED = {},
+	---@type PETITION_CLOSED
+	PETITION_CLOSED = {},
+	---@type PETITION_SHOW
+	PETITION_SHOW = {},
+	---@type PET_ATTACK_START
+	PET_ATTACK_START = {},
+	---@type PET_ATTACK_STOP
+	PET_ATTACK_STOP = {},
+	---@type PET_BAR_HIDEGRID
+	PET_BAR_HIDEGRID = {},
+	---@type PET_BAR_SHOWGRID
+	PET_BAR_SHOWGRID = {},
+	---@type PET_BAR_UPDATE
+	PET_BAR_UPDATE = {},
+	---@type PET_BAR_UPDATE_COOLDOWN
+	PET_BAR_UPDATE_COOLDOWN = {},
+	---@type PET_BAR_UPDATE_USABLE
+	PET_BAR_UPDATE_USABLE = {},
+	---@type PET_BATTLE_ABILITY_CHANGED
+	PET_BATTLE_ABILITY_CHANGED = {},
+	---@type PET_BATTLE_ACTION_SELECTED
+	PET_BATTLE_ACTION_SELECTED = {},
+	---@type PET_BATTLE_AURA_APPLIED
+	PET_BATTLE_AURA_APPLIED = {},
+	---@type PET_BATTLE_AURA_CANCELED
+	PET_BATTLE_AURA_CANCELED = {},
+	---@type PET_BATTLE_AURA_CHANGED
+	PET_BATTLE_AURA_CHANGED = {},
+	---@type PET_BATTLE_CAPTURED
+	PET_BATTLE_CAPTURED = {},
+	---@type PET_BATTLE_CLOSE
+	PET_BATTLE_CLOSE = {},
+	---@type PET_BATTLE_FINAL_ROUND
+	PET_BATTLE_FINAL_ROUND = {},
+	---@type PET_BATTLE_HEALTH_CHANGED
+	PET_BATTLE_HEALTH_CHANGED = {},
+	---@type PET_BATTLE_LEVEL_CHANGED
+	PET_BATTLE_LEVEL_CHANGED = {},
+	---@type PET_BATTLE_LOOT_RECEIVED
+	PET_BATTLE_LOOT_RECEIVED = {},
+	---@type PET_BATTLE_MAX_HEALTH_CHANGED
+	PET_BATTLE_MAX_HEALTH_CHANGED = {},
+	---@type PET_BATTLE_OPENING_DONE
+	PET_BATTLE_OPENING_DONE = {},
+	---@type PET_BATTLE_OPENING_START
+	PET_BATTLE_OPENING_START = {},
+	---@type PET_BATTLE_OVER
+	PET_BATTLE_OVER = {},
+	---@type PET_BATTLE_OVERRIDE_ABILITY
+	PET_BATTLE_OVERRIDE_ABILITY = {},
+	---@type PET_BATTLE_PET_CHANGED
+	PET_BATTLE_PET_CHANGED = {},
+	---@type PET_BATTLE_PET_ROUND_PLAYBACK_COMPLETE
+	PET_BATTLE_PET_ROUND_PLAYBACK_COMPLETE = {},
+	---@type PET_BATTLE_PET_ROUND_RESULTS
+	PET_BATTLE_PET_ROUND_RESULTS = {},
+	---@type PET_BATTLE_PET_TYPE_CHANGED
+	PET_BATTLE_PET_TYPE_CHANGED = {},
+	---@type PET_BATTLE_PVP_DUEL_REQUESTED
+	PET_BATTLE_PVP_DUEL_REQUESTED = {},
+	---@type PET_BATTLE_PVP_DUEL_REQUEST_CANCEL
+	PET_BATTLE_PVP_DUEL_REQUEST_CANCEL = {},
+	---@type PET_BATTLE_QUEUE_PROPOSAL_ACCEPTED
+	PET_BATTLE_QUEUE_PROPOSAL_ACCEPTED = {},
+	---@type PET_BATTLE_QUEUE_PROPOSAL_DECLINED
+	PET_BATTLE_QUEUE_PROPOSAL_DECLINED = {},
+	---@type PET_BATTLE_QUEUE_PROPOSE_MATCH
+	PET_BATTLE_QUEUE_PROPOSE_MATCH = {},
+	---@type PET_BATTLE_QUEUE_STATUS
+	PET_BATTLE_QUEUE_STATUS = {},
+	---@type PET_BATTLE_XP_CHANGED
+	PET_BATTLE_XP_CHANGED = {},
+	---@type PET_DISMISS_START
+	PET_DISMISS_START = {},
+	---@type PET_FORCE_NAME_DECLENSION
+	PET_FORCE_NAME_DECLENSION = {},
+	---@type PET_JOURNAL_AUTO_SLOTTED_PET
+	PET_JOURNAL_AUTO_SLOTTED_PET = {},
+	---@type PET_JOURNAL_CAGE_FAILED
+	PET_JOURNAL_CAGE_FAILED = {},
+	---@type PET_JOURNAL_LIST_UPDATE
+	PET_JOURNAL_LIST_UPDATE = {},
+	---@type PET_JOURNAL_NEW_BATTLE_SLOT
+	PET_JOURNAL_NEW_BATTLE_SLOT = {},
+	---@type PET_JOURNAL_PETS_HEALED
+	PET_JOURNAL_PETS_HEALED = {},
+	---@type PET_JOURNAL_PET_DELETED
+	PET_JOURNAL_PET_DELETED = {},
+	---@type PET_JOURNAL_PET_RESTORED
+	PET_JOURNAL_PET_RESTORED = {},
+	---@type PET_JOURNAL_PET_REVOKED
+	PET_JOURNAL_PET_REVOKED = {},
+	---@type PET_JOURNAL_TRAP_LEVEL_SET
+	PET_JOURNAL_TRAP_LEVEL_SET = {},
+	---@type PET_SPECIALIZATION_CHANGED
+	PET_SPECIALIZATION_CHANGED = {},
+	---@type PET_SPELL_POWER_UPDATE
+	PET_SPELL_POWER_UPDATE = {},
+	---@type PET_STABLE_CLOSED
+	PET_STABLE_CLOSED = {},
+	---@type PET_STABLE_SHOW
+	PET_STABLE_SHOW = {},
+	---@type PET_STABLE_UPDATE
+	PET_STABLE_UPDATE = {},
+	---@type PET_STABLE_UPDATE_PAPERDOLL
+	PET_STABLE_UPDATE_PAPERDOLL = {},
+	---@type PET_UI_CLOSE
+	PET_UI_CLOSE = {},
+	---@type PET_UI_UPDATE
+	PET_UI_UPDATE = {},
+	---@type PLAYERBANKBAGSLOTS_CHANGED
+	PLAYERBANKBAGSLOTS_CHANGED = {},
+	---@type PLAYERBANKSLOTS_CHANGED
+	PLAYERBANKSLOTS_CHANGED = {},
+	---@type PLAYERREAGENTBANKSLOTS_CHANGED
+	PLAYERREAGENTBANKSLOTS_CHANGED = {},
+	---@type PLAYER_ALIVE
+	PLAYER_ALIVE = {},
+	---@type PLAYER_AVG_ITEM_LEVEL_UPDATE
+	PLAYER_AVG_ITEM_LEVEL_UPDATE = {},
+	---@type PLAYER_CAMPING
+	PLAYER_CAMPING = {},
+	---@type PLAYER_CONTROL_GAINED
+	PLAYER_CONTROL_GAINED = {},
+	---@type PLAYER_CONTROL_LOST
+	PLAYER_CONTROL_LOST = {},
+	---@type PLAYER_DAMAGE_DONE_MODS
+	PLAYER_DAMAGE_DONE_MODS = {},
+	---@type PLAYER_DEAD
+	PLAYER_DEAD = {},
+	---@type PLAYER_DIFFICULTY_CHANGED
+	PLAYER_DIFFICULTY_CHANGED = {},
+	---@type PLAYER_ENTERING_BATTLEGROUND
+	PLAYER_ENTERING_BATTLEGROUND = {},
+	---@type PLAYER_ENTERING_WORLD
+	PLAYER_ENTERING_WORLD = {},
+	---@type PLAYER_ENTER_COMBAT
+	PLAYER_ENTER_COMBAT = {},
+	---@type PLAYER_EQUIPMENT_CHANGED
+	PLAYER_EQUIPMENT_CHANGED = {},
+	---@type PLAYER_FARSIGHT_FOCUS_CHANGED
+	PLAYER_FARSIGHT_FOCUS_CHANGED = {},
+	---@type PLAYER_FLAGS_CHANGED
+	PLAYER_FLAGS_CHANGED = {},
+	---@type PLAYER_FOCUS_CHANGED
+	PLAYER_FOCUS_CHANGED = {},
+	---@type PLAYER_GAINS_VEHICLE_DATA
+	PLAYER_GAINS_VEHICLE_DATA = {},
+	---@type PLAYER_GUILD_UPDATE
+	PLAYER_GUILD_UPDATE = {},
+	---@type PLAYER_LEARN_PVP_TALENT_FAILED
+	PLAYER_LEARN_PVP_TALENT_FAILED = {},
+	---@type PLAYER_LEARN_TALENT_FAILED
+	PLAYER_LEARN_TALENT_FAILED = {},
+	---@type PLAYER_LEAVE_COMBAT
+	PLAYER_LEAVE_COMBAT = {},
+	---@type PLAYER_LEAVING_WORLD
+	PLAYER_LEAVING_WORLD = {},
+	---@type PLAYER_LEVEL_CHANGED
+	PLAYER_LEVEL_CHANGED = {},
+	---@type PLAYER_LEVEL_UP
+	PLAYER_LEVEL_UP = {},
+	---@type PLAYER_LOGIN
+	PLAYER_LOGIN = {},
+	---@type PLAYER_LOGOUT
+	PLAYER_LOGOUT = {},
+	---@type PLAYER_LOOT_SPEC_UPDATED
+	PLAYER_LOOT_SPEC_UPDATED = {},
+	---@type PLAYER_LOSES_VEHICLE_DATA
+	PLAYER_LOSES_VEHICLE_DATA = {},
+	---@type PLAYER_MONEY
+	PLAYER_MONEY = {},
+	---@type PLAYER_MOUNT_DISPLAY_CHANGED
+	PLAYER_MOUNT_DISPLAY_CHANGED = {},
+	---@type PLAYER_PVP_KILLS_CHANGED
+	PLAYER_PVP_KILLS_CHANGED = {},
+	---@type PLAYER_PVP_RANK_CHANGED
+	PLAYER_PVP_RANK_CHANGED = {},
+	---@type PLAYER_PVP_TALENT_UPDATE
+	PLAYER_PVP_TALENT_UPDATE = {},
+	---@type PLAYER_QUITING
+	PLAYER_QUITING = {},
+	---@type PLAYER_REGEN_DISABLED
+	PLAYER_REGEN_DISABLED = {},
+	---@type PLAYER_REGEN_ENABLED
+	PLAYER_REGEN_ENABLED = {},
+	---@type PLAYER_REPORT_SUBMITTED
+	PLAYER_REPORT_SUBMITTED = {},
+	---@type PLAYER_ROLES_ASSIGNED
+	PLAYER_ROLES_ASSIGNED = {},
+	---@type PLAYER_SKINNED
+	PLAYER_SKINNED = {},
+	---@type PLAYER_SPECIALIZATION_CHANGED
+	PLAYER_SPECIALIZATION_CHANGED = {},
+	---@type PLAYER_STARTED_LOOKING
+	PLAYER_STARTED_LOOKING = {},
+	---@type PLAYER_STARTED_MOVING
+	PLAYER_STARTED_MOVING = {},
+	---@type PLAYER_STARTED_TURNING
+	PLAYER_STARTED_TURNING = {},
+	---@type PLAYER_STOPPED_LOOKING
+	PLAYER_STOPPED_LOOKING = {},
+	---@type PLAYER_STOPPED_MOVING
+	PLAYER_STOPPED_MOVING = {},
+	---@type PLAYER_STOPPED_TURNING
+	PLAYER_STOPPED_TURNING = {},
+	---@type PLAYER_TALENT_UPDATE
+	PLAYER_TALENT_UPDATE = {},
+	---@type PLAYER_TARGET_CHANGED
+	PLAYER_TARGET_CHANGED = {},
+	---@type PLAYER_TOTEM_UPDATE
+	PLAYER_TOTEM_UPDATE = {},
+	---@type PLAYER_TRADE_CURRENCY
+	PLAYER_TRADE_CURRENCY = {},
+	---@type PLAYER_TRADE_MONEY
+	PLAYER_TRADE_MONEY = {},
+	---@type PLAYER_TRIAL_XP_UPDATE
+	PLAYER_TRIAL_XP_UPDATE = {},
+	---@type PLAYER_UNGHOST
+	PLAYER_UNGHOST = {},
+	---@type PLAYER_UPDATE_RESTING
+	PLAYER_UPDATE_RESTING = {},
+	---@type PLAYER_XP_UPDATE
+	PLAYER_XP_UPDATE = {},
+	---@type PLAY_MOVIE
+	PLAY_MOVIE = {},
+	---@type PORTRAITS_UPDATED
+	PORTRAITS_UPDATED = {},
+	---@type POST_MATCH_CURRENCY_REWARD_UPDATE
+	POST_MATCH_CURRENCY_REWARD_UPDATE = {},
+	---@type POST_MATCH_ITEM_REWARD_UPDATE
+	POST_MATCH_ITEM_REWARD_UPDATE = {},
+	---@type PROVING_GROUNDS_SCORE_UPDATE
+	PROVING_GROUNDS_SCORE_UPDATE = {},
+	---@type PVPQUEUE_ANYWHERE_SHOW
+	PVPQUEUE_ANYWHERE_SHOW = {},
+	---@type PVPQUEUE_ANYWHERE_UPDATE_AVAILABLE
+	PVPQUEUE_ANYWHERE_UPDATE_AVAILABLE = {},
+	---@type PVP_BRAWL_INFO_UPDATED
+	PVP_BRAWL_INFO_UPDATED = {},
+	---@type PVP_MATCH_ACTIVE
+	PVP_MATCH_ACTIVE = {},
+	---@type PVP_MATCH_COMPLETE
+	PVP_MATCH_COMPLETE = {},
+	---@type PVP_MATCH_INACTIVE
+	PVP_MATCH_INACTIVE = {},
+	---@type PVP_POWER_UPDATE
+	PVP_POWER_UPDATE = {},
+	---@type PVP_RATED_STATS_UPDATE
+	PVP_RATED_STATS_UPDATE = {},
+	---@type PVP_REWARDS_UPDATE
+	PVP_REWARDS_UPDATE = {},
+	---@type PVP_ROLE_UPDATE
+	PVP_ROLE_UPDATE = {},
+	---@type PVP_SPECIAL_EVENT_INFO_UPDATED
+	PVP_SPECIAL_EVENT_INFO_UPDATED = {},
+	---@type PVP_TIMER_UPDATE
+	PVP_TIMER_UPDATE = {},
+	---@type PVP_TYPES_ENABLED
+	PVP_TYPES_ENABLED = {},
+	---@type PVP_VEHICLE_INFO_UPDATED
+	PVP_VEHICLE_INFO_UPDATED = {},
+	---@type PVP_WORLDSTATE_UPDATE
+	PVP_WORLDSTATE_UPDATE = {},
+	---@type QUESTLINE_UPDATE
+	QUESTLINE_UPDATE = {},
+	---@type QUEST_ACCEPTED
+	QUEST_ACCEPTED = {},
+	---@type QUEST_ACCEPT_CONFIRM
+	QUEST_ACCEPT_CONFIRM = {},
+	---@type QUEST_AUTOCOMPLETE
+	QUEST_AUTOCOMPLETE = {},
+	---@type QUEST_BOSS_EMOTE
+	QUEST_BOSS_EMOTE = {},
+	---@type QUEST_CHOICE_CLOSE
+	QUEST_CHOICE_CLOSE = {},
+	---@type QUEST_CHOICE_UPDATE
+	QUEST_CHOICE_UPDATE = {},
+	---@type QUEST_COMPLETE
+	QUEST_COMPLETE = {},
+	---@type QUEST_CURRENCY_LOOT_RECEIVED
+	QUEST_CURRENCY_LOOT_RECEIVED = {},
+	---@type QUEST_DATA_LOAD_RESULT
+	QUEST_DATA_LOAD_RESULT = {},
+	---@type QUEST_DETAIL
+	QUEST_DETAIL = {},
+	---@type QUEST_FINISHED
+	QUEST_FINISHED = {},
+	---@type QUEST_GREETING
+	QUEST_GREETING = {},
+	---@type QUEST_ITEM_UPDATE
+	QUEST_ITEM_UPDATE = {},
+	---@type QUEST_LOG_CRITERIA_UPDATE
+	QUEST_LOG_CRITERIA_UPDATE = {},
+	---@type QUEST_LOG_UPDATE
+	QUEST_LOG_UPDATE = {},
+	---@type QUEST_LOOT_RECEIVED
+	QUEST_LOOT_RECEIVED = {},
+	---@type QUEST_POI_UPDATE
+	QUEST_POI_UPDATE = {},
+	---@type QUEST_PROGRESS
+	QUEST_PROGRESS = {},
+	---@type QUEST_REMOVED
+	QUEST_REMOVED = {},
+	---@type QUEST_SESSION_CREATED
+	QUEST_SESSION_CREATED = {},
+	---@type QUEST_SESSION_DESTROYED
+	QUEST_SESSION_DESTROYED = {},
+	---@type QUEST_SESSION_ENABLED_STATE_CHANGED
+	QUEST_SESSION_ENABLED_STATE_CHANGED = {},
+	---@type QUEST_SESSION_JOINED
+	QUEST_SESSION_JOINED = {},
+	---@type QUEST_SESSION_LEFT
+	QUEST_SESSION_LEFT = {},
+	---@type QUEST_SESSION_MEMBER_CONFIRM
+	QUEST_SESSION_MEMBER_CONFIRM = {},
+	---@type QUEST_SESSION_MEMBER_START_RESPONSE
+	QUEST_SESSION_MEMBER_START_RESPONSE = {},
+	---@type QUEST_SESSION_NOTIFICATION
+	QUEST_SESSION_NOTIFICATION = {},
+	---@type QUEST_TURNED_IN
+	QUEST_TURNED_IN = {},
+	---@type QUEST_WATCH_LIST_CHANGED
+	QUEST_WATCH_LIST_CHANGED = {},
+	---@type QUEST_WATCH_UPDATE
+	QUEST_WATCH_UPDATE = {},
+	---@type QUICK_TICKET_SYSTEM_STATUS
+	QUICK_TICKET_SYSTEM_STATUS = {},
+	---@type QUICK_TICKET_THROTTLE_CHANGED
+	QUICK_TICKET_THROTTLE_CHANGED = {},
+	---@type RAF_ENTITLEMENT_DELIVERED
+	RAF_ENTITLEMENT_DELIVERED = {},
+	---@type RAF_INFO_UPDATED
+	RAF_INFO_UPDATED = {},
+	---@type RAF_RECRUITING_ENABLED_STATUS
+	RAF_RECRUITING_ENABLED_STATUS = {},
+	---@type RAF_SYSTEM_ENABLED_STATUS
+	RAF_SYSTEM_ENABLED_STATUS = {},
+	---@type RAF_SYSTEM_INFO_UPDATED
+	RAF_SYSTEM_INFO_UPDATED = {},
+	---@type RAID_BOSS_EMOTE
+	RAID_BOSS_EMOTE = {},
+	---@type RAID_BOSS_WHISPER
+	RAID_BOSS_WHISPER = {},
+	---@type RAID_INSTANCE_WELCOME
+	RAID_INSTANCE_WELCOME = {},
+	---@type RAID_ROSTER_UPDATE
+	RAID_ROSTER_UPDATE = {},
+	---@type RAID_TARGET_UPDATE
+	RAID_TARGET_UPDATE = {},
+	---@type RAISED_AS_GHOUL
+	RAISED_AS_GHOUL = {},
+	---@type READY_CHECK
+	READY_CHECK = {},
+	---@type READY_CHECK_CONFIRM
+	READY_CHECK_CONFIRM = {},
+	---@type READY_CHECK_FINISHED
+	READY_CHECK_FINISHED = {},
+	---@type REAGENTBANK_PURCHASED
+	REAGENTBANK_PURCHASED = {},
+	---@type REAGENTBANK_UPDATE
+	REAGENTBANK_UPDATE = {},
+	---@type RECEIVED_ACHIEVEMENT_LIST
+	RECEIVED_ACHIEVEMENT_LIST = {},
+	---@type RECEIVED_ACHIEVEMENT_MEMBER_LIST
+	RECEIVED_ACHIEVEMENT_MEMBER_LIST = {},
+	---@type REPLACE_ENCHANT
+	REPLACE_ENCHANT = {},
+	---@type REPLICATE_ITEM_LIST_UPDATE
+	REPLICATE_ITEM_LIST_UPDATE = {},
+	---@type REPORT_PLAYER_RESULT
+	REPORT_PLAYER_RESULT = {},
+	---@type REQUEST_CEMETERY_LIST_RESPONSE
+	REQUEST_CEMETERY_LIST_RESPONSE = {},
+	---@type REQUEST_INVITE_CONFIRMATION
+	REQUEST_INVITE_CONFIRMATION = {},
+	---@type REQUIRED_GUILD_RENAME_RESULT
+	REQUIRED_GUILD_RENAME_RESULT = {},
+	---@type RESEARCH_ARTIFACT_COMPLETE
+	RESEARCH_ARTIFACT_COMPLETE = {},
+	---@type RESEARCH_ARTIFACT_DIG_SITE_UPDATED
+	RESEARCH_ARTIFACT_DIG_SITE_UPDATED = {},
+	---@type RESEARCH_ARTIFACT_HISTORY_READY
+	RESEARCH_ARTIFACT_HISTORY_READY = {},
+	---@type RESEARCH_ARTIFACT_UPDATE
+	RESEARCH_ARTIFACT_UPDATE = {},
+	---@type RESPEC_AZERITE_EMPOWERED_ITEM_CLOSED
+	RESPEC_AZERITE_EMPOWERED_ITEM_CLOSED = {},
+	---@type RESPEC_AZERITE_EMPOWERED_ITEM_OPENED
+	RESPEC_AZERITE_EMPOWERED_ITEM_OPENED = {},
+	---@type RESURRECT_REQUEST
+	RESURRECT_REQUEST = {},
+	---@type ROLE_CHANGED_INFORM
+	ROLE_CHANGED_INFORM = {},
+	---@type ROLE_POLL_BEGIN
+	ROLE_POLL_BEGIN = {},
+	---@type RUNE_POWER_UPDATE
+	RUNE_POWER_UPDATE = {},
+	---@type SAVED_VARIABLES_TOO_LARGE
+	SAVED_VARIABLES_TOO_LARGE = {},
+	---@type SCENARIO_BONUS_OBJECTIVE_COMPLETE
+	SCENARIO_BONUS_OBJECTIVE_COMPLETE = {},
+	---@type SCENARIO_BONUS_VISIBILITY_UPDATE
+	SCENARIO_BONUS_VISIBILITY_UPDATE = {},
+	---@type SCENARIO_COMPLETED
+	SCENARIO_COMPLETED = {},
+	---@type SCENARIO_CRITERIA_SHOW_STATE_UPDATE
+	SCENARIO_CRITERIA_SHOW_STATE_UPDATE = {},
+	---@type SCENARIO_CRITERIA_UPDATE
+	SCENARIO_CRITERIA_UPDATE = {},
+	---@type SCENARIO_POI_UPDATE
+	SCENARIO_POI_UPDATE = {},
+	---@type SCENARIO_SPELL_UPDATE
+	SCENARIO_SPELL_UPDATE = {},
+	---@type SCENARIO_UPDATE
+	SCENARIO_UPDATE = {},
+	---@type SCRAPPING_MACHINE_CLOSE
+	SCRAPPING_MACHINE_CLOSE = {},
+	---@type SCRAPPING_MACHINE_ITEM_REMOVED_OR_CANCELLED
+	SCRAPPING_MACHINE_ITEM_REMOVED_OR_CANCELLED = {},
+	---@type SCRAPPING_MACHINE_PENDING_ITEM_CHANGED
+	SCRAPPING_MACHINE_PENDING_ITEM_CHANGED = {},
+	---@type SCRAPPING_MACHINE_SCRAPPING_FINISHED
+	SCRAPPING_MACHINE_SCRAPPING_FINISHED = {},
+	---@type SCRAPPING_MACHINE_SHOW
+	SCRAPPING_MACHINE_SHOW = {},
+	---@type SCREENSHOT_FAILED
+	SCREENSHOT_FAILED = {},
+	---@type SCREENSHOT_STARTED
+	SCREENSHOT_STARTED = {},
+	---@type SCREENSHOT_SUCCEEDED
+	SCREENSHOT_SUCCEEDED = {},
+	---@type SEARCH_DB_LOADED
+	SEARCH_DB_LOADED = {},
+	---@type SECURE_TRANSFER_CANCEL
+	SECURE_TRANSFER_CANCEL = {},
+	---@type SECURE_TRANSFER_CONFIRM_SEND_MAIL
+	SECURE_TRANSFER_CONFIRM_SEND_MAIL = {},
+	---@type SECURE_TRANSFER_CONFIRM_TRADE_ACCEPT
+	SECURE_TRANSFER_CONFIRM_TRADE_ACCEPT = {},
+	---@type SELF_RES_SPELL_CHANGED
+	SELF_RES_SPELL_CHANGED = {},
+	---@type SEND_MAIL_COD_CHANGED
+	SEND_MAIL_COD_CHANGED = {},
+	---@type SEND_MAIL_MONEY_CHANGED
+	SEND_MAIL_MONEY_CHANGED = {},
+	---@type SHIPMENT_CRAFTER_CLOSED
+	SHIPMENT_CRAFTER_CLOSED = {},
+	---@type SHIPMENT_CRAFTER_INFO
+	SHIPMENT_CRAFTER_INFO = {},
+	---@type SHIPMENT_CRAFTER_OPENED
+	SHIPMENT_CRAFTER_OPENED = {},
+	---@type SHIPMENT_CRAFTER_REAGENT_UPDATE
+	SHIPMENT_CRAFTER_REAGENT_UPDATE = {},
+	---@type SHIPMENT_UPDATE
+	SHIPMENT_UPDATE = {},
+	---@type SHOW_FACTION_SELECT_UI
+	SHOW_FACTION_SELECT_UI = {},
+	---@type SHOW_LOOT_TOAST
+	SHOW_LOOT_TOAST = {},
+	---@type SHOW_LOOT_TOAST_LEGENDARY_LOOTED
+	SHOW_LOOT_TOAST_LEGENDARY_LOOTED = {},
+	---@type SHOW_LOOT_TOAST_UPGRADE
+	SHOW_LOOT_TOAST_UPGRADE = {},
+	---@type SHOW_PVP_FACTION_LOOT_TOAST
+	SHOW_PVP_FACTION_LOOT_TOAST = {},
+	---@type SHOW_RATED_PVP_REWARD_TOAST
+	SHOW_RATED_PVP_REWARD_TOAST = {},
+	---@type SIMPLE_BROWSER_WEB_ERROR
+	SIMPLE_BROWSER_WEB_ERROR = {},
+	---@type SIMPLE_BROWSER_WEB_PROXY_FAILED
+	SIMPLE_BROWSER_WEB_PROXY_FAILED = {},
+	---@type SIMPLE_CHECKOUT_CLOSED
+	SIMPLE_CHECKOUT_CLOSED = {},
+	---@type SKILL_LINES_CHANGED
+	SKILL_LINES_CHANGED = {},
+	---@type SOCIAL_ITEM_RECEIVED
+	SOCIAL_ITEM_RECEIVED = {},
+	---@type SOCIAL_QUEUE_CONFIG_UPDATED
+	SOCIAL_QUEUE_CONFIG_UPDATED = {},
+	---@type SOCIAL_QUEUE_UPDATE
+	SOCIAL_QUEUE_UPDATE = {},
+	---@type SOCKET_INFO_ACCEPT
+	SOCKET_INFO_ACCEPT = {},
+	---@type SOCKET_INFO_BIND_CONFIRM
+	SOCKET_INFO_BIND_CONFIRM = {},
+	---@type SOCKET_INFO_CLOSE
+	SOCKET_INFO_CLOSE = {},
+	---@type SOCKET_INFO_FAILURE
+	SOCKET_INFO_FAILURE = {},
+	---@type SOCKET_INFO_SUCCESS
+	SOCKET_INFO_SUCCESS = {},
+	---@type SOCKET_INFO_UPDATE
+	SOCKET_INFO_UPDATE = {},
+	---@type SOUNDKIT_FINISHED
+	SOUNDKIT_FINISHED = {},
+	---@type SOUND_DEVICE_UPDATE
+	SOUND_DEVICE_UPDATE = {},
+	---@type SPEC_INVOLUNTARILY_CHANGED
+	SPEC_INVOLUNTARILY_CHANGED = {},
+	---@type SPEED_UPDATE
+	SPEED_UPDATE = {},
+	---@type SPELLS_CHANGED
+	SPELLS_CHANGED = {},
+	---@type SPELL_ACTIVATION_OVERLAY_GLOW_HIDE
+	SPELL_ACTIVATION_OVERLAY_GLOW_HIDE = {},
+	---@type SPELL_ACTIVATION_OVERLAY_GLOW_SHOW
+	SPELL_ACTIVATION_OVERLAY_GLOW_SHOW = {},
+	---@type SPELL_ACTIVATION_OVERLAY_HIDE
+	SPELL_ACTIVATION_OVERLAY_HIDE = {},
+	---@type SPELL_ACTIVATION_OVERLAY_SHOW
+	SPELL_ACTIVATION_OVERLAY_SHOW = {},
+	---@type SPELL_CONFIRMATION_PROMPT
+	SPELL_CONFIRMATION_PROMPT = {},
+	---@type SPELL_CONFIRMATION_TIMEOUT
+	SPELL_CONFIRMATION_TIMEOUT = {},
+	---@type SPELL_DATA_LOAD_RESULT
+	SPELL_DATA_LOAD_RESULT = {},
+	---@type SPELL_FLYOUT_UPDATE
+	SPELL_FLYOUT_UPDATE = {},
+	---@type SPELL_POWER_CHANGED
+	SPELL_POWER_CHANGED = {},
+	---@type SPELL_PUSHED_TO_ACTIONBAR
+	SPELL_PUSHED_TO_ACTIONBAR = {},
+	---@type SPELL_TEXT_UPDATE
+	SPELL_TEXT_UPDATE = {},
+	---@type SPELL_UPDATE_CHARGES
+	SPELL_UPDATE_CHARGES = {},
+	---@type SPELL_UPDATE_COOLDOWN
+	SPELL_UPDATE_COOLDOWN = {},
+	---@type SPELL_UPDATE_ICON
+	SPELL_UPDATE_ICON = {},
+	---@type SPELL_UPDATE_USABLE
+	SPELL_UPDATE_USABLE = {},
+	---@type START_AUTOREPEAT_SPELL
+	START_AUTOREPEAT_SPELL = {},
+	---@type START_LOOT_ROLL
+	START_LOOT_ROLL = {},
+	---@type START_TIMER
+	START_TIMER = {},
+	---@type STOP_AUTOREPEAT_SPELL
+	STOP_AUTOREPEAT_SPELL = {},
+	---@type STREAMING_ICON
+	STREAMING_ICON = {},
+	---@type STREAM_VIEW_MARKER_UPDATED
+	STREAM_VIEW_MARKER_UPDATED = {},
+	---@type STURDINESS_UPDATE
+	STURDINESS_UPDATE = {},
+	---@type SUPER_TRACKED_QUEST_CHANGED
+	SUPER_TRACKED_QUEST_CHANGED = {},
+	---@type SYSMSG
+	SYSMSG = {},
+	---@type TABARD_CANSAVE_CHANGED
+	TABARD_CANSAVE_CHANGED = {},
+	---@type TABARD_SAVE_PENDING
+	TABARD_SAVE_PENDING = {},
+	---@type TALENTS_INVOLUNTARILY_RESET
+	TALENTS_INVOLUNTARILY_RESET = {},
+	---@type TALKINGHEAD_CLOSE
+	TALKINGHEAD_CLOSE = {},
+	---@type TALKINGHEAD_REQUESTED
+	TALKINGHEAD_REQUESTED = {},
+	---@type TASK_PROGRESS_UPDATE
+	TASK_PROGRESS_UPDATE = {},
+	---@type TAXIMAP_CLOSED
+	TAXIMAP_CLOSED = {},
+	---@type TAXIMAP_OPENED
+	TAXIMAP_OPENED = {},
+	---@type TIME_PLAYED_MSG
+	TIME_PLAYED_MSG = {},
+	---@type TOGGLE_CONSOLE
+	TOGGLE_CONSOLE = {},
+	---@type TOKEN_AUCTION_SOLD
+	TOKEN_AUCTION_SOLD = {},
+	---@type TOKEN_BUY_CONFIRM_REQUIRED
+	TOKEN_BUY_CONFIRM_REQUIRED = {},
+	---@type TOKEN_BUY_RESULT
+	TOKEN_BUY_RESULT = {},
+	---@type TOKEN_CAN_VETERAN_BUY_UPDATE
+	TOKEN_CAN_VETERAN_BUY_UPDATE = {},
+	---@type TOKEN_DISTRIBUTIONS_UPDATED
+	TOKEN_DISTRIBUTIONS_UPDATED = {},
+	---@type TOKEN_MARKET_PRICE_UPDATED
+	TOKEN_MARKET_PRICE_UPDATED = {},
+	---@type TOKEN_REDEEM_BALANCE_UPDATED
+	TOKEN_REDEEM_BALANCE_UPDATED = {},
+	---@type TOKEN_REDEEM_CONFIRM_REQUIRED
+	TOKEN_REDEEM_CONFIRM_REQUIRED = {},
+	---@type TOKEN_REDEEM_FRAME_SHOW
+	TOKEN_REDEEM_FRAME_SHOW = {},
+	---@type TOKEN_REDEEM_GAME_TIME_UPDATED
+	TOKEN_REDEEM_GAME_TIME_UPDATED = {},
+	---@type TOKEN_REDEEM_RESULT
+	TOKEN_REDEEM_RESULT = {},
+	---@type TOKEN_SELL_CONFIRMED
+	TOKEN_SELL_CONFIRMED = {},
+	---@type TOKEN_SELL_CONFIRM_REQUIRED
+	TOKEN_SELL_CONFIRM_REQUIRED = {},
+	---@type TOKEN_SELL_RESULT
+	TOKEN_SELL_RESULT = {},
+	---@type TOKEN_STATUS_CHANGED
+	TOKEN_STATUS_CHANGED = {},
+	---@type TOYS_UPDATED
+	TOYS_UPDATED = {},
+	---@type TRACKED_ACHIEVEMENT_LIST_CHANGED
+	TRACKED_ACHIEVEMENT_LIST_CHANGED = {},
+	---@type TRACKED_ACHIEVEMENT_UPDATE
+	TRACKED_ACHIEVEMENT_UPDATE = {},
+	---@type TRADE_ACCEPT_UPDATE
+	TRADE_ACCEPT_UPDATE = {},
+	---@type TRADE_CLOSED
+	TRADE_CLOSED = {},
+	---@type TRADE_CURRENCY_CHANGED
+	TRADE_CURRENCY_CHANGED = {},
+	---@type TRADE_MONEY_CHANGED
+	TRADE_MONEY_CHANGED = {},
+	---@type TRADE_PLAYER_ITEM_CHANGED
+	TRADE_PLAYER_ITEM_CHANGED = {},
+	---@type TRADE_POTENTIAL_BIND_ENCHANT
+	TRADE_POTENTIAL_BIND_ENCHANT = {},
+	---@type TRADE_POTENTIAL_REMOVE_TRANSMOG
+	TRADE_POTENTIAL_REMOVE_TRANSMOG = {},
+	---@type TRADE_REPLACE_ENCHANT
+	TRADE_REPLACE_ENCHANT = {},
+	---@type TRADE_REQUEST
+	TRADE_REQUEST = {},
+	---@type TRADE_REQUEST_CANCEL
+	TRADE_REQUEST_CANCEL = {},
+	---@type TRADE_SHOW
+	TRADE_SHOW = {},
+	---@type TRADE_SKILL_CLOSE
+	TRADE_SKILL_CLOSE = {},
+	---@type TRADE_SKILL_DATA_SOURCE_CHANGED
+	TRADE_SKILL_DATA_SOURCE_CHANGED = {},
+	---@type TRADE_SKILL_DATA_SOURCE_CHANGING
+	TRADE_SKILL_DATA_SOURCE_CHANGING = {},
+	---@type TRADE_SKILL_DETAILS_UPDATE
+	TRADE_SKILL_DETAILS_UPDATE = {},
+	---@type TRADE_SKILL_LIST_UPDATE
+	TRADE_SKILL_LIST_UPDATE = {},
+	---@type TRADE_SKILL_NAME_UPDATE
+	TRADE_SKILL_NAME_UPDATE = {},
+	---@type TRADE_SKILL_SHOW
+	TRADE_SKILL_SHOW = {},
+	---@type TRADE_TARGET_ITEM_CHANGED
+	TRADE_TARGET_ITEM_CHANGED = {},
+	---@type TRADE_UPDATE
+	TRADE_UPDATE = {},
+	---@type TRAINER_CLOSED
+	TRAINER_CLOSED = {},
+	---@type TRAINER_DESCRIPTION_UPDATE
+	TRAINER_DESCRIPTION_UPDATE = {},
+	---@type TRAINER_SERVICE_INFO_NAME_UPDATE
+	TRAINER_SERVICE_INFO_NAME_UPDATE = {},
+	---@type TRAINER_SHOW
+	TRAINER_SHOW = {},
+	---@type TRAINER_UPDATE
+	TRAINER_UPDATE = {},
+	---@type TRANSMOGRIFY_CLOSE
+	TRANSMOGRIFY_CLOSE = {},
+	---@type TRANSMOGRIFY_ITEM_UPDATE
+	TRANSMOGRIFY_ITEM_UPDATE = {},
+	---@type TRANSMOGRIFY_OPEN
+	TRANSMOGRIFY_OPEN = {},
+	---@type TRANSMOGRIFY_SUCCESS
+	TRANSMOGRIFY_SUCCESS = {},
+	---@type TRANSMOGRIFY_UPDATE
+	TRANSMOGRIFY_UPDATE = {},
+	---@type TRANSMOG_COLLECTION_CAMERA_UPDATE
+	TRANSMOG_COLLECTION_CAMERA_UPDATE = {},
+	---@type TRANSMOG_COLLECTION_ITEM_UPDATE
+	TRANSMOG_COLLECTION_ITEM_UPDATE = {},
+	---@type TRANSMOG_COLLECTION_SOURCE_ADDED
+	TRANSMOG_COLLECTION_SOURCE_ADDED = {},
+	---@type TRANSMOG_COLLECTION_SOURCE_REMOVED
+	TRANSMOG_COLLECTION_SOURCE_REMOVED = {},
+	---@type TRANSMOG_COLLECTION_UPDATED
+	TRANSMOG_COLLECTION_UPDATED = {},
+	---@type TRANSMOG_OUTFITS_CHANGED
+	TRANSMOG_OUTFITS_CHANGED = {},
+	---@type TRANSMOG_SEARCH_UPDATED
+	TRANSMOG_SEARCH_UPDATED = {},
+	---@type TRANSMOG_SETS_UPDATE_FAVORITE
+	TRANSMOG_SETS_UPDATE_FAVORITE = {},
+	---@type TRANSMOG_SOURCE_COLLECTABILITY_UPDATE
+	TRANSMOG_SOURCE_COLLECTABILITY_UPDATE = {},
+	---@type TREASURE_PICKER_CACHE_FLUSH
+	TREASURE_PICKER_CACHE_FLUSH = {},
+	---@type TRIAL_CAP_REACHED_MONEY
+	TRIAL_CAP_REACHED_MONEY = {},
+	---@type TUTORIAL_HIGHLIGHT_SPELL
+	TUTORIAL_HIGHLIGHT_SPELL = {},
+	---@type TUTORIAL_TRIGGER
+	TUTORIAL_TRIGGER = {},
+	---@type TUTORIAL_UNHIGHLIGHT_SPELL
+	TUTORIAL_UNHIGHLIGHT_SPELL = {},
+	---@type TWITTER_LINK_RESULT
+	TWITTER_LINK_RESULT = {},
+	---@type TWITTER_POST_RESULT
+	TWITTER_POST_RESULT = {},
+	---@type TWITTER_STATUS_UPDATE
+	TWITTER_STATUS_UPDATE = {},
+	---@type UI_ERROR_MESSAGE
+	UI_ERROR_MESSAGE = {},
+	---@type UI_INFO_MESSAGE
+	UI_INFO_MESSAGE = {},
+	---@type UI_MODEL_SCENE_INFO_UPDATED
+	UI_MODEL_SCENE_INFO_UPDATED = {},
+	---@type UI_SCALE_CHANGED
+	UI_SCALE_CHANGED = {},
+	---@type UNIT_ABSORB_AMOUNT_CHANGED
+	UNIT_ABSORB_AMOUNT_CHANGED = {},
+	---@type UNIT_ATTACK
+	UNIT_ATTACK = {},
+	---@type UNIT_ATTACK_POWER
+	UNIT_ATTACK_POWER = {},
+	---@type UNIT_ATTACK_SPEED
+	UNIT_ATTACK_SPEED = {},
+	---@type UNIT_AURA
+	UNIT_AURA = {},
+	---@type UNIT_CHEAT_TOGGLE_EVENT
+	UNIT_CHEAT_TOGGLE_EVENT = {},
+	---@type UNIT_CLASSIFICATION_CHANGED
+	UNIT_CLASSIFICATION_CHANGED = {},
+	---@type UNIT_COMBAT
+	UNIT_COMBAT = {},
+	---@type UNIT_CONNECTION
+	UNIT_CONNECTION = {},
+	---@type UNIT_DAMAGE
+	UNIT_DAMAGE = {},
+	---@type UNIT_DEFENSE
+	UNIT_DEFENSE = {},
+	---@type UNIT_DISPLAYPOWER
+	UNIT_DISPLAYPOWER = {},
+	---@type UNIT_ENTERED_VEHICLE
+	UNIT_ENTERED_VEHICLE = {},
+	---@type UNIT_ENTERING_VEHICLE
+	UNIT_ENTERING_VEHICLE = {},
+	---@type UNIT_EXITED_VEHICLE
+	UNIT_EXITED_VEHICLE = {},
+	---@type UNIT_EXITING_VEHICLE
+	UNIT_EXITING_VEHICLE = {},
+	---@type UNIT_FACTION
+	UNIT_FACTION = {},
+	---@type UNIT_FLAGS
+	UNIT_FLAGS = {},
+	---@type UNIT_HEALTH
+	UNIT_HEALTH = {},
+	---@type UNIT_HEALTH_FREQUENT
+	UNIT_HEALTH_FREQUENT = {},
+	---@type UNIT_HEAL_ABSORB_AMOUNT_CHANGED
+	UNIT_HEAL_ABSORB_AMOUNT_CHANGED = {},
+	---@type UNIT_HEAL_PREDICTION
+	UNIT_HEAL_PREDICTION = {},
+	---@type UNIT_INVENTORY_CHANGED
+	UNIT_INVENTORY_CHANGED = {},
+	---@type UNIT_LEVEL
+	UNIT_LEVEL = {},
+	---@type UNIT_MANA
+	UNIT_MANA = {},
+	---@type UNIT_MAXHEALTH
+	UNIT_MAXHEALTH = {},
+	---@type UNIT_MAXPOWER
+	UNIT_MAXPOWER = {},
+	---@type UNIT_MODEL_CHANGED
+	UNIT_MODEL_CHANGED = {},
+	---@type UNIT_NAME_UPDATE
+	UNIT_NAME_UPDATE = {},
+	---@type UNIT_OTHER_PARTY_CHANGED
+	UNIT_OTHER_PARTY_CHANGED = {},
+	---@type UNIT_PET
+	UNIT_PET = {},
+	---@type UNIT_PET_EXPERIENCE
+	UNIT_PET_EXPERIENCE = {},
+	---@type UNIT_PHASE
+	UNIT_PHASE = {},
+	---@type UNIT_PORTRAIT_UPDATE
+	UNIT_PORTRAIT_UPDATE = {},
+	---@type UNIT_POWER_BAR_HIDE
+	UNIT_POWER_BAR_HIDE = {},
+	---@type UNIT_POWER_BAR_SHOW
+	UNIT_POWER_BAR_SHOW = {},
+	---@type UNIT_POWER_BAR_TIMER_UPDATE
+	UNIT_POWER_BAR_TIMER_UPDATE = {},
+	---@type UNIT_POWER_FREQUENT
+	UNIT_POWER_FREQUENT = {},
+	---@type UNIT_POWER_UPDATE
+	UNIT_POWER_UPDATE = {},
+	---@type UNIT_QUEST_LOG_CHANGED
+	UNIT_QUEST_LOG_CHANGED = {},
+	---@type UNIT_RANGEDDAMAGE
+	UNIT_RANGEDDAMAGE = {},
+	---@type UNIT_RANGED_ATTACK_POWER
+	UNIT_RANGED_ATTACK_POWER = {},
+	---@type UNIT_RESISTANCES
+	UNIT_RESISTANCES = {},
+	---@type UNIT_SPELLCAST_CHANNEL_START
+	UNIT_SPELLCAST_CHANNEL_START = {},
+	---@type UNIT_SPELLCAST_CHANNEL_STOP
+	UNIT_SPELLCAST_CHANNEL_STOP = {},
+	---@type UNIT_SPELLCAST_CHANNEL_UPDATE
+	UNIT_SPELLCAST_CHANNEL_UPDATE = {},
+	---@type UNIT_SPELLCAST_DELAYED
+	UNIT_SPELLCAST_DELAYED = {},
+	---@type UNIT_SPELLCAST_FAILED
+	UNIT_SPELLCAST_FAILED = {},
+	---@type UNIT_SPELLCAST_FAILED_QUIET
+	UNIT_SPELLCAST_FAILED_QUIET = {},
+	---@type UNIT_SPELLCAST_INTERRUPTED
+	UNIT_SPELLCAST_INTERRUPTED = {},
+	---@type UNIT_SPELLCAST_INTERRUPTIBLE
+	UNIT_SPELLCAST_INTERRUPTIBLE = {},
+	---@type UNIT_SPELLCAST_NOT_INTERRUPTIBLE
+	UNIT_SPELLCAST_NOT_INTERRUPTIBLE = {},
+	---@type UNIT_SPELLCAST_SENT
+	UNIT_SPELLCAST_SENT = {},
+	---@type UNIT_SPELLCAST_START
+	UNIT_SPELLCAST_START = {},
+	---@type UNIT_SPELLCAST_STOP
+	UNIT_SPELLCAST_STOP = {},
+	---@type UNIT_SPELLCAST_SUCCEEDED
+	UNIT_SPELLCAST_SUCCEEDED = {},
+	---@type UNIT_SPELL_HASTE
+	UNIT_SPELL_HASTE = {},
+	---@type UNIT_STATS
+	UNIT_STATS = {},
+	---@type UNIT_TARGET
+	UNIT_TARGET = {},
+	---@type UNIT_TARGETABLE_CHANGED
+	UNIT_TARGETABLE_CHANGED = {},
+	---@type UNIT_THREAT_LIST_UPDATE
+	UNIT_THREAT_LIST_UPDATE = {},
+	---@type UNIT_THREAT_SITUATION_UPDATE
+	UNIT_THREAT_SITUATION_UPDATE = {},
+	---@type UPDATE_ACTIVE_BATTLEFIELD
+	UPDATE_ACTIVE_BATTLEFIELD = {},
+	---@type UPDATE_ALL_UI_WIDGETS
+	UPDATE_ALL_UI_WIDGETS = {},
+	---@type UPDATE_BATTLEFIELD_SCORE
+	UPDATE_BATTLEFIELD_SCORE = {},
+	---@type UPDATE_BATTLEFIELD_STATUS
+	UPDATE_BATTLEFIELD_STATUS = {},
+	---@type UPDATE_BINDINGS
+	UPDATE_BINDINGS = {},
+	---@type UPDATE_BONUS_ACTIONBAR
+	UPDATE_BONUS_ACTIONBAR = {},
+	---@type UPDATE_CHAT_COLOR
+	UPDATE_CHAT_COLOR = {},
+	---@type UPDATE_CHAT_COLOR_NAME_BY_CLASS
+	UPDATE_CHAT_COLOR_NAME_BY_CLASS = {},
+	---@type UPDATE_CHAT_WINDOWS
+	UPDATE_CHAT_WINDOWS = {},
+	---@type UPDATE_EXHAUSTION
+	UPDATE_EXHAUSTION = {},
+	---@type UPDATE_EXTRA_ACTIONBAR
+	UPDATE_EXTRA_ACTIONBAR = {},
+	---@type UPDATE_FACTION
+	UPDATE_FACTION = {},
+	---@type UPDATE_FLOATING_CHAT_WINDOWS
+	UPDATE_FLOATING_CHAT_WINDOWS = {},
+	---@type UPDATE_INSTANCE_INFO
+	UPDATE_INSTANCE_INFO = {},
+	---@type UPDATE_INVENTORY_ALERTS
+	UPDATE_INVENTORY_ALERTS = {},
+	---@type UPDATE_INVENTORY_DURABILITY
+	UPDATE_INVENTORY_DURABILITY = {},
+	---@type UPDATE_LFG_LIST
+	UPDATE_LFG_LIST = {},
+	---@type UPDATE_MACROS
+	UPDATE_MACROS = {},
+	---@type UPDATE_MASTER_LOOT_LIST
+	UPDATE_MASTER_LOOT_LIST = {},
+	---@type UPDATE_MOUSEOVER_UNIT
+	UPDATE_MOUSEOVER_UNIT = {},
+	---@type UPDATE_MULTI_CAST_ACTIONBAR
+	UPDATE_MULTI_CAST_ACTIONBAR = {},
+	---@type UPDATE_OVERRIDE_ACTIONBAR
+	UPDATE_OVERRIDE_ACTIONBAR = {},
+	---@type UPDATE_PENDING_MAIL
+	UPDATE_PENDING_MAIL = {},
+	---@type UPDATE_POSSESS_BAR
+	UPDATE_POSSESS_BAR = {},
+	---@type UPDATE_SHAPESHIFT_COOLDOWN
+	UPDATE_SHAPESHIFT_COOLDOWN = {},
+	---@type UPDATE_SHAPESHIFT_FORM
+	UPDATE_SHAPESHIFT_FORM = {},
+	---@type UPDATE_SHAPESHIFT_FORMS
+	UPDATE_SHAPESHIFT_FORMS = {},
+	---@type UPDATE_SHAPESHIFT_USABLE
+	UPDATE_SHAPESHIFT_USABLE = {},
+	---@type UPDATE_STEALTH
+	UPDATE_STEALTH = {},
+	---@type UPDATE_SUMMONPETS_ACTION
+	UPDATE_SUMMONPETS_ACTION = {},
+	---@type UPDATE_TRADESKILL_RECAST
+	UPDATE_TRADESKILL_RECAST = {},
+	---@type UPDATE_UI_WIDGET
+	UPDATE_UI_WIDGET = {},
+	---@type UPDATE_VEHICLE_ACTIONBAR
+	UPDATE_VEHICLE_ACTIONBAR = {},
+	---@type UPDATE_WEB_TICKET
+	UPDATE_WEB_TICKET = {},
+	---@type USE_BIND_CONFIRM
+	USE_BIND_CONFIRM = {},
+	---@type USE_GLYPH
+	USE_GLYPH = {},
+	---@type USE_NO_REFUND_CONFIRM
+	USE_NO_REFUND_CONFIRM = {},
+	---@type VARIABLES_LOADED
+	VARIABLES_LOADED = {},
+	---@type VEHICLE_ANGLE_SHOW
+	VEHICLE_ANGLE_SHOW = {},
+	---@type VEHICLE_ANGLE_UPDATE
+	VEHICLE_ANGLE_UPDATE = {},
+	---@type VEHICLE_PASSENGERS_CHANGED
+	VEHICLE_PASSENGERS_CHANGED = {},
+	---@type VEHICLE_POWER_SHOW
+	VEHICLE_POWER_SHOW = {},
+	---@type VEHICLE_UPDATE
+	VEHICLE_UPDATE = {},
+	---@type VIGNETTES_UPDATED
+	VIGNETTES_UPDATED = {},
+	---@type VIGNETTE_MINIMAP_UPDATED
+	VIGNETTE_MINIMAP_UPDATED = {},
+	---@type VOICE_CHAT_ACTIVE_INPUT_DEVICE_UPDATED
+	VOICE_CHAT_ACTIVE_INPUT_DEVICE_UPDATED = {},
+	---@type VOICE_CHAT_ACTIVE_OUTPUT_DEVICE_UPDATED
+	VOICE_CHAT_ACTIVE_OUTPUT_DEVICE_UPDATED = {},
+	---@type VOICE_CHAT_AUDIO_CAPTURE_ENERGY
+	VOICE_CHAT_AUDIO_CAPTURE_ENERGY = {},
+	---@type VOICE_CHAT_AUDIO_CAPTURE_STARTED
+	VOICE_CHAT_AUDIO_CAPTURE_STARTED = {},
+	---@type VOICE_CHAT_AUDIO_CAPTURE_STOPPED
+	VOICE_CHAT_AUDIO_CAPTURE_STOPPED = {},
+	---@type VOICE_CHAT_CHANNEL_ACTIVATED
+	VOICE_CHAT_CHANNEL_ACTIVATED = {},
+	---@type VOICE_CHAT_CHANNEL_DEACTIVATED
+	VOICE_CHAT_CHANNEL_DEACTIVATED = {},
+	---@type VOICE_CHAT_CHANNEL_DISPLAY_NAME_CHANGED
+	VOICE_CHAT_CHANNEL_DISPLAY_NAME_CHANGED = {},
+	---@type VOICE_CHAT_CHANNEL_JOINED
+	VOICE_CHAT_CHANNEL_JOINED = {},
+	---@type VOICE_CHAT_CHANNEL_MEMBER_ACTIVE_STATE_CHANGED
+	VOICE_CHAT_CHANNEL_MEMBER_ACTIVE_STATE_CHANGED = {},
+	---@type VOICE_CHAT_CHANNEL_MEMBER_ADDED
+	VOICE_CHAT_CHANNEL_MEMBER_ADDED = {},
+	---@type VOICE_CHAT_CHANNEL_MEMBER_ENERGY_CHANGED
+	VOICE_CHAT_CHANNEL_MEMBER_ENERGY_CHANGED = {},
+	---@type VOICE_CHAT_CHANNEL_MEMBER_GUID_UPDATED
+	VOICE_CHAT_CHANNEL_MEMBER_GUID_UPDATED = {},
+	---@type VOICE_CHAT_CHANNEL_MEMBER_MUTE_FOR_ALL_CHANGED
+	VOICE_CHAT_CHANNEL_MEMBER_MUTE_FOR_ALL_CHANGED = {},
+	---@type VOICE_CHAT_CHANNEL_MEMBER_MUTE_FOR_ME_CHANGED
+	VOICE_CHAT_CHANNEL_MEMBER_MUTE_FOR_ME_CHANGED = {},
+	---@type VOICE_CHAT_CHANNEL_MEMBER_REMOVED
+	VOICE_CHAT_CHANNEL_MEMBER_REMOVED = {},
+	---@type VOICE_CHAT_CHANNEL_MEMBER_SILENCED_CHANGED
+	VOICE_CHAT_CHANNEL_MEMBER_SILENCED_CHANGED = {},
+	---@type VOICE_CHAT_CHANNEL_MEMBER_SPEAKING_STATE_CHANGED
+	VOICE_CHAT_CHANNEL_MEMBER_SPEAKING_STATE_CHANGED = {},
+	---@type VOICE_CHAT_CHANNEL_MEMBER_VOLUME_CHANGED
+	VOICE_CHAT_CHANNEL_MEMBER_VOLUME_CHANGED = {},
+	---@type VOICE_CHAT_CHANNEL_MUTE_STATE_CHANGED
+	VOICE_CHAT_CHANNEL_MUTE_STATE_CHANGED = {},
+	---@type VOICE_CHAT_CHANNEL_PTT_CHANGED
+	VOICE_CHAT_CHANNEL_PTT_CHANGED = {},
+	---@type VOICE_CHAT_CHANNEL_REMOVED
+	VOICE_CHAT_CHANNEL_REMOVED = {},
+	---@type VOICE_CHAT_CHANNEL_TRANSMIT_CHANGED
+	VOICE_CHAT_CHANNEL_TRANSMIT_CHANGED = {},
+	---@type VOICE_CHAT_CHANNEL_VOLUME_CHANGED
+	VOICE_CHAT_CHANNEL_VOLUME_CHANGED = {},
+	---@type VOICE_CHAT_COMMUNICATION_MODE_CHANGED
+	VOICE_CHAT_COMMUNICATION_MODE_CHANGED = {},
+	---@type VOICE_CHAT_CONNECTION_SUCCESS
+	VOICE_CHAT_CONNECTION_SUCCESS = {},
+	---@type VOICE_CHAT_DEAFENED_CHANGED
+	VOICE_CHAT_DEAFENED_CHANGED = {},
+	---@type VOICE_CHAT_ERROR
+	VOICE_CHAT_ERROR = {},
+	---@type VOICE_CHAT_INPUT_DEVICES_UPDATED
+	VOICE_CHAT_INPUT_DEVICES_UPDATED = {},
+	---@type VOICE_CHAT_LOGIN
+	VOICE_CHAT_LOGIN = {},
+	---@type VOICE_CHAT_LOGOUT
+	VOICE_CHAT_LOGOUT = {},
+	---@type VOICE_CHAT_MUTED_CHANGED
+	VOICE_CHAT_MUTED_CHANGED = {},
+	---@type VOICE_CHAT_OUTPUT_DEVICES_UPDATED
+	VOICE_CHAT_OUTPUT_DEVICES_UPDATED = {},
+	---@type VOICE_CHAT_PENDING_CHANNEL_JOIN_STATE
+	VOICE_CHAT_PENDING_CHANNEL_JOIN_STATE = {},
+	---@type VOICE_CHAT_PTT_BUTTON_PRESSED_STATE_CHANGED
+	VOICE_CHAT_PTT_BUTTON_PRESSED_STATE_CHANGED = {},
+	---@type VOICE_CHAT_SILENCED_CHANGED
+	VOICE_CHAT_SILENCED_CHANGED = {},
+	---@type VOID_DEPOSIT_WARNING
+	VOID_DEPOSIT_WARNING = {},
+	---@type VOID_STORAGE_CLOSE
+	VOID_STORAGE_CLOSE = {},
+	---@type VOID_STORAGE_CONTENTS_UPDATE
+	VOID_STORAGE_CONTENTS_UPDATE = {},
+	---@type VOID_STORAGE_DEPOSIT_UPDATE
+	VOID_STORAGE_DEPOSIT_UPDATE = {},
+	---@type VOID_STORAGE_OPEN
+	VOID_STORAGE_OPEN = {},
+	---@type VOID_STORAGE_UPDATE
+	VOID_STORAGE_UPDATE = {},
+	---@type VOID_TRANSFER_DONE
+	VOID_TRANSFER_DONE = {},
+	---@type VOID_TRANSFER_SUCCESS
+	VOID_TRANSFER_SUCCESS = {},
+	---@type VOTE_KICK_REASON_NEEDED
+	VOTE_KICK_REASON_NEEDED = {},
+	---@type WARFRONT_COMPLETED
+	WARFRONT_COMPLETED = {},
+	---@type WARGAME_REQUESTED
+	WARGAME_REQUESTED = {},
+	---@type WAR_MODE_STATUS_UPDATE
+	WAR_MODE_STATUS_UPDATE = {},
+	---@type WAYPOINT_UPDATE
+	WAYPOINT_UPDATE = {},
+	---@type WEAR_EQUIPMENT_SET
+	WEAR_EQUIPMENT_SET = {},
+	---@type WHO_LIST_UPDATE
+	WHO_LIST_UPDATE = {},
+	---@type WORLD_MAP_CLOSE
+	WORLD_MAP_CLOSE = {},
+	---@type WORLD_MAP_OPEN
+	WORLD_MAP_OPEN = {},
+	---@type WORLD_QUEST_COMPLETED_BY_SPELL
+	WORLD_QUEST_COMPLETED_BY_SPELL = {},
+	---@type WORLD_STATE_TIMER_START
+	WORLD_STATE_TIMER_START = {},
+	---@type WORLD_STATE_TIMER_STOP
+	WORLD_STATE_TIMER_STOP = {},
+	---@type WOW_MOUSE_NOT_FOUND
+	WOW_MOUSE_NOT_FOUND = {},
+	---@type ZONE_CHANGED
+	ZONE_CHANGED = {},
+	---@type ZONE_CHANGED_INDOORS
+	ZONE_CHANGED_INDOORS = {},
+	---@type ZONE_CHANGED_NEW_AREA
+	ZONE_CHANGED_NEW_AREA = {},
 }

@@ -9,11 +9,11 @@ function C_ToyBoxInfo.ClearFanfare(itemID) end
 ---[Documentation](https://wow.gamepedia.com/API_C_ToyBoxInfo.NeedsFanfare)
 function C_ToyBoxInfo.NeedsFanfare(itemID) end
 
----@class NEW_TOY_ADDED : Event
+---@class NEW_TOY_ADDED
 ---@field itemID number
 local NEW_TOY_ADDED = {}
 
----@class TOYS_UPDATED : Event
+---@class TOYS_UPDATED
 ---@field itemID number
 ---@field isNew boolean
 ---@field hasFanfare boolean

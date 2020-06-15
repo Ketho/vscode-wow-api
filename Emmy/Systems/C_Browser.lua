@@ -1,11 +1,11 @@
 C_Browser = {}
 
----@class SIMPLE_BROWSER_WEB_ERROR : Event
+---@class SIMPLE_BROWSER_WEB_ERROR
 ---@field errorCode number
 local SIMPLE_BROWSER_WEB_ERROR = {}
 
----@class SIMPLE_BROWSER_WEB_PROXY_FAILED : Event
+---@class SIMPLE_BROWSER_WEB_PROXY_FAILED
 local SIMPLE_BROWSER_WEB_PROXY_FAILED = {}
 
----@class SIMPLE_CHECKOUT_CLOSED : Event
+---@class SIMPLE_CHECKOUT_CLOSED
 local SIMPLE_CHECKOUT_CLOSED = {}

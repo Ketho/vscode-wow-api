@@ -40,71 +40,71 @@ function C_PaperDollInfo.OffhandHasShield() end
 ---[Documentation](https://wow.gamepedia.com/API_C_PaperDollInfo.OffhandHasWeapon)
 function C_PaperDollInfo.OffhandHasWeapon() end
 
----@class AVOIDANCE_UPDATE : Event
+---@class AVOIDANCE_UPDATE
 local AVOIDANCE_UPDATE = {}
 
----@class CHARACTER_POINTS_CHANGED : Event
+---@class CHARACTER_POINTS_CHANGED
 ---@field change number
 local CHARACTER_POINTS_CHANGED = {}
 
----@class CHARACTER_UPGRADE_SPELL_TIER_SET : Event
+---@class CHARACTER_UPGRADE_SPELL_TIER_SET
 ---@field tierIndex number
 local CHARACTER_UPGRADE_SPELL_TIER_SET = {}
 
----@class COMBAT_RATING_UPDATE : Event
+---@class COMBAT_RATING_UPDATE
 local COMBAT_RATING_UPDATE = {}
 
----@class DISABLE_XP_GAIN : Event
+---@class DISABLE_XP_GAIN
 local DISABLE_XP_GAIN = {}
 
----@class ENABLE_XP_GAIN : Event
+---@class ENABLE_XP_GAIN
 local ENABLE_XP_GAIN = {}
 
----@class EQUIP_BIND_CONFIRM : Event
+---@class EQUIP_BIND_CONFIRM
 ---@field slot number
 local EQUIP_BIND_CONFIRM = {}
 
----@class INSPECT_HONOR_UPDATE : Event
+---@class INSPECT_HONOR_UPDATE
 local INSPECT_HONOR_UPDATE = {}
 
----@class INSPECT_READY : Event
+---@class INSPECT_READY
 ---@field inspecteeGUID string
 local INSPECT_READY = {}
 
----@class LIFESTEAL_UPDATE : Event
+---@class LIFESTEAL_UPDATE
 local LIFESTEAL_UPDATE = {}
 
----@class MASTERY_UPDATE : Event
+---@class MASTERY_UPDATE
 local MASTERY_UPDATE = {}
 
----@class PET_SPELL_POWER_UPDATE : Event
+---@class PET_SPELL_POWER_UPDATE
 local PET_SPELL_POWER_UPDATE = {}
 
----@class PLAYER_AVG_ITEM_LEVEL_UPDATE : Event
+---@class PLAYER_AVG_ITEM_LEVEL_UPDATE
 local PLAYER_AVG_ITEM_LEVEL_UPDATE = {}
 
----@class PLAYER_EQUIPMENT_CHANGED : Event
+---@class PLAYER_EQUIPMENT_CHANGED
 ---@field equipmentSlot number
 ---@field hasCurrent boolean
 local PLAYER_EQUIPMENT_CHANGED = {}
 
----@class PVP_POWER_UPDATE : Event
+---@class PVP_POWER_UPDATE
 local PVP_POWER_UPDATE = {}
 
----@class SPEED_UPDATE : Event
+---@class SPEED_UPDATE
 local SPEED_UPDATE = {}
 
----@class SPELL_POWER_CHANGED : Event
+---@class SPELL_POWER_CHANGED
 local SPELL_POWER_CHANGED = {}
 
----@class STURDINESS_UPDATE : Event
+---@class STURDINESS_UPDATE
 local STURDINESS_UPDATE = {}
 
----@class UPDATE_FACTION : Event
+---@class UPDATE_FACTION
 local UPDATE_FACTION = {}
 
----@class UPDATE_INVENTORY_ALERTS : Event
+---@class UPDATE_INVENTORY_ALERTS
 local UPDATE_INVENTORY_ALERTS = {}
 
----@class UPDATE_INVENTORY_DURABILITY : Event
+---@class UPDATE_INVENTORY_DURABILITY
 local UPDATE_INVENTORY_DURABILITY = {}

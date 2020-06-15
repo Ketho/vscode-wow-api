@@ -1,6 +1,6 @@
 C_IslandsInfo = {}
 
----@class ISLAND_AZERITE_GAIN : Event
+---@class ISLAND_AZERITE_GAIN
 ---@field amount number
 ---@field gainedByPlayer boolean
 ---@field factionIndex number

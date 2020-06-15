@@ -76,48 +76,48 @@ function C_ChatInfo.SendAddonMessageLogged(prefix, message, chatType, target) en
 ---[Documentation](https://wow.gamepedia.com/API_C_ChatInfo.SwapChatChannelsByChannelIndex)
 function C_ChatInfo.SwapChatChannelsByChannelIndex(firstChannelIndex, secondChannelIndex) end
 
----@class ALTERNATIVE_DEFAULT_LANGUAGE_CHANGED : Event
+---@class ALTERNATIVE_DEFAULT_LANGUAGE_CHANGED
 local ALTERNATIVE_DEFAULT_LANGUAGE_CHANGED = {}
 
----@class BN_CHAT_MSG_ADDON : Event
+---@class BN_CHAT_MSG_ADDON
 ---@field prefix string
 ---@field text string
 ---@field channel string
 ---@field senderID number
 local BN_CHAT_MSG_ADDON = {}
 
----@class CHANNEL_COUNT_UPDATE : Event
+---@class CHANNEL_COUNT_UPDATE
 ---@field displayIndex number
 ---@field count number
 local CHANNEL_COUNT_UPDATE = {}
 
----@class CHANNEL_FLAGS_UPDATED : Event
+---@class CHANNEL_FLAGS_UPDATED
 ---@field displayIndex number
 local CHANNEL_FLAGS_UPDATED = {}
 
----@class CHANNEL_INVITE_REQUEST : Event
+---@class CHANNEL_INVITE_REQUEST
 ---@field channelID string
 ---@field name string
 local CHANNEL_INVITE_REQUEST = {}
 
----@class CHANNEL_LEFT : Event
+---@class CHANNEL_LEFT
 ---@field chatChannelID number
 ---@field name string
 local CHANNEL_LEFT = {}
 
----@class CHANNEL_PASSWORD_REQUEST : Event
+---@class CHANNEL_PASSWORD_REQUEST
 ---@field channelID string
 local CHANNEL_PASSWORD_REQUEST = {}
 
----@class CHANNEL_ROSTER_UPDATE : Event
+---@class CHANNEL_ROSTER_UPDATE
 ---@field displayIndex number
 ---@field count number
 local CHANNEL_ROSTER_UPDATE = {}
 
----@class CHANNEL_UI_UPDATE : Event
+---@class CHANNEL_UI_UPDATE
 local CHANNEL_UI_UPDATE = {}
 
----@class CHAT_COMBAT_MSG_ARENA_POINTS_GAIN : Event
+---@class CHAT_COMBAT_MSG_ARENA_POINTS_GAIN
 ---@field text string
 ---@field playerName string
 ---@field languageName string
@@ -137,7 +137,7 @@ local CHANNEL_UI_UPDATE = {}
 ---@field supressRaidIcons boolean
 local CHAT_COMBAT_MSG_ARENA_POINTS_GAIN = {}
 
----@class CHAT_MSG_ACHIEVEMENT : Event
+---@class CHAT_MSG_ACHIEVEMENT
 ---@field text string
 ---@field playerName string
 ---@field languageName string
@@ -157,7 +157,7 @@ local CHAT_COMBAT_MSG_ARENA_POINTS_GAIN = {}
 ---@field supressRaidIcons boolean
 local CHAT_MSG_ACHIEVEMENT = {}
 
----@class CHAT_MSG_ADDON : Event
+---@class CHAT_MSG_ADDON
 ---@field prefix string
 ---@field text string
 ---@field channel string
@@ -169,7 +169,7 @@ local CHAT_MSG_ACHIEVEMENT = {}
 ---@field instanceID number
 local CHAT_MSG_ADDON = {}
 
----@class CHAT_MSG_ADDON_LOGGED : Event
+---@class CHAT_MSG_ADDON_LOGGED
 ---@field prefix string
 ---@field text string
 ---@field channel string
@@ -181,7 +181,7 @@ local CHAT_MSG_ADDON = {}
 ---@field instanceID number
 local CHAT_MSG_ADDON_LOGGED = {}
 
----@class CHAT_MSG_AFK : Event
+---@class CHAT_MSG_AFK
 ---@field text string
 ---@field playerName string
 ---@field languageName string
@@ -201,7 +201,7 @@ local CHAT_MSG_ADDON_LOGGED = {}
 ---@field supressRaidIcons boolean
 local CHAT_MSG_AFK = {}
 
----@class CHAT_MSG_BG_SYSTEM_ALLIANCE : Event
+---@class CHAT_MSG_BG_SYSTEM_ALLIANCE
 ---@field text string
 ---@field playerName string
 ---@field languageName string
@@ -221,7 +221,7 @@ local CHAT_MSG_AFK = {}
 ---@field supressRaidIcons boolean
 local CHAT_MSG_BG_SYSTEM_ALLIANCE = {}
 
----@class CHAT_MSG_BG_SYSTEM_HORDE : Event
+---@class CHAT_MSG_BG_SYSTEM_HORDE
 ---@field text string
 ---@field playerName string
 ---@field languageName string
@@ -241,7 +241,7 @@ local CHAT_MSG_BG_SYSTEM_ALLIANCE = {}
 ---@field supressRaidIcons boolean
 local CHAT_MSG_BG_SYSTEM_HORDE = {}
 
----@class CHAT_MSG_BG_SYSTEM_NEUTRAL : Event
+---@class CHAT_MSG_BG_SYSTEM_NEUTRAL
 ---@field text string
 ---@field playerName string
 ---@field languageName string
@@ -261,7 +261,7 @@ local CHAT_MSG_BG_SYSTEM_HORDE = {}
 ---@field supressRaidIcons boolean
 local CHAT_MSG_BG_SYSTEM_NEUTRAL = {}
 
----@class CHAT_MSG_BN : Event
+---@class CHAT_MSG_BN
 ---@field text string
 ---@field playerName string
 ---@field languageName string
@@ -281,7 +281,7 @@ local CHAT_MSG_BG_SYSTEM_NEUTRAL = {}
 ---@field supressRaidIcons boolean
 local CHAT_MSG_BN = {}
 
----@class CHAT_MSG_BN_INLINE_TOAST_ALERT : Event
+---@class CHAT_MSG_BN_INLINE_TOAST_ALERT
 ---@field text string
 ---@field playerName string
 ---@field languageName string
@@ -301,7 +301,7 @@ local CHAT_MSG_BN = {}
 ---@field supressRaidIcons boolean
 local CHAT_MSG_BN_INLINE_TOAST_ALERT = {}
 
----@class CHAT_MSG_BN_INLINE_TOAST_BROADCAST : Event
+---@class CHAT_MSG_BN_INLINE_TOAST_BROADCAST
 ---@field text string
 ---@field playerName string
 ---@field languageName string
@@ -321,7 +321,7 @@ local CHAT_MSG_BN_INLINE_TOAST_ALERT = {}
 ---@field supressRaidIcons boolean
 local CHAT_MSG_BN_INLINE_TOAST_BROADCAST = {}
 
----@class CHAT_MSG_BN_INLINE_TOAST_BROADCAST_INFORM : Event
+---@class CHAT_MSG_BN_INLINE_TOAST_BROADCAST_INFORM
 ---@field text string
 ---@field playerName string
 ---@field languageName string
@@ -341,7 +341,7 @@ local CHAT_MSG_BN_INLINE_TOAST_BROADCAST = {}
 ---@field supressRaidIcons boolean
 local CHAT_MSG_BN_INLINE_TOAST_BROADCAST_INFORM = {}
 
----@class CHAT_MSG_BN_INLINE_TOAST_CONVERSATION : Event
+---@class CHAT_MSG_BN_INLINE_TOAST_CONVERSATION
 ---@field text string
 ---@field playerName string
 ---@field languageName string
@@ -361,7 +361,7 @@ local CHAT_MSG_BN_INLINE_TOAST_BROADCAST_INFORM = {}
 ---@field supressRaidIcons boolean
 local CHAT_MSG_BN_INLINE_TOAST_CONVERSATION = {}
 
----@class CHAT_MSG_BN_WHISPER : Event
+---@class CHAT_MSG_BN_WHISPER
 ---@field text string
 ---@field playerName string
 ---@field languageName string
@@ -381,7 +381,7 @@ local CHAT_MSG_BN_INLINE_TOAST_CONVERSATION = {}
 ---@field supressRaidIcons boolean
 local CHAT_MSG_BN_WHISPER = {}
 
----@class CHAT_MSG_BN_WHISPER_INFORM : Event
+---@class CHAT_MSG_BN_WHISPER_INFORM
 ---@field text string
 ---@field playerName string
 ---@field languageName string
@@ -401,7 +401,7 @@ local CHAT_MSG_BN_WHISPER = {}
 ---@field supressRaidIcons boolean
 local CHAT_MSG_BN_WHISPER_INFORM = {}
 
----@class CHAT_MSG_BN_WHISPER_PLAYER_OFFLINE : Event
+---@class CHAT_MSG_BN_WHISPER_PLAYER_OFFLINE
 ---@field text string
 ---@field playerName string
 ---@field languageName string
@@ -421,7 +421,7 @@ local CHAT_MSG_BN_WHISPER_INFORM = {}
 ---@field supressRaidIcons boolean
 local CHAT_MSG_BN_WHISPER_PLAYER_OFFLINE = {}
 
----@class CHAT_MSG_CHANNEL : Event
+---@class CHAT_MSG_CHANNEL
 ---@field text string
 ---@field playerName string
 ---@field languageName string
@@ -441,7 +441,7 @@ local CHAT_MSG_BN_WHISPER_PLAYER_OFFLINE = {}
 ---@field supressRaidIcons boolean
 local CHAT_MSG_CHANNEL = {}
 
----@class CHAT_MSG_CHANNEL_JOIN : Event
+---@class CHAT_MSG_CHANNEL_JOIN
 ---@field text string
 ---@field playerName string
 ---@field languageName string
@@ -461,7 +461,7 @@ local CHAT_MSG_CHANNEL = {}
 ---@field supressRaidIcons boolean
 local CHAT_MSG_CHANNEL_JOIN = {}
 
----@class CHAT_MSG_CHANNEL_LEAVE : Event
+---@class CHAT_MSG_CHANNEL_LEAVE
 ---@field text string
 ---@field playerName string
 ---@field languageName string
@@ -481,7 +481,7 @@ local CHAT_MSG_CHANNEL_JOIN = {}
 ---@field supressRaidIcons boolean
 local CHAT_MSG_CHANNEL_LEAVE = {}
 
----@class CHAT_MSG_CHANNEL_LIST : Event
+---@class CHAT_MSG_CHANNEL_LIST
 ---@field text string
 ---@field playerName string
 ---@field languageName string
@@ -501,7 +501,7 @@ local CHAT_MSG_CHANNEL_LEAVE = {}
 ---@field supressRaidIcons boolean
 local CHAT_MSG_CHANNEL_LIST = {}
 
----@class CHAT_MSG_CHANNEL_NOTICE : Event
+---@class CHAT_MSG_CHANNEL_NOTICE
 ---@field text string
 ---@field playerName string
 ---@field languageName string
@@ -521,7 +521,7 @@ local CHAT_MSG_CHANNEL_LIST = {}
 ---@field supressRaidIcons boolean
 local CHAT_MSG_CHANNEL_NOTICE = {}
 
----@class CHAT_MSG_CHANNEL_NOTICE_USER : Event
+---@class CHAT_MSG_CHANNEL_NOTICE_USER
 ---@field text string
 ---@field playerName string
 ---@field languageName string
@@ -541,7 +541,7 @@ local CHAT_MSG_CHANNEL_NOTICE = {}
 ---@field supressRaidIcons boolean
 local CHAT_MSG_CHANNEL_NOTICE_USER = {}
 
----@class CHAT_MSG_COMBAT_FACTION_CHANGE : Event
+---@class CHAT_MSG_COMBAT_FACTION_CHANGE
 ---@field text string
 ---@field playerName string
 ---@field languageName string
@@ -561,7 +561,7 @@ local CHAT_MSG_CHANNEL_NOTICE_USER = {}
 ---@field supressRaidIcons boolean
 local CHAT_MSG_COMBAT_FACTION_CHANGE = {}
 
----@class CHAT_MSG_COMBAT_HONOR_GAIN : Event
+---@class CHAT_MSG_COMBAT_HONOR_GAIN
 ---@field text string
 ---@field playerName string
 ---@field languageName string
@@ -581,7 +581,7 @@ local CHAT_MSG_COMBAT_FACTION_CHANGE = {}
 ---@field supressRaidIcons boolean
 local CHAT_MSG_COMBAT_HONOR_GAIN = {}
 
----@class CHAT_MSG_COMBAT_MISC_INFO : Event
+---@class CHAT_MSG_COMBAT_MISC_INFO
 ---@field text string
 ---@field playerName string
 ---@field languageName string
@@ -601,7 +601,7 @@ local CHAT_MSG_COMBAT_HONOR_GAIN = {}
 ---@field supressRaidIcons boolean
 local CHAT_MSG_COMBAT_MISC_INFO = {}
 
----@class CHAT_MSG_COMBAT_XP_GAIN : Event
+---@class CHAT_MSG_COMBAT_XP_GAIN
 ---@field text string
 ---@field playerName string
 ---@field languageName string
@@ -621,7 +621,7 @@ local CHAT_MSG_COMBAT_MISC_INFO = {}
 ---@field supressRaidIcons boolean
 local CHAT_MSG_COMBAT_XP_GAIN = {}
 
----@class CHAT_MSG_COMMUNITIES_CHANNEL : Event
+---@class CHAT_MSG_COMMUNITIES_CHANNEL
 ---@field text string
 ---@field playerName string
 ---@field languageName string
@@ -641,7 +641,7 @@ local CHAT_MSG_COMBAT_XP_GAIN = {}
 ---@field supressRaidIcons boolean
 local CHAT_MSG_COMMUNITIES_CHANNEL = {}
 
----@class CHAT_MSG_CURRENCY : Event
+---@class CHAT_MSG_CURRENCY
 ---@field text string
 ---@field playerName string
 ---@field languageName string
@@ -661,7 +661,7 @@ local CHAT_MSG_COMMUNITIES_CHANNEL = {}
 ---@field supressRaidIcons boolean
 local CHAT_MSG_CURRENCY = {}
 
----@class CHAT_MSG_DND : Event
+---@class CHAT_MSG_DND
 ---@field text string
 ---@field playerName string
 ---@field languageName string
@@ -681,7 +681,7 @@ local CHAT_MSG_CURRENCY = {}
 ---@field supressRaidIcons boolean
 local CHAT_MSG_DND = {}
 
----@class CHAT_MSG_EMOTE : Event
+---@class CHAT_MSG_EMOTE
 ---@field text string
 ---@field playerName string
 ---@field languageName string
@@ -701,7 +701,7 @@ local CHAT_MSG_DND = {}
 ---@field supressRaidIcons boolean
 local CHAT_MSG_EMOTE = {}
 
----@class CHAT_MSG_FILTERED : Event
+---@class CHAT_MSG_FILTERED
 ---@field text string
 ---@field playerName string
 ---@field languageName string
@@ -721,7 +721,7 @@ local CHAT_MSG_EMOTE = {}
 ---@field supressRaidIcons boolean
 local CHAT_MSG_FILTERED = {}
 
----@class CHAT_MSG_GUILD : Event
+---@class CHAT_MSG_GUILD
 ---@field text string
 ---@field playerName string
 ---@field languageName string
@@ -741,7 +741,7 @@ local CHAT_MSG_FILTERED = {}
 ---@field supressRaidIcons boolean
 local CHAT_MSG_GUILD = {}
 
----@class CHAT_MSG_GUILD_ACHIEVEMENT : Event
+---@class CHAT_MSG_GUILD_ACHIEVEMENT
 ---@field text string
 ---@field playerName string
 ---@field languageName string
@@ -761,7 +761,7 @@ local CHAT_MSG_GUILD = {}
 ---@field supressRaidIcons boolean
 local CHAT_MSG_GUILD_ACHIEVEMENT = {}
 
----@class CHAT_MSG_GUILD_ITEM_LOOTED : Event
+---@class CHAT_MSG_GUILD_ITEM_LOOTED
 ---@field text string
 ---@field playerName string
 ---@field languageName string
@@ -781,7 +781,7 @@ local CHAT_MSG_GUILD_ACHIEVEMENT = {}
 ---@field supressRaidIcons boolean
 local CHAT_MSG_GUILD_ITEM_LOOTED = {}
 
----@class CHAT_MSG_IGNORED : Event
+---@class CHAT_MSG_IGNORED
 ---@field text string
 ---@field playerName string
 ---@field languageName string
@@ -801,7 +801,7 @@ local CHAT_MSG_GUILD_ITEM_LOOTED = {}
 ---@field supressRaidIcons boolean
 local CHAT_MSG_IGNORED = {}
 
----@class CHAT_MSG_INSTANCE_CHAT : Event
+---@class CHAT_MSG_INSTANCE_CHAT
 ---@field text string
 ---@field playerName string
 ---@field languageName string
@@ -821,7 +821,7 @@ local CHAT_MSG_IGNORED = {}
 ---@field supressRaidIcons boolean
 local CHAT_MSG_INSTANCE_CHAT = {}
 
----@class CHAT_MSG_INSTANCE_CHAT_LEADER : Event
+---@class CHAT_MSG_INSTANCE_CHAT_LEADER
 ---@field text string
 ---@field playerName string
 ---@field languageName string
@@ -841,7 +841,7 @@ local CHAT_MSG_INSTANCE_CHAT = {}
 ---@field supressRaidIcons boolean
 local CHAT_MSG_INSTANCE_CHAT_LEADER = {}
 
----@class CHAT_MSG_LOOT : Event
+---@class CHAT_MSG_LOOT
 ---@field text string
 ---@field playerName string
 ---@field languageName string
@@ -861,7 +861,7 @@ local CHAT_MSG_INSTANCE_CHAT_LEADER = {}
 ---@field supressRaidIcons boolean
 local CHAT_MSG_LOOT = {}
 
----@class CHAT_MSG_MONEY : Event
+---@class CHAT_MSG_MONEY
 ---@field text string
 ---@field playerName string
 ---@field languageName string
@@ -881,7 +881,7 @@ local CHAT_MSG_LOOT = {}
 ---@field supressRaidIcons boolean
 local CHAT_MSG_MONEY = {}
 
----@class CHAT_MSG_MONSTER_EMOTE : Event
+---@class CHAT_MSG_MONSTER_EMOTE
 ---@field text string
 ---@field playerName string
 ---@field languageName string
@@ -901,7 +901,7 @@ local CHAT_MSG_MONEY = {}
 ---@field supressRaidIcons boolean
 local CHAT_MSG_MONSTER_EMOTE = {}
 
----@class CHAT_MSG_MONSTER_PARTY : Event
+---@class CHAT_MSG_MONSTER_PARTY
 ---@field text string
 ---@field playerName string
 ---@field languageName string
@@ -921,7 +921,7 @@ local CHAT_MSG_MONSTER_EMOTE = {}
 ---@field supressRaidIcons boolean
 local CHAT_MSG_MONSTER_PARTY = {}
 
----@class CHAT_MSG_MONSTER_SAY : Event
+---@class CHAT_MSG_MONSTER_SAY
 ---@field text string
 ---@field playerName string
 ---@field languageName string
@@ -941,7 +941,7 @@ local CHAT_MSG_MONSTER_PARTY = {}
 ---@field supressRaidIcons boolean
 local CHAT_MSG_MONSTER_SAY = {}
 
----@class CHAT_MSG_MONSTER_WHISPER : Event
+---@class CHAT_MSG_MONSTER_WHISPER
 ---@field text string
 ---@field playerName string
 ---@field languageName string
@@ -961,7 +961,7 @@ local CHAT_MSG_MONSTER_SAY = {}
 ---@field supressRaidIcons boolean
 local CHAT_MSG_MONSTER_WHISPER = {}
 
----@class CHAT_MSG_MONSTER_YELL : Event
+---@class CHAT_MSG_MONSTER_YELL
 ---@field text string
 ---@field playerName string
 ---@field languageName string
@@ -981,7 +981,7 @@ local CHAT_MSG_MONSTER_WHISPER = {}
 ---@field supressRaidIcons boolean
 local CHAT_MSG_MONSTER_YELL = {}
 
----@class CHAT_MSG_OFFICER : Event
+---@class CHAT_MSG_OFFICER
 ---@field text string
 ---@field playerName string
 ---@field languageName string
@@ -1001,7 +1001,7 @@ local CHAT_MSG_MONSTER_YELL = {}
 ---@field supressRaidIcons boolean
 local CHAT_MSG_OFFICER = {}
 
----@class CHAT_MSG_OPENING : Event
+---@class CHAT_MSG_OPENING
 ---@field text string
 ---@field playerName string
 ---@field languageName string
@@ -1021,7 +1021,7 @@ local CHAT_MSG_OFFICER = {}
 ---@field supressRaidIcons boolean
 local CHAT_MSG_OPENING = {}
 
----@class CHAT_MSG_PARTY : Event
+---@class CHAT_MSG_PARTY
 ---@field text string
 ---@field playerName string
 ---@field languageName string
@@ -1041,7 +1041,7 @@ local CHAT_MSG_OPENING = {}
 ---@field supressRaidIcons boolean
 local CHAT_MSG_PARTY = {}
 
----@class CHAT_MSG_PARTY_LEADER : Event
+---@class CHAT_MSG_PARTY_LEADER
 ---@field text string
 ---@field playerName string
 ---@field languageName string
@@ -1061,7 +1061,7 @@ local CHAT_MSG_PARTY = {}
 ---@field supressRaidIcons boolean
 local CHAT_MSG_PARTY_LEADER = {}
 
----@class CHAT_MSG_PET_BATTLE_COMBAT_LOG : Event
+---@class CHAT_MSG_PET_BATTLE_COMBAT_LOG
 ---@field text string
 ---@field playerName string
 ---@field languageName string
@@ -1081,7 +1081,7 @@ local CHAT_MSG_PARTY_LEADER = {}
 ---@field supressRaidIcons boolean
 local CHAT_MSG_PET_BATTLE_COMBAT_LOG = {}
 
----@class CHAT_MSG_PET_BATTLE_INFO : Event
+---@class CHAT_MSG_PET_BATTLE_INFO
 ---@field text string
 ---@field playerName string
 ---@field languageName string
@@ -1101,7 +1101,7 @@ local CHAT_MSG_PET_BATTLE_COMBAT_LOG = {}
 ---@field supressRaidIcons boolean
 local CHAT_MSG_PET_BATTLE_INFO = {}
 
----@class CHAT_MSG_PET_INFO : Event
+---@class CHAT_MSG_PET_INFO
 ---@field text string
 ---@field playerName string
 ---@field languageName string
@@ -1121,7 +1121,7 @@ local CHAT_MSG_PET_BATTLE_INFO = {}
 ---@field supressRaidIcons boolean
 local CHAT_MSG_PET_INFO = {}
 
----@class CHAT_MSG_RAID : Event
+---@class CHAT_MSG_RAID
 ---@field text string
 ---@field playerName string
 ---@field languageName string
@@ -1141,7 +1141,7 @@ local CHAT_MSG_PET_INFO = {}
 ---@field supressRaidIcons boolean
 local CHAT_MSG_RAID = {}
 
----@class CHAT_MSG_RAID_BOSS_EMOTE : Event
+---@class CHAT_MSG_RAID_BOSS_EMOTE
 ---@field text string
 ---@field playerName string
 ---@field languageName string
@@ -1161,7 +1161,7 @@ local CHAT_MSG_RAID = {}
 ---@field supressRaidIcons boolean
 local CHAT_MSG_RAID_BOSS_EMOTE = {}
 
----@class CHAT_MSG_RAID_BOSS_WHISPER : Event
+---@class CHAT_MSG_RAID_BOSS_WHISPER
 ---@field text string
 ---@field playerName string
 ---@field languageName string
@@ -1181,7 +1181,7 @@ local CHAT_MSG_RAID_BOSS_EMOTE = {}
 ---@field supressRaidIcons boolean
 local CHAT_MSG_RAID_BOSS_WHISPER = {}
 
----@class CHAT_MSG_RAID_LEADER : Event
+---@class CHAT_MSG_RAID_LEADER
 ---@field text string
 ---@field playerName string
 ---@field languageName string
@@ -1201,7 +1201,7 @@ local CHAT_MSG_RAID_BOSS_WHISPER = {}
 ---@field supressRaidIcons boolean
 local CHAT_MSG_RAID_LEADER = {}
 
----@class CHAT_MSG_RAID_WARNING : Event
+---@class CHAT_MSG_RAID_WARNING
 ---@field text string
 ---@field playerName string
 ---@field languageName string
@@ -1221,7 +1221,7 @@ local CHAT_MSG_RAID_LEADER = {}
 ---@field supressRaidIcons boolean
 local CHAT_MSG_RAID_WARNING = {}
 
----@class CHAT_MSG_RESTRICTED : Event
+---@class CHAT_MSG_RESTRICTED
 ---@field text string
 ---@field playerName string
 ---@field languageName string
@@ -1241,7 +1241,7 @@ local CHAT_MSG_RAID_WARNING = {}
 ---@field supressRaidIcons boolean
 local CHAT_MSG_RESTRICTED = {}
 
----@class CHAT_MSG_SAY : Event
+---@class CHAT_MSG_SAY
 ---@field text string
 ---@field playerName string
 ---@field languageName string
@@ -1261,7 +1261,7 @@ local CHAT_MSG_RESTRICTED = {}
 ---@field supressRaidIcons boolean
 local CHAT_MSG_SAY = {}
 
----@class CHAT_MSG_SKILL : Event
+---@class CHAT_MSG_SKILL
 ---@field text string
 ---@field playerName string
 ---@field languageName string
@@ -1281,7 +1281,7 @@ local CHAT_MSG_SAY = {}
 ---@field supressRaidIcons boolean
 local CHAT_MSG_SKILL = {}
 
----@class CHAT_MSG_SYSTEM : Event
+---@class CHAT_MSG_SYSTEM
 ---@field text string
 ---@field playerName string
 ---@field languageName string
@@ -1301,7 +1301,7 @@ local CHAT_MSG_SKILL = {}
 ---@field supressRaidIcons boolean
 local CHAT_MSG_SYSTEM = {}
 
----@class CHAT_MSG_TARGETICONS : Event
+---@class CHAT_MSG_TARGETICONS
 ---@field text string
 ---@field playerName string
 ---@field languageName string
@@ -1321,7 +1321,7 @@ local CHAT_MSG_SYSTEM = {}
 ---@field supressRaidIcons boolean
 local CHAT_MSG_TARGETICONS = {}
 
----@class CHAT_MSG_TEXT_EMOTE : Event
+---@class CHAT_MSG_TEXT_EMOTE
 ---@field text string
 ---@field playerName string
 ---@field languageName string
@@ -1341,7 +1341,7 @@ local CHAT_MSG_TARGETICONS = {}
 ---@field supressRaidIcons boolean
 local CHAT_MSG_TEXT_EMOTE = {}
 
----@class CHAT_MSG_TRADESKILLS : Event
+---@class CHAT_MSG_TRADESKILLS
 ---@field text string
 ---@field playerName string
 ---@field languageName string
@@ -1361,7 +1361,7 @@ local CHAT_MSG_TEXT_EMOTE = {}
 ---@field supressRaidIcons boolean
 local CHAT_MSG_TRADESKILLS = {}
 
----@class CHAT_MSG_WHISPER : Event
+---@class CHAT_MSG_WHISPER
 ---@field text string
 ---@field playerName string
 ---@field languageName string
@@ -1381,7 +1381,7 @@ local CHAT_MSG_TRADESKILLS = {}
 ---@field supressRaidIcons boolean
 local CHAT_MSG_WHISPER = {}
 
----@class CHAT_MSG_WHISPER_INFORM : Event
+---@class CHAT_MSG_WHISPER_INFORM
 ---@field text string
 ---@field playerName string
 ---@field languageName string
@@ -1401,7 +1401,7 @@ local CHAT_MSG_WHISPER = {}
 ---@field supressRaidIcons boolean
 local CHAT_MSG_WHISPER_INFORM = {}
 
----@class CHAT_MSG_YELL : Event
+---@class CHAT_MSG_YELL
 ---@field text string
 ---@field playerName string
 ---@field languageName string
@@ -1421,61 +1421,61 @@ local CHAT_MSG_WHISPER_INFORM = {}
 ---@field supressRaidIcons boolean
 local CHAT_MSG_YELL = {}
 
----@class CHAT_SERVER_DISCONNECTED : Event
+---@class CHAT_SERVER_DISCONNECTED
 ---@field isInitialMessage boolean
 local CHAT_SERVER_DISCONNECTED = {}
 
----@class CHAT_SERVER_RECONNECTED : Event
+---@class CHAT_SERVER_RECONNECTED
 local CHAT_SERVER_RECONNECTED = {}
 
----@class CLEAR_BOSS_EMOTES : Event
+---@class CLEAR_BOSS_EMOTES
 local CLEAR_BOSS_EMOTES = {}
 
----@class LANGUAGE_LIST_CHANGED : Event
+---@class LANGUAGE_LIST_CHANGED
 local LANGUAGE_LIST_CHANGED = {}
 
----@class QUEST_BOSS_EMOTE : Event
+---@class QUEST_BOSS_EMOTE
 ---@field text string
 ---@field playerName string
 ---@field displayTime number
 ---@field enableBossEmoteWarningSound boolean
 local QUEST_BOSS_EMOTE = {}
 
----@class RAID_BOSS_EMOTE : Event
+---@class RAID_BOSS_EMOTE
 ---@field text string
 ---@field playerName string
 ---@field displayTime number
 ---@field enableBossEmoteWarningSound boolean
 local RAID_BOSS_EMOTE = {}
 
----@class RAID_BOSS_WHISPER : Event
+---@class RAID_BOSS_WHISPER
 ---@field text string
 ---@field playerName string
 ---@field displayTime number
 ---@field enableBossEmoteWarningSound boolean
 local RAID_BOSS_WHISPER = {}
 
----@class RAID_INSTANCE_WELCOME : Event
+---@class RAID_INSTANCE_WELCOME
 ---@field mapname string
 ---@field timeLeft number
 ---@field locked number
 ---@field extended number
 local RAID_INSTANCE_WELCOME = {}
 
----@class UPDATE_CHAT_COLOR : Event
+---@class UPDATE_CHAT_COLOR
 ---@field name string
 ---@field r number
 ---@field g number
 ---@field b number
 local UPDATE_CHAT_COLOR = {}
 
----@class UPDATE_CHAT_COLOR_NAME_BY_CLASS : Event
+---@class UPDATE_CHAT_COLOR_NAME_BY_CLASS
 ---@field name string
 ---@field colorNameByClass boolean
 local UPDATE_CHAT_COLOR_NAME_BY_CLASS = {}
 
----@class UPDATE_CHAT_WINDOWS : Event
+---@class UPDATE_CHAT_WINDOWS
 local UPDATE_CHAT_WINDOWS = {}
 
----@class UPDATE_FLOATING_CHAT_WINDOWS : Event
+---@class UPDATE_FLOATING_CHAT_WINDOWS
 local UPDATE_FLOATING_CHAT_WINDOWS = {}

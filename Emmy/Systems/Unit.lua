@@ -157,62 +157,62 @@ function UnitTreatAsPlayerForDisplay(unit) end
 ---[Documentation](https://wow.gamepedia.com/API_UnitWidgetSet)
 function UnitWidgetSet(unit) end
 
----@class ARENA_COOLDOWNS_UPDATE : Event
+---@class ARENA_COOLDOWNS_UPDATE
 ---@field unitTarget string
 local ARENA_COOLDOWNS_UPDATE = {}
 
----@class ARENA_CROWD_CONTROL_SPELL_UPDATE : Event
+---@class ARENA_CROWD_CONTROL_SPELL_UPDATE
 ---@field unitTarget string
 ---@field spellID number
 local ARENA_CROWD_CONTROL_SPELL_UPDATE = {}
 
----@class AUTOFOLLOW_BEGIN : Event
+---@class AUTOFOLLOW_BEGIN
 ---@field name string
 local AUTOFOLLOW_BEGIN = {}
 
----@class AUTOFOLLOW_END : Event
+---@class AUTOFOLLOW_END
 local AUTOFOLLOW_END = {}
 
----@class CANCEL_SUMMON : Event
+---@class CANCEL_SUMMON
 local CANCEL_SUMMON = {}
 
----@class CONFIRM_BINDER : Event
+---@class CONFIRM_BINDER
 ---@field areaName string
 local CONFIRM_BINDER = {}
 
----@class CONFIRM_SUMMON : Event
+---@class CONFIRM_SUMMON
 ---@field summonReason number
 ---@field skippingStartExperience boolean
 local CONFIRM_SUMMON = {}
 
----@class HEARTHSTONE_BOUND : Event
+---@class HEARTHSTONE_BOUND
 local HEARTHSTONE_BOUND = {}
 
----@class HONOR_XP_UPDATE : Event
+---@class HONOR_XP_UPDATE
 ---@field unitTarget string
 local HONOR_XP_UPDATE = {}
 
----@class INCOMING_RESURRECT_CHANGED : Event
+---@class INCOMING_RESURRECT_CHANGED
 ---@field unitTarget string
 local INCOMING_RESURRECT_CHANGED = {}
 
----@class INCOMING_SUMMON_CHANGED : Event
+---@class INCOMING_SUMMON_CHANGED
 ---@field unitTarget string
 local INCOMING_SUMMON_CHANGED = {}
 
----@class KNOWN_TITLES_UPDATE : Event
+---@class KNOWN_TITLES_UPDATE
 ---@field unitTarget string
 local KNOWN_TITLES_UPDATE = {}
 
----@class LOCALPLAYER_PET_RENAMED : Event
+---@class LOCALPLAYER_PET_RENAMED
 local LOCALPLAYER_PET_RENAMED = {}
 
----@class MIRROR_TIMER_PAUSE : Event
+---@class MIRROR_TIMER_PAUSE
 ---@field timerName string
 ---@field paused number
 local MIRROR_TIMER_PAUSE = {}
 
----@class MIRROR_TIMER_START : Event
+---@class MIRROR_TIMER_START
 ---@field timerName string
 ---@field value number
 ---@field maxValue number
@@ -221,54 +221,54 @@ local MIRROR_TIMER_PAUSE = {}
 ---@field timerLabel string
 local MIRROR_TIMER_START = {}
 
----@class MIRROR_TIMER_STOP : Event
+---@class MIRROR_TIMER_STOP
 ---@field timerName string
 local MIRROR_TIMER_STOP = {}
 
----@class NEUTRAL_FACTION_SELECT_RESULT : Event
+---@class NEUTRAL_FACTION_SELECT_RESULT
 ---@field success boolean
 local NEUTRAL_FACTION_SELECT_RESULT = {}
 
----@class OBJECT_ENTERED_AOI : Event
+---@class OBJECT_ENTERED_AOI
 ---@field guid string
 local OBJECT_ENTERED_AOI = {}
 
----@class OBJECT_LEFT_AOI : Event
+---@class OBJECT_LEFT_AOI
 ---@field guid string
 local OBJECT_LEFT_AOI = {}
 
----@class PET_BAR_UPDATE_USABLE : Event
+---@class PET_BAR_UPDATE_USABLE
 local PET_BAR_UPDATE_USABLE = {}
 
----@class PET_UI_UPDATE : Event
+---@class PET_UI_UPDATE
 local PET_UI_UPDATE = {}
 
----@class PLAYER_DAMAGE_DONE_MODS : Event
+---@class PLAYER_DAMAGE_DONE_MODS
 ---@field unitTarget string
 local PLAYER_DAMAGE_DONE_MODS = {}
 
----@class PLAYER_ENTER_COMBAT : Event
+---@class PLAYER_ENTER_COMBAT
 local PLAYER_ENTER_COMBAT = {}
 
----@class PLAYER_FARSIGHT_FOCUS_CHANGED : Event
+---@class PLAYER_FARSIGHT_FOCUS_CHANGED
 local PLAYER_FARSIGHT_FOCUS_CHANGED = {}
 
----@class PLAYER_FLAGS_CHANGED : Event
+---@class PLAYER_FLAGS_CHANGED
 ---@field unitTarget string
 local PLAYER_FLAGS_CHANGED = {}
 
----@class PLAYER_FOCUS_CHANGED : Event
+---@class PLAYER_FOCUS_CHANGED
 local PLAYER_FOCUS_CHANGED = {}
 
----@class PLAYER_LEAVE_COMBAT : Event
+---@class PLAYER_LEAVE_COMBAT
 local PLAYER_LEAVE_COMBAT = {}
 
----@class PLAYER_LEVEL_CHANGED : Event
+---@class PLAYER_LEVEL_CHANGED
 ---@field oldLevel number
 ---@field newLevel number
 local PLAYER_LEVEL_CHANGED = {}
 
----@class PLAYER_LEVEL_UP : Event
+---@class PLAYER_LEVEL_UP
 ---@field level number
 ---@field healthDelta number
 ---@field powerDelta number
@@ -280,79 +280,79 @@ local PLAYER_LEVEL_CHANGED = {}
 ---@field intellectDelta number
 local PLAYER_LEVEL_UP = {}
 
----@class PLAYER_MOUNT_DISPLAY_CHANGED : Event
+---@class PLAYER_MOUNT_DISPLAY_CHANGED
 local PLAYER_MOUNT_DISPLAY_CHANGED = {}
 
----@class PLAYER_PVP_KILLS_CHANGED : Event
+---@class PLAYER_PVP_KILLS_CHANGED
 ---@field unitTarget string
 local PLAYER_PVP_KILLS_CHANGED = {}
 
----@class PLAYER_PVP_RANK_CHANGED : Event
+---@class PLAYER_PVP_RANK_CHANGED
 ---@field unitTarget string
 local PLAYER_PVP_RANK_CHANGED = {}
 
----@class PLAYER_REGEN_DISABLED : Event
+---@class PLAYER_REGEN_DISABLED
 local PLAYER_REGEN_DISABLED = {}
 
----@class PLAYER_REGEN_ENABLED : Event
+---@class PLAYER_REGEN_ENABLED
 local PLAYER_REGEN_ENABLED = {}
 
----@class PLAYER_SPECIALIZATION_CHANGED : Event
+---@class PLAYER_SPECIALIZATION_CHANGED
 ---@field unitTarget string
 local PLAYER_SPECIALIZATION_CHANGED = {}
 
----@class PLAYER_STARTED_LOOKING : Event
+---@class PLAYER_STARTED_LOOKING
 local PLAYER_STARTED_LOOKING = {}
 
----@class PLAYER_STARTED_MOVING : Event
+---@class PLAYER_STARTED_MOVING
 local PLAYER_STARTED_MOVING = {}
 
----@class PLAYER_STARTED_TURNING : Event
+---@class PLAYER_STARTED_TURNING
 local PLAYER_STARTED_TURNING = {}
 
----@class PLAYER_STOPPED_LOOKING : Event
+---@class PLAYER_STOPPED_LOOKING
 local PLAYER_STOPPED_LOOKING = {}
 
----@class PLAYER_STOPPED_MOVING : Event
+---@class PLAYER_STOPPED_MOVING
 local PLAYER_STOPPED_MOVING = {}
 
----@class PLAYER_STOPPED_TURNING : Event
+---@class PLAYER_STOPPED_TURNING
 local PLAYER_STOPPED_TURNING = {}
 
----@class PLAYER_TARGET_CHANGED : Event
+---@class PLAYER_TARGET_CHANGED
 local PLAYER_TARGET_CHANGED = {}
 
----@class PLAYER_TRIAL_XP_UPDATE : Event
+---@class PLAYER_TRIAL_XP_UPDATE
 ---@field unitTarget string
 local PLAYER_TRIAL_XP_UPDATE = {}
 
----@class PLAYER_UPDATE_RESTING : Event
+---@class PLAYER_UPDATE_RESTING
 local PLAYER_UPDATE_RESTING = {}
 
----@class PLAYER_XP_UPDATE : Event
+---@class PLAYER_XP_UPDATE
 ---@field unitTarget string
 local PLAYER_XP_UPDATE = {}
 
----@class PORTRAITS_UPDATED : Event
+---@class PORTRAITS_UPDATED
 local PORTRAITS_UPDATED = {}
 
----@class PROVING_GROUNDS_SCORE_UPDATE : Event
+---@class PROVING_GROUNDS_SCORE_UPDATE
 ---@field points number
 local PROVING_GROUNDS_SCORE_UPDATE = {}
 
----@class PVP_TIMER_UPDATE : Event
+---@class PVP_TIMER_UPDATE
 ---@field unitTarget string
 local PVP_TIMER_UPDATE = {}
 
----@class RUNE_POWER_UPDATE : Event
+---@class RUNE_POWER_UPDATE
 ---@field runeIndex number
 ---@field added boolean
 local RUNE_POWER_UPDATE = {}
 
----@class SHOW_FACTION_SELECT_UI : Event
+---@class SHOW_FACTION_SELECT_UI
 local SHOW_FACTION_SELECT_UI = {}
 
----@class SPELL_CONFIRMATION_PROMPT : Event
+---@class SPELL_CONFIRMATION_PROMPT
 ---@field spellID number
 ---@field effectValue number
 ---@field message string
@@ -362,39 +362,39 @@ local SHOW_FACTION_SELECT_UI = {}
 ---@field currentDifficulty number
 local SPELL_CONFIRMATION_PROMPT = {}
 
----@class SPELL_CONFIRMATION_TIMEOUT : Event
+---@class SPELL_CONFIRMATION_TIMEOUT
 ---@field spellID number
 ---@field effectValue number
 local SPELL_CONFIRMATION_TIMEOUT = {}
 
----@class UNIT_ABSORB_AMOUNT_CHANGED : Event
+---@class UNIT_ABSORB_AMOUNT_CHANGED
 ---@field unitTarget string
 local UNIT_ABSORB_AMOUNT_CHANGED = {}
 
----@class UNIT_ATTACK : Event
+---@class UNIT_ATTACK
 ---@field unitTarget string
 local UNIT_ATTACK = {}
 
----@class UNIT_ATTACK_POWER : Event
+---@class UNIT_ATTACK_POWER
 ---@field unitTarget string
 local UNIT_ATTACK_POWER = {}
 
----@class UNIT_ATTACK_SPEED : Event
+---@class UNIT_ATTACK_SPEED
 ---@field unitTarget string
 local UNIT_ATTACK_SPEED = {}
 
----@class UNIT_AURA : Event
+---@class UNIT_AURA
 ---@field unitTarget string
 local UNIT_AURA = {}
 
----@class UNIT_CHEAT_TOGGLE_EVENT : Event
+---@class UNIT_CHEAT_TOGGLE_EVENT
 local UNIT_CHEAT_TOGGLE_EVENT = {}
 
----@class UNIT_CLASSIFICATION_CHANGED : Event
+---@class UNIT_CLASSIFICATION_CHANGED
 ---@field unitTarget string
 local UNIT_CLASSIFICATION_CHANGED = {}
 
----@class UNIT_COMBAT : Event
+---@class UNIT_COMBAT
 ---@field unitTarget string
 ---@field event string
 ---@field flagText string
@@ -402,236 +402,236 @@ local UNIT_CLASSIFICATION_CHANGED = {}
 ---@field schoolMask number
 local UNIT_COMBAT = {}
 
----@class UNIT_CONNECTION : Event
+---@class UNIT_CONNECTION
 ---@field unitTarget string
 ---@field isConnected boolean
 local UNIT_CONNECTION = {}
 
----@class UNIT_DAMAGE : Event
+---@class UNIT_DAMAGE
 ---@field unitTarget string
 local UNIT_DAMAGE = {}
 
----@class UNIT_DEFENSE : Event
+---@class UNIT_DEFENSE
 ---@field unitTarget string
 local UNIT_DEFENSE = {}
 
----@class UNIT_DISPLAYPOWER : Event
+---@class UNIT_DISPLAYPOWER
 ---@field unitTarget string
 local UNIT_DISPLAYPOWER = {}
 
----@class UNIT_FACTION : Event
+---@class UNIT_FACTION
 ---@field unitTarget string
 local UNIT_FACTION = {}
 
----@class UNIT_FLAGS : Event
+---@class UNIT_FLAGS
 ---@field unitTarget string
 local UNIT_FLAGS = {}
 
----@class UNIT_HEAL_ABSORB_AMOUNT_CHANGED : Event
+---@class UNIT_HEAL_ABSORB_AMOUNT_CHANGED
 ---@field unitTarget string
 local UNIT_HEAL_ABSORB_AMOUNT_CHANGED = {}
 
----@class UNIT_HEAL_PREDICTION : Event
+---@class UNIT_HEAL_PREDICTION
 ---@field unitTarget string
 local UNIT_HEAL_PREDICTION = {}
 
----@class UNIT_HEALTH : Event
+---@class UNIT_HEALTH
 ---@field unitTarget string
 local UNIT_HEALTH = {}
 
----@class UNIT_HEALTH_FREQUENT : Event
+---@class UNIT_HEALTH_FREQUENT
 ---@field unitTarget string
 local UNIT_HEALTH_FREQUENT = {}
 
----@class UNIT_INVENTORY_CHANGED : Event
+---@class UNIT_INVENTORY_CHANGED
 ---@field unitTarget string
 local UNIT_INVENTORY_CHANGED = {}
 
----@class UNIT_LEVEL : Event
+---@class UNIT_LEVEL
 ---@field unitTarget string
 local UNIT_LEVEL = {}
 
----@class UNIT_MANA : Event
+---@class UNIT_MANA
 ---@field unitTarget string
 local UNIT_MANA = {}
 
----@class UNIT_MAXHEALTH : Event
+---@class UNIT_MAXHEALTH
 ---@field unitTarget string
 local UNIT_MAXHEALTH = {}
 
----@class UNIT_MAXPOWER : Event
+---@class UNIT_MAXPOWER
 ---@field unitTarget string
 ---@field powerType string
 local UNIT_MAXPOWER = {}
 
----@class UNIT_MODEL_CHANGED : Event
+---@class UNIT_MODEL_CHANGED
 ---@field unitTarget string
 local UNIT_MODEL_CHANGED = {}
 
----@class UNIT_NAME_UPDATE : Event
+---@class UNIT_NAME_UPDATE
 ---@field unitTarget string
 local UNIT_NAME_UPDATE = {}
 
----@class UNIT_OTHER_PARTY_CHANGED : Event
+---@class UNIT_OTHER_PARTY_CHANGED
 ---@field unitTarget string
 local UNIT_OTHER_PARTY_CHANGED = {}
 
----@class UNIT_PET : Event
+---@class UNIT_PET
 ---@field unitTarget string
 local UNIT_PET = {}
 
----@class UNIT_PET_EXPERIENCE : Event
+---@class UNIT_PET_EXPERIENCE
 ---@field unitTarget string
 local UNIT_PET_EXPERIENCE = {}
 
----@class UNIT_PHASE : Event
+---@class UNIT_PHASE
 ---@field unitTarget string
 local UNIT_PHASE = {}
 
----@class UNIT_PORTRAIT_UPDATE : Event
+---@class UNIT_PORTRAIT_UPDATE
 ---@field unitTarget string
 local UNIT_PORTRAIT_UPDATE = {}
 
----@class UNIT_POWER_BAR_HIDE : Event
+---@class UNIT_POWER_BAR_HIDE
 ---@field unitTarget string
 local UNIT_POWER_BAR_HIDE = {}
 
----@class UNIT_POWER_BAR_SHOW : Event
+---@class UNIT_POWER_BAR_SHOW
 ---@field unitTarget string
 local UNIT_POWER_BAR_SHOW = {}
 
----@class UNIT_POWER_BAR_TIMER_UPDATE : Event
+---@class UNIT_POWER_BAR_TIMER_UPDATE
 ---@field unitTarget string
 local UNIT_POWER_BAR_TIMER_UPDATE = {}
 
----@class UNIT_POWER_FREQUENT : Event
+---@class UNIT_POWER_FREQUENT
 ---@field unitTarget string
 ---@field powerType string
 local UNIT_POWER_FREQUENT = {}
 
----@class UNIT_POWER_UPDATE : Event
+---@class UNIT_POWER_UPDATE
 ---@field unitTarget string
 ---@field powerType string
 local UNIT_POWER_UPDATE = {}
 
----@class UNIT_QUEST_LOG_CHANGED : Event
+---@class UNIT_QUEST_LOG_CHANGED
 ---@field unitTarget string
 local UNIT_QUEST_LOG_CHANGED = {}
 
----@class UNIT_RANGED_ATTACK_POWER : Event
+---@class UNIT_RANGED_ATTACK_POWER
 ---@field unitTarget string
 local UNIT_RANGED_ATTACK_POWER = {}
 
----@class UNIT_RANGEDDAMAGE : Event
+---@class UNIT_RANGEDDAMAGE
 ---@field unitTarget string
 local UNIT_RANGEDDAMAGE = {}
 
----@class UNIT_RESISTANCES : Event
+---@class UNIT_RESISTANCES
 ---@field unitTarget string
 local UNIT_RESISTANCES = {}
 
----@class UNIT_SPELL_HASTE : Event
+---@class UNIT_SPELL_HASTE
 ---@field unitTarget string
 local UNIT_SPELL_HASTE = {}
 
----@class UNIT_SPELLCAST_CHANNEL_START : Event
+---@class UNIT_SPELLCAST_CHANNEL_START
 ---@field unitTarget string
 ---@field castGUID string
 ---@field spellID number
 local UNIT_SPELLCAST_CHANNEL_START = {}
 
----@class UNIT_SPELLCAST_CHANNEL_STOP : Event
+---@class UNIT_SPELLCAST_CHANNEL_STOP
 ---@field unitTarget string
 ---@field castGUID string
 ---@field spellID number
 local UNIT_SPELLCAST_CHANNEL_STOP = {}
 
----@class UNIT_SPELLCAST_CHANNEL_UPDATE : Event
+---@class UNIT_SPELLCAST_CHANNEL_UPDATE
 ---@field unitTarget string
 ---@field castGUID string
 ---@field spellID number
 local UNIT_SPELLCAST_CHANNEL_UPDATE = {}
 
----@class UNIT_SPELLCAST_DELAYED : Event
+---@class UNIT_SPELLCAST_DELAYED
 ---@field unitTarget string
 ---@field castGUID string
 ---@field spellID number
 local UNIT_SPELLCAST_DELAYED = {}
 
----@class UNIT_SPELLCAST_FAILED : Event
+---@class UNIT_SPELLCAST_FAILED
 ---@field unitTarget string
 ---@field castGUID string
 ---@field spellID number
 local UNIT_SPELLCAST_FAILED = {}
 
----@class UNIT_SPELLCAST_FAILED_QUIET : Event
+---@class UNIT_SPELLCAST_FAILED_QUIET
 ---@field unitTarget string
 ---@field castGUID string
 ---@field spellID number
 local UNIT_SPELLCAST_FAILED_QUIET = {}
 
----@class UNIT_SPELLCAST_INTERRUPTED : Event
+---@class UNIT_SPELLCAST_INTERRUPTED
 ---@field unitTarget string
 ---@field castGUID string
 ---@field spellID number
 local UNIT_SPELLCAST_INTERRUPTED = {}
 
----@class UNIT_SPELLCAST_INTERRUPTIBLE : Event
+---@class UNIT_SPELLCAST_INTERRUPTIBLE
 ---@field unitTarget string
 local UNIT_SPELLCAST_INTERRUPTIBLE = {}
 
----@class UNIT_SPELLCAST_NOT_INTERRUPTIBLE : Event
+---@class UNIT_SPELLCAST_NOT_INTERRUPTIBLE
 ---@field unitTarget string
 local UNIT_SPELLCAST_NOT_INTERRUPTIBLE = {}
 
----@class UNIT_SPELLCAST_START : Event
+---@class UNIT_SPELLCAST_START
 ---@field unitTarget string
 ---@field castGUID string
 ---@field spellID number
 local UNIT_SPELLCAST_START = {}
 
----@class UNIT_SPELLCAST_STOP : Event
+---@class UNIT_SPELLCAST_STOP
 ---@field unitTarget string
 ---@field castGUID string
 ---@field spellID number
 local UNIT_SPELLCAST_STOP = {}
 
----@class UNIT_SPELLCAST_SUCCEEDED : Event
+---@class UNIT_SPELLCAST_SUCCEEDED
 ---@field unitTarget string
 ---@field castGUID string
 ---@field spellID number
 local UNIT_SPELLCAST_SUCCEEDED = {}
 
----@class UNIT_STATS : Event
+---@class UNIT_STATS
 ---@field unitTarget string
 local UNIT_STATS = {}
 
----@class UNIT_TARGET : Event
+---@class UNIT_TARGET
 ---@field unitTarget string
 local UNIT_TARGET = {}
 
----@class UNIT_TARGETABLE_CHANGED : Event
+---@class UNIT_TARGETABLE_CHANGED
 ---@field unitTarget string
 local UNIT_TARGETABLE_CHANGED = {}
 
----@class UNIT_THREAT_LIST_UPDATE : Event
+---@class UNIT_THREAT_LIST_UPDATE
 ---@field unitTarget string
 local UNIT_THREAT_LIST_UPDATE = {}
 
----@class UNIT_THREAT_SITUATION_UPDATE : Event
+---@class UNIT_THREAT_SITUATION_UPDATE
 ---@field unitTarget string
 local UNIT_THREAT_SITUATION_UPDATE = {}
 
----@class UPDATE_EXHAUSTION : Event
+---@class UPDATE_EXHAUSTION
 local UPDATE_EXHAUSTION = {}
 
----@class UPDATE_MOUSEOVER_UNIT : Event
+---@class UPDATE_MOUSEOVER_UNIT
 local UPDATE_MOUSEOVER_UNIT = {}
 
----@class UPDATE_STEALTH : Event
+---@class UPDATE_STEALTH
 local UPDATE_STEALTH = {}
 
----@class VEHICLE_ANGLE_UPDATE : Event
+---@class VEHICLE_ANGLE_UPDATE
 ---@field normalizedPitch number
 ---@field radians number
 local VEHICLE_ANGLE_UPDATE = {}

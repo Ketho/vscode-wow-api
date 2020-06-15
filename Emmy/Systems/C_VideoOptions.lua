@@ -4,19 +4,19 @@ C_VideoOptions = {}
 ---[Documentation](https://wow.gamepedia.com/API_C_VideoOptions.GetGxAdapterInfo)
 function C_VideoOptions.GetGxAdapterInfo() end
 
----@class DISPLAY_SIZE_CHANGED : Event
+---@class DISPLAY_SIZE_CHANGED
 local DISPLAY_SIZE_CHANGED = {}
 
----@class GLUE_SCREENSHOT_FAILED : Event
+---@class GLUE_SCREENSHOT_FAILED
 local GLUE_SCREENSHOT_FAILED = {}
 
----@class SCREENSHOT_FAILED : Event
+---@class SCREENSHOT_FAILED
 local SCREENSHOT_FAILED = {}
 
----@class SCREENSHOT_STARTED : Event
+---@class SCREENSHOT_STARTED
 local SCREENSHOT_STARTED = {}
 
----@class SCREENSHOT_SUCCEEDED : Event
+---@class SCREENSHOT_SUCCEEDED
 local SCREENSHOT_SUCCEEDED = {}
 
 ---@class GxAdapterInfoDetails

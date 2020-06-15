@@ -1,352 +1,236 @@
 Enum = {
 	---@type AuctionHouseCommoditySortOrder
 	AuctionHouseCommoditySortOrder = {},
-
 	---@type AuctionHouseFilter
 	AuctionHouseFilter = {},
-
 	---@type AuctionHouseFilterCategory
 	AuctionHouseFilterCategory = {},
-
 	---@type AuctionHouseItemSortOrder
 	AuctionHouseItemSortOrder = {},
-
 	---@type AuctionHouseSortOrder
 	AuctionHouseSortOrder = {},
-
 	---@type AuctionHouseTimeLeftBand
 	AuctionHouseTimeLeftBand = {},
-
 	---@type AuctionStatus
 	AuctionStatus = {},
-
 	---@type AzeriteEssence
 	AzeriteEssence = {},
-
 	---@type AzeritePowerLevel
 	AzeritePowerLevel = {},
-
 	---@type BrawlType
 	BrawlType = {},
-
 	---@type CalendarCommandType
 	CalendarCommandType = {},
-
 	---@type CalendarErrorType
 	CalendarErrorType = {},
-
 	---@type CalendarEventBits
 	CalendarEventBits = {},
-
 	---@type CalendarEventRepeatOptions
 	CalendarEventRepeatOptions = {},
-
 	---@type CalendarEventType
 	CalendarEventType = {},
-
 	---@type CalendarFilterFlags
 	CalendarFilterFlags = {},
-
 	---@type CalendarGetEventType
 	CalendarGetEventType = {},
-
 	---@type CalendarHolidayFilterType
 	CalendarHolidayFilterType = {},
-
 	---@type CalendarInviteBits
 	CalendarInviteBits = {},
-
 	---@type CalendarInviteSortType
 	CalendarInviteSortType = {},
-
 	---@type CalendarInviteType
 	CalendarInviteType = {},
-
 	---@type CalendarModeratorStatus
 	CalendarModeratorStatus = {},
-
 	---@type CalendarStatus
 	CalendarStatus = {},
-
 	---@type CalendarType
 	CalendarType = {},
-
 	---@type CalendarWebActionType
 	CalendarWebActionType = {},
-
 	---@type CaptureBarWidgetFillDirectionType
 	CaptureBarWidgetFillDirectionType = {},
-
 	---@type CaptureBarWidgetGlowAnimType
 	CaptureBarWidgetGlowAnimType = {},
-
 	---@type CharacterServiceInfoFlag
 	CharacterServiceInfoFlag = {},
-
 	---@type ChatChannelType
 	ChatChannelType = {},
-
 	---@type ClubActionType
 	ClubActionType = {},
-
 	---@type ClubErrorType
 	ClubErrorType = {},
-
 	---@type ClubFieldType
 	ClubFieldType = {},
-
 	---@type ClubFinderApplicationUpdateType
 	ClubFinderApplicationUpdateType = {},
-
 	---@type ClubFinderClubPostingStatusFlags
 	ClubFinderClubPostingStatusFlags = {},
-
 	---@type ClubFinderDisableReason
 	ClubFinderDisableReason = {},
-
 	---@type ClubFinderPostingReportType
 	ClubFinderPostingReportType = {},
-
 	---@type ClubFinderRequestType
 	ClubFinderRequestType = {},
-
 	---@type ClubFinderSettingFlags
 	ClubFinderSettingFlags = {},
-
 	---@type ClubInvitationCandidateStatus
 	ClubInvitationCandidateStatus = {},
-
 	---@type ClubMemberPresence
 	ClubMemberPresence = {},
-
 	---@type ClubRemovedReason
 	ClubRemovedReason = {},
-
 	---@type ClubRestrictionReason
 	ClubRestrictionReason = {},
-
 	---@type ClubRoleIdentifier
 	ClubRoleIdentifier = {},
-
 	---@type ClubStreamNotificationFilter
 	ClubStreamNotificationFilter = {},
-
 	---@type ClubStreamType
 	ClubStreamType = {},
-
 	---@type ClubType
 	ClubType = {},
-
 	---@type CommunicationMode
 	CommunicationMode = {},
-
 	---@type ConsoleCategory
 	ConsoleCategory = {},
-
 	---@type ConsoleColorType
 	ConsoleColorType = {},
-
 	---@type ConsoleCommandType
 	ConsoleCommandType = {},
-
 	---@type ContributionAppearanceFlags
 	ContributionAppearanceFlags = {},
-
 	---@type ContributionResult
 	ContributionResult = {},
-
 	---@type ContributionState
 	ContributionState = {},
-
 	---@type CustomBindingType
 	CustomBindingType = {},
-
 	---@type FlightPathFaction
 	FlightPathFaction = {},
-
 	---@type FlightPathState
 	FlightPathState = {},
-
 	---@type GarrTalentResearchCostSource
 	GarrTalentResearchCostSource = {},
-
 	---@type GarrTalentTreeType
 	GarrTalentTreeType = {},
-
 	---@type GarrTalentType
 	GarrTalentType = {},
-
 	---@type HolidayFlags
 	HolidayFlags = {},
-
 	---@type IconAndTextWidgetState
 	IconAndTextWidgetState = {},
-
 	---@type IconState
 	IconState = {},
-
 	---@type InventoryType
 	InventoryType = {},
-
 	---@type ItemCommodityStatus
 	ItemCommodityStatus = {},
-
 	---@type ItemInteractionFrameType
 	ItemInteractionFrameType = {},
-
 	---@type ItemQuality
 	ItemQuality = {},
-
 	---@type ItemTryOnReason
 	ItemTryOnReason = {},
-
 	---@type ManipulatorEventType
 	ManipulatorEventType = {},
-
 	---@type MapCanvasPosition
 	MapCanvasPosition = {},
-
 	---@type ModelSceneSetting
 	ModelSceneSetting = {},
-
 	---@type ModelSceneType
 	ModelSceneType = {},
-
 	---@type PartyRequestJoinRelation
 	PartyRequestJoinRelation = {},
-
 	---@type PetJournalError
 	PetJournalError = {},
-
 	---@type PlayerClubRequestStatus
 	PlayerClubRequestStatus = {},
-
 	---@type PowerType
 	PowerType = {},
-
 	---@type PvpMatchState
 	PvpMatchState = {},
-
 	---@type PvpUnitClassification
 	PvpUnitClassification = {},
-
 	---@type QuestLineFloorLocation
 	QuestLineFloorLocation = {},
-
 	---@type QuestSessionCommand
 	QuestSessionCommand = {},
-
 	---@type QuestSessionResult
 	QuestSessionResult = {},
-
 	---@type QuestTag
 	QuestTag = {},
-
 	---@type RafLinkType
 	RafLinkType = {},
-
 	---@type RafRecruitActivityState
 	RafRecruitActivityState = {},
-
 	---@type RafRecruitSubStatus
 	RafRecruitSubStatus = {},
-
 	---@type RafRewardType
 	RafRewardType = {},
-
 	---@type SelfResurrectOptionType
 	SelfResurrectOptionType = {},
-
 	---@type SpellDisplayIconDisplayType
 	SpellDisplayIconDisplayType = {},
-
 	---@type SpellDisplayIconSizeType
 	SpellDisplayIconSizeType = {},
-
 	---@type StatusBarOverrideBarTextShownType
 	StatusBarOverrideBarTextShownType = {},
-
 	---@type StatusBarValueTextType
 	StatusBarValueTextType = {},
-
 	---@type SummonStatus
 	SummonStatus = {},
-
 	---@type TooltipSide
 	TooltipSide = {},
-
 	---@type TooltipTextureAnchor
 	TooltipTextureAnchor = {},
-
 	---@type TooltipTextureRelativeRegion
 	TooltipTextureRelativeRegion = {},
-
 	---@type TrackedSpellCategory
 	TrackedSpellCategory = {},
-
 	---@type TransmogSource
 	TransmogSource = {},
-
 	---@type UIMapSystem
 	UIMapSystem = {},
-
 	---@type UIMapType
 	UIMapType = {},
-
 	---@type UIWidgetTextSizeType
 	UIWidgetTextSizeType = {},
-
 	---@type UIWidgetVisualizationType
 	UIWidgetVisualizationType = {},
-
 	---@type UiwIdgetFlag
 	UiwIdgetFlag = {},
-
 	---@type ValidateNameResult
 	ValidateNameResult = {},
-
 	---@type VasPurchaseProgress
 	VasPurchaseProgress = {},
-
 	---@type VignetteType
 	VignetteType = {},
-
 	---@type VoiceChatStatusCode
 	VoiceChatStatusCode = {},
-
 	---@type WidgetAnimationType
 	WidgetAnimationType = {},
-
 	---@type WidgetCurrencyClass
 	WidgetCurrencyClass = {},
-
 	---@type WidgetEnabledState
 	WidgetEnabledState = {},
-
 	---@type WidgetShownState
 	WidgetShownState = {},
-
 	---@type WoWEntitlementType
 	WoWEntitlementType = {},
-
 	---@type ZoneAbilityType
 	ZoneAbilityType = {},
-
 	---@type ZoneControlActiveState
 	ZoneControlActiveState = {},
-
 	---@type ZoneControlDangerFlashType
 	ZoneControlDangerFlashType = {},
-
 	---@type ZoneControlFillType
 	ZoneControlFillType = {},
-
 	---@type ZoneControlLeadingEdgeType
 	ZoneControlLeadingEdgeType = {},
-
 	---@type ZoneControlMode
 	ZoneControlMode = {},
-
 	---@type ZoneControlState
 	ZoneControlState = {},
 

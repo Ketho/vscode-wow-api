@@ -538,22 +538,22 @@ function C_Commentator.ZoomIn() end
 ---[Documentation](https://wow.gamepedia.com/API_C_Commentator.ZoomOut)
 function C_Commentator.ZoomOut() end
 
----@class COMMENTATOR_ENTER_WORLD : Event
+---@class COMMENTATOR_ENTER_WORLD
 local COMMENTATOR_ENTER_WORLD = {}
 
----@class COMMENTATOR_IMMEDIATE_FOV_UPDATE : Event
+---@class COMMENTATOR_IMMEDIATE_FOV_UPDATE
 ---@field fov number
 local COMMENTATOR_IMMEDIATE_FOV_UPDATE = {}
 
----@class COMMENTATOR_MAP_UPDATE : Event
+---@class COMMENTATOR_MAP_UPDATE
 local COMMENTATOR_MAP_UPDATE = {}
 
----@class COMMENTATOR_PLAYER_NAME_OVERRIDE_UPDATE : Event
+---@class COMMENTATOR_PLAYER_NAME_OVERRIDE_UPDATE
 ---@field nameToOverride string
 ---@field overrideName string
 local COMMENTATOR_PLAYER_NAME_OVERRIDE_UPDATE = {}
 
----@class COMMENTATOR_PLAYER_UPDATE : Event
+---@class COMMENTATOR_PLAYER_UPDATE
 local COMMENTATOR_PLAYER_UPDATE = {}
 
 ---@class TrackedSpellCategory

@@ -5,12 +5,12 @@ C_KeyBindings = {}
 ---[Documentation](https://wow.gamepedia.com/API_C_KeyBindings.GetCustomBindingType)
 function C_KeyBindings.GetCustomBindingType(bindingIndex) end
 
----@class MODIFIER_STATE_CHANGED : Event
+---@class MODIFIER_STATE_CHANGED
 ---@field key string
 ---@field down number
 local MODIFIER_STATE_CHANGED = {}
 
----@class UPDATE_BINDINGS : Event
+---@class UPDATE_BINDINGS
 local UPDATE_BINDINGS = {}
 
 ---@class CustomBindingType

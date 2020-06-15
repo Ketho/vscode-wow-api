@@ -1,18 +1,18 @@
 C_SpellActivationOverlay = {}
 
----@class SPELL_ACTIVATION_OVERLAY_GLOW_HIDE : Event
+---@class SPELL_ACTIVATION_OVERLAY_GLOW_HIDE
 ---@field spellID number
 local SPELL_ACTIVATION_OVERLAY_GLOW_HIDE = {}
 
----@class SPELL_ACTIVATION_OVERLAY_GLOW_SHOW : Event
+---@class SPELL_ACTIVATION_OVERLAY_GLOW_SHOW
 ---@field spellID number
 local SPELL_ACTIVATION_OVERLAY_GLOW_SHOW = {}
 
----@class SPELL_ACTIVATION_OVERLAY_HIDE : Event
+---@class SPELL_ACTIVATION_OVERLAY_HIDE
 ---@field spellID number
 local SPELL_ACTIVATION_OVERLAY_HIDE = {}
 
----@class SPELL_ACTIVATION_OVERLAY_SHOW : Event
+---@class SPELL_ACTIVATION_OVERLAY_SHOW
 ---@field spellID number
 ---@field overlayFileDataID number
 ---@field locationName string

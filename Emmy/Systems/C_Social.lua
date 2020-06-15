@@ -60,20 +60,20 @@ function C_Social.TwitterGetMSTillCanPost() end
 ---Not allowed to be called by addons
 function C_Social.TwitterPostMessage(message) end
 
----@class SOCIAL_ITEM_RECEIVED : Event
+---@class SOCIAL_ITEM_RECEIVED
 local SOCIAL_ITEM_RECEIVED = {}
 
----@class TWITTER_LINK_RESULT : Event
+---@class TWITTER_LINK_RESULT
 ---@field isLinked boolean
 ---@field screenName string
 ---@field error string
 local TWITTER_LINK_RESULT = {}
 
----@class TWITTER_POST_RESULT : Event
+---@class TWITTER_POST_RESULT
 ---@field result number
 local TWITTER_POST_RESULT = {}
 
----@class TWITTER_STATUS_UPDATE : Event
+---@class TWITTER_STATUS_UPDATE
 ---@field isTwitterEnabled boolean
 ---@field isLinked boolean
 ---@field screenName string

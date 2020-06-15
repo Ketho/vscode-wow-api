@@ -10,15 +10,15 @@ function C_MerchantFrame.GetBuybackItemID(buybackSlotIndex) end
 ---[Documentation](https://wow.gamepedia.com/API_C_MerchantFrame.IsMerchantItemRefundable)
 function C_MerchantFrame.IsMerchantItemRefundable(index) end
 
----@class MERCHANT_CLOSED : Event
+---@class MERCHANT_CLOSED
 local MERCHANT_CLOSED = {}
 
----@class MERCHANT_FILTER_ITEM_UPDATE : Event
+---@class MERCHANT_FILTER_ITEM_UPDATE
 ---@field itemID number
 local MERCHANT_FILTER_ITEM_UPDATE = {}
 
----@class MERCHANT_SHOW : Event
+---@class MERCHANT_SHOW
 local MERCHANT_SHOW = {}
 
----@class MERCHANT_UPDATE : Event
+---@class MERCHANT_UPDATE
 local MERCHANT_UPDATE = {}

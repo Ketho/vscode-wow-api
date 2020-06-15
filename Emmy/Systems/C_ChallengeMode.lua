@@ -95,33 +95,33 @@ function C_ChallengeMode.SlotKeystone() end
 ---[Documentation](https://wow.gamepedia.com/API_C_ChallengeMode.StartChallengeMode)
 function C_ChallengeMode.StartChallengeMode() end
 
----@class CHALLENGE_MODE_COMPLETED : Event
+---@class CHALLENGE_MODE_COMPLETED
 local CHALLENGE_MODE_COMPLETED = {}
 
----@class CHALLENGE_MODE_DEATH_COUNT_UPDATED : Event
+---@class CHALLENGE_MODE_DEATH_COUNT_UPDATED
 local CHALLENGE_MODE_DEATH_COUNT_UPDATED = {}
 
----@class CHALLENGE_MODE_KEYSTONE_RECEPTABLE_OPEN : Event
+---@class CHALLENGE_MODE_KEYSTONE_RECEPTABLE_OPEN
 local CHALLENGE_MODE_KEYSTONE_RECEPTABLE_OPEN = {}
 
----@class CHALLENGE_MODE_KEYSTONE_SLOTTED : Event
+---@class CHALLENGE_MODE_KEYSTONE_SLOTTED
 ---@field keystoneID number
 local CHALLENGE_MODE_KEYSTONE_SLOTTED = {}
 
----@class CHALLENGE_MODE_LEADERS_UPDATE : Event
+---@class CHALLENGE_MODE_LEADERS_UPDATE
 local CHALLENGE_MODE_LEADERS_UPDATE = {}
 
----@class CHALLENGE_MODE_MAPS_UPDATE : Event
+---@class CHALLENGE_MODE_MAPS_UPDATE
 local CHALLENGE_MODE_MAPS_UPDATE = {}
 
----@class CHALLENGE_MODE_MEMBER_INFO_UPDATED : Event
+---@class CHALLENGE_MODE_MEMBER_INFO_UPDATED
 local CHALLENGE_MODE_MEMBER_INFO_UPDATED = {}
 
----@class CHALLENGE_MODE_RESET : Event
+---@class CHALLENGE_MODE_RESET
 ---@field mapID number
 local CHALLENGE_MODE_RESET = {}
 
----@class CHALLENGE_MODE_START : Event
+---@class CHALLENGE_MODE_START
 ---@field mapID number
 local CHALLENGE_MODE_START = {}
 
