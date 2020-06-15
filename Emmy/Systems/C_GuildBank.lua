@@ -1,0 +1,33 @@
+C_GuildBank = {}
+
+---@class GUILDBANK_ITEM_LOCK_CHANGED : Event
+local GUILDBANK_ITEM_LOCK_CHANGED = {}
+
+---@class GUILDBANK_TEXT_CHANGED : Event
+---@field guildBankTab number
+local GUILDBANK_TEXT_CHANGED = {}
+
+---@class GUILDBANK_UPDATE_MONEY : Event
+local GUILDBANK_UPDATE_MONEY = {}
+
+---@class GUILDBANK_UPDATE_TABS : Event
+local GUILDBANK_UPDATE_TABS = {}
+
+---@class GUILDBANK_UPDATE_TEXT : Event
+---@field guildBankTab number
+local GUILDBANK_UPDATE_TEXT = {}
+
+---@class GUILDBANK_UPDATE_WITHDRAWMONEY : Event
+local GUILDBANK_UPDATE_WITHDRAWMONEY = {}
+
+---@class GUILDBANKBAGSLOTS_CHANGED : Event
+local GUILDBANKBAGSLOTS_CHANGED = {}
+
+---@class GUILDBANKFRAME_CLOSED : Event
+local GUILDBANKFRAME_CLOSED = {}
+
+---@class GUILDBANKFRAME_OPENED : Event
+local GUILDBANKFRAME_OPENED = {}
+
+---@class GUILDBANKLOG_UPDATE : Event
+local GUILDBANKLOG_UPDATE = {}

@@ -12,6 +12,7 @@ function Emmy:GetTable(apiTable)
 			tinsert(tbl, self:GetField("field", field))
 		end
 		tinsert(tbl, format("local %s = {}", apiTable.Name))
+	-- elseif apiTable.Type == "Constants" then
 	end
 	return table.concat(tbl, "\n")
 end

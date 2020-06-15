@@ -1,0 +1,7 @@
+C_ClassTrial = {}
+
+---@class CLASS_TRIAL_TIMER_START : Event
+local CLASS_TRIAL_TIMER_START = {}
+
+---@class CLASS_TRIAL_UPGRADE_COMPLETE : Event
+local CLASS_TRIAL_UPGRADE_COMPLETE = {}

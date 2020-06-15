@@ -1,0 +1,4 @@
+C_CompactUnitFrames = {}
+
+---@class COMPACT_UNIT_FRAME_PROFILES_LOADED : Event
+local COMPACT_UNIT_FRAME_PROFILES_LOADED = {}

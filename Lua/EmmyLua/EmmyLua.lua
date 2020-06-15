@@ -12,7 +12,8 @@ function Emmy:GetSystem(system)
 	local tbl = {}
 	local functions = system.Functions
 	local tables = system.Tables
-	if (functions and #functions > 0) or (tables and #tables > 0) then
+	local events = system.Events
+	if (functions and #functions > 0) or (tables and #tables > 0) or (events and #events > 0) then
 		tinsert(tbl, format("%s = {}", system.Namespace or system.Name))
 		for _, func in pairs(system.Functions) do
 			tinsert(tbl, self:GetFunction(func))
