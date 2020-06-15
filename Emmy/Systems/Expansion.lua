@@ -69,7 +69,7 @@ function IsVeteranTrialAccount() end
 ---@class ExpansionDisplayInfo
 ---@field logo number
 ---@field banner string
----@field features table
+---@field features ExpansionDisplayInfoFeature[]
 local ExpansionDisplayInfo = {}
 
 ---@class ExpansionDisplayInfoFeature

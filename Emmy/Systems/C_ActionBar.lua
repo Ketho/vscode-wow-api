@@ -1,22 +1,22 @@
 C_ActionBar = {}
 
 ---@param flyoutID number
----@return table slots
+---@return number[] slots
 ---[Documentation](https://wow.gamepedia.com/API_C_ActionBar.FindFlyoutActionButtons)
 function C_ActionBar.FindFlyoutActionButtons(flyoutID) end
 
 ---@param petActionID number
----@return table slots
+---@return number[] slots
 ---[Documentation](https://wow.gamepedia.com/API_C_ActionBar.FindPetActionButtons)
 function C_ActionBar.FindPetActionButtons(petActionID) end
 
 ---@param spellID number
----@return table slots
+---@return number[] slots
 ---[Documentation](https://wow.gamepedia.com/API_C_ActionBar.FindSpellActionButtons)
 function C_ActionBar.FindSpellActionButtons(spellID) end
 
 ---@param petActionID number
----@return table slots
+---@return number[] slots
 ---[Documentation](https://wow.gamepedia.com/API_C_ActionBar.GetPetActionPetBarIndices)
 function C_ActionBar.GetPetActionPetBarIndices(petActionID) end
 

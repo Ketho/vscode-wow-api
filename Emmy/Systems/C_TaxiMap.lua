@@ -1,12 +1,12 @@
 C_TaxiMap = {}
 
 ---@param uiMapID number
----@return table taxiNodes
+---@return TaxiNodeInfo[] taxiNodes
 ---[Documentation](https://wow.gamepedia.com/API_C_TaxiMap.GetAllTaxiNodes)
 function C_TaxiMap.GetAllTaxiNodes(uiMapID) end
 
 ---@param uiMapID number
----@return table mapTaxiNodes
+---@return MapTaxiNodeInfo[] mapTaxiNodes
 ---[Documentation](https://wow.gamepedia.com/API_C_TaxiMap.GetTaxiNodesForMap)
 function C_TaxiMap.GetTaxiNodesForMap(uiMapID) end
 
@@ -31,7 +31,7 @@ local FlightPathState = {
 
 ---@class MapTaxiNodeInfo
 ---@field nodeID number
----@field position table
+---@field position Vector2DMixin
 ---@field name string
 ---@field atlasName string
 ---@field faction FlightPathFaction
@@ -40,7 +40,7 @@ local MapTaxiNodeInfo = {}
 
 ---@class TaxiNodeInfo
 ---@field nodeID number
----@field position table
+---@field position Vector2DMixin
 ---@field name string
 ---@field state FlightPathState
 ---@field slotIndex number

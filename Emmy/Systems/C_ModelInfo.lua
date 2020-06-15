@@ -35,8 +35,8 @@ function C_ModelInfo.GetModelSceneCameraInfoByID(modelSceneCameraID) end
 
 ---@param modelSceneID number
 ---@return ModelSceneType modelSceneType
----@return table modelCameraIDs
----@return table modelActorsIDs
+---@return number[] modelCameraIDs
+---@return number[] modelActorsIDs
 ---[Documentation](https://wow.gamepedia.com/API_C_ModelInfo.GetModelSceneInfoByID)
 function C_ModelInfo.GetModelSceneInfoByID(modelSceneID) end
 
@@ -88,7 +88,7 @@ local UIModelSceneActorDisplayInfo = {}
 ---@class UIModelSceneActorInfo
 ---@field modelActorID number
 ---@field scriptTag string
----@field position table
+---@field position Vector3DMixin
 ---@field yaw number
 ---@field pitch number
 ---@field roll number
@@ -103,14 +103,14 @@ local UIModelSceneActorInfo = {}
 ---@field modelSceneCameraID number
 ---@field scriptTag string
 ---@field cameraType string
----@field target table
+---@field target Vector3DMixin
 ---@field yaw number
 ---@field pitch number
 ---@field roll number
 ---@field zoomDistance number
 ---@field minZoomDistance number
 ---@field maxZoomDistance number
----@field zoomedTargetOffset table
+---@field zoomedTargetOffset Vector3DMixin
 ---@field zoomedYawOffset number
 ---@field zoomedPitchOffset number
 ---@field zoomedRollOffset number

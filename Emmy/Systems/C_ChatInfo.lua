@@ -10,7 +10,7 @@ C_ChatInfo = {}
 function C_ChatInfo.GetChannelRosterInfo(channelIndex, rosterIndex) end
 
 ---@param clubID string
----@return table ids
+---@return string[] ids
 ---[Documentation](https://wow.gamepedia.com/API_C_ChatInfo.GetClubStreamIDs)
 function C_ChatInfo.GetClubStreamIDs(clubID) end
 
@@ -18,7 +18,7 @@ function C_ChatInfo.GetClubStreamIDs(clubID) end
 ---[Documentation](https://wow.gamepedia.com/API_C_ChatInfo.GetNumActiveChannels)
 function C_ChatInfo.GetNumActiveChannels() end
 
----@return table registeredPrefixes
+---@return string[] registeredPrefixes
 ---[Documentation](https://wow.gamepedia.com/API_C_ChatInfo.GetRegisteredAddonMessagePrefixes)
 function C_ChatInfo.GetRegisteredAddonMessagePrefixes() end
 

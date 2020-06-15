@@ -11,7 +11,7 @@ function C_ConfigurationWarnings.GetConfigurationWarningSeen(configurationWarnin
 function C_ConfigurationWarnings.GetConfigurationWarningString(configurationWarning) end
 
 ---@param includeSeenWarnings boolean
----@return table configurationWarnings
+---@return ConfigurationWarning[] configurationWarnings
 ---[Documentation](https://wow.gamepedia.com/API_C_ConfigurationWarnings.GetConfigurationWarnings)
 function C_ConfigurationWarnings.GetConfigurationWarnings(includeSeenWarnings) end
 

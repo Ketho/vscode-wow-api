@@ -220,11 +220,11 @@ function C_ArtifactUI.GetPowerHyperlink(powerID) end
 function C_ArtifactUI.GetPowerInfo(powerID) end
 
 ---@param powerID number
----@return table linkingPowerID
+---@return number[] linkingPowerID
 ---[Documentation](https://wow.gamepedia.com/API_C_ArtifactUI.GetPowerLinks)
 function C_ArtifactUI.GetPowerLinks(powerID) end
 
----@return table powerID
+---@return number[] powerID
 ---[Documentation](https://wow.gamepedia.com/API_C_ArtifactUI.GetPowers)
 function C_ArtifactUI.GetPowers() end
 
@@ -356,9 +356,9 @@ function C_ArtifactUI.ShouldSuppressForgeRotation() end
 ---@class ArtifactArtInfo
 ---@field textureKit string
 ---@field titleName string
----@field titleColor table
----@field barConnectedColor table
----@field barDisconnectedColor table
+---@field titleColor ColorMixin
+---@field barConnectedColor ColorMixin
+---@field barDisconnectedColor ColorMixin
 ---@field uiModelSceneID number
 ---@field spellVisualKitID number
 local ArtifactArtInfo = {}
@@ -375,7 +375,7 @@ local ArtifactArtInfo = {}
 ---@field isGoldMedal boolean
 ---@field isFinal boolean
 ---@field tier number
----@field position table
----@field offset table
+---@field position Vector2DMixin
+---@field offset Vector2DMixin
 ---@field linearIndex number
 local ArtifactPowerInfo = {}

@@ -122,12 +122,12 @@ function C_Club.FocusStream(clubId, streamId) end
 
 ---@param clubId string
 ---@param memberId number
----@return table assignableRoles
+---@return ClubRoleIdentifier[] assignableRoles
 ---[Documentation](https://wow.gamepedia.com/API_C_Club.GetAssignableRoles)
 function C_Club.GetAssignableRoles(clubId, memberId) end
 
 ---@param clubType ClubType
----@return table avatarIds
+---@return number[] avatarIds
 ---[Documentation](https://wow.gamepedia.com/API_C_Club.GetAvatarIdList)
 function C_Club.GetAvatarIdList(clubType) end
 
@@ -147,7 +147,7 @@ function C_Club.GetClubLimits(clubType) end
 
 ---@param clubId string
 ---@param streamId string
----@return table members
+---@return number[] members
 ---[Documentation](https://wow.gamepedia.com/API_C_Club.GetClubMembers)
 function C_Club.GetClubMembers(clubId, streamId) end
 
@@ -157,7 +157,7 @@ function C_Club.GetClubMembers(clubId, streamId) end
 function C_Club.GetClubPrivileges(clubId) end
 
 ---@param clubId string
----@return table settings
+---@return ClubStreamNotificationSetting[] settings
 ---[Documentation](https://wow.gamepedia.com/API_C_Club.GetClubStreamNotificationSettings)
 function C_Club.GetClubStreamNotificationSettings(clubId) end
 
@@ -182,7 +182,7 @@ function C_Club.GetInfoFromLastCommunityChatLine() end
 ---@param cursorPosition number
 ---@param allowFullMatch boolean
 ---@param clubId string
----@return table candidates
+---@return ClubInvitationCandidateInfo[] candidates
 ---[Documentation](https://wow.gamepedia.com/API_C_Club.GetInvitationCandidates)
 function C_Club.GetInvitationCandidates(filter, maxResults, cursorPosition, allowFullMatch, clubId) end
 
@@ -192,11 +192,11 @@ function C_Club.GetInvitationCandidates(filter, maxResults, cursorPosition, allo
 function C_Club.GetInvitationInfo(clubId) end
 
 ---@param clubId string
----@return table invitations
+---@return ClubInvitationInfo[] invitations
 ---[Documentation](https://wow.gamepedia.com/API_C_Club.GetInvitationsForClub)
 function C_Club.GetInvitationsForClub(clubId) end
 
----@return table invitations
+---@return ClubSelfInvitationInfo[] invitations
 ---[Documentation](https://wow.gamepedia.com/API_C_Club.GetInvitationsForSelf)
 function C_Club.GetInvitationsForSelf() end
 
@@ -227,7 +227,7 @@ function C_Club.GetMessageInfo(clubId, streamId, messageId) end
 
 ---@param clubId string
 ---@param streamId string
----@return table ranges
+---@return ClubMessageRange[] ranges
 ---[Documentation](https://wow.gamepedia.com/API_C_Club.GetMessageRanges)
 function C_Club.GetMessageRanges(clubId, streamId) end
 
@@ -235,7 +235,7 @@ function C_Club.GetMessageRanges(clubId, streamId) end
 ---@param streamId string
 ---@param newest ClubMessageIdentifier
 ---@param count number
----@return table messages
+---@return ClubMessageInfo[] messages
 ---[Documentation](https://wow.gamepedia.com/API_C_Club.GetMessagesBefore)
 function C_Club.GetMessagesBefore(clubId, streamId, newest, count) end
 
@@ -243,7 +243,7 @@ function C_Club.GetMessagesBefore(clubId, streamId, newest, count) end
 ---@param streamId string
 ---@param oldest ClubMessageIdentifier
 ---@param newest ClubMessageIdentifier
----@return table messages
+---@return ClubMessageInfo[] messages
 ---[Documentation](https://wow.gamepedia.com/API_C_Club.GetMessagesInRange)
 function C_Club.GetMessagesInRange(clubId, streamId, oldest, newest) end
 
@@ -260,16 +260,16 @@ function C_Club.GetStreamInfo(clubId, streamId) end
 function C_Club.GetStreamViewMarker(clubId, streamId) end
 
 ---@param clubId string
----@return table streams
+---@return ClubStreamInfo[] streams
 ---[Documentation](https://wow.gamepedia.com/API_C_Club.GetStreams)
 function C_Club.GetStreams(clubId) end
 
----@return table clubs
+---@return ClubInfo[] clubs
 ---[Documentation](https://wow.gamepedia.com/API_C_Club.GetSubscribedClubs)
 function C_Club.GetSubscribedClubs() end
 
 ---@param clubId string
----@return table tickets
+---@return ClubTicketInfo[] tickets
 ---[Documentation](https://wow.gamepedia.com/API_C_Club.GetTickets)
 function C_Club.GetTickets(clubId) end
 
@@ -380,7 +380,7 @@ function C_Club.SetClubMemberNote(clubId, memberId, note) end
 function C_Club.SetClubPresenceSubscription(clubId) end
 
 ---@param clubId string
----@param settings table
+---@param settings ClubStreamNotificationSetting[]
 ---[Documentation](https://wow.gamepedia.com/API_C_Club.SetClubStreamNotificationSettings)
 function C_Club.SetClubStreamNotificationSettings(clubId, settings) end
 
@@ -704,14 +704,14 @@ local ClubMessageRange = {}
 ---@field canDestroyOtherMessage boolean
 ---@field canEditOwnMessage boolean
 ---@field canPinMessage boolean
----@field kickableRoleIds table
+---@field kickableRoleIds number[]
 local ClubPrivilegeInfo = {}
 
 ---@class ClubSelfInvitationInfo
 ---@field invitationId string
 ---@field club ClubInfo
 ---@field inviter ClubMemberInfo
----@field leaders table
+---@field leaders ClubMemberInfo[]
 local ClubSelfInvitationInfo = {}
 
 ---@class ClubStreamInfo

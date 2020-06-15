@@ -1,6 +1,6 @@
 C_MountJournal = {}
 
----@param itemLocation table
+---@param itemLocation ItemLocationMixin
 ---@return boolean canContinue
 ---[Documentation](https://wow.gamepedia.com/API_C_MountJournal.ApplyMountEquipment)
 function C_MountJournal.ApplyMountEquipment(itemLocation) end
@@ -29,7 +29,7 @@ function C_MountJournal.GetAppliedMountEquipmentID() end
 function C_MountJournal.GetCollectedFilterSetting(filterIndex) end
 
 ---@param mountIndex number
----@return table allDisplayInfo
+---@return MountCreatureDisplayInfo[] allDisplayInfo
 ---[Documentation](https://wow.gamepedia.com/API_C_MountJournal.GetDisplayedMountAllCreatureDisplayInfo)
 function C_MountJournal.GetDisplayedMountAllCreatureDisplayInfo(mountIndex) end
 
@@ -69,7 +69,7 @@ function C_MountJournal.GetDisplayedMountInfoExtra(mountIndex) end
 function C_MountJournal.GetIsFavorite(mountIndex) end
 
 ---@param mountID number
----@return table allDisplayInfo
+---@return MountCreatureDisplayInfo[] allDisplayInfo
 ---[Documentation](https://wow.gamepedia.com/API_C_MountJournal.GetMountAllCreatureDisplayInfoByID)
 function C_MountJournal.GetMountAllCreatureDisplayInfoByID(mountID) end
 
@@ -87,7 +87,7 @@ function C_MountJournal.GetMountFromItem(itemID) end
 ---[Documentation](https://wow.gamepedia.com/API_C_MountJournal.GetMountFromSpell)
 function C_MountJournal.GetMountFromSpell(spellID) end
 
----@return table mountIDs
+---@return number[] mountIDs
 ---[Documentation](https://wow.gamepedia.com/API_C_MountJournal.GetMountIDs)
 function C_MountJournal.GetMountIDs() end
 
@@ -139,7 +139,7 @@ function C_MountJournal.GetNumMounts() end
 ---[Documentation](https://wow.gamepedia.com/API_C_MountJournal.GetNumMountsNeedingFanfare)
 function C_MountJournal.GetNumMountsNeedingFanfare() end
 
----@param itemLocation table
+---@param itemLocation ItemLocationMixin
 ---@return boolean isMountEquipment
 ---[Documentation](https://wow.gamepedia.com/API_C_MountJournal.IsItemMountEquipment)
 function C_MountJournal.IsItemMountEquipment(itemLocation) end

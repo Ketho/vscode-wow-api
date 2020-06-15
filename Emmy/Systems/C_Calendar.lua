@@ -146,20 +146,20 @@ function C_Calendar.EventGetInviteSortCriterion() end
 function C_Calendar.EventGetSelectedInvite() end
 
 ---@param eventIndex number
----@return table options
+---@return CalendarEventStatusOption[] options
 ---[Documentation](https://wow.gamepedia.com/API_C_Calendar.EventGetStatusOptions)
 function C_Calendar.EventGetStatusOptions(eventIndex) end
 
 ---@param eventType CalendarEventType
----@return table textures
+---@return CalendarEventTextureInfo[] textures
 ---[Documentation](https://wow.gamepedia.com/API_C_Calendar.EventGetTextures)
 function C_Calendar.EventGetTextures(eventType) end
 
----@return table types
+---@return string[] types
 ---[Documentation](https://wow.gamepedia.com/API_C_Calendar.EventGetTypes)
 function C_Calendar.EventGetTypes() end
 
----@return table infos
+---@return CalendarEventTypeDisplayInfo[] infos
 ---[Documentation](https://wow.gamepedia.com/API_C_Calendar.EventGetTypesDisplayOrdered)
 function C_Calendar.EventGetTypesDisplayOrdered() end
 
@@ -247,7 +247,7 @@ function C_Calendar.EventTentative() end
 ---@param clubId string
 ---@param startTime CalendarTime
 ---@param endTime CalendarTime
----@return table events
+---@return CalendarDayEvent[] events
 ---[Documentation](https://wow.gamepedia.com/API_C_Calendar.GetClubCalendarEvents)
 function C_Calendar.GetClubCalendarEvents(clubId, startTime, endTime) end
 

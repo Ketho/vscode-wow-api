@@ -28,7 +28,7 @@ function C_GuildInfo.GetGuildRankOrder(guid) end
 function C_GuildInfo.GetGuildTabardInfo(unit) end
 
 ---@param rankOrder number
----@return table permissions
+---@return bool[] permissions
 ---[Documentation](https://wow.gamepedia.com/API_C_GuildInfo.GuildControlGetRankFlags)
 function C_GuildInfo.GuildControlGetRankFlags(rankOrder) end
 
@@ -72,7 +72,7 @@ function C_GuildInfo.SetNote(guid, note, isPublic) end
 ---@field whoText string
 ---@field whatText string
 ---@field newsDataID number
----@field data table
+---@field data number[]
 ---@field weekday number
 ---@field day number
 ---@field month number

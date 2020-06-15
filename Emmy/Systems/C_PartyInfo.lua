@@ -38,12 +38,12 @@ function C_PartyInfo.ConvertToParty() end
 ---[Documentation](https://wow.gamepedia.com/API_C_PartyInfo.ConvertToRaid)
 function C_PartyInfo.ConvertToRaid() end
 
----@return table categories
+---@return number[] categories
 ---[Documentation](https://wow.gamepedia.com/API_C_PartyInfo.GetActiveCategories)
 function C_PartyInfo.GetActiveCategories() end
 
 ---@param inviteGUID string
----@return table invalidQueues
+---@return QueueSpecificInfo[] invalidQueues
 ---[Documentation](https://wow.gamepedia.com/API_C_PartyInfo.GetInviteConfirmationInvalidQueues)
 function C_PartyInfo.GetInviteConfirmationInvalidQueues(inviteGUID) end
 

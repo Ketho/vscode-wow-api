@@ -6,7 +6,7 @@ C_AchievementInfo = {}
 function C_AchievementInfo.GetRewardItemID(achievementID) end
 
 ---@param achievementID number
----@return table supercedingAchievements
+---@return number[] supercedingAchievements
 ---[Documentation](https://wow.gamepedia.com/API_C_AchievementInfo.GetSupercedingAchievements)
 function C_AchievementInfo.GetSupercedingAchievements(achievementID) end
 

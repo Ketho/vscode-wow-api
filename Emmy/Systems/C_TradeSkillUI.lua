@@ -1,6 +1,6 @@
 C_TradeSkillUI = {}
 
----@return table skillLineID
+---@return number[] skillLineID
 ---[Documentation](https://wow.gamepedia.com/API_C_TradeSkillUI.GetAllProfessionTradeSkillLines)
 function C_TradeSkillUI.GetAllProfessionTradeSkillLines() end
 

@@ -1,6 +1,6 @@
 C_SpecializationInfo = {}
 
----@return table selectedPvpTalentIDs
+---@return number[] selectedPvpTalentIDs
 ---[Documentation](https://wow.gamepedia.com/API_C_SpecializationInfo.GetAllSelectedPvpTalentIDs)
 function C_SpecializationInfo.GetAllSelectedPvpTalentIDs() end
 
@@ -31,7 +31,7 @@ function C_SpecializationInfo.GetPvpTalentSlotUnlockLevel(talentIndex) end
 function C_SpecializationInfo.GetPvpTalentUnlockLevel(talentID) end
 
 ---@param specializationID number
----@return table spellID
+---@return number[] spellID
 ---[Documentation](https://wow.gamepedia.com/API_C_SpecializationInfo.GetSpellsDisplay)
 function C_SpecializationInfo.GetSpellsDisplay(specializationID) end
 
@@ -53,5 +53,5 @@ function C_SpecializationInfo.SetPvpTalentLocked(talentID, locked) end
 ---@field enabled boolean
 ---@field level number
 ---@field selectedTalentID number
----@field availableTalentIDs table
+---@field availableTalentIDs number[]
 local PvpTalentSlotInfo = {}

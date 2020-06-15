@@ -1,7 +1,7 @@
 C_UIWidgetManager = {}
 
 ---@param setID number
----@return table widgets
+---@return UIWidgetInfo[] widgets
 ---[Documentation](https://wow.gamepedia.com/API_C_UIWidgetManager.GetAllWidgetsBySetID)
 function C_UIWidgetManager.GetAllWidgetsBySetID(setID) end
 
@@ -276,7 +276,7 @@ local ZoneControlState = {
 ---@class BulletTextListWidgetVisualizationInfo
 ---@field shownState WidgetShownState
 ---@field enabledState WidgetEnabledState
----@field lines table
+---@field lines string[]
 ---@field widgetSizeSetting number
 ---@field textureKitID number
 ---@field frameTextureKitID number
@@ -342,8 +342,8 @@ local DoubleIconAndTextWidgetVisualizationInfo = {}
 
 ---@class DoubleStateIconRowVisualizationInfo
 ---@field shownState WidgetShownState
----@field leftIcons table
----@field rightIcons table
+---@field leftIcons UIWidgetStateIconInfo[]
+---@field rightIcons UIWidgetStateIconInfo[]
 ---@field widgetSizeSetting number
 ---@field textureKitID number
 ---@field frameTextureKitID number
@@ -378,7 +378,7 @@ local DoubleStatusBarWidgetVisualizationInfo = {}
 
 ---@class HorizontalCurrenciesWidgetVisualizationInfo
 ---@field shownState WidgetShownState
----@field currencies table
+---@field currencies UIWidgetCurrencyInfo[]
 ---@field widgetSizeSetting number
 ---@field textureKitID number
 ---@field frameTextureKitID number
@@ -424,7 +424,7 @@ local IconTextAndBackgroundWidgetVisualizationInfo = {}
 ---@field descriptionEnabledState WidgetEnabledState
 ---@field text string
 ---@field description string
----@field currencies table
+---@field currencies UIWidgetCurrencyInfo[]
 ---@field widgetSizeSetting number
 ---@field textureKitID number
 ---@field frameTextureKitID number
@@ -437,7 +437,7 @@ local IconTextAndCurrenciesWidgetVisualizationInfo = {}
 
 ---@class ScenarioHeaderCurrenciesAndBackgroundWidgetVisualizationInfo
 ---@field shownState WidgetShownState
----@field currencies table
+---@field currencies UIWidgetCurrencyInfo[]
 ---@field widgetSizeSetting number
 ---@field textureKitID number
 ---@field frameTextureKitID number
@@ -464,7 +464,7 @@ local SpellDisplayVisualizationInfo = {}
 
 ---@class StackedResourceTrackerWidgetVisualizationInfo
 ---@field shownState WidgetShownState
----@field resources table
+---@field resources UIWidgetCurrencyInfo[]
 ---@field widgetSizeSetting number
 ---@field textureKitID number
 ---@field frameTextureKitID number
@@ -518,7 +518,7 @@ local TextureAndTextEntryInfo = {}
 
 ---@class TextureAndTextRowVisualizationInfo
 ---@field shownState WidgetShownState
----@field entries table
+---@field entries TextureAndTextEntryInfo[]
 ---@field textSizeType UIWidgetTextSizeType
 ---@field widgetSizeSetting number
 ---@field textureKitID number
@@ -578,7 +578,7 @@ local UIWidgetStateIconInfo = {}
 ---@field mode ZoneControlMode
 ---@field leadingEdgeType ZoneControlLeadingEdgeType
 ---@field dangerFlashType ZoneControlDangerFlashType
----@field zoneEntries table
+---@field zoneEntries ZoneEntry[]
 ---@field widgetSizeSetting number
 ---@field textureKitID number
 ---@field frameTextureKitID number

@@ -1,21 +1,21 @@
 C_DeathInfo = {}
 
 ---@param uiMapID number
----@return table position
+---@return Vector2DMixin position
 ---[Documentation](https://wow.gamepedia.com/API_C_DeathInfo.GetCorpseMapPosition)
 function C_DeathInfo.GetCorpseMapPosition(uiMapID) end
 
 ---@param uiMapID number
----@return table position
+---@return Vector2DMixin position
 ---[Documentation](https://wow.gamepedia.com/API_C_DeathInfo.GetDeathReleasePosition)
 function C_DeathInfo.GetDeathReleasePosition(uiMapID) end
 
 ---@param uiMapID number
----@return table graveyards
+---@return GraveyardMapInfo[] graveyards
 ---[Documentation](https://wow.gamepedia.com/API_C_DeathInfo.GetGraveyardsForMap)
 function C_DeathInfo.GetGraveyardsForMap(uiMapID) end
 
----@return table options
+---@return SelfResurrectOption[] options
 ---[Documentation](https://wow.gamepedia.com/API_C_DeathInfo.GetSelfResurrectOptions)
 function C_DeathInfo.GetSelfResurrectOptions() end
 
@@ -32,7 +32,7 @@ local SelfResurrectOptionType = {
 
 ---@class GraveyardMapInfo
 ---@field areaPoiID number
----@field position table
+---@field position Vector2DMixin
 ---@field name string
 ---@field textureIndex number
 ---@field graveyardID number

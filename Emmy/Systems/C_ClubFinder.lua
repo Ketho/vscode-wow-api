@@ -80,7 +80,7 @@ function C_ClubFinder.GetRecruitingClubInfoFromClubID(clubId) end
 function C_ClubFinder.GetRecruitingClubInfoFromFinderGUID(clubFinderGUID) end
 
 ---@param postingID string
----@return table postingFlags
+---@return ClubFinderClubPostingStatusFlags[] postingFlags
 ---[Documentation](https://wow.gamepedia.com/API_C_ClubFinder.GetStatusOfPostingFromClubId)
 function C_ClubFinder.GetStatusOfPostingFromClubId(postingID) end
 
@@ -121,7 +121,7 @@ function C_ClubFinder.IsPostingBanned(postingID) end
 ---[Documentation](https://wow.gamepedia.com/API_C_ClubFinder.LookupClubPostingFromClubFinderGUID)
 function C_ClubFinder.LookupClubPostingFromClubFinderGUID(clubFinderGUID, isLinkedPosting) end
 
----@return table inviteList
+---@return RecruitingClubInfo[] inviteList
 ---[Documentation](https://wow.gamepedia.com/API_C_ClubFinder.PlayerGetClubInvitationList)
 function C_ClubFinder.PlayerGetClubInvitationList() end
 
@@ -129,11 +129,11 @@ function C_ClubFinder.PlayerGetClubInvitationList() end
 ---[Documentation](https://wow.gamepedia.com/API_C_ClubFinder.PlayerRequestPendingClubsList)
 function C_ClubFinder.PlayerRequestPendingClubsList(type) end
 
----@return table info
+---@return RecruitingClubInfo[] info
 ---[Documentation](https://wow.gamepedia.com/API_C_ClubFinder.PlayerReturnPendingCommunitiesList)
 function C_ClubFinder.PlayerReturnPendingCommunitiesList() end
 
----@return table info
+---@return RecruitingClubInfo[] info
 ---[Documentation](https://wow.gamepedia.com/API_C_ClubFinder.PlayerReturnPendingGuildsList)
 function C_ClubFinder.PlayerReturnPendingGuildsList() end
 
@@ -141,7 +141,7 @@ function C_ClubFinder.PlayerReturnPendingGuildsList() end
 ---@param itemLevelRequirement number
 ---@param name string
 ---@param description string
----@param specs table
+---@param specs number[]
 ---@param type ClubFinderRequestType
 ---@return boolean succesful
 ---[Documentation](https://wow.gamepedia.com/API_C_ClubFinder.PostClub)
@@ -160,13 +160,13 @@ function C_ClubFinder.RequestApplicantList(type) end
 
 ---@param guildListRequested boolean
 ---@param searchString string
----@param specIDs table
+---@param specIDs number[]
 ---[Documentation](https://wow.gamepedia.com/API_C_ClubFinder.RequestClubsList)
 function C_ClubFinder.RequestClubsList(guildListRequested, searchString, specIDs) end
 
 ---@param clubFinderGUID string
 ---@param comment string
----@param specIDs table
+---@param specIDs number[]
 ---[Documentation](https://wow.gamepedia.com/API_C_ClubFinder.RequestMembershipToClub)
 function C_ClubFinder.RequestMembershipToClub(clubFinderGUID, comment, specIDs) end
 
@@ -202,20 +202,20 @@ function C_ClubFinder.ResetClubPostingMapCache() end
 function C_ClubFinder.RespondToApplicant(clubFinderGUID, playerGUID, shouldAccept, requestType, playerName, forceAccept, reported) end
 
 ---@param clubId string
----@return table info
+---@return ClubFinderApplicantInfo[] info
 ---[Documentation](https://wow.gamepedia.com/API_C_ClubFinder.ReturnClubApplicantList)
 function C_ClubFinder.ReturnClubApplicantList(clubId) end
 
----@return table recruitingClubs
+---@return RecruitingClubInfo[] recruitingClubs
 ---[Documentation](https://wow.gamepedia.com/API_C_ClubFinder.ReturnMatchingCommunityList)
 function C_ClubFinder.ReturnMatchingCommunityList() end
 
----@return table recruitingClubs
+---@return RecruitingClubInfo[] recruitingClubs
 ---[Documentation](https://wow.gamepedia.com/API_C_ClubFinder.ReturnMatchingGuildList)
 function C_ClubFinder.ReturnMatchingGuildList() end
 
 ---@param clubId string
----@return table info
+---@return ClubFinderApplicantInfo[] info
 ---[Documentation](https://wow.gamepedia.com/API_C_ClubFinder.ReturnPendingClubApplicantList)
 function C_ClubFinder.ReturnPendingClubApplicantList(clubId) end
 
@@ -341,7 +341,7 @@ local PlayerClubRequestStatus = {
 ---@field level number
 ---@field classID number
 ---@field ilvl number
----@field specIds table
+---@field specIds number[]
 ---@field requestStatus PlayerClubRequestStatus
 ---@field lookupSuccess boolean
 ---@field lastUpdatedTime number
@@ -376,7 +376,7 @@ local ClubSettingsInfo = {}
 ---@field isGuild boolean
 ---@field emblemInfo number
 ---@field tabardInfo GuildTabardInfo
----@field recruitingSpecIds table
+---@field recruitingSpecIds number[]
 ---@field recruitmentFlags number
 ---@field localeSet boolean
 ---@field recruitmentLocale number

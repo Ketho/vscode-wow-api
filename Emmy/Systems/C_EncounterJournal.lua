@@ -1,17 +1,17 @@
 C_EncounterJournal = {}
 
 ---@param uiMapID number
----@return table dungeonEntrances
+---@return DungeonEntranceMapInfo[] dungeonEntrances
 ---[Documentation](https://wow.gamepedia.com/API_C_EncounterJournal.GetDungeonEntrancesForMap)
 function C_EncounterJournal.GetDungeonEntrancesForMap(uiMapID) end
 
 ---@param uiMapID number
----@return table encounters
+---@return EncounterJournalMapEncounterInfo[] encounters
 ---[Documentation](https://wow.gamepedia.com/API_C_EncounterJournal.GetEncountersOnMap)
 function C_EncounterJournal.GetEncountersOnMap(uiMapID) end
 
 ---@param sectionID number
----@return table iconFlags
+---@return number[] iconFlags
 ---[Documentation](https://wow.gamepedia.com/API_C_EncounterJournal.GetSectionIconFlags)
 function C_EncounterJournal.GetSectionIconFlags(sectionID) end
 
@@ -40,7 +40,7 @@ function C_EncounterJournal.SetPreviewPvpTier(tier) end
 
 ---@class DungeonEntranceMapInfo
 ---@field areaPoiID number
----@field position table
+---@field position Vector2DMixin
 ---@field name string
 ---@field description string
 ---@field atlasName string

@@ -24,7 +24,7 @@ function C_RecruitAFriend.GetRAFSystemInfo() end
 
 ---@param activityID number
 ---@param acceptanceID string
----@return table requirementsText
+---@return string[] requirementsText
 ---[Documentation](https://wow.gamepedia.com/API_C_RecruitAFriend.GetRecruitActivityRequirementsText)
 function C_RecruitAFriend.GetRecruitActivityRequirementsText(activityID, acceptanceID) end
 
@@ -83,7 +83,7 @@ local RafAppearanceInfo = {}
 ---@class RafAppearanceSetInfo
 ---@field setID number
 ---@field setName string
----@field appearanceIDs table
+---@field appearanceIDs number[]
 local RafAppearanceSetInfo = {}
 
 ---@class RafIllusionInfo
@@ -95,10 +95,10 @@ local RafIllusionInfo = {}
 ---@field spentMonths number
 ---@field availableMonths number
 ---@field claimInProgress boolean
----@field rewards table
+---@field rewards RafReward[]
 ---@field nextReward RafReward
 ---@field recruitmentInfo RafRecruitmentinfo
----@field recruits table
+---@field recruits RafRecruit[]
 local RafInfo = {}
 
 ---@class RafMountInfo
@@ -121,7 +121,7 @@ local RafPetInfo = {}
 ---@field monthsRemaining number
 ---@field subStatus RafRecruitSubStatus
 ---@field acceptanceID string
----@field activities table
+---@field activities RafRecruitActivity[]
 local RafRecruit = {}
 
 ---@class RafRecruitActivity

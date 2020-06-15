@@ -41,7 +41,7 @@ function C_EquipmentSet.GetEquipmentSetForSpec(specIndex) end
 ---[Documentation](https://wow.gamepedia.com/API_C_EquipmentSet.GetEquipmentSetID)
 function C_EquipmentSet.GetEquipmentSetID(equipmentSetName) end
 
----@return table equipmentSetIDs
+---@return number[] equipmentSetIDs
 ---[Documentation](https://wow.gamepedia.com/API_C_EquipmentSet.GetEquipmentSetIDs)
 function C_EquipmentSet.GetEquipmentSetIDs() end
 
@@ -59,17 +59,17 @@ function C_EquipmentSet.GetEquipmentSetIDs() end
 function C_EquipmentSet.GetEquipmentSetInfo(equipmentSetID) end
 
 ---@param equipmentSetID number
----@return table slotIgnored
+---@return bool[] slotIgnored
 ---[Documentation](https://wow.gamepedia.com/API_C_EquipmentSet.GetIgnoredSlots)
 function C_EquipmentSet.GetIgnoredSlots(equipmentSetID) end
 
 ---@param equipmentSetID number
----@return table itemIDs
+---@return number[] itemIDs
 ---[Documentation](https://wow.gamepedia.com/API_C_EquipmentSet.GetItemIDs)
 function C_EquipmentSet.GetItemIDs(equipmentSetID) end
 
 ---@param equipmentSetID number
----@return table locations
+---@return number[] locations
 ---[Documentation](https://wow.gamepedia.com/API_C_EquipmentSet.GetItemLocations)
 function C_EquipmentSet.GetItemLocations(equipmentSetID) end
 

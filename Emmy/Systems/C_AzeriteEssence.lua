@@ -37,7 +37,7 @@ function C_AzeriteEssence.GetEssenceHyperlink(essenceID, rank) end
 ---[Documentation](https://wow.gamepedia.com/API_C_AzeriteEssence.GetEssenceInfo)
 function C_AzeriteEssence.GetEssenceInfo(essenceID) end
 
----@return table essences
+---@return AzeriteEssenceInfo[] essences
 ---[Documentation](https://wow.gamepedia.com/API_C_AzeriteEssence.GetEssences)
 function C_AzeriteEssence.GetEssences() end
 
@@ -56,7 +56,7 @@ function C_AzeriteEssence.GetMilestoneInfo(milestoneID) end
 ---[Documentation](https://wow.gamepedia.com/API_C_AzeriteEssence.GetMilestoneSpell)
 function C_AzeriteEssence.GetMilestoneSpell(milestoneID) end
 
----@return table milestones
+---@return AzeriteMilestoneInfo[] milestones
 ---[Documentation](https://wow.gamepedia.com/API_C_AzeriteEssence.GetMilestones)
 function C_AzeriteEssence.GetMilestones() end
 

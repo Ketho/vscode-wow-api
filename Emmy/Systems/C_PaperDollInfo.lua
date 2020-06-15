@@ -13,7 +13,7 @@ function C_PaperDollInfo.GetArmorEffectivenessAgainstTarget(armor) end
 
 ---@param unit string
 ---@param equipmentSlotIndex number
----@return table azeritePowerIDs
+---@return number[] azeritePowerIDs
 ---[Documentation](https://wow.gamepedia.com/API_C_PaperDollInfo.GetInspectAzeriteItemEmpoweredChoices)
 function C_PaperDollInfo.GetInspectAzeriteItemEmpoweredChoices(unit, equipmentSlotIndex) end
 

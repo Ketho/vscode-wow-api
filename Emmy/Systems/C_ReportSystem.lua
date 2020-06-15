@@ -1,19 +1,19 @@
 C_ReportSystem = {}
 
----@param playerLocation table
+---@param playerLocation PlayerLocationMixin
 ---@return boolean canReport
 ---[Documentation](https://wow.gamepedia.com/API_C_ReportSystem.CanReportPlayer)
 function C_ReportSystem.CanReportPlayer(playerLocation) end
 
 ---@param complaintType string
----@param playerLocation table
+---@param playerLocation PlayerLocationMixin
 ---@return number token
 ---[Documentation](https://wow.gamepedia.com/API_C_ReportSystem.InitiateReportPlayer)
 function C_ReportSystem.InitiateReportPlayer(complaintType, playerLocation) end
 
 ---@param reportType string
 ---@param playerName string
----@param playerLocation table
+---@param playerLocation PlayerLocationMixin
 ---[Documentation](https://wow.gamepedia.com/API_C_ReportSystem.OpenReportPlayerDialog)
 function C_ReportSystem.OpenReportPlayerDialog(reportType, playerName, playerLocation) end
 

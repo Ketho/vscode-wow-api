@@ -4,7 +4,7 @@ C_AlliedRaces = {}
 function C_AlliedRaces.ClearAlliedRaceDetailsGiver() end
 
 ---@param raceID number
----@return table allDisplayInfo
+---@return AlliedRaceRacialAbility[] allDisplayInfo
 ---[Documentation](https://wow.gamepedia.com/API_C_AlliedRaces.GetAllRacialAbilitiesFromID)
 function C_AlliedRaces.GetAllRacialAbilitiesFromID(raceID) end
 
@@ -24,7 +24,7 @@ function C_AlliedRaces.GetRaceInfoByID(raceID) end
 ---@field crestAtlas string
 ---@field modelBackgroundAtlas string
 ---@field raceFileString string
----@field bannerColor table
+---@field bannerColor ColorMixin
 local AlliedRaceInfo = {}
 
 ---@class AlliedRaceRacialAbility

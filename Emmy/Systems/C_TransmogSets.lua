@@ -13,7 +13,7 @@ function C_TransmogSets.ClearNewSource(sourceID) end
 function C_TransmogSets.ClearSetNewSourcesForSlot(transmogSetID, slot) end
 
 ---@param transmogSetID number
----@return table sources
+---@return number[] sources
 ---[Documentation](https://wow.gamepedia.com/API_C_TransmogSets.GetAllSourceIDs)
 function C_TransmogSets.GetAllSourceIDs(transmogSetID) end
 
@@ -43,24 +43,24 @@ function C_TransmogSets.GetIsFavorite(transmogSetID) end
 function C_TransmogSets.GetLatestSource() end
 
 ---@param transmogSetID number
----@return table sourceIDs
+---@return number[] sourceIDs
 ---[Documentation](https://wow.gamepedia.com/API_C_TransmogSets.GetSetNewSources)
 function C_TransmogSets.GetSetNewSources(transmogSetID) end
 
 ---@param sourceID number
----@return table setIDs
+---@return number[] setIDs
 ---[Documentation](https://wow.gamepedia.com/API_C_TransmogSets.GetSetsContainingSourceID)
 function C_TransmogSets.GetSetsContainingSourceID(sourceID) end
 
 ---@param transmogSetID number
 ---@param slot number
----@return table sources
+---@return number[] sources
 ---[Documentation](https://wow.gamepedia.com/API_C_TransmogSets.GetSourceIDsForSlot)
 function C_TransmogSets.GetSourceIDsForSlot(transmogSetID, slot) end
 
 ---@param transmogSetID number
 ---@param slot number
----@return table sources
+---@return AppearanceSourceInfo[] sources
 ---[Documentation](https://wow.gamepedia.com/API_C_TransmogSets.GetSourcesForSlot)
 function C_TransmogSets.GetSourcesForSlot(transmogSetID, slot) end
 

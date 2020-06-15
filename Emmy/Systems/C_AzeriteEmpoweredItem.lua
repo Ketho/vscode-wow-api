@@ -1,6 +1,6 @@
 C_AzeriteEmpoweredItem = {}
 
----@param azeriteEmpoweredItemLocation table
+---@param azeriteEmpoweredItemLocation ItemLocationMixin
 ---@param powerID number
 ---@return boolean canSelect
 ---[Documentation](https://wow.gamepedia.com/API_C_AzeriteEmpoweredItem.CanSelectPower)
@@ -9,18 +9,18 @@ function C_AzeriteEmpoweredItem.CanSelectPower(azeriteEmpoweredItemLocation, pow
 ---[Documentation](https://wow.gamepedia.com/API_C_AzeriteEmpoweredItem.CloseAzeriteEmpoweredItemRespec)
 function C_AzeriteEmpoweredItem.CloseAzeriteEmpoweredItemRespec() end
 
----@param azeriteEmpoweredItemLocation table
+---@param azeriteEmpoweredItemLocation ItemLocationMixin
 ---[Documentation](https://wow.gamepedia.com/API_C_AzeriteEmpoweredItem.ConfirmAzeriteEmpoweredItemRespec)
 function C_AzeriteEmpoweredItem.ConfirmAzeriteEmpoweredItemRespec(azeriteEmpoweredItemLocation) end
 
----@param azeriteEmpoweredItemLocation table
----@return table tierInfo
+---@param azeriteEmpoweredItemLocation ItemLocationMixin
+---@return AzeriteEmpoweredItemTierInfo[] tierInfo
 ---[Documentation](https://wow.gamepedia.com/API_C_AzeriteEmpoweredItem.GetAllTierInfo)
 function C_AzeriteEmpoweredItem.GetAllTierInfo(azeriteEmpoweredItemLocation) end
 
 ---@param itemInfo string
 ---@param classID number
----@return table tierInfo
+---@return AzeriteEmpoweredItemTierInfo[] tierInfo
 ---[Documentation](https://wow.gamepedia.com/API_C_AzeriteEmpoweredItem.GetAllTierInfoByItemID)
 function C_AzeriteEmpoweredItem.GetAllTierInfoByItemID(itemInfo, classID) end
 
@@ -33,7 +33,7 @@ function C_AzeriteEmpoweredItem.GetAzeriteEmpoweredItemRespecCost() end
 ---[Documentation](https://wow.gamepedia.com/API_C_AzeriteEmpoweredItem.GetPowerInfo)
 function C_AzeriteEmpoweredItem.GetPowerInfo(powerID) end
 
----@param azeriteEmpoweredItemLocation table
+---@param azeriteEmpoweredItemLocation ItemLocationMixin
 ---@param powerID number
 ---@param level AzeritePowerLevel
 ---@return AzeriteEmpoweredItemPowerText powerText
@@ -41,21 +41,21 @@ function C_AzeriteEmpoweredItem.GetPowerInfo(powerID) end
 function C_AzeriteEmpoweredItem.GetPowerText(azeriteEmpoweredItemLocation, powerID, level) end
 
 ---@param powerID number
----@return table specInfo
+---@return AzeriteSpecInfo[] specInfo
 ---[Documentation](https://wow.gamepedia.com/API_C_AzeriteEmpoweredItem.GetSpecsForPower)
 function C_AzeriteEmpoweredItem.GetSpecsForPower(powerID) end
 
----@param azeriteEmpoweredItemLocation table
+---@param azeriteEmpoweredItemLocation ItemLocationMixin
 ---@return boolean hasAnyUnselectedPowers
 ---[Documentation](https://wow.gamepedia.com/API_C_AzeriteEmpoweredItem.HasAnyUnselectedPowers)
 function C_AzeriteEmpoweredItem.HasAnyUnselectedPowers(azeriteEmpoweredItemLocation) end
 
----@param azeriteEmpoweredItemLocation table
+---@param azeriteEmpoweredItemLocation ItemLocationMixin
 ---@return boolean hasBeenViewed
 ---[Documentation](https://wow.gamepedia.com/API_C_AzeriteEmpoweredItem.HasBeenViewed)
 function C_AzeriteEmpoweredItem.HasBeenViewed(azeriteEmpoweredItemLocation) end
 
----@param itemLocation table
+---@param itemLocation ItemLocationMixin
 ---@return boolean isAzeriteEmpoweredItem
 ---[Documentation](https://wow.gamepedia.com/API_C_AzeriteEmpoweredItem.IsAzeriteEmpoweredItem)
 function C_AzeriteEmpoweredItem.IsAzeriteEmpoweredItem(itemLocation) end
@@ -81,19 +81,19 @@ function C_AzeriteEmpoweredItem.IsHeartOfAzerothEquipped() end
 ---[Documentation](https://wow.gamepedia.com/API_C_AzeriteEmpoweredItem.IsPowerAvailableForSpec)
 function C_AzeriteEmpoweredItem.IsPowerAvailableForSpec(powerID, specID) end
 
----@param azeriteEmpoweredItemLocation table
+---@param azeriteEmpoweredItemLocation ItemLocationMixin
 ---@param powerID number
 ---@return boolean isSelected
 ---[Documentation](https://wow.gamepedia.com/API_C_AzeriteEmpoweredItem.IsPowerSelected)
 function C_AzeriteEmpoweredItem.IsPowerSelected(azeriteEmpoweredItemLocation, powerID) end
 
----@param azeriteEmpoweredItemLocation table
+---@param azeriteEmpoweredItemLocation ItemLocationMixin
 ---@param powerID number
 ---@return boolean success
 ---[Documentation](https://wow.gamepedia.com/API_C_AzeriteEmpoweredItem.SelectPower)
 function C_AzeriteEmpoweredItem.SelectPower(azeriteEmpoweredItemLocation, powerID) end
 
----@param azeriteEmpoweredItemLocation table
+---@param azeriteEmpoweredItemLocation ItemLocationMixin
 ---[Documentation](https://wow.gamepedia.com/API_C_AzeriteEmpoweredItem.SetHasBeenViewed)
 function C_AzeriteEmpoweredItem.SetHasBeenViewed(azeriteEmpoweredItemLocation) end
 
@@ -115,7 +115,7 @@ local AzeriteEmpoweredItemPowerInfo = {}
 local AzeriteEmpoweredItemPowerText = {}
 
 ---@class AzeriteEmpoweredItemTierInfo
----@field azeritePowerIDs table
+---@field azeritePowerIDs number[]
 ---@field unlockLevel number
 local AzeriteEmpoweredItemTierInfo = {}
 

@@ -12,7 +12,7 @@ function C_ContributionCollector.Contribute(contributionID) end
 function C_ContributionCollector.GetActive() end
 
 ---@param contributionID number
----@return table atlasName
+---@return string[] atlasName
 ---[Documentation](https://wow.gamepedia.com/API_C_ContributionCollector.GetAtlases)
 function C_ContributionCollector.GetAtlases(contributionID) end
 
@@ -28,7 +28,7 @@ function C_ContributionCollector.GetBuffs(contributionID) end
 function C_ContributionCollector.GetContributionAppearance(contributionID, contributionState) end
 
 ---@param uiMapID number
----@return table contributionCollectors
+---@return ContributionMapInfo[] contributionCollectors
 ---[Documentation](https://wow.gamepedia.com/API_C_ContributionCollector.GetContributionCollectorsForMap)
 function C_ContributionCollector.GetContributionCollectorsForMap(uiMapID) end
 
@@ -120,7 +120,7 @@ local ContributionState = {
 
 ---@class ContributionAppearance
 ---@field stateName string
----@field stateColor table
+---@field stateColor ColorMixin
 ---@field tooltipLine string
 ---@field tooltipUseTimeRemaining boolean
 ---@field statusBarAtlas string
@@ -130,7 +130,7 @@ local ContributionAppearance = {}
 
 ---@class ContributionMapInfo
 ---@field areaPoiID number
----@field position table
+---@field position Vector2DMixin
 ---@field name string
 ---@field atlasName string
 ---@field collectorCreatureID number

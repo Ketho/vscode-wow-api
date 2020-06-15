@@ -5,11 +5,11 @@ C_Commentator = {}
 ---[Documentation](https://wow.gamepedia.com/API_C_Commentator.AddPlayerOverrideName)
 function C_Commentator.AddPlayerOverrideName(playerName, overrideName) end
 
----@param spellIDs table
+---@param spellIDs number[]
 ---[Documentation](https://wow.gamepedia.com/API_C_Commentator.AddTrackedDefensiveAuras)
 function C_Commentator.AddTrackedDefensiveAuras(spellIDs) end
 
----@param spellIDs table
+---@param spellIDs number[]
 ---[Documentation](https://wow.gamepedia.com/API_C_Commentator.AddTrackedOffensiveAuras)
 function C_Commentator.AddTrackedOffensiveAuras(spellIDs) end
 
@@ -60,7 +60,7 @@ function C_Commentator.GetAdditionalCameraWeight() end
 ---[Documentation](https://wow.gamepedia.com/API_C_Commentator.GetAdditionalCameraWeightByToken)
 function C_Commentator.GetAdditionalCameraWeightByToken(token) end
 
----@return table nameEntries
+---@return NameOverrideEntry[] nameEntries
 ---[Documentation](https://wow.gamepedia.com/API_C_Commentator.GetAllPlayerOverrideNames)
 function C_Commentator.GetAllPlayerOverrideNames() end
 
@@ -266,7 +266,7 @@ function C_Commentator.GetSoftlockWeight() end
 function C_Commentator.GetSpeedFactor() end
 
 ---@param mapID number
----@return table pos
+---@return Vector3DMixin pos
 ---[Documentation](https://wow.gamepedia.com/API_C_Commentator.GetStartLocation)
 function C_Commentator.GetStartLocation(mapID) end
 
@@ -290,7 +290,7 @@ function C_Commentator.GetTrackedSpellID(indirectSpellID) end
 ---@param teamIndex number
 ---@param playerIndex number
 ---@param category TrackedSpellCategory
----@return table spells
+---@return number[] spells
 ---[Documentation](https://wow.gamepedia.com/API_C_Commentator.GetTrackedSpells)
 function C_Commentator.GetTrackedSpells(teamIndex, playerIndex, category) end
 
@@ -373,12 +373,12 @@ function C_Commentator.SetAdditionalCameraWeight(teamIndex, playerIndex, weight)
 ---[Documentation](https://wow.gamepedia.com/API_C_Commentator.SetAdditionalCameraWeightByToken)
 function C_Commentator.SetAdditionalCameraWeightByToken(token, weight) end
 
----@param spellIDs table
+---@param spellIDs number[]
 ---[Documentation](https://wow.gamepedia.com/API_C_Commentator.SetBlacklistedAuras)
 function C_Commentator.SetBlacklistedAuras(spellIDs) end
 
 ---@param specID number
----@param spellIDs table
+---@param spellIDs number[]
 ---[Documentation](https://wow.gamepedia.com/API_C_Commentator.SetBlacklistedCooldowns)
 function C_Commentator.SetBlacklistedCooldowns(specID, spellIDs) end
 
@@ -470,17 +470,17 @@ function C_Commentator.SetMsToSmoothVerticalChange(ms) end
 function C_Commentator.SetPositionLerpAmount(amount) end
 
 ---@param specID number
----@param spellIDs table
+---@param spellIDs number[]
 ---[Documentation](https://wow.gamepedia.com/API_C_Commentator.SetRequestedDebuffCooldowns)
 function C_Commentator.SetRequestedDebuffCooldowns(specID, spellIDs) end
 
 ---@param specID number
----@param spellIDs table
+---@param spellIDs number[]
 ---[Documentation](https://wow.gamepedia.com/API_C_Commentator.SetRequestedDefensiveCooldowns)
 function C_Commentator.SetRequestedDefensiveCooldowns(specID, spellIDs) end
 
 ---@param specID number
----@param spellIDs table
+---@param spellIDs number[]
 ---[Documentation](https://wow.gamepedia.com/API_C_Commentator.SetRequestedOffensiveCooldowns)
 function C_Commentator.SetRequestedOffensiveCooldowns(specID, spellIDs) end
 

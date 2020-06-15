@@ -8,7 +8,7 @@ function C_ScrappingMachineUI.CloseScrappingMachine() end
 function C_ScrappingMachineUI.DropPendingScrapItemFromCursor(index) end
 
 ---@param index number
----@return table itemLoc
+---@return ItemLocationMixin itemLoc
 ---[Documentation](https://wow.gamepedia.com/API_C_ScrappingMachineUI.GetCurrentPendingScrapItemLocationByIndex)
 function C_ScrappingMachineUI.GetCurrentPendingScrapItemLocationByIndex(index) end
 

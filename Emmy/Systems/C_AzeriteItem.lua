@@ -1,21 +1,21 @@
 C_AzeriteItem = {}
 
----@return table activeAzeriteItemLocation
+---@return ItemLocationMixin activeAzeriteItemLocation
 ---[Documentation](https://wow.gamepedia.com/API_C_AzeriteItem.FindActiveAzeriteItem)
 function C_AzeriteItem.FindActiveAzeriteItem() end
 
----@param azeriteItemLocation table
+---@param azeriteItemLocation ItemLocationMixin
 ---@return number xp
 ---@return number totalLevelXP
 ---[Documentation](https://wow.gamepedia.com/API_C_AzeriteItem.GetAzeriteItemXPInfo)
 function C_AzeriteItem.GetAzeriteItemXPInfo(azeriteItemLocation) end
 
----@param azeriteItemLocation table
+---@param azeriteItemLocation ItemLocationMixin
 ---@return number powerLevel
 ---[Documentation](https://wow.gamepedia.com/API_C_AzeriteItem.GetPowerLevel)
 function C_AzeriteItem.GetPowerLevel(azeriteItemLocation) end
 
----@param azeriteItemLocation table
+---@param azeriteItemLocation ItemLocationMixin
 ---@return number powerLevel
 ---[Documentation](https://wow.gamepedia.com/API_C_AzeriteItem.GetUnlimitedPowerLevel)
 function C_AzeriteItem.GetUnlimitedPowerLevel(azeriteItemLocation) end
@@ -24,7 +24,7 @@ function C_AzeriteItem.GetUnlimitedPowerLevel(azeriteItemLocation) end
 ---[Documentation](https://wow.gamepedia.com/API_C_AzeriteItem.HasActiveAzeriteItem)
 function C_AzeriteItem.HasActiveAzeriteItem() end
 
----@param itemLocation table
+---@param itemLocation ItemLocationMixin
 ---@return boolean isAzeriteItem
 ---[Documentation](https://wow.gamepedia.com/API_C_AzeriteItem.IsAzeriteItem)
 function C_AzeriteItem.IsAzeriteItem(itemLocation) end
@@ -39,6 +39,6 @@ function C_AzeriteItem.IsAzeriteItemAtMaxLevel() end
 function C_AzeriteItem.IsAzeriteItemByID(itemInfo) end
 
 ---@class UnlockedAzeriteEmpoweredItems
----@field unlockedItem table
+---@field unlockedItem ItemLocationMixin
 ---@field tierIndex number
 local UnlockedAzeriteEmpoweredItems = {}

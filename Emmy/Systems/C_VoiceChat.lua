@@ -32,11 +32,11 @@ function C_VoiceChat.GetActiveChannelID() end
 ---[Documentation](https://wow.gamepedia.com/API_C_VoiceChat.GetActiveChannelType)
 function C_VoiceChat.GetActiveChannelType() end
 
----@return table inputDevices
+---@return VoiceAudioDevice[] inputDevices
 ---[Documentation](https://wow.gamepedia.com/API_C_VoiceChat.GetAvailableInputDevices)
 function C_VoiceChat.GetAvailableInputDevices() end
 
----@return table outputDevices
+---@return VoiceAudioDevice[] outputDevices
 ---[Documentation](https://wow.gamepedia.com/API_C_VoiceChat.GetAvailableOutputDevices)
 function C_VoiceChat.GetAvailableOutputDevices() end
 
@@ -105,7 +105,7 @@ function C_VoiceChat.GetMemberInfo(memberID, channelID) end
 ---[Documentation](https://wow.gamepedia.com/API_C_VoiceChat.GetMemberName)
 function C_VoiceChat.GetMemberName(memberID, channelID) end
 
----@param playerLocation table
+---@param playerLocation PlayerLocationMixin
 ---@return number volume
 ---[Documentation](https://wow.gamepedia.com/API_C_VoiceChat.GetMemberVolume)
 function C_VoiceChat.GetMemberVolume(playerLocation) end
@@ -118,11 +118,11 @@ function C_VoiceChat.GetOutputVolume() end
 ---[Documentation](https://wow.gamepedia.com/API_C_VoiceChat.GetPTTButtonPressedState)
 function C_VoiceChat.GetPTTButtonPressedState() end
 
----@return table processes
+---@return VoiceChatProcess[] processes
 ---[Documentation](https://wow.gamepedia.com/API_C_VoiceChat.GetProcesses)
 function C_VoiceChat.GetProcesses() end
 
----@return table keys
+---@return string[] keys
 ---[Documentation](https://wow.gamepedia.com/API_C_VoiceChat.GetPushToTalkBinding)
 function C_VoiceChat.GetPushToTalkBinding() end
 
@@ -155,7 +155,7 @@ function C_VoiceChat.IsLoggedIn() end
 ---[Documentation](https://wow.gamepedia.com/API_C_VoiceChat.IsMemberLocalPlayer)
 function C_VoiceChat.IsMemberLocalPlayer(memberID, channelID) end
 
----@param playerLocation table
+---@param playerLocation PlayerLocationMixin
 ---@return boolean mutedForMe
 ---[Documentation](https://wow.gamepedia.com/API_C_VoiceChat.IsMemberMuted)
 function C_VoiceChat.IsMemberMuted(playerLocation) end
@@ -184,7 +184,7 @@ function C_VoiceChat.IsParentalDisabled() end
 ---[Documentation](https://wow.gamepedia.com/API_C_VoiceChat.IsParentalMuted)
 function C_VoiceChat.IsParentalMuted() end
 
----@param playerLocation table
+---@param playerLocation PlayerLocationMixin
 ---@return boolean isUsingVoice
 ---[Documentation](https://wow.gamepedia.com/API_C_VoiceChat.IsPlayerUsingVoice)
 function C_VoiceChat.IsPlayerUsingVoice(playerLocation) end
@@ -238,12 +238,12 @@ function C_VoiceChat.SetInputVolume(volume) end
 ---[Documentation](https://wow.gamepedia.com/API_C_VoiceChat.SetMasterVolumeScale)
 function C_VoiceChat.SetMasterVolumeScale(scale) end
 
----@param playerLocation table
+---@param playerLocation PlayerLocationMixin
 ---@param muted boolean
 ---[Documentation](https://wow.gamepedia.com/API_C_VoiceChat.SetMemberMuted)
 function C_VoiceChat.SetMemberMuted(playerLocation, muted) end
 
----@param playerLocation table
+---@param playerLocation PlayerLocationMixin
 ---@param volume number
 ---[Documentation](https://wow.gamepedia.com/API_C_VoiceChat.SetMemberVolume)
 function C_VoiceChat.SetMemberVolume(playerLocation, volume) end
@@ -266,7 +266,7 @@ function C_VoiceChat.SetOutputVolume(volume) end
 ---[Documentation](https://wow.gamepedia.com/API_C_VoiceChat.SetPortraitTexture)
 function C_VoiceChat.SetPortraitTexture(textureObject, memberID, channelID) end
 
----@param keys table
+---@param keys string[]
 ---[Documentation](https://wow.gamepedia.com/API_C_VoiceChat.SetPushToTalkBinding)
 function C_VoiceChat.SetPushToTalkBinding(keys) end
 
@@ -281,7 +281,7 @@ function C_VoiceChat.ShouldDiscoverChannels() end
 ---[Documentation](https://wow.gamepedia.com/API_C_VoiceChat.ToggleDeafened)
 function C_VoiceChat.ToggleDeafened() end
 
----@param playerLocation table
+---@param playerLocation PlayerLocationMixin
 ---[Documentation](https://wow.gamepedia.com/API_C_VoiceChat.ToggleMemberMuted)
 function C_VoiceChat.ToggleMemberMuted(playerLocation) end
 
@@ -342,7 +342,7 @@ local VoiceAudioDevice = {}
 ---@field isMuted boolean
 ---@field isTransmitting boolean
 ---@field isLocalProcess boolean
----@field members table
+---@field members VoiceChatMember[]
 local VoiceChatChannel = {}
 
 ---@class VoiceChatMember
@@ -356,5 +356,5 @@ local VoiceChatMember = {}
 
 ---@class VoiceChatProcess
 ---@field name string
----@field channels table
+---@field channels VoiceChatChannel[]
 local VoiceChatProcess = {}

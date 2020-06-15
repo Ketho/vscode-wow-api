@@ -14,6 +14,6 @@ function C_GossipInfo.GetGossipPoiInfo(uiMapID, gossipPoiID) end
 ---@class GossipPoiInfo
 ---@field name string
 ---@field textureIndex number
----@field position table
+---@field position Vector2DMixin
 ---@field inBattleMap boolean
 local GossipPoiInfo = {}

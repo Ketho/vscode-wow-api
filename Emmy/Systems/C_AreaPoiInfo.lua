@@ -1,7 +1,7 @@
 C_AreaPoiInfo = {}
 
 ---@param uiMapID number
----@return table areaPoiIDs
+---@return number[] areaPoiIDs
 ---[Documentation](https://wow.gamepedia.com/API_C_AreaPoiInfo.GetAreaPOIForMap)
 function C_AreaPoiInfo.GetAreaPOIForMap(uiMapID) end
 
@@ -23,7 +23,7 @@ function C_AreaPoiInfo.IsAreaPOITimed(areaPoiID) end
 
 ---@class AreaPOIInfo
 ---@field areaPoiID number
----@field position table
+---@field position Vector2DMixin
 ---@field name string
 ---@field description string
 ---@field textureIndex number

@@ -26,7 +26,7 @@ function C_ItemInteraction.Reset() end
 ---[Documentation](https://wow.gamepedia.com/API_C_ItemInteraction.SetCorruptionReforgerItemTooltip)
 function C_ItemInteraction.SetCorruptionReforgerItemTooltip() end
 
----@param item table
+---@param item ItemLocationMixin
 ---@return boolean success
 ---[Documentation](https://wow.gamepedia.com/API_C_ItemInteraction.SetPendingItem)
 function C_ItemInteraction.SetPendingItem(item) end

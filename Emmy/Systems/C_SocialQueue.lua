@@ -2,7 +2,7 @@ C_SocialQueue = {}
 
 ---@param allowNonJoinable boolean
 ---@param allowNonQueuedGroups boolean
----@return table groupGUIDs
+---@return string[] groupGUIDs
 ---[Documentation](https://wow.gamepedia.com/API_C_SocialQueue.GetAllGroups)
 function C_SocialQueue.GetAllGroups(allowNonJoinable, allowNonQueuedGroups) end
 
@@ -29,12 +29,12 @@ function C_SocialQueue.GetGroupForPlayer(playerGUID) end
 function C_SocialQueue.GetGroupInfo(groupGUID) end
 
 ---@param groupGUID string
----@return table groupMembers
+---@return SocialQueuePlayerInfo[] groupMembers
 ---[Documentation](https://wow.gamepedia.com/API_C_SocialQueue.GetGroupMembers)
 function C_SocialQueue.GetGroupMembers(groupGUID) end
 
 ---@param groupGUID string
----@return table queues
+---@return SocialQueueGroupQueueInfo[] queues
 ---[Documentation](https://wow.gamepedia.com/API_C_SocialQueue.GetGroupQueues)
 function C_SocialQueue.GetGroupQueues(groupGUID) end
 

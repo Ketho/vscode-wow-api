@@ -3,7 +3,7 @@ C_IslandsQueue = {}
 ---[Documentation](https://wow.gamepedia.com/API_C_IslandsQueue.CloseIslandsQueueScreen)
 function C_IslandsQueue.CloseIslandsQueueScreen() end
 
----@return table islandDifficultyInfo
+---@return IslandsQueueDifficultyInfo[] islandDifficultyInfo
 ---[Documentation](https://wow.gamepedia.com/API_C_IslandsQueue.GetIslandDifficultyInfo)
 function C_IslandsQueue.GetIslandDifficultyInfo() end
 

@@ -1,7 +1,7 @@
 C_QuestLine = {}
 
 ---@param uiMapID number
----@return table questLines
+---@return QuestLineInfo[] questLines
 ---[Documentation](https://wow.gamepedia.com/API_C_QuestLine.GetAvailableQuestLines)
 function C_QuestLine.GetAvailableQuestLines(uiMapID) end
 
@@ -12,7 +12,7 @@ function C_QuestLine.GetAvailableQuestLines(uiMapID) end
 function C_QuestLine.GetQuestLineInfo(questID, uiMapID) end
 
 ---@param questLineID number
----@return table questIDs
+---@return number[] questIDs
 ---[Documentation](https://wow.gamepedia.com/API_C_QuestLine.GetQuestLineQuests)
 function C_QuestLine.GetQuestLineQuests(questLineID) end
 

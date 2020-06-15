@@ -11,7 +11,7 @@ function C_ChallengeMode.CloseKeystoneFrame() end
 function C_ChallengeMode.GetActiveChallengeMapID() end
 
 ---@return number activeKeystoneLevel
----@return table activeAffixIDs
+---@return number[] activeAffixIDs
 ---@return boolean wasActiveKeystoneCharged
 ---[Documentation](https://wow.gamepedia.com/API_C_ChallengeMode.GetActiveKeystoneInfo)
 function C_ChallengeMode.GetActiveKeystoneInfo() end
@@ -37,11 +37,11 @@ function C_ChallengeMode.GetCompletionInfo() end
 ---[Documentation](https://wow.gamepedia.com/API_C_ChallengeMode.GetDeathCount)
 function C_ChallengeMode.GetDeathCount() end
 
----@return table topAttempt
+---@return ChallengeModeGuildTopAttempt[] topAttempt
 ---[Documentation](https://wow.gamepedia.com/API_C_ChallengeMode.GetGuildLeaders)
 function C_ChallengeMode.GetGuildLeaders() end
 
----@return table mapChallengeModeIDs
+---@return number[] mapChallengeModeIDs
 ---[Documentation](https://wow.gamepedia.com/API_C_ChallengeMode.GetMapTable)
 function C_ChallengeMode.GetMapTable() end
 
@@ -61,7 +61,7 @@ function C_ChallengeMode.GetMapUIInfo(mapChallengeModeID) end
 function C_ChallengeMode.GetPowerLevelDamageHealthMod(powerLevel) end
 
 ---@return number mapChallengeModeID
----@return table affixIDs
+---@return number[] affixIDs
 ---@return number keystoneLevel
 ---[Documentation](https://wow.gamepedia.com/API_C_ChallengeMode.GetSlottedKeystoneInfo)
 function C_ChallengeMode.GetSlottedKeystoneInfo() end
@@ -106,5 +106,5 @@ local ChallengeModeGuildAttemptMember = {}
 ---@field keystoneLevel number
 ---@field mapChallengeModeID number
 ---@field isYou boolean
----@field members table
+---@field members ChallengeModeGuildAttemptMember[]
 local ChallengeModeGuildTopAttempt = {}

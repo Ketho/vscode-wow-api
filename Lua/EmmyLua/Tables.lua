@@ -8,11 +8,10 @@ function Emmy:GetTable(apiTable)
 		end
 		tinsert(tbl, "}")
 	elseif apiTable.Type == "Structure" then
-		for _, v in pairs(apiTable.Fields) do
-			tinsert(tbl, format("---@field %s %s", v.Name, self:GetType(v.Type)))
+		for _, field in pairs(apiTable.Fields) do
+			tinsert(tbl, self:GetField("field", field))
 		end
 		tinsert(tbl, format("local %s = {}", apiTable.Name))
 	end
-	-- tinsert(tbl, self.fs.func:format(func:GetFullName(false, false)))
 	return table.concat(tbl, "\n")
 end

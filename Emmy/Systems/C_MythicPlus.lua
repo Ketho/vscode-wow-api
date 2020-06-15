@@ -1,6 +1,6 @@
 C_MythicPlus = {}
 
----@return table affixIDs
+---@return MythicPlusKeystoneAffix[] affixIDs
 ---[Documentation](https://wow.gamepedia.com/API_C_MythicPlus.GetCurrentAffixes)
 function C_MythicPlus.GetCurrentAffixes() end
 
@@ -42,8 +42,8 @@ function C_MythicPlus.GetSeasonBestForMap(mapChallengeModeID) end
 ---@return number durationSec
 ---@return number level
 ---@return MythicPlusDate completionDate
----@return table affixIDs
----@return table members
+---@return number[] affixIDs
+---@return MythicPlusMember[] members
 ---[Documentation](https://wow.gamepedia.com/API_C_MythicPlus.GetWeeklyBestForMap)
 function C_MythicPlus.GetWeeklyBestForMap(mapChallengeModeID) end
 
@@ -75,8 +75,8 @@ function C_MythicPlus.RequestRewards() end
 ---@field durationSec number
 ---@field level number
 ---@field completionDate MythicPlusDate
----@field affixIDs table
----@field members table
+---@field affixIDs number[]
+---@field members MythicPlusMember[]
 local MapSeasonBestInfo = {}
 
 ---@class MythicPlusDate

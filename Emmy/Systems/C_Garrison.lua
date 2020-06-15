@@ -9,7 +9,7 @@ function C_Garrison.GetCurrentGarrTalentTreeFriendshipFactionID() end
 function C_Garrison.GetCurrentGarrTalentTreeID() end
 
 ---@param uiMapID number
----@return table garrisonPlotInstances
+---@return GarrisonPlotInstanceMapInfo[] garrisonPlotInstances
 ---[Documentation](https://wow.gamepedia.com/API_C_Garrison.GetGarrisonPlotsInstancesForMap)
 function C_Garrison.GetGarrisonPlotsInstancesForMap(uiMapID) end
 
@@ -30,7 +30,7 @@ function C_Garrison.GetTalentPointsSpentInTalentTree(garrTalentTreeID) end
 
 ---@param garrType number
 ---@param classID number
----@return table treeIDs
+---@return number[] treeIDs
 ---[Documentation](https://wow.gamepedia.com/API_C_Garrison.GetTalentTreeIDsByClassID)
 function C_Garrison.GetTalentTreeIDsByClassID(garrType, classID) end
 
@@ -60,7 +60,7 @@ local GarrisonFollowerDeathInfo = {}
 
 ---@class GarrisonPlotInstanceMapInfo
 ---@field buildingPlotInstanceID number
----@field position table
+---@field position Vector2DMixin
 ---@field name string
 ---@field atlasName string
 local GarrisonPlotInstanceMapInfo = {}

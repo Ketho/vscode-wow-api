@@ -1,6 +1,6 @@
 Unit = {}
 
----@return table corruptionEffects
+---@return CorruptionEffectInfo[] corruptionEffects
 ---[Documentation](https://wow.gamepedia.com/API_GetNegativeCorruptionEffectInfo)
 function GetNegativeCorruptionEffectInfo() end
 

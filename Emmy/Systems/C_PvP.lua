@@ -51,15 +51,15 @@ function C_PvP.GetArenaCrowdControlInfo(playerToken) end
 ---@param teamSize number
 ---@return number honor
 ---@return number experience
----@return table itemRewards
----@return table currencyRewards
+---@return BattlefieldItemReward[] itemRewards
+---@return BattlefieldCurrencyReward[] currencyRewards
 ---[Documentation](https://wow.gamepedia.com/API_C_PvP.GetArenaRewards)
 function C_PvP.GetArenaRewards(teamSize) end
 
 ---@return number honor
 ---@return number experience
----@return table itemRewards
----@return table currencyRewards
+---@return BattlefieldItemReward[] itemRewards
+---@return BattlefieldCurrencyReward[] currencyRewards
 ---[Documentation](https://wow.gamepedia.com/API_C_PvP.GetArenaSkirmishRewards)
 function C_PvP.GetArenaSkirmishRewards() end
 
@@ -70,14 +70,14 @@ function C_PvP.GetAvailableBrawlInfo() end
 ---@param brawlType BrawlType
 ---@return number honor
 ---@return number experience
----@return table itemRewards
----@return table currencyRewards
+---@return BattlefieldItemReward[] itemRewards
+---@return BattlefieldCurrencyReward[] currencyRewards
 ---@return boolean hasWon
 ---[Documentation](https://wow.gamepedia.com/API_C_PvP.GetBrawlRewards)
 function C_PvP.GetBrawlRewards(brawlType) end
 
 ---@param specializationID number
----@return table pvpScalingData
+---@return PvpScalingData[] pvpScalingData
 ---[Documentation](https://wow.gamepedia.com/API_C_PvP.GetGlobalPvpScalingInfoForSpecID)
 function C_PvP.GetGlobalPvpScalingInfoForSpecID(specializationID) end
 
@@ -91,7 +91,7 @@ function C_PvP.GetHonorRewardInfo(honorLevel) end
 ---[Documentation](https://wow.gamepedia.com/API_C_PvP.GetMatchPVPStatColumn)
 function C_PvP.GetMatchPVPStatColumn(pvpStatID) end
 
----@return table columns
+---@return MatchPVPStatColumn[] columns
 ---[Documentation](https://wow.gamepedia.com/API_C_PvP.GetMatchPVPStatColumns)
 function C_PvP.GetMatchPVPStatColumns() end
 
@@ -109,11 +109,11 @@ function C_PvP.GetOutdoorPvPWaitTime(uiMapID) end
 ---[Documentation](https://wow.gamepedia.com/API_C_PvP.GetPVPActiveMatchPersonalRatedInfo)
 function C_PvP.GetPVPActiveMatchPersonalRatedInfo() end
 
----@return table rewards
+---@return PVPPostMatchCurrencyReward[] rewards
 ---[Documentation](https://wow.gamepedia.com/API_C_PvP.GetPostMatchCurrencyRewards)
 function C_PvP.GetPostMatchCurrencyRewards() end
 
----@return table rewards
+---@return PVPPostMatchItemReward[] rewards
 ---[Documentation](https://wow.gamepedia.com/API_C_PvP.GetPostMatchItemRewards)
 function C_PvP.GetPostMatchItemRewards() end
 
@@ -128,8 +128,8 @@ function C_PvP.GetRandomBGInfo() end
 
 ---@return number honor
 ---@return number experience
----@return table itemRewards
----@return table currencyRewards
+---@return BattlefieldItemReward[] itemRewards
+---@return BattlefieldCurrencyReward[] currencyRewards
 ---[Documentation](https://wow.gamepedia.com/API_C_PvP.GetRandomBGRewards)
 function C_PvP.GetRandomBGRewards() end
 
@@ -139,15 +139,15 @@ function C_PvP.GetRandomEpicBGInfo() end
 
 ---@return number honor
 ---@return number experience
----@return table itemRewards
----@return table currencyRewards
+---@return BattlefieldItemReward[] itemRewards
+---@return BattlefieldCurrencyReward[] currencyRewards
 ---[Documentation](https://wow.gamepedia.com/API_C_PvP.GetRandomEpicBGRewards)
 function C_PvP.GetRandomEpicBGRewards() end
 
 ---@return number honor
 ---@return number experience
----@return table itemRewards
----@return table currencyRewards
+---@return BattlefieldItemReward[] itemRewards
+---@return BattlefieldCurrencyReward[] currencyRewards
 ---[Documentation](https://wow.gamepedia.com/API_C_PvP.GetRatedBGRewards)
 function C_PvP.GetRatedBGRewards() end
 
@@ -342,7 +342,7 @@ local MatchPVPStatColumn = {}
 ---@field canQueue boolean
 ---@field timeLeftUntilNextChange number
 ---@field brawlType BrawlType
----@field mapNames table
+---@field mapNames string[]
 local PvpBrawlInfo = {}
 
 ---@class PvpScalingData
@@ -409,7 +409,7 @@ local PVPPostMatchItemReward = {}
 ---@field mmrChange number
 ---@field talentSpec string
 ---@field honorLevel number
----@field stats table
+---@field stats PVPStatInfo[]
 local PVPScoreInfo = {}
 
 ---@class PVPStatInfo

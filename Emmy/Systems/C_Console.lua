@@ -1,11 +1,11 @@
 C_Console = {}
 
----@return table commands
+---@return ConsoleCommandInfo[] commands
 ---[Documentation](https://wow.gamepedia.com/API_C_Console.GetAllCommands)
 function C_Console.GetAllCommands() end
 
 ---@param colorType ConsoleColorType
----@return table color
+---@return ColorMixin color
 ---[Documentation](https://wow.gamepedia.com/API_C_Console.GetColorFromType)
 function C_Console.GetColorFromType(colorType) end
 

@@ -2,6 +2,7 @@ Emmy = {}
 require "Lua/EmmyLua/Functions"
 require "Lua/EmmyLua/Events"
 require "Lua/EmmyLua/Tables"
+require "Lua/EmmyLua/Fields"
 
 Emmy.fs = {
 	class = "---@class %s",

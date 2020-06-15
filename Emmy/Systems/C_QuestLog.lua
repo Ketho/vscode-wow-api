@@ -1,6 +1,6 @@
 C_QuestLog = {}
 
----@return table uiMapIDs
+---@return number[] uiMapIDs
 ---[Documentation](https://wow.gamepedia.com/API_C_QuestLog.GetActiveThreatMaps)
 function C_QuestLog.GetActiveThreatMaps() end
 
@@ -51,12 +51,12 @@ function C_QuestLog.GetQuestDifficultyLevel(questID) end
 function C_QuestLog.GetQuestInfo(questID) end
 
 ---@param questID number
----@return table objectives
+---@return QuestObjectiveInfo[] objectives
 ---[Documentation](https://wow.gamepedia.com/API_C_QuestLog.GetQuestObjectives)
 function C_QuestLog.GetQuestObjectives(questID) end
 
 ---@param uiMapID number
----@return table quests
+---@return QuestOnMapInfo[] quests
 ---[Documentation](https://wow.gamepedia.com/API_C_QuestLog.GetQuestsOnMap)
 function C_QuestLog.GetQuestsOnMap(uiMapID) end
 

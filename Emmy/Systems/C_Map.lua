@@ -14,7 +14,7 @@ function C_Map.GetAreaInfo(areaID) end
 function C_Map.GetBestMapForUnit(unitToken) end
 
 ---@param bountySetID number
----@return table mapIDs
+---@return number[] mapIDs
 ---[Documentation](https://wow.gamepedia.com/API_C_Map.GetBountySetMaps)
 function C_Map.GetBountySetMaps(bountySetID) end
 
@@ -39,24 +39,24 @@ function C_Map.GetMapArtID(uiMapID) end
 
 ---@param uiMapID number
 ---@param layerIndex number
----@return table textures
+---@return number[] textures
 ---[Documentation](https://wow.gamepedia.com/API_C_Map.GetMapArtLayerTextures)
 function C_Map.GetMapArtLayerTextures(uiMapID, layerIndex) end
 
 ---@param uiMapID number
----@return table layerInfo
+---@return UiMapLayerInfo[] layerInfo
 ---[Documentation](https://wow.gamepedia.com/API_C_Map.GetMapArtLayers)
 function C_Map.GetMapArtLayers(uiMapID) end
 
 ---@param uiMapID number
----@return table mapBanners
+---@return MapBannerInfo[] mapBanners
 ---[Documentation](https://wow.gamepedia.com/API_C_Map.GetMapBannersForMap)
 function C_Map.GetMapBannersForMap(uiMapID) end
 
 ---@param uiMapID number
 ---@param mapType UIMapType
 ---@param allDescendants boolean
----@return table info
+---@return UiMapDetails[] info
 ---[Documentation](https://wow.gamepedia.com/API_C_Map.GetMapChildrenInfo)
 function C_Map.GetMapChildrenInfo(uiMapID, mapType, allDescendants) end
 
@@ -71,7 +71,7 @@ function C_Map.GetMapDisplayInfo(uiMapID) end
 function C_Map.GetMapGroupID(uiMapID) end
 
 ---@param uiMapGroupID number
----@return table info
+---@return UiMapGroupMemberInfo[] info
 ---[Documentation](https://wow.gamepedia.com/API_C_Map.GetMapGroupMembersInfo)
 function C_Map.GetMapGroupMembersInfo(uiMapGroupID) end
 
@@ -110,15 +110,15 @@ function C_Map.GetMapInfoAtPosition(uiMapID, x, y) end
 function C_Map.GetMapLevels(uiMapID) end
 
 ---@param uiMapID number
----@return table mapLinks
+---@return MapLinkInfo[] mapLinks
 ---[Documentation](https://wow.gamepedia.com/API_C_Map.GetMapLinksForMap)
 function C_Map.GetMapLinksForMap(uiMapID) end
 
 ---@param continentID number
----@param worldPosition table
+---@param worldPosition Vector2DMixin
 ---@param overrideUiMapID number
 ---@return number uiMapID
----@return table mapPosition
+---@return Vector2DMixin mapPosition
 ---[Documentation](https://wow.gamepedia.com/API_C_Map.GetMapPosFromWorldPos)
 function C_Map.GetMapPosFromWorldPos(continentID, worldPosition, overrideUiMapID) end
 
@@ -133,14 +133,14 @@ function C_Map.GetMapRectOnMap(uiMapID, topUiMapID) end
 
 ---@param uiMapID number
 ---@param unitToken string
----@return table position
+---@return Vector2DMixin position
 ---[Documentation](https://wow.gamepedia.com/API_C_Map.GetPlayerMapPosition)
 function C_Map.GetPlayerMapPosition(uiMapID, unitToken) end
 
 ---@param uiMapID number
----@param mapPosition table
+---@param mapPosition Vector2DMixin
 ---@return number continentID
----@return table worldPosition
+---@return Vector2DMixin worldPosition
 ---[Documentation](https://wow.gamepedia.com/API_C_Map.GetWorldPosFromMapPos)
 function C_Map.GetWorldPosFromMapPos(uiMapID, mapPosition) end
 
@@ -189,7 +189,7 @@ local MapBannerInfo = {}
 
 ---@class MapLinkInfo
 ---@field areaPoiID number
----@field position table
+---@field position Vector2DMixin
 ---@field name string
 ---@field atlasName string
 ---@field linkedUiMapID number

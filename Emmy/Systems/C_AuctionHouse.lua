@@ -7,7 +7,7 @@ C_AuctionHouse = {}
 ---[Documentation](https://wow.gamepedia.com/API_C_AuctionHouse.CalculateCommodityDeposit)
 function C_AuctionHouse.CalculateCommodityDeposit(itemID, duration, quantity) end
 
----@param item table
+---@param item ItemLocationMixin
 ---@param duration number
 ---@param quantity number
 ---@return number depositCost
@@ -42,11 +42,11 @@ function C_AuctionHouse.ConfirmCommoditiesPurchase(itemID, quantity) end
 function C_AuctionHouse.FavoritesAreAvailable() end
 
 ---@param classID number
----@return table subClasses
+---@return number[] subClasses
 ---[Documentation](https://wow.gamepedia.com/API_C_AuctionHouse.GetAuctionItemSubClasses)
 function C_AuctionHouse.GetAuctionItemSubClasses(classID) end
 
----@param item table
+---@param item ItemLocationMixin
 ---@return number listCount
 ---[Documentation](https://wow.gamepedia.com/API_C_AuctionHouse.GetAvailablePostCount)
 function C_AuctionHouse.GetAvailablePostCount(item) end
@@ -61,7 +61,7 @@ function C_AuctionHouse.GetBidInfo(bidIndex) end
 ---[Documentation](https://wow.gamepedia.com/API_C_AuctionHouse.GetBidType)
 function C_AuctionHouse.GetBidType(bidTypeIndex) end
 
----@return table browseResults
+---@return BrowseResultInfo[] browseResults
 ---[Documentation](https://wow.gamepedia.com/API_C_AuctionHouse.GetBrowseResults)
 function C_AuctionHouse.GetBrowseResults() end
 
@@ -86,16 +86,16 @@ function C_AuctionHouse.GetCommoditySearchResultsQuantity(itemID) end
 ---[Documentation](https://wow.gamepedia.com/API_C_AuctionHouse.GetExtraBrowseInfo)
 function C_AuctionHouse.GetExtraBrowseInfo(itemKey) end
 
----@return table filterGroups
+---@return AuctionHouseFilterGroup[] filterGroups
 ---[Documentation](https://wow.gamepedia.com/API_C_AuctionHouse.GetFilterGroups)
 function C_AuctionHouse.GetFilterGroups() end
 
----@param item table
+---@param item ItemLocationMixin
 ---@return ItemCommodityStatus isCommodity
 ---[Documentation](https://wow.gamepedia.com/API_C_AuctionHouse.GetItemCommodityStatus)
 function C_AuctionHouse.GetItemCommodityStatus(item) end
 
----@param item table
+---@param item ItemLocationMixin
 ---@return ItemKey itemKey
 ---[Documentation](https://wow.gamepedia.com/API_C_AuctionHouse.GetItemKeyFromItem)
 function C_AuctionHouse.GetItemKeyFromItem(item) end
@@ -276,7 +276,7 @@ function C_AuctionHouse.HasSearchResults(itemKey) end
 ---[Documentation](https://wow.gamepedia.com/API_C_AuctionHouse.IsFavoriteItem)
 function C_AuctionHouse.IsFavoriteItem(itemKey) end
 
----@param item table
+---@param item ItemLocationMixin
 ---@param displayError boolean
 ---@return boolean valid
 ---[Documentation](https://wow.gamepedia.com/API_C_AuctionHouse.IsSellItemValid)
@@ -300,14 +300,14 @@ function C_AuctionHouse.MakeItemKey(itemID, itemLevel, itemSuffix, battlePetSpec
 ---[Documentation](https://wow.gamepedia.com/API_C_AuctionHouse.PlaceBid)
 function C_AuctionHouse.PlaceBid(auctionID, bidAmount) end
 
----@param item table
+---@param item ItemLocationMixin
 ---@param duration number
 ---@param quantity number
 ---@param unitPrice number
 ---[Documentation](https://wow.gamepedia.com/API_C_AuctionHouse.PostCommodity)
 function C_AuctionHouse.PostCommodity(item, duration, quantity, unitPrice) end
 
----@param item table
+---@param item ItemLocationMixin
 ---@param duration number
 ---@param quantity number
 ---@param bid number
@@ -315,12 +315,12 @@ function C_AuctionHouse.PostCommodity(item, duration, quantity, unitPrice) end
 ---[Documentation](https://wow.gamepedia.com/API_C_AuctionHouse.PostItem)
 function C_AuctionHouse.PostItem(item, duration, quantity, bid, buyout) end
 
----@param sorts table
----@param auctionIDs table
+---@param sorts AuctionHouseSortType[]
+---@param auctionIDs number[]
 ---[Documentation](https://wow.gamepedia.com/API_C_AuctionHouse.QueryBids)
 function C_AuctionHouse.QueryBids(sorts, auctionIDs) end
 
----@param sorts table
+---@param sorts AuctionHouseSortType[]
 ---[Documentation](https://wow.gamepedia.com/API_C_AuctionHouse.QueryOwnedAuctions)
 function C_AuctionHouse.QueryOwnedAuctions(sorts) end
 
@@ -348,12 +348,12 @@ function C_AuctionHouse.RequestMoreCommoditySearchResults(itemID) end
 ---[Documentation](https://wow.gamepedia.com/API_C_AuctionHouse.RequestMoreItemSearchResults)
 function C_AuctionHouse.RequestMoreItemSearchResults(itemKey) end
 
----@param sorts table
+---@param sorts AuctionHouseSortType[]
 ---[Documentation](https://wow.gamepedia.com/API_C_AuctionHouse.SearchForFavorites)
 function C_AuctionHouse.SearchForFavorites(sorts) end
 
----@param itemKeys table
----@param sorts table
+---@param itemKeys ItemKey[]
+---@param sorts AuctionHouseSortType[]
 ---[Documentation](https://wow.gamepedia.com/API_C_AuctionHouse.SearchForItemKeys)
 function C_AuctionHouse.SearchForItemKeys(itemKeys, sorts) end
 
@@ -362,13 +362,13 @@ function C_AuctionHouse.SearchForItemKeys(itemKeys, sorts) end
 function C_AuctionHouse.SendBrowseQuery(query) end
 
 ---@param itemKey ItemKey
----@param sorts table
+---@param sorts AuctionHouseSortType[]
 ---@param separateOwnerItems boolean
 ---[Documentation](https://wow.gamepedia.com/API_C_AuctionHouse.SendSearchQuery)
 function C_AuctionHouse.SendSearchQuery(itemKey, sorts, separateOwnerItems) end
 
 ---@param itemKey ItemKey
----@param sorts table
+---@param sorts AuctionHouseSortType[]
 ---@param separateOwnerItems boolean
 ---[Documentation](https://wow.gamepedia.com/API_C_AuctionHouse.SendSellSearchQuery)
 function C_AuctionHouse.SendSellSearchQuery(itemKey, sorts, separateOwnerItems) end
@@ -405,16 +405,16 @@ local ItemCommodityStatus = {
 
 ---@class AuctionHouseBrowseQuery
 ---@field searchString string
----@field sorts table
+---@field sorts AuctionHouseSortType[]
 ---@field minLevel number
 ---@field maxLevel number
----@field filters table
----@field itemClassFilters table
+---@field filters AuctionHouseFilter[]
+---@field itemClassFilters AuctionHouseItemClassFilter[]
 local AuctionHouseBrowseQuery = {}
 
 ---@class AuctionHouseFilterGroup
 ---@field category AuctionHouseFilterCategory
----@field filters table
+---@field filters AuctionHouseFilter[]
 local AuctionHouseFilterGroup = {}
 
 ---@class AuctionHouseItemClassFilter
@@ -451,7 +451,7 @@ local BrowseResultInfo = {}
 ---@field quantity number
 ---@field unitPrice number
 ---@field auctionID number
----@field owners table
+---@field owners string[]
 ---@field timeLeftSeconds number
 ---@field numOwnerItems number
 ---@field containsOwnerItem boolean
@@ -478,7 +478,7 @@ local ItemKeyInfo = {}
 
 ---@class ItemSearchResultInfo
 ---@field itemKey ItemKey
----@field owners table
+---@field owners string[]
 ---@field timeLeft AuctionHouseTimeLeftBand
 ---@field auctionID number
 ---@field quantity number

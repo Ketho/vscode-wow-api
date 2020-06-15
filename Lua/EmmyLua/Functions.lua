@@ -1,13 +1,13 @@
 function Emmy:GetFunction(func)
 	local tbl = {}
 	if func.Arguments then
-		for _, v in pairs(func.Arguments) do
-			tinsert(tbl, self.fs.param:format("param", v.Name, self:GetType(v.Type)))
+		for _, arg in pairs(func.Arguments) do
+			tinsert(tbl, self:GetField("param", arg))
 		end
 	end
 	if func.Returns then
-		for _, v in pairs(func.Returns) do
-			tinsert(tbl, self.fs.param:format("return", self:GetType(v.Type), v.Name))
+		for _, ret in pairs(func.Returns) do
+			tinsert(tbl, self:GetField("return", ret))
 		end
 	end
 	tinsert(tbl, self.fs.doc:format("API_"..Util:GetFullName(func)))

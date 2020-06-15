@@ -46,11 +46,11 @@ function C_TaskQuest.GetQuestTimeLeftSeconds(questID) end
 function C_TaskQuest.GetQuestZoneID(questID) end
 
 ---@param uiMapID number
----@return table taskPOIs
+---@return TaskPOIData[] taskPOIs
 ---[Documentation](https://wow.gamepedia.com/API_C_TaskQuest.GetQuestsForPlayerByMapID)
 function C_TaskQuest.GetQuestsForPlayerByMapID(uiMapID) end
 
----@return table quests
+---@return number[] quests
 ---[Documentation](https://wow.gamepedia.com/API_C_TaskQuest.GetThreatQuests)
 function C_TaskQuest.GetThreatQuests() end
 

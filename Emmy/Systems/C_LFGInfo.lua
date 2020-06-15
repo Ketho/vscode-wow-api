@@ -1,7 +1,7 @@
 C_LFGInfo = {}
 
 ---@param category number
----@return table lfgDungeonIDs
+---@return number[] lfgDungeonIDs
 ---[Documentation](https://wow.gamepedia.com/API_C_LFGInfo.GetAllEntriesForCategory)
 function C_LFGInfo.GetAllEntriesForCategory(category) end
 

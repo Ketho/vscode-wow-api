@@ -1,6 +1,6 @@
 C_VignetteInfo = {}
 
----@param vignetteGUIDs table
+---@param vignetteGUIDs string[]
 ---@return number bestUniqueVignetteIndex
 ---[Documentation](https://wow.gamepedia.com/API_C_VignetteInfo.FindBestUniqueVignette)
 function C_VignetteInfo.FindBestUniqueVignette(vignetteGUIDs) end
@@ -12,11 +12,11 @@ function C_VignetteInfo.GetVignetteInfo(vignetteGUID) end
 
 ---@param vignetteGUID string
 ---@param uiMapID number
----@return table vignettePosition
+---@return Vector2DMixin vignettePosition
 ---[Documentation](https://wow.gamepedia.com/API_C_VignetteInfo.GetVignettePosition)
 function C_VignetteInfo.GetVignettePosition(vignetteGUID, uiMapID) end
 
----@return table vignetteGUIDs
+---@return string[] vignetteGUIDs
 ---[Documentation](https://wow.gamepedia.com/API_C_VignetteInfo.GetVignettes)
 function C_VignetteInfo.GetVignettes() end
 

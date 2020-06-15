@@ -22,7 +22,7 @@ function C_InvasionInfo.GetInvasionTimeLeft(invasionID) end
 ---@class InvasionMapInfo
 ---@field invasionID number
 ---@field name string
----@field position table
+---@field position Vector2DMixin
 ---@field atlasName string
 ---@field rewardQuestID number
 local InvasionMapInfo = {}

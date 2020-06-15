@@ -8,7 +8,7 @@ function C_Cursor.DropCursorCommunitiesStream() end
 ---[Documentation](https://wow.gamepedia.com/API_C_Cursor.GetCursorCommunitiesStream)
 function C_Cursor.GetCursorCommunitiesStream() end
 
----@return table item
+---@return ItemLocationMixin item
 ---[Documentation](https://wow.gamepedia.com/API_C_Cursor.GetCursorItem)
 function C_Cursor.GetCursorItem() end
 
