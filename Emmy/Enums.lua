@@ -1,1024 +1,354 @@
 Enum = {
-	AuctionHouseCommoditySortOrder = {
-		UnitPrice = 0,
-		Quantity = 1,
-	},
-	AuctionHouseFilter = {
-		UncollectedOnly = 0,
-		UsableOnly = 1,
-		UpgradesOnly = 2,
-		ExactMatch = 3,
-		PoorQuality = 4,
-		CommonQuality = 5,
-		UncommonQuality = 6,
-		RareQuality = 7,
-		EpicQuality = 8,
-		LegendaryQuality = 9,
-		ArtifactQuality = 10,
-	},
-	AuctionHouseFilterCategory = {
-		Uncategorized = 0,
-		Equipment = 1,
-		Rarity = 2,
-	},
-	AuctionHouseItemSortOrder = {
-		Bid = 0,
-		Buyout = 1,
-	},
-	AuctionHouseSortOrder = {
-		Price = 0,
-		Name = 1,
-		Level = 2,
-		Bid = 3,
-		Buyout = 4,
-	},
-	AuctionHouseTimeLeftBand = {
-		Short = 0,
-		Medium = 1,
-		Long = 2,
-		VeryLong = 3,
-	},
-	AuctionStatus = {
-		Active = 0,
-		Sold = 1,
-	},
-	AzeriteEssence = {
-		MainSlot = 0,
-		PassiveOneSlot = 1,
-		PassiveTwoSlot = 2,
-		PassiveThreeSlot = 3,
-	},
-	AzeritePowerLevel = {
-		Base = 0,
-		Upgraded = 1,
-		Downgraded = 2,
-	},
-	BrawlType = {
-		None = 0,
-		Battleground = 1,
-		Arena = 2,
-		Lfg = 3,
-	},
-	CalendarCommandType = {
-		CalendarCommandCreate = 0,
-		CalendarCommandInvite = 1,
-		CalendarCommandRsvp = 2,
-		CalendarCommandRemoveInvite = 3,
-		CalendarCommandRemoveEvent = 4,
-		CalendarCommandStatus = 5,
-		CalendarCommandModeratorStatus = 6,
-		CalendarCommandGetCalendar = 7,
-		CalendarCommandGetEvent = 8,
-		CalendarCommandUpdateEvent = 9,
-		CalendarCommandComplain = 10,
-		CalendarCommandNotes = 11,
-	},
-	CalendarErrorType = {
-		CalendarErrorSuccess = 0,
-		CalendarErrorCommunityEventsExceeded = 1,
-		CalendarErrorEventsExceeded = 2,
-		CalendarErrorSelfInvitesExceeded = 3,
-		CalendarErrorOtherInvitesExceeded = 4,
-		CalendarErrorNoPermission = 5,
-		CalendarErrorEventInvalid = 6,
-		CalendarErrorNotInvited = 7,
-		CalendarErrorUnknownError = 8,
-		CalendarErrorNotInGuild = 9,
-		CalendarErrorNotInCommunity = 10,
-		CalendarErrorTargetAlreadyInvited = 11,
-		CalendarErrorNameNotFound = 12,
-		CalendarErrorWrongFaction = 13,
-		CalendarErrorIgnored = 14,
-		CalendarErrorInvitesExceeded = 15,
-		CalendarErrorInvalidMaxSize = 16,
-		CalendarErrorInvalidDate = 17,
-		CalendarErrorInvalidTime = 18,
-		CalendarErrorNoInvites = 19,
-		CalendarErrorNeedsTitle = 20,
-		CalendarErrorEventPassed = 21,
-		CalendarErrorEventLocked = 22,
-		CalendarErrorDeleteCreatorFailed = 23,
-		CalendarErrorDataAlreadySet = 24,
-		CalendarErrorCalendarDisabled = 25,
-		CalendarErrorRestrictedAccount = 26,
-		CalendarErrorArenaEventsExceeded = 27,
-		CalendarErrorRestrictedLevel = 28,
-		CalendarErrorSquelched = 29,
-		CalendarErrorNoInvite = 30,
-		CalendarErrorComplaintDisabled = 31,
-		CalendarErrorComplaintSelf = 32,
-		CalendarErrorComplaintSameGuild = 33,
-		CalendarErrorComplaintGm = 34,
-		CalendarErrorComplaintLimit = 35,
-		CalendarErrorComplaintNotFound = 36,
-		CalendarErrorEventWrongServer = 37,
-		CalendarErrorNoCommunityInvites = 38,
-		CalendarErrorInvalidSignup = 39,
-		CalendarErrorNoModerator = 40,
-		CalendarErrorModeratorRestricted = 41,
-		CalendarErrorInvalidNotes = 42,
-		CalendarErrorInvalidTitle = 43,
-		CalendarErrorInvalidDescription = 44,
-		CalendarErrorInvalidClub = 45,
-		CalendarErrorCreatorNotFound = 46,
-		CalendarErrorEventThrottled = 47,
-		CalendarErrorInviteThrottled = 48,
-		CalendarErrorInternal = 49,
-		CalendarErrorComplaintAdded = 50,
-	},
-	CalendarEventBits = {
-		CalendarEventBitPlayer = 1,
-		CalendarEventBitGuildDeprecated = 2,
-		CalendarEventBitSystem = 4,
-		CalendarEventBitHoliday = 8,
-		CalendarEventBitLocked = 16,
-		CalendarEventBitAutoApprove = 32,
-		CalendarEventBitCommunityAnnouncement = 64,
-		CalendarEventBitRaidLockout = 128,
-		CalendarEventBitArenaDeprecated = 256,
-		CalendarEventBitRaidResetDeprecated = 512,
-		CalendarEventBitCommunitySignup = 1024,
-		CalendarEventBitGuildSignup = 2048,
-		CommunityWide = 3136,
-		PlayerCreated = 3395,
-		CantComplain = 3788,
-	},
-	CalendarEventRepeatOptions = {
-		CalendarRepeatNever = 0,
-		CalendarRepeatWeekly = 1,
-		CalendarRepeatBiweekly = 2,
-		CalendarRepeatMonthly = 3,
-	},
-	CalendarEventType = {
-		Raid = 0,
-		Dungeon = 1,
-		Pvp = 2,
-		Meeting = 3,
-		Other = 4,
-		HeroicDeprecated = 5,
-	},
-	CalendarFilterFlags = {
-		WeeklyHoliday = 1,
-		Darkmoon = 2,
-		Battleground = 4,
-		RaidLockout = 8,
-		RaidReset = 16,
-	},
-	CalendarGetEventType = {
-		Get = 0,
-		DefaultCalendarGetEventType = 0,
-		Add = 1,
-		Copy = 2,
-	},
-	CalendarHolidayFilterType = {
-		Weekly = 0,
-		Darkmoon = 1,
-		Battleground = 2,
-	},
-	CalendarInviteBits = {
-		CalendarInviteBitPendingInvite = 1,
-		CalendarInviteBitModerator = 2,
-		CalendarInviteBitCreator = 4,
-		CalendarInviteBitSignup = 8,
-	},
-	CalendarInviteSortType = {
-		CalendarInviteSortName = 0,
-		CalendarInviteSortLevel = 1,
-		CalendarInviteSortClass = 2,
-		CalendarInviteSortStatus = 3,
-		CalendarInviteSortParty = 4,
-		CalendarInviteSortNotes = 5,
-	},
-	CalendarInviteType = {
-		Normal = 0,
-		Signup = 1,
-	},
-	CalendarModeratorStatus = {
-		CalendarModeratorNone = 0,
-		CalendarModeratorModerator = 1,
-		CalendarModeratorCreator = 2,
-	},
-	CalendarStatus = {
-		Invited = 0,
-		Available = 1,
-		Declined = 2,
-		Confirmed = 3,
-		Out = 4,
-		Standby = 5,
-		Signedup = 6,
-		NotSignedup = 7,
-		Tentative = 8,
-	},
-	CalendarType = {
-		Player = 0,
-		Community = 1,
-		RaidLockout = 2,
-		RaidResetDeprecated = 3,
-		Holiday = 4,
-		HolidayWeekly = 5,
-		HolidayDarkmoon = 6,
-		HolidayBattleground = 7,
-	},
-	CalendarWebActionType = {
-		Accept = 0,
-		Decline = 1,
-		Remove = 2,
-		ReportSpam = 3,
-		Signup = 4,
-		Tentative = 5,
-		TentativeSignup = 6,
-	},
-	CaptureBarWidgetFillDirectionType = {
-		RightToLeft = 0,
-		LeftToRight = 1,
-	},
-	CaptureBarWidgetGlowAnimType = {
-		None = 0,
-		Pulse = 1,
-	},
-	CharacterServiceInfoFlag = {
-		RestrictToRecommendedSpecs = 1,
-	},
-	ChatChannelType = {
-		None = 0,
-		Custom = 1,
-		Private_Party = 2,
-		Public_Party = 3,
-		Communities = 4,
-	},
-	ClubActionType = {
-		ErrorClubActionSubscribe = 0,
-		ErrorClubActionCreate = 1,
-		ErrorClubActionEdit = 2,
-		ErrorClubActionDestroy = 3,
-		ErrorClubActionLeave = 4,
-		ErrorClubActionCreateTicket = 5,
-		ErrorClubActionDestroyTicket = 6,
-		ErrorClubActionRedeemTicket = 7,
-		ErrorClubActionGetTicket = 8,
-		ErrorClubActionGetTickets = 9,
-		ErrorClubActionGetBans = 10,
-		ErrorClubActionGetInvitations = 11,
-		ErrorClubActionRevokeInvitation = 12,
-		ErrorClubActionAcceptInvitation = 13,
-		ErrorClubActionDeclineInvitation = 14,
-		ErrorClubActionCreateStream = 15,
-		ErrorClubActionEditStream = 16,
-		ErrorClubActionDestroyStream = 17,
-		ErrorClubActionInviteMember = 18,
-		ErrorClubActionEditMember = 19,
-		ErrorClubActionEditMemberNote = 20,
-		ErrorClubActionKickMember = 21,
-		ErrorClubActionAddBan = 22,
-		ErrorClubActionRemoveBan = 23,
-		ErrorClubActionCreateMessage = 24,
-		ErrorClubActionEditMessage = 25,
-		ErrorClubActionDestroyMessage = 26,
-	},
-	ClubErrorType = {
-		ErrorCommunitiesNone = 0,
-		ErrorCommunitiesUnknown = 1,
-		ErrorCommunitiesNeutralFaction = 2,
-		ErrorCommunitiesUnknownRealm = 3,
-		ErrorCommunitiesBadTarget = 4,
-		ErrorCommunitiesWrongFaction = 5,
-		ErrorCommunitiesRestricted = 6,
-		ErrorCommunitiesIgnored = 7,
-		ErrorCommunitiesGuild = 8,
-		ErrorCommunitiesWrongRegion = 9,
-		ErrorCommunitiesUnknownTicket = 10,
-		ErrorCommunitiesMissingShortName = 11,
-		ErrorCommunitiesProfanity = 12,
-		ErrorCommunitiesTrial = 13,
-		ErrorCommunitiesVeteranTrial = 14,
-		ErrorCommunitiesChatMute = 15,
-		ErrorClubFull = 16,
-		ErrorClubNoClub = 17,
-		ErrorClubNotMember = 18,
-		ErrorClubAlreadyMember = 19,
-		ErrorClubNoSuchMember = 20,
-		ErrorClubNoSuchInvitation = 21,
-		ErrorClubInvitationAlreadyExists = 22,
-		ErrorClubInvalidRoleID = 23,
-		ErrorClubInsufficientPrivileges = 24,
-		ErrorClubTooManyClubsJoined = 25,
-		ErrorClubVoiceFull = 26,
-		ErrorClubStreamNoStream = 27,
-		ErrorClubStreamInvalidName = 28,
-		ErrorClubStreamCountAtMin = 29,
-		ErrorClubStreamCountAtMax = 30,
-		ErrorClubMemberHasRequiredRole = 31,
-		ErrorClubSentInvitationCountAtMax = 32,
-		ErrorClubReceivedInvitationCountAtMax = 33,
-		ErrorClubTargetIsBanned = 34,
-		ErrorClubBanAlreadyExists = 35,
-		ErrorClubBanCountAtMax = 36,
-		ErrorClubTicketCountAtMax = 37,
-		ErrorClubTicketNoSuchTicket = 38,
-		ErrorClubTicketHasConsumedAllowedRedeemCount = 39,
-	},
-	ClubFieldType = {
-		ClubName = 0,
-		ClubShortName = 1,
-		ClubDescription = 2,
-		ClubBroadcast = 3,
-		ClubStreamName = 4,
-		ClubStreamSubject = 5,
-		NumTypes = 6,
-	},
-	ClubFinderApplicationUpdateType = {
-		None = 0,
-		AcceptInvite = 1,
-		DeclineInvite = 2,
-		Cancel = 3,
-	},
-	ClubFinderClubPostingStatusFlags = {
-		None = 0,
-		NeedsCacheUpdate = 1,
-		ForceDescriptionChange = 2,
-		ForceNameChange = 3,
-		UnderReview = 4,
-		Banned = 5,
-		FakePost = 6,
-		PendingDelete = 7,
-		PostDelisted = 8,
-	},
-	ClubFinderDisableReason = {
-		Muted = 0,
-		Silenced = 1,
-		VeteranTrial = 2,
-	},
-	ClubFinderPostingReportType = {
-		PostersName = 0,
-		ClubName = 1,
-		PostingDescription = 2,
-		ApplicantsName = 3,
-		JoinNote = 4,
-	},
-	ClubFinderRequestType = {
-		None = 0,
-		Guild = 1,
-		Community = 2,
-		All = 3,
-	},
-	ClubFinderSettingFlags = {
-		None = 0,
-		Dungeons = 1,
-		Raids = 2,
-		Pvp = 3,
-		Rp = 4,
-		Social = 5,
-		Small = 6,
-		Medium = 7,
-		Large = 8,
-		Tank = 9,
-		Healer = 10,
-		Damage = 11,
-		EnableListing = 12,
-		MaxLevelOnly = 13,
-		AutoAccept = 14,
-		FactionHorde = 15,
-		FactionAlliance = 16,
-		FactionNeutral = 17,
-		SortRelevance = 18,
-		SortMemberCount = 19,
-		SortNewest = 20,
-		LanguageReserved1 = 21,
-		LanguageReserved2 = 22,
-		LanguageReserved3 = 23,
-		LanguageReserved4 = 24,
-		LanguageReserved5 = 25,
-	},
-	ClubInvitationCandidateStatus = {
-		Available = 0,
-		InvitePending = 1,
-		AlreadyMember = 2,
-	},
-	ClubMemberPresence = {
-		Unknown = 0,
-		Online = 1,
-		OnlineMobile = 2,
-		Offline = 3,
-		Away = 4,
-		Busy = 5,
-	},
-	ClubRemovedReason = {
-		None = 0,
-		Banned = 1,
-		Removed = 2,
-		ClubDestroyed = 3,
-	},
-	ClubRestrictionReason = {
-		None = 0,
-		Unavailable = 1,
-	},
-	ClubRoleIdentifier = {
-		Owner = 1,
-		Leader = 2,
-		Moderator = 3,
-		Member = 4,
-	},
-	ClubStreamNotificationFilter = {
-		None = 0,
-		Mention = 1,
-		All = 2,
-	},
-	ClubStreamType = {
-		General = 0,
-		Guild = 1,
-		Officer = 2,
-		Other = 3,
-	},
-	ClubType = {
-		BattleNet = 0,
-		Character = 1,
-		Guild = 2,
-		Other = 3,
-	},
-	CommunicationMode = {
-		PushToTalk = 0,
-		OpenMic = 1,
-	},
-	ConsoleCategory = {
-		Debug = 0,
-		Graphics = 1,
-		Console = 2,
-		Combat = 3,
-		Game = 4,
-		Default = 5,
-		Net = 6,
-		Sound = 7,
-		Gm = 8,
-		Reveal = 9,
-		None = 10,
-	},
-	ConsoleColorType = {
-		DefaultColor = 0,
-		InputColor = 1,
-		EchoColor = 2,
-		ErrorColor = 3,
-		WarningColor = 4,
-		GlobalColor = 5,
-		AdminColor = 6,
-		HighlightColor = 7,
-		BackgroundColor = 8,
-		ClickbufferColor = 9,
-		PrivateColor = 10,
-		DefaultGreen = 11,
-	},
-	ConsoleCommandType = {
-		Cvar = 0,
-		Command = 1,
-		Script = 2,
-	},
-	ContributionAppearanceFlags = {
-		TooltipUseTimeRemaining = 0,
-	},
-	ContributionResult = {
-		Success = 0,
-		MustBeNearNpc = 1,
-		IncorrectState = 2,
-		InvalidID = 3,
-		QuestDataMissing = 4,
-		FailedConditionCheck = 5,
-		UnableToCompleteTurnIn = 6,
-		InternalError = 7,
-	},
-	ContributionState = {
-		None = 0,
-		Building = 1,
-		Active = 2,
-		UnderAttack = 3,
-		Destroyed = 4,
-	},
-	CustomBindingType = {
-		VoicePushToTalk = 0,
-	},
-	FlightPathFaction = {
-		Neutral = 0,
-		Horde = 1,
-		Alliance = 2,
-	},
-	FlightPathState = {
-		Current = 0,
-		Reachable = 1,
-		Unreachable = 2,
-	},
-	GarrTalentResearchCostSource = {
-		Talent = 0,
-		Tree = 1,
-	},
-	GarrTalentTreeType = {
-		Tiers = 0,
-		Classic = 1,
-	},
-	GarrTalentType = {
-		Standard = 0,
-		Minor = 1,
-		Major = 2,
-	},
-	HolidayFlags = {
-		IsRegionwide = 1,
-		DontShowInCalendar = 2,
-		DontDisplayEnd = 4,
-		DontDisplayBanner = 8,
-	},
-	IconAndTextWidgetState = {
-		Hidden = 0,
-		Shown = 1,
-		ShownWithDynamicIconFlashing = 2,
-		ShownWithDynamicIconNotFlashing = 3,
-	},
-	IconState = {
-		Hidden = 0,
-		ShowState1 = 1,
-		ShowState2 = 2,
-	},
-	InventoryType = {
-		IndexNonEquipType = 0,
-		IndexHeadType = 1,
-		IndexNeckType = 2,
-		IndexShoulderType = 3,
-		IndexBodyType = 4,
-		IndexChestType = 5,
-		IndexWaistType = 6,
-		IndexLegsType = 7,
-		IndexFeetType = 8,
-		IndexWristType = 9,
-		IndexHandType = 10,
-		IndexFingerType = 11,
-		IndexTrinketType = 12,
-		IndexWeaponType = 13,
-		IndexShieldType = 14,
-		IndexRangedType = 15,
-		IndexCloakType = 16,
-		Index2HweaponType = 17,
-		IndexBagType = 18,
-		IndexTabardType = 19,
-		IndexRobeType = 20,
-		IndexWeaponmainhandType = 21,
-		IndexWeaponoffhandType = 22,
-		IndexHoldableType = 23,
-		IndexAmmoType = 24,
-		IndexThrownType = 25,
-		IndexRangedrightType = 26,
-		IndexQuiverType = 27,
-		IndexRelicType = 28,
-	},
-	ItemCommodityStatus = {
-		Unknown = 0,
-		Item = 1,
-		Commodity = 2,
-	},
-	ItemInteractionFrameType = {
-		CleanseCorruption = 0,
-	},
-	ItemQuality = {
-		Poor = 0,
-		Standard = 1,
-		Good = 2,
-		Superior = 3,
-		Epic = 4,
-		Legendary = 5,
-		Artifact = 6,
-		Heirloom = 7,
-		WoWToken = 8,
-	},
-	ItemTryOnReason = {
-		Success = 0,
-		WrongRace = 1,
-		NotEquippable = 2,
-		DataPending = 3,
-	},
-	ManipulatorEventType = {
-		Start = 0,
-		Move = 1,
-		Complete = 2,
-		Delete = 3,
-	},
-	MapCanvasPosition = {
-		None = 0,
-		BottomLeft = 1,
-		BottomRight = 2,
-		TopLeft = 3,
-		TopRight = 4,
-	},
-	ModelSceneSetting = {
-		AlignLightToOrbitDelta = 1,
-	},
-	ModelSceneType = {
-		MountJournal = 0,
-		PetJournalCard = 1,
-		ShopCard = 2,
-		EncounterJournal = 3,
-		PetJournalLoadout = 4,
-		ArtifactTier2 = 5,
-		ArtifactTier2ForgingScene = 6,
-		ArtifactTier2SlamEffect = 7,
-		CommentatorVictoryFanfare = 8,
-		ArtifactRelicTalentEffect = 9,
-		PvpWarModeOrb = 10,
-		PvpWarModeFire = 11,
-		PartyPose = 12,
-		AzeriteItemLevelUpToast = 13,
-		AzeritePowers = 14,
-		AzeriteRewardGlow = 15,
-		HeartOfAzeroth = 16,
-		WorldMapThreat = 17,
-	},
-	PartyRequestJoinRelation = {
-		None = 0,
-		Friend = 1,
-		Guild = 2,
-		Club = 3,
-		NumPartyRequestJoinRelations = 4,
-	},
-	PetJournalError = {
-		None = 0,
-		PetIsDead = 1,
-		JournalIsLocked = 2,
-		InvalidFaction = 3,
-		NoFavoritesToSummon = 4,
-		NoValidRandomSummon = 5,
-	},
-	PlayerClubRequestStatus = {
-		None = 0,
-		Pending = 1,
-		AutoApproved = 2,
-		Declined = 3,
-		Approved = 4,
-		Joined = 5,
-		JoinedAnother = 6,
-		Canceled = 7,
-	},
-	PowerType = {
-		HealthCost = -2,
-		None = -1,
-		Mana = 0,
-		Rage = 1,
-		Focus = 2,
-		Energy = 3,
-		ComboPoints = 4,
-		Runes = 5,
-		RunicPower = 6,
-		SoulShards = 7,
-		LunarPower = 8,
-		HolyPower = 9,
-		Alternate = 10,
-		Maelstrom = 11,
-		Chi = 12,
-		Insanity = 13,
-		Obsolete = 14,
-		Obsolete2 = 15,
-		ArcaneCharges = 16,
-		Fury = 17,
-		Pain = 18,
-		NumPowerTypes = 19,
-	},
-	PvpMatchState = {
-		Inactive = 0,
-		Active = 1,
-		Complete = 2,
-	},
-	PvpUnitClassification = {
-		FlagCarrierHorde = 0,
-		FlagCarrierAlliance = 1,
-		FlagCarrierNeutral = 2,
-		CartRunnerHorde = 3,
-		CartRunnerAlliance = 4,
-		AssassinHorde = 5,
-		AssassinAlliance = 6,
-		OrbCarrierBlue = 7,
-		OrbCarrierGreen = 8,
-		OrbCarrierOrange = 9,
-		OrbCarrierPurple = 10,
-	},
-	QuestLineFloorLocation = {
-		Above = 0,
-		Below = 1,
-		Same = 2,
-	},
-	QuestSessionCommand = {
-		None = 0,
-		Start = 1,
-		Stop = 2,
-		SessionActiveNoCommand = 3,
-	},
-	QuestSessionResult = {
-		Ok = 0,
-		NotInParty = 1,
-		InvalidOwner = 2,
-		AlreadyActive = 3,
-		NotActive = 4,
-		InRaid = 5,
-		OwnerRefused = 6,
-		Timeout = 7,
-		Disabled = 8,
-		Started = 9,
-		Stopped = 10,
-		Joined = 11,
-		Left = 12,
-		OwnerLeft = 13,
-		ReadyCheckFailed = 14,
-		PartyDestroyed = 15,
-		MemberTimeout = 16,
-		AlreadyMember = 17,
-		NotOwner = 18,
-		AlreadyOwner = 19,
-		AlreadyJoined = 20,
-		NotMember = 21,
-		Busy = 22,
-		JoinRejected = 23,
-		Logout = 24,
-		Empty = 25,
-		QuestNotCompleted = 26,
-		Resync = 27,
-		Restricted = 28,
-		InPetBattle = 29,
-		InvalidPublicParty = 30,
-		Unknown = 31,
-	},
-	QuestTag = {
-		Group = 1,
-		Pvp = 41,
-		Raid = 62,
-		Dungeon = 81,
-		Legendary = 83,
-		Heroic = 85,
-		Raid10 = 88,
-		Raid25 = 89,
-		Scenario = 98,
-		Account = 102,
-		CombatAlly = 266,
-	},
-	RafLinkType = {
-		None = 0,
-		Recruit = 1,
-		Friend = 2,
-		Both = 3,
-	},
-	RafRecruitActivityState = {
-		Incomplete = 0,
-		Complete = 1,
-		RewardClaimed = 2,
-	},
-	RafRecruitSubStatus = {
-		Trial = 0,
-		Active = 1,
-		Inactive = 2,
-	},
-	RafRewardType = {
-		Pet = 0,
-		Mount = 1,
-		Appearance = 2,
-		Title = 3,
-		GameTime = 4,
-		AppearanceSet = 5,
-		Illusion = 6,
-		Invalid = 7,
-	},
-	SelfResurrectOptionType = {
-		Spell = 0,
-		Item = 1,
-	},
-	SpellDisplayIconDisplayType = {
-		Buff = 0,
-		Debuff = 1,
-	},
-	SpellDisplayIconSizeType = {
-		Small = 0,
-		Medium = 1,
-		Large = 2,
-	},
-	StatusBarOverrideBarTextShownType = {
-		Never = 0,
-		Always = 1,
-		OnlyOnMouseover = 2,
-		OnlyNotOnMouseover = 3,
-	},
-	StatusBarValueTextType = {
-		Hidden = 0,
-		Percentage = 1,
-		Value = 2,
-		Time = 3,
-		TimeShowOneLevelOnly = 4,
-		ValueOverMax = 5,
-		ValueOverMaxNormalized = 6,
-	},
-	SummonStatus = {
-		None = 0,
-		Pending = 1,
-		Accepted = 2,
-		Declined = 3,
-	},
-	TooltipSide = {
-		Left = 0,
-		Right = 1,
-		Top = 2,
-		Bottom = 3,
-	},
-	TooltipTextureAnchor = {
-		LeftTop = 0,
-		LeftCenter = 1,
-		LeftBottom = 2,
-		RightTop = 3,
-		RightCenter = 4,
-		RightBottom = 5,
-		All = 6,
-	},
-	TooltipTextureRelativeRegion = {
-		LeftLine = 0,
-		RightLine = 1,
-	},
-	TrackedSpellCategory = {
-		Offensive = 0,
-		Defensive = 1,
-		Debuff = 2,
-		Count = 3,
-	},
-	TransmogSource = {
-		None = 0,
-		JournalEncounter = 1,
-		Quest = 2,
-		Vendor = 3,
-		WorldDrop = 4,
-		HiddenUntilCollected = 5,
-		CantCollect = 6,
-		Achievement = 7,
-		Profession = 8,
-		NotValidForTransmog = 9,
-	},
-	UIMapSystem = {
-		World = 0,
-		Taxi = 1,
-		Adventure = 2,
-	},
-	UIMapType = {
-		Cosmic = 0,
-		World = 1,
-		Continent = 2,
-		Zone = 3,
-		Dungeon = 4,
-		Micro = 5,
-		Orphan = 6,
-	},
-	UIWidgetTextSizeType = {
-		Small = 0,
-		Medium = 1,
-		Large = 2,
-		Huge = 3,
-	},
-	UIWidgetVisualizationType = {
-		IconAndText = 0,
-		CaptureBar = 1,
-		StatusBar = 2,
-		DoubleStatusBar = 3,
-		IconTextAndBackground = 4,
-		DoubleIconAndText = 5,
-		StackedResourceTracker = 6,
-		IconTextAndCurrencies = 7,
-		TextWithState = 8,
-		HorizontalCurrencies = 9,
-		BulletTextList = 10,
-		ScenarioHeaderCurrenciesAndBackground = 11,
-		TextureAndText = 12,
-		SpellDisplay = 13,
-		DoubleStateIconRow = 14,
-		TextureAndTextRow = 15,
-		ZoneControl = 16,
-		CaptureZone = 17,
-	},
-	UiwIdgetFlag = {
-		UniversalWidget = 1,
-	},
-	ValidateNameResult = {
-		NameSuccess = 0,
-		NameFailure = 1,
-		NameNoName = 2,
-		NameTooShort = 3,
-		NameTooLong = 4,
-		NameInvalidCharacter = 5,
-		NameMixedLanguages = 6,
-		NameProfane = 7,
-		NameReserved = 8,
-		NameInvalidApostrophe = 9,
-		NameMultipleApostrophes = 10,
-		NameThreeConsecutive = 11,
-		NameInvalidSpace = 12,
-		NameConsecutiveSpaces = 13,
-		NameRussianConsecutiveSilentCharacters = 14,
-		NameRussianSilentCharacterAtBeginningOrEnd = 15,
-		NameDeclensionDoesntMatchBaseName = 16,
-		NameSpacesDisallowed = 17,
-	},
-	VasPurchaseProgress = {
-		Invalid = 0,
-		PrePurchase = 1,
-		PaymentPending = 2,
-		ApplyingLicense = 3,
-		WaitingOnQueue = 4,
-		Ready = 5,
-		ProcessingFactionChange = 6,
-		Complete = 7,
-	},
-	VignetteType = {
-		Normal = 0,
-		PvpBounty = 1,
-	},
-	VoiceChatStatusCode = {
-		Success = 0,
-		OperationPending = 1,
-		TooManyRequests = 2,
-		LoginProhibited = 3,
-		ClientNotInitialized = 4,
-		ClientNotLoggedIn = 5,
-		ClientAlreadyLoggedIn = 6,
-		ChannelNameTooShort = 7,
-		ChannelNameTooLong = 8,
-		ChannelAlreadyExists = 9,
-		AlreadyInChannel = 10,
-		TargetNotFound = 11,
-		Failure = 12,
-		ServiceLost = 13,
-		UnableToLaunchProxy = 14,
-		ProxyConnectionTimeOut = 15,
-		ProxyConnectionUnableToConnect = 16,
-		ProxyConnectionUnexpectedDisconnect = 17,
-		Disabled = 18,
-		UnsupportedChatChannelType = 19,
-		InvalidCommunityStream = 20,
-		PlayerSilenced = 21,
-		PlayerVoiceChatParentalDisabled = 22,
-		InvalidInputDevice = 23,
-		InvalidOutputDevice = 24,
-	},
-	WidgetAnimationType = {
-		None = 0,
-		Fade = 1,
-	},
-	WidgetCurrencyClass = {
-		Currency = 0,
-		Item = 1,
-	},
-	WidgetEnabledState = {
-		Disabled = 0,
-		Enabled = 1,
-		Red = 2,
-		Highlight = 3,
-	},
-	WidgetShownState = {
-		Hidden = 0,
-		Shown = 1,
-	},
-	WoWEntitlementType = {
-		Item = 0,
-		Mount = 1,
-		Battlepet = 2,
-		Toy = 3,
-		Appearance = 4,
-		AppearanceSet = 5,
-		GameTime = 6,
-		Title = 7,
-		Illusion = 8,
-		Invalid = 9,
-	},
-	ZoneAbilityType = {
-		Garrison = 0,
-		OrderHall = 1,
-		Argus = 2,
-		WarEffort = 3,
-		Visions = 4,
-	},
-	ZoneControlActiveState = {
-		Inactive = 0,
-		Active = 1,
-	},
-	ZoneControlDangerFlashType = {
-		ShowOnGoodStates = 0,
-		ShowOnBadStates = 1,
-		ShowOnBoth = 2,
-		ShowOnNeither = 3,
-	},
-	ZoneControlFillType = {
-		SingleFillClockwise = 0,
-		SingleFillCounterClockwise = 1,
-		DoubleFillClockwise = 2,
-		DoubleFillCounterClockwise = 3,
-	},
-	ZoneControlLeadingEdgeType = {
-		NoLeadingEdge = 0,
-		UseLeadingEdge = 1,
-	},
-	ZoneControlMode = {
-		BothStatesAreGood = 0,
-		State1IsGood = 1,
-		State2IsGood = 2,
-		NeitherStateIsGood = 3,
-	},
-	ZoneControlState = {
-		State1 = 0,
-		State2 = 1,
-	},
+	---@type AuctionHouseCommoditySortOrder
+	AuctionHouseCommoditySortOrder = {},
+
+	---@type AuctionHouseFilter
+	AuctionHouseFilter = {},
+
+	---@type AuctionHouseFilterCategory
+	AuctionHouseFilterCategory = {},
+
+	---@type AuctionHouseItemSortOrder
+	AuctionHouseItemSortOrder = {},
+
+	---@type AuctionHouseSortOrder
+	AuctionHouseSortOrder = {},
+
+	---@type AuctionHouseTimeLeftBand
+	AuctionHouseTimeLeftBand = {},
+
+	---@type AuctionStatus
+	AuctionStatus = {},
+
+	---@type AzeriteEssence
+	AzeriteEssence = {},
+
+	---@type AzeritePowerLevel
+	AzeritePowerLevel = {},
+
+	---@type BrawlType
+	BrawlType = {},
+
+	---@type CalendarCommandType
+	CalendarCommandType = {},
+
+	---@type CalendarErrorType
+	CalendarErrorType = {},
+
+	---@type CalendarEventBits
+	CalendarEventBits = {},
+
+	---@type CalendarEventRepeatOptions
+	CalendarEventRepeatOptions = {},
+
+	---@type CalendarEventType
+	CalendarEventType = {},
+
+	---@type CalendarFilterFlags
+	CalendarFilterFlags = {},
+
+	---@type CalendarGetEventType
+	CalendarGetEventType = {},
+
+	---@type CalendarHolidayFilterType
+	CalendarHolidayFilterType = {},
+
+	---@type CalendarInviteBits
+	CalendarInviteBits = {},
+
+	---@type CalendarInviteSortType
+	CalendarInviteSortType = {},
+
+	---@type CalendarInviteType
+	CalendarInviteType = {},
+
+	---@type CalendarModeratorStatus
+	CalendarModeratorStatus = {},
+
+	---@type CalendarStatus
+	CalendarStatus = {},
+
+	---@type CalendarType
+	CalendarType = {},
+
+	---@type CalendarWebActionType
+	CalendarWebActionType = {},
+
+	---@type CaptureBarWidgetFillDirectionType
+	CaptureBarWidgetFillDirectionType = {},
+
+	---@type CaptureBarWidgetGlowAnimType
+	CaptureBarWidgetGlowAnimType = {},
+
+	---@type CharacterServiceInfoFlag
+	CharacterServiceInfoFlag = {},
+
+	---@type ChatChannelType
+	ChatChannelType = {},
+
+	---@type ClubActionType
+	ClubActionType = {},
+
+	---@type ClubErrorType
+	ClubErrorType = {},
+
+	---@type ClubFieldType
+	ClubFieldType = {},
+
+	---@type ClubFinderApplicationUpdateType
+	ClubFinderApplicationUpdateType = {},
+
+	---@type ClubFinderClubPostingStatusFlags
+	ClubFinderClubPostingStatusFlags = {},
+
+	---@type ClubFinderDisableReason
+	ClubFinderDisableReason = {},
+
+	---@type ClubFinderPostingReportType
+	ClubFinderPostingReportType = {},
+
+	---@type ClubFinderRequestType
+	ClubFinderRequestType = {},
+
+	---@type ClubFinderSettingFlags
+	ClubFinderSettingFlags = {},
+
+	---@type ClubInvitationCandidateStatus
+	ClubInvitationCandidateStatus = {},
+
+	---@type ClubMemberPresence
+	ClubMemberPresence = {},
+
+	---@type ClubRemovedReason
+	ClubRemovedReason = {},
+
+	---@type ClubRestrictionReason
+	ClubRestrictionReason = {},
+
+	---@type ClubRoleIdentifier
+	ClubRoleIdentifier = {},
+
+	---@type ClubStreamNotificationFilter
+	ClubStreamNotificationFilter = {},
+
+	---@type ClubStreamType
+	ClubStreamType = {},
+
+	---@type ClubType
+	ClubType = {},
+
+	---@type CommunicationMode
+	CommunicationMode = {},
+
+	---@type ConsoleCategory
+	ConsoleCategory = {},
+
+	---@type ConsoleColorType
+	ConsoleColorType = {},
+
+	---@type ConsoleCommandType
+	ConsoleCommandType = {},
+
+	---@type ContributionAppearanceFlags
+	ContributionAppearanceFlags = {},
+
+	---@type ContributionResult
+	ContributionResult = {},
+
+	---@type ContributionState
+	ContributionState = {},
+
+	---@type CustomBindingType
+	CustomBindingType = {},
+
+	---@type FlightPathFaction
+	FlightPathFaction = {},
+
+	---@type FlightPathState
+	FlightPathState = {},
+
+	---@type GarrTalentResearchCostSource
+	GarrTalentResearchCostSource = {},
+
+	---@type GarrTalentTreeType
+	GarrTalentTreeType = {},
+
+	---@type GarrTalentType
+	GarrTalentType = {},
+
+	---@type HolidayFlags
+	HolidayFlags = {},
+
+	---@type IconAndTextWidgetState
+	IconAndTextWidgetState = {},
+
+	---@type IconState
+	IconState = {},
+
+	---@type InventoryType
+	InventoryType = {},
+
+	---@type ItemCommodityStatus
+	ItemCommodityStatus = {},
+
+	---@type ItemInteractionFrameType
+	ItemInteractionFrameType = {},
+
+	---@type ItemQuality
+	ItemQuality = {},
+
+	---@type ItemTryOnReason
+	ItemTryOnReason = {},
+
+	---@type ManipulatorEventType
+	ManipulatorEventType = {},
+
+	---@type MapCanvasPosition
+	MapCanvasPosition = {},
+
+	---@type ModelSceneSetting
+	ModelSceneSetting = {},
+
+	---@type ModelSceneType
+	ModelSceneType = {},
+
+	---@type PartyRequestJoinRelation
+	PartyRequestJoinRelation = {},
+
+	---@type PetJournalError
+	PetJournalError = {},
+
+	---@type PlayerClubRequestStatus
+	PlayerClubRequestStatus = {},
+
+	---@type PowerType
+	PowerType = {},
+
+	---@type PvpMatchState
+	PvpMatchState = {},
+
+	---@type PvpUnitClassification
+	PvpUnitClassification = {},
+
+	---@type QuestLineFloorLocation
+	QuestLineFloorLocation = {},
+
+	---@type QuestSessionCommand
+	QuestSessionCommand = {},
+
+	---@type QuestSessionResult
+	QuestSessionResult = {},
+
+	---@type QuestTag
+	QuestTag = {},
+
+	---@type RafLinkType
+	RafLinkType = {},
+
+	---@type RafRecruitActivityState
+	RafRecruitActivityState = {},
+
+	---@type RafRecruitSubStatus
+	RafRecruitSubStatus = {},
+
+	---@type RafRewardType
+	RafRewardType = {},
+
+	---@type SelfResurrectOptionType
+	SelfResurrectOptionType = {},
+
+	---@type SpellDisplayIconDisplayType
+	SpellDisplayIconDisplayType = {},
+
+	---@type SpellDisplayIconSizeType
+	SpellDisplayIconSizeType = {},
+
+	---@type StatusBarOverrideBarTextShownType
+	StatusBarOverrideBarTextShownType = {},
+
+	---@type StatusBarValueTextType
+	StatusBarValueTextType = {},
+
+	---@type SummonStatus
+	SummonStatus = {},
+
+	---@type TooltipSide
+	TooltipSide = {},
+
+	---@type TooltipTextureAnchor
+	TooltipTextureAnchor = {},
+
+	---@type TooltipTextureRelativeRegion
+	TooltipTextureRelativeRegion = {},
+
+	---@type TrackedSpellCategory
+	TrackedSpellCategory = {},
+
+	---@type TransmogSource
+	TransmogSource = {},
+
+	---@type UIMapSystem
+	UIMapSystem = {},
+
+	---@type UIMapType
+	UIMapType = {},
+
+	---@type UIWidgetTextSizeType
+	UIWidgetTextSizeType = {},
+
+	---@type UIWidgetVisualizationType
+	UIWidgetVisualizationType = {},
+
+	---@type UiwIdgetFlag
+	UiwIdgetFlag = {},
+
+	---@type ValidateNameResult
+	ValidateNameResult = {},
+
+	---@type VasPurchaseProgress
+	VasPurchaseProgress = {},
+
+	---@type VignetteType
+	VignetteType = {},
+
+	---@type VoiceChatStatusCode
+	VoiceChatStatusCode = {},
+
+	---@type WidgetAnimationType
+	WidgetAnimationType = {},
+
+	---@type WidgetCurrencyClass
+	WidgetCurrencyClass = {},
+
+	---@type WidgetEnabledState
+	WidgetEnabledState = {},
+
+	---@type WidgetShownState
+	WidgetShownState = {},
+
+	---@type WoWEntitlementType
+	WoWEntitlementType = {},
+
+	---@type ZoneAbilityType
+	ZoneAbilityType = {},
+
+	---@type ZoneControlActiveState
+	ZoneControlActiveState = {},
+
+	---@type ZoneControlDangerFlashType
+	ZoneControlDangerFlashType = {},
+
+	---@type ZoneControlFillType
+	ZoneControlFillType = {},
+
+	---@type ZoneControlLeadingEdgeType
+	ZoneControlLeadingEdgeType = {},
+
+	---@type ZoneControlMode
+	ZoneControlMode = {},
+
+	---@type ZoneControlState
+	ZoneControlState = {},
 
 	-- all these globals get annoying with vscode fuzzy search completion
 	-- putting them in the Enum table
