@@ -65,6 +65,7 @@ function C_PvP.GetArenaSkirmishRewards() end
 
 ---@return PvpBrawlInfo brawlInfo
 ---[Documentation](https://wow.gamepedia.com/API_C_PvP.GetAvailableBrawlInfo)
+---If nil is returned, PVP_BRAWL_INFO_UPDATED event will be sent when the data is ready.
 function C_PvP.GetAvailableBrawlInfo() end
 
 ---@param brawlType BrawlType

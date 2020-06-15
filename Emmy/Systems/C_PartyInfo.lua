@@ -10,6 +10,7 @@ function C_PartyInfo.AllowedToDoPartyConversion(toRaid) end
 function C_PartyInfo.CanInvite() end
 
 ---[Documentation](https://wow.gamepedia.com/API_C_PartyInfo.ConfirmConvertToRaid)
+---Immediately convert to raid with no regard for potentially destructive actions.
 function C_PartyInfo.ConfirmConvertToRaid() end
 
 ---@param targetName string
@@ -19,10 +20,12 @@ function C_PartyInfo.ConfirmInviteTravelPass(targetName, targetGUID) end
 
 ---@param targetName string
 ---[Documentation](https://wow.gamepedia.com/API_C_PartyInfo.ConfirmInviteUnit)
+---Immediately invites the named unit to a party, with no regard for potentially destructive actions.
 function C_PartyInfo.ConfirmInviteUnit(targetName) end
 
 ---@param category number
 ---[Documentation](https://wow.gamepedia.com/API_C_PartyInfo.ConfirmLeaveParty)
+---Immediately leave the party with no regard for potentially destructive actions
 function C_PartyInfo.ConfirmLeaveParty(category) end
 
 ---@param targetName string
@@ -30,12 +33,14 @@ function C_PartyInfo.ConfirmLeaveParty(category) end
 ---@param healer boolean
 ---@param dps boolean
 ---[Documentation](https://wow.gamepedia.com/API_C_PartyInfo.ConfirmRequestInviteFromUnit)
+---Immediately request an invite into the target party, this is the confirmation function to call after RequestInviteFromUnit, or if you would like to skip the confirmation process.
 function C_PartyInfo.ConfirmRequestInviteFromUnit(targetName, tank, healer, dps) end
 
 ---[Documentation](https://wow.gamepedia.com/API_C_PartyInfo.ConvertToParty)
 function C_PartyInfo.ConvertToParty() end
 
 ---[Documentation](https://wow.gamepedia.com/API_C_PartyInfo.ConvertToRaid)
+---Usually this will convert to raid immediately. In some cases (e.g. PartySync) the user will be prompted to confirm converting to raid, because it's potentially destructive.
 function C_PartyInfo.ConvertToRaid() end
 
 ---@return number[] categories
@@ -63,6 +68,7 @@ function C_PartyInfo.GetMinLevel(category) end
 
 ---@param targetName string
 ---[Documentation](https://wow.gamepedia.com/API_C_PartyInfo.InviteUnit)
+---Attempt to invite the named unit to a party, requires confirmation in some cases (e.g. the party will convert to a raid, or if there is a party sync in progress).
 function C_PartyInfo.InviteUnit(targetName) end
 
 ---@param category number
@@ -72,6 +78,7 @@ function C_PartyInfo.IsPartyFull(category) end
 
 ---@param category number
 ---[Documentation](https://wow.gamepedia.com/API_C_PartyInfo.LeaveParty)
+---Usually this will leave the party immediately. In some cases (e.g. PartySync) the user will be prompted to confirm leaving the party, because it's potentially destructive
 function C_PartyInfo.LeaveParty(category) end
 
 ---@param targetName string
@@ -79,6 +86,7 @@ function C_PartyInfo.LeaveParty(category) end
 ---@param healer boolean
 ---@param dps boolean
 ---[Documentation](https://wow.gamepedia.com/API_C_PartyInfo.RequestInviteFromUnit)
+---Attempt to request an invite into the target party, requires confirmation in some cases (e.g. there is a party sync in progress).
 function C_PartyInfo.RequestInviteFromUnit(targetName, tank, healer, dps) end
 
 ---@class PartyRequestJoinRelation

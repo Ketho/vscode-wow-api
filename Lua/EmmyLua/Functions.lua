@@ -11,6 +11,9 @@ function Emmy:GetFunction(func)
 		end
 	end
 	tinsert(tbl, self.fs.doc:format("API_"..Util:GetFullName(func)))
+	if func.Documentation then
+		tinsert(tbl, "---"..table.concat(func.Documentation, "; "))
+	end
 	tinsert(tbl, self.fs.func:format(func:GetFullName(false, false)))
 	return table.concat(tbl, "\n")
 end

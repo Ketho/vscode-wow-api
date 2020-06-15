@@ -30,6 +30,7 @@ function C_CurrencyInfo.GetCurrencyIDFromLink(currencyLink) end
 ---@param currencyID number
 ---@return number factionID
 ---[Documentation](https://wow.gamepedia.com/API_C_CurrencyInfo.GetFactionGrantedByCurrency)
+---Gets the faction ID for currency that is immediately converted into reputation with that faction instead.
 function C_CurrencyInfo.GetFactionGrantedByCurrency(currencyID) end
 
 ---@return number warResourceCurrencyID

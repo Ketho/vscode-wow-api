@@ -206,6 +206,7 @@ function C_VoiceChat.Login() end
 function C_VoiceChat.Logout() end
 
 ---[Documentation](https://wow.gamepedia.com/API_C_VoiceChat.MarkChannelsDiscovered)
+---Once the UI has enumerated all channels, use this to reset the channel discovery state, it will be updated again if appropriate
 function C_VoiceChat.MarkChannelsDiscovered() end
 
 ---@param clubId string
@@ -246,6 +247,7 @@ function C_VoiceChat.SetMemberMuted(playerLocation, muted) end
 ---@param playerLocation PlayerLocationMixin
 ---@param volume number
 ---[Documentation](https://wow.gamepedia.com/API_C_VoiceChat.SetMemberVolume)
+---Adjusts member volume across all channels
 function C_VoiceChat.SetMemberVolume(playerLocation, volume) end
 
 ---@param isMuted boolean
@@ -276,6 +278,7 @@ function C_VoiceChat.SetVADSensitivity(sensitivity) end
 
 ---@return boolean shouldDiscoverChannels
 ---[Documentation](https://wow.gamepedia.com/API_C_VoiceChat.ShouldDiscoverChannels)
+---Use this while loading to determine if the UI should attempt to rediscover the previously joined/active voice channels
 function C_VoiceChat.ShouldDiscoverChannels() end
 
 ---[Documentation](https://wow.gamepedia.com/API_C_VoiceChat.ToggleDeafened)

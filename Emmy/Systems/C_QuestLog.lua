@@ -10,10 +10,12 @@ function C_QuestLog.GetMapForQuestPOIs() end
 
 ---@return number maxNumQuests
 ---[Documentation](https://wow.gamepedia.com/API_C_QuestLog.GetMaxNumQuests)
+---This is the maximum number of quests a player can be on, including hidden quests, world quests, emissaries etc
 function C_QuestLog.GetMaxNumQuests() end
 
 ---@return number maxNumQuestsCanAccept
 ---[Documentation](https://wow.gamepedia.com/API_C_QuestLog.GetMaxNumQuestsCanAccept)
+---This is the maximum number of standard quests a player can accept. These are quests that are normally visible in the quest log.
 function C_QuestLog.GetMaxNumQuestsCanAccept() end
 
 ---@param questID number
@@ -113,6 +115,7 @@ function C_QuestLog.IsThreatQuest(questID) end
 ---@param questID number
 ---@return boolean hasBonus
 ---[Documentation](https://wow.gamepedia.com/API_C_QuestLog.QuestCanHaveWarModeBonus)
+---Tests whether a quest is eligible for warmode bonuses (e.g. most world quests, some daily quests
 function C_QuestLog.QuestCanHaveWarModeBonus(questID) end
 
 ---@param questID number
@@ -123,6 +126,7 @@ function C_QuestLog.QuestHasQuestSessionBonus(questID) end
 ---@param questID number
 ---@return boolean hasBonus
 ---[Documentation](https://wow.gamepedia.com/API_C_QuestLog.QuestHasWarModeBonus)
+---Tests whether a quest in the player's quest log that is eligible for warmode bonuses (see 'QuestCanHaveWarModeBOnus') has been completed in warmode (including accepting it)
 function C_QuestLog.QuestHasWarModeBonus(questID) end
 
 ---@param questID number

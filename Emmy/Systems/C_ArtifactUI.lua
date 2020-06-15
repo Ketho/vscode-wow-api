@@ -347,6 +347,7 @@ function C_ArtifactUI.SetForgeRotation(forgeRotationX, forgeRotationY, forgeRota
 
 ---@param artifactAppearanceID number
 ---[Documentation](https://wow.gamepedia.com/API_C_ArtifactUI.SetPreviewAppearance)
+---Call without an argument to clear the preview.
 function C_ArtifactUI.SetPreviewAppearance(artifactAppearanceID) end
 
 ---@return boolean shouldSuppressForgeRotation

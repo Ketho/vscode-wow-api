@@ -3,19 +3,23 @@ C_ModelInfo = {}
 ---@param modelSceneFrame table
 ---@param modelSceneID number
 ---[Documentation](https://wow.gamepedia.com/API_C_ModelInfo.AddActiveModelScene)
+---This function does nothing in public clients
 function C_ModelInfo.AddActiveModelScene(modelSceneFrame, modelSceneID) end
 
 ---@param modelSceneFrameActor table
 ---@param modelSceneActorID number
 ---[Documentation](https://wow.gamepedia.com/API_C_ModelInfo.AddActiveModelSceneActor)
+---This function does nothing in public clients
 function C_ModelInfo.AddActiveModelSceneActor(modelSceneFrameActor, modelSceneActorID) end
 
 ---@param modelSceneFrame table
 ---[Documentation](https://wow.gamepedia.com/API_C_ModelInfo.ClearActiveModelScene)
+---This function does nothing in public clients
 function C_ModelInfo.ClearActiveModelScene(modelSceneFrame) end
 
 ---@param modelSceneFrameActor table
 ---[Documentation](https://wow.gamepedia.com/API_C_ModelInfo.ClearActiveModelSceneActor)
+---This function does nothing in public clients
 function C_ModelInfo.ClearActiveModelSceneActor(modelSceneFrameActor) end
 
 ---@param modelActorDisplayID number

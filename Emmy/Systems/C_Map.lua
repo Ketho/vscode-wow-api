@@ -11,6 +11,7 @@ function C_Map.GetAreaInfo(areaID) end
 ---@param unitToken string
 ---@return number uiMapID
 ---[Documentation](https://wow.gamepedia.com/API_C_Map.GetBestMapForUnit)
+---Only works for the player and party members.
 function C_Map.GetBestMapForUnit(unitToken) end
 
 ---@param bountySetID number
@@ -135,6 +136,7 @@ function C_Map.GetMapRectOnMap(uiMapID, topUiMapID) end
 ---@param unitToken string
 ---@return Vector2DMixin position
 ---[Documentation](https://wow.gamepedia.com/API_C_Map.GetPlayerMapPosition)
+---Only works for the player and party members.
 function C_Map.GetPlayerMapPosition(uiMapID, unitToken) end
 
 ---@param uiMapID number

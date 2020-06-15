@@ -40,6 +40,7 @@ function GetExpansionTrialInfo() end
 ---@param useModernLevelMapping boolean
 ---@return number maxLevel
 ---[Documentation](https://wow.gamepedia.com/API_GetMaxLevelForExpansionLevel)
+---Maps an expansion level to a maximum character level for that expansion, optionally takes a useModernLevelMapping instead of legacy level mapping. Legacy treats the maxes as the original caps for those expansions.
 function GetMaxLevelForExpansionLevel(expansionLevel, useModernLevelMapping) end
 
 ---@return number expansionLevel

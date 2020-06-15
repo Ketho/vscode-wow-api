@@ -13,6 +13,7 @@ function C_EncounterJournal.GetEncountersOnMap(uiMapID) end
 ---@param sectionID number
 ---@return number[] iconFlags
 ---[Documentation](https://wow.gamepedia.com/API_C_EncounterJournal.GetSectionIconFlags)
+---Represents the icon indices for this EJ section.  An icon index can be used to arrive at texture coordinates for specific encounter types, e.g.: EncounterJournal_SetFlagIcon
 function C_EncounterJournal.GetSectionIconFlags(sectionID) end
 
 ---@param sectionID number

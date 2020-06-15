@@ -40,6 +40,7 @@ function C_ChatInfo.IsValidChatLine(chatLine) end
 ---@param prefix string
 ---@return boolean successfulRequest
 ---[Documentation](https://wow.gamepedia.com/API_C_ChatInfo.RegisterAddonMessagePrefix)
+---Registers interest in addon messages with this prefix, cannot be an empty string.
 function C_ChatInfo.RegisterAddonMessagePrefix(prefix) end
 
 ---@param input string
@@ -58,6 +59,7 @@ function C_ChatInfo.ResetDefaultZoneChannels() end
 ---@param target string
 ---@return boolean success
 ---[Documentation](https://wow.gamepedia.com/API_C_ChatInfo.SendAddonMessage)
+---Sends a text payload to other clients specified by chatChannel and target which are registered to listen for prefix.
 function C_ChatInfo.SendAddonMessage(prefix, message, chatType, target) end
 
 ---@param prefix string
@@ -66,6 +68,7 @@ function C_ChatInfo.SendAddonMessage(prefix, message, chatType, target) end
 ---@param target string
 ---@return boolean success
 ---[Documentation](https://wow.gamepedia.com/API_C_ChatInfo.SendAddonMessageLogged)
+---Sends a text payload to other clients specified by chatChannel and target which are registered to listen for prefix. Intended for plain text payloads; logged and throttled.
 function C_ChatInfo.SendAddonMessageLogged(prefix, message, chatType, target) end
 
 ---@param firstChannelIndex number

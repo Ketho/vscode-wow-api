@@ -142,6 +142,7 @@ function C_MountJournal.GetNumMountsNeedingFanfare() end
 ---@param itemLocation ItemLocationMixin
 ---@return boolean isMountEquipment
 ---[Documentation](https://wow.gamepedia.com/API_C_MountJournal.IsItemMountEquipment)
+---Determines if the item is mount equipment based on its class and subclass.
 function C_MountJournal.IsItemMountEquipment(itemLocation) end
 
 ---@return boolean isApplied

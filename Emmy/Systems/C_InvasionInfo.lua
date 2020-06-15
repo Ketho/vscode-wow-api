@@ -2,6 +2,7 @@ C_InvasionInfo = {}
 
 ---@return boolean areInvasionsAvailable
 ---[Documentation](https://wow.gamepedia.com/API_C_InvasionInfo.AreInvasionsAvailable)
+---Returns true if invasions are active in the same physical area as the player.
 function C_InvasionInfo.AreInvasionsAvailable() end
 
 ---@param uiMapID number

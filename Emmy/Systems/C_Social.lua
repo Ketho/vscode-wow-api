@@ -40,12 +40,15 @@ function C_Social.GetTweetLength(tweetText) end
 function C_Social.IsSocialEnabled() end
 
 ---[Documentation](https://wow.gamepedia.com/API_C_Social.TwitterCheckStatus)
+---Not allowed to be called by addons
 function C_Social.TwitterCheckStatus() end
 
 ---[Documentation](https://wow.gamepedia.com/API_C_Social.TwitterConnect)
+---Not allowed to be called by addons
 function C_Social.TwitterConnect() end
 
 ---[Documentation](https://wow.gamepedia.com/API_C_Social.TwitterDisconnect)
+---Not allowed to be called by addons
 function C_Social.TwitterDisconnect() end
 
 ---@return number msTimeLeft
@@ -54,4 +57,5 @@ function C_Social.TwitterGetMSTillCanPost() end
 
 ---@param message string
 ---[Documentation](https://wow.gamepedia.com/API_C_Social.TwitterPostMessage)
+---Not allowed to be called by addons
 function C_Social.TwitterPostMessage(message) end

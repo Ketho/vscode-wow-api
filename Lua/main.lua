@@ -7,4 +7,4 @@ require "Lua/Tests/Tests"
 
 local Exporter = require("Lua/Exporter")
 Exporter:ExportSystems("./Emmy/Systems/%s.lua")
-Exporter:ExportEvents("./Emmy/Event.lua")
+Exporter:ExportEvents("./Emmy/Events.lua")

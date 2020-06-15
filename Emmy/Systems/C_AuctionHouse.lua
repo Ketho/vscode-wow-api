@@ -285,6 +285,7 @@ function C_AuctionHouse.IsSellItemValid(item, displayError) end
 ---@param specificSearch boolean
 ---@return boolean canSendThrottledMessage
 ---[Documentation](https://wow.gamepedia.com/API_C_AuctionHouse.IsThrottledMessageSystemReady)
+---This function is not used in the base UI but is included for AddOn ease-of-use.
 function C_AuctionHouse.IsThrottledMessageSystemReady(specificSearch) end
 
 ---@param itemID number
@@ -333,6 +334,7 @@ function C_AuctionHouse.RefreshCommoditySearchResults(itemID) end
 function C_AuctionHouse.RefreshItemSearchResults(itemKey) end
 
 ---[Documentation](https://wow.gamepedia.com/API_C_AuctionHouse.ReplicateItems)
+---This function should be used in place of an 'allItem' QueryAuctionItems call to query the entire auction house.
 function C_AuctionHouse.ReplicateItems() end
 
 ---[Documentation](https://wow.gamepedia.com/API_C_AuctionHouse.RequestMoreBrowseResults)
@@ -365,12 +367,14 @@ function C_AuctionHouse.SendBrowseQuery(query) end
 ---@param sorts AuctionHouseSortType[]
 ---@param separateOwnerItems boolean
 ---[Documentation](https://wow.gamepedia.com/API_C_AuctionHouse.SendSearchQuery)
+---Search queries are restricted to 100 calls per minute. These should not be used to query the entire auction house. See ReplicateItems
 function C_AuctionHouse.SendSearchQuery(itemKey, sorts, separateOwnerItems) end
 
 ---@param itemKey ItemKey
 ---@param sorts AuctionHouseSortType[]
 ---@param separateOwnerItems boolean
 ---[Documentation](https://wow.gamepedia.com/API_C_AuctionHouse.SendSellSearchQuery)
+---Search queries are restricted to 100 calls per minute. These should not be used to query the entire auction house. See ReplicateItems
 function C_AuctionHouse.SendSellSearchQuery(itemKey, sorts, separateOwnerItems) end
 
 ---@param itemKey ItemKey
