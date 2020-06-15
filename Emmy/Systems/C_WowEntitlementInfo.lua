@@ -1,5 +1,21 @@
 C_WowEntitlementInfo = {}
 
+---@class ENTITLEMENT_DELIVERED : Event
+---@field entitlementType WoWEntitlementType
+---@field textureID number
+---@field name string
+---@field payloadID number
+---@field showFancyToast boolean
+local ENTITLEMENT_DELIVERED = {}
+
+---@class RAF_ENTITLEMENT_DELIVERED : Event
+---@field entitlementType WoWEntitlementType
+---@field textureID number
+---@field name string
+---@field payloadID number
+---@field showFancyToast boolean
+local RAF_ENTITLEMENT_DELIVERED = {}
+
 ---@class WoWEntitlementType
 local WoWEntitlementType = {
 	Item = 0,

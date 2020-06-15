@@ -16,3 +16,15 @@ function C_Cursor.GetCursorItem() end
 ---@param streamId string
 ---[Documentation](https://wow.gamepedia.com/API_C_Cursor.SetCursorCommunitiesStream)
 function C_Cursor.SetCursorCommunitiesStream(clubId, streamId) end
+
+---@class BATTLE_PET_CURSOR_CLEAR : Event
+local BATTLE_PET_CURSOR_CLEAR = {}
+
+---@class COMMUNITIES_STREAM_CURSOR_CLEAR : Event
+local COMMUNITIES_STREAM_CURSOR_CLEAR = {}
+
+---@class CURSOR_UPDATE : Event
+local CURSOR_UPDATE = {}
+
+---@class MOUNT_CURSOR_CLEAR : Event
+local MOUNT_CURSOR_CLEAR = {}

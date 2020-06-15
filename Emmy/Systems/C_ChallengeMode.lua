@@ -95,6 +95,36 @@ function C_ChallengeMode.SlotKeystone() end
 ---[Documentation](https://wow.gamepedia.com/API_C_ChallengeMode.StartChallengeMode)
 function C_ChallengeMode.StartChallengeMode() end
 
+---@class CHALLENGE_MODE_COMPLETED : Event
+local CHALLENGE_MODE_COMPLETED = {}
+
+---@class CHALLENGE_MODE_DEATH_COUNT_UPDATED : Event
+local CHALLENGE_MODE_DEATH_COUNT_UPDATED = {}
+
+---@class CHALLENGE_MODE_KEYSTONE_RECEPTABLE_OPEN : Event
+local CHALLENGE_MODE_KEYSTONE_RECEPTABLE_OPEN = {}
+
+---@class CHALLENGE_MODE_KEYSTONE_SLOTTED : Event
+---@field keystoneID number
+local CHALLENGE_MODE_KEYSTONE_SLOTTED = {}
+
+---@class CHALLENGE_MODE_LEADERS_UPDATE : Event
+local CHALLENGE_MODE_LEADERS_UPDATE = {}
+
+---@class CHALLENGE_MODE_MAPS_UPDATE : Event
+local CHALLENGE_MODE_MAPS_UPDATE = {}
+
+---@class CHALLENGE_MODE_MEMBER_INFO_UPDATED : Event
+local CHALLENGE_MODE_MEMBER_INFO_UPDATED = {}
+
+---@class CHALLENGE_MODE_RESET : Event
+---@field mapID number
+local CHALLENGE_MODE_RESET = {}
+
+---@class CHALLENGE_MODE_START : Event
+---@field mapID number
+local CHALLENGE_MODE_START = {}
+
 ---@class ChallengeModeGuildAttemptMember
 ---@field name string
 ---@field classFileName string

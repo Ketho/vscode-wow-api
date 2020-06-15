@@ -21,6 +21,37 @@ function C_Console.PrintAllMatchingCommands(partialCommandText) end
 ---[Documentation](https://wow.gamepedia.com/API_C_Console.SetFontHeight)
 function C_Console.SetFontHeight(fontHeightInPixels) end
 
+---@class CONSOLE_CLEAR : Event
+local CONSOLE_CLEAR = {}
+
+---@class CONSOLE_COLORS_CHANGED : Event
+local CONSOLE_COLORS_CHANGED = {}
+
+---@class CONSOLE_FONT_SIZE_CHANGED : Event
+local CONSOLE_FONT_SIZE_CHANGED = {}
+
+---@class CONSOLE_LOG : Event
+---@field message string
+local CONSOLE_LOG = {}
+
+---@class CONSOLE_MESSAGE : Event
+---@field message string
+---@field colorType number
+local CONSOLE_MESSAGE = {}
+
+---@class CVAR_UPDATE : Event
+---@field eventName string
+---@field value string
+local CVAR_UPDATE = {}
+
+---@class GLUE_CONSOLE_LOG : Event
+---@field message string
+local GLUE_CONSOLE_LOG = {}
+
+---@class TOGGLE_CONSOLE : Event
+---@field showConsole boolean
+local TOGGLE_CONSOLE = {}
+
 ---@class ConsoleCategory
 local ConsoleCategory = {
 	Debug = 0,

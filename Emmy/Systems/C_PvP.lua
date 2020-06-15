@@ -285,6 +285,122 @@ function C_PvP.SetWarModeDesired(warModeDesired) end
 ---[Documentation](https://wow.gamepedia.com/API_C_PvP.ToggleWarMode)
 function C_PvP.ToggleWarMode() end
 
+---@class ARENA_OPPONENT_UPDATE : Event
+---@field unitToken string
+---@field updateReason string
+local ARENA_OPPONENT_UPDATE = {}
+
+---@class ARENA_PREP_OPPONENT_SPECIALIZATIONS : Event
+local ARENA_PREP_OPPONENT_SPECIALIZATIONS = {}
+
+---@class ARENA_SEASON_WORLD_STATE : Event
+local ARENA_SEASON_WORLD_STATE = {}
+
+---@class BATTLEFIELD_QUEUE_TIMEOUT : Event
+local BATTLEFIELD_QUEUE_TIMEOUT = {}
+
+---@class BATTLEFIELDS_CLOSED : Event
+local BATTLEFIELDS_CLOSED = {}
+
+---@class BATTLEFIELDS_SHOW : Event
+---@field isArena boolean
+---@field battleMasterListID number
+local BATTLEFIELDS_SHOW = {}
+
+---@class BATTLEGROUND_OBJECTIVES_UPDATE : Event
+local BATTLEGROUND_OBJECTIVES_UPDATE = {}
+
+---@class BATTLEGROUND_POINTS_UPDATE : Event
+local BATTLEGROUND_POINTS_UPDATE = {}
+
+---@class GDF_SIM_COMPLETE : Event
+local GDF_SIM_COMPLETE = {}
+
+---@class HONOR_LEVEL_UPDATE : Event
+---@field isHigherLevel boolean
+local HONOR_LEVEL_UPDATE = {}
+
+---@class NOTIFY_PVP_AFK_RESULT : Event
+---@field offender string
+---@field numBlackMarksOnOffender number
+---@field numPlayersIHaveReported number
+local NOTIFY_PVP_AFK_RESULT = {}
+
+---@class PLAYER_ENTERING_BATTLEGROUND : Event
+local PLAYER_ENTERING_BATTLEGROUND = {}
+
+---@class POST_MATCH_CURRENCY_REWARD_UPDATE : Event
+---@field reward PVPPostMatchCurrencyReward
+local POST_MATCH_CURRENCY_REWARD_UPDATE = {}
+
+---@class POST_MATCH_ITEM_REWARD_UPDATE : Event
+local POST_MATCH_ITEM_REWARD_UPDATE = {}
+
+---@class PVP_BRAWL_INFO_UPDATED : Event
+local PVP_BRAWL_INFO_UPDATED = {}
+
+---@class PVP_MATCH_ACTIVE : Event
+local PVP_MATCH_ACTIVE = {}
+
+---@class PVP_MATCH_COMPLETE : Event
+---@field winner number
+---@field duration number
+local PVP_MATCH_COMPLETE = {}
+
+---@class PVP_MATCH_INACTIVE : Event
+local PVP_MATCH_INACTIVE = {}
+
+---@class PVP_RATED_STATS_UPDATE : Event
+local PVP_RATED_STATS_UPDATE = {}
+
+---@class PVP_REWARDS_UPDATE : Event
+local PVP_REWARDS_UPDATE = {}
+
+---@class PVP_ROLE_UPDATE : Event
+local PVP_ROLE_UPDATE = {}
+
+---@class PVP_SPECIAL_EVENT_INFO_UPDATED : Event
+local PVP_SPECIAL_EVENT_INFO_UPDATED = {}
+
+---@class PVP_TYPES_ENABLED : Event
+---@field wargameBattlegrounds boolean
+---@field ratedBattlegrounds boolean
+---@field ratedArenas boolean
+local PVP_TYPES_ENABLED = {}
+
+---@class PVP_VEHICLE_INFO_UPDATED : Event
+local PVP_VEHICLE_INFO_UPDATED = {}
+
+---@class PVP_WORLDSTATE_UPDATE : Event
+local PVP_WORLDSTATE_UPDATE = {}
+
+---@class PVPQUEUE_ANYWHERE_SHOW : Event
+local PVPQUEUE_ANYWHERE_SHOW = {}
+
+---@class PVPQUEUE_ANYWHERE_UPDATE_AVAILABLE : Event
+local PVPQUEUE_ANYWHERE_UPDATE_AVAILABLE = {}
+
+---@class UPDATE_ACTIVE_BATTLEFIELD : Event
+local UPDATE_ACTIVE_BATTLEFIELD = {}
+
+---@class UPDATE_BATTLEFIELD_SCORE : Event
+local UPDATE_BATTLEFIELD_SCORE = {}
+
+---@class UPDATE_BATTLEFIELD_STATUS : Event
+---@field battleFieldIndex number
+local UPDATE_BATTLEFIELD_STATUS = {}
+
+---@class WAR_MODE_STATUS_UPDATE : Event
+---@field warModeEnabled boolean
+local WAR_MODE_STATUS_UPDATE = {}
+
+---@class WARGAME_REQUESTED : Event
+---@field opposingPartyMemberName string
+---@field battlegroundName string
+---@field timeoutSeconds number
+---@field tournamentRules boolean
+local WARGAME_REQUESTED = {}
+
 ---@class BrawlType
 local BrawlType = {
 	None = 0,

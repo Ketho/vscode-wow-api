@@ -387,6 +387,138 @@ function C_AuctionHouse.SetFavoriteItem(itemKey, setFavorite) end
 ---[Documentation](https://wow.gamepedia.com/API_C_AuctionHouse.StartCommoditiesPurchase)
 function C_AuctionHouse.StartCommoditiesPurchase(itemID, quantity) end
 
+---@class AUCTION_CANCELED : Event
+---@field auctionID number
+local AUCTION_CANCELED = {}
+
+---@class AUCTION_HOUSE_AUCTION_CREATED : Event
+---@field auctionID number
+local AUCTION_HOUSE_AUCTION_CREATED = {}
+
+---@class AUCTION_HOUSE_BROWSE_FAILURE : Event
+local AUCTION_HOUSE_BROWSE_FAILURE = {}
+
+---@class AUCTION_HOUSE_BROWSE_RESULTS_ADDED : Event
+---@field addedBrowseResults BrowseResultInfo[]
+local AUCTION_HOUSE_BROWSE_RESULTS_ADDED = {}
+
+---@class AUCTION_HOUSE_BROWSE_RESULTS_UPDATED : Event
+local AUCTION_HOUSE_BROWSE_RESULTS_UPDATED = {}
+
+---@class AUCTION_HOUSE_CLOSED : Event
+local AUCTION_HOUSE_CLOSED = {}
+
+---@class AUCTION_HOUSE_DISABLED : Event
+local AUCTION_HOUSE_DISABLED = {}
+
+---@class AUCTION_HOUSE_FAVORITES_UPDATED : Event
+local AUCTION_HOUSE_FAVORITES_UPDATED = {}
+
+---@class AUCTION_HOUSE_NEW_BID_RECEIVED : Event
+---@field auctionID number
+local AUCTION_HOUSE_NEW_BID_RECEIVED = {}
+
+---@class AUCTION_HOUSE_NEW_RESULTS_RECEIVED : Event
+---@field itemKey ItemKey
+local AUCTION_HOUSE_NEW_RESULTS_RECEIVED = {}
+
+---@class AUCTION_HOUSE_SCRIPT_DEPRECATED : Event
+local AUCTION_HOUSE_SCRIPT_DEPRECATED = {}
+
+---@class AUCTION_HOUSE_SHOW : Event
+local AUCTION_HOUSE_SHOW = {}
+
+---@class AUCTION_HOUSE_THROTTLED_MESSAGE_DROPPED : Event
+local AUCTION_HOUSE_THROTTLED_MESSAGE_DROPPED = {}
+
+---@class AUCTION_HOUSE_THROTTLED_MESSAGE_QUEUED : Event
+local AUCTION_HOUSE_THROTTLED_MESSAGE_QUEUED = {}
+
+---@class AUCTION_HOUSE_THROTTLED_MESSAGE_RESPONSE_RECEIVED : Event
+local AUCTION_HOUSE_THROTTLED_MESSAGE_RESPONSE_RECEIVED = {}
+
+---@class AUCTION_HOUSE_THROTTLED_MESSAGE_SENT : Event
+local AUCTION_HOUSE_THROTTLED_MESSAGE_SENT = {}
+
+---@class AUCTION_HOUSE_THROTTLED_SPECIFIC_SEARCH_READY : Event
+local AUCTION_HOUSE_THROTTLED_SPECIFIC_SEARCH_READY = {}
+
+---@class AUCTION_HOUSE_THROTTLED_SYSTEM_READY : Event
+local AUCTION_HOUSE_THROTTLED_SYSTEM_READY = {}
+
+---@class AUCTION_MULTISELL_FAILURE : Event
+local AUCTION_MULTISELL_FAILURE = {}
+
+---@class AUCTION_MULTISELL_START : Event
+---@field numRepetitions number
+local AUCTION_MULTISELL_START = {}
+
+---@class AUCTION_MULTISELL_UPDATE : Event
+---@field createdCount number
+---@field totalToCreate number
+local AUCTION_MULTISELL_UPDATE = {}
+
+---@class BID_ADDED : Event
+---@field bidID number
+local BID_ADDED = {}
+
+---@class BIDS_UPDATED : Event
+local BIDS_UPDATED = {}
+
+---@class COMMODITY_PRICE_UNAVAILABLE : Event
+local COMMODITY_PRICE_UNAVAILABLE = {}
+
+---@class COMMODITY_PRICE_UPDATED : Event
+---@field updatedUnitPrice number
+---@field updatedTotalPrice number
+local COMMODITY_PRICE_UPDATED = {}
+
+---@class COMMODITY_PURCHASE_FAILED : Event
+local COMMODITY_PURCHASE_FAILED = {}
+
+---@class COMMODITY_PURCHASE_SUCCEEDED : Event
+local COMMODITY_PURCHASE_SUCCEEDED = {}
+
+---@class COMMODITY_PURCHASED : Event
+---@field itemID number
+---@field quantity number
+local COMMODITY_PURCHASED = {}
+
+---@class COMMODITY_SEARCH_RESULTS_ADDED : Event
+---@field itemID number
+local COMMODITY_SEARCH_RESULTS_ADDED = {}
+
+---@class COMMODITY_SEARCH_RESULTS_UPDATED : Event
+---@field itemID number
+local COMMODITY_SEARCH_RESULTS_UPDATED = {}
+
+---@class EXTRA_BROWSE_INFO_RECEIVED : Event
+---@field itemID number
+local EXTRA_BROWSE_INFO_RECEIVED = {}
+
+---@class ITEM_KEY_ITEM_INFO_RECEIVED : Event
+---@field itemID number
+local ITEM_KEY_ITEM_INFO_RECEIVED = {}
+
+---@class ITEM_PURCHASED : Event
+---@field itemID number
+local ITEM_PURCHASED = {}
+
+---@class ITEM_SEARCH_RESULTS_ADDED : Event
+---@field itemKey ItemKey
+local ITEM_SEARCH_RESULTS_ADDED = {}
+
+---@class ITEM_SEARCH_RESULTS_UPDATED : Event
+---@field itemKey ItemKey
+---@field newAuctionID number
+local ITEM_SEARCH_RESULTS_UPDATED = {}
+
+---@class OWNED_AUCTIONS_UPDATED : Event
+local OWNED_AUCTIONS_UPDATED = {}
+
+---@class REPLICATE_ITEM_LIST_UPDATE : Event
+local REPLICATE_ITEM_LIST_UPDATE = {}
+
 ---@class AuctionHouseFilterCategory
 local AuctionHouseFilterCategory = {
 	Uncategorized = 0,

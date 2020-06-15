@@ -1,3 +1,15 @@
+function Emmy:GetEvent(event)
+	local tbl = {}
+	tinsert(tbl, format("---@class %s : Event", event.LiteralName))
+	if event.Payload then
+		for _, arg in pairs(event.Payload) do
+			tinsert(tbl, self:GetField("field", arg))
+		end
+	end
+	tinsert(tbl, format("local %s = {}", event.LiteralName))
+	return table.concat(tbl, "\n")
+end
+
 local function HasMiddleOptionals(paramTbl)
 	local optional
 	for _, param in ipairs(paramTbl) do

@@ -71,6 +71,21 @@ function C_MythicPlus.RequestMapInfo() end
 ---[Documentation](https://wow.gamepedia.com/API_C_MythicPlus.RequestRewards)
 function C_MythicPlus.RequestRewards() end
 
+---@class MYTHIC_PLUS_CURRENT_AFFIX_UPDATE : Event
+local MYTHIC_PLUS_CURRENT_AFFIX_UPDATE = {}
+
+---@class MYTHIC_PLUS_NEW_SEASON_RECORD : Event
+---@field mapChallengeModeID number
+---@field completionMilliseconds number
+---@field level number
+local MYTHIC_PLUS_NEW_SEASON_RECORD = {}
+
+---@class MYTHIC_PLUS_NEW_WEEKLY_RECORD : Event
+---@field mapChallengeModeID number
+---@field completionMilliseconds number
+---@field level number
+local MYTHIC_PLUS_NEW_WEEKLY_RECORD = {}
+
 ---@class MapSeasonBestInfo
 ---@field durationSec number
 ---@field level number

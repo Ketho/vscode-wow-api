@@ -67,6 +67,12 @@ function IsTrialAccount() end
 ---[Documentation](https://wow.gamepedia.com/API_IsVeteranTrialAccount)
 function IsVeteranTrialAccount() end
 
+---@class MAX_EXPANSION_LEVEL_UPDATED : Event
+local MAX_EXPANSION_LEVEL_UPDATED = {}
+
+---@class MIN_EXPANSION_LEVEL_UPDATED : Event
+local MIN_EXPANSION_LEVEL_UPDATED = {}
+
 ---@class ExpansionDisplayInfo
 ---@field logo number
 ---@field banner string

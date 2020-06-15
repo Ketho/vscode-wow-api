@@ -1,4 +1,4 @@
-local fs = "---@%s %s %s"
+local fs_field = "---@%s %s %s"
 
 function Emmy:GetField(annotation, apiTable)
 	local str, paramType
@@ -10,9 +10,9 @@ function Emmy:GetField(annotation, apiTable)
 		paramType = self:GetType(apiTable.Type)
 	end
 	if annotation == "return" then
-		str = fs:format(annotation, paramType, apiTable.Name)
+		str = fs_field:format(annotation, paramType, apiTable.Name)
 	else
-		str = fs:format(annotation, apiTable.Name, paramType)
+		str = fs_field:format(annotation, apiTable.Name, paramType)
 	end
 	return str
 end

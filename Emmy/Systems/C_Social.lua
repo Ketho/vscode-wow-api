@@ -59,3 +59,22 @@ function C_Social.TwitterGetMSTillCanPost() end
 ---[Documentation](https://wow.gamepedia.com/API_C_Social.TwitterPostMessage)
 ---Not allowed to be called by addons
 function C_Social.TwitterPostMessage(message) end
+
+---@class SOCIAL_ITEM_RECEIVED : Event
+local SOCIAL_ITEM_RECEIVED = {}
+
+---@class TWITTER_LINK_RESULT : Event
+---@field isLinked boolean
+---@field screenName string
+---@field error string
+local TWITTER_LINK_RESULT = {}
+
+---@class TWITTER_POST_RESULT : Event
+---@field result number
+local TWITTER_POST_RESULT = {}
+
+---@class TWITTER_STATUS_UPDATE : Event
+---@field isTwitterEnabled boolean
+---@field isLinked boolean
+---@field screenName string
+local TWITTER_STATUS_UPDATE = {}

@@ -1,4 +1,5 @@
-local doc = "---[Documentation](https://wow.gamepedia.com/%s)"
+local fs_doc = "---[Documentation](https://wow.gamepedia.com/%s)"
+local fs_func = "function %s end"
 
 function Emmy:GetFunction(func)
 	local tbl = {}
@@ -12,10 +13,10 @@ function Emmy:GetFunction(func)
 			tinsert(tbl, self:GetField("return", ret))
 		end
 	end
-	tinsert(tbl, doc:format("API_"..Util:GetFullName(func)))
+	tinsert(tbl, fs_doc:format("API_"..Util:GetFullName(func)))
 	if func.Documentation then
 		tinsert(tbl, "---"..table.concat(func.Documentation, "; "))
 	end
-	tinsert(tbl, self.fs.func:format(func:GetFullName(false, false)))
+	tinsert(tbl, fs_func:format(func:GetFullName(false, false)))
 	return table.concat(tbl, "\n")
 end

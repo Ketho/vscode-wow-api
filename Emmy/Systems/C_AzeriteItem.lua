@@ -38,6 +38,19 @@ function C_AzeriteItem.IsAzeriteItemAtMaxLevel() end
 ---[Documentation](https://wow.gamepedia.com/API_C_AzeriteItem.IsAzeriteItemByID)
 function C_AzeriteItem.IsAzeriteItemByID(itemInfo) end
 
+---@class AZERITE_ITEM_EXPERIENCE_CHANGED : Event
+---@field azeriteItemLocation ItemLocationMixin
+---@field oldExperienceAmount number
+---@field newExperienceAmount number
+local AZERITE_ITEM_EXPERIENCE_CHANGED = {}
+
+---@class AZERITE_ITEM_POWER_LEVEL_CHANGED : Event
+---@field azeriteItemLocation ItemLocationMixin
+---@field oldPowerLevel number
+---@field newPowerLevel number
+---@field unlockedEmpoweredItemsInfo UnlockedAzeriteEmpoweredItems[]
+local AZERITE_ITEM_POWER_LEVEL_CHANGED = {}
+
 ---@class UnlockedAzeriteEmpoweredItems
 ---@field unlockedItem ItemLocationMixin
 ---@field tierIndex number

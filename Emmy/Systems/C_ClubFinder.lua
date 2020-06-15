@@ -245,6 +245,57 @@ function C_ClubFinder.SetRecruitmentSettings(index, checked) end
 ---[Documentation](https://wow.gamepedia.com/API_C_ClubFinder.ShouldShowClubFinder)
 function C_ClubFinder.ShouldShowClubFinder() end
 
+---@class CLUB_FINDER_APPLICANT_INVITE_RECIEVED : Event
+---@field clubFinderGUIDs string[]
+local CLUB_FINDER_APPLICANT_INVITE_RECIEVED = {}
+
+---@class CLUB_FINDER_APPLICATIONS_UPDATED : Event
+---@field type ClubFinderRequestType
+---@field clubFinderGUIDs string[]
+local CLUB_FINDER_APPLICATIONS_UPDATED = {}
+
+---@class CLUB_FINDER_CLUB_LIST_RETURNED : Event
+---@field type ClubFinderRequestType
+local CLUB_FINDER_CLUB_LIST_RETURNED = {}
+
+---@class CLUB_FINDER_CLUB_REPORTED : Event
+---@field type ClubFinderRequestType
+---@field clubFinderGUID string
+local CLUB_FINDER_CLUB_REPORTED = {}
+
+---@class CLUB_FINDER_COMMUNITY_OFFLINE_JOIN : Event
+---@field clubId string
+local CLUB_FINDER_COMMUNITY_OFFLINE_JOIN = {}
+
+---@class CLUB_FINDER_ENABLED_OR_DISABLED : Event
+local CLUB_FINDER_ENABLED_OR_DISABLED = {}
+
+---@class CLUB_FINDER_LINKED_CLUB_RETURNED : Event
+---@field clubInfo RecruitingClubInfo
+local CLUB_FINDER_LINKED_CLUB_RETURNED = {}
+
+---@class CLUB_FINDER_MEMBERSHIP_LIST_CHANGED : Event
+local CLUB_FINDER_MEMBERSHIP_LIST_CHANGED = {}
+
+---@class CLUB_FINDER_PLAYER_PENDING_LIST_RECIEVED : Event
+---@field type ClubFinderRequestType
+local CLUB_FINDER_PLAYER_PENDING_LIST_RECIEVED = {}
+
+---@class CLUB_FINDER_POST_UPDATED : Event
+---@field clubFinderGUIDs string[]
+local CLUB_FINDER_POST_UPDATED = {}
+
+---@class CLUB_FINDER_RECRUIT_LIST_CHANGED : Event
+local CLUB_FINDER_RECRUIT_LIST_CHANGED = {}
+
+---@class CLUB_FINDER_RECRUITMENT_POST_RETURNED : Event
+---@field type ClubFinderRequestType
+local CLUB_FINDER_RECRUITMENT_POST_RETURNED = {}
+
+---@class CLUB_FINDER_RECRUITS_UPDATED : Event
+---@field type ClubFinderRequestType
+local CLUB_FINDER_RECRUITS_UPDATED = {}
+
 ---@class ClubFinderApplicationUpdateType
 local ClubFinderApplicationUpdateType = {
 	None = 0,

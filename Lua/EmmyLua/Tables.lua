@@ -1,6 +1,6 @@
 function Emmy:GetTable(apiTable)
 	local tbl = {}
-	tinsert(tbl, self.fs.class:format(apiTable.Name))
+	tinsert(tbl, format("---@class %s", apiTable.Name))
 	if apiTable.Type == "Enumeration" then
 		tinsert(tbl, format("local %s = {", apiTable.Name))
 		for _, v in pairs(apiTable.Fields) do

@@ -149,6 +149,60 @@ function C_Item.UnlockItem(itemLocation) end
 ---[Documentation](https://wow.gamepedia.com/API_C_Item.UnlockItemByGUID)
 function C_Item.UnlockItemByGUID(itemGUID) end
 
+---@class ACTION_WILL_BIND_ITEM : Event
+local ACTION_WILL_BIND_ITEM = {}
+
+---@class BIND_ENCHANT : Event
+local BIND_ENCHANT = {}
+
+---@class CHARACTER_ITEM_FIXUP_NOTIFICATION : Event
+---@field fixupVersion number
+local CHARACTER_ITEM_FIXUP_NOTIFICATION = {}
+
+---@class CONFIRM_BEFORE_USE : Event
+local CONFIRM_BEFORE_USE = {}
+
+---@class DELETE_ITEM_CONFIRM : Event
+---@field itemName string
+---@field qualityID number
+---@field bonding number
+---@field questWarn number
+local DELETE_ITEM_CONFIRM = {}
+
+---@class END_BOUND_TRADEABLE : Event
+---@field reason string
+local END_BOUND_TRADEABLE = {}
+
+---@class GET_ITEM_INFO_RECEIVED : Event
+---@field itemID number
+---@field success boolean
+local GET_ITEM_INFO_RECEIVED = {}
+
+---@class ITEM_DATA_LOAD_RESULT : Event
+---@field itemID number
+---@field success boolean
+local ITEM_DATA_LOAD_RESULT = {}
+
+---@class MERCHANT_CONFIRM_TRADE_TIMER_REMOVAL : Event
+---@field itemLink string
+local MERCHANT_CONFIRM_TRADE_TIMER_REMOVAL = {}
+
+---@class REPLACE_ENCHANT : Event
+---@field existingStr string
+---@field replacementStr string
+local REPLACE_ENCHANT = {}
+
+---@class TRADE_REPLACE_ENCHANT : Event
+---@field existing string
+---@field replacement string
+local TRADE_REPLACE_ENCHANT = {}
+
+---@class USE_BIND_CONFIRM : Event
+local USE_BIND_CONFIRM = {}
+
+---@class USE_NO_REFUND_CONFIRM : Event
+local USE_NO_REFUND_CONFIRM = {}
+
 ---@class InventoryType
 local InventoryType = {
 	IndexNonEquipType = 0,

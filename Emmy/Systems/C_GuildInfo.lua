@@ -65,6 +65,97 @@ function C_GuildInfo.SetGuildRankOrder(guid, rankOrder) end
 ---[Documentation](https://wow.gamepedia.com/API_C_GuildInfo.SetNote)
 function C_GuildInfo.SetNote(guid, note, isPublic) end
 
+---@class CLOSE_TABARD_FRAME : Event
+local CLOSE_TABARD_FRAME = {}
+
+---@class DISABLE_DECLINE_GUILD_INVITE : Event
+local DISABLE_DECLINE_GUILD_INVITE = {}
+
+---@class ENABLE_DECLINE_GUILD_INVITE : Event
+local ENABLE_DECLINE_GUILD_INVITE = {}
+
+---@class GUILD_CHALLENGE_COMPLETED : Event
+---@field challengeType number
+---@field currentCount number
+---@field maxCount number
+---@field goldAwarded number
+local GUILD_CHALLENGE_COMPLETED = {}
+
+---@class GUILD_CHALLENGE_UPDATED : Event
+local GUILD_CHALLENGE_UPDATED = {}
+
+---@class GUILD_EVENT_LOG_UPDATE : Event
+local GUILD_EVENT_LOG_UPDATE = {}
+
+---@class GUILD_INVITE_CANCEL : Event
+local GUILD_INVITE_CANCEL = {}
+
+---@class GUILD_INVITE_REQUEST : Event
+---@field inviter string
+---@field guildName string
+---@field guildAchievementPoints number
+---@field oldGuildName string
+---@field isNewGuild boolean
+---@field tabardInfo GuildTabardInfo
+local GUILD_INVITE_REQUEST = {}
+
+---@class GUILD_MOTD : Event
+---@field motdText string
+local GUILD_MOTD = {}
+
+---@class GUILD_NEWS_UPDATE : Event
+local GUILD_NEWS_UPDATE = {}
+
+---@class GUILD_PARTY_STATE_UPDATED : Event
+---@field inGuildParty boolean
+local GUILD_PARTY_STATE_UPDATED = {}
+
+---@class GUILD_RANKS_UPDATE : Event
+local GUILD_RANKS_UPDATE = {}
+
+---@class GUILD_RECIPE_KNOWN_BY_MEMBERS : Event
+local GUILD_RECIPE_KNOWN_BY_MEMBERS = {}
+
+---@class GUILD_REGISTRAR_CLOSED : Event
+local GUILD_REGISTRAR_CLOSED = {}
+
+---@class GUILD_REGISTRAR_SHOW : Event
+local GUILD_REGISTRAR_SHOW = {}
+
+---@class GUILD_RENAME_REQUIRED : Event
+---@field flagSet boolean
+local GUILD_RENAME_REQUIRED = {}
+
+---@class GUILD_REWARDS_LIST : Event
+local GUILD_REWARDS_LIST = {}
+
+---@class GUILD_ROSTER_UPDATE : Event
+---@field canRequestRosterUpdate boolean
+local GUILD_ROSTER_UPDATE = {}
+
+---@class GUILD_TRADESKILL_UPDATE : Event
+local GUILD_TRADESKILL_UPDATE = {}
+
+---@class GUILDTABARD_UPDATE : Event
+local GUILDTABARD_UPDATE = {}
+
+---@class OPEN_TABARD_FRAME : Event
+local OPEN_TABARD_FRAME = {}
+
+---@class PLAYER_GUILD_UPDATE : Event
+---@field unitTarget string
+local PLAYER_GUILD_UPDATE = {}
+
+---@class REQUIRED_GUILD_RENAME_RESULT : Event
+---@field success boolean
+local REQUIRED_GUILD_RENAME_RESULT = {}
+
+---@class TABARD_CANSAVE_CHANGED : Event
+local TABARD_CANSAVE_CHANGED = {}
+
+---@class TABARD_SAVE_PENDING : Event
+local TABARD_SAVE_PENDING = {}
+
 ---@class GuildNewsInfo
 ---@field isSticky boolean
 ---@field isHeader boolean

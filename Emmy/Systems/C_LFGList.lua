@@ -59,6 +59,54 @@ function C_LFGList.SetSearchToActivity(activityID) end
 ---[Documentation](https://wow.gamepedia.com/API_C_LFGList.SetSearchToQuestID)
 function C_LFGList.SetSearchToQuestID(questID) end
 
+---@class LFG_LIST_ACTIVE_ENTRY_UPDATE : Event
+---@field created boolean
+local LFG_LIST_ACTIVE_ENTRY_UPDATE = {}
+
+---@class LFG_LIST_APPLICANT_LIST_UPDATED : Event
+---@field newPendingEntry boolean
+---@field newPendingEntryWithData boolean
+local LFG_LIST_APPLICANT_LIST_UPDATED = {}
+
+---@class LFG_LIST_APPLICANT_UPDATED : Event
+---@field applicantID number
+local LFG_LIST_APPLICANT_UPDATED = {}
+
+---@class LFG_LIST_APPLICATION_STATUS_UPDATED : Event
+---@field searchResultID number
+---@field newStatus string
+---@field oldStatus string
+---@field groupName string
+local LFG_LIST_APPLICATION_STATUS_UPDATED = {}
+
+---@class LFG_LIST_AVAILABILITY_UPDATE : Event
+local LFG_LIST_AVAILABILITY_UPDATE = {}
+
+---@class LFG_LIST_ENTRY_CREATION_FAILED : Event
+local LFG_LIST_ENTRY_CREATION_FAILED = {}
+
+---@class LFG_LIST_ENTRY_EXPIRED_TIMEOUT : Event
+local LFG_LIST_ENTRY_EXPIRED_TIMEOUT = {}
+
+---@class LFG_LIST_ENTRY_EXPIRED_TOO_MANY_PLAYERS : Event
+local LFG_LIST_ENTRY_EXPIRED_TOO_MANY_PLAYERS = {}
+
+---@class LFG_LIST_JOINED_GROUP : Event
+---@field searchResultID number
+---@field groupName string
+local LFG_LIST_JOINED_GROUP = {}
+
+---@class LFG_LIST_SEARCH_FAILED : Event
+---@field reason string
+local LFG_LIST_SEARCH_FAILED = {}
+
+---@class LFG_LIST_SEARCH_RESULT_UPDATED : Event
+---@field searchResultID number
+local LFG_LIST_SEARCH_RESULT_UPDATED = {}
+
+---@class LFG_LIST_SEARCH_RESULTS_RECEIVED : Event
+local LFG_LIST_SEARCH_RESULTS_RECEIVED = {}
+
 ---@class LfgApplicantData
 ---@field applicantID number
 ---@field applicationStatus string

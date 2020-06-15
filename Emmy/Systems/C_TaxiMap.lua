@@ -17,6 +17,13 @@ function C_TaxiMap.GetTaxiNodesForMap(uiMapID) end
 ---[Documentation](https://wow.gamepedia.com/API_C_TaxiMap.ShouldMapShowTaxiNodes)
 function C_TaxiMap.ShouldMapShowTaxiNodes(uiMapID) end
 
+---@class TAXIMAP_CLOSED : Event
+local TAXIMAP_CLOSED = {}
+
+---@class TAXIMAP_OPENED : Event
+---@field system number
+local TAXIMAP_OPENED = {}
+
 ---@class FlightPathFaction
 local FlightPathFaction = {
 	Neutral = 0,

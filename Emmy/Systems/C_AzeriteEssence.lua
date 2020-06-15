@@ -92,6 +92,38 @@ function C_AzeriteEssence.SetPendingActivationEssence(essenceID) end
 ---[Documentation](https://wow.gamepedia.com/API_C_AzeriteEssence.UnlockMilestone)
 function C_AzeriteEssence.UnlockMilestone(milestoneID) end
 
+---@class AZERITE_ESSENCE_ACTIVATED : Event
+---@field slot AzeriteEssence
+---@field essenceID number
+local AZERITE_ESSENCE_ACTIVATED = {}
+
+---@class AZERITE_ESSENCE_ACTIVATION_FAILED : Event
+---@field slot AzeriteEssence
+---@field essenceID number
+local AZERITE_ESSENCE_ACTIVATION_FAILED = {}
+
+---@class AZERITE_ESSENCE_CHANGED : Event
+---@field essenceID number
+---@field newRank number
+local AZERITE_ESSENCE_CHANGED = {}
+
+---@class AZERITE_ESSENCE_FORGE_CLOSE : Event
+local AZERITE_ESSENCE_FORGE_CLOSE = {}
+
+---@class AZERITE_ESSENCE_FORGE_OPEN : Event
+local AZERITE_ESSENCE_FORGE_OPEN = {}
+
+---@class AZERITE_ESSENCE_MILESTONE_UNLOCKED : Event
+---@field milestoneID number
+local AZERITE_ESSENCE_MILESTONE_UNLOCKED = {}
+
+---@class AZERITE_ESSENCE_UPDATE : Event
+local AZERITE_ESSENCE_UPDATE = {}
+
+---@class PENDING_AZERITE_ESSENCE_CHANGED : Event
+---@field essenceID number
+local PENDING_AZERITE_ESSENCE_CHANGED = {}
+
 ---@class AzeriteEssence
 local AzeriteEssence = {
 	MainSlot = 0,

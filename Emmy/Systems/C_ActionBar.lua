@@ -66,3 +66,43 @@ function C_ActionBar.ShouldOverrideBarShowManaBar() end
 ---@param slotID number
 ---[Documentation](https://wow.gamepedia.com/API_C_ActionBar.ToggleAutoCastPetAction)
 function C_ActionBar.ToggleAutoCastPetAction(slotID) end
+
+---@class ACTIONBAR_HIDEGRID : Event
+local ACTIONBAR_HIDEGRID = {}
+
+---@class ACTIONBAR_PAGE_CHANGED : Event
+local ACTIONBAR_PAGE_CHANGED = {}
+
+---@class ACTIONBAR_SHOW_BOTTOMLEFT : Event
+local ACTIONBAR_SHOW_BOTTOMLEFT = {}
+
+---@class ACTIONBAR_SHOWGRID : Event
+local ACTIONBAR_SHOWGRID = {}
+
+---@class ACTIONBAR_SLOT_CHANGED : Event
+---@field slot number
+local ACTIONBAR_SLOT_CHANGED = {}
+
+---@class ACTIONBAR_UPDATE_COOLDOWN : Event
+local ACTIONBAR_UPDATE_COOLDOWN = {}
+
+---@class ACTIONBAR_UPDATE_STATE : Event
+local ACTIONBAR_UPDATE_STATE = {}
+
+---@class ACTIONBAR_UPDATE_USABLE : Event
+local ACTIONBAR_UPDATE_USABLE = {}
+
+---@class PET_BAR_UPDATE : Event
+local PET_BAR_UPDATE = {}
+
+---@class UPDATE_BONUS_ACTIONBAR : Event
+local UPDATE_BONUS_ACTIONBAR = {}
+
+---@class UPDATE_EXTRA_ACTIONBAR : Event
+local UPDATE_EXTRA_ACTIONBAR = {}
+
+---@class UPDATE_MULTI_CAST_ACTIONBAR : Event
+local UPDATE_MULTI_CAST_ACTIONBAR = {}
+
+---@class UPDATE_OVERRIDE_ACTIONBAR : Event
+local UPDATE_OVERRIDE_ACTIONBAR = {}

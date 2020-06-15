@@ -5,6 +5,14 @@ C_KeyBindings = {}
 ---[Documentation](https://wow.gamepedia.com/API_C_KeyBindings.GetCustomBindingType)
 function C_KeyBindings.GetCustomBindingType(bindingIndex) end
 
+---@class MODIFIER_STATE_CHANGED : Event
+---@field key string
+---@field down number
+local MODIFIER_STATE_CHANGED = {}
+
+---@class UPDATE_BINDINGS : Event
+local UPDATE_BINDINGS = {}
+
 ---@class CustomBindingType
 local CustomBindingType = {
 	VoicePushToTalk = 0,

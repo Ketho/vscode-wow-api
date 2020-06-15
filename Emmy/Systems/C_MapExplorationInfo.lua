@@ -11,6 +11,9 @@ function C_MapExplorationInfo.GetExploredAreaIDsAtPosition(uiMapID, normalizedPo
 ---[Documentation](https://wow.gamepedia.com/API_C_MapExplorationInfo.GetExploredMapTextures)
 function C_MapExplorationInfo.GetExploredMapTextures(uiMapID) end
 
+---@class MAP_EXPLORATION_UPDATED : Event
+local MAP_EXPLORATION_UPDATED = {}
+
 ---@class UiMapExplorationHitRect
 ---@field top number
 ---@field bottom number

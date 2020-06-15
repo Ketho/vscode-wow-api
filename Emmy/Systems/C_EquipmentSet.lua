@@ -113,3 +113,21 @@ function C_EquipmentSet.UnignoreSlotForSave(slot) end
 ---@return boolean setWasEquipped
 ---[Documentation](https://wow.gamepedia.com/API_C_EquipmentSet.UseEquipmentSet)
 function C_EquipmentSet.UseEquipmentSet(equipmentSetID) end
+
+---@class EQUIPMENT_SETS_CHANGED : Event
+local EQUIPMENT_SETS_CHANGED = {}
+
+---@class EQUIPMENT_SWAP_FINISHED : Event
+---@field result boolean
+---@field setID number
+local EQUIPMENT_SWAP_FINISHED = {}
+
+---@class EQUIPMENT_SWAP_PENDING : Event
+local EQUIPMENT_SWAP_PENDING = {}
+
+---@class TRANSMOG_OUTFITS_CHANGED : Event
+local TRANSMOG_OUTFITS_CHANGED = {}
+
+---@class WEAR_EQUIPMENT_SET : Event
+---@field setID number
+local WEAR_EQUIPMENT_SET = {}

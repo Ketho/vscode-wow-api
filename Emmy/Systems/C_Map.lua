@@ -155,6 +155,25 @@ function C_Map.MapHasArt(uiMapID) end
 ---[Documentation](https://wow.gamepedia.com/API_C_Map.RequestPreloadMap)
 function C_Map.RequestPreloadMap(uiMapID) end
 
+---@class NEW_WMO_CHUNK : Event
+local NEW_WMO_CHUNK = {}
+
+---@class WORLD_MAP_CLOSE : Event
+local WORLD_MAP_CLOSE = {}
+
+---@class WORLD_MAP_OPEN : Event
+---@field uiMapID number
+local WORLD_MAP_OPEN = {}
+
+---@class ZONE_CHANGED : Event
+local ZONE_CHANGED = {}
+
+---@class ZONE_CHANGED_INDOORS : Event
+local ZONE_CHANGED_INDOORS = {}
+
+---@class ZONE_CHANGED_NEW_AREA : Event
+local ZONE_CHANGED_NEW_AREA = {}
+
 ---@class MapCanvasPosition
 local MapCanvasPosition = {
 	None = 0,

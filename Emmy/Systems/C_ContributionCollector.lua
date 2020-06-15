@@ -92,6 +92,32 @@ function C_ContributionCollector.HasPendingContribution(contributionID) end
 ---[Documentation](https://wow.gamepedia.com/API_C_ContributionCollector.IsAwaitingRewardQuestData)
 function C_ContributionCollector.IsAwaitingRewardQuestData(contributionID) end
 
+---@class CONTRIBUTION_CHANGED : Event
+---@field state ContributionState
+---@field result ContributionResult
+---@field name string
+---@field contributionID number
+local CONTRIBUTION_CHANGED = {}
+
+---@class CONTRIBUTION_COLLECTOR_CLOSE : Event
+local CONTRIBUTION_COLLECTOR_CLOSE = {}
+
+---@class CONTRIBUTION_COLLECTOR_OPEN : Event
+local CONTRIBUTION_COLLECTOR_OPEN = {}
+
+---@class CONTRIBUTION_COLLECTOR_PENDING : Event
+---@field contributionID number
+---@field isPending boolean
+---@field result number
+local CONTRIBUTION_COLLECTOR_PENDING = {}
+
+---@class CONTRIBUTION_COLLECTOR_UPDATE : Event
+local CONTRIBUTION_COLLECTOR_UPDATE = {}
+
+---@class CONTRIBUTION_COLLECTOR_UPDATE_SINGLE : Event
+---@field contributionID number
+local CONTRIBUTION_COLLECTOR_UPDATE_SINGLE = {}
+
 ---@class ContributionAppearanceFlags
 local ContributionAppearanceFlags = {
 	TooltipUseTimeRemaining = 0,

@@ -13,6 +13,13 @@ function C_AlliedRaces.GetAllRacialAbilitiesFromID(raceID) end
 ---[Documentation](https://wow.gamepedia.com/API_C_AlliedRaces.GetRaceInfoByID)
 function C_AlliedRaces.GetRaceInfoByID(raceID) end
 
+---@class ALLIED_RACE_CLOSE : Event
+local ALLIED_RACE_CLOSE = {}
+
+---@class ALLIED_RACE_OPEN : Event
+---@field raceID number
+local ALLIED_RACE_OPEN = {}
+
 ---@class AlliedRaceInfo
 ---@field raceID number
 ---@field maleModelID number

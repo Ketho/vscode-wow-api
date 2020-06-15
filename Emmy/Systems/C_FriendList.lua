@@ -131,6 +131,84 @@ function C_FriendList.ShowFriends() end
 ---[Documentation](https://wow.gamepedia.com/API_C_FriendList.SortWho)
 function C_FriendList.SortWho(sorting) end
 
+---@class BATTLETAG_INVITE_SHOW : Event
+---@field name string
+local BATTLETAG_INVITE_SHOW = {}
+
+---@class BN_BLOCK_FAILED_TOO_MANY : Event
+---@field blockType string
+local BN_BLOCK_FAILED_TOO_MANY = {}
+
+---@class BN_BLOCK_LIST_UPDATED : Event
+local BN_BLOCK_LIST_UPDATED = {}
+
+---@class BN_CHAT_WHISPER_UNDELIVERABLE : Event
+---@field senderID number
+local BN_CHAT_WHISPER_UNDELIVERABLE = {}
+
+---@class BN_CONNECTED : Event
+---@field suppressNotification boolean
+local BN_CONNECTED = {}
+
+---@class BN_CUSTOM_MESSAGE_CHANGED : Event
+---@field id number
+local BN_CUSTOM_MESSAGE_CHANGED = {}
+
+---@class BN_CUSTOM_MESSAGE_LOADED : Event
+local BN_CUSTOM_MESSAGE_LOADED = {}
+
+---@class BN_DISCONNECTED : Event
+---@field result boolean
+---@field suppressNotification boolean
+local BN_DISCONNECTED = {}
+
+---@class BN_FRIEND_ACCOUNT_OFFLINE : Event
+---@field friendId number
+---@field isCompanionApp boolean
+local BN_FRIEND_ACCOUNT_OFFLINE = {}
+
+---@class BN_FRIEND_ACCOUNT_ONLINE : Event
+---@field friendId number
+---@field isCompanionApp boolean
+local BN_FRIEND_ACCOUNT_ONLINE = {}
+
+---@class BN_FRIEND_INFO_CHANGED : Event
+---@field friendIndex number
+local BN_FRIEND_INFO_CHANGED = {}
+
+---@class BN_FRIEND_INVITE_ADDED : Event
+---@field accountID number
+local BN_FRIEND_INVITE_ADDED = {}
+
+---@class BN_FRIEND_INVITE_LIST_INITIALIZED : Event
+---@field listSize number
+local BN_FRIEND_INVITE_LIST_INITIALIZED = {}
+
+---@class BN_FRIEND_INVITE_REMOVED : Event
+local BN_FRIEND_INVITE_REMOVED = {}
+
+---@class BN_FRIEND_LIST_SIZE_CHANGED : Event
+---@field accountID number
+local BN_FRIEND_LIST_SIZE_CHANGED = {}
+
+---@class BN_INFO_CHANGED : Event
+local BN_INFO_CHANGED = {}
+
+---@class BN_REQUEST_FOF_SUCCEEDED : Event
+local BN_REQUEST_FOF_SUCCEEDED = {}
+
+---@class FRIENDLIST_UPDATE : Event
+local FRIENDLIST_UPDATE = {}
+
+---@class IGNORELIST_UPDATE : Event
+local IGNORELIST_UPDATE = {}
+
+---@class MUTELIST_UPDATE : Event
+local MUTELIST_UPDATE = {}
+
+---@class WHO_LIST_UPDATE : Event
+local WHO_LIST_UPDATE = {}
+
 ---@class FriendInfo
 ---@field connected boolean
 ---@field name string

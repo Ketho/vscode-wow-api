@@ -440,6 +440,147 @@ function C_Club.UnfocusStream(clubId, streamId) end
 ---[Documentation](https://wow.gamepedia.com/API_C_Club.ValidateText)
 function C_Club.ValidateText(clubType, text, clubFieldType) end
 
+---@class AVATAR_LIST_UPDATED : Event
+---@field clubType ClubType
+local AVATAR_LIST_UPDATED = {}
+
+---@class CLUB_ADDED : Event
+---@field clubId string
+local CLUB_ADDED = {}
+
+---@class CLUB_ERROR : Event
+---@field action ClubActionType
+---@field error ClubErrorType
+---@field clubType ClubType
+local CLUB_ERROR = {}
+
+---@class CLUB_INVITATION_ADDED_FOR_SELF : Event
+---@field invitation ClubSelfInvitationInfo
+local CLUB_INVITATION_ADDED_FOR_SELF = {}
+
+---@class CLUB_INVITATION_REMOVED_FOR_SELF : Event
+---@field invitationId string
+local CLUB_INVITATION_REMOVED_FOR_SELF = {}
+
+---@class CLUB_INVITATIONS_RECEIVED_FOR_CLUB : Event
+---@field clubId string
+local CLUB_INVITATIONS_RECEIVED_FOR_CLUB = {}
+
+---@class CLUB_MEMBER_ADDED : Event
+---@field clubId string
+---@field memberId number
+local CLUB_MEMBER_ADDED = {}
+
+---@class CLUB_MEMBER_PRESENCE_UPDATED : Event
+---@field clubId string
+---@field memberId number
+---@field presence ClubMemberPresence
+local CLUB_MEMBER_PRESENCE_UPDATED = {}
+
+---@class CLUB_MEMBER_REMOVED : Event
+---@field clubId string
+---@field memberId number
+local CLUB_MEMBER_REMOVED = {}
+
+---@class CLUB_MEMBER_ROLE_UPDATED : Event
+---@field clubId string
+---@field memberId number
+---@field roleId number
+local CLUB_MEMBER_ROLE_UPDATED = {}
+
+---@class CLUB_MEMBER_UPDATED : Event
+---@field clubId string
+---@field memberId number
+local CLUB_MEMBER_UPDATED = {}
+
+---@class CLUB_MESSAGE_ADDED : Event
+---@field clubId string
+---@field streamId string
+---@field messageId ClubMessageIdentifier
+local CLUB_MESSAGE_ADDED = {}
+
+---@class CLUB_MESSAGE_HISTORY_RECEIVED : Event
+---@field clubId string
+---@field streamId string
+---@field downloadedRange ClubMessageRange
+---@field contiguousRange ClubMessageRange
+local CLUB_MESSAGE_HISTORY_RECEIVED = {}
+
+---@class CLUB_MESSAGE_UPDATED : Event
+---@field clubId string
+---@field streamId string
+---@field messageId ClubMessageIdentifier
+local CLUB_MESSAGE_UPDATED = {}
+
+---@class CLUB_REMOVED : Event
+---@field clubId string
+local CLUB_REMOVED = {}
+
+---@class CLUB_REMOVED_MESSAGE : Event
+---@field clubName string
+---@field clubRemovedReason ClubRemovedReason
+local CLUB_REMOVED_MESSAGE = {}
+
+---@class CLUB_SELF_MEMBER_ROLE_UPDATED : Event
+---@field clubId string
+---@field roleId number
+local CLUB_SELF_MEMBER_ROLE_UPDATED = {}
+
+---@class CLUB_STREAM_ADDED : Event
+---@field clubId string
+---@field streamId string
+local CLUB_STREAM_ADDED = {}
+
+---@class CLUB_STREAM_REMOVED : Event
+---@field clubId string
+---@field streamId string
+local CLUB_STREAM_REMOVED = {}
+
+---@class CLUB_STREAM_SUBSCRIBED : Event
+---@field clubId string
+---@field streamId string
+local CLUB_STREAM_SUBSCRIBED = {}
+
+---@class CLUB_STREAM_UNSUBSCRIBED : Event
+---@field clubId string
+---@field streamId string
+local CLUB_STREAM_UNSUBSCRIBED = {}
+
+---@class CLUB_STREAM_UPDATED : Event
+---@field clubId string
+---@field streamId string
+local CLUB_STREAM_UPDATED = {}
+
+---@class CLUB_STREAMS_LOADED : Event
+---@field clubId string
+local CLUB_STREAMS_LOADED = {}
+
+---@class CLUB_TICKET_CREATED : Event
+---@field clubId string
+---@field ticketInfo ClubTicketInfo
+local CLUB_TICKET_CREATED = {}
+
+---@class CLUB_TICKET_RECEIVED : Event
+---@field ticket string
+local CLUB_TICKET_RECEIVED = {}
+
+---@class CLUB_TICKETS_RECEIVED : Event
+---@field clubId string
+local CLUB_TICKETS_RECEIVED = {}
+
+---@class CLUB_UPDATED : Event
+---@field clubId string
+local CLUB_UPDATED = {}
+
+---@class INITIAL_CLUBS_LOADED : Event
+local INITIAL_CLUBS_LOADED = {}
+
+---@class STREAM_VIEW_MARKER_UPDATED : Event
+---@field clubId string
+---@field streamId string
+---@field lastReadTime number
+local STREAM_VIEW_MARKER_UPDATED = {}
+
 ---@class ClubActionType
 local ClubActionType = {
 	ErrorClubActionSubscribe = 0,

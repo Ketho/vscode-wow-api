@@ -49,6 +49,39 @@ function C_SpecializationInfo.IsPvpTalentLocked(talentID) end
 ---[Documentation](https://wow.gamepedia.com/API_C_SpecializationInfo.SetPvpTalentLocked)
 function C_SpecializationInfo.SetPvpTalentLocked(talentID, locked) end
 
+---@class ACTIVE_TALENT_GROUP_CHANGED : Event
+---@field curr number
+---@field prev number
+local ACTIVE_TALENT_GROUP_CHANGED = {}
+
+---@class CONFIRM_TALENT_WIPE : Event
+---@field cost number
+---@field respecType number
+local CONFIRM_TALENT_WIPE = {}
+
+---@class PET_SPECIALIZATION_CHANGED : Event
+local PET_SPECIALIZATION_CHANGED = {}
+
+---@class PLAYER_LEARN_PVP_TALENT_FAILED : Event
+local PLAYER_LEARN_PVP_TALENT_FAILED = {}
+
+---@class PLAYER_LEARN_TALENT_FAILED : Event
+local PLAYER_LEARN_TALENT_FAILED = {}
+
+---@class PLAYER_PVP_TALENT_UPDATE : Event
+local PLAYER_PVP_TALENT_UPDATE = {}
+
+---@class PLAYER_TALENT_UPDATE : Event
+local PLAYER_TALENT_UPDATE = {}
+
+---@class SPEC_INVOLUNTARILY_CHANGED : Event
+---@field isPet boolean
+local SPEC_INVOLUNTARILY_CHANGED = {}
+
+---@class TALENTS_INVOLUNTARILY_RESET : Event
+---@field isPetTalents boolean
+local TALENTS_INVOLUNTARILY_RESET = {}
+
 ---@class PvpTalentSlotInfo
 ---@field enabled boolean
 ---@field level number

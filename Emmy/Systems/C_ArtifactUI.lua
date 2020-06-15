@@ -354,6 +354,44 @@ function C_ArtifactUI.SetPreviewAppearance(artifactAppearanceID) end
 ---[Documentation](https://wow.gamepedia.com/API_C_ArtifactUI.ShouldSuppressForgeRotation)
 function C_ArtifactUI.ShouldSuppressForgeRotation() end
 
+---@class ARTIFACT_CLOSE : Event
+local ARTIFACT_CLOSE = {}
+
+---@class ARTIFACT_ENDGAME_REFUND : Event
+---@field numRefundedPowers number
+---@field refundedTier number
+---@field bagOrSlotIndex number
+---@field slotIndex number
+local ARTIFACT_ENDGAME_REFUND = {}
+
+---@class ARTIFACT_RELIC_FORGE_CLOSE : Event
+local ARTIFACT_RELIC_FORGE_CLOSE = {}
+
+---@class ARTIFACT_RELIC_FORGE_PREVIEW_RELIC_CHANGED : Event
+local ARTIFACT_RELIC_FORGE_PREVIEW_RELIC_CHANGED = {}
+
+---@class ARTIFACT_RELIC_FORGE_UPDATE : Event
+local ARTIFACT_RELIC_FORGE_UPDATE = {}
+
+---@class ARTIFACT_RELIC_INFO_RECEIVED : Event
+local ARTIFACT_RELIC_INFO_RECEIVED = {}
+
+---@class ARTIFACT_RESPEC_PROMPT : Event
+local ARTIFACT_RESPEC_PROMPT = {}
+
+---@class ARTIFACT_TIER_CHANGED : Event
+---@field newTier number
+---@field bagOrSlotIndex number
+---@field slotIndex number
+local ARTIFACT_TIER_CHANGED = {}
+
+---@class ARTIFACT_UPDATE : Event
+---@field newItem boolean
+local ARTIFACT_UPDATE = {}
+
+---@class ARTIFACT_XP_UPDATE : Event
+local ARTIFACT_XP_UPDATE = {}
+
 ---@class ArtifactArtInfo
 ---@field textureKit string
 ---@field titleName string

@@ -142,6 +142,81 @@ function C_QuestLog.SetMapForQuestPOIs(uiMapID) end
 ---[Documentation](https://wow.gamepedia.com/API_C_QuestLog.ShouldShowQuestRewards)
 function C_QuestLog.ShouldShowQuestRewards(questID) end
 
+---@class QUEST_ACCEPTED : Event
+---@field questIndex number
+---@field questId number
+local QUEST_ACCEPTED = {}
+
+---@class QUEST_AUTOCOMPLETE : Event
+---@field questId number
+local QUEST_AUTOCOMPLETE = {}
+
+---@class QUEST_COMPLETE : Event
+local QUEST_COMPLETE = {}
+
+---@class QUEST_DATA_LOAD_RESULT : Event
+---@field questID number
+---@field success boolean
+local QUEST_DATA_LOAD_RESULT = {}
+
+---@class QUEST_DETAIL : Event
+---@field questStartItemID number
+local QUEST_DETAIL = {}
+
+---@class QUEST_LOG_CRITERIA_UPDATE : Event
+---@field questID number
+---@field specificTreeID number
+---@field description string
+---@field numFulfilled number
+---@field numRequired number
+local QUEST_LOG_CRITERIA_UPDATE = {}
+
+---@class QUEST_LOG_UPDATE : Event
+local QUEST_LOG_UPDATE = {}
+
+---@class QUEST_POI_UPDATE : Event
+local QUEST_POI_UPDATE = {}
+
+---@class QUEST_REMOVED : Event
+---@field questID number
+---@field wasReplayQuest boolean
+local QUEST_REMOVED = {}
+
+---@class QUEST_TURNED_IN : Event
+---@field questID number
+---@field xpReward number
+---@field moneyReward number
+local QUEST_TURNED_IN = {}
+
+---@class QUEST_WATCH_LIST_CHANGED : Event
+---@field questID number
+---@field added boolean
+local QUEST_WATCH_LIST_CHANGED = {}
+
+---@class QUEST_WATCH_UPDATE : Event
+---@field questIndex number
+local QUEST_WATCH_UPDATE = {}
+
+---@class QUESTLINE_UPDATE : Event
+---@field requestRequired boolean
+local QUESTLINE_UPDATE = {}
+
+---@class SUPER_TRACKED_QUEST_CHANGED : Event
+local SUPER_TRACKED_QUEST_CHANGED = {}
+
+---@class TASK_PROGRESS_UPDATE : Event
+local TASK_PROGRESS_UPDATE = {}
+
+---@class TREASURE_PICKER_CACHE_FLUSH : Event
+local TREASURE_PICKER_CACHE_FLUSH = {}
+
+---@class WAYPOINT_UPDATE : Event
+local WAYPOINT_UPDATE = {}
+
+---@class WORLD_QUEST_COMPLETED_BY_SPELL : Event
+---@field questID number
+local WORLD_QUEST_COMPLETED_BY_SPELL = {}
+
 ---@class QuestTag
 local QuestTag = {
 	Group = 1,

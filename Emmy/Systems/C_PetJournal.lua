@@ -34,6 +34,61 @@ function C_PetJournal.PetIsSummonable(battlePetGUID) end
 ---[Documentation](https://wow.gamepedia.com/API_C_PetJournal.PetUsesRandomDisplay)
 function C_PetJournal.PetUsesRandomDisplay(speciesID) end
 
+---@class BATTLEPET_FORCE_NAME_DECLENSION : Event
+---@field name string
+---@field battlePetGUID string
+local BATTLEPET_FORCE_NAME_DECLENSION = {}
+
+---@class COMPANION_LEARNED : Event
+local COMPANION_LEARNED = {}
+
+---@class COMPANION_UNLEARNED : Event
+local COMPANION_UNLEARNED = {}
+
+---@class COMPANION_UPDATE : Event
+---@field companionType string
+local COMPANION_UPDATE = {}
+
+---@class NEW_PET_ADDED : Event
+---@field battlePetGUID string
+local NEW_PET_ADDED = {}
+
+---@class PET_JOURNAL_AUTO_SLOTTED_PET : Event
+---@field slotIndex number
+---@field battlePetGUID string
+local PET_JOURNAL_AUTO_SLOTTED_PET = {}
+
+---@class PET_JOURNAL_CAGE_FAILED : Event
+local PET_JOURNAL_CAGE_FAILED = {}
+
+---@class PET_JOURNAL_LIST_UPDATE : Event
+local PET_JOURNAL_LIST_UPDATE = {}
+
+---@class PET_JOURNAL_NEW_BATTLE_SLOT : Event
+local PET_JOURNAL_NEW_BATTLE_SLOT = {}
+
+---@class PET_JOURNAL_PET_DELETED : Event
+---@field battlePetGUID string
+local PET_JOURNAL_PET_DELETED = {}
+
+---@class PET_JOURNAL_PET_RESTORED : Event
+---@field battlePetGUID string
+local PET_JOURNAL_PET_RESTORED = {}
+
+---@class PET_JOURNAL_PET_REVOKED : Event
+---@field battlePetGUID string
+local PET_JOURNAL_PET_REVOKED = {}
+
+---@class PET_JOURNAL_PETS_HEALED : Event
+local PET_JOURNAL_PETS_HEALED = {}
+
+---@class PET_JOURNAL_TRAP_LEVEL_SET : Event
+---@field trapLevel number
+local PET_JOURNAL_TRAP_LEVEL_SET = {}
+
+---@class UPDATE_SUMMONPETS_ACTION : Event
+local UPDATE_SUMMONPETS_ACTION = {}
+
 ---@class PetJournalError
 local PetJournalError = {
 	None = 0,
