@@ -9,7 +9,6 @@ Emmy.fs = {
 	class2 = "---@class %s %s",
 	object = "%s = {}",
 	param = "---@%s %s %s",
-	doc = "---[Documentation](https://wow.gamepedia.com/%s)",
 	func = "function %s end",
 	event = "%s = true",
 	-- event = "%s = \"%s\"",
