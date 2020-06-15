@@ -287,3 +287,74 @@ function C_VoiceChat.ToggleMemberMuted(playerLocation) end
 
 ---[Documentation](https://wow.gamepedia.com/API_C_VoiceChat.ToggleMuted)
 function C_VoiceChat.ToggleMuted() end
+
+---@class CommunicationMode
+local CommunicationMode = {
+	PushToTalk = 0,
+	OpenMic = 1,
+}
+
+---@class VoiceChatStatusCode
+local VoiceChatStatusCode = {
+	Success = 0,
+	OperationPending = 1,
+	TooManyRequests = 2,
+	LoginProhibited = 3,
+	ClientNotInitialized = 4,
+	ClientNotLoggedIn = 5,
+	ClientAlreadyLoggedIn = 6,
+	ChannelNameTooShort = 7,
+	ChannelNameTooLong = 8,
+	ChannelAlreadyExists = 9,
+	AlreadyInChannel = 10,
+	TargetNotFound = 11,
+	Failure = 12,
+	ServiceLost = 13,
+	UnableToLaunchProxy = 14,
+	ProxyConnectionTimeOut = 15,
+	ProxyConnectionUnableToConnect = 16,
+	ProxyConnectionUnexpectedDisconnect = 17,
+	Disabled = 18,
+	UnsupportedChatChannelType = 19,
+	InvalidCommunityStream = 20,
+	PlayerSilenced = 21,
+	PlayerVoiceChatParentalDisabled = 22,
+	InvalidInputDevice = 23,
+	InvalidOutputDevice = 24,
+}
+
+---@class VoiceAudioDevice
+---@field deviceID string
+---@field displayName string
+---@field power number
+---@field isActive boolean
+---@field isSystemDefault boolean
+local VoiceAudioDevice = {}
+
+---@class VoiceChatChannel
+---@field name string
+---@field channelID number
+---@field channelType ChatChannelType
+---@field clubId string
+---@field streamId string
+---@field volume number
+---@field isActive boolean
+---@field isMuted boolean
+---@field isTransmitting boolean
+---@field isLocalProcess boolean
+---@field members table
+local VoiceChatChannel = {}
+
+---@class VoiceChatMember
+---@field energy number
+---@field memberID number
+---@field isActive boolean
+---@field isSpeaking boolean
+---@field isMutedForAll boolean
+---@field isSilenced boolean
+local VoiceChatMember = {}
+
+---@class VoiceChatProcess
+---@field name string
+---@field channels table
+local VoiceChatProcess = {}

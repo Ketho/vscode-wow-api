@@ -80,3 +80,12 @@ function C_PartyInfo.LeaveParty(category) end
 ---@param dps boolean
 ---[Documentation](https://wow.gamepedia.com/API_C_PartyInfo.RequestInviteFromUnit)
 function C_PartyInfo.RequestInviteFromUnit(targetName, tank, healer, dps) end
+
+---@class PartyRequestJoinRelation
+local PartyRequestJoinRelation = {
+	None = 0,
+	Friend = 1,
+	Guild = 2,
+	Club = 3,
+	NumPartyRequestJoinRelations = 4,
+}

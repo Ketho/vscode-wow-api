@@ -197,3 +197,8 @@ function C_MountJournal.SetSourceFilter(filterIndex, isChecked) end
 ---@param mountID number
 ---[Documentation](https://wow.gamepedia.com/API_C_MountJournal.SummonByID)
 function C_MountJournal.SummonByID(mountID) end
+
+---@class MountCreatureDisplayInfo
+---@field creatureDisplayID number
+---@field isVisible boolean
+local MountCreatureDisplayInfo = {}

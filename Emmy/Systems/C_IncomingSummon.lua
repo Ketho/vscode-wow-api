@@ -9,3 +9,11 @@ function C_IncomingSummon.HasIncomingSummon(unit) end
 ---@return SummonStatus status
 ---[Documentation](https://wow.gamepedia.com/API_C_IncomingSummon.IncomingSummonStatus)
 function C_IncomingSummon.IncomingSummonStatus(unit) end
+
+---@class SummonStatus
+local SummonStatus = {
+	None = 0,
+	Pending = 1,
+	Accepted = 2,
+	Declined = 3,
+}

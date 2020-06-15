@@ -18,3 +18,15 @@ function C_ConfigurationWarnings.GetConfigurationWarnings(includeSeenWarnings) e
 ---@param configurationWarning ConfigurationWarning
 ---[Documentation](https://wow.gamepedia.com/API_C_ConfigurationWarnings.SetConfigurationWarningSeen)
 function C_ConfigurationWarnings.SetConfigurationWarningSeen(configurationWarning) end
+
+---@class ConfigurationWarning
+local ConfigurationWarning = {
+	ShaderModelWillBeOutdated = 0,
+	ShaderModelIsOutdated = 1,
+	ConsoleDeviceSseoUtdated = 2,
+	DriverBlacklisted = 3,
+	DriverOutOfDate = 4,
+	DeviceBlacklisted = 5,
+	GraphicsApiwIllBeOutdated = 6,
+	OsBitsWillBeOutdated = 7,
+}

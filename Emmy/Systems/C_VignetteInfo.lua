@@ -19,3 +19,25 @@ function C_VignetteInfo.GetVignettePosition(vignetteGUID, uiMapID) end
 ---@return table vignetteGUIDs
 ---[Documentation](https://wow.gamepedia.com/API_C_VignetteInfo.GetVignettes)
 function C_VignetteInfo.GetVignettes() end
+
+---@class VignetteType
+local VignetteType = {
+	Normal = 0,
+	PvpBounty = 1,
+}
+
+---@class VignetteInfo
+---@field vignetteGUID string
+---@field objectGUID string
+---@field name string
+---@field isDead boolean
+---@field onWorldMap boolean
+---@field onMinimap boolean
+---@field isUnique boolean
+---@field inFogOfWar boolean
+---@field atlasName string
+---@field hasTooltip boolean
+---@field vignetteID number
+---@field type VignetteType
+---@field rewardQuestID number
+local VignetteInfo = {}

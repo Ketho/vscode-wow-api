@@ -22,3 +22,8 @@ function C_IslandsQueue.QueueForIsland(difficultyID) end
 ---@param questId number
 ---[Documentation](https://wow.gamepedia.com/API_C_IslandsQueue.RequestPreloadRewardData)
 function C_IslandsQueue.RequestPreloadRewardData(questId) end
+
+---@class IslandsQueueDifficultyInfo
+---@field difficultyId number
+---@field previewRewardQuestId number
+local IslandsQueueDifficultyInfo = {}

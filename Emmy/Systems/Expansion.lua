@@ -65,3 +65,14 @@ function IsTrialAccount() end
 ---@return boolean isVeteranTrialAccount
 ---[Documentation](https://wow.gamepedia.com/API_IsVeteranTrialAccount)
 function IsVeteranTrialAccount() end
+
+---@class ExpansionDisplayInfo
+---@field logo number
+---@field banner string
+---@field features table
+local ExpansionDisplayInfo = {}
+
+---@class ExpansionDisplayInfoFeature
+---@field icon number
+---@field text string
+local ExpansionDisplayInfoFeature = {}

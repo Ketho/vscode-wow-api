@@ -37,3 +37,33 @@ function C_EncounterJournal.SetPreviewMythicPlusLevel(level) end
 ---@param tier number
 ---[Documentation](https://wow.gamepedia.com/API_C_EncounterJournal.SetPreviewPvpTier)
 function C_EncounterJournal.SetPreviewPvpTier(tier) end
+
+---@class DungeonEntranceMapInfo
+---@field areaPoiID number
+---@field position table
+---@field name string
+---@field description string
+---@field atlasName string
+---@field journalInstanceID number
+local DungeonEntranceMapInfo = {}
+
+---@class EncounterJournalMapEncounterInfo
+---@field encounterID number
+---@field mapX number
+---@field mapY number
+local EncounterJournalMapEncounterInfo = {}
+
+---@class EncounterJournalSectionInfo
+---@field spellID number
+---@field title string
+---@field description string
+---@field headerType number
+---@field abilityIcon number
+---@field creatureDisplayID number
+---@field uiModelSceneID number
+---@field siblingSectionID number
+---@field firstChildSectionID number
+---@field filteredByDifficulty boolean
+---@field link string
+---@field startsOpen boolean
+local EncounterJournalSectionInfo = {}

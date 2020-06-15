@@ -91,3 +91,47 @@ function C_ContributionCollector.HasPendingContribution(contributionID) end
 ---@return boolean awaitingData
 ---[Documentation](https://wow.gamepedia.com/API_C_ContributionCollector.IsAwaitingRewardQuestData)
 function C_ContributionCollector.IsAwaitingRewardQuestData(contributionID) end
+
+---@class ContributionAppearanceFlags
+local ContributionAppearanceFlags = {
+	TooltipUseTimeRemaining = 0,
+}
+
+---@class ContributionResult
+local ContributionResult = {
+	Success = 0,
+	MustBeNearNpc = 1,
+	IncorrectState = 2,
+	InvalidID = 3,
+	QuestDataMissing = 4,
+	FailedConditionCheck = 5,
+	UnableToCompleteTurnIn = 6,
+	InternalError = 7,
+}
+
+---@class ContributionState
+local ContributionState = {
+	None = 0,
+	Building = 1,
+	Active = 2,
+	UnderAttack = 3,
+	Destroyed = 4,
+}
+
+---@class ContributionAppearance
+---@field stateName string
+---@field stateColor table
+---@field tooltipLine string
+---@field tooltipUseTimeRemaining boolean
+---@field statusBarAtlas string
+---@field borderAtlas string
+---@field bannerAtlas string
+local ContributionAppearance = {}
+
+---@class ContributionMapInfo
+---@field areaPoiID number
+---@field position table
+---@field name string
+---@field atlasName string
+---@field collectorCreatureID number
+local ContributionMapInfo = {}

@@ -352,3 +352,30 @@ function C_ArtifactUI.SetPreviewAppearance(artifactAppearanceID) end
 ---@return boolean shouldSuppressForgeRotation
 ---[Documentation](https://wow.gamepedia.com/API_C_ArtifactUI.ShouldSuppressForgeRotation)
 function C_ArtifactUI.ShouldSuppressForgeRotation() end
+
+---@class ArtifactArtInfo
+---@field textureKit string
+---@field titleName string
+---@field titleColor table
+---@field barConnectedColor table
+---@field barDisconnectedColor table
+---@field uiModelSceneID number
+---@field spellVisualKitID number
+local ArtifactArtInfo = {}
+
+---@class ArtifactPowerInfo
+---@field spellID number
+---@field cost number
+---@field currentRank number
+---@field maxRank number
+---@field bonusRanks number
+---@field numMaxRankBonusFromTier number
+---@field prereqsMet boolean
+---@field isStart boolean
+---@field isGoldMedal boolean
+---@field isFinal boolean
+---@field tier number
+---@field position table
+---@field offset table
+---@field linearIndex number
+local ArtifactPowerInfo = {}

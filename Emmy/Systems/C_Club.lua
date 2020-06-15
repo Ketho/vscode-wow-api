@@ -410,3 +410,330 @@ function C_Club.UnfocusStream(clubId, streamId) end
 ---@return ValidateNameResult result
 ---[Documentation](https://wow.gamepedia.com/API_C_Club.ValidateText)
 function C_Club.ValidateText(clubType, text, clubFieldType) end
+
+---@class ClubActionType
+local ClubActionType = {
+	ErrorClubActionSubscribe = 0,
+	ErrorClubActionCreate = 1,
+	ErrorClubActionEdit = 2,
+	ErrorClubActionDestroy = 3,
+	ErrorClubActionLeave = 4,
+	ErrorClubActionCreateTicket = 5,
+	ErrorClubActionDestroyTicket = 6,
+	ErrorClubActionRedeemTicket = 7,
+	ErrorClubActionGetTicket = 8,
+	ErrorClubActionGetTickets = 9,
+	ErrorClubActionGetBans = 10,
+	ErrorClubActionGetInvitations = 11,
+	ErrorClubActionRevokeInvitation = 12,
+	ErrorClubActionAcceptInvitation = 13,
+	ErrorClubActionDeclineInvitation = 14,
+	ErrorClubActionCreateStream = 15,
+	ErrorClubActionEditStream = 16,
+	ErrorClubActionDestroyStream = 17,
+	ErrorClubActionInviteMember = 18,
+	ErrorClubActionEditMember = 19,
+	ErrorClubActionEditMemberNote = 20,
+	ErrorClubActionKickMember = 21,
+	ErrorClubActionAddBan = 22,
+	ErrorClubActionRemoveBan = 23,
+	ErrorClubActionCreateMessage = 24,
+	ErrorClubActionEditMessage = 25,
+	ErrorClubActionDestroyMessage = 26,
+}
+
+---@class ClubErrorType
+local ClubErrorType = {
+	ErrorCommunitiesNone = 0,
+	ErrorCommunitiesUnknown = 1,
+	ErrorCommunitiesNeutralFaction = 2,
+	ErrorCommunitiesUnknownRealm = 3,
+	ErrorCommunitiesBadTarget = 4,
+	ErrorCommunitiesWrongFaction = 5,
+	ErrorCommunitiesRestricted = 6,
+	ErrorCommunitiesIgnored = 7,
+	ErrorCommunitiesGuild = 8,
+	ErrorCommunitiesWrongRegion = 9,
+	ErrorCommunitiesUnknownTicket = 10,
+	ErrorCommunitiesMissingShortName = 11,
+	ErrorCommunitiesProfanity = 12,
+	ErrorCommunitiesTrial = 13,
+	ErrorCommunitiesVeteranTrial = 14,
+	ErrorCommunitiesChatMute = 15,
+	ErrorClubFull = 16,
+	ErrorClubNoClub = 17,
+	ErrorClubNotMember = 18,
+	ErrorClubAlreadyMember = 19,
+	ErrorClubNoSuchMember = 20,
+	ErrorClubNoSuchInvitation = 21,
+	ErrorClubInvitationAlreadyExists = 22,
+	ErrorClubInvalidRoleID = 23,
+	ErrorClubInsufficientPrivileges = 24,
+	ErrorClubTooManyClubsJoined = 25,
+	ErrorClubVoiceFull = 26,
+	ErrorClubStreamNoStream = 27,
+	ErrorClubStreamInvalidName = 28,
+	ErrorClubStreamCountAtMin = 29,
+	ErrorClubStreamCountAtMax = 30,
+	ErrorClubMemberHasRequiredRole = 31,
+	ErrorClubSentInvitationCountAtMax = 32,
+	ErrorClubReceivedInvitationCountAtMax = 33,
+	ErrorClubTargetIsBanned = 34,
+	ErrorClubBanAlreadyExists = 35,
+	ErrorClubBanCountAtMax = 36,
+	ErrorClubTicketCountAtMax = 37,
+	ErrorClubTicketNoSuchTicket = 38,
+	ErrorClubTicketHasConsumedAllowedRedeemCount = 39,
+}
+
+---@class ClubFieldType
+local ClubFieldType = {
+	ClubName = 0,
+	ClubShortName = 1,
+	ClubDescription = 2,
+	ClubBroadcast = 3,
+	ClubStreamName = 4,
+	ClubStreamSubject = 5,
+	NumTypes = 6,
+}
+
+---@class ClubInvitationCandidateStatus
+local ClubInvitationCandidateStatus = {
+	Available = 0,
+	InvitePending = 1,
+	AlreadyMember = 2,
+}
+
+---@class ClubMemberPresence
+local ClubMemberPresence = {
+	Unknown = 0,
+	Online = 1,
+	OnlineMobile = 2,
+	Offline = 3,
+	Away = 4,
+	Busy = 5,
+}
+
+---@class ClubRemovedReason
+local ClubRemovedReason = {
+	None = 0,
+	Banned = 1,
+	Removed = 2,
+	ClubDestroyed = 3,
+}
+
+---@class ClubRestrictionReason
+local ClubRestrictionReason = {
+	None = 0,
+	Unavailable = 1,
+}
+
+---@class ClubRoleIdentifier
+local ClubRoleIdentifier = {
+	Owner = 1,
+	Leader = 2,
+	Moderator = 3,
+	Member = 4,
+}
+
+---@class ClubStreamNotificationFilter
+local ClubStreamNotificationFilter = {
+	None = 0,
+	Mention = 1,
+	All = 2,
+}
+
+---@class ClubStreamType
+local ClubStreamType = {
+	General = 0,
+	Guild = 1,
+	Officer = 2,
+	Other = 3,
+}
+
+---@class ClubType
+local ClubType = {
+	BattleNet = 0,
+	Character = 1,
+	Guild = 2,
+	Other = 3,
+}
+
+---@class ValidateNameResult
+local ValidateNameResult = {
+	NameSuccess = 0,
+	NameFailure = 1,
+	NameNoName = 2,
+	NameTooShort = 3,
+	NameTooLong = 4,
+	NameInvalidCharacter = 5,
+	NameMixedLanguages = 6,
+	NameProfane = 7,
+	NameReserved = 8,
+	NameInvalidApostrophe = 9,
+	NameMultipleApostrophes = 10,
+	NameThreeConsecutive = 11,
+	NameInvalidSpace = 12,
+	NameConsecutiveSpaces = 13,
+	NameRussianConsecutiveSilentCharacters = 14,
+	NameRussianSilentCharacterAtBeginningOrEnd = 15,
+	NameDeclensionDoesntMatchBaseName = 16,
+	NameSpacesDisallowed = 17,
+}
+
+---@class ClubInfo
+---@field clubId string
+---@field name string
+---@field shortName string
+---@field description string
+---@field broadcast string
+---@field clubType ClubType
+---@field avatarId number
+---@field memberCount number
+---@field favoriteTimeStamp number
+---@field joinTime number
+---@field socialQueueingEnabled boolean
+local ClubInfo = {}
+
+---@class ClubInvitationCandidateInfo
+---@field memberId number
+---@field name string
+---@field priority number
+---@field status ClubInvitationCandidateStatus
+local ClubInvitationCandidateInfo = {}
+
+---@class ClubInvitationInfo
+---@field invitationId string
+---@field isMyInvitation boolean
+---@field invitee ClubMemberInfo
+local ClubInvitationInfo = {}
+
+---@class ClubLimits
+---@field maximumNumberOfStreams number
+local ClubLimits = {}
+
+---@class ClubMemberInfo
+---@field isSelf boolean
+---@field memberId number
+---@field name string
+---@field role ClubRoleIdentifier
+---@field presence ClubMemberPresence
+---@field clubType ClubType
+---@field guid string
+---@field bnetAccountId number
+---@field memberNote string
+---@field officerNote string
+---@field classID number
+---@field race number
+---@field level number
+---@field zone string
+---@field achievementPoints number
+---@field profession1ID number
+---@field profession1Rank number
+---@field profession1Name string
+---@field profession2ID number
+---@field profession2Rank number
+---@field profession2Name string
+---@field lastOnlineYear number
+---@field lastOnlineMonth number
+---@field lastOnlineDay number
+---@field lastOnlineHour number
+---@field guildRank string
+---@field guildRankOrder number
+---@field isRemoteChat boolean
+local ClubMemberInfo = {}
+
+---@class ClubMessageIdentifier
+---@field epoch number
+---@field position number
+local ClubMessageIdentifier = {}
+
+---@class ClubMessageInfo
+---@field messageId ClubMessageIdentifier
+---@field content string
+---@field author ClubMemberInfo
+---@field destroyer ClubMemberInfo
+---@field destroyed boolean
+---@field edited boolean
+local ClubMessageInfo = {}
+
+---@class ClubMessageRange
+---@field oldestMessageId ClubMessageIdentifier
+---@field newestMessageId ClubMessageIdentifier
+local ClubMessageRange = {}
+
+---@class ClubPrivilegeInfo
+---@field canDestroy boolean
+---@field canSetAttribute boolean
+---@field canSetName boolean
+---@field canSetDescription boolean
+---@field canSetAvatar boolean
+---@field canSetBroadcast boolean
+---@field canSetPrivacyLevel boolean
+---@field canSetOwnMemberAttribute boolean
+---@field canSetOtherMemberAttribute boolean
+---@field canSetOwnMemberNote boolean
+---@field canSetOtherMemberNote boolean
+---@field canSetOwnVoiceState boolean
+---@field canSetOwnPresenceLevel boolean
+---@field canUseVoice boolean
+---@field canVoiceMuteMemberForAll boolean
+---@field canGetInvitation boolean
+---@field canSendInvitation boolean
+---@field canSendGuestInvitation boolean
+---@field canRevokeOwnInvitation boolean
+---@field canRevokeOtherInvitation boolean
+---@field canGetBan boolean
+---@field canGetSuggestion boolean
+---@field canSuggestMember boolean
+---@field canGetTicket boolean
+---@field canCreateTicket boolean
+---@field canDestroyTicket boolean
+---@field canAddBan boolean
+---@field canRemoveBan boolean
+---@field canCreateStream boolean
+---@field canDestroyStream boolean
+---@field canSetStreamPosition boolean
+---@field canSetStreamAttribute boolean
+---@field canSetStreamName boolean
+---@field canSetStreamSubject boolean
+---@field canSetStreamAccess boolean
+---@field canSetStreamVoiceLevel boolean
+---@field canCreateMessage boolean
+---@field canDestroyOwnMessage boolean
+---@field canDestroyOtherMessage boolean
+---@field canEditOwnMessage boolean
+---@field canPinMessage boolean
+---@field kickableRoleIds table
+local ClubPrivilegeInfo = {}
+
+---@class ClubSelfInvitationInfo
+---@field invitationId string
+---@field club ClubInfo
+---@field inviter ClubMemberInfo
+---@field leaders table
+local ClubSelfInvitationInfo = {}
+
+---@class ClubStreamInfo
+---@field streamId string
+---@field name string
+---@field subject string
+---@field leadersAndModeratorsOnly boolean
+---@field streamType ClubStreamType
+---@field creationTime number
+local ClubStreamInfo = {}
+
+---@class ClubStreamNotificationSetting
+---@field streamId string
+---@field filter ClubStreamNotificationFilter
+local ClubStreamNotificationSetting = {}
+
+---@class ClubTicketInfo
+---@field ticketId string
+---@field allowedRedeemCount number
+---@field currentRedeemCount number
+---@field creationTime number
+---@field expirationTime number
+---@field defaultStreamId string
+---@field creator ClubMemberInfo
+local ClubTicketInfo = {}

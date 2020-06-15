@@ -391,3 +391,131 @@ function C_Calendar.SetNextClubId(clubId) end
 
 ---[Documentation](https://wow.gamepedia.com/API_C_Calendar.UpdateEvent)
 function C_Calendar.UpdateEvent() end
+
+---@class CalendarDayEvent
+---@field eventID string
+---@field title string
+---@field isCustomTitle boolean
+---@field startTime CalendarTime
+---@field endTime CalendarTime
+---@field calendarType string
+---@field sequenceType string
+---@field eventType CalendarEventType
+---@field iconTexture number
+---@field modStatus string
+---@field inviteStatus number
+---@field invitedBy string
+---@field difficulty number
+---@field inviteType number
+---@field sequenceIndex number
+---@field numSequenceDays number
+---@field difficultyName string
+---@field dontDisplayBanner boolean
+---@field dontDisplayEnd boolean
+---@field clubID string
+---@field isLocked boolean
+local CalendarDayEvent = {}
+
+---@class CalendarEventIndexInfo
+---@field offsetMonths number
+---@field monthDay number
+---@field eventIndex number
+local CalendarEventIndexInfo = {}
+
+---@class CalendarEventInfo
+---@field title string
+---@field description string
+---@field creator string
+---@field eventType CalendarEventType
+---@field repeatOption number
+---@field maxSize number
+---@field textureIndex number
+---@field time CalendarTime
+---@field lockoutTime CalendarTime
+---@field isLocked boolean
+---@field isAutoApprove boolean
+---@field hasPendingInvite boolean
+---@field inviteStatus number
+---@field inviteType number
+---@field calendarType string
+---@field communityName string
+local CalendarEventInfo = {}
+
+---@class CalendarEventInviteInfo
+---@field name string
+---@field level number
+---@field className string
+---@field classFilename string
+---@field inviteStatus number
+---@field modStatus string
+---@field inviteIsMine boolean
+---@field type number
+---@field notes string
+---@field classID number
+---@field guid string
+local CalendarEventInviteInfo = {}
+
+---@class CalendarEventStatusOption
+---@field optionIndex number
+---@field statusString string
+local CalendarEventStatusOption = {}
+
+---@class CalendarEventTextureInfo
+---@field title string
+---@field iconTexture number
+---@field expansionLevel number
+---@field difficultyId number
+---@field mapId number
+---@field isLfr boolean
+local CalendarEventTextureInfo = {}
+
+---@class CalendarEventTypeDisplayInfo
+---@field displayString string
+---@field eventType CalendarEventType
+local CalendarEventTypeDisplayInfo = {}
+
+---@class CalendarGuildEventInfo
+---@field eventID string
+---@field year number
+---@field month number
+---@field monthDay number
+---@field weekday number
+---@field hour number
+---@field minute number
+---@field eventType CalendarEventType
+---@field title string
+---@field calendarType string
+---@field texture number
+---@field inviteStatus number
+---@field clubID string
+local CalendarGuildEventInfo = {}
+
+---@class CalendarGuildFilterInfo
+---@field minLevel number
+---@field maxLevel number
+---@field rank number
+local CalendarGuildFilterInfo = {}
+
+---@class CalendarHolidayInfo
+---@field name string
+---@field description string
+---@field texture number
+---@field startTime CalendarTime
+---@field endTime CalendarTime
+local CalendarHolidayInfo = {}
+
+---@class CalendarMonthInfo
+---@field month number
+---@field year number
+---@field numDays number
+---@field firstWeekday number
+local CalendarMonthInfo = {}
+
+---@class CalendarRaidInfo
+---@field name string
+---@field calendarType string
+---@field raidID number
+---@field time CalendarTime
+---@field difficulty number
+---@field difficultyName string
+local CalendarRaidInfo = {}

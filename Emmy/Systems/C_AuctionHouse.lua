@@ -382,3 +382,126 @@ function C_AuctionHouse.SetFavoriteItem(itemKey, setFavorite) end
 ---@param quantity number
 ---[Documentation](https://wow.gamepedia.com/API_C_AuctionHouse.StartCommoditiesPurchase)
 function C_AuctionHouse.StartCommoditiesPurchase(itemID, quantity) end
+
+---@class AuctionHouseFilterCategory
+local AuctionHouseFilterCategory = {
+	Uncategorized = 0,
+	Equipment = 1,
+	Rarity = 2,
+}
+
+---@class AuctionStatus
+local AuctionStatus = {
+	Active = 0,
+	Sold = 1,
+}
+
+---@class ItemCommodityStatus
+local ItemCommodityStatus = {
+	Unknown = 0,
+	Item = 1,
+	Commodity = 2,
+}
+
+---@class AuctionHouseBrowseQuery
+---@field searchString string
+---@field sorts table
+---@field minLevel number
+---@field maxLevel number
+---@field filters table
+---@field itemClassFilters table
+local AuctionHouseBrowseQuery = {}
+
+---@class AuctionHouseFilterGroup
+---@field category AuctionHouseFilterCategory
+---@field filters table
+local AuctionHouseFilterGroup = {}
+
+---@class AuctionHouseItemClassFilter
+---@field classID number
+---@field subClassID number
+---@field inventoryType number
+local AuctionHouseItemClassFilter = {}
+
+---@class AuctionHouseSortType
+---@field sortOrder AuctionHouseSortOrder
+---@field reverseSort boolean
+local AuctionHouseSortType = {}
+
+---@class BidInfo
+---@field auctionID number
+---@field itemKey ItemKey
+---@field itemLink string
+---@field timeLeft AuctionHouseTimeLeftBand
+---@field bidAmount number
+---@field buyoutAmount number
+---@field bidder string
+local BidInfo = {}
+
+---@class BrowseResultInfo
+---@field itemKey ItemKey
+---@field appearanceLink string
+---@field totalQuantity number
+---@field minPrice number
+---@field containsOwnerItem boolean
+local BrowseResultInfo = {}
+
+---@class CommoditySearchResultInfo
+---@field itemID number
+---@field quantity number
+---@field unitPrice number
+---@field auctionID number
+---@field owners table
+---@field timeLeftSeconds number
+---@field numOwnerItems number
+---@field containsOwnerItem boolean
+---@field containsAccountItem boolean
+local CommoditySearchResultInfo = {}
+
+---@class ItemKey
+---@field itemID number
+---@field itemLevel number
+---@field itemSuffix number
+---@field battlePetSpeciesID number
+local ItemKey = {}
+
+---@class ItemKeyInfo
+---@field itemName string
+---@field battlePetLink string
+---@field appearanceLink string
+---@field quality number
+---@field iconFileID number
+---@field isPet boolean
+---@field isCommodity boolean
+---@field isEquipment boolean
+local ItemKeyInfo = {}
+
+---@class ItemSearchResultInfo
+---@field itemKey ItemKey
+---@field owners table
+---@field timeLeft AuctionHouseTimeLeftBand
+---@field auctionID number
+---@field quantity number
+---@field itemLink string
+---@field containsOwnerItem boolean
+---@field containsAccountItem boolean
+---@field containsSocketedItem boolean
+---@field bidder string
+---@field minBid number
+---@field bidAmount number
+---@field buyoutAmount number
+---@field timeLeftSeconds number
+local ItemSearchResultInfo = {}
+
+---@class OwnedAuctionInfo
+---@field auctionID number
+---@field itemKey ItemKey
+---@field itemLink string
+---@field status AuctionStatus
+---@field quantity number
+---@field timeLeftSeconds number
+---@field timeLeft AuctionHouseTimeLeftBand
+---@field bidAmount number
+---@field buyoutAmount number
+---@field bidder string
+local OwnedAuctionInfo = {}

@@ -41,3 +41,12 @@ function C_CurrencyInfo.GetWarResourcesCurrencyID() end
 ---@return boolean isCurrencyContainer
 ---[Documentation](https://wow.gamepedia.com/API_C_CurrencyInfo.IsCurrencyContainer)
 function C_CurrencyInfo.IsCurrencyContainer(currencyID, quantity) end
+
+---@class CurrencyDisplayInfo
+---@field name string
+---@field description string
+---@field icon number
+---@field quality number
+---@field displayAmount number
+---@field actualAmount number
+local CurrencyDisplayInfo = {}

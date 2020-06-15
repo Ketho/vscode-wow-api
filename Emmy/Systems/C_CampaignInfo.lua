@@ -22,3 +22,19 @@ function C_CampaignInfo.GetCurrentCampaignID() end
 ---@return boolean isCampaignQuest
 ---[Documentation](https://wow.gamepedia.com/API_C_CampaignInfo.IsCampaignQuest)
 function C_CampaignInfo.IsCampaignQuest(questID) end
+
+---@class CampaignChapterInfo
+---@field name string
+---@field description string
+---@field rewardQuestID number
+local CampaignChapterInfo = {}
+
+---@class CampaignInfo
+---@field name string
+---@field description string
+---@field uiTextureKitID number
+---@field visibilityConditionMatched boolean
+---@field playerConditionFailedReason string
+---@field complete boolean
+---@field overrideStepActive boolean
+local CampaignInfo = {}

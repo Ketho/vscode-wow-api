@@ -130,3 +130,28 @@ function C_FriendList.ShowFriends() end
 ---@param sorting string
 ---[Documentation](https://wow.gamepedia.com/API_C_FriendList.SortWho)
 function C_FriendList.SortWho(sorting) end
+
+---@class FriendInfo
+---@field connected boolean
+---@field name string
+---@field className string
+---@field area string
+---@field notes string
+---@field guid string
+---@field level number
+---@field dnd boolean
+---@field afk boolean
+---@field rafLinkType RafLinkType
+---@field mobile boolean
+local FriendInfo = {}
+
+---@class WhoInfo
+---@field fullName string
+---@field fullGuildName string
+---@field level number
+---@field raceStr string
+---@field classStr string
+---@field area string
+---@field filename string
+---@field gender number
+local WhoInfo = {}

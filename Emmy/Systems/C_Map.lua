@@ -152,3 +152,68 @@ function C_Map.MapHasArt(uiMapID) end
 ---@param uiMapID number
 ---[Documentation](https://wow.gamepedia.com/API_C_Map.RequestPreloadMap)
 function C_Map.RequestPreloadMap(uiMapID) end
+
+---@class MapCanvasPosition
+local MapCanvasPosition = {
+	None = 0,
+	BottomLeft = 1,
+	BottomRight = 2,
+	TopLeft = 3,
+	TopRight = 4,
+}
+
+---@class UIMapSystem
+local UIMapSystem = {
+	World = 0,
+	Taxi = 1,
+	Adventure = 2,
+}
+
+---@class UIMapType
+local UIMapType = {
+	Cosmic = 0,
+	World = 1,
+	Continent = 2,
+	Zone = 3,
+	Dungeon = 4,
+	Micro = 5,
+	Orphan = 6,
+}
+
+---@class MapBannerInfo
+---@field areaPoiID number
+---@field name string
+---@field atlasName string
+---@field uiTextureKit string
+local MapBannerInfo = {}
+
+---@class MapLinkInfo
+---@field areaPoiID number
+---@field position table
+---@field name string
+---@field atlasName string
+---@field linkedUiMapID number
+local MapLinkInfo = {}
+
+---@class UiMapDetails
+---@field mapID number
+---@field name string
+---@field mapType UIMapType
+---@field parentMapID number
+local UiMapDetails = {}
+
+---@class UiMapGroupMemberInfo
+---@field mapID number
+---@field relativeHeightIndex number
+---@field name string
+local UiMapGroupMemberInfo = {}
+
+---@class UiMapLayerInfo
+---@field layerWidth number
+---@field layerHeight number
+---@field tileWidth number
+---@field tileHeight number
+---@field minScale number
+---@field maxScale number
+---@field additionalZoomSteps number
+local UiMapLayerInfo = {}

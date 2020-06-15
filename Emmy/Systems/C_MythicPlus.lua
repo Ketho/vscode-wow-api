@@ -70,3 +70,30 @@ function C_MythicPlus.RequestMapInfo() end
 
 ---[Documentation](https://wow.gamepedia.com/API_C_MythicPlus.RequestRewards)
 function C_MythicPlus.RequestRewards() end
+
+---@class MapSeasonBestInfo
+---@field durationSec number
+---@field level number
+---@field completionDate MythicPlusDate
+---@field affixIDs table
+---@field members table
+local MapSeasonBestInfo = {}
+
+---@class MythicPlusDate
+---@field year number
+---@field month number
+---@field day number
+---@field hour number
+---@field minute number
+local MythicPlusDate = {}
+
+---@class MythicPlusKeystoneAffix
+---@field id number
+---@field seasonID number
+local MythicPlusKeystoneAffix = {}
+
+---@class MythicPlusMember
+---@field name string
+---@field specID number
+---@field classID number
+local MythicPlusMember = {}

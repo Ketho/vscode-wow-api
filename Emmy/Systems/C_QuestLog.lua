@@ -137,3 +137,34 @@ function C_QuestLog.SetMapForQuestPOIs(uiMapID) end
 ---@return boolean shouldShow
 ---[Documentation](https://wow.gamepedia.com/API_C_QuestLog.ShouldShowQuestRewards)
 function C_QuestLog.ShouldShowQuestRewards(questID) end
+
+---@class QuestTag
+local QuestTag = {
+	Group = 1,
+	Pvp = 41,
+	Raid = 62,
+	Dungeon = 81,
+	Legendary = 83,
+	Heroic = 85,
+	Raid10 = 88,
+	Raid25 = 89,
+	Scenario = 98,
+	Account = 102,
+	CombatAlly = 266,
+}
+
+---@class QuestObjectiveInfo
+---@field text string
+---@field type string
+---@field finished boolean
+---@field numFulfilled number
+---@field numRequired number
+local QuestObjectiveInfo = {}
+
+---@class QuestOnMapInfo
+---@field questID number
+---@field x number
+---@field y number
+---@field type number
+---@field isMapIndicatorQuest boolean
+local QuestOnMapInfo = {}

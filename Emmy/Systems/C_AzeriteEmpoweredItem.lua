@@ -96,3 +96,30 @@ function C_AzeriteEmpoweredItem.SelectPower(azeriteEmpoweredItemLocation, powerI
 ---@param azeriteEmpoweredItemLocation table
 ---[Documentation](https://wow.gamepedia.com/API_C_AzeriteEmpoweredItem.SetHasBeenViewed)
 function C_AzeriteEmpoweredItem.SetHasBeenViewed(azeriteEmpoweredItemLocation) end
+
+---@class AzeritePowerLevel
+local AzeritePowerLevel = {
+	Base = 0,
+	Upgraded = 1,
+	Downgraded = 2,
+}
+
+---@class AzeriteEmpoweredItemPowerInfo
+---@field azeritePowerID number
+---@field spellID number
+local AzeriteEmpoweredItemPowerInfo = {}
+
+---@class AzeriteEmpoweredItemPowerText
+---@field name string
+---@field description string
+local AzeriteEmpoweredItemPowerText = {}
+
+---@class AzeriteEmpoweredItemTierInfo
+---@field azeritePowerIDs table
+---@field unlockLevel number
+local AzeriteEmpoweredItemTierInfo = {}
+
+---@class AzeriteSpecInfo
+---@field classID number
+---@field specID number
+local AzeriteSpecInfo = {}

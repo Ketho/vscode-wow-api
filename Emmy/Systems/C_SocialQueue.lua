@@ -50,3 +50,44 @@ function C_SocialQueue.RequestToJoin(groupGUID, applyAsTank, applyAsHealer, appl
 ---@param priority number
 ---[Documentation](https://wow.gamepedia.com/API_C_SocialQueue.SignalToastDisplayed)
 function C_SocialQueue.SignalToastDisplayed(groupGUID, priority) end
+
+---@class SocialQueueConfig
+---@field TOASTS_DISABLED boolean
+---@field TOAST_DURATION number
+---@field DELAY_DURATION number
+---@field QUEUE_MULTIPLIER number
+---@field PLAYER_MULTIPLIER number
+---@field PLAYER_FRIEND_VALUE number
+---@field PLAYER_GUILD_VALUE number
+---@field THROTTLE_INITIAL_THRESHOLD number
+---@field THROTTLE_DECAY_TIME number
+---@field THROTTLE_PRIORITY_SPIKE number
+---@field THROTTLE_MIN_THRESHOLD number
+---@field THROTTLE_PVP_PRIORITY_NORMAL number
+---@field THROTTLE_PVP_PRIORITY_LOW number
+---@field THROTTLE_PVP_HONOR_THRESHOLD number
+---@field THROTTLE_LFGLIST_PRIORITY_DEFAULT number
+---@field THROTTLE_LFGLIST_PRIORITY_ABOVE number
+---@field THROTTLE_LFGLIST_PRIORITY_BELOW number
+---@field THROTTLE_LFGLIST_ILVL_SCALING_ABOVE number
+---@field THROTTLE_LFGLIST_ILVL_SCALING_BELOW number
+---@field THROTTLE_RF_PRIORITY_ABOVE number
+---@field THROTTLE_RF_ILVL_SCALING_ABOVE number
+---@field THROTTLE_DF_MAX_ITEM_LEVEL number
+---@field THROTTLE_DF_BEST_PRIORITY number
+local SocialQueueConfig = {}
+
+---@class SocialQueueGroupQueueInfo
+---@field clientID number
+---@field eligible boolean
+---@field needTank boolean
+---@field needHealer boolean
+---@field needDamage boolean
+---@field isAutoAccept boolean
+---@field queueData QueueSpecificInfo
+local SocialQueueGroupQueueInfo = {}
+
+---@class SocialQueuePlayerInfo
+---@field guid string
+---@field clubId string
+local SocialQueuePlayerInfo = {}

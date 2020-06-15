@@ -52,3 +52,15 @@ function C_Garrison.IsAtGarrisonMissionNPC() end
 ---@return boolean environmentCountered
 ---[Documentation](https://wow.gamepedia.com/API_C_Garrison.IsEnvironmentCountered)
 function C_Garrison.IsEnvironmentCountered(missionID) end
+
+---@class GarrisonFollowerDeathInfo
+---@field followerID string
+---@field state number
+local GarrisonFollowerDeathInfo = {}
+
+---@class GarrisonPlotInstanceMapInfo
+---@field buildingPlotInstanceID number
+---@field position table
+---@field name string
+---@field atlasName string
+local GarrisonPlotInstanceMapInfo = {}

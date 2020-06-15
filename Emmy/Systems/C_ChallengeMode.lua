@@ -94,3 +94,17 @@ function C_ChallengeMode.SlotKeystone() end
 ---@return boolean success
 ---[Documentation](https://wow.gamepedia.com/API_C_ChallengeMode.StartChallengeMode)
 function C_ChallengeMode.StartChallengeMode() end
+
+---@class ChallengeModeGuildAttemptMember
+---@field name string
+---@field classFileName string
+local ChallengeModeGuildAttemptMember = {}
+
+---@class ChallengeModeGuildTopAttempt
+---@field name string
+---@field classFileName string
+---@field keystoneLevel number
+---@field mapChallengeModeID number
+---@field isYou boolean
+---@field members table
+local ChallengeModeGuildTopAttempt = {}

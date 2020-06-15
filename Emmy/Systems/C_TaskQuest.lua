@@ -62,3 +62,16 @@ function C_TaskQuest.IsActive(questID) end
 ---@param questID number
 ---[Documentation](https://wow.gamepedia.com/API_C_TaskQuest.RequestPreloadRewardData)
 function C_TaskQuest.RequestPreloadRewardData(questID) end
+
+---@class TaskPOIData
+---@field questId number
+---@field x number
+---@field y number
+---@field inProgress boolean
+---@field numObjectives number
+---@field mapID number
+---@field isQuestStart boolean
+---@field isDaily boolean
+---@field isCombatAllyQuest boolean
+---@field childDepth number
+local TaskPOIData = {}

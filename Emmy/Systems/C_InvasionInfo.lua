@@ -18,3 +18,11 @@ function C_InvasionInfo.GetInvasionInfo(invasionID) end
 ---@return number timeLeftMinutes
 ---[Documentation](https://wow.gamepedia.com/API_C_InvasionInfo.GetInvasionTimeLeft)
 function C_InvasionInfo.GetInvasionTimeLeft(invasionID) end
+
+---@class InvasionMapInfo
+---@field invasionID number
+---@field name string
+---@field position table
+---@field atlasName string
+---@field rewardQuestID number
+local InvasionMapInfo = {}

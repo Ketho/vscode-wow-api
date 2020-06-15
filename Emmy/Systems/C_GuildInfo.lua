@@ -64,3 +64,18 @@ function C_GuildInfo.SetGuildRankOrder(guid, rankOrder) end
 ---@param isPublic boolean
 ---[Documentation](https://wow.gamepedia.com/API_C_GuildInfo.SetNote)
 function C_GuildInfo.SetNote(guid, note, isPublic) end
+
+---@class GuildNewsInfo
+---@field isSticky boolean
+---@field isHeader boolean
+---@field newsType number
+---@field whoText string
+---@field whatText string
+---@field newsDataID number
+---@field data table
+---@field weekday number
+---@field day number
+---@field month number
+---@field year number
+---@field guildMembersPresent number
+local GuildNewsInfo = {}

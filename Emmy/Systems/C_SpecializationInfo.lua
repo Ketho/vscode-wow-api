@@ -48,3 +48,10 @@ function C_SpecializationInfo.IsPvpTalentLocked(talentID) end
 ---@param locked boolean
 ---[Documentation](https://wow.gamepedia.com/API_C_SpecializationInfo.SetPvpTalentLocked)
 function C_SpecializationInfo.SetPvpTalentLocked(talentID, locked) end
+
+---@class PvpTalentSlotInfo
+---@field enabled boolean
+---@field level number
+---@field selectedTalentID number
+---@field availableTalentIDs table
+local PvpTalentSlotInfo = {}

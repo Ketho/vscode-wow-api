@@ -20,3 +20,13 @@ function C_AreaPoiInfo.GetAreaPOISecondsLeft(areaPoiID) end
 ---@return boolean isTimed
 ---[Documentation](https://wow.gamepedia.com/API_C_AreaPoiInfo.IsAreaPOITimed)
 function C_AreaPoiInfo.IsAreaPOITimed(areaPoiID) end
+
+---@class AreaPOIInfo
+---@field areaPoiID number
+---@field position table
+---@field name string
+---@field description string
+---@field textureIndex number
+---@field widgetSetID number
+---@field atlasName string
+local AreaPOIInfo = {}

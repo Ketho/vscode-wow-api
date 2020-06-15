@@ -37,3 +37,8 @@ function C_AzeriteItem.IsAzeriteItemAtMaxLevel() end
 ---@return boolean isAzeriteItem
 ---[Documentation](https://wow.gamepedia.com/API_C_AzeriteItem.IsAzeriteItemByID)
 function C_AzeriteItem.IsAzeriteItemByID(itemInfo) end
+
+---@class UnlockedAzeriteEmpoweredItems
+---@field unlockedItem table
+---@field tierIndex number
+local UnlockedAzeriteEmpoweredItems = {}

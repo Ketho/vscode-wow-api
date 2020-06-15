@@ -58,3 +58,59 @@ function C_LFGList.SetSearchToActivity(activityID) end
 ---@param questID number
 ---[Documentation](https://wow.gamepedia.com/API_C_LFGList.SetSearchToQuestID)
 function C_LFGList.SetSearchToQuestID(questID) end
+
+---@class LfgApplicantData
+---@field applicantID number
+---@field applicationStatus string
+---@field pendingApplicationStatus string
+---@field numMembers number
+---@field isNew boolean
+---@field comment string
+---@field displayOrderID number
+local LfgApplicantData = {}
+
+---@class LfgEntryData
+---@field activityID number
+---@field requiredItemLevel number
+---@field requiredHonorLevel number
+---@field name string
+---@field comment string
+---@field voiceChat string
+---@field duration number
+---@field autoAccept boolean
+---@field privateGroup boolean
+---@field questID number
+local LfgEntryData = {}
+
+---@class LfgSearchResultData
+---@field searchResultID number
+---@field activityID number
+---@field leaderName string
+---@field name string
+---@field comment string
+---@field voiceChat string
+---@field requiredItemLevel number
+---@field requiredHonorLevel number
+---@field numMembers number
+---@field numBNetFriends number
+---@field numCharFriends number
+---@field numGuildMates number
+---@field isDelisted boolean
+---@field autoAccept boolean
+---@field age number
+---@field questID number
+local LfgSearchResultData = {}
+
+---@class WowLocale
+---@field enUS boolean
+---@field koKR boolean
+---@field frFR boolean
+---@field deDE boolean
+---@field zhCN boolean
+---@field zhTW boolean
+---@field esES boolean
+---@field esMX boolean
+---@field ruRU boolean
+---@field ptBR boolean
+---@field itIT boolean
+local WowLocale = {}

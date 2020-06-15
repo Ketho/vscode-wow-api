@@ -283,3 +283,164 @@ function C_PvP.SetWarModeDesired(warModeDesired) end
 
 ---[Documentation](https://wow.gamepedia.com/API_C_PvP.ToggleWarMode)
 function C_PvP.ToggleWarMode() end
+
+---@class BrawlType
+local BrawlType = {
+	None = 0,
+	Battleground = 1,
+	Arena = 2,
+	Lfg = 3,
+}
+
+---@class PvpMatchState
+local PvpMatchState = {
+	Inactive = 0,
+	Active = 1,
+	Complete = 2,
+}
+
+---@class BattlefieldCurrencyReward
+---@field id number
+---@field quantity number
+local BattlefieldCurrencyReward = {}
+
+---@class BattlefieldItemReward
+---@field id number
+---@field name string
+---@field texture number
+---@field quantity number
+local BattlefieldItemReward = {}
+
+---@class BattlemasterListInfo
+---@field name string
+---@field instanceType number
+---@field minPlayers number
+---@field maxPlayers number
+---@field icon number
+---@field longDescription string
+---@field shortDescription string
+local BattlemasterListInfo = {}
+
+---@class HonorRewardInfo
+---@field honorLevelName string
+---@field badgeFileDataID number
+---@field achievementRewardedID number
+local HonorRewardInfo = {}
+
+---@class MatchPVPStatColumn
+---@field pvpStatID number
+---@field columnHeaderID number
+---@field orderIndex number
+---@field name string
+---@field tooltip string
+local MatchPVPStatColumn = {}
+
+---@class PvpBrawlInfo
+---@field name string
+---@field shortDescription string
+---@field longDescription string
+---@field canQueue boolean
+---@field timeLeftUntilNextChange number
+---@field brawlType BrawlType
+---@field mapNames table
+local PvpBrawlInfo = {}
+
+---@class PvpScalingData
+---@field scalingDataID number
+---@field specializationID number
+---@field name string
+---@field value number
+local PvpScalingData = {}
+
+---@class PvpTierInfo
+---@field name string
+---@field descendRating number
+---@field ascendRating number
+---@field descendTier number
+---@field ascendTier number
+---@field pvpTierEnum number
+---@field tierIconID number
+local PvpTierInfo = {}
+
+---@class PVPPersonalRatedInfo
+---@field personalRating number
+---@field bestSeasonRating number
+---@field bestWeeklyRating number
+---@field seasonPlayed number
+---@field seasonWon number
+---@field weeklyPlayed number
+---@field weeklyWon number
+---@field lastWeeksBestRating number
+---@field hasWonBracketToday boolean
+---@field tier number
+---@field ranking number
+local PVPPersonalRatedInfo = {}
+
+---@class PVPPostMatchCurrencyReward
+---@field currencyType number
+---@field quantityChanged number
+local PVPPostMatchCurrencyReward = {}
+
+---@class PVPPostMatchItemReward
+---@field type string
+---@field link string
+---@field quantity number
+---@field specID number
+---@field sex number
+---@field isUpgraded boolean
+local PVPPostMatchItemReward = {}
+
+---@class PVPScoreInfo
+---@field name string
+---@field guid string
+---@field killingBlows number
+---@field honorableKills number
+---@field deaths number
+---@field honorGained number
+---@field faction number
+---@field raceName string
+---@field className string
+---@field classToken string
+---@field damageDone number
+---@field healingDone number
+---@field rating number
+---@field ratingChange number
+---@field prematchMMR number
+---@field mmrChange number
+---@field talentSpec string
+---@field honorLevel number
+---@field stats table
+local PVPScoreInfo = {}
+
+---@class PVPStatInfo
+---@field pvpStatID number
+---@field pvpStatValue number
+---@field orderIndex number
+---@field name string
+---@field tooltip string
+---@field iconName string
+local PVPStatInfo = {}
+
+---@class PVPTeamInfo
+---@field name string
+---@field size number
+---@field rating number
+---@field ratingNew number
+---@field ratingMMR number
+local PVPTeamInfo = {}
+
+---@class RandomBGInfo
+---@field canQueue boolean
+---@field bgID number
+---@field hasRandomWinToday boolean
+---@field minLevel number
+---@field maxLevel number
+local RandomBGInfo = {}
+
+---@class SpecialEventDetails
+---@field name string
+---@field shortDescription string
+---@field longDescription string
+---@field achievementID number
+---@field isActive boolean
+local SpecialEventDetails = {}

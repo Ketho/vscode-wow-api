@@ -33,3 +33,13 @@ function C_PetJournal.PetIsSummonable(battlePetGUID) end
 ---@return boolean usesRandomDisplay
 ---[Documentation](https://wow.gamepedia.com/API_C_PetJournal.PetUsesRandomDisplay)
 function C_PetJournal.PetUsesRandomDisplay(speciesID) end
+
+---@class PetJournalError
+local PetJournalError = {
+	None = 0,
+	PetIsDead = 1,
+	JournalIsLocked = 2,
+	InvalidFaction = 3,
+	NoFavoritesToSummon = 4,
+	NoValidRandomSummon = 5,
+}

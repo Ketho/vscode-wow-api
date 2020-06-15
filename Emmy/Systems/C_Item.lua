@@ -148,3 +148,49 @@ function C_Item.UnlockItem(itemLocation) end
 ---@param itemGUID string
 ---[Documentation](https://wow.gamepedia.com/API_C_Item.UnlockItemByGUID)
 function C_Item.UnlockItemByGUID(itemGUID) end
+
+---@class InventoryType
+local InventoryType = {
+	IndexNonEquipType = 0,
+	IndexHeadType = 1,
+	IndexNeckType = 2,
+	IndexShoulderType = 3,
+	IndexBodyType = 4,
+	IndexChestType = 5,
+	IndexWaistType = 6,
+	IndexLegsType = 7,
+	IndexFeetType = 8,
+	IndexWristType = 9,
+	IndexHandType = 10,
+	IndexFingerType = 11,
+	IndexTrinketType = 12,
+	IndexWeaponType = 13,
+	IndexShieldType = 14,
+	IndexRangedType = 15,
+	IndexCloakType = 16,
+	Index2HweaponType = 17,
+	IndexBagType = 18,
+	IndexTabardType = 19,
+	IndexRobeType = 20,
+	IndexWeaponmainhandType = 21,
+	IndexWeaponoffhandType = 22,
+	IndexHoldableType = 23,
+	IndexAmmoType = 24,
+	IndexThrownType = 25,
+	IndexRangedrightType = 26,
+	IndexQuiverType = 27,
+	IndexRelicType = 28,
+}
+
+---@class ItemQuality
+local ItemQuality = {
+	Poor = 0,
+	Standard = 1,
+	Good = 2,
+	Superior = 3,
+	Epic = 4,
+	Legendary = 5,
+	Artifact = 6,
+	Heirloom = 7,
+	WoWToken = 8,
+}

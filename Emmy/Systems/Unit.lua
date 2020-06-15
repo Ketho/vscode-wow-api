@@ -156,3 +156,69 @@ function UnitTreatAsPlayerForDisplay(unit) end
 ---@return number uiWidgetSet
 ---[Documentation](https://wow.gamepedia.com/API_UnitWidgetSet)
 function UnitWidgetSet(unit) end
+
+---@class PowerType
+local PowerType = {
+	HealthCost = -2,
+	None = -1,
+	Mana = 0,
+	Rage = 1,
+	Focus = 2,
+	Energy = 3,
+	ComboPoints = 4,
+	Runes = 5,
+	RunicPower = 6,
+	SoulShards = 7,
+	LunarPower = 8,
+	HolyPower = 9,
+	Alternate = 10,
+	Maelstrom = 11,
+	Chi = 12,
+	Insanity = 13,
+	Obsolete = 14,
+	Obsolete2 = 15,
+	ArcaneCharges = 16,
+	Fury = 17,
+	Pain = 18,
+	NumPowerTypes = 19,
+}
+
+---@class PvpUnitClassification
+local PvpUnitClassification = {
+	FlagCarrierHorde = 0,
+	FlagCarrierAlliance = 1,
+	FlagCarrierNeutral = 2,
+	CartRunnerHorde = 3,
+	CartRunnerAlliance = 4,
+	AssassinHorde = 5,
+	AssassinAlliance = 6,
+	OrbCarrierBlue = 7,
+	OrbCarrierGreen = 8,
+	OrbCarrierOrange = 9,
+	OrbCarrierPurple = 10,
+}
+
+---@class CorruptionEffectInfo
+---@field name string
+---@field description string
+---@field minCorruption number
+local CorruptionEffectInfo = {}
+
+---@class UnitPowerBarInfo
+---@field ID number
+---@field barType number
+---@field minPower number
+---@field startInset number
+---@field endInset number
+---@field smooth boolean
+---@field hideFromOthers boolean
+---@field showOnRaid boolean
+---@field opaqueSpark boolean
+---@field opaqueFlash boolean
+---@field anchorTop boolean
+---@field forcePercentage boolean
+---@field sparkUnderFrame boolean
+---@field flashAtMinPower boolean
+---@field fractionalCounter boolean
+---@field animateNumbers boolean
+local UnitPowerBarInfo = {}

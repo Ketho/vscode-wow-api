@@ -10,3 +10,10 @@ function C_GossipInfo.GetGossipPoiForUiMapID(uiMapID) end
 ---@return GossipPoiInfo gossipPoiInfo
 ---[Documentation](https://wow.gamepedia.com/API_C_GossipInfo.GetGossipPoiInfo)
 function C_GossipInfo.GetGossipPoiInfo(uiMapID, gossipPoiID) end
+
+---@class GossipPoiInfo
+---@field name string
+---@field textureIndex number
+---@field position table
+---@field inBattleMap boolean
+local GossipPoiInfo = {}

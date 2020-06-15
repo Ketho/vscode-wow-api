@@ -91,3 +91,29 @@ function C_AzeriteEssence.SetPendingActivationEssence(essenceID) end
 ---@param milestoneID number
 ---[Documentation](https://wow.gamepedia.com/API_C_AzeriteEssence.UnlockMilestone)
 function C_AzeriteEssence.UnlockMilestone(milestoneID) end
+
+---@class AzeriteEssence
+local AzeriteEssence = {
+	MainSlot = 0,
+	PassiveOneSlot = 1,
+	PassiveTwoSlot = 2,
+	PassiveThreeSlot = 3,
+}
+
+---@class AzeriteEssenceInfo
+---@field ID number
+---@field name string
+---@field rank number
+---@field unlocked boolean
+---@field valid boolean
+---@field icon number
+local AzeriteEssenceInfo = {}
+
+---@class AzeriteMilestoneInfo
+---@field ID number
+---@field requiredLevel number
+---@field canUnlock boolean
+---@field unlocked boolean
+---@field rank number
+---@field slot AzeriteEssence
+local AzeriteMilestoneInfo = {}

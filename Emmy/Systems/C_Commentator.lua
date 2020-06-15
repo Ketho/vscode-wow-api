@@ -537,3 +537,16 @@ function C_Commentator.ZoomIn() end
 
 ---[Documentation](https://wow.gamepedia.com/API_C_Commentator.ZoomOut)
 function C_Commentator.ZoomOut() end
+
+---@class TrackedSpellCategory
+local TrackedSpellCategory = {
+	Offensive = 0,
+	Defensive = 1,
+	Debuff = 2,
+	Count = 3,
+}
+
+---@class NameOverrideEntry
+---@field originalName string
+---@field overrideName string
+local NameOverrideEntry = {}

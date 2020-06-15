@@ -244,3 +244,146 @@ function C_ClubFinder.SetRecruitmentSettings(index, checked) end
 ---@return boolean shouldShow
 ---[Documentation](https://wow.gamepedia.com/API_C_ClubFinder.ShouldShowClubFinder)
 function C_ClubFinder.ShouldShowClubFinder() end
+
+---@class ClubFinderApplicationUpdateType
+local ClubFinderApplicationUpdateType = {
+	None = 0,
+	AcceptInvite = 1,
+	DeclineInvite = 2,
+	Cancel = 3,
+}
+
+---@class ClubFinderClubPostingStatusFlags
+local ClubFinderClubPostingStatusFlags = {
+	None = 0,
+	NeedsCacheUpdate = 1,
+	ForceDescriptionChange = 2,
+	ForceNameChange = 3,
+	UnderReview = 4,
+	Banned = 5,
+	FakePost = 6,
+	PendingDelete = 7,
+	PostDelisted = 8,
+}
+
+---@class ClubFinderDisableReason
+local ClubFinderDisableReason = {
+	Muted = 0,
+	Silenced = 1,
+	VeteranTrial = 2,
+}
+
+---@class ClubFinderPostingReportType
+local ClubFinderPostingReportType = {
+	PostersName = 0,
+	ClubName = 1,
+	PostingDescription = 2,
+	ApplicantsName = 3,
+	JoinNote = 4,
+}
+
+---@class ClubFinderRequestType
+local ClubFinderRequestType = {
+	None = 0,
+	Guild = 1,
+	Community = 2,
+	All = 3,
+}
+
+---@class ClubFinderSettingFlags
+local ClubFinderSettingFlags = {
+	None = 0,
+	Dungeons = 1,
+	Raids = 2,
+	Pvp = 3,
+	Rp = 4,
+	Social = 5,
+	Small = 6,
+	Medium = 7,
+	Large = 8,
+	Tank = 9,
+	Healer = 10,
+	Damage = 11,
+	EnableListing = 12,
+	MaxLevelOnly = 13,
+	AutoAccept = 14,
+	FactionHorde = 15,
+	FactionAlliance = 16,
+	FactionNeutral = 17,
+	SortRelevance = 18,
+	SortMemberCount = 19,
+	SortNewest = 20,
+	LanguageReserved1 = 21,
+	LanguageReserved2 = 22,
+	LanguageReserved3 = 23,
+	LanguageReserved4 = 24,
+	LanguageReserved5 = 25,
+}
+
+---@class PlayerClubRequestStatus
+local PlayerClubRequestStatus = {
+	None = 0,
+	Pending = 1,
+	AutoApproved = 2,
+	Declined = 3,
+	Approved = 4,
+	Joined = 5,
+	JoinedAnother = 6,
+	Canceled = 7,
+}
+
+---@class ClubFinderApplicantInfo
+---@field clubFinderGUID string
+---@field playerGUID string
+---@field closed number
+---@field name string
+---@field message string
+---@field level number
+---@field classID number
+---@field ilvl number
+---@field specIds table
+---@field requestStatus PlayerClubRequestStatus
+---@field lookupSuccess boolean
+---@field lastUpdatedTime number
+local ClubFinderApplicantInfo = {}
+
+---@class ClubSettingsInfo
+---@field playStyleDungeon boolean
+---@field playStyleRaids boolean
+---@field playStylePvp boolean
+---@field playStyleRP boolean
+---@field playStyleSocial boolean
+---@field roleTank boolean
+---@field roleHealer boolean
+---@field roleDps boolean
+---@field sizeSmall boolean
+---@field sizeMedium boolean
+---@field sizeLarge boolean
+---@field maxLevelOnly boolean
+---@field enableListing boolean
+---@field sortRelevance boolean
+---@field sortMembers boolean
+---@field sortNewest boolean
+---@field autoAccept boolean
+local ClubSettingsInfo = {}
+
+---@class RecruitingClubInfo
+---@field clubFinderGUID string
+---@field numActiveMembers number
+---@field name string
+---@field comment string
+---@field guildLeader string
+---@field isGuild boolean
+---@field emblemInfo number
+---@field tabardInfo GuildTabardInfo
+---@field recruitingSpecIds table
+---@field recruitmentFlags number
+---@field localeSet boolean
+---@field recruitmentLocale number
+---@field minILvl number
+---@field cached number
+---@field cacheRequested number
+---@field lastPosterGUID string
+---@field clubId string
+---@field lastUpdatedTime number
+local RecruitingClubInfo = {}
