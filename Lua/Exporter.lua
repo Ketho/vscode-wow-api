@@ -24,4 +24,10 @@ function m:ExportEvents(path)
 	print("Finished exporting events")
 end
 
+function m:ExportEventsLiterals(path)
+	local events = Emmy:GetEventsLiterals()
+	WriteFile(path, events)
+	print("Finished exporting event string literals")
+end
+
 return m
