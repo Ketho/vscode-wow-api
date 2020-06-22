@@ -22,8 +22,8 @@ function ItemLocationMixin:Clear() end
 ---@param slotIndex number
 function ItemLocationMixin:SetBagAndSlot(bagID, slotIndex) end
 
----@return bagID number
----@return slotIndex number
+---@return number bagID
+---@return number slotIndex
 function ItemLocationMixin:GetBagAndSlot() end
 
 ---@param equipmentSlotIndex number
