@@ -1,8 +1,8 @@
 Emmy = {}
-require "Lua/EmmyLua/Functions"
-require "Lua/EmmyLua/Events"
-require "Lua/EmmyLua/Tables"
-require "Lua/EmmyLua/Fields"
+require "Lua/Emmy/Functions"
+require "Lua/Emmy/Events"
+require "Lua/Emmy/Tables"
+require "Lua/Emmy/Fields"
 
 Emmy.fs_doc = "---[Documentation](https://wow.gamepedia.com/%s)"
 
