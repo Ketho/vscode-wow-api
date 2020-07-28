@@ -267,6 +267,20 @@ local AuctionHouse =
 			},
 		},
 		{
+			Name = "GetItemKeyRequiredLevel",
+			Type = "Function",
+
+			Arguments =
+			{
+				{ Name = "itemKey", Type = "ItemKey", Nilable = false },
+			},
+
+			Returns =
+			{
+				{ Name = "requiredLevel", Type = "number", Nilable = false },
+			},
+		},
+		{
 			Name = "GetItemSearchResultInfo",
 			Type = "Function",
 
@@ -830,6 +844,20 @@ local AuctionHouse =
 			},
 		},
 		{
+			Name = "RequestOwnedAuctionBidderInfo",
+			Type = "Function",
+
+			Arguments =
+			{
+				{ Name = "auctionID", Type = "number", Nilable = false },
+			},
+
+			Returns =
+			{
+				{ Name = "bidderName", Type = "string", Nilable = true },
+			},
+		},
+		{
 			Name = "SearchForFavorites",
 			Type = "Function",
 
@@ -1161,6 +1189,16 @@ local AuctionHouse =
 			},
 		},
 		{
+			Name = "OwnedAuctionBidderInfoReceived",
+			Type = "Event",
+			LiteralName = "OWNED_AUCTION_BIDDER_INFO_RECEIVED",
+			Payload =
+			{
+				{ Name = "auctionID", Type = "number", Nilable = false },
+				{ Name = "bidderName", Type = "string", Nilable = false },
+			},
+		},
+		{
 			Name = "OwnedAuctionsUpdated",
 			Type = "Event",
 			LiteralName = "OWNED_AUCTIONS_UPDATED",
@@ -1262,6 +1300,7 @@ local AuctionHouse =
 				{ Name = "itemKey", Type = "ItemKey", Nilable = false },
 				{ Name = "itemLink", Type = "string", Nilable = true },
 				{ Name = "timeLeft", Type = "AuctionHouseTimeLeftBand", Nilable = false },
+				{ Name = "minBid", Type = "number", Nilable = true },
 				{ Name = "bidAmount", Type = "number", Nilable = true },
 				{ Name = "buyoutAmount", Type = "number", Nilable = true },
 				{ Name = "bidder", Type = "string", Nilable = true },
