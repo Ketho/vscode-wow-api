@@ -1,4 +1,4 @@
----@class Button
+---@class Button : Frame
 local Button = {}
 
 function Button:Enable() end

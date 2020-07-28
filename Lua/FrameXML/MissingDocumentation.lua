@@ -48,9 +48,47 @@ local Missing =
 				{ Name = "visualID", Type = "number" },
 			},
 		},
-		-- placeholders
-		{ Name = "QueueSpecificInfo", Type = "Structure", Fields = {} },
+		-- undocumented
+		{ Name = "CachedRewardType", Type = "Enumeration", Fields = {} }, -- WeeklyRewardsDocumentation.lua
+		{ Name = "CharacterAlternateFormData", Type = "Structure", Fields = {} }, -- BarberShopDocumentation.lua
+		{ Name = "CurrencyCost", Type = "Structure", Fields = {} }, -- LegendaryCraftingDocumentation.lua
+		{ Name = "GarrisonTalentTreeInfo", Type = "Structure", Fields = {} }, -- GarrisonInfoDocumentation.lua
+		{ Name = "OptionalReagentInfo", Type = "Structure", Fields = {} }, -- TradeSkillUIDocumentation.lua
+		{ Name = "QueueSpecificInfo", Type = "Structure", Fields = {} }, -- PartyInfoDocumentation.lua, SocialQueueDocumentation.lua
+		{ Name = "RuneforgeLegendaryComponentInfo", Type = "Structure", Fields = {} }, -- LegendaryCraftingDocumentation.lua
+		{ Name = "RuneforgeLegendaryCraftDescription", Type = "Structure", Fields = {} }, -- LegendaryCraftingDocumentation.lua
+		{ Name = "RuneforgePower", Type = "Structure", Fields = {} }, -- LegendaryCraftingDocumentation.lua
+		{ Name = "SoulbindConduitInstallResult", Type = "Enumeration", Fields = {} }, -- SoulbindsDocumentation.lua
+		{ Name = "SoulbindConduitType", Type = "Enumeration", Fields = {} }, -- SoulbindsDocumentation.lua
+		{ Name = "SoulbindNodeState", Type = "Enumeration", Fields = {} }, -- SoulbindsDocumentation.lua
+		{ Name = "TradeSkillRecipeInfo", Type = "Structure", Fields = {} }, -- MissingDocumentation.lua
+		{ Name = "WeeklyRewardChestThresholdType", Type = "Enumeration", Fields = {} }, -- WeeklyRewardsDocumentation.lua
+		-- undocumented enums which are not used in another structure
+		{ Name = "CharacterServiceInfoFlag", Type = "Enumeration", Fields = {} },
+		{ Name = "ManipulatorEventType", Type = "Enumeration", Fields = {} },
+		{ Name = "VasPurchaseProgress", Type = "Enumeration", Fields = {} },
+		-- defined from FrameXML
+		{ Name = "QuestPOIQuestTypes", Type = "Enumeration", Fields = {} }, -- QuestPOI.lua
 	},
 }
 
 APIDocumentation:AddDocumentationTable(Missing)
+
+--- empty docs
+-- ActionDocumentation.lua
+-- AppearanceSourceDocumentation.lua
+-- BaseDocumentation.lua
+-- ClubSharedDocumentation.lua
+-- ColorDocumentation.lua
+-- GarrisonSharedDocumentation.lua
+-- GuildInfoSharedDocumentation.lua
+-- ItemLocationSharedDocumentation.lua
+-- ItemSharedDocumentation.lua
+-- ModelSceneDocumentation.lua
+-- NamePlateDocumentation.lua
+-- PlayerDocumentation.lua
+-- QueueSpecificDocumentation.lua
+-- TextureSharedDocumentation.lua
+-- TimeDocumentation.lua
+-- UnitSharedDocumentation.lua
+-- VectorSharedDocumentation.lua
