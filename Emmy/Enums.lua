@@ -1,4 +1,6 @@
 Enum = {
+	---@type AnimaDiversionNodeState
+	AnimaDiversionNodeState = {},
 	---@type AuctionHouseCommoditySortOrder
 	AuctionHouseCommoditySortOrder = {},
 	---@type AuctionHouseFilter
@@ -19,6 +21,8 @@ Enum = {
 	AzeritePowerLevel = {},
 	---@type BrawlType
 	BrawlType = {},
+	---@type CachedRewardType
+	CachedRewardType = {},
 	---@type CalendarCommandType
 	CalendarCommandType = {},
 	---@type CalendarErrorType
@@ -49,14 +53,24 @@ Enum = {
 	CalendarType = {},
 	---@type CalendarWebActionType
 	CalendarWebActionType = {},
+	---@type CallingStates
+	CallingStates = {},
+	---@type CampaignState
+	CampaignState = {},
 	---@type CaptureBarWidgetFillDirectionType
 	CaptureBarWidgetFillDirectionType = {},
 	---@type CaptureBarWidgetGlowAnimType
 	CaptureBarWidgetGlowAnimType = {},
 	---@type CharacterServiceInfoFlag
 	CharacterServiceInfoFlag = {},
+	---@type ChatChannelRuleset
+	ChatChannelRuleset = {},
 	---@type ChatChannelType
 	ChatChannelType = {},
+	---@type ChrCustomizationCategoryFlag
+	ChrCustomizationCategoryFlag = {},
+	---@type ChrCustomizationOptionType
+	ChrCustomizationOptionType = {},
 	---@type ClubActionType
 	ClubActionType = {},
 	---@type ClubErrorType
@@ -105,18 +119,62 @@ Enum = {
 	ContributionResult = {},
 	---@type ContributionState
 	ContributionState = {},
+	---@type CovenantAbilityType
+	CovenantAbilityType = {},
+	---@type CovenantType
+	CovenantType = {},
 	---@type CustomBindingType
 	CustomBindingType = {},
+	---@type Damageclass
+	Damageclass = {},
+	---@type DamageclassType
+	DamageclassType = {},
+	---@type EnvironmentalDamageFlags
+	EnvironmentalDamageFlags = {},
+	---@type Environmentaldamagetype
+	Environmentaldamagetype = {},
 	---@type FlightPathFaction
 	FlightPathFaction = {},
 	---@type FlightPathState
 	FlightPathState = {},
+	---@type FollowerAbilityCastResult
+	FollowerAbilityCastResult = {},
+	---@type GarrAutoBoardIndex
+	GarrAutoBoardIndex = {},
+	---@type GarrAutoCombatantRole
+	GarrAutoCombatantRole = {},
+	---@type GarrAutoEventFlags
+	GarrAutoEventFlags = {},
+	---@type GarrAutoMissionEventType
+	GarrAutoMissionEventType = {},
+	---@type GarrFollowerMissionCompleteState
+	GarrFollowerMissionCompleteState = {},
+	---@type GarrFollowerQuality
+	GarrFollowerQuality = {},
+	---@type GarrTalentCostType
+	GarrTalentCostType = {},
+	---@type GarrTalentFeatureSubtype
+	GarrTalentFeatureSubtype = {},
+	---@type GarrTalentFeatureType
+	GarrTalentFeatureType = {},
 	---@type GarrTalentResearchCostSource
 	GarrTalentResearchCostSource = {},
+	---@type GarrTalentSocketType
+	GarrTalentSocketType = {},
 	---@type GarrTalentTreeType
 	GarrTalentTreeType = {},
 	---@type GarrTalentType
 	GarrTalentType = {},
+	---@type GarrTalentUI
+	GarrTalentUI = {},
+	---@type GarrisonFollowerType
+	GarrisonFollowerType = {},
+	---@type GarrisonTalentAvailability
+	GarrisonTalentAvailability = {},
+	---@type GarrisonType
+	GarrisonType = {},
+	---@type HolidayCalendarFlags
+	HolidayCalendarFlags = {},
 	---@type HolidayFlags
 	HolidayFlags = {},
 	---@type IconAndTextWidgetState
@@ -131,36 +189,58 @@ Enum = {
 	ItemInteractionFrameType = {},
 	---@type ItemQuality
 	ItemQuality = {},
+	---@type ItemSlotFilterType
+	ItemSlotFilterType = {},
 	---@type ItemTryOnReason
 	ItemTryOnReason = {},
 	---@type ManipulatorEventType
 	ManipulatorEventType = {},
 	---@type MapCanvasPosition
 	MapCanvasPosition = {},
+	---@type MapOverlayDisplayLocation
+	MapOverlayDisplayLocation = {},
 	---@type ModelSceneSetting
 	ModelSceneSetting = {},
 	---@type ModelSceneType
 	ModelSceneType = {},
+	---@type NavigationState
+	NavigationState = {},
+	---@type OptionalReagentItemFlag
+	OptionalReagentItemFlag = {},
 	---@type PartyRequestJoinRelation
 	PartyRequestJoinRelation = {},
 	---@type PetJournalError
 	PetJournalError = {},
+	---@type PlayerChoiceRarity
+	PlayerChoiceRarity = {},
 	---@type PlayerClubRequestStatus
 	PlayerClubRequestStatus = {},
+	---@type PlayerMentorshipApplicationResult
+	PlayerMentorshipApplicationResult = {},
+	---@type PlayerMentorshipStatus
+	PlayerMentorshipStatus = {},
 	---@type PowerType
 	PowerType = {},
-	---@type PvpMatchState
-	PvpMatchState = {},
-	---@type PvpUnitClassification
-	PvpUnitClassification = {},
+	---@type PvPMatchState
+	PvPMatchState = {},
+	---@type PvPUnitClassification
+	PvPUnitClassification = {},
+	---@type QuestFrequency
+	QuestFrequency = {},
 	---@type QuestLineFloorLocation
 	QuestLineFloorLocation = {},
+	---@type QuestPOIQuestTypes
+	QuestPOIQuestTypes = {},
 	---@type QuestSessionCommand
 	QuestSessionCommand = {},
 	---@type QuestSessionResult
 	QuestSessionResult = {},
 	---@type QuestTag
 	QuestTag = {},
+	---@type QuestTagType
+	QuestTagType = {},
+	---@type QuestWatchType
+	QuestWatchType = {},
 	---@type RafLinkType
 	RafLinkType = {},
 	---@type RafRecruitActivityState
@@ -169,18 +249,38 @@ Enum = {
 	RafRecruitSubStatus = {},
 	---@type RafRewardType
 	RafRewardType = {},
+	---@type RelativeContentDifficulty
+	RelativeContentDifficulty = {},
+	---@type ScriptedAnimationBehavior
+	ScriptedAnimationBehavior = {},
+	---@type ScriptedAnimationTrajectory
+	ScriptedAnimationTrajectory = {},
 	---@type SelfResurrectOptionType
 	SelfResurrectOptionType = {},
+	---@type SoulbindConduitInstallResult
+	SoulbindConduitInstallResult = {},
+	---@type SoulbindConduitType
+	SoulbindConduitType = {},
+	---@type SoulbindNodeState
+	SoulbindNodeState = {},
 	---@type SpellDisplayIconDisplayType
 	SpellDisplayIconDisplayType = {},
 	---@type SpellDisplayIconSizeType
 	SpellDisplayIconSizeType = {},
+	---@type SpellDisplayTextShownStateType
+	SpellDisplayTextShownStateType = {},
+	---@type SplashScreenType
+	SplashScreenType = {},
+	---@type StatusBarColorTintValue
+	StatusBarColorTintValue = {},
 	---@type StatusBarOverrideBarTextShownType
 	StatusBarOverrideBarTextShownType = {},
 	---@type StatusBarValueTextType
 	StatusBarValueTextType = {},
 	---@type SummonStatus
 	SummonStatus = {},
+	---@type SuperTrackingType
+	SuperTrackingType = {},
 	---@type TooltipSide
 	TooltipSide = {},
 	---@type TooltipTextureAnchor
@@ -189,18 +289,30 @@ Enum = {
 	TooltipTextureRelativeRegion = {},
 	---@type TrackedSpellCategory
 	TrackedSpellCategory = {},
+	---@type TransmogModification
+	TransmogModification = {},
 	---@type TransmogSource
 	TransmogSource = {},
+	---@type TransmogType
+	TransmogType = {},
 	---@type UIMapSystem
 	UIMapSystem = {},
 	---@type UIMapType
 	UIMapType = {},
+	---@type UIWidgetFlag
+	UIWidgetFlag = {},
+	---@type UIWidgetLayoutDirection
+	UIWidgetLayoutDirection = {},
+	---@type UIWidgetScale
+	UIWidgetScale = {},
+	---@type UIWidgetSetLayoutDirection
+	UIWidgetSetLayoutDirection = {},
 	---@type UIWidgetTextSizeType
 	UIWidgetTextSizeType = {},
 	---@type UIWidgetVisualizationType
 	UIWidgetVisualizationType = {},
-	---@type UiwIdgetFlag
-	UiwIdgetFlag = {},
+	---@type Unitsex
+	Unitsex = {},
 	---@type ValidateNameResult
 	ValidateNameResult = {},
 	---@type VasPurchaseProgress
@@ -209,6 +321,8 @@ Enum = {
 	VignetteType = {},
 	---@type VoiceChatStatusCode
 	VoiceChatStatusCode = {},
+	---@type WeeklyRewardChestThresholdType
+	WeeklyRewardChestThresholdType = {},
 	---@type WidgetAnimationType
 	WidgetAnimationType = {},
 	---@type WidgetCurrencyClass
@@ -219,8 +333,8 @@ Enum = {
 	WidgetShownState = {},
 	---@type WoWEntitlementType
 	WoWEntitlementType = {},
-	---@type ZoneAbilityType
-	ZoneAbilityType = {},
+	---@type WorldQuestQuality
+	WorldQuestQuality = {},
 	---@type ZoneControlActiveState
 	ZoneControlActiveState = {},
 	---@type ZoneControlDangerFlashType
@@ -304,54 +418,26 @@ Enum = {
 	LE_CHARACTER_UPGRADE_RESULT_INVALID_CHARACTER = 11,
 	LE_CHARACTER_UPGRADE_RESULT_NOT_FRESH_CHARACTER = 12,
 
-	NUM_LE_EXPANSION_LEVELS = 7,
+	NUM_LE_EXPANSION_LEVELS = 8,
 	LE_EXPANSION_CLASSIC = 0,
 	LE_EXPANSION_BURNING_CRUSADE = 1,
 	LE_EXPANSION_WRATH_OF_THE_LICH_KING = 2,
 	LE_EXPANSION_CATACLYSM = 3,
 	LE_EXPANSION_MISTS_OF_PANDARIA = 4,
 	LE_EXPANSION_WARLORDS_OF_DRAENOR = 5,
-	LE_EXPANSION_LEVEL_PREVIOUS = 6,
 	LE_EXPANSION_LEGION = 6,
-	LE_EXPANSION_LEVEL_CURRENT = 7,
+	LE_EXPANSION_LEVEL_PREVIOUS = 7,
 	LE_EXPANSION_BATTLE_FOR_AZEROTH = 7,
-	LE_EXPANSION_9_0 = 8,
+	LE_EXPANSION_SHADOWLANDS = 8,
+	LE_EXPANSION_LEVEL_CURRENT = 8,
 	LE_EXPANSION_10_0 = 9,
 	LE_EXPANSION_11_0 = 10,
 
-	NUM_LE_FOLLOWER_ABILITY_CAST_RESULTS = 14,
-	LE_FOLLOWER_ABILITY_CAST_RESULT_SUCCESS = 1,
-	LE_FOLLOWER_ABILITY_CAST_RESULT_FAILURE = 2,
-	LE_FOLLOWER_ABILITY_CAST_RESULT_NO_PENDING_CAST = 3,
-	LE_FOLLOWER_ABILITY_CAST_RESULT_INVALID_TARGET = 4,
-	LE_FOLLOWER_ABILITY_CAST_RESULT_INVALID_FOLLOWER_SPELL = 5,
-	LE_FOLLOWER_ABILITY_CAST_RESULT_REROLL_NOT_ALLOWED = 6,
-	LE_FOLLOWER_ABILITY_CAST_RESULT_SINGLE_MISSION_DURATION = 7,
-	LE_FOLLOWER_ABILITY_CAST_RESULT_MUST_TARGET_FOLLOWER = 8,
-	LE_FOLLOWER_ABILITY_CAST_RESULT_MUST_TARGET_TRAIT = 9,
-	LE_FOLLOWER_ABILITY_CAST_RESULT_INVALID_FOLLOWER_TYPE = 10,
-	LE_FOLLOWER_ABILITY_CAST_RESULT_MUST_BE_UNIQUE = 11,
-	LE_FOLLOWER_ABILITY_CAST_RESULT_CANNOT_TARGET_LIMITED_USE_FOLLOWER = 12,
-	LE_FOLLOWER_ABILITY_CAST_RESULT_MUST_TARGET_LIMITED_USE_FOLLOWER = 13,
-	LE_FOLLOWER_ABILITY_CAST_RESULT_ALREADY_AT_MAX_DURABILITY = 14,
-
-	NUM_LE_FOLLOWER_MISSION_COMPLETE_STATES = 4,
-	LE_FOLLOWER_MISSION_COMPLETE_STATE_ALIVE = 1,
-	LE_FOLLOWER_MISSION_COMPLETE_STATE_DEAD = 2,
-	LE_FOLLOWER_MISSION_COMPLETE_STATE_SAVED = 3,
-	LE_FOLLOWER_MISSION_COMPLETE_STATE_OUT_OF_DURABILITY = 4,
-
-	NUM_LE_FOLLOWER_TYPES = 23,
-	LE_FOLLOWER_TYPE_GARRISON_6_0 = 1,
-	LE_FOLLOWER_TYPE_SHIPYARD_6_2 = 2,
-	LE_FOLLOWER_TYPE_GARRISON_7_0 = 4,
-	LE_FOLLOWER_TYPE_GARRISON_8_0 = 22,
-
-	NUM_LE_FRAME_TUTORIALS = 77,
+	NUM_LE_FRAME_TUTORIALS = 79,
 	LE_FRAME_TUTORIAL_TALENT = 1,
 	LE_FRAME_TUTORIAL_SPEC = 2,
-	LE_FRAME_TUTORIAL_ACCOUNT_CLUB_FINDER_NEW_COMMUNITY_JOINED = 3,
 	LE_FRAME_TUTORIAL_GLYPH = 3,
+	LE_FRAME_TUTORIAL_ACCOUNT_CLUB_FINDER_NEW_COMMUNITY_JOINED = 3,
 	LE_FRAME_TUTORIAL_SPELLBOOK = 4,
 	LE_FRAME_TUTORIAL_PROFESSIONS = 5,
 	LE_FRAME_TUTORIAL_CORE_ABILITITES = 6,
@@ -426,66 +512,12 @@ Enum = {
 	LE_FRAME_TUTORIAL_WORLD_MAP_THREAT_ICON = 75,
 	LE_FRAME_TUTORIAL_CORRUPTION_CLEANSER = 76,
 	LE_FRAME_TUTORIAL_CLUB_FINDER_NEW_LANGUAGE_FILTER = 77,
+	LE_FRAME_TUTORIAL_OPTIONAL_REAGENT_CRAFTING = 78,
+	LE_FRAME_TUTORIAL_CAMPAIGN_LORE_TEXT = 79,
 
 	NUM_LE_FRAME_TUTORIAL_ACCCOUNTS = 3,
 	LE_FRAME_TUTORIAL_ACCCOUNT_RAF_INTRO = 1,
 	LE_FRAME_TUTORIAL_ACCCOUNT_CLUB_FINDER_NEW_FEATURE = 2,
-
-	NUM_LE_GARRISON_TALENT_AVAILABILITYS = 9,
-	LE_GARRISON_TALENT_AVAILABILITY_AVAILABLE = 1,
-	LE_GARRISON_TALENT_AVAILABILITY_UNAVAILABLE = 2,
-	LE_GARRISON_TALENT_AVAILABILITY_UNAVAILABLE_ANOTHER_IS_RESEARCHING = 3,
-	LE_GARRISON_TALENT_AVAILABILITY_UNAVAILABLE_NOT_ENOUGH_RESOURCES = 4,
-	LE_GARRISON_TALENT_AVAILABILITY_UNAVAILABLE_NOT_ENOUGH_GOLD = 5,
-	LE_GARRISON_TALENT_AVAILABILITY_UNAVAILABLE_TIER_UNAVAILABLE = 6,
-	LE_GARRISON_TALENT_AVAILABILITY_UNAVAILABLE_PLAYER_CONDITION = 7,
-	LE_GARRISON_TALENT_AVAILABILITY_UNAVAILABLE_ALREADY_HAVE = 8,
-	LE_GARRISON_TALENT_AVAILABILITY_UNAVAILABLE_REQUIRES_PREREQUISITE_TALENT = 9,
-
-	NUM_LE_GARRISON_TYPES = 10,
-	LE_GARRISON_TYPE_6_0 = 2,
-	LE_GARRISON_TYPE_7_0 = 3,
-	LE_GARRISON_TYPE_8_0 = 9,
-
-	NUM_LE_GARR_FOLLOWER_QUALITYS = 7,
-	LE_GARR_FOLLOWER_QUALITY_NONE = 0,
-	LE_GARR_FOLLOWER_QUALITY_COMMON = 1,
-	LE_GARR_FOLLOWER_QUALITY_UNCOMMON = 2,
-	LE_GARR_FOLLOWER_QUALITY_RARE = 3,
-	LE_GARR_FOLLOWER_QUALITY_EPIC = 4,
-	LE_GARR_FOLLOWER_QUALITY_LEGENDARY = 5,
-	LE_GARR_FOLLOWER_QUALITY_TITLE = 6,
-
-	NUM_LE_INVENTORY_TYPES = 29,
-	LE_INVENTORY_TYPE_NON_EQUIP_TYPE = 0,
-	LE_INVENTORY_TYPE_HEAD_TYPE = 1,
-	LE_INVENTORY_TYPE_NECK_TYPE = 2,
-	LE_INVENTORY_TYPE_SHOULDER_TYPE = 3,
-	LE_INVENTORY_TYPE_BODY_TYPE = 4,
-	LE_INVENTORY_TYPE_CHEST_TYPE = 5,
-	LE_INVENTORY_TYPE_WAIST_TYPE = 6,
-	LE_INVENTORY_TYPE_LEGS_TYPE = 7,
-	LE_INVENTORY_TYPE_FEET_TYPE = 8,
-	LE_INVENTORY_TYPE_WRIST_TYPE = 9,
-	LE_INVENTORY_TYPE_HAND_TYPE = 10,
-	LE_INVENTORY_TYPE_FINGER_TYPE = 11,
-	LE_INVENTORY_TYPE_TRINKET_TYPE = 12,
-	LE_INVENTORY_TYPE_WEAPON_TYPE = 13,
-	LE_INVENTORY_TYPE_SHIELD_TYPE = 14,
-	LE_INVENTORY_TYPE_RANGED_TYPE = 15,
-	LE_INVENTORY_TYPE_CLOAK_TYPE = 16,
-	LE_INVENTORY_TYPE_2HWEAPON_TYPE = 17,
-	LE_INVENTORY_TYPE_BAG_TYPE = 18,
-	LE_INVENTORY_TYPE_TABARD_TYPE = 19,
-	LE_INVENTORY_TYPE_ROBE_TYPE = 20,
-	LE_INVENTORY_TYPE_WEAPONMAINHAND_TYPE = 21,
-	LE_INVENTORY_TYPE_WEAPONOFFHAND_TYPE = 22,
-	LE_INVENTORY_TYPE_HOLDABLE_TYPE = 23,
-	LE_INVENTORY_TYPE_AMMO_TYPE = 24,
-	LE_INVENTORY_TYPE_THROWN_TYPE = 25,
-	LE_INVENTORY_TYPE_RANGEDRIGHT_TYPE = 26,
-	LE_INVENTORY_TYPE_QUIVER_TYPE = 27,
-	LE_INVENTORY_TYPE_RELIC_TYPE = 28,
 
 	NUM_LE_INVITE_REQUEST_TYPES = 3,
 	LE_INVITE_CONFIRMATION_REQUEST = 1,
@@ -532,23 +564,6 @@ Enum = {
 	LE_ITEM_CLASS_BATTLEPET = 17,
 	LE_ITEM_CLASS_WOW_TOKEN = 18,
 
-	NUM_LE_ITEM_FILTER_TYPES = 31,
-	LE_ITEM_FILTER_TYPE_HEAD = 1,
-	LE_ITEM_FILTER_TYPE_NECK = 2,
-	LE_ITEM_FILTER_TYPE_SHOULDER = 3,
-	LE_ITEM_FILTER_TYPE_CHEST = 5,
-	LE_ITEM_FILTER_TYPE_WAIST = 6,
-	LE_ITEM_FILTER_TYPE_LEGS = 7,
-	LE_ITEM_FILTER_TYPE_FEET = 8,
-	LE_ITEM_FILTER_TYPE_WRIST = 9,
-	LE_ITEM_FILTER_TYPE_HAND = 10,
-	LE_ITEM_FILTER_TYPE_FINGER = 11,
-	LE_ITEM_FILTER_TYPE_TRINKET = 12,
-	LE_ITEM_FILTER_TYPE_CLOAK = 16,
-	LE_ITEM_FILTER_TYPE_MAIN_HAND = 21,
-	LE_ITEM_FILTER_TYPE_OFF_HAND = 22,
-	LE_ITEM_FILTER_TYPE_ARTIFACT_RELIC = 30,
-
 	NUM_LE_ITEM_GEMS = 12,
 	LE_ITEM_GEM_INTELLECT = 0,
 	LE_ITEM_GEM_AGILITY = 1,
@@ -570,17 +585,6 @@ Enum = {
 	LE_ITEM_MISCELLANEOUS_OTHER = 4,
 	LE_ITEM_MISCELLANEOUS_MOUNT = 5,
 	LE_ITEM_MISCELLANEOUS_MOUNT_EQUIPMENT = 6,
-
-	NUM_LE_ITEM_QUALITYS = 9,
-	LE_ITEM_QUALITY_POOR = 0,
-	LE_ITEM_QUALITY_COMMON = 1,
-	LE_ITEM_QUALITY_UNCOMMON = 2,
-	LE_ITEM_QUALITY_RARE = 3,
-	LE_ITEM_QUALITY_EPIC = 4,
-	LE_ITEM_QUALITY_LEGENDARY = 5,
-	LE_ITEM_QUALITY_ARTIFACT = 6,
-	LE_ITEM_QUALITY_HEIRLOOM = 7,
-	LE_ITEM_QUALITY_WOW_TOKEN = 8,
 
 	NUM_LE_ITEM_RECIPES = 12,
 	LE_ITEM_RECIPE_BOOK = 0,
@@ -648,14 +652,6 @@ Enum = {
 	LE_LOOT_FILTER_SPEC4 = 6,
 	LE_LOOT_FILTER_BOE = 7,
 
-	NUM_LE_MAP_OVERLAY_DISPLAY_LOCATIONS = 6,
-	LE_MAP_OVERLAY_DISPLAY_LOCATION_DEFAULT = 1,
-	LE_MAP_OVERLAY_DISPLAY_LOCATION_BOTTOM_LEFT = 2,
-	LE_MAP_OVERLAY_DISPLAY_LOCATION_TOP_LEFT = 3,
-	LE_MAP_OVERLAY_DISPLAY_LOCATION_BOTTOM_RIGHT = 4,
-	LE_MAP_OVERLAY_DISPLAY_LOCATION_TOP_RIGHT = 5,
-	LE_MAP_OVERLAY_DISPLAY_LOCATION_HIDDEN = 6,
-
 	NUM_LE_MODEL_BLEND_OPERATIONS = 2,
 	LE_MODEL_BLEND_OPERATION_NONE = 1,
 	LE_MODEL_BLEND_OPERATION_ANIM = 2,
@@ -703,26 +699,6 @@ Enum = {
 	LE_QUEST_FACTION_ALLIANCE = 1,
 	LE_QUEST_FACTION_HORDE = 2,
 
-	NUM_LE_QUEST_FREQUENCYS = 3,
-	LE_QUEST_FREQUENCY_DEFAULT = 1,
-	LE_QUEST_FREQUENCY_DAILY = 2,
-	LE_QUEST_FREQUENCY_WEEKLY = 3,
-
-	NUM_LE_QUEST_TAG_TYPES = 15,
-	LE_QUEST_TAG_TYPE_TAG = 0,
-	LE_QUEST_TAG_TYPE_PROFESSION = 1,
-	LE_QUEST_TAG_TYPE_NORMAL = 2,
-	LE_QUEST_TAG_TYPE_PVP = 3,
-	LE_QUEST_TAG_TYPE_PET_BATTLE = 4,
-	LE_QUEST_TAG_TYPE_BOUNTY = 5,
-	LE_QUEST_TAG_TYPE_DUNGEON = 6,
-	LE_QUEST_TAG_TYPE_INVASION = 7,
-	LE_QUEST_TAG_TYPE_RAID = 8,
-	LE_QUEST_TAG_TYPE_INVASION_WRAPPER = 11,
-	LE_QUEST_TAG_TYPE_FACTION_ASSAULT = 12,
-	LE_QUEST_TAG_TYPE_ISLANDS = 13,
-	LE_QUEST_TAG_TYPE_THREAT = 14,
-
 	NUM_LE_REALM_RELATIONS = 3,
 	LE_REALM_RELATION_SAME = 1,
 	LE_REALM_RELATION_COALESCED = 2,
@@ -766,6 +742,10 @@ Enum = {
 	NUM_LE_TOKEN_CHOICES = 2,
 	LE_TOKEN_CHOICE_SUBSCRIPTION = 1,
 	LE_TOKEN_CHOICE_BALANCE = 2,
+
+	NUM_LE_TOKEN_REDEEM_TYPES = 2,
+	LE_TOKEN_REDEEM_TYPE_GAME_TIME = 1,
+	LE_TOKEN_REDEEM_TYPE_BALANCE = 2,
 
 	NUM_LE_TOKEN_RESULTS = 10,
 	LE_TOKEN_RESULT_SUCCESS = 1,
@@ -826,10 +806,6 @@ Enum = {
 	LE_TRANSMOG_SET_FILTER_PVE = 3,
 	LE_TRANSMOG_SET_FILTER_PVP = 4,
 
-	NUM_LE_TRANSMOG_TYPES = 2,
-	LE_TRANSMOG_TYPE_APPEARANCE = 0,
-	LE_TRANSMOG_TYPE_ILLUSION = 1,
-
 	NUM_LE_TWITTER_RESULTS = 3,
 	LE_TWITTER_RESULT_SUCCESS = 1,
 	LE_TWITTER_RESULT_NOT_LINKED = 2,
@@ -855,15 +831,8 @@ Enum = {
 	LE_WORLD_ELAPSED_TIMER_TYPE_CHALLENGE_MODE = 2,
 	LE_WORLD_ELAPSED_TIMER_TYPE_PROVING_GROUND = 3,
 
-	NUM_LE_WORLD_QUEST_QUALITYS = 3,
-	LE_WORLD_QUEST_QUALITY_COMMON = 1,
-	LE_WORLD_QUEST_QUALITY_RARE = 2,
-	LE_WORLD_QUEST_QUALITY_EPIC = 3,
-
 	NUM_LE_WOW_CONNECTION_STATES = 3,
 	LE_WOW_CONNECTION_STATE_NONE = 1,
 	LE_WOW_CONNECTION_STATE_CONNECTING = 2,
 	LE_WOW_CONNECTION_STATE_IN_QUEUE = 3,
-
-	NUM_LE_TOKEN_REDEEM_TYPES = 2,
 }
