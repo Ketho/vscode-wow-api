@@ -1,8 +1,15 @@
 ## vscode-wow-api (WIP)
-Shows [API Documentation](https://github.com/Gethe/wow-ui-source/tree/live/AddOns/Blizzard_APIDocumentation) in VSCode  
-This should be compatible with Sumneko's [Lua Language Server](https://github.com/sumneko/lua-language-server) since it only provides API completion for now.
+Shows Blizzard [API Documentation](https://github.com/Gethe/wow-ui-source/tree/live/AddOns/Blizzard_APIDocumentation) in VSCode.
 
 ### Features
-* Currently it only supports code completion for Blizzard documented API functions
+IntelliSense via [Sumneko's Lua](https://github.com/sumneko/lua-language-server) extension with [EmmyLua](https://github.com/EmmyLua) annotations.
 
-![](https://i.imgur.com/4v5HE8y.png)
+#### API
+* API systems documented by Blizzard
+  * Functions
+  * Enums
+  * Events
+* [Widgets](https://wow.gamepedia.com/Widget_API)
+* [Mixins](https://github.com/Gethe/wow-ui-source/tree/live/FrameXML/ObjectAPI)
+
+![](https://i.imgur.com/NLvGBHb.png)
