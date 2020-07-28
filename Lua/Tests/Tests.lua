@@ -11,7 +11,7 @@ end
 local function TestSystem(name)
 	for _, system in ipairs(APIDocumentation.systems) do
 		if system.Namespace == name then
-			-- WriteFile(OUTPUT:format(system.Namespace), Emmy:GetSystem(system))
+			-- Util:WriteFile(OUTPUT:format(system.Namespace), Emmy:GetSystem(system))
 			break
 		end
 	end

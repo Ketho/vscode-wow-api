@@ -1,33 +1,17 @@
 local m = {}
 
-local function WriteFile(path, text)
-	-- print("Writing", path)
-	local file = io.open(path, "w")
-	file:write(text)
-	file:close()
-end
-
-function m:ExportSystems(fs)
-	for _, system in ipairs(APIDocumentation.systems) do
-		local path = fs:format(system.Namespace or system.Name)
-		local systemText = Emmy:GetSystem(system)
-		if systemText then
-			WriteFile(path, systemText)
-		end
-	end
-	print("Finished exporting systems")
-end
-
 function m:ExportEvents(path)
 	local events = Emmy:GetEvents()
-	WriteFile(path, events)
-	print("Finished exporting events")
+	Util:WriteFile(path, events)
 end
 
 function m:ExportEventsLiterals(path)
 	local events = Emmy:GetEventsLiterals()
-	WriteFile(path, events)
-	print("Finished exporting event string literals")
+	Util:WriteFile(path, events)
 end
+
+-- enums are dumped in-game with KethoDoc just to be safe
+-- todo: compare with apidocs for any differences
+-- function m:ExportEnums() end
 
 return m
