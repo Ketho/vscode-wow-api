@@ -1,0 +1,43 @@
+---@class QuestSessionCommand
+local QuestSessionCommand = {
+	None = 0,
+	Start = 1,
+	Stop = 2,
+	SessionActiveNoCommand = 3,
+}
+
+---@class QuestSessionResult
+local QuestSessionResult = {
+	Ok = 0,
+	NotInParty = 1,
+	InvalidOwner = 2,
+	AlreadyActive = 3,
+	NotActive = 4,
+	InRaid = 5,
+	OwnerRefused = 6,
+	Timeout = 7,
+	Disabled = 8,
+	Started = 9,
+	Stopped = 10,
+	Joined = 11,
+	Left = 12,
+	OwnerLeft = 13,
+	ReadyCheckFailed = 14,
+	PartyDestroyed = 15,
+	MemberTimeout = 16,
+	AlreadyMember = 17,
+	NotOwner = 18,
+	AlreadyOwner = 19,
+	AlreadyJoined = 20,
+	NotMember = 21,
+	Busy = 22,
+	JoinRejected = 23,
+	Logout = 24,
+	Empty = 25,
+	QuestNotCompleted = 26,
+	Resync = 27,
+	Restricted = 28,
+	InPetBattle = 29,
+	InvalidPublicParty = 30,
+	Unknown = 31,
+}
