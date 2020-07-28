@@ -26,5 +26,3 @@ local RelativeContentDifficulty = {
 	Difficult = 3,
 	Impossible = 4,
 }
-
----@class QuestWatchConsts

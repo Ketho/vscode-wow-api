@@ -187,5 +187,3 @@ local GarrisonType = {
 	Type_8_0 = 9,
 	Type_9_0 = 111,
 }
-
----@class GarrisonConstsExposed

@@ -10,6 +10,12 @@ local types = {
 	bool = "boolean",
 }
 
+local supportedTables = {
+	Enumeration = true,
+	Structure = true,
+	-- Constants = true,
+}
+
 function Emmy:GetSystem(system)
 	local tbl = {}
 	if system.Functions and #system.Functions>0 then
@@ -25,7 +31,9 @@ function Emmy:GetSystem(system)
 	end
 	if system.Tables then
 		for _, apiTable in pairs(system.Tables) do
-			tinsert(tbl, self:GetTable(apiTable))
+			if supportedTables[apiTable.Type] then
+				tinsert(tbl, self:GetTable(apiTable))
+			end
 		end
 	end
 	return table.concat(tbl, "\n\n").."\n"
