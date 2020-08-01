@@ -24,6 +24,3 @@ function UIObject:IsForbidden() end
 
 ---@param forbidden boolean
 function UIObject:SetForbidden(forbidden) end
-
----@return Object|UIObject
-local function dummy() end

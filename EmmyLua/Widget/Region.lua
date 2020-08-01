@@ -9,6 +9,3 @@ function Region:GetBottom() end
 
 ---@return number
 function Region:GetCenter() end
-
----@return Object|UIObject|Region
-local function dummy() end
