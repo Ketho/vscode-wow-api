@@ -76,5 +76,5 @@ function Emmy:GetEventsLiterals()
 	for _, event in ipairs(APIDocumentation.events) do
 		tinsert(tbl, format("'\"%s\"'", event.LiteralName))
 	end
-	return table.concat(tbl, " | ")
+	return table.concat(tbl, " | ").."\n"
 end

@@ -36,7 +36,7 @@ function Emmy:GetSystem(system)
 			end
 		end
 	end
-	return table.concat(tbl, "\n\n").."\n"
+	return table.concat(tbl, "\n\n")
 end
 
 function Emmy:GetType(paramType)

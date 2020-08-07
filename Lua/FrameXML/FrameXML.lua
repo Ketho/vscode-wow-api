@@ -10,7 +10,9 @@ function m:LoadApiDocs(base)
 			Util:LoadFile(base.."/Blizzard_APIDocumentation/"..line)
 			if isDoc then -- write to emmylua
 				local text = Emmy:GetSystem(self.documentationInfo)
-				Util:WriteFile("EmmyLua/System/"..line, text or "")
+				if #text > 0 then -- try not to create empty files as they take up the maxPreload limit
+					Util:WriteFile("EmmyLua/System/"..line, text.."\n")
+				end
 			end
 		elseif line == "# Start documentation files here" then
 			isDoc = true
@@ -25,7 +27,7 @@ function m:LoadApiDocs(base)
 
 	require(base.."/MissingDocumentation")
 	local text = Emmy:GetSystem(self.documentationInfo)
-	Util:WriteFile("EmmyLua/MissingDocumentation.lua", text)
+	Util:WriteFile("EmmyLua/MissingDocumentation.lua", text.."\n")
 end
 
 return m
