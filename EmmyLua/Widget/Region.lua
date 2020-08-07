@@ -1,7 +1,8 @@
 ---@class Region : UIObject
+---[Documentation](https://wow.gamepedia.com/UIOBJECT_Region)
 local Region = {}
 
----@return boolean
+---@return boolean canChange
 function Region:CanChangeProtectedState() end
 
 function Region:ClearAllPoints() end
@@ -98,10 +99,10 @@ function Region:IsProtected() end
 ---@return boolean rectValid
 function Region:IsRectValid() end
 
----@return boolean
+---@return boolean isShown
 function Region:IsShown() end
 
----@return boolean
+---@return boolean isVisible
 function Region:IsVisible() end
 
 ---@param region Region|string|nil
