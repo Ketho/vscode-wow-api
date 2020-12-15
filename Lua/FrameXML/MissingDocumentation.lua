@@ -113,6 +113,34 @@ local Missing =
 				{ Name = "visualID", Type = "number" },
 			},
 		},
+		-- structures which are not copied to the new file, but only exist in the old file which is not loaded from TOC
+		-- BountiesDocumentation.lua -> QuestLogDocumentation.lua; 9.0.1 (34615)
+		{
+			Name = "BountyInfo",
+			Type = "Structure",
+			Fields =
+			{
+				{ Name = "questID", Type = "number", Nilable = false },
+				{ Name = "factionID", Type = "number", Nilable = false },
+				{ Name = "icon", Type = "number", Nilable = false },
+				{ Name = "numObjectives", Type = "number", Nilable = false },
+				{ Name = "turninRequirementText", Type = "string", Nilable = true },
+			},
+		},
+		-- CharacterCustomizationDocumentation.lua -> Blizzard_APIDocumentation\BarberShopDocumentation.lua; 9.0.1 (34615)
+		{
+			Name = "CharCustomizationCategory",
+			Type = "Structure",
+			Fields =
+			{
+				{ Name = "id", Type = "number", Nilable = false },
+				{ Name = "orderIndex", Type = "number", Nilable = false },
+				{ Name = "name", Type = "string", Nilable = false },
+				{ Name = "icon", Type = "string", Nilable = false },
+				{ Name = "selectedIcon", Type = "string", Nilable = false },
+				{ Name = "options", Type = "table", InnerType = "CharCustomizationOption", Nilable = false },
+			},
+		},
 		-- enums used in apidocs
 		{
 			-- WeeklyRewardsDocumentation.lua
