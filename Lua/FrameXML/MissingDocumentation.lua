@@ -114,8 +114,8 @@ local Missing =
 			},
 		},
 		-- structures which are not copied to the new file, but only exist in the old file which is not loaded from TOC
-		-- BountiesDocumentation.lua -> QuestLogDocumentation.lua; 9.0.1 (34615)
 		{
+			-- BountiesDocumentation.lua -> QuestLogDocumentation.lua; 9.0.1 (34615)
 			Name = "BountyInfo",
 			Type = "Structure",
 			Fields =
@@ -127,8 +127,8 @@ local Missing =
 				{ Name = "turninRequirementText", Type = "string", Nilable = true },
 			},
 		},
-		-- CharacterCustomizationDocumentation.lua -> Blizzard_APIDocumentation\BarberShopDocumentation.lua; 9.0.1 (34615)
 		{
+			-- CharacterCustomizationDocumentation.lua -> Blizzard_APIDocumentation\BarberShopDocumentation.lua; 9.0.1 (34615)
 			Name = "CharCustomizationCategory",
 			Type = "Structure",
 			Fields =
