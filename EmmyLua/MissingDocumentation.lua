@@ -133,6 +133,23 @@ local TradeSkillRecipeInfo = {}
 ---@field visualID number
 local AppearanceSourceInfo = {}
 
+---@class BountyInfo
+---@field questID number
+---@field factionID number
+---@field icon number
+---@field numObjectives number
+---@field turninRequirementText string
+local BountyInfo = {}
+
+---@class CharCustomizationCategory
+---@field id number
+---@field orderIndex number
+---@field name string
+---@field icon string
+---@field selectedIcon string
+---@field options CharCustomizationOption[]
+local CharCustomizationCategory = {}
+
 ---@class CachedRewardType
 local CachedRewardType = {
 	None = 0,
