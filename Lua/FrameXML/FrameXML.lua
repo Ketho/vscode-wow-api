@@ -34,9 +34,7 @@ function m:LoadApiDocs(base)
 	for missingFile in pairs(not_in_toc) do
 		Util:LoadFile(base.."/Blizzard_APIDocumentation/"..missingFile)
 		local text = Emmy:GetSystem(self.documentationInfo)
-		if #text > 0 then
-			Util:WriteFile("EmmyLua/System/"..missingFile, text.."\n")
-		end
+		Util:WriteFile("EmmyLua/System/"..missingFile, text.."\n")
 	end
 	require(base.."/MissingDocumentation")
 	local text = Emmy:GetSystem(self.documentationInfo)

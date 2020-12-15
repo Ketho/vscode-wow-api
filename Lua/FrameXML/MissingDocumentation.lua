@@ -1,11 +1,21 @@
 local Empty = {
-	{ Name = "Undocumented", Type = "bool" },
+	{ Name = "Undocumented", Type = "bool", EnumValue = 0 },
 }
 
 local Missing =
 {
 	Tables =
 	{
+		-- placeholders
+		{ Name = "CharacterAlternateFormData", Type = "Structure", Fields = Empty }, -- BarberShopDocumentation.lua
+		{ Name = "CurrencyCost", Type = "Structure", Fields = Empty }, -- LegendaryCraftingDocumentation.lua
+		{ Name = "OptionalReagentInfo", Type = "Structure", Fields = Empty }, -- TradeSkillUIDocumentation.lua
+		{ Name = "QueueSpecificInfo", Type = "Structure", Fields = Empty }, -- PartyInfoDocumentation.lua, SocialQueueDocumentation.lua
+		{ Name = "RuneforgeItemPreviewInfo", Type = "Structure", Fields = Empty }, -- LegendaryCraftingDocumentation.lua
+		{ Name = "RuneforgeLegendaryComponentInfo", Type = "Structure", Fields = Empty }, -- LegendaryCraftingDocumentation.lua
+		{ Name = "RuneforgeLegendaryCraftDescription", Type = "Structure", Fields = Empty }, -- LegendaryCraftingDocumentation.lua
+		{ Name = "RuneforgePower", Type = "Structure", Fields = Empty }, -- LegendaryCraftingDocumentation.lua
+		-- structures
 		{
 			-- C_Calendar; CalendarDocumentation.lua
 			Name = "CalendarTime",
@@ -94,20 +104,67 @@ local Missing =
 				{ Name = "visualID", Type = "number" },
 			},
 		},
-		-- placeholders
-		{ Name = "CachedRewardType", Type = "Enumeration", Fields = Empty }, -- WeeklyRewardsDocumentation.lua
-		{ Name = "CharacterAlternateFormData", Type = "Structure", Fields = Empty }, -- BarberShopDocumentation.lua
-		{ Name = "CurrencyCost", Type = "Structure", Fields = Empty }, -- LegendaryCraftingDocumentation.lua
-		{ Name = "OptionalReagentInfo", Type = "Structure", Fields = Empty }, -- TradeSkillUIDocumentation.lua
-		{ Name = "QueueSpecificInfo", Type = "Structure", Fields = Empty }, -- PartyInfoDocumentation.lua, SocialQueueDocumentation.lua
-		{ Name = "RuneforgeItemPreviewInfo", Type = "Structure", Fields = Empty }, -- LegendaryCraftingDocumentation.lua
-		{ Name = "RuneforgeLegendaryComponentInfo", Type = "Structure", Fields = Empty }, -- LegendaryCraftingDocumentation.lua
-		{ Name = "RuneforgeLegendaryCraftDescription", Type = "Structure", Fields = Empty }, -- LegendaryCraftingDocumentation.lua
-		{ Name = "RuneforgePower", Type = "Structure", Fields = Empty }, -- LegendaryCraftingDocumentation.lua
-		{ Name = "SoulbindConduitTransactionType", Type = "Enumeration", Fields = Empty }, -- CurrencyConstantsDocumentation.lua; beta 9.0.2 (36401)
-		{ Name = "SoulbindConduitType", Type = "Enumeration", Fields = Empty }, -- SoulbindsDocumentation.lua
-		{ Name = "SoulbindNodeState", Type = "Enumeration", Fields = Empty }, -- SoulbindsDocumentation.lua
-		{ Name = "WeeklyRewardChestThresholdType", Type = "Enumeration", Fields = Empty }, -- WeeklyRewardsDocumentation.lua
+		-- enums
+		{
+			-- WeeklyRewardsDocumentation.lua
+			Name = "CachedRewardType",
+			Type = "Enumeration",
+			Fields =
+			{
+				{ Name = "None", Type = "CachedRewardType", EnumValue = 0 },
+				{ Name = "Item", Type = "CachedRewardType", EnumValue = 1 },
+				{ Name = "Currency", Type = "CachedRewardType", EnumValue = 2 },
+				{ Name = "Quest", Type = "CachedRewardType", EnumValue = 3 },
+			},
+		},
+		{
+			-- CurrencyConstantsDocumentation.lua
+			Name = "SoulbindConduitTransactionType",
+			Type = "Enumeration",
+			Fields =
+			{
+				{ Name = "Install", Type = "SoulbindConduitTransactionType", EnumValue = 0 },
+				{ Name = "Uninstall", Type = "SoulbindConduitTransactionType", EnumValue = 1 },
+			},
+		},
+		{
+			-- SoulbindsDocumentation.lua
+			Name = "SoulbindConduitType",
+			Type = "Enumeration",
+			Fields =
+			{
+				{ Name = "Finesse", Type = "SoulbindConduitType", EnumValue = 0 },
+				{ Name = "Potency", Type = "SoulbindConduitType", EnumValue = 1 },
+				{ Name = "Endurance", Type = "SoulbindConduitType", EnumValue = 2 },
+				{ Name = "Flex", Type = "SoulbindConduitType", EnumValue = 3 },
+			},
+		},
+		{
+			-- SoulbindsDocumentation.lua
+			Name = "SoulbindNodeState",
+			Type = "Enumeration",
+			Fields =
+			{
+				{ Name = "Unavailable", Type = "SoulbindNodeState", EnumValue = 0 },
+				{ Name = "Unselected", Type = "SoulbindNodeState", EnumValue = 1 },
+				{ Name = "Selectable", Type = "SoulbindNodeState", EnumValue = 2 },
+				{ Name = "Selected", Type = "SoulbindNodeState", EnumValue = 3 },
+			},
+		},
+		{
+			-- WeeklyRewardsDocumentation.lua
+			Name = "WeeklyRewardChestThresholdType",
+			Type = "Enumeration",
+			Fields =
+			{
+				{ Name = "None", Type = "WeeklyRewardChestThresholdType", EnumValue = 0 },
+				{ Name = "MythicPlus", Type = "WeeklyRewardChestThresholdType", EnumValue = 1 },
+				{ Name = "RankedPvP", Type = "WeeklyRewardChestThresholdType", EnumValue = 2 },
+				{ Name = "Raid", Type = "WeeklyRewardChestThresholdType", EnumValue = 3 },
+				{ Name = "AlsoReceive", Type = "WeeklyRewardChestThresholdType", EnumValue = 4 },
+				{ Name = "Concession", Type = "WeeklyRewardChestThresholdType", EnumValue = 5 },
+			},
+		},
 	},
 }
 

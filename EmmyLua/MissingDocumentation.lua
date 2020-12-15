@@ -63,7 +63,42 @@ local AppearanceSourceInfo = {}
 
 ---@class CachedRewardType
 local CachedRewardType = {
-	Undocumented = nil,
+	None = 0,
+	Item = 1,
+	Currency = 2,
+	Quest = 3,
+}
+
+---@class SoulbindConduitTransactionType
+local SoulbindConduitTransactionType = {
+	Install = 0,
+	Uninstall = 1,
+}
+
+---@class SoulbindConduitType
+local SoulbindConduitType = {
+	Finesse = 0,
+	Potency = 1,
+	Endurance = 2,
+	Flex = 3,
+}
+
+---@class SoulbindNodeState
+local SoulbindNodeState = {
+	Unavailable = 0,
+	Unselected = 1,
+	Selectable = 2,
+	Selected = 3,
+}
+
+---@class WeeklyRewardChestThresholdType
+local WeeklyRewardChestThresholdType = {
+	None = 0,
+	MythicPlus = 1,
+	RankedPvP = 2,
+	Raid = 3,
+	AlsoReceive = 4,
+	Concession = 5,
 }
 
 ---@class CharacterAlternateFormData
@@ -97,23 +132,3 @@ local RuneforgeLegendaryCraftDescription = {}
 ---@class RuneforgePower
 ---@field Undocumented boolean
 local RuneforgePower = {}
-
----@class SoulbindConduitTransactionType
-local SoulbindConduitTransactionType = {
-	Undocumented = nil,
-}
-
----@class SoulbindConduitType
-local SoulbindConduitType = {
-	Undocumented = nil,
-}
-
----@class SoulbindNodeState
-local SoulbindNodeState = {
-	Undocumented = nil,
-}
-
----@class WeeklyRewardChestThresholdType
-local WeeklyRewardChestThresholdType = {
-	Undocumented = nil,
-}
