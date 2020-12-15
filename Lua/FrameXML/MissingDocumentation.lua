@@ -1,9 +1,13 @@
+local Empty = {
+	{ Name = "Undocumented", Type = "bool" },
+}
+
 local Missing =
 {
 	Tables =
 	{
 		{
-			-- C_Calendar
+			-- C_Calendar; CalendarDocumentation.lua
 			Name = "CalendarTime",
 			Type = "Structure",
 			Fields =
@@ -17,7 +21,22 @@ local Missing =
 			},
 		},
 		{
-			-- C_GuildInfo
+			-- C_Garrison; GarrisonInfoDocumentation.lua
+			Name = "GarrisonTalentTreeInfo",
+			Type = "Structure",
+			Fields =
+			{
+				{ Name = "featureSubtype", Type = "number" },
+				{ Name = "featureType", Type = "number" },
+				{ Name = "isClassAgnostic", Type = "bool" },
+				{ Name = "isThemed", Type = "bool" },
+				{ Name = "talents", Type = "table" },
+				{ Name = "title", Type = "string" },
+				{ Name = "treeID", Type = "number" },
+			},
+		},
+		{
+			-- C_GuildInfo; GuildInfoDocumentation.lua
 			Name = "GuildTabardInfo",
 			Type = "Structure",
 			Fields =
@@ -30,7 +49,34 @@ local Missing =
 			},
 		},
 		{
-			-- C_TransmogCollection
+			-- C_TradeSkillUI; TradeSkillUIDocumentation.lua
+			Name = "TradeSkillRecipeInfo",
+			Type = "Structure",
+			Fields =
+			{
+				{ Name = "alternateVerb", Type = "string", Nilable = true },
+				{ Name = "categoryID", Type = "number" },
+				{ Name = "craftable", Type = "bool" },
+				{ Name = "difficulty", Type = "string" },
+				{ Name = "disabled", Type = "bool" },
+				{ Name = "favorite", Type = "bool" },
+				{ Name = "hiddenUnlessLearned", Type = "bool" },
+				{ Name = "icon", Type = "number" },
+				{ Name = "learned", Type = "bool" },
+				{ Name = "name", Type = "string" },
+				{ Name = "nextRecipeID", Type = "number", Nilable = true },
+				{ Name = "numAvailable", Type = "number" },
+				{ Name = "numIndents", Type = "number" },
+				{ Name = "numSkillUps", Type = "number" },
+				{ Name = "previousRecipeID", Type = "number", Nilable = true },
+				{ Name = "productQuality", Type = "number" },
+				{ Name = "recipeID", Type = "number" },
+				{ Name = "sourceType", Type = "number" },
+				{ Name = "type", Type = "string" },
+			},
+		},
+		{
+			-- C_TransmogCollection; TransmogItemsDocumentation.lua
 			Name = "AppearanceSourceInfo",
 			Type = "Structure",
 			Fields =
@@ -48,47 +94,21 @@ local Missing =
 				{ Name = "visualID", Type = "number" },
 			},
 		},
-		-- undocumented
-		{ Name = "CachedRewardType", Type = "Enumeration", Fields = {} }, -- WeeklyRewardsDocumentation.lua
-		{ Name = "CharacterAlternateFormData", Type = "Structure", Fields = {} }, -- BarberShopDocumentation.lua
-		{ Name = "CurrencyCost", Type = "Structure", Fields = {} }, -- LegendaryCraftingDocumentation.lua
-		{ Name = "GarrisonTalentTreeInfo", Type = "Structure", Fields = {} }, -- GarrisonInfoDocumentation.lua
-		{ Name = "OptionalReagentInfo", Type = "Structure", Fields = {} }, -- TradeSkillUIDocumentation.lua
-		{ Name = "QueueSpecificInfo", Type = "Structure", Fields = {} }, -- PartyInfoDocumentation.lua, SocialQueueDocumentation.lua
-		{ Name = "RuneforgeLegendaryComponentInfo", Type = "Structure", Fields = {} }, -- LegendaryCraftingDocumentation.lua
-		{ Name = "RuneforgeLegendaryCraftDescription", Type = "Structure", Fields = {} }, -- LegendaryCraftingDocumentation.lua
-		{ Name = "RuneforgePower", Type = "Structure", Fields = {} }, -- LegendaryCraftingDocumentation.lua
-		{ Name = "SoulbindConduitInstallResult", Type = "Enumeration", Fields = {} }, -- SoulbindsDocumentation.lua
-		{ Name = "SoulbindConduitType", Type = "Enumeration", Fields = {} }, -- SoulbindsDocumentation.lua
-		{ Name = "SoulbindNodeState", Type = "Enumeration", Fields = {} }, -- SoulbindsDocumentation.lua
-		{ Name = "TradeSkillRecipeInfo", Type = "Structure", Fields = {} }, -- MissingDocumentation.lua
-		{ Name = "WeeklyRewardChestThresholdType", Type = "Enumeration", Fields = {} }, -- WeeklyRewardsDocumentation.lua
-		-- undocumented enums which are not used in another structure
-		{ Name = "CharacterServiceInfoFlag", Type = "Enumeration", Fields = {} },
-		{ Name = "ManipulatorEventType", Type = "Enumeration", Fields = {} },
-		{ Name = "VasPurchaseProgress", Type = "Enumeration", Fields = {} },
-		-- defined from FrameXML
-		{ Name = "QuestPOIQuestTypes", Type = "Enumeration", Fields = {} }, -- QuestPOI.lua
+		-- placeholders
+		{ Name = "CachedRewardType", Type = "Enumeration", Fields = Empty }, -- WeeklyRewardsDocumentation.lua
+		{ Name = "CharacterAlternateFormData", Type = "Structure", Fields = Empty }, -- BarberShopDocumentation.lua
+		{ Name = "CurrencyCost", Type = "Structure", Fields = Empty }, -- LegendaryCraftingDocumentation.lua
+		{ Name = "OptionalReagentInfo", Type = "Structure", Fields = Empty }, -- TradeSkillUIDocumentation.lua
+		{ Name = "QueueSpecificInfo", Type = "Structure", Fields = Empty }, -- PartyInfoDocumentation.lua, SocialQueueDocumentation.lua
+		{ Name = "RuneforgeItemPreviewInfo", Type = "Structure", Fields = Empty }, -- LegendaryCraftingDocumentation.lua
+		{ Name = "RuneforgeLegendaryComponentInfo", Type = "Structure", Fields = Empty }, -- LegendaryCraftingDocumentation.lua
+		{ Name = "RuneforgeLegendaryCraftDescription", Type = "Structure", Fields = Empty }, -- LegendaryCraftingDocumentation.lua
+		{ Name = "RuneforgePower", Type = "Structure", Fields = Empty }, -- LegendaryCraftingDocumentation.lua
+		{ Name = "SoulbindConduitTransactionType", Type = "Enumeration", Fields = Empty }, -- CurrencyConstantsDocumentation.lua; beta 9.0.2 (36401)
+		{ Name = "SoulbindConduitType", Type = "Enumeration", Fields = Empty }, -- SoulbindsDocumentation.lua
+		{ Name = "SoulbindNodeState", Type = "Enumeration", Fields = Empty }, -- SoulbindsDocumentation.lua
+		{ Name = "WeeklyRewardChestThresholdType", Type = "Enumeration", Fields = Empty }, -- WeeklyRewardsDocumentation.lua
 	},
 }
 
 APIDocumentation:AddDocumentationTable(Missing)
-
---- empty docs
--- ActionDocumentation.lua
--- AppearanceSourceDocumentation.lua
--- BaseDocumentation.lua
--- ClubSharedDocumentation.lua
--- ColorDocumentation.lua
--- GarrisonSharedDocumentation.lua
--- GuildInfoSharedDocumentation.lua
--- ItemLocationSharedDocumentation.lua
--- ItemSharedDocumentation.lua
--- ModelSceneDocumentation.lua
--- NamePlateDocumentation.lua
--- PlayerDocumentation.lua
--- QueueSpecificDocumentation.lua
--- TextureSharedDocumentation.lua
--- TimeDocumentation.lua
--- UnitSharedDocumentation.lua
--- VectorSharedDocumentation.lua

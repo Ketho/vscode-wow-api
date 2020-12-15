@@ -1,5 +1,12 @@
 local m = {}
 
+-- maybe should just load all files in folder instead of TOC
+-- these seems like old documentation, but the structures are still used in other docs
+local not_in_toc = {
+	["BountiesDocumentation.lua"] = true, -- 9.0.1 (34615); C_Bounties -> C_QuestLog
+	["CharacterCustomizationDocumentation.lua"] = true, -- 9.0.1 (34615); C_CharacterCustomization -> C_BarberShop
+}
+
 function m:LoadApiDocs(base)
 	require(base.."/Compat")
 	local toc = io.open(base.."/Blizzard_APIDocumentation/Blizzard_APIDocumentation.toc")
@@ -24,7 +31,13 @@ function m:LoadApiDocs(base)
 		end
 	end
 	toc:close()
-
+	for missingFile in pairs(not_in_toc) do
+		Util:LoadFile(base.."/Blizzard_APIDocumentation/"..missingFile)
+		local text = Emmy:GetSystem(self.documentationInfo)
+		if #text > 0 then
+			Util:WriteFile("EmmyLua/System/"..missingFile, text.."\n")
+		end
+	end
 	require(base.."/MissingDocumentation")
 	local text = Emmy:GetSystem(self.documentationInfo)
 	Util:WriteFile("EmmyLua/MissingDocumentation.lua", text.."\n")
