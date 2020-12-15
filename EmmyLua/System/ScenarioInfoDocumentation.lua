@@ -1,3 +1,9 @@
+---@class JAILERS_TOWER_LEVEL_UPDATE
+---@field level number
+---@field type JailersTowerType
+---[Documentation](https://wow.gamepedia.com/JAILERS_TOWER_LEVEL_UPDATE)
+local JAILERS_TOWER_LEVEL_UPDATE = {}
+
 ---@class SCENARIO_BONUS_OBJECTIVE_COMPLETE
 ---@field bonusObjectiveID number
 ---[Documentation](https://wow.gamepedia.com/SCENARIO_BONUS_OBJECTIVE_COMPLETE)
@@ -36,3 +42,19 @@ local SCENARIO_SPELL_UPDATE = {}
 ---@field newStep boolean
 ---[Documentation](https://wow.gamepedia.com/SCENARIO_UPDATE)
 local SCENARIO_UPDATE = {}
+
+---@class JailersTowerType
+local JailersTowerType = {
+	TwistingCorridors = 0,
+	SkoldusHalls = 1,
+	FractureChambers = 2,
+	Soulforges = 3,
+	Coldheart = 4,
+	Mortregar = 5,
+	UpperReaches = 6,
+	ArkobanHall = 7,
+	TormentChamberJaina = 8,
+	TormentChamberThrall = 9,
+	TormentChamberAnduin = 10,
+	AdamantVaults = 11,
+}

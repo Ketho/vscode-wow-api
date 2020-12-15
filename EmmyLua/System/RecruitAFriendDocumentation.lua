@@ -189,5 +189,5 @@ local RafReward = {}
 local RafSystemInfo = {}
 
 ---@class RafTitleInfo
----@field titleID number
+---@field titleMaskID number
 local RafTitleInfo = {}

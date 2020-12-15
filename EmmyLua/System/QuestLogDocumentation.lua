@@ -117,6 +117,15 @@ function C_QuestLog.GetNumQuestWatches() end
 function C_QuestLog.GetNumWorldQuestWatches() end
 
 ---@param questID number
+---@return number uiMapID
+---@return boolean worldQuests
+---@return boolean worldQuestsElite
+---@return boolean dungeons
+---@return boolean treasures
+---[Documentation](https://wow.gamepedia.com/API_C_QuestLog.GetQuestAdditionalHighlights)
+function C_QuestLog.GetQuestAdditionalHighlights(questID) end
+
+---@param questID number
 ---@return QuestTheme theme
 ---[Documentation](https://wow.gamepedia.com/API_C_QuestLog.GetQuestDetailsTheme)
 function C_QuestLog.GetQuestDetailsTheme(questID) end

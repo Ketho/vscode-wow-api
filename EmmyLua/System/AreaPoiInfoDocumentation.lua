@@ -35,4 +35,5 @@ local AREA_POIS_UPDATED = {}
 ---@field textureIndex number
 ---@field widgetSetID number
 ---@field atlasName string
+---@field uiTextureKit string
 local AreaPOIInfo = {}

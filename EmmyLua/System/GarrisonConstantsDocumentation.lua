@@ -44,6 +44,30 @@ local GarrAutoBoardIndex = {
 	EnemyRightBack = 12,
 }
 
+---@class GarrAutoCombatSpellTutorialFlag
+local GarrAutoCombatSpellTutorialFlag = {
+	None = 0,
+	Single = 1,
+	Column = 2,
+	Row = 3,
+	All = 4,
+}
+
+---@class GarrAutoCombatTutorial
+local GarrAutoCombatTutorial = {
+	SelectMission = 1,
+	PlaceCompanion = 2,
+	HealCompanion = 4,
+	LevelHeal = 8,
+	BeneficialEffect = 16,
+	AttackSingle = 32,
+	AttackColumn = 64,
+	AttackRow = 128,
+	AttackAll = 256,
+	TroopTutorial = 512,
+	EnvironmentalEffect = 1024,
+}
+
 ---@class GarrAutoCombatantRole
 local GarrAutoCombatantRole = {
 	None = 0,
@@ -74,6 +98,15 @@ local GarrAutoMissionEventType = {
 	ApplyAura = 7,
 	RemoveAura = 8,
 	Died = 9,
+}
+
+---@class GarrAutoPreviewTargetType
+local GarrAutoPreviewTargetType = {
+	None = 0,
+	Damage = 1,
+	Heal = 2,
+	Buff = 4,
+	Debuff = 8,
 }
 
 ---@class GarrFollowerMissionCompleteState
@@ -107,8 +140,8 @@ local GarrTalentFeatureSubtype = {
 	Generic = 0,
 	Bastion = 1,
 	Revendreth = 2,
-	Maldraxxus = 3,
-	Ardenweald = 4,
+	Ardenweald = 3,
+	Maldraxxus = 4,
 }
 
 ---@class GarrTalentFeatureType

@@ -80,6 +80,10 @@ function C_PartyInfo.InviteUnit(targetName) end
 ---[Documentation](https://wow.gamepedia.com/API_C_PartyInfo.IsPartyFull)
 function C_PartyInfo.IsPartyFull(category) end
 
+---@return boolean isPartyInJailersTower
+---[Documentation](https://wow.gamepedia.com/API_C_PartyInfo.IsPartyInJailersTower)
+function C_PartyInfo.IsPartyInJailersTower() end
+
 ---@param category number
 ---[Documentation](https://wow.gamepedia.com/API_C_PartyInfo.LeaveParty)
 ---Usually this will leave the party immediately. In some cases (e.g. PartySync) the user will be prompted to confirm leaving the party, because it's potentially destructive

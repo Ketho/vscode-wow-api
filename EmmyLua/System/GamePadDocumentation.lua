@@ -98,6 +98,7 @@ local GamePadAxisConfig = {}
 ---@field comment string
 ---@field name string
 ---@field configID GamePadConfigID
+---@field labelStyle string
 ---@field rawButtonMappings GamePadRawButtonMapping[]
 ---@field rawAxisMappings GamePadRawAxisMapping[]
 ---@field axisConfigs GamePadAxisConfig[]
@@ -111,6 +112,7 @@ local GamePadConfigID = {}
 
 ---@class GamePadMappedState
 ---@field name string
+---@field labelStyle string
 ---@field buttonCount number
 ---@field axisCount number
 ---@field stickCount number

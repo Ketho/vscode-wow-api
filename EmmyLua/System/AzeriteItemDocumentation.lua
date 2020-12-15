@@ -38,6 +38,16 @@ function C_AzeriteItem.IsAzeriteItemAtMaxLevel() end
 ---[Documentation](https://wow.gamepedia.com/API_C_AzeriteItem.IsAzeriteItemByID)
 function C_AzeriteItem.IsAzeriteItemByID(itemInfo) end
 
+---@param azeriteItemLocation ItemLocationMixin
+---@return boolean isEnabled
+---[Documentation](https://wow.gamepedia.com/API_C_AzeriteItem.IsAzeriteItemEnabled)
+function C_AzeriteItem.IsAzeriteItemEnabled(azeriteItemLocation) end
+
+---@class AZERITE_ITEM_ENABLED_STATE_CHANGED
+---@field enabled boolean
+---[Documentation](https://wow.gamepedia.com/AZERITE_ITEM_ENABLED_STATE_CHANGED)
+local AZERITE_ITEM_ENABLED_STATE_CHANGED = {}
+
 ---@class AZERITE_ITEM_EXPERIENCE_CHANGED
 ---@field azeriteItemLocation ItemLocationMixin
 ---@field oldExperienceAmount number

@@ -25,6 +25,14 @@ local BATTLE_PET_CURSOR_CLEAR = {}
 ---[Documentation](https://wow.gamepedia.com/COMMUNITIES_STREAM_CURSOR_CLEAR)
 local COMMUNITIES_STREAM_CURSOR_CLEAR = {}
 
+---@class CURSOR_CHANGED
+---@field isDefault boolean
+---@field newCursorType UICursorType
+---@field oldCursorType UICursorType
+---@field oldCursorVirtualID number
+---[Documentation](https://wow.gamepedia.com/CURSOR_CHANGED)
+local CURSOR_CHANGED = {}
+
 ---@class CURSOR_UPDATE
 ---[Documentation](https://wow.gamepedia.com/CURSOR_UPDATE)
 local CURSOR_UPDATE = {}
@@ -32,3 +40,28 @@ local CURSOR_UPDATE = {}
 ---@class MOUNT_CURSOR_CLEAR
 ---[Documentation](https://wow.gamepedia.com/MOUNT_CURSOR_CLEAR)
 local MOUNT_CURSOR_CLEAR = {}
+
+---@class UICursorType
+local UICursorType = {
+	Default = 0,
+	Item = 1,
+	Money = 2,
+	Spell = 3,
+	PetAction = 4,
+	Merchant = 5,
+	ActionBar = 6,
+	Macro = 7,
+	AmmoObsolete = 8,
+	Pet = 9,
+	GuildBank = 10,
+	GuildBankMoney = 11,
+	EquipmentSet = 12,
+	Currency = 13,
+	Flyout = 14,
+	VoidItem = 15,
+	BattlePet = 16,
+	Mount = 17,
+	Toy = 18,
+	CommunitiesStream = 19,
+	ConduitCollectionItem = 20,
+}

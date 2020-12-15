@@ -55,10 +55,26 @@ function C_ActionBar.IsAutoCastPetAction(slotID) end
 ---[Documentation](https://wow.gamepedia.com/API_C_ActionBar.IsEnabledAutoCastPetAction)
 function C_ActionBar.IsEnabledAutoCastPetAction(slotID) end
 
+---@param actionID number
+---@param useNeutral boolean
+---@return boolean isHarmful
+---[Documentation](https://wow.gamepedia.com/API_C_ActionBar.IsHarmfulAction)
+function C_ActionBar.IsHarmfulAction(actionID, useNeutral) end
+
+---@param actionID number
+---@param useNeutral boolean
+---@return boolean isHelpful
+---[Documentation](https://wow.gamepedia.com/API_C_ActionBar.IsHelpfulAction)
+function C_ActionBar.IsHelpfulAction(actionID, useNeutral) end
+
 ---@param spellID number
 ---@return boolean isOnBarOrSpecialBar
 ---[Documentation](https://wow.gamepedia.com/API_C_ActionBar.IsOnBarOrSpecialBar)
 function C_ActionBar.IsOnBarOrSpecialBar(spellID) end
+
+---@param slotID number
+---[Documentation](https://wow.gamepedia.com/API_C_ActionBar.PutActionInSlot)
+function C_ActionBar.PutActionInSlot(slotID) end
 
 ---@return boolean showHealthBar
 ---[Documentation](https://wow.gamepedia.com/API_C_ActionBar.ShouldOverrideBarShowHealthBar)

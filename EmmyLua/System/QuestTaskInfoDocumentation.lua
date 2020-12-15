@@ -50,6 +50,11 @@ function C_TaskQuest.GetQuestsForPlayerByMapID(uiMapID) end
 function C_TaskQuest.GetThreatQuests() end
 
 ---@param questID number
+---@return number UiWidgetSetID
+---[Documentation](https://wow.gamepedia.com/API_C_TaskQuest.GetUIWidgetSetIDFromQuestID)
+function C_TaskQuest.GetUIWidgetSetIDFromQuestID(questID) end
+
+---@param questID number
 ---@return boolean active
 ---[Documentation](https://wow.gamepedia.com/API_C_TaskQuest.IsActive)
 function C_TaskQuest.IsActive(questID) end

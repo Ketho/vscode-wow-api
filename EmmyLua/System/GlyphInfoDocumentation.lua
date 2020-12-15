@@ -1,5 +1,5 @@
 ---@class ACTIVATE_GLYPH
----@field spellSlot number
+---@field spellID number
 ---[Documentation](https://wow.gamepedia.com/ACTIVATE_GLYPH)
 local ACTIVATE_GLYPH = {}
 
@@ -8,6 +8,6 @@ local ACTIVATE_GLYPH = {}
 local CANCEL_GLYPH_CAST = {}
 
 ---@class USE_GLYPH
----@field spellSlot number
+---@field spellID number
 ---[Documentation](https://wow.gamepedia.com/USE_GLYPH)
 local USE_GLYPH = {}

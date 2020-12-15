@@ -46,6 +46,7 @@ local AnimaDiversionNodeState = {
 	Available = 1,
 	SelectedTemporary = 2,
 	SelectedPermanent = 3,
+	Cooldown = 4,
 }
 
 ---@class AnimaDiversionCostInfo

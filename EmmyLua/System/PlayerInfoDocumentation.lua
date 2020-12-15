@@ -1,7 +1,10 @@
 C_PlayerInfo = {}
 
+---@return boolean canEnter
+---[Documentation](https://wow.gamepedia.com/API_C_PlayerInfo.CanPlayerEnterChromieTime)
+function C_PlayerInfo.CanPlayerEnterChromieTime() end
+
 ---@return boolean canUseAreaLoot
----@return string failureReason
 ---[Documentation](https://wow.gamepedia.com/API_C_PlayerInfo.CanPlayerUseAreaLoot)
 function C_PlayerInfo.CanPlayerUseAreaLoot() end
 
@@ -29,6 +32,10 @@ function C_PlayerInfo.IsPlayerEligibleForNPE() end
 ---@return string failureReason
 ---[Documentation](https://wow.gamepedia.com/API_C_PlayerInfo.IsPlayerEligibleForNPEv2)
 function C_PlayerInfo.IsPlayerEligibleForNPEv2() end
+
+---@return boolean inChromieTime
+---[Documentation](https://wow.gamepedia.com/API_C_PlayerInfo.IsPlayerInChromieTime)
+function C_PlayerInfo.IsPlayerInChromieTime() end
 
 ---@return boolean isRestricted
 ---[Documentation](https://wow.gamepedia.com/API_C_PlayerInfo.IsPlayerNPERestricted)

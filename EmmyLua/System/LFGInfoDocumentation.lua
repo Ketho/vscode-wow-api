@@ -25,15 +25,17 @@ function C_LFGInfo.CanPlayerUsePVP() end
 ---[Documentation](https://wow.gamepedia.com/API_C_LFGInfo.CanPlayerUsePremadeGroup)
 function C_LFGInfo.CanPlayerUsePremadeGroup() end
 
----@return boolean canUse
----@return string failureReason
----[Documentation](https://wow.gamepedia.com/API_C_LFGInfo.CanPlayerUseScenarioFinder)
-function C_LFGInfo.CanPlayerUseScenarioFinder() end
+---[Documentation](https://wow.gamepedia.com/API_C_LFGInfo.ConfirmLfgExpandSearch)
+function C_LFGInfo.ConfirmLfgExpandSearch() end
 
 ---@param category number
 ---@return number[] lfgDungeonIDs
 ---[Documentation](https://wow.gamepedia.com/API_C_LFGInfo.GetAllEntriesForCategory)
 function C_LFGInfo.GetAllEntriesForCategory(category) end
+
+---@return LFGLockInfo[] lockInfo
+---[Documentation](https://wow.gamepedia.com/API_C_LFGInfo.GetLFDLockStates)
+function C_LFGInfo.GetLFDLockStates() end
 
 ---@return number maxLevel
 ---@return boolean isLevelReduced
@@ -166,6 +168,10 @@ local LFG_UPDATE = {}
 ---[Documentation](https://wow.gamepedia.com/LFG_UPDATE_RANDOM_INFO)
 local LFG_UPDATE_RANDOM_INFO = {}
 
+---@class SHOW_LFG_EXPAND_SEARCH_PROMPT
+---[Documentation](https://wow.gamepedia.com/SHOW_LFG_EXPAND_SEARCH_PROMPT)
+local SHOW_LFG_EXPAND_SEARCH_PROMPT = {}
+
 ---@class UPDATE_LFG_LIST
 ---[Documentation](https://wow.gamepedia.com/UPDATE_LFG_LIST)
 local UPDATE_LFG_LIST = {}
@@ -175,3 +181,9 @@ local UPDATE_LFG_LIST = {}
 ---@field winner number
 ---[Documentation](https://wow.gamepedia.com/WARFRONT_COMPLETED)
 local WARFRONT_COMPLETED = {}
+
+---@class LFGLockInfo
+---@field lfgID number
+---@field reason number
+---@field hideEntry boolean
+local LFGLockInfo = {}

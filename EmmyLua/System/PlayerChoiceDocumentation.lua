@@ -55,6 +55,7 @@ local PlayerChoiceInfo = {}
 ---@field widgetSetID number
 ---@field disabledButton boolean
 ---@field desaturatedArt boolean
+---@field disabledOption boolean
 ---@field groupID number
 ---@field headerIconAtlasElement string
 ---@field subHeader string
@@ -63,6 +64,7 @@ local PlayerChoiceInfo = {}
 ---@field soundKitID number
 ---@field hasRewards boolean
 ---@field rarity PlayerChoiceRarity
+---@field rarityColor ColorMixin
 ---@field typeArtID number
 ---@field uiTextureKit string
 ---@field spellID number

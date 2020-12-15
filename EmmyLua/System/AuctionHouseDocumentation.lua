@@ -287,11 +287,9 @@ function C_AuctionHouse.IsFavoriteItem(itemKey) end
 ---[Documentation](https://wow.gamepedia.com/API_C_AuctionHouse.IsSellItemValid)
 function C_AuctionHouse.IsSellItemValid(item, displayError) end
 
----@param specificSearch boolean
 ---@return boolean canSendThrottledMessage
 ---[Documentation](https://wow.gamepedia.com/API_C_AuctionHouse.IsThrottledMessageSystemReady)
----This function is not used in the base UI but is included for AddOn ease-of-use.
-function C_AuctionHouse.IsThrottledMessageSystemReady(specificSearch) end
+function C_AuctionHouse.IsThrottledMessageSystemReady() end
 
 ---@param itemID number
 ---@param itemLevel number
@@ -465,10 +463,6 @@ local AUCTION_HOUSE_THROTTLED_MESSAGE_RESPONSE_RECEIVED = {}
 ---@class AUCTION_HOUSE_THROTTLED_MESSAGE_SENT
 ---[Documentation](https://wow.gamepedia.com/AUCTION_HOUSE_THROTTLED_MESSAGE_SENT)
 local AUCTION_HOUSE_THROTTLED_MESSAGE_SENT = {}
-
----@class AUCTION_HOUSE_THROTTLED_SPECIFIC_SEARCH_READY
----[Documentation](https://wow.gamepedia.com/AUCTION_HOUSE_THROTTLED_SPECIFIC_SEARCH_READY)
-local AUCTION_HOUSE_THROTTLED_SPECIFIC_SEARCH_READY = {}
 
 ---@class AUCTION_HOUSE_THROTTLED_SYSTEM_READY
 ---[Documentation](https://wow.gamepedia.com/AUCTION_HOUSE_THROTTLED_SYSTEM_READY)

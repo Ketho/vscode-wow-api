@@ -16,6 +16,10 @@ function GetAccountExpansionLevel() end
 ---[Documentation](https://wow.gamepedia.com/API_GetClientDisplayExpansionLevel)
 function GetClientDisplayExpansionLevel() end
 
+---@return string regionName
+---[Documentation](https://wow.gamepedia.com/API_GetCurrentRegionName)
+function GetCurrentRegionName() end
+
 ---@param expansionLevel number
 ---@return ExpansionDisplayInfo info
 ---[Documentation](https://wow.gamepedia.com/API_GetExpansionDisplayInfo)
@@ -61,6 +65,10 @@ function GetMinimumExpansionLevel() end
 ---[Documentation](https://wow.gamepedia.com/API_GetNumExpansions)
 function GetNumExpansions() end
 
+---@return number serverExpansionLevel
+---[Documentation](https://wow.gamepedia.com/API_GetServerExpansionLevel)
+function GetServerExpansionLevel() end
+
 ---@return boolean isExpansionTrialAccount
 ---[Documentation](https://wow.gamepedia.com/API_IsExpansionTrial)
 function IsExpansionTrial() end
@@ -73,6 +81,10 @@ function IsTrialAccount() end
 ---[Documentation](https://wow.gamepedia.com/API_IsVeteranTrialAccount)
 function IsVeteranTrialAccount() end
 
+---@param response SubscriptionInterstitialResponseType
+---[Documentation](https://wow.gamepedia.com/API_SendSubscriptionInterstitialResponse)
+function SendSubscriptionInterstitialResponse(response) end
+
 ---@class MAX_EXPANSION_LEVEL_UPDATED
 ---[Documentation](https://wow.gamepedia.com/MAX_EXPANSION_LEVEL_UPDATED)
 local MAX_EXPANSION_LEVEL_UPDATED = {}
@@ -80,6 +92,25 @@ local MAX_EXPANSION_LEVEL_UPDATED = {}
 ---@class MIN_EXPANSION_LEVEL_UPDATED
 ---[Documentation](https://wow.gamepedia.com/MIN_EXPANSION_LEVEL_UPDATED)
 local MIN_EXPANSION_LEVEL_UPDATED = {}
+
+---@class SHOW_SUBSCRIPTION_INTERSTITIAL
+---@field type SubscriptionInterstitialType
+---[Documentation](https://wow.gamepedia.com/SHOW_SUBSCRIPTION_INTERSTITIAL)
+local SHOW_SUBSCRIPTION_INTERSTITIAL = {}
+
+---@class SubscriptionInterstitialResponseType
+local SubscriptionInterstitialResponseType = {
+	Clicked = 0,
+	Closed = 1,
+	WebRedirect = 2,
+}
+
+---@class SubscriptionInterstitialType
+local SubscriptionInterstitialType = {
+	Standard = 0,
+	LeftNpeArea = 1,
+	MaxLevel = 2,
+}
 
 ---@class ExpansionDisplayInfo
 ---@field logo number

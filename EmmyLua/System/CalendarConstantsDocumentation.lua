@@ -209,4 +209,5 @@ local HolidayFlags = {
 	DontShowInCalendar = 2,
 	DontDisplayEnd = 4,
 	DontDisplayBanner = 8,
+	NotAvailableClientSide = 16,
 }

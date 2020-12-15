@@ -45,6 +45,11 @@ function C_SpecializationInfo.GetPvpTalentSlotUnlockLevel(talentIndex) end
 ---[Documentation](https://wow.gamepedia.com/API_C_SpecializationInfo.GetPvpTalentUnlockLevel)
 function C_SpecializationInfo.GetPvpTalentUnlockLevel(talentID) end
 
+---@param specSetID number
+---@return number[] specIDs
+---[Documentation](https://wow.gamepedia.com/API_C_SpecializationInfo.GetSpecIDs)
+function C_SpecializationInfo.GetSpecIDs(specSetID) end
+
 ---@param specializationID number
 ---@return number[] spellID
 ---[Documentation](https://wow.gamepedia.com/API_C_SpecializationInfo.GetSpellsDisplay)
@@ -58,6 +63,11 @@ function C_SpecializationInfo.IsInitialized() end
 ---@return boolean locked
 ---[Documentation](https://wow.gamepedia.com/API_C_SpecializationInfo.IsPvpTalentLocked)
 function C_SpecializationInfo.IsPvpTalentLocked(talentID) end
+
+---@param specSetID number
+---@return boolean matches
+---[Documentation](https://wow.gamepedia.com/API_C_SpecializationInfo.MatchesCurrentSpecSet)
+function C_SpecializationInfo.MatchesCurrentSpecSet(specSetID) end
 
 ---@param talentID number
 ---@param locked boolean

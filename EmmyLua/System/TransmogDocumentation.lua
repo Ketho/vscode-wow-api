@@ -7,16 +7,20 @@ function C_Transmog.ClearAllPending() end
 ---[Documentation](https://wow.gamepedia.com/API_C_Transmog.ClearPending)
 function C_Transmog.ClearPending(transmogLocation) end
 
----@param slotID number
 ---@param transmogID number
 ---@return number categoryID
 ---[Documentation](https://wow.gamepedia.com/API_C_Transmog.GetBaseCategory)
-function C_Transmog.GetBaseCategory(slotID, transmogID) end
+function C_Transmog.GetBaseCategory(transmogID) end
 
 ---@param itemModifiedAppearanceID number
 ---@return number creatureDisplayID
 ---[Documentation](https://wow.gamepedia.com/API_C_Transmog.GetCreatureDisplayIDForSource)
 function C_Transmog.GetCreatureDisplayIDForSource(itemModifiedAppearanceID) end
+
+---@param itemModifiedAppearanceID number
+---@return number itemID
+---[Documentation](https://wow.gamepedia.com/API_C_Transmog.GetItemIDForSource)
+function C_Transmog.GetItemIDForSource(itemModifiedAppearanceID) end
 
 ---@param inventoryType number
 ---@return number slot
@@ -46,8 +50,10 @@ function C_Transmog.GetSlotUseError(transmogLocation) end
 ---@return number baseVisualID
 ---@return number appliedSourceID
 ---@return number appliedVisualID
+---@return number appliedCategoryID
 ---@return number pendingSourceID
 ---@return number pendingVisualID
+---@return number pendingCategoryID
 ---@return boolean hasUndo
 ---@return boolean isHideVisual
 ---@return number itemSubclass
@@ -56,8 +62,9 @@ function C_Transmog.GetSlotVisualInfo(transmogLocation) end
 
 ---@param transmogLocation TransmogLocationMixin
 ---@param transmogID number
+---@param categoryID number
 ---[Documentation](https://wow.gamepedia.com/API_C_Transmog.SetPending)
-function C_Transmog.SetPending(transmogLocation, transmogID) end
+function C_Transmog.SetPending(transmogLocation, transmogID, categoryID) end
 
 ---@class TRANSMOG_COLLECTION_CAMERA_UPDATE
 ---[Documentation](https://wow.gamepedia.com/TRANSMOG_COLLECTION_CAMERA_UPDATE)
@@ -123,6 +130,39 @@ local TRANSMOGRIFY_SUCCESS = {}
 ---@field action string
 ---[Documentation](https://wow.gamepedia.com/TRANSMOGRIFY_UPDATE)
 local TRANSMOGRIFY_UPDATE = {}
+
+---@class TransmogCollectionType
+local TransmogCollectionType = {
+	Head = 0,
+	Shoulder = 1,
+	Back = 2,
+	Chest = 3,
+	Shirt = 4,
+	Tabard = 5,
+	Wrist = 6,
+	Hands = 7,
+	Waist = 8,
+	Legs = 9,
+	Feet = 10,
+	Wand = 11,
+	OneHAxe = 12,
+	OneHSword = 13,
+	OneHMace = 14,
+	Dagger = 15,
+	Fist = 16,
+	Shield = 17,
+	Holdable = 18,
+	TwoHAxe = 19,
+	TwoHSword = 20,
+	TwoHMace = 21,
+	Staff = 22,
+	Polearm = 23,
+	Bow = 24,
+	Gun = 25,
+	Crossbow = 26,
+	Warglaives = 27,
+	Paired = 28,
+}
 
 ---@class TransmogModification
 local TransmogModification = {

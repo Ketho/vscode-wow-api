@@ -5,6 +5,11 @@ C_ReportSystem = {}
 ---[Documentation](https://wow.gamepedia.com/API_C_ReportSystem.CanReportPlayer)
 function C_ReportSystem.CanReportPlayer(playerLocation) end
 
+---@param playerLocation PlayerLocationMixin
+---@return boolean canReport
+---[Documentation](https://wow.gamepedia.com/API_C_ReportSystem.CanReportPlayerForLanguage)
+function C_ReportSystem.CanReportPlayerForLanguage(playerLocation) end
+
 ---@param complaintType string
 ---@param playerLocation PlayerLocationMixin
 ---@return number token

@@ -85,7 +85,9 @@ function C_TradeSkillUI.IsEmptySkillLineCategory(categoryID) end
 function C_TradeSkillUI.SetRecipeRepeatCount(recipeSpellID, numCasts, optionalReagents) end
 
 ---@class NEW_RECIPE_LEARNED
----@field spellID number
+---@field recipeID number
+---@field recipeLevel number
+---@field baseRecipeID number
 ---[Documentation](https://wow.gamepedia.com/NEW_RECIPE_LEARNED)
 local NEW_RECIPE_LEARNED = {}
 
@@ -144,6 +146,7 @@ local OptionalReagentItemFlag = {
 }
 
 ---@class OptionalReagentSlot
+---@field requiredSkillRank number
 ---@field slotText string
 ---@field options number[]
 local OptionalReagentSlot = {}

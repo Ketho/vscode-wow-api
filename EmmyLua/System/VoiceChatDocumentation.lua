@@ -68,6 +68,11 @@ function C_VoiceChat.GetCurrentVoiceChatConnectionStatusCode() end
 ---[Documentation](https://wow.gamepedia.com/API_C_VoiceChat.GetInputVolume)
 function C_VoiceChat.GetInputVolume() end
 
+---@param clubId string
+---@return VoiceChannelErrorReason errorReason
+---[Documentation](https://wow.gamepedia.com/API_C_VoiceChat.GetJoinClubVoiceChannelError)
+function C_VoiceChat.GetJoinClubVoiceChannelError(clubId) end
+
 ---@return VoiceChatMember memberInfo
 ---[Documentation](https://wow.gamepedia.com/API_C_VoiceChat.GetLocalPlayerActiveChannelMemberInfo)
 function C_VoiceChat.GetLocalPlayerActiveChannelMemberInfo() end
@@ -499,6 +504,12 @@ local VOICE_CHAT_SILENCED_CHANGED = {}
 local CommunicationMode = {
 	PushToTalk = 0,
 	OpenMic = 1,
+}
+
+---@class VoiceChannelErrorReason
+local VoiceChannelErrorReason = {
+	Unknown = 0,
+	IsBattleNetChannel = 1,
 }
 
 ---@class VoiceChatStatusCode

@@ -46,6 +46,9 @@ function C_GossipInfo.GetPoiInfo(uiMapID, gossipPoiID) end
 ---[Documentation](https://wow.gamepedia.com/API_C_GossipInfo.GetText)
 function C_GossipInfo.GetText() end
 
+---[Documentation](https://wow.gamepedia.com/API_C_GossipInfo.RefreshOptions)
+function C_GossipInfo.RefreshOptions() end
+
 ---@param index number
 ---[Documentation](https://wow.gamepedia.com/API_C_GossipInfo.SelectActiveQuest)
 function C_GossipInfo.SelectActiveQuest(index) end
@@ -84,14 +87,41 @@ local GOSSIP_CONFIRM_CANCEL = {}
 ---[Documentation](https://wow.gamepedia.com/GOSSIP_ENTER_CODE)
 local GOSSIP_ENTER_CODE = {}
 
+---@class GOSSIP_OPTIONS_REFRESHED
+---[Documentation](https://wow.gamepedia.com/GOSSIP_OPTIONS_REFRESHED)
+local GOSSIP_OPTIONS_REFRESHED = {}
+
 ---@class GOSSIP_SHOW
 ---@field uiTextureKit string
 ---[Documentation](https://wow.gamepedia.com/GOSSIP_SHOW)
 local GOSSIP_SHOW = {}
 
+---@class GossipOptionRewardType
+local GossipOptionRewardType = {
+	Item = 0,
+	Currency = 1,
+}
+
+---@class GossipOptionStatus
+local GossipOptionStatus = {
+	Available = 0,
+	Unavailable = 1,
+	Locked = 2,
+	AlreadyComplete = 3,
+}
+
+---@class GossipOptionRewardInfo
+---@field id number
+---@field quantity number
+---@field rewardType GossipOptionRewardType
+local GossipOptionRewardInfo = {}
+
 ---@class GossipOptionUIInfo
 ---@field name string
 ---@field type string
+---@field rewards GossipOptionRewardInfo[]
+---@field status GossipOptionStatus
+---@field spellID number
 local GossipOptionUIInfo = {}
 
 ---@class GossipPoiInfo

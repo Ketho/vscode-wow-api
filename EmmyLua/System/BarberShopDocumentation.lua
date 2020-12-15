@@ -7,6 +7,9 @@ function C_BarberShop.ApplyCustomizationChoices() end
 ---[Documentation](https://wow.gamepedia.com/API_C_BarberShop.Cancel)
 function C_BarberShop.Cancel() end
 
+---[Documentation](https://wow.gamepedia.com/API_C_BarberShop.ClearPreviewChoices)
+function C_BarberShop.ClearPreviewChoices() end
+
 ---@return CharCustomizationCategory[] categories
 ---[Documentation](https://wow.gamepedia.com/API_C_BarberShop.GetAvailableCustomizations)
 function C_BarberShop.GetAvailableCustomizations() end
@@ -23,12 +26,21 @@ function C_BarberShop.GetCurrentCharacterData() end
 ---[Documentation](https://wow.gamepedia.com/API_C_BarberShop.GetCurrentCost)
 function C_BarberShop.GetCurrentCost() end
 
+---@return boolean hasChanges
+---[Documentation](https://wow.gamepedia.com/API_C_BarberShop.HasAnyChanges)
+function C_BarberShop.HasAnyChanges() end
+
 ---@return boolean isViewingAlteredForm
 ---[Documentation](https://wow.gamepedia.com/API_C_BarberShop.IsViewingAlteredForm)
 function C_BarberShop.IsViewingAlteredForm() end
 
 ---[Documentation](https://wow.gamepedia.com/API_C_BarberShop.OldBarberShopLoaded)
 function C_BarberShop.OldBarberShopLoaded() end
+
+---@param optionID number
+---@param choiceID number
+---[Documentation](https://wow.gamepedia.com/API_C_BarberShop.PreviewCustomizationChoice)
+function C_BarberShop.PreviewCustomizationChoice(optionID, choiceID) end
 
 ---[Documentation](https://wow.gamepedia.com/API_C_BarberShop.ResetCameraRotation)
 function C_BarberShop.ResetCameraRotation() end
@@ -77,6 +89,10 @@ function C_BarberShop.ZoomCamera(zoomAmount) end
 ---@class BARBER_SHOP_APPEARANCE_APPLIED
 ---[Documentation](https://wow.gamepedia.com/BARBER_SHOP_APPEARANCE_APPLIED)
 local BARBER_SHOP_APPEARANCE_APPLIED = {}
+
+---@class BARBER_SHOP_CAMERA_VALUES_UPDATED
+---[Documentation](https://wow.gamepedia.com/BARBER_SHOP_CAMERA_VALUES_UPDATED)
+local BARBER_SHOP_CAMERA_VALUES_UPDATED = {}
 
 ---@class BARBER_SHOP_CLOSE
 ---[Documentation](https://wow.gamepedia.com/BARBER_SHOP_CLOSE)

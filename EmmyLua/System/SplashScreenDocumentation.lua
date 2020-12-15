@@ -7,8 +7,9 @@ function C_SplashScreen.AcknowledgeSplash() end
 ---[Documentation](https://wow.gamepedia.com/API_C_SplashScreen.CanViewSplashScreen)
 function C_SplashScreen.CanViewSplashScreen() end
 
+---@param fromGameMenu boolean
 ---[Documentation](https://wow.gamepedia.com/API_C_SplashScreen.RequestLatestSplashScreen)
-function C_SplashScreen.RequestLatestSplashScreen() end
+function C_SplashScreen.RequestLatestSplashScreen(fromGameMenu) end
 
 ---@class OPEN_SPLASH_SCREEN
 ---@field info SplashScreenInfo

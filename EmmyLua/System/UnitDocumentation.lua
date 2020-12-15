@@ -80,6 +80,11 @@ function SetPortraitTextureFromCreatureDisplayID(textureObject, creatureDisplayI
 function UnitAlliedRaceInfo(unit) end
 
 ---@param unit string
+---@return number ID
+---[Documentation](https://wow.gamepedia.com/API_UnitChromieTimeID)
+function UnitChromieTimeID(unit) end
+
+---@param unit string
 ---@return string className
 ---@return string classFilename
 ---@return number classID
@@ -93,6 +98,11 @@ function UnitClass(unit) end
 function UnitClassBase(unit) end
 
 ---@param unit string
+---@return boolean inPartyShard
+---[Documentation](https://wow.gamepedia.com/API_UnitInPartyShard)
+function UnitInPartyShard(unit) end
+
+---@param unit string
 ---@return boolean isConnected
 ---[Documentation](https://wow.gamepedia.com/API_UnitIsConnected)
 function UnitIsConnected(unit) end
@@ -104,24 +114,14 @@ function UnitIsConnected(unit) end
 function UnitIsOwnerOrControllerOfUnit(controllingUnit, controlledUnit) end
 
 ---@param unit string
----@return boolean warModeActive
----[Documentation](https://wow.gamepedia.com/API_UnitIsWarModeActive)
-function UnitIsWarModeActive(unit) end
-
----@param unit string
----@return boolean warModeDesired
----[Documentation](https://wow.gamepedia.com/API_UnitIsWarModeDesired)
-function UnitIsWarModeDesired(unit) end
-
----@param unit string
----@return boolean warModePhased
----[Documentation](https://wow.gamepedia.com/API_UnitIsWarModePhased)
-function UnitIsWarModePhased(unit) end
-
----@param unit string
 ---@return boolean nameplateShowsWidgetsOnly
 ---[Documentation](https://wow.gamepedia.com/API_UnitNameplateShowsWidgetsOnly)
 function UnitNameplateShowsWidgetsOnly(unit) end
+
+---@param unit string
+---@return PhaseReason reason
+---[Documentation](https://wow.gamepedia.com/API_UnitPhaseReason)
+function UnitPhaseReason(unit) end
 
 ---@param unitToken string
 ---@param powerType PowerType
@@ -313,6 +313,7 @@ local PLAYER_LEAVE_COMBAT = {}
 ---@class PLAYER_LEVEL_CHANGED
 ---@field oldLevel number
 ---@field newLevel number
+---@field real boolean
 ---[Documentation](https://wow.gamepedia.com/PLAYER_LEVEL_CHANGED)
 local PLAYER_LEVEL_CHANGED = {}
 
@@ -444,6 +445,11 @@ local SPELL_CONFIRMATION_TIMEOUT = {}
 ---[Documentation](https://wow.gamepedia.com/UNIT_ABSORB_AMOUNT_CHANGED)
 local UNIT_ABSORB_AMOUNT_CHANGED = {}
 
+---@class UNIT_AREA_CHANGED
+---@field unitTarget string
+---[Documentation](https://wow.gamepedia.com/UNIT_AREA_CHANGED)
+local UNIT_AREA_CHANGED = {}
+
 ---@class UNIT_ATTACK
 ---@field unitTarget string
 ---[Documentation](https://wow.gamepedia.com/UNIT_ATTACK)
@@ -487,6 +493,11 @@ local UNIT_COMBAT = {}
 ---@field isConnected boolean
 ---[Documentation](https://wow.gamepedia.com/UNIT_CONNECTION)
 local UNIT_CONNECTION = {}
+
+---@class UNIT_CTR_OPTIONS
+---@field unitTarget string
+---[Documentation](https://wow.gamepedia.com/UNIT_CTR_OPTIONS)
+local UNIT_CTR_OPTIONS = {}
 
 ---@class UNIT_DAMAGE
 ---@field unitTarget string
@@ -768,6 +779,14 @@ local UPDATE_STEALTH = {}
 ---@field radians number
 ---[Documentation](https://wow.gamepedia.com/VEHICLE_ANGLE_UPDATE)
 local VEHICLE_ANGLE_UPDATE = {}
+
+---@class PhaseReason
+local PhaseReason = {
+	Phasing = 0,
+	Sharding = 1,
+	WarMode = 2,
+	ChromieTime = 3,
+}
 
 ---@class PowerType
 local PowerType = {

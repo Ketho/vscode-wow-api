@@ -90,10 +90,20 @@ function C_Item.GetItemQualityByID(itemInfo) end
 ---[Documentation](https://wow.gamepedia.com/API_C_Item.GetStackCount)
 function C_Item.GetStackCount(itemLocation) end
 
+---@param itemInfo string
+---@return boolean isAnimaItem
+---[Documentation](https://wow.gamepedia.com/API_C_Item.IsAnimaItemByID)
+function C_Item.IsAnimaItemByID(itemInfo) end
+
 ---@param itemLocation ItemLocationMixin
 ---@return boolean isBound
 ---[Documentation](https://wow.gamepedia.com/API_C_Item.IsBound)
 function C_Item.IsBound(itemLocation) end
+
+---@param itemLoc ItemLocationMixin
+---@return boolean isConduit
+---[Documentation](https://wow.gamepedia.com/API_C_Item.IsItemConduit)
+function C_Item.IsItemConduit(itemLoc) end
 
 ---@param itemLoc ItemLocationMixin
 ---@return boolean isCorrupted
@@ -119,6 +129,11 @@ function C_Item.IsItemDataCached(itemLocation) end
 ---@return boolean isCached
 ---[Documentation](https://wow.gamepedia.com/API_C_Item.IsItemDataCachedByID)
 function C_Item.IsItemDataCachedByID(itemInfo) end
+
+---@param itemInfo string
+---@return boolean isKeystone
+---[Documentation](https://wow.gamepedia.com/API_C_Item.IsItemKeystoneByID)
+function C_Item.IsItemKeystoneByID(itemInfo) end
 
 ---@param itemLocation ItemLocationMixin
 ---@return boolean isLocked
@@ -184,6 +199,12 @@ local END_BOUND_TRADEABLE = {}
 ---@field success boolean
 ---[Documentation](https://wow.gamepedia.com/GET_ITEM_INFO_RECEIVED)
 local GET_ITEM_INFO_RECEIVED = {}
+
+---@class ITEM_CHANGED
+---@field previousHyperlink string
+---@field newHyperlink string
+---[Documentation](https://wow.gamepedia.com/ITEM_CHANGED)
+local ITEM_CHANGED = {}
 
 ---@class ITEM_DATA_LOAD_RESULT
 ---@field itemID number

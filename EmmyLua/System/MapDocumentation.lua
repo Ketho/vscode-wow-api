@@ -1,5 +1,10 @@
 C_Map = {}
 
+---@param uiMapID number
+---@return boolean canSet
+---[Documentation](https://wow.gamepedia.com/API_C_Map.CanSetUserWaypointOnMap)
+function C_Map.CanSetUserWaypointOnMap(uiMapID) end
+
 ---[Documentation](https://wow.gamepedia.com/API_C_Map.ClearUserWaypoint)
 function C_Map.ClearUserWaypoint() end
 
@@ -179,6 +184,11 @@ function C_Map.GetWorldPosFromMapPos(uiMapID, mapPosition) end
 function C_Map.HasUserWaypoint() end
 
 ---@param uiMapID number
+---@return boolean isValid
+---[Documentation](https://wow.gamepedia.com/API_C_Map.IsMapValidForNavBarDropDown)
+function C_Map.IsMapValidForNavBarDropDown(uiMapID) end
+
+---@param uiMapID number
 ---@return boolean hasArt
 ---[Documentation](https://wow.gamepedia.com/API_C_Map.MapHasArt)
 function C_Map.MapHasArt(uiMapID) end
@@ -229,11 +239,32 @@ local MapCanvasPosition = {
 	TopRight = 4,
 }
 
+---@class UIMapFlag
+local UIMapFlag = {
+	NoHighlight = 1,
+	ShowOverlays = 2,
+	ShowTaxiNodes = 4,
+	GarrisonMap = 8,
+	FallbackToParentMap = 16,
+	NoHighlightTexture = 32,
+	ShowTaskObjectives = 64,
+	NoWorldPositions = 128,
+	HideArchaeologyDigs = 256,
+	Deprecated = 512,
+	HideIcons = 1024,
+	HideVignettes = 2048,
+	ForceAllOverlayExplored = 4096,
+	FlightMapShowZoomOut = 8192,
+	FlightMapAutoZoom = 16384,
+	ForceOnNavbar = 32768,
+}
+
 ---@class UIMapSystem
 local UIMapSystem = {
 	World = 0,
 	Taxi = 1,
 	Adventure = 2,
+	Minimap = 3,
 }
 
 ---@class UIMapType
@@ -267,6 +298,7 @@ local MapLinkInfo = {}
 ---@field name string
 ---@field mapType UIMapType
 ---@field parentMapID number
+---@field flags number
 local UiMapDetails = {}
 
 ---@class UiMapGroupMemberInfo

@@ -17,6 +17,7 @@ local AuctionHouseFilter = {
 	EpicQuality = 8,
 	LegendaryQuality = 9,
 	ArtifactQuality = 10,
+	LegendaryCraftedItemOnly = 11,
 }
 
 ---@class AuctionHouseItemSortOrder

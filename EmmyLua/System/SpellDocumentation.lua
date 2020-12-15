@@ -6,6 +6,11 @@ C_Spell = {}
 function C_Spell.DoesSpellExist(spellID) end
 
 ---@param spellID number
+---@return string rarityBorderAtlas
+---[Documentation](https://wow.gamepedia.com/API_C_Spell.GetMawPowerBorderAtlasBySpellID)
+function C_Spell.GetMawPowerBorderAtlasBySpellID(spellID) end
+
+---@param spellID number
 ---@return boolean isCached
 ---[Documentation](https://wow.gamepedia.com/API_C_Spell.IsSpellDataCached)
 function C_Spell.IsSpellDataCached(spellID) end

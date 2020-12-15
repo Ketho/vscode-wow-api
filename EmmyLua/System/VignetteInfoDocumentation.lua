@@ -34,6 +34,8 @@ local VIGNETTES_UPDATED = {}
 local VignetteType = {
 	Normal = 0,
 	PvPBounty = 1,
+	Torghast = 2,
+	Treasure = 3,
 }
 
 ---@class VignetteInfo
@@ -42,6 +44,7 @@ local VignetteType = {
 ---@field name string
 ---@field isDead boolean
 ---@field onWorldMap boolean
+---@field zoneInfiniteAOI boolean
 ---@field onMinimap boolean
 ---@field isUnique boolean
 ---@field inFogOfWar boolean

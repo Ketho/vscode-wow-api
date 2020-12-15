@@ -1,3 +1,15 @@
+C_Tutorial = {}
+
+---[Documentation](https://wow.gamepedia.com/API_C_Tutorial.AbandonTutorialArea)
+function C_Tutorial.AbandonTutorialArea() end
+
+---[Documentation](https://wow.gamepedia.com/API_C_Tutorial.ReturnToTutorialArea)
+function C_Tutorial.ReturnToTutorialArea() end
+
+---@class LEAVING_TUTORIAL_AREA
+---[Documentation](https://wow.gamepedia.com/LEAVING_TUTORIAL_AREA)
+local LEAVING_TUTORIAL_AREA = {}
+
 ---@class NPE_TUTORIAL_UPDATE
 ---[Documentation](https://wow.gamepedia.com/NPE_TUTORIAL_UPDATE)
 local NPE_TUTORIAL_UPDATE = {}

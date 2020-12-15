@@ -79,6 +79,11 @@ function C_PvP.GetAvailableBrawlInfo() end
 ---[Documentation](https://wow.gamepedia.com/API_C_PvP.GetBattlefieldVehicleInfo)
 function C_PvP.GetBattlefieldVehicleInfo(vehicleIndex, uiMapID) end
 
+---@param uiMapID number
+---@return BattlefieldVehicleInfo[] vehicles
+---[Documentation](https://wow.gamepedia.com/API_C_PvP.GetBattlefieldVehicles)
+function C_PvP.GetBattlefieldVehicles(uiMapID) end
+
 ---@param brawlType BrawlType
 ---@return number honor
 ---@return number experience
@@ -133,6 +138,12 @@ function C_PvP.GetPostMatchCurrencyRewards() end
 ---@return PVPPostMatchItemReward[] rewards
 ---[Documentation](https://wow.gamepedia.com/API_C_PvP.GetPostMatchItemRewards)
 function C_PvP.GetPostMatchItemRewards() end
+
+---@param tierEnum number
+---@param bracketEnum number
+---@return number id
+---[Documentation](https://wow.gamepedia.com/API_C_PvP.GetPvpTierID)
+function C_PvP.GetPvpTierID(tierEnum, bracketEnum) end
 
 ---@param tierID number
 ---@return PvpTierInfo pvpTierInfo

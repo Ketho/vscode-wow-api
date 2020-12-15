@@ -26,7 +26,7 @@ local ALLIED_RACE_OPEN = {}
 ---@field raceID number
 ---@field maleModelID number
 ---@field femaleModelID number
----@field achievementID number
+---@field achievementIds number[]
 ---@field maleName string
 ---@field femaleName string
 ---@field description string

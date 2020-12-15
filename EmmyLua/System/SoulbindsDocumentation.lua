@@ -10,15 +10,90 @@ function C_Soulbinds.ActivateSoulbind(soulbindID) end
 ---[Documentation](https://wow.gamepedia.com/API_C_Soulbinds.CanActivateSoulbind)
 function C_Soulbinds.CanActivateSoulbind(soulbindID) end
 
----[Documentation](https://wow.gamepedia.com/API_C_Soulbinds.CloseSoulbindForge)
-function C_Soulbinds.CloseSoulbindForge() end
+---@return boolean result
+---[Documentation](https://wow.gamepedia.com/API_C_Soulbinds.CanModifySoulbind)
+function C_Soulbinds.CanModifySoulbind() end
 
----[Documentation](https://wow.gamepedia.com/API_C_Soulbinds.EndInteraction)
-function C_Soulbinds.EndInteraction() end
+---@param soulbindID number
+---@return boolean result
+---@return string errorDescription
+---[Documentation](https://wow.gamepedia.com/API_C_Soulbinds.CanResetConduitsInSoulbind)
+function C_Soulbinds.CanResetConduitsInSoulbind(soulbindID) end
+
+---@return boolean result
+---[Documentation](https://wow.gamepedia.com/API_C_Soulbinds.CanSwitchActiveSoulbindTreeBranch)
+function C_Soulbinds.CanSwitchActiveSoulbindTreeBranch() end
+
+---[Documentation](https://wow.gamepedia.com/API_C_Soulbinds.CloseUI)
+function C_Soulbinds.CloseUI() end
+
+---@param soulbindID number
+---[Documentation](https://wow.gamepedia.com/API_C_Soulbinds.CommitPendingConduitsInSoulbind)
+function C_Soulbinds.CommitPendingConduitsInSoulbind(soulbindID) end
+
+---@param soulbindID number
+---@param conduitID number
+---@return number nodeID
+---[Documentation](https://wow.gamepedia.com/API_C_Soulbinds.FindNodeIDActuallyInstalled)
+function C_Soulbinds.FindNodeIDActuallyInstalled(soulbindID, conduitID) end
+
+---@param soulbindID number
+---@param conduitID number
+---@return number nodeID
+---[Documentation](https://wow.gamepedia.com/API_C_Soulbinds.FindNodeIDAppearingInstalled)
+function C_Soulbinds.FindNodeIDAppearingInstalled(soulbindID, conduitID) end
+
+---@param soulbindID number
+---@param conduitID number
+---@return number nodeID
+---[Documentation](https://wow.gamepedia.com/API_C_Soulbinds.FindNodeIDPendingInstall)
+function C_Soulbinds.FindNodeIDPendingInstall(soulbindID, conduitID) end
+
+---@param soulbindID number
+---@param conduitID number
+---@return number nodeID
+---[Documentation](https://wow.gamepedia.com/API_C_Soulbinds.FindNodeIDPendingUninstall)
+function C_Soulbinds.FindNodeIDPendingUninstall(soulbindID, conduitID) end
 
 ---@return number soulbindID
 ---[Documentation](https://wow.gamepedia.com/API_C_Soulbinds.GetActiveSoulbindID)
 function C_Soulbinds.GetActiveSoulbindID() end
+
+---@return number charges
+---[Documentation](https://wow.gamepedia.com/API_C_Soulbinds.GetConduitCharges)
+function C_Soulbinds.GetConduitCharges() end
+
+---@return number charges
+---[Documentation](https://wow.gamepedia.com/API_C_Soulbinds.GetConduitChargesCapacity)
+function C_Soulbinds.GetConduitChargesCapacity() end
+
+---@param conduitType SoulbindConduitType
+---@return ConduitCollectionData[] collectionData
+---[Documentation](https://wow.gamepedia.com/API_C_Soulbinds.GetConduitCollection)
+function C_Soulbinds.GetConduitCollection(conduitType) end
+
+---@return number count
+---[Documentation](https://wow.gamepedia.com/API_C_Soulbinds.GetConduitCollectionCount)
+function C_Soulbinds.GetConduitCollectionCount() end
+
+---@param conduitID number
+---@return ConduitCollectionData collectionData
+---[Documentation](https://wow.gamepedia.com/API_C_Soulbinds.GetConduitCollectionData)
+function C_Soulbinds.GetConduitCollectionData(conduitID) end
+
+---@return ConduitCollectionData collectionData
+---[Documentation](https://wow.gamepedia.com/API_C_Soulbinds.GetConduitCollectionDataAtCursor)
+function C_Soulbinds.GetConduitCollectionDataAtCursor() end
+
+---@param virtualID number
+---@return ConduitCollectionData collectionData
+---[Documentation](https://wow.gamepedia.com/API_C_Soulbinds.GetConduitCollectionDataByVirtualID)
+function C_Soulbinds.GetConduitCollectionDataByVirtualID(virtualID) end
+
+---@param nodeID number
+---@return number conduitID
+---[Documentation](https://wow.gamepedia.com/API_C_Soulbinds.GetConduitDisplayed)
+function C_Soulbinds.GetConduitDisplayed(nodeID) end
 
 ---@param conduitID number
 ---@param rank number
@@ -26,51 +101,87 @@ function C_Soulbinds.GetActiveSoulbindID() end
 ---[Documentation](https://wow.gamepedia.com/API_C_Soulbinds.GetConduitHyperlink)
 function C_Soulbinds.GetConduitHyperlink(conduitID, rank) end
 
+---@param nodeID number
+---@return number conduitID
+---[Documentation](https://wow.gamepedia.com/API_C_Soulbinds.GetConduitIDPendingInstall)
+function C_Soulbinds.GetConduitIDPendingInstall(nodeID) end
+
+---@param conduitID number
+---@param rank number
+---@return number itemLevel
+---[Documentation](https://wow.gamepedia.com/API_C_Soulbinds.GetConduitItemLevel)
+function C_Soulbinds.GetConduitItemLevel(conduitID, rank) end
+
+---@param conduitID number
+---@param rank number
+---@return number quality
+---[Documentation](https://wow.gamepedia.com/API_C_Soulbinds.GetConduitQuality)
+function C_Soulbinds.GetConduitQuality(conduitID, rank) end
+
+---@param conduitID number
+---@return number conduitRank
+---[Documentation](https://wow.gamepedia.com/API_C_Soulbinds.GetConduitRankFromCollection)
+function C_Soulbinds.GetConduitRankFromCollection(conduitID) end
+
 ---@param conduitID number
 ---@param conduitRank number
 ---@return number spellID
 ---[Documentation](https://wow.gamepedia.com/API_C_Soulbinds.GetConduitSpellID)
 function C_Soulbinds.GetConduitSpellID(conduitID, conduitRank) end
 
----@param itemLocation ItemLocationMixin
----@return SoulbindConduitType type
----[Documentation](https://wow.gamepedia.com/API_C_Soulbinds.GetItemConduitType)
-function C_Soulbinds.GetItemConduitType(itemLocation) end
+---@param nodeID number
+---@return number conduitID
+---[Documentation](https://wow.gamepedia.com/API_C_Soulbinds.GetInstalledConduitID)
+function C_Soulbinds.GetInstalledConduitID(nodeID) end
+
+---@param nodeID number
+---@return SoulbindNode node
+---[Documentation](https://wow.gamepedia.com/API_C_Soulbinds.GetNode)
+function C_Soulbinds.GetNode(nodeID) end
 
 ---@param soulbindID number
 ---@return SoulbindData data
 ---[Documentation](https://wow.gamepedia.com/API_C_Soulbinds.GetSoulbindData)
 function C_Soulbinds.GetSoulbindData(soulbindID) end
 
----@param covenantID number
----@return number[] soulbindID
----[Documentation](https://wow.gamepedia.com/API_C_Soulbinds.GetSoulbindIDs)
-function C_Soulbinds.GetSoulbindIDs(covenantID) end
+---@return number count
+---[Documentation](https://wow.gamepedia.com/API_C_Soulbinds.GetTotalConduitChargesPending)
+function C_Soulbinds.GetTotalConduitChargesPending() end
+
+---@param soulbindID number
+---@return number count
+---[Documentation](https://wow.gamepedia.com/API_C_Soulbinds.GetTotalConduitChargesPendingInSoulbind)
+function C_Soulbinds.GetTotalConduitChargesPendingInSoulbind(soulbindID) end
 
 ---@param treeID number
 ---@return SoulbindTree tree
 ---[Documentation](https://wow.gamepedia.com/API_C_Soulbinds.GetTree)
 function C_Soulbinds.GetTree(treeID) end
 
----@param nodeID number
+---@param soulbindID number
 ---@return boolean result
----[Documentation](https://wow.gamepedia.com/API_C_Soulbinds.HasInstalledConduit)
-function C_Soulbinds.HasInstalledConduit(nodeID) end
-
----@param nodeID number
----@param itemLocation ItemLocationMixin
----@return SoulbindConduitInstallResult result
----[Documentation](https://wow.gamepedia.com/API_C_Soulbinds.InstallConduitInSlot)
-function C_Soulbinds.InstallConduitInSlot(nodeID, itemLocation) end
+---[Documentation](https://wow.gamepedia.com/API_C_Soulbinds.HasAnyInstalledConduitInSoulbind)
+function C_Soulbinds.HasAnyInstalledConduitInSoulbind(soulbindID) end
 
 ---@return boolean result
----[Documentation](https://wow.gamepedia.com/API_C_Soulbinds.IsAtSoulbindForge)
-function C_Soulbinds.IsAtSoulbindForge() end
+---[Documentation](https://wow.gamepedia.com/API_C_Soulbinds.HasAnyPendingConduits)
+function C_Soulbinds.HasAnyPendingConduits() end
 
----@param itemLocation ItemLocationMixin
----@return boolean isConduit
----[Documentation](https://wow.gamepedia.com/API_C_Soulbinds.IsItemConduit)
-function C_Soulbinds.IsItemConduit(itemLocation) end
+---@param soulbindID number
+---@return boolean result
+---[Documentation](https://wow.gamepedia.com/API_C_Soulbinds.HasPendingConduitsInSoulbind)
+function C_Soulbinds.HasPendingConduitsInSoulbind(soulbindID) end
+
+---@param nodeID number
+---@return boolean result
+---[Documentation](https://wow.gamepedia.com/API_C_Soulbinds.IsConduitInstalled)
+function C_Soulbinds.IsConduitInstalled(nodeID) end
+
+---@param soulbindID number
+---@param conduitID number
+---@return boolean result
+---[Documentation](https://wow.gamepedia.com/API_C_Soulbinds.IsConduitInstalledInSoulbind)
+function C_Soulbinds.IsConduitInstalledInSoulbind(soulbindID, conduitID) end
 
 ---@param itemInfo string
 ---@return boolean result
@@ -78,22 +189,52 @@ function C_Soulbinds.IsItemConduit(itemLocation) end
 function C_Soulbinds.IsItemConduitByItemInfo(itemInfo) end
 
 ---@param nodeID number
----[Documentation](https://wow.gamepedia.com/API_C_Soulbinds.LearnNode)
-function C_Soulbinds.LearnNode(nodeID) end
+---@return boolean result
+---[Documentation](https://wow.gamepedia.com/API_C_Soulbinds.IsNodePendingModify)
+function C_Soulbinds.IsNodePendingModify(nodeID) end
 
 ---@param soulbindID number
----[Documentation](https://wow.gamepedia.com/API_C_Soulbinds.ResetSoulbind)
-function C_Soulbinds.ResetSoulbind(soulbindID) end
+---@return boolean result
+---[Documentation](https://wow.gamepedia.com/API_C_Soulbinds.IsUnselectedConduitPendingInSoulbind)
+function C_Soulbinds.IsUnselectedConduitPendingInSoulbind(soulbindID) end
 
 ---@param nodeID number
----@return boolean result
----[Documentation](https://wow.gamepedia.com/API_C_Soulbinds.UninstallConduitInSlot)
-function C_Soulbinds.UninstallConduitInSlot(nodeID) end
+---@param conduitID number
+---@param type SoulbindConduitTransactionType
+---[Documentation](https://wow.gamepedia.com/API_C_Soulbinds.ModifyNode)
+function C_Soulbinds.ModifyNode(nodeID, conduitID, type) end
+
+---@param nodeID number
+---[Documentation](https://wow.gamepedia.com/API_C_Soulbinds.SelectNode)
+function C_Soulbinds.SelectNode(nodeID) end
+
+---@param nodeID number
+---[Documentation](https://wow.gamepedia.com/API_C_Soulbinds.UnmodifyNode)
+function C_Soulbinds.UnmodifyNode(nodeID) end
 
 ---@class SOULBIND_ACTIVATED
 ---@field soulbindID number
 ---[Documentation](https://wow.gamepedia.com/SOULBIND_ACTIVATED)
 local SOULBIND_ACTIVATED = {}
+
+---@class SOULBIND_CONDUIT_CHARGES_UPDATED
+---@field charges number
+---[Documentation](https://wow.gamepedia.com/SOULBIND_CONDUIT_CHARGES_UPDATED)
+local SOULBIND_CONDUIT_CHARGES_UPDATED = {}
+
+---@class SOULBIND_CONDUIT_COLLECTION_CLEARED
+---[Documentation](https://wow.gamepedia.com/SOULBIND_CONDUIT_COLLECTION_CLEARED)
+local SOULBIND_CONDUIT_COLLECTION_CLEARED = {}
+
+---@class SOULBIND_CONDUIT_COLLECTION_REMOVED
+---@field conduitID number
+---[Documentation](https://wow.gamepedia.com/SOULBIND_CONDUIT_COLLECTION_REMOVED)
+local SOULBIND_CONDUIT_COLLECTION_REMOVED = {}
+
+---@class SOULBIND_CONDUIT_COLLECTION_UPDATED
+---@field collectionData ConduitCollectionData
+---[Documentation](https://wow.gamepedia.com/SOULBIND_CONDUIT_COLLECTION_UPDATED)
+local SOULBIND_CONDUIT_COLLECTION_UPDATED = {}
 
 ---@class SOULBIND_CONDUIT_INSTALLED
 ---@field nodeID number
@@ -103,6 +244,7 @@ local SOULBIND_CONDUIT_INSTALLED = {}
 
 ---@class SOULBIND_CONDUIT_UNINSTALLED
 ---@field nodeID number
+---@field data SoulbindConduitData
 ---[Documentation](https://wow.gamepedia.com/SOULBIND_CONDUIT_UNINSTALLED)
 local SOULBIND_CONDUIT_UNINSTALLED = {}
 
@@ -129,6 +271,28 @@ local SOULBIND_NODE_UNLEARNED = {}
 ---[Documentation](https://wow.gamepedia.com/SOULBIND_NODE_UPDATED)
 local SOULBIND_NODE_UPDATED = {}
 
+---@class SOULBIND_PATH_CHANGED
+---[Documentation](https://wow.gamepedia.com/SOULBIND_PATH_CHANGED)
+local SOULBIND_PATH_CHANGED = {}
+
+---@class SOULBIND_PENDING_CONDUIT_CHANGED
+---@field nodeID number
+---@field conduitID number
+---[Documentation](https://wow.gamepedia.com/SOULBIND_PENDING_CONDUIT_CHANGED)
+local SOULBIND_PENDING_CONDUIT_CHANGED = {}
+
+---@class ConduitCollectionData
+---@field conduitID number
+---@field conduitRank number
+---@field conduitItemLevel number
+---@field conduitType SoulbindConduitType
+---@field conduitSpecSetID number
+---@field conduitSpecIDs number[]
+---@field conduitSpecName string
+---@field covenantID number
+---@field conduitItemID number
+local ConduitCollectionData = {}
+
 ---@class SoulbindConduitData
 ---@field conduitID number
 ---@field conduitRank number
@@ -140,9 +304,11 @@ local SoulbindConduitData = {}
 ---@field name string
 ---@field description string
 ---@field textureKit string
+---@field unlocked boolean
+---@field cvarIndex number
 ---@field tree SoulbindTree
 ---@field modelSceneData SoulbindModelSceneData
----@field resetData SoulbindResetData
+---@field activationSoundKitID number
 local SoulbindData = {}
 
 ---@class SoulbindModelSceneData
@@ -162,17 +328,8 @@ local SoulbindModelSceneData = {}
 ---@field state SoulbindNodeState
 ---@field conduitType SoulbindConduitType
 ---@field parentNodeIDs number[]
+---@field failureRenownRequirement number
 local SoulbindNode = {}
-
----@class SoulbindResetCurrencyData
----@field currencyID number
----@field quantity number
-local SoulbindResetCurrencyData = {}
-
----@class SoulbindResetData
----@field goldCost number
----@field currencyCosts SoulbindResetCurrencyData[]
-local SoulbindResetData = {}
 
 ---@class SoulbindTree
 ---@field editable boolean

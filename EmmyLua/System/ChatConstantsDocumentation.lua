@@ -2,6 +2,7 @@
 local ChatChannelRuleset = {
 	None = 0,
 	Mentor = 1,
+	Disabled = 2,
 }
 
 ---@class ChatChannelType

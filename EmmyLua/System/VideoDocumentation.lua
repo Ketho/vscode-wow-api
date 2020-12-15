@@ -4,6 +4,10 @@ C_VideoOptions = {}
 ---[Documentation](https://wow.gamepedia.com/API_C_VideoOptions.GetGxAdapterInfo)
 function C_VideoOptions.GetGxAdapterInfo() end
 
+---@class ADAPTER_LIST_CHANGED
+---[Documentation](https://wow.gamepedia.com/ADAPTER_LIST_CHANGED)
+local ADAPTER_LIST_CHANGED = {}
+
 ---@class DISPLAY_SIZE_CHANGED
 ---[Documentation](https://wow.gamepedia.com/DISPLAY_SIZE_CHANGED)
 local DISPLAY_SIZE_CHANGED = {}

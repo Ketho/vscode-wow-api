@@ -3,6 +3,11 @@ C_ChromieTime = {}
 ---[Documentation](https://wow.gamepedia.com/API_C_ChromieTime.CloseUI)
 function C_ChromieTime.CloseUI() end
 
+---@param expansionRecID number
+---@return ChromieTimeExpansionInfo info
+---[Documentation](https://wow.gamepedia.com/API_C_ChromieTime.GetChromieTimeExpansionOption)
+function C_ChromieTime.GetChromieTimeExpansionOption(expansionRecID) end
+
 ---@return ChromieTimeExpansionInfo[] expansionOptions
 ---[Documentation](https://wow.gamepedia.com/API_C_ChromieTime.GetChromieTimeExpansionOptions)
 function C_ChromieTime.GetChromieTimeExpansionOptions() end
@@ -25,4 +30,6 @@ local CHROMIE_TIME_OPEN = {}
 ---@field description string
 ---@field mapAtlas string
 ---@field previewAtlas string
+---@field completed boolean
+---@field alreadyOn boolean
 local ChromieTimeExpansionInfo = {}

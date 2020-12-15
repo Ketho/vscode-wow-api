@@ -78,6 +78,11 @@ function C_UIWidgetManager.GetPowerBarWidgetSetID() end
 function C_UIWidgetManager.GetScenarioHeaderCurrenciesAndBackgroundWidgetVisualizationInfo(widgetID) end
 
 ---@param widgetID number
+---@return ScenarioHeaderTimerWidgetVisualizationInfo widgetInfo
+---[Documentation](https://wow.gamepedia.com/API_C_UIWidgetManager.GetScenarioHeaderTimerWidgetVisualizationInfo)
+function C_UIWidgetManager.GetScenarioHeaderTimerWidgetVisualizationInfo(widgetID) end
+
+---@param widgetID number
 ---@return SpellDisplayVisualizationInfo widgetInfo
 ---[Documentation](https://wow.gamepedia.com/API_C_UIWidgetManager.GetSpellDisplayVisualizationInfo)
 function C_UIWidgetManager.GetSpellDisplayVisualizationInfo(widgetID) end
@@ -117,9 +122,9 @@ function C_UIWidgetManager.GetTextureWithAnimationVisualizationInfo(widgetID) en
 function C_UIWidgetManager.GetTopCenterWidgetSetID() end
 
 ---@param widgetSetID number
----@return UIWidgetLayoutDirection layoutDirection
----[Documentation](https://wow.gamepedia.com/API_C_UIWidgetManager.GetWidgetLayoutDirectionFromWidgetSetID)
-function C_UIWidgetManager.GetWidgetLayoutDirectionFromWidgetSetID(widgetSetID) end
+---@return UIWidgetSetInfo widgetSetInfo
+---[Documentation](https://wow.gamepedia.com/API_C_UIWidgetManager.GetWidgetSetInfo)
+function C_UIWidgetManager.GetWidgetSetInfo(widgetSetID) end
 
 ---@param widgetID number
 ---@return ZoneControlVisualizationInfo widgetInfo
@@ -229,6 +234,13 @@ local StatusBarValueTextType = {
 ---@class UIWidgetFlag
 local UIWidgetFlag = {
 	UniversalWidget = 1,
+}
+
+---@class UIWidgetFontType
+local UIWidgetFontType = {
+	Normal = 0,
+	Shadow = 1,
+	Outline = 2,
 }
 
 ---@class UIWidgetTextSizeType
@@ -511,6 +523,7 @@ local IconTextAndCurrenciesWidgetVisualizationInfo = {}
 ---@class ScenarioHeaderCurrenciesAndBackgroundWidgetVisualizationInfo
 ---@field shownState WidgetShownState
 ---@field currencies UIWidgetCurrencyInfo[]
+---@field headerText string
 ---@field widgetSizeSetting number
 ---@field textureKit string
 ---@field frameTextureKit string
@@ -522,6 +535,25 @@ local IconTextAndCurrenciesWidgetVisualizationInfo = {}
 ---@field widgetScale UIWidgetScale
 ---@field layoutDirection UIWidgetLayoutDirection
 local ScenarioHeaderCurrenciesAndBackgroundWidgetVisualizationInfo = {}
+
+---@class ScenarioHeaderTimerWidgetVisualizationInfo
+---@field shownState WidgetShownState
+---@field timerMin number
+---@field timerMax number
+---@field timerValue number
+---@field headerText string
+---@field timerTooltip string
+---@field widgetSizeSetting number
+---@field textureKit string
+---@field frameTextureKit string
+---@field hasTimer boolean
+---@field orderIndex number
+---@field widgetTag string
+---@field inAnimType WidgetAnimationType
+---@field outAnimType WidgetAnimationType
+---@field widgetScale UIWidgetScale
+---@field layoutDirection UIWidgetLayoutDirection
+local ScenarioHeaderTimerWidgetVisualizationInfo = {}
 
 ---@class SpellDisplayVisualizationInfo
 ---@field shownState WidgetShownState
@@ -584,6 +616,8 @@ local StatusBarWidgetVisualizationInfo = {}
 ---@field text string
 ---@field tooltip string
 ---@field textSizeType UIWidgetTextSizeType
+---@field fontType UIWidgetFontType
+---@field bottomPadding number
 ---@field widgetSizeSetting number
 ---@field textureKit string
 ---@field frameTextureKit string
@@ -662,6 +696,11 @@ local UIWidgetCurrencyInfo = {}
 ---@field widgetType UIWidgetVisualizationType
 ---@field unitToken string
 local UIWidgetInfo = {}
+
+---@class UIWidgetSetInfo
+---@field layoutDirection UIWidgetSetLayoutDirection
+---@field verticalPadding number
+local UIWidgetSetInfo = {}
 
 ---@class UIWidgetSpellInfo
 ---@field spellID number

@@ -140,5 +140,7 @@ local CurrencyDisplayInfo = {}
 ---@field isTradeable boolean
 ---@field quality ItemQuality
 ---@field maxWeeklyQuantity number
+---@field totalEarned number
 ---@field discovered boolean
+---@field useTotalEarnedForMaxQty boolean
 local CurrencyInfo = {}

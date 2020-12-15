@@ -27,6 +27,14 @@ function C_DateAndTime.GetCalendarTimeFromEpoch(epoch) end
 ---[Documentation](https://wow.gamepedia.com/API_C_DateAndTime.GetCurrentCalendarTime)
 function C_DateAndTime.GetCurrentCalendarTime() end
 
+---@return number seconds
+---[Documentation](https://wow.gamepedia.com/API_C_DateAndTime.GetSecondsUntilDailyReset)
+function C_DateAndTime.GetSecondsUntilDailyReset() end
+
+---@return number seconds
+---[Documentation](https://wow.gamepedia.com/API_C_DateAndTime.GetSecondsUntilWeeklyReset)
+function C_DateAndTime.GetSecondsUntilWeeklyReset() end
+
 ---@return number serverTimeLocal
 ---[Documentation](https://wow.gamepedia.com/API_C_DateAndTime.GetServerTimeLocal)
 function C_DateAndTime.GetServerTimeLocal() end

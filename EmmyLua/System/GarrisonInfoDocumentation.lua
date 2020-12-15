@@ -1,7 +1,7 @@
 C_Garrison = {}
 
 ---@param missionID number
----@param followerID number
+---@param followerID string
 ---@param boardIndex number
 ---@return boolean followerAdded
 ---[Documentation](https://wow.gamepedia.com/API_C_Garrison.AddFollowerToMission)
@@ -10,6 +10,28 @@ function C_Garrison.AddFollowerToMission(missionID, followerID, boardIndex) end
 ---@return AutoCombatDamageClassString[] damageClassStrings
 ---[Documentation](https://wow.gamepedia.com/API_C_Garrison.GetAutoCombatDamageClassValues)
 function C_Garrison.GetAutoCombatDamageClassValues() end
+
+---@param missionID number
+---@return AutoMissionTargetingInfo[] targetInfo
+---[Documentation](https://wow.gamepedia.com/API_C_Garrison.GetAutoMissionBoardState)
+function C_Garrison.GetAutoMissionBoardState(missionID) end
+
+---@param missionID number
+---@return AutoMissionEnvironmentEffect autoMissionEnvEffect
+---[Documentation](https://wow.gamepedia.com/API_C_Garrison.GetAutoMissionEnvironmentEffect)
+function C_Garrison.GetAutoMissionEnvironmentEffect(missionID) end
+
+---@param missionID number
+---@param followerID string
+---@param casterBoardIndex number
+---@return AutoMissionTargetingInfo[] targetInfo
+---[Documentation](https://wow.gamepedia.com/API_C_Garrison.GetAutoMissionTargetingInfo)
+function C_Garrison.GetAutoMissionTargetingInfo(missionID, followerID, casterBoardIndex) end
+
+---@param followerType number
+---@return AutoCombatTroopInfo[] autoTroopInfo
+---[Documentation](https://wow.gamepedia.com/API_C_Garrison.GetAutoTroops)
+function C_Garrison.GetAutoTroops(followerType) end
 
 ---@param autoCombatSpellID number
 ---@return AutoCombatSpellInfo spellInfo
@@ -25,9 +47,10 @@ function C_Garrison.GetCurrentGarrTalentTreeFriendshipFactionID() end
 function C_Garrison.GetCurrentGarrTalentTreeID() end
 
 ---@param garrFollowerID string
+---@param followerLevel number
 ---@return AutoCombatSpellInfo[] spellInfo
 ---[Documentation](https://wow.gamepedia.com/API_C_Garrison.GetFollowerAutoCombatSpells)
-function C_Garrison.GetFollowerAutoCombatSpells(garrFollowerID) end
+function C_Garrison.GetFollowerAutoCombatSpells(garrFollowerID, followerLevel) end
 
 ---@param garrFollowerID string
 ---@return FollowerAutoCombatStatsInfo autoCombatInfo
@@ -105,6 +128,15 @@ function C_Garrison.GetTalentTreeResetInfo(garrTalentTreeID) end
 ---[Documentation](https://wow.gamepedia.com/API_C_Garrison.GetTalentTreeTalentPointResearchInfo)
 function C_Garrison.GetTalentTreeTalentPointResearchInfo(garrTalentTreeID, talentPointIndex, isRespec) end
 
+---@param talentID number
+---@return number worldQuestID
+---[Documentation](https://wow.gamepedia.com/API_C_Garrison.GetTalentUnlockWorldQuest)
+function C_Garrison.GetTalentUnlockWorldQuest(talentID) end
+
+---@return boolean hasAdventures
+---[Documentation](https://wow.gamepedia.com/API_C_Garrison.HasAdventures)
+function C_Garrison.HasAdventures() end
+
 ---@return boolean atGarrisonMissionNPC
 ---[Documentation](https://wow.gamepedia.com/API_C_Garrison.IsAtGarrisonMissionNPC)
 function C_Garrison.IsAtGarrisonMissionNPC() end
@@ -125,13 +157,22 @@ function C_Garrison.IsTalentConditionMet(talentID) end
 function C_Garrison.RegenerateCombatLog(missionID) end
 
 ---@param missionID number
----@param garrAutoSpellID number
----[Documentation](https://wow.gamepedia.com/API_C_Garrison.RequestAutoMissionTargetingInfo)
-function C_Garrison.RequestAutoMissionTargetingInfo(missionID, garrAutoSpellID) end
+---@param followerID string
+---@param boardIndex number
+---[Documentation](https://wow.gamepedia.com/API_C_Garrison.RemoveFollowerFromMission)
+function C_Garrison.RemoveFollowerFromMission(missionID, followerID, boardIndex) end
+
+---@param followerType number
+---[Documentation](https://wow.gamepedia.com/API_C_Garrison.RushHealAllFollowers)
+function C_Garrison.RushHealAllFollowers(followerType) end
 
 ---@param garrFollowerID string
 ---[Documentation](https://wow.gamepedia.com/API_C_Garrison.RushHealFollower)
 function C_Garrison.RushHealFollower(garrFollowerID) end
+
+---@param state boolean
+---[Documentation](https://wow.gamepedia.com/API_C_Garrison.SetAutoCombatSpellFastForward)
+function C_Garrison.SetAutoCombatSpellFastForward(state) end
 
 ---@class GARRISON_ARCHITECT_CLOSED
 ---[Documentation](https://wow.gamepedia.com/GARRISON_ARCHITECT_CLOSED)
@@ -141,13 +182,6 @@ local GARRISON_ARCHITECT_CLOSED = {}
 ---@field followerTypeID number
 ---[Documentation](https://wow.gamepedia.com/GARRISON_ARCHITECT_OPENED)
 local GARRISON_ARCHITECT_OPENED = {}
-
----@class GARRISON_AUTO_MISSION_TARGETING_RESPONSE
----@field missionID number
----@field garrAutoSpellID number
----@field targetInfo AutoMissionTargetingInfo[]
----[Documentation](https://wow.gamepedia.com/GARRISON_AUTO_MISSION_TARGETING_RESPONSE)
-local GARRISON_AUTO_MISSION_TARGETING_RESPONSE = {}
 
 ---@class GARRISON_BUILDING_ACTIVATABLE
 ---@field buildingName string
@@ -210,6 +244,11 @@ local GARRISON_FOLLOWER_CATEGORIES_UPDATED = {}
 ---@field followerDurability number
 ---[Documentation](https://wow.gamepedia.com/GARRISON_FOLLOWER_DURABILITY_CHANGED)
 local GARRISON_FOLLOWER_DURABILITY_CHANGED = {}
+
+---@class GARRISON_FOLLOWER_HEALED
+---@field followerID string
+---[Documentation](https://wow.gamepedia.com/GARRISON_FOLLOWER_HEALED)
+local GARRISON_FOLLOWER_HEALED = {}
 
 ---@class GARRISON_FOLLOWER_LIST_UPDATE
 ---@field followerTypeID number
@@ -389,6 +428,12 @@ local GARRISON_SHOW_LANDING_PAGE = {}
 ---[Documentation](https://wow.gamepedia.com/GARRISON_TALENT_COMPLETE)
 local GARRISON_TALENT_COMPLETE = {}
 
+---@class GARRISON_TALENT_EVENT_UPDATE
+---@field eventType number
+---@field eventID number
+---[Documentation](https://wow.gamepedia.com/GARRISON_TALENT_EVENT_UPDATE)
+local GARRISON_TALENT_EVENT_UPDATE = {}
+
 ---@class GARRISON_TALENT_NPC_CLOSED
 ---[Documentation](https://wow.gamepedia.com/GARRISON_TALENT_NPC_CLOSED)
 local GARRISON_TALENT_NPC_CLOSED = {}
@@ -398,6 +443,17 @@ local GARRISON_TALENT_NPC_CLOSED = {}
 ---@field garrisonTalentTreeID number
 ---[Documentation](https://wow.gamepedia.com/GARRISON_TALENT_NPC_OPENED)
 local GARRISON_TALENT_NPC_OPENED = {}
+
+---@class GARRISON_TALENT_RESEARCH_STARTED
+---@field garrTypeID number
+---@field garrisonTalentTreeID number
+---@field garrTalentID number
+---[Documentation](https://wow.gamepedia.com/GARRISON_TALENT_RESEARCH_STARTED)
+local GARRISON_TALENT_RESEARCH_STARTED = {}
+
+---@class GARRISON_TALENT_UNLOCKS_RESULT
+---[Documentation](https://wow.gamepedia.com/GARRISON_TALENT_UNLOCKS_RESULT)
+local GARRISON_TALENT_UNLOCKS_RESULT = {}
 
 ---@class GARRISON_TALENT_UPDATE
 ---@field garrTypeID number
@@ -466,15 +522,54 @@ local AutoCombatResult = {}
 ---@field cooldown number
 ---@field duration number
 ---@field schoolMask number
+---@field previewMask number
 ---@field icon number
+---@field spellTutorialFlag number
 local AutoCombatSpellInfo = {}
+
+---@class AutoCombatTroopInfo
+---@field name string
+---@field followerID string
+---@field garrFollowerID string
+---@field followerTypeID number
+---@field displayIDs FollowerDisplayID[]
+---@field level number
+---@field quality number
+---@field levelXP number
+---@field maxXP number
+---@field height number
+---@field scale number
+---@field displayScale number
+---@field displayHeight number
+---@field classSpec number
+---@field className string
+---@field flavorText string
+---@field classAtlas string
+---@field portraitIconID number
+---@field textureKit string
+---@field isTroop boolean
+---@field raceID number
+---@field health number
+---@field maxHealth number
+---@field role number
+---@field isAutoTroop boolean
+---@field isCollected boolean
+---@field autoCombatStats FollowerAutoCombatStatsInfo
+---@field autoCombatSpells AutoCombatSpellInfo[]
+local AutoCombatTroopInfo = {}
 
 ---@class AutoMissionCombatEventInfo
 ---@field boardIndex number
 ---@field oldHealth number
 ---@field newHealth number
+---@field maxHealth number
 ---@field points number
 local AutoMissionCombatEventInfo = {}
+
+---@class AutoMissionEnvironmentEffect
+---@field name string
+---@field autoCombatSpellInfo AutoCombatSpellInfo
+local AutoMissionEnvironmentEffect = {}
 
 ---@class AutoMissionEvent
 ---@field type number
@@ -482,6 +577,7 @@ local AutoMissionCombatEventInfo = {}
 ---@field schoolMask number
 ---@field effectIndex number
 ---@field casterBoardIndex number
+---@field auraType number
 ---@field targetInfo AutoMissionCombatEventInfo[]
 local AutoMissionEvent = {}
 
@@ -490,8 +586,8 @@ local AutoMissionEvent = {}
 local AutoMissionRound = {}
 
 ---@class AutoMissionTargetingInfo
----@field casterBoardIndex number
----@field targetIndices number[]
+---@field targetIndex number
+---@field previewType number
 local AutoMissionTargetingInfo = {}
 
 ---@class FollowerAutoCombatStatsInfo
@@ -499,6 +595,7 @@ local AutoMissionTargetingInfo = {}
 ---@field maxHealth number
 ---@field attack number
 ---@field healingTimestamp number
+---@field healCost number
 local FollowerAutoCombatStatsInfo = {}
 
 ---@class FollowerDisplayID
@@ -568,6 +665,7 @@ local GarrisonAbilityInfo = {}
 ---@field role number
 ---@field health number
 ---@field maxHealth number
+---@field attack number
 ---@field boardIndex number
 local GarrisonEnemyEncounterInfo = {}
 

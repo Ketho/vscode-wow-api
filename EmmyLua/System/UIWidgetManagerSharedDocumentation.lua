@@ -45,4 +45,5 @@ local UIWidgetVisualizationType = {
 	CaptureZone = 17,
 	TextureWithAnimation = 18,
 	DiscreteProgressSteps = 19,
+	ScenarioHeaderTimer = 20,
 }

@@ -9,6 +9,11 @@ function C_CampaignInfo.GetAvailableCampaigns() end
 ---[Documentation](https://wow.gamepedia.com/API_C_CampaignInfo.GetCampaignChapterInfo)
 function C_CampaignInfo.GetCampaignChapterInfo(campaignChapterID) end
 
+---@param questID number
+---@return number campaignID
+---[Documentation](https://wow.gamepedia.com/API_C_CampaignInfo.GetCampaignID)
+function C_CampaignInfo.GetCampaignID(questID) end
+
 ---@param campaignID number
 ---@return CampaignInfo campaignInfo
 ---[Documentation](https://wow.gamepedia.com/API_C_CampaignInfo.GetCampaignInfo)
@@ -38,6 +43,11 @@ function C_CampaignInfo.GetState(campaignID) end
 ---@return boolean isCampaignQuest
 ---[Documentation](https://wow.gamepedia.com/API_C_CampaignInfo.IsCampaignQuest)
 function C_CampaignInfo.IsCampaignQuest(questID) end
+
+---@param campaignID number
+---@return boolean useNormalQuestIcons
+---[Documentation](https://wow.gamepedia.com/API_C_CampaignInfo.UsesNormalQuestIcons)
+function C_CampaignInfo.UsesNormalQuestIcons(campaignID) end
 
 ---@class CampaignState
 local CampaignState = {

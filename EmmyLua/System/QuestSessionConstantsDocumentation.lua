@@ -40,4 +40,5 @@ local QuestSessionResult = {
 	InPetBattle = 29,
 	InvalidPublicParty = 30,
 	Unknown = 31,
+	InCombat = 32,
 }
