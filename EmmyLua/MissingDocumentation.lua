@@ -1,3 +1,35 @@
+---@class CharacterAlternateFormData
+---@field Undocumented boolean
+local CharacterAlternateFormData = {}
+
+---@class CurrencyCost
+---@field Undocumented boolean
+local CurrencyCost = {}
+
+---@class OptionalReagentInfo
+---@field Undocumented boolean
+local OptionalReagentInfo = {}
+
+---@class QueueSpecificInfo
+---@field Undocumented boolean
+local QueueSpecificInfo = {}
+
+---@class RuneforgeItemPreviewInfo
+---@field Undocumented boolean
+local RuneforgeItemPreviewInfo = {}
+
+---@class RuneforgeLegendaryComponentInfo
+---@field Undocumented boolean
+local RuneforgeLegendaryComponentInfo = {}
+
+---@class RuneforgeLegendaryCraftDescription
+---@field Undocumented boolean
+local RuneforgeLegendaryCraftDescription = {}
+
+---@class RuneforgePower
+---@field Undocumented boolean
+local RuneforgePower = {}
+
 ---@class CalendarTime
 ---@field year number
 ---@field month number
@@ -100,35 +132,3 @@ local WeeklyRewardChestThresholdType = {
 	AlsoReceive = 4,
 	Concession = 5,
 }
-
----@class CharacterAlternateFormData
----@field Undocumented boolean
-local CharacterAlternateFormData = {}
-
----@class CurrencyCost
----@field Undocumented boolean
-local CurrencyCost = {}
-
----@class OptionalReagentInfo
----@field Undocumented boolean
-local OptionalReagentInfo = {}
-
----@class QueueSpecificInfo
----@field Undocumented boolean
-local QueueSpecificInfo = {}
-
----@class RuneforgeItemPreviewInfo
----@field Undocumented boolean
-local RuneforgeItemPreviewInfo = {}
-
----@class RuneforgeLegendaryComponentInfo
----@field Undocumented boolean
-local RuneforgeLegendaryComponentInfo = {}
-
----@class RuneforgeLegendaryCraftDescription
----@field Undocumented boolean
-local RuneforgeLegendaryCraftDescription = {}
-
----@class RuneforgePower
----@field Undocumented boolean
-local RuneforgePower = {}
