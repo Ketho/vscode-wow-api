@@ -84,13 +84,15 @@ local VignetteInfo =
 		{
 			Name = "VignetteType",
 			Type = "Enumeration",
-			NumValues = 2,
+			NumValues = 4,
 			MinValue = 0,
-			MaxValue = 1,
+			MaxValue = 3,
 			Fields =
 			{
 				{ Name = "Normal", Type = "VignetteType", EnumValue = 0 },
 				{ Name = "PvPBounty", Type = "VignetteType", EnumValue = 1 },
+				{ Name = "Torghast", Type = "VignetteType", EnumValue = 2 },
+				{ Name = "Treasure", Type = "VignetteType", EnumValue = 3 },
 			},
 		},
 		{
@@ -103,6 +105,7 @@ local VignetteInfo =
 				{ Name = "name", Type = "string", Nilable = false },
 				{ Name = "isDead", Type = "bool", Nilable = false },
 				{ Name = "onWorldMap", Type = "bool", Nilable = false },
+				{ Name = "zoneInfiniteAOI", Type = "bool", Nilable = false },
 				{ Name = "onMinimap", Type = "bool", Nilable = false },
 				{ Name = "isUnique", Type = "bool", Nilable = false },
 				{ Name = "inFogOfWar", Type = "bool", Nilable = false },

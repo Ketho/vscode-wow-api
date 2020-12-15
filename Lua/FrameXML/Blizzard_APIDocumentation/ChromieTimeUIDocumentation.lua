@@ -11,6 +11,20 @@ local ChromieTimeUI =
 			Type = "Function",
 		},
 		{
+			Name = "GetChromieTimeExpansionOption",
+			Type = "Function",
+
+			Arguments =
+			{
+				{ Name = "expansionRecID", Type = "number", Nilable = false },
+			},
+
+			Returns =
+			{
+				{ Name = "info", Type = "ChromieTimeExpansionInfo", Nilable = true },
+			},
+		},
+		{
 			Name = "GetChromieTimeExpansionOptions",
 			Type = "Function",
 
@@ -56,6 +70,8 @@ local ChromieTimeUI =
 				{ Name = "description", Type = "string", Nilable = false },
 				{ Name = "mapAtlas", Type = "string", Nilable = false },
 				{ Name = "previewAtlas", Type = "string", Nilable = false },
+				{ Name = "completed", Type = "bool", Nilable = false },
+				{ Name = "alreadyOn", Type = "bool", Nilable = false },
 			},
 		},
 	},

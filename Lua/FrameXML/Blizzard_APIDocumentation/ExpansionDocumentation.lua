@@ -42,6 +42,15 @@ local Expansion =
 			},
 		},
 		{
+			Name = "GetCurrentRegionName",
+			Type = "Function",
+
+			Returns =
+			{
+				{ Name = "regionName", Type = "string", Nilable = false },
+			},
+		},
+		{
 			Name = "GetExpansionDisplayInfo",
 			Type = "Function",
 
@@ -149,6 +158,15 @@ local Expansion =
 			},
 		},
 		{
+			Name = "GetServerExpansionLevel",
+			Type = "Function",
+
+			Returns =
+			{
+				{ Name = "serverExpansionLevel", Type = "number", Nilable = false },
+			},
+		},
+		{
 			Name = "IsExpansionTrial",
 			Type = "Function",
 
@@ -175,6 +193,15 @@ local Expansion =
 				{ Name = "isVeteranTrialAccount", Type = "bool", Nilable = false },
 			},
 		},
+		{
+			Name = "SendSubscriptionInterstitialResponse",
+			Type = "Function",
+
+			Arguments =
+			{
+				{ Name = "response", Type = "SubscriptionInterstitialResponseType", Nilable = false },
+			},
+		},
 	},
 
 	Events =
@@ -189,10 +216,45 @@ local Expansion =
 			Type = "Event",
 			LiteralName = "MIN_EXPANSION_LEVEL_UPDATED",
 		},
+		{
+			Name = "ShowSubscriptionInterstitial",
+			Type = "Event",
+			LiteralName = "SHOW_SUBSCRIPTION_INTERSTITIAL",
+			Payload =
+			{
+				{ Name = "type", Type = "SubscriptionInterstitialType", Nilable = false },
+			},
+		},
 	},
 
 	Tables =
 	{
+		{
+			Name = "SubscriptionInterstitialResponseType",
+			Type = "Enumeration",
+			NumValues = 3,
+			MinValue = 0,
+			MaxValue = 2,
+			Fields =
+			{
+				{ Name = "Clicked", Type = "SubscriptionInterstitialResponseType", EnumValue = 0 },
+				{ Name = "Closed", Type = "SubscriptionInterstitialResponseType", EnumValue = 1 },
+				{ Name = "WebRedirect", Type = "SubscriptionInterstitialResponseType", EnumValue = 2 },
+			},
+		},
+		{
+			Name = "SubscriptionInterstitialType",
+			Type = "Enumeration",
+			NumValues = 3,
+			MinValue = 0,
+			MaxValue = 2,
+			Fields =
+			{
+				{ Name = "Standard", Type = "SubscriptionInterstitialType", EnumValue = 0 },
+				{ Name = "LeftNpeArea", Type = "SubscriptionInterstitialType", EnumValue = 1 },
+				{ Name = "MaxLevel", Type = "SubscriptionInterstitialType", EnumValue = 2 },
+			},
+		},
 		{
 			Name = "ExpansionDisplayInfo",
 			Type = "Structure",

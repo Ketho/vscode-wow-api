@@ -182,6 +182,20 @@ local PvpInfo =
 			},
 		},
 		{
+			Name = "GetBattlefieldVehicles",
+			Type = "Function",
+
+			Arguments =
+			{
+				{ Name = "uiMapID", Type = "number", Nilable = false },
+			},
+
+			Returns =
+			{
+				{ Name = "vehicles", Type = "table", InnerType = "BattlefieldVehicleInfo", Nilable = false },
+			},
+		},
+		{
 			Name = "GetBrawlRewards",
 			Type = "Function",
 
@@ -317,6 +331,21 @@ local PvpInfo =
 			Returns =
 			{
 				{ Name = "rewards", Type = "table", InnerType = "PVPPostMatchItemReward", Nilable = false },
+			},
+		},
+		{
+			Name = "GetPvpTierID",
+			Type = "Function",
+
+			Arguments =
+			{
+				{ Name = "tierEnum", Type = "number", Nilable = false },
+				{ Name = "bracketEnum", Type = "number", Nilable = false },
+			},
+
+			Returns =
+			{
+				{ Name = "id", Type = "number", Nilable = true },
 			},
 		},
 		{

@@ -20,6 +20,10 @@ local BarberShop =
 			Type = "Function",
 		},
 		{
+			Name = "ClearPreviewChoices",
+			Type = "Function",
+		},
+		{
 			Name = "GetAvailableCustomizations",
 			Type = "Function",
 
@@ -56,6 +60,15 @@ local BarberShop =
 			},
 		},
 		{
+			Name = "HasAnyChanges",
+			Type = "Function",
+
+			Returns =
+			{
+				{ Name = "hasChanges", Type = "bool", Nilable = false },
+			},
+		},
+		{
 			Name = "IsViewingAlteredForm",
 			Type = "Function",
 
@@ -67,6 +80,16 @@ local BarberShop =
 		{
 			Name = "OldBarberShopLoaded",
 			Type = "Function",
+		},
+		{
+			Name = "PreviewCustomizationChoice",
+			Type = "Function",
+
+			Arguments =
+			{
+				{ Name = "optionID", Type = "number", Nilable = false },
+				{ Name = "choiceID", Type = "number", Nilable = false },
+			},
 		},
 		{
 			Name = "ResetCameraRotation",
@@ -167,6 +190,11 @@ local BarberShop =
 			Name = "BarberShopAppearanceApplied",
 			Type = "Event",
 			LiteralName = "BARBER_SHOP_APPEARANCE_APPLIED",
+		},
+		{
+			Name = "BarberShopCameraValuesUpdated",
+			Type = "Event",
+			LiteralName = "BARBER_SHOP_CAMERA_VALUES_UPDATED",
 		},
 		{
 			Name = "BarberShopClose",

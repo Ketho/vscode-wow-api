@@ -216,6 +216,20 @@ local UIWidgetManager =
 			},
 		},
 		{
+			Name = "GetScenarioHeaderTimerWidgetVisualizationInfo",
+			Type = "Function",
+
+			Arguments =
+			{
+				{ Name = "widgetID", Type = "number", Nilable = false },
+			},
+
+			Returns =
+			{
+				{ Name = "widgetInfo", Type = "ScenarioHeaderTimerWidgetVisualizationInfo", Nilable = true },
+			},
+		},
+		{
 			Name = "GetSpellDisplayVisualizationInfo",
 			Type = "Function",
 
@@ -323,7 +337,7 @@ local UIWidgetManager =
 			},
 		},
 		{
-			Name = "GetWidgetLayoutDirectionFromWidgetSetID",
+			Name = "GetWidgetSetInfo",
 			Type = "Function",
 
 			Arguments =
@@ -333,7 +347,7 @@ local UIWidgetManager =
 
 			Returns =
 			{
-				{ Name = "layoutDirection", Type = "UIWidgetLayoutDirection", Nilable = false },
+				{ Name = "widgetSetInfo", Type = "UIWidgetSetInfo", Nilable = false },
 			},
 		},
 		{
@@ -547,6 +561,19 @@ local UIWidgetManager =
 			Fields =
 			{
 				{ Name = "UniversalWidget", Type = "UIWidgetFlag", EnumValue = 1 },
+			},
+		},
+		{
+			Name = "UIWidgetFontType",
+			Type = "Enumeration",
+			NumValues = 3,
+			MinValue = 0,
+			MaxValue = 2,
+			Fields =
+			{
+				{ Name = "Normal", Type = "UIWidgetFontType", EnumValue = 0 },
+				{ Name = "Shadow", Type = "UIWidgetFontType", EnumValue = 1 },
+				{ Name = "Outline", Type = "UIWidgetFontType", EnumValue = 2 },
 			},
 		},
 		{
@@ -943,6 +970,30 @@ local UIWidgetManager =
 			{
 				{ Name = "shownState", Type = "WidgetShownState", Nilable = false },
 				{ Name = "currencies", Type = "table", InnerType = "UIWidgetCurrencyInfo", Nilable = false },
+				{ Name = "headerText", Type = "string", Nilable = false },
+				{ Name = "widgetSizeSetting", Type = "number", Nilable = false },
+				{ Name = "textureKit", Type = "string", Nilable = false },
+				{ Name = "frameTextureKit", Type = "string", Nilable = false },
+				{ Name = "hasTimer", Type = "bool", Nilable = false },
+				{ Name = "orderIndex", Type = "number", Nilable = false },
+				{ Name = "widgetTag", Type = "string", Nilable = false },
+				{ Name = "inAnimType", Type = "WidgetAnimationType", Nilable = false },
+				{ Name = "outAnimType", Type = "WidgetAnimationType", Nilable = false },
+				{ Name = "widgetScale", Type = "UIWidgetScale", Nilable = false },
+				{ Name = "layoutDirection", Type = "UIWidgetLayoutDirection", Nilable = false },
+			},
+		},
+		{
+			Name = "ScenarioHeaderTimerWidgetVisualizationInfo",
+			Type = "Structure",
+			Fields =
+			{
+				{ Name = "shownState", Type = "WidgetShownState", Nilable = false },
+				{ Name = "timerMin", Type = "number", Nilable = false },
+				{ Name = "timerMax", Type = "number", Nilable = false },
+				{ Name = "timerValue", Type = "number", Nilable = false },
+				{ Name = "headerText", Type = "string", Nilable = false },
+				{ Name = "timerTooltip", Type = "string", Nilable = false },
 				{ Name = "widgetSizeSetting", Type = "number", Nilable = false },
 				{ Name = "textureKit", Type = "string", Nilable = false },
 				{ Name = "frameTextureKit", Type = "string", Nilable = false },
@@ -1032,6 +1083,8 @@ local UIWidgetManager =
 				{ Name = "text", Type = "string", Nilable = false },
 				{ Name = "tooltip", Type = "string", Nilable = false },
 				{ Name = "textSizeType", Type = "UIWidgetTextSizeType", Nilable = false },
+				{ Name = "fontType", Type = "UIWidgetFontType", Nilable = false },
+				{ Name = "bottomPadding", Type = "number", Nilable = false },
 				{ Name = "widgetSizeSetting", Type = "number", Nilable = false },
 				{ Name = "textureKit", Type = "string", Nilable = false },
 				{ Name = "frameTextureKit", Type = "string", Nilable = false },
@@ -1133,6 +1186,15 @@ local UIWidgetManager =
 				{ Name = "widgetSetID", Type = "number", Nilable = false },
 				{ Name = "widgetType", Type = "UIWidgetVisualizationType", Nilable = false },
 				{ Name = "unitToken", Type = "string", Nilable = true },
+			},
+		},
+		{
+			Name = "UIWidgetSetInfo",
+			Type = "Structure",
+			Fields =
+			{
+				{ Name = "layoutDirection", Type = "UIWidgetSetLayoutDirection", Nilable = false },
+				{ Name = "verticalPadding", Type = "number", Nilable = false },
 			},
 		},
 		{

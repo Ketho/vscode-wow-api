@@ -259,6 +259,20 @@ local Item =
 			},
 		},
 		{
+			Name = "IsAnimaItemByID",
+			Type = "Function",
+
+			Arguments =
+			{
+				{ Name = "itemInfo", Type = "string", Nilable = false },
+			},
+
+			Returns =
+			{
+				{ Name = "isAnimaItem", Type = "bool", Nilable = false },
+			},
+		},
+		{
 			Name = "IsBound",
 			Type = "Function",
 
@@ -270,6 +284,20 @@ local Item =
 			Returns =
 			{
 				{ Name = "isBound", Type = "bool", Nilable = false },
+			},
+		},
+		{
+			Name = "IsItemConduit",
+			Type = "Function",
+
+			Arguments =
+			{
+				{ Name = "itemLoc", Type = "table", Mixin = "ItemLocationMixin", Nilable = false },
+			},
+
+			Returns =
+			{
+				{ Name = "isConduit", Type = "bool", Nilable = false },
 			},
 		},
 		{
@@ -340,6 +368,20 @@ local Item =
 			Returns =
 			{
 				{ Name = "isCached", Type = "bool", Nilable = false },
+			},
+		},
+		{
+			Name = "IsItemKeystoneByID",
+			Type = "Function",
+
+			Arguments =
+			{
+				{ Name = "itemInfo", Type = "string", Nilable = false },
+			},
+
+			Returns =
+			{
+				{ Name = "isKeystone", Type = "bool", Nilable = false },
 			},
 		},
 		{
@@ -467,6 +509,16 @@ local Item =
 			{
 				{ Name = "itemID", Type = "number", Nilable = false },
 				{ Name = "success", Type = "bool", Nilable = false },
+			},
+		},
+		{
+			Name = "ItemChanged",
+			Type = "Event",
+			LiteralName = "ITEM_CHANGED",
+			Payload =
+			{
+				{ Name = "previousHyperlink", Type = "string", Nilable = false },
+				{ Name = "newHyperlink", Type = "string", Nilable = false },
 			},
 		},
 		{

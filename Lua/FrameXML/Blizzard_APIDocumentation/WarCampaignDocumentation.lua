@@ -30,6 +30,20 @@ local WarCampaign =
 			},
 		},
 		{
+			Name = "GetCampaignID",
+			Type = "Function",
+
+			Arguments =
+			{
+				{ Name = "questID", Type = "number", Nilable = false },
+			},
+
+			Returns =
+			{
+				{ Name = "campaignID", Type = "number", Nilable = false },
+			},
+		},
+		{
 			Name = "GetCampaignInfo",
 			Type = "Function",
 
@@ -111,6 +125,20 @@ local WarCampaign =
 			Returns =
 			{
 				{ Name = "isCampaignQuest", Type = "bool", Nilable = false },
+			},
+		},
+		{
+			Name = "UsesNormalQuestIcons",
+			Type = "Function",
+
+			Arguments =
+			{
+				{ Name = "campaignID", Type = "number", Nilable = false },
+			},
+
+			Returns =
+			{
+				{ Name = "useNormalQuestIcons", Type = "bool", Nilable = false },
 			},
 		},
 	},

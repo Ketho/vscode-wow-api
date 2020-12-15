@@ -75,6 +75,24 @@ local DateAndTime =
 			},
 		},
 		{
+			Name = "GetSecondsUntilDailyReset",
+			Type = "Function",
+
+			Returns =
+			{
+				{ Name = "seconds", Type = "number", Nilable = false },
+			},
+		},
+		{
+			Name = "GetSecondsUntilWeeklyReset",
+			Type = "Function",
+
+			Returns =
+			{
+				{ Name = "seconds", Type = "number", Nilable = false },
+			},
+		},
+		{
 			Name = "GetServerTimeLocal",
 			Type = "Function",
 

@@ -7,6 +7,24 @@ local PlayerMentorship =
 	Functions =
 	{
 		{
+			Name = "GetMentorLevelRequirement",
+			Type = "Function",
+
+			Returns =
+			{
+				{ Name = "level", Type = "number", Nilable = true },
+			},
+		},
+		{
+			Name = "GetMentorOptionalAchievementIDs",
+			Type = "Function",
+
+			Returns =
+			{
+				{ Name = "achievementIDs", Type = "table", InnerType = "number", Nilable = false },
+			},
+		},
+		{
 			Name = "GetMentorshipStatus",
 			Type = "Function",
 
@@ -20,10 +38,38 @@ local PlayerMentorship =
 				{ Name = "status", Type = "PlayerMentorshipStatus", Nilable = false },
 			},
 		},
+		{
+			Name = "IsActivePlayerConsideredNewcomer",
+			Type = "Function",
+
+			Returns =
+			{
+				{ Name = "isConsideredNewcomer", Type = "bool", Nilable = false },
+			},
+		},
+		{
+			Name = "IsMentorRestricted",
+			Type = "Function",
+
+			Returns =
+			{
+				{ Name = "isRestricted", Type = "bool", Nilable = false },
+			},
+		},
 	},
 
 	Events =
 	{
+		{
+			Name = "MentorshipStatusChanged",
+			Type = "Event",
+			LiteralName = "MENTORSHIP_STATUS_CHANGED",
+		},
+		{
+			Name = "NewcomerGraduation",
+			Type = "Event",
+			LiteralName = "NEWCOMER_GRADUATION",
+		},
 	},
 
 	Tables =
