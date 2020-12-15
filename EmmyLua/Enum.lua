@@ -1,4 +1,7 @@
+-- manually updated from KethoDoc / BlizzardInterfaceResources
 Enum = {
+	---@type AddSoulbindConduitReason
+	AddSoulbindConduitReason = {},
 	---@type AnimaDiversionNodeState
 	AnimaDiversionNodeState = {},
 	---@type AuctionHouseCommoditySortOrder
@@ -107,6 +110,8 @@ Enum = {
 	ClubType = {},
 	---@type CommunicationMode
 	CommunicationMode = {},
+	---@type ConquestProgressBarDisplayType
+	ConquestProgressBarDisplayType = {},
 	---@type ConsoleCategory
 	ConsoleCategory = {},
 	---@type ConsoleColorType
@@ -123,6 +128,18 @@ Enum = {
 	CovenantAbilityType = {},
 	---@type CovenantType
 	CovenantType = {},
+	---@type CurrencyDestroyReason
+	CurrencyDestroyReason = {},
+	---@type CurrencyFlags
+	CurrencyFlags = {},
+	---@type CurrencyFlagsB
+	CurrencyFlagsB = {},
+	---@type CurrencyGainFlags
+	CurrencyGainFlags = {},
+	---@type CurrencySource
+	CurrencySource = {},
+	---@type CurrencyTokenCategoryFlags
+	CurrencyTokenCategoryFlags = {},
 	---@type CustomBindingType
 	CustomBindingType = {},
 	---@type Damageclass
@@ -141,12 +158,18 @@ Enum = {
 	FollowerAbilityCastResult = {},
 	---@type GarrAutoBoardIndex
 	GarrAutoBoardIndex = {},
+	---@type GarrAutoCombatSpellTutorialFlag
+	GarrAutoCombatSpellTutorialFlag = {},
+	---@type GarrAutoCombatTutorial
+	GarrAutoCombatTutorial = {},
 	---@type GarrAutoCombatantRole
 	GarrAutoCombatantRole = {},
 	---@type GarrAutoEventFlags
 	GarrAutoEventFlags = {},
 	---@type GarrAutoMissionEventType
 	GarrAutoMissionEventType = {},
+	---@type GarrAutoPreviewTargetType
+	GarrAutoPreviewTargetType = {},
 	---@type GarrFollowerMissionCompleteState
 	GarrFollowerMissionCompleteState = {},
 	---@type GarrFollowerQuality
@@ -173,6 +196,10 @@ Enum = {
 	GarrisonTalentAvailability = {},
 	---@type GarrisonType
 	GarrisonType = {},
+	---@type GossipOptionRewardType
+	GossipOptionRewardType = {},
+	---@type GossipOptionStatus
+	GossipOptionStatus = {},
 	---@type HolidayCalendarFlags
 	HolidayCalendarFlags = {},
 	---@type HolidayFlags
@@ -193,6 +220,8 @@ Enum = {
 	ItemSlotFilterType = {},
 	---@type ItemTryOnReason
 	ItemTryOnReason = {},
+	---@type JailersTowerType
+	JailersTowerType = {},
 	---@type ManipulatorEventType
 	ManipulatorEventType = {},
 	---@type MapCanvasPosition
@@ -211,10 +240,16 @@ Enum = {
 	PartyRequestJoinRelation = {},
 	---@type PetJournalError
 	PetJournalError = {},
+	---@type PhaseReason
+	PhaseReason = {},
 	---@type PlayerChoiceRarity
 	PlayerChoiceRarity = {},
 	---@type PlayerClubRequestStatus
 	PlayerClubRequestStatus = {},
+	---@type PlayerCurrencyFlags
+	PlayerCurrencyFlags = {},
+	---@type PlayerCurrencyFlagsDbFlags
+	PlayerCurrencyFlagsDbFlags = {},
 	---@type PlayerMentorshipApplicationResult
 	PlayerMentorshipApplicationResult = {},
 	---@type PlayerMentorshipStatus
@@ -251,14 +286,24 @@ Enum = {
 	RafRewardType = {},
 	---@type RelativeContentDifficulty
 	RelativeContentDifficulty = {},
+	---@type RuneforgePowerFilter
+	RuneforgePowerFilter = {},
+	---@type RuneforgePowerState
+	RuneforgePowerState = {},
 	---@type ScriptedAnimationBehavior
 	ScriptedAnimationBehavior = {},
 	---@type ScriptedAnimationTrajectory
 	ScriptedAnimationTrajectory = {},
+	---@type ScriptedAnimationTransformation
+	ScriptedAnimationTransformation = {},
+	---@type ScriptedAnimationTransformationTiming
+	ScriptedAnimationTransformationTiming = {},
 	---@type SelfResurrectOptionType
 	SelfResurrectOptionType = {},
 	---@type SoulbindConduitInstallResult
 	SoulbindConduitInstallResult = {},
+	---@type SoulbindConduitTransactionType
+	SoulbindConduitTransactionType = {},
 	---@type SoulbindConduitType
 	SoulbindConduitType = {},
 	---@type SoulbindNodeState
@@ -277,6 +322,10 @@ Enum = {
 	StatusBarOverrideBarTextShownType = {},
 	---@type StatusBarValueTextType
 	StatusBarValueTextType = {},
+	---@type SubscriptionInterstitialResponseType
+	SubscriptionInterstitialResponseType = {},
+	---@type SubscriptionInterstitialType
+	SubscriptionInterstitialType = {},
 	---@type SummonStatus
 	SummonStatus = {},
 	---@type SuperTrackingType
@@ -289,18 +338,26 @@ Enum = {
 	TooltipTextureRelativeRegion = {},
 	---@type TrackedSpellCategory
 	TrackedSpellCategory = {},
+	---@type TransmogCollectionType
+	TransmogCollectionType = {},
 	---@type TransmogModification
 	TransmogModification = {},
 	---@type TransmogSource
 	TransmogSource = {},
 	---@type TransmogType
 	TransmogType = {},
+	---@type UICursorType
+	UICursorType = {},
+	---@type UIMapFlag
+	UIMapFlag = {},
 	---@type UIMapSystem
 	UIMapSystem = {},
 	---@type UIMapType
 	UIMapType = {},
 	---@type UIWidgetFlag
 	UIWidgetFlag = {},
+	---@type UIWidgetFontType
+	UIWidgetFontType = {},
 	---@type UIWidgetLayoutDirection
 	UIWidgetLayoutDirection = {},
 	---@type UIWidgetScale
@@ -319,6 +376,8 @@ Enum = {
 	VasPurchaseProgress = {},
 	---@type VignetteType
 	VignetteType = {},
+	---@type VoiceChannelErrorReason
+	VoiceChannelErrorReason = {},
 	---@type VoiceChatStatusCode
 	VoiceChatStatusCode = {},
 	---@type WeeklyRewardChestThresholdType
@@ -426,18 +485,17 @@ Enum = {
 	LE_EXPANSION_MISTS_OF_PANDARIA = 4,
 	LE_EXPANSION_WARLORDS_OF_DRAENOR = 5,
 	LE_EXPANSION_LEGION = 6,
-	LE_EXPANSION_LEVEL_PREVIOUS = 7,
 	LE_EXPANSION_BATTLE_FOR_AZEROTH = 7,
+	LE_EXPANSION_LEVEL_PREVIOUS = 7,
 	LE_EXPANSION_SHADOWLANDS = 8,
 	LE_EXPANSION_LEVEL_CURRENT = 8,
 	LE_EXPANSION_10_0 = 9,
 	LE_EXPANSION_11_0 = 10,
 
-	NUM_LE_FRAME_TUTORIALS = 79,
+	NUM_LE_FRAME_TUTORIALS = 99,
 	LE_FRAME_TUTORIAL_TALENT = 1,
 	LE_FRAME_TUTORIAL_SPEC = 2,
 	LE_FRAME_TUTORIAL_GLYPH = 3,
-	LE_FRAME_TUTORIAL_ACCOUNT_CLUB_FINDER_NEW_COMMUNITY_JOINED = 3,
 	LE_FRAME_TUTORIAL_SPELLBOOK = 4,
 	LE_FRAME_TUTORIAL_PROFESSIONS = 5,
 	LE_FRAME_TUTORIAL_CORE_ABILITITES = 6,
@@ -514,10 +572,31 @@ Enum = {
 	LE_FRAME_TUTORIAL_CLUB_FINDER_NEW_LANGUAGE_FILTER = 77,
 	LE_FRAME_TUTORIAL_OPTIONAL_REAGENT_CRAFTING = 78,
 	LE_FRAME_TUTORIAL_CAMPAIGN_LORE_TEXT = 79,
+	LE_FRAME_TUTORIAL_NEWCOMER_GRADUATION = 80,
+	LE_FRAME_TUTORIAL_NEWCOMER_GRADUATION_REMINDER = 81,
+	LE_FRAME_TUTORIAL_RUNEFORGE_LEGENDARY_CRAFT = 82,
+	LE_FRAME_TUTORIAL_ANIMA_DIVERSION_SPEND_ANIMA = 83,
+	LE_FRAME_TUTORIAL_ANIMA_DIVERSION_FILL_BAR = 84,
+	LE_FRAME_TUTORIAL_ANIMA_DIVERSION_ACTIVATE_LOCATION = 85,
+	LE_FRAME_TUTORIAL_ANIMA_DIVERSION_REINFORCE_LOCATION = 86,
+	LE_FRAME_TUTORIAL_9_0_GRRISON_LANDING_PAGE_BUTTON_CALLINGS = 87,
+	LE_FRAME_TUTORIAL_9_0_GRRISON_LANDING_PAGE_CALLINGS = 88,
+	LE_FRAME_TUTORIAL_9_0_JAILERS_TOWER_BUFFS = 89,
+	LE_FRAME_TUTORIAL_EMBER_COURT_MAP = 90,
+	LE_FRAME_TUTORIAL_EYE_OF_JAILER = 91,
+	LE_FRAME_TUTORIAL_SOULBIND_PATH_SELECT = 92,
+	LE_FRAME_TUTORIAL_SOULBIND_CONDUIT_INSTALL = 93,
+	LE_FRAME_TUTORIAL_SOULBIND_CONDUIT_LEARN = 94,
+	LE_FRAME_TUTORIAL_FIRST_RUNEFORGE_LEGENDARY_POWER = 95,
+	LE_FRAME_TUTORIAL_COVENANT_RENOWN_REWARDS = 96,
+	LE_FRAME_TUTORIAL_COVENANT_RENOWN_PROGRESS = 97,
+	LE_FRAME_TUTORIAL_COVENANT_RESERVOIR_DEPOSIT = 98,
+	LE_FRAME_TUTORIAL_COVENANT_RESERVOIR_FEATURES = 99,
 
 	NUM_LE_FRAME_TUTORIAL_ACCCOUNTS = 3,
 	LE_FRAME_TUTORIAL_ACCCOUNT_RAF_INTRO = 1,
 	LE_FRAME_TUTORIAL_ACCCOUNT_CLUB_FINDER_NEW_FEATURE = 2,
+	LE_FRAME_TUTORIAL_ACCOUNT_CLUB_FINDER_NEW_COMMUNITY_JOINED = 3,
 
 	NUM_LE_INVITE_REQUEST_TYPES = 3,
 	LE_INVITE_CONFIRMATION_REQUEST = 1,
@@ -763,37 +842,6 @@ Enum = {
 	LE_TRACKER_SORTING_PROXIMITY = 2,
 	LE_TRACKER_SORTING_DIFFICULTY_LOW = 3,
 	LE_TRACKER_SORTING_DIFFICULTY_HIGH = 4,
-
-	NUM_LE_TRANSMOG_COLLECTION_TYPES = 29,
-	LE_TRANSMOG_COLLECTION_TYPE_HEAD = 1,
-	LE_TRANSMOG_COLLECTION_TYPE_SHOULDER = 2,
-	LE_TRANSMOG_COLLECTION_TYPE_BACK = 3,
-	LE_TRANSMOG_COLLECTION_TYPE_CHEST = 4,
-	LE_TRANSMOG_COLLECTION_TYPE_SHIRT = 5,
-	LE_TRANSMOG_COLLECTION_TYPE_TABARD = 6,
-	LE_TRANSMOG_COLLECTION_TYPE_WRIST = 7,
-	LE_TRANSMOG_COLLECTION_TYPE_HANDS = 8,
-	LE_TRANSMOG_COLLECTION_TYPE_WAIST = 9,
-	LE_TRANSMOG_COLLECTION_TYPE_LEGS = 10,
-	LE_TRANSMOG_COLLECTION_TYPE_FEET = 11,
-	LE_TRANSMOG_COLLECTION_TYPE_WAND = 12,
-	LE_TRANSMOG_COLLECTION_TYPE_1H_AXE = 13,
-	LE_TRANSMOG_COLLECTION_TYPE_1H_SWORD = 14,
-	LE_TRANSMOG_COLLECTION_TYPE_1H_MACE = 15,
-	LE_TRANSMOG_COLLECTION_TYPE_DAGGER = 16,
-	LE_TRANSMOG_COLLECTION_TYPE_FIST = 17,
-	LE_TRANSMOG_COLLECTION_TYPE_SHIELD = 18,
-	LE_TRANSMOG_COLLECTION_TYPE_HOLDABLE = 19,
-	LE_TRANSMOG_COLLECTION_TYPE_2H_AXE = 20,
-	LE_TRANSMOG_COLLECTION_TYPE_2H_SWORD = 21,
-	LE_TRANSMOG_COLLECTION_TYPE_2H_MACE = 22,
-	LE_TRANSMOG_COLLECTION_TYPE_STAFF = 23,
-	LE_TRANSMOG_COLLECTION_TYPE_POLEARM = 24,
-	LE_TRANSMOG_COLLECTION_TYPE_BOW = 25,
-	LE_TRANSMOG_COLLECTION_TYPE_GUN = 26,
-	LE_TRANSMOG_COLLECTION_TYPE_CROSSBOW = 27,
-	LE_TRANSMOG_COLLECTION_TYPE_WARGLAIVES = 28,
-	LE_TRANSMOG_COLLECTION_TYPE_PAIRED = 29,
 
 	NUM_LE_TRANSMOG_SEARCH_TYPES = 3,
 	LE_TRANSMOG_SEARCH_TYPE_ITEMS = 1,

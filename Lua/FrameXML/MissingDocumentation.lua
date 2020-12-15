@@ -6,7 +6,7 @@ local Missing =
 {
 	Tables =
 	{
-		-- placeholders
+		-- placeholder structures
 		{ Name = "CharacterAlternateFormData", Type = "Structure", Fields = Empty }, -- BarberShopDocumentation.lua
 		{ Name = "CurrencyCost", Type = "Structure", Fields = Empty }, -- LegendaryCraftingDocumentation.lua
 		{ Name = "OptionalReagentInfo", Type = "Structure", Fields = Empty }, -- TradeSkillUIDocumentation.lua
@@ -15,6 +15,15 @@ local Missing =
 		{ Name = "RuneforgeLegendaryComponentInfo", Type = "Structure", Fields = Empty }, -- LegendaryCraftingDocumentation.lua
 		{ Name = "RuneforgeLegendaryCraftDescription", Type = "Structure", Fields = Empty }, -- LegendaryCraftingDocumentation.lua
 		{ Name = "RuneforgePower", Type = "Structure", Fields = Empty }, -- LegendaryCraftingDocumentation.lua
+		-- placeholder enums, unused in apidocs
+		{ Name = "AddSoulbindConduitReason", Type = "Enumeration", Fields = Empty },
+		{ Name = "CharacterServiceInfoFlag", Type = "Enumeration", Fields = Empty },
+		{ Name = "ManipulatorEventType", Type = "Enumeration", Fields = Empty },
+		{ Name = "QuestPOIQuestTypes", Type = "Enumeration", Fields = Empty },
+		{ Name = "ScriptedAnimationTransformation", Type = "Enumeration", Fields = Empty },
+		{ Name = "ScriptedAnimationTransformationTiming", Type = "Enumeration", Fields = Empty },
+		{ Name = "SoulbindConduitInstallResult", Type = "Enumeration", Fields = Empty },
+		{ Name = "VasPurchaseProgress", Type = "Enumeration", Fields = Empty },
 		-- structures
 		{
 			-- C_Calendar; CalendarDocumentation.lua
@@ -104,7 +113,7 @@ local Missing =
 				{ Name = "visualID", Type = "number" },
 			},
 		},
-		-- enums
+		-- enums used in apidocs
 		{
 			-- WeeklyRewardsDocumentation.lua
 			Name = "CachedRewardType",
