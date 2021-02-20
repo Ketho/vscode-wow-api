@@ -1,30 +1,5 @@
--- cannot do multiple inheritance in emmylua with Region,ScriptObject
----@class Frame : Region
+---@class Frame : Region, ScriptObject
 local Frame = {}
-
----@param scriptType string
----@param bindingType number
----@return function handler
----[Documentation](https://wow.gamepedia.com/API_ScriptObject_GetScript)
-function Frame:GetScript(scriptType, bindingType) end
-
----@param scriptType string
----@return boolean hasScript
----[Documentation](https://wow.gamepedia.com/API_ScriptObject_HasScript)
-function Frame:HasScript(scriptType) end
-
----@param scriptType string
----@param handler function
----@param bindingType number
----@return boolean success
----[Documentation](https://wow.gamepedia.com/API_ScriptObject_HookScript)
-function Frame:HookScript(scriptType, handler, bindingType) end
-
----@param scriptType string
----@param handler function
----[Documentation](https://wow.gamepedia.com/API_ScriptObject_SetScript)
-function Frame:SetScript(scriptType, handler) end
-
 
 ---[Documentation](https://wow.gamepedia.com/API_Frame_CanChangeAttribute)
 function Frame:CanChangeAttribute() end
