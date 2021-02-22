@@ -188,3 +188,17 @@ function Region:Show() end
 
 ---[Documentation](https://wow.gamepedia.com/API_Region_StopAnimating)
 function Region:StopAnimating() end
+
+
+---@class LayeredRegion : Region
+---[Documentation](https://wow.gamepedia.com/UIOBJECT_LayeredRegion)
+local LayeredRegion = {}
+
+---[Documentation](https://wow.gamepedia.com/API_LayeredRegion_GetDrawLayer)
+function LayeredRegion:GetDrawLayer() end
+
+---[Documentation](https://wow.gamepedia.com/API_LayeredRegion_SetDrawLayer)
+function LayeredRegion:SetDrawLayer() end
+
+---[Documentation](https://wow.gamepedia.com/API_LayeredRegion_SetVertexColor)
+function LayeredRegion:SetVertexColor() end
