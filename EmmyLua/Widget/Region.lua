@@ -1,4 +1,4 @@
----@class Region : UIObject
+---@class Region : ParentedObject
 ---[Documentation](https://wow.gamepedia.com/UIOBJECT_Region)
 local Region = {}
 
