@@ -51,12 +51,18 @@ export function activate(context: vscode.ExtensionContext) {
 }
 */
 
-// get emmylua path
-let extension = vscode.extensions.getExtension("ketho.wow-api")
-let path = extension?.extensionPath+"\\EmmyLua"
+function setLuaLibrary(v: any) {
+	let extension = vscode.extensions.getExtension("ketho.wow-api")
+	let path = extension?.extensionPath+"\\EmmyLua"
 
-// add it to the external libraries
-let luaConfig = vscode.workspace.getConfiguration("Lua")
-let library : any = luaConfig.get("workspace.library")
-library[path] = true
-luaConfig.update("workspace.library", library, true)
+	let luaConfig = vscode.workspace.getConfiguration("Lua")
+	let library : any = luaConfig.get("workspace.library")
+	library[path] = v
+	luaConfig.update("workspace.library", library, true)
+}
+
+setLuaLibrary(true)
+
+module.exports = {
+	setLuaLibrary
+}
