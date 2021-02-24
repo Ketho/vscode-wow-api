@@ -9,5 +9,5 @@ require "Lua/Tests/Tests"
 
 local Exporter = require("Lua/Exporter")
 Exporter:ExportEvents("EmmyLua/Event.lua")
-Exporter:ExportEventsLiterals("EmmyLua/EventLiteral.lua")
+Exporter:ExportEventsLiterals("EmmyLua/Types/EventName.lua")
 print("Finished.")

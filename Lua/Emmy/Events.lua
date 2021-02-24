@@ -72,7 +72,7 @@ function Emmy:GetEventsLiterals()
 		return a.LiteralName < b.LiteralName
 	end)
 	local tbl = {}
-	tinsert(tbl, "---@alias EventLiteral string")
+	tinsert(tbl, "---@alias EventName string")
 	for _, event in ipairs(APIDocumentation.events) do
 		tinsert(tbl, format("'\"%s\"'", event.LiteralName))
 	end

@@ -169,7 +169,7 @@ function Frame:Raise() end
 ---[Documentation](https://wow.gamepedia.com/API_Frame_RegisterAllEvents)
 function Frame:RegisterAllEvents() end
 
----@param event EventLiteral
+---@param event EventName
 ---[Documentation](https://wow.gamepedia.com/API_Frame_RegisterEvent)
 function Frame:RegisterEvent(event) end
 
@@ -266,6 +266,6 @@ function Frame:StopMovingOrSizing() end
 ---[Documentation](https://wow.gamepedia.com/API_Frame_UnregisterAllEvents)
 function Frame:UnregisterAllEvents() end
 
----@param event EventLiteral
+---@param event EventName
 ---[Documentation](https://wow.gamepedia.com/API_Frame_UnregisterEvent)
 function Frame:UnregisterEvent(event) end
