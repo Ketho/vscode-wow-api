@@ -104,8 +104,12 @@ function Texture:SetTexCoord() end
 ---[Documentation](https://wow.gamepedia.com/API_Texture_SetTexelSnappingBias)
 function Texture:SetTexelSnappingBias() end
 
+---@param fileID number
+---@param horizWrap string
+---@param vertWrap string
+---@param filterMode string
 ---[Documentation](https://wow.gamepedia.com/API_Texture_SetTexture)
-function Texture:SetTexture() end
+function Texture:SetTexture(fileID, horizWrap, vertWrap, filterMode) end
 
 ---[Documentation](https://wow.gamepedia.com/API_Texture_SetVertTile)
 function Texture:SetVertTile() end
