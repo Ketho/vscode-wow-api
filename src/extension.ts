@@ -49,11 +49,12 @@ export function activate(context: vscode.ExtensionContext) {
     context.subscriptions.push(completion)
 }
 
-// I want to edit the configuration of another extension
-// but it looks like a proxy object that is read-only
-// I also don't know how to point it to a relative path from our extension
-let luaConfig = vscode.workspace.getConfiguration("Lua")
+// get emmylua path
+let extension = vscode.extensions.getExtension("ketho.wow-api")
+let path = extension?.extensionPath+"\\EmmyLua"
 
-console.log(luaConfig.workspace.library)
-// luaConfig.workspace.library["C:\\Users\\Ketho\\.vscode\\extensions\\ketho.wow-api-0.0.2\\EmmyLua"] = true
-// console.log(luaConfig.workspace.library)
+// add it to the external libraries
+let luaConfig = vscode.workspace.getConfiguration("Lua")
+let library : any = luaConfig.get("workspace.library")
+library[path] = true
+luaConfig.update("workspace.library", library, true)
