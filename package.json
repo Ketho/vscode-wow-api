@@ -2,7 +2,7 @@
 	"name": "wow-api",
 	"displayName": "WoW API",
 	"description": "Basic support for World of Warcraft API",
-	"version": "0.0.2",
+	"version": "0.0.3",
 	"publisher": "Ketho",
 	"repository": "https://github.com/Ketho/vscode-wow-api",
 	"license": "MIT",
