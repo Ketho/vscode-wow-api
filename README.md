@@ -6,7 +6,7 @@ Adds support for World of Warcraft [AddOn API](https://wow.gamepedia.com/World_o
 
 ### Features
 IntelliSense via [Sumneko's Lua](https://marketplace.visualstudio.com/items?itemName=sumneko.lua) extension with [EmmyLua](https://github.com/EmmyLua) annotations.
-* [Blizard-documented](https://github.com/Gethe/wow-ui-source/tree/live/AddOns/Blizzard_APIDocumentation) API systems
+* [Blizzard-documented](https://github.com/Gethe/wow-ui-source/tree/live/AddOns/Blizzard_APIDocumentation) API systems
 * Wowpedia-documented functions
 * [Widget API](https://wow.gamepedia.com/Widget_API)
 * [Events](https://wow.gamepedia.com/Events)
