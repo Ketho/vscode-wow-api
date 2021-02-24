@@ -1,4 +1,3 @@
--- manually updated from KethoDoc / BlizzardInterfaceResources
 Enum = {
 	---@type AddSoulbindConduitReason
 	AddSoulbindConduitReason = {},

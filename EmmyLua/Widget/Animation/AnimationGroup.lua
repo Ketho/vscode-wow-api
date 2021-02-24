@@ -1,7 +1,5 @@
----@class AnimationGroup
+---@class AnimationGroup : ParentedObject, ScriptObject
 local AnimationGroup = {}
 
----@param animation AnimationLiteral
+---@param animation AnimationType
 function AnimationGroup:CreateAnimation(animation) end
-
----@alias AnimationLiteral string | '"Alpha"' | '"Animation"' | '"LineScale"' | '"LineTranslation"' | '"Path"' | '"Rotation"' | '"Scale"' | '"Translation"'
