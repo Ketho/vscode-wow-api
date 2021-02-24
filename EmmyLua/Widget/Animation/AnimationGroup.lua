@@ -1,9 +1,13 @@
 ---@class AnimationGroup : ParentedObject, ScriptObject
 local AnimationGroup = {}
 
----@param animation AnimationType
+---@generic Animation
+---@param animationType `Animation` | AnimationType
+---@param name string
+---@param template string
+---@return Animation animation
 ---[Documentation](https://wow.gamepedia.com/API_AnimationGroup_CreateAnimation)
-function AnimationGroup:CreateAnimation(animation) end
+function AnimationGroup:CreateAnimation(animationType, name, template) end
 
 ---[Documentation](https://wow.gamepedia.com/API_AnimationGroup_Finish)
 function AnimationGroup:Finish() end

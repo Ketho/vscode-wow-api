@@ -4,8 +4,13 @@ local Frame = {}
 ---[Documentation](https://wow.gamepedia.com/API_Frame_CanChangeAttribute)
 function Frame:CanChangeAttribute() end
 
+---@param name string
+---@param layer string
+---@param template string
+---@param subLayer number
+---@return FontString fontString
 ---[Documentation](https://wow.gamepedia.com/API_Frame_CreateFontString)
-function Frame:CreateFontString() end
+function Frame:CreateFontString(name, layer, template, subLayer) end
 
 ---[Documentation](https://wow.gamepedia.com/API_Frame_CreateLine)
 function Frame:CreateLine() end
@@ -13,6 +18,7 @@ function Frame:CreateLine() end
 ---[Documentation](https://wow.gamepedia.com/API_Frame_CreateMaskTexture)
 function Frame:CreateMaskTexture() end
 
+---@return Texture texture
 ---[Documentation](https://wow.gamepedia.com/API_Frame_CreateTexture)
 function Frame:CreateTexture() end
 
