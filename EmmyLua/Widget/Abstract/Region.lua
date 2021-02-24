@@ -17,9 +17,7 @@ function Region:CreateAnimationGroup() end
 ---[Documentation](https://wow.gamepedia.com/API_Region_GetAlpha)
 function Region:GetAlpha() end
 
----@return AnimationGroup group1
----@return AnimationGroup group2
----@return AnimationGroup group3...
+---@return AnimationGroup, ...
 ---[Documentation](https://wow.gamepedia.com/API_Region_GetAnimationGroups)
 function Region:GetAnimationGroups() end
 
