@@ -1,3 +1,10 @@
+C_ScenarioInfo = {}
+
+---@param runType JailersTowerType
+---@return string typeString
+---[Documentation](https://wow.gamepedia.com/API_C_ScenarioInfo.GetJailersTowerTypeString)
+function C_ScenarioInfo.GetJailersTowerTypeString(runType) end
+
 ---@class JAILERS_TOWER_LEVEL_UPDATE
 ---@field level number
 ---@field type JailersTowerType
