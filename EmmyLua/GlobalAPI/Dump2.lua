@@ -1009,9 +1009,6 @@ function CopyToClipboard() end
 ---[Documentation](https://wow.gamepedia.com/API_CreateFont)
 function CreateFont() end
 
----[Documentation](https://wow.gamepedia.com/API_CreateFrame)
-function CreateFrame() end
-
 ---[Documentation](https://wow.gamepedia.com/API_CreateMacro)
 function CreateMacro() end
 

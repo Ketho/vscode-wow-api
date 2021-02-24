@@ -6,5 +6,4 @@
 ---@param id number
 ---@return Frame table
 ---[Documentation](https://wow.gamepedia.com/API_CreateFrame)
-function CreateFrame(frameType, name, parent, template, id)
-end
+function CreateFrame(frameType, name, parent, template, id) end
