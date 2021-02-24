@@ -10,8 +10,15 @@
 		"vscode": "^1.44.0"
 	},
 	"categories": [
-		"Other"
+		"Linters",
+		"Programming Languages"
 	],
+	"keywords": [
+		"Lua",
+		"WoW",
+		"World of Warcraft"
+	],
+	"icon": "Images/wow-logo.png",
 	"activationEvents": [
 		"*"
 	],
