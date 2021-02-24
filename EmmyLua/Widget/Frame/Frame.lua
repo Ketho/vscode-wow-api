@@ -18,9 +18,13 @@ function Frame:CreateLine() end
 ---[Documentation](https://wow.gamepedia.com/API_Frame_CreateMaskTexture)
 function Frame:CreateMaskTexture() end
 
+---@param name string
+---@param layer string
+---@param template string
+---@param subLayer number
 ---@return Texture texture
 ---[Documentation](https://wow.gamepedia.com/API_Frame_CreateTexture)
-function Frame:CreateTexture() end
+function Frame:CreateTexture(name, layer, template, subLayer) end
 
 ---[Documentation](https://wow.gamepedia.com/API_Frame_DesaturateHierarchy)
 function Frame:DesaturateHierarchy() end
