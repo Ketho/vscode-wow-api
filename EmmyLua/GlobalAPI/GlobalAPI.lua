@@ -1,5 +1,5 @@
 ---@generic Frame
----@param frameType `Frame` | '"Frame"' | '"Button"' | '"PlayerModel"'
+---@param frameType `Frame` | FrameType
 ---@param name string
 ---@param parent Frame
 ---@param template string
