@@ -1,0 +1,22 @@
+-- non blizzard documented C namespaces
+C_AdventureJournal = {}
+C_AdventureMap = {}
+C_BlackMarket = {}
+C_CharacterServices = {}
+C_CharacterServicesPublic = {}
+C_ClassTrial = {}
+C_Debug = {}
+C_Heirloom = {}
+C_LootHistory = {}
+C_NamePlate = {}
+C_NewItems = {}
+C_PetBattles = {}
+C_PrototypeDialog = {}
+C_Scenario = {}
+C_SharedCharacterServices = {}
+C_TalkingHead = {}
+C_Timer = {}
+C_ToyBox = {}
+C_Trophy = {}
+C_Widget = {}
+C_WowTokenPublic = {}
