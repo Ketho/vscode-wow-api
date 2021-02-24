@@ -1,7 +1,7 @@
 {
 	"name": "wow-api",
 	"displayName": "WoW API",
-	"description": "Basic support for World of Warcraft API",
+	"description": "Adds support for World of Warcraft AddOn API",
 	"version": "0.0.4",
 	"publisher": "Ketho",
 	"repository": "https://github.com/Ketho/vscode-wow-api",
@@ -16,18 +16,6 @@
 		"*"
 	],
 	"main": "./out/extension.js",
-	"contributes": {
-		"configuration": {
-			"title": "WoW AddOn API",
-			"properties": {
-				"hello.SomeOption": {
-					"type": "boolean",
-					"default": false,
-					"description": "test option"
-				}
-			}
-		}
-	},
 	"scripts": {
 		"vscode:prepublish": "npm run compile",
 		"compile": "tsc -p ./",

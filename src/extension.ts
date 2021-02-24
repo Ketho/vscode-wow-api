@@ -1,5 +1,6 @@
 import * as vscode from "vscode"
 
+/*
 // temp code for testing vscode extension api
 const FunctionDocumentation = require("./functions").systemFunctions
 
@@ -48,6 +49,7 @@ export function activate(context: vscode.ExtensionContext) {
 	)
     context.subscriptions.push(completion)
 }
+*/
 
 // get emmylua path
 let extension = vscode.extensions.getExtension("ketho.wow-api")
