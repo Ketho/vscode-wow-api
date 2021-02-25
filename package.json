@@ -18,7 +18,7 @@
 		"WoW",
 		"World of Warcraft"
 	],
-	"icon": "Images/wow-logo.png",
+	"icon": "img/wow-logo.png",
 	"activationEvents": [
 		"*"
 	],

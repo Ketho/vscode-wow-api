@@ -56,7 +56,7 @@ function setLuaLibrary(v: any) {
 	let path = extension?.extensionPath+"\\EmmyLua"
 
 	let luaConfig = vscode.workspace.getConfiguration("Lua")
-	let library : any = luaConfig.get("workspace.library")
+	let library: any = luaConfig.get("workspace.library")
 	library[path] = v
 	luaConfig.update("workspace.library", library, true)
 }
