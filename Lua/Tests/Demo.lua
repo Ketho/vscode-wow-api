@@ -11,3 +11,5 @@ local fs = CreateFrame("Frame"):CreateFontString()
 local dressup = CreateFrame("DressUpModel")
 
 local tooltip = CreateFrame("GameTooltip")
+
+hooksecurefunc("test", function() end)
