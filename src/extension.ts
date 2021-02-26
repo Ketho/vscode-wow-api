@@ -59,6 +59,8 @@ function setLuaLibrary(v: any) {
 	let library: any = luaConfig.get("workspace.library")
 	library[path] = v
 	luaConfig.update("workspace.library", library, true)
+	// I don't really think showing the emmylua itself in the display context is useful
+	luaConfig.update("completion.displayContext", 0, true)
 }
 
 setLuaLibrary(true)
