@@ -1,6 +1,3 @@
----[Documentation](https://wow.gamepedia.com/API_HaveQuestData)
-function HaveQuestData(questID) end
-
 ---[Documentation](https://wow.gamepedia.com/API_HaveQuestRewardData)
 function HaveQuestRewardData(questID) end
 
@@ -1497,4 +1494,7 @@ function SetBackpackAutosortDisabled(disable) end
 
 ---[Documentation](https://wow.gamepedia.com/API_SetBagPortraitTexture)
 function SetBagPortraitTexture(texture, slot) end
+
+---[Documentation](https://wow.gamepedia.com/API_SetBagSlotFlag)
+function SetBagSlotFlag(index, flagIndex, checked) end
 

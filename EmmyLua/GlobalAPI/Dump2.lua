@@ -1,6 +1,3 @@
----[Documentation](https://wow.gamepedia.com/API_C_PetJournal.GetNumPetTypes)
-function C_PetJournal.GetNumPetTypes() end
-
 ---[Documentation](https://wow.gamepedia.com/API_C_PetJournal.GetNumPets)
 function C_PetJournal.GetNumPets() end
 
@@ -1497,4 +1494,7 @@ function EJ_GetCurrentTier() end
 
 ---[Documentation](https://wow.gamepedia.com/API_EJ_GetDifficulty)
 function EJ_GetDifficulty() end
+
+---[Documentation](https://wow.gamepedia.com/API_EJ_GetEncounterInfo)
+function EJ_GetEncounterInfo(encounterID) end
 

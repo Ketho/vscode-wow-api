@@ -1,6 +1,3 @@
----[Documentation](https://wow.gamepedia.com/API_GetMerchantItemCostInfo)
-function GetMerchantItemCostInfo(index) end
-
 ---[Documentation](https://wow.gamepedia.com/API_GetMerchantItemCostItem)
 function GetMerchantItemCostItem(index, itemIndex) end
 
@@ -1497,4 +1494,7 @@ function HasVehicleActionBar() end
 
 ---[Documentation](https://wow.gamepedia.com/API_HasWandEquipped)
 function HasWandEquipped() end
+
+---[Documentation](https://wow.gamepedia.com/API_HaveQuestData)
+function HaveQuestData(questID) end
 

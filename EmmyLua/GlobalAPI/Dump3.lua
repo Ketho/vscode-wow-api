@@ -1,6 +1,3 @@
----[Documentation](https://wow.gamepedia.com/API_EJ_GetEncounterInfo)
-function EJ_GetEncounterInfo(encounterID) end
-
 ---[Documentation](https://wow.gamepedia.com/API_EJ_GetEncounterInfoByIndex)
 function EJ_GetEncounterInfoByIndex(index, instanceID) end
 
@@ -1497,4 +1494,7 @@ function GetMerchantCurrencies() end
 
 ---[Documentation](https://wow.gamepedia.com/API_GetMerchantFilter)
 function GetMerchantFilter() end
+
+---[Documentation](https://wow.gamepedia.com/API_GetMerchantItemCostInfo)
+function GetMerchantItemCostInfo(index) end
 

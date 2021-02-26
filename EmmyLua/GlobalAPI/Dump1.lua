@@ -1495,3 +1495,6 @@ function C_PetJournal.GetNumMaxPets() end
 ---[Documentation](https://wow.gamepedia.com/API_C_PetJournal.GetNumPetSources)
 function C_PetJournal.GetNumPetSources() end
 
+---[Documentation](https://wow.gamepedia.com/API_C_PetJournal.GetNumPetTypes)
+function C_PetJournal.GetNumPetTypes() end
+
