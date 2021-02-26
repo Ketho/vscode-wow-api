@@ -11,10 +11,10 @@ function Rotation:GetOrigin() end
 function Rotation:GetRadians() end
 
 ---[Documentation](https://wow.gamepedia.com/API_Rotation_SetDegrees)
-function Rotation:SetDegrees() end
+function Rotation:SetDegrees(degrees) end
 
 ---[Documentation](https://wow.gamepedia.com/API_Rotation_SetOrigin)
-function Rotation:SetOrigin() end
+function Rotation:SetOrigin(point, offsetX, offsetY) end
 
 ---[Documentation](https://wow.gamepedia.com/API_Rotation_SetRadians)
-function Rotation:SetRadians() end
+function Rotation:SetRadians(radians) end

@@ -8,7 +8,7 @@ function Alpha:GetFromAlpha() end
 function Alpha:GetToAlpha() end
 
 ---[Documentation](https://wow.gamepedia.com/API_Alpha_SetFromAlpha)
-function Alpha:SetFromAlpha() end
+function Alpha:SetFromAlpha(fromAlpha) end
 
 ---[Documentation](https://wow.gamepedia.com/API_Alpha_SetToAlpha)
-function Alpha:SetToAlpha() end
+function Alpha:SetToAlpha(toAlpha) end

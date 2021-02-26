@@ -11,25 +11,25 @@ function DressUpModel:GetAutoDress() end
 function DressUpModel:GetSheathed() end
 
 ---[Documentation](https://wow.gamepedia.com/API_DressUpModel_GetSlotTransmogSources)
-function DressUpModel:GetSlotTransmogSources() end
+function DressUpModel:GetSlotTransmogSources(slotIndex) end
 
 ---[Documentation](https://wow.gamepedia.com/API_DressUpModel_GetUseTransmogSkin)
 function DressUpModel:GetUseTransmogSkin() end
 
 ---[Documentation](https://wow.gamepedia.com/API_DressUpModel_SetAutoDress)
-function DressUpModel:SetAutoDress() end
+function DressUpModel:SetAutoDress(bool) end
 
 ---[Documentation](https://wow.gamepedia.com/API_DressUpModel_SetSheathed)
-function DressUpModel:SetSheathed() end
+function DressUpModel:SetSheathed(bool) end
 
 ---[Documentation](https://wow.gamepedia.com/API_DressUpModel_SetUseTransmogSkin)
-function DressUpModel:SetUseTransmogSkin() end
+function DressUpModel:SetUseTransmogSkin(bool) end
 
 ---[Documentation](https://wow.gamepedia.com/API_DressUpModel_TryOn)
-function DressUpModel:TryOn() end
+function DressUpModel:TryOn(sourceID) end
 
 ---[Documentation](https://wow.gamepedia.com/API_DressUpModel_Undress)
 function DressUpModel:Undress() end
 
 ---[Documentation](https://wow.gamepedia.com/API_DressUpModel_UndressSlot)
-function DressUpModel:UndressSlot() end
+function DressUpModel:UndressSlot(slotIndex) end

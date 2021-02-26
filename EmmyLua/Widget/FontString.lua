@@ -3,7 +3,7 @@
 local FontString = {}
 
 ---[Documentation](https://wow.gamepedia.com/API_FontString_CalculateScreenAreaFromCharacterSpan)
-function FontString:CalculateScreenAreaFromCharacterSpan() end
+function FontString:CalculateScreenAreaFromCharacterSpan(leftCharacterIndex, rightCharacterIndex) end
 
 ---[Documentation](https://wow.gamepedia.com/API_FontString_CanNonSpaceWrap)
 function FontString:CanNonSpaceWrap() end
@@ -12,7 +12,7 @@ function FontString:CanNonSpaceWrap() end
 function FontString:CanWordWrap() end
 
 ---[Documentation](https://wow.gamepedia.com/API_FontString_FindCharacterIndexAtCoordinate)
-function FontString:FindCharacterIndexAtCoordinate() end
+function FontString:FindCharacterIndexAtCoordinate(x, y) end
 
 ---[Documentation](https://wow.gamepedia.com/API_FontString_GetFieldSize)
 function FontString:GetFieldSize() end
@@ -45,25 +45,25 @@ function FontString:GetWrappedWidth() end
 function FontString:IsTruncated() end
 
 ---[Documentation](https://wow.gamepedia.com/API_FontString_SetAlphaGradient)
-function FontString:SetAlphaGradient() end
+function FontString:SetAlphaGradient(start, length) end
 
 ---[Documentation](https://wow.gamepedia.com/API_FontString_SetFixedColor)
 function FontString:SetFixedColor() end
 
 ---[Documentation](https://wow.gamepedia.com/API_FontString_SetFormattedText)
-function FontString:SetFormattedText() end
+function FontString:SetFormattedText(formatstring) end
 
 ---[Documentation](https://wow.gamepedia.com/API_FontString_SetMaxLines)
 function FontString:SetMaxLines() end
 
 ---[Documentation](https://wow.gamepedia.com/API_FontString_SetNonSpaceWrap)
-function FontString:SetNonSpaceWrap() end
+function FontString:SetNonSpaceWrap(wrapFlag) end
 
 ---[Documentation](https://wow.gamepedia.com/API_FontString_SetText)
-function FontString:SetText() end
+function FontString:SetText(text) end
 
 ---[Documentation](https://wow.gamepedia.com/API_FontString_SetTextHeight)
-function FontString:SetTextHeight() end
+function FontString:SetTextHeight(pixelHeight) end
 
 ---[Documentation](https://wow.gamepedia.com/API_FontString_SetWordWrap)
 function FontString:SetWordWrap() end

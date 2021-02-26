@@ -11,7 +11,7 @@ function ControlPoint:GetOrder() end
 function ControlPoint:SetOffset() end
 
 ---[Documentation](https://wow.gamepedia.com/API_ControlPoint_SetOrder)
-function ControlPoint:SetOrder() end
+function ControlPoint:SetOrder(order) end
 
 ---[Documentation](https://wow.gamepedia.com/API_ControlPoint_SetParent)
 function ControlPoint:SetParent() end

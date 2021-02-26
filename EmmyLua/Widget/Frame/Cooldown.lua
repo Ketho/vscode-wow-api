@@ -41,52 +41,52 @@ function Cooldown:Pause() end
 function Cooldown:Resume() end
 
 ---[Documentation](https://wow.gamepedia.com/API_Cooldown_SetBlingTexture)
-function Cooldown:SetBlingTexture() end
+function Cooldown:SetBlingTexture(file_or_fileDataID,r, g, b, a) end
 
 ---[Documentation](https://wow.gamepedia.com/API_Cooldown_SetCooldown)
-function Cooldown:SetCooldown() end
+function Cooldown:SetCooldown(start, duration, modRate) end
 
 ---[Documentation](https://wow.gamepedia.com/API_Cooldown_SetCooldownDuration)
-function Cooldown:SetCooldownDuration() end
+function Cooldown:SetCooldownDuration(duration, modRate) end
 
 ---[Documentation](https://wow.gamepedia.com/API_Cooldown_SetCooldownUNIX)
-function Cooldown:SetCooldownUNIX() end
+function Cooldown:SetCooldownUNIX(start, duration, modRate) end
 
 ---[Documentation](https://wow.gamepedia.com/API_Cooldown_SetCountdownAbbrevThreshold)
-function Cooldown:SetCountdownAbbrevThreshold() end
+function Cooldown:SetCountdownAbbrevThreshold(seconds) end
 
 ---[Documentation](https://wow.gamepedia.com/API_Cooldown_SetCountdownFont)
-function Cooldown:SetCountdownFont() end
+function Cooldown:SetCountdownFont(font) end
 
 ---[Documentation](https://wow.gamepedia.com/API_Cooldown_SetDrawBling)
 function Cooldown:SetDrawBling() end
 
 ---[Documentation](https://wow.gamepedia.com/API_Cooldown_SetDrawEdge)
-function Cooldown:SetDrawEdge() end
+function Cooldown:SetDrawEdge(enable) end
 
 ---[Documentation](https://wow.gamepedia.com/API_Cooldown_SetDrawSwipe)
 function Cooldown:SetDrawSwipe() end
 
 ---[Documentation](https://wow.gamepedia.com/API_Cooldown_SetEdgeScale)
-function Cooldown:SetEdgeScale() end
+function Cooldown:SetEdgeScale(edgeScale) end
 
 ---[Documentation](https://wow.gamepedia.com/API_Cooldown_SetEdgeTexture)
-function Cooldown:SetEdgeTexture() end
+function Cooldown:SetEdgeTexture(file_or_fileDataID,r, g, b, a) end
 
 ---[Documentation](https://wow.gamepedia.com/API_Cooldown_SetHideCountdownNumbers)
-function Cooldown:SetHideCountdownNumbers() end
+function Cooldown:SetHideCountdownNumbers(hide) end
 
 ---[Documentation](https://wow.gamepedia.com/API_Cooldown_SetReverse)
-function Cooldown:SetReverse() end
+function Cooldown:SetReverse(boolean) end
 
 ---[Documentation](https://wow.gamepedia.com/API_Cooldown_SetRotation)
-function Cooldown:SetRotation() end
+function Cooldown:SetRotation(rotationRadians) end
 
 ---[Documentation](https://wow.gamepedia.com/API_Cooldown_SetSwipeColor)
-function Cooldown:SetSwipeColor() end
+function Cooldown:SetSwipeColor(r, g, b,a) end
 
 ---[Documentation](https://wow.gamepedia.com/API_Cooldown_SetSwipeTexture)
-function Cooldown:SetSwipeTexture() end
+function Cooldown:SetSwipeTexture(file_or_fileDataID,r, g, b, a) end
 
 ---[Documentation](https://wow.gamepedia.com/API_Cooldown_SetUseCircularEdge)
-function Cooldown:SetUseCircularEdge() end
+function Cooldown:SetUseCircularEdge(boolean) end

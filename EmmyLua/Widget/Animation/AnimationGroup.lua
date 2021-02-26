@@ -52,10 +52,10 @@ function AnimationGroup:Play() end
 function AnimationGroup:Restart() end
 
 ---[Documentation](https://wow.gamepedia.com/API_AnimationGroup_SetLooping)
-function AnimationGroup:SetLooping() end
+function AnimationGroup:SetLooping(loopType) end
 
 ---[Documentation](https://wow.gamepedia.com/API_AnimationGroup_SetPlaying)
-function AnimationGroup:SetPlaying() end
+function AnimationGroup:SetPlaying(play) end
 
 ---[Documentation](https://wow.gamepedia.com/API_AnimationGroup_SetToFinalAlpha)
 function AnimationGroup:SetToFinalAlpha() end

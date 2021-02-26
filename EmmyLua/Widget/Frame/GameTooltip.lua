@@ -2,28 +2,28 @@
 local GameTooltip = {}
 
 ---[Documentation](https://wow.gamepedia.com/API_GameTooltip_AddAtlas)
-function GameTooltip:AddAtlas() end
+function GameTooltip:AddAtlas(atlas, minx, maxx, miny, maxy) end
 
 ---[Documentation](https://wow.gamepedia.com/API_GameTooltip_AddDoubleLine)
-function GameTooltip:AddDoubleLine() end
+function GameTooltip:AddDoubleLine(textL, textR, rL, gL, bL, rR, gR, bR) end
 
 ---[Documentation](https://wow.gamepedia.com/API_GameTooltip_AddFontStrings)
-function GameTooltip:AddFontStrings() end
+function GameTooltip:AddFontStrings(leftstring, rightstring) end
 
 ---[Documentation](https://wow.gamepedia.com/API_GameTooltip_AddLine)
-function GameTooltip:AddLine() end
+function GameTooltip:AddLine(tooltipText, r, g, b, wrapText) end
 
 ---[Documentation](https://wow.gamepedia.com/API_GameTooltip_AddSpellByID)
-function GameTooltip:AddSpellByID() end
+function GameTooltip:AddSpellByID(spellID) end
 
 ---[Documentation](https://wow.gamepedia.com/API_GameTooltip_AddTexture)
-function GameTooltip:AddTexture() end
+function GameTooltip:AddTexture(texture) end
 
 ---[Documentation](https://wow.gamepedia.com/API_GameTooltip_AdvanceSecondaryCompareItem)
 function GameTooltip:AdvanceSecondaryCompareItem() end
 
 ---[Documentation](https://wow.gamepedia.com/API_GameTooltip_AppendText)
-function GameTooltip:AppendText() end
+function GameTooltip:AppendText(text) end
 
 ---[Documentation](https://wow.gamepedia.com/API_GameTooltip_ClearLines)
 function GameTooltip:ClearLines() end
@@ -62,10 +62,10 @@ function GameTooltip:GetUnit() end
 function GameTooltip:IsEquippedItem() end
 
 ---[Documentation](https://wow.gamepedia.com/API_GameTooltip_IsOwned)
-function GameTooltip:IsOwned() end
+function GameTooltip:IsOwned(frame) end
 
 ---[Documentation](https://wow.gamepedia.com/API_GameTooltip_IsUnit)
-function GameTooltip:IsUnit() end
+function GameTooltip:IsUnit(unit) end
 
 ---[Documentation](https://wow.gamepedia.com/API_GameTooltip_NumLines)
 function GameTooltip:NumLines() end
@@ -74,13 +74,13 @@ function GameTooltip:NumLines() end
 function GameTooltip:ResetSecondaryCompareItem() end
 
 ---[Documentation](https://wow.gamepedia.com/API_GameTooltip_SetAchievementByID)
-function GameTooltip:SetAchievementByID() end
+function GameTooltip:SetAchievementByID(id) end
 
 ---[Documentation](https://wow.gamepedia.com/API_GameTooltip_SetAction)
-function GameTooltip:SetAction() end
+function GameTooltip:SetAction(slot) end
 
 ---[Documentation](https://wow.gamepedia.com/API_GameTooltip_SetAnchorType)
-function GameTooltip:SetAnchorType() end
+function GameTooltip:SetAnchorType(anchorType,Xoffset,Yoffset) end
 
 ---[Documentation](https://wow.gamepedia.com/API_GameTooltip_SetArtifactItem)
 function GameTooltip:SetArtifactItem() end
@@ -89,238 +89,238 @@ function GameTooltip:SetArtifactItem() end
 function GameTooltip:SetArtifactPowerByID() end
 
 ---[Documentation](https://wow.gamepedia.com/API_GameTooltip_SetAzeriteEssence)
-function GameTooltip:SetAzeriteEssence() end
+function GameTooltip:SetAzeriteEssence(essenceID) end
 
 ---[Documentation](https://wow.gamepedia.com/API_GameTooltip_SetAzeriteEssenceSlot)
-function GameTooltip:SetAzeriteEssenceSlot() end
+function GameTooltip:SetAzeriteEssenceSlot(slot) end
 
 ---[Documentation](https://wow.gamepedia.com/API_GameTooltip_SetAzeritePower)
-function GameTooltip:SetAzeritePower() end
+function GameTooltip:SetAzeritePower(itemID, itemLevel, powerID, owningItemLink) end
 
 ---[Documentation](https://wow.gamepedia.com/API_GameTooltip_SetBackpackToken)
-function GameTooltip:SetBackpackToken() end
+function GameTooltip:SetBackpackToken(id) end
 
 ---[Documentation](https://wow.gamepedia.com/API_GameTooltip_SetBagItem)
-function GameTooltip:SetBagItem() end
+function GameTooltip:SetBagItem(bag, slot) end
 
 ---[Documentation](https://wow.gamepedia.com/API_GameTooltip_SetBagItemChild)
 function GameTooltip:SetBagItemChild() end
 
 ---[Documentation](https://wow.gamepedia.com/API_GameTooltip_SetBuybackItem)
-function GameTooltip:SetBuybackItem() end
+function GameTooltip:SetBuybackItem(slot) end
 
 ---[Documentation](https://wow.gamepedia.com/API_GameTooltip_SetCompanionPet)
 function GameTooltip:SetCompanionPet() end
 
 ---[Documentation](https://wow.gamepedia.com/API_GameTooltip_SetCompareAzeritePower)
-function GameTooltip:SetCompareAzeritePower() end
+function GameTooltip:SetCompareAzeritePower(itemID, itemLevel, powerID, owningItemLink) end
 
 ---[Documentation](https://wow.gamepedia.com/API_GameTooltip_SetCompareItem)
-function GameTooltip:SetCompareItem() end
+function GameTooltip:SetCompareItem(shoppingTooltipTwo, primaryMouseover) end
 
 ---[Documentation](https://wow.gamepedia.com/API_GameTooltip_SetConduit)
-function GameTooltip:SetConduit() end
+function GameTooltip:SetConduit(id, rank) end
 
 ---[Documentation](https://wow.gamepedia.com/API_GameTooltip_SetCurrencyByID)
-function GameTooltip:SetCurrencyByID() end
+function GameTooltip:SetCurrencyByID(id) end
 
 ---[Documentation](https://wow.gamepedia.com/API_GameTooltip_SetCurrencyToken)
-function GameTooltip:SetCurrencyToken() end
+function GameTooltip:SetCurrencyToken(tokenId) end
 
 ---[Documentation](https://wow.gamepedia.com/API_GameTooltip_SetCurrencyTokenByID)
-function GameTooltip:SetCurrencyTokenByID() end
+function GameTooltip:SetCurrencyTokenByID(currencyID) end
 
 ---[Documentation](https://wow.gamepedia.com/API_GameTooltip_SetEquipmentSet)
-function GameTooltip:SetEquipmentSet() end
+function GameTooltip:SetEquipmentSet(name) end
 
 ---[Documentation](https://wow.gamepedia.com/API_GameTooltip_SetExistingSocketGem)
-function GameTooltip:SetExistingSocketGem() end
+function GameTooltip:SetExistingSocketGem(index,toDestroy) end
 
 ---[Documentation](https://wow.gamepedia.com/API_GameTooltip_SetFrameStack)
-function GameTooltip:SetFrameStack() end
+function GameTooltip:SetFrameStack(showhidden) end
 
 ---[Documentation](https://wow.gamepedia.com/API_GameTooltip_SetGuildBankItem)
-function GameTooltip:SetGuildBankItem() end
+function GameTooltip:SetGuildBankItem(tab, id) end
 
 ---[Documentation](https://wow.gamepedia.com/API_GameTooltip_SetHeirloomByItemID)
-function GameTooltip:SetHeirloomByItemID() end
+function GameTooltip:SetHeirloomByItemID(itemID) end
 
 ---[Documentation](https://wow.gamepedia.com/API_GameTooltip_SetHyperlink)
-function GameTooltip:SetHyperlink() end
+function GameTooltip:SetHyperlink(itemString_or_itemLink) end
 
 ---[Documentation](https://wow.gamepedia.com/API_GameTooltip_SetInboxItem)
-function GameTooltip:SetInboxItem() end
+function GameTooltip:SetInboxItem(index) end
 
 ---[Documentation](https://wow.gamepedia.com/API_GameTooltip_SetInstanceLockEncountersComplete)
-function GameTooltip:SetInstanceLockEncountersComplete() end
+function GameTooltip:SetInstanceLockEncountersComplete(index) end
 
 ---[Documentation](https://wow.gamepedia.com/API_GameTooltip_SetInventoryItem)
-function GameTooltip:SetInventoryItem() end
+function GameTooltip:SetInventoryItem(unit, slot, nameOnly, hideUselessStats) end
 
 ---[Documentation](https://wow.gamepedia.com/API_GameTooltip_SetInventoryItemByID)
-function GameTooltip:SetInventoryItemByID() end
+function GameTooltip:SetInventoryItemByID(itemID) end
 
 ---[Documentation](https://wow.gamepedia.com/API_GameTooltip_SetItemByID)
-function GameTooltip:SetItemByID() end
+function GameTooltip:SetItemByID(itemID) end
 
 ---[Documentation](https://wow.gamepedia.com/API_GameTooltip_SetItemKey)
-function GameTooltip:SetItemKey() end
+function GameTooltip:SetItemKey(itemID, itemLevel, itemSuffix) end
 
 ---[Documentation](https://wow.gamepedia.com/API_GameTooltip_SetLFGDungeonReward)
-function GameTooltip:SetLFGDungeonReward() end
+function GameTooltip:SetLFGDungeonReward(dungeonID, lootIndex) end
 
 ---[Documentation](https://wow.gamepedia.com/API_GameTooltip_SetLFGDungeonShortageReward)
-function GameTooltip:SetLFGDungeonShortageReward() end
+function GameTooltip:SetLFGDungeonShortageReward(dungeonID, shortageSeverity, lootIndex) end
 
 ---[Documentation](https://wow.gamepedia.com/API_GameTooltip_SetLootCurrency)
-function GameTooltip:SetLootCurrency() end
+function GameTooltip:SetLootCurrency(lootSlot) end
 
 ---[Documentation](https://wow.gamepedia.com/API_GameTooltip_SetLootItem)
-function GameTooltip:SetLootItem() end
+function GameTooltip:SetLootItem(lootSlot) end
 
 ---[Documentation](https://wow.gamepedia.com/API_GameTooltip_SetLootRollItem)
-function GameTooltip:SetLootRollItem() end
+function GameTooltip:SetLootRollItem(id) end
 
 ---[Documentation](https://wow.gamepedia.com/API_GameTooltip_SetMerchantCostItem)
-function GameTooltip:SetMerchantCostItem() end
+function GameTooltip:SetMerchantCostItem(index, item) end
 
 ---[Documentation](https://wow.gamepedia.com/API_GameTooltip_SetMerchantItem)
-function GameTooltip:SetMerchantItem() end
+function GameTooltip:SetMerchantItem(merchantSlot) end
 
 ---[Documentation](https://wow.gamepedia.com/API_GameTooltip_SetMinimumWidth)
-function GameTooltip:SetMinimumWidth() end
+function GameTooltip:SetMinimumWidth(width) end
 
 ---[Documentation](https://wow.gamepedia.com/API_GameTooltip_SetMountBySpellID)
 function GameTooltip:SetMountBySpellID() end
 
 ---[Documentation](https://wow.gamepedia.com/API_GameTooltip_SetOwnedItemByID)
-function GameTooltip:SetOwnedItemByID() end
+function GameTooltip:SetOwnedItemByID(ID) end
 
 ---[Documentation](https://wow.gamepedia.com/API_GameTooltip_SetOwner)
-function GameTooltip:SetOwner() end
+function GameTooltip:SetOwner(owner, anchor, x, y) end
 
 ---[Documentation](https://wow.gamepedia.com/API_GameTooltip_SetPadding)
-function GameTooltip:SetPadding() end
+function GameTooltip:SetPadding(width, height) end
 
 ---[Documentation](https://wow.gamepedia.com/API_GameTooltip_SetPetAction)
-function GameTooltip:SetPetAction() end
+function GameTooltip:SetPetAction(slot) end
 
 ---[Documentation](https://wow.gamepedia.com/API_GameTooltip_SetPossession)
-function GameTooltip:SetPossession() end
+function GameTooltip:SetPossession(slot) end
 
 ---[Documentation](https://wow.gamepedia.com/API_GameTooltip_SetPvpBrawl)
 function GameTooltip:SetPvpBrawl() end
 
 ---[Documentation](https://wow.gamepedia.com/API_GameTooltip_SetPvpTalent)
-function GameTooltip:SetPvpTalent() end
+function GameTooltip:SetPvpTalent(talentID, talentIndex) end
 
 ---[Documentation](https://wow.gamepedia.com/API_GameTooltip_SetQuestCurrency)
-function GameTooltip:SetQuestCurrency() end
+function GameTooltip:SetQuestCurrency(type, index) end
 
 ---[Documentation](https://wow.gamepedia.com/API_GameTooltip_SetQuestItem)
-function GameTooltip:SetQuestItem() end
+function GameTooltip:SetQuestItem(type, index) end
 
 ---[Documentation](https://wow.gamepedia.com/API_GameTooltip_SetQuestLogCurrency)
-function GameTooltip:SetQuestLogCurrency() end
+function GameTooltip:SetQuestLogCurrency(type, index) end
 
 ---[Documentation](https://wow.gamepedia.com/API_GameTooltip_SetQuestLogItem)
-function GameTooltip:SetQuestLogItem() end
+function GameTooltip:SetQuestLogItem(type, index) end
 
 ---[Documentation](https://wow.gamepedia.com/API_GameTooltip_SetQuestLogRewardSpell)
-function GameTooltip:SetQuestLogRewardSpell() end
+function GameTooltip:SetQuestLogRewardSpell(rewardSpellIndex, questID) end
 
 ---[Documentation](https://wow.gamepedia.com/API_GameTooltip_SetQuestLogSpecialItem)
-function GameTooltip:SetQuestLogSpecialItem() end
+function GameTooltip:SetQuestLogSpecialItem(index) end
 
 ---[Documentation](https://wow.gamepedia.com/API_GameTooltip_SetQuestPartyProgress)
-function GameTooltip:SetQuestPartyProgress() end
+function GameTooltip:SetQuestPartyProgress(questID, omitTitle, ignoreActivePlayer) end
 
 ---[Documentation](https://wow.gamepedia.com/API_GameTooltip_SetQuestRewardSpell)
-function GameTooltip:SetQuestRewardSpell() end
+function GameTooltip:SetQuestRewardSpell(rewardSpellIndex) end
 
 ---[Documentation](https://wow.gamepedia.com/API_GameTooltip_SetRecipeRankInfo)
-function GameTooltip:SetRecipeRankInfo() end
+function GameTooltip:SetRecipeRankInfo(recipeID, learnedRank) end
 
 ---[Documentation](https://wow.gamepedia.com/API_GameTooltip_SetRecipeReagentItem)
-function GameTooltip:SetRecipeReagentItem() end
+function GameTooltip:SetRecipeReagentItem(recipeID, reagentIndex) end
 
 ---[Documentation](https://wow.gamepedia.com/API_GameTooltip_SetRecipeResultItem)
-function GameTooltip:SetRecipeResultItem() end
+function GameTooltip:SetRecipeResultItem(recipeID) end
 
 ---[Documentation](https://wow.gamepedia.com/API_GameTooltip_SetRuneforgeResultItem)
-function GameTooltip:SetRuneforgeResultItem() end
+function GameTooltip:SetRuneforgeResultItem(itemID, itemLevel, powerID, modifiers) end
 
 ---[Documentation](https://wow.gamepedia.com/API_GameTooltip_SetSendMailItem)
 function GameTooltip:SetSendMailItem() end
 
 ---[Documentation](https://wow.gamepedia.com/API_GameTooltip_SetShapeshift)
-function GameTooltip:SetShapeshift() end
+function GameTooltip:SetShapeshift(slot) end
 
 ---[Documentation](https://wow.gamepedia.com/API_GameTooltip_SetShrinkToFitWrapped)
 function GameTooltip:SetShrinkToFitWrapped() end
-
----[Documentation](https://wow.gamepedia.com/API_GameTooltip_SetSocketGem)
-function GameTooltip:SetSocketGem() end
 
 ---[Documentation](https://wow.gamepedia.com/API_GameTooltip_SetSocketedItem)
 function GameTooltip:SetSocketedItem() end
 
 ---[Documentation](https://wow.gamepedia.com/API_GameTooltip_SetSocketedRelic)
-function GameTooltip:SetSocketedRelic() end
+function GameTooltip:SetSocketedRelic(relicSlotIndex) end
+
+---[Documentation](https://wow.gamepedia.com/API_GameTooltip_SetSocketGem)
+function GameTooltip:SetSocketGem(index) end
 
 ---[Documentation](https://wow.gamepedia.com/API_GameTooltip_SetSpellBookItem)
-function GameTooltip:SetSpellBookItem() end
+function GameTooltip:SetSpellBookItem(spellId, bookType) end
 
 ---[Documentation](https://wow.gamepedia.com/API_GameTooltip_SetSpellByID)
-function GameTooltip:SetSpellByID() end
+function GameTooltip:SetSpellByID(spellId) end
 
 ---[Documentation](https://wow.gamepedia.com/API_GameTooltip_SetTalent)
-function GameTooltip:SetTalent() end
+function GameTooltip:SetTalent(talentIndex, isInspect, talentGroup, inspectedUnit, classId) end
 
 ---[Documentation](https://wow.gamepedia.com/API_GameTooltip_SetText)
-function GameTooltip:SetText() end
+function GameTooltip:SetText(text, r, g, b, alphaValue, textWrap) end
 
 ---[Documentation](https://wow.gamepedia.com/API_GameTooltip_SetTotem)
-function GameTooltip:SetTotem() end
+function GameTooltip:SetTotem(slot) end
 
 ---[Documentation](https://wow.gamepedia.com/API_GameTooltip_SetToyByItemID)
-function GameTooltip:SetToyByItemID() end
+function GameTooltip:SetToyByItemID(itemID) end
 
 ---[Documentation](https://wow.gamepedia.com/API_GameTooltip_SetTradePlayerItem)
-function GameTooltip:SetTradePlayerItem() end
+function GameTooltip:SetTradePlayerItem(tradeSlot) end
 
 ---[Documentation](https://wow.gamepedia.com/API_GameTooltip_SetTradeTargetItem)
-function GameTooltip:SetTradeTargetItem() end
+function GameTooltip:SetTradeTargetItem(tradeSlot) end
 
 ---[Documentation](https://wow.gamepedia.com/API_GameTooltip_SetTrainerService)
-function GameTooltip:SetTrainerService() end
+function GameTooltip:SetTrainerService(index) end
 
 ---[Documentation](https://wow.gamepedia.com/API_GameTooltip_SetTransmogrifyItem)
-function GameTooltip:SetTransmogrifyItem() end
+function GameTooltip:SetTransmogrifyItem(slotId) end
 
 ---[Documentation](https://wow.gamepedia.com/API_GameTooltip_SetUnit)
-function GameTooltip:SetUnit() end
+function GameTooltip:SetUnit(unit, hideStatus) end
 
 ---[Documentation](https://wow.gamepedia.com/API_GameTooltip_SetUnitAura)
-function GameTooltip:SetUnitAura() end
+function GameTooltip:SetUnitAura(unit, auraIndex, filter) end
 
 ---[Documentation](https://wow.gamepedia.com/API_GameTooltip_SetUnitBuff)
-function GameTooltip:SetUnitBuff() end
+function GameTooltip:SetUnitBuff(unit, buffIndex, raidFilter) end
 
 ---[Documentation](https://wow.gamepedia.com/API_GameTooltip_SetUnitDebuff)
-function GameTooltip:SetUnitDebuff() end
+function GameTooltip:SetUnitDebuff(unit, buffIndex, raidFilter) end
 
 ---[Documentation](https://wow.gamepedia.com/API_GameTooltip_SetUpgradeItem)
 function GameTooltip:SetUpgradeItem() end
 
 ---[Documentation](https://wow.gamepedia.com/API_GameTooltip_SetVoidDepositItem)
-function GameTooltip:SetVoidDepositItem() end
+function GameTooltip:SetVoidDepositItem(slotIndex) end
 
 ---[Documentation](https://wow.gamepedia.com/API_GameTooltip_SetVoidItem)
-function GameTooltip:SetVoidItem() end
+function GameTooltip:SetVoidItem(slotIndex) end
 
 ---[Documentation](https://wow.gamepedia.com/API_GameTooltip_SetVoidWithdrawalItem)
-function GameTooltip:SetVoidWithdrawalItem() end
+function GameTooltip:SetVoidWithdrawalItem(slotIndex) end
 
 ---[Documentation](https://wow.gamepedia.com/API_GameTooltip_SetWeeklyReward)
-function GameTooltip:SetWeeklyReward() end
+function GameTooltip:SetWeeklyReward(itemDBID) end

@@ -95,97 +95,97 @@ function Model:IsUsingModelCenterToTransform() end
 function Model:MakeCurrentCameraCustom() end
 
 ---[Documentation](https://wow.gamepedia.com/API_Model_ReplaceIconTexture)
-function Model:ReplaceIconTexture() end
+function Model:ReplaceIconTexture(texture_or_fileDataID) end
 
 ---[Documentation](https://wow.gamepedia.com/API_Model_SetCamera)
-function Model:SetCamera() end
+function Model:SetCamera(index) end
 
 ---[Documentation](https://wow.gamepedia.com/API_Model_SetCameraDistance)
-function Model:SetCameraDistance() end
+function Model:SetCameraDistance(distance) end
 
 ---[Documentation](https://wow.gamepedia.com/API_Model_SetCameraFacing)
-function Model:SetCameraFacing() end
+function Model:SetCameraFacing(radians) end
 
 ---[Documentation](https://wow.gamepedia.com/API_Model_SetCameraPosition)
-function Model:SetCameraPosition() end
+function Model:SetCameraPosition(x, y, z) end
 
 ---[Documentation](https://wow.gamepedia.com/API_Model_SetCameraRoll)
-function Model:SetCameraRoll() end
+function Model:SetCameraRoll(radians) end
 
 ---[Documentation](https://wow.gamepedia.com/API_Model_SetCameraTarget)
-function Model:SetCameraTarget() end
+function Model:SetCameraTarget(x, y, z) end
 
 ---[Documentation](https://wow.gamepedia.com/API_Model_SetCustomCamera)
-function Model:SetCustomCamera() end
+function Model:SetCustomCamera(defaultIndex) end
 
 ---[Documentation](https://wow.gamepedia.com/API_Model_SetDesaturation)
-function Model:SetDesaturation() end
+function Model:SetDesaturation(strength) end
 
 ---[Documentation](https://wow.gamepedia.com/API_Model_SetFacing)
-function Model:SetFacing() end
+function Model:SetFacing(facing) end
 
 ---[Documentation](https://wow.gamepedia.com/API_Model_SetFogColor)
-function Model:SetFogColor() end
+function Model:SetFogColor(r, g, b, a) end
 
 ---[Documentation](https://wow.gamepedia.com/API_Model_SetFogFar)
-function Model:SetFogFar() end
+function Model:SetFogFar(value) end
 
 ---[Documentation](https://wow.gamepedia.com/API_Model_SetFogNear)
-function Model:SetFogNear() end
+function Model:SetFogNear(value) end
 
 ---[Documentation](https://wow.gamepedia.com/API_Model_SetGlow)
 function Model:SetGlow() end
 
 ---[Documentation](https://wow.gamepedia.com/API_Model_SetLight)
-function Model:SetLight() end
+function Model:SetLight(enabled, omni, dirX, dirY, dirZ, ambIntensity, ambR, ambG, ambB, dirIntensity, dirR, dirG, dirB) end
 
 ---[Documentation](https://wow.gamepedia.com/API_Model_SetModel)
-function Model:SetModel() end
+function Model:SetModel(file) end
 
 ---[Documentation](https://wow.gamepedia.com/API_Model_SetModelAlpha)
-function Model:SetModelAlpha() end
+function Model:SetModelAlpha(alpha) end
 
 ---[Documentation](https://wow.gamepedia.com/API_Model_SetModelDrawLayer)
-function Model:SetModelDrawLayer() end
+function Model:SetModelDrawLayer(layer) end
 
 ---[Documentation](https://wow.gamepedia.com/API_Model_SetModelScale)
-function Model:SetModelScale() end
+function Model:SetModelScale(scale) end
 
 ---[Documentation](https://wow.gamepedia.com/API_Model_SetParticlesEnabled)
-function Model:SetParticlesEnabled() end
+function Model:SetParticlesEnabled(bool) end
 
 ---[Documentation](https://wow.gamepedia.com/API_Model_SetPaused)
-function Model:SetPaused() end
+function Model:SetPaused(bool) end
 
 ---[Documentation](https://wow.gamepedia.com/API_Model_SetPitch)
-function Model:SetPitch() end
+function Model:SetPitch(pitch) end
 
 ---[Documentation](https://wow.gamepedia.com/API_Model_SetPosition)
-function Model:SetPosition() end
+function Model:SetPosition(x, y, z) end
 
 ---[Documentation](https://wow.gamepedia.com/API_Model_SetRoll)
-function Model:SetRoll() end
+function Model:SetRoll(roll) end
 
 ---[Documentation](https://wow.gamepedia.com/API_Model_SetSequence)
-function Model:SetSequence() end
+function Model:SetSequence(sequence) end
 
 ---[Documentation](https://wow.gamepedia.com/API_Model_SetSequenceTime)
-function Model:SetSequenceTime() end
+function Model:SetSequenceTime(sequence, time) end
 
 ---[Documentation](https://wow.gamepedia.com/API_Model_SetShadowEffect)
-function Model:SetShadowEffect() end
+function Model:SetShadowEffect(strength) end
 
 ---[Documentation](https://wow.gamepedia.com/API_Model_SetTransform)
 function Model:SetTransform() end
 
 ---[Documentation](https://wow.gamepedia.com/API_Model_SetViewInsets)
-function Model:SetViewInsets() end
+function Model:SetViewInsets(l, r, t, b) end
 
 ---[Documentation](https://wow.gamepedia.com/API_Model_SetViewTranslation)
-function Model:SetViewTranslation() end
+function Model:SetViewTranslation(x, y) end
 
 ---[Documentation](https://wow.gamepedia.com/API_Model_TransformCameraSpaceToModelSpace)
-function Model:TransformCameraSpaceToModelSpace() end
+function Model:TransformCameraSpaceToModelSpace(positionX, positionY, positionZ) end
 
 ---[Documentation](https://wow.gamepedia.com/API_Model_UseModelCenterToTransform)
 function Model:UseModelCenterToTransform() end

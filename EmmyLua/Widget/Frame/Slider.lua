@@ -38,22 +38,22 @@ function Slider:IsEnabled() end
 function Slider:SetEnabled() end
 
 ---[Documentation](https://wow.gamepedia.com/API_Slider_SetMinMaxValues)
-function Slider:SetMinMaxValues() end
+function Slider:SetMinMaxValues(min, max) end
 
 ---[Documentation](https://wow.gamepedia.com/API_Slider_SetObeyStepOnDrag)
-function Slider:SetObeyStepOnDrag() end
+function Slider:SetObeyStepOnDrag(obeyStep) end
 
 ---[Documentation](https://wow.gamepedia.com/API_Slider_SetOrientation)
-function Slider:SetOrientation() end
+function Slider:SetOrientation(orientation) end
 
 ---[Documentation](https://wow.gamepedia.com/API_Slider_SetStepsPerPage)
-function Slider:SetStepsPerPage() end
+function Slider:SetStepsPerPage(steps) end
 
 ---[Documentation](https://wow.gamepedia.com/API_Slider_SetThumbTexture)
-function Slider:SetThumbTexture() end
+function Slider:SetThumbTexture(texture_or_fileDataIDbool) end
 
 ---[Documentation](https://wow.gamepedia.com/API_Slider_SetValue)
-function Slider:SetValue() end
+function Slider:SetValue(value) end
 
 ---[Documentation](https://wow.gamepedia.com/API_Slider_SetValueStep)
-function Slider:SetValueStep() end
+function Slider:SetValueStep(value) end

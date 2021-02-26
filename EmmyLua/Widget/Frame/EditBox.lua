@@ -2,7 +2,7 @@
 local EditBox = {}
 
 ---[Documentation](https://wow.gamepedia.com/API_EditBox_AddHistoryLine)
-function EditBox:AddHistoryLine() end
+function EditBox:AddHistoryLine(text) end
 
 ---[Documentation](https://wow.gamepedia.com/API_EditBox_ClearFocus)
 function EditBox:ClearFocus() end
@@ -65,10 +65,10 @@ function EditBox:GetVisibleTextByteLimit() end
 function EditBox:HasFocus() end
 
 ---[Documentation](https://wow.gamepedia.com/API_EditBox_HighlightText)
-function EditBox:HighlightText() end
+function EditBox:HighlightText(startPos, endPos) end
 
 ---[Documentation](https://wow.gamepedia.com/API_EditBox_Insert)
-function EditBox:Insert() end
+function EditBox:Insert(text) end
 
 ---[Documentation](https://wow.gamepedia.com/API_EditBox_IsAutoFocus)
 function EditBox:IsAutoFocus() end
@@ -95,19 +95,19 @@ function EditBox:IsPassword() end
 function EditBox:IsSecureText() end
 
 ---[Documentation](https://wow.gamepedia.com/API_EditBox_SetAltArrowKeyMode)
-function EditBox:SetAltArrowKeyMode() end
+function EditBox:SetAltArrowKeyMode(enable) end
 
 ---[Documentation](https://wow.gamepedia.com/API_EditBox_SetAutoFocus)
-function EditBox:SetAutoFocus() end
+function EditBox:SetAutoFocus(state) end
 
 ---[Documentation](https://wow.gamepedia.com/API_EditBox_SetBlinkSpeed)
-function EditBox:SetBlinkSpeed() end
+function EditBox:SetBlinkSpeed(speed) end
 
 ---[Documentation](https://wow.gamepedia.com/API_EditBox_SetCountInvisibleLetters)
 function EditBox:SetCountInvisibleLetters() end
 
 ---[Documentation](https://wow.gamepedia.com/API_EditBox_SetCursorPosition)
-function EditBox:SetCursorPosition() end
+function EditBox:SetCursorPosition(position) end
 
 ---[Documentation](https://wow.gamepedia.com/API_EditBox_SetEnabled)
 function EditBox:SetEnabled() end
@@ -119,25 +119,25 @@ function EditBox:SetFocus() end
 function EditBox:SetHighlightColor() end
 
 ---[Documentation](https://wow.gamepedia.com/API_EditBox_SetHistoryLines)
-function EditBox:SetHistoryLines() end
+function EditBox:SetHistoryLines(numLines) end
 
 ---[Documentation](https://wow.gamepedia.com/API_EditBox_SetMaxBytes)
-function EditBox:SetMaxBytes() end
+function EditBox:SetMaxBytes(maxBytes) end
 
 ---[Documentation](https://wow.gamepedia.com/API_EditBox_SetMaxLetters)
-function EditBox:SetMaxLetters() end
+function EditBox:SetMaxLetters(maxLetters) end
 
 ---[Documentation](https://wow.gamepedia.com/API_EditBox_SetMultiLine)
-function EditBox:SetMultiLine() end
+function EditBox:SetMultiLine(state) end
 
 ---[Documentation](https://wow.gamepedia.com/API_EditBox_SetNumber)
-function EditBox:SetNumber() end
+function EditBox:SetNumber(number) end
 
 ---[Documentation](https://wow.gamepedia.com/API_EditBox_SetNumeric)
-function EditBox:SetNumeric() end
+function EditBox:SetNumeric(state) end
 
 ---[Documentation](https://wow.gamepedia.com/API_EditBox_SetPassword)
-function EditBox:SetPassword() end
+function EditBox:SetPassword(state) end
 
 ---[Documentation](https://wow.gamepedia.com/API_EditBox_SetSecureText)
 function EditBox:SetSecureText() end
@@ -149,13 +149,13 @@ function EditBox:SetSecurityDisablePaste() end
 function EditBox:SetSecurityDisableSetText() end
 
 ---[Documentation](https://wow.gamepedia.com/API_EditBox_SetText)
-function EditBox:SetText() end
+function EditBox:SetText(text) end
 
 ---[Documentation](https://wow.gamepedia.com/API_EditBox_SetTextInsets)
-function EditBox:SetTextInsets() end
+function EditBox:SetTextInsets(l, r, t, b) end
 
 ---[Documentation](https://wow.gamepedia.com/API_EditBox_SetVisibleTextByteLimit)
-function EditBox:SetVisibleTextByteLimit() end
+function EditBox:SetVisibleTextByteLimit(maxVisibleBytes) end
 
 ---[Documentation](https://wow.gamepedia.com/API_EditBox_ToggleInputLanguage)
 function EditBox:ToggleInputLanguage() end

@@ -59,64 +59,64 @@ function Button:IsEnabled() end
 function Button:LockHighlight() end
 
 ---[Documentation](https://wow.gamepedia.com/API_Button_RegisterForClicks)
-function Button:RegisterForClicks() end
+function Button:RegisterForClicks(clickType1, clickType2) end
 
 ---[Documentation](https://wow.gamepedia.com/API_Button_RegisterForMouse)
 function Button:RegisterForMouse() end
 
 ---[Documentation](https://wow.gamepedia.com/API_Button_SetButtonState)
-function Button:SetButtonState() end
+function Button:SetButtonState(state, lock) end
 
 ---[Documentation](https://wow.gamepedia.com/API_Button_SetDisabledAtlas)
-function Button:SetDisabledAtlas() end
+function Button:SetDisabledAtlas(atlasName) end
 
 ---[Documentation](https://wow.gamepedia.com/API_Button_SetDisabledFontObject)
-function Button:SetDisabledFontObject() end
+function Button:SetDisabledFontObject(font) end
 
 ---[Documentation](https://wow.gamepedia.com/API_Button_SetDisabledTexture)
-function Button:SetDisabledTexture() end
+function Button:SetDisabledTexture(texture_or_texturePath) end
 
 ---[Documentation](https://wow.gamepedia.com/API_Button_SetEnabled)
-function Button:SetEnabled() end
+function Button:SetEnabled(boolean) end
 
 ---[Documentation](https://wow.gamepedia.com/API_Button_SetFontString)
-function Button:SetFontString() end
+function Button:SetFontString(fontString) end
 
 ---[Documentation](https://wow.gamepedia.com/API_Button_SetFormattedText)
-function Button:SetFormattedText() end
+function Button:SetFormattedText(formatstring) end
 
 ---[Documentation](https://wow.gamepedia.com/API_Button_SetHighlightAtlas)
-function Button:SetHighlightAtlas() end
+function Button:SetHighlightAtlas(atlasName, blendmode) end
 
 ---[Documentation](https://wow.gamepedia.com/API_Button_SetHighlightFontObject)
-function Button:SetHighlightFontObject() end
+function Button:SetHighlightFontObject(font) end
 
 ---[Documentation](https://wow.gamepedia.com/API_Button_SetHighlightTexture)
-function Button:SetHighlightTexture() end
+function Button:SetHighlightTexture(texture_or_texturePath,alphaMode) end
 
 ---[Documentation](https://wow.gamepedia.com/API_Button_SetMotionScriptsWhileDisabled)
-function Button:SetMotionScriptsWhileDisabled() end
+function Button:SetMotionScriptsWhileDisabled(bool) end
 
 ---[Documentation](https://wow.gamepedia.com/API_Button_SetNormalAtlas)
-function Button:SetNormalAtlas() end
+function Button:SetNormalAtlas(atlasName) end
 
 ---[Documentation](https://wow.gamepedia.com/API_Button_SetNormalFontObject)
-function Button:SetNormalFontObject() end
+function Button:SetNormalFontObject(FontObject) end
 
 ---[Documentation](https://wow.gamepedia.com/API_Button_SetNormalTexture)
-function Button:SetNormalTexture() end
+function Button:SetNormalTexture(texture_or_texturePath) end
 
 ---[Documentation](https://wow.gamepedia.com/API_Button_SetPushedAtlas)
-function Button:SetPushedAtlas() end
+function Button:SetPushedAtlas(atlasName) end
 
 ---[Documentation](https://wow.gamepedia.com/API_Button_SetPushedTextOffset)
-function Button:SetPushedTextOffset() end
+function Button:SetPushedTextOffset(x, y) end
 
 ---[Documentation](https://wow.gamepedia.com/API_Button_SetPushedTexture)
-function Button:SetPushedTexture() end
+function Button:SetPushedTexture(texture_or_texturePath) end
 
 ---[Documentation](https://wow.gamepedia.com/API_Button_SetText)
-function Button:SetText() end
+function Button:SetText(text) end
 
 ---[Documentation](https://wow.gamepedia.com/API_Button_UnlockHighlight)
 function Button:UnlockHighlight() end
@@ -135,10 +135,10 @@ function CheckButton:GetCheckedTexture() end
 function CheckButton:GetDisabledCheckedTexture() end
 
 ---[Documentation](https://wow.gamepedia.com/API_CheckButton_SetChecked)
-function CheckButton:SetChecked() end
+function CheckButton:SetChecked(boolean) end
 
 ---[Documentation](https://wow.gamepedia.com/API_CheckButton_SetCheckedTexture)
-function CheckButton:SetCheckedTexture() end
+function CheckButton:SetCheckedTexture(texture) end
 
 ---[Documentation](https://wow.gamepedia.com/API_CheckButton_SetDisabledCheckedTexture)
-function CheckButton:SetDisabledCheckedTexture() end
+function CheckButton:SetDisabledCheckedTexture(texture) end

@@ -196,7 +196,7 @@ local LayeredRegion = {}
 function LayeredRegion:GetDrawLayer() end
 
 ---[Documentation](https://wow.gamepedia.com/API_LayeredRegion_SetDrawLayer)
-function LayeredRegion:SetDrawLayer() end
+function LayeredRegion:SetDrawLayer(layer, sublevel) end
 
 ---[Documentation](https://wow.gamepedia.com/API_LayeredRegion_SetVertexColor)
-function LayeredRegion:SetVertexColor() end
+function LayeredRegion:SetVertexColor(r, g, b, a) end

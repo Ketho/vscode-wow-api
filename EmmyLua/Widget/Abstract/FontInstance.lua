@@ -9,10 +9,10 @@ function FontInstance:GetFont() end
 function FontInstance:GetFontObject() end
 
 ---[Documentation](https://wow.gamepedia.com/API_FontInstance_SetFont)
-function FontInstance:SetFont() end
+function FontInstance:SetFont(path, height,flags) end
 
 ---[Documentation](https://wow.gamepedia.com/API_FontInstance_SetFontObject)
-function FontInstance:SetFontObject() end
+function FontInstance:SetFontObject(fontObject) end
 
 ---[Documentation](https://wow.gamepedia.com/API_FontInstance_GetIndentedWordWrap)
 function FontInstance:GetIndentedWordWrap() end
@@ -30,13 +30,13 @@ function FontInstance:GetSpacing() end
 function FontInstance:SetIndentedWordWrap() end
 
 ---[Documentation](https://wow.gamepedia.com/API_FontInstance_SetJustifyH)
-function FontInstance:SetJustifyH() end
+function FontInstance:SetJustifyH(justifyH) end
 
 ---[Documentation](https://wow.gamepedia.com/API_FontInstance_SetJustifyV)
-function FontInstance:SetJustifyV() end
+function FontInstance:SetJustifyV(justifyV) end
 
 ---[Documentation](https://wow.gamepedia.com/API_FontInstance_SetSpacing)
-function FontInstance:SetSpacing() end
+function FontInstance:SetSpacing(spacing) end
 
 ---[Documentation](https://wow.gamepedia.com/API_FontInstance_GetShadowColor)
 function FontInstance:GetShadowColor() end
@@ -48,10 +48,10 @@ function FontInstance:GetShadowOffset() end
 function FontInstance:GetTextColor() end
 
 ---[Documentation](https://wow.gamepedia.com/API_FontInstance_SetShadowColor)
-function FontInstance:SetShadowColor() end
+function FontInstance:SetShadowColor(r, g, b, a) end
 
 ---[Documentation](https://wow.gamepedia.com/API_FontInstance_SetShadowOffset)
-function FontInstance:SetShadowOffset() end
+function FontInstance:SetShadowOffset(x, y) end
 
 ---[Documentation](https://wow.gamepedia.com/API_FontInstance_SetTextColor)
-function FontInstance:SetTextColor() end
+function FontInstance:SetTextColor(r, g, b, a) end

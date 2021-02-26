@@ -50,7 +50,7 @@ function Animation:IsStopped() end
 function Animation:Pause() end
 
 ---[Documentation](https://wow.gamepedia.com/API_Animation_Play)
-function Animation:Play() end
+function Animation:Play(reversed, elapsedOffset) end
 
 ---[Documentation](https://wow.gamepedia.com/API_Animation_Restart)
 function Animation:Restart() end
@@ -59,28 +59,28 @@ function Animation:Restart() end
 function Animation:SetChildKey() end
 
 ---[Documentation](https://wow.gamepedia.com/API_Animation_SetDuration)
-function Animation:SetDuration() end
+function Animation:SetDuration(durationSec) end
 
 ---[Documentation](https://wow.gamepedia.com/API_Animation_SetEndDelay)
-function Animation:SetEndDelay() end
+function Animation:SetEndDelay(delaySec) end
 
 ---[Documentation](https://wow.gamepedia.com/API_Animation_SetOrder)
-function Animation:SetOrder() end
+function Animation:SetOrder(order) end
 
 ---[Documentation](https://wow.gamepedia.com/API_Animation_SetParent)
-function Animation:SetParent() end
+function Animation:SetParent(animGroup_or_animGroupName) end
 
 ---[Documentation](https://wow.gamepedia.com/API_Animation_SetPlaying)
-function Animation:SetPlaying() end
+function Animation:SetPlaying(play) end
 
 ---[Documentation](https://wow.gamepedia.com/API_Animation_SetSmoothProgress)
-function Animation:SetSmoothProgress() end
+function Animation:SetSmoothProgress(smoothProgress) end
 
 ---[Documentation](https://wow.gamepedia.com/API_Animation_SetSmoothing)
-function Animation:SetSmoothing() end
+function Animation:SetSmoothing(smoothType) end
 
 ---[Documentation](https://wow.gamepedia.com/API_Animation_SetStartDelay)
-function Animation:SetStartDelay() end
+function Animation:SetStartDelay(delaySec) end
 
 ---[Documentation](https://wow.gamepedia.com/API_Animation_SetTarget)
 function Animation:SetTarget() end

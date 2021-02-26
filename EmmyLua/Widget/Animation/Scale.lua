@@ -14,13 +14,13 @@ function Scale:GetScale() end
 function Scale:GetToScale() end
 
 ---[Documentation](https://wow.gamepedia.com/API_Scale_SetFromScale)
-function Scale:SetFromScale() end
+function Scale:SetFromScale(x, y) end
 
 ---[Documentation](https://wow.gamepedia.com/API_Scale_SetOrigin)
-function Scale:SetOrigin() end
+function Scale:SetOrigin(point, offsetX, offsetY) end
 
 ---[Documentation](https://wow.gamepedia.com/API_Scale_SetScale)
-function Scale:SetScale() end
+function Scale:SetScale(x, y) end
 
 ---[Documentation](https://wow.gamepedia.com/API_Scale_SetToScale)
-function Scale:SetToScale() end
+function Scale:SetToScale(x, y) end
