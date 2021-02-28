@@ -1,6 +1,12 @@
 ---@class Frame : Region, ScriptObject
 local Frame = {}
 
+---@param scriptType ScriptTypeFrame
+---@param handler function
+---[Documentation](https://wow.gamepedia.com/API_ScriptObject_SetScript)
+function Frame:SetScript(scriptType, handler) end
+
+
 ---@param event EventName
 ---[Documentation](https://wow.gamepedia.com/API_Frame_RegisterEvent)
 function Frame:RegisterEvent(event) end
@@ -276,21 +282,3 @@ function Frame:GetID() end
 
 ---[Documentation](https://wow.gamepedia.com/API_Frame_SetID)
 function Frame:SetID(id) end
-
----[Documentation](https://wow.gamepedia.com/API_Frame_GetBackdrop)
-function Frame:GetBackdrop() end
-
----[Documentation](https://wow.gamepedia.com/API_Frame_GetBackdropBorderColor)
-function Frame:GetBackdropBorderColor(r, g, b, a) end
-
----[Documentation](https://wow.gamepedia.com/API_Frame_GetBackdropColor)
-function Frame:GetBackdropColor(r, g, b, a) end
-
----[Documentation](https://wow.gamepedia.com/API_Frame_SetBackdrop)
-function Frame:SetBackdrop(backdropTable) end
-
----[Documentation](https://wow.gamepedia.com/API_Frame_SetBackdropBorderColor)
-function Frame:SetBackdropBorderColor(r, g, b, a) end
-
----[Documentation](https://wow.gamepedia.com/API_Frame_SetBackdropColor)
-function Frame:SetBackdropColor(r, g, b, a) end
