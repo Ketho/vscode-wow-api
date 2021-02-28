@@ -1,9 +1,20 @@
 # Change Log
 
+## [0.1.4] - 2021-03-01
+### Added
+- Widget script handler types
+- Region AnchorPoint types
+- Gif examples
+
+### Removed
+- Frame Backdrop API
+- Events global table since event params are difficult to implement
+- Global Lua Enums (LE) since they pollute the global namespace / autocompletion
+
 ## [0.1.3] - 2021-02-28
 ### Added
-- Added image examples
-- Test overload annotation with hooksecurefunc()
+- hooksecurefunc() parameter overloading
+- Image examples
 
 ### Fixed
 - Duplicate CreateFrame()
@@ -21,10 +32,9 @@
 
 ## [0.1.0] - 2021-02-24
 ### Added
-- Globalapi dump
-- Partial Widget api
-- Update for 9.0.2 (36949)
-- Remove emmylua path from `Lua.workspace.library` after uninstall
+- Global API function names
+- Partial Widget API
+- Update for Patch 9.0.2 (36949)
 
 ## [0.0.4] - 2021-02-24
 ### Removed
@@ -32,8 +42,9 @@
 
 ## [0.0.3] - 2021-02-24
 ### Added
-- Test adding our EmmyLua annotations to `Lua.workspace.library`
+- EmmyLua path to `Lua.workspace.library`
 
+[0.1.4]: https://github.com/Ketho/vscode-wow-api/releases/tag/v0.1.4
 [0.1.3]: https://github.com/Ketho/vscode-wow-api/releases/tag/v0.1.3
 [0.1.2]: https://github.com/Ketho/vscode-wow-api/releases/tag/v0.1.2
 [0.1.1]: https://github.com/Ketho/vscode-wow-api/releases/tag/v0.1.1
