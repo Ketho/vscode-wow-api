@@ -13,3 +13,5 @@ local dressup = CreateFrame("DressUpModel")
 local tooltip = CreateFrame("GameTooltip")
 
 hooksecurefunc("test", function() end)
+
+C_AccountInfo.GetIDFromBattleNetAccountGUID()
