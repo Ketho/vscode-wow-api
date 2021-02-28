@@ -10,6 +10,10 @@
 ---[Documentation](https://wow.gamepedia.com/API_CreateFrame)
 function CreateFrame(frameType, name, parent, template, id) end
 
+---@overload fun(funcName: string, hookfunc: function)
+---[Documentation](https://wow.gamepedia.com/API_hooksecurefunc)
+function hooksecurefunc(table, funcName, hookfunc) end
+
 -- non blizzard documented C namespaces
 C_AdventureJournal = {}
 C_AdventureMap = {}

@@ -1282,9 +1282,6 @@ function forceinsecure() end
 ---[Documentation](https://wow.gamepedia.com/API_geterrorhandler)
 function geterrorhandler() end
 
----[Documentation](https://wow.gamepedia.com/API_hooksecurefunc)
-function hooksecurefunc(table, funcName, hookfunc) end
-
 ---[Documentation](https://wow.gamepedia.com/API_issecure)
 function issecure() end
 

@@ -1342,9 +1342,6 @@ function CopyToClipboard(text) end
 ---[Documentation](https://wow.gamepedia.com/API_CreateFont)
 function CreateFont(name) end
 
----[Documentation](https://wow.gamepedia.com/API_CreateFrame)
-function CreateFrame(frameType, frameName, parentFrame, inheritsFrame, id) end
-
 ---[Documentation](https://wow.gamepedia.com/API_CreateMacro)
 function CreateMacro(name, icon, body, perCharacter, isLocal) end
 
