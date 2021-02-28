@@ -1,6 +1,30 @@
 ---@class EditBox : Frame
 local EditBox = {}
 
+---@param scriptType ScriptEditBox
+---@param bindingType LE_SCRIPT_BINDING_TYPE
+---@return function handler
+---[Documentation](https://wow.gamepedia.com/API_ScriptObject_GetScript)
+function EditBox:GetScript(scriptType, bindingType) end
+
+---@param scriptType ScriptEditBox
+---@return boolean hasScript
+---[Documentation](https://wow.gamepedia.com/API_ScriptObject_HasScript)
+function EditBox:HasScript(scriptType) end
+
+---@param scriptType ScriptEditBox
+---@param handler function
+---@param bindingType LE_SCRIPT_BINDING_TYPE
+---@return boolean success
+---[Documentation](https://wow.gamepedia.com/API_ScriptObject_HookScript)
+function EditBox:HookScript(scriptType, handler, bindingType) end
+
+---@param scriptType ScriptEditBox
+---@param handler function
+---[Documentation](https://wow.gamepedia.com/API_ScriptObject_SetScript)
+function EditBox:SetScript(scriptType, handler) end
+
+
 ---[Documentation](https://wow.gamepedia.com/API_EditBox_AddHistoryLine)
 function EditBox:AddHistoryLine(text) end
 

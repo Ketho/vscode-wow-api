@@ -1,6 +1,30 @@
 ---@class Cooldown : Frame
 local Cooldown = {}
 
+---@param scriptType ScriptCooldown
+---@param bindingType LE_SCRIPT_BINDING_TYPE
+---@return function handler
+---[Documentation](https://wow.gamepedia.com/API_ScriptObject_GetScript)
+function Cooldown:GetScript(scriptType, bindingType) end
+
+---@param scriptType ScriptCooldown
+---@return boolean hasScript
+---[Documentation](https://wow.gamepedia.com/API_ScriptObject_HasScript)
+function Cooldown:HasScript(scriptType) end
+
+---@param scriptType ScriptCooldown
+---@param handler function
+---@param bindingType LE_SCRIPT_BINDING_TYPE
+---@return boolean success
+---[Documentation](https://wow.gamepedia.com/API_ScriptObject_HookScript)
+function Cooldown:HookScript(scriptType, handler, bindingType) end
+
+---@param scriptType ScriptCooldown
+---@param handler function
+---[Documentation](https://wow.gamepedia.com/API_ScriptObject_SetScript)
+function Cooldown:SetScript(scriptType, handler) end
+
+
 ---[Documentation](https://wow.gamepedia.com/API_Cooldown_Clear)
 function Cooldown:Clear() end
 

@@ -1,6 +1,30 @@
 ---@class Animation : ParentedObject, ScriptObject
 local Animation = {}
 
+---@param scriptType ScriptAnimation
+---@param bindingType LE_SCRIPT_BINDING_TYPE
+---@return function handler
+---[Documentation](https://wow.gamepedia.com/API_ScriptObject_GetScript)
+function Animation:GetScript(scriptType, bindingType) end
+
+---@param scriptType ScriptAnimation
+---@return boolean hasScript
+---[Documentation](https://wow.gamepedia.com/API_ScriptObject_HasScript)
+function Animation:HasScript(scriptType) end
+
+---@param scriptType ScriptAnimation
+---@param handler function
+---@param bindingType LE_SCRIPT_BINDING_TYPE
+---@return boolean success
+---[Documentation](https://wow.gamepedia.com/API_ScriptObject_HookScript)
+function Animation:HookScript(scriptType, handler, bindingType) end
+
+---@param scriptType ScriptAnimation
+---@param handler function
+---[Documentation](https://wow.gamepedia.com/API_ScriptObject_SetScript)
+function Animation:SetScript(scriptType, handler) end
+
+
 ---[Documentation](https://wow.gamepedia.com/API_Animation_GetDuration)
 function Animation:GetDuration() end
 

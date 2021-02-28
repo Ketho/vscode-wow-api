@@ -1,7 +1,25 @@
 ---@class Frame : Region, ScriptObject
 local Frame = {}
 
----@param scriptType ScriptTypeFrame
+---@param scriptType ScriptFrame
+---@param bindingType LE_SCRIPT_BINDING_TYPE
+---@return function handler
+---[Documentation](https://wow.gamepedia.com/API_ScriptObject_GetScript)
+function Frame:GetScript(scriptType, bindingType) end
+
+---@param scriptType ScriptFrame
+---@return boolean hasScript
+---[Documentation](https://wow.gamepedia.com/API_ScriptObject_HasScript)
+function Frame:HasScript(scriptType) end
+
+---@param scriptType ScriptFrame
+---@param handler function
+---@param bindingType LE_SCRIPT_BINDING_TYPE
+---@return boolean success
+---[Documentation](https://wow.gamepedia.com/API_ScriptObject_HookScript)
+function Frame:HookScript(scriptType, handler, bindingType) end
+
+---@param scriptType ScriptFrame
 ---@param handler function
 ---[Documentation](https://wow.gamepedia.com/API_ScriptObject_SetScript)
 function Frame:SetScript(scriptType, handler) end
@@ -11,6 +29,7 @@ function Frame:SetScript(scriptType, handler) end
 ---[Documentation](https://wow.gamepedia.com/API_Frame_RegisterEvent)
 function Frame:RegisterEvent(event) end
 
+---@param event EventName
 ---[Documentation](https://wow.gamepedia.com/API_Frame_RegisterUnitEvent)
 function Frame:RegisterUnitEvent(event, unit1, unit2) end
 
@@ -24,6 +43,7 @@ function Frame:UnregisterEvent(event) end
 ---[Documentation](https://wow.gamepedia.com/API_Frame_UnregisterAllEvents)
 function Frame:UnregisterAllEvents() end
 
+---@param event EventName
 ---[Documentation](https://wow.gamepedia.com/API_Frame_IsEventRegistered)
 function Frame:IsEventRegistered(event) end
 

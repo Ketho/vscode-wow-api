@@ -1,6 +1,30 @@
 ---@class AnimationGroup : ParentedObject, ScriptObject
 local AnimationGroup = {}
 
+---@param scriptType ScriptAnimationGroup
+---@param bindingType LE_SCRIPT_BINDING_TYPE
+---@return function handler
+---[Documentation](https://wow.gamepedia.com/API_ScriptObject_GetScript)
+function AnimationGroup:GetScript(scriptType, bindingType) end
+
+---@param scriptType ScriptAnimationGroup
+---@return boolean hasScript
+---[Documentation](https://wow.gamepedia.com/API_ScriptObject_HasScript)
+function AnimationGroup:HasScript(scriptType) end
+
+---@param scriptType ScriptAnimationGroup
+---@param handler function
+---@param bindingType LE_SCRIPT_BINDING_TYPE
+---@return boolean success
+---[Documentation](https://wow.gamepedia.com/API_ScriptObject_HookScript)
+function AnimationGroup:HookScript(scriptType, handler, bindingType) end
+
+---@param scriptType ScriptAnimationGroup
+---@param handler function
+---[Documentation](https://wow.gamepedia.com/API_ScriptObject_SetScript)
+function AnimationGroup:SetScript(scriptType, handler) end
+
+
 ---@generic Animation
 ---@param animationType `Animation` | AnimationType
 ---@param name string

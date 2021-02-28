@@ -1,6 +1,30 @@
 ---@class Button : Frame
 local Button = {}
 
+---@param scriptType ScriptButton
+---@param bindingType LE_SCRIPT_BINDING_TYPE
+---@return function handler
+---[Documentation](https://wow.gamepedia.com/API_ScriptObject_GetScript)
+function Button:GetScript(scriptType, bindingType) end
+
+---@param scriptType ScriptButton
+---@return boolean hasScript
+---[Documentation](https://wow.gamepedia.com/API_ScriptObject_HasScript)
+function Button:HasScript(scriptType) end
+
+---@param scriptType ScriptButton
+---@param handler function
+---@param bindingType LE_SCRIPT_BINDING_TYPE
+---@return boolean success
+---[Documentation](https://wow.gamepedia.com/API_ScriptObject_HookScript)
+function Button:HookScript(scriptType, handler, bindingType) end
+
+---@param scriptType ScriptButton
+---@param handler function
+---[Documentation](https://wow.gamepedia.com/API_ScriptObject_SetScript)
+function Button:SetScript(scriptType, handler) end
+
+
 ---[Documentation](https://wow.gamepedia.com/API_Button_Click)
 function Button:Click() end
 

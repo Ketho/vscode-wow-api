@@ -1,6 +1,30 @@
 ---@class DressUpModel : PlayerModel
 local DressUpModel = {}
 
+---@param scriptType ScriptDressUpModel
+---@param bindingType LE_SCRIPT_BINDING_TYPE
+---@return function handler
+---[Documentation](https://wow.gamepedia.com/API_ScriptObject_GetScript)
+function DressUpModel:GetScript(scriptType, bindingType) end
+
+---@param scriptType ScriptDressUpModel
+---@return boolean hasScript
+---[Documentation](https://wow.gamepedia.com/API_ScriptObject_HasScript)
+function DressUpModel:HasScript(scriptType) end
+
+---@param scriptType ScriptDressUpModel
+---@param handler function
+---@param bindingType LE_SCRIPT_BINDING_TYPE
+---@return boolean success
+---[Documentation](https://wow.gamepedia.com/API_ScriptObject_HookScript)
+function DressUpModel:HookScript(scriptType, handler, bindingType) end
+
+---@param scriptType ScriptDressUpModel
+---@param handler function
+---[Documentation](https://wow.gamepedia.com/API_ScriptObject_SetScript)
+function DressUpModel:SetScript(scriptType, handler) end
+
+
 ---[Documentation](https://wow.gamepedia.com/API_DressUpModel_Dress)
 function DressUpModel:Dress() end
 

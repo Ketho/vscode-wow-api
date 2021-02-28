@@ -1,6 +1,30 @@
 ---@class GameTooltip : Frame
 local GameTooltip = {}
 
+---@param scriptType ScriptGameTooltip
+---@param bindingType LE_SCRIPT_BINDING_TYPE
+---@return function handler
+---[Documentation](https://wow.gamepedia.com/API_ScriptObject_GetScript)
+function GameTooltip:GetScript(scriptType, bindingType) end
+
+---@param scriptType ScriptGameTooltip
+---@return boolean hasScript
+---[Documentation](https://wow.gamepedia.com/API_ScriptObject_HasScript)
+function GameTooltip:HasScript(scriptType) end
+
+---@param scriptType ScriptGameTooltip
+---@param handler function
+---@param bindingType LE_SCRIPT_BINDING_TYPE
+---@return boolean success
+---[Documentation](https://wow.gamepedia.com/API_ScriptObject_HookScript)
+function GameTooltip:HookScript(scriptType, handler, bindingType) end
+
+---@param scriptType ScriptGameTooltip
+---@param handler function
+---[Documentation](https://wow.gamepedia.com/API_ScriptObject_SetScript)
+function GameTooltip:SetScript(scriptType, handler) end
+
+
 ---[Documentation](https://wow.gamepedia.com/API_GameTooltip_AddAtlas)
 function GameTooltip:AddAtlas(atlas, minx, maxx, miny, maxy) end
 

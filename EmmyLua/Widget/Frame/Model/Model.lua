@@ -1,6 +1,30 @@
 ---@class Model : Frame
 local Model = {}
 
+---@param scriptType ScriptModel
+---@param bindingType LE_SCRIPT_BINDING_TYPE
+---@return function handler
+---[Documentation](https://wow.gamepedia.com/API_ScriptObject_GetScript)
+function Model:GetScript(scriptType, bindingType) end
+
+---@param scriptType ScriptModel
+---@return boolean hasScript
+---[Documentation](https://wow.gamepedia.com/API_ScriptObject_HasScript)
+function Model:HasScript(scriptType) end
+
+---@param scriptType ScriptModel
+---@param handler function
+---@param bindingType LE_SCRIPT_BINDING_TYPE
+---@return boolean success
+---[Documentation](https://wow.gamepedia.com/API_ScriptObject_HookScript)
+function Model:HookScript(scriptType, handler, bindingType) end
+
+---@param scriptType ScriptModel
+---@param handler function
+---[Documentation](https://wow.gamepedia.com/API_ScriptObject_SetScript)
+function Model:SetScript(scriptType, handler) end
+
+
 ---[Documentation](https://wow.gamepedia.com/API_Model_AdvanceTime)
 function Model:AdvanceTime() end
 
