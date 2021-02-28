@@ -156,7 +156,7 @@ function Region:SetIgnoreParentScale(ignoreScale) end
 ---[Documentation](https://wow.gamepedia.com/API_Region_SetParent)
 function Region:SetParent(region) end
 
----@param point string
+---@param point AnchorPoint
 ---@param relativeTo Region|string
 ---@param relativePoint string
 ---@param ofsx number

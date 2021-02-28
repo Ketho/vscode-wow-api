@@ -1,1 +1,0 @@
----@alias AnimationType | '"Animation"' | '"Alpha"' | '"LineScale"' | '"LineTranslation"' | '"Path"' | '"Rotation"' | '"Scale"' | '"Translation"'
