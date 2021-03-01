@@ -1,6 +1,6 @@
 # Change Log
 
-## [0.1.4] - 2021-03-01
+## [0.2.0] - 2021-03-01
 ### Added
 - Widget script handler types
 - Region AnchorPoint types
@@ -44,7 +44,7 @@
 ### Added
 - EmmyLua path to `Lua.workspace.library`
 
-[0.1.4]: https://github.com/Ketho/vscode-wow-api/releases/tag/v0.1.4
+[0.2.0]: https://github.com/Ketho/vscode-wow-api/releases/tag/v0.2.0
 [0.1.3]: https://github.com/Ketho/vscode-wow-api/releases/tag/v0.1.3
 [0.1.2]: https://github.com/Ketho/vscode-wow-api/releases/tag/v0.1.2
 [0.1.1]: https://github.com/Ketho/vscode-wow-api/releases/tag/v0.1.1
