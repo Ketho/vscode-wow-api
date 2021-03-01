@@ -1,5 +1,14 @@
 # Change Log
 
+## [0.2.1] - 2021-03-01
+### Changed
+- Rename Frame param to frameType
+- Update package.json
+- Update gif examples
+
+### Fixed
+- Fixed 0.2.0 changelog (from 0.1.4)
+
 ## [0.2.0] - 2021-03-01
 ### Added
 - Widget script handler types
@@ -44,6 +53,7 @@
 ### Added
 - EmmyLua path to `Lua.workspace.library`
 
+[0.2.1]: https://github.com/Ketho/vscode-wow-api/releases/tag/v0.2.1
 [0.2.0]: https://github.com/Ketho/vscode-wow-api/releases/tag/v0.2.0
 [0.1.3]: https://github.com/Ketho/vscode-wow-api/releases/tag/v0.1.3
 [0.1.2]: https://github.com/Ketho/vscode-wow-api/releases/tag/v0.1.2

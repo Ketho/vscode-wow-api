@@ -9,15 +9,15 @@ Adds support for World of Warcraft [AddOn API](https://wow.gamepedia.com/World_o
 Provides IntelliSense features from [Sumneko's Lua](https://marketplace.visualstudio.com/items?itemName=sumneko.lua) extension with [EmmyLua](https://github.com/EmmyLua) annotations.
 * [Blizzard-documented](https://github.com/Gethe/wow-ui-source/tree/live/AddOns/Blizzard_APIDocumentation) API systems
 
-![](https://i.imgur.com/Xm5kGmg.gif)
+![](https://github.com/Ketho/vscode-wow-api/raw/master/img/api.gif)
 
 * Wowpedia-documented functions
 * [Widget API](https://wow.gamepedia.com/Widget_API)
 
-![](https://i.imgur.com/00rraRM.gif)
+![](https://github.com/Ketho/vscode-wow-api/raw/master/img/widget.gif)
 
 * [Events](https://wow.gamepedia.com/Events)
 * [Mixins](https://github.com/Gethe/wow-ui-source/tree/live/FrameXML/ObjectAPI)
 * [Enums](https://github.com/Ketho/BlizzardInterfaceResources/blob/live/Resources/LuaEnum.lua)
 
-![](https://i.imgur.com/JSQtQ67.gif)
+![](https://github.com/Ketho/vscode-wow-api/raw/master/img/enum.gif)
