@@ -1,14 +1,14 @@
 -- keep files under the default 100 KB preload file size
 
 ---@generic Frame
----@param type `Frame` | FrameType
+---@param frameType `Frame` | FrameType
 ---@param name string
 ---@param parent Frame
 ---@param template string
 ---@param id number
 ---@return Frame frame
 ---[Documentation](https://wow.gamepedia.com/API_CreateFrame)
-function CreateFrame(type, name, parent, template, id) end
+function CreateFrame(frameType, name, parent, template, id) end
 
 ---@param tbl table
 ---@param name string
