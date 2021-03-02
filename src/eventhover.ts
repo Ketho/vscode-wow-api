@@ -22,7 +22,10 @@ function getMarkdown(name: string) {
 			if (index < payload.length-1)
 				s += ", "
 			// event params
-			params += "1. ```\n"+el.Name+": "+el.Type+"\n```"
+			params += "1. ```\n"+el.Name+": "+el.Type+""
+			if (el.Nilable)
+				params += "?"
+			params += "\n```"
 			if (el.Documentation)
 				params += `\n &nbsp; &nbsp; ${el.Documentation}`
 			params += "\n"
