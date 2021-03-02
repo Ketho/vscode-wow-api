@@ -1,10 +1,5 @@
 local m = {}
 
-function m:ExportEvents(path)
-	local events = Emmy:GetEvents()
-	Util:WriteFile(path, events)
-end
-
 function m:ExportEventsLiterals(path)
 	local events = Emmy:GetEventsLiterals()
 	Util:WriteFile(path, events)

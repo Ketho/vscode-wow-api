@@ -5,9 +5,6 @@ require "Lua/Emmy/Emmy"
 local FrameXML = require("Lua/FrameXML/FrameXML")
 FrameXML:LoadApiDocs("Lua/FrameXML")
 
-require "Lua/Tests/Tests"
-
 local Exporter = require("Lua/Exporter")
-Exporter:ExportEvents("EmmyLua/Event.lua")
-Exporter:ExportEventsLiterals("EmmyLua/Types/EventName.lua")
+Exporter:ExportEventsLiterals("EmmyLua/Type/EventName.lua")
 print("Finished.")
