@@ -1,57 +1,45 @@
 import * as vscode from "vscode"
 
-/*
-// temp code for testing vscode extension api
-const FunctionDocumentation = require("./functions").systemFunctions
-
-let namespaceSet : vscode.CompletionItem[] = []
-let namespaceMapCompletion = new Map()
-
-for (let system in FunctionDocumentation) {
-	let item_system = new vscode.CompletionItem(system, vscode.CompletionItemKind.Variable)
-	item_system.detail = "(table)"
-	namespaceSet.push(item_system)
-
-	let items = []
-	let systemValue = FunctionDocumentation[system]
-	for (let funcName in systemValue) {
-		const item = new vscode.CompletionItem(funcName, vscode.CompletionItemKind.Method)
-		item.detail = "(function)"
-		items.push(item)
-	}
-	namespaceMapCompletion.set(system, items)
-}
+const eventsDoc = require("./data/events").eventsDoc
+const getEventHover = require("./eventhover").getEventHover
 
 export function activate(context: vscode.ExtensionContext) {
 	console.log("loaded")
-	// vscode.workspace.onDidChangeTextDocument(function(e: vscode.TextDocumentChangeEvent) { console.log(e.contentChanges); });
 
 	const completion = vscode.languages.registerCompletionItemProvider(
 		"lua",
 		{
+			// complete Lua Enums only when typing "LE_"
+			// since we don't want to pollute emmylua fuzzy completion
 			provideCompletionItems(document: vscode.TextDocument, position: vscode.Position) {
 				let linePrefix = document.lineAt(position).text.substr(0, position.character)
-				// match "foo.bar" in "test(foo.bar"
 				let lastWord = linePrefix.split(/[^\w\.]/).slice(-1)[0]
-				if (lastWord.includes(".")) {
-					// match "foo" in "foo.bar"
-					let found = lastWord.match(/(.*)\./)
-					if (found != null && namespaceMapCompletion.has(found[1])) {
-						return namespaceMapCompletion.get(found[1])
-					}
-				}
-				else if (lastWord.toLowerCase().startsWith("c_")) {
-					return namespaceSet
-				}
+				if (lastWord == "LE_")
+					return [new vscode.CompletionItem("LE_SOMETHING_GOOD")]
 			}
 		},
 		"."
 	)
-    context.subscriptions.push(completion)
-}
-*/
 
-function setLuaLibrary(v: any) {
+	const hover = vscode.languages.registerHoverProvider(
+		"lua",
+		{
+			// show event payload on hover
+			provideHover(document: vscode.TextDocument, position: vscode.Position) {
+				const range = document.getWordRangeAtPosition(position)
+				if (range) {
+					const word = document.getText(range)
+					if (eventsDoc[word])
+						return getEventHover(word)
+				}
+			}
+        }
+    )
+
+    context.subscriptions.push(completion, hover)
+}
+
+export function setLuaLibrary(v: any) {
 	let extension = vscode.extensions.getExtension("ketho.wow-api")
 	let path = extension?.extensionPath+"\\EmmyLua"
 
@@ -64,7 +52,3 @@ function setLuaLibrary(v: any) {
 }
 
 setLuaLibrary(true)
-
-module.exports = {
-	setLuaLibrary
-}

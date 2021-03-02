@@ -5,9 +5,15 @@ require "Lua/Emmy/Emmy"
 local FrameXML = require("Lua/FrameXML/FrameXML")
 FrameXML:LoadApiDocs("Lua/FrameXML")
 
-local Tests = require "Lua/Tests/Emmy"
+-- test prints
+local Tests = require("Lua/Tests/Emmy")
 -- Tests:Run()
 
-local Exporter = require("Lua/Exporter")
-Exporter:ExportEventsLiterals("EmmyLua/Type/EventName.lua")
+-- write emmylua / typescript
+local eventLiterals = Emmy:GetEventsLiterals()
+Util:WriteFile("EmmyLua/Type/EventName.lua", eventLiterals)
+
+local eventTypeScript = require("Lua/TypeScript/Events")()
+Util:WriteFile("src/data/events.ts", eventTypeScript)
+
 print("Finished.")
