@@ -3,4 +3,5 @@ node_modules
 .vscode-test/
 .vscode
 *.vsix
+*.xml
 Lua/out
