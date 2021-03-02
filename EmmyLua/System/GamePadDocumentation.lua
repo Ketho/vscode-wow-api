@@ -116,7 +116,7 @@ local GamePadConfigID = {}
 ---@field buttonCount number
 ---@field axisCount number
 ---@field stickCount number
----@field buttons bool[]
+---@field buttons boolean[]
 ---@field axes number[]
 ---@field sticks GamePadStick[]
 local GamePadMappedState = {}
@@ -141,7 +141,7 @@ local GamePadRawButtonMapping = {}
 ---@field productID number
 ---@field rawButtonCount number
 ---@field rawAxisCount number
----@field rawButtons bool[]
+---@field rawButtons boolean[]
 ---@field rawAxes number[]
 local GamePadRawState = {}
 

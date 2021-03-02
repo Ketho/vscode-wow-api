@@ -28,7 +28,7 @@ function C_GuildInfo.GetGuildRankOrder(guid) end
 function C_GuildInfo.GetGuildTabardInfo(unit) end
 
 ---@param rankOrder number
----@return bool[] permissions
+---@return boolean[] permissions
 ---[Documentation](https://wow.gamepedia.com/API_C_GuildInfo.GuildControlGetRankFlags)
 function C_GuildInfo.GuildControlGetRankFlags(rankOrder) end
 

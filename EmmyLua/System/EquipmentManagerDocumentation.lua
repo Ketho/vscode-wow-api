@@ -59,7 +59,7 @@ function C_EquipmentSet.GetEquipmentSetIDs() end
 function C_EquipmentSet.GetEquipmentSetInfo(equipmentSetID) end
 
 ---@param equipmentSetID number
----@return bool[] slotIgnored
+---@return boolean[] slotIgnored
 ---[Documentation](https://wow.gamepedia.com/API_C_EquipmentSet.GetIgnoredSlots)
 function C_EquipmentSet.GetIgnoredSlots(equipmentSetID) end
 

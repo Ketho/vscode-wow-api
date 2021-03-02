@@ -5,7 +5,7 @@ function Emmy:GetField(annotation, apiTable)
 	if apiTable.Mixin then
 		paramType = apiTable.Mixin
 	elseif apiTable.InnerType then
-		paramType = apiTable.InnerType.."[]"
+		paramType = self:GetType(apiTable.InnerType).."[]"
 	else
 		paramType = self:GetType(apiTable.Type)
 	end
