@@ -9,7 +9,7 @@
 ## [0.2.1] - 2021-03-01
 ### Changed
 - 📦 Build: Update package.json
-- 📚 Documentation: Move gif examples to repository
+- 📚 Documentation: Moved gif examples to repository
 
 ## [0.2.0] - 2021-03-01
 ### Added
@@ -51,11 +51,11 @@
 - 🛠 Improvement: EmmyLua multiple inheritance ([#254](https://github.com/sumneko/lua-language-server/issues/254))
 - 🛠 Improvement: EmmyLua class inheritance ([#188](https://github.com/sumneko/lua-language-server/issues/188))
 
-## [0.0.2] - 2020-07-28
+## 0.0.2 - 2020-07-28
 ### Added
 - 🚧 Wip: Development work
 
-## [0.0.1] - 2020-10-05
+## 0.0.1 - 2020-05-10
 ### Added
 - 🚧 Wip: Development work
 
