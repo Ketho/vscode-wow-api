@@ -15,7 +15,7 @@ export function activate(context: vscode.ExtensionContext) {
 			provideCompletionItems(document: vscode.TextDocument, position: vscode.Position) {
 				let linePrefix = document.lineAt(position).text.substr(0, position.character)
 				let lastWord = linePrefix.split(/[^\w\.]/).slice(-1)[0]
-				// complete Lua Enums only for "LE_*" to avoid polluting fuzzy completion
+				// complete Lua Enums only for "LE_*" to avoid polluting global completion
 				if (lastWord.startsWith("LE_")) {
 					return luaenumArray
 				}

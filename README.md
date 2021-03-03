@@ -17,6 +17,9 @@ Provides IntelliSense features from [Sumneko's Lua](https://marketplace.visualst
 ![](https://github.com/Ketho/vscode-wow-api/raw/master/img/widget.gif)
 
 * [Events](https://wow.gamepedia.com/Events)
+
+![](https://github.com/Ketho/vscode-wow-api/raw/master/img/event.gif)
+
 * [Mixins](https://github.com/Gethe/wow-ui-source/tree/live/FrameXML/ObjectAPI)
 * [Enums](https://github.com/Ketho/BlizzardInterfaceResources/blob/live/Resources/LuaEnum.lua)
 
