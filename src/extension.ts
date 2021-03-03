@@ -7,7 +7,7 @@ const eventsDoc = require("./data/events").eventsDoc
 const getEventHover = require("./eventhover").getEventHover
 
 export function activate(context: vscode.ExtensionContext) {
-	console.log("loaded")
+	console.log("loaded ketho.wow-api")
 
 	const completion = vscode.languages.registerCompletionItemProvider(
 		"lua",
