@@ -32,15 +32,8 @@ function getMarkdown(name: string) {
 	return s+doc
 }
 
-const map = new Map()
-
 export function getEventHover(name: string) {
-	if (map.has(name))
-		return map.get(name)
-	else {
-		let md = new vscode.MarkdownString(getMarkdown(name))
-		let item = new vscode.Hover(md)
-		map.set(name, item)
-		return item
-	}
+	let md = new vscode.MarkdownString(getMarkdown(name))
+	let item = new vscode.Hover(md)
+	return item
 }

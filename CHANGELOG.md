@@ -1,5 +1,9 @@
 # Change Log
 
+## [0.3.1] - 2021-03-04
+### Fixed
+- 🐞 Bug Fixes: Event hover always appearing at the initial position (#1)
+
 ## [0.3.0] - 2021-03-03
 🚨 Breaking: v1.17.2 of the Lua Language Server gets stuck on hover ([#437](https://github.com/sumneko/lua-language-server/issues/437)), please revert to v1.17.0 until this is resolved
 ### Added
@@ -59,6 +63,7 @@
 ### Added
 - 🚧 Wip: Development work
 
+[0.3.1]: https://github.com/Ketho/vscode-wow-api/releases/tag/v0.3.1
 [0.3.0]: https://github.com/Ketho/vscode-wow-api/releases/tag/v0.3.0
 [0.2.1]: https://github.com/Ketho/vscode-wow-api/releases/tag/v0.2.1
 [0.2.0]: https://github.com/Ketho/vscode-wow-api/releases/tag/v0.2.0
