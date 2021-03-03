@@ -17,12 +17,11 @@ export function activate(context: vscode.ExtensionContext) {
 				let lastWord = linePrefix.split(/[^\w\.]/).slice(-1)[0]
 				// complete Lua Enums only for "LE_*" to avoid polluting fuzzy completion
 				if (lastWord.startsWith("LE_")) {
-					console.log(lastWord)
 					return luaenumArray
 				}
 			}
 		},
-		"."
+		"_"
 	)
 
 	const hover = vscode.languages.registerHoverProvider(
