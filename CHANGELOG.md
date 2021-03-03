@@ -1,6 +1,8 @@
 # Change Log
 
-## [0.3.1] - 2021-03-04
+## [0.3.1] - 2021-03-03
+### Changed
+- 🎨 Style: Changed enum context from `enum: integer 1` to just `integer 1`
 ### Fixed
 - 🐞 Bug Fixes: Event hover always appearing at the initial position (#1)
 
