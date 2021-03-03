@@ -16,7 +16,7 @@ function getMarkdown(name: string) {
 		let params = ""
 		for (let i = 0; i < payload.length; i++) {
 			const el = payload[i]
-			params += "1. ```\n"+el.Name+": "+el.Type+""
+			params += "1. ```\n"+el.Name+": "+el.Type
 			if (el.Nilable)
 				params += "?"
 			params += "\n```"
