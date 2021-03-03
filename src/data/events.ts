@@ -12,7 +12,7 @@ interface EventInterface {
 	}
 }
 
-const eventsDoc: EventInterface = {
+export const eventsDoc: EventInterface = {
 	ACHIEVEMENT_EARNED: {
 		Payload: [
 			{Name: "achievementID", Type: "number"},
@@ -5635,8 +5635,4 @@ const eventsDoc: EventInterface = {
 	ZONE_CHANGED: {},
 	ZONE_CHANGED_INDOORS: {},
 	ZONE_CHANGED_NEW_AREA: {},
-}
-
-module.exports = {
-	eventsDoc
 }

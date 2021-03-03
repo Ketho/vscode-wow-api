@@ -1,5 +1,8 @@
 import * as vscode from "vscode"
 
+const luaenumDoc = require("./data/enums").luaenumDoc
+const luaenumArray = require("./enumcompletion").luaenumArray
+
 const eventsDoc = require("./data/events").eventsDoc
 const getEventHover = require("./eventhover").getEventHover
 
@@ -9,13 +12,14 @@ export function activate(context: vscode.ExtensionContext) {
 	const completion = vscode.languages.registerCompletionItemProvider(
 		"lua",
 		{
-			// complete Lua Enums only when typing "LE_"
-			// since we don't want to pollute emmylua fuzzy completion
 			provideCompletionItems(document: vscode.TextDocument, position: vscode.Position) {
 				let linePrefix = document.lineAt(position).text.substr(0, position.character)
 				let lastWord = linePrefix.split(/[^\w\.]/).slice(-1)[0]
-				if (lastWord == "LE_")
-					return [new vscode.CompletionItem("LE_SOMETHING_GOOD")]
+				// complete Lua Enums only for "LE_*" to avoid polluting fuzzy completion
+				if (lastWord.startsWith("LE_")) {
+					console.log(lastWord)
+					return luaenumArray
+				}
 			}
 		},
 		"."
@@ -24,13 +28,20 @@ export function activate(context: vscode.ExtensionContext) {
 	const hover = vscode.languages.registerHoverProvider(
 		"lua",
 		{
-			// show event payload on hover
 			provideHover(document: vscode.TextDocument, position: vscode.Position) {
 				const range = document.getWordRangeAtPosition(position)
 				if (range) {
 					const word = document.getText(range)
+					// show event payload
 					if (eventsDoc[word])
 						return getEventHover(word)
+					// show lua enum value
+					else if (luaenumDoc[word]) {
+						const el = luaenumDoc[word]
+						let md = new vscode.MarkdownString("```\ninteger = "+el+"\n```")
+						let item = new vscode.Hover(md)
+						return item
+					}
 				}
 			}
         }

@@ -13,13 +13,7 @@ interface EventInterface {
 	}
 }
 
-const eventsDoc: EventInterface = {
-]]
-
-local post = [[
-module.exports = {
-	eventsDoc
-}
+export const eventsDoc: EventInterface = {
 ]]
 
 local types = {
@@ -39,6 +33,7 @@ local function ToTypeScript()
 			if event.Payload then
 				table.insert(t, "\t\tPayload: [")
 				for _, param in pairs(event.Payload) do
+					-- to do: handle table types
 					local typeName = types[param.Type] or param.Type
 					local s = string.format('\t\t\t{Name: "%s", Type: "%s"', param.Name, typeName)
 					if param.Nilable then
@@ -55,8 +50,8 @@ local function ToTypeScript()
 			table.insert(t, "\t},")
 		end
 	end
-	table.insert(t, "}\n\n")
-	return pre..table.concat(t, "\n")..post
+	table.insert(t, "}\n")
+	return pre..table.concat(t, "\n")
 end
 
 return ToTypeScript

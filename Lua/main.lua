@@ -16,4 +16,7 @@ Util:WriteFile("EmmyLua/Type/EventName.lua", eventLiterals)
 local eventTypeScript = require("Lua/TypeScript/Events")()
 Util:WriteFile("src/data/events.ts", eventTypeScript)
 
+local luaEnumTypeScript = require("Lua/TypeScript/LuaEnums")()
+Util:WriteFile("src/data/enums.ts", luaEnumTypeScript)
+
 print("Finished.")
