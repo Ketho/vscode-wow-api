@@ -37,7 +37,7 @@ export function activate(context: vscode.ExtensionContext) {
 					// show lua enum value
 					else if (luaenumDoc[word]) {
 						const el = luaenumDoc[word]
-						let md = new vscode.MarkdownString("```\ninteger = "+el+"\n```")
+						let md = new vscode.MarkdownString("```\nenum: integer = "+el+"\n```")
 						let item = new vscode.Hover(md)
 						return item
 					}
