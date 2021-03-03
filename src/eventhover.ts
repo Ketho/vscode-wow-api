@@ -13,15 +13,9 @@ function getMarkdown(name: string) {
 	s += "\n```\n"+name
 	let payload = event.Payload
 	if (payload) {
-		s += ": "
 		let params = ""
-		for (let index = 0; index < payload.length; index++) {
-			const el = payload[index]
-			// event signature
-			s += el.Name
-			if (index < payload.length-1)
-				s += ", "
-			// event params
+		for (let i = 0; i < payload.length; i++) {
+			const el = payload[i]
 			params += "1. ```\n"+el.Name+": "+el.Type+""
 			if (el.Nilable)
 				params += "?"

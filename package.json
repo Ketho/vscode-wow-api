@@ -1,7 +1,7 @@
 {
 	"name": "wow-api",
 	"displayName": "WoW API",
-	"description": "World of Warcraft AddOn API",
+	"description": "World of Warcraft AddOn support",
 	"version": "0.3.0",
 	"publisher": "Ketho",
 	"repository": {
