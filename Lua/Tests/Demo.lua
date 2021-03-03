@@ -15,3 +15,5 @@ local tooltip = CreateFrame("GameTooltip")
 hooksecurefunc("test", function() end)
 
 C_AccountInfo.GetIDFromBattleNetAccountGUID()
+
+f:RegisterEvent("ACHIEVEMENT_EARNED")
