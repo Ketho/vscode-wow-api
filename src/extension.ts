@@ -43,10 +43,10 @@ export function activate(context: vscode.ExtensionContext) {
 					}
 				}
 			}
-        }
-    )
+		}
+	)
 
-    context.subscriptions.push(completion, hover)
+	context.subscriptions.push(completion, hover)
 }
 
 export function setLuaLibrary(v: any) {
