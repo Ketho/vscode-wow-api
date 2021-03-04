@@ -7,20 +7,15 @@ Adds support for World of Warcraft [AddOn API](https://wow.gamepedia.com/World_o
 
 ### Features
 Provides IntelliSense features from [Sumneko's Lua](https://marketplace.visualstudio.com/items?itemName=sumneko.lua) extension with [EmmyLua](https://github.com/EmmyLua) annotations.
-* [Blizzard-documented](https://github.com/Gethe/wow-ui-source/tree/live/AddOns/Blizzard_APIDocumentation) API systems
 
+### [API](https://github.com/Gethe/wow-ui-source/tree/live/AddOns/Blizzard_APIDocumentation)
 ![](https://github.com/Ketho/vscode-wow-api/raw/master/img/api.gif)
 
-* Wowpedia-documented functions
-* [Widget API](https://wow.gamepedia.com/Widget_API)
-
+### [Widgets](https://wow.gamepedia.com/Widget_API)
 ![](https://github.com/Ketho/vscode-wow-api/raw/master/img/widget.gif)
 
-* [Events](https://wow.gamepedia.com/Events)
-
+### [Events](https://wow.gamepedia.com/Events)
 ![](https://github.com/Ketho/vscode-wow-api/raw/master/img/event.gif)
 
-* [Mixins](https://github.com/Gethe/wow-ui-source/tree/live/FrameXML/ObjectAPI)
-* [Enums](https://github.com/Ketho/BlizzardInterfaceResources/blob/live/Resources/LuaEnum.lua)
-
+### [Enums](https://github.com/Ketho/BlizzardInterfaceResources/blob/live/Resources/LuaEnum.lua)
 ![](https://github.com/Ketho/vscode-wow-api/raw/master/img/enum.gif)
