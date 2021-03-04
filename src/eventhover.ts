@@ -4,13 +4,13 @@ const eventsDoc = require("./data/events").eventsDoc
 
 // looks ugly and probably is
 function getMarkdown(name: string) {
-	let s = "event"
+	let s = ""
 	let event = eventsDoc[name]
 
 	if (event.Documentation)
-		s += " - "+event.Documentation
+		s += event.Documentation+"\n"
 
-	s += "\n```\n"+name
+	s += "```\n"
 	let payload = event.Payload
 	if (payload) {
 		let params = ""

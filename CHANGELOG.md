@@ -1,5 +1,9 @@
 # Change Log
 
+## TBA
+### Changed
+- 🎨 Style: Trimmed down event hover to just params and documentation link
+
 ## [0.3.1] - 2021-03-03
 ### Changed
 - 🎨 Style: Changed enum context from `enum: integer 1` to just `integer 1`
