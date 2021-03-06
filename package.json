@@ -50,5 +50,6 @@
 	},
 	"extensionDependencies": [
 		"sumneko.lua"
-	]
+	],
+	"enableProposedApi": true
 }
