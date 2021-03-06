@@ -10,7 +10,6 @@ function getMarkdown(name: string) {
 	if (event.Documentation)
 		s += event.Documentation+"\n"
 
-	s += "```\n"
 	let payload = event.Payload
 	if (payload) {
 		let params = ""
@@ -24,7 +23,7 @@ function getMarkdown(name: string) {
 				params += `\n &nbsp; &nbsp; ${el.Documentation}`
 			params += "\n"
 		}
-		s += "\n```\n"+params
+		s += params
 	}
 	else
 		s += "\n```"
