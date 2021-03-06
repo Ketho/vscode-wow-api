@@ -1,8 +1,9 @@
 # Change Log
 
-## TBA
+## [0.3.2] - 2021-03-06
 ### Changed
 - 🎨 Style: Trimmed down event hover to just params and documentation link
+- 📦 Build: Purged out/ folder of unused files, excluded WikiParser/ and gifs from packaging
 
 ## [0.3.1] - 2021-03-03
 ### Changed
@@ -69,6 +70,7 @@
 ### Added
 - 🚧 Wip: Development work
 
+[0.3.2]: https://github.com/Ketho/vscode-wow-api/releases/tag/v0.3.2
 [0.3.1]: https://github.com/Ketho/vscode-wow-api/releases/tag/v0.3.1
 [0.3.0]: https://github.com/Ketho/vscode-wow-api/releases/tag/v0.3.0
 [0.2.1]: https://github.com/Ketho/vscode-wow-api/releases/tag/v0.2.1
