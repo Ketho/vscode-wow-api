@@ -30,8 +30,8 @@ function m:ParsePages(limit)
 	for k, v in pairs(handler.root.mediawiki.page) do
 		local info = {}
 		info.idx = k
-		info.apiName = v.title:match("API (.+)")
-		info.apiName = info.apiName:gsub(" ", "_")
+		info.apiName = v.title:match("API (.+)"):gsub(" ", "_")
+		info.params = {arguments = {}, returns = {}}
 		local wikiText = v.revision.text[1]
 		for line in wikiText:gmatch("[^\r\n]+") do
 			local lineLower = line:lower()
@@ -43,25 +43,14 @@ function m:ParsePages(limit)
 				end
 			end
 			-- update current section
-			if line:find("==%s?Arguments%s?==") then
-				info.arguments = {}
-				info.isArgumentSection = true
-			elseif line:find("==%s?Returns%s?==") then
-				info.returns = {}
-				info.isArgumentSection = false
-				info.isReturnSection = true
-			elseif line:find("==%s?.-%s?==") then
-				info.isArgumentSection = false
-				info.isReturnSection = false
-			end
+			info.section = lineLower:match("==%s?(.-)%s?==") or info.section
 			-- look for params
 			if line:find("^;") and line:find(":") and findType(lineLower) then
 				local name, valueType = self:ParseParam(line, info)
 				if name then
-					local paramOwner = info.isArgumentSection and info.arguments
-						or info.isReturnSection and info.returns
-					if paramOwner then
-						table.insert(paramOwner, {name, valueType})
+					local paramTbl = info.params[info.section]
+					if paramTbl then
+						table.insert(paramTbl, {name, valueType})
 					end
 				end
 			end
@@ -100,10 +89,9 @@ function m:ParseParam(line, info)
 	end
 end
 
-local function PrintApiParam(t)
+local function printApiParam(t)
 	for _, v in pairs(t) do
-		local s = v[1]..": "..v[2]
-		print("\t\t"..s)
+		print("\t\t"..v[1]..": "..v[2])
 	end
 end
 
@@ -111,15 +99,15 @@ function m:PrintApi(name)
 	local info = API[name]
 	print(info.idx.." "..name)
 	print(info.signature)
-	local args = info.arguments
-	local rets = info.returns
-	if args then
+	local args = info.params.arguments
+	local rets = info.params.returns
+	if next(args) then
 		print("\targuments")
-		PrintApiParam(args)
+		printApiParam(args)
 	end
-	if rets then
+	if next(rets) then
 		print("\treturns")
-		PrintApiParam(rets)
+		printApiParam(rets)
 	end
 	print()
 end
