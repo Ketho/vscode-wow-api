@@ -1,17 +1,15 @@
 # Change Log
 
-## [0.3.5 - 2021-03-08
+## [0.3.5] - 2021-03-08
 ### Changed
+- 🐞 Bug Fixes: Fixed markdown formatting for events without payload
 - 🚨 Breaking: 0.3.4: Removed `sumneko.lua` dependency because something seems broken after the VS Code 1.54.1 update ([#444](https://github.com/sumneko/lua-language-server/issues/444))
-- 🐞 Bug Fixes: 0.3.5 Fixed markdown formatting for events without payload
 
-## [0.3.3 - 2021-03-06
+## [0.3.3] - 2021-03-06
 ### Changed
 - 🎨 Style: Trimmed down event hover to just params and documentation link
 - 📦 Package: Purged out/ folder of unused files, excluded WikiParser/ and gifs from packaging
-
-## [0.3.2 - 2021-03-06
-- 📦 Build: Skipped. Attempted to package with `enableProposedApi` set
+- 📦 Build: 0.3.2: Skipped. Attempted to package with `enableProposedApi` set
 
 ## [0.3.1] - 2021-03-03
 ### Changed
