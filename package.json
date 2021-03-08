@@ -33,7 +33,6 @@
 		"watch": "tsc -watch -p ./",
 		"pretest": "npm run compile && npm run lint",
 		"test": "node ./out/test/runTest.js",
-		"vscode:uninstall": "node ./out/src/uninstall"
 	},
 	"devDependencies": {
 		"@types/glob": "^7.1.3",
