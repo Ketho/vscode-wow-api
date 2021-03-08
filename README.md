@@ -5,9 +5,9 @@
 
 Adds support for World of Warcraft [AddOn API](https://wow.gamepedia.com/World_of_Warcraft_API) to VS Code.
 
-### Features
-Provides IntelliSense features from [Sumneko's Lua](https://marketplace.visualstudio.com/items?itemName=sumneko.lua) extension with [EmmyLua](https://github.com/EmmyLua) annotations.
+Note: It's **required** to have [Sumneko's Lua](https://marketplace.visualstudio.com/items?itemName=sumneko.lua) extension installed. You might need to restart VS Code afterwards ([#444](https://github.com/sumneko/lua-language-server/issues/444)).
 
+### Features
 ### [API](https://github.com/Gethe/wow-ui-source/tree/live/AddOns/Blizzard_APIDocumentation)
 ![](https://github.com/Ketho/vscode-wow-api/raw/master/img/api.gif)
 

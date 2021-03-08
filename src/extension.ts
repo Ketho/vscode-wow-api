@@ -55,10 +55,12 @@ export function setLuaLibrary(v: any) {
 
 	let luaConfig = vscode.workspace.getConfiguration("Lua")
 	let library: any = luaConfig.get("workspace.library")
-	library[path] = v
-	luaConfig.update("workspace.library", library, true)
-	// I don't really think showing the emmylua itself in the display context is useful
-	luaConfig.update("completion.displayContext", 0, true)
+	if (library) { // there is currently no dependency on sumnekos extension
+		library[path] = v
+		luaConfig.update("workspace.library", library, true)
+		// I don't really think showing the emmylua itself in the display context is useful
+		luaConfig.update("completion.displayContext", 0, true)
+	}
 }
 
 setLuaLibrary(true)
