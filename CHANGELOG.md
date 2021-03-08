@@ -1,8 +1,9 @@
 # Change Log
 
-## [0.3.4 - 2021-03-08
+## [0.3.5 - 2021-03-08
 ### Changed
-- 🚨 Breaking: Removed `sumneko.lua` dependency because something seems broken after the VS Code 1.54.1 update ([#444](https://github.com/sumneko/lua-language-server/issues/444))
+- 🚨 Breaking: 0.3.4: Removed `sumneko.lua` dependency because something seems broken after the VS Code 1.54.1 update ([#444](https://github.com/sumneko/lua-language-server/issues/444))
+- 🐞 Bug Fixes: 0.3.5 Fixed markdown formatting for events without payload
 
 ## [0.3.3 - 2021-03-06
 ### Changed
@@ -15,7 +16,6 @@
 ## [0.3.1] - 2021-03-03
 ### Changed
 - 🎨 Style: Changed enum context from `enum: integer 1` to just `integer 1`
-### Fixed
 - 🐞 Bug Fixes: Event hover always appearing at the initial position (#1)
 
 ## [0.3.0] - 2021-03-03
@@ -77,6 +77,8 @@
 ### Added
 - 🚧 Wip: Development work
 
+[0.3.5]: https://github.com/Ketho/vscode-wow-api/releases/tag/v0.3.5
+[0.3.4]: https://github.com/Ketho/vscode-wow-api/releases/tag/v0.3.4
 [0.3.2]: https://github.com/Ketho/vscode-wow-api/releases/tag/v0.3.2
 [0.3.1]: https://github.com/Ketho/vscode-wow-api/releases/tag/v0.3.1
 [0.3.0]: https://github.com/Ketho/vscode-wow-api/releases/tag/v0.3.0

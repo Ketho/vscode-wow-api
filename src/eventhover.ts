@@ -26,7 +26,7 @@ function getMarkdown(name: string) {
 		s += params
 	}
 	else
-		s += "\n```"
+		s += "No payload\n"
 	let doc = `\n[Documentation](https://wow.gamepedia.com/${name})`
 	return s+doc
 }
