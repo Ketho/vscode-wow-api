@@ -8,6 +8,7 @@ const getEventHover = require("./eventhover").getEventHover
 
 export function activate(context: vscode.ExtensionContext) {
 	console.log("loaded ketho.wow-api")
+	setLuaLibrary(true)
 
 	const completion = vscode.languages.registerCompletionItemProvider(
 		"lua",
@@ -49,18 +50,24 @@ export function activate(context: vscode.ExtensionContext) {
 	context.subscriptions.push(completion, hover)
 }
 
-export function setLuaLibrary(v: any) {
+function setLuaLibrary(enable: boolean) {
 	let extension = vscode.extensions.getExtension("ketho.wow-api")
 	let path = extension?.extensionPath+"\\EmmyLua"
 
 	let luaConfig = vscode.workspace.getConfiguration("Lua")
-	let library: any = luaConfig.get("workspace.library")
+	let library: string[] | undefined = luaConfig.get("workspace.library")
 	if (library) { // there is currently no dependency on sumnekos extension
-		library[path] = v
+		const index = library.indexOf(path)
+		if (enable) {
+			if (index == -1)
+				library.push(path)
+		}
+		else {
+			if (index > -1)
+				library.splice(index, 1)
+		}
 		luaConfig.update("workspace.library", library, true)
 		// I don't really think showing the emmylua itself in the display context is useful
 		luaConfig.update("completion.displayContext", 0, true)
 	}
 }
-
-setLuaLibrary(true)
