@@ -59,7 +59,7 @@ function m:ParsePages(limit)
 				end
 			end
 		end
-		API[info.idx] = info
+		API[k] = info
 		self:PrintApi(info)
 
 		if limit and k >= limit then
