@@ -56,7 +56,14 @@ function setLuaLibrary(enable: boolean) {
 
 	let luaConfig = vscode.workspace.getConfiguration("Lua")
 	let library: string[] | undefined = luaConfig.get("workspace.library")
-	if (library) { // there is currently no dependency on sumnekos extension
+	if (library) {
+		// remove any older release versions of our extension path
+		for (let i = library.length-1; i >= 0; i--) {
+			const el = library[i]
+			if (el.indexOf("ketho.wow-api") > -1 && el.indexOf(path) == -1)
+				library.splice(i, 1)
+		}
+		// add or remove path
 		const index = library.indexOf(path)
 		if (enable) {
 			if (index == -1)

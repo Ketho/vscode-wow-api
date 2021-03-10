@@ -1,13 +1,17 @@
 # Change Log
 
+## [0.3.7] - 2021-03-10
+### Changed
+- 📦 Package: Added back `sumneko.lua` dependency since issue #444 was fixed in Lua Language Server v1.18.1
+
 ## [0.3.6] - 2021-03-09
 ### Changed
-- 🚨 Breaking: Update for the `Lua.workspace.library` change in Lua Language Server [v1.18](https://github.com/sumneko/vscode-lua/commit/73f830faaa242f6029a932f8d1ec877e2318b116)
+- 🚨 Breaking Changes: Update for the `Lua.workspace.library` change in Lua Language Server [v1.18](https://github.com/sumneko/vscode-lua/commit/73f830faaa242f6029a932f8d1ec877e2318b116)
 
 ## [0.3.5] - 2021-03-08
 ### Changed
 - 🐞 Bug Fixes: Fixed markdown formatting for events without payload
-- 🚨 Breaking: 0.3.4: Removed `sumneko.lua` dependency because something seems broken after the VS Code 1.54.1 update ([#444](https://github.com/sumneko/lua-language-server/issues/444))
+- 🚨 Breaking Changes: 0.3.4: Removed `sumneko.lua` dependency because something seems broken after the VS Code 1.54.1 update ([#444](https://github.com/sumneko/lua-language-server/issues/444))
 
 ## [0.3.3] - 2021-03-06
 ### Changed
@@ -21,7 +25,7 @@
 - 🐞 Bug Fixes: Event hover always appearing at the initial position (#1)
 
 ## [0.3.0] - 2021-03-03
-🚨 Breaking: v1.17.2 of the Lua Language Server gets stuck on hover ([#437](https://github.com/sumneko/lua-language-server/issues/437)), please revert to v1.17.0 until this is resolved
+- 🚨 Breaking Changes: v1.17.2 of the Lua Language Server gets stuck on hover ([#437](https://github.com/sumneko/lua-language-server/issues/437)), please revert to v1.17.0 until this is resolved
 ### Added
 - ✨ Feature: Shows the event payload on hover
 - ✨ Feature: Code completion for Lua Enums (LE_*) and shows the value on hover
@@ -79,6 +83,7 @@
 ### Added
 - 🚧 Wip: Development work
 
+[0.3.7]: https://github.com/Ketho/vscode-wow-api/releases/tag/v0.3.7
 [0.3.6]: https://github.com/Ketho/vscode-wow-api/releases/tag/v0.3.6
 [0.3.5]: https://github.com/Ketho/vscode-wow-api/releases/tag/v0.3.5
 [0.3.3]: https://github.com/Ketho/vscode-wow-api/releases/tag/v0.3.3
