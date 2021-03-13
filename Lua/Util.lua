@@ -21,3 +21,13 @@ function Util:GetFullName(apiTable)
 	end
 	return fullName
 end
+
+function Util:Explode(t, level)
+	level = level or 0
+	for k, v in pairs(t) do
+		print(string.rep("\t", level)..k, v)
+		if type(v) == "table" then
+			self:Explode(v, level+1)
+		end
+	end
+end
