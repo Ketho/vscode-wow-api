@@ -1,7 +1,17 @@
 -- fuck wikis for documentation
-local xml2lua = require("xml2lua")
-local handler = require("xmlhandler.tree")
-local path = [[WikiParser\Wowpedia-20210314114900.xml]]
+local xml2lua = require "xml2lua"
+local handler = require "xmlhandler.tree"
+local lfs = require "lfs"
+
+local path
+for file in lfs.dir("./WikiParser") do
+	if file:find("%.xml") then
+		path = "WikiParser/"..file
+	end
+end
+if not path then
+	error("no XML file found")
+end
 
 -- parse xml from file
 local xmlstr = xml2lua.loadFile(path)
