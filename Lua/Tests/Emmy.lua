@@ -14,12 +14,12 @@ function Tests:Run()
 	TestFunction("C_Map.GetMapHighlightInfoAtPosition")
 	TestFunction("C_Map.GetMapHighlightInfoAtPosition")
 	TestFunction("C_AccountInfo.GetIDFromBattleNetAccountGUID")
-	TestFunction("C_Calendar.CanSendInvite")
-	TestFunction("C_Calendar.EventSetTitle")
-	TestFunction("C_AuctionHouse.MakeItemKey")
-	TestFunction("C_Calendar.EventSetClubId")
-	TestFunction("C_ArtifactUI.GetAppearanceInfo")
-	TestFunction("C_Club.CreateClub")
+	TestFunction("C_Calendar.CanSendInvite") -- no arguments, one return value
+	TestFunction("C_Calendar.EventSetTitle") -- one argument, no return values
+	TestFunction("C_AuctionHouse.MakeItemKey") -- three optional args
+	TestFunction("C_Calendar.EventSetClubId") -- first argument optional
+	TestFunction("C_ArtifactUI.GetAppearanceInfo") -- two optional returns
+	TestFunction("C_Club.CreateClub") -- optional arguments in middle
 end
 
 return Tests
