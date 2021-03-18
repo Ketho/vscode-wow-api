@@ -24,18 +24,18 @@ local function ToTypeScript()
 	local t = {}
 	for _, event in pairs(APIDocumentation.events) do
 		if not event.Payload and not event.Documentation then
-			table.insert(t, format("\t%s: {},", event.LiteralName))
+			tinsert(t, format("\t%s: {},", event.LiteralName))
 		else
-			table.insert(t, format("\t%s: {", event.LiteralName))
+			tinsert(t, format("\t%s: {", event.LiteralName))
 			if event.Documentation then
-				table.insert(t, format('\t\tDocumentation: "%s",', event.Documentation[1]))
+				tinsert(t, format('\t\tDocumentation: "%s",', event.Documentation[1]))
 			end
 			if event.Payload then
-				table.insert(t, "\t\tPayload: [")
+				tinsert(t, "\t\tPayload: [")
 				for _, param in pairs(event.Payload) do
-					-- to do: handle table types
+					-- to do: handle table types and InnerType
 					local typeName = types[param.Type] or param.Type
-					local s = string.format('\t\t\t{Name: "%s", Type: "%s"', param.Name, typeName)
+					local s = format('\t\t\t{Name: "%s", Type: "%s"', param.Name, typeName)
 					if param.Nilable then
 						s = s..", Nilable: true"
 					end
@@ -43,14 +43,14 @@ local function ToTypeScript()
 						s = s..format(', Documentation: "%s"', param.Documentation[1])
 					end
 					s = s.."},"
-					table.insert(t, s)
+					tinsert(t, s)
 				end
-				table.insert(t, "\t\t],")
+				tinsert(t, "\t\t],")
 			end
-			table.insert(t, "\t},")
+			tinsert(t, "\t},")
 		end
 	end
-	table.insert(t, "}\n")
+	tinsert(t, "}\n")
 	return pre..table.concat(t, "\n")
 end
 

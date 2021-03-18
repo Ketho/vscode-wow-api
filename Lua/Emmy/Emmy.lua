@@ -3,6 +3,7 @@ require "Lua/Emmy/Functions"
 require "Lua/Emmy/Events"
 require "Lua/Emmy/Tables"
 require "Lua/Emmy/Fields"
+require "Lua/Emmy/CVars"
 
 Emmy.fs_doc = "---[Documentation](https://wow.gamepedia.com/%s)"
 

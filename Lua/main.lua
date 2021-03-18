@@ -7,16 +7,18 @@ FrameXML:LoadApiDocs("Lua/FrameXML")
 
 -- test prints
 local Tests = require("Lua/Tests/Emmy")
--- Tests:Run()
+--Tests:Run()
 
 -- write emmylua / typescript
-local eventLiterals = Emmy:GetEventsLiterals()
-Util:WriteFile("EmmyLua/Type/EventName.lua", eventLiterals)
-
-local eventTypeScript = require("Lua/TypeScript/Events")()
+Util:WriteFile("EmmyLua/Type/Event.lua", Emmy:GetEventLiterals())
+local eventTypeScript = require("Lua/TypeScript/Event")()
 Util:WriteFile("src/data/events.ts", eventTypeScript)
 
-local luaEnumTypeScript = require("Lua/TypeScript/LuaEnums")()
+Util:WriteFile("EmmyLua/Type/CVar.lua", Emmy:GetCVarLiterals())
+local cvarTypeScript = require("Lua/TypeScript/CVar")()
+Util:WriteFile("src/data/cvars.ts", cvarTypeScript)
+
+local luaEnumTypeScript = require("Lua/TypeScript/LuaEnum")()
 Util:WriteFile("src/data/enums.ts", luaEnumTypeScript)
 
 print("Finished.")

@@ -1,12 +1,11 @@
 
-function Emmy:GetEventsLiterals()
+function Emmy:GetEventLiterals()
 	table.sort(APIDocumentation.events, function(a, b)
 		return a.LiteralName < b.LiteralName
 	end)
-	local tbl = {}
-	tinsert(tbl, "---@alias EventName")
+	local t = {}
 	for _, event in ipairs(APIDocumentation.events) do
-		tinsert(tbl, format("'\"%s\"'", event.LiteralName))
+		tinsert(t, format("'\"%s\"'", event.LiteralName))
 	end
-	return table.concat(tbl, " | ").."\n"
+	return "---@alias Event "..table.concat(t, " | ").."\n"
 end

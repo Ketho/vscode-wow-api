@@ -1,3 +1,6 @@
+local lfs = require "lfs"
+local https = require "ssl.https"
+
 Util = {}
 
 function Util:LoadFile(path)
@@ -6,10 +9,22 @@ function Util:LoadFile(path)
 end
 
 function Util:WriteFile(path, text)
-	print("Exporting", path)
+	print("Writing", path)
 	local file = io.open(path, "w")
 	file:write(text)
 	file:close()
+end
+
+function Util:MakeDir(path)
+	if not lfs.attributes(path) then
+		lfs.mkdir(path)
+	end
+end
+
+function Util:CacheFile(path, url)
+	if not lfs.attributes(path) then
+		self:WriteFile(path, https.request(url))
+	end
 end
 
 function Util:GetFullName(apiTable)
@@ -20,6 +35,15 @@ function Util:GetFullName(apiTable)
 		fullName = apiTable.Name
 	end
 	return fullName
+end
+
+function Util:ProxySort(tbl)
+	local t = {}
+	for k in pairs(tbl) do
+		table.insert(t, k)
+	end
+	table.sort(t)
+	return t
 end
 
 function Util:Explode(t, level)

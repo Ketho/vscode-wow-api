@@ -1,11 +1,9 @@
-local lfs = require "lfs"
-
 local m = {}
 
 function m:LoadApiDocs(base)
 	require(base.."/Compat")
+	Util:MakeDir("EmmyLua/System")
 	local toc = io.open(base.."/Blizzard_APIDocumentation/Blizzard_APIDocumentation.toc")
-	lfs.mkdir("EmmyLua/System")
 	local isDoc
 	for line in toc:lines() do
 		if line:find("%.lua") then
