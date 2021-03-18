@@ -151,7 +151,7 @@ end
 function m:ParseParam(line, info)
 	line = line:match("(.-)%s?%-") or line -- remove any comment text
 	-- not sure if we should use patterns to handle multiple formats
-	local name, valueType = line:match(":?;%d*%.?%s?(.-)%s?:%s?(.+)")
+	local name, valueType = line:match(":?;%d*%.?%s?(.-)%s?:%s?(%S+)")
 	if not valueType then
 		return "UNKNOWN", "UNKNOWN"
 	end
@@ -201,7 +201,7 @@ end
 
 function m:ValidateApi(info)
 	if isRedirectTarget(info.apiName) then
-		print(string.format("%d:%s - documents multiple functions", info.idx, info.apiName))
+		-- print(string.format("%d:%s - documents multiple functions", info.idx, info.apiName))
 		return
 	end
 	if not info.signature.name then
