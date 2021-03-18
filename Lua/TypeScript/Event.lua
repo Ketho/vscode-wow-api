@@ -20,7 +20,7 @@ local types = {
 	bool = "boolean",
 }
 
-local function toTypeScript()
+local function ToTypeScript()
 	local t = {}
 	for _, event in pairs(APIDocumentation.events) do
 		if not event.Payload and not event.Documentation then
@@ -54,4 +54,4 @@ local function toTypeScript()
 	return pre..table.concat(t, "\n")
 end
 
-return toTypeScript
+return ToTypeScript

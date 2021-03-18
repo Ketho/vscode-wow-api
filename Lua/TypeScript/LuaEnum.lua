@@ -11,7 +11,7 @@ export const luaenumDoc: LuaEnumInterface = {
 
 local body = request(url)
 
-local function toTypeScript()
+local function ToTypeScript()
 	local t = {}
 	for line in body:gmatch("[^\r\n]+") do
 		local enum, value = line:match("^(LE_.+) = (%d+)")
@@ -23,4 +23,4 @@ local function toTypeScript()
 	return pre..table.concat(t, "\n")
 end
 
-return toTypeScript
+return ToTypeScript
