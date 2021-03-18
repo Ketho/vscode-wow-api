@@ -27,19 +27,6 @@ function C_AnimaDiversion.OpenAnimaDiversionUI() end
 ---[Documentation](https://wow.gamepedia.com/API_C_AnimaDiversion.SelectAnimaNode)
 function C_AnimaDiversion.SelectAnimaNode(talentID, temporary) end
 
----@class ANIMA_DIVERSION_CLOSE
----[Documentation](https://wow.gamepedia.com/ANIMA_DIVERSION_CLOSE)
-local ANIMA_DIVERSION_CLOSE = {}
-
----@class ANIMA_DIVERSION_OPEN
----@field info AnimaDiversionFrameInfo
----[Documentation](https://wow.gamepedia.com/ANIMA_DIVERSION_OPEN)
-local ANIMA_DIVERSION_OPEN = {}
-
----@class ANIMA_DIVERSION_TALENT_UPDATED
----[Documentation](https://wow.gamepedia.com/ANIMA_DIVERSION_TALENT_UPDATED)
-local ANIMA_DIVERSION_TALENT_UPDATED = {}
-
 ---@class AnimaDiversionNodeState
 local AnimaDiversionNodeState = {
 	Unavailable = 0,

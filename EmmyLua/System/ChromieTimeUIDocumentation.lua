@@ -16,14 +16,6 @@ function C_ChromieTime.GetChromieTimeExpansionOptions() end
 ---[Documentation](https://wow.gamepedia.com/API_C_ChromieTime.SelectChromieTimeOption)
 function C_ChromieTime.SelectChromieTimeOption(chromieTimeExpansionInfoId) end
 
----@class CHROMIE_TIME_CLOSE
----[Documentation](https://wow.gamepedia.com/CHROMIE_TIME_CLOSE)
-local CHROMIE_TIME_CLOSE = {}
-
----@class CHROMIE_TIME_OPEN
----[Documentation](https://wow.gamepedia.com/CHROMIE_TIME_OPEN)
-local CHROMIE_TIME_OPEN = {}
-
 ---@class ChromieTimeExpansionInfo
 ---@field id number
 ---@field name string

@@ -650,47 +650,6 @@ function C_Commentator.ZoomIn() end
 ---[Documentation](https://wow.gamepedia.com/API_C_Commentator.ZoomOut)
 function C_Commentator.ZoomOut() end
 
----@class COMMENTATOR_ENTER_WORLD
----[Documentation](https://wow.gamepedia.com/COMMENTATOR_ENTER_WORLD)
-local COMMENTATOR_ENTER_WORLD = {}
-
----@class COMMENTATOR_HISTORY_FLUSHED
----[Documentation](https://wow.gamepedia.com/COMMENTATOR_HISTORY_FLUSHED)
-local COMMENTATOR_HISTORY_FLUSHED = {}
-
----@class COMMENTATOR_IMMEDIATE_FOV_UPDATE
----@field fov number
----[Documentation](https://wow.gamepedia.com/COMMENTATOR_IMMEDIATE_FOV_UPDATE)
-local COMMENTATOR_IMMEDIATE_FOV_UPDATE = {}
-
----@class COMMENTATOR_MAP_UPDATE
----[Documentation](https://wow.gamepedia.com/COMMENTATOR_MAP_UPDATE)
-local COMMENTATOR_MAP_UPDATE = {}
-
----@class COMMENTATOR_PLAYER_NAME_OVERRIDE_UPDATE
----@field nameToOverride string
----@field overrideName string
----[Documentation](https://wow.gamepedia.com/COMMENTATOR_PLAYER_NAME_OVERRIDE_UPDATE)
-local COMMENTATOR_PLAYER_NAME_OVERRIDE_UPDATE = {}
-
----@class COMMENTATOR_PLAYER_UPDATE
----[Documentation](https://wow.gamepedia.com/COMMENTATOR_PLAYER_UPDATE)
-local COMMENTATOR_PLAYER_UPDATE = {}
-
----@class COMMENTATOR_RESET_SETTINGS
----[Documentation](https://wow.gamepedia.com/COMMENTATOR_RESET_SETTINGS)
-local COMMENTATOR_RESET_SETTINGS = {}
-
----@class COMMENTATOR_TEAM_NAME_UPDATE
----@field teamName string
----[Documentation](https://wow.gamepedia.com/COMMENTATOR_TEAM_NAME_UPDATE)
-local COMMENTATOR_TEAM_NAME_UPDATE = {}
-
----@class COMMENTATOR_TEAMS_SWAPPED
----@field swapped boolean
----[Documentation](https://wow.gamepedia.com/COMMENTATOR_TEAMS_SWAPPED)
-local COMMENTATOR_TEAMS_SWAPPED = {}
-
 ---@class TrackedSpellCategory
 local TrackedSpellCategory = {
 	Offensive = 0,

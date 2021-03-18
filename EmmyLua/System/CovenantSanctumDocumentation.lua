@@ -50,28 +50,6 @@ function C_CovenantSanctumUI.GetSanctumType() end
 ---[Documentation](https://wow.gamepedia.com/API_C_CovenantSanctumUI.GetSoulCurrencies)
 function C_CovenantSanctumUI.GetSoulCurrencies() end
 
----@class COVENANT_RENOWN_INTERACTION_ENDED
----[Documentation](https://wow.gamepedia.com/COVENANT_RENOWN_INTERACTION_ENDED)
-local COVENANT_RENOWN_INTERACTION_ENDED = {}
-
----@class COVENANT_RENOWN_INTERACTION_STARTED
----[Documentation](https://wow.gamepedia.com/COVENANT_RENOWN_INTERACTION_STARTED)
-local COVENANT_RENOWN_INTERACTION_STARTED = {}
-
----@class COVENANT_SANCTUM_INTERACTION_ENDED
----[Documentation](https://wow.gamepedia.com/COVENANT_SANCTUM_INTERACTION_ENDED)
-local COVENANT_SANCTUM_INTERACTION_ENDED = {}
-
----@class COVENANT_SANCTUM_INTERACTION_STARTED
----[Documentation](https://wow.gamepedia.com/COVENANT_SANCTUM_INTERACTION_STARTED)
-local COVENANT_SANCTUM_INTERACTION_STARTED = {}
-
----@class COVENANT_SANCTUM_RENOWN_LEVEL_CHANGED
----@field newRenownLevel number
----@field oldRenownLevel number
----[Documentation](https://wow.gamepedia.com/COVENANT_SANCTUM_RENOWN_LEVEL_CHANGED)
-local COVENANT_SANCTUM_RENOWN_LEVEL_CHANGED = {}
-
 ---@class CovenantSanctumFeatureInfo
 ---@field garrTalentTreeID number
 ---@field featureType number

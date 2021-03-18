@@ -97,19 +97,6 @@ function C_CurrencyInfo.SetCurrencyBackpack(index, backpack) end
 ---[Documentation](https://wow.gamepedia.com/API_C_CurrencyInfo.SetCurrencyUnused)
 function C_CurrencyInfo.SetCurrencyUnused(index, unused) end
 
----@class CURRENCY_DISPLAY_UPDATE
----@field currencyType number
----@field quantity number
----@field quantityChange number
----@field quantityGainSource number
----@field quantityLostSource number
----[Documentation](https://wow.gamepedia.com/CURRENCY_DISPLAY_UPDATE)
-local CURRENCY_DISPLAY_UPDATE = {}
-
----@class PLAYER_MONEY
----[Documentation](https://wow.gamepedia.com/PLAYER_MONEY)
-local PLAYER_MONEY = {}
-
 ---@class BackpackCurrencyInfo
 ---@field name string
 ---@field quantity number

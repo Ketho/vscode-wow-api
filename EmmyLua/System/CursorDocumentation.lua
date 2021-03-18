@@ -17,30 +17,6 @@ function C_Cursor.GetCursorItem() end
 ---[Documentation](https://wow.gamepedia.com/API_C_Cursor.SetCursorCommunitiesStream)
 function C_Cursor.SetCursorCommunitiesStream(clubId, streamId) end
 
----@class BATTLE_PET_CURSOR_CLEAR
----[Documentation](https://wow.gamepedia.com/BATTLE_PET_CURSOR_CLEAR)
-local BATTLE_PET_CURSOR_CLEAR = {}
-
----@class COMMUNITIES_STREAM_CURSOR_CLEAR
----[Documentation](https://wow.gamepedia.com/COMMUNITIES_STREAM_CURSOR_CLEAR)
-local COMMUNITIES_STREAM_CURSOR_CLEAR = {}
-
----@class CURSOR_CHANGED
----@field isDefault boolean
----@field newCursorType UICursorType
----@field oldCursorType UICursorType
----@field oldCursorVirtualID number
----[Documentation](https://wow.gamepedia.com/CURSOR_CHANGED)
-local CURSOR_CHANGED = {}
-
----@class CURSOR_UPDATE
----[Documentation](https://wow.gamepedia.com/CURSOR_UPDATE)
-local CURSOR_UPDATE = {}
-
----@class MOUNT_CURSOR_CLEAR
----[Documentation](https://wow.gamepedia.com/MOUNT_CURSOR_CLEAR)
-local MOUNT_CURSOR_CLEAR = {}
-
 ---@class UICursorType
 local UICursorType = {
 	Default = 0,

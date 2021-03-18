@@ -63,39 +63,6 @@ function C_GossipInfo.SelectAvailableQuest(index) end
 ---[Documentation](https://wow.gamepedia.com/API_C_GossipInfo.SelectOption)
 function C_GossipInfo.SelectOption(index, text, confirmed) end
 
----@class DYNAMIC_GOSSIP_POI_UPDATED
----[Documentation](https://wow.gamepedia.com/DYNAMIC_GOSSIP_POI_UPDATED)
-local DYNAMIC_GOSSIP_POI_UPDATED = {}
-
----@class GOSSIP_CLOSED
----[Documentation](https://wow.gamepedia.com/GOSSIP_CLOSED)
-local GOSSIP_CLOSED = {}
-
----@class GOSSIP_CONFIRM
----@field gossipIndex number
----@field text string
----@field cost number
----[Documentation](https://wow.gamepedia.com/GOSSIP_CONFIRM)
-local GOSSIP_CONFIRM = {}
-
----@class GOSSIP_CONFIRM_CANCEL
----[Documentation](https://wow.gamepedia.com/GOSSIP_CONFIRM_CANCEL)
-local GOSSIP_CONFIRM_CANCEL = {}
-
----@class GOSSIP_ENTER_CODE
----@field gossipIndex number
----[Documentation](https://wow.gamepedia.com/GOSSIP_ENTER_CODE)
-local GOSSIP_ENTER_CODE = {}
-
----@class GOSSIP_OPTIONS_REFRESHED
----[Documentation](https://wow.gamepedia.com/GOSSIP_OPTIONS_REFRESHED)
-local GOSSIP_OPTIONS_REFRESHED = {}
-
----@class GOSSIP_SHOW
----@field uiTextureKit string
----[Documentation](https://wow.gamepedia.com/GOSSIP_SHOW)
-local GOSSIP_SHOW = {}
-
 ---@class GossipOptionRewardType
 local GossipOptionRewardType = {
 	Item = 0,

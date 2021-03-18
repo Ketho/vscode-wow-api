@@ -13,11 +13,6 @@ function C_Covenants.GetCovenantData(covenantID) end
 ---[Documentation](https://wow.gamepedia.com/API_C_Covenants.GetCovenantIDs)
 function C_Covenants.GetCovenantIDs() end
 
----@class COVENANT_CHOSEN
----@field covenantID number
----[Documentation](https://wow.gamepedia.com/COVENANT_CHOSEN)
-local COVENANT_CHOSEN = {}
-
 ---@class CovenantData
 ---@field ID number
 ---@field textureKit string

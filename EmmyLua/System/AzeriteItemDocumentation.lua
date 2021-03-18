@@ -43,26 +43,6 @@ function C_AzeriteItem.IsAzeriteItemByID(itemInfo) end
 ---[Documentation](https://wow.gamepedia.com/API_C_AzeriteItem.IsAzeriteItemEnabled)
 function C_AzeriteItem.IsAzeriteItemEnabled(azeriteItemLocation) end
 
----@class AZERITE_ITEM_ENABLED_STATE_CHANGED
----@field enabled boolean
----[Documentation](https://wow.gamepedia.com/AZERITE_ITEM_ENABLED_STATE_CHANGED)
-local AZERITE_ITEM_ENABLED_STATE_CHANGED = {}
-
----@class AZERITE_ITEM_EXPERIENCE_CHANGED
----@field azeriteItemLocation ItemLocationMixin
----@field oldExperienceAmount number
----@field newExperienceAmount number
----[Documentation](https://wow.gamepedia.com/AZERITE_ITEM_EXPERIENCE_CHANGED)
-local AZERITE_ITEM_EXPERIENCE_CHANGED = {}
-
----@class AZERITE_ITEM_POWER_LEVEL_CHANGED
----@field azeriteItemLocation ItemLocationMixin
----@field oldPowerLevel number
----@field newPowerLevel number
----@field unlockedEmpoweredItemsInfo UnlockedAzeriteEmpoweredItems[]
----[Documentation](https://wow.gamepedia.com/AZERITE_ITEM_POWER_LEVEL_CHANGED)
-local AZERITE_ITEM_POWER_LEVEL_CHANGED = {}
-
 ---@class UnlockedAzeriteEmpoweredItems
 ---@field unlockedItem ItemLocationMixin
 ---@field tierIndex number

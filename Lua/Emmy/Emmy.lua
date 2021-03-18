@@ -24,11 +24,6 @@ function Emmy:GetSystem(system)
 			tinsert(tbl, self:GetFunction(func))
 		end
 	end
-	if system.Events then
-		for _, event in pairs(system.Events) do
-			tinsert(tbl, self:GetEvent(event))
-		end
-	end
 	if system.Tables then
 		for _, apiTable in pairs(system.Tables) do
 			if supportedTables[apiTable.Type] then

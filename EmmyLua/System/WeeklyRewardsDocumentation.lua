@@ -39,22 +39,6 @@ function C_WeeklyRewards.HasAvailableRewards() end
 ---[Documentation](https://wow.gamepedia.com/API_C_WeeklyRewards.HasGeneratedRewards)
 function C_WeeklyRewards.HasGeneratedRewards() end
 
----@class WEEKLY_REWARDS_HIDE
----[Documentation](https://wow.gamepedia.com/WEEKLY_REWARDS_HIDE)
-local WEEKLY_REWARDS_HIDE = {}
-
----@class WEEKLY_REWARDS_ITEM_CHANGED
----[Documentation](https://wow.gamepedia.com/WEEKLY_REWARDS_ITEM_CHANGED)
-local WEEKLY_REWARDS_ITEM_CHANGED = {}
-
----@class WEEKLY_REWARDS_SHOW
----[Documentation](https://wow.gamepedia.com/WEEKLY_REWARDS_SHOW)
-local WEEKLY_REWARDS_SHOW = {}
-
----@class WEEKLY_REWARDS_UPDATE
----[Documentation](https://wow.gamepedia.com/WEEKLY_REWARDS_UPDATE)
-local WEEKLY_REWARDS_UPDATE = {}
-
 ---@class ConquestProgressBarDisplayType
 local ConquestProgressBarDisplayType = {
 	FirstChest = 0,

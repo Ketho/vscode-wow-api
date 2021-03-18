@@ -195,24 +195,6 @@ function C_MountJournal.SetSourceFilter(filterIndex, isChecked) end
 ---[Documentation](https://wow.gamepedia.com/API_C_MountJournal.SummonByID)
 function C_MountJournal.SummonByID(mountID) end
 
----@class MOUNT_EQUIPMENT_APPLY_RESULT
----@field success boolean
----[Documentation](https://wow.gamepedia.com/MOUNT_EQUIPMENT_APPLY_RESULT)
-local MOUNT_EQUIPMENT_APPLY_RESULT = {}
-
----@class MOUNT_JOURNAL_SEARCH_UPDATED
----[Documentation](https://wow.gamepedia.com/MOUNT_JOURNAL_SEARCH_UPDATED)
-local MOUNT_JOURNAL_SEARCH_UPDATED = {}
-
----@class MOUNT_JOURNAL_USABILITY_CHANGED
----[Documentation](https://wow.gamepedia.com/MOUNT_JOURNAL_USABILITY_CHANGED)
-local MOUNT_JOURNAL_USABILITY_CHANGED = {}
-
----@class NEW_MOUNT_ADDED
----@field mountID number
----[Documentation](https://wow.gamepedia.com/NEW_MOUNT_ADDED)
-local NEW_MOUNT_ADDED = {}
-
 ---@class MountCreatureDisplayInfo
 ---@field creatureDisplayID number
 ---@field isVisible boolean

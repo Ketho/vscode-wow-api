@@ -11,11 +11,6 @@ function C_SplashScreen.CanViewSplashScreen() end
 ---[Documentation](https://wow.gamepedia.com/API_C_SplashScreen.RequestLatestSplashScreen)
 function C_SplashScreen.RequestLatestSplashScreen(fromGameMenu) end
 
----@class OPEN_SPLASH_SCREEN
----@field info SplashScreenInfo
----[Documentation](https://wow.gamepedia.com/OPEN_SPLASH_SCREEN)
-local OPEN_SPLASH_SCREEN = {}
-
 ---@class SplashScreenType
 local SplashScreenType = {
 	WhatsNew = 0,

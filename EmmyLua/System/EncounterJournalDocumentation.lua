@@ -61,16 +61,6 @@ function C_EncounterJournal.SetPreviewPvpTier(tier) end
 ---[Documentation](https://wow.gamepedia.com/API_C_EncounterJournal.SetSlotFilter)
 function C_EncounterJournal.SetSlotFilter(filterSlot) end
 
----@class EJ_DIFFICULTY_UPDATE
----@field difficultyID number
----[Documentation](https://wow.gamepedia.com/EJ_DIFFICULTY_UPDATE)
-local EJ_DIFFICULTY_UPDATE = {}
-
----@class EJ_LOOT_DATA_RECIEVED
----@field itemID number
----[Documentation](https://wow.gamepedia.com/EJ_LOOT_DATA_RECIEVED)
-local EJ_LOOT_DATA_RECIEVED = {}
-
 ---@class ItemSlotFilterType
 local ItemSlotFilterType = {
 	Head = 0,

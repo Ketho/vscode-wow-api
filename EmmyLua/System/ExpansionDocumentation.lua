@@ -85,19 +85,6 @@ function IsVeteranTrialAccount() end
 ---[Documentation](https://wow.gamepedia.com/API_SendSubscriptionInterstitialResponse)
 function SendSubscriptionInterstitialResponse(response) end
 
----@class MAX_EXPANSION_LEVEL_UPDATED
----[Documentation](https://wow.gamepedia.com/MAX_EXPANSION_LEVEL_UPDATED)
-local MAX_EXPANSION_LEVEL_UPDATED = {}
-
----@class MIN_EXPANSION_LEVEL_UPDATED
----[Documentation](https://wow.gamepedia.com/MIN_EXPANSION_LEVEL_UPDATED)
-local MIN_EXPANSION_LEVEL_UPDATED = {}
-
----@class SHOW_SUBSCRIPTION_INTERSTITIAL
----@field type SubscriptionInterstitialType
----[Documentation](https://wow.gamepedia.com/SHOW_SUBSCRIPTION_INTERSTITIAL)
-local SHOW_SUBSCRIPTION_INTERSTITIAL = {}
-
 ---@class SubscriptionInterstitialResponseType
 local SubscriptionInterstitialResponseType = {
 	Clicked = 0,

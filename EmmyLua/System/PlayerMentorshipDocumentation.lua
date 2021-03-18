@@ -20,11 +20,3 @@ function C_PlayerMentorship.IsActivePlayerConsideredNewcomer() end
 ---@return boolean isRestricted
 ---[Documentation](https://wow.gamepedia.com/API_C_PlayerMentorship.IsMentorRestricted)
 function C_PlayerMentorship.IsMentorRestricted() end
-
----@class MENTORSHIP_STATUS_CHANGED
----[Documentation](https://wow.gamepedia.com/MENTORSHIP_STATUS_CHANGED)
-local MENTORSHIP_STATUS_CHANGED = {}
-
----@class NEWCOMER_GRADUATION
----[Documentation](https://wow.gamepedia.com/NEWCOMER_GRADUATION)
-local NEWCOMER_GRADUATION = {}

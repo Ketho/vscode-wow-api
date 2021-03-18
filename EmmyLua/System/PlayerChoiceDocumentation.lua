@@ -18,14 +18,6 @@ function C_PlayerChoice.GetPlayerChoiceRewardInfo(rewardIndex) end
 ---[Documentation](https://wow.gamepedia.com/API_C_PlayerChoice.IsWaitingForPlayerChoiceResponse)
 function C_PlayerChoice.IsWaitingForPlayerChoiceResponse() end
 
----@class PLAYER_CHOICE_CLOSE
----[Documentation](https://wow.gamepedia.com/PLAYER_CHOICE_CLOSE)
-local PLAYER_CHOICE_CLOSE = {}
-
----@class PLAYER_CHOICE_UPDATE
----[Documentation](https://wow.gamepedia.com/PLAYER_CHOICE_UPDATE)
-local PLAYER_CHOICE_UPDATE = {}
-
 ---@class PlayerChoiceRarity
 local PlayerChoiceRarity = {
 	Common = 0,

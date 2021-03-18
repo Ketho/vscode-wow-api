@@ -31,7 +31,3 @@ function C_SuperTrack.SetSuperTrackedQuestID(questID) end
 ---@param superTracked boolean
 ---[Documentation](https://wow.gamepedia.com/API_C_SuperTrack.SetSuperTrackedUserWaypoint)
 function C_SuperTrack.SetSuperTrackedUserWaypoint(superTracked) end
-
----@class SUPER_TRACKING_CHANGED
----[Documentation](https://wow.gamepedia.com/SUPER_TRACKING_CHANGED)
-local SUPER_TRACKING_CHANGED = {}

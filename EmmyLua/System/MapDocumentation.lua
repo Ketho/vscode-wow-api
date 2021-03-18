@@ -201,35 +201,6 @@ function C_Map.RequestPreloadMap(uiMapID) end
 ---[Documentation](https://wow.gamepedia.com/API_C_Map.SetUserWaypoint)
 function C_Map.SetUserWaypoint(point) end
 
----@class NEW_WMO_CHUNK
----[Documentation](https://wow.gamepedia.com/NEW_WMO_CHUNK)
-local NEW_WMO_CHUNK = {}
-
----@class USER_WAYPOINT_UPDATED
----[Documentation](https://wow.gamepedia.com/USER_WAYPOINT_UPDATED)
-local USER_WAYPOINT_UPDATED = {}
-
----@class WORLD_MAP_CLOSE
----[Documentation](https://wow.gamepedia.com/WORLD_MAP_CLOSE)
-local WORLD_MAP_CLOSE = {}
-
----@class WORLD_MAP_OPEN
----@field uiMapID number
----[Documentation](https://wow.gamepedia.com/WORLD_MAP_OPEN)
-local WORLD_MAP_OPEN = {}
-
----@class ZONE_CHANGED
----[Documentation](https://wow.gamepedia.com/ZONE_CHANGED)
-local ZONE_CHANGED = {}
-
----@class ZONE_CHANGED_INDOORS
----[Documentation](https://wow.gamepedia.com/ZONE_CHANGED_INDOORS)
-local ZONE_CHANGED_INDOORS = {}
-
----@class ZONE_CHANGED_NEW_AREA
----[Documentation](https://wow.gamepedia.com/ZONE_CHANGED_NEW_AREA)
-local ZONE_CHANGED_NEW_AREA = {}
-
 ---@class MapCanvasPosition
 local MapCanvasPosition = {
 	None = 0,

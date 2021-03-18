@@ -20,15 +20,6 @@ function C_Navigation.HasValidScreenPosition() end
 ---[Documentation](https://wow.gamepedia.com/API_C_Navigation.WasClampedToScreen)
 function C_Navigation.WasClampedToScreen() end
 
----@class NAVIGATION_FRAME_CREATED
----@field region table
----[Documentation](https://wow.gamepedia.com/NAVIGATION_FRAME_CREATED)
-local NAVIGATION_FRAME_CREATED = {}
-
----@class NAVIGATION_FRAME_DESTROYED
----[Documentation](https://wow.gamepedia.com/NAVIGATION_FRAME_DESTROYED)
-local NAVIGATION_FRAME_DESTROYED = {}
-
 ---@class NavigationState
 local NavigationState = {
 	Invalid = 0,

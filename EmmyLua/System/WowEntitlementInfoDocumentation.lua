@@ -1,21 +1,3 @@
----@class ENTITLEMENT_DELIVERED
----@field entitlementType WoWEntitlementType
----@field textureID number
----@field name string
----@field payloadID number
----@field showFancyToast boolean
----[Documentation](https://wow.gamepedia.com/ENTITLEMENT_DELIVERED)
-local ENTITLEMENT_DELIVERED = {}
-
----@class RAF_ENTITLEMENT_DELIVERED
----@field entitlementType WoWEntitlementType
----@field textureID number
----@field name string
----@field payloadID number
----@field showFancyToast boolean
----[Documentation](https://wow.gamepedia.com/RAF_ENTITLEMENT_DELIVERED)
-local RAF_ENTITLEMENT_DELIVERED = {}
-
 ---@class WoWEntitlementType
 local WoWEntitlementType = {
 	Item = 0,

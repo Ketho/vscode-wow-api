@@ -50,15 +50,3 @@ function C_ReportSystem.SetPendingReportTarget(target) end
 ---@return boolean set
 ---[Documentation](https://wow.gamepedia.com/API_C_ReportSystem.SetPendingReportTargetByGuid)
 function C_ReportSystem.SetPendingReportTargetByGuid(guid) end
-
----@class OPEN_REPORT_PLAYER
----@field token number
----@field reportType string
----@field playerName string
----[Documentation](https://wow.gamepedia.com/OPEN_REPORT_PLAYER)
-local OPEN_REPORT_PLAYER = {}
-
----@class REPORT_PLAYER_RESULT
----@field success boolean
----[Documentation](https://wow.gamepedia.com/REPORT_PLAYER_RESULT)
-local REPORT_PLAYER_RESULT = {}

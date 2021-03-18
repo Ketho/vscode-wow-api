@@ -21,45 +21,6 @@ function C_Console.PrintAllMatchingCommands(partialCommandText) end
 ---[Documentation](https://wow.gamepedia.com/API_C_Console.SetFontHeight)
 function C_Console.SetFontHeight(fontHeightInPixels) end
 
----@class CONSOLE_CLEAR
----[Documentation](https://wow.gamepedia.com/CONSOLE_CLEAR)
-local CONSOLE_CLEAR = {}
-
----@class CONSOLE_COLORS_CHANGED
----[Documentation](https://wow.gamepedia.com/CONSOLE_COLORS_CHANGED)
-local CONSOLE_COLORS_CHANGED = {}
-
----@class CONSOLE_FONT_SIZE_CHANGED
----[Documentation](https://wow.gamepedia.com/CONSOLE_FONT_SIZE_CHANGED)
-local CONSOLE_FONT_SIZE_CHANGED = {}
-
----@class CONSOLE_LOG
----@field message string
----[Documentation](https://wow.gamepedia.com/CONSOLE_LOG)
-local CONSOLE_LOG = {}
-
----@class CONSOLE_MESSAGE
----@field message string
----@field colorType number
----[Documentation](https://wow.gamepedia.com/CONSOLE_MESSAGE)
-local CONSOLE_MESSAGE = {}
-
----@class CVAR_UPDATE
----@field eventName string
----@field value string
----[Documentation](https://wow.gamepedia.com/CVAR_UPDATE)
-local CVAR_UPDATE = {}
-
----@class GLUE_CONSOLE_LOG
----@field message string
----[Documentation](https://wow.gamepedia.com/GLUE_CONSOLE_LOG)
-local GLUE_CONSOLE_LOG = {}
-
----@class TOGGLE_CONSOLE
----@field showConsole boolean
----[Documentation](https://wow.gamepedia.com/TOGGLE_CONSOLE)
-local TOGGLE_CONSOLE = {}
-
 ---@class ConsoleCategory
 local ConsoleCategory = {
 	Debug = 0,

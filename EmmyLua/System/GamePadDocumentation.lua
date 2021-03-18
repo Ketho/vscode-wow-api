@@ -71,18 +71,6 @@ function C_GamePad.SetConfig(config) end
 ---[Documentation](https://wow.gamepedia.com/API_C_GamePad.StickIndexToConfigName)
 function C_GamePad.StickIndexToConfigName(stickIndex) end
 
----@class GAME_PAD_CONFIGS_CHANGED
----[Documentation](https://wow.gamepedia.com/GAME_PAD_CONFIGS_CHANGED)
-local GAME_PAD_CONFIGS_CHANGED = {}
-
----@class GAME_PAD_CONNECTED
----[Documentation](https://wow.gamepedia.com/GAME_PAD_CONNECTED)
-local GAME_PAD_CONNECTED = {}
-
----@class GAME_PAD_DISCONNECTED
----[Documentation](https://wow.gamepedia.com/GAME_PAD_DISCONNECTED)
-local GAME_PAD_DISCONNECTED = {}
-
 ---@class GamePadAxisConfig
 ---@field axis string
 ---@field shift number

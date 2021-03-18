@@ -143,15 +143,6 @@ function C_UIWidgetManager.SetProcessingUnit(unit) end
 ---[Documentation](https://wow.gamepedia.com/API_C_UIWidgetManager.UnregisterUnitForWidgetUpdates)
 function C_UIWidgetManager.UnregisterUnitForWidgetUpdates(unitToken) end
 
----@class UPDATE_ALL_UI_WIDGETS
----[Documentation](https://wow.gamepedia.com/UPDATE_ALL_UI_WIDGETS)
-local UPDATE_ALL_UI_WIDGETS = {}
-
----@class UPDATE_UI_WIDGET
----@field widgetInfo UIWidgetInfo
----[Documentation](https://wow.gamepedia.com/UPDATE_UI_WIDGET)
-local UPDATE_UI_WIDGET = {}
-
 ---@class CaptureBarWidgetFillDirectionType
 local CaptureBarWidgetFillDirectionType = {
 	RightToLeft = 0,
