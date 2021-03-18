@@ -57,7 +57,7 @@ function C_BarberShop.RotateCamera(diffDegrees) end
 function C_BarberShop.SetCameraDistanceOffset(offset) end
 
 ---@param zoomLevel number
----@param keepCustomZoom boolean
+---@param keepCustomZoom boolean|nil
 ---[Documentation](https://wow.gamepedia.com/API_C_BarberShop.SetCameraZoomLevel)
 function C_BarberShop.SetCameraZoomLevel(zoomLevel, keepCustomZoom) end
 
@@ -78,7 +78,7 @@ function C_BarberShop.SetSelectedSex(sex) end
 ---[Documentation](https://wow.gamepedia.com/API_C_BarberShop.SetViewingAlteredForm)
 function C_BarberShop.SetViewingAlteredForm(isViewingAlteredForm) end
 
----@param shapeshiftFormID number
+---@param shapeshiftFormID number|nil
 ---[Documentation](https://wow.gamepedia.com/API_C_BarberShop.SetViewingShapeshiftForm)
 function C_BarberShop.SetViewingShapeshiftForm(shapeshiftFormID) end
 
@@ -94,5 +94,5 @@ local BarberShopCharacterData = {}
 ---@class BarberShopRaceData
 ---@field name string
 ---@field fileName string
----@field alternateFormRaceData CharacterAlternateFormData
+---@field alternateFormRaceData CharacterAlternateFormData|nil
 local BarberShopRaceData = {}

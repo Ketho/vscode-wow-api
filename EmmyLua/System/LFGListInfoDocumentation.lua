@@ -47,7 +47,7 @@ function C_LFGList.HasSearchResultInfo(searchResultID) end
 ---@param categoryID number
 ---@param filter number
 ---@param preferredFilters number
----@param languageFilter WowLocale
+---@param languageFilter WowLocale|nil
 ---[Documentation](https://wow.gamepedia.com/API_C_LFGList.Search)
 function C_LFGList.Search(categoryID, filter, preferredFilters, languageFilter) end
 
@@ -62,7 +62,7 @@ function C_LFGList.SetSearchToQuestID(questID) end
 ---@class LfgApplicantData
 ---@field applicantID number
 ---@field applicationStatus string
----@field pendingApplicationStatus string
+---@field pendingApplicationStatus string|nil
 ---@field numMembers number
 ---@field isNew boolean
 ---@field comment string
@@ -79,13 +79,13 @@ local LfgApplicantData = {}
 ---@field duration number
 ---@field autoAccept boolean
 ---@field privateGroup boolean
----@field questID number
+---@field questID number|nil
 local LfgEntryData = {}
 
 ---@class LfgSearchResultData
 ---@field searchResultID number
 ---@field activityID number
----@field leaderName string
+---@field leaderName string|nil
 ---@field name string
 ---@field comment string
 ---@field voiceChat string
@@ -98,7 +98,7 @@ local LfgEntryData = {}
 ---@field isDelisted boolean
 ---@field autoAccept boolean
 ---@field age number
----@field questID number
+---@field questID number|nil
 local LfgSearchResultData = {}
 
 ---@class WowLocale

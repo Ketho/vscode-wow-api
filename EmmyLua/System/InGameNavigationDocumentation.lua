@@ -4,7 +4,7 @@ C_Navigation = {}
 ---[Documentation](https://wow.gamepedia.com/API_C_Navigation.GetDistance)
 function C_Navigation.GetDistance() end
 
----@return table frame
+---@return table|nil frame
 ---[Documentation](https://wow.gamepedia.com/API_C_Navigation.GetFrame)
 function C_Navigation.GetFrame() end
 

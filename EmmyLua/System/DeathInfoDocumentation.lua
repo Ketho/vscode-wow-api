@@ -1,12 +1,12 @@
 C_DeathInfo = {}
 
 ---@param uiMapID number
----@return Vector2DMixin position
+---@return Vector2DMixin|nil position
 ---[Documentation](https://wow.gamepedia.com/API_C_DeathInfo.GetCorpseMapPosition)
 function C_DeathInfo.GetCorpseMapPosition(uiMapID) end
 
 ---@param uiMapID number
----@return Vector2DMixin position
+---@return Vector2DMixin|nil position
 ---[Documentation](https://wow.gamepedia.com/API_C_DeathInfo.GetDeathReleasePosition)
 function C_DeathInfo.GetDeathReleasePosition(uiMapID) end
 

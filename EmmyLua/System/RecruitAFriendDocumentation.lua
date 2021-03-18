@@ -96,8 +96,8 @@ local RafIllusionInfo = {}
 ---@field availableMonths number
 ---@field claimInProgress boolean
 ---@field rewards RafReward[]
----@field nextReward RafReward
----@field recruitmentInfo RafRecruitmentinfo
+---@field nextReward RafReward|nil
+---@field recruitmentInfo RafRecruitmentinfo|nil
 ---@field recruits RafRecruit[]
 local RafInfo = {}
 
@@ -145,12 +145,12 @@ local RafRecruitmentinfo = {}
 ---@field rewardID number
 ---@field itemID number
 ---@field rewardType RafRewardType
----@field petInfo RafPetInfo
----@field mountInfo RafMountInfo
----@field appearanceInfo RafAppearanceInfo
----@field titleInfo RafTitleInfo
----@field appearanceSetInfo RafAppearanceSetInfo
----@field illusionInfo RafIllusionInfo
+---@field petInfo RafPetInfo|nil
+---@field mountInfo RafMountInfo|nil
+---@field appearanceInfo RafAppearanceInfo|nil
+---@field titleInfo RafTitleInfo|nil
+---@field appearanceSetInfo RafAppearanceSetInfo|nil
+---@field illusionInfo RafIllusionInfo|nil
 ---@field canClaim boolean
 ---@field claimed boolean
 ---@field repeatable boolean

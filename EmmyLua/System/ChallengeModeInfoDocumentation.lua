@@ -6,7 +6,7 @@ function C_ChallengeMode.ClearKeystone() end
 ---[Documentation](https://wow.gamepedia.com/API_C_ChallengeMode.CloseKeystoneFrame)
 function C_ChallengeMode.CloseKeystoneFrame() end
 
----@return number mapChallengeModeID
+---@return number|nil mapChallengeModeID
 ---[Documentation](https://wow.gamepedia.com/API_C_ChallengeMode.GetActiveChallengeMapID)
 function C_ChallengeMode.GetActiveChallengeMapID() end
 
@@ -49,7 +49,7 @@ function C_ChallengeMode.GetMapTable() end
 ---@return string name
 ---@return number id
 ---@return number timeLimit
----@return number texture
+---@return number|nil texture
 ---@return number backgroundTexture
 ---[Documentation](https://wow.gamepedia.com/API_C_ChallengeMode.GetMapUIInfo)
 function C_ChallengeMode.GetMapUIInfo(mapChallengeModeID) end

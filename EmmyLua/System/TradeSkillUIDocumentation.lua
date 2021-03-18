@@ -2,8 +2,8 @@ C_TradeSkillUI = {}
 
 ---@param recipeSpellID number
 ---@param numCasts number
----@param optionalReagents OptionalReagentInfo[]
----@param recipeLevel number
+---@param optionalReagents OptionalReagentInfo[]|nil
+---@param recipeLevel number|nil
 ---[Documentation](https://wow.gamepedia.com/API_C_TradeSkillUI.CraftRecipe)
 function C_TradeSkillUI.CraftRecipe(recipeSpellID, numCasts, optionalReagents, recipeLevel) end
 
@@ -24,22 +24,22 @@ function C_TradeSkillUI.GetOptionalReagentBonusText(recipeSpellID, optionalReage
 function C_TradeSkillUI.GetOptionalReagentInfo(recipeSpellID) end
 
 ---@param recipeSpellID number
----@param recipeLevel number
----@return TradeSkillRecipeInfo recipeInfo
+---@param recipeLevel number|nil
+---@return TradeSkillRecipeInfo|nil recipeInfo
 ---[Documentation](https://wow.gamepedia.com/API_C_TradeSkillUI.GetRecipeInfo)
 function C_TradeSkillUI.GetRecipeInfo(recipeSpellID, recipeLevel) end
 
 ---@param recipeSpellID number
----@param recipeLevel number
+---@param recipeLevel number|nil
 ---@return number numReagents
 ---[Documentation](https://wow.gamepedia.com/API_C_TradeSkillUI.GetRecipeNumReagents)
 function C_TradeSkillUI.GetRecipeNumReagents(recipeSpellID, recipeLevel) end
 
 ---@param recipeSpellID number
 ---@param reagentIndex number
----@param recipeLevel number
----@return string reagentName
----@return number reagentFileID
+---@param recipeLevel number|nil
+---@return string|nil reagentName
+---@return number|nil reagentFileID
 ---@return number reagentCount
 ---@return number playerReagentCount
 ---[Documentation](https://wow.gamepedia.com/API_C_TradeSkillUI.GetRecipeReagentInfo)
@@ -59,8 +59,8 @@ function C_TradeSkillUI.GetTradeSkillDisplayName(skillLineID) end
 ---@return number skillLineRank
 ---@return number skillLineMaxRank
 ---@return number skillLineModifier
----@return number parentSkillLineID
----@return string parentSkillLineDisplayName
+---@return number|nil parentSkillLineID
+---@return string|nil parentSkillLineDisplayName
 ---[Documentation](https://wow.gamepedia.com/API_C_TradeSkillUI.GetTradeSkillLine)
 function C_TradeSkillUI.GetTradeSkillLine() end
 
@@ -69,7 +69,7 @@ function C_TradeSkillUI.GetTradeSkillLine() end
 ---@return number skillLineRank
 ---@return number skillLineMaxRank
 ---@return number skillLineModifier
----@return number parentSkillLineID
+---@return number|nil parentSkillLineID
 ---[Documentation](https://wow.gamepedia.com/API_C_TradeSkillUI.GetTradeSkillLineInfoByID)
 function C_TradeSkillUI.GetTradeSkillLineInfoByID(skillLineID) end
 
@@ -80,7 +80,7 @@ function C_TradeSkillUI.IsEmptySkillLineCategory(categoryID) end
 
 ---@param recipeSpellID number
 ---@param numCasts number
----@param optionalReagents OptionalReagentInfo[]
+---@param optionalReagents OptionalReagentInfo[]|nil
 ---[Documentation](https://wow.gamepedia.com/API_C_TradeSkillUI.SetRecipeRepeatCount)
 function C_TradeSkillUI.SetRecipeRepeatCount(recipeSpellID, numCasts, optionalReagents) end
 
@@ -91,6 +91,6 @@ local OptionalReagentItemFlag = {
 
 ---@class OptionalReagentSlot
 ---@field requiredSkillRank number
----@field slotText string
+---@field slotText string|nil
 ---@field options number[]
 local OptionalReagentSlot = {}

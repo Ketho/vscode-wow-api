@@ -21,7 +21,7 @@ function C_SpecializationInfo.GetAllSelectedPvpTalentIDs() end
 
 ---@param inspectedUnit string
 ---@param talentIndex number
----@return number selectedTalentID
+---@return number|nil selectedTalentID
 ---[Documentation](https://wow.gamepedia.com/API_C_SpecializationInfo.GetInspectSelectedPvpTalent)
 function C_SpecializationInfo.GetInspectSelectedPvpTalent(inspectedUnit, talentIndex) end
 
@@ -31,17 +31,17 @@ function C_SpecializationInfo.GetInspectSelectedPvpTalent(inspectedUnit, talentI
 function C_SpecializationInfo.GetPvpTalentAlertStatus() end
 
 ---@param talentIndex number
----@return PvpTalentSlotInfo slotInfo
+---@return PvpTalentSlotInfo|nil slotInfo
 ---[Documentation](https://wow.gamepedia.com/API_C_SpecializationInfo.GetPvpTalentSlotInfo)
 function C_SpecializationInfo.GetPvpTalentSlotInfo(talentIndex) end
 
 ---@param talentIndex number
----@return number requiredLevel
+---@return number|nil requiredLevel
 ---[Documentation](https://wow.gamepedia.com/API_C_SpecializationInfo.GetPvpTalentSlotUnlockLevel)
 function C_SpecializationInfo.GetPvpTalentSlotUnlockLevel(talentIndex) end
 
 ---@param talentID number
----@return number requiredLevel
+---@return number|nil requiredLevel
 ---[Documentation](https://wow.gamepedia.com/API_C_SpecializationInfo.GetPvpTalentUnlockLevel)
 function C_SpecializationInfo.GetPvpTalentUnlockLevel(talentID) end
 
@@ -77,6 +77,6 @@ function C_SpecializationInfo.SetPvpTalentLocked(talentID, locked) end
 ---@class PvpTalentSlotInfo
 ---@field enabled boolean
 ---@field level number
----@field selectedTalentID number
+---@field selectedTalentID number|nil
 ---@field availableTalentIDs number[]
 local PvpTalentSlotInfo = {}

@@ -7,7 +7,7 @@ function C_QuestLine.GetAvailableQuestLines(uiMapID) end
 
 ---@param questID number
 ---@param uiMapID number
----@return QuestLineInfo questLineInfo
+---@return QuestLineInfo|nil questLineInfo
 ---[Documentation](https://wow.gamepedia.com/API_C_QuestLine.GetQuestLineInfo)
 function C_QuestLine.GetQuestLineInfo(questID, uiMapID) end
 

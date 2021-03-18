@@ -1,8 +1,8 @@
 C_CurrencyInfo = {}
 
 ---@param currencyID number
----@return boolean warModeApplies
----@return boolean limitOncePerTooltip
+---@return boolean|nil warModeApplies
+---@return boolean|nil limitOncePerTooltip
 ---[Documentation](https://wow.gamepedia.com/API_C_CurrencyInfo.DoesWarModeBonusApply)
 function C_CurrencyInfo.DoesWarModeBonusApply(currencyID) end
 
@@ -21,7 +21,7 @@ function C_CurrencyInfo.GetAzeriteCurrencyID() end
 function C_CurrencyInfo.GetBackpackCurrencyInfo(index) end
 
 ---@param currencyType number
----@param quantity number
+---@param quantity number|nil
 ---@return CurrencyDisplayInfo info
 ---[Documentation](https://wow.gamepedia.com/API_C_CurrencyInfo.GetBasicCurrencyInfo)
 function C_CurrencyInfo.GetBasicCurrencyInfo(currencyType, quantity) end
@@ -68,7 +68,7 @@ function C_CurrencyInfo.GetCurrencyListLink(index) end
 function C_CurrencyInfo.GetCurrencyListSize() end
 
 ---@param currencyID number
----@return number factionID
+---@return number|nil factionID
 ---[Documentation](https://wow.gamepedia.com/API_C_CurrencyInfo.GetFactionGrantedByCurrency)
 ---Gets the faction ID for currency that is immediately converted into reputation with that faction instead.
 function C_CurrencyInfo.GetFactionGrantedByCurrency(currencyID) end

@@ -16,13 +16,13 @@ function C_EncounterJournal.GetEncountersOnMap(uiMapID) end
 function C_EncounterJournal.GetLootInfo(id) end
 
 ---@param index number
----@param encounterIndex number
+---@param encounterIndex number|nil
 ---@return EncounterJournalItemInfo itemInfo
 ---[Documentation](https://wow.gamepedia.com/API_C_EncounterJournal.GetLootInfoByIndex)
 function C_EncounterJournal.GetLootInfoByIndex(index, encounterIndex) end
 
 ---@param sectionID number
----@return number[] iconFlags
+---@return number[]|nil iconFlags
 ---[Documentation](https://wow.gamepedia.com/API_C_EncounterJournal.GetSectionIconFlags)
 ---Represents the icon indices for this EJ section.  An icon index can be used to arrive at texture coordinates for specific encounter types, e.g.: EncounterJournal_SetFlagIcon
 function C_EncounterJournal.GetSectionIconFlags(sectionID) end
@@ -36,7 +36,7 @@ function C_EncounterJournal.GetSectionInfo(sectionID) end
 ---[Documentation](https://wow.gamepedia.com/API_C_EncounterJournal.GetSlotFilter)
 function C_EncounterJournal.GetSlotFilter() end
 
----@param instanceID number
+---@param instanceID number|nil
 ---@return boolean hasLoot
 ---[Documentation](https://wow.gamepedia.com/API_C_EncounterJournal.InstanceHasLoot)
 function C_EncounterJournal.InstanceHasLoot(instanceID) end
@@ -92,16 +92,16 @@ local DungeonEntranceMapInfo = {}
 
 ---@class EncounterJournalItemInfo
 ---@field itemID number
----@field encounterID number
----@field name string
----@field itemQuality string
----@field filterType ItemSlotFilterType
----@field icon number
----@field slot string
----@field armorType string
----@field link string
----@field handError boolean
----@field weaponTypeError boolean
+---@field encounterID number|nil
+---@field name string|nil
+---@field itemQuality string|nil
+---@field filterType ItemSlotFilterType|nil
+---@field icon number|nil
+---@field slot string|nil
+---@field armorType string|nil
+---@field link string|nil
+---@field handError boolean|nil
+---@field weaponTypeError boolean|nil
 local EncounterJournalItemInfo = {}
 
 ---@class EncounterJournalMapEncounterInfo
@@ -113,13 +113,13 @@ local EncounterJournalMapEncounterInfo = {}
 ---@class EncounterJournalSectionInfo
 ---@field spellID number
 ---@field title string
----@field description string
+---@field description string|nil
 ---@field headerType number
 ---@field abilityIcon number
 ---@field creatureDisplayID number
 ---@field uiModelSceneID number
----@field siblingSectionID number
----@field firstChildSectionID number
+---@field siblingSectionID number|nil
+---@field firstChildSectionID number|nil
 ---@field filteredByDifficulty boolean
 ---@field link string
 ---@field startsOpen boolean

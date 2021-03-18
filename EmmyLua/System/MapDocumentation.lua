@@ -17,7 +17,7 @@ function C_Map.CloseWorldMapInteraction() end
 function C_Map.GetAreaInfo(areaID) end
 
 ---@param unitToken string
----@return number uiMapID
+---@return number|nil uiMapID
 ---[Documentation](https://wow.gamepedia.com/API_C_Map.GetBestMapForUnit)
 ---Only works for the player and party members.
 function C_Map.GetBestMapForUnit(unitToken) end
@@ -63,8 +63,8 @@ function C_Map.GetMapArtLayers(uiMapID) end
 function C_Map.GetMapBannersForMap(uiMapID) end
 
 ---@param uiMapID number
----@param mapType UIMapType
----@param allDescendants boolean
+---@param mapType UIMapType|nil
+---@param allDescendants boolean|nil
 ---@return UiMapDetails[] info
 ---[Documentation](https://wow.gamepedia.com/API_C_Map.GetMapChildrenInfo)
 function C_Map.GetMapChildrenInfo(uiMapID, mapType, allDescendants) end
@@ -125,7 +125,7 @@ function C_Map.GetMapLinksForMap(uiMapID) end
 
 ---@param continentID number
 ---@param worldPosition Vector2DMixin
----@param overrideUiMapID number
+---@param overrideUiMapID number|nil
 ---@return number uiMapID
 ---@return Vector2DMixin mapPosition
 ---[Documentation](https://wow.gamepedia.com/API_C_Map.GetMapPosFromWorldPos)
@@ -149,7 +149,7 @@ function C_Map.GetMapWorldSize(uiMapID) end
 
 ---@param uiMapID number
 ---@param unitToken string
----@return Vector2DMixin position
+---@return Vector2DMixin|nil position
 ---[Documentation](https://wow.gamepedia.com/API_C_Map.GetPlayerMapPosition)
 ---Only works for the player and party members.
 function C_Map.GetPlayerMapPosition(uiMapID, unitToken) end
@@ -253,7 +253,7 @@ local UIMapType = {
 ---@field areaPoiID number
 ---@field name string
 ---@field atlasName string
----@field uiTextureKit string
+---@field uiTextureKit string|nil
 local MapBannerInfo = {}
 
 ---@class MapLinkInfo

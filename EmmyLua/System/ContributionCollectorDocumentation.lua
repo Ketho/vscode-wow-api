@@ -23,7 +23,7 @@ function C_ContributionCollector.GetBuffs(contributionID) end
 
 ---@param contributionID number
 ---@param contributionState ContributionState
----@return ContributionAppearance appearance
+---@return ContributionAppearance|nil appearance
 ---[Documentation](https://wow.gamepedia.com/API_C_ContributionCollector.GetContributionAppearance)
 function C_ContributionCollector.GetContributionAppearance(contributionID, contributionState) end
 
@@ -77,7 +77,7 @@ function C_ContributionCollector.GetRewardQuestID(contributionID) end
 ---@param contributionID number
 ---@return ContributionState contributionState
 ---@return number contributionPercentageComplete
----@return number timeOfNextStateChange
+---@return number|nil timeOfNextStateChange
 ---@return number startTime
 ---[Documentation](https://wow.gamepedia.com/API_C_ContributionCollector.GetState)
 function C_ContributionCollector.GetState(contributionID) end

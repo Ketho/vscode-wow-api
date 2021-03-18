@@ -4,22 +4,22 @@ C_GamePad = {}
 function C_GamePad.ApplyConfigs() end
 
 ---@param axisIndex number
----@return string configName
+---@return string|nil configName
 ---[Documentation](https://wow.gamepedia.com/API_C_GamePad.AxisIndexToConfigName)
 function C_GamePad.AxisIndexToConfigName(axisIndex) end
 
 ---@param bindingName string
----@return number buttonIndex
+---@return number|nil buttonIndex
 ---[Documentation](https://wow.gamepedia.com/API_C_GamePad.ButtonBindingToIndex)
 function C_GamePad.ButtonBindingToIndex(bindingName) end
 
 ---@param buttonIndex number
----@return string bindingName
+---@return string|nil bindingName
 ---[Documentation](https://wow.gamepedia.com/API_C_GamePad.ButtonIndexToBinding)
 function C_GamePad.ButtonIndexToBinding(buttonIndex) end
 
 ---@param buttonIndex number
----@return string configName
+---@return string|nil configName
 ---[Documentation](https://wow.gamepedia.com/API_C_GamePad.ButtonIndexToConfigName)
 function C_GamePad.ButtonIndexToConfigName(buttonIndex) end
 
@@ -44,17 +44,17 @@ function C_GamePad.GetAllDeviceIDs() end
 function C_GamePad.GetCombinedDeviceID() end
 
 ---@param configID GamePadConfigID
----@return GamePadConfig config
+---@return GamePadConfig|nil config
 ---[Documentation](https://wow.gamepedia.com/API_C_GamePad.GetConfig)
 function C_GamePad.GetConfig(configID) end
 
----@param deviceID number
----@return GamePadMappedState state
+---@param deviceID number|nil
+---@return GamePadMappedState|nil state
 ---[Documentation](https://wow.gamepedia.com/API_C_GamePad.GetDeviceMappedState)
 function C_GamePad.GetDeviceMappedState(deviceID) end
 
 ---@param deviceID number
----@return GamePadRawState rawState
+---@return GamePadRawState|nil rawState
 ---[Documentation](https://wow.gamepedia.com/API_C_GamePad.GetDeviceRawState)
 function C_GamePad.GetDeviceRawState(deviceID) end
 
@@ -67,26 +67,26 @@ function C_GamePad.IsEnabled() end
 function C_GamePad.SetConfig(config) end
 
 ---@param stickIndex number
----@return string configName
+---@return string|nil configName
 ---[Documentation](https://wow.gamepedia.com/API_C_GamePad.StickIndexToConfigName)
 function C_GamePad.StickIndexToConfigName(stickIndex) end
 
 ---@class GamePadAxisConfig
 ---@field axis string
----@field shift number
----@field scale number
----@field deadzone number
----@field buttonThreshold number
----@field buttonPos string
----@field buttonNeg string
----@field comment string
+---@field shift number|nil
+---@field scale number|nil
+---@field deadzone number|nil
+---@field buttonThreshold number|nil
+---@field buttonPos string|nil
+---@field buttonNeg string|nil
+---@field comment string|nil
 local GamePadAxisConfig = {}
 
 ---@class GamePadConfig
----@field comment string
----@field name string
+---@field comment string|nil
+---@field name string|nil
 ---@field configID GamePadConfigID
----@field labelStyle string
+---@field labelStyle string|nil
 ---@field rawButtonMappings GamePadRawButtonMapping[]
 ---@field rawAxisMappings GamePadRawAxisMapping[]
 ---@field axisConfigs GamePadAxisConfig[]
@@ -94,8 +94,8 @@ local GamePadAxisConfig = {}
 local GamePadConfig = {}
 
 ---@class GamePadConfigID
----@field vendorID number
----@field productID number
+---@field vendorID number|nil
+---@field productID number|nil
 local GamePadConfigID = {}
 
 ---@class GamePadMappedState
@@ -111,16 +111,16 @@ local GamePadMappedState = {}
 
 ---@class GamePadRawAxisMapping
 ---@field rawIndex number
----@field axis string
----@field comment string
+---@field axis string|nil
+---@field comment string|nil
 local GamePadRawAxisMapping = {}
 
 ---@class GamePadRawButtonMapping
 ---@field rawIndex number
----@field button string
----@field axis string
----@field axisValue number
----@field comment string
+---@field button string|nil
+---@field axis string|nil
+---@field axisValue number|nil
+---@field comment string|nil
 local GamePadRawButtonMapping = {}
 
 ---@class GamePadRawState
@@ -141,8 +141,8 @@ local GamePadStick = {}
 
 ---@class GamePadStickConfig
 ---@field stick string
----@field axisX string
----@field axisY string
----@field deadzone number
----@field comment string
+---@field axisX string|nil
+---@field axisY string|nil
+---@field deadzone number|nil
+---@field comment string|nil
 local GamePadStickConfig = {}

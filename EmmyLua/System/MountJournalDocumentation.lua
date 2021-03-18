@@ -19,7 +19,7 @@ function C_MountJournal.ClearRecentFanfares() end
 ---[Documentation](https://wow.gamepedia.com/API_C_MountJournal.Dismiss)
 function C_MountJournal.Dismiss() end
 
----@return number itemID
+---@return number|nil itemID
 ---[Documentation](https://wow.gamepedia.com/API_C_MountJournal.GetAppliedMountEquipmentID)
 function C_MountJournal.GetAppliedMountEquipmentID() end
 
@@ -42,7 +42,7 @@ function C_MountJournal.GetDisplayedMountAllCreatureDisplayInfo(mountIndex) end
 ---@return number sourceType
 ---@return boolean isFavorite
 ---@return boolean isFactionSpecific
----@return number faction
+---@return number|nil faction
 ---@return boolean shouldHideOnChar
 ---@return boolean isCollected
 ---@return number mountID
@@ -50,7 +50,7 @@ function C_MountJournal.GetDisplayedMountAllCreatureDisplayInfo(mountIndex) end
 function C_MountJournal.GetDisplayedMountInfo(displayIndex) end
 
 ---@param mountIndex number
----@return number creatureDisplayInfoID
+---@return number|nil creatureDisplayInfoID
 ---@return string description
 ---@return string source
 ---@return boolean isSelfMount
@@ -78,12 +78,12 @@ function C_MountJournal.GetMountAllCreatureDisplayInfoByID(mountID) end
 function C_MountJournal.GetMountEquipmentUnlockLevel() end
 
 ---@param itemID number
----@return number mountID
+---@return number|nil mountID
 ---[Documentation](https://wow.gamepedia.com/API_C_MountJournal.GetMountFromItem)
 function C_MountJournal.GetMountFromItem(itemID) end
 
 ---@param spellID number
----@return number mountID
+---@return number|nil mountID
 ---[Documentation](https://wow.gamepedia.com/API_C_MountJournal.GetMountFromSpell)
 function C_MountJournal.GetMountFromSpell(spellID) end
 
@@ -100,7 +100,7 @@ function C_MountJournal.GetMountIDs() end
 ---@return number sourceType
 ---@return boolean isFavorite
 ---@return boolean isFactionSpecific
----@return number faction
+---@return number|nil faction
 ---@return boolean shouldHideOnChar
 ---@return boolean isCollected
 ---@return number mountID
@@ -108,7 +108,7 @@ function C_MountJournal.GetMountIDs() end
 function C_MountJournal.GetMountInfoByID(mountID) end
 
 ---@param mountID number
----@return number creatureDisplayInfoID
+---@return number|nil creatureDisplayInfoID
 ---@return string description
 ---@return string source
 ---@return boolean isSelfMount
@@ -123,7 +123,7 @@ function C_MountJournal.GetMountInfoExtraByID(mountID) end
 ---@param mountID number
 ---@param checkIndoors boolean
 ---@return boolean isUsable
----@return string useError
+---@return string|nil useError
 ---[Documentation](https://wow.gamepedia.com/API_C_MountJournal.GetMountUsabilityByID)
 function C_MountJournal.GetMountUsabilityByID(mountID, checkIndoors) end
 

@@ -37,7 +37,7 @@ function C_LFGInfo.GetAllEntriesForCategory(category) end
 ---[Documentation](https://wow.gamepedia.com/API_C_LFGInfo.GetLFDLockStates)
 function C_LFGInfo.GetLFDLockStates() end
 
----@return number maxLevel
+---@return number|nil maxLevel
 ---@return boolean isLevelReduced
 ---[Documentation](https://wow.gamepedia.com/API_C_LFGInfo.GetRoleCheckDifficultyDetails)
 function C_LFGInfo.GetRoleCheckDifficultyDetails() end

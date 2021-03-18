@@ -1,10 +1,10 @@
 C_SuperTrack = {}
 
----@return SuperTrackingType type
+---@return SuperTrackingType|nil type
 ---[Documentation](https://wow.gamepedia.com/API_C_SuperTrack.GetHighestPrioritySuperTrackingType)
 function C_SuperTrack.GetHighestPrioritySuperTrackingType() end
 
----@return number questID
+---@return number|nil questID
 ---[Documentation](https://wow.gamepedia.com/API_C_SuperTrack.GetSuperTrackedQuestID)
 function C_SuperTrack.GetSuperTrackedQuestID() end
 

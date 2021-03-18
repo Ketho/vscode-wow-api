@@ -24,39 +24,39 @@ function C_VoiceChat.DeactivateChannel(channelID) end
 ---[Documentation](https://wow.gamepedia.com/API_C_VoiceChat.EndLocalCapture)
 function C_VoiceChat.EndLocalCapture() end
 
----@return number channelID
+---@return number|nil channelID
 ---[Documentation](https://wow.gamepedia.com/API_C_VoiceChat.GetActiveChannelID)
 function C_VoiceChat.GetActiveChannelID() end
 
----@return ChatChannelType channelType
+---@return ChatChannelType|nil channelType
 ---[Documentation](https://wow.gamepedia.com/API_C_VoiceChat.GetActiveChannelType)
 function C_VoiceChat.GetActiveChannelType() end
 
----@return VoiceAudioDevice[] inputDevices
+---@return VoiceAudioDevice[]|nil inputDevices
 ---[Documentation](https://wow.gamepedia.com/API_C_VoiceChat.GetAvailableInputDevices)
 function C_VoiceChat.GetAvailableInputDevices() end
 
----@return VoiceAudioDevice[] outputDevices
+---@return VoiceAudioDevice[]|nil outputDevices
 ---[Documentation](https://wow.gamepedia.com/API_C_VoiceChat.GetAvailableOutputDevices)
 function C_VoiceChat.GetAvailableOutputDevices() end
 
 ---@param channelID number
----@return VoiceChatChannel channel
+---@return VoiceChatChannel|nil channel
 ---[Documentation](https://wow.gamepedia.com/API_C_VoiceChat.GetChannel)
 function C_VoiceChat.GetChannel(channelID) end
 
 ---@param channelType ChatChannelType
----@return VoiceChatChannel channel
+---@return VoiceChatChannel|nil channel
 ---[Documentation](https://wow.gamepedia.com/API_C_VoiceChat.GetChannelForChannelType)
 function C_VoiceChat.GetChannelForChannelType(channelType) end
 
 ---@param clubId string
 ---@param streamId string
----@return VoiceChatChannel channel
+---@return VoiceChatChannel|nil channel
 ---[Documentation](https://wow.gamepedia.com/API_C_VoiceChat.GetChannelForCommunityStream)
 function C_VoiceChat.GetChannelForCommunityStream(clubId, streamId) end
 
----@return CommunicationMode communicationMode
+---@return CommunicationMode|nil communicationMode
 ---[Documentation](https://wow.gamepedia.com/API_C_VoiceChat.GetCommunicationMode)
 function C_VoiceChat.GetCommunicationMode() end
 
@@ -64,21 +64,21 @@ function C_VoiceChat.GetCommunicationMode() end
 ---[Documentation](https://wow.gamepedia.com/API_C_VoiceChat.GetCurrentVoiceChatConnectionStatusCode)
 function C_VoiceChat.GetCurrentVoiceChatConnectionStatusCode() end
 
----@return number volume
+---@return number|nil volume
 ---[Documentation](https://wow.gamepedia.com/API_C_VoiceChat.GetInputVolume)
 function C_VoiceChat.GetInputVolume() end
 
 ---@param clubId string
----@return VoiceChannelErrorReason errorReason
+---@return VoiceChannelErrorReason|nil errorReason
 ---[Documentation](https://wow.gamepedia.com/API_C_VoiceChat.GetJoinClubVoiceChannelError)
 function C_VoiceChat.GetJoinClubVoiceChannelError(clubId) end
 
----@return VoiceChatMember memberInfo
+---@return VoiceChatMember|nil memberInfo
 ---[Documentation](https://wow.gamepedia.com/API_C_VoiceChat.GetLocalPlayerActiveChannelMemberInfo)
 function C_VoiceChat.GetLocalPlayerActiveChannelMemberInfo() end
 
 ---@param channelID number
----@return number memberID
+---@return number|nil memberID
 ---[Documentation](https://wow.gamepedia.com/API_C_VoiceChat.GetLocalPlayerMemberID)
 function C_VoiceChat.GetLocalPlayerMemberID(channelID) end
 
@@ -94,32 +94,32 @@ function C_VoiceChat.GetMemberGUID(memberID, channelID) end
 
 ---@param channelID number
 ---@param memberGUID string
----@return number memberID
+---@return number|nil memberID
 ---[Documentation](https://wow.gamepedia.com/API_C_VoiceChat.GetMemberID)
 function C_VoiceChat.GetMemberID(channelID, memberGUID) end
 
 ---@param memberID number
 ---@param channelID number
----@return VoiceChatMember memberInfo
+---@return VoiceChatMember|nil memberInfo
 ---[Documentation](https://wow.gamepedia.com/API_C_VoiceChat.GetMemberInfo)
 function C_VoiceChat.GetMemberInfo(memberID, channelID) end
 
 ---@param memberID number
 ---@param channelID number
----@return string memberName
+---@return string|nil memberName
 ---[Documentation](https://wow.gamepedia.com/API_C_VoiceChat.GetMemberName)
 function C_VoiceChat.GetMemberName(memberID, channelID) end
 
 ---@param playerLocation PlayerLocationMixin
----@return number volume
+---@return number|nil volume
 ---[Documentation](https://wow.gamepedia.com/API_C_VoiceChat.GetMemberVolume)
 function C_VoiceChat.GetMemberVolume(playerLocation) end
 
----@return number volume
+---@return number|nil volume
 ---[Documentation](https://wow.gamepedia.com/API_C_VoiceChat.GetOutputVolume)
 function C_VoiceChat.GetOutputVolume() end
 
----@return boolean isPressed
+---@return boolean|nil isPressed
 ---[Documentation](https://wow.gamepedia.com/API_C_VoiceChat.GetPTTButtonPressedState)
 function C_VoiceChat.GetPTTButtonPressedState() end
 
@@ -127,22 +127,22 @@ function C_VoiceChat.GetPTTButtonPressedState() end
 ---[Documentation](https://wow.gamepedia.com/API_C_VoiceChat.GetProcesses)
 function C_VoiceChat.GetProcesses() end
 
----@return string[] keys
+---@return string[]|nil keys
 ---[Documentation](https://wow.gamepedia.com/API_C_VoiceChat.GetPushToTalkBinding)
 function C_VoiceChat.GetPushToTalkBinding() end
 
----@return number sensitivity
+---@return number|nil sensitivity
 ---[Documentation](https://wow.gamepedia.com/API_C_VoiceChat.GetVADSensitivity)
 function C_VoiceChat.GetVADSensitivity() end
 
 ---@param channelType ChatChannelType
----@param clubId string
----@param streamId string
+---@param clubId string|nil
+---@param streamId string|nil
 ---@return boolean isPending
 ---[Documentation](https://wow.gamepedia.com/API_C_VoiceChat.IsChannelJoinPending)
 function C_VoiceChat.IsChannelJoinPending(channelType, clubId, streamId) end
 
----@return boolean isDeafened
+---@return boolean|nil isDeafened
 ---[Documentation](https://wow.gamepedia.com/API_C_VoiceChat.IsDeafened)
 function C_VoiceChat.IsDeafened() end
 
@@ -161,23 +161,23 @@ function C_VoiceChat.IsLoggedIn() end
 function C_VoiceChat.IsMemberLocalPlayer(memberID, channelID) end
 
 ---@param playerLocation PlayerLocationMixin
----@return boolean mutedForMe
+---@return boolean|nil mutedForMe
 ---[Documentation](https://wow.gamepedia.com/API_C_VoiceChat.IsMemberMuted)
 function C_VoiceChat.IsMemberMuted(playerLocation) end
 
 ---@param memberID number
 ---@param channelID number
----@return boolean mutedForAll
+---@return boolean|nil mutedForAll
 ---[Documentation](https://wow.gamepedia.com/API_C_VoiceChat.IsMemberMutedForAll)
 function C_VoiceChat.IsMemberMutedForAll(memberID, channelID) end
 
 ---@param memberID number
 ---@param channelID number
----@return boolean silenced
+---@return boolean|nil silenced
 ---[Documentation](https://wow.gamepedia.com/API_C_VoiceChat.IsMemberSilenced)
 function C_VoiceChat.IsMemberSilenced(memberID, channelID) end
 
----@return boolean isMuted
+---@return boolean|nil isMuted
 ---[Documentation](https://wow.gamepedia.com/API_C_VoiceChat.IsMuted)
 function C_VoiceChat.IsMuted() end
 
@@ -194,7 +194,7 @@ function C_VoiceChat.IsParentalMuted() end
 ---[Documentation](https://wow.gamepedia.com/API_C_VoiceChat.IsPlayerUsingVoice)
 function C_VoiceChat.IsPlayerUsingVoice(playerLocation) end
 
----@return boolean isSilenced
+---@return boolean|nil isSilenced
 ---[Documentation](https://wow.gamepedia.com/API_C_VoiceChat.IsSilenced)
 function C_VoiceChat.IsSilenced() end
 
@@ -220,7 +220,7 @@ function C_VoiceChat.MarkChannelsDiscovered() end
 function C_VoiceChat.RequestJoinAndActivateCommunityStreamChannel(clubId, streamId) end
 
 ---@param channelType ChatChannelType
----@param autoActivate boolean
+---@param autoActivate boolean|nil
 ---[Documentation](https://wow.gamepedia.com/API_C_VoiceChat.RequestJoinChannelByChannelType)
 function C_VoiceChat.RequestJoinChannelByChannelType(channelType, autoActivate) end
 

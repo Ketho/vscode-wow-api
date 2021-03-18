@@ -8,9 +8,9 @@ function C_LegendaryCrafting.CloseRuneforgeInteraction() end
 function C_LegendaryCrafting.CraftRuneforgeLegendary(description) end
 
 ---@param baseItem ItemLocationMixin
----@param runeforgePowerID number
----@param modifiers number[]
----@return RuneforgeItemPreviewInfo info
+---@param runeforgePowerID number|nil
+---@param modifiers number[]|nil
+---@return RuneforgeItemPreviewInfo|nil info
 ---[Documentation](https://wow.gamepedia.com/API_C_LegendaryCrafting.GetRuneforgeItemPreviewInfo)
 function C_LegendaryCrafting.GetRuneforgeItemPreviewInfo(baseItem, runeforgePowerID, modifiers) end
 
@@ -39,7 +39,7 @@ function C_LegendaryCrafting.GetRuneforgeLegendaryCurrencies() end
 function C_LegendaryCrafting.GetRuneforgeLegendaryUpgradeCost(runeforgeLegendary, upgradeItem) end
 
 ---@param baseItem ItemLocationMixin
----@param powerID number
+---@param powerID number|nil
 ---@param addedModifierIndex number
 ---@param modifiers number[]
 ---@return string name
@@ -61,16 +61,16 @@ function C_LegendaryCrafting.GetRuneforgePowerInfo(runeforgePowerID) end
 ---[Documentation](https://wow.gamepedia.com/API_C_LegendaryCrafting.GetRuneforgePowerSlots)
 function C_LegendaryCrafting.GetRuneforgePowerSlots(runeforgePowerID) end
 
----@param baseItem ItemLocationMixin
----@param filter RuneforgePowerFilter
+---@param baseItem ItemLocationMixin|nil
+---@param filter RuneforgePowerFilter|nil
 ---@return number[] specRuneforgePowerIDs
 ---@return number[] otherSpecRuneforgePowerIDs
 ---[Documentation](https://wow.gamepedia.com/API_C_LegendaryCrafting.GetRuneforgePowers)
 function C_LegendaryCrafting.GetRuneforgePowers(baseItem, filter) end
 
----@param classID number
----@param specID number
----@param filter RuneforgePowerFilter
+---@param classID number|nil
+---@param specID number|nil
+---@param filter RuneforgePowerFilter|nil
 ---@return number[] runeforgePowerIDs
 ---[Documentation](https://wow.gamepedia.com/API_C_LegendaryCrafting.GetRuneforgePowersByClassAndSpec)
 function C_LegendaryCrafting.GetRuneforgePowersByClassAndSpec(classID, specID, filter) end

@@ -5,7 +5,7 @@ C_CampaignInfo = {}
 function C_CampaignInfo.GetAvailableCampaigns() end
 
 ---@param campaignChapterID number
----@return CampaignChapterInfo campaignChapterInfo
+---@return CampaignChapterInfo|nil campaignChapterInfo
 ---[Documentation](https://wow.gamepedia.com/API_C_CampaignInfo.GetCampaignChapterInfo)
 function C_CampaignInfo.GetCampaignChapterInfo(campaignChapterID) end
 
@@ -15,22 +15,22 @@ function C_CampaignInfo.GetCampaignChapterInfo(campaignChapterID) end
 function C_CampaignInfo.GetCampaignID(questID) end
 
 ---@param campaignID number
----@return CampaignInfo campaignInfo
+---@return CampaignInfo|nil campaignInfo
 ---[Documentation](https://wow.gamepedia.com/API_C_CampaignInfo.GetCampaignInfo)
 function C_CampaignInfo.GetCampaignInfo(campaignID) end
 
 ---@param campaignID number
----@return number[] chapterIDs
+---@return number[]|nil chapterIDs
 ---[Documentation](https://wow.gamepedia.com/API_C_CampaignInfo.GetChapterIDs)
 function C_CampaignInfo.GetChapterIDs(campaignID) end
 
 ---@param campaignID number
----@return number currentChapterID
+---@return number|nil currentChapterID
 ---[Documentation](https://wow.gamepedia.com/API_C_CampaignInfo.GetCurrentChapterID)
 function C_CampaignInfo.GetCurrentChapterID(campaignID) end
 
 ---@param campaignID number
----@return CampaignFailureReason failureReason
+---@return CampaignFailureReason|nil failureReason
 ---[Documentation](https://wow.gamepedia.com/API_C_CampaignInfo.GetFailureReason)
 function C_CampaignInfo.GetFailureReason(campaignID) end
 
@@ -66,8 +66,8 @@ local CampaignChapterInfo = {}
 
 ---@class CampaignFailureReason
 ---@field text string
----@field questID number
----@field mapID number
+---@field questID number|nil
+---@field mapID number|nil
 local CampaignFailureReason = {}
 
 ---@class CampaignInfo

@@ -42,7 +42,7 @@ function C_Club.ClearClubPresenceSubscription() end
 function C_Club.CompareBattleNetDisplayName(clubId, lhsMemberId, rhsMemberId) end
 
 ---@param name string
----@param shortName string
+---@param shortName string|nil
 ---@param description string
 ---@param clubType ClubType
 ---@param avatarId number
@@ -58,9 +58,9 @@ function C_Club.CreateClub(name, shortName, description, clubType, avatarId) end
 function C_Club.CreateStream(clubId, name, subject, leadersAndModeratorsOnly) end
 
 ---@param clubId string
----@param allowedRedeemCount number
----@param duration number
----@param defaultStreamId string
+---@param allowedRedeemCount number|nil
+---@param duration number|nil
+---@param defaultStreamId string|nil
 ---[Documentation](https://wow.gamepedia.com/API_C_Club.CreateTicket)
 ---Check canCreateTicket privilege.
 function C_Club.CreateTicket(clubId, allowedRedeemCount, duration, defaultStreamId) end
@@ -93,11 +93,11 @@ function C_Club.DestroyStream(clubId, streamId) end
 function C_Club.DestroyTicket(clubId, ticketId) end
 
 ---@param clubId string
----@param name string
----@param shortName string
----@param description string
----@param avatarId number
----@param broadcast string
+---@param name string|nil
+---@param shortName string|nil
+---@param description string|nil
+---@param avatarId number|nil
+---@param broadcast string|nil
 ---[Documentation](https://wow.gamepedia.com/API_C_Club.EditClub)
 ---nil arguments will not change existing club data
 function C_Club.EditClub(clubId, name, shortName, description, avatarId, broadcast) end
@@ -111,9 +111,9 @@ function C_Club.EditMessage(clubId, streamId, messageId, message) end
 
 ---@param clubId string
 ---@param streamId string
----@param name string
----@param subject string
----@param leadersAndModeratorsOnly boolean
+---@param name string|nil
+---@param subject string|nil
+---@param leadersAndModeratorsOnly boolean|nil
 ---[Documentation](https://wow.gamepedia.com/API_C_Club.EditStream)
 ---Check the canSetStreamName, canSetStreamSubject, canSetStreamAccess privileges. nil arguments will not change existing stream data.
 function C_Club.EditStream(clubId, streamId, name, subject, leadersAndModeratorsOnly) end
@@ -134,7 +134,7 @@ function C_Club.FocusStream(clubId, streamId) end
 function C_Club.GetAssignableRoles(clubId, memberId) end
 
 ---@param clubType ClubType
----@return number[] avatarIds
+---@return number[]|nil avatarIds
 ---[Documentation](https://wow.gamepedia.com/API_C_Club.GetAvatarIdList)
 ---listen for AVATAR_LIST_UPDATED event. This can happen if we haven't downloaded the battle.net avatar list yet
 function C_Club.GetAvatarIdList(clubType) end
@@ -144,7 +144,7 @@ function C_Club.GetAvatarIdList(clubType) end
 function C_Club.GetClubCapacity() end
 
 ---@param clubId string
----@return ClubInfo info
+---@return ClubInfo|nil info
 ---[Documentation](https://wow.gamepedia.com/API_C_Club.GetClubInfo)
 function C_Club.GetClubInfo(clubId) end
 
@@ -154,7 +154,7 @@ function C_Club.GetClubInfo(clubId) end
 function C_Club.GetClubLimits(clubType) end
 
 ---@param clubId string
----@param streamId string
+---@param streamId string|nil
 ---@return number[] members
 ---[Documentation](https://wow.gamepedia.com/API_C_Club.GetClubMembers)
 function C_Club.GetClubMembers(clubId, streamId) end
@@ -171,11 +171,11 @@ function C_Club.GetClubPrivileges(clubId) end
 function C_Club.GetClubStreamNotificationSettings(clubId) end
 
 ---@param result ValidateNameResult
----@return string errorCode
+---@return string|nil errorCode
 ---[Documentation](https://wow.gamepedia.com/API_C_Club.GetCommunityNameResultText)
 function C_Club.GetCommunityNameResultText(result) end
 
----@return string guildClubId
+---@return string|nil guildClubId
 ---[Documentation](https://wow.gamepedia.com/API_C_Club.GetGuildClubId)
 function C_Club.GetGuildClubId() end
 
@@ -186,10 +186,10 @@ function C_Club.GetGuildClubId() end
 ---[Documentation](https://wow.gamepedia.com/API_C_Club.GetInfoFromLastCommunityChatLine)
 function C_Club.GetInfoFromLastCommunityChatLine() end
 
----@param filter string
----@param maxResults number
----@param cursorPosition number
----@param allowFullMatch boolean
+---@param filter string|nil
+---@param maxResults number|nil
+---@param cursorPosition number|nil
+---@param allowFullMatch boolean|nil
 ---@param clubId string
 ---@return ClubInvitationCandidateInfo[] candidates
 ---[Documentation](https://wow.gamepedia.com/API_C_Club.GetInvitationCandidates)
@@ -197,7 +197,7 @@ function C_Club.GetInfoFromLastCommunityChatLine() end
 function C_Club.GetInvitationCandidates(filter, maxResults, cursorPosition, allowFullMatch, clubId) end
 
 ---@param clubId string
----@return ClubSelfInvitationInfo invitation
+---@return ClubSelfInvitationInfo|nil invitation
 ---[Documentation](https://wow.gamepedia.com/API_C_Club.GetInvitationInfo)
 ---Get info about a specific club the active player has been invited to.
 function C_Club.GetInvitationInfo(clubId) end
@@ -215,19 +215,19 @@ function C_Club.GetInvitationsForSelf() end
 
 ---@param ticket string
 ---@return ClubErrorType error
----@return ClubInfo info
+---@return ClubInfo|nil info
 ---@return boolean showError
 ---[Documentation](https://wow.gamepedia.com/API_C_Club.GetLastTicketResponse)
 function C_Club.GetLastTicketResponse(ticket) end
 
 ---@param clubId string
 ---@param memberId number
----@return ClubMemberInfo info
+---@return ClubMemberInfo|nil info
 ---[Documentation](https://wow.gamepedia.com/API_C_Club.GetMemberInfo)
 function C_Club.GetMemberInfo(clubId, memberId) end
 
 ---@param clubId string
----@return ClubMemberInfo info
+---@return ClubMemberInfo|nil info
 ---[Documentation](https://wow.gamepedia.com/API_C_Club.GetMemberInfoForSelf)
 ---Info for the logged in user for this club
 function C_Club.GetMemberInfoForSelf(clubId) end
@@ -235,7 +235,7 @@ function C_Club.GetMemberInfoForSelf(clubId) end
 ---@param clubId string
 ---@param streamId string
 ---@param messageId ClubMessageIdentifier
----@return ClubMessageInfo message
+---@return ClubMessageInfo|nil message
 ---[Documentation](https://wow.gamepedia.com/API_C_Club.GetMessageInfo)
 ---Get info about a particular message.
 function C_Club.GetMessageInfo(clubId, streamId, messageId) end
@@ -267,13 +267,13 @@ function C_Club.GetMessagesInRange(clubId, streamId, oldest, newest) end
 
 ---@param clubId string
 ---@param streamId string
----@return ClubStreamInfo streamInfo
+---@return ClubStreamInfo|nil streamInfo
 ---[Documentation](https://wow.gamepedia.com/API_C_Club.GetStreamInfo)
 function C_Club.GetStreamInfo(clubId, streamId) end
 
 ---@param clubId string
 ---@param streamId string
----@return number lastReadTime
+---@return number|nil lastReadTime
 ---[Documentation](https://wow.gamepedia.com/API_C_Club.GetStreamViewMarker)
 function C_Club.GetStreamViewMarker(clubId, streamId) end
 
@@ -340,8 +340,8 @@ function C_Club.RequestInvitationsForClub(clubId) end
 
 ---@param clubId string
 ---@param streamId string
----@param messageId ClubMessageIdentifier
----@param count number
+---@param messageId ClubMessageIdentifier|nil
+---@param count number|nil
 ---@return boolean alreadyHasMessages
 ---[Documentation](https://wow.gamepedia.com/API_C_Club.RequestMoreMessagesBefore)
 ---Call this when the user scrolls near the top of the message view, and more need to be displayed. The history will be downloaded backwards (newest to oldest).
@@ -613,15 +613,15 @@ local ValidateNameResult = {
 ---@class ClubInfo
 ---@field clubId string
 ---@field name string
----@field shortName string
+---@field shortName string|nil
 ---@field description string
 ---@field broadcast string
 ---@field clubType ClubType
 ---@field avatarId number
----@field memberCount number
----@field favoriteTimeStamp number
----@field joinTime number
----@field socialQueueingEnabled boolean
+---@field memberCount number|nil
+---@field favoriteTimeStamp number|nil
+---@field joinTime number|nil
+---@field socialQueueingEnabled boolean|nil
 local ClubInfo = {}
 
 ---@class ClubInvitationCandidateInfo
@@ -644,32 +644,32 @@ local ClubLimits = {}
 ---@class ClubMemberInfo
 ---@field isSelf boolean
 ---@field memberId number
----@field name string
----@field role ClubRoleIdentifier
+---@field name string|nil
+---@field role ClubRoleIdentifier|nil
 ---@field presence ClubMemberPresence
----@field clubType ClubType
----@field guid string
----@field bnetAccountId number
----@field memberNote string
----@field officerNote string
----@field classID number
----@field race number
----@field level number
----@field zone string
----@field achievementPoints number
----@field profession1ID number
----@field profession1Rank number
----@field profession1Name string
----@field profession2ID number
----@field profession2Rank number
----@field profession2Name string
----@field lastOnlineYear number
----@field lastOnlineMonth number
----@field lastOnlineDay number
----@field lastOnlineHour number
----@field guildRank string
----@field guildRankOrder number
----@field isRemoteChat boolean
+---@field clubType ClubType|nil
+---@field guid string|nil
+---@field bnetAccountId number|nil
+---@field memberNote string|nil
+---@field officerNote string|nil
+---@field classID number|nil
+---@field race number|nil
+---@field level number|nil
+---@field zone string|nil
+---@field achievementPoints number|nil
+---@field profession1ID number|nil
+---@field profession1Rank number|nil
+---@field profession1Name string|nil
+---@field profession2ID number|nil
+---@field profession2Rank number|nil
+---@field profession2Name string|nil
+---@field lastOnlineYear number|nil
+---@field lastOnlineMonth number|nil
+---@field lastOnlineDay number|nil
+---@field lastOnlineHour number|nil
+---@field guildRank string|nil
+---@field guildRankOrder number|nil
+---@field isRemoteChat boolean|nil
 local ClubMemberInfo = {}
 
 ---@class ClubMessageIdentifier
@@ -681,7 +681,7 @@ local ClubMessageIdentifier = {}
 ---@field messageId ClubMessageIdentifier
 ---@field content string
 ---@field author ClubMemberInfo
----@field destroyer ClubMemberInfo
+---@field destroyer ClubMemberInfo|nil
 ---@field destroyed boolean
 ---@field edited boolean
 local ClubMessageInfo = {}
@@ -763,6 +763,6 @@ local ClubStreamNotificationSetting = {}
 ---@field currentRedeemCount number
 ---@field creationTime number
 ---@field expirationTime number
----@field defaultStreamId string
+---@field defaultStreamId string|nil
 ---@field creator ClubMemberInfo
 local ClubTicketInfo = {}

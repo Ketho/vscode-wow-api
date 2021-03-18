@@ -7,9 +7,9 @@ function C_TaskQuest.DoesMapShowTaskQuestObjectives(uiMapID) end
 
 ---@param questID number
 ---@return string questTitle
----@return number factionID
----@return boolean capped
----@return boolean displayAsObjective
+---@return number|nil factionID
+---@return boolean|nil capped
+---@return boolean|nil displayAsObjective
 ---[Documentation](https://wow.gamepedia.com/API_C_TaskQuest.GetQuestInfoByQuestID)
 function C_TaskQuest.GetQuestInfoByQuestID(questID) end
 
@@ -73,5 +73,5 @@ function C_TaskQuest.RequestPreloadRewardData(questID) end
 ---@field isQuestStart boolean
 ---@field isDaily boolean
 ---@field isCombatAllyQuest boolean
----@field childDepth number
+---@field childDepth number|nil
 local TaskPOIData = {}

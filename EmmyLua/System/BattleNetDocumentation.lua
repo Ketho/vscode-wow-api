@@ -1,25 +1,25 @@
 C_BattleNet = {}
 
 ---@param guid string
----@return BNetAccountInfo accountInfo
+---@return BNetAccountInfo|nil accountInfo
 ---[Documentation](https://wow.gamepedia.com/API_C_BattleNet.GetAccountInfoByGUID)
 function C_BattleNet.GetAccountInfoByGUID(guid) end
 
 ---@param id number
----@param wowAccountGUID string
----@return BNetAccountInfo accountInfo
+---@param wowAccountGUID string|nil
+---@return BNetAccountInfo|nil accountInfo
 ---[Documentation](https://wow.gamepedia.com/API_C_BattleNet.GetAccountInfoByID)
 function C_BattleNet.GetAccountInfoByID(id, wowAccountGUID) end
 
 ---@param friendIndex number
----@param wowAccountGUID string
----@return BNetAccountInfo accountInfo
+---@param wowAccountGUID string|nil
+---@return BNetAccountInfo|nil accountInfo
 ---[Documentation](https://wow.gamepedia.com/API_C_BattleNet.GetFriendAccountInfo)
 function C_BattleNet.GetFriendAccountInfo(friendIndex, wowAccountGUID) end
 
 ---@param friendIndex number
 ---@param accountIndex number
----@return BNetGameAccountInfo gameAccountInfo
+---@return BNetGameAccountInfo|nil gameAccountInfo
 ---[Documentation](https://wow.gamepedia.com/API_C_BattleNet.GetFriendGameAccountInfo)
 function C_BattleNet.GetFriendGameAccountInfo(friendIndex, accountIndex) end
 
@@ -29,12 +29,12 @@ function C_BattleNet.GetFriendGameAccountInfo(friendIndex, accountIndex) end
 function C_BattleNet.GetFriendNumGameAccounts(friendIndex) end
 
 ---@param guid string
----@return BNetGameAccountInfo gameAccountInfo
+---@return BNetGameAccountInfo|nil gameAccountInfo
 ---[Documentation](https://wow.gamepedia.com/API_C_BattleNet.GetGameAccountInfoByGUID)
 function C_BattleNet.GetGameAccountInfoByGUID(guid) end
 
 ---@param id number
----@return BNetGameAccountInfo gameAccountInfo
+---@return BNetGameAccountInfo|nil gameAccountInfo
 ---[Documentation](https://wow.gamepedia.com/API_C_BattleNet.GetGameAccountInfoByID)
 function C_BattleNet.GetGameAccountInfoByID(id) end
 
@@ -57,23 +57,23 @@ function C_BattleNet.GetGameAccountInfoByID(id) end
 local BNetAccountInfo = {}
 
 ---@class BNetGameAccountInfo
----@field gameAccountID number
+---@field gameAccountID number|nil
 ---@field clientProgram string
 ---@field isOnline boolean
 ---@field isGameBusy boolean
 ---@field isGameAFK boolean
----@field wowProjectID number
----@field characterName string
----@field realmName string
----@field realmDisplayName string
----@field realmID number
----@field factionName string
----@field raceName string
----@field className string
----@field areaName string
----@field characterLevel number
----@field richPresence string
----@field playerGuid string
+---@field wowProjectID number|nil
+---@field characterName string|nil
+---@field realmName string|nil
+---@field realmDisplayName string|nil
+---@field realmID number|nil
+---@field factionName string|nil
+---@field raceName string|nil
+---@field className string|nil
+---@field areaName string|nil
+---@field characterLevel number|nil
+---@field richPresence string|nil
+---@field playerGuid string|nil
 ---@field isWowMobile boolean
 ---@field canSummon boolean
 ---@field hasFocus boolean

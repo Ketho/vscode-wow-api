@@ -1,18 +1,18 @@
 C_VignetteInfo = {}
 
 ---@param vignetteGUIDs string[]
----@return number bestUniqueVignetteIndex
+---@return number|nil bestUniqueVignetteIndex
 ---[Documentation](https://wow.gamepedia.com/API_C_VignetteInfo.FindBestUniqueVignette)
 function C_VignetteInfo.FindBestUniqueVignette(vignetteGUIDs) end
 
 ---@param vignetteGUID string
----@return VignetteInfo vignetteInfo
+---@return VignetteInfo|nil vignetteInfo
 ---[Documentation](https://wow.gamepedia.com/API_C_VignetteInfo.GetVignetteInfo)
 function C_VignetteInfo.GetVignetteInfo(vignetteGUID) end
 
 ---@param vignetteGUID string
 ---@param uiMapID number
----@return Vector2DMixin vignettePosition
+---@return Vector2DMixin|nil vignettePosition
 ---[Documentation](https://wow.gamepedia.com/API_C_VignetteInfo.GetVignettePosition)
 function C_VignetteInfo.GetVignettePosition(vignetteGUID, uiMapID) end
 
@@ -43,5 +43,5 @@ local VignetteType = {
 ---@field vignetteID number
 ---@field type VignetteType
 ---@field rewardQuestID number
----@field widgetSetID number
+---@field widgetSetID number|nil
 local VignetteInfo = {}

@@ -11,7 +11,7 @@ function C_IslandsQueue.GetIslandDifficultyInfo() end
 ---[Documentation](https://wow.gamepedia.com/API_C_IslandsQueue.GetIslandsMaxGroupSize)
 function C_IslandsQueue.GetIslandsMaxGroupSize() end
 
----@return number questID
+---@return number|nil questID
 ---[Documentation](https://wow.gamepedia.com/API_C_IslandsQueue.GetIslandsWeeklyQuestID)
 function C_IslandsQueue.GetIslandsWeeklyQuestID() end
 

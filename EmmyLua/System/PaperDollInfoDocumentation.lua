@@ -7,7 +7,7 @@ C_PaperDollInfo = {}
 function C_PaperDollInfo.GetArmorEffectiveness(armor, attackerLevel) end
 
 ---@param armor number
----@return number effectiveness
+---@return number|nil effectiveness
 ---[Documentation](https://wow.gamepedia.com/API_C_PaperDollInfo.GetArmorEffectivenessAgainstTarget)
 function C_PaperDollInfo.GetArmorEffectivenessAgainstTarget(armor) end
 
@@ -22,13 +22,13 @@ function C_PaperDollInfo.GetInspectAzeriteItemEmpoweredChoices(unit, equipmentSl
 ---[Documentation](https://wow.gamepedia.com/API_C_PaperDollInfo.GetInspectItemLevel)
 function C_PaperDollInfo.GetInspectItemLevel(unit) end
 
----@return number minItemLevel
+---@return number|nil minItemLevel
 ---[Documentation](https://wow.gamepedia.com/API_C_PaperDollInfo.GetMinItemLevel)
 function C_PaperDollInfo.GetMinItemLevel() end
 
 ---@param unit string
 ---@return number stagger
----@return number staggerAgainstTarget
+---@return number|nil staggerAgainstTarget
 ---[Documentation](https://wow.gamepedia.com/API_C_PaperDollInfo.GetStaggerPercentage)
 function C_PaperDollInfo.GetStaggerPercentage(unit) end
 

@@ -22,8 +22,8 @@ function C_GuildInfo.GetGuildNewsInfo(index) end
 ---[Documentation](https://wow.gamepedia.com/API_C_GuildInfo.GetGuildRankOrder)
 function C_GuildInfo.GetGuildRankOrder(guid) end
 
----@param unit string
----@return GuildTabardInfo tabardInfo
+---@param unit string|nil
+---@return GuildTabardInfo|nil tabardInfo
 ---[Documentation](https://wow.gamepedia.com/API_C_GuildInfo.GetGuildTabardInfo)
 function C_GuildInfo.GetGuildTabardInfo(unit) end
 
@@ -69,8 +69,8 @@ function C_GuildInfo.SetNote(guid, note, isPublic) end
 ---@field isSticky boolean
 ---@field isHeader boolean
 ---@field newsType number
----@field whoText string
----@field whatText string
+---@field whoText string|nil
+---@field whatText string|nil
 ---@field newsDataID number
 ---@field data number[]
 ---@field weekday number

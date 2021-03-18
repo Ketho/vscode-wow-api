@@ -11,7 +11,7 @@ function C_WeeklyRewards.ClaimReward(id) end
 ---[Documentation](https://wow.gamepedia.com/API_C_WeeklyRewards.CloseInteraction)
 function C_WeeklyRewards.CloseInteraction() end
 
----@param type WeeklyRewardChestThresholdType
+---@param type WeeklyRewardChestThresholdType|nil
 ---@return WeeklyRewardActivityInfo[] activities
 ---[Documentation](https://wow.gamepedia.com/API_C_WeeklyRewards.GetActivities)
 function C_WeeklyRewards.GetActivities(type) end
@@ -69,5 +69,5 @@ local WeeklyRewardActivityInfo = {}
 ---@field type CachedRewardType
 ---@field id number
 ---@field quantity number
----@field itemDBID string
+---@field itemDBID string|nil
 local WeeklyRewardActivityRewardInfo = {}

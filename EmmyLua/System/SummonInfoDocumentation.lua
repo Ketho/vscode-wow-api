@@ -10,7 +10,7 @@ function C_SummonInfo.ConfirmSummon() end
 ---[Documentation](https://wow.gamepedia.com/API_C_SummonInfo.GetSummonConfirmAreaName)
 function C_SummonInfo.GetSummonConfirmAreaName() end
 
----@return string summoner
+---@return string|nil summoner
 ---[Documentation](https://wow.gamepedia.com/API_C_SummonInfo.GetSummonConfirmSummoner)
 function C_SummonInfo.GetSummonConfirmSummoner() end
 

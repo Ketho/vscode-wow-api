@@ -23,15 +23,15 @@ function C_PartyInfo.ConfirmInviteTravelPass(targetName, targetGUID) end
 ---Immediately invites the named unit to a party, with no regard for potentially destructive actions.
 function C_PartyInfo.ConfirmInviteUnit(targetName) end
 
----@param category number
+---@param category number|nil
 ---[Documentation](https://wow.gamepedia.com/API_C_PartyInfo.ConfirmLeaveParty)
 ---Immediately leave the party with no regard for potentially destructive actions
 function C_PartyInfo.ConfirmLeaveParty(category) end
 
 ---@param targetName string
----@param tank boolean
----@param healer boolean
----@param dps boolean
+---@param tank boolean|nil
+---@param healer boolean|nil
+---@param dps boolean|nil
 ---[Documentation](https://wow.gamepedia.com/API_C_PartyInfo.ConfirmRequestInviteFromUnit)
 ---Immediately request an invite into the target party, this is the confirmation function to call after RequestInviteFromUnit, or if you would like to skip the confirmation process.
 function C_PartyInfo.ConfirmRequestInviteFromUnit(targetName, tank, healer, dps) end
@@ -65,7 +65,7 @@ function C_PartyInfo.GetInviteConfirmationInvalidQueues(inviteGUID) end
 ---[Documentation](https://wow.gamepedia.com/API_C_PartyInfo.GetInviteReferralInfo)
 function C_PartyInfo.GetInviteReferralInfo(inviteGUID) end
 
----@param category number
+---@param category number|nil
 ---@return number minLevel
 ---[Documentation](https://wow.gamepedia.com/API_C_PartyInfo.GetMinLevel)
 function C_PartyInfo.GetMinLevel(category) end
@@ -75,7 +75,7 @@ function C_PartyInfo.GetMinLevel(category) end
 ---Attempt to invite the named unit to a party, requires confirmation in some cases (e.g. the party will convert to a raid, or if there is a party sync in progress).
 function C_PartyInfo.InviteUnit(targetName) end
 
----@param category number
+---@param category number|nil
 ---@return boolean isFull
 ---[Documentation](https://wow.gamepedia.com/API_C_PartyInfo.IsPartyFull)
 function C_PartyInfo.IsPartyFull(category) end
@@ -84,15 +84,15 @@ function C_PartyInfo.IsPartyFull(category) end
 ---[Documentation](https://wow.gamepedia.com/API_C_PartyInfo.IsPartyInJailersTower)
 function C_PartyInfo.IsPartyInJailersTower() end
 
----@param category number
+---@param category number|nil
 ---[Documentation](https://wow.gamepedia.com/API_C_PartyInfo.LeaveParty)
 ---Usually this will leave the party immediately. In some cases (e.g. PartySync) the user will be prompted to confirm leaving the party, because it's potentially destructive
 function C_PartyInfo.LeaveParty(category) end
 
 ---@param targetName string
----@param tank boolean
----@param healer boolean
----@param dps boolean
+---@param tank boolean|nil
+---@param healer boolean|nil
+---@param dps boolean|nil
 ---[Documentation](https://wow.gamepedia.com/API_C_PartyInfo.RequestInviteFromUnit)
 ---Attempt to request an invite into the target party, requires confirmation in some cases (e.g. there is a party sync in progress).
 function C_PartyInfo.RequestInviteFromUnit(targetName, tank, healer, dps) end

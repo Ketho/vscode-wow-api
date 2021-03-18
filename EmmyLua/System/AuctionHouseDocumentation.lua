@@ -3,14 +3,14 @@ C_AuctionHouse = {}
 ---@param itemID number
 ---@param duration number
 ---@param quantity number
----@return number depositCost
+---@return number|nil depositCost
 ---[Documentation](https://wow.gamepedia.com/API_C_AuctionHouse.CalculateCommodityDeposit)
 function C_AuctionHouse.CalculateCommodityDeposit(itemID, duration, quantity) end
 
 ---@param item ItemLocationMixin
 ---@param duration number
 ---@param quantity number
----@return number depositCost
+---@return number|nil depositCost
 ---[Documentation](https://wow.gamepedia.com/API_C_AuctionHouse.CalculateItemDeposit)
 function C_AuctionHouse.CalculateItemDeposit(item, duration, quantity) end
 
@@ -52,12 +52,12 @@ function C_AuctionHouse.GetAuctionItemSubClasses(classID) end
 function C_AuctionHouse.GetAvailablePostCount(item) end
 
 ---@param bidIndex number
----@return BidInfo bid
+---@return BidInfo|nil bid
 ---[Documentation](https://wow.gamepedia.com/API_C_AuctionHouse.GetBidInfo)
 function C_AuctionHouse.GetBidInfo(bidIndex) end
 
 ---@param bidTypeIndex number
----@return ItemKey typeItemKey
+---@return ItemKey|nil typeItemKey
 ---[Documentation](https://wow.gamepedia.com/API_C_AuctionHouse.GetBidType)
 function C_AuctionHouse.GetBidType(bidTypeIndex) end
 
@@ -72,7 +72,7 @@ function C_AuctionHouse.GetCancelCost(ownedAuctionID) end
 
 ---@param itemID number
 ---@param commoditySearchResultIndex number
----@return CommoditySearchResultInfo result
+---@return CommoditySearchResultInfo|nil result
 ---[Documentation](https://wow.gamepedia.com/API_C_AuctionHouse.GetCommoditySearchResultInfo)
 function C_AuctionHouse.GetCommoditySearchResultInfo(itemID, commoditySearchResultIndex) end
 
@@ -102,7 +102,7 @@ function C_AuctionHouse.GetItemKeyFromItem(item) end
 
 ---@param itemKey ItemKey
 ---@param restrictQualityToFilter boolean
----@return ItemKeyInfo itemKeyInfo
+---@return ItemKeyInfo|nil itemKeyInfo
 ---[Documentation](https://wow.gamepedia.com/API_C_AuctionHouse.GetItemKeyInfo)
 function C_AuctionHouse.GetItemKeyInfo(itemKey, restrictQualityToFilter) end
 
@@ -113,7 +113,7 @@ function C_AuctionHouse.GetItemKeyRequiredLevel(itemKey) end
 
 ---@param itemKey ItemKey
 ---@param itemSearchResultIndex number
----@return ItemSearchResultInfo result
+---@return ItemSearchResultInfo|nil result
 ---[Documentation](https://wow.gamepedia.com/API_C_AuctionHouse.GetItemSearchResultInfo)
 function C_AuctionHouse.GetItemSearchResultInfo(itemKey, itemSearchResultIndex) end
 
@@ -122,34 +122,34 @@ function C_AuctionHouse.GetItemSearchResultInfo(itemKey, itemSearchResultIndex) 
 ---[Documentation](https://wow.gamepedia.com/API_C_AuctionHouse.GetItemSearchResultsQuantity)
 function C_AuctionHouse.GetItemSearchResultsQuantity(itemKey) end
 
----@return number maxBid
+---@return number|nil maxBid
 ---[Documentation](https://wow.gamepedia.com/API_C_AuctionHouse.GetMaxBidItemBid)
 function C_AuctionHouse.GetMaxBidItemBid() end
 
----@return number maxBuyout
+---@return number|nil maxBuyout
 ---[Documentation](https://wow.gamepedia.com/API_C_AuctionHouse.GetMaxBidItemBuyout)
 function C_AuctionHouse.GetMaxBidItemBuyout() end
 
 ---@param itemID number
----@return number maxUnitPrice
+---@return number|nil maxUnitPrice
 ---[Documentation](https://wow.gamepedia.com/API_C_AuctionHouse.GetMaxCommoditySearchResultPrice)
 function C_AuctionHouse.GetMaxCommoditySearchResultPrice(itemID) end
 
 ---@param itemKey ItemKey
----@return number maxBid
+---@return number|nil maxBid
 ---[Documentation](https://wow.gamepedia.com/API_C_AuctionHouse.GetMaxItemSearchResultBid)
 function C_AuctionHouse.GetMaxItemSearchResultBid(itemKey) end
 
 ---@param itemKey ItemKey
----@return number maxBuyout
+---@return number|nil maxBuyout
 ---[Documentation](https://wow.gamepedia.com/API_C_AuctionHouse.GetMaxItemSearchResultBuyout)
 function C_AuctionHouse.GetMaxItemSearchResultBuyout(itemKey) end
 
----@return number maxBid
+---@return number|nil maxBid
 ---[Documentation](https://wow.gamepedia.com/API_C_AuctionHouse.GetMaxOwnedAuctionBid)
 function C_AuctionHouse.GetMaxOwnedAuctionBid() end
 
----@return number maxBuyout
+---@return number|nil maxBuyout
 ---[Documentation](https://wow.gamepedia.com/API_C_AuctionHouse.GetMaxOwnedAuctionBuyout)
 function C_AuctionHouse.GetMaxOwnedAuctionBuyout() end
 
@@ -184,12 +184,12 @@ function C_AuctionHouse.GetNumOwnedAuctions() end
 function C_AuctionHouse.GetNumReplicateItems() end
 
 ---@param ownedAuctionIndex number
----@return OwnedAuctionInfo ownedAuction
+---@return OwnedAuctionInfo|nil ownedAuction
 ---[Documentation](https://wow.gamepedia.com/API_C_AuctionHouse.GetOwnedAuctionInfo)
 function C_AuctionHouse.GetOwnedAuctionInfo(ownedAuctionIndex) end
 
 ---@param ownedAuctionTypeIndex number
----@return ItemKey typeItemKey
+---@return ItemKey|nil typeItemKey
 ---[Documentation](https://wow.gamepedia.com/API_C_AuctionHouse.GetOwnedAuctionType)
 function C_AuctionHouse.GetOwnedAuctionType(ownedAuctionTypeIndex) end
 
@@ -204,29 +204,29 @@ function C_AuctionHouse.GetQuoteDurationRemaining() end
 function C_AuctionHouse.GetReplicateItemBattlePetInfo(index) end
 
 ---@param index number
----@return string name
----@return number texture
+---@return string|nil name
+---@return number|nil texture
 ---@return number count
 ---@return number qualityID
----@return boolean usable
+---@return boolean|nil usable
 ---@return number level
----@return string levelType
+---@return string|nil levelType
 ---@return number minBid
 ---@return number minIncrement
 ---@return number buyoutPrice
 ---@return number bidAmount
----@return string highBidder
----@return string bidderFullName
----@return string owner
----@return string ownerFullName
+---@return string|nil highBidder
+---@return string|nil bidderFullName
+---@return string|nil owner
+---@return string|nil ownerFullName
 ---@return number saleStatus
 ---@return number itemID
----@return boolean hasAllInfo
+---@return boolean|nil hasAllInfo
 ---[Documentation](https://wow.gamepedia.com/API_C_AuctionHouse.GetReplicateItemInfo)
 function C_AuctionHouse.GetReplicateItemInfo(index) end
 
 ---@param index number
----@return string itemLink
+---@return string|nil itemLink
 ---[Documentation](https://wow.gamepedia.com/API_C_AuctionHouse.GetReplicateItemLink)
 function C_AuctionHouse.GetReplicateItemLink(index) end
 
@@ -314,8 +314,8 @@ function C_AuctionHouse.PostCommodity(item, duration, quantity, unitPrice) end
 ---@param item ItemLocationMixin
 ---@param duration number
 ---@param quantity number
----@param bid number
----@param buyout number
+---@param bid number|nil
+---@param buyout number|nil
 ---[Documentation](https://wow.gamepedia.com/API_C_AuctionHouse.PostItem)
 function C_AuctionHouse.PostItem(item, duration, quantity, bid, buyout) end
 
@@ -354,7 +354,7 @@ function C_AuctionHouse.RequestMoreCommoditySearchResults(itemID) end
 function C_AuctionHouse.RequestMoreItemSearchResults(itemKey) end
 
 ---@param auctionID number
----@return string bidderName
+---@return string|nil bidderName
 ---[Documentation](https://wow.gamepedia.com/API_C_AuctionHouse.RequestOwnedAuctionBidderInfo)
 function C_AuctionHouse.RequestOwnedAuctionBidderInfo(auctionID) end
 
@@ -418,10 +418,10 @@ local ItemCommodityStatus = {
 ---@class AuctionHouseBrowseQuery
 ---@field searchString string
 ---@field sorts AuctionHouseSortType[]
----@field minLevel number
----@field maxLevel number
----@field filters AuctionHouseFilter[]
----@field itemClassFilters AuctionHouseItemClassFilter[]
+---@field minLevel number|nil
+---@field maxLevel number|nil
+---@field filters AuctionHouseFilter[]|nil
+---@field itemClassFilters AuctionHouseItemClassFilter[]|nil
 local AuctionHouseBrowseQuery = {}
 
 ---@class AuctionHouseFilterGroup
@@ -431,8 +431,8 @@ local AuctionHouseFilterGroup = {}
 
 ---@class AuctionHouseItemClassFilter
 ---@field classID number
----@field subClassID number
----@field inventoryType number
+---@field subClassID number|nil
+---@field inventoryType number|nil
 local AuctionHouseItemClassFilter = {}
 
 ---@class AuctionHouseSortType
@@ -443,17 +443,17 @@ local AuctionHouseSortType = {}
 ---@class BidInfo
 ---@field auctionID number
 ---@field itemKey ItemKey
----@field itemLink string
+---@field itemLink string|nil
 ---@field timeLeft AuctionHouseTimeLeftBand
----@field minBid number
----@field bidAmount number
----@field buyoutAmount number
----@field bidder string
+---@field minBid number|nil
+---@field bidAmount number|nil
+---@field buyoutAmount number|nil
+---@field bidder string|nil
 local BidInfo = {}
 
 ---@class BrowseResultInfo
 ---@field itemKey ItemKey
----@field appearanceLink string
+---@field appearanceLink string|nil
 ---@field totalQuantity number
 ---@field minPrice number
 ---@field containsOwnerItem boolean
@@ -465,7 +465,7 @@ local BrowseResultInfo = {}
 ---@field unitPrice number
 ---@field auctionID number
 ---@field owners string[]
----@field timeLeftSeconds number
+---@field timeLeftSeconds number|nil
 ---@field numOwnerItems number
 ---@field containsOwnerItem boolean
 ---@field containsAccountItem boolean
@@ -480,8 +480,8 @@ local ItemKey = {}
 
 ---@class ItemKeyInfo
 ---@field itemName string
----@field battlePetLink string
----@field appearanceLink string
+---@field battlePetLink string|nil
+---@field appearanceLink string|nil
 ---@field quality number
 ---@field iconFileID number
 ---@field isPet boolean
@@ -495,26 +495,26 @@ local ItemKeyInfo = {}
 ---@field timeLeft AuctionHouseTimeLeftBand
 ---@field auctionID number
 ---@field quantity number
----@field itemLink string
+---@field itemLink string|nil
 ---@field containsOwnerItem boolean
 ---@field containsAccountItem boolean
 ---@field containsSocketedItem boolean
----@field bidder string
----@field minBid number
----@field bidAmount number
----@field buyoutAmount number
----@field timeLeftSeconds number
+---@field bidder string|nil
+---@field minBid number|nil
+---@field bidAmount number|nil
+---@field buyoutAmount number|nil
+---@field timeLeftSeconds number|nil
 local ItemSearchResultInfo = {}
 
 ---@class OwnedAuctionInfo
 ---@field auctionID number
 ---@field itemKey ItemKey
----@field itemLink string
+---@field itemLink string|nil
 ---@field status AuctionStatus
 ---@field quantity number
----@field timeLeftSeconds number
----@field timeLeft AuctionHouseTimeLeftBand
----@field bidAmount number
----@field buyoutAmount number
----@field bidder string
+---@field timeLeftSeconds number|nil
+---@field timeLeft AuctionHouseTimeLeftBand|nil
+---@field bidAmount number|nil
+---@field buyoutAmount number|nil
+---@field bidder string|nil
 local OwnedAuctionInfo = {}

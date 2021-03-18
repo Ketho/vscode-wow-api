@@ -9,6 +9,9 @@ function Emmy:GetField(annotation, apiTable)
 	else
 		paramType = self:GetType(apiTable.Type)
 	end
+	if apiTable.Nilable then
+		paramType = paramType.."|nil"
+	end
 	if annotation == "return" then
 		str = fs_field:format(annotation, paramType, apiTable.Name)
 	else

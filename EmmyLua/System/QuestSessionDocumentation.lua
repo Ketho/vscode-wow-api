@@ -24,11 +24,11 @@ function C_QuestSession.GetPendingCommand() end
 ---[Documentation](https://wow.gamepedia.com/API_C_QuestSession.GetProposedMaxLevelForSession)
 function C_QuestSession.GetProposedMaxLevelForSession() end
 
----@return QuestSessionPlayerDetails details
+---@return QuestSessionPlayerDetails|nil details
 ---[Documentation](https://wow.gamepedia.com/API_C_QuestSession.GetSessionBeginDetails)
 function C_QuestSession.GetSessionBeginDetails() end
 
----@return number questID
+---@return number|nil questID
 ---[Documentation](https://wow.gamepedia.com/API_C_QuestSession.GetSuperTrackedQuest)
 function C_QuestSession.GetSuperTrackedQuest() end
 

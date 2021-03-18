@@ -13,7 +13,7 @@ function C_EquipmentSet.CanUseEquipmentSets() end
 function C_EquipmentSet.ClearIgnoredSlotsForSave() end
 
 ---@param equipmentSetName string
----@param icon string
+---@param icon string|nil
 ---[Documentation](https://wow.gamepedia.com/API_C_EquipmentSet.CreateEquipmentSet)
 function C_EquipmentSet.CreateEquipmentSet(equipmentSetName, icon) end
 
@@ -88,7 +88,7 @@ function C_EquipmentSet.IsSlotIgnoredForSave(slot) end
 
 ---@param equipmentSetID number
 ---@param newName string
----@param newIcon string
+---@param newIcon string|nil
 ---[Documentation](https://wow.gamepedia.com/API_C_EquipmentSet.ModifyEquipmentSet)
 function C_EquipmentSet.ModifyEquipmentSet(equipmentSetID, newName, newIcon) end
 
@@ -97,7 +97,7 @@ function C_EquipmentSet.ModifyEquipmentSet(equipmentSetID, newName, newIcon) end
 function C_EquipmentSet.PickupEquipmentSet(equipmentSetID) end
 
 ---@param equipmentSetID number
----@param icon string
+---@param icon string|nil
 ---[Documentation](https://wow.gamepedia.com/API_C_EquipmentSet.SaveEquipmentSet)
 function C_EquipmentSet.SaveEquipmentSet(equipmentSetID, icon) end
 
