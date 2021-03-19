@@ -1,6 +1,6 @@
 import * as vscode from "vscode"
 
-const eventsDoc = require("./data/events").eventsDoc
+const eventsDoc = require("../data/events").eventsDoc
 
 // looks ugly and probably is
 function getMarkdown(name: string) {

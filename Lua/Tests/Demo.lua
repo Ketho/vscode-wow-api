@@ -1,21 +1,16 @@
-
 local f = CreateFrame("Frame")
-local checkbtn = CreateFrame("CheckButton")
-
-local group = CreateFrame("Frame"):CreateAnimationGroup()
-local anim = group:CreateAnimation("Alpha")
-
-local tex = CreateFrame("Frame"):CreateTexture()
-local fs = CreateFrame("Frame"):CreateFontString()
-
-local dressup = CreateFrame("DressUpModel")
-
-local tooltip = CreateFrame("GameTooltip")
-
-hooksecurefunc("test", function() end)
-
-C_AccountInfo.GetIDFromBattleNetAccountGUID()
-
+local group = f:CreateAnimationGroup()
+local anim = group:CreateAnimation("Animation")
+local alpha = f:CreateAnimationGroup():CreateAnimation("Alpha")
+local tex = f:CreateTexture()
+local fs = f:CreateFontString()
 f:RegisterEvent("ACHIEVEMENT_EARNED")
 
+local checkbtn = CreateFrame("CheckButton")
+local dressup = CreateFrame("DressUpModel")
+local tooltip = CreateFrame("GameTooltip")
+
+C_AccountInfo.GetIDFromBattleNetAccountGUID()
 C_CVar.GetCVar("autoClearAFK")
+
+hooksecurefunc("test", function() end)

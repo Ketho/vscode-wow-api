@@ -1,10 +1,15 @@
 import * as vscode from "vscode"
 
-const luaenumDoc = require("./data/enums").luaenumDoc
-const luaenumArray = require("./enumcompletion").luaenumArray
-
 const eventsDoc = require("./data/events").eventsDoc
-const getEventHover = require("./eventhover").getEventHover
+const getEventHover = require("./providers/event").getEventHover
+
+const cvarsDoc = require("./data/cvars").cvarsDoc
+const getCVarHover = require("./providers/cvar").getCVarHover
+
+const luaenumDoc = require("./data/enums").luaenumDoc
+import enumProvider = require("./providers/enum") // not sure if this is the right way to use import
+const getLuaEnumHover = enumProvider.getLuaEnumHover
+const luaenumArray = enumProvider.luaenumArray
 
 export function activate(context: vscode.ExtensionContext) {
 	console.log("loaded ketho.wow-api")
@@ -32,16 +37,15 @@ export function activate(context: vscode.ExtensionContext) {
 				const range = document.getWordRangeAtPosition(position)
 				if (range) {
 					const word = document.getText(range)
-					// show event payload
+					// events are case insensitive but virtually everyone properly uppercases
 					if (eventsDoc[word])
 						return getEventHover(word)
-					// show lua enum value
-					else if (luaenumDoc[word]) {
-						const el = luaenumDoc[word]
-						let md = new vscode.MarkdownString("```\ninteger = "+el+"\n```")
-						let item = new vscode.Hover(md)
-						return item
-					}
+					// cvars are case insensitive
+					// to do: match case insensitive when hovering a string
+					else if (cvarsDoc[word])
+						return getCVarHover(word)
+					else if (luaenumDoc[word])
+						return getLuaEnumHover(word)
 				}
 			}
 		}

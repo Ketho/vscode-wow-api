@@ -25,25 +25,25 @@ function Frame:HookScript(scriptType, handler, bindingType) end
 function Frame:SetScript(scriptType, handler) end
 
 
----@param event EventName
+---@param event Event
 ---[Documentation](https://wow.gamepedia.com/API_Frame_RegisterEvent)
 function Frame:RegisterEvent(event) end
 
----@param event EventName
+---@param event Event
 ---[Documentation](https://wow.gamepedia.com/API_Frame_RegisterUnitEvent)
 function Frame:RegisterUnitEvent(event, unit1, unit2) end
 
 ---[Documentation](https://wow.gamepedia.com/API_Frame_RegisterAllEvents)
 function Frame:RegisterAllEvents() end
 
----@param event EventName
+---@param event Event
 ---[Documentation](https://wow.gamepedia.com/API_Frame_UnregisterEvent)
 function Frame:UnregisterEvent(event) end
 
 ---[Documentation](https://wow.gamepedia.com/API_Frame_UnregisterAllEvents)
 function Frame:UnregisterAllEvents() end
 
----@param event EventName
+---@param event Event
 ---[Documentation](https://wow.gamepedia.com/API_Frame_IsEventRegistered)
 function Frame:IsEventRegistered(event) end
 
