@@ -9,6 +9,11 @@ This extension uses [Sumneko's](https://marketplace.visualstudio.com/items?itemN
 
 ### Features
 #### [API](https://github.com/Gethe/wow-ui-source/tree/live/AddOns/Blizzard_APIDocumentation)
+* Global API
+* `C_` namespaced systems
+* Lua shorthand references, e.g. `format` (string.format) and `tinsert` (table.insert)
+* Custom WoW Lua functions, e.g. `wipe` and `strsplit`
+
 ![](https://github.com/Ketho/vscode-wow-api/raw/master/img/api.gif)
 
 #### [Widgets](https://wow.gamepedia.com/Widget_API)
@@ -21,4 +26,7 @@ This extension uses [Sumneko's](https://marketplace.visualstudio.com/items?itemN
 ![](https://github.com/Ketho/vscode-wow-api/raw/master/img/cvar.gif)
 
 #### [Enums](https://github.com/Ketho/BlizzardInterfaceResources/blob/live/Resources/LuaEnum.lua)
+* `Enum` table
+* `LE_` Lua Enums
+
 ![](https://github.com/Ketho/vscode-wow-api/raw/master/img/enum.gif)

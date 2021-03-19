@@ -1,8 +1,20 @@
 # Change Log
 
+## [0.4.0] - 2021-03-19
+### Added
+- ✨ Feature: Code completion and hover information for CVars
+- 🌙 EmmyLua: Notable FrameXML functions from MathUtil.lua and TableUtil.lua
+- 🌙 EmmyLua: compat.lua functions, e.g. `format` and `tinsert`
+- 🌙 EmmyLua: Custom WoW Lua functions, e.g. `wipe` and `strsplit`
+- 🛠 Improvements: Nilable parameters are now shown with `|nil`
+
+### Changed
+- ♻️ Refactoring: Optimized Lua code for generating EmmyLua and TypeScript data
+- ♻️ Refactoring: Cleaned up unused Events annotations
+
 ## [0.3.7] - 2021-03-10
 ### Changed
-- 📦 Package: Added back `sumneko.lua` dependency since issue #444 was fixed in Lua Language Server v1.18.1
+- 📦 Package: Added back `sumneko.lua` dependency since issue [#444](https://github.com/sumneko/lua-language-server/issues/444) was fixed in Lua Language Server v1.18.1
 
 ## [0.3.6] - 2021-03-09
 ### Changed
@@ -83,6 +95,7 @@
 ### Added
 - 🚧 Wip: Development work
 
+[0.4.0]: https://github.com/Ketho/vscode-wow-api/releases/tag/v0.4.0
 [0.3.7]: https://github.com/Ketho/vscode-wow-api/releases/tag/v0.3.7
 [0.3.6]: https://github.com/Ketho/vscode-wow-api/releases/tag/v0.3.6
 [0.3.5]: https://github.com/Ketho/vscode-wow-api/releases/tag/v0.3.5
