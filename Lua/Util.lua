@@ -28,16 +28,6 @@ function Util:CacheFile(path, url)
 	end
 end
 
-function Util:GetFullName(apiTable)
-	local fullName
-	if apiTable.System.Namespace then
-		fullName = format("%s.%s", apiTable.System.Namespace, apiTable.Name)
-	else
-		fullName = apiTable.Name
-	end
-	return fullName
-end
-
 function Util:ProxySort(tbl)
 	local t = {}
 	for k in pairs(tbl) do
@@ -47,20 +37,12 @@ function Util:ProxySort(tbl)
 	return t
 end
 
-function Util:ToMap(tbl)
-	local t = {}
-	for _, v in pairs(tbl) do
-		t[v] = true
+function Util:GetFullName(apiTable)
+	local fullName
+	if apiTable.System.Namespace then
+		fullName = format("%s.%s", apiTable.System.Namespace, apiTable.Name)
+	else
+		fullName = apiTable.Name
 	end
-	return t
-end
-
-function Util:Explode(t, level)
-	level = level or 0
-	for k, v in pairs(t) do
-		print(string.rep("\t", level)..k, v)
-		if type(v) == "table" then
-			self:Explode(v, level+1)
-		end
-	end
+	return fullName
 end

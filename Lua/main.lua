@@ -15,9 +15,9 @@ Util:WriteFile("EmmyLua/Type/Event.lua", Emmy:GetEventLiterals())
 Util:WriteFile("EmmyLua/Type/CVar.lua", Emmy:GetCVarLiterals())
 
 -- write typescript data for hover
-Util:WriteFile("src/data/events.ts", require("Lua/TypeScript/Event")())
-Util:WriteFile("src/data/cvars.ts", require("Lua/TypeScript/CVar")())
-Util:WriteFile("src/data/enums.ts", require("Lua/TypeScript/LuaEnum")())
+Util:WriteFile("src/data/events.ts", require("Lua/ToTypeScript/Event")())
+Util:WriteFile("src/data/cvars.ts", require("Lua/ToTypeScript/CVar")())
+Util:WriteFile("src/data/enums.ts", require("Lua/ToTypeScript/LuaEnum")())
 
 -- parse the wiki
 require("Lua/WikiParser/WikiText/FunctionEmmy")
