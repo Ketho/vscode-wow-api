@@ -17,3 +17,5 @@ hooksecurefunc("test", function() end)
 C_AccountInfo.GetIDFromBattleNetAccountGUID()
 
 f:RegisterEvent("ACHIEVEMENT_EARNED")
+
+C_CVar.GetCVar("autoClearAFK")

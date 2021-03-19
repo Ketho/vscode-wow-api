@@ -1,3 +1,5 @@
+local patches = require("Lua/FrameXML/Patches")
+
 local m = {}
 
 function m:LoadApiDocs(base)
@@ -10,6 +12,10 @@ function m:LoadApiDocs(base)
 			-- load blizzard addon and apidocs
 			Util:LoadFile(base.."/Blizzard_APIDocumentation/"..line)
 			if isDoc then -- write to emmylua
+				local patch = patches.data[line]
+				if patch then
+					patches:ApplyPatch(self.documentationInfo, patch)
+				end
 				local text = Emmy:GetSystem(self.documentationInfo)
 				if #text > 0 then -- try not to create empty files as they take up the maxPreload limit
 					Util:WriteFile("EmmyLua/System/"..line, text.."\n")
@@ -18,8 +24,8 @@ function m:LoadApiDocs(base)
 		elseif line == "# Start documentation files here" then
 			isDoc = true
 			local old = APIDocumentation.AddDocumentationTable
-			APIDocumentation.AddDocumentationTable = function(_, documentationInfo)
-				old(_, documentationInfo)
+			APIDocumentation.AddDocumentationTable = function(APIDocumentation, documentationInfo)
+				old(APIDocumentation, documentationInfo)
 				self.documentationInfo = documentationInfo -- set current apidoc
 			end
 		end
