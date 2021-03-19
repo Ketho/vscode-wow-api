@@ -1,5 +1,5 @@
 -- cache should already be created at this point
-local cvarsDump = require "Lua/cache/CVars"
+local cvarsDump = require "Lua/Data/cache/CVars"
 
 local pre = [[
 interface CVarInterface {

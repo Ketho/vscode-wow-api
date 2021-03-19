@@ -1,13 +1,14 @@
 -- XML exported from https://wow.gamepedia.com/Special:Export
--- which is passed KethoDoc:DumpNonBlizzardDocumented()
+-- for API names from KethoDoc:DumpNonBlizzardDocumented()
+-- converted to e.g. "API AbandonSkill" with regex
 local lfs = require "lfs"
 local xml2lua = require "xml2lua"
 local handler = require "xmlhandler.tree"
 
 local path
-for file in lfs.dir("./WikiParser/XmlParser") do
+for file in lfs.dir("./Lua/Data/input") do
 	if file:find("%.xml") then
-		path = "WikiParser/XmlParser/"..file
+		path = "Lua/Data/input/"..file
 	end
 end
 if not path then
@@ -32,11 +33,11 @@ local validTypes = {
 
 local redirects = {}
 
-local function getApiName(name)
+local function GetApiName(name)
 	return name:match("API (.+)"):gsub(" ", "_")
 end
 
-local function isRedirectTarget(name)
+local function IsRedirectTarget(name)
 	for _, api in pairs(redirects) do
 		if api[2] == name then
 			return true
@@ -44,7 +45,7 @@ local function isRedirectTarget(name)
 	end
 end
 
-local function isSearchResult(options, info)
+local function IsSearchResult(options, info)
 	local range = options.range
 	if not next(options) then
 		return true
@@ -62,15 +63,15 @@ function m:ParsePages(options)
 		-- print(v.title) --debug
 		local info = {}
 		info.idx = k
-		info.apiName = getApiName(v.title)
+		info.apiName = GetApiName(v.title)
 		if v.redirect then
 			info.isRedirect = true
 			table.insert(redirects, {
 				info.apiName,
-				getApiName(v.redirect._attr.title)
+				GetApiName(v.redirect._attr.title)
 			})
 		end
-		if isSearchResult(options or {}, info) and not v.redirect then
+		if IsSearchResult(options or {}, info) and not v.redirect then
 			info.params = {arguments = {}, returns = {}}
 			info.signature = {lines = {}}
 			local parsingCodeBlock
@@ -165,7 +166,7 @@ function m:ParseParam(line, info)
 	return name, valueType
 end
 
-local function printApiParam(t)
+local function PrintApiParam(t)
 	for _, v in pairs(t) do
 		print("\t\t"..v.name..": "..v.type)
 	end
@@ -179,7 +180,7 @@ function m:PrintApi(info)
 	end
 	if #info.params.arguments > 0 then
 		print("\tparam arguments")
-		printApiParam(info.params.arguments)
+		PrintApiParam(info.params.arguments)
 	end
 	if info.signature.arguments then
 		print("\tsignature arguments")
@@ -189,7 +190,7 @@ function m:PrintApi(info)
 	end
 	if #info.params.returns > 0 then
 		print("\tparam returns")
-		printApiParam(info.params.returns)
+		PrintApiParam(info.params.returns)
 	end
 	if info.signature.returns then
 		print("\tsignature returns")
@@ -201,7 +202,7 @@ function m:PrintApi(info)
 end
 
 function m:ValidateApi(info)
-	if isRedirectTarget(info.apiName) then
+	if IsRedirectTarget(info.apiName) then
 		-- print(string.format("%d:%s - documents multiple functions", info.idx, info.apiName))
 		return
 	end

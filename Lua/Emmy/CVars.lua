@@ -1,7 +1,8 @@
 local url = "https://raw.githubusercontent.com/Ketho/BlizzardInterfaceResources/live/Resources/CVars.lua"
+local path = "Lua/Data/cache/CVars.lua"
 
-Util:CacheFile("Lua/cache/CVars.lua", url)
-local cvarsDump = require("Lua/cache/CVars")
+Util:CacheFile("Lua/Data/cache/CVars.lua", url)
+local cvarsDump = require(path:gsub("%.lua", ""))
 
 function Emmy:GetCVarLiterals()
 	local t = {}
