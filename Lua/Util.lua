@@ -23,7 +23,8 @@ end
 
 function Util:CacheFile(path, url)
 	if not lfs.attributes(path) then
-		self:WriteFile(path, https.request(url))
+		local body = https.request(url)
+		self:WriteFile(path, body)
 	end
 end
 
@@ -43,6 +44,14 @@ function Util:ProxySort(tbl)
 		table.insert(t, k)
 	end
 	table.sort(t)
+	return t
+end
+
+function Util:ToMap(tbl)
+	local t = {}
+	for _, v in pairs(tbl) do
+		t[v] = true
+	end
 	return t
 end
 
