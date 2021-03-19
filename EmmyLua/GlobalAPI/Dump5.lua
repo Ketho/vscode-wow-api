@@ -1,6 +1,3 @@
----[Documentation](https://wow.gamepedia.com/API_HaveQuestRewardData)
-function HaveQuestRewardData(questID) end
-
 ---[Documentation](https://wow.gamepedia.com/API_HearthAndResurrectFromArea)
 function HearthAndResurrectFromArea() end
 
@@ -1497,4 +1494,7 @@ function SetBagPortraitTexture(texture, slot) end
 
 ---[Documentation](https://wow.gamepedia.com/API_SetBagSlotFlag)
 function SetBagSlotFlag(index, flagIndex, checked) end
+
+---[Documentation](https://wow.gamepedia.com/API_SetBankAutosortDisabled)
+function SetBankAutosortDisabled() end
 

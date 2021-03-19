@@ -1112,7 +1112,7 @@ function C_LFGList.GetApplicationInfo(searchResultID) end
 function C_LFGList.GetApplications() end
 
 ---[Documentation](https://wow.gamepedia.com/API_C_LFGList.GetAvailableActivities)
-function C_LFGList.GetAvailableActivities(categoryID, groupID , filter) end
+function C_LFGList.GetAvailableActivities(categoryID, groupID, filter) end
 
 ---[Documentation](https://wow.gamepedia.com/API_C_LFGList.GetAvailableActivityGroups)
 function C_LFGList.GetAvailableActivityGroups(categoryID, filter) end

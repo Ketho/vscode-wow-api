@@ -1495,3 +1495,6 @@ function EJ_GetDifficulty() end
 ---[Documentation](https://wow.gamepedia.com/API_EJ_GetEncounterInfo)
 function EJ_GetEncounterInfo(encounterID) end
 
+---[Documentation](https://wow.gamepedia.com/API_EJ_GetEncounterInfoByIndex)
+function EJ_GetEncounterInfoByIndex(index, instanceID) end
+

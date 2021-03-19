@@ -1,6 +1,3 @@
----[Documentation](https://wow.gamepedia.com/API_EJ_GetEncounterInfoByIndex)
-function EJ_GetEncounterInfoByIndex(index, instanceID) end
-
 ---[Documentation](https://wow.gamepedia.com/API_EJ_GetInstanceByIndex)
 function EJ_GetInstanceByIndex(index, isRaid) end
 
@@ -1497,4 +1494,7 @@ function GetMerchantFilter() end
 
 ---[Documentation](https://wow.gamepedia.com/API_GetMerchantItemCostInfo)
 function GetMerchantItemCostInfo(index) end
+
+---[Documentation](https://wow.gamepedia.com/API_GetMerchantItemCostItem)
+function GetMerchantItemCostItem(index, itemIndex) end
 

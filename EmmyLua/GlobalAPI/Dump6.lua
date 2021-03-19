@@ -1,6 +1,3 @@
----[Documentation](https://wow.gamepedia.com/API_SetBankAutosortDisabled)
-function SetBankAutosortDisabled() end
-
 ---[Documentation](https://wow.gamepedia.com/API_SetBankBagSlotFlag)
 function SetBankBagSlotFlag() end
 

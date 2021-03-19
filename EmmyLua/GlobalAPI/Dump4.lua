@@ -1,6 +1,3 @@
----[Documentation](https://wow.gamepedia.com/API_GetMerchantItemCostItem)
-function GetMerchantItemCostItem(index, itemIndex) end
-
 ---[Documentation](https://wow.gamepedia.com/API_GetMerchantItemID)
 function GetMerchantItemID(index) end
 
@@ -326,7 +323,7 @@ function GetNumSockets() end
 function GetNumSpecGroups(isInspect) end
 
 ---[Documentation](https://wow.gamepedia.com/API_GetNumSpecializations)
-function GetNumSpecializations(isInspect , isPet) end
+function GetNumSpecializations(isInspect, isPet) end
 
 ---[Documentation](https://wow.gamepedia.com/API_GetNumSpecializationsForClassID)
 function GetNumSpecializationsForClassID(classID) end
@@ -539,7 +536,7 @@ function GetPvpPowerDamage() end
 function GetPvpPowerHealing() end
 
 ---[Documentation](https://wow.gamepedia.com/API_GetPvpTalentInfoByID)
-function GetPvpTalentInfoByID() end
+function GetPvpTalentInfoByID(talentID, specGroupIndex, isInspect, inspectUnit) end
 
 ---[Documentation](https://wow.gamepedia.com/API_GetPvpTalentInfoBySpecialization)
 function GetPvpTalentInfoBySpecialization() end
@@ -1497,4 +1494,7 @@ function HasWandEquipped() end
 
 ---[Documentation](https://wow.gamepedia.com/API_HaveQuestData)
 function HaveQuestData(questID) end
+
+---[Documentation](https://wow.gamepedia.com/API_HaveQuestRewardData)
+function HaveQuestRewardData(questID) end
 
