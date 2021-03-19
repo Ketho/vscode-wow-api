@@ -1,4 +1,5 @@
-local NonDocumentedAPI = {
+-- convert to "API AbandonSkill" with regex
+local NonBlizzardDocumented = {
 	"AbandonSkill",
 	"AcceptAreaSpiritHeal",
 	"AcceptBattlefieldPort",
@@ -2986,4 +2987,4 @@ local NonDocumentedAPI = {
 	"seterrorhandler",
 }
 
-return NonDocumentedAPI
+return NonBlizzardDocumented

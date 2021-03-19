@@ -1,6 +1,5 @@
 local url = "https://raw.githubusercontent.com/Ketho/BlizzardInterfaceResources/live/Resources/CVars.lua"
 
-Util:MakeDir("Lua/cache")
 Util:CacheFile("Lua/cache/CVars.lua", url)
 local cvarsDump = require("Lua/cache/CVars")
 

@@ -9,6 +9,9 @@ FrameXML:LoadApiDocs("Lua/FrameXML")
 local Tests = require("Lua/Tests/Emmy")
 --Tests:Run()
 
+-- create folders if they don't exist
+Util:MakeDir("Lua/cache")
+
 -- write emmylua / typescript
 Util:WriteFile("EmmyLua/Type/Event.lua", Emmy:GetEventLiterals())
 local eventTypeScript = require("Lua/TypeScript/Event")()

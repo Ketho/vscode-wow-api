@@ -1,4 +1,5 @@
--- fuck wikis for documentation
+-- XML exported from https://wow.gamepedia.com/Special:Export
+-- which is passed KethoDoc:DumpNonBlizzardDocumented()
 local lfs = require "lfs"
 local xml2lua = require "xml2lua"
 local handler = require "xmlhandler.tree"
