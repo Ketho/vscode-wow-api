@@ -1,5 +1,5 @@
 ---@class GameTooltip : Frame
-local GameTooltip = {}
+GameTooltip = {}
 
 ---@param scriptType ScriptGameTooltip
 ---@param bindingType LE_SCRIPT_BINDING_TYPE
