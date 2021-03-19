@@ -17,8 +17,8 @@ def parseXML(p):
 			# elif j.tag.find("text") != -1:
 			# 	print(j.text)
 
-for fileName in os.listdir("WikiParser"):
-	path = "WikiParser/"+fileName
+for fileName in os.listdir("WikiParser/XmlParser"):
+	path = "WikiParser/XmlParser/"+fileName
 	if isXML(path):
 		parseXML(path)
 

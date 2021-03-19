@@ -12,7 +12,6 @@ end
 
 function Tests:Run()
 	TestFunction("C_Map.GetMapHighlightInfoAtPosition")
-	TestFunction("C_Map.GetMapHighlightInfoAtPosition")
 	TestFunction("C_AccountInfo.GetIDFromBattleNetAccountGUID")
 	TestFunction("C_Calendar.CanSendInvite") -- no arguments, one return value
 	TestFunction("C_Calendar.EventSetTitle") -- one argument, no return values

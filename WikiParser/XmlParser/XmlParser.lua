@@ -4,9 +4,9 @@ local xml2lua = require "xml2lua"
 local handler = require "xmlhandler.tree"
 
 local path
-for file in lfs.dir("./WikiParser") do
+for file in lfs.dir("./WikiParser/XmlParser") do
 	if file:find("%.xml") then
-		path = "WikiParser/"..file
+		path = "WikiParser/XmlParser/"..file
 	end
 end
 if not path then

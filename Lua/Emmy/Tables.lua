@@ -2,7 +2,7 @@ function Emmy:GetTable(apiTable)
 	local tbl = {}
 	tinsert(tbl, format("---@class %s", apiTable.Name))
 	if apiTable.Type == "Enumeration" then
-		if next(apiTable.Fields) then
+		if #apiTable.Fields > 0 then
 			tinsert(tbl, format("local %s = {", apiTable.Name))
 			for _, v in pairs(apiTable.Fields) do
 				tinsert(tbl, format("\t%s = %s,", v.Name, v.EnumValue))
