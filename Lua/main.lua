@@ -21,6 +21,6 @@ Util:WriteFile("src/data/enums.ts", require("Lua/ToTypeScript/LuaEnum")())
 
 -- parse the wiki
 require("Lua/WikiParser/WikiText/FunctionEmmy")
---require("Lua/WikiParser/XmlParser/XmlParser")
+--require("Lua/WikiParser/XmlParser")
 
 print("Finished.")

@@ -1,7 +1,7 @@
-local api_path = "Lua/Data/cache/GlobalAPI.lua"
-local api_url = "https://raw.githubusercontent.com/Ketho/BlizzardInterfaceResources/live/Resources/GlobalAPI.lua"
-Util:CacheFile(api_path, api_url)
-local globalAPI = require(api_path:gsub("%.lua", ""))[1]
+local path = "Lua/Data/cache/GlobalAPI.lua"
+local url = "https://raw.githubusercontent.com/Ketho/BlizzardInterfaceResources/live/Resources/GlobalAPI.lua"
+Util:CacheFile(path, url)
+local globalApi = require(path:gsub("%.lua", ""))[1]
 
 local blizzDoc = {}
 for _, func in ipairs(APIDocumentation.functions) do
@@ -10,7 +10,7 @@ for _, func in ipairs(APIDocumentation.functions) do
 end
 
 local nonBlizzDocumented = {}
-for _, name in pairs(globalAPI) do
+for _, name in pairs(globalApi) do
 	if not blizzDoc[name] then
 		nonBlizzDocumented[name] = true
 	end

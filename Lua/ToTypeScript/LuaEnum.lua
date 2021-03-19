@@ -1,7 +1,9 @@
-local https = require "ssl.https"
-
+local path = "Lua/Data/cache/LuaEnum.lua"
 local url = "https://raw.githubusercontent.com/Ketho/BlizzardInterfaceResources/live/Resources/LuaEnum.lua"
-local body = https.request(url)
+Util:CacheFile(path, url)
+
+local file = io.open(path)
+local body = file:read("a")
 
 local pre = [[interface LuaEnumInterface {
 	[key: string]: number
