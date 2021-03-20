@@ -31,7 +31,7 @@ This extension uses [Sumneko's](https://marketplace.visualstudio.com/items?itemN
 
 ![](https://github.com/Ketho/vscode-wow-api/raw/master/img/enum.gif)
 
-## Documentation
+## Generating documentation
 * Blizzard documented functions are generated from `Blizzard_APIDocumentation`.
 * Non-Blizzard documented functions are [exported](https://wow.gamepedia.com/Special:Export) and [parsed](Lua/WikiParser/XmlParser.lua) from Wowpedia.
 * JSON data for the hover provider (Events, CVars and Enums) is generated from [Lua/ToTypeScript](Lua/ToTypeScript).
