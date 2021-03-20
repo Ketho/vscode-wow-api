@@ -11,7 +11,7 @@ for file in lfs.dir("./Lua/Data/input") do
 end
 if not path then
 	local output = "Lua/Data/cache/NonBlizzardDocumented.txt"
-	print("Parser: no XML file found; export it from wowpedia with "..output)
+	print("Parser: no XML file found; export it from Wowpedia with "..output)
 	if not lfs.attributes(output) then
 		local file = io.open(output, "w")
 		local nonBlizzDocumented = require("Lua/WikiParser/WikiText/NonBlizzardDocumented")

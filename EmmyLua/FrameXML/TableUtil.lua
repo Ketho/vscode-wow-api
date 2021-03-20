@@ -7,7 +7,7 @@ end
 
 -- Reverse iterates over a sequential table.
 -- ```
--- for k, v in ripairs(tbl) do body end
+-- for i, v in ripairs(tbl) do body end
 -- ```
 ---@param table table
 ---@return function iter

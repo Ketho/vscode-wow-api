@@ -39,8 +39,6 @@ function strsplit(delim, str, pieces) end
 ---[Documentation](https://wow.gamepedia.com/API_strjoin)
 function strjoin(delim, str1, str2, ...) end
 
-date = os.date
-
 ---@param time1 number
 ---@param time2 number
 ---@return number
@@ -79,12 +77,12 @@ function strconcat(...) end
 ---[Documentation](https://wow.gamepedia.com/API_strlenutf8)
 function strlenutf8(str) end
 
+date = os.date
 time = os.time
 
 -- for people who did not set "Lua.runtime.version": "Lua 5.1"
 
 unpack = table.unpack
-
 
 -- Table library
 local tab = table
@@ -118,7 +116,6 @@ min = math.min
 mod = math.fmod
 PI = math.pi
 --??? pow = math.pow
-
 rad = math.rad
 random = math.random
 sin = function (x) return math.sin(math.rad(x)) end
