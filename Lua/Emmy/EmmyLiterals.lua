@@ -9,19 +9,17 @@ function Emmy:GetEventLiterals()
 	return "---@alias Event "..table.concat(t, " | ").."\n"
 end
 
-do
-	local url = "https://raw.githubusercontent.com/Ketho/BlizzardInterfaceResources/live/Resources/CVars.lua"
-	local path = "Lua/Data/cache/CVars.lua"
+local cvar_path = "Lua/Data/cache/CVars.lua"
+local cvar_url = "https://raw.githubusercontent.com/Ketho/BlizzardInterfaceResources/live/Resources/CVars.lua"
 
-	Util:CacheFile(path, url)
-	local cvarsDump = require(path:gsub("%.lua", ""))
+Util:CacheFile(cvar_path, cvar_url)
+local cvarsDump = require(cvar_path:gsub("%.lua", ""))
 
-	function Emmy:GetCVarLiterals()
-		local t = {}
-		local sorted = Util:ProxySort(cvarsDump[1].var)
-		for _, cvar in pairs(sorted) do
-			tinsert(t, format("'\"%s\"'", cvar))
-		end
-		return "---@alias CVar "..table.concat(t, " | ").."\n"
+function Emmy:GetCVarLiterals()
+	local t = {}
+	local sorted = Util:ProxySort(cvarsDump[1].var)
+	for _, cvar in pairs(sorted) do
+		tinsert(t, format("'\"%s\"'", cvar))
 	end
+	return "---@alias CVar "..table.concat(t, " | ").."\n"
 end
