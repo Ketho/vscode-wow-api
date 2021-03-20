@@ -43,3 +43,4 @@ lua53 ./Lua/main.lua
 * luafilesystem: https://luarocks.org/modules/hisham/luafilesystem
 * luasocket: https://luarocks.org/modules/luasocket/luasocket
 * luasec: https://luarocks.org/modules/brunoos/luasec
+* xml2lua: https://luarocks.org/modules/manoelcampos/xml2lua
