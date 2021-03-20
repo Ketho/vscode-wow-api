@@ -2,6 +2,7 @@ require("Lua/Util")
 
 -- create folders if they don't exist yet
 Util:MakeDir("Lua/Data/cache")
+Util:MakeDir("Lua/Data/input")
 Util:MakeDir("Lua/Data/output")
 
 -- load blizzard apidocs and write emmylua
@@ -11,6 +12,7 @@ FrameXML:LoadApiDocs("Lua/FrameXML")
 --require("Lua/Tests/Emmy"):Run()
 
 -- write emmylua data for Type
+require("Lua/Emmy/EmmyLiterals")
 Util:WriteFile("EmmyLua/Type/Event.lua", Emmy:GetEventLiterals())
 Util:WriteFile("EmmyLua/Type/CVar.lua", Emmy:GetCVarLiterals())
 

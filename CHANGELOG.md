@@ -4,13 +4,13 @@
 ### Added
 - ✨ Feature: Code completion and hover information for CVars
 - 🌙 EmmyLua: Notable FrameXML functions from MathUtil.lua and TableUtil.lua
-- 🌙 EmmyLua: compat.lua functions, e.g. `format` and `tinsert`
-- 🌙 EmmyLua: Custom WoW Lua functions, e.g. `wipe` and `strsplit`
+- 🌙 EmmyLua: compat.lua functions e.g. `format` and `tinsert`
+- 🌙 EmmyLua: Custom WoW Lua functions e.g. `wipe` and `strsplit`
 - 🛠 Improvements: Nilable parameters are now shown with `|nil`
 
 ### Changed
 - ♻️ Refactoring: Optimized Lua code for generating EmmyLua and TypeScript data
-- ♻️ Refactoring: Cleaned up unused Events annotations
+- ♻️ Refactoring: Cleaned up unused EmmyLua annotations for Events
 
 ## [0.3.7] - 2021-03-10
 ### Changed

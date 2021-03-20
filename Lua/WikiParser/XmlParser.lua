@@ -12,7 +12,8 @@ for file in lfs.dir("./Lua/Data/input") do
 	end
 end
 if not path then
-	error("no XML file found")
+	print("Parser: no XML file found")
+	return
 end
 
 -- parse xml from file

@@ -1,6 +1,6 @@
 local wowpedia_arguments = require("Lua/WikiParser/WikiText/FunctionArgument")
 local nonBlizzDocumented = require("Lua/WikiParser/WikiText/NonBlizzardDocumented")
-local manuallyDocumented = require("Lua/Data/input/ManuallyDocumented")
+local manuallyDocumented = require("Lua/WikiParser/WikiText/ManuallyDocumented")
 
 local fileIndex = 0
 

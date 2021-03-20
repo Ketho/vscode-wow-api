@@ -11,8 +11,8 @@ This extension uses [Sumneko's](https://marketplace.visualstudio.com/items?itemN
 #### [API](https://github.com/Gethe/wow-ui-source/tree/live/AddOns/Blizzard_APIDocumentation)
 * Global API
 * `C_` namespaced systems
-* Lua shorthand references, e.g. `format` (string.format) and `tinsert` (table.insert)
-* Custom WoW Lua functions, e.g. `wipe` and `strsplit`
+* Lua shorthand references e.g. `format` (string.format) and `tinsert` (table.insert)
+* Custom WoW Lua functions e.g. `wipe` and `strsplit`
 
 ![](https://github.com/Ketho/vscode-wow-api/raw/master/img/api.gif)
 
