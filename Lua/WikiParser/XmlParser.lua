@@ -1,6 +1,4 @@
 -- XML exported from https://wow.gamepedia.com/Special:Export
--- for API names from KethoDoc:DumpNonBlizzardDocumented()
--- converted to e.g. "API AbandonSkill" with regex
 local lfs = require "lfs"
 local xml2lua = require "xml2lua"
 local handler = require "xmlhandler.tree"
@@ -12,7 +10,15 @@ for file in lfs.dir("./Lua/Data/input") do
 	end
 end
 if not path then
-	print("Parser: no XML file found")
+	local output = "Lua/Data/cache/NonBlizzardDocumented.txt"
+	print("Parser: no XML file found; export it from wowpedia with "..output)
+	if not lfs.attributes(output) then
+		local file = io.open(output, "w")
+		local nonBlizzDocumented = require("Lua/WikiParser/WikiText/NonBlizzardDocumented")
+		for _, name in pairs(Util:ProxySort(nonBlizzDocumented)) do
+			file:write("API "..name.."\n")
+		end
+	end
 	return
 end
 
