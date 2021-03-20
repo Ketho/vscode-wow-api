@@ -11,11 +11,8 @@ end
 function DEFAULT_CHAT_FRAME:SetMaxLines()
 end
 
--- Lua API
+-- Lua 5.1
 unpack = table.unpack
-
-tinsert = table.insert
-format = string.format
 
 -- why is WoW so backwards
 function string.split(delim, input)

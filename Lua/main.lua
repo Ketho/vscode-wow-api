@@ -1,3 +1,5 @@
+tinsert = table.insert
+format = string.format
 require("Lua/Util")
 
 -- create folders if they don't exist yet
