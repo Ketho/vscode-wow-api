@@ -3,10 +3,11 @@ function Emmy:GetEventLiterals()
 		return a.LiteralName < b.LiteralName
 	end)
 	local t = {}
+	tinsert(t, "---@alias Event")
 	for _, event in ipairs(APIDocumentation.events) do
 		tinsert(t, format("'\"%s\"'", event.LiteralName))
 	end
-	return "---@alias Event "..table.concat(t, " | ").."\n"
+return table.concat(t, "\n---| ").."\n"
 end
 
 local cvar_path = "Lua/Data/cache/CVars.lua"
@@ -17,9 +18,10 @@ local cvarsDump = require(cvar_path:gsub("%.lua", ""))
 
 function Emmy:GetCVarLiterals()
 	local t = {}
+	tinsert(t, "---@alias CVar")
 	local sorted = Util:ProxySort(cvarsDump[1].var)
 	for _, cvar in pairs(sorted) do
 		tinsert(t, format("'\"%s\"'", cvar))
 	end
-	return "---@alias CVar "..table.concat(t, " | ").."\n"
+	return table.concat(t, "\n---| ").."\n"
 end
