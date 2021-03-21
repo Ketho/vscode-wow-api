@@ -7,7 +7,7 @@ function Emmy:GetEventLiterals()
 	for _, event in ipairs(APIDocumentation.events) do
 		tinsert(t, format("'\"%s\"'", event.LiteralName))
 	end
-return table.concat(t, "\n---| ").."\n"
+	return table.concat(t, "\n---| ").."\n"
 end
 
 local cvar_path = "Lua/Data/cache/CVars.lua"
