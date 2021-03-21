@@ -37,8 +37,6 @@ function getglobal(varr)
 	return _G[varr];
 end
 
-local forceinsecure = forceinsecure;
-
 --- Sets a global (deprecated)
 ---@param varr string
 ---@param value any

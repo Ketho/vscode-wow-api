@@ -34,7 +34,7 @@
 ## [0.3.1] - 2021-03-03
 ### Changed
 - 🎨 Style: Changed enum context from `enum: integer 1` to just `integer 1`
-- 🐞 Bug Fixes: Event hover always appearing at the initial position (#1)
+- 🐞 Bug Fixes: Event hover always appearing at the initial position (#2)
 
 ## [0.3.0] - 2021-03-03
 - 🚨 Breaking Changes: v1.17.2 of the Lua Language Server gets stuck on hover ([#437](https://github.com/sumneko/lua-language-server/issues/437)), please revert to v1.17.0 until this is resolved
