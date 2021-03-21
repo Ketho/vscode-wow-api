@@ -1,5 +1,5 @@
 ---@param name CVar
----@param value string|nil
+---@param value? string
 ---[Documentation](https://wow.gamepedia.com/API_C_CVar.RegisterCVar)
 function RegisterCVar(name, value)
 	C_CVar.RegisterCVar(name, value);
@@ -11,8 +11,8 @@ function ResetTestCvars()
 end
 
 ---@param name CVar
----@param value boolean|string|nil
----@param eventName string|nil
+---@param value? boolean|string
+---@param eventName? string
 ---@return boolean success
 ---[Documentation](https://wow.gamepedia.com/API_C_CVar.SetCVar)
 function SetCVar(name, value, eventName)
@@ -24,7 +24,7 @@ function SetCVar(name, value, eventName)
 end
 
 ---@param name CVar
----@return string|nil value
+---@return string? value
 ---[Documentation](https://wow.gamepedia.com/API_C_CVar.GetCVar)
 function GetCVar(name)
 	return C_CVar.GetCVar(name);
@@ -33,7 +33,7 @@ end
 ---@param name CVar
 ---@param index number
 ---@param value boolean
----@param scriptCVar string|nil
+---@param scriptCVar? string
 ---@return boolean success
 ---[Documentation](https://wow.gamepedia.com/API_C_CVar.SetCVarBitfield)
 function SetCVarBitfield(name, index, value, scriptCVar)
@@ -42,21 +42,21 @@ end
 
 ---@param name CVar
 ---@param index number
----@return boolean|nil value
+---@return boolean? value
 ---[Documentation](https://wow.gamepedia.com/API_C_CVar.GetCVarBitfield)
 function GetCVarBitfield(name, index)
 	return C_CVar.GetCVarBitfield(name, index);
 end
 
 ---@param name CVar
----@return boolean|nil value
+---@return boolean? value
 ---[Documentation](https://wow.gamepedia.com/API_C_CVar.GetCVarBool)
 function GetCVarBool(name)
 	return C_CVar.GetCVarBool(name);
 end
 
 ---@param name CVar
----@return string|nil defaultValue
+---@return string? defaultValue
 ---[Documentation](https://wow.gamepedia.com/API_C_CVar.GetCVarDefault)
 function GetCVarDefault(name)
 	return C_CVar.GetCVarDefault(name);

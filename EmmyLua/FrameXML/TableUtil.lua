@@ -59,7 +59,7 @@ end
 -- of the keys, as this would be an expensive check and won't be necessary in most cases.
 ---@param lhsTable table
 ---@param rhsTable table
----@param depth number|nil
+---@param depth? number
 ---@return boolean
 ---[FrameXML](https://www.townlong-yak.com/framexml/go/tCompare)
 function tCompare(lhsTable, rhsTable, depth)
