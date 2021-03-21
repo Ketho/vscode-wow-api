@@ -3,12 +3,12 @@
 [![](https://img.shields.io/github/v/release/Ketho/vscode-wow-api)](https://github.com/Ketho/vscode-wow-api/releases)
 [![](https://img.shields.io/badge/wow-9.0.2-yellow)](https://github.com/Gethe/wow-ui-source/tree/9.0.2)
 
-Adds IntelliSense features for World of Warcraft [AddOn API](https://wow.gamepedia.com/World_of_Warcraft_API) to VS Code.
+Adds IntelliSense features for World of Warcraft API to VS Code.
 
 This extension uses [Sumneko's](https://marketplace.visualstudio.com/items?itemName=sumneko.lua) Lua [Language Server](https://microsoft.github.io/language-server-protocol/) with [EmmyLua](https://github.com/sumneko/lua-language-server/wiki/EmmyLua-Annotations) annotations.
 
 ### Features
-#### [API](https://github.com/Gethe/wow-ui-source/tree/live/AddOns/Blizzard_APIDocumentation)
+#### [API](https://wow.gamepedia.com/World_of_Warcraft_API)
 * Global API
 * `C_` namespaced systems
 * Lua shorthand references e.g. `format` (string.format) and `tinsert` (table.insert)
@@ -32,7 +32,7 @@ This extension uses [Sumneko's](https://marketplace.visualstudio.com/items?itemN
 ![](https://github.com/Ketho/vscode-wow-api/raw/master/img/enum.gif)
 
 ### Generating documentation
-* Blizzard documented functions are generated from `Blizzard_APIDocumentation`.
+* Blizzard documented functions are generated from [Blizzard_APIDocumentation](https://github.com/Gethe/wow-ui-source/tree/live/AddOns/Blizzard_APIDocumentation).
 * Non-Blizzard documented functions are [exported](https://wow.gamepedia.com/Special:Export) and [parsed](Lua/WikiParser/XmlParser.lua) from Wowpedia.
 * JSON data for the hover provider (Events, CVars and Enums) is generated from [Lua/ToTypeScript](Lua/ToTypeScript).
 ```
