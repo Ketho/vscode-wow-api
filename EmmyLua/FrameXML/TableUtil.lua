@@ -149,7 +149,6 @@ function tUnorderedRemove(tbl, index)
 
 	table.remove(tbl);
 end
-io = nil
 
 -- Returns a deep copy of a table.
 ---@param settings table
