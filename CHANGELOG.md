@@ -1,12 +1,23 @@
 # Change Log
 
+## [0.4.1] - 2021-03-23
+### Added
+- 🌙 EmmyLua: Added `GetUnitName`, `UIFrameFadeIn`, `Mixin`, `ShowUIPanel`, `getglobal` and similar functions (#4)
+- 🛠 Improvements: CVars are matched case insensitive and show only when hovering over a string literal
+- 📚 Documentation: Added documentation for generating API documentation
+
+### Changed
+- 🎨 Style: Shows the label when hovering over Events and CVars
+- 🎨 Style: Nilable parameters are marked with `?` instead of `|nil`
+- ♻️ Refactoring: Updated formatting for @alias annotations so everything is not on a single line
+
 ## [0.4.0] - 2021-03-19
 ### Added
 - ✨ Feature: Code completion and hover information for CVars
 - 🌙 EmmyLua: Notable FrameXML functions from MathUtil.lua and TableUtil.lua
 - 🌙 EmmyLua: compat.lua functions e.g. `format` and `tinsert`
 - 🌙 EmmyLua: Custom WoW Lua functions e.g. `wipe` and `strsplit`
-- 🛠 Improvements: Nilable parameters are now shown with `|nil`
+- 🎨 Style: Nilable parameters are now shown with `|nil`
 
 ### Changed
 - ♻️ Refactoring: Optimized Lua code for generating EmmyLua and TypeScript data
@@ -95,6 +106,7 @@
 ### Added
 - 🚧 Wip: Development work
 
+[0.4.1]: https://github.com/Ketho/vscode-wow-api/releases/tag/v0.4.1
 [0.4.0]: https://github.com/Ketho/vscode-wow-api/releases/tag/v0.4.0
 [0.3.7]: https://github.com/Ketho/vscode-wow-api/releases/tag/v0.3.7
 [0.3.6]: https://github.com/Ketho/vscode-wow-api/releases/tag/v0.3.6

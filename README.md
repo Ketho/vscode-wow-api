@@ -23,7 +23,7 @@ This extension uses [Sumneko's](https://marketplace.visualstudio.com/items?itemN
 ![](https://github.com/Ketho/vscode-wow-api/raw/master/img/event.gif)
 
 #### [CVars](https://wow.gamepedia.com/Console_variables)
-![](https://github.com/Ketho/vscode-wow-api/raw/master/img/cvar.gif)
+![](https://github.com/Ketho/vscode-wow-api/raw/master/img/cvar.png)
 
 #### [Enums](https://github.com/Ketho/BlizzardInterfaceResources/blob/live/Resources/LuaEnum.lua)
 * `Enum` table
