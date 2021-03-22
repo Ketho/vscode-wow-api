@@ -19,14 +19,14 @@ function table.getn(tbl) end
 function table.wipe(tbl) end
 
 ---@param str string
----@param chars string|nil
+---@param chars? string
 ---@return string
 ---[Documentation](https://wow.gamepedia.com/API_strtrim)
 function strtrim(str, chars) end
 
 ---@param delim string
 ---@param str string
----@param pieces number|nil
+---@param pieces? number
 ---@return ...
 ---[Documentation](https://wow.gamepedia.com/API_strsplit)
 function strsplit(delim, str, pieces) end
@@ -45,8 +45,8 @@ function strjoin(delim, str1, str2, ...) end
 ---[Documentation](https://wow.gamepedia.com/API_difftime)
 function difftime(time1, time2) end
 
----@param lower number|nil
----@param upper number|nil
+---@param lower? number
+---@param upper? number
 ---@return number
 ---[Documentation](https://wow.gamepedia.com/API_fastrandom)
 function fastrandom(lower, upper) end
