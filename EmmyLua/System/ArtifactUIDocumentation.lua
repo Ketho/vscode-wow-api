@@ -55,9 +55,9 @@ function C_ArtifactUI.DoesEquippedArtifactHaveAnyRelicsSlotted() end
 ---@return string appearanceName
 ---@return number displayIndex
 ---@return boolean unlocked
----@return string|nil failureDescription
+---@return string? failureDescription
 ---@return number uiCameraID
----@return number|nil altHandCameraID
+---@return number? altHandCameraID
 ---@return number swatchColorR
 ---@return number swatchColorG
 ---@return number swatchColorB
@@ -73,9 +73,9 @@ function C_ArtifactUI.GetAppearanceInfo(appearanceSetIndex, appearanceIndex) end
 ---@return string appearanceName
 ---@return number displayIndex
 ---@return boolean unlocked
----@return string|nil failureDescription
+---@return string? failureDescription
 ---@return number uiCameraID
----@return number|nil altHandCameraID
+---@return number? altHandCameraID
 ---@return number swatchColorR
 ---@return number swatchColorG
 ---@return number swatchColorB
@@ -98,7 +98,7 @@ function C_ArtifactUI.GetAppearanceSetInfo(appearanceSetIndex) end
 function C_ArtifactUI.GetArtifactArtInfo() end
 
 ---@return number itemID
----@return number|nil altItemID
+---@return number? altItemID
 ---@return string name
 ---@return number icon
 ---@return number xp
@@ -106,8 +106,8 @@ function C_ArtifactUI.GetArtifactArtInfo() end
 ---@return number quality
 ---@return number artifactAppearanceID
 ---@return number appearanceModID
----@return number|nil itemAppearanceID
----@return number|nil altItemAppearanceID
+---@return number? itemAppearanceID
+---@return number? altItemAppearanceID
 ---@return boolean altOnTop
 ---@return number tier
 ---[Documentation](https://wow.gamepedia.com/API_C_ArtifactUI.GetArtifactInfo)
@@ -117,7 +117,7 @@ function C_ArtifactUI.GetArtifactInfo() end
 ---[Documentation](https://wow.gamepedia.com/API_C_ArtifactUI.GetArtifactItemID)
 function C_ArtifactUI.GetArtifactItemID() end
 
----@return number|nil tier
+---@return number? tier
 ---[Documentation](https://wow.gamepedia.com/API_C_ArtifactUI.GetArtifactTier)
 function C_ArtifactUI.GetArtifactTier() end
 
@@ -138,7 +138,7 @@ function C_ArtifactUI.GetCostForPointAtRank(rank, tier) end
 function C_ArtifactUI.GetEquippedArtifactArtInfo() end
 
 ---@return number itemID
----@return number|nil altItemID
+---@return number? altItemID
 ---@return string name
 ---@return number icon
 ---@return number xp
@@ -146,8 +146,8 @@ function C_ArtifactUI.GetEquippedArtifactArtInfo() end
 ---@return number quality
 ---@return number artifactAppearanceID
 ---@return number appearanceModID
----@return number|nil itemAppearanceID
----@return number|nil altItemAppearanceID
+---@return number? itemAppearanceID
+---@return number? altItemAppearanceID
 ---@return boolean altOnTop
 ---@return number tier
 ---[Documentation](https://wow.gamepedia.com/API_C_ArtifactUI.GetEquippedArtifactInfo)
@@ -171,7 +171,7 @@ function C_ArtifactUI.GetEquippedArtifactNumRelicSlots(onlyUnlocked) end
 function C_ArtifactUI.GetEquippedArtifactRelicInfo(relicSlotIndex) end
 
 ---@param relicSlotIndex number
----@return string|nil lockedReason
+---@return string? lockedReason
 ---[Documentation](https://wow.gamepedia.com/API_C_ArtifactUI.GetEquippedRelicLockedReason)
 function C_ArtifactUI.GetEquippedRelicLockedReason(relicSlotIndex) end
 
@@ -238,7 +238,7 @@ function C_ArtifactUI.GetPowersAffectedByRelic(relicSlotIndex) end
 ---[Documentation](https://wow.gamepedia.com/API_C_ArtifactUI.GetPowersAffectedByRelicItemLink)
 function C_ArtifactUI.GetPowersAffectedByRelicItemLink(relicItemInfo) end
 
----@return number|nil artifactAppearanceID
+---@return number? artifactAppearanceID
 ---[Documentation](https://wow.gamepedia.com/API_C_ArtifactUI.GetPreviewAppearance)
 function C_ArtifactUI.GetPreviewAppearance() end
 
@@ -259,7 +259,7 @@ function C_ArtifactUI.GetRelicInfo(relicSlotIndex) end
 function C_ArtifactUI.GetRelicInfoByItemID(itemID) end
 
 ---@param relicSlotIndex number
----@return string|nil lockedReason
+---@return string? lockedReason
 ---[Documentation](https://wow.gamepedia.com/API_C_ArtifactUI.GetRelicLockedReason)
 function C_ArtifactUI.GetRelicLockedReason(relicSlotIndex) end
 
@@ -273,7 +273,7 @@ function C_ArtifactUI.GetRelicSlotType(relicSlotIndex) end
 function C_ArtifactUI.GetRespecArtifactArtInfo() end
 
 ---@return number itemID
----@return number|nil altItemID
+---@return number? altItemID
 ---@return string name
 ---@return number icon
 ---@return number xp
@@ -281,8 +281,8 @@ function C_ArtifactUI.GetRespecArtifactArtInfo() end
 ---@return number quality
 ---@return number artifactAppearanceID
 ---@return number appearanceModID
----@return number|nil itemAppearanceID
----@return number|nil altItemAppearanceID
+---@return number? itemAppearanceID
+---@return number? altItemAppearanceID
 ---@return boolean altOnTop
 ---@return number tier
 ---[Documentation](https://wow.gamepedia.com/API_C_ArtifactUI.GetRespecArtifactInfo)
@@ -377,6 +377,6 @@ local ArtifactArtInfo = {}
 ---@field isFinal boolean
 ---@field tier number
 ---@field position Vector2DMixin
----@field offset Vector2DMixin|nil
----@field linearIndex number|nil
+---@field offset Vector2DMixin
+---@field linearIndex number
 local ArtifactPowerInfo = {}

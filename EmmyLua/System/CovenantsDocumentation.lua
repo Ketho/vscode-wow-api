@@ -5,7 +5,7 @@ C_Covenants = {}
 function C_Covenants.GetActiveCovenantID() end
 
 ---@param covenantID number
----@return CovenantData|nil data
+---@return CovenantData? data
 ---[Documentation](https://wow.gamepedia.com/API_C_Covenants.GetCovenantData)
 function C_Covenants.GetCovenantData(covenantID) end
 

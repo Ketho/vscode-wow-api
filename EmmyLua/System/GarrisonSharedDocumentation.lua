@@ -13,7 +13,7 @@ local GarrisonAbilityEffect = {}
 ---@field isTrait boolean
 ---@field isSpecialization boolean
 ---@field temporary boolean
----@field category string|nil
+---@field category string
 ---@field counters GarrisonAbilityEffect[]
 ---@field isEmptySlot boolean
 local GarrisonFollowerAbilityInfo = {}
@@ -31,7 +31,7 @@ local GarrisonTalentCurrencyCostInfo = {}
 ---@field tier number
 ---@field uiOrder number
 ---@field type number
----@field prerequisiteTalentID number|nil
+---@field prerequisiteTalentID number
 ---@field selected boolean
 ---@field researched boolean
 ---@field researchDuration number
@@ -45,8 +45,8 @@ local GarrisonTalentCurrencyCostInfo = {}
 ---@field isBeingResearched boolean
 ---@field description string
 ---@field perkSpellID number
----@field researchDescription string|nil
----@field playerConditionReason string|nil
+---@field researchDescription string
+---@field playerConditionReason string
 ---@field socketInfo GarrisonTalentSocketInfo
 local GarrisonTalentInfo = {}
 

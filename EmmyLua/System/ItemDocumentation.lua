@@ -26,7 +26,7 @@ function C_Item.DoesItemExistByID(itemInfo) end
 function C_Item.DoesItemMatchBonusTreeReplacement(itemLoc) end
 
 ---@param itemLocation ItemLocationMixin
----@return number|nil currentItemLevel
+---@return number? currentItemLevel
 ---[Documentation](https://wow.gamepedia.com/API_C_Item.GetCurrentItemLevel)
 function C_Item.GetCurrentItemLevel(itemLocation) end
 
@@ -41,47 +41,47 @@ function C_Item.GetItemGUID(itemLocation) end
 function C_Item.GetItemID(itemLocation) end
 
 ---@param itemLocation ItemLocationMixin
----@return number|nil icon
+---@return number? icon
 ---[Documentation](https://wow.gamepedia.com/API_C_Item.GetItemIcon)
 function C_Item.GetItemIcon(itemLocation) end
 
 ---@param itemInfo string
----@return number|nil icon
+---@return number? icon
 ---[Documentation](https://wow.gamepedia.com/API_C_Item.GetItemIconByID)
 function C_Item.GetItemIconByID(itemInfo) end
 
 ---@param itemLocation ItemLocationMixin
----@return InventoryType|nil inventoryType
+---@return InventoryType? inventoryType
 ---[Documentation](https://wow.gamepedia.com/API_C_Item.GetItemInventoryType)
 function C_Item.GetItemInventoryType(itemLocation) end
 
 ---@param itemInfo string
----@return InventoryType|nil inventoryType
+---@return InventoryType? inventoryType
 ---[Documentation](https://wow.gamepedia.com/API_C_Item.GetItemInventoryTypeByID)
 function C_Item.GetItemInventoryTypeByID(itemInfo) end
 
 ---@param itemLocation ItemLocationMixin
----@return string|nil itemLink
+---@return string? itemLink
 ---[Documentation](https://wow.gamepedia.com/API_C_Item.GetItemLink)
 function C_Item.GetItemLink(itemLocation) end
 
 ---@param itemLocation ItemLocationMixin
----@return string|nil itemName
+---@return string? itemName
 ---[Documentation](https://wow.gamepedia.com/API_C_Item.GetItemName)
 function C_Item.GetItemName(itemLocation) end
 
 ---@param itemInfo string
----@return string|nil itemName
+---@return string? itemName
 ---[Documentation](https://wow.gamepedia.com/API_C_Item.GetItemNameByID)
 function C_Item.GetItemNameByID(itemInfo) end
 
 ---@param itemLocation ItemLocationMixin
----@return ItemQuality|nil itemQuality
+---@return ItemQuality? itemQuality
 ---[Documentation](https://wow.gamepedia.com/API_C_Item.GetItemQuality)
 function C_Item.GetItemQuality(itemLocation) end
 
 ---@param itemInfo string
----@return ItemQuality|nil itemQuality
+---@return ItemQuality? itemQuality
 ---[Documentation](https://wow.gamepedia.com/API_C_Item.GetItemQualityByID)
 function C_Item.GetItemQualityByID(itemInfo) end
 

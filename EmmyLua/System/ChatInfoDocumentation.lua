@@ -38,7 +38,7 @@ function C_ChatInfo.GetClubStreamIDs(clubID) end
 ---[Documentation](https://wow.gamepedia.com/API_C_ChatInfo.GetGeneralChannelID)
 function C_ChatInfo.GetGeneralChannelID() end
 
----@return number|nil localID
+---@return number? localID
 ---[Documentation](https://wow.gamepedia.com/API_C_ChatInfo.GetGeneralChannelLocalID)
 function C_ChatInfo.GetGeneralChannelLocalID() end
 
@@ -78,7 +78,7 @@ function C_ChatInfo.IsPartyChannelType(channelType) end
 ---[Documentation](https://wow.gamepedia.com/API_C_ChatInfo.IsRegionalServiceAvailable)
 function C_ChatInfo.IsRegionalServiceAvailable() end
 
----@param chatLine number|nil
+---@param chatLine? number
 ---@return boolean isValid
 ---[Documentation](https://wow.gamepedia.com/API_C_ChatInfo.IsValidChatLine)
 function C_ChatInfo.IsValidChatLine(chatLine) end
@@ -90,8 +90,8 @@ function C_ChatInfo.IsValidChatLine(chatLine) end
 function C_ChatInfo.RegisterAddonMessagePrefix(prefix) end
 
 ---@param input string
----@param noIconReplacement boolean|nil
----@param noGroupReplacement boolean|nil
+---@param noIconReplacement? boolean
+---@param noGroupReplacement? boolean
 ---@return string output
 ---[Documentation](https://wow.gamepedia.com/API_C_ChatInfo.ReplaceIconAndGroupExpressions)
 function C_ChatInfo.ReplaceIconAndGroupExpressions(input, noIconReplacement, noGroupReplacement) end
@@ -101,8 +101,8 @@ function C_ChatInfo.ResetDefaultZoneChannels() end
 
 ---@param prefix string
 ---@param message string
----@param chatType string|nil
----@param target string|nil
+---@param chatType? string
+---@param target? string
 ---@return boolean success
 ---[Documentation](https://wow.gamepedia.com/API_C_ChatInfo.SendAddonMessage)
 ---Sends a text payload to other clients specified by chatChannel and target which are registered to listen for prefix.
@@ -110,8 +110,8 @@ function C_ChatInfo.SendAddonMessage(prefix, message, chatType, target) end
 
 ---@param prefix string
 ---@param message string
----@param chatType string|nil
----@param target string|nil
+---@param chatType? string
+---@param target? string
 ---@return boolean success
 ---[Documentation](https://wow.gamepedia.com/API_C_ChatInfo.SendAddonMessageLogged)
 ---Sends a text payload to other clients specified by chatChannel and target which are registered to listen for prefix. Intended for plain text payloads; logged and throttled.

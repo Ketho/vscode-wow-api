@@ -20,22 +20,22 @@ function GetUnitPowerBarInfo(unitToken) end
 function GetUnitPowerBarInfoByID(barID) end
 
 ---@param unitToken string
----@return string|nil name
----@return string|nil tooltip
----@return string|nil cost
+---@return string? name
+---@return string? tooltip
+---@return string? cost
 ---[Documentation](https://wow.gamepedia.com/API_GetUnitPowerBarStrings)
 function GetUnitPowerBarStrings(unitToken) end
 
 ---@param barID number
----@return string|nil name
----@return string|nil tooltip
----@return string|nil cost
+---@return string? name
+---@return string? tooltip
+---@return string? cost
 ---[Documentation](https://wow.gamepedia.com/API_GetUnitPowerBarStringsByID)
 function GetUnitPowerBarStringsByID(barID) end
 
 ---@param unitToken string
 ---@param textureIndex number
----@param timerIndex number|nil
+---@param timerIndex? number
 ---@return number texture
 ---@return number colorR
 ---@return number colorG
@@ -119,7 +119,7 @@ function UnitIsOwnerOrControllerOfUnit(controllingUnit, controlledUnit) end
 function UnitNameplateShowsWidgetsOnly(unit) end
 
 ---@param unit string
----@return PhaseReason|nil reason
+---@return PhaseReason? reason
 ---[Documentation](https://wow.gamepedia.com/API_UnitPhaseReason)
 function UnitPhaseReason(unit) end
 
@@ -148,7 +148,7 @@ function UnitPowerDisplayMod(powerType) end
 function UnitPowerMax(unitToken, powerType, unmodified) end
 
 ---@param unit string
----@return PvPUnitClassification|nil classification
+---@return PvPUnitClassification? classification
 ---[Documentation](https://wow.gamepedia.com/API_UnitPvpClassification)
 function UnitPvpClassification(unit) end
 
@@ -163,7 +163,7 @@ function UnitQuestTrivialLevelRange(unit) end
 function UnitQuestTrivialLevelRangeScaling(unit) end
 
 ---@param unit string
----@return number|nil sex
+---@return number? sex
 ---[Documentation](https://wow.gamepedia.com/API_UnitSex)
 function UnitSex(unit) end
 

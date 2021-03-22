@@ -27,8 +27,8 @@ function C_TransmogSets.GetBaseSetsCounts() end
 ---[Documentation](https://wow.gamepedia.com/API_C_TransmogSets.GetBaseSetsFilter)
 function C_TransmogSets.GetBaseSetsFilter(index) end
 
----@return number|nil detailsCameraID
----@return number|nil vendorCameraID
+---@return number? detailsCameraID
+---@return number? vendorCameraID
 ---[Documentation](https://wow.gamepedia.com/API_C_TransmogSets.GetCameraIDs)
 function C_TransmogSets.GetCameraIDs() end
 

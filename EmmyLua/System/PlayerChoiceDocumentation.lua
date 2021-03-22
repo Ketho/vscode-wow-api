@@ -31,7 +31,7 @@ local PlayerChoiceRarity = {
 ---@field questionText string
 ---@field numOptions number
 ---@field uiTextureKit string
----@field soundKitID number|nil
+---@field soundKitID number
 ---@field hideWarboardHeader boolean
 ---@field keepOpenAfterChoice boolean
 local PlayerChoiceInfo = {}
@@ -43,23 +43,23 @@ local PlayerChoiceInfo = {}
 ---@field description string
 ---@field header string
 ---@field choiceArtID number
----@field confirmation string|nil
----@field widgetSetID number|nil
+---@field confirmation string
+---@field widgetSetID number
 ---@field disabledButton boolean
 ---@field desaturatedArt boolean
 ---@field disabledOption boolean
----@field groupID number|nil
----@field headerIconAtlasElement string|nil
----@field subHeader string|nil
----@field buttonTooltip string|nil
----@field rewardQuestID number|nil
----@field soundKitID number|nil
+---@field groupID number
+---@field headerIconAtlasElement string
+---@field subHeader string
+---@field buttonTooltip string
+---@field rewardQuestID number
+---@field soundKitID number
 ---@field hasRewards boolean
 ---@field rarity PlayerChoiceRarity
----@field rarityColor ColorMixin|nil
----@field typeArtID number|nil
----@field uiTextureKit string|nil
----@field spellID number|nil
+---@field rarityColor ColorMixin
+---@field typeArtID number
+---@field uiTextureKit string
+---@field spellID number
 ---@field maxStacks number
 local PlayerChoiceOptionInfo = {}
 
@@ -70,8 +70,8 @@ local PlayerChoiceOptionInfo = {}
 local PlayerChoiceRewardCurrencyInfo = {}
 
 ---@class PlayerChoiceRewardInfo
----@field money number|nil
----@field xp number|nil
+---@field money number
+---@field xp number
 ---@field itemRewards PlayerChoiceRewardItemInfo[]
 ---@field currencyRewards PlayerChoiceRewardCurrencyInfo[]
 ---@field repRewards PlayerChoiceRewardReputationInfo[]

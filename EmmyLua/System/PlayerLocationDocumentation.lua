@@ -6,29 +6,29 @@ C_PlayerInfo = {}
 function C_PlayerInfo.GUIDIsPlayer(guid) end
 
 ---@param playerLocation PlayerLocationMixin
----@return string|nil className
----@return string|nil classFilename
----@return number|nil classID
+---@return string? className
+---@return string? classFilename
+---@return number? classID
 ---[Documentation](https://wow.gamepedia.com/API_C_PlayerInfo.GetClass)
 function C_PlayerInfo.GetClass(playerLocation) end
 
 ---@param playerLocation PlayerLocationMixin
----@return string|nil name
+---@return string? name
 ---[Documentation](https://wow.gamepedia.com/API_C_PlayerInfo.GetName)
 function C_PlayerInfo.GetName(playerLocation) end
 
 ---@param playerLocation PlayerLocationMixin
----@return number|nil raceID
+---@return number? raceID
 ---[Documentation](https://wow.gamepedia.com/API_C_PlayerInfo.GetRace)
 function C_PlayerInfo.GetRace(playerLocation) end
 
 ---@param playerLocation PlayerLocationMixin
----@return number|nil sex
+---@return number? sex
 ---[Documentation](https://wow.gamepedia.com/API_C_PlayerInfo.GetSex)
 function C_PlayerInfo.GetSex(playerLocation) end
 
----@param playerLocation PlayerLocationMixin|nil
----@return boolean|nil isConnected
+---@param playerLocation? PlayerLocationMixin
+---@return boolean? isConnected
 ---[Documentation](https://wow.gamepedia.com/API_C_PlayerInfo.IsConnected)
 function C_PlayerInfo.IsConnected(playerLocation) end
 

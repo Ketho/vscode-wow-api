@@ -32,13 +32,13 @@ function C_GossipInfo.GetNumOptions() end
 function C_GossipInfo.GetOptions() end
 
 ---@param uiMapID number
----@return number|nil gossipPoiID
+---@return number? gossipPoiID
 ---[Documentation](https://wow.gamepedia.com/API_C_GossipInfo.GetPoiForUiMapID)
 function C_GossipInfo.GetPoiForUiMapID(uiMapID) end
 
 ---@param uiMapID number
 ---@param gossipPoiID number
----@return GossipPoiInfo|nil gossipPoiInfo
+---@return GossipPoiInfo? gossipPoiInfo
 ---[Documentation](https://wow.gamepedia.com/API_C_GossipInfo.GetPoiInfo)
 function C_GossipInfo.GetPoiInfo(uiMapID, gossipPoiID) end
 
@@ -58,8 +58,8 @@ function C_GossipInfo.SelectActiveQuest(index) end
 function C_GossipInfo.SelectAvailableQuest(index) end
 
 ---@param index number
----@param text string|nil
----@param confirmed boolean|nil
+---@param text? string
+---@param confirmed? boolean
 ---[Documentation](https://wow.gamepedia.com/API_C_GossipInfo.SelectOption)
 function C_GossipInfo.SelectOption(index, text, confirmed) end
 
@@ -88,7 +88,7 @@ local GossipOptionRewardInfo = {}
 ---@field type string
 ---@field rewards GossipOptionRewardInfo[]
 ---@field status GossipOptionStatus
----@field spellID number|nil
+---@field spellID number
 local GossipOptionUIInfo = {}
 
 ---@class GossipPoiInfo
@@ -102,9 +102,9 @@ local GossipPoiInfo = {}
 ---@field title string
 ---@field questLevel number
 ---@field isTrivial boolean
----@field frequency number|nil
----@field repeatable boolean|nil
----@field isComplete boolean|nil
+---@field frequency number
+---@field repeatable boolean
+---@field isComplete boolean
 ---@field isLegendary boolean
 ---@field isIgnored boolean
 ---@field questID number

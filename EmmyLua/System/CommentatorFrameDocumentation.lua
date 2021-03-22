@@ -42,7 +42,7 @@ function C_Commentator.ClearCameraTarget() end
 ---[Documentation](https://wow.gamepedia.com/API_C_Commentator.ClearFollowTarget)
 function C_Commentator.ClearFollowTarget() end
 
----@param lookAtIndex number|nil
+---@param lookAtIndex? number
 ---[Documentation](https://wow.gamepedia.com/API_C_Commentator.ClearLookAtTarget)
 function C_Commentator.ClearLookAtTarget(lookAtIndex) end
 
@@ -60,12 +60,12 @@ function C_Commentator.ExitInstance() end
 function C_Commentator.FindSpectatedUnit(unitToken) end
 
 ---@param teamIndex number
----@return string|nil teamName
+---@return string? teamName
 ---[Documentation](https://wow.gamepedia.com/API_C_Commentator.FindTeamNameInCurrentInstance)
 function C_Commentator.FindTeamNameInCurrentInstance(teamIndex) end
 
 ---@param playerNames string[]
----@return string|nil teamName
+---@return string? teamName
 ---[Documentation](https://wow.gamepedia.com/API_C_Commentator.FindTeamNameInDirectory)
 function C_Commentator.FindTeamNameInDirectory(playerNames) end
 
@@ -74,7 +74,7 @@ function C_Commentator.FlushCommentatorHistory() end
 
 ---@param factionIndex number
 ---@param playerIndex number
----@param forceInstantTransition boolean|nil
+---@param forceInstantTransition? boolean
 ---[Documentation](https://wow.gamepedia.com/API_C_Commentator.FollowPlayer)
 function C_Commentator.FollowPlayer(factionIndex, playerIndex, forceInstantTransition) end
 
@@ -123,7 +123,7 @@ function C_Commentator.GetCameraPosition() end
 ---[Documentation](https://wow.gamepedia.com/API_C_Commentator.GetCommentatorHistory)
 function C_Commentator.GetCommentatorHistory() end
 
----@return number|nil mapID
+---@return number? mapID
 ---[Documentation](https://wow.gamepedia.com/API_C_Commentator.GetCurrentMapID)
 function C_Commentator.GetCurrentMapID() end
 
@@ -159,7 +159,7 @@ function C_Commentator.GetIndirectSpellID(trackedSpellID) end
 ---@param mapIndex number
 ---@param instanceIndex number
 ---@return number mapID
----@return string|nil mapName
+---@return string? mapName
 ---@return number status
 ---@return number instanceIDLow
 ---@return number instanceIDHigh
@@ -276,7 +276,7 @@ function C_Commentator.GetPlayerCrowdControlInfoByUnit(token) end
 
 ---@param teamIndex number
 ---@param playerIndex number
----@return CommentatorPlayerData|nil info
+---@return CommentatorPlayerData? info
 ---[Documentation](https://wow.gamepedia.com/API_C_Commentator.GetPlayerData)
 function C_Commentator.GetPlayerData(teamIndex, playerIndex) end
 
@@ -346,7 +346,7 @@ function C_Commentator.GetTeamColor(teamIndex) end
 ---[Documentation](https://wow.gamepedia.com/API_C_Commentator.GetTeamColorByUnit)
 function C_Commentator.GetTeamColorByUnit(unitToken) end
 
----@return number|nil timeLeft
+---@return number? timeLeft
 ---[Documentation](https://wow.gamepedia.com/API_C_Commentator.GetTimeLeftInMatch)
 function C_Commentator.GetTimeLeftInMatch() end
 
@@ -358,13 +358,13 @@ function C_Commentator.GetTrackedSpellID(indirectSpellID) end
 ---@param teamIndex number
 ---@param playerIndex number
 ---@param category TrackedSpellCategory
----@return number[]|nil spells
+---@return number[]? spells
 ---[Documentation](https://wow.gamepedia.com/API_C_Commentator.GetTrackedSpells)
 function C_Commentator.GetTrackedSpells(teamIndex, playerIndex, category) end
 
 ---@param unitToken string
 ---@param category TrackedSpellCategory
----@return number[]|nil spells
+---@return number[]? spells
 ---[Documentation](https://wow.gamepedia.com/API_C_Commentator.GetTrackedSpellsByUnit)
 function C_Commentator.GetTrackedSpellsByUnit(unitToken, category) end
 
@@ -426,7 +426,7 @@ function C_Commentator.IsUsingSmartCamera() end
 
 ---@param factionIndex number
 ---@param playerIndex number
----@param lookAtIndex number|nil
+---@param lookAtIndex? number
 ---[Documentation](https://wow.gamepedia.com/API_C_Commentator.LookAtPlayer)
 function C_Commentator.LookAtPlayer(factionIndex, playerIndex, lookAtIndex) end
 
@@ -637,7 +637,7 @@ function C_Commentator.SwapTeamSides() end
 ---[Documentation](https://wow.gamepedia.com/API_C_Commentator.ToggleCheats)
 function C_Commentator.ToggleCheats() end
 
----@param targetPlayer string|nil
+---@param targetPlayer? string
 ---[Documentation](https://wow.gamepedia.com/API_C_Commentator.UpdateMapInfo)
 function C_Commentator.UpdateMapInfo(targetPlayer) end
 

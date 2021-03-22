@@ -4,13 +4,13 @@ C_QuestLog = {}
 function C_QuestLog.AbandonQuest() end
 
 ---@param questID number
----@param watchType QuestWatchType|nil
+---@param watchType? QuestWatchType
 ---@return boolean wasWatched
 ---[Documentation](https://wow.gamepedia.com/API_C_QuestLog.AddQuestWatch)
 function C_QuestLog.AddQuestWatch(questID, watchType) end
 
 ---@param questID number
----@param watchType QuestWatchType|nil
+---@param watchType? QuestWatchType
 ---@return boolean wasWatched
 ---[Documentation](https://wow.gamepedia.com/API_C_QuestLog.AddWorldQuestWatch)
 function C_QuestLog.AddWorldQuestWatch(questID, watchType) end
@@ -37,7 +37,7 @@ function C_QuestLog.GetActiveThreatMaps() end
 function C_QuestLog.GetAllCompletedQuestIDs() end
 
 ---@param uiMapID number
----@return BountyInfo[]|nil bounties
+---@return BountyInfo[]? bounties
 ---[Documentation](https://wow.gamepedia.com/API_C_QuestLog.GetBountiesForMapID)
 function C_QuestLog.GetBountiesForMapID(uiMapID) end
 
@@ -55,12 +55,12 @@ function C_QuestLog.GetBountySetInfoForMapID(uiMapID) end
 function C_QuestLog.GetDistanceSqToQuest(questID) end
 
 ---@param questLogIndex number
----@return QuestInfo|nil info
+---@return QuestInfo? info
 ---[Documentation](https://wow.gamepedia.com/API_C_QuestLog.GetInfo)
 function C_QuestLog.GetInfo(questLogIndex) end
 
 ---@param questID number
----@return number|nil questLogIndex
+---@return number? questLogIndex
 ---[Documentation](https://wow.gamepedia.com/API_C_QuestLog.GetLogIndexForQuestID)
 ---Only returns a log index for actual quests, not headers
 function C_QuestLog.GetLogIndexForQuestID(questID) end
@@ -126,7 +126,7 @@ function C_QuestLog.GetNumWorldQuestWatches() end
 function C_QuestLog.GetQuestAdditionalHighlights(questID) end
 
 ---@param questID number
----@return QuestTheme|nil theme
+---@return QuestTheme? theme
 ---[Documentation](https://wow.gamepedia.com/API_C_QuestLog.GetQuestDetailsTheme)
 function C_QuestLog.GetQuestDetailsTheme(questID) end
 
@@ -136,18 +136,18 @@ function C_QuestLog.GetQuestDetailsTheme(questID) end
 function C_QuestLog.GetQuestDifficultyLevel(questID) end
 
 ---@param questLogIndex number
----@return number|nil questID
+---@return number? questID
 ---[Documentation](https://wow.gamepedia.com/API_C_QuestLog.GetQuestIDForLogIndex)
 ---Only returns a questID for actual quests, not headers
 function C_QuestLog.GetQuestIDForLogIndex(questLogIndex) end
 
 ---@param questWatchIndex number
----@return number|nil questID
+---@return number? questID
 ---[Documentation](https://wow.gamepedia.com/API_C_QuestLog.GetQuestIDForQuestWatchIndex)
 function C_QuestLog.GetQuestIDForQuestWatchIndex(questWatchIndex) end
 
 ---@param questWatchIndex number
----@return number|nil questID
+---@return number? questID
 ---[Documentation](https://wow.gamepedia.com/API_C_QuestLog.GetQuestIDForWorldQuestWatchIndex)
 function C_QuestLog.GetQuestIDForWorldQuestWatchIndex(questWatchIndex) end
 
@@ -157,12 +157,12 @@ function C_QuestLog.GetQuestIDForWorldQuestWatchIndex(questWatchIndex) end
 function C_QuestLog.GetQuestObjectives(questID) end
 
 ---@param questID number
----@return QuestTagInfo|nil info
+---@return QuestTagInfo? info
 ---[Documentation](https://wow.gamepedia.com/API_C_QuestLog.GetQuestTagInfo)
 function C_QuestLog.GetQuestTagInfo(questID) end
 
 ---@param questID number
----@return QuestWatchType|nil watchType
+---@return QuestWatchType? watchType
 ---[Documentation](https://wow.gamepedia.com/API_C_QuestLog.GetQuestWatchType)
 function C_QuestLog.GetQuestWatchType(questID) end
 
@@ -171,7 +171,7 @@ function C_QuestLog.GetQuestWatchType(questID) end
 ---[Documentation](https://wow.gamepedia.com/API_C_QuestLog.GetQuestsOnMap)
 function C_QuestLog.GetQuestsOnMap(uiMapID) end
 
----@param questID number|nil
+---@param questID? number
 ---@return number requiredMoney
 ---[Documentation](https://wow.gamepedia.com/API_C_QuestLog.GetRequiredMoney)
 ---Uses the selected quest if no questID is provided
@@ -193,13 +193,13 @@ function C_QuestLog.GetSuggestedGroupSize(questID) end
 function C_QuestLog.GetTimeAllowed(questID) end
 
 ---@param questLogIndex number
----@return string|nil title
+---@return string? title
 ---[Documentation](https://wow.gamepedia.com/API_C_QuestLog.GetTitleForLogIndex)
 ---Returns a valid title for anything that is in the quest log.
 function C_QuestLog.GetTitleForLogIndex(questLogIndex) end
 
 ---@param questID number
----@return string|nil title
+---@return string? title
 ---[Documentation](https://wow.gamepedia.com/API_C_QuestLog.GetTitleForQuestID)
 ---Only returns a valid title for quests, header titles cannot be discovered using this.
 function C_QuestLog.GetTitleForQuestID(questID) end
@@ -340,7 +340,7 @@ function C_QuestLog.QuestHasQuestSessionBonus(questID) end
 function C_QuestLog.QuestHasWarModeBonus(questID) end
 
 ---@param questID number
----@return boolean|nil readyForTurnIn
+---@return boolean? readyForTurnIn
 ---[Documentation](https://wow.gamepedia.com/API_C_QuestLog.ReadyForTurnIn)
 function C_QuestLog.ReadyForTurnIn(questID) end
 
@@ -426,11 +426,11 @@ local WorldQuestQuality = {
 ---@field title string
 ---@field questLogIndex number
 ---@field questID number
----@field campaignID number|nil
+---@field campaignID number
 ---@field level number
 ---@field difficultyLevel number
 ---@field suggestedGroup number
----@field frequency QuestFrequency|nil
+---@field frequency QuestFrequency
 ---@field isHeader boolean
 ---@field isCollapsed boolean
 ---@field startEvent boolean
@@ -465,11 +465,11 @@ local QuestOnMapInfo = {}
 ---@class QuestTagInfo
 ---@field tagName string
 ---@field tagID number
----@field worldQuestType number|nil
----@field quality WorldQuestQuality|nil
----@field tradeskillLineID number|nil
----@field isElite boolean|nil
----@field displayExpiration boolean|nil
+---@field worldQuestType number
+---@field quality WorldQuestQuality
+---@field tradeskillLineID number
+---@field isElite boolean
+---@field displayExpiration boolean
 local QuestTagInfo = {}
 
 ---@class QuestTheme

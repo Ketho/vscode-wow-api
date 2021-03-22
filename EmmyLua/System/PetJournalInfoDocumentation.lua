@@ -2,18 +2,18 @@ C_PetJournal = {}
 
 ---@param speciesID number
 ---@param index number
----@return number|nil displayID
+---@return number? displayID
 ---[Documentation](https://wow.gamepedia.com/API_C_PetJournal.GetDisplayIDByIndex)
 function C_PetJournal.GetDisplayIDByIndex(speciesID, index) end
 
 ---@param speciesID number
 ---@param index number
----@return number|nil displayProbability
+---@return number? displayProbability
 ---[Documentation](https://wow.gamepedia.com/API_C_PetJournal.GetDisplayProbabilityByIndex)
 function C_PetJournal.GetDisplayProbabilityByIndex(speciesID, index) end
 
 ---@param speciesID number
----@return number|nil numDisplays
+---@return number? numDisplays
 ---[Documentation](https://wow.gamepedia.com/API_C_PetJournal.GetNumDisplays)
 function C_PetJournal.GetNumDisplays(speciesID) end
 
@@ -30,7 +30,7 @@ function C_PetJournal.GetPetSummonInfo(battlePetGUID) end
 function C_PetJournal.PetIsSummonable(battlePetGUID) end
 
 ---@param speciesID number
----@return boolean|nil usesRandomDisplay
+---@return boolean? usesRandomDisplay
 ---[Documentation](https://wow.gamepedia.com/API_C_PetJournal.PetUsesRandomDisplay)
 function C_PetJournal.PetUsesRandomDisplay(speciesID) end
 

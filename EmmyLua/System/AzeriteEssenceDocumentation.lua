@@ -114,6 +114,6 @@ local AzeriteEssenceInfo = {}
 ---@field requiredLevel number
 ---@field canUnlock boolean
 ---@field unlocked boolean
----@field rank number|nil
----@field slot AzeriteEssence|nil
+---@field rank number
+---@field slot AzeriteEssence
 local AzeriteMilestoneInfo = {}

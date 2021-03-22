@@ -6,7 +6,7 @@ function C_Soulbinds.ActivateSoulbind(soulbindID) end
 
 ---@param soulbindID number
 ---@return boolean result
----@return string|nil errorDescription
+---@return string? errorDescription
 ---[Documentation](https://wow.gamepedia.com/API_C_Soulbinds.CanActivateSoulbind)
 function C_Soulbinds.CanActivateSoulbind(soulbindID) end
 
@@ -16,7 +16,7 @@ function C_Soulbinds.CanModifySoulbind() end
 
 ---@param soulbindID number
 ---@return boolean result
----@return string|nil errorDescription
+---@return string? errorDescription
 ---[Documentation](https://wow.gamepedia.com/API_C_Soulbinds.CanResetConduitsInSoulbind)
 function C_Soulbinds.CanResetConduitsInSoulbind(soulbindID) end
 
@@ -77,16 +77,16 @@ function C_Soulbinds.GetConduitCollection(conduitType) end
 function C_Soulbinds.GetConduitCollectionCount() end
 
 ---@param conduitID number
----@return ConduitCollectionData|nil collectionData
+---@return ConduitCollectionData? collectionData
 ---[Documentation](https://wow.gamepedia.com/API_C_Soulbinds.GetConduitCollectionData)
 function C_Soulbinds.GetConduitCollectionData(conduitID) end
 
----@return ConduitCollectionData|nil collectionData
+---@return ConduitCollectionData? collectionData
 ---[Documentation](https://wow.gamepedia.com/API_C_Soulbinds.GetConduitCollectionDataAtCursor)
 function C_Soulbinds.GetConduitCollectionDataAtCursor() end
 
 ---@param virtualID number
----@return ConduitCollectionData|nil collectionData
+---@return ConduitCollectionData? collectionData
 ---[Documentation](https://wow.gamepedia.com/API_C_Soulbinds.GetConduitCollectionDataByVirtualID)
 function C_Soulbinds.GetConduitCollectionDataByVirtualID(virtualID) end
 
@@ -219,8 +219,8 @@ function C_Soulbinds.UnmodifyNode(nodeID) end
 ---@field conduitType SoulbindConduitType
 ---@field conduitSpecSetID number
 ---@field conduitSpecIDs number[]
----@field conduitSpecName string|nil
----@field covenantID number|nil
+---@field conduitSpecName string
+---@field covenantID number
 ---@field conduitItemID number
 local ConduitCollectionData = {}
 
@@ -253,13 +253,13 @@ local SoulbindModelSceneData = {}
 ---@field column number
 ---@field icon number
 ---@field spellID number
----@field playerConditionReason string|nil
+---@field playerConditionReason string
 ---@field conduitID number
 ---@field conduitRank number
 ---@field state SoulbindNodeState
----@field conduitType SoulbindConduitType|nil
+---@field conduitType SoulbindConduitType
 ---@field parentNodeIDs number[]
----@field failureRenownRequirement number|nil
+---@field failureRenownRequirement number
 local SoulbindNode = {}
 
 ---@class SoulbindTree

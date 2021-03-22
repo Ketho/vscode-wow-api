@@ -13,12 +13,12 @@ function C_Transmog.ClearPending(transmogLocation) end
 function C_Transmog.GetBaseCategory(transmogID) end
 
 ---@param itemModifiedAppearanceID number
----@return number|nil creatureDisplayID
+---@return number? creatureDisplayID
 ---[Documentation](https://wow.gamepedia.com/API_C_Transmog.GetCreatureDisplayIDForSource)
 function C_Transmog.GetCreatureDisplayIDForSource(itemModifiedAppearanceID) end
 
 ---@param itemModifiedAppearanceID number
----@return number|nil itemID
+---@return number? itemID
 ---[Documentation](https://wow.gamepedia.com/API_C_Transmog.GetItemIDForSource)
 function C_Transmog.GetItemIDForSource(itemModifiedAppearanceID) end
 
@@ -35,7 +35,7 @@ function C_Transmog.GetSlotForInventoryType(inventoryType) end
 ---@return number cannotTransmogrifyReason
 ---@return boolean hasUndo
 ---@return boolean isHideVisual
----@return number|nil texture
+---@return number? texture
 ---[Documentation](https://wow.gamepedia.com/API_C_Transmog.GetSlotInfo)
 function C_Transmog.GetSlotInfo(transmogLocation) end
 
@@ -62,7 +62,7 @@ function C_Transmog.GetSlotVisualInfo(transmogLocation) end
 
 ---@param transmogLocation TransmogLocationMixin
 ---@param transmogID number
----@param categoryID number|nil
+---@param categoryID? number
 ---[Documentation](https://wow.gamepedia.com/API_C_Transmog.SetPending)
 function C_Transmog.SetPending(transmogLocation, transmogID, categoryID) end
 

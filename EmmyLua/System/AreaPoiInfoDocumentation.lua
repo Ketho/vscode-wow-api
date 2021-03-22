@@ -27,9 +27,9 @@ function C_AreaPoiInfo.IsAreaPOITimed(areaPoiID) end
 ---@field areaPoiID number
 ---@field position Vector2DMixin
 ---@field name string
----@field description string|nil
----@field textureIndex number|nil
----@field widgetSetID number|nil
----@field atlasName string|nil
----@field uiTextureKit string|nil
+---@field description string
+---@field textureIndex number
+---@field widgetSetID number
+---@field atlasName string
+---@field uiTextureKit string
 local AreaPOIInfo = {}

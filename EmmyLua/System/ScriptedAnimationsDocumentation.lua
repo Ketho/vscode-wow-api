@@ -38,9 +38,9 @@ local ScriptedAnimationTrajectory = {
 ---@field offsetY number
 ---@field offsetZ number
 ---@field animationSpeed number
----@field startBehavior ScriptedAnimationBehavior|nil
----@field startSoundKitID number|nil
----@field finishEffectID number|nil
----@field finishBehavior ScriptedAnimationBehavior|nil
----@field finishSoundKitID number|nil
+---@field startBehavior ScriptedAnimationBehavior
+---@field startSoundKitID number
+---@field finishEffectID number
+---@field finishBehavior ScriptedAnimationBehavior
+---@field finishSoundKitID number
 local ScriptedAnimationEffect = {}

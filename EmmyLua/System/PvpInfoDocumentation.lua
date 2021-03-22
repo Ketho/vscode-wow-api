@@ -26,7 +26,7 @@ function C_PvP.CanToggleWarModeInArea() end
 ---[Documentation](https://wow.gamepedia.com/API_C_PvP.DoesMatchOutcomeAffectRating)
 function C_PvP.DoesMatchOutcomeAffectRating() end
 
----@return PvpBrawlInfo|nil brawlInfo
+---@return PvpBrawlInfo? brawlInfo
 ---[Documentation](https://wow.gamepedia.com/API_C_PvP.GetActiveBrawlInfo)
 function C_PvP.GetActiveBrawlInfo() end
 
@@ -56,19 +56,19 @@ function C_PvP.GetArenaCrowdControlInfo(playerToken) end
 ---@param teamSize number
 ---@return number honor
 ---@return number experience
----@return BattlefieldItemReward[]|nil itemRewards
----@return BattlefieldCurrencyReward[]|nil currencyRewards
+---@return BattlefieldItemReward[]? itemRewards
+---@return BattlefieldCurrencyReward[]? currencyRewards
 ---[Documentation](https://wow.gamepedia.com/API_C_PvP.GetArenaRewards)
 function C_PvP.GetArenaRewards(teamSize) end
 
 ---@return number honor
 ---@return number experience
----@return BattlefieldItemReward[]|nil itemRewards
----@return BattlefieldCurrencyReward[]|nil currencyRewards
+---@return BattlefieldItemReward[]? itemRewards
+---@return BattlefieldCurrencyReward[]? currencyRewards
 ---[Documentation](https://wow.gamepedia.com/API_C_PvP.GetArenaSkirmishRewards)
 function C_PvP.GetArenaSkirmishRewards() end
 
----@return PvpBrawlInfo|nil brawlInfo
+---@return PvpBrawlInfo? brawlInfo
 ---[Documentation](https://wow.gamepedia.com/API_C_PvP.GetAvailableBrawlInfo)
 ---If nil is returned, PVP_BRAWL_INFO_UPDATED event will be sent when the data is ready.
 function C_PvP.GetAvailableBrawlInfo() end
@@ -87,8 +87,8 @@ function C_PvP.GetBattlefieldVehicles(uiMapID) end
 ---@param brawlType BrawlType
 ---@return number honor
 ---@return number experience
----@return BattlefieldItemReward[]|nil itemRewards
----@return BattlefieldCurrencyReward[]|nil currencyRewards
+---@return BattlefieldItemReward[]? itemRewards
+---@return BattlefieldCurrencyReward[]? currencyRewards
 ---@return boolean hasWon
 ---[Documentation](https://wow.gamepedia.com/API_C_PvP.GetBrawlRewards)
 function C_PvP.GetBrawlRewards(brawlType) end
@@ -99,7 +99,7 @@ function C_PvP.GetBrawlRewards(brawlType) end
 function C_PvP.GetGlobalPvpScalingInfoForSpecID(specializationID) end
 
 ---@param honorLevel number
----@return HonorRewardInfo|nil info
+---@return HonorRewardInfo? info
 ---[Documentation](https://wow.gamepedia.com/API_C_PvP.GetHonorRewardInfo)
 function C_PvP.GetHonorRewardInfo(honorLevel) end
 
@@ -109,7 +109,7 @@ function C_PvP.GetHonorRewardInfo(honorLevel) end
 function C_PvP.GetLevelUpBattlegrounds(level) end
 
 ---@param pvpStatID number
----@return MatchPVPStatColumn|nil info
+---@return MatchPVPStatColumn? info
 ---[Documentation](https://wow.gamepedia.com/API_C_PvP.GetMatchPVPStatColumn)
 function C_PvP.GetMatchPVPStatColumn(pvpStatID) end
 
@@ -118,7 +118,7 @@ function C_PvP.GetMatchPVPStatColumn(pvpStatID) end
 function C_PvP.GetMatchPVPStatColumns() end
 
 ---@param honorLevel number
----@return number|nil nextHonorLevelWithReward
+---@return number? nextHonorLevelWithReward
 ---[Documentation](https://wow.gamepedia.com/API_C_PvP.GetNextHonorLevelForReward)
 function C_PvP.GetNextHonorLevelForReward(honorLevel) end
 
@@ -127,7 +127,7 @@ function C_PvP.GetNextHonorLevelForReward(honorLevel) end
 ---[Documentation](https://wow.gamepedia.com/API_C_PvP.GetOutdoorPvPWaitTime)
 function C_PvP.GetOutdoorPvPWaitTime(uiMapID) end
 
----@return PVPPersonalRatedInfo|nil info
+---@return PVPPersonalRatedInfo? info
 ---[Documentation](https://wow.gamepedia.com/API_C_PvP.GetPVPActiveMatchPersonalRatedInfo)
 function C_PvP.GetPVPActiveMatchPersonalRatedInfo() end
 
@@ -141,12 +141,12 @@ function C_PvP.GetPostMatchItemRewards() end
 
 ---@param tierEnum number
 ---@param bracketEnum number
----@return number|nil id
+---@return number? id
 ---[Documentation](https://wow.gamepedia.com/API_C_PvP.GetPvpTierID)
 function C_PvP.GetPvpTierID(tierEnum, bracketEnum) end
 
 ---@param tierID number
----@return PvpTierInfo|nil pvpTierInfo
+---@return PvpTierInfo? pvpTierInfo
 ---[Documentation](https://wow.gamepedia.com/API_C_PvP.GetPvpTierInfo)
 function C_PvP.GetPvpTierInfo(tierID) end
 
@@ -156,8 +156,8 @@ function C_PvP.GetRandomBGInfo() end
 
 ---@return number honor
 ---@return number experience
----@return BattlefieldItemReward[]|nil itemRewards
----@return BattlefieldCurrencyReward[]|nil currencyRewards
+---@return BattlefieldItemReward[]? itemRewards
+---@return BattlefieldCurrencyReward[]? currencyRewards
 ---[Documentation](https://wow.gamepedia.com/API_C_PvP.GetRandomBGRewards)
 function C_PvP.GetRandomBGRewards() end
 
@@ -167,15 +167,15 @@ function C_PvP.GetRandomEpicBGInfo() end
 
 ---@return number honor
 ---@return number experience
----@return BattlefieldItemReward[]|nil itemRewards
----@return BattlefieldCurrencyReward[]|nil currencyRewards
+---@return BattlefieldItemReward[]? itemRewards
+---@return BattlefieldCurrencyReward[]? currencyRewards
 ---[Documentation](https://wow.gamepedia.com/API_C_PvP.GetRandomEpicBGRewards)
 function C_PvP.GetRandomEpicBGRewards() end
 
 ---@return number honor
 ---@return number experience
----@return BattlefieldItemReward[]|nil itemRewards
----@return BattlefieldCurrencyReward[]|nil currencyRewards
+---@return BattlefieldItemReward[]? itemRewards
+---@return BattlefieldCurrencyReward[]? currencyRewards
 ---[Documentation](https://wow.gamepedia.com/API_C_PvP.GetRatedBGRewards)
 function C_PvP.GetRatedBGRewards() end
 
@@ -186,17 +186,17 @@ function C_PvP.GetRatedBGRewards() end
 function C_PvP.GetRewardItemLevelsByTierEnum(pvpTierEnum) end
 
 ---@param offsetIndex number
----@return PVPScoreInfo|nil info
+---@return PVPScoreInfo? info
 ---[Documentation](https://wow.gamepedia.com/API_C_PvP.GetScoreInfo)
 function C_PvP.GetScoreInfo(offsetIndex) end
 
 ---@param guid string
----@return PVPScoreInfo|nil info
+---@return PVPScoreInfo? info
 ---[Documentation](https://wow.gamepedia.com/API_C_PvP.GetScoreInfoByPlayerGuid)
 function C_PvP.GetScoreInfoByPlayerGuid(guid) end
 
 ---@return number tierID
----@return number|nil nextTierID
+---@return number? nextTierID
 ---[Documentation](https://wow.gamepedia.com/API_C_PvP.GetSeasonBestInfo)
 function C_PvP.GetSeasonBestInfo() end
 
@@ -205,7 +205,7 @@ function C_PvP.GetSeasonBestInfo() end
 ---[Documentation](https://wow.gamepedia.com/API_C_PvP.GetSkirmishInfo)
 function C_PvP.GetSkirmishInfo(pvpBracket) end
 
----@return SpecialEventDetails|nil info
+---@return SpecialEventDetails? info
 ---[Documentation](https://wow.gamepedia.com/API_C_PvP.GetSpecialEventDetails)
 function C_PvP.GetSpecialEventDetails() end
 
@@ -214,7 +214,7 @@ function C_PvP.GetSpecialEventDetails() end
 function C_PvP.GetSpecialEventInfo() end
 
 ---@param factionIndex number
----@return PVPTeamInfo|nil info
+---@return PVPTeamInfo? info
 ---[Documentation](https://wow.gamepedia.com/API_C_PvP.GetTeamInfo)
 function C_PvP.GetTeamInfo(factionIndex) end
 
@@ -405,7 +405,7 @@ local PvpBrawlInfo = {}
 ---@field lastWeeksBestRating number
 ---@field hasWonBracketToday boolean
 ---@field tier number
----@field ranking number|nil
+---@field ranking number
 local PVPPersonalRatedInfo = {}
 
 ---@class PVPPostMatchCurrencyReward

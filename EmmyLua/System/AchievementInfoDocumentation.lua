@@ -1,7 +1,7 @@
 C_AchievementInfo = {}
 
 ---@param achievementID number
----@return number|nil rewardItemID
+---@return number? rewardItemID
 ---[Documentation](https://wow.gamepedia.com/API_C_AchievementInfo.GetRewardItemID)
 function C_AchievementInfo.GetRewardItemID(achievementID) end
 

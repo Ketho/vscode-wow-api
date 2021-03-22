@@ -9,6 +9,6 @@ function C_PetInfo.GetPetTamersForMap(uiMapID) end
 ---@field areaPoiID number
 ---@field position Vector2DMixin
 ---@field name string
----@field atlasName string|nil
----@field textureIndex number|nil
+---@field atlasName string
+---@field textureIndex number
 local PetTamerMapInfo = {}

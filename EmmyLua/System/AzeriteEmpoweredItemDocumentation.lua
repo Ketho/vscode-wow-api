@@ -19,7 +19,7 @@ function C_AzeriteEmpoweredItem.ConfirmAzeriteEmpoweredItemRespec(azeriteEmpower
 function C_AzeriteEmpoweredItem.GetAllTierInfo(azeriteEmpoweredItemLocation) end
 
 ---@param itemInfo string
----@param classID number|nil
+---@param classID? number
 ---@return AzeriteEmpoweredItemTierInfo[] tierInfo
 ---[Documentation](https://wow.gamepedia.com/API_C_AzeriteEmpoweredItem.GetAllTierInfoByItemID)
 function C_AzeriteEmpoweredItem.GetAllTierInfoByItemID(itemInfo, classID) end
@@ -66,7 +66,7 @@ function C_AzeriteEmpoweredItem.IsAzeriteEmpoweredItem(itemLocation) end
 function C_AzeriteEmpoweredItem.IsAzeriteEmpoweredItemByID(itemInfo) end
 
 ---@param itemInfo string
----@param classID number|nil
+---@param classID? number
 ---@return boolean isAzeritePreviewSourceDisplayable
 ---[Documentation](https://wow.gamepedia.com/API_C_AzeriteEmpoweredItem.IsAzeritePreviewSourceDisplayable)
 function C_AzeriteEmpoweredItem.IsAzeritePreviewSourceDisplayable(itemInfo, classID) end

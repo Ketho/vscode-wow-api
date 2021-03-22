@@ -4,7 +4,7 @@ C_ChromieTime = {}
 function C_ChromieTime.CloseUI() end
 
 ---@param expansionRecID number
----@return ChromieTimeExpansionInfo|nil info
+---@return ChromieTimeExpansionInfo? info
 ---[Documentation](https://wow.gamepedia.com/API_C_ChromieTime.GetChromieTimeExpansionOption)
 function C_ChromieTime.GetChromieTimeExpansionOption(expansionRecID) end
 

@@ -49,7 +49,7 @@ function C_Calendar.ContextMenuEventComplain() end
 ---[Documentation](https://wow.gamepedia.com/API_C_Calendar.ContextMenuEventCopy)
 function C_Calendar.ContextMenuEventCopy() end
 
----@return string|nil calendarType
+---@return string? calendarType
 ---[Documentation](https://wow.gamepedia.com/API_C_Calendar.ContextMenuEventGetCalendarType)
 function C_Calendar.ContextMenuEventGetCalendarType() end
 
@@ -118,11 +118,11 @@ function C_Calendar.EventClearModerator(inviteIndex) end
 ---[Documentation](https://wow.gamepedia.com/API_C_Calendar.EventDecline)
 function C_Calendar.EventDecline() end
 
----@return string|nil calendarType
+---@return string? calendarType
 ---[Documentation](https://wow.gamepedia.com/API_C_Calendar.EventGetCalendarType)
 function C_Calendar.EventGetCalendarType() end
 
----@return string|nil info
+---@return string? info
 ---[Documentation](https://wow.gamepedia.com/API_C_Calendar.EventGetClubId)
 function C_Calendar.EventGetClubId() end
 
@@ -141,7 +141,7 @@ function C_Calendar.EventGetInviteResponseTime(eventIndex) end
 ---[Documentation](https://wow.gamepedia.com/API_C_Calendar.EventGetInviteSortCriterion)
 function C_Calendar.EventGetInviteSortCriterion() end
 
----@return number|nil inviteIndex
+---@return number? inviteIndex
 ---[Documentation](https://wow.gamepedia.com/API_C_Calendar.EventGetSelectedInvite)
 function C_Calendar.EventGetSelectedInvite() end
 
@@ -190,7 +190,7 @@ function C_Calendar.EventSelectInvite(inviteIndex) end
 ---[Documentation](https://wow.gamepedia.com/API_C_Calendar.EventSetAutoApprove)
 function C_Calendar.EventSetAutoApprove() end
 
----@param clubId string|nil
+---@param clubId? string
 ---[Documentation](https://wow.gamepedia.com/API_C_Calendar.EventSetClubId)
 function C_Calendar.EventSetClubId(clubId) end
 
@@ -267,9 +267,9 @@ function C_Calendar.GetDefaultGuildFilter() end
 function C_Calendar.GetEventIndex() end
 
 ---@param eventID string
----@param monthOffset number|nil
----@param monthDay number|nil
----@return CalendarEventIndexInfo|nil eventIndexInfo
+---@param monthOffset? number
+---@param monthDay? number
+---@return CalendarEventIndexInfo? eventIndexInfo
 ---[Documentation](https://wow.gamepedia.com/API_C_Calendar.GetEventIndexInfo)
 function C_Calendar.GetEventIndexInfo(eventID, monthOffset, monthDay) end
 
@@ -279,7 +279,7 @@ function C_Calendar.GetEventInfo() end
 
 ---@param offsetMonths number
 ---@param monthDay number
----@return number|nil firstPendingInvite
+---@return number? firstPendingInvite
 ---[Documentation](https://wow.gamepedia.com/API_C_Calendar.GetFirstPendingInvite)
 function C_Calendar.GetFirstPendingInvite(offsetMonths, monthDay) end
 
@@ -313,7 +313,7 @@ function C_Calendar.GetMinDate() end
 ---[Documentation](https://wow.gamepedia.com/API_C_Calendar.GetMonthInfo)
 function C_Calendar.GetMonthInfo(offsetMonths) end
 
----@return string|nil clubId
+---@return string? clubId
 ---[Documentation](https://wow.gamepedia.com/API_C_Calendar.GetNextClubId)
 function C_Calendar.GetNextClubId() end
 
@@ -353,7 +353,7 @@ function C_Calendar.IsEventOpen() end
 ---@param clubId string
 ---@param minLevel number
 ---@param maxLevel number
----@param maxRankOrder number|nil
+---@param maxRankOrder? number
 ---[Documentation](https://wow.gamepedia.com/API_C_Calendar.MassInviteCommunity)
 function C_Calendar.MassInviteCommunity(clubId, minLevel, maxLevel, maxRankOrder) end
 
@@ -385,7 +385,7 @@ function C_Calendar.SetAbsMonth(month, year) end
 ---[Documentation](https://wow.gamepedia.com/API_C_Calendar.SetMonth)
 function C_Calendar.SetMonth(offsetMonths) end
 
----@param clubId string|nil
+---@param clubId? string
 ---[Documentation](https://wow.gamepedia.com/API_C_Calendar.SetNextClubId)
 function C_Calendar.SetNextClubId(clubId) end
 
@@ -401,7 +401,7 @@ function C_Calendar.UpdateEvent() end
 ---@field calendarType string
 ---@field sequenceType string
 ---@field eventType CalendarEventType
----@field iconTexture number|nil
+---@field iconTexture number
 ---@field modStatus string
 ---@field inviteStatus number
 ---@field invitedBy string
@@ -425,33 +425,33 @@ local CalendarEventIndexInfo = {}
 ---@class CalendarEventInfo
 ---@field title string
 ---@field description string
----@field creator string|nil
+---@field creator string
 ---@field eventType CalendarEventType
 ---@field repeatOption number
 ---@field maxSize number
----@field textureIndex number|nil
+---@field textureIndex number
 ---@field time CalendarTime
 ---@field lockoutTime CalendarTime
 ---@field isLocked boolean
 ---@field isAutoApprove boolean
 ---@field hasPendingInvite boolean
----@field inviteStatus number|nil
----@field inviteType number|nil
+---@field inviteStatus number
+---@field inviteType number
 ---@field calendarType string
----@field communityName string|nil
+---@field communityName string
 local CalendarEventInfo = {}
 
 ---@class CalendarEventInviteInfo
----@field name string|nil
+---@field name string
 ---@field level number
----@field className string|nil
----@field classFilename string|nil
----@field inviteStatus number|nil
----@field modStatus string|nil
+---@field className string
+---@field classFilename string
+---@field inviteStatus number
+---@field modStatus string
 ---@field inviteIsMine boolean
 ---@field type number
 ---@field notes string
----@field classID number|nil
+---@field classID number
 ---@field guid string
 local CalendarEventInviteInfo = {}
 
@@ -464,9 +464,9 @@ local CalendarEventStatusOption = {}
 ---@field title string
 ---@field iconTexture number
 ---@field expansionLevel number
----@field difficultyId number|nil
----@field mapId number|nil
----@field isLfr boolean|nil
+---@field difficultyId number
+---@field mapId number
+---@field isLfr boolean
 local CalendarEventTextureInfo = {}
 
 ---@class CalendarEventTypeDisplayInfo
@@ -500,8 +500,8 @@ local CalendarGuildFilterInfo = {}
 ---@field name string
 ---@field description string
 ---@field texture number
----@field startTime CalendarTime|nil
----@field endTime CalendarTime|nil
+---@field startTime CalendarTime
+---@field endTime CalendarTime
 local CalendarHolidayInfo = {}
 
 ---@class CalendarMonthInfo
@@ -517,5 +517,5 @@ local CalendarMonthInfo = {}
 ---@field raidID number
 ---@field time CalendarTime
 ---@field difficulty number
----@field difficultyName string|nil
+---@field difficultyName string
 local CalendarRaidInfo = {}

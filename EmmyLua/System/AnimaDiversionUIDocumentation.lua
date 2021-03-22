@@ -7,7 +7,7 @@ function C_AnimaDiversion.CloseUI() end
 ---[Documentation](https://wow.gamepedia.com/API_C_AnimaDiversion.GetAnimaDiversionNodes)
 function C_AnimaDiversion.GetAnimaDiversionNodes() end
 
----@return Vector2DMixin|nil normalizedPosition
+---@return Vector2DMixin? normalizedPosition
 ---[Documentation](https://wow.gamepedia.com/API_C_AnimaDiversion.GetOriginPosition)
 function C_AnimaDiversion.GetOriginPosition() end
 

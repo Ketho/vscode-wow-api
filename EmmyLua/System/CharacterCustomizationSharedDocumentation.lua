@@ -21,8 +21,8 @@ local Unitsex = {
 ---@field id number
 ---@field name string
 ---@field ineligibleChoice boolean
----@field swatchColor1 ColorMixin|nil
----@field swatchColor2 ColorMixin|nil
+---@field swatchColor1 ColorMixin
+---@field swatchColor2 ColorMixin
 local CharCustomizationChoice = {}
 
 ---@class CharCustomizationOption

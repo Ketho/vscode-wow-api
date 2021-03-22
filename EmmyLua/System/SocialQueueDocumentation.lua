@@ -89,5 +89,5 @@ local SocialQueueGroupQueueInfo = {}
 
 ---@class SocialQueuePlayerInfo
 ---@field guid string
----@field clubId string|nil
+---@field clubId string
 local SocialQueuePlayerInfo = {}

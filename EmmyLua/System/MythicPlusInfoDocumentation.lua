@@ -28,7 +28,7 @@ function C_MythicPlus.GetOwnedKeystoneLevel() end
 function C_MythicPlus.GetRewardLevelForDifficultyLevel(difficultyLevel) end
 
 ---@param keystoneLevel number
----@return number|nil rewardLevel
+---@return number? rewardLevel
 ---[Documentation](https://wow.gamepedia.com/API_C_MythicPlus.GetRewardLevelFromKeystoneLevel)
 function C_MythicPlus.GetRewardLevelFromKeystoneLevel(keystoneLevel) end
 
@@ -39,8 +39,8 @@ function C_MythicPlus.GetRewardLevelFromKeystoneLevel(keystoneLevel) end
 function C_MythicPlus.GetRunHistory(includePreviousWeeks, includeIncompleteRuns) end
 
 ---@param mapChallengeModeID number
----@return MapSeasonBestInfo|nil intimeInfo
----@return MapSeasonBestInfo|nil overtimeInfo
+---@return MapSeasonBestInfo? intimeInfo
+---@return MapSeasonBestInfo? overtimeInfo
 ---[Documentation](https://wow.gamepedia.com/API_C_MythicPlus.GetSeasonBestForMap)
 function C_MythicPlus.GetSeasonBestForMap(mapChallengeModeID) end
 
@@ -99,7 +99,7 @@ local MythicPlusDate = {}
 local MythicPlusKeystoneAffix = {}
 
 ---@class MythicPlusMember
----@field name string|nil
+---@field name string
 ---@field specID number
 ---@field classID number
 local MythicPlusMember = {}

@@ -88,13 +88,12 @@ function Emmy:GetField(annotation, apiTable)
 	else
 		paramType = self:GetType(apiTable.Type)
 	end
-	if apiTable.Nilable then
-		paramType = paramType.."|nil"
-	end
+	-- field annotations dont seem to support nilable params or comments
+	local nilable = (apiTable.Nilable and annotation ~= "field") and "?" or ""
 	if annotation == "return" then
-		str = fs_field:format(annotation, paramType, apiTable.Name)
+		str = fs_field:format(annotation, paramType..nilable, apiTable.Name)
 	else
-		str = fs_field:format(annotation, apiTable.Name, paramType)
+		str = fs_field:format(annotation, apiTable.Name..nilable, paramType)
 	end
 	return str
 end

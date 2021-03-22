@@ -29,7 +29,7 @@ function C_ClubFinder.ClearClubFinderPostingsCache() end
 ---[Documentation](https://wow.gamepedia.com/API_C_ClubFinder.DoesPlayerBelongToClubFromClubGUID)
 function C_ClubFinder.DoesPlayerBelongToClubFromClubGUID(clubFinderGUID) end
 
----@return ClubFinderDisableReason|nil disableReason
+---@return ClubFinderDisableReason? disableReason
 ---[Documentation](https://wow.gamepedia.com/API_C_ClubFinder.GetClubFinderDisableReason)
 function C_ClubFinder.GetClubFinderDisableReason() end
 
@@ -65,12 +65,12 @@ function C_ClubFinder.GetPlayerClubApplicationStatus(clubFinderGUID) end
 function C_ClubFinder.GetPlayerSettingsFocusFlagsSelectedCount() end
 
 ---@param clubFinderGUID string
----@return number|nil postingID
+---@return number? postingID
 ---[Documentation](https://wow.gamepedia.com/API_C_ClubFinder.GetPostingIDFromClubFinderGUID)
 function C_ClubFinder.GetPostingIDFromClubFinderGUID(clubFinderGUID) end
 
 ---@param clubId string
----@return RecruitingClubInfo|nil clubInfo
+---@return RecruitingClubInfo? clubInfo
 ---[Documentation](https://wow.gamepedia.com/API_C_ClubFinder.GetRecruitingClubInfoFromClubID)
 function C_ClubFinder.GetRecruitingClubInfoFromClubID(clubId) end
 
@@ -197,7 +197,7 @@ function C_ClubFinder.ResetClubPostingMapCache() end
 ---@param requestType ClubFinderRequestType
 ---@param playerName string
 ---@param forceAccept boolean
----@param reported boolean|nil
+---@param reported? boolean
 ---[Documentation](https://wow.gamepedia.com/API_C_ClubFinder.RespondToApplicant)
 function C_ClubFinder.RespondToApplicant(clubFinderGUID, playerGUID, shouldAccept, requestType, playerName, forceAccept, reported) end
 
@@ -375,7 +375,7 @@ local ClubSettingsInfo = {}
 ---@field guildLeader string
 ---@field isGuild boolean
 ---@field emblemInfo number
----@field tabardInfo GuildTabardInfo|nil
+---@field tabardInfo GuildTabardInfo
 ---@field recruitingSpecIds number[]
 ---@field recruitmentFlags number
 ---@field localeSet boolean

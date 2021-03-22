@@ -4,7 +4,7 @@ C_Minimap = {}
 ---[Documentation](https://wow.gamepedia.com/API_C_Minimap.GetDrawGroundTextures)
 function C_Minimap.GetDrawGroundTextures() end
 
----@return number|nil uiMapID
+---@return number? uiMapID
 ---[Documentation](https://wow.gamepedia.com/API_C_Minimap.GetUiMapID)
 function C_Minimap.GetUiMapID() end
 

@@ -6,7 +6,7 @@ function C_ItemInteraction.ClearPendingItem() end
 ---[Documentation](https://wow.gamepedia.com/API_C_ItemInteraction.CloseUI)
 function C_ItemInteraction.CloseUI() end
 
----@return ItemInteractionFrameInfo|nil info
+---@return ItemInteractionFrameInfo? info
 ---[Documentation](https://wow.gamepedia.com/API_C_ItemInteraction.GetItemInteractionInfo)
 function C_ItemInteraction.GetItemInteractionInfo() end
 
@@ -26,7 +26,7 @@ function C_ItemInteraction.Reset() end
 ---[Documentation](https://wow.gamepedia.com/API_C_ItemInteraction.SetCorruptionReforgerItemTooltip)
 function C_ItemInteraction.SetCorruptionReforgerItemTooltip() end
 
----@param item ItemLocationMixin|nil
+---@param item? ItemLocationMixin
 ---@return boolean success
 ---[Documentation](https://wow.gamepedia.com/API_C_ItemInteraction.SetPendingItem)
 function C_ItemInteraction.SetPendingItem(item) end
@@ -44,8 +44,8 @@ local ItemInteractionFrameType = {
 ---@field tutorialText string
 ---@field buttonText string
 ---@field frameType ItemInteractionFrameType
----@field description string|nil
----@field cost number|nil
----@field currencyTypeId number|nil
----@field dropInSlotSoundKitId number|nil
+---@field description string
+---@field cost number
+---@field currencyTypeId number
+---@field dropInSlotSoundKitId number
 local ItemInteractionFrameInfo = {}

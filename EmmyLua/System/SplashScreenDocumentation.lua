@@ -22,8 +22,8 @@ local SplashScreenType = {
 ---@field minDisplayCharLevel number
 ---@field minQuestDisplayLevel number
 ---@field soundKitID number
----@field allianceQuestID number|nil
----@field hordeQuestID number|nil
+---@field allianceQuestID number
+---@field hordeQuestID number
 ---@field header string
 ---@field topLeftFeatureTitle string
 ---@field topLeftFeatureDesc string

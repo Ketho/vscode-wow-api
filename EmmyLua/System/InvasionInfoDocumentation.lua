@@ -6,7 +6,7 @@ C_InvasionInfo = {}
 function C_InvasionInfo.AreInvasionsAvailable() end
 
 ---@param uiMapID number
----@return number|nil invasionID
+---@return number? invasionID
 ---[Documentation](https://wow.gamepedia.com/API_C_InvasionInfo.GetInvasionForUiMapID)
 function C_InvasionInfo.GetInvasionForUiMapID(uiMapID) end
 
@@ -16,7 +16,7 @@ function C_InvasionInfo.GetInvasionForUiMapID(uiMapID) end
 function C_InvasionInfo.GetInvasionInfo(invasionID) end
 
 ---@param invasionID number
----@return number|nil timeLeftMinutes
+---@return number? timeLeftMinutes
 ---[Documentation](https://wow.gamepedia.com/API_C_InvasionInfo.GetInvasionTimeLeft)
 function C_InvasionInfo.GetInvasionTimeLeft(invasionID) end
 
@@ -25,5 +25,5 @@ function C_InvasionInfo.GetInvasionTimeLeft(invasionID) end
 ---@field name string
 ---@field position Vector2DMixin
 ---@field atlasName string
----@field rewardQuestID number|nil
+---@field rewardQuestID number
 local InvasionMapInfo = {}

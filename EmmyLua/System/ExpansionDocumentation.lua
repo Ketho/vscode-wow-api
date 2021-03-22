@@ -21,7 +21,7 @@ function GetClientDisplayExpansionLevel() end
 function GetCurrentRegionName() end
 
 ---@param expansionLevel number
----@return ExpansionDisplayInfo|nil info
+---@return ExpansionDisplayInfo? info
 ---[Documentation](https://wow.gamepedia.com/API_GetExpansionDisplayInfo)
 function GetExpansionDisplayInfo(expansionLevel) end
 
@@ -35,7 +35,7 @@ function GetExpansionForLevel(playerLevel) end
 function GetExpansionLevel() end
 
 ---@return boolean isExpansionTrialAccount
----@return number|nil expansionTrialRemainingSeconds
+---@return number? expansionTrialRemainingSeconds
 ---[Documentation](https://wow.gamepedia.com/API_GetExpansionTrialInfo)
 function GetExpansionTrialInfo() end
 

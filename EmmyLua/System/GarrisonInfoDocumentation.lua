@@ -2,7 +2,7 @@ C_Garrison = {}
 
 ---@param missionID number
 ---@param followerID string
----@param boardIndex number|nil
+---@param boardIndex? number
 ---@return boolean followerAdded
 ---[Documentation](https://wow.gamepedia.com/API_C_Garrison.AddFollowerToMission)
 function C_Garrison.AddFollowerToMission(missionID, followerID, boardIndex) end
@@ -17,7 +17,7 @@ function C_Garrison.GetAutoCombatDamageClassValues() end
 function C_Garrison.GetAutoMissionBoardState(missionID) end
 
 ---@param missionID number
----@return AutoMissionEnvironmentEffect|nil autoMissionEnvEffect
+---@return AutoMissionEnvironmentEffect? autoMissionEnvEffect
 ---[Documentation](https://wow.gamepedia.com/API_C_Garrison.GetAutoMissionEnvironmentEffect)
 function C_Garrison.GetAutoMissionEnvironmentEffect(missionID) end
 
@@ -34,15 +34,15 @@ function C_Garrison.GetAutoMissionTargetingInfo(missionID, followerID, casterBoa
 function C_Garrison.GetAutoTroops(followerType) end
 
 ---@param autoCombatSpellID number
----@return AutoCombatSpellInfo|nil spellInfo
+---@return AutoCombatSpellInfo? spellInfo
 ---[Documentation](https://wow.gamepedia.com/API_C_Garrison.GetCombatLogSpellInfo)
 function C_Garrison.GetCombatLogSpellInfo(autoCombatSpellID) end
 
----@return number|nil currentGarrTalentTreeFriendshipFactionID
+---@return number? currentGarrTalentTreeFriendshipFactionID
 ---[Documentation](https://wow.gamepedia.com/API_C_Garrison.GetCurrentGarrTalentTreeFriendshipFactionID)
 function C_Garrison.GetCurrentGarrTalentTreeFriendshipFactionID() end
 
----@return number|nil currentGarrTalentTreeID
+---@return number? currentGarrTalentTreeID
 ---[Documentation](https://wow.gamepedia.com/API_C_Garrison.GetCurrentGarrTalentTreeID)
 function C_Garrison.GetCurrentGarrTalentTreeID() end
 
@@ -53,7 +53,7 @@ function C_Garrison.GetCurrentGarrTalentTreeID() end
 function C_Garrison.GetFollowerAutoCombatSpells(garrFollowerID, followerLevel) end
 
 ---@param garrFollowerID string
----@return FollowerAutoCombatStatsInfo|nil autoCombatInfo
+---@return FollowerAutoCombatStatsInfo? autoCombatInfo
 ---[Documentation](https://wow.gamepedia.com/API_C_Garrison.GetFollowerAutoCombatStats)
 function C_Garrison.GetFollowerAutoCombatStats(garrFollowerID) end
 
@@ -68,7 +68,7 @@ function C_Garrison.GetFollowerMissionCompleteInfo(followerID) end
 function C_Garrison.GetGarrisonPlotsInstancesForMap(uiMapID) end
 
 ---@param garrTalentTreeID number
----@return number|nil garrTalentTreeCurrencyType
+---@return number? garrTalentTreeCurrencyType
 ---[Documentation](https://wow.gamepedia.com/API_C_Garrison.GetGarrisonTalentTreeCurrencyTypes)
 function C_Garrison.GetGarrisonTalentTreeCurrencyTypes(garrTalentTreeID) end
 
@@ -148,7 +148,7 @@ function C_Garrison.IsEnvironmentCountered(missionID) end
 
 ---@param talentID number
 ---@return boolean isMet
----@return string|nil failureString
+---@return string? failureString
 ---[Documentation](https://wow.gamepedia.com/API_C_Garrison.IsTalentConditionMet)
 function C_Garrison.IsTalentConditionMet(talentID) end
 
@@ -158,7 +158,7 @@ function C_Garrison.RegenerateCombatLog(missionID) end
 
 ---@param missionID number
 ---@param followerID string
----@param boardIndex number|nil
+---@param boardIndex? number
 ---[Documentation](https://wow.gamepedia.com/API_C_Garrison.RemoveFollowerFromMission)
 function C_Garrison.RemoveFollowerFromMission(missionID, followerID, boardIndex) end
 
@@ -208,11 +208,11 @@ local AutoCombatSpellInfo = {}
 ---@field maxXP number
 ---@field height number
 ---@field scale number
----@field displayScale number|nil
----@field displayHeight number|nil
----@field classSpec number|nil
----@field className string|nil
----@field flavorText string|nil
+---@field displayScale number
+---@field displayHeight number
+---@field classSpec number
+---@field className string
+---@field flavorText string
 ---@field classAtlas string
 ---@field portraitIconID number
 ---@field textureKit string
@@ -232,7 +232,7 @@ local AutoCombatTroopInfo = {}
 ---@field oldHealth number
 ---@field newHealth number
 ---@field maxHealth number
----@field points number|nil
+---@field points number
 local AutoMissionCombatEventInfo = {}
 
 ---@class AutoMissionEnvironmentEffect
@@ -282,15 +282,15 @@ local FollowerDisplayID = {}
 ---@field maxXP number
 ---@field height number
 ---@field scale number
----@field movementType number|nil
----@field impactDelay number|nil
----@field castID number|nil
----@field castSoundID number|nil
----@field impactID number|nil
----@field impactSoundID number|nil
----@field targetImpactID number|nil
----@field targetImpactSoundID number|nil
----@field className string|nil
+---@field movementType number
+---@field impactDelay number
+---@field castID number
+---@field castSoundID number
+---@field impactID number
+---@field impactSoundID number
+---@field targetImpactID number
+---@field targetImpactSoundID number
+---@field className string
 ---@field classAtlas string
 ---@field portraitIconID number
 ---@field textureKit string
@@ -317,7 +317,7 @@ local GarrisonAbilityCounterInfo = {}
 ---@field isTrait boolean
 ---@field isSpecialization boolean
 ---@field temporary boolean
----@field category string|nil
+---@field category string
 ---@field counters GarrisonAbilityCounterInfo[]
 ---@field isEmptySlot boolean
 local GarrisonAbilityInfo = {}
@@ -349,7 +349,7 @@ local GarrisonFollowerDeathInfo = {}
 ---@field name string
 ---@field factor number
 ---@field description string
----@field ability GarrisonAbilityInfo|nil
+---@field ability GarrisonAbilityInfo
 local GarrisonMechanicInfo = {}
 
 ---@class GarrisonPlotInstanceMapInfo
@@ -362,8 +362,8 @@ local GarrisonPlotInstanceMapInfo = {}
 ---@class MissionDeploymentInfo
 ---@field location string
 ---@field xp number
----@field environment string|nil
----@field environmentDesc string|nil
+---@field environment string
+---@field environmentDesc string
 ---@field environmentTexture number
 ---@field locTextureKit string
 ---@field isExhausting boolean

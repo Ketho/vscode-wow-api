@@ -5,7 +5,7 @@ C_SpellBook = {}
 function C_SpellBook.ContainsAnyDisenchantSpell() end
 
 ---@param skillLineID number
----@return number|nil skillIndex
+---@return number? skillIndex
 ---[Documentation](https://wow.gamepedia.com/API_C_SpellBook.GetSkillLineIndexByID)
 function C_SpellBook.GetSkillLineIndexByID(skillLineID) end
 

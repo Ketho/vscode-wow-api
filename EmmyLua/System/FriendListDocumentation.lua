@@ -1,7 +1,7 @@
 C_FriendList = {}
 
 ---@param name string
----@param notes string|nil
+---@param notes? string
 ---[Documentation](https://wow.gamepedia.com/API_C_FriendList.AddFriend)
 function C_FriendList.AddFriend(name, notes) end
 
@@ -39,7 +39,7 @@ function C_FriendList.GetFriendInfo(name) end
 function C_FriendList.GetFriendInfoByIndex(index) end
 
 ---@param index number
----@return string|nil name
+---@return string? name
 ---[Documentation](https://wow.gamepedia.com/API_C_FriendList.GetIgnoreName)
 function C_FriendList.GetIgnoreName(index) end
 
@@ -60,11 +60,11 @@ function C_FriendList.GetNumOnlineFriends() end
 ---[Documentation](https://wow.gamepedia.com/API_C_FriendList.GetNumWhoResults)
 function C_FriendList.GetNumWhoResults() end
 
----@return number|nil index
+---@return number? index
 ---[Documentation](https://wow.gamepedia.com/API_C_FriendList.GetSelectedFriend)
 function C_FriendList.GetSelectedFriend() end
 
----@return number|nil index
+---@return number? index
 ---[Documentation](https://wow.gamepedia.com/API_C_FriendList.GetSelectedIgnore)
 function C_FriendList.GetSelectedIgnore() end
 
@@ -134,9 +134,9 @@ function C_FriendList.SortWho(sorting) end
 ---@class FriendInfo
 ---@field connected boolean
 ---@field name string
----@field className string|nil
----@field area string|nil
----@field notes string|nil
+---@field className string
+---@field area string
+---@field notes string
 ---@field guid string
 ---@field level number
 ---@field dnd boolean
@@ -152,6 +152,6 @@ local FriendInfo = {}
 ---@field raceStr string
 ---@field classStr string
 ---@field area string
----@field filename string|nil
+---@field filename string
 ---@field gender number
 local WhoInfo = {}

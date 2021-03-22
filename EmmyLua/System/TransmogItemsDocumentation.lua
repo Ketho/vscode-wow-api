@@ -1,7 +1,7 @@
 C_TransmogCollection = {}
 
 ---@param appearanceID number
----@param categoryID number|nil
+---@param categoryID? number
 ---@return AppearanceSourceInfo[] sources
 ---[Documentation](https://wow.gamepedia.com/API_C_TransmogCollection.GetAppearanceSources)
 function C_TransmogCollection.GetAppearanceSources(appearanceID, categoryID) end

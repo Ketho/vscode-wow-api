@@ -1,6 +1,6 @@
 C_PlayerMentorship = {}
 
----@return number|nil level
+---@return number? level
 ---[Documentation](https://wow.gamepedia.com/API_C_PlayerMentorship.GetMentorLevelRequirement)
 function C_PlayerMentorship.GetMentorLevelRequirement() end
 

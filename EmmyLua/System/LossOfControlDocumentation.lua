@@ -1,13 +1,13 @@
 C_LossOfControl = {}
 
 ---@param index number
----@return LossOfControlData|nil event
+---@return LossOfControlData? event
 ---[Documentation](https://wow.gamepedia.com/API_C_LossOfControl.GetActiveLossOfControlData)
 function C_LossOfControl.GetActiveLossOfControlData(index) end
 
 ---@param unitToken string
 ---@param index number
----@return LossOfControlData|nil event
+---@return LossOfControlData? event
 ---[Documentation](https://wow.gamepedia.com/API_C_LossOfControl.GetActiveLossOfControlDataByUnit)
 function C_LossOfControl.GetActiveLossOfControlDataByUnit(unitToken, index) end
 
@@ -25,9 +25,9 @@ function C_LossOfControl.GetActiveLossOfControlDataCountByUnit(unitToken) end
 ---@field spellID number
 ---@field displayText string
 ---@field iconTexture number
----@field startTime number|nil
----@field timeRemaining number|nil
----@field duration number|nil
+---@field startTime number
+---@field timeRemaining number
+---@field duration number
 ---@field lockoutSchool number
 ---@field priority number
 ---@field displayType number

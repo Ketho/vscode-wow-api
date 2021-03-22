@@ -8,7 +8,7 @@ function C_PartyPose.GetPartyPoseInfoByMapID(mapID) end
 ---@class PartyPoseInfo
 ---@field partyPoseID number
 ---@field mapID number
----@field widgetSetID number|nil
+---@field widgetSetID number
 ---@field victoryModelSceneID number
 ---@field defeatModelSceneID number
 ---@field victorySoundKitID number
