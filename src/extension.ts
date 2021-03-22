@@ -15,10 +15,10 @@ const luaenumArray = enumProvider.luaenumArray
 function isHoverString(document: vscode.TextDocument, range: vscode.Range) {
 	if (range.start.character > 0) {
 		const leftPos = new vscode.Position(range.start.line, range.start.character-1)
-		const leftChar = document.getText(new vscode.Range(leftPos, range.start))
-
 		const rightPos = new vscode.Position(range.end.line, range.end.character+1)
-		const rightChar = document.getText(new vscode.Range(range.end, rightPos))
+		const word = document.getText(new vscode.Range(leftPos, rightPos))
+		const leftChar = word.charAt(0)
+		const rightChar = word.charAt(word.length-1)
 		return (leftChar == '"' || leftChar == "'") && (rightChar == '"' || rightChar == "'")
 	}
 	return false
