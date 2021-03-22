@@ -30,7 +30,7 @@ function getMarkdown(name: string) {
 	if (cvar.scope)
 		s += "- ```\nScope: "+cvar.scope+"\n```\n"
 
-	let doc = `\n[GitHub](https://github.com/Gethe/wow-ui-source/search?q=${name})`
+	let doc = `\n[GitHub](https://github.com/Gethe/wow-ui-source/search?q=${cvar.name})`
 	return s+doc
 }
 

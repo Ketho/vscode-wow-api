@@ -4,6 +4,7 @@ local cvarsDump = require("Lua/Data/cache/CVars")
 local pre = [[
 interface CVarInterface {
 	[key: string]: {
+		name: string,
 		default: string,
 		category: number,
 		scope?: string,
@@ -11,6 +12,7 @@ interface CVarInterface {
 	}
 }
 
+// match case insensitive
 export const cvarsDoc: CVarInterface = {
 ]]
 
@@ -19,7 +21,8 @@ local function ToTypeScript()
 	local sorted = Util:ProxySort(cvarsDump[1].var)
 	for _, name in pairs(sorted) do
 		local default, category, character, server, help = unpack(cvarsDump[1].var[name])
-		tinsert(t, format("\t%s: {", name))
+		tinsert(t, format("\t%s: {", name:lower()))
+		tinsert(t, format('\t\tname: "%s",', name))
 		tinsert(t, format('\t\tdefault: "%s",', default))
 		tinsert(t, format("\t\tcategory: %d,", category))
 		local scope = server and "Account" or character and "Character"

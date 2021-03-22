@@ -11,6 +11,19 @@ import enumProvider = require("./providers/enum") // not sure if this is the rig
 const getLuaEnumHover = enumProvider.getLuaEnumHover
 const luaenumArray = enumProvider.luaenumArray
 
+// dont know how to use a custom regex so check the word boundary instead
+function isHoverString(document: vscode.TextDocument, range: vscode.Range) {
+	if (range.start.character > 0) {
+		const leftPos = new vscode.Position(range.start.line, range.start.character-1)
+		const leftChar = document.getText(new vscode.Range(leftPos, range.start))
+
+		const rightPos = new vscode.Position(range.end.line, range.end.character+1)
+		const rightChar = document.getText(new vscode.Range(range.end, rightPos))
+		return (leftChar == '"' || leftChar == "'") && (rightChar == '"' || rightChar == "'")
+	}
+	return false
+}
+
 export function activate(context: vscode.ExtensionContext) {
 	console.log("loaded ketho.wow-api")
 	setExternalLibrary(true)
@@ -21,7 +34,7 @@ export function activate(context: vscode.ExtensionContext) {
 			provideCompletionItems(document: vscode.TextDocument, position: vscode.Position) {
 				let linePrefix = document.lineAt(position).text.substr(0, position.character)
 				let lastWord = linePrefix.split(/[^\w\.]/).slice(-1)[0]
-				// complete Lua Enums only for "LE_*" to avoid polluting global completion
+				// complete Lua Enums only for "LE_*" to avoid polluting fuzzy completion
 				if (lastWord.startsWith("LE_")) {
 					return luaenumArray
 				}
@@ -37,13 +50,13 @@ export function activate(context: vscode.ExtensionContext) {
 				const range = document.getWordRangeAtPosition(position)
 				if (range) {
 					const word = document.getText(range)
-					// events are case insensitive but virtually everyone properly uppercases
+					const lword = word.toLowerCase()
+					// events are case insensitive but virtually everyone properly uppercases anyway
 					if (eventsDoc[word])
 						return getEventHover(word)
 					// cvars are case insensitive
-					// to do: match case insensitive when hovering a string
-					else if (cvarsDoc[word])
-						return getCVarHover(word)
+					else if (cvarsDoc[lword] && isHoverString(document, range))
+						return getCVarHover(lword)
 					else if (luaenumDoc[word])
 						return getLuaEnumHover(word)
 				}

@@ -1,5 +1,6 @@
 interface CVarInterface {
 	[key: string]: {
+		name: string,
 		default: string,
 		category: number,
 		scope?: string,
@@ -7,6416 +8,7647 @@ interface CVarInterface {
 	}
 }
 
+// match case insensitive
 export const cvarsDoc: CVarInterface = {
-	AIBrain: {
+	aibrain: {
+		name: "AIBrain",
 		default: "0",
 		category: 5,
 	},
-	AIController: {
+	aicontroller: {
+		name: "AIController",
 		default: "0",
 		category: 5,
 	},
-	AIControllerEventLog: {
+	aicontrollereventlog: {
+		name: "AIControllerEventLog",
 		default: "0",
 		category: 5,
 	},
-	AIEventLog: {
+	aieventlog: {
+		name: "AIEventLog",
 		default: "0",
 		category: 5,
 	},
-	AIProcessDebugger: {
+	aiprocessdebugger: {
+		name: "AIProcessDebugger",
 		default: "0",
 		category: 5,
 	},
-	ActionButtonUseKeyDown: {
+	actionbuttonusekeydown: {
+		name: "ActionButtonUseKeyDown",
 		default: "1",
 		category: 4,
 		scope: "Character",
 		help: "Activate the action button on a keydown",
 	},
-	AreaTriggerEventLog: {
+	areatriggereventlog: {
+		name: "AreaTriggerEventLog",
 		default: "0",
 		category: 5,
 	},
-	AreaTriggers: {
+	areatriggers: {
+		name: "AreaTriggers",
 		default: "0",
 		category: 5,
 	},
-	AuraDebugger: {
+	auradebugger: {
+		name: "AuraDebugger",
 		default: "0",
 		category: 5,
 	},
-	AuraEventLog: {
+	auraeventlog: {
+		name: "AuraEventLog",
 		default: "0",
 		category: 5,
 	},
-	AutoPushSpellToActionBar: {
+	autopushspelltoactionbar: {
+		name: "AutoPushSpellToActionBar",
 		default: "1",
 		category: 4,
 		scope: "Account",
 		help: "Determines if spells are automatically pushed to the Action Bar. 0: No, 1: Yes (default).",
 	},
-	BehaviorTree: {
+	behaviortree: {
+		name: "BehaviorTree",
 		default: "0",
 		category: 5,
 	},
-	Brightness: {
+	brightness: {
+		name: "Brightness",
 		default: "50.000000",
 		category: 1,
 		help: "Brightness adjustment. Range: [0 - 100]",
 	},
-	CameraFollowOnStick: {
+	camerafollowonstick: {
+		name: "CameraFollowOnStick",
 		default: "0",
 		category: 5,
 		scope: "Character",
 		help: "Enable camera to follow target as though being pushed/pulled along on a stick",
 	},
-	CameraFollowPitchDeadZone: {
+	camerafollowpitchdeadzone: {
+		name: "CameraFollowPitchDeadZone",
 		default: "5",
 		category: 5,
 		scope: "Character",
 		help: "Controls pitch follow deadzone size",
 	},
-	CameraFollowPitchSpeed: {
+	camerafollowpitchspeed: {
+		name: "CameraFollowPitchSpeed",
 		default: "1",
 		category: 5,
 		scope: "Character",
 		help: "Controls speed of pitch following",
 	},
-	CameraFollowPitchStrength: {
+	camerafollowpitchstrength: {
+		name: "CameraFollowPitchStrength",
 		default: "0.7",
 		category: 5,
 		scope: "Character",
 		help: "Controls strength of pitch following",
 	},
-	CameraFollowSnapCharacterAngle: {
+	camerafollowsnapcharacterangle: {
+		name: "CameraFollowSnapCharacterAngle",
 		default: "45",
 		category: 5,
 		scope: "Character",
 		help: "Angle at which character will snap to camera's facing",
 	},
-	CameraFollowYawSpeed: {
+	camerafollowyawspeed: {
+		name: "CameraFollowYawSpeed",
 		default: "1",
 		category: 5,
 		scope: "Character",
 		help: "Controls speed of yaw following",
 	},
-	CameraKeepCharacterCentered: {
+	camerakeepcharactercentered: {
+		name: "CameraKeepCharacterCentered",
 		default: "1",
 		category: 5,
 		scope: "Character",
 		help: "Motion sickness control to keep character's head at center of screen to act as motion reference point. Can override other cvar settings.",
 	},
-	CameraReduceUnexpectedMovement: {
+	camerareduceunexpectedmovement: {
+		name: "CameraReduceUnexpectedMovement",
 		default: "0",
 		category: 5,
 		scope: "Character",
 		help: "Motion sickness control to reduce camera movement without player input. Can override other cvar settings.",
 	},
-	ChatAmbienceVolume: {
+	chatambiencevolume: {
+		name: "ChatAmbienceVolume",
 		default: "0.3",
 		category: 7,
 		help: "Ambience Volume (0.0 to 1.0)",
 	},
-	ChatMusicVolume: {
+	chatmusicvolume: {
+		name: "ChatMusicVolume",
 		default: "0.3",
 		category: 7,
 		help: "Music volume (0.0 to 1.0)",
 	},
-	ChatSoundVolume: {
+	chatsoundvolume: {
+		name: "ChatSoundVolume",
 		default: "0.4",
 		category: 7,
 		help: "Sound volume (0.0 to 1.0)",
 	},
-	ClientCastDebug: {
+	clientcastdebug: {
+		name: "ClientCastDebug",
 		default: "0",
 		category: 5,
 		help: "debug client cast allocation",
 	},
-	ClientMessageEventLog: {
+	clientmessageeventlog: {
+		name: "ClientMessageEventLog",
 		default: "0",
 		category: 5,
 	},
-	ClipCursor: {
+	clipcursor: {
+		name: "ClipCursor",
 		default: "0",
 		category: 1,
 		help: "Lock the cursor to the game window",
 	},
-	Collision: {
+	collision: {
+		name: "Collision",
 		default: "0",
 		category: 5,
 	},
-	ConsoleKey: {
+	consolekey: {
+		name: "ConsoleKey",
 		default: "`",
 		category: 2,
 		help: "Set key that opens the console",
 	},
-	ContentTuning: {
+	contenttuning: {
+		name: "ContentTuning",
 		default: "0",
 		category: 5,
 	},
-	Contrast: {
+	contrast: {
+		name: "Contrast",
 		default: "50.000000",
 		category: 1,
 		help: "Contrast adjustment. Range: [0 - 100]",
 	},
-	CursorCenteredYPos: {
+	cursorcenteredypos: {
+		name: "CursorCenteredYPos",
 		default: "0.6",
 		category: 5,
 		help: "0-1 vertical position of centered cursor/targeting (0 at bottom)",
 	},
-	CursorFreelookCentering: {
+	cursorfreelookcentering: {
+		name: "CursorFreelookCentering",
 		default: "0",
 		category: 5,
 		help: "Center the cursor when using Mouse freelook",
 	},
-	CursorFreelookStartDelta: {
+	cursorfreelookstartdelta: {
+		name: "CursorFreelookStartDelta",
 		default: "0.001",
 		category: 5,
 		help: "Fraction of the screen the cursor must move to start freelook after mouse button goes down",
 	},
-	CursorStickyCentering: {
+	cursorstickycentering: {
+		name: "CursorStickyCentering",
 		default: "0",
 		category: 5,
 		help: "Make the centered position stick after freelook; Don't restore previous cursor position",
 	},
-	CustomDesignEventLog: {
+	customdesigneventlog: {
+		name: "CustomDesignEventLog",
 		default: "0",
 		category: 5,
 	},
-	CustomWindowEventLog: {
+	customwindoweventlog: {
+		name: "CustomWindowEventLog",
 		default: "0",
 		category: 5,
 	},
-	DamageCalculator: {
+	damagecalculator: {
+		name: "DamageCalculator",
 		default: "0",
 		category: 5,
 	},
-	DebugTorsoTwist: {
+	debugtorsotwist: {
+		name: "DebugTorsoTwist",
 		default: "0",
 		category: 0,
 		help: "Debug visualization for Torso Twist: 1 = Player, 2 = Target, 3 = All",
 	},
-	DepthBasedOpacity: {
+	depthbasedopacity: {
+		name: "DepthBasedOpacity",
 		default: "1",
 		category: 1,
 		help: "Enable/Disable Soft Edge Effect",
 	},
-	DriverVersionCheck: {
+	driverversioncheck: {
+		name: "DriverVersionCheck",
 		default: "1",
 		category: 1,
 	},
-	EJDungeonDifficulty: {
+	ejdungeondifficulty: {
+		name: "EJDungeonDifficulty",
 		default: "0",
 		category: 4,
 		scope: "Account",
 		help: "Stores the last dungeon difficulty viewed in the encounter journal",
 	},
-	EJLootClass: {
+	ejlootclass: {
+		name: "EJLootClass",
 		default: "-1",
 		category: 4,
 		scope: "Account",
 		help: "Stores the last class that loot was filtered by in the encounter journal",
 	},
-	EJLootSpec: {
+	ejlootspec: {
+		name: "EJLootSpec",
 		default: "0",
 		category: 4,
 		scope: "Account",
 		help: "Stores the last spec that loot was filtered by in the encounter journal",
 	},
-	EJRaidDifficulty: {
+	ejraiddifficulty: {
+		name: "EJRaidDifficulty",
 		default: "0",
 		category: 4,
 		scope: "Account",
 		help: "Stores the last raid difficulty viewed in the encounter journal",
 	},
-	EmitterCombatRange: {
+	emittercombatrange: {
+		name: "EmitterCombatRange",
 		default: "900",
 		category: 4,
 		scope: "Character",
 		help: "Range to stop shoulder/weapon emissions during combat",
 	},
-	EnableBlinkApplicationIcon: {
+	enableblinkapplicationicon: {
+		name: "EnableBlinkApplicationIcon",
 		default: "1",
 		category: 4,
 		help: "Allows the client to blink the application icon in the taskbar in Windows, or bounce the application icon in the dock on macOS",
 	},
-	ErrorFilter: {
+	errorfilter: {
+		name: "ErrorFilter",
 		default: "all",
 		category: 0,
 	},
-	ErrorLevelMax: {
+	errorlevelmax: {
+		name: "ErrorLevelMax",
 		default: "3",
 		category: 0,
 	},
-	ErrorLevelMin: {
+	errorlevelmin: {
+		name: "ErrorLevelMin",
 		default: "2",
 		category: 0,
 	},
-	Errors: {
+	errors: {
+		name: "Errors",
 		default: "0",
 		category: 0,
 	},
-	FootstepSounds: {
+	footstepsounds: {
+		name: "FootstepSounds",
 		default: "1",
 		category: 7,
 		help: "play footstep sounds",
 	},
-	ForceAllowAero: {
+	forceallowaero: {
+		name: "ForceAllowAero",
 		default: "0",
 		category: 1,
 		help: "Force Direct X 12 on Windows 7 to not disable Aero theme. You are opting into crashing in some edge cases",
 	},
-	ForceResolutionDefaultToMaxSize: {
+	forceresolutiondefaulttomaxsize: {
+		name: "ForceResolutionDefaultToMaxSize",
 		default: "0",
 		category: 1,
 		help: "Force default resolution to the maximum supported size rather than the auto-detected size",
 	},
-	GamePadAbbreviatedBindingReverse: {
+	gamepadabbreviatedbindingreverse: {
+		name: "GamePadAbbreviatedBindingReverse",
 		default: "1",
 		category: 5,
 		help: "Display main binding button first so it's visible even if truncated on action bar",
 	},
-	GamePadCameraPitchSpeed: {
+	gamepadcamerapitchspeed: {
+		name: "GamePadCameraPitchSpeed",
 		default: "1",
 		category: 5,
 		help: "Pitch speed of GameUp camera moving up/down",
 	},
-	GamePadCameraYawSpeed: {
+	gamepadcamerayawspeed: {
+		name: "GamePadCameraYawSpeed",
 		default: "1",
 		category: 5,
 		help: "Yaw speed of GamePad camera turning left/right",
 	},
-	GamePadCursorAutoDisableJump: {
+	gamepadcursorautodisablejump: {
+		name: "GamePadCursorAutoDisableJump",
 		default: "1",
 		category: 5,
 		help: "GamePad cursor control will auto-disable when you jump",
 	},
-	GamePadCursorAutoDisableSticks: {
+	gamepadcursorautodisablesticks: {
+		name: "GamePadCursorAutoDisableSticks",
 		default: "2",
 		category: 5,
 		help: "GamePad cursor control will auto-disable on stick input (0=none, 1=movement, 2=movement+cursor)",
 	},
-	GamePadCursorAutoEnable: {
+	gamepadcursorautoenable: {
+		name: "GamePadCursorAutoEnable",
 		default: "1",
 		category: 5,
 		help: "Auto enable GamePad cursor control when opening UIs that may need it",
 	},
-	GamePadCursorCenteredEmulation: {
+	gamepadcursorcenteredemulation: {
+		name: "GamePadCursorCenteredEmulation",
 		default: "1",
 		category: 5,
 		help: "When cursor is centered for GamePad movement, also emulate mouse clicks",
 	},
-	GamePadCursorCentering: {
+	gamepadcursorcentering: {
+		name: "GamePadCursorCentering",
 		default: "0",
 		category: 5,
 		help: "When using GamePad, center the cursor",
 	},
-	GamePadCursorLeftClick: {
+	gamepadcursorleftclick: {
+		name: "GamePadCursorLeftClick",
 		default: "PADRTRIGGER",
 		category: 5,
 		help: "GamePad button that should emulate mouse Left Click while controlling the mouse cursor",
 	},
-	GamePadCursorOnLogin: {
+	gamepadcursoronlogin: {
+		name: "GamePadCursorOnLogin",
 		default: "1",
 		category: 5,
 		help: "Enable GamePad cursor control on login and character screens",
 	},
-	GamePadCursorRightClick: {
+	gamepadcursorrightclick: {
+		name: "GamePadCursorRightClick",
 		default: "PADRSHOULDER",
 		category: 5,
 		help: "GamePad button that should emulate mouse Right Click while controlling the mouse cursor",
 	},
-	GamePadCursorSpeedAccel: {
+	gamepadcursorspeedaccel: {
+		name: "GamePadCursorSpeedAccel",
 		default: "2",
 		category: 5,
 		help: "Acceleration of GamePad cursor per second as it continues to move",
 	},
-	GamePadCursorSpeedMax: {
+	gamepadcursorspeedmax: {
+		name: "GamePadCursorSpeedMax",
 		default: "1",
 		category: 5,
 		help: "Top speed of GamePad cursor movement",
 	},
-	GamePadCursorSpeedStart: {
+	gamepadcursorspeedstart: {
+		name: "GamePadCursorSpeedStart",
 		default: "0.1",
 		category: 5,
 		help: "Speed of GamePad cursor when it starts moving",
 	},
-	GamePadEmulateAlt: {
+	gamepademulatealt: {
+		name: "GamePadEmulateAlt",
 		default: "none",
 		category: 5,
 		help: "GamePad button that should emulate the Alt key",
 	},
-	GamePadEmulateCtrl: {
+	gamepademulatectrl: {
+		name: "GamePadEmulateCtrl",
 		default: "PADLSHOULDER",
 		category: 5,
 		help: "GamePad button that should emulate the Ctrl key",
 	},
-	GamePadEmulateEsc: {
+	gamepademulateesc: {
+		name: "GamePadEmulateEsc",
 		default: "PADBACK",
 		category: 5,
 		help: "GamePad button that should emulate the Esc key",
 	},
-	GamePadEmulateShift: {
+	gamepademulateshift: {
+		name: "GamePadEmulateShift",
 		default: "PADLTRIGGER",
 		category: 5,
 		help: "GamePad button that should emulate the Shift key",
 	},
-	GamePadEnable: {
+	gamepadenable: {
+		name: "GamePadEnable",
 		default: "0",
 		category: 5,
 		help: "Whether GamePad input should be enabled",
 	},
-	GamePadFaceMovementThreshold: {
+	gamepadfacemovementthreshold: {
+		name: "GamePadFaceMovementThreshold",
 		default: "180",
 		category: 5,
 		help: "Angle threshold for facing movement direction. 0 = always, 180 = never (115 allows using strafe with quick turn around)",
 	},
-	GamePadForceXInput: {
+	gamepadforcexinput: {
+		name: "GamePadForceXInput",
 		default: "0",
 		category: 5,
 		help: "Force game to use XInput, rather than a newer, more advanced api",
 	},
-	GamePadSingleActiveID: {
+	gamepadsingleactiveid: {
+		name: "GamePadSingleActiveID",
 		default: "0",
 		category: 5,
 		help: "ID of single GamePad device to use. 0 = Use all devices' combined input",
 	},
-	GamePadSmoothFacing: {
+	gamepadsmoothfacing: {
+		name: "GamePadSmoothFacing",
 		default: "1",
 		category: 5,
 		help: "Enable adjustment of facing direction to smooth out GamePad movement",
 	},
-	GamePadStickAxisButtons: {
+	gamepadstickaxisbuttons: {
+		name: "GamePadStickAxisButtons",
 		default: "0",
 		category: 5,
 		help: "Enables virtual buttons for the GamePad stick cardinal directions",
 	},
-	GamePadTankTurnSpeed: {
+	gamepadtankturnspeed: {
+		name: "GamePadTankTurnSpeed",
 		default: "0",
 		category: 5,
 		help: "If non-zero, character turns like a tank from GamePad movement",
 	},
-	Gamma: {
+	gamma: {
+		name: "Gamma",
 		default: "1.000000",
 		category: 1,
 		help: "Gamma correction. Range: [0.3 - 2.8]",
 	},
-	GxPrismEnabled: {
+	gxprismenabled: {
+		name: "GxPrismEnabled",
 		default: "1",
 		category: 1,
 		help: "Allow use of prism backend when possible",
 	},
-	HardwareCursor: {
+	hardwarecursor: {
+		name: "HardwareCursor",
 		default: "1",
 		category: 1,
 	},
-	HealHandler: {
+	healhandler: {
+		name: "HealHandler",
 		default: "0",
 		category: 5,
 	},
-	HotfixEventLog: {
+	hotfixeventlog: {
+		name: "HotfixEventLog",
 		default: "0",
 		category: 5,
 	},
-	ImpactModelCollisionMelee: {
+	impactmodelcollisionmelee: {
+		name: "ImpactModelCollisionMelee",
 		default: "1",
 		category: 4,
 		help: "Enable model collision checks for melee impact effects",
 	},
-	ImpactModelCollisionMissile: {
+	impactmodelcollisionmissile: {
+		name: "ImpactModelCollisionMissile",
 		default: "1",
 		category: 4,
 		help: "Enable model collision checks for missile impact effects",
 	},
-	ImpactModelCollisionRanged: {
+	impactmodelcollisionranged: {
+		name: "ImpactModelCollisionRanged",
 		default: "1",
 		category: 4,
 		help: "Enable model collision checks for ranged attack impact effects",
 	},
-	KioskCanSessionExpire: {
+	kioskcansessionexpire: {
+		name: "KioskCanSessionExpire",
 		default: "",
 		category: 5,
 	},
-	KioskCharacterTemplateSet: {
+	kioskcharactertemplateset: {
+		name: "KioskCharacterTemplateSet",
 		default: "",
 		category: 5,
 	},
-	KioskLobbyKickSeconds: {
+	kiosklobbykickseconds: {
+		name: "KioskLobbyKickSeconds",
 		default: "",
 		category: 5,
 	},
-	M2ForceAdditiveParticleSort: {
+	m2forceadditiveparticlesort: {
+		name: "M2ForceAdditiveParticleSort",
 		default: "0",
 		category: 1,
 		help: "force all particles to sort as though they were additive",
 	},
-	M2UseInstancing: {
+	m2useinstancing: {
+		name: "M2UseInstancing",
 		default: "1",
 		category: 1,
 		help: "use hardware instancing",
 	},
-	M2UseThreads: {
+	m2usethreads: {
+		name: "M2UseThreads",
 		default: "1",
 		category: 1,
 		help: "multithread model animations",
 	},
-	MSAAAlphaTest: {
+	msaaalphatest: {
+		name: "MSAAAlphaTest",
 		default: "1",
 		category: 1,
 		help: "Enable MSAA for alpha-tested geometry",
 	},
-	MSAAQuality: {
+	msaaquality: {
+		name: "MSAAQuality",
 		default: "0",
 		category: 1,
 		help: "Multisampling AA quality",
 	},
-	MaxObservedPetBattles: {
+	maxobservedpetbattles: {
+		name: "MaxObservedPetBattles",
 		default: "4",
 		category: 5,
 		help: "Maximum number of observed pet battles",
 	},
-	MouseNoRepositioning: {
+	mousenorepositioning: {
+		name: "MouseNoRepositioning",
 		default: "0",
 		category: 4,
 		help: "Disables repositioning of mouse cursor during relative movement to keep it in the game's window frame",
 	},
-	MouseUseLazyRepositioning: {
+	mouseuselazyrepositioning: {
+		name: "MouseUseLazyRepositioning",
 		default: "1",
 		category: 4,
 		help: "During camera control, only reposition mouse cursor when nearing edge of window, rather than every input event",
 	},
-	MoveHistoryEventLog: {
+	movehistoryeventlog: {
+		name: "MoveHistoryEventLog",
 		default: "0",
 		category: 5,
 	},
-	NamePlateClassificationScale: {
+	nameplateclassificationscale: {
+		name: "NamePlateClassificationScale",
 		default: "1.0",
 		category: 4,
 		scope: "Account",
 		help: "Applied to the classification icon for nameplates.",
 	},
-	NamePlateHorizontalScale: {
+	nameplatehorizontalscale: {
+		name: "NamePlateHorizontalScale",
 		default: "1.0",
 		category: 4,
 		scope: "Account",
 		help: "Applied to horizontal size of all nameplates.",
 	},
-	NamePlateMaximumClassificationScale: {
+	nameplatemaximumclassificationscale: {
+		name: "NamePlateMaximumClassificationScale",
 		default: "1.25",
 		category: 4,
 		scope: "Account",
 		help: "This is the maximum effective scale of the classification icon for nameplates.",
 	},
-	NamePlateVerticalScale: {
+	nameplateverticalscale: {
+		name: "NamePlateVerticalScale",
 		default: "1.0",
 		category: 4,
 		scope: "Account",
 		help: "Applied to vertical size of all nameplates.",
 	},
-	NameplatePersonalClickThrough: {
+	nameplatepersonalclickthrough: {
+		name: "NameplatePersonalClickThrough",
 		default: "1",
 		category: 4,
 		scope: "Account",
 		help: "When enabled, the personal nameplate is transparent to mouse clicks.",
 	},
-	NameplatePersonalHideDelayAlpha: {
+	nameplatepersonalhidedelayalpha: {
+		name: "NameplatePersonalHideDelayAlpha",
 		default: "0.45",
 		category: 4,
 		scope: "Account",
 		help: "Determines the alpha of the personal nameplate after no visibility conditions are met (during the period of time specified by NameplatePersonalHideDelaySeconds).",
 	},
-	NameplatePersonalHideDelaySeconds: {
+	nameplatepersonalhidedelayseconds: {
+		name: "NameplatePersonalHideDelaySeconds",
 		default: "3.0",
 		category: 4,
 		scope: "Account",
 		help: "Determines the length of time in seconds that the personal nameplate will be visible after no visibility conditions are met.",
 	},
-	NameplatePersonalShowAlways: {
+	nameplatepersonalshowalways: {
+		name: "NameplatePersonalShowAlways",
 		default: "0",
 		category: 4,
 		scope: "Account",
 		help: "Determines if the the personal nameplate is always shown.",
 	},
-	NameplatePersonalShowInCombat: {
+	nameplatepersonalshowincombat: {
+		name: "NameplatePersonalShowInCombat",
 		default: "1",
 		category: 4,
 		scope: "Account",
 		help: "Determines if the the personal nameplate is shown when you enter combat.",
 	},
-	NameplatePersonalShowWithTarget: {
+	nameplatepersonalshowwithtarget: {
+		name: "NameplatePersonalShowWithTarget",
 		default: "0",
 		category: 4,
 		scope: "Account",
 		help: "Determines if the personal nameplate is shown when selecting a target. 0 = targeting has no effect, 1 = show on hostile target, 2 = show on any target",
 	},
-	NonEmitterCombatRange: {
+	nonemittercombatrange: {
+		name: "NonEmitterCombatRange",
 		default: "6400",
 		category: 4,
 		scope: "Character",
 		help: "Range to stop shoulder/weapon emissions outside combat",
 	},
-	ObjectSelectionCircle: {
+	objectselectioncircle: {
+		name: "ObjectSelectionCircle",
 		default: "1",
 		category: 4,
 	},
-	Outline: {
+	outline: {
+		name: "Outline",
 		default: "2",
 		category: 4,
 		scope: "Character",
 		help: "Outline Mode",
 	},
-	OutlineEngineMode: {
+	outlineenginemode: {
+		name: "OutlineEngineMode",
 		default: "0",
 		category: 5,
 	},
-	POIShiftComplete: {
+	poishiftcomplete: {
+		name: "POIShiftComplete",
 		default: "0.3",
 		category: 0,
 	},
-	Pathing: {
+	pathing: {
+		name: "Pathing",
 		default: "0",
 		category: 5,
 	},
-	PhaseHistory: {
+	phasehistory: {
+		name: "PhaseHistory",
 		default: "0",
 		category: 5,
 	},
-	PlayerSpawnTracking: {
+	playerspawntracking: {
+		name: "PlayerSpawnTracking",
 		default: "0",
 		category: 5,
 	},
-	PraiseTheSun: {
+	praisethesun: {
+		name: "PraiseTheSun",
 		default: "0",
 		category: 4,
 	},
-	PreemptiveCastEnable: {
+	preemptivecastenable: {
+		name: "PreemptiveCastEnable",
 		default: "0",
 		category: 5,
 		help: "Enable preemptive triggering of cast visuals based on spell release timing",
 	},
-	PreventOsIdleSleep: {
+	preventosidlesleep: {
+		name: "PreventOsIdleSleep",
 		default: "0",
 		category: 5,
 		help: "Enable this to prevent the computer from idle sleeping while the game is running",
 	},
-	ProcDebugEventLog: {
+	procdebugeventlog: {
+		name: "ProcDebugEventLog",
 		default: "0",
 		category: 5,
 	},
-	PushToTalkSound: {
+	pushtotalksound: {
+		name: "PushToTalkSound",
 		default: "0",
 		category: 7,
 		scope: "Character",
 		help: "Play a sound when voice recording activates and deactivates",
 	},
-	QuestEventLog: {
+	questeventlog: {
+		name: "QuestEventLog",
 		default: "0",
 		category: 5,
 	},
-	RAIDDepthBasedOpacity: {
+	raiddepthbasedopacity: {
+		name: "RAIDDepthBasedOpacity",
 		default: "1",
 		category: 1,
 		help: "Raid Enable/Disable Soft Edge Effect",
 	},
-	RAIDOutlineEngineMode: {
+	raidoutlineenginemode: {
+		name: "RAIDOutlineEngineMode",
 		default: "0",
 		category: 5,
 		help: "Mode for the OutlineBuffer",
 	},
-	RAIDParticulatesEnabled: {
+	raidparticulatesenabled: {
+		name: "RAIDParticulatesEnabled",
 		default: "1",
 		category: 1,
 		help: "Enabling particulates (0-1)",
 	},
-	RAIDSSAO: {
+	raidssao: {
+		name: "RAIDSSAO",
 		default: "0",
 		category: 5,
 		help: "Raid Screen-Space Ambient Occlusion",
 	},
-	RAIDTerrainLodDiv: {
+	raidterrainloddiv: {
+		name: "RAIDTerrainLodDiv",
 		default: "768",
 		category: 5,
 	},
-	RAIDVolumeFogLevel: {
+	raidvolumefoglevel: {
+		name: "RAIDVolumeFogLevel",
 		default: "2",
 		category: 1,
 		help: "Volume Fog Level (0-3)",
 	},
-	RAIDWaterDetail: {
+	raidwaterdetail: {
+		name: "RAIDWaterDetail",
 		default: "0",
 		category: 5,
 		help: "Raid Water surface detail",
 	},
-	RAIDcomponentTextureLevel: {
+	raidcomponenttexturelevel: {
+		name: "RAIDcomponentTextureLevel",
 		default: "0",
 		category: 1,
 		help: "Level of detail for character component textures. 0 means full detail.",
 	},
-	RAIDdoodadLodScale: {
+	raiddoodadlodscale: {
+		name: "RAIDdoodadLodScale",
 		default: "100",
 		category: 1,
 		help: "Raid doodad level of detail scale",
 	},
-	RAIDentityLodDist: {
+	raidentityloddist: {
+		name: "RAIDentityLodDist",
 		default: "10",
 		category: 1,
 		help: "Raid Entity level of detail distance",
 	},
-	RAIDentityShadowFadeScale: {
+	raidentityshadowfadescale: {
+		name: "RAIDentityShadowFadeScale",
 		default: "10",
 		category: 5,
 		help: "Raid Entity shadow fade scale",
 	},
-	RAIDfarclip: {
+	raidfarclip: {
+		name: "RAIDfarclip",
 		default: "1000",
 		category: 5,
 		help: "Raid Far clip plane distance",
 	},
-	RAIDgraphicsQuality: {
+	raidgraphicsquality: {
+		name: "RAIDgraphicsQuality",
 		default: "4",
 		category: 5,
 		help: "save for Raid Graphics Quality Selection",
 	},
-	RAIDgroundEffectDensity: {
+	raidgroundeffectdensity: {
+		name: "RAIDgroundEffectDensity",
 		default: "16",
 		category: 5,
 		help: "Raid Ground effect density",
 	},
-	RAIDgroundEffectDist: {
+	raidgroundeffectdist: {
+		name: "RAIDgroundEffectDist",
 		default: "70",
 		category: 5,
 		help: "Raid Ground effect dist",
 	},
-	RAIDgroundEffectFade: {
+	raidgroundeffectfade: {
+		name: "RAIDgroundEffectFade",
 		default: "70",
 		category: 1,
 		help: "Raid Ground effect fade",
 	},
-	RAIDhorizonClip: {
+	raidhorizonclip: {
+		name: "RAIDhorizonClip",
 		default: "1600",
 		category: 5,
 	},
-	RAIDhorizonStart: {
+	raidhorizonstart: {
+		name: "RAIDhorizonStart",
 		default: "800",
 		category: 5,
 		help: "Raid Horizon start distance",
 	},
-	RAIDlodObjectCullDist: {
+	raidlodobjectculldist: {
+		name: "RAIDlodObjectCullDist",
 		default: "30",
 		category: 1,
 		help: "Lod object culling dist minimum",
 	},
-	RAIDlodObjectCullSize: {
+	raidlodobjectcullsize: {
+		name: "RAIDlodObjectCullSize",
 		default: "15",
 		category: 5,
 		help: "Lod object culling size",
 	},
-	RAIDlodObjectFadeScale: {
+	raidlodobjectfadescale: {
+		name: "RAIDlodObjectFadeScale",
 		default: "100",
 		category: 1,
 		help: "Lod object fade scale",
 	},
-	RAIDlodObjectMinSize: {
+	raidlodobjectminsize: {
+		name: "RAIDlodObjectMinSize",
 		default: "20",
 		category: 5,
 		help: "Lod object min size",
 	},
-	RAIDparticleDensity: {
+	raidparticledensity: {
+		name: "RAIDparticleDensity",
 		default: "100",
 		category: 5,
 		help: "Particle density",
 	},
-	RAIDparticleMTDensity: {
+	raidparticlemtdensity: {
+		name: "RAIDparticleMTDensity",
 		default: "100",
 		category: 1,
 		help: "Multi-Tex particle density",
 	},
-	RAIDprojectedTextures: {
+	raidprojectedtextures: {
+		name: "RAIDprojectedTextures",
 		default: "0",
 		category: 5,
 		help: "Projected Textures",
 	},
-	RAIDreflectionMode: {
+	raidreflectionmode: {
+		name: "RAIDreflectionMode",
 		default: "3",
 		category: 5,
 		help: "Reflection mode",
 	},
-	RAIDrefraction: {
+	raidrefraction: {
+		name: "RAIDrefraction",
 		default: "0",
 		category: 5,
 		help: "Refraction",
 	},
-	RAIDrippleDetail: {
+	raidrippledetail: {
+		name: "RAIDrippleDetail",
 		default: "2",
 		category: 5,
 		help: "Ripple surface detail",
 	},
-	RAIDsettingsEnabled: {
+	raidsettingsenabled: {
+		name: "RAIDsettingsEnabled",
 		default: "0",
 		category: 1,
 		help: "Raid graphic settings are available",
 	},
-	RAIDshadowMode: {
+	raidshadowmode: {
+		name: "RAIDshadowMode",
 		default: "0",
 		category: 5,
 		help: "Raid Quality of shadows (0-3)",
 	},
-	RAIDshadowRt: {
+	raidshadowrt: {
+		name: "RAIDshadowRt",
 		default: "0",
 		category: 1,
 		help: "Raid Raytraced shadows (0-2)",
 	},
-	RAIDshadowSoft: {
+	raidshadowsoft: {
+		name: "RAIDshadowSoft",
 		default: "0",
 		category: 1,
 		help: "Soft shadows (0/1)",
 	},
-	RAIDshadowTextureSize: {
+	raidshadowtexturesize: {
+		name: "RAIDshadowTextureSize",
 		default: "1024",
 		category: 5,
 		help: "Shadow texture size (1024-2048)",
 	},
-	RAIDspellClutter: {
+	raidspellclutter: {
+		name: "RAIDspellClutter",
 		default: "-1",
 		category: 1,
 		help: "Cull unimportant spell effects. -1 means auto based on targetFPS otherwise [0-100], 0 means cull nothing for perf reasons, 100 means cull as much as you can",
 	},
-	RAIDsunShafts: {
+	raidsunshafts: {
+		name: "RAIDsunShafts",
 		default: "0",
 		category: 5,
 		help: "SunShafts",
 	},
-	RAIDterrainLodDist: {
+	raidterrainloddist: {
+		name: "RAIDterrainLodDist",
 		default: "400",
 		category: 5,
 		help: "Raid Terrain level of detail distance",
 	},
-	RAIDterrainMipLevel: {
+	raidterrainmiplevel: {
+		name: "RAIDterrainMipLevel",
 		default: "0",
 		category: 1,
 		help: "Terrain blend map mip level",
 	},
-	RAIDweatherDensity: {
+	raidweatherdensity: {
+		name: "RAIDweatherDensity",
 		default: "2",
 		category: 5,
 	},
-	RAIDwmoLodDist: {
+	raidwmoloddist: {
+		name: "RAIDwmoLodDist",
 		default: "650",
 		category: 5,
 		help: "Raid Wmo level of detail distance",
 	},
-	RAIDworldBaseMip: {
+	raidworldbasemip: {
+		name: "RAIDworldBaseMip",
 		default: "0",
 		category: 1,
 		help: "World texture base mip",
 	},
-	RenderScale: {
+	renderscale: {
+		name: "RenderScale",
 		default: "1.0",
 		category: 1,
 		help: "Render scale (for supersampling or undersampling)",
 	},
-	ResampleQuality: {
+	resamplequality: {
+		name: "ResampleQuality",
 		default: "0",
 		category: 1,
 		help: "Resample quality",
 	},
-	ResolvedSSAOType: {
+	resolvedssaotype: {
+		name: "ResolvedSSAOType",
 		default: "1",
 		category: 1,
 	},
-	SSAO: {
+	ssao: {
+		name: "SSAO",
 		default: "0",
 		category: 5,
 		help: "Screen-Space Ambient Occlusion",
 	},
-	SSAOType: {
+	ssaotype: {
+		name: "SSAOType",
 		default: "0",
 		category: 1,
 		help: "Screen-Space Ambient Occlusion Type",
 	},
-	ServerMessageEventLog: {
+	servermessageeventlog: {
+		name: "ServerMessageEventLog",
 		default: "0",
 		category: 5,
 	},
-	ShakeStrengthCamera: {
+	shakestrengthcamera: {
+		name: "ShakeStrengthCamera",
 		default: "1",
 		category: 5,
 		scope: "Character",
 		help: "Motion sickness control for how much effects can shake the camera",
 	},
-	ShakeStrengthUI: {
+	shakestrengthui: {
+		name: "ShakeStrengthUI",
 		default: "1",
 		category: 5,
 		scope: "Character",
 		help: "Motion sickness control for how much effects can shake in 2D UI",
 	},
-	ShowClassColorInFriendlyNameplate: {
+	showclasscolorinfriendlynameplate: {
+		name: "ShowClassColorInFriendlyNameplate",
 		default: "1",
 		category: 4,
 		scope: "Account",
 		help: "use this to display the class color in friendly nameplate health bars",
 	},
-	ShowClassColorInNameplate: {
+	showclasscolorinnameplate: {
+		name: "ShowClassColorInNameplate",
 		default: "1",
 		category: 4,
 		scope: "Account",
 		help: "use this to display the class color in enemy nameplate health bars",
 	},
-	ShowNamePlateLoseAggroFlash: {
+	shownameplateloseaggroflash: {
+		name: "ShowNamePlateLoseAggroFlash",
 		default: "1",
 		category: 4,
 		scope: "Account",
 		help: "When enabled, if you are a tank role and lose aggro, the nameplate with briefly flash.",
 	},
-	ShowQuestUnitCircles: {
+	showquestunitcircles: {
+		name: "ShowQuestUnitCircles",
 		default: "1",
 		category: 4,
 		scope: "Character",
 		help: "Determines if units related to a quest display an indicator on the ground.",
 	},
-	SkyCloudLOD: {
+	skycloudlod: {
+		name: "SkyCloudLOD",
 		default: "0",
 		category: 1,
 		help: "Texture resolution for clouds",
 	},
-	SoundPerf_VariationCap: {
+	soundperf_variationcap: {
+		name: "SoundPerf_VariationCap",
 		default: "32",
 		category: 7,
 		help: "Limit sound kit variations to cut down on memory usage and disk thrashing on 32-bit machines",
 	},
-	Sound_AllyPlayerHighpassDSPCutoff: {
+	sound_allyplayerhighpassdspcutoff: {
+		name: "Sound_AllyPlayerHighpassDSPCutoff",
 		default: "",
 		category: 7,
 		help: "The cutoff value to use for the Highpass filter on the Ally Player bus (default 80 Hz)",
 	},
-	Sound_AlternateListener: {
+	sound_alternatelistener: {
+		name: "Sound_AlternateListener",
 		default: "1",
 		category: 7,
 		help: "When enabled, calculates listener forward by simply using the camera's yaw value, instead of a vector from camera position to listener position",
 	},
-	Sound_AmbienceHighpassDSPCutoff: {
+	sound_ambiencehighpassdspcutoff: {
+		name: "Sound_AmbienceHighpassDSPCutoff",
 		default: "",
 		category: 7,
 		help: "The cutoff value to use for the Highpass filter on the Ambience bus (default 100 Hz)",
 	},
-	Sound_AmbienceVolume: {
+	sound_ambiencevolume: {
+		name: "Sound_AmbienceVolume",
 		default: "0.6",
 		category: 5,
 	},
-	Sound_DSPBufferSize: {
+	sound_dspbuffersize: {
+		name: "Sound_DSPBufferSize",
 		default: "0",
 		category: 7,
 		help: "sound buffer size, default 0",
 	},
-	Sound_DialogVolume: {
+	sound_dialogvolume: {
+		name: "Sound_DialogVolume",
 		default: "1.0",
 		category: 7,
 		help: "Dialog Volume (0.0 to 1.0)",
 	},
-	Sound_EnableAllSound: {
+	sound_enableallsound: {
+		name: "Sound_EnableAllSound",
 		default: "1",
 		category: 7,
 	},
-	Sound_EnableAmbience: {
+	sound_enableambience: {
+		name: "Sound_EnableAmbience",
 		default: "1",
 		category: 7,
 		help: "Enable Ambience",
 	},
-	Sound_EnableArmorFoleySoundForOthers: {
+	sound_enablearmorfoleysoundforothers: {
+		name: "Sound_EnableArmorFoleySoundForOthers",
 		default: "1",
 		category: 7,
 	},
-	Sound_EnableArmorFoleySoundForSelf: {
+	sound_enablearmorfoleysoundforself: {
+		name: "Sound_EnableArmorFoleySoundForSelf",
 		default: "1",
 		category: 7,
 	},
-	Sound_EnableDSPEffects: {
+	sound_enabledspeffects: {
+		name: "Sound_EnableDSPEffects",
 		default: "1",
 		category: 7,
 	},
-	Sound_EnableDialog: {
+	sound_enabledialog: {
+		name: "Sound_EnableDialog",
 		default: "1",
 		category: 7,
 		help: "all dialog",
 	},
-	Sound_EnableEmoteSounds: {
+	sound_enableemotesounds: {
+		name: "Sound_EnableEmoteSounds",
 		default: "1",
 		category: 7,
 	},
-	Sound_EnableErrorSpeech: {
+	sound_enableerrorspeech: {
+		name: "Sound_EnableErrorSpeech",
 		default: "1",
 		category: 5,
 		help: "error speech",
 	},
-	Sound_EnableMixMode2: {
+	sound_enablemixmode2: {
+		name: "Sound_EnableMixMode2",
 		default: "0",
 		category: 7,
 		help: "test",
 	},
-	Sound_EnableMusic: {
+	sound_enablemusic: {
+		name: "Sound_EnableMusic",
 		default: "1",
 		category: 7,
 		help: "Enables music",
 	},
-	Sound_EnablePetBattleMusic: {
+	sound_enablepetbattlemusic: {
+		name: "Sound_EnablePetBattleMusic",
 		default: "1",
 		category: 7,
 		help: "Enables music in pet battles",
 	},
-	Sound_EnablePetSounds: {
+	sound_enablepetsounds: {
+		name: "Sound_EnablePetSounds",
 		default: "1",
 		category: 7,
 		help: "Enables pet sounds",
 	},
-	Sound_EnablePositionalLowPassFilter: {
+	sound_enablepositionallowpassfilter: {
+		name: "Sound_EnablePositionalLowPassFilter",
 		default: "1",
 		category: 7,
 		help: "Environmental effect to make sounds duller behind you or far away",
 	},
-	Sound_EnableReverb: {
+	sound_enablereverb: {
+		name: "Sound_EnableReverb",
 		default: "1",
 		category: 7,
 	},
-	Sound_EnableSFX: {
+	sound_enablesfx: {
+		name: "Sound_EnableSFX",
 		default: "1",
 		category: 7,
 	},
-	Sound_EnableSoundWhenGameIsInBG: {
+	sound_enablesoundwhengameisinbg: {
+		name: "Sound_EnableSoundWhenGameIsInBG",
 		default: "0",
 		category: 7,
 		help: "Enable Sound When Game Is In Background",
 	},
-	Sound_EnemyPlayerHighpassDSPCutoff: {
+	sound_enemyplayerhighpassdspcutoff: {
+		name: "Sound_EnemyPlayerHighpassDSPCutoff",
 		default: "",
 		category: 7,
 		help: "The cutoff value to use for the Highpass filter on the Enemy Player bus (default 80 Hz)",
 	},
-	Sound_ListenerAtCharacter: {
+	sound_listeneratcharacter: {
+		name: "Sound_ListenerAtCharacter",
 		default: "1",
 		category: 7,
 		help: "lock listener at character",
 	},
-	Sound_MasterVolume: {
+	sound_mastervolume: {
+		name: "Sound_MasterVolume",
 		default: "1.0",
 		category: 7,
 		help: "master volume (0.0 to 1.0)",
 	},
-	Sound_MaxCacheSizeInBytes: {
+	sound_maxcachesizeinbytes: {
+		name: "Sound_MaxCacheSizeInBytes",
 		default: "134217728",
 		category: 7,
 		help: "Max cache size in bytes",
 	},
-	Sound_MaxCacheableSizeInBytes: {
+	sound_maxcacheablesizeinbytes: {
+		name: "Sound_MaxCacheableSizeInBytes",
 		default: "2097152",
 		category: 7,
 		help: "Max sound size that will be cached, larger files will be streamed instead",
 	},
-	Sound_MusicVolume: {
+	sound_musicvolume: {
+		name: "Sound_MusicVolume",
 		default: "0.4",
 		category: 5,
 	},
-	Sound_NPCHighpassDSPCutoff: {
+	sound_npchighpassdspcutoff: {
+		name: "Sound_NPCHighpassDSPCutoff",
 		default: "",
 		category: 7,
 		help: "The cutoff value to use for the Highpass filter on the NPC bus (default 80 Hz)",
 	},
-	Sound_NumChannels: {
+	sound_numchannels: {
+		name: "Sound_NumChannels",
 		default: "64",
 		category: 7,
 		help: "number of sound channels",
 	},
-	Sound_OutputDriverIndex: {
+	sound_outputdriverindex: {
+		name: "Sound_OutputDriverIndex",
 		default: "0",
 		category: 7,
 	},
-	Sound_OutputDriverName: {
+	sound_outputdrivername: {
+		name: "Sound_OutputDriverName",
 		default: "Primary Sound Driver",
 		category: 5,
 	},
-	Sound_OutputSampleRate: {
+	sound_outputsamplerate: {
+		name: "Sound_OutputSampleRate",
 		default: "44100",
 		category: 7,
 		help: "output sample rate",
 	},
-	Sound_SFXVolume: {
+	sound_sfxvolume: {
+		name: "Sound_SFXVolume",
 		default: "1.0",
 		category: 7,
 		help: "sound volume (0.0 to 1.0)",
 	},
-	Sound_VoiceChatInputDriverIndex: {
+	sound_voicechatinputdriverindex: {
+		name: "Sound_VoiceChatInputDriverIndex",
 		default: "0",
 		category: 7,
 	},
-	Sound_VoiceChatInputDriverName: {
+	sound_voicechatinputdrivername: {
+		name: "Sound_VoiceChatInputDriverName",
 		default: "Primary Sound Capture Driver",
 		category: 7,
 	},
-	Sound_VoiceChatOutputDriverIndex: {
+	sound_voicechatoutputdriverindex: {
+		name: "Sound_VoiceChatOutputDriverIndex",
 		default: "0",
 		category: 7,
 	},
-	Sound_VoiceChatOutputDriverName: {
+	sound_voicechatoutputdrivername: {
+		name: "Sound_VoiceChatOutputDriverName",
 		default: "Primary Sound Driver",
 		category: 7,
 	},
-	Sound_ZoneMusicNoDelay: {
+	sound_zonemusicnodelay: {
+		name: "Sound_ZoneMusicNoDelay",
 		default: "0",
 		category: 7,
 	},
-	SpawnRegion: {
+	spawnregion: {
+		name: "SpawnRegion",
 		default: "0",
 		category: 5,
 	},
-	SpellEventLog: {
+	spelleventlog: {
+		name: "SpellEventLog",
 		default: "0",
 		category: 5,
 	},
-	SpellOverrides: {
+	spelloverrides: {
+		name: "SpellOverrides",
 		default: "0",
 		category: 5,
 	},
-	SpellQueueWindow: {
+	spellqueuewindow: {
+		name: "SpellQueueWindow",
 		default: "400",
 		category: 4,
 		scope: "Character",
 		help: "Sets how early you can pre-activate/queue a spell/ability. (In Milliseconds)",
 	},
-	SpellScriptEventLog: {
+	spellscripteventlog: {
+		name: "SpellScriptEventLog",
 		default: "0",
 		category: 5,
 	},
-	SpellTargeting: {
+	spelltargeting: {
+		name: "SpellTargeting",
 		default: "0",
 		category: 5,
 	},
-	SplineOpt: {
+	splineopt: {
+		name: "SplineOpt",
 		default: "1",
 		category: 0,
 		help: "toggles use of spline coll optimization",
 	},
-	TargetNearestUseNew: {
+	targetnearestusenew: {
+		name: "TargetNearestUseNew",
 		default: "1",
 		category: 4,
 		help: "Use new 7.2 'nearest target' functionality (Set to 0 for 6.x style tab targeting)",
 	},
-	TargetPriorityCombatLock: {
+	targetprioritycombatlock: {
+		name: "TargetPriorityCombatLock",
 		default: "1",
 		category: 4,
 		help: "1=Lock to in-combat targets when starting from an in-combat target. 2=Further restrict to in-combat with player.",
 	},
-	TargetPriorityCombatLockContextualRelaxation: {
+	targetprioritycombatlockcontextualrelaxation: {
+		name: "TargetPriorityCombatLockContextualRelaxation",
 		default: "1",
 		category: 4,
 		help: "1=Enables relaxation of combat lock based on context (eg. no in-combat target infront)",
 	},
-	TargetPriorityCombatLockHighlight: {
+	targetprioritycombatlockhighlight: {
+		name: "TargetPriorityCombatLockHighlight",
 		default: "0",
 		category: 4,
 		help: "1=Lock to in-combat targets when starting from an in-combat target. 2=Further restrict to in-combat with player. (while doing hold-to-target)",
 	},
-	TargetPriorityPvp: {
+	targetprioritypvp: {
+		name: "TargetPriorityPvp",
 		default: "1",
 		category: 4,
 		help: "When in pvp, give higher priority to players and important pvp targets (1 = players & npc bosses, 2 = all pvp targets, 3 = players only)",
 	},
-	TargetPriorityValueBank: {
+	targetpriorityvaluebank: {
+		name: "TargetPriorityValueBank",
 		default: "1",
 		category: 4,
 		help: "Selects the active targeting values bank for calculating target priority order",
 	},
-	TerrainLodDiv: {
+	terrainloddiv: {
+		name: "TerrainLodDiv",
 		default: "768",
 		category: 5,
 	},
-	TurnSpeed: {
+	turnspeed: {
+		name: "TurnSpeed",
 		default: "180",
 		category: 5,
 		help: "Set the keyboard turn rate in degrees per second; capped by the server",
 	},
-	UberTooltips: {
+	ubertooltips: {
+		name: "UberTooltips",
 		default: "1",
 		category: 4,
 		scope: "Character",
 		help: "Show verbose tooltips",
 	},
-	UnitEnterCombatLog: {
+	unitentercombatlog: {
+		name: "UnitEnterCombatLog",
 		default: "0",
 		category: 5,
 	},
-	UnitNameEnemyGuardianName: {
+	unitnameenemyguardianname: {
+		name: "UnitNameEnemyGuardianName",
 		default: "1",
 		category: 4,
 		scope: "Character",
 	},
-	UnitNameEnemyMinionName: {
+	unitnameenemyminionname: {
+		name: "UnitNameEnemyMinionName",
 		default: "1",
 		category: 4,
 		scope: "Character",
 	},
-	UnitNameEnemyPetName: {
+	unitnameenemypetname: {
+		name: "UnitNameEnemyPetName",
 		default: "1",
 		category: 4,
 		scope: "Character",
 	},
-	UnitNameEnemyPlayerName: {
+	unitnameenemyplayername: {
+		name: "UnitNameEnemyPlayerName",
 		default: "1",
 		category: 4,
 		scope: "Character",
 	},
-	UnitNameEnemyTotemName: {
+	unitnameenemytotemname: {
+		name: "UnitNameEnemyTotemName",
 		default: "1",
 		category: 4,
 		scope: "Character",
 	},
-	UnitNameForceHideMinus: {
+	unitnameforcehideminus: {
+		name: "UnitNameForceHideMinus",
 		default: "0",
 		category: 4,
 		scope: "Character",
 	},
-	UnitNameFriendlyGuardianName: {
+	unitnamefriendlyguardianname: {
+		name: "UnitNameFriendlyGuardianName",
 		default: "1",
 		category: 4,
 		scope: "Character",
 	},
-	UnitNameFriendlyMinionName: {
+	unitnamefriendlyminionname: {
+		name: "UnitNameFriendlyMinionName",
 		default: "1",
 		category: 4,
 		scope: "Character",
 	},
-	UnitNameFriendlyPetName: {
+	unitnamefriendlypetname: {
+		name: "UnitNameFriendlyPetName",
 		default: "1",
 		category: 4,
 		scope: "Character",
 	},
-	UnitNameFriendlyPlayerName: {
+	unitnamefriendlyplayername: {
+		name: "UnitNameFriendlyPlayerName",
 		default: "1",
 		category: 4,
 		scope: "Character",
 	},
-	UnitNameFriendlySpecialNPCName: {
+	unitnamefriendlyspecialnpcname: {
+		name: "UnitNameFriendlySpecialNPCName",
 		default: "1",
 		category: 4,
 		scope: "Character",
 	},
-	UnitNameFriendlyTotemName: {
+	unitnamefriendlytotemname: {
+		name: "UnitNameFriendlyTotemName",
 		default: "1",
 		category: 4,
 		scope: "Character",
 	},
-	UnitNameGuildTitle: {
+	unitnameguildtitle: {
+		name: "UnitNameGuildTitle",
 		default: "1",
 		category: 4,
 		scope: "Character",
 	},
-	UnitNameHostleNPC: {
+	unitnamehostlenpc: {
+		name: "UnitNameHostleNPC",
 		default: "1",
 		category: 4,
 		scope: "Character",
 	},
-	UnitNameInteractiveNPC: {
+	unitnameinteractivenpc: {
+		name: "UnitNameInteractiveNPC",
 		default: "1",
 		category: 4,
 		scope: "Character",
 	},
-	UnitNameNPC: {
+	unitnamenpc: {
+		name: "UnitNameNPC",
 		default: "0",
 		category: 4,
 		scope: "Character",
 	},
-	UnitNameNonCombatCreatureName: {
+	unitnamenoncombatcreaturename: {
+		name: "UnitNameNonCombatCreatureName",
 		default: "0",
 		category: 4,
 		scope: "Character",
 	},
-	UnitNameOwn: {
+	unitnameown: {
+		name: "UnitNameOwn",
 		default: "0",
 		category: 4,
 		scope: "Character",
 	},
-	UnitNamePlayerGuild: {
+	unitnameplayerguild: {
+		name: "UnitNamePlayerGuild",
 		default: "1",
 		category: 4,
 		scope: "Character",
 	},
-	UnitNamePlayerPVPTitle: {
+	unitnameplayerpvptitle: {
+		name: "UnitNamePlayerPVPTitle",
 		default: "1",
 		category: 4,
 		scope: "Character",
 	},
-	VerboseSpellScriptEventLog: {
+	verbosespellscripteventlog: {
+		name: "VerboseSpellScriptEventLog",
 		default: "0",
 		category: 5,
 	},
-	VoiceChatMasterVolumeScale: {
+	voicechatmastervolumescale: {
+		name: "VoiceChatMasterVolumeScale",
 		default: "1",
 		category: 5,
 		help: "Voice Chat audio ducking, applied as a scale to the game's master volume when somebody is speaking in voice chat",
 	},
-	VoiceCommunicationMode: {
+	voicecommunicationmode: {
+		name: "VoiceCommunicationMode",
 		default: "0",
 		category: 7,
 		scope: "Character",
 		help: "Which communication mode to use for voice chat: push-to-talk, open mic, etc...",
 	},
-	VoiceEnableWhenGameIsInBG: {
+	voiceenablewhengameisinbg: {
+		name: "VoiceEnableWhenGameIsInBG",
 		default: "1",
 		category: 7,
 		help: "Enable Voice Chat when game is in background",
 	},
-	VoiceInputDevice: {
+	voiceinputdevice: {
+		name: "VoiceInputDevice",
 		default: "",
 		category: 7,
 		help: "Which deviceID you would like to use to pick up the sound of your wonderful voice, usually a microphone of some kind, empty string is system default",
 	},
-	VoiceInputVolume: {
+	voiceinputvolume: {
+		name: "VoiceInputVolume",
 		default: "50",
 		category: 7,
 		help: "The gain applied to your microphone, helps change your speaking volume from other users' perspectives, larger values are louder.",
 	},
-	VoiceOutputDevice: {
+	voiceoutputdevice: {
+		name: "VoiceOutputDevice",
 		default: "",
 		category: 7,
 		help: "Which deviceID you would like to use to transmit the sound of other users' wonderful voices, usually a speakers of some kind, empty string is system default",
 	},
-	VoiceOutputVolume: {
+	voiceoutputvolume: {
+		name: "VoiceOutputVolume",
 		default: "50",
 		category: 7,
 		help: "The volume of incoming voice chat, how loud other users' voices sound",
 	},
-	VoicePushToTalkKeybind: {
+	voicepushtotalkkeybind: {
+		name: "VoicePushToTalkKeybind",
 		default: "`",
 		category: 7,
 		scope: "Character",
 		help: "Push to talk key",
 	},
-	VoiceSelfDeafened: {
+	voiceselfdeafened: {
+		name: "VoiceSelfDeafened",
 		default: "0",
 		category: 7,
 		help: "Voice Chat Self Deafened",
 	},
-	VoiceSelfMuted: {
+	voiceselfmuted: {
+		name: "VoiceSelfMuted",
 		default: "0",
 		category: 7,
 		help: "Voice Chat Self Muted",
 	},
-	VoiceVADSensitivity: {
+	voicevadsensitivity: {
+		name: "VoiceVADSensitivity",
 		default: "57",
 		category: 7,
 		help: "How sensitive voice activity detection is.  Value ranges from 0 to 100, smaller values will transmit at a lower noise threshold.",
 	},
-	WorldActionsLog: {
+	worldactionslog: {
+		name: "WorldActionsLog",
 		default: "0",
 		category: 5,
 	},
-	WorldTextCritScreenY: {
+	worldtextcritscreeny: {
+		name: "WorldTextCritScreenY",
 		default: "0.0275",
 		category: 4,
 		scope: "Character",
 	},
-	WorldTextGravity: {
+	worldtextgravity: {
+		name: "WorldTextGravity",
 		default: "0.5",
 		category: 4,
 		scope: "Character",
 	},
-	WorldTextNonRandomZ: {
+	worldtextnonrandomz: {
+		name: "WorldTextNonRandomZ",
 		default: "2.5",
 		category: 4,
 		scope: "Character",
 	},
-	WorldTextRampDuration: {
+	worldtextrampduration: {
+		name: "WorldTextRampDuration",
 		default: "1.0",
 		category: 4,
 		scope: "Character",
 	},
-	WorldTextRampPow: {
+	worldtextramppow: {
+		name: "WorldTextRampPow",
 		default: "1.9",
 		category: 4,
 		scope: "Character",
 	},
-	WorldTextRampPowCrit: {
+	worldtextramppowcrit: {
+		name: "WorldTextRampPowCrit",
 		default: "8.0",
 		category: 4,
 		scope: "Character",
 	},
-	WorldTextRandomXY: {
+	worldtextrandomxy: {
+		name: "WorldTextRandomXY",
 		default: "0.0",
 		category: 4,
 		scope: "Character",
 	},
-	WorldTextRandomZMax: {
+	worldtextrandomzmax: {
+		name: "WorldTextRandomZMax",
 		default: "1.5",
 		category: 4,
 		scope: "Character",
 	},
-	WorldTextRandomZMin: {
+	worldtextrandomzmin: {
+		name: "WorldTextRandomZMin",
 		default: "0.8",
 		category: 4,
 		scope: "Character",
 	},
-	WorldTextScale: {
+	worldtextscale: {
+		name: "WorldTextScale",
 		default: "1.0",
 		category: 4,
 		scope: "Character",
 	},
-	WorldTextScreenY: {
+	worldtextscreeny: {
+		name: "WorldTextScreenY",
 		default: "0.015",
 		category: 4,
 		scope: "Character",
 	},
-	WorldTextStartPosRandomness: {
+	worldtextstartposrandomness: {
+		name: "WorldTextStartPosRandomness",
 		default: "1.0",
 		category: 4,
 		scope: "Character",
 	},
-	actionedAdventureJournalEntries: {
+	actionedadventurejournalentries: {
+		name: "actionedAdventureJournalEntries",
 		default: "",
 		category: 4,
 		scope: "Character",
 		help: "Which adventure journal entries flagged with ADVENTURE_JOURNAL_HIDE_AFTER_ACTION the user acted upon",
 	},
-	activeCUFProfile: {
+	activecufprofile: {
+		name: "activeCUFProfile",
 		default: "",
 		category: 4,
 		scope: "Account",
 		help: "The last active CUF Profile.",
 	},
-	addFriendInfoShown: {
+	addfriendinfoshown: {
+		name: "addFriendInfoShown",
 		default: "0",
 		category: 4,
 		scope: "Character",
 		help: "The info for Add Friend has been shown",
 	},
-	advJournalLastOpened: {
+	advjournallastopened: {
+		name: "advJournalLastOpened",
 		default: "0",
 		category: 4,
 		scope: "Character",
 		help: "Last time the Adventure Journal opened",
 	},
-	advancedCombatLogging: {
+	advancedcombatlogging: {
+		name: "advancedCombatLogging",
 		default: "0",
 		category: 4,
 		help: "Whether we want advanced combat log data sent from the server",
 	},
-	advancedWatchFrame: {
+	advancedwatchframe: {
+		name: "advancedWatchFrame",
 		default: "0",
 		category: 4,
 		scope: "Character",
 		help: "Enables advanced Objectives tracking features",
 	},
-	agentUID: {
+	agentuid: {
+		name: "agentUID",
 		default: "",
 		category: 4,
 		help: "The UID provided by Battle.net to be passed to Agent",
 	},
-	allowCompareWithToggle: {
+	allowcomparewithtoggle: {
+		name: "allowCompareWithToggle",
 		default: "1",
 		category: 4,
 		scope: "Character",
 	},
-	alwaysCompareItems: {
+	alwayscompareitems: {
+		name: "alwaysCompareItems",
 		default: "0",
 		category: 4,
 		scope: "Character",
 		help: "Always show item comparison tooltips",
 	},
-	alwaysShowActionBars: {
+	alwaysshowactionbars: {
+		name: "alwaysShowActionBars",
 		default: "0",
 		category: 4,
 		scope: "Character",
 		help: "Whether to always show the action bar grid",
 	},
-	animFrameSkipLOD: {
+	animframeskiplod: {
+		name: "animFrameSkipLOD",
 		default: "0",
 		category: 1,
 		help: "animations will skip frames at distance",
 	},
-	assaoAdaptiveQualityLimit: {
+	assaoadaptivequalitylimit: {
+		name: "assaoAdaptiveQualityLimit",
 		default: ".45",
 		category: 1,
 		help: "ASSAO Adaptive Quality Limit [0.0, 1.0] (only for Quality Level 3)",
 	},
-	assaoBlurPassCount: {
+	assaoblurpasscount: {
+		name: "assaoBlurPassCount",
 		default: "2",
 		category: 1,
 		help: "ASSAO Blur Pass Count [  0,   6] Number of edge-sensitive smart blur passes to apply. Quality 0 is an exception with only one 'dumb' blur pass used.",
 	},
-	assaoDetailShadowStrength: {
+	assaodetailshadowstrength: {
+		name: "assaoDetailShadowStrength",
 		default: "0",
 		category: 1,
 		help: "ASSAO Detail Shadow Strength [0.0, 5.0] Used for high-res detail AO using neighboring depth pixels: adds a lot of detail but also reduces temporal stability (adds aliasing).",
 	},
-	assaoFadeOutFrom: {
+	assaofadeoutfrom: {
+		name: "assaoFadeOutFrom",
 		default: "50.0",
 		category: 1,
 		help: "ASSAO Fade Out From [0.0,  ~ ] Distance to start start fading out the effect.",
 	},
-	assaoFadeOutTo: {
+	assaofadeoutto: {
+		name: "assaoFadeOutTo",
 		default: "300.0",
 		category: 1,
 		help: "ASSAO Fade Out To [0.0,  ~ ] Distance at which the effect is faded out.",
 	},
-	assaoHorizonAngleThresh: {
+	assaohorizonanglethresh: {
+		name: "assaoHorizonAngleThresh",
 		default: "0.4",
 		category: 1,
 		help: "ASSAO Horizon Angle Thresh [0.0, 0.2] Limits self-shadowing",
 	},
-	assaoNormals: {
+	assaonormals: {
+		name: "assaoNormals",
 		default: "1",
 		category: 1,
 		help: "Use Normals for ASSAO",
 	},
-	assaoRadius: {
+	assaoradius: {
+		name: "assaoRadius",
 		default: "1.85",
 		category: 1,
 		help: "ASSAO Radius [0.0,  ~ ] World (view) space size of the occlusion sphere",
 	},
-	assaoShadowClamp: {
+	assaoshadowclamp: {
+		name: "assaoShadowClamp",
 		default: ".98",
 		category: 1,
 		help: "ASSAO Shadow Clamp [0.0, 1.0]",
 	},
-	assaoShadowMult: {
+	assaoshadowmult: {
+		name: "assaoShadowMult",
 		default: "1.1",
 		category: 1,
 		help: "ASSAO Shadow Multiplier [0.0, 5.0] Effect strength linear multiplier",
 	},
-	assaoShadowPower: {
+	assaoshadowpower: {
+		name: "assaoShadowPower",
 		default: "1.34",
 		category: 1,
 		help: "ASSAO Shadow Power [0.5, 5.0] Effect strength pow modifier",
 	},
-	assaoSharpness: {
+	assaosharpness: {
+		name: "assaoSharpness",
 		default: ".98",
 		category: 1,
 		help: "ASSAO Sharpness [0.0, 1.0] (How much to bleed over edges; 1: not at all, 0.5: half-half; 0.0: completely ignore edges)",
 	},
-	assaoTemporalSSAngleOffset: {
+	assaotemporalssangleoffset: {
+		name: "assaoTemporalSSAngleOffset",
 		default: "0.0",
 		category: 1,
 		help: "ASSAO Temporal Super Sampling Angle Offset [0.0,  PI] Used to rotate sampling kernel; If using temporal AA / supersampling, suggested to rotate by ( (frame%3)/3.0*PI ) or similar. Kernel is already symmetrical, which is why we use PI and not 2*PI.",
 	},
-	assaoTemporalSSRadiusOffset: {
+	assaotemporalssradiusoffset: {
+		name: "assaoTemporalSSRadiusOffset",
 		default: "1.0",
 		category: 1,
 		help: "ASSAO Temporal Super Sampling Radius Offset [0.0, 2.0] Used to scale sampling kernel; If using temporal AA / supersampling, suggested to scale by ( 1.0f + (((frame%3)-1.0)/3.0)*0.1 ) or similar.",
 	},
-	assistAttack: {
+	assistattack: {
+		name: "assistAttack",
 		default: "0",
 		category: 4,
 		scope: "Account",
 		help: "Whether to start attacking after an assist",
 	},
-	asyncHandlerTimeout: {
+	asynchandlertimeout: {
+		name: "asyncHandlerTimeout",
 		default: "100",
 		category: 0,
 		help: "Engine option: Async read main thread timeout",
 	},
-	asyncThreadSleep: {
+	asyncthreadsleep: {
+		name: "asyncThreadSleep",
 		default: "0",
 		category: 0,
 		help: "Engine option: Async read thread sleep",
 	},
-	auctionDisplayOnCharacter: {
+	auctiondisplayoncharacter: {
+		name: "auctionDisplayOnCharacter",
 		default: "0",
 		category: 4,
 		scope: "Character",
 		help: "Show auction items on the dress-up paperdoll",
 	},
-	auctionHouseDurationDropdown: {
+	auctionhousedurationdropdown: {
+		name: "auctionHouseDurationDropdown",
 		default: "2",
 		category: 4,
 		scope: "Character",
 		help: "The previously selected duration index in the auction house duration dropdown",
 	},
-	audioLocale: {
+	audiolocale: {
+		name: "audioLocale",
 		default: "",
 		category: 4,
 		help: "Set the game locale for audio content",
 	},
-	autoAcceptQuickJoinRequests: {
+	autoacceptquickjoinrequests: {
+		name: "autoAcceptQuickJoinRequests",
 		default: "0",
 		category: 4,
 		scope: "Character",
 		help: "Whether or not to auto-accept players who are trying to join your party through quick join",
 	},
-	autoClearAFK: {
+	autoclearafk: {
+		name: "autoClearAFK",
 		default: "1",
 		category: 4,
 		scope: "Character",
 		help: "Automatically clear AFK when moving or chatting",
 	},
-	autoCompleteResortNamesOnRecency: {
+	autocompleteresortnamesonrecency: {
+		name: "autoCompleteResortNamesOnRecency",
 		default: "1",
 		category: 4,
 		scope: "Character",
 		help: "Shows people you recently spoke with higher up on the AutoComplete list.",
 	},
-	autoCompleteUseContext: {
+	autocompleteusecontext: {
+		name: "autoCompleteUseContext",
 		default: "1",
 		category: 4,
 		scope: "Character",
 		help: "The system will, for example, only show people in your guild when you are typing /gpromote. Names will also never be removed.",
 	},
-	autoCompleteWhenEditingFromCenter: {
+	autocompletewheneditingfromcenter: {
+		name: "autoCompleteWhenEditingFromCenter",
 		default: "1",
 		category: 4,
 		scope: "Character",
 		help: "If you edit a name by inserting characters into the center, a smarter auto-complete will occur.",
 	},
-	autoDismount: {
+	autodismount: {
+		name: "autoDismount",
 		default: "1",
 		category: 4,
 		scope: "Character",
 		help: "Automatically dismount when needed",
 	},
-	autoDismountFlying: {
+	autodismountflying: {
+		name: "autoDismountFlying",
 		default: "0",
 		category: 4,
 		scope: "Character",
 		help: "If enabled, your character will automatically dismount before casting while flying",
 	},
-	autoFilledMultiCastSlots: {
+	autofilledmulticastslots: {
+		name: "autoFilledMultiCastSlots",
 		default: "0",
 		category: 4,
 		scope: "Account",
 		help: "Bitfield that saves whether multi-cast slots have been automatically filled.",
 	},
-	autoInteract: {
+	autointeract: {
+		name: "autoInteract",
 		default: "0",
 		category: 4,
 		scope: "Character",
 		help: "Toggles auto-move to interact target",
 	},
-	autoLootDefault: {
+	autolootdefault: {
+		name: "autoLootDefault",
 		default: "0",
 		category: 4,
 		scope: "Account",
 		help: "Automatically loot items when the loot window opens",
 	},
-	autoLootRate: {
+	autolootrate: {
+		name: "autoLootRate",
 		default: "150",
 		category: 4,
 		scope: "Account",
 		help: "Rate in milliseconds to tick auto loot",
 	},
-	autoOpenLootHistory: {
+	autoopenloothistory: {
+		name: "autoOpenLootHistory",
 		default: "0",
 		category: 4,
 		scope: "Character",
 		help: "Automatically opens the Loot History window when certain items drop",
 	},
-	autoQuestPopUps: {
+	autoquestpopups: {
+		name: "autoQuestPopUps",
 		default: "",
 		category: 4,
 		scope: "Account",
 		help: "Saves current pop-ups for quests that are automatically acquired or completed.",
 	},
-	autoQuestProgress: {
+	autoquestprogress: {
+		name: "autoQuestProgress",
 		default: "1",
 		category: 4,
 		scope: "Character",
 		help: "Whether to automatically watch all quests when they are updated",
 	},
-	autoQuestWatch: {
+	autoquestwatch: {
+		name: "autoQuestWatch",
 		default: "1",
 		category: 4,
 		scope: "Character",
 		help: "Whether to automatically watch all quests when you obtain them",
 	},
-	autoSelfCast: {
+	autoselfcast: {
+		name: "autoSelfCast",
 		default: "1",
 		category: 4,
 		scope: "Account",
 		help: "Whether spells should automatically be cast on you if you don't have a valid target",
 	},
-	autoStand: {
+	autostand: {
+		name: "autoStand",
 		default: "1",
 		category: 4,
 		scope: "Character",
 		help: "Automatically stand when needed",
 	},
-	autoUnshift: {
+	autounshift: {
+		name: "autoUnshift",
 		default: "1",
 		category: 4,
 		scope: "Character",
 		help: "Automatically leave shapeshift form when needed",
 	},
-	autojoinBGVoice: {
+	autojoinbgvoice: {
+		name: "autojoinBGVoice",
 		default: "0",
 		category: 7,
 		scope: "Character",
 		help: "Automatically join the voice session in battleground chat",
 	},
-	autojoinPartyVoice: {
+	autojoinpartyvoice: {
+		name: "autojoinPartyVoice",
 		default: "0",
 		category: 7,
 		scope: "Character",
 		help: "Automatically join the voice session in party/raid chat",
 	},
-	blockChannelInvites: {
+	blockchannelinvites: {
+		name: "blockChannelInvites",
 		default: "0",
 		category: 4,
 		scope: "Account",
 		help: "Whether to automatically block chat channel invites",
 	},
-	blockTrades: {
+	blocktrades: {
+		name: "blockTrades",
 		default: "0",
 		category: 4,
 		scope: "Account",
 		help: "Whether to automatically block trade requests",
 	},
-	bodyQuota: {
+	bodyquota: {
+		name: "bodyQuota",
 		default: "100",
 		category: 1,
 		help: "Maximum number of componented bodies seen at once",
 	},
-	breakUpLargeNumbers: {
+	breakuplargenumbers: {
+		name: "breakUpLargeNumbers",
 		default: "1",
 		category: 4,
 		scope: "Character",
 		help: "Toggles using commas in large numbers",
 	},
 	bspcache: {
+		name: "bspcache",
 		default: "1",
 		category: 1,
 		help: "BSP node caching",
 	},
-	buffDurations: {
+	buffdurations: {
+		name: "buffDurations",
 		default: "1",
 		category: 4,
 		scope: "Character",
 		help: "Whether to show buff durations",
 	},
-	cacaoBilateralSimilarityDistanceSigma: {
+	cacaobilateralsimilaritydistancesigma: {
+		name: "cacaoBilateralSimilarityDistanceSigma",
 		default: "0.01",
 		category: 1,
 		help: "CACAO Sigma squared value for use in bilateral upsampler giving similarity weighting for neighbouring pixels. Should be greater than 0.0.",
 	},
-	calendarShowBattlegrounds: {
+	calendarshowbattlegrounds: {
+		name: "calendarShowBattlegrounds",
 		default: "1",
 		category: 4,
 		scope: "Account",
 		help: "Whether Battleground holidays should appear in the calendar",
 	},
-	calendarShowDarkmoon: {
+	calendarshowdarkmoon: {
+		name: "calendarShowDarkmoon",
 		default: "1",
 		category: 4,
 		scope: "Account",
 		help: "Whether Darkmoon Faire holidays should appear in the calendar",
 	},
-	calendarShowHolidays: {
+	calendarshowholidays: {
+		name: "calendarShowHolidays",
 		default: "1",
 		category: 4,
 		scope: "Account",
 		help: "Whether holidays should appear in the calendar",
 	},
-	calendarShowLockouts: {
+	calendarshowlockouts: {
+		name: "calendarShowLockouts",
 		default: "1",
 		category: 4,
 		scope: "Account",
 		help: "Whether raid lockouts should appear in the calendar",
 	},
-	calendarShowWeeklyHolidays: {
+	calendarshowweeklyholidays: {
+		name: "calendarShowWeeklyHolidays",
 		default: "1",
 		category: 4,
 		scope: "Account",
 		help: "Whether weekly holidays should appear in the calendar",
 	},
-	cameraBobbing: {
+	camerabobbing: {
+		name: "cameraBobbing",
 		default: "0",
 		category: 5,
 	},
-	cameraBobbingSmoothSpeed: {
+	camerabobbingsmoothspeed: {
+		name: "cameraBobbingSmoothSpeed",
 		default: "0.8",
 		category: 5,
 		scope: "Character",
 	},
-	cameraCustomViewSmoothing: {
+	cameracustomviewsmoothing: {
+		name: "cameraCustomViewSmoothing",
 		default: "0",
 		category: 5,
 		scope: "Character",
 	},
-	cameraDistanceMaxZoomFactor: {
+	cameradistancemaxzoomfactor: {
+		name: "cameraDistanceMaxZoomFactor",
 		default: "1.9",
 		category: 5,
 		scope: "Character",
 	},
-	cameraDistanceRateMult: {
+	cameradistanceratemult: {
+		name: "cameraDistanceRateMult",
 		default: "1",
 		category: 5,
 		scope: "Character",
 	},
-	cameraDive: {
+	cameradive: {
+		name: "cameraDive",
 		default: "1",
 		category: 5,
 		scope: "Character",
 	},
-	cameraFoVSmoothSpeed: {
+	camerafovsmoothspeed: {
+		name: "cameraFoVSmoothSpeed",
 		default: "0.5",
 		category: 5,
 		scope: "Character",
 	},
-	cameraGroundSmoothSpeed: {
+	cameragroundsmoothspeed: {
+		name: "cameraGroundSmoothSpeed",
 		default: "7.5",
 		category: 5,
 		scope: "Character",
 	},
-	cameraHeightIgnoreStandState: {
+	cameraheightignorestandstate: {
+		name: "cameraHeightIgnoreStandState",
 		default: "0",
 		category: 5,
 		scope: "Character",
 	},
-	cameraPitchMoveSpeed: {
+	camerapitchmovespeed: {
+		name: "cameraPitchMoveSpeed",
 		default: "90",
 		category: 5,
 		scope: "Character",
 	},
-	cameraPitchSmoothMax: {
+	camerapitchsmoothmax: {
+		name: "cameraPitchSmoothMax",
 		default: "23.0",
 		category: 5,
 		scope: "Character",
 	},
-	cameraPitchSmoothMin: {
+	camerapitchsmoothmin: {
+		name: "cameraPitchSmoothMin",
 		default: "0.0",
 		category: 5,
 		scope: "Character",
 	},
-	cameraPitchSmoothSpeed: {
+	camerapitchsmoothspeed: {
+		name: "cameraPitchSmoothSpeed",
 		default: "45",
 		category: 5,
 		scope: "Character",
 	},
-	cameraPivot: {
+	camerapivot: {
+		name: "cameraPivot",
 		default: "1",
 		category: 5,
 		scope: "Character",
 	},
-	cameraPivotDXMax: {
+	camerapivotdxmax: {
+		name: "cameraPivotDXMax",
 		default: "0.05",
 		category: 5,
 		scope: "Character",
 	},
-	cameraPivotDYMin: {
+	camerapivotdymin: {
+		name: "cameraPivotDYMin",
 		default: "0.00",
 		category: 5,
 		scope: "Character",
 	},
-	cameraSavedDistance: {
+	camerasaveddistance: {
+		name: "cameraSavedDistance",
 		default: "5.55",
 		category: 5,
 		scope: "Account",
 	},
-	cameraSavedPetBattleDistance: {
+	camerasavedpetbattledistance: {
+		name: "cameraSavedPetBattleDistance",
 		default: "10.0",
 		category: 5,
 		scope: "Account",
 	},
-	cameraSavedPitch: {
+	camerasavedpitch: {
+		name: "cameraSavedPitch",
 		default: "10.0",
 		category: 5,
 		scope: "Account",
 	},
-	cameraSavedVehicleDistance: {
+	camerasavedvehicledistance: {
+		name: "cameraSavedVehicleDistance",
 		default: "-1.0",
 		category: 5,
 		scope: "Account",
 	},
-	cameraSmooth: {
+	camerasmooth: {
+		name: "cameraSmooth",
 		default: "1",
 		category: 5,
 		scope: "Character",
 	},
-	cameraSmoothAlwaysFearDelay: {
+	camerasmoothalwaysfeardelay: {
+		name: "cameraSmoothAlwaysFearDelay",
 		default: "0.0",
 		category: 5,
 		scope: "Character",
 	},
-	cameraSmoothAlwaysFearFactor: {
+	camerasmoothalwaysfearfactor: {
+		name: "cameraSmoothAlwaysFearFactor",
 		default: "1.0",
 		category: 5,
 		scope: "Character",
 	},
-	cameraSmoothAlwaysIdleDelay: {
+	camerasmoothalwaysidledelay: {
+		name: "cameraSmoothAlwaysIdleDelay",
 		default: "0.0",
 		category: 5,
 		scope: "Character",
 	},
-	cameraSmoothAlwaysIdleFactor: {
+	camerasmoothalwaysidlefactor: {
+		name: "cameraSmoothAlwaysIdleFactor",
 		default: "1.0",
 		category: 5,
 		scope: "Character",
 	},
-	cameraSmoothAlwaysMoveDelay: {
+	camerasmoothalwaysmovedelay: {
+		name: "cameraSmoothAlwaysMoveDelay",
 		default: "0.0",
 		category: 5,
 		scope: "Character",
 	},
-	cameraSmoothAlwaysMoveFactor: {
+	camerasmoothalwaysmovefactor: {
+		name: "cameraSmoothAlwaysMoveFactor",
 		default: "1.0",
 		category: 5,
 		scope: "Character",
 	},
-	cameraSmoothAlwaysStopDelay: {
+	camerasmoothalwaysstopdelay: {
+		name: "cameraSmoothAlwaysStopDelay",
 		default: "0.0",
 		category: 5,
 		scope: "Character",
 	},
-	cameraSmoothAlwaysStopFactor: {
+	camerasmoothalwaysstopfactor: {
+		name: "cameraSmoothAlwaysStopFactor",
 		default: "1.0",
 		category: 5,
 		scope: "Character",
 	},
-	cameraSmoothAlwaysStrafeDelay: {
+	camerasmoothalwaysstrafedelay: {
+		name: "cameraSmoothAlwaysStrafeDelay",
 		default: "0.0",
 		category: 5,
 		scope: "Character",
 	},
-	cameraSmoothAlwaysStrafeFactor: {
+	camerasmoothalwaysstrafefactor: {
+		name: "cameraSmoothAlwaysStrafeFactor",
 		default: "1.0",
 		category: 5,
 		scope: "Character",
 	},
-	cameraSmoothAlwaysTrackDelay: {
+	camerasmoothalwaystrackdelay: {
+		name: "cameraSmoothAlwaysTrackDelay",
 		default: "0.0",
 		category: 5,
 		scope: "Character",
 	},
-	cameraSmoothAlwaysTrackFactor: {
+	camerasmoothalwaystrackfactor: {
+		name: "cameraSmoothAlwaysTrackFactor",
 		default: "1.0",
 		category: 5,
 		scope: "Character",
 	},
-	cameraSmoothAlwaysTurnDelay: {
+	camerasmoothalwaysturndelay: {
+		name: "cameraSmoothAlwaysTurnDelay",
 		default: "0.0",
 		category: 5,
 		scope: "Character",
 	},
-	cameraSmoothAlwaysTurnFactor: {
+	camerasmoothalwaysturnfactor: {
+		name: "cameraSmoothAlwaysTurnFactor",
 		default: "1.0",
 		category: 5,
 		scope: "Character",
 	},
-	cameraSmoothNeverFearDelay: {
+	camerasmoothneverfeardelay: {
+		name: "cameraSmoothNeverFearDelay",
 		default: "0.0",
 		category: 5,
 		scope: "Character",
 	},
-	cameraSmoothNeverFearFactor: {
+	camerasmoothneverfearfactor: {
+		name: "cameraSmoothNeverFearFactor",
 		default: "0.0",
 		category: 5,
 		scope: "Character",
 	},
-	cameraSmoothNeverIdleDelay: {
+	camerasmoothneveridledelay: {
+		name: "cameraSmoothNeverIdleDelay",
 		default: "0.0",
 		category: 5,
 		scope: "Character",
 	},
-	cameraSmoothNeverIdleFactor: {
+	camerasmoothneveridlefactor: {
+		name: "cameraSmoothNeverIdleFactor",
 		default: "0.0",
 		category: 5,
 		scope: "Character",
 	},
-	cameraSmoothNeverMoveDelay: {
+	camerasmoothnevermovedelay: {
+		name: "cameraSmoothNeverMoveDelay",
 		default: "0.0",
 		category: 5,
 		scope: "Character",
 	},
-	cameraSmoothNeverMoveFactor: {
+	camerasmoothnevermovefactor: {
+		name: "cameraSmoothNeverMoveFactor",
 		default: "0.0",
 		category: 5,
 		scope: "Character",
 	},
-	cameraSmoothNeverStopDelay: {
+	camerasmoothneverstopdelay: {
+		name: "cameraSmoothNeverStopDelay",
 		default: "0.0",
 		category: 5,
 		scope: "Character",
 	},
-	cameraSmoothNeverStopFactor: {
+	camerasmoothneverstopfactor: {
+		name: "cameraSmoothNeverStopFactor",
 		default: "0.0",
 		category: 5,
 		scope: "Character",
 	},
-	cameraSmoothNeverStrafeDelay: {
+	camerasmoothneverstrafedelay: {
+		name: "cameraSmoothNeverStrafeDelay",
 		default: "0.0",
 		category: 5,
 		scope: "Character",
 	},
-	cameraSmoothNeverStrafeFactor: {
+	camerasmoothneverstrafefactor: {
+		name: "cameraSmoothNeverStrafeFactor",
 		default: "0.0",
 		category: 5,
 		scope: "Character",
 	},
-	cameraSmoothNeverTrackDelay: {
+	camerasmoothnevertrackdelay: {
+		name: "cameraSmoothNeverTrackDelay",
 		default: "0.0",
 		category: 5,
 		scope: "Character",
 	},
-	cameraSmoothNeverTrackFactor: {
+	camerasmoothnevertrackfactor: {
+		name: "cameraSmoothNeverTrackFactor",
 		default: "0.0",
 		category: 5,
 		scope: "Character",
 	},
-	cameraSmoothNeverTurnDelay: {
+	camerasmoothneverturndelay: {
+		name: "cameraSmoothNeverTurnDelay",
 		default: "0.0",
 		category: 5,
 		scope: "Character",
 	},
-	cameraSmoothNeverTurnFactor: {
+	camerasmoothneverturnfactor: {
+		name: "cameraSmoothNeverTurnFactor",
 		default: "0.0",
 		category: 5,
 		scope: "Character",
 	},
-	cameraSmoothPitch: {
+	camerasmoothpitch: {
+		name: "cameraSmoothPitch",
 		default: "1",
 		category: 5,
 		scope: "Character",
 	},
-	cameraSmoothSmartFearDelay: {
+	camerasmoothsmartfeardelay: {
+		name: "cameraSmoothSmartFearDelay",
 		default: "0.4",
 		category: 5,
 		scope: "Character",
 	},
-	cameraSmoothSmartFearFactor: {
+	camerasmoothsmartfearfactor: {
+		name: "cameraSmoothSmartFearFactor",
 		default: "10.0",
 		category: 5,
 		scope: "Character",
 	},
-	cameraSmoothSmartIdleDelay: {
+	camerasmoothsmartidledelay: {
+		name: "cameraSmoothSmartIdleDelay",
 		default: "0.0",
 		category: 5,
 		scope: "Character",
 	},
-	cameraSmoothSmartIdleFactor: {
+	camerasmoothsmartidlefactor: {
+		name: "cameraSmoothSmartIdleFactor",
 		default: "0.0",
 		category: 5,
 		scope: "Character",
 	},
-	cameraSmoothSmartMoveDelay: {
+	camerasmoothsmartmovedelay: {
+		name: "cameraSmoothSmartMoveDelay",
 		default: "0.0",
 		category: 5,
 		scope: "Character",
 	},
-	cameraSmoothSmartMoveFactor: {
+	camerasmoothsmartmovefactor: {
+		name: "cameraSmoothSmartMoveFactor",
 		default: "1.0",
 		category: 5,
 		scope: "Character",
 	},
-	cameraSmoothSmartStopDelay: {
+	camerasmoothsmartstopdelay: {
+		name: "cameraSmoothSmartStopDelay",
 		default: "0.0",
 		category: 5,
 		scope: "Character",
 	},
-	cameraSmoothSmartStopFactor: {
+	camerasmoothsmartstopfactor: {
+		name: "cameraSmoothSmartStopFactor",
 		default: "0.0",
 		category: 5,
 		scope: "Character",
 	},
-	cameraSmoothSmartStrafeDelay: {
+	camerasmoothsmartstrafedelay: {
+		name: "cameraSmoothSmartStrafeDelay",
 		default: "0.0",
 		category: 5,
 		scope: "Character",
 	},
-	cameraSmoothSmartStrafeFactor: {
+	camerasmoothsmartstrafefactor: {
+		name: "cameraSmoothSmartStrafeFactor",
 		default: "1.0",
 		category: 5,
 		scope: "Character",
 	},
-	cameraSmoothSmartTrackDelay: {
+	camerasmoothsmarttrackdelay: {
+		name: "cameraSmoothSmartTrackDelay",
 		default: "0.4",
 		category: 5,
 		scope: "Character",
 	},
-	cameraSmoothSmartTrackFactor: {
+	camerasmoothsmarttrackfactor: {
+		name: "cameraSmoothSmartTrackFactor",
 		default: "10.0",
 		category: 5,
 		scope: "Character",
 	},
-	cameraSmoothSmartTurnDelay: {
+	camerasmoothsmartturndelay: {
+		name: "cameraSmoothSmartTurnDelay",
 		default: "0.0",
 		category: 5,
 		scope: "Character",
 	},
-	cameraSmoothSmartTurnFactor: {
+	camerasmoothsmartturnfactor: {
+		name: "cameraSmoothSmartTurnFactor",
 		default: "1.0",
 		category: 5,
 		scope: "Character",
 	},
-	cameraSmoothSmarterFearDelay: {
+	camerasmoothsmarterfeardelay: {
+		name: "cameraSmoothSmarterFearDelay",
 		default: "0.4",
 		category: 5,
 		scope: "Character",
 	},
-	cameraSmoothSmarterFearFactor: {
+	camerasmoothsmarterfearfactor: {
+		name: "cameraSmoothSmarterFearFactor",
 		default: "10.0",
 		category: 5,
 		scope: "Character",
 	},
-	cameraSmoothSmarterIdleDelay: {
+	camerasmoothsmarteridledelay: {
+		name: "cameraSmoothSmarterIdleDelay",
 		default: "0.0",
 		category: 5,
 		scope: "Character",
 	},
-	cameraSmoothSmarterIdleFactor: {
+	camerasmoothsmarteridlefactor: {
+		name: "cameraSmoothSmarterIdleFactor",
 		default: "0.0",
 		category: 5,
 		scope: "Character",
 	},
-	cameraSmoothSmarterMoveDelay: {
+	camerasmoothsmartermovedelay: {
+		name: "cameraSmoothSmarterMoveDelay",
 		default: "0.0",
 		category: 5,
 		scope: "Character",
 	},
-	cameraSmoothSmarterMoveFactor: {
+	camerasmoothsmartermovefactor: {
+		name: "cameraSmoothSmarterMoveFactor",
 		default: "1.0",
 		category: 5,
 		scope: "Character",
 	},
-	cameraSmoothSmarterStopDelay: {
+	camerasmoothsmarterstopdelay: {
+		name: "cameraSmoothSmarterStopDelay",
 		default: "0.0",
 		category: 5,
 		scope: "Character",
 	},
-	cameraSmoothSmarterStopFactor: {
+	camerasmoothsmarterstopfactor: {
+		name: "cameraSmoothSmarterStopFactor",
 		default: "0.0",
 		category: 5,
 		scope: "Character",
 	},
-	cameraSmoothSmarterStrafeDelay: {
+	camerasmoothsmarterstrafedelay: {
+		name: "cameraSmoothSmarterStrafeDelay",
 		default: "0.0",
 		category: 5,
 		scope: "Character",
 	},
-	cameraSmoothSmarterStrafeFactor: {
+	camerasmoothsmarterstrafefactor: {
+		name: "cameraSmoothSmarterStrafeFactor",
 		default: "1.0",
 		category: 5,
 		scope: "Character",
 	},
-	cameraSmoothSmarterTrackDelay: {
+	camerasmoothsmartertrackdelay: {
+		name: "cameraSmoothSmarterTrackDelay",
 		default: "0.4",
 		category: 5,
 		scope: "Character",
 	},
-	cameraSmoothSmarterTrackFactor: {
+	camerasmoothsmartertrackfactor: {
+		name: "cameraSmoothSmarterTrackFactor",
 		default: "10.0",
 		category: 5,
 		scope: "Character",
 	},
-	cameraSmoothSmarterTurnDelay: {
+	camerasmoothsmarterturndelay: {
+		name: "cameraSmoothSmarterTurnDelay",
 		default: "0.0",
 		category: 5,
 		scope: "Character",
 	},
-	cameraSmoothSmarterTurnFactor: {
+	camerasmoothsmarterturnfactor: {
+		name: "cameraSmoothSmarterTurnFactor",
 		default: "1.0",
 		category: 5,
 		scope: "Character",
 	},
-	cameraSmoothSplineFearDelay: {
+	camerasmoothsplinefeardelay: {
+		name: "cameraSmoothSplineFearDelay",
 		default: "0.0",
 		category: 5,
 		scope: "Character",
 	},
-	cameraSmoothSplineFearFactor: {
+	camerasmoothsplinefearfactor: {
+		name: "cameraSmoothSplineFearFactor",
 		default: "4.0",
 		category: 5,
 		scope: "Character",
 	},
-	cameraSmoothSplineIdleDelay: {
+	camerasmoothsplineidledelay: {
+		name: "cameraSmoothSplineIdleDelay",
 		default: "0.0",
 		category: 5,
 		scope: "Character",
 	},
-	cameraSmoothSplineIdleFactor: {
+	camerasmoothsplineidlefactor: {
+		name: "cameraSmoothSplineIdleFactor",
 		default: "4.0",
 		category: 5,
 		scope: "Character",
 	},
-	cameraSmoothSplineMoveDelay: {
+	camerasmoothsplinemovedelay: {
+		name: "cameraSmoothSplineMoveDelay",
 		default: "0.0",
 		category: 5,
 		scope: "Character",
 	},
-	cameraSmoothSplineMoveFactor: {
+	camerasmoothsplinemovefactor: {
+		name: "cameraSmoothSplineMoveFactor",
 		default: "1.0",
 		category: 5,
 		scope: "Character",
 	},
-	cameraSmoothSplineStopDelay: {
+	camerasmoothsplinestopdelay: {
+		name: "cameraSmoothSplineStopDelay",
 		default: "0.0",
 		category: 5,
 		scope: "Character",
 	},
-	cameraSmoothSplineStopFactor: {
+	camerasmoothsplinestopfactor: {
+		name: "cameraSmoothSplineStopFactor",
 		default: "4.0",
 		category: 5,
 		scope: "Character",
 	},
-	cameraSmoothSplineStrafeDelay: {
+	camerasmoothsplinestrafedelay: {
+		name: "cameraSmoothSplineStrafeDelay",
 		default: "0.0",
 		category: 5,
 		scope: "Character",
 	},
-	cameraSmoothSplineStrafeFactor: {
+	camerasmoothsplinestrafefactor: {
+		name: "cameraSmoothSplineStrafeFactor",
 		default: "1.0",
 		category: 5,
 		scope: "Character",
 	},
-	cameraSmoothSplineTrackDelay: {
+	camerasmoothsplinetrackdelay: {
+		name: "cameraSmoothSplineTrackDelay",
 		default: "0.0",
 		category: 5,
 		scope: "Character",
 	},
-	cameraSmoothSplineTrackFactor: {
+	camerasmoothsplinetrackfactor: {
+		name: "cameraSmoothSplineTrackFactor",
 		default: "4.0",
 		category: 5,
 		scope: "Character",
 	},
-	cameraSmoothSplineTurnDelay: {
+	camerasmoothsplineturndelay: {
+		name: "cameraSmoothSplineTurnDelay",
 		default: "0.0",
 		category: 5,
 		scope: "Character",
 	},
-	cameraSmoothSplineTurnFactor: {
+	camerasmoothsplineturnfactor: {
+		name: "cameraSmoothSplineTurnFactor",
 		default: "1.0",
 		category: 5,
 		scope: "Character",
 	},
-	cameraSmoothStyle: {
+	camerasmoothstyle: {
+		name: "cameraSmoothStyle",
 		default: "4",
 		category: 5,
 		scope: "Character",
 	},
-	cameraSmoothTimeMax: {
+	camerasmoothtimemax: {
+		name: "cameraSmoothTimeMax",
 		default: "2.0",
 		category: 5,
 		scope: "Character",
 	},
-	cameraSmoothTimeMin: {
+	camerasmoothtimemin: {
+		name: "cameraSmoothTimeMin",
 		default: "0.1",
 		category: 5,
 		scope: "Character",
 	},
-	cameraSmoothTrackingStyle: {
+	camerasmoothtrackingstyle: {
+		name: "cameraSmoothTrackingStyle",
 		default: "4",
 		category: 5,
 		scope: "Character",
 	},
-	cameraSmoothViewDataAlwaysDistanceDelay: {
+	camerasmoothviewdataalwaysdistancedelay: {
+		name: "cameraSmoothViewDataAlwaysDistanceDelay",
 		default: "0.0",
 		category: 5,
 		scope: "Character",
 	},
-	cameraSmoothViewDataAlwaysDistanceFactor: {
+	camerasmoothviewdataalwaysdistancefactor: {
+		name: "cameraSmoothViewDataAlwaysDistanceFactor",
 		default: "0.0",
 		category: 5,
 		scope: "Character",
 	},
-	cameraSmoothViewDataAlwaysPitchDelay: {
+	camerasmoothviewdataalwayspitchdelay: {
+		name: "cameraSmoothViewDataAlwaysPitchDelay",
 		default: "0.0",
 		category: 5,
 		scope: "Character",
 	},
-	cameraSmoothViewDataAlwaysPitchFactor: {
+	camerasmoothviewdataalwayspitchfactor: {
+		name: "cameraSmoothViewDataAlwaysPitchFactor",
 		default: "1.0",
 		category: 5,
 		scope: "Character",
 	},
-	cameraSmoothViewDataAlwaysYawDelay: {
+	camerasmoothviewdataalwaysyawdelay: {
+		name: "cameraSmoothViewDataAlwaysYawDelay",
 		default: "0.0",
 		category: 5,
 		scope: "Character",
 	},
-	cameraSmoothViewDataAlwaysYawFactor: {
+	camerasmoothviewdataalwaysyawfactor: {
+		name: "cameraSmoothViewDataAlwaysYawFactor",
 		default: "1.0",
 		category: 5,
 		scope: "Character",
 	},
-	cameraSmoothViewDataNeverDistanceDelay: {
+	camerasmoothviewdataneverdistancedelay: {
+		name: "cameraSmoothViewDataNeverDistanceDelay",
 		default: "0.0",
 		category: 5,
 		scope: "Character",
 	},
-	cameraSmoothViewDataNeverDistanceFactor: {
+	camerasmoothviewdataneverdistancefactor: {
+		name: "cameraSmoothViewDataNeverDistanceFactor",
 		default: "0.0",
 		category: 5,
 		scope: "Character",
 	},
-	cameraSmoothViewDataNeverPitchDelay: {
+	camerasmoothviewdataneverpitchdelay: {
+		name: "cameraSmoothViewDataNeverPitchDelay",
 		default: "0.0",
 		category: 5,
 		scope: "Character",
 	},
-	cameraSmoothViewDataNeverPitchFactor: {
+	camerasmoothviewdataneverpitchfactor: {
+		name: "cameraSmoothViewDataNeverPitchFactor",
 		default: "0.0",
 		category: 5,
 		scope: "Character",
 	},
-	cameraSmoothViewDataNeverYawDelay: {
+	camerasmoothviewdataneveryawdelay: {
+		name: "cameraSmoothViewDataNeverYawDelay",
 		default: "0.0",
 		category: 5,
 		scope: "Character",
 	},
-	cameraSmoothViewDataNeverYawFactor: {
+	camerasmoothviewdataneveryawfactor: {
+		name: "cameraSmoothViewDataNeverYawFactor",
 		default: "0.0",
 		category: 5,
 		scope: "Character",
 	},
-	cameraSmoothViewDataSmartDistanceDelay: {
+	camerasmoothviewdatasmartdistancedelay: {
+		name: "cameraSmoothViewDataSmartDistanceDelay",
 		default: "0.0",
 		category: 5,
 		scope: "Character",
 	},
-	cameraSmoothViewDataSmartDistanceFactor: {
+	camerasmoothviewdatasmartdistancefactor: {
+		name: "cameraSmoothViewDataSmartDistanceFactor",
 		default: "0.0",
 		category: 5,
 		scope: "Character",
 	},
-	cameraSmoothViewDataSmartPitchDelay: {
+	camerasmoothviewdatasmartpitchdelay: {
+		name: "cameraSmoothViewDataSmartPitchDelay",
 		default: "0.0",
 		category: 5,
 		scope: "Character",
 	},
-	cameraSmoothViewDataSmartPitchFactor: {
+	camerasmoothviewdatasmartpitchfactor: {
+		name: "cameraSmoothViewDataSmartPitchFactor",
 		default: "0.0",
 		category: 5,
 		scope: "Character",
 	},
-	cameraSmoothViewDataSmartYawDelay: {
+	camerasmoothviewdatasmartyawdelay: {
+		name: "cameraSmoothViewDataSmartYawDelay",
 		default: "0.0",
 		category: 5,
 		scope: "Character",
 	},
-	cameraSmoothViewDataSmartYawFactor: {
+	camerasmoothviewdatasmartyawfactor: {
+		name: "cameraSmoothViewDataSmartYawFactor",
 		default: "1.0",
 		category: 5,
 		scope: "Character",
 	},
-	cameraSmoothViewDataSmarterDistanceDelay: {
+	camerasmoothviewdatasmarterdistancedelay: {
+		name: "cameraSmoothViewDataSmarterDistanceDelay",
 		default: "0.0",
 		category: 5,
 		scope: "Character",
 	},
-	cameraSmoothViewDataSmarterDistanceFactor: {
+	camerasmoothviewdatasmarterdistancefactor: {
+		name: "cameraSmoothViewDataSmarterDistanceFactor",
 		default: "0.0",
 		category: 5,
 		scope: "Character",
 	},
-	cameraSmoothViewDataSmarterPitchDelay: {
+	camerasmoothviewdatasmarterpitchdelay: {
+		name: "cameraSmoothViewDataSmarterPitchDelay",
 		default: "0.0",
 		category: 5,
 		scope: "Character",
 	},
-	cameraSmoothViewDataSmarterPitchFactor: {
+	camerasmoothviewdatasmarterpitchfactor: {
+		name: "cameraSmoothViewDataSmarterPitchFactor",
 		default: "1.0",
 		category: 5,
 		scope: "Character",
 	},
-	cameraSmoothViewDataSmarterYawDelay: {
+	camerasmoothviewdatasmarteryawdelay: {
+		name: "cameraSmoothViewDataSmarterYawDelay",
 		default: "0.0",
 		category: 5,
 		scope: "Character",
 	},
-	cameraSmoothViewDataSmarterYawFactor: {
+	camerasmoothviewdatasmarteryawfactor: {
+		name: "cameraSmoothViewDataSmarterYawFactor",
 		default: "1.0",
 		category: 5,
 		scope: "Character",
 	},
-	cameraSmoothViewDataSplineDistanceDelay: {
+	camerasmoothviewdatasplinedistancedelay: {
+		name: "cameraSmoothViewDataSplineDistanceDelay",
 		default: "0.0",
 		category: 5,
 		scope: "Character",
 	},
-	cameraSmoothViewDataSplineDistanceFactor: {
+	camerasmoothviewdatasplinedistancefactor: {
+		name: "cameraSmoothViewDataSplineDistanceFactor",
 		default: "0.0",
 		category: 5,
 		scope: "Character",
 	},
-	cameraSmoothViewDataSplinePitchDelay: {
+	camerasmoothviewdatasplinepitchdelay: {
+		name: "cameraSmoothViewDataSplinePitchDelay",
 		default: "0.0",
 		category: 5,
 		scope: "Character",
 	},
-	cameraSmoothViewDataSplinePitchFactor: {
+	camerasmoothviewdatasplinepitchfactor: {
+		name: "cameraSmoothViewDataSplinePitchFactor",
 		default: "1.0",
 		category: 5,
 		scope: "Character",
 	},
-	cameraSmoothViewDataSplineYawDelay: {
+	camerasmoothviewdatasplineyawdelay: {
+		name: "cameraSmoothViewDataSplineYawDelay",
 		default: "0.0",
 		category: 5,
 		scope: "Character",
 	},
-	cameraSmoothViewDataSplineYawFactor: {
+	camerasmoothviewdatasplineyawfactor: {
+		name: "cameraSmoothViewDataSplineYawFactor",
 		default: "1.0",
 		category: 5,
 		scope: "Character",
 	},
-	cameraSmoothYaw: {
+	camerasmoothyaw: {
+		name: "cameraSmoothYaw",
 		default: "1",
 		category: 5,
 		scope: "Character",
 	},
-	cameraSubmergePitch: {
+	camerasubmergepitch: {
+		name: "cameraSubmergePitch",
 		default: "18.0",
 		category: 5,
 		scope: "Character",
 	},
-	cameraSurfacePitch: {
+	camerasurfacepitch: {
+		name: "cameraSurfacePitch",
 		default: "0.0",
 		category: 5,
 		scope: "Character",
 	},
-	cameraTargetSmoothSpeed: {
+	cameratargetsmoothspeed: {
+		name: "cameraTargetSmoothSpeed",
 		default: "90",
 		category: 5,
 		scope: "Character",
 	},
-	cameraTerrainTilt: {
+	cameraterraintilt: {
+		name: "cameraTerrainTilt",
 		default: "0",
 		category: 5,
 		scope: "Character",
 	},
-	cameraTerrainTiltAlwaysFallAbsorb: {
+	cameraterraintiltalwaysfallabsorb: {
+		name: "cameraTerrainTiltAlwaysFallAbsorb",
 		default: "1.0",
 		category: 5,
 		scope: "Character",
 	},
-	cameraTerrainTiltAlwaysFallDelay: {
+	cameraterraintiltalwaysfalldelay: {
+		name: "cameraTerrainTiltAlwaysFallDelay",
 		default: "0.0",
 		category: 5,
 		scope: "Character",
 	},
-	cameraTerrainTiltAlwaysFallFactor: {
+	cameraterraintiltalwaysfallfactor: {
+		name: "cameraTerrainTiltAlwaysFallFactor",
 		default: "0.75",
 		category: 5,
 		scope: "Character",
 	},
-	cameraTerrainTiltAlwaysFearAbsorb: {
+	cameraterraintiltalwaysfearabsorb: {
+		name: "cameraTerrainTiltAlwaysFearAbsorb",
 		default: "1.0",
 		category: 5,
 		scope: "Character",
 	},
-	cameraTerrainTiltAlwaysFearDelay: {
+	cameraterraintiltalwaysfeardelay: {
+		name: "cameraTerrainTiltAlwaysFearDelay",
 		default: "0.0",
 		category: 5,
 		scope: "Character",
 	},
-	cameraTerrainTiltAlwaysFearFactor: {
+	cameraterraintiltalwaysfearfactor: {
+		name: "cameraTerrainTiltAlwaysFearFactor",
 		default: "1.0",
 		category: 5,
 		scope: "Character",
 	},
-	cameraTerrainTiltAlwaysIdleAbsorb: {
+	cameraterraintiltalwaysidleabsorb: {
+		name: "cameraTerrainTiltAlwaysIdleAbsorb",
 		default: "1.0",
 		category: 5,
 		scope: "Character",
 	},
-	cameraTerrainTiltAlwaysIdleDelay: {
+	cameraterraintiltalwaysidledelay: {
+		name: "cameraTerrainTiltAlwaysIdleDelay",
 		default: "0.0",
 		category: 5,
 		scope: "Character",
 	},
-	cameraTerrainTiltAlwaysIdleFactor: {
+	cameraterraintiltalwaysidlefactor: {
+		name: "cameraTerrainTiltAlwaysIdleFactor",
 		default: "1.0",
 		category: 5,
 		scope: "Character",
 	},
-	cameraTerrainTiltAlwaysJumpAbsorb: {
+	cameraterraintiltalwaysjumpabsorb: {
+		name: "cameraTerrainTiltAlwaysJumpAbsorb",
 		default: "0.0",
 		category: 5,
 		scope: "Character",
 	},
-	cameraTerrainTiltAlwaysJumpDelay: {
+	cameraterraintiltalwaysjumpdelay: {
+		name: "cameraTerrainTiltAlwaysJumpDelay",
 		default: "0.0",
 		category: 5,
 		scope: "Character",
 	},
-	cameraTerrainTiltAlwaysJumpFactor: {
+	cameraterraintiltalwaysjumpfactor: {
+		name: "cameraTerrainTiltAlwaysJumpFactor",
 		default: "-1.0",
 		category: 5,
 		scope: "Character",
 	},
-	cameraTerrainTiltAlwaysMoveAbsorb: {
+	cameraterraintiltalwaysmoveabsorb: {
+		name: "cameraTerrainTiltAlwaysMoveAbsorb",
 		default: "1.0",
 		category: 5,
 		scope: "Character",
 	},
-	cameraTerrainTiltAlwaysMoveDelay: {
+	cameraterraintiltalwaysmovedelay: {
+		name: "cameraTerrainTiltAlwaysMoveDelay",
 		default: "0.0",
 		category: 5,
 		scope: "Character",
 	},
-	cameraTerrainTiltAlwaysMoveFactor: {
+	cameraterraintiltalwaysmovefactor: {
+		name: "cameraTerrainTiltAlwaysMoveFactor",
 		default: "1.0",
 		category: 5,
 		scope: "Character",
 	},
-	cameraTerrainTiltAlwaysStrafeAbsorb: {
+	cameraterraintiltalwaysstrafeabsorb: {
+		name: "cameraTerrainTiltAlwaysStrafeAbsorb",
 		default: "1.0",
 		category: 5,
 		scope: "Character",
 	},
-	cameraTerrainTiltAlwaysStrafeDelay: {
+	cameraterraintiltalwaysstrafedelay: {
+		name: "cameraTerrainTiltAlwaysStrafeDelay",
 		default: "0.0",
 		category: 5,
 		scope: "Character",
 	},
-	cameraTerrainTiltAlwaysStrafeFactor: {
+	cameraterraintiltalwaysstrafefactor: {
+		name: "cameraTerrainTiltAlwaysStrafeFactor",
 		default: "1.0",
 		category: 5,
 		scope: "Character",
 	},
-	cameraTerrainTiltAlwaysSwimAbsorb: {
+	cameraterraintiltalwaysswimabsorb: {
+		name: "cameraTerrainTiltAlwaysSwimAbsorb",
 		default: "0.0",
 		category: 5,
 		scope: "Character",
 	},
-	cameraTerrainTiltAlwaysSwimDelay: {
+	cameraterraintiltalwaysswimdelay: {
+		name: "cameraTerrainTiltAlwaysSwimDelay",
 		default: "0.0",
 		category: 5,
 		scope: "Character",
 	},
-	cameraTerrainTiltAlwaysSwimFactor: {
+	cameraterraintiltalwaysswimfactor: {
+		name: "cameraTerrainTiltAlwaysSwimFactor",
 		default: "1.0",
 		category: 5,
 		scope: "Character",
 	},
-	cameraTerrainTiltAlwaysTaxiAbsorb: {
+	cameraterraintiltalwaystaxiabsorb: {
+		name: "cameraTerrainTiltAlwaysTaxiAbsorb",
 		default: "0.0",
 		category: 5,
 		scope: "Character",
 	},
-	cameraTerrainTiltAlwaysTaxiDelay: {
+	cameraterraintiltalwaystaxidelay: {
+		name: "cameraTerrainTiltAlwaysTaxiDelay",
 		default: "0.0",
 		category: 5,
 		scope: "Character",
 	},
-	cameraTerrainTiltAlwaysTaxiFactor: {
+	cameraterraintiltalwaystaxifactor: {
+		name: "cameraTerrainTiltAlwaysTaxiFactor",
 		default: "1.0",
 		category: 5,
 		scope: "Character",
 	},
-	cameraTerrainTiltAlwaysTrackAbsorb: {
+	cameraterraintiltalwaystrackabsorb: {
+		name: "cameraTerrainTiltAlwaysTrackAbsorb",
 		default: "1.0",
 		category: 5,
 		scope: "Character",
 	},
-	cameraTerrainTiltAlwaysTrackDelay: {
+	cameraterraintiltalwaystrackdelay: {
+		name: "cameraTerrainTiltAlwaysTrackDelay",
 		default: "0.0",
 		category: 5,
 		scope: "Character",
 	},
-	cameraTerrainTiltAlwaysTrackFactor: {
+	cameraterraintiltalwaystrackfactor: {
+		name: "cameraTerrainTiltAlwaysTrackFactor",
 		default: "1.0",
 		category: 5,
 		scope: "Character",
 	},
-	cameraTerrainTiltAlwaysTurnAbsorb: {
+	cameraterraintiltalwaysturnabsorb: {
+		name: "cameraTerrainTiltAlwaysTurnAbsorb",
 		default: "1.0",
 		category: 5,
 		scope: "Character",
 	},
-	cameraTerrainTiltAlwaysTurnDelay: {
+	cameraterraintiltalwaysturndelay: {
+		name: "cameraTerrainTiltAlwaysTurnDelay",
 		default: "0.0",
 		category: 5,
 		scope: "Character",
 	},
-	cameraTerrainTiltAlwaysTurnFactor: {
+	cameraterraintiltalwaysturnfactor: {
+		name: "cameraTerrainTiltAlwaysTurnFactor",
 		default: "1.0",
 		category: 5,
 		scope: "Character",
 	},
-	cameraTerrainTiltNeverFallAbsorb: {
+	cameraterraintiltneverfallabsorb: {
+		name: "cameraTerrainTiltNeverFallAbsorb",
 		default: "0.0",
 		category: 5,
 		scope: "Character",
 	},
-	cameraTerrainTiltNeverFallDelay: {
+	cameraterraintiltneverfalldelay: {
+		name: "cameraTerrainTiltNeverFallDelay",
 		default: "0.0",
 		category: 5,
 		scope: "Character",
 	},
-	cameraTerrainTiltNeverFallFactor: {
+	cameraterraintiltneverfallfactor: {
+		name: "cameraTerrainTiltNeverFallFactor",
 		default: "-1.0",
 		category: 5,
 		scope: "Character",
 	},
-	cameraTerrainTiltNeverFearAbsorb: {
+	cameraterraintiltneverfearabsorb: {
+		name: "cameraTerrainTiltNeverFearAbsorb",
 		default: "0.0",
 		category: 5,
 		scope: "Character",
 	},
-	cameraTerrainTiltNeverFearDelay: {
+	cameraterraintiltneverfeardelay: {
+		name: "cameraTerrainTiltNeverFearDelay",
 		default: "0.0",
 		category: 5,
 		scope: "Character",
 	},
-	cameraTerrainTiltNeverFearFactor: {
+	cameraterraintiltneverfearfactor: {
+		name: "cameraTerrainTiltNeverFearFactor",
 		default: "-1.0",
 		category: 5,
 		scope: "Character",
 	},
-	cameraTerrainTiltNeverIdleAbsorb: {
+	cameraterraintiltneveridleabsorb: {
+		name: "cameraTerrainTiltNeverIdleAbsorb",
 		default: "0.0",
 		category: 5,
 		scope: "Character",
 	},
-	cameraTerrainTiltNeverIdleDelay: {
+	cameraterraintiltneveridledelay: {
+		name: "cameraTerrainTiltNeverIdleDelay",
 		default: "0.0",
 		category: 5,
 		scope: "Character",
 	},
-	cameraTerrainTiltNeverIdleFactor: {
+	cameraterraintiltneveridlefactor: {
+		name: "cameraTerrainTiltNeverIdleFactor",
 		default: "-1.0",
 		category: 5,
 		scope: "Character",
 	},
-	cameraTerrainTiltNeverJumpAbsorb: {
+	cameraterraintiltneverjumpabsorb: {
+		name: "cameraTerrainTiltNeverJumpAbsorb",
 		default: "0.0",
 		category: 5,
 		scope: "Character",
 	},
-	cameraTerrainTiltNeverJumpDelay: {
+	cameraterraintiltneverjumpdelay: {
+		name: "cameraTerrainTiltNeverJumpDelay",
 		default: "0.0",
 		category: 5,
 		scope: "Character",
 	},
-	cameraTerrainTiltNeverJumpFactor: {
+	cameraterraintiltneverjumpfactor: {
+		name: "cameraTerrainTiltNeverJumpFactor",
 		default: "-1.0",
 		category: 5,
 		scope: "Character",
 	},
-	cameraTerrainTiltNeverMoveAbsorb: {
+	cameraterraintiltnevermoveabsorb: {
+		name: "cameraTerrainTiltNeverMoveAbsorb",
 		default: "0.0",
 		category: 5,
 		scope: "Character",
 	},
-	cameraTerrainTiltNeverMoveDelay: {
+	cameraterraintiltnevermovedelay: {
+		name: "cameraTerrainTiltNeverMoveDelay",
 		default: "0.0",
 		category: 5,
 		scope: "Character",
 	},
-	cameraTerrainTiltNeverMoveFactor: {
+	cameraterraintiltnevermovefactor: {
+		name: "cameraTerrainTiltNeverMoveFactor",
 		default: "-1.0",
 		category: 5,
 		scope: "Character",
 	},
-	cameraTerrainTiltNeverStrafeAbsorb: {
+	cameraterraintiltneverstrafeabsorb: {
+		name: "cameraTerrainTiltNeverStrafeAbsorb",
 		default: "0.0",
 		category: 5,
 		scope: "Character",
 	},
-	cameraTerrainTiltNeverStrafeDelay: {
+	cameraterraintiltneverstrafedelay: {
+		name: "cameraTerrainTiltNeverStrafeDelay",
 		default: "0.0",
 		category: 5,
 		scope: "Character",
 	},
-	cameraTerrainTiltNeverStrafeFactor: {
+	cameraterraintiltneverstrafefactor: {
+		name: "cameraTerrainTiltNeverStrafeFactor",
 		default: "-1.0",
 		category: 5,
 		scope: "Character",
 	},
-	cameraTerrainTiltNeverSwimAbsorb: {
+	cameraterraintiltneverswimabsorb: {
+		name: "cameraTerrainTiltNeverSwimAbsorb",
 		default: "0.0",
 		category: 5,
 		scope: "Character",
 	},
-	cameraTerrainTiltNeverSwimDelay: {
+	cameraterraintiltneverswimdelay: {
+		name: "cameraTerrainTiltNeverSwimDelay",
 		default: "0.0",
 		category: 5,
 		scope: "Character",
 	},
-	cameraTerrainTiltNeverSwimFactor: {
+	cameraterraintiltneverswimfactor: {
+		name: "cameraTerrainTiltNeverSwimFactor",
 		default: "-1.0",
 		category: 5,
 		scope: "Character",
 	},
-	cameraTerrainTiltNeverTaxiAbsorb: {
+	cameraterraintiltnevertaxiabsorb: {
+		name: "cameraTerrainTiltNeverTaxiAbsorb",
 		default: "0.0",
 		category: 5,
 		scope: "Character",
 	},
-	cameraTerrainTiltNeverTaxiDelay: {
+	cameraterraintiltnevertaxidelay: {
+		name: "cameraTerrainTiltNeverTaxiDelay",
 		default: "0.0",
 		category: 5,
 		scope: "Character",
 	},
-	cameraTerrainTiltNeverTaxiFactor: {
+	cameraterraintiltnevertaxifactor: {
+		name: "cameraTerrainTiltNeverTaxiFactor",
 		default: "-1.0",
 		category: 5,
 		scope: "Character",
 	},
-	cameraTerrainTiltNeverTrackAbsorb: {
+	cameraterraintiltnevertrackabsorb: {
+		name: "cameraTerrainTiltNeverTrackAbsorb",
 		default: "0.0",
 		category: 5,
 		scope: "Character",
 	},
-	cameraTerrainTiltNeverTrackDelay: {
+	cameraterraintiltnevertrackdelay: {
+		name: "cameraTerrainTiltNeverTrackDelay",
 		default: "0.0",
 		category: 5,
 		scope: "Character",
 	},
-	cameraTerrainTiltNeverTrackFactor: {
+	cameraterraintiltnevertrackfactor: {
+		name: "cameraTerrainTiltNeverTrackFactor",
 		default: "-1.0",
 		category: 5,
 		scope: "Character",
 	},
-	cameraTerrainTiltNeverTurnAbsorb: {
+	cameraterraintiltneverturnabsorb: {
+		name: "cameraTerrainTiltNeverTurnAbsorb",
 		default: "0.0",
 		category: 5,
 		scope: "Character",
 	},
-	cameraTerrainTiltNeverTurnDelay: {
+	cameraterraintiltneverturndelay: {
+		name: "cameraTerrainTiltNeverTurnDelay",
 		default: "0.0",
 		category: 5,
 		scope: "Character",
 	},
-	cameraTerrainTiltNeverTurnFactor: {
+	cameraterraintiltneverturnfactor: {
+		name: "cameraTerrainTiltNeverTurnFactor",
 		default: "-1.0",
 		category: 5,
 		scope: "Character",
 	},
-	cameraTerrainTiltSmartFallAbsorb: {
+	cameraterraintiltsmartfallabsorb: {
+		name: "cameraTerrainTiltSmartFallAbsorb",
 		default: "1.0",
 		category: 5,
 		scope: "Character",
 	},
-	cameraTerrainTiltSmartFallDelay: {
+	cameraterraintiltsmartfalldelay: {
+		name: "cameraTerrainTiltSmartFallDelay",
 		default: "0.0",
 		category: 5,
 		scope: "Character",
 	},
-	cameraTerrainTiltSmartFallFactor: {
+	cameraterraintiltsmartfallfactor: {
+		name: "cameraTerrainTiltSmartFallFactor",
 		default: "0.75",
 		category: 5,
 		scope: "Character",
 	},
-	cameraTerrainTiltSmartFearAbsorb: {
+	cameraterraintiltsmartfearabsorb: {
+		name: "cameraTerrainTiltSmartFearAbsorb",
 		default: "1.0",
 		category: 5,
 		scope: "Character",
 	},
-	cameraTerrainTiltSmartFearDelay: {
+	cameraterraintiltsmartfeardelay: {
+		name: "cameraTerrainTiltSmartFearDelay",
 		default: "0.0",
 		category: 5,
 		scope: "Character",
 	},
-	cameraTerrainTiltSmartFearFactor: {
+	cameraterraintiltsmartfearfactor: {
+		name: "cameraTerrainTiltSmartFearFactor",
 		default: "1.0",
 		category: 5,
 		scope: "Character",
 	},
-	cameraTerrainTiltSmartIdleAbsorb: {
+	cameraterraintiltsmartidleabsorb: {
+		name: "cameraTerrainTiltSmartIdleAbsorb",
 		default: "0.0",
 		category: 5,
 		scope: "Character",
 	},
-	cameraTerrainTiltSmartIdleDelay: {
+	cameraterraintiltsmartidledelay: {
+		name: "cameraTerrainTiltSmartIdleDelay",
 		default: "0.0",
 		category: 5,
 		scope: "Character",
 	},
-	cameraTerrainTiltSmartIdleFactor: {
+	cameraterraintiltsmartidlefactor: {
+		name: "cameraTerrainTiltSmartIdleFactor",
 		default: "-1.0",
 		category: 5,
 		scope: "Character",
 	},
-	cameraTerrainTiltSmartJumpAbsorb: {
+	cameraterraintiltsmartjumpabsorb: {
+		name: "cameraTerrainTiltSmartJumpAbsorb",
 		default: "0.0",
 		category: 5,
 		scope: "Character",
 	},
-	cameraTerrainTiltSmartJumpDelay: {
+	cameraterraintiltsmartjumpdelay: {
+		name: "cameraTerrainTiltSmartJumpDelay",
 		default: "0.0",
 		category: 5,
 		scope: "Character",
 	},
-	cameraTerrainTiltSmartJumpFactor: {
+	cameraterraintiltsmartjumpfactor: {
+		name: "cameraTerrainTiltSmartJumpFactor",
 		default: "-1.0",
 		category: 5,
 		scope: "Character",
 	},
-	cameraTerrainTiltSmartMoveAbsorb: {
+	cameraterraintiltsmartmoveabsorb: {
+		name: "cameraTerrainTiltSmartMoveAbsorb",
 		default: "1.0",
 		category: 5,
 		scope: "Character",
 	},
-	cameraTerrainTiltSmartMoveDelay: {
+	cameraterraintiltsmartmovedelay: {
+		name: "cameraTerrainTiltSmartMoveDelay",
 		default: "0.0",
 		category: 5,
 		scope: "Character",
 	},
-	cameraTerrainTiltSmartMoveFactor: {
+	cameraterraintiltsmartmovefactor: {
+		name: "cameraTerrainTiltSmartMoveFactor",
 		default: "1.0",
 		category: 5,
 		scope: "Character",
 	},
-	cameraTerrainTiltSmartStrafeAbsorb: {
+	cameraterraintiltsmartstrafeabsorb: {
+		name: "cameraTerrainTiltSmartStrafeAbsorb",
 		default: "1.0",
 		category: 5,
 		scope: "Character",
 	},
-	cameraTerrainTiltSmartStrafeDelay: {
+	cameraterraintiltsmartstrafedelay: {
+		name: "cameraTerrainTiltSmartStrafeDelay",
 		default: "0.0",
 		category: 5,
 		scope: "Character",
 	},
-	cameraTerrainTiltSmartStrafeFactor: {
+	cameraterraintiltsmartstrafefactor: {
+		name: "cameraTerrainTiltSmartStrafeFactor",
 		default: "1.0",
 		category: 5,
 		scope: "Character",
 	},
-	cameraTerrainTiltSmartSwimAbsorb: {
+	cameraterraintiltsmartswimabsorb: {
+		name: "cameraTerrainTiltSmartSwimAbsorb",
 		default: "0.0",
 		category: 5,
 		scope: "Character",
 	},
-	cameraTerrainTiltSmartSwimDelay: {
+	cameraterraintiltsmartswimdelay: {
+		name: "cameraTerrainTiltSmartSwimDelay",
 		default: "0.0",
 		category: 5,
 		scope: "Character",
 	},
-	cameraTerrainTiltSmartSwimFactor: {
+	cameraterraintiltsmartswimfactor: {
+		name: "cameraTerrainTiltSmartSwimFactor",
 		default: "1.0",
 		category: 5,
 		scope: "Character",
 	},
-	cameraTerrainTiltSmartTaxiAbsorb: {
+	cameraterraintiltsmarttaxiabsorb: {
+		name: "cameraTerrainTiltSmartTaxiAbsorb",
 		default: "0.0",
 		category: 5,
 		scope: "Character",
 	},
-	cameraTerrainTiltSmartTaxiDelay: {
+	cameraterraintiltsmarttaxidelay: {
+		name: "cameraTerrainTiltSmartTaxiDelay",
 		default: "0.0",
 		category: 5,
 		scope: "Character",
 	},
-	cameraTerrainTiltSmartTaxiFactor: {
+	cameraterraintiltsmarttaxifactor: {
+		name: "cameraTerrainTiltSmartTaxiFactor",
 		default: "1.0",
 		category: 5,
 		scope: "Character",
 	},
-	cameraTerrainTiltSmartTrackAbsorb: {
+	cameraterraintiltsmarttrackabsorb: {
+		name: "cameraTerrainTiltSmartTrackAbsorb",
 		default: "1.0",
 		category: 5,
 		scope: "Character",
 	},
-	cameraTerrainTiltSmartTrackDelay: {
+	cameraterraintiltsmarttrackdelay: {
+		name: "cameraTerrainTiltSmartTrackDelay",
 		default: "0.0",
 		category: 5,
 		scope: "Character",
 	},
-	cameraTerrainTiltSmartTrackFactor: {
+	cameraterraintiltsmarttrackfactor: {
+		name: "cameraTerrainTiltSmartTrackFactor",
 		default: "1.0",
 		category: 5,
 		scope: "Character",
 	},
-	cameraTerrainTiltSmartTurnAbsorb: {
+	cameraterraintiltsmartturnabsorb: {
+		name: "cameraTerrainTiltSmartTurnAbsorb",
 		default: "1.0",
 		category: 5,
 		scope: "Character",
 	},
-	cameraTerrainTiltSmartTurnDelay: {
+	cameraterraintiltsmartturndelay: {
+		name: "cameraTerrainTiltSmartTurnDelay",
 		default: "0.0",
 		category: 5,
 		scope: "Character",
 	},
-	cameraTerrainTiltSmartTurnFactor: {
+	cameraterraintiltsmartturnfactor: {
+		name: "cameraTerrainTiltSmartTurnFactor",
 		default: "1.0",
 		category: 5,
 		scope: "Character",
 	},
-	cameraTerrainTiltSmarterFallAbsorb: {
+	cameraterraintiltsmarterfallabsorb: {
+		name: "cameraTerrainTiltSmarterFallAbsorb",
 		default: "1.0",
 		category: 5,
 		scope: "Character",
 	},
-	cameraTerrainTiltSmarterFallDelay: {
+	cameraterraintiltsmarterfalldelay: {
+		name: "cameraTerrainTiltSmarterFallDelay",
 		default: "0.0",
 		category: 5,
 		scope: "Character",
 	},
-	cameraTerrainTiltSmarterFallFactor: {
+	cameraterraintiltsmarterfallfactor: {
+		name: "cameraTerrainTiltSmarterFallFactor",
 		default: "0.75",
 		category: 5,
 		scope: "Character",
 	},
-	cameraTerrainTiltSmarterFearAbsorb: {
+	cameraterraintiltsmarterfearabsorb: {
+		name: "cameraTerrainTiltSmarterFearAbsorb",
 		default: "1.0",
 		category: 5,
 		scope: "Character",
 	},
-	cameraTerrainTiltSmarterFearDelay: {
+	cameraterraintiltsmarterfeardelay: {
+		name: "cameraTerrainTiltSmarterFearDelay",
 		default: "0.0",
 		category: 5,
 		scope: "Character",
 	},
-	cameraTerrainTiltSmarterFearFactor: {
+	cameraterraintiltsmarterfearfactor: {
+		name: "cameraTerrainTiltSmarterFearFactor",
 		default: "1.0",
 		category: 5,
 		scope: "Character",
 	},
-	cameraTerrainTiltSmarterIdleAbsorb: {
+	cameraterraintiltsmarteridleabsorb: {
+		name: "cameraTerrainTiltSmarterIdleAbsorb",
 		default: "0.0",
 		category: 5,
 		scope: "Character",
 	},
-	cameraTerrainTiltSmarterIdleDelay: {
+	cameraterraintiltsmarteridledelay: {
+		name: "cameraTerrainTiltSmarterIdleDelay",
 		default: "0.0",
 		category: 5,
 		scope: "Character",
 	},
-	cameraTerrainTiltSmarterIdleFactor: {
+	cameraterraintiltsmarteridlefactor: {
+		name: "cameraTerrainTiltSmarterIdleFactor",
 		default: "-1.0",
 		category: 5,
 		scope: "Character",
 	},
-	cameraTerrainTiltSmarterJumpAbsorb: {
+	cameraterraintiltsmarterjumpabsorb: {
+		name: "cameraTerrainTiltSmarterJumpAbsorb",
 		default: "0.0",
 		category: 5,
 		scope: "Character",
 	},
-	cameraTerrainTiltSmarterJumpDelay: {
+	cameraterraintiltsmarterjumpdelay: {
+		name: "cameraTerrainTiltSmarterJumpDelay",
 		default: "0.0",
 		category: 5,
 		scope: "Character",
 	},
-	cameraTerrainTiltSmarterJumpFactor: {
+	cameraterraintiltsmarterjumpfactor: {
+		name: "cameraTerrainTiltSmarterJumpFactor",
 		default: "-1.0",
 		category: 5,
 		scope: "Character",
 	},
-	cameraTerrainTiltSmarterMoveAbsorb: {
+	cameraterraintiltsmartermoveabsorb: {
+		name: "cameraTerrainTiltSmarterMoveAbsorb",
 		default: "1.0",
 		category: 5,
 		scope: "Character",
 	},
-	cameraTerrainTiltSmarterMoveDelay: {
+	cameraterraintiltsmartermovedelay: {
+		name: "cameraTerrainTiltSmarterMoveDelay",
 		default: "0.0",
 		category: 5,
 		scope: "Character",
 	},
-	cameraTerrainTiltSmarterMoveFactor: {
+	cameraterraintiltsmartermovefactor: {
+		name: "cameraTerrainTiltSmarterMoveFactor",
 		default: "1.0",
 		category: 5,
 		scope: "Character",
 	},
-	cameraTerrainTiltSmarterStrafeAbsorb: {
+	cameraterraintiltsmarterstrafeabsorb: {
+		name: "cameraTerrainTiltSmarterStrafeAbsorb",
 		default: "1.0",
 		category: 5,
 		scope: "Character",
 	},
-	cameraTerrainTiltSmarterStrafeDelay: {
+	cameraterraintiltsmarterstrafedelay: {
+		name: "cameraTerrainTiltSmarterStrafeDelay",
 		default: "0.0",
 		category: 5,
 		scope: "Character",
 	},
-	cameraTerrainTiltSmarterStrafeFactor: {
+	cameraterraintiltsmarterstrafefactor: {
+		name: "cameraTerrainTiltSmarterStrafeFactor",
 		default: "1.0",
 		category: 5,
 		scope: "Character",
 	},
-	cameraTerrainTiltSmarterSwimAbsorb: {
+	cameraterraintiltsmarterswimabsorb: {
+		name: "cameraTerrainTiltSmarterSwimAbsorb",
 		default: "0.0",
 		category: 5,
 		scope: "Character",
 	},
-	cameraTerrainTiltSmarterSwimDelay: {
+	cameraterraintiltsmarterswimdelay: {
+		name: "cameraTerrainTiltSmarterSwimDelay",
 		default: "0.0",
 		category: 5,
 		scope: "Character",
 	},
-	cameraTerrainTiltSmarterSwimFactor: {
+	cameraterraintiltsmarterswimfactor: {
+		name: "cameraTerrainTiltSmarterSwimFactor",
 		default: "1.0",
 		category: 5,
 		scope: "Character",
 	},
-	cameraTerrainTiltSmarterTaxiAbsorb: {
+	cameraterraintiltsmartertaxiabsorb: {
+		name: "cameraTerrainTiltSmarterTaxiAbsorb",
 		default: "0.0",
 		category: 5,
 		scope: "Character",
 	},
-	cameraTerrainTiltSmarterTaxiDelay: {
+	cameraterraintiltsmartertaxidelay: {
+		name: "cameraTerrainTiltSmarterTaxiDelay",
 		default: "0.0",
 		category: 5,
 		scope: "Character",
 	},
-	cameraTerrainTiltSmarterTaxiFactor: {
+	cameraterraintiltsmartertaxifactor: {
+		name: "cameraTerrainTiltSmarterTaxiFactor",
 		default: "1.0",
 		category: 5,
 		scope: "Character",
 	},
-	cameraTerrainTiltSmarterTrackAbsorb: {
+	cameraterraintiltsmartertrackabsorb: {
+		name: "cameraTerrainTiltSmarterTrackAbsorb",
 		default: "1.0",
 		category: 5,
 		scope: "Character",
 	},
-	cameraTerrainTiltSmarterTrackDelay: {
+	cameraterraintiltsmartertrackdelay: {
+		name: "cameraTerrainTiltSmarterTrackDelay",
 		default: "0.0",
 		category: 5,
 		scope: "Character",
 	},
-	cameraTerrainTiltSmarterTrackFactor: {
+	cameraterraintiltsmartertrackfactor: {
+		name: "cameraTerrainTiltSmarterTrackFactor",
 		default: "1.0",
 		category: 5,
 		scope: "Character",
 	},
-	cameraTerrainTiltSmarterTurnAbsorb: {
+	cameraterraintiltsmarterturnabsorb: {
+		name: "cameraTerrainTiltSmarterTurnAbsorb",
 		default: "1.0",
 		category: 5,
 		scope: "Character",
 	},
-	cameraTerrainTiltSmarterTurnDelay: {
+	cameraterraintiltsmarterturndelay: {
+		name: "cameraTerrainTiltSmarterTurnDelay",
 		default: "0.0",
 		category: 5,
 		scope: "Character",
 	},
-	cameraTerrainTiltSmarterTurnFactor: {
+	cameraterraintiltsmarterturnfactor: {
+		name: "cameraTerrainTiltSmarterTurnFactor",
 		default: "1.0",
 		category: 5,
 		scope: "Character",
 	},
-	cameraTerrainTiltSplineFallAbsorb: {
+	cameraterraintiltsplinefallabsorb: {
+		name: "cameraTerrainTiltSplineFallAbsorb",
 		default: "1.0",
 		category: 5,
 		scope: "Character",
 	},
-	cameraTerrainTiltSplineFallDelay: {
+	cameraterraintiltsplinefalldelay: {
+		name: "cameraTerrainTiltSplineFallDelay",
 		default: "0.0",
 		category: 5,
 		scope: "Character",
 	},
-	cameraTerrainTiltSplineFallFactor: {
+	cameraterraintiltsplinefallfactor: {
+		name: "cameraTerrainTiltSplineFallFactor",
 		default: "0.75",
 		category: 5,
 		scope: "Character",
 	},
-	cameraTerrainTiltSplineFearAbsorb: {
+	cameraterraintiltsplinefearabsorb: {
+		name: "cameraTerrainTiltSplineFearAbsorb",
 		default: "1.0",
 		category: 5,
 		scope: "Character",
 	},
-	cameraTerrainTiltSplineFearDelay: {
+	cameraterraintiltsplinefeardelay: {
+		name: "cameraTerrainTiltSplineFearDelay",
 		default: "0.0",
 		category: 5,
 		scope: "Character",
 	},
-	cameraTerrainTiltSplineFearFactor: {
+	cameraterraintiltsplinefearfactor: {
+		name: "cameraTerrainTiltSplineFearFactor",
 		default: "1.0",
 		category: 5,
 		scope: "Character",
 	},
-	cameraTerrainTiltSplineIdleAbsorb: {
+	cameraterraintiltsplineidleabsorb: {
+		name: "cameraTerrainTiltSplineIdleAbsorb",
 		default: "0.0",
 		category: 5,
 		scope: "Character",
 	},
-	cameraTerrainTiltSplineIdleDelay: {
+	cameraterraintiltsplineidledelay: {
+		name: "cameraTerrainTiltSplineIdleDelay",
 		default: "0.0",
 		category: 5,
 		scope: "Character",
 	},
-	cameraTerrainTiltSplineIdleFactor: {
+	cameraterraintiltsplineidlefactor: {
+		name: "cameraTerrainTiltSplineIdleFactor",
 		default: "-1.0",
 		category: 5,
 		scope: "Character",
 	},
-	cameraTerrainTiltSplineJumpAbsorb: {
+	cameraterraintiltsplinejumpabsorb: {
+		name: "cameraTerrainTiltSplineJumpAbsorb",
 		default: "0.0",
 		category: 5,
 		scope: "Character",
 	},
-	cameraTerrainTiltSplineJumpDelay: {
+	cameraterraintiltsplinejumpdelay: {
+		name: "cameraTerrainTiltSplineJumpDelay",
 		default: "0.0",
 		category: 5,
 		scope: "Character",
 	},
-	cameraTerrainTiltSplineJumpFactor: {
+	cameraterraintiltsplinejumpfactor: {
+		name: "cameraTerrainTiltSplineJumpFactor",
 		default: "-1.0",
 		category: 5,
 		scope: "Character",
 	},
-	cameraTerrainTiltSplineMoveAbsorb: {
+	cameraterraintiltsplinemoveabsorb: {
+		name: "cameraTerrainTiltSplineMoveAbsorb",
 		default: "1.0",
 		category: 5,
 		scope: "Character",
 	},
-	cameraTerrainTiltSplineMoveDelay: {
+	cameraterraintiltsplinemovedelay: {
+		name: "cameraTerrainTiltSplineMoveDelay",
 		default: "0.0",
 		category: 5,
 		scope: "Character",
 	},
-	cameraTerrainTiltSplineMoveFactor: {
+	cameraterraintiltsplinemovefactor: {
+		name: "cameraTerrainTiltSplineMoveFactor",
 		default: "1.0",
 		category: 5,
 		scope: "Character",
 	},
-	cameraTerrainTiltSplineStrafeAbsorb: {
+	cameraterraintiltsplinestrafeabsorb: {
+		name: "cameraTerrainTiltSplineStrafeAbsorb",
 		default: "1.0",
 		category: 5,
 		scope: "Character",
 	},
-	cameraTerrainTiltSplineStrafeDelay: {
+	cameraterraintiltsplinestrafedelay: {
+		name: "cameraTerrainTiltSplineStrafeDelay",
 		default: "0.0",
 		category: 5,
 		scope: "Character",
 	},
-	cameraTerrainTiltSplineStrafeFactor: {
+	cameraterraintiltsplinestrafefactor: {
+		name: "cameraTerrainTiltSplineStrafeFactor",
 		default: "1.0",
 		category: 5,
 		scope: "Character",
 	},
-	cameraTerrainTiltSplineSwimAbsorb: {
+	cameraterraintiltsplineswimabsorb: {
+		name: "cameraTerrainTiltSplineSwimAbsorb",
 		default: "0.0",
 		category: 5,
 		scope: "Character",
 	},
-	cameraTerrainTiltSplineSwimDelay: {
+	cameraterraintiltsplineswimdelay: {
+		name: "cameraTerrainTiltSplineSwimDelay",
 		default: "0.0",
 		category: 5,
 		scope: "Character",
 	},
-	cameraTerrainTiltSplineSwimFactor: {
+	cameraterraintiltsplineswimfactor: {
+		name: "cameraTerrainTiltSplineSwimFactor",
 		default: "1.0",
 		category: 5,
 		scope: "Character",
 	},
-	cameraTerrainTiltSplineTaxiAbsorb: {
+	cameraterraintiltsplinetaxiabsorb: {
+		name: "cameraTerrainTiltSplineTaxiAbsorb",
 		default: "0.0",
 		category: 5,
 		scope: "Character",
 	},
-	cameraTerrainTiltSplineTaxiDelay: {
+	cameraterraintiltsplinetaxidelay: {
+		name: "cameraTerrainTiltSplineTaxiDelay",
 		default: "0.0",
 		category: 5,
 		scope: "Character",
 	},
-	cameraTerrainTiltSplineTaxiFactor: {
+	cameraterraintiltsplinetaxifactor: {
+		name: "cameraTerrainTiltSplineTaxiFactor",
 		default: "1.0",
 		category: 5,
 		scope: "Character",
 	},
-	cameraTerrainTiltSplineTrackAbsorb: {
+	cameraterraintiltsplinetrackabsorb: {
+		name: "cameraTerrainTiltSplineTrackAbsorb",
 		default: "1.0",
 		category: 5,
 		scope: "Character",
 	},
-	cameraTerrainTiltSplineTrackDelay: {
+	cameraterraintiltsplinetrackdelay: {
+		name: "cameraTerrainTiltSplineTrackDelay",
 		default: "0.0",
 		category: 5,
 		scope: "Character",
 	},
-	cameraTerrainTiltSplineTrackFactor: {
+	cameraterraintiltsplinetrackfactor: {
+		name: "cameraTerrainTiltSplineTrackFactor",
 		default: "1.0",
 		category: 5,
 		scope: "Character",
 	},
-	cameraTerrainTiltSplineTurnAbsorb: {
+	cameraterraintiltsplineturnabsorb: {
+		name: "cameraTerrainTiltSplineTurnAbsorb",
 		default: "1.0",
 		category: 5,
 		scope: "Character",
 	},
-	cameraTerrainTiltSplineTurnDelay: {
+	cameraterraintiltsplineturndelay: {
+		name: "cameraTerrainTiltSplineTurnDelay",
 		default: "0.0",
 		category: 5,
 		scope: "Character",
 	},
-	cameraTerrainTiltSplineTurnFactor: {
+	cameraterraintiltsplineturnfactor: {
+		name: "cameraTerrainTiltSplineTurnFactor",
 		default: "1.0",
 		category: 5,
 		scope: "Character",
 	},
-	cameraTerrainTiltTimeMax: {
+	cameraterraintilttimemax: {
+		name: "cameraTerrainTiltTimeMax",
 		default: "10.0",
 		category: 5,
 		scope: "Character",
 	},
-	cameraTerrainTiltTimeMin: {
+	cameraterraintilttimemin: {
+		name: "cameraTerrainTiltTimeMin",
 		default: "3.0",
 		category: 5,
 		scope: "Character",
 	},
-	cameraView: {
+	cameraview: {
+		name: "cameraView",
 		default: "2",
 		category: 5,
 		scope: "Character",
 	},
-	cameraViewBlendStyle: {
+	cameraviewblendstyle: {
+		name: "cameraViewBlendStyle",
 		default: "1",
 		category: 5,
 		scope: "Character",
 	},
-	cameraWaterCollision: {
+	camerawatercollision: {
+		name: "cameraWaterCollision",
 		default: "0",
 		category: 5,
 		scope: "Character",
 	},
-	cameraYawMoveSpeed: {
+	camerayawmovespeed: {
+		name: "cameraYawMoveSpeed",
 		default: "180",
 		category: 5,
 		scope: "Character",
 	},
-	cameraYawSmoothMax: {
+	camerayawsmoothmax: {
+		name: "cameraYawSmoothMax",
 		default: "0.0",
 		category: 5,
 		scope: "Character",
 	},
-	cameraYawSmoothMin: {
+	camerayawsmoothmin: {
+		name: "cameraYawSmoothMin",
 		default: "0.0",
 		category: 5,
 		scope: "Character",
 	},
-	cameraYawSmoothSpeed: {
+	camerayawsmoothspeed: {
+		name: "cameraYawSmoothSpeed",
 		default: "180",
 		category: 5,
 		scope: "Character",
 	},
-	cameraZSmooth: {
+	camerazsmooth: {
+		name: "cameraZSmooth",
 		default: "1",
 		category: 5,
 		scope: "Character",
 		help: "Smooths camera vertical movement. 1 = only while moving, 2 = also while standing still",
 	},
-	cameraZoomSpeed: {
+	camerazoomspeed: {
+		name: "cameraZoomSpeed",
 		default: "20",
 		category: 5,
 		scope: "Character",
 	},
-	chatBubbles: {
+	chatbubbles: {
+		name: "chatBubbles",
 		default: "1",
 		category: 4,
 		scope: "Character",
 		help: "Whether to show in-game chat bubbles",
 	},
-	chatBubblesParty: {
+	chatbubblesparty: {
+		name: "chatBubblesParty",
 		default: "1",
 		category: 4,
 		scope: "Character",
 		help: "Whether to show in-game chat bubbles for party chat",
 	},
-	chatClassColorOverride: {
+	chatclasscoloroverride: {
+		name: "chatClassColorOverride",
 		default: "0",
 		category: 4,
 		help: "Whether or not class names are colored in chat. 0 = always color by class name (where applicable), 1 = never color by class name, 2 = respect the legacy per-channel class color settings",
 	},
-	chatMouseScroll: {
+	chatmousescroll: {
+		name: "chatMouseScroll",
 		default: "1",
 		category: 4,
 		scope: "Character",
 		help: "Whether the user can use the mouse wheel to scroll through chat",
 	},
-	chatStyle: {
+	chatstyle: {
+		name: "chatStyle",
 		default: "im",
 		category: 4,
 		scope: "Character",
 		help: "The style of Edit Boxes for the ChatFrame. Valid values: \"classic\", \"im\"",
 	},
-	checkAddonVersion: {
+	checkaddonversion: {
+		name: "checkAddonVersion",
 		default: "1",
 		category: 5,
 		help: "Check interface addon version number",
 	},
-	cloakFixEnabled: {
+	cloakfixenabled: {
+		name: "cloakFixEnabled",
 		default: "1",
 		category: 5,
 	},
-	closedExtraAbiltyTutorials: {
+	closedextraabiltytutorials: {
+		name: "closedExtraAbiltyTutorials",
 		default: "",
 		category: 4,
 		scope: "Account",
 		help: "Bitfield for which extra ability tutorials have been acknowledged by the user",
 	},
-	closedInfoFrames: {
+	closedinfoframes: {
+		name: "closedInfoFrames",
 		default: "",
 		category: 4,
 		scope: "Account",
 		help: "Bitfield for which help frames have been acknowledged by the user",
 	},
-	closedInfoFramesAccountWide: {
+	closedinfoframesaccountwide: {
+		name: "closedInfoFramesAccountWide",
 		default: "",
 		category: 4,
 		scope: "Character",
 		help: "Bitfield for which help frames have been acknowledged by the user (account-wide)",
 	},
-	clubFinderCacheExpiry: {
+	clubfindercacheexpiry: {
+		name: "clubFinderCacheExpiry",
 		default: "1000",
 		category: 4,
 		help: "Value in (MS) for time to expire the cache.",
 	},
-	clubFinderCachePendingExpiry: {
+	clubfindercachependingexpiry: {
+		name: "clubFinderCachePendingExpiry",
 		default: "5000",
 		category: 4,
 		help: "Value in (MS) for time to expire the cache.",
 	},
-	clubFinderPlayerLanguageSettings: {
+	clubfinderplayerlanguagesettings: {
+		name: "clubFinderPlayerLanguageSettings",
 		default: "0",
 		category: 4,
 		scope: "Account",
 		help: "Bit field of Looking for club/guild player language settings",
 	},
-	clubFinderPlayerSettings: {
+	clubfinderplayersettings: {
+		name: "clubFinderPlayerSettings",
 		default: "1",
 		category: 4,
 		scope: "Account",
 		help: "Bit field of Looking for guild player settings",
 	},
-	colorChatNamesByClass: {
+	colorchatnamesbyclass: {
+		name: "colorChatNamesByClass",
 		default: "0",
 		category: 4,
 		scope: "Character",
 		help: "If enabled, the name of a player speaking in chat will be colored according to his class.",
 	},
-	colorblindMode: {
+	colorblindmode: {
+		name: "colorblindMode",
 		default: "0",
 		category: 4,
 		scope: "Character",
 		help: "Enables colorblind accessibility features in the game",
 	},
-	colorblindSimulator: {
+	colorblindsimulator: {
+		name: "colorblindSimulator",
 		default: "0",
 		category: 1,
 		help: "Type of color blindness",
 	},
-	colorblindWeaknessFactor: {
+	colorblindweaknessfactor: {
+		name: "colorblindWeaknessFactor",
 		default: "0.5",
 		category: 1,
 		help: "Amount of sensitivity. e.g. Protanope (red-weakness) 0.0 = not colorblind, 1.0 = full weakness(Protanopia), 0.5 = mid weakness(Protanomaly)",
 	},
-	combatLogRetentionTime: {
+	combatlogretentiontime: {
+		name: "combatLogRetentionTime",
 		default: "300",
 		category: 4,
 		scope: "Character",
 		help: "The maximum duration in seconds to retain combat log entries",
 	},
-	combatLogUniqueFilename: {
+	combatloguniquefilename: {
+		name: "combatLogUniqueFilename",
 		default: "1",
 		category: 4,
 		help: "Write combat log file with a timestamped name per client launch",
 	},
-	comboPointLocation: {
+	combopointlocation: {
+		name: "comboPointLocation",
 		default: "2",
 		category: 4,
 		help: "Location of combo points in UI. 1=target, 2=self",
 	},
-	commentatorLossOfControlIconUnitFrame: {
+	commentatorlossofcontroliconunitframe: {
+		name: "commentatorLossOfControlIconUnitFrame",
 		default: "1",
 		category: 4,
 		scope: "Character",
 		help: "0: Off, 1: On.",
 	},
-	commentatorLossOfControlTextNameplate: {
+	commentatorlossofcontroltextnameplate: {
+		name: "commentatorLossOfControlTextNameplate",
 		default: "0",
 		category: 4,
 		scope: "Character",
 		help: "0: Off, 1: On.",
 	},
-	commentatorLossOfControlTextUnitFrame: {
+	commentatorlossofcontroltextunitframe: {
+		name: "commentatorLossOfControlTextUnitFrame",
 		default: "0",
 		category: 4,
 		scope: "Character",
 		help: "0: Off, 1: On.",
 	},
-	communitiesShowOffline: {
+	communitiesshowoffline: {
+		name: "communitiesShowOffline",
 		default: "1",
 		category: 4,
 		scope: "Character",
 		help: "Show offline community members in the communities frame roster",
 	},
-	componentCompress: {
+	componentcompress: {
+		name: "componentCompress",
 		default: "1",
 		category: 1,
 		help: "Character component texture compression",
 	},
-	componentEmissive: {
+	componentemissive: {
+		name: "componentEmissive",
 		default: "1",
 		category: 1,
 		help: "Character component unlit/emissive",
 	},
-	componentSpecular: {
+	componentspecular: {
+		name: "componentSpecular",
 		default: "1",
 		category: 1,
 		help: "Character component specular highlights",
 	},
-	componentTexCacheSize: {
+	componenttexcachesize: {
+		name: "componentTexCacheSize",
 		default: "32",
 		category: 1,
 		help: "Character component texture cache size (in MB)",
 	},
-	componentTexLoadLimit: {
+	componenttexloadlimit: {
+		name: "componentTexLoadLimit",
 		default: "16",
 		category: 1,
 		help: "Character component texture loading limit per frame",
 	},
-	componentTextureLevel: {
+	componenttexturelevel: {
+		name: "componentTextureLevel",
 		default: "0",
 		category: 1,
 		help: "Level of detail for character component textures. 0 means full detail.",
 	},
-	componentThread: {
+	componentthread: {
+		name: "componentThread",
 		default: "1",
 		category: 1,
 		help: "Multi thread character component processing",
 	},
-	countdownForCooldowns: {
+	countdownforcooldowns: {
+		name: "countdownForCooldowns",
 		default: "0",
 		category: 4,
 		scope: "Character",
 		help: "Whether to use number countdown instead of radial swipe for action button cooldowns or not.",
 	},
-	covenantMissionTutorial: {
+	covenantmissiontutorial: {
+		name: "covenantMissionTutorial",
 		default: "0",
 		category: 4,
 		scope: "Account",
 		help: "Stores information about which covenant mission/adventures tutorials the player has seen",
 	},
-	currencyCategoriesCollapsed: {
+	currencycategoriescollapsed: {
+		name: "currencyCategoriesCollapsed",
 		default: "0",
 		category: 4,
 		scope: "Account",
 		help: "Internal CVar for tracking collapsed currency categories.",
 	},
-	currencyTokensBackpack1: {
+	currencytokensbackpack1: {
+		name: "currencyTokensBackpack1",
 		default: "0",
 		category: 4,
 		scope: "Account",
 		help: "Currency token types shown on backpack.",
 	},
-	currencyTokensBackpack2: {
+	currencytokensbackpack2: {
+		name: "currencyTokensBackpack2",
 		default: "0",
 		category: 4,
 		scope: "Account",
 		help: "Currency token types shown on backpack.",
 	},
-	currencyTokensUnused1: {
+	currencytokensunused1: {
+		name: "currencyTokensUnused1",
 		default: "0",
 		category: 4,
 		scope: "Account",
 		help: "Currency token types marked as unused.",
 	},
-	currencyTokensUnused2: {
+	currencytokensunused2: {
+		name: "currencyTokensUnused2",
 		default: "0",
 		category: 4,
 		scope: "Account",
 		help: "Currency token types marked as unused.",
 	},
-	cursorSizePreferred: {
+	cursorsizepreferred: {
+		name: "cursorSizePreferred",
 		default: "-1",
 		category: 1,
 		help: "Size of cursor: -1=determine based on system/monitor dpi, 0=32x32, 1=48x48, 2=64x64, 3=96x96, 4=128x128",
 	},
 	daltonize: {
+		name: "daltonize",
 		default: "1",
 		category: 1,
 		help: "Attempt to correct for color blindness (set colorblindSimulator to type of colorblindness)",
 	},
-	dangerousShipyardMissionWarningAlreadyShown: {
+	dangerousshipyardmissionwarningalreadyshown: {
+		name: "dangerousShipyardMissionWarningAlreadyShown",
 		default: "0",
 		category: 4,
 		scope: "Account",
 		help: "Boolean indicating whether the shipyard's dangerous mission warning has been shown",
 	},
-	debugGameEvents: {
+	debuggameevents: {
+		name: "debugGameEvents",
 		default: "0",
 		category: 0,
 		help: "Show additional information about game events",
 	},
-	deselectOnClick: {
+	deselectonclick: {
+		name: "deselectOnClick",
 		default: "0",
 		category: 4,
 		scope: "Character",
 		help: "Clear the target when clicking on terrain",
 	},
-	digSites: {
+	digsites: {
+		name: "digSites",
 		default: "1",
 		category: 4,
 		scope: "Account",
 		help: "If enabled, the archaeological dig site system will be used.",
 	},
-	disableAELooting: {
+	disableaelooting: {
+		name: "disableAELooting",
 		default: "0",
 		category: 4,
 		help: "Disable AoE Looting",
 	},
-	disableAutoRealmSelect: {
+	disableautorealmselect: {
+		name: "disableAutoRealmSelect",
 		default: "0",
 		category: 5,
 		help: "Disable automatically selecting a realm on login",
 	},
-	disableServerNagle: {
+	disableservernagle: {
+		name: "disableServerNagle",
 		default: "1",
 		category: 6,
 		help: "Disable server-side nagle algorithm",
 	},
-	displayFreeBagSlots: {
+	displayfreebagslots: {
+		name: "displayFreeBagSlots",
 		default: "1",
 		category: 4,
 		scope: "Character",
 		help: "Whether or not the backpack button should indicate how many inventory slots you've got free",
 	},
-	displaySpellActivationOverlays: {
+	displayspellactivationoverlays: {
+		name: "displaySpellActivationOverlays",
 		default: "1",
 		category: 4,
 		scope: "Account",
 		help: "Whether to display Spell Activation Overlays (a.k.a. Spell Alerts)",
 	},
-	displayWorldPVPObjectives: {
+	displayworldpvpobjectives: {
+		name: "displayWorldPVPObjectives",
 		default: "1",
 		category: 4,
 		scope: "Character",
 		help: "Whether to show world PvP objectives",
 	},
-	displayedRAFFriendInfo: {
+	displayedraffriendinfo: {
+		name: "displayedRAFFriendInfo",
 		default: "0",
 		category: 4,
 		scope: "Character",
 		help: "Stores whether we already told a recruited person about their new BattleTag friend",
 	},
-	doNotFlashLowHealthWarning: {
+	donotflashlowhealthwarning: {
+		name: "doNotFlashLowHealthWarning",
 		default: "0",
 		category: 4,
 		scope: "Character",
 		help: "Do not flash your screen red when you are low on health.",
 	},
-	dontShowEquipmentSetsOnItems: {
+	dontshowequipmentsetsonitems: {
+		name: "dontShowEquipmentSetsOnItems",
 		default: "0",
 		category: 4,
 		scope: "Character",
 		help: "Don't show which equipment sets an item is associated with",
 	},
-	doodadLodScale: {
+	doodadlodscale: {
+		name: "doodadLodScale",
 		default: "100",
 		category: 1,
 		help: "Doodad level of detail scale",
 	},
-	dynamicLod: {
+	dynamiclod: {
+		name: "dynamicLod",
 		default: "1",
 		category: 1,
 		help: "Dynamic level of detail adjustment",
 	},
-	emphasizeMySpellEffects: {
+	emphasizemyspelleffects: {
+		name: "emphasizeMySpellEffects",
 		default: "1",
 		category: 4,
 		scope: "Character",
 		help: "Whether other player's spell impacts are toned down or not.",
 	},
-	enableAssetTracking: {
+	enableassettracking: {
+		name: "enableAssetTracking",
 		default: "1",
 		category: 4,
 		help: "Whether to track which assets are least recently used",
 	},
-	enableBGDL: {
+	enablebgdl: {
+		name: "enableBGDL",
 		default: "1",
 		category: 0,
 		help: "Background Download (on async net thread) Enabled",
 	},
-	enableFloatingCombatText: {
+	enablefloatingcombattext: {
+		name: "enableFloatingCombatText",
 		default: "0",
 		category: 4,
 		scope: "Character",
 		help: "Whether to show floating combat text",
 	},
-	enableMouseSpeed: {
+	enablemousespeed: {
+		name: "enableMouseSpeed",
 		default: "0",
 		category: 4,
 		help: "Enables setting a custom mouse sensitivity to override the setting from the operating system.",
 	},
-	enableMovePad: {
+	enablemovepad: {
+		name: "enableMovePad",
 		default: "0",
 		category: 4,
 		scope: "Character",
 		help: "Enables the MovePad accessibility feature in the game",
 	},
-	enablePVPNotifyAFK: {
+	enablepvpnotifyafk: {
+		name: "enablePVPNotifyAFK",
 		default: "1",
 		category: 4,
 		scope: "Character",
 		help: "The ability to shutdown the AFK notification system",
 	},
-	enablePetBattleFloatingCombatText: {
+	enablepetbattlefloatingcombattext: {
+		name: "enablePetBattleFloatingCombatText",
 		default: "1",
 		category: 4,
 		scope: "Character",
 		help: "Whether to show floating combat text for pet battles",
 	},
-	enableRuneSpentAnim: {
+	enablerunespentanim: {
+		name: "enableRuneSpentAnim",
 		default: "1",
 		category: 5,
 		help: "Adjust the time the rune fades after it flashes when you spend it",
 	},
-	enableTwitter: {
+	enabletwitter: {
+		name: "enableTwitter",
 		default: "0",
 		category: 4,
 		scope: "Character",
 		help: "Whether Twitter integration is enabled",
 	},
-	enableWowMouse: {
+	enablewowmouse: {
+		name: "enableWowMouse",
 		default: "0",
 		category: 5,
 		help: "Enable Steelseries World of Warcraft Mouse",
 	},
-	engineSurvey: {
+	enginesurvey: {
+		name: "engineSurvey",
 		default: "0",
 		category: 5,
 		help: "Whether to send the engine survey to the servers",
 	},
-	entityLodDist: {
+	entityloddist: {
+		name: "entityLodDist",
 		default: "10",
 		category: 1,
 		help: "Entity level of detail distance",
 	},
-	entityLodOffset: {
+	entitylodoffset: {
+		name: "entityLodOffset",
 		default: "10",
 		category: 1,
 		help: "Entity level of detail offset",
 	},
-	entityShadowFadeScale: {
+	entityshadowfadescale: {
+		name: "entityShadowFadeScale",
 		default: "50",
 		category: 5,
 		help: "Entity shadow fade scale",
 	},
-	expandUpgradePanel: {
+	expandupgradepanel: {
+		name: "expandUpgradePanel",
 		default: "1",
 		category: 4,
 		help: "Controls whether the upgrade panel is expanded or collapsed.",
 	},
 	farclip: {
+		name: "farclip",
 		default: "1000",
 		category: 5,
 		help: "Far clip plane distance",
 	},
-	ffxAntiAliasingMode: {
+	ffxantialiasingmode: {
+		name: "ffxAntiAliasingMode",
 		default: "0",
 		category: 1,
 		help: "Anti Aliasing Mode",
 	},
-	ffxDeath: {
+	ffxdeath: {
+		name: "ffxDeath",
 		default: "1",
 		category: 1,
 		help: "full screen death desat effect",
 	},
-	ffxGlow: {
+	ffxglow: {
+		name: "ffxGlow",
 		default: "1",
 		category: 1,
 		help: "full screen glow effect",
 	},
-	ffxLingeringVenari: {
+	ffxlingeringvenari: {
+		name: "ffxLingeringVenari",
 		default: "1",
 		category: 1,
 		help: "full screen Lingering Cloak of Ven'ari effect",
 	},
-	ffxNether: {
+	ffxnether: {
+		name: "ffxNether",
 		default: "1",
 		category: 1,
 		help: "full screen nether effect",
 	},
-	ffxVenari: {
+	ffxvenari: {
+		name: "ffxVenari",
 		default: "1",
 		category: 1,
 		help: "full screen Cloak of Ven'ari effect",
 	},
-	findYourselfAnywhere: {
+	findyourselfanywhere: {
+		name: "findYourselfAnywhere",
 		default: "0",
 		category: 4,
 		scope: "Character",
 		help: "Always Highlight your character",
 	},
-	findYourselfAnywhereOnlyInCombat: {
+	findyourselfanywhereonlyincombat: {
+		name: "findYourselfAnywhereOnlyInCombat",
 		default: "0",
 		category: 4,
 		scope: "Character",
 		help: "Highlight your character only when in combat",
 	},
-	findYourselfInBG: {
+	findyourselfinbg: {
+		name: "findYourselfInBG",
 		default: "1",
 		category: 4,
 		scope: "Character",
 		help: "Always Highlight your character in Battlegrounds",
 	},
-	findYourselfInBGOnlyInCombat: {
+	findyourselfinbgonlyincombat: {
+		name: "findYourselfInBGOnlyInCombat",
 		default: "0",
 		category: 4,
 		scope: "Character",
 		help: "Highlight your character in Battlegrounds only when in combat",
 	},
-	findYourselfInRaid: {
+	findyourselfinraid: {
+		name: "findYourselfInRaid",
 		default: "1",
 		category: 4,
 		scope: "Character",
 		help: "Always Highlight your character in Raids",
 	},
-	findYourselfInRaidOnlyInCombat: {
+	findyourselfinraidonlyincombat: {
+		name: "findYourselfInRaidOnlyInCombat",
 		default: "1",
 		category: 4,
 		scope: "Character",
 		help: "Highlight your character in Raids only when in combat",
 	},
-	findYourselfMode: {
+	findyourselfmode: {
+		name: "findYourselfMode",
 		default: "0",
 		category: 4,
 		scope: "Character",
 		help: "Highlight your character. 0 = circle, 1 = circle & outline, 2 = outline",
 	},
-	flaggedTutorials: {
+	flaggedtutorials: {
+		name: "flaggedTutorials",
 		default: "",
 		category: 4,
 		scope: "Character",
 		help: "Internal cvar for saving completed tutorials in order",
 	},
-	flashErrorMessageRepeats: {
+	flasherrormessagerepeats: {
+		name: "flashErrorMessageRepeats",
 		default: "1",
 		category: 4,
 		scope: "Character",
 		help: "Flashes the center screen red error text if the same message is fired.",
 	},
-	flightAngleLookAhead: {
+	flightanglelookahead: {
+		name: "flightAngleLookAhead",
 		default: "0",
 		category: 4,
 		help: "Enables more dynamic attitude adjustments while flying",
 	},
-	floatingCombatTextAllSpellMechanics: {
+	floatingcombattextallspellmechanics: {
+		name: "floatingCombatTextAllSpellMechanics",
 		default: "0",
 		category: 4,
 		scope: "Character",
 	},
-	floatingCombatTextAuras: {
+	floatingcombattextauras: {
+		name: "floatingCombatTextAuras",
 		default: "0",
 		category: 4,
 		scope: "Character",
 	},
-	floatingCombatTextCombatDamage: {
+	floatingcombattextcombatdamage: {
+		name: "floatingCombatTextCombatDamage",
 		default: "1",
 		category: 4,
 		scope: "Character",
 		help: "Display damage numbers over hostile creatures when damaged",
 	},
-	floatingCombatTextCombatDamageAllAutos: {
+	floatingcombattextcombatdamageallautos: {
+		name: "floatingCombatTextCombatDamageAllAutos",
 		default: "1",
 		category: 4,
 		scope: "Character",
 		help: "Show all auto-attack numbers, rather than hiding non-event numbers",
 	},
-	floatingCombatTextCombatDamageDirectionalOffset: {
+	floatingcombattextcombatdamagedirectionaloffset: {
+		name: "floatingCombatTextCombatDamageDirectionalOffset",
 		default: "1",
 		category: 4,
 		scope: "Character",
 		help: "Amount to offset directional damage numbers when they start",
 	},
-	floatingCombatTextCombatDamageDirectionalScale: {
+	floatingcombattextcombatdamagedirectionalscale: {
+		name: "floatingCombatTextCombatDamageDirectionalScale",
 		default: "1",
 		category: 4,
 		scope: "Character",
 		help: "Directional damage numbers movement scale (0 = no directional numbers)",
 	},
-	floatingCombatTextCombatDamageStyle: {
+	floatingcombattextcombatdamagestyle: {
+		name: "floatingCombatTextCombatDamageStyle",
 		default: "1",
 		category: 4,
 		scope: "Character",
 		help: "No longer used",
 	},
-	floatingCombatTextCombatHealing: {
+	floatingcombattextcombathealing: {
+		name: "floatingCombatTextCombatHealing",
 		default: "1",
 		category: 4,
 		scope: "Character",
 		help: "Display amount of healing you did to the target",
 	},
-	floatingCombatTextCombatHealingAbsorbSelf: {
+	floatingcombattextcombathealingabsorbself: {
+		name: "floatingCombatTextCombatHealingAbsorbSelf",
 		default: "1",
 		category: 4,
 		scope: "Character",
 		help: "Shows a message when you gain a shield.",
 	},
-	floatingCombatTextCombatHealingAbsorbTarget: {
+	floatingcombattextcombathealingabsorbtarget: {
+		name: "floatingCombatTextCombatHealingAbsorbTarget",
 		default: "1",
 		category: 4,
 		scope: "Character",
 		help: "Display amount of shield added to the target.",
 	},
-	floatingCombatTextCombatLogPeriodicSpells: {
+	floatingcombattextcombatlogperiodicspells: {
+		name: "floatingCombatTextCombatLogPeriodicSpells",
 		default: "1",
 		category: 4,
 		scope: "Character",
 		help: "Display damage caused by periodic effects",
 	},
-	floatingCombatTextCombatState: {
+	floatingcombattextcombatstate: {
+		name: "floatingCombatTextCombatState",
 		default: "0",
 		category: 4,
 		scope: "Character",
 	},
-	floatingCombatTextComboPoints: {
+	floatingcombattextcombopoints: {
+		name: "floatingCombatTextComboPoints",
 		default: "0",
 		category: 4,
 		scope: "Character",
 	},
-	floatingCombatTextDamageReduction: {
+	floatingcombattextdamagereduction: {
+		name: "floatingCombatTextDamageReduction",
 		default: "0",
 		category: 4,
 		scope: "Character",
 	},
-	floatingCombatTextDodgeParryMiss: {
+	floatingcombattextdodgeparrymiss: {
+		name: "floatingCombatTextDodgeParryMiss",
 		default: "0",
 		category: 4,
 		scope: "Character",
 	},
-	floatingCombatTextEnergyGains: {
+	floatingcombattextenergygains: {
+		name: "floatingCombatTextEnergyGains",
 		default: "0",
 		category: 4,
 		scope: "Character",
 	},
-	floatingCombatTextFloatMode: {
+	floatingcombattextfloatmode: {
+		name: "floatingCombatTextFloatMode",
 		default: "1",
 		category: 4,
 		scope: "Character",
 		help: "The combat text float mode",
 	},
-	floatingCombatTextFriendlyHealers: {
+	floatingcombattextfriendlyhealers: {
+		name: "floatingCombatTextFriendlyHealers",
 		default: "0",
 		category: 4,
 		scope: "Character",
 	},
-	floatingCombatTextHonorGains: {
+	floatingcombattexthonorgains: {
+		name: "floatingCombatTextHonorGains",
 		default: "0",
 		category: 4,
 		scope: "Character",
 	},
-	floatingCombatTextLowManaHealth: {
+	floatingcombattextlowmanahealth: {
+		name: "floatingCombatTextLowManaHealth",
 		default: "1",
 		category: 4,
 		scope: "Character",
 	},
-	floatingCombatTextPeriodicEnergyGains: {
+	floatingcombattextperiodicenergygains: {
+		name: "floatingCombatTextPeriodicEnergyGains",
 		default: "0",
 		category: 4,
 		scope: "Character",
 	},
-	floatingCombatTextPetMeleeDamage: {
+	floatingcombattextpetmeleedamage: {
+		name: "floatingCombatTextPetMeleeDamage",
 		default: "1",
 		category: 4,
 		scope: "Character",
 		help: "Display pet melee damage in the world",
 	},
-	floatingCombatTextPetSpellDamage: {
+	floatingcombattextpetspelldamage: {
+		name: "floatingCombatTextPetSpellDamage",
 		default: "1",
 		category: 4,
 		scope: "Character",
 		help: "Display pet spell damage in the world",
 	},
-	floatingCombatTextReactives: {
+	floatingcombattextreactives: {
+		name: "floatingCombatTextReactives",
 		default: "1",
 		category: 4,
 		scope: "Character",
 	},
-	floatingCombatTextRepChanges: {
+	floatingcombattextrepchanges: {
+		name: "floatingCombatTextRepChanges",
 		default: "0",
 		category: 4,
 		scope: "Character",
 	},
-	floatingCombatTextSpellMechanics: {
+	floatingcombattextspellmechanics: {
+		name: "floatingCombatTextSpellMechanics",
 		default: "0",
 		category: 4,
 		scope: "Character",
 	},
-	floatingCombatTextSpellMechanicsOther: {
+	floatingcombattextspellmechanicsother: {
+		name: "floatingCombatTextSpellMechanicsOther",
 		default: "0",
 		category: 4,
 		scope: "Character",
 	},
-	forceEnglishNames: {
+	forceenglishnames: {
+		name: "forceEnglishNames",
 		default: "0",
 		category: 5,
 	},
-	forceLODCheck: {
+	forcelodcheck: {
+		name: "forceLODCheck",
 		default: "0",
 		category: 1,
 		help: "If enabled, we will skip checking DBC for LOD count and every m2 will scan the folder for skin profiles",
 	},
-	friendInvitesCollapsed: {
+	friendinvitescollapsed: {
+		name: "friendInvitesCollapsed",
 		default: "0",
 		category: 4,
 		scope: "Character",
 		help: "Whether friend invites are hidden in the friends list",
 	},
-	friendsSmallView: {
+	friendssmallview: {
+		name: "friendsSmallView",
 		default: "0",
 		category: 4,
 		scope: "Account",
 		help: "Whether to use smaller buttons in the friends list",
 	},
-	friendsViewButtons: {
+	friendsviewbuttons: {
+		name: "friendsViewButtons",
 		default: "0",
 		category: 4,
 		scope: "Account",
 		help: "Whether to show the friends list view buttons",
 	},
-	fstack_preferParentKeys: {
+	fstack_preferparentkeys: {
+		name: "fstack_preferParentKeys",
 		default: "0",
 		category: 0,
 		help: "0: Prefer Global Names, 1: Prefer ParentKeys (Default).",
 	},
-	fstack_showRaisedFrameLevels: {
+	fstack_showraisedframelevels: {
+		name: "fstack_showRaisedFrameLevels",
 		default: "0",
 		category: 0,
 		help: "0: Show normal frame levels (default), 1: Show raised frame levels instead",
 	},
 	fstack_showanchors: {
+		name: "fstack_showanchors",
 		default: "1",
 		category: 0,
 		help: "0: Hide Anchors, 1: Show Anchors (Default).",
 	},
 	fstack_showhidden: {
+		name: "fstack_showhidden",
 		default: "0",
 		category: 0,
 		help: "0: Hide Hidden (Default), 1: Show Hidden.",
 	},
 	fstack_showhighlight: {
+		name: "fstack_showhighlight",
 		default: "1",
 		category: 0,
 		help: "0: Hide Highlight, 1: Show Highlight (Default).",
 	},
 	fstack_showregions: {
+		name: "fstack_showregions",
 		default: "1",
 		category: 0,
 		help: "0: Hide Regions, 1: Show Regions (Default).",
 	},
-	fullDump: {
+	fulldump: {
+		name: "fullDump",
 		default: "0",
 		category: 0,
 		help: "When you crash, generate a full memory dump",
 	},
-	fullSizeFocusFrame: {
+	fullsizefocusframe: {
+		name: "fullSizeFocusFrame",
 		default: "1",
 		category: 4,
 		scope: "Account",
 		help: "Increases the size of the focus frame to that of the target frame",
 	},
-	gameTip: {
+	gametip: {
+		name: "gameTip",
 		default: "0",
 		category: 5,
 	},
-	garrisonCompleteTalent: {
-		default: "0",
-		category: 4,
-		scope: "Account",
-	},
-	garrisonCompleteTalentType: {
+	garrisoncompletetalent: {
+		name: "garrisonCompleteTalent",
 		default: "0",
 		category: 4,
 		scope: "Account",
 	},
-	graphicsDepthEffects: {
+	garrisoncompletetalenttype: {
+		name: "garrisonCompleteTalentType",
+		default: "0",
+		category: 4,
+		scope: "Account",
+	},
+	graphicsdeptheffects: {
+		name: "graphicsDepthEffects",
 		default: "4",
 		category: 5,
 		help: "UI value of the graphics setting",
 	},
-	graphicsEnvironmentDetail: {
+	graphicsenvironmentdetail: {
+		name: "graphicsEnvironmentDetail",
 		default: "6",
 		category: 5,
 		help: "UI value of the graphics setting",
 	},
-	graphicsGroundClutter: {
+	graphicsgroundclutter: {
+		name: "graphicsGroundClutter",
 		default: "6",
 		category: 5,
 		help: "UI value of the graphics setting",
 	},
-	graphicsLiquidDetail: {
+	graphicsliquiddetail: {
+		name: "graphicsLiquidDetail",
 		default: "4",
 		category: 5,
 		help: "UI value of the graphics setting",
 	},
-	graphicsOutlineMode: {
+	graphicsoutlinemode: {
+		name: "graphicsOutlineMode",
 		default: "3",
 		category: 5,
 		help: "UI value of the graphics setting",
 	},
-	graphicsParticleDensity: {
+	graphicsparticledensity: {
+		name: "graphicsParticleDensity",
 		default: "3",
 		category: 5,
 		help: "UI value of the graphics setting",
 	},
-	graphicsProjectedTextures: {
+	graphicsprojectedtextures: {
+		name: "graphicsProjectedTextures",
 		default: "2",
 		category: 5,
 		help: "UI value of the graphics setting",
 	},
-	graphicsQuality: {
+	graphicsquality: {
+		name: "graphicsQuality",
 		default: "4",
 		category: 5,
 		help: "save for Graphics Quality Selection",
 	},
-	graphicsSSAO: {
+	graphicsssao: {
+		name: "graphicsSSAO",
 		default: "4",
 		category: 5,
 		help: "UI value of the graphics setting",
 	},
-	graphicsShadowQuality: {
+	graphicsshadowquality: {
+		name: "graphicsShadowQuality",
 		default: "5",
 		category: 5,
 		help: "UI value of the graphics setting",
 	},
-	graphicsSpellDensity: {
+	graphicsspelldensity: {
+		name: "graphicsSpellDensity",
 		default: "5",
 		category: 5,
 		help: "UI value of the graphics setting",
 	},
-	graphicsSunshafts: {
+	graphicssunshafts: {
+		name: "graphicsSunshafts",
 		default: "3",
 		category: 5,
 		help: "UI value of the graphics setting",
 	},
-	graphicsTextureResolution: {
+	graphicstextureresolution: {
+		name: "graphicsTextureResolution",
 		default: "5",
 		category: 5,
 		help: "UI value of the graphics setting",
 	},
-	graphicsViewDistance: {
+	graphicsviewdistance: {
+		name: "graphicsViewDistance",
 		default: "7",
 		category: 5,
 		help: "UI value of the graphics setting",
 	},
-	groundEffectDensity: {
+	groundeffectdensity: {
+		name: "groundEffectDensity",
 		default: "16",
 		category: 5,
 		help: "Ground effect density",
 	},
-	groundEffectDist: {
+	groundeffectdist: {
+		name: "groundEffectDist",
 		default: "70",
 		category: 5,
 		help: "Ground effect dist",
 	},
-	groundEffectFade: {
+	groundeffectfade: {
+		name: "groundEffectFade",
 		default: "70",
 		category: 1,
 		help: "Ground effect fade",
 	},
-	guildMemberNotify: {
+	guildmembernotify: {
+		name: "guildMemberNotify",
 		default: "1",
 		category: 4,
 		scope: "Character",
 		help: "Receive notification when guild members log on/off",
 	},
-	guildNewsFilter: {
+	guildnewsfilter: {
+		name: "guildNewsFilter",
 		default: "0",
 		category: 4,
 		scope: "Account",
 		help: "Stores the guild news filters",
 	},
-	guildRewardsCategory: {
+	guildrewardscategory: {
+		name: "guildRewardsCategory",
 		default: "0",
 		category: 4,
 		scope: "Account",
 		help: "Show category of guild rewards",
 	},
-	guildRewardsUsable: {
+	guildrewardsusable: {
+		name: "guildRewardsUsable",
 		default: "0",
 		category: 4,
 		scope: "Account",
 		help: "Show usable guild rewards only",
 	},
-	guildRosterView: {
+	guildrosterview: {
+		name: "guildRosterView",
 		default: "",
 		category: 4,
 		scope: "Account",
 		help: "The current guild roster display mode",
 	},
-	guildShowOffline: {
+	guildshowoffline: {
+		name: "guildShowOffline",
 		default: "1",
 		category: 4,
 		scope: "Character",
 		help: "Show offline guild members in the guild UI",
 	},
-	gxAFRDevicesCount: {
+	gxafrdevicescount: {
+		name: "gxAFRDevicesCount",
 		default: "0",
 		category: 1,
 		help: "Force to set number of AFR devices",
 	},
-	gxAdapter: {
+	gxadapter: {
+		name: "gxAdapter",
 		default: "",
 		category: 1,
 		help: "Set which GPU to use. See GxListGPUs for valid names (empty string to let client choose)",
 	},
-	gxAftermathEnabled: {
+	gxaftermathenabled: {
+		name: "gxAftermathEnabled",
 		default: "1",
 		category: 1,
 		help: "Enable frame crash debugging",
 	},
-	gxApi: {
+	gxapi: {
+		name: "gxApi",
 		default: "auto",
 		category: 5,
 		help: "graphics api",
 	},
-	gxAspect: {
+	gxaspect: {
+		name: "gxAspect",
 		default: "1",
 		category: 1,
 		help: "constrain window aspect",
 	},
-	gxFullscreenResolution: {
+	gxfullscreenresolution: {
+		name: "gxFullscreenResolution",
 		default: "auto",
 		category: 1,
 		help: "resolution",
 	},
-	gxMTAlphaM2: {
+	gxmtalpham2: {
+		name: "gxMTAlphaM2",
 		default: "1",
 		category: 1,
 		help: "Render transparent M2 pass in parallel.",
 	},
-	gxMTBeginDraw: {
+	gxmtbegindraw: {
+		name: "gxMTBeginDraw",
 		default: "1",
 		category: 1,
 		help: "Do BeginDraw multithreaded.",
 	},
-	gxMTDisable: {
+	gxmtdisable: {
+		name: "gxMTDisable",
 		default: "0",
 		category: 1,
 		help: "Disable all render multithreading",
 	},
-	gxMTOpaqueM2: {
+	gxmtopaquem2: {
+		name: "gxMTOpaqueM2",
 		default: "1",
 		category: 1,
 		help: "Render opaque model pass in parallel.",
 	},
-	gxMTOpaqueM2NoReflect: {
+	gxmtopaquem2noreflect: {
+		name: "gxMTOpaqueM2NoReflect",
 		default: "1",
 		category: 1,
 		help: "Render opaque model no reflection pass in parallel.",
 	},
-	gxMTOpaqueWMO: {
+	gxmtopaquewmo: {
+		name: "gxMTOpaqueWMO",
 		default: "1",
 		category: 1,
 		help: "Render opaque WMO in parallel.",
 	},
-	gxMTPrepass: {
+	gxmtprepass: {
+		name: "gxMTPrepass",
 		default: "1",
 		category: 1,
 		help: "Render prepass in parallel.",
 	},
-	gxMTShadow: {
+	gxmtshadow: {
+		name: "gxMTShadow",
 		default: "1",
 		category: 1,
 		help: "Render shadow bands in parallel.",
 	},
-	gxMTTerrain: {
+	gxmtterrain: {
+		name: "gxMTTerrain",
 		default: "1",
 		category: 1,
 		help: "Render terrain in parallel.",
 	},
-	gxMaxFrameLatency: {
+	gxmaxframelatency: {
+		name: "gxMaxFrameLatency",
 		default: "3",
 		category: 1,
 		help: "maximum number of frames ahead of GPU the CPU can be",
 	},
-	gxMaximize: {
+	gxmaximize: {
+		name: "gxMaximize",
 		default: "1",
 		category: 5,
 	},
-	gxMonitor: {
+	gxmonitor: {
+		name: "gxMonitor",
 		default: "0",
 		category: 1,
 		help: "monitor",
 	},
-	gxNewResolution: {
+	gxnewresolution: {
+		name: "gxNewResolution",
 		default: "0x0",
 		category: 1,
 		help: "resolution to be set",
 	},
-	gxWindowedResolution: {
+	gxwindowedresolution: {
+		name: "gxWindowedResolution",
 		default: "1920x1080",
 		category: 1,
 		help: "windowed resolution",
 	},
-	hardTrackedQuests: {
+	hardtrackedquests: {
+		name: "hardTrackedQuests",
 		default: "",
 		category: 4,
 		scope: "Account",
 		help: "Internal cvar for saving user manually tracked quests in order",
 	},
-	hardTrackedWorldQuests: {
+	hardtrackedworldquests: {
+		name: "hardTrackedWorldQuests",
 		default: "",
 		category: 4,
 		scope: "Account",
 		help: "Internal cvar for saving user manually tracked world quests",
 	},
-	heirloomCollectedFilters: {
+	heirloomcollectedfilters: {
+		name: "heirloomCollectedFilters",
 		default: "0",
 		category: 4,
 		scope: "Character",
 		help: "Bitfield for which collected filters are applied in the heirloom journal",
 	},
-	heirloomSourceFilters: {
+	heirloomsourcefilters: {
+		name: "heirloomSourceFilters",
 		default: "0",
 		category: 4,
 		scope: "Character",
 		help: "Bitfield for which source filters are applied in the heirloom journal",
 	},
-	hideAdventureJournalAlerts: {
+	hideadventurejournalalerts: {
+		name: "hideAdventureJournalAlerts",
 		default: "0",
 		category: 4,
 		scope: "Character",
 		help: "Hide alerts shown on the Adventure Journal Microbutton",
 	},
-	horizonClip: {
+	horizonclip: {
+		name: "horizonClip",
 		default: "1600",
 		category: 5,
 	},
-	horizonStart: {
+	horizonstart: {
+		name: "horizonStart",
 		default: "800",
 		category: 5,
 		help: "Horizon start distance",
 	},
-	hotReloadModels: {
+	hotreloadmodels: {
+		name: "hotReloadModels",
 		default: "1",
 		category: 1,
 		help: "Allow an active model to be reloaded when a new version is detected in the bin folder.  If this is disabled, the model data will only be refreshed after all game objects using the model are deleted",
 	},
-	hwDetect: {
+	hwdetect: {
+		name: "hwDetect",
 		default: "1",
 		category: 5,
 		help: "do hardware detection",
 	},
-	incompleteQuestPriorityThresholdDelta: {
+	incompletequestprioritythresholddelta: {
+		name: "incompleteQuestPriorityThresholdDelta",
 		default: "135",
 		category: 0,
 	},
-	initialRealmListTimeout: {
+	initialrealmlisttimeout: {
+		name: "initialRealmListTimeout",
 		default: "60",
 		category: 5,
 		help: "How long to wait for the initial realm list before failing login (in seconds)",
 	},
-	interactOnLeftClick: {
+	interactonleftclick: {
+		name: "interactOnLeftClick",
 		default: "1",
 		category: 4,
 		scope: "Character",
 		help: "Test CVar for interacting with NPC's on left click",
 	},
-	lastAddonVersion: {
+	lastaddonversion: {
+		name: "lastAddonVersion",
 		default: "0",
 		category: 5,
 		help: "Addon interface version number from previous build",
 	},
-	lastCharacterIndex: {
+	lastcharacterindex: {
+		name: "lastCharacterIndex",
 		default: "0",
 		category: 5,
 		help: "Last character selected",
 	},
-	lastGarrisonMissionTutorial: {
+	lastgarrisonmissiontutorial: {
+		name: "lastGarrisonMissionTutorial",
 		default: "0",
 		category: 4,
 		scope: "Account",
 		help: "Stores the last garrison mission tutorial the player has accepted",
 	},
-	lastRenownForCovenant1: {
+	lastrenownforcovenant1: {
+		name: "lastRenownForCovenant1",
 		default: "0",
 		category: 4,
 		scope: "Account",
 		help: "Stores the Kyrian renown when Renown UI is closed",
 	},
-	lastRenownForCovenant2: {
+	lastrenownforcovenant2: {
+		name: "lastRenownForCovenant2",
 		default: "0",
 		category: 4,
 		scope: "Account",
 		help: "Stores the Venthyr renown when Renown UI is closed",
 	},
-	lastRenownForCovenant3: {
+	lastrenownforcovenant3: {
+		name: "lastRenownForCovenant3",
 		default: "0",
 		category: 4,
 		scope: "Account",
 		help: "Stores the NightFae renown when Renown UI is closed",
 	},
-	lastRenownForCovenant4: {
+	lastrenownforcovenant4: {
+		name: "lastRenownForCovenant4",
 		default: "0",
 		category: 4,
 		scope: "Account",
 		help: "Stores the Necrolord renown when Renown UI is closed",
 	},
-	lastSelectedClubId: {
+	lastselectedclubid: {
+		name: "lastSelectedClubId",
 		default: "0",
 		category: 4,
 		scope: "Account",
 		help: "The last club that was selected by the user. We default to this club when the player opens the communities frame if the player isn't in a guild.",
 	},
-	lastTalkedToGM: {
+	lasttalkedtogm: {
+		name: "lastTalkedToGM",
 		default: "",
 		category: 4,
 		scope: "Character",
 		help: "Stores the last GM someone was talking to in case they reload the UI while the GM chat window is open.",
 	},
-	lastTransmogOutfitIDSpec1: {
+	lasttransmogoutfitidspec1: {
+		name: "lastTransmogOutfitIDSpec1",
 		default: "",
 		category: 4,
 		scope: "Account",
 		help: "SetID of the last applied transmog outfit for the 1st spec",
 	},
-	lastTransmogOutfitIDSpec2: {
+	lasttransmogoutfitidspec2: {
+		name: "lastTransmogOutfitIDSpec2",
 		default: "",
 		category: 4,
 		scope: "Account",
 		help: "SetID of the last applied transmog outfit for the 2nd spec",
 	},
-	lastTransmogOutfitIDSpec3: {
+	lasttransmogoutfitidspec3: {
+		name: "lastTransmogOutfitIDSpec3",
 		default: "",
 		category: 4,
 		scope: "Account",
 		help: "SetID of the last applied transmog outfit for the 3rd spec",
 	},
-	lastTransmogOutfitIDSpec4: {
+	lasttransmogoutfitidspec4: {
+		name: "lastTransmogOutfitIDSpec4",
 		default: "",
 		category: 4,
 		scope: "Account",
 		help: "SetID of the last applied transmog outfit for the 4th spec",
 	},
-	lastVoidStorageTutorial: {
+	lastvoidstoragetutorial: {
+		name: "lastVoidStorageTutorial",
 		default: "0",
 		category: 4,
 		scope: "Account",
 		help: "Stores the last void storage tutorial the player has accepted",
 	},
-	latestSplashScreen: {
+	latestsplashscreen: {
+		name: "latestSplashScreen",
 		default: "0",
 		category: 4,
 		scope: "Account",
 		help: "The ID of the latest splash screen from the UISPLASHSCREEN table.",
 	},
-	latestTransmogSetSource: {
+	latesttransmogsetsource: {
+		name: "latestTransmogSetSource",
 		default: "0",
 		category: 4,
 		scope: "Account",
 		help: "itemModifiedAppearanceID of the latest collected source belonging to a set",
 	},
-	launchAgent: {
+	launchagent: {
+		name: "launchAgent",
 		default: "1",
 		category: 4,
 		help: "Set this to have the client start up Agent",
 	},
-	lfGuildComment: {
+	lfguildcomment: {
+		name: "lfGuildComment",
 		default: "",
 		category: 4,
 		scope: "Account",
 		help: "Stores the player's Looking For Guild comment",
 	},
-	lfGuildSettings: {
+	lfguildsettings: {
+		name: "lfGuildSettings",
 		default: "1",
 		category: 4,
 		scope: "Account",
 		help: "Bit field of Looking For Guild player settings",
 	},
-	lfdCollapsedHeaders: {
+	lfdcollapsedheaders: {
+		name: "lfdCollapsedHeaders",
 		default: "",
 		category: 4,
 		scope: "Account",
 		help: "Stores which LFD headers are collapsed.",
 	},
-	lfdSelectedDungeons: {
+	lfdselecteddungeons: {
+		name: "lfdSelectedDungeons",
 		default: "",
 		category: 4,
 		scope: "Account",
 		help: "Stores which LFD dungeons are selected.",
 	},
-	lfgAutoFill: {
+	lfgautofill: {
+		name: "lfgAutoFill",
 		default: "0",
 		category: 4,
 		scope: "Character",
 		help: "Whether to automatically add party members while looking for a group",
 	},
-	lfgAutoJoin: {
+	lfgautojoin: {
+		name: "lfgAutoJoin",
 		default: "0",
 		category: 4,
 		scope: "Character",
 		help: "Whether to automatically join a party while looking for a group",
 	},
-	lfgListSearchLanguages: {
+	lfglistsearchlanguages: {
+		name: "lfgListSearchLanguages",
 		default: "0",
 		category: 4,
 		scope: "Character",
 		help: "A simple bitfield for what languages we want to search in.",
 	},
-	lfgSelectedRoles: {
+	lfgselectedroles: {
+		name: "lfgSelectedRoles",
 		default: "0",
 		category: 4,
 		scope: "Account",
 		help: "Stores what roles the player is willing to take on.",
 	},
 	locale: {
+		name: "locale",
 		default: "",
 		category: 5,
 		help: "Set the game locale",
 	},
-	lockActionBars: {
+	lockactionbars: {
+		name: "lockActionBars",
 		default: "1",
 		category: 4,
 		scope: "Character",
 		help: "Whether the action bars should be locked, preventing changes",
 	},
-	lodObjectCullDist: {
+	lodobjectculldist: {
+		name: "lodObjectCullDist",
 		default: "30",
 		category: 1,
 		help: "Lod object culling dist minimum",
 	},
-	lodObjectCullSize: {
+	lodobjectcullsize: {
+		name: "lodObjectCullSize",
 		default: "15",
 		category: 5,
 		help: "Lod object culling size",
 	},
-	lodObjectFadeScale: {
+	lodobjectfadescale: {
+		name: "lodObjectFadeScale",
 		default: "100",
 		category: 1,
 		help: "Lod object fade scale",
 	},
-	lodObjectMinSize: {
+	lodobjectminsize: {
+		name: "lodObjectMinSize",
 		default: "20",
 		category: 5,
 		help: "Lod object min size",
 	},
-	lootUnderMouse: {
+	lootundermouse: {
+		name: "lootUnderMouse",
 		default: "1",
 		category: 4,
 		scope: "Character",
 		help: "Whether the loot window should open under the mouse",
 	},
-	lossOfControl: {
+	lossofcontrol: {
+		name: "lossOfControl",
 		default: "1",
 		category: 4,
 		scope: "Account",
 		help: "Enables loss of control spell banner",
 	},
-	lossOfControlDisarm: {
+	lossofcontroldisarm: {
+		name: "lossOfControlDisarm",
 		default: "2",
 		category: 4,
 		scope: "Account",
 		help: "Setting for Loss of Control - Disarm",
 	},
-	lossOfControlFull: {
+	lossofcontrolfull: {
+		name: "lossOfControlFull",
 		default: "2",
 		category: 4,
 		scope: "Account",
 		help: "Setting for Loss of Control - Full Loss",
 	},
-	lossOfControlInterrupt: {
+	lossofcontrolinterrupt: {
+		name: "lossOfControlInterrupt",
 		default: "2",
 		category: 4,
 		scope: "Account",
 		help: "Setting for Loss of Control - Interrupt",
 	},
-	lossOfControlRoot: {
+	lossofcontrolroot: {
+		name: "lossOfControlRoot",
 		default: "2",
 		category: 4,
 		scope: "Account",
 		help: "Setting for Loss of Control - Root",
 	},
-	lossOfControlSilence: {
+	lossofcontrolsilence: {
+		name: "lossOfControlSilence",
 		default: "2",
 		category: 4,
 		scope: "Account",
 		help: "Setting for Loss of Control - Silence",
 	},
-	mapAnimDuration: {
+	mapanimduration: {
+		name: "mapAnimDuration",
 		default: "0.12",
 		category: 4,
 		scope: "Character",
 		help: "Duration for the alpha animation",
 	},
-	mapAnimMinAlpha: {
+	mapanimminalpha: {
+		name: "mapAnimMinAlpha",
 		default: "0.35",
 		category: 4,
 		scope: "Character",
 		help: "Alpha value to animate to when player moves with windowed world map open",
 	},
-	mapAnimStartDelay: {
+	mapanimstartdelay: {
+		name: "mapAnimStartDelay",
 		default: "0.0",
 		category: 4,
 		scope: "Character",
 		help: "Start delay for the alpha animation",
 	},
-	mapFade: {
+	mapfade: {
+		name: "mapFade",
 		default: "1",
 		category: 4,
 		scope: "Account",
 		help: "Whether to fade out the world map when moving",
 	},
-	maxFPS: {
+	maxfps: {
+		name: "maxFPS",
 		default: "100",
 		category: 1,
 		help: "Set FPS limit",
 	},
-	maxFPSBk: {
+	maxfpsbk: {
+		name: "maxFPSBk",
 		default: "30",
 		category: 1,
 		help: "Set background FPS limit",
 	},
-	maxFPSLoading: {
+	maxfpsloading: {
+		name: "maxFPSLoading",
 		default: "10",
 		category: 1,
 		help: "Set loading screen max FPS",
 	},
-	maxLightCount: {
+	maxlightcount: {
+		name: "maxLightCount",
 		default: "",
 		category: 1,
 		help: "Maximum lights to render",
 	},
-	maxLightDist: {
+	maxlightdist: {
+		name: "maxLightDist",
 		default: "2048",
 		category: 1,
 		help: "Maximum distance to render lights",
 	},
-	miniCommunitiesFrame: {
+	minicommunitiesframe: {
+		name: "miniCommunitiesFrame",
 		default: "0",
 		category: 4,
 		scope: "Account",
 		help: "Whether or not the communities frame has been toggled to smaller size",
 	},
-	miniDressUpFrame: {
+	minidressupframe: {
+		name: "miniDressUpFrame",
 		default: "0",
 		category: 4,
 		scope: "Account",
 		help: "Whether or not the dress up has been toggled to smaller size",
 	},
-	miniWorldMap: {
+	miniworldmap: {
+		name: "miniWorldMap",
 		default: "1",
 		category: 4,
 		scope: "Account",
 		help: "Whether or not the world map has been toggled to smaller size",
 	},
-	minimapAltitudeHintMode: {
+	minimapaltitudehintmode: {
+		name: "minimapAltitudeHintMode",
 		default: "0",
 		category: 4,
 		help: "Change minimap altitude difference display. 0=none, 1=darken, 2=arrows",
 	},
-	minimapInsideZoom: {
+	minimapinsidezoom: {
+		name: "minimapInsideZoom",
 		default: "0",
 		category: 4,
 		scope: "Account",
 		help: "The current indoor minimap zoom level",
 	},
-	minimapPortalMax: {
+	minimapportalmax: {
+		name: "minimapPortalMax",
 		default: "99",
 		category: 4,
 		help: "Max Number of Portals to traverse for minimap",
 	},
-	minimapShapeshiftTracking: {
+	minimapshapeshifttracking: {
+		name: "minimapShapeshiftTracking",
 		default: "",
 		category: 4,
 		scope: "Account",
 		help: "Stores shapeshift-specific tracking spells that were active last session.",
 	},
-	minimapShowArchBlobs: {
+	minimapshowarchblobs: {
+		name: "minimapShowArchBlobs",
 		default: "1",
 		category: 4,
 		scope: "Account",
 		help: "Stores whether to show the quest blobs on the minimap.",
 	},
-	minimapShowQuestBlobs: {
+	minimapshowquestblobs: {
+		name: "minimapShowQuestBlobs",
 		default: "1",
 		category: 4,
 		scope: "Account",
 		help: "Stores whether to show the quest blobs on the minimap.",
 	},
-	minimapTrackedInfov2: {
+	minimaptrackedinfov2: {
+		name: "minimapTrackedInfov2",
 		default: "491528",
 		category: 4,
 		scope: "Account",
 		help: "Stores the minimap tracking that was active last session.",
 	},
-	minimapZoom: {
+	minimapzoom: {
+		name: "minimapZoom",
 		default: "0",
 		category: 4,
 		scope: "Account",
 		help: "The current outdoor minimap zoom level",
 	},
-	missingTransmogSourceInItemTooltips: {
+	missingtransmogsourceinitemtooltips: {
+		name: "missingTransmogSourceInItemTooltips",
 		default: "0",
 		category: 4,
 		scope: "Account",
 		help: "Whether to show if you have collected the appearance of an item but not from that item itself",
 	},
-	mountJournalGeneralFilters: {
+	mountjournalgeneralfilters: {
+		name: "mountJournalGeneralFilters",
 		default: "",
 		category: 4,
 		scope: "Character",
 		help: "Bitfield for which collected filters are applied in the mount journal",
 	},
-	mountJournalShowPlayer: {
+	mountjournalshowplayer: {
+		name: "mountJournalShowPlayer",
 		default: "0",
 		category: 4,
 		scope: "Character",
 		help: "Show the player on the mount preview.",
 	},
-	mountJournalSourcesFilter: {
+	mountjournalsourcesfilter: {
+		name: "mountJournalSourcesFilter",
 		default: "",
 		category: 4,
 		scope: "Character",
 		help: "Bitfield for which source filters are applied in the mount journal",
 	},
-	mouseInvertPitch: {
+	mouseinvertpitch: {
+		name: "mouseInvertPitch",
 		default: "0",
 		category: 5,
 		scope: "Character",
 	},
-	mouseInvertYaw: {
+	mouseinvertyaw: {
+		name: "mouseInvertYaw",
 		default: "0",
 		category: 5,
 		scope: "Character",
 	},
-	mouseSpeed: {
+	mousespeed: {
+		name: "mouseSpeed",
 		default: "1.0",
 		category: 5,
 	},
-	movieSubtitle: {
+	moviesubtitle: {
+		name: "movieSubtitle",
 		default: "1",
 		category: 4,
 		help: "Show movie subtitles",
 	},
-	multiBarRightVerticalLayout: {
+	multibarrightverticallayout: {
+		name: "multiBarRightVerticalLayout",
 		default: "0",
 		category: 4,
 		scope: "Account",
 		help: "Whether to force the right action bars to always align horizontally instead of vertically",
 	},
-	nameplateClassResourceTopInset: {
+	nameplateclassresourcetopinset: {
+		name: "nameplateClassResourceTopInset",
 		default: ".03",
 		category: 1,
 		scope: "Account",
 		help: "The inset from the top (in screen percent) that nameplates are clamped to when class resources are being displayed on them.",
 	},
-	nameplateGlobalScale: {
+	nameplateglobalscale: {
+		name: "nameplateGlobalScale",
 		default: "1.0",
 		category: 1,
 		scope: "Account",
 		help: "Applies global scaling to non-self nameplates, this is applied AFTER selected, min, and max scale.",
 	},
-	nameplateLargeBottomInset: {
+	nameplatelargebottominset: {
+		name: "nameplateLargeBottomInset",
 		default: "0.15",
 		category: 1,
 		scope: "Account",
 		help: "The inset from the bottom (in screen percent) that large nameplates are clamped to.",
 	},
-	nameplateLargeTopInset: {
+	nameplatelargetopinset: {
+		name: "nameplateLargeTopInset",
 		default: "0.1",
 		category: 1,
 		scope: "Account",
 		help: "The inset from the top (in screen percent) that large nameplates are clamped to.",
 	},
-	nameplateLargerScale: {
+	nameplatelargerscale: {
+		name: "nameplateLargerScale",
 		default: "1.2",
 		category: 1,
 		scope: "Account",
 		help: "An additional scale modifier for important monsters.",
 	},
-	nameplateMaxAlpha: {
+	nameplatemaxalpha: {
+		name: "nameplateMaxAlpha",
 		default: "1.0",
 		category: 1,
 		scope: "Account",
 		help: "The max alpha of nameplates.",
 	},
-	nameplateMaxAlphaDistance: {
+	nameplatemaxalphadistance: {
+		name: "nameplateMaxAlphaDistance",
 		default: "40",
 		category: 1,
 		scope: "Account",
 		help: "The distance from the camera that nameplates will reach their maximum alpha.",
 	},
-	nameplateMaxDistance: {
+	nameplatemaxdistance: {
+		name: "nameplateMaxDistance",
 		default: "60",
 		category: 1,
 		scope: "Account",
 		help: "The max distance to show nameplates.",
 	},
-	nameplateMaxScale: {
+	nameplatemaxscale: {
+		name: "nameplateMaxScale",
 		default: "1.0",
 		category: 1,
 		scope: "Account",
 		help: "The max scale of nameplates.",
 	},
-	nameplateMaxScaleDistance: {
+	nameplatemaxscaledistance: {
+		name: "nameplateMaxScaleDistance",
 		default: "10",
 		category: 1,
 		scope: "Account",
 		help: "The distance from the camera that nameplates will reach their maximum scale.",
 	},
-	nameplateMinAlpha: {
+	nameplateminalpha: {
+		name: "nameplateMinAlpha",
 		default: "0.6",
 		category: 1,
 		scope: "Account",
 		help: "The minimum alpha of nameplates.",
 	},
-	nameplateMinAlphaDistance: {
+	nameplateminalphadistance: {
+		name: "nameplateMinAlphaDistance",
 		default: "10",
 		category: 1,
 		scope: "Account",
 		help: "The distance from the max distance that nameplates will reach their minimum alpha.",
 	},
-	nameplateMinScale: {
+	nameplateminscale: {
+		name: "nameplateMinScale",
 		default: "0.8",
 		category: 1,
 		scope: "Account",
 		help: "The minimum scale of nameplates.",
 	},
-	nameplateMinScaleDistance: {
+	nameplateminscaledistance: {
+		name: "nameplateMinScaleDistance",
 		default: "10",
 		category: 1,
 		scope: "Account",
 		help: "The distance from the max distance that nameplates will reach their minimum scale.",
 	},
-	nameplateMotion: {
+	nameplatemotion: {
+		name: "nameplateMotion",
 		default: "0",
 		category: 1,
 		scope: "Account",
 		help: "Defines the movement/collision model for nameplates",
 	},
-	nameplateMotionSpeed: {
+	nameplatemotionspeed: {
+		name: "nameplateMotionSpeed",
 		default: "0.025",
 		category: 1,
 		scope: "Account",
 		help: "Controls the rate at which nameplate animates into their target locations [0.0-1.0]",
 	},
-	nameplateOccludedAlphaMult: {
+	nameplateoccludedalphamult: {
+		name: "nameplateOccludedAlphaMult",
 		default: "0.4",
 		category: 1,
 		scope: "Account",
 		help: "Alpha multiplier of nameplates for occluded targets.",
 	},
-	nameplateOtherAtBase: {
+	nameplateotheratbase: {
+		name: "nameplateOtherAtBase",
 		default: "0",
 		category: 4,
 		scope: "Character",
 		help: "Position other nameplates at the base, rather than overhead",
 	},
-	nameplateOtherBottomInset: {
+	nameplateotherbottominset: {
+		name: "nameplateOtherBottomInset",
 		default: "0.1",
 		category: 1,
 		scope: "Account",
 		help: "The inset from the bottom (in screen percent) that the non-self nameplates are clamped to.",
 	},
-	nameplateOtherTopInset: {
+	nameplateothertopinset: {
+		name: "nameplateOtherTopInset",
 		default: "0.08",
 		category: 1,
 		scope: "Account",
 		help: "The inset from the top (in screen percent) that the non-self nameplates are clamped to.",
 	},
-	nameplateOverlapH: {
+	nameplateoverlaph: {
+		name: "nameplateOverlapH",
 		default: "0.8",
 		category: 1,
 		scope: "Character",
 		help: "Percentage amount for horizontal overlap of nameplates",
 	},
-	nameplateOverlapV: {
+	nameplateoverlapv: {
+		name: "nameplateOverlapV",
 		default: "1.1",
 		category: 1,
 		scope: "Character",
 		help: "Percentage amount for vertical overlap of nameplates",
 	},
-	nameplateResourceOnTarget: {
+	nameplateresourceontarget: {
+		name: "nameplateResourceOnTarget",
 		default: "0",
 		category: 4,
 		scope: "Account",
 		help: "Nameplate class resource overlay mode. 0=self, 1=target",
 	},
-	nameplateSelectedAlpha: {
+	nameplateselectedalpha: {
+		name: "nameplateSelectedAlpha",
 		default: "1.0",
 		category: 1,
 		scope: "Account",
 		help: "The alpha of the selected nameplate.",
 	},
-	nameplateSelectedScale: {
+	nameplateselectedscale: {
+		name: "nameplateSelectedScale",
 		default: "1.2",
 		category: 1,
 		scope: "Account",
 		help: "The scale of the selected nameplate.",
 	},
-	nameplateSelfAlpha: {
+	nameplateselfalpha: {
+		name: "nameplateSelfAlpha",
 		default: "0.75",
 		category: 1,
 		scope: "Account",
 		help: "The alpha of the self nameplate.",
 	},
-	nameplateSelfBottomInset: {
+	nameplateselfbottominset: {
+		name: "nameplateSelfBottomInset",
 		default: "0.2",
 		category: 1,
 		scope: "Account",
 		help: "The inset from the bottom (in screen percent) that the self nameplate is clamped to.",
 	},
-	nameplateSelfScale: {
+	nameplateselfscale: {
+		name: "nameplateSelfScale",
 		default: "1.0",
 		category: 1,
 		scope: "Account",
 		help: "The scale of the self nameplate.",
 	},
-	nameplateSelfTopInset: {
+	nameplateselftopinset: {
+		name: "nameplateSelfTopInset",
 		default: "0.5",
 		category: 1,
 		scope: "Account",
 		help: "The inset from the top (in screen percent) that the self nameplate is clamped to.",
 	},
-	nameplateShowAll: {
+	nameplateshowall: {
+		name: "nameplateShowAll",
 		default: "0",
 		category: 4,
 		scope: "Account",
 	},
-	nameplateShowDebuffsOnFriendly: {
+	nameplateshowdebuffsonfriendly: {
+		name: "nameplateShowDebuffsOnFriendly",
 		default: "1",
 		category: 4,
 		scope: "Account",
 	},
-	nameplateShowEnemies: {
+	nameplateshowenemies: {
+		name: "nameplateShowEnemies",
 		default: "1",
 		category: 4,
 		scope: "Account",
 	},
-	nameplateShowEnemyGuardians: {
+	nameplateshowenemyguardians: {
+		name: "nameplateShowEnemyGuardians",
 		default: "0",
 		category: 4,
 		scope: "Account",
 	},
-	nameplateShowEnemyMinions: {
+	nameplateshowenemyminions: {
+		name: "nameplateShowEnemyMinions",
 		default: "0",
 		category: 4,
 		scope: "Account",
 	},
-	nameplateShowEnemyMinus: {
+	nameplateshowenemyminus: {
+		name: "nameplateShowEnemyMinus",
 		default: "1",
 		category: 4,
 		scope: "Account",
 	},
-	nameplateShowEnemyPets: {
+	nameplateshowenemypets: {
+		name: "nameplateShowEnemyPets",
 		default: "0",
 		category: 4,
 		scope: "Account",
 	},
-	nameplateShowEnemyTotems: {
+	nameplateshowenemytotems: {
+		name: "nameplateShowEnemyTotems",
 		default: "0",
 		category: 4,
 		scope: "Account",
 	},
-	nameplateShowFriendlyGuardians: {
+	nameplateshowfriendlyguardians: {
+		name: "nameplateShowFriendlyGuardians",
 		default: "0",
 		category: 4,
 		scope: "Account",
 	},
-	nameplateShowFriendlyMinions: {
+	nameplateshowfriendlyminions: {
+		name: "nameplateShowFriendlyMinions",
 		default: "0",
 		category: 4,
 		scope: "Account",
 	},
-	nameplateShowFriendlyNPCs: {
+	nameplateshowfriendlynpcs: {
+		name: "nameplateShowFriendlyNPCs",
 		default: "0",
 		category: 4,
 		scope: "Account",
 	},
-	nameplateShowFriendlyPets: {
+	nameplateshowfriendlypets: {
+		name: "nameplateShowFriendlyPets",
 		default: "0",
 		category: 4,
 		scope: "Account",
 	},
-	nameplateShowFriendlyTotems: {
+	nameplateshowfriendlytotems: {
+		name: "nameplateShowFriendlyTotems",
 		default: "0",
 		category: 4,
 		scope: "Account",
 	},
-	nameplateShowFriends: {
+	nameplateshowfriends: {
+		name: "nameplateShowFriends",
 		default: "0",
 		category: 4,
 		scope: "Account",
 	},
-	nameplateShowOnlyNames: {
+	nameplateshowonlynames: {
+		name: "nameplateShowOnlyNames",
 		default: "0",
 		category: 4,
 		scope: "Account",
 		help: "Whether to hide the nameplate bars",
 	},
-	nameplateShowSelf: {
+	nameplateshowself: {
+		name: "nameplateShowSelf",
 		default: "1",
 		category: 4,
 		scope: "Account",
 	},
-	nameplateTargetBehindMaxDistance: {
+	nameplatetargetbehindmaxdistance: {
+		name: "nameplateTargetBehindMaxDistance",
 		default: "15",
 		category: 1,
 		scope: "Account",
 		help: "The max distance to show the target nameplate when the target is behind the camera.",
 	},
-	nameplateTargetRadialPosition: {
+	nameplatetargetradialposition: {
+		name: "nameplateTargetRadialPosition",
 		default: "0",
 		category: 4,
 		scope: "Character",
 		help: "When target is off screen, position its nameplate radially around sides and bottom. 1: Target Only. 2: All In Combat",
 	},
 	nearclip: {
+		name: "nearclip",
 		default: "0.2",
 		category: 1,
 		help: "Near clip plane distance",
 	},
-	newMythicPlusSeason: {
+	newmythicplusseason: {
+		name: "newMythicPlusSeason",
 		default: "1",
 		category: 4,
 		scope: "Account",
 		help: "Signals a new mythic+ season for the user, so when they open the UI it shows them the info about the season",
 	},
-	newPvpSeason: {
+	newpvpseason: {
+		name: "newPvpSeason",
 		default: "1",
 		category: 4,
 		scope: "Account",
 		help: "Signals a new pvp season for the user, so when they open the UI it shows them the info about the season",
 	},
-	noBuffDebuffFilterOnTarget: {
+	nobuffdebufffilterontarget: {
+		name: "noBuffDebuffFilterOnTarget",
 		default: "0",
 		category: 4,
 		scope: "Account",
 		help: "Do not filter buffs or debuffs at all on targets",
 	},
-	occlusionMaxJobs: {
+	occlusionmaxjobs: {
+		name: "occlusionMaxJobs",
 		default: "5",
 		category: 1,
 		help: "Maximum job threads for occlusion render",
 	},
-	orderHallMissionTutorial: {
+	orderhallmissiontutorial: {
+		name: "orderHallMissionTutorial",
 		default: "0",
 		category: 4,
 		scope: "Account",
 		help: "Stores information about which order hall mission tutorials the player has seen",
 	},
-	otherRolesAzeriteEssencesHidden: {
+	otherrolesazeriteessenceshidden: {
+		name: "otherRolesAzeriteEssencesHidden",
 		default: "0",
 		category: 4,
 		scope: "Account",
 		help: "Whether to collapse the Azerite Essences for player's other roles",
 	},
-	outdoorMinAltitudeDistance: {
+	outdoorminaltitudedistance: {
+		name: "outdoorMinAltitudeDistance",
 		default: "10",
 		category: 4,
 		help: "Minimum altitude distance for outdoor objects when you are also outdoors before the altitude difference marker displays",
 	},
-	outlineMouseOverFadeDuration: {
+	outlinemouseoverfadeduration: {
+		name: "outlineMouseOverFadeDuration",
 		default: "0.9",
 		category: 0,
 	},
-	outlineSelectionFadeDuration: {
+	outlineselectionfadeduration: {
+		name: "outlineSelectionFadeDuration",
 		default: "0.32",
 		category: 0,
 	},
-	overrideArchive: {
+	overridearchive: {
+		name: "overrideArchive",
 		default: "0",
 		category: 4,
 		help: "Whether or not the client loads alternate data",
 	},
-	overrideScreenFlash: {
+	overridescreenflash: {
+		name: "overrideScreenFlash",
 		default: "0",
 		category: 4,
 		scope: "Character",
 		help: "Overrides fade color options so that it always fades to black",
 	},
-	particleDensity: {
+	particledensity: {
+		name: "particleDensity",
 		default: "100",
 		category: 5,
 		help: "Particle density",
 	},
-	particleMTDensity: {
+	particlemtdensity: {
+		name: "particleMTDensity",
 		default: "100",
 		category: 1,
 		help: "Multi-Tex particle density",
 	},
-	particulatesEnabled: {
+	particulatesenabled: {
+		name: "particulatesEnabled",
 		default: "1",
 		category: 1,
 		help: "Particulates enabled",
 	},
-	partyBackgroundOpacity: {
+	partybackgroundopacity: {
+		name: "partyBackgroundOpacity",
 		default: "0.5",
 		category: 4,
 		scope: "Character",
 		help: "The opacity of the party background",
 	},
-	pathSmoothing: {
+	pathsmoothing: {
+		name: "pathSmoothing",
 		default: "1",
 		category: 4,
 		help: "NPC will round corners on ground paths",
 	},
-	pendingInviteInfoShown: {
+	pendinginviteinfoshown: {
+		name: "pendingInviteInfoShown",
 		default: "0",
 		category: 4,
 		scope: "Character",
 		help: "The info for pending invites has been shown",
 	},
-	persistMoveLogOnTransfer: {
+	persistmovelogontransfer: {
+		name: "persistMoveLogOnTransfer",
 		default: "0",
 		category: 0,
 		help: "Set to 1 to automatically re-enable logging on the current movelog target after a transfer",
 	},
-	petJournalFilters: {
+	petjournalfilters: {
+		name: "petJournalFilters",
 		default: "",
 		category: 4,
 		scope: "Character",
 		help: "Bitfield for which collected filters are applied in the pet journal",
 	},
-	petJournalSort: {
+	petjournalsort: {
+		name: "petJournalSort",
 		default: "0",
 		category: 4,
 		scope: "Character",
 		help: "Sorting value for the pet journal",
 	},
-	petJournalSourceFilters: {
+	petjournalsourcefilters: {
+		name: "petJournalSourceFilters",
 		default: "",
 		category: 4,
 		scope: "Character",
 		help: "Bitfield for which source filters are applied in the pet journal",
 	},
-	petJournalTab: {
+	petjournaltab: {
+		name: "petJournalTab",
 		default: "1",
 		category: 4,
 		scope: "Character",
 		help: "Stores the last tab the pet journal was opened to",
 	},
-	petJournalTypeFilters: {
+	petjournaltypefilters: {
+		name: "petJournalTypeFilters",
 		default: "",
 		category: 4,
 		scope: "Character",
 		help: "Bitfield for which type filters are applied in the pet journal",
 	},
-	physicsLevel: {
+	physicslevel: {
+		name: "physicsLevel",
 		default: "1",
 		category: 1,
 		help: "Level of physics world interaction",
 	},
-	playIntroMovie: {
+	playintromovie: {
+		name: "playIntroMovie",
 		default: "5",
 		category: 5,
 		help: "Starting expansion movie to play on startup",
 	},
-	playerStatLeftDropdown: {
+	playerstatleftdropdown: {
+		name: "playerStatLeftDropdown",
 		default: "",
 		category: 4,
 		scope: "Account",
 		help: "The player stat selected in the left dropdown",
 	},
-	playerStatRightDropdown: {
+	playerstatrightdropdown: {
+		name: "playerStatRightDropdown",
 		default: "",
 		category: 4,
 		scope: "Account",
 		help: "The player stat selected in the right dropdown",
 	},
 	portal: {
+		name: "portal",
 		default: "",
 		category: 6,
 		help: "Name of Battle.net portal to use",
 	},
-	predictedHealth: {
+	predictedhealth: {
+		name: "predictedHealth",
 		default: "1",
 		category: 4,
 		scope: "Character",
 		help: "Whether or not to use predicted health values in the UI",
 	},
-	preloadLoadingDistObject: {
+	preloadloadingdistobject: {
+		name: "preloadLoadingDistObject",
 		default: "512",
 		category: 5,
 		help: "Object preload distance when loading",
 	},
-	preloadLoadingDistTerrain: {
+	preloadloadingdistterrain: {
+		name: "preloadLoadingDistTerrain",
 		default: "1024",
 		category: 5,
 		help: "Terrain preload distance when loading",
 	},
-	preloadPlayerModels: {
+	preloadplayermodels: {
+		name: "preloadPlayerModels",
 		default: "1",
 		category: 4,
 		help: "Preload all local racial models into memory",
 	},
-	preloadStreamingDistObject: {
+	preloadstreamingdistobject: {
+		name: "preloadStreamingDistObject",
 		default: "64",
 		category: 5,
 		help: "Object preload distance when streaming",
 	},
-	preloadStreamingDistTerrain: {
+	preloadstreamingdistterrain: {
+		name: "preloadStreamingDistTerrain",
 		default: "256",
 		category: 5,
 		help: "Terrain preload distance when streaming",
 	},
-	primaryProfessionsFilter: {
+	primaryprofessionsfilter: {
+		name: "primaryProfessionsFilter",
 		default: "1",
 		category: 4,
 		scope: "Account",
 		help: "If enabled, primary profession world quests icons will be shown on world maps",
 	},
-	processAffinityMask: {
+	processaffinitymask: {
+		name: "processAffinityMask",
 		default: "0",
 		category: 0,
 		help: "Sets which core(s) WoW may execute on - changes require restart to take effect",
 	},
-	profanityFilter: {
+	profanityfilter: {
+		name: "profanityFilter",
 		default: "1",
 		category: 4,
 		scope: "Character",
 		help: "Whether to enable mature language filtering",
 	},
-	projectedTextures: {
+	projectedtextures: {
+		name: "projectedTextures",
 		default: "0",
 		category: 5,
 		help: "Projected Textures",
 	},
-	pvpSelectedRoles: {
+	pvpselectedroles: {
+		name: "pvpSelectedRoles",
 		default: "0",
 		category: 4,
 		scope: "Account",
 		help: "Stores what roles the player will fulfill in a BG.",
 	},
-	questLogOpen: {
+	questlogopen: {
+		name: "questLogOpen",
 		default: "1",
 		category: 4,
 		scope: "Account",
 		help: "Whether the quest log appears the side of the windowed map. ",
 	},
-	questPOI: {
+	questpoi: {
+		name: "questPOI",
 		default: "1",
 		category: 4,
 		scope: "Account",
 		help: "If enabled, the quest POI system will be used.",
 	},
-	raidFramesDisplayAggroHighlight: {
+	raidframesdisplayaggrohighlight: {
+		name: "raidFramesDisplayAggroHighlight",
 		default: "1",
 		category: 4,
 		scope: "Account",
 		help: "Whether to display aggro highlights on Raid Frames",
 	},
-	raidFramesDisplayClassColor: {
+	raidframesdisplayclasscolor: {
+		name: "raidFramesDisplayClassColor",
 		default: "0",
 		category: 4,
 		scope: "Account",
 		help: "Colors raid frames with the class color",
 	},
-	raidFramesDisplayOnlyDispellableDebuffs: {
+	raidframesdisplayonlydispellabledebuffs: {
+		name: "raidFramesDisplayOnlyDispellableDebuffs",
 		default: "0",
 		category: 4,
 		scope: "Account",
 		help: "Whether to display only dispellable debuffs on Raid Frames",
 	},
-	raidFramesDisplayPowerBars: {
+	raidframesdisplaypowerbars: {
+		name: "raidFramesDisplayPowerBars",
 		default: "0",
 		category: 4,
 		scope: "Account",
 		help: "Whether to display mana, rage, etc. on Raid Frames",
 	},
-	raidFramesHealthText: {
+	raidframeshealthtext: {
+		name: "raidFramesHealthText",
 		default: "none",
 		category: 4,
 		scope: "Account",
 		help: "How to display health text on the raid frames",
 	},
-	raidFramesHeight: {
+	raidframesheight: {
+		name: "raidFramesHeight",
 		default: "36",
 		category: 4,
 		scope: "Account",
 		help: "The height of the individual raid frames",
 	},
-	raidFramesPosition: {
+	raidframesposition: {
+		name: "raidFramesPosition",
 		default: "",
 		category: 4,
 		scope: "Account",
 		help: "Where the raid frames should be placed",
 	},
-	raidFramesWidth: {
+	raidframeswidth: {
+		name: "raidFramesWidth",
 		default: "72",
 		category: 4,
 		scope: "Account",
 		help: "The width of the individual raid frames",
 	},
-	raidGraphicsDepthEffects: {
+	raidgraphicsdeptheffects: {
+		name: "raidGraphicsDepthEffects",
 		default: "1",
 		category: 5,
 		help: "UI value of the raidGraphics setting",
 	},
-	raidGraphicsEnvironmentDetail: {
+	raidgraphicsenvironmentdetail: {
+		name: "raidGraphicsEnvironmentDetail",
 		default: "6",
 		category: 5,
 		help: "UI value of the raidGraphics setting",
 	},
-	raidGraphicsGroundClutter: {
+	raidgraphicsgroundclutter: {
+		name: "raidGraphicsGroundClutter",
 		default: "6",
 		category: 5,
 		help: "UI value of the raidGraphics setting",
 	},
-	raidGraphicsLiquidDetail: {
+	raidgraphicsliquiddetail: {
+		name: "raidGraphicsLiquidDetail",
 		default: "2",
 		category: 5,
 		help: "UI value of the raidGraphics setting",
 	},
-	raidGraphicsOutlineMode: {
+	raidgraphicsoutlinemode: {
+		name: "raidGraphicsOutlineMode",
 		default: "1",
 		category: 5,
 		help: "UI value of the raidGraphics setting",
 	},
-	raidGraphicsParticleDensity: {
+	raidgraphicsparticledensity: {
+		name: "raidGraphicsParticleDensity",
 		default: "2",
 		category: 5,
 		help: "UI value of the raidGraphics setting",
 	},
-	raidGraphicsProjectedTextures: {
+	raidgraphicsprojectedtextures: {
+		name: "raidGraphicsProjectedTextures",
 		default: "1",
 		category: 5,
 		help: "UI value of the raidGraphics setting",
 	},
-	raidGraphicsSSAO: {
+	raidgraphicsssao: {
+		name: "raidGraphicsSSAO",
 		default: "2",
 		category: 5,
 		help: "UI value of the raidGraphics setting",
 	},
-	raidGraphicsShadowQuality: {
+	raidgraphicsshadowquality: {
+		name: "raidGraphicsShadowQuality",
 		default: "3",
 		category: 5,
 		help: "UI value of the raidGraphics setting",
 	},
-	raidGraphicsSpellDensity: {
+	raidgraphicsspelldensity: {
+		name: "raidGraphicsSpellDensity",
 		default: "5",
 		category: 5,
 		help: "UI value of the raidGraphics setting",
 	},
-	raidGraphicsSunshafts: {
+	raidgraphicssunshafts: {
+		name: "raidGraphicsSunshafts",
 		default: "1",
 		category: 5,
 		help: "UI value of the raidGraphics setting",
 	},
-	raidGraphicsTextureResolution: {
+	raidgraphicstextureresolution: {
+		name: "raidGraphicsTextureResolution",
 		default: "3",
 		category: 5,
 		help: "UI value of the raidGraphics setting",
 	},
-	raidGraphicsViewDistance: {
+	raidgraphicsviewdistance: {
+		name: "raidGraphicsViewDistance",
 		default: "5",
 		category: 5,
 		help: "UI value of the raidGraphics setting",
 	},
-	raidOptionDisplayMainTankAndAssist: {
+	raidoptiondisplaymaintankandassist: {
+		name: "raidOptionDisplayMainTankAndAssist",
 		default: "1",
 		category: 4,
 		scope: "Account",
 		help: "Whether to display main tank and main assist units in the raid frames",
 	},
-	raidOptionDisplayPets: {
+	raidoptiondisplaypets: {
+		name: "raidOptionDisplayPets",
 		default: "0",
 		category: 4,
 		scope: "Account",
 		help: "Whether to display pets on the raid frames",
 	},
-	raidOptionIsShown: {
+	raidoptionisshown: {
+		name: "raidOptionIsShown",
 		default: "1",
 		category: 4,
 		scope: "Account",
 		help: "Whether the Raid Frames are shown",
 	},
-	raidOptionKeepGroupsTogether: {
+	raidoptionkeepgroupstogether: {
+		name: "raidOptionKeepGroupsTogether",
 		default: "0",
 		category: 4,
 		scope: "Account",
 		help: "The way to group raid frames",
 	},
-	raidOptionLocked: {
+	raidoptionlocked: {
+		name: "raidOptionLocked",
 		default: "lock",
 		category: 4,
 		scope: "Account",
 		help: "Whether the raid frames are locked",
 	},
-	raidOptionShowBorders: {
+	raidoptionshowborders: {
+		name: "raidOptionShowBorders",
 		default: "1",
 		category: 4,
 		scope: "Account",
 		help: "Displays borders around the raid frames.",
 	},
-	raidOptionSortMode: {
+	raidoptionsortmode: {
+		name: "raidOptionSortMode",
 		default: "role",
 		category: 4,
 		scope: "Account",
 		help: "The way to sort raid frames",
 	},
-	raidOrBattleCount: {
+	raidorbattlecount: {
+		name: "raidOrBattleCount",
 		default: "0",
 		category: 4,
 		help: "How many times we've sent a raid or battleground survey to the servers",
 	},
-	rawMouseAccelerationEnable: {
+	rawmouseaccelerationenable: {
+		name: "rawMouseAccelerationEnable",
 		default: "1",
 		category: 4,
 		help: "Enable acceleration for raw mouse input",
 	},
-	rawMouseEnable: {
+	rawmouseenable: {
+		name: "rawMouseEnable",
 		default: "0",
 		category: 4,
 		help: "Enable raw mouse input",
 	},
-	rawMouseRate: {
+	rawmouserate: {
+		name: "rawMouseRate",
 		default: "125",
 		category: 4,
 		help: "Raw mouse update rate",
 	},
-	rawMouseResolution: {
+	rawmouseresolution: {
+		name: "rawMouseResolution",
 		default: "400",
 		category: 4,
 		help: "Raw mouse resolution",
 	},
-	reflectionDownscale: {
+	reflectiondownscale: {
+		name: "reflectionDownscale",
 		default: "0",
 		category: 1,
 		help: "Reflection downscale",
 	},
-	reflectionMode: {
+	reflectionmode: {
+		name: "reflectionMode",
 		default: "3",
 		category: 5,
 		help: "Reflection mode",
 	},
 	refraction: {
+		name: "refraction",
 		default: "0",
 		category: 5,
 	},
-	removeChatDelay: {
+	removechatdelay: {
+		name: "removeChatDelay",
 		default: "0",
 		category: 4,
 		scope: "Character",
 		help: "Remove Chat Hover Delay",
 	},
-	reputationsCollapsed: {
+	reputationscollapsed: {
+		name: "reputationsCollapsed",
 		default: "",
 		category: 4,
 		scope: "Account",
 		help: "List of reputation categories that have been collapsed in the Reputation tab",
 	},
-	rippleDetail: {
+	rippledetail: {
+		name: "rippleDetail",
 		default: "2",
 		category: 5,
 		help: "Ripple surface detail",
 	},
-	rotateMinimap: {
+	rotateminimap: {
+		name: "rotateMinimap",
 		default: "0",
 		category: 4,
 		scope: "Character",
 		help: "Whether to rotate the entire minimap instead of the player arrow",
 	},
-	runeFadeTime: {
+	runefadetime: {
+		name: "runeFadeTime",
 		default: "0.2",
 		category: 5,
 		help: "Adjust the time the rune fades from on CD to ready",
 	},
-	runeSpentFadeTime: {
+	runespentfadetime: {
+		name: "runeSpentFadeTime",
 		default: "0.1",
 		category: 5,
 		help: "Adjust the time the base rune takes to fade out after the rune flash fades out",
 	},
-	runeSpentFlashTime: {
+	runespentflashtime: {
+		name: "runeSpentFlashTime",
 		default: "0.15",
 		category: 5,
 		help: "Adjust the time the rune flash takes to fade out",
 	},
-	sceneOcclusionEnable: {
+	sceneocclusionenable: {
+		name: "sceneOcclusionEnable",
 		default: "1",
 		category: 1,
 		help: "Scene software occlusion",
 	},
-	screenEdgeFlash: {
+	screenedgeflash: {
+		name: "screenEdgeFlash",
 		default: "1",
 		category: 4,
 		scope: "Character",
 		help: "Whether to show a red flash while you are in combat with the world map up",
 	},
-	screenshotFormat: {
+	screenshotformat: {
+		name: "screenshotFormat",
 		default: "jpeg",
 		category: 1,
 		help: "Set the format of screenshots",
 	},
-	screenshotQuality: {
+	screenshotquality: {
+		name: "screenshotQuality",
 		default: "3",
 		category: 1,
 		help: "Set the quality of screenshots (1 - 10)",
 	},
-	screenshotSizeOverride: {
+	screenshotsizeoverride: {
+		name: "screenshotSizeOverride",
 		default: "0x0",
 		category: 1,
 		help: "Set the size of screenshots to a specific resolution (e.g. 7680x4320). 0x0 means use the window size",
 	},
-	scriptErrors: {
+	scripterrors: {
+		name: "scriptErrors",
 		default: "0",
 		category: 5,
 		scope: "Character",
 		help: "Whether or not the UI shows Lua errors",
 	},
-	scriptProfile: {
+	scriptprofile: {
+		name: "scriptProfile",
 		default: "0",
 		category: 5,
 		help: "Whether or not script profiling is enabled",
 	},
-	scriptWarnings: {
+	scriptwarnings: {
+		name: "scriptWarnings",
 		default: "0",
 		category: 5,
 		scope: "Character",
 		help: "Whether or not the UI shows Lua warnings",
 	},
-	secondaryProfessionsFilter: {
+	secondaryprofessionsfilter: {
+		name: "secondaryProfessionsFilter",
 		default: "1",
 		category: 4,
 		scope: "Account",
 		help: "If enabled, secondary profession world quests icons will be shown on world maps",
 	},
-	secureAbilityToggle: {
+	secureabilitytoggle: {
+		name: "secureAbilityToggle",
 		default: "1",
 		category: 4,
 		scope: "Character",
 		help: "Whether you should be protected against accidentally double-clicking an aura",
 	},
-	seenAlliedRaceUnlocks: {
+	seenalliedraceunlocks: {
+		name: "seenAlliedRaceUnlocks",
 		default: "0",
 		category: 4,
 		help: "Bit array for which allied race unlocks have been seen",
 	},
-	seenAsiaCharacterUpgradePopup: {
+	seenasiacharacterupgradepopup: {
+		name: "seenAsiaCharacterUpgradePopup",
 		default: "0",
 		category: 4,
 		scope: "Character",
 		help: "Seen the free character upgrade popup (Asia)",
 	},
-	seenCharacterUpgradePopup: {
+	seencharacterupgradepopup: {
+		name: "seenCharacterUpgradePopup",
 		default: "6",
 		category: 4,
 		help: "Seen the free character upgrade popup",
 	},
-	seenConfigurationWarnings: {
+	seenconfigurationwarnings: {
+		name: "seenConfigurationWarnings",
 		default: "0",
 		category: 4,
 		help: "A bitfield to track which configuration warnings have been seen",
 	},
-	seenExpansionTrialPopup: {
+	seenexpansiontrialpopup: {
+		name: "seenExpansionTrialPopup",
 		default: "6",
 		category: 4,
 		help: "Seen the expansion trial popup",
 	},
-	seenLevelSquishPopup: {
+	seenlevelsquishpopup: {
+		name: "seenLevelSquishPopup",
 		default: "0",
 		category: 4,
 		help: "Seen the level squish popup",
 	},
-	serverAlert: {
+	serveralert: {
+		name: "serverAlert",
 		default: "SERVER_ALERT_URL",
 		category: 6,
 		help: "Get the glue-string tag for the URL",
 	},
-	serviceTypeFilter: {
+	servicetypefilter: {
+		name: "serviceTypeFilter",
 		default: "6",
 		category: 4,
 		scope: "Character",
 		help: "Which trainer services to show",
 	},
-	shadowCull: {
+	shadowcull: {
+		name: "shadowCull",
 		default: "1",
 		category: 5,
 		help: "enable shadow frustum culling",
 	},
-	shadowInstancing: {
+	shadowinstancing: {
+		name: "shadowInstancing",
 		default: "1",
 		category: 5,
 		help: "enable instancing when rendering shadowmaps",
 	},
-	shadowMode: {
+	shadowmode: {
+		name: "shadowMode",
 		default: "0",
 		category: 5,
 		help: "Quality of shadows (0-3)",
 	},
-	shadowRt: {
+	shadowrt: {
+		name: "shadowRt",
 		default: "0",
 		category: 1,
 		help: "Raytraced shadows (0-3)",
 	},
-	shadowScissor: {
+	shadowscissor: {
+		name: "shadowScissor",
 		default: "1",
 		category: 5,
 		help: "enable scissoring when rendering shadowmaps",
 	},
-	shadowSoft: {
+	shadowsoft: {
+		name: "shadowSoft",
 		default: "0",
 		category: 1,
 		help: "Soft shadows (0/1)",
 	},
-	shadowTextureSize: {
+	shadowtexturesize: {
+		name: "shadowTextureSize",
 		default: "1024",
 		category: 5,
 		help: "Shadow texture size (1024-2048)",
 	},
-	shipyardMissionTutorialAreaBuff: {
+	shipyardmissiontutorialareabuff: {
+		name: "shipyardMissionTutorialAreaBuff",
 		default: "0",
 		category: 4,
 		scope: "Account",
 		help: "Stores whether the player has accepted the first area buff mission tutorial",
 	},
-	shipyardMissionTutorialBlockade: {
+	shipyardmissiontutorialblockade: {
+		name: "shipyardMissionTutorialBlockade",
 		default: "0",
 		category: 4,
 		scope: "Account",
 		help: "Stores whether the player has accepted the first blockade mission tutorial",
 	},
-	shipyardMissionTutorialFirst: {
+	shipyardmissiontutorialfirst: {
+		name: "shipyardMissionTutorialFirst",
 		default: "0",
 		category: 4,
 		scope: "Account",
 		help: "Stores whether the player has accepted the first mission tutorial",
 	},
-	showArenaEnemyCastbar: {
+	showarenaenemycastbar: {
+		name: "showArenaEnemyCastbar",
 		default: "1",
 		category: 4,
 		scope: "Account",
 		help: "Show the spell enemies are casting on the Arena Enemy frames",
 	},
-	showArenaEnemyFrames: {
+	showarenaenemyframes: {
+		name: "showArenaEnemyFrames",
 		default: "1",
 		category: 4,
 		scope: "Account",
 		help: "Show arena enemy frames while in an Arena",
 	},
-	showArenaEnemyPets: {
+	showarenaenemypets: {
+		name: "showArenaEnemyPets",
 		default: "1",
 		category: 4,
 		scope: "Account",
 		help: "Show the enemy team's pets on the ArenaEnemy frames",
 	},
-	showBattlefieldMinimap: {
+	showbattlefieldminimap: {
+		name: "showBattlefieldMinimap",
 		default: "0",
 		category: 4,
 		scope: "Account",
 		help: "Whether or not the battlefield minimap is shown",
 	},
-	showBuilderFeedback: {
+	showbuilderfeedback: {
+		name: "showBuilderFeedback",
 		default: "1",
 		category: 4,
 		help: "Show animation when building power for builder/spender bar",
 	},
-	showCastableBuffs: {
+	showcastablebuffs: {
+		name: "showCastableBuffs",
 		default: "0",
 		category: 4,
 		scope: "Account",
 		help: "Show only Buffs the player can cast.  Only applies to raids.",
 	},
-	showDispelDebuffs: {
+	showdispeldebuffs: {
+		name: "showDispelDebuffs",
 		default: "1",
 		category: 4,
 		scope: "Account",
 		help: "Show only Debuffs that the player can dispel.  Only applies to raids.",
 	},
-	showDungeonEntrancesOnMap: {
+	showdungeonentrancesonmap: {
+		name: "showDungeonEntrancesOnMap",
 		default: "1",
 		category: 4,
 		scope: "Account",
 		help: "If enabled, dungeon entrances will display on the world map.",
 	},
-	showErrors: {
+	showerrors: {
+		name: "showErrors",
 		default: "1",
 		category: 0,
 	},
-	showHonorAsExperience: {
+	showhonorasexperience: {
+		name: "showHonorAsExperience",
 		default: "0",
 		category: 4,
 		scope: "Account",
 		help: "Show the honor bar as a regular experience bar in place of rep",
 	},
-	showInGameNavigation: {
+	showingamenavigation: {
+		name: "showInGameNavigation",
 		default: "1",
 		category: 4,
 		scope: "Character",
 		help: "0: Disable IGN, 1: Enable IGN (Default).",
 	},
-	showNPETutorials: {
+	shownpetutorials: {
+		name: "showNPETutorials",
 		default: "1",
 		category: 4,
 		scope: "Character",
 		help: "display NPE tutorials",
 	},
-	showPartyBackground: {
+	showpartybackground: {
+		name: "showPartyBackground",
 		default: "0",
 		category: 4,
 		scope: "Character",
 		help: "Show a background behind party members",
 	},
-	showPartyPets: {
+	showpartypets: {
+		name: "showPartyPets",
 		default: "0",
 		category: 4,
 		scope: "Account",
 		help: "Whether to show pets in the party UI",
 	},
-	showQuestObjectivesOnMap: {
+	showquestobjectivesonmap: {
+		name: "showQuestObjectivesOnMap",
 		default: "1",
 		category: 4,
 		scope: "Account",
 		help: "Shows quest POIs on the main map.",
 	},
-	showSpectatorTeamCircles: {
+	showspectatorteamcircles: {
+		name: "showSpectatorTeamCircles",
 		default: "1",
 		category: 4,
 		help: "Determines if the team color circles are visible while spectating or commentating a wargame",
 	},
-	showSpenderFeedback: {
+	showspenderfeedback: {
+		name: "showSpenderFeedback",
 		default: "1",
 		category: 4,
 		help: "Show animation when spending power for builder/spender bar",
 	},
-	showTamers: {
+	showtamers: {
+		name: "showTamers",
 		default: "1",
 		category: 4,
 		scope: "Account",
 		help: "If enabled, pet battle icons will be shown on world maps",
 	},
-	showTargetCastbar: {
+	showtargetcastbar: {
+		name: "showTargetCastbar",
 		default: "1",
 		category: 4,
 		scope: "Character",
 		help: "Show the spell your current target is casting",
 	},
-	showTargetOfTarget: {
+	showtargetoftarget: {
+		name: "showTargetOfTarget",
 		default: "0",
 		category: 4,
 		scope: "Character",
 		help: "Whether the target of target frame should be shown",
 	},
-	showTimestamps: {
+	showtimestamps: {
+		name: "showTimestamps",
 		default: "none",
 		category: 4,
 		scope: "Character",
 		help: "The format of timestamps in chat or \"none\"",
 	},
-	showToastBroadcast: {
+	showtoastbroadcast: {
+		name: "showToastBroadcast",
 		default: "0",
 		category: 4,
 		scope: "Character",
 		help: "Whether to show Battle.net message for broadcasts",
 	},
-	showToastClubInvitation: {
+	showtoastclubinvitation: {
+		name: "showToastClubInvitation",
 		default: "1",
 		category: 4,
 		scope: "Character",
 		help: "Whether to show Battle.net message for club invitations",
 	},
-	showToastConversation: {
+	showtoastconversation: {
+		name: "showToastConversation",
 		default: "1",
 		category: 4,
 		scope: "Character",
 		help: "Whether to show Battle.net message for conversations",
 	},
-	showToastFriendRequest: {
+	showtoastfriendrequest: {
+		name: "showToastFriendRequest",
 		default: "1",
 		category: 4,
 		scope: "Character",
 		help: "Whether to show Battle.net message for friend requests",
 	},
-	showToastOffline: {
+	showtoastoffline: {
+		name: "showToastOffline",
 		default: "1",
 		category: 4,
 		scope: "Character",
 		help: "Whether to show Battle.net message for friend going offline",
 	},
-	showToastOnline: {
+	showtoastonline: {
+		name: "showToastOnline",
 		default: "1",
 		category: 4,
 		scope: "Character",
 		help: "Whether to show Battle.net message for friend coming online",
 	},
-	showToastWindow: {
+	showtoastwindow: {
+		name: "showToastWindow",
 		default: "1",
 		category: 4,
 		scope: "Character",
 		help: "Whether to show Battle.net system messages in a toast window",
 	},
-	showTokenFrame: {
+	showtokenframe: {
+		name: "showTokenFrame",
 		default: "0",
 		category: 4,
 		scope: "Account",
 		help: "The token UI has been shown",
 	},
-	showTokenFrameHonor: {
+	showtokenframehonor: {
+		name: "showTokenFrameHonor",
 		default: "0",
 		category: 4,
 		scope: "Account",
 		help: "The token UI has shown Honor",
 	},
-	showTutorials: {
+	showtutorials: {
+		name: "showTutorials",
 		default: "1",
 		category: 4,
 		scope: "Character",
 		help: "display tutorials",
 	},
-	showVKeyCastbar: {
+	showvkeycastbar: {
+		name: "showVKeyCastbar",
 		default: "1",
 		category: 4,
 		scope: "Character",
 		help: "If the V key display is up for your current target, show the enemy cast bar with the target's health bar in the game field",
 	},
-	showVKeyCastbarOnlyOnTarget: {
+	showvkeycastbaronlyontarget: {
+		name: "showVKeyCastbarOnlyOnTarget",
 		default: "0",
 		category: 4,
 		scope: "Account",
 	},
-	showVKeyCastbarSpellName: {
+	showvkeycastbarspellname: {
+		name: "showVKeyCastbarSpellName",
 		default: "1",
 		category: 4,
 		scope: "Account",
 	},
 	showfootprintparticles: {
+		name: "showfootprintparticles",
 		default: "1",
 		category: 1,
 		help: "toggles rendering of footprint particles",
 	},
 	simd: {
+		name: "simd",
 		default: "-1",
 		category: 5,
 		help: "Enable SIMD features (e.g. SSE)",
 	},
-	skipStartGear: {
+	skipstartgear: {
+		name: "skipStartGear",
 		default: "0",
 		category: 4,
 		help: "Whether we should show starter gear on character create",
 	},
-	smoothUnitPhasing: {
+	smoothunitphasing: {
+		name: "smoothUnitPhasing",
 		default: "1",
 		category: 4,
 		help: "The client will try to smoothly switch between the same on model different phases.",
 	},
-	smoothUnitPhasingActorPurgatoryTimeMs: {
+	smoothunitphasingactorpurgatorytimems: {
+		name: "smoothUnitPhasingActorPurgatoryTimeMs",
 		default: "1500",
 		category: 4,
 		help: "Time to keep client-actor displays in purgatory before letting go of them, if they were despawned",
 	},
-	smoothUnitPhasingAliveTimeoutMs: {
+	smoothunitphasingalivetimeoutms: {
+		name: "smoothUnitPhasingAliveTimeoutMs",
 		default: "3500",
 		category: 4,
 		help: "Time to wait for an alive unit to get it's despawn message",
 	},
-	smoothUnitPhasingDestroyedPurgatoryTimeMs: {
+	smoothunitphasingdestroyedpurgatorytimems: {
+		name: "smoothUnitPhasingDestroyedPurgatoryTimeMs",
 		default: "750",
 		category: 4,
 		help: "Time to keep unit displays in purgatory before letting go of them, if they were destroyed",
 	},
-	smoothUnitPhasingDistThreshold: {
+	smoothunitphasingdistthreshold: {
+		name: "smoothUnitPhasingDistThreshold",
 		default: "0.25",
 		category: 4,
 		help: "Distance threshold to active smooth unit phasing.",
 	},
-	smoothUnitPhasingEnableAlive: {
+	smoothunitphasingenablealive: {
+		name: "smoothUnitPhasingEnableAlive",
 		default: "1",
 		category: 4,
 		help: "Use units that have not despawn yet if they match, in hopes the despawn message will come later.",
 	},
-	smoothUnitPhasingUnseenPurgatoryTimeMs: {
+	smoothunitphasingunseenpurgatorytimems: {
+		name: "smoothUnitPhasingUnseenPurgatoryTimeMs",
 		default: "1000",
 		category: 4,
 		help: "Time to keep unit displays in purgatory before letting go of them, if they were just unseen.",
 	},
-	smoothUnitPhasingVehicleExtraTimeoutMs: {
+	smoothunitphasingvehicleextratimeoutms: {
+		name: "smoothUnitPhasingVehicleExtraTimeoutMs",
 		default: "1000",
 		category: 4,
 		help: "Extra time to wait before releasing a vehicle, after it has smooth phased. This allows it's passengers to smooth phase as well.",
 	},
-	sortDiskReads: {
+	sortdiskreads: {
+		name: "sortDiskReads",
 		default: "0",
 		category: 0,
 		help: "Sort async disk reads to minimize seeks (requires restart)",
 	},
-	soulbindsActivatedTutorial: {
+	soulbindsactivatedtutorial: {
+		name: "soulbindsActivatedTutorial",
 		default: "",
 		category: 4,
 		scope: "Account",
 		help: "Bitfield for tutorializing activating soulbinds",
 	},
-	soulbindsLandingPageTutorial: {
+	soulbindslandingpagetutorial: {
+		name: "soulbindsLandingPageTutorial",
 		default: "",
 		category: 4,
 		scope: "Account",
 		help: "Boolean indicating if the landing page tutorial has been completed.",
 	},
-	soulbindsViewedTutorial: {
+	soulbindsviewedtutorial: {
+		name: "soulbindsViewedTutorial",
 		default: "",
 		category: 4,
 		scope: "Account",
 		help: "Bitfield for tutorializing viewing soulbinds trees",
 	},
-	spamFilter: {
+	spamfilter: {
+		name: "spamFilter",
 		default: "1",
 		category: 4,
 		scope: "Character",
 		help: "Whether to enable spam filtering",
 	},
-	spellActivationOverlayOpacity: {
+	spellactivationoverlayopacity: {
+		name: "spellActivationOverlayOpacity",
 		default: "0.65",
 		category: 4,
 		scope: "Character",
 		help: "The opacity of the Spell Activation Overlays (a.k.a. Spell Alerts)",
 	},
-	spellBookSort: {
+	spellbooksort: {
+		name: "spellBookSort",
 		default: "1",
 		category: 4,
 		scope: "Character",
 	},
-	spellClutter: {
+	spellclutter: {
+		name: "spellClutter",
 		default: "-1",
 		category: 1,
 		help: "Cull unimportant spell effects. -1 means auto based on targetFPS otherwise [0-100], 0 means cull nothing for perf reasons, 100 means cull as much as you can",
 	},
-	splashScreenBoost: {
+	splashscreenboost: {
+		name: "splashScreenBoost",
 		default: "0",
 		category: 4,
 		scope: "Account",
 		help: "Show boost splash screen id ",
 	},
-	splashScreenNormal: {
+	splashscreennormal: {
+		name: "splashScreenNormal",
 		default: "0",
 		category: 4,
 		scope: "Account",
 		help: "Show normal splash screen id",
 	},
-	splashScreenSeason: {
+	splashscreenseason: {
+		name: "splashScreenSeason",
 		default: "1",
 		category: 4,
 		scope: "Account",
 		help: "Show season splash screen id",
 	},
-	ssaoMagicNormals: {
+	ssaomagicnormals: {
+		name: "ssaoMagicNormals",
 		default: "1",
 		category: 1,
 		help: "SSAO Use combined GBuffer and face normals; attempts to get the best compromise for architecture, foliage, and characters",
 	},
-	ssaoMagicThresholdHigh: {
+	ssaomagicthresholdhigh: {
+		name: "ssaoMagicThresholdHigh",
 		default: "50",
 		category: 1,
 		help: "SSAO High threshold for transitioning from gbuffer to face normal (degrees)",
 	},
-	ssaoMagicThresholdLow: {
+	ssaomagicthresholdlow: {
+		name: "ssaoMagicThresholdLow",
 		default: "25",
 		category: 1,
 		help: "SSAO Low threshold for transitioning from gbuffer to face normal (degrees)",
 	},
-	statusText: {
+	statustext: {
+		name: "statusText",
 		default: "0",
 		category: 4,
 		scope: "Character",
 		help: "Whether the status bars show numeric health/mana values",
 	},
-	statusTextDisplay: {
+	statustextdisplay: {
+		name: "statusTextDisplay",
 		default: "NONE",
 		category: 4,
 		scope: "Character",
 		help: "Whether numeric health/mana values are shown as raw values or percentages, or both",
 	},
-	stopAutoAttackOnTargetChange: {
+	stopautoattackontargetchange: {
+		name: "stopAutoAttackOnTargetChange",
 		default: "0",
 		category: 4,
 		scope: "Account",
 		help: "Whether to stop attacking when changing targets",
 	},
-	streamStatusMessage: {
+	streamstatusmessage: {
+		name: "streamStatusMessage",
 		default: "1",
 		category: 4,
 		scope: "Character",
 		help: "Whether to display status messages while streaming content",
 	},
-	streamingCameraLookAheadTime: {
+	streamingcameralookaheadtime: {
+		name: "streamingCameraLookAheadTime",
 		default: "2000",
 		category: 1,
 		help: "Look ahead time for streaming.",
 	},
-	streamingCameraMaxRadius: {
+	streamingcameramaxradius: {
+		name: "streamingCameraMaxRadius",
 		default: "250",
 		category: 1,
 		help: "Max radius of the streaming camera.",
 	},
-	streamingCameraRadius: {
+	streamingcameraradius: {
+		name: "streamingCameraRadius",
 		default: "100",
 		category: 1,
 		help: "Base radius of the streaming camera.",
 	},
-	sunShafts: {
+	sunshafts: {
+		name: "sunShafts",
 		default: "0",
 		category: 5,
 		help: "SunShafts",
 	},
-	superTrackerDist: {
+	supertrackerdist: {
+		name: "superTrackerDist",
 		default: "0.75",
 		category: 4,
 		scope: "Character",
 	},
-	synchronizeBindings: {
+	synchronizebindings: {
+		name: "synchronizeBindings",
 		default: "1",
 		category: 5,
 	},
-	synchronizeChatFrames: {
+	synchronizechatframes: {
+		name: "synchronizeChatFrames",
 		default: "1",
 		category: 5,
 	},
-	synchronizeConfig: {
+	synchronizeconfig: {
+		name: "synchronizeConfig",
 		default: "1",
 		category: 5,
 	},
-	synchronizeMacros: {
+	synchronizemacros: {
+		name: "synchronizeMacros",
 		default: "1",
 		category: 5,
 	},
-	synchronizeSettings: {
+	synchronizesettings: {
+		name: "synchronizeSettings",
 		default: "1",
 		category: 5,
 		help: "Whether client settings should be stored on the server",
 	},
-	taintLog: {
+	taintlog: {
+		name: "taintLog",
 		default: "0",
 		category: 5,
 		help: "Whether taint logging is enabled",
 	},
-	talentFrameShown: {
+	talentframeshown: {
+		name: "talentFrameShown",
 		default: "0",
 		category: 4,
 		scope: "Character",
 		help: "The talent UI has been shown",
 	},
-	talentPointsSpent: {
+	talentpointsspent: {
+		name: "talentPointsSpent",
 		default: "0",
 		category: 4,
 		scope: "Account",
 		help: "The player has spent a talent point",
 	},
-	targetFPS: {
+	targetfps: {
+		name: "targetFPS",
 		default: "0",
 		category: 1,
 		help: "Set target FPS. Dynamic actions will be taken if you fall below the FPS target",
 	},
-	teleportMaxNoLoadDist: {
+	teleportmaxnoloaddist: {
+		name: "teleportMaxNoLoadDist",
 		default: "200",
 		category: 1,
 		help: "Max teleport distanace without preload",
 	},
-	terrainLodDist: {
+	terrainloddist: {
+		name: "terrainLodDist",
 		default: "400",
 		category: 5,
 		help: "Terrain level of detail distance",
 	},
-	terrainMipLevel: {
+	terrainmiplevel: {
+		name: "terrainMipLevel",
 		default: "0",
 		category: 1,
 		help: "Terrain blend map mip level",
 	},
-	test_cameraDynamicPitch: {
+	test_cameradynamicpitch: {
+		name: "test_cameraDynamicPitch",
 		default: "0",
 		category: 5,
 	},
-	test_cameraDynamicPitchBaseFovPad: {
+	test_cameradynamicpitchbasefovpad: {
+		name: "test_cameraDynamicPitchBaseFovPad",
 		default: "0.4",
 		category: 5,
 		help: "Fraction of screen height to keep feet below",
 	},
-	test_cameraDynamicPitchBaseFovPadDownScale: {
+	test_cameradynamicpitchbasefovpaddownscale: {
+		name: "test_cameraDynamicPitchBaseFovPadDownScale",
 		default: "0.25",
 		category: 5,
 		help: "Strength of dynamic pitch when looking down",
 	},
-	test_cameraDynamicPitchBaseFovPadFlying: {
+	test_cameradynamicpitchbasefovpadflying: {
+		name: "test_cameraDynamicPitchBaseFovPadFlying",
 		default: "0.75",
 		category: 5,
 		help: "Fraction of screen height to keep character below when able to fly",
 	},
-	test_cameraDynamicPitchSmartPivotCutoffDist: {
+	test_cameradynamicpitchsmartpivotcutoffdist: {
+		name: "test_cameraDynamicPitchSmartPivotCutoffDist",
 		default: "10",
 		category: 5,
 		help: "Dynamic pitch disables Smart Pivot within this camera distance",
 	},
-	test_cameraHeadMovementDeadZone: {
+	test_cameraheadmovementdeadzone: {
+		name: "test_cameraHeadMovementDeadZone",
 		default: "0.015",
 		category: 5,
 	},
-	test_cameraHeadMovementFirstPersonDampRate: {
+	test_cameraheadmovementfirstpersondamprate: {
+		name: "test_cameraHeadMovementFirstPersonDampRate",
 		default: "20",
 		category: 5,
 	},
-	test_cameraHeadMovementMovingDampRate: {
+	test_cameraheadmovementmovingdamprate: {
+		name: "test_cameraHeadMovementMovingDampRate",
 		default: "10",
 		category: 5,
 	},
-	test_cameraHeadMovementMovingStrength: {
+	test_cameraheadmovementmovingstrength: {
+		name: "test_cameraHeadMovementMovingStrength",
 		default: "0.5",
 		category: 5,
 	},
-	test_cameraHeadMovementRangeScale: {
+	test_cameraheadmovementrangescale: {
+		name: "test_cameraHeadMovementRangeScale",
 		default: "5",
 		category: 5,
 	},
-	test_cameraHeadMovementStandingDampRate: {
+	test_cameraheadmovementstandingdamprate: {
+		name: "test_cameraHeadMovementStandingDampRate",
 		default: "10",
 		category: 5,
 	},
-	test_cameraHeadMovementStandingStrength: {
+	test_cameraheadmovementstandingstrength: {
+		name: "test_cameraHeadMovementStandingStrength",
 		default: "0.3",
 		category: 5,
 	},
-	test_cameraHeadMovementStrength: {
+	test_cameraheadmovementstrength: {
+		name: "test_cameraHeadMovementStrength",
 		default: "0",
 		category: 5,
 	},
-	test_cameraOverShoulder: {
+	test_cameraovershoulder: {
+		name: "test_cameraOverShoulder",
 		default: "0",
 		category: 5,
 	},
-	test_cameraTargetFocusEnemyEnable: {
+	test_cameratargetfocusenemyenable: {
+		name: "test_cameraTargetFocusEnemyEnable",
 		default: "0",
 		category: 5,
 	},
-	test_cameraTargetFocusEnemyStrengthPitch: {
+	test_cameratargetfocusenemystrengthpitch: {
+		name: "test_cameraTargetFocusEnemyStrengthPitch",
 		default: "0.4",
 		category: 5,
 	},
-	test_cameraTargetFocusEnemyStrengthYaw: {
+	test_cameratargetfocusenemystrengthyaw: {
+		name: "test_cameraTargetFocusEnemyStrengthYaw",
 		default: "0.5",
 		category: 5,
 	},
-	test_cameraTargetFocusInteractEnable: {
+	test_cameratargetfocusinteractenable: {
+		name: "test_cameraTargetFocusInteractEnable",
 		default: "0",
 		category: 5,
 	},
-	test_cameraTargetFocusInteractStrengthPitch: {
+	test_cameratargetfocusinteractstrengthpitch: {
+		name: "test_cameraTargetFocusInteractStrengthPitch",
 		default: "0.75",
 		category: 5,
 	},
-	test_cameraTargetFocusInteractStrengthYaw: {
+	test_cameratargetfocusinteractstrengthyaw: {
+		name: "test_cameraTargetFocusInteractStrengthYaw",
 		default: "1.0",
 		category: 5,
 	},
-	textLocale: {
+	textlocale: {
+		name: "textLocale",
 		default: "",
 		category: 4,
 		help: "Set the game locale for text",
 	},
-	textureFilteringMode: {
+	texturefilteringmode: {
+		name: "textureFilteringMode",
 		default: "5",
 		category: 1,
 		help: "Texture filtering mode",
 	},
-	threatPlaySounds: {
+	threatplaysounds: {
+		name: "threatPlaySounds",
 		default: "1",
 		category: 4,
 		scope: "Character",
 		help: "Whether or not to sounds when certain threat transitions occur",
 	},
-	threatShowNumeric: {
+	threatshownumeric: {
+		name: "threatShowNumeric",
 		default: "0",
 		category: 4,
 		scope: "Character",
 		help: "Whether or not to show numeric threat on the target and focus frames",
 	},
-	threatWarning: {
+	threatwarning: {
+		name: "threatWarning",
 		default: "3",
 		category: 4,
 		scope: "Account",
 		help: "Whether or not to show threat warning UI (0 = off, 1 = in dungeons, 2 = in party/raid, 3 = always)",
 	},
-	threatWorldText: {
+	threatworldtext: {
+		name: "threatWorldText",
 		default: "1",
 		category: 4,
 		scope: "Character",
 		help: "Whether or not to show threat floaters in combat",
 	},
-	timeMgrAlarmEnabled: {
+	timemgralarmenabled: {
+		name: "timeMgrAlarmEnabled",
 		default: "0",
 		category: 4,
 		scope: "Character",
 		help: "Toggles whether or not the time manager's alarm will go off",
 	},
-	timeMgrAlarmMessage: {
+	timemgralarmmessage: {
+		name: "timeMgrAlarmMessage",
 		default: "",
 		category: 4,
 		scope: "Character",
 		help: "The time manager's alarm message",
 	},
-	timeMgrAlarmTime: {
+	timemgralarmtime: {
+		name: "timeMgrAlarmTime",
 		default: "0",
 		category: 4,
 		scope: "Character",
 		help: "The time manager's alarm time in minutes",
 	},
-	timeMgrUseLocalTime: {
+	timemgruselocaltime: {
+		name: "timeMgrUseLocalTime",
 		default: "0",
 		category: 4,
 		scope: "Character",
 		help: "Toggles the use of either the realm time or your system time",
 	},
-	timeMgrUseMilitaryTime: {
+	timemgrusemilitarytime: {
+		name: "timeMgrUseMilitaryTime",
 		default: "0",
 		category: 4,
 		scope: "Character",
 		help: "Toggles the display of either 12 or 24 hour time",
 	},
-	timingMethod: {
+	timingmethod: {
+		name: "timingMethod",
 		default: "0",
 		category: 5,
 		help: "Desired method for game timing",
 	},
-	timingTestError: {
+	timingtesterror: {
+		name: "timingTestError",
 		default: "0",
 		category: 5,
 		help: "Error reported by the timing validation system",
 	},
-	toastDuration: {
+	toastduration: {
+		name: "toastDuration",
 		default: "4",
 		category: 4,
 		scope: "Character",
 		help: "How long to display Battle.net toast windows, in seconds",
 	},
-	toyBoxCollectedFilters: {
+	toyboxcollectedfilters: {
+		name: "toyBoxCollectedFilters",
 		default: "0",
 		category: 4,
 		scope: "Character",
 		help: "Bitfield for which collected filters are applied in the toybox",
 	},
-	toyBoxExpansionFilters: {
+	toyboxexpansionfilters: {
+		name: "toyBoxExpansionFilters",
 		default: "0",
 		category: 4,
 		scope: "Character",
 		help: "Bitfield for which expansion filters are applied in the toybox",
 	},
-	toyBoxSourceFilters: {
+	toyboxsourcefilters: {
+		name: "toyBoxSourceFilters",
 		default: "0",
 		category: 4,
 		scope: "Character",
 		help: "Bitfield for which source filters are applied in the toybox",
 	},
-	trackQuestSorting: {
+	trackquestsorting: {
+		name: "trackQuestSorting",
 		default: "top",
 		category: 4,
 		scope: "Character",
 		help: "Whether to sort the last tracked quest to the top of the quest tracker or use proximity sorting",
 	},
-	trackedAchievements: {
+	trackedachievements: {
+		name: "trackedAchievements",
 		default: "",
 		category: 4,
 		scope: "Account",
 		help: "Internal cvar for saving tracked achievements in order",
 	},
-	trackedQuests: {
+	trackedquests: {
+		name: "trackedQuests",
 		default: "",
 		category: 4,
 		scope: "Account",
 		help: "Internal cvar for saving automatically tracked quests in order",
 	},
-	trackedWorldQuests: {
+	trackedworldquests: {
+		name: "trackedWorldQuests",
 		default: "",
 		category: 4,
 		scope: "Account",
 		help: "Internal cvar for saving automatically tracked world quests",
 	},
-	transmogCurrentSpecOnly: {
+	transmogcurrentspeconly: {
+		name: "transmogCurrentSpecOnly",
 		default: "0",
 		category: 4,
 		scope: "Account",
 		help: "Stores whether transmogs apply to current spec instead of all specs",
 	},
-	transmogShouldersSeparately: {
+	transmogshouldersseparately: {
+		name: "transmogShouldersSeparately",
 		default: "0",
 		category: 4,
 		scope: "Account",
 		help: "Whether right shoulder can have a different visual than left shoulder",
 	},
-	transmogrifyShowCollected: {
+	transmogrifyshowcollected: {
+		name: "transmogrifyShowCollected",
 		default: "1",
 		category: 4,
 		scope: "Character",
 		help: "Whether to show collected transmogs in the at the transmogrifier",
 	},
-	transmogrifyShowUncollected: {
+	transmogrifyshowuncollected: {
+		name: "transmogrifyShowUncollected",
 		default: "0",
 		category: 4,
 		scope: "Character",
 		help: "Whether to show uncollected transmogs in the at the transmogrifier",
 	},
-	transmogrifySourceFilters: {
+	transmogrifysourcefilters: {
+		name: "transmogrifySourceFilters",
 		default: "0",
 		category: 4,
 		scope: "Character",
 		help: "Bitfield for which source filters are applied in the  wardrobe at the transmogrifier",
 	},
-	twitterGetConfigTime: {
+	twittergetconfigtime: {
+		name: "twitterGetConfigTime",
 		default: "0",
 		category: 4,
 		help: "Last time that we got Twitter configuration data successfully",
 	},
-	twitterShortUrlLength: {
+	twittershorturllength: {
+		name: "twitterShortUrlLength",
 		default: "23",
 		category: 4,
 		help: "Number of characters that non-https URLS get shortened to",
 	},
-	twitterShortUrlLengthHttps: {
+	twittershorturllengthhttps: {
+		name: "twitterShortUrlLengthHttps",
 		default: "23",
 		category: 4,
 		help: "Number of characters that https URLS get shortened to",
 	},
-	uiScale: {
+	uiscale: {
+		name: "uiScale",
 		default: "1.0",
 		category: 4,
 		help: "The current UI scale",
 	},
-	uiScaleMultiplier: {
+	uiscalemultiplier: {
+		name: "uiScaleMultiplier",
 		default: "-1",
 		category: 4,
 		help: "A multiplier for the default UI scale. -1=determine based on system/monitor DPI, 0.5-2.0=multiplier to use when calculating UI scale. Only applied when useUIScale is 0.",
 	},
-	unitClutter: {
+	unitclutter: {
+		name: "unitClutter",
 		default: "1",
 		category: 4,
 		help: "Enables/Disables unit clutter",
 	},
-	unitClutterInstancesOnly: {
+	unitclutterinstancesonly: {
+		name: "unitClutterInstancesOnly",
 		default: "1",
 		category: 4,
 		help: "Whether or not to use unit clutter in instances only (0 or 1)",
 	},
-	unitClutterPlayerThreshold: {
+	unitclutterplayerthreshold: {
+		name: "unitClutterPlayerThreshold",
 		default: "10",
 		category: 4,
 		help: "The number of players that have to be nearby to trigger unit clutter",
 	},
-	unitFacingPlayerDeadZoneDeg: {
+	unitfacingplayerdeadzonedeg: {
+		name: "unitFacingPlayerDeadZoneDeg",
 		default: "60",
 		category: 4,
 		help: "Degrees outside a unit's default facing a player has to be for the unit to face them on interact",
 	},
-	unitsLookAtPlayers: {
+	unitslookatplayers: {
+		name: "unitsLookAtPlayers",
 		default: "1",
 		category: 4,
 		help: "Enables units turning their head to look at players",
 	},
-	useCompactPartyFrames: {
+	usecompactpartyframes: {
+		name: "useCompactPartyFrames",
 		default: "0",
 		category: 4,
 		scope: "Account",
 		help: "Use the new raid frames for parties",
 	},
-	useHighResolutionUITextures: {
+	usehighresolutionuitextures: {
+		name: "useHighResolutionUITextures",
 		default: "0",
 		category: 4,
 		help: "Whether to use high resolution UI Textures",
 	},
-	useIPv6: {
+	useipv6: {
+		name: "useIPv6",
 		default: "0",
 		category: 6,
 		help: "Enable the usage of IPv6 sockets",
 	},
-	useUiScale: {
+	useuiscale: {
+		name: "useUiScale",
 		default: "0",
 		category: 4,
 		help: "Whether or not the UI scale should be used",
 	},
-	videoOptionsVersion: {
+	videooptionsversion: {
+		name: "videoOptionsVersion",
 		default: "0",
 		category: 5,
 		help: "Video options version",
 	},
-	videoOptionsVersionDefault: {
+	videooptionsversiondefault: {
+		name: "videoOptionsVersionDefault",
 		default: "0",
 		category: 1,
 	},
-	violenceLevel: {
+	violencelevel: {
+		name: "violenceLevel",
 		default: "2",
 		category: 4,
 		scope: "Character",
 		help: "Sets the violence level of the game",
 	},
-	volumeFog: {
+	volumefog: {
+		name: "volumeFog",
 		default: "1",
 		category: 1,
 		help: "Volume Fog",
 	},
-	volumeFogInterior: {
+	volumefoginterior: {
+		name: "volumeFogInterior",
 		default: "1",
 		category: 1,
 		help: "Volume Fog Interiors",
 	},
-	volumeFogLevel: {
+	volumefoglevel: {
+		name: "volumeFogLevel",
 		default: "2",
 		category: 1,
 		help: "Volume Fog Level (0-3)",
 	},
-	vrsParticles: {
+	vrsparticles: {
+		name: "vrsParticles",
 		default: "",
 		category: 1,
 		help: "Render scale like effect for particles. Only used if lots of particles are on screen",
 	},
-	vrsWorldGeo: {
+	vrsworldgeo: {
+		name: "vrsWorldGeo",
 		default: "",
 		category: 1,
 		help: "Render scale like effect for terrain, buildings and liquids",
 	},
 	vsync: {
+		name: "vsync",
 		default: "1",
 		category: 1,
 		help: "vsync on or off",
 	},
-	wardrobeSetsFilters: {
+	wardrobesetsfilters: {
+		name: "wardrobeSetsFilters",
 		default: "0",
 		category: 4,
 		scope: "Character",
 		help: "Bitfield for which transmog sets filters are applied in the wardrobe in the collection journal",
 	},
-	wardrobeShowCollected: {
+	wardrobeshowcollected: {
+		name: "wardrobeShowCollected",
 		default: "1",
 		category: 4,
 		scope: "Character",
 		help: "Whether to show collected transmogs in the wardrobe",
 	},
-	wardrobeShowUncollected: {
+	wardrobeshowuncollected: {
+		name: "wardrobeShowUncollected",
 		default: "1",
 		category: 4,
 		scope: "Character",
 		help: "Whether to show uncollected transmogs in the wardrobe",
 	},
-	wardrobeSourceFilters: {
+	wardrobesourcefilters: {
+		name: "wardrobeSourceFilters",
 		default: "0",
 		category: 4,
 		scope: "Character",
 		help: "Bitfield for which source filters are applied in the wardrobe in the collection journal",
 	},
-	watchFrameBaseAlpha: {
+	watchframebasealpha: {
+		name: "watchFrameBaseAlpha",
 		default: "0",
 		category: 4,
 		scope: "Character",
 		help: "Objectives frame opacity.",
 	},
-	watchFrameIgnoreCursor: {
+	watchframeignorecursor: {
+		name: "watchFrameIgnoreCursor",
 		default: "0",
 		category: 4,
 		scope: "Character",
 		help: "Disables Objectives frame mouseover and title dropdown.",
 	},
-	watchFrameState: {
+	watchframestate: {
+		name: "watchFrameState",
 		default: "0",
 		category: 4,
 		scope: "Character",
 		help: "Stores Objectives frame locked and collapsed states",
 	},
-	waterDetail: {
+	waterdetail: {
+		name: "waterDetail",
 		default: "0",
 		category: 5,
 		help: "Water surface detail",
 	},
-	weatherDensity: {
+	weatherdensity: {
+		name: "weatherDensity",
 		default: "2",
 		category: 5,
 	},
-	webChallengeURLTimeout: {
+	webchallengeurltimeout: {
+		name: "webChallengeURLTimeout",
 		default: "60",
 		category: 5,
 		help: "How long to wait for the web challenge URL (in seconds). 0 means wait forever.",
 	},
-	whisperMode: {
+	whispermode: {
+		name: "whisperMode",
 		default: "popout",
 		category: 4,
 		scope: "Character",
 		help: "The action new whispers take by default: \"popout\", \"inline\", \"popout_and_inline\"",
 	},
-	wholeChatWindowClickable: {
+	wholechatwindowclickable: {
+		name: "wholeChatWindowClickable",
 		default: "1",
 		category: 4,
 		scope: "Character",
 		help: "Whether the user may click anywhere on a chat window to change EditBox focus (only works in IM style)",
 	},
-	windowResizeLock: {
+	windowresizelock: {
+		name: "windowResizeLock",
 		default: "0",
 		category: 1,
 		help: "prevent resizing in windowed mode",
 	},
-	wmoDoodadDist: {
+	wmodoodaddist: {
+		name: "wmoDoodadDist",
 		default: "2000",
 		category: 1,
 		help: "Wmo doodad load distance",
 	},
-	wmoLodDist: {
+	wmoloddist: {
+		name: "wmoLodDist",
 		default: "300",
 		category: 5,
 		help: "Wmo level of detail distance",
 	},
-	wmoLodDistScale: {
+	wmoloddistscale: {
+		name: "wmoLodDistScale",
 		default: "1.0f",
 		category: 1,
 		help: "Wmo level of detail distance scale",
 	},
-	wmoPortalMinScreenSize: {
+	wmoportalminscreensize: {
+		name: "wmoPortalMinScreenSize",
 		default: "0",
 		category: 1,
 		help: "Wmo portal min screen size",
 	},
-	worldBaseMip: {
+	worldbasemip: {
+		name: "worldBaseMip",
 		default: "0",
 		category: 1,
 		help: "World texture base mip",
 	},
-	worldEntityLinkMode: {
+	worldentitylinkmode: {
+		name: "worldEntityLinkMode",
 		default: "1",
 		category: 1,
 		help: "Entity link mode",
 	},
-	worldLoadSort: {
+	worldloadsort: {
+		name: "worldLoadSort",
 		default: "1",
 		category: 1,
 		help: "Sort objects by distance when loading",
 	},
-	worldMaxMipLevel: {
+	worldmaxmiplevel: {
+		name: "worldMaxMipLevel",
 		default: "12",
 		category: 1,
 		help: "World maximum texture mip level",
 	},
-	worldPreloadHighResTextures: {
+	worldpreloadhighrestextures: {
+		name: "worldPreloadHighResTextures",
 		default: "1",
 		category: 1,
 		help: "Require high res textures to be loaded in streaming non critical radius when preloading",
 	},
-	worldPreloadNonCritical: {
+	worldpreloadnoncritical: {
+		name: "worldPreloadNonCritical",
 		default: "2",
 		category: 1,
 		help: "Require objects to be loaded in streaming non critical radius when preloading",
 	},
-	worldPreloadNonCriticalTimeout: {
+	worldpreloadnoncriticaltimeout: {
+		name: "worldPreloadNonCriticalTimeout",
 		default: "45",
 		category: 1,
 		help: "World preload time (in seconds) when non-critical items are automatically ignored",
 	},
-	worldPreloadSort: {
+	worldpreloadsort: {
+		name: "worldPreloadSort",
 		default: "1",
 		category: 1,
 		help: "Sort objects by distance when preloading",
 	},
-	worldQuestFilterAnima: {
+	worldquestfilteranima: {
+		name: "worldQuestFilterAnima",
 		default: "1",
 		category: 4,
 		scope: "Account",
 		help: "If enabled, world quests with anima rewards will be shown on the map",
 	},
-	worldQuestFilterArtifactPower: {
+	worldquestfilterartifactpower: {
+		name: "worldQuestFilterArtifactPower",
 		default: "1",
 		category: 4,
 		scope: "Account",
 		help: "If enabled, world quests with artifact power rewards will be shown on the map",
 	},
-	worldQuestFilterEquipment: {
+	worldquestfilterequipment: {
+		name: "worldQuestFilterEquipment",
 		default: "1",
 		category: 4,
 		scope: "Account",
 		help: "If enabled, world quests with equipment rewards will be shown on the map",
 	},
-	worldQuestFilterGold: {
+	worldquestfiltergold: {
+		name: "worldQuestFilterGold",
 		default: "1",
 		category: 4,
 		scope: "Account",
 		help: "If enabled, world quests with gold rewards will be shown on the map",
 	},
-	worldQuestFilterProfessionMaterials: {
+	worldquestfilterprofessionmaterials: {
+		name: "worldQuestFilterProfessionMaterials",
 		default: "1",
 		category: 4,
 		scope: "Account",
 		help: "If enabled, world quests with profession material rewards will be shown on the map",
 	},
-	worldQuestFilterReputation: {
+	worldquestfilterreputation: {
+		name: "worldQuestFilterReputation",
 		default: "1",
 		category: 4,
 		scope: "Account",
 		help: "If enabled, world quests with reputation rewards will be shown on the map",
 	},
-	worldQuestFilterResources: {
+	worldquestfilterresources: {
+		name: "worldQuestFilterResources",
 		default: "1",
 		category: 4,
 		scope: "Account",
 		help: "If enabled, world quests with order resource rewards or war resource rewards will be shown on the map",
 	},
-	worldViewCullMaxJobs: {
+	worldviewcullmaxjobs: {
+		name: "worldViewCullMaxJobs",
 		default: "32",
 		category: 1,
 		help: "Maximum job threads for culling",
 	},
-	xpBarText: {
+	xpbartext: {
+		name: "xpBarText",
 		default: "0",
 		category: 4,
 		scope: "Character",
