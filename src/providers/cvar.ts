@@ -17,18 +17,19 @@ const ConsoleCategory = [
 ]
 
 function getMarkdown(name: string) {
-	let s = ""
+	let s = "**CVar**"
 	let cvar = cvarDoc[name]
 
 	if (cvar.help)
-		s += cvar.help+"\n"
+		s += " - "+cvar.help
+	s += "\n"
 	// need to use the whole line for a code block, cannot mix it with normal text
 	if (cvar.default)
-		s += "- ```\nDefault: "+cvar.default+"\n```\n"
+		s += "* ```\nDefault: "+cvar.default+"\n```\n"
 	if (cvar.category != 5)
-		s += "- ```\nCategory: "+ConsoleCategory[cvar.category]+"\n```\n"
+		s += "* ```\nCategory: "+ConsoleCategory[cvar.category]+"\n```\n"
 	if (cvar.scope)
-		s += "- ```\nScope: "+cvar.scope+"\n```\n"
+		s += "* ```\nScope: "+cvar.scope+"\n```\n"
 
 	let doc = `\n[GitHub](https://github.com/Gethe/wow-ui-source/search?q=${cvar.name})`
 	return s+doc

@@ -2,31 +2,29 @@ import * as vscode from "vscode"
 
 const eventsDoc = require("../data/events").eventsDoc
 
-// looks ugly and probably is
 function getMarkdown(name: string) {
-	let s = ""
+	let s = "**Event**"
 	let event = eventsDoc[name]
 
 	if (event.Documentation)
-		s += event.Documentation+"\n"
+		s += " - "+event.Documentation
+	s += "\n"
 
 	let payload = event.Payload
 	if (payload) {
 		let params = ""
 		for (let i = 0; i < payload.length; i++) {
 			const el = payload[i]
-			params += "1. ```\n"+el.Name+": "+el.Type
+			params += "1. ```\n"+el.Name
 			if (el.Nilable)
-				params += "|nil"
-			params += "\n```"
+				params += "?"
+			params += ": "+el.Type+"\n```"
 			if (el.Documentation)
 				params += `\n &nbsp; &nbsp; ${el.Documentation}`
 			params += "\n"
 		}
 		s += params
 	}
-	else
-		s += "No payload\n"
 	let doc = `\n[Documentation](https://wow.gamepedia.com/${name})`
 	return s+doc
 }
