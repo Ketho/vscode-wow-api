@@ -1,18 +1,20 @@
---SharedXML/Vector2D.lua
-
---Abstract class
-
 ---@class Vector2DMixin
 ---@field x number|nil
 ---@field y number|nil
-local Vector2DMixin = {}
-
---Functions and methods of an abstract class
+---[FrameXML](https://www.townlong-yak.com/framexml/go/Vector2DMixin)
+Vector2DMixin = {}
 
 ---@param x number
 ---@param y number
----[FrameXML](https://www.townlong-yak.com/framexml/go/Vector2DMixin:OnLoad)
-function Vector2DMixin:OnLoad(x, y) end
+---@return Vector2DMixin
+---[FrameXML](https://www.townlong-yak.com/framexml/go/CreateVector2D)
+function CreateVector2D(x, y) end
+
+---@param left Vector2DMixin
+---@param right Vector2DMixin
+---@return boolean
+---[FrameXML](https://www.townlong-yak.com/framexml/go/AreVector2DEqual)
+function AreVector2DEqual(left, right) end
 
 ---@param otherVector Vector2DMixin
 ---@return boolean
@@ -76,21 +78,3 @@ function Vector2DMixin:RotateDirection(rotationRadians) end
 ---@return Vector2DMixin
 ---[FrameXML](https://www.townlong-yak.com/framexml/go/Vector2DMixin:Clone)
 function Vector2DMixin:Clone() end
-
---Global objects, functions and methods
-
----@type Vector2DMixin
----[FrameXML](https://www.townlong-yak.com/framexml/go/Vector2DMixin)
-Vector2DMixin = {}
-
----@param x number
----@param y number
----@return Vector2DMixin
----[FrameXML](https://www.townlong-yak.com/framexml/go/CreateVector2D)
-function CreateVector2D(x, y) end
-
----@param left Vector2DMixin
----@param right Vector2DMixin
----@return boolean
----[FrameXML](https://www.townlong-yak.com/framexml/go/AreVector2DEqual)
-function AreVector2DEqual(left, right) end

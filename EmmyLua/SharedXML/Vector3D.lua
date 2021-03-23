@@ -1,20 +1,57 @@
---SharedXML/Vector3D.lua
+---@param left Vector3DMixin
+---@param right Vector3DMixin
+---@return Vector3DMixin
+---[FrameXML](https://www.townlong-yak.com/framexml/go/Vector3D_AddVector)
+function Vector3D_AddVector(left, right) end
 
---Abstract class
+---@param left Vector3DMixin
+---@param right Vector3DMixin
+---@return Vector3DMixin
+---[FrameXML](https://www.townlong-yak.com/framexml/go/Vector3D_SubtractVector)
+function Vector3D_SubtractVector(left, right) end
+
+---@param vector Vector3DMixin
+---@return Vector3DMixin
+---[FrameXML](https://www.townlong-yak.com/framexml/go/Vector3D_NormalizeVector)
+function Vector3D_NormalizeVector(vector) end
+
+---@param scalar number
+---@param vector Vector3DMixin
+---@return Vector3DMixin
+---[FrameXML](https://www.townlong-yak.com/framexml/go/Vector3D_ScaleVector)
+function Vector3D_ScaleVector(scalar, vector) end
+
+---@param vector Vector3DMixin
+---@return number
+---@return number
+---[FrameXML](https://www.townlong-yak.com/framexml/go/Vector3D_CalculateYawPitchFromNormalVector)
+function Vector3D_CalculateYawPitchFromNormalVector(vector) end
+
+---@param yawRadians number
+---@param pitchRadians number
+---@return Vector3DMixin
+---[FrameXML](https://www.townlong-yak.com/framexml/go/Vector3D_CreateNormalVectorFromYawPitch)
+function Vector3D_CreateNormalVectorFromYawPitch(yawRadians, pitchRadians) end
 
 ---@class Vector3DMixin
 ---@field x number|nil
 ---@field y number|nil
 ---@field z number|nil
+---[FrameXML](https://www.townlong-yak.com/framexml/go/Vector3DMixin)
 local Vector3DMixin = {}
-
---Functions and methods of an abstract class
 
 ---@param x number
 ---@param y number
 ---@param z number
----[FrameXML](https://www.townlong-yak.com/framexml/go/Vector3DMixin:OnLoad)
-function Vector3DMixin:OnLoad(x, y, z) end
+---@return Vector3DMixin
+---[FrameXML](https://www.townlong-yak.com/framexml/go/CreateVector3D)
+function CreateVector3D(x, y, z) end
+
+---@param left Vector3DMixin
+---@param right Vector3DMixin
+---@return boolean
+---[FrameXML](https://www.townlong-yak.com/framexml/go/AreVector3DEqual)
+function AreVector3DEqual(left, right) end
 
 ---@param otherVector Vector3DMixin
 ---@return boolean
@@ -72,57 +109,3 @@ function Vector3DMixin:Normalize() end
 ---@return Vector3DMixin
 ---[FrameXML](https://www.townlong-yak.com/framexml/go/Vector3DMixin:Clone)
 function Vector3DMixin:Clone() end
-
---Global objects, functions and methods
-
----@type Vector3DMixin
----[FrameXML](https://www.townlong-yak.com/framexml/go/Vector3DMixin)
-Vector3DMixin = {}
-
----@param x number
----@param y number
----@param z number
----@return Vector3DMixin
----[FrameXML](https://www.townlong-yak.com/framexml/go/CreateVector3D)
-function CreateVector3D(x, y, z) end
-
----@param left Vector3DMixin
----@param right Vector3DMixin
----@return boolean
----[FrameXML](https://www.townlong-yak.com/framexml/go/AreVector3DEqual)
-function AreVector3DEqual(left, right) end
-
----@param left Vector3DMixin
----@param right Vector3DMixin
----@return Vector3DMixin
----[FrameXML](https://www.townlong-yak.com/framexml/go/Vector3D_AddVector)
-function Vector3D_AddVector(left, right) end
-
----@param left Vector3DMixin
----@param right Vector3DMixin
----@return Vector3DMixin
----[FrameXML](https://www.townlong-yak.com/framexml/go/Vector3D_SubtractVector)
-function Vector3D_SubtractVector(left, right) end
-
----@param vector Vector3DMixin
----@return Vector3DMixin
----[FrameXML](https://www.townlong-yak.com/framexml/go/Vector3D_NormalizeVector)
-function Vector3D_NormalizeVector(vector) end
-
----@param scalar number
----@param vector Vector3DMixin
----@return Vector3DMixin
----[FrameXML](https://www.townlong-yak.com/framexml/go/Vector3D_ScaleVector)
-function Vector3D_ScaleVector(scalar, vector) end
-
----@param vector Vector3DMixin
----@return number
----@return number
----[FrameXML](https://www.townlong-yak.com/framexml/go/Vector3D_CalculateYawPitchFromNormalVector)
-function Vector3D_CalculateYawPitchFromNormalVector(vector) end
-
----@param yawRadians number
----@param pitchRadians number
----@return Vector3DMixin
----[FrameXML](https://www.townlong-yak.com/framexml/go/Vector3D_CreateNormalVectorFromYawPitch)
-function Vector3D_CreateNormalVectorFromYawPitch(yawRadians, pitchRadians) end
