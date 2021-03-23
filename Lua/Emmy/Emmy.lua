@@ -99,10 +99,10 @@ function Emmy:GetField(annotation, apiTable)
 	end
 	if annotation == "field" then
 		str = fs_field:format(annotation, apiTable.Name, paramType..nilable)
+	elseif annotation == "param" then
+		str = fs_field:format(annotation, apiTable.Name..nilable, paramType)
 	elseif annotation == "return" then
 		str = fs_field:format(annotation, paramType..nilable, apiTable.Name)
-	else
-		str = fs_field:format(annotation, apiTable.Name..nilable, paramType)
 	end
 	return str
 end
