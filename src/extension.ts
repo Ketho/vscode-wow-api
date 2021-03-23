@@ -11,7 +11,6 @@ import enumProvider = require("./providers/enum") // not sure if this is the rig
 const getLuaEnumHover = enumProvider.getLuaEnumHover
 const luaenumArray = enumProvider.luaenumArray
 
-// dont know how to use a custom regex so check the word boundary instead
 function isHoverString(document: vscode.TextDocument, range: vscode.Range) {
 	if (range.start.character > 0) {
 		const leftPos = new vscode.Position(range.start.line, range.start.character-1)
@@ -19,7 +18,7 @@ function isHoverString(document: vscode.TextDocument, range: vscode.Range) {
 		const word = document.getText(new vscode.Range(leftPos, rightPos))
 		const leftChar = word.charAt(0)
 		const rightChar = word.charAt(word.length-1)
-		return (leftChar == '"' || leftChar == "'") && (rightChar == '"' || rightChar == "'")
+		return (leftChar == '"' && rightChar == '"') || (leftChar == "'" && rightChar == "'")
 	}
 	return false
 }
