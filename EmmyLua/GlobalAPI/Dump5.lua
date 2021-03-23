@@ -380,7 +380,7 @@ function IsModifierKeyDown() end
 function IsMounted() end
 
 ---[Documentation](https://wow.gamepedia.com/API_IsMouseButtonDown)
-function IsMouseButtonDown() end
+function IsMouseButtonDown(button) end
 
 ---[Documentation](https://wow.gamepedia.com/API_IsMouselooking)
 function IsMouselooking() end
