@@ -2,7 +2,6 @@
 
 --Abstract class
 
----@diagnostic disable-next-line: duplicate-doc-class
 ---@class ColorMixin
 ---@field r number|nil
 ---@field g number|nil

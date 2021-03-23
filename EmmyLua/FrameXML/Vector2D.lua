@@ -2,7 +2,6 @@
 
 --Abstract class
 
----@diagnostic disable-next-line: duplicate-doc-class
 ---@class Vector2DMixin
 ---@field x number|nil
 ---@field y number|nil
