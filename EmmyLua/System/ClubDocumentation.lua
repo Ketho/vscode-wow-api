@@ -613,15 +613,15 @@ local ValidateNameResult = {
 ---@class ClubInfo
 ---@field clubId string
 ---@field name string
----@field shortName string
+---@field shortName string|nil
 ---@field description string
 ---@field broadcast string
 ---@field clubType ClubType
 ---@field avatarId number
----@field memberCount number
----@field favoriteTimeStamp number
----@field joinTime number
----@field socialQueueingEnabled boolean
+---@field memberCount number|nil
+---@field favoriteTimeStamp number|nil
+---@field joinTime number|nil
+---@field socialQueueingEnabled boolean|nil
 local ClubInfo = {}
 
 ---@class ClubInvitationCandidateInfo
@@ -644,32 +644,32 @@ local ClubLimits = {}
 ---@class ClubMemberInfo
 ---@field isSelf boolean
 ---@field memberId number
----@field name string
----@field role ClubRoleIdentifier
+---@field name string|nil
+---@field role ClubRoleIdentifier|nil
 ---@field presence ClubMemberPresence
----@field clubType ClubType
----@field guid string
----@field bnetAccountId number
----@field memberNote string
----@field officerNote string
----@field classID number
----@field race number
----@field level number
----@field zone string
----@field achievementPoints number
----@field profession1ID number
----@field profession1Rank number
----@field profession1Name string
----@field profession2ID number
----@field profession2Rank number
----@field profession2Name string
----@field lastOnlineYear number
----@field lastOnlineMonth number
----@field lastOnlineDay number
----@field lastOnlineHour number
----@field guildRank string
----@field guildRankOrder number
----@field isRemoteChat boolean
+---@field clubType ClubType|nil
+---@field guid string|nil
+---@field bnetAccountId number|nil
+---@field memberNote string|nil
+---@field officerNote string|nil
+---@field classID number|nil
+---@field race number|nil
+---@field level number|nil
+---@field zone string|nil
+---@field achievementPoints number|nil
+---@field profession1ID number|nil
+---@field profession1Rank number|nil
+---@field profession1Name string|nil
+---@field profession2ID number|nil
+---@field profession2Rank number|nil
+---@field profession2Name string|nil
+---@field lastOnlineYear number|nil
+---@field lastOnlineMonth number|nil
+---@field lastOnlineDay number|nil
+---@field lastOnlineHour number|nil
+---@field guildRank string|nil
+---@field guildRankOrder number|nil
+---@field isRemoteChat boolean|nil
 local ClubMemberInfo = {}
 
 ---@class ClubMessageIdentifier
@@ -681,7 +681,7 @@ local ClubMessageIdentifier = {}
 ---@field messageId ClubMessageIdentifier
 ---@field content string
 ---@field author ClubMemberInfo
----@field destroyer ClubMemberInfo
+---@field destroyer ClubMemberInfo|nil
 ---@field destroyed boolean
 ---@field edited boolean
 local ClubMessageInfo = {}
@@ -763,6 +763,6 @@ local ClubStreamNotificationSetting = {}
 ---@field currentRedeemCount number
 ---@field creationTime number
 ---@field expirationTime number
----@field defaultStreamId string
+---@field defaultStreamId string|nil
 ---@field creator ClubMemberInfo
 local ClubTicketInfo = {}

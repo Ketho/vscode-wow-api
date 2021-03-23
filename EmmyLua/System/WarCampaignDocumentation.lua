@@ -66,8 +66,8 @@ local CampaignChapterInfo = {}
 
 ---@class CampaignFailureReason
 ---@field text string
----@field questID number
----@field mapID number
+---@field questID number|nil
+---@field mapID number|nil
 local CampaignFailureReason = {}
 
 ---@class CampaignInfo

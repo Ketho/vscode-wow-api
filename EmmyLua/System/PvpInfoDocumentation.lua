@@ -405,7 +405,7 @@ local PvpBrawlInfo = {}
 ---@field lastWeeksBestRating number
 ---@field hasWonBracketToday boolean
 ---@field tier number
----@field ranking number
+---@field ranking number|nil
 local PVPPersonalRatedInfo = {}
 
 ---@class PVPPostMatchCurrencyReward

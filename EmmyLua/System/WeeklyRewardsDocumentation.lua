@@ -69,5 +69,5 @@ local WeeklyRewardActivityInfo = {}
 ---@field type CachedRewardType
 ---@field id number
 ---@field quantity number
----@field itemDBID string
+---@field itemDBID string|nil
 local WeeklyRewardActivityRewardInfo = {}

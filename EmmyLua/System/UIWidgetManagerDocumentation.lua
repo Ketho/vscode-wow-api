@@ -685,7 +685,7 @@ local UIWidgetCurrencyInfo = {}
 ---@field widgetID number
 ---@field widgetSetID number
 ---@field widgetType UIWidgetVisualizationType
----@field unitToken string
+---@field unitToken string|nil
 local UIWidgetInfo = {}
 
 ---@class UIWidgetSetInfo

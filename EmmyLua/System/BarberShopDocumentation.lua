@@ -94,5 +94,5 @@ local BarberShopCharacterData = {}
 ---@class BarberShopRaceData
 ---@field name string
 ---@field fileName string
----@field alternateFormRaceData CharacterAlternateFormData
+---@field alternateFormRaceData CharacterAlternateFormData|nil
 local BarberShopRaceData = {}

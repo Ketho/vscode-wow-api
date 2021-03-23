@@ -77,6 +77,6 @@ function C_SpecializationInfo.SetPvpTalentLocked(talentID, locked) end
 ---@class PvpTalentSlotInfo
 ---@field enabled boolean
 ---@field level number
----@field selectedTalentID number
+---@field selectedTalentID number|nil
 ---@field availableTalentIDs number[]
 local PvpTalentSlotInfo = {}

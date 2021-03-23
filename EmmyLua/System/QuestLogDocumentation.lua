@@ -426,11 +426,11 @@ local WorldQuestQuality = {
 ---@field title string
 ---@field questLogIndex number
 ---@field questID number
----@field campaignID number
+---@field campaignID number|nil
 ---@field level number
 ---@field difficultyLevel number
 ---@field suggestedGroup number
----@field frequency QuestFrequency
+---@field frequency QuestFrequency|nil
 ---@field isHeader boolean
 ---@field isCollapsed boolean
 ---@field startEvent boolean
@@ -465,11 +465,11 @@ local QuestOnMapInfo = {}
 ---@class QuestTagInfo
 ---@field tagName string
 ---@field tagID number
----@field worldQuestType number
----@field quality WorldQuestQuality
----@field tradeskillLineID number
----@field isElite boolean
----@field displayExpiration boolean
+---@field worldQuestType number|nil
+---@field quality WorldQuestQuality|nil
+---@field tradeskillLineID number|nil
+---@field isElite boolean|nil
+---@field displayExpiration boolean|nil
 local QuestTagInfo = {}
 
 ---@class QuestTheme

@@ -25,9 +25,9 @@ function C_LossOfControl.GetActiveLossOfControlDataCountByUnit(unitToken) end
 ---@field spellID number
 ---@field displayText string
 ---@field iconTexture number
----@field startTime number
----@field timeRemaining number
----@field duration number
+---@field startTime number|nil
+---@field timeRemaining number|nil
+---@field duration number|nil
 ---@field lockoutSchool number
 ---@field priority number
 ---@field displayType number

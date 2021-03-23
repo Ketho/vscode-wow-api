@@ -401,7 +401,7 @@ function C_Calendar.UpdateEvent() end
 ---@field calendarType string
 ---@field sequenceType string
 ---@field eventType CalendarEventType
----@field iconTexture number
+---@field iconTexture number|nil
 ---@field modStatus string
 ---@field inviteStatus number
 ---@field invitedBy string
@@ -425,33 +425,33 @@ local CalendarEventIndexInfo = {}
 ---@class CalendarEventInfo
 ---@field title string
 ---@field description string
----@field creator string
+---@field creator string|nil
 ---@field eventType CalendarEventType
 ---@field repeatOption number
 ---@field maxSize number
----@field textureIndex number
+---@field textureIndex number|nil
 ---@field time CalendarTime
 ---@field lockoutTime CalendarTime
 ---@field isLocked boolean
 ---@field isAutoApprove boolean
 ---@field hasPendingInvite boolean
----@field inviteStatus number
----@field inviteType number
+---@field inviteStatus number|nil
+---@field inviteType number|nil
 ---@field calendarType string
----@field communityName string
+---@field communityName string|nil
 local CalendarEventInfo = {}
 
 ---@class CalendarEventInviteInfo
----@field name string
+---@field name string|nil
 ---@field level number
----@field className string
----@field classFilename string
----@field inviteStatus number
----@field modStatus string
+---@field className string|nil
+---@field classFilename string|nil
+---@field inviteStatus number|nil
+---@field modStatus string|nil
 ---@field inviteIsMine boolean
 ---@field type number
 ---@field notes string
----@field classID number
+---@field classID number|nil
 ---@field guid string
 local CalendarEventInviteInfo = {}
 
@@ -464,9 +464,9 @@ local CalendarEventStatusOption = {}
 ---@field title string
 ---@field iconTexture number
 ---@field expansionLevel number
----@field difficultyId number
----@field mapId number
----@field isLfr boolean
+---@field difficultyId number|nil
+---@field mapId number|nil
+---@field isLfr boolean|nil
 local CalendarEventTextureInfo = {}
 
 ---@class CalendarEventTypeDisplayInfo
@@ -500,8 +500,8 @@ local CalendarGuildFilterInfo = {}
 ---@field name string
 ---@field description string
 ---@field texture number
----@field startTime CalendarTime
----@field endTime CalendarTime
+---@field startTime CalendarTime|nil
+---@field endTime CalendarTime|nil
 local CalendarHolidayInfo = {}
 
 ---@class CalendarMonthInfo
@@ -517,5 +517,5 @@ local CalendarMonthInfo = {}
 ---@field raidID number
 ---@field time CalendarTime
 ---@field difficulty number
----@field difficultyName string
+---@field difficultyName string|nil
 local CalendarRaidInfo = {}

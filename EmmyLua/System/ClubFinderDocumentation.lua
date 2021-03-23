@@ -375,7 +375,7 @@ local ClubSettingsInfo = {}
 ---@field guildLeader string
 ---@field isGuild boolean
 ---@field emblemInfo number
----@field tabardInfo GuildTabardInfo
+---@field tabardInfo GuildTabardInfo|nil
 ---@field recruitingSpecIds number[]
 ---@field recruitmentFlags number
 ---@field localeSet boolean

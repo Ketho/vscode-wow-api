@@ -14,6 +14,6 @@ function C_Texture.GetAtlasInfo(atlas) end
 ---@field bottomTexCoord number
 ---@field tilesHorizontally boolean
 ---@field tilesVertically boolean
----@field file number
----@field filename string
+---@field file number|nil
+---@field filename string|nil
 local AtlasInfo = {}

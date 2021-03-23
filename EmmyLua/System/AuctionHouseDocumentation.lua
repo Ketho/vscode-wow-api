@@ -418,10 +418,10 @@ local ItemCommodityStatus = {
 ---@class AuctionHouseBrowseQuery
 ---@field searchString string
 ---@field sorts AuctionHouseSortType[]
----@field minLevel number
----@field maxLevel number
----@field filters AuctionHouseFilter[]
----@field itemClassFilters AuctionHouseItemClassFilter[]
+---@field minLevel number|nil
+---@field maxLevel number|nil
+---@field filters AuctionHouseFilter[]|nil
+---@field itemClassFilters AuctionHouseItemClassFilter[]|nil
 local AuctionHouseBrowseQuery = {}
 
 ---@class AuctionHouseFilterGroup
@@ -431,8 +431,8 @@ local AuctionHouseFilterGroup = {}
 
 ---@class AuctionHouseItemClassFilter
 ---@field classID number
----@field subClassID number
----@field inventoryType number
+---@field subClassID number|nil
+---@field inventoryType number|nil
 local AuctionHouseItemClassFilter = {}
 
 ---@class AuctionHouseSortType
@@ -443,17 +443,17 @@ local AuctionHouseSortType = {}
 ---@class BidInfo
 ---@field auctionID number
 ---@field itemKey ItemKey
----@field itemLink string
+---@field itemLink string|nil
 ---@field timeLeft AuctionHouseTimeLeftBand
----@field minBid number
----@field bidAmount number
----@field buyoutAmount number
----@field bidder string
+---@field minBid number|nil
+---@field bidAmount number|nil
+---@field buyoutAmount number|nil
+---@field bidder string|nil
 local BidInfo = {}
 
 ---@class BrowseResultInfo
 ---@field itemKey ItemKey
----@field appearanceLink string
+---@field appearanceLink string|nil
 ---@field totalQuantity number
 ---@field minPrice number
 ---@field containsOwnerItem boolean
@@ -465,7 +465,7 @@ local BrowseResultInfo = {}
 ---@field unitPrice number
 ---@field auctionID number
 ---@field owners string[]
----@field timeLeftSeconds number
+---@field timeLeftSeconds number|nil
 ---@field numOwnerItems number
 ---@field containsOwnerItem boolean
 ---@field containsAccountItem boolean
@@ -480,8 +480,8 @@ local ItemKey = {}
 
 ---@class ItemKeyInfo
 ---@field itemName string
----@field battlePetLink string
----@field appearanceLink string
+---@field battlePetLink string|nil
+---@field appearanceLink string|nil
 ---@field quality number
 ---@field iconFileID number
 ---@field isPet boolean
@@ -495,26 +495,26 @@ local ItemKeyInfo = {}
 ---@field timeLeft AuctionHouseTimeLeftBand
 ---@field auctionID number
 ---@field quantity number
----@field itemLink string
+---@field itemLink string|nil
 ---@field containsOwnerItem boolean
 ---@field containsAccountItem boolean
 ---@field containsSocketedItem boolean
----@field bidder string
----@field minBid number
----@field bidAmount number
----@field buyoutAmount number
----@field timeLeftSeconds number
+---@field bidder string|nil
+---@field minBid number|nil
+---@field bidAmount number|nil
+---@field buyoutAmount number|nil
+---@field timeLeftSeconds number|nil
 local ItemSearchResultInfo = {}
 
 ---@class OwnedAuctionInfo
 ---@field auctionID number
 ---@field itemKey ItemKey
----@field itemLink string
+---@field itemLink string|nil
 ---@field status AuctionStatus
 ---@field quantity number
----@field timeLeftSeconds number
----@field timeLeft AuctionHouseTimeLeftBand
----@field bidAmount number
----@field buyoutAmount number
----@field bidder string
+---@field timeLeftSeconds number|nil
+---@field timeLeft AuctionHouseTimeLeftBand|nil
+---@field bidAmount number|nil
+---@field buyoutAmount number|nil
+---@field bidder string|nil
 local OwnedAuctionInfo = {}

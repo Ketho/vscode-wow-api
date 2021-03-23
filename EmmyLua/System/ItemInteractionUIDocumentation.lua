@@ -44,8 +44,8 @@ local ItemInteractionFrameType = {
 ---@field tutorialText string
 ---@field buttonText string
 ---@field frameType ItemInteractionFrameType
----@field description string
----@field cost number
----@field currencyTypeId number
----@field dropInSlotSoundKitId number
+---@field description string|nil
+---@field cost number|nil
+---@field currencyTypeId number|nil
+---@field dropInSlotSoundKitId number|nil
 local ItemInteractionFrameInfo = {}

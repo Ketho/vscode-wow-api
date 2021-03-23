@@ -99,7 +99,7 @@ local MythicPlusDate = {}
 local MythicPlusKeystoneAffix = {}
 
 ---@class MythicPlusMember
----@field name string
+---@field name string|nil
 ---@field specID number
 ---@field classID number
 local MythicPlusMember = {}

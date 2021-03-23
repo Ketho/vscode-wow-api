@@ -208,11 +208,11 @@ local AutoCombatSpellInfo = {}
 ---@field maxXP number
 ---@field height number
 ---@field scale number
----@field displayScale number
----@field displayHeight number
----@field classSpec number
----@field className string
----@field flavorText string
+---@field displayScale number|nil
+---@field displayHeight number|nil
+---@field classSpec number|nil
+---@field className string|nil
+---@field flavorText string|nil
 ---@field classAtlas string
 ---@field portraitIconID number
 ---@field textureKit string
@@ -232,7 +232,7 @@ local AutoCombatTroopInfo = {}
 ---@field oldHealth number
 ---@field newHealth number
 ---@field maxHealth number
----@field points number
+---@field points number|nil
 local AutoMissionCombatEventInfo = {}
 
 ---@class AutoMissionEnvironmentEffect
@@ -282,15 +282,15 @@ local FollowerDisplayID = {}
 ---@field maxXP number
 ---@field height number
 ---@field scale number
----@field movementType number
----@field impactDelay number
----@field castID number
----@field castSoundID number
----@field impactID number
----@field impactSoundID number
----@field targetImpactID number
----@field targetImpactSoundID number
----@field className string
+---@field movementType number|nil
+---@field impactDelay number|nil
+---@field castID number|nil
+---@field castSoundID number|nil
+---@field impactID number|nil
+---@field impactSoundID number|nil
+---@field targetImpactID number|nil
+---@field targetImpactSoundID number|nil
+---@field className string|nil
 ---@field classAtlas string
 ---@field portraitIconID number
 ---@field textureKit string
@@ -317,7 +317,7 @@ local GarrisonAbilityCounterInfo = {}
 ---@field isTrait boolean
 ---@field isSpecialization boolean
 ---@field temporary boolean
----@field category string
+---@field category string|nil
 ---@field counters GarrisonAbilityCounterInfo[]
 ---@field isEmptySlot boolean
 local GarrisonAbilityInfo = {}
@@ -349,7 +349,7 @@ local GarrisonFollowerDeathInfo = {}
 ---@field name string
 ---@field factor number
 ---@field description string
----@field ability GarrisonAbilityInfo
+---@field ability GarrisonAbilityInfo|nil
 local GarrisonMechanicInfo = {}
 
 ---@class GarrisonPlotInstanceMapInfo
@@ -362,8 +362,8 @@ local GarrisonPlotInstanceMapInfo = {}
 ---@class MissionDeploymentInfo
 ---@field location string
 ---@field xp number
----@field environment string
----@field environmentDesc string
+---@field environment string|nil
+---@field environmentDesc string|nil
 ---@field environmentTexture number
 ---@field locTextureKit string
 ---@field isExhausting boolean

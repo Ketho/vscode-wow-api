@@ -98,7 +98,7 @@ local GarrisonTalentTreeInfo = {}
 local GuildTabardInfo = {}
 
 ---@class TradeSkillRecipeInfo
----@field alternateVerb string
+---@field alternateVerb string|nil
 ---@field categoryID number
 ---@field craftable boolean
 ---@field difficulty string
@@ -108,11 +108,11 @@ local GuildTabardInfo = {}
 ---@field icon number
 ---@field learned boolean
 ---@field name string
----@field nextRecipeID number
+---@field nextRecipeID number|nil
 ---@field numAvailable number
 ---@field numIndents number
 ---@field numSkillUps number
----@field previousRecipeID number
+---@field previousRecipeID number|nil
 ---@field productQuality number
 ---@field recipeID number
 ---@field sourceType number
@@ -123,13 +123,13 @@ local TradeSkillRecipeInfo = {}
 ---@field categoryID number
 ---@field invType number
 ---@field isCollected boolean
----@field isHideVisual boolean
+---@field isHideVisual boolean|nil
 ---@field itemID number
 ---@field itemModID number
----@field name string
----@field quality number
+---@field name string|nil
+---@field quality number|nil
 ---@field sourceID number
----@field sourceType number
+---@field sourceType number|nil
 ---@field visualID number
 local AppearanceSourceInfo = {}
 
@@ -138,7 +138,7 @@ local AppearanceSourceInfo = {}
 ---@field factionID number
 ---@field icon number
 ---@field numObjectives number
----@field turninRequirementText string
+---@field turninRequirementText string|nil
 local BountyInfo = {}
 
 ---@class CharCustomizationCategory

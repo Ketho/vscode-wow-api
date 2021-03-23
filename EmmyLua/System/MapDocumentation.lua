@@ -253,7 +253,7 @@ local UIMapType = {
 ---@field areaPoiID number
 ---@field name string
 ---@field atlasName string
----@field uiTextureKit string
+---@field uiTextureKit string|nil
 local MapBannerInfo = {}
 
 ---@class MapLinkInfo

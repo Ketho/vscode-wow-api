@@ -134,9 +134,9 @@ function C_FriendList.SortWho(sorting) end
 ---@class FriendInfo
 ---@field connected boolean
 ---@field name string
----@field className string
----@field area string
----@field notes string
+---@field className string|nil
+---@field area string|nil
+---@field notes string|nil
 ---@field guid string
 ---@field level number
 ---@field dnd boolean
@@ -152,6 +152,6 @@ local FriendInfo = {}
 ---@field raceStr string
 ---@field classStr string
 ---@field area string
----@field filename string
+---@field filename string|nil
 ---@field gender number
 local WhoInfo = {}

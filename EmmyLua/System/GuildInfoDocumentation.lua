@@ -69,8 +69,8 @@ function C_GuildInfo.SetNote(guid, note, isPublic) end
 ---@field isSticky boolean
 ---@field isHeader boolean
 ---@field newsType number
----@field whoText string
----@field whatText string
+---@field whoText string|nil
+---@field whatText string|nil
 ---@field newsDataID number
 ---@field data number[]
 ---@field weekday number
