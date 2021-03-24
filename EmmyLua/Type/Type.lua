@@ -1,6 +1,9 @@
 ---@class object
 local object = {}
 
+---@class unknown
+local unknown = {}
+
 ---@alias FrameType
 ---| '"Frame"'
 ---| '"ArchaeologyDigSiteFrame"'

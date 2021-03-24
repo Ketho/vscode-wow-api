@@ -39,6 +39,8 @@ local validTypes = {
 }
 
 local redirects = {}
+local validatedApi = {}
+local nonValidatedApi = {}
 
 local function GetApiName(name)
 	return name:match("API (.+)"):gsub(" ", "_")
@@ -116,7 +118,12 @@ function m:ParsePages(options)
 				self:ParseSignature(info.signature.lines, info)
 			end
 			-- self:PrintApi(info)
-			self:ValidateApi(info)
+			local hasError = self:ValidateApi(info)
+			if not hasError then
+				validatedApi[info.apiName] = info
+			else
+				nonValidatedApi[info.apiName] = info
+			end
 		end
 	end
 end
@@ -208,50 +215,72 @@ function m:PrintApi(info)
 	print()
 end
 
+local function ValidationError(info, msg)
+	info.hasError = true
+	-- print(msg)
+end
+
 function m:ValidateApi(info)
 	if IsRedirectTarget(info.apiName) then
-		-- print(string.format("%d:%s - documents multiple functions", info.idx, info.apiName))
-		return
+		ValidationError(info, string.format("%d:%s - documents multiple functions", info.idx, info.apiName))
 	end
 	if not info.signature.name then
-		print(string.format("%d:%s - signature not found", info.idx, info.apiName))
+		ValidationError(info, string.format("%d:%s - signature not found", info.idx, info.apiName))
 	elseif #info.signature.name == 0 then
-		print(string.format("%d:%s - signature function name not found", info.idx, info.apiName))
+		ValidationError(info, string.format("%d:%s - signature function name not found", info.idx, info.apiName))
 	elseif info.apiName ~= info.signature.name then
-		print(string.format("%d:%s - signature function name does not match: %s", info.idx, info.apiName, info.signature.name))
+		ValidationError(info, string.format("%d:%s - signature function name does not match: %s", info.idx, info.apiName, info.signature.name))
+	end
+
+	if info.signature.arguments then
+		for i, param in pairs(info.signature.arguments) do
+			if not info.params.arguments[i] then
+				ValidationError(info, string.format("%d:%s - could not find param arguments", info.idx, info.apiName))
+			end
+		end
 	end
 	for i, param in pairs(info.params.arguments) do
 		if not info.signature.arguments then
-			print(string.format("%d:%s - could not find signature arguments", info.idx, info.apiName))
+			ValidationError(info, string.format("%d:%s - could not find signature arguments", info.idx, info.apiName))
 		elseif param.type == "UNKNOWN" then
-			print(string.format("%d:%s - argument type could not be parsed: %s, %s", info.idx, info.apiName, info.signature.arguments[i], param.name))
+			ValidationError(info, string.format("%d:%s - argument type could not be parsed: %s, %s", info.idx, info.apiName, info.signature.arguments[i], param.name))
 		elseif info.signature.arguments[i] ~= param.name then
-			print(string.format("%d:%s - argument does not match: %s, %s", info.idx, info.apiName, info.signature.arguments[i], param.name))
+			ValidationError(info, string.format("%d:%s - argument does not match: %s, %s", info.idx, info.apiName, info.signature.arguments[i], param.name))
 		end
 		if not validTypes[param.type] then
-			print(string.format("%d:%s - argument type is not valid: %s, %s", info.idx, info.apiName, param.name, param.type))
+			ValidationError(info, string.format("%d:%s - argument type is not valid: %s, %s", info.idx, info.apiName, param.name, param.type))
+		end
+	end
+
+	if info.signature.returns then
+		for i, param in pairs(info.signature.returns) do
+			if not info.params.returns[i] then
+				ValidationError(info, string.format("%d:%s - could not find param returns", info.idx, info.apiName))
+			end
 		end
 	end
 	for i, param in pairs(info.params.returns) do
 		if not info.signature.returns then
-			print(string.format("%d:%s - could not find signature returns", info.idx, info.apiName))
+			ValidationError(info, string.format("%d:%s - could not find signature returns", info.idx, info.apiName))
 		elseif param.type == "UNKNOWN" then
-			print(string.format("%d:%s - return type could not be parsed: %s, %s", info.idx, info.apiName, info.signature.returns[i], param.name))
+			ValidationError(info, string.format("%d:%s - return type could not be parsed: %s, %s", info.idx, info.apiName, info.signature.returns[i], param.name))
 		elseif info.signature.returns[i] ~= param.name then
-			print(string.format("%d:%s - return value does not match: %s, %s", info.idx, info.apiName, info.signature.returns[i], param.name))
+			ValidationError(info, string.format("%d:%s - return value does not match: %s, %s", info.idx, info.apiName, info.signature.returns[i], param.name))
 		end
 		if not validTypes[param.type] then
-			print(string.format("%d:%s - return type is not valid: %s, %s", info.idx, info.apiName, param.name, param.type))
+			ValidationError(info, string.format("%d:%s - return type is not valid: %s, %s", info.idx, info.apiName, param.name, param.type))
 		end
 	end
+	return info.hasError
 end
 
 m:ParsePages()
 -- m:ParsePages({range = {844, 850}})
--- m:ParsePages({name = "BNConnected"})
+-- m:ParsePages({name = "C_Garrison.HasShipyard"})
 
 -- for k, v in pairs(redirects) do
 -- 	print(k, v[1], v[2])
 -- end
 
-print("done")
+print("* Parsed XML")
+return {validatedApi, nonValidatedApi}
