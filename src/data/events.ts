@@ -216,7 +216,7 @@ export const eventsDoc: EventInterface = {
 	AUCTION_HOUSE_BROWSE_FAILURE: {},
 	AUCTION_HOUSE_BROWSE_RESULTS_ADDED: {
 		Payload: [
-			{Name: "addedBrowseResults", Type: "table"},
+			{Name: "addedBrowseResults", Type: "BrowseResultInfo[]"},
 		],
 	},
 	AUCTION_HOUSE_BROWSE_RESULTS_UPDATED: {},
@@ -277,7 +277,7 @@ export const eventsDoc: EventInterface = {
 	},
 	AZERITE_EMPOWERED_ITEM_SELECTION_UPDATED: {
 		Payload: [
-			{Name: "azeriteEmpoweredItemLocation", Type: "table"},
+			{Name: "azeriteEmpoweredItemLocation", Type: "ItemLocationMixin"},
 		],
 	},
 	AZERITE_ESSENCE_ACTIVATED: {
@@ -313,17 +313,17 @@ export const eventsDoc: EventInterface = {
 	},
 	AZERITE_ITEM_EXPERIENCE_CHANGED: {
 		Payload: [
-			{Name: "azeriteItemLocation", Type: "table"},
+			{Name: "azeriteItemLocation", Type: "ItemLocationMixin"},
 			{Name: "oldExperienceAmount", Type: "number"},
 			{Name: "newExperienceAmount", Type: "number"},
 		],
 	},
 	AZERITE_ITEM_POWER_LEVEL_CHANGED: {
 		Payload: [
-			{Name: "azeriteItemLocation", Type: "table"},
+			{Name: "azeriteItemLocation", Type: "ItemLocationMixin"},
 			{Name: "oldPowerLevel", Type: "number"},
 			{Name: "newPowerLevel", Type: "number"},
-			{Name: "unlockedEmpoweredItemsInfo", Type: "table"},
+			{Name: "unlockedEmpoweredItemsInfo", Type: "UnlockedAzeriteEmpoweredItems[]"},
 		],
 	},
 	BAG_CLOSED: {
@@ -2070,13 +2070,13 @@ export const eventsDoc: EventInterface = {
 	},
 	CLUB_FINDER_APPLICANT_INVITE_RECIEVED: {
 		Payload: [
-			{Name: "clubFinderGUIDs", Type: "table"},
+			{Name: "clubFinderGUIDs", Type: "string[]"},
 		],
 	},
 	CLUB_FINDER_APPLICATIONS_UPDATED: {
 		Payload: [
 			{Name: "type", Type: "ClubFinderRequestType"},
-			{Name: "clubFinderGUIDs", Type: "table"},
+			{Name: "clubFinderGUIDs", Type: "string[]"},
 		],
 	},
 	CLUB_FINDER_CLUB_LIST_RETURNED: {
@@ -2115,7 +2115,7 @@ export const eventsDoc: EventInterface = {
 	},
 	CLUB_FINDER_POST_UPDATED: {
 		Payload: [
-			{Name: "clubFinderGUIDs", Type: "table"},
+			{Name: "clubFinderGUIDs", Type: "string[]"},
 		],
 	},
 	CLUB_FINDER_RECRUITMENT_POST_RETURNED: {
@@ -2416,7 +2416,7 @@ export const eventsDoc: EventInterface = {
 	CORPSE_OUT_OF_RANGE: {},
 	COVENANT_CALLINGS_UPDATED: {
 		Payload: [
-			{Name: "callings", Type: "table"},
+			{Name: "callings", Type: "BountyInfo[]"},
 		],
 	},
 	COVENANT_CHOSEN: {
@@ -2731,7 +2731,7 @@ export const eventsDoc: EventInterface = {
 			{Name: "canComplete", Type: "boolean"},
 			{Name: "success", Type: "boolean"},
 			{Name: "bonusRollSuccess", Type: "boolean"},
-			{Name: "followerDeaths", Type: "table"},
+			{Name: "followerDeaths", Type: "GarrisonFollowerDeathInfo[]"},
 			{Name: "autoCombatResult", Type: "AutoCombatResult", Nilable: true},
 		],
 	},
@@ -3122,7 +3122,7 @@ export const eventsDoc: EventInterface = {
 	ITEM_INTERACTION_CLOSE: {},
 	ITEM_INTERACTION_ITEM_SELECTION_UPDATED: {
 		Payload: [
-			{Name: "itemLocation", Type: "table", Nilable: true},
+			{Name: "itemLocation", Type: "ItemLocationMixin", Nilable: true},
 		],
 	},
 	ITEM_INTERACTION_OPEN: {},
@@ -3412,7 +3412,7 @@ export const eventsDoc: EventInterface = {
 	LORE_TEXT_UPDATED_CAMPAIGN: {
 		Payload: [
 			{Name: "campaignID", Type: "number"},
-			{Name: "textEntries", Type: "table"},
+			{Name: "textEntries", Type: "LoreTextEntry[]"},
 		],
 	},
 	LOSS_OF_CONTROL_ADDED: {
@@ -4827,12 +4827,12 @@ export const eventsDoc: EventInterface = {
 	TRANSMOGRIFY_OPEN: {},
 	TRANSMOGRIFY_SUCCESS: {
 		Payload: [
-			{Name: "transmogLocation", Type: "table"},
+			{Name: "transmogLocation", Type: "TransmogLocationMixin"},
 		],
 	},
 	TRANSMOGRIFY_UPDATE: {
 		Payload: [
-			{Name: "transmogLocation", Type: "table", Nilable: true},
+			{Name: "transmogLocation", Type: "TransmogLocationMixin", Nilable: true},
 			{Name: "action", Type: "string", Nilable: true},
 		],
 	},

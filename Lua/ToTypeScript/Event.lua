@@ -20,6 +20,10 @@ local types = {
 	bool = "boolean",
 }
 
+local function GetType(paramType)
+	return types[paramType] or paramType
+end
+
 local function ToTypeScript()
 	local t = {}
 	for _, event in pairs(APIDocumentation.events) do
@@ -34,7 +38,14 @@ local function ToTypeScript()
 				tinsert(t, "\t\tPayload: [")
 				for _, param in pairs(event.Payload) do
 					-- to do: handle table types and InnerType
-					local typeName = types[param.Type] or param.Type
+					local typeName
+					if param.Mixin then
+						typeName = param.Mixin
+					elseif param.InnerType then
+						typeName = GetType(param.InnerType).."[]"
+					else
+						typeName = GetType(param.Type)
+					end
 					local s = format('\t\t\t{Name: "%s", Type: "%s"', param.Name, typeName)
 					if param.Nilable then
 						s = s..", Nilable: true"

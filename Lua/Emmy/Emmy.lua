@@ -7,8 +7,12 @@ local types = {
 local supportedTables = {
 	Enumeration = true,
 	Structure = true,
-	-- Constants = true,
+	--Constants = true,
 }
+
+local function GetType(paramType)
+	return types[paramType] or paramType
+end
 
 function Emmy:GetSystem(system)
 	local tbl = {}
@@ -28,9 +32,6 @@ function Emmy:GetSystem(system)
 	return table.concat(tbl, "\n\n")
 end
 
-function Emmy:GetType(paramType)
-	return types[paramType] or paramType
-end
 
 local fs_doc = "---[Documentation](https://wow.gamepedia.com/%s)"
 
@@ -72,7 +73,7 @@ function Emmy:GetTable(apiTable)
 			tinsert(tbl, self:GetField("field", field))
 		end
 		tinsert(tbl, format("local %s = {}", apiTable.Name))
-	-- elseif apiTable.Type == "Constants" then
+	--elseif apiTable.Type == "Constants" then
 	end
 	return table.concat(tbl, "\n")
 end
@@ -84,9 +85,9 @@ function Emmy:GetField(annotation, apiTable)
 	if apiTable.Mixin then
 		paramType = apiTable.Mixin
 	elseif apiTable.InnerType then
-		paramType = self:GetType(apiTable.InnerType).."[]"
+		paramType = GetType(apiTable.InnerType).."[]"
 	else
-		paramType = self:GetType(apiTable.Type)
+		paramType = GetType(apiTable.Type)
 	end
 	-- field annotations dont seem to support nilable params on hover
 	local nilable = ""
