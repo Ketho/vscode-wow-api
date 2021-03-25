@@ -19,29 +19,29 @@ function CreateColor(r, g, b, a) end
 ---[FrameXML](https://www.townlong-yak.com/framexml/go/ColorMixin:IsEqualTo)
 function ColorMixin:IsEqualTo(otherColor) end
 
----@return number
----@return number
----@return number
+---@return number r
+---@return number g
+---@return number b
 ---[FrameXML](https://www.townlong-yak.com/framexml/go/ColorMixin:GetRGB)
 function ColorMixin:GetRGB() end
 
----@return number
----@return number
----@return number
+---@return number r
+---@return number g
+---@return number b
 ---[FrameXML](https://www.townlong-yak.com/framexml/go/ColorMixin:GetRGBAsBytes)
 function ColorMixin:GetRGBAsBytes() end
 
----@return number
----@return number
----@return number
----@return number
+---@return number r
+---@return number g
+---@return number b
+---@return number a
 ---[FrameXML](https://www.townlong-yak.com/framexml/go/ColorMixin:GetRGBA)
 function ColorMixin:GetRGBA() end
 
----@return number
----@return number
----@return number
----@return number
+---@return number r
+---@return number g
+---@return number b
+---@return number a
 ---[FrameXML](https://www.townlong-yak.com/framexml/go/ColorMixin:GetRGBAAsBytes)
 function ColorMixin:GetRGBAAsBytes() end
 
