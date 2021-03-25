@@ -1,8 +1,14 @@
 # Change Log
 
+## [0.4.2] - 2021-03-25
+### Added
+- 🌙 EmmyLua: Added `ColorMixin`, `Vector2DMixin`, `Vector3DMixin` from PR [#5](https://github.com/Ketho/vscode-wow-api/pull/5)
+- 🌙 EmmyLua: Parsed and validated 55% (744/1345) of non-Blizzard documented API that have an existing Wowpedia page
+- 🐞 Bug Fixes: Event payload params properly show Mixins and arrays of types instead of just `table`
+
 ## [0.4.1] - 2021-03-23
 ### Added
-- 🌙 EmmyLua: Added `GetUnitName`, `UIFrameFadeIn`, `Mixin`, `ShowUIPanel`, `getglobal` and similar functions (#4)
+- 🌙 EmmyLua: Added `GetUnitName`, `UIFrameFadeIn`, `Mixin`, `ShowUIPanel`, `getglobal` and similar functions #4
 - 🛠 Improvements: CVars are matched case insensitive and show only when hovering over a string literal
 - 📚 Documentation: Added documentation for generating API documentation
 
@@ -45,7 +51,7 @@
 ## [0.3.1] - 2021-03-03
 ### Changed
 - 🎨 Style: Changed enum context from `enum: integer 1` to just `integer 1`
-- 🐞 Bug Fixes: Event hover always appearing at the initial position (#2)
+- 🐞 Bug Fixes: Event hover always appearing at the initial position #2
 
 ## [0.3.0] - 2021-03-03
 - 🚨 Breaking Changes: v1.17.2 of the Lua Language Server gets stuck on hover ([#437](https://github.com/sumneko/lua-language-server/issues/437)), please revert to v1.17.0 until this is resolved
@@ -106,6 +112,7 @@
 ### Added
 - 🚧 Wip: Development work
 
+[0.4.2]: https://github.com/Ketho/vscode-wow-api/releases/tag/v0.4.2
 [0.4.1]: https://github.com/Ketho/vscode-wow-api/releases/tag/v0.4.1
 [0.4.0]: https://github.com/Ketho/vscode-wow-api/releases/tag/v0.4.0
 [0.3.7]: https://github.com/Ketho/vscode-wow-api/releases/tag/v0.3.7

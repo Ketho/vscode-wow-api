@@ -38,7 +38,7 @@ function Vector3D_CreateNormalVectorFromYawPitch(yawRadians, pitchRadians) end
 ---@field y number|nil
 ---@field z number|nil
 ---[FrameXML](https://www.townlong-yak.com/framexml/go/Vector3DMixin)
-local Vector3DMixin = {}
+Vector3DMixin = {}
 
 ---@param x number
 ---@param y number

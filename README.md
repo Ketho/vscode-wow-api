@@ -9,7 +9,7 @@ This extension uses [Sumneko's](https://marketplace.visualstudio.com/items?itemN
 
 ### Features
 #### [API](https://wow.gamepedia.com/World_of_Warcraft_API)
-* Global API
+* Global API: Parsed and validated 55% (744/1345) of non-Blizzard documented API that have an existing Wowpedia page
 * `C_` namespaced systems
 * Lua shorthand references e.g. `format` (string.format) and `tinsert` (table.insert)
 * Custom WoW Lua functions e.g. `wipe` and `strsplit`
