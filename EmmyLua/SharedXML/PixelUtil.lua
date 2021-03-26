@@ -43,9 +43,7 @@ function PixelUtil.SetSize(region, width, height, minWidthPixels, minHeightPixel
 ---[FrameXML](https://www.townlong-yak.com/framexml/live/PixelUtil.lua)
 function PixelUtil.SetPoint(region, point, relativeTo, relativePoint, offsetX, offsetY, minOffsetXPixels, minOffsetYPixels) end
 
---There is currently no StatusBar as widget type. So the last function is commented out.
-
---[[ ---@param statusBar StatusBar
+---@param statusBar StatusBar
 ---@param value number
 ---[FrameXML](https://www.townlong-yak.com/framexml/live/PixelUtil.lua)
-function PixelUtil.SetStatusBarValue(statusBar, value) end ]]
+function PixelUtil.SetStatusBarValue(statusBar, value) end
