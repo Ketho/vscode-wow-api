@@ -7,19 +7,19 @@ local StatusBar = {}
 ---[Documentation](https://wow.gamepedia.com/API_ScriptObject_GetScript)
 function StatusBar:GetScript(scriptType, bindingType) end
 
----@param scriptType ScriptButton
+---@param scriptType ScriptStatusBar
 ---@return boolean hasScript
 ---[Documentation](https://wow.gamepedia.com/API_ScriptObject_HasScript)
 function StatusBar:HasScript(scriptType) end
 
----@param scriptType ScriptButton
+---@param scriptType ScriptStatusBar
 ---@param handler function
 ---@param bindingType LE_SCRIPT_BINDING_TYPE
 ---@return boolean success
 ---[Documentation](https://wow.gamepedia.com/API_ScriptObject_HookScript)
 function StatusBar:HookScript(scriptType, handler, bindingType) end
 
----@param scriptType ScriptButton
+---@param scriptType ScriptStatusBar
 ---@param handler function
 ---[Documentation](https://wow.gamepedia.com/API_ScriptObject_SetScript)
 function StatusBar:SetScript(scriptType, handler) end
