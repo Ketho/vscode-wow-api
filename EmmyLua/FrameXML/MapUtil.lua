@@ -8,7 +8,7 @@ function MapUtil.IsMapTypeZone(mapID) end
 
 ---@param mapID number
 ---@param mapType UIMapType
----@param topMost boolean
+---@param topMost? boolean
 ---@return UiMapDetails
 ---[FrameXML](https://www.townlong-yak.com/framexml/live/MapUtil.lua)
 function MapUtil.GetMapParentInfo(mapID, mapType, topMost) end
