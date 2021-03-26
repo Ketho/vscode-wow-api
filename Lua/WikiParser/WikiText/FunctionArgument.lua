@@ -1,4 +1,4 @@
-local nonBlizzDocumented = require("Lua/WikiParser/WikiText/NonBlizzardDocumented")
+local nonBlizzDocumented = require("Lua/WikiParser/WikiText/NonBlizzardDocumented")[1]
 
 local file			= io.open("Lua/Data/input/World_of_Warcraft_API.txt", "r")
 local file_valid	= io.open("Lua/Data/output/World_of_Warcraft_API_valid.txt", "w")

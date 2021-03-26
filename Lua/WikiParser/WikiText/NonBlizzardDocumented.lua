@@ -16,4 +16,4 @@ for _, name in pairs(globalApi) do
 	end
 end
 
-return nonBlizzDocumented
+return {nonBlizzDocumented, blizzDoc}

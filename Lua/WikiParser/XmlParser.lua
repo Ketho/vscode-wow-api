@@ -13,10 +13,14 @@ if not path then
 	local output = "Lua/Data/cache/NonBlizzardDocumented.txt"
 	print("Parser: no XML file found; export it from Wowpedia with "..output)
 	if not lfs.attributes(output) then
-		local file = io.open(output, "w")
-		local nonBlizzDocumented = require("Lua/WikiParser/WikiText/NonBlizzardDocumented")
+		local nonBlizzDocumented, blizzDocumented = unpack(require("Lua/WikiParser/WikiText/NonBlizzardDocumented"))
+		local file1 = io.open(output, "w")
 		for _, name in pairs(Util:ProxySort(nonBlizzDocumented)) do
-			file:write("API "..name.."\n")
+			file1:write("API "..name.."\n")
+		end
+		local file2 = io.open("Lua/Data/cache/BlizzardDocumented.txt", "w")
+		for _, name in pairs(Util:ProxySort(blizzDocumented)) do
+			file2:write("API "..name.."\n")
 		end
 	end
 	return
@@ -282,5 +286,5 @@ m:ParsePages()
 -- 	print(k, v[1], v[2])
 -- end
 
-print("* Parsed XML")
+print("Parsed XML")
 return {validatedApi, nonValidatedApi}

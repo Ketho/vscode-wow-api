@@ -1,9 +1,15 @@
 -- this place is a mess
 local wowpedia_arguments = require("Lua/WikiParser/WikiText/FunctionArgument")
-local nonBlizzDocumented = require("Lua/WikiParser/WikiText/NonBlizzardDocumented")
+local nonBlizzDocumented = require("Lua/WikiParser/WikiText/NonBlizzardDocumented")[1]
 local manualDocFile = io.open("EmmyLua/GlobalAPI/GlobalAPI.lua")
 
-local validated, nonvalidated = unpack(require("Lua/WikiParser/XmlParser"))
+local parserData = require("Lua/WikiParser/XmlParser")
+local validated, nonvalidated
+if type(parserData) == "table" then
+	validated, nonvalidated = unpack(parserData)
+else
+	return
+end
 local converter = require("Lua/WikiParser/WikiText/WowpediaConverter")
 local convertedApi = converter:ConvertApi(validated)
 
