@@ -21,8 +21,8 @@ function AreVector2DEqual(left, right) end
 ---[FrameXML](https://www.townlong-yak.com/framexml/go/Vector2DMixin:IsEqualTo)
 function Vector2DMixin:IsEqualTo(otherVector) end
 
----@return number
----@return number
+---@return number x
+---@return number y
 ---[FrameXML](https://www.townlong-yak.com/framexml/go/Vector2DMixin:GetXY)
 function Vector2DMixin:GetXY() end
 
