@@ -68,7 +68,7 @@ local IntervalDescription_Subtable = {}
 ---@type table<number, IntervalDescription_Subtable>
 ---[FrameXML](https://www.townlong-yak.com/framexml/live/TimeUtil.lua)
 SecondsFormatter.IntervalDescription = {
-    [1] = {},
+	[1] = {},
 	[2] = {},
 	[3] = {},
 	[4] = {}
