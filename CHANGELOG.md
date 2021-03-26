@@ -1,5 +1,11 @@
 # Change Log
 
+## [0.4.3] - 2021-03-26
+### Added
+- 🌙 EmmyLua: Added `MapUtil.lua`, `EasingUtil.lua`, `PixelUtil.lua`, `TimeUtil.lua` from PR #6
+- 🌙 EmmyLua: Added basic function signatures for the StatusBar widget
+- 🐞 Documentation: Added known issues section to the readme
+
 ## [0.4.2] - 2021-03-25
 ### Added
 - 🌙 EmmyLua: Added `ColorMixin`, `Vector2DMixin`, `Vector3DMixin` from PR [#5](https://github.com/Ketho/vscode-wow-api/pull/5)
@@ -112,6 +118,7 @@
 ### Added
 - 🚧 Wip: Development work
 
+[0.4.3]: https://github.com/Ketho/vscode-wow-api/releases/tag/v0.4.3
 [0.4.2]: https://github.com/Ketho/vscode-wow-api/releases/tag/v0.4.2
 [0.4.1]: https://github.com/Ketho/vscode-wow-api/releases/tag/v0.4.1
 [0.4.0]: https://github.com/Ketho/vscode-wow-api/releases/tag/v0.4.0

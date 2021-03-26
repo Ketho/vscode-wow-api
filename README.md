@@ -9,7 +9,7 @@ This extension uses [Sumneko's](https://marketplace.visualstudio.com/items?itemN
 
 ### Features
 #### [API](https://wow.gamepedia.com/World_of_Warcraft_API)
-* Global API: Parsed and validated 55% (744/1345) of non-Blizzard documented API that have an existing Wowpedia page
+* Global API: Parsed 55% (744/1345) of non-Blizzard documented API that have an existing Wowpedia page
 * `C_` namespaced systems
 * Lua shorthand references e.g. `format` (string.format) and `tinsert` (table.insert)
 * Custom WoW Lua functions e.g. `wipe` and `strsplit`
@@ -30,6 +30,15 @@ This extension uses [Sumneko's](https://marketplace.visualstudio.com/items?itemN
 * `LE_` Lua Enums
 
 ![](https://github.com/Ketho/vscode-wow-api/raw/master/img/enum.gif)
+
+### Known issues ###
+The hover tooltip gets filled with all `@alias` params for frame types and events.
+![](https://user-images.githubusercontent.com/1073877/112683615-1d10fa80-8e72-11eb-866d-9c50543e762e.png)
+
+When using `CreateFrame()` all objects returned will share the same methods, e.g. `local f = CreateFrame("Frame")` would have the methods from GameTooltip after running `local tooltip = CreateFrame("GameTooltip")`
+![](https://user-images.githubusercontent.com/1073877/112684545-76c5f480-8e73-11eb-9a2c-3a720a1b943f.png)
+
+![](https://user-images.githubusercontent.com/1073877/112685017-3adf5f00-8e74-11eb-918a-0f4cd6d56572.png)
 
 ### Generating documentation
 * Blizzard documented functions are generated from [Blizzard_APIDocumentation](https://github.com/Gethe/wow-ui-source/tree/live/AddOns/Blizzard_APIDocumentation).
