@@ -24,7 +24,7 @@ function PixelUtil.SetWidth(region, width, minPixels) end
 ---[FrameXML](https://www.townlong-yak.com/framexml/live/PixelUtil.lua)
 function PixelUtil.SetHeight(region, height, minPixels) end
 
----@param region Region|string
+---@param region Region
 ---@param width number
 ---@param height number
 ---@param minWidthPixels? number
