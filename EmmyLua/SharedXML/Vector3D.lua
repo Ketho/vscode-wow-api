@@ -22,8 +22,8 @@ function Vector3D_NormalizeVector(vector) end
 function Vector3D_ScaleVector(scalar, vector) end
 
 ---@param vector Vector3DMixin
----@return number
----@return number
+---@return number yaw
+---@return number pitch
 ---[FrameXML](https://www.townlong-yak.com/framexml/go/Vector3D_CalculateYawPitchFromNormalVector)
 function Vector3D_CalculateYawPitchFromNormalVector(vector) end
 
@@ -58,9 +58,9 @@ function AreVector3DEqual(left, right) end
 ---[FrameXML](https://www.townlong-yak.com/framexml/go/Vector3DMixin:IsEqualTo)
 function Vector3DMixin:IsEqualTo(otherVector) end
 
----@return number
----@return number
----@return number
+---@return number x
+---@return number y
+---@return number z
 ---[FrameXML](https://www.townlong-yak.com/framexml/go/Vector3DMixin:GetXYZ)
 function Vector3DMixin:GetXYZ() end
 
