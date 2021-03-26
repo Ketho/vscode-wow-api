@@ -12,19 +12,19 @@ function PixelUtil.GetPixelToUIUnitFactor() end
 ---[FrameXML](https://www.townlong-yak.com/framexml/live/PixelUtil.lua)
 function PixelUtil.GetNearestPixelSize(uiUnitSize, layoutScale, minPixels) end
 
----@param region Region|string
+---@param region Region
 ---@param width number
 ---@param minPixels? number
 ---[FrameXML](https://www.townlong-yak.com/framexml/live/PixelUtil.lua)
 function PixelUtil.SetWidth(region, width, minPixels) end
 
----@param region Region|string
+---@param region Region
 ---@param height number
 ---@param minPixels? number
 ---[FrameXML](https://www.townlong-yak.com/framexml/live/PixelUtil.lua)
 function PixelUtil.SetHeight(region, height, minPixels) end
 
----@param region Region|string
+---@param region Region
 ---@param width number
 ---@param height number
 ---@param minWidthPixels? number
@@ -32,7 +32,7 @@ function PixelUtil.SetHeight(region, height, minPixels) end
 ---[FrameXML](https://www.townlong-yak.com/framexml/live/PixelUtil.lua)
 function PixelUtil.SetSize(region, width, height, minWidthPixels, minHeightPixels) end
 
----@param region Region|string
+---@param region Region
 ---@param point AnchorPoint
 ---@param relativeTo Region|string
 ---@param relativePoint AnchorPoint

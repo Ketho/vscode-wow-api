@@ -1,27 +1,20 @@
 ---False in some locale specific files.
----
----[FrameXML](https://www.townlong-yak.com/framexml/live/TimeUtil.lua)
 ---@type boolean
 TIME_UTIL_WHITE_SPACE_STRIPPABLE = true
 
 ---@type number
----[FrameXML](https://www.townlong-yak.com/framexml/live/TimeUtil.lua)
 SECONDS_PER_MIN = 0
 
 ---@type number
----[FrameXML](https://www.townlong-yak.com/framexml/live/TimeUtil.lua)
 SECONDS_PER_HOUR = 0
 
 ---@type number
----[FrameXML](https://www.townlong-yak.com/framexml/live/TimeUtil.lua)
 SECONDS_PER_DAY = 0
 
 ---@type number
----[FrameXML](https://www.townlong-yak.com/framexml/live/TimeUtil.lua)
 SECONDS_PER_MONTH = 0
 
 ---@type number
----[FrameXML](https://www.townlong-yak.com/framexml/live/TimeUtil.lua)
 SECONDS_PER_YEAR = 0
 
 ---@param seconds number
@@ -41,7 +34,6 @@ function MinutesToSeconds(minutes) end
 function HasTimePassed(testTime, amountOfTime) end
 
 ---Seconds formatter to standardize representations of seconds
----
 ---[FrameXML](https://www.townlong-yak.com/framexml/live/TimeUtil.lua)
 SecondsFormatter = {};
 

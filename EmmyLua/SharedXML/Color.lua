@@ -9,7 +9,7 @@ ColorMixin = {}
 ---@param r number
 ---@param g number
 ---@param b number
----@param a number
+---@param a? number
 ---@return ColorMixin
 ---[FrameXML](https://www.townlong-yak.com/framexml/go/CreateColor)
 function CreateColor(r, g, b, a) end
@@ -34,21 +34,21 @@ function ColorMixin:GetRGBAsBytes() end
 ---@return number r
 ---@return number g
 ---@return number b
----@return number a
+---@return number? a
 ---[FrameXML](https://www.townlong-yak.com/framexml/go/ColorMixin:GetRGBA)
 function ColorMixin:GetRGBA() end
 
 ---@return number r
 ---@return number g
 ---@return number b
----@return number a
+---@return number? a
 ---[FrameXML](https://www.townlong-yak.com/framexml/go/ColorMixin:GetRGBAAsBytes)
 function ColorMixin:GetRGBAAsBytes() end
 
 ---@param r number
 ---@param g number
 ---@param b number
----@param a number
+---@param a? number
 ---[FrameXML](https://www.townlong-yak.com/framexml/go/ColorMixin:SetRGBA)
 function ColorMixin:SetRGBA(r, g, b, a) end
 
