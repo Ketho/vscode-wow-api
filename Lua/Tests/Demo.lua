@@ -1,3 +1,13 @@
+---@diagnostic disable:unused-local
+local str1 = strtrim(" hello world ")
+local str2 = format("%s %d", "greedisgood", 999)
+local num1 = bit.bor(0x1, 0x2)
+
+hooksecurefunc("test", function() end)
+
+C_AccountInfo.GetIDFromBattleNetAccountGUID()
+C_CVar.GetCVar("autoClearAFK")
+
 local f = CreateFrame("Frame")
 local group = f:CreateAnimationGroup()
 local anim = group:CreateAnimation("Animation")
@@ -9,8 +19,3 @@ f:RegisterEvent("ACHIEVEMENT_EARNED")
 local checkbtn = CreateFrame("CheckButton")
 local dressup = CreateFrame("DressUpModel")
 local tooltip = CreateFrame("GameTooltip")
-
-C_AccountInfo.GetIDFromBattleNetAccountGUID()
-C_CVar.GetCVar("autoClearAFK")
-
-hooksecurefunc("test", function() end)
