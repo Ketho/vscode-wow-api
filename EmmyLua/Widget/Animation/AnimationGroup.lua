@@ -25,11 +25,11 @@ function AnimationGroup:HookScript(scriptType, handler, bindingType) end
 function AnimationGroup:SetScript(scriptType, handler) end
 
 
----@generic Animation
----@param animationType `Animation` | AnimationType
+---@generic T
+---@param animationType `T` | AnimationType
 ---@param name string
 ---@param template string
----@return Animation animation
+---@return T
 ---[Documentation](https://wow.gamepedia.com/API_AnimationGroup_CreateAnimation)
 function AnimationGroup:CreateAnimation(animationType, name, template) end
 
