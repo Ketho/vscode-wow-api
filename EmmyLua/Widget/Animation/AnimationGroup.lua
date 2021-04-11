@@ -29,7 +29,7 @@ function AnimationGroup:SetScript(scriptType, handler) end
 ---@param animationType `T` | AnimationType
 ---@param name string
 ---@param template string
----@return T
+---@return T animation
 ---[Documentation](https://wow.gamepedia.com/API_AnimationGroup_CreateAnimation)
 function AnimationGroup:CreateAnimation(animationType, name, template) end
 
