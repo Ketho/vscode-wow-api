@@ -10,10 +10,10 @@
 ---[Documentation](https://wow.gamepedia.com/API_CreateFrame)
 function CreateFrame(frameType, name, parent, template, id) end
 
----@overload fun(name: string, hook: function)
 ---@param tbl table
 ---@param name string
 ---@param hook function
+---@overload fun(name: string, hook: function)
 ---[Documentation](https://wow.gamepedia.com/API_hooksecurefunc)
 function hooksecurefunc(tbl, name, hook) end
 

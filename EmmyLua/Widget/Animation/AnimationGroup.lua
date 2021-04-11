@@ -31,6 +31,7 @@ function AnimationGroup:SetScript(scriptType, handler) end
 ---@param template string
 ---@return T animation
 ---[Documentation](https://wow.gamepedia.com/API_AnimationGroup_CreateAnimation)
+---@overload fun(): Animation
 function AnimationGroup:CreateAnimation(animationType, name, template) end
 
 ---[Documentation](https://wow.gamepedia.com/API_AnimationGroup_Finish)
