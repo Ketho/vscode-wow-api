@@ -1,14 +1,21 @@
 # Change Log
 
+## [0.4.4] - 2021-04-11
+### Added
+- 🌙 EmmyLua: Added bitlib (Issue #7)
+
+### Changed
+- 🐞 Bug Fixes: Objects returned from CreateFrame() share all methods (#8)
+
 ## [0.4.3] - 2021-03-26
 ### Added
 - 🌙 EmmyLua: Added `MapUtil.lua`, `EasingUtil.lua`, `PixelUtil.lua`, `TimeUtil.lua` from PR #6
 - 🌙 EmmyLua: Added basic function signatures for the StatusBar widget
-- 🐞 Documentation: Added known issues section to the readme
+- 📚 Documentation: Added known issues section to the readme
 
 ## [0.4.2] - 2021-03-25
 ### Added
-- 🌙 EmmyLua: Added `ColorMixin`, `Vector2DMixin`, `Vector3DMixin` from PR [#5](https://github.com/Ketho/vscode-wow-api/pull/5)
+- 🌙 EmmyLua: Added `ColorMixin`, `Vector2DMixin`, `Vector3DMixin` from PR #5
 - 🌙 EmmyLua: Parsed and validated 55% (744/1345) of non-Blizzard documented API that have an existing Wowpedia page
 - 🐞 Bug Fixes: Event payload params properly show Mixins and arrays of types instead of just `table`
 
