@@ -5,7 +5,12 @@ function Emmy:GetEventLiterals()
 	local t = {}
 	tinsert(t, "---@alias Event")
 	for _, event in ipairs(APIDocumentation.events) do
-		tinsert(t, format("'\"%s\"'", event.LiteralName))
+		local line = format("'\"%s\"'", event.LiteralName)
+		local payload = event:GetPayloadString(false, false)
+		if #payload > 0 then
+			line = line.." # "..payload
+		end
+		tinsert(t, line)
 	end
 	return table.concat(t, "\n---| ").."\n"
 end
