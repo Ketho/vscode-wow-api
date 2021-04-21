@@ -1,0 +1,25 @@
+---@class GarrisonFollowerAbilityTemplate : Frame
+---@field Icon Texture
+---@field Name FontString
+---@field Description FontString
+---@field CounterIcon Texture
+---@field Details FontString
+---@field CounterIconBorder Texture
+---@field Border Texture
+
+---@class GarrisonFollowerTooltipContentsTemplate : Frame
+---@field Class Texture
+---@field XPBarBackground Texture
+---@field Name FontString
+---@field ClassSpecName FontString
+---@field ILevel FontString
+---@field Quality FontString
+---@field XPBar Texture
+---@field XP FontString
+---@field SpecializationLabel FontString
+---@field AbilitiesLabel FontString
+---@field TraitsLabel FontString
+---@field UnderBiased FontString
+---@field PortraitFrame GarrisonFollowerPortraitTemplate
+---@field Abilities GarrisonFollowerAbilityTemplate[]
+---@field Traits GarrisonFollowerAbilityTemplate[]
