@@ -50,9 +50,11 @@ function Frame:IsEventRegistered(event) end
 ---[Documentation](https://wow.gamepedia.com/API_Frame_DesaturateHierarchy)
 function Frame:DesaturateHierarchy(desaturation) end
 
+---@param layer DrawLayer
 ---[Documentation](https://wow.gamepedia.com/API_Frame_DisableDrawLayer)
 function Frame:DisableDrawLayer(layer) end
 
+---@param layer DrawLayer
 ---[Documentation](https://wow.gamepedia.com/API_Frame_EnableDrawLayer)
 function Frame:EnableDrawLayer(layer) end
 
@@ -80,9 +82,11 @@ function Frame:GetEffectivelyFlattensRenderLayers() end
 ---[Documentation](https://wow.gamepedia.com/API_Frame_GetFlattensRenderLayers)
 function Frame:GetFlattensRenderLayers() end
 
+---@return number level
 ---[Documentation](https://wow.gamepedia.com/API_Frame_GetFrameLevel)
 function Frame:GetFrameLevel() end
 
+---@return FrameStrata strata
 ---[Documentation](https://wow.gamepedia.com/API_Frame_GetFrameStrata)
 function Frame:GetFrameStrata() end
 
@@ -95,9 +99,11 @@ function Frame:GetMaxResize(w, h) end
 ---[Documentation](https://wow.gamepedia.com/API_Frame_GetMinResize)
 function Frame:GetMinResize(w, h) end
 
+---@return boolean
 ---[Documentation](https://wow.gamepedia.com/API_Frame_HasFixedFrameLevel)
 function Frame:HasFixedFrameLevel() end
 
+---@return boolean
 ---[Documentation](https://wow.gamepedia.com/API_Frame_HasFixedFrameStrata)
 function Frame:HasFixedFrameStrata() end
 
@@ -134,21 +140,27 @@ function Frame:SetDepth(depth) end
 ---[Documentation](https://wow.gamepedia.com/API_Frame_SetDontSavePosition)
 function Frame:SetDontSavePosition() end
 
+---@param layer DrawLayer
+---@param mouseOver boolean
 ---[Documentation](https://wow.gamepedia.com/API_Frame_SetDrawLayerEnabled)
 function Frame:SetDrawLayerEnabled(layer, mouseOver) end
 
+---@param bool boolean
 ---[Documentation](https://wow.gamepedia.com/API_Frame_SetFixedFrameLevel)
-function Frame:SetFixedFrameLevel(boolean) end
+function Frame:SetFixedFrameLevel(bool) end
 
+---@param bool boolean
 ---[Documentation](https://wow.gamepedia.com/API_Frame_SetFixedFrameStrata)
-function Frame:SetFixedFrameStrata(boolean) end
+function Frame:SetFixedFrameStrata(bool) end
 
 ---[Documentation](https://wow.gamepedia.com/API_Frame_SetFlattensRenderLayers)
 function Frame:SetFlattensRenderLayers() end
 
+---@param level number
 ---[Documentation](https://wow.gamepedia.com/API_Frame_SetFrameLevel)
 function Frame:SetFrameLevel(level) end
 
+---@param strata FrameStrata
 ---[Documentation](https://wow.gamepedia.com/API_Frame_SetFrameStrata)
 function Frame:SetFrameStrata(strata) end
 

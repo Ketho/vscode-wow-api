@@ -4,6 +4,16 @@ local object = {}
 ---@class unknown
 local unknown = {}
 
+---@alias AnimationType
+---| '"Animation"'
+---| '"Alpha"'
+---| '"LineScale"'
+---| '"LineTranslation"'
+---| '"Path"'
+---| '"Rotation"'
+---| '"Scale"'
+---| '"Translation"'
+
 ---@alias FrameType
 ---| '"Frame"'
 ---| '"ArchaeologyDigSiteFrame"'
@@ -35,5 +45,30 @@ local unknown = {}
 ---| '"TabardModel"'
 ---| '"UnitPositionFrame"'
 
----@alias AnimationType '"Animation"' | '"Alpha"' | '"LineScale"' | '"LineTranslation"' | '"Path"' | '"Rotation"' | '"Scale"' | '"Translation"'
----@alias AnchorPoint '"TOP"' | '"RIGHT"' | '"BOTTOM"' | '"LEFT"' | '"TOPRIGHT"' | '"TOPLEFT"' | '"BOTTOMLEFT"' | '"BOTTOMRIGHT"' | '"CENTER"'
+---@alias AnchorPoint
+---| '"TOPLEFT"'
+---| '"TOPRIGHT"'
+---| '"BOTTOMLEFT"'
+---| '"BOTTOMRIGHT"'
+---| '"TOP"'
+---| '"BOTTOM"'
+---| '"LEFT"'
+---| '"RIGHT"'
+---| '"CENTER"'
+
+---@alias FrameStrata
+---| '"BACKGROUND"'
+---| '"LOW"'
+---| '"MEDIUM"'
+---| '"HIGH"'
+---| '"DIALOG"'
+---| '"FULLSCREEN"'
+---| '"FULLSCREEN_DIALOG"'
+---| '"TOOLTIP"'
+
+---@alias DrawLayer
+---| '"BACKGROUND"'
+---| '"BORDER"'
+---| '"ARTWORK"'
+---| '"OVERLAY"'
+---| '"HIGHLIGHT"'

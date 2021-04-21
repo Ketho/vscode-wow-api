@@ -192,9 +192,12 @@ function Region:StopAnimating() end
 ---[Documentation](https://wow.gamepedia.com/UIOBJECT_LayeredRegion)
 local LayeredRegion = {}
 
+---@return DrawLayer layer
 ---[Documentation](https://wow.gamepedia.com/API_LayeredRegion_GetDrawLayer)
 function LayeredRegion:GetDrawLayer() end
 
+---@param layer DrawLayer
+---@param sublevel? number
 ---[Documentation](https://wow.gamepedia.com/API_LayeredRegion_SetDrawLayer)
 function LayeredRegion:SetDrawLayer(layer, sublevel) end
 
