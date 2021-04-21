@@ -32,7 +32,7 @@ This extension uses [Sumneko's](https://marketplace.visualstudio.com/items?itemN
 ![](https://github.com/Ketho/vscode-wow-api/raw/master/img/enum.gif)
 
 ### Known issues ###
-The hover tooltip gets filled with all `@alias` params for frame types and events.
+The hover tooltip gets filled with all `@alias` params for frame types and events ([#507](https://github.com/sumneko/lua-language-server/issues/507)).
 
 ![](https://user-images.githubusercontent.com/1073877/112683615-1d10fa80-8e72-11eb-866d-9c50543e762e.png)
 

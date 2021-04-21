@@ -1,11 +1,16 @@
 # Change Log
 
+## [0.4.5] - 2021-04-21
+### Added
+- 🌙 EmmyLua: Added WOW_PROJECT IDs
+- 🌙 EmmyLua: Added UIParent and GameTooltip global frames
+
+![](https://github.com/Ketho/vscode-wow-api/raw/master/img/gametooltip.gif)
+
 ## [0.4.4] - 2021-04-11
 ### Added
 - 🌙 EmmyLua: Added bitlib (Issue #7)
-
-### Changed
-- 🐞 Bug Fixes: Objects returned from CreateFrame() share all methods (#8)
+- 🐞 Bug Fixes: Objects returned from CreateFrame() share all methods (Issue #8)
 
 ## [0.4.3] - 2021-03-26
 ### Added
@@ -21,7 +26,7 @@
 
 ## [0.4.1] - 2021-03-23
 ### Added
-- 🌙 EmmyLua: Added `GetUnitName`, `UIFrameFadeIn`, `Mixin`, `ShowUIPanel`, `getglobal` and similar functions #4
+- 🌙 EmmyLua: Added `GetUnitName`, `UIFrameFadeIn`, `Mixin`, `ShowUIPanel`, `getglobal` and similar functions (Issue #4)
 - 🛠 Improvements: CVars are matched case insensitive and show only when hovering over a string literal
 - 📚 Documentation: Added documentation for generating API documentation
 
@@ -64,7 +69,7 @@
 ## [0.3.1] - 2021-03-03
 ### Changed
 - 🎨 Style: Changed enum context from `enum: integer 1` to just `integer 1`
-- 🐞 Bug Fixes: Event hover always appearing at the initial position #2
+- 🐞 Bug Fixes: Event hover always appearing at the initial position (Issue #2)
 
 ## [0.3.0] - 2021-03-03
 - 🚨 Breaking Changes: v1.17.2 of the Lua Language Server gets stuck on hover ([#437](https://github.com/sumneko/lua-language-server/issues/437)), please revert to v1.17.0 until this is resolved
@@ -125,6 +130,8 @@
 ### Added
 - 🚧 Wip: Development work
 
+[0.4.5]: https://github.com/Ketho/vscode-wow-api/releases/tag/v0.4.5
+[0.4.4]: https://github.com/Ketho/vscode-wow-api/releases/tag/v0.4.4
 [0.4.3]: https://github.com/Ketho/vscode-wow-api/releases/tag/v0.4.3
 [0.4.2]: https://github.com/Ketho/vscode-wow-api/releases/tag/v0.4.2
 [0.4.1]: https://github.com/Ketho/vscode-wow-api/releases/tag/v0.4.1
