@@ -77,12 +77,69 @@ function strconcat(...) end
 ---[Documentation](https://wow.gamepedia.com/API_strlenutf8)
 function strlenutf8(str) end
 
+bit = {}
+
+--- Returns the one's complement of `a`
+---@param a number
+---@return number
+function bit.bnot(a) end
+
+--- Returns the bitwise "AND" of the values
+---@param a1 number
+---@vararg number
+---@return number
+function bit.band(a1, ...) end
+
+--- Returns the bitwise "OR" of the values
+---@param a1 number
+---@vararg number
+---@return number
+function bit.bor(a1, ...) end
+
+--- Returns the bitwise "exclusive OR" of the values
+---@param a1 number
+---@vararg number
+---@return number
+function bit.bxor(a1, ...) end
+
+--- Returns `a` logical shifted left by `n` bits
+---@param a number
+---@param n number
+---@return number
+function bit.lshift(a, n) end
+
+--- Returns `a` logical shifted right by `n` bits
+---@param a number
+---@param n number
+---@return number
+function bit.rshift(a, n) end
+
+--- Returns `a` arithmetically shifted right by `n` bits
+---@param a number
+---@param n number
+---@return number
+function bit.arshift(a, n) end
+
+--- Returns the signed value of `a` modulo `n`
+---@param a number
+---@param n number
+---@return number
+function bit.mod(a, n) end
+
+-- os.date
 date = os.date
+
+-- os.time
 time = os.time
 
--- for people who did not set "Lua.runtime.version": "Lua 5.1"
+-- table.unpack (defined in sumnekos, even for lua >5.1)
+--unpack = table.unpack
 
-unpack = table.unpack
+-- dont know how to mark something as not existing
+--debug = nil
+--io = nil
+--os = nil
+--package = nil
 
 -- Table library
 local tab = table
@@ -143,53 +200,3 @@ strupper = str.upper
 str.trim = strtrim
 str.split = strsplit
 str.join = strjoin
-
-
-bit = {}
-
---- Returns the one's complement of `a`
----@param a number
----@return number
-function bit.bnot(a) end
-
---- Returns the bitwise "AND" of the values
----@param a1 number
----@vararg number
----@return number
-function bit.band(a1, ...) end
-
---- Returns the bitwise "OR" of the values
----@param a1 number
----@vararg number
----@return number
-function bit.bor(a1, ...) end
-
---- Returns the bitwise "exclusive OR" of the values
----@param a1 number
----@vararg number
----@return number
-function bit.bxor(a1, ...) end
-
---- Returns `a` logical shifted left by `n` bits
----@param a number
----@param n number
----@return number
-function bit.lshift(a, n) end
-
---- Returns `a` logical shifted right by `n` bits
----@param a number
----@param n number
----@return number
-function bit.rshift(a, n) end
-
---- Returns `a` arithmetically shifted right by `n` bits
----@param a number
----@param n number
----@return number
-function bit.arshift(a, n) end
-
---- Returns the signed value of `a` modulo `n`
----@param a number
----@param n number
----@return number
-function bit.mod(a, n) end
