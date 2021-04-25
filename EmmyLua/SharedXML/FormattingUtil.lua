@@ -22,10 +22,8 @@ function FormatLargeNumber(amount) end
 
 ---@type number
 COPPER_PER_SILVER = 0
-
 ---@type number
 SILVER_PER_GOLD = 0
-
 ---@type number
 COPPER_PER_GOLD = 0
 

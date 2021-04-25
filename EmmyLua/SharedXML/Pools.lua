@@ -65,7 +65,6 @@ function ObjectPoolMixin:EnumerateInactive() end
 function CreateObjectPool(creationFunc, resetterFunc) end
 
 
-
 ---@class FramePoolMixin
 ---@field creationFunc fun(framePool: FramePoolMixin)
 ---@field resetterFunc fun(framePool: FramePoolMixin, object: object)
@@ -146,7 +145,6 @@ function FramePoolMixin:GetTemplate() end
 function CreateFramePool(frameType, parent, frameTemplate, resetterFunc, forbidden) end
 
 
-
 ---@class TexturePoolMixin
 ---@field creationFunc fun(texturePool: TexturePoolMixin)
 ---@field resetterFunc fun(texturePool: TexturePoolMixin, object: Texture)
@@ -222,7 +220,6 @@ function TexturePoolMixin:OnLoad(parent, layer, subLayer, textureTemplate, reset
 ---@return TexturePoolMixin
 ---[FrameXML](https://www.townlong-yak.com/framexml/go/CreateTexturePool)
 function CreateTexturePool(parent, layer, subLayer, textureTemplate, resetterFunc) end
-
 
 
 ---@class FontStringPoolMixin
@@ -302,7 +299,6 @@ function FontStringPoolMixin:OnLoad(parent, layer, subLayer, fontStringTemplate,
 function CreateFontStringPool(parent, layer, subLayer, fontStringTemplate, resetterFunc) end
 
 
-
 ---@class ActorPoolMixin
 ---@field creationFunc fun(actorPool: ActorPoolMixin)
 ---@field resetterFunc fun(actorPool: ActorPoolMixin, object: ModelSceneActor)
@@ -372,7 +368,6 @@ function ActorPoolMixin:OnLoad(parent, actorTemplate, resetterFunc) end
 ---@return ActorPoolMixin
 ---[FrameXML](https://www.townlong-yak.com/framexml/go/CreateActorPool)
 function CreateActorPool(parent, actorTemplate, resetterFunc) end
-
 
 
 ---@class FramePoolCollectionMixin
@@ -454,7 +449,6 @@ function FramePoolCollectionMixin:EnumerateInactive() end
 ---@return FramePoolCollectionMixin
 ---[FrameXML](https://www.townlong-yak.com/framexml/go/CreateFramePoolCollection)
 function CreateFramePoolCollection() end
-
 
 
 ---@class FixedSizeFramePoolCollectionMixin

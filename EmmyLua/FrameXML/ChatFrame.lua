@@ -1,6 +1,5 @@
 ---@type number
 NUM_CHAT_WINDOWS = 0
-
 ---@type number
 MAX_WOW_CHAT_CHANNELS = 0
 

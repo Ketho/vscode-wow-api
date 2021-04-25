@@ -1,13 +1,10 @@
 ---@type number
 WOW_PROJECT_MAINLINE = 0
-
 ---@type number
 WOW_PROJECT_CLASSIC = 0
-
 ---@type number
 ---Note: It's not yet available on Retail, Classic, PTR
 WOW_PROJECT_BURNING_CRUSADE_CLASSIC = 0
-
 ---@type number
 WOW_PROJECT_ID = 0
 
