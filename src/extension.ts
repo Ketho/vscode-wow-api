@@ -41,6 +41,7 @@ export function activate(context: vscode.ExtensionContext) {
 		},
 		"_"
 	)
+	onCompletion() // update `Lua.diagnostics.globals` 
 
 	const hover = vscode.languages.registerHoverProvider(
 		"lua",
@@ -95,4 +96,21 @@ function setExternalLibrary(enable: boolean) {
 		// I don't really think showing the emmylua itself in the display context is useful
 		luaConfig.update("completion.displayContext", 0, true)
 	}
+}
+
+function onCompletion() {
+	// use a command to listen when one of our completion items were committed
+	vscode.commands.registerTextEditorCommand("ketho.wow-api.onCompletion", (editor: vscode.TextEditor) => {
+		const pos = editor.selection.active
+		const range = editor.document.getWordRangeAtPosition(pos)
+		const word = editor.document.getText(range)
+		const isValidWord = luaenumDoc[word] // doublecheck it matched the word properly
+
+		const config = vscode.workspace.getConfiguration("Lua")
+		const globals : string[] | undefined = config.get("diagnostics.globals")
+		if (globals?.indexOf(word) && isValidWord) {
+			globals.push(word)
+			config.update("diagnostics.globals", globals)
+		}
+	})
 }

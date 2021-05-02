@@ -8,6 +8,7 @@ for (const key in luaenumDoc) {
 	const item = new vscode.CompletionItem(key, vscode.CompletionItemKind.Enum)
 	item.detail = "enum"
 	item.documentation = new vscode.MarkdownString("```\ninteger = "+el+"\n```")
+	item.command = {command: "ketho.wow-api.onCompletion", title: ""}
 	luaenumArray.push(item)
 }
 
