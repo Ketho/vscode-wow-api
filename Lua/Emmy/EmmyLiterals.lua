@@ -24,7 +24,7 @@ local cvarsDump = require(cvar_path:gsub("%.lua", ""))
 function Emmy:GetCVarLiterals()
 	local t = {}
 	tinsert(t, "---@alias CVar")
-	local sorted = Util:ProxySort(cvarsDump[1].var)
+	local sorted = Util:SortTable(cvarsDump[1].var)
 	for _, cvar in pairs(sorted) do
 		tinsert(t, format("'\"%s\"'", cvar))
 	end

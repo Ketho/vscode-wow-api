@@ -15,11 +15,11 @@ if not path then
 	if not lfs.attributes(output) then
 		local nonBlizzDocumented, blizzDocumented = unpack(require("Lua/WikiParser/WikiText/NonBlizzardDocumented"))
 		local file1 = io.open(output, "w")
-		for _, name in pairs(Util:ProxySort(nonBlizzDocumented)) do
+		for _, name in pairs(Util:SortTable(nonBlizzDocumented)) do
 			file1:write("API "..name.."\n")
 		end
 		local file2 = io.open("Lua/Data/cache/BlizzardDocumented.txt", "w")
-		for _, name in pairs(Util:ProxySort(blizzDocumented)) do
+		for _, name in pairs(Util:SortTable(blizzDocumented)) do
 			file2:write("API "..name.."\n")
 		end
 	end

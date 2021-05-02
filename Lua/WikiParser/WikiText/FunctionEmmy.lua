@@ -35,7 +35,7 @@ local countValid = 0
 local countNonValid = 0
 local countNonDoc = 0
 
-local sorted = Util:ProxySort(nonBlizzDocumented)
+local sorted = Util:SortTable(nonBlizzDocumented)
 for _, name in pairs(sorted) do
 	if not manualDoc[name] then
 		if convertedApi[name] then

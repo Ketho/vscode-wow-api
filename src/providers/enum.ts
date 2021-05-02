@@ -1,6 +1,6 @@
 import * as vscode from "vscode"
 
-const luaenumDoc = require("../data/enums").luaenumDoc
+const luaenumDoc = require("../data/enum").luaenumDoc
 export const luaenumArray: vscode.CompletionItem[] = []
 
 for (const key in luaenumDoc) {

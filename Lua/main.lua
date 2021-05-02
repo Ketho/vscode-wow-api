@@ -13,15 +13,16 @@ local FrameXML = require("Lua/FrameXML/FrameXML")
 FrameXML:LoadApiDocs("Lua/FrameXML")
 --require("Lua/Tests/Emmy"):Run()
 
--- write emmylua data for Type
+-- emmylua data
 require("Lua/Emmy/EmmyLiterals")
 Util:WriteFile("EmmyLua/Type/Event.lua", Emmy:GetEventLiterals())
 Util:WriteFile("EmmyLua/Type/CVar.lua", Emmy:GetCVarLiterals())
 
--- write typescript data for hover
-Util:WriteFile("src/data/events.ts", require("Lua/ToTypeScript/Event")())
-Util:WriteFile("src/data/cvars.ts", require("Lua/ToTypeScript/CVar")())
-Util:WriteFile("src/data/enums.ts", require("Lua/ToTypeScript/LuaEnum")())
+-- typescript data
+Util:WriteFile("src/data/event.ts", require("Lua/ToTypeScript/Event")())
+Util:WriteFile("src/data/cvar.ts", require("Lua/ToTypeScript/CVar")())
+Util:WriteFile("src/data/enum.ts", require("Lua/ToTypeScript/LuaEnum")())
+Util:WriteFile("src/data/globalstring.ts", require("Lua/ToTypeScript/GlobalString")())
 
 -- parse the wiki
 require("Lua/WikiParser/WikiText/FunctionEmmy")

@@ -1,6 +1,6 @@
 import * as vscode from "vscode"
 
-const cvarDoc = require("../data/cvars").cvarsDoc
+const cvarDoc = require("../data/cvar").cvarsDoc
 
 const ConsoleCategory = [
 	"Debug",	// 0

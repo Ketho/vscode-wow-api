@@ -1,5 +1,5 @@
 -- cache should already be created at this point
-local cvarsDump = require("Lua/Data/cache/CVars")
+local data = require("Lua/Data/cache/CVars")
 
 local pre = [[
 interface CVarInterface {
@@ -18,9 +18,9 @@ export const cvarsDoc: CVarInterface = {
 
 local function ToTypeScript()
 	local t = {}
-	local sorted = Util:ProxySort(cvarsDump[1].var)
+	local sorted = Util:SortTable(data[1].var)
 	for _, name in pairs(sorted) do
-		local default, category, character, server, help = unpack(cvarsDump[1].var[name])
+		local default, category, character, server, help = unpack(data[1].var[name])
 		tinsert(t, format("\t%s: {", name:lower()))
 		tinsert(t, format('\t\tname: "%s",', name))
 		tinsert(t, format('\t\tdefault: "%s",', default))

@@ -1,6 +1,6 @@
 import * as vscode from "vscode"
 
-const eventsDoc = require("../data/events").eventsDoc
+const eventsDoc = require("../data/event").eventsDoc
 
 function getMarkdown(name: string) {
 	let s = "**Event**"

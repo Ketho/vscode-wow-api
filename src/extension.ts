@@ -1,15 +1,21 @@
 import * as vscode from "vscode"
 
-const eventsDoc = require("./data/events").eventsDoc
+const eventsDoc = require("./data/event").eventsDoc
 const getEventHover = require("./providers/event").getEventHover
 
-const cvarsDoc = require("./data/cvars").cvarsDoc
+const cvarsDoc = require("./data/cvar").cvarsDoc
 const getCVarHover = require("./providers/cvar").getCVarHover
 
-const luaenumDoc = require("./data/enums").luaenumDoc
+// todo: refactor
+const luaenumDoc = require("./data/enum").luaenumDoc
 import enumProvider = require("./providers/enum") // not sure if this is the right way to use import
 const getLuaEnumHover = enumProvider.getLuaEnumHover
 const luaenumArray = enumProvider.luaenumArray
+
+const globalstringDoc = require("./data/globalstring").globalstringDoc
+import globalstringProvider = require("./providers/globalstring")
+const getGlobalStringHover = globalstringProvider.getGlobalStringHover
+const globalstringArray = globalstringProvider.globalstringArray
 
 function isHoverString(document: vscode.TextDocument, range: vscode.Range) {
 	if (range.start.character > 0) {
@@ -30,18 +36,23 @@ export function activate(context: vscode.ExtensionContext) {
 	const completion = vscode.languages.registerCompletionItemProvider(
 		"lua",
 		{
+			// restrict string matching to avoid polluting fuzzy completion
 			provideCompletionItems(document: vscode.TextDocument, position: vscode.Position) {
-				let linePrefix = document.lineAt(position).text.substr(0, position.character)
-				let lastWord = linePrefix.split(/[^\w\.]/).slice(-1)[0]
-				// complete Lua Enums only for "LE_*" to avoid polluting fuzzy completion
-				if (lastWord.startsWith("LE_")) {
+				const linePrefix = document.lineAt(position).text.substr(0, position.character)
+				const lastWord = linePrefix.split(/[^\w\.]/).slice(-1)[0]
+				if (lastWord.startsWith("LE_"))
 					return luaenumArray
+				else if (lastWord.length>3 && lastWord == lastWord.match("^[0-9A-Z_]+")?.[0]) {
+					return globalstringArray
 				}
 			}
 		},
-		"_"
+		"_",
+		// idk this feels ugly but it needs to trigger globalstring completion
+		"A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M",
+		"N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z"
 	)
-	onCompletion() // update `Lua.diagnostics.globals` 
+	onCompletion()
 
 	const hover = vscode.languages.registerHoverProvider(
 		"lua",
@@ -59,6 +70,8 @@ export function activate(context: vscode.ExtensionContext) {
 						return getCVarHover(lword)
 					else if (luaenumDoc[word])
 						return getLuaEnumHover(word)
+					else if (globalstringDoc[word])
+						return getGlobalStringHover(word)
 				}
 			}
 		}
@@ -99,16 +112,17 @@ function setExternalLibrary(enable: boolean) {
 }
 
 function onCompletion() {
-	// use a command to listen when one of our completion items were committed
+	// listen when one of our completion items were committed
 	vscode.commands.registerTextEditorCommand("ketho.wow-api.onCompletion", (editor: vscode.TextEditor) => {
 		const pos = editor.selection.active
 		const range = editor.document.getWordRangeAtPosition(pos)
 		const word = editor.document.getText(range)
-		const isValidWord = luaenumDoc[word] // doublecheck it matched the word properly
+		// doublecheck if the word was matched properly
+		const isValidWord = luaenumDoc[word] || globalstringDoc[word]
 
 		const config = vscode.workspace.getConfiguration("Lua")
 		const globals : string[] | undefined = config.get("diagnostics.globals")
-		if (globals?.indexOf(word) && isValidWord) {
+		if (isValidWord && globals?.indexOf(word)) {
 			globals.push(word)
 			config.update("diagnostics.globals", globals)
 		}

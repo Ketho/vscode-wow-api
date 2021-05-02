@@ -28,7 +28,7 @@ function Util:CacheFile(path, url)
 	end
 end
 
-function Util:ProxySort(tbl)
+function Util:SortTable(tbl)
 	local t = {}
 	for k in pairs(tbl) do
 		tinsert(t, k)
