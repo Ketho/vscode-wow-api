@@ -71,8 +71,8 @@ function ModelSceneActor:SetAnimation(animation, variation, animSpeed, timeOffse
 
 function ModelSceneActor:SetAnimationBlendOperation(LE_MODEL_BLEND_OPERATION) end
 
----@param value boolean
-function ModelSceneActor:SetAutoDress(value) end
+---@param bool boolean
+function ModelSceneActor:SetAutoDress(bool) end
 
 function ModelSceneActor:SetDesaturation(strength) end
 
@@ -98,18 +98,18 @@ function ModelSceneActor:SetRoll(roll) end
 
 function ModelSceneActor:SetScale(scale) end
 
----@param value boolean
-function ModelSceneActor:SetSheathed(value) end
+---@param bool boolean
+function ModelSceneActor:SetSheathed(bool) end
 
----@param value boolean
-function ModelSceneActor:SetShown(value) end
+---@param bool boolean
+function ModelSceneActor:SetShown(bool) end
 
 function ModelSceneActor:SetSpellVisualKit() end
 
 function ModelSceneActor:SetUseCenterForOrigin() end
 
----@param value boolean
-function ModelSceneActor:SetUseTransmogSkin(value) end
+---@param bool boolean
+function ModelSceneActor:SetUseTransmogSkin(bool) end
 
 function ModelSceneActor:SetYaw(facing) end
 
