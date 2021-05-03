@@ -66,17 +66,17 @@ function CreateTextureMarkup(file, fileWidth, fileHeight, width, height, left, r
 ---[FrameXML](https://www.townlong-yak.com/framexml/go/CreateAtlasMarkup)
 function CreateAtlasMarkup(atlasName, width, height, offsetX, offsetY) end
 
----@type table<string, boolean>
----[FrameXML](https://www.townlong-yak.com/framexml/live/TextureUtil.lua)
 TextureKitConstants = {
-	SetVisibility = true,
-	DoNotSetVisibility = false,
-	UseAtlasSize = true,
-	IgnoreAtlasSize = false
+	SetVisibility = true;
+	DoNotSetVisibility = false;
+
+	UseAtlasSize = true;
+	IgnoreAtlasSize = false;
 }
 
+--- Pass in a frame and a table containing parentKeys (on frame) as keys and atlas member names as the values
 ---@param frame Frame
----@param regionsToAtlases table A table containing parentKeys (on frame) as keys and atlas member names as the values
+---@param regionsToAtlases table
 ---@param useAtlasSize? boolean
 ---[FrameXML](https://www.townlong-yak.com/framexml/go/SetupAtlasesOnRegions)
 function SetupAtlasesOnRegions(frame, regionsToAtlases, useAtlasSize) end
@@ -87,6 +87,10 @@ function SetupAtlasesOnRegions(frame, regionsToAtlases, useAtlasSize) end
 ---[FrameXML](https://www.townlong-yak.com/framexml/go/GetFinalNameFromTextureKit)
 function GetFinalNameFromTextureKit(fmt, textureKits) end
 
+
+--- Pass in a TextureKit name, a frame and a formatting string.
+--- The TextureKit name will be inserted into fmt (at the first %s). The resulting atlas name will be set on frame
+--- Use "%s" for fmt if the TextureKit name is the entire atlas element name
 ---@param textureKit string|table
 ---@param frame Texture|StatusBar
 ---@param fmt string Formatting string
@@ -95,29 +99,40 @@ function GetFinalNameFromTextureKit(fmt, textureKits) end
 ---[FrameXML](https://www.townlong-yak.com/framexml/go/SetupTextureKitOnFrame)
 function SetupTextureKitOnFrame(textureKit, frame, fmt, setVisibility, useAtlasSize) end
 
+--- Pass in a TextureKit name and a table containing frames as keys and formatting strings as values
+--- For each frame key in frames, the TextureKit name will be inserted into fmt (at the first %s). The resulting atlas name will be set on frame
+--- Use "%s" for fmt if the TextureKit name is the entire atlas element name
 ---@param textureKit string|table
----@param frames table A table containing frames as keys and formatting strings as values
+---@param frames table
 ---@param setVisibilityOfRegions boolean
 ---@param useAtlasSize? boolean
 ---[FrameXML](https://www.townlong-yak.com/framexml/go/SetupTextureKitOnFrames)
 function SetupTextureKitOnFrames(textureKit, frames, setVisibilityOfRegions, useAtlasSize) end
 
+--- Pass in a TextureKit name, a frame and a table containing parentKeys (on frame) as keys and formatting strings as values
+--- For each frame key in frames, the TextureKit name will be inserted into fmt (at the first %s). The resulting atlas name will be set on frame
+--- Use "%s" for fmt if the TextureKit name is the entire atlas element name
 ---@param textureKit string|table
 ---@param frame Frame
----@param regions table A table containing parentKeys (on frame) as keys and formatting strings as values
+---@param regions table
 ---@param setVisibilityOfRegions boolean
 ---@param useAtlasSize? boolean
 ---[FrameXML](https://www.townlong-yak.com/framexml/go/SetupTextureKitOnRegions)
 function SetupTextureKitOnRegions(textureKit, frame, regions, setVisibilityOfRegions, useAtlasSize) end
 
+--- Pass in a TextureKit name, a frame and a table containing parentKeys (on frame) as keys and a table as values
+--- The values table should contain formatString as a member (setVisibility and useAtlasSize can also be added if desired)
+--- For each frame key in frames, the TextureKit name will be inserted into formatString (at the first %s). The resulting atlas name will be set on frame
+--- Use "%s" for formatString if the TextureKit name is the entire atlas element name
 ---@param textureKit string|table
 ---@param frame Frame
----@param regionInfoList table A table containing parentKeys (on frame) as keys and a table as values. The values table should contain formatString as a member (setVisibility and useAtlasSize can also be added if desired)
+---@param regionInfoList table
 ---[FrameXML](https://www.townlong-yak.com/framexml/go/SetupTextureKitsFromRegionInfo)
 function SetupTextureKitsFromRegionInfo(textureKit, frame, regionInfoList) end
 
----@param texture string Formatting string
+--- Pass the texture and the textureKit, if the atlas exists in data then it will return the actual atlas name otherwise, return nil.
+---@param texture string
 ---@param textureKit string|table
----@return string|nil
+---@return string?
 ---[FrameXML](https://www.townlong-yak.com/framexml/go/GetFinalAtlasFromTextureKitIfExists)
 function GetFinalAtlasFromTextureKitIfExists(texture, textureKit) end
