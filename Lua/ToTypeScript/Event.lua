@@ -37,7 +37,6 @@ local function ToTypeScript()
 			if event.Payload then
 				tinsert(t, "\t\tPayload: [")
 				for _, param in pairs(event.Payload) do
-					-- to do: handle table types and InnerType
 					local typeName
 					if param.Mixin then
 						typeName = param.Mixin

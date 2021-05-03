@@ -94,15 +94,9 @@ function Texture:SetSnapToPixelGrid() end
 ---@param URy number
 ---@param LRx number
 ---@param LRy number
+---@overload fun(minX: number, maxX: number, minY: number, maxY: number)
 ---[Documentation](https://wow.gamepedia.com/API_Texture_SetTexCoord)
 function Texture:SetTexCoord(ULx, ULy, LLx, LLy, URx, URy, LRx, LRy) end
-
----@param minX number
----@param maxX number
----@param minY number
----@param maxY number
----[Documentation](https://wow.gamepedia.com/API_Texture_SetTexCoord)
-function Texture:SetTexCoord(minX, maxX, minY, maxY) end
 
 ---[Documentation](https://wow.gamepedia.com/API_Texture_SetTexelSnappingBias)
 function Texture:SetTexelSnappingBias(texelSnappingBias) end
