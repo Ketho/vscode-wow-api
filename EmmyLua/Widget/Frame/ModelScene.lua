@@ -4,7 +4,7 @@ local ModelScene = {}
 function ModelScene:ClearFog() end
 
 ---@return ModelSceneActor actor
-function ModelScene:CreateActor(unk, template) end
+function ModelScene:CreateActor(name, template) end
 
 function ModelScene:GetActorAtIndex(actorIndex) end
 
