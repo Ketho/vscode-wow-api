@@ -8,7 +8,7 @@ function Emmy:GetEventLiterals()
 		local line = format("'\"%s\"'", event.LiteralName)
 		local payload = event:GetPayloadString(false, false)
 		if #payload > 0 then
-			line = line.." # "..payload
+			line = line.." # `"..payload.."`"
 		end
 		tinsert(t, line)
 	end
