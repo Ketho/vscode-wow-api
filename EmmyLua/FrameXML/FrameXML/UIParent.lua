@@ -1,3 +1,8 @@
+---@class UIParent : Frame
+---@field firstTimeLoaded number
+---@field variablesLoaded boolean
+UIParent = {}
+
 ---@param frame object
 ---@param force? number
 ---[FrameXML](https://www.townlong-yak.com/framexml/go/ShowUIPanel)
