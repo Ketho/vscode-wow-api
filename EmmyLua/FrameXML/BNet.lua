@@ -1,14 +1,9 @@
----@type number
-WOW_PROJECT_MAINLINE = 0
----@type number
-WOW_PROJECT_CLASSIC = 0
----@type number
----Note: It's not yet available on Retail, Classic, PTR
-WOW_PROJECT_BURNING_CRUSADE_CLASSIC = 0
----@type number
-WOW_PROJECT_ID = 0
+WOW_PROJECT_MAINLINE = 1
+WOW_PROJECT_CLASSIC = 2
+WOW_PROJECT_BURNING_CRUSADE_CLASSIC = 5
+WOW_PROJECT_ID = 0 ---@type number
 
----@param name string Can be a realID or plain battletag with no 4 digit number
+---@param name string Can be a realID or plain battletag without the 4 digit number
 ---@return number
 ---[FrameXML](https://www.townlong-yak.com/framexml/go/BNet_GetBNetIDAccount)
 function BNet_GetBNetIDAccount(name) end
