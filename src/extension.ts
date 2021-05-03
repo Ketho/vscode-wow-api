@@ -13,15 +13,15 @@ const cvar = {
 import luaenum_provider = require("./providers/enum")
 const luaenum = {
 	data: require("./data/enum").data,
-	hover: luaenum_provider.getHover,
 	completion: luaenum_provider.completion,
+	hover: luaenum_provider.getHover,
 }
 
 import globalstring_provider = require("./providers/globalstring")
 const globalstring = {
 	data: require("./data/globalstring").data,
-	hover: globalstring_provider.getHover,
 	completion: globalstring_provider.completion,
+	hover: globalstring_provider.getHover,
 }
 
 function isHoverString(document: vscode.TextDocument, range: vscode.Range) { 
@@ -113,8 +113,10 @@ function setExternalLibrary(enable: boolean) {
 				config.splice(index, 1)
 		}
 		luaConfig.update("workspace.library", config, true)
-		// I don't really think showing the emmylua itself in the display context is useful
+		// hides the emmylua source from the hover tooltip
 		luaConfig.update("completion.displayContext", 0, true)
+		// hides the hundreds of types from the function signature hover tooltip
+		luaConfig.update("hover.enumsLimit", 0, true)
 	}
 }
 
