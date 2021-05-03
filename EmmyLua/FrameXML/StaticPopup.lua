@@ -1,7 +1,6 @@
----@type number
-STATICPOPUP_NUMDIALOGS = 0
+STATICPOPUP_NUMDIALOGS = 4
 
----@class StaticPopupDialogs_Subtable:table
+---@class StaticPopupDialogs
 ---@field button1 string
 ---@field button2 string
 ---@field button3 string
@@ -67,21 +66,19 @@ STATICPOPUP_NUMDIALOGS = 0
 ---@field verticalButtonLayout boolean
 ---@field whileDead boolean
 ---@field wide boolean
-local StaticPopupDialogs_Subtable = {}
 
----@type table<string, StaticPopupDialogs_Subtable>
----[FrameXML](https://www.townlong-yak.com/framexml/live/StaticPopup.lua)
+---@type table<string, StaticPopupDialogs>
 StaticPopupDialogs = {}
 
 ---@param which string
----@return string|nil name
----@return object|nil frame
+---@return string? name
+---@return object? dialog
 ---[FrameXML](https://www.townlong-yak.com/framexml/go/StaticPopup_Visible)
 function StaticPopup_Visible(which) end
 
 ---@param which string
 ---@param data? any
----@return object|nil
+---@return object? dialog
 ---[FrameXML](https://www.townlong-yak.com/framexml/go/StaticPopup_FindVisible)
 function StaticPopup_FindVisible(which, data) end
 
@@ -90,7 +87,7 @@ function StaticPopup_FindVisible(which, data) end
 ---@param text_arg2? string
 ---@param data? any
 ---@param insertedFrame? object
----@return object|nil
+---@return object? dialog
 ---[FrameXML](https://www.townlong-yak.com/framexml/go/StaticPopup_Show)
 function StaticPopup_Show(which, text_arg1, text_arg2, data, insertedFrame) end
 
