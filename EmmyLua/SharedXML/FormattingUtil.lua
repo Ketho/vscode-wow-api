@@ -5,8 +5,8 @@
 function SplitTextIntoLines(text, delimiter) end
 
 ---@param text string
----@return string|nil header
----@return string|nil nonHeader
+---@return string? header
+---@return string? nonHeader
 ---[FrameXML](https://www.townlong-yak.com/framexml/go/SplitTextIntoHeaderAndNonHeader)
 function SplitTextIntoHeaderAndNonHeader(text) end
 
@@ -20,12 +20,9 @@ function FormatValueWithSign(value) end
 ---[FrameXML](https://www.townlong-yak.com/framexml/go/FormatLargeNumber)
 function FormatLargeNumber(amount) end
 
----@type number
-COPPER_PER_SILVER = 0
----@type number
-SILVER_PER_GOLD = 0
----@type number
-COPPER_PER_GOLD = 0
+COPPER_PER_SILVER = 100
+SILVER_PER_GOLD = 100
+COPPER_PER_GOLD = COPPER_PER_SILVER * SILVER_PER_GOLD
 
 ---@param money number
 ---@param separateThousands? boolean
@@ -65,15 +62,14 @@ function FormatUnreadMailTooltip(tooltip, headerText, senders) end
 ---[FrameXML](https://www.townlong-yak.com/framexml/go/GetCurrencyString)
 function GetCurrencyString(currencyID, overrideAmount, colorCode, abbreviate) end
 
----@param currencies number[]|table[] An array of currencyInfo (*not to be confused with* `CurrencyInfo` *type*), which in turn is either a currencyID, or an array with { currencyID, overrideAmount, colorCode }, or a table with { currencyID = 123, amount = 45 }. See comments in [UIPanelTemplates.lua](https://www.townlong-yak.com/framexml/live/UIPanelTemplates.lua)
+---@param currencies number[] | table[] an array of currencyIDs, or a table with { currencyID = 123, amount = 45 }
 ---@return string
 ---[FrameXML](https://www.townlong-yak.com/framexml/go/GetCurrenciesString)
 function GetCurrenciesString(currencies) end
 
+--- This is a very simple parser that will only handle $G/$g tokens
 ---@param string string
 ---@param gender string
 ---@return string
----Very simple parser that will only handle $G/$g tokens
----
 ---[FrameXML](https://www.townlong-yak.com/framexml/go/ReplaceGenderTokens)
 function ReplaceGenderTokens(string, gender) end
