@@ -1,48 +1,17 @@
----@type number
-NUM_CHAT_WINDOWS = 0
----@type number
-MAX_WOW_CHAT_CHANNELS = 0
+NUM_CHAT_WINDOWS = 10
+MAX_WOW_CHAT_CHANNELS = 20
 
---temporary as object
-
----@type object
----[FrameXML](https://www.townlong-yak.com/framexml/live/ChatFrame.lua)
-DEFAULT_CHAT_FRAME = {}
-
----@type table<string, function>
----Structure: [localizedCommand] -> function
----
----[FrameXML](https://www.townlong-yak.com/framexml/live/ChatFrame.lua)
----@diagnostic disable-next-line: lowercase-global
-hash_SlashCmdList = {}
-
----@type table<string, string>
----Structure: [localizedCommand] -> emoteToken
----
----[FrameXML](https://www.townlong-yak.com/framexml/live/ChatFrame.lua)
----@diagnostic disable-next-line: lowercase-global
-hash_EmoteTokenList = {}
-
----@type table<string, string>
----Structure: [localizedCommand] -> identifier
----
----[FrameXML](https://www.townlong-yak.com/framexml/live/ChatFrame.lua)
----@diagnostic disable-next-line: lowercase-global
-hash_ChatTypeInfoList = {}
-
----@class ChatTypeInfo_Subtable:table
----@field id number
+---@class ChatTypeInfo
 ---@field r number
 ---@field g number
 ---@field b number
+---@field id number
 ---@field sticky number
 ---@field flashTab boolean
 ---@field flashTabOnGeneral boolean
 ---@field colorNameByClass boolean
-local ChatTypeInfo_Subtable = {}
 
----@type table<string, ChatTypeInfo_Subtable>
----[FrameXML](https://www.townlong-yak.com/framexml/live/ChatFrame.lua)
+---@type table<string, ChatTypeInfo>
 ChatTypeInfo = {
 	SYSTEM = {},
 	SAY = {},
@@ -133,19 +102,90 @@ ChatTypeInfo = {
 	COMMUNITIES_CHANNEL = {},
 }
 
----@type string[]
----[FrameXML](https://www.townlong-yak.com/framexml/live/ChatFrame.lua)
-ICON_LIST = {}
-
----@type table<string, number>
----Links tags from Global Strings to indicies for entries in `ICON_LIST`. This way addons can easily replace icons
----
----[FrameXML](https://www.townlong-yak.com/framexml/live/ChatFrame.lua)
-ICON_TAG_LIST = {}
-
----@type table<string, function>
----[FrameXML](https://www.townlong-yak.com/framexml/live/ChatFrame.lua)
-SlashCmdList = {}
+SlashCmdList = {
+	CONSOLE = function() end,
+	CHATLOG = function() end,
+	COMBATLOG = function() end,
+	INVITE = function() end,
+	REQUEST_INVITE = function() end,
+	UNINVITE = function() end,
+	PROMOTE = function() end,
+	REPLY = function() end,
+	HELP = function() end,
+	MACROHELP = function() end,
+	TIME = function() end,
+	PLAYED = function() end,
+	FOLLOW = function() end,
+	TRADE = function() end,
+	INSPECT = function() end,
+	JOIN = function() end,
+	LEAVE = function() end,
+	LIST_CHANNEL = function() end,
+	CHAT_HELP = function() end,
+	CHAT_PASSWORD = function() end,
+	CHAT_OWNER = function() end,
+	CHAT_MODERATOR = function() end,
+	CHAT_UNMODERATOR = function() end,
+	CHAT_CINVITE = function() end,
+	CHAT_KICK = function() end,
+	CHAT_BAN = function() end,
+	CHAT_UNBAN = function() end,
+	CHAT_ANNOUNCE = function() end,
+	GUILD_INVITE = function() end,
+	GUILD_MOTD = function() end,
+	GUILD_INFO = function() end,
+	GUILD_ROSTER = function() end,
+	CHAT_AFK = function() end,
+	CHAT_DND = function() end,
+	WHO = function() end,
+	CHANNEL = function() end,
+	FRIENDS = function() end,
+	REMOVEFRIEND = function() end,
+	IGNORE = function() end,
+	UNIGNORE = function() end,
+	SCRIPT = function() end,
+	RANDOM = function() end,
+	MACRO = function() end,
+	PVP = function() end,
+	RAID_INFO = function() end,
+	READYCHECK = function() end,
+	SAVEGUILDROSTER = function() end,
+	DUNGEONS = function() end,
+	BENCHMARK = function() end,
+	DISMOUNT = function() end,
+	LEAVEVEHICLE = function() end,
+	RESETCHAT = function() end,
+	ENABLE_ADDONS = function() end,
+	DISABLE_ADDONS = function() end,
+	STOPWATCH = function() end,
+	CALENDAR = function() end,
+	ACHIEVEMENTUI = function() end,
+	SET_TITLE = function() end,
+	USE_TALENT_SPEC = function() end,
+	UI_ERRORS_OFF = function() end,
+	UI_ERRORS_ON = function() end,
+	FRAMESTACK = function() end,
+	EVENTTRACE = function() end,
+	TEXELVIS = function() end,
+	TABLEINSPECT = function() end,
+	DUMP = function() end,
+	RELOAD = function() end,
+	WARGAME = function() end,
+	SPECTATOR_WARGAME = function() end,
+	GUILDFINDER = function() end,
+	TARGET_MARKER = function() end,
+	OPEN_LOOT_HISTORY = function() end,
+	RAIDFINDER = function() end,
+	SHARE = function() end,
+	API = function() end,
+	COMMENTATOR_OVERRIDE = function() end,
+	COMMENTATOR_NAMETEAM = function() end,
+	COMMENTATOR_ASSIGNPLAYER = function() end,
+	RESET_COMMENTATOR_SETTINGS = function() end,
+	VOICECHAT = function() end,
+	COMMUNITY = function() end,
+	COUNTDOWN = function() end,
+}
 
 ---@param callback function
 ---@param command string
