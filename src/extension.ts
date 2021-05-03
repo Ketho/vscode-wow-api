@@ -10,11 +10,11 @@ const cvar = {
 	hover: require("./providers/cvar").getHover,
 }
 
-import luaenum_provider = require("./providers/enum")
-const luaenum = {
+import enum_provider = require("./providers/enum")
+const lenum = {
 	data: require("./data/enum").data,
-	completion: luaenum_provider.completion,
-	hover: luaenum_provider.getHover,
+	completion: enum_provider.completion,
+	hover: enum_provider.getHover,
 }
 
 import globalstring_provider = require("./providers/globalstring")
@@ -48,7 +48,7 @@ export function activate(context: vscode.ExtensionContext) {
 				const linePrefix = document.lineAt(position).text.substr(0, position.character)
 				const lastWord = linePrefix.split(/[^\w\.]/).slice(-1)[0]
 				if (lastWord.startsWith("LE_"))
-					return luaenum.completion
+					return lenum.completion
 				else if (lastWord.length>3 && lastWord == lastWord.match("^[0-9A-Z_]+")?.[0]) {
 					return globalstring.completion
 				}
@@ -75,8 +75,8 @@ export function activate(context: vscode.ExtensionContext) {
 					// cvars are case insensitive
 					else if (cvar.data[lword] && isHoverString(document, range))
 						return cvar.hover(lword)
-					else if (luaenum.data[word])
-						return luaenum.hover(word)
+					else if (lenum.data[word])
+						return lenum.hover(word)
 					else if (globalstring.data[word])
 						return globalstring.hover(word)
 				}
@@ -127,7 +127,7 @@ function onCompletion() {
 		const range = editor.document.getWordRangeAtPosition(pos)
 		const word = editor.document.getText(range)
 		// doublecheck if the word was matched properly
-		const isValidWord = luaenum.data[word] || globalstring.data[word]
+		const isValidWord = lenum.data[word] || globalstring.data[word]
 
 		const config = vscode.workspace.getConfiguration("Lua")
 		const globals: string[] | undefined = config.get("diagnostics.globals")
