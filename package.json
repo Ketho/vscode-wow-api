@@ -49,5 +49,17 @@
 	},
 	"extensionDependencies": [
 		"sumneko.lua"
-	]
+	],
+	"contributes": {
+		"configuration": {
+			"title": "WoW API",
+			"properties": {
+				"wowAPI.emmyLua.loadFrameXML": {
+					"type": "boolean",
+					"default": true,
+					"markdownDescription": "Load manually updated documentation for [FrameXML](https://github.com/Ketho/vscode-wow-api/tree/master/EmmyLua/FrameXML) globals and functions."
+				}
+			}
+		}
+	}
 }

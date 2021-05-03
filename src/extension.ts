@@ -1,24 +1,24 @@
 import * as vscode from "vscode"
 
-const event = {
+const events = {
 	data: require("./data/event").data,
 	hover: require("./providers/event").getHover,
 }
 
-const cvar = {
+const cvars = {
 	data: require("./data/cvar").data,
 	hover: require("./providers/cvar").getHover,
 }
 
 import enum_provider = require("./providers/enum")
-const lenum = {
+const enums = {
 	data: require("./data/enum").data,
 	completion: enum_provider.completion,
 	hover: enum_provider.getHover,
 }
 
 import globalstring_provider = require("./providers/globalstring")
-const globalstring = {
+const globalstrings = {
 	data: require("./data/globalstring").data,
 	completion: globalstring_provider.completion,
 	hover: globalstring_provider.getHover,
@@ -38,7 +38,11 @@ function isHoverString(document: vscode.TextDocument, range: vscode.Range) {
 
 export function activate(context: vscode.ExtensionContext) {
 	console.log("loaded ketho.wow-api")
-	setExternalLibrary(true)
+
+	setExternalLibrary("\\EmmyLua\\API", true)
+	const loadFrameXML = vscode.workspace.getConfiguration("wowAPI").get("emmyLua.loadFrameXML")
+	setExternalLibrary("\\EmmyLua\\FrameXML", loadFrameXML ? true : false)
+	setLanguageServerOptions()
 
 	const completion = vscode.languages.registerCompletionItemProvider(
 		"lua",
@@ -48,9 +52,9 @@ export function activate(context: vscode.ExtensionContext) {
 				const linePrefix = document.lineAt(position).text.substr(0, position.character)
 				const lastWord = linePrefix.split(/[^\w\.]/).slice(-1)[0]
 				if (lastWord.startsWith("LE_"))
-					return lenum.completion
+					return enums.completion
 				else if (lastWord.length>3 && lastWord == lastWord.match("^[0-9A-Z_]+")?.[0]) {
-					return globalstring.completion
+					return globalstrings.completion
 				}
 			}
 		},
@@ -70,36 +74,42 @@ export function activate(context: vscode.ExtensionContext) {
 					const word = document.getText(range)
 					const lword = word.toLowerCase()
 					// events are case insensitive but virtually everyone properly uppercases anyway
-					if (event.data[word])
-						return event.hover(word)
+					if (events.data[word])
+						return events.hover(word)
 					// cvars are case insensitive
-					else if (cvar.data[lword] && isHoverString(document, range))
-						return cvar.hover(lword)
-					else if (lenum.data[word])
-						return lenum.hover(word)
-					else if (globalstring.data[word])
-						return globalstring.hover(word)
+					else if (cvars.data[lword] && isHoverString(document, range))
+						return cvars.hover(lword)
+					else if (enums.data[word])
+						return enums.hover(word)
+					else if (globalstrings.data[word])
+						return globalstrings.hover(word)
 				}
 			}
 		}
 	)
 
 	context.subscriptions.push(completion, hover)
+
+	vscode.workspace.onDidChangeConfiguration((event: vscode.ConfigurationChangeEvent) => {
+		if (event.affectsConfiguration("wowAPI.emmyLua.loadFrameXML")) {
+			const loadFrameXML = vscode.workspace.getConfiguration("wowAPI").get("emmyLua.loadFrameXML")
+			setExternalLibrary("\\EmmyLua\\FrameXML", loadFrameXML ? true : false)
+		}
+	})
 }
 
-function setExternalLibrary(enable: boolean) {
-	const name = "ketho.wow-api"
-	// get emmylua path
-	const extension = vscode.extensions.getExtension(name)
-	const path = extension?.extensionPath+"\\EmmyLua"
-	// get configuration
-	const luaConfig = vscode.workspace.getConfiguration("Lua")
-	const config: string[] | undefined = luaConfig.get("workspace.library")
+function setExternalLibrary(folder: string, enable: boolean) {
+	const extensionId = "ketho.wow-api"
+	const path = vscode.extensions.getExtension(extensionId)?.extensionPath+folder
+	const namespace = vscode.workspace.getConfiguration("Lua")
+	const config: string[] | undefined = namespace.get("workspace.library")
 	if (config) {
 		// remove any older release versions of our extension path e.g. publisher.name-0.0.1
 		for (let i = config.length-1; i >= 0; i--) {
 			const el = config[i]
-			if (el.indexOf(name) > -1 && el.indexOf(path) == -1)
+			if (el.indexOf(extensionId) > -1 && el.indexOf(path) == -1)
+				config.splice(i, 1)
+			else if (el.endsWith("\\EmmyLua") && el.indexOf(extensionId) > -1) // clean up <=0.4.5 path
 				config.splice(i, 1)
 		}
 		// add or remove path
@@ -112,12 +122,16 @@ function setExternalLibrary(enable: boolean) {
 			if (index > -1)
 				config.splice(index, 1)
 		}
-		luaConfig.update("workspace.library", config, true)
-		// hides the emmylua source from the hover tooltip
-		luaConfig.update("completion.displayContext", 0, true)
-		// hides the hundreds of types from the function signature hover tooltip
-		luaConfig.update("hover.enumsLimit", 0, true)
+		namespace.update("workspace.library", config, true)
 	}
+}
+
+function setLanguageServerOptions() {
+	const config = vscode.workspace.getConfiguration("Lua")
+	// hides the emmylua source from the hover tooltip
+	config.update("completion.displayContext", 0, true)
+	// hides the @alias types from the function signature hover tooltip
+	config.update("hover.enumsLimit", 0, true)
 }
 
 function onCompletion() {
@@ -127,7 +141,7 @@ function onCompletion() {
 		const range = editor.document.getWordRangeAtPosition(pos)
 		const word = editor.document.getText(range)
 		// doublecheck if the word was matched properly
-		const isValidWord = lenum.data[word] || globalstring.data[word]
+		const isValidWord = enums.data[word] || globalstrings.data[word]
 
 		const config = vscode.workspace.getConfiguration("Lua")
 		const globals: string[] | undefined = config.get("diagnostics.globals")

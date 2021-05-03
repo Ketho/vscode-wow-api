@@ -5,5 +5,4 @@ node_modules
 *.vsix
 *.xml
 *.txt
-Lua/Data/cache
-Lua/Data/output
+Lua/Data
