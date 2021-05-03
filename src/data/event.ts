@@ -12,7 +12,7 @@ interface EventInterface {
 	}
 }
 
-export const eventsDoc: EventInterface = {
+export const data: EventInterface = {
 	ACHIEVEMENT_EARNED: {
 		Payload: [
 			{Name: "achievementID", Type: "number"},

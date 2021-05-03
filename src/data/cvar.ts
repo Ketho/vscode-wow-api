@@ -9,7 +9,7 @@ interface CVarInterface {
 }
 
 // match case insensitive
-export const cvarsDoc: CVarInterface = {
+export const data: CVarInterface = {
 	aibrain: {
 		name: "AIBrain",
 		default: "0",

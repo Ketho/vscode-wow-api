@@ -13,7 +13,7 @@ interface CVarInterface {
 }
 
 // match case insensitive
-export const cvarsDoc: CVarInterface = {
+export const data: CVarInterface = {
 ]]
 
 local function ToTypeScript()

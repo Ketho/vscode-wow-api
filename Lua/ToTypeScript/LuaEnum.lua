@@ -7,7 +7,7 @@ local pre = [[interface LuaEnumInterface {
 	[key: string]: number
 }
 
-export const luaenumDoc: LuaEnumInterface = {
+export const data: LuaEnumInterface = {
 ]]
 
 local function ToTypeScript()

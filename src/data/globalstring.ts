@@ -2,7 +2,7 @@ interface GlobalStringInterface {
 	[key: string]: string
 }
 
-export const globalstringDoc: GlobalStringInterface = {
+export const data: GlobalStringInterface = {
 	ABANDON_PET: "Are you sure you want to permanently abandon your pet? You will never be able to summon this pet again.",
 	ABANDON_QUEST: "Abandon Quest",
 	ABANDON_QUEST_ABBREV: "Abandon",

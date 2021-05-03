@@ -2,7 +2,7 @@ interface LuaEnumInterface {
 	[key: string]: number
 }
 
-export const luaenumDoc: LuaEnumInterface = {
+export const data: LuaEnumInterface = {
 	LE_ACTIONBAR_STATE_MAIN: 1,
 	LE_ACTIONBAR_STATE_OVERRIDE: 2,
 	LE_AURORA_STATE_NONE: 1,

@@ -7,7 +7,7 @@ local pre = [[interface GlobalStringInterface {
 	[key: string]: string
 }
 
-export const globalstringDoc: GlobalStringInterface = {
+export const data: GlobalStringInterface = {
 ]]
 
 local function ToTypeScript()

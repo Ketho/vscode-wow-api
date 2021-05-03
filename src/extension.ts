@@ -1,23 +1,30 @@
 import * as vscode from "vscode"
 
-const eventsDoc = require("./data/event").eventsDoc
-const getEventHover = require("./providers/event").getEventHover
+const event = {
+	data: require("./data/event").data,
+	hover: require("./providers/event").getHover,
+}
 
-const cvarsDoc = require("./data/cvar").cvarsDoc
-const getCVarHover = require("./providers/cvar").getCVarHover
+const cvar = {
+	data: require("./data/cvar").data,
+	hover: require("./providers/cvar").getHover,
+}
 
-// todo: refactor
-const luaenumDoc = require("./data/enum").luaenumDoc
-import enumProvider = require("./providers/enum") // not sure if this is the right way to use import
-const getLuaEnumHover = enumProvider.getLuaEnumHover
-const luaenumArray = enumProvider.luaenumArray
+import luaenum_provider = require("./providers/enum")
+const luaenum = {
+	data: require("./data/enum").data,
+	hover: luaenum_provider.getHover,
+	completion: luaenum_provider.completion,
+}
 
-const globalstringDoc = require("./data/globalstring").globalstringDoc
-import globalstringProvider = require("./providers/globalstring")
-const getGlobalStringHover = globalstringProvider.getGlobalStringHover
-const globalstringArray = globalstringProvider.globalstringArray
+import globalstring_provider = require("./providers/globalstring")
+const globalstring = {
+	data: require("./data/globalstring").data,
+	hover: globalstring_provider.getHover,
+	completion: globalstring_provider.completion,
+}
 
-function isHoverString(document: vscode.TextDocument, range: vscode.Range) {
+function isHoverString(document: vscode.TextDocument, range: vscode.Range) { 
 	if (range.start.character > 0) {
 		const leftPos = new vscode.Position(range.start.line, range.start.character-1)
 		const rightPos = new vscode.Position(range.end.line, range.end.character+1)
@@ -41,9 +48,9 @@ export function activate(context: vscode.ExtensionContext) {
 				const linePrefix = document.lineAt(position).text.substr(0, position.character)
 				const lastWord = linePrefix.split(/[^\w\.]/).slice(-1)[0]
 				if (lastWord.startsWith("LE_"))
-					return luaenumArray
+					return luaenum.completion
 				else if (lastWord.length>3 && lastWord == lastWord.match("^[0-9A-Z_]+")?.[0]) {
-					return globalstringArray
+					return globalstring.completion
 				}
 			}
 		},
@@ -63,15 +70,15 @@ export function activate(context: vscode.ExtensionContext) {
 					const word = document.getText(range)
 					const lword = word.toLowerCase()
 					// events are case insensitive but virtually everyone properly uppercases anyway
-					if (eventsDoc[word])
-						return getEventHover(word)
+					if (event.data[word])
+						return event.hover(word)
 					// cvars are case insensitive
-					else if (cvarsDoc[lword] && isHoverString(document, range))
-						return getCVarHover(lword)
-					else if (luaenumDoc[word])
-						return getLuaEnumHover(word)
-					else if (globalstringDoc[word])
-						return getGlobalStringHover(word)
+					else if (cvar.data[lword] && isHoverString(document, range))
+						return cvar.hover(lword)
+					else if (luaenum.data[word])
+						return luaenum.hover(word)
+					else if (globalstring.data[word])
+						return globalstring.hover(word)
 				}
 			}
 		}
@@ -81,13 +88,13 @@ export function activate(context: vscode.ExtensionContext) {
 }
 
 function setExternalLibrary(enable: boolean) {
-	let name = "ketho.wow-api"
+	const name = "ketho.wow-api"
 	// get emmylua path
-	let extension = vscode.extensions.getExtension(name)
-	let path = extension?.extensionPath+"\\EmmyLua"
+	const extension = vscode.extensions.getExtension(name)
+	const path = extension?.extensionPath+"\\EmmyLua"
 	// get configuration
-	let luaConfig = vscode.workspace.getConfiguration("Lua")
-	let config: string[] | undefined = luaConfig.get("workspace.library")
+	const luaConfig = vscode.workspace.getConfiguration("Lua")
+	const config: string[] | undefined = luaConfig.get("workspace.library")
 	if (config) {
 		// remove any older release versions of our extension path e.g. publisher.name-0.0.1
 		for (let i = config.length-1; i >= 0; i--) {
@@ -118,10 +125,10 @@ function onCompletion() {
 		const range = editor.document.getWordRangeAtPosition(pos)
 		const word = editor.document.getText(range)
 		// doublecheck if the word was matched properly
-		const isValidWord = luaenumDoc[word] || globalstringDoc[word]
+		const isValidWord = luaenum.data[word] || globalstring.data[word]
 
 		const config = vscode.workspace.getConfiguration("Lua")
-		const globals : string[] | undefined = config.get("diagnostics.globals")
+		const globals: string[] | undefined = config.get("diagnostics.globals")
 		if (isValidWord && globals?.indexOf(word)) {
 			globals.push(word)
 			config.update("diagnostics.globals", globals)

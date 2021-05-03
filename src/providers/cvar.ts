@@ -1,6 +1,6 @@
 import * as vscode from "vscode"
 
-const cvarDoc = require("../data/cvar").cvarsDoc
+const data = require("../data/cvar").data
 
 const ConsoleCategory = [
 	"Debug",	// 0
@@ -18,7 +18,7 @@ const ConsoleCategory = [
 
 function getMarkdown(name: string) {
 	let s = "**CVar**"
-	let cvar = cvarDoc[name]
+	let cvar = data[name]
 
 	if (cvar.help)
 		s += " - "+cvar.help

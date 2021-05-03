@@ -13,7 +13,7 @@ interface EventInterface {
 	}
 }
 
-export const eventsDoc: EventInterface = {
+export const data: EventInterface = {
 ]]
 
 local types = {

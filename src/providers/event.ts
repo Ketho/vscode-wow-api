@@ -1,10 +1,10 @@
 import * as vscode from "vscode"
 
-const eventsDoc = require("../data/event").eventsDoc
+const data = require("../data/event").data
 
 function getMarkdown(name: string) {
 	let s = "**Event**"
-	let event = eventsDoc[name]
+	let event = data[name]
 
 	if (event.Documentation)
 		s += " - "+event.Documentation
@@ -29,7 +29,7 @@ function getMarkdown(name: string) {
 	return s+doc
 }
 
-export function getEventHover(name: string) {
+export function getHover(name: string) {
 	let md = new vscode.MarkdownString(getMarkdown(name))
 	let item = new vscode.Hover(md)
 	return item
