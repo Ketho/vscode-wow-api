@@ -3,7 +3,7 @@
 ## [0.5.0] - 2021-05-04
 ### Added
 - ✨ Feature: Added GlobalStrings completion and hover information.
-- 🌙 EmmyLua: Added FrameXML docs from PR #9; C_Timer augments; bare ModelSceneActor widget
+- 🌙 EmmyLua: Added FrameXML docs from PR #9; C_Timer augments; bare ModelSceneActor widget.
 - 🌙 EmmyLua: Added bare ModelScene widget; FrameStrata and DrawLayer types.
 - 🌙 EmmyLua: Added event payload to the event completion tooltip.
 - 🐞 Bug Fixes: GlobalStrings and Lua Enums (LE) are now automatically defined as globals in `Lua.diagnostics.globals` on completion.
