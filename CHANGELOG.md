@@ -1,14 +1,18 @@
 # Change Log
 
+## [0.5.1] - 2021-05-04
+### Changed
+- 🐞 Bug Fixes: Fixed accidentally unregistering our own EmmyLua path
+
 ## [0.5.0] - 2021-05-04
 ### Added
-- ✨ Feature: Added GlobalStrings completion and hover information.
-- 🌙 EmmyLua: Added FrameXML docs from PR #9; C_Timer augments; bare ModelSceneActor widget.
-- 🌙 EmmyLua: Added bare ModelScene widget; FrameStrata and DrawLayer types.
-- 🌙 EmmyLua: Added event payload to the event completion tooltip.
-- 🐞 Bug Fixes: GlobalStrings and Lua Enums (LE) are now automatically defined as globals in `Lua.diagnostics.globals` on completion.
+- ✨ Feature: Added GlobalStrings completion and hover information
+- 🌙 EmmyLua: Added FrameXML docs from PR #9; C_Timer augments; bare ModelSceneActor widget
+- 🌙 EmmyLua: Added bare ModelScene widget; FrameStrata and DrawLayer types
+- 🌙 EmmyLua: Added event payload to the event completion tooltip
+- 🐞 Bug Fixes: GlobalStrings and Lua Enums (LE) are now automatically defined as globals in `Lua.diagnostics.globals` on completion
 - 🐞 Bug Fixes: Fixed `@alias` types from spamming the hover tooltip ([#507](https://github.com/sumneko/lua-language-server/issues/507))
-- ⚙️ Options: Added an option to load FrameXML documentation. It's recommended to uncheck this option if you want to prevent polluting the fuzzy search for global completion.
+- ⚙️ Options: Added an option to load [FrameXML](https://github.com/Ketho/vscode-wow-api/tree/master/EmmyLua/FrameXML) documentation. It's recommended to uncheck this option if you want to prevent polluting the fuzzy search for global completion
 
 ![](https://github.com/Ketho/vscode-wow-api/raw/master/img/loadframexml.png)
 
@@ -142,6 +146,7 @@
 ### Added
 - 🚧 Wip: Development work
 
+[0.5.1]: https://github.com/Ketho/vscode-wow-api/releases/tag/v0.5.1
 [0.5.0]: https://github.com/Ketho/vscode-wow-api/releases/tag/v0.5.0
 [0.4.5]: https://github.com/Ketho/vscode-wow-api/releases/tag/v0.4.5
 [0.4.4]: https://github.com/Ketho/vscode-wow-api/releases/tag/v0.4.4

@@ -100,23 +100,23 @@ export function activate(context: vscode.ExtensionContext) {
 
 function setExternalLibrary(folder: string, enable: boolean) {
 	const extensionId = "ketho.wow-api"
-	const path = vscode.extensions.getExtension(extensionId)?.extensionPath+folder
+	const extensionPath = vscode.extensions.getExtension(extensionId)?.extensionPath
+	const folderPath = extensionPath+folder
 	const namespace = vscode.workspace.getConfiguration("Lua")
 	const config: string[] | undefined = namespace.get("workspace.library")
-	if (config) {
+	if (config && extensionPath) {
 		// remove any older release versions of our extension path e.g. publisher.name-0.0.1
 		for (let i = config.length-1; i >= 0; i--) {
 			const el = config[i]
-			if (el.indexOf(extensionId) > -1 && el.indexOf(path) == -1)
-				config.splice(i, 1)
-			else if (el.endsWith("\\EmmyLua") && el.indexOf(extensionId) > -1) // clean up <=0.4.5 path
+			const isSelfExtension = el.indexOf(extensionId) > -1
+			const isCurrentVersion = el.indexOf(extensionPath) > -1
+			if (isSelfExtension && !isCurrentVersion)
 				config.splice(i, 1)
 		}
-		// add or remove path
-		const index = config.indexOf(path)
+		const index = config.indexOf(folderPath)
 		if (enable) {
 			if (index == -1)
-				config.push(path)
+				config.push(folderPath)
 		}
 		else {
 			if (index > -1)
