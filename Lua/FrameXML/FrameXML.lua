@@ -4,7 +4,7 @@ local m = {}
 
 function m:LoadApiDocs(base)
 	require(base.."/Compat")
-	Util:MakeDir("EmmyLua/System")
+	Util:MakeDir("EmmyLua/API/System")
 	local toc = io.open(base.."/Blizzard_APIDocumentation/Blizzard_APIDocumentation.toc")
 	local isDoc
 	for line in toc:lines() do
@@ -18,7 +18,7 @@ function m:LoadApiDocs(base)
 				end
 				local text = Emmy:GetSystem(self.documentationInfo)
 				if #text > 0 then -- try not to create empty files as they take up the maxPreload limit
-					Util:WriteFile("EmmyLua/System/"..line, text.."\n")
+					Util:WriteFile("EmmyLua/API/System/"..line, text.."\n")
 				end
 			end
 		elseif line == "# Start documentation files here" then
@@ -33,7 +33,7 @@ function m:LoadApiDocs(base)
 	toc:close()
 	require(base.."/MissingDocumentation")
 	local text = Emmy:GetSystem(self.documentationInfo)
-	Util:WriteFile("EmmyLua/MissingDocumentation.lua", text.."\n")
+	Util:WriteFile("EmmyLua/API/MissingDocumentation.lua", text.."\n")
 end
 
 return m

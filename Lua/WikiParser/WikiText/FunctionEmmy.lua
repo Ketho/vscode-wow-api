@@ -1,7 +1,7 @@
 -- this place is a mess
 local wowpedia_arguments = require("Lua/WikiParser/WikiText/FunctionArgument")
 local nonBlizzDocumented = require("Lua/WikiParser/WikiText/NonBlizzardDocumented")[1]
-local manualDocFile = io.open("EmmyLua/GlobalAPI/GlobalAPI.lua")
+local manualDocFile = io.open("EmmyLua/API/GlobalAPI/GlobalAPI.lua")
 
 local parserData = require("Lua/WikiParser/XmlParser")
 local validated, nonvalidated
@@ -23,7 +23,7 @@ local fileIndex = 0
 
 local function GetOutputFile()
 	fileIndex = fileIndex + 1
-	local file = io.open(format("EmmyLua/GlobalAPI/Dump%d.lua", fileIndex), "w")
+	local file = io.open(format("EmmyLua/API/GlobalAPI/Dump%d.lua", fileIndex), "w")
 	return file
 end
 

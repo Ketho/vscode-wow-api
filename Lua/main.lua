@@ -1,6 +1,6 @@
 tinsert = table.insert
 format = string.format
-require("Lua/Util")
+require("Lua/Util/Util")
 
 -- create folders if they don't exist yet
 Util:MakeDir("Lua/Data/cache")
@@ -15,8 +15,8 @@ FrameXML:LoadApiDocs("Lua/FrameXML")
 
 -- emmylua data
 require("Lua/Emmy/EmmyLiterals")
-Util:WriteFile("EmmyLua/Type/Event.lua", Emmy:GetEventLiterals())
-Util:WriteFile("EmmyLua/Type/CVar.lua", Emmy:GetCVarLiterals())
+Util:WriteFile("EmmyLua/API/Type/Event.lua", Emmy:GetEventLiterals())
+Util:WriteFile("EmmyLua/API/Type/CVar.lua", Emmy:GetCVarLiterals())
 
 -- typescript data
 Util:WriteFile("src/data/event.ts", require("Lua/ToTypeScript/Event")())
