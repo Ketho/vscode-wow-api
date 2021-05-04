@@ -31,6 +31,16 @@ This extension uses [Sumneko's](https://marketplace.visualstudio.com/items?itemN
 
 ![](https://github.com/Ketho/vscode-wow-api/raw/master/img/enum.gif)
 
+#### [GlobalStrings](https://github.com/Ketho/BlizzardInterfaceResources/blob/live/Resources/GlobalStrings.lua)
+Shows completion for GlobalStrings at >4 uppercase letters to avoid polluting fuzzy search.
+
+![](https://github.com/Ketho/vscode-wow-api/raw/master/img/globalstring.gif)
+
+### Options
+Consider disabling the [Load Frame XML](https://github.com/Ketho/vscode-wow-api/tree/master/EmmyLua/FrameXML) option to reduce the amount of globals that can appear for code completion.
+
+![](https://github.com/Ketho/vscode-wow-api/raw/master/img/loadframexml.png)
+
 ### Generating documentation
 * Blizzard documented functions are generated from [Blizzard_APIDocumentation](https://github.com/Gethe/wow-ui-source/tree/live/AddOns/Blizzard_APIDocumentation).
 * Non-Blizzard documented functions are [exported](https://wow.gamepedia.com/Special:Export) and [parsed](Lua/WikiParser/XmlParser.lua) from Wowpedia.

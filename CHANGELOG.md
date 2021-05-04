@@ -10,6 +10,8 @@
 - 🐞 Bug Fixes: Fixed `@alias` types from spamming the hover tooltip ([#507](https://github.com/sumneko/lua-language-server/issues/507))
 - ⚙️ Options: Added an option to load FrameXML documentation. It's recommended to uncheck this option if you want to prevent polluting the fuzzy search for global completion.
 
+![](https://github.com/Ketho/vscode-wow-api/raw/master/img/loadframexml.png)
+
 ## [0.4.5] - 2021-04-21
 ### Added
 - 🌙 EmmyLua: Added WOW_PROJECT IDs
