@@ -1,5 +1,15 @@
 # Change Log
 
+## [0.5.0] - 2021-05-04
+### Added
+- ✨ Feature: Added GlobalStrings completion and hover information.
+- 🌙 EmmyLua: Added FrameXML docs from PR #9; C_Timer augments; bare ModelSceneActor widget
+- 🌙 EmmyLua: Added bare ModelScene widget; FrameStrata and DrawLayer types.
+- 🌙 EmmyLua: Added event payload to the event completion tooltip.
+- 🐞 Bug Fixes: GlobalStrings and Lua Enums (LE) are now automatically defined as globals in `Lua.diagnostics.globals` on completion.
+- 🐞 Bug Fixes: Fixed `@alias` types from spamming the hover tooltip ([#507](https://github.com/sumneko/lua-language-server/issues/507))
+- ⚙️ Options: Added an option to load FrameXML documentation. It's recommended to uncheck this option if you want to prevent polluting the fuzzy search for global completion.
+
 ## [0.4.5] - 2021-04-21
 ### Added
 - 🌙 EmmyLua: Added WOW_PROJECT IDs
@@ -130,6 +140,7 @@
 ### Added
 - 🚧 Wip: Development work
 
+[0.5.0]: https://github.com/Ketho/vscode-wow-api/releases/tag/v0.5.0
 [0.4.5]: https://github.com/Ketho/vscode-wow-api/releases/tag/v0.4.5
 [0.4.4]: https://github.com/Ketho/vscode-wow-api/releases/tag/v0.4.4
 [0.4.3]: https://github.com/Ketho/vscode-wow-api/releases/tag/v0.4.3
