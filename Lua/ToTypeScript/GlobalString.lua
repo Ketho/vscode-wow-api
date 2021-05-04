@@ -37,6 +37,9 @@ local function ToTypeScript()
 	for _, tbl in pairs(stringsTable) do
 		local key, value = tbl.BaseTag, tbl.TagText
 		value = value:gsub('\\32', ' ') -- space char
+		-- unescape any quotes before escaping quotes
+		value = value:gsub('\\\"', '"')
+		value = value:gsub('"', '\\\"')
 		if slashStrings[key] and slashStrings[key](usedBuild) then
 			value = value:gsub("\\", "\\\\")
 		end
