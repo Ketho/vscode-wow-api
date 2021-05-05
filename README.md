@@ -32,7 +32,7 @@ This extension uses [Sumneko's](https://marketplace.visualstudio.com/items?itemN
 ![](https://github.com/Ketho/vscode-wow-api/raw/master/img/enum.gif)
 
 #### [GlobalStrings](https://github.com/Ketho/BlizzardInterfaceResources/blob/live/Resources/GlobalStrings.lua)
-Shows completion for GlobalStrings at >3 uppercase letters to avoid polluting fuzzy search.
+Shows completion for GlobalStrings at >3 uppercase letters to declutter fuzzy search.
 
 ![](https://github.com/Ketho/vscode-wow-api/raw/master/img/globalstring.gif)
 
