@@ -39,9 +39,9 @@ function isHoverString(document: vscode.TextDocument, range: vscode.Range) {
 export function activate(context: vscode.ExtensionContext) {
 	console.log("loaded ketho.wow-api")
 
-	setExternalLibrary("\\EmmyLua\\API", true)
+	setExternalLibrary("EmmyLua\\API", true)
 	const loadFrameXML = vscode.workspace.getConfiguration("wowAPI").get("emmyLua.loadFrameXML")
-	setExternalLibrary("\\EmmyLua\\FrameXML", loadFrameXML ? true : false)
+	setExternalLibrary("EmmyLua\\FrameXML", loadFrameXML ? true : false)
 	setLanguageServerOptions()
 
 	const completion = vscode.languages.registerCompletionItemProvider(
@@ -63,7 +63,7 @@ export function activate(context: vscode.ExtensionContext) {
 		"A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M",
 		"N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z"
 	)
-	onCompletion()
+	onCustomCompletion()
 
 	const hover = vscode.languages.registerHoverProvider(
 		"lua",
@@ -93,7 +93,7 @@ export function activate(context: vscode.ExtensionContext) {
 	vscode.workspace.onDidChangeConfiguration((event: vscode.ConfigurationChangeEvent) => {
 		if (event.affectsConfiguration("wowAPI.emmyLua.loadFrameXML")) {
 			const loadFrameXML = vscode.workspace.getConfiguration("wowAPI").get("emmyLua.loadFrameXML")
-			setExternalLibrary("\\EmmyLua\\FrameXML", loadFrameXML ? true : false)
+			setExternalLibrary("EmmyLua\\FrameXML", loadFrameXML ? true : false)
 		}
 	})
 }
@@ -101,28 +101,31 @@ export function activate(context: vscode.ExtensionContext) {
 function setExternalLibrary(folder: string, enable: boolean) {
 	const extensionId = "ketho.wow-api"
 	const extensionPath = vscode.extensions.getExtension(extensionId)?.extensionPath
-	const folderPath = extensionPath+folder
-	const namespace = vscode.workspace.getConfiguration("Lua")
-	const config: string[] | undefined = namespace.get("workspace.library")
-	if (config && extensionPath) {
-		// remove any older release versions of our extension path e.g. publisher.name-0.0.1
-		for (let i = config.length-1; i >= 0; i--) {
-			const el = config[i]
+	const folderPath = extensionPath+"\\"+folder
+	const config = vscode.workspace.getConfiguration("Lua")
+	const library: string[] | undefined = config.get("workspace.library")
+	if (library && extensionPath) {
+		// remove any older versions of our path e.g. "publisher.name-0.0.1"
+		for (let i = library.length-1; i >= 0; i--) {
+			const el = library[i]
 			const isSelfExtension = el.indexOf(extensionId) > -1
 			const isCurrentVersion = el.indexOf(extensionPath) > -1
-			if (isSelfExtension && !isCurrentVersion)
-				config.splice(i, 1)
+			if (isSelfExtension && !isCurrentVersion) {
+				library.splice(i, 1)
+			}
 		}
-		const index = config.indexOf(folderPath)
+		const index = library.indexOf(folderPath)
 		if (enable) {
-			if (index == -1)
-				config.push(folderPath)
+			if (index == -1) {
+				library.push(folderPath)
+			}
 		}
 		else {
-			if (index > -1)
-				config.splice(index, 1)
+			if (index > -1) {
+				library.splice(index, 1)
+			}
 		}
-		namespace.update("workspace.library", config, true)
+		config.update("workspace.library", library, true)
 	}
 }
 
@@ -134,7 +137,7 @@ function setLanguageServerOptions() {
 	config.update("hover.enumsLimit", 0, true)
 }
 
-function onCompletion() {
+function onCustomCompletion() {
 	// listen when one of our completion items were committed
 	vscode.commands.registerTextEditorCommand("ketho.wow-api.onCompletion", (editor: vscode.TextEditor) => {
 		const pos = editor.selection.active
