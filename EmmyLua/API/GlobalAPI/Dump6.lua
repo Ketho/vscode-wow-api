@@ -1177,9 +1177,6 @@ function UnitPosition(unit) end
 ---[Documentation](https://wow.gamepedia.com/API_UnitPowerBarTimerInfo)
 function UnitPowerBarTimerInfo() end
 
----[Documentation](https://wow.gamepedia.com/API_UnitPowerType)
-function UnitPowerType(unit) end
-
 ---[Documentation](https://wow.gamepedia.com/API_UnitRace)
 function UnitRace(unit) end
 
