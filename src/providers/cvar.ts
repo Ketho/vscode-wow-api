@@ -35,7 +35,7 @@ function getMarkdown(name: string) {
 	return s+doc
 }
 
-export function getCVarHover(name: string) {
+export function getHover(name: string) {
 	let md = new vscode.MarkdownString(getMarkdown(name))
 	let item = new vscode.Hover(md)
 	return item
