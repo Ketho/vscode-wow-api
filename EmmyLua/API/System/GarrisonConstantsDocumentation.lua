@@ -1,3 +1,11 @@
+---@class CovenantSkill
+local CovenantSkill = {
+	Kyrian = 2730,
+	Venthyr = 2731,
+	NightFae = 2732,
+	Necrolord = 2733,
+}
+
 ---@class CovenantType
 local CovenantType = {
 	None = 0,

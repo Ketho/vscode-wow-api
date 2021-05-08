@@ -15,6 +15,10 @@ function C_GossipInfo.GetActiveQuests() end
 ---[Documentation](https://wow.gamepedia.com/API_C_GossipInfo.GetAvailableQuests)
 function C_GossipInfo.GetAvailableQuests() end
 
+---@return string? description
+---[Documentation](https://wow.gamepedia.com/API_C_GossipInfo.GetCustomGossipDescriptionString)
+function C_GossipInfo.GetCustomGossipDescriptionString() end
+
 ---@return number numQuests
 ---[Documentation](https://wow.gamepedia.com/API_C_GossipInfo.GetNumActiveQuests)
 function C_GossipInfo.GetNumActiveQuests() end

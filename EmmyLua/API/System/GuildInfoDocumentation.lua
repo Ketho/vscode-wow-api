@@ -50,6 +50,13 @@ function C_GuildInfo.IsGuildRankAssignmentAllowed(guid, rankOrder) end
 ---[Documentation](https://wow.gamepedia.com/API_C_GuildInfo.QueryGuildMemberRecipes)
 function C_GuildInfo.QueryGuildMemberRecipes(guildMemberGUID, skillLineID) end
 
+---@param skillLineID number
+---@param recipeSpellID number
+---@param recipeLevel? number
+---@return number updatedRecipeSpellID
+---[Documentation](https://wow.gamepedia.com/API_C_GuildInfo.QueryGuildMembersForRecipe)
+function C_GuildInfo.QueryGuildMembersForRecipe(skillLineID, recipeSpellID, recipeLevel) end
+
 ---@param guid string
 ---[Documentation](https://wow.gamepedia.com/API_C_GuildInfo.RemoveFromGuild)
 function C_GuildInfo.RemoveFromGuild(guid) end

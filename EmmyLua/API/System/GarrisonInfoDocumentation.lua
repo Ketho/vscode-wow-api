@@ -146,6 +146,11 @@ function C_Garrison.IsAtGarrisonMissionNPC() end
 ---[Documentation](https://wow.gamepedia.com/API_C_Garrison.IsEnvironmentCountered)
 function C_Garrison.IsEnvironmentCountered(missionID) end
 
+---@param followerID string
+---@return boolean followerOnCompletedMission
+---[Documentation](https://wow.gamepedia.com/API_C_Garrison.IsFollowerOnCompletedMission)
+function C_Garrison.IsFollowerOnCompletedMission(followerID) end
+
 ---@param talentID number
 ---@return boolean isMet
 ---@return string? failureString
@@ -153,6 +158,7 @@ function C_Garrison.IsEnvironmentCountered(missionID) end
 function C_Garrison.IsTalentConditionMet(talentID) end
 
 ---@param missionID number
+---@return boolean success
 ---[Documentation](https://wow.gamepedia.com/API_C_Garrison.RegenerateCombatLog)
 function C_Garrison.RegenerateCombatLog(missionID) end
 
@@ -222,6 +228,7 @@ local AutoCombatSpellInfo = {}
 ---@field maxHealth number
 ---@field role number
 ---@field isAutoTroop boolean
+---@field isSoulbind boolean
 ---@field isCollected boolean
 ---@field autoCombatStats FollowerAutoCombatStatsInfo
 ---@field autoCombatSpells AutoCombatSpellInfo[]
@@ -265,6 +272,7 @@ local AutoMissionTargetingInfo = {}
 ---@field attack number
 ---@field healingTimestamp number
 ---@field healCost number
+---@field minutesHealingRemaining number
 local FollowerAutoCombatStatsInfo = {}
 
 ---@class FollowerDisplayID

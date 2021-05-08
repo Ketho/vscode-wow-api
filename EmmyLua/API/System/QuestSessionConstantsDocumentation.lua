@@ -41,4 +41,5 @@ local QuestSessionResult = {
 	InvalidPublicParty = 30,
 	Unknown = 31,
 	InCombat = 32,
+	MemberInCombat = 33,
 }

@@ -1,7 +1,7 @@
 ## WoW API
 [![](https://img.shields.io/github/license/Ketho/vscode-wow-api)](https://opensource.org/licenses/MIT)
 [![](https://img.shields.io/github/v/release/Ketho/vscode-wow-api)](https://github.com/Ketho/vscode-wow-api/releases)
-[![](https://img.shields.io/badge/wow-9.0.2-yellow)](https://github.com/Gethe/wow-ui-source/tree/9.0.2)
+[![](https://img.shields.io/badge/wow-9.0.5-yellow)](https://github.com/Gethe/wow-ui-source/tree/9.0.5)
 
 Adds IntelliSense features for World of Warcraft API to VS Code.
 
@@ -9,7 +9,7 @@ This extension uses [Sumneko's](https://marketplace.visualstudio.com/items?itemN
 
 ### Features
 #### [API](https://wow.gamepedia.com/World_of_Warcraft_API)
-* Global API: Parsed 55% (744/1345) of non-Blizzard documented API that have an existing Wowpedia page
+* Global API: Parsed 55% (743/1344) of non-Blizzard documented API that have an existing Wowpedia page
 * `C_` namespaced systems
 * Lua shorthand references e.g. `format` (string.format) and `tinsert` (table.insert)
 * Custom WoW Lua functions e.g. `wipe` and `strsplit`

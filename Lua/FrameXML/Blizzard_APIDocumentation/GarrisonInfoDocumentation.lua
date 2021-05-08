@@ -385,6 +385,20 @@ local GarrisonInfo =
 			},
 		},
 		{
+			Name = "IsFollowerOnCompletedMission",
+			Type = "Function",
+
+			Arguments =
+			{
+				{ Name = "followerID", Type = "string", Nilable = false },
+			},
+
+			Returns =
+			{
+				{ Name = "followerOnCompletedMission", Type = "bool", Nilable = false },
+			},
+		},
+		{
 			Name = "IsTalentConditionMet",
 			Type = "Function",
 
@@ -406,6 +420,11 @@ local GarrisonInfo =
 			Arguments =
 			{
 				{ Name = "missionID", Type = "number", Nilable = false },
+			},
+
+			Returns =
+			{
+				{ Name = "success", Type = "bool", Nilable = false },
 			},
 		},
 		{
@@ -1029,6 +1048,7 @@ local GarrisonInfo =
 				{ Name = "maxHealth", Type = "number", Nilable = false },
 				{ Name = "role", Type = "number", Nilable = false },
 				{ Name = "isAutoTroop", Type = "bool", Nilable = false },
+				{ Name = "isSoulbind", Type = "bool", Nilable = false },
 				{ Name = "isCollected", Type = "bool", Nilable = false },
 				{ Name = "autoCombatStats", Type = "FollowerAutoCombatStatsInfo", Nilable = false },
 				{ Name = "autoCombatSpells", Type = "table", InnerType = "AutoCombatSpellInfo", Nilable = false },
@@ -1096,6 +1116,7 @@ local GarrisonInfo =
 				{ Name = "attack", Type = "number", Nilable = false },
 				{ Name = "healingTimestamp", Type = "number", Nilable = false },
 				{ Name = "healCost", Type = "number", Nilable = false },
+				{ Name = "minutesHealingRemaining", Type = "number", Nilable = false },
 			},
 		},
 		{

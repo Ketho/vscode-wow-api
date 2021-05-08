@@ -50,6 +50,21 @@ function C_CovenantSanctumUI.GetSanctumType() end
 ---[Documentation](https://wow.gamepedia.com/API_C_CovenantSanctumUI.GetSoulCurrencies)
 function C_CovenantSanctumUI.GetSoulCurrencies() end
 
+---@return boolean hasMaxRenown
+---[Documentation](https://wow.gamepedia.com/API_C_CovenantSanctumUI.HasMaximumRenown)
+function C_CovenantSanctumUI.HasMaximumRenown() end
+
+---@return boolean isInCatchUpMode
+---[Documentation](https://wow.gamepedia.com/API_C_CovenantSanctumUI.IsPlayerInRenownCatchUpMode)
+function C_CovenantSanctumUI.IsPlayerInRenownCatchUpMode() end
+
+---@return boolean isWeeklyCapped
+---[Documentation](https://wow.gamepedia.com/API_C_CovenantSanctumUI.IsWeeklyRenownCapped)
+function C_CovenantSanctumUI.IsWeeklyRenownCapped() end
+
+---[Documentation](https://wow.gamepedia.com/API_C_CovenantSanctumUI.RequestCatchUpState)
+function C_CovenantSanctumUI.RequestCatchUpState() end
+
 ---@class CovenantSanctumFeatureInfo
 ---@field garrTalentTreeID number
 ---@field featureType number

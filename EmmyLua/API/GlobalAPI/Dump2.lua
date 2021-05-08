@@ -1,8 +1,3 @@
----@return number numPets
----@return number numOwned
----[Documentation](https://wow.gamepedia.com/API_C_PetJournal.GetNumPets)
-function C_PetJournal.GetNumPets() end
-
 ---[Documentation](https://wow.gamepedia.com/API_C_PetJournal.GetNumPetsNeedingFanfare)
 function C_PetJournal.GetNumPetsNeedingFanfare() end
 
@@ -307,6 +302,9 @@ function C_Social.TwitterPostItem(text, width, height, snapshotId, offScreenFram
 
 ---[Documentation](https://wow.gamepedia.com/API_C_Social.TwitterPostScreenshot)
 function C_Social.TwitterPostScreenshot(text, screenshotIndex, texture, usedCustomText) end
+
+---[Documentation](https://wow.gamepedia.com/API_C_Soulbinds.GetConduitItemLevel)
+function C_Soulbinds.GetConduitItemLevel(conduitID, rank) end
 
 ---[Documentation](https://wow.gamepedia.com/API_C_TalkingHead.GetConversationsDeferred)
 function C_TalkingHead.GetConversationsDeferred() end

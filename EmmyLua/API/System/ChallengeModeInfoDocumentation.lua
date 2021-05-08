@@ -1,5 +1,10 @@
 C_ChallengeMode = {}
 
+---@param itemLocation ItemLocationMixin
+---@return boolean canUse
+---[Documentation](https://wow.gamepedia.com/API_C_ChallengeMode.CanUseKeystoneInCurrentMap)
+function C_ChallengeMode.CanUseKeystoneInCurrentMap(itemLocation) end
+
 ---[Documentation](https://wow.gamepedia.com/API_C_ChallengeMode.ClearKeystone)
 function C_ChallengeMode.ClearKeystone() end
 

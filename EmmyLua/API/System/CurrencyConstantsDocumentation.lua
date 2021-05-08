@@ -113,7 +113,9 @@ local CurrencySource = {
 	DailyReset = 45,
 	AddConduitToCollection = 46,
 	Barbershop = 47,
-	Last = 48,
+	ConvertItemsToCurrencyValue = 48,
+	PvPTeamContribution = 49,
+	Last = 50,
 }
 
 ---@class CurrencyTokenCategoryFlags

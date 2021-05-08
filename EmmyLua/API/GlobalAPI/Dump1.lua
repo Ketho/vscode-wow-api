@@ -1287,11 +1287,6 @@ function C_LFGList.GetSearchResultMemberCounts(searchResultID) end
 ---[Documentation](https://wow.gamepedia.com/API_C_LFGList.GetSearchResultMemberInfo)
 function C_LFGList.GetSearchResultMemberInfo(searchResultID, memberIndex) end
 
----@return number numResults
----@return table resultIDTable
----[Documentation](https://wow.gamepedia.com/API_C_LFGList.GetSearchResults)
-function C_LFGList.GetSearchResults() end
-
 ---[Documentation](https://wow.gamepedia.com/API_C_LFGList.HasActivityList)
 function C_LFGList.HasActivityList() end
 
@@ -1752,4 +1747,9 @@ function C_PetJournal.GetNumPetSources() end
 ---@return number numTypes
 ---[Documentation](https://wow.gamepedia.com/API_C_PetJournal.GetNumPetTypes)
 function C_PetJournal.GetNumPetTypes() end
+
+---@return number numPets
+---@return number numOwned
+---[Documentation](https://wow.gamepedia.com/API_C_PetJournal.GetNumPets)
+function C_PetJournal.GetNumPets() end
 

@@ -2430,6 +2430,7 @@ export const data: EventInterface = {
 			{Name: "previewInfo", Type: "CovenantPreviewInfo"},
 		],
 	},
+	COVENANT_RENOWN_CATCH_UP_STATE_UPDATE: {},
 	COVENANT_RENOWN_INTERACTION_ENDED: {},
 	COVENANT_RENOWN_INTERACTION_STARTED: {},
 	COVENANT_SANCTUM_INTERACTION_ENDED: {},

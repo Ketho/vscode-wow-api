@@ -30,10 +30,20 @@ function C_LFGList.GetActiveEntryInfo() end
 ---[Documentation](https://wow.gamepedia.com/API_C_LFGList.GetApplicantInfo)
 function C_LFGList.GetApplicantInfo(applicantID) end
 
+---@return number totalResultsFound
+---@return number[] filteredResults
+---[Documentation](https://wow.gamepedia.com/API_C_LFGList.GetFilteredSearchResults)
+function C_LFGList.GetFilteredSearchResults() end
+
 ---@param searchResultID number
 ---@return LfgSearchResultData searchResultData
 ---[Documentation](https://wow.gamepedia.com/API_C_LFGList.GetSearchResultInfo)
 function C_LFGList.GetSearchResultInfo(searchResultID) end
+
+---@return number totalResultsFound
+---@return number[] results
+---[Documentation](https://wow.gamepedia.com/API_C_LFGList.GetSearchResults)
+function C_LFGList.GetSearchResults() end
 
 ---@return boolean hasActiveEntryInfo
 ---[Documentation](https://wow.gamepedia.com/API_C_LFGList.HasActiveEntryInfo)
