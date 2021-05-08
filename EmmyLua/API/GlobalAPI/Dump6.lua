@@ -1133,17 +1133,6 @@ function UnitIsWildBattlePet() end
 ---[Documentation](https://wow.gamepedia.com/API_UnitLeadsAnyGroup)
 function UnitLeadsAnyGroup() end
 
----@param unit string
----@return number level
----[Documentation](https://wow.gamepedia.com/API_UnitLevel)
-function UnitLevel(unit) end
-
----@param unit string
----@return string name
----@return string realm
----[Documentation](https://wow.gamepedia.com/API_UnitName)
-function UnitName(unit) end
-
 ---[Documentation](https://wow.gamepedia.com/API_UnitNameUnmodified)
 function UnitNameUnmodified() end
 

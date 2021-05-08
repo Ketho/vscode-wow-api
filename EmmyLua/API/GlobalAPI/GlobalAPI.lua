@@ -17,7 +17,7 @@ function CreateFrame(frameType, name, parent, template, id) end
 ---[Documentation](https://wow.gamepedia.com/API_hooksecurefunc)
 function hooksecurefunc(tbl, name, hook) end
 
----@param unit string
+---@param unit Unit
 ---@param index? number
 ---@return PowerType powerType
 ---@return string powerToken
@@ -26,6 +26,17 @@ function hooksecurefunc(tbl, name, hook) end
 ---@return number altB
 ---[Documentation](https://wow.gamepedia.com/API_UnitPowerType)
 function UnitPowerType(unit, index) end
+
+---@param unit Unit
+---@return number level
+---[Documentation](https://wow.gamepedia.com/API_UnitLevel)
+function UnitLevel(unit) end
+
+---@param unit Unit
+---@return string name
+---@return string realm
+---[Documentation](https://wow.gamepedia.com/API_UnitName)
+function UnitName(unit) end
 
 -- non blizzard documented C namespaces
 C_AdventureJournal = {}

@@ -30,6 +30,8 @@ function Frame:SetScript(scriptType, handler) end
 function Frame:RegisterEvent(event) end
 
 ---@param event Event
+---@param unit1 Unit
+---@param unit2 Unit
 ---[Documentation](https://wow.gamepedia.com/API_Frame_RegisterUnitEvent)
 function Frame:RegisterUnitEvent(event, unit1, unit2) end
 
