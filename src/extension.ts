@@ -148,7 +148,7 @@ function onCustomCompletion() {
 
 		const config = vscode.workspace.getConfiguration("Lua")
 		const globals: string[] | undefined = config.get("diagnostics.globals")
-		if (isValidWord && globals?.indexOf(word)) {
+		if (isValidWord && globals && globals?.indexOf(word)==-1) {
 			globals.push(word)
 			config.update("diagnostics.globals", globals)
 		}
