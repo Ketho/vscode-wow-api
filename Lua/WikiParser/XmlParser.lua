@@ -10,7 +10,7 @@ for file in lfs.dir("./Lua/Data/input") do
 	end
 end
 if not path then
-	local output = "Lua/Data/cache/NonBlizzardDocumented.txt"
+	local output = "Lua/Data/output/NonBlizzardDocumented.txt"
 	print("Parser: no XML file found; export it from Wowpedia with "..output)
 	if not lfs.attributes(output) then
 		local nonBlizzDocumented, blizzDocumented = unpack(require("Lua/WikiParser/WikiText/NonBlizzardDocumented"))
@@ -18,7 +18,7 @@ if not path then
 		for _, name in pairs(Util:SortTable(nonBlizzDocumented)) do
 			file1:write("API "..name.."\n")
 		end
-		local file2 = io.open("Lua/Data/cache/BlizzardDocumented.txt", "w")
+		local file2 = io.open("Lua/Data/output/BlizzardDocumented.txt", "w")
 		for _, name in pairs(Util:SortTable(blizzDocumented)) do
 			file2:write("API "..name.."\n")
 		end

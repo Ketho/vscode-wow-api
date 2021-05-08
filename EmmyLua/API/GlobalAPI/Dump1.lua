@@ -92,7 +92,6 @@ function ApplyBarberShopStyle() end
 ---[Documentation](https://wow.gamepedia.com/API_ArchaeologyGetIconInfo)
 function ArchaeologyGetIconInfo(index) end
 
----@return number numSites
 ---[Documentation](https://wow.gamepedia.com/API_ArchaeologyMapUpdateAll)
 function ArchaeologyMapUpdateAll() end
 

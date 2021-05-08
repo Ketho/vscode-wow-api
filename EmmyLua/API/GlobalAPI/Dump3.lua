@@ -366,8 +366,10 @@ function GetActionCharges(slot) end
 ---[Documentation](https://wow.gamepedia.com/API_GetActionCooldown)
 function GetActionCooldown(slot) end
 
+---@param actionSlot number
+---@return number text
 ---[Documentation](https://wow.gamepedia.com/API_GetActionCount)
-function GetActionCount(slot) end
+function GetActionCount(actionSlot) end
 
 ---[Documentation](https://wow.gamepedia.com/API_GetActionInfo)
 function GetActionInfo(slot) end
@@ -524,6 +526,7 @@ function GetAvailableLocales() end
 ---@return number frequency
 ---@return boolean isRepeatable
 ---@return boolean isLegendary
+---@return number questID
 ---[Documentation](https://wow.gamepedia.com/API_GetAvailableQuestInfo)
 function GetAvailableQuestInfo(index) end
 
@@ -571,8 +574,9 @@ function GetBarberShopTotalCost() end
 ---[Documentation](https://wow.gamepedia.com/API_GetBattlefieldArenaFaction)
 function GetBattlefieldArenaFaction() end
 
+---@return number waitTime
 ---[Documentation](https://wow.gamepedia.com/API_GetBattlefieldEstimatedWaitTime)
-function GetBattlefieldEstimatedWaitTime(index) end
+function GetBattlefieldEstimatedWaitTime() end
 
 ---[Documentation](https://wow.gamepedia.com/API_GetBattlefieldFlagPosition)
 function GetBattlefieldFlagPosition(index) end
@@ -1058,6 +1062,7 @@ function GetFollowerTypeIDFromSpell() end
 ---[Documentation](https://wow.gamepedia.com/API_GetFontInfo)
 function GetFontInfo() end
 
+---@return string fonts
 ---[Documentation](https://wow.gamepedia.com/API_GetFonts)
 function GetFonts() end
 
@@ -1476,8 +1481,13 @@ function GetItemClassInfo(classID) end
 ---[Documentation](https://wow.gamepedia.com/API_GetItemCooldown)
 function GetItemCooldown(itemId) end
 
+---@param itemInfo string
+---@param includeBank boolean
+---@param includeUses boolean
+---@param includeReagentBank boolean
+---@return number count
 ---[Documentation](https://wow.gamepedia.com/API_GetItemCount)
-function GetItemCount(item, includeBank, includeCharges) end
+function GetItemCount(itemInfo, includeBank, includeUses, includeReagentBank) end
 
 ---[Documentation](https://wow.gamepedia.com/API_GetItemCreationContext)
 function GetItemCreationContext(itemlink) end

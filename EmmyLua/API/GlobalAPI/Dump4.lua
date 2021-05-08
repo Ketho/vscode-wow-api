@@ -727,8 +727,6 @@ function GetQuestLogPortraitGiver() end
 ---[Documentation](https://wow.gamepedia.com/API_GetQuestLogPortraitTurnIn)
 function GetQuestLogPortraitTurnIn() end
 
----@return string questDescription
----@return string questObjectives
 ---[Documentation](https://wow.gamepedia.com/API_GetQuestLogQuestText)
 function GetQuestLogQuestText() end
 

@@ -1177,15 +1177,8 @@ function UnitPosition(unit) end
 ---[Documentation](https://wow.gamepedia.com/API_UnitPowerBarTimerInfo)
 function UnitPowerBarTimerInfo() end
 
----@param unit string
----@param index number
----@return number powerType
----@return string powerToken
----@return number altR
----@return number altG
----@return number altB
 ---[Documentation](https://wow.gamepedia.com/API_UnitPowerType)
-function UnitPowerType(unit, index) end
+function UnitPowerType(unit) end
 
 ---[Documentation](https://wow.gamepedia.com/API_UnitRace)
 function UnitRace(unit) end
