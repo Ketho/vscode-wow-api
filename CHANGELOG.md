@@ -2,7 +2,7 @@
 
 ## [0.5.2] - 2021-05-09
 ### Added
-- 🌙 EmmyLua: Updated Wowpedia definitions and Blizzard_APIDocumentation to 9.0.5 (38134)
+- 🌙 EmmyLua: Updated Blizzard_APIDocumentation to 9.0.5 (38134) and Wowpedia definitions
 - 🌙 EmmyLua: Added preliminary support for UnitID types
 - 📚 Documentation: Added wiki page for [Recommended settings](https://github.com/Ketho/vscode-wow-api/wiki/Recommended-settings)
 
