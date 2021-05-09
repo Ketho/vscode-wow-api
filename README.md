@@ -7,6 +7,8 @@ Adds IntelliSense features for World of Warcraft API to VS Code.
 
 This extension uses [Sumneko's](https://marketplace.visualstudio.com/items?itemName=sumneko.lua) Lua [Language Server](https://microsoft.github.io/language-server-protocol/) with [EmmyLua](https://github.com/sumneko/lua-language-server/wiki/EmmyLua-Annotations) annotations.
 
+See [Recommended settings](https://github.com/Ketho/vscode-wow-api/wiki/Recommended-settings) for suggested config options and comparisons.
+
 ### Features
 #### [API](https://wow.gamepedia.com/World_of_Warcraft_API)
 * Global API: Parsed 55% (743/1344) of non-Blizzard documented API that have an existing Wowpedia page
@@ -35,11 +37,6 @@ This extension uses [Sumneko's](https://marketplace.visualstudio.com/items?itemN
 Shows completion for GlobalStrings at >3 uppercase letters to declutter fuzzy search.
 
 ![](https://github.com/Ketho/vscode-wow-api/raw/master/img/globalstring.gif)
-
-### Options
-Consider disabling the [Load Frame XML](https://github.com/Ketho/vscode-wow-api/tree/master/EmmyLua/FrameXML) option to reduce the amount of globals that can appear for code completion.
-
-![](https://github.com/Ketho/vscode-wow-api/raw/master/img/loadframexml.png)
 
 ### Generating documentation
 * Blizzard documented functions are generated from [Blizzard_APIDocumentation](https://github.com/Gethe/wow-ui-source/tree/live/AddOns/Blizzard_APIDocumentation).

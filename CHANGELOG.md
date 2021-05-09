@@ -1,5 +1,15 @@
 # Change Log
 
+## [0.5.2] - 2021-05-09
+### Added
+- 🌙 EmmyLua: Updated Wowpedia definitions and Blizzard_APIDocumentation to 9.0.5 (38134)
+- 🌙 EmmyLua: Added preliminary support for UnitID types
+- 📚 Documentation: Added wiki page for [Recommended settings](https://github.com/Ketho/vscode-wow-api/wiki/Recommended-settings)
+
+### Changed
+- 🐞 Bug Fixes: Fixed regression for CVar hover tooltip
+- 🐞 Bug Fixes: Fixed globals being added to `Lua.diagnostics.globals` when already defined there
+
 ## [0.5.1] - 2021-05-04
 ### Changed
 - 🐞 Bug Fixes: Fixed accidentally unregistering our own EmmyLua path
@@ -13,8 +23,6 @@
 - 🐞 Bug Fixes: GlobalStrings and Lua Enums (LE) are now automatically defined as globals in `Lua.diagnostics.globals` on completion
 - 🐞 Bug Fixes: Fixed `@alias` types from spamming the hover tooltip ([#507](https://github.com/sumneko/lua-language-server/issues/507))
 - ⚙️ Options: Added an option to load [FrameXML](https://github.com/Ketho/vscode-wow-api/tree/master/EmmyLua/FrameXML) documentation. It's recommended to uncheck this option if you want to prevent polluting the fuzzy search for global completion
-
-![](https://github.com/Ketho/vscode-wow-api/raw/master/img/loadframexml.png)
 
 ## [0.4.5] - 2021-04-21
 ### Added
@@ -146,6 +154,7 @@
 ### Added
 - 🚧 Wip: Development work
 
+[0.5.2]: https://github.com/Ketho/vscode-wow-api/releases/tag/v0.5.2
 [0.5.1]: https://github.com/Ketho/vscode-wow-api/releases/tag/v0.5.1
 [0.5.0]: https://github.com/Ketho/vscode-wow-api/releases/tag/v0.5.0
 [0.4.5]: https://github.com/Ketho/vscode-wow-api/releases/tag/v0.4.5
