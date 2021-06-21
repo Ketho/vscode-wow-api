@@ -3,11 +3,11 @@ import * as vscode from "vscode"
 const data = require("../data/event").data
 
 function getMarkdown(name: string) {
-	let s = "**Event**"
 	let event = data[name]
+	let s = "**Event** `"+name+"`"
 
 	if (event.Documentation)
-		s += " - "+event.Documentation
+		s += "\n\n"+event.Documentation
 	s += "\n"
 
 	let payload = event.Payload
