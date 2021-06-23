@@ -1,13 +1,3 @@
----[Documentation](https://wow.gamepedia.com/API_HearthAndResurrectFromArea)
-function HearthAndResurrectFromArea() end
-
----[Documentation](https://wow.gamepedia.com/API_HideRepairCursor)
-function HideRepairCursor() end
-
----@return boolean inCinematic
----[Documentation](https://wow.gamepedia.com/API_InCinematic)
-function InCinematic() end
-
 ---[Documentation](https://wow.gamepedia.com/API_InCombatLockdown)
 function InCombatLockdown() end
 
@@ -1624,4 +1614,13 @@ function SetBagSlotFlag(index, flagIndex, checked) end
 
 ---[Documentation](https://wow.gamepedia.com/API_SetBankAutosortDisabled)
 function SetBankAutosortDisabled() end
+
+---[Documentation](https://wow.gamepedia.com/API_SetBankBagSlotFlag)
+function SetBankBagSlotFlag() end
+
+---[Documentation](https://wow.gamepedia.com/API_SetBarSlotFromIntro)
+function SetBarSlotFromIntro(slot) end
+
+---[Documentation](https://wow.gamepedia.com/API_SetBarberShopAlternateFormFrame)
+function SetBarberShopAlternateFormFrame() end
 

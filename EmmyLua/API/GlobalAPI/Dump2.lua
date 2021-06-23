@@ -353,6 +353,13 @@ function C_ToyBox.GetNumToys() end
 ---[Documentation](https://wow.gamepedia.com/API_C_ToyBox.GetToyFromIndex)
 function C_ToyBox.GetToyFromIndex(itemIndex) end
 
+---@param itemID number
+---@return number itemID
+---@return string toyName
+---@return number icon
+---@return boolean isFavorite
+---@return boolean hasFanfare
+---@return number itemQuality
 ---[Documentation](https://wow.gamepedia.com/API_C_ToyBox.GetToyInfo)
 function C_ToyBox.GetToyInfo(itemID) end
 

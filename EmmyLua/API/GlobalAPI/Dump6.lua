@@ -1,12 +1,3 @@
----[Documentation](https://wow.gamepedia.com/API_SetBankBagSlotFlag)
-function SetBankBagSlotFlag() end
-
----[Documentation](https://wow.gamepedia.com/API_SetBarSlotFromIntro)
-function SetBarSlotFromIntro(slot) end
-
----[Documentation](https://wow.gamepedia.com/API_SetBarberShopAlternateFormFrame)
-function SetBarberShopAlternateFormFrame() end
-
 ---[Documentation](https://wow.gamepedia.com/API_SetBattlefieldScoreFaction)
 function SetBattlefieldScoreFaction(faction) end
 
@@ -873,18 +864,6 @@ function UnitCanPetBattle() end
 
 ---[Documentation](https://wow.gamepedia.com/API_UnitCastingInfo)
 function UnitCastingInfo(unit) end
-
----@param unit string
----@return string name
----@return string text
----@return string texture
----@return number startTimeMS
----@return number endTimeMS
----@return boolean isTradeSkill
----@return boolean notInterruptible
----@return number spellId
----[Documentation](https://wow.gamepedia.com/API_UnitChannelInfo)
-function UnitChannelInfo(unit) end
 
 ---@param unit string
 ---@return string classification

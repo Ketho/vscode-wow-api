@@ -727,9 +727,6 @@ function GetQuestLogPortraitGiver() end
 ---[Documentation](https://wow.gamepedia.com/API_GetQuestLogPortraitTurnIn)
 function GetQuestLogPortraitTurnIn() end
 
----[Documentation](https://wow.gamepedia.com/API_GetQuestLogQuestText)
-function GetQuestLogQuestText() end
-
 ---[Documentation](https://wow.gamepedia.com/API_GetQuestLogQuestType)
 function GetQuestLogQuestType() end
 
@@ -1147,28 +1144,6 @@ function GetSpecialization(isInspect, isPet, specGroup) end
 
 ---[Documentation](https://wow.gamepedia.com/API_GetSpecializationInfo)
 function GetSpecializationInfo(specIndex, isInspect, isPet, inspectTarget, sex) end
-
----@param specID number
----@return number id
----@return string name
----@return string description
----@return string icon
----@return string role
----@return string class
----[Documentation](https://wow.gamepedia.com/API_GetSpecializationInfoByID)
-function GetSpecializationInfoByID(specID) end
-
----@param classID number
----@param specNum number
----@return number specID
----@return string name
----@return string description
----@return number iconID
----@return string role
----@return boolean isRecommended
----@return boolean isAllowed
----[Documentation](https://wow.gamepedia.com/API_GetSpecializationInfoForClassID)
-function GetSpecializationInfoForClassID(classID, specNum) end
 
 ---[Documentation](https://wow.gamepedia.com/API_GetSpecializationInfoForSpecID)
 function GetSpecializationInfoForSpecID(specID, sex) end
@@ -1800,4 +1775,14 @@ function HaveQuestData(questID) end
 
 ---[Documentation](https://wow.gamepedia.com/API_HaveQuestRewardData)
 function HaveQuestRewardData(questID) end
+
+---[Documentation](https://wow.gamepedia.com/API_HearthAndResurrectFromArea)
+function HearthAndResurrectFromArea() end
+
+---[Documentation](https://wow.gamepedia.com/API_HideRepairCursor)
+function HideRepairCursor() end
+
+---@return boolean inCinematic
+---[Documentation](https://wow.gamepedia.com/API_InCinematic)
+function InCinematic() end
 

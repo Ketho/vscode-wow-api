@@ -38,6 +38,46 @@ function UnitLevel(unit) end
 ---[Documentation](https://wow.gamepedia.com/API_UnitName)
 function UnitName(unit) end
 
+---@param questLogIndex? number    @Index of quest in quest log
+---@return string questDescription @The quest description
+---@return string questObjectives  @The quest objective
+---[Documentation](https://wow.gamepedia.com/API_GetQuestLogQuestText)
+function GetQuestLogQuestText(questLogIndex) end
+
+---@param unit string
+---@return string name
+---@return string text
+---@return string texture
+---@return number startTimeMS
+---@return number endTimeMS
+---@return boolean isTradeSkill
+---@return boolean notInterruptible
+---@return number spellId
+---[Documentation](https://wow.gamepedia.com/API_UnitChannelInfo)
+function UnitChannelInfo(unit) end
+
+---@param specID number
+---@return number id
+---@return string name
+---@return string description
+---@return string icon
+---@return string role
+---@return string class
+---[Documentation](https://wow.gamepedia.com/API_GetSpecializationInfoByID)
+function GetSpecializationInfoByID(specID) end
+
+---@param classID number
+---@param specNum number
+---@return number specID
+---@return string name
+---@return string description
+---@return number iconID
+---@return string role
+---@return boolean isRecommended
+---@return boolean isAllowed
+---[Documentation](https://wow.gamepedia.com/API_GetSpecializationInfoForClassID)
+function GetSpecializationInfoForClassID(classID, specNum) end
+
 -- non blizzard documented C namespaces
 C_AdventureJournal = {}
 C_AdventureMap = {}
