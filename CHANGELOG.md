@@ -1,6 +1,6 @@
 # Change Log
 
-## [0.5.3] - 2021-05-09
+## [0.5.3] - 2021-06-23
 ### Added
 - 🌙 EmmyLua: Updated to `wowpedia.fandom.com/wiki` URL
 - 🌙 EmmyLua: Added `GetQuestLogQuestText` params
