@@ -2,63 +2,63 @@ C_EncounterJournal = {}
 
 ---@param uiMapID number
 ---@return DungeonEntranceMapInfo[] dungeonEntrances
----[Documentation](https://wow.gamepedia.com/API_C_EncounterJournal.GetDungeonEntrancesForMap)
+---[Documentation](https://wowpedia.fandom.com/wiki/API_C_EncounterJournal.GetDungeonEntrancesForMap)
 function C_EncounterJournal.GetDungeonEntrancesForMap(uiMapID) end
 
 ---@param uiMapID number
 ---@return EncounterJournalMapEncounterInfo[] encounters
----[Documentation](https://wow.gamepedia.com/API_C_EncounterJournal.GetEncountersOnMap)
+---[Documentation](https://wowpedia.fandom.com/wiki/API_C_EncounterJournal.GetEncountersOnMap)
 function C_EncounterJournal.GetEncountersOnMap(uiMapID) end
 
 ---@param id number
 ---@return EncounterJournalItemInfo itemInfo
----[Documentation](https://wow.gamepedia.com/API_C_EncounterJournal.GetLootInfo)
+---[Documentation](https://wowpedia.fandom.com/wiki/API_C_EncounterJournal.GetLootInfo)
 function C_EncounterJournal.GetLootInfo(id) end
 
 ---@param index number
 ---@param encounterIndex? number
 ---@return EncounterJournalItemInfo itemInfo
----[Documentation](https://wow.gamepedia.com/API_C_EncounterJournal.GetLootInfoByIndex)
+---[Documentation](https://wowpedia.fandom.com/wiki/API_C_EncounterJournal.GetLootInfoByIndex)
 function C_EncounterJournal.GetLootInfoByIndex(index, encounterIndex) end
 
 ---@param sectionID number
 ---@return number[]? iconFlags
----[Documentation](https://wow.gamepedia.com/API_C_EncounterJournal.GetSectionIconFlags)
+---[Documentation](https://wowpedia.fandom.com/wiki/API_C_EncounterJournal.GetSectionIconFlags)
 ---Represents the icon indices for this EJ section.  An icon index can be used to arrive at texture coordinates for specific encounter types, e.g.: EncounterJournal_SetFlagIcon
 function C_EncounterJournal.GetSectionIconFlags(sectionID) end
 
 ---@param sectionID number
 ---@return EncounterJournalSectionInfo info
----[Documentation](https://wow.gamepedia.com/API_C_EncounterJournal.GetSectionInfo)
+---[Documentation](https://wowpedia.fandom.com/wiki/API_C_EncounterJournal.GetSectionInfo)
 function C_EncounterJournal.GetSectionInfo(sectionID) end
 
 ---@return ItemSlotFilterType filter
----[Documentation](https://wow.gamepedia.com/API_C_EncounterJournal.GetSlotFilter)
+---[Documentation](https://wowpedia.fandom.com/wiki/API_C_EncounterJournal.GetSlotFilter)
 function C_EncounterJournal.GetSlotFilter() end
 
 ---@param instanceID? number
 ---@return boolean hasLoot
----[Documentation](https://wow.gamepedia.com/API_C_EncounterJournal.InstanceHasLoot)
+---[Documentation](https://wowpedia.fandom.com/wiki/API_C_EncounterJournal.InstanceHasLoot)
 function C_EncounterJournal.InstanceHasLoot(instanceID) end
 
 ---@param journalEncounterID number
 ---@return boolean isEncounterComplete
----[Documentation](https://wow.gamepedia.com/API_C_EncounterJournal.IsEncounterComplete)
+---[Documentation](https://wowpedia.fandom.com/wiki/API_C_EncounterJournal.IsEncounterComplete)
 function C_EncounterJournal.IsEncounterComplete(journalEncounterID) end
 
----[Documentation](https://wow.gamepedia.com/API_C_EncounterJournal.ResetSlotFilter)
+---[Documentation](https://wowpedia.fandom.com/wiki/API_C_EncounterJournal.ResetSlotFilter)
 function C_EncounterJournal.ResetSlotFilter() end
 
 ---@param level number
----[Documentation](https://wow.gamepedia.com/API_C_EncounterJournal.SetPreviewMythicPlusLevel)
+---[Documentation](https://wowpedia.fandom.com/wiki/API_C_EncounterJournal.SetPreviewMythicPlusLevel)
 function C_EncounterJournal.SetPreviewMythicPlusLevel(level) end
 
 ---@param tier number
----[Documentation](https://wow.gamepedia.com/API_C_EncounterJournal.SetPreviewPvpTier)
+---[Documentation](https://wowpedia.fandom.com/wiki/API_C_EncounterJournal.SetPreviewPvpTier)
 function C_EncounterJournal.SetPreviewPvpTier(tier) end
 
 ---@param filterSlot ItemSlotFilterType
----[Documentation](https://wow.gamepedia.com/API_C_EncounterJournal.SetSlotFilter)
+---[Documentation](https://wowpedia.fandom.com/wiki/API_C_EncounterJournal.SetSlotFilter)
 function C_EncounterJournal.SetSlotFilter(filterSlot) end
 
 ---@class ItemSlotFilterType

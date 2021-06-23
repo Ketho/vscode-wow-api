@@ -1,14 +1,14 @@
 C_SplashScreen = {}
 
----[Documentation](https://wow.gamepedia.com/API_C_SplashScreen.AcknowledgeSplash)
+---[Documentation](https://wowpedia.fandom.com/wiki/API_C_SplashScreen.AcknowledgeSplash)
 function C_SplashScreen.AcknowledgeSplash() end
 
 ---@return boolean canView
----[Documentation](https://wow.gamepedia.com/API_C_SplashScreen.CanViewSplashScreen)
+---[Documentation](https://wowpedia.fandom.com/wiki/API_C_SplashScreen.CanViewSplashScreen)
 function C_SplashScreen.CanViewSplashScreen() end
 
 ---@param fromGameMenu boolean
----[Documentation](https://wow.gamepedia.com/API_C_SplashScreen.RequestLatestSplashScreen)
+---[Documentation](https://wowpedia.fandom.com/wiki/API_C_SplashScreen.RequestLatestSplashScreen)
 function C_SplashScreen.RequestLatestSplashScreen(fromGameMenu) end
 
 ---@class SplashScreenType

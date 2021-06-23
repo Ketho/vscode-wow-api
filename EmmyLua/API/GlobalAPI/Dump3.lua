@@ -10,12 +10,12 @@
 ---@return number dungeonAreaMapID
 ---@return string link
 ---@return boolean shouldDisplayDifficulty
----[Documentation](https://wow.gamepedia.com/API_EJ_GetInstanceByIndex)
+---[Documentation](https://wowpedia.fandom.com/wiki/API_EJ_GetInstanceByIndex)
 function EJ_GetInstanceByIndex(index, isRaid) end
 
 ---@param mapID number
 ---@return number instanceID
----[Documentation](https://wow.gamepedia.com/API_EJ_GetInstanceForMap)
+---[Documentation](https://wowpedia.fandom.com/wiki/API_EJ_GetInstanceForMap)
 function EJ_GetInstanceForMap(mapID) end
 
 ---@param instanceID number
@@ -28,7 +28,7 @@ function EJ_GetInstanceForMap(mapID) end
 ---@return number dungeonAreaMapID
 ---@return string link
 ---@return boolean shouldDisplayDifficulty
----[Documentation](https://wow.gamepedia.com/API_EJ_GetInstanceInfo)
+---[Documentation](https://wowpedia.fandom.com/wiki/API_EJ_GetInstanceInfo)
 function EJ_GetInstanceInfo(instanceID) end
 
 ---[Documentation](https://wow.gamepedia.com/API_EJ_GetInvTypeSortOrder)
@@ -36,7 +36,7 @@ function EJ_GetInvTypeSortOrder(invType) end
 
 ---@return number classID
 ---@return number specID
----[Documentation](https://wow.gamepedia.com/API_EJ_GetLootFilter)
+---[Documentation](https://wowpedia.fandom.com/wiki/API_EJ_GetLootFilter)
 function EJ_GetLootFilter() end
 
 ---[Documentation](https://wow.gamepedia.com/API_EJ_GetMapEncounter)
@@ -44,23 +44,23 @@ function EJ_GetMapEncounter(mapID, index, fromJournal) end
 
 ---@param index number
 ---@return number numLoot
----[Documentation](https://wow.gamepedia.com/API_EJ_GetNumEncountersForLootByIndex)
+---[Documentation](https://wowpedia.fandom.com/wiki/API_EJ_GetNumEncountersForLootByIndex)
 function EJ_GetNumEncountersForLootByIndex(index) end
 
 ---@return number numLoot
----[Documentation](https://wow.gamepedia.com/API_EJ_GetNumLoot)
+---[Documentation](https://wowpedia.fandom.com/wiki/API_EJ_GetNumLoot)
 function EJ_GetNumLoot() end
 
 ---@return number numResults
----[Documentation](https://wow.gamepedia.com/API_EJ_GetNumSearchResults)
+---[Documentation](https://wowpedia.fandom.com/wiki/API_EJ_GetNumSearchResults)
 function EJ_GetNumSearchResults() end
 
 ---@return number numTiers
----[Documentation](https://wow.gamepedia.com/API_EJ_GetNumTiers)
+---[Documentation](https://wowpedia.fandom.com/wiki/API_EJ_GetNumTiers)
 function EJ_GetNumTiers() end
 
 ---@return number searchProgress
----[Documentation](https://wow.gamepedia.com/API_EJ_GetSearchProgress)
+---[Documentation](https://wowpedia.fandom.com/wiki/API_EJ_GetSearchProgress)
 function EJ_GetSearchProgress() end
 
 ---@param index number
@@ -70,72 +70,72 @@ function EJ_GetSearchProgress() end
 ---@return number instanceID
 ---@return number encounterID
 ---@return string itemLink
----[Documentation](https://wow.gamepedia.com/API_EJ_GetSearchResult)
+---[Documentation](https://wowpedia.fandom.com/wiki/API_EJ_GetSearchResult)
 function EJ_GetSearchResult(index) end
 
 ---@return number searchSize
----[Documentation](https://wow.gamepedia.com/API_EJ_GetSearchSize)
+---[Documentation](https://wowpedia.fandom.com/wiki/API_EJ_GetSearchSize)
 function EJ_GetSearchSize() end
 
 ---@param sectionID number
 ---@return number sectionID
 ---@return number parentSectionID
 ---@return number grandParentSectionID
----[Documentation](https://wow.gamepedia.com/API_EJ_GetSectionPath)
+---[Documentation](https://wowpedia.fandom.com/wiki/API_EJ_GetSectionPath)
 function EJ_GetSectionPath(sectionID) end
 
 ---@param index number
 ---@return string name
 ---@return string link
----[Documentation](https://wow.gamepedia.com/API_EJ_GetTierInfo)
+---[Documentation](https://wowpedia.fandom.com/wiki/API_EJ_GetTierInfo)
 function EJ_GetTierInfo(index) end
 
 ---[Documentation](https://wow.gamepedia.com/API_EJ_HandleLinkPath)
 function EJ_HandleLinkPath(jtype, id) end
 
 ---@return boolean isRaid
----[Documentation](https://wow.gamepedia.com/API_EJ_InstanceIsRaid)
+---[Documentation](https://wowpedia.fandom.com/wiki/API_EJ_InstanceIsRaid)
 function EJ_InstanceIsRaid() end
 
 ---@return boolean listOutOfDate
----[Documentation](https://wow.gamepedia.com/API_EJ_IsLootListOutOfDate)
+---[Documentation](https://wowpedia.fandom.com/wiki/API_EJ_IsLootListOutOfDate)
 function EJ_IsLootListOutOfDate() end
 
 ---@return boolean isFinished
----[Documentation](https://wow.gamepedia.com/API_EJ_IsSearchFinished)
+---[Documentation](https://wowpedia.fandom.com/wiki/API_EJ_IsSearchFinished)
 function EJ_IsSearchFinished() end
 
 ---@param difficultyID number
 ---@return boolean isValid
----[Documentation](https://wow.gamepedia.com/API_EJ_IsValidInstanceDifficulty)
+---[Documentation](https://wowpedia.fandom.com/wiki/API_EJ_IsValidInstanceDifficulty)
 function EJ_IsValidInstanceDifficulty(difficultyID) end
 
----[Documentation](https://wow.gamepedia.com/API_EJ_ResetLootFilter)
+---[Documentation](https://wowpedia.fandom.com/wiki/API_EJ_ResetLootFilter)
 function EJ_ResetLootFilter() end
 
 ---@param encounterID number
----[Documentation](https://wow.gamepedia.com/API_EJ_SelectEncounter)
+---[Documentation](https://wowpedia.fandom.com/wiki/API_EJ_SelectEncounter)
 function EJ_SelectEncounter(encounterID) end
 
 ---@param instanceID number
----[Documentation](https://wow.gamepedia.com/API_EJ_SelectInstance)
+---[Documentation](https://wowpedia.fandom.com/wiki/API_EJ_SelectInstance)
 function EJ_SelectInstance(instanceID) end
 
 ---@param index number
----[Documentation](https://wow.gamepedia.com/API_EJ_SelectTier)
+---[Documentation](https://wowpedia.fandom.com/wiki/API_EJ_SelectTier)
 function EJ_SelectTier(index) end
 
 ---@param difficultyID number
----[Documentation](https://wow.gamepedia.com/API_EJ_SetDifficulty)
+---[Documentation](https://wowpedia.fandom.com/wiki/API_EJ_SetDifficulty)
 function EJ_SetDifficulty(difficultyID) end
 
 ---@param classID number
 ---@param specID number
----[Documentation](https://wow.gamepedia.com/API_EJ_SetLootFilter)
+---[Documentation](https://wowpedia.fandom.com/wiki/API_EJ_SetLootFilter)
 function EJ_SetLootFilter(classID, specID) end
 
 ---@param text string
----[Documentation](https://wow.gamepedia.com/API_EJ_SetSearch)
+---[Documentation](https://wowpedia.fandom.com/wiki/API_EJ_SetSearch)
 function EJ_SetSearch(text) end
 
 ---[Documentation](https://wow.gamepedia.com/API_EditMacro)
@@ -147,7 +147,7 @@ function EjectPassengerFromSeat(seat) end
 ---[Documentation](https://wow.gamepedia.com/API_EnableAddOn)
 function EnableAddOn() end
 
----[Documentation](https://wow.gamepedia.com/API_EnableAllAddOns)
+---[Documentation](https://wowpedia.fandom.com/wiki/API_EnableAllAddOns)
 function EnableAllAddOns() end
 
 ---[Documentation](https://wow.gamepedia.com/API_EnableSpellAutocast)
@@ -161,7 +161,7 @@ function EndRefund() end
 
 ---@param currentFrame table
 ---@return table nextFrame
----[Documentation](https://wow.gamepedia.com/API_EnumerateFrames)
+---[Documentation](https://wowpedia.fandom.com/wiki/API_EnumerateFrames)
 function EnumerateFrames(currentFrame) end
 
 ---[Documentation](https://wow.gamepedia.com/API_EnumerateServerChannels)
@@ -176,14 +176,14 @@ function EquipItemByName(item, invSlot) end
 ---[Documentation](https://wow.gamepedia.com/API_EquipPendingItem)
 function EquipPendingItem(invSlot) end
 
----[Documentation](https://wow.gamepedia.com/API_ExecuteVoidTransfer)
+---[Documentation](https://wowpedia.fandom.com/wiki/API_ExecuteVoidTransfer)
 function ExecuteVoidTransfer() end
 
 ---[Documentation](https://wow.gamepedia.com/API_ExpandAllFactionHeaders)
 function ExpandAllFactionHeaders() end
 
 ---@param rowIndex number
----[Documentation](https://wow.gamepedia.com/API_ExpandFactionHeader)
+---[Documentation](https://wowpedia.fandom.com/wiki/API_ExpandFactionHeader)
 function ExpandFactionHeader(rowIndex) end
 
 ---[Documentation](https://wow.gamepedia.com/API_ExpandGuildTradeSkillHeader)
@@ -203,7 +203,7 @@ function FillLocalizedClassList(classTable, isFemale) end
 
 ---@param spellID number
 ---@return number baseSpellID
----[Documentation](https://wow.gamepedia.com/API_FindBaseSpellByID)
+---[Documentation](https://wowpedia.fandom.com/wiki/API_FindBaseSpellByID)
 function FindBaseSpellByID(spellID) end
 
 ---[Documentation](https://wow.gamepedia.com/API_FindFlyoutSlotBySpellID)
@@ -214,13 +214,13 @@ function FindSpellBookSlotBySpellID(spellID, isPet) end
 
 ---@param spellID number
 ---@return number overrideSpellID
----[Documentation](https://wow.gamepedia.com/API_FindSpellOverrideByID)
+---[Documentation](https://wowpedia.fandom.com/wiki/API_FindSpellOverrideByID)
 function FindSpellOverrideByID(spellID) end
 
 ---[Documentation](https://wow.gamepedia.com/API_FlagTutorial)
 function FlagTutorial(tutorial) end
 
----[Documentation](https://wow.gamepedia.com/API_FlashClientIcon)
+---[Documentation](https://wowpedia.fandom.com/wiki/API_FlashClientIcon)
 function FlashClientIcon() end
 
 ---[Documentation](https://wow.gamepedia.com/API_FlipCameraYaw)
@@ -229,7 +229,7 @@ function FlipCameraYaw(degrees) end
 ---@param flyoutID number
 ---@param spellID number
 ---@return boolean hasSpell
----[Documentation](https://wow.gamepedia.com/API_FlyoutHasSpell)
+---[Documentation](https://wowpedia.fandom.com/wiki/API_FlyoutHasSpell)
 function FlyoutHasSpell(flyoutID, spellID) end
 
 ---[Documentation](https://wow.gamepedia.com/API_FocusUnit)
@@ -238,10 +238,10 @@ function FocusUnit(unit) end
 ---[Documentation](https://wow.gamepedia.com/API_FollowUnit)
 function FollowUnit(unit) end
 
----[Documentation](https://wow.gamepedia.com/API_ForceLogout)
+---[Documentation](https://wowpedia.fandom.com/wiki/API_ForceLogout)
 function ForceLogout() end
 
----[Documentation](https://wow.gamepedia.com/API_ForceQuit)
+---[Documentation](https://wowpedia.fandom.com/wiki/API_ForceQuit)
 function ForceQuit() end
 
 ---[Documentation](https://wow.gamepedia.com/API_ForfeitDuel)
@@ -274,7 +274,7 @@ function GMQuickTicketSystemThrottled() end
 ---[Documentation](https://wow.gamepedia.com/API_GMReportLag)
 function GMReportLag() end
 
----[Documentation](https://wow.gamepedia.com/API_GMRequestPlayerInfo)
+---[Documentation](https://wowpedia.fandom.com/wiki/API_GMRequestPlayerInfo)
 function GMRequestPlayerInfo() end
 
 ---[Documentation](https://wow.gamepedia.com/API_GMResponseResolve)
@@ -303,7 +303,7 @@ function GameMovieFinished() end
 
 ---@param achievementID number
 ---@return number categoryID
----[Documentation](https://wow.gamepedia.com/API_GetAchievementCategory)
+---[Documentation](https://wowpedia.fandom.com/wiki/API_GetAchievementCategory)
 function GetAchievementCategory(achievementID) end
 
 ---@param achievementID number
@@ -311,7 +311,7 @@ function GetAchievementCategory(achievementID) end
 ---@return number month
 ---@return number day
 ---@return number year
----[Documentation](https://wow.gamepedia.com/API_GetAchievementComparisonInfo)
+---[Documentation](https://wowpedia.fandom.com/wiki/API_GetAchievementComparisonInfo)
 function GetAchievementComparisonInfo(achievementID) end
 
 ---[Documentation](https://wow.gamepedia.com/API_GetAchievementCriteriaInfo)
@@ -348,7 +348,7 @@ function GetAchievementSearchSize() end
 function GetActionAutocast(slot) end
 
 ---@return number index
----[Documentation](https://wow.gamepedia.com/API_GetActionBarPage)
+---[Documentation](https://wowpedia.fandom.com/wiki/API_GetActionBarPage)
 function GetActionBarPage() end
 
 ---[Documentation](https://wow.gamepedia.com/API_GetActionBarToggles)
@@ -360,7 +360,7 @@ function GetActionBarToggles() end
 ---@return number cooldownStart
 ---@return number cooldownDuration
 ---@return number chargeModRate
----[Documentation](https://wow.gamepedia.com/API_GetActionCharges)
+---[Documentation](https://wowpedia.fandom.com/wiki/API_GetActionCharges)
 function GetActionCharges(slot) end
 
 ---[Documentation](https://wow.gamepedia.com/API_GetActionCooldown)
@@ -368,7 +368,7 @@ function GetActionCooldown(slot) end
 
 ---@param actionSlot number
 ---@return number text
----[Documentation](https://wow.gamepedia.com/API_GetActionCount)
+---[Documentation](https://wowpedia.fandom.com/wiki/API_GetActionCount)
 function GetActionCount(actionSlot) end
 
 ---[Documentation](https://wow.gamepedia.com/API_GetActionInfo)
@@ -377,7 +377,7 @@ function GetActionInfo(slot) end
 ---@param slot number
 ---@return number start
 ---@return number duration
----[Documentation](https://wow.gamepedia.com/API_GetActionLossOfControlCooldown)
+---[Documentation](https://wowpedia.fandom.com/wiki/API_GetActionLossOfControlCooldown)
 function GetActionLossOfControlCooldown(slot) end
 
 ---[Documentation](https://wow.gamepedia.com/API_GetActionText)
@@ -400,7 +400,7 @@ function GetActiveQuestID(index) end
 
 ---@param isInspect boolean
 ---@return number activeSpec
----[Documentation](https://wow.gamepedia.com/API_GetActiveSpecGroup)
+---[Documentation](https://wowpedia.fandom.com/wiki/API_GetActiveSpecGroup)
 function GetActiveSpecGroup(isInspect) end
 
 ---[Documentation](https://wow.gamepedia.com/API_GetActiveTitle)
@@ -424,7 +424,7 @@ function GetAddOnMemoryUsage() end
 ---@param addon string
 ---@param field string
 ---@return string value
----[Documentation](https://wow.gamepedia.com/API_GetAddOnMetadata)
+---[Documentation](https://wowpedia.fandom.com/wiki/API_GetAddOnMetadata)
 function GetAddOnMetadata(addon, field) end
 
 ---[Documentation](https://wow.gamepedia.com/API_GetAddOnOptionalDependencies)
@@ -437,7 +437,7 @@ function GetAllowLowLevelRaid() end
 function GetAlternativeDefaultLanguage() end
 
 ---@return string localizedName
----[Documentation](https://wow.gamepedia.com/API_GetArchaeologyInfo)
+---[Documentation](https://wowpedia.fandom.com/wiki/API_GetArchaeologyInfo)
 function GetArchaeologyInfo() end
 
 ---@param raceIndex number
@@ -447,7 +447,7 @@ function GetArchaeologyInfo() end
 ---@return number numFragmentsCollected
 ---@return number numFragmentsRequired
 ---@return number maxFragments
----[Documentation](https://wow.gamepedia.com/API_GetArchaeologyRaceInfo)
+---[Documentation](https://wowpedia.fandom.com/wiki/API_GetArchaeologyRaceInfo)
 function GetArchaeologyRaceInfo(raceIndex) end
 
 ---[Documentation](https://wow.gamepedia.com/API_GetArchaeologyRaceInfoByID)
@@ -473,19 +473,19 @@ function GetArenaOpponentSpec() end
 ---@return string bgTexture
 ---@return number firstCompletionTime
 ---@return number completionCount
----[Documentation](https://wow.gamepedia.com/API_GetArtifactInfoByRace)
+---[Documentation](https://wowpedia.fandom.com/wiki/API_GetArtifactInfoByRace)
 function GetArtifactInfoByRace(raceIndex, artifactIndex) end
 
 ---@return number numFragmentsCollected
 ---@return number numFragmentsAdded
 ---@return number numFragmentsRequired
----[Documentation](https://wow.gamepedia.com/API_GetArtifactProgress)
+---[Documentation](https://wowpedia.fandom.com/wiki/API_GetArtifactProgress)
 function GetArtifactProgress() end
 
 ---@param statId number
 ---@param amount number
 ---@return number ap
----[Documentation](https://wow.gamepedia.com/API_GetAttackPowerForStat)
+---[Documentation](https://wowpedia.fandom.com/wiki/API_GetAttackPowerForStat)
 function GetAttackPowerForStat(statId, amount) end
 
 ---[Documentation](https://wow.gamepedia.com/API_GetAutoCompletePresenceID)
@@ -493,20 +493,20 @@ function GetAutoCompletePresenceID(name) end
 
 ---@param realmNames table
 ---@return table realmNames
----[Documentation](https://wow.gamepedia.com/API_GetAutoCompleteRealms)
+---[Documentation](https://wowpedia.fandom.com/wiki/API_GetAutoCompleteRealms)
 function GetAutoCompleteRealms(realmNames) end
 
 ---[Documentation](https://wow.gamepedia.com/API_GetAutoCompleteResults)
 function GetAutoCompleteResults(text, include, exclude, maxResults, cursorPosition) end
 
 ---@return number enabled
----[Documentation](https://wow.gamepedia.com/API_GetAutoDeclineGuildInvites)
+---[Documentation](https://wowpedia.fandom.com/wiki/API_GetAutoDeclineGuildInvites)
 function GetAutoDeclineGuildInvites() end
 
 ---@param index number
 ---@return number questID
 ---@return string type
----[Documentation](https://wow.gamepedia.com/API_GetAutoQuestPopUp)
+---[Documentation](https://wowpedia.fandom.com/wiki/API_GetAutoQuestPopUp)
 function GetAutoQuestPopUp(index) end
 
 ---[Documentation](https://wow.gamepedia.com/API_GetAvailableBandwidth)
@@ -527,7 +527,7 @@ function GetAvailableLocales() end
 ---@return boolean isRepeatable
 ---@return boolean isLegendary
 ---@return number questID
----[Documentation](https://wow.gamepedia.com/API_GetAvailableQuestInfo)
+---[Documentation](https://wowpedia.fandom.com/wiki/API_GetAvailableQuestInfo)
 function GetAvailableQuestInfo(index) end
 
 ---[Documentation](https://wow.gamepedia.com/API_GetAvailableTitle)
@@ -536,7 +536,7 @@ function GetAvailableTitle(index) end
 ---@return number avgItemLevel
 ---@return number avgItemLevelEquipped
 ---@return number avgItemLevelPvp
----[Documentation](https://wow.gamepedia.com/API_GetAverageItemLevel)
+---[Documentation](https://wowpedia.fandom.com/wiki/API_GetAverageItemLevel)
 function GetAverageItemLevel() end
 
 ---[Documentation](https://wow.gamepedia.com/API_GetAvoidance)
@@ -562,7 +562,7 @@ function GetBankBagSlotFlag() end
 
 ---@param numSlots number
 ---@return number cost
----[Documentation](https://wow.gamepedia.com/API_GetBankSlotCost)
+---[Documentation](https://wowpedia.fandom.com/wiki/API_GetBankSlotCost)
 function GetBankSlotCost(numSlots) end
 
 ---[Documentation](https://wow.gamepedia.com/API_GetBarberShopStyleInfo)
@@ -575,7 +575,7 @@ function GetBarberShopTotalCost() end
 function GetBattlefieldArenaFaction() end
 
 ---@return number waitTime
----[Documentation](https://wow.gamepedia.com/API_GetBattlefieldEstimatedWaitTime)
+---[Documentation](https://wowpedia.fandom.com/wiki/API_GetBattlefieldEstimatedWaitTime)
 function GetBattlefieldEstimatedWaitTime() end
 
 ---[Documentation](https://wow.gamepedia.com/API_GetBattlefieldFlagPosition)
@@ -585,7 +585,7 @@ function GetBattlefieldFlagPosition(index) end
 function GetBattlefieldInstanceExpiration() end
 
 ---@return number time
----[Documentation](https://wow.gamepedia.com/API_GetBattlefieldInstanceRunTime)
+---[Documentation](https://wowpedia.fandom.com/wiki/API_GetBattlefieldInstanceRunTime)
 function GetBattlefieldInstanceRunTime() end
 
 ---[Documentation](https://wow.gamepedia.com/API_GetBattlefieldMapIconScale)
@@ -618,18 +618,18 @@ function GetBattlegroundInfo(index) end
 ---@param team number
 ---@return number currentPoints
 ---@return number maxPoints
----[Documentation](https://wow.gamepedia.com/API_GetBattlegroundPoints)
+---[Documentation](https://wowpedia.fandom.com/wiki/API_GetBattlegroundPoints)
 function GetBattlegroundPoints(team) end
 
 ---@return number flexDungeonID
----[Documentation](https://wow.gamepedia.com/API_GetBestFlexRaidChoice)
+---[Documentation](https://wowpedia.fandom.com/wiki/API_GetBestFlexRaidChoice)
 function GetBestFlexRaidChoice() end
 
 ---[Documentation](https://wow.gamepedia.com/API_GetBestRFChoice)
 function GetBestRFChoice() end
 
 ---@return number secondsRemaining
----[Documentation](https://wow.gamepedia.com/API_GetBillingTimeRested)
+---[Documentation](https://wowpedia.fandom.com/wiki/API_GetBillingTimeRested)
 function GetBillingTimeRested() end
 
 ---[Documentation](https://wow.gamepedia.com/API_GetBindLocation)
@@ -641,12 +641,12 @@ function GetBinding(index) end
 ---@param binding string
 ---@param checkOverride boolean
 ---@return string action
----[Documentation](https://wow.gamepedia.com/API_GetBindingAction)
+---[Documentation](https://wowpedia.fandom.com/wiki/API_GetBindingAction)
 function GetBindingAction(binding, checkOverride) end
 
 ---@param key string
 ---@return string bindingAction
----[Documentation](https://wow.gamepedia.com/API_GetBindingByKey)
+---[Documentation](https://wowpedia.fandom.com/wiki/API_GetBindingByKey)
 function GetBindingByKey(key) end
 
 ---[Documentation](https://wow.gamepedia.com/API_GetBindingKey)
@@ -656,11 +656,11 @@ function GetBindingKey(command) end
 ---@param prefix string
 ---@param abbreviate boolean
 ---@return string text
----[Documentation](https://wow.gamepedia.com/API_GetBindingText)
+---[Documentation](https://wowpedia.fandom.com/wiki/API_GetBindingText)
 function GetBindingText(key, prefix, abbreviate) end
 
 ---@return number blockChance
----[Documentation](https://wow.gamepedia.com/API_GetBlockChance)
+---[Documentation](https://wowpedia.fandom.com/wiki/API_GetBlockChance)
 function GetBlockChance() end
 
 ---[Documentation](https://wow.gamepedia.com/API_GetBonusBarIndex)
@@ -697,11 +697,11 @@ function GetCategoryAchievementPoints(categoryID, includeSubCategories) end
 ---@return string title
 ---@return number parentCategoryID
 ---@return number flags
----[Documentation](https://wow.gamepedia.com/API_GetCategoryInfo)
+---[Documentation](https://wowpedia.fandom.com/wiki/API_GetCategoryInfo)
 function GetCategoryInfo(categoryID) end
 
 ---@return table idTable
----[Documentation](https://wow.gamepedia.com/API_GetCategoryList)
+---[Documentation](https://wowpedia.fandom.com/wiki/API_GetCategoryList)
 function GetCategoryList() end
 
 ---@param categoryId number
@@ -709,7 +709,7 @@ function GetCategoryList() end
 ---@return number total
 ---@return number completed
 ---@return number incompleted
----[Documentation](https://wow.gamepedia.com/API_GetCategoryNumAchievements)
+---[Documentation](https://wowpedia.fandom.com/wiki/API_GetCategoryNumAchievements)
 function GetCategoryNumAchievements(categoryId, includeAll) end
 
 ---[Documentation](https://wow.gamepedia.com/API_GetCemeteryPreference)
@@ -721,7 +721,7 @@ function GetChannelDisplayInfo(channelID) end
 ---@return number id
 ---@return string name
 ---@return boolean disabled
----[Documentation](https://wow.gamepedia.com/API_GetChannelList)
+---[Documentation](https://wowpedia.fandom.com/wiki/API_GetChannelList)
 function GetChannelList() end
 
 ---[Documentation](https://wow.gamepedia.com/API_GetChannelName)
@@ -749,7 +749,7 @@ function GetChatWindowSavedPosition(index) end
 ---@return string className
 ---@return string classFile
 ---@return number classID
----[Documentation](https://wow.gamepedia.com/API_GetClassInfo)
+---[Documentation](https://wowpedia.fandom.com/wiki/API_GetClassInfo)
 function GetClassInfo(classIndex) end
 
 ---[Documentation](https://wow.gamepedia.com/API_GetClickFrame)
@@ -761,7 +761,7 @@ function GetCoinIcon(amount) end
 ---@param amount number
 ---@param separator string
 ---@return string formattedAmount
----[Documentation](https://wow.gamepedia.com/API_GetCoinText)
+---[Documentation](https://wowpedia.fandom.com/wiki/API_GetCoinText)
 function GetCoinText(amount, separator) end
 
 ---[Documentation](https://wow.gamepedia.com/API_GetCoinTextureString)
@@ -769,12 +769,12 @@ function GetCoinTextureString(amount, fontHeight) end
 
 ---@param combatRatingIdentifier number
 ---@return number rating
----[Documentation](https://wow.gamepedia.com/API_GetCombatRating)
+---[Documentation](https://wowpedia.fandom.com/wiki/API_GetCombatRating)
 function GetCombatRating(combatRatingIdentifier) end
 
 ---@param combatRatingIdentifier number
 ---@return number bonus
----[Documentation](https://wow.gamepedia.com/API_GetCombatRatingBonus)
+---[Documentation](https://wowpedia.fandom.com/wiki/API_GetCombatRatingBonus)
 function GetCombatRatingBonus(combatRatingIdentifier) end
 
 ---[Documentation](https://wow.gamepedia.com/API_GetCombatRatingBonusForCombatRatingValue)
@@ -783,7 +783,7 @@ function GetCombatRatingBonusForCombatRatingValue(ratingIndex, value) end
 ---@param unit string
 ---@param target string
 ---@return number comboPoints
----[Documentation](https://wow.gamepedia.com/API_GetComboPoints)
+---[Documentation](https://wowpedia.fandom.com/wiki/API_GetComboPoints)
 function GetComboPoints(unit, target) end
 
 ---[Documentation](https://wow.gamepedia.com/API_GetCompanionInfo)
@@ -797,7 +797,7 @@ function GetComparisonCategoryNumAchievements(achievementID) end
 
 ---@param achievementID number
 ---@return string value
----[Documentation](https://wow.gamepedia.com/API_GetComparisonStatistic)
+---[Documentation](https://wowpedia.fandom.com/wiki/API_GetComparisonStatistic)
 function GetComparisonStatistic(achievementID) end
 
 ---[Documentation](https://wow.gamepedia.com/API_GetContainerFreeSlots)
@@ -810,7 +810,7 @@ function GetContainerItemCooldown(bagID, slot) end
 ---@param slot number
 ---@return number current
 ---@return number maximum
----[Documentation](https://wow.gamepedia.com/API_GetContainerItemDurability)
+---[Documentation](https://wowpedia.fandom.com/wiki/API_GetContainerItemDurability)
 function GetContainerItemDurability(bag, slot) end
 
 ---[Documentation](https://wow.gamepedia.com/API_GetContainerItemEquipmentSetInfo)
@@ -819,7 +819,7 @@ function GetContainerItemEquipmentSetInfo(index, slot) end
 ---@param bag number
 ---@param slot number
 ---@return number itemId
----[Documentation](https://wow.gamepedia.com/API_GetContainerItemID)
+---[Documentation](https://wowpedia.fandom.com/wiki/API_GetContainerItemID)
 function GetContainerItemID(bag, slot) end
 
 ---[Documentation](https://wow.gamepedia.com/API_GetContainerItemInfo)
@@ -843,27 +843,27 @@ function GetContainerItemQuestInfo(bag, slot) end
 ---@param bagID number
 ---@return number numberOfFreeSlots
 ---@return number bagType
----[Documentation](https://wow.gamepedia.com/API_GetContainerNumFreeSlots)
+---[Documentation](https://wowpedia.fandom.com/wiki/API_GetContainerNumFreeSlots)
 function GetContainerNumFreeSlots(bagID) end
 
 ---@param bagID number
 ---@return number numberOfSlots
----[Documentation](https://wow.gamepedia.com/API_GetContainerNumSlots)
+---[Documentation](https://wowpedia.fandom.com/wiki/API_GetContainerNumSlots)
 function GetContainerNumSlots(bagID) end
 
 ---[Documentation](https://wow.gamepedia.com/API_GetCorpseRecoveryDelay)
 function GetCorpseRecoveryDelay() end
 
 ---@return number corruption
----[Documentation](https://wow.gamepedia.com/API_GetCorruption)
+---[Documentation](https://wowpedia.fandom.com/wiki/API_GetCorruption)
 function GetCorruption() end
 
 ---@return number corruptionResistance
----[Documentation](https://wow.gamepedia.com/API_GetCorruptionResistance)
+---[Documentation](https://wowpedia.fandom.com/wiki/API_GetCorruptionResistance)
 function GetCorruptionResistance() end
 
 ---@return number critChance
----[Documentation](https://wow.gamepedia.com/API_GetCritChance)
+---[Documentation](https://wowpedia.fandom.com/wiki/API_GetCritChance)
 function GetCritChance() end
 
 ---[Documentation](https://wow.gamepedia.com/API_GetCritChanceProvidesParryEffect)
@@ -912,7 +912,7 @@ function GetCurrentResolution() end
 function GetCurrentScaledResolution() end
 
 ---@return number currentTitle
----[Documentation](https://wow.gamepedia.com/API_GetCurrentTitle)
+---[Documentation](https://wowpedia.fandom.com/wiki/API_GetCurrentTitle)
 function GetCurrentTitle() end
 
 ---[Documentation](https://wow.gamepedia.com/API_GetCursorDelta)
@@ -922,12 +922,12 @@ function GetCursorDelta() end
 function GetCursorInfo() end
 
 ---@return number copper
----[Documentation](https://wow.gamepedia.com/API_GetCursorMoney)
+---[Documentation](https://wowpedia.fandom.com/wiki/API_GetCursorMoney)
 function GetCursorMoney() end
 
 ---@return number x
 ---@return number y
----[Documentation](https://wow.gamepedia.com/API_GetCursorPosition)
+---[Documentation](https://wowpedia.fandom.com/wiki/API_GetCursorPosition)
 function GetCursorPosition() end
 
 ---[Documentation](https://wow.gamepedia.com/API_GetCustomizationDetails)
@@ -971,11 +971,11 @@ function GetDetailedItemLevelInfo(item) end
 ---@return boolean displayHeroic
 ---@return boolean displayMythic
 ---@return number toggleDifficultyID
----[Documentation](https://wow.gamepedia.com/API_GetDifficultyInfo)
+---[Documentation](https://wowpedia.fandom.com/wiki/API_GetDifficultyInfo)
 function GetDifficultyInfo(id) end
 
 ---@return number dodgeChance
----[Documentation](https://wow.gamepedia.com/API_GetDodgeChance)
+---[Documentation](https://wowpedia.fandom.com/wiki/API_GetDodgeChance)
 function GetDodgeChance() end
 
 ---[Documentation](https://wow.gamepedia.com/API_GetDodgeChanceFromAttribute)
@@ -985,7 +985,7 @@ function GetDodgeChanceFromAttribute() end
 function GetDownloadedPercentage() end
 
 ---@return number difficultyID
----[Documentation](https://wow.gamepedia.com/API_GetDungeonDifficultyID)
+---[Documentation](https://wowpedia.fandom.com/wiki/API_GetDungeonDifficultyID)
 function GetDungeonDifficultyID() end
 
 ---[Documentation](https://wow.gamepedia.com/API_GetDungeonForRandomSlot)
@@ -1012,11 +1012,11 @@ function GetExistingSocketLink(id) end
 ---@return number expertise
 ---@return number offhandExpertise
 ---@return number rangedExpertise
----[Documentation](https://wow.gamepedia.com/API_GetExpertise)
+---[Documentation](https://wowpedia.fandom.com/wiki/API_GetExpertise)
 function GetExpertise() end
 
 ---@return number extraPage
----[Documentation](https://wow.gamepedia.com/API_GetExtraBarIndex)
+---[Documentation](https://wowpedia.fandom.com/wiki/API_GetExtraBarIndex)
 function GetExtraBarIndex() end
 
 ---[Documentation](https://wow.gamepedia.com/API_GetFactionInfo)
@@ -1033,7 +1033,7 @@ function GetFailedTalentIDs() end
 
 ---@param filePath string
 ---@return number fileID
----[Documentation](https://wow.gamepedia.com/API_GetFileIDFromPath)
+---[Documentation](https://wowpedia.fandom.com/wiki/API_GetFileIDFromPath)
 function GetFileIDFromPath(filePath) end
 
 ---[Documentation](https://wow.gamepedia.com/API_GetFileStreamingStatus)
@@ -1041,7 +1041,7 @@ function GetFileStreamingStatus() end
 
 ---@param index number
 ---@return number achievementID
----[Documentation](https://wow.gamepedia.com/API_GetFilteredAchievementID)
+---[Documentation](https://wowpedia.fandom.com/wiki/API_GetFilteredAchievementID)
 function GetFilteredAchievementID(index) end
 
 ---[Documentation](https://wow.gamepedia.com/API_GetFlexRaidDungeonInfo)
@@ -1063,7 +1063,7 @@ function GetFollowerTypeIDFromSpell() end
 function GetFontInfo() end
 
 ---@return string fonts
----[Documentation](https://wow.gamepedia.com/API_GetFonts)
+---[Documentation](https://wowpedia.fandom.com/wiki/API_GetFonts)
 function GetFonts() end
 
 ---[Documentation](https://wow.gamepedia.com/API_GetFrameCPUUsage)
@@ -1085,13 +1085,13 @@ function GetFramesRegisteredForEvent(event) end
 ---@return string friendTextLevel
 ---@return number friendThreshold
 ---@return number nextFriendThreshold
----[Documentation](https://wow.gamepedia.com/API_GetFriendshipReputation)
+---[Documentation](https://wowpedia.fandom.com/wiki/API_GetFriendshipReputation)
 function GetFriendshipReputation(factionID) end
 
 ---@param factionID number
 ---@return number currentRank
 ---@return number maxRank
----[Documentation](https://wow.gamepedia.com/API_GetFriendshipReputationRanks)
+---[Documentation](https://wowpedia.fandom.com/wiki/API_GetFriendshipReputationRanks)
 function GetFriendshipReputationRanks(factionID) end
 
 ---[Documentation](https://wow.gamepedia.com/API_GetFunctionCPUUsage)
@@ -1110,7 +1110,7 @@ function GetGameMessageInfo(gameMessageType) end
 function GetGameTime() end
 
 ---@return string cvarValues
----[Documentation](https://wow.gamepedia.com/API_GetGraphicsAPIs)
+---[Documentation](https://wowpedia.fandom.com/wiki/API_GetGraphicsAPIs)
 function GetGraphicsAPIs() end
 
 ---[Documentation](https://wow.gamepedia.com/API_GetGraphicsDropdownIndexByMasterIndex)
@@ -1147,14 +1147,14 @@ function GetGuildBankBonusDepositMoney() end
 ---@return boolean locked
 ---@return boolean isFiltered
 ---@return number quality
----[Documentation](https://wow.gamepedia.com/API_GetGuildBankItemInfo)
+---[Documentation](https://wowpedia.fandom.com/wiki/API_GetGuildBankItemInfo)
 function GetGuildBankItemInfo(tab, slot) end
 
 ---[Documentation](https://wow.gamepedia.com/API_GetGuildBankItemLink)
 function GetGuildBankItemLink(tab, slot) end
 
 ---@return number retVal1
----[Documentation](https://wow.gamepedia.com/API_GetGuildBankMoney)
+---[Documentation](https://wowpedia.fandom.com/wiki/API_GetGuildBankMoney)
 function GetGuildBankMoney() end
 
 ---[Documentation](https://wow.gamepedia.com/API_GetGuildBankMoneyTransaction)
@@ -1171,7 +1171,7 @@ function GetGuildBankTabCost() end
 ---@return number numWithdrawals
 ---@return number remainingWithdrawals
 ---@return boolean filtered
----[Documentation](https://wow.gamepedia.com/API_GetGuildBankTabInfo)
+---[Documentation](https://wowpedia.fandom.com/wiki/API_GetGuildBankTabInfo)
 function GetGuildBankTabInfo(tab) end
 
 ---@param tab number
@@ -1179,7 +1179,7 @@ function GetGuildBankTabInfo(tab) end
 ---@return boolean canDeposit
 ---@return boolean canEdit
 ---@return number stacksPerDay
----[Documentation](https://wow.gamepedia.com/API_GetGuildBankTabPermissions)
+---[Documentation](https://wowpedia.fandom.com/wiki/API_GetGuildBankTabPermissions)
 function GetGuildBankTabPermissions(tab) end
 
 ---[Documentation](https://wow.gamepedia.com/API_GetGuildBankText)
@@ -1197,7 +1197,7 @@ function GetGuildBankText(tab) end
 ---@return number month
 ---@return number day
 ---@return number hour
----[Documentation](https://wow.gamepedia.com/API_GetGuildBankTransaction)
+---[Documentation](https://wowpedia.fandom.com/wiki/API_GetGuildBankTransaction)
 function GetGuildBankTransaction(tab, index) end
 
 ---[Documentation](https://wow.gamepedia.com/API_GetGuildBankWithdrawGoldLimit)
@@ -1232,7 +1232,7 @@ function GetGuildFactionInfo() end
 ---@return string guildRankName
 ---@return number guildRankIndex
 ---@return string realm
----[Documentation](https://wow.gamepedia.com/API_GetGuildInfo)
+---[Documentation](https://wowpedia.fandom.com/wiki/API_GetGuildInfo)
 function GetGuildInfo(unit) end
 
 ---[Documentation](https://wow.gamepedia.com/API_GetGuildInfoText)
@@ -1268,7 +1268,7 @@ function GetGuildRecipeInfoPostQuery() end
 ---@param index number
 ---@return string name
 ---@return boolean online
----[Documentation](https://wow.gamepedia.com/API_GetGuildRecipeMember)
+---[Documentation](https://wowpedia.fandom.com/wiki/API_GetGuildRecipeMember)
 function GetGuildRecipeMember(index) end
 
 ---[Documentation](https://wow.gamepedia.com/API_GetGuildRecruitmentComment)
@@ -1293,7 +1293,7 @@ function GetGuildRosterLargestAchievementPoints() end
 function GetGuildRosterLastOnline(index) end
 
 ---@return string motd
----[Documentation](https://wow.gamepedia.com/API_GetGuildRosterMOTD)
+---[Documentation](https://wowpedia.fandom.com/wiki/API_GetGuildRosterMOTD)
 function GetGuildRosterMOTD() end
 
 ---[Documentation](https://wow.gamepedia.com/API_GetGuildRosterSelection)
@@ -1308,7 +1308,7 @@ function GetGuildRosterShowOffline() end
 ---@return number tabardEmblemLower
 ---@return number tabardBorderUpper
 ---@return number tabardBorderLower
----[Documentation](https://wow.gamepedia.com/API_GetGuildTabardFiles)
+---[Documentation](https://wowpedia.fandom.com/wiki/API_GetGuildTabardFiles)
 function GetGuildTabardFiles() end
 
 ---@param index number
@@ -1328,19 +1328,19 @@ function GetGuildTabardFiles() end
 ---@return string classFileName
 ---@return boolean isMobile
 ---@return number isAway
----[Documentation](https://wow.gamepedia.com/API_GetGuildTradeSkillInfo)
+---[Documentation](https://wowpedia.fandom.com/wiki/API_GetGuildTradeSkillInfo)
 function GetGuildTradeSkillInfo(index) end
 
 ---[Documentation](https://wow.gamepedia.com/API_GetHaste)
 function GetHaste() end
 
 ---@return number hitModifier
----[Documentation](https://wow.gamepedia.com/API_GetHitModifier)
+---[Documentation](https://wowpedia.fandom.com/wiki/API_GetHitModifier)
 function GetHitModifier() end
 
 ---@param homePlayers table
 ---@return table homePlayers
----[Documentation](https://wow.gamepedia.com/API_GetHomePartyInfo)
+---[Documentation](https://wowpedia.fandom.com/wiki/API_GetHomePartyInfo)
 function GetHomePartyInfo(homePlayers) end
 
 ---[Documentation](https://wow.gamepedia.com/API_GetInboxHeaderInfo)
@@ -1370,7 +1370,7 @@ function GetInsertItemsLeftToRight() end
 ---@return number seasonWon
 ---@return number weeklyPlayed
 ---@return number weeklyWon
----[Documentation](https://wow.gamepedia.com/API_GetInspectArenaData)
+---[Documentation](https://wowpedia.fandom.com/wiki/API_GetInspectArenaData)
 function GetInspectArenaData(bracketId) end
 
 ---[Documentation](https://wow.gamepedia.com/API_GetInspectGuildInfo)
@@ -1382,7 +1382,7 @@ function GetInspectGuildInfo(unit) end
 ---@return number yesterdayHonor
 ---@return number lifetimeHK
 ---@return number lifetimeRank
----[Documentation](https://wow.gamepedia.com/API_GetInspectHonorData)
+---[Documentation](https://wowpedia.fandom.com/wiki/API_GetInspectHonorData)
 function GetInspectHonorData() end
 
 ---[Documentation](https://wow.gamepedia.com/API_GetInspectRatedBGData)
@@ -1390,7 +1390,7 @@ function GetInspectRatedBGData() end
 
 ---@param unit string
 ---@return number id
----[Documentation](https://wow.gamepedia.com/API_GetInspectSpecialization)
+---[Documentation](https://wowpedia.fandom.com/wiki/API_GetInspectSpecialization)
 function GetInspectSpecialization(unit) end
 
 ---[Documentation](https://wow.gamepedia.com/API_GetInspectTalent)
@@ -1409,7 +1409,7 @@ function GetInstanceBootTimeRemaining() end
 ---@return number instanceID
 ---@return number instanceGroupSize
 ---@return number LfgDungeonID
----[Documentation](https://wow.gamepedia.com/API_GetInstanceInfo)
+---[Documentation](https://wowpedia.fandom.com/wiki/API_GetInstanceInfo)
 function GetInstanceInfo() end
 
 ---[Documentation](https://wow.gamepedia.com/API_GetInstanceLockTimeRemaining)
@@ -1419,12 +1419,12 @@ function GetInstanceLockTimeRemaining() end
 ---@return string bossName
 ---@return string texture
 ---@return boolean isKilled
----[Documentation](https://wow.gamepedia.com/API_GetInstanceLockTimeRemainingEncounter)
+---[Documentation](https://wowpedia.fandom.com/wiki/API_GetInstanceLockTimeRemainingEncounter)
 function GetInstanceLockTimeRemainingEncounter(id) end
 
 ---@param index string
 ---@return number alertStatus
----[Documentation](https://wow.gamepedia.com/API_GetInventoryAlertStatus)
+---[Documentation](https://wowpedia.fandom.com/wiki/API_GetInventoryAlertStatus)
 function GetInventoryAlertStatus(index) end
 
 ---[Documentation](https://wow.gamepedia.com/API_GetInventoryItemBroken)
@@ -1439,7 +1439,7 @@ function GetInventoryItemCount(unit, invSlot) end
 ---@param slot number
 ---@return number current
 ---@return number maximum
----[Documentation](https://wow.gamepedia.com/API_GetInventoryItemDurability)
+---[Documentation](https://wowpedia.fandom.com/wiki/API_GetInventoryItemDurability)
 function GetInventoryItemDurability(slot) end
 
 ---[Documentation](https://wow.gamepedia.com/API_GetInventoryItemEquippedUnusable)
@@ -1449,7 +1449,7 @@ function GetInventoryItemEquippedUnusable(unit, slot) end
 ---@param invSlot number
 ---@return number itemId
 ---@return number unknown
----[Documentation](https://wow.gamepedia.com/API_GetInventoryItemID)
+---[Documentation](https://wowpedia.fandom.com/wiki/API_GetInventoryItemID)
 function GetInventoryItemID(unit, invSlot) end
 
 ---[Documentation](https://wow.gamepedia.com/API_GetInventoryItemLink)
@@ -1475,7 +1475,7 @@ function GetItemChildInfo(item, slotID) end
 
 ---@param classID number
 ---@return string name
----[Documentation](https://wow.gamepedia.com/API_GetItemClassInfo)
+---[Documentation](https://wowpedia.fandom.com/wiki/API_GetItemClassInfo)
 function GetItemClassInfo(classID) end
 
 ---[Documentation](https://wow.gamepedia.com/API_GetItemCooldown)
@@ -1486,7 +1486,7 @@ function GetItemCooldown(itemId) end
 ---@param includeUses boolean
 ---@param includeReagentBank boolean
 ---@return number count
----[Documentation](https://wow.gamepedia.com/API_GetItemCount)
+---[Documentation](https://wowpedia.fandom.com/wiki/API_GetItemCount)
 function GetItemCount(itemInfo, includeBank, includeUses, includeReagentBank) end
 
 ---[Documentation](https://wow.gamepedia.com/API_GetItemCreationContext)
@@ -1500,7 +1500,7 @@ function GetItemGem(item, index) end
 
 ---@param itemID number
 ---@return number icon
----[Documentation](https://wow.gamepedia.com/API_GetItemIcon)
+---[Documentation](https://wowpedia.fandom.com/wiki/API_GetItemIcon)
 function GetItemIcon(itemID) end
 
 ---[Documentation](https://wow.gamepedia.com/API_GetItemInfo)
@@ -1516,7 +1516,7 @@ function GetItemInventorySlotInfo(inventorySlot) end
 function GetItemLevelColor() end
 
 ---@return number itemLevelIncrement
----[Documentation](https://wow.gamepedia.com/API_GetItemLevelIncrement)
+---[Documentation](https://wowpedia.fandom.com/wiki/API_GetItemLevelIncrement)
 function GetItemLevelIncrement() end
 
 ---@param quality number
@@ -1524,7 +1524,7 @@ function GetItemLevelIncrement() end
 ---@return number g
 ---@return number b
 ---@return string hex
----[Documentation](https://wow.gamepedia.com/API_GetItemQualityColor)
+---[Documentation](https://wowpedia.fandom.com/wiki/API_GetItemQualityColor)
 function GetItemQualityColor(quality) end
 
 ---[Documentation](https://wow.gamepedia.com/API_GetItemSetInfo)
@@ -1546,20 +1546,20 @@ function GetItemStats(itemLink, statTable) end
 ---@param subClassID number
 ---@return string name
 ---@return boolean isArmorType
----[Documentation](https://wow.gamepedia.com/API_GetItemSubClassInfo)
+---[Documentation](https://wowpedia.fandom.com/wiki/API_GetItemSubClassInfo)
 function GetItemSubClassInfo(classID, subClassID) end
 
 ---[Documentation](https://wow.gamepedia.com/API_GetItemUniqueness)
 function GetItemUniqueness(item) end
 
 ---@return number itemLevel
----[Documentation](https://wow.gamepedia.com/API_GetItemUpdateLevel)
+---[Documentation](https://wowpedia.fandom.com/wiki/API_GetItemUpdateLevel)
 function GetItemUpdateLevel() end
 
 ---@param effectIndex number
 ---@return string leftText
 ---@return string rightText
----[Documentation](https://wow.gamepedia.com/API_GetItemUpgradeEffect)
+---[Documentation](https://wowpedia.fandom.com/wiki/API_GetItemUpgradeEffect)
 function GetItemUpgradeEffect(effectIndex) end
 
 ---@return number icon
@@ -1571,7 +1571,7 @@ function GetItemUpgradeEffect(effectIndex) end
 ---@return number cost
 ---@return number currencyType
 ---@return string failureMessage
----[Documentation](https://wow.gamepedia.com/API_GetItemUpgradeItemInfo)
+---[Documentation](https://wowpedia.fandom.com/wiki/API_GetItemUpgradeItemInfo)
 function GetItemUpgradeItemInfo() end
 
 ---[Documentation](https://wow.gamepedia.com/API_GetItemUpgradeStats)
@@ -1628,7 +1628,7 @@ function GetLFGDeserterExpiration() end
 ---@return string texture
 ---@return boolean isKilled
 ---@return boolean unknown4
----[Documentation](https://wow.gamepedia.com/API_GetLFGDungeonEncounterInfo)
+---[Documentation](https://wowpedia.fandom.com/wiki/API_GetLFGDungeonEncounterInfo)
 function GetLFGDungeonEncounterInfo(dungeonID, encounterIndex) end
 
 ---[Documentation](https://wow.gamepedia.com/API_GetLFGDungeonInfo)
@@ -1637,7 +1637,7 @@ function GetLFGDungeonInfo(dungeonID) end
 ---@param dungeonID number
 ---@return number numEncounters
 ---@return number numCompleted
----[Documentation](https://wow.gamepedia.com/API_GetLFGDungeonNumEncounters)
+---[Documentation](https://wowpedia.fandom.com/wiki/API_GetLFGDungeonNumEncounters)
 function GetLFGDungeonNumEncounters(dungeonID) end
 
 ---[Documentation](https://wow.gamepedia.com/API_GetLFGDungeonRewardCapBarInfo)
@@ -1706,14 +1706,14 @@ function GetLFGReadyCheckUpdateBattlegroundInfo() end
 ---@return number itemCount
 ---@return number money
 ---@return number xp
----[Documentation](https://wow.gamepedia.com/API_GetLFGRoleShortageRewards)
+---[Documentation](https://wowpedia.fandom.com/wiki/API_GetLFGRoleShortageRewards)
 function GetLFGRoleShortageRewards(dungeonID, shortageSeverity) end
 
 ---[Documentation](https://wow.gamepedia.com/API_GetLFGRoleUpdate)
 function GetLFGRoleUpdate() end
 
 ---@return string queueName
----[Documentation](https://wow.gamepedia.com/API_GetLFGRoleUpdateBattlegroundInfo)
+---[Documentation](https://wowpedia.fandom.com/wiki/API_GetLFGRoleUpdateBattlegroundInfo)
 function GetLFGRoleUpdateBattlegroundInfo() end
 
 ---[Documentation](https://wow.gamepedia.com/API_GetLFGRoleUpdateMember)
@@ -1726,7 +1726,7 @@ function GetLFGRoleUpdateSlot(slotIndex) end
 ---@return boolean isTank
 ---@return boolean isHealer
 ---@return boolean isDPS
----[Documentation](https://wow.gamepedia.com/API_GetLFGRoles)
+---[Documentation](https://wowpedia.fandom.com/wiki/API_GetLFGRoles)
 function GetLFGRoles() end
 
 ---[Documentation](https://wow.gamepedia.com/API_GetLFGSuspendedPlayers)
@@ -1734,7 +1734,7 @@ function GetLFGSuspendedPlayers(category) end
 
 ---@param LFRRaidList table
 ---@return table raidList
----[Documentation](https://wow.gamepedia.com/API_GetLFRChoiceOrder)
+---[Documentation](https://wowpedia.fandom.com/wiki/API_GetLFRChoiceOrder)
 function GetLFRChoiceOrder(LFRRaidList) end
 
 ---[Documentation](https://wow.gamepedia.com/API_GetLanguageByIndex)
@@ -1788,7 +1788,7 @@ function GetLootInfo() end
 ---@return string lootmethod
 ---@return number masterlooterPartyID
 ---@return number masterlooterRaidID
----[Documentation](https://wow.gamepedia.com/API_GetLootMethod)
+---[Documentation](https://wowpedia.fandom.com/wiki/API_GetLootMethod)
 function GetLootMethod() end
 
 ---[Documentation](https://wow.gamepedia.com/API_GetLootRollItemInfo)
@@ -1805,23 +1805,23 @@ function GetLootSlotInfo(slot) end
 
 ---@param index number
 ---@return string itemLink
----[Documentation](https://wow.gamepedia.com/API_GetLootSlotLink)
+---[Documentation](https://wowpedia.fandom.com/wiki/API_GetLootSlotLink)
 function GetLootSlotLink(index) end
 
 ---@param slotIndex number
 ---@return number slotType
----[Documentation](https://wow.gamepedia.com/API_GetLootSlotType)
+---[Documentation](https://wowpedia.fandom.com/wiki/API_GetLootSlotType)
 function GetLootSlotType(slotIndex) end
 
 ---[Documentation](https://wow.gamepedia.com/API_GetLootSourceInfo)
 function GetLootSourceInfo(slot) end
 
 ---@return number specID
----[Documentation](https://wow.gamepedia.com/API_GetLootSpecialization)
+---[Documentation](https://wowpedia.fandom.com/wiki/API_GetLootSpecialization)
 function GetLootSpecialization() end
 
 ---@return number threshold
----[Documentation](https://wow.gamepedia.com/API_GetLootThreshold)
+---[Documentation](https://wowpedia.fandom.com/wiki/API_GetLootThreshold)
 function GetLootThreshold() end
 
 ---[Documentation](https://wow.gamepedia.com/API_GetMacroBody)
@@ -1832,7 +1832,7 @@ function GetMacroIcons(table) end
 
 ---@param name string
 ---@return number macroSlot
----[Documentation](https://wow.gamepedia.com/API_GetMacroIndexByName)
+---[Documentation](https://wowpedia.fandom.com/wiki/API_GetMacroIndexByName)
 function GetMacroIndexByName(name) end
 
 ---[Documentation](https://wow.gamepedia.com/API_GetMacroInfo)
@@ -1849,19 +1849,19 @@ function GetMacroSpell() end
 
 ---@return number base
 ---@return number casting
----[Documentation](https://wow.gamepedia.com/API_GetManaRegen)
+---[Documentation](https://wowpedia.fandom.com/wiki/API_GetManaRegen)
 function GetManaRegen() end
 
 ---[Documentation](https://wow.gamepedia.com/API_GetMasterLootCandidate)
 function GetMasterLootCandidate(index) end
 
 ---@return number mastery
----[Documentation](https://wow.gamepedia.com/API_GetMastery)
+---[Documentation](https://wowpedia.fandom.com/wiki/API_GetMastery)
 function GetMastery() end
 
 ---@return number mastery
 ---@return number coefficient
----[Documentation](https://wow.gamepedia.com/API_GetMasteryEffect)
+---[Documentation](https://wowpedia.fandom.com/wiki/API_GetMasteryEffect)
 function GetMasteryEffect() end
 
 ---[Documentation](https://wow.gamepedia.com/API_GetMawPowerLinkBySpellID)
@@ -1871,7 +1871,7 @@ function GetMawPowerLinkBySpellID(spellID) end
 function GetMaxArenaCurrency() end
 
 ---@return number maxBattlefieldID
----[Documentation](https://wow.gamepedia.com/API_GetMaxBattlefieldID)
+---[Documentation](https://wowpedia.fandom.com/wiki/API_GetMaxBattlefieldID)
 function GetMaxBattlefieldID() end
 
 ---[Documentation](https://wow.gamepedia.com/API_GetMaxCombatRatingBonus)
@@ -1893,7 +1893,7 @@ function GetMaxRewardCurrencies() end
 function GetMaxSpellStartRecoveryOffset() end
 
 ---@return number tiers
----[Documentation](https://wow.gamepedia.com/API_GetMaxTalentTier)
+---[Documentation](https://wowpedia.fandom.com/wiki/API_GetMaxTalentTier)
 function GetMaxTalentTier() end
 
 ---[Documentation](https://wow.gamepedia.com/API_GetMeleeHaste)
@@ -1907,7 +1907,7 @@ function GetMerchantFilter() end
 
 ---@param index number
 ---@return number itemCount
----[Documentation](https://wow.gamepedia.com/API_GetMerchantItemCostInfo)
+---[Documentation](https://wowpedia.fandom.com/wiki/API_GetMerchantItemCostInfo)
 function GetMerchantItemCostInfo(index) end
 
 ---@param index number
@@ -1916,6 +1916,6 @@ function GetMerchantItemCostInfo(index) end
 ---@return number itemValue
 ---@return string itemLink
 ---@return string currencyName
----[Documentation](https://wow.gamepedia.com/API_GetMerchantItemCostItem)
+---[Documentation](https://wowpedia.fandom.com/wiki/API_GetMerchantItemCostItem)
 function GetMerchantItemCostItem(index, itemIndex) end
 

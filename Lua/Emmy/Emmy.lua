@@ -33,7 +33,7 @@ function Emmy:GetSystem(system)
 end
 
 
-local fs_doc = "---[Documentation](https://wow.gamepedia.com/%s)"
+local fs_doc = "---[Documentation](https://wowpedia.fandom.com/wiki/%s)"
 
 function Emmy:GetFunction(func)
 	local tbl = {}

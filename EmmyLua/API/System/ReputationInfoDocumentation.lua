@@ -6,14 +6,14 @@ C_Reputation = {}
 ---@return number rewardQuestID
 ---@return boolean hasRewardPending
 ---@return boolean tooLowLevelForParagon
----[Documentation](https://wow.gamepedia.com/API_C_Reputation.GetFactionParagonInfo)
+---[Documentation](https://wowpedia.fandom.com/wiki/API_C_Reputation.GetFactionParagonInfo)
 function C_Reputation.GetFactionParagonInfo(factionID) end
 
 ---@param factionID number
 ---@return boolean hasParagon
----[Documentation](https://wow.gamepedia.com/API_C_Reputation.IsFactionParagon)
+---[Documentation](https://wowpedia.fandom.com/wiki/API_C_Reputation.IsFactionParagon)
 function C_Reputation.IsFactionParagon(factionID) end
 
 ---@param factionID number
----[Documentation](https://wow.gamepedia.com/API_C_Reputation.RequestFactionParagonPreloadRewardData)
+---[Documentation](https://wowpedia.fandom.com/wiki/API_C_Reputation.RequestFactionParagonPreloadRewardData)
 function C_Reputation.RequestFactionParagonPreloadRewardData(factionID) end

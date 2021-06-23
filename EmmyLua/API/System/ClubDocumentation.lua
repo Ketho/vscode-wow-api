@@ -1,23 +1,23 @@
 C_Club = {}
 
 ---@param clubId string
----[Documentation](https://wow.gamepedia.com/API_C_Club.AcceptInvitation)
+---[Documentation](https://wowpedia.fandom.com/wiki/API_C_Club.AcceptInvitation)
 function C_Club.AcceptInvitation(clubId) end
 
 ---@param clubId string
 ---@param streamId string
----[Documentation](https://wow.gamepedia.com/API_C_Club.AddClubStreamChatChannel)
+---[Documentation](https://wowpedia.fandom.com/wiki/API_C_Club.AddClubStreamChatChannel)
 function C_Club.AddClubStreamChatChannel(clubId, streamId) end
 
 ---@param clubId string
 ---@param streamId string
----[Documentation](https://wow.gamepedia.com/API_C_Club.AdvanceStreamViewMarker)
+---[Documentation](https://wowpedia.fandom.com/wiki/API_C_Club.AdvanceStreamViewMarker)
 function C_Club.AdvanceStreamViewMarker(clubId, streamId) end
 
 ---@param clubId string
 ---@param memberId number
 ---@param roleId ClubRoleIdentifier
----[Documentation](https://wow.gamepedia.com/API_C_Club.AssignMemberRole)
+---[Documentation](https://wowpedia.fandom.com/wiki/API_C_Club.AssignMemberRole)
 function C_Club.AssignMemberRole(clubId, memberId, roleId) end
 
 ---@param clubId string
@@ -25,20 +25,20 @@ function C_Club.AssignMemberRole(clubId, memberId, roleId) end
 ---@param epoch number
 ---@param position number
 ---@return boolean canResolve
----[Documentation](https://wow.gamepedia.com/API_C_Club.CanResolvePlayerLocationFromClubMessageData)
+---[Documentation](https://wowpedia.fandom.com/wiki/API_C_Club.CanResolvePlayerLocationFromClubMessageData)
 function C_Club.CanResolvePlayerLocationFromClubMessageData(clubId, streamId, epoch, position) end
 
----[Documentation](https://wow.gamepedia.com/API_C_Club.ClearAutoAdvanceStreamViewMarker)
+---[Documentation](https://wowpedia.fandom.com/wiki/API_C_Club.ClearAutoAdvanceStreamViewMarker)
 function C_Club.ClearAutoAdvanceStreamViewMarker() end
 
----[Documentation](https://wow.gamepedia.com/API_C_Club.ClearClubPresenceSubscription)
+---[Documentation](https://wowpedia.fandom.com/wiki/API_C_Club.ClearClubPresenceSubscription)
 function C_Club.ClearClubPresenceSubscription() end
 
 ---@param clubId string
 ---@param lhsMemberId number
 ---@param rhsMemberId number
 ---@return number comparison
----[Documentation](https://wow.gamepedia.com/API_C_Club.CompareBattleNetDisplayName)
+---[Documentation](https://wowpedia.fandom.com/wiki/API_C_Club.CompareBattleNetDisplayName)
 function C_Club.CompareBattleNetDisplayName(clubId, lhsMemberId, rhsMemberId) end
 
 ---@param name string
@@ -46,14 +46,14 @@ function C_Club.CompareBattleNetDisplayName(clubId, lhsMemberId, rhsMemberId) en
 ---@param description string
 ---@param clubType ClubType
 ---@param avatarId number
----[Documentation](https://wow.gamepedia.com/API_C_Club.CreateClub)
+---[Documentation](https://wowpedia.fandom.com/wiki/API_C_Club.CreateClub)
 function C_Club.CreateClub(name, shortName, description, clubType, avatarId) end
 
 ---@param clubId string
 ---@param name string
 ---@param subject string
 ---@param leadersAndModeratorsOnly boolean
----[Documentation](https://wow.gamepedia.com/API_C_Club.CreateStream)
+---[Documentation](https://wowpedia.fandom.com/wiki/API_C_Club.CreateStream)
 ---Check the canCreateStream privilege.
 function C_Club.CreateStream(clubId, name, subject, leadersAndModeratorsOnly) end
 
@@ -61,34 +61,34 @@ function C_Club.CreateStream(clubId, name, subject, leadersAndModeratorsOnly) en
 ---@param allowedRedeemCount? number
 ---@param duration? number
 ---@param defaultStreamId? string
----[Documentation](https://wow.gamepedia.com/API_C_Club.CreateTicket)
+---[Documentation](https://wowpedia.fandom.com/wiki/API_C_Club.CreateTicket)
 ---Check canCreateTicket privilege.
 function C_Club.CreateTicket(clubId, allowedRedeemCount, duration, defaultStreamId) end
 
 ---@param clubId string
----[Documentation](https://wow.gamepedia.com/API_C_Club.DeclineInvitation)
+---[Documentation](https://wowpedia.fandom.com/wiki/API_C_Club.DeclineInvitation)
 function C_Club.DeclineInvitation(clubId) end
 
 ---@param clubId string
----[Documentation](https://wow.gamepedia.com/API_C_Club.DestroyClub)
+---[Documentation](https://wowpedia.fandom.com/wiki/API_C_Club.DestroyClub)
 ---Check the canDestroy privilege.
 function C_Club.DestroyClub(clubId) end
 
 ---@param clubId string
 ---@param streamId string
 ---@param messageId ClubMessageIdentifier
----[Documentation](https://wow.gamepedia.com/API_C_Club.DestroyMessage)
+---[Documentation](https://wowpedia.fandom.com/wiki/API_C_Club.DestroyMessage)
 function C_Club.DestroyMessage(clubId, streamId, messageId) end
 
 ---@param clubId string
 ---@param streamId string
----[Documentation](https://wow.gamepedia.com/API_C_Club.DestroyStream)
+---[Documentation](https://wowpedia.fandom.com/wiki/API_C_Club.DestroyStream)
 ---Check canDestroyStream privilege.
 function C_Club.DestroyStream(clubId, streamId) end
 
 ---@param clubId string
 ---@param ticketId string
----[Documentation](https://wow.gamepedia.com/API_C_Club.DestroyTicket)
+---[Documentation](https://wowpedia.fandom.com/wiki/API_C_Club.DestroyTicket)
 ---Check canDestroyTicket privilege.
 function C_Club.DestroyTicket(clubId, ticketId) end
 
@@ -98,7 +98,7 @@ function C_Club.DestroyTicket(clubId, ticketId) end
 ---@param description? string
 ---@param avatarId? number
 ---@param broadcast? string
----[Documentation](https://wow.gamepedia.com/API_C_Club.EditClub)
+---[Documentation](https://wowpedia.fandom.com/wiki/API_C_Club.EditClub)
 ---nil arguments will not change existing club data
 function C_Club.EditClub(clubId, name, shortName, description, avatarId, broadcast) end
 
@@ -106,7 +106,7 @@ function C_Club.EditClub(clubId, name, shortName, description, avatarId, broadca
 ---@param streamId string
 ---@param messageId ClubMessageIdentifier
 ---@param message string
----[Documentation](https://wow.gamepedia.com/API_C_Club.EditMessage)
+---[Documentation](https://wowpedia.fandom.com/wiki/API_C_Club.EditMessage)
 function C_Club.EditMessage(clubId, streamId, messageId, message) end
 
 ---@param clubId string
@@ -114,76 +114,76 @@ function C_Club.EditMessage(clubId, streamId, messageId, message) end
 ---@param name? string
 ---@param subject? string
 ---@param leadersAndModeratorsOnly? boolean
----[Documentation](https://wow.gamepedia.com/API_C_Club.EditStream)
+---[Documentation](https://wowpedia.fandom.com/wiki/API_C_Club.EditStream)
 ---Check the canSetStreamName, canSetStreamSubject, canSetStreamAccess privileges. nil arguments will not change existing stream data.
 function C_Club.EditStream(clubId, streamId, name, subject, leadersAndModeratorsOnly) end
 
----[Documentation](https://wow.gamepedia.com/API_C_Club.Flush)
+---[Documentation](https://wowpedia.fandom.com/wiki/API_C_Club.Flush)
 function C_Club.Flush() end
 
 ---@param clubId string
 ---@param streamId string
 ---@return boolean focused
----[Documentation](https://wow.gamepedia.com/API_C_Club.FocusStream)
+---[Documentation](https://wowpedia.fandom.com/wiki/API_C_Club.FocusStream)
 function C_Club.FocusStream(clubId, streamId) end
 
 ---@param clubId string
 ---@param memberId number
 ---@return ClubRoleIdentifier[] assignableRoles
----[Documentation](https://wow.gamepedia.com/API_C_Club.GetAssignableRoles)
+---[Documentation](https://wowpedia.fandom.com/wiki/API_C_Club.GetAssignableRoles)
 function C_Club.GetAssignableRoles(clubId, memberId) end
 
 ---@param clubType ClubType
 ---@return number[]? avatarIds
----[Documentation](https://wow.gamepedia.com/API_C_Club.GetAvatarIdList)
+---[Documentation](https://wowpedia.fandom.com/wiki/API_C_Club.GetAvatarIdList)
 ---listen for AVATAR_LIST_UPDATED event. This can happen if we haven't downloaded the battle.net avatar list yet
 function C_Club.GetAvatarIdList(clubType) end
 
 ---@return number capacity
----[Documentation](https://wow.gamepedia.com/API_C_Club.GetClubCapacity)
+---[Documentation](https://wowpedia.fandom.com/wiki/API_C_Club.GetClubCapacity)
 function C_Club.GetClubCapacity() end
 
 ---@param clubId string
 ---@return ClubInfo? info
----[Documentation](https://wow.gamepedia.com/API_C_Club.GetClubInfo)
+---[Documentation](https://wowpedia.fandom.com/wiki/API_C_Club.GetClubInfo)
 function C_Club.GetClubInfo(clubId) end
 
 ---@param clubType ClubType
 ---@return ClubLimits clubLimits
----[Documentation](https://wow.gamepedia.com/API_C_Club.GetClubLimits)
+---[Documentation](https://wowpedia.fandom.com/wiki/API_C_Club.GetClubLimits)
 function C_Club.GetClubLimits(clubType) end
 
 ---@param clubId string
 ---@param streamId? string
 ---@return number[] members
----[Documentation](https://wow.gamepedia.com/API_C_Club.GetClubMembers)
+---[Documentation](https://wowpedia.fandom.com/wiki/API_C_Club.GetClubMembers)
 function C_Club.GetClubMembers(clubId, streamId) end
 
 ---@param clubId string
 ---@return ClubPrivilegeInfo privilegeInfo
----[Documentation](https://wow.gamepedia.com/API_C_Club.GetClubPrivileges)
+---[Documentation](https://wowpedia.fandom.com/wiki/API_C_Club.GetClubPrivileges)
 ---The privileges for the logged in user for this club
 function C_Club.GetClubPrivileges(clubId) end
 
 ---@param clubId string
 ---@return ClubStreamNotificationSetting[] settings
----[Documentation](https://wow.gamepedia.com/API_C_Club.GetClubStreamNotificationSettings)
+---[Documentation](https://wowpedia.fandom.com/wiki/API_C_Club.GetClubStreamNotificationSettings)
 function C_Club.GetClubStreamNotificationSettings(clubId) end
 
 ---@param result ValidateNameResult
 ---@return string? errorCode
----[Documentation](https://wow.gamepedia.com/API_C_Club.GetCommunityNameResultText)
+---[Documentation](https://wowpedia.fandom.com/wiki/API_C_Club.GetCommunityNameResultText)
 function C_Club.GetCommunityNameResultText(result) end
 
 ---@return string? guildClubId
----[Documentation](https://wow.gamepedia.com/API_C_Club.GetGuildClubId)
+---[Documentation](https://wowpedia.fandom.com/wiki/API_C_Club.GetGuildClubId)
 function C_Club.GetGuildClubId() end
 
 ---@return ClubMessageInfo messageInfo
 ---@return string clubId
 ---@return string streamId
 ---@return ClubType clubType
----[Documentation](https://wow.gamepedia.com/API_C_Club.GetInfoFromLastCommunityChatLine)
+---[Documentation](https://wowpedia.fandom.com/wiki/API_C_Club.GetInfoFromLastCommunityChatLine)
 function C_Club.GetInfoFromLastCommunityChatLine() end
 
 ---@param filter? string
@@ -192,24 +192,24 @@ function C_Club.GetInfoFromLastCommunityChatLine() end
 ---@param allowFullMatch? boolean
 ---@param clubId string
 ---@return ClubInvitationCandidateInfo[] candidates
----[Documentation](https://wow.gamepedia.com/API_C_Club.GetInvitationCandidates)
+---[Documentation](https://wowpedia.fandom.com/wiki/API_C_Club.GetInvitationCandidates)
 ---Returns a list of players that you can send a request to a Battle.net club. Returns an empty list for Character based clubs
 function C_Club.GetInvitationCandidates(filter, maxResults, cursorPosition, allowFullMatch, clubId) end
 
 ---@param clubId string
 ---@return ClubSelfInvitationInfo? invitation
----[Documentation](https://wow.gamepedia.com/API_C_Club.GetInvitationInfo)
+---[Documentation](https://wowpedia.fandom.com/wiki/API_C_Club.GetInvitationInfo)
 ---Get info about a specific club the active player has been invited to.
 function C_Club.GetInvitationInfo(clubId) end
 
 ---@param clubId string
 ---@return ClubInvitationInfo[] invitations
----[Documentation](https://wow.gamepedia.com/API_C_Club.GetInvitationsForClub)
+---[Documentation](https://wowpedia.fandom.com/wiki/API_C_Club.GetInvitationsForClub)
 ---Get the pending invitations for this club. Call RequestInvitationsForClub() to retrieve invitations from server.
 function C_Club.GetInvitationsForClub(clubId) end
 
 ---@return ClubSelfInvitationInfo[] invitations
----[Documentation](https://wow.gamepedia.com/API_C_Club.GetInvitationsForSelf)
+---[Documentation](https://wowpedia.fandom.com/wiki/API_C_Club.GetInvitationsForSelf)
 ---These are the clubs the active player has been invited to.
 function C_Club.GetInvitationsForSelf() end
 
@@ -217,18 +217,18 @@ function C_Club.GetInvitationsForSelf() end
 ---@return ClubErrorType error
 ---@return ClubInfo? info
 ---@return boolean showError
----[Documentation](https://wow.gamepedia.com/API_C_Club.GetLastTicketResponse)
+---[Documentation](https://wowpedia.fandom.com/wiki/API_C_Club.GetLastTicketResponse)
 function C_Club.GetLastTicketResponse(ticket) end
 
 ---@param clubId string
 ---@param memberId number
 ---@return ClubMemberInfo? info
----[Documentation](https://wow.gamepedia.com/API_C_Club.GetMemberInfo)
+---[Documentation](https://wowpedia.fandom.com/wiki/API_C_Club.GetMemberInfo)
 function C_Club.GetMemberInfo(clubId, memberId) end
 
 ---@param clubId string
 ---@return ClubMemberInfo? info
----[Documentation](https://wow.gamepedia.com/API_C_Club.GetMemberInfoForSelf)
+---[Documentation](https://wowpedia.fandom.com/wiki/API_C_Club.GetMemberInfoForSelf)
 ---Info for the logged in user for this club
 function C_Club.GetMemberInfoForSelf(clubId) end
 
@@ -236,14 +236,14 @@ function C_Club.GetMemberInfoForSelf(clubId) end
 ---@param streamId string
 ---@param messageId ClubMessageIdentifier
 ---@return ClubMessageInfo? message
----[Documentation](https://wow.gamepedia.com/API_C_Club.GetMessageInfo)
+---[Documentation](https://wowpedia.fandom.com/wiki/API_C_Club.GetMessageInfo)
 ---Get info about a particular message.
 function C_Club.GetMessageInfo(clubId, streamId, messageId) end
 
 ---@param clubId string
 ---@param streamId string
 ---@return ClubMessageRange[] ranges
----[Documentation](https://wow.gamepedia.com/API_C_Club.GetMessageRanges)
+---[Documentation](https://wowpedia.fandom.com/wiki/API_C_Club.GetMessageRanges)
 ---Get the ranges of the messages currently downloaded.
 function C_Club.GetMessageRanges(clubId, streamId) end
 
@@ -252,7 +252,7 @@ function C_Club.GetMessageRanges(clubId, streamId) end
 ---@param newest ClubMessageIdentifier
 ---@param count number
 ---@return ClubMessageInfo[] messages
----[Documentation](https://wow.gamepedia.com/API_C_Club.GetMessagesBefore)
+---[Documentation](https://wowpedia.fandom.com/wiki/API_C_Club.GetMessagesBefore)
 ---Get downloaded messages before (and including) the specified messageId limited by count. These are filtered by ignored players
 function C_Club.GetMessagesBefore(clubId, streamId, newest, count) end
 
@@ -261,80 +261,80 @@ function C_Club.GetMessagesBefore(clubId, streamId, newest, count) end
 ---@param oldest ClubMessageIdentifier
 ---@param newest ClubMessageIdentifier
 ---@return ClubMessageInfo[] messages
----[Documentation](https://wow.gamepedia.com/API_C_Club.GetMessagesInRange)
+---[Documentation](https://wowpedia.fandom.com/wiki/API_C_Club.GetMessagesInRange)
 ---Get downloaded messages in the given range. These are filtered by ignored players
 function C_Club.GetMessagesInRange(clubId, streamId, oldest, newest) end
 
 ---@param clubId string
 ---@param streamId string
 ---@return ClubStreamInfo? streamInfo
----[Documentation](https://wow.gamepedia.com/API_C_Club.GetStreamInfo)
+---[Documentation](https://wowpedia.fandom.com/wiki/API_C_Club.GetStreamInfo)
 function C_Club.GetStreamInfo(clubId, streamId) end
 
 ---@param clubId string
 ---@param streamId string
 ---@return number? lastReadTime
----[Documentation](https://wow.gamepedia.com/API_C_Club.GetStreamViewMarker)
+---[Documentation](https://wowpedia.fandom.com/wiki/API_C_Club.GetStreamViewMarker)
 function C_Club.GetStreamViewMarker(clubId, streamId) end
 
 ---@param clubId string
 ---@return ClubStreamInfo[] streams
----[Documentation](https://wow.gamepedia.com/API_C_Club.GetStreams)
+---[Documentation](https://wowpedia.fandom.com/wiki/API_C_Club.GetStreams)
 function C_Club.GetStreams(clubId) end
 
 ---@return ClubInfo[] clubs
----[Documentation](https://wow.gamepedia.com/API_C_Club.GetSubscribedClubs)
+---[Documentation](https://wowpedia.fandom.com/wiki/API_C_Club.GetSubscribedClubs)
 function C_Club.GetSubscribedClubs() end
 
 ---@param clubId string
 ---@return ClubTicketInfo[] tickets
----[Documentation](https://wow.gamepedia.com/API_C_Club.GetTickets)
+---[Documentation](https://wowpedia.fandom.com/wiki/API_C_Club.GetTickets)
 ---Get the existing tickets for this club. Call RequestTickets() to retrieve tickets from server.
 function C_Club.GetTickets(clubId) end
 
 ---@param clubId string
 ---@return boolean accountMuted
----[Documentation](https://wow.gamepedia.com/API_C_Club.IsAccountMuted)
+---[Documentation](https://wowpedia.fandom.com/wiki/API_C_Club.IsAccountMuted)
 function C_Club.IsAccountMuted(clubId) end
 
 ---@param clubId string
 ---@param streamId string
 ---@param messageId ClubMessageIdentifier
 ---@return boolean isBeginningOfStream
----[Documentation](https://wow.gamepedia.com/API_C_Club.IsBeginningOfStream)
+---[Documentation](https://wowpedia.fandom.com/wiki/API_C_Club.IsBeginningOfStream)
 ---Returns whether the given message is the first message in the stream, taking into account ignored messages
 function C_Club.IsBeginningOfStream(clubId, streamId, messageId) end
 
 ---@return boolean clubsEnabled
----[Documentation](https://wow.gamepedia.com/API_C_Club.IsEnabled)
+---[Documentation](https://wowpedia.fandom.com/wiki/API_C_Club.IsEnabled)
 function C_Club.IsEnabled() end
 
 ---@return ClubRestrictionReason restrictionReason
----[Documentation](https://wow.gamepedia.com/API_C_Club.IsRestricted)
+---[Documentation](https://wowpedia.fandom.com/wiki/API_C_Club.IsRestricted)
 function C_Club.IsRestricted() end
 
 ---@param clubId string
 ---@param streamId string
 ---@return boolean subscribed
----[Documentation](https://wow.gamepedia.com/API_C_Club.IsSubscribedToStream)
+---[Documentation](https://wowpedia.fandom.com/wiki/API_C_Club.IsSubscribedToStream)
 function C_Club.IsSubscribedToStream(clubId, streamId) end
 
 ---@param clubId string
 ---@param memberId number
----[Documentation](https://wow.gamepedia.com/API_C_Club.KickMember)
+---[Documentation](https://wowpedia.fandom.com/wiki/API_C_Club.KickMember)
 ---Check kickableRoleIds privilege.
 function C_Club.KickMember(clubId, memberId) end
 
 ---@param clubId string
----[Documentation](https://wow.gamepedia.com/API_C_Club.LeaveClub)
+---[Documentation](https://wowpedia.fandom.com/wiki/API_C_Club.LeaveClub)
 function C_Club.LeaveClub(clubId) end
 
 ---@param ticketId string
----[Documentation](https://wow.gamepedia.com/API_C_Club.RedeemTicket)
+---[Documentation](https://wowpedia.fandom.com/wiki/API_C_Club.RedeemTicket)
 function C_Club.RedeemTicket(ticketId) end
 
 ---@param clubId string
----[Documentation](https://wow.gamepedia.com/API_C_Club.RequestInvitationsForClub)
+---[Documentation](https://wowpedia.fandom.com/wiki/API_C_Club.RequestInvitationsForClub)
 ---Request invitations for this club from server. Check canGetInvitation privilege.
 function C_Club.RequestInvitationsForClub(clubId) end
 
@@ -343,101 +343,101 @@ function C_Club.RequestInvitationsForClub(clubId) end
 ---@param messageId? ClubMessageIdentifier
 ---@param count? number
 ---@return boolean alreadyHasMessages
----[Documentation](https://wow.gamepedia.com/API_C_Club.RequestMoreMessagesBefore)
+---[Documentation](https://wowpedia.fandom.com/wiki/API_C_Club.RequestMoreMessagesBefore)
 ---Call this when the user scrolls near the top of the message view, and more need to be displayed. The history will be downloaded backwards (newest to oldest).
 function C_Club.RequestMoreMessagesBefore(clubId, streamId, messageId, count) end
 
 ---@param ticketId string
----[Documentation](https://wow.gamepedia.com/API_C_Club.RequestTicket)
+---[Documentation](https://wowpedia.fandom.com/wiki/API_C_Club.RequestTicket)
 function C_Club.RequestTicket(ticketId) end
 
 ---@param clubId string
----[Documentation](https://wow.gamepedia.com/API_C_Club.RequestTickets)
+---[Documentation](https://wowpedia.fandom.com/wiki/API_C_Club.RequestTickets)
 ---Request tickets from server. Check canGetTicket privilege.
 function C_Club.RequestTickets(clubId) end
 
 ---@param clubId string
 ---@param memberId number
----[Documentation](https://wow.gamepedia.com/API_C_Club.RevokeInvitation)
+---[Documentation](https://wowpedia.fandom.com/wiki/API_C_Club.RevokeInvitation)
 ---Check canRevokeOwnInvitation or canRevokeOtherInvitation
 function C_Club.RevokeInvitation(clubId, memberId) end
 
 ---@param guildClubId string
 ---@param memberId number
----[Documentation](https://wow.gamepedia.com/API_C_Club.SendBattleTagFriendRequest)
+---[Documentation](https://wowpedia.fandom.com/wiki/API_C_Club.SendBattleTagFriendRequest)
 function C_Club.SendBattleTagFriendRequest(guildClubId, memberId) end
 
 ---@param clubId string
 ---@param character string
----[Documentation](https://wow.gamepedia.com/API_C_Club.SendCharacterInvitation)
+---[Documentation](https://wowpedia.fandom.com/wiki/API_C_Club.SendCharacterInvitation)
 function C_Club.SendCharacterInvitation(clubId, character) end
 
 ---@param clubId string
 ---@param memberId number
----[Documentation](https://wow.gamepedia.com/API_C_Club.SendInvitation)
+---[Documentation](https://wowpedia.fandom.com/wiki/API_C_Club.SendInvitation)
 ---Check the canSendInvitation privilege.
 function C_Club.SendInvitation(clubId, memberId) end
 
 ---@param clubId string
 ---@param streamId string
 ---@param message string
----[Documentation](https://wow.gamepedia.com/API_C_Club.SendMessage)
+---[Documentation](https://wowpedia.fandom.com/wiki/API_C_Club.SendMessage)
 function C_Club.SendMessage(clubId, streamId, message) end
 
 ---@param clubId string
 ---@param streamId string
----[Documentation](https://wow.gamepedia.com/API_C_Club.SetAutoAdvanceStreamViewMarker)
+---[Documentation](https://wowpedia.fandom.com/wiki/API_C_Club.SetAutoAdvanceStreamViewMarker)
 ---Only one stream can be set for auto-advance at a time. Focused streams will have their view times advanced automatically.
 function C_Club.SetAutoAdvanceStreamViewMarker(clubId, streamId) end
 
 ---@param texture table
 ---@param avatarId number
 ---@param clubType ClubType
----[Documentation](https://wow.gamepedia.com/API_C_Club.SetAvatarTexture)
+---[Documentation](https://wowpedia.fandom.com/wiki/API_C_Club.SetAvatarTexture)
 function C_Club.SetAvatarTexture(texture, avatarId, clubType) end
 
 ---@param clubId string
 ---@param memberId number
 ---@param note string
----[Documentation](https://wow.gamepedia.com/API_C_Club.SetClubMemberNote)
+---[Documentation](https://wowpedia.fandom.com/wiki/API_C_Club.SetClubMemberNote)
 ---Check the canSetOwnMemberNote and canSetOtherMemberNote privileges.
 function C_Club.SetClubMemberNote(clubId, memberId, note) end
 
 ---@param clubId string
----[Documentation](https://wow.gamepedia.com/API_C_Club.SetClubPresenceSubscription)
+---[Documentation](https://wowpedia.fandom.com/wiki/API_C_Club.SetClubPresenceSubscription)
 ---You can only be subscribed to 0 or 1 clubs for presence.  Subscribing to a new club automatically unsuscribes you to existing subscription.
 function C_Club.SetClubPresenceSubscription(clubId) end
 
 ---@param clubId string
 ---@param settings ClubStreamNotificationSetting[]
----[Documentation](https://wow.gamepedia.com/API_C_Club.SetClubStreamNotificationSettings)
+---[Documentation](https://wowpedia.fandom.com/wiki/API_C_Club.SetClubStreamNotificationSettings)
 function C_Club.SetClubStreamNotificationSettings(clubId, settings) end
 
 ---@param clubId string
 ---@param isFavorite boolean
----[Documentation](https://wow.gamepedia.com/API_C_Club.SetFavorite)
+---[Documentation](https://wowpedia.fandom.com/wiki/API_C_Club.SetFavorite)
 function C_Club.SetFavorite(clubId, isFavorite) end
 
 ---@param clubId string
 ---@param enabled boolean
----[Documentation](https://wow.gamepedia.com/API_C_Club.SetSocialQueueingEnabled)
+---[Documentation](https://wowpedia.fandom.com/wiki/API_C_Club.SetSocialQueueingEnabled)
 function C_Club.SetSocialQueueingEnabled(clubId, enabled) end
 
 ---@param clubType ClubType
 ---@return boolean clubTypeIsAllowed
----[Documentation](https://wow.gamepedia.com/API_C_Club.ShouldAllowClubType)
+---[Documentation](https://wowpedia.fandom.com/wiki/API_C_Club.ShouldAllowClubType)
 function C_Club.ShouldAllowClubType(clubType) end
 
 ---@param clubId string
 ---@param streamId string
----[Documentation](https://wow.gamepedia.com/API_C_Club.UnfocusStream)
+---[Documentation](https://wowpedia.fandom.com/wiki/API_C_Club.UnfocusStream)
 function C_Club.UnfocusStream(clubId, streamId) end
 
 ---@param clubType ClubType
 ---@param text string
 ---@param clubFieldType ClubFieldType
 ---@return ValidateNameResult result
----[Documentation](https://wow.gamepedia.com/API_C_Club.ValidateText)
+---[Documentation](https://wowpedia.fandom.com/wiki/API_C_Club.ValidateText)
 function C_Club.ValidateText(clubType, text, clubFieldType) end
 
 ---@class ClubActionType

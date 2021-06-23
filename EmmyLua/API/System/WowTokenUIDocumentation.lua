@@ -1,5 +1,5 @@
 C_WowTokenUI = {}
 
 ---@param tokenGUID string
----[Documentation](https://wow.gamepedia.com/API_C_WowTokenUI.StartTokenSell)
+---[Documentation](https://wowpedia.fandom.com/wiki/API_C_WowTokenUI.StartTokenSell)
 function C_WowTokenUI.StartTokenSell(tokenGUID) end

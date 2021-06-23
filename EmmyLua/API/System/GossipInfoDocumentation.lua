@@ -1,70 +1,70 @@
 C_GossipInfo = {}
 
----[Documentation](https://wow.gamepedia.com/API_C_GossipInfo.CloseGossip)
+---[Documentation](https://wowpedia.fandom.com/wiki/API_C_GossipInfo.CloseGossip)
 function C_GossipInfo.CloseGossip() end
 
 ---@return boolean forceGossip
----[Documentation](https://wow.gamepedia.com/API_C_GossipInfo.ForceGossip)
+---[Documentation](https://wowpedia.fandom.com/wiki/API_C_GossipInfo.ForceGossip)
 function C_GossipInfo.ForceGossip() end
 
 ---@return GossipQuestUIInfo[] info
----[Documentation](https://wow.gamepedia.com/API_C_GossipInfo.GetActiveQuests)
+---[Documentation](https://wowpedia.fandom.com/wiki/API_C_GossipInfo.GetActiveQuests)
 function C_GossipInfo.GetActiveQuests() end
 
 ---@return GossipQuestUIInfo[] info
----[Documentation](https://wow.gamepedia.com/API_C_GossipInfo.GetAvailableQuests)
+---[Documentation](https://wowpedia.fandom.com/wiki/API_C_GossipInfo.GetAvailableQuests)
 function C_GossipInfo.GetAvailableQuests() end
 
 ---@return string? description
----[Documentation](https://wow.gamepedia.com/API_C_GossipInfo.GetCustomGossipDescriptionString)
+---[Documentation](https://wowpedia.fandom.com/wiki/API_C_GossipInfo.GetCustomGossipDescriptionString)
 function C_GossipInfo.GetCustomGossipDescriptionString() end
 
 ---@return number numQuests
----[Documentation](https://wow.gamepedia.com/API_C_GossipInfo.GetNumActiveQuests)
+---[Documentation](https://wowpedia.fandom.com/wiki/API_C_GossipInfo.GetNumActiveQuests)
 function C_GossipInfo.GetNumActiveQuests() end
 
 ---@return number numQuests
----[Documentation](https://wow.gamepedia.com/API_C_GossipInfo.GetNumAvailableQuests)
+---[Documentation](https://wowpedia.fandom.com/wiki/API_C_GossipInfo.GetNumAvailableQuests)
 function C_GossipInfo.GetNumAvailableQuests() end
 
 ---@return number numOptions
----[Documentation](https://wow.gamepedia.com/API_C_GossipInfo.GetNumOptions)
+---[Documentation](https://wowpedia.fandom.com/wiki/API_C_GossipInfo.GetNumOptions)
 function C_GossipInfo.GetNumOptions() end
 
 ---@return GossipOptionUIInfo[] info
----[Documentation](https://wow.gamepedia.com/API_C_GossipInfo.GetOptions)
+---[Documentation](https://wowpedia.fandom.com/wiki/API_C_GossipInfo.GetOptions)
 function C_GossipInfo.GetOptions() end
 
 ---@param uiMapID number
 ---@return number? gossipPoiID
----[Documentation](https://wow.gamepedia.com/API_C_GossipInfo.GetPoiForUiMapID)
+---[Documentation](https://wowpedia.fandom.com/wiki/API_C_GossipInfo.GetPoiForUiMapID)
 function C_GossipInfo.GetPoiForUiMapID(uiMapID) end
 
 ---@param uiMapID number
 ---@param gossipPoiID number
 ---@return GossipPoiInfo? gossipPoiInfo
----[Documentation](https://wow.gamepedia.com/API_C_GossipInfo.GetPoiInfo)
+---[Documentation](https://wowpedia.fandom.com/wiki/API_C_GossipInfo.GetPoiInfo)
 function C_GossipInfo.GetPoiInfo(uiMapID, gossipPoiID) end
 
 ---@return string gossipText
----[Documentation](https://wow.gamepedia.com/API_C_GossipInfo.GetText)
+---[Documentation](https://wowpedia.fandom.com/wiki/API_C_GossipInfo.GetText)
 function C_GossipInfo.GetText() end
 
----[Documentation](https://wow.gamepedia.com/API_C_GossipInfo.RefreshOptions)
+---[Documentation](https://wowpedia.fandom.com/wiki/API_C_GossipInfo.RefreshOptions)
 function C_GossipInfo.RefreshOptions() end
 
 ---@param index number
----[Documentation](https://wow.gamepedia.com/API_C_GossipInfo.SelectActiveQuest)
+---[Documentation](https://wowpedia.fandom.com/wiki/API_C_GossipInfo.SelectActiveQuest)
 function C_GossipInfo.SelectActiveQuest(index) end
 
 ---@param index number
----[Documentation](https://wow.gamepedia.com/API_C_GossipInfo.SelectAvailableQuest)
+---[Documentation](https://wowpedia.fandom.com/wiki/API_C_GossipInfo.SelectAvailableQuest)
 function C_GossipInfo.SelectAvailableQuest(index) end
 
 ---@param index number
 ---@param text? string
 ---@param confirmed? boolean
----[Documentation](https://wow.gamepedia.com/API_C_GossipInfo.SelectOption)
+---[Documentation](https://wowpedia.fandom.com/wiki/API_C_GossipInfo.SelectOption)
 function C_GossipInfo.SelectOption(index, text, confirmed) end
 
 ---@class GossipOptionRewardType

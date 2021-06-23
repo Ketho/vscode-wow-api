@@ -1,30 +1,30 @@
 C_AnimaDiversion = {}
 
----[Documentation](https://wow.gamepedia.com/API_C_AnimaDiversion.CloseUI)
+---[Documentation](https://wowpedia.fandom.com/wiki/API_C_AnimaDiversion.CloseUI)
 function C_AnimaDiversion.CloseUI() end
 
 ---@return AnimaDiversionNodeInfo[] animaNodes
----[Documentation](https://wow.gamepedia.com/API_C_AnimaDiversion.GetAnimaDiversionNodes)
+---[Documentation](https://wowpedia.fandom.com/wiki/API_C_AnimaDiversion.GetAnimaDiversionNodes)
 function C_AnimaDiversion.GetAnimaDiversionNodes() end
 
 ---@return Vector2DMixin? normalizedPosition
----[Documentation](https://wow.gamepedia.com/API_C_AnimaDiversion.GetOriginPosition)
+---[Documentation](https://wowpedia.fandom.com/wiki/API_C_AnimaDiversion.GetOriginPosition)
 function C_AnimaDiversion.GetOriginPosition() end
 
 ---@return number progress
----[Documentation](https://wow.gamepedia.com/API_C_AnimaDiversion.GetReinforceProgress)
+---[Documentation](https://wowpedia.fandom.com/wiki/API_C_AnimaDiversion.GetReinforceProgress)
 function C_AnimaDiversion.GetReinforceProgress() end
 
 ---@return string textureKit
----[Documentation](https://wow.gamepedia.com/API_C_AnimaDiversion.GetTextureKit)
+---[Documentation](https://wowpedia.fandom.com/wiki/API_C_AnimaDiversion.GetTextureKit)
 function C_AnimaDiversion.GetTextureKit() end
 
----[Documentation](https://wow.gamepedia.com/API_C_AnimaDiversion.OpenAnimaDiversionUI)
+---[Documentation](https://wowpedia.fandom.com/wiki/API_C_AnimaDiversion.OpenAnimaDiversionUI)
 function C_AnimaDiversion.OpenAnimaDiversionUI() end
 
 ---@param talentID number
 ---@param temporary boolean
----[Documentation](https://wow.gamepedia.com/API_C_AnimaDiversion.SelectAnimaNode)
+---[Documentation](https://wowpedia.fandom.com/wiki/API_C_AnimaDiversion.SelectAnimaNode)
 function C_AnimaDiversion.SelectAnimaNode(talentID, temporary) end
 
 ---@class AnimaDiversionNodeState

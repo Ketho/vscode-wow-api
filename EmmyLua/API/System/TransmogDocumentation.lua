@@ -1,30 +1,30 @@
 C_Transmog = {}
 
----[Documentation](https://wow.gamepedia.com/API_C_Transmog.ClearAllPending)
+---[Documentation](https://wowpedia.fandom.com/wiki/API_C_Transmog.ClearAllPending)
 function C_Transmog.ClearAllPending() end
 
 ---@param transmogLocation TransmogLocationMixin
----[Documentation](https://wow.gamepedia.com/API_C_Transmog.ClearPending)
+---[Documentation](https://wowpedia.fandom.com/wiki/API_C_Transmog.ClearPending)
 function C_Transmog.ClearPending(transmogLocation) end
 
 ---@param transmogID number
 ---@return number categoryID
----[Documentation](https://wow.gamepedia.com/API_C_Transmog.GetBaseCategory)
+---[Documentation](https://wowpedia.fandom.com/wiki/API_C_Transmog.GetBaseCategory)
 function C_Transmog.GetBaseCategory(transmogID) end
 
 ---@param itemModifiedAppearanceID number
 ---@return number? creatureDisplayID
----[Documentation](https://wow.gamepedia.com/API_C_Transmog.GetCreatureDisplayIDForSource)
+---[Documentation](https://wowpedia.fandom.com/wiki/API_C_Transmog.GetCreatureDisplayIDForSource)
 function C_Transmog.GetCreatureDisplayIDForSource(itemModifiedAppearanceID) end
 
 ---@param itemModifiedAppearanceID number
 ---@return number? itemID
----[Documentation](https://wow.gamepedia.com/API_C_Transmog.GetItemIDForSource)
+---[Documentation](https://wowpedia.fandom.com/wiki/API_C_Transmog.GetItemIDForSource)
 function C_Transmog.GetItemIDForSource(itemModifiedAppearanceID) end
 
 ---@param inventoryType number
 ---@return number slot
----[Documentation](https://wow.gamepedia.com/API_C_Transmog.GetSlotForInventoryType)
+---[Documentation](https://wowpedia.fandom.com/wiki/API_C_Transmog.GetSlotForInventoryType)
 function C_Transmog.GetSlotForInventoryType(inventoryType) end
 
 ---@param transmogLocation TransmogLocationMixin
@@ -36,13 +36,13 @@ function C_Transmog.GetSlotForInventoryType(inventoryType) end
 ---@return boolean hasUndo
 ---@return boolean isHideVisual
 ---@return number? texture
----[Documentation](https://wow.gamepedia.com/API_C_Transmog.GetSlotInfo)
+---[Documentation](https://wowpedia.fandom.com/wiki/API_C_Transmog.GetSlotInfo)
 function C_Transmog.GetSlotInfo(transmogLocation) end
 
 ---@param transmogLocation TransmogLocationMixin
 ---@return number errorCode
 ---@return string errorString
----[Documentation](https://wow.gamepedia.com/API_C_Transmog.GetSlotUseError)
+---[Documentation](https://wowpedia.fandom.com/wiki/API_C_Transmog.GetSlotUseError)
 function C_Transmog.GetSlotUseError(transmogLocation) end
 
 ---@param transmogLocation TransmogLocationMixin
@@ -57,13 +57,13 @@ function C_Transmog.GetSlotUseError(transmogLocation) end
 ---@return boolean hasUndo
 ---@return boolean isHideVisual
 ---@return number itemSubclass
----[Documentation](https://wow.gamepedia.com/API_C_Transmog.GetSlotVisualInfo)
+---[Documentation](https://wowpedia.fandom.com/wiki/API_C_Transmog.GetSlotVisualInfo)
 function C_Transmog.GetSlotVisualInfo(transmogLocation) end
 
 ---@param transmogLocation TransmogLocationMixin
 ---@param transmogID number
 ---@param categoryID? number
----[Documentation](https://wow.gamepedia.com/API_C_Transmog.SetPending)
+---[Documentation](https://wowpedia.fandom.com/wiki/API_C_Transmog.SetPending)
 function C_Transmog.SetPending(transmogLocation, transmogID, categoryID) end
 
 ---@class TransmogCollectionType

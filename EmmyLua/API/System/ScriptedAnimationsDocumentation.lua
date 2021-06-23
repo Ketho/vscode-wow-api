@@ -1,7 +1,7 @@
 C_ScriptedAnimations = {}
 
 ---@return ScriptedAnimationEffect[] scriptedAnimationEffects
----[Documentation](https://wow.gamepedia.com/API_C_ScriptedAnimations.GetAllScriptedAnimationEffects)
+---[Documentation](https://wowpedia.fandom.com/wiki/API_C_ScriptedAnimations.GetAllScriptedAnimationEffects)
 function C_ScriptedAnimations.GetAllScriptedAnimationEffects() end
 
 ---@class ScriptedAnimationBehavior

@@ -1,75 +1,75 @@
 C_GuildInfo = {}
 
 ---@return boolean canEditOfficerNote
----[Documentation](https://wow.gamepedia.com/API_C_GuildInfo.CanEditOfficerNote)
+---[Documentation](https://wowpedia.fandom.com/wiki/API_C_GuildInfo.CanEditOfficerNote)
 function C_GuildInfo.CanEditOfficerNote() end
 
 ---@return boolean canSpeakInGuildChat
----[Documentation](https://wow.gamepedia.com/API_C_GuildInfo.CanSpeakInGuildChat)
+---[Documentation](https://wowpedia.fandom.com/wiki/API_C_GuildInfo.CanSpeakInGuildChat)
 function C_GuildInfo.CanSpeakInGuildChat() end
 
 ---@return boolean canViewOfficerNote
----[Documentation](https://wow.gamepedia.com/API_C_GuildInfo.CanViewOfficerNote)
+---[Documentation](https://wowpedia.fandom.com/wiki/API_C_GuildInfo.CanViewOfficerNote)
 function C_GuildInfo.CanViewOfficerNote() end
 
 ---@param index number
 ---@return GuildNewsInfo newsInfo
----[Documentation](https://wow.gamepedia.com/API_C_GuildInfo.GetGuildNewsInfo)
+---[Documentation](https://wowpedia.fandom.com/wiki/API_C_GuildInfo.GetGuildNewsInfo)
 function C_GuildInfo.GetGuildNewsInfo(index) end
 
 ---@param guid string
 ---@return number rankOrder
----[Documentation](https://wow.gamepedia.com/API_C_GuildInfo.GetGuildRankOrder)
+---[Documentation](https://wowpedia.fandom.com/wiki/API_C_GuildInfo.GetGuildRankOrder)
 function C_GuildInfo.GetGuildRankOrder(guid) end
 
 ---@param unit? string
 ---@return GuildTabardInfo? tabardInfo
----[Documentation](https://wow.gamepedia.com/API_C_GuildInfo.GetGuildTabardInfo)
+---[Documentation](https://wowpedia.fandom.com/wiki/API_C_GuildInfo.GetGuildTabardInfo)
 function C_GuildInfo.GetGuildTabardInfo(unit) end
 
 ---@param rankOrder number
 ---@return boolean[] permissions
----[Documentation](https://wow.gamepedia.com/API_C_GuildInfo.GuildControlGetRankFlags)
+---[Documentation](https://wowpedia.fandom.com/wiki/API_C_GuildInfo.GuildControlGetRankFlags)
 function C_GuildInfo.GuildControlGetRankFlags(rankOrder) end
 
----[Documentation](https://wow.gamepedia.com/API_C_GuildInfo.GuildRoster)
+---[Documentation](https://wowpedia.fandom.com/wiki/API_C_GuildInfo.GuildRoster)
 function C_GuildInfo.GuildRoster() end
 
 ---@return boolean isOfficer
----[Documentation](https://wow.gamepedia.com/API_C_GuildInfo.IsGuildOfficer)
+---[Documentation](https://wowpedia.fandom.com/wiki/API_C_GuildInfo.IsGuildOfficer)
 function C_GuildInfo.IsGuildOfficer() end
 
 ---@param guid string
 ---@param rankOrder number
 ---@return boolean isGuildRankAssignmentAllowed
----[Documentation](https://wow.gamepedia.com/API_C_GuildInfo.IsGuildRankAssignmentAllowed)
+---[Documentation](https://wowpedia.fandom.com/wiki/API_C_GuildInfo.IsGuildRankAssignmentAllowed)
 function C_GuildInfo.IsGuildRankAssignmentAllowed(guid, rankOrder) end
 
 ---@param guildMemberGUID string
 ---@param skillLineID number
----[Documentation](https://wow.gamepedia.com/API_C_GuildInfo.QueryGuildMemberRecipes)
+---[Documentation](https://wowpedia.fandom.com/wiki/API_C_GuildInfo.QueryGuildMemberRecipes)
 function C_GuildInfo.QueryGuildMemberRecipes(guildMemberGUID, skillLineID) end
 
 ---@param skillLineID number
 ---@param recipeSpellID number
 ---@param recipeLevel? number
 ---@return number updatedRecipeSpellID
----[Documentation](https://wow.gamepedia.com/API_C_GuildInfo.QueryGuildMembersForRecipe)
+---[Documentation](https://wowpedia.fandom.com/wiki/API_C_GuildInfo.QueryGuildMembersForRecipe)
 function C_GuildInfo.QueryGuildMembersForRecipe(skillLineID, recipeSpellID, recipeLevel) end
 
 ---@param guid string
----[Documentation](https://wow.gamepedia.com/API_C_GuildInfo.RemoveFromGuild)
+---[Documentation](https://wowpedia.fandom.com/wiki/API_C_GuildInfo.RemoveFromGuild)
 function C_GuildInfo.RemoveFromGuild(guid) end
 
 ---@param guid string
 ---@param rankOrder number
----[Documentation](https://wow.gamepedia.com/API_C_GuildInfo.SetGuildRankOrder)
+---[Documentation](https://wowpedia.fandom.com/wiki/API_C_GuildInfo.SetGuildRankOrder)
 function C_GuildInfo.SetGuildRankOrder(guid, rankOrder) end
 
 ---@param guid string
 ---@param note string
 ---@param isPublic boolean
----[Documentation](https://wow.gamepedia.com/API_C_GuildInfo.SetNote)
+---[Documentation](https://wowpedia.fandom.com/wiki/API_C_GuildInfo.SetNote)
 function C_GuildInfo.SetNote(guid, note, isPublic) end
 
 ---@class GuildNewsInfo

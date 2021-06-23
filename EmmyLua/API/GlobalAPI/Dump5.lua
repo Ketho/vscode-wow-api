@@ -5,7 +5,7 @@ function InCombatLockdown() end
 ---@return number numGuildPresent
 ---@return number numGuildRequired
 ---@return number xpMultiplier
----[Documentation](https://wow.gamepedia.com/API_InGuildParty)
+---[Documentation](https://wowpedia.fandom.com/wiki/API_InGuildParty)
 function InGuildParty() end
 
 ---[Documentation](https://wow.gamepedia.com/API_InRepairMode)
@@ -14,11 +14,11 @@ function InRepairMode() end
 ---[Documentation](https://wow.gamepedia.com/API_InboxItemCanDelete)
 function InboxItemCanDelete(index) end
 
----[Documentation](https://wow.gamepedia.com/API_InitiateRolePoll)
+---[Documentation](https://wowpedia.fandom.com/wiki/API_InitiateRolePoll)
 function InitiateRolePoll() end
 
 ---@param unit string
----[Documentation](https://wow.gamepedia.com/API_InitiateTrade)
+---[Documentation](https://wowpedia.fandom.com/wiki/API_InitiateTrade)
 function InitiateTrade(unit) end
 
 ---[Documentation](https://wow.gamepedia.com/API_InteractUnit)
@@ -32,7 +32,7 @@ function IsAccountSecured() end
 
 ---@param achievementID number
 ---@return boolean eligible
----[Documentation](https://wow.gamepedia.com/API_IsAchievementEligible)
+---[Documentation](https://wowpedia.fandom.com/wiki/API_IsAchievementEligible)
 function IsAchievementEligible(achievementID) end
 
 ---[Documentation](https://wow.gamepedia.com/API_IsActionInRange)
@@ -40,7 +40,7 @@ function IsActionInRange(slot) end
 
 ---@return boolean isArena
 ---@return boolean isRegistered
----[Documentation](https://wow.gamepedia.com/API_IsActiveBattlefieldArena)
+---[Documentation](https://wowpedia.fandom.com/wiki/API_IsActiveBattlefieldArena)
 function IsActiveBattlefieldArena() end
 
 ---[Documentation](https://wow.gamepedia.com/API_IsActiveQuestLegendary)
@@ -59,7 +59,7 @@ function IsAddOnLoaded() end
 function IsAddonVersionCheckEnabled() end
 
 ---@return boolean allowedToTeleport
----[Documentation](https://wow.gamepedia.com/API_IsAllowedToUserTeleport)
+---[Documentation](https://wowpedia.fandom.com/wiki/API_IsAllowedToUserTeleport)
 function IsAllowedToUserTeleport() end
 
 ---[Documentation](https://wow.gamepedia.com/API_IsAltKeyDown)
@@ -113,7 +113,7 @@ function IsBarberShopStyleValid() end
 ---@param bag number
 ---@param slot number
 ---@return boolean isPayItem
----[Documentation](https://wow.gamepedia.com/API_IsBattlePayItem)
+---[Documentation](https://wowpedia.fandom.com/wiki/API_IsBattlePayItem)
 function IsBattlePayItem(bag, slot) end
 
 ---[Documentation](https://wow.gamepedia.com/API_IsBindingForGamePad)
@@ -178,7 +178,7 @@ function IsCurrentQuestFailed() end
 
 ---@param spellID boolean
 ---@return boolean isCurrent
----[Documentation](https://wow.gamepedia.com/API_IsCurrentSpell)
+---[Documentation](https://wowpedia.fandom.com/wiki/API_IsCurrentSpell)
 function IsCurrentSpell(spellID) end
 
 ---[Documentation](https://wow.gamepedia.com/API_IsDebugBuild)
@@ -200,7 +200,7 @@ function IsDisplayChannelOwner() end
 function IsDressableItem(item) end
 
 ---@return boolean isDualWield
----[Documentation](https://wow.gamepedia.com/API_IsDualWielding)
+---[Documentation](https://wowpedia.fandom.com/wiki/API_IsDualWielding)
 function IsDualWielding() end
 
 ---[Documentation](https://wow.gamepedia.com/API_IsEncounterInProgress)
@@ -217,7 +217,7 @@ function IsEquippableItem(item) end
 
 ---@param slotID number
 ---@return boolean isEquipped
----[Documentation](https://wow.gamepedia.com/API_IsEquippedAction)
+---[Documentation](https://wowpedia.fandom.com/wiki/API_IsEquippedAction)
 function IsEquippedAction(slotID) end
 
 ---[Documentation](https://wow.gamepedia.com/API_IsEquippedItem)
@@ -225,7 +225,7 @@ function IsEquippedItem(item) end
 
 ---@param type string
 ---@return boolean isEquipped
----[Documentation](https://wow.gamepedia.com/API_IsEquippedItemType)
+---[Documentation](https://wowpedia.fandom.com/wiki/API_IsEquippedItemType)
 function IsEquippedItemType(type) end
 
 ---[Documentation](https://wow.gamepedia.com/API_IsEuropeanNumbers)
@@ -262,7 +262,7 @@ function IsGamePadCursorControlEnabled() end
 function IsGamePadFreelookEnabled() end
 
 ---@return boolean isGuildLeader
----[Documentation](https://wow.gamepedia.com/API_IsGuildLeader)
+---[Documentation](https://wowpedia.fandom.com/wiki/API_IsGuildLeader)
 function IsGuildLeader() end
 
 ---[Documentation](https://wow.gamepedia.com/API_IsGuildMember)
@@ -293,12 +293,12 @@ function IsInArenaTeam() end
 function IsInAuthenticatedRank() end
 
 ---@return boolean inCinematicScene
----[Documentation](https://wow.gamepedia.com/API_IsInCinematicScene)
+---[Documentation](https://wowpedia.fandom.com/wiki/API_IsInCinematicScene)
 function IsInCinematicScene() end
 
 ---@param groupType number
 ---@return boolean inGroup
----[Documentation](https://wow.gamepedia.com/API_IsInGroup)
+---[Documentation](https://wowpedia.fandom.com/wiki/API_IsInGroup)
 function IsInGroup(groupType) end
 
 ---[Documentation](https://wow.gamepedia.com/API_IsInGuild)
@@ -318,7 +318,7 @@ function IsInLFGDungeon() end
 
 ---@param groupType number
 ---@return boolean isInRaid
----[Documentation](https://wow.gamepedia.com/API_IsInRaid)
+---[Documentation](https://wowpedia.fandom.com/wiki/API_IsInRaid)
 function IsInRaid(groupType) end
 
 ---[Documentation](https://wow.gamepedia.com/API_IsInScenarioGroup)
@@ -352,7 +352,7 @@ function IsJailersTowerLayerTimeLocked() end
 function IsKeyDown(keyOrMouseName, excludeCurrentBindingState) end
 
 ---@return boolean isComplete
----[Documentation](https://wow.gamepedia.com/API_IsLFGComplete)
+---[Documentation](https://wowpedia.fandom.com/wiki/API_IsLFGComplete)
 function IsLFGComplete() end
 
 ---[Documentation](https://wow.gamepedia.com/API_IsLFGDungeonJoinable)
@@ -390,7 +390,7 @@ function IsMetaKeyDown() end
 
 ---@param action string
 ---@return boolean isHeld
----[Documentation](https://wow.gamepedia.com/API_IsModifiedClick)
+---[Documentation](https://wowpedia.fandom.com/wiki/API_IsModifiedClick)
 function IsModifiedClick(action) end
 
 ---[Documentation](https://wow.gamepedia.com/API_IsModifierKeyDown)
@@ -402,7 +402,7 @@ function IsMounted() end
 ---[Documentation](https://wow.gamepedia.com/API_IsMouseButtonDown)
 function IsMouseButtonDown(button) end
 
----[Documentation](https://wow.gamepedia.com/API_IsMouselooking)
+---[Documentation](https://wowpedia.fandom.com/wiki/API_IsMouselooking)
 function IsMouselooking() end
 
 ---[Documentation](https://wow.gamepedia.com/API_IsMovieLocal)
@@ -410,11 +410,11 @@ function IsMovieLocal(movieId) end
 
 ---@param movieID number
 ---@return boolean playable
----[Documentation](https://wow.gamepedia.com/API_IsMoviePlayable)
+---[Documentation](https://wowpedia.fandom.com/wiki/API_IsMoviePlayable)
 function IsMoviePlayable(movieID) end
 
 ---@return boolean isOnGlueScreen
----[Documentation](https://wow.gamepedia.com/API_IsOnGlueScreen)
+---[Documentation](https://wowpedia.fandom.com/wiki/API_IsOnGlueScreen)
 function IsOnGlueScreen() end
 
 ---[Documentation](https://wow.gamepedia.com/API_IsOnGroundFloorInJailersTower)
@@ -463,12 +463,12 @@ function IsPlayerInWorld() end
 function IsPlayerMoving() end
 
 ---@return boolean isNeutral
----[Documentation](https://wow.gamepedia.com/API_IsPlayerNeutral)
+---[Documentation](https://wowpedia.fandom.com/wiki/API_IsPlayerNeutral)
 function IsPlayerNeutral() end
 
 ---@param spellID number
 ---@return boolean isKnown
----[Documentation](https://wow.gamepedia.com/API_IsPlayerSpell)
+---[Documentation](https://wowpedia.fandom.com/wiki/API_IsPlayerSpell)
 function IsPlayerSpell(spellID) end
 
 ---[Documentation](https://wow.gamepedia.com/API_IsPossessBarVisible)
@@ -481,7 +481,7 @@ function IsPublicBuild() end
 function IsPvpTalentSpell() end
 
 ---@return boolean isQuestCompletable
----[Documentation](https://wow.gamepedia.com/API_IsQuestCompletable)
+---[Documentation](https://wowpedia.fandom.com/wiki/API_IsQuestCompletable)
 function IsQuestCompletable() end
 
 ---[Documentation](https://wow.gamepedia.com/API_IsQuestIDValidSpellTarget)
@@ -509,18 +509,18 @@ function IsReagentBankUnlocked() end
 ---@param includeBitfield number
 ---@param excludeBitfield number
 ---@return boolean isRecognized
----[Documentation](https://wow.gamepedia.com/API_IsRecognizedName)
+---[Documentation](https://wowpedia.fandom.com/wiki/API_IsRecognizedName)
 function IsRecognizedName(text, includeBitfield, excludeBitfield) end
 
 ---@return boolean isRafLinked
----[Documentation](https://wow.gamepedia.com/API_IsRecruitAFriendLinked)
+---[Documentation](https://wowpedia.fandom.com/wiki/API_IsRecruitAFriendLinked)
 function IsRecruitAFriendLinked() end
 
 ---[Documentation](https://wow.gamepedia.com/API_IsReplacingUnit)
 function IsReplacingUnit() end
 
 ---@return boolean resting
----[Documentation](https://wow.gamepedia.com/API_IsResting)
+---[Documentation](https://wowpedia.fandom.com/wiki/API_IsResting)
 function IsResting() end
 
 ---[Documentation](https://wow.gamepedia.com/API_IsRestrictedAccount)
@@ -556,7 +556,7 @@ function IsSpellInRange(spellName, unit) end
 ---@param spellID number
 ---@param isPetSpell boolean
 ---@return boolean isKnown
----[Documentation](https://wow.gamepedia.com/API_IsSpellKnown)
+---[Documentation](https://wowpedia.fandom.com/wiki/API_IsSpellKnown)
 function IsSpellKnown(spellID, isPetSpell) end
 
 ---[Documentation](https://wow.gamepedia.com/API_IsSpellKnownOrOverridesKnown)
@@ -564,7 +564,7 @@ function IsSpellKnownOrOverridesKnown(spellID, isPet) end
 
 ---@param spellID number
 ---@return boolean isTrue
----[Documentation](https://wow.gamepedia.com/API_IsSpellOverlayed)
+---[Documentation](https://wowpedia.fandom.com/wiki/API_IsSpellOverlayed)
 function IsSpellOverlayed(spellID) end
 
 ---[Documentation](https://wow.gamepedia.com/API_IsSpellValidForPendingGlyph)
@@ -577,7 +577,7 @@ function IsSplashFramePrimaryFeatureUnlocked() end
 function IsStackableAction(slot) end
 
 ---@return boolean stealthed
----[Documentation](https://wow.gamepedia.com/API_IsStealthed)
+---[Documentation](https://wowpedia.fandom.com/wiki/API_IsStealthed)
 function IsStealthed() end
 
 ---[Documentation](https://wow.gamepedia.com/API_IsStoryQuest)
@@ -603,14 +603,14 @@ function IsThreatWarningEnabled() end
 
 ---@param titleId number
 ---@return boolean isKnown
----[Documentation](https://wow.gamepedia.com/API_IsTitleKnown)
+---[Documentation](https://wowpedia.fandom.com/wiki/API_IsTitleKnown)
 function IsTitleKnown(titleId) end
 
 ---[Documentation](https://wow.gamepedia.com/API_IsTrackedAchievement)
 function IsTrackedAchievement(achievementID) end
 
 ---@return boolean isTracking
----[Documentation](https://wow.gamepedia.com/API_IsTrackingBattlePets)
+---[Documentation](https://wowpedia.fandom.com/wiki/API_IsTrackingBattlePets)
 function IsTrackingBattlePets() end
 
 ---[Documentation](https://wow.gamepedia.com/API_IsTrackingHiddenQuests)
@@ -625,7 +625,7 @@ function IsTutorialFlagged(tutorial) end
 ---@param slot number
 ---@return boolean isUsable
 ---@return boolean notEnoughMana
----[Documentation](https://wow.gamepedia.com/API_IsUsableAction)
+---[Documentation](https://wowpedia.fandom.com/wiki/API_IsUsableAction)
 function IsUsableAction(slot) end
 
 ---[Documentation](https://wow.gamepedia.com/API_IsUsableItem)
@@ -650,10 +650,10 @@ function IsVehicleAimPowerAdjustable() end
 function IsVoidStorageReady() end
 
 ---@return boolean isWargame
----[Documentation](https://wow.gamepedia.com/API_IsWargame)
+---[Documentation](https://wowpedia.fandom.com/wiki/API_IsWargame)
 function IsWargame() end
 
----[Documentation](https://wow.gamepedia.com/API_IsWindowsClient)
+---[Documentation](https://wowpedia.fandom.com/wiki/API_IsWindowsClient)
 function IsWindowsClient() end
 
 ---[Documentation](https://wow.gamepedia.com/API_IsXPUserDisabled)
@@ -689,10 +689,10 @@ function ItemTextHasNextPage() end
 ---[Documentation](https://wow.gamepedia.com/API_ItemTextIsFullPage)
 function ItemTextIsFullPage() end
 
----[Documentation](https://wow.gamepedia.com/API_ItemTextNextPage)
+---[Documentation](https://wowpedia.fandom.com/wiki/API_ItemTextNextPage)
 function ItemTextNextPage() end
 
----[Documentation](https://wow.gamepedia.com/API_ItemTextPrevPage)
+---[Documentation](https://wowpedia.fandom.com/wiki/API_ItemTextPrevPage)
 function ItemTextPrevPage() end
 
 ---[Documentation](https://wow.gamepedia.com/API_JoinArena)
@@ -701,7 +701,7 @@ function JoinArena() end
 ---@param index number
 ---@param asGroup boolean
 ---@param isRated boolean
----[Documentation](https://wow.gamepedia.com/API_JoinBattlefield)
+---[Documentation](https://wowpedia.fandom.com/wiki/API_JoinBattlefield)
 function JoinBattlefield(index, asGroup, isRated) end
 
 ---@param channelName string
@@ -710,7 +710,7 @@ function JoinBattlefield(index, asGroup, isRated) end
 ---@param hasVoice boolean
 ---@return number type
 ---@return string name
----[Documentation](https://wow.gamepedia.com/API_JoinChannelByName)
+---[Documentation](https://wowpedia.fandom.com/wiki/API_JoinChannelByName)
 function JoinChannelByName(channelName, password, frameID, hasVoice) end
 
 ---[Documentation](https://wow.gamepedia.com/API_JoinLFG)
@@ -727,13 +727,13 @@ function JoinSingleLFG(category, lfgID) end
 
 ---@param arenaID number
 ---@param joinAsGroup boolean
----[Documentation](https://wow.gamepedia.com/API_JoinSkirmish)
+---[Documentation](https://wowpedia.fandom.com/wiki/API_JoinSkirmish)
 function JoinSkirmish(arenaID, joinAsGroup) end
 
 ---[Documentation](https://wow.gamepedia.com/API_JoinTemporaryChannel)
 function JoinTemporaryChannel(channelName, password, frameID, hasVoice) end
 
----[Documentation](https://wow.gamepedia.com/API_JumpOrAscendStart)
+---[Documentation](https://wowpedia.fandom.com/wiki/API_JumpOrAscendStart)
 function JumpOrAscendStart() end
 
 ---[Documentation](https://wow.gamepedia.com/API_KBArticle_BeginLoading)
@@ -743,7 +743,7 @@ function KBArticle_BeginLoading(articleId, searchType) end
 function KBArticle_GetData() end
 
 ---@return boolean loaded
----[Documentation](https://wow.gamepedia.com/API_KBArticle_IsLoaded)
+---[Documentation](https://wowpedia.fandom.com/wiki/API_KBArticle_IsLoaded)
 function KBArticle_IsLoaded() end
 
 ---[Documentation](https://wow.gamepedia.com/API_KBQuery_BeginLoading)
@@ -798,14 +798,14 @@ function KBSetup_IsLoaded() end
 function KBSystem_GetMOTD() end
 
 ---@return string notice
----[Documentation](https://wow.gamepedia.com/API_KBSystem_GetServerNotice)
+---[Documentation](https://wowpedia.fandom.com/wiki/API_KBSystem_GetServerNotice)
 function KBSystem_GetServerNotice() end
 
 ---[Documentation](https://wow.gamepedia.com/API_KBSystem_GetServerStatus)
 function KBSystem_GetServerStatus() end
 
 ---@param toSafety boolean
----[Documentation](https://wow.gamepedia.com/API_LFGTeleport)
+---[Documentation](https://wowpedia.fandom.com/wiki/API_LFGTeleport)
 function LFGTeleport(toSafety) end
 
 ---[Documentation](https://wow.gamepedia.com/API_LearnPvpTalent)
@@ -827,7 +827,7 @@ function LeaveBattlefield() end
 function LeaveChannelByLocalID(localID) end
 
 ---@param channelName string
----[Documentation](https://wow.gamepedia.com/API_LeaveChannelByName)
+---[Documentation](https://wowpedia.fandom.com/wiki/API_LeaveChannelByName)
 function LeaveChannelByName(channelName) end
 
 ---[Documentation](https://wow.gamepedia.com/API_LeaveLFG)
@@ -839,14 +839,14 @@ function LeaveSingleLFG(category, lfgID) end
 ---[Documentation](https://wow.gamepedia.com/API_ListChannelByName)
 function ListChannelByName(channelMatch) end
 
----[Documentation](https://wow.gamepedia.com/API_ListChannels)
+---[Documentation](https://wowpedia.fandom.com/wiki/API_ListChannels)
 function ListChannels() end
 
 ---[Documentation](https://wow.gamepedia.com/API_LoadAddOn)
 function LoadAddOn() end
 
 ---@param bindingSet number
----[Documentation](https://wow.gamepedia.com/API_LoadBindings)
+---[Documentation](https://wowpedia.fandom.com/wiki/API_LoadBindings)
 function LoadBindings(bindingSet) end
 
 ---[Documentation](https://wow.gamepedia.com/API_LoadURLIndex)
@@ -858,7 +858,7 @@ function LoggingChat(newState) end
 ---[Documentation](https://wow.gamepedia.com/API_LoggingCombat)
 function LoggingCombat(newState) end
 
----[Documentation](https://wow.gamepedia.com/API_Logout)
+---[Documentation](https://wowpedia.fandom.com/wiki/API_Logout)
 function Logout() end
 
 ---[Documentation](https://wow.gamepedia.com/API_LootMoneyNotify)
@@ -869,16 +869,16 @@ function LootSlot(slot) end
 
 ---@param lootSlot number
 ---@return boolean isLootItem
----[Documentation](https://wow.gamepedia.com/API_LootSlotHasItem)
+---[Documentation](https://wowpedia.fandom.com/wiki/API_LootSlotHasItem)
 function LootSlotHasItem(lootSlot) end
 
 ---[Documentation](https://wow.gamepedia.com/API_MouseOverrideCinematicDisable)
 function MouseOverrideCinematicDisable() end
 
----[Documentation](https://wow.gamepedia.com/API_MouselookStart)
+---[Documentation](https://wowpedia.fandom.com/wiki/API_MouselookStart)
 function MouselookStart() end
 
----[Documentation](https://wow.gamepedia.com/API_MouselookStop)
+---[Documentation](https://wowpedia.fandom.com/wiki/API_MouselookStop)
 function MouselookStop() end
 
 ---[Documentation](https://wow.gamepedia.com/API_MoveAndSteerStart)
@@ -888,59 +888,59 @@ function MoveAndSteerStart() end
 function MoveAndSteerStop() end
 
 ---@param startTime number
----[Documentation](https://wow.gamepedia.com/API_MoveBackwardStart)
+---[Documentation](https://wowpedia.fandom.com/wiki/API_MoveBackwardStart)
 function MoveBackwardStart(startTime) end
 
 ---[Documentation](https://wow.gamepedia.com/API_MoveBackwardStop)
 function MoveBackwardStop() end
 
 ---@param startTime number
----[Documentation](https://wow.gamepedia.com/API_MoveForwardStart)
+---[Documentation](https://wowpedia.fandom.com/wiki/API_MoveForwardStart)
 function MoveForwardStart(startTime) end
 
 ---[Documentation](https://wow.gamepedia.com/API_MoveForwardStop)
 function MoveForwardStop() end
 
 ---@param speed number
----[Documentation](https://wow.gamepedia.com/API_MoveViewDownStart)
+---[Documentation](https://wowpedia.fandom.com/wiki/API_MoveViewDownStart)
 function MoveViewDownStart(speed) end
 
----[Documentation](https://wow.gamepedia.com/API_MoveViewDownStop)
+---[Documentation](https://wowpedia.fandom.com/wiki/API_MoveViewDownStop)
 function MoveViewDownStop() end
 
 ---@param speed number
----[Documentation](https://wow.gamepedia.com/API_MoveViewInStart)
+---[Documentation](https://wowpedia.fandom.com/wiki/API_MoveViewInStart)
 function MoveViewInStart(speed) end
 
----[Documentation](https://wow.gamepedia.com/API_MoveViewInStop)
+---[Documentation](https://wowpedia.fandom.com/wiki/API_MoveViewInStop)
 function MoveViewInStop() end
 
 ---@param speed number
----[Documentation](https://wow.gamepedia.com/API_MoveViewLeftStart)
+---[Documentation](https://wowpedia.fandom.com/wiki/API_MoveViewLeftStart)
 function MoveViewLeftStart(speed) end
 
----[Documentation](https://wow.gamepedia.com/API_MoveViewLeftStop)
+---[Documentation](https://wowpedia.fandom.com/wiki/API_MoveViewLeftStop)
 function MoveViewLeftStop() end
 
 ---@param speed number
----[Documentation](https://wow.gamepedia.com/API_MoveViewOutStart)
+---[Documentation](https://wowpedia.fandom.com/wiki/API_MoveViewOutStart)
 function MoveViewOutStart(speed) end
 
----[Documentation](https://wow.gamepedia.com/API_MoveViewOutStop)
+---[Documentation](https://wowpedia.fandom.com/wiki/API_MoveViewOutStop)
 function MoveViewOutStop() end
 
 ---@param speed number
----[Documentation](https://wow.gamepedia.com/API_MoveViewRightStart)
+---[Documentation](https://wowpedia.fandom.com/wiki/API_MoveViewRightStart)
 function MoveViewRightStart(speed) end
 
----[Documentation](https://wow.gamepedia.com/API_MoveViewRightStop)
+---[Documentation](https://wowpedia.fandom.com/wiki/API_MoveViewRightStop)
 function MoveViewRightStop() end
 
 ---@param speed number
----[Documentation](https://wow.gamepedia.com/API_MoveViewUpStart)
+---[Documentation](https://wowpedia.fandom.com/wiki/API_MoveViewUpStart)
 function MoveViewUpStart(speed) end
 
----[Documentation](https://wow.gamepedia.com/API_MoveViewUpStop)
+---[Documentation](https://wowpedia.fandom.com/wiki/API_MoveViewUpStop)
 function MoveViewUpStop() end
 
 ---[Documentation](https://wow.gamepedia.com/API_MultiSampleAntiAliasingSupported)
@@ -950,7 +950,7 @@ function MultiSampleAntiAliasingSupported() end
 function MuteSoundFile() end
 
 ---@param factionIndex number
----[Documentation](https://wow.gamepedia.com/API_NeutralPlayerSelectFaction)
+---[Documentation](https://wowpedia.fandom.com/wiki/API_NeutralPlayerSelectFaction)
 function NeutralPlayerSelectFaction(factionIndex) end
 
 ---[Documentation](https://wow.gamepedia.com/API_NextView)
@@ -959,18 +959,18 @@ function NextView() end
 ---[Documentation](https://wow.gamepedia.com/API_NoPlayTime)
 function NoPlayTime() end
 
----[Documentation](https://wow.gamepedia.com/API_NotWhileDeadError)
+---[Documentation](https://wowpedia.fandom.com/wiki/API_NotWhileDeadError)
 function NotWhileDeadError() end
 
 ---@param unit string
----[Documentation](https://wow.gamepedia.com/API_NotifyInspect)
+---[Documentation](https://wowpedia.fandom.com/wiki/API_NotifyInspect)
 function NotifyInspect(unit) end
 
 ---@return number numNodes
----[Documentation](https://wow.gamepedia.com/API_NumTaxiNodes)
+---[Documentation](https://wowpedia.fandom.com/wiki/API_NumTaxiNodes)
 function NumTaxiNodes() end
 
----[Documentation](https://wow.gamepedia.com/API_OfferPetition)
+---[Documentation](https://wowpedia.fandom.com/wiki/API_OfferPetition)
 function OfferPetition() end
 
 ---[Documentation](https://wow.gamepedia.com/API_OpenTrainer)
@@ -985,39 +985,39 @@ function PartialPlayTime() end
 ---[Documentation](https://wow.gamepedia.com/API_PartyLFGStartBackfill)
 function PartyLFGStartBackfill() end
 
----[Documentation](https://wow.gamepedia.com/API_PetAbandon)
+---[Documentation](https://wowpedia.fandom.com/wiki/API_PetAbandon)
 function PetAbandon() end
 
----[Documentation](https://wow.gamepedia.com/API_PetAggressiveMode)
+---[Documentation](https://wowpedia.fandom.com/wiki/API_PetAggressiveMode)
 function PetAggressiveMode() end
 
----[Documentation](https://wow.gamepedia.com/API_PetAssistMode)
+---[Documentation](https://wowpedia.fandom.com/wiki/API_PetAssistMode)
 function PetAssistMode() end
 
----[Documentation](https://wow.gamepedia.com/API_PetAttack)
+---[Documentation](https://wowpedia.fandom.com/wiki/API_PetAttack)
 function PetAttack() end
 
 ---@return boolean canAbandon
----[Documentation](https://wow.gamepedia.com/API_PetCanBeAbandoned)
+---[Documentation](https://wowpedia.fandom.com/wiki/API_PetCanBeAbandoned)
 function PetCanBeAbandoned() end
 
 ---[Documentation](https://wow.gamepedia.com/API_PetCanBeDismissed)
 function PetCanBeDismissed() end
 
 ---@return boolean canRename
----[Documentation](https://wow.gamepedia.com/API_PetCanBeRenamed)
+---[Documentation](https://wowpedia.fandom.com/wiki/API_PetCanBeRenamed)
 function PetCanBeRenamed() end
 
----[Documentation](https://wow.gamepedia.com/API_PetDefensiveAssistMode)
+---[Documentation](https://wowpedia.fandom.com/wiki/API_PetDefensiveAssistMode)
 function PetDefensiveAssistMode() end
 
----[Documentation](https://wow.gamepedia.com/API_PetDefensiveMode)
+---[Documentation](https://wowpedia.fandom.com/wiki/API_PetDefensiveMode)
 function PetDefensiveMode() end
 
----[Documentation](https://wow.gamepedia.com/API_PetDismiss)
+---[Documentation](https://wowpedia.fandom.com/wiki/API_PetDismiss)
 function PetDismiss() end
 
----[Documentation](https://wow.gamepedia.com/API_PetFollow)
+---[Documentation](https://wowpedia.fandom.com/wiki/API_PetFollow)
 function PetFollow() end
 
 ---[Documentation](https://wow.gamepedia.com/API_PetHasActionBar)
@@ -1029,20 +1029,20 @@ function PetHasSpellbook() end
 ---[Documentation](https://wow.gamepedia.com/API_PetMoveTo)
 function PetMoveTo(target) end
 
----[Documentation](https://wow.gamepedia.com/API_PetPassiveMode)
+---[Documentation](https://wowpedia.fandom.com/wiki/API_PetPassiveMode)
 function PetPassiveMode() end
 
 ---@param name string
----[Documentation](https://wow.gamepedia.com/API_PetRename)
+---[Documentation](https://wowpedia.fandom.com/wiki/API_PetRename)
 function PetRename(name) end
 
----[Documentation](https://wow.gamepedia.com/API_PetStopAttack)
+---[Documentation](https://wowpedia.fandom.com/wiki/API_PetStopAttack)
 function PetStopAttack() end
 
 ---[Documentation](https://wow.gamepedia.com/API_PetUsesPetFrame)
 function PetUsesPetFrame() end
 
----[Documentation](https://wow.gamepedia.com/API_PetWait)
+---[Documentation](https://wowpedia.fandom.com/wiki/API_PetWait)
 function PetWait() end
 
 ---[Documentation](https://wow.gamepedia.com/API_PickupAction)
@@ -1053,12 +1053,12 @@ function PickupBagFromSlot(slot) end
 
 ---@param type string
 ---@param index number
----[Documentation](https://wow.gamepedia.com/API_PickupCompanion)
+---[Documentation](https://wowpedia.fandom.com/wiki/API_PickupCompanion)
 function PickupCompanion(type, index) end
 
 ---@param bagID number
 ---@param slot number
----[Documentation](https://wow.gamepedia.com/API_PickupContainerItem)
+---[Documentation](https://wowpedia.fandom.com/wiki/API_PickupContainerItem)
 function PickupContainerItem(bagID, slot) end
 
 ---[Documentation](https://wow.gamepedia.com/API_PickupGuildBankItem)
@@ -1083,18 +1083,18 @@ function PickupMerchantItem(index) end
 function PickupPetAction(slot) end
 
 ---@param spellID number
----[Documentation](https://wow.gamepedia.com/API_PickupPetSpell)
+---[Documentation](https://wowpedia.fandom.com/wiki/API_PickupPetSpell)
 function PickupPetSpell(spellID) end
 
 ---@param copper number
----[Documentation](https://wow.gamepedia.com/API_PickupPlayerMoney)
+---[Documentation](https://wowpedia.fandom.com/wiki/API_PickupPlayerMoney)
 function PickupPlayerMoney(copper) end
 
 ---[Documentation](https://wow.gamepedia.com/API_PickupPvpTalent)
 function PickupPvpTalent() end
 
 ---@param spellID number
----[Documentation](https://wow.gamepedia.com/API_PickupSpell)
+---[Documentation](https://wowpedia.fandom.com/wiki/API_PickupSpell)
 function PickupSpell(spellID) end
 
 ---[Documentation](https://wow.gamepedia.com/API_PickupSpellBookItem)
@@ -1107,7 +1107,7 @@ function PickupStablePet(index) end
 function PickupTalent(talentID) end
 
 ---@param copper number
----[Documentation](https://wow.gamepedia.com/API_PickupTradeMoney)
+---[Documentation](https://wowpedia.fandom.com/wiki/API_PickupTradeMoney)
 function PickupTradeMoney(copper) end
 
 ---[Documentation](https://wow.gamepedia.com/API_PitchDownStart)
@@ -1182,11 +1182,11 @@ function PromoteToLeader(unit) end
 ---[Documentation](https://wow.gamepedia.com/API_PurchaseSlot)
 function PurchaseSlot() end
 
----[Documentation](https://wow.gamepedia.com/API_PutItemInBackpack)
+---[Documentation](https://wowpedia.fandom.com/wiki/API_PutItemInBackpack)
 function PutItemInBackpack() end
 
 ---@param slotId number
----[Documentation](https://wow.gamepedia.com/API_PutItemInBag)
+---[Documentation](https://wowpedia.fandom.com/wiki/API_PutItemInBag)
 function PutItemInBag(slotId) end
 
 ---[Documentation](https://wow.gamepedia.com/API_QueryGuildBankLog)
@@ -1210,7 +1210,7 @@ function QueryGuildNews() end
 ---[Documentation](https://wow.gamepedia.com/API_QueryGuildRecipes)
 function QueryGuildRecipes() end
 
----[Documentation](https://wow.gamepedia.com/API_QuestChooseRewardError)
+---[Documentation](https://wowpedia.fandom.com/wiki/API_QuestChooseRewardError)
 function QuestChooseRewardError() end
 
 ---[Documentation](https://wow.gamepedia.com/API_QuestFlagsPVP)
@@ -1237,7 +1237,7 @@ function QuestIsFromAreaTrigger() end
 ---[Documentation](https://wow.gamepedia.com/API_QuestIsWeekly)
 function QuestIsWeekly() end
 
----[Documentation](https://wow.gamepedia.com/API_QuestLogPushQuest)
+---[Documentation](https://wowpedia.fandom.com/wiki/API_QuestLogPushQuest)
 function QuestLogPushQuest() end
 
 ---[Documentation](https://wow.gamepedia.com/API_QuestLogRewardHasTreasurePicker)
@@ -1254,7 +1254,7 @@ function QuestMapUpdateAllQuests() end
 ---@return number posX
 ---@return number posY
 ---@return number objective
----[Documentation](https://wow.gamepedia.com/API_QuestPOIGetIconInfo)
+---[Documentation](https://wowpedia.fandom.com/wiki/API_QuestPOIGetIconInfo)
 function QuestPOIGetIconInfo(questId) end
 
 ---[Documentation](https://wow.gamepedia.com/API_QuestPOIGetSecondaryLocations)
@@ -1263,7 +1263,7 @@ function QuestPOIGetSecondaryLocations(questID, table) end
 ---[Documentation](https://wow.gamepedia.com/API_QuestPOIUpdateIcons)
 function QuestPOIUpdateIcons() end
 
----[Documentation](https://wow.gamepedia.com/API_Quit)
+---[Documentation](https://wowpedia.fandom.com/wiki/API_Quit)
 function Quit() end
 
 ---[Documentation](https://wow.gamepedia.com/API_RaidProfileExists)
@@ -1287,7 +1287,7 @@ function RefreshLFGList() end
 ---[Documentation](https://wow.gamepedia.com/API_RegisterStaticConstants)
 function RegisterStaticConstants(table) end
 
----[Documentation](https://wow.gamepedia.com/API_RejectProposal)
+---[Documentation](https://wowpedia.fandom.com/wiki/API_RejectProposal)
 function RejectProposal() end
 
 ---[Documentation](https://wow.gamepedia.com/API_RemoveAutoQuestPopUp)
@@ -1295,12 +1295,12 @@ function RemoveAutoQuestPopUp() end
 
 ---@param windowId number
 ---@param channelName string
----[Documentation](https://wow.gamepedia.com/API_RemoveChatWindowChannel)
+---[Documentation](https://wowpedia.fandom.com/wiki/API_RemoveChatWindowChannel)
 function RemoveChatWindowChannel(windowId, channelName) end
 
 ---@param index number
 ---@param messageGroup string
----[Documentation](https://wow.gamepedia.com/API_RemoveChatWindowMessages)
+---[Documentation](https://wowpedia.fandom.com/wiki/API_RemoveChatWindowMessages)
 function RemoveChatWindowMessages(index, messageGroup) end
 
 ---[Documentation](https://wow.gamepedia.com/API_RemoveItemFromArtifact)
@@ -1316,26 +1316,26 @@ function RemoveTalent(talentID) end
 function RemoveTrackedAchievement(achievementID) end
 
 ---@param name string
----[Documentation](https://wow.gamepedia.com/API_RenamePetition)
+---[Documentation](https://wowpedia.fandom.com/wiki/API_RenamePetition)
 function RenamePetition(name) end
 
 ---[Documentation](https://wow.gamepedia.com/API_ReopenInteraction)
 function ReopenInteraction() end
 
 ---@param guildBankRepair boolean
----[Documentation](https://wow.gamepedia.com/API_RepairAllItems)
+---[Documentation](https://wowpedia.fandom.com/wiki/API_RepairAllItems)
 function RepairAllItems(guildBankRepair) end
 
----[Documentation](https://wow.gamepedia.com/API_ReplaceEnchant)
+---[Documentation](https://wowpedia.fandom.com/wiki/API_ReplaceEnchant)
 function ReplaceEnchant() end
 
----[Documentation](https://wow.gamepedia.com/API_ReplaceGuildMaster)
+---[Documentation](https://wowpedia.fandom.com/wiki/API_ReplaceGuildMaster)
 function ReplaceGuildMaster() end
 
----[Documentation](https://wow.gamepedia.com/API_ReplaceTradeEnchant)
+---[Documentation](https://wowpedia.fandom.com/wiki/API_ReplaceTradeEnchant)
 function ReplaceTradeEnchant() end
 
----[Documentation](https://wow.gamepedia.com/API_RepopMe)
+---[Documentation](https://wowpedia.fandom.com/wiki/API_RepopMe)
 function RepopMe() end
 
 ---[Documentation](https://wow.gamepedia.com/API_ReportBug)
@@ -1347,20 +1347,20 @@ function ReportPlayerIsPVPAFK(unit) end
 ---[Documentation](https://wow.gamepedia.com/API_ReportSuggestion)
 function ReportSuggestion(description) end
 
----[Documentation](https://wow.gamepedia.com/API_RequestArtifactCompletionHistory)
+---[Documentation](https://wowpedia.fandom.com/wiki/API_RequestArtifactCompletionHistory)
 function RequestArtifactCompletionHistory() end
 
----[Documentation](https://wow.gamepedia.com/API_RequestBattlefieldScoreData)
+---[Documentation](https://wowpedia.fandom.com/wiki/API_RequestBattlefieldScoreData)
 function RequestBattlefieldScoreData() end
 
 ---@param index number
----[Documentation](https://wow.gamepedia.com/API_RequestBattlegroundInstanceInfo)
+---[Documentation](https://wowpedia.fandom.com/wiki/API_RequestBattlegroundInstanceInfo)
 function RequestBattlegroundInstanceInfo(index) end
 
 ---[Documentation](https://wow.gamepedia.com/API_RequestBottomLeftActionBar)
 function RequestBottomLeftActionBar() end
 
----[Documentation](https://wow.gamepedia.com/API_RequestGuildApplicantsList)
+---[Documentation](https://wowpedia.fandom.com/wiki/API_RequestGuildApplicantsList)
 function RequestGuildApplicantsList() end
 
 ---[Documentation](https://wow.gamepedia.com/API_RequestGuildChallengeInfo)
@@ -1393,19 +1393,19 @@ function RequestPVPOptionsEnabled() end
 ---[Documentation](https://wow.gamepedia.com/API_RequestPVPRewards)
 function RequestPVPRewards() end
 
----[Documentation](https://wow.gamepedia.com/API_RequestRaidInfo)
+---[Documentation](https://wowpedia.fandom.com/wiki/API_RequestRaidInfo)
 function RequestRaidInfo() end
 
----[Documentation](https://wow.gamepedia.com/API_RequestRandomBattlegroundInstanceInfo)
+---[Documentation](https://wowpedia.fandom.com/wiki/API_RequestRandomBattlegroundInstanceInfo)
 function RequestRandomBattlegroundInstanceInfo() end
 
----[Documentation](https://wow.gamepedia.com/API_RequestRatedInfo)
+---[Documentation](https://wowpedia.fandom.com/wiki/API_RequestRatedInfo)
 function RequestRatedInfo() end
 
 ---[Documentation](https://wow.gamepedia.com/API_RequestRecruitingGuildsList)
 function RequestRecruitingGuildsList() end
 
----[Documentation](https://wow.gamepedia.com/API_RequestTimePlayed)
+---[Documentation](https://wowpedia.fandom.com/wiki/API_RequestTimePlayed)
 function RequestTimePlayed() end
 
 ---[Documentation](https://wow.gamepedia.com/API_RequeueSkirmish)
@@ -1423,19 +1423,19 @@ function ResetChatColors() end
 ---[Documentation](https://wow.gamepedia.com/API_ResetChatWindows)
 function ResetChatWindows() end
 
----[Documentation](https://wow.gamepedia.com/API_ResetCursor)
+---[Documentation](https://wowpedia.fandom.com/wiki/API_ResetCursor)
 function ResetCursor() end
 
 ---[Documentation](https://wow.gamepedia.com/API_ResetDisabledAddOns)
 function ResetDisabledAddOns() end
 
----[Documentation](https://wow.gamepedia.com/API_ResetInstances)
+---[Documentation](https://wowpedia.fandom.com/wiki/API_ResetInstances)
 function ResetInstances() end
 
 ---[Documentation](https://wow.gamepedia.com/API_ResetSetMerchantFilter)
 function ResetSetMerchantFilter() end
 
----[Documentation](https://wow.gamepedia.com/API_ResetTutorials)
+---[Documentation](https://wowpedia.fandom.com/wiki/API_ResetTutorials)
 function ResetTutorials() end
 
 ---[Documentation](https://wow.gamepedia.com/API_ResetView)
@@ -1453,7 +1453,7 @@ function RespondMailLockSendItem(slot, keepItem) end
 ---[Documentation](https://wow.gamepedia.com/API_RespondToInviteConfirmation)
 function RespondToInviteConfirmation(guid, accept) end
 
----[Documentation](https://wow.gamepedia.com/API_RestartGx)
+---[Documentation](https://wowpedia.fandom.com/wiki/API_RestartGx)
 function RestartGx() end
 
 ---[Documentation](https://wow.gamepedia.com/API_RestoreRaidProfileFromCopy)
@@ -1468,7 +1468,7 @@ function ResurrectHasSickness() end
 ---[Documentation](https://wow.gamepedia.com/API_ResurrectHasTimer)
 function ResurrectHasTimer() end
 
----[Documentation](https://wow.gamepedia.com/API_RetrieveCorpse)
+---[Documentation](https://wowpedia.fandom.com/wiki/API_RetrieveCorpse)
 function RetrieveCorpse() end
 
 ---[Documentation](https://wow.gamepedia.com/API_ReturnInboxItem)
@@ -1479,14 +1479,14 @@ function RollOnLoot(rollId, roll) end
 
 ---@param command string
 ---@param up string
----[Documentation](https://wow.gamepedia.com/API_RunBinding)
+---[Documentation](https://wowpedia.fandom.com/wiki/API_RunBinding)
 function RunBinding(command, up) end
 
 ---[Documentation](https://wow.gamepedia.com/API_RunMacro)
 function RunMacro() end
 
 ---@param macro string
----[Documentation](https://wow.gamepedia.com/API_RunMacroText)
+---[Documentation](https://wowpedia.fandom.com/wiki/API_RunMacroText)
 function RunMacroText(macro) end
 
 ---[Documentation](https://wow.gamepedia.com/API_RunScript)
@@ -1502,10 +1502,10 @@ function SaveBindings(which) end
 function SaveRaidProfileCopy(profile) end
 
 ---@param viewIndex number
----[Documentation](https://wow.gamepedia.com/API_SaveView)
+---[Documentation](https://wowpedia.fandom.com/wiki/API_SaveView)
 function SaveView(viewIndex) end
 
----[Documentation](https://wow.gamepedia.com/API_Screenshot)
+---[Documentation](https://wowpedia.fandom.com/wiki/API_Screenshot)
 function Screenshot() end
 
 ---[Documentation](https://wow.gamepedia.com/API_ScriptsDisallowedForBeta)
@@ -1519,7 +1519,7 @@ function SearchLFGGetJoinedID() end
 
 ---@return number numResults
 ---@return number totalResults
----[Documentation](https://wow.gamepedia.com/API_SearchLFGGetNumResults)
+---[Documentation](https://wowpedia.fandom.com/wiki/API_SearchLFGGetNumResults)
 function SearchLFGGetNumResults() end
 
 ---[Documentation](https://wow.gamepedia.com/API_SearchLFGGetPartyResults)
@@ -1530,7 +1530,7 @@ function SearchLFGGetResults(index) end
 
 ---@param typeID number
 ---@param lfgID number
----[Documentation](https://wow.gamepedia.com/API_SearchLFGJoin)
+---[Documentation](https://wowpedia.fandom.com/wiki/API_SearchLFGJoin)
 function SearchLFGJoin(typeID, lfgID) end
 
 ---[Documentation](https://wow.gamepedia.com/API_SearchLFGLeave)
@@ -1542,7 +1542,7 @@ function SearchLFGSort(type) end
 ---@param options string
 ---@return string result
 ---@return string target
----[Documentation](https://wow.gamepedia.com/API_SecureCmdOptionParse)
+---[Documentation](https://wowpedia.fandom.com/wiki/API_SecureCmdOptionParse)
 function SecureCmdOptionParse(options) end
 
 ---[Documentation](https://wow.gamepedia.com/API_SelectActiveQuest)
@@ -1552,11 +1552,11 @@ function SelectActiveQuest() end
 function SelectAvailableQuest() end
 
 ---@param index number
----[Documentation](https://wow.gamepedia.com/API_SelectTrainerService)
+---[Documentation](https://wowpedia.fandom.com/wiki/API_SelectTrainerService)
 function SelectTrainerService(index) end
 
 ---@return string realmName
----[Documentation](https://wow.gamepedia.com/API_SelectedRealmName)
+---[Documentation](https://wowpedia.fandom.com/wiki/API_SelectedRealmName)
 function SelectedRealmName() end
 
 ---[Documentation](https://wow.gamepedia.com/API_SellCursorItem)
@@ -1568,7 +1568,7 @@ function SendChatMessage(msg, chatType, languageID, target) end
 ---@param recipient string
 ---@param subject string
 ---@param body string
----[Documentation](https://wow.gamepedia.com/API_SendMail)
+---[Documentation](https://wowpedia.fandom.com/wiki/API_SendMail)
 function SendMail(recipient, subject, body) end
 
 ---[Documentation](https://wow.gamepedia.com/API_SendPlayerChoiceResponse)
@@ -1582,7 +1582,7 @@ function SetAchievementComparisonUnit(unitId) end
 
 ---@param searchText string
 ---@return boolean searchFinished
----[Documentation](https://wow.gamepedia.com/API_SetAchievementSearchString)
+---[Documentation](https://wowpedia.fandom.com/wiki/API_SetAchievementSearchString)
 function SetAchievementSearchString(searchText) end
 
 ---[Documentation](https://wow.gamepedia.com/API_SetActionBarToggles)

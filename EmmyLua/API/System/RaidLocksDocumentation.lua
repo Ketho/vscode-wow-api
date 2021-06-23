@@ -4,5 +4,5 @@ C_RaidLocks = {}
 ---@param encounterID number
 ---@param difficultyID? number
 ---@return boolean encounterIsComplete
----[Documentation](https://wow.gamepedia.com/API_C_RaidLocks.IsEncounterComplete)
+---[Documentation](https://wowpedia.fandom.com/wiki/API_C_RaidLocks.IsEncounterComplete)
 function C_RaidLocks.IsEncounterComplete(mapID, encounterID, difficultyID) end

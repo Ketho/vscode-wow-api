@@ -7,14 +7,14 @@
 ---@param template string
 ---@param id number
 ---@return T frame
----[Documentation](https://wow.gamepedia.com/API_CreateFrame)
+---[Documentation](https://wowpedia.fandom.com/wiki/API_CreateFrame)
 function CreateFrame(frameType, name, parent, template, id) end
 
 ---@param tbl table
 ---@param name string
 ---@param hook function
 ---@overload fun(name: string, hook: function)
----[Documentation](https://wow.gamepedia.com/API_hooksecurefunc)
+---[Documentation](https://wowpedia.fandom.com/wiki/API_hooksecurefunc)
 function hooksecurefunc(tbl, name, hook) end
 
 ---@param unit Unit
@@ -24,24 +24,24 @@ function hooksecurefunc(tbl, name, hook) end
 ---@return number altR
 ---@return number altG
 ---@return number altB
----[Documentation](https://wow.gamepedia.com/API_UnitPowerType)
+---[Documentation](https://wowpedia.fandom.com/wiki/API_UnitPowerType)
 function UnitPowerType(unit, index) end
 
 ---@param unit Unit
 ---@return number level
----[Documentation](https://wow.gamepedia.com/API_UnitLevel)
+---[Documentation](https://wowpedia.fandom.com/wiki/API_UnitLevel)
 function UnitLevel(unit) end
 
 ---@param unit Unit
 ---@return string name
 ---@return string realm
----[Documentation](https://wow.gamepedia.com/API_UnitName)
+---[Documentation](https://wowpedia.fandom.com/wiki/API_UnitName)
 function UnitName(unit) end
 
 ---@param questLogIndex? number    @Index of quest in quest log
 ---@return string questDescription @The quest description
 ---@return string questObjectives  @The quest objective
----[Documentation](https://wow.gamepedia.com/API_GetQuestLogQuestText)
+---[Documentation](https://wowpedia.fandom.com/wiki/API_GetQuestLogQuestText)
 function GetQuestLogQuestText(questLogIndex) end
 
 ---@param unit string
@@ -53,7 +53,7 @@ function GetQuestLogQuestText(questLogIndex) end
 ---@return boolean isTradeSkill
 ---@return boolean notInterruptible
 ---@return number spellId
----[Documentation](https://wow.gamepedia.com/API_UnitChannelInfo)
+---[Documentation](https://wowpedia.fandom.com/wiki/API_UnitChannelInfo)
 function UnitChannelInfo(unit) end
 
 ---@param specID number
@@ -63,7 +63,7 @@ function UnitChannelInfo(unit) end
 ---@return string icon
 ---@return string role
 ---@return string class
----[Documentation](https://wow.gamepedia.com/API_GetSpecializationInfoByID)
+---[Documentation](https://wowpedia.fandom.com/wiki/API_GetSpecializationInfoByID)
 function GetSpecializationInfoByID(specID) end
 
 ---@param classID number
@@ -75,7 +75,7 @@ function GetSpecializationInfoByID(specID) end
 ---@return string role
 ---@return boolean isRecommended
 ---@return boolean isAllowed
----[Documentation](https://wow.gamepedia.com/API_GetSpecializationInfoForClassID)
+---[Documentation](https://wowpedia.fandom.com/wiki/API_GetSpecializationInfoForClassID)
 function GetSpecializationInfoForClassID(classID, specNum) end
 
 -- non blizzard documented C namespaces

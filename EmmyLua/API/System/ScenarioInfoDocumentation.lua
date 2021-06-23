@@ -2,7 +2,7 @@ C_ScenarioInfo = {}
 
 ---@param runType JailersTowerType
 ---@return string? typeString
----[Documentation](https://wow.gamepedia.com/API_C_ScenarioInfo.GetJailersTowerTypeString)
+---[Documentation](https://wowpedia.fandom.com/wiki/API_C_ScenarioInfo.GetJailersTowerTypeString)
 function C_ScenarioInfo.GetJailersTowerTypeString(runType) end
 
 ---@class JailersTowerType

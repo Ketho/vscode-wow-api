@@ -2,94 +2,94 @@ C_AzeriteEssence = {}
 
 ---@param essenceID number
 ---@param milestoneID number
----[Documentation](https://wow.gamepedia.com/API_C_AzeriteEssence.ActivateEssence)
+---[Documentation](https://wowpedia.fandom.com/wiki/API_C_AzeriteEssence.ActivateEssence)
 function C_AzeriteEssence.ActivateEssence(essenceID, milestoneID) end
 
 ---@param essenceID number
 ---@param milestoneID number
 ---@return boolean canActivate
----[Documentation](https://wow.gamepedia.com/API_C_AzeriteEssence.CanActivateEssence)
+---[Documentation](https://wowpedia.fandom.com/wiki/API_C_AzeriteEssence.CanActivateEssence)
 function C_AzeriteEssence.CanActivateEssence(essenceID, milestoneID) end
 
 ---@param milestoneID number
 ---@return boolean canDeactivate
----[Documentation](https://wow.gamepedia.com/API_C_AzeriteEssence.CanDeactivateEssence)
+---[Documentation](https://wowpedia.fandom.com/wiki/API_C_AzeriteEssence.CanDeactivateEssence)
 function C_AzeriteEssence.CanDeactivateEssence(milestoneID) end
 
 ---@return boolean canOpen
----[Documentation](https://wow.gamepedia.com/API_C_AzeriteEssence.CanOpenUI)
+---[Documentation](https://wowpedia.fandom.com/wiki/API_C_AzeriteEssence.CanOpenUI)
 function C_AzeriteEssence.CanOpenUI() end
 
----[Documentation](https://wow.gamepedia.com/API_C_AzeriteEssence.ClearPendingActivationEssence)
+---[Documentation](https://wowpedia.fandom.com/wiki/API_C_AzeriteEssence.ClearPendingActivationEssence)
 function C_AzeriteEssence.ClearPendingActivationEssence() end
 
----[Documentation](https://wow.gamepedia.com/API_C_AzeriteEssence.CloseForge)
+---[Documentation](https://wowpedia.fandom.com/wiki/API_C_AzeriteEssence.CloseForge)
 function C_AzeriteEssence.CloseForge() end
 
 ---@param essenceID number
 ---@param rank number
 ---@return string link
----[Documentation](https://wow.gamepedia.com/API_C_AzeriteEssence.GetEssenceHyperlink)
+---[Documentation](https://wowpedia.fandom.com/wiki/API_C_AzeriteEssence.GetEssenceHyperlink)
 function C_AzeriteEssence.GetEssenceHyperlink(essenceID, rank) end
 
 ---@param essenceID number
 ---@return AzeriteEssenceInfo info
----[Documentation](https://wow.gamepedia.com/API_C_AzeriteEssence.GetEssenceInfo)
+---[Documentation](https://wowpedia.fandom.com/wiki/API_C_AzeriteEssence.GetEssenceInfo)
 function C_AzeriteEssence.GetEssenceInfo(essenceID) end
 
 ---@return AzeriteEssenceInfo[] essences
----[Documentation](https://wow.gamepedia.com/API_C_AzeriteEssence.GetEssences)
+---[Documentation](https://wowpedia.fandom.com/wiki/API_C_AzeriteEssence.GetEssences)
 function C_AzeriteEssence.GetEssences() end
 
 ---@param milestoneID number
 ---@return number essenceID
----[Documentation](https://wow.gamepedia.com/API_C_AzeriteEssence.GetMilestoneEssence)
+---[Documentation](https://wowpedia.fandom.com/wiki/API_C_AzeriteEssence.GetMilestoneEssence)
 function C_AzeriteEssence.GetMilestoneEssence(milestoneID) end
 
 ---@param milestoneID number
 ---@return AzeriteMilestoneInfo info
----[Documentation](https://wow.gamepedia.com/API_C_AzeriteEssence.GetMilestoneInfo)
+---[Documentation](https://wowpedia.fandom.com/wiki/API_C_AzeriteEssence.GetMilestoneInfo)
 function C_AzeriteEssence.GetMilestoneInfo(milestoneID) end
 
 ---@param milestoneID number
 ---@return number spellID
----[Documentation](https://wow.gamepedia.com/API_C_AzeriteEssence.GetMilestoneSpell)
+---[Documentation](https://wowpedia.fandom.com/wiki/API_C_AzeriteEssence.GetMilestoneSpell)
 function C_AzeriteEssence.GetMilestoneSpell(milestoneID) end
 
 ---@return AzeriteMilestoneInfo[] milestones
----[Documentation](https://wow.gamepedia.com/API_C_AzeriteEssence.GetMilestones)
+---[Documentation](https://wowpedia.fandom.com/wiki/API_C_AzeriteEssence.GetMilestones)
 function C_AzeriteEssence.GetMilestones() end
 
 ---@return number numUnlockedEssences
----[Documentation](https://wow.gamepedia.com/API_C_AzeriteEssence.GetNumUnlockedEssences)
+---[Documentation](https://wowpedia.fandom.com/wiki/API_C_AzeriteEssence.GetNumUnlockedEssences)
 function C_AzeriteEssence.GetNumUnlockedEssences() end
 
 ---@return number numUsableEssences
----[Documentation](https://wow.gamepedia.com/API_C_AzeriteEssence.GetNumUsableEssences)
+---[Documentation](https://wowpedia.fandom.com/wiki/API_C_AzeriteEssence.GetNumUsableEssences)
 function C_AzeriteEssence.GetNumUsableEssences() end
 
 ---@return number essenceID
----[Documentation](https://wow.gamepedia.com/API_C_AzeriteEssence.GetPendingActivationEssence)
+---[Documentation](https://wowpedia.fandom.com/wiki/API_C_AzeriteEssence.GetPendingActivationEssence)
 function C_AzeriteEssence.GetPendingActivationEssence() end
 
 ---@return boolean hasNeverActivatedAnyEssences
----[Documentation](https://wow.gamepedia.com/API_C_AzeriteEssence.HasNeverActivatedAnyEssences)
+---[Documentation](https://wowpedia.fandom.com/wiki/API_C_AzeriteEssence.HasNeverActivatedAnyEssences)
 function C_AzeriteEssence.HasNeverActivatedAnyEssences() end
 
 ---@return boolean hasEssence
----[Documentation](https://wow.gamepedia.com/API_C_AzeriteEssence.HasPendingActivationEssence)
+---[Documentation](https://wowpedia.fandom.com/wiki/API_C_AzeriteEssence.HasPendingActivationEssence)
 function C_AzeriteEssence.HasPendingActivationEssence() end
 
 ---@return boolean isAtForge
----[Documentation](https://wow.gamepedia.com/API_C_AzeriteEssence.IsAtForge)
+---[Documentation](https://wowpedia.fandom.com/wiki/API_C_AzeriteEssence.IsAtForge)
 function C_AzeriteEssence.IsAtForge() end
 
 ---@param essenceID number
----[Documentation](https://wow.gamepedia.com/API_C_AzeriteEssence.SetPendingActivationEssence)
+---[Documentation](https://wowpedia.fandom.com/wiki/API_C_AzeriteEssence.SetPendingActivationEssence)
 function C_AzeriteEssence.SetPendingActivationEssence(essenceID) end
 
 ---@param milestoneID number
----[Documentation](https://wow.gamepedia.com/API_C_AzeriteEssence.UnlockMilestone)
+---[Documentation](https://wowpedia.fandom.com/wiki/API_C_AzeriteEssence.UnlockMilestone)
 function C_AzeriteEssence.UnlockMilestone(milestoneID) end
 
 ---@class AzeriteEssence

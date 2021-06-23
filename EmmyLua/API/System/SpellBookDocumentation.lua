@@ -1,15 +1,15 @@
 C_SpellBook = {}
 
 ---@return boolean contains
----[Documentation](https://wow.gamepedia.com/API_C_SpellBook.ContainsAnyDisenchantSpell)
+---[Documentation](https://wowpedia.fandom.com/wiki/API_C_SpellBook.ContainsAnyDisenchantSpell)
 function C_SpellBook.ContainsAnyDisenchantSpell() end
 
 ---@param skillLineID number
 ---@return number? skillIndex
----[Documentation](https://wow.gamepedia.com/API_C_SpellBook.GetSkillLineIndexByID)
+---[Documentation](https://wowpedia.fandom.com/wiki/API_C_SpellBook.GetSkillLineIndexByID)
 function C_SpellBook.GetSkillLineIndexByID(skillLineID) end
 
 ---@param spellID number
 ---@return boolean disabled
----[Documentation](https://wow.gamepedia.com/API_C_SpellBook.IsSpellDisabled)
+---[Documentation](https://wowpedia.fandom.com/wiki/API_C_SpellBook.IsSpellDisabled)
 function C_SpellBook.IsSpellDisabled(spellID) end
