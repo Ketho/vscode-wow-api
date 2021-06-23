@@ -1,5 +1,11 @@
 # Change Log
 
+## [0.5.3] - 2021-05-09
+### Added
+- 🌙 EmmyLua: Updated to `wowpedia.fandom.com/wiki` URL
+- 🌙 EmmyLua: Added `GetQuestLogQuestText` params
+- 🎨 Style: Added the CVar/Event name in the hover tooltip
+
 ## [0.5.2] - 2021-05-09
 ### Added
 - 🌙 EmmyLua: Updated Blizzard_APIDocumentation to 9.0.5 (38134) and Wowpedia definitions
@@ -154,6 +160,7 @@
 ### Added
 - 🚧 Wip: Development work
 
+[0.5.3]: https://github.com/Ketho/vscode-wow-api/releases/tag/v0.5.3
 [0.5.2]: https://github.com/Ketho/vscode-wow-api/releases/tag/v0.5.2
 [0.5.1]: https://github.com/Ketho/vscode-wow-api/releases/tag/v0.5.1
 [0.5.0]: https://github.com/Ketho/vscode-wow-api/releases/tag/v0.5.0
