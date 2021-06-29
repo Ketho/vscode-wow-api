@@ -98,7 +98,8 @@ export function activate(context: vscode.ExtensionContext) {
 	})
 }
 
-function setExternalLibrary(folder: string, enable: boolean) {
+export function setExternalLibrary(folder: string, enable: boolean) {
+	console.log("setExternalLibrary", folder, enable)
 	const extensionId = "ketho.wow-api"
 	const extensionPath = vscode.extensions.getExtension(extensionId)?.extensionPath
 	const folderPath = extensionPath+"\\"+folder
