@@ -37,7 +37,7 @@ function isHoverString(document: vscode.TextDocument, range: vscode.Range) {
 }
 
 export function activate(context: vscode.ExtensionContext) {
-	console.log("loaded ketho.wow-api")
+	console.log("loaded ketho.wow-api", context.extension.id)
 
 	setExternalLibrary("EmmyLua\\API", true)
 	const loadFrameXML = vscode.workspace.getConfiguration("wowAPI").get("emmyLua.loadFrameXML")
@@ -135,7 +135,7 @@ function setLanguageServerOptions() {
 	// hides the emmylua source from the hover tooltip
 	config.update("completion.displayContext", 0, true)
 	// hides the @alias types from the function signature hover tooltip
-	config.update("hover.enumsLimit", 0, true)
+	// config.update("hover.enumsLimit", 0, true)
 }
 
 function onCustomCompletion() {

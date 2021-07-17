@@ -1,5 +1,9 @@
 # Change Log
 
+## [0.5.5] - 2021-07-17
+### Added
+- 🛠 Bug Fixes: Stop forcing `hover.enumsLimit` option
+
 ## [0.5.4] - 2021-06-29
 ### Added
 - 🛠 Improvements: Test uninstall script
@@ -164,6 +168,8 @@
 ### Added
 - 🚧 Wip: Development work
 
+[0.5.5]: https://github.com/Ketho/vscode-wow-api/releases/tag/v0.5.5
+[0.5.4]: https://github.com/Ketho/vscode-wow-api/releases/tag/v0.5.4
 [0.5.3]: https://github.com/Ketho/vscode-wow-api/releases/tag/v0.5.3
 [0.5.2]: https://github.com/Ketho/vscode-wow-api/releases/tag/v0.5.2
 [0.5.1]: https://github.com/Ketho/vscode-wow-api/releases/tag/v0.5.1
