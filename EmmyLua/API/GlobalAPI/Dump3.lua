@@ -1464,9 +1464,6 @@ function GetInventoryItemTexture(unit, invSlot) end
 ---[Documentation](https://wow.gamepedia.com/API_GetInventoryItemsForSlot)
 function GetInventoryItemsForSlot(slot, returnTable, transmogrify) end
 
----[Documentation](https://wow.gamepedia.com/API_GetInventorySlotInfo)
-function GetInventorySlotInfo(invSlotName) end
-
 ---[Documentation](https://wow.gamepedia.com/API_GetInviteConfirmationInfo)
 function GetInviteConfirmationInfo(guid) end
 

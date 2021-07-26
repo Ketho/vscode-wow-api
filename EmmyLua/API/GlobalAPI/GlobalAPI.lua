@@ -10,6 +10,13 @@
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_CreateFrame)
 function CreateFrame(frameType, name, parent, template, id) end
 
+---@param invSlotName InventorySlotName 
+---@return number slotId
+---@return string textureName
+---@return boolean checkRelic
+---[Documentation](https://wow.gamepedia.com/API_GetInventorySlotInfo)
+function GetInventorySlotInfo(invSlotName) end
+
 ---@param tbl table
 ---@param name string
 ---@param hook function
