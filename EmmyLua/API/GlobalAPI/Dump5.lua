@@ -52,9 +52,6 @@ function IsActiveQuestTrivial(index) end
 ---[Documentation](https://wow.gamepedia.com/API_IsAddOnLoadOnDemand)
 function IsAddOnLoadOnDemand() end
 
----[Documentation](https://wow.gamepedia.com/API_IsAddOnLoaded)
-function IsAddOnLoaded() end
-
 ---[Documentation](https://wow.gamepedia.com/API_IsAddonVersionCheckEnabled)
 function IsAddonVersionCheckEnabled() end
 

@@ -85,6 +85,12 @@ function GetSpecializationInfoByID(specID) end
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_GetSpecializationInfoForClassID)
 function GetSpecializationInfoForClassID(classID, specNum) end
 
+---@param addon number|string index or name
+---@return boolean loaded
+---@return boolean finished
+---[Documentation](https://wow.gamepedia.com/API_IsAddOnLoaded)
+function IsAddOnLoaded(addon) end
+
 -- non blizzard documented C namespaces
 C_AdventureJournal = {}
 C_AdventureMap = {}
