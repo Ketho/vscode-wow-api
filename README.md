@@ -49,3 +49,28 @@ lua53 ./Lua/main.lua
 * luasocket: https://luarocks.org/modules/luasocket/luasocket
 * luasec: https://luarocks.org/modules/brunoos/luasec
 * xml2lua: https://luarocks.org/modules/manoelcampos/xml2lua
+
+#### Acknowledgements
+* [Andols](https://www.curseforge.com/members/andols/projects)
+* [Buds](https://github.com/mrbuds)
+* [Cladhaire](https://wowprogramming.com/)
+* [DahkCeles](https://www.curseforge.com/members/dahkceles/projects)
+* [Ellypse](https://github.com/Ellypse)
+* [Foxlit](https://www.townlong-yak.com/)
+* [Gethe](https://github.com/Gethe)
+* [Iriel](https://wowpedia.fandom.com/wiki/Iriel)
+* [Kaydeethree](https://github.com/kaydeethree)
+* [Marlamin](https://wow.tools/)
+* [Meorawr](https://github.com/Meorawr)
+* [nebula](https://github.com/nebularg)
+* [Nevcairiel](https://github.com/Nevcairiel)
+* [Resike](https://github.com/Resike)
+* [Sumneko](https://github.com/Sumneko)
+* [Stanzilla](https://github.com/Stanzilla)
+* [Yuyuli](https://www.curseforge.com/members/yuyuli/projects)
+---
+* [Blizzard Entertainment](https://www.blizzard.com/)
+* [EmmyLua](https://github.com/EmmyLua)
+* [ScreenToGif](https://github.com/NickeManarin/ScreenToGif)
+* [WoWInterface](https://wowinterface.com/)
+* [Wowpedia](https://wowpedia.fandom.com/)
