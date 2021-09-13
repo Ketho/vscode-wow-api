@@ -3,7 +3,7 @@
 ## [0.6.0] - 2021-09-13
 ### Added
 - 🌙 EmmyLua: Updated Blizzard_APIDocumentation to 9.1.0 (40000)
-- 🌙 EmmyLua: Added InventorySlotIDs (Issue #14)
+- 🌙 EmmyLua: Added InventorySlotIDs (#14)
 - 📚 Documentation: Added [acknowledgements](https://github.com/Ketho/vscode-wow-api#acknowledgements) section
 
 ### Changed
@@ -41,7 +41,7 @@
 ## [0.5.0] - 2021-05-04
 ### Added
 - ✨ Feature: Added GlobalStrings completion and hover information
-- 🌙 EmmyLua: Added FrameXML docs from PR #9; C_Timer augments; bare ModelSceneActor widget
+- 🌙 EmmyLua: Added FrameXML docs (PR #9); C_Timer augments; bare ModelSceneActor widget
 - 🌙 EmmyLua: Added bare ModelScene widget; FrameStrata and DrawLayer types
 - 🌙 EmmyLua: Added event payload to the event completion tooltip
 - 🐞 Bug Fixes: GlobalStrings and Lua Enums (LE) are now automatically defined as globals in `Lua.diagnostics.globals` on completion
@@ -58,23 +58,23 @@
 ## [0.4.4] - 2021-04-11
 ### Added
 - 🌙 EmmyLua: Added bitlib (Issue #7)
-- 🐞 Bug Fixes: Objects returned from CreateFrame() share all methods (Issue #8)
+- 🐞 Bug Fixes: Objects returned from CreateFrame() share all methods (#8)
 
 ## [0.4.3] - 2021-03-26
 ### Added
-- 🌙 EmmyLua: Added `MapUtil.lua`, `EasingUtil.lua`, `PixelUtil.lua`, `TimeUtil.lua` from PR #6
+- 🌙 EmmyLua: Added `MapUtil.lua`, `EasingUtil.lua`, `PixelUtil.lua`, `TimeUtil.lua` (PR #6)
 - 🌙 EmmyLua: Added basic function signatures for the StatusBar widget
 - 📚 Documentation: Added known issues section to the readme
 
 ## [0.4.2] - 2021-03-25
 ### Added
-- 🌙 EmmyLua: Added `ColorMixin`, `Vector2DMixin`, `Vector3DMixin` from PR #5
+- 🌙 EmmyLua: Added `ColorMixin`, `Vector2DMixin`, `Vector3DMixin` (PR #5)
 - 🌙 EmmyLua: Parsed and validated 55% (744/1345) of non-Blizzard documented API that have an existing Wowpedia page
 - 🐞 Bug Fixes: Event payload params properly show Mixins and arrays of types instead of just `table`
 
 ## [0.4.1] - 2021-03-23
 ### Added
-- 🌙 EmmyLua: Added `GetUnitName`, `UIFrameFadeIn`, `Mixin`, `ShowUIPanel`, `getglobal` and similar functions (Issue #4)
+- 🌙 EmmyLua: Added `GetUnitName`, `UIFrameFadeIn`, `Mixin`, `ShowUIPanel`, `getglobal` and similar functions (#4)
 - 🛠 Improvements: CVars are matched case insensitive and show only when hovering over a string literal
 - 📚 Documentation: Added documentation for generating API documentation
 
@@ -117,7 +117,7 @@
 ## [0.3.1] - 2021-03-03
 ### Changed
 - 🎨 Style: Changed enum context from `enum: integer 1` to just `integer 1`
-- 🐞 Bug Fixes: Event hover always appearing at the initial position (Issue #2)
+- 🐞 Bug Fixes: Event hover always appearing at the initial position (#2)
 
 ## [0.3.0] - 2021-03-03
 - 🚨 Breaking Changes: v1.17.2 of the Lua Language Server gets stuck on hover ([#437](https://github.com/sumneko/lua-language-server/issues/437)), please revert to v1.17.0 until this is resolved
@@ -178,6 +178,7 @@
 ### Added
 - 🚧 Wip: Development work
 
+[0.6.0]: https://github.com/Ketho/vscode-wow-api/releases/tag/v0.6.0
 [0.5.5]: https://github.com/Ketho/vscode-wow-api/releases/tag/v0.5.5
 [0.5.4]: https://github.com/Ketho/vscode-wow-api/releases/tag/v0.5.4
 [0.5.3]: https://github.com/Ketho/vscode-wow-api/releases/tag/v0.5.3
