@@ -1,5 +1,15 @@
 # Change Log
 
+## [0.6.0] - 2021-09-13
+### Added
+- 🌙 EmmyLua: Updated Blizzard_APIDocumentation to 9.1.0 (40000)
+- 🌙 EmmyLua: Added InventorySlotIDs (Issue #14)
+- 📚 Documentation: Added [acknowledgements](https://github.com/Ketho/vscode-wow-api#acknowledgements) section
+
+### Changed
+- 🛠 Bug Fixes: Reset `Hover: Enums Limit` option back to default if still set at 0
+- 🛠 Bug Fixes: Attempt to fix uninstall script path
+
 ## [0.5.5] - 2021-07-17
 ### Added
 - 🛠 Bug Fixes: Stop forcing `hover.enumsLimit` option
