@@ -1,3 +1,4 @@
+import { config } from "process"
 import * as vscode from "vscode"
 
 const events = {
@@ -135,7 +136,12 @@ function setLanguageServerOptions() {
 	// hides the emmylua source from the hover tooltip
 	config.update("completion.displayContext", 0, true)
 	// hides the @alias types from the function signature hover tooltip
-	// config.update("hover.enumsLimit", 0, true)
+	// but also controls the amount of types shown for each function param
+	// this was forced previously to 0, reset it back to default
+	if (config.get("hover.enumsLimit") == 0) {
+		const defaultValue = config.inspect("hover.enumsLimit")?.defaultValue
+		config.update("hover.enumsLimit", defaultValue, true)
+	}
 }
 
 function onCustomCompletion() {
