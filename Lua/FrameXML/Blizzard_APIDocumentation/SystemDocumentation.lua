@@ -126,6 +126,11 @@ local System =
 			LiteralName = "SEARCH_DB_LOADED",
 		},
 		{
+			Name = "ShowAADCAlert",
+			Type = "Event",
+			LiteralName = "SHOW_AADC_ALERT",
+		},
+		{
 			Name = "StreamingIcon",
 			Type = "Event",
 			LiteralName = "STREAMING_ICON",
@@ -160,6 +165,16 @@ local System =
 			Name = "UiErrorMessage",
 			Type = "Event",
 			LiteralName = "UI_ERROR_MESSAGE",
+			Payload =
+			{
+				{ Name = "errorType", Type = "number", Nilable = false },
+				{ Name = "message", Type = "string", Nilable = false },
+			},
+		},
+		{
+			Name = "UiErrorPopup",
+			Type = "Event",
+			LiteralName = "UI_ERROR_POPUP",
 			Payload =
 			{
 				{ Name = "errorType", Type = "number", Nilable = false },
