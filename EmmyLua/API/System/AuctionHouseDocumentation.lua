@@ -333,8 +333,10 @@ function C_AuctionHouse.QueryOwnedAuctions(sorts) end
 function C_AuctionHouse.RefreshCommoditySearchResults(itemID) end
 
 ---@param itemKey ItemKey
+---@param minLevelFilter? number
+---@param maxLevelFilter? number
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_AuctionHouse.RefreshItemSearchResults)
-function C_AuctionHouse.RefreshItemSearchResults(itemKey) end
+function C_AuctionHouse.RefreshItemSearchResults(itemKey, minLevelFilter, maxLevelFilter) end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_AuctionHouse.ReplicateItems)
 ---This function should be used in place of an 'allItem' QueryAuctionItems call to query the entire auction house.
@@ -374,9 +376,11 @@ function C_AuctionHouse.SendBrowseQuery(query) end
 ---@param itemKey ItemKey
 ---@param sorts AuctionHouseSortType[]
 ---@param separateOwnerItems boolean
+---@param minLevelFilter number
+---@param maxLevelFilter number
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_AuctionHouse.SendSearchQuery)
 ---Search queries are restricted to 100 calls per minute. These should not be used to query the entire auction house. See ReplicateItems
-function C_AuctionHouse.SendSearchQuery(itemKey, sorts, separateOwnerItems) end
+function C_AuctionHouse.SendSearchQuery(itemKey, sorts, separateOwnerItems, minLevelFilter, maxLevelFilter) end
 
 ---@param itemKey ItemKey
 ---@param sorts AuctionHouseSortType[]

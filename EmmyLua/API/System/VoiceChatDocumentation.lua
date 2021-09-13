@@ -4,6 +4,10 @@ C_VoiceChat = {}
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_VoiceChat.ActivateChannel)
 function C_VoiceChat.ActivateChannel(channelID) end
 
+---@param channelID number
+---[Documentation](https://wowpedia.fandom.com/wiki/API_C_VoiceChat.ActivateChannelTranscription)
+function C_VoiceChat.ActivateChannelTranscription(channelID) end
+
 ---@param listenToLocalUser boolean
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_VoiceChat.BeginLocalCapture)
 function C_VoiceChat.BeginLocalCapture(listenToLocalUser) end
@@ -20,6 +24,10 @@ function C_VoiceChat.CreateChannel(channelDisplayName) end
 ---@param channelID number
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_VoiceChat.DeactivateChannel)
 function C_VoiceChat.DeactivateChannel(channelID) end
+
+---@param channelID number
+---[Documentation](https://wowpedia.fandom.com/wiki/API_C_VoiceChat.DeactivateChannelTranscription)
+function C_VoiceChat.DeactivateChannelTranscription(channelID) end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_VoiceChat.EndLocalCapture)
 function C_VoiceChat.EndLocalCapture() end
@@ -131,6 +139,14 @@ function C_VoiceChat.GetProcesses() end
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_VoiceChat.GetPushToTalkBinding)
 function C_VoiceChat.GetPushToTalkBinding() end
 
+---@return VoiceTtsVoiceType[] ttsVoices
+---[Documentation](https://wowpedia.fandom.com/wiki/API_C_VoiceChat.GetRemoteTtsVoices)
+function C_VoiceChat.GetRemoteTtsVoices() end
+
+---@return VoiceTtsVoiceType[] ttsVoices
+---[Documentation](https://wowpedia.fandom.com/wiki/API_C_VoiceChat.GetTtsVoices)
+function C_VoiceChat.GetTtsVoices() end
+
 ---@return number? sensitivity
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_VoiceChat.GetVADSensitivity)
 function C_VoiceChat.GetVADSensitivity() end
@@ -197,6 +213,18 @@ function C_VoiceChat.IsPlayerUsingVoice(playerLocation) end
 ---@return boolean? isSilenced
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_VoiceChat.IsSilenced)
 function C_VoiceChat.IsSilenced() end
+
+---@return boolean isActive
+---[Documentation](https://wowpedia.fandom.com/wiki/API_C_VoiceChat.IsSpeakForMeActive)
+function C_VoiceChat.IsSpeakForMeActive() end
+
+---@return boolean isAllowed
+---[Documentation](https://wowpedia.fandom.com/wiki/API_C_VoiceChat.IsSpeakForMeAllowed)
+function C_VoiceChat.IsSpeakForMeAllowed() end
+
+---@return boolean isAllowed
+---[Documentation](https://wowpedia.fandom.com/wiki/API_C_VoiceChat.IsTranscriptionAllowed)
+function C_VoiceChat.IsTranscriptionAllowed() end
 
 ---@param channelID number
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_VoiceChat.LeaveChannel)
@@ -286,6 +314,21 @@ function C_VoiceChat.SetVADSensitivity(sensitivity) end
 ---Use this while loading to determine if the UI should attempt to rediscover the previously joined/active voice channels
 function C_VoiceChat.ShouldDiscoverChannels() end
 
+---@param text string
+---[Documentation](https://wowpedia.fandom.com/wiki/API_C_VoiceChat.SpeakRemoteTextSample)
+function C_VoiceChat.SpeakRemoteTextSample(text) end
+
+---@param voiceID number
+---@param text string
+---@param destination VoiceTtsDestination
+---@param rate number
+---@param volume number
+---[Documentation](https://wowpedia.fandom.com/wiki/API_C_VoiceChat.SpeakText)
+function C_VoiceChat.SpeakText(voiceID, text, destination, rate, volume) end
+
+---[Documentation](https://wowpedia.fandom.com/wiki/API_C_VoiceChat.StopSpeakingText)
+function C_VoiceChat.StopSpeakingText() end
+
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_VoiceChat.ToggleDeafened)
 function C_VoiceChat.ToggleDeafened() end
 
@@ -337,12 +380,41 @@ local VoiceChatStatusCode = {
 	InvalidOutputDevice = 24,
 }
 
+---@class VoiceTtsDestination
+local VoiceTtsDestination = {
+	RemoteTransmission = 0,
+	LocalPlayback = 1,
+	RemoteTransmissionWithLocalPlayback = 2,
+	QueuedRemoteTransmission = 3,
+	QueuedLocalPlayback = 4,
+	QueuedRemoteTransmissionWithLocalPlayback = 5,
+	ScreenReader = 6,
+}
+
+---@class VoiceTtsStatusCode
+local VoiceTtsStatusCode = {
+	Success = 0,
+	InvalidEngineType = 1,
+	EngineAllocationFailed = 2,
+	NotSupported = 3,
+	MaxCharactersExceeded = 4,
+	UtteranceBelowMinimumDuration = 5,
+	InputTextEnqueued = 6,
+	SdkNotInitialized = 7,
+	DestinationQueueFull = 8,
+	EnqueueNotNecessary = 9,
+	UtteranceNotFound = 10,
+	ManagerNotFound = 11,
+	InvalidArgument = 12,
+	InternalError = 13,
+}
+
 ---@class VoiceAudioDevice
 ---@field deviceID string
 ---@field displayName string
----@field power number
 ---@field isActive boolean
 ---@field isSystemDefault boolean
+---@field isCommsDefault boolean
 local VoiceAudioDevice = {}
 
 ---@class VoiceChatChannel
@@ -355,7 +427,7 @@ local VoiceAudioDevice = {}
 ---@field isActive boolean
 ---@field isMuted boolean
 ---@field isTransmitting boolean
----@field isLocalProcess boolean
+---@field isTranscribing boolean
 ---@field members VoiceChatMember[]
 local VoiceChatChannel = {}
 
@@ -372,3 +444,8 @@ local VoiceChatMember = {}
 ---@field name string
 ---@field channels VoiceChatChannel[]
 local VoiceChatProcess = {}
+
+---@class VoiceTtsVoiceType
+---@field voiceID number
+---@field name string
+local VoiceTtsVoiceType = {}

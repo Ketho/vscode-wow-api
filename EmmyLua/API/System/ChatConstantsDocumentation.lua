@@ -13,3 +13,11 @@ local ChatChannelType = {
 	PublicParty = 3,
 	Communities = 4,
 }
+
+---@class PermanentChatChannelType
+local PermanentChatChannelType = {
+	None = 0,
+	Zone = 1,
+	Communities = 2,
+	Custom = 3,
+}

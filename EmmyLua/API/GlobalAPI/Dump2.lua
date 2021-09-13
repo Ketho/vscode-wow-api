@@ -1,17 +1,3 @@
----[Documentation](https://wow.gamepedia.com/API_C_PetJournal.GetNumPetsNeedingFanfare)
-function C_PetJournal.GetNumPetsNeedingFanfare() end
-
----@param speciesId number
----@return string ownedString
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_PetJournal.GetOwnedBattlePetString)
-function C_PetJournal.GetOwnedBattlePetString(speciesId) end
-
----[Documentation](https://wow.gamepedia.com/API_C_PetJournal.GetPetAbilityInfo)
-function C_PetJournal.GetPetAbilityInfo(abilityID) end
-
----[Documentation](https://wow.gamepedia.com/API_C_PetJournal.GetPetAbilityList)
-function C_PetJournal.GetPetAbilityList(speciesID, idTable, levelTable) end
-
 ---@param GUID string
 ---@return number start
 ---@return number duration
@@ -30,15 +16,6 @@ function C_PetJournal.GetPetInfoByPetID(petID) end
 
 ---[Documentation](https://wow.gamepedia.com/API_C_PetJournal.GetPetInfoBySpeciesID)
 function C_PetJournal.GetPetInfoBySpeciesID(speciesID) end
-
----@param slotIndex number
----@return string petGUID
----@return number ability1
----@return number ability2
----@return number ability3
----@return boolean locked
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_PetJournal.GetPetLoadOutInfo)
-function C_PetJournal.GetPetLoadOutInfo(slotIndex) end
 
 ---[Documentation](https://wow.gamepedia.com/API_C_PetJournal.GetPetModelSceneInfoBySpeciesID)
 function C_PetJournal.GetPetModelSceneInfoBySpeciesID(speciesID) end
@@ -209,6 +186,15 @@ function C_PetJournal.SummonPetByGUID(petID) end
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_PetJournal.SummonRandomPet)
 function C_PetJournal.SummonRandomPet(favoritePets) end
 
+---[Documentation](https://wow.gamepedia.com/API_C_PlayerChoice.GetPlayerChoiceInfo)
+function C_PlayerChoice.GetPlayerChoiceInfo() end
+
+---[Documentation](https://wow.gamepedia.com/API_C_PlayerChoice.GetPlayerChoiceOptionInfo)
+function C_PlayerChoice.GetPlayerChoiceOptionInfo(optionIndex) end
+
+---[Documentation](https://wow.gamepedia.com/API_C_PlayerChoice.GetPlayerChoiceRewardInfo)
+function C_PlayerChoice.GetPlayerChoiceRewardInfo(rewardIndex) end
+
 ---@param instanceID number
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_PrototypeDialog.EnsureRemoved)
 function C_PrototypeDialog.EnsureRemoved(instanceID) end
@@ -305,6 +291,9 @@ function C_Social.TwitterPostScreenshot(text, screenshotIndex, texture, usedCust
 
 ---[Documentation](https://wow.gamepedia.com/API_C_Soulbinds.GetConduitItemLevel)
 function C_Soulbinds.GetConduitItemLevel(conduitID, rank) end
+
+---[Documentation](https://wow.gamepedia.com/API_C_Soulbinds.GetConduitRankFromCollection)
+function C_Soulbinds.GetConduitRankFromCollection(conduitID) end
 
 ---[Documentation](https://wow.gamepedia.com/API_C_TalkingHead.GetConversationsDeferred)
 function C_TalkingHead.GetConversationsDeferred() end
@@ -616,20 +605,6 @@ function C_TradeSkillUI.SetRecipeSourceTypeFilter(sourceType, filtered) end
 ---[Documentation](https://wow.gamepedia.com/API_C_TradeSkillUI.StopRecipeRepeat)
 function C_TradeSkillUI.StopRecipeRepeat() end
 
----@param currentSpecOnly boolean
----@return boolean success
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_Transmog.ApplyAllPending)
-function C_Transmog.ApplyAllPending(currentSpecOnly) end
-
----[Documentation](https://wow.gamepedia.com/API_C_Transmog.CanTransmogItemWithItem)
-function C_Transmog.CanTransmogItemWithItem(targetItemLink, sourceItemLink) end
-
----[Documentation](https://wow.gamepedia.com/API_C_Transmog.Close)
-function C_Transmog.Close() end
-
----[Documentation](https://wow.gamepedia.com/API_C_Transmog.GetApplyWarnings)
-function C_Transmog.GetApplyWarnings() end
-
 ---@return number cost
 ---@return number numChanges
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_Transmog.GetCost)
@@ -637,9 +612,6 @@ function C_Transmog.GetCost() end
 
 ---[Documentation](https://wow.gamepedia.com/API_C_Transmog.GetItemInfo)
 function C_Transmog.GetItemInfo(item) end
-
----[Documentation](https://wow.gamepedia.com/API_C_Transmog.LoadOutfit)
-function C_Transmog.LoadOutfit(outfitID) end
 
 ---[Documentation](https://wow.gamepedia.com/API_C_Transmog.LoadSources)
 function C_Transmog.LoadSources(sourceIDTable, mainHandEnchant, offHandEnchant) end
@@ -650,75 +622,14 @@ function C_Transmog.ValidateAllPending() end
 ---[Documentation](https://wow.gamepedia.com/API_C_TransmogCollection.CanSetFavoriteInCategory)
 function C_TransmogCollection.CanSetFavoriteInCategory(categoryID) end
 
----[Documentation](https://wow.gamepedia.com/API_C_TransmogCollection.ClearNewAppearance)
-function C_TransmogCollection.ClearNewAppearance(visualID) end
-
----[Documentation](https://wow.gamepedia.com/API_C_TransmogCollection.ClearSearch)
-function C_TransmogCollection.ClearSearch(searchType) end
-
----[Documentation](https://wow.gamepedia.com/API_C_TransmogCollection.DeleteOutfit)
-function C_TransmogCollection.DeleteOutfit(outfitID) end
-
----[Documentation](https://wow.gamepedia.com/API_C_TransmogCollection.EndSearch)
-function C_TransmogCollection.EndSearch() end
-
----[Documentation](https://wow.gamepedia.com/API_C_TransmogCollection.GetAllAppearanceSources)
-function C_TransmogCollection.GetAllAppearanceSources(appearanceID) end
-
----[Documentation](https://wow.gamepedia.com/API_C_TransmogCollection.GetAppearanceCameraID)
-function C_TransmogCollection.GetAppearanceCameraID(visualID) end
-
----[Documentation](https://wow.gamepedia.com/API_C_TransmogCollection.GetAppearanceCameraIDBySource)
-function C_TransmogCollection.GetAppearanceCameraIDBySource(sourceID) end
-
----[Documentation](https://wow.gamepedia.com/API_C_TransmogCollection.GetAppearanceInfoBySource)
-function C_TransmogCollection.GetAppearanceInfoBySource(sourceID) end
-
----[Documentation](https://wow.gamepedia.com/API_C_TransmogCollection.GetAppearanceSourceDrops)
-function C_TransmogCollection.GetAppearanceSourceDrops(sourceID) end
-
----[Documentation](https://wow.gamepedia.com/API_C_TransmogCollection.GetAppearanceSourceInfo)
-function C_TransmogCollection.GetAppearanceSourceInfo(sourceID) end
-
----[Documentation](https://wow.gamepedia.com/API_C_TransmogCollection.GetCategoryAppearances)
-function C_TransmogCollection.GetCategoryAppearances(categoryID, transmogExclusionCategory) end
-
----[Documentation](https://wow.gamepedia.com/API_C_TransmogCollection.GetCategoryCollectedCount)
-function C_TransmogCollection.GetCategoryCollectedCount(categoryID) end
-
----[Documentation](https://wow.gamepedia.com/API_C_TransmogCollection.GetCategoryInfo)
-function C_TransmogCollection.GetCategoryInfo(categoryID) end
-
----[Documentation](https://wow.gamepedia.com/API_C_TransmogCollection.GetCategoryTotal)
-function C_TransmogCollection.GetCategoryTotal(categoryID) end
-
----[Documentation](https://wow.gamepedia.com/API_C_TransmogCollection.GetCollectedShown)
-function C_TransmogCollection.GetCollectedShown() end
-
 ---[Documentation](https://wow.gamepedia.com/API_C_TransmogCollection.GetIllusionFallbackWeaponSource)
 function C_TransmogCollection.GetIllusionFallbackWeaponSource() end
 
----[Documentation](https://wow.gamepedia.com/API_C_TransmogCollection.GetIllusions)
-function C_TransmogCollection.GetIllusions() end
+---[Documentation](https://wow.gamepedia.com/API_C_TransmogCollection.GetIllusionSourceInfo)
+function C_TransmogCollection.GetIllusionSourceInfo(sourceID) end
 
 ---[Documentation](https://wow.gamepedia.com/API_C_TransmogCollection.GetInspectSources)
 function C_TransmogCollection.GetInspectSources() end
-
----[Documentation](https://wow.gamepedia.com/API_C_TransmogCollection.GetIsAppearanceFavorite)
-function C_TransmogCollection.GetIsAppearanceFavorite(appearanceID) end
-
----[Documentation](https://wow.gamepedia.com/API_C_TransmogCollection.GetItemInfo)
-function C_TransmogCollection.GetItemInfo() end
-
----[Documentation](https://wow.gamepedia.com/API_C_TransmogCollection.GetLatestAppearance)
-function C_TransmogCollection.GetLatestAppearance() end
-
----@return number maxOutfits
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_TransmogCollection.GetNumMaxOutfits)
-function C_TransmogCollection.GetNumMaxOutfits() end
-
----[Documentation](https://wow.gamepedia.com/API_C_TransmogCollection.GetNumTransmogSources)
-function C_TransmogCollection.GetNumTransmogSources() end
 
 ---[Documentation](https://wow.gamepedia.com/API_C_TransmogCollection.GetOutfitName)
 function C_TransmogCollection.GetOutfitName(outfitID) end
@@ -726,109 +637,19 @@ function C_TransmogCollection.GetOutfitName(outfitID) end
 ---[Documentation](https://wow.gamepedia.com/API_C_TransmogCollection.GetOutfitSources)
 function C_TransmogCollection.GetOutfitSources(outfitID) end
 
----[Documentation](https://wow.gamepedia.com/API_C_TransmogCollection.GetOutfits)
-function C_TransmogCollection.GetOutfits() end
-
 ---[Documentation](https://wow.gamepedia.com/API_C_TransmogCollection.GetShowMissingSourceInItemTooltips)
 function C_TransmogCollection.GetShowMissingSourceInItemTooltips() end
-
----[Documentation](https://wow.gamepedia.com/API_C_TransmogCollection.GetSourceRequiredHoliday)
-function C_TransmogCollection.GetSourceRequiredHoliday(sourceID) end
-
----[Documentation](https://wow.gamepedia.com/API_C_TransmogCollection.GetUncollectedShown)
-function C_TransmogCollection.GetUncollectedShown() end
-
----[Documentation](https://wow.gamepedia.com/API_C_TransmogCollection.HasFavorites)
-function C_TransmogCollection.HasFavorites() end
-
----[Documentation](https://wow.gamepedia.com/API_C_TransmogCollection.IsCategoryValidForItem)
-function C_TransmogCollection.IsCategoryValidForItem(categoryID, itemID) end
-
----[Documentation](https://wow.gamepedia.com/API_C_TransmogCollection.IsNewAppearance)
-function C_TransmogCollection.IsNewAppearance(visualID) end
-
----[Documentation](https://wow.gamepedia.com/API_C_TransmogCollection.IsSearchDBLoading)
-function C_TransmogCollection.IsSearchDBLoading() end
-
----[Documentation](https://wow.gamepedia.com/API_C_TransmogCollection.IsSearchInProgress)
-function C_TransmogCollection.IsSearchInProgress(searchType) end
-
----[Documentation](https://wow.gamepedia.com/API_C_TransmogCollection.IsSourceTypeFilterChecked)
-function C_TransmogCollection.IsSourceTypeFilterChecked(sourceIndex) end
-
----[Documentation](https://wow.gamepedia.com/API_C_TransmogCollection.ModifyOutfit)
-function C_TransmogCollection.ModifyOutfit(outfitID, newName, newIcon) end
-
----[Documentation](https://wow.gamepedia.com/API_C_TransmogCollection.PlayerCanCollectSource)
-function C_TransmogCollection.PlayerCanCollectSource(sourceID) end
-
----[Documentation](https://wow.gamepedia.com/API_C_TransmogCollection.PlayerHasTransmog)
-function C_TransmogCollection.PlayerHasTransmog(itemID, itemAppearanceModID) end
-
----[Documentation](https://wow.gamepedia.com/API_C_TransmogCollection.PlayerHasTransmogItemModifiedAppearance)
-function C_TransmogCollection.PlayerHasTransmogItemModifiedAppearance(itemModifiedAppearanceID) end
-
----[Documentation](https://wow.gamepedia.com/API_C_TransmogCollection.PlayerKnowsSource)
-function C_TransmogCollection.PlayerKnowsSource(sourceID) end
 
 ---[Documentation](https://wow.gamepedia.com/API_C_TransmogCollection.SaveOutfit)
 function C_TransmogCollection.SaveOutfit(name, sourceIDTable, mainHandEnchant, offHandEnchant, icon) end
 
----[Documentation](https://wow.gamepedia.com/API_C_TransmogCollection.SearchProgress)
-function C_TransmogCollection.SearchProgress(searchType) end
-
----[Documentation](https://wow.gamepedia.com/API_C_TransmogCollection.SearchSize)
-function C_TransmogCollection.SearchSize(searchType) end
-
----[Documentation](https://wow.gamepedia.com/API_C_TransmogCollection.SetAllSourceTypeFilters)
-function C_TransmogCollection.SetAllSourceTypeFilters(checked) end
-
----[Documentation](https://wow.gamepedia.com/API_C_TransmogCollection.SetCollectedShown)
-function C_TransmogCollection.SetCollectedShown(checked) end
-
----[Documentation](https://wow.gamepedia.com/API_C_TransmogCollection.SetIsAppearanceFavorite)
-function C_TransmogCollection.SetIsAppearanceFavorite(appearanceID, value) end
-
----[Documentation](https://wow.gamepedia.com/API_C_TransmogCollection.SetSearch)
-function C_TransmogCollection.SetSearch(searchValue) end
-
----[Documentation](https://wow.gamepedia.com/API_C_TransmogCollection.SetSearchAndFilterCategory)
-function C_TransmogCollection.SetSearchAndFilterCategory(category) end
-
 ---[Documentation](https://wow.gamepedia.com/API_C_TransmogCollection.SetShowMissingSourceInItemTooltips)
 function C_TransmogCollection.SetShowMissingSourceInItemTooltips(bool) end
-
----[Documentation](https://wow.gamepedia.com/API_C_TransmogCollection.SetSourceTypeFilter)
-function C_TransmogCollection.SetSourceTypeFilter(sourceIndex, checked) end
-
----[Documentation](https://wow.gamepedia.com/API_C_TransmogCollection.SetUncollectedShown)
-function C_TransmogCollection.SetUncollectedShown(checked) end
-
----[Documentation](https://wow.gamepedia.com/API_C_TransmogCollection.UpdateUsableAppearances)
-function C_TransmogCollection.UpdateUsableAppearances() end
-
----[Documentation](https://wow.gamepedia.com/API_C_TransmogSets.GetAllSets)
-function C_TransmogSets.GetAllSets() end
-
----[Documentation](https://wow.gamepedia.com/API_C_TransmogSets.GetBaseSetID)
-function C_TransmogSets.GetBaseSetID(setID) end
-
----[Documentation](https://wow.gamepedia.com/API_C_TransmogSets.GetBaseSets)
-function C_TransmogSets.GetBaseSets() end
-
----[Documentation](https://wow.gamepedia.com/API_C_TransmogSets.GetSetInfo)
-function C_TransmogSets.GetSetInfo(setID) end
 
 ---@param setID number
 ---@return table sources
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_TransmogSets.GetSetSources)
 function C_TransmogSets.GetSetSources(setID) end
-
----[Documentation](https://wow.gamepedia.com/API_C_TransmogSets.GetUsableSets)
-function C_TransmogSets.GetUsableSets() end
-
----[Documentation](https://wow.gamepedia.com/API_C_TransmogSets.GetVariantSets)
-function C_TransmogSets.GetVariantSets(setID) end
 
 ---[Documentation](https://wow.gamepedia.com/API_C_TransmogSets.IsSetCollected)
 function C_TransmogSets.IsSetCollected(setID) end
@@ -1674,4 +1495,241 @@ function EJ_GetEncounterInfo(encounterID) end
 
 ---[Documentation](https://wow.gamepedia.com/API_EJ_GetEncounterInfoByIndex)
 function EJ_GetEncounterInfoByIndex(index, instanceID) end
+
+---@param index number
+---@param isRaid boolean
+---@return number instanceID
+---@return string name
+---@return string description
+---@return number bgImage
+---@return number buttonImage1
+---@return number loreImage
+---@return number buttonImage2
+---@return number dungeonAreaMapID
+---@return string link
+---@return boolean shouldDisplayDifficulty
+---[Documentation](https://wowpedia.fandom.com/wiki/API_EJ_GetInstanceByIndex)
+function EJ_GetInstanceByIndex(index, isRaid) end
+
+---@param mapID number
+---@return number instanceID
+---[Documentation](https://wowpedia.fandom.com/wiki/API_EJ_GetInstanceForMap)
+function EJ_GetInstanceForMap(mapID) end
+
+---@param instanceID number
+---@return string name
+---@return string description
+---@return number bgImage
+---@return number buttonImage1
+---@return number loreImage
+---@return number buttonImage2
+---@return number dungeonAreaMapID
+---@return string link
+---@return boolean shouldDisplayDifficulty
+---[Documentation](https://wowpedia.fandom.com/wiki/API_EJ_GetInstanceInfo)
+function EJ_GetInstanceInfo(instanceID) end
+
+---[Documentation](https://wow.gamepedia.com/API_EJ_GetInvTypeSortOrder)
+function EJ_GetInvTypeSortOrder(invType) end
+
+---@return number classID
+---@return number specID
+---[Documentation](https://wowpedia.fandom.com/wiki/API_EJ_GetLootFilter)
+function EJ_GetLootFilter() end
+
+---[Documentation](https://wow.gamepedia.com/API_EJ_GetMapEncounter)
+function EJ_GetMapEncounter(mapID, index, fromJournal) end
+
+---@param index number
+---@return number numLoot
+---[Documentation](https://wowpedia.fandom.com/wiki/API_EJ_GetNumEncountersForLootByIndex)
+function EJ_GetNumEncountersForLootByIndex(index) end
+
+---@return number numLoot
+---[Documentation](https://wowpedia.fandom.com/wiki/API_EJ_GetNumLoot)
+function EJ_GetNumLoot() end
+
+---@return number numResults
+---[Documentation](https://wowpedia.fandom.com/wiki/API_EJ_GetNumSearchResults)
+function EJ_GetNumSearchResults() end
+
+---@return number numTiers
+---[Documentation](https://wowpedia.fandom.com/wiki/API_EJ_GetNumTiers)
+function EJ_GetNumTiers() end
+
+---@return number searchProgress
+---[Documentation](https://wowpedia.fandom.com/wiki/API_EJ_GetSearchProgress)
+function EJ_GetSearchProgress() end
+
+---@param index number
+---@return number id
+---@return number stype
+---@return number difficultyID
+---@return number instanceID
+---@return number encounterID
+---@return string itemLink
+---[Documentation](https://wowpedia.fandom.com/wiki/API_EJ_GetSearchResult)
+function EJ_GetSearchResult(index) end
+
+---@return number searchSize
+---[Documentation](https://wowpedia.fandom.com/wiki/API_EJ_GetSearchSize)
+function EJ_GetSearchSize() end
+
+---@param sectionID number
+---@return number sectionID
+---@return number parentSectionID
+---@return number grandParentSectionID
+---[Documentation](https://wowpedia.fandom.com/wiki/API_EJ_GetSectionPath)
+function EJ_GetSectionPath(sectionID) end
+
+---@param index number
+---@return string name
+---@return string link
+---[Documentation](https://wowpedia.fandom.com/wiki/API_EJ_GetTierInfo)
+function EJ_GetTierInfo(index) end
+
+---[Documentation](https://wow.gamepedia.com/API_EJ_HandleLinkPath)
+function EJ_HandleLinkPath(jtype, id) end
+
+---@return boolean isRaid
+---[Documentation](https://wowpedia.fandom.com/wiki/API_EJ_InstanceIsRaid)
+function EJ_InstanceIsRaid() end
+
+---@return boolean listOutOfDate
+---[Documentation](https://wowpedia.fandom.com/wiki/API_EJ_IsLootListOutOfDate)
+function EJ_IsLootListOutOfDate() end
+
+---@return boolean isFinished
+---[Documentation](https://wowpedia.fandom.com/wiki/API_EJ_IsSearchFinished)
+function EJ_IsSearchFinished() end
+
+---@param difficultyID number
+---@return boolean isValid
+---[Documentation](https://wowpedia.fandom.com/wiki/API_EJ_IsValidInstanceDifficulty)
+function EJ_IsValidInstanceDifficulty(difficultyID) end
+
+---[Documentation](https://wowpedia.fandom.com/wiki/API_EJ_ResetLootFilter)
+function EJ_ResetLootFilter() end
+
+---@param encounterID number
+---[Documentation](https://wowpedia.fandom.com/wiki/API_EJ_SelectEncounter)
+function EJ_SelectEncounter(encounterID) end
+
+---@param instanceID number
+---[Documentation](https://wowpedia.fandom.com/wiki/API_EJ_SelectInstance)
+function EJ_SelectInstance(instanceID) end
+
+---@param index number
+---[Documentation](https://wowpedia.fandom.com/wiki/API_EJ_SelectTier)
+function EJ_SelectTier(index) end
+
+---@param difficultyID number
+---[Documentation](https://wowpedia.fandom.com/wiki/API_EJ_SetDifficulty)
+function EJ_SetDifficulty(difficultyID) end
+
+---@param classID number
+---@param specID number
+---[Documentation](https://wowpedia.fandom.com/wiki/API_EJ_SetLootFilter)
+function EJ_SetLootFilter(classID, specID) end
+
+---@param text string
+---[Documentation](https://wowpedia.fandom.com/wiki/API_EJ_SetSearch)
+function EJ_SetSearch(text) end
+
+---[Documentation](https://wow.gamepedia.com/API_EditMacro)
+function EditMacro(index, name, iconIndex, body, isLocal, perCharacter) end
+
+---[Documentation](https://wow.gamepedia.com/API_EjectPassengerFromSeat)
+function EjectPassengerFromSeat(seat) end
+
+---[Documentation](https://wow.gamepedia.com/API_EnableAddOn)
+function EnableAddOn() end
+
+---[Documentation](https://wowpedia.fandom.com/wiki/API_EnableAllAddOns)
+function EnableAllAddOns() end
+
+---[Documentation](https://wow.gamepedia.com/API_EnableSpellAutocast)
+function EnableSpellAutocast() end
+
+---[Documentation](https://wow.gamepedia.com/API_EndBoundTradeable)
+function EndBoundTradeable(type) end
+
+---[Documentation](https://wow.gamepedia.com/API_EndRefund)
+function EndRefund() end
+
+---@param currentFrame table
+---@return table nextFrame
+---[Documentation](https://wowpedia.fandom.com/wiki/API_EnumerateFrames)
+function EnumerateFrames(currentFrame) end
+
+---[Documentation](https://wow.gamepedia.com/API_EnumerateServerChannels)
+function EnumerateServerChannels() end
+
+---[Documentation](https://wow.gamepedia.com/API_EquipCursorItem)
+function EquipCursorItem(invSlot) end
+
+---[Documentation](https://wow.gamepedia.com/API_EquipItemByName)
+function EquipItemByName(item, invSlot) end
+
+---[Documentation](https://wow.gamepedia.com/API_EquipPendingItem)
+function EquipPendingItem(invSlot) end
+
+---[Documentation](https://wowpedia.fandom.com/wiki/API_ExecuteVoidTransfer)
+function ExecuteVoidTransfer() end
+
+---[Documentation](https://wow.gamepedia.com/API_ExpandAllFactionHeaders)
+function ExpandAllFactionHeaders() end
+
+---@param rowIndex number
+---[Documentation](https://wowpedia.fandom.com/wiki/API_ExpandFactionHeader)
+function ExpandFactionHeader(rowIndex) end
+
+---[Documentation](https://wow.gamepedia.com/API_ExpandGuildTradeSkillHeader)
+function ExpandGuildTradeSkillHeader(tradeSkillID) end
+
+---[Documentation](https://wow.gamepedia.com/API_ExpandQuestHeader)
+function ExpandQuestHeader() end
+
+---[Documentation](https://wow.gamepedia.com/API_ExpandWarGameHeader)
+function ExpandWarGameHeader(index) end
+
+---[Documentation](https://wow.gamepedia.com/API_FactionToggleAtWar)
+function FactionToggleAtWar(index) end
+
+---[Documentation](https://wow.gamepedia.com/API_FillLocalizedClassList)
+function FillLocalizedClassList(classTable, isFemale) end
+
+---@param spellID number
+---@return number baseSpellID
+---[Documentation](https://wowpedia.fandom.com/wiki/API_FindBaseSpellByID)
+function FindBaseSpellByID(spellID) end
+
+---[Documentation](https://wow.gamepedia.com/API_FindFlyoutSlotBySpellID)
+function FindFlyoutSlotBySpellID(spellID) end
+
+---[Documentation](https://wow.gamepedia.com/API_FindSpellBookSlotBySpellID)
+function FindSpellBookSlotBySpellID(spellID, isPet) end
+
+---@param spellID number
+---@return number overrideSpellID
+---[Documentation](https://wowpedia.fandom.com/wiki/API_FindSpellOverrideByID)
+function FindSpellOverrideByID(spellID) end
+
+---[Documentation](https://wow.gamepedia.com/API_FlagTutorial)
+function FlagTutorial(tutorial) end
+
+---[Documentation](https://wowpedia.fandom.com/wiki/API_FlashClientIcon)
+function FlashClientIcon() end
+
+---[Documentation](https://wow.gamepedia.com/API_FlipCameraYaw)
+function FlipCameraYaw(degrees) end
+
+---@param flyoutID number
+---@param spellID number
+---@return boolean hasSpell
+---[Documentation](https://wowpedia.fandom.com/wiki/API_FlyoutHasSpell)
+function FlyoutHasSpell(flyoutID, spellID) end
+
+---[Documentation](https://wow.gamepedia.com/API_FocusUnit)
+function FocusUnit(unit) end
 

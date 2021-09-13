@@ -1,8 +1,9 @@
 ---@class RuneforgePowerFilter
 local RuneforgePowerFilter = {
 	All = 0,
-	Available = 1,
-	Unavailable = 2,
+	Relevant = 1,
+	Available = 2,
+	Unavailable = 3,
 }
 
 ---@class RuneforgePowerState

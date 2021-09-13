@@ -1,240 +1,3 @@
----@param index number
----@param isRaid boolean
----@return number instanceID
----@return string name
----@return string description
----@return number bgImage
----@return number buttonImage1
----@return number loreImage
----@return number buttonImage2
----@return number dungeonAreaMapID
----@return string link
----@return boolean shouldDisplayDifficulty
----[Documentation](https://wowpedia.fandom.com/wiki/API_EJ_GetInstanceByIndex)
-function EJ_GetInstanceByIndex(index, isRaid) end
-
----@param mapID number
----@return number instanceID
----[Documentation](https://wowpedia.fandom.com/wiki/API_EJ_GetInstanceForMap)
-function EJ_GetInstanceForMap(mapID) end
-
----@param instanceID number
----@return string name
----@return string description
----@return number bgImage
----@return number buttonImage1
----@return number loreImage
----@return number buttonImage2
----@return number dungeonAreaMapID
----@return string link
----@return boolean shouldDisplayDifficulty
----[Documentation](https://wowpedia.fandom.com/wiki/API_EJ_GetInstanceInfo)
-function EJ_GetInstanceInfo(instanceID) end
-
----[Documentation](https://wow.gamepedia.com/API_EJ_GetInvTypeSortOrder)
-function EJ_GetInvTypeSortOrder(invType) end
-
----@return number classID
----@return number specID
----[Documentation](https://wowpedia.fandom.com/wiki/API_EJ_GetLootFilter)
-function EJ_GetLootFilter() end
-
----[Documentation](https://wow.gamepedia.com/API_EJ_GetMapEncounter)
-function EJ_GetMapEncounter(mapID, index, fromJournal) end
-
----@param index number
----@return number numLoot
----[Documentation](https://wowpedia.fandom.com/wiki/API_EJ_GetNumEncountersForLootByIndex)
-function EJ_GetNumEncountersForLootByIndex(index) end
-
----@return number numLoot
----[Documentation](https://wowpedia.fandom.com/wiki/API_EJ_GetNumLoot)
-function EJ_GetNumLoot() end
-
----@return number numResults
----[Documentation](https://wowpedia.fandom.com/wiki/API_EJ_GetNumSearchResults)
-function EJ_GetNumSearchResults() end
-
----@return number numTiers
----[Documentation](https://wowpedia.fandom.com/wiki/API_EJ_GetNumTiers)
-function EJ_GetNumTiers() end
-
----@return number searchProgress
----[Documentation](https://wowpedia.fandom.com/wiki/API_EJ_GetSearchProgress)
-function EJ_GetSearchProgress() end
-
----@param index number
----@return number id
----@return number stype
----@return number difficultyID
----@return number instanceID
----@return number encounterID
----@return string itemLink
----[Documentation](https://wowpedia.fandom.com/wiki/API_EJ_GetSearchResult)
-function EJ_GetSearchResult(index) end
-
----@return number searchSize
----[Documentation](https://wowpedia.fandom.com/wiki/API_EJ_GetSearchSize)
-function EJ_GetSearchSize() end
-
----@param sectionID number
----@return number sectionID
----@return number parentSectionID
----@return number grandParentSectionID
----[Documentation](https://wowpedia.fandom.com/wiki/API_EJ_GetSectionPath)
-function EJ_GetSectionPath(sectionID) end
-
----@param index number
----@return string name
----@return string link
----[Documentation](https://wowpedia.fandom.com/wiki/API_EJ_GetTierInfo)
-function EJ_GetTierInfo(index) end
-
----[Documentation](https://wow.gamepedia.com/API_EJ_HandleLinkPath)
-function EJ_HandleLinkPath(jtype, id) end
-
----@return boolean isRaid
----[Documentation](https://wowpedia.fandom.com/wiki/API_EJ_InstanceIsRaid)
-function EJ_InstanceIsRaid() end
-
----@return boolean listOutOfDate
----[Documentation](https://wowpedia.fandom.com/wiki/API_EJ_IsLootListOutOfDate)
-function EJ_IsLootListOutOfDate() end
-
----@return boolean isFinished
----[Documentation](https://wowpedia.fandom.com/wiki/API_EJ_IsSearchFinished)
-function EJ_IsSearchFinished() end
-
----@param difficultyID number
----@return boolean isValid
----[Documentation](https://wowpedia.fandom.com/wiki/API_EJ_IsValidInstanceDifficulty)
-function EJ_IsValidInstanceDifficulty(difficultyID) end
-
----[Documentation](https://wowpedia.fandom.com/wiki/API_EJ_ResetLootFilter)
-function EJ_ResetLootFilter() end
-
----@param encounterID number
----[Documentation](https://wowpedia.fandom.com/wiki/API_EJ_SelectEncounter)
-function EJ_SelectEncounter(encounterID) end
-
----@param instanceID number
----[Documentation](https://wowpedia.fandom.com/wiki/API_EJ_SelectInstance)
-function EJ_SelectInstance(instanceID) end
-
----@param index number
----[Documentation](https://wowpedia.fandom.com/wiki/API_EJ_SelectTier)
-function EJ_SelectTier(index) end
-
----@param difficultyID number
----[Documentation](https://wowpedia.fandom.com/wiki/API_EJ_SetDifficulty)
-function EJ_SetDifficulty(difficultyID) end
-
----@param classID number
----@param specID number
----[Documentation](https://wowpedia.fandom.com/wiki/API_EJ_SetLootFilter)
-function EJ_SetLootFilter(classID, specID) end
-
----@param text string
----[Documentation](https://wowpedia.fandom.com/wiki/API_EJ_SetSearch)
-function EJ_SetSearch(text) end
-
----[Documentation](https://wow.gamepedia.com/API_EditMacro)
-function EditMacro(index, name, iconIndex, body, isLocal, perCharacter) end
-
----[Documentation](https://wow.gamepedia.com/API_EjectPassengerFromSeat)
-function EjectPassengerFromSeat(seat) end
-
----[Documentation](https://wow.gamepedia.com/API_EnableAddOn)
-function EnableAddOn() end
-
----[Documentation](https://wowpedia.fandom.com/wiki/API_EnableAllAddOns)
-function EnableAllAddOns() end
-
----[Documentation](https://wow.gamepedia.com/API_EnableSpellAutocast)
-function EnableSpellAutocast() end
-
----[Documentation](https://wow.gamepedia.com/API_EndBoundTradeable)
-function EndBoundTradeable(type) end
-
----[Documentation](https://wow.gamepedia.com/API_EndRefund)
-function EndRefund() end
-
----@param currentFrame table
----@return table nextFrame
----[Documentation](https://wowpedia.fandom.com/wiki/API_EnumerateFrames)
-function EnumerateFrames(currentFrame) end
-
----[Documentation](https://wow.gamepedia.com/API_EnumerateServerChannels)
-function EnumerateServerChannels() end
-
----[Documentation](https://wow.gamepedia.com/API_EquipCursorItem)
-function EquipCursorItem(invSlot) end
-
----[Documentation](https://wow.gamepedia.com/API_EquipItemByName)
-function EquipItemByName(item, invSlot) end
-
----[Documentation](https://wow.gamepedia.com/API_EquipPendingItem)
-function EquipPendingItem(invSlot) end
-
----[Documentation](https://wowpedia.fandom.com/wiki/API_ExecuteVoidTransfer)
-function ExecuteVoidTransfer() end
-
----[Documentation](https://wow.gamepedia.com/API_ExpandAllFactionHeaders)
-function ExpandAllFactionHeaders() end
-
----@param rowIndex number
----[Documentation](https://wowpedia.fandom.com/wiki/API_ExpandFactionHeader)
-function ExpandFactionHeader(rowIndex) end
-
----[Documentation](https://wow.gamepedia.com/API_ExpandGuildTradeSkillHeader)
-function ExpandGuildTradeSkillHeader(tradeSkillID) end
-
----[Documentation](https://wow.gamepedia.com/API_ExpandQuestHeader)
-function ExpandQuestHeader() end
-
----[Documentation](https://wow.gamepedia.com/API_ExpandWarGameHeader)
-function ExpandWarGameHeader(index) end
-
----[Documentation](https://wow.gamepedia.com/API_FactionToggleAtWar)
-function FactionToggleAtWar(index) end
-
----[Documentation](https://wow.gamepedia.com/API_FillLocalizedClassList)
-function FillLocalizedClassList(classTable, isFemale) end
-
----@param spellID number
----@return number baseSpellID
----[Documentation](https://wowpedia.fandom.com/wiki/API_FindBaseSpellByID)
-function FindBaseSpellByID(spellID) end
-
----[Documentation](https://wow.gamepedia.com/API_FindFlyoutSlotBySpellID)
-function FindFlyoutSlotBySpellID(spellID) end
-
----[Documentation](https://wow.gamepedia.com/API_FindSpellBookSlotBySpellID)
-function FindSpellBookSlotBySpellID(spellID, isPet) end
-
----@param spellID number
----@return number overrideSpellID
----[Documentation](https://wowpedia.fandom.com/wiki/API_FindSpellOverrideByID)
-function FindSpellOverrideByID(spellID) end
-
----[Documentation](https://wow.gamepedia.com/API_FlagTutorial)
-function FlagTutorial(tutorial) end
-
----[Documentation](https://wowpedia.fandom.com/wiki/API_FlashClientIcon)
-function FlashClientIcon() end
-
----[Documentation](https://wow.gamepedia.com/API_FlipCameraYaw)
-function FlipCameraYaw(degrees) end
-
----@param flyoutID number
----@param spellID number
----@return boolean hasSpell
----[Documentation](https://wowpedia.fandom.com/wiki/API_FlyoutHasSpell)
-function FlyoutHasSpell(flyoutID, spellID) end
-
----[Documentation](https://wow.gamepedia.com/API_FocusUnit)
-function FocusUnit(unit) end
-
 ---[Documentation](https://wow.gamepedia.com/API_FollowUnit)
 function FollowUnit(unit) end
 
@@ -1915,4 +1678,198 @@ function GetMerchantItemCostInfo(index) end
 ---@return string currencyName
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_GetMerchantItemCostItem)
 function GetMerchantItemCostItem(index, itemIndex) end
+
+---[Documentation](https://wow.gamepedia.com/API_GetMerchantItemID)
+function GetMerchantItemID(index) end
+
+---[Documentation](https://wow.gamepedia.com/API_GetMerchantItemInfo)
+function GetMerchantItemInfo(index) end
+
+---[Documentation](https://wow.gamepedia.com/API_GetMerchantItemLink)
+function GetMerchantItemLink(index) end
+
+---@param index number
+---@return number maxStack
+---[Documentation](https://wowpedia.fandom.com/wiki/API_GetMerchantItemMaxStack)
+function GetMerchantItemMaxStack(index) end
+
+---[Documentation](https://wow.gamepedia.com/API_GetMerchantNumItems)
+function GetMerchantNumItems() end
+
+---[Documentation](https://wow.gamepedia.com/API_GetMinRenderScale)
+function GetMinRenderScale() end
+
+---[Documentation](https://wow.gamepedia.com/API_GetMinimapZoneText)
+function GetMinimapZoneText() end
+
+---[Documentation](https://wow.gamepedia.com/API_GetMirrorTimerInfo)
+function GetMirrorTimerInfo(id) end
+
+---[Documentation](https://wow.gamepedia.com/API_GetMirrorTimerProgress)
+function GetMirrorTimerProgress(id) end
+
+---[Documentation](https://wow.gamepedia.com/API_GetModResilienceDamageReduction)
+function GetModResilienceDamageReduction() end
+
+---@param action string
+---@return string key
+---[Documentation](https://wowpedia.fandom.com/wiki/API_GetModifiedClick)
+function GetModifiedClick(action) end
+
+---[Documentation](https://wow.gamepedia.com/API_GetModifiedClickAction)
+function GetModifiedClickAction(index) end
+
+---@return number money
+---[Documentation](https://wowpedia.fandom.com/wiki/API_GetMoney)
+function GetMoney() end
+
+---[Documentation](https://wow.gamepedia.com/API_GetMonitorAspectRatio)
+function GetMonitorAspectRatio() end
+
+---[Documentation](https://wow.gamepedia.com/API_GetMonitorCount)
+function GetMonitorCount() end
+
+---[Documentation](https://wow.gamepedia.com/API_GetMonitorName)
+function GetMonitorName() end
+
+---@return string buttonName
+---[Documentation](https://wowpedia.fandom.com/wiki/API_GetMouseButtonClicked)
+function GetMouseButtonClicked() end
+
+---[Documentation](https://wow.gamepedia.com/API_GetMouseButtonName)
+function GetMouseButtonName() end
+
+---[Documentation](https://wow.gamepedia.com/API_GetMouseClickFocus)
+function GetMouseClickFocus() end
+
+---[Documentation](https://wow.gamepedia.com/API_GetMouseFocus)
+function GetMouseFocus() end
+
+---[Documentation](https://wow.gamepedia.com/API_GetMouseMotionFocus)
+function GetMouseMotionFocus() end
+
+---[Documentation](https://wow.gamepedia.com/API_GetMovieDownloadProgress)
+function GetMovieDownloadProgress(movieId) end
+
+---[Documentation](https://wow.gamepedia.com/API_GetMultiCastBarIndex)
+function GetMultiCastBarIndex() end
+
+---[Documentation](https://wow.gamepedia.com/API_GetMultiCastTotemSpells)
+function GetMultiCastTotemSpells(totemslot) end
+
+---[Documentation](https://wow.gamepedia.com/API_GetNetIpTypes)
+function GetNetIpTypes() end
+
+---@return number bandwidthIn
+---@return number bandwidthOut
+---@return number latencyHome
+---@return number latencyWorld
+---[Documentation](https://wowpedia.fandom.com/wiki/API_GetNetStats)
+function GetNetStats() end
+
+---[Documentation](https://wow.gamepedia.com/API_GetNewSocketInfo)
+function GetNewSocketInfo(id) end
+
+---[Documentation](https://wow.gamepedia.com/API_GetNewSocketLink)
+function GetNewSocketLink(id) end
+
+---@param achievementID number
+---@return number nextAchievementID
+---[Documentation](https://wowpedia.fandom.com/wiki/API_GetNextAchievement)
+function GetNextAchievement(achievementID) end
+
+---[Documentation](https://wow.gamepedia.com/API_GetNextCompleatedTutorial)
+function GetNextCompleatedTutorial(tutorial) end
+
+---[Documentation](https://wow.gamepedia.com/API_GetNextPendingInviteConfirmation)
+function GetNextPendingInviteConfirmation() end
+
+---[Documentation](https://wow.gamepedia.com/API_GetNormalizedRealmName)
+function GetNormalizedRealmName() end
+
+---[Documentation](https://wow.gamepedia.com/API_GetNumActiveQuests)
+function GetNumActiveQuests() end
+
+---[Documentation](https://wow.gamepedia.com/API_GetNumAddOns)
+function GetNumAddOns() end
+
+---@return number numRaces
+---[Documentation](https://wowpedia.fandom.com/wiki/API_GetNumArchaeologyRaces)
+function GetNumArchaeologyRaces() end
+
+---[Documentation](https://wow.gamepedia.com/API_GetNumArenaOpponentSpecs)
+function GetNumArenaOpponentSpecs() end
+
+---[Documentation](https://wow.gamepedia.com/API_GetNumArenaOpponents)
+function GetNumArenaOpponents() end
+
+---@param raceIndex number
+---@return number numProjects
+---[Documentation](https://wowpedia.fandom.com/wiki/API_GetNumArtifactsByRace)
+function GetNumArtifactsByRace(raceIndex) end
+
+---@return number numPopups
+---[Documentation](https://wowpedia.fandom.com/wiki/API_GetNumAutoQuestPopUps)
+function GetNumAutoQuestPopUps() end
+
+---[Documentation](https://wow.gamepedia.com/API_GetNumAvailableQuests)
+function GetNumAvailableQuests() end
+
+---[Documentation](https://wow.gamepedia.com/API_GetNumBankSlots)
+function GetNumBankSlots() end
+
+---[Documentation](https://wow.gamepedia.com/API_GetNumBattlefieldFlagPositions)
+function GetNumBattlefieldFlagPositions() end
+
+---[Documentation](https://wow.gamepedia.com/API_GetNumBattlefieldScores)
+function GetNumBattlefieldScores() end
+
+---[Documentation](https://wow.gamepedia.com/API_GetNumBattlefieldVehicles)
+function GetNumBattlefieldVehicles(index) end
+
+---@return number numBattlegrounds
+---[Documentation](https://wowpedia.fandom.com/wiki/API_GetNumBattlegroundTypes)
+function GetNumBattlegroundTypes() end
+
+---[Documentation](https://wow.gamepedia.com/API_GetNumBindings)
+function GetNumBindings() end
+
+---[Documentation](https://wow.gamepedia.com/API_GetNumBuybackItems)
+function GetNumBuybackItems() end
+
+---[Documentation](https://wow.gamepedia.com/API_GetNumChannelMembers)
+function GetNumChannelMembers() end
+
+---@return number numClasses
+---[Documentation](https://wowpedia.fandom.com/wiki/API_GetNumClasses)
+function GetNumClasses() end
+
+---@param type string
+---@return number count
+---[Documentation](https://wowpedia.fandom.com/wiki/API_GetNumCompanions)
+function GetNumCompanions(type) end
+
+---[Documentation](https://wow.gamepedia.com/API_GetNumComparisonCompletedAchievements)
+function GetNumComparisonCompletedAchievements() end
+
+---@return number total
+---@return number completed
+---[Documentation](https://wowpedia.fandom.com/wiki/API_GetNumCompletedAchievements)
+function GetNumCompletedAchievements() end
+
+---[Documentation](https://wow.gamepedia.com/API_GetNumDeclensionSets)
+function GetNumDeclensionSets(name, gender) end
+
+---[Documentation](https://wow.gamepedia.com/API_GetNumDisplayChannels)
+function GetNumDisplayChannels() end
+
+---[Documentation](https://wow.gamepedia.com/API_GetNumDungeonForRandomSlot)
+function GetNumDungeonForRandomSlot(randomID) end
+
+---[Documentation](https://wow.gamepedia.com/API_GetNumFactions)
+function GetNumFactions() end
+
+---@return number numFiltered
+---[Documentation](https://wowpedia.fandom.com/wiki/API_GetNumFilteredAchievements)
+function GetNumFilteredAchievements() end
 

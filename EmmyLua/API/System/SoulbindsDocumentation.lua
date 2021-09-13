@@ -114,8 +114,8 @@ function C_Soulbinds.GetConduitQuality(conduitID, rank) end
 
 ---@param conduitID number
 ---@return number conduitRank
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_Soulbinds.GetConduitRankFromCollection)
-function C_Soulbinds.GetConduitRankFromCollection(conduitID) end
+---[Documentation](https://wowpedia.fandom.com/wiki/API_C_Soulbinds.GetConduitRank)
+function C_Soulbinds.GetConduitRank(conduitID) end
 
 ---@param conduitID number
 ---@param conduitRank number
@@ -137,6 +137,11 @@ function C_Soulbinds.GetNode(nodeID) end
 ---@return SoulbindData data
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_Soulbinds.GetSoulbindData)
 function C_Soulbinds.GetSoulbindData(soulbindID) end
+
+---@param soulbindID number
+---@return number[] specIDs
+---[Documentation](https://wowpedia.fandom.com/wiki/API_C_Soulbinds.GetSpecsAssignedToSoulbind)
+function C_Soulbinds.GetSpecsAssignedToSoulbind(soulbindID) end
 
 ---@return number count
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_Soulbinds.GetTotalConduitChargesPending)
@@ -255,6 +260,7 @@ local SoulbindModelSceneData = {}
 ---@field conduitType SoulbindConduitType|nil
 ---@field parentNodeIDs number[]
 ---@field failureRenownRequirement number|nil
+---@field socketEnhanced boolean|nil
 local SoulbindNode = {}
 
 ---@class SoulbindTree

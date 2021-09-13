@@ -12,10 +12,23 @@ function C_TransmogSets.ClearNewSource(sourceID) end
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_TransmogSets.ClearSetNewSourcesForSlot)
 function C_TransmogSets.ClearSetNewSourcesForSlot(transmogSetID, slot) end
 
+---@return TransmogSetInfo[] sets
+---[Documentation](https://wowpedia.fandom.com/wiki/API_C_TransmogSets.GetAllSets)
+function C_TransmogSets.GetAllSets() end
+
 ---@param transmogSetID number
 ---@return number[] sources
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_TransmogSets.GetAllSourceIDs)
 function C_TransmogSets.GetAllSourceIDs(transmogSetID) end
+
+---@param transmogSetID number
+---@return number baseTransmogSetID
+---[Documentation](https://wowpedia.fandom.com/wiki/API_C_TransmogSets.GetBaseSetID)
+function C_TransmogSets.GetBaseSetID(transmogSetID) end
+
+---@return TransmogSetInfo[] sets
+---[Documentation](https://wowpedia.fandom.com/wiki/API_C_TransmogSets.GetBaseSets)
+function C_TransmogSets.GetBaseSets() end
 
 ---@return number numCollected
 ---@return number numTotal
@@ -43,9 +56,19 @@ function C_TransmogSets.GetIsFavorite(transmogSetID) end
 function C_TransmogSets.GetLatestSource() end
 
 ---@param transmogSetID number
+---@return TransmogSetInfo set
+---[Documentation](https://wowpedia.fandom.com/wiki/API_C_TransmogSets.GetSetInfo)
+function C_TransmogSets.GetSetInfo(transmogSetID) end
+
+---@param transmogSetID number
 ---@return number[] sourceIDs
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_TransmogSets.GetSetNewSources)
 function C_TransmogSets.GetSetNewSources(transmogSetID) end
+
+---@param transmogSetID number
+---@return TransmogSetPrimaryAppearanceInfo[] apppearances
+---[Documentation](https://wowpedia.fandom.com/wiki/API_C_TransmogSets.GetSetPrimaryAppearances)
+function C_TransmogSets.GetSetPrimaryAppearances(transmogSetID) end
 
 ---@param sourceID number
 ---@return number[] setIDs
@@ -63,6 +86,15 @@ function C_TransmogSets.GetSourceIDsForSlot(transmogSetID, slot) end
 ---@return AppearanceSourceInfo[] sources
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_TransmogSets.GetSourcesForSlot)
 function C_TransmogSets.GetSourcesForSlot(transmogSetID, slot) end
+
+---@return TransmogSetInfo[] sets
+---[Documentation](https://wowpedia.fandom.com/wiki/API_C_TransmogSets.GetUsableSets)
+function C_TransmogSets.GetUsableSets() end
+
+---@param transmogSetID number
+---@return TransmogSetInfo[] sets
+---[Documentation](https://wowpedia.fandom.com/wiki/API_C_TransmogSets.GetVariantSets)
+function C_TransmogSets.GetVariantSets(transmogSetID) end
 
 ---@return boolean hasUsableSets
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_TransmogSets.HasUsableSets)
@@ -98,3 +130,25 @@ function C_TransmogSets.SetHasNewSourcesForSlot(transmogSetID, slot) end
 ---@param isFavorite boolean
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_TransmogSets.SetIsFavorite)
 function C_TransmogSets.SetIsFavorite(transmogSetID, isFavorite) end
+
+---@class TransmogSetInfo
+---@field setID number
+---@field name string
+---@field baseSetID number|nil
+---@field description string|nil
+---@field label string|nil
+---@field expansionID number
+---@field patchID number
+---@field uiOrder number
+---@field classMask number
+---@field hiddenUntilCollected boolean
+---@field requiredFaction string|nil
+---@field collected boolean
+---@field favorite boolean
+---@field limitedTimeSet boolean
+local TransmogSetInfo = {}
+
+---@class TransmogSetPrimaryAppearanceInfo
+---@field appearanceID number
+---@field collected boolean
+local TransmogSetPrimaryAppearanceInfo = {}

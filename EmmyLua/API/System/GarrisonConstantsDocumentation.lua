@@ -1,3 +1,12 @@
+---@class ContributionState
+local ContributionState = {
+	None = 0,
+	Building = 1,
+	Active = 2,
+	UnderAttack = 3,
+	Destroyed = 4,
+}
+
 ---@class CovenantSkill
 local CovenantSkill = {
 	Kyrian = 2730,
@@ -127,6 +136,7 @@ local GarrFollowerMissionCompleteState = {
 
 ---@class GarrFollowerQuality
 local GarrFollowerQuality = {
+	None = 0,
 	Common = 1,
 	Uncommon = 2,
 	Rare = 3,

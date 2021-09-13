@@ -91,6 +91,7 @@ local OptionalReagentItemFlag = {
 
 ---@class OptionalReagentSlot
 ---@field requiredSkillRank number
+---@field lockedReason string|nil
 ---@field slotText string|nil
 ---@field options number[]
 local OptionalReagentSlot = {}

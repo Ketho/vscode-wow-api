@@ -21,9 +21,9 @@ function C_AlliedRaces.GetRaceInfoByID(raceID) end
 ---@field maleName string
 ---@field femaleName string
 ---@field description string
+---@field raceFileString string
 ---@field crestAtlas string
 ---@field modelBackgroundAtlas string
----@field raceFileString string
 ---@field bannerColor ColorMixin
 local AlliedRaceInfo = {}
 

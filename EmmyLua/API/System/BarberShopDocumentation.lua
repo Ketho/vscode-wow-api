@@ -7,8 +7,9 @@ function C_BarberShop.ApplyCustomizationChoices() end
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_BarberShop.Cancel)
 function C_BarberShop.Cancel() end
 
+---@param clearSavedChoices boolean
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_BarberShop.ClearPreviewChoices)
-function C_BarberShop.ClearPreviewChoices() end
+function C_BarberShop.ClearPreviewChoices(clearSavedChoices) end
 
 ---@return CharCustomizationCategory[] categories
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_BarberShop.GetAvailableCustomizations)
@@ -34,13 +35,13 @@ function C_BarberShop.HasAnyChanges() end
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_BarberShop.IsViewingAlteredForm)
 function C_BarberShop.IsViewingAlteredForm() end
 
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_BarberShop.OldBarberShopLoaded)
-function C_BarberShop.OldBarberShopLoaded() end
-
 ---@param optionID number
 ---@param choiceID number
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_BarberShop.PreviewCustomizationChoice)
 function C_BarberShop.PreviewCustomizationChoice(optionID, choiceID) end
+
+---[Documentation](https://wowpedia.fandom.com/wiki/API_C_BarberShop.RandomizeCustomizationChoices)
+function C_BarberShop.RandomizeCustomizationChoices() end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_BarberShop.ResetCameraRotation)
 function C_BarberShop.ResetCameraRotation() end

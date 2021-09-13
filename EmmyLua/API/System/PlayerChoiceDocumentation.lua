@@ -1,22 +1,26 @@
 C_PlayerChoice = {}
 
 ---@return PlayerChoiceInfo choiceInfo
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_PlayerChoice.GetPlayerChoiceInfo)
-function C_PlayerChoice.GetPlayerChoiceInfo() end
+---[Documentation](https://wowpedia.fandom.com/wiki/API_C_PlayerChoice.GetCurrentPlayerChoiceInfo)
+function C_PlayerChoice.GetCurrentPlayerChoiceInfo() end
 
----@param optionIndex number
----@return PlayerChoiceOptionInfo info
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_PlayerChoice.GetPlayerChoiceOptionInfo)
-function C_PlayerChoice.GetPlayerChoiceOptionInfo(optionIndex) end
-
----@param rewardIndex number
----@return PlayerChoiceRewardInfo rewardInfo
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_PlayerChoice.GetPlayerChoiceRewardInfo)
-function C_PlayerChoice.GetPlayerChoiceRewardInfo(rewardIndex) end
+---@return number numRerolls
+---[Documentation](https://wowpedia.fandom.com/wiki/API_C_PlayerChoice.GetNumRerolls)
+function C_PlayerChoice.GetNumRerolls() end
 
 ---@return boolean isWaitingForResponse
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_PlayerChoice.IsWaitingForPlayerChoiceResponse)
 function C_PlayerChoice.IsWaitingForPlayerChoiceResponse() end
+
+---[Documentation](https://wowpedia.fandom.com/wiki/API_C_PlayerChoice.OnUIClosed)
+function C_PlayerChoice.OnUIClosed() end
+
+---[Documentation](https://wowpedia.fandom.com/wiki/API_C_PlayerChoice.RequestRerollPlayerChoice)
+function C_PlayerChoice.RequestRerollPlayerChoice() end
+
+---@param responseID number
+---[Documentation](https://wowpedia.fandom.com/wiki/API_C_PlayerChoice.SendPlayerChoiceResponse)
+function C_PlayerChoice.SendPlayerChoiceResponse(responseID) end
 
 ---@class PlayerChoiceRarity
 local PlayerChoiceRarity = {
@@ -29,61 +33,62 @@ local PlayerChoiceRarity = {
 ---@class PlayerChoiceInfo
 ---@field choiceID number
 ---@field questionText string
----@field numOptions number
 ---@field uiTextureKit string
----@field soundKitID number|nil
 ---@field hideWarboardHeader boolean
 ---@field keepOpenAfterChoice boolean
+---@field options PlayerChoiceOptionInfo[]
+---@field soundKitID number|nil
 local PlayerChoiceInfo = {}
+
+---@class PlayerChoiceOptionButtonInfo
+---@field id number
+---@field text string
+---@field disabled boolean
+---@field confirmation string|nil
+---@field tooltip string|nil
+---@field rewardQuestID number|nil
+---@field soundKitID number|nil
+local PlayerChoiceOptionButtonInfo = {}
 
 ---@class PlayerChoiceOptionInfo
 ---@field id number
----@field responseIdentifier number
----@field buttonText string
 ---@field description string
 ---@field header string
 ---@field choiceArtID number
----@field confirmation string|nil
----@field widgetSetID number|nil
----@field disabledButton boolean
 ---@field desaturatedArt boolean
 ---@field disabledOption boolean
----@field groupID number|nil
----@field headerIconAtlasElement string|nil
----@field subHeader string|nil
----@field buttonTooltip string|nil
----@field rewardQuestID number|nil
----@field soundKitID number|nil
 ---@field hasRewards boolean
+---@field rewardInfo PlayerChoiceOptionRewardInfo
 ---@field rarity PlayerChoiceRarity
+---@field uiTextureKit string
+---@field maxStacks number
+---@field buttons PlayerChoiceOptionButtonInfo[]
+---@field widgetSetID number|nil
+---@field spellID number|nil
 ---@field rarityColor ColorMixin|nil
 ---@field typeArtID number|nil
----@field uiTextureKit string|nil
----@field spellID number|nil
----@field maxStacks number
+---@field headerIconAtlasElement string|nil
+---@field subHeader string|nil
 local PlayerChoiceOptionInfo = {}
+
+---@class PlayerChoiceOptionRewardInfo
+---@field currencyRewards PlayerChoiceRewardCurrencyInfo[]
+---@field itemRewards PlayerChoiceRewardItemInfo[]
+---@field repRewards PlayerChoiceRewardReputationInfo[]
+local PlayerChoiceOptionRewardInfo = {}
 
 ---@class PlayerChoiceRewardCurrencyInfo
 ---@field currencyId number
+---@field name string
 ---@field currencyTexture number
 ---@field quantity number
+---@field isCurrencyContainer boolean
 local PlayerChoiceRewardCurrencyInfo = {}
-
----@class PlayerChoiceRewardInfo
----@field money number|nil
----@field xp number|nil
----@field itemRewards PlayerChoiceRewardItemInfo[]
----@field currencyRewards PlayerChoiceRewardCurrencyInfo[]
----@field repRewards PlayerChoiceRewardReputationInfo[]
-local PlayerChoiceRewardInfo = {}
 
 ---@class PlayerChoiceRewardItemInfo
 ---@field itemId number
 ---@field name string
----@field quality number
----@field textureFileId number
 ---@field quantity number
----@field itemLink string
 local PlayerChoiceRewardItemInfo = {}
 
 ---@class PlayerChoiceRewardReputationInfo

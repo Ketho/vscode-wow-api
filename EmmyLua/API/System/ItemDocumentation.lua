@@ -1,6 +1,12 @@
 C_Item = {}
 
 ---@param itemLoc ItemLocationMixin
+---@return boolean canTransmog
+---@return number errorCode
+---[Documentation](https://wowpedia.fandom.com/wiki/API_C_Item.CanItemTransmogAppearance)
+function C_Item.CanItemTransmogAppearance(itemLoc) end
+
+---@param itemLoc ItemLocationMixin
 ---@return boolean canBeScrapped
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_Item.CanScrapItem)
 function C_Item.CanScrapItem(itemLoc) end
@@ -24,6 +30,16 @@ function C_Item.DoesItemExistByID(itemInfo) end
 ---@return boolean matchesBonusTree
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_Item.DoesItemMatchBonusTreeReplacement)
 function C_Item.DoesItemMatchBonusTreeReplacement(itemLoc) end
+
+---@param itemLoc ItemLocationMixin
+---@return ItemTransmogInfoMixin? info
+---[Documentation](https://wowpedia.fandom.com/wiki/API_C_Item.GetAppliedItemTransmogInfo)
+function C_Item.GetAppliedItemTransmogInfo(itemLoc) end
+
+---@param itemLoc ItemLocationMixin
+---@return ItemTransmogInfoMixin? info
+---[Documentation](https://wowpedia.fandom.com/wiki/API_C_Item.GetBaseItemTransmogInfo)
+function C_Item.GetBaseItemTransmogInfo(itemLoc) end
 
 ---@param itemLocation ItemLocationMixin
 ---@return number? currentItemLevel
@@ -99,6 +115,11 @@ function C_Item.IsAnimaItemByID(itemInfo) end
 ---@return boolean isBound
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_Item.IsBound)
 function C_Item.IsBound(itemLocation) end
+
+---@param itemInfo string
+---@return boolean isDressableItem
+---[Documentation](https://wowpedia.fandom.com/wiki/API_C_Item.IsDressableItemByID)
+function C_Item.IsDressableItemByID(itemInfo) end
 
 ---@param itemLoc ItemLocationMixin
 ---@return boolean isConduit

@@ -46,4 +46,6 @@ local UIWidgetVisualizationType = {
 	TextureWithAnimation = 18,
 	DiscreteProgressSteps = 19,
 	ScenarioHeaderTimer = 20,
+	TextColumnRow = 21,
+	Spacer = 22,
 }

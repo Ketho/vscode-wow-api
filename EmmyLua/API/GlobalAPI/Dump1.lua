@@ -411,6 +411,9 @@ function C_AdventureMap.GetZoneChoiceInfo(choiceIndex) end
 ---[Documentation](https://wow.gamepedia.com/API_C_AdventureMap.StartQuest)
 function C_AdventureMap.StartQuest(questID) end
 
+---[Documentation](https://wow.gamepedia.com/API_C_BarberShop.OldBarberShopLoaded)
+function C_BarberShop.OldBarberShopLoaded() end
+
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_BlackMarket.Close)
 function C_BlackMarket.Close() end
 
@@ -1323,6 +1326,9 @@ function C_LFGList.SetApplicantMemberRole(applicantID, memberIndex, role) end
 ---[Documentation](https://wow.gamepedia.com/API_C_LFGList.UpdateListing)
 function C_LFGList.UpdateListing(lfgID, itemLevel, honorLevel, autoAccept, private, questID) end
 
+---[Documentation](https://wow.gamepedia.com/API_C_LegendaryCrafting.GetRuneforgePowersByClassAndSpec)
+function C_LegendaryCrafting.GetRuneforgePowersByClassAndSpec(classID, specID, filter) end
+
 ---[Documentation](https://wow.gamepedia.com/API_C_LootHistory.CanMasterLoot)
 function C_LootHistory.CanMasterLoot(itemIndex, playerIndex) end
 
@@ -1538,12 +1544,6 @@ function C_PetBattles.GetBattleState() end
 
 ---@param petOwner number
 ---@param petIndex number
----@return number rarity
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_PetBattles.GetBreedQuality)
-function C_PetBattles.GetBreedQuality(petOwner, petIndex) end
-
----@param petOwner number
----@param petIndex number
 ---@return number displayID
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_PetBattles.GetDisplayID)
 function C_PetBattles.GetDisplayID(petOwner, petIndex) end
@@ -1560,12 +1560,6 @@ function C_PetBattles.GetHealth(petOwner, petIndex) end
 
 ---@param petOwner number
 ---@param petIndex number
----@return string icon
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_PetBattles.GetIcon)
-function C_PetBattles.GetIcon(petOwner, petIndex) end
-
----@param petOwner number
----@param petIndex number
 ---@return number level
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_PetBattles.GetLevel)
 function C_PetBattles.GetLevel(petOwner, petIndex) end
@@ -1575,13 +1569,6 @@ function C_PetBattles.GetLevel(petOwner, petIndex) end
 ---@return number maxHealth
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_PetBattles.GetMaxHealth)
 function C_PetBattles.GetMaxHealth(petOwner, petIndex) end
-
----@param petOwner number
----@param petIndex number
----@return string name
----@return string speciesName
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_PetBattles.GetName)
-function C_PetBattles.GetName(petOwner, petIndex) end
 
 ---@param petOwner number
 ---@param petIndex number
@@ -1654,11 +1641,6 @@ function C_PetBattles.GetXP(petOwner, petIndex) end
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_PetBattles.IsInBattle)
 function C_PetBattles.IsInBattle() end
 
----@param petOwner number
----@return boolean isNPC
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_PetBattles.IsPlayerNPC)
-function C_PetBattles.IsPlayerNPC(petOwner) end
-
 ---@return boolean usable
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_PetBattles.IsSkipAvailable)
 function C_PetBattles.IsSkipAvailable() end
@@ -1670,10 +1652,6 @@ function C_PetBattles.IsTrapAvailable() end
 ---@return boolean isWaiting
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_PetBattles.IsWaitingOnOpponent)
 function C_PetBattles.IsWaitingOnOpponent() end
-
----@return boolean inWildBattle
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_PetBattles.IsWildBattle)
-function C_PetBattles.IsWildBattle() end
 
 ---@param petIndex number
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_PetBattles.SetPendingReportBattlePetTarget)
@@ -1751,4 +1729,15 @@ function C_PetJournal.GetNumPetTypes() end
 ---@return number numOwned
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_PetJournal.GetNumPets)
 function C_PetJournal.GetNumPets() end
+
+---[Documentation](https://wow.gamepedia.com/API_C_PetJournal.GetNumPetsNeedingFanfare)
+function C_PetJournal.GetNumPetsNeedingFanfare() end
+
+---@param speciesId number
+---@return string ownedString
+---[Documentation](https://wowpedia.fandom.com/wiki/API_C_PetJournal.GetOwnedBattlePetString)
+function C_PetJournal.GetOwnedBattlePetString(speciesId) end
+
+---[Documentation](https://wow.gamepedia.com/API_C_PetJournal.GetPetAbilityList)
+function C_PetJournal.GetPetAbilityList(speciesID, idTable, levelTable) end
 

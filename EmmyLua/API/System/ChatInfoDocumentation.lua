@@ -1,5 +1,10 @@
 C_ChatInfo = {}
 
+---@param channelIdentifier string
+---@return ChatChannelInfo? info
+---[Documentation](https://wowpedia.fandom.com/wiki/API_C_ChatInfo.GetChannelInfoFromIdentifier)
+function C_ChatInfo.GetChannelInfoFromIdentifier(channelIdentifier) end
+
 ---@param channelIndex number
 ---@param rosterIndex number
 ---@return string name
@@ -29,6 +34,11 @@ function C_ChatInfo.GetChannelShortcut(channelIndex) end
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_ChatInfo.GetChannelShortcutForChannelID)
 function C_ChatInfo.GetChannelShortcutForChannelID(channelID) end
 
+---@param typeID number
+---@return string? name
+---[Documentation](https://wowpedia.fandom.com/wiki/API_C_ChatInfo.GetChatTypeName)
+function C_ChatInfo.GetChatTypeName(typeID) end
+
 ---@param clubID string
 ---@return string[] ids
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_ChatInfo.GetClubStreamIDs)
@@ -49,6 +59,10 @@ function C_ChatInfo.GetMentorChannelID() end
 ---@return number numChannels
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_ChatInfo.GetNumActiveChannels)
 function C_ChatInfo.GetNumActiveChannels() end
+
+---@return number numReserved
+---[Documentation](https://wowpedia.fandom.com/wiki/API_C_ChatInfo.GetNumReservedChatWindows)
+function C_ChatInfo.GetNumReservedChatWindows() end
 
 ---@return string[] registeredPrefixes
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_ChatInfo.GetRegisteredAddonMessagePrefixes)
@@ -121,3 +135,12 @@ function C_ChatInfo.SendAddonMessageLogged(prefix, message, chatType, target) en
 ---@param secondChannelIndex number
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_ChatInfo.SwapChatChannelsByChannelIndex)
 function C_ChatInfo.SwapChatChannelsByChannelIndex(firstChannelIndex, secondChannelIndex) end
+
+---@class ChatChannelInfo
+---@field name string
+---@field shortcut string
+---@field localID number
+---@field instanceID number
+---@field zoneChannelID number
+---@field channelType PermanentChatChannelType
+local ChatChannelInfo = {}

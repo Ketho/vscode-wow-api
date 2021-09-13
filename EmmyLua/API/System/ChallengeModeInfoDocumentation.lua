@@ -34,6 +34,12 @@ function C_ChallengeMode.GetAffixInfo(affixID) end
 ---@return boolean onTime
 ---@return number keystoneUpgradeLevels
 ---@return boolean practiceRun
+---@return number oldOverallDungeonScore
+---@return number newOverallDungeonScore
+---@return boolean IsMapRecord
+---@return boolean IsAffixRecord
+---@return number PrimaryAffix
+---@return ChallengeModeCompletionMemberInfo[] members
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_ChallengeMode.GetCompletionInfo)
 function C_ChallengeMode.GetCompletionInfo() end
 
@@ -42,9 +48,21 @@ function C_ChallengeMode.GetCompletionInfo() end
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_ChallengeMode.GetDeathCount)
 function C_ChallengeMode.GetDeathCount() end
 
+---@param dungeonScore number
+---@return ColorMixin scoreColor
+---[Documentation](https://wowpedia.fandom.com/wiki/API_C_ChallengeMode.GetDungeonScoreRarityColor)
+---Returns a color value from the passed in overall season M+ rating.
+function C_ChallengeMode.GetDungeonScoreRarityColor(dungeonScore) end
+
 ---@return ChallengeModeGuildTopAttempt[] topAttempt
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_ChallengeMode.GetGuildLeaders)
 function C_ChallengeMode.GetGuildLeaders() end
+
+---@param level number
+---@return ColorMixin levelScore
+---[Documentation](https://wowpedia.fandom.com/wiki/API_C_ChallengeMode.GetKeystoneLevelRarityColor)
+---Returns a color value from the passed in keystone level.
+function C_ChallengeMode.GetKeystoneLevelRarityColor(level) end
 
 ---@return number[] mapChallengeModeIDs
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_ChallengeMode.GetMapTable)
@@ -59,6 +77,11 @@ function C_ChallengeMode.GetMapTable() end
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_ChallengeMode.GetMapUIInfo)
 function C_ChallengeMode.GetMapUIInfo(mapChallengeModeID) end
 
+---@return number overallDungeonScore
+---[Documentation](https://wowpedia.fandom.com/wiki/API_C_ChallengeMode.GetOverallDungeonScore)
+---Gets the overall season mythic+ rating for the player.
+function C_ChallengeMode.GetOverallDungeonScore() end
+
 ---@param powerLevel number
 ---@return number damageMod
 ---@return number healthMod
@@ -70,6 +93,18 @@ function C_ChallengeMode.GetPowerLevelDamageHealthMod(powerLevel) end
 ---@return number keystoneLevel
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_ChallengeMode.GetSlottedKeystoneInfo)
 function C_ChallengeMode.GetSlottedKeystoneInfo() end
+
+---@param specificDungeonOverallScore number
+---@return ColorMixin specificDungeonOverallScoreColor
+---[Documentation](https://wowpedia.fandom.com/wiki/API_C_ChallengeMode.GetSpecificDungeonOverallScoreRarityColor)
+---Returns a color value from the passed in mythic+ rating from the combined affix scores for a specific dungeon
+function C_ChallengeMode.GetSpecificDungeonOverallScoreRarityColor(specificDungeonOverallScore) end
+
+---@param specificDungeonScore number
+---@return ColorMixin specificDungeonScoreColor
+---[Documentation](https://wowpedia.fandom.com/wiki/API_C_ChallengeMode.GetSpecificDungeonScoreRarityColor)
+---Returns a color value from the passed in mythic+ rating for a specific dungeon.
+function C_ChallengeMode.GetSpecificDungeonScoreRarityColor(specificDungeonScore) end
 
 ---@return boolean hasSlottedKeystone
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_ChallengeMode.HasSlottedKeystone)
@@ -99,6 +134,11 @@ function C_ChallengeMode.SlotKeystone() end
 ---@return boolean success
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_ChallengeMode.StartChallengeMode)
 function C_ChallengeMode.StartChallengeMode() end
+
+---@class ChallengeModeCompletionMemberInfo
+---@field memberGUID string
+---@field name string
+local ChallengeModeCompletionMemberInfo = {}
 
 ---@class ChallengeModeGuildAttemptMember
 ---@field name string

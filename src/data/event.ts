@@ -1964,6 +1964,27 @@ export const data: EventInterface = {
 			{Name: "supressRaidIcons", Type: "boolean"},
 		],
 	},
+	CHAT_MSG_VOICE_TEXT: {
+		Payload: [
+			{Name: "text", Type: "string"},
+			{Name: "playerName", Type: "string"},
+			{Name: "languageName", Type: "string"},
+			{Name: "channelName", Type: "string"},
+			{Name: "playerName2", Type: "string"},
+			{Name: "specialFlags", Type: "string"},
+			{Name: "zoneChannelID", Type: "number"},
+			{Name: "channelIndex", Type: "number"},
+			{Name: "channelBaseName", Type: "string"},
+			{Name: "unused", Type: "number"},
+			{Name: "lineID", Type: "number"},
+			{Name: "guid", Type: "string"},
+			{Name: "bnSenderID", Type: "number"},
+			{Name: "isMobile", Type: "boolean"},
+			{Name: "isSubtitle", Type: "boolean"},
+			{Name: "hideSenderInLetterbox", Type: "boolean"},
+			{Name: "supressRaidIcons", Type: "boolean"},
+		],
+	},
 	CHAT_MSG_WHISPER: {
 		Payload: [
 			{Name: "text", Type: "string"},
@@ -2494,6 +2515,12 @@ export const data: EventInterface = {
 	DISABLE_LOW_LEVEL_RAID: {},
 	DISABLE_TAXI_BENCHMARK: {},
 	DISABLE_XP_GAIN: {},
+	DISPLAY_EVENT_TOASTS: {},
+	DISPLAY_EVENT_TOAST_LINK: {
+		Payload: [
+			{Name: "link", Type: "string"},
+		],
+	},
 	DISPLAY_SIZE_CHANGED: {},
 	DUEL_FINISHED: {},
 	DUEL_INBOUNDS: {},
@@ -2607,6 +2634,13 @@ export const data: EventInterface = {
 	FORBIDDEN_NAME_PLATE_UNIT_REMOVED: {
 		Payload: [
 			{Name: "unitToken", Type: "string"},
+		],
+	},
+	FRAME_MANAGER_UPDATE_ALL: {},
+	FRAME_MANAGER_UPDATE_FRAME: {
+		Payload: [
+			{Name: "type", Type: "UIFrameType"},
+			{Name: "show", Type: "boolean"},
 		],
 	},
 	FRIENDLIST_UPDATE: {},
@@ -2816,6 +2850,17 @@ export const data: EventInterface = {
 		],
 	},
 	GARRISON_SHOW_LANDING_PAGE: {},
+	GARRISON_SPEC_GROUPS_CLEARED: {
+		Payload: [
+			{Name: "garrTypeID", Type: "number"},
+		],
+	},
+	GARRISON_SPEC_GROUP_UPDATED: {
+		Payload: [
+			{Name: "garrTypeID", Type: "number"},
+			{Name: "specID", Type: "number"},
+		],
+	},
 	GARRISON_TALENT_COMPLETE: {
 		Payload: [
 			{Name: "garrTypeID", Type: "number"},
@@ -3540,13 +3585,6 @@ export const data: EventInterface = {
 	MOUNT_JOURNAL_USABILITY_CHANGED: {},
 	MUTELIST_UPDATE: {},
 	MYTHIC_PLUS_CURRENT_AFFIX_UPDATE: {},
-	MYTHIC_PLUS_NEW_SEASON_RECORD: {
-		Payload: [
-			{Name: "mapChallengeModeID", Type: "number"},
-			{Name: "completionMilliseconds", Type: "number"},
-			{Name: "level", Type: "number"},
-		],
-	},
 	MYTHIC_PLUS_NEW_WEEKLY_RECORD: {
 		Payload: [
 			{Name: "mapChallengeModeID", Type: "number"},
@@ -4378,6 +4416,7 @@ export const data: EventInterface = {
 	SCREENSHOT_FAILED: {},
 	SCREENSHOT_STARTED: {},
 	SCREENSHOT_SUCCEEDED: {},
+	SCRIPTED_ANIMATIONS_UPDATE: {},
 	SEARCH_DB_LOADED: {},
 	SECURE_TRANSFER_CANCEL: {},
 	SECURE_TRANSFER_CONFIRM_SEND_MAIL: {},
@@ -4407,6 +4446,7 @@ export const data: EventInterface = {
 			{Name: "hasAttachedFollower", Type: "boolean", Nilable: true},
 		],
 	},
+	SHOW_AADC_ALERT: {},
 	SHOW_FACTION_SELECT_UI: {},
 	SHOW_LFG_EXPAND_SEARCH_PROMPT: {},
 	SHOW_LOOT_TOAST: {
@@ -4860,8 +4900,8 @@ export const data: EventInterface = {
 	TRANSMOG_OUTFITS_CHANGED: {},
 	TRANSMOG_SEARCH_UPDATED: {
 		Payload: [
-			{Name: "searchType", Type: "number"},
-			{Name: "collectionType", Type: "number", Nilable: true},
+			{Name: "searchType", Type: "TransmogSearchType"},
+			{Name: "collectionType", Type: "TransmogCollectionType", Nilable: true},
 		],
 	},
 	TRANSMOG_SETS_UPDATE_FAVORITE: {},
@@ -4906,6 +4946,12 @@ export const data: EventInterface = {
 		],
 	},
 	UI_ERROR_MESSAGE: {
+		Payload: [
+			{Name: "errorType", Type: "number"},
+			{Name: "message", Type: "string"},
+		],
+	},
+	UI_ERROR_POPUP: {
 		Payload: [
 			{Name: "errorType", Type: "number"},
 			{Name: "message", Type: "string"},
@@ -5470,6 +5516,14 @@ export const data: EventInterface = {
 			{Name: "isSpeaking", Type: "boolean"},
 		],
 	},
+	VOICE_CHAT_CHANNEL_MEMBER_STT_MESSAGE: {
+		Payload: [
+			{Name: "memberID", Type: "number"},
+			{Name: "channelID", Type: "number"},
+			{Name: "message", Type: "string"},
+			{Name: "language", Type: "string"},
+		],
+	},
 	VOICE_CHAT_CHANNEL_MEMBER_VOLUME_CHANGED: {
 		Payload: [
 			{Name: "memberID", Type: "number"},
@@ -5492,6 +5546,12 @@ export const data: EventInterface = {
 	VOICE_CHAT_CHANNEL_REMOVED: {
 		Payload: [
 			{Name: "channelID", Type: "number"},
+		],
+	},
+	VOICE_CHAT_CHANNEL_TRANSCRIBING_CHANGED: {
+		Payload: [
+			{Name: "channelID", Type: "number"},
+			{Name: "isTranscribing", Type: "boolean"},
 		],
 	},
 	VOICE_CHAT_CHANNEL_TRANSMIT_CHANGED: {
@@ -5558,6 +5618,37 @@ export const data: EventInterface = {
 			{Name: "isSilenced", Type: "boolean"},
 		],
 	},
+	VOICE_CHAT_SPEAK_FOR_ME_ACTIVE_STATUS_UPDATED: {},
+	VOICE_CHAT_SPEAK_FOR_ME_FEATURE_STATUS_UPDATED: {},
+	VOICE_CHAT_TTS_PLAYBACK_FAILED: {
+		Payload: [
+			{Name: "status", Type: "VoiceTtsStatusCode"},
+			{Name: "utteranceID", Type: "number"},
+			{Name: "destination", Type: "VoiceTtsDestination"},
+		],
+	},
+	VOICE_CHAT_TTS_PLAYBACK_FINISHED: {
+		Payload: [
+			{Name: "numConsumers", Type: "number"},
+			{Name: "utteranceID", Type: "number"},
+			{Name: "destination", Type: "VoiceTtsDestination"},
+		],
+	},
+	VOICE_CHAT_TTS_PLAYBACK_STARTED: {
+		Payload: [
+			{Name: "numConsumers", Type: "number"},
+			{Name: "utteranceID", Type: "number"},
+			{Name: "durationMS", Type: "number"},
+			{Name: "destination", Type: "VoiceTtsDestination"},
+		],
+	},
+	VOICE_CHAT_TTS_SPEAK_TEXT_UPDATE: {
+		Payload: [
+			{Name: "status", Type: "VoiceTtsStatusCode"},
+			{Name: "utteranceID", Type: "number"},
+		],
+	},
+	VOICE_CHAT_TTS_VOICES_UPDATE: {},
 	VOID_DEPOSIT_WARNING: {
 		Payload: [
 			{Name: "slot", Type: "number"},

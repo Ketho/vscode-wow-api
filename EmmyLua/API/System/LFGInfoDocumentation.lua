@@ -33,6 +33,11 @@ function C_LFGInfo.ConfirmLfgExpandSearch() end
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_LFGInfo.GetAllEntriesForCategory)
 function C_LFGInfo.GetAllEntriesForCategory(category) end
 
+---@param lfgDungeonID number
+---@return LFGDungeonInfo dungeonInfo
+---[Documentation](https://wowpedia.fandom.com/wiki/API_C_LFGInfo.GetDungeonInfo)
+function C_LFGInfo.GetDungeonInfo(lfgDungeonID) end
+
 ---@return LFGLockInfo[] lockInfo
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_LFGInfo.GetLFDLockStates)
 function C_LFGInfo.GetLFDLockStates() end
@@ -46,6 +51,12 @@ function C_LFGInfo.GetRoleCheckDifficultyDetails() end
 ---@return boolean shouldHide
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_LFGInfo.HideNameFromUI)
 function C_LFGInfo.HideNameFromUI(dungeonID) end
+
+---@class LFGDungeonInfo
+---@field name string
+---@field iconID number
+---@field link string|nil
+local LFGDungeonInfo = {}
 
 ---@class LFGLockInfo
 ---@field lfgID number

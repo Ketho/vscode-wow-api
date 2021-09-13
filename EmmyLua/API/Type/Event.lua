@@ -262,6 +262,7 @@
 ---| '"CHAT_MSG_TARGETICONS"' # `text, playerName, languageName, channelName, playerName2, specialFlags, zoneChannelID, channelIndex, channelBaseName, unused, lineID, guid, bnSenderID, isMobile, isSubtitle, hideSenderInLetterbox, supressRaidIcons`
 ---| '"CHAT_MSG_TEXT_EMOTE"' # `text, playerName, languageName, channelName, playerName2, specialFlags, zoneChannelID, channelIndex, channelBaseName, unused, lineID, guid, bnSenderID, isMobile, isSubtitle, hideSenderInLetterbox, supressRaidIcons`
 ---| '"CHAT_MSG_TRADESKILLS"' # `text, playerName, languageName, channelName, playerName2, specialFlags, zoneChannelID, channelIndex, channelBaseName, unused, lineID, guid, bnSenderID, isMobile, isSubtitle, hideSenderInLetterbox, supressRaidIcons`
+---| '"CHAT_MSG_VOICE_TEXT"' # `text, playerName, languageName, channelName, playerName2, specialFlags, zoneChannelID, channelIndex, channelBaseName, unused, lineID, guid, bnSenderID, isMobile, isSubtitle, hideSenderInLetterbox, supressRaidIcons`
 ---| '"CHAT_MSG_WHISPER"' # `text, playerName, languageName, channelName, playerName2, specialFlags, zoneChannelID, channelIndex, channelBaseName, unused, lineID, guid, bnSenderID, isMobile, isSubtitle, hideSenderInLetterbox, supressRaidIcons`
 ---| '"CHAT_MSG_WHISPER_INFORM"' # `text, playerName, languageName, channelName, playerName2, specialFlags, zoneChannelID, channelIndex, channelBaseName, unused, lineID, guid, bnSenderID, isMobile, isSubtitle, hideSenderInLetterbox, supressRaidIcons`
 ---| '"CHAT_MSG_YELL"' # `text, playerName, languageName, channelName, playerName2, specialFlags, zoneChannelID, channelIndex, channelBaseName, unused, lineID, guid, bnSenderID, isMobile, isSubtitle, hideSenderInLetterbox, supressRaidIcons`
@@ -387,6 +388,8 @@
 ---| '"DISABLE_LOW_LEVEL_RAID"'
 ---| '"DISABLE_TAXI_BENCHMARK"'
 ---| '"DISABLE_XP_GAIN"'
+---| '"DISPLAY_EVENT_TOASTS"'
+---| '"DISPLAY_EVENT_TOAST_LINK"' # `link`
 ---| '"DISPLAY_SIZE_CHANGED"'
 ---| '"DUEL_FINISHED"'
 ---| '"DUEL_INBOUNDS"'
@@ -417,6 +420,8 @@
 ---| '"FORBIDDEN_NAME_PLATE_CREATED"' # `namePlateFrame`
 ---| '"FORBIDDEN_NAME_PLATE_UNIT_ADDED"' # `unitToken`
 ---| '"FORBIDDEN_NAME_PLATE_UNIT_REMOVED"' # `unitToken`
+---| '"FRAME_MANAGER_UPDATE_ALL"'
+---| '"FRAME_MANAGER_UPDATE_FRAME"' # `type, show`
 ---| '"FRIENDLIST_UPDATE"'
 ---| '"GAME_PAD_CONFIGS_CHANGED"'
 ---| '"GAME_PAD_CONNECTED"'
@@ -469,6 +474,8 @@
 ---| '"GARRISON_SHIPYARD_NPC_CLOSED"'
 ---| '"GARRISON_SHIPYARD_NPC_OPENED"' # `followerTypeID`
 ---| '"GARRISON_SHOW_LANDING_PAGE"'
+---| '"GARRISON_SPEC_GROUPS_CLEARED"' # `garrTypeID`
+---| '"GARRISON_SPEC_GROUP_UPDATED"' # `garrTypeID, specID`
 ---| '"GARRISON_TALENT_COMPLETE"' # `garrTypeID, doAlert`
 ---| '"GARRISON_TALENT_EVENT_UPDATE"' # `eventType, eventID`
 ---| '"GARRISON_TALENT_NPC_CLOSED"'
@@ -699,7 +706,6 @@
 ---| '"MOUNT_JOURNAL_USABILITY_CHANGED"'
 ---| '"MUTELIST_UPDATE"'
 ---| '"MYTHIC_PLUS_CURRENT_AFFIX_UPDATE"'
----| '"MYTHIC_PLUS_NEW_SEASON_RECORD"' # `mapChallengeModeID, completionMilliseconds, level`
 ---| '"MYTHIC_PLUS_NEW_WEEKLY_RECORD"' # `mapChallengeModeID, completionMilliseconds, level`
 ---| '"NAME_PLATE_CREATED"' # `namePlateFrame`
 ---| '"NAME_PLATE_UNIT_ADDED"' # `unitToken`
@@ -954,6 +960,7 @@
 ---| '"SCREENSHOT_FAILED"'
 ---| '"SCREENSHOT_STARTED"'
 ---| '"SCREENSHOT_SUCCEEDED"'
+---| '"SCRIPTED_ANIMATIONS_UPDATE"'
 ---| '"SEARCH_DB_LOADED"'
 ---| '"SECURE_TRANSFER_CANCEL"'
 ---| '"SECURE_TRANSFER_CONFIRM_SEND_MAIL"'
@@ -966,6 +973,7 @@
 ---| '"SHIPMENT_CRAFTER_OPENED"' # `charShipmentContainerID`
 ---| '"SHIPMENT_CRAFTER_REAGENT_UPDATE"'
 ---| '"SHIPMENT_UPDATE"' # `shipmentStarted, hasAttachedFollower`
+---| '"SHOW_AADC_ALERT"'
 ---| '"SHOW_FACTION_SELECT_UI"'
 ---| '"SHOW_LFG_EXPAND_SEARCH_PROMPT"'
 ---| '"SHOW_LOOT_TOAST"' # `typeIdentifier, itemLink, quantity, specID, sex, personalLootToast, toastMethod, lessAwesome, upgraded, corrupted`
@@ -1108,6 +1116,7 @@
 ---| '"TWITTER_POST_RESULT"' # `result`
 ---| '"TWITTER_STATUS_UPDATE"' # `isTwitterEnabled, isLinked, screenName`
 ---| '"UI_ERROR_MESSAGE"' # `errorType, message`
+---| '"UI_ERROR_POPUP"' # `errorType, message`
 ---| '"UI_INFO_MESSAGE"' # `errorType, message`
 ---| '"UI_MODEL_SCENE_INFO_UPDATED"'
 ---| '"UI_SCALE_CHANGED"'
@@ -1239,10 +1248,12 @@
 ---| '"VOICE_CHAT_CHANNEL_MEMBER_REMOVED"' # `memberID, channelID`
 ---| '"VOICE_CHAT_CHANNEL_MEMBER_SILENCED_CHANGED"' # `memberID, channelID, isSilenced`
 ---| '"VOICE_CHAT_CHANNEL_MEMBER_SPEAKING_STATE_CHANGED"' # `memberID, channelID, isSpeaking`
+---| '"VOICE_CHAT_CHANNEL_MEMBER_STT_MESSAGE"' # `memberID, channelID, message, language`
 ---| '"VOICE_CHAT_CHANNEL_MEMBER_VOLUME_CHANGED"' # `memberID, channelID, volume`
 ---| '"VOICE_CHAT_CHANNEL_MUTE_STATE_CHANGED"' # `channelID, isMuted`
 ---| '"VOICE_CHAT_CHANNEL_PTT_CHANGED"' # `channelID, pushToTalkSetting`
 ---| '"VOICE_CHAT_CHANNEL_REMOVED"' # `channelID`
+---| '"VOICE_CHAT_CHANNEL_TRANSCRIBING_CHANGED"' # `channelID, isTranscribing`
 ---| '"VOICE_CHAT_CHANNEL_TRANSMIT_CHANGED"' # `channelID, isTransmitting`
 ---| '"VOICE_CHAT_CHANNEL_VOLUME_CHANGED"' # `channelID, volume`
 ---| '"VOICE_CHAT_COMMUNICATION_MODE_CHANGED"' # `communicationMode`
@@ -1257,6 +1268,13 @@
 ---| '"VOICE_CHAT_PENDING_CHANNEL_JOIN_STATE"' # `channelType, clubId, streamId, pendingJoin`
 ---| '"VOICE_CHAT_PTT_BUTTON_PRESSED_STATE_CHANGED"' # `isPressed`
 ---| '"VOICE_CHAT_SILENCED_CHANGED"' # `isSilenced`
+---| '"VOICE_CHAT_SPEAK_FOR_ME_ACTIVE_STATUS_UPDATED"'
+---| '"VOICE_CHAT_SPEAK_FOR_ME_FEATURE_STATUS_UPDATED"'
+---| '"VOICE_CHAT_TTS_PLAYBACK_FAILED"' # `status, utteranceID, destination`
+---| '"VOICE_CHAT_TTS_PLAYBACK_FINISHED"' # `numConsumers, utteranceID, destination`
+---| '"VOICE_CHAT_TTS_PLAYBACK_STARTED"' # `numConsumers, utteranceID, durationMS, destination`
+---| '"VOICE_CHAT_TTS_SPEAK_TEXT_UPDATE"' # `status, utteranceID`
+---| '"VOICE_CHAT_TTS_VOICES_UPDATE"'
 ---| '"VOID_DEPOSIT_WARNING"' # `slot, link`
 ---| '"VOID_STORAGE_CLOSE"'
 ---| '"VOID_STORAGE_CONTENTS_UPDATE"'

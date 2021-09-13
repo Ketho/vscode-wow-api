@@ -1,5 +1,30 @@
 C_Transmog = {}
 
+---@param currentSpecOnly boolean
+---@return boolean requestSent
+---[Documentation](https://wowpedia.fandom.com/wiki/API_C_Transmog.ApplyAllPending)
+function C_Transmog.ApplyAllPending(currentSpecOnly) end
+
+---@param slotID number
+---@return boolean canHaveSecondaryAppearance
+---[Documentation](https://wowpedia.fandom.com/wiki/API_C_Transmog.CanHaveSecondaryAppearanceForSlotID)
+function C_Transmog.CanHaveSecondaryAppearanceForSlotID(slotID) end
+
+---@param itemInfo string
+---@return boolean canBeTransmogged
+---@return string? selfFailureReason
+---@return boolean canTransmogOthers
+---@return string? othersFailureReason
+---[Documentation](https://wowpedia.fandom.com/wiki/API_C_Transmog.CanTransmogItem)
+function C_Transmog.CanTransmogItem(itemInfo) end
+
+---@param targetItemInfo string
+---@param sourceItemInfo string
+---@return boolean canTransmog
+---@return string? failureReason
+---[Documentation](https://wowpedia.fandom.com/wiki/API_C_Transmog.CanTransmogItemWithItem)
+function C_Transmog.CanTransmogItemWithItem(targetItemInfo, sourceItemInfo) end
+
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_Transmog.ClearAllPending)
 function C_Transmog.ClearAllPending() end
 
@@ -7,8 +32,19 @@ function C_Transmog.ClearAllPending() end
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_Transmog.ClearPending)
 function C_Transmog.ClearPending(transmogLocation) end
 
+---[Documentation](https://wowpedia.fandom.com/wiki/API_C_Transmog.Close)
+function C_Transmog.Close() end
+
+---@return number? cost
+---[Documentation](https://wowpedia.fandom.com/wiki/API_C_Transmog.GetApplyCost)
+function C_Transmog.GetApplyCost() end
+
+---@return TransmogApplyWarningInfo[] warnings
+---[Documentation](https://wowpedia.fandom.com/wiki/API_C_Transmog.GetApplyWarnings)
+function C_Transmog.GetApplyWarnings() end
+
 ---@param transmogID number
----@return number categoryID
+---@return TransmogCollectionType categoryID
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_Transmog.GetBaseCategory)
 function C_Transmog.GetBaseCategory(transmogID) end
 
@@ -21,6 +57,16 @@ function C_Transmog.GetCreatureDisplayIDForSource(itemModifiedAppearanceID) end
 ---@return number? itemID
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_Transmog.GetItemIDForSource)
 function C_Transmog.GetItemIDForSource(itemModifiedAppearanceID) end
+
+---@param transmogLocation TransmogLocationMixin
+---@return TransmogPendingInfoMixin pendingInfo
+---[Documentation](https://wowpedia.fandom.com/wiki/API_C_Transmog.GetPending)
+function C_Transmog.GetPending(transmogLocation) end
+
+---@param transmogLocation TransmogLocationMixin
+---@return TransmogCollectionType categoryID
+---[Documentation](https://wowpedia.fandom.com/wiki/API_C_Transmog.GetSlotEffectiveCategory)
+function C_Transmog.GetSlotEffectiveCategory(transmogLocation) end
 
 ---@param inventoryType number
 ---@return number slot
@@ -50,59 +96,45 @@ function C_Transmog.GetSlotUseError(transmogLocation) end
 ---@return number baseVisualID
 ---@return number appliedSourceID
 ---@return number appliedVisualID
----@return number appliedCategoryID
 ---@return number pendingSourceID
 ---@return number pendingVisualID
----@return number pendingCategoryID
 ---@return boolean hasUndo
 ---@return boolean isHideVisual
 ---@return number itemSubclass
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_Transmog.GetSlotVisualInfo)
 function C_Transmog.GetSlotVisualInfo(transmogLocation) end
 
----@param transmogLocation TransmogLocationMixin
----@param transmogID number
----@param categoryID? number
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_Transmog.SetPending)
-function C_Transmog.SetPending(transmogLocation, transmogID, categoryID) end
+---@return boolean isAtNPC
+---[Documentation](https://wowpedia.fandom.com/wiki/API_C_Transmog.IsAtTransmogNPC)
+function C_Transmog.IsAtTransmogNPC() end
 
----@class TransmogCollectionType
-local TransmogCollectionType = {
-	Head = 0,
-	Shoulder = 1,
-	Back = 2,
-	Chest = 3,
-	Shirt = 4,
-	Tabard = 5,
-	Wrist = 6,
-	Hands = 7,
-	Waist = 8,
-	Legs = 9,
-	Feet = 10,
-	Wand = 11,
-	OneHAxe = 12,
-	OneHSword = 13,
-	OneHMace = 14,
-	Dagger = 15,
-	Fist = 16,
-	Shield = 17,
-	Holdable = 18,
-	TwoHAxe = 19,
-	TwoHSword = 20,
-	TwoHMace = 21,
-	Staff = 22,
-	Polearm = 23,
-	Bow = 24,
-	Gun = 25,
-	Crossbow = 26,
-	Warglaives = 27,
-	Paired = 28,
-}
+---@param transmogLocation TransmogLocationMixin
+---@return boolean isBeingCollapsed
+---[Documentation](https://wowpedia.fandom.com/wiki/API_C_Transmog.IsSlotBeingCollapsed)
+---Returns true if the only pending for the location's slot is a ToggleOff for the secondary appearance.
+function C_Transmog.IsSlotBeingCollapsed(transmogLocation) end
+
+---@param outfitID number
+---[Documentation](https://wowpedia.fandom.com/wiki/API_C_Transmog.LoadOutfit)
+function C_Transmog.LoadOutfit(outfitID) end
+
+---@param transmogLocation TransmogLocationMixin
+---@param pendingInfo TransmogPendingInfoMixin
+---[Documentation](https://wowpedia.fandom.com/wiki/API_C_Transmog.SetPending)
+function C_Transmog.SetPending(transmogLocation, pendingInfo) end
 
 ---@class TransmogModification
 local TransmogModification = {
-	None = 0,
-	RightShoulder = 1,
+	Main = 0,
+	Secondary = 1,
+}
+
+---@class TransmogPendingType
+local TransmogPendingType = {
+	Apply = 0,
+	Revert = 1,
+	ToggleOn = 2,
+	ToggleOff = 3,
 }
 
 ---@class TransmogSource
@@ -124,3 +156,8 @@ local TransmogType = {
 	Appearance = 0,
 	Illusion = 1,
 }
+
+---@class TransmogApplyWarningInfo
+---@field itemLink string
+---@field text string
+local TransmogApplyWarningInfo = {}

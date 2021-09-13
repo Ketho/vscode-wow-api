@@ -141,11 +141,12 @@ function C_ClubFinder.PlayerReturnPendingGuildsList() end
 ---@param itemLevelRequirement number
 ---@param name string
 ---@param description string
+---@param avatarId number
 ---@param specs number[]
 ---@param type ClubFinderRequestType
 ---@return boolean succesful
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_ClubFinder.PostClub)
-function C_ClubFinder.PostClub(clubId, itemLevelRequirement, name, description, specs, type) end
+function C_ClubFinder.PostClub(clubId, itemLevelRequirement, name, description, avatarId, specs, type) end
 
 ---@param reportType ClubFinderPostingReportType
 ---@param clubFinderGUID string

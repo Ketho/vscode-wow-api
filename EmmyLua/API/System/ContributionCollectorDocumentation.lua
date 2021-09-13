@@ -109,15 +109,6 @@ local ContributionResult = {
 	InternalError = 7,
 }
 
----@class ContributionState
-local ContributionState = {
-	None = 0,
-	Building = 1,
-	Active = 2,
-	UnderAttack = 3,
-	Destroyed = 4,
-}
-
 ---@class ContributionAppearance
 ---@field stateName string
 ---@field stateColor ColorMixin

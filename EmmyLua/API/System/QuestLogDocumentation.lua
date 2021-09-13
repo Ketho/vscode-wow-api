@@ -151,6 +151,15 @@ function C_QuestLog.GetQuestIDForQuestWatchIndex(questWatchIndex) end
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_QuestLog.GetQuestIDForWorldQuestWatchIndex)
 function C_QuestLog.GetQuestIDForWorldQuestWatchIndex(questWatchIndex) end
 
+---@param questLogIndex? number
+---@return number portraitGiver
+---@return string portraitGiverText
+---@return string portraitGiverName
+---@return number portraitGiverMount
+---@return number? portraitGiverModelSceneID
+---[Documentation](https://wowpedia.fandom.com/wiki/API_C_QuestLog.GetQuestLogPortraitGiver)
+function C_QuestLog.GetQuestLogPortraitGiver(questLogIndex) end
+
 ---@param questID number
 ---@return QuestObjectiveInfo[] objectives
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_QuestLog.GetQuestObjectives)
@@ -160,6 +169,11 @@ function C_QuestLog.GetQuestObjectives(questID) end
 ---@return QuestTagInfo? info
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_QuestLog.GetQuestTagInfo)
 function C_QuestLog.GetQuestTagInfo(questID) end
+
+---@param questID number
+---@return number? questType
+---[Documentation](https://wowpedia.fandom.com/wiki/API_C_QuestLog.GetQuestType)
+function C_QuestLog.GetQuestType(questID) end
 
 ---@param questID number
 ---@return QuestWatchType? watchType
@@ -481,4 +495,5 @@ local QuestTagInfo = {}
 ---@field background string
 ---@field seal string
 ---@field signature string
+---@field poiIcon string
 local QuestTheme = {}

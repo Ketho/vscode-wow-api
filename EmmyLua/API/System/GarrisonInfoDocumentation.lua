@@ -28,6 +28,13 @@ function C_Garrison.GetAutoMissionEnvironmentEffect(missionID) end
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_Garrison.GetAutoMissionTargetingInfo)
 function C_Garrison.GetAutoMissionTargetingInfo(missionID, followerID, casterBoardIndex) end
 
+---@param missionID number
+---@param autoCombatSpellID number
+---@param casterBoardIndex number
+---@return AutoMissionTargetingInfo[] targetInfo
+---[Documentation](https://wowpedia.fandom.com/wiki/API_C_Garrison.GetAutoMissionTargetingInfoForSpell)
+function C_Garrison.GetAutoMissionTargetingInfoForSpell(missionID, autoCombatSpellID, casterBoardIndex) end
+
 ---@param followerType number
 ---@return AutoCombatTroopInfo[] autoTroopInfo
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_Garrison.GetAutoTroops)
@@ -48,7 +55,8 @@ function C_Garrison.GetCurrentGarrTalentTreeID() end
 
 ---@param garrFollowerID string
 ---@param followerLevel number
----@return AutoCombatSpellInfo[] spellInfo
+---@return AutoCombatSpellInfo[] autoCombatSpells
+---@return AutoCombatSpellInfo? autoCombatAutoAttack
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_Garrison.GetFollowerAutoCombatSpells)
 function C_Garrison.GetFollowerAutoCombatSpells(garrFollowerID, followerLevel) end
 
@@ -200,6 +208,7 @@ local AutoCombatResult = {}
 ---@field previewMask number
 ---@field icon number
 ---@field spellTutorialFlag number
+---@field hasThornsEffect boolean
 local AutoCombatSpellInfo = {}
 
 ---@class AutoCombatTroopInfo
@@ -231,7 +240,6 @@ local AutoCombatSpellInfo = {}
 ---@field isSoulbind boolean
 ---@field isCollected boolean
 ---@field autoCombatStats FollowerAutoCombatStatsInfo
----@field autoCombatSpells AutoCombatSpellInfo[]
 local AutoCombatTroopInfo = {}
 
 ---@class AutoMissionCombatEventInfo
@@ -264,6 +272,8 @@ local AutoMissionRound = {}
 ---@class AutoMissionTargetingInfo
 ---@field targetIndex number
 ---@field previewType number
+---@field spellID number
+---@field effectIndex number
 local AutoMissionTargetingInfo = {}
 
 ---@class FollowerAutoCombatStatsInfo
@@ -339,11 +349,13 @@ local GarrisonAbilityInfo = {}
 ---@field height number
 ---@field mechanics GarrisonMechanicInfo[]
 ---@field autoCombatSpells AutoCombatSpellInfo[]
+---@field autoCombatAutoAttack AutoCombatSpellInfo|nil
 ---@field role number
 ---@field health number
 ---@field maxHealth number
 ---@field attack number
 ---@field boardIndex number
+---@field isElite boolean
 local GarrisonEnemyEncounterInfo = {}
 
 ---@class GarrisonFollowerDeathInfo
@@ -380,6 +392,7 @@ local MissionDeploymentInfo = {}
 
 ---@class MissionEncounterIconInfo
 ---@field portraitFileDataID number
+---@field missionScalar number
 ---@field isElite boolean
 ---@field isRare boolean
 local MissionEncounterIconInfo = {}

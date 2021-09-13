@@ -39,6 +39,13 @@ function C_MythicPlus.GetRewardLevelFromKeystoneLevel(keystoneLevel) end
 function C_MythicPlus.GetRunHistory(includePreviousWeeks, includeIncompleteRuns) end
 
 ---@param mapChallengeModeID number
+---@return MythicPlusAffixScoreInfo[] affixScores
+---@return number bestOverAllScore
+---[Documentation](https://wowpedia.fandom.com/wiki/API_C_MythicPlus.GetSeasonBestAffixScoreInfoForMap)
+---Gets the active players best runs by the seasonal tracked affixes as well as their overall score for the current season.
+function C_MythicPlus.GetSeasonBestAffixScoreInfoForMap(mapChallengeModeID) end
+
+---@param mapChallengeModeID number
 ---@return MapSeasonBestInfo? intimeInfo
 ---@return MapSeasonBestInfo? overtimeInfo
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_MythicPlus.GetSeasonBestForMap)
@@ -50,6 +57,7 @@ function C_MythicPlus.GetSeasonBestForMap(mapChallengeModeID) end
 ---@return MythicPlusDate completionDate
 ---@return number[] affixIDs
 ---@return MythicPlusMember[] members
+---@return number dungeonScore
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_MythicPlus.GetWeeklyBestForMap)
 function C_MythicPlus.GetWeeklyBestForMap(mapChallengeModeID) end
 
@@ -83,7 +91,16 @@ function C_MythicPlus.RequestRewards() end
 ---@field completionDate MythicPlusDate
 ---@field affixIDs number[]
 ---@field members MythicPlusMember[]
+---@field dungeonScore number
 local MapSeasonBestInfo = {}
+
+---@class MythicPlusAffixScoreInfo
+---@field name string
+---@field score number
+---@field level number
+---@field durationSec number
+---@field overTime boolean
+local MythicPlusAffixScoreInfo = {}
 
 ---@class MythicPlusDate
 ---@field year number
@@ -109,4 +126,5 @@ local MythicPlusMember = {}
 ---@field level number
 ---@field thisWeek boolean
 ---@field completed boolean
+---@field runScore number
 local MythicPlusRunInfo = {}
