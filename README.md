@@ -51,7 +51,7 @@ lua53 ./Lua/main.lua
 * xml2lua: https://luarocks.org/modules/manoelcampos/xml2lua
 
 #### Acknowledgements
-The following people contributed to the development resources or their work was of valuable help.
+The following people contributed to the development resources or their work was of invaluable help.
 * [Andols](https://www.curseforge.com/members/andols/projects)
 * [Buds](https://github.com/mrbuds)
 * [Cladhaire](https://wowprogramming.com/)
