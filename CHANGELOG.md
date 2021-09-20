@@ -1,5 +1,9 @@
 # Change Log
 
+## [0.6.1] - 2021-09-20
+### Added
+- 🌙 EmmyLua: Renamed emmylua classes internally to something more unique to avoid collisions with similar extensions, e.g. `Event` to `WowEvent`
+
 ## [0.6.0] - 2021-09-13
 ### Added
 - 🌙 EmmyLua: Updated Blizzard_APIDocumentation to 9.1.0 (40000)
@@ -178,6 +182,7 @@
 ### Added
 - 🚧 Wip: Development work
 
+[0.6.1]: https://github.com/Ketho/vscode-wow-api/releases/tag/v0.6.1
 [0.6.0]: https://github.com/Ketho/vscode-wow-api/releases/tag/v0.6.0
 [0.5.5]: https://github.com/Ketho/vscode-wow-api/releases/tag/v0.5.5
 [0.5.4]: https://github.com/Ketho/vscode-wow-api/releases/tag/v0.5.4
