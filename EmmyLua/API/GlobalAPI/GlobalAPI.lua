@@ -24,7 +24,7 @@ function GetInventorySlotInfo(invSlotName) end
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_hooksecurefunc)
 function hooksecurefunc(tbl, name, hook) end
 
----@param unit Unit
+---@param unit WowUnit
 ---@param index? number
 ---@return PowerType powerType
 ---@return string powerToken
@@ -34,12 +34,12 @@ function hooksecurefunc(tbl, name, hook) end
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_UnitPowerType)
 function UnitPowerType(unit, index) end
 
----@param unit Unit
+---@param unit WowUnit
 ---@return number level
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_UnitLevel)
 function UnitLevel(unit) end
 
----@param unit Unit
+---@param unit WowUnit
 ---@return string name
 ---@return string realm
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_UnitName)

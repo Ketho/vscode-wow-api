@@ -1,7 +1,7 @@
----@class object
+---@class WowObject
 local object = {}
 
----@class unknown
+---@class WowUnknown
 local unknown = {}
 
 ---@alias AnimationType
@@ -73,7 +73,7 @@ local unknown = {}
 ---| '"OVERLAY"'
 ---| '"HIGHLIGHT"'
 
----@alias Unit
+---@alias WowUnit
 ---| '"arenaN"'
 ---| '"bossN"'
 ---| '"focus"'

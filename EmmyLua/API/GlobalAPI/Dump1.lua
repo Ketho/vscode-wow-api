@@ -181,7 +181,7 @@ function BNGetFriendIndex(presenceID) end
 ---@return number inviteID
 ---@return number accountName
 ---@return boolean isBattleTag
----@return unknown unknown
+---@return WowUnknown unknown
 ---@return number sentTime
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_BNGetFriendInviteInfo)
 function BNGetFriendInviteInfo(inviteIndex) end

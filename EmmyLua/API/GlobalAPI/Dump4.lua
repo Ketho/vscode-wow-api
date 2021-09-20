@@ -572,10 +572,10 @@ function GetQuestLogRewardSkillPoints() end
 ---@return string name
 ---@return boolean isTradeskillSpell
 ---@return boolean isSpellLearned
----@return unknown hideSpellLearnText
+---@return WowUnknown hideSpellLearnText
 ---@return boolean isBoostSpell
 ---@return number garrFollowerID
----@return unknown genericUnlock
+---@return WowUnknown genericUnlock
 ---@return number spellID
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_GetQuestLogRewardSpell)
 function GetQuestLogRewardSpell(rewardIndex, questID) end

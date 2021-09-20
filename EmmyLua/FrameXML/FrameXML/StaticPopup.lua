@@ -72,13 +72,13 @@ StaticPopupDialogs = {}
 
 ---@param which string
 ---@return string? name
----@return object? dialog
+---@return WowObject? dialog
 ---[FrameXML](https://www.townlong-yak.com/framexml/go/StaticPopup_Visible)
 function StaticPopup_Visible(which) end
 
 ---@param which string
 ---@param data? any
----@return object? dialog
+---@return WowObject? dialog
 ---[FrameXML](https://www.townlong-yak.com/framexml/go/StaticPopup_FindVisible)
 function StaticPopup_FindVisible(which, data) end
 
@@ -86,8 +86,8 @@ function StaticPopup_FindVisible(which, data) end
 ---@param text_arg1? string
 ---@param text_arg2? string
 ---@param data? any
----@param insertedFrame? object
----@return object? dialog
+---@param insertedFrame? WowObject
+---@return WowObject? dialog
 ---[FrameXML](https://www.townlong-yak.com/framexml/go/StaticPopup_Show)
 function StaticPopup_Show(which, text_arg1, text_arg2, data, insertedFrame) end
 

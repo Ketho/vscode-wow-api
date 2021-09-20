@@ -1,4 +1,4 @@
----@alias Event
+---@alias WowEvent
 ---| '"ACHIEVEMENT_EARNED"' # `achievementID, alreadyEarned`
 ---| '"ACHIEVEMENT_PLAYER_NAME"' # `achievementID`
 ---| '"ACHIEVEMENT_SEARCH_UPDATED"'

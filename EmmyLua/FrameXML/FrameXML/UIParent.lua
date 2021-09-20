@@ -3,24 +3,24 @@
 ---@field variablesLoaded boolean
 UIParent = {}
 
----@param frame object
+---@param frame WowObject
 ---@param force? number
 ---[FrameXML](https://www.townlong-yak.com/framexml/go/ShowUIPanel)
 function ShowUIPanel(frame, force) end
 
----@param frame object
+---@param frame WowObject
 ---@param skipSetPoint? boolean
 ---[FrameXML](https://www.townlong-yak.com/framexml/go/HideUIPanel)
 function HideUIPanel(frame, skipSetPoint) end
 
 -- Generic fade function
----@param frame object
+---@param frame WowObject
 ---@param fadeInfo table
 ---[FrameXML](https://www.townlong-yak.com/framexml/go/UIFrameFade)
 function UIFrameFade(frame, fadeInfo) end
 
 -- Convenience function to do a simple fade in
----@param frame object
+---@param frame WowObject
 ---@param timeToFade table
 ---@param startAlpha table
 ---@param endAlpha table
@@ -28,7 +28,7 @@ function UIFrameFade(frame, fadeInfo) end
 function UIFrameFadeIn(frame, timeToFade, startAlpha, endAlpha) end
 
 -- Convenience function to do a simple fade out
----@param frame object
+---@param frame WowObject
 ---@param timeToFade table
 ---@param startAlpha table
 ---@param endAlpha table
