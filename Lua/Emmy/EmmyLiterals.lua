@@ -3,7 +3,7 @@ function Emmy:GetEventLiterals()
 		return a.LiteralName < b.LiteralName
 	end)
 	local t = {}
-	tinsert(t, "---@alias Event")
+	tinsert(t, "---@alias WowEvent")
 	for _, event in ipairs(APIDocumentation.events) do
 		local line = format("'\"%s\"'", event.LiteralName)
 		local payload = event:GetPayloadString(false, false)
