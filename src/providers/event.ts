@@ -26,7 +26,7 @@ function getMarkdown(name: string) {
 		}
 		s += params
 	}
-	let doc = `\n[Documentation](https://wow.gamepedia.com/${name})`
+	let doc = `\n[Documentation](https://wowpedia.fandom.com/wiki/${name})`
 	return s+doc
 }
 
