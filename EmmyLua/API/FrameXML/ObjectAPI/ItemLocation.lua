@@ -1,7 +1,7 @@
 ItemLocation = {}
 
 ---@class ItemLocationMixin
----[Documentation](https://wow.gamepedia.com/ItemLocationMixin)
+---[Documentation](https://wowpedia.fandom.com/wiki/ItemLocationMixin)
 ItemLocationMixin = {}
 
 ---@return ItemLocationMixin

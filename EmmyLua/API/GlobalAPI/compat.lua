@@ -1,34 +1,34 @@
 ---@param tbl table
 ---@param func function
----[Documentation](https://wow.gamepedia.com/API_foreach)
+---[Documentation](https://wowpedia.fandom.com/wiki/API_foreach)
 function table.foreach(tbl, func) end
 
 ---@param tbl table
 ---@param func function
----[Documentation](https://wow.gamepedia.com/API_foreachi)
+---[Documentation](https://wowpedia.fandom.com/wiki/API_foreachi)
 function table.foreachi(tbl, func) end
 
 ---@param tbl table
 ---@return number size
----[Documentation](https://wow.gamepedia.com/API_getn)
+---[Documentation](https://wowpedia.fandom.com/wiki/API_getn)
 function table.getn(tbl) end
 
 ---@param tbl table
 ---@return table
----[Documentation](https://wow.gamepedia.com/API_wipe)
+---[Documentation](https://wowpedia.fandom.com/wiki/API_wipe)
 function table.wipe(tbl) end
 
 ---@param str string
 ---@param chars? string
 ---@return string
----[Documentation](https://wow.gamepedia.com/API_strtrim)
+---[Documentation](https://wowpedia.fandom.com/wiki/API_strtrim)
 function strtrim(str, chars) end
 
 ---@param delim string
 ---@param str string
 ---@param pieces? number
 ---@return ...
----[Documentation](https://wow.gamepedia.com/API_strsplit)
+---[Documentation](https://wowpedia.fandom.com/wiki/API_strsplit)
 function strsplit(delim, str, pieces) end
 
 ---@param delim string
@@ -36,45 +36,45 @@ function strsplit(delim, str, pieces) end
 ---@param str2 string
 ---@vararg string
 ---@return string
----[Documentation](https://wow.gamepedia.com/API_strjoin)
+---[Documentation](https://wowpedia.fandom.com/wiki/API_strjoin)
 function strjoin(delim, str1, str2, ...) end
 
 ---@param time1 number
 ---@param time2 number
 ---@return number
----[Documentation](https://wow.gamepedia.com/API_difftime)
+---[Documentation](https://wowpedia.fandom.com/wiki/API_difftime)
 function difftime(time1, time2) end
 
 ---@param lower? number
 ---@param upper? number
 ---@return number
----[Documentation](https://wow.gamepedia.com/API_fastrandom)
+---[Documentation](https://wowpedia.fandom.com/wiki/API_fastrandom)
 function fastrandom(lower, upper) end
 
 ---@return number memoryInUse
----[Documentation](https://wow.gamepedia.com/API_gcinfo)
+---[Documentation](https://wowpedia.fandom.com/wiki/API_gcinfo)
 function gcinfo() end
 
 ---@param bool boolean
 ---@return userdata
 ---@overload fun(otherproxy: userdata): userdata
----[Documentation](https://wow.gamepedia.com/API_newproxy)
+---[Documentation](https://wowpedia.fandom.com/wiki/API_newproxy)
 function newproxy(bool) end
 
 ---@param str1 string
 ---@param str2 string
 ---@return string
----[Documentation](https://wow.gamepedia.com/API_strcmputf8i)
+---[Documentation](https://wowpedia.fandom.com/wiki/API_strcmputf8i)
 function strcmputf8i(str1, str2) end
 
 ---@vararg string
 ---@return string
----[Documentation](https://wow.gamepedia.com/API_strconcat)
+---[Documentation](https://wowpedia.fandom.com/wiki/API_strconcat)
 function strconcat(...) end
 
 ---@param str string
 ---@return number
----[Documentation](https://wow.gamepedia.com/API_strlenutf8)
+---[Documentation](https://wowpedia.fandom.com/wiki/API_strlenutf8)
 function strlenutf8(str) end
 
 bit = {}

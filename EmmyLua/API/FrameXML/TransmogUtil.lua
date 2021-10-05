@@ -1,3 +1,3 @@
 ---@class TransmogLocationMixin
----[Documentation](https://wow.gamepedia.com/TransmogLocationMixin)
+---[Documentation](https://wowpedia.fandom.com/wiki/TransmogLocationMixin)
 TransmogLocationMixin = {}

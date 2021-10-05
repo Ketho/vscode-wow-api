@@ -1,7 +1,7 @@
 Item = {}
 
 ---@class ItemMixin
----[Documentation](https://wow.gamepedia.com/ItemMixin)
+---[Documentation](https://wowpedia.fandom.com/wiki/ItemMixin)
 ItemMixin = {}
 
 ---@param itemLocation ItemLocationMixin

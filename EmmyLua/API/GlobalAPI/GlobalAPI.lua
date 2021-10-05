@@ -14,7 +14,7 @@ function CreateFrame(frameType, name, parent, template, id) end
 ---@return number slotId
 ---@return string textureName
 ---@return boolean checkRelic
----[Documentation](https://wow.gamepedia.com/API_GetInventorySlotInfo)
+---[Documentation](https://wowpedia.fandom.com/wiki/API_GetInventorySlotInfo)
 function GetInventorySlotInfo(invSlotName) end
 
 ---@param tbl table
@@ -88,7 +88,7 @@ function GetSpecializationInfoForClassID(classID, specNum) end
 ---@param addon number|string index or name
 ---@return boolean loaded
 ---@return boolean finished
----[Documentation](https://wow.gamepedia.com/API_IsAddOnLoaded)
+---[Documentation](https://wowpedia.fandom.com/wiki/API_IsAddOnLoaded)
 function IsAddOnLoaded(addon) end
 
 -- non blizzard documented C namespaces

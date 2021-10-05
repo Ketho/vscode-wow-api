@@ -1,69 +1,69 @@
 ---@class FontString : FontInstance, LayeredRegion
----[Documentation](https://wow.gamepedia.com/UIOBJECT_FontString)
+---[Documentation](https://wowpedia.fandom.com/wiki/UIOBJECT_FontString)
 local FontString = {}
 
----[Documentation](https://wow.gamepedia.com/API_FontString_CalculateScreenAreaFromCharacterSpan)
+---[Documentation](https://wowpedia.fandom.com/wiki/API_FontString_CalculateScreenAreaFromCharacterSpan)
 function FontString:CalculateScreenAreaFromCharacterSpan(leftCharacterIndex, rightCharacterIndex) end
 
----[Documentation](https://wow.gamepedia.com/API_FontString_CanNonSpaceWrap)
+---[Documentation](https://wowpedia.fandom.com/wiki/API_FontString_CanNonSpaceWrap)
 function FontString:CanNonSpaceWrap() end
 
----[Documentation](https://wow.gamepedia.com/API_FontString_CanWordWrap)
+---[Documentation](https://wowpedia.fandom.com/wiki/API_FontString_CanWordWrap)
 function FontString:CanWordWrap() end
 
----[Documentation](https://wow.gamepedia.com/API_FontString_FindCharacterIndexAtCoordinate)
+---[Documentation](https://wowpedia.fandom.com/wiki/API_FontString_FindCharacterIndexAtCoordinate)
 function FontString:FindCharacterIndexAtCoordinate(x, y) end
 
----[Documentation](https://wow.gamepedia.com/API_FontString_GetFieldSize)
+---[Documentation](https://wowpedia.fandom.com/wiki/API_FontString_GetFieldSize)
 function FontString:GetFieldSize() end
 
----[Documentation](https://wow.gamepedia.com/API_FontString_GetLineHeight)
+---[Documentation](https://wowpedia.fandom.com/wiki/API_FontString_GetLineHeight)
 function FontString:GetLineHeight() end
 
----[Documentation](https://wow.gamepedia.com/API_FontString_GetMaxLines)
+---[Documentation](https://wowpedia.fandom.com/wiki/API_FontString_GetMaxLines)
 function FontString:GetMaxLines() end
 
----[Documentation](https://wow.gamepedia.com/API_FontString_GetNumLines)
+---[Documentation](https://wowpedia.fandom.com/wiki/API_FontString_GetNumLines)
 function FontString:GetNumLines() end
 
----[Documentation](https://wow.gamepedia.com/API_FontString_GetStringHeight)
+---[Documentation](https://wowpedia.fandom.com/wiki/API_FontString_GetStringHeight)
 function FontString:GetStringHeight() end
 
----[Documentation](https://wow.gamepedia.com/API_FontString_GetStringWidth)
+---[Documentation](https://wowpedia.fandom.com/wiki/API_FontString_GetStringWidth)
 function FontString:GetStringWidth() end
 
----[Documentation](https://wow.gamepedia.com/API_FontString_GetText)
+---[Documentation](https://wowpedia.fandom.com/wiki/API_FontString_GetText)
 function FontString:GetText() end
 
----[Documentation](https://wow.gamepedia.com/API_FontString_GetUnboundedStringWidth)
+---[Documentation](https://wowpedia.fandom.com/wiki/API_FontString_GetUnboundedStringWidth)
 function FontString:GetUnboundedStringWidth() end
 
----[Documentation](https://wow.gamepedia.com/API_FontString_GetWrappedWidth)
+---[Documentation](https://wowpedia.fandom.com/wiki/API_FontString_GetWrappedWidth)
 function FontString:GetWrappedWidth() end
 
----[Documentation](https://wow.gamepedia.com/API_FontString_IsTruncated)
+---[Documentation](https://wowpedia.fandom.com/wiki/API_FontString_IsTruncated)
 function FontString:IsTruncated() end
 
----[Documentation](https://wow.gamepedia.com/API_FontString_SetAlphaGradient)
+---[Documentation](https://wowpedia.fandom.com/wiki/API_FontString_SetAlphaGradient)
 function FontString:SetAlphaGradient(start, length) end
 
----[Documentation](https://wow.gamepedia.com/API_FontString_SetFixedColor)
+---[Documentation](https://wowpedia.fandom.com/wiki/API_FontString_SetFixedColor)
 function FontString:SetFixedColor() end
 
----[Documentation](https://wow.gamepedia.com/API_FontString_SetFormattedText)
+---[Documentation](https://wowpedia.fandom.com/wiki/API_FontString_SetFormattedText)
 function FontString:SetFormattedText(formatstring) end
 
----[Documentation](https://wow.gamepedia.com/API_FontString_SetMaxLines)
+---[Documentation](https://wowpedia.fandom.com/wiki/API_FontString_SetMaxLines)
 function FontString:SetMaxLines() end
 
----[Documentation](https://wow.gamepedia.com/API_FontString_SetNonSpaceWrap)
+---[Documentation](https://wowpedia.fandom.com/wiki/API_FontString_SetNonSpaceWrap)
 function FontString:SetNonSpaceWrap(wrapFlag) end
 
----[Documentation](https://wow.gamepedia.com/API_FontString_SetText)
+---[Documentation](https://wowpedia.fandom.com/wiki/API_FontString_SetText)
 function FontString:SetText(text) end
 
----[Documentation](https://wow.gamepedia.com/API_FontString_SetTextHeight)
+---[Documentation](https://wowpedia.fandom.com/wiki/API_FontString_SetTextHeight)
 function FontString:SetTextHeight(pixelHeight) end
 
----[Documentation](https://wow.gamepedia.com/API_FontString_SetWordWrap)
+---[Documentation](https://wowpedia.fandom.com/wiki/API_FontString_SetWordWrap)
 function FontString:SetWordWrap() end

@@ -1,7 +1,7 @@
 PlayerLocation = {}
 
 ---@class PlayerLocationMixin
----[Documentation](https://wow.gamepedia.com/PlayerLocationMixin)
+---[Documentation](https://wowpedia.fandom.com/wiki/PlayerLocationMixin)
 PlayerLocationMixin = {}
 
 ---@param guid string

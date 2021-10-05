@@ -1,12 +1,12 @@
 ---@class Font : FontInstance
----[Documentation](https://wow.gamepedia.com/UIOBJECT_Font)
+---[Documentation](https://wowpedia.fandom.com/wiki/UIOBJECT_Font)
 local Font = {}
 
----[Documentation](https://wow.gamepedia.com/API_Font_CopyFontObject)
+---[Documentation](https://wowpedia.fandom.com/wiki/API_Font_CopyFontObject)
 function Font:CopyFontObject(otherFont) end
 
----[Documentation](https://wow.gamepedia.com/API_Font_GetAlpha)
+---[Documentation](https://wowpedia.fandom.com/wiki/API_Font_GetAlpha)
 function Font:GetAlpha() end
 
----[Documentation](https://wow.gamepedia.com/API_Font_SetAlpha)
+---[Documentation](https://wowpedia.fandom.com/wiki/API_Font_SetAlpha)
 function Font:SetAlpha(alpha) end

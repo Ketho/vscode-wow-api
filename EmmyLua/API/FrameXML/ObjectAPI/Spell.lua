@@ -1,7 +1,7 @@
 Spell = {}
 
 ---@class SpellMixin
----[Documentation](https://wow.gamepedia.com/SpellMixin)
+---[Documentation](https://wowpedia.fandom.com/wiki/SpellMixin)
 SpellMixin = {}
 
 ---@param spellID number
