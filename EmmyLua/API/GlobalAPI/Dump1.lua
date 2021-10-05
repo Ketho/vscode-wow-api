@@ -92,8 +92,10 @@ function ApplyBarberShopStyle() end
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_ArchaeologyGetIconInfo)
 function ArchaeologyGetIconInfo(index) end
 
+---@param uiMapID number
+---@return number numSites
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_ArchaeologyMapUpdateAll)
-function ArchaeologyMapUpdateAll() end
+function ArchaeologyMapUpdateAll(uiMapID) end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_ArcheologyGetVisibleBlobID)
 function ArcheologyGetVisibleBlobID(index) end
@@ -181,7 +183,7 @@ function BNGetFriendIndex(presenceID) end
 ---@return number inviteID
 ---@return number accountName
 ---@return boolean isBattleTag
----@return WowUnknown unknown
+---@return unknown unknown
 ---@return number sentTime
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_BNGetFriendInviteInfo)
 function BNGetFriendInviteInfo(inviteIndex) end
@@ -681,10 +683,8 @@ function C_Garrison.GetFollowerClassSpecName(garrFollowerID) end
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_Garrison.GetFollowerDisplayID)
 function C_Garrison.GetFollowerDisplayID(followerID) end
 
----@param followerID number
----@return table info
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_Garrison.GetFollowerInfo)
-function C_Garrison.GetFollowerInfo(followerID) end
+function C_Garrison.GetFollowerInfo() end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_Garrison.GetFollowerInfoForBuilding)
 function C_Garrison.GetFollowerInfoForBuilding() end
@@ -695,11 +695,6 @@ function C_Garrison.GetFollowerIsTroop() end
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_Garrison.GetFollowerItemLevelAverage)
 function C_Garrison.GetFollowerItemLevelAverage(followerID) end
 
----@param followerID string
----@return number weaponItemID
----@return number weaponItemLevel
----@return number armorItemID
----@return number armorItemLevel
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_Garrison.GetFollowerItems)
 function C_Garrison.GetFollowerItems(followerID) end
 
@@ -817,22 +812,8 @@ function C_Garrison.GetLandingPageShipmentCount() end
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_Garrison.GetLandingPageShipmentInfo)
 function C_Garrison.GetLandingPageShipmentInfo(buildingID) end
 
----@param containerID number
----@return string name
----@return number texture
----@return number shipmentCapacity
----@return number shipmentsReady
----@return number shipmentsTotal
----@return number creationTime
----@return number duration
----@return string timeleftString
----@return string itemName
----@return number itemTexture
----@return number unk1
----@return number itemID
----@return number followerID
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_Garrison.GetLandingPageShipmentInfoByContainerID)
-function C_Garrison.GetLandingPageShipmentInfoByContainerID(containerID) end
+function C_Garrison.GetLandingPageShipmentInfoByContainerID(shipmentContainerID) end
 
 ---@param garrisonType number
 ---@return table looseShipments
@@ -902,8 +883,20 @@ function C_Garrison.GetNumShipmentReagents() end
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_Garrison.GetOwnedBuildingInfo)
 function C_Garrison.GetOwnedBuildingInfo(plotInstanceID) end
 
+---@param plotID number
+---@return number id
+---@return string name
+---@return string textureKit
+---@return number icon
+---@return number rank
+---@return boolean isBuilding
+---@return number timeStart
+---@return number buildTime
+---@return boolean canActivate
+---@return boolean canUpgrade
+---@return boolean isPrebuilt
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_Garrison.GetOwnedBuildingInfoAbbrev)
-function C_Garrison.GetOwnedBuildingInfoAbbrev(plotInstanceID) end
+function C_Garrison.GetOwnedBuildingInfoAbbrev(plotID) end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_Garrison.GetPartyBuffs)
 function C_Garrison.GetPartyBuffs(missionID) end
@@ -1184,6 +1177,13 @@ function C_LFGList.CancelApplication(resultID) end
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_LFGList.ClearSearchResults)
 function C_LFGList.ClearSearchResults() end
 
+---@param activityID number
+---@param itemLevel number
+---@param honorLevel number
+---@param autoAccept boolean
+---@param privateGroup boolean
+---@param questID number
+---@return boolean hasTitle
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_LFGList.CreateListing)
 function C_LFGList.CreateListing(activityID, itemLevel, honorLevel, autoAccept, privateGroup, questID) end
 
@@ -1202,6 +1202,22 @@ function C_LFGList.GetActivityGroupInfo(groupID) end
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_LFGList.GetActivityIDForQuestID)
 function C_LFGList.GetActivityIDForQuestID(questID) end
 
+---@param activityID number
+---@return string fullName
+---@return string shortName
+---@return number categoryID
+---@return number groupID
+---@return number itemLevel
+---@return number filters
+---@return number minLevel
+---@return number maxPlayers
+---@return number displayType
+---@return number orderIndex
+---@return boolean useHonorLevel
+---@return boolean showQuickJoinToast
+---@return boolean isMythicPlusActivity
+---@return boolean isRatedPvpActivity
+---@return boolean isCurrentRaidActivity
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_LFGList.GetActivityInfo)
 function C_LFGList.GetActivityInfo(activityID) end
 
@@ -1428,8 +1444,6 @@ function C_NewItems.ClearAll() end
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_NewItems.IsNewItem)
 function C_NewItems.IsNewItem(bag, slot) end
 
----@param bag number
----@param slot number
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_NewItems.RemoveNewItem)
 function C_NewItems.RemoveNewItem(bag, slot) end
 
@@ -1576,6 +1590,8 @@ function C_PetBattles.GetMaxHealth(petOwner, petIndex) end
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_PetBattles.GetNumAuras)
 function C_PetBattles.GetNumAuras(petOwner, petIndex) end
 
+---@param petOwner number
+---@return number numPets
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_PetBattles.GetNumPets)
 function C_PetBattles.GetNumPets(petOwner) end
 

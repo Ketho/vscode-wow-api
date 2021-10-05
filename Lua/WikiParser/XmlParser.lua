@@ -45,6 +45,7 @@ local validTypes = {
 local redirects = {}
 local validatedApi = {}
 local nonValidatedApi = {}
+local EmmyLuaApi = {}
 
 local function GetApiName(name)
 	return name:match("API (.+)"):gsub(" ", "_")
@@ -128,6 +129,11 @@ function m:ParsePages(options)
 			else
 				nonValidatedApi[info.apiName] = info
 			end
+
+			local emmylua = wikiText:match("<!%-%- emmylua\n(.*)\n%-%->")
+			if emmylua then
+				EmmyLuaApi[info.apiName] = emmylua
+			end
 		end
 	end
 end
@@ -169,14 +175,15 @@ function m:ParseSignature(lines, info)
 end
 
 function m:ParseParam(line, info)
+	-- ;spellID : &lt;span class="apitype"&gt;number&lt;/span&gt; - Any valid spell ID.
 	line = line:match("(.-)%s?%-") or line -- remove any comment text
 	-- not sure if we should use patterns to handle multiple formats
-	local name, valueType = line:match(":?;%d*%.?%s?(.-)%s?:%s?(%S+)")
+	local name, valueType = line:match(":?;%d*%.?%s?(.-)%s?:%s?(.+)")
 	if not valueType then
 		return "UNKNOWN", "UNKNOWN"
 	end
-	-- <font color="#ecbc2a">number</font>
-	valueType = valueType:match("(%w+)</font>") or valueType
+	-- <span class="apitype">number</span>
+	valueType = valueType:match("(%w+)</span>") or valueType
 	-- {{api|t=t|number}}
 	valueType = valueType:match("(%w+)}}") or valueType
 	name = name:match("(%w+)%]%]") or name
@@ -287,4 +294,4 @@ m:ParsePages()
 -- end
 
 print("Parsed XML")
-return {validatedApi, nonValidatedApi}
+return {validatedApi, nonValidatedApi, EmmyLuaApi}

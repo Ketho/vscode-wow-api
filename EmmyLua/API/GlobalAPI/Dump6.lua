@@ -53,9 +53,12 @@ function SetMoveEnabled() end
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_SetMultiCastSpell)
 function SetMultiCastSpell(actionID, spellID) end
 
+---@param catId number
+---@param reverse boolean
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_SetNextBarberShopStyle)
-function SetNextBarberShopStyle(id, reverse) end
+function SetNextBarberShopStyle(catId, reverse) end
 
+---@param optOut boolean
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_SetOptOutOfLoot)
 function SetOptOutOfLoot(optOut) end
 
@@ -114,6 +117,8 @@ function SetRaidProfileSavedPosition(profile, isDynamic, topPoint, topOffset, bo
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_SetRaidSubgroup)
 function SetRaidSubgroup(index, subgroup) end
 
+---@param unit string
+---@param index number
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_SetRaidTarget)
 function SetRaidTarget(unit, index) end
 
@@ -347,9 +352,11 @@ function SpellIsAlwaysShown(spellID) end
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_SpellIsSelfBuff)
 function SpellIsSelfBuff(spellID) end
 
+---@return boolean isTargeting
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_SpellIsTargeting)
 function SpellIsTargeting() end
 
+---@return boolean stopped
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_SpellStopCasting)
 function SpellStopCasting() end
 
@@ -366,11 +373,8 @@ function SpellTargetUnit(unitId) end
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_SplashFrameCanBeShown)
 function SplashFrameCanBeShown() end
 
----@param bagID number
----@param slot number
----@param count number
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_SplitContainerItem)
-function SplitContainerItem(bagID, slot, count) end
+function SplitContainerItem(bagID, slot, amount) end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_SplitGuildBankItem)
 function SplitGuildBankItem(tab, slot, amount) end
@@ -435,7 +439,6 @@ function Stuck() end
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_SubmitRequiredGuildRename)
 function SubmitRequiredGuildRename() end
 
----@param unit string
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_SummonFriend)
 function SummonFriend(unit) end
 
@@ -490,8 +493,9 @@ function TargetLastTarget() end
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_TargetNearest)
 function TargetNearest() end
 
+---@param reverse boolean
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_TargetNearestEnemy)
-function TargetNearestEnemy(reverseFlag) end
+function TargetNearestEnemy(reverse) end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_TargetNearestEnemyPlayer)
 function TargetNearestEnemyPlayer(reverseFlag) end
@@ -652,10 +656,8 @@ function UnitAuraSlots(unit, filter, maxSlots, continuationToken) end
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_UnitBattlePetLevel)
 function UnitBattlePetLevel() end
 
----@param unit string
----@return number speciesID
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_UnitBattlePetSpeciesID)
-function UnitBattlePetSpeciesID(unit) end
+function UnitBattlePetSpeciesID() end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_UnitBattlePetType)
 function UnitBattlePetType() end
@@ -700,8 +702,15 @@ function UnitDamage(unit) end
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_UnitDebuff)
 function UnitDebuff(unit, index, raidFilter) end
 
+---@param unit string
+---@param mobUnit string
+---@return boolean isTanking
+---@return number status
+---@return number scaledPercentage
+---@return number rawPercentage
+---@return number threatValue
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_UnitDetailedThreatSituation)
-function UnitDetailedThreatSituation(unit, unitMob) end
+function UnitDetailedThreatSituation(unit, mobUnit) end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_UnitDistanceSquared)
 function UnitDistanceSquared(unit) end
@@ -818,11 +827,15 @@ function UnitInVehicleHidesPetFrame() end
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_UnitIsAFK)
 function UnitIsAFK(unit) end
 
+---@param unit string
+---@return boolean isBattlePet
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_UnitIsBattlePet)
-function UnitIsBattlePet() end
+function UnitIsBattlePet(unit) end
 
+---@param unit string
+---@return boolean isCompanion
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_UnitIsBattlePetCompanion)
-function UnitIsBattlePetCompanion() end
+function UnitIsBattlePetCompanion(unit) end
 
 ---@param unit string
 ---@return boolean isTrue
@@ -847,6 +860,8 @@ function UnitIsDeadOrGhost(unit) end
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_UnitIsEnemy)
 function UnitIsEnemy(unit, otherUnit) end
 
+---@param unit string
+---@return boolean isFeign
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_UnitIsFeignDeath)
 function UnitIsFeignDeath(unit) end
 
@@ -856,11 +871,12 @@ function UnitIsFriend(unit, otherUnit) end
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_UnitIsGhost)
 function UnitIsGhost(unit) end
 
----@param unit string
----@return boolean isAssistant
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_UnitIsGroupAssistant)
-function UnitIsGroupAssistant(unit) end
+function UnitIsGroupAssistant() end
 
+---@param unit string
+---@param partyCategory number
+---@return boolean isLeader
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_UnitIsGroupLeader)
 function UnitIsGroupLeader(unit, partyCategory) end
 
@@ -870,8 +886,10 @@ function UnitIsInMyGuild(unit) end
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_UnitIsMercenary)
 function UnitIsMercenary() end
 
+---@param unit string
+---@return boolean isOther
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_UnitIsOtherPlayersBattlePet)
-function UnitIsOtherPlayersBattlePet() end
+function UnitIsOtherPlayersBattlePet(unit) end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_UnitIsOtherPlayersPet)
 function UnitIsOtherPlayersPet() end
@@ -901,11 +919,15 @@ function UnitIsQuestBoss(unit) end
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_UnitIsRaidOfficer)
 function UnitIsRaidOfficer(unit) end
 
+---@param unit string
+---@return boolean sameServer
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_UnitIsSameServer)
 function UnitIsSameServer(unit) end
 
+---@param unit string
+---@return boolean unitIsTapDenied
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_UnitIsTapDenied)
-function UnitIsTapDenied() end
+function UnitIsTapDenied(unit) end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_UnitIsTrivial)
 function UnitIsTrivial(unit) end
@@ -919,8 +941,10 @@ function UnitIsUnit(unit, otherUnit) end
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_UnitIsVisible)
 function UnitIsVisible(unit) end
 
+---@param unit string
+---@return boolean isWild
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_UnitIsWildBattlePet)
-function UnitIsWildBattlePet() end
+function UnitIsWildBattlePet(unit) end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_UnitLeadsAnyGroup)
 function UnitLeadsAnyGroup() end
@@ -952,12 +976,21 @@ function UnitPlayerOrPetInParty(unit) end
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_UnitPlayerOrPetInRaid)
 function UnitPlayerOrPetInRaid(unit) end
 
+---@param unit string
+---@return number posY
+---@return number posX
+---@return number posZ
+---@return number instanceID
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_UnitPosition)
 function UnitPosition(unit) end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_UnitPowerBarTimerInfo)
 function UnitPowerBarTimerInfo() end
 
+---@param unit string
+---@return string raceName
+---@return string raceFile
+---@return number raceID
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_UnitRace)
 function UnitRace(unit) end
 
@@ -970,10 +1003,8 @@ function UnitRangedDamage(unit) end
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_UnitReaction)
 function UnitReaction(unit, otherUnit) end
 
----@param unit string
----@return number realmRelationship
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_UnitRealmRelationship)
-function UnitRealmRelationship(unit) end
+function UnitRealmRelationship() end
 
 ---@param UnitId string
 ---@param useExtendedColors boolean
@@ -998,13 +1029,13 @@ function UnitSetRole(target, role) end
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_UnitShouldDisplayName)
 function UnitShouldDisplayName() end
 
+---@param unit string
+---@return number spellHastePercent
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_UnitSpellHaste)
 function UnitSpellHaste(unit) end
 
----@param unit string
----@return number damage
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_UnitStagger)
-function UnitStagger(unit) end
+function UnitStagger() end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_UnitStat)
 function UnitStat(unit, statIndex) end
@@ -1015,9 +1046,15 @@ function UnitSwitchToVehicleSeat(unit, seatId) end
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_UnitTargetsVehicleInRaidUI)
 function UnitTargetsVehicleInRaidUI(unit) end
 
+---@param unit string
+---@param mobUnit string
+---@return number percentage
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_UnitThreatPercentageOfLead)
-function UnitThreatPercentageOfLead() end
+function UnitThreatPercentageOfLead(unit, mobUnit) end
 
+---@param unit string
+---@param mobUnit string
+---@return number status
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_UnitThreatSituation)
 function UnitThreatSituation(unit, mobUnit) end
 
@@ -1189,6 +1226,7 @@ function debugstack(start, count1, count2) end
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_forceinsecure)
 function forceinsecure() end
 
+---@return function func
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_geterrorhandler)
 function geterrorhandler() end
 

@@ -293,7 +293,7 @@ function C_Social.TwitterPostScreenshot(text, screenshotIndex, texture, usedCust
 function C_Soulbinds.GetConduitItemLevel(conduitID, rank) end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_Soulbinds.GetConduitRankFromCollection)
-function C_Soulbinds.GetConduitRankFromCollection(conduitID) end
+function C_Soulbinds.GetConduitRankFromCollection() end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_TalkingHead.GetConversationsDeferred)
 function C_TalkingHead.GetConversationsDeferred() end
@@ -439,6 +439,7 @@ function C_TradeSkillUI.DropPendingObliterateItemFromCursor() end
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_TradeSkillUI.GetAllFilterableInventorySlots)
 function C_TradeSkillUI.GetAllFilterableInventorySlots() end
 
+---@return number recipeIDs
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_TradeSkillUI.GetAllRecipeIDs)
 function C_TradeSkillUI.GetAllRecipeIDs() end
 
@@ -611,10 +612,10 @@ function C_TradeSkillUI.StopRecipeRepeat() end
 function C_Transmog.GetCost() end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_Transmog.GetItemInfo)
-function C_Transmog.GetItemInfo(item) end
+function C_Transmog.GetItemInfo() end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_Transmog.LoadSources)
-function C_Transmog.LoadSources(sourceIDTable, mainHandEnchant, offHandEnchant) end
+function C_Transmog.LoadSources() end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_Transmog.ValidateAllPending)
 function C_Transmog.ValidateAllPending() end
@@ -625,6 +626,10 @@ function C_TransmogCollection.CanSetFavoriteInCategory(categoryID) end
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_TransmogCollection.GetIllusionFallbackWeaponSource)
 function C_TransmogCollection.GetIllusionFallbackWeaponSource() end
 
+---@param sourceID number
+---@return number visualID
+---@return string name
+---@return string link
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_TransmogCollection.GetIllusionSourceInfo)
 function C_TransmogCollection.GetIllusionSourceInfo(sourceID) end
 
@@ -632,16 +637,16 @@ function C_TransmogCollection.GetIllusionSourceInfo(sourceID) end
 function C_TransmogCollection.GetInspectSources() end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_TransmogCollection.GetOutfitName)
-function C_TransmogCollection.GetOutfitName(outfitID) end
+function C_TransmogCollection.GetOutfitName() end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_TransmogCollection.GetOutfitSources)
-function C_TransmogCollection.GetOutfitSources(outfitID) end
+function C_TransmogCollection.GetOutfitSources() end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_TransmogCollection.GetShowMissingSourceInItemTooltips)
 function C_TransmogCollection.GetShowMissingSourceInItemTooltips() end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_TransmogCollection.SaveOutfit)
-function C_TransmogCollection.SaveOutfit(name, sourceIDTable, mainHandEnchant, offHandEnchant, icon) end
+function C_TransmogCollection.SaveOutfit() end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_TransmogCollection.SetShowMissingSourceInItemTooltips)
 function C_TransmogCollection.SetShowMissingSourceInItemTooltips(bool) end
@@ -652,10 +657,10 @@ function C_TransmogCollection.SetShowMissingSourceInItemTooltips(bool) end
 function C_TransmogSets.GetSetSources(setID) end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_TransmogSets.IsSetCollected)
-function C_TransmogSets.IsSetCollected(setID) end
+function C_TransmogSets.IsSetCollected() end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_TransmogSets.IsSetUsable)
-function C_TransmogSets.IsSetUsable(setID) end
+function C_TransmogSets.IsSetUsable() end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_Trophy.MonumentChangeAppearanceToTrophyID)
 function C_Trophy.MonumentChangeAppearanceToTrophyID(trophyID) end
@@ -766,6 +771,7 @@ function CanChangePlayerDifficulty() end
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_CanComplainInboxItem)
 function CanComplainInboxItem(index) end
 
+---@return boolean canDualWield
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_CanDualWield)
 function CanDualWield() end
 
@@ -946,11 +952,8 @@ function CancelTrade() end
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_CancelTradeAccept)
 function CancelTradeAccept() end
 
----@param unit string
----@param buffIndex number
----@param filter string
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_CancelUnitBuff)
-function CancelUnitBuff(unit, buffIndex, filter) end
+function CancelUnitBuff() end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_CannotBeResurrected)
 function CannotBeResurrected() end
@@ -1026,8 +1029,11 @@ function CheckBinderDist() end
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_CheckInbox)
 function CheckInbox() end
 
+---@param unit string
+---@param distIndex number
+---@return boolean inRange
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_CheckInteractDistance)
-function CheckInteractDistance(unit, interaction) end
+function CheckInteractDistance(unit, distIndex) end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_CheckSpiritHealerDist)
 function CheckSpiritHealerDist() end
@@ -1468,17 +1474,10 @@ function EJ_ClearSearch() end
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_EJ_EndSearch)
 function EJ_EndSearch() end
 
+---@return number tuningID
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_EJ_GetContentTuningID)
 function EJ_GetContentTuningID() end
 
----@param index number
----@param encounterID number
----@return number id
----@return string name
----@return string description
----@return number displayInfo
----@return number iconImage
----@return number uiModelSceneID
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_EJ_GetCreatureInfo)
 function EJ_GetCreatureInfo(index, encounterID) end
 
@@ -1496,39 +1495,17 @@ function EJ_GetEncounterInfo(encounterID) end
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_EJ_GetEncounterInfoByIndex)
 function EJ_GetEncounterInfoByIndex(index, instanceID) end
 
----@param index number
----@param isRaid boolean
----@return number instanceID
----@return string name
----@return string description
----@return number bgImage
----@return number buttonImage1
----@return number loreImage
----@return number buttonImage2
----@return number dungeonAreaMapID
----@return string link
----@return boolean shouldDisplayDifficulty
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_EJ_GetInstanceByIndex)
 function EJ_GetInstanceByIndex(index, isRaid) end
 
----@param mapID number
----@return number instanceID
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_EJ_GetInstanceForMap)
 function EJ_GetInstanceForMap(mapID) end
 
----@param instanceID number
----@return string name
----@return string description
----@return number bgImage
----@return number buttonImage1
----@return number loreImage
----@return number buttonImage2
----@return number dungeonAreaMapID
----@return string link
----@return boolean shouldDisplayDifficulty
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_EJ_GetInstanceInfo)
-function EJ_GetInstanceInfo(instanceID) end
+function EJ_GetInstanceInfo() end
 
+---@param invType number
+---@return number sortOrder
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_EJ_GetInvTypeSortOrder)
 function EJ_GetInvTypeSortOrder(invType) end
 
@@ -1575,10 +1552,6 @@ function EJ_GetSearchResult(index) end
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_EJ_GetSearchSize)
 function EJ_GetSearchSize() end
 
----@param sectionID number
----@return number sectionID
----@return number parentSectionID
----@return number grandParentSectionID
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_EJ_GetSectionPath)
 function EJ_GetSectionPath(sectionID) end
 
@@ -1611,11 +1584,9 @@ function EJ_IsValidInstanceDifficulty(difficultyID) end
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_EJ_ResetLootFilter)
 function EJ_ResetLootFilter() end
 
----@param encounterID number
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_EJ_SelectEncounter)
 function EJ_SelectEncounter(encounterID) end
 
----@param instanceID number
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_EJ_SelectInstance)
 function EJ_SelectInstance(instanceID) end
 
@@ -1657,8 +1628,6 @@ function EndBoundTradeable(type) end
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_EndRefund)
 function EndRefund() end
 
----@param currentFrame table
----@return table nextFrame
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_EnumerateFrames)
 function EnumerateFrames(currentFrame) end
 
@@ -1721,8 +1690,9 @@ function FlagTutorial(tutorial) end
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_FlashClientIcon)
 function FlashClientIcon() end
 
+---@param angle number
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_FlipCameraYaw)
-function FlipCameraYaw(degrees) end
+function FlipCameraYaw(angle) end
 
 ---@param flyoutID number
 ---@param spellID number

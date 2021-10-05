@@ -51,7 +51,6 @@ function GetNumGuildRewards() end
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_GetNumGuildTradeSkill)
 function GetNumGuildTradeSkill() end
 
----@return number numUpgradeEffects
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_GetNumItemUpgradeEffects)
 function GetNumItemUpgradeEffects() end
 
@@ -232,6 +231,7 @@ function GetObjectIconTextureCoords(objectIcon) end
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_GetObjectiveText)
 function GetObjectiveText() end
 
+---@return boolean optedOut
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_GetOptOutOfLoot)
 function GetOptOutOfLoot() end
 
@@ -373,6 +373,7 @@ function GetPhysicalScreenSize() end
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_GetPlayerAuraBySpellID)
 function GetPlayerAuraBySpellID(spellID) end
 
+---@return number facing
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_GetPlayerFacing)
 function GetPlayerFacing() end
 
@@ -409,8 +410,6 @@ function GetPowerRegenForPowerType(POWER_TYPE) end
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_GetPrevCompleatedTutorial)
 function GetPrevCompleatedTutorial(tutorial) end
 
----@param achievementID number
----@return number previousAchievementID
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_GetPreviousAchievement)
 function GetPreviousAchievement(achievementID) end
 
@@ -448,7 +447,6 @@ function GetProgressText() end
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_GetPromotionRank)
 function GetPromotionRank(index) end
 
----@return number pvpDamage
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_GetPvpPowerDamage)
 function GetPvpPowerDamage() end
 
@@ -484,6 +482,8 @@ function GetQuestCurrencyInfo(itemType, index) end
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_GetQuestExpansion)
 function GetQuestExpansion(questID) end
 
+---@param questID number
+---@return number factionGroup
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_GetQuestFactionGroup)
 function GetQuestFactionGroup(questID) end
 
@@ -491,8 +491,15 @@ function GetQuestFactionGroup(questID) end
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_GetQuestID)
 function GetQuestID() end
 
+---@param type string
+---@param index number
+---@return string name
+---@return string texture
+---@return number count
+---@return number quality
+---@return boolean isUsable
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_GetQuestItemInfo)
-function GetQuestItemInfo() end
+function GetQuestItemInfo(type, index) end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_GetQuestItemInfoLootType)
 function GetQuestItemInfoLootType(type, index) end
@@ -572,10 +579,10 @@ function GetQuestLogRewardSkillPoints() end
 ---@return string name
 ---@return boolean isTradeskillSpell
 ---@return boolean isSpellLearned
----@return WowUnknown hideSpellLearnText
+---@return unknown hideSpellLearnText
 ---@return boolean isBoostSpell
 ---@return number garrFollowerID
----@return WowUnknown genericUnlock
+---@return unknown genericUnlock
 ---@return number spellID
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_GetQuestLogRewardSpell)
 function GetQuestLogRewardSpell(rewardIndex, questID) end
@@ -664,7 +671,6 @@ function GetQuestUiMapID(questID) end
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_GetRFDungeonInfo)
 function GetRFDungeonInfo(index) end
 
----@return number difficultyID
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_GetRaidDifficultyID)
 function GetRaidDifficultyID() end
 
@@ -683,6 +689,8 @@ function GetRaidProfileSavedPosition(profile) end
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_GetRaidRosterInfo)
 function GetRaidRosterInfo(index) end
 
+---@param unit string
+---@return number index
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_GetRaidTargetIndex)
 function GetRaidTargetIndex(unit) end
 
@@ -714,8 +722,10 @@ function GetReadyCheckTimeLeft() end
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_GetReagentBankCost)
 function GetReagentBankCost() end
 
+---@param instanceID number
+---@return string zone
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_GetRealZoneText)
-function GetRealZoneText(mapID) end
+function GetRealZoneText(instanceID) end
 
 ---@return number realmID
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_GetRealmID)
@@ -748,6 +758,9 @@ function GetResSicknessDuration() end
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_GetRestState)
 function GetRestState() end
 
+---@return number rLevel
+---@return number rMoney
+---@return number profCap
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_GetRestrictedAccountData)
 function GetRestrictedAccountData() end
 
@@ -826,6 +839,20 @@ function GetSavedInstanceChatLink(index) end
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_GetSavedInstanceEncounterInfo)
 function GetSavedInstanceEncounterInfo(instanceIndex, encounterIndex) end
 
+---@param index number
+---@return string name
+---@return number id
+---@return number reset
+---@return number difficulty
+---@return boolean locked
+---@return boolean extended
+---@return number instanceIDMostSig
+---@return boolean isRaid
+---@return number maxPlayers
+---@return string difficultyName
+---@return number numEncounters
+---@return number encounterProgress
+---@return boolean extendDisabled
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_GetSavedInstanceInfo)
 function GetSavedInstanceInfo(index) end
 
@@ -891,19 +918,19 @@ function GetSendMailMoney() end
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_GetSendMailPrice)
 function GetSendMailPrice() end
 
+---@return number timestamp
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_GetServerTime)
 function GetServerTime() end
 
+---@return number sessionTime
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_GetSessionTime)
 function GetSessionTime() end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_GetSetBonusesForSpecializationByItemID)
 function GetSetBonusesForSpecializationByItemID(specID, itemID) end
 
----@param flag boolean
----@return number index
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_GetShapeshiftForm)
-function GetShapeshiftForm(flag) end
+function GetShapeshiftForm(unknown) end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_GetShapeshiftFormCooldown)
 function GetShapeshiftFormCooldown(index) end
@@ -912,6 +939,11 @@ function GetShapeshiftFormCooldown(index) end
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_GetShapeshiftFormID)
 function GetShapeshiftFormID() end
 
+---@param index number
+---@return string icon
+---@return boolean active
+---@return boolean castable
+---@return number spellID
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_GetShapeshiftFormInfo)
 function GetShapeshiftFormInfo(index) end
 
@@ -923,12 +955,14 @@ function GetSheathState() end
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_GetShieldBlock)
 function GetShieldBlock() end
 
+---@return boolean isBoundTradeable
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_GetSocketItemBoundTradeable)
 function GetSocketItemBoundTradeable() end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_GetSocketItemInfo)
 function GetSocketItemInfo() end
 
+---@return boolean isRefundable
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_GetSocketItemRefundable)
 function GetSocketItemRefundable() end
 
@@ -1029,7 +1063,15 @@ function GetSpellDescription(spellID) end
 function GetSpellHitModifier() end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_GetSpellInfo)
-function GetSpellInfo() end
+---@param spell number|string spellID or spellName
+---@return string name
+---@return string rank
+---@return number icon
+---@return number castTime
+---@return number minRange
+---@return number maxRange
+---@return number spellID
+function GetSpellInfo(spell) end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_GetSpellLevelLearned)
 function GetSpellLevelLearned() end
@@ -1095,6 +1137,7 @@ function GetStatisticsCategoryList() end
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_GetSturdiness)
 function GetSturdiness() end
 
+---@return string subzone
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_GetSubZoneText)
 function GetSubZoneText() end
 
@@ -1124,8 +1167,15 @@ function GetTalentInfoBySpecialization(specGroupIndex, tier, column) end
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_GetTalentLink)
 function GetTalentLink(talentID, isInspect, specGroup, inspectID, classID) end
 
+---@param tier number
+---@param specGroupIndex number
+---@param isInspect boolean
+---@param inspectedUnit string
+---@return boolean tierAvailable
+---@return number selectedTalent
+---@return number tierUnlockLevel
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_GetTalentTierInfo)
-function GetTalentTierInfo(tier) end
+function GetTalentTierInfo(tier, specGroupIndex, isInspect, inspectedUnit) end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_GetTargetTradeCurrency)
 function GetTargetTradeCurrency() end
@@ -1158,6 +1208,10 @@ function GetTempShapeshiftBarIndex() end
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_GetText)
 function GetText() end
 
+---@param status number
+---@return number r
+---@return number g
+---@return number b
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_GetThreatStatusColor)
 function GetThreatStatusColor(status) end
 
@@ -1165,6 +1219,7 @@ function GetThreatStatusColor(status) end
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_GetTickTime)
 function GetTickTime() end
 
+---@return number seconds
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_GetTime)
 function GetTime() end
 
@@ -1206,6 +1261,12 @@ function GetTotemTimeLeft(slot) end
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_GetTrackedAchievements)
 function GetTrackedAchievements() end
 
+---@param id number
+---@return string name
+---@return number texture
+---@return boolean active
+---@return string category
+---@return number nested
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_GetTrackingInfo)
 function GetTrackingInfo(id) end
 
@@ -1355,15 +1416,17 @@ function GetWarGameQueueStatus() end
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_GetWarGameTypeInfo)
 function GetWarGameTypeInfo(index) end
 
----@return string name
----@return number standing
----@return number min
----@return number max
----@return number value
----@return number factionID
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_GetWatchedFactionInfo)
 function GetWatchedFactionInfo() end
 
+---@return boolean hasMainHandEnchant
+---@return number mainHandExpiration
+---@return number mainHandCharges
+---@return number mainHandEnchantID
+---@return boolean hasOffHandEnchant
+---@return number offHandExpiration
+---@return number offHandCharges
+---@return number offHandEnchantID
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_GetWeaponEnchantInfo)
 function GetWeaponEnchantInfo() end
 
@@ -1398,9 +1461,13 @@ function GetWorldPVPQueueStatus(queueId) end
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_GetXPExhaustion)
 function GetXPExhaustion() end
 
+---@return string pvpType
+---@return boolean isFFA
+---@return string faction
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_GetZonePVPInfo)
 function GetZonePVPInfo() end
 
+---@return string zoneName
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_GetZoneText)
 function GetZoneText() end
 
@@ -1499,8 +1566,6 @@ function HasAPEffectsSpellPower() end
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_HasAction)
 function HasAction(actionSlot) end
 
----@return boolean hasAlternateForm
----@return boolean inAlternateForm
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_HasAlternateForm)
 function HasAlternateForm() end
 
@@ -1522,6 +1587,7 @@ function HasCompletedAnyAchievement(achievementID) end
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_HasDualWieldPenalty)
 function HasDualWieldPenalty() end
 
+---@return boolean hasBar
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_HasExtraActionBar)
 function HasExtraActionBar() end
 
@@ -1535,6 +1601,7 @@ function HasIgnoreDualWieldWeapon() end
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_HasInboxItem)
 function HasInboxItem() end
 
+---@return boolean isRestricted
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_HasLFGRestrictions)
 function HasLFGRestrictions() end
 
@@ -1621,6 +1688,7 @@ function InteractUnit(unitToken, exactMatch) end
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_Is64BitClient)
 function Is64BitClient() end
 
+---@return boolean accountSecured
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_IsAccountSecured)
 function IsAccountSecured() end
 
@@ -1629,8 +1697,10 @@ function IsAccountSecured() end
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_IsAchievementEligible)
 function IsAchievementEligible(achievementID) end
 
+---@param actionSlot number
+---@return boolean inRange
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_IsActionInRange)
-function IsActionInRange(slot) end
+function IsActionInRange(actionSlot) end
 
 ---@return boolean isArena
 ---@return boolean isRegistered
@@ -1701,9 +1771,6 @@ function IsBagSlotFlagEnabledOnOtherBankBags() end
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_IsBarberShopStyleValid)
 function IsBarberShopStyleValid() end
 
----@param bag number
----@param slot number
----@return boolean isPayItem
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_IsBattlePayItem)
 function IsBattlePayItem(bag, slot) end
 
@@ -1758,8 +1825,10 @@ function IsCorruptedItem(item) end
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_IsCosmeticItem)
 function IsCosmeticItem() end
 
+---@param actionSlot number
+---@return boolean isCurrent
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_IsCurrentAction)
-function IsCurrentAction(slot) end
+function IsCurrentAction(actionSlot) end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_IsCurrentItem)
 function IsCurrentItem(item) end

@@ -203,13 +203,6 @@ function GetAlternativeDefaultLanguage() end
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_GetArchaeologyInfo)
 function GetArchaeologyInfo() end
 
----@param raceIndex number
----@return string raceName
----@return number raceTexture
----@return number raceItemID
----@return number numFragmentsCollected
----@return number numFragmentsRequired
----@return number maxFragments
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_GetArchaeologyRaceInfo)
 function GetArchaeologyRaceInfo(raceIndex) end
 
@@ -219,6 +212,7 @@ function GetArchaeologyRaceInfoByID(researchBranchID) end
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_GetAreaSpiritHealerTime)
 function GetAreaSpiritHealerTime() end
 
+---@return string areaText
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_GetAreaText)
 function GetAreaText() end
 
@@ -329,7 +323,7 @@ function GetBankBagSlotFlag() end
 function GetBankSlotCost(numSlots) end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_GetBarberShopStyleInfo)
-function GetBarberShopStyleInfo(id) end
+function GetBarberShopStyleInfo() end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_GetBarberShopTotalCost)
 function GetBarberShopTotalCost() end
@@ -441,6 +435,14 @@ function GetBuybackItemInfo(index) end
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_GetBuybackItemLink)
 function GetBuybackItemLink(index) end
 
+---@param name string
+---@return string value
+---@return string defaultValue
+---@return boolean account
+---@return boolean character
+---@return boolean unknown5
+---@return boolean setCvarOnly
+---@return boolean readOnly
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_GetCVarInfo)
 function GetCVarInfo(name) end
 
@@ -456,12 +458,8 @@ function GetCameraZoom() end
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_GetCategoryAchievementPoints)
 function GetCategoryAchievementPoints(categoryID, includeSubCategories) end
 
----@param categoryID number
----@return string title
----@return number parentCategoryID
----@return number flags
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_GetCategoryInfo)
-function GetCategoryInfo(categoryID) end
+function GetCategoryInfo(category) end
 
 ---@return table idTable
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_GetCategoryList)
@@ -543,14 +541,19 @@ function GetCombatRatingBonus(combatRatingIdentifier) end
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_GetCombatRatingBonusForCombatRatingValue)
 function GetCombatRatingBonusForCombatRatingValue(ratingIndex, value) end
 
----@param unit string
----@param target string
----@return number comboPoints
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_GetComboPoints)
-function GetComboPoints(unit, target) end
+function GetComboPoints() end
 
+---@param type string
+---@param id number
+---@return number creatureID
+---@return string creatureName
+---@return number creatureSpellID
+---@return string icon
+---@return boolean issummoned
+---@return number mountType
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_GetCompanionInfo)
-function GetCompanionInfo(type, slotid) end
+function GetCompanionInfo(type, id) end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_GetComparisonAchievementPoints)
 function GetComparisonAchievementPoints() end
@@ -579,9 +582,6 @@ function GetContainerItemDurability(bag, slot) end
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_GetContainerItemEquipmentSetInfo)
 function GetContainerItemEquipmentSetInfo(index, slot) end
 
----@param bag number
----@param slot number
----@return number itemId
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_GetContainerItemID)
 function GetContainerItemID(bag, slot) end
 
@@ -603,9 +603,6 @@ function GetContainerItemPurchaseItem(bag, slot, itemIndex, isEquipped) end
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_GetContainerItemQuestInfo)
 function GetContainerItemQuestInfo(bag, slot) end
 
----@param bagID number
----@return number numberOfFreeSlots
----@return number bagType
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_GetContainerNumFreeSlots)
 function GetContainerNumFreeSlots(bagID) end
 
@@ -663,7 +660,7 @@ function GetCurrentKeyBoardFocus() end
 function GetCurrentLevelFeatures(level) end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_GetCurrentLevelSpells)
-function GetCurrentLevelSpells(level) end
+function GetCurrentLevelSpells() end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_GetCurrentRegion)
 function GetCurrentRegion() end
@@ -694,7 +691,7 @@ function GetCursorMoney() end
 function GetCursorPosition() end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_GetCustomizationDetails)
-function GetCustomizationDetails(customizationIndex) end
+function GetCustomizationDetails() end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_GetDailyQuestsCompleted)
 function GetDailyQuestsCompleted() end
@@ -705,8 +702,10 @@ function GetDeathRecapLink(recapID) end
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_GetDefaultGraphicsQuality)
 function GetDefaultGraphicsQuality() end
 
+---@return string language
+---@return number languageID
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_GetDefaultLanguage)
-function GetDefaultLanguage(unit) end
+function GetDefaultLanguage() end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_GetDefaultScale)
 function GetDefaultScale() end
@@ -747,7 +746,6 @@ function GetDodgeChanceFromAttribute() end
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_GetDownloadedPercentage)
 function GetDownloadedPercentage() end
 
----@return number difficultyID
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_GetDungeonDifficultyID)
 function GetDungeonDifficultyID() end
 
@@ -866,9 +864,15 @@ function GetGMStatus() end
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_GetGMTicket)
 function GetGMTicket() end
 
+---@param messageType number
+---@return string stringId
+---@return number soundKitID
+---@return number voiceID
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_GetGameMessageInfo)
-function GetGameMessageInfo(gameMessageType) end
+function GetGameMessageInfo(messageType) end
 
+---@return number hours
+---@return number minutes
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_GetGameTime)
 function GetGameTime() end
 
@@ -1106,12 +1110,34 @@ function GetHitModifier() end
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_GetHomePartyInfo)
 function GetHomePartyInfo(homePlayers) end
 
+---@param index number
+---@return string packageIcon
+---@return string stationeryIcon
+---@return string sender
+---@return string subject
+---@return number money
+---@return number CODAmount
+---@return number daysLeft
+---@return number hasItem
+---@return boolean wasRead
+---@return boolean wasReturned
+---@return boolean textCreated
+---@return boolean canReply
+---@return boolean isGM
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_GetInboxHeaderInfo)
 function GetInboxHeaderInfo(index) end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_GetInboxInvoiceInfo)
 function GetInboxInvoiceInfo(index) end
 
+---@param index number
+---@param itemIndex number
+---@return string name
+---@return number itemID
+---@return string texture
+---@return number count
+---@return number quality
+---@return boolean canUse
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_GetInboxItem)
 function GetInboxItem(index, itemIndex) end
 
@@ -1208,10 +1234,6 @@ function GetInventoryItemDurability(slot) end
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_GetInventoryItemEquippedUnusable)
 function GetInventoryItemEquippedUnusable(unit, slot) end
 
----@param unit string
----@param invSlot number
----@return number itemId
----@return number unknown
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_GetInventoryItemID)
 function GetInventoryItemID(unit, invSlot) end
 
@@ -1255,6 +1277,10 @@ function GetItemCreationContext(itemlink) end
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_GetItemFamily)
 function GetItemFamily(item) end
 
+---@param item string
+---@param index number
+---@return string itemName
+---@return string itemLink
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_GetItemGem)
 function GetItemGem(item, index) end
 
@@ -1266,8 +1292,16 @@ function GetItemIcon(itemID) end
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_GetItemInfo)
 function GetItemInfo(item) end
 
+---@param itemInfo string
+---@return number itemID
+---@return string itemType
+---@return string itemSubType
+---@return string itemEquipLoc
+---@return number icon
+---@return number classID
+---@return number subclassID
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_GetItemInfoInstant)
-function GetItemInfoInstant(item) end
+function GetItemInfoInstant(itemInfo) end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_GetItemInventorySlotInfo)
 function GetItemInventorySlotInfo(inventorySlot) end
@@ -1275,7 +1309,6 @@ function GetItemInventorySlotInfo(inventorySlot) end
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_GetItemLevelColor)
 function GetItemLevelColor() end
 
----@return number itemLevelIncrement
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_GetItemLevelIncrement)
 function GetItemLevelIncrement() end
 
@@ -1316,11 +1349,8 @@ function GetItemUniqueness(item) end
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_GetItemUpdateLevel)
 function GetItemUpdateLevel() end
 
----@param effectIndex number
----@return string leftText
----@return string rightText
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_GetItemUpgradeEffect)
-function GetItemUpgradeEffect(effectIndex) end
+function GetItemUpgradeEffect() end
 
 ---@return number icon
 ---@return string name
@@ -1457,17 +1487,8 @@ function GetLFGReadyCheckUpdate() end
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_GetLFGReadyCheckUpdateBattlegroundInfo)
 function GetLFGReadyCheckUpdateBattlegroundInfo() end
 
----@param dungeonID number
----@param shortageSeverity number
----@return boolean eligible
----@return boolean forTank
----@return boolean forHealer
----@return boolean forDamage
----@return number itemCount
----@return number money
----@return number xp
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_GetLFGRoleShortageRewards)
-function GetLFGRoleShortageRewards(dungeonID, shortageSeverity) end
+function GetLFGRoleShortageRewards(dungeonID, shortageIndex) end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_GetLFGRoleUpdate)
 function GetLFGRoleUpdate() end
@@ -1482,10 +1503,6 @@ function GetLFGRoleUpdateMember(memberIndex) end
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_GetLFGRoleUpdateSlot)
 function GetLFGRoleUpdateSlot(slotIndex) end
 
----@return boolean isLeader
----@return boolean isTank
----@return boolean isHealer
----@return boolean isDPS
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_GetLFGRoles)
 function GetLFGRoles() end
 
@@ -1497,6 +1514,9 @@ function GetLFGSuspendedPlayers(category) end
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_GetLFRChoiceOrder)
 function GetLFRChoiceOrder(LFRRaidList) end
 
+---@param index number
+---@return string language
+---@return number languageID
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_GetLanguageByIndex)
 function GetLanguageByIndex(index) end
 
@@ -1519,7 +1539,7 @@ function GetLatestUpdatedStats() end
 function GetLegacyRaidDifficultyID() end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_GetLevelUpInstances)
-function GetLevelUpInstances(level, isRaid) end
+function GetLevelUpInstances() end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_GetLifesteal)
 function GetLifesteal() end
@@ -1545,14 +1565,24 @@ function GetLooseMacroItemIcons() end
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_GetLootInfo)
 function GetLootInfo() end
 
----@return string lootmethod
----@return number masterlooterPartyID
----@return number masterlooterRaidID
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_GetLootMethod)
 function GetLootMethod() end
 
+---@param rollID number
+---@return string texture
+---@return string name
+---@return number count
+---@return number quality
+---@return boolean bindOnPickUp
+---@return boolean canNeed
+---@return boolean canGreed
+---@return boolean canDisenchant
+---@return number reasonNeed
+---@return number reasonGreed
+---@return number reasonDisenchant
+---@return number deSkillRequired
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_GetLootRollItemInfo)
-function GetLootRollItemInfo(rollId) end
+function GetLootRollItemInfo(rollID) end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_GetLootRollItemLink)
 function GetLootRollItemLink(id) end
@@ -1573,8 +1603,11 @@ function GetLootSlotLink(index) end
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_GetLootSlotType)
 function GetLootSlotType(slotIndex) end
 
+---@param lootSlot number
+---@return string guid
+---@return number quantity
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_GetLootSourceInfo)
-function GetLootSourceInfo(slot) end
+function GetLootSourceInfo(lootSlot) end
 
 ---@return number specID
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_GetLootSpecialization)
@@ -1699,9 +1732,17 @@ function GetMerchantNumItems() end
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_GetMinRenderScale)
 function GetMinRenderScale() end
 
+---@return string zone
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_GetMinimapZoneText)
 function GetMinimapZoneText() end
 
+---@param id number
+---@return string timer
+---@return number initial
+---@return number maxvalue
+---@return number scale
+---@return boolean paused
+---@return string label
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_GetMirrorTimerInfo)
 function GetMirrorTimerInfo(id) end
 
@@ -1773,8 +1814,6 @@ function GetNewSocketInfo(id) end
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_GetNewSocketLink)
 function GetNewSocketLink(id) end
 
----@param achievementID number
----@return number nextAchievementID
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_GetNextAchievement)
 function GetNextAchievement(achievementID) end
 
@@ -1815,6 +1854,8 @@ function GetNumAutoQuestPopUps() end
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_GetNumAvailableQuests)
 function GetNumAvailableQuests() end
 
+---@return number numSlots
+---@return boolean full
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_GetNumBankSlots)
 function GetNumBankSlots() end
 

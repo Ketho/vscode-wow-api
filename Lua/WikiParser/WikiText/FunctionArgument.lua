@@ -9,7 +9,7 @@ local api = {}
 for line in file:lines() do
 	if line:match("^: (.-)") then
 		local name = line:match("%[%[API (.-)|")
-		local args = line:match("ecbc2a\">(.-)</span>%)")
+		local args = line:match("apiarg\">(.-)</span>%)")
 		--local returns = line:match("%) : (.+</span>)")
 		if name and nonBlizzDocumented[name] and args then
 			args = args:gsub("%s?%[", "")

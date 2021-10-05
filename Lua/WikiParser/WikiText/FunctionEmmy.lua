@@ -4,9 +4,9 @@ local nonBlizzDocumented = require("Lua/WikiParser/WikiText/NonBlizzardDocumente
 local manualDocFile = io.open("EmmyLua/API/GlobalAPI/GlobalAPI.lua")
 
 local parserData = require("Lua/WikiParser/XmlParser")
-local validated, nonvalidated
+local validated, nonvalidated, emmyLua
 if type(parserData) == "table" then
-	validated, nonvalidated = unpack(parserData)
+	validated, nonvalidated, emmyLua = unpack(parserData)
 else
 	return
 end
@@ -28,7 +28,7 @@ local function GetOutputFile()
 end
 
 local count = 0
-local fs = "---[Documentation](https://wow.gamepedia.com/API_%s)\nfunction %s(%s) end\n\n"
+local fs = "---[Documentation](https://wowpedia.fandom.com/wiki/API_%s)\nfunction %s(%s) end\n\n"
 local outputFile = GetOutputFile()
 
 local countValid = 0
@@ -38,7 +38,10 @@ local countNonDoc = 0
 local sorted = Util:SortTable(nonBlizzDocumented)
 for _, name in pairs(sorted) do
 	if not manualDoc[name] then
-		if convertedApi[name] then
+		if emmyLua[name] then
+			outputFile:write(format("---[Documentation](https://wowpedia.fandom.com/wiki/API_%s)\n", name))
+			outputFile:write(emmyLua[name].."\n\n")
+		elseif convertedApi[name] then
 			outputFile:write(Emmy:GetFunction(convertedApi[name]).."\n\n")
 			countValid = countValid + 1
 		else

@@ -26,10 +26,8 @@ function IsEncounterSuppressingRelease() end
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_IsEquippableItem)
 function IsEquippableItem(item) end
 
----@param slotID number
----@return boolean isEquipped
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_IsEquippedAction)
-function IsEquippedAction(slotID) end
+function IsEquippedAction(slot) end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_IsEquippedItem)
 function IsEquippedItem(item) end
@@ -45,6 +43,8 @@ function IsEuropeanNumbers() end
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_IsEveryoneAssistant)
 function IsEveryoneAssistant() end
 
+---@param index number
+---@return boolean inactive
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_IsFactionInactive)
 function IsFactionInactive(index) end
 
@@ -118,6 +118,8 @@ function IsInGuild() end
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_IsInGuildGroup)
 function IsInGuildGroup() end
 
+---@return boolean inInstance
+---@return string instanceType
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_IsInInstance)
 function IsInInstance() end
 
@@ -153,6 +155,9 @@ function IsInventoryItemProfessionBag(unit, slot) end
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_IsItemAction)
 function IsItemAction(slot) end
 
+---@param item string
+---@param unit string
+---@return boolean inRange
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_IsItemInRange)
 function IsItemInRange(item, unit) end
 
@@ -210,6 +215,8 @@ function IsModifierKeyDown() end
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_IsMounted)
 function IsMounted() end
 
+---@param button string
+---@return boolean isDown
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_IsMouseButtonDown)
 function IsMouseButtonDown(button) end
 
@@ -234,6 +241,7 @@ function IsOnGroundFloorInJailersTower() end
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_IsOnTournamentRealm)
 function IsOnTournamentRealm() end
 
+---@return boolean oob
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_IsOutOfBounds)
 function IsOutOfBounds() end
 
@@ -364,9 +372,6 @@ function IsSpellClassOrSpec() end
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_IsSpellInRange)
 function IsSpellInRange(spellName, unit) end
 
----@param spellID number
----@param isPetSpell boolean
----@return boolean isKnown
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_IsSpellKnown)
 function IsSpellKnown(spellID, isPetSpell) end
 
@@ -400,6 +405,7 @@ function IsSubZonePVPPOI() end
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_IsSubmerged)
 function IsSubmerged() end
 
+---@return boolean isSwimming
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_IsSwimming)
 function IsSwimming() end
 
@@ -767,13 +773,13 @@ function NeutralPlayerSelectFaction(factionIndex) end
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_NextView)
 function NextView() end
 
+---@return boolean isUnhealthy
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_NoPlayTime)
 function NoPlayTime() end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_NotWhileDeadError)
 function NotWhileDeadError() end
 
----@param unit string
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_NotifyInspect)
 function NotifyInspect(unit) end
 
@@ -1036,6 +1042,7 @@ function QuestGetAutoLaunched() end
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_QuestHasPOIInfo)
 function QuestHasPOIInfo(questID) end
 
+---@return boolean isDaily
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_QuestIsDaily)
 function QuestIsDaily() end
 
@@ -1045,6 +1052,7 @@ function QuestIsFromAdventureMap() end
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_QuestIsFromAreaTrigger)
 function QuestIsFromAreaTrigger() end
 
+---@return boolean isWeekly
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_QuestIsWeekly)
 function QuestIsWeekly() end
 
@@ -1060,13 +1068,8 @@ function QuestLogShouldShowPortrait() end
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_QuestMapUpdateAllQuests)
 function QuestMapUpdateAllQuests() end
 
----@param questId number
----@return boolean completed
----@return number posX
----@return number posY
----@return number objective
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_QuestPOIGetIconInfo)
-function QuestPOIGetIconInfo(questId) end
+function QuestPOIGetIconInfo(questID) end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_QuestPOIGetSecondaryLocations)
 function QuestPOIGetSecondaryLocations(questID, table) end
@@ -1373,6 +1376,10 @@ function SelectedRealmName() end
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_SellCursorItem)
 function SellCursorItem() end
 
+---@param msg string
+---@param chatType string
+---@param languageID number
+---@param target string
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_SendChatMessage)
 function SendChatMessage(msg, chatType, languageID, target) end
 
@@ -1383,7 +1390,7 @@ function SendChatMessage(msg, chatType, languageID, target) end
 function SendMail(recipient, subject, body) end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_SendPlayerChoiceResponse)
-function SendPlayerChoiceResponse(responseID) end
+function SendPlayerChoiceResponse() end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_SendSystemMessage)
 function SendSystemMessage(message) end
@@ -1441,17 +1448,27 @@ function SetBattlefieldScoreFaction(faction) end
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_SetBinding)
 function SetBinding(key, command, mode) end
 
+---@param key string
+---@param buttonName string
+---@param button string
+---@return boolean ok
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_SetBindingClick)
-function SetBindingClick(key, ButtonName, mouseButton) end
+function SetBindingClick(key, buttonName, button) end
 
+---@param key string
+---@param item string
+---@return boolean ok
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_SetBindingItem)
-function SetBindingItem(key, itemname) end
+function SetBindingItem(key, item) end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_SetBindingMacro)
 function SetBindingMacro() end
 
+---@param key string
+---@param spell string
+---@return boolean ok
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_SetBindingSpell)
-function SetBindingSpell(key, spellName) end
+function SetBindingSpell(key, spell) end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_SetCemeteryPreference)
 function SetCemeteryPreference(cemeteryID) end
@@ -1509,6 +1526,8 @@ function SetCurrentGuildBankTab(tab) end
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_SetCurrentTitle)
 function SetCurrentTitle(titleId) end
 
+---@param cursor string
+---@return boolean changed
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_SetCursor)
 function SetCursor(cursor) end
 
