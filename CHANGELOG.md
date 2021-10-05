@@ -1,7 +1,13 @@
 # Change Log
 
-## [0.6.1] - 2021-09-20
+## [0.6.2] - 2021-10-05
 ### Added
+- 🛠 Improvements: Parse emmylua directly from wikitext, testing with [GetSpellInfo](https://wowpedia.fandom.com/wiki/API_GetSpellInfo)
+- 🌙 EmmyLua: Updated https://wow.gamepedia.com URLs to https://wowpedia.fandom.com
+- 🌙 EmmyLua: Added `ItemTransmogInfoMixin`, `TransmogPendingInfoMixin`
+
+## [0.6.1] - 2021-09-20
+### Changed
 - 🌙 EmmyLua: Renamed emmylua classes internally to something more unique to avoid collisions with similar extensions, e.g. `Event` to `WowEvent`
 
 ## [0.6.0] - 2021-09-13
@@ -182,6 +188,7 @@
 ### Added
 - 🚧 Wip: Development work
 
+[0.6.2]: https://github.com/Ketho/vscode-wow-api/releases/tag/v0.6.2
 [0.6.1]: https://github.com/Ketho/vscode-wow-api/releases/tag/v0.6.1
 [0.6.0]: https://github.com/Ketho/vscode-wow-api/releases/tag/v0.6.0
 [0.5.5]: https://github.com/Ketho/vscode-wow-api/releases/tag/v0.5.5

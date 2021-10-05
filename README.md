@@ -8,7 +8,7 @@ Adds IntelliSense features for World of Warcraft API to VS Code. This extension 
 See [Recommended settings](https://github.com/Ketho/vscode-wow-api/wiki/Recommended-settings) for suggested config options and comparisons.
 
 ### Features
-#### [API](https://wow.gamepedia.com/World_of_Warcraft_API)
+#### [API](https://wowpedia.fandom.com/wiki/World_of_Warcraft_API)
 * Global API: Parsed 55% (743/1344) of non-Blizzard documented API that have an existing Wowpedia page
 * `C_` namespaced systems
 * Lua shorthand references e.g. `format` (string.format) and `tinsert` (table.insert)
@@ -16,13 +16,13 @@ See [Recommended settings](https://github.com/Ketho/vscode-wow-api/wiki/Recommen
 
 ![](https://github.com/Ketho/vscode-wow-api/raw/master/img/api.gif)
 
-#### [Widgets](https://wow.gamepedia.com/Widget_API)
+#### [Widgets](https://wowpedia.fandom.com/wiki/Widget_API)
 ![](https://github.com/Ketho/vscode-wow-api/raw/master/img/widget.gif)
 
-#### [Events](https://wow.gamepedia.com/Events)
+#### [Events](https://wowpedia.fandom.com/wiki/Events)
 ![](https://github.com/Ketho/vscode-wow-api/raw/master/img/event.gif)
 
-#### [CVars](https://wow.gamepedia.com/Console_variables)
+#### [CVars](https://wowpedia.fandom.com/wiki/Console_variables)
 ![](https://github.com/Ketho/vscode-wow-api/raw/master/img/cvar.png)
 
 #### [Enums](https://github.com/Ketho/BlizzardInterfaceResources/blob/live/Resources/LuaEnum.lua)
@@ -38,7 +38,7 @@ Shows completion for GlobalStrings at >3 uppercase letters to declutter fuzzy se
 
 ### Generating documentation
 * Blizzard documented functions are generated from [Blizzard_APIDocumentation](https://github.com/Gethe/wow-ui-source/tree/live/AddOns/Blizzard_APIDocumentation).
-* Non-Blizzard documented functions are [exported](https://wow.gamepedia.com/Special:Export) and [parsed](Lua/WikiParser/XmlParser.lua) from Wowpedia.
+* Non-Blizzard documented functions are [exported](https://wowpedia.fandom.com/wiki/Special:Export) and [parsed](Lua/WikiParser/XmlParser.lua) from Wowpedia.
 * JSON data for the hover provider (Events, CVars and Enums) is generated from [Lua/ToTypeScript](Lua/ToTypeScript).
 ```
 lua53 ./Lua/main.lua
