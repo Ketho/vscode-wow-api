@@ -2,9 +2,77 @@ local xml = require("xml")
 local lfs = require("lfs")
 
 local interfacePath = "c:/dev/wow-ui-source"
-local wowUiGit = "https://github.com/Gethe/wow-ui-source/tree/live/"
+local wowUiGit = "https://github.com/Gethe/wow-ui-source/tree/live/Interface/"
+local outputDir = "../EmmyLua/FrameXML/SharedXML/"
+local luaFileName = "UITemplates"
 
-local nodeNameFlags = "[!-]+"
+-- Any characters in template names that are not allowed to be present in LUA variable names.
+local invalidTemplateChars = "[!-]+"
+
+-- Info for below types pulled from https://github.com/lua-wow-tools/wowless/blob/main/wowless/xmllang.lua
+local genericTypes = [[
+---@class DropDownToggleButton : Button
+
+---@class FontFamily
+
+---@class MaskTexture
+
+---@class ItemButton : Button
+
+---@class EventButton : Button
+
+---@class ScrollFrame : Frame
+
+---@class Fontstring : FontString
+
+---@class ContainedAlertFrame : Button
+
+---@class FogOfWarFrame : Frame
+
+---@class Browser : Frame
+---@field imefont string
+
+---@class UnitPositionFrame : Frame
+
+---@class Actor
+---@field mixin string
+---@field name string
+
+---@class LayoutFrame
+---@field alpha number
+---@field hidden boolean
+---@field ignoreparentalpha boolean
+---@field ignoreparentscale boolean
+---@field inherits string
+---@field mixin string
+---@field name string
+---@field parentarray string
+---@field parentkey string
+---@field scale number
+---@field setallpoints boolean
+---@field virtual boolean
+
+---@class Line : LayoutFrame
+---@field alphaMode string
+---@field atlas string
+---@field thickness number
+
+---@class SimpleHTML : Frame
+
+---@class CinematicModel : Frame
+
+---@class ScrollingMessageFrame : Frame
+
+---@class GlueButtonTemplate : Button
+
+---@class POIFrame : Frame
+
+---@class ScenarioPOIFrame : POIFrame
+
+---@class QuestPOIFrame : POIFrame
+
+---@class EventFrame : Frame
+]]
 
 local createFrameHeader =
     [[
@@ -20,43 +88,7 @@ local createFrameHeader =
 function CreateFrame(frameType, name, parent, template, id) end
 ]]
 
-local function read_file(path)
-    if path == nil then
-        return ""
-    end
-    local file = io.open(path, "rb")
-    if not file then
-        return ""
-    end
-    local content = file:read "*a"
-    file:close()
-    return content
-end
-
-local function write_file(path, content)
-    print("Writing File " .. path)
-    if path == nil then
-        return nil
-    end
-    local file = io.open(path, "wb")
-    if not file then
-        print(path)
-        return false
-    end
-    file:write(content)
-    file:close()
-    return true
-end
-
-local gSubStrings = {
-    "</?Anchors>[ \t]*",
-    --"</?Layers>",
-    '</?Layer[ =A-Za-z0-9-">\t]*',
-    "</?Frames>[ \t]*",
-    "</?KeyValues>[ \t]*",
-    '</?ScopedModifier[ =A-Za-z0-9-"]*>'
-}
-
+-- Widget Types that would not need to be arrays.
 local singleTextureTypes = {
     ["PushedTexture"] = true,
     ["DisabledTexture"] = true,
@@ -85,10 +117,45 @@ local singleTextureTypes = {
     ["ThumbTexture"] = true,
 }
 
+--- 2 = Verbose, 1 = Informational, 0 = None
+local outputLevel = 1
+local function consoleOutput(functionName, outputString, level)
+    if level <= outputLevel then
+        local printString = string.format("%s: %s",functionName, outputString)
+        print(printString)
+    end
+end
+
+local function read_file(path)
+    if path == nil then
+        return ""
+    end
+    local file = io.open(path, "rb")
+    if not file then
+        return ""
+    end
+    local content = file:read "*a"
+    file:close()
+    return content
+end
+
+local function write_file(path, content)
+    if path == nil then
+        return nil
+    end
+    local file = io.open(path, "wb")
+    if not file then
+        return false
+    end
+    file:write(content)
+    file:close()
+    return true
+end
+
 -- Function to recursivley go through each node of the parsed XML looking for certain widget types for specific processing.
 -- If a none of a specific widget type is not found, then the node is looped through and processed.
 
-local function processNodes(node)
+local function processChildNodes(node)
     local parentNode = {}
     if node._widgetType == "KeyValue" then
         parentNode[node.key] = {
@@ -103,7 +170,7 @@ local function processNodes(node)
             if type(v) == "string" then
                 parentNode[node._widgetType][k] = v
             elseif type(v) == "table" then
-                local newKeys = processNodes(v)
+                local newKeys = processChildNodes(v)
                 for k2,v2 in pairs(newKeys) do
                     parentNode[node._widgetType][k2] = v2
                 end
@@ -152,7 +219,7 @@ local function processNodes(node)
         if type(v) == "string" then
             parentNode[k] = v
         elseif type(v) == "table" then
-            local processedNode = processNodes(v)
+            local processedNode = processChildNodes(v)
 
             if not processedNode._widgetType then
                 for key, value in pairs(processedNode) do
@@ -220,32 +287,27 @@ local function processNodes(node)
     return parentNode
 end
 
-local skipDir = {
-    ["."] = true,
-    [".."] = true
-}
-
-local fullNoteTable = {}
-local aliasTable = {
-    "---@alias TemplateType"
-}
-
 -- Keep track if templates or their sub elements inherit another template or element found.
 -- If we get to a template that provides no additional fields and is not inherited by another template, it will be skipped.
-local inheritsLog = {}
-
-local rtnValDump = {}
+--local inheritsTracker = {}
 
 --Recursively go through the table and rename any XML keys to our own name.
-local function XmlPropertyRename(table)
+local function processXMLAtt(table)
     local rtnVal = {}
     for k, v in pairs(table) do
         if type(v) == "table" then
-            rtnVal[k] = XmlPropertyRename(v)
+            rtnVal[k] = processXMLAtt(v)
         elseif type(v) == "string" then
-            if k == "inherits" then
-                inheritsLog[v] = true
-            end
+            --[[ if k == "inherits" then
+                if v:find(",") then
+                    for templateName in v:gmatch("([^,]+)") do
+                        local cleanTemplateName = templateName:gsub(invalidTemplateChars, "")
+                        --inheritsTracker[string.format("%s",cleanTemplateName)] = true
+                    end
+                else
+                    --inheritsTracker[string.format("%s",v)] = true
+                end
+            end ]]
             if k == "xml" then
                 rtnVal._widgetType = v
             elseif k == "name" then
@@ -258,59 +320,89 @@ local function XmlPropertyRename(table)
     return rtnVal
 end
 
-local function parseXml(path, filename)
-    --print("Reading " .. path)
+
+local function xmlPreprocess(path, fileName)
+    local functionName = "xmlPreprocess"
+    consoleOutput(functionName, string.format("Reading file %s",fileName), 2)
+
     local xmlString = read_file(path)
 
+    if xmlString == nil or xmlString == "" then
+        consoleOutput(functionName, string.format("String from file %s is blank",fileName), 2)
+    end
+
+    -- Strings used for clearing out undesired XML nodes.
+    local gSubStrings = {
+        "</?Anchors>[ \t]*",
+        --"</?Layers>",
+        '</?Layer[ =A-Za-z0-9-">\t]*',
+        "</?Frames>[ \t]*",
+        "</?KeyValues>[ \t]*",
+        '</?ScopedModifier[ =A-Za-z0-9-"]*>'
+    }
+
     --Remove containers that are not required that can make parsing the templates harder.
+    consoleOutput(functionName, "Removing unwanted containers", 2)
+
     for _, v in pairs(gSubStrings) do
         xmlString = xmlString:gsub(v .. "[%s]?\r\n", "")
     end
 
-    -- Removes any thing between <Scripts> blocks.
     -- This is easier than making a regex.
     local xmlStringArray = {}
     local inScriptBlock = false
     local i = 0
+
+    consoleOutput(functionName, "Remove Scripts Blocks", 2)
     -- Split the text by line to iterate over.
     for line in xmlString:gmatch("([^\r\n]*)\r?\n?") do
         i = i + 1
         if line:find("<Scripts>") then
-            --print("Scripts Block Start: "..i, line)
             inScriptBlock = true
         end
         if not inScriptBlock then
             if line:find("[%a%d*]+") or line:find("[<!-]+->?") then
-                --print("Adding Clean Line: "..i,line)
                 table.insert(xmlStringArray, line)
-            --else
-            --print("Blank  Line  Skip: "..i,line)
             end
-        --else
-        --print("Scripts Block Skip: "..i,line)
         end
         if line:find("</Scripts>") then
-            --print("Scripts Block  Stop: "..i, line)
             inScriptBlock = false
         end
     end
     --If needed, uncomment the next line to see what XML the parser is actually going through.
-    --write_file(string.format("C:/dev/vscode-wow-api/Lua/TemplateExtraction/Testing/%s_cleaned.xml",filename:sub(1, filename:len() - 4)),table.concat(xmlStringArray,"\r\n"))
-    xmlString = table.concat(xmlStringArray, "\r\n")
+    --write_file(string.format("C:/dev/vscode-wow-api/Lua/TemplateExtraction/Testing/%s_cleaned.xml",fileName:sub(1, fileName:len() - 4)),table.concat(xmlStringArray,"\r\n"))
+
+    consoleOutput(functionName, "Rebuilding XML string", 2)
+    local rtnVal = table.concat(xmlStringArray, "\r\n")
+    return rtnVal
+end
+
+local function parseXml(xmlString, fileName)
+    local functionName = "parseXml"
+    --Rejoin the XM string for actual parsing.
+    consoleOutput(functionName, "Parsing XML", 2)
     local parsedXml = xml.load(xmlString)
+
     local rtnVal = {}
     local templates = {}
 
+    if parsedXml == nil or type(parsedXml) ~= "table" then
+        consoleOutput(functionName, string.format("Unable to parse %s",fileName), 1)
+    end
+
+    -- Loop over each node parsed from XML and add only templates with the "virtual" attribute as only "virtual" templates can be used as templates.
+    consoleOutput(functionName, "Locating \"virtual\" templates.", 2)
     for _, v in pairs(parsedXml) do
         if v.name and v.virtual == "true" then
             local templateName = v.name
             v.name = nil
             v._widgetType = v.xml
             v.xml = nil
-            templates[templateName] = XmlPropertyRename(v)
+            templates[templateName] = processXMLAtt(v)
         end
     end
 
+    consoleOutput(functionName, "Processing \"virtual\" templates.", 2)
     for templateName, template in pairs(templates) do
         -- This should be at looping through the second node of each object. So Texture, Frame, ec
         if type(template) == "table" then
@@ -318,16 +410,15 @@ local function parseXml(path, filename)
             rtnVal[templateName] = {
                 _widgetType = template._widgetType
             }
+
+            consoleOutput(functionName, string.format("Processing Template %s Nodes", templateName), 2)
             for templatenNodeIdx, templateNode in pairs(template) do
                 -- Any property that is a string is represents an attribute on the XML node.
                 -- A few examples of these would be virtual="true" or file="AnimationTemplates.lua" where virtual is the key and true is the value.
                 if type(templateNode) == "string" and templatenNodeIdx ~= "xml" then
                     rtnVal[templateName][templatenNodeIdx] = templateNode
                 elseif type(templateNode) == "table" --[[ and tNode.xml ~= "Scripts" ]] then
-                    local tElement = processNodes(templateNode)
-                    if tElement._widgetType == "Size" then
-                        print("z")
-                    end
+                    local tElement = processChildNodes(templateNode)
                     if tElement.parentKey then
                         rtnVal[templateName][tElement.parentKey] = tElement
                         rtnVal[templateName][tElement.parentKey].parentKey = nil
@@ -341,95 +432,172 @@ local function parseXml(path, filename)
                     end
                 end
             end
+        else
+            consoleOutput(functionName, string.format("Unable to process Template %s", templateName), 1)
         end
     end
-
-    -- Loop through each template for processing into a class.
-    for k, v in pairs(rtnVal) do
-        rtnValDump[k] = v
-        local node = v
-        local nodeName = k
-        local cleanNodeName = nodeName:gsub(nodeNameFlags, "")
-        local nodeType = node._widgetType
-        local mixin = node.mixin or nil
-        local inherits = node.inherits or nil
-        local noteTable = {}
-        local filePath = path:sub(interfacePath:len() + 2)
-        local nodeClassString =
-            string.format(
-            "---@class %s : %s\n",
-            cleanNodeName or nodeName,
-            inherits or nodeType--,mixin and ", " .. mixin or ""
-        )
-        local nodeNoteString = string.format("---Located in [%s](%s%s)\n", filename, wowUiGit, filePath)
-
-        table.insert(aliasTable, string.format('---|"\'%s\'"', nodeName))
-
-        if nodeName:find(nodeNameFlags) then
-            local aliasNote =
-                string.format('---@alias %s\n---|"\'%s\'"\n', nodeName, cleanNodeName)
-
-            table.insert(aliasTable, string.format('---|"\'%s\'"', cleanNodeName))
-            table.insert(noteTable, aliasNote)
-        end
-
-        table.insert(noteTable, nodeClassString)
-        table.insert(noteTable, nodeNoteString)
-
-        local fieldString = "---@field %s %s\n"
-        local propFound = false
-        for prop, subNode in pairs(v) do
-            if subNode._widgetType then
-                local propType = subNode._widgetType:gsub("_", "")
-                table.insert(noteTable, string.format(fieldString, prop, propType))
-                propFound = true
-            end
-        end
-        if propFound then
-            fullNoteTable[cleanNodeName] = noteTable
-        end
-    end
+    return rtnVal
 end
 
-local function IterateFiles(folder)
+local function generateClassStrings(templates, path, fileName)
+    local functionName = "generateClassStrings"
+    --[[ local aliasTable = {
+        "---@alias TemplateType"
+    } ]]
+
+    local templateStrTables = {}
+
+    consoleOutput(functionName, string.format("Generating Class strings for %s",fileName), 1)
+    -- Loop through each template for processing into a class.
+    for templateName, template in pairs(templates) do
+        local cleanTemplateName = templateName:gsub(invalidTemplateChars, "")
+        local templateType = template._widgetType
+        -- Get Mixins working in a similar manner as UI templates.
+        --local mixin = template.mixin or nil
+        local inherits = template.inherits or nil
+        local templateStrTable = {}
+        local urlPath = path:sub(interfacePath:len() + 2)
+
+        --Adds the template name to the alias table. Aliases for each template are currently not required.
+        --[[ table.insert(aliasTable, string.format('\---|"\'%s\'"', templateName)) ]]
+
+        -- If the template name has characters that would not be proper LUA variable names, an alias is created.
+        -- This alias links the invalid template name to the valid LUA name.
+        if templateName:find(invalidTemplateChars) then
+            local aliasNote = string.format("---@alias %s\n---|\"'%s'\"\n---|\"'%s'\"\n",cleanTemplateName,cleanTemplateName,templateName)
+
+            --[[ table.insert(aliasTable, string.format('---|"\'%s\'"', cleanTemplateName)) ]]
+            table.insert(templateStrTable, aliasNote)
+        end
+
+        --Generate the class name string and include the class name for any other templates it would inherit.
+        local templateClassString =
+            string.format(
+            "---@class %s : %s\n",
+            cleanTemplateName or templateName,
+            inherits or templateType--,mixin and ", " .. mixin or ""
+        )
+
+        table.insert(templateStrTable, templateClassString)
+
+        --Adds a link to the file the template was generated from using WoWUiGit as the root.
+        --This link is shown in the VS Code tooltip.
+        local templateNote = string.format("---Located in [%s](%s%s)\n", fileName, wowUiGit, urlPath)
+        table.insert(templateStrTable, templateNote)
+
+        -- Go throuh each property of the template in order to populate fields with any properties that the template may create on the frame.
+        -- For example, if the template has a widget that has a parentKey "Text", then the frame created from said template would have a
+        -- property of Text that can be referenced in LUA.
+        local fieldString = "---@field %s %s\n"
+        for prop, subNode in pairs(template) do
+            if subNode._widgetType then
+                local propType = subNode._widgetType:gsub("_", "")
+                table.insert(templateStrTable, string.format(fieldString, prop, propType))
+            end
+        end
+
+        -- Only add classes for templates that have fields OR are inherited by other template classses.
+        if (templateName:find(invalidTemplateChars) == nil) then
+            templateStrTables[cleanTemplateName] = templateStrTable
+        end
+    end
+    return templateStrTables
+end
+
+local function iterateFiles(folder)
+    local functionName = "iterateFiles"
+    local skipDir = {
+        ["."] = true,
+        [".."] = true,
+        ["GlueXML"] = true,
+        [".git"] = true,
+        [".github"] = true
+    }
+    local filesToProcess = {}
     for fileName in lfs.dir(folder) do
         local path = folder .. "/" .. fileName
         local attr = lfs.attributes(path)
         if attr.mode == "directory" then
             if not skipDir[fileName] then
-                IterateFiles(path)
+                consoleOutput(functionName, string.format("Processing directory %s", path), 1)
+                local files = iterateFiles(path)
+                for _,file in pairs(files) do
+                    table.insert(filesToProcess,{path= file.path,name= file.name})
+                end
             end
         else
             if fileName:find("%.xml") then
-                local success, err = pcall(parseXml,path, fileName)
-                if not success then error(err) end
+                table.insert(filesToProcess,{path= path,name= fileName})
             end
         end
     end
+    return filesToProcess
 end
-IterateFiles(interfacePath)
+
 -- Debugging individual files.
 -- parseXml("C:/dev/wow-ui-source/SharedXML/SharedUIPanelTemplates.xml","SharedUIPanelTemplates.xml")
-local noteFiles = {}
--- Iterate through the table and create entries in the table named "noteFiles" for each file while also
--- checking to see if it makes the file larger than 100k.
 
-for _, v in pairs(fullNoteTable) do
-    local noteString = table.concat(v)
-    if #noteFiles == 0 then
-        noteFiles[1] = noteString
-    elseif noteFiles[#noteFiles] and (noteString:len() + noteFiles[#noteFiles]:len() > 100000) then
-        noteFiles[#noteFiles + 1] = noteString
-    else
-        noteFiles[#noteFiles] = noteFiles[#noteFiles] .. "\n" .. noteString
+local function exportTemplateClasses(templateClassStrings)
+    local functionName = "exportTemplateClasses"
+    local outFiles = {}
+    consoleOutput(functionName, "Generating LUA file strings", 1)
+
+    for _, tempClassString in pairs(templateClassStrings) do
+        if #outFiles == 0 then
+            outFiles[1] = genericTypes .. "\n" .. tempClassString
+        elseif outFiles[#outFiles] and (tempClassString:len() + outFiles[#outFiles]:len() > 100000) then
+            outFiles[#outFiles + 1] = tempClassString
+        else
+            outFiles[#outFiles] = outFiles[#outFiles] .. "\n" .. tempClassString
+        end
+    end
+
+    outFiles[#outFiles] = outFiles[#outFiles] .. "\n" .. createFrameHeader
+    for k, outFileString in pairs(outFiles) do
+        local fileNumber = tostring(k)
+        local fileName = string.format(luaFileName.."%s.lua",fileNumber)
+        consoleOutput(functionName, string.format("Writing to %s",outputDir .. fileName), 1)
+        write_file(outputDir .. fileName, outFileString)
     end
 end
 
-noteFiles[#noteFiles] = noteFiles[#noteFiles] .. "\n" .. createFrameHeader
-for k, v in pairs(noteFiles) do
-    local fileNumber = k > 1 and tostring(k) or ""
-    write_file(string.format("../EmmyLua/FrameXML/SharedXML/UITemplates%s.lua", fileNumber), v)
+local function deleteOldTemplates(dir)
+    local functionName = "deleteOldTemplates"
+    for filename in lfs.dir(dir) do
+        local path = folder .. "/" .. fileName
+        local attr = lfs.attributes(path)
+        if attr.mode == "file" and filename:find(luaFileName.."%d+.lua") then
+            consoleOutput(functionName, string.format("Removing file  %s",filename), 1)
+            os.remove(path)
+        end
+    end
 end
---Used for debugging.
---local inspect = require("inspect")
---write_file("TemplateExtraction/Testing/rtnVal.lua",inspect(rtnValDump))
+
+local function startProcess()
+    local functionName = "startProcess"
+    deleteOldTemplates(outputDir)
+    local filesToProcess = iterateFiles(interfacePath)
+    local templateClassStrings = {}
+    local templatesAdded = {}
+    for _,file in pairs(filesToProcess) do
+        consoleOutput(functionName, string.format("Processing file %s",file.path), 1)
+        local xmlString = xmlPreprocess(file.path, file.name)
+        if xmlString ~= nil and #xmlString > 0 then
+            local processedTemplates = parseXml(xmlString, file.name)
+            --local templateStrTables = generateClassStrings(processedTemplates, file.path, file.name)
+            -- Insert each entry from the returned table into the table that is used to generate the final LUA files.
+            consoleOutput(functionName, "Adding templates to templateClassStrings", 2)
+            for tempName,v in pairs(generateClassStrings(processedTemplates, file.path, file.name)) do
+                if not templatesAdded[tempName] then
+                    templatesAdded[tempName] = true
+                    table.insert(templateClassStrings,table.concat(v))
+                end
+            end
+        else
+            consoleOutput("File Loop", string.format("String for %s was nil or 0 length.", file.name), 1)
+        end
+    end
+    exportTemplateClasses(templateClassStrings)
+end
+
+startProcess()
