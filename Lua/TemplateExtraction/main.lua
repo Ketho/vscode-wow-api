@@ -13,7 +13,7 @@ local createFrameHeader =
 ---@param frameType `T` | FrameType
 ---@param name string
 ---@param parent Frame
----@param template? `Tp` | TemplateType
+---@param template? `Tp`
 ---@param id number
 ---@return T|Tp frame
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_CreateFrame)
@@ -262,7 +262,7 @@ local function parseXml(path, filename)
     --print("Reading " .. path)
     local xmlString = read_file(path)
 
-    --Remove containers that are not needed and make interating over the XML more complicanted.
+    --Remove containers that are not required that can make parsing the templates harder.
     for _, v in pairs(gSubStrings) do
         xmlString = xmlString:gsub(v .. "[%s]?\r\n", "")
     end
@@ -408,7 +408,8 @@ local function IterateFiles(folder)
     end
 end
 IterateFiles(interfacePath)
---parseXml("C:/dev/wow-ui-source/SharedXML/SharedUIPanelTemplates.xml","SharedUIPanelTemplates.xml")
+-- Debugging individual files.
+-- parseXml("C:/dev/wow-ui-source/SharedXML/SharedUIPanelTemplates.xml","SharedUIPanelTemplates.xml")
 local noteFiles = {}
 -- Iterate through the table and create entries in the table named "noteFiles" for each file while also
 -- checking to see if it makes the file larger than 100k.
@@ -427,7 +428,7 @@ end
 noteFiles[#noteFiles] = noteFiles[#noteFiles] .. "\n" .. createFrameHeader
 for k, v in pairs(noteFiles) do
     local fileNumber = k > 1 and tostring(k) or ""
-    write_file(string.format("TemplateExtraction/Out/TemplatesNotes%s.lua", fileNumber), v)
+    write_file(string.format("../EmmyLua/FrameXML/SharedXML/UITemplates%s.lua", fileNumber), v)
 end
 --Used for debugging.
 --local inspect = require("inspect")
