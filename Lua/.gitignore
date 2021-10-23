@@ -2,3 +2,5 @@
 /lua.bat
 /lua_modules
 /.luarocks
+/lua*
+!luafilesystem*

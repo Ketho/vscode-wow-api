@@ -1,5 +1,5 @@
 local nonBlizzDocumented = require("Lua/WikiParser/WikiText/NonBlizzardDocumented")[1]
-
+Util:GetWoWApiXML()
 local file			= io.open("Lua/Data/input/World_of_Warcraft_API.txt", "r")
 local file_valid	= io.open("Lua/Data/output/World_of_Warcraft_API_valid.txt", "w")
 local file_invalid	= io.open("Lua/Data/output/World_of_Warcraft_API_invalid.txt", "w")

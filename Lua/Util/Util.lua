@@ -1,5 +1,7 @@
 local lfs = require "lfs"
 local https = require "ssl.https"
+local http = require "socket.http"
+local ltn12 = require "ltn12"
 
 Util = {}
 
@@ -45,4 +47,22 @@ function Util:GetFullName(apiTable)
 		fullName = apiTable.Name
 	end
 	return fullName
+end
+
+function Util:GetWoWApiXML()
+  local postUrl = "https://wowpedia.fandom.com/wiki/Special:Export"
+  local requestBody = "catname=&pages=World_of_Warcraft_API&curonly=1&wpEditToken=%2B%5C&title=Special%3AExport"
+  local responseBody = {}
+  local body = https.request{
+    url = postUrl,
+    method = 'POST',
+    headers = {
+      ["Content-Type"] = "application/x-www-form-urlencoded",
+      ["Content-Length"] = string.len(requestBody)
+    },
+    source = ltn12.source.string(requestBody),
+    sink = ltn12.sink.table(responseBody)
+  }
+
+  Util:WriteFile("Lua/Data/input/World_of_Warcraft_API.txt",table.concat(responseBody))
 end

@@ -1,9 +1,9 @@
 local xml = require("xml")
 local lfs = require("lfs")
 
-local interfacePath = "c:/dev/wow-ui-source"
+local interfacePath = "../wow-ui-source"
 local wowUiGit = "https://github.com/Gethe/wow-ui-source/tree/live/Interface/"
-local outputDir = "../EmmyLua/FrameXML/SharedXML/"
+local outputDir = "EmmyLua/FrameXML/SharedXML/"
 local luaFileName = "UITemplates"
 
 -- Any characters in template names that are not allowed to be present in LUA variable names.
