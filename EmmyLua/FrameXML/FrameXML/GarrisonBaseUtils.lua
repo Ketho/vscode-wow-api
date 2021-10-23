@@ -1,11 +1,3 @@
----@class GarrisonFollowerPortraitTemplate : Frame, GarrisonFollowerPortraitMixin
----@field PortraitRing Texture
----@field Portrait Texture
----@field PortraitRingQuality Texture
----@field LevelBorder Texture
----@field Level FontString
----@field PortraitRingCover Texture
-
 ---@class GarrisonFollowerPortraitMixin
 local GarrisonFollowerPortraitMixin = {}
 

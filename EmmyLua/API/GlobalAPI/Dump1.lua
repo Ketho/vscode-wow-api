@@ -41,11 +41,14 @@ function AcceptTrade() end
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_AcceptXPLoss)
 function AcceptXPLoss() end
 
+---[Documentation](https://wowpedia.fandom.com/wiki/API_AcknowledgeAADCAlert)
+function AcknowledgeAADCAlert() end
+
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_AcknowledgeAutoAcceptQuest)
 function AcknowledgeAutoAcceptQuest() end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_AcknowledgeSurvey)
-function AcknowledgeSurvey(caseIndex) end
+function AcknowledgeSurvey() end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_ActionBindsItem)
 function ActionBindsItem() end
@@ -86,11 +89,8 @@ function Ambiguate(fullName, context) end
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_AntiAliasingSupported)
 function AntiAliasingSupported() end
 
----[Documentation](https://wowpedia.fandom.com/wiki/API_ApplyBarberShopStyle)
-function ApplyBarberShopStyle() end
-
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_ArchaeologyGetIconInfo)
-function ArchaeologyGetIconInfo(index) end
+function ArchaeologyGetIconInfo() end
 
 ---@param uiMapID number
 ---@return number numSites
@@ -98,7 +98,7 @@ function ArchaeologyGetIconInfo(index) end
 function ArchaeologyMapUpdateAll(uiMapID) end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_ArcheologyGetVisibleBlobID)
-function ArcheologyGetVisibleBlobID(index) end
+function ArcheologyGetVisibleBlobID() end
 
 ---@return boolean hidden
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_AreAccountAchievementsHidden)
@@ -118,7 +118,7 @@ function AscendStop() end
 function AssistUnit(unit) end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_AttachGlyphToSpell)
-function AttachGlyphToSpell(spellID) end
+function AttachGlyphToSpell() end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_AttackTarget)
 function AttackTarget() end
@@ -130,7 +130,7 @@ function AutoChooseCurrentGraphicsSetting() end
 function AutoEquipCursorItem() end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_AutoLootMailItem)
-function AutoLootMailItem(index) end
+function AutoLootMailItem() end
 
 ---@param tab number
 ---@param slot number
@@ -138,20 +138,20 @@ function AutoLootMailItem(index) end
 function AutoStoreGuildBankItem(tab, slot) end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_BNAcceptFriendInvite)
-function BNAcceptFriendInvite(ID) end
+function BNAcceptFriendInvite() end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_BNCheckBattleTagInviteToGuildMember)
-function BNCheckBattleTagInviteToGuildMember(fullname) end
+function BNCheckBattleTagInviteToGuildMember() end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_BNCheckBattleTagInviteToUnit)
-function BNCheckBattleTagInviteToUnit(unit) end
+function BNCheckBattleTagInviteToUnit() end
 
 ---@return boolean connected
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_BNConnected)
 function BNConnected() end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_BNDeclineFriendInvite)
-function BNDeclineFriendInvite(ID) end
+function BNDeclineFriendInvite() end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_BNFeaturesEnabled)
 function BNFeaturesEnabled() end
@@ -160,10 +160,10 @@ function BNFeaturesEnabled() end
 function BNFeaturesEnabledAndConnected() end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_BNGetBlockedInfo)
-function BNGetBlockedInfo(index) end
+function BNGetBlockedInfo() end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_BNGetDisplayName)
-function BNGetDisplayName(bnetIdAccount) end
+function BNGetDisplayName() end
 
 ---@param mutual boolean
 ---@param nonMutual boolean
@@ -202,7 +202,7 @@ function BNGetInfo() end
 function BNGetNumBlocked() end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_BNGetNumFOF)
-function BNGetNumFOF(ID, mutual, non) end
+function BNGetNumFOF() end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_BNGetNumFriendInvites)
 function BNGetNumFriendInvites() end
@@ -221,31 +221,31 @@ function BNGetSelectedBlock() end
 function BNGetSelectedFriend() end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_BNInviteFriend)
-function BNInviteFriend(bnetIDGameAccount) end
+function BNInviteFriend() end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_BNIsBlocked)
-function BNIsBlocked(ID) end
+function BNIsBlocked() end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_BNIsFriend)
-function BNIsFriend(presenceID) end
+function BNIsFriend() end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_BNIsSelf)
-function BNIsSelf(presenceID) end
+function BNIsSelf() end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_BNRemoveFriend)
-function BNRemoveFriend(ID) end
+function BNRemoveFriend() end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_BNRequestFOFInfo)
-function BNRequestFOFInfo(bnetIDAccount) end
+function BNRequestFOFInfo() end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_BNRequestInviteFriend)
-function BNRequestInviteFriend(presenceID, tank, heal, dps) end
+function BNRequestInviteFriend() end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_BNSendFriendInvite)
-function BNSendFriendInvite(text, noteText) end
+function BNSendFriendInvite() end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_BNSendFriendInviteByID)
-function BNSendFriendInviteByID(ID, noteText) end
+function BNSendFriendInviteByID() end
 
 ---@param presenceID number
 ---@param addonPrefix string
@@ -254,7 +254,7 @@ function BNSendFriendInviteByID(ID, noteText) end
 function BNSendGameData(presenceID, addonPrefix, message) end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_BNSendSoR)
-function BNSendSoR(target, comment) end
+function BNSendSoR() end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_BNSendVerifiedBattleTagInvite)
 function BNSendVerifiedBattleTagInvite() end
@@ -269,7 +269,7 @@ function BNSendWhisper(bnetAccountID, message) end
 function BNSetAFK(bool) end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_BNSetBlocked)
-function BNSetBlocked(ID, bool) end
+function BNSetBlocked() end
 
 ---@param text string
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_BNSetCustomMessage)
@@ -290,37 +290,34 @@ function BNSetFriendFavoriteFlag(id, isFavorite) end
 function BNSetFriendNote(bnetIDAccount, noteText) end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_BNSetSelectedBlock)
-function BNSetSelectedBlock(index) end
+function BNSetSelectedBlock() end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_BNSetSelectedFriend)
-function BNSetSelectedFriend(index) end
+function BNSetSelectedFriend() end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_BNSummonFriendByIndex)
-function BNSummonFriendByIndex(id) end
+function BNSummonFriendByIndex() end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_BNTokenFindName)
-function BNTokenFindName(target) end
+function BNTokenFindName() end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_BankButtonIDToInvSlotID)
-function BankButtonIDToInvSlotID(buttonID, isBag) end
-
----[Documentation](https://wowpedia.fandom.com/wiki/API_BarberShopReset)
-function BarberShopReset() end
+function BankButtonIDToInvSlotID() end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_BattlefieldMgrEntryInviteResponse)
-function BattlefieldMgrEntryInviteResponse(queueId, accept) end
+function BattlefieldMgrEntryInviteResponse() end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_BattlefieldMgrExitRequest)
-function BattlefieldMgrExitRequest(queueId) end
+function BattlefieldMgrExitRequest() end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_BattlefieldMgrQueueInviteResponse)
-function BattlefieldMgrQueueInviteResponse(queueId, accept) end
+function BattlefieldMgrQueueInviteResponse() end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_BattlefieldMgrQueueRequest)
 function BattlefieldMgrQueueRequest() end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_BattlefieldSetPendingReportTarget)
-function BattlefieldSetPendingReportTarget(index) end
+function BattlefieldSetPendingReportTarget() end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_BeginTrade)
 function BeginTrade() end
@@ -357,7 +354,7 @@ function BuyTrainerService(index) end
 function BuybackItem(slot) end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_AdventureJournal.ActivateEntry)
-function C_AdventureJournal.ActivateEntry(index) end
+function C_AdventureJournal.ActivateEntry() end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_AdventureJournal.CanBeShown)
 function C_AdventureJournal.CanBeShown() end
@@ -372,13 +369,13 @@ function C_AdventureJournal.GetPrimaryOffset() end
 function C_AdventureJournal.GetReward() end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_AdventureJournal.GetSuggestions)
-function C_AdventureJournal.GetSuggestions(suggestions) end
+function C_AdventureJournal.GetSuggestions() end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_AdventureJournal.SetPrimaryOffset)
-function C_AdventureJournal.SetPrimaryOffset(offset) end
+function C_AdventureJournal.SetPrimaryOffset() end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_AdventureJournal.UpdateSuggestions)
-function C_AdventureJournal.UpdateSuggestions(levelUp) end
+function C_AdventureJournal.UpdateSuggestions() end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_AdventureMap.Close)
 function C_AdventureMap.Close() end
@@ -387,10 +384,10 @@ function C_AdventureMap.Close() end
 function C_AdventureMap.GetMapID() end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_AdventureMap.GetMapInsetDetailTileInfo)
-function C_AdventureMap.GetMapInsetDetailTileInfo(insetIndex, tileIndex) end
+function C_AdventureMap.GetMapInsetDetailTileInfo() end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_AdventureMap.GetMapInsetInfo)
-function C_AdventureMap.GetMapInsetInfo(insetIndex) end
+function C_AdventureMap.GetMapInsetInfo() end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_AdventureMap.GetNumMapInsets)
 function C_AdventureMap.GetNumMapInsets() end
@@ -402,19 +399,16 @@ function C_AdventureMap.GetNumQuestOffers() end
 function C_AdventureMap.GetNumZoneChoices() end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_AdventureMap.GetQuestInfo)
-function C_AdventureMap.GetQuestInfo(questID) end
+function C_AdventureMap.GetQuestInfo() end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_AdventureMap.GetQuestOfferInfo)
-function C_AdventureMap.GetQuestOfferInfo(offerIndex) end
+function C_AdventureMap.GetQuestOfferInfo() end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_AdventureMap.GetZoneChoiceInfo)
-function C_AdventureMap.GetZoneChoiceInfo(choiceIndex) end
+function C_AdventureMap.GetZoneChoiceInfo() end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_AdventureMap.StartQuest)
-function C_AdventureMap.StartQuest(questID) end
-
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_BarberShop.OldBarberShopLoaded)
-function C_BarberShop.OldBarberShopLoaded() end
+function C_AdventureMap.StartQuest() end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_BlackMarket.Close)
 function C_BlackMarket.Close() end
@@ -423,10 +417,10 @@ function C_BlackMarket.Close() end
 function C_BlackMarket.GetHotItem() end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_BlackMarket.GetItemInfoByID)
-function C_BlackMarket.GetItemInfoByID(marketID) end
+function C_BlackMarket.GetItemInfoByID() end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_BlackMarket.GetItemInfoByIndex)
-function C_BlackMarket.GetItemInfoByIndex(index) end
+function C_BlackMarket.GetItemInfoByIndex() end
 
 ---@return number numItems
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_BlackMarket.GetNumItems)
@@ -490,58 +484,58 @@ function C_ClassTrial.IsClassTrialCharacter() end
 function C_Debug.DashboardIsEnabled() end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_Debug.GetAllPortLocsForMap)
-function C_Debug.GetAllPortLocsForMap(uiMapID) end
+function C_Debug.GetAllPortLocsForMap() end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_Debug.GetMapDebugObjects)
-function C_Debug.GetMapDebugObjects(uiMapID) end
+function C_Debug.GetMapDebugObjects() end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_Debug.TeleportToMapDebugObject)
-function C_Debug.TeleportToMapDebugObject(pinIndex) end
+function C_Debug.TeleportToMapDebugObject() end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_Debug.TeleportToMapLocation)
-function C_Debug.TeleportToMapLocation(uiMapID, mapX, mapY) end
+function C_Debug.TeleportToMapLocation() end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_Garrison.AllowMissionStartAboveSoftCap)
-function C_Garrison.AllowMissionStartAboveSoftCap(garrFollowerTypeID) end
+function C_Garrison.AllowMissionStartAboveSoftCap() end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_Garrison.AreMissionFollowerRequirementsMet)
-function C_Garrison.AreMissionFollowerRequirementsMet(missionRecID) end
+function C_Garrison.AreMissionFollowerRequirementsMet() end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_Garrison.AssignFollowerToBuilding)
-function C_Garrison.AssignFollowerToBuilding(plotInstanceID, followerID) end
+function C_Garrison.AssignFollowerToBuilding() end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_Garrison.CanGenerateRecruits)
 function C_Garrison.CanGenerateRecruits() end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_Garrison.CanOpenMissionChest)
-function C_Garrison.CanOpenMissionChest(missionID) end
+function C_Garrison.CanOpenMissionChest() end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_Garrison.CanSetRecruitmentPreference)
 function C_Garrison.CanSetRecruitmentPreference() end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_Garrison.CanSpellTargetFollowerIDWithAddAbility)
-function C_Garrison.CanSpellTargetFollowerIDWithAddAbility(followerID) end
+function C_Garrison.CanSpellTargetFollowerIDWithAddAbility() end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_Garrison.CanUpgradeGarrison)
 function C_Garrison.CanUpgradeGarrison() end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_Garrison.CancelConstruction)
-function C_Garrison.CancelConstruction(plotInstanceID) end
+function C_Garrison.CancelConstruction() end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_Garrison.CastItemSpellOnFollowerAbility)
-function C_Garrison.CastItemSpellOnFollowerAbility(followerID, abilityID) end
+function C_Garrison.CastItemSpellOnFollowerAbility() end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_Garrison.CastSpellOnFollower)
-function C_Garrison.CastSpellOnFollower(followerID) end
+function C_Garrison.CastSpellOnFollower() end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_Garrison.CastSpellOnFollowerAbility)
-function C_Garrison.CastSpellOnFollowerAbility(followerID, abilityID) end
+function C_Garrison.CastSpellOnFollowerAbility() end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_Garrison.CastSpellOnMission)
-function C_Garrison.CastSpellOnMission(missionID) end
+function C_Garrison.CastSpellOnMission() end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_Garrison.ClearCompleteTalent)
-function C_Garrison.ClearCompleteTalent(garrisonType) end
+function C_Garrison.ClearCompleteTalent() end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_Garrison.CloseArchitect)
 function C_Garrison.CloseArchitect() end
@@ -562,28 +556,28 @@ function C_Garrison.CloseTalentNPC() end
 function C_Garrison.CloseTradeskillCrafter() end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_Garrison.GenerateRecruits)
-function C_Garrison.GenerateRecruits(mechanicTypeID, traitID) end
+function C_Garrison.GenerateRecruits() end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_Garrison.GetAllBonusAbilityEffects)
 function C_Garrison.GetAllBonusAbilityEffects() end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_Garrison.GetAllEncounterThreats)
-function C_Garrison.GetAllEncounterThreats(garrFollowerTypeID) end
+function C_Garrison.GetAllEncounterThreats() end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_Garrison.GetAvailableMissions)
-function C_Garrison.GetAvailableMissions(missionList, garrFollowerTypeID) end
+function C_Garrison.GetAvailableMissions() end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_Garrison.GetAvailableRecruits)
 function C_Garrison.GetAvailableRecruits() end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_Garrison.GetBasicMissionInfo)
-function C_Garrison.GetBasicMissionInfo(missionID) end
+function C_Garrison.GetBasicMissionInfo() end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_Garrison.GetBuffedFollowersForMission)
-function C_Garrison.GetBuffedFollowersForMission(missionID, displayingAbilities) end
+function C_Garrison.GetBuffedFollowersForMission() end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_Garrison.GetBuildingInfo)
-function C_Garrison.GetBuildingInfo(buildingID) end
+function C_Garrison.GetBuildingInfo() end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_Garrison.GetBuildingLockInfo)
 function C_Garrison.GetBuildingLockInfo() end
@@ -595,37 +589,37 @@ function C_Garrison.GetBuildingSizes() end
 function C_Garrison.GetBuildingSpecInfo() end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_Garrison.GetBuildingTimeRemaining)
-function C_Garrison.GetBuildingTimeRemaining(plotInstanceID) end
+function C_Garrison.GetBuildingTimeRemaining() end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_Garrison.GetBuildingTooltip)
-function C_Garrison.GetBuildingTooltip(buildingID) end
+function C_Garrison.GetBuildingTooltip() end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_Garrison.GetBuildingUpgradeInfo)
-function C_Garrison.GetBuildingUpgradeInfo(buildingID) end
+function C_Garrison.GetBuildingUpgradeInfo() end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_Garrison.GetBuildings)
-function C_Garrison.GetBuildings(garrisonType) end
+function C_Garrison.GetBuildings() end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_Garrison.GetBuildingsForPlot)
-function C_Garrison.GetBuildingsForPlot(plotInstanceID) end
+function C_Garrison.GetBuildingsForPlot() end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_Garrison.GetBuildingsForSize)
-function C_Garrison.GetBuildingsForSize(garrisonType, uiCategoryID) end
+function C_Garrison.GetBuildingsForSize() end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_Garrison.GetClassSpecCategoryInfo)
-function C_Garrison.GetClassSpecCategoryInfo(garrFollowerType) end
+function C_Garrison.GetClassSpecCategoryInfo() end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_Garrison.GetCombatAllyMission)
-function C_Garrison.GetCombatAllyMission(garrFollowerTypeID) end
+function C_Garrison.GetCombatAllyMission() end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_Garrison.GetCompleteMissions)
-function C_Garrison.GetCompleteMissions(missionList, garrFollowerTypeID) end
+function C_Garrison.GetCompleteMissions() end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_Garrison.GetCompleteTalent)
-function C_Garrison.GetCompleteTalent(garrisonType) end
+function C_Garrison.GetCompleteTalent() end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_Garrison.GetCurrencyTypes)
-function C_Garrison.GetCurrencyTypes(garrType) end
+function C_Garrison.GetCurrencyTypes() end
 
 ---@param followerID number
 ---@return table abilities
@@ -633,55 +627,55 @@ function C_Garrison.GetCurrencyTypes(garrType) end
 function C_Garrison.GetFollowerAbilities(followerID) end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_Garrison.GetFollowerAbilityAtIndex)
-function C_Garrison.GetFollowerAbilityAtIndex(followerID, index) end
+function C_Garrison.GetFollowerAbilityAtIndex() end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_Garrison.GetFollowerAbilityAtIndexByID)
-function C_Garrison.GetFollowerAbilityAtIndexByID(garrFollowerID, index) end
+function C_Garrison.GetFollowerAbilityAtIndexByID() end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_Garrison.GetFollowerAbilityCounterMechanicInfo)
-function C_Garrison.GetFollowerAbilityCounterMechanicInfo(garrAbilityID) end
+function C_Garrison.GetFollowerAbilityCounterMechanicInfo() end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_Garrison.GetFollowerAbilityCountersForMechanicTypes)
-function C_Garrison.GetFollowerAbilityCountersForMechanicTypes(garrFollowerTypeID) end
+function C_Garrison.GetFollowerAbilityCountersForMechanicTypes() end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_Garrison.GetFollowerAbilityDescription)
-function C_Garrison.GetFollowerAbilityDescription(garrAbilityID) end
+function C_Garrison.GetFollowerAbilityDescription() end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_Garrison.GetFollowerAbilityIcon)
-function C_Garrison.GetFollowerAbilityIcon(garrAbilityID) end
+function C_Garrison.GetFollowerAbilityIcon() end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_Garrison.GetFollowerAbilityInfo)
-function C_Garrison.GetFollowerAbilityInfo(garrAbilityID) end
+function C_Garrison.GetFollowerAbilityInfo() end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_Garrison.GetFollowerAbilityIsTrait)
-function C_Garrison.GetFollowerAbilityIsTrait(garrAbilityID) end
+function C_Garrison.GetFollowerAbilityIsTrait() end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_Garrison.GetFollowerAbilityLink)
-function C_Garrison.GetFollowerAbilityLink(abilityID) end
+function C_Garrison.GetFollowerAbilityLink() end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_Garrison.GetFollowerAbilityName)
-function C_Garrison.GetFollowerAbilityName(garrAbilityID) end
+function C_Garrison.GetFollowerAbilityName() end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_Garrison.GetFollowerActivationCost)
 function C_Garrison.GetFollowerActivationCost() end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_Garrison.GetFollowerBiasForMission)
-function C_Garrison.GetFollowerBiasForMission(missionID, followerID) end
+function C_Garrison.GetFollowerBiasForMission() end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_Garrison.GetFollowerClassSpec)
-function C_Garrison.GetFollowerClassSpec(followerID) end
+function C_Garrison.GetFollowerClassSpec() end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_Garrison.GetFollowerClassSpecAtlas)
-function C_Garrison.GetFollowerClassSpecAtlas(garrSpecID) end
+function C_Garrison.GetFollowerClassSpecAtlas() end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_Garrison.GetFollowerClassSpecByID)
-function C_Garrison.GetFollowerClassSpecByID(garrFollowerID) end
+function C_Garrison.GetFollowerClassSpecByID() end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_Garrison.GetFollowerClassSpecName)
-function C_Garrison.GetFollowerClassSpecName(garrFollowerID) end
+function C_Garrison.GetFollowerClassSpecName() end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_Garrison.GetFollowerDisplayID)
-function C_Garrison.GetFollowerDisplayID(followerID) end
+function C_Garrison.GetFollowerDisplayID() end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_Garrison.GetFollowerInfo)
 function C_Garrison.GetFollowerInfo() end
@@ -693,91 +687,91 @@ function C_Garrison.GetFollowerInfoForBuilding() end
 function C_Garrison.GetFollowerIsTroop() end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_Garrison.GetFollowerItemLevelAverage)
-function C_Garrison.GetFollowerItemLevelAverage(followerID) end
+function C_Garrison.GetFollowerItemLevelAverage() end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_Garrison.GetFollowerItems)
-function C_Garrison.GetFollowerItems(followerID) end
+function C_Garrison.GetFollowerItems() end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_Garrison.GetFollowerLevel)
-function C_Garrison.GetFollowerLevel(followerID) end
+function C_Garrison.GetFollowerLevel() end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_Garrison.GetFollowerLevelXP)
-function C_Garrison.GetFollowerLevelXP(followerID) end
+function C_Garrison.GetFollowerLevelXP() end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_Garrison.GetFollowerLink)
-function C_Garrison.GetFollowerLink(followerID) end
+function C_Garrison.GetFollowerLink() end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_Garrison.GetFollowerLinkByID)
-function C_Garrison.GetFollowerLinkByID(garrFollowerID) end
+function C_Garrison.GetFollowerLinkByID() end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_Garrison.GetFollowerMissionTimeLeft)
-function C_Garrison.GetFollowerMissionTimeLeft(followerID) end
+function C_Garrison.GetFollowerMissionTimeLeft() end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_Garrison.GetFollowerMissionTimeLeftSeconds)
-function C_Garrison.GetFollowerMissionTimeLeftSeconds(followerID) end
+function C_Garrison.GetFollowerMissionTimeLeftSeconds() end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_Garrison.GetFollowerModelItems)
-function C_Garrison.GetFollowerModelItems(followerID) end
+function C_Garrison.GetFollowerModelItems() end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_Garrison.GetFollowerName)
-function C_Garrison.GetFollowerName(followerID) end
+function C_Garrison.GetFollowerName() end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_Garrison.GetFollowerNameByID)
-function C_Garrison.GetFollowerNameByID(garrFollowerID) end
+function C_Garrison.GetFollowerNameByID() end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_Garrison.GetFollowerPortraitIconID)
-function C_Garrison.GetFollowerPortraitIconID(followerID) end
+function C_Garrison.GetFollowerPortraitIconID() end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_Garrison.GetFollowerPortraitIconIDByID)
-function C_Garrison.GetFollowerPortraitIconIDByID(garrFollowerID) end
+function C_Garrison.GetFollowerPortraitIconIDByID() end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_Garrison.GetFollowerQuality)
-function C_Garrison.GetFollowerQuality(followerID) end
+function C_Garrison.GetFollowerQuality() end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_Garrison.GetFollowerQualityTable)
-function C_Garrison.GetFollowerQualityTable(garrFollowerTypeID) end
+function C_Garrison.GetFollowerQualityTable() end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_Garrison.GetFollowerRecentlyGainedAbilityIDs)
-function C_Garrison.GetFollowerRecentlyGainedAbilityIDs(followerID) end
+function C_Garrison.GetFollowerRecentlyGainedAbilityIDs() end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_Garrison.GetFollowerRecentlyGainedTraitIDs)
-function C_Garrison.GetFollowerRecentlyGainedTraitIDs(followerID) end
+function C_Garrison.GetFollowerRecentlyGainedTraitIDs() end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_Garrison.GetFollowerShipments)
-function C_Garrison.GetFollowerShipments(garrTypeID) end
+function C_Garrison.GetFollowerShipments() end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_Garrison.GetFollowerSoftCap)
-function C_Garrison.GetFollowerSoftCap(garrFollowerTypeID) end
+function C_Garrison.GetFollowerSoftCap() end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_Garrison.GetFollowerSourceTextByID)
-function C_Garrison.GetFollowerSourceTextByID(garrFollowerID) end
+function C_Garrison.GetFollowerSourceTextByID() end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_Garrison.GetFollowerSpecializationAtIndex)
-function C_Garrison.GetFollowerSpecializationAtIndex(followerID, index) end
+function C_Garrison.GetFollowerSpecializationAtIndex() end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_Garrison.GetFollowerStatus)
-function C_Garrison.GetFollowerStatus(followerID) end
+function C_Garrison.GetFollowerStatus() end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_Garrison.GetFollowerTraitAtIndex)
-function C_Garrison.GetFollowerTraitAtIndex(followerID, index) end
+function C_Garrison.GetFollowerTraitAtIndex() end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_Garrison.GetFollowerTraitAtIndexByID)
-function C_Garrison.GetFollowerTraitAtIndexByID(garrFollowerID, index) end
+function C_Garrison.GetFollowerTraitAtIndexByID() end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_Garrison.GetFollowerTypeByID)
-function C_Garrison.GetFollowerTypeByID(garrFollowerID) end
+function C_Garrison.GetFollowerTypeByID() end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_Garrison.GetFollowerTypeByMissionID)
-function C_Garrison.GetFollowerTypeByMissionID(missionID) end
+function C_Garrison.GetFollowerTypeByMissionID() end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_Garrison.GetFollowerUnderBiasReason)
-function C_Garrison.GetFollowerUnderBiasReason(missionID, followerID) end
+function C_Garrison.GetFollowerUnderBiasReason() end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_Garrison.GetFollowerXP)
-function C_Garrison.GetFollowerXP(followerID) end
+function C_Garrison.GetFollowerXP() end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_Garrison.GetFollowerXPTable)
-function C_Garrison.GetFollowerXPTable(garrFollowerTypeID) end
+function C_Garrison.GetFollowerXPTable() end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_Garrison.GetFollowerZoneSupportAbilities)
 function C_Garrison.GetFollowerZoneSupportAbilities() end
@@ -786,34 +780,34 @@ function C_Garrison.GetFollowerZoneSupportAbilities() end
 function C_Garrison.GetFollowers() end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_Garrison.GetFollowersSpellsForMission)
-function C_Garrison.GetFollowersSpellsForMission(missionID) end
+function C_Garrison.GetFollowersSpellsForMission() end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_Garrison.GetFollowersTraitsForMission)
-function C_Garrison.GetFollowersTraitsForMission(missionID) end
+function C_Garrison.GetFollowersTraitsForMission() end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_Garrison.GetGarrisonInfo)
-function C_Garrison.GetGarrisonInfo(garrisonType) end
+function C_Garrison.GetGarrisonInfo() end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_Garrison.GetGarrisonUpgradeCost)
-function C_Garrison.GetGarrisonUpgradeCost(followerType) end
+function C_Garrison.GetGarrisonUpgradeCost() end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_Garrison.GetInProgressMissions)
-function C_Garrison.GetInProgressMissions(missionList, garrFollowerTypeID) end
+function C_Garrison.GetInProgressMissions() end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_Garrison.GetLandingPageGarrisonType)
 function C_Garrison.GetLandingPageGarrisonType() end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_Garrison.GetLandingPageItems)
-function C_Garrison.GetLandingPageItems(garrTypeID, noSort) end
+function C_Garrison.GetLandingPageItems() end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_Garrison.GetLandingPageShipmentCount)
 function C_Garrison.GetLandingPageShipmentCount() end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_Garrison.GetLandingPageShipmentInfo)
-function C_Garrison.GetLandingPageShipmentInfo(buildingID) end
+function C_Garrison.GetLandingPageShipmentInfo() end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_Garrison.GetLandingPageShipmentInfoByContainerID)
-function C_Garrison.GetLandingPageShipmentInfoByContainerID(shipmentContainerID) end
+function C_Garrison.GetLandingPageShipmentInfoByContainerID() end
 
 ---@param garrisonType number
 ---@return table looseShipments
@@ -821,43 +815,43 @@ function C_Garrison.GetLandingPageShipmentInfoByContainerID(shipmentContainerID)
 function C_Garrison.GetLooseShipments(garrisonType) end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_Garrison.GetMissionBonusAbilityEffects)
-function C_Garrison.GetMissionBonusAbilityEffects(missionID) end
+function C_Garrison.GetMissionBonusAbilityEffects() end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_Garrison.GetMissionCost)
-function C_Garrison.GetMissionCost(missionID) end
+function C_Garrison.GetMissionCost() end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_Garrison.GetMissionDisplayIDs)
-function C_Garrison.GetMissionDisplayIDs(missionID) end
+function C_Garrison.GetMissionDisplayIDs() end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_Garrison.GetMissionLink)
-function C_Garrison.GetMissionLink(missionID) end
+function C_Garrison.GetMissionLink() end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_Garrison.GetMissionMaxFollowers)
-function C_Garrison.GetMissionMaxFollowers(garrMissionID) end
+function C_Garrison.GetMissionMaxFollowers() end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_Garrison.GetMissionName)
-function C_Garrison.GetMissionName(garrMissionID) end
+function C_Garrison.GetMissionName() end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_Garrison.GetMissionRewardInfo)
-function C_Garrison.GetMissionRewardInfo(garrMissionID, missionDBID) end
+function C_Garrison.GetMissionRewardInfo() end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_Garrison.GetMissionSuccessChance)
-function C_Garrison.GetMissionSuccessChance(missionID) end
+function C_Garrison.GetMissionSuccessChance() end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_Garrison.GetMissionTexture)
-function C_Garrison.GetMissionTexture(offeredGarrMissionTextureID) end
+function C_Garrison.GetMissionTexture() end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_Garrison.GetMissionTimes)
-function C_Garrison.GetMissionTimes(missionID) end
+function C_Garrison.GetMissionTimes() end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_Garrison.GetMissionUncounteredMechanics)
-function C_Garrison.GetMissionUncounteredMechanics(missionID) end
+function C_Garrison.GetMissionUncounteredMechanics() end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_Garrison.GetNumActiveFollowers)
 function C_Garrison.GetNumActiveFollowers() end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_Garrison.GetNumFollowerActivationsRemaining)
-function C_Garrison.GetNumFollowerActivationsRemaining(garrTypeID) end
+function C_Garrison.GetNumFollowerActivationsRemaining() end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_Garrison.GetNumFollowerDailyActivations)
 function C_Garrison.GetNumFollowerDailyActivations() end
@@ -866,10 +860,10 @@ function C_Garrison.GetNumFollowerDailyActivations() end
 function C_Garrison.GetNumFollowers() end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_Garrison.GetNumFollowersForMechanic)
-function C_Garrison.GetNumFollowersForMechanic(followerType, mechanicID) end
+function C_Garrison.GetNumFollowersForMechanic() end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_Garrison.GetNumFollowersOnMission)
-function C_Garrison.GetNumFollowersOnMission(missionID) end
+function C_Garrison.GetNumFollowersOnMission() end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_Garrison.GetNumPendingShipments)
 function C_Garrison.GetNumPendingShipments() end
@@ -881,7 +875,7 @@ function C_Garrison.GetNumShipmentCurrencies() end
 function C_Garrison.GetNumShipmentReagents() end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_Garrison.GetOwnedBuildingInfo)
-function C_Garrison.GetOwnedBuildingInfo(plotInstanceID) end
+function C_Garrison.GetOwnedBuildingInfo() end
 
 ---@param plotID number
 ---@return number id
@@ -899,34 +893,34 @@ function C_Garrison.GetOwnedBuildingInfo(plotInstanceID) end
 function C_Garrison.GetOwnedBuildingInfoAbbrev(plotID) end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_Garrison.GetPartyBuffs)
-function C_Garrison.GetPartyBuffs(missionID) end
+function C_Garrison.GetPartyBuffs() end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_Garrison.GetPartyMentorLevels)
-function C_Garrison.GetPartyMentorLevels(missionID) end
+function C_Garrison.GetPartyMentorLevels() end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_Garrison.GetPartyMissionInfo)
-function C_Garrison.GetPartyMissionInfo(missionID) end
+function C_Garrison.GetPartyMissionInfo() end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_Garrison.GetPendingShipmentInfo)
-function C_Garrison.GetPendingShipmentInfo(index) end
+function C_Garrison.GetPendingShipmentInfo() end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_Garrison.GetPlots)
-function C_Garrison.GetPlots(followerType) end
+function C_Garrison.GetPlots() end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_Garrison.GetPlotsForBuilding)
-function C_Garrison.GetPlotsForBuilding(buildingID) end
+function C_Garrison.GetPlotsForBuilding() end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_Garrison.GetPossibleFollowersForBuilding)
-function C_Garrison.GetPossibleFollowersForBuilding(followerType, plotInstanceID) end
+function C_Garrison.GetPossibleFollowersForBuilding() end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_Garrison.GetRecruitAbilities)
-function C_Garrison.GetRecruitAbilities(index) end
+function C_Garrison.GetRecruitAbilities() end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_Garrison.GetRecruiterAbilityCategories)
 function C_Garrison.GetRecruiterAbilityCategories() end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_Garrison.GetRecruiterAbilityList)
-function C_Garrison.GetRecruiterAbilityList(traits) end
+function C_Garrison.GetRecruiterAbilityList() end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_Garrison.GetRecruitmentPreferences)
 function C_Garrison.GetRecruitmentPreferences() end
@@ -941,37 +935,37 @@ function C_Garrison.GetShipmentContainerInfo() end
 function C_Garrison.GetShipmentItemInfo() end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_Garrison.GetShipmentReagentCurrencyInfo)
-function C_Garrison.GetShipmentReagentCurrencyInfo(currencyIndex) end
+function C_Garrison.GetShipmentReagentCurrencyInfo() end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_Garrison.GetShipmentReagentInfo)
-function C_Garrison.GetShipmentReagentInfo(reagentIndex) end
+function C_Garrison.GetShipmentReagentInfo() end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_Garrison.GetShipmentReagentItemLink)
-function C_Garrison.GetShipmentReagentItemLink(reagentIndex) end
+function C_Garrison.GetShipmentReagentItemLink() end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_Garrison.GetSpecChangeCost)
 function C_Garrison.GetSpecChangeCost() end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_Garrison.GetTabForPlot)
-function C_Garrison.GetTabForPlot(plotInstanceID) end
+function C_Garrison.GetTabForPlot() end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_Garrison.HasGarrison)
-function C_Garrison.HasGarrison(garrisonType) end
+function C_Garrison.HasGarrison() end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_Garrison.HasShipyard)
 function C_Garrison.HasShipyard() end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_Garrison.IsAboveFollowerSoftCap)
-function C_Garrison.IsAboveFollowerSoftCap(garrFollowerTypeID) end
+function C_Garrison.IsAboveFollowerSoftCap() end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_Garrison.IsFollowerCollected)
-function C_Garrison.IsFollowerCollected(garrFollowerID) end
+function C_Garrison.IsFollowerCollected() end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_Garrison.IsInvasionAvailable)
 function C_Garrison.IsInvasionAvailable() end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_Garrison.IsMechanicFullyCountered)
-function C_Garrison.IsMechanicFullyCountered(missionID, followerID, mechanicID) end
+function C_Garrison.IsMechanicFullyCountered() end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_Garrison.IsOnGarrisonMap)
 function C_Garrison.IsOnGarrisonMap() end
@@ -983,7 +977,7 @@ function C_Garrison.IsOnShipmentQuestForNPC() end
 function C_Garrison.IsOnShipyardMap() end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_Garrison.IsPlayerInGarrison)
-function C_Garrison.IsPlayerInGarrison(garrType) end
+function C_Garrison.IsPlayerInGarrison() end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_Garrison.IsUsingPartyGarrison)
 function C_Garrison.IsUsingPartyGarrison() end
@@ -992,31 +986,31 @@ function C_Garrison.IsUsingPartyGarrison() end
 function C_Garrison.IsVisitGarrisonAvailable() end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_Garrison.MarkMissionComplete)
-function C_Garrison.MarkMissionComplete(missionID) end
+function C_Garrison.MarkMissionComplete() end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_Garrison.MissionBonusRoll)
-function C_Garrison.MissionBonusRoll(missionID) end
+function C_Garrison.MissionBonusRoll() end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_Garrison.PlaceBuilding)
-function C_Garrison.PlaceBuilding(plotInstanceID, buildingID) end
+function C_Garrison.PlaceBuilding() end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_Garrison.RecruitFollower)
-function C_Garrison.RecruitFollower(followerIndex) end
+function C_Garrison.RecruitFollower() end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_Garrison.RemoveFollower)
-function C_Garrison.RemoveFollower(dbID) end
+function C_Garrison.RemoveFollower() end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_Garrison.RemoveFollowerFromBuilding)
 function C_Garrison.RemoveFollowerFromBuilding() end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_Garrison.RenameFollower)
-function C_Garrison.RenameFollower(followerID, name) end
+function C_Garrison.RenameFollower() end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_Garrison.RequestClassSpecCategoryInfo)
-function C_Garrison.RequestClassSpecCategoryInfo(garrFollowerTypeID) end
+function C_Garrison.RequestClassSpecCategoryInfo() end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_Garrison.RequestGarrisonUpgradeable)
-function C_Garrison.RequestGarrisonUpgradeable(followerType) end
+function C_Garrison.RequestGarrisonUpgradeable() end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_Garrison.RequestLandingPageShipmentInfo)
 function C_Garrison.RequestLandingPageShipmentInfo() end
@@ -1028,13 +1022,13 @@ function C_Garrison.RequestShipmentCreation() end
 function C_Garrison.RequestShipmentInfo() end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_Garrison.ResearchTalent)
-function C_Garrison.ResearchTalent(garrTalentID) end
+function C_Garrison.ResearchTalent() end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_Garrison.SearchForFollower)
 function C_Garrison.SearchForFollower() end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_Garrison.SetBuildingActive)
-function C_Garrison.SetBuildingActive(plotInstanceID) end
+function C_Garrison.SetBuildingActive() end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_Garrison.SetBuildingSpecialization)
 function C_Garrison.SetBuildingSpecialization() end
@@ -1043,26 +1037,26 @@ function C_Garrison.SetBuildingSpecialization() end
 function C_Garrison.SetFollowerFavorite() end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_Garrison.SetFollowerInactive)
-function C_Garrison.SetFollowerInactive(followerID, inactive) end
+function C_Garrison.SetFollowerInactive() end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_Garrison.SetRecruitmentPreferences)
-function C_Garrison.SetRecruitmentPreferences(mechanicTypeID, traitID) end
+function C_Garrison.SetRecruitmentPreferences() end
 
 ---@param enabled boolean
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_Garrison.SetUsingPartyGarrison)
 function C_Garrison.SetUsingPartyGarrison(enabled) end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_Garrison.ShouldShowMapTab)
-function C_Garrison.ShouldShowMapTab(garrType) end
+function C_Garrison.ShouldShowMapTab() end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_Garrison.ShowFollowerNameInErrorMessage)
-function C_Garrison.ShowFollowerNameInErrorMessage(missionRecID) end
+function C_Garrison.ShowFollowerNameInErrorMessage() end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_Garrison.StartMission)
-function C_Garrison.StartMission(missionID) end
+function C_Garrison.StartMission() end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_Garrison.SwapBuildings)
-function C_Garrison.SwapBuildings(plotInstanceID1, plotInstanceID2) end
+function C_Garrison.SwapBuildings() end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_Garrison.TargetSpellHasFollowerItemLevelUpgrade)
 function C_Garrison.TargetSpellHasFollowerItemLevelUpgrade() end
@@ -1074,16 +1068,16 @@ function C_Garrison.TargetSpellHasFollowerReroll() end
 function C_Garrison.TargetSpellHasFollowerTemporaryAbility() end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_Garrison.UpgradeBuilding)
-function C_Garrison.UpgradeBuilding(plotInstanceID) end
+function C_Garrison.UpgradeBuilding() end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_Garrison.UpgradeGarrison)
-function C_Garrison.UpgradeGarrison(followerType) end
+function C_Garrison.UpgradeGarrison() end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_Heirloom.CanHeirloomUpgradeFromPending)
-function C_Heirloom.CanHeirloomUpgradeFromPending(itemID) end
+function C_Heirloom.CanHeirloomUpgradeFromPending() end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_Heirloom.CreateHeirloom)
-function C_Heirloom.CreateHeirloom(itemID) end
+function C_Heirloom.CreateHeirloom() end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_Heirloom.GetClassAndSpecFilters)
 function C_Heirloom.GetClassAndSpecFilters() end
@@ -1106,19 +1100,19 @@ function C_Heirloom.GetCollectedHeirloomFilter() end
 function C_Heirloom.GetHeirloomInfo(itemID) end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_Heirloom.GetHeirloomItemIDFromDisplayedIndex)
-function C_Heirloom.GetHeirloomItemIDFromDisplayedIndex(heirloomIndex) end
+function C_Heirloom.GetHeirloomItemIDFromDisplayedIndex() end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_Heirloom.GetHeirloomItemIDs)
 function C_Heirloom.GetHeirloomItemIDs() end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_Heirloom.GetHeirloomLink)
-function C_Heirloom.GetHeirloomLink(itemID) end
+function C_Heirloom.GetHeirloomLink() end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_Heirloom.GetHeirloomMaxUpgradeLevel)
-function C_Heirloom.GetHeirloomMaxUpgradeLevel(itemID) end
+function C_Heirloom.GetHeirloomMaxUpgradeLevel() end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_Heirloom.GetHeirloomSourceFilter)
-function C_Heirloom.GetHeirloomSourceFilter(source) end
+function C_Heirloom.GetHeirloomSourceFilter() end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_Heirloom.GetNumDisplayedHeirlooms)
 function C_Heirloom.GetNumDisplayedHeirlooms() end
@@ -1133,46 +1127,46 @@ function C_Heirloom.GetNumKnownHeirlooms() end
 function C_Heirloom.GetUncollectedHeirloomFilter() end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_Heirloom.IsHeirloomSourceValid)
-function C_Heirloom.IsHeirloomSourceValid(source) end
+function C_Heirloom.IsHeirloomSourceValid() end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_Heirloom.IsItemHeirloom)
-function C_Heirloom.IsItemHeirloom(itemID) end
+function C_Heirloom.IsItemHeirloom() end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_Heirloom.IsPendingHeirloomUpgrade)
 function C_Heirloom.IsPendingHeirloomUpgrade() end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_Heirloom.PlayerHasHeirloom)
-function C_Heirloom.PlayerHasHeirloom(itemID) end
+function C_Heirloom.PlayerHasHeirloom() end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_Heirloom.SetClassAndSpecFilters)
-function C_Heirloom.SetClassAndSpecFilters(classID, specID) end
+function C_Heirloom.SetClassAndSpecFilters() end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_Heirloom.SetCollectedHeirloomFilter)
-function C_Heirloom.SetCollectedHeirloomFilter(boolean) end
+function C_Heirloom.SetCollectedHeirloomFilter() end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_Heirloom.SetHeirloomSourceFilter)
-function C_Heirloom.SetHeirloomSourceFilter(source, filtered) end
+function C_Heirloom.SetHeirloomSourceFilter() end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_Heirloom.SetSearch)
-function C_Heirloom.SetSearch(searchValue) end
+function C_Heirloom.SetSearch() end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_Heirloom.SetUncollectedHeirloomFilter)
-function C_Heirloom.SetUncollectedHeirloomFilter(boolean) end
+function C_Heirloom.SetUncollectedHeirloomFilter() end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_Heirloom.ShouldShowHeirloomHelp)
 function C_Heirloom.ShouldShowHeirloomHelp() end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_Heirloom.UpgradeHeirloom)
-function C_Heirloom.UpgradeHeirloom(itemID) end
+function C_Heirloom.UpgradeHeirloom() end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_LFGList.AcceptInvite)
-function C_LFGList.AcceptInvite(resultID) end
+function C_LFGList.AcceptInvite() end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_LFGList.ApplyToGroup)
-function C_LFGList.ApplyToGroup(resultID, comment, tank, healer, dps) end
+function C_LFGList.ApplyToGroup() end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_LFGList.CancelApplication)
-function C_LFGList.CancelApplication(resultID) end
+function C_LFGList.CancelApplication() end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_LFGList.ClearSearchResults)
 function C_LFGList.ClearSearchResults() end
@@ -1188,10 +1182,10 @@ function C_LFGList.ClearSearchResults() end
 function C_LFGList.CreateListing(activityID, itemLevel, honorLevel, autoAccept, privateGroup, questID) end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_LFGList.DeclineApplicant)
-function C_LFGList.DeclineApplicant(applicantID) end
+function C_LFGList.DeclineApplicant() end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_LFGList.DeclineInvite)
-function C_LFGList.DeclineInvite(searchResultID) end
+function C_LFGList.DeclineInvite() end
 
 ---@param groupID number
 ---@return string name
@@ -1200,7 +1194,7 @@ function C_LFGList.DeclineInvite(searchResultID) end
 function C_LFGList.GetActivityGroupInfo(groupID) end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_LFGList.GetActivityIDForQuestID)
-function C_LFGList.GetActivityIDForQuestID(questID) end
+function C_LFGList.GetActivityIDForQuestID() end
 
 ---@param activityID number
 ---@return string fullName
@@ -1227,7 +1221,7 @@ function C_LFGList.GetActivityInfo(activityID) end
 function C_LFGList.GetActivityInfoExpensive(activityID) end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_LFGList.GetApplicantMemberInfo)
-function C_LFGList.GetApplicantMemberInfo(applicantID) end
+function C_LFGList.GetApplicantMemberInfo() end
 
 ---@param applicantID number
 ---@param memberIndex number
@@ -1240,7 +1234,7 @@ function C_LFGList.GetApplicantMemberStats(applicantID, memberIndex) end
 function C_LFGList.GetApplicants() end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_LFGList.GetApplicationInfo)
-function C_LFGList.GetApplicationInfo(searchResultID) end
+function C_LFGList.GetApplicationInfo() end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_LFGList.GetApplications)
 function C_LFGList.GetApplications() end
@@ -1270,7 +1264,7 @@ function C_LFGList.GetAvailableLanguageSearchFilter() end
 function C_LFGList.GetAvailableRoles() end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_LFGList.GetCategoryInfo)
-function C_LFGList.GetCategoryInfo(categoryID) end
+function C_LFGList.GetCategoryInfo() end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_LFGList.GetDefaultLanguageSearchFilter)
 function C_LFGList.GetDefaultLanguageSearchFilter() end
@@ -1294,16 +1288,16 @@ function C_LFGList.GetNumPendingApplicantMembers() end
 function C_LFGList.GetRoleCheckInfo() end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_LFGList.GetSearchResultEncounterInfo)
-function C_LFGList.GetSearchResultEncounterInfo(searchResultID) end
+function C_LFGList.GetSearchResultEncounterInfo() end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_LFGList.GetSearchResultFriends)
-function C_LFGList.GetSearchResultFriends(searchResultID) end
+function C_LFGList.GetSearchResultFriends() end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_LFGList.GetSearchResultMemberCounts)
-function C_LFGList.GetSearchResultMemberCounts(searchResultID) end
+function C_LFGList.GetSearchResultMemberCounts() end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_LFGList.GetSearchResultMemberInfo)
-function C_LFGList.GetSearchResultMemberInfo(searchResultID, memberIndex) end
+function C_LFGList.GetSearchResultMemberInfo() end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_LFGList.HasActivityList)
 function C_LFGList.HasActivityList() end
@@ -1319,52 +1313,49 @@ function C_LFGList.IsCurrentlyApplying() end
 function C_LFGList.RefreshApplicants() end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_LFGList.RemoveApplicant)
-function C_LFGList.RemoveApplicant(applicantID) end
+function C_LFGList.RemoveApplicant() end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_LFGList.RemoveListing)
 function C_LFGList.RemoveListing() end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_LFGList.ReportApplicant)
-function C_LFGList.ReportApplicant(applicantID) end
+function C_LFGList.ReportApplicant() end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_LFGList.ReportSearchResult)
-function C_LFGList.ReportSearchResult(resultID, complaintType) end
+function C_LFGList.ReportSearchResult() end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_LFGList.RequestAvailableActivities)
 function C_LFGList.RequestAvailableActivities() end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_LFGList.SaveLanguageSearchFilter)
-function C_LFGList.SaveLanguageSearchFilter(enabled) end
+function C_LFGList.SaveLanguageSearchFilter() end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_LFGList.SetApplicantMemberRole)
-function C_LFGList.SetApplicantMemberRole(applicantID, memberIndex, role) end
+function C_LFGList.SetApplicantMemberRole() end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_LFGList.UpdateListing)
-function C_LFGList.UpdateListing(lfgID, itemLevel, honorLevel, autoAccept, private, questID) end
-
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_LegendaryCrafting.GetRuneforgePowersByClassAndSpec)
-function C_LegendaryCrafting.GetRuneforgePowersByClassAndSpec(classID, specID, filter) end
+function C_LFGList.UpdateListing() end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_LootHistory.CanMasterLoot)
-function C_LootHistory.CanMasterLoot(itemIndex, playerIndex) end
+function C_LootHistory.CanMasterLoot() end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_LootHistory.GetExpiration)
 function C_LootHistory.GetExpiration() end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_LootHistory.GetItem)
-function C_LootHistory.GetItem(itemIndex) end
+function C_LootHistory.GetItem() end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_LootHistory.GetNumItems)
 function C_LootHistory.GetNumItems() end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_LootHistory.GetPlayerInfo)
-function C_LootHistory.GetPlayerInfo(itemIndex, playerIndex) end
+function C_LootHistory.GetPlayerInfo() end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_LootHistory.GiveMasterLoot)
-function C_LootHistory.GiveMasterLoot(itemIndex, playerIndex) end
+function C_LootHistory.GiveMasterLoot() end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_LootHistory.SetExpiration)
-function C_LootHistory.SetExpiration(numItemsToSave, secondsToSave) end
+function C_LootHistory.SetExpiration() end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_NamePlate.GetNamePlateEnemyClickThrough)
 function C_NamePlate.GetNamePlateEnemyClickThrough() end
@@ -1376,7 +1367,7 @@ function C_NamePlate.GetNamePlateEnemyPreferredClickInsets() end
 function C_NamePlate.GetNamePlateEnemySize() end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_NamePlate.GetNamePlateForUnit)
-function C_NamePlate.GetNamePlateForUnit(unitToken, includeForbidden) end
+function C_NamePlate.GetNamePlateForUnit() end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_NamePlate.GetNamePlateFriendlyClickThrough)
 function C_NamePlate.GetNamePlateFriendlyClickThrough() end
@@ -1397,7 +1388,7 @@ function C_NamePlate.GetNamePlateSelfPreferredClickInsets() end
 function C_NamePlate.GetNamePlateSelfSize() end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_NamePlate.GetNamePlates)
-function C_NamePlate.GetNamePlates(includeForbidden) end
+function C_NamePlate.GetNamePlates() end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_NamePlate.GetNumNamePlateMotionTypes)
 function C_NamePlate.GetNumNamePlateMotionTypes() end
@@ -1406,34 +1397,34 @@ function C_NamePlate.GetNumNamePlateMotionTypes() end
 function C_NamePlate.GetTargetClampingInsets() end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_NamePlate.SetNamePlateEnemyClickThrough)
-function C_NamePlate.SetNamePlateEnemyClickThrough(clickthrough) end
+function C_NamePlate.SetNamePlateEnemyClickThrough() end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_NamePlate.SetNamePlateEnemyPreferredClickInsets)
 function C_NamePlate.SetNamePlateEnemyPreferredClickInsets() end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_NamePlate.SetNamePlateEnemySize)
-function C_NamePlate.SetNamePlateEnemySize(width, height) end
+function C_NamePlate.SetNamePlateEnemySize() end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_NamePlate.SetNamePlateFriendlyClickThrough)
 function C_NamePlate.SetNamePlateFriendlyClickThrough() end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_NamePlate.SetNamePlateFriendlyPreferredClickInsets)
-function C_NamePlate.SetNamePlateFriendlyPreferredClickInsets(left, right, top, bottom) end
+function C_NamePlate.SetNamePlateFriendlyPreferredClickInsets() end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_NamePlate.SetNamePlateFriendlySize)
-function C_NamePlate.SetNamePlateFriendlySize(width, height) end
+function C_NamePlate.SetNamePlateFriendlySize() end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_NamePlate.SetNamePlateSelfClickThrough)
-function C_NamePlate.SetNamePlateSelfClickThrough(clickthrough) end
+function C_NamePlate.SetNamePlateSelfClickThrough() end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_NamePlate.SetNamePlateSelfPreferredClickInsets)
-function C_NamePlate.SetNamePlateSelfPreferredClickInsets(left, right, top, bottom) end
+function C_NamePlate.SetNamePlateSelfPreferredClickInsets() end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_NamePlate.SetNamePlateSelfSize)
-function C_NamePlate.SetNamePlateSelfSize(width, height) end
+function C_NamePlate.SetNamePlateSelfSize() end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_NamePlate.SetTargetClampingInsets)
-function C_NamePlate.SetTargetClampingInsets(clickthrough) end
+function C_NamePlate.SetTargetClampingInsets() end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_NewItems.ClearAll)
 function C_NewItems.ClearAll() end
@@ -1445,7 +1436,7 @@ function C_NewItems.ClearAll() end
 function C_NewItems.IsNewItem(bag, slot) end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_NewItems.RemoveNewItem)
-function C_NewItems.RemoveNewItem(bag, slot) end
+function C_NewItems.RemoveNewItem() end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_PetBattles.AcceptPVPDuel)
 function C_PetBattles.AcceptPVPDuel() end
@@ -1502,7 +1493,7 @@ function C_PetBattles.GetAbilityEffectInfo(abilityID, turnIndex, effectIndex, ef
 function C_PetBattles.GetAbilityInfo(petOwner, petIndex, abilityIndex) end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_PetBattles.GetAbilityInfoByID)
-function C_PetBattles.GetAbilityInfoByID(abilityID) end
+function C_PetBattles.GetAbilityInfoByID() end
 
 ---@param abilityID number
 ---@param procType number
@@ -1730,9 +1721,6 @@ function C_PetJournal.GetBattlePetLink(petID) end
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_PetJournal.GetNumCollectedInfo)
 function C_PetJournal.GetNumCollectedInfo(speciesId) end
 
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_PetJournal.GetNumMaxPets)
-function C_PetJournal.GetNumMaxPets() end
-
 ---@return number numSources
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_PetJournal.GetNumPetSources)
 function C_PetJournal.GetNumPetSources() end
@@ -1755,5 +1743,21 @@ function C_PetJournal.GetNumPetsNeedingFanfare() end
 function C_PetJournal.GetOwnedBattlePetString(speciesId) end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_PetJournal.GetPetAbilityList)
-function C_PetJournal.GetPetAbilityList(speciesID, idTable, levelTable) end
+function C_PetJournal.GetPetAbilityList() end
+
+---@param GUID string
+---@return number start
+---@return number duration
+---@return number isEnabled
+---[Documentation](https://wowpedia.fandom.com/wiki/API_C_PetJournal.GetPetCooldownByGUID)
+function C_PetJournal.GetPetCooldownByGUID(GUID) end
+
+---[Documentation](https://wowpedia.fandom.com/wiki/API_C_PetJournal.GetPetInfoByIndex)
+function C_PetJournal.GetPetInfoByIndex() end
+
+---[Documentation](https://wowpedia.fandom.com/wiki/API_C_PetJournal.GetPetInfoByItemID)
+function C_PetJournal.GetPetInfoByItemID() end
+
+---[Documentation](https://wowpedia.fandom.com/wiki/API_C_PetJournal.GetPetInfoByPetID)
+function C_PetJournal.GetPetInfoByPetID() end
 

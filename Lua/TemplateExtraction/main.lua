@@ -118,7 +118,7 @@ local singleTextureTypes = {
 }
 
 --- 2 = Verbose, 1 = Informational, 0 = None
-local outputLevel = 1
+local outputLevel = 0
 local function consoleOutput(functionName, outputString, level)
     if level <= outputLevel then
         local printString = string.format("%s: %s",functionName, outputString)

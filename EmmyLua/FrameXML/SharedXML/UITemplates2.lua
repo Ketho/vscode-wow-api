@@ -1,85 +1,70 @@
 ---@class CommunitiesCalendarButtonTemplate : Button
 ---Located in [CommunitiesCalendar.xml](https://github.com/Gethe/wow-ui-source/tree/live/Interface/AddOns/Blizzard_Communities/CommunitiesCalendar.xml)
 
----@class CommunitiesChatTemplate : Frame
----Located in [CommunitiesChatFrame.xml](https://github.com/Gethe/wow-ui-source/tree/live/Interface/AddOns/Blizzard_Communities/CommunitiesChatFrame.xml)
----@field MessageFrame ScrollingMessageFrame
----@field InsetFrame Frame
-
 ---@class CommunitiesChatEditBoxTemplate : EditBox
 ---Located in [CommunitiesChatFrame.xml](https://github.com/Gethe/wow-ui-source/tree/live/Interface/AddOns/Blizzard_Communities/CommunitiesChatFrame.xml)
----@field Left Texture
 ---@field Mid Texture
+---@field Left Texture
 ---@field Right Texture
 
----@class ClubFinderPostingExpirationTemplate : Frame
----Located in [CommunitiesFrame.xml](https://github.com/Gethe/wow-ui-source/tree/live/Interface/AddOns/Blizzard_Communities/CommunitiesFrame.xml)
----@field DaysUntilExpire FontString
----@field InfoButton Button
----@field ExpirationTimeText FontString
----@field ExpiredText FontString
+---@class CommunitiesChatTemplate : Frame
+---Located in [CommunitiesChatFrame.xml](https://github.com/Gethe/wow-ui-source/tree/live/Interface/AddOns/Blizzard_Communities/CommunitiesChatFrame.xml)
+---@field InsetFrame Frame
+---@field MessageFrame ScrollingMessageFrame
 
----@class CommunitiesSubPanelButtonScriptTemplate : Button
+---@class GuildBenefitsFrameTemplate : Frame
 ---Located in [CommunitiesFrame.xml](https://github.com/Gethe/wow-ui-source/tree/live/Interface/AddOns/Blizzard_Communities/CommunitiesFrame.xml)
-
----@class GuildDetailsFrameTemplate : Frame
----Located in [CommunitiesFrame.xml](https://github.com/Gethe/wow-ui-source/tree/live/Interface/AddOns/Blizzard_Communities/CommunitiesFrame.xml)
----@field InsetBorderTopRight Texture
----@field Info Frame
----@field InsetBorderTopLeft Texture
----@field InsetBorderLeft Texture
----@field InsetBorderBottomRight Texture
+---@field Perks Frame
 ---@field InsetBorderTopLeft2 Texture
----@field InsetBorderBottomLeft Texture
----@field InsetBorderLeft2 Texture
+---@field GuildAchievementPointDisplay Frame
+---@field InsetBorderBottomRight Texture
 ---@field InsetBorderBottomLeft2 Texture
+---@field FactionFrame Frame
+---@field GuildRewardsTutorialButton Button
+---@field InsetBorderBottomLeft Texture
+---@field InsetBorderLeft Texture
+---@field InsetBorderTopRight Texture
+---@field InsetBorderTopLeft Texture
+---@field InsetBorderLeft2 Texture
+---@field Rewards Frame
 ---@field InsetBorderRight Texture
----@field News Frame
 
 ---@class CommunitiesControlFrameTemplate : Frame
 ---Located in [CommunitiesFrame.xml](https://github.com/Gethe/wow-ui-source/tree/live/Interface/AddOns/Blizzard_Communities/CommunitiesFrame.xml)
 ---@field CommunitiesSettingsButton Button
----@field GuildControlButton Button
 ---@field GuildRecruitmentButton Button
+---@field GuildControlButton Button
 
----@class GuildBenefitsFrameTemplate : Frame
+---@class GuildDetailsFrameTemplate : Frame
 ---Located in [CommunitiesFrame.xml](https://github.com/Gethe/wow-ui-source/tree/live/Interface/AddOns/Blizzard_Communities/CommunitiesFrame.xml)
----@field InsetBorderTopRight Texture
----@field InsetBorderBottomLeft2 Texture
----@field InsetBorderTopLeft Texture
----@field Rewards Frame
----@field Perks Frame
----@field GuildRewardsTutorialButton Button
----@field InsetBorderLeft2 Texture
----@field InsetBorderBottomRight Texture
----@field GuildAchievementPointDisplay Frame
----@field InsetBorderBottomLeft Texture
 ---@field InsetBorderTopLeft2 Texture
----@field InsetBorderRight Texture
+---@field InsetBorderBottomRight Texture
+---@field InsetBorderBottomLeft2 Texture
+---@field Info Frame
+---@field InsetBorderBottomLeft Texture
 ---@field InsetBorderLeft Texture
----@field FactionFrame Frame
+---@field InsetBorderTopRight Texture
+---@field InsetBorderTopLeft Texture
+---@field InsetBorderLeft2 Texture
+---@field News Frame
+---@field InsetBorderRight Texture
+
+---@class CommunitiesSubPanelButtonScriptTemplate : Button
+---Located in [CommunitiesFrame.xml](https://github.com/Gethe/wow-ui-source/tree/live/Interface/AddOns/Blizzard_Communities/CommunitiesFrame.xml)
+
+---@class ClubFinderPostingExpirationTemplate : Frame
+---Located in [CommunitiesFrame.xml](https://github.com/Gethe/wow-ui-source/tree/live/Interface/AddOns/Blizzard_Communities/CommunitiesFrame.xml)
+---@field ExpirationTimeText FontString
+---@field InfoButton Button
+---@field DaysUntilExpire FontString
+---@field ExpiredText FontString
 
 ---@class CommunitiesGuildFinderFrameTemplate : Frame
 ---Located in [CommunitiesGuildFinderFrame.xml](https://github.com/Gethe/wow-ui-source/tree/live/Interface/AddOns/Blizzard_Communities/CommunitiesGuildFinderFrame.xml)
----@field Description FontString
----@field InsetFrame Frame
----@field Name FontString
 ---@field FindAGuildButton Button
-
----@class CommunitiesInvitationFrameTemplate : Frame
----Located in [CommunitiesInvitationFrame.xml](https://github.com/Gethe/wow-ui-source/tree/live/Interface/AddOns/Blizzard_Communities/CommunitiesInvitationFrame.xml)
----@field Leader FontString
 ---@field Description FontString
----@field DeclineButton Button
----@field AcceptButton Button
----@field Type FontString
----@field Icon Texture
----@field InvitationText FontString
----@field CircleMask MaskTexture
 ---@field Name FontString
 ---@field InsetFrame Frame
----@field IconRing Texture
----@field MemberCount FontString
 
 ---@class CommunitiesInviteButtonTemplate : UIPanelDynamicResizeButtonTemplate
 ---Located in [CommunitiesInvitationFrame.xml](https://github.com/Gethe/wow-ui-source/tree/live/Interface/AddOns/Blizzard_Communities/CommunitiesInvitationFrame.xml)
@@ -87,77 +72,89 @@
 ---@class CommunitiesTicketFrameTemplate : CommunitiesInvitationFrameTemplate
 ---Located in [CommunitiesInvitationFrame.xml](https://github.com/Gethe/wow-ui-source/tree/live/Interface/AddOns/Blizzard_Communities/CommunitiesInvitationFrame.xml)
 
+---@class CommunitiesInvitationFrameTemplate : Frame
+---Located in [CommunitiesInvitationFrame.xml](https://github.com/Gethe/wow-ui-source/tree/live/Interface/AddOns/Blizzard_Communities/CommunitiesInvitationFrame.xml)
+---@field InvitationText FontString
+---@field Description FontString
+---@field Leader FontString
+---@field IconRing Texture
+---@field AcceptButton Button
+---@field Type FontString
+---@field Icon Texture
+---@field InsetFrame Frame
+---@field MemberCount FontString
+---@field Name FontString
+---@field CircleMask MaskTexture
+---@field DeclineButton Button
+
+---@class CommunitiesListFrameTemplate : Frame
+---Located in [CommunitiesList.xml](https://github.com/Gethe/wow-ui-source/tree/live/Interface/AddOns/Blizzard_Communities/CommunitiesList.xml)
+---@field TopFiligree Texture
+---@field EntryDropDown Frame
+---@field BottomFiligree Texture
+---@field InsetFrame Frame
+---@field Bg Texture
+---@field ListScrollFrame ScrollFrame
+---@field FilligreeOverlay Frame
+
 ---@class CommunitiesListDropDownMenuTemplate : UIDropDownMenuTemplate
 ---Located in [CommunitiesList.xml](https://github.com/Gethe/wow-ui-source/tree/live/Interface/AddOns/Blizzard_Communities/CommunitiesList.xml)
 ---@field NotificationOverlay Frame
 
----@class CommunitiesListFrameTemplate : Frame
----Located in [CommunitiesList.xml](https://github.com/Gethe/wow-ui-source/tree/live/Interface/AddOns/Blizzard_Communities/CommunitiesList.xml)
----@field ListScrollFrame ScrollFrame
----@field Bg Texture
----@field EntryDropDown Frame
----@field TopFiligree Texture
----@field BottomFiligree Texture
----@field InsetFrame Frame
----@field FilligreeOverlay Frame
-
 ---@class CommunitiesListEntryTemplate : Button
 ---Located in [CommunitiesList.xml](https://github.com/Gethe/wow-ui-source/tree/live/Interface/AddOns/Blizzard_Communities/CommunitiesList.xml)
+---@field InvitationIcon Texture
+---@field IconRing Texture
+---@field NewCommunityFlash Texture
+---@field GuildTabardEmblem Texture
 ---@field Selection Texture
 ---@field GuildTabardBorder Texture
----@field UnreadNotificationIcon Texture
 ---@field Icon Texture
----@field NewCommunityFlash Texture
+---@field FavoriteIcon Texture
+---@field Background Texture
+---@field Name FontString
 ---@field GuildTabardBackground Texture
 ---@field CircleMask MaskTexture
----@field Background Texture
----@field FavoriteIcon Texture
----@field GuildTabardEmblem Texture
----@field IconRing Texture
----@field Name FontString
----@field InvitationIcon Texture
+---@field UnreadNotificationIcon Texture
 
----@class CommunitiesMemberListEntryTemplate : Button
+---@class CommunitiesMemberListFrameTemplate : Frame
 ---Located in [CommunitiesMemberList.xml](https://github.com/Gethe/wow-ui-source/tree/live/Interface/AddOns/Blizzard_Communities/CommunitiesMemberList.xml)
----@field Level FontString
----@field Note FontString
----@field Class Texture
----@field CancelInvitationButton Button
----@field Zone FontString
----@field SelfDeafenButton Button
----@field SelfMuteButton Button
----@field VoiceChatStatusIcon Texture
----@field MemberMuteButton Button
----@field Rank FontString
----@field ProfessionHeader Button
----@field NameFrame Frame
----@field GuildInfo FontString
+---@field ShowOfflineButton CheckButton
+---@field InsetFrame Frame
+---@field ColumnDisplay Frame
+---@field DropDown Frame
+---@field MemberCount FontString
+---@field ListScrollFrame ScrollFrame
+---@field WatermarkFrame Frame
 
 ---@class GuildMemberListDropDownMenuTemplate : CommunitiesFrameMemberListDropDownMenuTemplate
 ---Located in [CommunitiesMemberList.xml](https://github.com/Gethe/wow-ui-source/tree/live/Interface/AddOns/Blizzard_Communities/CommunitiesMemberList.xml)
 
+---@class CommunitiesMemberListEntryTemplate : Button
+---Located in [CommunitiesMemberList.xml](https://github.com/Gethe/wow-ui-source/tree/live/Interface/AddOns/Blizzard_Communities/CommunitiesMemberList.xml)
+---@field VoiceChatStatusIcon Texture
+---@field MemberMuteButton Button
+---@field ProfessionHeader Button
+---@field Level FontString
+---@field Zone FontString
+---@field Note FontString
+---@field CancelInvitationButton Button
+---@field SelfDeafenButton Button
+---@field NameFrame Frame
+---@field GuildInfo FontString
+---@field SelfMuteButton Button
+---@field Class Texture
+---@field Rank FontString
+
 ---@class CommunitiesFrameMemberListDropDownMenuTemplate : UIDropDownMenuTemplate
 ---Located in [CommunitiesMemberList.xml](https://github.com/Gethe/wow-ui-source/tree/live/Interface/AddOns/Blizzard_Communities/CommunitiesMemberList.xml)
 ---@field NotificationOverlay Frame
-
----@class CommunitiesMemberListFrameTemplate : Frame
----Located in [CommunitiesMemberList.xml](https://github.com/Gethe/wow-ui-source/tree/live/Interface/AddOns/Blizzard_Communities/CommunitiesMemberList.xml)
----@field ListScrollFrame ScrollFrame
----@field WatermarkFrame Frame
----@field InsetFrame Frame
----@field ColumnDisplay Frame
----@field ShowOfflineButton CheckButton
----@field DropDown Frame
----@field MemberCount FontString
 
 ---@class CommunityMemberListDropDownMenuTemplate : CommunitiesFrameMemberListDropDownMenuTemplate
 ---Located in [CommunitiesMemberList.xml](https://github.com/Gethe/wow-ui-source/tree/live/Interface/AddOns/Blizzard_Communities/CommunitiesMemberList.xml)
 
 ---@class CommunitiesSettingsButtonTemplate : UIPanelDynamicResizeButtonTemplate
 ---Located in [CommunitiesSettings.xml](https://github.com/Gethe/wow-ui-source/tree/live/Interface/AddOns/Blizzard_Communities/CommunitiesSettings.xml)
-
----@class CommunitiesMassNotificationsSettingsButtonTemplate : UIMenuButtonStretchTemplate
----Located in [CommunitiesStreams.xml](https://github.com/Gethe/wow-ui-source/tree/live/Interface/AddOns/Blizzard_Communities/CommunitiesStreams.xml)
 
 ---@class StreamDropDownMenuTemplate : UIDropDownMenuTemplate
 ---Located in [CommunitiesStreams.xml](https://github.com/Gethe/wow-ui-source/tree/live/Interface/AddOns/Blizzard_Communities/CommunitiesStreams.xml)
@@ -166,50 +163,53 @@
 ---@class CommunitiesEditStreamDialogTemplate : Frame
 ---Located in [CommunitiesStreams.xml](https://github.com/Gethe/wow-ui-source/tree/live/Interface/AddOns/Blizzard_Communities/CommunitiesStreams.xml)
 ---@field BG Frame
----@field Description ScrollFrame
----@field NameEdit EditBox
----@field TitleLabel FontString
----@field NameLabel FontString
 ---@field Delete Button
----@field Accept Button
----@field DescriptionLabel FontString
----@field TypeCheckBox CheckButton
 ---@field TypeLabel FontString
+---@field TypeCheckBox CheckButton
 ---@field Cancel Button
-
----@class CommunitiesNotificationSettingsStreamEntryCheckButtonTemplate : UIRadioButtonTemplate
----Located in [CommunitiesStreams.xml](https://github.com/Gethe/wow-ui-source/tree/live/Interface/AddOns/Blizzard_Communities/CommunitiesStreams.xml)
-
----@class AddToChatButtonTemplate : UIMenuButtonStretchTemplate
----Located in [CommunitiesStreams.xml](https://github.com/Gethe/wow-ui-source/tree/live/Interface/AddOns/Blizzard_Communities/CommunitiesStreams.xml)
----@field DropDown Frame
----@field Label FontString
----@field icon Texture
-
----@class CommunitiesNotificationSettingsDialogTemplate : SelectionFrameTemplate
----Located in [CommunitiesStreams.xml](https://github.com/Gethe/wow-ui-source/tree/live/Interface/AddOns/Blizzard_Communities/CommunitiesStreams.xml)
----@field BG Texture
----@field ScrollFrame ScrollFrame
+---@field NameEdit EditBox
+---@field NameLabel FontString
+---@field Accept Button
+---@field Description ScrollFrame
+---@field DescriptionLabel FontString
 ---@field TitleLabel FontString
----@field CommunitiesListDropDownMenu Frame
+
+---@class CommunitiesMassNotificationsSettingsButtonTemplate : UIMenuButtonStretchTemplate
+---Located in [CommunitiesStreams.xml](https://github.com/Gethe/wow-ui-source/tree/live/Interface/AddOns/Blizzard_Communities/CommunitiesStreams.xml)
 
 ---@class CommunitiesNotificationSettingsStreamEntryTemplate : Button
 ---Located in [CommunitiesStreams.xml](https://github.com/Gethe/wow-ui-source/tree/live/Interface/AddOns/Blizzard_Communities/CommunitiesStreams.xml)
 ---@field Separator Texture
----@field StreamName FontString
 ---@field HideNotificationsButton CheckButton
 ---@field ShowNotificationsButton CheckButton
+---@field StreamName FontString
+
+---@class CommunitiesNotificationSettingsDialogTemplate : SelectionFrameTemplate
+---Located in [CommunitiesStreams.xml](https://github.com/Gethe/wow-ui-source/tree/live/Interface/AddOns/Blizzard_Communities/CommunitiesStreams.xml)
+---@field CommunitiesListDropDownMenu Frame
+---@field ScrollFrame ScrollFrame
+---@field TitleLabel FontString
+---@field BG Texture
+
+---@class AddToChatButtonTemplate : UIMenuButtonStretchTemplate
+---Located in [CommunitiesStreams.xml](https://github.com/Gethe/wow-ui-source/tree/live/Interface/AddOns/Blizzard_Communities/CommunitiesStreams.xml)
+---@field Label FontString
+---@field DropDown Frame
+---@field icon Texture
+
+---@class CommunitiesNotificationSettingsStreamEntryCheckButtonTemplate : UIRadioButtonTemplate
+---Located in [CommunitiesStreams.xml](https://github.com/Gethe/wow-ui-source/tree/live/Interface/AddOns/Blizzard_Communities/CommunitiesStreams.xml)
 
 ---@class CommunitiesRosterTabTemplate : CommunitiesFrameTabTemplate
 ---Located in [CommunitiesTabs.xml](https://github.com/Gethe/wow-ui-source/tree/live/Interface/AddOns/Blizzard_Communities/CommunitiesTabs.xml)
 
----@class CommunitiesFrameTabTemplate : CheckButton
----Located in [CommunitiesTabs.xml](https://github.com/Gethe/wow-ui-source/tree/live/Interface/AddOns/Blizzard_Communities/CommunitiesTabs.xml)
----@field IconOverlay Texture
----@field Icon Texture
-
 ---@class CommunitiesGuildBenefitsTabTemplate : CommunitiesFrameTabTemplate
 ---Located in [CommunitiesTabs.xml](https://github.com/Gethe/wow-ui-source/tree/live/Interface/AddOns/Blizzard_Communities/CommunitiesTabs.xml)
+
+---@class CommunitiesFrameTabTemplate : CheckButton
+---Located in [CommunitiesTabs.xml](https://github.com/Gethe/wow-ui-source/tree/live/Interface/AddOns/Blizzard_Communities/CommunitiesTabs.xml)
+---@field Icon Texture
+---@field IconOverlay Texture
 
 ---@class CommunitiesGuildInfoTabTemplate : CommunitiesFrameTabTemplate
 ---Located in [CommunitiesTabs.xml](https://github.com/Gethe/wow-ui-source/tree/live/Interface/AddOns/Blizzard_Communities/CommunitiesTabs.xml)
@@ -219,130 +219,121 @@
 
 ---@class CommunitiesTicketEntryTemplate : Button
 ---Located in [CommunitiesTicketManagerDialog.xml](https://github.com/Gethe/wow-ui-source/tree/live/Interface/AddOns/Blizzard_Communities/CommunitiesTicketManagerDialog.xml)
----@field Link FontString
----@field Creator FontString
----@field Expires FontString
----@field Stripe Texture
----@field RevokeButton Button
 ---@field CopyLinkButton Button
 ---@field Uses FontString
+---@field Stripe Texture
+---@field Link FontString
+---@field Expires FontString
+---@field RevokeButton Button
+---@field Creator FontString
 
 ---@class CommunitiesTicketManagerScrollFrameTemplate : Frame
 ---Located in [CommunitiesTicketManagerDialog.xml](https://github.com/Gethe/wow-ui-source/tree/live/Interface/AddOns/Blizzard_Communities/CommunitiesTicketManagerDialog.xml)
----@field ArtOverlay Frame
 ---@field ColumnDisplay Frame
+---@field ArtOverlay Frame
 ---@field ListScrollFrame ScrollFrame
-
----@class CommunitiesGuildChallengeTemplate : Frame
----Located in [GuildInfo.xml](https://github.com/Gethe/wow-ui-source/tree/live/Interface/AddOns/Blizzard_Communities/GuildInfo.xml)
----@field count FontString
----@field check Texture
----@field label FontString
 
 ---@class CommunitiesGuildInfoFrameTemplate : Frame
 ---Located in [GuildInfo.xml](https://github.com/Gethe/wow-ui-source/tree/live/Interface/AddOns/Blizzard_Communities/GuildInfo.xml)
 ---@field DetailsFrame ScrollFrame
 ---@field MOTDScrollFrame ScrollFrame
----@field EditDetailsButton Button
----@field EditMOTDButton Button
 ---@field TitleText FontString
 ---@field Header1 Texture
+---@field EditDetailsButton Button
+---@field EditMOTDButton Button
 
----@class GuildNameChangeFrameTemplate : ReportedGuildOrCommunityChangeTemplate
+---@class CommunitiesGuildChallengeTemplate : Frame
+---Located in [GuildInfo.xml](https://github.com/Gethe/wow-ui-source/tree/live/Interface/AddOns/Blizzard_Communities/GuildInfo.xml)
+---@field label FontString
+---@field count FontString
+---@field check Texture
+
+---@class NameChangeEditBoxTemplate : InputBoxTemplate
 ---Located in [GuildNameChange.xml](https://github.com/Gethe/wow-ui-source/tree/live/Interface/AddOns/Blizzard_Communities/GuildNameChange.xml)
----@field EditBox EditBox
----@field Button Button
----@field RenameText FontString
 
 ---@class ReportedGuildOrCommunityChangeTemplate : Frame
 ---Located in [GuildNameChange.xml](https://github.com/Gethe/wow-ui-source/tree/live/Interface/AddOns/Blizzard_Communities/GuildNameChange.xml)
 ---@field Error FontString
----@field CloseButton Button
 ---@field GMText FontString
+---@field CloseButton Button
 
----@class NameChangeEditBoxTemplate : InputBoxTemplate
+---@class CommunityPostingChangeFrameTemplate : ReportedGuildOrCommunityChangeTemplate
 ---Located in [GuildNameChange.xml](https://github.com/Gethe/wow-ui-source/tree/live/Interface/AddOns/Blizzard_Communities/GuildNameChange.xml)
+---@field Button Button
+
+---@class GuildNameChangeFrameTemplate : ReportedGuildOrCommunityChangeTemplate
+---Located in [GuildNameChange.xml](https://github.com/Gethe/wow-ui-source/tree/live/Interface/AddOns/Blizzard_Communities/GuildNameChange.xml)
+---@field RenameText FontString
+---@field Button Button
+---@field EditBox EditBox
 
 ---@class CommunitiesGuildNameChangeAlertFrameTemplate : GlowBoxTemplate
 ---Located in [GuildNameChange.xml](https://github.com/Gethe/wow-ui-source/tree/live/Interface/AddOns/Blizzard_Communities/GuildNameChange.xml)
 ---@field Alert FontString
 ---@field ClickText FontString
 
----@class GuildPostingChangeFrameTemplate : ReportedGuildOrCommunityChangeTemplate
----Located in [GuildNameChange.xml](https://github.com/Gethe/wow-ui-source/tree/live/Interface/AddOns/Blizzard_Communities/GuildNameChange.xml)
----@field Button Button
-
----@class CommunityPostingChangeFrameTemplate : ReportedGuildOrCommunityChangeTemplate
----Located in [GuildNameChange.xml](https://github.com/Gethe/wow-ui-source/tree/live/Interface/AddOns/Blizzard_Communities/GuildNameChange.xml)
----@field Button Button
-
 ---@class CommunityNameChangeFrameTemplate : ReportedGuildOrCommunityChangeTemplate
 ---Located in [GuildNameChange.xml](https://github.com/Gethe/wow-ui-source/tree/live/Interface/AddOns/Blizzard_Communities/GuildNameChange.xml)
 ---@field Button Button
 
----@class CommunitiesGuildNewsFrameTemplate : Frame
----Located in [GuildNews.xml](https://github.com/Gethe/wow-ui-source/tree/live/Interface/AddOns/Blizzard_Communities/GuildNews.xml)
----@field BossModel PlayerModel
----@field GMImpeachButton Button
----@field DropDown Frame
----@field Container ScrollFrame
----@field SetFiltersButton Button
----@field NoNews FontString
----@field Header Texture
----@field TitleText FontString
+---@class GuildPostingChangeFrameTemplate : ReportedGuildOrCommunityChangeTemplate
+---Located in [GuildNameChange.xml](https://github.com/Gethe/wow-ui-source/tree/live/Interface/AddOns/Blizzard_Communities/GuildNameChange.xml)
+---@field Button Button
 
 ---@class CommunitiesGuildNewsButtonTemplate : Button
 ---Located in [GuildNews.xml](https://github.com/Gethe/wow-ui-source/tree/live/Interface/AddOns/Blizzard_Communities/GuildNews.xml)
----@field icon Texture
 ---@field header Texture
----@field text FontString
 ---@field dash FontString
+---@field text FontString
+---@field icon Texture
+
+---@class CommunitiesGuildNewsFrameTemplate : Frame
+---Located in [GuildNews.xml](https://github.com/Gethe/wow-ui-source/tree/live/Interface/AddOns/Blizzard_Communities/GuildNews.xml)
+---@field GMImpeachButton Button
+---@field Header Texture
+---@field TitleText FontString
+---@field NoNews FontString
+---@field BossModel PlayerModel
+---@field DropDown Frame
+---@field SetFiltersButton Button
+---@field Container ScrollFrame
 
 ---@class CommunitiesGuildNewsBossModelTemplate : PlayerModel
 ---Located in [GuildNews.xml](https://github.com/Gethe/wow-ui-source/tree/live/Interface/AddOns/Blizzard_Communities/GuildNews.xml)
+---@field BorderRight Texture
 ---@field CornerBottomRight Texture
----@field BorderLeft Texture
+---@field CornerTopLeft Texture
+---@field TextFrame Frame
+---@field BorderBottomLeft Texture
 ---@field ShadowOverlay Texture
+---@field BorderLeft Texture
+---@field BorderBottom Texture
+---@field BorderTop Texture
 ---@field TopBg Texture
 ---@field Nameplate Texture
 ---@field Bg Texture
----@field CornerTopLeft Texture
----@field BossName FontString
----@field TextFrame Frame
----@field CornerBottomLeft Texture
----@field BorderBottomRight Texture
----@field BorderTop Texture
----@field BorderBottom Texture
 ---@field CornerTopRight Texture
----@field BorderRight Texture
----@field BorderBottomLeft Texture
+---@field CornerBottomLeft Texture
+---@field BossName FontString
+---@field BorderBottomRight Texture
 
 ---@class CommunitiesGuildNewsCheckButtonTemplate : CheckButton
 ---Located in [GuildNews.xml](https://github.com/Gethe/wow-ui-source/tree/live/Interface/AddOns/Blizzard_Communities/GuildNews.xml)
 ---@field Text FontString
 
+---@class CommunitiesGuildPerksButtonTemplate : Button
+---Located in [GuildPerks.xml](https://github.com/Gethe/wow-ui-source/tree/live/Interface/AddOns/Blizzard_Communities/GuildPerks.xml)
+---@field NormalBorder Frame
+---@field DisabledBorder Frame
+---@field Icon Texture
+---@field Left Texture
+---@field Name FontString
+---@field Right Texture
+
 ---@class CommunitiesGuildPerksFrameTemplate : Frame
 ---Located in [GuildPerks.xml](https://github.com/Gethe/wow-ui-source/tree/live/Interface/AddOns/Blizzard_Communities/GuildPerks.xml)
 ---@field TitleText FontString
 ---@field Container ScrollFrame
-
----@class CommunitiesGuildPerksButtonTemplate : Button
----Located in [GuildPerks.xml](https://github.com/Gethe/wow-ui-source/tree/live/Interface/AddOns/Blizzard_Communities/GuildPerks.xml)
----@field Left Texture
----@field DisabledBorder Frame
----@field NormalBorder Frame
----@field Right Texture
----@field Name FontString
----@field Icon Texture
-
----@class CommunitiesGuildRewardsButtonTemplate : Button
----Located in [GuildRewards.xml](https://github.com/Gethe/wow-ui-source/tree/live/Interface/AddOns/Blizzard_Communities/GuildRewards.xml)
----@field Lock Texture
----@field DisabledBG Texture
----@field Name FontString
----@field Icon Texture
----@field SubText FontString
----@field Money Frame
 
 ---@class GuildRewardsTutorialButtonTemplate : Button
 ---Located in [GuildRewards.xml](https://github.com/Gethe/wow-ui-source/tree/live/Interface/AddOns/Blizzard_Communities/GuildRewards.xml)
@@ -350,46 +341,58 @@
 
 ---@class CommunitiesGuildRewardsFrameTemplate : Frame
 ---Located in [GuildRewards.xml](https://github.com/Gethe/wow-ui-source/tree/live/Interface/AddOns/Blizzard_Communities/GuildRewards.xml)
----@field Bg Texture
 ---@field TitleText FontString
----@field RewardsContainer ScrollFrame
+---@field Bg Texture
 ---@field DropDown Frame
+---@field RewardsContainer ScrollFrame
+
+---@class CommunitiesGuildRewardsButtonTemplate : Button
+---Located in [GuildRewards.xml](https://github.com/Gethe/wow-ui-source/tree/live/Interface/AddOns/Blizzard_Communities/GuildRewards.xml)
+---@field DisabledBG Texture
+---@field Icon Texture
+---@field Money Frame
+---@field Name FontString
+---@field Lock Texture
+---@field SubText FontString
 
 ---@class GuildAchievementPointDisplayTemplate : Frame
 ---Located in [GuildRewards.xml](https://github.com/Gethe/wow-ui-source/tree/live/Interface/AddOns/Blizzard_Communities/GuildRewards.xml)
----@field SumText FontString
 ---@field Highlight Texture
+---@field SumText FontString
 ---@field Icon Texture
 
 ---@class CommunitiesGuildProgressBarTemplate : Frame
 ---Located in [GuildRewards.xml](https://github.com/Gethe/wow-ui-source/tree/live/Interface/AddOns/Blizzard_Communities/GuildRewards.xml)
 ---@field BG Texture
----@field Progress Texture
----@field Left Texture
----@field Shadow Texture
----@field Right Texture
----@field Middle Texture
 ---@field Label FontString
+---@field Progress Texture
+---@field Shadow Texture
+---@field Middle Texture
+---@field Left Texture
+---@field Right Texture
 
 ---@class CommunitiesGuildMemberDetailFrameTemplate : Frame
 ---Located in [GuildRoster.xml](https://github.com/Gethe/wow-ui-source/tree/live/Interface/AddOns/Blizzard_Communities/GuildRoster.xml)
----@field Level FontString
----@field GroupInviteButton Button
----@field OnlineText FontString
+---@field RankLabel FontString
 ---@field ZoneText FontString
+---@field OnlineLabel FontString
+---@field GroupInviteButton Button
+---@field OfficerNoteBackground Frame
 ---@field OfficerNoteLabel FontString
+---@field RankDropdown Frame
+---@field Level FontString
 ---@field RankText FontString
 ---@field ZoneLabel FontString
----@field NoteLabel FontString
----@field OfficerNoteBackground Frame
----@field OnlineLabel FontString
----@field NoteBackground Frame
----@field RankDropdown Frame
 ---@field RemoveButton Button
+---@field NoteBackground Frame
+---@field NoteLabel FontString
 ---@field CloseButton Button
----@field RankLabel FontString
 ---@field Name FontString
 ---@field Border Frame
+---@field OnlineText FontString
+
+---@class CRFManagerFilterGroupButtonTemplate : CRFManagerFilterButtonTemplate
+---Located in [Blizzard_CompactRaidFrameManager.xml](https://github.com/Gethe/wow-ui-source/tree/live/Interface/AddOns/Blizzard_CompactRaidFrames/Blizzard_CompactRaidFrameManager.xml)
 
 ---@class CRFManagerFilterButtonTemplate : UIMenuButtonStretchTemplate
 ---Located in [Blizzard_CompactRaidFrameManager.xml](https://github.com/Gethe/wow-ui-source/tree/live/Interface/AddOns/Blizzard_CompactRaidFrames/Blizzard_CompactRaidFrameManager.xml)
@@ -398,234 +401,231 @@
 ---@class CRFManagerFilterRoleButtonTemplate : CRFManagerFilterButtonTemplate
 ---Located in [Blizzard_CompactRaidFrameManager.xml](https://github.com/Gethe/wow-ui-source/tree/live/Interface/AddOns/Blizzard_CompactRaidFrames/Blizzard_CompactRaidFrameManager.xml)
 
----@class CRFManagerFilterGroupButtonTemplate : CRFManagerFilterButtonTemplate
----Located in [Blizzard_CompactRaidFrameManager.xml](https://github.com/Gethe/wow-ui-source/tree/live/Interface/AddOns/Blizzard_CompactRaidFrames/Blizzard_CompactRaidFrameManager.xml)
-
 ---@class CRFManagerRaidIconButtonTemplate : Button
 ---Located in [Blizzard_CompactRaidFrameManager.xml](https://github.com/Gethe/wow-ui-source/tree/live/Interface/AddOns/Blizzard_CompactRaidFrames/Blizzard_CompactRaidFrameManager.xml)
 
 ---@class DeveloperConsoleBackgroundTemplate : Frame
 ---Located in [Blizzard_Console.xml](https://github.com/Gethe/wow-ui-source/tree/live/Interface/AddOns/Blizzard_Console/Blizzard_Console.xml)
----@field BorderTop Texture
----@field Background Texture
 ---@field BorderBottom Texture
-
----@class DeveloperConsoleAutoCompleteTemplate : Frame
----Located in [Blizzard_Console_AutoComplete.xml](https://github.com/Gethe/wow-ui-source/tree/live/Interface/AddOns/Blizzard_Console/Blizzard_Console_AutoComplete.xml)
----@field BorderLeft Texture
 ---@field Background Texture
 ---@field BorderTop Texture
----@field BorderRight Texture
----@field Tooltip Frame
----@field BorderBottom Texture
 
 ---@class DeveloperConsoleAutoCompleteEntryTemplate : Frame
 ---Located in [Blizzard_Console_AutoComplete.xml](https://github.com/Gethe/wow-ui-source/tree/live/Interface/AddOns/Blizzard_Console/Blizzard_Console_AutoComplete.xml)
----@field Highlight Texture
----@field Value FontString
----@field Text FontString
 ---@field Type FontString
----@field Help FontString
 ---@field Selected Texture
+---@field Highlight Texture
+---@field Help FontString
+---@field Text FontString
+---@field Value FontString
+
+---@class DeveloperConsoleAutoCompleteTemplate : Frame
+---Located in [Blizzard_Console_AutoComplete.xml](https://github.com/Gethe/wow-ui-source/tree/live/Interface/AddOns/Blizzard_Console/Blizzard_Console_AutoComplete.xml)
+---@field BorderBottom Texture
+---@field BorderTop Texture
+---@field Tooltip Frame
+---@field Background Texture
+---@field BorderRight Texture
+---@field BorderLeft Texture
 
 ---@class DeveloperConsoleAutoCompleteEntryTooltipTemplate : Frame
 ---Located in [Blizzard_Console_AutoComplete.xml](https://github.com/Gethe/wow-ui-source/tree/live/Interface/AddOns/Blizzard_Console/Blizzard_Console_AutoComplete.xml)
----@field BorderLeft Texture
----@field Background Texture
----@field Text FontString
----@field BorderTop Texture
 ---@field BorderRight Texture
+---@field BorderTop Texture
+---@field Text FontString
+---@field Background Texture
 ---@field BorderBottom Texture
+---@field BorderLeft Texture
+
+---@class ContributionRewardTemplate : Frame
+---Located in [Blizzard_Contribution.xml](https://github.com/Gethe/wow-ui-source/tree/live/Interface/AddOns/Blizzard_Contribution/Blizzard_Contribution.xml)
+---@field Icon Texture
+---@field PadLock Texture
+---@field MouseOver Frame
+---@field RewardName FontString
+---@field Border Texture
 
 ---@class ContributionStatusTemplate : StatusBar
 ---Located in [Blizzard_Contribution.xml](https://github.com/Gethe/wow-ui-source/tree/live/Interface/AddOns/Blizzard_Contribution/Blizzard_Contribution.xml)
+---@field BorderGlow Texture
+---@field SparkGlow Texture
+---@field BarGlow Texture
+---@field Spark Texture
 ---@field BG Texture
 ---@field Border Texture
----@field BorderGlow Texture
----@field BarGlow Texture
----@field SparkGlow Texture
 ---@field Text FontString
----@field Spark Texture
+
+---@class ContributionTemplate : Frame
+---Located in [Blizzard_Contribution.xml](https://github.com/Gethe/wow-ui-source/tree/live/Interface/AddOns/Blizzard_Contribution/Blizzard_Contribution.xml)
+---@field State Frame
+---@field Status StatusBar
+---@field Description FontString
+---@field Header Frame
+---@field ContributeButton Button
+
+---@class ContributionStateTemplate : Frame
+---Located in [Blizzard_Contribution.xml](https://github.com/Gethe/wow-ui-source/tree/live/Interface/AddOns/Blizzard_Contribution/Blizzard_Contribution.xml)
+---@field TextBG Texture
+---@field Text FontString
+---@field Border Texture
+---@field Icon Texture
 
 ---@class ContributionHeaderTemplate : Frame
 ---Located in [Blizzard_Contribution.xml](https://github.com/Gethe/wow-ui-source/tree/live/Interface/AddOns/Blizzard_Contribution/Blizzard_Contribution.xml)
 ---@field Background Texture
 ---@field Text FontString
 
----@class ContributionStateTemplate : Frame
----Located in [Blizzard_Contribution.xml](https://github.com/Gethe/wow-ui-source/tree/live/Interface/AddOns/Blizzard_Contribution/Blizzard_Contribution.xml)
----@field Border Texture
----@field Text FontString
----@field TextBG Texture
----@field Icon Texture
-
----@class ContributionTemplate : Frame
----Located in [Blizzard_Contribution.xml](https://github.com/Gethe/wow-ui-source/tree/live/Interface/AddOns/Blizzard_Contribution/Blizzard_Contribution.xml)
----@field Status StatusBar
----@field State Frame
----@field ContributeButton Button
----@field Header Frame
----@field Description FontString
-
----@class ContributionRewardTemplate : Frame
----Located in [Blizzard_Contribution.xml](https://github.com/Gethe/wow-ui-source/tree/live/Interface/AddOns/Blizzard_Contribution/Blizzard_Contribution.xml)
----@field RewardName FontString
----@field MouseOver Frame
----@field PadLock Texture
----@field Border Texture
----@field Icon Texture
+---@class CovenantCallingsTemplate : Frame
+---Located in [CovenantCallings.xml](https://github.com/Gethe/wow-ui-source/tree/live/Interface/AddOns/Blizzard_CovenantCallings/CovenantCallings.xml)
+---@field Background Texture
+---@field Decor Texture
+---@field Title FontString
 
 ---@class CovenantCallingQuestTemplate : Frame
 ---Located in [CovenantCallings.xml](https://github.com/Gethe/wow-ui-source/tree/live/Interface/AddOns/Blizzard_CovenantCallings/CovenantCallings.xml)
----@field Glow Texture
+---@field Icon Texture
 ---@field Highlight Texture
+---@field Glow Texture
 ---@field Bang Texture
----@field Icon Texture
-
----@class CovenantCallingsTemplate : Frame
----Located in [CovenantCallings.xml](https://github.com/Gethe/wow-ui-source/tree/live/Interface/AddOns/Blizzard_CovenantCallings/CovenantCallings.xml)
----@field Title FontString
----@field Background Texture
----@field Decor Texture
-
----@class CovenantSoulbindButtonTemplate : Button
----Located in [Blizzard_CovenantPreviewUI.xml](https://github.com/Gethe/wow-ui-source/tree/live/Interface/AddOns/Blizzard_CovenantPreviewUI/Blizzard_CovenantPreviewUI.xml)
----@field Border Texture
----@field Background Texture
----@field Icon Texture
 
 ---@class CovenantAbilityButtonTemplate : Button
 ---Located in [Blizzard_CovenantPreviewUI.xml](https://github.com/Gethe/wow-ui-source/tree/live/Interface/AddOns/Blizzard_CovenantPreviewUI/Blizzard_CovenantPreviewUI.xml)
 ---@field IconBorder Texture
 ---@field Icon Texture
 
+---@class CovenantSoulbindButtonTemplate : Button
+---Located in [Blizzard_CovenantPreviewUI.xml](https://github.com/Gethe/wow-ui-source/tree/live/Interface/AddOns/Blizzard_CovenantPreviewUI/Blizzard_CovenantPreviewUI.xml)
+---@field Background Texture
+---@field Border Texture
+---@field Icon Texture
+
 ---@class CovenantRenownLevelTemplate : Frame
 ---Located in [Blizzard_CovenantRenown.xml](https://github.com/Gethe/wow-ui-source/tree/live/Interface/AddOns/Blizzard_CovenantRenown/Blizzard_CovenantRenown.xml)
 ---@field Level FontString
----@field Check Texture
----@field IconBorder Texture
----@field HighlightTexture Texture
 ---@field HexMask MaskTexture
+---@field HighlightTexture Texture
+---@field Icon Texture
+---@field IconBorder Texture
+---@field Check Texture
+
+---@class CovenantRenownRewardTemplate : Frame
+---Located in [Blizzard_CovenantRenown.xml](https://github.com/Gethe/wow-ui-source/tree/live/Interface/AddOns/Blizzard_CovenantRenown/Blizzard_CovenantRenown.xml)
+---@field Highlight Texture
+---@field Toast Texture
+---@field IconBorder Texture
+---@field Check Texture
+---@field Name FontString
+---@field CircleMask MaskTexture
 ---@field Icon Texture
 
 ---@class CovenantRenownTrackButtonTemplate : Button
 ---Located in [Blizzard_CovenantRenown.xml](https://github.com/Gethe/wow-ui-source/tree/live/Interface/AddOns/Blizzard_CovenantRenown/Blizzard_CovenantRenown.xml)
 
----@class CovenantRenownRewardTemplate : Frame
----Located in [Blizzard_CovenantRenown.xml](https://github.com/Gethe/wow-ui-source/tree/live/Interface/AddOns/Blizzard_CovenantRenown/Blizzard_CovenantRenown.xml)
----@field CircleMask MaskTexture
----@field Check Texture
----@field Toast Texture
----@field IconBorder Texture
----@field Highlight Texture
----@field Name FontString
----@field Icon Texture
-
----@class CovenantSanctumUpgradeTalentTemplate : Frame
+---@class CovenantSanctumUpgradeTreeTemplate : Frame
 ---Located in [Blizzard_CovenantSanctumUpgrades.xml](https://github.com/Gethe/wow-ui-source/tree/live/Interface/AddOns/Blizzard_CovenantSanctum/Blizzard_CovenantSanctumUpgrades.xml)
----@field Highlight Texture
----@field Background Texture
 ---@field Border Texture
----@field TierBorder Texture
+---@field HighlightTexture Texture
 ---@field Cooldown Cooldown
----@field IconBorder Texture
----@field Tier FontString
----@field Name FontString
----@field InfoText FontString
 ---@field Icon Texture
+---@field Glow Texture
+---@field UpgradeArrow Texture
+---@field Tier FontString
+---@field TierBorder Texture
+---@field CircleMask MaskTexture
+---@field SelectedTexture Texture
 
 ---@class CovenantSanctumUpgradeReservoirTemplate : Frame
 ---Located in [Blizzard_CovenantSanctumUpgrades.xml](https://github.com/Gethe/wow-ui-source/tree/live/Interface/AddOns/Blizzard_CovenantSanctum/Blizzard_CovenantSanctumUpgrades.xml)
----@field ModelScene ModelScene
 ---@field ClippedElements Frame
+---@field ModelScene ModelScene
 ---@field FullElements Frame
----@field Shadow Texture
 ---@field Background Texture
+---@field Shadow Texture
 
----@class CovenantSanctumUpgradeTreeTemplate : Frame
+---@class CovenantSanctumUpgradeTalentTemplate : Frame
 ---Located in [Blizzard_CovenantSanctumUpgrades.xml](https://github.com/Gethe/wow-ui-source/tree/live/Interface/AddOns/Blizzard_CovenantSanctum/Blizzard_CovenantSanctumUpgrades.xml)
----@field Glow Texture
----@field SelectedTexture Texture
----@field CircleMask MaskTexture
----@field UpgradeArrow Texture
+---@field InfoText FontString
 ---@field Cooldown Cooldown
----@field TierBorder Texture
----@field Tier FontString
----@field Border Texture
----@field HighlightTexture Texture
+---@field Highlight Texture
 ---@field Icon Texture
+---@field Tier FontString
+---@field IconBorder Texture
+---@field Background Texture
+---@field Name FontString
+---@field Border Texture
+---@field TierBorder Texture
 
 ---@class CovenantCelebrationBannerTemplate : Frame
 ---Located in [Blizzard_CovenantToasts.xml](https://github.com/Gethe/wow-ui-source/tree/live/Interface/AddOns/Blizzard_CovenantToasts/Blizzard_CovenantToasts.xml)
----@field GlowLineTop Texture
 ---@field IconSwirlModelScene ModelScene
+---@field GlowLineTop Texture
 ---@field GlowLineTopAdditive Texture
 ---@field Icon Frame
-
----@class CompactUnitFrameProfileDialogWithCoverTemplate : Frame
----Located in [Blizzard_CompactUnitFrameProfiles.xml](https://github.com/Gethe/wow-ui-source/tree/live/Interface/AddOns/Blizzard_CUFProfiles/Blizzard_CompactUnitFrameProfiles.xml)
----@field Border Frame
----@field cover Frame
-
----@class CompactUnitFrameProfilesSliderTemplate : HorizontalSliderTemplate
----Located in [Blizzard_CompactUnitFrameProfiles.xml](https://github.com/Gethe/wow-ui-source/tree/live/Interface/AddOns/Blizzard_CUFProfiles/Blizzard_CompactUnitFrameProfiles.xml)
----@field minLabel FontString
----@field maxLabel FontString
----@field label FontString
 
 ---@class CompactUnitFrameProfilesCheckButtonTemplate : CheckButton
 ---Located in [Blizzard_CompactUnitFrameProfiles.xml](https://github.com/Gethe/wow-ui-source/tree/live/Interface/AddOns/Blizzard_CUFProfiles/Blizzard_CompactUnitFrameProfiles.xml)
 ---@field label FontString
 
+---@class CompactUnitFrameProfileDialogWithCoverTemplate : Frame
+---Located in [Blizzard_CompactUnitFrameProfiles.xml](https://github.com/Gethe/wow-ui-source/tree/live/Interface/AddOns/Blizzard_CUFProfiles/Blizzard_CompactUnitFrameProfiles.xml)
+---@field cover Frame
+---@field Border Frame
+
 ---@class CompactUnitFrameProfilesDropdownTemplate : UIDropDownMenuTemplate
 ---Located in [Blizzard_CompactUnitFrameProfiles.xml](https://github.com/Gethe/wow-ui-source/tree/live/Interface/AddOns/Blizzard_CUFProfiles/Blizzard_CompactUnitFrameProfiles.xml)
 ---@field label FontString
+
+---@class CompactUnitFrameProfilesSliderTemplate : HorizontalSliderTemplate
+---Located in [Blizzard_CompactUnitFrameProfiles.xml](https://github.com/Gethe/wow-ui-source/tree/live/Interface/AddOns/Blizzard_CUFProfiles/Blizzard_CompactUnitFrameProfiles.xml)
+---@field maxLabel FontString
+---@field label FontString
+---@field minLabel FontString
 
 ---@class DeathRecapEntryTemplate : Frame
 ---Located in [Blizzard_DeathRecap.xml](https://github.com/Gethe/wow-ui-source/tree/live/Interface/AddOns/Blizzard_DeathRecap/Blizzard_DeathRecap.xml)
 ---@field DamageInfo Frame
 ---@field SpellInfo Frame
 
----@class DebugIdentifierFrameNoNameTemplate : Frame
----Located in [Blizzard_DebugTools.xml](https://github.com/Gethe/wow-ui-source/tree/live/Interface/AddOns/Blizzard_DebugTools/Blizzard_DebugTools.xml)
----@field DebugHighlight Texture
-
 ---@class FrameHighlightTemplate : Frame
 ---Located in [Blizzard_DebugTools.xml](https://github.com/Gethe/wow-ui-source/tree/live/Interface/AddOns/Blizzard_DebugTools/Blizzard_DebugTools.xml)
-
----@class FrameStackAnchorHighlightTemplate : Frame
----Located in [Blizzard_DebugTools.xml](https://github.com/Gethe/wow-ui-source/tree/live/Interface/AddOns/Blizzard_DebugTools/Blizzard_DebugTools.xml)
----@field AnchorPoint Texture
 
 ---@class DebugIdentifierFrameTemplate : DebugIdentifierFrameNoNameTemplate
 ---Located in [Blizzard_DebugTools.xml](https://github.com/Gethe/wow-ui-source/tree/live/Interface/AddOns/Blizzard_DebugTools/Blizzard_DebugTools.xml)
 ---@field DebugName FontString
 
+---@class FrameStackAnchorHighlightTemplate : Frame
+---Located in [Blizzard_DebugTools.xml](https://github.com/Gethe/wow-ui-source/tree/live/Interface/AddOns/Blizzard_DebugTools/Blizzard_DebugTools.xml)
+---@field AnchorPoint Texture
+
+---@class DebugIdentifierFrameNoNameTemplate : Frame
+---Located in [Blizzard_DebugTools.xml](https://github.com/Gethe/wow-ui-source/tree/live/Interface/AddOns/Blizzard_DebugTools/Blizzard_DebugTools.xml)
+---@field DebugHighlight Texture
+
 ---@class TableAttributeDisplayTemplate : Frame
 ---Located in [Blizzard_TableInspector.xml](https://github.com/Gethe/wow-ui-source/tree/live/Interface/AddOns/Blizzard_DebugTools/Blizzard_TableInspector.xml)
----@field TopLeft Texture
----@field Left Texture
----@field Top Texture
----@field CloseButton Button
----@field Right Texture
----@field TopRight Texture
----@field LinesScrollFrame ScrollFrame
----@field ScrollFrameArt Frame
----@field TitleBG Texture
----@field VisibilityButton CheckButton
 ---@field NavigateBackwardButton Button
----@field TitleButton Button
+---@field Top Texture
 ---@field BottomRight Texture
----@field HighlightButton CheckButton
----@field DynamicUpdateButton CheckButton
----@field OpenParentButton Button
----@field DialogBG Texture
----@field NavigateForwardButton Button
----@field DuplicateButton Button
+---@field VisibilityButton CheckButton
+---@field TopLeft Texture
+---@field TitleBG Texture
+---@field Right Texture
 ---@field BottomLeft Texture
----@field FilterBox EditBox
----@field Bottom Texture
 ---@field FrameHighlight Frame
+---@field ScrollFrameArt Frame
+---@field Left Texture
+---@field DynamicUpdateButton CheckButton
+---@field LinesScrollFrame ScrollFrame
+---@field CloseButton Button
+---@field OpenParentButton Button
+---@field Bottom Texture
+---@field NavigateForwardButton Button
+---@field TopRight Texture
+---@field HighlightButton CheckButton
+---@field TitleButton Button
+---@field DialogBG Texture
+---@field FilterBox EditBox
+---@field DuplicateButton Button
 
 ---@class TableInspectAnchorDataProviderTitleTemplate : Frame
 ---Located in [Blizzard_TableInspectorAnchorDataProvider.xml](https://github.com/Gethe/wow-ui-source/tree/live/Interface/AddOns/Blizzard_DebugTools/Blizzard_TableInspectorAnchorDataProvider.xml)
@@ -634,101 +634,70 @@
 ---@class TableInspectAnchorLineTemplate : Button
 ---Located in [Blizzard_TableInspectorAnchorDataProvider.xml](https://github.com/Gethe/wow-ui-source/tree/live/Interface/AddOns/Blizzard_DebugTools/Blizzard_TableInspectorAnchorDataProvider.xml)
 ---@field Point FontString
----@field RelativeTo FontString
----@field XOffset FontString
 ---@field YOffset FontString
 ---@field RelativePoint FontString
-
----@class TableAttributeLineBaseTemplate : Frame
----Located in [Blizzard_TableInspectorAttributeDataProvider.xml](https://github.com/Gethe/wow-ui-source/tree/live/Interface/AddOns/Blizzard_DebugTools/Blizzard_TableInspectorAttributeDataProvider.xml)
----@field Key Frame
-
----@class TableAttributeLineTitleTemplate : Frame
----Located in [Blizzard_TableInspectorAttributeDataProvider.xml](https://github.com/Gethe/wow-ui-source/tree/live/Interface/AddOns/Blizzard_DebugTools/Blizzard_TableInspectorAttributeDataProvider.xml)
----@field Text FontString
-
----@class TableAttributeLineEditableTemplate : TableAttributeLineBaseTemplate
----Located in [Blizzard_TableInspectorAttributeDataProvider.xml](https://github.com/Gethe/wow-ui-source/tree/live/Interface/AddOns/Blizzard_DebugTools/Blizzard_TableInspectorAttributeDataProvider.xml)
----@field Value EditBox
-
----@class TableAttributeLineFixedValueTemplate : TableAttributeLineBaseTemplate, TruncatedTooltipScriptTemplate
----Located in [Blizzard_TableInspectorAttributeDataProvider.xml](https://github.com/Gethe/wow-ui-source/tree/live/Interface/AddOns/Blizzard_DebugTools/Blizzard_TableInspectorAttributeDataProvider.xml)
----@field Value FontString
+---@field XOffset FontString
+---@field RelativeTo FontString
 
 ---@class TableAttributeLineReferenceTemplate : TableAttributeLineBaseTemplate
 ---Located in [Blizzard_TableInspectorAttributeDataProvider.xml](https://github.com/Gethe/wow-ui-source/tree/live/Interface/AddOns/Blizzard_DebugTools/Blizzard_TableInspectorAttributeDataProvider.xml)
 ---@field ValueButton Button
 
----@class EncounterInfoTemplate : InlineHyperlinkFrameTemplate
----Located in [Blizzard_EncounterJournal.xml](https://github.com/Gethe/wow-ui-source/tree/live/Interface/AddOns/Blizzard_EncounterJournal/Blizzard_EncounterJournal.xml)
----@field overviewDescription Frame
----@field description FontString
----@field descriptionBG Texture
----@field descriptionBGBottom Texture
----@field button Button
+---@class TableAttributeLineFixedValueTemplate : TableAttributeLineBaseTemplate, TruncatedTooltipScriptTemplate
+---Located in [Blizzard_TableInspectorAttributeDataProvider.xml](https://github.com/Gethe/wow-ui-source/tree/live/Interface/AddOns/Blizzard_DebugTools/Blizzard_TableInspectorAttributeDataProvider.xml)
+---@field Value FontString
 
----@class EncounterCreatureButtonTemplate : Button
----Located in [Blizzard_EncounterJournal.xml](https://github.com/Gethe/wow-ui-source/tree/live/Interface/AddOns/Blizzard_EncounterJournal/Blizzard_EncounterJournal.xml)
----@field creature Texture
+---@class TableAttributeLineEditableTemplate : TableAttributeLineBaseTemplate
+---Located in [Blizzard_TableInspectorAttributeDataProvider.xml](https://github.com/Gethe/wow-ui-source/tree/live/Interface/AddOns/Blizzard_DebugTools/Blizzard_TableInspectorAttributeDataProvider.xml)
+---@field Value EditBox
 
----@class EncounterSearchSMTemplate : Button
----Located in [Blizzard_EncounterJournal.xml](https://github.com/Gethe/wow-ui-source/tree/live/Interface/AddOns/Blizzard_EncounterJournal/Blizzard_EncounterJournal.xml)
----@field selectedTexture Texture
----@field name FontString
----@field icon Texture
+---@class TableAttributeLineTitleTemplate : Frame
+---Located in [Blizzard_TableInspectorAttributeDataProvider.xml](https://github.com/Gethe/wow-ui-source/tree/live/Interface/AddOns/Blizzard_DebugTools/Blizzard_TableInspectorAttributeDataProvider.xml)
+---@field Text FontString
 
----@class EncounterSectionIconTemplate : Frame
----Located in [Blizzard_EncounterJournal.xml](https://github.com/Gethe/wow-ui-source/tree/live/Interface/AddOns/Blizzard_EncounterJournal/Blizzard_EncounterJournal.xml)
----@field icon Texture
+---@class TableAttributeLineBaseTemplate : Frame
+---Located in [Blizzard_TableInspectorAttributeDataProvider.xml](https://github.com/Gethe/wow-ui-source/tree/live/Interface/AddOns/Blizzard_DebugTools/Blizzard_TableInspectorAttributeDataProvider.xml)
+---@field Key Frame
 
 ---@class EncounterDescriptionTemplate : Frame
 ---Located in [Blizzard_EncounterJournal.xml](https://github.com/Gethe/wow-ui-source/tree/live/Interface/AddOns/Blizzard_EncounterJournal/Blizzard_EncounterJournal.xml)
 ---@field Text SimpleHTML
 
+---@class EncounterSectionIconTemplate : Frame
+---Located in [Blizzard_EncounterJournal.xml](https://github.com/Gethe/wow-ui-source/tree/live/Interface/AddOns/Blizzard_EncounterJournal/Blizzard_EncounterJournal.xml)
+---@field icon Texture
+
+---@class EncounterJournalScrollBarTemplate : MinimalScrollBarTemplate
+---Located in [Blizzard_EncounterJournal.xml](https://github.com/Gethe/wow-ui-source/tree/live/Interface/AddOns/Blizzard_EncounterJournal/Blizzard_EncounterJournal.xml)
+
 ---@class AdventureJournal_SecondaryTemplate : Frame
 ---Located in [Blizzard_EncounterJournal.xml](https://github.com/Gethe/wow-ui-source/tree/live/Interface/AddOns/Blizzard_EncounterJournal/Blizzard_EncounterJournal.xml)
 ---@field bg Texture
 ---@field reward Frame
----@field centerDisplay Frame
 ---@field iconRing Texture
+---@field centerDisplay Frame
 ---@field icon Texture
+
+---@class _SearchBarSm : Texture
+---Located in [Blizzard_EncounterJournal.xml](https://github.com/Gethe/wow-ui-source/tree/live/Interface/AddOns/Blizzard_EncounterJournal/Blizzard_EncounterJournal.xml)
+
+---@class EncounterSearchSMTemplate : Button
+---Located in [Blizzard_EncounterJournal.xml](https://github.com/Gethe/wow-ui-source/tree/live/Interface/AddOns/Blizzard_EncounterJournal/Blizzard_EncounterJournal.xml)
+---@field icon Texture
+---@field name FontString
+---@field selectedTexture Texture
 
 ---@class EJButtonTemplate : Button
 ---Located in [Blizzard_EncounterJournal.xml](https://github.com/Gethe/wow-ui-source/tree/live/Interface/AddOns/Blizzard_EncounterJournal/Blizzard_EncounterJournal.xml)
----@field UpRight Texture
----@field HighRight Texture
----@field HighLeft Texture
----@field DownRight Texture
 ---@field UpLeft Texture
+---@field HighRight Texture
+---@field UpRight Texture
 ---@field DownLeft Texture
+---@field DownRight Texture
+---@field HighLeft Texture
 
----@class EncounterInstanceButtonTemplate : Button
+---@class EncounterTabTemplate : Button
 ---Located in [Blizzard_EncounterJournal.xml](https://github.com/Gethe/wow-ui-source/tree/live/Interface/AddOns/Blizzard_EncounterJournal/Blizzard_EncounterJournal.xml)
----@field heroicIcon Texture
----@field range FontString
----@field name FontString
----@field bgImage Texture
-
----@class EncounterSearchLGTemplate : Button
----Located in [Blizzard_EncounterJournal.xml](https://github.com/Gethe/wow-ui-source/tree/live/Interface/AddOns/Blizzard_EncounterJournal/Blizzard_EncounterJournal.xml)
----@field path FontString
----@field resultType FontString
----@field name FontString
----@field icon Texture
-
----@class EncounterTierTabTemplate : Button
----Located in [Blizzard_EncounterJournal.xml](https://github.com/Gethe/wow-ui-source/tree/live/Interface/AddOns/Blizzard_EncounterJournal/Blizzard_EncounterJournal.xml)
----@field left Texture
----@field selectedGlow Texture
----@field midHighlight Texture
----@field leftSelect Texture
----@field rightHighlight Texture
----@field right Texture
----@field midSelect Texture
----@field grayBox Frame
----@field rightSelect Texture
----@field leftHighlight Texture
----@field mid Texture
 
 ---@class EncounterBossButtonTemplate : Button
 ---Located in [Blizzard_EncounterJournal.xml](https://github.com/Gethe/wow-ui-source/tree/live/Interface/AddOns/Blizzard_EncounterJournal/Blizzard_EncounterJournal.xml)
@@ -739,82 +708,117 @@
 ---@field Bullet Texture
 ---@field Text SimpleHTML
 
+---@class EncounterSearchLGTemplate : Button
+---Located in [Blizzard_EncounterJournal.xml](https://github.com/Gethe/wow-ui-source/tree/live/Interface/AddOns/Blizzard_EncounterJournal/Blizzard_EncounterJournal.xml)
+---@field path FontString
+---@field icon Texture
+---@field resultType FontString
+---@field name FontString
+
+---@class EncounterCreatureButtonTemplate : Button
+---Located in [Blizzard_EncounterJournal.xml](https://github.com/Gethe/wow-ui-source/tree/live/Interface/AddOns/Blizzard_EncounterJournal/Blizzard_EncounterJournal.xml)
+---@field creature Texture
+
+---@class EncounterTierTabTemplate : Button
+---Located in [Blizzard_EncounterJournal.xml](https://github.com/Gethe/wow-ui-source/tree/live/Interface/AddOns/Blizzard_EncounterJournal/Blizzard_EncounterJournal.xml)
+---@field midHighlight Texture
+---@field leftSelect Texture
+---@field rightSelect Texture
+---@field mid Texture
+---@field grayBox Frame
+---@field left Texture
+---@field rightHighlight Texture
+---@field midSelect Texture
+---@field leftHighlight Texture
+---@field right Texture
+---@field selectedGlow Texture
+
 ---@class EncounterItemTemplate : Button
 ---Located in [Blizzard_EncounterJournal.xml](https://github.com/Gethe/wow-ui-source/tree/live/Interface/AddOns/Blizzard_EncounterJournal/Blizzard_EncounterJournal.xml)
----@field IconOverlay2 Texture
----@field IconOverlay Texture
----@field IconBorder Texture
----@field armorType FontString
----@field bossTexture Texture
----@field boss FontString
 ---@field bosslessTexture Texture
----@field slot FontString
----@field name FontString
+---@field armorType FontString
+---@field IconOverlay Texture
+---@field IconOverlay2 Texture
 ---@field icon Texture
+---@field boss FontString
+---@field slot FontString
+---@field bossTexture Texture
+---@field name FontString
+---@field IconBorder Texture
 
----@class EncounterTabTemplate : Button
+---@class EncounterInfoTemplate : InlineHyperlinkFrameTemplate
 ---Located in [Blizzard_EncounterJournal.xml](https://github.com/Gethe/wow-ui-source/tree/live/Interface/AddOns/Blizzard_EncounterJournal/Blizzard_EncounterJournal.xml)
+---@field overviewDescription Frame
+---@field description FontString
+---@field button Button
+---@field descriptionBG Texture
+---@field descriptionBGBottom Texture
 
----@class EncounterJournalScrollBarTemplate : MinimalScrollBarTemplate
+---@class EncounterInstanceButtonTemplate : Button
 ---Located in [Blizzard_EncounterJournal.xml](https://github.com/Gethe/wow-ui-source/tree/live/Interface/AddOns/Blizzard_EncounterJournal/Blizzard_EncounterJournal.xml)
+---@field bgImage Texture
+---@field heroicIcon Texture
+---@field range FontString
+---@field name FontString
 
 ---@class EncounterDifficultyTemplate : Button
 ---Located in [Blizzard_EncounterJournal.xml](https://github.com/Gethe/wow-ui-source/tree/live/Interface/AddOns/Blizzard_EncounterJournal/Blizzard_EncounterJournal.xml)
 ---@field selected Texture
 
----@class _SearchBarSm : Texture
----Located in [Blizzard_EncounterJournal.xml](https://github.com/Gethe/wow-ui-source/tree/live/Interface/AddOns/Blizzard_EncounterJournal/Blizzard_EncounterJournal.xml)
-
 ---@class RuneforgeLegendaryPowerLootJournalTemplate : GridListElementTemplate
 ---Located in [Blizzard_LootJournal.xml](https://github.com/Gethe/wow-ui-source/tree/live/Interface/AddOns/Blizzard_EncounterJournal/Blizzard_LootJournal.xml)
----@field CircleMask MaskTexture
----@field Background Texture
+---@field UnavailableBackground Texture
+---@field BackgroundOverlay Texture
+---@field Icon Texture
 ---@field CovenantSigil Frame
 ---@field SpecName FontString
----@field UnavailableOverlay Texture
----@field BackgroundOverlay Texture
----@field UnavailableBackground Texture
+---@field Background Texture
 ---@field Name FontString
----@field Icon Texture
-
----@class EventTraceLogMessageButtonTemplate : EventTraceScrollBoxButtonTemplate
----Located in [Blizzard_EventTrace.xml](https://github.com/Gethe/wow-ui-source/tree/live/Interface/AddOns/Blizzard_EventTrace/Blizzard_EventTrace.xml)
----@field RightLabel FontString
----@field LeftLabel FontString
-
----@class EventTraceMenuButtonTemplate : EventTraceButtonBehaviorTemplate
----Located in [Blizzard_EventTrace.xml](https://github.com/Gethe/wow-ui-source/tree/live/Interface/AddOns/Blizzard_EventTrace/Blizzard_EventTrace.xml)
----@field MouseoverOverlay Texture
----@field Label FontString
----@field HighlightTexture Texture
----@field NormalTexture Texture
+---@field CircleMask MaskTexture
+---@field UnavailableOverlay Texture
 
 ---@class EventTraceCheckButtonTemplate : CheckButton
 ---Located in [Blizzard_EventTrace.xml](https://github.com/Gethe/wow-ui-source/tree/live/Interface/AddOns/Blizzard_EventTrace/Blizzard_EventTrace.xml)
 
----@class EventTraceButtonBehaviorTemplate : Frame
----Located in [Blizzard_EventTrace.xml](https://github.com/Gethe/wow-ui-source/tree/live/Interface/AddOns/Blizzard_EventTrace/Blizzard_EventTrace.xml)
-
 ---@class EventTraceScrollBoxButtonTemplate : EventTraceButtonBehaviorTemplate
 ---Located in [Blizzard_EventTrace.xml](https://github.com/Gethe/wow-ui-source/tree/live/Interface/AddOns/Blizzard_EventTrace/Blizzard_EventTrace.xml)
+---@field FlashOverlay Texture
 ---@field MouseoverOverlay Texture
 ---@field Alternate Texture
----@field FlashOverlay Texture
-
----@class EventTraceFilterButtonTemplate : EventTraceScrollBoxButtonTemplate
----Located in [Blizzard_EventTrace.xml](https://github.com/Gethe/wow-ui-source/tree/live/Interface/AddOns/Blizzard_EventTrace/Blizzard_EventTrace.xml)
----@field HideButton Button
----@field CheckButton CheckButton
----@field Label FontString
 
 ---@class EventTraceLogEventButtonTemplate : EventTraceScrollBoxButtonTemplate
 ---Located in [Blizzard_EventTrace.xml](https://github.com/Gethe/wow-ui-source/tree/live/Interface/AddOns/Blizzard_EventTrace/Blizzard_EventTrace.xml)
----@field HideButton Button
----@field RightLabel FontString
 ---@field LeftLabel FontString
+---@field RightLabel FontString
+---@field HideButton Button
+
+---@class EventTraceMenuButtonTemplate : EventTraceButtonBehaviorTemplate
+---Located in [Blizzard_EventTrace.xml](https://github.com/Gethe/wow-ui-source/tree/live/Interface/AddOns/Blizzard_EventTrace/Blizzard_EventTrace.xml)
+---@field NormalTexture Texture
+---@field MouseoverOverlay Texture
+---@field Label FontString
+---@field HighlightTexture Texture
+
+---@class EventTraceLogMessageButtonTemplate : EventTraceScrollBoxButtonTemplate
+---Located in [Blizzard_EventTrace.xml](https://github.com/Gethe/wow-ui-source/tree/live/Interface/AddOns/Blizzard_EventTrace/Blizzard_EventTrace.xml)
+---@field LeftLabel FontString
+---@field RightLabel FontString
+
+---@class EventTraceButtonBehaviorTemplate : Frame
+---Located in [Blizzard_EventTrace.xml](https://github.com/Gethe/wow-ui-source/tree/live/Interface/AddOns/Blizzard_EventTrace/Blizzard_EventTrace.xml)
+
+---@class EventTraceFilterButtonTemplate : EventTraceScrollBoxButtonTemplate
+---Located in [Blizzard_EventTrace.xml](https://github.com/Gethe/wow-ui-source/tree/live/Interface/AddOns/Blizzard_EventTrace/Blizzard_EventTrace.xml)
+---@field Label FontString
+---@field CheckButton CheckButton
+---@field HideButton Button
 
 ---@class FlightMap_AreaPOIPinTemplate : AreaPOIPinTemplate
 ---Located in [FM_AreaPOIDataProvider.xml](https://github.com/Gethe/wow-ui-source/tree/live/Interface/AddOns/Blizzard_FlightMap/FM_AreaPOIDataProvider.xml)
+
+---@class FlightMap_BackgroundFlightLineTemplate : Frame
+---Located in [FM_FlightPathDataProvider.xml](https://github.com/Gethe/wow-ui-source/tree/live/Interface/AddOns/Blizzard_FlightMap/FM_FlightPathDataProvider.xml)
+---@field Fill Line
 
 ---@class FlightMap_HighlightFlightLineTemplate : Frame
 ---Located in [FM_FlightPathDataProvider.xml](https://github.com/Gethe/wow-ui-source/tree/live/Interface/AddOns/Blizzard_FlightMap/FM_FlightPathDataProvider.xml)
@@ -824,10 +828,6 @@
 ---Located in [FM_FlightPathDataProvider.xml](https://github.com/Gethe/wow-ui-source/tree/live/Interface/AddOns/Blizzard_FlightMap/FM_FlightPathDataProvider.xml)
 ---@field IconHighlight Texture
 ---@field Icon Texture
-
----@class FlightMap_BackgroundFlightLineTemplate : Frame
----Located in [FM_FlightPathDataProvider.xml](https://github.com/Gethe/wow-ui-source/tree/live/Interface/AddOns/Blizzard_FlightMap/FM_FlightPathDataProvider.xml)
----@field Fill Line
 
 ---@class FlightMap_QuestPinTemplate : QuestPinTemplate
 ---Located in [FM_QuestDataProvider.xml](https://github.com/Gethe/wow-ui-source/tree/live/Interface/AddOns/Blizzard_FlightMap/FM_QuestDataProvider.xml)
@@ -840,8 +840,8 @@
 
 ---@class GlowEmitterTemplate : Frame
 ---Located in [GlowEmitter.xml](https://github.com/Gethe/wow-ui-source/tree/live/Interface/AddOns/Blizzard_FrameEffects/GlowEmitter.xml)
----@field Left Texture
 ---@field Middle Texture
+---@field Left Texture
 ---@field Right Texture
 
 ---@class PowerSwirlScale : Texture
@@ -849,71 +849,79 @@
 
 ---@class PowerSwirlTemplate : Frame
 ---Located in [PowerSwirl.xml](https://github.com/Gethe/wow-ui-source/tree/live/Interface/AddOns/Blizzard_FrameEffects/PowerSwirl.xml)
----@field RingBurst Texture
----@field BigWhirls Texture
----@field LightRune Texture
----@field WhiteStarBurst Texture
----@field SpinningGlows2 Texture
 ---@field SpinningGlows Texture
+---@field LightRune Texture
 ---@field Ring Texture
 ---@field StarBurst Texture
-
----@class CovenantMissionFollowerOrCategoryListButtonTemplate : Frame
----Located in [Blizzard_CovenantMissionTemplates.xml](https://github.com/Gethe/wow-ui-source/tree/live/Interface/AddOns/Blizzard_GarrisonTemplates/Blizzard_CovenantMissionTemplates.xml)
----@field Follower Button
----@field Category FontString
-
----@class CovenantMissionAutoSpellAbilityTemplate : GarrisonAbilityLargeCounterTemplate
----Located in [Blizzard_CovenantMissionTemplates.xml](https://github.com/Gethe/wow-ui-source/tree/live/Interface/AddOns/Blizzard_GarrisonTemplates/Blizzard_CovenantMissionTemplates.xml)
----@field SpellBorder Texture
----@field IconMask MaskTexture
----@field Name FontString
+---@field WhiteStarBurst Texture
+---@field RingBurst Texture
+---@field SpinningGlows2 Texture
+---@field BigWhirls Texture
 
 ---@class CovenantStatLineTemplate : Frame
 ---Located in [Blizzard_CovenantMissionTemplates.xml](https://github.com/Gethe/wow-ui-source/tree/live/Interface/AddOns/Blizzard_GarrisonTemplates/Blizzard_CovenantMissionTemplates.xml)
 ---@field LeftString FontString
 ---@field RightString FontString
 
----@class AdventuresTargetingIndicatorTemplate : Frame
+---@class CovenantMissionFollowerButtonTemplate : CovenantFollowerButtonTemplate
 ---Located in [Blizzard_CovenantMissionTemplates.xml](https://github.com/Gethe/wow-ui-source/tree/live/Interface/AddOns/Blizzard_GarrisonTemplates/Blizzard_CovenantMissionTemplates.xml)
----@field TargetMarker Texture
+---@field BusyFrame Frame
+---@field DurabilityFrame Frame
+---@field AbilitiesBG Texture
 
----@class AdventuresFriendlyTargetingIndicatorTemplate : Frame
+---@class OribosScrollUpButtonTemplate : Button
 ---Located in [Blizzard_CovenantMissionTemplates.xml](https://github.com/Gethe/wow-ui-source/tree/live/Interface/AddOns/Blizzard_GarrisonTemplates/Blizzard_CovenantMissionTemplates.xml)
----@field TargetMarker Texture
----@field SupportColorationAnimator Frame
 
----@class SmallCovenantMissionEncounterIconTemplate : Frame
+---@class CovenantMissionFollowerOrCategoryListButtonTemplate : Frame
 ---Located in [Blizzard_CovenantMissionTemplates.xml](https://github.com/Gethe/wow-ui-source/tree/live/Interface/AddOns/Blizzard_GarrisonTemplates/Blizzard_CovenantMissionTemplates.xml)
----@field Level FontString
----@field CircleMask MaskTexture
----@field EliteOverlay Texture
----@field LevelFrame Texture
----@field PortraitBorder Texture
----@field RareOverlay Texture
----@field Portrait Texture
+---@field Follower Button
+---@field Category FontString
 
----@class OribosScrollBarTemplate : Slider
+---@class CovenantFollowerTabTemplate : CovenantMissionBaseFrameTemplate
 ---Located in [Blizzard_CovenantMissionTemplates.xml](https://github.com/Gethe/wow-ui-source/tree/live/Interface/AddOns/Blizzard_GarrisonTemplates/Blizzard_CovenantMissionTemplates.xml)
----@field DownButton Button
----@field trackBG Texture
----@field UpButton Button
+---@field ClassSpec FontString
+---@field Header Texture
+---@field HealTimeRemaining FontString
+---@field AbilitiesFrame Frame
+---@field ModelCluster ScrollFrame
+---@field StatsFrame Frame
+---@field NoFollowersLabel FontString
+---@field UpgradeClickTarget Button
+---@field HealTimeRemainingIcon Texture
+---@field Name FontString
+---@field HealFollowerFrame Frame
 
 ---@class CovenantFollowerButtonTemplate : Button
 ---Located in [Blizzard_CovenantMissionTemplates.xml](https://github.com/Gethe/wow-ui-source/tree/live/Interface/AddOns/Blizzard_GarrisonTemplates/Blizzard_CovenantMissionTemplates.xml)
 ---@field BG Texture
 ---@field Selection Texture
----@field Status FontString
+---@field Selected Texture
 ---@field PortraitFrame Frame
+---@field Status FontString
 ---@field ILevel FontString
 ---@field Name FontString
----@field Selected Texture
 
----@class CovenantMissionFollowerButtonTemplate : CovenantFollowerButtonTemplate
+---@class CovenantPortraitTemplate : Frame
 ---Located in [Blizzard_CovenantMissionTemplates.xml](https://github.com/Gethe/wow-ui-source/tree/live/Interface/AddOns/Blizzard_GarrisonTemplates/Blizzard_CovenantMissionTemplates.xml)
----@field BusyFrame Frame
----@field AbilitiesBG Texture
----@field DurabilityFrame Frame
+---@field LevelCircle Texture
+---@field PortraitRingQuality Texture
+---@field PortraitRingCover Texture
+---@field LevelText FontString
+---@field PuckBorder Texture
+---@field Portrait Texture
+---@field CircleMask MaskTexture
+---@field HealthBar Frame
+
+---@class CovenantMissionListTemplate : CovenantListWideFrameTemplate
+---Located in [Blizzard_CovenantMissionTemplates.xml](https://github.com/Gethe/wow-ui-source/tree/live/Interface/AddOns/Blizzard_GarrisonTemplates/Blizzard_CovenantMissionTemplates.xml)
+---@field EmptyListString FontString
+---@field MaterialFrame Frame
+---@field CompleteDialog Frame
+
+---@class AdventuresFriendlyTargetingIndicatorTemplate : Frame
+---Located in [Blizzard_CovenantMissionTemplates.xml](https://github.com/Gethe/wow-ui-source/tree/live/Interface/AddOns/Blizzard_GarrisonTemplates/Blizzard_CovenantMissionTemplates.xml)
+---@field TargetMarker Texture
+---@field SupportColorationAnimator Frame
 
 ---@class CovenantStatLineLandingPageTemplate : Frame
 ---Located in [Blizzard_CovenantMissionTemplates.xml](https://github.com/Gethe/wow-ui-source/tree/live/Interface/AddOns/Blizzard_GarrisonTemplates/Blizzard_CovenantMissionTemplates.xml)
@@ -922,68 +930,89 @@
 
 ---@class CovenantMissionEncounterIconTemplate : Frame
 ---Located in [Blizzard_CovenantMissionTemplates.xml](https://github.com/Gethe/wow-ui-source/tree/live/Interface/AddOns/Blizzard_GarrisonTemplates/Blizzard_CovenantMissionTemplates.xml)
+---@field RareOverlay Texture
+---@field PortraitBorder Texture
+---@field Portrait Texture
 ---@field CircleMask MaskTexture
 ---@field EliteOverlay Texture
----@field PortraitBorder Texture
----@field RareOverlay Texture
----@field Portrait Texture
-
----@class CovenantMissionBaseFrameTemplate : Frame
----Located in [Blizzard_CovenantMissionTemplates.xml](https://github.com/Gethe/wow-ui-source/tree/live/Interface/AddOns/Blizzard_GarrisonTemplates/Blizzard_CovenantMissionTemplates.xml)
----@field BaseFrameTop Texture
----@field BoardDropShadow Texture
----@field BaseFrameBottomRight Texture
----@field RaisedFrameEdges Frame
----@field BaseFrameTopRight Texture
----@field BaseFrameBottomLeft Texture
----@field BaseFrameLeft Texture
----@field BaseFrameRight Texture
----@field BaseFrameBackground Texture
----@field BaseFrameTopLeft Texture
----@field BaseFrameBottom Texture
-
----@class CovenantPortraitTemplate : Frame
----Located in [Blizzard_CovenantMissionTemplates.xml](https://github.com/Gethe/wow-ui-source/tree/live/Interface/AddOns/Blizzard_GarrisonTemplates/Blizzard_CovenantMissionTemplates.xml)
----@field LevelText FontString
----@field CircleMask MaskTexture
----@field PuckBorder Texture
----@field PortraitRingCover Texture
----@field HealthBar Frame
----@field LevelCircle Texture
----@field PortraitRingQuality Texture
----@field Portrait Texture
-
----@class OribosScrollUpButtonTemplate : Button
----Located in [Blizzard_CovenantMissionTemplates.xml](https://github.com/Gethe/wow-ui-source/tree/live/Interface/AddOns/Blizzard_GarrisonTemplates/Blizzard_CovenantMissionTemplates.xml)
-
----@class SupportColorationAnimatorTemplate : Frame
----Located in [Blizzard_CovenantMissionTemplates.xml](https://github.com/Gethe/wow-ui-source/tree/live/Interface/AddOns/Blizzard_GarrisonTemplates/Blizzard_CovenantMissionTemplates.xml)
-
----@class CovenantFollowerTabTemplate : CovenantMissionBaseFrameTemplate
----Located in [Blizzard_CovenantMissionTemplates.xml](https://github.com/Gethe/wow-ui-source/tree/live/Interface/AddOns/Blizzard_GarrisonTemplates/Blizzard_CovenantMissionTemplates.xml)
----@field NoFollowersLabel FontString
----@field UpgradeClickTarget Button
----@field Header Texture
----@field StatsFrame Frame
----@field HealFollowerFrame Frame
----@field ClassSpec FontString
----@field ModelCluster ScrollFrame
----@field HealTimeRemaining FontString
----@field HealTimeRemainingIcon Texture
----@field Name FontString
----@field AbilitiesFrame Frame
 
 ---@class CovenantMissionListButtonTemplate : Button
 ---Located in [Blizzard_CovenantMissionTemplates.xml](https://github.com/Gethe/wow-ui-source/tree/live/Interface/AddOns/Blizzard_GarrisonTemplates/Blizzard_CovenantMissionTemplates.xml)
 ---@field Level FontString
 ---@field LocBG Texture
+---@field EncounterIcon Frame
 ---@field ButtonBG Texture
----@field Highlight Texture
 ---@field Overlay Frame
+---@field Highlight Texture
+---@field CompleteCheck Texture
 ---@field Summary FontString
 ---@field Title FontString
----@field CompleteCheck Texture
----@field EncounterIcon Frame
+
+---@class OribosScrollDownButtonTemplate : Button
+---Located in [Blizzard_CovenantMissionTemplates.xml](https://github.com/Gethe/wow-ui-source/tree/live/Interface/AddOns/Blizzard_GarrisonTemplates/Blizzard_CovenantMissionTemplates.xml)
+
+---@class OribosScrollBarTemplate : Slider
+---Located in [Blizzard_CovenantMissionTemplates.xml](https://github.com/Gethe/wow-ui-source/tree/live/Interface/AddOns/Blizzard_GarrisonTemplates/Blizzard_CovenantMissionTemplates.xml)
+---@field trackBG Texture
+---@field UpButton Button
+---@field DownButton Button
+
+---@class AdventuresTargetingIndicatorTemplate : Frame
+---Located in [Blizzard_CovenantMissionTemplates.xml](https://github.com/Gethe/wow-ui-source/tree/live/Interface/AddOns/Blizzard_GarrisonTemplates/Blizzard_CovenantMissionTemplates.xml)
+---@field TargetMarker Texture
+
+---@class CovenantMissionAutoSpellAbilityTemplate : GarrisonAbilityLargeCounterTemplate
+---Located in [Blizzard_CovenantMissionTemplates.xml](https://github.com/Gethe/wow-ui-source/tree/live/Interface/AddOns/Blizzard_GarrisonTemplates/Blizzard_CovenantMissionTemplates.xml)
+---@field IconMask MaskTexture
+---@field Name FontString
+---@field SpellBorder Texture
+
+---@class CovenantMissionPageFollowerTemplate : Frame
+---Located in [Blizzard_CovenantMissionTemplates.xml](https://github.com/Gethe/wow-ui-source/tree/live/Interface/AddOns/Blizzard_GarrisonTemplates/Blizzard_CovenantMissionTemplates.xml)
+---@field DurabilityBackground Texture
+---@field PortraitFrame Frame
+---@field Name FontString
+---@field Durability Frame
+
+---@class SupportColorationAnimatorTemplate : Frame
+---Located in [Blizzard_CovenantMissionTemplates.xml](https://github.com/Gethe/wow-ui-source/tree/live/Interface/AddOns/Blizzard_GarrisonTemplates/Blizzard_CovenantMissionTemplates.xml)
+
+---@class SmallCovenantMissionEncounterIconTemplate : Frame
+---Located in [Blizzard_CovenantMissionTemplates.xml](https://github.com/Gethe/wow-ui-source/tree/live/Interface/AddOns/Blizzard_GarrisonTemplates/Blizzard_CovenantMissionTemplates.xml)
+---@field RareOverlay Texture
+---@field PortraitBorder Texture
+---@field Level FontString
+---@field LevelFrame Texture
+---@field Portrait Texture
+---@field CircleMask MaskTexture
+---@field EliteOverlay Texture
+
+---@class AdventuresPuckHealthBarTemplate : Frame
+---Located in [Blizzard_CovenantMissionTemplates.xml](https://github.com/Gethe/wow-ui-source/tree/live/Interface/AddOns/Blizzard_GarrisonTemplates/Blizzard_CovenantMissionTemplates.xml)
+---@field HealthValue FontString
+---@field Health Texture
+---@field Background Texture
+---@field Border Texture
+---@field RoleIcon Texture
+
+---@class CovenantFollowerListTemplate : Frame
+---Located in [Blizzard_CovenantMissionTemplates.xml](https://github.com/Gethe/wow-ui-source/tree/live/Interface/AddOns/Blizzard_GarrisonTemplates/Blizzard_CovenantMissionTemplates.xml)
+---@field listScroll ScrollFrame
+---@field ElevatedFrame Frame
+
+---@class CovenantMissionBaseFrameTemplate : Frame
+---Located in [Blizzard_CovenantMissionTemplates.xml](https://github.com/Gethe/wow-ui-source/tree/live/Interface/AddOns/Blizzard_GarrisonTemplates/Blizzard_CovenantMissionTemplates.xml)
+---@field BaseFrameBottomRight Texture
+---@field BaseFrameBottom Texture
+---@field BaseFrameLeft Texture
+---@field BaseFrameRight Texture
+---@field BaseFrameTopLeft Texture
+---@field BoardDropShadow Texture
+---@field RaisedFrameEdges Frame
+---@field BaseFrameBottomLeft Texture
+---@field BaseFrameTopRight Texture
+---@field BaseFrameTop Texture
+---@field BaseFrameBackground Texture
 
 ---@class CovenantListWideFrameTemplate : CovenantMissionBaseFrameTemplate
 ---Located in [Blizzard_CovenantMissionTemplates.xml](https://github.com/Gethe/wow-ui-source/tree/live/Interface/AddOns/Blizzard_GarrisonTemplates/Blizzard_CovenantMissionTemplates.xml)
@@ -991,135 +1020,100 @@
 
 ---@class CovenantLandingPageEncounterIconTemplate : Frame
 ---Located in [Blizzard_CovenantMissionTemplates.xml](https://github.com/Gethe/wow-ui-source/tree/live/Interface/AddOns/Blizzard_GarrisonTemplates/Blizzard_CovenantMissionTemplates.xml)
+---@field RareOverlay Texture
+---@field PortraitBorder Texture
+---@field Portrait Texture
 ---@field CircleMask MaskTexture
 ---@field EliteOverlay Texture
----@field PortraitBorder Texture
----@field RareOverlay Texture
----@field Portrait Texture
 
----@class CovenantMissionListTemplate : CovenantListWideFrameTemplate
----Located in [Blizzard_CovenantMissionTemplates.xml](https://github.com/Gethe/wow-ui-source/tree/live/Interface/AddOns/Blizzard_GarrisonTemplates/Blizzard_CovenantMissionTemplates.xml)
----@field MaterialFrame Frame
----@field EmptyListString FontString
----@field CompleteDialog Frame
+---@class GarrisonMissionFrameTabTemplate : Button
+---Located in [Blizzard_GarrisonMissionTemplates.xml](https://github.com/Gethe/wow-ui-source/tree/live/Interface/AddOns/Blizzard_GarrisonTemplates/Blizzard_GarrisonMissionTemplates.xml)
+---@field RightDisabled Texture
+---@field MiddleDisabled Texture
+---@field LeftDisabled Texture
+---@field RightHighlight Texture
+---@field MiddleHighlight Texture
+---@field LeftHighlight Texture
+---@field Middle Texture
+---@field Left Texture
+---@field Right Texture
 
----@class CovenantFollowerListTemplate : Frame
----Located in [Blizzard_CovenantMissionTemplates.xml](https://github.com/Gethe/wow-ui-source/tree/live/Interface/AddOns/Blizzard_GarrisonTemplates/Blizzard_CovenantMissionTemplates.xml)
----@field ElevatedFrame Frame
----@field listScroll ScrollFrame
-
----@class AdventuresPuckHealthBarTemplate : Frame
----Located in [Blizzard_CovenantMissionTemplates.xml](https://github.com/Gethe/wow-ui-source/tree/live/Interface/AddOns/Blizzard_GarrisonTemplates/Blizzard_CovenantMissionTemplates.xml)
----@field Background Texture
----@field Health Texture
----@field RoleIcon Texture
----@field Border Texture
----@field HealthValue FontString
-
----@class OribosScrollDownButtonTemplate : Button
----Located in [Blizzard_CovenantMissionTemplates.xml](https://github.com/Gethe/wow-ui-source/tree/live/Interface/AddOns/Blizzard_GarrisonTemplates/Blizzard_CovenantMissionTemplates.xml)
-
----@class CovenantMissionPageFollowerTemplate : Frame
----Located in [Blizzard_CovenantMissionTemplates.xml](https://github.com/Gethe/wow-ui-source/tree/live/Interface/AddOns/Blizzard_GarrisonTemplates/Blizzard_CovenantMissionTemplates.xml)
----@field DurabilityBackground Texture
----@field Durability Frame
----@field PortraitFrame Frame
----@field Name FontString
+---@class StartMissionButtonTemplate : UIPanelButtonTemplate
+---Located in [Blizzard_GarrisonMissionTemplates.xml](https://github.com/Gethe/wow-ui-source/tree/live/Interface/AddOns/Blizzard_GarrisonTemplates/Blizzard_GarrisonMissionTemplates.xml)
+---@field Flash Texture
 
 ---@class GarrisonMissionMechanicTemplate : GarrisonAbilityCounterTemplate
 ---Located in [Blizzard_GarrisonMissionTemplates.xml](https://github.com/Gethe/wow-ui-source/tree/live/Interface/AddOns/Blizzard_GarrisonTemplates/Blizzard_GarrisonMissionTemplates.xml)
 
----@class MissionPageTemplate : Button
----Located in [Blizzard_GarrisonMissionTemplates.xml](https://github.com/Gethe/wow-ui-source/tree/live/Interface/AddOns/Blizzard_GarrisonTemplates/Blizzard_GarrisonMissionTemplates.xml)
----@field EmptyString FontString
----@field CostFrame Frame
----@field ItemLevelHitboxFrame Frame
----@field CloseButton Button
----@field BuffsFrameAnchor Frame
----@field Stage Frame
----@field BuffsFrame Frame
-
 ---@class GarrisonMissionPageItemLevelHitboxFrame : Frame
 ---Located in [Blizzard_GarrisonMissionTemplates.xml](https://github.com/Gethe/wow-ui-source/tree/live/Interface/AddOns/Blizzard_GarrisonTemplates/Blizzard_GarrisonMissionTemplates.xml)
 
----@class GarrisonMissionPageCostWithTooltipTemplate : GarrisonMissionPageCostFrameTemplate
----Located in [Blizzard_GarrisonMissionTemplates.xml](https://github.com/Gethe/wow-ui-source/tree/live/Interface/AddOns/Blizzard_GarrisonTemplates/Blizzard_GarrisonMissionTemplates.xml)
-
----@class GarrisonFollowerXPGainTemplate : Frame
----Located in [Blizzard_GarrisonMissionTemplates.xml](https://github.com/Gethe/wow-ui-source/tree/live/Interface/AddOns/Blizzard_GarrisonTemplates/Blizzard_GarrisonMissionTemplates.xml)
----@field Text FontString
-
----@class GarrisonMissionChanceFrameTemplate : Frame
----Located in [Blizzard_GarrisonMissionTemplates.xml](https://github.com/Gethe/wow-ui-source/tree/live/Interface/AddOns/Blizzard_GarrisonTemplates/Blizzard_GarrisonMissionTemplates.xml)
----@field Banner Texture
----@field SuccessGlow Texture
----@field ResultText FontString
----@field ChanceGlow Texture
----@field ChanceBG Texture
----@field GreenGlow Texture
----@field ChanceText FontString
-
 ---@class GarrisonMissionPageRewardTemplate : Frame
 ---Located in [Blizzard_GarrisonMissionTemplates.xml](https://github.com/Gethe/wow-ui-source/tree/live/Interface/AddOns/Blizzard_GarrisonTemplates/Blizzard_GarrisonMissionTemplates.xml)
----@field Glow Texture
 ---@field Chance FontString
----@field TooltipHitBox Frame
 ---@field Reward2 Frame
----@field Chest Texture
----@field MissionXPTooltipHitBox Frame
----@field OvermaxItem Frame
 ---@field MissionXP FontString
----@field ChanceLabel FontString
+---@field MissionXPTooltipHitBox Frame
+---@field TooltipHitBox Frame
+---@field Chest Texture
 ---@field Reward1 Frame
+---@field ChanceLabel FontString
+---@field OvermaxItem Frame
+---@field Glow Texture
 
----@class GarrisonMissionPageCostFrameTemplate : Frame
+---@class GarrisonMissionRewardEffectsTemplate : Frame
 ---Located in [Blizzard_GarrisonMissionTemplates.xml](https://github.com/Gethe/wow-ui-source/tree/live/Interface/AddOns/Blizzard_GarrisonTemplates/Blizzard_GarrisonMissionTemplates.xml)
----@field CostLabel FontString
----@field CostIcon Texture
----@field Cost FontString
-
----@class GarrisonMissionFrameTabTemplate : Button
----Located in [Blizzard_GarrisonMissionTemplates.xml](https://github.com/Gethe/wow-ui-source/tree/live/Interface/AddOns/Blizzard_GarrisonTemplates/Blizzard_GarrisonMissionTemplates.xml)
----@field MiddleDisabled Texture
----@field Left Texture
----@field Middle Texture
----@field MiddleHighlight Texture
----@field RightDisabled Texture
----@field LeftHighlight Texture
----@field RightHighlight Texture
----@field Right Texture
----@field LeftDisabled Texture
-
----@class GarrisonMissionCompleteStageTemplate : Frame
----Located in [Blizzard_GarrisonMissionTemplates.xml](https://github.com/Gethe/wow-ui-source/tree/live/Interface/AddOns/Blizzard_GarrisonTemplates/Blizzard_GarrisonMissionTemplates.xml)
----@field ModelRight Frame
----@field Miss Frame
----@field ModelMiddle Frame
----@field ModelLeft Frame
-
----@class GarrisonFollowerLevelUpTemplate : Frame
----Located in [Blizzard_GarrisonMissionTemplates.xml](https://github.com/Gethe/wow-ui-source/tree/live/Interface/AddOns/Blizzard_GarrisonTemplates/Blizzard_GarrisonMissionTemplates.xml)
----@field LevelupLines1 Texture
----@field Banner Texture
----@field LevelupLines3 Texture
----@field LevelupLines2 Texture
----@field LevelupGlow Texture
----@field Text FontString
----@field BannerGlow Texture
-
----@class GarrisonMissionFrameTemplate : Frame
----Located in [Blizzard_GarrisonMissionTemplates.xml](https://github.com/Gethe/wow-ui-source/tree/live/Interface/AddOns/Blizzard_GarrisonTemplates/Blizzard_GarrisonMissionTemplates.xml)
+---@field Chance FontString
+---@field Quantity FontString
+---@field Icon Texture
+---@field IconOverlay Texture
+---@field GlowSmokeBurst Texture
+---@field IconBorder Texture
+---@field ItemBorderGlow Texture
+---@field Name FontString
+---@field ItemBurst Texture
+---@field BG Texture
 
 ---@class GarrisonMissionPageStageTemplate : GarrisonMissionStageTemplate
 ---Located in [Blizzard_GarrisonMissionTemplates.xml](https://github.com/Gethe/wow-ui-source/tree/live/Interface/AddOns/Blizzard_GarrisonTemplates/Blizzard_GarrisonMissionTemplates.xml)
 ---@field Level FontString
+---@field Header Texture
+---@field MissionDescription FontString
 ---@field Title FontString
+---@field ItemLevel FontString
 ---@field MissionInfo Frame
 ---@field Location FontString
 ---@field MissionEnvIcon Frame
----@field ItemLevel FontString
----@field Header Texture
----@field MissionDescription FontString
+
+---@class GarrisonMissionChanceFrameTemplate : Frame
+---Located in [Blizzard_GarrisonMissionTemplates.xml](https://github.com/Gethe/wow-ui-source/tree/live/Interface/AddOns/Blizzard_GarrisonTemplates/Blizzard_GarrisonMissionTemplates.xml)
+---@field SuccessGlow Texture
+---@field Banner Texture
+---@field ChanceText FontString
+---@field ChanceGlow Texture
+---@field ResultText FontString
+---@field GreenGlow Texture
+---@field ChanceBG Texture
+
+---@class GarrisonMissionCompleteTemplate : Frame
+---Located in [Blizzard_GarrisonMissionTemplates.xml](https://github.com/Gethe/wow-ui-source/tree/live/Interface/AddOns/Blizzard_GarrisonTemplates/Blizzard_GarrisonMissionTemplates.xml)
+---@field ButtonFrameRight Texture
+---@field LoadingFrame Frame
+---@field NextMissionButton Button
+---@field ButtonFrameLeft Texture
+
+---@class GarrisonMissionCompleteStageTemplate : Frame
+---Located in [Blizzard_GarrisonMissionTemplates.xml](https://github.com/Gethe/wow-ui-source/tree/live/Interface/AddOns/Blizzard_GarrisonTemplates/Blizzard_GarrisonMissionTemplates.xml)
+---@field Miss Frame
+---@field ModelMiddle Frame
+---@field ModelRight Frame
+---@field ModelLeft Frame
+
+---@class GarrisonMissionPageCostFrameTemplate : Frame
+---Located in [Blizzard_GarrisonMissionTemplates.xml](https://github.com/Gethe/wow-ui-source/tree/live/Interface/AddOns/Blizzard_GarrisonTemplates/Blizzard_GarrisonMissionTemplates.xml)
+---@field CostIcon Texture
+---@field Cost FontString
+---@field CostLabel FontString
 
 ---@class GarrisonFollowerTabModelCluster : ScrollFrame
 ---Located in [Blizzard_GarrisonMissionTemplates.xml](https://github.com/Gethe/wow-ui-source/tree/live/Interface/AddOns/Blizzard_GarrisonTemplates/Blizzard_GarrisonMissionTemplates.xml)
@@ -1127,214 +1121,182 @@
 
 ---@class GarrisonMissionCompleteDialogTemplate : Frame
 ---Located in [Blizzard_GarrisonMissionTemplates.xml](https://github.com/Gethe/wow-ui-source/tree/live/Interface/AddOns/Blizzard_GarrisonTemplates/Blizzard_GarrisonMissionTemplates.xml)
----@field Stage Frame
 ---@field LoadingFrame Frame
+---@field Stage Frame
 ---@field ViewButton Button
 ---@field Model CinematicModel
+
+---@class GarrisonMissionFrameTemplate : Frame
+---Located in [Blizzard_GarrisonMissionTemplates.xml](https://github.com/Gethe/wow-ui-source/tree/live/Interface/AddOns/Blizzard_GarrisonTemplates/Blizzard_GarrisonMissionTemplates.xml)
 
 ---@class GarrisonFollowerTabModelClusterModel : ModelTemplate
 ---Located in [Blizzard_GarrisonMissionTemplates.xml](https://github.com/Gethe/wow-ui-source/tree/live/Interface/AddOns/Blizzard_GarrisonTemplates/Blizzard_GarrisonMissionTemplates.xml)
 
----@class GarrisonMissionRewardEffectsTemplate : Frame
+---@class GarrisonMissionBonusRewardsTemplate : Frame
 ---Located in [Blizzard_GarrisonMissionTemplates.xml](https://github.com/Gethe/wow-ui-source/tree/live/Interface/AddOns/Blizzard_GarrisonTemplates/Blizzard_GarrisonMissionTemplates.xml)
----@field BG Texture
----@field ItemBurst Texture
----@field GlowSmokeBurst Texture
----@field Quantity FontString
----@field IconBorder Texture
----@field IconOverlay Texture
----@field ItemBorderGlow Texture
----@field Chance FontString
----@field Name FontString
----@field Icon Texture
-
----@class GarrisonMissionPageCloseButtonTemplate : UIPanelCloseButtonNoScripts
----Located in [Blizzard_GarrisonMissionTemplates.xml](https://github.com/Gethe/wow-ui-source/tree/live/Interface/AddOns/Blizzard_GarrisonTemplates/Blizzard_GarrisonMissionTemplates.xml)
-
----@class GarrisonMissionCompleteTemplate : Frame
----Located in [Blizzard_GarrisonMissionTemplates.xml](https://github.com/Gethe/wow-ui-source/tree/live/Interface/AddOns/Blizzard_GarrisonTemplates/Blizzard_GarrisonMissionTemplates.xml)
----@field NextMissionButton Button
----@field LoadingFrame Frame
----@field ButtonFrameLeft Texture
----@field ButtonFrameRight Texture
-
----@class GarrisonMissionEnemyLargeMechanicTemplate : GarrisonMissionLargeMechanicTemplate, GarrisonMissionCheckTemplate
----Located in [Blizzard_GarrisonMissionTemplates.xml](https://github.com/Gethe/wow-ui-source/tree/live/Interface/AddOns/Blizzard_GarrisonTemplates/Blizzard_GarrisonMissionTemplates.xml)
-
----@class GarrisonMissionCompleteModelCluster : Frame
----Located in [Blizzard_GarrisonMissionTemplates.xml](https://github.com/Gethe/wow-ui-source/tree/live/Interface/AddOns/Blizzard_GarrisonTemplates/Blizzard_GarrisonMissionTemplates.xml)
----@field Model4 CinematicModel
----@field Model3 CinematicModel
----@field Model2 CinematicModel
----@field Model1 CinematicModel
----@field Model5 CinematicModel
-
----@class StartMissionButtonTemplate : UIPanelButtonTemplate
----Located in [Blizzard_GarrisonMissionTemplates.xml](https://github.com/Gethe/wow-ui-source/tree/live/Interface/AddOns/Blizzard_GarrisonTemplates/Blizzard_GarrisonMissionTemplates.xml)
----@field Flash Texture
+---@field Banner Texture
+---@field ChestModel CinematicModel
+---@field Saturated Frame
 
 ---@class GarrisonMissionStageTemplate : Frame
 ---Located in [Blizzard_GarrisonMissionTemplates.xml](https://github.com/Gethe/wow-ui-source/tree/live/Interface/AddOns/Blizzard_GarrisonTemplates/Blizzard_GarrisonMissionTemplates.xml)
 ---@field LocFore Texture
----@field LocMid Texture
 ---@field LocBack Texture
+---@field LocMid Texture
 
----@class GarrisonMissionBonusRewardsTemplate : Frame
+---@class GarrisonMissionPartyBuffsFrameTemplate : Frame
+---Located in [Blizzard_GarrisonMissionTemplates.xml](https://github.com/Gethe/wow-ui-source/tree/live/Interface/AddOns/Blizzard_GarrisonTemplates/Blizzard_GarrisonMissionTemplates.xml)
+---@field BuffsTitle FontString
+---@field BuffsBG Texture
+
+---@class GarrisonFollowerXPGainTemplate : Frame
+---Located in [Blizzard_GarrisonMissionTemplates.xml](https://github.com/Gethe/wow-ui-source/tree/live/Interface/AddOns/Blizzard_GarrisonTemplates/Blizzard_GarrisonMissionTemplates.xml)
+---@field Text FontString
+
+---@class GarrisonMissionPageOvermaxRewardTemplate : Frame
+---Located in [Blizzard_GarrisonMissionTemplates.xml](https://github.com/Gethe/wow-ui-source/tree/live/Interface/AddOns/Blizzard_GarrisonTemplates/Blizzard_GarrisonMissionTemplates.xml)
+---@field IconOverlay Texture
+---@field Icon Texture
+---@field IconBorder Texture
+---@field Name FontString
+---@field Quantity FontString
+---@field BG Texture
+
+---@class GarrisonFollowerLevelUpTemplate : Frame
 ---Located in [Blizzard_GarrisonMissionTemplates.xml](https://github.com/Gethe/wow-ui-source/tree/live/Interface/AddOns/Blizzard_GarrisonTemplates/Blizzard_GarrisonMissionTemplates.xml)
 ---@field Banner Texture
----@field Saturated Frame
----@field ChestModel CinematicModel
-
----@class GarrisonMissionCompleteModelTemplate : GarrisonCinematicModelBaseTemplate
----Located in [Blizzard_GarrisonMissionTemplates.xml](https://github.com/Gethe/wow-ui-source/tree/live/Interface/AddOns/Blizzard_GarrisonTemplates/Blizzard_GarrisonMissionTemplates.xml)
+---@field LevelupLines2 Texture
+---@field LevelupGlow Texture
+---@field LevelupLines1 Texture
+---@field Text FontString
+---@field LevelupLines3 Texture
+---@field BannerGlow Texture
 
 ---@class GarrisonAbilityLargeCounterTemplate : Frame
 ---Located in [Blizzard_GarrisonMissionTemplates.xml](https://github.com/Gethe/wow-ui-source/tree/live/Interface/AddOns/Blizzard_GarrisonTemplates/Blizzard_GarrisonMissionTemplates.xml)
 ---@field Border Texture
 ---@field Icon Texture
 
----@class GarrisonMissionPageOvermaxRewardTemplate : Frame
+---@class GarrisonMissionPageCostWithTooltipTemplate : GarrisonMissionPageCostFrameTemplate
 ---Located in [Blizzard_GarrisonMissionTemplates.xml](https://github.com/Gethe/wow-ui-source/tree/live/Interface/AddOns/Blizzard_GarrisonTemplates/Blizzard_GarrisonMissionTemplates.xml)
----@field BG Texture
----@field Quantity FontString
----@field IconBorder Texture
----@field Name FontString
----@field IconOverlay Texture
----@field Icon Texture
-
----@class GarrisonMissionCheckTemplate : Frame
----Located in [Blizzard_GarrisonMissionTemplates.xml](https://github.com/Gethe/wow-ui-source/tree/live/Interface/AddOns/Blizzard_GarrisonTemplates/Blizzard_GarrisonMissionTemplates.xml)
----@field CheckGlow Texture
----@field CheckBurst Texture
----@field Check Texture
 
 ---@class GarrisonMissionEnemyMechanicTemplate : GarrisonMissionMechanicTemplate, GarrisonMissionCheckTemplate
 ---Located in [Blizzard_GarrisonMissionTemplates.xml](https://github.com/Gethe/wow-ui-source/tree/live/Interface/AddOns/Blizzard_GarrisonTemplates/Blizzard_GarrisonMissionTemplates.xml)
 
 ---@class GarrisonFollowerXPBarTemplate : StatusBar
 ---Located in [Blizzard_GarrisonMissionTemplates.xml](https://github.com/Gethe/wow-ui-source/tree/live/Interface/AddOns/Blizzard_GarrisonTemplates/Blizzard_GarrisonMissionTemplates.xml)
----@field XPRight Texture
 ---@field XPLeft Texture
+---@field XPRight Texture
+
+---@class GarrisonMissionPageCloseButtonTemplate : UIPanelCloseButtonNoScripts
+---Located in [Blizzard_GarrisonMissionTemplates.xml](https://github.com/Gethe/wow-ui-source/tree/live/Interface/AddOns/Blizzard_GarrisonTemplates/Blizzard_GarrisonMissionTemplates.xml)
+
+---@class GarrisonMissionEnemyLargeMechanicTemplate : GarrisonMissionLargeMechanicTemplate, GarrisonMissionCheckTemplate
+---Located in [Blizzard_GarrisonMissionTemplates.xml](https://github.com/Gethe/wow-ui-source/tree/live/Interface/AddOns/Blizzard_GarrisonTemplates/Blizzard_GarrisonMissionTemplates.xml)
+
+---@class GarrisonMissionCheckTemplate : Frame
+---Located in [Blizzard_GarrisonMissionTemplates.xml](https://github.com/Gethe/wow-ui-source/tree/live/Interface/AddOns/Blizzard_GarrisonTemplates/Blizzard_GarrisonMissionTemplates.xml)
+---@field CheckBurst Texture
+---@field CheckGlow Texture
+---@field Check Texture
+
+---@class GarrisonMissionCompleteModelCluster : Frame
+---Located in [Blizzard_GarrisonMissionTemplates.xml](https://github.com/Gethe/wow-ui-source/tree/live/Interface/AddOns/Blizzard_GarrisonTemplates/Blizzard_GarrisonMissionTemplates.xml)
+---@field Model2 CinematicModel
+---@field Model5 CinematicModel
+---@field Model3 CinematicModel
+---@field Model4 CinematicModel
+---@field Model1 CinematicModel
 
 ---@class GarrisonMissionLargeMechanicTemplate : GarrisonAbilityLargeCounterTemplate
 ---Located in [Blizzard_GarrisonMissionTemplates.xml](https://github.com/Gethe/wow-ui-source/tree/live/Interface/AddOns/Blizzard_GarrisonTemplates/Blizzard_GarrisonMissionTemplates.xml)
 
----@class GarrisonMissionPartyBuffsFrameTemplate : Frame
+---@class GarrisonMissionCompleteModelTemplate : GarrisonCinematicModelBaseTemplate
 ---Located in [Blizzard_GarrisonMissionTemplates.xml](https://github.com/Gethe/wow-ui-source/tree/live/Interface/AddOns/Blizzard_GarrisonTemplates/Blizzard_GarrisonMissionTemplates.xml)
----@field BuffsBG Texture
----@field BuffsTitle FontString
 
----@class GarrisonMissionAbilityCounterTemplate : GarrisonAbilityCounterTemplate
----Located in [Blizzard_GarrisonSharedTemplates.xml](https://github.com/Gethe/wow-ui-source/tree/live/Interface/AddOns/Blizzard_GarrisonTemplates/Blizzard_GarrisonSharedTemplates.xml)
----@field AbilityFeedbackGlow Texture
+---@class MissionPageTemplate : Button
+---Located in [Blizzard_GarrisonMissionTemplates.xml](https://github.com/Gethe/wow-ui-source/tree/live/Interface/AddOns/Blizzard_GarrisonTemplates/Blizzard_GarrisonMissionTemplates.xml)
+---@field EmptyString FontString
+---@field BuffsFrame Frame
+---@field Stage Frame
+---@field ItemLevelHitboxFrame Frame
+---@field BuffsFrameAnchor Frame
+---@field CostFrame Frame
+---@field CloseButton Button
 
----@class GarrisonMissionFollowerOrCategoryListButtonTemplate : Frame
+---@class GarrisonMissionBaseFrameTemplate : Frame
 ---Located in [Blizzard_GarrisonSharedTemplates.xml](https://github.com/Gethe/wow-ui-source/tree/live/Interface/AddOns/Blizzard_GarrisonTemplates/Blizzard_GarrisonSharedTemplates.xml)
----@field Follower Button
----@field Category FontString
+---@field BaseFrameBottomRight Texture
+---@field BaseFrameBottom Texture
+---@field BaseFrameLeft Texture
+---@field BaseFrameRight Texture
+---@field BaseFrameTopLeft Texture
+---@field BaseFrameTopRight Texture
+---@field BaseFrameBottomLeft Texture
+---@field BaseFrameTop Texture
+---@field BaseFrameBackground Texture
 
----@class GarrisonFollowerListButtonAbilityTemplate : Frame
+---@class GarrisonMissionFollowerButtonTemplate : GarrisonFollowerButtonTemplate
 ---Located in [Blizzard_GarrisonSharedTemplates.xml](https://github.com/Gethe/wow-ui-source/tree/live/Interface/AddOns/Blizzard_GarrisonTemplates/Blizzard_GarrisonSharedTemplates.xml)
----@field Name FontString
----@field Icon Texture
-
----@class GarrisonFollowerButtonTemplate : Button
----Located in [Blizzard_GarrisonSharedTemplates.xml](https://github.com/Gethe/wow-ui-source/tree/live/Interface/AddOns/Blizzard_GarrisonTemplates/Blizzard_GarrisonSharedTemplates.xml)
----@field BG Texture
----@field Selection Texture
----@field Status FontString
----@field Class Texture
----@field XPBar Texture
----@field PortraitFrame Frame
----@field ILevel FontString
----@field Name FontString
----@field Selected Texture
-
----@class GarrisonFollowerModelUpgradeTemplate : Frame
----Located in [Blizzard_GarrisonSharedTemplates.xml](https://github.com/Gethe/wow-ui-source/tree/live/Interface/AddOns/Blizzard_GarrisonTemplates/Blizzard_GarrisonSharedTemplates.xml)
----@field Icon Texture
----@field Text FontString
----@field TextInvalid FontString
-
----@class GarrisonAbilityCounterWithCheckTemplate : GarrisonAbilityCounterTemplate
----Located in [Blizzard_GarrisonSharedTemplates.xml](https://github.com/Gethe/wow-ui-source/tree/live/Interface/AddOns/Blizzard_GarrisonTemplates/Blizzard_GarrisonSharedTemplates.xml)
----@field TimeLeft FontString
----@field Check Texture
----@field Working Texture
----@field Away Texture
-
----@class GarrisonMissionFollowerDurabilityFrameTemplate : Frame
----Located in [Blizzard_GarrisonSharedTemplates.xml](https://github.com/Gethe/wow-ui-source/tree/live/Interface/AddOns/Blizzard_GarrisonTemplates/Blizzard_GarrisonSharedTemplates.xml)
-
----@class MaterialFrameTemplate : Frame
----Located in [Blizzard_GarrisonSharedTemplates.xml](https://github.com/Gethe/wow-ui-source/tree/live/Interface/AddOns/Blizzard_GarrisonTemplates/Blizzard_GarrisonSharedTemplates.xml)
----@field BG Texture
----@field Icon Texture
----@field Materials FontString
-
----@class GarrisonFollowerEquipmentTemplate : GarrisonEquipmentTemplate
----Located in [Blizzard_GarrisonSharedTemplates.xml](https://github.com/Gethe/wow-ui-source/tree/live/Interface/AddOns/Blizzard_GarrisonTemplates/Blizzard_GarrisonSharedTemplates.xml)
----@field Border Texture
----@field Lock Texture
----@field BG Texture
-
----@class GarrisonListTemplate : GarrisonMissionBaseFrameTemplate
----Located in [Blizzard_GarrisonSharedTemplates.xml](https://github.com/Gethe/wow-ui-source/tree/live/Interface/AddOns/Blizzard_GarrisonTemplates/Blizzard_GarrisonSharedTemplates.xml)
----@field listScroll ScrollFrame
-
----@class GarrisonThreatCounterTemplate : GarrisonAbilityCounterTemplate
----Located in [Blizzard_GarrisonSharedTemplates.xml](https://github.com/Gethe/wow-ui-source/tree/live/Interface/AddOns/Blizzard_GarrisonTemplates/Blizzard_GarrisonSharedTemplates.xml)
----@field Count FontString
-
----@class GarrisonThreatCountersFrameTemplate : Frame
----Located in [Blizzard_GarrisonSharedTemplates.xml](https://github.com/Gethe/wow-ui-source/tree/live/Interface/AddOns/Blizzard_GarrisonTemplates/Blizzard_GarrisonSharedTemplates.xml)
+---@field AbilitiesBG Texture
+---@field DownArrow Texture
+---@field UpArrow Texture
+---@field BusyFrame Frame
+---@field DurabilityFrame Frame
 
 ---@class GarrisonAbilityCounterTemplate : Frame
 ---Located in [Blizzard_GarrisonSharedTemplates.xml](https://github.com/Gethe/wow-ui-source/tree/live/Interface/AddOns/Blizzard_GarrisonTemplates/Blizzard_GarrisonSharedTemplates.xml)
 ---@field Border Texture
 ---@field Icon Texture
 
+---@class GarrisonThreatCountersFrameTemplate : Frame
+---Located in [Blizzard_GarrisonSharedTemplates.xml](https://github.com/Gethe/wow-ui-source/tree/live/Interface/AddOns/Blizzard_GarrisonTemplates/Blizzard_GarrisonSharedTemplates.xml)
+
 ---@class GarrisonFollowerCombatAllySpellTemplate : Button
 ---Located in [Blizzard_GarrisonSharedTemplates.xml](https://github.com/Gethe/wow-ui-source/tree/live/Interface/AddOns/Blizzard_GarrisonTemplates/Blizzard_GarrisonSharedTemplates.xml)
 ---@field iconTexture Texture
 
----@class GarrisonMissionBaseFrameTemplate : Frame
----Located in [Blizzard_GarrisonSharedTemplates.xml](https://github.com/Gethe/wow-ui-source/tree/live/Interface/AddOns/Blizzard_GarrisonTemplates/Blizzard_GarrisonSharedTemplates.xml)
----@field BaseFrameTop Texture
----@field BaseFrameBottomRight Texture
----@field BaseFrameTopRight Texture
----@field BaseFrameBottomLeft Texture
----@field BaseFrameLeft Texture
----@field BaseFrameRight Texture
----@field BaseFrameBackground Texture
----@field BaseFrameTopLeft Texture
----@field BaseFrameBottom Texture
-
----@class GarrisonMissionFollowerButtonTemplate : GarrisonFollowerButtonTemplate
----Located in [Blizzard_GarrisonSharedTemplates.xml](https://github.com/Gethe/wow-ui-source/tree/live/Interface/AddOns/Blizzard_GarrisonTemplates/Blizzard_GarrisonSharedTemplates.xml)
----@field DurabilityFrame Frame
----@field BusyFrame Frame
----@field UpArrow Texture
----@field DownArrow Texture
----@field AbilitiesBG Texture
-
----@class GarrisonListTemplateHeader : GarrisonListTemplate
----Located in [Blizzard_GarrisonSharedTemplates.xml](https://github.com/Gethe/wow-ui-source/tree/live/Interface/AddOns/Blizzard_GarrisonTemplates/Blizzard_GarrisonSharedTemplates.xml)
----@field HeaderRight Texture
----@field HeaderMid Texture
----@field HeaderLeft Texture
-
----@class GarrisonMissionFollowerButtonDurabilityTemplate : Texture
----Located in [Blizzard_GarrisonSharedTemplates.xml](https://github.com/Gethe/wow-ui-source/tree/live/Interface/AddOns/Blizzard_GarrisonTemplates/Blizzard_GarrisonSharedTemplates.xml)
-
 ---@class GarrisonUITemplate : BaseBasicFrameTemplate
 ---Located in [Blizzard_GarrisonSharedTemplates.xml](https://github.com/Gethe/wow-ui-source/tree/live/Interface/AddOns/Blizzard_GarrisonTemplates/Blizzard_GarrisonSharedTemplates.xml)
 ---@field BackgroundTile Texture
----@field Left Texture
----@field Top Texture
----@field Right Texture
 ---@field GarrCorners Frame
 ---@field Bottom Texture
+---@field Left Texture
+---@field Right Texture
+---@field Top Texture
+
+---@class GarrisonMissionAbilityCounterTemplate : GarrisonAbilityCounterTemplate
+---Located in [Blizzard_GarrisonSharedTemplates.xml](https://github.com/Gethe/wow-ui-source/tree/live/Interface/AddOns/Blizzard_GarrisonTemplates/Blizzard_GarrisonSharedTemplates.xml)
+---@field AbilityFeedbackGlow Texture
+
+---@class GarrisonMissionFollowerDurabilityFrameTemplate : Frame
+---Located in [Blizzard_GarrisonSharedTemplates.xml](https://github.com/Gethe/wow-ui-source/tree/live/Interface/AddOns/Blizzard_GarrisonTemplates/Blizzard_GarrisonSharedTemplates.xml)
+
+---@class GarrisonThreatCounterTemplate : GarrisonAbilityCounterTemplate
+---Located in [Blizzard_GarrisonSharedTemplates.xml](https://github.com/Gethe/wow-ui-source/tree/live/Interface/AddOns/Blizzard_GarrisonTemplates/Blizzard_GarrisonSharedTemplates.xml)
+---@field Count FontString
+
+---@class GarrisonAbilityCounterWithCheckTemplate : GarrisonAbilityCounterTemplate
+---Located in [Blizzard_GarrisonSharedTemplates.xml](https://github.com/Gethe/wow-ui-source/tree/live/Interface/AddOns/Blizzard_GarrisonTemplates/Blizzard_GarrisonSharedTemplates.xml)
+---@field Working Texture
+---@field Away Texture
+---@field TimeLeft FontString
+---@field Check Texture
+
+---@class GarrisonListTemplate : GarrisonMissionBaseFrameTemplate
+---Located in [Blizzard_GarrisonSharedTemplates.xml](https://github.com/Gethe/wow-ui-source/tree/live/Interface/AddOns/Blizzard_GarrisonTemplates/Blizzard_GarrisonSharedTemplates.xml)
+---@field listScroll ScrollFrame
+
+---@class GarrisonFollowerEquipmentTemplate : GarrisonEquipmentTemplate
+---Located in [Blizzard_GarrisonSharedTemplates.xml](https://github.com/Gethe/wow-ui-source/tree/live/Interface/AddOns/Blizzard_GarrisonTemplates/Blizzard_GarrisonSharedTemplates.xml)
+---@field BG Texture
+---@field Lock Texture
+---@field Border Texture
+
+---@class GarrisonMissionFollowerOrCategoryListButtonTemplate : Frame
+---Located in [Blizzard_GarrisonSharedTemplates.xml](https://github.com/Gethe/wow-ui-source/tree/live/Interface/AddOns/Blizzard_GarrisonTemplates/Blizzard_GarrisonSharedTemplates.xml)
+---@field Follower Button
+---@field Category FontString
 
 ---@class GarrisonEquipmentTemplate : Button
 ---Located in [Blizzard_GarrisonSharedTemplates.xml](https://github.com/Gethe/wow-ui-source/tree/live/Interface/AddOns/Blizzard_GarrisonTemplates/Blizzard_GarrisonSharedTemplates.xml)
@@ -1343,38 +1305,76 @@
 ---@field ValidSpellHighlight Texture
 ---@field Icon Texture
 
+---@class MaterialFrameTemplate : Frame
+---Located in [Blizzard_GarrisonSharedTemplates.xml](https://github.com/Gethe/wow-ui-source/tree/live/Interface/AddOns/Blizzard_GarrisonTemplates/Blizzard_GarrisonSharedTemplates.xml)
+---@field BG Texture
+---@field Materials FontString
+---@field Icon Texture
+
+---@class GarrisonFollowerListButtonAbilityTemplate : Frame
+---Located in [Blizzard_GarrisonSharedTemplates.xml](https://github.com/Gethe/wow-ui-source/tree/live/Interface/AddOns/Blizzard_GarrisonTemplates/Blizzard_GarrisonSharedTemplates.xml)
+---@field Name FontString
+---@field Icon Texture
+
+---@class GarrisonMissionFollowerButtonDurabilityTemplate : Texture
+---Located in [Blizzard_GarrisonSharedTemplates.xml](https://github.com/Gethe/wow-ui-source/tree/live/Interface/AddOns/Blizzard_GarrisonTemplates/Blizzard_GarrisonSharedTemplates.xml)
+
+---@class GarrisonListTemplateHeader : GarrisonListTemplate
+---Located in [Blizzard_GarrisonSharedTemplates.xml](https://github.com/Gethe/wow-ui-source/tree/live/Interface/AddOns/Blizzard_GarrisonTemplates/Blizzard_GarrisonSharedTemplates.xml)
+---@field HeaderMid Texture
+---@field HeaderRight Texture
+---@field HeaderLeft Texture
+
+---@class GarrisonFollowerModelUpgradeTemplate : Frame
+---Located in [Blizzard_GarrisonSharedTemplates.xml](https://github.com/Gethe/wow-ui-source/tree/live/Interface/AddOns/Blizzard_GarrisonTemplates/Blizzard_GarrisonSharedTemplates.xml)
+---@field TextInvalid FontString
+---@field Text FontString
+---@field Icon Texture
+
+---@class GarrisonFollowerButtonTemplate : Button
+---Located in [Blizzard_GarrisonSharedTemplates.xml](https://github.com/Gethe/wow-ui-source/tree/live/Interface/AddOns/Blizzard_GarrisonTemplates/Blizzard_GarrisonSharedTemplates.xml)
+---@field XPBar Texture
+---@field Class Texture
+---@field Selected Texture
+---@field PortraitFrame Frame
+---@field Status FontString
+---@field ILevel FontString
+---@field Selection Texture
+---@field Name FontString
+---@field BG Texture
+
+---@class AdventuresBoardEmptySocketTemplate : Frame
+---Located in [Blizzard_AdventuresBoard.xml](https://github.com/Gethe/wow-ui-source/tree/live/Interface/AddOns/Blizzard_GarrisonUI/Blizzard_AdventuresBoard.xml)
+---@field AuraContainer Frame
+---@field FriendlyTargetingIndicatorFrame Frame
+---@field TutorialRing Texture
+---@field EnemyTargetingIndicatorFrame Frame
+---@field SocketTexture Texture
+
+---@class AdventuresBoardCombatTemplate : AdventuresBoardTemplate
+---Located in [Blizzard_AdventuresBoard.xml](https://github.com/Gethe/wow-ui-source/tree/live/Interface/AddOns/Blizzard_GarrisonUI/Blizzard_AdventuresBoard.xml)
+---@field TextContainer Frame
+
 ---@class AdventuresBoardAuraContainerTemplate : HorizontalLayoutFrame
 ---Located in [Blizzard_AdventuresBoard.xml](https://github.com/Gethe/wow-ui-source/tree/live/Interface/AddOns/Blizzard_GarrisonUI/Blizzard_AdventuresBoard.xml)
 ---@field HealingIcon Frame
 ---@field BuffIcon Frame
 ---@field DebuffIcon Frame
 
----@class AdventuresBoardTemplate : Frame
+---@class FollowerEmptySocketTemplate : AdventuresBoardEmptySocketTemplate
 ---Located in [Blizzard_AdventuresBoard.xml](https://github.com/Gethe/wow-ui-source/tree/live/Interface/AddOns/Blizzard_GarrisonUI/Blizzard_AdventuresBoard.xml)
----@field FollowerContainer Frame
----@field EnemyContainer Frame
+
+---@class EnemyEmptySocketTemplate : AdventuresBoardEmptySocketTemplate
+---Located in [Blizzard_AdventuresBoard.xml](https://github.com/Gethe/wow-ui-source/tree/live/Interface/AddOns/Blizzard_GarrisonUI/Blizzard_AdventuresBoard.xml)
 
 ---@class AdventuresBoardAuraIcon : Frame
 ---Located in [Blizzard_AdventuresBoard.xml](https://github.com/Gethe/wow-ui-source/tree/live/Interface/AddOns/Blizzard_GarrisonUI/Blizzard_AdventuresBoard.xml)
 ---@field IconTexture Texture
 
----@class AdventuresBoardCombatTemplate : AdventuresBoardTemplate
+---@class AdventuresBoardTemplate : Frame
 ---Located in [Blizzard_AdventuresBoard.xml](https://github.com/Gethe/wow-ui-source/tree/live/Interface/AddOns/Blizzard_GarrisonUI/Blizzard_AdventuresBoard.xml)
----@field TextContainer Frame
-
----@class EnemyEmptySocketTemplate : AdventuresBoardEmptySocketTemplate
----Located in [Blizzard_AdventuresBoard.xml](https://github.com/Gethe/wow-ui-source/tree/live/Interface/AddOns/Blizzard_GarrisonUI/Blizzard_AdventuresBoard.xml)
-
----@class FollowerEmptySocketTemplate : AdventuresBoardEmptySocketTemplate
----Located in [Blizzard_AdventuresBoard.xml](https://github.com/Gethe/wow-ui-source/tree/live/Interface/AddOns/Blizzard_GarrisonUI/Blizzard_AdventuresBoard.xml)
-
----@class AdventuresBoardEmptySocketTemplate : Frame
----Located in [Blizzard_AdventuresBoard.xml](https://github.com/Gethe/wow-ui-source/tree/live/Interface/AddOns/Blizzard_GarrisonUI/Blizzard_AdventuresBoard.xml)
----@field SocketTexture Texture
----@field TutorialRing Texture
----@field EnemyTargetingIndicatorFrame Frame
----@field AuraContainer Frame
----@field FriendlyTargetingIndicatorFrame Frame
+---@field FollowerContainer Frame
+---@field EnemyContainer Frame
 
 ---@class CombatLogTemplate : Frame
 ---Located in [Blizzard_AdventuresCombatLog.xml](https://github.com/Gethe/wow-ui-source/tree/live/Interface/AddOns/Blizzard_GarrisonUI/Blizzard_AdventuresCombatLog.xml)
@@ -1384,35 +1384,44 @@
 
 ---@class AdventuresCompleteScreenTemplate : Frame
 ---Located in [Blizzard_AdventuresCompleteScreen.xml](https://github.com/Gethe/wow-ui-source/tree/live/Interface/AddOns/Blizzard_GarrisonUI/Blizzard_AdventuresCompleteScreen.xml)
----@field Median Texture
----@field CompleteFrame Frame
----@field ModelScene ModelScene
----@field AdventuresCombatLog Frame
----@field BoardDropShadow Texture
----@field NineSlice Frame
 ---@field FollowerBackground Texture
----@field EnemyBackground Texture
----@field MissionInfo Frame
----@field Board Frame
+---@field ModelScene ModelScene
 ---@field RewardsScreen Frame
+---@field AdventuresCombatLog Frame
+---@field EnemyBackground Texture
+---@field BoardDropShadow Texture
+---@field Median Texture
+---@field MissionInfo Frame
+---@field CompleteFrame Frame
+---@field Board Frame
+---@field NineSlice Frame
 
 ---@class AdventuresMissionPageFollowerPuckTemplate : AdventuresFollowerPuckTemplate
 ---Located in [Blizzard_AdventuresPuck.xml](https://github.com/Gethe/wow-ui-source/tree/live/Interface/AddOns/Blizzard_GarrisonUI/Blizzard_AdventuresPuck.xml)
----@field Highlight Texture
 ---@field EmptyPortrait Texture
+---@field Highlight Texture
 
 ---@class AdventuresPuckAbilityTemplate : Button
 ---Located in [Blizzard_AdventuresPuck.xml](https://github.com/Gethe/wow-ui-source/tree/live/Interface/AddOns/Blizzard_GarrisonUI/Blizzard_AdventuresPuck.xml)
----@field CooldownText FontString
----@field CircleMask MaskTexture
 ---@field DisabledTexture Texture
----@field Border Texture
+---@field CooldownText FontString
 ---@field Icon Texture
+---@field Border Texture
+---@field CircleMask MaskTexture
 
----@class AdventuresPuckAnimatedTemplate : AdventuresPuckTemplate
+---@class AdventuresPuckTemplate : Frame
 ---Located in [Blizzard_AdventuresPuck.xml](https://github.com/Gethe/wow-ui-source/tree/live/Interface/AddOns/Blizzard_GarrisonUI/Blizzard_AdventuresPuck.xml)
----@field EnemyTargetingIndicatorFrame Frame
----@field DeathAnimationFrame Frame
+---@field PuckShadow Texture
+---@field SupportColorationBurst Texture
+---@field AbilityOne Button
+---@field SupportColorationAnimator Frame
+---@field AbilityTwo Button
+---@field HealthBar Frame
+---@field PuckBorder Texture
+---@field Portrait Texture
+---@field BorderOverlay Texture
+---@field CircleMask MaskTexture
+---@field SupportColorationRing Texture
 
 ---@class AdventuresFollowerPuckTemplate : AdventuresPuckAnimatedTemplate
 ---Located in [Blizzard_AdventuresPuck.xml](https://github.com/Gethe/wow-ui-source/tree/live/Interface/AddOns/Blizzard_GarrisonUI/Blizzard_AdventuresPuck.xml)
@@ -1421,30 +1430,21 @@
 ---Located in [Blizzard_AdventuresPuck.xml](https://github.com/Gethe/wow-ui-source/tree/live/Interface/AddOns/Blizzard_GarrisonUI/Blizzard_AdventuresPuck.xml)
 ---@field EliteOverlay Texture
 
----@class AdventuresPuckTemplate : Frame
+---@class AdventuresPuckAnimatedTemplate : AdventuresPuckTemplate
 ---Located in [Blizzard_AdventuresPuck.xml](https://github.com/Gethe/wow-ui-source/tree/live/Interface/AddOns/Blizzard_GarrisonUI/Blizzard_AdventuresPuck.xml)
----@field SupportColorationBurst Texture
----@field CircleMask MaskTexture
----@field PuckBorder Texture
----@field AbilityTwo Button
----@field SupportColorationAnimator Frame
----@field HealthBar Frame
----@field SupportColorationRing Texture
----@field AbilityOne Button
----@field BorderOverlay Texture
----@field PuckShadow Texture
----@field Portrait Texture
+---@field EnemyTargetingIndicatorFrame Frame
+---@field DeathAnimationFrame Frame
 
 ---@class AdventuresRewardsScreenTemplate : Frame
 ---Located in [Blizzard_AdventuresRewardsScreen.xml](https://github.com/Gethe/wow-ui-source/tree/live/Interface/AddOns/Blizzard_GarrisonUI/Blizzard_AdventuresRewardsScreen.xml)
+---@field RewardsBackground Texture
 ---@field FinalRewardsPanel Frame
 ---@field CombatCompleteSuccessFrame Frame
----@field RewardsBackground Texture
 
 ---@class AdventuresRewardsFollowerTemplate : AdventuresLevelPortraitTemplate
 ---Located in [Blizzard_AdventuresRewardsScreen.xml](https://github.com/Gethe/wow-ui-source/tree/live/Interface/AddOns/Blizzard_GarrisonUI/Blizzard_AdventuresRewardsScreen.xml)
----@field FollowerExperienceDisplay Cooldown
 ---@field LevelUpAnimFrame Frame
+---@field FollowerExperienceDisplay Cooldown
 ---@field XPFloatingText Frame
 
 ---@class AdventuresRewardsPaddedFollower : Frame
@@ -1455,190 +1455,235 @@
 ---Located in [Blizzard_CovenantMissionUI.xml](https://github.com/Gethe/wow-ui-source/tree/live/Interface/AddOns/Blizzard_GarrisonUI/Blizzard_CovenantMissionUI.xml)
 ---@field MechanicEffect Frame
 
----@class CovenantMissionPageTemplate : Button
----Located in [Blizzard_CovenantMissionUI.xml](https://github.com/Gethe/wow-ui-source/tree/live/Interface/AddOns/Blizzard_GarrisonUI/Blizzard_CovenantMissionUI.xml)
----@field FollowerBackground Texture
----@field Median Texture
----@field NineSlice Frame
----@field CloseButton Button
----@field EncounterIcon Frame
----@field BoardDropShadow Texture
----@field StartMissionButton Button
----@field Board Frame
----@field CostFrame Frame
----@field ItemLevelHitboxFrame Frame
----@field StartMissionFrame Frame
----@field IconBG Texture
----@field EnemyBackground Texture
----@field EmptyString FontString
----@field Stage Frame
-
 ---@class CovenantMissionPageStageTemplate : Frame
 ---Located in [Blizzard_CovenantMissionUI.xml](https://github.com/Gethe/wow-ui-source/tree/live/Interface/AddOns/Blizzard_GarrisonUI/Blizzard_CovenantMissionUI.xml)
----@field Level FontString
----@field EnemyPowerValue FontString
----@field ItemLevel FontString
----@field Header Texture
----@field MissionDescription FontString
----@field EnemyHealthIcon Texture
----@field EnemyPowerIcon Texture
----@field Title FontString
----@field MissionInfo Frame
----@field EnvironmentEffectFrame Frame
----@field MissionEnvIcon Frame
----@field MouseOverTitleFrame Frame
----@field Location FontString
 ---@field EnemyHealthValue FontString
+---@field Location FontString
+---@field Header Texture
+---@field MissionInfo Frame
+---@field EnemyPowerValue FontString
+---@field MouseOverTitleFrame Frame
+---@field MissionDescription FontString
+---@field EnemyPowerIcon Texture
+---@field EnvironmentEffectFrame Frame
+---@field ItemLevel FontString
+---@field Level FontString
+---@field Title FontString
+---@field MissionEnvIcon Frame
+---@field EnemyHealthIcon Texture
 
----@class GarrisonInfoBoxFiligreeTemplate : GarrisonInfoBoxLittleBottomTemplate
----Located in [Blizzard_GarrisonBuildingUI.xml](https://github.com/Gethe/wow-ui-source/tree/live/Interface/AddOns/Blizzard_GarrisonUI/Blizzard_GarrisonBuildingUI.xml)
+---@class CovenantMissionPageTemplate : Button
+---Located in [Blizzard_CovenantMissionUI.xml](https://github.com/Gethe/wow-ui-source/tree/live/Interface/AddOns/Blizzard_GarrisonUI/Blizzard_CovenantMissionUI.xml)
+---@field EnemyBackground Texture
+---@field Stage Frame
+---@field Median Texture
+---@field CostFrame Frame
+---@field Board Frame
+---@field EncounterIcon Frame
+---@field FollowerBackground Texture
+---@field StartMissionFrame Frame
+---@field ItemLevelHitboxFrame Frame
+---@field StartMissionButton Button
+---@field BoardDropShadow Texture
+---@field IconBG Texture
+---@field CloseButton Button
+---@field EmptyString FontString
+---@field NineSlice Frame
 
----@class GarrisonPlotTemplate : Button
+---@class GarrisonBuildingTabTemplate : Button
 ---Located in [Blizzard_GarrisonBuildingUI.xml](https://github.com/Gethe/wow-ui-source/tree/live/Interface/AddOns/Blizzard_GarrisonUI/Blizzard_GarrisonBuildingUI.xml)
----@field UpgradeArrow Texture
----@field BuildLines2 Texture
----@field BuildGlow Texture
----@field BuildingHighlight Texture
----@field Plot Texture
----@field PlotHover Texture
----@field Lock Texture
----@field Timer Frame
----@field BuildLines Texture
----@field AlphaPulse Texture
----@field IconRing Texture
----@field Icon Texture
----@field BuildingPulse Texture
----@field Building Texture
----@field PlotHighlight Texture
+---@field Text FontString
 
 ---@class GarrisonBuildingSpecTemplate : Button
 ---Located in [Blizzard_GarrisonBuildingUI.xml](https://github.com/Gethe/wow-ui-source/tree/live/Interface/AddOns/Blizzard_GarrisonUI/Blizzard_GarrisonBuildingUI.xml)
 ---@field Selected Texture
 ---@field Icon Texture
 
----@class GarrisonBuildingTabTemplate : Button
+---@class GarrisonPlotTemplate : Button
 ---Located in [Blizzard_GarrisonBuildingUI.xml](https://github.com/Gethe/wow-ui-source/tree/live/Interface/AddOns/Blizzard_GarrisonUI/Blizzard_GarrisonBuildingUI.xml)
----@field Text FontString
-
----@class GarrisonBuildingListButtonTemplate : Button
----Located in [Blizzard_GarrisonBuildingUI.xml](https://github.com/Gethe/wow-ui-source/tree/live/Interface/AddOns/Blizzard_GarrisonUI/Blizzard_GarrisonBuildingUI.xml)
----@field BG Texture
----@field Plans Texture
----@field Name FontString
----@field SelectedBG Texture
+---@field PlotHover Texture
+---@field Building Texture
+---@field BuildingHighlight Texture
+---@field AlphaPulse Texture
+---@field IconRing Texture
+---@field Lock Texture
+---@field BuildingPulse Texture
 ---@field Icon Texture
+---@field PlotHighlight Texture
+---@field UpgradeArrow Texture
+---@field Timer Frame
+---@field BuildLines2 Texture
+---@field BuildGlow Texture
+---@field BuildLines Texture
+---@field Plot Texture
 
----@class GarrisonBaseInfoBoxTemplate : Frame
+---@class GarrisonInfoBoxLittleBottomTemplate : GarrisonBaseInfoBoxTemplate
 ---Located in [Blizzard_GarrisonBuildingUI.xml](https://github.com/Gethe/wow-ui-source/tree/live/Interface/AddOns/Blizzard_GarrisonUI/Blizzard_GarrisonBuildingUI.xml)
 
 ---@class GarrisonInfoBoxBigBottomTemplate : GarrisonBaseInfoBoxTemplate
 ---Located in [Blizzard_GarrisonBuildingUI.xml](https://github.com/Gethe/wow-ui-source/tree/live/Interface/AddOns/Blizzard_GarrisonUI/Blizzard_GarrisonBuildingUI.xml)
 
----@class GarrisonInfoBoxLittleBottomTemplate : GarrisonBaseInfoBoxTemplate
+---@class GarrisonBaseInfoBoxTemplate : Frame
 ---Located in [Blizzard_GarrisonBuildingUI.xml](https://github.com/Gethe/wow-ui-source/tree/live/Interface/AddOns/Blizzard_GarrisonUI/Blizzard_GarrisonBuildingUI.xml)
+
+---@class GarrisonInfoBoxFiligreeTemplate : GarrisonInfoBoxLittleBottomTemplate
+---Located in [Blizzard_GarrisonBuildingUI.xml](https://github.com/Gethe/wow-ui-source/tree/live/Interface/AddOns/Blizzard_GarrisonUI/Blizzard_GarrisonBuildingUI.xml)
+
+---@class GarrisonBuildingListButtonTemplate : Button
+---Located in [Blizzard_GarrisonBuildingUI.xml](https://github.com/Gethe/wow-ui-source/tree/live/Interface/AddOns/Blizzard_GarrisonUI/Blizzard_GarrisonBuildingUI.xml)
+---@field Plans Texture
+---@field Icon Texture
+---@field Name FontString
+---@field BG Texture
+---@field SelectedBG Texture
 
 ---@class GarrisonCapacitiveWorkOrderTemplate : Frame
 ---Located in [Blizzard_GarrisonCapacitiveDisplay.xml](https://github.com/Gethe/wow-ui-source/tree/live/Interface/AddOns/Blizzard_GarrisonUI/Blizzard_GarrisonCapacitiveDisplay.xml)
----@field Active Texture
----@field Lock Texture
----@field Checkmark Texture
----@field QueuedOverlay Texture
----@field Arrow Texture
----@field Border Texture
 ---@field CompletedOverlay Texture
 ---@field Icon Texture
+---@field Lock Texture
+---@field Active Texture
+---@field Arrow Texture
+---@field QueuedOverlay Texture
+---@field Border Texture
+---@field Checkmark Texture
 
 ---@class GarrisonCapacitiveItemButtonTemplate : Button
 ---Located in [Blizzard_GarrisonCapacitiveDisplay.xml](https://github.com/Gethe/wow-ui-source/tree/live/Interface/AddOns/Blizzard_GarrisonUI/Blizzard_GarrisonCapacitiveDisplay.xml)
----@field Count FontString
----@field Name FontString
 ---@field NameFrame Texture
+---@field Name FontString
+---@field Count FontString
 ---@field Icon Texture
+
+---@class GarrisonLandingPageReportShipmentStatusTemplate : Frame
+---Located in [Blizzard_GarrisonLandingPage.xml](https://github.com/Gethe/wow-ui-source/tree/live/Interface/AddOns/Blizzard_GarrisonUI/Blizzard_GarrisonLandingPage.xml)
+---@field Done Texture
+---@field Swipe Cooldown
+---@field Count FontString
+---@field Icon Texture
+---@field Name FontString
+---@field Border Texture
+---@field BG Texture
+
+---@class GarrisonLandingPageReportMissionRewardTemplate : Frame
+---Located in [Blizzard_GarrisonLandingPage.xml](https://github.com/Gethe/wow-ui-source/tree/live/Interface/AddOns/Blizzard_GarrisonUI/Blizzard_GarrisonLandingPage.xml)
+---@field Icon Texture
+---@field IconBorder Texture
+---@field Quantity FontString
+---@field IconOverlay Texture
+
+---@class BaseLandingPageFollowerListTemplate : Frame
+---Located in [Blizzard_GarrisonLandingPage.xml](https://github.com/Gethe/wow-ui-source/tree/live/Interface/AddOns/Blizzard_GarrisonUI/Blizzard_GarrisonLandingPage.xml)
+---@field FollowerHeaderBar Texture
+---@field FollowerScrollFrame Texture
+---@field listScroll ScrollFrame
+---@field SearchBox EditBox
 
 ---@class GarrisonFollowerUpgradeClickTargetTemplate : Button
 ---Located in [Blizzard_GarrisonLandingPage.xml](https://github.com/Gethe/wow-ui-source/tree/live/Interface/AddOns/Blizzard_GarrisonUI/Blizzard_GarrisonLandingPage.xml)
 
+---@class GarrisonLandingPageTabTemplate : Button
+---Located in [Blizzard_GarrisonLandingPage.xml](https://github.com/Gethe/wow-ui-source/tree/live/Interface/AddOns/Blizzard_GarrisonUI/Blizzard_GarrisonLandingPage.xml)
+---@field RightDisabled Texture
+---@field MiddleDisabled Texture
+---@field LeftDisabled Texture
+---@field RightHighlight Texture
+---@field MiddleHighlight Texture
+---@field LeftHighlight Texture
+---@field Middle Texture
+---@field Left Texture
+---@field Right Texture
+
 ---@class GarrisonLandingPageReportMissionTemplate : Button
 ---Located in [Blizzard_GarrisonLandingPage.xml](https://github.com/Gethe/wow-ui-source/tree/live/Interface/AddOns/Blizzard_GarrisonUI/Blizzard_GarrisonLandingPage.xml)
+---@field EncounterIcon Frame
+---@field MissionType FontString
+---@field MissionTypeIcon Texture
+---@field Reward3 Frame
+---@field Status FontString
+---@field Reward1 Frame
+---@field Reward2 Frame
 ---@field BG Texture
 ---@field TimeLeft FontString
 ---@field Title FontString
----@field Reward1 Frame
----@field MissionType FontString
----@field Reward3 Frame
----@field Reward2 Frame
----@field MissionTypeIcon Texture
----@field Status FontString
----@field EncounterIcon Frame
 
----@class GarrisonLandingPageTabTemplate : Button
----Located in [Blizzard_GarrisonLandingPage.xml](https://github.com/Gethe/wow-ui-source/tree/live/Interface/AddOns/Blizzard_GarrisonUI/Blizzard_GarrisonLandingPage.xml)
----@field MiddleDisabled Texture
----@field Left Texture
----@field Middle Texture
----@field MiddleHighlight Texture
----@field RightDisabled Texture
----@field LeftHighlight Texture
----@field RightHighlight Texture
----@field Right Texture
----@field LeftDisabled Texture
+---@class GarrisonMissionListButtonTemplate : Button
+---Located in [Blizzard_GarrisonMissionUI.xml](https://github.com/Gethe/wow-ui-source/tree/live/Interface/AddOns/Blizzard_GarrisonUI/Blizzard_GarrisonMissionUI.xml)
+---@field HighlightB Texture
+---@field HighlightBR Texture
+---@field Highlight Texture
+---@field RareText FontString
+---@field Title FontString
+---@field HighlightTR Texture
+---@field Level FontString
+---@field LocBG Texture
+---@field HighlightBL Texture
+---@field HighlightT Texture
+---@field Overlay Frame
+---@field ItemLevel FontString
+---@field IconBG Texture
+---@field RareOverlay Texture
+---@field HighlightTL Texture
+---@field MissionType Texture
+---@field Summary FontString
 
----@class GarrisonLandingPageReportShipmentStatusTemplate : Frame
----Located in [Blizzard_GarrisonLandingPage.xml](https://github.com/Gethe/wow-ui-source/tree/live/Interface/AddOns/Blizzard_GarrisonUI/Blizzard_GarrisonLandingPage.xml)
----@field BG Texture
----@field Swipe Cooldown
----@field Border Texture
----@field Count FontString
----@field Name FontString
----@field Done Texture
----@field Icon Texture
+---@class FollowerMissionPageTemplate : GarrisonMissionPageBaseTemplate, MissionPageTemplate
+---Located in [Blizzard_GarrisonMissionUI.xml](https://github.com/Gethe/wow-ui-source/tree/live/Interface/AddOns/Blizzard_GarrisonUI/Blizzard_GarrisonMissionUI.xml)
+---@field ButtonFrame Texture
+---@field MissionType Texture
+---@field RewardsFrame Frame
+---@field IconBG Texture
 
----@class GarrisonLandingPageReportMissionRewardTemplate : Frame
----Located in [Blizzard_GarrisonLandingPage.xml](https://github.com/Gethe/wow-ui-source/tree/live/Interface/AddOns/Blizzard_GarrisonUI/Blizzard_GarrisonLandingPage.xml)
----@field Quantity FontString
----@field IconBorder Texture
----@field IconOverlay Texture
----@field Icon Texture
+---@class GarrisonFollowerMissionPortraitTemplate : GarrisonFollowerPortraitTemplate
+---Located in [Blizzard_GarrisonMissionUI.xml](https://github.com/Gethe/wow-ui-source/tree/live/Interface/AddOns/Blizzard_GarrisonUI/Blizzard_GarrisonMissionUI.xml)
+---@field Highlight Texture
+---@field SpellTargetHighlight Texture
+---@field Empty Texture
+---@field PortraitFeedbackGlow Texture
 
----@class BaseLandingPageFollowerListTemplate : Frame
----Located in [Blizzard_GarrisonLandingPage.xml](https://github.com/Gethe/wow-ui-source/tree/live/Interface/AddOns/Blizzard_GarrisonUI/Blizzard_GarrisonLandingPage.xml)
----@field listScroll ScrollFrame
----@field FollowerScrollFrame Texture
----@field SearchBox EditBox
----@field FollowerHeaderBar Texture
+---@class GarrisonCinematicModelBaseTemplate : CinematicModel
+---Located in [Blizzard_GarrisonMissionUI.xml](https://github.com/Gethe/wow-ui-source/tree/live/Interface/AddOns/Blizzard_GarrisonUI/Blizzard_GarrisonMissionUI.xml)
+
+---@class MissionCompletePreloadModelTemplate : PlayerModel
+---Located in [Blizzard_GarrisonMissionUI.xml](https://github.com/Gethe/wow-ui-source/tree/live/Interface/AddOns/Blizzard_GarrisonUI/Blizzard_GarrisonMissionUI.xml)
 
 ---@class GarrisonFollowerPageAbilityTemplate : Frame
 ---Located in [Blizzard_GarrisonMissionUI.xml](https://github.com/Gethe/wow-ui-source/tree/live/Interface/AddOns/Blizzard_GarrisonUI/Blizzard_GarrisonMissionUI.xml)
----@field LargeAbilityFeedbackGlow Texture
----@field Name FontString
----@field CounterString FontString
 ---@field IconButton Button
+---@field CounterString FontString
 ---@field Category FontString
-
----@class GarrisonMissionTopBorderTemplate : Frame
----Located in [Blizzard_GarrisonMissionUI.xml](https://github.com/Gethe/wow-ui-source/tree/live/Interface/AddOns/Blizzard_GarrisonUI/Blizzard_GarrisonMissionUI.xml)
+---@field Name FontString
+---@field LargeAbilityFeedbackGlow Texture
 
 ---@class GarrisonFollowerTabTemplate : GarrisonMissionBaseFrameTemplate
 ---Located in [Blizzard_GarrisonMissionUI.xml](https://github.com/Gethe/wow-ui-source/tree/live/Interface/AddOns/Blizzard_GarrisonUI/Blizzard_GarrisonMissionUI.xml)
----@field XPBar StatusBar
----@field NoFollowersLabel FontString
----@field PortraitFrame Frame
----@field UpgradeClickTarget Button
----@field QualityFrame Frame
 ---@field XPLabel FontString
----@field NumFollowers FontString
----@field ModelCluster ScrollFrame
 ---@field ItemArmor Frame
----@field ItemWeapon Frame
----@field Source Frame
----@field HeaderBG Texture
----@field ClassSpec FontString
----@field DurabilityFrame Frame
+---@field PortraitFrame Frame
+---@field NumFollowers FontString
 ---@field AbilitiesFrame Frame
----@field Class Texture
+---@field ModelCluster ScrollFrame
 ---@field ItemAverageLevel Frame
+---@field ItemWeapon Frame
+---@field XPBar StatusBar
+---@field Class Texture
+---@field Source Frame
+---@field QualityFrame Frame
+---@field NoFollowersLabel FontString
+---@field UpgradeClickTarget Button
+---@field ClassSpec FontString
+---@field HeaderBG Texture
 ---@field Name FontString
+---@field DurabilityFrame Frame
 ---@field XPText FontString
+
+---@class GarrisonEncounterGlowTemplate : Frame
+---Located in [Blizzard_GarrisonMissionUI.xml](https://github.com/Gethe/wow-ui-source/tree/live/Interface/AddOns/Blizzard_GarrisonUI/Blizzard_GarrisonMissionUI.xml)
+---@field EncounterGlow Texture
+---@field SpikeyGlow Texture
+
+---@class GarrisonMissionAbilityLargeCounterTemplate : GarrisonAbilityLargeCounterTemplate
+---Located in [Blizzard_GarrisonMissionUI.xml](https://github.com/Gethe/wow-ui-source/tree/live/Interface/AddOns/Blizzard_GarrisonUI/Blizzard_GarrisonMissionUI.xml)
 
 ---@class GarrisonEncounterPortraitTemplate : Frame
 ---Located in [Blizzard_GarrisonMissionUI.xml](https://github.com/Gethe/wow-ui-source/tree/live/Interface/AddOns/Blizzard_GarrisonUI/Blizzard_GarrisonMissionUI.xml)
@@ -1649,239 +1694,160 @@
 ---@field Elite Texture
 ---@field Portrait Texture
 
+---@class GarrisonFollowerItemButtonTemplate : Frame
+---Located in [Blizzard_GarrisonMissionUI.xml](https://github.com/Gethe/wow-ui-source/tree/live/Interface/AddOns/Blizzard_GarrisonUI/Blizzard_GarrisonMissionUI.xml)
+---@field ItemLevel FontString
+---@field Name FontString
+---@field Border Texture
+---@field Icon Texture
+
+---@class GarrisonMissionTopBorderTemplate : Frame
+---Located in [Blizzard_GarrisonMissionUI.xml](https://github.com/Gethe/wow-ui-source/tree/live/Interface/AddOns/Blizzard_GarrisonUI/Blizzard_GarrisonMissionUI.xml)
+
+---@class GarrisonLargeFollowerXPFrameTemplate : Frame
+---Located in [Blizzard_GarrisonMissionUI.xml](https://github.com/Gethe/wow-ui-source/tree/live/Interface/AddOns/Blizzard_GarrisonUI/Blizzard_GarrisonMissionUI.xml)
+---@field DurabilityBackground Texture
+---@field XP StatusBar
+---@field PortraitFrame Frame
+---@field XPGain Frame
+---@field LevelUpFrame Frame
+---@field Name FontString
+---@field DurabilityFrame Frame
+---@field Class Texture
+
+---@class GarrisonFollowerPageAbilityIconButtonTemplate : Button
+---Located in [Blizzard_GarrisonMissionUI.xml](https://github.com/Gethe/wow-ui-source/tree/live/Interface/AddOns/Blizzard_GarrisonUI/Blizzard_GarrisonMissionUI.xml)
+---@field SmokeyCenter Texture
+---@field Icon Texture
+---@field WideGlow Texture
+---@field OldIcon Texture
+---@field SmokeyCenter2 Texture
+---@field ValidSpellHighlight Texture
+---@field Border Texture
+
 ---@class GarrisonSmallFollowerXPFrameTemplate : Frame
 ---Located in [Blizzard_GarrisonMissionUI.xml](https://github.com/Gethe/wow-ui-source/tree/live/Interface/AddOns/Blizzard_GarrisonUI/Blizzard_GarrisonMissionUI.xml)
 ---@field LevelUpFrame Frame
 ---@field XPGain Frame
+---@field Name FontString
 ---@field XP StatusBar
 ---@field PortraitFrame Frame
----@field Name FontString
 
----@class GarrisonMissionPageFollowerTemplate : Frame
+---@class GarrisonMissionListTabTemplate : Button
 ---Located in [Blizzard_GarrisonMissionUI.xml](https://github.com/Gethe/wow-ui-source/tree/live/Interface/AddOns/Blizzard_GarrisonUI/Blizzard_GarrisonMissionUI.xml)
----@field DurabilityBackground Texture
----@field Class Texture
----@field Durability Frame
----@field PortraitFrame Frame
----@field Name FontString
-
----@class GarrisonFollowerItemButtonTemplate : Frame
----Located in [Blizzard_GarrisonMissionUI.xml](https://github.com/Gethe/wow-ui-source/tree/live/Interface/AddOns/Blizzard_GarrisonUI/Blizzard_GarrisonMissionUI.xml)
----@field Border Texture
----@field ItemLevel FontString
----@field Name FontString
----@field Icon Texture
-
----@class GarrisonMissionListButtonRewardTemplate : Frame
----Located in [Blizzard_GarrisonMissionUI.xml](https://github.com/Gethe/wow-ui-source/tree/live/Interface/AddOns/Blizzard_GarrisonUI/Blizzard_GarrisonMissionUI.xml)
----@field Quantity FontString
----@field IconBorder Texture
----@field IconOverlay Texture
----@field Icon Texture
+---@field SelectedMid Texture
+---@field SelectedRight Texture
+---@field Middle Texture
+---@field Left Texture
+---@field SelectedLeft Texture
+---@field Right Texture
 
 ---@class GarrisonFollowerMissionCompleteStageTemplate : GarrisonMissionStageTemplate, GarrisonMissionCompleteStageTemplate
 ---Located in [Blizzard_GarrisonMissionUI.xml](https://github.com/Gethe/wow-ui-source/tree/live/Interface/AddOns/Blizzard_GarrisonUI/Blizzard_GarrisonMissionUI.xml)
----@field ItemLevelHitboxFrame Frame
+---@field EncountersFrame Frame
 ---@field FollowersFrame Frame
 ---@field MissionInfo Frame
----@field EncountersFrame Frame
+---@field ItemLevelHitboxFrame Frame
+
+---@class GarrisonMissionPageBaseTemplate : Frame
+---Located in [Blizzard_GarrisonMissionUI.xml](https://github.com/Gethe/wow-ui-source/tree/live/Interface/AddOns/Blizzard_GarrisonUI/Blizzard_GarrisonMissionUI.xml)
+
+---@class GarrisonEncounterPortraitCheckTemplate : Frame
+---Located in [Blizzard_GarrisonMissionUI.xml](https://github.com/Gethe/wow-ui-source/tree/live/Interface/AddOns/Blizzard_GarrisonUI/Blizzard_GarrisonMissionUI.xml)
+---@field CheckMarkLeft Texture
+---@field CheckMarkRight Texture
+---@field CheckMark Texture
+---@field CrossLeft Texture
+---@field CrossRight Texture
+---@field CheckMarkGlow Texture
+---@field CheckSmoke Texture
 
 ---@class GarrisonMissionListTemplate : GarrisonListTemplate
 ---Located in [Blizzard_GarrisonMissionUI.xml](https://github.com/Gethe/wow-ui-source/tree/live/Interface/AddOns/Blizzard_GarrisonUI/Blizzard_GarrisonMissionUI.xml)
+---@field EmptyListString FontString
+---@field Tab1 Button
 ---@field MaterialFrame Frame
 ---@field Tab2 Button
 ---@field CompleteDialog Frame
----@field EmptyListString FontString
----@field Tab1 Button
 
----@class GarrisonMissionAbilityLargeCounterTemplate : GarrisonAbilityLargeCounterTemplate
+---@class GarrisonFollowerMissionRewardsFrameTemplate : Frame
 ---Located in [Blizzard_GarrisonMissionUI.xml](https://github.com/Gethe/wow-ui-source/tree/live/Interface/AddOns/Blizzard_GarrisonUI/Blizzard_GarrisonMissionUI.xml)
-
----@class GarrisonFollowerMissionPortraitTemplate : GarrisonFollowerPortraitTemplate
----Located in [Blizzard_GarrisonMissionUI.xml](https://github.com/Gethe/wow-ui-source/tree/live/Interface/AddOns/Blizzard_GarrisonUI/Blizzard_GarrisonMissionUI.xml)
----@field SpellTargetHighlight Texture
----@field Empty Texture
----@field Highlight Texture
----@field PortraitFeedbackGlow Texture
-
----@class GarrisonMissionPageEnemyTemplate : Frame
----Located in [Blizzard_GarrisonMissionUI.xml](https://github.com/Gethe/wow-ui-source/tree/live/Interface/AddOns/Blizzard_GarrisonUI/Blizzard_GarrisonMissionUI.xml)
----@field PortraitFrame Frame
----@field Name FontString
 
 ---@class GarrisonMissionPartyBuffTemplate : Frame
 ---Located in [Blizzard_GarrisonMissionUI.xml](https://github.com/Gethe/wow-ui-source/tree/live/Interface/AddOns/Blizzard_GarrisonUI/Blizzard_GarrisonMissionUI.xml)
 ---@field AbilityFeedbackGlow Texture
 ---@field Icon Texture
 
----@class FollowerMissionPageTemplate : GarrisonMissionPageBaseTemplate, MissionPageTemplate
+---@class GarrisonMissionPageEnemyTemplate : Frame
 ---Located in [Blizzard_GarrisonMissionUI.xml](https://github.com/Gethe/wow-ui-source/tree/live/Interface/AddOns/Blizzard_GarrisonUI/Blizzard_GarrisonMissionUI.xml)
----@field RewardsFrame Frame
----@field ButtonFrame Texture
----@field IconBG Texture
----@field MissionType Texture
+---@field Name FontString
+---@field PortraitFrame Frame
 
----@class GarrisonLargeFollowerXPFrameTemplate : Frame
+---@class GarrisonMissionPageFollowerTemplate : Frame
 ---Located in [Blizzard_GarrisonMissionUI.xml](https://github.com/Gethe/wow-ui-source/tree/live/Interface/AddOns/Blizzard_GarrisonUI/Blizzard_GarrisonMissionUI.xml)
 ---@field DurabilityBackground Texture
 ---@field Class Texture
 ---@field PortraitFrame Frame
----@field DurabilityFrame Frame
----@field XPGain Frame
----@field LevelUpFrame Frame
----@field XP StatusBar
+---@field Durability Frame
 ---@field Name FontString
-
----@class GarrisonFollowerPageAbilityIconButtonTemplate : Button
----Located in [Blizzard_GarrisonMissionUI.xml](https://github.com/Gethe/wow-ui-source/tree/live/Interface/AddOns/Blizzard_GarrisonUI/Blizzard_GarrisonMissionUI.xml)
----@field SmokeyCenter Texture
----@field OldIcon Texture
----@field WideGlow Texture
----@field Border Texture
----@field SmokeyCenter2 Texture
----@field ValidSpellHighlight Texture
----@field Icon Texture
-
----@class GarrisonMissionListButtonNewHighlightTemplate : Frame
----Located in [Blizzard_GarrisonMissionUI.xml](https://github.com/Gethe/wow-ui-source/tree/live/Interface/AddOns/Blizzard_GarrisonUI/Blizzard_GarrisonMissionUI.xml)
----@field SelectBR Texture
----@field SelectB Texture
----@field SelectTL Texture
----@field Select Texture
----@field SelectT Texture
----@field SelectBL Texture
----@field SelectTR Texture
-
----@class GarrisonMissionListTabTemplate : Button
----Located in [Blizzard_GarrisonMissionUI.xml](https://github.com/Gethe/wow-ui-source/tree/live/Interface/AddOns/Blizzard_GarrisonUI/Blizzard_GarrisonMissionUI.xml)
----@field Left Texture
----@field SelectedLeft Texture
----@field SelectedMid Texture
----@field SelectedRight Texture
----@field Right Texture
----@field Middle Texture
 
 ---@class GarrisonEnemyPortraitTemplate : Frame
 ---Located in [Blizzard_GarrisonMissionUI.xml](https://github.com/Gethe/wow-ui-source/tree/live/Interface/AddOns/Blizzard_GarrisonUI/Blizzard_GarrisonMissionUI.xml)
----@field Elite Texture
 ---@field Portrait Texture
 ---@field PortraitRing Texture
+---@field Elite Texture
 
----@class GarrisonMissionListButtonTemplate : Button
+---@class GarrisonMissionListButtonNewHighlightTemplate : Frame
 ---Located in [Blizzard_GarrisonMissionUI.xml](https://github.com/Gethe/wow-ui-source/tree/live/Interface/AddOns/Blizzard_GarrisonUI/Blizzard_GarrisonMissionUI.xml)
----@field Level FontString
----@field LocBG Texture
----@field MissionType Texture
----@field HighlightBR Texture
----@field ItemLevel FontString
----@field RareOverlay Texture
----@field Overlay Frame
----@field Title FontString
----@field HighlightTL Texture
----@field Summary FontString
----@field HighlightT Texture
----@field Highlight Texture
----@field HighlightBL Texture
----@field IconBG Texture
----@field HighlightTR Texture
----@field RareText FontString
----@field HighlightB Texture
+---@field SelectT Texture
+---@field SelectTL Texture
+---@field SelectTR Texture
+---@field SelectB Texture
+---@field Select Texture
+---@field SelectBR Texture
+---@field SelectBL Texture
 
----@class GarrisonCinematicModelBaseTemplate : CinematicModel
+---@class GarrisonMissionListButtonRewardTemplate : Frame
 ---Located in [Blizzard_GarrisonMissionUI.xml](https://github.com/Gethe/wow-ui-source/tree/live/Interface/AddOns/Blizzard_GarrisonUI/Blizzard_GarrisonMissionUI.xml)
+---@field Icon Texture
+---@field IconBorder Texture
+---@field Quantity FontString
+---@field IconOverlay Texture
 
----@class GarrisonMissionPageBaseTemplate : Frame
----Located in [Blizzard_GarrisonMissionUI.xml](https://github.com/Gethe/wow-ui-source/tree/live/Interface/AddOns/Blizzard_GarrisonUI/Blizzard_GarrisonMissionUI.xml)
+---@class GarrisonRecruitTemplate : Frame
+---Located in [Blizzard_GarrisonRecruiterUI.xml](https://github.com/Gethe/wow-ui-source/tree/live/Interface/AddOns/Blizzard_GarrisonUI/Blizzard_GarrisonRecruiterUI.xml)
+---@field HireRecruits Button
+---@field Class Texture
+---@field Traits Frame
+---@field PortraitFrame Frame
+---@field Status FontString
+---@field ILevel FontString
+---@field Abilities Frame
+---@field Name FontString
+---@field Model CinematicModel
+---@field Counter Frame
 
----@class GarrisonEncounterGlowTemplate : Frame
----Located in [Blizzard_GarrisonMissionUI.xml](https://github.com/Gethe/wow-ui-source/tree/live/Interface/AddOns/Blizzard_GarrisonUI/Blizzard_GarrisonMissionUI.xml)
----@field EncounterGlow Texture
----@field SpikeyGlow Texture
-
----@class MissionCompletePreloadModelTemplate : PlayerModel
----Located in [Blizzard_GarrisonMissionUI.xml](https://github.com/Gethe/wow-ui-source/tree/live/Interface/AddOns/Blizzard_GarrisonUI/Blizzard_GarrisonMissionUI.xml)
-
----@class GarrisonFollowerMissionRewardsFrameTemplate : Frame
----Located in [Blizzard_GarrisonMissionUI.xml](https://github.com/Gethe/wow-ui-source/tree/live/Interface/AddOns/Blizzard_GarrisonUI/Blizzard_GarrisonMissionUI.xml)
-
----@class GarrisonEncounterPortraitCheckTemplate : Frame
----Located in [Blizzard_GarrisonMissionUI.xml](https://github.com/Gethe/wow-ui-source/tree/live/Interface/AddOns/Blizzard_GarrisonUI/Blizzard_GarrisonMissionUI.xml)
----@field CheckMarkRight Texture
----@field CrossLeft Texture
----@field CheckSmoke Texture
----@field CheckMark Texture
----@field CheckMarkGlow Texture
----@field CrossRight Texture
----@field CheckMarkLeft Texture
+---@class GarrisonRecruiterRadioButtonTemplate : UIRadioButtonTemplate
+---Located in [Blizzard_GarrisonRecruiterUI.xml](https://github.com/Gethe/wow-ui-source/tree/live/Interface/AddOns/Blizzard_GarrisonUI/Blizzard_GarrisonRecruiterUI.xml)
+---@field Text FontString
 
 ---@class GarrisonRecruitAbilityTemplate : Frame
 ---Located in [Blizzard_GarrisonRecruiterUI.xml](https://github.com/Gethe/wow-ui-source/tree/live/Interface/AddOns/Blizzard_GarrisonUI/Blizzard_GarrisonRecruiterUI.xml)
 ---@field Name FontString
 ---@field Icon Texture
 
----@class GarrisonRecruitTemplate : Frame
----Located in [Blizzard_GarrisonRecruiterUI.xml](https://github.com/Gethe/wow-ui-source/tree/live/Interface/AddOns/Blizzard_GarrisonUI/Blizzard_GarrisonRecruiterUI.xml)
----@field Counter Frame
----@field Status FontString
----@field Class Texture
----@field HireRecruits Button
----@field PortraitFrame Frame
----@field ILevel FontString
----@field Abilities Frame
----@field Name FontString
----@field Traits Frame
----@field Model CinematicModel
-
----@class GarrisonRecruiterRadioButtonTemplate : UIRadioButtonTemplate
----Located in [Blizzard_GarrisonRecruiterUI.xml](https://github.com/Gethe/wow-ui-source/tree/live/Interface/AddOns/Blizzard_GarrisonUI/Blizzard_GarrisonRecruiterUI.xml)
----@field Text FontString
-
----@class GarrisonShipEquipmentTemplate : GarrisonEquipmentTemplate
+---@class GarrisonShipFollowerListTemplateHeader : GarrisonBaseInfoBoxTemplate
 ---Located in [Blizzard_GarrisonShipyardUI.xml](https://github.com/Gethe/wow-ui-source/tree/live/Interface/AddOns/Blizzard_GarrisonUI/Blizzard_GarrisonShipyardUI.xml)
----@field Border Texture
----@field BG Texture
-
----@class GarrisonShipFollowerButtonTemplate : Button
----Located in [Blizzard_GarrisonShipyardUI.xml](https://github.com/Gethe/wow-ui-source/tree/live/Interface/AddOns/Blizzard_GarrisonUI/Blizzard_GarrisonShipyardUI.xml)
----@field XPBar Texture
----@field Selection Texture
----@field Status FontString
----@field BoatName FontString
----@field BoatType FontString
----@field BusyFrame Frame
----@field Quality Texture
----@field BG Texture
----@field AbilitiesBG Texture
----@field Portrait Texture
+---@field HeaderRight Texture
+---@field NoShipsLabel FontString
+---@field HeaderLeft Texture
+---@field listScroll ScrollFrame
 
 ---@class GarrisonShipTraitTemplate : Button
 ---Located in [Blizzard_GarrisonShipyardUI.xml](https://github.com/Gethe/wow-ui-source/tree/live/Interface/AddOns/Blizzard_GarrisonUI/Blizzard_GarrisonShipyardUI.xml)
+---@field Portrait Texture
 ---@field Border Texture
 ---@field Counter Frame
----@field Portrait Texture
-
----@class FogFrameTemplate : Frame
----Located in [Blizzard_GarrisonShipyardUI.xml](https://github.com/Gethe/wow-ui-source/tree/live/Interface/AddOns/Blizzard_GarrisonUI/Blizzard_GarrisonShipyardUI.xml)
----@field HighlightGlowAnimTexture Texture
----@field FogAnimTexture Texture
----@field HighlightAnimTexture Texture
----@field FogTexture Texture
-
----@class ShipyardMissionPageTemplate : GarrisonShipyardMissionPageBaseTemplate, MissionPageTemplate
----Located in [Blizzard_GarrisonShipyardUI.xml](https://github.com/Gethe/wow-ui-source/tree/live/Interface/AddOns/Blizzard_GarrisonUI/Blizzard_GarrisonShipyardUI.xml)
----@field RewardsFrame Frame
----@field ButtonFrame Texture
----@field IconBG Texture
----@field MissionType Texture
-
----@class GarrisonShipyardMissionPageBaseTemplate : Frame
----Located in [Blizzard_GarrisonShipyardUI.xml](https://github.com/Gethe/wow-ui-source/tree/live/Interface/AddOns/Blizzard_GarrisonUI/Blizzard_GarrisonShipyardUI.xml)
-
----@class GarrisonShipyardMissionCompleteStageTemplate : GarrisonMissionStageTemplate, GarrisonMissionCompleteStageTemplate
----Located in [Blizzard_GarrisonShipyardUI.xml](https://github.com/Gethe/wow-ui-source/tree/live/Interface/AddOns/Blizzard_GarrisonUI/Blizzard_GarrisonShipyardUI.xml)
----@field FollowersFrame Frame
----@field MissionInfo Frame
----@field EncountersFrame Frame
 
 ---@class GarrisonShipyardBonusAreaFrameTemplate : Frame
 ---Located in [Blizzard_GarrisonShipyardUI.xml](https://github.com/Gethe/wow-ui-source/tree/live/Interface/AddOns/Blizzard_GarrisonUI/Blizzard_GarrisonShipyardUI.xml)
@@ -1889,103 +1855,137 @@
 ---@field CircleGlowTrails Texture
 ---@field CirclePulse Texture
 
----@class GarrisonShipMissionFollowerTemplate : Frame
+---@class GarrisonShipFollowerButtonTemplate : Button
 ---Located in [Blizzard_GarrisonShipyardUI.xml](https://github.com/Gethe/wow-ui-source/tree/live/Interface/AddOns/Blizzard_GarrisonUI/Blizzard_GarrisonShipyardUI.xml)
----@field Highlight Texture
----@field NameBG Texture
----@field Name FontString
+---@field BoatName FontString
+---@field XPBar Texture
+---@field AbilitiesBG Texture
+---@field Status FontString
+---@field BoatType FontString
+---@field BusyFrame Frame
+---@field Selection Texture
 ---@field Portrait Texture
+---@field BG Texture
+---@field Quality Texture
 
----@class GarrisonShipyardMissionRewardsFrameTemplate : Frame
+---@class FogFrameTemplate : Frame
 ---Located in [Blizzard_GarrisonShipyardUI.xml](https://github.com/Gethe/wow-ui-source/tree/live/Interface/AddOns/Blizzard_GarrisonUI/Blizzard_GarrisonShipyardUI.xml)
+---@field FogAnimTexture Texture
+---@field FogTexture Texture
+---@field HighlightGlowAnimTexture Texture
+---@field HighlightAnimTexture Texture
 
----@class GarrisonShipFollowerListTemplateHeader : GarrisonBaseInfoBoxTemplate
+---@class GarrisonShipyardMissionPageBaseTemplate : Frame
 ---Located in [Blizzard_GarrisonShipyardUI.xml](https://github.com/Gethe/wow-ui-source/tree/live/Interface/AddOns/Blizzard_GarrisonUI/Blizzard_GarrisonShipyardUI.xml)
----@field HeaderRight Texture
----@field listScroll ScrollFrame
----@field NoShipsLabel FontString
----@field HeaderLeft Texture
 
 ---@class GarrisonShipyardMapMissionTemplate : Button
 ---Located in [Blizzard_GarrisonShipyardUI.xml](https://github.com/Gethe/wow-ui-source/tree/live/Interface/AddOns/Blizzard_GarrisonUI/Blizzard_GarrisonShipyardUI.xml)
----@field YellowSpikeGlow Texture
 ---@field SmokeBurst Texture
----@field FogHighlight Texture
----@field BgGlow Texture
----@field TimerBG Texture
----@field GlowRing Texture
 ---@field TimerText FontString
----@field RingBurst Texture
----@field Circle Texture
----@field SmokeBurst3 Texture
 ---@field YellowGlow Texture
----@field Glow Texture
----@field StarBurst Texture
----@field InProgressIcon Texture
+---@field TimerBG Texture
 ---@field SmokeBurst2 Texture
+---@field StarBurst Texture
+---@field FogHighlight Texture
+---@field Glow Texture
+---@field Circle Texture
+---@field BgGlow Texture
 ---@field SoftGlow Texture
 ---@field BonusAreaEffect Texture
-
----@class GarrisonShipMissionEnemyTemplate : Frame
----Located in [Blizzard_GarrisonShipyardUI.xml](https://github.com/Gethe/wow-ui-source/tree/live/Interface/AddOns/Blizzard_GarrisonUI/Blizzard_GarrisonShipyardUI.xml)
----@field Name FontString
----@field PortraitIcon Texture
----@field Portrait Texture
----@field PortraitRing Texture
+---@field InProgressIcon Texture
+---@field SmokeBurst3 Texture
+---@field RingBurst Texture
+---@field GlowRing Texture
+---@field YellowSpikeGlow Texture
 
 ---@class GarrisonShipMissionCompleteEnemyTemplate : Frame
 ---Located in [Blizzard_GarrisonShipyardUI.xml](https://github.com/Gethe/wow-ui-source/tree/live/Interface/AddOns/Blizzard_GarrisonUI/Blizzard_GarrisonShipyardUI.xml)
----@field CheckFrame Frame
 ---@field MechanicsFrame Frame
----@field PortraitIcon Texture
----@field Name FontString
----@field Portrait Texture
+---@field CheckFrame Frame
 ---@field PortraitRing Texture
+---@field PortraitIcon Texture
+---@field Portrait Texture
+---@field Name FontString
+
+---@class ShipyardMissionPageTemplate : GarrisonShipyardMissionPageBaseTemplate, MissionPageTemplate
+---Located in [Blizzard_GarrisonShipyardUI.xml](https://github.com/Gethe/wow-ui-source/tree/live/Interface/AddOns/Blizzard_GarrisonUI/Blizzard_GarrisonShipyardUI.xml)
+---@field ButtonFrame Texture
+---@field MissionType Texture
+---@field RewardsFrame Frame
+---@field IconBG Texture
 
 ---@class GarrisonShipyardFollowerTabTemplate : GarrisonBaseInfoBoxTemplate
 ---Located in [Blizzard_GarrisonShipyardUI.xml](https://github.com/Gethe/wow-ui-source/tree/live/Interface/AddOns/Blizzard_GarrisonUI/Blizzard_GarrisonShipyardUI.xml)
----@field XPBar StatusBar
----@field Trait1 Button
----@field Quality Texture
----@field QualityFrame Frame
----@field NumFollowers FontString
 ---@field XPLabel FontString
----@field ThreatCountersFrame Frame
----@field EquipmentFrame Frame
----@field HeaderBG Texture
----@field XPText FontString
----@field BoatType FontString
 ---@field BoatName FontString
+---@field NumFollowers FontString
+---@field XPBar StatusBar
+---@field QualityFrame Frame
+---@field ThreatCountersFrame Frame
+---@field Trait1 Button
+---@field EquipmentFrame Frame
+---@field BoatType FontString
 ---@field Trait2 Button
+---@field Quality Texture
+---@field HeaderBG Texture
 ---@field Portrait Texture
 ---@field Model CinematicModel
-
----@class GarrisonShipMissionCompleteFollowerTemplate : Frame
----Located in [Blizzard_GarrisonShipyardUI.xml](https://github.com/Gethe/wow-ui-source/tree/live/Interface/AddOns/Blizzard_GarrisonUI/Blizzard_GarrisonShipyardUI.xml)
----@field BoatDeathAnimations CinematicModel
----@field XP StatusBar
----@field NameBG Texture
----@field DestroyedText FontString
----@field LevelUpFrame Frame
----@field XPGain Frame
----@field Name FontString
----@field SurvivedText FontString
----@field Portrait Texture
+---@field XPText FontString
 
 ---@class GarrisonShipyardTopBorderTemplate : Frame
 ---Located in [Blizzard_GarrisonShipyardUI.xml](https://github.com/Gethe/wow-ui-source/tree/live/Interface/AddOns/Blizzard_GarrisonUI/Blizzard_GarrisonShipyardUI.xml)
 
+---@class GarrisonShipyardMissionRewardsFrameTemplate : Frame
+---Located in [Blizzard_GarrisonShipyardUI.xml](https://github.com/Gethe/wow-ui-source/tree/live/Interface/AddOns/Blizzard_GarrisonUI/Blizzard_GarrisonShipyardUI.xml)
+
 ---@class GarrisonBonusAreaTooltipFrameTemplate : Frame
 ---Located in [Blizzard_GarrisonShipyardUI.xml](https://github.com/Gethe/wow-ui-source/tree/live/Interface/AddOns/Blizzard_GarrisonUI/Blizzard_GarrisonShipyardUI.xml)
+---@field BonusEffectFrame Frame
 ---@field TimeLeft FontString
 ---@field Title FontString
----@field BonusEffectFrame Frame
+
+---@class GarrisonShipEquipmentTemplate : GarrisonEquipmentTemplate
+---Located in [Blizzard_GarrisonShipyardUI.xml](https://github.com/Gethe/wow-ui-source/tree/live/Interface/AddOns/Blizzard_GarrisonUI/Blizzard_GarrisonShipyardUI.xml)
+---@field BG Texture
+---@field Border Texture
+
+---@class GarrisonShipyardMissionCompleteStageTemplate : GarrisonMissionStageTemplate, GarrisonMissionCompleteStageTemplate
+---Located in [Blizzard_GarrisonShipyardUI.xml](https://github.com/Gethe/wow-ui-source/tree/live/Interface/AddOns/Blizzard_GarrisonUI/Blizzard_GarrisonShipyardUI.xml)
+---@field EncountersFrame Frame
+---@field FollowersFrame Frame
+---@field MissionInfo Frame
+
+---@class GarrisonShipMissionFollowerTemplate : Frame
+---Located in [Blizzard_GarrisonShipyardUI.xml](https://github.com/Gethe/wow-ui-source/tree/live/Interface/AddOns/Blizzard_GarrisonUI/Blizzard_GarrisonShipyardUI.xml)
+---@field NameBG Texture
+---@field Name FontString
+---@field Highlight Texture
+---@field Portrait Texture
+
+---@class GarrisonShipMissionCompleteFollowerTemplate : Frame
+---Located in [Blizzard_GarrisonShipyardUI.xml](https://github.com/Gethe/wow-ui-source/tree/live/Interface/AddOns/Blizzard_GarrisonUI/Blizzard_GarrisonShipyardUI.xml)
+---@field SurvivedText FontString
+---@field XPGain Frame
+---@field XP StatusBar
+---@field DestroyedText FontString
+---@field NameBG Texture
+---@field BoatDeathAnimations CinematicModel
+---@field Portrait Texture
+---@field LevelUpFrame Frame
+---@field Name FontString
 
 ---@class GarrisonBonusEffectFrameTemplate : Frame
 ---Located in [Blizzard_GarrisonShipyardUI.xml](https://github.com/Gethe/wow-ui-source/tree/live/Interface/AddOns/Blizzard_GarrisonUI/Blizzard_GarrisonShipyardUI.xml)
 ---@field Description FontString
 ---@field Name FontString
 ---@field Icon Texture
+
+---@class GarrisonShipMissionEnemyTemplate : Frame
+---Located in [Blizzard_GarrisonShipyardUI.xml](https://github.com/Gethe/wow-ui-source/tree/live/Interface/AddOns/Blizzard_GarrisonUI/Blizzard_GarrisonShipyardUI.xml)
+---@field Name FontString
+---@field Portrait Texture
+---@field PortraitRing Texture
+---@field PortraitIcon Texture
 
 ---@class OrderHallMissionListButtonTemplate : GarrisonMissionListButtonTemplate
 ---Located in [Blizzard_OrderHallMissionUI.xml](https://github.com/Gethe/wow-ui-source/tree/live/Interface/AddOns/Blizzard_GarrisonUI/Blizzard_OrderHallMissionUI.xml)

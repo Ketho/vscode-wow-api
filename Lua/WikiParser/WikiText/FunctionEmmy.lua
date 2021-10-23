@@ -50,6 +50,7 @@ for _, name in pairs(sorted) do
 				countNonValid = countNonValid + 1
 			else
 				countNonDoc = countNonDoc + 1
+        print(name)
 			end
 		end
 		count = count + 1

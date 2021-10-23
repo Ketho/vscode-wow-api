@@ -3,33 +3,27 @@ local lfs = require "lfs"
 local xml2lua = require "xml2lua"
 local handler = require "xmlhandler.tree"
 
-local path
-for file in lfs.dir("./Lua/Data/input") do
-	if file:find("%.xml") then
-		path = "Lua/Data/input/"..file
-	end
+local nonBlizzDocumented, blizzDocumented = unpack(require("Lua/WikiParser/WikiText/NonBlizzardDocumented"))
+local requestBody = ""
+
+local file = io.open("Lua/Data/output/BlizzardDocumented.txt", "w")
+for _, name in pairs(Util:SortTable(blizzDocumented)) do
+  file:write("API "..name.."\n")
 end
-if not path then
-	local output = "Lua/Data/output/NonBlizzardDocumented.txt"
-	print("Parser: no XML file found; export it from Wowpedia with "..output)
-	if not lfs.attributes(output) then
-		local nonBlizzDocumented, blizzDocumented = unpack(require("Lua/WikiParser/WikiText/NonBlizzardDocumented"))
-		local file1 = io.open(output, "w")
-		for _, name in pairs(Util:SortTable(nonBlizzDocumented)) do
-			file1:write("API "..name.."\n")
-		end
-		local file2 = io.open("Lua/Data/output/BlizzardDocumented.txt", "w")
-		for _, name in pairs(Util:SortTable(blizzDocumented)) do
-			file2:write("API "..name.."\n")
-		end
-	end
-	return
+file:close()
+
+for _,name in pairs(Util:SortTable(nonBlizzDocumented)) do
+  requestBody = requestBody .. "API " .. name .. "\r\n"
 end
 
+local blizzDocumentedData = Util:GetWoWApiPagesXML(requestBody)
+file = io.open("Lua/Data/input/NotBlizzardDocumented.xml", "w")
+file:write(blizzDocumentedData)
+file:close()
+
 -- parse xml from file
-local xmlstr = xml2lua.loadFile(path)
 local parser = xml2lua.parser(handler)
-parser:parse(xmlstr)
+parser:parse(blizzDocumentedData)
 
 local validTypes = {
 	boolean = true,
