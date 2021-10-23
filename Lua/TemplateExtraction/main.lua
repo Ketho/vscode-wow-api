@@ -447,7 +447,7 @@ local function generateClassStrings(templates, path, fileName)
 
     local templateStrTables = {}
 
-    consoleOutput(functionName, string.format("Generating Class strings for %s",fileName), 1)
+    consoleOutput(functionName, string.format("Generating Class strings for %s",fileName), 2)
     -- Loop through each template for processing into a class.
     for templateName, template in pairs(templates) do
         local cleanTemplateName = templateName:gsub(invalidTemplateChars, "")
@@ -564,10 +564,10 @@ end
 local function deleteOldTemplates(dir)
     local functionName = "deleteOldTemplates"
     for filename in lfs.dir(dir) do
-        local path = folder .. "/" .. fileName
+        local path = dir .. filename
         local attr = lfs.attributes(path)
         if attr.mode == "file" and filename:find(luaFileName.."%d+.lua") then
-            consoleOutput(functionName, string.format("Removing file  %s",filename), 1)
+            consoleOutput(functionName, string.format("Removing file %s",filename), 1)
             os.remove(path)
         end
     end
