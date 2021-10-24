@@ -128,6 +128,121 @@ function C_LFGList.GetSearchResultMemberCounts(resultID) end
 ---|'"HEALER"'
 ---|'"TANK"'
 
----@param specIndex number
----@return SpecRole role
+---@param specIndex number Index of the specialization whos role is being checked.
+---@return SpecRole role One of 3 roles roles returned for the specIndex checked.
 function GetSpecializationRole(specIndex) end
+
+---@param resultID number|string LFG Search Result ID
+---@param memberIdx number|string Index of the member being referenced. Member index 1 is always the group leader and always exists.
+---@return string role Role of the member index.
+---@return string class Global Class name eg: ("WARRIOR")
+---@return string classLocalized Localized class name eg: ("Warrior" )
+function C_LFGList.GetSearchResultMemberInfo(resultID,memberIdx) end
+
+
+---@param applicantID string|number ID of the application being referenced
+---@param memberIdx string|number Index of the member being referenced. Member index 1 is always the group leader and always exists.
+---@return string name Name of the applicant
+---@return string class Global Class name eg: ("WARRIOR")
+---@return string classLocalized Localized class name eg: ("Warrior" )
+---@return number level Level
+---@return number itemLevel Item Level
+---@return string honorLevel Honor level
+---@return boolean tank Applied as Tank
+---@return boolean healer Applied as Healer
+---@return boolean damager Applied as Damager
+---@return string assignedRole Role that is currently selected in the UI. If the role has not been changed in the UI, this will be the role of the spec the applicant currently has active.
+---@return boolean relationship True if the applicant is a friend of a member in the listed group.
+---@return number dungeonScore Blizzard Mythic Plus Rating
+---@return string pvpItemLevel PvP Item Level
+function C_LFGList.GetApplicantMemberInfo(applicantID, memberIdx) end
+
+---@param applicantID string|number ID of the applicant to remove from queue
+function C_LFGList.RemoveApplicant(applicantID) end
+
+---@param applicantID string|number ID of the applicant to decline
+function C_LFGList.DeclineApplicant(applicantID) end
+
+---@param unitID string Unit to check inspectability of.
+---@param showError boolean If true, the function will display an error message ("You can't inspect that unit") if you cannot inspect the specified unit.
+function CanInspect(unitID, showError) end
+
+---@param unitID string Unit to get a GUID for
+---@return string GUID
+function UnitGUID(unitID) end
+
+---Generates an event ("INSPECT_READY") when the specified unit can be inspected.
+---@param unitID string Unit that an event will be generated for when they can be inspected.
+function NotifyInspect(unitID) end
+
+---@class FontString : FontInstance, LayeredRegion
+---[Documentation](https://wowpedia.fandom.com/wiki/UIOBJECT_FontString)
+local FontString = {}
+
+---[Documentation](https://wowpedia.fandom.com/wiki/API_FontString_CalculateScreenAreaFromCharacterSpan)
+function FontString:CalculateScreenAreaFromCharacterSpan(leftCharacterIndex, rightCharacterIndex) end
+
+---[Documentation](https://wowpedia.fandom.com/wiki/API_FontString_CanNonSpaceWrap)
+function FontString:CanNonSpaceWrap() end
+
+---[Documentation](https://wowpedia.fandom.com/wiki/API_FontString_CanWordWrap)
+function FontString:CanWordWrap() end
+
+---[Documentation](https://wowpedia.fandom.com/wiki/API_FontString_FindCharacterIndexAtCoordinate)
+function FontString:FindCharacterIndexAtCoordinate(x, y) end
+
+---[Documentation](https://wowpedia.fandom.com/wiki/API_FontString_GetFieldSize)
+function FontString:GetFieldSize() end
+
+---[Documentation](https://wowpedia.fandom.com/wiki/API_FontString_GetLineHeight)
+function FontString:GetLineHeight() end
+
+---[Documentation](https://wowpedia.fandom.com/wiki/API_FontString_GetMaxLines)
+function FontString:GetMaxLines() end
+
+---[Documentation](https://wowpedia.fandom.com/wiki/API_FontString_GetNumLines)
+function FontString:GetNumLines() end
+
+---[Documentation](https://wowpedia.fandom.com/wiki/API_FontString_GetStringHeight)
+function FontString:GetStringHeight() end
+
+---[Documentation](https://wowpedia.fandom.com/wiki/API_FontString_GetStringWidth)
+function FontString:GetStringWidth() end
+
+---[Documentation](https://wowpedia.fandom.com/wiki/API_FontString_GetText)
+function FontString:GetText() end
+
+---[Documentation](https://wowpedia.fandom.com/wiki/API_FontString_GetUnboundedStringWidth)
+function FontString:GetUnboundedStringWidth() end
+
+---[Documentation](https://wowpedia.fandom.com/wiki/API_FontString_GetWrappedWidth)
+function FontString:GetWrappedWidth() end
+
+---[Documentation](https://wowpedia.fandom.com/wiki/API_FontString_IsTruncated)
+function FontString:IsTruncated() end
+
+---[Documentation](https://wowpedia.fandom.com/wiki/API_FontString_SetAlphaGradient)
+function FontString:SetAlphaGradient(start, length) end
+
+---[Documentation](https://wowpedia.fandom.com/wiki/API_FontString_SetFixedColor)
+function FontString:SetFixedColor() end
+
+---[Documentation](https://wowpedia.fandom.com/wiki/API_FontString_SetFormattedText)
+function FontString:SetFormattedText(formatstring) end
+
+---[Documentation](https://wowpedia.fandom.com/wiki/API_FontString_SetMaxLines)
+function FontString:SetMaxLines() end
+
+---[Documentation](https://wowpedia.fandom.com/wiki/API_FontString_SetNonSpaceWrap)
+function FontString:SetNonSpaceWrap(wrapFlag) end
+
+---[Documentation](https://wowpedia.fandom.com/wiki/API_FontString_SetText)
+function FontString:SetText(text) end
+
+---[Documentation](https://wowpedia.fandom.com/wiki/API_FontString_SetTextHeight)
+function FontString:SetTextHeight(pixelHeight) end
+
+---@param enabled boolean Toggle Word Wrap for the FontString.
+---[Documentation](https://wowpedia.fandom.com/wiki/API_FontString_SetWordWrap)
+function FontString:SetWordWrap(enabled) end
+
