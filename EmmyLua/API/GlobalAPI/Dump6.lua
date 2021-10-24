@@ -512,7 +512,7 @@ function UnitAttackSpeed() end
 ---@return string? dispelType
 ---@return number duration
 ---@return number expirationTime
----@return string source 
+---@return string source
 ---@return boolean isStealable
 ---@return boolean nameplateShowPersonal
 ---@return number spellId
@@ -533,7 +533,7 @@ function UnitAura(unit, index, filter) end
 ---@return string? dispelType
 ---@return number duration
 ---@return number expirationTime
----@return string source 
+---@return string source
 ---@return boolean isStealable
 ---@return boolean nameplateShowPersonal
 ---@return number spellId
@@ -554,7 +554,7 @@ function UnitBuff(unit, index, filter) end
 ---@return string? dispelType
 ---@return number duration
 ---@return number expirationTime
----@return string source 
+---@return string source
 ---@return boolean isStealable
 ---@return boolean nameplateShowPersonal
 ---@return number spellId
@@ -650,9 +650,6 @@ function UnitFactionGroup(unit) end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_UnitFullName)
 function UnitFullName() end
-
----[Documentation](https://wowpedia.fandom.com/wiki/API_UnitGUID)
-function UnitGUID() end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_UnitGetAvailableRoles)
 function UnitGetAvailableRoles() end

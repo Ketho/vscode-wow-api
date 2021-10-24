@@ -1181,9 +1181,6 @@ function C_LFGList.ClearSearchResults() end
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_LFGList.CreateListing)
 function C_LFGList.CreateListing(activityID, itemLevel, honorLevel, autoAccept, privateGroup, questID) end
 
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_LFGList.DeclineApplicant)
-function C_LFGList.DeclineApplicant() end
-
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_LFGList.DeclineInvite)
 function C_LFGList.DeclineInvite() end
 
@@ -1219,9 +1216,6 @@ function C_LFGList.GetActivityInfo(activityID) end
 ---@return boolean currentArea
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_LFGList.GetActivityInfoExpensive)
 function C_LFGList.GetActivityInfoExpensive(activityID) end
-
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_LFGList.GetApplicantMemberInfo)
-function C_LFGList.GetApplicantMemberInfo() end
 
 ---@param applicantID number
 ---@param memberIndex number
@@ -1293,12 +1287,6 @@ function C_LFGList.GetSearchResultEncounterInfo() end
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_LFGList.GetSearchResultFriends)
 function C_LFGList.GetSearchResultFriends() end
 
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_LFGList.GetSearchResultMemberCounts)
-function C_LFGList.GetSearchResultMemberCounts() end
-
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_LFGList.GetSearchResultMemberInfo)
-function C_LFGList.GetSearchResultMemberInfo() end
-
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_LFGList.HasActivityList)
 function C_LFGList.HasActivityList() end
 
@@ -1311,9 +1299,6 @@ function C_LFGList.IsCurrentlyApplying() end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_LFGList.RefreshApplicants)
 function C_LFGList.RefreshApplicants() end
-
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_LFGList.RemoveApplicant)
-function C_LFGList.RemoveApplicant() end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_LFGList.RemoveListing)
 function C_LFGList.RemoveListing() end

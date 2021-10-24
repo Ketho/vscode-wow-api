@@ -875,9 +875,6 @@ function GetSpecializationMasterySpells() end
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_GetSpecializationNameForSpecID)
 function GetSpecializationNameForSpecID() end
 
----[Documentation](https://wowpedia.fandom.com/wiki/API_GetSpecializationRole)
-function GetSpecializationRole() end
-
 ---@param specID number
 ---@return string roleToken
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_GetSpecializationRoleByID)

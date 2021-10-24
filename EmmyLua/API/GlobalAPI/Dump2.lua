@@ -740,9 +740,6 @@ function CanHearthAndResurrectFromArea() end
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_CanInitiateWarGame)
 function CanInitiateWarGame() end
 
----[Documentation](https://wowpedia.fandom.com/wiki/API_CanInspect)
-function CanInspect() end
-
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_CanItemBeSocketedToArtifact)
 function CanItemBeSocketedToArtifact() end
 

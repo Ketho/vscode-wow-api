@@ -652,9 +652,6 @@ function NoPlayTime() end
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_NotWhileDeadError)
 function NotWhileDeadError() end
 
----[Documentation](https://wowpedia.fandom.com/wiki/API_NotifyInspect)
-function NotifyInspect() end
-
 ---@return number numNodes
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_NumTaxiNodes)
 function NumTaxiNodes() end

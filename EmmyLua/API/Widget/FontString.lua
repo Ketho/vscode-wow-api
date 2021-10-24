@@ -65,5 +65,6 @@ function FontString:SetText(text) end
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_FontString_SetTextHeight)
 function FontString:SetTextHeight(pixelHeight) end
 
+---@param enabled boolean Toggle Word Wrap for the FontString.
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_FontString_SetWordWrap)
-function FontString:SetWordWrap() end
+function FontString:SetWordWrap(enabled) end
