@@ -10,7 +10,7 @@
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_CreateFrame)
 function CreateFrame(frameType, name, parent, template, id) end
 
----@param invSlotName InventorySlotName 
+---@param invSlotName InventorySlotName
 ---@return number slotId
 ---@return string textureName
 ---@return boolean checkRelic
@@ -113,3 +113,21 @@ C_ToyBox = {}
 C_Trophy = {}
 C_Widget = {}
 C_WowTokenPublic = {}
+
+---@class roleCount:Table
+---@field TANK number
+---@field HEALER number
+---@field DAMAGER number
+
+---@param resultID number|string LFG Search Result ID
+---@return roleCount roleCount Counts for each role in the search result.
+function C_LFGList.GetSearchResultMemberCounts(resultID) end
+
+---@alias SpecRole
+---|'"DAMAGER"'
+---|'"HEALER"'
+---|'"TANK"'
+
+---@param specIndex number
+---@return SpecRole role
+function GetSpecializationRole(specIndex) end
