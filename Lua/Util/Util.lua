@@ -81,6 +81,5 @@ function Util:GetWoWApiPagesXML(pages)
     source = ltn12.source.string(requestBody),
     sink = ltn12.sink.table(responseBody)
   }
-  print(requestBody)
   return table.concat(responseBody)
 end

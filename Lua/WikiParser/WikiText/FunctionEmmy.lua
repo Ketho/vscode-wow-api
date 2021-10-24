@@ -34,7 +34,10 @@ local outputFile = GetOutputFile()
 local countValid = 0
 local countNonValid = 0
 local countNonDoc = 0
-
+local checkApi = {
+  undoc = {},
+  unver = {}
+}
 local sorted = Util:SortTable(nonBlizzDocumented)
 for _, name in pairs(sorted) do
 	if not manualDoc[name] then
@@ -48,9 +51,10 @@ for _, name in pairs(sorted) do
 			outputFile:write(fs:format(name, name, wowpedia_arguments[name] or ""))
 			if nonvalidated[name] then
 				countNonValid = countNonValid + 1
+        checkApi.unver[name] = true
 			else
 				countNonDoc = countNonDoc + 1
-        print(name)
+        checkApi.undoc[name] = true
 			end
 		end
 		count = count + 1
@@ -61,7 +65,8 @@ for _, name in pairs(sorted) do
 		end
 	end
 end
-
+-- Write out any unknown/unverified APIs for further research.
+Util:WriteFile("Lua/unknownApiList.lua","local z = "..require("inspect")(checkApi))
 local total = countValid+countNonValid+countNonDoc
 print("valid api", countValid, format("%.2f%%", 100*countValid/total))
 print("non valid", countNonValid, format("%.2f%%", 100*countNonValid/total))

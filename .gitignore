@@ -8,3 +8,4 @@ node_modules
 Lua/Data
 lua-*
 luarocks-*
+UITemplates*.lua

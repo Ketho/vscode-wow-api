@@ -18,7 +18,7 @@ then
     curl -R -O http://luarocks.github.io/luarocks/releases/luarocks-3.7.0.tar.gz
     tar zxpf luarocks-3.7.0.tar.gz
     cd luarocks-3.7.0
-    ./configure --with-lua-include=/usr/local/include
+    ./configure --lua-version=5.3 --versioned-rocks-dir --with-lua-include=/usr/local/include
     make
     sudo make install
     cd ..
