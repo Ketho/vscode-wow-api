@@ -8,6 +8,7 @@ function m:LoadApiDocs(base)
 	local toc = io.open(base.."/Blizzard_APIDocumentation/Blizzard_APIDocumentation.toc")
 	local isDoc
 	for line in toc:lines() do
+		line = line:gsub("[\r\n]+$","")
 		if line:find("%.lua") then
 			-- load blizzard addon and apidocs
 			Util:LoadFile(base.."/Blizzard_APIDocumentation/"..line)
@@ -31,7 +32,6 @@ function m:LoadApiDocs(base)
 		end
 	end
 	toc:close()
-	require(base.."/MissingDocumentation")
 	local text = Emmy:GetSystem(self.documentationInfo)
 	Util:WriteFile("EmmyLua/API/MissingDocumentation.lua", text.."\n")
 end
