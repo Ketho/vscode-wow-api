@@ -530,7 +530,7 @@ function UnitAttackSpeed() end
 ---@return string? dispelType
 ---@return number duration
 ---@return number expirationTime
----@return string source 
+---@return string source
 ---@return boolean isStealable
 ---@return boolean nameplateShowPersonal
 ---@return number spellId
@@ -551,7 +551,7 @@ function UnitAura(unit, index, filter) end
 ---@return string? dispelType
 ---@return number duration
 ---@return number expirationTime
----@return string source 
+---@return string source
 ---@return boolean isStealable
 ---@return boolean nameplateShowPersonal
 ---@return number spellId
@@ -572,7 +572,7 @@ function UnitBuff(unit, index, filter) end
 ---@return string? dispelType
 ---@return number duration
 ---@return number expirationTime
----@return string source 
+---@return string source
 ---@return boolean isStealable
 ---@return boolean nameplateShowPersonal
 ---@return number spellId
