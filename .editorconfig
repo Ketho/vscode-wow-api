@@ -12,6 +12,9 @@ insert_final_newline = true
 [bin/**]
 end_of_line = lf
 
+[.lua/**]
+end_of_line = lf
+
 [.luacheckrc]
 indent_style = tab
 indent_size = 4
