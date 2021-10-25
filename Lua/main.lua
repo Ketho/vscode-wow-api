@@ -3,7 +3,6 @@ format = string.format
 require("Lua/Util/Util")
 
 -- create folders if they don't exist yet
-Util:MakeDir("Lua/Data")
 Util:MakeDir("Lua/Data/cache")
 Util:MakeDir("Lua/Data/input")
 Util:MakeDir("Lua/Data/output")
@@ -28,6 +27,4 @@ Util:WriteFile("src/data/globalstring.ts", require("Lua/ToTypeScript/GlobalStrin
 -- parse the wiki
 require("Lua/WikiParser/WikiText/FunctionEmmy")
 
---- parse UI templates
-require("Lua/TemplateExtraction/main")
 print("Finished.")
