@@ -1,5 +1,8 @@
 # Change Log
-
+- 🛠 Improvements: UI Templates are parsed from XML and have their properties inherited by frames created using them (via Intellisense)
+- 🛠 Improvements: Added bin/setup.sh that can be ran in bash prepare an environment for running main.lua. Everything is created in directory .lua
+- 🛠 Improvements: Running bin/run.sh executes main.lua in the proper environmet to generate all required files.
+- Added a Rock Spec for the project.
 ## [0.6.2] - 2021-10-05
 ### Added
 - 🛠 Improvements: Parse emmylua directly from wikitext, testing with [GetSpellInfo](https://wowpedia.fandom.com/wiki/API_GetSpellInfo)
