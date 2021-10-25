@@ -9,3 +9,5 @@ Lua/Data
 lua-*
 luarocks-*
 UITemplates*.lua
+.lua
+.wow-ui-source

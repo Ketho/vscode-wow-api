@@ -12,7 +12,7 @@ function DEFAULT_CHAT_FRAME:SetMaxLines()
 end
 
 -- Lua 5.1
-unpack = table.unpack
+unpack = unpack or table.unpack
 
 -- why is WoW so backwards
 function string.split(delim, input)

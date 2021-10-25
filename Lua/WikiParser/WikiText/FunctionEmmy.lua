@@ -15,7 +15,7 @@ local convertedApi = converter:ConvertApi(validated)
 
 -- dont generate for manually documented API
 local manualDoc = {}
-for s in string.gmatch(manualDocFile:read("a"), "function (%w+)") do
+for s in string.gmatch(manualDocFile:read(), "function (%w+)") do
 	manualDoc[s] = true
 end
 

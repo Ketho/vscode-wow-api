@@ -1,6 +1,6 @@
 -- cache should already be created at this point
 local data = require("Lua/Data/cache/CVars")
-local unpack = table.unpack
+local unpack = unpack or table.unpack
 local pre = [[
 interface CVarInterface {
 	[key: string]: {

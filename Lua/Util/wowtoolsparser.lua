@@ -171,13 +171,13 @@ end
 
 function parser.ExplodeCSV(iter)
 	for line in iter:lines() do
-		print(table.unpack(line))
+		print(unpack(line))
 	end
 end
 
 function parser.ExplodeJSON(tbl)
 	for _, line in pairs(tbl) do
-		print(table.unpack(line))
+		print(unpack(line))
 	end
 end
 

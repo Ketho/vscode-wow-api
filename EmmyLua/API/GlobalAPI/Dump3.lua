@@ -1,3 +1,6 @@
+---[Documentation](https://wowpedia.fandom.com/wiki/API_GetAchievementGuildRep)
+function GetAchievementGuildRep() end
+
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_GetAchievementInfo)
 function GetAchievementInfo() end
 
@@ -1146,6 +1149,9 @@ function GetInventoryItemTexture() end
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_GetInventoryItemsForSlot)
 function GetInventoryItemsForSlot() end
 
+---[Documentation](https://wowpedia.fandom.com/wiki/API_GetInventorySlotInfo)
+function GetInventorySlotInfo() end
+
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_GetInviteConfirmationInfo)
 function GetInviteConfirmationInfo() end
 
@@ -1909,10 +1915,4 @@ function GetNumQuestLogRewardSpells() end
 ---@return number numQuestRewards
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_GetNumQuestLogRewards)
 function GetNumQuestLogRewards() end
-
----[Documentation](https://wowpedia.fandom.com/wiki/API_GetNumQuestLogTasks)
-function GetNumQuestLogTasks() end
-
----[Documentation](https://wowpedia.fandom.com/wiki/API_GetNumQuestPOIWorldEffects)
-function GetNumQuestPOIWorldEffects() end
 

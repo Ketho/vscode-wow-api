@@ -1,3 +1,21 @@
+---[Documentation](https://wowpedia.fandom.com/wiki/API_SetRecruitingGuildSelection)
+function SetRecruitingGuildSelection() end
+
+---[Documentation](https://wowpedia.fandom.com/wiki/API_SetSavedInstanceExtend)
+function SetSavedInstanceExtend() end
+
+---[Documentation](https://wowpedia.fandom.com/wiki/API_SetScreenResolution)
+function SetScreenResolution() end
+
+---[Documentation](https://wowpedia.fandom.com/wiki/API_SetSelectedArtifact)
+function SetSelectedArtifact() end
+
+---[Documentation](https://wowpedia.fandom.com/wiki/API_SetSelectedDisplayChannel)
+function SetSelectedDisplayChannel() end
+
+---[Documentation](https://wowpedia.fandom.com/wiki/API_SetSelectedFaction)
+function SetSelectedFaction() end
+
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_SetSelectedScreenResolutionIndex)
 function SetSelectedScreenResolutionIndex() end
 
@@ -512,7 +530,7 @@ function UnitAttackSpeed() end
 ---@return string? dispelType
 ---@return number duration
 ---@return number expirationTime
----@return string source
+---@return string source 
 ---@return boolean isStealable
 ---@return boolean nameplateShowPersonal
 ---@return number spellId
@@ -533,7 +551,7 @@ function UnitAura(unit, index, filter) end
 ---@return string? dispelType
 ---@return number duration
 ---@return number expirationTime
----@return string source
+---@return string source 
 ---@return boolean isStealable
 ---@return boolean nameplateShowPersonal
 ---@return number spellId
@@ -554,7 +572,7 @@ function UnitBuff(unit, index, filter) end
 ---@return string? dispelType
 ---@return number duration
 ---@return number expirationTime
----@return string source
+---@return string source 
 ---@return boolean isStealable
 ---@return boolean nameplateShowPersonal
 ---@return number spellId
@@ -569,8 +587,14 @@ function UnitDebuff(unit, index, filter) end
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_UnitAuraBySlot)
 function UnitAuraBySlot() end
 
+---@param unit string
+---@param filter string
+---@param maxSlots number
+---@param continuationToken number
+---@return number continuationToken
+---@return number ..
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_UnitAuraSlots)
-function UnitAuraSlots() end
+function UnitAuraSlots(unit, filter, maxSlots, continuationToken) end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_UnitBattlePetLevel)
 function UnitBattlePetLevel() end
@@ -598,6 +622,9 @@ function UnitCanPetBattle() end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_UnitCastingInfo)
 function UnitCastingInfo() end
+
+---[Documentation](https://wowpedia.fandom.com/wiki/API_UnitChannelInfo)
+function UnitChannelInfo() end
 
 ---@param unit string
 ---@return string classification
@@ -650,6 +677,9 @@ function UnitFactionGroup(unit) end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_UnitFullName)
 function UnitFullName() end
+
+---[Documentation](https://wowpedia.fandom.com/wiki/API_UnitGUID)
+function UnitGUID() end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_UnitGetAvailableRoles)
 function UnitGetAvailableRoles() end
@@ -865,6 +895,17 @@ function UnitIsWildBattlePet(unit) end
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_UnitLeadsAnyGroup)
 function UnitLeadsAnyGroup() end
 
+---@param unit string
+---@return number level
+---[Documentation](https://wowpedia.fandom.com/wiki/API_UnitLevel)
+function UnitLevel(unit) end
+
+---@param unit string
+---@return string name
+---@return string realm
+---[Documentation](https://wowpedia.fandom.com/wiki/API_UnitName)
+function UnitName(unit) end
+
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_UnitNameUnmodified)
 function UnitNameUnmodified() end
 
@@ -902,6 +943,9 @@ function UnitPosition(unit) end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_UnitPowerBarTimerInfo)
 function UnitPowerBarTimerInfo() end
+
+---[Documentation](https://wowpedia.fandom.com/wiki/API_UnitPowerType)
+function UnitPowerType() end
 
 ---@param unit string
 ---@return string raceName
@@ -1145,6 +1189,9 @@ function forceinsecure() end
 ---@return function func
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_geterrorhandler)
 function geterrorhandler() end
+
+---[Documentation](https://wowpedia.fandom.com/wiki/API_hooksecurefunc)
+function hooksecurefunc() end
 
 ---@return boolean secure
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_issecure)

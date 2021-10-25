@@ -22,7 +22,8 @@ local function ToTypeScript()
 	local stringsTable = {}
 	for line in globalstrings:lines() do
 		local flags = tonumber(line.Flags)
-		if flags and flags&0x1 > 0 then
+
+    if flags and flags+0x1 > 0 then
 			table.insert(stringsTable, {
 				BaseTag = line.BaseTag,
 				TagText = line.TagText_lang

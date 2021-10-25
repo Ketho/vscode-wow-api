@@ -1,7 +1,7 @@
 local xml = require("xml")
 local lfs = require("lfs")
 
-local interfacePath = "../wow-ui-source"
+local interfacePath = ".wow-ui-source/Interface"
 local wowUiGit = "https://github.com/Gethe/wow-ui-source/tree/live/Interface/"
 local outputDir = "EmmyLua/FrameXML/SharedXML/"
 local luaFileName = "UITemplates"

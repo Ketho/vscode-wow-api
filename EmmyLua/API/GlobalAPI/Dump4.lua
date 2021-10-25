@@ -1,3 +1,9 @@
+---[Documentation](https://wowpedia.fandom.com/wiki/API_GetNumQuestLogTasks)
+function GetNumQuestLogTasks() end
+
+---[Documentation](https://wowpedia.fandom.com/wiki/API_GetNumQuestPOIWorldEffects)
+function GetNumQuestPOIWorldEffects() end
+
 ---@return number numRewards
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_GetNumQuestRewards)
 function GetNumQuestRewards() end
@@ -420,6 +426,12 @@ function GetQuestLogLeaderBoard() end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_GetQuestLogPortraitTurnIn)
 function GetQuestLogPortraitTurnIn() end
+
+---@param questLogIndex number
+---@return string questDescription
+---@return string questObjectives
+---[Documentation](https://wowpedia.fandom.com/wiki/API_GetQuestLogQuestText)
+function GetQuestLogQuestText(questLogIndex) end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_GetQuestLogQuestType)
 function GetQuestLogQuestType() end
@@ -866,6 +878,12 @@ function GetSpecialization(isInspect, isPet, specGroup) end
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_GetSpecializationInfo)
 function GetSpecializationInfo() end
 
+---[Documentation](https://wowpedia.fandom.com/wiki/API_GetSpecializationInfoByID)
+function GetSpecializationInfoByID() end
+
+---[Documentation](https://wowpedia.fandom.com/wiki/API_GetSpecializationInfoForClassID)
+function GetSpecializationInfoForClassID() end
+
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_GetSpecializationInfoForSpecID)
 function GetSpecializationInfoForSpecID() end
 
@@ -874,6 +892,9 @@ function GetSpecializationMasterySpells() end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_GetSpecializationNameForSpecID)
 function GetSpecializationNameForSpecID() end
+
+---[Documentation](https://wowpedia.fandom.com/wiki/API_GetSpecializationRole)
+function GetSpecializationRole() end
 
 ---@param specID number
 ---@return string roleToken
@@ -1591,6 +1612,9 @@ function IsActiveQuestTrivial() end
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_IsAddOnLoadOnDemand)
 function IsAddOnLoadOnDemand() end
 
+---[Documentation](https://wowpedia.fandom.com/wiki/API_IsAddOnLoaded)
+function IsAddOnLoaded() end
+
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_IsAddonVersionCheckEnabled)
 function IsAddonVersionCheckEnabled() end
 
@@ -1824,26 +1848,4 @@ function IsInAuthenticatedRank() end
 ---@return boolean inCinematicScene
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_IsInCinematicScene)
 function IsInCinematicScene() end
-
----@param groupType number
----@return boolean inGroup
----[Documentation](https://wowpedia.fandom.com/wiki/API_IsInGroup)
-function IsInGroup(groupType) end
-
----[Documentation](https://wowpedia.fandom.com/wiki/API_IsInGuild)
-function IsInGuild() end
-
----[Documentation](https://wowpedia.fandom.com/wiki/API_IsInGuildGroup)
-function IsInGuildGroup() end
-
----@return boolean inInstance
----@return string instanceType
----[Documentation](https://wowpedia.fandom.com/wiki/API_IsInInstance)
-function IsInInstance() end
-
----[Documentation](https://wowpedia.fandom.com/wiki/API_IsInJailersTower)
-function IsInJailersTower() end
-
----[Documentation](https://wowpedia.fandom.com/wiki/API_IsInLFGDungeon)
-function IsInLFGDungeon() end
 

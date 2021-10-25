@@ -249,7 +249,7 @@ function m:ValidateApi(info)
 			ValidationError(info, string.format("%d:%s - could not find signature arguments", info.idx, info.apiName))
 		elseif param.type == "UNKNOWN" then
 			ValidationError(info, string.format("%d:%s - argument type could not be parsed: %s, %s", info.idx, info.apiName, info.signature.arguments[i], param.name))
-		elseif info.signature.arguments[i] ~= param.name then
+		elseif info.signature.arguments[i] and info.signature.arguments[i] ~= param.name then
 			ValidationError(info, string.format("%d:%s - argument does not match: %s, %s", info.idx, info.apiName, info.signature.arguments[i], param.name))
 		end
 		if not validTypes[param.type] then
@@ -269,7 +269,7 @@ function m:ValidateApi(info)
 			ValidationError(info, string.format("%d:%s - could not find signature returns", info.idx, info.apiName))
 		elseif param.type == "UNKNOWN" then
 			ValidationError(info, string.format("%d:%s - return type could not be parsed: %s, %s", info.idx, info.apiName, info.signature.returns[i], param.name))
-		elseif info.signature.returns[i] ~= param.name then
+		elseif info.signature.returns[i] and info.signature.returns[i] ~= param.name then
 			ValidationError(info, string.format("%d:%s - return value does not match: %s, %s", info.idx, info.apiName, info.signature.returns[i], param.name))
 		end
 		if not validTypes[param.type] then

@@ -740,6 +740,9 @@ function CanHearthAndResurrectFromArea() end
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_CanInitiateWarGame)
 function CanInitiateWarGame() end
 
+---[Documentation](https://wowpedia.fandom.com/wiki/API_CanInspect)
+function CanInspect() end
+
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_CanItemBeSocketedToArtifact)
 function CanItemBeSocketedToArtifact() end
 
@@ -1224,6 +1227,9 @@ function CopyToClipboard() end
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_CreateFont)
 function CreateFont() end
 
+---[Documentation](https://wowpedia.fandom.com/wiki/API_CreateFrame)
+function CreateFrame() end
+
 ---@param name string
 ---@param iconFileID number
 ---@param body string
@@ -1691,7 +1697,4 @@ function GetAchievementCriteriaInfo() end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_GetAchievementCriteriaInfoByID)
 function GetAchievementCriteriaInfoByID() end
-
----[Documentation](https://wowpedia.fandom.com/wiki/API_GetAchievementGuildRep)
-function GetAchievementGuildRep() end
 

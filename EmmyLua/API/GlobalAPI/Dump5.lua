@@ -1,4 +1,26 @@
 ---@param groupType number
+---@return boolean inGroup
+---[Documentation](https://wowpedia.fandom.com/wiki/API_IsInGroup)
+function IsInGroup(groupType) end
+
+---[Documentation](https://wowpedia.fandom.com/wiki/API_IsInGuild)
+function IsInGuild() end
+
+---[Documentation](https://wowpedia.fandom.com/wiki/API_IsInGuildGroup)
+function IsInGuildGroup() end
+
+---@return boolean inInstance
+---@return string instanceType
+---[Documentation](https://wowpedia.fandom.com/wiki/API_IsInInstance)
+function IsInInstance() end
+
+---[Documentation](https://wowpedia.fandom.com/wiki/API_IsInJailersTower)
+function IsInJailersTower() end
+
+---[Documentation](https://wowpedia.fandom.com/wiki/API_IsInLFGDungeon)
+function IsInLFGDungeon() end
+
+---@param groupType number
 ---@return boolean isInRaid
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_IsInRaid)
 function IsInRaid(groupType) end
@@ -651,6 +673,9 @@ function NoPlayTime() end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_NotWhileDeadError)
 function NotWhileDeadError() end
+
+---[Documentation](https://wowpedia.fandom.com/wiki/API_NotifyInspect)
+function NotifyInspect() end
 
 ---@return number numNodes
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_NumTaxiNodes)
@@ -1622,22 +1647,4 @@ function SetRaidTarget(unit, index) end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_SetRaidTargetProtected)
 function SetRaidTargetProtected() end
-
----[Documentation](https://wowpedia.fandom.com/wiki/API_SetRecruitingGuildSelection)
-function SetRecruitingGuildSelection() end
-
----[Documentation](https://wowpedia.fandom.com/wiki/API_SetSavedInstanceExtend)
-function SetSavedInstanceExtend() end
-
----[Documentation](https://wowpedia.fandom.com/wiki/API_SetScreenResolution)
-function SetScreenResolution() end
-
----[Documentation](https://wowpedia.fandom.com/wiki/API_SetSelectedArtifact)
-function SetSelectedArtifact() end
-
----[Documentation](https://wowpedia.fandom.com/wiki/API_SetSelectedDisplayChannel)
-function SetSelectedDisplayChannel() end
-
----[Documentation](https://wowpedia.fandom.com/wiki/API_SetSelectedFaction)
-function SetSelectedFaction() end
 
