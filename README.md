@@ -1,7 +1,7 @@
 ## WoW API
 [![](https://img.shields.io/github/license/Ketho/vscode-wow-api)](https://opensource.org/licenses/MIT)
 [![](https://img.shields.io/github/v/release/Ketho/vscode-wow-api)](https://github.com/Ketho/vscode-wow-api/releases)
-[![](https://img.shields.io/badge/wow-9.1.0-yellow)](https://github.com/Gethe/wow-ui-source/tree/9.1.0)
+[![](https://img.shields.io/badge/wow-9.1.5-yellow)](https://github.com/Gethe/wow-ui-source/tree/9.1.5)
 
 Adds IntelliSense features for World of Warcraft API to VS Code. This extension uses [Sumneko's](https://marketplace.visualstudio.com/items?itemName=sumneko.lua) Lua [Language Server](https://microsoft.github.io/language-server-protocol/) with [EmmyLua](https://github.com/sumneko/lua-language-server/wiki/EmmyLua-Annotations) annotations.
 
@@ -25,13 +25,13 @@ See [Recommended settings](https://github.com/Ketho/vscode-wow-api/wiki/Recommen
 #### [CVars](https://wowpedia.fandom.com/wiki/Console_variables)
 ![](https://github.com/Ketho/vscode-wow-api/raw/master/img/cvar.png)
 
-#### [Enums](https://github.com/Ketho/BlizzardInterfaceResources/blob/live/Resources/LuaEnum.lua)
+#### [Enums](https://github.com/Ketho/BlizzardInterfaceResources/blob/mainline/Resources/LuaEnum.lua)
 * `Enum` table
 * `LE_` Lua Enums
 
 ![](https://github.com/Ketho/vscode-wow-api/raw/master/img/enum.gif)
 
-#### [GlobalStrings](https://github.com/Ketho/BlizzardInterfaceResources/blob/live/Resources/GlobalStrings.lua)
+#### [GlobalStrings](https://github.com/Ketho/BlizzardInterfaceResources/blob/mainline/Resources/GlobalStrings.lua)
 Shows completion for GlobalStrings at >3 uppercase letters to declutter fuzzy search.
 
 ![](https://github.com/Ketho/vscode-wow-api/raw/master/img/globalstring.gif)
@@ -54,12 +54,13 @@ lua53 ./Lua/main.lua
 The following people contributed to the development resources or their work was of invaluable help.
 * [Andols](https://www.curseforge.com/members/andols/projects)
 * [Buds](https://github.com/mrbuds)
-* [Cladhaire](https://wowprogramming.com/)
+* [ChrisKader](https://github.com/ChrisKader)
 * [DahkCeles](https://www.curseforge.com/members/dahkceles/projects)
 * [Ellypse](https://github.com/Ellypse)
 * [Foxlit](https://www.townlong-yak.com/)
 * [Gethe](https://github.com/Gethe)
 * [Iriel](https://wowpedia.fandom.com/wiki/Iriel)
+* [jnwhiteh](https://twitter.com/jnwhiteh)
 * [Kaydeethree](https://github.com/kaydeethree)
 * [Marlamin](https://wow.tools/)
 * [Meorawr](https://github.com/Meorawr)
@@ -75,3 +76,4 @@ The following people contributed to the development resources or their work was 
 * [ScreenToGif](https://github.com/NickeManarin/ScreenToGif)
 * [WoWInterface](https://wowinterface.com/)
 * [Wowpedia](https://wowpedia.fandom.com/)
+* [Wowprogramming](https://wowprogramming.com/)
