@@ -1,6 +1,6 @@
 local path = "Lua/Data/cache/LuaEnum.lua"
-local url = "https://raw.githubusercontent.com/Ketho/BlizzardInterfaceResources/live/Resources/LuaEnum.lua"
-Util:CacheFile(path, url)
+local url = "https://raw.githubusercontent.com/Ketho/BlizzardInterfaceResources/mainline/Resources/LuaEnum.lua"
+Util:DownloadFile(path, url, true)
 local file = io.open(path)
 
 local pre = [[interface LuaEnumInterface {
