@@ -30,45 +30,13 @@ local RuneforgeLegendaryCraftDescription = {}
 ---@field Undocumented boolean
 local RuneforgePower = {}
 
----@class AddSoulbindConduitReason
-local AddSoulbindConduitReason = {
-	Undocumented = 0,
-}
+---@class MythicPlusRatingLinkInfo
+---@field Undocumented boolean
+local MythicPlusRatingLinkInfo = {}
 
----@class CharacterServiceInfoFlag
-local CharacterServiceInfoFlag = {
-	Undocumented = 0,
-}
-
----@class ManipulatorEventType
-local ManipulatorEventType = {
-	Undocumented = 0,
-}
-
----@class QuestPOIQuestTypes
-local QuestPOIQuestTypes = {
-	Undocumented = 0,
-}
-
----@class ScriptedAnimationTransformation
-local ScriptedAnimationTransformation = {
-	Undocumented = 0,
-}
-
----@class ScriptedAnimationTransformationTiming
-local ScriptedAnimationTransformationTiming = {
-	Undocumented = 0,
-}
-
----@class SoulbindConduitInstallResult
-local SoulbindConduitInstallResult = {
-	Undocumented = 0,
-}
-
----@class VasPurchaseProgress
-local VasPurchaseProgress = {
-	Undocumented = 0,
-}
+---@class ChatChannelInfo
+---@field Undocumented boolean
+local ChatChannelInfo = {}
 
 ---@class CalendarTime
 ---@field year number
@@ -96,6 +64,14 @@ local GarrisonTalentTreeInfo = {}
 ---@field emblemFileID number
 ---@field emblemStyle number
 local GuildTabardInfo = {}
+
+---@class MythicPlusAffixScoreInfo
+---@field name string
+---@field score number
+---@field level number
+---@field durationSec number
+---@field overTime boolean
+local MythicPlusAffixScoreInfo = {}
 
 ---@class TradeSkillRecipeInfo
 ---@field alternateVerb string|nil

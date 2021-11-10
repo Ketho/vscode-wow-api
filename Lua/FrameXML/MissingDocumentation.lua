@@ -15,16 +15,10 @@ local Missing =
 		{ Name = "RuneforgeLegendaryComponentInfo", Type = "Structure", Fields = Empty }, -- LegendaryCraftingDocumentation.lua
 		{ Name = "RuneforgeLegendaryCraftDescription", Type = "Structure", Fields = Empty }, -- LegendaryCraftingDocumentation.lua
 		{ Name = "RuneforgePower", Type = "Structure", Fields = Empty }, -- LegendaryCraftingDocumentation.lua
-		-- placeholder enums, unused in apidocs
-		{ Name = "AddSoulbindConduitReason", Type = "Enumeration", Fields = Empty },
-		{ Name = "CharacterServiceInfoFlag", Type = "Enumeration", Fields = Empty },
-		{ Name = "ManipulatorEventType", Type = "Enumeration", Fields = Empty },
-		{ Name = "QuestPOIQuestTypes", Type = "Enumeration", Fields = Empty },
-		{ Name = "ScriptedAnimationTransformation", Type = "Enumeration", Fields = Empty },
-		{ Name = "ScriptedAnimationTransformationTiming", Type = "Enumeration", Fields = Empty },
-		{ Name = "SoulbindConduitInstallResult", Type = "Enumeration", Fields = Empty },
-		{ Name = "VasPurchaseProgress", Type = "Enumeration", Fields = Empty },
-		-- structures
+		-- 9.1.5
+		{ Name = "MythicPlusRatingLinkInfo", Type = "Structure", Fields = Empty }, -- ChallengeModeInfoDocumentation.lua
+		{ Name = "ChatChannelInfo", Type = "Structure", Fields = Empty }, -- ChatInfoDocumentation.lua
+
 		{
 			-- C_Calendar; CalendarDocumentation.lua
 			Name = "CalendarTime",
@@ -65,6 +59,20 @@ local Missing =
 				{ Name = "emblemColor", Type = "table", Mixin = "ColorMixin" },
 				{ Name = "emblemFileID", Type = "number" },
 				{ Name = "emblemStyle", Type = "number" },
+			},
+		},
+		{
+			-- C_MythicPlus; MythicPlusInfoDocumentation.lua; definition was removed from 9.1.5 but its still used
+			Name = "MythicPlusAffixScoreInfo",
+			Type = "Structure",
+			Documentation = { "Information about a specific M+ run" },
+			Fields =
+			{
+				{ Name = "name", Type = "string", Nilable = false },
+				{ Name = "score", Type = "number", Nilable = false },
+				{ Name = "level", Type = "number", Nilable = false },
+				{ Name = "durationSec", Type = "number", Nilable = false },
+				{ Name = "overTime", Type = "bool", Nilable = false },
 			},
 		},
 		{
