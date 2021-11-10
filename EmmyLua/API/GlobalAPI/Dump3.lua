@@ -1,115 +1,3 @@
----[Documentation](https://wowpedia.fandom.com/wiki/API_FollowUnit)
-function FollowUnit(unit) end
-
----[Documentation](https://wowpedia.fandom.com/wiki/API_ForceLogout)
-function ForceLogout() end
-
----[Documentation](https://wowpedia.fandom.com/wiki/API_ForceQuit)
-function ForceQuit() end
-
----[Documentation](https://wowpedia.fandom.com/wiki/API_ForfeitDuel)
-function ForfeitDuel() end
-
----[Documentation](https://wowpedia.fandom.com/wiki/API_FrameXML_Debug)
-function FrameXML_Debug(flag) end
-
----[Documentation](https://wowpedia.fandom.com/wiki/API_GMEuropaBugsEnabled)
-function GMEuropaBugsEnabled() end
-
----[Documentation](https://wowpedia.fandom.com/wiki/API_GMEuropaComplaintsEnabled)
-function GMEuropaComplaintsEnabled() end
-
----[Documentation](https://wowpedia.fandom.com/wiki/API_GMEuropaSuggestionsEnabled)
-function GMEuropaSuggestionsEnabled() end
-
----[Documentation](https://wowpedia.fandom.com/wiki/API_GMEuropaTicketsEnabled)
-function GMEuropaTicketsEnabled() end
-
----[Documentation](https://wowpedia.fandom.com/wiki/API_GMItemRestorationButtonEnabled)
-function GMItemRestorationButtonEnabled() end
-
----[Documentation](https://wowpedia.fandom.com/wiki/API_GMQuickTicketSystemEnabled)
-function GMQuickTicketSystemEnabled() end
-
----[Documentation](https://wowpedia.fandom.com/wiki/API_GMQuickTicketSystemThrottled)
-function GMQuickTicketSystemThrottled() end
-
----[Documentation](https://wowpedia.fandom.com/wiki/API_GMReportLag)
-function GMReportLag() end
-
----[Documentation](https://wowpedia.fandom.com/wiki/API_GMRequestPlayerInfo)
-function GMRequestPlayerInfo() end
-
----[Documentation](https://wowpedia.fandom.com/wiki/API_GMResponseResolve)
-function GMResponseResolve() end
-
----[Documentation](https://wowpedia.fandom.com/wiki/API_GMSurveyAnswer)
-function GMSurveyAnswer() end
-
----[Documentation](https://wowpedia.fandom.com/wiki/API_GMSurveyAnswerSubmit)
-function GMSurveyAnswerSubmit(question, rank, comment) end
-
----[Documentation](https://wowpedia.fandom.com/wiki/API_GMSurveyCommentSubmit)
-function GMSurveyCommentSubmit(comment) end
-
----[Documentation](https://wowpedia.fandom.com/wiki/API_GMSurveyNumAnswers)
-function GMSurveyNumAnswers() end
-
----[Documentation](https://wowpedia.fandom.com/wiki/API_GMSurveyQuestion)
-function GMSurveyQuestion() end
-
----[Documentation](https://wowpedia.fandom.com/wiki/API_GMSurveySubmit)
-function GMSurveySubmit() end
-
----[Documentation](https://wowpedia.fandom.com/wiki/API_GameMovieFinished)
-function GameMovieFinished() end
-
----@param achievementID number
----@return number categoryID
----[Documentation](https://wowpedia.fandom.com/wiki/API_GetAchievementCategory)
-function GetAchievementCategory(achievementID) end
-
----@param achievementID number
----@return boolean completed
----@return number month
----@return number day
----@return number year
----[Documentation](https://wowpedia.fandom.com/wiki/API_GetAchievementComparisonInfo)
-function GetAchievementComparisonInfo(achievementID) end
-
----[Documentation](https://wowpedia.fandom.com/wiki/API_GetAchievementCriteriaInfo)
-function GetAchievementCriteriaInfo(achievementID, criteriaNum) end
-
----[Documentation](https://wowpedia.fandom.com/wiki/API_GetAchievementCriteriaInfoByID)
-function GetAchievementCriteriaInfoByID(achievementID, criteriaIndex) end
-
----[Documentation](https://wowpedia.fandom.com/wiki/API_GetAchievementGuildRep)
-function GetAchievementGuildRep() end
-
----[Documentation](https://wowpedia.fandom.com/wiki/API_GetAchievementInfo)
-function GetAchievementInfo() end
-
----[Documentation](https://wowpedia.fandom.com/wiki/API_GetAchievementLink)
-function GetAchievementLink(achievementID) end
-
----[Documentation](https://wowpedia.fandom.com/wiki/API_GetAchievementNumCriteria)
-function GetAchievementNumCriteria(achievementID) end
-
----[Documentation](https://wowpedia.fandom.com/wiki/API_GetAchievementNumRewards)
-function GetAchievementNumRewards(achievementID) end
-
----[Documentation](https://wowpedia.fandom.com/wiki/API_GetAchievementReward)
-function GetAchievementReward(achievementID, rewardIndex) end
-
----[Documentation](https://wowpedia.fandom.com/wiki/API_GetAchievementSearchProgress)
-function GetAchievementSearchProgress() end
-
----[Documentation](https://wowpedia.fandom.com/wiki/API_GetAchievementSearchSize)
-function GetAchievementSearchSize() end
-
----[Documentation](https://wowpedia.fandom.com/wiki/API_GetActionAutocast)
-function GetActionAutocast(slot) end
-
 ---@return number index
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_GetActionBarPage)
 function GetActionBarPage() end
@@ -321,12 +209,6 @@ function GetBankBagSlotFlag() end
 ---@return number cost
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_GetBankSlotCost)
 function GetBankSlotCost(numSlots) end
-
----[Documentation](https://wowpedia.fandom.com/wiki/API_GetBarberShopStyleInfo)
-function GetBarberShopStyleInfo() end
-
----[Documentation](https://wowpedia.fandom.com/wiki/API_GetBarberShopTotalCost)
-function GetBarberShopTotalCost() end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_GetBattlefieldArenaFaction)
 function GetBattlefieldArenaFaction() end
@@ -659,9 +541,6 @@ function GetCurrentKeyBoardFocus() end
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_GetCurrentLevelFeatures)
 function GetCurrentLevelFeatures(level) end
 
----[Documentation](https://wowpedia.fandom.com/wiki/API_GetCurrentLevelSpells)
-function GetCurrentLevelSpells() end
-
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_GetCurrentRegion)
 function GetCurrentRegion() end
 
@@ -689,9 +568,6 @@ function GetCursorMoney() end
 ---@return number y
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_GetCursorPosition)
 function GetCursorPosition() end
-
----[Documentation](https://wowpedia.fandom.com/wiki/API_GetCustomizationDetails)
-function GetCustomizationDetails() end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_GetDailyQuestsCompleted)
 function GetDailyQuestsCompleted() end
@@ -751,9 +627,6 @@ function GetDungeonDifficultyID() end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_GetDungeonForRandomSlot)
 function GetDungeonForRandomSlot(randomID, index) end
-
----[Documentation](https://wowpedia.fandom.com/wiki/API_GetDungeonInfo)
-function GetDungeonInfo() end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_GetEquipmentNameFromSpell)
 function GetEquipmentNameFromSpell() end
@@ -898,12 +771,6 @@ function GetGuildAchievementMembers(achievementID) end
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_GetGuildAchievementNumMembers)
 function GetGuildAchievementNumMembers(achievementID) end
 
----[Documentation](https://wowpedia.fandom.com/wiki/API_GetGuildApplicantInfo)
-function GetGuildApplicantInfo(index) end
-
----[Documentation](https://wowpedia.fandom.com/wiki/API_GetGuildApplicantSelection)
-function GetGuildApplicantSelection() end
-
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_GetGuildBankBonusDepositMoney)
 function GetGuildBankBonusDepositMoney() end
 
@@ -1011,12 +878,6 @@ function GetGuildLogoInfo() end
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_GetGuildMemberRecipes)
 function GetGuildMemberRecipes(name, skillLineID) end
 
----[Documentation](https://wowpedia.fandom.com/wiki/API_GetGuildMembershipRequestInfo)
-function GetGuildMembershipRequestInfo() end
-
----[Documentation](https://wowpedia.fandom.com/wiki/API_GetGuildMembershipRequestSettings)
-function GetGuildMembershipRequestSettings() end
-
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_GetGuildNewsFilters)
 function GetGuildNewsFilters() end
 
@@ -1037,12 +898,6 @@ function GetGuildRecipeInfoPostQuery() end
 ---@return boolean online
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_GetGuildRecipeMember)
 function GetGuildRecipeMember(index) end
-
----[Documentation](https://wowpedia.fandom.com/wiki/API_GetGuildRecruitmentComment)
-function GetGuildRecruitmentComment() end
-
----[Documentation](https://wowpedia.fandom.com/wiki/API_GetGuildRecruitmentSettings)
-function GetGuildRecruitmentSettings() end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_GetGuildRenameRequired)
 function GetGuildRenameRequired() end
@@ -1127,6 +982,14 @@ function GetHomePartyInfo(homePlayers) end
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_GetInboxHeaderInfo)
 function GetInboxHeaderInfo(index) end
 
+---@param index number
+---@return string invoiceType
+---@return string itemName
+---@return string playerName
+---@return number bid
+---@return number buyout
+---@return number deposit
+---@return number consignment
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_GetInboxInvoiceInfo)
 function GetInboxInvoiceInfo(index) end
 
@@ -1309,9 +1172,6 @@ function GetItemInventorySlotInfo(inventorySlot) end
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_GetItemLevelColor)
 function GetItemLevelColor() end
 
----[Documentation](https://wowpedia.fandom.com/wiki/API_GetItemLevelIncrement)
-function GetItemLevelIncrement() end
-
 ---@param quality number
 ---@return number r
 ---@return number g
@@ -1344,28 +1204,6 @@ function GetItemSubClassInfo(classID, subClassID) end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_GetItemUniqueness)
 function GetItemUniqueness(item) end
-
----@return number itemLevel
----[Documentation](https://wowpedia.fandom.com/wiki/API_GetItemUpdateLevel)
-function GetItemUpdateLevel() end
-
----[Documentation](https://wowpedia.fandom.com/wiki/API_GetItemUpgradeEffect)
-function GetItemUpgradeEffect() end
-
----@return number icon
----@return string name
----@return number quality
----@return string bound
----@return number numCurrUpgrades
----@return number numMaxUpgrades
----@return number cost
----@return number currencyType
----@return string failureMessage
----[Documentation](https://wowpedia.fandom.com/wiki/API_GetItemUpgradeItemInfo)
-function GetItemUpgradeItemInfo() end
-
----[Documentation](https://wowpedia.fandom.com/wiki/API_GetItemUpgradeStats)
-function GetItemUpgradeStats(upgraded) end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_GetJailersTowerLevel)
 function GetJailersTowerLevel() end
@@ -1538,9 +1376,6 @@ function GetLatestUpdatedStats() end
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_GetLegacyRaidDifficultyID)
 function GetLegacyRaidDifficultyID() end
 
----[Documentation](https://wowpedia.fandom.com/wiki/API_GetLevelUpInstances)
-function GetLevelUpInstances() end
-
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_GetLifesteal)
 function GetLifesteal() end
 
@@ -1549,12 +1384,6 @@ function GetLocalGameTime() end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_GetLocale)
 function GetLocale() end
-
----[Documentation](https://wowpedia.fandom.com/wiki/API_GetLookingForGuildComment)
-function GetLookingForGuildComment() end
-
----[Documentation](https://wowpedia.fandom.com/wiki/API_GetLookingForGuildSettings)
-function GetLookingForGuildSettings() end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_GetLooseMacroIcons)
 function GetLooseMacroIcons() end
@@ -1829,6 +1658,7 @@ function GetNormalizedRealmName() end
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_GetNumActiveQuests)
 function GetNumActiveQuests() end
 
+---@return number count
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_GetNumAddOns)
 function GetNumAddOns() end
 
@@ -1913,4 +1743,183 @@ function GetNumFactions() end
 ---@return number numFiltered
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_GetNumFilteredAchievements)
 function GetNumFilteredAchievements() end
+
+---@return number numInstances
+---[Documentation](https://wowpedia.fandom.com/wiki/API_GetNumFlexRaidDungeons)
+function GetNumFlexRaidDungeons() end
+
+---[Documentation](https://wowpedia.fandom.com/wiki/API_GetNumFlyouts)
+function GetNumFlyouts() end
+
+---[Documentation](https://wowpedia.fandom.com/wiki/API_GetNumFrames)
+function GetNumFrames() end
+
+---[Documentation](https://wowpedia.fandom.com/wiki/API_GetNumGroupChannels)
+function GetNumGroupChannels() end
+
+---[Documentation](https://wowpedia.fandom.com/wiki/API_GetNumGroupMembers)
+function GetNumGroupMembers(groupType) end
+
+---[Documentation](https://wowpedia.fandom.com/wiki/API_GetNumGuildBankMoneyTransactions)
+function GetNumGuildBankMoneyTransactions() end
+
+---[Documentation](https://wowpedia.fandom.com/wiki/API_GetNumGuildBankTabs)
+function GetNumGuildBankTabs() end
+
+---[Documentation](https://wowpedia.fandom.com/wiki/API_GetNumGuildBankTransactions)
+function GetNumGuildBankTransactions(tab) end
+
+---[Documentation](https://wowpedia.fandom.com/wiki/API_GetNumGuildChallenges)
+function GetNumGuildChallenges() end
+
+---[Documentation](https://wowpedia.fandom.com/wiki/API_GetNumGuildEvents)
+function GetNumGuildEvents() end
+
+---[Documentation](https://wowpedia.fandom.com/wiki/API_GetNumGuildMembers)
+function GetNumGuildMembers() end
+
+---[Documentation](https://wowpedia.fandom.com/wiki/API_GetNumGuildNews)
+function GetNumGuildNews() end
+
+---[Documentation](https://wowpedia.fandom.com/wiki/API_GetNumGuildPerks)
+function GetNumGuildPerks() end
+
+---[Documentation](https://wowpedia.fandom.com/wiki/API_GetNumGuildRewards)
+function GetNumGuildRewards() end
+
+---[Documentation](https://wowpedia.fandom.com/wiki/API_GetNumGuildTradeSkill)
+function GetNumGuildTradeSkill() end
+
+---[Documentation](https://wowpedia.fandom.com/wiki/API_GetNumLanguages)
+function GetNumLanguages() end
+
+---@return number numLootItems
+---[Documentation](https://wowpedia.fandom.com/wiki/API_GetNumLootItems)
+function GetNumLootItems() end
+
+---@return number global
+---@return number perChar
+---[Documentation](https://wowpedia.fandom.com/wiki/API_GetNumMacros)
+function GetNumMacros() end
+
+---[Documentation](https://wowpedia.fandom.com/wiki/API_GetNumMembersInRank)
+function GetNumMembersInRank(index) end
+
+---[Documentation](https://wowpedia.fandom.com/wiki/API_GetNumModifiedClickActions)
+function GetNumModifiedClickActions() end
+
+---[Documentation](https://wowpedia.fandom.com/wiki/API_GetNumPetitionNames)
+function GetNumPetitionNames() end
+
+---@return number numChoices
+---[Documentation](https://wowpedia.fandom.com/wiki/API_GetNumQuestChoices)
+function GetNumQuestChoices() end
+
+---[Documentation](https://wowpedia.fandom.com/wiki/API_GetNumQuestCurrencies)
+function GetNumQuestCurrencies() end
+
+---[Documentation](https://wowpedia.fandom.com/wiki/API_GetNumQuestItemDrops)
+function GetNumQuestItemDrops() end
+
+---@return number numRequiredItems
+---[Documentation](https://wowpedia.fandom.com/wiki/API_GetNumQuestItems)
+function GetNumQuestItems() end
+
+---[Documentation](https://wowpedia.fandom.com/wiki/API_GetNumQuestLeaderBoards)
+function GetNumQuestLeaderBoards(questIndex) end
+
+---[Documentation](https://wowpedia.fandom.com/wiki/API_GetNumQuestLogChoices)
+function GetNumQuestLogChoices() end
+
+---[Documentation](https://wowpedia.fandom.com/wiki/API_GetNumQuestLogRewardCurrencies)
+function GetNumQuestLogRewardCurrencies() end
+
+---[Documentation](https://wowpedia.fandom.com/wiki/API_GetNumQuestLogRewardFactions)
+function GetNumQuestLogRewardFactions() end
+
+---[Documentation](https://wowpedia.fandom.com/wiki/API_GetNumQuestLogRewardSpells)
+function GetNumQuestLogRewardSpells() end
+
+---@return number numQuestRewards
+---[Documentation](https://wowpedia.fandom.com/wiki/API_GetNumQuestLogRewards)
+function GetNumQuestLogRewards() end
+
+---[Documentation](https://wowpedia.fandom.com/wiki/API_GetNumQuestLogTasks)
+function GetNumQuestLogTasks() end
+
+---[Documentation](https://wowpedia.fandom.com/wiki/API_GetNumQuestPOIWorldEffects)
+function GetNumQuestPOIWorldEffects() end
+
+---@return number numRewards
+---[Documentation](https://wowpedia.fandom.com/wiki/API_GetNumQuestRewards)
+function GetNumQuestRewards() end
+
+---@return number numRFDungeons
+---[Documentation](https://wowpedia.fandom.com/wiki/API_GetNumRFDungeons)
+function GetNumRFDungeons() end
+
+---[Documentation](https://wowpedia.fandom.com/wiki/API_GetNumRaidProfiles)
+function GetNumRaidProfiles() end
+
+---[Documentation](https://wowpedia.fandom.com/wiki/API_GetNumRandomDungeons)
+function GetNumRandomDungeons() end
+
+---[Documentation](https://wowpedia.fandom.com/wiki/API_GetNumRandomScenarios)
+function GetNumRandomScenarios() end
+
+---@return number numCurrencies
+---[Documentation](https://wowpedia.fandom.com/wiki/API_GetNumRewardCurrencies)
+function GetNumRewardCurrencies() end
+
+---[Documentation](https://wowpedia.fandom.com/wiki/API_GetNumRewardSpells)
+function GetNumRewardSpells() end
+
+---[Documentation](https://wowpedia.fandom.com/wiki/API_GetNumRoutes)
+function GetNumRoutes(slot) end
+
+---@return number numInstances
+---[Documentation](https://wowpedia.fandom.com/wiki/API_GetNumSavedInstances)
+function GetNumSavedInstances() end
+
+---@return number numSavedWorldBosses
+---[Documentation](https://wowpedia.fandom.com/wiki/API_GetNumSavedWorldBosses)
+function GetNumSavedWorldBosses() end
+
+---[Documentation](https://wowpedia.fandom.com/wiki/API_GetNumScenarios)
+function GetNumScenarios() end
+
+---[Documentation](https://wowpedia.fandom.com/wiki/API_GetNumShapeshiftForms)
+function GetNumShapeshiftForms() end
+
+---[Documentation](https://wowpedia.fandom.com/wiki/API_GetNumSockets)
+function GetNumSockets() end
+
+---@param b boolean
+---@return number numSpecGroups
+---[Documentation](https://wowpedia.fandom.com/wiki/API_GetNumSpecGroups)
+function GetNumSpecGroups(b) end
+
+---[Documentation](https://wowpedia.fandom.com/wiki/API_GetNumSpecializations)
+function GetNumSpecializations(isInspect, isPet) end
+
+---[Documentation](https://wowpedia.fandom.com/wiki/API_GetNumSpecializationsForClassID)
+function GetNumSpecializationsForClassID(classID) end
+
+---@return number numTabs
+---[Documentation](https://wowpedia.fandom.com/wiki/API_GetNumSpellTabs)
+function GetNumSpellTabs() end
+
+---[Documentation](https://wowpedia.fandom.com/wiki/API_GetNumSubgroupMembers)
+function GetNumSubgroupMembers(groupType) end
+
+---@return number numTitles
+---[Documentation](https://wowpedia.fandom.com/wiki/API_GetNumTitles)
+function GetNumTitles() end
+
+---@return number numTracked
+---[Documentation](https://wowpedia.fandom.com/wiki/API_GetNumTrackedAchievements)
+function GetNumTrackedAchievements() end
+
+---[Documentation](https://wowpedia.fandom.com/wiki/API_GetNumTrackingTypes)
+function GetNumTrackingTypes() end
 

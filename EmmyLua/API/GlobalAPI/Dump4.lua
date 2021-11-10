@@ -1,195 +1,3 @@
----@return number numInstances
----[Documentation](https://wowpedia.fandom.com/wiki/API_GetNumFlexRaidDungeons)
-function GetNumFlexRaidDungeons() end
-
----[Documentation](https://wowpedia.fandom.com/wiki/API_GetNumFlyouts)
-function GetNumFlyouts() end
-
----[Documentation](https://wowpedia.fandom.com/wiki/API_GetNumFrames)
-function GetNumFrames() end
-
----[Documentation](https://wowpedia.fandom.com/wiki/API_GetNumGroupChannels)
-function GetNumGroupChannels() end
-
----[Documentation](https://wowpedia.fandom.com/wiki/API_GetNumGroupMembers)
-function GetNumGroupMembers(groupType) end
-
----@return number numApplicants
----[Documentation](https://wowpedia.fandom.com/wiki/API_GetNumGuildApplicants)
-function GetNumGuildApplicants() end
-
----[Documentation](https://wowpedia.fandom.com/wiki/API_GetNumGuildBankMoneyTransactions)
-function GetNumGuildBankMoneyTransactions() end
-
----[Documentation](https://wowpedia.fandom.com/wiki/API_GetNumGuildBankTabs)
-function GetNumGuildBankTabs() end
-
----[Documentation](https://wowpedia.fandom.com/wiki/API_GetNumGuildBankTransactions)
-function GetNumGuildBankTransactions(tab) end
-
----[Documentation](https://wowpedia.fandom.com/wiki/API_GetNumGuildChallenges)
-function GetNumGuildChallenges() end
-
----[Documentation](https://wowpedia.fandom.com/wiki/API_GetNumGuildEvents)
-function GetNumGuildEvents() end
-
----[Documentation](https://wowpedia.fandom.com/wiki/API_GetNumGuildMembers)
-function GetNumGuildMembers() end
-
----[Documentation](https://wowpedia.fandom.com/wiki/API_GetNumGuildMembershipRequests)
-function GetNumGuildMembershipRequests() end
-
----[Documentation](https://wowpedia.fandom.com/wiki/API_GetNumGuildNews)
-function GetNumGuildNews() end
-
----[Documentation](https://wowpedia.fandom.com/wiki/API_GetNumGuildPerks)
-function GetNumGuildPerks() end
-
----[Documentation](https://wowpedia.fandom.com/wiki/API_GetNumGuildRewards)
-function GetNumGuildRewards() end
-
----[Documentation](https://wowpedia.fandom.com/wiki/API_GetNumGuildTradeSkill)
-function GetNumGuildTradeSkill() end
-
----[Documentation](https://wowpedia.fandom.com/wiki/API_GetNumItemUpgradeEffects)
-function GetNumItemUpgradeEffects() end
-
----[Documentation](https://wowpedia.fandom.com/wiki/API_GetNumLanguages)
-function GetNumLanguages() end
-
----@return number numLootItems
----[Documentation](https://wowpedia.fandom.com/wiki/API_GetNumLootItems)
-function GetNumLootItems() end
-
----@return number global
----@return number perChar
----[Documentation](https://wowpedia.fandom.com/wiki/API_GetNumMacros)
-function GetNumMacros() end
-
----[Documentation](https://wowpedia.fandom.com/wiki/API_GetNumMembersInRank)
-function GetNumMembersInRank(index) end
-
----[Documentation](https://wowpedia.fandom.com/wiki/API_GetNumModifiedClickActions)
-function GetNumModifiedClickActions() end
-
----[Documentation](https://wowpedia.fandom.com/wiki/API_GetNumPetitionNames)
-function GetNumPetitionNames() end
-
----@return number numChoices
----[Documentation](https://wowpedia.fandom.com/wiki/API_GetNumQuestChoices)
-function GetNumQuestChoices() end
-
----[Documentation](https://wowpedia.fandom.com/wiki/API_GetNumQuestCurrencies)
-function GetNumQuestCurrencies() end
-
----[Documentation](https://wowpedia.fandom.com/wiki/API_GetNumQuestItemDrops)
-function GetNumQuestItemDrops() end
-
----@return number numRequiredItems
----[Documentation](https://wowpedia.fandom.com/wiki/API_GetNumQuestItems)
-function GetNumQuestItems() end
-
----[Documentation](https://wowpedia.fandom.com/wiki/API_GetNumQuestLeaderBoards)
-function GetNumQuestLeaderBoards(questIndex) end
-
----[Documentation](https://wowpedia.fandom.com/wiki/API_GetNumQuestLogChoices)
-function GetNumQuestLogChoices() end
-
----[Documentation](https://wowpedia.fandom.com/wiki/API_GetNumQuestLogRewardCurrencies)
-function GetNumQuestLogRewardCurrencies() end
-
----[Documentation](https://wowpedia.fandom.com/wiki/API_GetNumQuestLogRewardFactions)
-function GetNumQuestLogRewardFactions() end
-
----[Documentation](https://wowpedia.fandom.com/wiki/API_GetNumQuestLogRewardSpells)
-function GetNumQuestLogRewardSpells() end
-
----@return number numQuestRewards
----[Documentation](https://wowpedia.fandom.com/wiki/API_GetNumQuestLogRewards)
-function GetNumQuestLogRewards() end
-
----[Documentation](https://wowpedia.fandom.com/wiki/API_GetNumQuestLogTasks)
-function GetNumQuestLogTasks() end
-
----[Documentation](https://wowpedia.fandom.com/wiki/API_GetNumQuestPOIWorldEffects)
-function GetNumQuestPOIWorldEffects() end
-
----@return number numRewards
----[Documentation](https://wowpedia.fandom.com/wiki/API_GetNumQuestRewards)
-function GetNumQuestRewards() end
-
----@return number numRFDungeons
----[Documentation](https://wowpedia.fandom.com/wiki/API_GetNumRFDungeons)
-function GetNumRFDungeons() end
-
----[Documentation](https://wowpedia.fandom.com/wiki/API_GetNumRaidProfiles)
-function GetNumRaidProfiles() end
-
----[Documentation](https://wowpedia.fandom.com/wiki/API_GetNumRandomDungeons)
-function GetNumRandomDungeons() end
-
----[Documentation](https://wowpedia.fandom.com/wiki/API_GetNumRandomScenarios)
-function GetNumRandomScenarios() end
-
----[Documentation](https://wowpedia.fandom.com/wiki/API_GetNumRecruitingGuilds)
-function GetNumRecruitingGuilds() end
-
----@return number numCurrencies
----[Documentation](https://wowpedia.fandom.com/wiki/API_GetNumRewardCurrencies)
-function GetNumRewardCurrencies() end
-
----[Documentation](https://wowpedia.fandom.com/wiki/API_GetNumRewardSpells)
-function GetNumRewardSpells() end
-
----[Documentation](https://wowpedia.fandom.com/wiki/API_GetNumRoutes)
-function GetNumRoutes(slot) end
-
----@return number numInstances
----[Documentation](https://wowpedia.fandom.com/wiki/API_GetNumSavedInstances)
-function GetNumSavedInstances() end
-
----@return number numSavedWorldBosses
----[Documentation](https://wowpedia.fandom.com/wiki/API_GetNumSavedWorldBosses)
-function GetNumSavedWorldBosses() end
-
----[Documentation](https://wowpedia.fandom.com/wiki/API_GetNumScenarios)
-function GetNumScenarios() end
-
----[Documentation](https://wowpedia.fandom.com/wiki/API_GetNumShapeshiftForms)
-function GetNumShapeshiftForms() end
-
----[Documentation](https://wowpedia.fandom.com/wiki/API_GetNumSockets)
-function GetNumSockets() end
-
----@param b boolean
----@return number numSpecGroups
----[Documentation](https://wowpedia.fandom.com/wiki/API_GetNumSpecGroups)
-function GetNumSpecGroups(b) end
-
----[Documentation](https://wowpedia.fandom.com/wiki/API_GetNumSpecializations)
-function GetNumSpecializations(isInspect, isPet) end
-
----[Documentation](https://wowpedia.fandom.com/wiki/API_GetNumSpecializationsForClassID)
-function GetNumSpecializationsForClassID(classID) end
-
----@return number numTabs
----[Documentation](https://wowpedia.fandom.com/wiki/API_GetNumSpellTabs)
-function GetNumSpellTabs() end
-
----[Documentation](https://wowpedia.fandom.com/wiki/API_GetNumSubgroupMembers)
-function GetNumSubgroupMembers(groupType) end
-
----@return number numTitles
----[Documentation](https://wowpedia.fandom.com/wiki/API_GetNumTitles)
-function GetNumTitles() end
-
----@return number numTracked
----[Documentation](https://wowpedia.fandom.com/wiki/API_GetNumTrackedAchievements)
-function GetNumTrackedAchievements() end
-
----[Documentation](https://wowpedia.fandom.com/wiki/API_GetNumTrackingTypes)
-function GetNumTrackingTypes() end
-
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_GetNumTrainerServices)
 function GetNumTrainerServices() end
 
@@ -534,9 +342,6 @@ function GetQuestLogItemLink(type, index) end
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_GetQuestLogLeaderBoard)
 function GetQuestLogLeaderBoard(ldrIndex, questIndex) end
 
----[Documentation](https://wowpedia.fandom.com/wiki/API_GetQuestLogPortraitGiver)
-function GetQuestLogPortraitGiver() end
-
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_GetQuestLogPortraitTurnIn)
 function GetQuestLogPortraitTurnIn() end
 
@@ -727,21 +532,16 @@ function GetReagentBankCost() end
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_GetRealZoneText)
 function GetRealZoneText(instanceID) end
 
----@return number realmID
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_GetRealmID)
+---@return number realmID
 function GetRealmID() end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_GetRealmName)
+---@return string realmName
 function GetRealmName() end
 
----[Documentation](https://wowpedia.fandom.com/wiki/API_GetRecruitingGuildInfo)
-function GetRecruitingGuildInfo() end
-
----[Documentation](https://wowpedia.fandom.com/wiki/API_GetRecruitingGuildSelection)
-function GetRecruitingGuildSelection() end
-
----[Documentation](https://wowpedia.fandom.com/wiki/API_GetRecruitingGuildSettings)
-function GetRecruitingGuildSettings() end
+---@return string? normalizedRealmName
+function GetNormalizedRealmName() end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_GetReleaseTimeRemaining)
 function GetReleaseTimeRemaining() end
@@ -1566,9 +1366,6 @@ function HasAPEffectsSpellPower() end
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_HasAction)
 function HasAction(actionSlot) end
 
----[Documentation](https://wowpedia.fandom.com/wiki/API_HasAlternateForm)
-function HasAlternateForm() end
-
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_HasArtifactEquipped)
 function HasArtifactEquipped() end
 
@@ -1768,9 +1565,6 @@ function IsBagSlotFlagEnabledOnOtherBags(index, flagIndex) end
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_IsBagSlotFlagEnabledOnOtherBankBags)
 function IsBagSlotFlagEnabledOnOtherBankBags() end
 
----[Documentation](https://wowpedia.fandom.com/wiki/API_IsBarberShopStyleValid)
-function IsBarberShopStyleValid() end
-
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_IsBattlePayItem)
 function IsBattlePayItem(bag, slot) end
 
@@ -1846,4 +1640,215 @@ function IsDebugBuild() end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_IsDemonHunterAvailable)
 function IsDemonHunterAvailable() end
+
+---[Documentation](https://wowpedia.fandom.com/wiki/API_IsDesaturateSupported)
+function IsDesaturateSupported() end
+
+---[Documentation](https://wowpedia.fandom.com/wiki/API_IsDisplayChannelModerator)
+function IsDisplayChannelModerator() end
+
+---[Documentation](https://wowpedia.fandom.com/wiki/API_IsDisplayChannelOwner)
+function IsDisplayChannelOwner() end
+
+---@return boolean isDualWield
+---[Documentation](https://wowpedia.fandom.com/wiki/API_IsDualWielding)
+function IsDualWielding() end
+
+---[Documentation](https://wowpedia.fandom.com/wiki/API_IsEncounterInProgress)
+function IsEncounterInProgress() end
+
+---[Documentation](https://wowpedia.fandom.com/wiki/API_IsEncounterLimitingResurrections)
+function IsEncounterLimitingResurrections() end
+
+---[Documentation](https://wowpedia.fandom.com/wiki/API_IsEncounterSuppressingRelease)
+function IsEncounterSuppressingRelease() end
+
+---[Documentation](https://wowpedia.fandom.com/wiki/API_IsEquippableItem)
+function IsEquippableItem(item) end
+
+---[Documentation](https://wowpedia.fandom.com/wiki/API_IsEquippedAction)
+function IsEquippedAction(slot) end
+
+---[Documentation](https://wowpedia.fandom.com/wiki/API_IsEquippedItem)
+function IsEquippedItem(item) end
+
+---@param type string
+---@return boolean isEquipped
+---[Documentation](https://wowpedia.fandom.com/wiki/API_IsEquippedItemType)
+function IsEquippedItemType(type) end
+
+---[Documentation](https://wowpedia.fandom.com/wiki/API_IsEuropeanNumbers)
+function IsEuropeanNumbers() end
+
+---[Documentation](https://wowpedia.fandom.com/wiki/API_IsEveryoneAssistant)
+function IsEveryoneAssistant() end
+
+---@param index number
+---@return boolean inactive
+---[Documentation](https://wowpedia.fandom.com/wiki/API_IsFactionInactive)
+function IsFactionInactive(index) end
+
+---[Documentation](https://wowpedia.fandom.com/wiki/API_IsFalling)
+function IsFalling() end
+
+---[Documentation](https://wowpedia.fandom.com/wiki/API_IsFishingLoot)
+function IsFishingLoot() end
+
+---[Documentation](https://wowpedia.fandom.com/wiki/API_IsFlyableArea)
+function IsFlyableArea() end
+
+---[Documentation](https://wowpedia.fandom.com/wiki/API_IsFlying)
+function IsFlying() end
+
+---[Documentation](https://wowpedia.fandom.com/wiki/API_IsGMClient)
+function IsGMClient() end
+
+---[Documentation](https://wowpedia.fandom.com/wiki/API_IsGUIDInGroup)
+function IsGUIDInGroup(guid, groupType) end
+
+---[Documentation](https://wowpedia.fandom.com/wiki/API_IsGamePadCursorControlEnabled)
+function IsGamePadCursorControlEnabled() end
+
+---[Documentation](https://wowpedia.fandom.com/wiki/API_IsGamePadFreelookEnabled)
+function IsGamePadFreelookEnabled() end
+
+---@return boolean isGuildLeader
+---[Documentation](https://wowpedia.fandom.com/wiki/API_IsGuildLeader)
+function IsGuildLeader() end
+
+---[Documentation](https://wowpedia.fandom.com/wiki/API_IsGuildMember)
+function IsGuildMember() end
+
+---[Documentation](https://wowpedia.fandom.com/wiki/API_IsGuildRankAssignmentAllowed)
+function IsGuildRankAssignmentAllowed(playerIndex, rankIndex) end
+
+---[Documentation](https://wowpedia.fandom.com/wiki/API_IsHarmfulItem)
+function IsHarmfulItem(item) end
+
+---[Documentation](https://wowpedia.fandom.com/wiki/API_IsHarmfulSpell)
+function IsHarmfulSpell(spellSlot) end
+
+---[Documentation](https://wowpedia.fandom.com/wiki/API_IsHelpfulItem)
+function IsHelpfulItem(item) end
+
+---[Documentation](https://wowpedia.fandom.com/wiki/API_IsHelpfulSpell)
+function IsHelpfulSpell(spellSlot) end
+
+---[Documentation](https://wowpedia.fandom.com/wiki/API_IsInActiveWorldPVP)
+function IsInActiveWorldPVP() end
+
+---[Documentation](https://wowpedia.fandom.com/wiki/API_IsInArenaTeam)
+function IsInArenaTeam() end
+
+---[Documentation](https://wowpedia.fandom.com/wiki/API_IsInAuthenticatedRank)
+function IsInAuthenticatedRank() end
+
+---@return boolean inCinematicScene
+---[Documentation](https://wowpedia.fandom.com/wiki/API_IsInCinematicScene)
+function IsInCinematicScene() end
+
+---@param groupType number
+---@return boolean inGroup
+---[Documentation](https://wowpedia.fandom.com/wiki/API_IsInGroup)
+function IsInGroup(groupType) end
+
+---[Documentation](https://wowpedia.fandom.com/wiki/API_IsInGuild)
+function IsInGuild() end
+
+---[Documentation](https://wowpedia.fandom.com/wiki/API_IsInGuildGroup)
+function IsInGuildGroup() end
+
+---@return boolean inInstance
+---@return string instanceType
+---[Documentation](https://wowpedia.fandom.com/wiki/API_IsInInstance)
+function IsInInstance() end
+
+---[Documentation](https://wowpedia.fandom.com/wiki/API_IsInJailersTower)
+function IsInJailersTower() end
+
+---[Documentation](https://wowpedia.fandom.com/wiki/API_IsInLFGDungeon)
+function IsInLFGDungeon() end
+
+---@param groupType number
+---@return boolean isInRaid
+---[Documentation](https://wowpedia.fandom.com/wiki/API_IsInRaid)
+function IsInRaid(groupType) end
+
+---[Documentation](https://wowpedia.fandom.com/wiki/API_IsInScenarioGroup)
+function IsInScenarioGroup() end
+
+---[Documentation](https://wowpedia.fandom.com/wiki/API_IsIndoors)
+function IsIndoors() end
+
+---[Documentation](https://wowpedia.fandom.com/wiki/API_IsInsane)
+function IsInsane() end
+
+---[Documentation](https://wowpedia.fandom.com/wiki/API_IsInventoryItemAnUpgrade)
+function IsInventoryItemAnUpgrade(unit, slot) end
+
+---[Documentation](https://wowpedia.fandom.com/wiki/API_IsInventoryItemLocked)
+function IsInventoryItemLocked(id) end
+
+---[Documentation](https://wowpedia.fandom.com/wiki/API_IsInventoryItemProfessionBag)
+function IsInventoryItemProfessionBag(unit, slot) end
+
+---[Documentation](https://wowpedia.fandom.com/wiki/API_IsItemAction)
+function IsItemAction(slot) end
+
+---@param item string
+---@param unit string
+---@return boolean inRange
+---[Documentation](https://wowpedia.fandom.com/wiki/API_IsItemInRange)
+function IsItemInRange(item, unit) end
+
+---[Documentation](https://wowpedia.fandom.com/wiki/API_IsJailersTowerLayerTimeLocked)
+function IsJailersTowerLayerTimeLocked() end
+
+---[Documentation](https://wowpedia.fandom.com/wiki/API_IsKeyDown)
+function IsKeyDown(keyOrMouseName, excludeCurrentBindingState) end
+
+---@return boolean isComplete
+---[Documentation](https://wowpedia.fandom.com/wiki/API_IsLFGComplete)
+function IsLFGComplete() end
+
+---[Documentation](https://wowpedia.fandom.com/wiki/API_IsLFGDungeonJoinable)
+function IsLFGDungeonJoinable() end
+
+---[Documentation](https://wowpedia.fandom.com/wiki/API_IsLeftAltKeyDown)
+function IsLeftAltKeyDown() end
+
+---[Documentation](https://wowpedia.fandom.com/wiki/API_IsLeftControlKeyDown)
+function IsLeftControlKeyDown() end
+
+---[Documentation](https://wowpedia.fandom.com/wiki/API_IsLeftMetaKeyDown)
+function IsLeftMetaKeyDown() end
+
+---[Documentation](https://wowpedia.fandom.com/wiki/API_IsLeftShiftKeyDown)
+function IsLeftShiftKeyDown() end
+
+---[Documentation](https://wowpedia.fandom.com/wiki/API_IsLegacyDifficulty)
+function IsLegacyDifficulty(difficultyID) end
+
+---[Documentation](https://wowpedia.fandom.com/wiki/API_IsLinuxClient)
+function IsLinuxClient() end
+
+---[Documentation](https://wowpedia.fandom.com/wiki/API_IsLoggedIn)
+function IsLoggedIn() end
+
+---[Documentation](https://wowpedia.fandom.com/wiki/API_IsMacClient)
+function IsMacClient() end
+
+---[Documentation](https://wowpedia.fandom.com/wiki/API_IsMasterLooter)
+function IsMasterLooter() end
+
+---[Documentation](https://wowpedia.fandom.com/wiki/API_IsMetaKeyDown)
+function IsMetaKeyDown() end
+
+---@param action string
+---@return boolean isHeld
+---[Documentation](https://wowpedia.fandom.com/wiki/API_IsModifiedClick)
+function IsModifiedClick(action) end
+
+---[Documentation](https://wowpedia.fandom.com/wiki/API_IsModifierKeyDown)
+function IsModifierKeyDown() end
 

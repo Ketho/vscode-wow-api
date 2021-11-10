@@ -86,9 +86,6 @@ function Ambiguate(fullName, context) end
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_AntiAliasingSupported)
 function AntiAliasingSupported() end
 
----[Documentation](https://wowpedia.fandom.com/wiki/API_ApplyBarberShopStyle)
-function ApplyBarberShopStyle() end
-
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_ArchaeologyGetIconInfo)
 function ArchaeologyGetIconInfo(index) end
 
@@ -304,9 +301,6 @@ function BNTokenFindName(target) end
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_BankButtonIDToInvSlotID)
 function BankButtonIDToInvSlotID(buttonID, isBag) end
 
----[Documentation](https://wowpedia.fandom.com/wiki/API_BarberShopReset)
-function BarberShopReset() end
-
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_BattlefieldMgrEntryInviteResponse)
 function BattlefieldMgrEntryInviteResponse(queueId, accept) end
 
@@ -412,9 +406,6 @@ function C_AdventureMap.GetZoneChoiceInfo(choiceIndex) end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_AdventureMap.StartQuest)
 function C_AdventureMap.StartQuest(questID) end
-
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_BarberShop.OldBarberShopLoaded)
-function C_BarberShop.OldBarberShopLoaded() end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_BlackMarket.Close)
 function C_BlackMarket.Close() end
@@ -1193,33 +1184,8 @@ function C_LFGList.DeclineApplicant(applicantID) end
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_LFGList.DeclineInvite)
 function C_LFGList.DeclineInvite(searchResultID) end
 
----@param groupID number
----@return string name
----@return number groupOrder
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_LFGList.GetActivityGroupInfo)
-function C_LFGList.GetActivityGroupInfo(groupID) end
-
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_LFGList.GetActivityIDForQuestID)
 function C_LFGList.GetActivityIDForQuestID(questID) end
-
----@param activityID number
----@return string fullName
----@return string shortName
----@return number categoryID
----@return number groupID
----@return number itemLevel
----@return number filters
----@return number minLevel
----@return number maxPlayers
----@return number displayType
----@return number orderIndex
----@return boolean useHonorLevel
----@return boolean showQuickJoinToast
----@return boolean isMythicPlusActivity
----@return boolean isRatedPvpActivity
----@return boolean isCurrentRaidActivity
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_LFGList.GetActivityInfo)
-function C_LFGList.GetActivityInfo(activityID) end
 
 ---@param activityID number
 ---@return boolean currentArea
@@ -1268,9 +1234,6 @@ function C_LFGList.GetAvailableLanguageSearchFilter() end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_LFGList.GetAvailableRoles)
 function C_LFGList.GetAvailableRoles() end
-
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_LFGList.GetCategoryInfo)
-function C_LFGList.GetCategoryInfo(categoryID) end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_LFGList.GetDefaultLanguageSearchFilter)
 function C_LFGList.GetDefaultLanguageSearchFilter() end
@@ -1341,9 +1304,6 @@ function C_LFGList.SetApplicantMemberRole(applicantID, memberIndex, role) end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_LFGList.UpdateListing)
 function C_LFGList.UpdateListing(lfgID, itemLevel, honorLevel, autoAccept, private, questID) end
-
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_LegendaryCrafting.GetRuneforgePowersByClassAndSpec)
-function C_LegendaryCrafting.GetRuneforgePowersByClassAndSpec(classID, specID, filter) end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_LootHistory.CanMasterLoot)
 function C_LootHistory.CanMasterLoot(itemIndex, playerIndex) end
@@ -1730,9 +1690,6 @@ function C_PetJournal.GetBattlePetLink(petID) end
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_PetJournal.GetNumCollectedInfo)
 function C_PetJournal.GetNumCollectedInfo(speciesId) end
 
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_PetJournal.GetNumMaxPets)
-function C_PetJournal.GetNumMaxPets() end
-
 ---@return number numSources
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_PetJournal.GetNumPetSources)
 function C_PetJournal.GetNumPetSources() end
@@ -1756,4 +1713,39 @@ function C_PetJournal.GetOwnedBattlePetString(speciesId) end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_PetJournal.GetPetAbilityList)
 function C_PetJournal.GetPetAbilityList(speciesID, idTable, levelTable) end
+
+---@param GUID string
+---@return number start
+---@return number duration
+---@return number isEnabled
+---[Documentation](https://wowpedia.fandom.com/wiki/API_C_PetJournal.GetPetCooldownByGUID)
+function C_PetJournal.GetPetCooldownByGUID(GUID) end
+
+---[Documentation](https://wowpedia.fandom.com/wiki/API_C_PetJournal.GetPetInfoByIndex)
+function C_PetJournal.GetPetInfoByIndex(index) end
+
+---[Documentation](https://wowpedia.fandom.com/wiki/API_C_PetJournal.GetPetInfoByItemID)
+function C_PetJournal.GetPetInfoByItemID(itemID) end
+
+---[Documentation](https://wowpedia.fandom.com/wiki/API_C_PetJournal.GetPetInfoByPetID)
+function C_PetJournal.GetPetInfoByPetID(petID) end
+
+---[Documentation](https://wowpedia.fandom.com/wiki/API_C_PetJournal.GetPetInfoBySpeciesID)
+function C_PetJournal.GetPetInfoBySpeciesID(speciesID) end
+
+---[Documentation](https://wowpedia.fandom.com/wiki/API_C_PetJournal.GetPetModelSceneInfoBySpeciesID)
+function C_PetJournal.GetPetModelSceneInfoBySpeciesID(speciesID) end
+
+---@return number sortParameter
+---[Documentation](https://wowpedia.fandom.com/wiki/API_C_PetJournal.GetPetSortParameter)
+function C_PetJournal.GetPetSortParameter() end
+
+---@param petID string
+---@return number health
+---@return number maxHealth
+---@return number power
+---@return number speed
+---@return number rarity
+---[Documentation](https://wowpedia.fandom.com/wiki/API_C_PetJournal.GetPetStats)
+function C_PetJournal.GetPetStats(petID) end
 
