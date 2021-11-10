@@ -38,41 +38,6 @@ local MythicPlusRatingLinkInfo = {}
 ---@field Undocumented boolean
 local ChatChannelInfo = {}
 
----@class AddSoulbindConduitReason
-local AddSoulbindConduitReason = {
-	Undocumented = 0,
-}
-
----@class CharacterServiceInfoFlag
-local CharacterServiceInfoFlag = {
-	Undocumented = 0,
-}
-
----@class ManipulatorEventType
-local ManipulatorEventType = {
-	Undocumented = 0,
-}
-
----@class QuestPOIQuestTypes
-local QuestPOIQuestTypes = {
-	Undocumented = 0,
-}
-
----@class SoulbindConduitFlags
-local SoulbindConduitFlags = {
-	Undocumented = 0,
-}
-
----@class SoulbindConduitInstallResult
-local SoulbindConduitInstallResult = {
-	Undocumented = 0,
-}
-
----@class VasPurchaseProgress
-local VasPurchaseProgress = {
-	Undocumented = 0,
-}
-
 ---@class CalendarTime
 ---@field year number
 ---@field month number
@@ -199,4 +164,60 @@ local WeeklyRewardChestThresholdType = {
 	Raid = 3,
 	AlsoReceive = 4,
 	Concession = 5,
+}
+
+---@class AddSoulbindConduitReason
+local AddSoulbindConduitReason = {
+	None = 0,
+	Cheat = 1,
+	SpellEffect = 2,
+	Upgrade = 3,
+}
+
+---@class CharacterServiceInfoFlag
+local CharacterServiceInfoFlag = {
+	RestrictToRecommendedSpecs = 1,
+}
+
+---@class ManipulatorEventType
+local ManipulatorEventType = {
+	Start = 0,
+	Move = 1,
+	Complete = 2,
+	Delete = 3,
+}
+
+---@class QuestPOIQuestTypes
+local QuestPOIQuestTypes = {
+	Normal = 1,
+	Campaign = 2,
+	Calling = 3,
+}
+
+---@class SoulbindConduitFlags
+local SoulbindConduitFlags = {
+	VisibleToGetallsoulbindconduitScript = 1,
+}
+
+---@class SoulbindConduitInstallResult
+local SoulbindConduitInstallResult = {
+	Success = 0,
+	InvalidItem = 1,
+	InvalidConduit = 2,
+	InvalidTalent = 3,
+	DuplicateConduit = 4,
+	ForgeNotInProximity = 5,
+	SocketNotEmpty = 6,
+}
+
+---@class VasPurchaseProgress
+local VasPurchaseProgress = {
+	Invalid = 0,
+	PrePurchase = 1,
+	PaymentPending = 2,
+	ApplyingLicense = 3,
+	WaitingOnQueue = 4,
+	Ready = 5,
+	ProcessingFactionChange = 6,
+	Complete = 7,
 }

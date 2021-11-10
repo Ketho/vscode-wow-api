@@ -19,14 +19,6 @@ local Missing =
 		{ Name = "MythicPlusRatingLinkInfo", Type = "Structure", Fields = Empty }, -- ChallengeModeInfoDocumentation.lua
 		{ Name = "ChatChannelInfo", Type = "Structure", Fields = Empty }, -- ChatInfoDocumentation.lua
 
-		-- placeholder enums, unused in apidocs but still needed to be defined as an emmylua type
-		{ Name = "AddSoulbindConduitReason", Type = "Enumeration", Fields = Empty },
-		{ Name = "CharacterServiceInfoFlag", Type = "Enumeration", Fields = Empty },
-		{ Name = "ManipulatorEventType", Type = "Enumeration", Fields = Empty },
-		{ Name = "QuestPOIQuestTypes", Type = "Enumeration", Fields = Empty },
-		{ Name = "SoulbindConduitFlags", Type = "Enumeration", Fields = Empty },
-		{ Name = "SoulbindConduitInstallResult", Type = "Enumeration", Fields = Empty },
-		{ Name = "VasPurchaseProgress", Type = "Enumeration", Fields = Empty },
 		{
 			-- C_Calendar; CalendarDocumentation.lua
 			Name = "CalendarTime",
@@ -216,6 +208,84 @@ local Missing =
 				{ Name = "Raid", Type = "WeeklyRewardChestThresholdType", EnumValue = 3 },
 				{ Name = "AlsoReceive", Type = "WeeklyRewardChestThresholdType", EnumValue = 4 },
 				{ Name = "Concession", Type = "WeeklyRewardChestThresholdType", EnumValue = 5 },
+			},
+		},
+		-- enums unused in apidocs but still needed to be defined as an emmylua type
+		{
+			Name = "AddSoulbindConduitReason",
+			Type = "Enumeration",
+			Fields =
+			{
+				{ Name = "None", Type = "AddSoulbindConduitReason", EnumValue = 0 },
+				{ Name = "Cheat", Type = "AddSoulbindConduitReason", EnumValue = 1 },
+				{ Name = "SpellEffect", Type = "AddSoulbindConduitReason", EnumValue = 2 },
+				{ Name = "Upgrade", Type = "AddSoulbindConduitReason", EnumValue = 3 },
+			},
+		},
+		{
+			Name = "CharacterServiceInfoFlag",
+			Type = "Enumeration",
+			Fields =
+			{
+				{ Name = "RestrictToRecommendedSpecs", Type = "CharacterServiceInfoFlag", EnumValue = 1 },
+			},
+		},
+		{
+			Name = "ManipulatorEventType",
+			Type = "Enumeration",
+			Fields =
+			{
+				{ Name = "Start", Type = "ManipulatorEventType", EnumValue = 0 },
+				{ Name = "Move", Type = "ManipulatorEventType", EnumValue = 1 },
+				{ Name = "Complete", Type = "ManipulatorEventType", EnumValue = 2 },
+				{ Name = "Delete", Type = "ManipulatorEventType", EnumValue = 3 },
+			},
+		},
+		{
+			Name = "QuestPOIQuestTypes",
+			Type = "Enumeration",
+			Fields =
+			{
+				{ Name = "Normal", Type = "QuestPOIQuestTypes", EnumValue = 1 },
+				{ Name = "Campaign", Type = "QuestPOIQuestTypes", EnumValue = 2 },
+				{ Name = "Calling", Type = "QuestPOIQuestTypes", EnumValue = 3 },
+			},
+		},
+		{
+			Name = "SoulbindConduitFlags",
+			Type = "Enumeration",
+			Fields =
+			{
+				{ Name = "VisibleToGetallsoulbindconduitScript", Type = "SoulbindConduitFlags", EnumValue = 1 },
+			},
+		},
+		{
+			Name = "SoulbindConduitInstallResult",
+			Type = "Enumeration",
+			Fields =
+			{
+				{ Name = "Success", Type = "SoulbindConduitInstallResult", EnumValue = 0 },
+				{ Name = "InvalidItem", Type = "SoulbindConduitInstallResult", EnumValue = 1 },
+				{ Name = "InvalidConduit", Type = "SoulbindConduitInstallResult", EnumValue = 2 },
+				{ Name = "InvalidTalent", Type = "SoulbindConduitInstallResult", EnumValue = 3 },
+				{ Name = "DuplicateConduit", Type = "SoulbindConduitInstallResult", EnumValue = 4 },
+				{ Name = "ForgeNotInProximity", Type = "SoulbindConduitInstallResult", EnumValue = 5 },
+				{ Name = "SocketNotEmpty", Type = "SoulbindConduitInstallResult", EnumValue = 6 },
+			},
+		},
+		{
+			Name = "VasPurchaseProgress",
+			Type = "Enumeration",
+			Fields =
+			{
+				{ Name = "Invalid", Type = "VasPurchaseProgress", EnumValue = 0 },
+				{ Name = "PrePurchase", Type = "VasPurchaseProgress", EnumValue = 1 },
+				{ Name = "PaymentPending", Type = "VasPurchaseProgress", EnumValue = 2 },
+				{ Name = "ApplyingLicense", Type = "VasPurchaseProgress", EnumValue = 3 },
+				{ Name = "WaitingOnQueue", Type = "VasPurchaseProgress", EnumValue = 4 },
+				{ Name = "Ready", Type = "VasPurchaseProgress", EnumValue = 5 },
+				{ Name = "ProcessingFactionChange", Type = "VasPurchaseProgress", EnumValue = 6 },
+				{ Name = "Complete", Type = "VasPurchaseProgress", EnumValue = 7 },
 			},
 		},
 	},
