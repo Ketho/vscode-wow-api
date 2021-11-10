@@ -1,3 +1,4 @@
+require("Lua/constants")
 require("Lua/Util/Util")
 
 -- create folders if they don't exist yet
