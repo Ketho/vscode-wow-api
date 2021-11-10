@@ -1,5 +1,3 @@
--- keep files under the default 100 KB preload file size
-
 ---@generic T
 ---@param frameType `T` | FrameType
 ---@param name string

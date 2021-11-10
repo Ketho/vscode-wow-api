@@ -24,7 +24,7 @@ local fileIndex = 0
 local function GetOutputFile()
 	local tempTbl = {}
 	fileIndex = fileIndex + 1
-	local file = io.open(string.format("EmmyLua/API/GlobalAPI/Dump%d.lua", fileIndex), "w")
+	local file = io.open(string.format("EmmyLua/API/GlobalAPI/API%d.lua", fileIndex), "w")
 	return file, tempTbl
 end
 
@@ -61,7 +61,7 @@ for _, name in pairs(sorted) do
 				countNonDoc = countNonDoc + 1
 			end
 		end
-
+		-- keep files under the default 100 KB preload file size
 		local tblContents = table.concat(tempTbl)
 		if #tblContents > 1024*95 then
 			WriteToFile(tblContents)
