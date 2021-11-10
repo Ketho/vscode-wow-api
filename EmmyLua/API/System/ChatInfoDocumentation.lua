@@ -135,12 +135,3 @@ function C_ChatInfo.SendAddonMessageLogged(prefix, message, chatType, target) en
 ---@param secondChannelIndex number
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_ChatInfo.SwapChatChannelsByChannelIndex)
 function C_ChatInfo.SwapChatChannelsByChannelIndex(firstChannelIndex, secondChannelIndex) end
-
----@class ChatChannelInfo
----@field name string
----@field shortcut string
----@field localID number
----@field instanceID number
----@field zoneChannelID number
----@field channelType PermanentChatChannelType
-local ChatChannelInfo = {}

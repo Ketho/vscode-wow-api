@@ -46,6 +46,11 @@ function C_Item.GetBaseItemTransmogInfo(itemLoc) end
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_Item.GetCurrentItemLevel)
 function C_Item.GetCurrentItemLevel(itemLocation) end
 
+---@param itemLoc ItemLocationMixin
+---@return ItemTransmogInfoMixin? info
+---[Documentation](https://wowpedia.fandom.com/wiki/API_C_Item.GetCurrentItemTransmogInfo)
+function C_Item.GetCurrentItemTransmogInfo(itemLoc) end
+
 ---@param itemLocation ItemLocationMixin
 ---@return string itemGuid
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_Item.GetItemGUID)

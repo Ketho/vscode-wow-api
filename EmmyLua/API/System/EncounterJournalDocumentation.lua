@@ -102,6 +102,7 @@ local DungeonEntranceMapInfo = {}
 ---@field link string|nil
 ---@field handError boolean|nil
 ---@field weaponTypeError boolean|nil
+---@field displayAsPerPlayerLoot boolean|nil
 local EncounterJournalItemInfo = {}
 
 ---@class EncounterJournalMapEncounterInfo

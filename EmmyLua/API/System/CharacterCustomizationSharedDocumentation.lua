@@ -21,6 +21,7 @@ local Unitsex = {
 ---@field id number
 ---@field name string
 ---@field ineligibleChoice boolean
+---@field isNew boolean
 ---@field swatchColor1 ColorMixin|nil
 ---@field swatchColor2 ColorMixin|nil
 local CharCustomizationChoice = {}
@@ -32,4 +33,5 @@ local CharCustomizationChoice = {}
 ---@field optionType ChrCustomizationOptionType
 ---@field choices CharCustomizationChoice[]
 ---@field currentChoiceIndex number
+---@field hasNewChoices boolean
 local CharCustomizationOption = {}

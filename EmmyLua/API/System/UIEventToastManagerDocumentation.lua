@@ -46,6 +46,8 @@ local EventToastEventType = {
 	PlayerAuraAdded = 16,
 	PlayerAuraRemoved = 17,
 	SpellScript = 18,
+	CriteriaUpdated = 19,
+	PvPTierUpdate = 20,
 }
 
 ---@class EventToastInfo

@@ -59,14 +59,6 @@ function C_Soulbinds.FindNodeIDPendingUninstall(soulbindID, conduitID) end
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_Soulbinds.GetActiveSoulbindID)
 function C_Soulbinds.GetActiveSoulbindID() end
 
----@return number charges
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_Soulbinds.GetConduitCharges)
-function C_Soulbinds.GetConduitCharges() end
-
----@return number charges
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_Soulbinds.GetConduitChargesCapacity)
-function C_Soulbinds.GetConduitChargesCapacity() end
-
 ---@param conduitType SoulbindConduitType
 ---@return ConduitCollectionData[] collectionData
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_Soulbinds.GetConduitCollection)
@@ -142,15 +134,6 @@ function C_Soulbinds.GetSoulbindData(soulbindID) end
 ---@return number[] specIDs
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_Soulbinds.GetSpecsAssignedToSoulbind)
 function C_Soulbinds.GetSpecsAssignedToSoulbind(soulbindID) end
-
----@return number count
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_Soulbinds.GetTotalConduitChargesPending)
-function C_Soulbinds.GetTotalConduitChargesPending() end
-
----@param soulbindID number
----@return number count
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_Soulbinds.GetTotalConduitChargesPendingInSoulbind)
-function C_Soulbinds.GetTotalConduitChargesPendingInSoulbind(soulbindID) end
 
 ---@param treeID number
 ---@return SoulbindTree tree

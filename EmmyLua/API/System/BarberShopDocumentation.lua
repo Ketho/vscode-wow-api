@@ -35,6 +35,14 @@ function C_BarberShop.HasAnyChanges() end
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_BarberShop.IsViewingAlteredForm)
 function C_BarberShop.IsViewingAlteredForm() end
 
+---@param choiceID number
+---[Documentation](https://wowpedia.fandom.com/wiki/API_C_BarberShop.MarkCustomizationChoiceAsSeen)
+function C_BarberShop.MarkCustomizationChoiceAsSeen(choiceID) end
+
+---@param optionID number
+---[Documentation](https://wowpedia.fandom.com/wiki/API_C_BarberShop.MarkCustomizationOptionAsSeen)
+function C_BarberShop.MarkCustomizationOptionAsSeen(optionID) end
+
 ---@param optionID number
 ---@param choiceID number
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_BarberShop.PreviewCustomizationChoice)
@@ -52,6 +60,9 @@ function C_BarberShop.ResetCustomizationChoices() end
 ---@param diffDegrees number
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_BarberShop.RotateCamera)
 function C_BarberShop.RotateCamera(diffDegrees) end
+
+---[Documentation](https://wowpedia.fandom.com/wiki/API_C_BarberShop.SaveSeenChoices)
+function C_BarberShop.SaveSeenChoices() end
 
 ---@param offset number
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_BarberShop.SetCameraDistanceOffset)

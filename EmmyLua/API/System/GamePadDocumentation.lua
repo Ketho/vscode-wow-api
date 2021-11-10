@@ -66,10 +66,18 @@ function C_GamePad.IsEnabled() end
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_GamePad.SetConfig)
 function C_GamePad.SetConfig(config) end
 
+---@param vibrationType string
+---@param intensity number
+---[Documentation](https://wowpedia.fandom.com/wiki/API_C_GamePad.SetVibration)
+function C_GamePad.SetVibration(vibrationType, intensity) end
+
 ---@param stickIndex number
 ---@return string? configName
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_GamePad.StickIndexToConfigName)
 function C_GamePad.StickIndexToConfigName(stickIndex) end
+
+---[Documentation](https://wowpedia.fandom.com/wiki/API_C_GamePad.StopVibration)
+function C_GamePad.StopVibration() end
 
 ---@class GamePadAxisConfig
 ---@field axis string
@@ -144,5 +152,7 @@ local GamePadStick = {}
 ---@field axisX string|nil
 ---@field axisY string|nil
 ---@field deadzone number|nil
+---@field deadzoneX number|nil
+---@field deadzoneY number|nil
 ---@field comment string|nil
 local GamePadStickConfig = {}

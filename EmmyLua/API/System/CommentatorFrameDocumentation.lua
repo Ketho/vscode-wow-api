@@ -468,13 +468,13 @@ function C_Commentator.SetAdditionalCameraWeight(teamIndex, playerIndex, weight)
 function C_Commentator.SetAdditionalCameraWeightByToken(unitToken, weight) end
 
 ---@param spellIDs number[]
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_Commentator.SetBlacklistedAuras)
-function C_Commentator.SetBlacklistedAuras(spellIDs) end
+---[Documentation](https://wowpedia.fandom.com/wiki/API_C_Commentator.SetBlocklistedAuras)
+function C_Commentator.SetBlocklistedAuras(spellIDs) end
 
 ---@param specID number
 ---@param spellIDs number[]
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_Commentator.SetBlacklistedCooldowns)
-function C_Commentator.SetBlacklistedCooldowns(specID, spellIDs) end
+---[Documentation](https://wowpedia.fandom.com/wiki/API_C_Commentator.SetBlocklistedCooldowns)
+function C_Commentator.SetBlocklistedCooldowns(specID, spellIDs) end
 
 ---@param xPos number
 ---@param yPos number

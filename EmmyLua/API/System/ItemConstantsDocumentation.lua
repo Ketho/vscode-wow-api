@@ -153,3 +153,46 @@ local ItemWeaponSubclass = {
 	Wand = 19,
 	Fishingpole = 20,
 }
+
+---@class Itemclassfilterflags
+local Itemclassfilterflags = {
+	Consumable = 1,
+	Container = 2,
+	Weapon = 4,
+	Gem = 8,
+	Armor = 16,
+	Reagent = 32,
+	Projectile = 64,
+	Tradegoods = 128,
+	ItemEnhancement = 256,
+	Recipe = 512,
+	CurrencyTokenObsolete = 1024,
+	Quiver = 2048,
+	Questitemclassfilterflags = 4096,
+	Key = 8192,
+	PermanentObsolete = 16384,
+	Miscellaneous = 32768,
+	Glyph = 65536,
+	Battlepet = 131072,
+}
+
+---@class Itemsetflags
+local Itemsetflags = {
+	Legacy = 1,
+	UseItemHistorySetSlots = 2,
+	RequiresPvPTalentsActive = 4,
+}
+
+---@class UIItemInteractionFlags
+local UIItemInteractionFlags = {
+	DisplayWithInset = 1,
+	ConfirmationHasDelay = 2,
+}
+
+---@class UIItemInteractionType
+local UIItemInteractionType = {
+	None = 0,
+	CastSpell = 1,
+	CleanseCorruption = 2,
+	RunecarverScrapping = 3,
+}

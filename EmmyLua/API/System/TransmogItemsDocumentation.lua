@@ -1,5 +1,11 @@
 C_TransmogCollection = {}
 
+---@param sourceID number
+---@return boolean hasItemData
+---@return boolean canCollect
+---[Documentation](https://wowpedia.fandom.com/wiki/API_C_TransmogCollection.AccountCanCollectSource)
+function C_TransmogCollection.AccountCanCollectSource(sourceID) end
+
 ---@param appearanceID number
 ---@return boolean canHaveIllusion
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_TransmogCollection.CanAppearanceHaveIllusion)
@@ -62,9 +68,10 @@ function C_TransmogCollection.GetAppearanceSourceDrops(itemModifiedAppearanceID)
 function C_TransmogCollection.GetAppearanceSourceInfo(itemModifiedAppearanceID) end
 
 ---@param appearanceID number
+---@param categoryType? TransmogCollectionType
 ---@return AppearanceSourceInfo[] sources
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_TransmogCollection.GetAppearanceSources)
-function C_TransmogCollection.GetAppearanceSources(appearanceID) end
+function C_TransmogCollection.GetAppearanceSources(appearanceID, categoryType) end
 
 ---@param appearanceID number
 ---@return string name
@@ -135,6 +142,11 @@ function C_TransmogCollection.GetIsAppearanceFavorite(itemAppearanceID) end
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_TransmogCollection.GetItemInfo)
 function C_TransmogCollection.GetItemInfo(itemInfo) end
 
+---@param hyperlink string
+---@return table[] list
+---[Documentation](https://wowpedia.fandom.com/wiki/API_C_TransmogCollection.GetItemTransmogInfoListFromOutfitHyperlink)
+function C_TransmogCollection.GetItemTransmogInfoListFromOutfitHyperlink(hyperlink) end
+
 ---@return number visualID
 ---@return TransmogCollectionType category
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_TransmogCollection.GetLatestAppearance)
@@ -147,6 +159,11 @@ function C_TransmogCollection.GetNumMaxOutfits() end
 ---@return number count
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_TransmogCollection.GetNumTransmogSources)
 function C_TransmogCollection.GetNumTransmogSources() end
+
+---@param itemTransmogInfoList table[]
+---@return string hyperlink
+---[Documentation](https://wowpedia.fandom.com/wiki/API_C_TransmogCollection.GetOutfitHyperlinkFromItemTransmogInfoList)
+function C_TransmogCollection.GetOutfitHyperlinkFromItemTransmogInfoList(itemTransmogInfoList) end
 
 ---@param outfitID number
 ---@return string name
@@ -177,6 +194,11 @@ function C_TransmogCollection.GetSourceIcon(itemModifiedAppearanceID) end
 ---@return AppearanceSourceInfo sourceInfo
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_TransmogCollection.GetSourceInfo)
 function C_TransmogCollection.GetSourceInfo(sourceID) end
+
+---@param itemModifiedAppearanceID number
+---@return number itemID
+---[Documentation](https://wowpedia.fandom.com/wiki/API_C_TransmogCollection.GetSourceItemID)
+function C_TransmogCollection.GetSourceItemID(itemModifiedAppearanceID) end
 
 ---@param itemModifiedAppearanceID number
 ---@return string holidayName
@@ -244,6 +266,11 @@ function C_TransmogCollection.PlayerCanCollectSource(sourceID) end
 ---@return boolean hasTransmog
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_TransmogCollection.PlayerHasTransmog)
 function C_TransmogCollection.PlayerHasTransmog(itemID, itemAppearanceModID) end
+
+---@param itemInfo string
+---@return boolean hasTransmog
+---[Documentation](https://wowpedia.fandom.com/wiki/API_C_TransmogCollection.PlayerHasTransmogByItemInfo)
+function C_TransmogCollection.PlayerHasTransmogByItemInfo(itemInfo) end
 
 ---@param itemModifiedAppearanceID number
 ---@return boolean hasTransmog
@@ -323,6 +350,7 @@ local TransmogCameraVariation = {
 ---@field appearanceMeetsNonLevelRequirements boolean
 ---@field appearanceIsUsable boolean
 ---@field appearanceNumSources number
+---@field sourceIsKnown boolean
 local TransmogAppearanceInfoBySourceData = {}
 
 ---@class TransmogAppearanceJournalEncounterInfo

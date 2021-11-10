@@ -5,8 +5,10 @@ C_PlayerMentorship = {}
 function C_PlayerMentorship.GetMentorLevelRequirement() end
 
 ---@return number[] achievementIDs
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_PlayerMentorship.GetMentorOptionalAchievementIDs)
-function C_PlayerMentorship.GetMentorOptionalAchievementIDs() end
+---@return number[] optionalAchievementIDs
+---@return number optionalCompleteAtLeastCount
+---[Documentation](https://wowpedia.fandom.com/wiki/API_C_PlayerMentorship.GetMentorRequirements)
+function C_PlayerMentorship.GetMentorRequirements() end
 
 ---@param playerLocation PlayerLocationMixin
 ---@return PlayerMentorshipStatus status

@@ -31,6 +31,7 @@ local PlayerChoiceRarity = {
 }
 
 ---@class PlayerChoiceInfo
+---@field objectGUID string
 ---@field choiceID number
 ---@field questionText string
 ---@field uiTextureKit string

@@ -110,6 +110,11 @@ function C_TransmogSets.IsBaseSetCollected(transmogSetID) end
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_TransmogSets.IsNewSource)
 function C_TransmogSets.IsNewSource(sourceID) end
 
+---@param transmogSetID number
+---@return boolean isVisible
+---[Documentation](https://wowpedia.fandom.com/wiki/API_C_TransmogSets.IsSetVisible)
+function C_TransmogSets.IsSetVisible(transmogSetID) end
+
 ---@param index number
 ---@param isChecked boolean
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_TransmogSets.SetBaseSetsFilter)

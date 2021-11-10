@@ -31,11 +31,6 @@ function C_ItemInteraction.SetCorruptionReforgerItemTooltip() end
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_ItemInteraction.SetPendingItem)
 function C_ItemInteraction.SetPendingItem(item) end
 
----@class ItemInteractionFrameType
-local ItemInteractionFrameType = {
-	CleanseCorruption = 0,
-}
-
 ---@class ItemInteractionFrameInfo
 ---@field textureKit string
 ---@field openSoundKitID number
@@ -43,8 +38,11 @@ local ItemInteractionFrameType = {
 ---@field titleText string
 ---@field tutorialText string
 ---@field buttonText string
----@field frameType ItemInteractionFrameType
+---@field interactionType UIItemInteractionType
+---@field flags number
 ---@field description string|nil
+---@field buttonTooltip string|nil
+---@field confirmationDescription string|nil
 ---@field cost number|nil
 ---@field currencyTypeId number|nil
 ---@field dropInSlotSoundKitId number|nil

@@ -24,9 +24,9 @@ local ConfigurationWarning = {
 	ShaderModelWillBeOutdated = 0,
 	ShaderModelIsOutdated = 1,
 	ConsoleDeviceSseOutdated = 2,
-	DriverBlacklisted = 3,
+	DriverBlocklisted = 3,
 	DriverOutOfDate = 4,
-	DeviceBlacklisted = 5,
+	DeviceBlocklisted = 5,
 	GraphicsApiWillBeOutdated = 6,
 	OsBitsWillBeOutdated = 7,
 }

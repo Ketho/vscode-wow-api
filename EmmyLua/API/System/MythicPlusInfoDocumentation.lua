@@ -8,6 +8,12 @@ function C_MythicPlus.GetCurrentAffixes() end
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_MythicPlus.GetCurrentSeason)
 function C_MythicPlus.GetCurrentSeason() end
 
+---@return number displaySeasonID
+---@return number milestoneSeasonID
+---@return number rewardSeasonID
+---[Documentation](https://wowpedia.fandom.com/wiki/API_C_MythicPlus.GetCurrentSeasonValues)
+function C_MythicPlus.GetCurrentSeasonValues() end
+
 ---@return number challengeMapId
 ---@return number level
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_MythicPlus.GetLastWeeklyBestInformation)
@@ -20,6 +26,10 @@ function C_MythicPlus.GetOwnedKeystoneChallengeMapID() end
 ---@return number keyStoneLevel
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_MythicPlus.GetOwnedKeystoneLevel)
 function C_MythicPlus.GetOwnedKeystoneLevel() end
+
+---@return number mapID
+---[Documentation](https://wowpedia.fandom.com/wiki/API_C_MythicPlus.GetOwnedKeystoneMapID)
+function C_MythicPlus.GetOwnedKeystoneMapID() end
 
 ---@param difficultyLevel number
 ---@return number weeklyRewardLevel
@@ -93,14 +103,6 @@ function C_MythicPlus.RequestRewards() end
 ---@field members MythicPlusMember[]
 ---@field dungeonScore number
 local MapSeasonBestInfo = {}
-
----@class MythicPlusAffixScoreInfo
----@field name string
----@field score number
----@field level number
----@field durationSec number
----@field overTime boolean
-local MythicPlusAffixScoreInfo = {}
 
 ---@class MythicPlusDate
 ---@field year number

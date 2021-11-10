@@ -36,8 +36,9 @@ local CurrencyFlags = {
 
 ---@class CurrencyFlagsB
 local CurrencyFlagsB = {
-	CurrencyBUseTotalEarnedForMaxQty = 1,
+	CurrencyBUseTotalEarnedForEarned = 1,
 	CurrencyBShowQuestXpGainInTooltip = 2,
+	CurrencyBNoNotificationMailOnOfflineProgress = 4,
 }
 
 ---@class CurrencyGainFlags

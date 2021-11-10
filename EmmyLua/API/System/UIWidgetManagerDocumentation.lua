@@ -142,16 +142,22 @@ function C_UIWidgetManager.GetWidgetSetInfo(widgetSetID) end
 function C_UIWidgetManager.GetZoneControlVisualizationInfo(widgetID) end
 
 ---@param unitToken string
+---@param isGuid boolean
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_UIWidgetManager.RegisterUnitForWidgetUpdates)
-function C_UIWidgetManager.RegisterUnitForWidgetUpdates(unitToken) end
+function C_UIWidgetManager.RegisterUnitForWidgetUpdates(unitToken, isGuid) end
 
 ---@param unit? string
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_UIWidgetManager.SetProcessingUnit)
 function C_UIWidgetManager.SetProcessingUnit(unit) end
 
+---@param unit? string
+---[Documentation](https://wowpedia.fandom.com/wiki/API_C_UIWidgetManager.SetProcessingUnitGuid)
+function C_UIWidgetManager.SetProcessingUnitGuid(unit) end
+
 ---@param unitToken string
+---@param isGuid boolean
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_UIWidgetManager.UnregisterUnitForWidgetUpdates)
-function C_UIWidgetManager.UnregisterUnitForWidgetUpdates(unitToken) end
+function C_UIWidgetManager.UnregisterUnitForWidgetUpdates(unitToken, isGuid) end
 
 ---@class CaptureBarWidgetFillDirectionType
 local CaptureBarWidgetFillDirectionType = {

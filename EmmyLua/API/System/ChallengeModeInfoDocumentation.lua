@@ -39,6 +39,7 @@ function C_ChallengeMode.GetAffixInfo(affixID) end
 ---@return boolean IsMapRecord
 ---@return boolean IsAffixRecord
 ---@return number PrimaryAffix
+---@return boolean isEligibleForScore
 ---@return ChallengeModeCompletionMemberInfo[] members
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_ChallengeMode.GetCompletionInfo)
 function C_ChallengeMode.GetCompletionInfo() end
@@ -63,6 +64,10 @@ function C_ChallengeMode.GetGuildLeaders() end
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_ChallengeMode.GetKeystoneLevelRarityColor)
 ---Returns a color value from the passed in keystone level.
 function C_ChallengeMode.GetKeystoneLevelRarityColor(level) end
+
+---@return MythicPlusRatingLinkInfo[] displayScores
+---[Documentation](https://wowpedia.fandom.com/wiki/API_C_ChallengeMode.GetMapScoreInfo)
+function C_ChallengeMode.GetMapScoreInfo() end
 
 ---@return number[] mapChallengeModeIDs
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_ChallengeMode.GetMapTable)

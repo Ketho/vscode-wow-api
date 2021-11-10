@@ -155,9 +155,19 @@ function C_MountJournal.IsMountEquipmentApplied() end
 function C_MountJournal.IsSourceChecked(filterIndex) end
 
 ---@param filterIndex number
+---@return boolean isChecked
+---[Documentation](https://wowpedia.fandom.com/wiki/API_C_MountJournal.IsTypeChecked)
+function C_MountJournal.IsTypeChecked(filterIndex) end
+
+---@param filterIndex number
 ---@return boolean isValid
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_MountJournal.IsValidSourceFilter)
 function C_MountJournal.IsValidSourceFilter(filterIndex) end
+
+---@param filterIndex number
+---@return boolean isValid
+---[Documentation](https://wowpedia.fandom.com/wiki/API_C_MountJournal.IsValidTypeFilter)
+function C_MountJournal.IsValidTypeFilter(filterIndex) end
 
 ---@param mountID number
 ---@return boolean needsFanfare
@@ -171,6 +181,10 @@ function C_MountJournal.Pickup(displayIndex) end
 ---@param isChecked boolean
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_MountJournal.SetAllSourceFilters)
 function C_MountJournal.SetAllSourceFilters(isChecked) end
+
+---@param isChecked boolean
+---[Documentation](https://wowpedia.fandom.com/wiki/API_C_MountJournal.SetAllTypeFilters)
+function C_MountJournal.SetAllTypeFilters(isChecked) end
 
 ---@param filterIndex number
 ---@param isChecked boolean
@@ -191,9 +205,27 @@ function C_MountJournal.SetSearch(searchValue) end
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_MountJournal.SetSourceFilter)
 function C_MountJournal.SetSourceFilter(filterIndex, isChecked) end
 
+---@param filterIndex number
+---@param isChecked boolean
+---[Documentation](https://wowpedia.fandom.com/wiki/API_C_MountJournal.SetTypeFilter)
+function C_MountJournal.SetTypeFilter(filterIndex, isChecked) end
+
 ---@param mountID number
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_MountJournal.SummonByID)
 function C_MountJournal.SummonByID(mountID) end
+
+---@class MountType
+local MountType = {
+	Ground = 0,
+	Flying = 1,
+	Aquatic = 2,
+}
+
+---@class MountTypeFlag
+local MountTypeFlag = {
+	IsFlyingMount = 1,
+	IsAquaticMount = 2,
+}
 
 ---@class MountCreatureDisplayInfo
 ---@field creatureDisplayID number

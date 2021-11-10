@@ -47,5 +47,5 @@ local TransmogUseErrorType = {
 	Ability = 3,
 	Faction = 4,
 	Holiday = 5,
-	ArtifactSpec = 6,
+	HotRecheckFailed = 6,
 }

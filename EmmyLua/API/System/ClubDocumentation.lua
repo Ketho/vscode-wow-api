@@ -121,6 +121,9 @@ function C_Club.EditStream(clubId, streamId, name, subject, leadersAndModerators
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_Club.Flush)
 function C_Club.Flush() end
 
+---[Documentation](https://wowpedia.fandom.com/wiki/API_C_Club.FocusCommunityStreams)
+function C_Club.FocusCommunityStreams() end
+
 ---@param clubId string
 ---@param streamId string
 ---@return boolean focused
@@ -427,6 +430,10 @@ function C_Club.SetSocialQueueingEnabled(clubId, enabled) end
 ---@return boolean clubTypeIsAllowed
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_Club.ShouldAllowClubType)
 function C_Club.ShouldAllowClubType(clubType) end
+
+---@param unsubscribe boolean
+---[Documentation](https://wowpedia.fandom.com/wiki/API_C_Club.UnfocusAllStreams)
+function C_Club.UnfocusAllStreams(unsubscribe) end
 
 ---@param clubId string
 ---@param streamId string
