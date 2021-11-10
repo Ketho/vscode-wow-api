@@ -1,33 +1,45 @@
--- XML exported from https://wow.gamepedia.com/Special:Export
-local lfs = require "lfs"
 local xml2lua = require "xml2lua"
 local handler = require "xmlhandler.tree"
 
-local path
-for file in lfs.dir("./Lua/Data/input") do
-	if file:find("%.xml") then
-		path = "Lua/Data/input/"..file
+local PATH = "Lua/Data/cache/Wowpedia_API.xml"
+
+local function GetUndocumentedApi()
+	local nonBlizzDocumented = unpack(require("Lua/WikiParser/WikiText/NonBlizzardDocumented"))
+	local t = {}
+	for k in pairs(nonBlizzDocumented) do
+		table.insert(t, "API "..k)
 	end
-end
-if not path then
-	local output = "Lua/Data/output/NonBlizzardDocumented.txt"
-	print("Parser: no XML file found; export it from Wowpedia with "..output)
-	if not lfs.attributes(output) then
-		local nonBlizzDocumented, blizzDocumented = unpack(require("Lua/WikiParser/WikiText/NonBlizzardDocumented"))
-		local file1 = io.open(output, "w")
-		for _, name in pairs(Util:SortTable(nonBlizzDocumented)) do
-			file1:write("API "..name.."\n")
-		end
-		local file2 = io.open("Lua/Data/output/BlizzardDocumented.txt", "w")
-		for _, name in pairs(Util:SortTable(blizzDocumented)) do
-			file2:write("API "..name.."\n")
-		end
-	end
-	return
+	table.sort(t)
+	return table.concat(t, "%0A")
 end
 
+local function SaveWowpediaExport(path, pages)
+	local url = "https://wowpedia.fandom.com/wiki/Special:Export"
+	local requestBody = string.format("pages=%s&curonly=1", pages)
+	Util:DownloadFilePost(path, url, requestBody)
+end
+
+local undoc = GetUndocumentedApi()
+SaveWowpediaExport(PATH, undoc)
+
+-- todo: refactor; still need to write these files for later
+local function WriteApiFiles()
+	local output = "Lua/Data/output/NonBlizzardDocumented.txt"
+	local nonBlizzDocumented, blizzDocumented = unpack(require("Lua/WikiParser/WikiText/NonBlizzardDocumented"))
+	local file1 = io.open(output, "w")
+	for _, name in pairs(Util:SortTable(nonBlizzDocumented)) do
+		file1:write("API "..name.."\n")
+	end
+	local file2 = io.open("Lua/Data/output/BlizzardDocumented.txt", "w")
+	for _, name in pairs(Util:SortTable(blizzDocumented)) do
+		file2:write("API "..name.."\n")
+	end
+end
+
+WriteApiFiles()
+
 -- parse xml from file
-local xmlstr = xml2lua.loadFile(path)
+local xmlstr = xml2lua.loadFile(PATH)
 local parser = xml2lua.parser(handler)
 parser:parse(xmlstr)
 
