@@ -37,6 +37,10 @@ local fs_doc = "---[Documentation](https://wowpedia.fandom.com/wiki/%s)"
 
 function Emmy:GetFunction(func)
 	local tbl = {}
+	if func.Documentation then
+		table.insert(tbl, "---"..table.concat(func.Documentation, "; "))
+	end
+	table.insert(tbl, fs_doc:format("API_"..Util:GetFullName(func)))
 	if func.Arguments then
 		for _, arg in pairs(func.Arguments) do
 			table.insert(tbl, self:GetField("param", arg))
@@ -46,10 +50,6 @@ function Emmy:GetFunction(func)
 		for _, ret in pairs(func.Returns) do
 			table.insert(tbl, self:GetField("return", ret))
 		end
-	end
-	table.insert(tbl, fs_doc:format("API_"..Util:GetFullName(func)))
-	if func.Documentation then
-		table.insert(tbl, "---"..table.concat(func.Documentation, "; "))
 	end
 	table.insert(tbl, string.format("function %s end", func:GetFullName(false, false)))
 	return table.concat(tbl, "\n")
