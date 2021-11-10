@@ -1,3 +1,6 @@
+-- this complains about Lua 5.1 stuff but we're using 5.3
+---@diagnostic disable: deprecated
+
 ---@param tbl table
 ---@param func function
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_foreach)
