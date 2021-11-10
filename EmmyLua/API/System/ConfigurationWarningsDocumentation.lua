@@ -1,22 +1,22 @@
 C_ConfigurationWarnings = {}
 
+---[Documentation](https://wowpedia.fandom.com/wiki/API_C_ConfigurationWarnings.GetConfigurationWarningSeen)
 ---@param configurationWarning ConfigurationWarning
 ---@return boolean hasSeenConfigurationWarning
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_ConfigurationWarnings.GetConfigurationWarningSeen)
 function C_ConfigurationWarnings.GetConfigurationWarningSeen(configurationWarning) end
 
+---[Documentation](https://wowpedia.fandom.com/wiki/API_C_ConfigurationWarnings.GetConfigurationWarningString)
 ---@param configurationWarning ConfigurationWarning
 ---@return string configurationWarningString
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_ConfigurationWarnings.GetConfigurationWarningString)
 function C_ConfigurationWarnings.GetConfigurationWarningString(configurationWarning) end
 
+---[Documentation](https://wowpedia.fandom.com/wiki/API_C_ConfigurationWarnings.GetConfigurationWarnings)
 ---@param includeSeenWarnings boolean
 ---@return ConfigurationWarning[] configurationWarnings
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_ConfigurationWarnings.GetConfigurationWarnings)
 function C_ConfigurationWarnings.GetConfigurationWarnings(includeSeenWarnings) end
 
----@param configurationWarning ConfigurationWarning
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_ConfigurationWarnings.SetConfigurationWarningSeen)
+---@param configurationWarning ConfigurationWarning
 function C_ConfigurationWarnings.SetConfigurationWarningSeen(configurationWarning) end
 
 ---@class ConfigurationWarning

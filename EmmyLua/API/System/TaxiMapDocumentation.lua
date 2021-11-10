@@ -1,20 +1,20 @@
 C_TaxiMap = {}
 
+---Returns information on taxi nodes at the current flight master.
+---[Documentation](https://wowpedia.fandom.com/wiki/API_C_TaxiMap.GetAllTaxiNodes)
 ---@param uiMapID number
 ---@return TaxiNodeInfo[] taxiNodes
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_TaxiMap.GetAllTaxiNodes)
----Returns information on taxi nodes at the current flight master.
 function C_TaxiMap.GetAllTaxiNodes(uiMapID) end
 
+---Returns information on taxi nodes for a given map, without considering the current flight master.
+---[Documentation](https://wowpedia.fandom.com/wiki/API_C_TaxiMap.GetTaxiNodesForMap)
 ---@param uiMapID number
 ---@return MapTaxiNodeInfo[] mapTaxiNodes
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_TaxiMap.GetTaxiNodesForMap)
----Returns information on taxi nodes for a given map, without considering the current flight master.
 function C_TaxiMap.GetTaxiNodesForMap(uiMapID) end
 
+---[Documentation](https://wowpedia.fandom.com/wiki/API_C_TaxiMap.ShouldMapShowTaxiNodes)
 ---@param uiMapID number
 ---@return boolean shouldShowNodes
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_TaxiMap.ShouldMapShowTaxiNodes)
 function C_TaxiMap.ShouldMapShowTaxiNodes(uiMapID) end
 
 ---@class FlightPathFaction

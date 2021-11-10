@@ -1,7 +1,7 @@
 C_LoreText = {}
 
----@param campaignID number
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_LoreText.RequestLoreTextForCampaignID)
+---@param campaignID number
 function C_LoreText.RequestLoreTextForCampaignID(campaignID) end
 
 ---@class LoreTextEntry

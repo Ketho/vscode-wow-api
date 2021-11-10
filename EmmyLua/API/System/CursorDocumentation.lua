@@ -3,18 +3,18 @@ C_Cursor = {}
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_Cursor.DropCursorCommunitiesStream)
 function C_Cursor.DropCursorCommunitiesStream() end
 
+---[Documentation](https://wowpedia.fandom.com/wiki/API_C_Cursor.GetCursorCommunitiesStream)
 ---@return string clubId
 ---@return string streamId
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_Cursor.GetCursorCommunitiesStream)
 function C_Cursor.GetCursorCommunitiesStream() end
 
----@return ItemLocationMixin item
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_Cursor.GetCursorItem)
+---@return ItemLocationMixin item
 function C_Cursor.GetCursorItem() end
 
+---[Documentation](https://wowpedia.fandom.com/wiki/API_C_Cursor.SetCursorCommunitiesStream)
 ---@param clubId string
 ---@param streamId string
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_Cursor.SetCursorCommunitiesStream)
 function C_Cursor.SetCursorCommunitiesStream(clubId, streamId) end
 
 ---@class UICursorType

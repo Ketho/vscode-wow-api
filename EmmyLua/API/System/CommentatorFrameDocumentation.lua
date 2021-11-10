@@ -1,39 +1,39 @@
 C_Commentator = {}
 
+---[Documentation](https://wowpedia.fandom.com/wiki/API_C_Commentator.AddPlayerOverrideName)
 ---@param playerName string
 ---@param overrideName string
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_Commentator.AddPlayerOverrideName)
 function C_Commentator.AddPlayerOverrideName(playerName, overrideName) end
 
----@param spellIDs number[]
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_Commentator.AddTrackedDefensiveAuras)
+---@param spellIDs number[]
 function C_Commentator.AddTrackedDefensiveAuras(spellIDs) end
 
----@param spellIDs number[]
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_Commentator.AddTrackedOffensiveAuras)
+---@param spellIDs number[]
 function C_Commentator.AddTrackedOffensiveAuras(spellIDs) end
 
----@return boolean teamsAreSwapped
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_Commentator.AreTeamsSwapped)
+---@return boolean teamsAreSwapped
 function C_Commentator.AreTeamsSwapped() end
 
+---[Documentation](https://wowpedia.fandom.com/wiki/API_C_Commentator.AssignPlayerToTeam)
 ---@param playerName string
 ---@param teamName string
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_Commentator.AssignPlayerToTeam)
 function C_Commentator.AssignPlayerToTeam(playerName, teamName) end
 
+---[Documentation](https://wowpedia.fandom.com/wiki/API_C_Commentator.AssignPlayersToTeam)
 ---@param playerName string[]
 ---@param teamName string
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_Commentator.AssignPlayersToTeam)
 function C_Commentator.AssignPlayersToTeam(playerName, teamName) end
 
+---[Documentation](https://wowpedia.fandom.com/wiki/API_C_Commentator.AssignPlayersToTeamInCurrentInstance)
 ---@param teamIndex number
 ---@param teamName string
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_Commentator.AssignPlayersToTeamInCurrentInstance)
 function C_Commentator.AssignPlayersToTeamInCurrentInstance(teamIndex, teamName) end
 
----@return boolean canUseCommentatorCheats
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_Commentator.CanUseCommentatorCheats)
+---@return boolean canUseCommentatorCheats
 function C_Commentator.CanUseCommentatorCheats() end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_Commentator.ClearCameraTarget)
@@ -42,8 +42,8 @@ function C_Commentator.ClearCameraTarget() end
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_Commentator.ClearFollowTarget)
 function C_Commentator.ClearFollowTarget() end
 
----@param lookAtIndex? number
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_Commentator.ClearLookAtTarget)
+---@param lookAtIndex? number
 function C_Commentator.ClearLookAtTarget(lookAtIndex) end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_Commentator.EnterInstance)
@@ -52,53 +52,54 @@ function C_Commentator.EnterInstance() end
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_Commentator.ExitInstance)
 function C_Commentator.ExitInstance() end
 
+---[Documentation](https://wowpedia.fandom.com/wiki/API_C_Commentator.FindSpectatedUnit)
 ---@param unitToken string
 ---@return number playerIndex
 ---@return number teamIndex
 ---@return boolean isPet
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_Commentator.FindSpectatedUnit)
 function C_Commentator.FindSpectatedUnit(unitToken) end
 
+---[Documentation](https://wowpedia.fandom.com/wiki/API_C_Commentator.FindTeamNameInCurrentInstance)
 ---@param teamIndex number
 ---@return string? teamName
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_Commentator.FindTeamNameInCurrentInstance)
 function C_Commentator.FindTeamNameInCurrentInstance(teamIndex) end
 
+---[Documentation](https://wowpedia.fandom.com/wiki/API_C_Commentator.FindTeamNameInDirectory)
 ---@param playerNames string[]
 ---@return string? teamName
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_Commentator.FindTeamNameInDirectory)
 function C_Commentator.FindTeamNameInDirectory(playerNames) end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_Commentator.FlushCommentatorHistory)
 function C_Commentator.FlushCommentatorHistory() end
 
+---[Documentation](https://wowpedia.fandom.com/wiki/API_C_Commentator.FollowPlayer)
 ---@param factionIndex number
 ---@param playerIndex number
 ---@param forceInstantTransition? boolean
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_Commentator.FollowPlayer)
 function C_Commentator.FollowPlayer(factionIndex, playerIndex, forceInstantTransition) end
 
----@param token string
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_Commentator.FollowUnit)
+---@param token string
 function C_Commentator.FollowUnit(token) end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_Commentator.ForceFollowTransition)
 function C_Commentator.ForceFollowTransition() end
 
+---[Documentation](https://wowpedia.fandom.com/wiki/API_C_Commentator.GetAdditionalCameraWeight)
 ---@return number teamIndex
 ---@return number playerIndex
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_Commentator.GetAdditionalCameraWeight)
 function C_Commentator.GetAdditionalCameraWeight() end
 
+---[Documentation](https://wowpedia.fandom.com/wiki/API_C_Commentator.GetAdditionalCameraWeightByToken)
 ---@param unitToken string
 ---@return number weight
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_Commentator.GetAdditionalCameraWeightByToken)
 function C_Commentator.GetAdditionalCameraWeightByToken(unitToken) end
 
----@return NameOverrideEntry[] nameEntries
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_Commentator.GetAllPlayerOverrideNames)
+---@return NameOverrideEntry[] nameEntries
 function C_Commentator.GetAllPlayerOverrideNames() end
 
+---[Documentation](https://wowpedia.fandom.com/wiki/API_C_Commentator.GetCamera)
 ---@return number xPos
 ---@return number yPos
 ---@return number zPos
@@ -106,56 +107,56 @@ function C_Commentator.GetAllPlayerOverrideNames() end
 ---@return number pitch
 ---@return number roll
 ---@return number fov
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_Commentator.GetCamera)
 function C_Commentator.GetCamera() end
 
----@return boolean isColliding
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_Commentator.GetCameraCollision)
+---@return boolean isColliding
 function C_Commentator.GetCameraCollision() end
 
+---[Documentation](https://wowpedia.fandom.com/wiki/API_C_Commentator.GetCameraPosition)
 ---@return number xPos
 ---@return number yPos
 ---@return number zPos
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_Commentator.GetCameraPosition)
 function C_Commentator.GetCameraPosition() end
 
----@return CommentatorHistory history
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_Commentator.GetCommentatorHistory)
+---@return CommentatorHistory history
 function C_Commentator.GetCommentatorHistory() end
 
----@return number? mapID
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_Commentator.GetCurrentMapID)
+---@return number? mapID
 function C_Commentator.GetCurrentMapID() end
 
----@return number percentage
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_Commentator.GetDampeningPercent)
+---@return number percentage
 function C_Commentator.GetDampeningPercent() end
 
----@return number distance
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_Commentator.GetDistanceBeforeForcedHorizontalConvergence)
+---@return number distance
 function C_Commentator.GetDistanceBeforeForcedHorizontalConvergence() end
 
----@return number ms
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_Commentator.GetDurationToForceHorizontalConvergence)
+---@return number ms
 function C_Commentator.GetDurationToForceHorizontalConvergence() end
 
----@return number excludeDistance
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_Commentator.GetExcludeDistance)
+---@return number excludeDistance
 function C_Commentator.GetExcludeDistance() end
 
----@return number weight
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_Commentator.GetHardlockWeight)
+---@return number weight
 function C_Commentator.GetHardlockWeight() end
 
----@return number angle
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_Commentator.GetHorizontalAngleThresholdToSmooth)
+---@return number angle
 function C_Commentator.GetHorizontalAngleThresholdToSmooth() end
 
+---[Documentation](https://wowpedia.fandom.com/wiki/API_C_Commentator.GetIndirectSpellID)
 ---@param trackedSpellID number
 ---@return number indirectSpellID
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_Commentator.GetIndirectSpellID)
 function C_Commentator.GetIndirectSpellID(trackedSpellID) end
 
+---[Documentation](https://wowpedia.fandom.com/wiki/API_C_Commentator.GetInstanceInfo)
 ---@param mapIndex number
 ---@param instanceIndex number
 ---@return number mapID
@@ -163,139 +164,139 @@ function C_Commentator.GetIndirectSpellID(trackedSpellID) end
 ---@return number status
 ---@return number instanceIDLow
 ---@return number instanceIDHigh
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_Commentator.GetInstanceInfo)
 function C_Commentator.GetInstanceInfo(mapIndex, instanceIndex) end
 
----@return number amount
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_Commentator.GetLookAtLerpAmount)
+---@return number amount
 function C_Commentator.GetLookAtLerpAmount() end
 
+---[Documentation](https://wowpedia.fandom.com/wiki/API_C_Commentator.GetMapInfo)
 ---@param mapIndex number
 ---@return number teamSize
 ---@return number minLevel
 ---@return number maxLevel
 ---@return number numInstances
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_Commentator.GetMapInfo)
 function C_Commentator.GetMapInfo(mapIndex) end
 
----@return number seconds
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_Commentator.GetMatchDuration)
+---@return number seconds
 function C_Commentator.GetMatchDuration() end
 
----@return number maxNumPlayersPerTeam
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_Commentator.GetMaxNumPlayersPerTeam)
+---@return number maxNumPlayersPerTeam
 function C_Commentator.GetMaxNumPlayersPerTeam() end
 
----@return number maxNumTeams
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_Commentator.GetMaxNumTeams)
+---@return number maxNumTeams
 function C_Commentator.GetMaxNumTeams() end
 
----@return number commentatorMode
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_Commentator.GetMode)
+---@return number commentatorMode
 function C_Commentator.GetMode() end
 
----@return number ms
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_Commentator.GetMsToHoldForHorizontalMovement)
+---@return number ms
 function C_Commentator.GetMsToHoldForHorizontalMovement() end
 
----@return number ms
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_Commentator.GetMsToHoldForVerticalMovement)
+---@return number ms
 function C_Commentator.GetMsToHoldForVerticalMovement() end
 
----@return number ms
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_Commentator.GetMsToSmoothHorizontalChange)
+---@return number ms
 function C_Commentator.GetMsToSmoothHorizontalChange() end
 
----@return number ms
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_Commentator.GetMsToSmoothVerticalChange)
+---@return number ms
 function C_Commentator.GetMsToSmoothVerticalChange() end
 
----@return number numMaps
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_Commentator.GetNumMaps)
+---@return number numMaps
 function C_Commentator.GetNumMaps() end
 
+---[Documentation](https://wowpedia.fandom.com/wiki/API_C_Commentator.GetNumPlayers)
 ---@param factionIndex number
 ---@return number numPlayers
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_Commentator.GetNumPlayers)
 function C_Commentator.GetNumPlayers(factionIndex) end
 
+---[Documentation](https://wowpedia.fandom.com/wiki/API_C_Commentator.GetOrCreateSeries)
 ---@param teamName1 string
 ---@param teamName2 string
 ---@return CommentatorSeries data
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_Commentator.GetOrCreateSeries)
 function C_Commentator.GetOrCreateSeries(teamName1, teamName2) end
 
+---[Documentation](https://wowpedia.fandom.com/wiki/API_C_Commentator.GetPlayerAuraInfo)
 ---@param teamIndex number
 ---@param playerIndex number
 ---@param spellID number
 ---@return number startTime
 ---@return number duration
 ---@return boolean enable
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_Commentator.GetPlayerAuraInfo)
 function C_Commentator.GetPlayerAuraInfo(teamIndex, playerIndex, spellID) end
 
+---[Documentation](https://wowpedia.fandom.com/wiki/API_C_Commentator.GetPlayerAuraInfoByUnit)
 ---@param token string
 ---@param spellID number
 ---@return number startTime
 ---@return number duration
 ---@return boolean enable
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_Commentator.GetPlayerAuraInfoByUnit)
 function C_Commentator.GetPlayerAuraInfoByUnit(token, spellID) end
 
+---[Documentation](https://wowpedia.fandom.com/wiki/API_C_Commentator.GetPlayerCooldownInfo)
 ---@param teamIndex number
 ---@param playerIndex number
 ---@param spellID number
 ---@return number startTime
 ---@return number duration
 ---@return boolean enable
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_Commentator.GetPlayerCooldownInfo)
 function C_Commentator.GetPlayerCooldownInfo(teamIndex, playerIndex, spellID) end
 
+---[Documentation](https://wowpedia.fandom.com/wiki/API_C_Commentator.GetPlayerCooldownInfoByUnit)
 ---@param unitToken string
 ---@param spellID number
 ---@return number startTime
 ---@return number duration
 ---@return boolean enable
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_Commentator.GetPlayerCooldownInfoByUnit)
 function C_Commentator.GetPlayerCooldownInfoByUnit(unitToken, spellID) end
 
+---[Documentation](https://wowpedia.fandom.com/wiki/API_C_Commentator.GetPlayerCrowdControlInfo)
 ---@param teamIndex number
 ---@param playerIndex number
 ---@return number spellID
 ---@return number expiration
 ---@return number duration
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_Commentator.GetPlayerCrowdControlInfo)
 function C_Commentator.GetPlayerCrowdControlInfo(teamIndex, playerIndex) end
 
+---[Documentation](https://wowpedia.fandom.com/wiki/API_C_Commentator.GetPlayerCrowdControlInfoByUnit)
 ---@param token string
 ---@return number spellID
 ---@return number expiration
 ---@return number duration
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_Commentator.GetPlayerCrowdControlInfoByUnit)
 function C_Commentator.GetPlayerCrowdControlInfoByUnit(token) end
 
+---[Documentation](https://wowpedia.fandom.com/wiki/API_C_Commentator.GetPlayerData)
 ---@param teamIndex number
 ---@param playerIndex number
 ---@return CommentatorPlayerData? info
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_Commentator.GetPlayerData)
 function C_Commentator.GetPlayerData(teamIndex, playerIndex) end
 
+---[Documentation](https://wowpedia.fandom.com/wiki/API_C_Commentator.GetPlayerFlagInfo)
 ---@param teamIndex number
 ---@param playerIndex number
 ---@return boolean hasFlag
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_Commentator.GetPlayerFlagInfo)
 function C_Commentator.GetPlayerFlagInfo(teamIndex, playerIndex) end
 
+---[Documentation](https://wowpedia.fandom.com/wiki/API_C_Commentator.GetPlayerFlagInfoByUnit)
 ---@param unitToken string
 ---@return boolean hasFlag
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_Commentator.GetPlayerFlagInfoByUnit)
 function C_Commentator.GetPlayerFlagInfoByUnit(unitToken) end
 
+---[Documentation](https://wowpedia.fandom.com/wiki/API_C_Commentator.GetPlayerOverrideName)
 ---@param originalName string
 ---@return string overrideName
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_Commentator.GetPlayerOverrideName)
 function C_Commentator.GetPlayerOverrideName(originalName) end
 
+---[Documentation](https://wowpedia.fandom.com/wiki/API_C_Commentator.GetPlayerSpellCharges)
 ---@param teamIndex number
 ---@param playerIndex number
 ---@param spellID number
@@ -303,151 +304,150 @@ function C_Commentator.GetPlayerOverrideName(originalName) end
 ---@return number maxCharges
 ---@return number startTime
 ---@return number duration
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_Commentator.GetPlayerSpellCharges)
 function C_Commentator.GetPlayerSpellCharges(teamIndex, playerIndex, spellID) end
 
+---[Documentation](https://wowpedia.fandom.com/wiki/API_C_Commentator.GetPlayerSpellChargesByUnit)
 ---@param unitToken string
 ---@param spellID number
 ---@return number charges
 ---@return number maxCharges
 ---@return number startTime
 ---@return number duration
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_Commentator.GetPlayerSpellChargesByUnit)
 function C_Commentator.GetPlayerSpellChargesByUnit(unitToken, spellID) end
 
----@return number amount
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_Commentator.GetPositionLerpAmount)
+---@return number amount
 function C_Commentator.GetPositionLerpAmount() end
 
----@return boolean enabled
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_Commentator.GetSmoothFollowTransitioning)
+---@return boolean enabled
 function C_Commentator.GetSmoothFollowTransitioning() end
 
----@return number weight
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_Commentator.GetSoftlockWeight)
+---@return number weight
 function C_Commentator.GetSoftlockWeight() end
 
----@return number factor
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_Commentator.GetSpeedFactor)
+---@return number factor
 function C_Commentator.GetSpeedFactor() end
 
+---[Documentation](https://wowpedia.fandom.com/wiki/API_C_Commentator.GetStartLocation)
 ---@param mapID number
 ---@return Vector3DMixin pos
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_Commentator.GetStartLocation)
 function C_Commentator.GetStartLocation(mapID) end
 
+---[Documentation](https://wowpedia.fandom.com/wiki/API_C_Commentator.GetTeamColor)
 ---@param teamIndex number
 ---@return ColorMixin color
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_Commentator.GetTeamColor)
 function C_Commentator.GetTeamColor(teamIndex) end
 
+---[Documentation](https://wowpedia.fandom.com/wiki/API_C_Commentator.GetTeamColorByUnit)
 ---@param unitToken string
 ---@return ColorMixin color
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_Commentator.GetTeamColorByUnit)
 function C_Commentator.GetTeamColorByUnit(unitToken) end
 
----@return number? timeLeft
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_Commentator.GetTimeLeftInMatch)
+---@return number? timeLeft
 function C_Commentator.GetTimeLeftInMatch() end
 
+---[Documentation](https://wowpedia.fandom.com/wiki/API_C_Commentator.GetTrackedSpellID)
 ---@param indirectSpellID number
 ---@return number trackedSpellID
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_Commentator.GetTrackedSpellID)
 function C_Commentator.GetTrackedSpellID(indirectSpellID) end
 
+---[Documentation](https://wowpedia.fandom.com/wiki/API_C_Commentator.GetTrackedSpells)
 ---@param teamIndex number
 ---@param playerIndex number
 ---@param category TrackedSpellCategory
 ---@return number[]? spells
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_Commentator.GetTrackedSpells)
 function C_Commentator.GetTrackedSpells(teamIndex, playerIndex, category) end
 
+---[Documentation](https://wowpedia.fandom.com/wiki/API_C_Commentator.GetTrackedSpellsByUnit)
 ---@param unitToken string
 ---@param category TrackedSpellCategory
 ---@return number[]? spells
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_Commentator.GetTrackedSpellsByUnit)
 function C_Commentator.GetTrackedSpellsByUnit(unitToken, category) end
 
+---[Documentation](https://wowpedia.fandom.com/wiki/API_C_Commentator.GetUnitData)
 ---@param unitToken string
 ---@return CommentatorUnitData data
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_Commentator.GetUnitData)
 function C_Commentator.GetUnitData(unitToken) end
 
+---[Documentation](https://wowpedia.fandom.com/wiki/API_C_Commentator.GetWargameInfo)
 ---@param listID number
 ---@return string name
 ---@return number minPlayers
 ---@return number maxPlayers
 ---@return boolean isArena
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_Commentator.GetWargameInfo)
 function C_Commentator.GetWargameInfo(listID) end
 
+---[Documentation](https://wowpedia.fandom.com/wiki/API_C_Commentator.HasTrackedAuras)
 ---@param token string
 ---@return boolean hasOffensiveAura
 ---@return boolean hasDefensiveAura
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_Commentator.HasTrackedAuras)
 function C_Commentator.HasTrackedAuras(token) end
 
----@return boolean isSmartCameraLocked
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_Commentator.IsSmartCameraLocked)
+---@return boolean isSmartCameraLocked
 function C_Commentator.IsSmartCameraLocked() end
 
----@return boolean isSpectating
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_Commentator.IsSpectating)
+---@return boolean isSpectating
 function C_Commentator.IsSpectating() end
 
+---[Documentation](https://wowpedia.fandom.com/wiki/API_C_Commentator.IsTrackedDefensiveAura)
 ---@param spellID number
 ---@return boolean isDefensiveTrigger
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_Commentator.IsTrackedDefensiveAura)
 function C_Commentator.IsTrackedDefensiveAura(spellID) end
 
+---[Documentation](https://wowpedia.fandom.com/wiki/API_C_Commentator.IsTrackedOffensiveAura)
 ---@param spellID number
 ---@return boolean isOffensiveTrigger
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_Commentator.IsTrackedOffensiveAura)
 function C_Commentator.IsTrackedOffensiveAura(spellID) end
 
+---[Documentation](https://wowpedia.fandom.com/wiki/API_C_Commentator.IsTrackedSpell)
 ---@param teamIndex number
 ---@param playerIndex number
 ---@param spellID number
 ---@param category TrackedSpellCategory
 ---@return boolean isTracked
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_Commentator.IsTrackedSpell)
 function C_Commentator.IsTrackedSpell(teamIndex, playerIndex, spellID, category) end
 
+---[Documentation](https://wowpedia.fandom.com/wiki/API_C_Commentator.IsTrackedSpellByUnit)
 ---@param unitToken string
 ---@param spellID number
 ---@param category TrackedSpellCategory
 ---@return boolean isTracked
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_Commentator.IsTrackedSpellByUnit)
 function C_Commentator.IsTrackedSpellByUnit(unitToken, spellID, category) end
 
----@return boolean isUsingSmartCamera
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_Commentator.IsUsingSmartCamera)
+---@return boolean isUsingSmartCamera
 function C_Commentator.IsUsingSmartCamera() end
 
+---[Documentation](https://wowpedia.fandom.com/wiki/API_C_Commentator.LookAtPlayer)
 ---@param factionIndex number
 ---@param playerIndex number
 ---@param lookAtIndex? number
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_Commentator.LookAtPlayer)
 function C_Commentator.LookAtPlayer(factionIndex, playerIndex, lookAtIndex) end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_Commentator.RemoveAllOverrideNames)
 function C_Commentator.RemoveAllOverrideNames() end
 
----@param originalPlayerName string
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_Commentator.RemovePlayerOverrideName)
+---@param originalPlayerName string
 function C_Commentator.RemovePlayerOverrideName(originalPlayerName) end
 
+---[Documentation](https://wowpedia.fandom.com/wiki/API_C_Commentator.RequestPlayerCooldownInfo)
 ---@param teamIndex number
 ---@param playerIndex number
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_Commentator.RequestPlayerCooldownInfo)
 function C_Commentator.RequestPlayerCooldownInfo(teamIndex, playerIndex) end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_Commentator.ResetFoVTarget)
 function C_Commentator.ResetFoVTarget() end
 
+---[Documentation](https://wowpedia.fandom.com/wiki/API_C_Commentator.ResetSeriesScores)
 ---@param teamName1 string
 ---@param teamName2 string
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_Commentator.ResetSeriesScores)
 function C_Commentator.ResetSeriesScores(teamName1, teamName2) end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_Commentator.ResetSettings)
@@ -456,26 +456,27 @@ function C_Commentator.ResetSettings() end
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_Commentator.ResetTrackedAuras)
 function C_Commentator.ResetTrackedAuras() end
 
+---[Documentation](https://wowpedia.fandom.com/wiki/API_C_Commentator.SetAdditionalCameraWeight)
 ---@param teamIndex number
 ---@param playerIndex number
 ---@param weight number
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_Commentator.SetAdditionalCameraWeight)
 function C_Commentator.SetAdditionalCameraWeight(teamIndex, playerIndex, weight) end
 
+---[Documentation](https://wowpedia.fandom.com/wiki/API_C_Commentator.SetAdditionalCameraWeightByToken)
 ---@param unitToken string
 ---@param weight number
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_Commentator.SetAdditionalCameraWeightByToken)
 function C_Commentator.SetAdditionalCameraWeightByToken(unitToken, weight) end
 
----@param spellIDs number[]
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_Commentator.SetBlocklistedAuras)
+---@param spellIDs number[]
 function C_Commentator.SetBlocklistedAuras(spellIDs) end
 
+---[Documentation](https://wowpedia.fandom.com/wiki/API_C_Commentator.SetBlocklistedCooldowns)
 ---@param specID number
 ---@param spellIDs number[]
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_Commentator.SetBlocklistedCooldowns)
 function C_Commentator.SetBlocklistedCooldowns(specID, spellIDs) end
 
+---[Documentation](https://wowpedia.fandom.com/wiki/API_C_Commentator.SetCamera)
 ---@param xPos number
 ---@param yPos number
 ---@param zPos number
@@ -483,152 +484,151 @@ function C_Commentator.SetBlocklistedCooldowns(specID, spellIDs) end
 ---@param pitch number
 ---@param roll number
 ---@param fov number
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_Commentator.SetCamera)
 function C_Commentator.SetCamera(xPos, yPos, zPos, yaw, pitch, roll, fov) end
 
----@param collide boolean
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_Commentator.SetCameraCollision)
+---@param collide boolean
 function C_Commentator.SetCameraCollision(collide) end
 
+---[Documentation](https://wowpedia.fandom.com/wiki/API_C_Commentator.SetCameraPosition)
 ---@param xPos number
 ---@param yPos number
 ---@param zPos number
 ---@param snapToLocation boolean
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_Commentator.SetCameraPosition)
 function C_Commentator.SetCameraPosition(xPos, yPos, zPos, snapToLocation) end
 
----@param enableCheats boolean
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_Commentator.SetCheatsEnabled)
+---@param enableCheats boolean
 function C_Commentator.SetCheatsEnabled(enableCheats) end
 
----@param history CommentatorHistory
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_Commentator.SetCommentatorHistory)
+---@param history CommentatorHistory
 function C_Commentator.SetCommentatorHistory(history) end
 
----@param distance number
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_Commentator.SetDistanceBeforeForcedHorizontalConvergence)
+---@param distance number
 function C_Commentator.SetDistanceBeforeForcedHorizontalConvergence(distance) end
 
----@param ms number
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_Commentator.SetDurationToForceHorizontalConvergence)
+---@param ms number
 function C_Commentator.SetDurationToForceHorizontalConvergence(ms) end
 
----@param excludeDistance number
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_Commentator.SetExcludeDistance)
+---@param excludeDistance number
 function C_Commentator.SetExcludeDistance(excludeDistance) end
 
+---[Documentation](https://wowpedia.fandom.com/wiki/API_C_Commentator.SetFollowCameraSpeeds)
 ---@param elasticSpeed number
 ---@param minSpeed number
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_Commentator.SetFollowCameraSpeeds)
 function C_Commentator.SetFollowCameraSpeeds(elasticSpeed, minSpeed) end
 
----@param weight number
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_Commentator.SetHardlockWeight)
+---@param weight number
 function C_Commentator.SetHardlockWeight(weight) end
 
----@param angle number
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_Commentator.SetHorizontalAngleThresholdToSmooth)
+---@param angle number
 function C_Commentator.SetHorizontalAngleThresholdToSmooth(angle) end
 
----@param amount number
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_Commentator.SetLookAtLerpAmount)
+---@param amount number
 function C_Commentator.SetLookAtLerpAmount(amount) end
 
+---[Documentation](https://wowpedia.fandom.com/wiki/API_C_Commentator.SetMapAndInstanceIndex)
 ---@param mapIndex number
 ---@param instanceIndex number
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_Commentator.SetMapAndInstanceIndex)
 function C_Commentator.SetMapAndInstanceIndex(mapIndex, instanceIndex) end
 
----@param disabled boolean
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_Commentator.SetMouseDisabled)
+---@param disabled boolean
 function C_Commentator.SetMouseDisabled(disabled) end
 
----@param newSpeed number
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_Commentator.SetMoveSpeed)
+---@param newSpeed number
 function C_Commentator.SetMoveSpeed(newSpeed) end
 
----@param ms number
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_Commentator.SetMsToHoldForHorizontalMovement)
+---@param ms number
 function C_Commentator.SetMsToHoldForHorizontalMovement(ms) end
 
----@param ms number
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_Commentator.SetMsToHoldForVerticalMovement)
+---@param ms number
 function C_Commentator.SetMsToHoldForVerticalMovement(ms) end
 
----@param ms number
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_Commentator.SetMsToSmoothHorizontalChange)
+---@param ms number
 function C_Commentator.SetMsToSmoothHorizontalChange(ms) end
 
----@param ms number
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_Commentator.SetMsToSmoothVerticalChange)
+---@param ms number
 function C_Commentator.SetMsToSmoothVerticalChange(ms) end
 
----@param amount number
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_Commentator.SetPositionLerpAmount)
+---@param amount number
 function C_Commentator.SetPositionLerpAmount(amount) end
 
+---[Documentation](https://wowpedia.fandom.com/wiki/API_C_Commentator.SetRequestedDebuffCooldowns)
 ---@param specID number
 ---@param spellIDs number[]
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_Commentator.SetRequestedDebuffCooldowns)
 function C_Commentator.SetRequestedDebuffCooldowns(specID, spellIDs) end
 
+---[Documentation](https://wowpedia.fandom.com/wiki/API_C_Commentator.SetRequestedDefensiveCooldowns)
 ---@param specID number
 ---@param spellIDs number[]
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_Commentator.SetRequestedDefensiveCooldowns)
 function C_Commentator.SetRequestedDefensiveCooldowns(specID, spellIDs) end
 
+---[Documentation](https://wowpedia.fandom.com/wiki/API_C_Commentator.SetRequestedOffensiveCooldowns)
 ---@param specID number
 ---@param spellIDs number[]
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_Commentator.SetRequestedOffensiveCooldowns)
 function C_Commentator.SetRequestedOffensiveCooldowns(specID, spellIDs) end
 
+---[Documentation](https://wowpedia.fandom.com/wiki/API_C_Commentator.SetSeriesScore)
 ---@param teamName1 string
 ---@param teamName2 string
 ---@param scoringTeamName string
 ---@param score number
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_Commentator.SetSeriesScore)
 function C_Commentator.SetSeriesScore(teamName1, teamName2, scoringTeamName, score) end
 
+---[Documentation](https://wowpedia.fandom.com/wiki/API_C_Commentator.SetSeriesScores)
 ---@param teamName1 string
 ---@param teamName2 string
 ---@param score1 number
 ---@param score2 number
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_Commentator.SetSeriesScores)
 function C_Commentator.SetSeriesScores(teamName1, teamName2, score1, score2) end
 
----@param locked boolean
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_Commentator.SetSmartCameraLocked)
+---@param locked boolean
 function C_Commentator.SetSmartCameraLocked(locked) end
 
----@param enabled boolean
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_Commentator.SetSmoothFollowTransitioning)
+---@param enabled boolean
 function C_Commentator.SetSmoothFollowTransitioning(enabled) end
 
----@param weight number
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_Commentator.SetSoftlockWeight)
+---@param weight number
 function C_Commentator.SetSoftlockWeight(weight) end
 
----@param factor number
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_Commentator.SetSpeedFactor)
+---@param factor number
 function C_Commentator.SetSpeedFactor(factor) end
 
----@param offset number
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_Commentator.SetTargetHeightOffset)
+---@param offset number
 function C_Commentator.SetTargetHeightOffset(offset) end
 
----@param useSmartCamera boolean
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_Commentator.SetUseSmartCamera)
+---@param useSmartCamera boolean
 function C_Commentator.SetUseSmartCamera(useSmartCamera) end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_Commentator.SnapCameraLookAtPoint)
 function C_Commentator.SnapCameraLookAtPoint() end
 
+---[Documentation](https://wowpedia.fandom.com/wiki/API_C_Commentator.StartWargame)
 ---@param listID number
 ---@param teamSize number
 ---@param tournamentRules boolean
 ---@param teamOneCaptain string
 ---@param teamTwoCaptain string
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_Commentator.StartWargame)
 function C_Commentator.StartWargame(listID, teamSize, tournamentRules, teamOneCaptain, teamTwoCaptain) end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_Commentator.SwapTeamSides)
@@ -637,8 +637,8 @@ function C_Commentator.SwapTeamSides() end
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_Commentator.ToggleCheats)
 function C_Commentator.ToggleCheats() end
 
----@param targetPlayer? string
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_Commentator.UpdateMapInfo)
+---@param targetPlayer? string
 function C_Commentator.UpdateMapInfo(targetPlayer) end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_Commentator.UpdatePlayerInfo)

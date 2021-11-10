@@ -1,134 +1,134 @@
 C_FriendList = {}
 
+---[Documentation](https://wowpedia.fandom.com/wiki/API_C_FriendList.AddFriend)
 ---@param name string
 ---@param notes? string
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_FriendList.AddFriend)
 function C_FriendList.AddFriend(name, notes) end
 
+---[Documentation](https://wowpedia.fandom.com/wiki/API_C_FriendList.AddIgnore)
 ---@param name string
 ---@return boolean added
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_FriendList.AddIgnore)
 function C_FriendList.AddIgnore(name) end
 
----@param name string
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_FriendList.AddOrDelIgnore)
+---@param name string
 function C_FriendList.AddOrDelIgnore(name) end
 
+---[Documentation](https://wowpedia.fandom.com/wiki/API_C_FriendList.AddOrRemoveFriend)
 ---@param name string
 ---@param notes string
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_FriendList.AddOrRemoveFriend)
 function C_FriendList.AddOrRemoveFriend(name, notes) end
 
+---[Documentation](https://wowpedia.fandom.com/wiki/API_C_FriendList.DelIgnore)
 ---@param name string
 ---@return boolean removed
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_FriendList.DelIgnore)
 function C_FriendList.DelIgnore(name) end
 
----@param index number
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_FriendList.DelIgnoreByIndex)
+---@param index number
 function C_FriendList.DelIgnoreByIndex(index) end
 
+---[Documentation](https://wowpedia.fandom.com/wiki/API_C_FriendList.GetFriendInfo)
 ---@param name string
 ---@return FriendInfo info
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_FriendList.GetFriendInfo)
 function C_FriendList.GetFriendInfo(name) end
 
+---[Documentation](https://wowpedia.fandom.com/wiki/API_C_FriendList.GetFriendInfoByIndex)
 ---@param index number
 ---@return FriendInfo info
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_FriendList.GetFriendInfoByIndex)
 function C_FriendList.GetFriendInfoByIndex(index) end
 
+---[Documentation](https://wowpedia.fandom.com/wiki/API_C_FriendList.GetIgnoreName)
 ---@param index number
 ---@return string? name
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_FriendList.GetIgnoreName)
 function C_FriendList.GetIgnoreName(index) end
 
----@return number numFriends
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_FriendList.GetNumFriends)
+---@return number numFriends
 function C_FriendList.GetNumFriends() end
 
----@return number numIgnores
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_FriendList.GetNumIgnores)
+---@return number numIgnores
 function C_FriendList.GetNumIgnores() end
 
----@return number numOnline
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_FriendList.GetNumOnlineFriends)
+---@return number numOnline
 function C_FriendList.GetNumOnlineFriends() end
 
+---[Documentation](https://wowpedia.fandom.com/wiki/API_C_FriendList.GetNumWhoResults)
 ---@return number numWhos
 ---@return number totalNumWhos
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_FriendList.GetNumWhoResults)
 function C_FriendList.GetNumWhoResults() end
 
----@return number? index
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_FriendList.GetSelectedFriend)
+---@return number? index
 function C_FriendList.GetSelectedFriend() end
 
----@return number? index
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_FriendList.GetSelectedIgnore)
+---@return number? index
 function C_FriendList.GetSelectedIgnore() end
 
+---[Documentation](https://wowpedia.fandom.com/wiki/API_C_FriendList.GetWhoInfo)
 ---@param index number
 ---@return WhoInfo info
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_FriendList.GetWhoInfo)
 function C_FriendList.GetWhoInfo(index) end
 
+---[Documentation](https://wowpedia.fandom.com/wiki/API_C_FriendList.IsFriend)
 ---@param guid string
 ---@return boolean isFriend
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_FriendList.IsFriend)
 function C_FriendList.IsFriend(guid) end
 
+---[Documentation](https://wowpedia.fandom.com/wiki/API_C_FriendList.IsIgnored)
 ---@param token string
 ---@return boolean isIgnored
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_FriendList.IsIgnored)
 function C_FriendList.IsIgnored(token) end
 
+---[Documentation](https://wowpedia.fandom.com/wiki/API_C_FriendList.IsIgnoredByGuid)
 ---@param guid string
 ---@return boolean isIgnored
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_FriendList.IsIgnoredByGuid)
 function C_FriendList.IsIgnoredByGuid(guid) end
 
+---[Documentation](https://wowpedia.fandom.com/wiki/API_C_FriendList.RemoveFriend)
 ---@param name string
 ---@return boolean removed
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_FriendList.RemoveFriend)
 function C_FriendList.RemoveFriend(name) end
 
----@param index number
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_FriendList.RemoveFriendByIndex)
+---@param index number
 function C_FriendList.RemoveFriendByIndex(index) end
 
----@param filter string
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_FriendList.SendWho)
+---@param filter string
 function C_FriendList.SendWho(filter) end
 
+---[Documentation](https://wowpedia.fandom.com/wiki/API_C_FriendList.SetFriendNotes)
 ---@param name string
 ---@param notes string
 ---@return boolean found
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_FriendList.SetFriendNotes)
 function C_FriendList.SetFriendNotes(name, notes) end
 
+---[Documentation](https://wowpedia.fandom.com/wiki/API_C_FriendList.SetFriendNotesByIndex)
 ---@param index number
 ---@param notes string
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_FriendList.SetFriendNotesByIndex)
 function C_FriendList.SetFriendNotesByIndex(index, notes) end
 
----@param index number
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_FriendList.SetSelectedFriend)
+---@param index number
 function C_FriendList.SetSelectedFriend(index) end
 
----@param index number
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_FriendList.SetSelectedIgnore)
+---@param index number
 function C_FriendList.SetSelectedIgnore(index) end
 
----@param whoToUi boolean
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_FriendList.SetWhoToUi)
+---@param whoToUi boolean
 function C_FriendList.SetWhoToUi(whoToUi) end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_FriendList.ShowFriends)
 function C_FriendList.ShowFriends() end
 
----@param sorting string
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_FriendList.SortWho)
+---@param sorting string
 function C_FriendList.SortWho(sorting) end
 
 ---@class FriendInfo

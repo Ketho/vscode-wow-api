@@ -1,100 +1,100 @@
 C_CurrencyInfo = {}
 
+---[Documentation](https://wowpedia.fandom.com/wiki/API_C_CurrencyInfo.DoesWarModeBonusApply)
 ---@param currencyID number
 ---@return boolean? warModeApplies
 ---@return boolean? limitOncePerTooltip
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_CurrencyInfo.DoesWarModeBonusApply)
 function C_CurrencyInfo.DoesWarModeBonusApply(currencyID) end
 
+---[Documentation](https://wowpedia.fandom.com/wiki/API_C_CurrencyInfo.ExpandCurrencyList)
 ---@param index number
 ---@param expand boolean
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_CurrencyInfo.ExpandCurrencyList)
 function C_CurrencyInfo.ExpandCurrencyList(index, expand) end
 
----@return number azeriteCurrencyID
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_CurrencyInfo.GetAzeriteCurrencyID)
+---@return number azeriteCurrencyID
 function C_CurrencyInfo.GetAzeriteCurrencyID() end
 
+---[Documentation](https://wowpedia.fandom.com/wiki/API_C_CurrencyInfo.GetBackpackCurrencyInfo)
 ---@param index number
 ---@return BackpackCurrencyInfo info
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_CurrencyInfo.GetBackpackCurrencyInfo)
 function C_CurrencyInfo.GetBackpackCurrencyInfo(index) end
 
+---[Documentation](https://wowpedia.fandom.com/wiki/API_C_CurrencyInfo.GetBasicCurrencyInfo)
 ---@param currencyType number
 ---@param quantity? number
 ---@return CurrencyDisplayInfo info
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_CurrencyInfo.GetBasicCurrencyInfo)
 function C_CurrencyInfo.GetBasicCurrencyInfo(currencyType, quantity) end
 
+---[Documentation](https://wowpedia.fandom.com/wiki/API_C_CurrencyInfo.GetCurrencyContainerInfo)
 ---@param currencyType number
 ---@param quantity number
 ---@return CurrencyDisplayInfo info
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_CurrencyInfo.GetCurrencyContainerInfo)
 function C_CurrencyInfo.GetCurrencyContainerInfo(currencyType, quantity) end
 
+---[Documentation](https://wowpedia.fandom.com/wiki/API_C_CurrencyInfo.GetCurrencyIDFromLink)
 ---@param currencyLink string
 ---@return number currencyID
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_CurrencyInfo.GetCurrencyIDFromLink)
 function C_CurrencyInfo.GetCurrencyIDFromLink(currencyLink) end
 
+---[Documentation](https://wowpedia.fandom.com/wiki/API_C_CurrencyInfo.GetCurrencyInfo)
 ---@param type number
 ---@return CurrencyInfo info
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_CurrencyInfo.GetCurrencyInfo)
 function C_CurrencyInfo.GetCurrencyInfo(type) end
 
+---[Documentation](https://wowpedia.fandom.com/wiki/API_C_CurrencyInfo.GetCurrencyInfoFromLink)
 ---@param link string
 ---@return CurrencyInfo info
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_CurrencyInfo.GetCurrencyInfoFromLink)
 function C_CurrencyInfo.GetCurrencyInfoFromLink(link) end
 
+---[Documentation](https://wowpedia.fandom.com/wiki/API_C_CurrencyInfo.GetCurrencyLink)
 ---@param type number
 ---@param amount? number
 ---@return string link
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_CurrencyInfo.GetCurrencyLink)
 function C_CurrencyInfo.GetCurrencyLink(type, amount) end
 
+---[Documentation](https://wowpedia.fandom.com/wiki/API_C_CurrencyInfo.GetCurrencyListInfo)
 ---@param index number
 ---@return CurrencyInfo info
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_CurrencyInfo.GetCurrencyListInfo)
 function C_CurrencyInfo.GetCurrencyListInfo(index) end
 
+---[Documentation](https://wowpedia.fandom.com/wiki/API_C_CurrencyInfo.GetCurrencyListLink)
 ---@param index number
 ---@return string link
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_CurrencyInfo.GetCurrencyListLink)
 function C_CurrencyInfo.GetCurrencyListLink(index) end
 
----@return number currencyListSize
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_CurrencyInfo.GetCurrencyListSize)
+---@return number currencyListSize
 function C_CurrencyInfo.GetCurrencyListSize() end
 
+---Gets the faction ID for currency that is immediately converted into reputation with that faction instead.
+---[Documentation](https://wowpedia.fandom.com/wiki/API_C_CurrencyInfo.GetFactionGrantedByCurrency)
 ---@param currencyID number
 ---@return number? factionID
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_CurrencyInfo.GetFactionGrantedByCurrency)
----Gets the faction ID for currency that is immediately converted into reputation with that faction instead.
 function C_CurrencyInfo.GetFactionGrantedByCurrency(currencyID) end
 
----@return number warResourceCurrencyID
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_CurrencyInfo.GetWarResourcesCurrencyID)
+---@return number warResourceCurrencyID
 function C_CurrencyInfo.GetWarResourcesCurrencyID() end
 
+---[Documentation](https://wowpedia.fandom.com/wiki/API_C_CurrencyInfo.IsCurrencyContainer)
 ---@param currencyID number
 ---@param quantity number
 ---@return boolean isCurrencyContainer
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_CurrencyInfo.IsCurrencyContainer)
 function C_CurrencyInfo.IsCurrencyContainer(currencyID, quantity) end
 
----@param type number
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_CurrencyInfo.PickupCurrency)
+---@param type number
 function C_CurrencyInfo.PickupCurrency(type) end
 
+---[Documentation](https://wowpedia.fandom.com/wiki/API_C_CurrencyInfo.SetCurrencyBackpack)
 ---@param index number
 ---@param backpack boolean
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_CurrencyInfo.SetCurrencyBackpack)
 function C_CurrencyInfo.SetCurrencyBackpack(index, backpack) end
 
+---[Documentation](https://wowpedia.fandom.com/wiki/API_C_CurrencyInfo.SetCurrencyUnused)
 ---@param index number
 ---@param unused boolean
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_CurrencyInfo.SetCurrencyUnused)
 function C_CurrencyInfo.SetCurrencyUnused(index, unused) end
 
 ---@class BackpackCurrencyInfo

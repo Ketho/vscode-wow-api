@@ -3,14 +3,14 @@ C_AlliedRaces = {}
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_AlliedRaces.ClearAlliedRaceDetailsGiver)
 function C_AlliedRaces.ClearAlliedRaceDetailsGiver() end
 
+---[Documentation](https://wowpedia.fandom.com/wiki/API_C_AlliedRaces.GetAllRacialAbilitiesFromID)
 ---@param raceID number
 ---@return AlliedRaceRacialAbility[] allDisplayInfo
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_AlliedRaces.GetAllRacialAbilitiesFromID)
 function C_AlliedRaces.GetAllRacialAbilitiesFromID(raceID) end
 
+---[Documentation](https://wowpedia.fandom.com/wiki/API_C_AlliedRaces.GetRaceInfoByID)
 ---@param raceID number
 ---@return AlliedRaceInfo info
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_AlliedRaces.GetRaceInfoByID)
 function C_AlliedRaces.GetRaceInfoByID(raceID) end
 
 ---@class AlliedRaceInfo

@@ -1,63 +1,63 @@
 C_PetJournal = {}
 
+---[Documentation](https://wowpedia.fandom.com/wiki/API_C_PetJournal.GetDisplayIDByIndex)
 ---@param speciesID number
 ---@param index number
 ---@return number? displayID
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_PetJournal.GetDisplayIDByIndex)
 function C_PetJournal.GetDisplayIDByIndex(speciesID, index) end
 
+---[Documentation](https://wowpedia.fandom.com/wiki/API_C_PetJournal.GetDisplayProbabilityByIndex)
 ---@param speciesID number
 ---@param index number
 ---@return number? displayProbability
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_PetJournal.GetDisplayProbabilityByIndex)
 function C_PetJournal.GetDisplayProbabilityByIndex(speciesID, index) end
 
+---[Documentation](https://wowpedia.fandom.com/wiki/API_C_PetJournal.GetNumDisplays)
 ---@param speciesID number
 ---@return number? numDisplays
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_PetJournal.GetNumDisplays)
 function C_PetJournal.GetNumDisplays(speciesID) end
 
+---[Documentation](https://wowpedia.fandom.com/wiki/API_C_PetJournal.GetPetAbilityInfo)
 ---@param abilityID number
 ---@return string name
 ---@return number icon
 ---@return number petType
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_PetJournal.GetPetAbilityInfo)
 function C_PetJournal.GetPetAbilityInfo(abilityID) end
 
+---[Documentation](https://wowpedia.fandom.com/wiki/API_C_PetJournal.GetPetAbilityListTable)
 ---@param speciesID number
 ---@return PetAbilityLevelInfo[] info
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_PetJournal.GetPetAbilityListTable)
 function C_PetJournal.GetPetAbilityListTable(speciesID) end
 
+---[Documentation](https://wowpedia.fandom.com/wiki/API_C_PetJournal.GetPetInfoTableByPetID)
 ---@param petID string
 ---@return PetJournalPetInfo info
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_PetJournal.GetPetInfoTableByPetID)
 function C_PetJournal.GetPetInfoTableByPetID(petID) end
 
+---[Documentation](https://wowpedia.fandom.com/wiki/API_C_PetJournal.GetPetLoadOutInfo)
 ---@param slot number
 ---@return string? petID
 ---@return number ability1ID
 ---@return number ability2ID
 ---@return number ability3ID
 ---@return boolean locked
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_PetJournal.GetPetLoadOutInfo)
 function C_PetJournal.GetPetLoadOutInfo(slot) end
 
+---[Documentation](https://wowpedia.fandom.com/wiki/API_C_PetJournal.GetPetSummonInfo)
 ---@param battlePetGUID string
 ---@return boolean isSummonable
 ---@return PetJournalError error
 ---@return string errorText
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_PetJournal.GetPetSummonInfo)
 function C_PetJournal.GetPetSummonInfo(battlePetGUID) end
 
+---[Documentation](https://wowpedia.fandom.com/wiki/API_C_PetJournal.PetIsSummonable)
 ---@param battlePetGUID string
 ---@return boolean isSummonable
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_PetJournal.PetIsSummonable)
 function C_PetJournal.PetIsSummonable(battlePetGUID) end
 
+---[Documentation](https://wowpedia.fandom.com/wiki/API_C_PetJournal.PetUsesRandomDisplay)
 ---@param speciesID number
 ---@return boolean? usesRandomDisplay
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_PetJournal.PetUsesRandomDisplay)
 function C_PetJournal.PetUsesRandomDisplay(speciesID) end
 
 ---@class PetJournalError

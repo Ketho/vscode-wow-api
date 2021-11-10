@@ -1,8 +1,8 @@
 C_PetInfo = {}
 
+---[Documentation](https://wowpedia.fandom.com/wiki/API_C_PetInfo.GetPetTamersForMap)
 ---@param uiMapID number
 ---@return PetTamerMapInfo[] petTamers
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_PetInfo.GetPetTamersForMap)
 function C_PetInfo.GetPetTamersForMap(uiMapID) end
 
 ---@class PetTamerMapInfo

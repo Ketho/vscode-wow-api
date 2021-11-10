@@ -3,44 +3,44 @@ C_Calendar = {}
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_Calendar.AddEvent)
 function C_Calendar.AddEvent() end
 
----@return boolean ready
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_Calendar.AreNamesReady)
+---@return boolean ready
 function C_Calendar.AreNamesReady() end
 
----@return boolean canAddEvent
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_Calendar.CanAddEvent)
+---@return boolean canAddEvent
 function C_Calendar.CanAddEvent() end
 
----@return boolean canSendInvite
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_Calendar.CanSendInvite)
+---@return boolean canSendInvite
 function C_Calendar.CanSendInvite() end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_Calendar.CloseEvent)
 function C_Calendar.CloseEvent() end
 
+---[Documentation](https://wowpedia.fandom.com/wiki/API_C_Calendar.ContextMenuEventCanComplain)
 ---@param offsetMonths number
 ---@param monthDay number
 ---@param eventIndex number
 ---@return boolean canComplain
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_Calendar.ContextMenuEventCanComplain)
 function C_Calendar.ContextMenuEventCanComplain(offsetMonths, monthDay, eventIndex) end
 
+---[Documentation](https://wowpedia.fandom.com/wiki/API_C_Calendar.ContextMenuEventCanEdit)
 ---@param offsetMonths number
 ---@param monthDay number
 ---@param eventIndex number
 ---@return boolean canEdit
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_Calendar.ContextMenuEventCanEdit)
 function C_Calendar.ContextMenuEventCanEdit(offsetMonths, monthDay, eventIndex) end
 
+---[Documentation](https://wowpedia.fandom.com/wiki/API_C_Calendar.ContextMenuEventCanRemove)
 ---@param offsetMonths number
 ---@param monthDay number
 ---@param eventIndex number
 ---@return boolean canRemove
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_Calendar.ContextMenuEventCanRemove)
 function C_Calendar.ContextMenuEventCanRemove(offsetMonths, monthDay, eventIndex) end
 
----@return boolean exists
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_Calendar.ContextMenuEventClipboard)
+---@return boolean exists
 function C_Calendar.ContextMenuEventClipboard() end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_Calendar.ContextMenuEventComplain)
@@ -49,13 +49,13 @@ function C_Calendar.ContextMenuEventComplain() end
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_Calendar.ContextMenuEventCopy)
 function C_Calendar.ContextMenuEventCopy() end
 
----@return string? calendarType
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_Calendar.ContextMenuEventGetCalendarType)
+---@return string? calendarType
 function C_Calendar.ContextMenuEventGetCalendarType() end
 
+---[Documentation](https://wowpedia.fandom.com/wiki/API_C_Calendar.ContextMenuEventPaste)
 ---@param offsetMonths number
 ---@param monthDay number
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_Calendar.ContextMenuEventPaste)
 function C_Calendar.ContextMenuEventPaste(offsetMonths, monthDay) end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_Calendar.ContextMenuEventRemove)
@@ -64,8 +64,8 @@ function C_Calendar.ContextMenuEventRemove() end
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_Calendar.ContextMenuEventSignUp)
 function C_Calendar.ContextMenuEventSignUp() end
 
----@return CalendarEventIndexInfo info
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_Calendar.ContextMenuGetEventIndex)
+---@return CalendarEventIndexInfo info
 function C_Calendar.ContextMenuGetEventIndex() end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_Calendar.ContextMenuInviteAvailable)
@@ -80,10 +80,10 @@ function C_Calendar.ContextMenuInviteRemove() end
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_Calendar.ContextMenuInviteTentative)
 function C_Calendar.ContextMenuInviteTentative() end
 
+---[Documentation](https://wowpedia.fandom.com/wiki/API_C_Calendar.ContextMenuSelectEvent)
 ---@param offsetMonths number
 ---@param monthDay number
 ---@param eventIndex number
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_Calendar.ContextMenuSelectEvent)
 function C_Calendar.ContextMenuSelectEvent(offsetMonths, monthDay, eventIndex) end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_Calendar.CreateCommunitySignUpEvent)
@@ -101,8 +101,8 @@ function C_Calendar.CreatePlayerEvent() end
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_Calendar.EventAvailable)
 function C_Calendar.EventAvailable() end
 
----@return boolean canEdit
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_Calendar.EventCanEdit)
+---@return boolean canEdit
 function C_Calendar.EventCanEdit() end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_Calendar.EventClearAutoApprove)
@@ -111,282 +111,282 @@ function C_Calendar.EventClearAutoApprove() end
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_Calendar.EventClearLocked)
 function C_Calendar.EventClearLocked() end
 
----@param inviteIndex number
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_Calendar.EventClearModerator)
+---@param inviteIndex number
 function C_Calendar.EventClearModerator(inviteIndex) end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_Calendar.EventDecline)
 function C_Calendar.EventDecline() end
 
----@return string? calendarType
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_Calendar.EventGetCalendarType)
+---@return string? calendarType
 function C_Calendar.EventGetCalendarType() end
 
----@return string? info
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_Calendar.EventGetClubId)
+---@return string? info
 function C_Calendar.EventGetClubId() end
 
+---[Documentation](https://wowpedia.fandom.com/wiki/API_C_Calendar.EventGetInvite)
 ---@param eventIndex number
 ---@return CalendarEventInviteInfo info
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_Calendar.EventGetInvite)
 function C_Calendar.EventGetInvite(eventIndex) end
 
+---[Documentation](https://wowpedia.fandom.com/wiki/API_C_Calendar.EventGetInviteResponseTime)
 ---@param eventIndex number
 ---@return CalendarTime time
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_Calendar.EventGetInviteResponseTime)
 function C_Calendar.EventGetInviteResponseTime(eventIndex) end
 
+---[Documentation](https://wowpedia.fandom.com/wiki/API_C_Calendar.EventGetInviteSortCriterion)
 ---@return string criterion
 ---@return boolean reverse
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_Calendar.EventGetInviteSortCriterion)
 function C_Calendar.EventGetInviteSortCriterion() end
 
----@return number? inviteIndex
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_Calendar.EventGetSelectedInvite)
+---@return number? inviteIndex
 function C_Calendar.EventGetSelectedInvite() end
 
+---[Documentation](https://wowpedia.fandom.com/wiki/API_C_Calendar.EventGetStatusOptions)
 ---@param eventIndex number
 ---@return CalendarEventStatusOption[] options
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_Calendar.EventGetStatusOptions)
 function C_Calendar.EventGetStatusOptions(eventIndex) end
 
+---[Documentation](https://wowpedia.fandom.com/wiki/API_C_Calendar.EventGetTextures)
 ---@param eventType CalendarEventType
 ---@return CalendarEventTextureInfo[] textures
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_Calendar.EventGetTextures)
 function C_Calendar.EventGetTextures(eventType) end
 
----@return string[] types
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_Calendar.EventGetTypes)
+---@return string[] types
 function C_Calendar.EventGetTypes() end
 
----@return CalendarEventTypeDisplayInfo[] infos
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_Calendar.EventGetTypesDisplayOrdered)
+---@return CalendarEventTypeDisplayInfo[] infos
 function C_Calendar.EventGetTypesDisplayOrdered() end
 
----@return boolean hasPendingInvite
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_Calendar.EventHasPendingInvite)
+---@return boolean hasPendingInvite
 function C_Calendar.EventHasPendingInvite() end
 
----@return boolean haveSettingsChanged
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_Calendar.EventHaveSettingsChanged)
+---@return boolean haveSettingsChanged
 function C_Calendar.EventHaveSettingsChanged() end
 
----@param name string
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_Calendar.EventInvite)
+---@param name string
 function C_Calendar.EventInvite(name) end
 
----@param inviteIndex number
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_Calendar.EventRemoveInvite)
+---@param inviteIndex number
 function C_Calendar.EventRemoveInvite(inviteIndex) end
 
----@param guid string
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_Calendar.EventRemoveInviteByGuid)
+---@param guid string
 function C_Calendar.EventRemoveInviteByGuid(guid) end
 
----@param inviteIndex number
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_Calendar.EventSelectInvite)
+---@param inviteIndex number
 function C_Calendar.EventSelectInvite(inviteIndex) end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_Calendar.EventSetAutoApprove)
 function C_Calendar.EventSetAutoApprove() end
 
----@param clubId? string
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_Calendar.EventSetClubId)
+---@param clubId? string
 function C_Calendar.EventSetClubId(clubId) end
 
+---[Documentation](https://wowpedia.fandom.com/wiki/API_C_Calendar.EventSetDate)
 ---@param month number
 ---@param monthDay number
 ---@param year number
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_Calendar.EventSetDate)
 function C_Calendar.EventSetDate(month, monthDay, year) end
 
----@param description string
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_Calendar.EventSetDescription)
+---@param description string
 function C_Calendar.EventSetDescription(description) end
 
+---[Documentation](https://wowpedia.fandom.com/wiki/API_C_Calendar.EventSetInviteStatus)
 ---@param eventIndex number
 ---@param status CalendarStatus
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_Calendar.EventSetInviteStatus)
 function C_Calendar.EventSetInviteStatus(eventIndex, status) end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_Calendar.EventSetLocked)
 function C_Calendar.EventSetLocked() end
 
----@param inviteIndex number
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_Calendar.EventSetModerator)
+---@param inviteIndex number
 function C_Calendar.EventSetModerator(inviteIndex) end
 
----@param textureIndex number
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_Calendar.EventSetTextureID)
+---@param textureIndex number
 function C_Calendar.EventSetTextureID(textureIndex) end
 
+---[Documentation](https://wowpedia.fandom.com/wiki/API_C_Calendar.EventSetTime)
 ---@param hour number
 ---@param minute number
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_Calendar.EventSetTime)
 function C_Calendar.EventSetTime(hour, minute) end
 
----@param title string
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_Calendar.EventSetTitle)
+---@param title string
 function C_Calendar.EventSetTitle(title) end
 
----@param typeIndex CalendarEventType
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_Calendar.EventSetType)
+---@param typeIndex CalendarEventType
 function C_Calendar.EventSetType(typeIndex) end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_Calendar.EventSignUp)
 function C_Calendar.EventSignUp() end
 
+---[Documentation](https://wowpedia.fandom.com/wiki/API_C_Calendar.EventSortInvites)
 ---@param criterion string
 ---@param reverse boolean
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_Calendar.EventSortInvites)
 function C_Calendar.EventSortInvites(criterion, reverse) end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_Calendar.EventTentative)
 function C_Calendar.EventTentative() end
 
+---[Documentation](https://wowpedia.fandom.com/wiki/API_C_Calendar.GetClubCalendarEvents)
 ---@param clubId string
 ---@param startTime CalendarTime
 ---@param endTime CalendarTime
 ---@return CalendarDayEvent[] events
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_Calendar.GetClubCalendarEvents)
 function C_Calendar.GetClubCalendarEvents(clubId, startTime, endTime) end
 
+---[Documentation](https://wowpedia.fandom.com/wiki/API_C_Calendar.GetDayEvent)
 ---@param monthOffset number
 ---@param monthDay number
 ---@param index number
 ---@return CalendarDayEvent event
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_Calendar.GetDayEvent)
 function C_Calendar.GetDayEvent(monthOffset, monthDay, index) end
 
----@return CalendarGuildFilterInfo info
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_Calendar.GetDefaultGuildFilter)
+---@return CalendarGuildFilterInfo info
 function C_Calendar.GetDefaultGuildFilter() end
 
----@return CalendarEventIndexInfo info
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_Calendar.GetEventIndex)
+---@return CalendarEventIndexInfo info
 function C_Calendar.GetEventIndex() end
 
+---[Documentation](https://wowpedia.fandom.com/wiki/API_C_Calendar.GetEventIndexInfo)
 ---@param eventID string
 ---@param monthOffset? number
 ---@param monthDay? number
 ---@return CalendarEventIndexInfo? eventIndexInfo
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_Calendar.GetEventIndexInfo)
 function C_Calendar.GetEventIndexInfo(eventID, monthOffset, monthDay) end
 
----@return CalendarEventInfo info
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_Calendar.GetEventInfo)
+---@return CalendarEventInfo info
 function C_Calendar.GetEventInfo() end
 
+---[Documentation](https://wowpedia.fandom.com/wiki/API_C_Calendar.GetFirstPendingInvite)
 ---@param offsetMonths number
 ---@param monthDay number
 ---@return number? firstPendingInvite
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_Calendar.GetFirstPendingInvite)
 function C_Calendar.GetFirstPendingInvite(offsetMonths, monthDay) end
 
+---[Documentation](https://wowpedia.fandom.com/wiki/API_C_Calendar.GetGuildEventInfo)
 ---@param index number
 ---@return CalendarGuildEventInfo info
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_Calendar.GetGuildEventInfo)
 function C_Calendar.GetGuildEventInfo(index) end
 
+---[Documentation](https://wowpedia.fandom.com/wiki/API_C_Calendar.GetGuildEventSelectionInfo)
 ---@param index number
 ---@return CalendarEventIndexInfo info
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_Calendar.GetGuildEventSelectionInfo)
 function C_Calendar.GetGuildEventSelectionInfo(index) end
 
+---[Documentation](https://wowpedia.fandom.com/wiki/API_C_Calendar.GetHolidayInfo)
 ---@param monthOffset number
 ---@param monthDay number
 ---@param index number
 ---@return CalendarHolidayInfo event
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_Calendar.GetHolidayInfo)
 function C_Calendar.GetHolidayInfo(monthOffset, monthDay, index) end
 
----@return CalendarTime maxCreateDate
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_Calendar.GetMaxCreateDate)
+---@return CalendarTime maxCreateDate
 function C_Calendar.GetMaxCreateDate() end
 
----@return CalendarTime minDate
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_Calendar.GetMinDate)
+---@return CalendarTime minDate
 function C_Calendar.GetMinDate() end
 
+---[Documentation](https://wowpedia.fandom.com/wiki/API_C_Calendar.GetMonthInfo)
 ---@param offsetMonths number
 ---@return CalendarMonthInfo monthInfo
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_Calendar.GetMonthInfo)
 function C_Calendar.GetMonthInfo(offsetMonths) end
 
----@return string? clubId
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_Calendar.GetNextClubId)
+---@return string? clubId
 function C_Calendar.GetNextClubId() end
 
+---[Documentation](https://wowpedia.fandom.com/wiki/API_C_Calendar.GetNumDayEvents)
 ---@param offsetMonths number
 ---@param monthDay number
 ---@return number numDayEvents
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_Calendar.GetNumDayEvents)
 function C_Calendar.GetNumDayEvents(offsetMonths, monthDay) end
 
----@return number numGuildEvents
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_Calendar.GetNumGuildEvents)
+---@return number numGuildEvents
 function C_Calendar.GetNumGuildEvents() end
 
----@return number num
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_Calendar.GetNumInvites)
+---@return number num
 function C_Calendar.GetNumInvites() end
 
----@return number num
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_Calendar.GetNumPendingInvites)
+---@return number num
 function C_Calendar.GetNumPendingInvites() end
 
+---[Documentation](https://wowpedia.fandom.com/wiki/API_C_Calendar.GetRaidInfo)
 ---@param offsetMonths number
 ---@param monthDay number
 ---@param eventIndex number
 ---@return CalendarRaidInfo info
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_Calendar.GetRaidInfo)
 function C_Calendar.GetRaidInfo(offsetMonths, monthDay, eventIndex) end
 
----@return boolean actionPending
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_Calendar.IsActionPending)
+---@return boolean actionPending
 function C_Calendar.IsActionPending() end
 
----@return boolean isOpen
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_Calendar.IsEventOpen)
+---@return boolean isOpen
 function C_Calendar.IsEventOpen() end
 
+---[Documentation](https://wowpedia.fandom.com/wiki/API_C_Calendar.MassInviteCommunity)
 ---@param clubId string
 ---@param minLevel number
 ---@param maxLevel number
 ---@param maxRankOrder? number
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_Calendar.MassInviteCommunity)
 function C_Calendar.MassInviteCommunity(clubId, minLevel, maxLevel, maxRankOrder) end
 
+---[Documentation](https://wowpedia.fandom.com/wiki/API_C_Calendar.MassInviteGuild)
 ---@param minLevel number
 ---@param maxLevel number
 ---@param maxRankOrder number
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_Calendar.MassInviteGuild)
 function C_Calendar.MassInviteGuild(minLevel, maxLevel, maxRankOrder) end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_Calendar.OpenCalendar)
 function C_Calendar.OpenCalendar() end
 
+---[Documentation](https://wowpedia.fandom.com/wiki/API_C_Calendar.OpenEvent)
 ---@param offsetMonths number
 ---@param monthDay number
 ---@param index number
 ---@return boolean success
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_Calendar.OpenEvent)
 function C_Calendar.OpenEvent(offsetMonths, monthDay, index) end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_Calendar.RemoveEvent)
 function C_Calendar.RemoveEvent() end
 
+---[Documentation](https://wowpedia.fandom.com/wiki/API_C_Calendar.SetAbsMonth)
 ---@param month number
 ---@param year number
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_Calendar.SetAbsMonth)
 function C_Calendar.SetAbsMonth(month, year) end
 
----@param offsetMonths number
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_Calendar.SetMonth)
+---@param offsetMonths number
 function C_Calendar.SetMonth(offsetMonths) end
 
----@param clubId? string
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_Calendar.SetNextClubId)
+---@param clubId? string
 function C_Calendar.SetNextClubId(clubId) end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_Calendar.UpdateEvent)

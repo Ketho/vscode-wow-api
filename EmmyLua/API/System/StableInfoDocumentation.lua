@@ -1,9 +1,9 @@
 C_StableInfo = {}
 
----@return number numActivePets
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_StableInfo.GetNumActivePets)
+---@return number numActivePets
 function C_StableInfo.GetNumActivePets() end
 
----@return number numStablePets
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_StableInfo.GetNumStablePets)
+---@return number numStablePets
 function C_StableInfo.GetNumStablePets() end

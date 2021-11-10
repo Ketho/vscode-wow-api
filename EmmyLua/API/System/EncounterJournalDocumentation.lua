@@ -1,64 +1,64 @@
 C_EncounterJournal = {}
 
+---[Documentation](https://wowpedia.fandom.com/wiki/API_C_EncounterJournal.GetDungeonEntrancesForMap)
 ---@param uiMapID number
 ---@return DungeonEntranceMapInfo[] dungeonEntrances
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_EncounterJournal.GetDungeonEntrancesForMap)
 function C_EncounterJournal.GetDungeonEntrancesForMap(uiMapID) end
 
+---[Documentation](https://wowpedia.fandom.com/wiki/API_C_EncounterJournal.GetEncountersOnMap)
 ---@param uiMapID number
 ---@return EncounterJournalMapEncounterInfo[] encounters
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_EncounterJournal.GetEncountersOnMap)
 function C_EncounterJournal.GetEncountersOnMap(uiMapID) end
 
+---[Documentation](https://wowpedia.fandom.com/wiki/API_C_EncounterJournal.GetLootInfo)
 ---@param id number
 ---@return EncounterJournalItemInfo itemInfo
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_EncounterJournal.GetLootInfo)
 function C_EncounterJournal.GetLootInfo(id) end
 
+---[Documentation](https://wowpedia.fandom.com/wiki/API_C_EncounterJournal.GetLootInfoByIndex)
 ---@param index number
 ---@param encounterIndex? number
 ---@return EncounterJournalItemInfo itemInfo
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_EncounterJournal.GetLootInfoByIndex)
 function C_EncounterJournal.GetLootInfoByIndex(index, encounterIndex) end
 
+---Represents the icon indices for this EJ section.  An icon index can be used to arrive at texture coordinates for specific encounter types, e.g.: EncounterJournal_SetFlagIcon
+---[Documentation](https://wowpedia.fandom.com/wiki/API_C_EncounterJournal.GetSectionIconFlags)
 ---@param sectionID number
 ---@return number[]? iconFlags
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_EncounterJournal.GetSectionIconFlags)
----Represents the icon indices for this EJ section.  An icon index can be used to arrive at texture coordinates for specific encounter types, e.g.: EncounterJournal_SetFlagIcon
 function C_EncounterJournal.GetSectionIconFlags(sectionID) end
 
+---[Documentation](https://wowpedia.fandom.com/wiki/API_C_EncounterJournal.GetSectionInfo)
 ---@param sectionID number
 ---@return EncounterJournalSectionInfo info
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_EncounterJournal.GetSectionInfo)
 function C_EncounterJournal.GetSectionInfo(sectionID) end
 
----@return ItemSlotFilterType filter
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_EncounterJournal.GetSlotFilter)
+---@return ItemSlotFilterType filter
 function C_EncounterJournal.GetSlotFilter() end
 
+---[Documentation](https://wowpedia.fandom.com/wiki/API_C_EncounterJournal.InstanceHasLoot)
 ---@param instanceID? number
 ---@return boolean hasLoot
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_EncounterJournal.InstanceHasLoot)
 function C_EncounterJournal.InstanceHasLoot(instanceID) end
 
+---[Documentation](https://wowpedia.fandom.com/wiki/API_C_EncounterJournal.IsEncounterComplete)
 ---@param journalEncounterID number
 ---@return boolean isEncounterComplete
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_EncounterJournal.IsEncounterComplete)
 function C_EncounterJournal.IsEncounterComplete(journalEncounterID) end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_EncounterJournal.ResetSlotFilter)
 function C_EncounterJournal.ResetSlotFilter() end
 
----@param level number
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_EncounterJournal.SetPreviewMythicPlusLevel)
+---@param level number
 function C_EncounterJournal.SetPreviewMythicPlusLevel(level) end
 
----@param tier number
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_EncounterJournal.SetPreviewPvpTier)
+---@param tier number
 function C_EncounterJournal.SetPreviewPvpTier(tier) end
 
----@param filterSlot ItemSlotFilterType
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_EncounterJournal.SetSlotFilter)
+---@param filterSlot ItemSlotFilterType
 function C_EncounterJournal.SetSlotFilter(filterSlot) end
 
 ---@class ItemSlotFilterType

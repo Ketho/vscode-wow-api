@@ -1,11 +1,11 @@
 C_ArdenwealdGardening = {}
 
----@return ArdenwealdGardenData data
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_ArdenwealdGardening.GetGardenData)
+---@return ArdenwealdGardenData data
 function C_ArdenwealdGardening.GetGardenData() end
 
----@return boolean accessible
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_ArdenwealdGardening.IsGardenAccessible)
+---@return boolean accessible
 function C_ArdenwealdGardening.IsGardenAccessible() end
 
 ---@class ArdenwealdGardenData

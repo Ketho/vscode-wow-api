@@ -1,12 +1,12 @@
 C_EventToastManager = {}
 
+---[Documentation](https://wowpedia.fandom.com/wiki/API_C_EventToastManager.GetLevelUpDisplayToastsFromLevel)
 ---@param level number
 ---@return EventToastInfo[] toastInfo
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_EventToastManager.GetLevelUpDisplayToastsFromLevel)
 function C_EventToastManager.GetLevelUpDisplayToastsFromLevel(level) end
 
----@return EventToastInfo toastInfo
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_EventToastManager.GetNextToastToDisplay)
+---@return EventToastInfo toastInfo
 function C_EventToastManager.GetNextToastToDisplay() end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_EventToastManager.RemoveCurrentToast)

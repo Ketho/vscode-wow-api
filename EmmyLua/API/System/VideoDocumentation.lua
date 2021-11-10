@@ -1,7 +1,7 @@
 C_VideoOptions = {}
 
----@return GxAdapterInfoDetails[] adapters
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_VideoOptions.GetGxAdapterInfo)
+---@return GxAdapterInfoDetails[] adapters
 function C_VideoOptions.GetGxAdapterInfo() end
 
 ---@class GxAdapterInfoDetails

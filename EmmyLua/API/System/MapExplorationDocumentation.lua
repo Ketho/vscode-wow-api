@@ -1,14 +1,14 @@
 C_MapExplorationInfo = {}
 
+---[Documentation](https://wowpedia.fandom.com/wiki/API_C_MapExplorationInfo.GetExploredAreaIDsAtPosition)
 ---@param uiMapID number
 ---@param normalizedPosition Vector2DMixin
 ---@return number[]? areaID
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_MapExplorationInfo.GetExploredAreaIDsAtPosition)
 function C_MapExplorationInfo.GetExploredAreaIDsAtPosition(uiMapID, normalizedPosition) end
 
+---[Documentation](https://wowpedia.fandom.com/wiki/API_C_MapExplorationInfo.GetExploredMapTextures)
 ---@param uiMapID number
 ---@return UiMapExplorationInfo[] overlayInfo
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_MapExplorationInfo.GetExploredMapTextures)
 function C_MapExplorationInfo.GetExploredMapTextures(uiMapID) end
 
 ---@class UiMapExplorationHitRect

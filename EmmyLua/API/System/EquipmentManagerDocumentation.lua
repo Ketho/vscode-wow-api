@@ -1,50 +1,51 @@
 C_EquipmentSet = {}
 
+---[Documentation](https://wowpedia.fandom.com/wiki/API_C_EquipmentSet.AssignSpecToEquipmentSet)
 ---@param equipmentSetID number
 ---@param specIndex number
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_EquipmentSet.AssignSpecToEquipmentSet)
 function C_EquipmentSet.AssignSpecToEquipmentSet(equipmentSetID, specIndex) end
 
----@return boolean canUseEquipmentSets
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_EquipmentSet.CanUseEquipmentSets)
+---@return boolean canUseEquipmentSets
 function C_EquipmentSet.CanUseEquipmentSets() end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_EquipmentSet.ClearIgnoredSlotsForSave)
 function C_EquipmentSet.ClearIgnoredSlotsForSave() end
 
+---[Documentation](https://wowpedia.fandom.com/wiki/API_C_EquipmentSet.CreateEquipmentSet)
 ---@param equipmentSetName string
 ---@param icon? string
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_EquipmentSet.CreateEquipmentSet)
 function C_EquipmentSet.CreateEquipmentSet(equipmentSetName, icon) end
 
----@param equipmentSetID number
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_EquipmentSet.DeleteEquipmentSet)
+---@param equipmentSetID number
 function C_EquipmentSet.DeleteEquipmentSet(equipmentSetID) end
 
+---[Documentation](https://wowpedia.fandom.com/wiki/API_C_EquipmentSet.EquipmentSetContainsLockedItems)
 ---@param equipmentSetID number
 ---@return boolean hasLockedItems
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_EquipmentSet.EquipmentSetContainsLockedItems)
 function C_EquipmentSet.EquipmentSetContainsLockedItems(equipmentSetID) end
 
+---[Documentation](https://wowpedia.fandom.com/wiki/API_C_EquipmentSet.GetEquipmentSetAssignedSpec)
 ---@param equipmentSetID number
 ---@return number specIndex
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_EquipmentSet.GetEquipmentSetAssignedSpec)
 function C_EquipmentSet.GetEquipmentSetAssignedSpec(equipmentSetID) end
 
+---[Documentation](https://wowpedia.fandom.com/wiki/API_C_EquipmentSet.GetEquipmentSetForSpec)
 ---@param specIndex number
 ---@return number equipmentSetID
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_EquipmentSet.GetEquipmentSetForSpec)
 function C_EquipmentSet.GetEquipmentSetForSpec(specIndex) end
 
+---[Documentation](https://wowpedia.fandom.com/wiki/API_C_EquipmentSet.GetEquipmentSetID)
 ---@param equipmentSetName string
 ---@return number equipmentSetID
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_EquipmentSet.GetEquipmentSetID)
 function C_EquipmentSet.GetEquipmentSetID(equipmentSetName) end
 
----@return number[] equipmentSetIDs
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_EquipmentSet.GetEquipmentSetIDs)
+---@return number[] equipmentSetIDs
 function C_EquipmentSet.GetEquipmentSetIDs() end
 
+---[Documentation](https://wowpedia.fandom.com/wiki/API_C_EquipmentSet.GetEquipmentSetInfo)
 ---@param equipmentSetID number
 ---@return string name
 ---@return number iconFileID
@@ -55,61 +56,60 @@ function C_EquipmentSet.GetEquipmentSetIDs() end
 ---@return number numInInventory
 ---@return number numLost
 ---@return number numIgnored
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_EquipmentSet.GetEquipmentSetInfo)
 function C_EquipmentSet.GetEquipmentSetInfo(equipmentSetID) end
 
+---[Documentation](https://wowpedia.fandom.com/wiki/API_C_EquipmentSet.GetIgnoredSlots)
 ---@param equipmentSetID number
 ---@return boolean[] slotIgnored
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_EquipmentSet.GetIgnoredSlots)
 function C_EquipmentSet.GetIgnoredSlots(equipmentSetID) end
 
+---[Documentation](https://wowpedia.fandom.com/wiki/API_C_EquipmentSet.GetItemIDs)
 ---@param equipmentSetID number
 ---@return number[] itemIDs
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_EquipmentSet.GetItemIDs)
 function C_EquipmentSet.GetItemIDs(equipmentSetID) end
 
+---[Documentation](https://wowpedia.fandom.com/wiki/API_C_EquipmentSet.GetItemLocations)
 ---@param equipmentSetID number
 ---@return number[] locations
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_EquipmentSet.GetItemLocations)
 function C_EquipmentSet.GetItemLocations(equipmentSetID) end
 
----@return number numEquipmentSets
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_EquipmentSet.GetNumEquipmentSets)
+---@return number numEquipmentSets
 function C_EquipmentSet.GetNumEquipmentSets() end
 
----@param slot number
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_EquipmentSet.IgnoreSlotForSave)
+---@param slot number
 function C_EquipmentSet.IgnoreSlotForSave(slot) end
 
+---[Documentation](https://wowpedia.fandom.com/wiki/API_C_EquipmentSet.IsSlotIgnoredForSave)
 ---@param slot number
 ---@return boolean isSlotIgnored
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_EquipmentSet.IsSlotIgnoredForSave)
 function C_EquipmentSet.IsSlotIgnoredForSave(slot) end
 
+---[Documentation](https://wowpedia.fandom.com/wiki/API_C_EquipmentSet.ModifyEquipmentSet)
 ---@param equipmentSetID number
 ---@param newName string
 ---@param newIcon? string
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_EquipmentSet.ModifyEquipmentSet)
 function C_EquipmentSet.ModifyEquipmentSet(equipmentSetID, newName, newIcon) end
 
----@param equipmentSetID number
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_EquipmentSet.PickupEquipmentSet)
+---@param equipmentSetID number
 function C_EquipmentSet.PickupEquipmentSet(equipmentSetID) end
 
+---[Documentation](https://wowpedia.fandom.com/wiki/API_C_EquipmentSet.SaveEquipmentSet)
 ---@param equipmentSetID number
 ---@param icon? string
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_EquipmentSet.SaveEquipmentSet)
 function C_EquipmentSet.SaveEquipmentSet(equipmentSetID, icon) end
 
----@param equipmentSetID number
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_EquipmentSet.UnassignEquipmentSetSpec)
+---@param equipmentSetID number
 function C_EquipmentSet.UnassignEquipmentSetSpec(equipmentSetID) end
 
----@param slot number
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_EquipmentSet.UnignoreSlotForSave)
+---@param slot number
 function C_EquipmentSet.UnignoreSlotForSave(slot) end
 
+---[Documentation](https://wowpedia.fandom.com/wiki/API_C_EquipmentSet.UseEquipmentSet)
 ---@param equipmentSetID number
 ---@return boolean setWasEquipped
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_EquipmentSet.UseEquipmentSet)
 function C_EquipmentSet.UseEquipmentSet(equipmentSetID) end

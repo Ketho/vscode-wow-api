@@ -1,29 +1,29 @@
 C_Minimap = {}
 
----@return boolean draw
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_Minimap.GetDrawGroundTextures)
+---@return boolean draw
 function C_Minimap.GetDrawGroundTextures() end
 
----@return number? uiMapID
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_Minimap.GetUiMapID)
+---@return number? uiMapID
 function C_Minimap.GetUiMapID() end
 
----@return number yards
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_Minimap.GetViewRadius)
+---@return number yards
 function C_Minimap.GetViewRadius() end
 
----@return boolean isIgnored
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_Minimap.IsRotateMinimapIgnored)
+---@return boolean isIgnored
 function C_Minimap.IsRotateMinimapIgnored() end
 
----@param draw boolean
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_Minimap.SetDrawGroundTextures)
+---@param draw boolean
 function C_Minimap.SetDrawGroundTextures(draw) end
 
----@param ignore boolean
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_Minimap.SetIgnoreRotateMinimap)
+---@param ignore boolean
 function C_Minimap.SetIgnoreRotateMinimap(ignore) end
 
----@return boolean shouldUse
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_Minimap.ShouldUseHybridMinimap)
+---@return boolean shouldUse
 function C_Minimap.ShouldUseHybridMinimap() end

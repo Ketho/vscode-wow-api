@@ -1,13 +1,13 @@
 C_FogOfWar = {}
 
+---[Documentation](https://wowpedia.fandom.com/wiki/API_C_FogOfWar.GetFogOfWarForMap)
 ---@param uiMapID number
 ---@return number? fogOfWarID
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_FogOfWar.GetFogOfWarForMap)
 function C_FogOfWar.GetFogOfWarForMap(uiMapID) end
 
+---[Documentation](https://wowpedia.fandom.com/wiki/API_C_FogOfWar.GetFogOfWarInfo)
 ---@param fogOfWarID number
 ---@return FogOfWarInfo? fogOfWarInfo
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_FogOfWar.GetFogOfWarInfo)
 function C_FogOfWar.GetFogOfWarInfo(fogOfWarID) end
 
 ---@class FogOfWarInfo

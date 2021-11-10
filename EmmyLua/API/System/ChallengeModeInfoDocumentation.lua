@@ -1,8 +1,8 @@
 C_ChallengeMode = {}
 
+---[Documentation](https://wowpedia.fandom.com/wiki/API_C_ChallengeMode.CanUseKeystoneInCurrentMap)
 ---@param itemLocation ItemLocationMixin
 ---@return boolean canUse
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_ChallengeMode.CanUseKeystoneInCurrentMap)
 function C_ChallengeMode.CanUseKeystoneInCurrentMap(itemLocation) end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_ChallengeMode.ClearKeystone)
@@ -11,23 +11,24 @@ function C_ChallengeMode.ClearKeystone() end
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_ChallengeMode.CloseKeystoneFrame)
 function C_ChallengeMode.CloseKeystoneFrame() end
 
----@return number? mapChallengeModeID
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_ChallengeMode.GetActiveChallengeMapID)
+---@return number? mapChallengeModeID
 function C_ChallengeMode.GetActiveChallengeMapID() end
 
+---[Documentation](https://wowpedia.fandom.com/wiki/API_C_ChallengeMode.GetActiveKeystoneInfo)
 ---@return number activeKeystoneLevel
 ---@return number[] activeAffixIDs
 ---@return boolean wasActiveKeystoneCharged
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_ChallengeMode.GetActiveKeystoneInfo)
 function C_ChallengeMode.GetActiveKeystoneInfo() end
 
+---[Documentation](https://wowpedia.fandom.com/wiki/API_C_ChallengeMode.GetAffixInfo)
 ---@param affixID number
 ---@return string name
 ---@return string description
 ---@return number filedataid
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_ChallengeMode.GetAffixInfo)
 function C_ChallengeMode.GetAffixInfo(affixID) end
 
+---[Documentation](https://wowpedia.fandom.com/wiki/API_C_ChallengeMode.GetCompletionInfo)
 ---@return number mapChallengeModeID
 ---@return number level
 ---@return number time
@@ -41,90 +42,89 @@ function C_ChallengeMode.GetAffixInfo(affixID) end
 ---@return number PrimaryAffix
 ---@return boolean isEligibleForScore
 ---@return ChallengeModeCompletionMemberInfo[] members
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_ChallengeMode.GetCompletionInfo)
 function C_ChallengeMode.GetCompletionInfo() end
 
+---[Documentation](https://wowpedia.fandom.com/wiki/API_C_ChallengeMode.GetDeathCount)
 ---@return number numDeaths
 ---@return number timeLost
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_ChallengeMode.GetDeathCount)
 function C_ChallengeMode.GetDeathCount() end
 
+---Returns a color value from the passed in overall season M+ rating.
+---[Documentation](https://wowpedia.fandom.com/wiki/API_C_ChallengeMode.GetDungeonScoreRarityColor)
 ---@param dungeonScore number
 ---@return ColorMixin scoreColor
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_ChallengeMode.GetDungeonScoreRarityColor)
----Returns a color value from the passed in overall season M+ rating.
 function C_ChallengeMode.GetDungeonScoreRarityColor(dungeonScore) end
 
----@return ChallengeModeGuildTopAttempt[] topAttempt
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_ChallengeMode.GetGuildLeaders)
+---@return ChallengeModeGuildTopAttempt[] topAttempt
 function C_ChallengeMode.GetGuildLeaders() end
 
+---Returns a color value from the passed in keystone level.
+---[Documentation](https://wowpedia.fandom.com/wiki/API_C_ChallengeMode.GetKeystoneLevelRarityColor)
 ---@param level number
 ---@return ColorMixin levelScore
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_ChallengeMode.GetKeystoneLevelRarityColor)
----Returns a color value from the passed in keystone level.
 function C_ChallengeMode.GetKeystoneLevelRarityColor(level) end
 
----@return MythicPlusRatingLinkInfo[] displayScores
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_ChallengeMode.GetMapScoreInfo)
+---@return MythicPlusRatingLinkInfo[] displayScores
 function C_ChallengeMode.GetMapScoreInfo() end
 
----@return number[] mapChallengeModeIDs
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_ChallengeMode.GetMapTable)
+---@return number[] mapChallengeModeIDs
 function C_ChallengeMode.GetMapTable() end
 
+---[Documentation](https://wowpedia.fandom.com/wiki/API_C_ChallengeMode.GetMapUIInfo)
 ---@param mapChallengeModeID number
 ---@return string name
 ---@return number id
 ---@return number timeLimit
 ---@return number? texture
 ---@return number backgroundTexture
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_ChallengeMode.GetMapUIInfo)
 function C_ChallengeMode.GetMapUIInfo(mapChallengeModeID) end
 
----@return number overallDungeonScore
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_ChallengeMode.GetOverallDungeonScore)
 ---Gets the overall season mythic+ rating for the player.
+---[Documentation](https://wowpedia.fandom.com/wiki/API_C_ChallengeMode.GetOverallDungeonScore)
+---@return number overallDungeonScore
 function C_ChallengeMode.GetOverallDungeonScore() end
 
+---[Documentation](https://wowpedia.fandom.com/wiki/API_C_ChallengeMode.GetPowerLevelDamageHealthMod)
 ---@param powerLevel number
 ---@return number damageMod
 ---@return number healthMod
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_ChallengeMode.GetPowerLevelDamageHealthMod)
 function C_ChallengeMode.GetPowerLevelDamageHealthMod(powerLevel) end
 
+---[Documentation](https://wowpedia.fandom.com/wiki/API_C_ChallengeMode.GetSlottedKeystoneInfo)
 ---@return number mapChallengeModeID
 ---@return number[] affixIDs
 ---@return number keystoneLevel
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_ChallengeMode.GetSlottedKeystoneInfo)
 function C_ChallengeMode.GetSlottedKeystoneInfo() end
 
+---Returns a color value from the passed in mythic+ rating from the combined affix scores for a specific dungeon
+---[Documentation](https://wowpedia.fandom.com/wiki/API_C_ChallengeMode.GetSpecificDungeonOverallScoreRarityColor)
 ---@param specificDungeonOverallScore number
 ---@return ColorMixin specificDungeonOverallScoreColor
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_ChallengeMode.GetSpecificDungeonOverallScoreRarityColor)
----Returns a color value from the passed in mythic+ rating from the combined affix scores for a specific dungeon
 function C_ChallengeMode.GetSpecificDungeonOverallScoreRarityColor(specificDungeonOverallScore) end
 
+---Returns a color value from the passed in mythic+ rating for a specific dungeon.
+---[Documentation](https://wowpedia.fandom.com/wiki/API_C_ChallengeMode.GetSpecificDungeonScoreRarityColor)
 ---@param specificDungeonScore number
 ---@return ColorMixin specificDungeonScoreColor
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_ChallengeMode.GetSpecificDungeonScoreRarityColor)
----Returns a color value from the passed in mythic+ rating for a specific dungeon.
 function C_ChallengeMode.GetSpecificDungeonScoreRarityColor(specificDungeonScore) end
 
----@return boolean hasSlottedKeystone
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_ChallengeMode.HasSlottedKeystone)
+---@return boolean hasSlottedKeystone
 function C_ChallengeMode.HasSlottedKeystone() end
 
----@return boolean challengeModeActive
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_ChallengeMode.IsChallengeModeActive)
+---@return boolean challengeModeActive
 function C_ChallengeMode.IsChallengeModeActive() end
 
----@return boolean removalSuccessful
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_ChallengeMode.RemoveKeystone)
+---@return boolean removalSuccessful
 function C_ChallengeMode.RemoveKeystone() end
 
----@param mapChallengeModeID number
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_ChallengeMode.RequestLeaders)
+---@param mapChallengeModeID number
 function C_ChallengeMode.RequestLeaders(mapChallengeModeID) end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_ChallengeMode.Reset)
@@ -136,8 +136,8 @@ function C_ChallengeMode.SetKeystoneTooltip() end
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_ChallengeMode.SlotKeystone)
 function C_ChallengeMode.SlotKeystone() end
 
----@return boolean success
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_ChallengeMode.StartChallengeMode)
+---@return boolean success
 function C_ChallengeMode.StartChallengeMode() end
 
 ---@class ChallengeModeCompletionMemberInfo

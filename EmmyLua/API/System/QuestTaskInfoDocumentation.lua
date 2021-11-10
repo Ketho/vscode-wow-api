@@ -1,66 +1,66 @@
 C_TaskQuest = {}
 
+---[Documentation](https://wowpedia.fandom.com/wiki/API_C_TaskQuest.DoesMapShowTaskQuestObjectives)
 ---@param uiMapID number
 ---@return boolean showsTaskQuestObjectives
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_TaskQuest.DoesMapShowTaskQuestObjectives)
 function C_TaskQuest.DoesMapShowTaskQuestObjectives(uiMapID) end
 
+---[Documentation](https://wowpedia.fandom.com/wiki/API_C_TaskQuest.GetQuestInfoByQuestID)
 ---@param questID number
 ---@return string questTitle
 ---@return number? factionID
 ---@return boolean? capped
 ---@return boolean? displayAsObjective
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_TaskQuest.GetQuestInfoByQuestID)
 function C_TaskQuest.GetQuestInfoByQuestID(questID) end
 
+---[Documentation](https://wowpedia.fandom.com/wiki/API_C_TaskQuest.GetQuestLocation)
 ---@param questID number
 ---@param uiMapID number
 ---@return number locationX
 ---@return number locationY
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_TaskQuest.GetQuestLocation)
 function C_TaskQuest.GetQuestLocation(questID, uiMapID) end
 
+---[Documentation](https://wowpedia.fandom.com/wiki/API_C_TaskQuest.GetQuestProgressBarInfo)
 ---@param questID number
 ---@return number progress
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_TaskQuest.GetQuestProgressBarInfo)
 function C_TaskQuest.GetQuestProgressBarInfo(questID) end
 
+---[Documentation](https://wowpedia.fandom.com/wiki/API_C_TaskQuest.GetQuestTimeLeftMinutes)
 ---@param questID number
 ---@return number minutesLeft
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_TaskQuest.GetQuestTimeLeftMinutes)
 function C_TaskQuest.GetQuestTimeLeftMinutes(questID) end
 
+---[Documentation](https://wowpedia.fandom.com/wiki/API_C_TaskQuest.GetQuestTimeLeftSeconds)
 ---@param questID number
 ---@return number secondsLeft
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_TaskQuest.GetQuestTimeLeftSeconds)
 function C_TaskQuest.GetQuestTimeLeftSeconds(questID) end
 
+---[Documentation](https://wowpedia.fandom.com/wiki/API_C_TaskQuest.GetQuestZoneID)
 ---@param questID number
 ---@return number uiMapID
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_TaskQuest.GetQuestZoneID)
 function C_TaskQuest.GetQuestZoneID(questID) end
 
+---[Documentation](https://wowpedia.fandom.com/wiki/API_C_TaskQuest.GetQuestsForPlayerByMapID)
 ---@param uiMapID number
 ---@return TaskPOIData[] taskPOIs
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_TaskQuest.GetQuestsForPlayerByMapID)
 function C_TaskQuest.GetQuestsForPlayerByMapID(uiMapID) end
 
----@return number[] quests
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_TaskQuest.GetThreatQuests)
+---@return number[] quests
 function C_TaskQuest.GetThreatQuests() end
 
+---[Documentation](https://wowpedia.fandom.com/wiki/API_C_TaskQuest.GetUIWidgetSetIDFromQuestID)
 ---@param questID number
 ---@return number UiWidgetSetID
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_TaskQuest.GetUIWidgetSetIDFromQuestID)
 function C_TaskQuest.GetUIWidgetSetIDFromQuestID(questID) end
 
+---[Documentation](https://wowpedia.fandom.com/wiki/API_C_TaskQuest.IsActive)
 ---@param questID number
 ---@return boolean active
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_TaskQuest.IsActive)
 function C_TaskQuest.IsActive(questID) end
 
----@param questID number
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_TaskQuest.RequestPreloadRewardData)
+---@param questID number
 function C_TaskQuest.RequestPreloadRewardData(questID) end
 
 ---@class TaskPOIData

@@ -3,137 +3,137 @@ C_TransmogSets = {}
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_TransmogSets.ClearLatestSource)
 function C_TransmogSets.ClearLatestSource() end
 
----@param sourceID number
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_TransmogSets.ClearNewSource)
+---@param sourceID number
 function C_TransmogSets.ClearNewSource(sourceID) end
 
+---[Documentation](https://wowpedia.fandom.com/wiki/API_C_TransmogSets.ClearSetNewSourcesForSlot)
 ---@param transmogSetID number
 ---@param slot number
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_TransmogSets.ClearSetNewSourcesForSlot)
 function C_TransmogSets.ClearSetNewSourcesForSlot(transmogSetID, slot) end
 
----@return TransmogSetInfo[] sets
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_TransmogSets.GetAllSets)
+---@return TransmogSetInfo[] sets
 function C_TransmogSets.GetAllSets() end
 
+---[Documentation](https://wowpedia.fandom.com/wiki/API_C_TransmogSets.GetAllSourceIDs)
 ---@param transmogSetID number
 ---@return number[] sources
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_TransmogSets.GetAllSourceIDs)
 function C_TransmogSets.GetAllSourceIDs(transmogSetID) end
 
+---[Documentation](https://wowpedia.fandom.com/wiki/API_C_TransmogSets.GetBaseSetID)
 ---@param transmogSetID number
 ---@return number baseTransmogSetID
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_TransmogSets.GetBaseSetID)
 function C_TransmogSets.GetBaseSetID(transmogSetID) end
 
----@return TransmogSetInfo[] sets
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_TransmogSets.GetBaseSets)
+---@return TransmogSetInfo[] sets
 function C_TransmogSets.GetBaseSets() end
 
+---[Documentation](https://wowpedia.fandom.com/wiki/API_C_TransmogSets.GetBaseSetsCounts)
 ---@return number numCollected
 ---@return number numTotal
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_TransmogSets.GetBaseSetsCounts)
 function C_TransmogSets.GetBaseSetsCounts() end
 
+---[Documentation](https://wowpedia.fandom.com/wiki/API_C_TransmogSets.GetBaseSetsFilter)
 ---@param index number
 ---@return boolean isChecked
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_TransmogSets.GetBaseSetsFilter)
 function C_TransmogSets.GetBaseSetsFilter(index) end
 
+---[Documentation](https://wowpedia.fandom.com/wiki/API_C_TransmogSets.GetCameraIDs)
 ---@return number? detailsCameraID
 ---@return number? vendorCameraID
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_TransmogSets.GetCameraIDs)
 function C_TransmogSets.GetCameraIDs() end
 
+---[Documentation](https://wowpedia.fandom.com/wiki/API_C_TransmogSets.GetIsFavorite)
 ---@param transmogSetID number
 ---@return boolean isFavorite
 ---@return boolean isGroupFavorite
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_TransmogSets.GetIsFavorite)
 function C_TransmogSets.GetIsFavorite(transmogSetID) end
 
----@return number sourceID
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_TransmogSets.GetLatestSource)
+---@return number sourceID
 function C_TransmogSets.GetLatestSource() end
 
+---[Documentation](https://wowpedia.fandom.com/wiki/API_C_TransmogSets.GetSetInfo)
 ---@param transmogSetID number
 ---@return TransmogSetInfo set
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_TransmogSets.GetSetInfo)
 function C_TransmogSets.GetSetInfo(transmogSetID) end
 
+---[Documentation](https://wowpedia.fandom.com/wiki/API_C_TransmogSets.GetSetNewSources)
 ---@param transmogSetID number
 ---@return number[] sourceIDs
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_TransmogSets.GetSetNewSources)
 function C_TransmogSets.GetSetNewSources(transmogSetID) end
 
+---[Documentation](https://wowpedia.fandom.com/wiki/API_C_TransmogSets.GetSetPrimaryAppearances)
 ---@param transmogSetID number
 ---@return TransmogSetPrimaryAppearanceInfo[] apppearances
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_TransmogSets.GetSetPrimaryAppearances)
 function C_TransmogSets.GetSetPrimaryAppearances(transmogSetID) end
 
+---[Documentation](https://wowpedia.fandom.com/wiki/API_C_TransmogSets.GetSetsContainingSourceID)
 ---@param sourceID number
 ---@return number[] setIDs
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_TransmogSets.GetSetsContainingSourceID)
 function C_TransmogSets.GetSetsContainingSourceID(sourceID) end
 
+---[Documentation](https://wowpedia.fandom.com/wiki/API_C_TransmogSets.GetSourceIDsForSlot)
 ---@param transmogSetID number
 ---@param slot number
 ---@return number[] sources
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_TransmogSets.GetSourceIDsForSlot)
 function C_TransmogSets.GetSourceIDsForSlot(transmogSetID, slot) end
 
+---[Documentation](https://wowpedia.fandom.com/wiki/API_C_TransmogSets.GetSourcesForSlot)
 ---@param transmogSetID number
 ---@param slot number
 ---@return AppearanceSourceInfo[] sources
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_TransmogSets.GetSourcesForSlot)
 function C_TransmogSets.GetSourcesForSlot(transmogSetID, slot) end
 
----@return TransmogSetInfo[] sets
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_TransmogSets.GetUsableSets)
+---@return TransmogSetInfo[] sets
 function C_TransmogSets.GetUsableSets() end
 
+---[Documentation](https://wowpedia.fandom.com/wiki/API_C_TransmogSets.GetVariantSets)
 ---@param transmogSetID number
 ---@return TransmogSetInfo[] sets
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_TransmogSets.GetVariantSets)
 function C_TransmogSets.GetVariantSets(transmogSetID) end
 
----@return boolean hasUsableSets
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_TransmogSets.HasUsableSets)
+---@return boolean hasUsableSets
 function C_TransmogSets.HasUsableSets() end
 
+---[Documentation](https://wowpedia.fandom.com/wiki/API_C_TransmogSets.IsBaseSetCollected)
 ---@param transmogSetID number
 ---@return boolean isCollected
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_TransmogSets.IsBaseSetCollected)
 function C_TransmogSets.IsBaseSetCollected(transmogSetID) end
 
+---[Documentation](https://wowpedia.fandom.com/wiki/API_C_TransmogSets.IsNewSource)
 ---@param sourceID number
 ---@return boolean isNew
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_TransmogSets.IsNewSource)
 function C_TransmogSets.IsNewSource(sourceID) end
 
+---[Documentation](https://wowpedia.fandom.com/wiki/API_C_TransmogSets.IsSetVisible)
 ---@param transmogSetID number
 ---@return boolean isVisible
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_TransmogSets.IsSetVisible)
 function C_TransmogSets.IsSetVisible(transmogSetID) end
 
+---[Documentation](https://wowpedia.fandom.com/wiki/API_C_TransmogSets.SetBaseSetsFilter)
 ---@param index number
 ---@param isChecked boolean
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_TransmogSets.SetBaseSetsFilter)
 function C_TransmogSets.SetBaseSetsFilter(index, isChecked) end
 
+---[Documentation](https://wowpedia.fandom.com/wiki/API_C_TransmogSets.SetHasNewSources)
 ---@param transmogSetID number
 ---@return boolean hasNewSources
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_TransmogSets.SetHasNewSources)
 function C_TransmogSets.SetHasNewSources(transmogSetID) end
 
+---[Documentation](https://wowpedia.fandom.com/wiki/API_C_TransmogSets.SetHasNewSourcesForSlot)
 ---@param transmogSetID number
 ---@param slot number
 ---@return boolean hasNewSources
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_TransmogSets.SetHasNewSourcesForSlot)
 function C_TransmogSets.SetHasNewSourcesForSlot(transmogSetID, slot) end
 
+---[Documentation](https://wowpedia.fandom.com/wiki/API_C_TransmogSets.SetIsFavorite)
 ---@param transmogSetID number
 ---@param isFavorite boolean
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_TransmogSets.SetIsFavorite)
 function C_TransmogSets.SetIsFavorite(transmogSetID, isFavorite) end
 
 ---@class TransmogSetInfo

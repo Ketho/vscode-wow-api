@@ -1,47 +1,47 @@
 C_ModelInfo = {}
 
+---This function does nothing in public clients
+---[Documentation](https://wowpedia.fandom.com/wiki/API_C_ModelInfo.AddActiveModelScene)
 ---@param modelSceneFrame table
 ---@param modelSceneID number
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_ModelInfo.AddActiveModelScene)
----This function does nothing in public clients
 function C_ModelInfo.AddActiveModelScene(modelSceneFrame, modelSceneID) end
 
+---This function does nothing in public clients
+---[Documentation](https://wowpedia.fandom.com/wiki/API_C_ModelInfo.AddActiveModelSceneActor)
 ---@param modelSceneFrameActor table
 ---@param modelSceneActorID number
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_ModelInfo.AddActiveModelSceneActor)
----This function does nothing in public clients
 function C_ModelInfo.AddActiveModelSceneActor(modelSceneFrameActor, modelSceneActorID) end
 
----@param modelSceneFrame table
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_ModelInfo.ClearActiveModelScene)
 ---This function does nothing in public clients
+---[Documentation](https://wowpedia.fandom.com/wiki/API_C_ModelInfo.ClearActiveModelScene)
+---@param modelSceneFrame table
 function C_ModelInfo.ClearActiveModelScene(modelSceneFrame) end
 
----@param modelSceneFrameActor table
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_ModelInfo.ClearActiveModelSceneActor)
 ---This function does nothing in public clients
+---[Documentation](https://wowpedia.fandom.com/wiki/API_C_ModelInfo.ClearActiveModelSceneActor)
+---@param modelSceneFrameActor table
 function C_ModelInfo.ClearActiveModelSceneActor(modelSceneFrameActor) end
 
+---[Documentation](https://wowpedia.fandom.com/wiki/API_C_ModelInfo.GetModelSceneActorDisplayInfoByID)
 ---@param modelActorDisplayID number
 ---@return UIModelSceneActorDisplayInfo actorDisplayInfo
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_ModelInfo.GetModelSceneActorDisplayInfoByID)
 function C_ModelInfo.GetModelSceneActorDisplayInfoByID(modelActorDisplayID) end
 
+---[Documentation](https://wowpedia.fandom.com/wiki/API_C_ModelInfo.GetModelSceneActorInfoByID)
 ---@param modelActorID number
 ---@return UIModelSceneActorInfo actorInfo
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_ModelInfo.GetModelSceneActorInfoByID)
 function C_ModelInfo.GetModelSceneActorInfoByID(modelActorID) end
 
+---[Documentation](https://wowpedia.fandom.com/wiki/API_C_ModelInfo.GetModelSceneCameraInfoByID)
 ---@param modelSceneCameraID number
 ---@return UIModelSceneCameraInfo modelSceneCameraInfo
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_ModelInfo.GetModelSceneCameraInfoByID)
 function C_ModelInfo.GetModelSceneCameraInfoByID(modelSceneCameraID) end
 
+---[Documentation](https://wowpedia.fandom.com/wiki/API_C_ModelInfo.GetModelSceneInfoByID)
 ---@param modelSceneID number
 ---@return ModelSceneType modelSceneType
 ---@return number[] modelCameraIDs
 ---@return number[] modelActorsIDs
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_ModelInfo.GetModelSceneInfoByID)
 function C_ModelInfo.GetModelSceneInfoByID(modelSceneID) end
 
 ---@class ItemTryOnReason

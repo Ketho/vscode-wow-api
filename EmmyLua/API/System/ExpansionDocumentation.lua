@@ -1,88 +1,88 @@
 Expansion = {}
 
----@return boolean canUpgradeExpansion
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_CanUpgradeExpansion)
+---@return boolean canUpgradeExpansion
 function CanUpgradeExpansion() end
 
----@return boolean regionSellsExpansions
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_DoesCurrentLocaleSellExpansionLevels)
+---@return boolean regionSellsExpansions
 function DoesCurrentLocaleSellExpansionLevels() end
 
----@return number expansionLevel
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_GetAccountExpansionLevel)
+---@return number expansionLevel
 function GetAccountExpansionLevel() end
 
----@return number expansionLevel
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_GetClientDisplayExpansionLevel)
+---@return number expansionLevel
 function GetClientDisplayExpansionLevel() end
 
----@return string regionName
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_GetCurrentRegionName)
+---@return string regionName
 function GetCurrentRegionName() end
 
+---[Documentation](https://wowpedia.fandom.com/wiki/API_GetExpansionDisplayInfo)
 ---@param expansionLevel number
 ---@return ExpansionDisplayInfo? info
----[Documentation](https://wowpedia.fandom.com/wiki/API_GetExpansionDisplayInfo)
 function GetExpansionDisplayInfo(expansionLevel) end
 
+---[Documentation](https://wowpedia.fandom.com/wiki/API_GetExpansionForLevel)
 ---@param playerLevel number
 ---@return number expansionLevel
----[Documentation](https://wowpedia.fandom.com/wiki/API_GetExpansionForLevel)
 function GetExpansionForLevel(playerLevel) end
 
----@return number expansionLevel
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_GetExpansionLevel)
+---@return number expansionLevel
 function GetExpansionLevel() end
 
+---[Documentation](https://wowpedia.fandom.com/wiki/API_GetExpansionTrialInfo)
 ---@return boolean isExpansionTrialAccount
 ---@return number? expansionTrialRemainingSeconds
----[Documentation](https://wowpedia.fandom.com/wiki/API_GetExpansionTrialInfo)
 function GetExpansionTrialInfo() end
 
+---Maps an expansion level to a maximum character level for that expansion.
+---[Documentation](https://wowpedia.fandom.com/wiki/API_GetMaxLevelForExpansionLevel)
 ---@param expansionLevel number
 ---@return number maxLevel
----[Documentation](https://wowpedia.fandom.com/wiki/API_GetMaxLevelForExpansionLevel)
----Maps an expansion level to a maximum character level for that expansion.
 function GetMaxLevelForExpansionLevel(expansionLevel) end
 
----@return number maxLevel
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_GetMaxLevelForLatestExpansion)
+---@return number maxLevel
 function GetMaxLevelForLatestExpansion() end
 
----@return number maxLevel
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_GetMaxLevelForPlayerExpansion)
+---@return number maxLevel
 function GetMaxLevelForPlayerExpansion() end
 
----@return number expansionLevel
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_GetMaximumExpansionLevel)
+---@return number expansionLevel
 function GetMaximumExpansionLevel() end
 
----@return number expansionLevel
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_GetMinimumExpansionLevel)
+---@return number expansionLevel
 function GetMinimumExpansionLevel() end
 
----@return number numExpansions
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_GetNumExpansions)
+---@return number numExpansions
 function GetNumExpansions() end
 
----@return number serverExpansionLevel
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_GetServerExpansionLevel)
+---@return number serverExpansionLevel
 function GetServerExpansionLevel() end
 
----@return boolean isExpansionTrialAccount
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_IsExpansionTrial)
+---@return boolean isExpansionTrialAccount
 function IsExpansionTrial() end
 
----@return boolean isTrialAccount
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_IsTrialAccount)
+---@return boolean isTrialAccount
 function IsTrialAccount() end
 
----@return boolean isVeteranTrialAccount
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_IsVeteranTrialAccount)
+---@return boolean isVeteranTrialAccount
 function IsVeteranTrialAccount() end
 
----@param response SubscriptionInterstitialResponseType
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_SendSubscriptionInterstitialResponse)
+---@param response SubscriptionInterstitialResponseType
 function SendSubscriptionInterstitialResponse(response) end
 
 ---@class SubscriptionInterstitialResponseType

@@ -1,8 +1,8 @@
 C_ItemUpgrade = {}
 
+---[Documentation](https://wowpedia.fandom.com/wiki/API_C_ItemUpgrade.CanUpgradeItem)
 ---@param baseItem ItemLocationMixin
 ---@return boolean isValid
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_ItemUpgrade.CanUpgradeItem)
 function C_ItemUpgrade.CanUpgradeItem(baseItem) end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_ItemUpgrade.ClearItemUpgrade)
@@ -11,45 +11,45 @@ function C_ItemUpgrade.ClearItemUpgrade() end
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_ItemUpgrade.CloseItemUpgrade)
 function C_ItemUpgrade.CloseItemUpgrade() end
 
----@return string link
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_ItemUpgrade.GetItemHyperlink)
+---@return string link
 function C_ItemUpgrade.GetItemHyperlink() end
 
+---[Documentation](https://wowpedia.fandom.com/wiki/API_C_ItemUpgrade.GetItemUpgradeCurrentLevel)
 ---@return number itemLevel
 ---@return boolean isPvpItemLevel
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_ItemUpgrade.GetItemUpgradeCurrentLevel)
 function C_ItemUpgrade.GetItemUpgradeCurrentLevel() end
 
+---[Documentation](https://wowpedia.fandom.com/wiki/API_C_ItemUpgrade.GetItemUpgradeEffect)
 ---@param effectIndex number
 ---@param numUpgradeLevels? number
 ---@return string outBaseEffect
 ---@return string outUpgradedEffect
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_ItemUpgrade.GetItemUpgradeEffect)
 function C_ItemUpgrade.GetItemUpgradeEffect(effectIndex, numUpgradeLevels) end
 
----@return ItemUpgradeItemInfo itemInfo
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_ItemUpgrade.GetItemUpgradeItemInfo)
+---@return ItemUpgradeItemInfo itemInfo
 function C_ItemUpgrade.GetItemUpgradeItemInfo() end
 
+---[Documentation](https://wowpedia.fandom.com/wiki/API_C_ItemUpgrade.GetItemUpgradePvpItemLevelDeltaValues)
 ---@param numUpgradeLevels number
 ---@return number currentPvPItemLevel
 ---@return number upgradedPvPItemLevel
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_ItemUpgrade.GetItemUpgradePvpItemLevelDeltaValues)
 function C_ItemUpgrade.GetItemUpgradePvpItemLevelDeltaValues(numUpgradeLevels) end
 
----@return number numItemUpgradeEffects
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_ItemUpgrade.GetNumItemUpgradeEffects)
+---@return number numItemUpgradeEffects
 function C_ItemUpgrade.GetNumItemUpgradeEffects() end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_ItemUpgrade.SetItemUpgradeFromCursorItem)
 function C_ItemUpgrade.SetItemUpgradeFromCursorItem() end
 
----@param itemToSet ItemLocationMixin
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_ItemUpgrade.SetItemUpgradeFromLocation)
+---@param itemToSet ItemLocationMixin
 function C_ItemUpgrade.SetItemUpgradeFromLocation(itemToSet) end
 
----@param numUpgrades number
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_ItemUpgrade.UpgradeItem)
+---@param numUpgrades number
 function C_ItemUpgrade.UpgradeItem(numUpgrades) end
 
 ---@class ItemUpgradeCurrencyCost

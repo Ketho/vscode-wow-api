@@ -1,16 +1,16 @@
 C_MountJournal = {}
 
+---[Documentation](https://wowpedia.fandom.com/wiki/API_C_MountJournal.ApplyMountEquipment)
 ---@param itemLocation ItemLocationMixin
 ---@return boolean canContinue
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_MountJournal.ApplyMountEquipment)
 function C_MountJournal.ApplyMountEquipment(itemLocation) end
 
----@return boolean areEffectsSuppressed
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_MountJournal.AreMountEquipmentEffectsSuppressed)
+---@return boolean areEffectsSuppressed
 function C_MountJournal.AreMountEquipmentEffectsSuppressed() end
 
----@param mountID number
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_MountJournal.ClearFanfare)
+---@param mountID number
 function C_MountJournal.ClearFanfare(mountID) end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_MountJournal.ClearRecentFanfares)
@@ -19,20 +19,21 @@ function C_MountJournal.ClearRecentFanfares() end
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_MountJournal.Dismiss)
 function C_MountJournal.Dismiss() end
 
----@return number? itemID
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_MountJournal.GetAppliedMountEquipmentID)
+---@return number? itemID
 function C_MountJournal.GetAppliedMountEquipmentID() end
 
+---[Documentation](https://wowpedia.fandom.com/wiki/API_C_MountJournal.GetCollectedFilterSetting)
 ---@param filterIndex number
 ---@return boolean isChecked
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_MountJournal.GetCollectedFilterSetting)
 function C_MountJournal.GetCollectedFilterSetting(filterIndex) end
 
+---[Documentation](https://wowpedia.fandom.com/wiki/API_C_MountJournal.GetDisplayedMountAllCreatureDisplayInfo)
 ---@param mountIndex number
 ---@return MountCreatureDisplayInfo[] allDisplayInfo
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_MountJournal.GetDisplayedMountAllCreatureDisplayInfo)
 function C_MountJournal.GetDisplayedMountAllCreatureDisplayInfo(mountIndex) end
 
+---[Documentation](https://wowpedia.fandom.com/wiki/API_C_MountJournal.GetDisplayedMountInfo)
 ---@param displayIndex number
 ---@return string name
 ---@return number spellID
@@ -46,9 +47,9 @@ function C_MountJournal.GetDisplayedMountAllCreatureDisplayInfo(mountIndex) end
 ---@return boolean shouldHideOnChar
 ---@return boolean isCollected
 ---@return number mountID
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_MountJournal.GetDisplayedMountInfo)
 function C_MountJournal.GetDisplayedMountInfo(displayIndex) end
 
+---[Documentation](https://wowpedia.fandom.com/wiki/API_C_MountJournal.GetDisplayedMountInfoExtra)
 ---@param mountIndex number
 ---@return number? creatureDisplayInfoID
 ---@return string description
@@ -59,38 +60,38 @@ function C_MountJournal.GetDisplayedMountInfo(displayIndex) end
 ---@return number animID
 ---@return number spellVisualKitID
 ---@return boolean disablePlayerMountPreview
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_MountJournal.GetDisplayedMountInfoExtra)
 function C_MountJournal.GetDisplayedMountInfoExtra(mountIndex) end
 
+---[Documentation](https://wowpedia.fandom.com/wiki/API_C_MountJournal.GetIsFavorite)
 ---@param mountIndex number
 ---@return boolean isFavorite
 ---@return boolean canSetFavorite
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_MountJournal.GetIsFavorite)
 function C_MountJournal.GetIsFavorite(mountIndex) end
 
+---[Documentation](https://wowpedia.fandom.com/wiki/API_C_MountJournal.GetMountAllCreatureDisplayInfoByID)
 ---@param mountID number
 ---@return MountCreatureDisplayInfo[] allDisplayInfo
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_MountJournal.GetMountAllCreatureDisplayInfoByID)
 function C_MountJournal.GetMountAllCreatureDisplayInfoByID(mountID) end
 
----@return number level
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_MountJournal.GetMountEquipmentUnlockLevel)
+---@return number level
 function C_MountJournal.GetMountEquipmentUnlockLevel() end
 
+---[Documentation](https://wowpedia.fandom.com/wiki/API_C_MountJournal.GetMountFromItem)
 ---@param itemID number
 ---@return number? mountID
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_MountJournal.GetMountFromItem)
 function C_MountJournal.GetMountFromItem(itemID) end
 
+---[Documentation](https://wowpedia.fandom.com/wiki/API_C_MountJournal.GetMountFromSpell)
 ---@param spellID number
 ---@return number? mountID
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_MountJournal.GetMountFromSpell)
 function C_MountJournal.GetMountFromSpell(spellID) end
 
----@return number[] mountIDs
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_MountJournal.GetMountIDs)
+---@return number[] mountIDs
 function C_MountJournal.GetMountIDs() end
 
+---[Documentation](https://wowpedia.fandom.com/wiki/API_C_MountJournal.GetMountInfoByID)
 ---@param mountID number
 ---@return string name
 ---@return number spellID
@@ -104,9 +105,9 @@ function C_MountJournal.GetMountIDs() end
 ---@return boolean shouldHideOnChar
 ---@return boolean isCollected
 ---@return number mountID
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_MountJournal.GetMountInfoByID)
 function C_MountJournal.GetMountInfoByID(mountID) end
 
+---[Documentation](https://wowpedia.fandom.com/wiki/API_C_MountJournal.GetMountInfoExtraByID)
 ---@param mountID number
 ---@return number? creatureDisplayInfoID
 ---@return string description
@@ -117,101 +118,100 @@ function C_MountJournal.GetMountInfoByID(mountID) end
 ---@return number animID
 ---@return number spellVisualKitID
 ---@return boolean disablePlayerMountPreview
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_MountJournal.GetMountInfoExtraByID)
 function C_MountJournal.GetMountInfoExtraByID(mountID) end
 
+---[Documentation](https://wowpedia.fandom.com/wiki/API_C_MountJournal.GetMountUsabilityByID)
 ---@param mountID number
 ---@param checkIndoors boolean
 ---@return boolean isUsable
 ---@return string? useError
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_MountJournal.GetMountUsabilityByID)
 function C_MountJournal.GetMountUsabilityByID(mountID, checkIndoors) end
 
----@return number numMounts
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_MountJournal.GetNumDisplayedMounts)
+---@return number numMounts
 function C_MountJournal.GetNumDisplayedMounts() end
 
----@return number numMounts
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_MountJournal.GetNumMounts)
+---@return number numMounts
 function C_MountJournal.GetNumMounts() end
 
----@return number numMountsNeedingFanfare
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_MountJournal.GetNumMountsNeedingFanfare)
+---@return number numMountsNeedingFanfare
 function C_MountJournal.GetNumMountsNeedingFanfare() end
 
+---Determines if the item is mount equipment based on its class and subclass.
+---[Documentation](https://wowpedia.fandom.com/wiki/API_C_MountJournal.IsItemMountEquipment)
 ---@param itemLocation ItemLocationMixin
 ---@return boolean isMountEquipment
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_MountJournal.IsItemMountEquipment)
----Determines if the item is mount equipment based on its class and subclass.
 function C_MountJournal.IsItemMountEquipment(itemLocation) end
 
----@return boolean isApplied
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_MountJournal.IsMountEquipmentApplied)
+---@return boolean isApplied
 function C_MountJournal.IsMountEquipmentApplied() end
 
+---[Documentation](https://wowpedia.fandom.com/wiki/API_C_MountJournal.IsSourceChecked)
 ---@param filterIndex number
 ---@return boolean isChecked
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_MountJournal.IsSourceChecked)
 function C_MountJournal.IsSourceChecked(filterIndex) end
 
+---[Documentation](https://wowpedia.fandom.com/wiki/API_C_MountJournal.IsTypeChecked)
 ---@param filterIndex number
 ---@return boolean isChecked
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_MountJournal.IsTypeChecked)
 function C_MountJournal.IsTypeChecked(filterIndex) end
 
+---[Documentation](https://wowpedia.fandom.com/wiki/API_C_MountJournal.IsValidSourceFilter)
 ---@param filterIndex number
 ---@return boolean isValid
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_MountJournal.IsValidSourceFilter)
 function C_MountJournal.IsValidSourceFilter(filterIndex) end
 
+---[Documentation](https://wowpedia.fandom.com/wiki/API_C_MountJournal.IsValidTypeFilter)
 ---@param filterIndex number
 ---@return boolean isValid
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_MountJournal.IsValidTypeFilter)
 function C_MountJournal.IsValidTypeFilter(filterIndex) end
 
+---[Documentation](https://wowpedia.fandom.com/wiki/API_C_MountJournal.NeedsFanfare)
 ---@param mountID number
 ---@return boolean needsFanfare
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_MountJournal.NeedsFanfare)
 function C_MountJournal.NeedsFanfare(mountID) end
 
----@param displayIndex number
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_MountJournal.Pickup)
+---@param displayIndex number
 function C_MountJournal.Pickup(displayIndex) end
 
----@param isChecked boolean
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_MountJournal.SetAllSourceFilters)
+---@param isChecked boolean
 function C_MountJournal.SetAllSourceFilters(isChecked) end
 
----@param isChecked boolean
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_MountJournal.SetAllTypeFilters)
+---@param isChecked boolean
 function C_MountJournal.SetAllTypeFilters(isChecked) end
 
+---[Documentation](https://wowpedia.fandom.com/wiki/API_C_MountJournal.SetCollectedFilterSetting)
 ---@param filterIndex number
 ---@param isChecked boolean
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_MountJournal.SetCollectedFilterSetting)
 function C_MountJournal.SetCollectedFilterSetting(filterIndex, isChecked) end
 
+---[Documentation](https://wowpedia.fandom.com/wiki/API_C_MountJournal.SetIsFavorite)
 ---@param mountIndex number
 ---@param isFavorite boolean
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_MountJournal.SetIsFavorite)
 function C_MountJournal.SetIsFavorite(mountIndex, isFavorite) end
 
----@param searchValue string
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_MountJournal.SetSearch)
+---@param searchValue string
 function C_MountJournal.SetSearch(searchValue) end
 
+---[Documentation](https://wowpedia.fandom.com/wiki/API_C_MountJournal.SetSourceFilter)
 ---@param filterIndex number
 ---@param isChecked boolean
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_MountJournal.SetSourceFilter)
 function C_MountJournal.SetSourceFilter(filterIndex, isChecked) end
 
+---[Documentation](https://wowpedia.fandom.com/wiki/API_C_MountJournal.SetTypeFilter)
 ---@param filterIndex number
 ---@param isChecked boolean
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_MountJournal.SetTypeFilter)
 function C_MountJournal.SetTypeFilter(filterIndex, isChecked) end
 
----@param mountID number
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_MountJournal.SummonByID)
+---@param mountID number
 function C_MountJournal.SummonByID(mountID) end
 
 ---@class MountType

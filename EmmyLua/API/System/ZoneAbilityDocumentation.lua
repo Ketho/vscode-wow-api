@@ -1,7 +1,7 @@
 C_ZoneAbility = {}
 
----@return ZoneAbilityInfo[] zoneAbilities
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_ZoneAbility.GetActiveAbilities)
+---@return ZoneAbilityInfo[] zoneAbilities
 function C_ZoneAbility.GetActiveAbilities() end
 
 ---@class ZoneAbilityInfo

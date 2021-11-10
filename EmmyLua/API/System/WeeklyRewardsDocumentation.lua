@@ -1,63 +1,63 @@
 C_WeeklyRewards = {}
 
----@return boolean isCurrentPeriod
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_WeeklyRewards.AreRewardsForCurrentRewardPeriod)
+---@return boolean isCurrentPeriod
 function C_WeeklyRewards.AreRewardsForCurrentRewardPeriod() end
 
----@return boolean canClaimRewards
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_WeeklyRewards.CanClaimRewards)
+---@return boolean canClaimRewards
 function C_WeeklyRewards.CanClaimRewards() end
 
----@param id number
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_WeeklyRewards.ClaimReward)
+---@param id number
 function C_WeeklyRewards.ClaimReward(id) end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_WeeklyRewards.CloseInteraction)
 function C_WeeklyRewards.CloseInteraction() end
 
+---[Documentation](https://wowpedia.fandom.com/wiki/API_C_WeeklyRewards.GetActivities)
 ---@param type? WeeklyRewardChestThresholdType
 ---@return WeeklyRewardActivityInfo[] activities
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_WeeklyRewards.GetActivities)
 function C_WeeklyRewards.GetActivities(type) end
 
+---[Documentation](https://wowpedia.fandom.com/wiki/API_C_WeeklyRewards.GetActivityEncounterInfo)
 ---@param type WeeklyRewardChestThresholdType
 ---@param index number
 ---@return WeeklyRewardActivityEncounterInfo[] info
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_WeeklyRewards.GetActivityEncounterInfo)
 function C_WeeklyRewards.GetActivityEncounterInfo(type, index) end
 
----@return ConquestWeeklyProgress weeklyProgress
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_WeeklyRewards.GetConquestWeeklyProgress)
+---@return ConquestWeeklyProgress weeklyProgress
 function C_WeeklyRewards.GetConquestWeeklyProgress() end
 
+---[Documentation](https://wowpedia.fandom.com/wiki/API_C_WeeklyRewards.GetExampleRewardItemHyperlinks)
 ---@param id number
 ---@return string hyperlink
 ---@return string upgradeHyperlink
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_WeeklyRewards.GetExampleRewardItemHyperlinks)
 function C_WeeklyRewards.GetExampleRewardItemHyperlinks(id) end
 
+---[Documentation](https://wowpedia.fandom.com/wiki/API_C_WeeklyRewards.GetItemHyperlink)
 ---@param itemDBID string
 ---@return string hyperlink
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_WeeklyRewards.GetItemHyperlink)
 function C_WeeklyRewards.GetItemHyperlink(itemDBID) end
 
+---[Documentation](https://wowpedia.fandom.com/wiki/API_C_WeeklyRewards.GetNextMythicPlusIncrease)
 ---@param mythicPlusLevel number
 ---@return boolean hasSeasonData
 ---@return number? nextMythicPlusLevel
 ---@return number? itemLevel
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_WeeklyRewards.GetNextMythicPlusIncrease)
 function C_WeeklyRewards.GetNextMythicPlusIncrease(mythicPlusLevel) end
 
----@return boolean hasAvailableRewards
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_WeeklyRewards.HasAvailableRewards)
+---@return boolean hasAvailableRewards
 function C_WeeklyRewards.HasAvailableRewards() end
 
----@return boolean hasGeneratedRewards
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_WeeklyRewards.HasGeneratedRewards)
+---@return boolean hasGeneratedRewards
 function C_WeeklyRewards.HasGeneratedRewards() end
 
----@return boolean isInteracting
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_WeeklyRewards.HasInteraction)
+---@return boolean isInteracting
 function C_WeeklyRewards.HasInteraction() end
 
 ---@class ConquestProgressBarDisplayType

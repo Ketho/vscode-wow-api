@@ -3,17 +3,17 @@ C_ChromieTime = {}
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_ChromieTime.CloseUI)
 function C_ChromieTime.CloseUI() end
 
+---[Documentation](https://wowpedia.fandom.com/wiki/API_C_ChromieTime.GetChromieTimeExpansionOption)
 ---@param expansionRecID number
 ---@return ChromieTimeExpansionInfo? info
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_ChromieTime.GetChromieTimeExpansionOption)
 function C_ChromieTime.GetChromieTimeExpansionOption(expansionRecID) end
 
----@return ChromieTimeExpansionInfo[] expansionOptions
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_ChromieTime.GetChromieTimeExpansionOptions)
+---@return ChromieTimeExpansionInfo[] expansionOptions
 function C_ChromieTime.GetChromieTimeExpansionOptions() end
 
----@param chromieTimeExpansionInfoId number
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_ChromieTime.SelectChromieTimeOption)
+---@param chromieTimeExpansionInfoId number
 function C_ChromieTime.SelectChromieTimeOption(chromieTimeExpansionInfoId) end
 
 ---@class ChromieTimeExpansionInfo

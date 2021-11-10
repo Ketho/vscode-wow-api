@@ -1,89 +1,89 @@
 C_ActionBar = {}
 
+---[Documentation](https://wowpedia.fandom.com/wiki/API_C_ActionBar.FindFlyoutActionButtons)
 ---@param flyoutID number
 ---@return number[] slots
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_ActionBar.FindFlyoutActionButtons)
 function C_ActionBar.FindFlyoutActionButtons(flyoutID) end
 
+---[Documentation](https://wowpedia.fandom.com/wiki/API_C_ActionBar.FindPetActionButtons)
 ---@param petActionID number
 ---@return number[] slots
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_ActionBar.FindPetActionButtons)
 function C_ActionBar.FindPetActionButtons(petActionID) end
 
+---[Documentation](https://wowpedia.fandom.com/wiki/API_C_ActionBar.FindSpellActionButtons)
 ---@param spellID number
 ---@return number[] slots
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_ActionBar.FindSpellActionButtons)
 function C_ActionBar.FindSpellActionButtons(spellID) end
 
+---[Documentation](https://wowpedia.fandom.com/wiki/API_C_ActionBar.GetBonusBarIndexForSlot)
 ---@param slotID number
 ---@return number? bonusBarIndex
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_ActionBar.GetBonusBarIndexForSlot)
 function C_ActionBar.GetBonusBarIndexForSlot(slotID) end
 
+---[Documentation](https://wowpedia.fandom.com/wiki/API_C_ActionBar.GetPetActionPetBarIndices)
 ---@param petActionID number
 ---@return number[] slots
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_ActionBar.GetPetActionPetBarIndices)
 function C_ActionBar.GetPetActionPetBarIndices(petActionID) end
 
+---[Documentation](https://wowpedia.fandom.com/wiki/API_C_ActionBar.HasFlyoutActionButtons)
 ---@param flyoutID number
 ---@return boolean hasFlyoutActionButtons
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_ActionBar.HasFlyoutActionButtons)
 function C_ActionBar.HasFlyoutActionButtons(flyoutID) end
 
+---[Documentation](https://wowpedia.fandom.com/wiki/API_C_ActionBar.HasPetActionButtons)
 ---@param petActionID number
 ---@return boolean hasPetActionButtons
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_ActionBar.HasPetActionButtons)
 function C_ActionBar.HasPetActionButtons(petActionID) end
 
+---[Documentation](https://wowpedia.fandom.com/wiki/API_C_ActionBar.HasPetActionPetBarIndices)
 ---@param petActionID number
 ---@return boolean hasPetActionPetBarIndices
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_ActionBar.HasPetActionPetBarIndices)
 function C_ActionBar.HasPetActionPetBarIndices(petActionID) end
 
+---[Documentation](https://wowpedia.fandom.com/wiki/API_C_ActionBar.HasSpellActionButtons)
 ---@param spellID number
 ---@return boolean hasSpellActionButtons
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_ActionBar.HasSpellActionButtons)
 function C_ActionBar.HasSpellActionButtons(spellID) end
 
+---[Documentation](https://wowpedia.fandom.com/wiki/API_C_ActionBar.IsAutoCastPetAction)
 ---@param slotID number
 ---@return boolean isAutoCastPetAction
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_ActionBar.IsAutoCastPetAction)
 function C_ActionBar.IsAutoCastPetAction(slotID) end
 
+---[Documentation](https://wowpedia.fandom.com/wiki/API_C_ActionBar.IsEnabledAutoCastPetAction)
 ---@param slotID number
 ---@return boolean isEnabledAutoCastPetAction
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_ActionBar.IsEnabledAutoCastPetAction)
 function C_ActionBar.IsEnabledAutoCastPetAction(slotID) end
 
+---[Documentation](https://wowpedia.fandom.com/wiki/API_C_ActionBar.IsHarmfulAction)
 ---@param actionID number
 ---@param useNeutral boolean
 ---@return boolean isHarmful
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_ActionBar.IsHarmfulAction)
 function C_ActionBar.IsHarmfulAction(actionID, useNeutral) end
 
+---[Documentation](https://wowpedia.fandom.com/wiki/API_C_ActionBar.IsHelpfulAction)
 ---@param actionID number
 ---@param useNeutral boolean
 ---@return boolean isHelpful
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_ActionBar.IsHelpfulAction)
 function C_ActionBar.IsHelpfulAction(actionID, useNeutral) end
 
+---[Documentation](https://wowpedia.fandom.com/wiki/API_C_ActionBar.IsOnBarOrSpecialBar)
 ---@param spellID number
 ---@return boolean isOnBarOrSpecialBar
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_ActionBar.IsOnBarOrSpecialBar)
 function C_ActionBar.IsOnBarOrSpecialBar(spellID) end
 
----@param slotID number
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_ActionBar.PutActionInSlot)
+---@param slotID number
 function C_ActionBar.PutActionInSlot(slotID) end
 
----@return boolean showHealthBar
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_ActionBar.ShouldOverrideBarShowHealthBar)
+---@return boolean showHealthBar
 function C_ActionBar.ShouldOverrideBarShowHealthBar() end
 
----@return boolean showManaBar
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_ActionBar.ShouldOverrideBarShowManaBar)
+---@return boolean showManaBar
 function C_ActionBar.ShouldOverrideBarShowManaBar() end
 
----@param slotID number
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_ActionBar.ToggleAutoCastPetAction)
+---@param slotID number
 function C_ActionBar.ToggleAutoCastPetAction(slotID) end

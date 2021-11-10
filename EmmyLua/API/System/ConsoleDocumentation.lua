@@ -1,24 +1,24 @@
 C_Console = {}
 
----@return ConsoleCommandInfo[] commands
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_Console.GetAllCommands)
+---@return ConsoleCommandInfo[] commands
 function C_Console.GetAllCommands() end
 
+---[Documentation](https://wowpedia.fandom.com/wiki/API_C_Console.GetColorFromType)
 ---@param colorType ConsoleColorType
 ---@return ColorMixin color
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_Console.GetColorFromType)
 function C_Console.GetColorFromType(colorType) end
 
----@return number fontHeightInPixels
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_Console.GetFontHeight)
+---@return number fontHeightInPixels
 function C_Console.GetFontHeight() end
 
----@param partialCommandText string
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_Console.PrintAllMatchingCommands)
+---@param partialCommandText string
 function C_Console.PrintAllMatchingCommands(partialCommandText) end
 
----@param fontHeightInPixels number
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_Console.SetFontHeight)
+---@param fontHeightInPixels number
 function C_Console.SetFontHeight(fontHeightInPixels) end
 
 ---@class ConsoleCategory

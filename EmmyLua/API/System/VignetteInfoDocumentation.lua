@@ -1,23 +1,23 @@
 C_VignetteInfo = {}
 
+---[Documentation](https://wowpedia.fandom.com/wiki/API_C_VignetteInfo.FindBestUniqueVignette)
 ---@param vignetteGUIDs string[]
 ---@return number? bestUniqueVignetteIndex
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_VignetteInfo.FindBestUniqueVignette)
 function C_VignetteInfo.FindBestUniqueVignette(vignetteGUIDs) end
 
+---[Documentation](https://wowpedia.fandom.com/wiki/API_C_VignetteInfo.GetVignetteInfo)
 ---@param vignetteGUID string
 ---@return VignetteInfo? vignetteInfo
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_VignetteInfo.GetVignetteInfo)
 function C_VignetteInfo.GetVignetteInfo(vignetteGUID) end
 
+---[Documentation](https://wowpedia.fandom.com/wiki/API_C_VignetteInfo.GetVignettePosition)
 ---@param vignetteGUID string
 ---@param uiMapID number
 ---@return Vector2DMixin? vignettePosition
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_VignetteInfo.GetVignettePosition)
 function C_VignetteInfo.GetVignettePosition(vignetteGUID, uiMapID) end
 
----@return string[] vignetteGUIDs
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_VignetteInfo.GetVignettes)
+---@return string[] vignetteGUIDs
 function C_VignetteInfo.GetVignettes() end
 
 ---@class VignetteType

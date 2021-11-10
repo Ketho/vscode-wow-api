@@ -6,12 +6,12 @@ function C_ItemInteraction.ClearPendingItem() end
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_ItemInteraction.CloseUI)
 function C_ItemInteraction.CloseUI() end
 
----@return ItemInteractionFrameInfo? info
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_ItemInteraction.GetItemInteractionInfo)
+---@return ItemInteractionFrameInfo? info
 function C_ItemInteraction.GetItemInteractionInfo() end
 
----@return number spellId
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_ItemInteraction.GetItemInteractionSpellId)
+---@return number spellId
 function C_ItemInteraction.GetItemInteractionSpellId() end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_ItemInteraction.InitializeFrame)
@@ -26,9 +26,9 @@ function C_ItemInteraction.Reset() end
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_ItemInteraction.SetCorruptionReforgerItemTooltip)
 function C_ItemInteraction.SetCorruptionReforgerItemTooltip() end
 
+---[Documentation](https://wowpedia.fandom.com/wiki/API_C_ItemInteraction.SetPendingItem)
 ---@param item? ItemLocationMixin
 ---@return boolean success
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_ItemInteraction.SetPendingItem)
 function C_ItemInteraction.SetPendingItem(item) end
 
 ---@class ItemInteractionFrameInfo

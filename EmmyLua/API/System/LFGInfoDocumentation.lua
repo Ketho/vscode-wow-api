@@ -1,55 +1,55 @@
 C_LFGInfo = {}
 
+---[Documentation](https://wowpedia.fandom.com/wiki/API_C_LFGInfo.CanPlayerUseGroupFinder)
 ---@return boolean canUse
 ---@return string failureReason
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_LFGInfo.CanPlayerUseGroupFinder)
 function C_LFGInfo.CanPlayerUseGroupFinder() end
 
+---[Documentation](https://wowpedia.fandom.com/wiki/API_C_LFGInfo.CanPlayerUseLFD)
 ---@return boolean canUse
 ---@return string failureReason
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_LFGInfo.CanPlayerUseLFD)
 function C_LFGInfo.CanPlayerUseLFD() end
 
+---[Documentation](https://wowpedia.fandom.com/wiki/API_C_LFGInfo.CanPlayerUseLFR)
 ---@return boolean canUse
 ---@return string failureReason
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_LFGInfo.CanPlayerUseLFR)
 function C_LFGInfo.CanPlayerUseLFR() end
 
+---[Documentation](https://wowpedia.fandom.com/wiki/API_C_LFGInfo.CanPlayerUsePVP)
 ---@return boolean canUse
 ---@return string failureReason
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_LFGInfo.CanPlayerUsePVP)
 function C_LFGInfo.CanPlayerUsePVP() end
 
+---[Documentation](https://wowpedia.fandom.com/wiki/API_C_LFGInfo.CanPlayerUsePremadeGroup)
 ---@return boolean canUse
 ---@return string failureReason
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_LFGInfo.CanPlayerUsePremadeGroup)
 function C_LFGInfo.CanPlayerUsePremadeGroup() end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_LFGInfo.ConfirmLfgExpandSearch)
 function C_LFGInfo.ConfirmLfgExpandSearch() end
 
+---[Documentation](https://wowpedia.fandom.com/wiki/API_C_LFGInfo.GetAllEntriesForCategory)
 ---@param category number
 ---@return number[] lfgDungeonIDs
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_LFGInfo.GetAllEntriesForCategory)
 function C_LFGInfo.GetAllEntriesForCategory(category) end
 
+---[Documentation](https://wowpedia.fandom.com/wiki/API_C_LFGInfo.GetDungeonInfo)
 ---@param lfgDungeonID number
 ---@return LFGDungeonInfo dungeonInfo
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_LFGInfo.GetDungeonInfo)
 function C_LFGInfo.GetDungeonInfo(lfgDungeonID) end
 
----@return LFGLockInfo[] lockInfo
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_LFGInfo.GetLFDLockStates)
+---@return LFGLockInfo[] lockInfo
 function C_LFGInfo.GetLFDLockStates() end
 
+---[Documentation](https://wowpedia.fandom.com/wiki/API_C_LFGInfo.GetRoleCheckDifficultyDetails)
 ---@return number? maxLevel
 ---@return boolean isLevelReduced
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_LFGInfo.GetRoleCheckDifficultyDetails)
 function C_LFGInfo.GetRoleCheckDifficultyDetails() end
 
+---[Documentation](https://wowpedia.fandom.com/wiki/API_C_LFGInfo.HideNameFromUI)
 ---@param dungeonID number
 ---@return boolean shouldHide
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_LFGInfo.HideNameFromUI)
 function C_LFGInfo.HideNameFromUI(dungeonID) end
 
 ---@class LFGDungeonInfo

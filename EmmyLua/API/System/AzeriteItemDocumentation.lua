@@ -1,46 +1,46 @@
 C_AzeriteItem = {}
 
----@return ItemLocationMixin activeAzeriteItemLocation
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_AzeriteItem.FindActiveAzeriteItem)
+---@return ItemLocationMixin activeAzeriteItemLocation
 function C_AzeriteItem.FindActiveAzeriteItem() end
 
+---[Documentation](https://wowpedia.fandom.com/wiki/API_C_AzeriteItem.GetAzeriteItemXPInfo)
 ---@param azeriteItemLocation ItemLocationMixin
 ---@return number xp
 ---@return number totalLevelXP
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_AzeriteItem.GetAzeriteItemXPInfo)
 function C_AzeriteItem.GetAzeriteItemXPInfo(azeriteItemLocation) end
 
+---[Documentation](https://wowpedia.fandom.com/wiki/API_C_AzeriteItem.GetPowerLevel)
 ---@param azeriteItemLocation ItemLocationMixin
 ---@return number powerLevel
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_AzeriteItem.GetPowerLevel)
 function C_AzeriteItem.GetPowerLevel(azeriteItemLocation) end
 
+---[Documentation](https://wowpedia.fandom.com/wiki/API_C_AzeriteItem.GetUnlimitedPowerLevel)
 ---@param azeriteItemLocation ItemLocationMixin
 ---@return number powerLevel
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_AzeriteItem.GetUnlimitedPowerLevel)
 function C_AzeriteItem.GetUnlimitedPowerLevel(azeriteItemLocation) end
 
----@return boolean hasActiveAzeriteItem
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_AzeriteItem.HasActiveAzeriteItem)
+---@return boolean hasActiveAzeriteItem
 function C_AzeriteItem.HasActiveAzeriteItem() end
 
+---[Documentation](https://wowpedia.fandom.com/wiki/API_C_AzeriteItem.IsAzeriteItem)
 ---@param itemLocation ItemLocationMixin
 ---@return boolean isAzeriteItem
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_AzeriteItem.IsAzeriteItem)
 function C_AzeriteItem.IsAzeriteItem(itemLocation) end
 
----@return boolean isAtMax
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_AzeriteItem.IsAzeriteItemAtMaxLevel)
+---@return boolean isAtMax
 function C_AzeriteItem.IsAzeriteItemAtMaxLevel() end
 
+---[Documentation](https://wowpedia.fandom.com/wiki/API_C_AzeriteItem.IsAzeriteItemByID)
 ---@param itemInfo string
 ---@return boolean isAzeriteItem
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_AzeriteItem.IsAzeriteItemByID)
 function C_AzeriteItem.IsAzeriteItemByID(itemInfo) end
 
+---[Documentation](https://wowpedia.fandom.com/wiki/API_C_AzeriteItem.IsAzeriteItemEnabled)
 ---@param azeriteItemLocation ItemLocationMixin
 ---@return boolean isEnabled
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_AzeriteItem.IsAzeriteItemEnabled)
 function C_AzeriteItem.IsAzeriteItemEnabled(azeriteItemLocation) end
 
 ---@class UnlockedAzeriteEmpoweredItems

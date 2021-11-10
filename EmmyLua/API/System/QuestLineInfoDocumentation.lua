@@ -1,28 +1,28 @@
 C_QuestLine = {}
 
+---[Documentation](https://wowpedia.fandom.com/wiki/API_C_QuestLine.GetAvailableQuestLines)
 ---@param uiMapID number
 ---@return QuestLineInfo[] questLines
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_QuestLine.GetAvailableQuestLines)
 function C_QuestLine.GetAvailableQuestLines(uiMapID) end
 
+---[Documentation](https://wowpedia.fandom.com/wiki/API_C_QuestLine.GetQuestLineInfo)
 ---@param questID number
 ---@param uiMapID number
 ---@return QuestLineInfo? questLineInfo
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_QuestLine.GetQuestLineInfo)
 function C_QuestLine.GetQuestLineInfo(questID, uiMapID) end
 
+---[Documentation](https://wowpedia.fandom.com/wiki/API_C_QuestLine.GetQuestLineQuests)
 ---@param questLineID number
 ---@return number[] questIDs
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_QuestLine.GetQuestLineQuests)
 function C_QuestLine.GetQuestLineQuests(questLineID) end
 
+---[Documentation](https://wowpedia.fandom.com/wiki/API_C_QuestLine.IsComplete)
 ---@param questLineID number
 ---@return boolean isComplete
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_QuestLine.IsComplete)
 function C_QuestLine.IsComplete(questLineID) end
 
----@param uiMapID number
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_QuestLine.RequestQuestLinesForMap)
+---@param uiMapID number
 function C_QuestLine.RequestQuestLinesForMap(uiMapID) end
 
 ---@class QuestLineFloorLocation

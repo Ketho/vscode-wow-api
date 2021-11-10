@@ -1,38 +1,39 @@
 Unit = {}
 
----@return CorruptionEffectInfo[] corruptionEffects
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_GetNegativeCorruptionEffectInfo)
+---@return CorruptionEffectInfo[] corruptionEffects
 function GetNegativeCorruptionEffectInfo() end
 
+---[Documentation](https://wowpedia.fandom.com/wiki/API_GetUnitChargedPowerPoints)
 ---@param unit string
 ---@return number[] pointIndices
----[Documentation](https://wowpedia.fandom.com/wiki/API_GetUnitChargedPowerPoints)
 function GetUnitChargedPowerPoints(unit) end
 
+---[Documentation](https://wowpedia.fandom.com/wiki/API_GetUnitPowerBarInfo)
 ---@param unitToken string
 ---@return UnitPowerBarInfo info
----[Documentation](https://wowpedia.fandom.com/wiki/API_GetUnitPowerBarInfo)
 function GetUnitPowerBarInfo(unitToken) end
 
+---[Documentation](https://wowpedia.fandom.com/wiki/API_GetUnitPowerBarInfoByID)
 ---@param barID number
 ---@return UnitPowerBarInfo info
----[Documentation](https://wowpedia.fandom.com/wiki/API_GetUnitPowerBarInfoByID)
 function GetUnitPowerBarInfoByID(barID) end
 
+---[Documentation](https://wowpedia.fandom.com/wiki/API_GetUnitPowerBarStrings)
 ---@param unitToken string
 ---@return string? name
 ---@return string? tooltip
 ---@return string? cost
----[Documentation](https://wowpedia.fandom.com/wiki/API_GetUnitPowerBarStrings)
 function GetUnitPowerBarStrings(unitToken) end
 
+---[Documentation](https://wowpedia.fandom.com/wiki/API_GetUnitPowerBarStringsByID)
 ---@param barID number
 ---@return string? name
 ---@return string? tooltip
 ---@return string? cost
----[Documentation](https://wowpedia.fandom.com/wiki/API_GetUnitPowerBarStringsByID)
 function GetUnitPowerBarStringsByID(barID) end
 
+---[Documentation](https://wowpedia.fandom.com/wiki/API_GetUnitPowerBarTextureInfo)
 ---@param unitToken string
 ---@param textureIndex number
 ---@param timerIndex? number
@@ -41,9 +42,9 @@ function GetUnitPowerBarStringsByID(barID) end
 ---@return number colorG
 ---@return number colorB
 ---@return number colorA
----[Documentation](https://wowpedia.fandom.com/wiki/API_GetUnitPowerBarTextureInfo)
 function GetUnitPowerBarTextureInfo(unitToken, textureIndex, timerIndex) end
 
+---[Documentation](https://wowpedia.fandom.com/wiki/API_GetUnitPowerBarTextureInfoByID)
 ---@param barID number
 ---@param textureIndex number
 ---@return number texture
@@ -51,130 +52,129 @@ function GetUnitPowerBarTextureInfo(unitToken, textureIndex, timerIndex) end
 ---@return number colorG
 ---@return number colorB
 ---@return number colorA
----[Documentation](https://wowpedia.fandom.com/wiki/API_GetUnitPowerBarTextureInfoByID)
 function GetUnitPowerBarTextureInfoByID(barID, textureIndex) end
 
+---[Documentation](https://wowpedia.fandom.com/wiki/API_IsUnitModelReadyForUI)
 ---@param unitToken string
 ---@return boolean isReady
----[Documentation](https://wowpedia.fandom.com/wiki/API_IsUnitModelReadyForUI)
 function IsUnitModelReadyForUI(unitToken) end
 
----@return boolean vehicleHasComboPoints
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_PlayerVehicleHasComboPoints)
+---@return boolean vehicleHasComboPoints
 function PlayerVehicleHasComboPoints() end
 
+---[Documentation](https://wowpedia.fandom.com/wiki/API_SetPortraitTexture)
 ---@param textureObject table
 ---@param unitToken string
----[Documentation](https://wowpedia.fandom.com/wiki/API_SetPortraitTexture)
 function SetPortraitTexture(textureObject, unitToken) end
 
+---[Documentation](https://wowpedia.fandom.com/wiki/API_SetPortraitTextureFromCreatureDisplayID)
 ---@param textureObject table
 ---@param creatureDisplayID number
----[Documentation](https://wowpedia.fandom.com/wiki/API_SetPortraitTextureFromCreatureDisplayID)
 function SetPortraitTextureFromCreatureDisplayID(textureObject, creatureDisplayID) end
 
+---[Documentation](https://wowpedia.fandom.com/wiki/API_UnitAlliedRaceInfo)
 ---@param unit string
 ---@return boolean isAlliedRace
 ---@return boolean hasHeritageArmorUnlocked
----[Documentation](https://wowpedia.fandom.com/wiki/API_UnitAlliedRaceInfo)
 function UnitAlliedRaceInfo(unit) end
 
+---[Documentation](https://wowpedia.fandom.com/wiki/API_UnitChromieTimeID)
 ---@param unit string
 ---@return number ID
----[Documentation](https://wowpedia.fandom.com/wiki/API_UnitChromieTimeID)
 function UnitChromieTimeID(unit) end
 
+---[Documentation](https://wowpedia.fandom.com/wiki/API_UnitClass)
 ---@param unit string
 ---@return string className
 ---@return string classFilename
 ---@return number classID
----[Documentation](https://wowpedia.fandom.com/wiki/API_UnitClass)
 function UnitClass(unit) end
 
+---[Documentation](https://wowpedia.fandom.com/wiki/API_UnitClassBase)
 ---@param unit string
 ---@return string classFilename
 ---@return number classID
----[Documentation](https://wowpedia.fandom.com/wiki/API_UnitClassBase)
 function UnitClassBase(unit) end
 
+---[Documentation](https://wowpedia.fandom.com/wiki/API_UnitInPartyShard)
 ---@param unit string
 ---@return boolean inPartyShard
----[Documentation](https://wowpedia.fandom.com/wiki/API_UnitInPartyShard)
 function UnitInPartyShard(unit) end
 
+---[Documentation](https://wowpedia.fandom.com/wiki/API_UnitIsConnected)
 ---@param unit string
 ---@return boolean isConnected
----[Documentation](https://wowpedia.fandom.com/wiki/API_UnitIsConnected)
 function UnitIsConnected(unit) end
 
+---[Documentation](https://wowpedia.fandom.com/wiki/API_UnitIsOwnerOrControllerOfUnit)
 ---@param controllingUnit string
 ---@param controlledUnit string
 ---@return boolean unitIsOwnerOrControllerOfUnit
----[Documentation](https://wowpedia.fandom.com/wiki/API_UnitIsOwnerOrControllerOfUnit)
 function UnitIsOwnerOrControllerOfUnit(controllingUnit, controlledUnit) end
 
+---[Documentation](https://wowpedia.fandom.com/wiki/API_UnitNameplateShowsWidgetsOnly)
 ---@param unit string
 ---@return boolean nameplateShowsWidgetsOnly
----[Documentation](https://wowpedia.fandom.com/wiki/API_UnitNameplateShowsWidgetsOnly)
 function UnitNameplateShowsWidgetsOnly(unit) end
 
+---[Documentation](https://wowpedia.fandom.com/wiki/API_UnitPhaseReason)
 ---@param unit string
 ---@return PhaseReason? reason
----[Documentation](https://wowpedia.fandom.com/wiki/API_UnitPhaseReason)
 function UnitPhaseReason(unit) end
 
+---[Documentation](https://wowpedia.fandom.com/wiki/API_UnitPower)
 ---@param unitToken string
 ---@param powerType PowerType
 ---@param unmodified boolean
 ---@return number power
----[Documentation](https://wowpedia.fandom.com/wiki/API_UnitPower)
 function UnitPower(unitToken, powerType, unmodified) end
 
+---[Documentation](https://wowpedia.fandom.com/wiki/API_UnitPowerBarID)
 ---@param unitToken string
 ---@return number barID
----[Documentation](https://wowpedia.fandom.com/wiki/API_UnitPowerBarID)
 function UnitPowerBarID(unitToken) end
 
+---[Documentation](https://wowpedia.fandom.com/wiki/API_UnitPowerDisplayMod)
 ---@param powerType PowerType
 ---@return number displayMod
----[Documentation](https://wowpedia.fandom.com/wiki/API_UnitPowerDisplayMod)
 function UnitPowerDisplayMod(powerType) end
 
+---[Documentation](https://wowpedia.fandom.com/wiki/API_UnitPowerMax)
 ---@param unitToken string
 ---@param powerType PowerType
 ---@param unmodified boolean
 ---@return number maxPower
----[Documentation](https://wowpedia.fandom.com/wiki/API_UnitPowerMax)
 function UnitPowerMax(unitToken, powerType, unmodified) end
 
+---[Documentation](https://wowpedia.fandom.com/wiki/API_UnitPvpClassification)
 ---@param unit string
 ---@return PvPUnitClassification? classification
----[Documentation](https://wowpedia.fandom.com/wiki/API_UnitPvpClassification)
 function UnitPvpClassification(unit) end
 
+---[Documentation](https://wowpedia.fandom.com/wiki/API_UnitQuestTrivialLevelRange)
 ---@param unit string
 ---@return number levelRange
----[Documentation](https://wowpedia.fandom.com/wiki/API_UnitQuestTrivialLevelRange)
 function UnitQuestTrivialLevelRange(unit) end
 
+---[Documentation](https://wowpedia.fandom.com/wiki/API_UnitQuestTrivialLevelRangeScaling)
 ---@param unit string
 ---@return number levelRange
----[Documentation](https://wowpedia.fandom.com/wiki/API_UnitQuestTrivialLevelRangeScaling)
 function UnitQuestTrivialLevelRangeScaling(unit) end
 
+---[Documentation](https://wowpedia.fandom.com/wiki/API_UnitSex)
 ---@param unit string
 ---@return number? sex
----[Documentation](https://wowpedia.fandom.com/wiki/API_UnitSex)
 function UnitSex(unit) end
 
+---[Documentation](https://wowpedia.fandom.com/wiki/API_UnitTreatAsPlayerForDisplay)
 ---@param unit string
 ---@return boolean treatAsPlayer
----[Documentation](https://wowpedia.fandom.com/wiki/API_UnitTreatAsPlayerForDisplay)
 function UnitTreatAsPlayerForDisplay(unit) end
 
+---[Documentation](https://wowpedia.fandom.com/wiki/API_UnitWidgetSet)
 ---@param unit string
 ---@return number uiWidgetSet
----[Documentation](https://wowpedia.fandom.com/wiki/API_UnitWidgetSet)
 function UnitWidgetSet(unit) end
 
 ---@class PhaseReason

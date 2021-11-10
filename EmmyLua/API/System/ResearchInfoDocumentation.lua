@@ -1,8 +1,8 @@
 C_ResearchInfo = {}
 
+---[Documentation](https://wowpedia.fandom.com/wiki/API_C_ResearchInfo.GetDigSitesForMap)
 ---@param uiMapID number
 ---@return DigSiteMapInfo[] digSites
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_ResearchInfo.GetDigSitesForMap)
 function C_ResearchInfo.GetDigSitesForMap(uiMapID) end
 
 ---@class DigSiteMapInfo

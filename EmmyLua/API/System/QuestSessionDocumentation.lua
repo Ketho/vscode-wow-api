@@ -1,43 +1,43 @@
 C_QuestSession = {}
 
----@return boolean allowed
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_QuestSession.CanStart)
+---@return boolean allowed
 function C_QuestSession.CanStart() end
 
----@return boolean allowed
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_QuestSession.CanStop)
+---@return boolean allowed
 function C_QuestSession.CanStop() end
 
----@return boolean exists
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_QuestSession.Exists)
+---@return boolean exists
 function C_QuestSession.Exists() end
 
----@return QuestSessionCommand command
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_QuestSession.GetAvailableSessionCommand)
+---@return QuestSessionCommand command
 function C_QuestSession.GetAvailableSessionCommand() end
 
----@return QuestSessionCommand command
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_QuestSession.GetPendingCommand)
+---@return QuestSessionCommand command
 function C_QuestSession.GetPendingCommand() end
 
----@return number proposedMaxLevel
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_QuestSession.GetProposedMaxLevelForSession)
+---@return number proposedMaxLevel
 function C_QuestSession.GetProposedMaxLevelForSession() end
 
----@return QuestSessionPlayerDetails? details
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_QuestSession.GetSessionBeginDetails)
+---@return QuestSessionPlayerDetails? details
 function C_QuestSession.GetSessionBeginDetails() end
 
----@return number? questID
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_QuestSession.GetSuperTrackedQuest)
+---@return number? questID
 function C_QuestSession.GetSuperTrackedQuest() end
 
----@return boolean hasJoined
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_QuestSession.HasJoined)
+---@return boolean hasJoined
 function C_QuestSession.HasJoined() end
 
----@return boolean hasPendingCommand
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_QuestSession.HasPendingCommand)
+---@return boolean hasPendingCommand
 function C_QuestSession.HasPendingCommand() end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_QuestSession.RequestSessionStart)
@@ -46,13 +46,13 @@ function C_QuestSession.RequestSessionStart() end
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_QuestSession.RequestSessionStop)
 function C_QuestSession.RequestSessionStop() end
 
----@param beginSession boolean
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_QuestSession.SendSessionBeginResponse)
+---@param beginSession boolean
 function C_QuestSession.SendSessionBeginResponse(beginSession) end
 
+---[Documentation](https://wowpedia.fandom.com/wiki/API_C_QuestSession.SetQuestIsSuperTracked)
 ---@param questID number
 ---@param superTrack boolean
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_QuestSession.SetQuestIsSuperTracked)
 function C_QuestSession.SetQuestIsSuperTracked(questID, superTrack) end
 
 ---@class QuestSessionPlayerDetails

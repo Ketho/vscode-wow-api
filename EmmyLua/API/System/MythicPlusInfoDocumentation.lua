@@ -1,66 +1,67 @@
 C_MythicPlus = {}
 
----@return MythicPlusKeystoneAffix[] affixIDs
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_MythicPlus.GetCurrentAffixes)
+---@return MythicPlusKeystoneAffix[] affixIDs
 function C_MythicPlus.GetCurrentAffixes() end
 
----@return number seasonID
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_MythicPlus.GetCurrentSeason)
+---@return number seasonID
 function C_MythicPlus.GetCurrentSeason() end
 
+---[Documentation](https://wowpedia.fandom.com/wiki/API_C_MythicPlus.GetCurrentSeasonValues)
 ---@return number displaySeasonID
 ---@return number milestoneSeasonID
 ---@return number rewardSeasonID
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_MythicPlus.GetCurrentSeasonValues)
 function C_MythicPlus.GetCurrentSeasonValues() end
 
+---[Documentation](https://wowpedia.fandom.com/wiki/API_C_MythicPlus.GetLastWeeklyBestInformation)
 ---@return number challengeMapId
 ---@return number level
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_MythicPlus.GetLastWeeklyBestInformation)
 function C_MythicPlus.GetLastWeeklyBestInformation() end
 
----@return number challengeMapID
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_MythicPlus.GetOwnedKeystoneChallengeMapID)
+---@return number challengeMapID
 function C_MythicPlus.GetOwnedKeystoneChallengeMapID() end
 
----@return number keyStoneLevel
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_MythicPlus.GetOwnedKeystoneLevel)
+---@return number keyStoneLevel
 function C_MythicPlus.GetOwnedKeystoneLevel() end
 
----@return number mapID
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_MythicPlus.GetOwnedKeystoneMapID)
+---@return number mapID
 function C_MythicPlus.GetOwnedKeystoneMapID() end
 
+---[Documentation](https://wowpedia.fandom.com/wiki/API_C_MythicPlus.GetRewardLevelForDifficultyLevel)
 ---@param difficultyLevel number
 ---@return number weeklyRewardLevel
 ---@return number endOfRunRewardLevel
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_MythicPlus.GetRewardLevelForDifficultyLevel)
 function C_MythicPlus.GetRewardLevelForDifficultyLevel(difficultyLevel) end
 
+---[Documentation](https://wowpedia.fandom.com/wiki/API_C_MythicPlus.GetRewardLevelFromKeystoneLevel)
 ---@param keystoneLevel number
 ---@return number? rewardLevel
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_MythicPlus.GetRewardLevelFromKeystoneLevel)
 function C_MythicPlus.GetRewardLevelFromKeystoneLevel(keystoneLevel) end
 
+---[Documentation](https://wowpedia.fandom.com/wiki/API_C_MythicPlus.GetRunHistory)
 ---@param includePreviousWeeks boolean
 ---@param includeIncompleteRuns boolean
 ---@return MythicPlusRunInfo[] runs
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_MythicPlus.GetRunHistory)
 function C_MythicPlus.GetRunHistory(includePreviousWeeks, includeIncompleteRuns) end
 
+---Gets the active players best runs by the seasonal tracked affixes as well as their overall score for the current season.
+---[Documentation](https://wowpedia.fandom.com/wiki/API_C_MythicPlus.GetSeasonBestAffixScoreInfoForMap)
 ---@param mapChallengeModeID number
 ---@return MythicPlusAffixScoreInfo[] affixScores
 ---@return number bestOverAllScore
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_MythicPlus.GetSeasonBestAffixScoreInfoForMap)
----Gets the active players best runs by the seasonal tracked affixes as well as their overall score for the current season.
 function C_MythicPlus.GetSeasonBestAffixScoreInfoForMap(mapChallengeModeID) end
 
+---[Documentation](https://wowpedia.fandom.com/wiki/API_C_MythicPlus.GetSeasonBestForMap)
 ---@param mapChallengeModeID number
 ---@return MapSeasonBestInfo? intimeInfo
 ---@return MapSeasonBestInfo? overtimeInfo
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_MythicPlus.GetSeasonBestForMap)
 function C_MythicPlus.GetSeasonBestForMap(mapChallengeModeID) end
 
+---[Documentation](https://wowpedia.fandom.com/wiki/API_C_MythicPlus.GetWeeklyBestForMap)
 ---@param mapChallengeModeID number
 ---@return number durationSec
 ---@return number level
@@ -68,22 +69,21 @@ function C_MythicPlus.GetSeasonBestForMap(mapChallengeModeID) end
 ---@return number[] affixIDs
 ---@return MythicPlusMember[] members
 ---@return number dungeonScore
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_MythicPlus.GetWeeklyBestForMap)
 function C_MythicPlus.GetWeeklyBestForMap(mapChallengeModeID) end
 
+---[Documentation](https://wowpedia.fandom.com/wiki/API_C_MythicPlus.GetWeeklyChestRewardLevel)
 ---@return number currentWeekBestLevel
 ---@return number weeklyRewardLevel
 ---@return number nextDifficultyWeeklyRewardLevel
 ---@return number nextBestLevel
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_MythicPlus.GetWeeklyChestRewardLevel)
 function C_MythicPlus.GetWeeklyChestRewardLevel() end
 
----@return boolean isMythicPlusActive
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_MythicPlus.IsMythicPlusActive)
+---@return boolean isMythicPlusActive
 function C_MythicPlus.IsMythicPlusActive() end
 
----@return boolean weeklyRewardAvailable
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_MythicPlus.IsWeeklyRewardAvailable)
+---@return boolean weeklyRewardAvailable
 function C_MythicPlus.IsWeeklyRewardAvailable() end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_MythicPlus.RequestCurrentAffixes)

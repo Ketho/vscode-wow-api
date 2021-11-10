@@ -3,93 +3,93 @@ C_ContributionCollector = {}
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_ContributionCollector.Close)
 function C_ContributionCollector.Close() end
 
----@param contributionID number
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_ContributionCollector.Contribute)
+---@param contributionID number
 function C_ContributionCollector.Contribute(contributionID) end
 
----@return number contributionID
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_ContributionCollector.GetActive)
+---@return number contributionID
 function C_ContributionCollector.GetActive() end
 
+---[Documentation](https://wowpedia.fandom.com/wiki/API_C_ContributionCollector.GetAtlases)
 ---@param contributionID number
 ---@return string[] atlasName
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_ContributionCollector.GetAtlases)
 function C_ContributionCollector.GetAtlases(contributionID) end
 
+---[Documentation](https://wowpedia.fandom.com/wiki/API_C_ContributionCollector.GetBuffs)
 ---@param contributionID number
 ---@return number spellID
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_ContributionCollector.GetBuffs)
 function C_ContributionCollector.GetBuffs(contributionID) end
 
+---[Documentation](https://wowpedia.fandom.com/wiki/API_C_ContributionCollector.GetContributionAppearance)
 ---@param contributionID number
 ---@param contributionState ContributionState
 ---@return ContributionAppearance? appearance
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_ContributionCollector.GetContributionAppearance)
 function C_ContributionCollector.GetContributionAppearance(contributionID, contributionState) end
 
+---[Documentation](https://wowpedia.fandom.com/wiki/API_C_ContributionCollector.GetContributionCollectorsForMap)
 ---@param uiMapID number
 ---@return ContributionMapInfo[] contributionCollectors
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_ContributionCollector.GetContributionCollectorsForMap)
 function C_ContributionCollector.GetContributionCollectorsForMap(uiMapID) end
 
+---[Documentation](https://wowpedia.fandom.com/wiki/API_C_ContributionCollector.GetContributionResult)
 ---@param contributionID number
 ---@return ContributionResult result
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_ContributionCollector.GetContributionResult)
 function C_ContributionCollector.GetContributionResult(contributionID) end
 
+---[Documentation](https://wowpedia.fandom.com/wiki/API_C_ContributionCollector.GetDescription)
 ---@param contributionID number
 ---@return string description
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_ContributionCollector.GetDescription)
 function C_ContributionCollector.GetDescription(contributionID) end
 
+---[Documentation](https://wowpedia.fandom.com/wiki/API_C_ContributionCollector.GetManagedContributionsForCreatureID)
 ---@param creatureID number
 ---@return number contributionID
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_ContributionCollector.GetManagedContributionsForCreatureID)
 function C_ContributionCollector.GetManagedContributionsForCreatureID(creatureID) end
 
+---[Documentation](https://wowpedia.fandom.com/wiki/API_C_ContributionCollector.GetName)
 ---@param contributionID number
 ---@return string name
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_ContributionCollector.GetName)
 function C_ContributionCollector.GetName(contributionID) end
 
+---[Documentation](https://wowpedia.fandom.com/wiki/API_C_ContributionCollector.GetOrderIndex)
 ---@param contributionID number
 ---@return number orderIndex
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_ContributionCollector.GetOrderIndex)
 function C_ContributionCollector.GetOrderIndex(contributionID) end
 
+---[Documentation](https://wowpedia.fandom.com/wiki/API_C_ContributionCollector.GetRequiredContributionCurrency)
 ---@param contributionID number
 ---@return number currencyID
 ---@return number currencyAmount
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_ContributionCollector.GetRequiredContributionCurrency)
 function C_ContributionCollector.GetRequiredContributionCurrency(contributionID) end
 
+---[Documentation](https://wowpedia.fandom.com/wiki/API_C_ContributionCollector.GetRequiredContributionItem)
 ---@param contributionID number
 ---@return number itemID
 ---@return number itemCount
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_ContributionCollector.GetRequiredContributionItem)
 function C_ContributionCollector.GetRequiredContributionItem(contributionID) end
 
+---[Documentation](https://wowpedia.fandom.com/wiki/API_C_ContributionCollector.GetRewardQuestID)
 ---@param contributionID number
 ---@return number questID
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_ContributionCollector.GetRewardQuestID)
 function C_ContributionCollector.GetRewardQuestID(contributionID) end
 
+---[Documentation](https://wowpedia.fandom.com/wiki/API_C_ContributionCollector.GetState)
 ---@param contributionID number
 ---@return ContributionState contributionState
 ---@return number contributionPercentageComplete
 ---@return number? timeOfNextStateChange
 ---@return number startTime
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_ContributionCollector.GetState)
 function C_ContributionCollector.GetState(contributionID) end
 
+---[Documentation](https://wowpedia.fandom.com/wiki/API_C_ContributionCollector.HasPendingContribution)
 ---@param contributionID number
 ---@return boolean hasPending
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_ContributionCollector.HasPendingContribution)
 function C_ContributionCollector.HasPendingContribution(contributionID) end
 
+---[Documentation](https://wowpedia.fandom.com/wiki/API_C_ContributionCollector.IsAwaitingRewardQuestData)
 ---@param contributionID number
 ---@return boolean awaitingData
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_ContributionCollector.IsAwaitingRewardQuestData)
 function C_ContributionCollector.IsAwaitingRewardQuestData(contributionID) end
 
 ---@class ContributionAppearanceFlags

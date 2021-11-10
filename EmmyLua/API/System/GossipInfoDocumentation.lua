@@ -3,68 +3,68 @@ C_GossipInfo = {}
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_GossipInfo.CloseGossip)
 function C_GossipInfo.CloseGossip() end
 
----@return boolean forceGossip
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_GossipInfo.ForceGossip)
+---@return boolean forceGossip
 function C_GossipInfo.ForceGossip() end
 
----@return GossipQuestUIInfo[] info
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_GossipInfo.GetActiveQuests)
+---@return GossipQuestUIInfo[] info
 function C_GossipInfo.GetActiveQuests() end
 
----@return GossipQuestUIInfo[] info
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_GossipInfo.GetAvailableQuests)
+---@return GossipQuestUIInfo[] info
 function C_GossipInfo.GetAvailableQuests() end
 
----@return string? description
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_GossipInfo.GetCustomGossipDescriptionString)
+---@return string? description
 function C_GossipInfo.GetCustomGossipDescriptionString() end
 
----@return number numQuests
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_GossipInfo.GetNumActiveQuests)
+---@return number numQuests
 function C_GossipInfo.GetNumActiveQuests() end
 
----@return number numQuests
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_GossipInfo.GetNumAvailableQuests)
+---@return number numQuests
 function C_GossipInfo.GetNumAvailableQuests() end
 
----@return number numOptions
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_GossipInfo.GetNumOptions)
+---@return number numOptions
 function C_GossipInfo.GetNumOptions() end
 
----@return GossipOptionUIInfo[] info
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_GossipInfo.GetOptions)
+---@return GossipOptionUIInfo[] info
 function C_GossipInfo.GetOptions() end
 
+---[Documentation](https://wowpedia.fandom.com/wiki/API_C_GossipInfo.GetPoiForUiMapID)
 ---@param uiMapID number
 ---@return number? gossipPoiID
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_GossipInfo.GetPoiForUiMapID)
 function C_GossipInfo.GetPoiForUiMapID(uiMapID) end
 
+---[Documentation](https://wowpedia.fandom.com/wiki/API_C_GossipInfo.GetPoiInfo)
 ---@param uiMapID number
 ---@param gossipPoiID number
 ---@return GossipPoiInfo? gossipPoiInfo
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_GossipInfo.GetPoiInfo)
 function C_GossipInfo.GetPoiInfo(uiMapID, gossipPoiID) end
 
----@return string gossipText
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_GossipInfo.GetText)
+---@return string gossipText
 function C_GossipInfo.GetText() end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_GossipInfo.RefreshOptions)
 function C_GossipInfo.RefreshOptions() end
 
----@param index number
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_GossipInfo.SelectActiveQuest)
+---@param index number
 function C_GossipInfo.SelectActiveQuest(index) end
 
----@param index number
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_GossipInfo.SelectAvailableQuest)
+---@param index number
 function C_GossipInfo.SelectAvailableQuest(index) end
 
+---[Documentation](https://wowpedia.fandom.com/wiki/API_C_GossipInfo.SelectOption)
 ---@param index number
 ---@param text? string
 ---@param confirmed? boolean
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_GossipInfo.SelectOption)
 function C_GossipInfo.SelectOption(index, text, confirmed) end
 
 ---@class GossipOptionRewardType

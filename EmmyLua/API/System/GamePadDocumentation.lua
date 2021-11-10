@@ -3,77 +3,77 @@ C_GamePad = {}
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_GamePad.ApplyConfigs)
 function C_GamePad.ApplyConfigs() end
 
+---[Documentation](https://wowpedia.fandom.com/wiki/API_C_GamePad.AxisIndexToConfigName)
 ---@param axisIndex number
 ---@return string? configName
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_GamePad.AxisIndexToConfigName)
 function C_GamePad.AxisIndexToConfigName(axisIndex) end
 
+---[Documentation](https://wowpedia.fandom.com/wiki/API_C_GamePad.ButtonBindingToIndex)
 ---@param bindingName string
 ---@return number? buttonIndex
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_GamePad.ButtonBindingToIndex)
 function C_GamePad.ButtonBindingToIndex(bindingName) end
 
+---[Documentation](https://wowpedia.fandom.com/wiki/API_C_GamePad.ButtonIndexToBinding)
 ---@param buttonIndex number
 ---@return string? bindingName
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_GamePad.ButtonIndexToBinding)
 function C_GamePad.ButtonIndexToBinding(buttonIndex) end
 
+---[Documentation](https://wowpedia.fandom.com/wiki/API_C_GamePad.ButtonIndexToConfigName)
 ---@param buttonIndex number
 ---@return string? configName
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_GamePad.ButtonIndexToConfigName)
 function C_GamePad.ButtonIndexToConfigName(buttonIndex) end
 
----@param configID GamePadConfigID
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_GamePad.DeleteConfig)
+---@param configID GamePadConfigID
 function C_GamePad.DeleteConfig(configID) end
 
----@return number deviceID
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_GamePad.GetActiveDeviceID)
+---@return number deviceID
 function C_GamePad.GetActiveDeviceID() end
 
----@return GamePadConfigID[] configIDs
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_GamePad.GetAllConfigIDs)
+---@return GamePadConfigID[] configIDs
 function C_GamePad.GetAllConfigIDs() end
 
----@return number[] deviceIDs
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_GamePad.GetAllDeviceIDs)
+---@return number[] deviceIDs
 function C_GamePad.GetAllDeviceIDs() end
 
----@return number deviceID
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_GamePad.GetCombinedDeviceID)
+---@return number deviceID
 function C_GamePad.GetCombinedDeviceID() end
 
+---[Documentation](https://wowpedia.fandom.com/wiki/API_C_GamePad.GetConfig)
 ---@param configID GamePadConfigID
 ---@return GamePadConfig? config
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_GamePad.GetConfig)
 function C_GamePad.GetConfig(configID) end
 
+---[Documentation](https://wowpedia.fandom.com/wiki/API_C_GamePad.GetDeviceMappedState)
 ---@param deviceID? number
 ---@return GamePadMappedState? state
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_GamePad.GetDeviceMappedState)
 function C_GamePad.GetDeviceMappedState(deviceID) end
 
+---[Documentation](https://wowpedia.fandom.com/wiki/API_C_GamePad.GetDeviceRawState)
 ---@param deviceID number
 ---@return GamePadRawState? rawState
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_GamePad.GetDeviceRawState)
 function C_GamePad.GetDeviceRawState(deviceID) end
 
----@return boolean enabled
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_GamePad.IsEnabled)
+---@return boolean enabled
 function C_GamePad.IsEnabled() end
 
----@param config GamePadConfig
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_GamePad.SetConfig)
+---@param config GamePadConfig
 function C_GamePad.SetConfig(config) end
 
+---[Documentation](https://wowpedia.fandom.com/wiki/API_C_GamePad.SetVibration)
 ---@param vibrationType string
 ---@param intensity number
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_GamePad.SetVibration)
 function C_GamePad.SetVibration(vibrationType, intensity) end
 
+---[Documentation](https://wowpedia.fandom.com/wiki/API_C_GamePad.StickIndexToConfigName)
 ---@param stickIndex number
 ---@return string? configName
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_GamePad.StickIndexToConfigName)
 function C_GamePad.StickIndexToConfigName(stickIndex) end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_GamePad.StopVibration)

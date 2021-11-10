@@ -1,15 +1,15 @@
 C_PlayerChoice = {}
 
----@return PlayerChoiceInfo choiceInfo
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_PlayerChoice.GetCurrentPlayerChoiceInfo)
+---@return PlayerChoiceInfo choiceInfo
 function C_PlayerChoice.GetCurrentPlayerChoiceInfo() end
 
----@return number numRerolls
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_PlayerChoice.GetNumRerolls)
+---@return number numRerolls
 function C_PlayerChoice.GetNumRerolls() end
 
----@return boolean isWaitingForResponse
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_PlayerChoice.IsWaitingForPlayerChoiceResponse)
+---@return boolean isWaitingForResponse
 function C_PlayerChoice.IsWaitingForPlayerChoiceResponse() end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_PlayerChoice.OnUIClosed)
@@ -18,8 +18,8 @@ function C_PlayerChoice.OnUIClosed() end
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_PlayerChoice.RequestRerollPlayerChoice)
 function C_PlayerChoice.RequestRerollPlayerChoice() end
 
----@param responseID number
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_PlayerChoice.SendPlayerChoiceResponse)
+---@param responseID number
 function C_PlayerChoice.SendPlayerChoiceResponse(responseID) end
 
 ---@class PlayerChoiceRarity

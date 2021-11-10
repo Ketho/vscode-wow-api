@@ -1,8 +1,8 @@
 C_Texture = {}
 
+---[Documentation](https://wowpedia.fandom.com/wiki/API_C_Texture.GetAtlasInfo)
 ---@param atlas string
 ---@return AtlasInfo info
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_Texture.GetAtlasInfo)
 function C_Texture.GetAtlasInfo(atlas) end
 
 ---@class AtlasInfo

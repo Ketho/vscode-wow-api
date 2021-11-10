@@ -1,18 +1,18 @@
 C_CreatureInfo = {}
 
+---[Documentation](https://wowpedia.fandom.com/wiki/API_C_CreatureInfo.GetClassInfo)
 ---@param classID number
 ---@return ClassInfo? classInfo
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_CreatureInfo.GetClassInfo)
 function C_CreatureInfo.GetClassInfo(classID) end
 
+---[Documentation](https://wowpedia.fandom.com/wiki/API_C_CreatureInfo.GetFactionInfo)
 ---@param raceID number
 ---@return FactionInfo? factionInfo
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_CreatureInfo.GetFactionInfo)
 function C_CreatureInfo.GetFactionInfo(raceID) end
 
+---[Documentation](https://wowpedia.fandom.com/wiki/API_C_CreatureInfo.GetRaceInfo)
 ---@param raceID number
 ---@return RaceInfo? raceInfo
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_CreatureInfo.GetRaceInfo)
 function C_CreatureInfo.GetRaceInfo(raceID) end
 
 ---@class ClassInfo

@@ -1,28 +1,28 @@
 C_PetBattles = {}
 
+---[Documentation](https://wowpedia.fandom.com/wiki/API_C_PetBattles.GetBreedQuality)
 ---@param petOwner number
 ---@param slot number
 ---@return number quality
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_PetBattles.GetBreedQuality)
 function C_PetBattles.GetBreedQuality(petOwner, slot) end
 
+---[Documentation](https://wowpedia.fandom.com/wiki/API_C_PetBattles.GetIcon)
 ---@param petOwner number
 ---@param slot number
 ---@return number iconFileID
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_PetBattles.GetIcon)
 function C_PetBattles.GetIcon(petOwner, slot) end
 
+---[Documentation](https://wowpedia.fandom.com/wiki/API_C_PetBattles.GetName)
 ---@param petOwner number
 ---@param slot number
 ---@return string customName
 ---@return string speciesName
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_PetBattles.GetName)
 function C_PetBattles.GetName(petOwner, slot) end
 
----@return boolean isPlayerNPC
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_PetBattles.IsPlayerNPC)
+---@return boolean isPlayerNPC
 function C_PetBattles.IsPlayerNPC() end
 
----@return boolean isWildBattle
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_PetBattles.IsWildBattle)
+---@return boolean isWildBattle
 function C_PetBattles.IsWildBattle() end
