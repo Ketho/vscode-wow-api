@@ -30,11 +30,6 @@ export const data: CVarInterface = {
 		default: "0",
 		category: 5,
 	},
-	aiprocessdebugger: {
-		name: "AIProcessDebugger",
-		default: "0",
-		category: 5,
-	},
 	actionbuttonusekeydown: {
 		name: "ActionButtonUseKeyDown",
 		default: "1",
@@ -80,6 +75,20 @@ export const data: CVarInterface = {
 		category: 1,
 		help: "Brightness adjustment. Range: [0 - 100]",
 	},
+	camerafollowgamepadadjustdelay: {
+		name: "CameraFollowGamepadAdjustDelay",
+		default: "1.0",
+		category: 5,
+		scope: "Character",
+		help: "Delay before follow resuming after manually adjusting the camera with Gamepad input",
+	},
+	camerafollowgamepadadjusteasein: {
+		name: "CameraFollowGamepadAdjustEaseIn",
+		default: "1.0",
+		category: 5,
+		scope: "Character",
+		help: "Ease-in time for follow resuming after manually adjusting the camera with Gamepad input",
+	},
 	camerafollowonstick: {
 		name: "CameraFollowOnStick",
 		default: "0",
@@ -113,7 +122,7 @@ export const data: CVarInterface = {
 		default: "45",
 		category: 5,
 		scope: "Character",
-		help: "Angle at which character will snap to camera's facing",
+		help: "Angle beyond which character will snap to camera's facing when moving",
 	},
 	camerafollowyawspeed: {
 		name: "CameraFollowYawSpeed",
@@ -249,6 +258,18 @@ export const data: CVarInterface = {
 		default: "1",
 		category: 1,
 	},
+	dynamicrenderscale: {
+		name: "DynamicRenderScale",
+		default: "0",
+		category: 1,
+		help: "Lowers render scale if GPU bound to hit Target FPS. Note this feature is in BETA. Known issues: May cause hitching. May behave poorly with vsync on.",
+	},
+	dynamicrenderscalemin: {
+		name: "DynamicRenderScaleMin",
+		default: "0.333333",
+		category: 1,
+		help: "Lowest render scale DynamicRenderScale can use",
+	},
 	ejdungeondifficulty: {
 		name: "EJDungeonDifficulty",
 		default: "0",
@@ -328,17 +349,41 @@ export const data: CVarInterface = {
 		category: 1,
 		help: "Force default resolution to the maximum supported size rather than the auto-detected size",
 	},
+	framebuffercacheforcenoheaps: {
+		name: "FrameBufferCacheForceNoHeaps",
+		default: "0",
+		category: 1,
+		help: "Disable use of texture heaps and force the fallback path",
+	},
 	gamepadabbreviatedbindingreverse: {
 		name: "GamePadAbbreviatedBindingReverse",
 		default: "1",
 		category: 5,
 		help: "Display main binding button first so it's visible even if truncated on action bar",
 	},
+	gamepadanalogmovement: {
+		name: "GamePadAnalogMovement",
+		default: "1",
+		category: 5,
+		help: "Enable analog movement in any direction, rather than just the 8 cardinal directions",
+	},
+	gamepadcameralookmaxpitch: {
+		name: "GamePadCameraLookMaxPitch",
+		default: "0",
+		category: 5,
+		help: "Max pitch 'Look' stick can adjust camera angle",
+	},
+	gamepadcameralookmaxyaw: {
+		name: "GamePadCameraLookMaxYaw",
+		default: "0",
+		category: 5,
+		help: "Max yaw 'Look' stick can adjust camera angle",
+	},
 	gamepadcamerapitchspeed: {
 		name: "GamePadCameraPitchSpeed",
 		default: "1",
 		category: 5,
-		help: "Pitch speed of GameUp camera moving up/down",
+		help: "Pitch speed of GamePad camera moving up/down",
 	},
 	gamepadcamerayawspeed: {
 		name: "GamePadCameraYawSpeed",
@@ -376,6 +421,12 @@ export const data: CVarInterface = {
 		category: 5,
 		help: "When using GamePad, center the cursor",
 	},
+	gamepadcursorfortargeting: {
+		name: "GamePadCursorForTargeting",
+		default: "1",
+		category: 5,
+		help: "Enable GamePad controlled cursor for spell targeting",
+	},
 	gamepadcursorleftclick: {
 		name: "GamePadCursorLeftClick",
 		default: "PADRTRIGGER",
@@ -387,6 +438,12 @@ export const data: CVarInterface = {
 		default: "1",
 		category: 5,
 		help: "Enable GamePad cursor control on login and character screens",
+	},
+	gamepadcursorpushcamera: {
+		name: "GamePadCursorPushCamera",
+		default: "1",
+		category: 5,
+		help: "Rate for GamePad controlled cursor to push/turn camera when at edge of window",
 	},
 	gamepadcursorrightclick: {
 		name: "GamePadCursorRightClick",
@@ -442,29 +499,23 @@ export const data: CVarInterface = {
 		category: 5,
 		help: "Whether GamePad input should be enabled",
 	},
-	gamepadfacemovementthreshold: {
-		name: "GamePadFaceMovementThreshold",
-		default: "180",
-		category: 5,
-		help: "Angle threshold for facing movement direction. 0 = always, 180 = never (115 allows using strafe with quick turn around)",
-	},
-	gamepadforcexinput: {
-		name: "GamePadForceXInput",
+	gamepadfacemovementmaxangle: {
+		name: "GamePadFaceMovementMaxAngle",
 		default: "0",
 		category: 5,
-		help: "Force game to use XInput, rather than a newer, more advanced api",
+		help: "Max movement to camera angle to face movement direction instead of camera direction. 0 = always, 180 = never (115 allows using strafe with quick turn around)",
+	},
+	gamepadfacemovementmaxanglecombat: {
+		name: "GamePadFaceMovementMaxAngleCombat",
+		default: "180",
+		category: 5,
+		help: "Max movement to camera angle to face movement direction instead of camera direction, in combat. 0 = always, 180 = never (115 allows using strafe with quick turn around)",
 	},
 	gamepadsingleactiveid: {
 		name: "GamePadSingleActiveID",
 		default: "0",
 		category: 5,
 		help: "ID of single GamePad device to use. 0 = Use all devices' combined input",
-	},
-	gamepadsmoothfacing: {
-		name: "GamePadSmoothFacing",
-		default: "1",
-		category: 5,
-		help: "Enable adjustment of facing direction to smooth out GamePad movement",
 	},
 	gamepadstickaxisbuttons: {
 		name: "GamePadStickAxisButtons",
@@ -478,6 +529,23 @@ export const data: CVarInterface = {
 		category: 5,
 		help: "If non-zero, character turns like a tank from GamePad movement",
 	},
+	gamepadtouchcursorenable: {
+		name: "GamePadTouchCursorEnable",
+		default: "1",
+		category: 5,
+		help: "Enable cursor control with GamePad's touch pad",
+	},
+	gamepadturnwithcamera: {
+		name: "GamePadTurnWithCamera",
+		default: "1",
+		category: 5,
+		help: "Turn character to match when camera facing is changed (1=in-combat, 2=always)",
+	},
+	gameplaycontext: {
+		name: "GameplayContext",
+		default: "0",
+		category: 5,
+	},
 	gamma: {
 		name: "Gamma",
 		default: "1.000000",
@@ -488,7 +556,7 @@ export const data: CVarInterface = {
 		name: "GxPrismEnabled",
 		default: "1",
 		category: 1,
-		help: "Allow use of prism backend when possible",
+		help: "0: Prism backends Disabled. 1: Default Prism backends Enabled. 2: Experimental Prism backends Enabled.",
 	},
 	hardwarecursor: {
 		name: "HardwareCursor",
@@ -768,6 +836,12 @@ export const data: CVarInterface = {
 		default: "768",
 		category: 5,
 	},
+	raidvolumefog: {
+		name: "RAIDVolumeFog",
+		default: "1",
+		category: 1,
+		help: "Volume Fog",
+	},
 	raidvolumefoglevel: {
 		name: "RAIDVolumeFogLevel",
 		default: "2",
@@ -978,15 +1052,27 @@ export const data: CVarInterface = {
 	},
 	renderscale: {
 		name: "RenderScale",
-		default: "1.0",
+		default: "1.000000",
 		category: 1,
 		help: "Render scale (for supersampling or undersampling)",
 	},
-	resamplequality: {
-		name: "ResampleQuality",
+	resamplealwayssharpen: {
+		name: "ResampleAlwaysSharpen",
 		default: "0",
 		category: 1,
+		help: "Run sharpness pass, even if not using AMD FSR Upscale [0,1]",
+	},
+	resamplequality: {
+		name: "ResampleQuality",
+		default: "3",
+		category: 1,
 		help: "Resample quality",
+	},
+	resamplesharpness: {
+		name: "ResampleSharpness",
+		default: "0.2",
+		category: 1,
+		help: "FSR sharpness strength [0.0-2.0]. 0 is full strength. -1 to disable.",
 	},
 	resolvedssaotype: {
 		name: "ResolvedSSAOType",
@@ -1096,7 +1182,7 @@ export const data: CVarInterface = {
 	sound_dialogvolume: {
 		name: "Sound_DialogVolume",
 		default: "1.0",
-		category: 7,
+		category: 5,
 		help: "Dialog Volume (0.0 to 1.0)",
 	},
 	sound_enableallsound: {
@@ -1139,7 +1225,7 @@ export const data: CVarInterface = {
 	sound_enableerrorspeech: {
 		name: "Sound_EnableErrorSpeech",
 		default: "1",
-		category: 5,
+		category: 7,
 		help: "error speech",
 	},
 	sound_enablemixmode2: {
@@ -1203,7 +1289,7 @@ export const data: CVarInterface = {
 	sound_mastervolume: {
 		name: "Sound_MasterVolume",
 		default: "1.0",
-		category: 7,
+		category: 5,
 		help: "master volume (0.0 to 1.0)",
 	},
 	sound_maxcachesizeinbytes: {
@@ -1214,7 +1300,7 @@ export const data: CVarInterface = {
 	},
 	sound_maxcacheablesizeinbytes: {
 		name: "Sound_MaxCacheableSizeInBytes",
-		default: "2097152",
+		default: "174762",
 		category: 7,
 		help: "Max sound size that will be cached, larger files will be streamed instead",
 	},
@@ -1243,7 +1329,7 @@ export const data: CVarInterface = {
 	sound_outputdrivername: {
 		name: "Sound_OutputDriverName",
 		default: "Primary Sound Driver",
-		category: 5,
+		category: 7,
 	},
 	sound_outputsamplerate: {
 		name: "Sound_OutputSampleRate",
@@ -1254,7 +1340,7 @@ export const data: CVarInterface = {
 	sound_sfxvolume: {
 		name: "Sound_SFXVolume",
 		default: "1.0",
-		category: 7,
+		category: 5,
 		help: "sound volume (0.0 to 1.0)",
 	},
 	sound_voicechatinputdriverindex: {
@@ -1284,6 +1370,11 @@ export const data: CVarInterface = {
 	},
 	spawnregion: {
 		name: "SpawnRegion",
+		default: "0",
+		category: 5,
+	},
+	spellcooldowndebugger: {
+		name: "SpellCooldownDebugger",
 		default: "0",
 		category: 5,
 	},
@@ -1319,6 +1410,13 @@ export const data: CVarInterface = {
 		default: "1",
 		category: 0,
 		help: "toggles use of spline coll optimization",
+	},
+	ttsusecharactersettings: {
+		name: "TTSUseCharacterSettings",
+		default: "1",
+		category: 5,
+		scope: "Account",
+		help: "If character-specific TTS settings are being used.",
 	},
 	targetnearestusenew: {
 		name: "TargetNearestUseNew",
@@ -1360,6 +1458,7 @@ export const data: CVarInterface = {
 		name: "TerrainLodDiv",
 		default: "768",
 		category: 5,
+		help: "Terrain lod divisor",
 	},
 	turnspeed: {
 		name: "TurnSpeed",
@@ -1568,7 +1667,7 @@ export const data: CVarInterface = {
 	},
 	voicevadsensitivity: {
 		name: "VoiceVADSensitivity",
-		default: "57",
+		default: "43",
 		category: 7,
 		help: "How sensitive voice activity detection is.  Value ranges from 0 to 100, smaller values will transmit at a lower noise threshold.",
 	},
@@ -1652,7 +1751,7 @@ export const data: CVarInterface = {
 	actionedadventurejournalentries: {
 		name: "actionedAdventureJournalEntries",
 		default: "",
-		category: 4,
+		category: 5,
 		scope: "Character",
 		help: "Which adventure journal entries flagged with ADVENTURE_JOURNAL_HIDE_AFTER_ACTION the user acted upon",
 	},
@@ -4102,7 +4201,7 @@ export const data: CVarInterface = {
 	deselectonclick: {
 		name: "deselectOnClick",
 		default: "0",
-		category: 4,
+		category: 5,
 		scope: "Character",
 		help: "Clear the target when clicking on terrain",
 	},
@@ -4263,6 +4362,12 @@ export const data: CVarInterface = {
 		category: 5,
 		help: "Whether to send the engine survey to the servers",
 	},
+	enginesurveypatch: {
+		name: "engineSurveyPatch",
+		default: "0",
+		category: 4,
+		help: "Engine Survey Patch",
+	},
 	entityloddist: {
 		name: "entityLodDist",
 		default: "10",
@@ -4381,7 +4486,7 @@ export const data: CVarInterface = {
 	flaggedtutorials: {
 		name: "flaggedTutorials",
 		default: "",
-		category: 4,
+		category: 5,
 		scope: "Character",
 		help: "Internal cvar for saving completed tutorials in order",
 	},
@@ -4670,6 +4775,11 @@ export const data: CVarInterface = {
 		category: 4,
 		scope: "Account",
 	},
+	graphicscomputeeffects: {
+		name: "graphicsComputeEffects",
+		default: "4",
+		category: 5,
+	},
 	graphicsdeptheffects: {
 		name: "graphicsDepthEffects",
 		default: "4",
@@ -4736,12 +4846,6 @@ export const data: CVarInterface = {
 		category: 5,
 		help: "UI value of the graphics setting",
 	},
-	graphicssunshafts: {
-		name: "graphicsSunshafts",
-		default: "3",
-		category: 5,
-		help: "UI value of the graphics setting",
-	},
 	graphicstextureresolution: {
 		name: "graphicsTextureResolution",
 		default: "5",
@@ -4751,7 +4855,7 @@ export const data: CVarInterface = {
 	graphicsviewdistance: {
 		name: "graphicsViewDistance",
 		default: "7",
-		category: 5,
+		category: 1,
 		help: "UI value of the graphics setting",
 	},
 	groundeffectdensity: {
@@ -5015,6 +5119,12 @@ export const data: CVarInterface = {
 		category: 5,
 		help: "Addon interface version number from previous build",
 	},
+	lastcharacterguid: {
+		name: "lastCharacterGuid",
+		default: "0",
+		category: 4,
+		help: "Last character selected's guid",
+	},
 	lastcharacterindex: {
 		name: "lastCharacterIndex",
 		default: "0",
@@ -5217,6 +5327,12 @@ export const data: CVarInterface = {
 		default: "20",
 		category: 5,
 		help: "Lod object min size",
+	},
+	lodobjectsizescale: {
+		name: "lodObjectSizeScale",
+		default: "1",
+		category: 1,
+		help: "Scales all objects size for culling",
 	},
 	lootundermouse: {
 		name: "lootUnderMouse",
@@ -5427,6 +5543,13 @@ export const data: CVarInterface = {
 		category: 4,
 		scope: "Character",
 		help: "Bitfield for which source filters are applied in the mount journal",
+	},
+	mountjournaltypefilter: {
+		name: "mountJournalTypeFilter",
+		default: "",
+		category: 4,
+		scope: "Character",
+		help: "Bitfield for which type filters are applied in the mount journal",
 	},
 	mouseinvertpitch: {
 		name: "mouseInvertPitch",
@@ -6012,7 +6135,7 @@ export const data: CVarInterface = {
 	profanityfilter: {
 		name: "profanityFilter",
 		default: "1",
-		category: 4,
+		category: 5,
 		scope: "Character",
 		help: "Whether to enable mature language filtering",
 	},
@@ -6042,6 +6165,12 @@ export const data: CVarInterface = {
 		category: 4,
 		scope: "Account",
 		help: "If enabled, the quest POI system will be used.",
+	},
+	questtextcontrast: {
+		name: "questTextContrast",
+		default: "0",
+		category: 4,
+		help: "Whether to increase text contrast in Quest UIs",
 	},
 	raidframesdisplayaggrohighlight: {
 		name: "raidFramesDisplayAggroHighlight",
@@ -6098,6 +6227,11 @@ export const data: CVarInterface = {
 		category: 4,
 		scope: "Account",
 		help: "The width of the individual raid frames",
+	},
+	raidgraphicscomputeeffects: {
+		name: "raidGraphicsComputeEffects",
+		default: "1",
+		category: 5,
 	},
 	raidgraphicsdeptheffects: {
 		name: "raidGraphicsDepthEffects",
@@ -6156,12 +6290,6 @@ export const data: CVarInterface = {
 	raidgraphicsspelldensity: {
 		name: "raidGraphicsSpellDensity",
 		default: "5",
-		category: 5,
-		help: "UI value of the raidGraphics setting",
-	},
-	raidgraphicssunshafts: {
-		name: "raidGraphicsSunshafts",
-		default: "1",
 		category: 5,
 		help: "UI value of the raidGraphics setting",
 	},
@@ -6226,12 +6354,6 @@ export const data: CVarInterface = {
 		scope: "Account",
 		help: "The way to sort raid frames",
 	},
-	raidorbattlecount: {
-		name: "raidOrBattleCount",
-		default: "0",
-		category: 4,
-		help: "How many times we've sent a raid or battleground survey to the servers",
-	},
 	rawmouseaccelerationenable: {
 		name: "rawMouseAccelerationEnable",
 		default: "1",
@@ -6272,6 +6394,20 @@ export const data: CVarInterface = {
 		name: "refraction",
 		default: "0",
 		category: 5,
+	},
+	remotetexttospeech: {
+		name: "remoteTextToSpeech",
+		default: "0",
+		category: 4,
+		scope: "Character",
+		help: "Enables typing into a voice chat window to speak to other players using the text to speech system",
+	},
+	remotetexttospeechvoice: {
+		name: "remoteTextToSpeechVoice",
+		default: "1",
+		category: 4,
+		scope: "Character",
+		help: "Voice option used with Speak for Me where you can send text to speech to other players in voice chat",
 	},
 	removechatdelay: {
 		name: "removeChatDelay",
@@ -6419,6 +6555,13 @@ export const data: CVarInterface = {
 		default: "0",
 		category: 4,
 		help: "Seen the level squish popup",
+	},
+	seenregionalchatdisabled: {
+		name: "seenRegionalChatDisabled",
+		default: "0",
+		category: 4,
+		scope: "Character",
+		help: "Seen the alert indicating chat has been disabled by default. (UK AADC)",
 	},
 	serveralert: {
 		name: "serverAlert",
@@ -6570,12 +6713,25 @@ export const data: CVarInterface = {
 		scope: "Character",
 		help: "0: Disable IGN, 1: Enable IGN (Default).",
 	},
+	showloadingscreentips: {
+		name: "showLoadingScreenTips",
+		default: "1",
+		category: 4,
+		help: "Show loading screen tooltips",
+	},
 	shownpetutorials: {
 		name: "showNPETutorials",
 		default: "1",
 		category: 4,
 		scope: "Character",
 		help: "display NPE tutorials",
+	},
+	showoutfitdetails: {
+		name: "showOutfitDetails",
+		default: "1",
+		category: 4,
+		scope: "Account",
+		help: "Whether or not to show outfit details when the dressing room is opened in maximized mode, default on",
 	},
 	showpartybackground: {
 		name: "showPartyBackground",
@@ -6627,7 +6783,7 @@ export const data: CVarInterface = {
 	showtargetoftarget: {
 		name: "showTargetOfTarget",
 		default: "0",
-		category: 4,
+		category: 5,
 		scope: "Character",
 		help: "Whether the target of target frame should be shown",
 	},
@@ -6820,12 +6976,18 @@ export const data: CVarInterface = {
 		scope: "Account",
 		help: "Bitfield for tutorializing viewing soulbinds trees",
 	},
-	spamfilter: {
-		name: "spamFilter",
+	specular: {
+		name: "specular",
 		default: "1",
+		category: 1,
+		help: "Specular lighting multiplier (0-1)",
+	},
+	speechtotext: {
+		name: "speechToText",
+		default: "0",
 		category: 4,
 		scope: "Character",
-		help: "Whether to enable spam filtering",
+		help: "Allows enabling transcription on a voice channel in order to see written text based on the words spoken by other players",
 	},
 	spellactivationoverlayopacity: {
 		name: "spellActivationOverlayOpacity",
@@ -7123,6 +7285,13 @@ export const data: CVarInterface = {
 		category: 4,
 		help: "Set the game locale for text",
 	},
+	texttospeech: {
+		name: "textToSpeech",
+		default: "0",
+		category: 4,
+		scope: "Character",
+		help: "Reads chat text out loud using the voice text to speech system based on the selected options",
+	},
 	texturefilteringmode: {
 		name: "textureFilteringMode",
 		default: "5",
@@ -7266,13 +7435,6 @@ export const data: CVarInterface = {
 		category: 4,
 		scope: "Account",
 		help: "Stores whether transmogs apply to current spec instead of all specs",
-	},
-	transmogshouldersseparately: {
-		name: "transmogShouldersSeparately",
-		default: "0",
-		category: 4,
-		scope: "Account",
-		help: "Whether right shoulder can have a different visual than left shoulder",
 	},
 	transmogrifyshowcollected: {
 		name: "transmogrifyShowCollected",
