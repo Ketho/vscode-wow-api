@@ -17,10 +17,56 @@ Enum = {
 	AuctionHouseTimeLeftBand = {},
 	---@type AuctionStatus
 	AuctionStatus = {},
-	---@type AzeriteEssence
-	AzeriteEssence = {},
+	---@type AzeriteEssenceSlot
+	AzeriteEssenceSlot = {},
 	---@type AzeritePowerLevel
 	AzeritePowerLevel = {},
+	---@type BattlePetAbilityFlag
+	BattlePetAbilityFlag = {},
+	---@type BattlePetAbilitySlot
+	BattlePetAbilitySlot = {},
+	---@type BattlePetAbilityTargets
+	BattlePetAbilityTargets = {},
+	---@type BattlePetAbilityTurnFlag
+	BattlePetAbilityTurnFlag = {},
+	---@type BattlePetAbilityTurnType
+	BattlePetAbilityTurnType = {},
+	---@type BattlePetAbilityType
+	BattlePetAbilityType = {},
+	---@type BattlePetAction
+	BattlePetAction = {},
+	---@type BattlePetBreedQuality
+	BattlePetBreedQuality = {},
+	---@type BattlePetEffectFlags
+	BattlePetEffectFlags = {},
+	---@type BattlePetEffectParamType
+	BattlePetEffectParamType = {},
+	---@type BattlePetEvent
+	BattlePetEvent = {},
+	---@type BattlePetNpcEmote
+	BattlePetNpcEmote = {},
+	---@type BattlePetNpcTeamFlag
+	BattlePetNpcTeamFlag = {},
+	---@type BattlePetOwner
+	BattlePetOwner = {},
+	---@type BattlePetSources
+	BattlePetSources = {},
+	---@type BattlePetSpeciesFlags
+	BattlePetSpeciesFlags = {},
+	---@type BattlePetStateFlag
+	BattlePetStateFlag = {},
+	---@type BattlePetTypes
+	BattlePetTypes = {},
+	---@type BattlePetVisualFlag
+	BattlePetVisualFlag = {},
+	---@type BattlePetVisualRange
+	BattlePetVisualRange = {},
+	---@type BattlepetDbFlags
+	BattlepetDbFlags = {},
+	---@type BattlepetDeletedReason
+	BattlepetDeletedReason = {},
+	---@type BattlepetSlotLockCheat
+	BattlepetSlotLockCheat = {},
 	---@type BrawlType
 	BrawlType = {},
 	---@type CachedRewardType
@@ -125,6 +171,8 @@ Enum = {
 	ContributionState = {},
 	---@type CovenantAbilityType
 	CovenantAbilityType = {},
+	---@type CovenantSkill
+	CovenantSkill = {},
 	---@type CovenantType
 	CovenantType = {},
 	---@type CurrencyDestroyReason
@@ -149,6 +197,10 @@ Enum = {
 	EnvironmentalDamageFlags = {},
 	---@type Environmentaldamagetype
 	Environmentaldamagetype = {},
+	---@type EventToastDisplayType
+	EventToastDisplayType = {},
+	---@type EventToastEventType
+	EventToastEventType = {},
 	---@type FlightPathFaction
 	FlightPathFaction = {},
 	---@type FlightPathState
@@ -207,20 +259,46 @@ Enum = {
 	IconAndTextWidgetState = {},
 	---@type IconState
 	IconState = {},
+	---@type InputContext
+	InputContext = {},
 	---@type InventoryType
 	InventoryType = {},
+	---@type ItemArmorSubclass
+	ItemArmorSubclass = {},
+	---@type ItemClass
+	ItemClass = {},
 	---@type ItemCommodityStatus
 	ItemCommodityStatus = {},
-	---@type ItemInteractionFrameType
-	ItemInteractionFrameType = {},
+	---@type ItemConsumableSubclass
+	ItemConsumableSubclass = {},
+	---@type ItemGemSubclass
+	ItemGemSubclass = {},
+	---@type ItemMiscellaneousSubclass
+	ItemMiscellaneousSubclass = {},
 	---@type ItemQuality
 	ItemQuality = {},
+	---@type ItemReagentSubclass
+	ItemReagentSubclass = {},
+	---@type ItemRecipeSubclass
+	ItemRecipeSubclass = {},
 	---@type ItemSlotFilterType
 	ItemSlotFilterType = {},
 	---@type ItemTryOnReason
 	ItemTryOnReason = {},
+	---@type ItemWeaponSubclass
+	ItemWeaponSubclass = {},
+	---@type Itemclassfilterflags
+	Itemclassfilterflags = {},
+	---@type Itemsetflags
+	Itemsetflags = {},
 	---@type JailersTowerType
 	JailersTowerType = {},
+	---@type LfgEntryPlaystyle
+	LfgEntryPlaystyle = {},
+	---@type LfgListDisplayType
+	LfgListDisplayType = {},
+	---@type LinkedCurrencyFlags
+	LinkedCurrencyFlags = {},
 	---@type ManipulatorEventType
 	ManipulatorEventType = {},
 	---@type MapCanvasPosition
@@ -231,14 +309,58 @@ Enum = {
 	ModelSceneSetting = {},
 	---@type ModelSceneType
 	ModelSceneType = {},
+	---@type MountType
+	MountType = {},
+	---@type MountTypeFlag
+	MountTypeFlag = {},
 	---@type NavigationState
 	NavigationState = {},
 	---@type OptionalReagentItemFlag
 	OptionalReagentItemFlag = {},
 	---@type PartyRequestJoinRelation
 	PartyRequestJoinRelation = {},
+	---@type PermanentChatChannelType
+	PermanentChatChannelType = {},
+	---@type PetBattleState
+	PetBattleState = {},
 	---@type PetJournalError
 	PetJournalError = {},
+	---@type PetbattleAuraStateFlags
+	PetbattleAuraStateFlags = {},
+	---@type PetbattleCheatFlags
+	PetbattleCheatFlags = {},
+	---@type PetbattleEffectFlags
+	PetbattleEffectFlags = {},
+	---@type PetbattleEffectType
+	PetbattleEffectType = {},
+	---@type PetbattleEnviros
+	PetbattleEnviros = {},
+	---@type PetbattleInputMoveMsgDebugFlag
+	PetbattleInputMoveMsgDebugFlag = {},
+	---@type PetbattleMoveType
+	PetbattleMoveType = {},
+	---@type PetbattlePboid
+	PetbattlePboid = {},
+	---@type PetbattlePetStatus
+	PetbattlePetStatus = {},
+	---@type PetbattlePlayer
+	PetbattlePlayer = {},
+	---@type PetbattlePlayerInputFlags
+	PetbattlePlayerInputFlags = {},
+	---@type PetbattleResult
+	PetbattleResult = {},
+	---@type PetbattleSlot
+	PetbattleSlot = {},
+	---@type PetbattleSlotAbility
+	PetbattleSlotAbility = {},
+	---@type PetbattleSlotResult
+	PetbattleSlotResult = {},
+	---@type PetbattleState
+	PetbattleState = {},
+	---@type PetbattleTrapstatus
+	PetbattleTrapstatus = {},
+	---@type PetbattleType
+	PetbattleType = {},
 	---@type PhaseReason
 	PhaseReason = {},
 	---@type PlayerChoiceRarity
@@ -291,14 +413,14 @@ Enum = {
 	RuneforgePowerState = {},
 	---@type ScriptedAnimationBehavior
 	ScriptedAnimationBehavior = {},
+	---@type ScriptedAnimationFlags
+	ScriptedAnimationFlags = {},
 	---@type ScriptedAnimationTrajectory
 	ScriptedAnimationTrajectory = {},
-	---@type ScriptedAnimationTransformation
-	ScriptedAnimationTransformation = {},
-	---@type ScriptedAnimationTransformationTiming
-	ScriptedAnimationTransformationTiming = {},
 	---@type SelfResurrectOptionType
 	SelfResurrectOptionType = {},
+	---@type SoulbindConduitFlags
+	SoulbindConduitFlags = {},
 	---@type SoulbindConduitInstallResult
 	SoulbindConduitInstallResult = {},
 	---@type SoulbindConduitTransactionType
@@ -337,16 +459,38 @@ Enum = {
 	TooltipTextureRelativeRegion = {},
 	---@type TrackedSpellCategory
 	TrackedSpellCategory = {},
+	---@type TransmogCameraVariation
+	TransmogCameraVariation = {},
 	---@type TransmogCollectionType
 	TransmogCollectionType = {},
+	---@type TransmogIllisionFlags
+	TransmogIllisionFlags = {},
 	---@type TransmogModification
 	TransmogModification = {},
+	---@type TransmogPendingType
+	TransmogPendingType = {},
+	---@type TransmogSearchType
+	TransmogSearchType = {},
+	---@type TransmogSlot
+	TransmogSlot = {},
 	---@type TransmogSource
 	TransmogSource = {},
 	---@type TransmogType
 	TransmogType = {},
+	---@type TransmogUseErrorType
+	TransmogUseErrorType = {},
+	---@type TtsBoolSetting
+	TtsBoolSetting = {},
+	---@type TtsVoiceType
+	TtsVoiceType = {},
 	---@type UICursorType
 	UICursorType = {},
+	---@type UIFrameType
+	UIFrameType = {},
+	---@type UIItemInteractionFlags
+	UIItemInteractionFlags = {},
+	---@type UIItemInteractionType
+	UIItemInteractionType = {},
 	---@type UIMapFlag
 	UIMapFlag = {},
 	---@type UIMapSystem
@@ -359,12 +503,16 @@ Enum = {
 	UIWidgetFontType = {},
 	---@type UIWidgetLayoutDirection
 	UIWidgetLayoutDirection = {},
+	---@type UIWidgetModelSceneLayer
+	UIWidgetModelSceneLayer = {},
 	---@type UIWidgetScale
 	UIWidgetScale = {},
 	---@type UIWidgetSetLayoutDirection
 	UIWidgetSetLayoutDirection = {},
 	---@type UIWidgetTextSizeType
 	UIWidgetTextSizeType = {},
+	---@type UIWidgetTooltipLocation
+	UIWidgetTooltipLocation = {},
 	---@type UIWidgetVisualizationType
 	UIWidgetVisualizationType = {},
 	---@type Unitsex
@@ -379,6 +527,10 @@ Enum = {
 	VoiceChannelErrorReason = {},
 	---@type VoiceChatStatusCode
 	VoiceChatStatusCode = {},
+	---@type VoiceTtsDestination
+	VoiceTtsDestination = {},
+	---@type VoiceTtsStatusCode
+	VoiceTtsStatusCode = {},
 	---@type WeeklyRewardChestThresholdType
 	WeeklyRewardChestThresholdType = {},
 	---@type WidgetAnimationType
@@ -389,6 +541,8 @@ Enum = {
 	WidgetEnabledState = {},
 	---@type WidgetShownState
 	WidgetShownState = {},
+	---@type WidgetTextHorizontalAlignmentType
+	WidgetTextHorizontalAlignmentType = {},
 	---@type WoWEntitlementType
 	WoWEntitlementType = {},
 	---@type WorldQuestQuality

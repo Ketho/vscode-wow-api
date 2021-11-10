@@ -19,6 +19,14 @@ local Missing =
 		{ Name = "MythicPlusRatingLinkInfo", Type = "Structure", Fields = Empty }, -- ChallengeModeInfoDocumentation.lua
 		{ Name = "ChatChannelInfo", Type = "Structure", Fields = Empty }, -- ChatInfoDocumentation.lua
 
+		-- placeholder enums, unused in apidocs but still needed to be defined as an emmylua type
+		{ Name = "AddSoulbindConduitReason", Type = "Enumeration", Fields = Empty },
+		{ Name = "CharacterServiceInfoFlag", Type = "Enumeration", Fields = Empty },
+		{ Name = "ManipulatorEventType", Type = "Enumeration", Fields = Empty },
+		{ Name = "QuestPOIQuestTypes", Type = "Enumeration", Fields = Empty },
+		{ Name = "SoulbindConduitFlags", Type = "Enumeration", Fields = Empty },
+		{ Name = "SoulbindConduitInstallResult", Type = "Enumeration", Fields = Empty },
+		{ Name = "VasPurchaseProgress", Type = "Enumeration", Fields = Empty },
 		{
 			-- C_Calendar; CalendarDocumentation.lua
 			Name = "CalendarTime",

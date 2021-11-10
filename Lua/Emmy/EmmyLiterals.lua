@@ -30,3 +30,21 @@ function Emmy:GetCVarLiterals()
 	end
 	return table.concat(t, "\n---| ").."\n"
 end
+
+local enum_path = "Lua/Data/cache/Enum.lua"
+local enum_url = "https://raw.githubusercontent.com/Ketho/BlizzardInterfaceResources/mainline/Resources/LuaEnum.lua"
+
+Util:DownloadFile(enum_path, enum_url, true)
+require(enum_path:gsub("%.lua", ""))
+
+function Emmy:GetEnumTable()
+	local t = {}
+	local sorted = Util:SortTable(Enum)
+	table.insert(t, "Enum = {")
+	for _, enum in pairs(sorted) do
+		table.insert(t, string.format("\t---@type %s", enum))
+		table.insert(t, string.format("\t%s = {},", enum))
+	end
+	table.insert(t, "}")
+	return table.concat(t, "\n").."\n"
+end

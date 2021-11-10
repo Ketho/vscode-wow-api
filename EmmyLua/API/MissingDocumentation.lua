@@ -38,6 +38,41 @@ local MythicPlusRatingLinkInfo = {}
 ---@field Undocumented boolean
 local ChatChannelInfo = {}
 
+---@class AddSoulbindConduitReason
+local AddSoulbindConduitReason = {
+	Undocumented = 0,
+}
+
+---@class CharacterServiceInfoFlag
+local CharacterServiceInfoFlag = {
+	Undocumented = 0,
+}
+
+---@class ManipulatorEventType
+local ManipulatorEventType = {
+	Undocumented = 0,
+}
+
+---@class QuestPOIQuestTypes
+local QuestPOIQuestTypes = {
+	Undocumented = 0,
+}
+
+---@class SoulbindConduitFlags
+local SoulbindConduitFlags = {
+	Undocumented = 0,
+}
+
+---@class SoulbindConduitInstallResult
+local SoulbindConduitInstallResult = {
+	Undocumented = 0,
+}
+
+---@class VasPurchaseProgress
+local VasPurchaseProgress = {
+	Undocumented = 0,
+}
+
 ---@class CalendarTime
 ---@field year number
 ---@field month number

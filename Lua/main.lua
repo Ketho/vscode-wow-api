@@ -16,6 +16,7 @@ FrameXML:LoadApiDocs("Lua/FrameXML")
 require("Lua/Emmy/EmmyLiterals")
 Util:WriteFile("EmmyLua/API/Type/Event.lua", Emmy:GetEventLiterals())
 Util:WriteFile("EmmyLua/API/Type/CVar.lua", Emmy:GetCVarLiterals())
+Util:WriteFile("EmmyLua/API/Enum.lua", Emmy:GetEnumTable())
 
 -- typescript data
 Util:WriteFile("src/data/event.ts", require("Lua/ToTypeScript/Event")())
