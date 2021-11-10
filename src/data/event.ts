@@ -117,6 +117,7 @@ export const data: EventInterface = {
 		],
 	},
 	AJ_REWARD_DATA_RECEIVED: {},
+	ALERT_REGIONAL_CHAT_DISABLED: {},
 	ALLIED_RACE_CLOSE: {},
 	ALLIED_RACE_OPEN: {
 		Payload: [
@@ -282,13 +283,13 @@ export const data: EventInterface = {
 	},
 	AZERITE_ESSENCE_ACTIVATED: {
 		Payload: [
-			{Name: "slot", Type: "AzeriteEssence"},
+			{Name: "slot", Type: "AzeriteEssenceSlot"},
 			{Name: "essenceID", Type: "number"},
 		],
 	},
 	AZERITE_ESSENCE_ACTIVATION_FAILED: {
 		Payload: [
-			{Name: "slot", Type: "AzeriteEssence"},
+			{Name: "slot", Type: "AzeriteEssenceSlot"},
 			{Name: "essenceID", Type: "number"},
 		],
 	},
@@ -390,6 +391,12 @@ export const data: EventInterface = {
 		],
 	},
 	BATTLE_PET_CURSOR_CLEAR: {},
+	BEHAVIORAL_NOTIFICATION: {
+		Payload: [
+			{Name: "notificationType", Type: "string"},
+			{Name: "dbId", Type: "string"},
+		],
+	},
 	BIDS_UPDATED: {},
 	BID_ADDED: {
 		Payload: [
@@ -671,6 +678,16 @@ export const data: EventInterface = {
 			{Name: "isSubtitle", Type: "boolean"},
 			{Name: "hideSenderInLetterbox", Type: "boolean"},
 			{Name: "supressRaidIcons", Type: "boolean"},
+		],
+	},
+	CHAT_DISABLED_CHANGED: {
+		Payload: [
+			{Name: "disabled", Type: "boolean"},
+		],
+	},
+	CHAT_DISABLED_CHANGE_FAILED: {
+		Payload: [
+			{Name: "disabled", Type: "boolean"},
 		],
 	},
 	CHAT_MSG_ACHIEVEMENT: {
@@ -3226,10 +3243,10 @@ export const data: EventInterface = {
 			{Name: "slotIndex", Type: "number", Nilable: true},
 		],
 	},
+	ITEM_UPGRADE_FAILED: {},
 	ITEM_UPGRADE_MASTER_CLOSED: {},
 	ITEM_UPGRADE_MASTER_OPENED: {},
 	ITEM_UPGRADE_MASTER_SET_ITEM: {},
-	ITEM_UPGRADE_MASTER_UPDATE: {},
 	JAILERS_TOWER_LEVEL_UPDATE: {
 		Payload: [
 			{Name: "level", Type: "number"},
@@ -3374,16 +3391,6 @@ export const data: EventInterface = {
 	LFG_ROLE_UPDATE: {},
 	LFG_UPDATE: {},
 	LFG_UPDATE_RANDOM_INFO: {},
-	LF_GUILD_BROWSE_UPDATED: {},
-	LF_GUILD_MEMBERSHIP_LIST_CHANGED: {},
-	LF_GUILD_MEMBERSHIP_LIST_UPDATED: {
-		Payload: [
-			{Name: "numApplicationsRemaining", Type: "number"},
-		],
-	},
-	LF_GUILD_POST_UPDATED: {},
-	LF_GUILD_RECRUITS_UPDATED: {},
-	LF_GUILD_RECRUIT_LIST_CHANGED: {},
 	LIFESTEAL_UPDATE: {},
 	LOADING_SCREEN_DISABLED: {},
 	LOADING_SCREEN_ENABLED: {},
@@ -3647,6 +3654,7 @@ export const data: EventInterface = {
 		],
 	},
 	NEW_WMO_CHUNK: {},
+	NOTIFY_CHAT_SUPPRESSED: {},
 	NOTIFY_PVP_AFK_RESULT: {
 		Payload: [
 			{Name: "offender", Type: "string"},
@@ -4446,7 +4454,6 @@ export const data: EventInterface = {
 			{Name: "hasAttachedFollower", Type: "boolean", Nilable: true},
 		],
 	},
-	SHOW_AADC_ALERT: {},
 	SHOW_FACTION_SELECT_UI: {},
 	SHOW_LFG_EXPAND_SEARCH_PROMPT: {},
 	SHOW_LOOT_TOAST: {
@@ -4532,11 +4539,6 @@ export const data: EventInterface = {
 	SOULBIND_ACTIVATED: {
 		Payload: [
 			{Name: "soulbindID", Type: "number"},
-		],
-	},
-	SOULBIND_CONDUIT_CHARGES_UPDATED: {
-		Payload: [
-			{Name: "charges", Type: "number"},
 		],
 	},
 	SOULBIND_CONDUIT_COLLECTION_CLEARED: {},
@@ -4895,6 +4897,11 @@ export const data: EventInterface = {
 			{Name: "modID", Type: "number", Nilable: true},
 			{Name: "itemAppearanceID", Type: "number", Nilable: true},
 			{Name: "reason", Type: "string", Nilable: true},
+		],
+	},
+	TRANSMOG_COSMETIC_COLLECTION_SOURCE_ADDED: {
+		Payload: [
+			{Name: "itemModifiedAppearanceID", Type: "number"},
 		],
 	},
 	TRANSMOG_OUTFITS_CHANGED: {},

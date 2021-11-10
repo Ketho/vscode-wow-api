@@ -34,6 +34,7 @@
 ---| '"AJ_RAID_ACTION"' # `lfgDungeonID`
 ---| '"AJ_REFRESH_DISPLAY"' # `newAdventureNotice`
 ---| '"AJ_REWARD_DATA_RECEIVED"'
+---| '"ALERT_REGIONAL_CHAT_DISABLED"'
 ---| '"ALLIED_RACE_CLOSE"'
 ---| '"ALLIED_RACE_OPEN"' # `raceID`
 ---| '"ALTERNATIVE_DEFAULT_LANGUAGE_CHANGED"'
@@ -126,6 +127,7 @@
 ---| '"BATTLEPET_FORCE_NAME_DECLENSION"' # `name, battlePetGUID`
 ---| '"BATTLETAG_INVITE_SHOW"' # `name`
 ---| '"BATTLE_PET_CURSOR_CLEAR"'
+---| '"BEHAVIORAL_NOTIFICATION"' # `notificationType, dbId`
 ---| '"BIDS_UPDATED"'
 ---| '"BID_ADDED"' # `bidID`
 ---| '"BIND_ENCHANT"'
@@ -199,6 +201,8 @@
 ---| '"CHARACTER_POINTS_CHANGED"' # `change`
 ---| '"CHARACTER_UPGRADE_SPELL_TIER_SET"' # `tierIndex`
 ---| '"CHAT_COMBAT_MSG_ARENA_POINTS_GAIN"' # `text, playerName, languageName, channelName, playerName2, specialFlags, zoneChannelID, channelIndex, channelBaseName, unused, lineID, guid, bnSenderID, isMobile, isSubtitle, hideSenderInLetterbox, supressRaidIcons`
+---| '"CHAT_DISABLED_CHANGED"' # `disabled`
+---| '"CHAT_DISABLED_CHANGE_FAILED"' # `disabled`
 ---| '"CHAT_MSG_ACHIEVEMENT"' # `text, playerName, languageName, channelName, playerName2, specialFlags, zoneChannelID, channelIndex, channelBaseName, unused, lineID, guid, bnSenderID, isMobile, isSubtitle, hideSenderInLetterbox, supressRaidIcons`
 ---| '"CHAT_MSG_ADDON"' # `prefix, text, channel, sender, target, zoneChannelID, localID, name, instanceID`
 ---| '"CHAT_MSG_ADDON_LOGGED"' # `prefix, text, channel, sender, target, zoneChannelID, localID, name, instanceID`
@@ -584,10 +588,10 @@
 ---| '"ITEM_TEXT_READY"'
 ---| '"ITEM_TEXT_TRANSLATION"' # `delay`
 ---| '"ITEM_UNLOCKED"' # `bagOrSlotIndex, slotIndex`
+---| '"ITEM_UPGRADE_FAILED"'
 ---| '"ITEM_UPGRADE_MASTER_CLOSED"'
 ---| '"ITEM_UPGRADE_MASTER_OPENED"'
 ---| '"ITEM_UPGRADE_MASTER_SET_ITEM"'
----| '"ITEM_UPGRADE_MASTER_UPDATE"'
 ---| '"JAILERS_TOWER_LEVEL_UPDATE"' # `level, type`
 ---| '"KNOWLEDGE_BASE_ARTICLE_LOAD_FAILURE"'
 ---| '"KNOWLEDGE_BASE_ARTICLE_LOAD_SUCCESS"'
@@ -640,12 +644,6 @@
 ---| '"LFG_ROLE_UPDATE"'
 ---| '"LFG_UPDATE"'
 ---| '"LFG_UPDATE_RANDOM_INFO"'
----| '"LF_GUILD_BROWSE_UPDATED"'
----| '"LF_GUILD_MEMBERSHIP_LIST_CHANGED"'
----| '"LF_GUILD_MEMBERSHIP_LIST_UPDATED"' # `numApplicationsRemaining`
----| '"LF_GUILD_POST_UPDATED"'
----| '"LF_GUILD_RECRUITS_UPDATED"'
----| '"LF_GUILD_RECRUIT_LIST_CHANGED"'
 ---| '"LIFESTEAL_UPDATE"'
 ---| '"LOADING_SCREEN_DISABLED"'
 ---| '"LOADING_SCREEN_ENABLED"'
@@ -720,6 +718,7 @@
 ---| '"NEW_RUNEFORGE_POWER_ADDED"' # `powerID`
 ---| '"NEW_TOY_ADDED"' # `itemID`
 ---| '"NEW_WMO_CHUNK"'
+---| '"NOTIFY_CHAT_SUPPRESSED"'
 ---| '"NOTIFY_PVP_AFK_RESULT"' # `offender, numBlackMarksOnOffender, numPlayersIHaveReported`
 ---| '"NPE_TUTORIAL_UPDATE"'
 ---| '"OBJECT_ENTERED_AOI"' # `guid`
@@ -973,7 +972,6 @@
 ---| '"SHIPMENT_CRAFTER_OPENED"' # `charShipmentContainerID`
 ---| '"SHIPMENT_CRAFTER_REAGENT_UPDATE"'
 ---| '"SHIPMENT_UPDATE"' # `shipmentStarted, hasAttachedFollower`
----| '"SHOW_AADC_ALERT"'
 ---| '"SHOW_FACTION_SELECT_UI"'
 ---| '"SHOW_LFG_EXPAND_SEARCH_PROMPT"'
 ---| '"SHOW_LOOT_TOAST"' # `typeIdentifier, itemLink, quantity, specID, sex, personalLootToast, toastMethod, lessAwesome, upgraded, corrupted`
@@ -997,7 +995,6 @@
 ---| '"SOCKET_INFO_SUCCESS"'
 ---| '"SOCKET_INFO_UPDATE"'
 ---| '"SOULBIND_ACTIVATED"' # `soulbindID`
----| '"SOULBIND_CONDUIT_CHARGES_UPDATED"' # `charges`
 ---| '"SOULBIND_CONDUIT_COLLECTION_CLEARED"'
 ---| '"SOULBIND_CONDUIT_COLLECTION_REMOVED"' # `conduitID`
 ---| '"SOULBIND_CONDUIT_COLLECTION_UPDATED"' # `collectionData`
@@ -1103,6 +1100,7 @@
 ---| '"TRANSMOG_COLLECTION_SOURCE_ADDED"' # `itemModifiedAppearanceID`
 ---| '"TRANSMOG_COLLECTION_SOURCE_REMOVED"' # `itemModifiedAppearanceID`
 ---| '"TRANSMOG_COLLECTION_UPDATED"' # `collectionIndex, modID, itemAppearanceID, reason`
+---| '"TRANSMOG_COSMETIC_COLLECTION_SOURCE_ADDED"' # `itemModifiedAppearanceID`
 ---| '"TRANSMOG_OUTFITS_CHANGED"'
 ---| '"TRANSMOG_SEARCH_UPDATED"' # `searchType, collectionType`
 ---| '"TRANSMOG_SETS_UPDATE_FAVORITE"'
