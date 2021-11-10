@@ -22,44 +22,53 @@ end
 local fileIndex = 0
 
 local function GetOutputFile()
+	local tempTbl = {}
 	fileIndex = fileIndex + 1
 	local file = io.open(string.format("EmmyLua/API/GlobalAPI/Dump%d.lua", fileIndex), "w")
-	return file
+	return file, tempTbl
 end
 
-local count = 0
 local fs = "---[Documentation](https://wowpedia.fandom.com/wiki/API_%s)\nfunction %s(%s) end\n\n"
-local outputFile = GetOutputFile()
+local outputFile, tempTbl = GetOutputFile()
 
 local countValid = 0
 local countNonValid = 0
 local countNonDoc = 0
 
+local function WriteToFile(tblContents, isFlush)
+	outputFile:write(tblContents)
+	Util:Wipe(tempTbl)
+	outputFile:close()
+	if not isFlush then
+		outputFile = GetOutputFile()
+	end
+end
+
 local sorted = Util:SortTable(nonBlizzDocumented)
 for _, name in pairs(sorted) do
 	if not manualDoc[name] then
 		if emmyLua[name] then
-			outputFile:write(string.format("---[Documentation](https://wowpedia.fandom.com/wiki/API_%s)\n", name))
-			outputFile:write(emmyLua[name].."\n\n")
+			table.insert(tempTbl, string.format("---[Documentation](https://wowpedia.fandom.com/wiki/API_%s)\n", name))
+			table.insert(tempTbl, emmyLua[name].."\n\n")
 		elseif convertedApi[name] then
-			outputFile:write(Emmy:GetFunction(convertedApi[name]).."\n\n")
+			table.insert(tempTbl, Emmy:GetFunction(convertedApi[name]).."\n\n")
 			countValid = countValid + 1
 		else
-			outputFile:write(fs:format(name, name, wowpedia_arguments[name] or ""))
+			table.insert(tempTbl, fs:format(name, name, wowpedia_arguments[name] or ""))
 			if nonvalidated[name] then
 				countNonValid = countNonValid + 1
 			else
 				countNonDoc = countNonDoc + 1
 			end
 		end
-		count = count + 1
-		if count == 500 then
-			count = 0
-			outputFile:close()
-			outputFile = GetOutputFile()
+
+		local tblContents = table.concat(tempTbl)
+		if #tblContents > 1024*95 then
+			WriteToFile(tblContents)
 		end
 	end
 end
+WriteToFile(table.concat(tempTbl), true)
 
 local total = countValid+countNonValid+countNonDoc
 print("valid api", countValid, string.format("%.2f%%", 100*countValid/total))

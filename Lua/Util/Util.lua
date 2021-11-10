@@ -74,6 +74,12 @@ function Util:SortTable(tbl)
 	return t
 end
 
+function Util:Wipe(tbl)
+	for k in pairs(tbl) do
+		tbl[k] = nil
+	end
+end
+
 function Util:GetFullName(apiTable)
 	local fullName
 	if apiTable.System.Namespace then

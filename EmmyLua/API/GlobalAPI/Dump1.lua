@@ -1749,3 +1749,434 @@ function C_PetJournal.GetPetSortParameter() end
 ---@return number rarity
 function C_PetJournal.GetPetStats(petID) end
 
+---[Documentation](https://wowpedia.fandom.com/wiki/API_C_PetJournal.GetPetTeamAverageLevel)
+---@return number avgLevel
+function C_PetJournal.GetPetTeamAverageLevel() end
+
+---[Documentation](https://wowpedia.fandom.com/wiki/API_C_PetJournal.GetSummonBattlePetCooldown)
+function C_PetJournal.GetSummonBattlePetCooldown() end
+
+---[Documentation](https://wowpedia.fandom.com/wiki/API_C_PetJournal.GetSummonRandomFavoritePetGUID)
+function C_PetJournal.GetSummonRandomFavoritePetGUID() end
+
+---[Documentation](https://wowpedia.fandom.com/wiki/API_C_PetJournal.GetSummonedPetGUID)
+---@return string summonedPetGUID
+function C_PetJournal.GetSummonedPetGUID() end
+
+---[Documentation](https://wowpedia.fandom.com/wiki/API_C_PetJournal.IsFilterChecked)
+---@param filter number
+---@return boolean isFiltered
+function C_PetJournal.IsFilterChecked(filter) end
+
+---[Documentation](https://wowpedia.fandom.com/wiki/API_C_PetJournal.IsFindBattleEnabled)
+---@return boolean isEnabled
+function C_PetJournal.IsFindBattleEnabled() end
+
+---[Documentation](https://wowpedia.fandom.com/wiki/API_C_PetJournal.IsJournalReadOnly)
+function C_PetJournal.IsJournalReadOnly() end
+
+---[Documentation](https://wowpedia.fandom.com/wiki/API_C_PetJournal.IsJournalUnlocked)
+function C_PetJournal.IsJournalUnlocked() end
+
+---[Documentation](https://wowpedia.fandom.com/wiki/API_C_PetJournal.IsPetSourceChecked)
+---@param index number
+---@return boolean isChecked
+function C_PetJournal.IsPetSourceChecked(index) end
+
+---[Documentation](https://wowpedia.fandom.com/wiki/API_C_PetJournal.IsPetTypeChecked)
+---@param index number
+---@return boolean isChecked
+function C_PetJournal.IsPetTypeChecked(index) end
+
+---[Documentation](https://wowpedia.fandom.com/wiki/API_C_PetJournal.PetCanBeReleased)
+---@param petID string
+---@return boolean canRelease
+function C_PetJournal.PetCanBeReleased(petID) end
+
+---[Documentation](https://wowpedia.fandom.com/wiki/API_C_PetJournal.PetIsCapturable)
+---@param petID string
+---@return boolean isCapturable
+function C_PetJournal.PetIsCapturable(petID) end
+
+---[Documentation](https://wowpedia.fandom.com/wiki/API_C_PetJournal.PetIsFavorite)
+---@param petGUID string
+---@return boolean isFavorite
+function C_PetJournal.PetIsFavorite(petGUID) end
+
+---[Documentation](https://wowpedia.fandom.com/wiki/API_C_PetJournal.PetIsHurt)
+---@param petID string
+---@return boolean isHurt
+function C_PetJournal.PetIsHurt(petID) end
+
+---[Documentation](https://wowpedia.fandom.com/wiki/API_C_PetJournal.PetIsLockedForConvert)
+function C_PetJournal.PetIsLockedForConvert(petID) end
+
+---[Documentation](https://wowpedia.fandom.com/wiki/API_C_PetJournal.PetIsRevoked)
+---@param petID string
+---@return boolean isRevoked
+function C_PetJournal.PetIsRevoked(petID) end
+
+---[Documentation](https://wowpedia.fandom.com/wiki/API_C_PetJournal.PetIsSlotted)
+---@param petID string
+---@return boolean isSlotted
+function C_PetJournal.PetIsSlotted(petID) end
+
+---[Documentation](https://wowpedia.fandom.com/wiki/API_C_PetJournal.PetIsTradable)
+---@param petID string
+---@return boolean isTradable
+function C_PetJournal.PetIsTradable(petID) end
+
+---[Documentation](https://wowpedia.fandom.com/wiki/API_C_PetJournal.PetIsUsable)
+function C_PetJournal.PetIsUsable(petID) end
+
+---[Documentation](https://wowpedia.fandom.com/wiki/API_C_PetJournal.PetNeedsFanfare)
+function C_PetJournal.PetNeedsFanfare() end
+
+---[Documentation](https://wowpedia.fandom.com/wiki/API_C_PetJournal.PickupPet)
+---@param petID string
+function C_PetJournal.PickupPet(petID) end
+
+---[Documentation](https://wowpedia.fandom.com/wiki/API_C_PetJournal.PickupSummonRandomPet)
+function C_PetJournal.PickupSummonRandomPet() end
+
+---[Documentation](https://wowpedia.fandom.com/wiki/API_C_PetJournal.ReleasePetByID)
+---@param petID string
+function C_PetJournal.ReleasePetByID(petID) end
+
+---[Documentation](https://wowpedia.fandom.com/wiki/API_C_PetJournal.SetAbility)
+---@param slotIndex number
+---@param spellIndex number
+---@param petSpellID number
+function C_PetJournal.SetAbility(slotIndex, spellIndex, petSpellID) end
+
+---[Documentation](https://wowpedia.fandom.com/wiki/API_C_PetJournal.SetAllPetSourcesChecked)
+---@param value boolean
+function C_PetJournal.SetAllPetSourcesChecked(value) end
+
+---[Documentation](https://wowpedia.fandom.com/wiki/API_C_PetJournal.SetAllPetTypesChecked)
+---@param value boolean
+function C_PetJournal.SetAllPetTypesChecked(value) end
+
+---[Documentation](https://wowpedia.fandom.com/wiki/API_C_PetJournal.SetCustomName)
+---@param petID string
+---@param customName string
+function C_PetJournal.SetCustomName(petID, customName) end
+
+---[Documentation](https://wowpedia.fandom.com/wiki/API_C_PetJournal.SetFavorite)
+---@param petID string
+---@param value number
+function C_PetJournal.SetFavorite(petID, value) end
+
+---[Documentation](https://wowpedia.fandom.com/wiki/API_C_PetJournal.SetFilterChecked)
+---@param filter number
+---@param value boolean
+function C_PetJournal.SetFilterChecked(filter, value) end
+
+---[Documentation](https://wowpedia.fandom.com/wiki/API_C_PetJournal.SetPetLoadOutInfo)
+---@param slotIndex number
+---@param petID string
+function C_PetJournal.SetPetLoadOutInfo(slotIndex, petID) end
+
+---[Documentation](https://wowpedia.fandom.com/wiki/API_C_PetJournal.SetPetSortParameter)
+function C_PetJournal.SetPetSortParameter() end
+
+---[Documentation](https://wowpedia.fandom.com/wiki/API_C_PetJournal.SetPetSourceChecked)
+---@param index number
+---@param value boolean
+function C_PetJournal.SetPetSourceChecked(index, value) end
+
+---[Documentation](https://wowpedia.fandom.com/wiki/API_C_PetJournal.SetPetTypeFilter)
+---@param index number
+---@param value boolean
+function C_PetJournal.SetPetTypeFilter(index, value) end
+
+---[Documentation](https://wowpedia.fandom.com/wiki/API_C_PetJournal.SetSearchFilter)
+---@param text string
+function C_PetJournal.SetSearchFilter(text) end
+
+---[Documentation](https://wowpedia.fandom.com/wiki/API_C_PetJournal.SummonPetByGUID)
+---@param petID string
+function C_PetJournal.SummonPetByGUID(petID) end
+
+---[Documentation](https://wowpedia.fandom.com/wiki/API_C_PetJournal.SummonRandomPet)
+---@param favoritePets boolean
+function C_PetJournal.SummonRandomPet(favoritePets) end
+
+---[Documentation](https://wowpedia.fandom.com/wiki/API_C_PrototypeDialog.EnsureRemoved)
+---@param instanceID number
+function C_PrototypeDialog.EnsureRemoved(instanceID) end
+
+---[Documentation](https://wowpedia.fandom.com/wiki/API_C_PrototypeDialog.SelectOption)
+---@param instanceID number
+---@param optionIndex number
+function C_PrototypeDialog.SelectOption(instanceID, optionIndex) end
+
+---[Documentation](https://wowpedia.fandom.com/wiki/API_C_Scenario.GetBonusStepRewardQuestID)
+function C_Scenario.GetBonusStepRewardQuestID(stepIndex) end
+
+---[Documentation](https://wowpedia.fandom.com/wiki/API_C_Scenario.GetBonusSteps)
+function C_Scenario.GetBonusSteps() end
+
+---[Documentation](https://wowpedia.fandom.com/wiki/API_C_Scenario.GetCriteriaInfo)
+function C_Scenario.GetCriteriaInfo(criteriaIndex) end
+
+---[Documentation](https://wowpedia.fandom.com/wiki/API_C_Scenario.GetCriteriaInfoByStep)
+function C_Scenario.GetCriteriaInfoByStep(stepID, criteriaIndex) end
+
+---[Documentation](https://wowpedia.fandom.com/wiki/API_C_Scenario.GetInfo)
+function C_Scenario.GetInfo() end
+
+---[Documentation](https://wowpedia.fandom.com/wiki/API_C_Scenario.GetProvingGroundsInfo)
+---@return number difficulty
+---@return number curWave
+---@return number maxWave
+---@return number duration
+function C_Scenario.GetProvingGroundsInfo() end
+
+---[Documentation](https://wowpedia.fandom.com/wiki/API_C_Scenario.GetScenarioIconInfo)
+function C_Scenario.GetScenarioIconInfo(uiMapID) end
+
+---[Documentation](https://wowpedia.fandom.com/wiki/API_C_Scenario.GetStepInfo)
+function C_Scenario.GetStepInfo(bonusStepIndex) end
+
+---[Documentation](https://wowpedia.fandom.com/wiki/API_C_Scenario.GetSupersededObjectives)
+function C_Scenario.GetSupersededObjectives() end
+
+---[Documentation](https://wowpedia.fandom.com/wiki/API_C_Scenario.IsInScenario)
+function C_Scenario.IsInScenario() end
+
+---[Documentation](https://wowpedia.fandom.com/wiki/API_C_Scenario.ShouldShowCriteria)
+function C_Scenario.ShouldShowCriteria() end
+
+---[Documentation](https://wowpedia.fandom.com/wiki/API_C_Scenario.TreatScenarioAsDungeon)
+function C_Scenario.TreatScenarioAsDungeon() end
+
+---[Documentation](https://wowpedia.fandom.com/wiki/API_C_SharedCharacterServices.GetLastSeenCharacterUpgradePopup)
+function C_SharedCharacterServices.GetLastSeenCharacterUpgradePopup() end
+
+---[Documentation](https://wowpedia.fandom.com/wiki/API_C_SharedCharacterServices.GetLastSeenExpansionTrialPopup)
+function C_SharedCharacterServices.GetLastSeenExpansionTrialPopup() end
+
+---[Documentation](https://wowpedia.fandom.com/wiki/API_C_SharedCharacterServices.GetUpgradeDistributions)
+function C_SharedCharacterServices.GetUpgradeDistributions() end
+
+---[Documentation](https://wowpedia.fandom.com/wiki/API_C_SharedCharacterServices.HasFreePromotionalUpgrade)
+function C_SharedCharacterServices.HasFreePromotionalUpgrade() end
+
+---[Documentation](https://wowpedia.fandom.com/wiki/API_C_SharedCharacterServices.HasSeenFreePromotionalUpgradePopup)
+function C_SharedCharacterServices.HasSeenFreePromotionalUpgradePopup() end
+
+---[Documentation](https://wowpedia.fandom.com/wiki/API_C_SharedCharacterServices.IsPurchaseIDPendingUpgrade)
+function C_SharedCharacterServices.IsPurchaseIDPendingUpgrade() end
+
+---[Documentation](https://wowpedia.fandom.com/wiki/API_C_SharedCharacterServices.QueryClassTrialBoostResult)
+function C_SharedCharacterServices.QueryClassTrialBoostResult() end
+
+---[Documentation](https://wowpedia.fandom.com/wiki/API_C_SharedCharacterServices.SetCharacterUpgradePopupSeen)
+function C_SharedCharacterServices.SetCharacterUpgradePopupSeen(expansion_id) end
+
+---[Documentation](https://wowpedia.fandom.com/wiki/API_C_SharedCharacterServices.SetExpansionTrialPopupSeen)
+function C_SharedCharacterServices.SetExpansionTrialPopupSeen(expansion_id) end
+
+---[Documentation](https://wowpedia.fandom.com/wiki/API_C_SharedCharacterServices.SetPromotionalPopupSeen)
+function C_SharedCharacterServices.SetPromotionalPopupSeen(seen) end
+
+---[Documentation](https://wowpedia.fandom.com/wiki/API_C_Social.RegisterSocialBrowser)
+function C_Social.RegisterSocialBrowser() end
+
+---[Documentation](https://wowpedia.fandom.com/wiki/API_C_Social.SetTextureToScreenshot)
+function C_Social.SetTextureToScreenshot(texture, index) end
+
+---[Documentation](https://wowpedia.fandom.com/wiki/API_C_Social.TwitterPostAchievement)
+function C_Social.TwitterPostAchievement(text, width, height, snapshotId, offScreenFrame, lastAchievementID, usedCustomText) end
+
+---[Documentation](https://wowpedia.fandom.com/wiki/API_C_Social.TwitterPostItem)
+function C_Social.TwitterPostItem(text, width, height, snapshotId, offScreenFrame, lastItemID, usedCustomText) end
+
+---[Documentation](https://wowpedia.fandom.com/wiki/API_C_Social.TwitterPostScreenshot)
+function C_Social.TwitterPostScreenshot(text, screenshotIndex, texture, usedCustomText) end
+
+---[Documentation](https://wowpedia.fandom.com/wiki/API_C_TalkingHead.GetConversationsDeferred)
+function C_TalkingHead.GetConversationsDeferred() end
+
+---[Documentation](https://wowpedia.fandom.com/wiki/API_C_TalkingHead.GetCurrentLineAnimationInfo)
+function C_TalkingHead.GetCurrentLineAnimationInfo() end
+
+---[Documentation](https://wowpedia.fandom.com/wiki/API_C_TalkingHead.GetCurrentLineInfo)
+function C_TalkingHead.GetCurrentLineInfo() end
+
+---[Documentation](https://wowpedia.fandom.com/wiki/API_C_TalkingHead.IgnoreCurrentTalkingHead)
+function C_TalkingHead.IgnoreCurrentTalkingHead() end
+
+---[Documentation](https://wowpedia.fandom.com/wiki/API_C_TalkingHead.IsCurrentTalkingHeadIgnored)
+function C_TalkingHead.IsCurrentTalkingHeadIgnored() end
+
+---[Documentation](https://wowpedia.fandom.com/wiki/API_C_TalkingHead.SetConversationsDeferred)
+function C_TalkingHead.SetConversationsDeferred(deferred) end
+
+---[Documentation](https://wowpedia.fandom.com/wiki/API_C_Timer.After)
+---@param duration number
+---@param callback function
+function C_Timer.After(duration, callback) end
+
+---[Documentation](https://wowpedia.fandom.com/wiki/API_C_ToyBox.ForceToyRefilter)
+function C_ToyBox.ForceToyRefilter() end
+
+---[Documentation](https://wowpedia.fandom.com/wiki/API_C_ToyBox.GetCollectedShown)
+function C_ToyBox.GetCollectedShown() end
+
+---[Documentation](https://wowpedia.fandom.com/wiki/API_C_ToyBox.GetIsFavorite)
+function C_ToyBox.GetIsFavorite(itemID) end
+
+---[Documentation](https://wowpedia.fandom.com/wiki/API_C_ToyBox.GetNumFilteredToys)
+function C_ToyBox.GetNumFilteredToys() end
+
+---[Documentation](https://wowpedia.fandom.com/wiki/API_C_ToyBox.GetNumLearnedDisplayedToys)
+function C_ToyBox.GetNumLearnedDisplayedToys() end
+
+---[Documentation](https://wowpedia.fandom.com/wiki/API_C_ToyBox.GetNumTotalDisplayedToys)
+function C_ToyBox.GetNumTotalDisplayedToys() end
+
+---[Documentation](https://wowpedia.fandom.com/wiki/API_C_ToyBox.GetNumToys)
+function C_ToyBox.GetNumToys() end
+
+---[Documentation](https://wowpedia.fandom.com/wiki/API_C_ToyBox.GetToyFromIndex)
+function C_ToyBox.GetToyFromIndex(itemIndex) end
+
+---[Documentation](https://wowpedia.fandom.com/wiki/API_C_ToyBox.GetToyInfo)
+---@param itemID number
+---@return number itemID
+---@return string toyName
+---@return number icon
+---@return boolean isFavorite
+---@return boolean hasFanfare
+---@return number itemQuality
+function C_ToyBox.GetToyInfo(itemID) end
+
+---[Documentation](https://wowpedia.fandom.com/wiki/API_C_ToyBox.GetToyLink)
+function C_ToyBox.GetToyLink(itemID) end
+
+---[Documentation](https://wowpedia.fandom.com/wiki/API_C_ToyBox.GetUncollectedShown)
+function C_ToyBox.GetUncollectedShown() end
+
+---[Documentation](https://wowpedia.fandom.com/wiki/API_C_ToyBox.GetUnusableShown)
+function C_ToyBox.GetUnusableShown() end
+
+---[Documentation](https://wowpedia.fandom.com/wiki/API_C_ToyBox.HasFavorites)
+function C_ToyBox.HasFavorites() end
+
+---[Documentation](https://wowpedia.fandom.com/wiki/API_C_ToyBox.IsExpansionTypeFilterChecked)
+function C_ToyBox.IsExpansionTypeFilterChecked(expansionIndex) end
+
+---[Documentation](https://wowpedia.fandom.com/wiki/API_C_ToyBox.IsSourceTypeFilterChecked)
+function C_ToyBox.IsSourceTypeFilterChecked(sourceIndex) end
+
+---[Documentation](https://wowpedia.fandom.com/wiki/API_C_ToyBox.IsToyUsable)
+function C_ToyBox.IsToyUsable(itemID) end
+
+---[Documentation](https://wowpedia.fandom.com/wiki/API_C_ToyBox.PickupToyBoxItem)
+function C_ToyBox.PickupToyBoxItem(itemID) end
+
+---[Documentation](https://wowpedia.fandom.com/wiki/API_C_ToyBox.SetAllExpansionTypeFilters)
+function C_ToyBox.SetAllExpansionTypeFilters(checked) end
+
+---[Documentation](https://wowpedia.fandom.com/wiki/API_C_ToyBox.SetAllSourceTypeFilters)
+function C_ToyBox.SetAllSourceTypeFilters(checked) end
+
+---[Documentation](https://wowpedia.fandom.com/wiki/API_C_ToyBox.SetCollectedShown)
+function C_ToyBox.SetCollectedShown(checked) end
+
+---[Documentation](https://wowpedia.fandom.com/wiki/API_C_ToyBox.SetExpansionTypeFilter)
+function C_ToyBox.SetExpansionTypeFilter(expansionIndex, checked) end
+
+---[Documentation](https://wowpedia.fandom.com/wiki/API_C_ToyBox.SetFilterString)
+function C_ToyBox.SetFilterString(searchString) end
+
+---[Documentation](https://wowpedia.fandom.com/wiki/API_C_ToyBox.SetIsFavorite)
+function C_ToyBox.SetIsFavorite(itemID, value) end
+
+---[Documentation](https://wowpedia.fandom.com/wiki/API_C_ToyBox.SetSourceTypeFilter)
+function C_ToyBox.SetSourceTypeFilter(sourceIndex, checked) end
+
+---[Documentation](https://wowpedia.fandom.com/wiki/API_C_ToyBox.SetUncollectedShown)
+function C_ToyBox.SetUncollectedShown(checked) end
+
+---[Documentation](https://wowpedia.fandom.com/wiki/API_C_ToyBox.SetUnusableShown)
+function C_ToyBox.SetUnusableShown(checked) end
+
+---[Documentation](https://wowpedia.fandom.com/wiki/API_C_TradeSkillUI.AnyRecipeCategoriesFiltered)
+function C_TradeSkillUI.AnyRecipeCategoriesFiltered() end
+
+---[Documentation](https://wowpedia.fandom.com/wiki/API_C_TradeSkillUI.AreAnyInventorySlotsFiltered)
+function C_TradeSkillUI.AreAnyInventorySlotsFiltered() end
+
+---[Documentation](https://wowpedia.fandom.com/wiki/API_C_TradeSkillUI.CanObliterateCursorItem)
+function C_TradeSkillUI.CanObliterateCursorItem() end
+
+---[Documentation](https://wowpedia.fandom.com/wiki/API_C_TradeSkillUI.CanTradeSkillListLink)
+function C_TradeSkillUI.CanTradeSkillListLink() end
+
+---[Documentation](https://wowpedia.fandom.com/wiki/API_C_TradeSkillUI.ClearInventorySlotFilter)
+function C_TradeSkillUI.ClearInventorySlotFilter() end
+
+---[Documentation](https://wowpedia.fandom.com/wiki/API_C_TradeSkillUI.ClearPendingObliterateItem)
+function C_TradeSkillUI.ClearPendingObliterateItem() end
+
+---[Documentation](https://wowpedia.fandom.com/wiki/API_C_TradeSkillUI.ClearRecipeCategoryFilter)
+function C_TradeSkillUI.ClearRecipeCategoryFilter() end
+
+---[Documentation](https://wowpedia.fandom.com/wiki/API_C_TradeSkillUI.ClearRecipeSourceTypeFilter)
+function C_TradeSkillUI.ClearRecipeSourceTypeFilter() end
+
+---[Documentation](https://wowpedia.fandom.com/wiki/API_C_TradeSkillUI.CloseObliterumForge)
+function C_TradeSkillUI.CloseObliterumForge() end
+
+---[Documentation](https://wowpedia.fandom.com/wiki/API_C_TradeSkillUI.CloseTradeSkill)
+function C_TradeSkillUI.CloseTradeSkill() end
+
+---[Documentation](https://wowpedia.fandom.com/wiki/API_C_TradeSkillUI.DropPendingObliterateItemFromCursor)
+function C_TradeSkillUI.DropPendingObliterateItemFromCursor() end
+
+---[Documentation](https://wowpedia.fandom.com/wiki/API_C_TradeSkillUI.GetAllFilterableInventorySlots)
+function C_TradeSkillUI.GetAllFilterableInventorySlots() end
+
+---[Documentation](https://wowpedia.fandom.com/wiki/API_C_TradeSkillUI.GetAllRecipeIDs)
+---@return number recipeIDs
+function C_TradeSkillUI.GetAllRecipeIDs() end
+
+---[Documentation](https://wowpedia.fandom.com/wiki/API_C_TradeSkillUI.GetCategories)
+function C_TradeSkillUI.GetCategories() end
+
+---[Documentation](https://wowpedia.fandom.com/wiki/API_C_TradeSkillUI.GetCategoryInfo)
+---@param categoryID number
+---@param returnTable table
+---@return table categoryInfo
+function C_TradeSkillUI.GetCategoryInfo(categoryID, returnTable) end
+
+---[Documentation](https://wowpedia.fandom.com/wiki/API_C_TradeSkillUI.GetFilterableInventorySlots)
+function C_TradeSkillUI.GetFilterableInventorySlots() end
+
+---[Documentation](https://wowpedia.fandom.com/wiki/API_C_TradeSkillUI.GetFilteredRecipeIDs)
+function C_TradeSkillUI.GetFilteredRecipeIDs() end
+
+---[Documentation](https://wowpedia.fandom.com/wiki/API_C_TradeSkillUI.GetObliterateSpellID)
+function C_TradeSkillUI.GetObliterateSpellID() end
+
+---[Documentation](https://wowpedia.fandom.com/wiki/API_C_TradeSkillUI.GetOnlyShowLearnedRecipes)
+function C_TradeSkillUI.GetOnlyShowLearnedRecipes() end
+
+---[Documentation](https://wowpedia.fandom.com/wiki/API_C_TradeSkillUI.GetOnlyShowMakeableRecipes)
+function C_TradeSkillUI.GetOnlyShowMakeableRecipes() end
+
+---[Documentation](https://wowpedia.fandom.com/wiki/API_C_TradeSkillUI.GetOnlyShowSkillUpRecipes)
+function C_TradeSkillUI.GetOnlyShowSkillUpRecipes() end
+
+---[Documentation](https://wowpedia.fandom.com/wiki/API_C_TradeSkillUI.GetOnlyShowUnlearnedRecipes)
+function C_TradeSkillUI.GetOnlyShowUnlearnedRecipes() end
+
+---[Documentation](https://wowpedia.fandom.com/wiki/API_C_TradeSkillUI.GetPendingObliterateItemID)
+function C_TradeSkillUI.GetPendingObliterateItemID() end
+
+---[Documentation](https://wowpedia.fandom.com/wiki/API_C_TradeSkillUI.GetPendingObliterateItemLink)
+function C_TradeSkillUI.GetPendingObliterateItemLink() end
+
