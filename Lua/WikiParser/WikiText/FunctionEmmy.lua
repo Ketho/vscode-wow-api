@@ -23,7 +23,7 @@ local fileIndex = 0
 
 local function GetOutputFile()
 	fileIndex = fileIndex + 1
-	local file = io.open(format("EmmyLua/API/GlobalAPI/Dump%d.lua", fileIndex), "w")
+	local file = io.open(string.format("EmmyLua/API/GlobalAPI/Dump%d.lua", fileIndex), "w")
 	return file
 end
 
@@ -39,7 +39,7 @@ local sorted = Util:SortTable(nonBlizzDocumented)
 for _, name in pairs(sorted) do
 	if not manualDoc[name] then
 		if emmyLua[name] then
-			outputFile:write(format("---[Documentation](https://wowpedia.fandom.com/wiki/API_%s)\n", name))
+			outputFile:write(string.format("---[Documentation](https://wowpedia.fandom.com/wiki/API_%s)\n", name))
 			outputFile:write(emmyLua[name].."\n\n")
 		elseif convertedApi[name] then
 			outputFile:write(Emmy:GetFunction(convertedApi[name]).."\n\n")
@@ -62,9 +62,9 @@ for _, name in pairs(sorted) do
 end
 
 local total = countValid+countNonValid+countNonDoc
-print("valid api", countValid, format("%.2f%%", 100*countValid/total))
-print("non valid", countNonValid, format("%.2f%%", 100*countNonValid/total))
-print("not documented", countNonDoc, format("%.2f%%", 100*countNonDoc/total))
+print("valid api", countValid, string.format("%.2f%%", 100*countValid/total))
+print("non valid", countNonValid, string.format("%.2f%%", 100*countNonValid/total))
+print("not documented", countNonDoc, string.format("%.2f%%", 100*countNonDoc/total))
 
 -- valid api       744     25.38%
 -- non valid       601     20.50%

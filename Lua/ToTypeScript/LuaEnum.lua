@@ -16,10 +16,10 @@ local function ToTypeScript()
 	for line in file:lines() do
 		local enum, value = line:match("^(LE_.+) = (%d+)")
 		if enum then
-			tinsert(t, format("\t%s: %s,", enum, value))
+			table.insert(t, string.format("\t%s: %s,", enum, value))
 		end
 	end
-	tinsert(t, "}\n")
+	table.insert(t, "}\n")
 	return pre..table.concat(t, "\n")
 end
 

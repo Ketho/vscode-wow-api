@@ -22,7 +22,7 @@ function m:ConvertApi(wowpediaDocs)
 			if info.signature.arguments then
 				args = table.concat(info.signature.arguments, ", ")
 			end
-			return format("%s(%s)", info.apiName, args)
+			return string.format("%s(%s)", info.apiName, args)
 		end
 		if #info.params.arguments > 0 then
 			newInfo.Arguments = {}

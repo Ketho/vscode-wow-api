@@ -21,20 +21,20 @@ local function ToTypeScript()
 	local sorted = Util:SortTable(data[1].var)
 	for _, name in pairs(sorted) do
 		local default, category, character, server, help = unpack(data[1].var[name])
-		tinsert(t, format("\t%s: {", name:lower()))
-		tinsert(t, format('\t\tname: "%s",', name))
-		tinsert(t, format('\t\tdefault: "%s",', default))
-		tinsert(t, format("\t\tcategory: %d,", category))
+		table.insert(t, string.format("\t%s: {", name:lower()))
+		table.insert(t, string.format('\t\tname: "%s",', name))
+		table.insert(t, string.format('\t\tdefault: "%s",', default))
+		table.insert(t, string.format("\t\tcategory: %d,", category))
 		local scope = server and "Account" or character and "Character"
 		if scope then
-			tinsert(t, format('\t\tscope: "%s",', scope))
+			table.insert(t, string.format('\t\tscope: "%s",', scope))
 		end
 		if #help > 0 then
-			tinsert(t, format('\t\thelp: "%s",', help:gsub('"', '\\"')))
+			table.insert(t, string.format('\t\thelp: "%s",', help:gsub('"', '\\"')))
 		end
-		tinsert(t, "\t},")
+		table.insert(t, "\t},")
 	end
-	tinsert(t, "}\n")
+	table.insert(t, "}\n")
 	return pre..table.concat(t, "\n")
 end
 

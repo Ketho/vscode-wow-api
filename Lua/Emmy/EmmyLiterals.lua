@@ -3,30 +3,30 @@ function Emmy:GetEventLiterals()
 		return a.LiteralName < b.LiteralName
 	end)
 	local t = {}
-	tinsert(t, "---@alias WowEvent")
+	table.insert(t, "---@alias WowEvent")
 	for _, event in ipairs(APIDocumentation.events) do
-		local line = format("'\"%s\"'", event.LiteralName)
+		local line = string.format("'\"%s\"'", event.LiteralName)
 		local payload = event:GetPayloadString(false, false)
 		if #payload > 0 then
 			line = line.." # `"..payload.."`"
 		end
-		tinsert(t, line)
+		table.insert(t, line)
 	end
 	return table.concat(t, "\n---| ").."\n"
 end
 
 local cvar_path = "Lua/Data/cache/CVars.lua"
-local cvar_url = "https://raw.githubusercontent.com/Ketho/BlizzardInterfaceResources/live/Resources/CVars.lua"
+local cvar_url = "https://raw.githubusercontent.com/Ketho/BlizzardInterfaceResources/mainline/Resources/CVars.lua"
 
-Util:CacheFile(cvar_path, cvar_url)
+Util:DownloadFile(cvar_path, cvar_url, true)
 local cvarsDump = require(cvar_path:gsub("%.lua", ""))
 
 function Emmy:GetCVarLiterals()
 	local t = {}
-	tinsert(t, "---@alias CVar")
+	table.insert(t, "---@alias CVar")
 	local sorted = Util:SortTable(cvarsDump[1].var)
 	for _, cvar in pairs(sorted) do
-		tinsert(t, format("'\"%s\"'", cvar))
+		table.insert(t, string.format("'\"%s\"'", cvar))
 	end
 	return table.concat(t, "\n---| ").."\n"
 end

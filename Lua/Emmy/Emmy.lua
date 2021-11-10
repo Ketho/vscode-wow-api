@@ -17,15 +17,15 @@ end
 function Emmy:GetSystem(system)
 	local tbl = {}
 	if system.Functions and #system.Functions>0 then
-		tinsert(tbl, format("%s = {}", system.Namespace or system.Name))
+		table.insert(tbl, string.format("%s = {}", system.Namespace or system.Name))
 		for _, func in pairs(system.Functions) do
-			tinsert(tbl, self:GetFunction(func))
+			table.insert(tbl, self:GetFunction(func))
 		end
 	end
 	if system.Tables then
 		for _, apiTable in pairs(system.Tables) do
 			if supportedTables[apiTable.Type] then
-				tinsert(tbl, self:GetTable(apiTable))
+				table.insert(tbl, self:GetTable(apiTable))
 			end
 		end
 	end
@@ -39,40 +39,40 @@ function Emmy:GetFunction(func)
 	local tbl = {}
 	if func.Arguments then
 		for _, arg in pairs(func.Arguments) do
-			tinsert(tbl, self:GetField("param", arg))
+			table.insert(tbl, self:GetField("param", arg))
 		end
 	end
 	if func.Returns then
 		for _, ret in pairs(func.Returns) do
-			tinsert(tbl, self:GetField("return", ret))
+			table.insert(tbl, self:GetField("return", ret))
 		end
 	end
-	tinsert(tbl, fs_doc:format("API_"..Util:GetFullName(func)))
+	table.insert(tbl, fs_doc:format("API_"..Util:GetFullName(func)))
 	if func.Documentation then
-		tinsert(tbl, "---"..table.concat(func.Documentation, "; "))
+		table.insert(tbl, "---"..table.concat(func.Documentation, "; "))
 	end
-	tinsert(tbl, format("function %s end", func:GetFullName(false, false)))
+	table.insert(tbl, string.format("function %s end", func:GetFullName(false, false)))
 	return table.concat(tbl, "\n")
 end
 
 function Emmy:GetTable(apiTable)
 	local tbl = {}
-	tinsert(tbl, format("---@class %s", apiTable.Name))
+	table.insert(tbl, string.format("---@class %s", apiTable.Name))
 	if apiTable.Type == "Enumeration" then
 		if #apiTable.Fields > 0 then
-			tinsert(tbl, format("local %s = {", apiTable.Name))
+			table.insert(tbl, string.format("local %s = {", apiTable.Name))
 			for _, v in pairs(apiTable.Fields) do
-				tinsert(tbl, format("\t%s = %s,", v.Name, v.EnumValue))
+				table.insert(tbl, string.format("\t%s = %s,", v.Name, v.EnumValue))
 			end
-			tinsert(tbl, "}")
+			table.insert(tbl, "}")
 		else
-			tinsert(tbl, format("local %s = {}", apiTable.Name))
+			table.insert(tbl, string.format("local %s = {}", apiTable.Name))
 		end
 	elseif apiTable.Type == "Structure" then
 		for _, field in pairs(apiTable.Fields) do
-			tinsert(tbl, self:GetField("field", field))
+			table.insert(tbl, self:GetField("field", field))
 		end
-		tinsert(tbl, format("local %s = {}", apiTable.Name))
+		table.insert(tbl, string.format("local %s = {}", apiTable.Name))
 	--elseif apiTable.Type == "Constants" then
 	end
 	return table.concat(tbl, "\n")

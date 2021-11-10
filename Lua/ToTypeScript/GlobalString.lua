@@ -44,10 +44,10 @@ local function ToTypeScript()
 			value = value:gsub("\\", "\\\\")
 		end
 		if IsValidTableKey(key) then
-			tinsert(t, fs:format(key, value))
+			table.insert(t, fs:format(key, value))
 		end
 	end
-	tinsert(t, "}\n")
+	table.insert(t, "}\n")
 	return pre..table.concat(t, "\n")
 end
 

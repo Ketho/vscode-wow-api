@@ -18,9 +18,9 @@ for line in file:lines() do
 				and not args:find("-") and not args:find("%.%.%.") and not args:find("/")
 			if isValid then
 				api[name] = args
-				file_valid:write(format("%s; %s\n", name, args))
+				file_valid:write(string.format("%s; %s\n", name, args))
 			else
-				file_invalid:write(format("%s; %s\n", name, args))
+				file_invalid:write(string.format("%s; %s\n", name, args))
 			end
 		end
 	end
