@@ -27,12 +27,17 @@ function table.wipe(tbl) end
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_strtrim)
 function strtrim(str, chars) end
 
----@param delim string
+---@param delimiter string
 ---@param str string
 ---@param pieces? number
 ---@return ...
----[Documentation](https://wowpedia.fandom.com/wiki/API_strsplit)
-function strsplit(delim, str, pieces) end
+function strsplit(delimiter, str, pieces) end
+
+---@param delimiter string
+---@param str string
+---@param pieces? number
+---@return string[] chunks
+function strsplittable(delimiter, str, pieces) end
 
 ---@param delim string
 ---@param str1 string

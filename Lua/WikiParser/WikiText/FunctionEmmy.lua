@@ -1,7 +1,7 @@
 -- this place is a mess
 local wowpedia_arguments = require("Lua/WikiParser/WikiText/FunctionArgument")
 local nonBlizzDocumented = require("Lua/WikiParser/WikiText/NonBlizzardDocumented")[1]
-local manualDocFile = io.open("EmmyLua/API/GlobalAPI/GlobalAPI.lua")
+local manualDocFile = io.open("EmmyLua/API/GlobalAPI/ManualDoc.lua")
 
 local parserData = require("Lua/WikiParser/XmlParser")
 local validated, nonvalidated, emmyLua
