@@ -1,5 +1,4 @@
---- Pretty prints a variable or value.
+---[FrameXML](https://www.townlong-yak.com/framexml/go/DevTools_Dump)
 ---@param value any
 ---@param startKey? string
----[FrameXML](https://www.townlong-yak.com/framexml/go/DevTools_Dump)
 function DevTools_Dump(value, startKey) end

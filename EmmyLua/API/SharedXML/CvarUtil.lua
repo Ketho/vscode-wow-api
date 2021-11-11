@@ -1,6 +1,6 @@
+---[Documentation](https://wowpedia.fandom.com/wiki/API_C_CVar.RegisterCVar)
 ---@param name CVar
 ---@param value? string
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_CVar.RegisterCVar)
 function RegisterCVar(name, value)
 	C_CVar.RegisterCVar(name, value);
 end
@@ -10,11 +10,11 @@ function ResetTestCvars()
 	C_CVar.ResetTestCVars();
 end
 
+---[Documentation](https://wowpedia.fandom.com/wiki/API_C_CVar.SetCVar)
 ---@param name CVar
 ---@param value? boolean|string
 ---@param eventName? string
 ---@return boolean success
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_CVar.SetCVar)
 function SetCVar(name, value, eventName)
 	if type(value) == "boolean" then
 		return C_CVar.SetCVar(name, value and "1" or "0", eventName);
@@ -23,41 +23,41 @@ function SetCVar(name, value, eventName)
 	end
 end
 
+---[Documentation](https://wowpedia.fandom.com/wiki/API_C_CVar.GetCVar)
 ---@param name CVar
 ---@return string? value
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_CVar.GetCVar)
 function GetCVar(name)
 	return C_CVar.GetCVar(name);
 end
 
+---[Documentation](https://wowpedia.fandom.com/wiki/API_C_CVar.SetCVarBitfield)
 ---@param name CVar
 ---@param index number
 ---@param value boolean
 ---@param scriptCVar? string
 ---@return boolean success
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_CVar.SetCVarBitfield)
 function SetCVarBitfield(name, index, value, scriptCVar)
 	return C_CVar.SetCVarBitfield(name, index, value, scriptCVar);
 end
 
+---[Documentation](https://wowpedia.fandom.com/wiki/API_C_CVar.GetCVarBitfield)
 ---@param name CVar
 ---@param index number
 ---@return boolean? value
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_CVar.GetCVarBitfield)
 function GetCVarBitfield(name, index)
 	return C_CVar.GetCVarBitfield(name, index);
 end
 
+---[Documentation](https://wowpedia.fandom.com/wiki/API_C_CVar.GetCVarBool)
 ---@param name CVar
 ---@return boolean? value
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_CVar.GetCVarBool)
 function GetCVarBool(name)
 	return C_CVar.GetCVarBool(name);
 end
 
+---[Documentation](https://wowpedia.fandom.com/wiki/API_C_CVar.GetCVarDefault)
 ---@param name CVar
 ---@return string? defaultValue
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_CVar.GetCVarDefault)
 function GetCVarDefault(name)
 	return C_CVar.GetCVarDefault(name);
 end

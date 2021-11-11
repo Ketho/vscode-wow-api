@@ -5,7 +5,8 @@ local function ripairsiter(table, index)
 	end
 end
 
--- Reverse iterates over a sequential table.
+---[FrameXML](https://www.townlong-yak.com/framexml/go/ripairs)
+-- Reverse iterates over a sequential table. Example:
 -- ```
 -- for i, v in ripairs(tbl) do body end
 -- ```
@@ -13,15 +14,14 @@ end
 ---@return function iter
 ---@return table invariant
 ---@return number init
----[FrameXML](https://www.townlong-yak.com/framexml/go/ripairs)
 function ripairs(table)
 	return ripairsiter, table, #table + 1;
 end
 
+---[FrameXML](https://www.townlong-yak.com/framexml/go/tDeleteItem)
 -- Removes a value from a sequential table.
 ---@param tbl table
 ---@param item any
----[FrameXML](https://www.townlong-yak.com/framexml/go/tDeleteItem)
 function tDeleteItem(tbl, item)
 	local index = 1;
 	while tbl[index] do
@@ -33,11 +33,11 @@ function tDeleteItem(tbl, item)
 	end
 end
 
+---[FrameXML](https://www.townlong-yak.com/framexml/go/tIndexOf)
 -- Returns the index for a value in a table.
 ---@param tbl table
 ---@param item any
 ---@return number index
----[FrameXML](https://www.townlong-yak.com/framexml/go/tIndexOf)
 function tIndexOf(tbl, item)
 	for i, v in ipairs(tbl) do
 		if item == v then
@@ -46,11 +46,11 @@ function tIndexOf(tbl, item)
 	end
 end
 
+---[FrameXML](https://www.townlong-yak.com/framexml/go/tContains)
 -- Returns true if a table contains a value.
 ---@param tbl table
 ---@param item any
 ---@return boolean
----[FrameXML](https://www.townlong-yak.com/framexml/go/tContains)
 function tContains(tbl, item)
 	for k, v in pairs(tbl) do
 		if item == v then
@@ -60,13 +60,13 @@ function tContains(tbl, item)
 	return false;
 end
 
+---[FrameXML](https://www.townlong-yak.com/framexml/go/tCompare)
 -- This is a deep compare on the values of the table (based on depth) but not a deep comparison
 -- of the keys, as this would be an expensive check and won't be necessary in most cases.
 ---@param lhsTable table
 ---@param rhsTable table
 ---@param depth? number
 ---@return boolean
----[FrameXML](https://www.townlong-yak.com/framexml/go/tCompare)
 function tCompare(lhsTable, rhsTable, depth)
 	depth = depth or 1;
 	for key, value in pairs(lhsTable) do
@@ -95,10 +95,10 @@ function tCompare(lhsTable, rhsTable, depth)
 	return true;
 end
 
+---[FrameXML](https://www.townlong-yak.com/framexml/go/tInvert)
 -- Returns an inverted table.
 ---@param tbl table
 ---@return table
----[FrameXML](https://www.townlong-yak.com/framexml/go/tInvert)
 function tInvert(tbl)
 	local inverted = {};
 	for k, v in pairs(tbl) do
@@ -107,11 +107,11 @@ function tInvert(tbl)
 	return inverted;
 end
 
+---[FrameXML](https://www.townlong-yak.com/framexml/go/tFilter)
 ---@param tbl table
 ---@param pred function
 ---@param isIndexTable boolean
 ---@return table
----[FrameXML](https://www.townlong-yak.com/framexml/go/tFilter)
 function tFilter(tbl, pred, isIndexTable)
 	local out = {};
 
@@ -134,19 +134,19 @@ function tFilter(tbl, pred, isIndexTable)
 	return out;
 end
 
+---[FrameXML](https://www.townlong-yak.com/framexml/go/tAppendAll)
 -- Appends the contents of a sequential table to another table.
 ---@param table table
 ---@param addedArray table
----[FrameXML](https://www.townlong-yak.com/framexml/go/tAppendAll)
 function tAppendAll(table, addedArray)
 	for i, element in ipairs(addedArray) do
 		tinsert(table, element);
 	end
 end
 
+---[FrameXML](https://www.townlong-yak.com/framexml/go/tUnorderedRemove)
 ---@param tbl table
 ---@param index number
----[FrameXML](https://www.townlong-yak.com/framexml/go/tUnorderedRemove)
 function tUnorderedRemove(tbl, index)
 	if index ~= #tbl then
 		tbl[index] = tbl[#tbl];
@@ -155,10 +155,10 @@ function tUnorderedRemove(tbl, index)
 	table.remove(tbl);
 end
 
+---[FrameXML](https://www.townlong-yak.com/framexml/go/CopyTable)
 -- Returns a deep copy of a table.
 ---@param settings table
 ---@return table
----[FrameXML](https://www.townlong-yak.com/framexml/go/CopyTable)
 function CopyTable(settings)
 	local copy = {};
 	for k, v in pairs(settings) do
@@ -171,10 +171,10 @@ function CopyTable(settings)
 	return copy;
 end
 
+---[FrameXML](https://www.townlong-yak.com/framexml/go/AccumulateIf)
 ---@param tbl table
 ---@param pred function
 ---@return number
----[FrameXML](https://www.townlong-yak.com/framexml/go/AccumulateIf)
 function AccumulateIf(tbl, pred)
 	local count = 0;
 	for k, v in pairs(tbl) do
@@ -185,10 +185,10 @@ function AccumulateIf(tbl, pred)
 	return count;
 end
 
+---[FrameXML](https://www.townlong-yak.com/framexml/go/ContainsIf)
 ---@param tbl table
 ---@param pred function
 ---@return boolean
----[FrameXML](https://www.townlong-yak.com/framexml/go/ContainsIf)
 function ContainsIf(tbl, pred)
 	for k, v in pairs(tbl) do
 		if (pred(v)) then
@@ -199,11 +199,11 @@ function ContainsIf(tbl, pred)
 	return false;
 end
 
+---[FrameXML](https://www.townlong-yak.com/framexml/go/FindInTableIf)
 ---@param tbl table
 ---@param pred function
 ---@return string|number key
 ---@return any value
----[FrameXML](https://www.townlong-yak.com/framexml/go/FindInTableIf)
 function FindInTableIf(tbl, pred)
 	for k, v in pairs(tbl) do
 		if (pred(v)) then
@@ -214,18 +214,18 @@ function FindInTableIf(tbl, pred)
 	return nil;
 end
 
+---[FrameXML](https://www.townlong-yak.com/framexml/go/SafePack)
 ---@vararg any
 ---@return table
----[FrameXML](https://www.townlong-yak.com/framexml/go/SafePack)
 function SafePack(...)
 	local tbl = { ... };
 	tbl.n = select("#", ...);
 	return tbl;
 end
 
+---[FrameXML](https://www.townlong-yak.com/framexml/go/SafeUnpack)
 ---@param tbl table
 ---@return ...
----[FrameXML](https://www.townlong-yak.com/framexml/go/SafeUnpack)
 function SafeUnpack(tbl)
 	return unpack(tbl, 1, tbl.n);
 end

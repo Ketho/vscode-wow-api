@@ -1,2 +1,0 @@
----@class GameTooltipText : Font
----@class GameTooltipTextSmall : Font
