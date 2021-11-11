@@ -1,5 +1,4 @@
-require("Lua/constants")
-require("Lua/Util/Util")
+local Util = require("Lua/Util/Util")
 
 -- create folders if they don't exist yet
 Util:MakeDir("Lua/Data/cache")

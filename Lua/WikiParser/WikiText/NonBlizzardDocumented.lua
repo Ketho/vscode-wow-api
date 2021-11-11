@@ -1,7 +1,9 @@
-local path = "Lua/Data/cache/GlobalAPI.lua"
-local url = "https://raw.githubusercontent.com/Ketho/BlizzardInterfaceResources/mainline/Resources/GlobalAPI.lua"
-Util:DownloadFile(path, url, true)
-local globalApi = require(path:gsub("%.lua", ""))[1]
+local Util = require("Lua/Util/Util")
+
+local PATH = "Lua/Data/cache/GlobalAPI.lua"
+local URL = "https://raw.githubusercontent.com/Ketho/BlizzardInterfaceResources/mainline/Resources/GlobalAPI.lua"
+Util:DownloadFile(PATH, URL, true)
+local globalApi = require(PATH:gsub("%.lua", ""))[1]
 
 local blizzDoc = {}
 for _, func in ipairs(APIDocumentation.functions) do

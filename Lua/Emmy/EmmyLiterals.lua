@@ -1,3 +1,5 @@
+local Util = require("Lua/Util/util")
+
 function Emmy:GetEventLiterals()
 	table.sort(APIDocumentation.events, function(a, b)
 		return a.LiteralName < b.LiteralName

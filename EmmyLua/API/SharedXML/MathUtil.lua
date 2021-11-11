@@ -97,7 +97,7 @@ end
 ---@param amount number
 ---@return number
 function FrameDeltaLerp(startValue, endValue, amount)
-	return DeltaLerp(startValue, endValue, amount, GetTickTime());
+	--return DeltaLerp(startValue, endValue, amount, GetTickTime());
 end
 
 ---[FrameXML](https://www.townlong-yak.com/framexml/go/RandomFloatInRange)
@@ -154,5 +154,6 @@ end
 ---@param y2 number
 ---@return number
 function CalculateAngleBetween(x1, y1, x2, y2)
+	---@diagnostic disable-next-line: deprecated
 	return math.atan2(y2 - y1, x2 - x1);
 end

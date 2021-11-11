@@ -1,4 +1,5 @@
-local parser = require "Lua/Util/wowtoolsparser"
+local constants = require("Lua/Util/constants")
+local parser = require("Lua/Util/wowtoolsparser")
 
 local pre = [[interface GlobalStringInterface {
 	[key: string]: string

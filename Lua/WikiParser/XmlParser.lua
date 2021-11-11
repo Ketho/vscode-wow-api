@@ -1,5 +1,6 @@
 local xml2lua = require "xml2lua"
 local handler = require "xmlhandler.tree"
+local Util = require("Lua/Util/Util")
 
 local PATH = "Lua/Data/cache/Wowpedia_API.xml"
 

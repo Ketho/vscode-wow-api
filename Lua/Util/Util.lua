@@ -2,7 +2,7 @@ local lfs = require "lfs"
 local https = require "ssl.https"
 local ltn12 = require "ltn12"
 
-Util = {}
+local Util = {}
 local INVALIDATION_TIME = 60*60
 
 function Util:LoadFile(path)
@@ -89,3 +89,5 @@ function Util:GetFullName(apiTable)
 	end
 	return fullName
 end
+
+return Util

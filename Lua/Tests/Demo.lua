@@ -24,4 +24,3 @@ f:RegisterEvent("ACHIEVEMENT_EARNED")
 
 -- frames
 local isVisible = UIParent:IsVisible()
-local text = GameTooltip.ItemTooltip.Tooltip.TextLeft1

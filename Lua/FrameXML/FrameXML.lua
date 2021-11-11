@@ -1,7 +1,7 @@
+local Util = require("Lua/Util/util")
 local patches = require("Lua/FrameXML/Patches")
 
 local m = {}
-
 local ignoredFiles = {
 	["ConfigurationWarningsDocumentation.lua"] = true,
 }

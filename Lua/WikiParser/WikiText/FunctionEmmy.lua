@@ -1,3 +1,5 @@
+local Util = require("Lua/Util/Util")
+
 -- this place is a mess
 local wowpedia_arguments = require("Lua/WikiParser/WikiText/FunctionArgument")
 local nonBlizzDocumented = require("Lua/WikiParser/WikiText/NonBlizzardDocumented")[1]
