@@ -37,14 +37,42 @@ local enum_url = "https://raw.githubusercontent.com/Ketho/BlizzardInterfaceResou
 Util:DownloadFile(enum_path, enum_url, true)
 require(enum_path:gsub("%.lua", ""))
 
+local function SortByValue(tbl)
+	local t = {}
+	for key, value in pairs(tbl) do
+		table.insert(t, {key=key, value=value})
+	end
+	table.sort(t, function(a, b)
+		if a.value ~= b.value then
+			return a.value < b.value
+		else
+			return a.key < b.key
+		end
+	end)
+	return t
+end
+
 function Emmy:GetEnumTable()
 	local t = {}
-	local sorted = Util:SortTable(Enum)
 	table.insert(t, "Enum = {")
-	for _, enum in pairs(sorted) do
-		table.insert(t, string.format("\t---@type %s", enum))
-		table.insert(t, string.format("\t%s = {},", enum))
+	for _, name in pairs(Util:SortTable(Enum)) do
+		table.insert(t, string.format("\t---@class %s", name))
+		table.insert(t, string.format("\t%s = {", name))
+		for _, enumTbl in pairs(SortByValue(Enum[name])) do
+			table.insert(t, string.format("\t\t%s = %d,", enumTbl.key, enumTbl.value))
+		end
+		table.insert(t, "\t},")
 	end
-	table.insert(t, "}")
-	return table.concat(t, "\n").."\n"
+	table.insert(t, "}\n")
+
+	table.insert(t, "Constants = {")
+	for _, name in pairs(Util:SortTable(Constants)) do
+		table.insert(t, string.format("\t%s = {", name))
+		for _, constTbl in pairs(SortByValue(Constants[name])) do
+			table.insert(t, string.format("\t\t%s = %d,", constTbl.key, constTbl.value))
+		end
+		table.insert(t, "\t},")
+	end
+	table.insert(t, "}\n")
+	return table.concat(t, "\n")
 end
