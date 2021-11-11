@@ -1,30 +1,29 @@
--- this complains about Lua 5.1 stuff but we're using 5.3
 ---@diagnostic disable: deprecated
 
+---[Documentation](https://wowpedia.fandom.com/wiki/API_foreach)
 ---@param tbl table
 ---@param func function
----[Documentation](https://wowpedia.fandom.com/wiki/API_foreach)
 function table.foreach(tbl, func) end
 
+---[Documentation](https://wowpedia.fandom.com/wiki/API_foreachi)
 ---@param tbl table
 ---@param func function
----[Documentation](https://wowpedia.fandom.com/wiki/API_foreachi)
 function table.foreachi(tbl, func) end
 
+---[Documentation](https://wowpedia.fandom.com/wiki/API_getn)
 ---@param tbl table
 ---@return number size
----[Documentation](https://wowpedia.fandom.com/wiki/API_getn)
 function table.getn(tbl) end
 
+---[Documentation](https://wowpedia.fandom.com/wiki/API_wipe)
 ---@param tbl table
 ---@return table
----[Documentation](https://wowpedia.fandom.com/wiki/API_wipe)
 function table.wipe(tbl) end
 
+---[Documentation](https://wowpedia.fandom.com/wiki/API_strtrim)
 ---@param str string
 ---@param chars? string
 ---@return string
----[Documentation](https://wowpedia.fandom.com/wiki/API_strtrim)
 function strtrim(str, chars) end
 
 ---@param delimiter string
@@ -39,50 +38,50 @@ function strsplit(delimiter, str, pieces) end
 ---@return string[] chunks
 function strsplittable(delimiter, str, pieces) end
 
+---[Documentation](https://wowpedia.fandom.com/wiki/API_strjoin)
 ---@param delim string
 ---@param str1 string
 ---@param str2 string
 ---@vararg string
 ---@return string
----[Documentation](https://wowpedia.fandom.com/wiki/API_strjoin)
 function strjoin(delim, str1, str2, ...) end
 
+---[Documentation](https://wowpedia.fandom.com/wiki/API_difftime)
 ---@param time1 number
 ---@param time2 number
 ---@return number
----[Documentation](https://wowpedia.fandom.com/wiki/API_difftime)
 function difftime(time1, time2) end
 
+---[Documentation](https://wowpedia.fandom.com/wiki/API_fastrandom)
 ---@param lower? number
 ---@param upper? number
 ---@return number
----[Documentation](https://wowpedia.fandom.com/wiki/API_fastrandom)
 function fastrandom(lower, upper) end
 
----@return number memoryInUse
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_gcinfo)
+---@return number memoryInUse
 function gcinfo() end
 
+---[Documentation](https://wowpedia.fandom.com/wiki/API_newproxy)
 ---@param bool boolean
 ---@return userdata
 ---@overload fun(otherproxy: userdata): userdata
----[Documentation](https://wowpedia.fandom.com/wiki/API_newproxy)
 function newproxy(bool) end
 
+---[Documentation](https://wowpedia.fandom.com/wiki/API_strcmputf8i)
 ---@param str1 string
 ---@param str2 string
 ---@return string
----[Documentation](https://wowpedia.fandom.com/wiki/API_strcmputf8i)
 function strcmputf8i(str1, str2) end
 
+---[Documentation](https://wowpedia.fandom.com/wiki/API_strconcat)
 ---@vararg string
 ---@return string
----[Documentation](https://wowpedia.fandom.com/wiki/API_strconcat)
 function strconcat(...) end
 
+---[Documentation](https://wowpedia.fandom.com/wiki/API_strlenutf8)
 ---@param str string
 ---@return number
----[Documentation](https://wowpedia.fandom.com/wiki/API_strlenutf8)
 function strlenutf8(str) end
 
 bit = {}
@@ -139,9 +138,6 @@ date = os.date
 
 -- os.time
 time = os.time
-
--- table.unpack (defined in sumnekos, even for lua >5.1)
---unpack = table.unpack
 
 -- dont know how to mark something as not existing
 --debug = nil

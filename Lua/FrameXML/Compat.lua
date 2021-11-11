@@ -42,12 +42,9 @@ function CreateFromMixins(...)
 end
 
 Enum = {
-	-- CurrencyConstantsDocumentation.lua CurrencyConsts
+	-- used in CurrencyConstantsDocumentation.lua:CurrencyConsts
 	PlayerCurrencyFlagsDbFlags = {
-		IgnoreMaxQtyOnload = 1,
-		Reuse1 = 2,
 		InBackpack = 4,
 		UnusedInUI = 8,
-		Reuse2 = 16,
 	}
 }
