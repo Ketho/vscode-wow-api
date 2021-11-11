@@ -1,3 +1,15 @@
+---[Documentation](https://wowpedia.fandom.com/wiki/API_GetLFGDungeonRewardLink)
+function GetLFGDungeonRewardLink(dungeonID, rewardIndex) end
+
+---[Documentation](https://wowpedia.fandom.com/wiki/API_GetLFGDungeonRewards)
+function GetLFGDungeonRewards(dungeonID) end
+
+---[Documentation](https://wowpedia.fandom.com/wiki/API_GetLFGDungeonShortageRewardInfo)
+function GetLFGDungeonShortageRewardInfo(dungeonID, shortageIndex, rewardIndex) end
+
+---[Documentation](https://wowpedia.fandom.com/wiki/API_GetLFGDungeonShortageRewardLink)
+function GetLFGDungeonShortageRewardLink(dungeonID, shortageIndex, rewardIndex) end
+
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_GetLFGInfoServer)
 function GetLFGInfoServer(category, lfgID) end
 
@@ -360,9 +372,6 @@ function GetNextCompleatedTutorial(tutorial) end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_GetNextPendingInviteConfirmation)
 function GetNextPendingInviteConfirmation() end
-
----[Documentation](https://wowpedia.fandom.com/wiki/API_GetNormalizedRealmName)
-function GetNormalizedRealmName() end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_GetNumActiveQuests)
 function GetNumActiveQuests() end
@@ -979,6 +988,12 @@ function GetQuestLogLeaderBoard(ldrIndex, questIndex) end
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_GetQuestLogPortraitTurnIn)
 function GetQuestLogPortraitTurnIn() end
 
+---[Documentation](https://wowpedia.fandom.com/wiki/API_GetQuestLogQuestText)
+---@param questLogIndex? number
+---@return string questDescription
+---@return string questObjectives
+function GetQuestLogQuestText(questLogIndex) end
+
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_GetQuestLogQuestType)
 function GetQuestLogQuestType() end
 
@@ -1417,9 +1432,52 @@ function GetSpecChangeCost() end
 function GetSpecialization(isInspect, isPet, specGroup) end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_GetSpecializationInfo)
-function GetSpecializationInfo(specIndex, isInspect, isPet, inspectTarget, sex) end
+---@param specID number
+---@param isInspect? boolean
+---@param isPet? boolean
+---@param inspectTarget? number
+---@param sex? number
+---@return number id
+---@return string name
+---@return string description
+---@return string icon
+---@return string role
+---@return number primaryStat
+function GetSpecializationInfo(specID, isInspect, isPet, inspectTarget, sex) end
 
----[Documentation](https://wowpedia.fandom.com/wiki/API_GetSpecializationInfoForSpecID)
+---[Documentation](https://wowpedia.fandom.com/wiki/API_GetSpecializationInfo)
+---@param specID number
+---@return number id
+---@return string name
+---@return string description
+---@return string icon
+---@return string role
+---@return string classFile
+---@return string className
+function GetSpecializationInfoByID(specID) end
+
+---[Documentation](https://wowpedia.fandom.com/wiki/API_GetSpecializationInfo)
+---@param classID number
+---@param specIndex number
+---@return number specID
+---@return string name
+---@return string description
+---@return number iconID
+---@return string role
+---@return boolean isRecommended
+---@return boolean isAllowed
+function GetSpecializationInfoForClassID(classID, specIndex) end
+
+---[Documentation](https://wowpedia.fandom.com/wiki/API_GetSpecializationInfo)
+---@param specID number
+---@param sex? number
+---@return number specID
+---@return string name
+---@return string description
+---@return number iconID
+---@return string role
+---@return boolean isRecommended
+---@return boolean isAllowed
 function GetSpecializationInfoForSpecID(specID, sex) end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_GetSpecializationMasterySpells)
@@ -2147,6 +2205,12 @@ function IsActiveQuestTrivial(index) end
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_IsAddOnLoadOnDemand)
 function IsAddOnLoadOnDemand() end
 
+---[Documentation](https://wowpedia.fandom.com/wiki/API_IsAddOnLoaded)
+---@param addonInfo number|string index or name
+---@return boolean loaded
+---@return boolean finished
+function IsAddOnLoaded(addonInfo) end
+
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_IsAddonVersionCheckEnabled)
 function IsAddonVersionCheckEnabled() end
 
@@ -2585,61 +2649,4 @@ function IsQuestItemHidden(index) end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_IsQuestLogSpecialItemInRange)
 function IsQuestLogSpecialItemInRange(index, target) end
-
----[Documentation](https://wowpedia.fandom.com/wiki/API_IsQuestSequenced)
-function IsQuestSequenced(questID) end
-
----[Documentation](https://wowpedia.fandom.com/wiki/API_IsRaidMarkerActive)
-function IsRaidMarkerActive(index) end
-
----[Documentation](https://wowpedia.fandom.com/wiki/API_IsRangedWeapon)
-function IsRangedWeapon() end
-
----[Documentation](https://wowpedia.fandom.com/wiki/API_IsReagentBankUnlocked)
-function IsReagentBankUnlocked() end
-
----[Documentation](https://wowpedia.fandom.com/wiki/API_IsRecognizedName)
----@param text string
----@param includeBitfield number
----@param excludeBitfield number
----@return boolean isRecognized
-function IsRecognizedName(text, includeBitfield, excludeBitfield) end
-
----[Documentation](https://wowpedia.fandom.com/wiki/API_IsRecruitAFriendLinked)
----@return boolean isRafLinked
-function IsRecruitAFriendLinked() end
-
----[Documentation](https://wowpedia.fandom.com/wiki/API_IsReplacingUnit)
-function IsReplacingUnit() end
-
----[Documentation](https://wowpedia.fandom.com/wiki/API_IsResting)
----@return boolean resting
-function IsResting() end
-
----[Documentation](https://wowpedia.fandom.com/wiki/API_IsRestrictedAccount)
-function IsRestrictedAccount() end
-
----[Documentation](https://wowpedia.fandom.com/wiki/API_IsRightAltKeyDown)
-function IsRightAltKeyDown() end
-
----[Documentation](https://wowpedia.fandom.com/wiki/API_IsRightControlKeyDown)
-function IsRightControlKeyDown() end
-
----[Documentation](https://wowpedia.fandom.com/wiki/API_IsRightMetaKeyDown)
-function IsRightMetaKeyDown() end
-
----[Documentation](https://wowpedia.fandom.com/wiki/API_IsRightShiftKeyDown)
-function IsRightShiftKeyDown() end
-
----[Documentation](https://wowpedia.fandom.com/wiki/API_IsSelectedSpellBookItem)
-function IsSelectedSpellBookItem(spellSlot) end
-
----[Documentation](https://wowpedia.fandom.com/wiki/API_IsServerControlledBackfill)
-function IsServerControlledBackfill() end
-
----[Documentation](https://wowpedia.fandom.com/wiki/API_IsShiftKeyDown)
-function IsShiftKeyDown() end
-
----[Documentation](https://wowpedia.fandom.com/wiki/API_IsSpellClassOrSpec)
-function IsSpellClassOrSpec() end
 

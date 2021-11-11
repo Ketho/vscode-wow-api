@@ -19,7 +19,6 @@ function SpellMixin:Clear() end
 ---@return boolean
 function SpellMixin:IsSpellEmpty() end
 
--- Spell API
 ---@return boolean
 function SpellMixin:IsSpellDataCached() end
 

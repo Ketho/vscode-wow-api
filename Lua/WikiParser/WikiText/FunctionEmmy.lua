@@ -1,23 +1,16 @@
 -- this place is a mess
 local wowpedia_arguments = require("Lua/WikiParser/WikiText/FunctionArgument")
 local nonBlizzDocumented = require("Lua/WikiParser/WikiText/NonBlizzardDocumented")[1]
-local manualDocFile = io.open("EmmyLua/API/GlobalAPI/ManualDoc.lua")
 
 local parserData = require("Lua/WikiParser/XmlParser")
 local validated, nonvalidated, emmyLua
 if type(parserData) == "table" then
-	validated, nonvalidated, emmyLua = unpack(parserData)
+	validated, nonvalidated, emmyLua, emmyLuaMulti = unpack(parserData)
 else
 	return
 end
 local converter = require("Lua/WikiParser/WikiText/WowpediaConverter")
 local convertedApi = converter:ConvertApi(validated)
-
--- dont generate for manually documented API
-local manualDoc = {}
-for s in string.gmatch(manualDocFile:read("a"), "function (%w+)") do
-	manualDoc[s] = true
-end
 
 local fileIndex = 0
 
@@ -44,9 +37,10 @@ local function WriteToFile(tblContents, isFlush)
 	end
 end
 
+emmyLuaMulti.strsplittable = true -- temp hack
 local sorted = Util:SortTable(nonBlizzDocumented)
 for _, name in pairs(sorted) do
-	if not manualDoc[name] then
+	if not emmyLuaMulti[name] then
 		if emmyLua[name] then
 			table.insert(tempTbl, string.format("---[Documentation](https://wowpedia.fandom.com/wiki/API_%s)\n", name))
 			table.insert(tempTbl, emmyLua[name].."\n\n")

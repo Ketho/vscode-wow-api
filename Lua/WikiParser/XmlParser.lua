@@ -57,7 +57,7 @@ local validTypes = {
 local redirects = {}
 local validatedApi = {}
 local nonValidatedApi = {}
-local EmmyLuaApi = {}
+local EmmyLuaApi, EmmyLuaMultiApi = {}, {}
 
 local function GetApiName(name)
 	return name:match("API (.+)"):gsub(" ", "_")
@@ -144,6 +144,12 @@ function m:ParsePages(options)
 
 			local emmylua = wikiText:match("<!%-%- emmylua\n(.*)\n%-%->")
 			if emmylua then
+				-- copy emmylua from wowpedia pages and avoid making duplicates
+				for name in emmylua:gmatch("function (.-)%(") do
+					if name ~= info.apiName then
+						EmmyLuaMultiApi[name] = true
+					end
+				end
 				EmmyLuaApi[info.apiName] = emmylua
 			end
 		end
@@ -306,4 +312,4 @@ m:ParsePages()
 -- end
 
 print("Parsed XML")
-return {validatedApi, nonValidatedApi, EmmyLuaApi}
+return {validatedApi, nonValidatedApi, EmmyLuaApi, EmmyLuaMultiApi}

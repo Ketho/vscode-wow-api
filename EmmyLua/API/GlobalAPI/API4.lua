@@ -1,3 +1,60 @@
+---[Documentation](https://wowpedia.fandom.com/wiki/API_IsQuestSequenced)
+function IsQuestSequenced(questID) end
+
+---[Documentation](https://wowpedia.fandom.com/wiki/API_IsRaidMarkerActive)
+function IsRaidMarkerActive(index) end
+
+---[Documentation](https://wowpedia.fandom.com/wiki/API_IsRangedWeapon)
+function IsRangedWeapon() end
+
+---[Documentation](https://wowpedia.fandom.com/wiki/API_IsReagentBankUnlocked)
+function IsReagentBankUnlocked() end
+
+---[Documentation](https://wowpedia.fandom.com/wiki/API_IsRecognizedName)
+---@param text string
+---@param includeBitfield number
+---@param excludeBitfield number
+---@return boolean isRecognized
+function IsRecognizedName(text, includeBitfield, excludeBitfield) end
+
+---[Documentation](https://wowpedia.fandom.com/wiki/API_IsRecruitAFriendLinked)
+---@return boolean isRafLinked
+function IsRecruitAFriendLinked() end
+
+---[Documentation](https://wowpedia.fandom.com/wiki/API_IsReplacingUnit)
+function IsReplacingUnit() end
+
+---[Documentation](https://wowpedia.fandom.com/wiki/API_IsResting)
+---@return boolean resting
+function IsResting() end
+
+---[Documentation](https://wowpedia.fandom.com/wiki/API_IsRestrictedAccount)
+function IsRestrictedAccount() end
+
+---[Documentation](https://wowpedia.fandom.com/wiki/API_IsRightAltKeyDown)
+function IsRightAltKeyDown() end
+
+---[Documentation](https://wowpedia.fandom.com/wiki/API_IsRightControlKeyDown)
+function IsRightControlKeyDown() end
+
+---[Documentation](https://wowpedia.fandom.com/wiki/API_IsRightMetaKeyDown)
+function IsRightMetaKeyDown() end
+
+---[Documentation](https://wowpedia.fandom.com/wiki/API_IsRightShiftKeyDown)
+function IsRightShiftKeyDown() end
+
+---[Documentation](https://wowpedia.fandom.com/wiki/API_IsSelectedSpellBookItem)
+function IsSelectedSpellBookItem(spellSlot) end
+
+---[Documentation](https://wowpedia.fandom.com/wiki/API_IsServerControlledBackfill)
+function IsServerControlledBackfill() end
+
+---[Documentation](https://wowpedia.fandom.com/wiki/API_IsShiftKeyDown)
+function IsShiftKeyDown() end
+
+---[Documentation](https://wowpedia.fandom.com/wiki/API_IsSpellClassOrSpec)
+function IsSpellClassOrSpec() end
+
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_IsSpellInRange)
 function IsSpellInRange(spellName, unit) end
 
@@ -1894,6 +1951,7 @@ function UnitAttackSpeed(unit) end
 ---@return ...
 function UnitAura(unit, index, filter) end
 
+---[Documentation](https://wowpedia.fandom.com/wiki/API_UnitAura)
 ---@param unit number
 ---@param index number
 ---@param filter? number
@@ -1915,6 +1973,7 @@ function UnitAura(unit, index, filter) end
 ---@return ...
 function UnitBuff(unit, index, filter) end
 
+---[Documentation](https://wowpedia.fandom.com/wiki/API_UnitAura)
 ---@param unit number
 ---@param index number
 ---@param filter? number
@@ -1951,9 +2010,6 @@ function UnitBattlePetSpeciesID() end
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_UnitBattlePetType)
 function UnitBattlePetType() end
 
----[Documentation](https://wowpedia.fandom.com/wiki/API_UnitBuff)
-function UnitBuff(unit, index, raidFilter) end
-
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_UnitCanAssist)
 function UnitCanAssist(unit, otherUnit) end
 
@@ -1968,6 +2024,18 @@ function UnitCanPetBattle() end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_UnitCastingInfo)
 function UnitCastingInfo(unit) end
+
+---[Documentation](https://wowpedia.fandom.com/wiki/API_UnitChannelInfo)
+---@param unit string
+---@return string name
+---@return string text
+---@return string texture
+---@return number startTimeMS
+---@return number endTimeMS
+---@return boolean isTradeSkill
+---@return boolean notInterruptible
+---@return number spellId
+function UnitChannelInfo(unit) end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_UnitClassification)
 ---@param unit string
@@ -1987,9 +2055,6 @@ function UnitCreatureType(unit) end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_UnitDamage)
 function UnitDamage(unit) end
-
----[Documentation](https://wowpedia.fandom.com/wiki/API_UnitDebuff)
-function UnitDebuff(unit, index, raidFilter) end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_UnitDetailedThreatSituation)
 ---@param unit string
@@ -2017,9 +2082,6 @@ function UnitExists(unit) end
 ---@return string englishFaction
 ---@return string localizedFaction
 function UnitFactionGroup(unit) end
-
----[Documentation](https://wowpedia.fandom.com/wiki/API_UnitFullName)
-function UnitFullName(unit) end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_UnitGUID)
 ---@param unit WowUnit
@@ -2240,8 +2302,28 @@ function UnitIsWildBattlePet(unit) end
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_UnitLeadsAnyGroup)
 function UnitLeadsAnyGroup() end
 
----[Documentation](https://wowpedia.fandom.com/wiki/API_UnitNameUnmodified)
-function UnitNameUnmodified() end
+---[Documentation](https://wowpedia.fandom.com/wiki/API_UnitLevel)
+---@param unit WowUnit
+---@return number level
+function UnitLevel(unit) end
+
+---[Documentation](https://wowpedia.fandom.com/wiki/API_UnitName)
+---@param unit WowUnit
+---@return string? name
+---@return string? realm
+function UnitName(unit) end
+
+---[Documentation](https://wowpedia.fandom.com/wiki/API_UnitName)
+---@param unit WowUnit
+---@return string? name
+---@return string? realm
+function UnitFullName(unit) end
+
+---[Documentation](https://wowpedia.fandom.com/wiki/API_UnitName)
+---@param unit WowUnit
+---@return string? name
+---@return string? realm
+function UnitNameUnmodified(unit) end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_UnitNumPowerBarTimers)
 function UnitNumPowerBarTimers() end
@@ -2277,6 +2359,16 @@ function UnitPosition(unit) end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_UnitPowerBarTimerInfo)
 function UnitPowerBarTimerInfo() end
+
+---[Documentation](https://wowpedia.fandom.com/wiki/API_UnitPowerType)
+---@param unit WowUnit
+---@param index? number
+---@return PowerType powerType
+---@return string powerToken
+---@return number altR
+---@return number altG
+---@return number altB
+function UnitPowerType(unit, index) end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_UnitRace)
 ---@param unit string
@@ -2518,6 +2610,13 @@ function forceinsecure() end
 ---@return function func
 function geterrorhandler() end
 
+---[Documentation](https://wowpedia.fandom.com/wiki/API_hooksecurefunc)
+---@param tbl table
+---@param name string
+---@param hook function
+---@overload fun(name: string, hook: function)
+function hooksecurefunc(tbl, name, hook) end
+
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_issecure)
 ---@return boolean secure
 function issecure() end
@@ -2540,11 +2639,4 @@ function securecallfunction() end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_secureexecuterange)
 function secureexecuterange() end
-
----[Documentation](https://wowpedia.fandom.com/wiki/API_seterrorhandler)
----@param errFunc function
-function seterrorhandler(errFunc) end
-
----[Documentation](https://wowpedia.fandom.com/wiki/API_strsplittable)
-function strsplittable() end
 

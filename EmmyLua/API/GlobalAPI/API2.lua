@@ -768,6 +768,16 @@ function CopyToClipboard(text) end
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_CreateFont)
 function CreateFont(name) end
 
+---[Documentation](https://wowpedia.fandom.com/wiki/API_CreateFrame)
+---@generic T
+---@param frameType `T` | FrameType
+---@param name string
+---@param parent Frame
+---@param template string
+---@param id number
+---@return T frame
+function CreateFrame(frameType, name, parent, template, id) end
+
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_CreateMacro)
 ---@param name string
 ---@param iconFileID number
@@ -2374,6 +2384,13 @@ function GetInventoryItemTexture(unit, invSlot) end
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_GetInventoryItemsForSlot)
 function GetInventoryItemsForSlot(slot, returnTable, transmogrify) end
 
+---[Documentation](https://wowpedia.fandom.com/wiki/API_GetInventorySlotInfo)
+---@param invSlotName InventorySlotName 
+---@return number slotId
+---@return string textureName
+---@return boolean checkRelic
+function GetInventorySlotInfo(invSlotName) end
+
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_GetInviteConfirmationInfo)
 function GetInviteConfirmationInfo(guid) end
 
@@ -2538,16 +2555,4 @@ function GetLFGDungeonRewardCapInfo(dungeonID) end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_GetLFGDungeonRewardInfo)
 function GetLFGDungeonRewardInfo(dungeonID, rewardIndex) end
-
----[Documentation](https://wowpedia.fandom.com/wiki/API_GetLFGDungeonRewardLink)
-function GetLFGDungeonRewardLink(dungeonID, rewardIndex) end
-
----[Documentation](https://wowpedia.fandom.com/wiki/API_GetLFGDungeonRewards)
-function GetLFGDungeonRewards(dungeonID) end
-
----[Documentation](https://wowpedia.fandom.com/wiki/API_GetLFGDungeonShortageRewardInfo)
-function GetLFGDungeonShortageRewardInfo(dungeonID, shortageIndex, rewardIndex) end
-
----[Documentation](https://wowpedia.fandom.com/wiki/API_GetLFGDungeonShortageRewardLink)
-function GetLFGDungeonShortageRewardLink(dungeonID, shortageIndex, rewardIndex) end
 
