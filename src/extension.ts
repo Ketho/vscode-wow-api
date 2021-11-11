@@ -94,7 +94,7 @@ export function activate(context: vscode.ExtensionContext) {
 	vscode.workspace.onDidChangeConfiguration((event: vscode.ConfigurationChangeEvent) => {
 		if (event.affectsConfiguration("wowAPI.emmyLua.loadFrameXML")) {
 			const loadFrameXML = vscode.workspace.getConfiguration("wowAPI").get("emmyLua.loadFrameXML")
-			setExternalLibrary("EmmyLua\\FrameXML", loadFrameXML ? true : false)
+			setExternalLibrary("EmmyLua\\Optional", loadFrameXML ? true : false)
 		}
 	})
 }
@@ -135,13 +135,6 @@ function setLanguageServerOptions() {
 	const config = vscode.workspace.getConfiguration("Lua")
 	// hides the emmylua source from the hover tooltip
 	config.update("completion.displayContext", 0, true)
-	// hides the @alias types from the function signature hover tooltip
-	// but also controls the amount of types shown for each function param
-	// this was forced previously to 0, reset it back to default
-	if (config.get("hover.enumsLimit") == 0) {
-		const defaultValue = config.inspect("hover.enumsLimit")?.defaultValue
-		config.update("hover.enumsLimit", defaultValue, true)
-	}
 }
 
 function onCustomCompletion() {

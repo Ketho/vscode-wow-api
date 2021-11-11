@@ -1,3 +1,9 @@
+---[Documentation](https://wowpedia.fandom.com/wiki/API_GetLFGDungeonRewardCapInfo)
+function GetLFGDungeonRewardCapInfo(dungeonID) end
+
+---[Documentation](https://wowpedia.fandom.com/wiki/API_GetLFGDungeonRewardInfo)
+function GetLFGDungeonRewardInfo(dungeonID, rewardIndex) end
+
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_GetLFGDungeonRewardLink)
 function GetLFGDungeonRewardLink(dungeonID, rewardIndex) end
 
@@ -2206,10 +2212,10 @@ function IsActiveQuestTrivial(index) end
 function IsAddOnLoadOnDemand() end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_IsAddOnLoaded)
----@param addonInfo number|string index or name
+---@param addon number|string index or name
 ---@return boolean loaded
 ---@return boolean finished
-function IsAddOnLoaded(addonInfo) end
+function IsAddOnLoaded(addon) end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_IsAddonVersionCheckEnabled)
 function IsAddonVersionCheckEnabled() end
@@ -2643,10 +2649,4 @@ function IsQuestCompletable() end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_IsQuestIDValidSpellTarget)
 function IsQuestIDValidSpellTarget(questID) end
-
----[Documentation](https://wowpedia.fandom.com/wiki/API_IsQuestItemHidden)
-function IsQuestItemHidden(index) end
-
----[Documentation](https://wowpedia.fandom.com/wiki/API_IsQuestLogSpecialItemInRange)
-function IsQuestLogSpecialItemInRange(index, target) end
 

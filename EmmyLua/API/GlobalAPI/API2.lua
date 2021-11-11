@@ -1339,7 +1339,15 @@ function GetAddOnDependencies() end
 function GetAddOnEnableState() end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_GetAddOnInfo)
-function GetAddOnInfo() end
+---@param addon number|string index or name
+---@return string name
+---@return string title
+---@return string notes
+---@return boolean loadable
+---@return string reason
+---@return string security
+---@return boolean newVersion
+function GetAddOnInfo(addon) end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_GetAddOnMemoryUsage)
 function GetAddOnMemoryUsage() end
@@ -2549,10 +2557,4 @@ function GetLFGDungeonNumEncounters(dungeonID) end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_GetLFGDungeonRewardCapBarInfo)
 function GetLFGDungeonRewardCapBarInfo(dungeonID) end
-
----[Documentation](https://wowpedia.fandom.com/wiki/API_GetLFGDungeonRewardCapInfo)
-function GetLFGDungeonRewardCapInfo(dungeonID) end
-
----[Documentation](https://wowpedia.fandom.com/wiki/API_GetLFGDungeonRewardInfo)
-function GetLFGDungeonRewardInfo(dungeonID, rewardIndex) end
 

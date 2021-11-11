@@ -1,3 +1,9 @@
+---[Documentation](https://wowpedia.fandom.com/wiki/API_IsQuestItemHidden)
+function IsQuestItemHidden(index) end
+
+---[Documentation](https://wowpedia.fandom.com/wiki/API_IsQuestLogSpecialItemInRange)
+function IsQuestLogSpecialItemInRange(index, target) end
+
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_IsQuestSequenced)
 function IsQuestSequenced(questID) end
 
@@ -2630,13 +2636,4 @@ function issecurevariable(table, variable) end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_scrub)
 function scrub() end
-
----[Documentation](https://wowpedia.fandom.com/wiki/API_securecall)
-function securecall() end
-
----[Documentation](https://wowpedia.fandom.com/wiki/API_securecallfunction)
-function securecallfunction() end
-
----[Documentation](https://wowpedia.fandom.com/wiki/API_secureexecuterange)
-function secureexecuterange() end
 
