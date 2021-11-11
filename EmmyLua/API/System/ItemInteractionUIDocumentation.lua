@@ -46,4 +46,3 @@ function C_ItemInteraction.SetPendingItem(item) end
 ---@field cost number|nil
 ---@field currencyTypeId number|nil
 ---@field dropInSlotSoundKitId number|nil
-local ItemInteractionFrameInfo = {}

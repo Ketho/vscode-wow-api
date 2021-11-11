@@ -11,4 +11,3 @@ function C_PetInfo.GetPetTamersForMap(uiMapID) end
 ---@field name string
 ---@field atlasName string|nil
 ---@field textureIndex number|nil
-local PetTamerMapInfo = {}

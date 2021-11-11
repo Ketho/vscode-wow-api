@@ -25,10 +25,8 @@ function C_AlliedRaces.GetRaceInfoByID(raceID) end
 ---@field crestAtlas string
 ---@field modelBackgroundAtlas string
 ---@field bannerColor ColorMixin
-local AlliedRaceInfo = {}
 
 ---@class AlliedRaceRacialAbility
 ---@field description string
 ---@field name string
 ---@field icon number
-local AlliedRaceRacialAbility = {}

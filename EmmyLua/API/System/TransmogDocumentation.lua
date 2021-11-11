@@ -160,4 +160,3 @@ local TransmogType = {
 ---@class TransmogApplyWarningInfo
 ---@field itemLink string
 ---@field text string
-local TransmogApplyWarningInfo = {}

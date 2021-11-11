@@ -18,13 +18,11 @@ local CovenantAbilityType = {
 ---@class CovenantAbilityInfo
 ---@field spellID number
 ---@field type CovenantAbilityType
-local CovenantAbilityInfo = {}
 
 ---@class CovenantFeatureInfo
 ---@field name string
 ---@field description string
 ---@field texture number
-local CovenantFeatureInfo = {}
 
 ---@class CovenantPreviewInfo
 ---@field textureKit string
@@ -38,7 +36,6 @@ local CovenantFeatureInfo = {}
 ---@field fromPlayerChoice boolean
 ---@field covenantSoulbinds CovenantSoulbindInfo[]
 ---@field featureInfo CovenantFeatureInfo
-local CovenantPreviewInfo = {}
 
 ---@class CovenantSoulbindInfo
 ---@field spellID number
@@ -46,4 +43,3 @@ local CovenantPreviewInfo = {}
 ---@field name string
 ---@field description string
 ---@field sortOrder number
-local CovenantSoulbindInfo = {}

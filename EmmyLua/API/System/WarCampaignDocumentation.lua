@@ -61,17 +61,14 @@ local CampaignState = {
 ---@field name string
 ---@field description string
 ---@field rewardQuestID number
-local CampaignChapterInfo = {}
 
 ---@class CampaignFailureReason
 ---@field text string
 ---@field questID number|nil
 ---@field mapID number|nil
-local CampaignFailureReason = {}
 
 ---@class CampaignInfo
 ---@field name string
 ---@field description string
 ---@field uiTextureKit string
 ---@field isWarCampaign boolean
-local CampaignInfo = {}

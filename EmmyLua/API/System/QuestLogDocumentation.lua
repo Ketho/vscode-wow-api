@@ -463,7 +463,6 @@ local WorldQuestQuality = {
 ---@field isAutoComplete boolean
 ---@field overridesSortOrder boolean
 ---@field readyForTranslation boolean
-local QuestInfo = {}
 
 ---@class QuestObjectiveInfo
 ---@field text string
@@ -471,7 +470,6 @@ local QuestInfo = {}
 ---@field finished boolean
 ---@field numFulfilled number
 ---@field numRequired number
-local QuestObjectiveInfo = {}
 
 ---@class QuestOnMapInfo
 ---@field questID number
@@ -479,7 +477,6 @@ local QuestObjectiveInfo = {}
 ---@field y number
 ---@field type number
 ---@field isMapIndicatorQuest boolean
-local QuestOnMapInfo = {}
 
 ---@class QuestTagInfo
 ---@field tagName string
@@ -489,11 +486,9 @@ local QuestOnMapInfo = {}
 ---@field tradeskillLineID number|nil
 ---@field isElite boolean|nil
 ---@field displayExpiration boolean|nil
-local QuestTagInfo = {}
 
 ---@class QuestTheme
 ---@field background string
 ---@field seal string
 ---@field signature string
 ---@field poiIcon string
-local QuestTheme = {}

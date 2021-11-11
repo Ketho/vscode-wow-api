@@ -36,4 +36,3 @@ function C_SpellBook.IsSpellDisabled(spellID) end
 ---@field minRange number
 ---@field maxRange number
 ---@field spellID number
-local SpellInfo = {}

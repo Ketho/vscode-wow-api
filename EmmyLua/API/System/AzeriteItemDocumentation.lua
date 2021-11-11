@@ -46,4 +46,3 @@ function C_AzeriteItem.IsAzeriteItemEnabled(azeriteItemLocation) end
 ---@class UnlockedAzeriteEmpoweredItems
 ---@field unlockedItem ItemLocationMixin
 ---@field tierIndex number
-local UnlockedAzeriteEmpoweredItems = {}

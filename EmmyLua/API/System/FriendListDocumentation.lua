@@ -143,7 +143,6 @@ function C_FriendList.SortWho(sorting) end
 ---@field afk boolean
 ---@field rafLinkType RafLinkType
 ---@field mobile boolean
-local FriendInfo = {}
 
 ---@class WhoInfo
 ---@field fullName string
@@ -154,4 +153,3 @@ local FriendInfo = {}
 ---@field area string
 ---@field filename string|nil
 ---@field gender number
-local WhoInfo = {}

@@ -426,23 +426,19 @@ local ItemCommodityStatus = {
 ---@field maxLevel number|nil
 ---@field filters AuctionHouseFilter[]|nil
 ---@field itemClassFilters AuctionHouseItemClassFilter[]|nil
-local AuctionHouseBrowseQuery = {}
 
 ---@class AuctionHouseFilterGroup
 ---@field category AuctionHouseFilterCategory
 ---@field filters AuctionHouseFilter[]
-local AuctionHouseFilterGroup = {}
 
 ---@class AuctionHouseItemClassFilter
 ---@field classID number
 ---@field subClassID number|nil
 ---@field inventoryType number|nil
-local AuctionHouseItemClassFilter = {}
 
 ---@class AuctionHouseSortType
 ---@field sortOrder AuctionHouseSortOrder
 ---@field reverseSort boolean
-local AuctionHouseSortType = {}
 
 ---@class BidInfo
 ---@field auctionID number
@@ -453,7 +449,6 @@ local AuctionHouseSortType = {}
 ---@field bidAmount number|nil
 ---@field buyoutAmount number|nil
 ---@field bidder string|nil
-local BidInfo = {}
 
 ---@class BrowseResultInfo
 ---@field itemKey ItemKey
@@ -461,7 +456,6 @@ local BidInfo = {}
 ---@field totalQuantity number
 ---@field minPrice number
 ---@field containsOwnerItem boolean
-local BrowseResultInfo = {}
 
 ---@class CommoditySearchResultInfo
 ---@field itemID number
@@ -474,14 +468,12 @@ local BrowseResultInfo = {}
 ---@field numOwnerItems number
 ---@field containsOwnerItem boolean
 ---@field containsAccountItem boolean
-local CommoditySearchResultInfo = {}
 
 ---@class ItemKey
 ---@field itemID number
 ---@field itemLevel number
 ---@field itemSuffix number
 ---@field battlePetSpeciesID number
-local ItemKey = {}
 
 ---@class ItemKeyInfo
 ---@field itemName string
@@ -492,7 +484,6 @@ local ItemKey = {}
 ---@field isPet boolean
 ---@field isCommodity boolean
 ---@field isEquipment boolean
-local ItemKeyInfo = {}
 
 ---@class ItemSearchResultInfo
 ---@field itemKey ItemKey
@@ -510,7 +501,6 @@ local ItemKeyInfo = {}
 ---@field bidAmount number|nil
 ---@field buyoutAmount number|nil
 ---@field timeLeftSeconds number|nil
-local ItemSearchResultInfo = {}
 
 ---@class OwnedAuctionInfo
 ---@field auctionID number
@@ -523,4 +513,3 @@ local ItemSearchResultInfo = {}
 ---@field bidAmount number|nil
 ---@field buyoutAmount number|nil
 ---@field bidder string|nil
-local OwnedAuctionInfo = {}

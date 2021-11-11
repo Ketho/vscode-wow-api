@@ -88,7 +88,6 @@ local ItemSlotFilterType = {
 ---@field description string
 ---@field atlasName string
 ---@field journalInstanceID number
-local DungeonEntranceMapInfo = {}
 
 ---@class EncounterJournalItemInfo
 ---@field itemID number
@@ -103,13 +102,11 @@ local DungeonEntranceMapInfo = {}
 ---@field handError boolean|nil
 ---@field weaponTypeError boolean|nil
 ---@field displayAsPerPlayerLoot boolean|nil
-local EncounterJournalItemInfo = {}
 
 ---@class EncounterJournalMapEncounterInfo
 ---@field encounterID number
 ---@field mapX number
 ---@field mapY number
-local EncounterJournalMapEncounterInfo = {}
 
 ---@class EncounterJournalSectionInfo
 ---@field spellID number
@@ -124,4 +121,3 @@ local EncounterJournalMapEncounterInfo = {}
 ---@field filteredByDifficulty boolean
 ---@field link string
 ---@field startsOpen boolean
-local EncounterJournalSectionInfo = {}

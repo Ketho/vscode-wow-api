@@ -414,13 +414,11 @@ function C_Calendar.UpdateEvent() end
 ---@field dontDisplayEnd boolean
 ---@field clubID string
 ---@field isLocked boolean
-local CalendarDayEvent = {}
 
 ---@class CalendarEventIndexInfo
 ---@field offsetMonths number
 ---@field monthDay number
 ---@field eventIndex number
-local CalendarEventIndexInfo = {}
 
 ---@class CalendarEventInfo
 ---@field title string
@@ -439,7 +437,6 @@ local CalendarEventIndexInfo = {}
 ---@field inviteType number|nil
 ---@field calendarType string
 ---@field communityName string|nil
-local CalendarEventInfo = {}
 
 ---@class CalendarEventInviteInfo
 ---@field name string|nil
@@ -453,12 +450,10 @@ local CalendarEventInfo = {}
 ---@field notes string
 ---@field classID number|nil
 ---@field guid string
-local CalendarEventInviteInfo = {}
 
 ---@class CalendarEventStatusOption
 ---@field status CalendarStatus
 ---@field statusString string
-local CalendarEventStatusOption = {}
 
 ---@class CalendarEventTextureInfo
 ---@field title string
@@ -467,12 +462,10 @@ local CalendarEventStatusOption = {}
 ---@field difficultyId number|nil
 ---@field mapId number|nil
 ---@field isLfr boolean|nil
-local CalendarEventTextureInfo = {}
 
 ---@class CalendarEventTypeDisplayInfo
 ---@field displayString string
 ---@field eventType CalendarEventType
-local CalendarEventTypeDisplayInfo = {}
 
 ---@class CalendarGuildEventInfo
 ---@field eventID string
@@ -488,13 +481,11 @@ local CalendarEventTypeDisplayInfo = {}
 ---@field texture number
 ---@field inviteStatus number
 ---@field clubID string
-local CalendarGuildEventInfo = {}
 
 ---@class CalendarGuildFilterInfo
 ---@field minLevel number
 ---@field maxLevel number
 ---@field rank number
-local CalendarGuildFilterInfo = {}
 
 ---@class CalendarHolidayInfo
 ---@field name string
@@ -502,14 +493,12 @@ local CalendarGuildFilterInfo = {}
 ---@field texture number
 ---@field startTime CalendarTime|nil
 ---@field endTime CalendarTime|nil
-local CalendarHolidayInfo = {}
 
 ---@class CalendarMonthInfo
 ---@field month number
 ---@field year number
 ---@field numDays number
 ---@field firstWeekday number
-local CalendarMonthInfo = {}
 
 ---@class CalendarRaidInfo
 ---@field name string
@@ -518,4 +507,3 @@ local CalendarMonthInfo = {}
 ---@field time CalendarTime
 ---@field difficulty number
 ---@field difficultyName string|nil
-local CalendarRaidInfo = {}

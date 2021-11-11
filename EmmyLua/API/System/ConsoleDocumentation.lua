@@ -67,4 +67,3 @@ local ConsoleCommandType = {
 ---@field commandType ConsoleCommandType
 ---@field scriptContents string
 ---@field scriptParameters string
-local ConsoleCommandInfo = {}

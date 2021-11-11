@@ -12,4 +12,3 @@ function C_ArdenwealdGardening.IsGardenAccessible() end
 ---@field active number
 ---@field ready number
 ---@field remainingSeconds number
-local ArdenwealdGardenData = {}

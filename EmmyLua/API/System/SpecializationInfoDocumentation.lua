@@ -79,4 +79,3 @@ function C_SpecializationInfo.SetPvpTalentLocked(talentID, locked) end
 ---@field level number
 ---@field selectedTalentID number|nil
 ---@field availableTalentIDs number[]
-local PvpTalentSlotInfo = {}

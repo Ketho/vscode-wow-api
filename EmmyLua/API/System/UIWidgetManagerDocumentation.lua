@@ -371,7 +371,6 @@ local ZoneControlState = {
 ---@field layoutDirection UIWidgetLayoutDirection
 ---@field modelSceneLayer UIWidgetModelSceneLayer
 ---@field scriptedAnimationEffectID number
-local BulletTextListWidgetVisualizationInfo = {}
 
 ---@class CaptureBarWidgetVisualizationInfo
 ---@field shownState WidgetShownState
@@ -396,7 +395,6 @@ local BulletTextListWidgetVisualizationInfo = {}
 ---@field layoutDirection UIWidgetLayoutDirection
 ---@field modelSceneLayer UIWidgetModelSceneLayer
 ---@field scriptedAnimationEffectID number
-local CaptureBarWidgetVisualizationInfo = {}
 
 ---@class CaptureZoneVisualizationInfo
 ---@field shownState WidgetShownState
@@ -417,7 +415,6 @@ local CaptureBarWidgetVisualizationInfo = {}
 ---@field layoutDirection UIWidgetLayoutDirection
 ---@field modelSceneLayer UIWidgetModelSceneLayer
 ---@field scriptedAnimationEffectID number
-local CaptureZoneVisualizationInfo = {}
 
 ---@class DiscreteProgressStepsVisualizationInfo
 ---@field shownState WidgetShownState
@@ -439,7 +436,6 @@ local CaptureZoneVisualizationInfo = {}
 ---@field layoutDirection UIWidgetLayoutDirection
 ---@field modelSceneLayer UIWidgetModelSceneLayer
 ---@field scriptedAnimationEffectID number
-local DiscreteProgressStepsVisualizationInfo = {}
 
 ---@class DoubleIconAndTextWidgetVisualizationInfo
 ---@field shownState WidgetShownState
@@ -461,7 +457,6 @@ local DiscreteProgressStepsVisualizationInfo = {}
 ---@field layoutDirection UIWidgetLayoutDirection
 ---@field modelSceneLayer UIWidgetModelSceneLayer
 ---@field scriptedAnimationEffectID number
-local DoubleIconAndTextWidgetVisualizationInfo = {}
 
 ---@class DoubleStateIconRowVisualizationInfo
 ---@field shownState WidgetShownState
@@ -480,7 +475,6 @@ local DoubleIconAndTextWidgetVisualizationInfo = {}
 ---@field layoutDirection UIWidgetLayoutDirection
 ---@field modelSceneLayer UIWidgetModelSceneLayer
 ---@field scriptedAnimationEffectID number
-local DoubleStateIconRowVisualizationInfo = {}
 
 ---@class DoubleStatusBarWidgetVisualizationInfo
 ---@field shownState WidgetShownState
@@ -508,7 +502,6 @@ local DoubleStateIconRowVisualizationInfo = {}
 ---@field layoutDirection UIWidgetLayoutDirection
 ---@field modelSceneLayer UIWidgetModelSceneLayer
 ---@field scriptedAnimationEffectID number
-local DoubleStatusBarWidgetVisualizationInfo = {}
 
 ---@class HorizontalCurrenciesWidgetVisualizationInfo
 ---@field shownState WidgetShownState
@@ -526,7 +519,6 @@ local DoubleStatusBarWidgetVisualizationInfo = {}
 ---@field layoutDirection UIWidgetLayoutDirection
 ---@field modelSceneLayer UIWidgetModelSceneLayer
 ---@field scriptedAnimationEffectID number
-local HorizontalCurrenciesWidgetVisualizationInfo = {}
 
 ---@class IconAndTextWidgetVisualizationInfo
 ---@field state IconAndTextWidgetState
@@ -546,7 +538,6 @@ local HorizontalCurrenciesWidgetVisualizationInfo = {}
 ---@field layoutDirection UIWidgetLayoutDirection
 ---@field modelSceneLayer UIWidgetModelSceneLayer
 ---@field scriptedAnimationEffectID number
-local IconAndTextWidgetVisualizationInfo = {}
 
 ---@class IconTextAndBackgroundWidgetVisualizationInfo
 ---@field shownState WidgetShownState
@@ -563,7 +554,6 @@ local IconAndTextWidgetVisualizationInfo = {}
 ---@field layoutDirection UIWidgetLayoutDirection
 ---@field modelSceneLayer UIWidgetModelSceneLayer
 ---@field scriptedAnimationEffectID number
-local IconTextAndBackgroundWidgetVisualizationInfo = {}
 
 ---@class IconTextAndCurrenciesWidgetVisualizationInfo
 ---@field shownState WidgetShownState
@@ -586,7 +576,6 @@ local IconTextAndBackgroundWidgetVisualizationInfo = {}
 ---@field layoutDirection UIWidgetLayoutDirection
 ---@field modelSceneLayer UIWidgetModelSceneLayer
 ---@field scriptedAnimationEffectID number
-local IconTextAndCurrenciesWidgetVisualizationInfo = {}
 
 ---@class ScenarioHeaderCurrenciesAndBackgroundWidgetVisualizationInfo
 ---@field shownState WidgetShownState
@@ -604,7 +593,6 @@ local IconTextAndCurrenciesWidgetVisualizationInfo = {}
 ---@field layoutDirection UIWidgetLayoutDirection
 ---@field modelSceneLayer UIWidgetModelSceneLayer
 ---@field scriptedAnimationEffectID number
-local ScenarioHeaderCurrenciesAndBackgroundWidgetVisualizationInfo = {}
 
 ---@class ScenarioHeaderTimerWidgetVisualizationInfo
 ---@field shownState WidgetShownState
@@ -625,7 +613,6 @@ local ScenarioHeaderCurrenciesAndBackgroundWidgetVisualizationInfo = {}
 ---@field layoutDirection UIWidgetLayoutDirection
 ---@field modelSceneLayer UIWidgetModelSceneLayer
 ---@field scriptedAnimationEffectID number
-local ScenarioHeaderTimerWidgetVisualizationInfo = {}
 
 ---@class SpacerVisualizationInfo
 ---@field shownState WidgetShownState
@@ -643,7 +630,6 @@ local ScenarioHeaderTimerWidgetVisualizationInfo = {}
 ---@field layoutDirection UIWidgetLayoutDirection
 ---@field modelSceneLayer UIWidgetModelSceneLayer
 ---@field scriptedAnimationEffectID number
-local SpacerVisualizationInfo = {}
 
 ---@class SpellDisplayVisualizationInfo
 ---@field shownState WidgetShownState
@@ -662,7 +648,6 @@ local SpacerVisualizationInfo = {}
 ---@field layoutDirection UIWidgetLayoutDirection
 ---@field modelSceneLayer UIWidgetModelSceneLayer
 ---@field scriptedAnimationEffectID number
-local SpellDisplayVisualizationInfo = {}
 
 ---@class StackedResourceTrackerWidgetVisualizationInfo
 ---@field shownState WidgetShownState
@@ -680,7 +665,6 @@ local SpellDisplayVisualizationInfo = {}
 ---@field layoutDirection UIWidgetLayoutDirection
 ---@field modelSceneLayer UIWidgetModelSceneLayer
 ---@field scriptedAnimationEffectID number
-local StackedResourceTrackerWidgetVisualizationInfo = {}
 
 ---@class StatusBarWidgetVisualizationInfo
 ---@field shownState WidgetShownState
@@ -707,14 +691,12 @@ local StackedResourceTrackerWidgetVisualizationInfo = {}
 ---@field layoutDirection UIWidgetLayoutDirection
 ---@field modelSceneLayer UIWidgetModelSceneLayer
 ---@field scriptedAnimationEffectID number
-local StatusBarWidgetVisualizationInfo = {}
 
 ---@class TextColumnRowEntryInfo
 ---@field text string
 ---@field enabledState WidgetEnabledState
 ---@field hAlign WidgetTextHorizontalAlignmentType
 ---@field columnWidth number
-local TextColumnRowEntryInfo = {}
 
 ---@class TextColumnRowVisualizationInfo
 ---@field shownState WidgetShownState
@@ -736,7 +718,6 @@ local TextColumnRowEntryInfo = {}
 ---@field layoutDirection UIWidgetLayoutDirection
 ---@field modelSceneLayer UIWidgetModelSceneLayer
 ---@field scriptedAnimationEffectID number
-local TextColumnRowVisualizationInfo = {}
 
 ---@class TextWithStateWidgetVisualizationInfo
 ---@field shownState WidgetShownState
@@ -760,12 +741,10 @@ local TextColumnRowVisualizationInfo = {}
 ---@field layoutDirection UIWidgetLayoutDirection
 ---@field modelSceneLayer UIWidgetModelSceneLayer
 ---@field scriptedAnimationEffectID number
-local TextWithStateWidgetVisualizationInfo = {}
 
 ---@class TextureAndTextEntryInfo
 ---@field text string
 ---@field tooltip string
-local TextureAndTextEntryInfo = {}
 
 ---@class TextureAndTextRowVisualizationInfo
 ---@field shownState WidgetShownState
@@ -784,7 +763,6 @@ local TextureAndTextEntryInfo = {}
 ---@field layoutDirection UIWidgetLayoutDirection
 ---@field modelSceneLayer UIWidgetModelSceneLayer
 ---@field scriptedAnimationEffectID number
-local TextureAndTextRowVisualizationInfo = {}
 
 ---@class TextureAndTextVisualizationInfo
 ---@field shownState WidgetShownState
@@ -803,7 +781,6 @@ local TextureAndTextRowVisualizationInfo = {}
 ---@field layoutDirection UIWidgetLayoutDirection
 ---@field modelSceneLayer UIWidgetModelSceneLayer
 ---@field scriptedAnimationEffectID number
-local TextureAndTextVisualizationInfo = {}
 
 ---@class TextureWithAnimationVisualizationInfo
 ---@field shownState WidgetShownState
@@ -821,7 +798,6 @@ local TextureAndTextVisualizationInfo = {}
 ---@field layoutDirection UIWidgetLayoutDirection
 ---@field modelSceneLayer UIWidgetModelSceneLayer
 ---@field scriptedAnimationEffectID number
-local TextureWithAnimationVisualizationInfo = {}
 
 ---@class UIWidgetCurrencyInfo
 ---@field iconFileID number
@@ -829,19 +805,16 @@ local TextureWithAnimationVisualizationInfo = {}
 ---@field text string
 ---@field tooltip string
 ---@field isCurrencyMaxed boolean
-local UIWidgetCurrencyInfo = {}
 
 ---@class UIWidgetInfo
 ---@field widgetID number
 ---@field widgetSetID number
 ---@field widgetType UIWidgetVisualizationType
 ---@field unitToken string|nil
-local UIWidgetInfo = {}
 
 ---@class UIWidgetSetInfo
 ---@field layoutDirection UIWidgetSetLayoutDirection
 ---@field verticalPadding number
-local UIWidgetSetInfo = {}
 
 ---@class UIWidgetSpellInfo
 ---@field spellID number
@@ -851,13 +824,11 @@ local UIWidgetSetInfo = {}
 ---@field iconSizeType SpellDisplayIconSizeType
 ---@field iconDisplayType SpellDisplayIconDisplayType
 ---@field textShownState SpellDisplayTextShownStateType
-local UIWidgetSpellInfo = {}
 
 ---@class UIWidgetStateIconInfo
 ---@field iconState IconState
 ---@field state1Tooltip string
 ---@field state2Tooltip string
-local UIWidgetStateIconInfo = {}
 
 ---@class ZoneControlVisualizationInfo
 ---@field shownState WidgetShownState
@@ -878,7 +849,6 @@ local UIWidgetStateIconInfo = {}
 ---@field layoutDirection UIWidgetLayoutDirection
 ---@field modelSceneLayer UIWidgetModelSceneLayer
 ---@field scriptedAnimationEffectID number
-local ZoneControlVisualizationInfo = {}
 
 ---@class ZoneEntry
 ---@field state ZoneControlState
@@ -889,4 +859,3 @@ local ZoneControlVisualizationInfo = {}
 ---@field current number
 ---@field capturePoint number
 ---@field tooltip string
-local ZoneEntry = {}

@@ -38,7 +38,6 @@ local FlightPathState = {
 ---@field atlasName string
 ---@field faction FlightPathFaction
 ---@field textureKit string
-local MapTaxiNodeInfo = {}
 
 ---@class TaxiNodeInfo
 ---@field nodeID number
@@ -47,4 +46,3 @@ local MapTaxiNodeInfo = {}
 ---@field state FlightPathState
 ---@field slotIndex number
 ---@field textureKit string
-local TaxiNodeInfo = {}

@@ -10,4 +10,3 @@ function C_ResearchInfo.GetDigSitesForMap(uiMapID) end
 ---@field position Vector2DMixin
 ---@field name string
 ---@field textureIndex number
-local DigSiteMapInfo = {}

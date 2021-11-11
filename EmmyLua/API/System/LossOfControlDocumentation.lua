@@ -31,4 +31,3 @@ function C_LossOfControl.GetActiveLossOfControlDataCountByUnit(unitToken) end
 ---@field lockoutSchool number
 ---@field priority number
 ---@field displayType number
-local LossOfControlData = {}

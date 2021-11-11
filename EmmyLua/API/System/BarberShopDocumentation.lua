@@ -101,10 +101,8 @@ function C_BarberShop.ZoomCamera(zoomAmount) end
 ---@class BarberShopCharacterData
 ---@field raceData BarberShopRaceData
 ---@field sex number
-local BarberShopCharacterData = {}
 
 ---@class BarberShopRaceData
 ---@field name string
 ---@field fileName string
 ---@field alternateFormRaceData CharacterAlternateFormData|nil
-local BarberShopRaceData = {}

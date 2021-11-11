@@ -103,9 +103,7 @@ local SubscriptionInterstitialType = {
 ---@field logo number
 ---@field banner string
 ---@field features ExpansionDisplayInfoFeature[]
-local ExpansionDisplayInfo = {}
 
 ---@class ExpansionDisplayInfoFeature
 ---@field icon number
 ---@field text string
-local ExpansionDisplayInfoFeature = {}

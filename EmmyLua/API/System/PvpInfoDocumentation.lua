@@ -330,14 +330,12 @@ local PvPMatchState = {
 ---@class BattlefieldCurrencyReward
 ---@field id number
 ---@field quantity number
-local BattlefieldCurrencyReward = {}
 
 ---@class BattlefieldItemReward
 ---@field id number
 ---@field name string
 ---@field texture number
 ---@field quantity number
-local BattlefieldItemReward = {}
 
 ---@class BattlefieldVehicleInfo
 ---@field x number
@@ -351,7 +349,6 @@ local BattlefieldItemReward = {}
 ---@field isPlayer boolean
 ---@field isAlive boolean
 ---@field shouldDrawBelowPlayerBlips boolean
-local BattlefieldVehicleInfo = {}
 
 ---@class BattlemasterListInfo
 ---@field name string
@@ -361,20 +358,17 @@ local BattlefieldVehicleInfo = {}
 ---@field icon number
 ---@field longDescription string
 ---@field shortDescription string
-local BattlemasterListInfo = {}
 
 ---@class HonorRewardInfo
 ---@field honorLevelName string
 ---@field badgeFileDataID number
 ---@field achievementRewardedID number
-local HonorRewardInfo = {}
 
 ---@class LevelUpBattlegroundInfo
 ---@field id number
 ---@field icon number
 ---@field name string
 ---@field isEpic boolean
-local LevelUpBattlegroundInfo = {}
 
 ---@class MatchPVPStatColumn
 ---@field pvpStatID number
@@ -382,7 +376,6 @@ local LevelUpBattlegroundInfo = {}
 ---@field orderIndex number
 ---@field name string
 ---@field tooltip string
-local MatchPVPStatColumn = {}
 
 ---@class PvpBrawlInfo
 ---@field name string
@@ -392,7 +385,6 @@ local MatchPVPStatColumn = {}
 ---@field timeLeftUntilNextChange number
 ---@field brawlType BrawlType
 ---@field mapNames string[]
-local PvpBrawlInfo = {}
 
 ---@class PVPPersonalRatedInfo
 ---@field personalRating number
@@ -406,12 +398,10 @@ local PvpBrawlInfo = {}
 ---@field hasWonBracketToday boolean
 ---@field tier number
 ---@field ranking number|nil
-local PVPPersonalRatedInfo = {}
 
 ---@class PVPPostMatchCurrencyReward
 ---@field currencyType number
 ---@field quantityChanged number
-local PVPPostMatchCurrencyReward = {}
 
 ---@class PVPPostMatchItemReward
 ---@field type string
@@ -420,14 +410,12 @@ local PVPPostMatchCurrencyReward = {}
 ---@field specID number
 ---@field sex number
 ---@field isUpgraded boolean
-local PVPPostMatchItemReward = {}
 
 ---@class PvpScalingData
 ---@field scalingDataID number
 ---@field specializationID number
 ---@field name string
 ---@field value number
-local PvpScalingData = {}
 
 ---@class PVPScoreInfo
 ---@field name string
@@ -449,7 +437,6 @@ local PvpScalingData = {}
 ---@field talentSpec string
 ---@field honorLevel number
 ---@field stats PVPStatInfo[]
-local PVPScoreInfo = {}
 
 ---@class PVPStatInfo
 ---@field pvpStatID number
@@ -458,7 +445,6 @@ local PVPScoreInfo = {}
 ---@field name string
 ---@field tooltip string
 ---@field iconName string
-local PVPStatInfo = {}
 
 ---@class PVPTeamInfo
 ---@field name string
@@ -466,7 +452,6 @@ local PVPStatInfo = {}
 ---@field rating number
 ---@field ratingNew number
 ---@field ratingMMR number
-local PVPTeamInfo = {}
 
 ---@class PvpTierInfo
 ---@field name string
@@ -476,7 +461,6 @@ local PVPTeamInfo = {}
 ---@field ascendTier number
 ---@field pvpTierEnum number
 ---@field tierIconID number
-local PvpTierInfo = {}
 
 ---@class RandomBGInfo
 ---@field canQueue boolean
@@ -484,7 +468,6 @@ local PvpTierInfo = {}
 ---@field hasRandomWinToday boolean
 ---@field minLevel number
 ---@field maxLevel number
-local RandomBGInfo = {}
 
 ---@class SpecialEventDetails
 ---@field name string
@@ -492,4 +475,3 @@ local RandomBGInfo = {}
 ---@field longDescription string
 ---@field questID number|nil
 ---@field isActive boolean
-local SpecialEventDetails = {}

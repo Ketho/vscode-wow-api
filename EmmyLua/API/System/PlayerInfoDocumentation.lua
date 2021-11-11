@@ -64,9 +64,7 @@ function C_PlayerInfo.IsPlayerNPERestricted() end
 ---@field bestRunLevel number
 ---@field bestRunDurationMS number
 ---@field finishedSuccess boolean
-local MythicPlusRatingMapSummary = {}
 
 ---@class MythicPlusRatingSummary
 ---@field currentSeasonScore number
 ---@field runs MythicPlusRatingMapSummary[]
-local MythicPlusRatingSummary = {}

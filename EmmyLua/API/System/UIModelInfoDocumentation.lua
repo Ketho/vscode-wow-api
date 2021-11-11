@@ -89,7 +89,6 @@ local ModelSceneType = {
 ---@field spellVisualKitID number|nil
 ---@field alpha number
 ---@field scale number
-local UIModelSceneActorDisplayInfo = {}
 
 ---@class UIModelSceneActorInfo
 ---@field modelActorID number
@@ -103,7 +102,6 @@ local UIModelSceneActorDisplayInfo = {}
 ---@field useCenterForOriginY boolean
 ---@field useCenterForOriginZ boolean
 ---@field modelActorDisplayID number|nil
-local UIModelSceneActorInfo = {}
 
 ---@class UIModelSceneCameraInfo
 ---@field modelSceneCameraID number
@@ -121,4 +119,3 @@ local UIModelSceneActorInfo = {}
 ---@field zoomedPitchOffset number
 ---@field zoomedRollOffset number
 ---@field flags ModelSceneSetting
-local UIModelSceneCameraInfo = {}

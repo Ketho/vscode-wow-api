@@ -44,4 +44,3 @@ local VignetteType = {
 ---@field type VignetteType
 ---@field rewardQuestID number
 ---@field widgetSetID number|nil
-local VignetteInfo = {}

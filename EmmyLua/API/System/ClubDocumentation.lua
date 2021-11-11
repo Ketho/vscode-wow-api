@@ -629,24 +629,20 @@ local ValidateNameResult = {
 ---@field favoriteTimeStamp number|nil
 ---@field joinTime number|nil
 ---@field socialQueueingEnabled boolean|nil
-local ClubInfo = {}
 
 ---@class ClubInvitationCandidateInfo
 ---@field memberId number
 ---@field name string
 ---@field priority number
 ---@field status ClubInvitationCandidateStatus
-local ClubInvitationCandidateInfo = {}
 
 ---@class ClubInvitationInfo
 ---@field invitationId string
 ---@field isMyInvitation boolean
 ---@field invitee ClubMemberInfo
-local ClubInvitationInfo = {}
 
 ---@class ClubLimits
 ---@field maximumNumberOfStreams number
-local ClubLimits = {}
 
 ---@class ClubMemberInfo
 ---@field isSelf boolean
@@ -678,12 +674,10 @@ local ClubLimits = {}
 ---@field guildRankOrder number|nil
 ---@field isRemoteChat boolean|nil
 ---@field overallDungeonScore number|nil
-local ClubMemberInfo = {}
 
 ---@class ClubMessageIdentifier
 ---@field epoch number
 ---@field position number
-local ClubMessageIdentifier = {}
 
 ---@class ClubMessageInfo
 ---@field messageId ClubMessageIdentifier
@@ -692,12 +686,10 @@ local ClubMessageIdentifier = {}
 ---@field destroyer ClubMemberInfo|nil
 ---@field destroyed boolean
 ---@field edited boolean
-local ClubMessageInfo = {}
 
 ---@class ClubMessageRange
 ---@field oldestMessageId ClubMessageIdentifier
 ---@field newestMessageId ClubMessageIdentifier
-local ClubMessageRange = {}
 
 ---@class ClubPrivilegeInfo
 ---@field canDestroy boolean
@@ -742,14 +734,12 @@ local ClubMessageRange = {}
 ---@field canEditOwnMessage boolean
 ---@field canPinMessage boolean
 ---@field kickableRoleIds number[]
-local ClubPrivilegeInfo = {}
 
 ---@class ClubSelfInvitationInfo
 ---@field invitationId string
 ---@field club ClubInfo
 ---@field inviter ClubMemberInfo
 ---@field leaders ClubMemberInfo[]
-local ClubSelfInvitationInfo = {}
 
 ---@class ClubStreamInfo
 ---@field streamId string
@@ -758,12 +748,10 @@ local ClubSelfInvitationInfo = {}
 ---@field leadersAndModeratorsOnly boolean
 ---@field streamType ClubStreamType
 ---@field creationTime number
-local ClubStreamInfo = {}
 
 ---@class ClubStreamNotificationSetting
 ---@field streamId string
 ---@field filter ClubStreamNotificationFilter
-local ClubStreamNotificationSetting = {}
 
 ---@class ClubTicketInfo
 ---@field ticketId string
@@ -773,4 +761,3 @@ local ClubStreamNotificationSetting = {}
 ---@field expirationTime number
 ---@field defaultStreamId string|nil
 ---@field creator ClubMemberInfo
-local ClubTicketInfo = {}

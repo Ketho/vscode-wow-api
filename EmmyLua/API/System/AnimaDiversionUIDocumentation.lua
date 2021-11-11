@@ -39,13 +39,11 @@ local AnimaDiversionNodeState = {
 ---@class AnimaDiversionCostInfo
 ---@field currencyID number
 ---@field quantity number
-local AnimaDiversionCostInfo = {}
 
 ---@class AnimaDiversionFrameInfo
 ---@field textureKit string
 ---@field title string
 ---@field mapID number
-local AnimaDiversionFrameInfo = {}
 
 ---@class AnimaDiversionNodeInfo
 ---@field talentID number
@@ -56,4 +54,3 @@ local AnimaDiversionFrameInfo = {}
 ---@field icon number
 ---@field normalizedPosition Vector2DMixin
 ---@field state AnimaDiversionNodeState
-local AnimaDiversionNodeInfo = {}

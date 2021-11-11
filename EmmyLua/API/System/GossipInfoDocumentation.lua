@@ -85,7 +85,6 @@ local GossipOptionStatus = {
 ---@field id number
 ---@field quantity number
 ---@field rewardType GossipOptionRewardType
-local GossipOptionRewardInfo = {}
 
 ---@class GossipOptionUIInfo
 ---@field name string
@@ -93,14 +92,12 @@ local GossipOptionRewardInfo = {}
 ---@field rewards GossipOptionRewardInfo[]
 ---@field status GossipOptionStatus
 ---@field spellID number|nil
-local GossipOptionUIInfo = {}
 
 ---@class GossipPoiInfo
 ---@field name string
 ---@field textureIndex number
 ---@field position Vector2DMixin
 ---@field inBattleMap boolean
-local GossipPoiInfo = {}
 
 ---@class GossipQuestUIInfo
 ---@field title string
@@ -112,4 +109,3 @@ local GossipPoiInfo = {}
 ---@field isLegendary boolean
 ---@field isIgnored boolean
 ---@field questID number
-local GossipQuestUIInfo = {}

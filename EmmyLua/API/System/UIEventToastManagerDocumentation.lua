@@ -75,4 +75,3 @@ local EventToastEventType = {
 ---@field showSoundKitID number|nil
 ---@field hideSoundKitID number|nil
 ---@field colorTint ColorMixin|nil
-local EventToastInfo = {}

@@ -74,7 +74,6 @@ local PetJournalError = {
 ---@class PetAbilityLevelInfo
 ---@field abilityID number
 ---@field level number
-local PetAbilityLevelInfo = {}
 
 ---@class PetJournalPetInfo
 ---@field speciesID number
@@ -95,4 +94,3 @@ local PetAbilityLevelInfo = {}
 ---@field tradable boolean
 ---@field unique boolean
 ---@field obtainable boolean
-local PetJournalPetInfo = {}

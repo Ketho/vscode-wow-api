@@ -346,7 +346,6 @@ local PlayerClubRequestStatus = {
 ---@field requestStatus PlayerClubRequestStatus
 ---@field lookupSuccess boolean
 ---@field lastUpdatedTime number
-local ClubFinderApplicantInfo = {}
 
 ---@class ClubSettingsInfo
 ---@field playStyleDungeon boolean
@@ -366,7 +365,6 @@ local ClubFinderApplicantInfo = {}
 ---@field sortMembers boolean
 ---@field sortNewest boolean
 ---@field autoAccept boolean
-local ClubSettingsInfo = {}
 
 ---@class RecruitingClubInfo
 ---@field clubFinderGUID string
@@ -387,4 +385,3 @@ local ClubSettingsInfo = {}
 ---@field lastPosterGUID string
 ---@field clubId string
 ---@field lastUpdatedTime number
-local RecruitingClubInfo = {}

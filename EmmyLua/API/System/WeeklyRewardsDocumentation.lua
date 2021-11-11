@@ -74,14 +74,12 @@ local ConquestProgressBarDisplayType = {
 ---@field unlocksCompleted number
 ---@field maxUnlocks number
 ---@field sampleItemHyperlink string
-local ConquestWeeklyProgress = {}
 
 ---@class WeeklyRewardActivityEncounterInfo
 ---@field encounterID number
 ---@field bestDifficulty number
 ---@field uiOrder number
 ---@field instanceID number
-local WeeklyRewardActivityEncounterInfo = {}
 
 ---@class WeeklyRewardActivityInfo
 ---@field type WeeklyRewardChestThresholdType
@@ -92,11 +90,9 @@ local WeeklyRewardActivityEncounterInfo = {}
 ---@field level number
 ---@field claimID number|nil
 ---@field rewards WeeklyRewardActivityRewardInfo[]
-local WeeklyRewardActivityInfo = {}
 
 ---@class WeeklyRewardActivityRewardInfo
 ---@field type CachedRewardType
 ---@field id number
 ---@field quantity number
 ---@field itemDBID string|nil
-local WeeklyRewardActivityRewardInfo = {}

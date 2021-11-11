@@ -7,4 +7,3 @@ function C_LoreText.RequestLoreTextForCampaignID(campaignID) end
 ---@class LoreTextEntry
 ---@field text string
 ---@field isHeader boolean
-local LoreTextEntry = {}

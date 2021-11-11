@@ -362,7 +362,6 @@ function C_ArtifactUI.ShouldSuppressForgeRotation() end
 ---@field barDisconnectedColor ColorMixin
 ---@field uiModelSceneID number
 ---@field spellVisualKitID number
-local ArtifactArtInfo = {}
 
 ---@class ArtifactPowerInfo
 ---@field spellID number
@@ -379,4 +378,3 @@ local ArtifactArtInfo = {}
 ---@field position Vector2DMixin
 ---@field offset Vector2DMixin|nil
 ---@field linearIndex number|nil
-local ArtifactPowerInfo = {}

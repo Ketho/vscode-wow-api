@@ -69,14 +69,12 @@ function C_CovenantSanctumUI.RequestCatchUpState() end
 ---@field garrTalentTreeID number
 ---@field featureType number
 ---@field uiOrder number
-local CovenantSanctumFeatureInfo = {}
 
 ---@class CovenantSanctumRenownLevelInfo
 ---@field level number
 ---@field locked boolean
 ---@field isMilestone boolean
 ---@field isCapstone boolean
-local CovenantSanctumRenownLevelInfo = {}
 
 ---@class CovenantSanctumRenownRewardInfo
 ---@field uiOrder number
@@ -92,4 +90,3 @@ local CovenantSanctumRenownLevelInfo = {}
 ---@field name string|nil
 ---@field description string|nil
 ---@field toastDescription string|nil
-local CovenantSanctumRenownRewardInfo = {}

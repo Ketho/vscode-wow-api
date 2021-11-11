@@ -26,4 +26,3 @@ function C_InvasionInfo.GetInvasionTimeLeft(invasionID) end
 ---@field position Vector2DMixin
 ---@field atlasName string
 ---@field rewardQuestID number|nil
-local InvasionMapInfo = {}

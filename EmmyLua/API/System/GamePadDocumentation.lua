@@ -88,7 +88,6 @@ function C_GamePad.StopVibration() end
 ---@field buttonPos string|nil
 ---@field buttonNeg string|nil
 ---@field comment string|nil
-local GamePadAxisConfig = {}
 
 ---@class GamePadConfig
 ---@field comment string|nil
@@ -99,12 +98,10 @@ local GamePadAxisConfig = {}
 ---@field rawAxisMappings GamePadRawAxisMapping[]
 ---@field axisConfigs GamePadAxisConfig[]
 ---@field stickConfigs GamePadStickConfig[]
-local GamePadConfig = {}
 
 ---@class GamePadConfigID
 ---@field vendorID number|nil
 ---@field productID number|nil
-local GamePadConfigID = {}
 
 ---@class GamePadMappedState
 ---@field name string
@@ -115,13 +112,11 @@ local GamePadConfigID = {}
 ---@field buttons boolean[]
 ---@field axes number[]
 ---@field sticks GamePadStick[]
-local GamePadMappedState = {}
 
 ---@class GamePadRawAxisMapping
 ---@field rawIndex number
 ---@field axis string|nil
 ---@field comment string|nil
-local GamePadRawAxisMapping = {}
 
 ---@class GamePadRawButtonMapping
 ---@field rawIndex number
@@ -129,7 +124,6 @@ local GamePadRawAxisMapping = {}
 ---@field axis string|nil
 ---@field axisValue number|nil
 ---@field comment string|nil
-local GamePadRawButtonMapping = {}
 
 ---@class GamePadRawState
 ---@field name string
@@ -139,13 +133,11 @@ local GamePadRawButtonMapping = {}
 ---@field rawAxisCount number
 ---@field rawButtons boolean[]
 ---@field rawAxes number[]
-local GamePadRawState = {}
 
 ---@class GamePadStick
 ---@field x number
 ---@field y number
 ---@field len number
-local GamePadStick = {}
 
 ---@class GamePadStickConfig
 ---@field stick string
@@ -155,4 +147,3 @@ local GamePadStick = {}
 ---@field deadzoneX number|nil
 ---@field deadzoneY number|nil
 ---@field comment string|nil
-local GamePadStickConfig = {}

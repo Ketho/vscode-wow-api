@@ -75,7 +75,6 @@ function C_SocialQueue.SignalToastDisplayed(groupGUID, priority) end
 ---@field THROTTLE_RF_ILVL_SCALING_ABOVE number
 ---@field THROTTLE_DF_MAX_ITEM_LEVEL number
 ---@field THROTTLE_DF_BEST_PRIORITY number
-local SocialQueueConfig = {}
 
 ---@class SocialQueueGroupQueueInfo
 ---@field clientID number
@@ -85,9 +84,7 @@ local SocialQueueConfig = {}
 ---@field needDamage boolean
 ---@field isAutoAccept boolean
 ---@field queueData QueueSpecificInfo
-local SocialQueueGroupQueueInfo = {}
 
 ---@class SocialQueuePlayerInfo
 ---@field guid string
 ---@field clubId string|nil
-local SocialQueuePlayerInfo = {}

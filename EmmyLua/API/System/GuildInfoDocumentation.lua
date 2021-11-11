@@ -85,4 +85,3 @@ function C_GuildInfo.SetNote(guid, note, isPublic) end
 ---@field month number
 ---@field year number
 ---@field guildMembersPresent number
-local GuildNewsInfo = {}

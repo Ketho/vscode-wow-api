@@ -24,4 +24,3 @@ function C_ChromieTime.SelectChromieTimeOption(chromieTimeExpansionInfoId) end
 ---@field previewAtlas string
 ---@field completed boolean
 ---@field alreadyOn boolean
-local ChromieTimeExpansionInfo = {}

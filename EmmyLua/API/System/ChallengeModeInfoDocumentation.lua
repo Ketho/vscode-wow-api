@@ -143,12 +143,10 @@ function C_ChallengeMode.StartChallengeMode() end
 ---@class ChallengeModeCompletionMemberInfo
 ---@field memberGUID string
 ---@field name string
-local ChallengeModeCompletionMemberInfo = {}
 
 ---@class ChallengeModeGuildAttemptMember
 ---@field name string
 ---@field classFileName string
-local ChallengeModeGuildAttemptMember = {}
 
 ---@class ChallengeModeGuildTopAttempt
 ---@field name string
@@ -157,4 +155,3 @@ local ChallengeModeGuildAttemptMember = {}
 ---@field mapChallengeModeID number
 ---@field isYou boolean
 ---@field members ChallengeModeGuildAttemptMember[]
-local ChallengeModeGuildTopAttempt = {}

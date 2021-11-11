@@ -230,4 +230,3 @@ local MountTypeFlag = {
 ---@class MountCreatureDisplayInfo
 ---@field creatureDisplayID number
 ---@field isVisible boolean
-local MountCreatureDisplayInfo = {}

@@ -191,12 +191,10 @@ function C_Garrison.SetAutoCombatSpellFastForward(state) end
 ---@class AutoCombatDamageClassString
 ---@field damageClassValue number
 ---@field locString string
-local AutoCombatDamageClassString = {}
 
 ---@class AutoCombatResult
 ---@field winner boolean
 ---@field combatLog AutoMissionRound[]
-local AutoCombatResult = {}
 
 ---@class AutoCombatSpellInfo
 ---@field autoCombatSpellID number
@@ -209,7 +207,6 @@ local AutoCombatResult = {}
 ---@field icon number
 ---@field spellTutorialFlag number
 ---@field hasThornsEffect boolean
-local AutoCombatSpellInfo = {}
 
 ---@class AutoCombatTroopInfo
 ---@field name string
@@ -240,7 +237,6 @@ local AutoCombatSpellInfo = {}
 ---@field isSoulbind boolean
 ---@field isCollected boolean
 ---@field autoCombatStats FollowerAutoCombatStatsInfo
-local AutoCombatTroopInfo = {}
 
 ---@class AutoMissionCombatEventInfo
 ---@field boardIndex number
@@ -248,12 +244,10 @@ local AutoCombatTroopInfo = {}
 ---@field newHealth number
 ---@field maxHealth number
 ---@field points number|nil
-local AutoMissionCombatEventInfo = {}
 
 ---@class AutoMissionEnvironmentEffect
 ---@field name string
 ---@field autoCombatSpellInfo AutoCombatSpellInfo
-local AutoMissionEnvironmentEffect = {}
 
 ---@class AutoMissionEvent
 ---@field type number
@@ -263,18 +257,15 @@ local AutoMissionEnvironmentEffect = {}
 ---@field casterBoardIndex number
 ---@field auraType number
 ---@field targetInfo AutoMissionCombatEventInfo[]
-local AutoMissionEvent = {}
 
 ---@class AutoMissionRound
 ---@field events AutoMissionEvent[]
-local AutoMissionRound = {}
 
 ---@class AutoMissionTargetingInfo
 ---@field targetIndex number
 ---@field previewType number
 ---@field spellID number
 ---@field effectIndex number
-local AutoMissionTargetingInfo = {}
 
 ---@class FollowerAutoCombatStatsInfo
 ---@field currentHealth number
@@ -283,13 +274,11 @@ local AutoMissionTargetingInfo = {}
 ---@field healingTimestamp number
 ---@field healCost number
 ---@field minutesHealingRemaining number
-local FollowerAutoCombatStatsInfo = {}
 
 ---@class FollowerDisplayID
 ---@field id number
 ---@field followerPageScale number
 ---@field showWeapon boolean
-local FollowerDisplayID = {}
 
 ---@class FollowerMissionCompleteInfo
 ---@field name string
@@ -317,7 +306,6 @@ local FollowerDisplayID = {}
 ---@field health number
 ---@field maxHealth number
 ---@field role number
-local FollowerMissionCompleteInfo = {}
 
 ---@class GarrisonAbilityCounterInfo
 ---@field id number
@@ -325,7 +313,6 @@ local FollowerMissionCompleteInfo = {}
 ---@field name string
 ---@field factor number
 ---@field description string
-local GarrisonAbilityCounterInfo = {}
 
 ---@class GarrisonAbilityInfo
 ---@field id number
@@ -338,7 +325,6 @@ local GarrisonAbilityCounterInfo = {}
 ---@field category string|nil
 ---@field counters GarrisonAbilityCounterInfo[]
 ---@field isEmptySlot boolean
-local GarrisonAbilityInfo = {}
 
 ---@class GarrisonEnemyEncounterInfo
 ---@field name string
@@ -356,12 +342,10 @@ local GarrisonAbilityInfo = {}
 ---@field attack number
 ---@field boardIndex number
 ---@field isElite boolean
-local GarrisonEnemyEncounterInfo = {}
 
 ---@class GarrisonFollowerDeathInfo
 ---@field followerID string
 ---@field state number
-local GarrisonFollowerDeathInfo = {}
 
 ---@class GarrisonMechanicInfo
 ---@field mechanicTypeID number
@@ -370,14 +354,12 @@ local GarrisonFollowerDeathInfo = {}
 ---@field factor number
 ---@field description string
 ---@field ability GarrisonAbilityInfo|nil
-local GarrisonMechanicInfo = {}
 
 ---@class GarrisonPlotInstanceMapInfo
 ---@field buildingPlotInstanceID number
 ---@field position Vector2DMixin
 ---@field name string
 ---@field atlasName string
-local GarrisonPlotInstanceMapInfo = {}
 
 ---@class MissionDeploymentInfo
 ---@field location string
@@ -388,11 +370,9 @@ local GarrisonPlotInstanceMapInfo = {}
 ---@field locTextureKit string
 ---@field isExhausting boolean
 ---@field enemies GarrisonEnemyEncounterInfo[]
-local MissionDeploymentInfo = {}
 
 ---@class MissionEncounterIconInfo
 ---@field portraitFileDataID number
 ---@field missionScalar number
 ---@field isElite boolean
 ---@field isRare boolean
-local MissionEncounterIconInfo = {}

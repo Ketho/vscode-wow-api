@@ -13,4 +13,3 @@ function C_PartyPose.GetPartyPoseInfoByMapID(mapID) end
 ---@field defeatModelSceneID number
 ---@field victorySoundKitID number
 ---@field defeatSoundKitID number
-local PartyPoseInfo = {}

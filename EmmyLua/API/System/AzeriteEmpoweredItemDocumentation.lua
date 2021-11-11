@@ -107,19 +107,15 @@ local AzeritePowerLevel = {
 ---@class AzeriteEmpoweredItemPowerInfo
 ---@field azeritePowerID number
 ---@field spellID number
-local AzeriteEmpoweredItemPowerInfo = {}
 
 ---@class AzeriteEmpoweredItemPowerText
 ---@field name string
 ---@field description string
-local AzeriteEmpoweredItemPowerText = {}
 
 ---@class AzeriteEmpoweredItemTierInfo
 ---@field azeritePowerIDs number[]
 ---@field unlockLevel number
-local AzeriteEmpoweredItemTierInfo = {}
 
 ---@class AzeriteSpecInfo
 ---@field classID number
 ---@field specID number
-local AzeriteSpecInfo = {}

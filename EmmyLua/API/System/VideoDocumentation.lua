@@ -8,4 +8,3 @@ function C_VideoOptions.GetGxAdapterInfo() end
 ---@field name string
 ---@field isLowPower boolean
 ---@field isExternal boolean
-local GxAdapterInfoDetails = {}

@@ -28,4 +28,3 @@ function C_Covenants.GetCovenantIDs() end
 ---@field renownFanfareSoundKitID number
 ---@field name string
 ---@field soulbindIDs number[]
-local CovenantData = {}

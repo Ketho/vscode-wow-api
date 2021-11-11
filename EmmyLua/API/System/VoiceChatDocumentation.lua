@@ -415,7 +415,6 @@ local VoiceTtsStatusCode = {
 ---@field isActive boolean
 ---@field isSystemDefault boolean
 ---@field isCommsDefault boolean
-local VoiceAudioDevice = {}
 
 ---@class VoiceChatChannel
 ---@field name string
@@ -429,7 +428,6 @@ local VoiceAudioDevice = {}
 ---@field isTransmitting boolean
 ---@field isTranscribing boolean
 ---@field members VoiceChatMember[]
-local VoiceChatChannel = {}
 
 ---@class VoiceChatMember
 ---@field energy number
@@ -438,14 +436,11 @@ local VoiceChatChannel = {}
 ---@field isSpeaking boolean
 ---@field isMutedForAll boolean
 ---@field isSilenced boolean
-local VoiceChatMember = {}
 
 ---@class VoiceChatProcess
 ---@field name string
 ---@field channels VoiceChatChannel[]
-local VoiceChatProcess = {}
 
 ---@class VoiceTtsVoiceType
 ---@field voiceID number
 ---@field name string
-local VoiceTtsVoiceType = {}

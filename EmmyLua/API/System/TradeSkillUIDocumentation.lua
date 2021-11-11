@@ -94,4 +94,3 @@ local OptionalReagentItemFlag = {
 ---@field lockedReason string|nil
 ---@field slotText string|nil
 ---@field options number[]
-local OptionalReagentSlot = {}

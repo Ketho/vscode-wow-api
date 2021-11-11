@@ -16,4 +16,3 @@ function C_Texture.GetAtlasInfo(atlas) end
 ---@field tilesVertically boolean
 ---@field file number|nil
 ---@field filename string|nil
-local AtlasInfo = {}

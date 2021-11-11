@@ -39,7 +39,6 @@ local PlayerChoiceRarity = {
 ---@field keepOpenAfterChoice boolean
 ---@field options PlayerChoiceOptionInfo[]
 ---@field soundKitID number|nil
-local PlayerChoiceInfo = {}
 
 ---@class PlayerChoiceOptionButtonInfo
 ---@field id number
@@ -49,7 +48,6 @@ local PlayerChoiceInfo = {}
 ---@field tooltip string|nil
 ---@field rewardQuestID number|nil
 ---@field soundKitID number|nil
-local PlayerChoiceOptionButtonInfo = {}
 
 ---@class PlayerChoiceOptionInfo
 ---@field id number
@@ -70,13 +68,11 @@ local PlayerChoiceOptionButtonInfo = {}
 ---@field typeArtID number|nil
 ---@field headerIconAtlasElement string|nil
 ---@field subHeader string|nil
-local PlayerChoiceOptionInfo = {}
 
 ---@class PlayerChoiceOptionRewardInfo
 ---@field currencyRewards PlayerChoiceRewardCurrencyInfo[]
 ---@field itemRewards PlayerChoiceRewardItemInfo[]
 ---@field repRewards PlayerChoiceRewardReputationInfo[]
-local PlayerChoiceOptionRewardInfo = {}
 
 ---@class PlayerChoiceRewardCurrencyInfo
 ---@field currencyId number
@@ -84,15 +80,12 @@ local PlayerChoiceOptionRewardInfo = {}
 ---@field currencyTexture number
 ---@field quantity number
 ---@field isCurrencyContainer boolean
-local PlayerChoiceRewardCurrencyInfo = {}
 
 ---@class PlayerChoiceRewardItemInfo
 ---@field itemId number
 ---@field name string
 ---@field quantity number
-local PlayerChoiceRewardItemInfo = {}
 
 ---@class PlayerChoiceRewardReputationInfo
 ---@field factionId number
 ---@field quantity number
-local PlayerChoiceRewardReputationInfo = {}

@@ -37,7 +37,6 @@ local SelfResurrectOptionType = {
 ---@field textureIndex number
 ---@field graveyardID number
 ---@field isGraveyardSelectable boolean
-local GraveyardMapInfo = {}
 
 ---@class SelfResurrectOption
 ---@field name string
@@ -46,4 +45,3 @@ local GraveyardMapInfo = {}
 ---@field canUse boolean
 ---@field isLimited boolean
 ---@field priority number
-local SelfResurrectOption = {}

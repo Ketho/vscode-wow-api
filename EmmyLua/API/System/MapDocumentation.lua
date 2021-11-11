@@ -255,7 +255,6 @@ local UIMapType = {
 ---@field name string
 ---@field atlasName string
 ---@field uiTextureKit string|nil
-local MapBannerInfo = {}
 
 ---@class MapLinkInfo
 ---@field areaPoiID number
@@ -263,7 +262,6 @@ local MapBannerInfo = {}
 ---@field name string
 ---@field atlasName string
 ---@field linkedUiMapID number
-local MapLinkInfo = {}
 
 ---@class UiMapDetails
 ---@field mapID number
@@ -271,13 +269,11 @@ local MapLinkInfo = {}
 ---@field mapType UIMapType
 ---@field parentMapID number
 ---@field flags number
-local UiMapDetails = {}
 
 ---@class UiMapGroupMemberInfo
 ---@field mapID number
 ---@field relativeHeightIndex number
 ---@field name string
-local UiMapGroupMemberInfo = {}
 
 ---@class UiMapLayerInfo
 ---@field layerWidth number
@@ -287,4 +283,3 @@ local UiMapGroupMemberInfo = {}
 ---@field minScale number
 ---@field maxScale number
 ---@field additionalZoomSteps number
-local UiMapLayerInfo = {}

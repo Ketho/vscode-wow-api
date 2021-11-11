@@ -72,7 +72,6 @@ function Emmy:GetTable(apiTable)
 		for _, field in pairs(apiTable.Fields) do
 			table.insert(tbl, self:GetField("field", field))
 		end
-		table.insert(tbl, string.format("local %s = {}", apiTable.Name))
 	--elseif apiTable.Type == "Constants" then
 	end
 	return table.concat(tbl, "\n")

@@ -1,8 +1,4 @@
 ---@class WowObject
-local object = {}
-
----@class WowUnknown
-local unknown = {}
 
 ---@alias AnimationType
 ---| '"Animation"'

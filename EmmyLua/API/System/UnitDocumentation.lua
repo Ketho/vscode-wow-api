@@ -230,7 +230,6 @@ local PvPUnitClassification = {
 ---@field name string
 ---@field description string
 ---@field minCorruption number
-local CorruptionEffectInfo = {}
 
 ---@class UnitPowerBarInfo
 ---@field ID number
@@ -249,4 +248,3 @@ local CorruptionEffectInfo = {}
 ---@field flashAtMinPower boolean
 ---@field fractionalCounter boolean
 ---@field animateNumbers boolean
-local UnitPowerBarInfo = {}

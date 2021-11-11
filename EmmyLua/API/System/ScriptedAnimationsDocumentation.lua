@@ -58,4 +58,3 @@ local ScriptedAnimationTrajectory = {
 ---@field animationStartOffset number|nil
 ---@field loopingSoundKitID number|nil
 ---@field particleOverrideScale number|nil
-local ScriptedAnimationEffect = {}

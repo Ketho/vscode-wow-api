@@ -117,7 +117,6 @@ local ContributionResult = {
 ---@field statusBarAtlas string
 ---@field borderAtlas string
 ---@field bannerAtlas string
-local ContributionAppearance = {}
 
 ---@class ContributionMapInfo
 ---@field areaPoiID number
@@ -125,4 +124,3 @@ local ContributionAppearance = {}
 ---@field name string
 ---@field atlasName string
 ---@field collectorCreatureID number
-local ContributionMapInfo = {}

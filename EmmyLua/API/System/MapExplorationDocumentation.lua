@@ -16,7 +16,6 @@ function C_MapExplorationInfo.GetExploredMapTextures(uiMapID) end
 ---@field bottom number
 ---@field left number
 ---@field right number
-local UiMapExplorationHitRect = {}
 
 ---@class UiMapExplorationInfo
 ---@field textureWidth number
@@ -26,4 +25,3 @@ local UiMapExplorationHitRect = {}
 ---@field isShownByMouseOver boolean
 ---@field fileDataIDs number[]
 ---@field hitRect UiMapExplorationHitRect
-local UiMapExplorationInfo = {}

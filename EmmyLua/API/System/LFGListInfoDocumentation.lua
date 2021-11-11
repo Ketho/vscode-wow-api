@@ -170,7 +170,6 @@ local LfgListDisplayType = {
 ---@field mapName string
 ---@field bestRunLevel number
 ---@field finishedSuccess boolean
-local BestDungeonScoreMapInfo = {}
 
 ---@class GroupFinderActivityInfo
 ---@field fullName string
@@ -190,7 +189,6 @@ local BestDungeonScoreMapInfo = {}
 ---@field isCurrentRaidActivity boolean
 ---@field isPvpActivity boolean
 ---@field isMythicActivity boolean
-local GroupFinderActivityInfo = {}
 
 ---@class LfgApplicantData
 ---@field applicantID number
@@ -200,7 +198,6 @@ local GroupFinderActivityInfo = {}
 ---@field isNew boolean
 ---@field comment string
 ---@field displayOrderID number
-local LfgApplicantData = {}
 
 ---@class LfgCategoryData
 ---@field name string
@@ -209,7 +206,6 @@ local LfgApplicantData = {}
 ---@field autoChooseActivity boolean
 ---@field preferCurrentArea boolean
 ---@field showPlaystyleDropdown boolean
-local LfgCategoryData = {}
 
 ---@class LfgEntryData
 ---@field activityID number
@@ -225,7 +221,6 @@ local LfgCategoryData = {}
 ---@field requiredDungeonScore number|nil
 ---@field requiredPvpRating number|nil
 ---@field playstyle LfgEntryPlaystyle|nil
-local LfgEntryData = {}
 
 ---@class LfgSearchResultData
 ---@field searchResultID number
@@ -251,14 +246,12 @@ local LfgEntryData = {}
 ---@field requiredDungeonScore number|nil
 ---@field requiredPvpRating number|nil
 ---@field playstyle LfgEntryPlaystyle|nil
-local LfgSearchResultData = {}
 
 ---@class PvpRatingInfo
 ---@field bracket number
 ---@field rating number
 ---@field activityName string
 ---@field tier number
-local PvpRatingInfo = {}
 
 ---@class WowLocale
 ---@field enUS boolean
@@ -272,4 +265,3 @@ local PvpRatingInfo = {}
 ---@field ruRU boolean
 ---@field ptBR boolean
 ---@field itIT boolean
-local WowLocale = {}

@@ -662,12 +662,10 @@ local TrackedSpellCategory = {
 ---@field series CommentatorSeries[]
 ---@field teamDirectory CommentatorTeamDirectoryEntry[]
 ---@field overrideNameDirectory CommentatorOverrideNameEntry[]
-local CommentatorHistory = {}
 
 ---@class CommentatorOverrideNameEntry
 ---@field originalName string
 ---@field newName string
-local CommentatorOverrideNameEntry = {}
 
 ---@class CommentatorPlayerData
 ---@field unitToken string
@@ -680,21 +678,17 @@ local CommentatorOverrideNameEntry = {}
 ---@field healingTaken number
 ---@field kills number
 ---@field deaths number
-local CommentatorPlayerData = {}
 
 ---@class CommentatorSeries
 ---@field teams CommentatorSeriesTeam[]
-local CommentatorSeries = {}
 
 ---@class CommentatorSeriesTeam
 ---@field name string
 ---@field score number
-local CommentatorSeriesTeam = {}
 
 ---@class CommentatorTeamDirectoryEntry
 ---@field playerName string
 ---@field teamName string
-local CommentatorTeamDirectoryEntry = {}
 
 ---@class CommentatorUnitData
 ---@field healthMax number
@@ -705,9 +699,7 @@ local CommentatorTeamDirectoryEntry = {}
 ---@field powerTypeToken string
 ---@field power number
 ---@field powerMax number
-local CommentatorUnitData = {}
 
 ---@class NameOverrideEntry
 ---@field originalName string
 ---@field overrideName string
-local NameOverrideEntry = {}

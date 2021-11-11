@@ -44,4 +44,3 @@ local QuestLineFloorLocation = {
 ---@field isDaily boolean
 ---@field isCampaign boolean
 ---@field floorLocation QuestLineFloorLocation
-local QuestLineInfo = {}

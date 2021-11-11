@@ -3,7 +3,6 @@
 ---@field description string
 ---@field icon number
 ---@field factor number
-local GarrisonAbilityEffect = {}
 
 ---@class GarrisonFollowerAbilityInfo
 ---@field id number
@@ -16,12 +15,10 @@ local GarrisonAbilityEffect = {}
 ---@field category string|nil
 ---@field counters GarrisonAbilityEffect[]
 ---@field isEmptySlot boolean
-local GarrisonFollowerAbilityInfo = {}
 
 ---@class GarrisonTalentCurrencyCostInfo
 ---@field currencyType number
 ---@field currencyQuantity number
-local GarrisonTalentCurrencyCostInfo = {}
 
 ---@class GarrisonTalentInfo
 ---@field id number
@@ -48,11 +45,9 @@ local GarrisonTalentCurrencyCostInfo = {}
 ---@field researchDescription string|nil
 ---@field playerConditionReason string|nil
 ---@field socketInfo GarrisonTalentSocketInfo
-local GarrisonTalentInfo = {}
 
 ---@class GarrisonTalentSocketInfo
 ---@field socketType number
 ---@field socketSubtype number
 ---@field misc0 number
 ---@field misc1 number
-local GarrisonTalentSocketInfo = {}

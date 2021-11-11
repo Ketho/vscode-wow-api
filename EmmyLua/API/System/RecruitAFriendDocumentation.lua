@@ -78,17 +78,14 @@ local RafRewardType = {
 
 ---@class RafAppearanceInfo
 ---@field appearanceID number
-local RafAppearanceInfo = {}
 
 ---@class RafAppearanceSetInfo
 ---@field setID number
 ---@field setName string
 ---@field appearanceIDs number[]
-local RafAppearanceSetInfo = {}
 
 ---@class RafIllusionInfo
 ---@field spellItemEnchantmentID number
-local RafIllusionInfo = {}
 
 ---@class RafInfo
 ---@field lifetimeMonths number
@@ -99,12 +96,10 @@ local RafIllusionInfo = {}
 ---@field nextReward RafReward|nil
 ---@field recruitmentInfo RafRecruitmentinfo|nil
 ---@field recruits RafRecruit[]
-local RafInfo = {}
 
 ---@class RafMountInfo
 ---@field spellID number
 ---@field mountID number
-local RafMountInfo = {}
 
 ---@class RafPetInfo
 ---@field creatureID number
@@ -112,7 +107,6 @@ local RafMountInfo = {}
 ---@field displayID number
 ---@field speciesName string
 ---@field description string
-local RafPetInfo = {}
 
 ---@class RafRecruit
 ---@field bnetAccountID number
@@ -122,13 +116,11 @@ local RafPetInfo = {}
 ---@field subStatus RafRecruitSubStatus
 ---@field acceptanceID string
 ---@field activities RafRecruitActivity[]
-local RafRecruit = {}
 
 ---@class RafRecruitActivity
 ---@field activityID number
 ---@field rewardQuestID number
 ---@field state RafRecruitActivityState
-local RafRecruitActivity = {}
 
 ---@class RafRecruitmentinfo
 ---@field recruitmentCode string
@@ -139,7 +131,6 @@ local RafRecruitActivity = {}
 ---@field remainingUses number
 ---@field sourceRealm string
 ---@field sourceFaction string
-local RafRecruitmentinfo = {}
 
 ---@class RafReward
 ---@field rewardID number
@@ -159,15 +150,12 @@ local RafRecruitmentinfo = {}
 ---@field monthCost number
 ---@field availableInMonths number
 ---@field iconID number
-local RafReward = {}
 
 ---@class RafSystemInfo
 ---@field maxRecruits number
 ---@field maxRecruitMonths number
 ---@field maxRecruitmentUses number
 ---@field daysInCycle number
-local RafSystemInfo = {}
 
 ---@class RafTitleInfo
 ---@field titleMaskID number
-local RafTitleInfo = {}

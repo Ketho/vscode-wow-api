@@ -43,7 +43,6 @@ local JailersTowerType = {
 ---@field type number
 ---@field area string
 ---@field uiTextureKit string
-local ScenarioInformation = {}
 
 ---@class ScenarioStepInfo
 ---@field title string
@@ -57,10 +56,8 @@ local ScenarioInformation = {}
 ---@field weightedProgress number|nil
 ---@field rewardQuestID number
 ---@field widgetSetID number|nil
-local ScenarioStepInfo = {}
 
 ---@class ScenarioStepSpellInfo
 ---@field spellID number
 ---@field name string
 ---@field icon number
-local ScenarioStepSpellInfo = {}

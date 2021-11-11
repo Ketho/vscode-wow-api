@@ -351,7 +351,6 @@ local TransmogCameraVariation = {
 ---@field appearanceIsUsable boolean
 ---@field appearanceNumSources number
 ---@field sourceIsKnown boolean
-local TransmogAppearanceInfoBySourceData = {}
 
 ---@class TransmogAppearanceJournalEncounterInfo
 ---@field instance string
@@ -359,7 +358,6 @@ local TransmogAppearanceInfoBySourceData = {}
 ---@field tiers string[]
 ---@field encounter string
 ---@field difficulties string[]
-local TransmogAppearanceJournalEncounterInfo = {}
 
 ---@class TransmogCategoryAppearanceInfo
 ---@field visualID number
@@ -373,7 +371,6 @@ local TransmogAppearanceJournalEncounterInfo = {}
 ---@field hasRequiredHoliday boolean
 ---@field hasActiveRequiredHoliday boolean
 ---@field alwaysShowItem boolean|nil
-local TransmogCategoryAppearanceInfo = {}
 
 ---@class TransmogIllusionInfo
 ---@field visualID number
@@ -382,4 +379,3 @@ local TransmogCategoryAppearanceInfo = {}
 ---@field isCollected boolean
 ---@field isUsable boolean
 ---@field isHideVisual boolean
-local TransmogIllusionInfo = {}

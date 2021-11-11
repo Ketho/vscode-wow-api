@@ -33,4 +33,3 @@ local SplashScreenType = {
 ---@field rightFeatureDesc string
 ---@field shouldShowQuest boolean
 ---@field screenType SplashScreenType
-local SplashScreenInfo = {}

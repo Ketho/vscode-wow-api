@@ -1,42 +1,32 @@
 ---@class CharacterAlternateFormData
 ---@field Undocumented boolean
-local CharacterAlternateFormData = {}
 
 ---@class CurrencyCost
 ---@field Undocumented boolean
-local CurrencyCost = {}
 
 ---@class OptionalReagentInfo
 ---@field Undocumented boolean
-local OptionalReagentInfo = {}
 
 ---@class QueueSpecificInfo
 ---@field Undocumented boolean
-local QueueSpecificInfo = {}
 
 ---@class RuneforgeItemPreviewInfo
 ---@field Undocumented boolean
-local RuneforgeItemPreviewInfo = {}
 
 ---@class RuneforgeLegendaryComponentInfo
 ---@field Undocumented boolean
-local RuneforgeLegendaryComponentInfo = {}
 
 ---@class RuneforgeLegendaryCraftDescription
 ---@field Undocumented boolean
-local RuneforgeLegendaryCraftDescription = {}
 
 ---@class RuneforgePower
 ---@field Undocumented boolean
-local RuneforgePower = {}
 
 ---@class MythicPlusRatingLinkInfo
 ---@field Undocumented boolean
-local MythicPlusRatingLinkInfo = {}
 
 ---@class ChatChannelInfo
 ---@field Undocumented boolean
-local ChatChannelInfo = {}
 
 ---@class CalendarTime
 ---@field year number
@@ -45,7 +35,6 @@ local ChatChannelInfo = {}
 ---@field weekday number
 ---@field hour number
 ---@field minute number
-local CalendarTime = {}
 
 ---@class GarrisonTalentTreeInfo
 ---@field featureSubtype number
@@ -55,7 +44,6 @@ local CalendarTime = {}
 ---@field talents table
 ---@field title string
 ---@field treeID number
-local GarrisonTalentTreeInfo = {}
 
 ---@class GuildTabardInfo
 ---@field backgroundColor ColorMixin
@@ -63,7 +51,6 @@ local GarrisonTalentTreeInfo = {}
 ---@field emblemColor ColorMixin
 ---@field emblemFileID number
 ---@field emblemStyle number
-local GuildTabardInfo = {}
 
 ---@class MythicPlusAffixScoreInfo
 ---@field name string
@@ -71,7 +58,6 @@ local GuildTabardInfo = {}
 ---@field level number
 ---@field durationSec number
 ---@field overTime boolean
-local MythicPlusAffixScoreInfo = {}
 
 ---@class TradeSkillRecipeInfo
 ---@field alternateVerb string|nil
@@ -93,7 +79,6 @@ local MythicPlusAffixScoreInfo = {}
 ---@field recipeID number
 ---@field sourceType number
 ---@field type string
-local TradeSkillRecipeInfo = {}
 
 ---@class AppearanceSourceInfo
 ---@field categoryID number
@@ -107,7 +92,6 @@ local TradeSkillRecipeInfo = {}
 ---@field sourceID number
 ---@field sourceType number|nil
 ---@field visualID number
-local AppearanceSourceInfo = {}
 
 ---@class BountyInfo
 ---@field questID number
@@ -115,7 +99,6 @@ local AppearanceSourceInfo = {}
 ---@field icon number
 ---@field numObjectives number
 ---@field turninRequirementText string|nil
-local BountyInfo = {}
 
 ---@class CharCustomizationCategory
 ---@field id number
@@ -124,7 +107,6 @@ local BountyInfo = {}
 ---@field icon string
 ---@field selectedIcon string
 ---@field options CharCustomizationOption[]
-local CharCustomizationCategory = {}
 
 ---@class CachedRewardType
 local CachedRewardType = {
