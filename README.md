@@ -9,8 +9,7 @@ See [Recommended settings](https://github.com/Ketho/vscode-wow-api/wiki/Recommen
 
 ### Features
 #### [API](https://wowpedia.fandom.com/wiki/World_of_Warcraft_API)
-* Global API: Parsed 55% (743/1344) of non-Blizzard documented API that have an existing Wowpedia page
-* `C_` namespaced systems
+* Parses Wowpedia pages for API documentation
 * Lua shorthand references e.g. `format` (string.format) and `tinsert` (table.insert)
 * Custom WoW Lua functions e.g. `wipe` and `strsplit`
 
@@ -26,7 +25,7 @@ See [Recommended settings](https://github.com/Ketho/vscode-wow-api/wiki/Recommen
 ![](https://github.com/Ketho/vscode-wow-api/raw/master/img/cvar.png)
 
 #### [Enums](https://github.com/Ketho/BlizzardInterfaceResources/blob/mainline/Resources/LuaEnum.lua)
-* `Enum` table
+* `Enum` and `Constants` table
 * `LE_` Lua Enums
 
 ![](https://github.com/Ketho/vscode-wow-api/raw/master/img/enum.gif)
@@ -38,7 +37,7 @@ Shows completion for GlobalStrings at >3 uppercase letters to declutter fuzzy se
 
 ### Generating documentation
 * Blizzard documented functions are generated from [Blizzard_APIDocumentation](https://github.com/Gethe/wow-ui-source/tree/live/AddOns/Blizzard_APIDocumentation).
-* Non-Blizzard documented functions are [exported](https://wowpedia.fandom.com/wiki/Special:Export) and [parsed](Lua/WikiParser/XmlParser.lua) from Wowpedia.
+* Non-Blizzard documented functions are [exported](https://wowpedia.fandom.com/wiki/Special:Export) and parsed from Wowpedia.
 * JSON data for the hover provider (Events, CVars and Enums) is generated from [Lua/ToTypeScript](Lua/ToTypeScript).
 ```
 lua53 ./Lua/main.lua
@@ -49,6 +48,12 @@ lua53 ./Lua/main.lua
 * luasocket: https://luarocks.org/modules/luasocket/luasocket
 * luasec: https://luarocks.org/modules/brunoos/luasec
 * xml2lua: https://luarocks.org/modules/manoelcampos/xml2lua
+
+[WoWtoolsParser](https://github.com/Ketho/WoWtoolsParser)
+* csv: https://luarocks.org/modules/geoffleyland/csv
+* curl: https://curl.haxx.se/
+* lua-curl: https://luarocks.org/modules/moteus/lua-curl
+* lua-cjson: https://luarocks.org/modules/openresty/lua-cjson
 
 #### Acknowledgements
 The following people contributed to the development resources or their work was of invaluable help.

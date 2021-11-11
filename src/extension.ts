@@ -42,7 +42,7 @@ export function activate(context: vscode.ExtensionContext) {
 
 	setExternalLibrary("EmmyLua\\API", true)
 	const loadFrameXML = vscode.workspace.getConfiguration("wowAPI").get("emmyLua.loadFrameXML")
-	setExternalLibrary("EmmyLua\\FrameXML", loadFrameXML ? true : false)
+	setExternalLibrary("EmmyLua\\Optional", loadFrameXML ? true : false)
 	setLanguageServerOptions()
 
 	const completion = vscode.languages.registerCompletionItemProvider(

@@ -1,5 +1,17 @@
 # Change Log
 
+### Known issues
+- Uninstalling the extension does not appear to work. It relied on vscode deleting the actual extension files instead of removing them from Sumneko's external libraries path.
+- Frame templates are not yet supported (#15)
+- The Classic (TBC) API is not supported (#13)
+
+## [0.7.0] - 2021-11-11
+### Added
+- 🌙 EmmyLua: Updated for [Patch 9.1.5](https://wowpedia.fandom.com/wiki/Patch_9.1.5/API_changes), except widget API
+- 🌙 EmmyLua: Improved the EmmyLua `Enum` types to use a single file and added the `Constants` table
+- 🌙 EmmyLua: Added [TransmogLocationMixin](https://github.com/Gethe/wow-ui-source/blob/9.1.5/Interface/FrameXML/TransmogUtil.lua#L322)
+- 🛠 Improvements: Parsing Wowpedia pages automatically instead of exporting the XML manually; refactored Lua code
+
 ## [0.6.2] - 2021-10-05
 ### Added
 - 🛠 Improvements: Parse emmylua directly from wikitext, testing with [GetSpellInfo](https://wowpedia.fandom.com/wiki/API_GetSpellInfo)
@@ -188,6 +200,7 @@
 ### Added
 - 🚧 Wip: Development work
 
+[0.7.0]: https://github.com/Ketho/vscode-wow-api/releases/tag/v0.7.0
 [0.6.2]: https://github.com/Ketho/vscode-wow-api/releases/tag/v0.6.2
 [0.6.1]: https://github.com/Ketho/vscode-wow-api/releases/tag/v0.6.1
 [0.6.0]: https://github.com/Ketho/vscode-wow-api/releases/tag/v0.6.0
