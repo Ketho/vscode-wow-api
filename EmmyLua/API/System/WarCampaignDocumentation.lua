@@ -49,14 +49,6 @@ function C_CampaignInfo.IsCampaignQuest(questID) end
 ---@return boolean useNormalQuestIcons
 function C_CampaignInfo.UsesNormalQuestIcons(campaignID) end
 
----@class CampaignState
-local CampaignState = {
-	Invalid = 0,
-	Complete = 1,
-	InProgress = 2,
-	Stalled = 3,
-}
-
 ---@class CampaignChapterInfo
 ---@field name string
 ---@field description string

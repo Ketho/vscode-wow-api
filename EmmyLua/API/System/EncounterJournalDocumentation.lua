@@ -61,26 +61,6 @@ function C_EncounterJournal.SetPreviewPvpTier(tier) end
 ---@param filterSlot ItemSlotFilterType
 function C_EncounterJournal.SetSlotFilter(filterSlot) end
 
----@class ItemSlotFilterType
-local ItemSlotFilterType = {
-	Head = 0,
-	Neck = 1,
-	Shoulder = 2,
-	Cloak = 3,
-	Chest = 4,
-	Wrist = 5,
-	Hand = 6,
-	Waist = 7,
-	Legs = 8,
-	Feet = 9,
-	MainHand = 10,
-	OffHand = 11,
-	Finger = 12,
-	Trinket = 13,
-	Other = 14,
-	NoFilter = 15,
-}
-
 ---@class DungeonEntranceMapInfo
 ---@field areaPoiID number
 ---@field position Vector2DMixin

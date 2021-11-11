@@ -399,26 +399,6 @@ function C_AuctionHouse.SetFavoriteItem(itemKey, setFavorite) end
 ---@param quantity number
 function C_AuctionHouse.StartCommoditiesPurchase(itemID, quantity) end
 
----@class AuctionHouseFilterCategory
-local AuctionHouseFilterCategory = {
-	Uncategorized = 0,
-	Equipment = 1,
-	Rarity = 2,
-}
-
----@class AuctionStatus
-local AuctionStatus = {
-	Active = 0,
-	Sold = 1,
-}
-
----@class ItemCommodityStatus
-local ItemCommodityStatus = {
-	Unknown = 0,
-	Item = 1,
-	Commodity = 2,
-}
-
 ---@class AuctionHouseBrowseQuery
 ---@field searchString string
 ---@field sorts AuctionHouseSortType[]

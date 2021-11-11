@@ -92,23 +92,6 @@ function C_ContributionCollector.HasPendingContribution(contributionID) end
 ---@return boolean awaitingData
 function C_ContributionCollector.IsAwaitingRewardQuestData(contributionID) end
 
----@class ContributionAppearanceFlags
-local ContributionAppearanceFlags = {
-	TooltipUseTimeRemaining = 0,
-}
-
----@class ContributionResult
-local ContributionResult = {
-	Success = 0,
-	MustBeNearNpc = 1,
-	IncorrectState = 2,
-	InvalidID = 3,
-	QuestDataMissing = 4,
-	FailedConditionCheck = 5,
-	UnableToCompleteTurnIn = 6,
-	InternalError = 7,
-}
-
 ---@class ContributionAppearance
 ---@field stateName string
 ---@field stateColor ColorMixin

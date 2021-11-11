@@ -14,24 +14,6 @@ function C_ScenarioInfo.GetScenarioInfo() end
 ---@return ScenarioStepInfo scenarioStepInfo
 function C_ScenarioInfo.GetScenarioStepInfo(scenarioStepID) end
 
----@class JailersTowerType
-local JailersTowerType = {
-	TwistingCorridors = 0,
-	SkoldusHalls = 1,
-	FractureChambers = 2,
-	Soulforges = 3,
-	Coldheart = 4,
-	Mortregar = 5,
-	UpperReaches = 6,
-	ArkobanHall = 7,
-	TormentChamberJaina = 8,
-	TormentChamberThrall = 9,
-	TormentChamberAnduin = 10,
-	AdamantVaults = 11,
-	ForgottenCatacombs = 12,
-	Ossuary = 13,
-}
-
 ---@class ScenarioInformation
 ---@field name string
 ---@field currentStage number

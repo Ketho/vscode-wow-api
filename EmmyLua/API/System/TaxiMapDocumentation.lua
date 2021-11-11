@@ -17,20 +17,6 @@ function C_TaxiMap.GetTaxiNodesForMap(uiMapID) end
 ---@return boolean shouldShowNodes
 function C_TaxiMap.ShouldMapShowTaxiNodes(uiMapID) end
 
----@class FlightPathFaction
-local FlightPathFaction = {
-	Neutral = 0,
-	Horde = 1,
-	Alliance = 2,
-}
-
----@class FlightPathState
-local FlightPathState = {
-	Current = 0,
-	Reachable = 1,
-	Unreachable = 2,
-}
-
 ---@class MapTaxiNodeInfo
 ---@field nodeID number
 ---@field position Vector2DMixin

@@ -27,15 +27,6 @@ function C_AnimaDiversion.OpenAnimaDiversionUI() end
 ---@param temporary boolean
 function C_AnimaDiversion.SelectAnimaNode(talentID, temporary) end
 
----@class AnimaDiversionNodeState
-local AnimaDiversionNodeState = {
-	Unavailable = 0,
-	Available = 1,
-	SelectedTemporary = 2,
-	SelectedPermanent = 3,
-	Cooldown = 4,
-}
-
 ---@class AnimaDiversionCostInfo
 ---@field currencyID number
 ---@field quantity number

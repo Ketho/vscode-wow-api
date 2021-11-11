@@ -20,14 +20,6 @@ function C_VignetteInfo.GetVignettePosition(vignetteGUID, uiMapID) end
 ---@return string[] vignetteGUIDs
 function C_VignetteInfo.GetVignettes() end
 
----@class VignetteType
-local VignetteType = {
-	Normal = 0,
-	PvPBounty = 1,
-	Torghast = 2,
-	Treasure = 3,
-}
-
 ---@class VignetteInfo
 ---@field vignetteGUID string
 ---@field objectGUID string

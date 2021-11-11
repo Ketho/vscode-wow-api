@@ -214,19 +214,6 @@ function C_MountJournal.SetTypeFilter(filterIndex, isChecked) end
 ---@param mountID number
 function C_MountJournal.SummonByID(mountID) end
 
----@class MountType
-local MountType = {
-	Ground = 0,
-	Flying = 1,
-	Aquatic = 2,
-}
-
----@class MountTypeFlag
-local MountTypeFlag = {
-	IsFlyingMount = 1,
-	IsAquaticMount = 2,
-}
-
 ---@class MountCreatureDisplayInfo
 ---@field creatureDisplayID number
 ---@field isVisible boolean

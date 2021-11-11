@@ -312,21 +312,6 @@ function C_PvP.SetWarModeDesired(warModeDesired) end
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_PvP.ToggleWarMode)
 function C_PvP.ToggleWarMode() end
 
----@class BrawlType
-local BrawlType = {
-	None = 0,
-	Battleground = 1,
-	Arena = 2,
-	Lfg = 3,
-}
-
----@class PvPMatchState
-local PvPMatchState = {
-	Inactive = 0,
-	Active = 1,
-	Complete = 2,
-}
-
 ---@class BattlefieldCurrencyReward
 ---@field id number
 ---@field quantity number

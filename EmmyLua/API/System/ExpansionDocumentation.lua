@@ -85,20 +85,6 @@ function IsVeteranTrialAccount() end
 ---@param response SubscriptionInterstitialResponseType
 function SendSubscriptionInterstitialResponse(response) end
 
----@class SubscriptionInterstitialResponseType
-local SubscriptionInterstitialResponseType = {
-	Clicked = 0,
-	Closed = 1,
-	WebRedirect = 2,
-}
-
----@class SubscriptionInterstitialType
-local SubscriptionInterstitialType = {
-	Standard = 0,
-	LeftNpeArea = 1,
-	MaxLevel = 2,
-}
-
 ---@class ExpansionDisplayInfo
 ---@field logo number
 ---@field banner string

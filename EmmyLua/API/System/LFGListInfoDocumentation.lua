@@ -148,23 +148,6 @@ function C_LFGList.ValidateRequiredDungeonScore(dungeonScore) end
 ---@return boolean passes
 function C_LFGList.ValidateRequiredPvpRatingForActivity(activityID, rating) end
 
----@class LfgEntryPlaystyle
-local LfgEntryPlaystyle = {
-	None = 0,
-	Standard = 1,
-	Casual = 2,
-	Hardcore = 3,
-}
-
----@class LfgListDisplayType
-local LfgListDisplayType = {
-	RoleCount = 0,
-	RoleEnumerate = 1,
-	ClassEnumerate = 2,
-	HideAll = 3,
-	PlayerCount = 4,
-}
-
 ---@class BestDungeonScoreMapInfo
 ---@field mapScore number
 ---@field mapName string

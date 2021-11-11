@@ -22,14 +22,6 @@ function C_PlayerChoice.RequestRerollPlayerChoice() end
 ---@param responseID number
 function C_PlayerChoice.SendPlayerChoiceResponse(responseID) end
 
----@class PlayerChoiceRarity
-local PlayerChoiceRarity = {
-	Common = 0,
-	Uncommon = 1,
-	Rare = 2,
-	Epic = 3,
-}
-
 ---@class PlayerChoiceInfo
 ---@field objectGUID string
 ---@field choiceID number

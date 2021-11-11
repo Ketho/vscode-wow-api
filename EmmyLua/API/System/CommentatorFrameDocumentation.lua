@@ -650,14 +650,6 @@ function C_Commentator.ZoomIn() end
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_Commentator.ZoomOut)
 function C_Commentator.ZoomOut() end
 
----@class TrackedSpellCategory
-local TrackedSpellCategory = {
-	Offensive = 0,
-	Defensive = 1,
-	Debuff = 2,
-	Count = 3,
-}
-
 ---@class CommentatorHistory
 ---@field series CommentatorSeries[]
 ---@field teamDirectory CommentatorTeamDirectoryEntry[]

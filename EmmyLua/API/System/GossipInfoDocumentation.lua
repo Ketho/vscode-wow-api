@@ -67,20 +67,6 @@ function C_GossipInfo.SelectAvailableQuest(index) end
 ---@param confirmed? boolean
 function C_GossipInfo.SelectOption(index, text, confirmed) end
 
----@class GossipOptionRewardType
-local GossipOptionRewardType = {
-	Item = 0,
-	Currency = 1,
-}
-
----@class GossipOptionStatus
-local GossipOptionStatus = {
-	Available = 0,
-	Unavailable = 1,
-	Locked = 2,
-	AlreadyComplete = 3,
-}
-
 ---@class GossipOptionRewardInfo
 ---@field id number
 ---@field quantity number

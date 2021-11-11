@@ -332,13 +332,6 @@ function C_TransmogCollection.SetUncollectedShown(shown) end
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_TransmogCollection.UpdateUsableAppearances)
 function C_TransmogCollection.UpdateUsableAppearances() end
 
----@class TransmogCameraVariation
-local TransmogCameraVariation = {
-	None = 0,
-	RightShoulder = 1,
-	CloakBackpack = 1,
-}
-
 ---@class TransmogAppearanceInfoBySourceData
 ---@field appearanceID number
 ---@field appearanceIsCollected boolean

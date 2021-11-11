@@ -9,11 +9,3 @@ function C_IncomingSummon.HasIncomingSummon(unit) end
 ---@param unit string
 ---@return SummonStatus status
 function C_IncomingSummon.IncomingSummonStatus(unit) end
-
----@class SummonStatus
-local SummonStatus = {
-	None = 0,
-	Pending = 1,
-	Accepted = 2,
-	Declined = 3,
-}

@@ -4,12 +4,6 @@ local types = {
 	bool = "boolean",
 }
 
-local supportedTables = {
-	Enumeration = true,
-	Structure = true,
-	--Constants = true,
-}
-
 local function GetType(paramType)
 	return types[paramType] or paramType
 end
@@ -17,6 +11,7 @@ end
 function Emmy:GetSystem(system)
 	local tbl = {}
 	if system.Functions and #system.Functions>0 then
+		-- namespace definition
 		table.insert(tbl, string.format("%s = {}", system.Namespace or system.Name))
 		for _, func in pairs(system.Functions) do
 			table.insert(tbl, self:GetFunction(func))
@@ -24,7 +19,7 @@ function Emmy:GetSystem(system)
 	end
 	if system.Tables then
 		for _, apiTable in pairs(system.Tables) do
-			if supportedTables[apiTable.Type] then
+			if apiTable.Type == "Structure" then
 				table.insert(tbl, self:GetTable(apiTable))
 			end
 		end
@@ -58,21 +53,8 @@ end
 function Emmy:GetTable(apiTable)
 	local tbl = {}
 	table.insert(tbl, string.format("---@class %s", apiTable.Name))
-	if apiTable.Type == "Enumeration" then
-		if #apiTable.Fields > 0 then
-			table.insert(tbl, string.format("local %s = {", apiTable.Name))
-			for _, v in pairs(apiTable.Fields) do
-				table.insert(tbl, string.format("\t%s = %s,", v.Name, v.EnumValue))
-			end
-			table.insert(tbl, "}")
-		else
-			table.insert(tbl, string.format("local %s = {}", apiTable.Name))
-		end
-	elseif apiTable.Type == "Structure" then
-		for _, field in pairs(apiTable.Fields) do
-			table.insert(tbl, self:GetField("field", field))
-		end
-	--elseif apiTable.Type == "Constants" then
+	for _, field in pairs(apiTable.Fields) do
+		table.insert(tbl, self:GetField("field", field))
 	end
 	return table.concat(tbl, "\n")
 end

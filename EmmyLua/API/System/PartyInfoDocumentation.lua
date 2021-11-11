@@ -96,12 +96,3 @@ function C_PartyInfo.LeaveParty(category) end
 ---@param healer? boolean
 ---@param dps? boolean
 function C_PartyInfo.RequestInviteFromUnit(targetName, tank, healer, dps) end
-
----@class PartyRequestJoinRelation
-local PartyRequestJoinRelation = {
-	None = 0,
-	Friend = 1,
-	Guild = 2,
-	Club = 3,
-	NumPartyRequestJoinRelations = 4,
-}

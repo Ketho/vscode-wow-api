@@ -60,13 +60,6 @@ function C_WeeklyRewards.HasGeneratedRewards() end
 ---@return boolean isInteracting
 function C_WeeklyRewards.HasInteraction() end
 
----@class ConquestProgressBarDisplayType
-local ConquestProgressBarDisplayType = {
-	FirstChest = 0,
-	AdditionalChest = 1,
-	Seasonal = 2,
-}
-
 ---@class ConquestWeeklyProgress
 ---@field progress number
 ---@field maxProgress number

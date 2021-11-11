@@ -19,10 +19,3 @@ function C_Navigation.HasValidScreenPosition() end
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_Navigation.WasClampedToScreen)
 ---@return boolean wasClamped
 function C_Navigation.WasClampedToScreen() end
-
----@class NavigationState
-local NavigationState = {
-	Invalid = 0,
-	Occluded = 1,
-	InRange = 2,
-}

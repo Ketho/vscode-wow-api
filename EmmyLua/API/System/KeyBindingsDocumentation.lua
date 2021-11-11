@@ -4,8 +4,3 @@ C_KeyBindings = {}
 ---@param bindingIndex number
 ---@return CustomBindingType? customBindingType
 function C_KeyBindings.GetCustomBindingType(bindingIndex) end
-
----@class CustomBindingType
-local CustomBindingType = {
-	VoicePushToTalk = 0,
-}

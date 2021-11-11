@@ -60,17 +60,6 @@ function C_PetJournal.PetIsSummonable(battlePetGUID) end
 ---@return boolean? usesRandomDisplay
 function C_PetJournal.PetUsesRandomDisplay(speciesID) end
 
----@class PetJournalError
-local PetJournalError = {
-	None = 0,
-	PetIsDead = 1,
-	JournalIsLocked = 2,
-	InvalidFaction = 3,
-	NoFavoritesToSummon = 4,
-	NoValidRandomSummon = 5,
-	InvalidCovenant = 6,
-}
-
 ---@class PetAbilityLevelInfo
 ---@field abilityID number
 ---@field level number
