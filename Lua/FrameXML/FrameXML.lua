@@ -2,6 +2,10 @@ local patches = require("Lua/FrameXML/Patches")
 
 local m = {}
 
+local ignoredFiles = {
+	["ConfigurationWarningsDocumentation.lua"] = true,
+}
+
 function m:LoadApiDocs(base)
 	require(base.."/Compat")
 	Util:MakeDir("EmmyLua/API/System")
@@ -11,7 +15,7 @@ function m:LoadApiDocs(base)
 		if line:find("%.lua") then
 			-- load blizzard addon and apidocs
 			Util:LoadFile(base.."/Blizzard_APIDocumentation/"..line)
-			if isDoc then -- write to emmylua
+			if isDoc and not ignoredFiles[line] then -- write to emmylua
 				local patch = patches.data[line]
 				if patch then
 					patches:ApplyPatch(self.documentationInfo, patch)
