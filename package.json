@@ -2,7 +2,7 @@
 	"name": "wow-api",
 	"displayName": "WoW API",
 	"description": "World of Warcraft API",
-	"version": "0.6.2",
+	"version": "0.7.0",
 	"publisher": "Ketho",
 	"repository": {
 		"type": "git",
