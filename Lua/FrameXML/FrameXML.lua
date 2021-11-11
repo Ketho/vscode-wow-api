@@ -35,9 +35,9 @@ function m:LoadApiDocs(base)
 		end
 	end
 	toc:close()
-	require(base.."/MissingDocumentation")
+	require(base.."/MissingStructures")
 	local text = Emmy:GetSystem(self.documentationInfo)
-	Util:WriteFile("EmmyLua/API/MissingDocumentation.lua", text.."\n")
+	Util:WriteFile("EmmyLua/API/MissingStructures.lua", text.."\n")
 end
 
 return m
