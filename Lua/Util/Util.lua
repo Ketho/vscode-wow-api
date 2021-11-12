@@ -53,7 +53,7 @@ function Util:HttpPostRequest(url, request)
 		url = url,
 		method = "POST",
 		headers = {
-			["Content-Length"] = string.len(request),
+			["Content-Length"] = #request,
 			["Content-Type"] = "application/x-www-form-urlencoded"
 		},
 		source = ltn12.source.string(request),

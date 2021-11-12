@@ -1,11 +1,10 @@
 local Util = require("Lua/Util/Util")
 
--- create folders if they don't exist yet
 Util:MakeDir("Lua/Data/cache")
 Util:MakeDir("Lua/Data/input")
 Util:MakeDir("Lua/Data/output")
 
--- load blizzard apidocs and write emmylua
+-- load blizzard apidocs
 require("Lua/Emmy/Emmy")
 local FrameXML = require("Lua/FrameXML/FrameXML")
 FrameXML:LoadApiDocs("Lua/FrameXML")
@@ -24,6 +23,6 @@ Util:WriteFile("src/data/enum.ts", require("Lua/ToTypeScript/LuaEnum")())
 Util:WriteFile("src/data/globalstring.ts", require("Lua/ToTypeScript/GlobalString")())
 
 -- parse the wiki
-require("Lua/WikiParser/WikiText/FunctionEmmy")
+require("Lua/WikiParser/WikiParser")
 
-print("Finished.")
+print("done")

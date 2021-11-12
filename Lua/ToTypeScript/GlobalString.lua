@@ -19,7 +19,7 @@ local function IsValidTableKey(s)
 end
 
 local function ToTypeScript()
-	local globalstrings, usedBuild = parser.ReadCSV("globalstrings", {header = true, build = constants.LATEST_MAINLINE})
+	local globalstrings, usedBuild = parser:ReadCSV("globalstrings", {header = true, build = constants.LATEST_MAINLINE})
 	local stringsTable = {}
 	for line in globalstrings:lines() do
 		local flags = tonumber(line.Flags)

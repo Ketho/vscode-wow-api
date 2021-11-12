@@ -13,7 +13,7 @@ local json_url = "https://wow.tools/api/data/%s/?build=%s&useHotfixes=true&lengt
 
 local USER_AGENT = "your user agent here"
 local CACHE_PATH = "Lua/Data/cache"
-local CACHE_INVALIDATION_TIME = 600
+local INVALIDATION_TIME = 60*60
 
 local listfile_cache = CACHE_PATH.."/listfile.csv"
 local versions_cache = CACHE_PATH.."/%s_versions.json"
@@ -39,7 +39,7 @@ local function ShouldDownload(path)
 		return true
 	elseif path:find("versions%.json") or path:find("listfile%.csv") then
 		local modified = attr.modification
-		if os.time() > modified + CACHE_INVALIDATION_TIME then
+		if os.time() > modified + INVALIDATION_TIME then
 			return true
 		end
 	end
@@ -66,7 +66,7 @@ end
 --- Gets all build versions for a database
 -- @param name the DBC name
 -- @return table available build versions
-local function GetVersions(name)
+function parser:GetVersions(name)
 	local path = versions_cache:format(name)
 	if ShouldDownload(path) then
 		local file = io.open(path, "w")
@@ -82,8 +82,8 @@ end
 -- @param name the DBC name
 -- @param build the build to search for
 -- @return string the build number (e.g. "8.2.0.30993")
-local function FindBuild(name, build)
-	local versions = GetVersions(name)
+function parser:FindBuild(name, build)
+	local versions = self:GetVersions(name)
 	if build then
 		for _, version in pairs(versions) do
 			if version:find(build, 1, true) then
@@ -103,9 +103,9 @@ end
 -- @param options.locale (optional) the locale, otherwise uses english
 -- @return function the csv iterator
 -- @return string the used build
-function parser.ReadCSV(name, options)
+function parser:ReadCSV(name, options)
 	options = options or {}
-	local build = FindBuild(name, options.build)
+	local build = self:FindBuild(name, options.build)
 	local base = GetBaseName(name, build, options)
 	local path = csv_cache:format(base)
 	if not lfs.attributes(path) then
@@ -128,9 +128,9 @@ end
 -- @param options.locale (optional) the locale, otherwise uses english
 -- @return table the converted json table
 -- @return string the used build
-function parser.ReadJSON(name, options)
+function parser:ReadJSON(name, options)
 	options = options or {}
-	local build = FindBuild(name, options.build)
+	local build = self:FindBuild(name, options.build)
 	local base = GetBaseName(name, build, options)
 	local path = json_cache:format(base)
 	if not lfs.attributes(path) then
@@ -151,7 +151,7 @@ function parser.ReadJSON(name, options)
 end
 
 --- Parses the CSV listfile
-function parser.ReadListfile()
+function parser:ReadListfile()
 	if ShouldDownload(listfile_cache) then
 		print("downloading listfile...")
 		local file = io.open(listfile_cache, "w")
@@ -169,19 +169,19 @@ function parser.ReadListfile()
 	return filedata
 end
 
-function parser.ExplodeCSV(iter)
+function parser:ExplodeCSV(iter)
 	for line in iter:lines() do
 		print(table.unpack(line))
 	end
 end
 
-function parser.ExplodeJSON(tbl)
+function parser:ExplodeJSON(tbl)
 	for _, line in pairs(tbl) do
 		print(table.unpack(line))
 	end
 end
 
-function parser.ExplodeListfile(tbl)
+function parser:ExplodeListfile(tbl)
 	for fdid, path in pairs(tbl) do
 		print(fdid, path)
 	end

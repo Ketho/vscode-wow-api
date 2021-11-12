@@ -1,6 +1,6 @@
 ---@diagnostic disable:unused-local
 local str1 = strtrim(" hello world ")
-local str2 = string.format("%s %d", "greedisgood", 999)
+local str2 = format("%s %d", "greedisgood", 999)
 local num1 = bit.bor(0x1, 0x2)
 
 hooksecurefunc("test", function() end)

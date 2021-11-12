@@ -79,6 +79,7 @@ The following people contributed to the development resources or their work was 
 * [Blizzard Entertainment](https://www.blizzard.com/)
 * [EmmyLua](https://github.com/EmmyLua)
 * [ScreenToGif](https://github.com/NickeManarin/ScreenToGif)
+* [Townlong Yak](https://www.townlong-yak.com/)
 * [WoW.tools](https://wow.tools/)
 * [WoWInterface](https://wowinterface.com/)
 * [Wowpedia](https://wowpedia.fandom.com/)
