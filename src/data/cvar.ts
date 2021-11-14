@@ -541,6 +541,12 @@ export const data: CVarInterface = {
 		category: 5,
 		help: "Turn character to match when camera facing is changed (1=in-combat, 2=always)",
 	},
+	gamepadvibrationstrength: {
+		name: "GamePadVibrationStrength",
+		default: "1",
+		category: 5,
+		help: "GamePad vibration effect strength",
+	},
 	gameplaycontext: {
 		name: "GameplayContext",
 		default: "0",
@@ -1182,7 +1188,7 @@ export const data: CVarInterface = {
 	sound_dialogvolume: {
 		name: "Sound_DialogVolume",
 		default: "1.0",
-		category: 5,
+		category: 7,
 		help: "Dialog Volume (0.0 to 1.0)",
 	},
 	sound_enableallsound: {
@@ -1289,7 +1295,7 @@ export const data: CVarInterface = {
 	sound_mastervolume: {
 		name: "Sound_MasterVolume",
 		default: "1.0",
-		category: 5,
+		category: 7,
 		help: "master volume (0.0 to 1.0)",
 	},
 	sound_maxcachesizeinbytes: {
@@ -1340,7 +1346,7 @@ export const data: CVarInterface = {
 	sound_sfxvolume: {
 		name: "Sound_SFXVolume",
 		default: "1.0",
-		category: 5,
+		category: 7,
 		help: "sound volume (0.0 to 1.0)",
 	},
 	sound_voicechatinputdriverindex: {
@@ -1751,7 +1757,7 @@ export const data: CVarInterface = {
 	actionedadventurejournalentries: {
 		name: "actionedAdventureJournalEntries",
 		default: "",
-		category: 5,
+		category: 4,
 		scope: "Character",
 		help: "Which adventure journal entries flagged with ADVENTURE_JOURNAL_HIDE_AFTER_ACTION the user acted upon",
 	},

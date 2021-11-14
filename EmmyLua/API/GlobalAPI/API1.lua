@@ -1160,7 +1160,11 @@ function C_Heirloom.UpgradeHeirloom(itemID) end
 function C_LFGList.AcceptInvite(resultID) end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_LFGList.ApplyToGroup)
-function C_LFGList.ApplyToGroup(resultID, comment, tank, healer, dps) end
+---@param resultID number
+---@param tankOK boolean
+---@param healerOK boolean
+---@param damageOK boolean
+function C_LFGList.ApplyToGroup(resultID, tankOK, healerOK, damageOK) end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_LFGList.CancelApplication)
 function C_LFGList.CancelApplication(resultID) end
@@ -2176,7 +2180,4 @@ function C_TradeSkillUI.GetOnlyShowUnlearnedRecipes() end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_TradeSkillUI.GetPendingObliterateItemID)
 function C_TradeSkillUI.GetPendingObliterateItemID() end
-
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_TradeSkillUI.GetPendingObliterateItemLink)
-function C_TradeSkillUI.GetPendingObliterateItemLink() end
 

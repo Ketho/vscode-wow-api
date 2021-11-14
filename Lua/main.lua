@@ -5,16 +5,15 @@ Util:MakeDir("Lua/Data/input")
 Util:MakeDir("Lua/Data/output")
 
 -- load blizzard apidocs
-require("Lua/Emmy/Emmy")
 local FrameXML = require("Lua/FrameXML/FrameXML")
-FrameXML:LoadApiDocs("Lua/FrameXML")
+FrameXML:ExportApiDocs("Lua/FrameXML")
 --require("Lua/Tests/Emmy"):Run()
 
 -- emmylua data
-require("Lua/Emmy/EmmyLiterals")
-Util:WriteFile("EmmyLua/API/Type/Event.lua", Emmy:GetEventLiterals())
-Util:WriteFile("EmmyLua/API/Type/CVar.lua", Emmy:GetCVarLiterals())
-Util:WriteFile("EmmyLua/API/Enum.lua", Emmy:GetEnumTable())
+local EmmyLiterals = require("Lua/Emmy/EmmyLiterals")
+Util:WriteFile("EmmyLua/API/Type/Event.lua", EmmyLiterals:GetEventLiterals())
+Util:WriteFile("EmmyLua/API/Type/CVar.lua", EmmyLiterals:GetCVarLiterals())
+Util:WriteFile("EmmyLua/API/Enum.lua", EmmyLiterals:GetEnumTable())
 
 -- typescript data
 Util:WriteFile("src/data/event.ts", require("Lua/ToTypeScript/Event")())

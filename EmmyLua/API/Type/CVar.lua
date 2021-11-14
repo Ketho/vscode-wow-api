@@ -88,6 +88,7 @@
 ---| '"GamePadTankTurnSpeed"'
 ---| '"GamePadTouchCursorEnable"'
 ---| '"GamePadTurnWithCamera"'
+---| '"GamePadVibrationStrength"'
 ---| '"GameplayContext"'
 ---| '"Gamma"'
 ---| '"GxPrismEnabled"'

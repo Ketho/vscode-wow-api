@@ -1,3 +1,13 @@
+---[Documentation](https://wowpedia.fandom.com/wiki/API_IsPvpTalentSpell)
+function IsPvpTalentSpell() end
+
+---[Documentation](https://wowpedia.fandom.com/wiki/API_IsQuestCompletable)
+---@return boolean isQuestCompletable
+function IsQuestCompletable() end
+
+---[Documentation](https://wowpedia.fandom.com/wiki/API_IsQuestIDValidSpellTarget)
+function IsQuestIDValidSpellTarget(questID) end
+
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_IsQuestItemHidden)
 function IsQuestItemHidden(index) end
 
@@ -2626,14 +2636,4 @@ function hooksecurefunc(tbl, name, hook) end
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_issecure)
 ---@return boolean secure
 function issecure() end
-
----[Documentation](https://wowpedia.fandom.com/wiki/API_issecurevariable)
----@param table table
----@param variable string
----@return boolean isSecure
----@return string taint
-function issecurevariable(table, variable) end
-
----[Documentation](https://wowpedia.fandom.com/wiki/API_scrub)
-function scrub() end
 

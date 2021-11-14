@@ -1,3 +1,6 @@
+---[Documentation](https://wowpedia.fandom.com/wiki/API_C_TradeSkillUI.GetPendingObliterateItemLink)
+function C_TradeSkillUI.GetPendingObliterateItemLink() end
+
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_TradeSkillUI.GetRecipeCooldown)
 function C_TradeSkillUI.GetRecipeCooldown(recipeID) end
 
@@ -124,6 +127,11 @@ function C_TradeSkillUI.SetRecipeSourceTypeFilter(sourceType, filtered) end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_TradeSkillUI.StopRecipeRepeat)
 function C_TradeSkillUI.StopRecipeRepeat() end
+
+---[Documentation](https://wowpedia.fandom.com/wiki/API_C_Transmog.ExtractTransmogIDList)
+---@param input string
+---@return number transmogIDList
+function C_Transmog.ExtractTransmogIDList(input) end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_Trophy.MonumentChangeAppearanceToTrophyID)
 function C_Trophy.MonumentChangeAppearanceToTrophyID(trophyID) end
@@ -2548,13 +2556,4 @@ function GetLFGDungeonEncounterInfo(dungeonID, encounterIndex) end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_GetLFGDungeonInfo)
 function GetLFGDungeonInfo(dungeonID) end
-
----[Documentation](https://wowpedia.fandom.com/wiki/API_GetLFGDungeonNumEncounters)
----@param dungeonID number
----@return number numEncounters
----@return number numCompleted
-function GetLFGDungeonNumEncounters(dungeonID) end
-
----[Documentation](https://wowpedia.fandom.com/wiki/API_GetLFGDungeonRewardCapBarInfo)
-function GetLFGDungeonRewardCapBarInfo(dungeonID) end
 

@@ -1,6 +1,8 @@
 local Util = require("Lua/Util/util")
 
-function Emmy:GetEventLiterals()
+local EmmyLiterals = {}
+
+function EmmyLiterals:GetEventLiterals()
 	table.sort(APIDocumentation.events, function(a, b)
 		return a.LiteralName < b.LiteralName
 	end)
@@ -23,7 +25,7 @@ local cvar_url = "https://raw.githubusercontent.com/Ketho/BlizzardInterfaceResou
 Util:DownloadFile(cvar_path, cvar_url, true)
 local cvarsDump = require(cvar_path:gsub("%.lua", ""))
 
-function Emmy:GetCVarLiterals()
+function EmmyLiterals:GetCVarLiterals()
 	local t = {}
 	table.insert(t, "---@alias CVar")
 	local sorted = Util:SortTable(cvarsDump[1].var)
@@ -54,7 +56,7 @@ local function SortByValue(tbl)
 	return t
 end
 
-function Emmy:GetEnumTable()
+function EmmyLiterals:GetEnumTable()
 	local t = {}
 	table.insert(t, "Enum = {")
 	for _, name in pairs(Util:SortTable(Enum)) do
@@ -78,3 +80,5 @@ function Emmy:GetEnumTable()
 	table.insert(t, "}\n")
 	return table.concat(t, "\n")
 end
+
+return EmmyLiterals

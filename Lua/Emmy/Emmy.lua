@@ -1,6 +1,6 @@
 local Util = require("Lua/Util/util")
 
-Emmy = {}
+local Emmy = {}
 
 local types = {
 	bool = "boolean",
@@ -90,3 +90,5 @@ function Emmy:GetField(annotation, apiTable)
 	end
 	return str
 end
+
+return Emmy

@@ -1,4 +1,5 @@
 local Util = require("Lua/Util/Util")
+local Emmy = require("Lua/Emmy/Emmy")
 
 -- this place is a mess
 local wowpedia_arguments = require("Lua/WikiParser/WikiText/FunctionArgument")

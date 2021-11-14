@@ -1,4 +1,5 @@
 local Util = require("Lua/Util/util")
+local Emmy = require("Lua/Emmy/Emmy")
 local patches = require("Lua/FrameXML/Patches")
 
 local m = {}
@@ -6,7 +7,7 @@ local ignoredFiles = {
 	["ConfigurationWarningsDocumentation.lua"] = true,
 }
 
-function m:LoadApiDocs(base)
+function m:ExportApiDocs(base)
 	require(base.."/Compat")
 	Util:MakeDir("EmmyLua/API/System")
 	local toc = io.open(base.."/Blizzard_APIDocumentation/Blizzard_APIDocumentation.toc")

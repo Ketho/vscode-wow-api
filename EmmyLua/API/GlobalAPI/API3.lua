@@ -1,3 +1,12 @@
+---[Documentation](https://wowpedia.fandom.com/wiki/API_GetLFGDungeonNumEncounters)
+---@param dungeonID number
+---@return number numEncounters
+---@return number numCompleted
+function GetLFGDungeonNumEncounters(dungeonID) end
+
+---[Documentation](https://wowpedia.fandom.com/wiki/API_GetLFGDungeonRewardCapBarInfo)
+function GetLFGDungeonRewardCapBarInfo(dungeonID) end
+
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_GetLFGDungeonRewardCapInfo)
 function GetLFGDungeonRewardCapInfo(dungeonID) end
 
@@ -1561,7 +1570,7 @@ function GetSpellDescription(spellID) end
 function GetSpellHitModifier() end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_GetSpellInfo)
----@param spell number|string spellID or spellName
+---@param spell number|string Spell ID or Name
 ---@return string name
 ---@return string rank
 ---@return number icon
@@ -2639,14 +2648,4 @@ function IsPossessBarVisible() end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_IsPublicBuild)
 function IsPublicBuild() end
-
----[Documentation](https://wowpedia.fandom.com/wiki/API_IsPvpTalentSpell)
-function IsPvpTalentSpell() end
-
----[Documentation](https://wowpedia.fandom.com/wiki/API_IsQuestCompletable)
----@return boolean isQuestCompletable
-function IsQuestCompletable() end
-
----[Documentation](https://wowpedia.fandom.com/wiki/API_IsQuestIDValidSpellTarget)
-function IsQuestIDValidSpellTarget(questID) end
 
