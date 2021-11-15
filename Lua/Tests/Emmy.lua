@@ -1,4 +1,6 @@
 local Util = require("Lua/Util/Util")
+local Emmy = require("Lua/Emmy/Emmy")
+
 local Tests = {}
 
 local function TestFunction(name)

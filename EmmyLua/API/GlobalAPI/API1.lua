@@ -1179,7 +1179,7 @@ function C_LFGList.ClearSearchResults() end
 ---@param autoAccept boolean
 ---@param privateGroup boolean
 ---@param questID number
----@return boolean hasTitle
+---@return boolean success
 function C_LFGList.CreateListing(activityID, itemLevel, honorLevel, autoAccept, privateGroup, questID) end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_LFGList.DeclineApplicant)

@@ -5,9 +5,10 @@ local ltn12 = require "ltn12"
 local Util = {}
 local INVALIDATION_TIME = 60*60
 
-function Util:LoadFile(path)
-	local file = assert(loadfile(path))
-	file()
+function Util:MakeDir(path)
+	if not lfs.attributes(path) then
+		lfs.mkdir(path)
+	end
 end
 
 function Util:WriteFile(path, text)
@@ -17,12 +18,15 @@ function Util:WriteFile(path, text)
 	file:close()
 end
 
-function Util:MakeDir(path)
-	if not lfs.attributes(path) then
-		lfs.mkdir(path)
-	end
+function Util:LoadFile(path)
+	local file = assert(loadfile(path))
+	file()
 end
 
+--- Downloads a file
+---@param path string Path to write the file to
+---@param url string URL to download from
+---@param isCache boolean If the file should be redownloaded after `INVALIDATION_TIME`
 function Util:DownloadFile(path, url, isCache)
 	if self:ShouldDownload(path, isCache) then
 		local body = https.request(url)
@@ -30,6 +34,19 @@ function Util:DownloadFile(path, url, isCache)
 	end
 end
 
+--- Downloads and runs a Lua file
+---@param path string Path to write the file to
+---@param url string URL to download from
+---@return ... @ The values returned from the Lua file, if applicable
+function Util:DownloadAndRun(path, url)
+	self:DownloadFile(path, url, true)
+	return require(path:gsub("%.lua", ""))
+end
+
+--- Sends a POST request and downloads a file
+---@param path string Path to write the file to
+---@param url string URL to download from
+---@param requestBody string Contents of the request
 function Util:DownloadFilePost(path, url, requestBody)
 	if self:ShouldDownload(path, true) then
 		local body = self:HttpPostRequest(url, requestBody)
@@ -65,19 +82,19 @@ function Util:HttpPostRequest(url, request)
 	return table.concat(response)
 end
 
-function Util:SortTable(tbl)
-	local t = {}
-	for k in pairs(tbl) do
-		table.insert(t, k)
-	end
-	table.sort(t)
-	return t
-end
-
 function Util:Wipe(tbl)
 	for k in pairs(tbl) do
 		tbl[k] = nil
 	end
+end
+
+function Util:SortTable(tbl, func)
+	local t = {}
+	for k in pairs(tbl) do
+		table.insert(t, k)
+	end
+	table.sort(t, func)
+	return t
 end
 
 function Util:GetFullName(apiTable)

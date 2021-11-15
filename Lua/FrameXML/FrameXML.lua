@@ -1,4 +1,4 @@
-local Util = require("Lua/Util/util")
+local Util = require("Lua/Util/Util")
 local Emmy = require("Lua/Emmy/Emmy")
 local patches = require("Lua/FrameXML/Patches")
 

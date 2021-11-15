@@ -1,4 +1,4 @@
-local Util = require("Lua/Util/util")
+local Util = require("Lua/Util/Util")
 
 local EmmyLiterals = {}
 
@@ -19,27 +19,19 @@ function EmmyLiterals:GetEventLiterals()
 	return table.concat(t, "\n---| ").."\n"
 end
 
-local cvar_path = "Lua/Data/cache/CVars.lua"
-local cvar_url = "https://raw.githubusercontent.com/Ketho/BlizzardInterfaceResources/mainline/Resources/CVars.lua"
-
-Util:DownloadFile(cvar_path, cvar_url, true)
-local cvarsDump = require(cvar_path:gsub("%.lua", ""))
-
 function EmmyLiterals:GetCVarLiterals()
+	local data = Util:DownloadAndRun(
+		"Lua/Data/cache/CVars.lua",
+		"https://raw.githubusercontent.com/Ketho/BlizzardInterfaceResources/mainline/Resources/CVars.lua"
+	)
 	local t = {}
 	table.insert(t, "---@alias CVar")
-	local sorted = Util:SortTable(cvarsDump[1].var)
+	local sorted = Util:SortTable(data[1].var)
 	for _, cvar in pairs(sorted) do
 		table.insert(t, string.format("'\"%s\"'", cvar))
 	end
 	return table.concat(t, "\n---| ").."\n"
 end
-
-local enum_path = "Lua/Data/cache/Enum.lua"
-local enum_url = "https://raw.githubusercontent.com/Ketho/BlizzardInterfaceResources/mainline/Resources/LuaEnum.lua"
-
-Util:DownloadFile(enum_path, enum_url, true)
-require(enum_path:gsub("%.lua", ""))
 
 local function SortByValue(tbl)
 	local t = {}
@@ -57,6 +49,10 @@ local function SortByValue(tbl)
 end
 
 function EmmyLiterals:GetEnumTable()
+	Util:DownloadAndRun(
+		"Lua/Data/cache/Enum.lua",
+		"https://raw.githubusercontent.com/Ketho/BlizzardInterfaceResources/mainline/Resources/LuaEnum.lua"
+	)
 	local t = {}
 	table.insert(t, "Enum = {")
 	for _, name in pairs(Util:SortTable(Enum)) do
