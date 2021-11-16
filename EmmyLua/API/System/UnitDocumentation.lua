@@ -1,5 +1,3 @@
-Unit = {}
-
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_GetNegativeCorruptionEffectInfo)
 ---@return CorruptionEffectInfo[] corruptionEffects
 function GetNegativeCorruptionEffectInfo() end

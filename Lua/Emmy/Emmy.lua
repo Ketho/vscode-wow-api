@@ -13,8 +13,9 @@ end
 function Emmy:GetSystem(system)
 	local tbl = {}
 	if system.Functions and #system.Functions>0 then
-		-- namespace definition
-		table.insert(tbl, string.format("%s = {}", system.Namespace or system.Name))
+		if system.Namespace then
+			table.insert(tbl, string.format("%s = {}", system.Namespace))
+		end
 		for _, func in pairs(system.Functions) do
 			table.insert(tbl, self:GetFunction(func))
 		end
