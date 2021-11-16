@@ -1,5 +1,5 @@
----@class ItemTransmogInfoMixin
 ---[Documentation](https://wowpedia.fandom.com/wiki/ItemTransmogInfoMixin)
+---@class ItemTransmogInfoMixin
 ItemTransmogInfoMixin = {}
 
 --- See [CreateAndInitFromMixin](https://www.townlong-yak.com/framexml/go/CreateAndInitFromMixin)
