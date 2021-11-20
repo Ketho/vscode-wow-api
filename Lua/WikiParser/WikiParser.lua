@@ -60,7 +60,7 @@ for _, name in pairs(sorted) do
 		end
 		-- keep files under the default 100 KB preload file size
 		local tblContents = table.concat(tempTbl)
-		if #tblContents > 1024*95 then
+		if #tblContents > 1024*90 then
 			WriteToFile(tblContents)
 		end
 	end
