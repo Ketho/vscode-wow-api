@@ -24,3 +24,7 @@ f:RegisterEvent("ACHIEVEMENT_EARNED")
 
 -- frames
 local isVisible = UIParent:IsVisible()
+
+-- libraries
+local lib1 = LibStub("WelcomeHome")
+local lib2 = LibStub:GetLibrary("WelcomeHome")
