@@ -4,10 +4,10 @@ const data = require("../data/event").data
 
 function getMarkdown(name: string) {
 	let event = data[name]
-	let s = "**Event** `"+name+"`"
+	let s = "**Event**"
 
 	if (event.Documentation)
-		s += "\n\n"+event.Documentation
+		s += " - "+event.Documentation
 	s += "\n"
 
 	let payload = event.Payload

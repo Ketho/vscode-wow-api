@@ -1045,6 +1045,14 @@ function EJ_EndSearch() end
 function EJ_GetContentTuningID() end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_EJ_GetCreatureInfo)
+---@param index number
+---@param encounterID number
+---@return number id
+---@return string name
+---@return string description
+---@return number displayInfo
+---@return number iconImage
+---@return number uiModelSceneID
 function EJ_GetCreatureInfo(index, encounterID) end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_EJ_GetCurrentTier)

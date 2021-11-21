@@ -18,10 +18,10 @@ const ConsoleCategory = [
 
 function getMarkdown(name: string) {
 	let cvar = data[name]
-	let s = "**CVar** `"+cvar.name+"`"
+	let s = "**CVar**"
 
 	if (cvar.help)
-		s += "\n\n"+cvar.help
+		s += " - "+cvar.help
 	s += "\n"
 	// need to use the whole line for a code block, cannot mix it with normal text
 	if (cvar.default)
