@@ -57,7 +57,7 @@
 				"wowAPI.emmyLua.loadFrameXML": {
 					"type": "boolean",
 					"default": true,
-					"markdownDescription": "Load manually updated documentation for [FrameXML](https://github.com/Ketho/vscode-wow-api/tree/master/EmmyLua/FrameXML) globals and functions."
+					"markdownDescription": "Load manually updated documentation for [FrameXML](https://github.com/Ketho/vscode-wow-api/tree/master/EmmyLua/Optional) globals and functions."
 				}
 			}
 		}

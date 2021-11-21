@@ -8,7 +8,7 @@
 ## [0.7.1] - 2021-11-21
 ### Added
 - 🌙 EmmyLua: Added `AuraUtil`, `LibStub` and Wowpedia definition updates
-- 🎨 Style: When hovering over a string, it will no longer show it a twice because Sumnekom already shows it
+- 🎨 Style: When hovering over a cvar/event string, it will no longer show it twice because Sumneko already shows it
 - 🛠 Improvements: Refactoring
 
 ## [0.7.0] - 2021-11-11
