@@ -1,9 +1,15 @@
 # Change Log
 
 ### Known issues
-- Uninstalling the extension does not appear to work. It relied on vscode deleting the actual extension files instead of removing them from Sumneko's external libraries path.
-- Frame templates are not yet supported (#15)
-- The Classic (TBC) API is not supported (#13)
+- Uninstalling the extension does not appear to work. It relied on vscode deleting the actual extension files instead of marking them in an `.obsolete` file. Removing them from Sumneko's external libraries path does not seem possible https://github.com/microsoft/vscode/issues/45474
+- Frame templates are not yet supported ([#15](https://github.com/Ketho/vscode-wow-api/issues/15))
+- The Classic (TBC) API is not supported ([#13](https://github.com/Ketho/vscode-wow-api/issues/13))
+
+## [0.7.1] - 2021-11-21
+### Added
+- 🌙 EmmyLua: Added `AuraUtil`, `LibStub` and Wowpedia definition updates
+- 🎨 Style: When hovering over a string, it will no longer show it a twice because Sumnekom already shows it
+- 🛠 Improvements: Refactoring
 
 ## [0.7.0] - 2021-11-11
 ### Added
@@ -200,6 +206,7 @@
 ### Added
 - 🚧 Wip: Development work
 
+[0.7.1]: https://github.com/Ketho/vscode-wow-api/releases/tag/v0.7.1
 [0.7.0]: https://github.com/Ketho/vscode-wow-api/releases/tag/v0.7.0
 [0.6.2]: https://github.com/Ketho/vscode-wow-api/releases/tag/v0.6.2
 [0.6.1]: https://github.com/Ketho/vscode-wow-api/releases/tag/v0.6.1
