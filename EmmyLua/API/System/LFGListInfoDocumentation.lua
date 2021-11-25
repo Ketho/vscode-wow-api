@@ -67,7 +67,7 @@ function C_LFGList.GetApplicantPvpRatingInfoForListing(localID, applicantIndex, 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_LFGList.GetApplicantMemberInfo)
 ---@param applicantID number
 ---@param memberIndex number
----@return LfgApplicantMemberData applicantMemberData
+---@return LfgApplicantMemberData applicantData
 function C_LFGList.GetApplicantMemberInfo(applicantID, memberIndex) end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_LFGList.GetFilteredSearchResults)
@@ -155,19 +155,19 @@ function C_LFGList.ValidateRequiredDungeonScore(dungeonScore) end
 function C_LFGList.ValidateRequiredPvpRatingForActivity(activityID, rating) end
 
 ---@class LfgApplicantMemberData
----@field assignedRole string
----@field class string
----@field damage boolean
----@field dungeonScore number
----@field healer boolean
----@field honorLevel number
----@field itemLevel number
----@field level number
----@field localizedClass string
 ---@field name string
----@field pvpItemLevel number
----@field relationship boolean|nil
+---@field class string
+---@field localizedClass string
+---@field level number
+---@field itemLevel number
+---@field honorLevel number
 ---@field tank boolean
+---@field healer boolean
+---@field damage boolean
+---@field assignedRole string
+---@field relationship boolean|nil
+---@field dungeonScore number
+---@field pvpItemLevel number
 
 ---@class BestDungeonScoreMapInfo
 ---@field mapScore number
