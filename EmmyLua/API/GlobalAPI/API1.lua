@@ -1199,7 +1199,19 @@ function C_LFGList.GetActivityInfoExpensive(activityID) end
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_LFGList.GetApplicantMemberInfo)
 ---@param applicantID number
 ---@param memberIndex number
----@return LfgApplicantMemberData applicantData
+---@return string name
+---@return string class
+---@return string localizedClass
+---@return number level
+---@return number itemLevel
+---@return number honorLevel
+---@return boolean tank
+---@return boolean healer
+---@return boolean damage
+---@return string assignedRole
+---@return boolean? relationship
+---@return number dungeonScore
+---@return number pvpItemLevel
 function C_LFGList.GetApplicantMemberInfo(applicantID, memberIndex) end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_LFGList.GetApplicantMemberStats)
@@ -2071,10 +2083,4 @@ function C_ToyBox.GetUnusableShown() end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_ToyBox.HasFavorites)
 function C_ToyBox.HasFavorites() end
-
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_ToyBox.IsExpansionTypeFilterChecked)
-function C_ToyBox.IsExpansionTypeFilterChecked(expansionIndex) end
-
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_ToyBox.IsSourceTypeFilterChecked)
-function C_ToyBox.IsSourceTypeFilterChecked(sourceIndex) end
 

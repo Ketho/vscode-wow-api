@@ -1,3 +1,9 @@
+---[Documentation](https://wowpedia.fandom.com/wiki/API_C_ToyBox.IsExpansionTypeFilterChecked)
+function C_ToyBox.IsExpansionTypeFilterChecked(expansionIndex) end
+
+---[Documentation](https://wowpedia.fandom.com/wiki/API_C_ToyBox.IsSourceTypeFilterChecked)
+function C_ToyBox.IsSourceTypeFilterChecked(sourceIndex) end
+
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_ToyBox.IsToyUsable)
 function C_ToyBox.IsToyUsable(itemID) end
 
