@@ -51,8 +51,6 @@ lua53 ./Lua/main.lua
 
 [WoWtoolsParser](https://github.com/Ketho/WoWtoolsParser)
 * csv: https://luarocks.org/modules/geoffleyland/csv
-* curl: https://curl.haxx.se/
-* lua-curl: https://luarocks.org/modules/moteus/lua-curl
 * lua-cjson: https://luarocks.org/modules/openresty/lua-cjson
 
 #### Acknowledgements
