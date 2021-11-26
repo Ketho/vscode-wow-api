@@ -1197,7 +1197,10 @@ function C_LFGList.GetActivityIDForQuestID(questID) end
 function C_LFGList.GetActivityInfoExpensive(activityID) end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_LFGList.GetApplicantMemberInfo)
-function C_LFGList.GetApplicantMemberInfo(applicantID) end
+---@param applicantID number
+---@param memberIndex number
+---@return LfgApplicantMemberData applicantData
+function C_LFGList.GetApplicantMemberInfo(applicantID, memberIndex) end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_LFGList.GetApplicantMemberStats)
 ---@param applicantID number
@@ -2074,7 +2077,4 @@ function C_ToyBox.IsExpansionTypeFilterChecked(expansionIndex) end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_ToyBox.IsSourceTypeFilterChecked)
 function C_ToyBox.IsSourceTypeFilterChecked(sourceIndex) end
-
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_ToyBox.IsToyUsable)
-function C_ToyBox.IsToyUsable(itemID) end
 

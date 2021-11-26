@@ -149,6 +149,28 @@ local Missing =
 				{ Name = "options", Type = "table", InnerType = "CharCustomizationOption", Nilable = false },
 			},
 		},
+		-- structures which are seemingly missing from files
+		{
+			-- C_LFGList; LFGListInfoDocumentation.lua
+			Name = "LfgApplicantMemberData",
+			Type = "Structure",
+			Fields =
+			{
+				{ Name = "name", Type = "string" },
+				{ Name = "class", Type = "string" },
+				{ Name = "localizedClass", Type = "string" },
+				{ Name = "level", Type = "number" },
+				{ Name = "itemLevel", Type = "number" },
+				{ Name = "honorLevel", Type = "number" },
+				{ Name = "tank", Type = "boolean" },
+				{ Name = "healer", Type = "boolean" },
+				{ Name = "damage", Type = "boolean" },
+				{ Name = "assignedRole", Type = "string" },
+				{ Name = "relationship", Type = "boolean", Nilable = true },
+				{ Name = "dungeonScore", Type = "number" },
+				{ Name = "pvpItemLevel", Type = "number" },
+			},
+		},
 	},
 }
 

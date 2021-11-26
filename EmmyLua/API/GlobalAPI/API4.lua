@@ -1,3 +1,12 @@
+---[Documentation](https://wowpedia.fandom.com/wiki/API_IsAddOnLoadOnDemand)
+function IsAddOnLoadOnDemand() end
+
+---[Documentation](https://wowpedia.fandom.com/wiki/API_IsAddOnLoaded)
+---@param addon number|string index or name
+---@return boolean loaded
+---@return boolean finished
+function IsAddOnLoaded(addon) end
+
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_IsAddonVersionCheckEnabled)
 function IsAddonVersionCheckEnabled() end
 
@@ -2461,10 +2470,4 @@ function UnitCanAttack(unit, otherUnit) end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_UnitCanCooperate)
 function UnitCanCooperate(unit, otherUnit) end
-
----[Documentation](https://wowpedia.fandom.com/wiki/API_UnitCanPetBattle)
-function UnitCanPetBattle() end
-
----[Documentation](https://wowpedia.fandom.com/wiki/API_UnitCastingInfo)
-function UnitCastingInfo(unit) end
 

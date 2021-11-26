@@ -107,3 +107,18 @@
 ---@field icon string
 ---@field selectedIcon string
 ---@field options CharCustomizationOption[]
+
+---@class LfgApplicantMemberData
+---@field name string
+---@field class string
+---@field localizedClass string
+---@field level number
+---@field itemLevel number
+---@field honorLevel number
+---@field tank boolean
+---@field healer boolean
+---@field damage boolean
+---@field assignedRole string
+---@field relationship boolean|nil
+---@field dungeonScore number
+---@field pvpItemLevel number

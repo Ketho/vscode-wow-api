@@ -1,3 +1,6 @@
+---[Documentation](https://wowpedia.fandom.com/wiki/API_C_ToyBox.IsToyUsable)
+function C_ToyBox.IsToyUsable(itemID) end
+
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_ToyBox.PickupToyBoxItem)
 function C_ToyBox.PickupToyBoxItem(itemID) end
 
@@ -2385,15 +2388,4 @@ function GetHomePartyInfo(homePlayers) end
 ---@return boolean canReply
 ---@return boolean isGM
 function GetInboxHeaderInfo(index) end
-
----[Documentation](https://wowpedia.fandom.com/wiki/API_GetInboxInvoiceInfo)
----@param index number
----@return string invoiceType
----@return string itemName
----@return string playerName
----@return number bid
----@return number buyout
----@return number deposit
----@return number consignment
-function GetInboxInvoiceInfo(index) end
 

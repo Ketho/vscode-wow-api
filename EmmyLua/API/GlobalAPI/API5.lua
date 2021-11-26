@@ -1,3 +1,9 @@
+---[Documentation](https://wowpedia.fandom.com/wiki/API_UnitCanPetBattle)
+function UnitCanPetBattle() end
+
+---[Documentation](https://wowpedia.fandom.com/wiki/API_UnitCastingInfo)
+function UnitCastingInfo(unit) end
+
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_UnitChannelInfo)
 ---@param unit string
 ---@return string name
