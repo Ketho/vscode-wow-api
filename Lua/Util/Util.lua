@@ -77,7 +77,7 @@ function Util:HttpPostRequest(url, request)
 		sink = ltn12.sink.table(response)
 	}
 	if code ~= 200 then
-		error("HTTP error: "..code)
+		error(string.format("HTTP error: %d, %s", code, url))
 	end
 	return table.concat(response)
 end
