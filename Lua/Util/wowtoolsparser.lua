@@ -103,7 +103,7 @@ function parser:ReadCSV(name, options)
 		DownloadFile(url, path)
 	end
 	print("reading "..path)
-	local iter = csv.open(path, {header = options.header})
+	local iter = csv.open(path, {header = options.header, buffer_size=1024*4})
 	return iter, build
 end
 
