@@ -1187,7 +1187,7 @@ function EJ_SetSearch(text) end
 ---@param icon? number
 ---@param body? string
 ---@return number macroID
-function EditMacro(macro, name, icon, body) end
+function EditMacro(macroInfo, name, icon, body) end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_EjectPassengerFromSeat)
 function EjectPassengerFromSeat(seat) end

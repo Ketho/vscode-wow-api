@@ -20,7 +20,7 @@ end
 
 function Util:LoadFile(path)
 	local file = assert(loadfile(path))
-	file()
+	return file()
 end
 
 --- Downloads a file
@@ -40,7 +40,7 @@ end
 ---@return ... @ The values returned from the Lua file, if applicable
 function Util:DownloadAndRun(path, url)
 	self:DownloadFile(path, url, true)
-	return require(path:gsub("%.lua", ""))
+	return self:LoadFile(path)
 end
 
 --- Sends a POST request and downloads a file
