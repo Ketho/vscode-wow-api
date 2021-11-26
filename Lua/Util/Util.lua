@@ -66,7 +66,7 @@ end
 -- https://github.com/brunoos/luasec/wiki/LuaSec-1.0.x#httpsrequesturl---body
 function Util:HttpPostRequest(url, request)
 	local response = {}
-	local _, code = https.request{
+	local res, code = https.request{
 		url = url,
 		method = "POST",
 		headers = {
@@ -76,7 +76,7 @@ function Util:HttpPostRequest(url, request)
 		source = ltn12.source.string(request),
 		sink = ltn12.sink.table(response)
 	}
-	if code ~= 200 then
+	if not res then
 		error(string.format("HTTP error: %d, %s", code, url))
 	end
 	return table.concat(response)
