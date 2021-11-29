@@ -70,8 +70,8 @@ The following people contributed to the development resources or their work was 
 * [nebula](https://github.com/nebularg)
 * [Nevcairiel](https://github.com/Nevcairiel)
 * [Resike](https://github.com/Resike)
-* [Sumneko](https://github.com/Sumneko)
 * [Stanzilla](https://github.com/Stanzilla)
+* [Sumneko](https://github.com/Sumneko)
 * [Yuyuli](https://www.curseforge.com/members/yuyuli/projects)
 ---
 * [Blizzard Entertainment](https://www.blizzard.com/)
