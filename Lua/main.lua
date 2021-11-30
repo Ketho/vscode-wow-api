@@ -1,7 +1,7 @@
 local Util = require("Lua/Util/Util")
 
+Util:MakeDir("Lua/Data")
 Util:MakeDir("Lua/Data/cache")
-Util:MakeDir("Lua/Data/input")
 Util:MakeDir("Lua/Data/output")
 
 -- load blizzard apidocs

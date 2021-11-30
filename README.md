@@ -51,8 +51,6 @@ lua53 ./Lua/main.lua
 
 [WoWtoolsParser](https://github.com/Ketho/WoWtoolsParser)
 * csv: https://luarocks.org/modules/geoffleyland/csv
-* curl: https://curl.haxx.se/
-* lua-curl: https://luarocks.org/modules/moteus/lua-curl
 * lua-cjson: https://luarocks.org/modules/openresty/lua-cjson
 
 #### Acknowledgements
@@ -72,8 +70,8 @@ The following people contributed to the development resources or their work was 
 * [nebula](https://github.com/nebularg)
 * [Nevcairiel](https://github.com/Nevcairiel)
 * [Resike](https://github.com/Resike)
-* [Sumneko](https://github.com/Sumneko)
 * [Stanzilla](https://github.com/Stanzilla)
+* [Sumneko](https://github.com/Sumneko)
 * [Yuyuli](https://www.curseforge.com/members/yuyuli/projects)
 ---
 * [Blizzard Entertainment](https://www.blizzard.com/)

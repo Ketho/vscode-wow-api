@@ -1,3 +1,12 @@
+---[Documentation](https://wowpedia.fandom.com/wiki/API_C_ToyBox.IsExpansionTypeFilterChecked)
+function C_ToyBox.IsExpansionTypeFilterChecked(expansionIndex) end
+
+---[Documentation](https://wowpedia.fandom.com/wiki/API_C_ToyBox.IsSourceTypeFilterChecked)
+function C_ToyBox.IsSourceTypeFilterChecked(sourceIndex) end
+
+---[Documentation](https://wowpedia.fandom.com/wiki/API_C_ToyBox.IsToyUsable)
+function C_ToyBox.IsToyUsable(itemID) end
+
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_ToyBox.PickupToyBoxItem)
 function C_ToyBox.PickupToyBoxItem(itemID) end
 
@@ -1187,7 +1196,7 @@ function EJ_SetSearch(text) end
 ---@param icon? number
 ---@param body? string
 ---@return number macroID
-function EditMacro(macro, name, icon, body) end
+function EditMacro(macroInfo, name, icon, body) end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_EjectPassengerFromSeat)
 function EjectPassengerFromSeat(seat) end
@@ -2385,15 +2394,4 @@ function GetHomePartyInfo(homePlayers) end
 ---@return boolean canReply
 ---@return boolean isGM
 function GetInboxHeaderInfo(index) end
-
----[Documentation](https://wowpedia.fandom.com/wiki/API_GetInboxInvoiceInfo)
----@param index number
----@return string invoiceType
----@return string itemName
----@return string playerName
----@return number bid
----@return number buyout
----@return number deposit
----@return number consignment
-function GetInboxInvoiceInfo(index) end
 

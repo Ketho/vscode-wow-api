@@ -1,3 +1,21 @@
+---[Documentation](https://wowpedia.fandom.com/wiki/API_UnitCanPetBattle)
+function UnitCanPetBattle() end
+
+---[Documentation](https://wowpedia.fandom.com/wiki/API_UnitCastingInfo)
+function UnitCastingInfo(unit) end
+
+---[Documentation](https://wowpedia.fandom.com/wiki/API_UnitChannelInfo)
+---@param unit string
+---@return string name
+---@return string text
+---@return string texture
+---@return number startTimeMS
+---@return number endTimeMS
+---@return boolean isTradeSkill
+---@return boolean notInterruptible
+---@return number spellId
+function UnitChannelInfo(unit) end
+
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_UnitClassification)
 ---@param unit string
 ---@return string classification

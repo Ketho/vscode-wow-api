@@ -1,3 +1,12 @@
+---[Documentation](https://wowpedia.fandom.com/wiki/API_IsAddOnLoadOnDemand)
+function IsAddOnLoadOnDemand() end
+
+---[Documentation](https://wowpedia.fandom.com/wiki/API_IsAddOnLoaded)
+---@param addon number|string index or name
+---@return boolean loaded
+---@return boolean finished
+function IsAddOnLoaded(addon) end
+
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_IsAddonVersionCheckEnabled)
 function IsAddonVersionCheckEnabled() end
 
@@ -790,7 +799,7 @@ function ListChannels() end
 ---@param addonInfo number|string index or name
 ---@return boolean loaded
 ---@return string? reason
-function LoadAddOn(addon) end
+function LoadAddOn(addonInfo) end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_LoadBindings)
 ---@param bindingSet number
@@ -894,7 +903,8 @@ function MoveViewUpStop() end
 function MultiSampleAntiAliasingSupported() end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_MuteSoundFile)
-function MuteSoundFile() end
+---@param sound number|string FileID of a game sound or file path to an addon sound
+function MuteSoundFile(sound) end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_NeutralPlayerSelectFaction)
 ---@param factionIndex number
@@ -2460,22 +2470,4 @@ function UnitCanAttack(unit, otherUnit) end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_UnitCanCooperate)
 function UnitCanCooperate(unit, otherUnit) end
-
----[Documentation](https://wowpedia.fandom.com/wiki/API_UnitCanPetBattle)
-function UnitCanPetBattle() end
-
----[Documentation](https://wowpedia.fandom.com/wiki/API_UnitCastingInfo)
-function UnitCastingInfo(unit) end
-
----[Documentation](https://wowpedia.fandom.com/wiki/API_UnitChannelInfo)
----@param unit string
----@return string name
----@return string text
----@return string texture
----@return number startTimeMS
----@return number endTimeMS
----@return boolean isTradeSkill
----@return boolean notInterruptible
----@return number spellId
-function UnitChannelInfo(unit) end
 

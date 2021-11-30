@@ -20,7 +20,7 @@ end
 
 function Util:LoadFile(path)
 	local file = assert(loadfile(path))
-	file()
+	return file()
 end
 
 --- Downloads a file
@@ -40,7 +40,7 @@ end
 ---@return ... @ The values returned from the Lua file, if applicable
 function Util:DownloadAndRun(path, url)
 	self:DownloadFile(path, url, true)
-	return require(path:gsub("%.lua", ""))
+	return self:LoadFile(path)
 end
 
 --- Sends a POST request and downloads a file
@@ -66,7 +66,7 @@ end
 -- https://github.com/brunoos/luasec/wiki/LuaSec-1.0.x#httpsrequesturl---body
 function Util:HttpPostRequest(url, request)
 	local response = {}
-	local _, code = https.request{
+	local res, code = https.request{
 		url = url,
 		method = "POST",
 		headers = {
@@ -76,8 +76,8 @@ function Util:HttpPostRequest(url, request)
 		source = ltn12.source.string(request),
 		sink = ltn12.sink.table(response)
 	}
-	if code ~= 200 then
-		error("HTTP error: "..code)
+	if not res then
+		error(string.format("HTTP error: %d, %s", code, url))
 	end
 	return table.concat(response)
 end

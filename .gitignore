@@ -4,5 +4,4 @@ node_modules
 .vscode
 *.vsix
 *.xml
-*.txt
 Lua/Data

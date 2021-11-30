@@ -1,3 +1,14 @@
+---[Documentation](https://wowpedia.fandom.com/wiki/API_GetInboxInvoiceInfo)
+---@param index number
+---@return string invoiceType
+---@return string itemName
+---@return string playerName
+---@return number bid
+---@return number buyout
+---@return number deposit
+---@return number consignment
+function GetInboxInvoiceInfo(index) end
+
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_GetInboxItem)
 ---@param index number
 ---@param itemIndex number
@@ -2492,13 +2503,4 @@ function IsActiveQuestLegendary(index) end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_IsActiveQuestTrivial)
 function IsActiveQuestTrivial(index) end
-
----[Documentation](https://wowpedia.fandom.com/wiki/API_IsAddOnLoadOnDemand)
-function IsAddOnLoadOnDemand() end
-
----[Documentation](https://wowpedia.fandom.com/wiki/API_IsAddOnLoaded)
----@param addon number|string index or name
----@return boolean loaded
----@return boolean finished
-function IsAddOnLoaded(addon) end
 
