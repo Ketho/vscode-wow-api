@@ -57,16 +57,12 @@ While using WSL is not required, the below setups are written around the assumpt
     * This updates the apt-get repos.  
 * Execute `sudo apt-get install pip unzip libreadline-dev libssl-dev`  
 * Execute `bin/setup.sh`  
-    * `setup.sh` will setup an isolated Lua 5.3 environment (using [hererocks](https://pypi.org/project/hererocks/) and [luarocks](https://luarocks.org/#quick-start)) within the `.lua` directory and install the below dependencies
-        * [Lua 5.3](http://www.lua.org/)
-        * [hererocks](https://pypi.org/project/hererocks/)
-        * [luarocks]()
-        * [luafilesystem](https://luarocks.org/modules/hisham/luafilesystem)
-        * [luasocket](https://luarocks.org/modules/luasocket/luasocket)
-        * [luasec](https://luarocks.org/modules/brunoos/luasec)
-        * [xml2lua](https://luarocks.org/modules/manoelcampos/xml2lua)
-        * [WoWtoolsParser](https://github.com/Ketho/WoWtoolsParser)
-            * [lua-cjson](https://luarocks.org/modules/openresty/lua-cjson)
+    This will setup an isolated [Lua 5.3](http://www.lua.org/) environment (using [hererocks](https://pypi.org/project/hererocks/) and [luarocks](https://luarocks.org/#quick-start)) within the `.lua` directory and install the below dependencies:
+    - [luafilesystem](https://luarocks.org/modules/hisham/luafilesystem)
+    - [luasocket](https://luarocks.org/modules/luasocket/luasocket)
+    - [luasec](https://luarocks.org/modules/brunoos/luasec)
+    - [lua-cjson](https://luarocks.org/modules/openresty/lua-cjson)
+    - [xml2lua](https://luarocks.org/modules/manoelcampos/xml2lua)
 #
 ### Generating documentation
 * Blizzard documented functions are generated from [Blizzard_APIDocumentation](https://github.com/Gethe/wow-ui-source/tree/live/AddOns/Blizzard_APIDocumentation).
