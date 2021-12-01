@@ -11,7 +11,6 @@ dependencies = {
   'luasocket',
   'luasec',
   'xml2lua',
-  'csv',
   'lua-cjson = 2.1.0-1',
 }
 build = {

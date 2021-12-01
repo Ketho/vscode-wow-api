@@ -1,9 +1,9 @@
 local lfs = require "lfs"
-local csv = require "csv"
 local https = require "ssl.https"
 local cjson = require "cjson"
 local cjsonutil = require "cjson.util"
-local parser = {}
+
+local csv = require("Lua/Util/csv/csv")
 
 local listfile_url = "https://wow.tools/casc/listfile/download/csv/unverified"
 --local databases_url = "https://api.wow.tools/databases"
@@ -22,6 +22,8 @@ local json_cache = CACHE_PATH.."/%s.json"
 if not lfs.attributes(CACHE_PATH) then
 	lfs.mkdir(CACHE_PATH)
 end
+
+local parser = {}
 
 local function GetBaseName(name, build, options)
 	local base = name

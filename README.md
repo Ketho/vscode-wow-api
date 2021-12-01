@@ -38,18 +38,18 @@ Shows completion for GlobalStrings at >3 uppercase letters to declutter fuzzy se
 # Environment Setup
 While using WSL is not required, the below setups are written around the assumption that WSL is being used. If you do not have WSL setup, you can start the install by running `wsl --install` from an elevated command prompt.  
 #
-## Git Config ##
+## Git Config
 * Execute `git config --global core.autocrlf true` from a command prompt.  
      * Ensure your Windows git config is setup to correctly handle CRLFs.  
 #
-## Setting up a WSL Ubuntu Instance  ##
-### Windows Command Prompt (Elevated)  ###
+## Setting up a WSL Ubuntu Instance
+### Windows Command Prompt (Elevated)
  * Start an elevated command prompt in Windows  
  * Execute `wsl --install -d Ubuntu-20.04`  
  * Follow the prompts to configure a username/password.  
  * You should be dropped into the bash shell.  
 
-### WSL Ubuntu Bash Shell  ##
+### WSL Ubuntu Bash Shell
 * Execute `git config --global core.autocrlf true`  
     * Configures CRLFs for git install within WSL.  
 * Execute `sudo apt-get update`  
@@ -57,17 +57,12 @@ While using WSL is not required, the below setups are written around the assumpt
     * This updates the apt-get repos.  
 * Execute `sudo apt-get install pip unzip libreadline-dev libssl-dev`  
 * Execute `bin/setup.sh`  
-    * `setup.sh` will setup an isolated Lua 5.3 environment (using [hererocks](https://pypi.org/project/hererocks/) and [luarocks](https://luarocks.org/#quick-start)) within the `.lua` directory and install the below dependencies
-        * [Lua 5.3](http://www.lua.org/)
-        * [hererocks](https://pypi.org/project/hererocks/)
-        * [luarocks]()
-        * [luafilesystem](https://luarocks.org/modules/hisham/luafilesystem)
-        * [luasocket](https://luarocks.org/modules/luasocket/luasocket)
-        * [luasec](https://luarocks.org/modules/brunoos/luasec)
-        * [xml2lua](https://luarocks.org/modules/manoelcampos/xml2lua)
-        * [WoWtoolsParser](https://github.com/Ketho/WoWtoolsParser)
-            * [csv](https://luarocks.org/modules/geoffleyland/csv)
-            * [lua-cjson](https://luarocks.org/modules/openresty/lua-cjson)
+    This will setup an isolated [Lua 5.3](http://www.lua.org/) environment (using [hererocks](https://pypi.org/project/hererocks/) and [luarocks](https://luarocks.org/#quick-start)) within the `.lua` directory and install the below dependencies:
+    - [luafilesystem](https://luarocks.org/modules/hisham/luafilesystem)
+    - [luasocket](https://luarocks.org/modules/luasocket/luasocket)
+    - [luasec](https://luarocks.org/modules/brunoos/luasec)
+    - [lua-cjson](https://luarocks.org/modules/openresty/lua-cjson)
+    - [xml2lua](https://luarocks.org/modules/manoelcampos/xml2lua)
 #
 ### Generating documentation
 * Blizzard documented functions are generated from [Blizzard_APIDocumentation](https://github.com/Gethe/wow-ui-source/tree/live/AddOns/Blizzard_APIDocumentation).
@@ -88,6 +83,7 @@ The following people contributed to the development resources or their work was 
 * [ChrisKader](https://github.com/ChrisKader)
 * [DahkCeles](https://www.curseforge.com/members/dahkceles/projects)
 * [Ellypse](https://github.com/Ellypse)
+* [Ferronn](https://github.com/ferronn-dev)
 * [Foxlit](https://www.townlong-yak.com/)
 * [Gethe](https://github.com/Gethe)
 * [Iriel](https://wowpedia.fandom.com/wiki/Iriel)
