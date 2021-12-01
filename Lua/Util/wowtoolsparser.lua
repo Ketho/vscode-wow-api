@@ -1,8 +1,9 @@
 local lfs = require "lfs"
-local csv = require "csv"
 local https = require "ssl.https"
 local cjson = require "cjson"
 local cjsonutil = require "cjson.util"
+
+local csv = require("Lua/Util/csv/csv")
 local parser = {}
 
 local listfile_url = "https://wow.tools/casc/listfile/download/csv/unverified"
