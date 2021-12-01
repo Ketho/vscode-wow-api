@@ -19,11 +19,12 @@ local function IsValidTableKey(s)
 end
 
 local function ToTypeScript()
-	local globalstrings, usedBuild = parser:ReadCSV("globalstrings", {header = true, build = constants.LATEST_MAINLINE})
+	local globalstrings, usedBuild = parser:ReadCSV("globalstrings", {header = true, build = constants.LATEST_MAINLINE, locale = "enUS"})
 	local stringsTable = {}
 	for line in globalstrings:lines() do
 		local flags = tonumber(line.Flags)
 		if flags and flags&0x1 > 0 then
+			print(line.ID.."|"..line.BaseTag.."|"..(line.TagText_lang or "").."|"..line.BaseTag..":|"..(line.TagText_lang or '').."|")
 			table.insert(stringsTable, {
 				BaseTag = line.BaseTag,
 				TagText = line.TagText_lang
@@ -37,15 +38,15 @@ local function ToTypeScript()
 	local fs = '\t%s: String.raw`%s`,'
 	for _, tbl in pairs(stringsTable) do
 		local key, value = tbl.BaseTag, tbl.TagText
-		value = value:gsub('\\32', ' ') -- space char
+		value = value:gsub("\\32", " ") -- space char
 		-- unescape any quotes before escaping quotes
 		value = value:gsub('\\\"', '"')
 		value = value:gsub('"', '\\\"')
 		if slashStrings[key] and slashStrings[key](usedBuild) then
-			value = value:gsub("\\", "\\\\")
+			--value = value:gsub("\\", "\\\\")
 		end
 		if IsValidTableKey(key) then
-			table.insert(t, fs:format(key, value))
+			table.insert(t, "\t"..key..": String.raw`"..value.."`,")
 		end
 	end
 	table.insert(t, "}\n")

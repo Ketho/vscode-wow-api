@@ -9483,7 +9483,7 @@ export const data: GlobalStringInterface = {
 	KEYBOARD_HEADER: String.raw`Keyboard Options`,
 	KEYRING: String.raw`Keyring`,
 	KEY_APOSTROPHE: String.raw`'`,
-	KEY_BACKSLASH: String.raw`\\`,
+	KEY_BACKSLASH: String.raw`\`,
 	KEY_BACKSPACE: String.raw`Backspace`,
 	KEY_BACKSPACE_MAC: String.raw`Delete`,
 	KEY_BINDING: String.raw`Key Binding`,
