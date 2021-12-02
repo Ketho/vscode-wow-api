@@ -1,6 +1,4 @@
-interface GlobalStringInterface {
-	[key: string]: string
-}
+import type { GlobalStringInterface } from "./GlobalStringInterface"
 
 export const data: GlobalStringInterface = {
 	"8.0_WARFRONTS_-_ARATHI_-_CONSTRUCT_BUILDING_-_BARRACKS": String.raw`Prova`,

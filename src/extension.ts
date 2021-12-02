@@ -1,4 +1,5 @@
 import * as vscode from "vscode"
+import type { GlobalStringInterface } from "./data/globalstring/GlobalStringInterface"
 
 const events = {
 	data: require("./data/event").data,
@@ -18,9 +19,10 @@ const enums = {
 }
 
 import globalstring_provider = require("./providers/globalstring")
-var globalstrings: {[k: string]: any} = {
+const globalstrings: {[k: string]: any} = {
 	completion: globalstring_provider.completion,
 	hover: globalstring_provider.getHover,
+	data: {} as GlobalStringInterface,
 }
 
 function isHoverString(document: vscode.TextDocument, range: vscode.Range) { 

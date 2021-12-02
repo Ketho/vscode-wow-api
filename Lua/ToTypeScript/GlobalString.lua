@@ -4,9 +4,9 @@ local constants = require("Lua/Util/constants")
 local Util = require("Lua/Util/Util")
 local parser = require("Lua/Util/wowtoolsparser")
 
-local pre = [[interface GlobalStringInterface {
-	[key: string]: string
-}
+Util:MakeDir("src/data/globalstring")
+
+local pre = [[import type { GlobalStringInterface } from "./GlobalStringInterface"
 
 export const data: GlobalStringInterface = {
 ]]
