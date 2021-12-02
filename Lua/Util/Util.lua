@@ -12,7 +12,7 @@ function Util:MakeDir(path)
 end
 
 function Util:WriteFile(path, text)
-	print("Writing", path)
+	print("writing", path)
 	local file = io.open(path, "w")
 	file:write(text)
 	file:close()

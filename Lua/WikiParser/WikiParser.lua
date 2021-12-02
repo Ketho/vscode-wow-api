@@ -69,9 +69,9 @@ WriteToFile(table.concat(tempTbl), true)
 
 local total = countValid+countNonValid+countNonDoc
 print("valid api", countValid, string.format("%.2f%%", 100*countValid/total))
-print("non valid", countNonValid, string.format("%.2f%%", 100*countNonValid/total))
+print("invalid api", countNonValid, string.format("%.2f%%", 100*countNonValid/total))
 print("not documented", countNonDoc, string.format("%.2f%%", 100*countNonDoc/total))
 
 -- valid api       763     27.51%
--- non valid       533     19.21%
+-- not valid       533     19.21%
 -- not documented  1478    53.28%

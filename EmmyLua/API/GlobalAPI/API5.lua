@@ -1,3 +1,6 @@
+---[Documentation](https://wowpedia.fandom.com/wiki/API_UnitCanCooperate)
+function UnitCanCooperate(unit, otherUnit) end
+
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_UnitCanPetBattle)
 function UnitCanPetBattle() end
 
