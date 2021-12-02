@@ -99,6 +99,12 @@ export function activate(context: vscode.ExtensionContext) {
 	})
 }
 
+export function deactivate() {
+	console.log("deactivated ketho.wow-api")
+	setExternalLibrary("EmmyLua\\API", false)
+	setExternalLibrary("EmmyLua\\Optional", false)
+}
+
 export function setExternalLibrary(folder: string, enable: boolean) {
 	console.log("setExternalLibrary", folder, enable)
 	const extensionId = "ketho.wow-api"
