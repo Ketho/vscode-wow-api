@@ -1,9 +1,13 @@
 # Change Log
 
 ### Known issues
-- Uninstalling the extension does not appear to work. It relied on vscode deleting the actual extension files instead of marking them in an `.obsolete` file. Removing them from Sumneko's external libraries path does not seem possible https://github.com/microsoft/vscode/issues/45474
+- Uninstalling the extension does not appear to work ([#20](https://github.com/Ketho/vscode-wow-api/issues/20))
 - Frame templates are not yet supported ([#15](https://github.com/Ketho/vscode-wow-api/issues/15))
 - The Classic (TBC) API is not supported ([#13](https://github.com/Ketho/vscode-wow-api/issues/13))
+
+## [0.7.2] - 2021-11-02
+### Changed
+- 🛠 Improvements: Test `deactivate` event
 
 ## [0.7.1] - 2021-11-21
 ### Added
@@ -206,6 +210,7 @@
 ### Added
 - 🚧 Wip: Development work
 
+[0.7.2]: https://github.com/Ketho/vscode-wow-api/releases/tag/v0.7.2
 [0.7.1]: https://github.com/Ketho/vscode-wow-api/releases/tag/v0.7.1
 [0.7.0]: https://github.com/Ketho/vscode-wow-api/releases/tag/v0.7.0
 [0.6.2]: https://github.com/Ketho/vscode-wow-api/releases/tag/v0.6.2
