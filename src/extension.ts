@@ -19,7 +19,7 @@ const enums = {
 }
 
 import globalstring_provider = require("./providers/globalstring")
-const globalstrings: {[k: string]: any} = {
+const globalstrings = {
 	completion: globalstring_provider.completion,
 	hover: globalstring_provider.getHover,
 	data: {} as GlobalStringInterface,
