@@ -36,6 +36,8 @@ Shows completion for GlobalStrings at >3 uppercase letters to declutter fuzzy se
 ![](https://github.com/Ketho/vscode-wow-api/raw/master/img/globalstring.gif)
 
 # Environment Setup
+If using WSL, it is HIGHLY recommend that setup your WSL instance and then clone the repo using git in WSL. Once cloned, you can cd to the directory and run `code .` to open VS Code in Windows and have it setup the remote extension.
+
 While using WSL is not required, the below setups are written around the assumption that WSL is being used. If you do not have WSL setup, you can start the install by running `wsl --install` from an elevated command prompt.  
 #
 ## Git Config
