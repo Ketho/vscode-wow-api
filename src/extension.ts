@@ -95,7 +95,6 @@ export function activate(context: vscode.ExtensionContext) {
 			setExternalLibrary("EmmyLua\\Optional", loadFrameXML ? true : false)
 		}
 		else if (event.affectsConfiguration("wowAPI.locale")) {
-			console.log("test A");
 			const wowapi = vscode.workspace.getConfiguration("wowAPI")
 			globalstrings.data = require("./data/globalstring/"+wowapi.get("locale")).data
 		}

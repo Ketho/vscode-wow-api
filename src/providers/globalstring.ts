@@ -1,20 +1,17 @@
 import * as vscode from "vscode"
 
-export const completion: vscode.CompletionItem[] = []
-
 var data : any;
+export const completion: vscode.CompletionItem[] = []
 
 vscode.workspace.onDidChangeConfiguration((event: vscode.ConfigurationChangeEvent) => {
 	if (event.affectsConfiguration("wowAPI.locale")) {
-		console.log("test B1");
 		updateGlobalStrings()
 	}
 })
 
 function updateGlobalStrings() {
 	const wowapi = vscode.workspace.getConfiguration("wowAPI")
-	console.log("test B2", wowapi.get("locale"));
-	data = require("./data/globalstring/"+wowapi.get("locale")).data
+	data = require("../data/globalstring/"+wowapi.get("locale")).data
 }
 updateGlobalStrings()
 
