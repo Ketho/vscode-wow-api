@@ -1,4 +1,3 @@
-import { config } from "process"
 import * as vscode from "vscode"
 
 const events = {
@@ -19,8 +18,7 @@ const enums = {
 }
 
 import globalstring_provider = require("./providers/globalstring")
-const globalstrings = {
-	data: require("./data/globalstring").data,
+var globalstrings: {[k: string]: any} = {
 	completion: globalstring_provider.completion,
 	hover: globalstring_provider.getHover,
 }
@@ -43,7 +41,7 @@ export function activate(context: vscode.ExtensionContext) {
 	setExternalLibrary("EmmyLua\\API", true)
 	const loadFrameXML = vscode.workspace.getConfiguration("wowAPI").get("emmyLua.loadFrameXML")
 	setExternalLibrary("EmmyLua\\Optional", loadFrameXML ? true : false)
-	setLanguageServerOptions()
+	updateConfigs()
 
 	const completion = vscode.languages.registerCompletionItemProvider(
 		"lua",
@@ -96,6 +94,11 @@ export function activate(context: vscode.ExtensionContext) {
 			const loadFrameXML = vscode.workspace.getConfiguration("wowAPI").get("emmyLua.loadFrameXML")
 			setExternalLibrary("EmmyLua\\Optional", loadFrameXML ? true : false)
 		}
+		else if (event.affectsConfiguration("wowAPI.locale")) {
+			console.log("test A");
+			const wowapi = vscode.workspace.getConfiguration("wowAPI")
+			globalstrings.data = require("./data/globalstring/"+wowapi.get("locale")).data
+		}
 	})
 }
 
@@ -131,10 +134,12 @@ export function setExternalLibrary(folder: string, enable: boolean) {
 	}
 }
 
-function setLanguageServerOptions() {
-	const config = vscode.workspace.getConfiguration("Lua")
-	// hides the emmylua source from the hover tooltip
-	config.update("completion.displayContext", 0, true)
+function updateConfigs() {
+	const sumneko = vscode.workspace.getConfiguration("Lua")
+	sumneko.update("completion.displayContext", 0, true) // hides the emmylua source from the hover tooltip
+
+	const wowapi = vscode.workspace.getConfiguration("wowAPI")
+	globalstrings.data = require("./data/globalstring/"+wowapi.get("locale")).data
 }
 
 function onCustomCompletion() {

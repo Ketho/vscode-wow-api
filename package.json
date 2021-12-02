@@ -58,6 +58,12 @@
 					"type": "boolean",
 					"default": true,
 					"markdownDescription": "Load manually updated documentation for [FrameXML](https://github.com/Ketho/vscode-wow-api/tree/master/EmmyLua/Optional) globals and functions."
+				},
+				"wowAPI.locale": {
+					"type": "string",
+					"default": "enUS",
+					"enum": ["enUS", "deDE", "esES", "esMX", "frFR", "itIT", "koKR", "ptBR", "zhCN", "zhTW"],
+					"markdownDescription": "Sets the GlobalStrings locale for code completion and hover."
 				}
 			}
 		}
