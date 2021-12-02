@@ -1,6 +1,7 @@
 import * as vscode from "vscode"
+import { GlobalStringInterface } from "../data/globalstring/GlobalStringInterface"
 
-var data : any;
+let data = {} as GlobalStringInterface
 export const completion: vscode.CompletionItem[] = []
 
 vscode.workspace.onDidChangeConfiguration((event: vscode.ConfigurationChangeEvent) => {
