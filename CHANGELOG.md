@@ -12,7 +12,7 @@
 - 📚 Documentation: Readme for WSL ([#21](https://github.com/Ketho/vscode-wow-api/pull/22))
 - ✨ Feature: Option to select GlobalStrings locale ([#24](https://github.com/Ketho/vscode-wow-api/issues/24))
 
-![](https://github.com/Ketho/vscode-wow-api/raw/master/img/locale option.png)
+![](https://github.com/Ketho/vscode-wow-api/raw/master/img/option_locale.png)
 
 ## [0.7.2] - 2021-11-02
 ### Changed
