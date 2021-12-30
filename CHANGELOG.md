@@ -5,6 +5,15 @@
 - Frame templates are not yet supported ([#15](https://github.com/Ketho/vscode-wow-api/issues/15))
 - The Classic (TBC) API is not supported ([#13](https://github.com/Ketho/vscode-wow-api/issues/13))
 
+## [0.7.3] - 2021-12-30
+### Added
+- 🌙 EmmyLua: [Blizzard_Deprecated](https://github.com/Ketho/vscode-wow-api/tree/master/EmmyLua/API/Blizzard_Deprecated) and [AceAddon-3.0](https://github.com/Ketho/vscode-wow-api/blob/master/EmmyLua/API/Libraries/Ace3/AceAddon-3.0.lua)
+- 🛠 Improvements: Use path seperators for Linux ([#25](https://github.com/Ketho/vscode-wow-api/pull/25))
+- 📚 Documentation: Readme for WSL ([#21](https://github.com/Ketho/vscode-wow-api/pull/22))
+- ✨ Feature: Option to select GlobalStrings locale ([#24](https://github.com/Ketho/vscode-wow-api/issues/24))
+
+![](https://github.com/Ketho/vscode-wow-api/raw/master/img/locale option.png)
+
 ## [0.7.2] - 2021-11-02
 ### Changed
 - 🛠 Improvements: Test `deactivate` event
@@ -210,6 +219,7 @@
 ### Added
 - 🚧 Wip: Development work
 
+[0.7.3]: https://github.com/Ketho/vscode-wow-api/releases/tag/v0.7.3
 [0.7.2]: https://github.com/Ketho/vscode-wow-api/releases/tag/v0.7.2
 [0.7.1]: https://github.com/Ketho/vscode-wow-api/releases/tag/v0.7.1
 [0.7.0]: https://github.com/Ketho/vscode-wow-api/releases/tag/v0.7.0
