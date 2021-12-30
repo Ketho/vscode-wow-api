@@ -19,7 +19,7 @@ function C_TransmogCollection.GetShowMissingSourceInItemTooltips() end
 function C_TransmogCollection.SetShowMissingSourceInItemTooltips() end
 
 ---@deprecated
---- [Deprecated](https://github.com/Gethe/wow-ui-source/blob/9.1.5/Interface/AddOns/Blizzard_Deprecated/Deprecated_9_1_0.lua#L93)
+---[Deprecated](https://github.com/Gethe/wow-ui-source/blob/9.1.5/Interface/AddOns/Blizzard_Deprecated/Deprecated_9_1_0.lua#L93)
 function C_TransmogCollection.CanSetFavoriteInCategory() end
 
 ---@deprecated

@@ -9,7 +9,7 @@
 ### Added
 - 🌙 EmmyLua: [Blizzard_Deprecated](https://github.com/Ketho/vscode-wow-api/tree/master/EmmyLua/API/Blizzard_Deprecated) and [AceAddon-3.0](https://github.com/Ketho/vscode-wow-api/blob/master/EmmyLua/API/Libraries/Ace3/AceAddon-3.0.lua)
 - 🛠 Improvements: Use path seperators for Linux ([#25](https://github.com/Ketho/vscode-wow-api/pull/25))
-- 📚 Documentation: Readme for WSL ([#21](https://github.com/Ketho/vscode-wow-api/pull/22))
+- 📚 Documentation: Readme for WSL ([#19](https://github.com/Ketho/vscode-wow-api/pull/19))
 - ✨ Feature: Option to select GlobalStrings locale ([#24](https://github.com/Ketho/vscode-wow-api/issues/24))
 
 ![](https://github.com/Ketho/vscode-wow-api/raw/master/img/option_locale.png)
