@@ -115,7 +115,7 @@ export function setExternalLibrary(folder: string, enable: boolean) {
 	const extensionId = "ketho.wow-api"
 	const extensionPath = vscode.extensions.getExtension(extensionId)?.extensionPath
 	// Use path.join to ensure the proper path seperators (\ for windows, / for anything else) are used.
-	const folderPath = path.join(extensionPath!,"EmmyLua",folder)
+	const folderPath = path.join(extensionPath!, "EmmyLua", folder)
 	const config = vscode.workspace.getConfiguration("Lua")
 	const library: string[] | undefined = config.get("workspace.library")
 	if (library && extensionPath) {
