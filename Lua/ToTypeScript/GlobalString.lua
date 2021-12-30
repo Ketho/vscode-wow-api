@@ -1,25 +1,42 @@
+local lfs = require "lfs"
+
 local constants = require("Lua/Util/constants")
+local Util = require("Lua/Util/Util")
 local parser = require("Lua/Util/wowtoolsparser")
 
-local pre = [[interface GlobalStringInterface {
-	[key: string]: string
-}
+Util:MakeDir("src/data/globalstring")
+
+local pre = [[import type { GlobalStringInterface } from "./GlobalStringInterface"
 
 export const data: GlobalStringInterface = {
 ]]
 
-local slashStrings = {
-	KEY_BACKSLASH = function(s) return s:sub(1, 2) == "9." end, -- broken in 9.1.0
-	CHATLOGENABLED = function(s) return s:sub(1, 3) == "9.0" end, -- broken in 9.0.5
-	--COMBATLOGENABLED = true,
+local locales = {
+	"deDE",
+	"enUS", -- same as enGB
+	"esES", "esMX",
+	"frFR",
+	"itIT",
+	"koKR",
+	"ptBR", -- same as ptPT
+	"ruRU",
+	"zhCN",	"zhTW",
 }
+
+-- its fine not escaping symbols, except single backslashes and backquotes
+local fixes = {
+	KEY_BACKSLASH = [[\]],
+	KEY_LEFTBRACKET = [[`]], -- esES/esMX
+}
+
+local m = {}
 
 local function IsValidTableKey(s)
 	return not s:find("-") and not s:find("^%d")
 end
 
-local function ToTypeScript()
-	local globalstrings, usedBuild = parser:ReadCSV("globalstrings", {header = true, build = constants.LATEST_MAINLINE})
+function m:ToTypeScript(locale)
+	local globalstrings = parser:ReadCSV("globalstrings", {header = true, build = constants.LATEST_MAINLINE, locale = locale})
 	local stringsTable = {}
 	for line in globalstrings:lines() do
 		local flags = tonumber(line.Flags)
@@ -34,22 +51,31 @@ local function ToTypeScript()
 		return a.BaseTag < b.BaseTag
 	end)
 	local t = {}
-	local fs = '\t%s: String.raw`%s`,'
+	local fs1 = '\t%s: String.raw`%s`,'
+	local fs2 = '\t"%s": String.raw`%s`,'
 	for _, tbl in pairs(stringsTable) do
 		local key, value = tbl.BaseTag, tbl.TagText
-		value = value:gsub('\\32', ' ') -- space char
-		-- unescape any quotes before escaping quotes
-		value = value:gsub('\\\"', '"')
-		value = value:gsub('"', '\\\"')
-		if slashStrings[key] and slashStrings[key](usedBuild) then
-			value = value:gsub("\\", "\\\\")
+		value = value:gsub("\\32", " ") -- space char
+		if fixes[key] and value == fixes[key] then
+			value = [[\]]..value
 		end
-		if IsValidTableKey(key) then
-			table.insert(t, fs:format(key, value))
-		end
+		local fs = IsValidTableKey(key) and fs1 or fs2
+		table.insert(t, fs:format(key, value))
 	end
 	table.insert(t, "}\n")
 	return pre..table.concat(t, "\n")
 end
 
-return ToTypeScript
+function m:WriteLocales()
+	local latest = parser:FindBuild("globalstrings", constants.LATEST_MAINLINE)
+	local cache = string.format("Lua/Data/cache/globalstrings_%s_enUS.csv", latest)
+	if not lfs.attributes(cache) then -- skip if already exported
+		for _, locale in pairs(locales) do
+			local path = string.format("src/data/globalstring/%s.ts", locale)
+			local data = self:ToTypeScript(locale)
+			Util:WriteFile(path, data)
+		end
+	end
+end
+
+return m

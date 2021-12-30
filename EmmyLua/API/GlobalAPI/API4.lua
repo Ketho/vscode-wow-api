@@ -921,6 +921,7 @@ function NoPlayTime() end
 function NotWhileDeadError() end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_NotifyInspect)
+---@param unit string
 function NotifyInspect(unit) end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_NumTaxiNodes)
@@ -2467,7 +2468,4 @@ function UnitCanAssist(unit, otherUnit) end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_UnitCanAttack)
 function UnitCanAttack(unit, otherUnit) end
-
----[Documentation](https://wowpedia.fandom.com/wiki/API_UnitCanCooperate)
-function UnitCanCooperate(unit, otherUnit) end
 

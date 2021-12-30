@@ -1,7 +1,20 @@
 import * as vscode from "vscode"
+import { GlobalStringInterface } from "../data/globalstring/GlobalStringInterface"
 
-const data = require("../data/globalstring").data
+let data = {} as GlobalStringInterface
 export const completion: vscode.CompletionItem[] = []
+
+vscode.workspace.onDidChangeConfiguration((event: vscode.ConfigurationChangeEvent) => {
+	if (event.affectsConfiguration("wowAPI.locale")) {
+		updateGlobalStrings()
+	}
+})
+
+function updateGlobalStrings() {
+	const wowapi = vscode.workspace.getConfiguration("wowAPI")
+	data = require("../data/globalstring/"+wowapi.get("locale")).data
+}
+updateGlobalStrings()
 
 for (const key in data) {
 	const item = new vscode.CompletionItem(key, vscode.CompletionItemKind.Text)

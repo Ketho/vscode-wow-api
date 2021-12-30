@@ -411,6 +411,9 @@ function CanHearthAndResurrectFromArea() end
 function CanInitiateWarGame() end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_CanInspect)
+---@param unit string
+---@param showError boolean
+---@return boolean canInspect
 function CanInspect(unit, showError) end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_CanItemBeSocketedToArtifact)
