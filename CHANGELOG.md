@@ -7,7 +7,7 @@
 
 ## [0.7.4] - 2022-01-30
 ### Changed
-- Forgot to include ruRU locale option ([#26](https://github.com/Ketho/vscode-wow-api/issues/26))
+- 🐞 Bug Fixes: Forgot to include ruRU locale option ([#26](https://github.com/Ketho/vscode-wow-api/issues/26))
 
 ## [0.7.3] - 2021-12-30
 ### Added
