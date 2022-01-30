@@ -1,3 +1,6 @@
+---[Documentation](https://wowpedia.fandom.com/wiki/API_C_ToyBox.HasFavorites)
+function C_ToyBox.HasFavorites() end
+
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_ToyBox.IsExpansionTypeFilterChecked)
 function C_ToyBox.IsExpansionTypeFilterChecked(expansionIndex) end
 
@@ -2380,21 +2383,4 @@ function GetHitModifier() end
 ---@param homePlayers table
 ---@return table homePlayers
 function GetHomePartyInfo(homePlayers) end
-
----[Documentation](https://wowpedia.fandom.com/wiki/API_GetInboxHeaderInfo)
----@param index number
----@return string packageIcon
----@return string stationeryIcon
----@return string sender
----@return string subject
----@return number money
----@return number CODAmount
----@return number daysLeft
----@return number hasItem
----@return boolean wasRead
----@return boolean wasReturned
----@return boolean textCreated
----@return boolean canReply
----@return boolean isGM
-function GetInboxHeaderInfo(index) end
 

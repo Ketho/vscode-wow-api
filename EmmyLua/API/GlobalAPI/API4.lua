@@ -1,3 +1,14 @@
+---[Documentation](https://wowpedia.fandom.com/wiki/API_IsActiveBattlefieldArena)
+---@return boolean isArena
+---@return boolean isRegistered
+function IsActiveBattlefieldArena() end
+
+---[Documentation](https://wowpedia.fandom.com/wiki/API_IsActiveQuestLegendary)
+function IsActiveQuestLegendary(index) end
+
+---[Documentation](https://wowpedia.fandom.com/wiki/API_IsActiveQuestTrivial)
+function IsActiveQuestTrivial(index) end
+
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_IsAddOnLoadOnDemand)
 function IsAddOnLoadOnDemand() end
 
@@ -2459,13 +2470,4 @@ function UnitBattlePetLevel() end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_UnitBattlePetSpeciesID)
 function UnitBattlePetSpeciesID() end
-
----[Documentation](https://wowpedia.fandom.com/wiki/API_UnitBattlePetType)
-function UnitBattlePetType() end
-
----[Documentation](https://wowpedia.fandom.com/wiki/API_UnitCanAssist)
-function UnitCanAssist(unit, otherUnit) end
-
----[Documentation](https://wowpedia.fandom.com/wiki/API_UnitCanAttack)
-function UnitCanAttack(unit, otherUnit) end
 

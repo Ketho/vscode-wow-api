@@ -1,3 +1,12 @@
+---[Documentation](https://wowpedia.fandom.com/wiki/API_UnitBattlePetType)
+function UnitBattlePetType() end
+
+---[Documentation](https://wowpedia.fandom.com/wiki/API_UnitCanAssist)
+function UnitCanAssist(unit, otherUnit) end
+
+---[Documentation](https://wowpedia.fandom.com/wiki/API_UnitCanAttack)
+function UnitCanAttack(unit, otherUnit) end
+
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_UnitCanCooperate)
 function UnitCanCooperate(unit, otherUnit) end
 

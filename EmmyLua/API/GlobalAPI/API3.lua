@@ -1,3 +1,20 @@
+---[Documentation](https://wowpedia.fandom.com/wiki/API_GetInboxHeaderInfo)
+---@param index number
+---@return string packageIcon
+---@return string stationeryIcon
+---@return string sender
+---@return string subject
+---@return number money
+---@return number CODAmount
+---@return number daysLeft
+---@return number hasItem
+---@return boolean wasRead
+---@return boolean wasReturned
+---@return boolean textCreated
+---@return boolean canReply
+---@return boolean isGM
+function GetInboxHeaderInfo(index) end
+
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_GetInboxInvoiceInfo)
 ---@param index number
 ---@return string invoiceType
@@ -2492,15 +2509,4 @@ function IsAchievementEligible(achievementID) end
 ---@param actionSlot number
 ---@return boolean inRange
 function IsActionInRange(actionSlot) end
-
----[Documentation](https://wowpedia.fandom.com/wiki/API_IsActiveBattlefieldArena)
----@return boolean isArena
----@return boolean isRegistered
-function IsActiveBattlefieldArena() end
-
----[Documentation](https://wowpedia.fandom.com/wiki/API_IsActiveQuestLegendary)
-function IsActiveQuestLegendary(index) end
-
----[Documentation](https://wowpedia.fandom.com/wiki/API_IsActiveQuestTrivial)
-function IsActiveQuestTrivial(index) end
 

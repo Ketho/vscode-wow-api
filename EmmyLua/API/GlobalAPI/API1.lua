@@ -983,9 +983,11 @@ function C_Garrison.IsUsingPartyGarrison() end
 function C_Garrison.IsVisitGarrisonAvailable() end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_Garrison.MarkMissionComplete)
+---@param missionID number
 function C_Garrison.MarkMissionComplete(missionID) end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_Garrison.MissionBonusRoll)
+---@param missionID number
 function C_Garrison.MissionBonusRoll(missionID) end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_Garrison.PlaceBuilding)
@@ -1050,6 +1052,7 @@ function C_Garrison.ShouldShowMapTab(garrType) end
 function C_Garrison.ShowFollowerNameInErrorMessage(missionRecID) end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_Garrison.StartMission)
+---@param missionID number
 function C_Garrison.StartMission(missionID) end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_Garrison.SwapBuildings)
@@ -2080,7 +2083,4 @@ function C_ToyBox.GetUncollectedShown() end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_ToyBox.GetUnusableShown)
 function C_ToyBox.GetUnusableShown() end
-
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_ToyBox.HasFavorites)
-function C_ToyBox.HasFavorites() end
 
