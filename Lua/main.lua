@@ -19,6 +19,7 @@ Util:WriteFile("EmmyLua/API/Enum.lua", EmmyLiterals:GetEnumTable())
 Util:WriteFile("src/data/event.ts", require("Lua/ToTypeScript/Event")())
 Util:WriteFile("src/data/cvar.ts", require("Lua/ToTypeScript/CVar")())
 Util:WriteFile("src/data/enum.ts", require("Lua/ToTypeScript/LuaEnum")())
+Util:MakeDir("Lua/Data/cache/globalstrings")
 require("Lua/ToTypeScript/GlobalString"):WriteLocales()
 
 -- parse the wiki

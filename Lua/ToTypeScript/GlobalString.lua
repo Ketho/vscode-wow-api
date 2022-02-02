@@ -68,7 +68,7 @@ end
 
 function m:WriteLocales()
 	local latest = parser:FindBuild("globalstrings", constants.LATEST_MAINLINE)
-	local cache = string.format("Lua/Data/cache/globalstrings_%s_enUS.csv", latest)
+	local cache = string.format("Lua/Data/cache/globalstrings/globalstrings_%s_enUS.csv", latest)
 	if not lfs.attributes(cache) then -- skip if already exported
 		for _, locale in pairs(locales) do
 			local path = string.format("src/data/globalstring/%s.ts", locale)

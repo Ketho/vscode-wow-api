@@ -15,13 +15,9 @@ local CACHE_PATH = "Lua/Data/cache"
 local INVALIDATION_TIME = 60*60
 
 local listfile_cache = CACHE_PATH.."/listfile.csv"
-local versions_cache = CACHE_PATH.."/%s_versions.json"
-local csv_cache = CACHE_PATH.."/%s.csv"
-local json_cache = CACHE_PATH.."/%s.json"
-
-if not lfs.attributes(CACHE_PATH) then
-	lfs.mkdir(CACHE_PATH)
-end
+local versions_cache = CACHE_PATH.."/%s/%s_versions.json"
+local csv_cache = CACHE_PATH.."/%s/%s.csv"
+local json_cache = CACHE_PATH.."/%s/%s.json"
 
 local parser = {}
 
@@ -33,6 +29,13 @@ local function GetBaseName(name, build, options)
 	end
 	return base
 end
+
+local function CreateFolder(path)
+	if not lfs.attributes(path) then
+		lfs.mkdir(path)
+	end
+end
+CreateFolder(CACHE_PATH)
 
 local function ShouldDownload(path)
 	local attr = lfs.attributes(path)
@@ -46,19 +49,42 @@ local function ShouldDownload(path)
 	end
 end
 
+local skip_codes = {
+	[204] = true, -- No Content
+	[400] = true, -- Bad Request
+}
+
+-- not really proud of this
 -- https://github.com/brunoos/luasec/wiki/LuaSec-1.0.x#httpsrequesturl---body
 local function DownloadFile(url, path)
-	local data = https.request(url)
-	local file = io.open(path, "w")
-	file:write(data)
-	file:close()
+	local res, code, _, status = https.request(url)
+	if code == 200 then
+		if not path then
+			return res
+		else
+			print("dl", path)
+			local file = io.open(path, "w")
+			file:write(res)
+			file:close()
+			return true
+		end
+	elseif code == 400 and url:find("useHotfixes") then -- some csvs are broken by hotfixes
+		url = url:gsub("&useHotfixes=true", "")
+		print("retry", path, status)
+		DownloadFile(url, path)
+	elseif skip_codes[code] then
+		print("skip", path, status)
+		return false
+	else
+		error(string.format("%s, %s, %s", path, code, status))
+	end
 end
 
 --- Gets all build versions for a database
 -- @param name the DBC name
 -- @return table available build versions
 function parser:GetVersions(name)
-	local path = versions_cache:format(name)
+	local path = versions_cache:format(name, name)
 	if ShouldDownload(path) then
 		DownloadFile(versions_url:format(name), path)
 	end
@@ -88,21 +114,23 @@ end
 --- Parses the DBC (with header) from CSV
 -- @param name the DBC name
 -- @param options.build (optional) the build version, otherwise uses the most recent build
--- @param options.header (optional) if true, fields will be keyed by header name instead of column index
+-- @param options.header (optional) whether fields will be keyed by header name instead of column index
 -- @param options.locale (optional) the locale, otherwise uses english
 -- @return function the csv iterator
 -- @return string the used build
 function parser:ReadCSV(name, options)
 	options = options or {}
+	CreateFolder(CACHE_PATH.."/"..name)
 	local build = self:FindBuild(name, options.build)
 	local base = GetBaseName(name, build, options)
-	local path = csv_cache:format(base)
+	local path = csv_cache:format(name, base)
 	if not lfs.attributes(path) then
 		local url = csv_url:format(name, build)
 		if options.locale then
 			url = url.."&locale="..options.locale
 		end
-		DownloadFile(url, path)
+		local success = DownloadFile(url, path)
+		if not success then return false end
 	end
 	print("reading "..path)
 	local iter = csv.open(path, {header = options.header, buffer_size = 1024*4})
@@ -117,17 +145,19 @@ end
 -- @return string the used build
 function parser:ReadJSON(name, options)
 	options = options or {}
+	CreateFolder(CACHE_PATH.."/"..name)
 	local build = self:FindBuild(name, options.build)
 	local base = GetBaseName(name, build, options)
-	local path = json_cache:format(base)
+	local path = json_cache:format(name, base)
 	if not lfs.attributes(path) then
-		local initialRequest = DownloadFile(json_url:format(name, build, 0))
+		local initialRequest = DownloadFile(json_url:format(name, build, 0), false)
 		local recordsTotal = cjson.decode(initialRequest).recordsTotal
 		local url = json_url:format(name, build, recordsTotal)
 		if options.locale then
 			url = url.."&locale="..options.locale
 		end
-		DownloadFile(url, path)
+		local success = DownloadFile(url, path)
+		if not success then return false end
 	end
 	print("reading "..path)
 	local json = cjsonutil.file_load(path)

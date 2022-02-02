@@ -425,7 +425,7 @@ export const data: CVarInterface = {
 		name: "GamePadCursorForTargeting",
 		default: "1",
 		category: 5,
-		help: "Enable GamePad controlled cursor for spell targeting",
+		help: "Enable GamePad controlled cursor for spell targeting (1=enable, 2=start-at-target)",
 	},
 	gamepadcursorleftclick: {
 		name: "GamePadCursorLeftClick",
@@ -1612,7 +1612,7 @@ export const data: CVarInterface = {
 	voicechatmastervolumescale: {
 		name: "VoiceChatMasterVolumeScale",
 		default: "1",
-		category: 5,
+		category: 7,
 		help: "Voice Chat audio ducking, applied as a scale to the game's master volume when somebody is speaking in voice chat",
 	},
 	voicecommunicationmode: {
@@ -3960,7 +3960,7 @@ export const data: CVarInterface = {
 	checkaddonversion: {
 		name: "checkAddonVersion",
 		default: "1",
-		category: 5,
+		category: 4,
 		help: "Check interface addon version number",
 	},
 	cloakfixenabled: {
@@ -5122,7 +5122,7 @@ export const data: CVarInterface = {
 	lastaddonversion: {
 		name: "lastAddonVersion",
 		default: "0",
-		category: 5,
+		category: 4,
 		help: "Addon interface version number from previous build",
 	},
 	lastcharacterguid: {
@@ -5134,7 +5134,7 @@ export const data: CVarInterface = {
 	lastcharacterindex: {
 		name: "lastCharacterIndex",
 		default: "0",
-		category: 5,
+		category: 4,
 		help: "Last character selected",
 	},
 	lastgarrisonmissiontutorial: {
