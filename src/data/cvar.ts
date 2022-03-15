@@ -64,6 +64,11 @@ export const data: CVarInterface = {
 		scope: "Account",
 		help: "Determines if spells are automatically pushed to the Action Bar. 0: No, 1: Yes (default).",
 	},
+	beckontriggereventlog: {
+		name: "BeckonTriggerEventlog",
+		default: "0",
+		category: 5,
+	},
 	behaviortree: {
 		name: "BehaviorTree",
 		default: "0",
@@ -74,6 +79,18 @@ export const data: CVarInterface = {
 		default: "50.000000",
 		category: 1,
 		help: "Brightness adjustment. Range: [0 - 100]",
+	},
+	cmaa2extrasharpness: {
+		name: "CMAA2ExtraSharpness",
+		default: "0",
+		category: 1,
+		help: "Set to 1 to preserve even more text and shape clarity at the expense of less AA",
+	},
+	cmaa2quality: {
+		name: "CMAA2Quality",
+		default: "2",
+		category: 1,
+		help: "CMAA2 Quality Level. 0 - LOW, 1 - MEDIUM, 2 - HIGH, 3 - ULTRA",
 	},
 	camerafollowgamepadadjustdelay: {
 		name: "CameraFollowGamepadAdjustDelay",
@@ -511,6 +528,12 @@ export const data: CVarInterface = {
 		category: 5,
 		help: "Max movement to camera angle to face movement direction instead of camera direction, in combat. 0 = always, 180 = never (115 allows using strafe with quick turn around)",
 	},
+	gamepadfactioncolor: {
+		name: "GamePadFactionColor",
+		default: "1",
+		category: 5,
+		help: "Enable setting GamePad's led color to match current faction",
+	},
 	gamepadsingleactiveid: {
 		name: "GamePadSingleActiveID",
 		default: "0",
@@ -741,6 +764,12 @@ export const data: CVarInterface = {
 		category: 4,
 		scope: "Character",
 		help: "Range to stop shoulder/weapon emissions outside combat",
+	},
+	notcheddisplaymode: {
+		name: "NotchedDisplayMode",
+		default: "1",
+		category: 1,
+		help: "Do nothing = 0. Shift UI down = 1. Shift everything down = 2.",
 	},
 	objectselectioncircle: {
 		name: "ObjectSelectionCircle",
@@ -4322,6 +4351,13 @@ export const data: CVarInterface = {
 		category: 4,
 		help: "Enables setting a custom mouse sensitivity to override the setting from the operating system.",
 	},
+	enablemouseovercast: {
+		name: "enableMouseoverCast",
+		default: "0",
+		category: 4,
+		scope: "Account",
+		help: "Whether mouseover casting is enabled (optionally with a modifier key).",
+	},
 	enablemovepad: {
 		name: "enableMovePad",
 		default: "0",
@@ -7162,6 +7198,12 @@ export const data: CVarInterface = {
 		default: "0",
 		category: 1,
 		help: "Set target FPS. Dynamic actions will be taken if you fall below the FPS target",
+	},
+	telemetrytargetpackage: {
+		name: "telemetryTargetPackage",
+		default: "Blizzard.Telemetry.Wow_Mainline",
+		category: 5,
+		help: "The Package we want to send telemetry to e.g. Wow_Mainline or Wow_Classic",
 	},
 	teleportmaxnoloaddist: {
 		name: "teleportMaxNoLoadDist",
