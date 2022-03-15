@@ -3,8 +3,13 @@ local Emmy = require("Lua/Emmy/Emmy")
 local patches = require("Lua/FrameXML/Patches")
 
 local m = {}
+
+local missingFiles = {
+	["ClientSceneDocumentation.lua"] = true, -- 9.2.0 (42614); not exported and not searchable
+	["LootJournalDocumentation.lua"] = true, -- 9.2.0 (42698); not exported but searchable in wow.tools files
+}
 local ignoredFiles = {
-	["ConfigurationWarningsDocumentation.lua"] = true,
+	["ConfigurationWarningsDocumentation.lua"] = true, -- C_ConfigurationWarnings does not exist
 }
 
 function m:ExportApiDocs(base)
@@ -13,7 +18,7 @@ function m:ExportApiDocs(base)
 	local toc = io.open(base.."/Blizzard_APIDocumentation/Blizzard_APIDocumentation.toc")
 	local isDoc
 	for line in toc:lines() do
-		if line:find("%.lua") then
+		if line:find("%.lua") and not missingFiles[line] then
 			-- load blizzard addon and apidocs
 			Util:LoadFile(base.."/Blizzard_APIDocumentation/"..line)
 			if isDoc and not ignoredFiles[line] then -- write to emmylua
