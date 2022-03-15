@@ -8,6 +8,10 @@ function C_PlayerChoice.GetCurrentPlayerChoiceInfo() end
 ---@return number numRerolls
 function C_PlayerChoice.GetNumRerolls() end
 
+---[Documentation](https://wowpedia.fandom.com/wiki/API_C_PlayerChoice.GetRemainingTime)
+---@return number? remainingTime
+function C_PlayerChoice.GetRemainingTime() end
+
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_PlayerChoice.IsWaitingForPlayerChoiceResponse)
 ---@return boolean isWaitingForResponse
 function C_PlayerChoice.IsWaitingForPlayerChoiceResponse() end
@@ -26,11 +30,13 @@ function C_PlayerChoice.SendPlayerChoiceResponse(responseID) end
 ---@field objectGUID string
 ---@field choiceID number
 ---@field questionText string
+---@field pendingChoiceText string
 ---@field uiTextureKit string
 ---@field hideWarboardHeader boolean
 ---@field keepOpenAfterChoice boolean
 ---@field options PlayerChoiceOptionInfo[]
 ---@field soundKitID number|nil
+---@field closeUISoundKitID number|nil
 
 ---@class PlayerChoiceOptionButtonInfo
 ---@field id number
@@ -50,12 +56,12 @@ function C_PlayerChoice.SendPlayerChoiceResponse(responseID) end
 ---@field disabledOption boolean
 ---@field hasRewards boolean
 ---@field rewardInfo PlayerChoiceOptionRewardInfo
----@field rarity PlayerChoiceRarity
 ---@field uiTextureKit string
 ---@field maxStacks number
 ---@field buttons PlayerChoiceOptionButtonInfo[]
 ---@field widgetSetID number|nil
 ---@field spellID number|nil
+---@field rarity PlayerChoiceRarity|nil
 ---@field rarityColor ColorMixin|nil
 ---@field typeArtID number|nil
 ---@field headerIconAtlasElement string|nil

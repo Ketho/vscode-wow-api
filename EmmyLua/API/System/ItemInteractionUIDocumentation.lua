@@ -6,6 +6,15 @@ function C_ItemInteraction.ClearPendingItem() end
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_ItemInteraction.CloseUI)
 function C_ItemInteraction.CloseUI() end
 
+---[Documentation](https://wowpedia.fandom.com/wiki/API_C_ItemInteraction.GetChargeInfo)
+---@return ItemInteractionChargeInfo chargeInfo
+function C_ItemInteraction.GetChargeInfo() end
+
+---[Documentation](https://wowpedia.fandom.com/wiki/API_C_ItemInteraction.GetItemConversionCurrencyCost)
+---@param item ItemLocationMixin
+---@return ConversionCurrencyCost conversionCost
+function C_ItemInteraction.GetItemConversionCurrencyCost(item) end
+
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_ItemInteraction.GetItemInteractionInfo)
 ---@return ItemInteractionFrameInfo? info
 function C_ItemInteraction.GetItemInteractionInfo() end
@@ -26,10 +35,22 @@ function C_ItemInteraction.Reset() end
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_ItemInteraction.SetCorruptionReforgerItemTooltip)
 function C_ItemInteraction.SetCorruptionReforgerItemTooltip() end
 
+---[Documentation](https://wowpedia.fandom.com/wiki/API_C_ItemInteraction.SetItemConversionOutputTooltip)
+function C_ItemInteraction.SetItemConversionOutputTooltip() end
+
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_ItemInteraction.SetPendingItem)
 ---@param item? ItemLocationMixin
 ---@return boolean success
 function C_ItemInteraction.SetPendingItem(item) end
+
+---@class ConversionCurrencyCost
+---@field currencyID number
+---@field amount number
+
+---@class ItemInteractionChargeInfo
+---@field newChargeAmount number
+---@field rechargeRate number
+---@field timeToNextCharge number
 
 ---@class ItemInteractionFrameInfo
 ---@field textureKit string

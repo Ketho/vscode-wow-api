@@ -21,6 +21,13 @@ function C_LFGList.ClearSearchTextFields() end
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_LFGList.CopyActiveEntryInfoToCreationFields)
 function C_LFGList.CopyActiveEntryInfoToCreationFields() end
 
+---[Documentation](https://wowpedia.fandom.com/wiki/API_C_LFGList.DoesEntryTitleMatchPrebuiltTitle)
+---@param activityID number
+---@param groupID number
+---@param playstyle? LfgEntryPlaystyle
+---@return boolean matches
+function C_LFGList.DoesEntryTitleMatchPrebuiltTitle(activityID, groupID, playstyle) end
+
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_LFGList.GetActiveEntryInfo)
 ---@return LfgEntryData entryData
 function C_LFGList.GetActiveEntryInfo() end

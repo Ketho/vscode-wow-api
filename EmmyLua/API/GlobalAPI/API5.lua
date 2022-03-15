@@ -1,3 +1,15 @@
+---[Documentation](https://wowpedia.fandom.com/wiki/API_UnitAuraBySlot)
+function UnitAuraBySlot(unit, slot) end
+
+---[Documentation](https://wowpedia.fandom.com/wiki/API_UnitAuraSlots)
+function UnitAuraSlots(unit, filter, maxSlots, continuationToken) end
+
+---[Documentation](https://wowpedia.fandom.com/wiki/API_UnitBattlePetLevel)
+function UnitBattlePetLevel() end
+
+---[Documentation](https://wowpedia.fandom.com/wiki/API_UnitBattlePetSpeciesID)
+function UnitBattlePetSpeciesID() end
+
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_UnitBattlePetType)
 function UnitBattlePetType() end
 
@@ -58,6 +70,9 @@ function UnitDamage(unit) end
 function UnitDetailedThreatSituation(unit, mobUnit) end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_UnitDistanceSquared)
+---@param unit string
+---@return number distanceSquared
+---@return boolean checkedDistance
 function UnitDistanceSquared(unit) end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_UnitEffectiveLevel)
@@ -151,6 +166,8 @@ function UnitInOtherParty() end
 function UnitInParty(unit) end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_UnitInRaid)
+---@param unit string
+---@return number index
 function UnitInRaid(unit) end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_UnitInRange)

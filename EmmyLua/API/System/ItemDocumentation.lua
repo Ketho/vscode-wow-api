@@ -51,6 +51,11 @@ function C_Item.GetCurrentItemLevel(itemLocation) end
 ---@return ItemTransmogInfoMixin? info
 function C_Item.GetCurrentItemTransmogInfo(itemLoc) end
 
+---[Documentation](https://wowpedia.fandom.com/wiki/API_C_Item.GetItemConversionOutputIcon)
+---@param itemLoc ItemLocationMixin
+---@return number? icon
+function C_Item.GetItemConversionOutputIcon(itemLoc) end
+
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_Item.GetItemGUID)
 ---@param itemLocation ItemLocationMixin
 ---@return string itemGuid
@@ -106,6 +111,14 @@ function C_Item.GetItemQuality(itemLocation) end
 ---@return ItemQuality? itemQuality
 function C_Item.GetItemQualityByID(itemInfo) end
 
+---[Documentation](https://wowpedia.fandom.com/wiki/API_C_Item.GetItemUniquenessByID)
+---@param itemInfo string
+---@return boolean isUnique
+---@return string? limitCategoryName
+---@return number? limitCategoryCount
+---@return number? limitCategoryID
+function C_Item.GetItemUniquenessByID(itemInfo) end
+
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_Item.GetStackCount)
 ---@param itemLocation ItemLocationMixin
 ---@return number stackCount
@@ -130,6 +143,11 @@ function C_Item.IsDressableItemByID(itemInfo) end
 ---@param itemLoc ItemLocationMixin
 ---@return boolean isConduit
 function C_Item.IsItemConduit(itemLoc) end
+
+---[Documentation](https://wowpedia.fandom.com/wiki/API_C_Item.IsItemConvertibleAndValidForPlayer)
+---@param itemLoc ItemLocationMixin
+---@return boolean isItemConvertibleAndValidForPlayer
+function C_Item.IsItemConvertibleAndValidForPlayer(itemLoc) end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_Item.IsItemCorrupted)
 ---@param itemLoc ItemLocationMixin
@@ -160,6 +178,11 @@ function C_Item.IsItemDataCachedByID(itemInfo) end
 ---@param itemInfo string
 ---@return boolean isKeystone
 function C_Item.IsItemKeystoneByID(itemInfo) end
+
+---[Documentation](https://wowpedia.fandom.com/wiki/API_C_Item.IsItemSpecificToPlayerClass)
+---@param itemInfo string
+---@return boolean isItemSpecificToPlayerClass
+function C_Item.IsItemSpecificToPlayerClass(itemInfo) end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_Item.IsLocked)
 ---@param itemLocation ItemLocationMixin

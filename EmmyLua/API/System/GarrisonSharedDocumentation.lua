@@ -31,6 +31,7 @@
 ---@field prerequisiteTalentID number|nil
 ---@field selected boolean
 ---@field researched boolean
+---@field ignoreTalent boolean
 ---@field researchDuration number
 ---@field startTime number
 ---@field timeRemaining number
@@ -45,6 +46,7 @@
 ---@field researchDescription string|nil
 ---@field playerConditionReason string|nil
 ---@field socketInfo GarrisonTalentSocketInfo
+---@field treeID number
 
 ---@class GarrisonTalentSocketInfo
 ---@field socketType number

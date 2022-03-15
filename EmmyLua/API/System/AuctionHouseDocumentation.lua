@@ -41,6 +41,11 @@ function C_AuctionHouse.ConfirmCommoditiesPurchase(itemID, quantity) end
 ---@return boolean favoritesAreAvailable
 function C_AuctionHouse.FavoritesAreAvailable() end
 
+---[Documentation](https://wowpedia.fandom.com/wiki/API_C_AuctionHouse.GetAuctionInfoByID)
+---@param auctionID number
+---@return AuctionInfo? priceInfo
+function C_AuctionHouse.GetAuctionInfoByID(auctionID) end
+
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_AuctionHouse.GetAuctionItemSubClasses)
 ---@param classID number
 ---@return number[] subClasses
@@ -419,6 +424,14 @@ function C_AuctionHouse.StartCommoditiesPurchase(itemID, quantity) end
 ---@class AuctionHouseSortType
 ---@field sortOrder AuctionHouseSortOrder
 ---@field reverseSort boolean
+
+---@class AuctionInfo
+---@field itemKey ItemKey
+---@field itemLink string|nil
+---@field minBid number|nil
+---@field bidAmount number|nil
+---@field buyoutAmount number|nil
+---@field bidder string|nil
 
 ---@class BidInfo
 ---@field auctionID number

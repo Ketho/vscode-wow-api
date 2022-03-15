@@ -1,12 +1,24 @@
 C_PvP = {}
 
+---[Documentation](https://wowpedia.fandom.com/wiki/API_C_PvP.CanDisplayDamage)
+---@return boolean canDisplay
+function C_PvP.CanDisplayDamage() end
+
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_PvP.CanDisplayDeaths)
 ---@return boolean canDisplay
 function C_PvP.CanDisplayDeaths() end
 
+---[Documentation](https://wowpedia.fandom.com/wiki/API_C_PvP.CanDisplayHealing)
+---@return boolean canDisplay
+function C_PvP.CanDisplayHealing() end
+
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_PvP.CanDisplayHonorableKills)
 ---@return boolean canDisplay
 function C_PvP.CanDisplayHonorableKills() end
+
+---[Documentation](https://wowpedia.fandom.com/wiki/API_C_PvP.CanDisplayKillingBlows)
+---@return boolean canDisplay
+function C_PvP.CanDisplayKillingBlows() end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_PvP.CanPlayerUseRatedPVPUI)
 ---@return boolean canUse
@@ -73,6 +85,14 @@ function C_PvP.GetArenaSkirmishRewards() end
 ---@return PvpBrawlInfo? brawlInfo
 function C_PvP.GetAvailableBrawlInfo() end
 
+---[Documentation](https://wowpedia.fandom.com/wiki/API_C_PvP.GetBattlefieldFlagPosition)
+---@param flagIndex number
+---@param uiMapId number
+---@return number? uiPosx
+---@return number? uiPosy
+---@return number flagTexture
+function C_PvP.GetBattlefieldFlagPosition(flagIndex, uiMapId) end
+
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_PvP.GetBattlefieldVehicleInfo)
 ---@param vehicleIndex number
 ---@param uiMapID number
@@ -92,6 +112,10 @@ function C_PvP.GetBattlefieldVehicles(uiMapID) end
 ---@return BattlefieldCurrencyReward[]? currencyRewards
 ---@return boolean hasWon
 function C_PvP.GetBrawlRewards(brawlType) end
+
+---[Documentation](https://wowpedia.fandom.com/wiki/API_C_PvP.GetCustomVictoryStatID)
+---@return number statID
+function C_PvP.GetCustomVictoryStatID() end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_PvP.GetGlobalPvpScalingInfoForSpecID)
 ---@param specializationID number
@@ -130,6 +154,10 @@ function C_PvP.GetOutdoorPvPWaitTime(uiMapID) end
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_PvP.GetPVPActiveMatchPersonalRatedInfo)
 ---@return PVPPersonalRatedInfo? info
 function C_PvP.GetPVPActiveMatchPersonalRatedInfo() end
+
+---[Documentation](https://wowpedia.fandom.com/wiki/API_C_PvP.GetPVPSeasonRewardAchievementID)
+---@return number achievementID
+function C_PvP.GetPVPSeasonRewardAchievementID() end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_PvP.GetPostMatchCurrencyRewards)
 ---@return PVPPostMatchCurrencyReward[] rewards
@@ -205,13 +233,9 @@ function C_PvP.GetSeasonBestInfo() end
 ---@return BattlemasterListInfo battlemasterListInfo
 function C_PvP.GetSkirmishInfo(pvpBracket) end
 
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_PvP.GetSpecialEventDetails)
----@return SpecialEventDetails? info
-function C_PvP.GetSpecialEventDetails() end
-
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_PvP.GetSpecialEventInfo)
----@return RandomBGInfo info
-function C_PvP.GetSpecialEventInfo() end
+---[Documentation](https://wowpedia.fandom.com/wiki/API_C_PvP.GetSpecialEventBrawlInfo)
+---@return PvpBrawlInfo? brawlInfo
+function C_PvP.GetSpecialEventBrawlInfo() end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_PvP.GetTeamInfo)
 ---@param factionIndex number
@@ -286,6 +310,10 @@ function C_PvP.IsRatedBattleground() end
 ---@return boolean isRatedMap
 function C_PvP.IsRatedMap() end
 
+---[Documentation](https://wowpedia.fandom.com/wiki/API_C_PvP.IsSoloShuffle)
+---@return boolean isSoloShuffle
+function C_PvP.IsSoloShuffle() end
+
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_PvP.IsWarModeActive)
 ---@return boolean warModeActive
 function C_PvP.IsWarModeActive() end
@@ -299,7 +327,8 @@ function C_PvP.IsWarModeDesired() end
 function C_PvP.IsWarModeFeatureEnabled() end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_PvP.JoinBrawl)
-function C_PvP.JoinBrawl() end
+---@param isSpecialBrawl boolean
+function C_PvP.JoinBrawl(isSpecialBrawl) end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_PvP.RequestCrowdControlSpell)
 ---@param playerToken string
@@ -363,13 +392,15 @@ function C_PvP.ToggleWarMode() end
 ---@field tooltip string
 
 ---@class PvpBrawlInfo
+---@field brawlID number
 ---@field name string
 ---@field shortDescription string
 ---@field longDescription string
 ---@field canQueue boolean
----@field timeLeftUntilNextChange number
+---@field timeLeftUntilNextChange number|nil
 ---@field brawlType BrawlType
 ---@field mapNames string[]
+---@field includesAllArenas boolean
 
 ---@class PVPPersonalRatedInfo
 ---@field personalRating number
@@ -396,6 +427,12 @@ function C_PvP.ToggleWarMode() end
 ---@field sex number
 ---@field isUpgraded boolean
 
+---@class PvpRoleQueueInfo
+---@field role string
+---@field totalRole number
+---@field totalAccepted number
+---@field totalDeclined number
+
 ---@class PvpScalingData
 ---@field scalingDataID number
 ---@field specializationID number
@@ -421,6 +458,7 @@ function C_PvP.ToggleWarMode() end
 ---@field mmrChange number
 ---@field talentSpec string
 ---@field honorLevel number
+---@field roleAssigned number
 ---@field stats PVPStatInfo[]
 
 ---@class PVPStatInfo
@@ -453,10 +491,3 @@ function C_PvP.ToggleWarMode() end
 ---@field hasRandomWinToday boolean
 ---@field minLevel number
 ---@field maxLevel number
-
----@class SpecialEventDetails
----@field name string
----@field shortDescription string
----@field longDescription string
----@field questID number|nil
----@field isActive boolean

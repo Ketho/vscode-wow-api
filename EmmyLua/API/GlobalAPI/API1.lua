@@ -435,6 +435,9 @@ function C_BlackMarket.ItemPlaceBid(marketID, bid) end
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_BlackMarket.RequestItems)
 function C_BlackMarket.RequestItems() end
 
+---[Documentation](https://wowpedia.fandom.com/wiki/API_C_CharacterServices.AssignPCTDistribution)
+function C_CharacterServices.AssignPCTDistribution() end
+
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_CharacterServices.AssignUpgradeDistribution)
 function C_CharacterServices.AssignUpgradeDistribution() end
 
@@ -453,8 +456,14 @@ function C_CharacterServices.GetAutomaticBoostCharacter() end
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_CharacterServices.GetCharacterServiceDisplayData)
 function C_CharacterServices.GetCharacterServiceDisplayData() end
 
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_CharacterServices.GetCharacterServiceDisplayOrder)
-function C_CharacterServices.GetCharacterServiceDisplayOrder() end
+---[Documentation](https://wowpedia.fandom.com/wiki/API_C_CharacterServices.GetCharacterServiceDisplayDataByVASType)
+function C_CharacterServices.GetCharacterServiceDisplayDataByVASType() end
+
+---[Documentation](https://wowpedia.fandom.com/wiki/API_C_CharacterServices.GetCharacterServiceDisplayInfo)
+function C_CharacterServices.GetCharacterServiceDisplayInfo() end
+
+---[Documentation](https://wowpedia.fandom.com/wiki/API_C_CharacterServices.GetVASDistributions)
+function C_CharacterServices.GetVASDistributions() end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_CharacterServices.HasRequiredBoostForClassTrial)
 function C_CharacterServices.HasRequiredBoostForClassTrial() end
@@ -2074,13 +2083,4 @@ function C_ToyBox.GetToyFromIndex(itemIndex) end
 ---@return boolean hasFanfare
 ---@return number itemQuality
 function C_ToyBox.GetToyInfo(itemID) end
-
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_ToyBox.GetToyLink)
-function C_ToyBox.GetToyLink(itemID) end
-
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_ToyBox.GetUncollectedShown)
-function C_ToyBox.GetUncollectedShown() end
-
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_ToyBox.GetUnusableShown)
-function C_ToyBox.GetUnusableShown() end
 

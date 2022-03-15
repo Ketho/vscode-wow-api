@@ -670,6 +670,8 @@ function C_Commentator.ZoomOut() end
 ---@field healingTaken number
 ---@field kills number
 ---@field deaths number
+---@field soloShuffleRoundWins number
+---@field soloShuffleRoundLosses number
 
 ---@class CommentatorSeries
 ---@field teams CommentatorSeriesTeam[]

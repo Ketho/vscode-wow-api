@@ -1,3 +1,15 @@
+---[Documentation](https://wowpedia.fandom.com/wiki/API_GetHaste)
+function GetHaste() end
+
+---[Documentation](https://wowpedia.fandom.com/wiki/API_GetHitModifier)
+---@return number hitModifier
+function GetHitModifier() end
+
+---[Documentation](https://wowpedia.fandom.com/wiki/API_GetHomePartyInfo)
+---@param homePlayers table
+---@return table homePlayers
+function GetHomePartyInfo(homePlayers) end
+
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_GetInboxHeaderInfo)
 ---@param index number
 ---@return string packageIcon
@@ -758,7 +770,10 @@ function GetNumClasses() end
 function GetNumCompanions(type) end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_GetNumComparisonCompletedAchievements)
-function GetNumComparisonCompletedAchievements() end
+---@param achievementID number
+---@return number total
+---@return number completed
+function GetNumComparisonCompletedAchievements(achievementID) end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_GetNumCompletedAchievements)
 ---@return number total
@@ -2364,7 +2379,8 @@ function GuildSetLeader(name) end
 function GuildSetMOTD(note) end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_GuildUninvite)
-function GuildUninvite(name) end
+---@param player string
+function GuildUninvite(player) end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_HandleAtlasMemberCommand)
 function HandleAtlasMemberCommand() end
@@ -2492,21 +2508,4 @@ function InitiateTrade(unit) end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_InteractUnit)
 function InteractUnit(unitToken, exactMatch) end
-
----[Documentation](https://wowpedia.fandom.com/wiki/API_Is64BitClient)
-function Is64BitClient() end
-
----[Documentation](https://wowpedia.fandom.com/wiki/API_IsAccountSecured)
----@return boolean accountSecured
-function IsAccountSecured() end
-
----[Documentation](https://wowpedia.fandom.com/wiki/API_IsAchievementEligible)
----@param achievementID number
----@return boolean eligible
-function IsAchievementEligible(achievementID) end
-
----[Documentation](https://wowpedia.fandom.com/wiki/API_IsActionInRange)
----@param actionSlot number
----@return boolean inRange
-function IsActionInRange(actionSlot) end
 

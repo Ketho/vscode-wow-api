@@ -1,3 +1,20 @@
+---[Documentation](https://wowpedia.fandom.com/wiki/API_Is64BitClient)
+function Is64BitClient() end
+
+---[Documentation](https://wowpedia.fandom.com/wiki/API_IsAccountSecured)
+---@return boolean accountSecured
+function IsAccountSecured() end
+
+---[Documentation](https://wowpedia.fandom.com/wiki/API_IsAchievementEligible)
+---@param achievementID number
+---@return boolean eligible
+function IsAchievementEligible(achievementID) end
+
+---[Documentation](https://wowpedia.fandom.com/wiki/API_IsActionInRange)
+---@param actionSlot number
+---@return boolean inRange
+function IsActionInRange(actionSlot) end
+
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_IsActiveBattlefieldArena)
 ---@return boolean isArena
 ---@return boolean isRegistered
@@ -1525,7 +1542,8 @@ function SendChatMessage(msg, chatType, languageID, target) end
 function SendMail(recipient, subject, body) end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_SendSystemMessage)
-function SendSystemMessage(message) end
+---@param msg string
+function SendSystemMessage(msg) end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_SetAchievementComparisonUnit)
 function SetAchievementComparisonUnit(unitId) end
@@ -2137,6 +2155,12 @@ function StartAutoRun() end
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_StartDuel)
 function StartDuel(name) end
 
+---[Documentation](https://wowpedia.fandom.com/wiki/API_StartSoloShuffleWarGameByName)
+function StartSoloShuffleWarGameByName() end
+
+---[Documentation](https://wowpedia.fandom.com/wiki/API_StartSpectatorSoloShuffleWarGame)
+function StartSpectatorSoloShuffleWarGame() end
+
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_StartSpectatorWarGame)
 function StartSpectatorWarGame(target1, target2, size, area, isTournamentMode) end
 
@@ -2458,16 +2482,4 @@ function UnitBuff(unit, index, filter) end
 ---@return number timeMod
 ---@return ...
 function UnitDebuff(unit, index, filter) end
-
----[Documentation](https://wowpedia.fandom.com/wiki/API_UnitAuraBySlot)
-function UnitAuraBySlot(unit, slot) end
-
----[Documentation](https://wowpedia.fandom.com/wiki/API_UnitAuraSlots)
-function UnitAuraSlots(unit, filter, maxSlots, continuationToken) end
-
----[Documentation](https://wowpedia.fandom.com/wiki/API_UnitBattlePetLevel)
-function UnitBattlePetLevel() end
-
----[Documentation](https://wowpedia.fandom.com/wiki/API_UnitBattlePetSpeciesID)
-function UnitBattlePetSpeciesID() end
 

@@ -32,3 +32,5 @@ function C_TaxiMap.ShouldMapShowTaxiNodes(uiMapID) end
 ---@field state FlightPathState
 ---@field slotIndex number
 ---@field textureKit string
+---@field useSpecialIcon boolean
+---@field specialIconCostString string|nil

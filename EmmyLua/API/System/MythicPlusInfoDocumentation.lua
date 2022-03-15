@@ -61,6 +61,11 @@ function C_MythicPlus.GetSeasonBestAffixScoreInfoForMap(mapChallengeModeID) end
 ---@return MapSeasonBestInfo? overtimeInfo
 function C_MythicPlus.GetSeasonBestForMap(mapChallengeModeID) end
 
+---[Documentation](https://wowpedia.fandom.com/wiki/API_C_MythicPlus.GetSeasonBestMythicRatingFromThisExpansion)
+---@return number bestSeasonScore
+---@return number bestSeason
+function C_MythicPlus.GetSeasonBestMythicRatingFromThisExpansion() end
+
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_MythicPlus.GetWeeklyBestForMap)
 ---@param mapChallengeModeID number
 ---@return number durationSec

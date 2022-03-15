@@ -45,6 +45,10 @@ function C_Garrison.GetAutoTroops(followerType) end
 ---@return AutoCombatSpellInfo? spellInfo
 function C_Garrison.GetCombatLogSpellInfo(autoCombatSpellID) end
 
+---[Documentation](https://wowpedia.fandom.com/wiki/API_C_Garrison.GetCurrentCypherEquipmentLevel)
+---@return number equipmentLevel
+function C_Garrison.GetCurrentCypherEquipmentLevel() end
+
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_Garrison.GetCurrentGarrTalentTreeFriendshipFactionID)
 ---@return number? currentGarrTalentTreeFriendshipFactionID
 function C_Garrison.GetCurrentGarrTalentTreeFriendshipFactionID() end
@@ -52,6 +56,10 @@ function C_Garrison.GetCurrentGarrTalentTreeFriendshipFactionID() end
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_Garrison.GetCurrentGarrTalentTreeID)
 ---@return number? currentGarrTalentTreeID
 function C_Garrison.GetCurrentGarrTalentTreeID() end
+
+---[Documentation](https://wowpedia.fandom.com/wiki/API_C_Garrison.GetCyphersToNextEquipmentLevel)
+---@return number? cyphersToNext
+function C_Garrison.GetCyphersToNextEquipmentLevel() end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_Garrison.GetFollowerAutoCombatSpells)
 ---@param garrFollowerID string
@@ -84,6 +92,10 @@ function C_Garrison.GetGarrisonTalentTreeCurrencyTypes(garrTalentTreeID) end
 ---@param garrTalentTreeID number
 ---@return number garrTalentTreeType
 function C_Garrison.GetGarrisonTalentTreeType(garrTalentTreeID) end
+
+---[Documentation](https://wowpedia.fandom.com/wiki/API_C_Garrison.GetMaxCypherEquipmentLevel)
+---@return number maxEquipmentLevel
+function C_Garrison.GetMaxCypherEquipmentLevel() end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_Garrison.GetMissionCompleteEncounters)
 ---@param missionID number
@@ -128,13 +140,15 @@ function C_Garrison.GetTalentTreeInfo(treeID) end
 function C_Garrison.GetTalentTreeResetInfo(garrTalentTreeID) end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_Garrison.GetTalentTreeTalentPointResearchInfo)
+---@param garrTalentID number
+---@param researchRank number
 ---@param garrTalentTreeID number
 ---@param talentPointIndex number
 ---@param isRespec number
 ---@return number goldCost
 ---@return GarrisonTalentCurrencyCostInfo[] currencyCosts
 ---@return number durationSecs
-function C_Garrison.GetTalentTreeTalentPointResearchInfo(garrTalentTreeID, talentPointIndex, isRespec) end
+function C_Garrison.GetTalentTreeTalentPointResearchInfo(garrTalentID, researchRank, garrTalentTreeID, talentPointIndex, isRespec) end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_Garrison.GetTalentUnlockWorldQuest)
 ---@param talentID number

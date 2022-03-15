@@ -15,6 +15,10 @@ function C_GossipInfo.GetActiveQuests() end
 ---@return GossipQuestUIInfo[] info
 function C_GossipInfo.GetAvailableQuests() end
 
+---[Documentation](https://wowpedia.fandom.com/wiki/API_C_GossipInfo.GetCompletedOptionDescriptionString)
+---@return string? description
+function C_GossipInfo.GetCompletedOptionDescriptionString() end
+
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_GossipInfo.GetCustomGossipDescriptionString)
 ---@return string? description
 function C_GossipInfo.GetCustomGossipDescriptionString() end

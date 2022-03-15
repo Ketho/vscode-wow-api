@@ -23,6 +23,9 @@ function C_GamePad.ButtonIndexToBinding(buttonIndex) end
 ---@return string? configName
 function C_GamePad.ButtonIndexToConfigName(buttonIndex) end
 
+---[Documentation](https://wowpedia.fandom.com/wiki/API_C_GamePad.ClearLedColor)
+function C_GamePad.ClearLedColor() end
+
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_GamePad.DeleteConfig)
 ---@param configID GamePadConfigID
 function C_GamePad.DeleteConfig(configID) end
@@ -58,6 +61,10 @@ function C_GamePad.GetDeviceMappedState(deviceID) end
 ---@return GamePadRawState? rawState
 function C_GamePad.GetDeviceRawState(deviceID) end
 
+---[Documentation](https://wowpedia.fandom.com/wiki/API_C_GamePad.GetLedColor)
+---@return ColorMixin color
+function C_GamePad.GetLedColor() end
+
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_GamePad.IsEnabled)
 ---@return boolean enabled
 function C_GamePad.IsEnabled() end
@@ -65,6 +72,10 @@ function C_GamePad.IsEnabled() end
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_GamePad.SetConfig)
 ---@param config GamePadConfig
 function C_GamePad.SetConfig(config) end
+
+---[Documentation](https://wowpedia.fandom.com/wiki/API_C_GamePad.SetLedColor)
+---@param color ColorMixin
+function C_GamePad.SetLedColor(color) end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_GamePad.SetVibration)
 ---@param vibrationType string

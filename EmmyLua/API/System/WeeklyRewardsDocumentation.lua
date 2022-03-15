@@ -82,6 +82,7 @@ function C_WeeklyRewards.HasInteraction() end
 ---@field id number
 ---@field level number
 ---@field claimID number|nil
+---@field raidString string|nil
 ---@field rewards WeeklyRewardActivityRewardInfo[]
 
 ---@class WeeklyRewardActivityRewardInfo

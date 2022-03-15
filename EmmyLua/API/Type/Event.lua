@@ -76,6 +76,10 @@
 ---| '"AUCTION_HOUSE_NEW_RESULTS_RECEIVED"' # `itemKey`
 ---| '"AUCTION_HOUSE_SCRIPT_DEPRECATED"'
 ---| '"AUCTION_HOUSE_SHOW"'
+---| '"AUCTION_HOUSE_SHOW_COMMODITY_WON_NOTIFICATION"' # `commodityName, commodityQuantity`
+---| '"AUCTION_HOUSE_SHOW_ERROR"' # `error`
+---| '"AUCTION_HOUSE_SHOW_FORMATTED_NOTIFICATION"' # `notification, text`
+---| '"AUCTION_HOUSE_SHOW_NOTIFICATION"' # `notification`
 ---| '"AUCTION_HOUSE_THROTTLED_MESSAGE_DROPPED"'
 ---| '"AUCTION_HOUSE_THROTTLED_MESSAGE_QUEUED"'
 ---| '"AUCTION_HOUSE_THROTTLED_MESSAGE_RESPONSE_RECEIVED"'
@@ -200,76 +204,76 @@
 ---| '"CHARACTER_ITEM_FIXUP_NOTIFICATION"' # `fixupVersion`
 ---| '"CHARACTER_POINTS_CHANGED"' # `change`
 ---| '"CHARACTER_UPGRADE_SPELL_TIER_SET"' # `tierIndex`
----| '"CHAT_COMBAT_MSG_ARENA_POINTS_GAIN"' # `text, playerName, languageName, channelName, playerName2, specialFlags, zoneChannelID, channelIndex, channelBaseName, unused, lineID, guid, bnSenderID, isMobile, isSubtitle, hideSenderInLetterbox, supressRaidIcons`
+---| '"CHAT_COMBAT_MSG_ARENA_POINTS_GAIN"' # `text, playerName, languageName, channelName, playerName2, specialFlags, zoneChannelID, channelIndex, channelBaseName, languageID, lineID, guid, bnSenderID, isMobile, isSubtitle, hideSenderInLetterbox, supressRaidIcons`
 ---| '"CHAT_DISABLED_CHANGED"' # `disabled`
 ---| '"CHAT_DISABLED_CHANGE_FAILED"' # `disabled`
----| '"CHAT_MSG_ACHIEVEMENT"' # `text, playerName, languageName, channelName, playerName2, specialFlags, zoneChannelID, channelIndex, channelBaseName, unused, lineID, guid, bnSenderID, isMobile, isSubtitle, hideSenderInLetterbox, supressRaidIcons`
+---| '"CHAT_MSG_ACHIEVEMENT"' # `text, playerName, languageName, channelName, playerName2, specialFlags, zoneChannelID, channelIndex, channelBaseName, languageID, lineID, guid, bnSenderID, isMobile, isSubtitle, hideSenderInLetterbox, supressRaidIcons`
 ---| '"CHAT_MSG_ADDON"' # `prefix, text, channel, sender, target, zoneChannelID, localID, name, instanceID`
 ---| '"CHAT_MSG_ADDON_LOGGED"' # `prefix, text, channel, sender, target, zoneChannelID, localID, name, instanceID`
----| '"CHAT_MSG_AFK"' # `text, playerName, languageName, channelName, playerName2, specialFlags, zoneChannelID, channelIndex, channelBaseName, unused, lineID, guid, bnSenderID, isMobile, isSubtitle, hideSenderInLetterbox, supressRaidIcons`
----| '"CHAT_MSG_BG_SYSTEM_ALLIANCE"' # `text, playerName, languageName, channelName, playerName2, specialFlags, zoneChannelID, channelIndex, channelBaseName, unused, lineID, guid, bnSenderID, isMobile, isSubtitle, hideSenderInLetterbox, supressRaidIcons`
----| '"CHAT_MSG_BG_SYSTEM_HORDE"' # `text, playerName, languageName, channelName, playerName2, specialFlags, zoneChannelID, channelIndex, channelBaseName, unused, lineID, guid, bnSenderID, isMobile, isSubtitle, hideSenderInLetterbox, supressRaidIcons`
----| '"CHAT_MSG_BG_SYSTEM_NEUTRAL"' # `text, playerName, languageName, channelName, playerName2, specialFlags, zoneChannelID, channelIndex, channelBaseName, unused, lineID, guid, bnSenderID, isMobile, isSubtitle, hideSenderInLetterbox, supressRaidIcons`
----| '"CHAT_MSG_BN"' # `text, playerName, languageName, channelName, playerName2, specialFlags, zoneChannelID, channelIndex, channelBaseName, unused, lineID, guid, bnSenderID, isMobile, isSubtitle, hideSenderInLetterbox, supressRaidIcons`
----| '"CHAT_MSG_BN_INLINE_TOAST_ALERT"' # `text, playerName, languageName, channelName, playerName2, specialFlags, zoneChannelID, channelIndex, channelBaseName, unused, lineID, guid, bnSenderID, isMobile, isSubtitle, hideSenderInLetterbox, supressRaidIcons`
----| '"CHAT_MSG_BN_INLINE_TOAST_BROADCAST"' # `text, playerName, languageName, channelName, playerName2, specialFlags, zoneChannelID, channelIndex, channelBaseName, unused, lineID, guid, bnSenderID, isMobile, isSubtitle, hideSenderInLetterbox, supressRaidIcons`
----| '"CHAT_MSG_BN_INLINE_TOAST_BROADCAST_INFORM"' # `text, playerName, languageName, channelName, playerName2, specialFlags, zoneChannelID, channelIndex, channelBaseName, unused, lineID, guid, bnSenderID, isMobile, isSubtitle, hideSenderInLetterbox, supressRaidIcons`
----| '"CHAT_MSG_BN_INLINE_TOAST_CONVERSATION"' # `text, playerName, languageName, channelName, playerName2, specialFlags, zoneChannelID, channelIndex, channelBaseName, unused, lineID, guid, bnSenderID, isMobile, isSubtitle, hideSenderInLetterbox, supressRaidIcons`
----| '"CHAT_MSG_BN_WHISPER"' # `text, playerName, languageName, channelName, playerName2, specialFlags, zoneChannelID, channelIndex, channelBaseName, unused, lineID, guid, bnSenderID, isMobile, isSubtitle, hideSenderInLetterbox, supressRaidIcons`
----| '"CHAT_MSG_BN_WHISPER_INFORM"' # `text, playerName, languageName, channelName, playerName2, specialFlags, zoneChannelID, channelIndex, channelBaseName, unused, lineID, guid, bnSenderID, isMobile, isSubtitle, hideSenderInLetterbox, supressRaidIcons`
----| '"CHAT_MSG_BN_WHISPER_PLAYER_OFFLINE"' # `text, playerName, languageName, channelName, playerName2, specialFlags, zoneChannelID, channelIndex, channelBaseName, unused, lineID, guid, bnSenderID, isMobile, isSubtitle, hideSenderInLetterbox, supressRaidIcons`
----| '"CHAT_MSG_CHANNEL"' # `text, playerName, languageName, channelName, playerName2, specialFlags, zoneChannelID, channelIndex, channelBaseName, unused, lineID, guid, bnSenderID, isMobile, isSubtitle, hideSenderInLetterbox, supressRaidIcons`
----| '"CHAT_MSG_CHANNEL_JOIN"' # `text, playerName, languageName, channelName, playerName2, specialFlags, zoneChannelID, channelIndex, channelBaseName, unused, lineID, guid, bnSenderID, isMobile, isSubtitle, hideSenderInLetterbox, supressRaidIcons`
----| '"CHAT_MSG_CHANNEL_LEAVE"' # `text, playerName, languageName, channelName, playerName2, specialFlags, zoneChannelID, channelIndex, channelBaseName, unused, lineID, guid, bnSenderID, isMobile, isSubtitle, hideSenderInLetterbox, supressRaidIcons`
+---| '"CHAT_MSG_AFK"' # `text, playerName, languageName, channelName, playerName2, specialFlags, zoneChannelID, channelIndex, channelBaseName, languageID, lineID, guid, bnSenderID, isMobile, isSubtitle, hideSenderInLetterbox, supressRaidIcons`
+---| '"CHAT_MSG_BG_SYSTEM_ALLIANCE"' # `text, playerName, languageName, channelName, playerName2, specialFlags, zoneChannelID, channelIndex, channelBaseName, languageID, lineID, guid, bnSenderID, isMobile, isSubtitle, hideSenderInLetterbox, supressRaidIcons`
+---| '"CHAT_MSG_BG_SYSTEM_HORDE"' # `text, playerName, languageName, channelName, playerName2, specialFlags, zoneChannelID, channelIndex, channelBaseName, languageID, lineID, guid, bnSenderID, isMobile, isSubtitle, hideSenderInLetterbox, supressRaidIcons`
+---| '"CHAT_MSG_BG_SYSTEM_NEUTRAL"' # `text, playerName, languageName, channelName, playerName2, specialFlags, zoneChannelID, channelIndex, channelBaseName, languageID, lineID, guid, bnSenderID, isMobile, isSubtitle, hideSenderInLetterbox, supressRaidIcons`
+---| '"CHAT_MSG_BN"' # `text, playerName, languageName, channelName, playerName2, specialFlags, zoneChannelID, channelIndex, channelBaseName, languageID, lineID, guid, bnSenderID, isMobile, isSubtitle, hideSenderInLetterbox, supressRaidIcons`
+---| '"CHAT_MSG_BN_INLINE_TOAST_ALERT"' # `text, playerName, languageName, channelName, playerName2, specialFlags, zoneChannelID, channelIndex, channelBaseName, languageID, lineID, guid, bnSenderID, isMobile, isSubtitle, hideSenderInLetterbox, supressRaidIcons`
+---| '"CHAT_MSG_BN_INLINE_TOAST_BROADCAST"' # `text, playerName, languageName, channelName, playerName2, specialFlags, zoneChannelID, channelIndex, channelBaseName, languageID, lineID, guid, bnSenderID, isMobile, isSubtitle, hideSenderInLetterbox, supressRaidIcons`
+---| '"CHAT_MSG_BN_INLINE_TOAST_BROADCAST_INFORM"' # `text, playerName, languageName, channelName, playerName2, specialFlags, zoneChannelID, channelIndex, channelBaseName, languageID, lineID, guid, bnSenderID, isMobile, isSubtitle, hideSenderInLetterbox, supressRaidIcons`
+---| '"CHAT_MSG_BN_INLINE_TOAST_CONVERSATION"' # `text, playerName, languageName, channelName, playerName2, specialFlags, zoneChannelID, channelIndex, channelBaseName, languageID, lineID, guid, bnSenderID, isMobile, isSubtitle, hideSenderInLetterbox, supressRaidIcons`
+---| '"CHAT_MSG_BN_WHISPER"' # `text, playerName, languageName, channelName, playerName2, specialFlags, zoneChannelID, channelIndex, channelBaseName, languageID, lineID, guid, bnSenderID, isMobile, isSubtitle, hideSenderInLetterbox, supressRaidIcons`
+---| '"CHAT_MSG_BN_WHISPER_INFORM"' # `text, playerName, languageName, channelName, playerName2, specialFlags, zoneChannelID, channelIndex, channelBaseName, languageID, lineID, guid, bnSenderID, isMobile, isSubtitle, hideSenderInLetterbox, supressRaidIcons`
+---| '"CHAT_MSG_BN_WHISPER_PLAYER_OFFLINE"' # `text, playerName, languageName, channelName, playerName2, specialFlags, zoneChannelID, channelIndex, channelBaseName, languageID, lineID, guid, bnSenderID, isMobile, isSubtitle, hideSenderInLetterbox, supressRaidIcons`
+---| '"CHAT_MSG_CHANNEL"' # `text, playerName, languageName, channelName, playerName2, specialFlags, zoneChannelID, channelIndex, channelBaseName, languageID, lineID, guid, bnSenderID, isMobile, isSubtitle, hideSenderInLetterbox, supressRaidIcons`
+---| '"CHAT_MSG_CHANNEL_JOIN"' # `text, playerName, languageName, channelName, playerName2, specialFlags, zoneChannelID, channelIndex, channelBaseName, languageID, lineID, guid, bnSenderID, isMobile, isSubtitle, hideSenderInLetterbox, supressRaidIcons`
+---| '"CHAT_MSG_CHANNEL_LEAVE"' # `text, playerName, languageName, channelName, playerName2, specialFlags, zoneChannelID, channelIndex, channelBaseName, languageID, lineID, guid, bnSenderID, isMobile, isSubtitle, hideSenderInLetterbox, supressRaidIcons`
 ---| '"CHAT_MSG_CHANNEL_LEAVE_PREVENTED"' # `channelName`
----| '"CHAT_MSG_CHANNEL_LIST"' # `text, playerName, languageName, channelName, playerName2, specialFlags, zoneChannelID, channelIndex, channelBaseName, unused, lineID, guid, bnSenderID, isMobile, isSubtitle, hideSenderInLetterbox, supressRaidIcons`
----| '"CHAT_MSG_CHANNEL_NOTICE"' # `text, playerName, languageName, channelName, playerName2, specialFlags, zoneChannelID, channelIndex, channelBaseName, unused, lineID, guid, bnSenderID, isMobile, isSubtitle, hideSenderInLetterbox, supressRaidIcons`
----| '"CHAT_MSG_CHANNEL_NOTICE_USER"' # `text, playerName, languageName, channelName, playerName2, specialFlags, zoneChannelID, channelIndex, channelBaseName, unused, lineID, guid, bnSenderID, isMobile, isSubtitle, hideSenderInLetterbox, supressRaidIcons`
----| '"CHAT_MSG_COMBAT_FACTION_CHANGE"' # `text, playerName, languageName, channelName, playerName2, specialFlags, zoneChannelID, channelIndex, channelBaseName, unused, lineID, guid, bnSenderID, isMobile, isSubtitle, hideSenderInLetterbox, supressRaidIcons`
----| '"CHAT_MSG_COMBAT_HONOR_GAIN"' # `text, playerName, languageName, channelName, playerName2, specialFlags, zoneChannelID, channelIndex, channelBaseName, unused, lineID, guid, bnSenderID, isMobile, isSubtitle, hideSenderInLetterbox, supressRaidIcons`
----| '"CHAT_MSG_COMBAT_MISC_INFO"' # `text, playerName, languageName, channelName, playerName2, specialFlags, zoneChannelID, channelIndex, channelBaseName, unused, lineID, guid, bnSenderID, isMobile, isSubtitle, hideSenderInLetterbox, supressRaidIcons`
----| '"CHAT_MSG_COMBAT_XP_GAIN"' # `text, playerName, languageName, channelName, playerName2, specialFlags, zoneChannelID, channelIndex, channelBaseName, unused, lineID, guid, bnSenderID, isMobile, isSubtitle, hideSenderInLetterbox, supressRaidIcons`
----| '"CHAT_MSG_COMMUNITIES_CHANNEL"' # `text, playerName, languageName, channelName, playerName2, specialFlags, zoneChannelID, channelIndex, channelBaseName, unused, lineID, guid, bnSenderID, isMobile, isSubtitle, hideSenderInLetterbox, supressRaidIcons`
----| '"CHAT_MSG_CURRENCY"' # `text, playerName, languageName, channelName, playerName2, specialFlags, zoneChannelID, channelIndex, channelBaseName, unused, lineID, guid, bnSenderID, isMobile, isSubtitle, hideSenderInLetterbox, supressRaidIcons`
----| '"CHAT_MSG_DND"' # `text, playerName, languageName, channelName, playerName2, specialFlags, zoneChannelID, channelIndex, channelBaseName, unused, lineID, guid, bnSenderID, isMobile, isSubtitle, hideSenderInLetterbox, supressRaidIcons`
----| '"CHAT_MSG_EMOTE"' # `text, playerName, languageName, channelName, playerName2, specialFlags, zoneChannelID, channelIndex, channelBaseName, unused, lineID, guid, bnSenderID, isMobile, isSubtitle, hideSenderInLetterbox, supressRaidIcons`
----| '"CHAT_MSG_FILTERED"' # `text, playerName, languageName, channelName, playerName2, specialFlags, zoneChannelID, channelIndex, channelBaseName, unused, lineID, guid, bnSenderID, isMobile, isSubtitle, hideSenderInLetterbox, supressRaidIcons`
----| '"CHAT_MSG_GUILD"' # `text, playerName, languageName, channelName, playerName2, specialFlags, zoneChannelID, channelIndex, channelBaseName, unused, lineID, guid, bnSenderID, isMobile, isSubtitle, hideSenderInLetterbox, supressRaidIcons`
----| '"CHAT_MSG_GUILD_ACHIEVEMENT"' # `text, playerName, languageName, channelName, playerName2, specialFlags, zoneChannelID, channelIndex, channelBaseName, unused, lineID, guid, bnSenderID, isMobile, isSubtitle, hideSenderInLetterbox, supressRaidIcons`
----| '"CHAT_MSG_GUILD_ITEM_LOOTED"' # `text, playerName, languageName, channelName, playerName2, specialFlags, zoneChannelID, channelIndex, channelBaseName, unused, lineID, guid, bnSenderID, isMobile, isSubtitle, hideSenderInLetterbox, supressRaidIcons`
----| '"CHAT_MSG_IGNORED"' # `text, playerName, languageName, channelName, playerName2, specialFlags, zoneChannelID, channelIndex, channelBaseName, unused, lineID, guid, bnSenderID, isMobile, isSubtitle, hideSenderInLetterbox, supressRaidIcons`
----| '"CHAT_MSG_INSTANCE_CHAT"' # `text, playerName, languageName, channelName, playerName2, specialFlags, zoneChannelID, channelIndex, channelBaseName, unused, lineID, guid, bnSenderID, isMobile, isSubtitle, hideSenderInLetterbox, supressRaidIcons`
----| '"CHAT_MSG_INSTANCE_CHAT_LEADER"' # `text, playerName, languageName, channelName, playerName2, specialFlags, zoneChannelID, channelIndex, channelBaseName, unused, lineID, guid, bnSenderID, isMobile, isSubtitle, hideSenderInLetterbox, supressRaidIcons`
----| '"CHAT_MSG_LOOT"' # `text, playerName, languageName, channelName, playerName2, specialFlags, zoneChannelID, channelIndex, channelBaseName, unused, lineID, guid, bnSenderID, isMobile, isSubtitle, hideSenderInLetterbox, supressRaidIcons`
----| '"CHAT_MSG_MONEY"' # `text, playerName, languageName, channelName, playerName2, specialFlags, zoneChannelID, channelIndex, channelBaseName, unused, lineID, guid, bnSenderID, isMobile, isSubtitle, hideSenderInLetterbox, supressRaidIcons`
----| '"CHAT_MSG_MONSTER_EMOTE"' # `text, playerName, languageName, channelName, playerName2, specialFlags, zoneChannelID, channelIndex, channelBaseName, unused, lineID, guid, bnSenderID, isMobile, isSubtitle, hideSenderInLetterbox, supressRaidIcons`
----| '"CHAT_MSG_MONSTER_PARTY"' # `text, playerName, languageName, channelName, playerName2, specialFlags, zoneChannelID, channelIndex, channelBaseName, unused, lineID, guid, bnSenderID, isMobile, isSubtitle, hideSenderInLetterbox, supressRaidIcons`
----| '"CHAT_MSG_MONSTER_SAY"' # `text, playerName, languageName, channelName, playerName2, specialFlags, zoneChannelID, channelIndex, channelBaseName, unused, lineID, guid, bnSenderID, isMobile, isSubtitle, hideSenderInLetterbox, supressRaidIcons`
----| '"CHAT_MSG_MONSTER_WHISPER"' # `text, playerName, languageName, channelName, playerName2, specialFlags, zoneChannelID, channelIndex, channelBaseName, unused, lineID, guid, bnSenderID, isMobile, isSubtitle, hideSenderInLetterbox, supressRaidIcons`
----| '"CHAT_MSG_MONSTER_YELL"' # `text, playerName, languageName, channelName, playerName2, specialFlags, zoneChannelID, channelIndex, channelBaseName, unused, lineID, guid, bnSenderID, isMobile, isSubtitle, hideSenderInLetterbox, supressRaidIcons`
----| '"CHAT_MSG_OFFICER"' # `text, playerName, languageName, channelName, playerName2, specialFlags, zoneChannelID, channelIndex, channelBaseName, unused, lineID, guid, bnSenderID, isMobile, isSubtitle, hideSenderInLetterbox, supressRaidIcons`
----| '"CHAT_MSG_OPENING"' # `text, playerName, languageName, channelName, playerName2, specialFlags, zoneChannelID, channelIndex, channelBaseName, unused, lineID, guid, bnSenderID, isMobile, isSubtitle, hideSenderInLetterbox, supressRaidIcons`
----| '"CHAT_MSG_PARTY"' # `text, playerName, languageName, channelName, playerName2, specialFlags, zoneChannelID, channelIndex, channelBaseName, unused, lineID, guid, bnSenderID, isMobile, isSubtitle, hideSenderInLetterbox, supressRaidIcons`
----| '"CHAT_MSG_PARTY_LEADER"' # `text, playerName, languageName, channelName, playerName2, specialFlags, zoneChannelID, channelIndex, channelBaseName, unused, lineID, guid, bnSenderID, isMobile, isSubtitle, hideSenderInLetterbox, supressRaidIcons`
----| '"CHAT_MSG_PET_BATTLE_COMBAT_LOG"' # `text, playerName, languageName, channelName, playerName2, specialFlags, zoneChannelID, channelIndex, channelBaseName, unused, lineID, guid, bnSenderID, isMobile, isSubtitle, hideSenderInLetterbox, supressRaidIcons`
----| '"CHAT_MSG_PET_BATTLE_INFO"' # `text, playerName, languageName, channelName, playerName2, specialFlags, zoneChannelID, channelIndex, channelBaseName, unused, lineID, guid, bnSenderID, isMobile, isSubtitle, hideSenderInLetterbox, supressRaidIcons`
----| '"CHAT_MSG_PET_INFO"' # `text, playerName, languageName, channelName, playerName2, specialFlags, zoneChannelID, channelIndex, channelBaseName, unused, lineID, guid, bnSenderID, isMobile, isSubtitle, hideSenderInLetterbox, supressRaidIcons`
----| '"CHAT_MSG_RAID"' # `text, playerName, languageName, channelName, playerName2, specialFlags, zoneChannelID, channelIndex, channelBaseName, unused, lineID, guid, bnSenderID, isMobile, isSubtitle, hideSenderInLetterbox, supressRaidIcons`
----| '"CHAT_MSG_RAID_BOSS_EMOTE"' # `text, playerName, languageName, channelName, playerName2, specialFlags, zoneChannelID, channelIndex, channelBaseName, unused, lineID, guid, bnSenderID, isMobile, isSubtitle, hideSenderInLetterbox, supressRaidIcons`
----| '"CHAT_MSG_RAID_BOSS_WHISPER"' # `text, playerName, languageName, channelName, playerName2, specialFlags, zoneChannelID, channelIndex, channelBaseName, unused, lineID, guid, bnSenderID, isMobile, isSubtitle, hideSenderInLetterbox, supressRaidIcons`
----| '"CHAT_MSG_RAID_LEADER"' # `text, playerName, languageName, channelName, playerName2, specialFlags, zoneChannelID, channelIndex, channelBaseName, unused, lineID, guid, bnSenderID, isMobile, isSubtitle, hideSenderInLetterbox, supressRaidIcons`
----| '"CHAT_MSG_RAID_WARNING"' # `text, playerName, languageName, channelName, playerName2, specialFlags, zoneChannelID, channelIndex, channelBaseName, unused, lineID, guid, bnSenderID, isMobile, isSubtitle, hideSenderInLetterbox, supressRaidIcons`
----| '"CHAT_MSG_RESTRICTED"' # `text, playerName, languageName, channelName, playerName2, specialFlags, zoneChannelID, channelIndex, channelBaseName, unused, lineID, guid, bnSenderID, isMobile, isSubtitle, hideSenderInLetterbox, supressRaidIcons`
----| '"CHAT_MSG_SAY"' # `text, playerName, languageName, channelName, playerName2, specialFlags, zoneChannelID, channelIndex, channelBaseName, unused, lineID, guid, bnSenderID, isMobile, isSubtitle, hideSenderInLetterbox, supressRaidIcons`
----| '"CHAT_MSG_SKILL"' # `text, playerName, languageName, channelName, playerName2, specialFlags, zoneChannelID, channelIndex, channelBaseName, unused, lineID, guid, bnSenderID, isMobile, isSubtitle, hideSenderInLetterbox, supressRaidIcons`
----| '"CHAT_MSG_SYSTEM"' # `text, playerName, languageName, channelName, playerName2, specialFlags, zoneChannelID, channelIndex, channelBaseName, unused, lineID, guid, bnSenderID, isMobile, isSubtitle, hideSenderInLetterbox, supressRaidIcons`
----| '"CHAT_MSG_TARGETICONS"' # `text, playerName, languageName, channelName, playerName2, specialFlags, zoneChannelID, channelIndex, channelBaseName, unused, lineID, guid, bnSenderID, isMobile, isSubtitle, hideSenderInLetterbox, supressRaidIcons`
----| '"CHAT_MSG_TEXT_EMOTE"' # `text, playerName, languageName, channelName, playerName2, specialFlags, zoneChannelID, channelIndex, channelBaseName, unused, lineID, guid, bnSenderID, isMobile, isSubtitle, hideSenderInLetterbox, supressRaidIcons`
----| '"CHAT_MSG_TRADESKILLS"' # `text, playerName, languageName, channelName, playerName2, specialFlags, zoneChannelID, channelIndex, channelBaseName, unused, lineID, guid, bnSenderID, isMobile, isSubtitle, hideSenderInLetterbox, supressRaidIcons`
----| '"CHAT_MSG_VOICE_TEXT"' # `text, playerName, languageName, channelName, playerName2, specialFlags, zoneChannelID, channelIndex, channelBaseName, unused, lineID, guid, bnSenderID, isMobile, isSubtitle, hideSenderInLetterbox, supressRaidIcons`
----| '"CHAT_MSG_WHISPER"' # `text, playerName, languageName, channelName, playerName2, specialFlags, zoneChannelID, channelIndex, channelBaseName, unused, lineID, guid, bnSenderID, isMobile, isSubtitle, hideSenderInLetterbox, supressRaidIcons`
----| '"CHAT_MSG_WHISPER_INFORM"' # `text, playerName, languageName, channelName, playerName2, specialFlags, zoneChannelID, channelIndex, channelBaseName, unused, lineID, guid, bnSenderID, isMobile, isSubtitle, hideSenderInLetterbox, supressRaidIcons`
----| '"CHAT_MSG_YELL"' # `text, playerName, languageName, channelName, playerName2, specialFlags, zoneChannelID, channelIndex, channelBaseName, unused, lineID, guid, bnSenderID, isMobile, isSubtitle, hideSenderInLetterbox, supressRaidIcons`
+---| '"CHAT_MSG_CHANNEL_LIST"' # `text, playerName, languageName, channelName, playerName2, specialFlags, zoneChannelID, channelIndex, channelBaseName, languageID, lineID, guid, bnSenderID, isMobile, isSubtitle, hideSenderInLetterbox, supressRaidIcons`
+---| '"CHAT_MSG_CHANNEL_NOTICE"' # `text, playerName, languageName, channelName, playerName2, specialFlags, zoneChannelID, channelIndex, channelBaseName, languageID, lineID, guid, bnSenderID, isMobile, isSubtitle, hideSenderInLetterbox, supressRaidIcons`
+---| '"CHAT_MSG_CHANNEL_NOTICE_USER"' # `text, playerName, languageName, channelName, playerName2, specialFlags, zoneChannelID, channelIndex, channelBaseName, languageID, lineID, guid, bnSenderID, isMobile, isSubtitle, hideSenderInLetterbox, supressRaidIcons`
+---| '"CHAT_MSG_COMBAT_FACTION_CHANGE"' # `text, playerName, languageName, channelName, playerName2, specialFlags, zoneChannelID, channelIndex, channelBaseName, languageID, lineID, guid, bnSenderID, isMobile, isSubtitle, hideSenderInLetterbox, supressRaidIcons`
+---| '"CHAT_MSG_COMBAT_HONOR_GAIN"' # `text, playerName, languageName, channelName, playerName2, specialFlags, zoneChannelID, channelIndex, channelBaseName, languageID, lineID, guid, bnSenderID, isMobile, isSubtitle, hideSenderInLetterbox, supressRaidIcons`
+---| '"CHAT_MSG_COMBAT_MISC_INFO"' # `text, playerName, languageName, channelName, playerName2, specialFlags, zoneChannelID, channelIndex, channelBaseName, languageID, lineID, guid, bnSenderID, isMobile, isSubtitle, hideSenderInLetterbox, supressRaidIcons`
+---| '"CHAT_MSG_COMBAT_XP_GAIN"' # `text, playerName, languageName, channelName, playerName2, specialFlags, zoneChannelID, channelIndex, channelBaseName, languageID, lineID, guid, bnSenderID, isMobile, isSubtitle, hideSenderInLetterbox, supressRaidIcons`
+---| '"CHAT_MSG_COMMUNITIES_CHANNEL"' # `text, playerName, languageName, channelName, playerName2, specialFlags, zoneChannelID, channelIndex, channelBaseName, languageID, lineID, guid, bnSenderID, isMobile, isSubtitle, hideSenderInLetterbox, supressRaidIcons`
+---| '"CHAT_MSG_CURRENCY"' # `text, playerName, languageName, channelName, playerName2, specialFlags, zoneChannelID, channelIndex, channelBaseName, languageID, lineID, guid, bnSenderID, isMobile, isSubtitle, hideSenderInLetterbox, supressRaidIcons`
+---| '"CHAT_MSG_DND"' # `text, playerName, languageName, channelName, playerName2, specialFlags, zoneChannelID, channelIndex, channelBaseName, languageID, lineID, guid, bnSenderID, isMobile, isSubtitle, hideSenderInLetterbox, supressRaidIcons`
+---| '"CHAT_MSG_EMOTE"' # `text, playerName, languageName, channelName, playerName2, specialFlags, zoneChannelID, channelIndex, channelBaseName, languageID, lineID, guid, bnSenderID, isMobile, isSubtitle, hideSenderInLetterbox, supressRaidIcons`
+---| '"CHAT_MSG_FILTERED"' # `text, playerName, languageName, channelName, playerName2, specialFlags, zoneChannelID, channelIndex, channelBaseName, languageID, lineID, guid, bnSenderID, isMobile, isSubtitle, hideSenderInLetterbox, supressRaidIcons`
+---| '"CHAT_MSG_GUILD"' # `text, playerName, languageName, channelName, playerName2, specialFlags, zoneChannelID, channelIndex, channelBaseName, languageID, lineID, guid, bnSenderID, isMobile, isSubtitle, hideSenderInLetterbox, supressRaidIcons`
+---| '"CHAT_MSG_GUILD_ACHIEVEMENT"' # `text, playerName, languageName, channelName, playerName2, specialFlags, zoneChannelID, channelIndex, channelBaseName, languageID, lineID, guid, bnSenderID, isMobile, isSubtitle, hideSenderInLetterbox, supressRaidIcons`
+---| '"CHAT_MSG_GUILD_ITEM_LOOTED"' # `text, playerName, languageName, channelName, playerName2, specialFlags, zoneChannelID, channelIndex, channelBaseName, languageID, lineID, guid, bnSenderID, isMobile, isSubtitle, hideSenderInLetterbox, supressRaidIcons`
+---| '"CHAT_MSG_IGNORED"' # `text, playerName, languageName, channelName, playerName2, specialFlags, zoneChannelID, channelIndex, channelBaseName, languageID, lineID, guid, bnSenderID, isMobile, isSubtitle, hideSenderInLetterbox, supressRaidIcons`
+---| '"CHAT_MSG_INSTANCE_CHAT"' # `text, playerName, languageName, channelName, playerName2, specialFlags, zoneChannelID, channelIndex, channelBaseName, languageID, lineID, guid, bnSenderID, isMobile, isSubtitle, hideSenderInLetterbox, supressRaidIcons`
+---| '"CHAT_MSG_INSTANCE_CHAT_LEADER"' # `text, playerName, languageName, channelName, playerName2, specialFlags, zoneChannelID, channelIndex, channelBaseName, languageID, lineID, guid, bnSenderID, isMobile, isSubtitle, hideSenderInLetterbox, supressRaidIcons`
+---| '"CHAT_MSG_LOOT"' # `text, playerName, languageName, channelName, playerName2, specialFlags, zoneChannelID, channelIndex, channelBaseName, languageID, lineID, guid, bnSenderID, isMobile, isSubtitle, hideSenderInLetterbox, supressRaidIcons`
+---| '"CHAT_MSG_MONEY"' # `text, playerName, languageName, channelName, playerName2, specialFlags, zoneChannelID, channelIndex, channelBaseName, languageID, lineID, guid, bnSenderID, isMobile, isSubtitle, hideSenderInLetterbox, supressRaidIcons`
+---| '"CHAT_MSG_MONSTER_EMOTE"' # `text, playerName, languageName, channelName, playerName2, specialFlags, zoneChannelID, channelIndex, channelBaseName, languageID, lineID, guid, bnSenderID, isMobile, isSubtitle, hideSenderInLetterbox, supressRaidIcons`
+---| '"CHAT_MSG_MONSTER_PARTY"' # `text, playerName, languageName, channelName, playerName2, specialFlags, zoneChannelID, channelIndex, channelBaseName, languageID, lineID, guid, bnSenderID, isMobile, isSubtitle, hideSenderInLetterbox, supressRaidIcons`
+---| '"CHAT_MSG_MONSTER_SAY"' # `text, playerName, languageName, channelName, playerName2, specialFlags, zoneChannelID, channelIndex, channelBaseName, languageID, lineID, guid, bnSenderID, isMobile, isSubtitle, hideSenderInLetterbox, supressRaidIcons`
+---| '"CHAT_MSG_MONSTER_WHISPER"' # `text, playerName, languageName, channelName, playerName2, specialFlags, zoneChannelID, channelIndex, channelBaseName, languageID, lineID, guid, bnSenderID, isMobile, isSubtitle, hideSenderInLetterbox, supressRaidIcons`
+---| '"CHAT_MSG_MONSTER_YELL"' # `text, playerName, languageName, channelName, playerName2, specialFlags, zoneChannelID, channelIndex, channelBaseName, languageID, lineID, guid, bnSenderID, isMobile, isSubtitle, hideSenderInLetterbox, supressRaidIcons`
+---| '"CHAT_MSG_OFFICER"' # `text, playerName, languageName, channelName, playerName2, specialFlags, zoneChannelID, channelIndex, channelBaseName, languageID, lineID, guid, bnSenderID, isMobile, isSubtitle, hideSenderInLetterbox, supressRaidIcons`
+---| '"CHAT_MSG_OPENING"' # `text, playerName, languageName, channelName, playerName2, specialFlags, zoneChannelID, channelIndex, channelBaseName, languageID, lineID, guid, bnSenderID, isMobile, isSubtitle, hideSenderInLetterbox, supressRaidIcons`
+---| '"CHAT_MSG_PARTY"' # `text, playerName, languageName, channelName, playerName2, specialFlags, zoneChannelID, channelIndex, channelBaseName, languageID, lineID, guid, bnSenderID, isMobile, isSubtitle, hideSenderInLetterbox, supressRaidIcons`
+---| '"CHAT_MSG_PARTY_LEADER"' # `text, playerName, languageName, channelName, playerName2, specialFlags, zoneChannelID, channelIndex, channelBaseName, languageID, lineID, guid, bnSenderID, isMobile, isSubtitle, hideSenderInLetterbox, supressRaidIcons`
+---| '"CHAT_MSG_PET_BATTLE_COMBAT_LOG"' # `text, playerName, languageName, channelName, playerName2, specialFlags, zoneChannelID, channelIndex, channelBaseName, languageID, lineID, guid, bnSenderID, isMobile, isSubtitle, hideSenderInLetterbox, supressRaidIcons`
+---| '"CHAT_MSG_PET_BATTLE_INFO"' # `text, playerName, languageName, channelName, playerName2, specialFlags, zoneChannelID, channelIndex, channelBaseName, languageID, lineID, guid, bnSenderID, isMobile, isSubtitle, hideSenderInLetterbox, supressRaidIcons`
+---| '"CHAT_MSG_PET_INFO"' # `text, playerName, languageName, channelName, playerName2, specialFlags, zoneChannelID, channelIndex, channelBaseName, languageID, lineID, guid, bnSenderID, isMobile, isSubtitle, hideSenderInLetterbox, supressRaidIcons`
+---| '"CHAT_MSG_RAID"' # `text, playerName, languageName, channelName, playerName2, specialFlags, zoneChannelID, channelIndex, channelBaseName, languageID, lineID, guid, bnSenderID, isMobile, isSubtitle, hideSenderInLetterbox, supressRaidIcons`
+---| '"CHAT_MSG_RAID_BOSS_EMOTE"' # `text, playerName, languageName, channelName, playerName2, specialFlags, zoneChannelID, channelIndex, channelBaseName, languageID, lineID, guid, bnSenderID, isMobile, isSubtitle, hideSenderInLetterbox, supressRaidIcons`
+---| '"CHAT_MSG_RAID_BOSS_WHISPER"' # `text, playerName, languageName, channelName, playerName2, specialFlags, zoneChannelID, channelIndex, channelBaseName, languageID, lineID, guid, bnSenderID, isMobile, isSubtitle, hideSenderInLetterbox, supressRaidIcons`
+---| '"CHAT_MSG_RAID_LEADER"' # `text, playerName, languageName, channelName, playerName2, specialFlags, zoneChannelID, channelIndex, channelBaseName, languageID, lineID, guid, bnSenderID, isMobile, isSubtitle, hideSenderInLetterbox, supressRaidIcons`
+---| '"CHAT_MSG_RAID_WARNING"' # `text, playerName, languageName, channelName, playerName2, specialFlags, zoneChannelID, channelIndex, channelBaseName, languageID, lineID, guid, bnSenderID, isMobile, isSubtitle, hideSenderInLetterbox, supressRaidIcons`
+---| '"CHAT_MSG_RESTRICTED"' # `text, playerName, languageName, channelName, playerName2, specialFlags, zoneChannelID, channelIndex, channelBaseName, languageID, lineID, guid, bnSenderID, isMobile, isSubtitle, hideSenderInLetterbox, supressRaidIcons`
+---| '"CHAT_MSG_SAY"' # `text, playerName, languageName, channelName, playerName2, specialFlags, zoneChannelID, channelIndex, channelBaseName, languageID, lineID, guid, bnSenderID, isMobile, isSubtitle, hideSenderInLetterbox, supressRaidIcons`
+---| '"CHAT_MSG_SKILL"' # `text, playerName, languageName, channelName, playerName2, specialFlags, zoneChannelID, channelIndex, channelBaseName, languageID, lineID, guid, bnSenderID, isMobile, isSubtitle, hideSenderInLetterbox, supressRaidIcons`
+---| '"CHAT_MSG_SYSTEM"' # `text, playerName, languageName, channelName, playerName2, specialFlags, zoneChannelID, channelIndex, channelBaseName, languageID, lineID, guid, bnSenderID, isMobile, isSubtitle, hideSenderInLetterbox, supressRaidIcons`
+---| '"CHAT_MSG_TARGETICONS"' # `text, playerName, languageName, channelName, playerName2, specialFlags, zoneChannelID, channelIndex, channelBaseName, languageID, lineID, guid, bnSenderID, isMobile, isSubtitle, hideSenderInLetterbox, supressRaidIcons`
+---| '"CHAT_MSG_TEXT_EMOTE"' # `text, playerName, languageName, channelName, playerName2, specialFlags, zoneChannelID, channelIndex, channelBaseName, languageID, lineID, guid, bnSenderID, isMobile, isSubtitle, hideSenderInLetterbox, supressRaidIcons`
+---| '"CHAT_MSG_TRADESKILLS"' # `text, playerName, languageName, channelName, playerName2, specialFlags, zoneChannelID, channelIndex, channelBaseName, languageID, lineID, guid, bnSenderID, isMobile, isSubtitle, hideSenderInLetterbox, supressRaidIcons`
+---| '"CHAT_MSG_VOICE_TEXT"' # `text, playerName, languageName, channelName, playerName2, specialFlags, zoneChannelID, channelIndex, channelBaseName, languageID, lineID, guid, bnSenderID, isMobile, isSubtitle, hideSenderInLetterbox, supressRaidIcons`
+---| '"CHAT_MSG_WHISPER"' # `text, playerName, languageName, channelName, playerName2, specialFlags, zoneChannelID, channelIndex, channelBaseName, languageID, lineID, guid, bnSenderID, isMobile, isSubtitle, hideSenderInLetterbox, supressRaidIcons`
+---| '"CHAT_MSG_WHISPER_INFORM"' # `text, playerName, languageName, channelName, playerName2, specialFlags, zoneChannelID, channelIndex, channelBaseName, languageID, lineID, guid, bnSenderID, isMobile, isSubtitle, hideSenderInLetterbox, supressRaidIcons`
+---| '"CHAT_MSG_YELL"' # `text, playerName, languageName, channelName, playerName2, specialFlags, zoneChannelID, channelIndex, channelBaseName, languageID, lineID, guid, bnSenderID, isMobile, isSubtitle, hideSenderInLetterbox, supressRaidIcons`
 ---| '"CHAT_REGIONAL_SEND_FAILED"'
 ---| '"CHAT_REGIONAL_STATUS_CHANGED"' # `isServiceAvailable`
 ---| '"CHAT_SERVER_DISCONNECTED"' # `isInitialMessage`
@@ -281,6 +285,7 @@
 ---| '"CLASS_TRIAL_TIMER_START"'
 ---| '"CLASS_TRIAL_UPGRADE_COMPLETE"'
 ---| '"CLEAR_BOSS_EMOTES"'
+---| '"CLICKBINDINGS_SET_HIGHLIGHTS_SHOWN"' # `showHighlights`
 ---| '"CLOSE_INBOX_ITEM"' # `mailIndex`
 ---| '"CLOSE_TABARD_FRAME"'
 ---| '"CLUB_ADDED"' # `clubId`
@@ -420,6 +425,7 @@
 ---| '"EQUIP_BIND_TRADEABLE_CONFIRM"' # `slot`
 ---| '"EXECUTE_CHAT_LINE"' # `chatLine`
 ---| '"EXTRA_BROWSE_INFO_RECEIVED"' # `itemID`
+---| '"FIRST_FRAME_RENDERED"'
 ---| '"FOG_OF_WAR_UPDATED"'
 ---| '"FORBIDDEN_NAME_PLATE_CREATED"' # `namePlateFrame`
 ---| '"FORBIDDEN_NAME_PLATE_UNIT_ADDED"' # `unitToken`
@@ -427,6 +433,7 @@
 ---| '"FRAME_MANAGER_UPDATE_ALL"'
 ---| '"FRAME_MANAGER_UPDATE_FRAME"' # `type, show`
 ---| '"FRIENDLIST_UPDATE"'
+---| '"GAME_PAD_ACTIVE_CHANGED"' # `isActive`
 ---| '"GAME_PAD_CONFIGS_CHANGED"'
 ---| '"GAME_PAD_CONNECTED"'
 ---| '"GAME_PAD_DISCONNECTED"'
@@ -571,7 +578,9 @@
 ---| '"ISLAND_AZERITE_GAIN"' # `amount, gainedByPlayer, factionIndex, gainedBy, gainedFrom`
 ---| '"ISLAND_COMPLETED"' # `mapID, winner`
 ---| '"ITEM_CHANGED"' # `previousHyperlink, newHyperlink`
+---| '"ITEM_CONVERSION_DATA_READY"' # `itemGUID`
 ---| '"ITEM_DATA_LOAD_RESULT"' # `itemID, success`
+---| '"ITEM_INTERACTION_CHARGE_INFO_UPDATED"'
 ---| '"ITEM_INTERACTION_CLOSE"'
 ---| '"ITEM_INTERACTION_ITEM_SELECTION_UPDATED"' # `itemLocation`
 ---| '"ITEM_INTERACTION_OPEN"'
@@ -718,6 +727,7 @@
 ---| '"NEW_RUNEFORGE_POWER_ADDED"' # `powerID`
 ---| '"NEW_TOY_ADDED"' # `itemID`
 ---| '"NEW_WMO_CHUNK"'
+---| '"NOTCHED_DISPLAY_MODE_CHANGED"'
 ---| '"NOTIFY_CHAT_SUPPRESSED"'
 ---| '"NOTIFY_PVP_AFK_RESULT"' # `offender, numBlackMarksOnOffender, numPlayersIHaveReported`
 ---| '"NPE_TUTORIAL_UPDATE"'
@@ -868,6 +878,9 @@
 ---| '"PVP_POWER_UPDATE"'
 ---| '"PVP_RATED_STATS_UPDATE"'
 ---| '"PVP_REWARDS_UPDATE"'
+---| '"PVP_ROLE_POPUP_HIDE"' # `roleQueueInfo`
+---| '"PVP_ROLE_POPUP_JOINED_MATCH"'
+---| '"PVP_ROLE_POPUP_SHOW"' # `roleQueueInfo`
 ---| '"PVP_ROLE_UPDATE"'
 ---| '"PVP_SPECIAL_EVENT_INFO_UPDATED"'
 ---| '"PVP_TIMER_UPDATE"' # `unitTarget`
@@ -1031,6 +1044,7 @@
 ---| '"START_LOOT_ROLL"' # `rollID, rollTime, lootHandle`
 ---| '"START_TIMER"' # `timerType, timeRemaining, totalTime`
 ---| '"STOP_AUTOREPEAT_SPELL"'
+---| '"STOP_MOVIE"'
 ---| '"STREAMING_ICON"' # `streamingStatus`
 ---| '"STREAM_VIEW_MARKER_UPDATED"' # `clubId, streamId, lastReadTime`
 ---| '"STURDINESS_UPDATE"'

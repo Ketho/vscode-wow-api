@@ -131,6 +131,11 @@ function C_UIWidgetManager.GetTextureWithAnimationVisualizationInfo(widgetID) en
 ---@return number setID
 function C_UIWidgetManager.GetTopCenterWidgetSetID() end
 
+---[Documentation](https://wowpedia.fandom.com/wiki/API_C_UIWidgetManager.GetUnitPowerBarWidgetVisualizationInfo)
+---@param widgetID number
+---@return UnitPowerBarWidgetVisualizationInfo? widgetInfo
+function C_UIWidgetManager.GetUnitPowerBarWidgetVisualizationInfo(widgetID) end
+
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_UIWidgetManager.GetWidgetSetInfo)
 ---@param widgetSetID number
 ---@return UIWidgetSetInfo widgetSetInfo
@@ -294,6 +299,7 @@ function C_UIWidgetManager.UnregisterUnitForWidgetUpdates(unitToken, isGuid) end
 ---@field text string
 ---@field leftBarTooltipLoc UIWidgetTooltipLocation
 ---@field rightBarTooltipLoc UIWidgetTooltipLocation
+---@field fillMotionType UIWidgetMotionType
 ---@field widgetSizeSetting number
 ---@field textureKit string
 ---@field frameTextureKit string
@@ -483,6 +489,10 @@ function C_UIWidgetManager.UnregisterUnitForWidgetUpdates(unitToken, isGuid) end
 ---@field colorTint StatusBarColorTintValue
 ---@field partitionValues number[]
 ---@field tooltipLoc UIWidgetTooltipLocation
+---@field fillMotionType UIWidgetMotionType
+---@field barTextEnabledState WidgetEnabledState
+---@field barTextFontType UIWidgetFontType
+---@field barTextSizeType UIWidgetTextSizeType
 ---@field widgetSizeSetting number
 ---@field textureKit string
 ---@field frameTextureKit string
@@ -633,6 +643,33 @@ function C_UIWidgetManager.UnregisterUnitForWidgetUpdates(unitToken, isGuid) end
 ---@field iconState IconState
 ---@field state1Tooltip string
 ---@field state2Tooltip string
+
+---@class UnitPowerBarWidgetVisualizationInfo
+---@field shownState WidgetShownState
+---@field barMin number
+---@field barMax number
+---@field barValue number
+---@field tooltip string
+---@field barValueTextType StatusBarValueTextType
+---@field overrideBarText string
+---@field overrideBarTextShownType StatusBarOverrideBarTextShownType
+---@field tooltipLoc UIWidgetTooltipLocation
+---@field fillMotionType UIWidgetMotionType
+---@field flashBlendModeType UIWidgetBlendModeType
+---@field sparkBlendModeType UIWidgetBlendModeType
+---@field flashMomentType WidgetUnitPowerBarFlashMomentType
+---@field widgetSizeSetting number
+---@field textureKit string
+---@field frameTextureKit string
+---@field hasTimer boolean
+---@field orderIndex number
+---@field widgetTag string
+---@field inAnimType WidgetAnimationType
+---@field outAnimType WidgetAnimationType
+---@field widgetScale UIWidgetScale
+---@field layoutDirection UIWidgetLayoutDirection
+---@field modelSceneLayer UIWidgetModelSceneLayer
+---@field scriptedAnimationEffectID number
 
 ---@class ZoneControlVisualizationInfo
 ---@field shownState WidgetShownState

@@ -35,8 +35,8 @@ function C_ChallengeMode.GetAffixInfo(affixID) end
 ---@return boolean onTime
 ---@return number keystoneUpgradeLevels
 ---@return boolean practiceRun
----@return number oldOverallDungeonScore
----@return number newOverallDungeonScore
+---@return number? oldOverallDungeonScore
+---@return number? newOverallDungeonScore
 ---@return boolean IsMapRecord
 ---@return boolean IsAffixRecord
 ---@return number PrimaryAffix

@@ -35,6 +35,11 @@ function C_Transmog.ClearPending(transmogLocation) end
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_Transmog.Close)
 function C_Transmog.Close() end
 
+---[Documentation](https://wowpedia.fandom.com/wiki/API_C_Transmog.ExtractTransmogIDList)
+---@param input string
+---@return number[] transmogIDList
+function C_Transmog.ExtractTransmogIDList(input) end
+
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_Transmog.GetApplyCost)
 ---@return number? cost
 function C_Transmog.GetApplyCost() end

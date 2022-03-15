@@ -1,3 +1,12 @@
+---[Documentation](https://wowpedia.fandom.com/wiki/API_C_ToyBox.GetToyLink)
+function C_ToyBox.GetToyLink(itemID) end
+
+---[Documentation](https://wowpedia.fandom.com/wiki/API_C_ToyBox.GetUncollectedShown)
+function C_ToyBox.GetUncollectedShown() end
+
+---[Documentation](https://wowpedia.fandom.com/wiki/API_C_ToyBox.GetUnusableShown)
+function C_ToyBox.GetUnusableShown() end
+
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_ToyBox.HasFavorites)
 function C_ToyBox.HasFavorites() end
 
@@ -242,11 +251,6 @@ function C_TradeSkillUI.SetRecipeSourceTypeFilter(sourceType, filtered) end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_TradeSkillUI.StopRecipeRepeat)
 function C_TradeSkillUI.StopRecipeRepeat() end
-
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_Transmog.ExtractTransmogIDList)
----@param input string
----@return number transmogIDList
-function C_Transmog.ExtractTransmogIDList(input) end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_Trophy.MonumentChangeAppearanceToTrophyID)
 function C_Trophy.MonumentChangeAppearanceToTrophyID(trophyID) end
@@ -542,6 +546,8 @@ function CancelUnitBuff() end
 function CannotBeResurrected() end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_CaseAccentInsensitiveParse)
+---@param string string
+---@return string lower
 function CaseAccentInsensitiveParse(string) end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_CastPetAction)
@@ -1636,9 +1642,6 @@ function GetBattlefieldArenaFaction() end
 ---@return number waitTime
 function GetBattlefieldEstimatedWaitTime() end
 
----[Documentation](https://wowpedia.fandom.com/wiki/API_GetBattlefieldFlagPosition)
-function GetBattlefieldFlagPosition(index) end
-
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_GetBattlefieldInstanceExpiration)
 function GetBattlefieldInstanceExpiration() end
 
@@ -1650,6 +1653,8 @@ function GetBattlefieldInstanceRunTime() end
 function GetBattlefieldMapIconScale() end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_GetBattlefieldPortExpiration)
+---@param index number
+---@return number expiration
 function GetBattlefieldPortExpiration(index) end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_GetBattlefieldScore)
@@ -1974,6 +1979,8 @@ function GetCurrentScaledResolution() end
 function GetCurrentTitle() end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_GetCursorDelta)
+---@return number x
+---@return number y
 function GetCursorDelta() end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_GetCursorInfo)
@@ -2003,6 +2010,7 @@ function GetDefaultGraphicsQuality() end
 function GetDefaultLanguage() end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_GetDefaultScale)
+---@return number scale
 function GetDefaultScale() end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_GetDefaultVideoOption)
@@ -2104,6 +2112,11 @@ function GetFlexRaidDungeonInfo(index) end
 function GetFlyoutID(index) end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_GetFlyoutInfo)
+---@param flyoutID number
+---@return string name
+---@return string description
+---@return number numSlots
+---@return boolean isKnown
 function GetFlyoutInfo(flyoutID) end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_GetFlyoutSlotInfo)
@@ -2142,10 +2155,10 @@ function GetFramesRegisteredForEvent(event) end
 function GetFriendshipReputation(factionID) end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_GetFriendshipReputationRanks)
----@param factionID number
+---@param friendID number
 ---@return number currentRank
 ---@return number maxRank
-function GetFriendshipReputationRanks(factionID) end
+function GetFriendshipReputationRanks(friendID) end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_GetFunctionCPUUsage)
 function GetFunctionCPUUsage(func, includeSubroutines) end
@@ -2204,6 +2217,9 @@ function GetGuildBankBonusDepositMoney() end
 function GetGuildBankItemInfo(tab, slot) end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_GetGuildBankItemLink)
+---@param tab number
+---@param slot number
+---@return string itemLink
 function GetGuildBankItemLink(tab, slot) end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_GetGuildBankMoney)
@@ -2371,16 +2387,4 @@ function GetGuildTabardFiles() end
 ---@return boolean isMobile
 ---@return number isAway
 function GetGuildTradeSkillInfo(index) end
-
----[Documentation](https://wowpedia.fandom.com/wiki/API_GetHaste)
-function GetHaste() end
-
----[Documentation](https://wowpedia.fandom.com/wiki/API_GetHitModifier)
----@return number hitModifier
-function GetHitModifier() end
-
----[Documentation](https://wowpedia.fandom.com/wiki/API_GetHomePartyInfo)
----@param homePlayers table
----@return table homePlayers
-function GetHomePartyInfo(homePlayers) end
 
