@@ -19,3 +19,5 @@ C_ToyBox = {} -- no doc
 C_Trophy = {} -- no doc
 C_Widget = {} -- no doc
 C_WowTokenPublic = {} -- no doc
+
+C_LootJournal = {} -- LootJournalDocumentation.lua not exported
