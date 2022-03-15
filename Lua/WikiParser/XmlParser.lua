@@ -41,6 +41,7 @@ WriteApiFiles()
 
 -- parse xml from file
 local xmlstr = xml2lua.loadFile(PATH)
+handler = handler:new() -- https://github.com/manoelcampos/xml2lua/issues/29#issuecomment-553099058
 local parser = xml2lua.parser(handler)
 parser:parse(xmlstr)
 

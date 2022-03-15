@@ -1,14 +1,18 @@
 local nonBlizzDocumented = require("Lua/WikiParser/WikiText/NonBlizzardDocumented")[1]
+local WikiText = require("Lua/WikiParser/WikiText/WikiText")
 
 -- this has to be done manually because symbols get turned into HTML char codes when downloaded
-local file			= io.open("Lua/DataInput/World_of_Warcraft_API.txt", "r")
+-- local file			= io.open("Lua/DataInput/World_of_Warcraft_API.txt", "r")
 
 local file_valid	= io.open("Lua/Data/output/World_of_Warcraft_API_valid.txt", "w")
 local file_invalid	= io.open("Lua/Data/output/World_of_Warcraft_API_invalid.txt", "w")
 
 local api = {}
 
-for line in file:lines() do
+WikiText:SaveExport()
+local text = WikiText:GetWikitext(true)
+
+for line in text:gmatch(".-\n") do
 	if line:match("^: (.-)") then
 		local name = line:match("%[%[API (.-)|")
 		local args = line:match("apiarg\">(.-)</span>%)")
@@ -28,7 +32,6 @@ for line in file:lines() do
 	end
 end
 
-file:close()
 file_valid:close()
 file_invalid:close()
 
