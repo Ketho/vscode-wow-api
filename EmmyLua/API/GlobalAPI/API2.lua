@@ -1,3 +1,13 @@
+---[Documentation](https://wowpedia.fandom.com/wiki/API_C_ToyBox.GetToyInfo)
+---@param itemID number
+---@return number itemID
+---@return string toyName
+---@return number icon
+---@return boolean isFavorite
+---@return boolean hasFanfare
+---@return number itemQuality
+function C_ToyBox.GetToyInfo(itemID) end
+
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_ToyBox.GetToyLink)
 function C_ToyBox.GetToyLink(itemID) end
 

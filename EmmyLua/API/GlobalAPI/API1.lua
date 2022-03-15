@@ -1357,6 +1357,12 @@ function C_LootHistory.GiveMasterLoot(itemIndex, playerIndex) end
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_LootHistory.SetExpiration)
 function C_LootHistory.SetExpiration(numItemsToSave, secondsToSave) end
 
+---[Documentation](https://wowpedia.fandom.com/wiki/API_C_LootJournal.GetItemSetItems)
+function C_LootJournal.GetItemSetItems() end
+
+---[Documentation](https://wowpedia.fandom.com/wiki/API_C_LootJournal.GetItemSets)
+function C_LootJournal.GetItemSets() end
+
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_NamePlate.GetNamePlateEnemyClickThrough)
 function C_NamePlate.GetNamePlateEnemyClickThrough() end
 
@@ -2073,14 +2079,4 @@ function C_ToyBox.GetNumToys() end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_ToyBox.GetToyFromIndex)
 function C_ToyBox.GetToyFromIndex(itemIndex) end
-
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_ToyBox.GetToyInfo)
----@param itemID number
----@return number itemID
----@return string toyName
----@return number icon
----@return boolean isFavorite
----@return boolean hasFanfare
----@return number itemQuality
-function C_ToyBox.GetToyInfo(itemID) end
 
