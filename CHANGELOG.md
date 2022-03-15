@@ -5,8 +5,14 @@
 - Frame templates are not yet supported ([#15](https://github.com/Ketho/vscode-wow-api/issues/15))
 - The Classic (TBC) API is not supported ([#13](https://github.com/Ketho/vscode-wow-api/issues/13))
 
+## [0.7.5] - 2022-03-15
+### Added
+- 🌙 EmmyLua: Updated for [Patch 9.2.0](https://wowpedia.fandom.com/wiki/Patch_9.2.0/API_changes)
+- 🌙 EmmyLua: Updated Wowpedia definitions
+- 🛠 Improvements: Refactoring
+
 ## [0.7.4] - 2022-01-30
-### Changed
+### Added
 - 🐞 Bug Fixes: Forgot to include ruRU locale option ([#26](https://github.com/Ketho/vscode-wow-api/issues/26))
 
 ## [0.7.3] - 2021-12-30
@@ -223,6 +229,7 @@
 ### Added
 - 🚧 Wip: Development work
 
+[0.7.5]: https://github.com/Ketho/vscode-wow-api/releases/tag/v0.7.5
 [0.7.4]: https://github.com/Ketho/vscode-wow-api/releases/tag/v0.7.4
 [0.7.3]: https://github.com/Ketho/vscode-wow-api/releases/tag/v0.7.3
 [0.7.2]: https://github.com/Ketho/vscode-wow-api/releases/tag/v0.7.2

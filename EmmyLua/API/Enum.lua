@@ -604,6 +604,11 @@ Enum = {
 		Macro = 2,
 		Interaction = 3,
 	},
+	---@class ClientSceneType
+	ClientSceneType = {
+		DefaultSceneType = 0,
+		MinigameSceneType = 1,
+	},
 	---@class ClubActionType
 	ClubActionType = {
 		ErrorClubActionSubscribe = 0,

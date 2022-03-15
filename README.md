@@ -1,7 +1,7 @@
 ## WoW API
 [![](https://img.shields.io/github/license/Ketho/vscode-wow-api)](https://opensource.org/licenses/MIT)
 [![](https://img.shields.io/github/v/release/Ketho/vscode-wow-api)](https://github.com/Ketho/vscode-wow-api/releases)
-[![](https://img.shields.io/badge/wow-9.1.5-yellow)](https://github.com/Gethe/wow-ui-source/tree/9.1.5)
+[![](https://img.shields.io/badge/wow-9.2.0-yellow)](https://github.com/Gethe/wow-ui-source/tree/9.2.0)
 
 Adds IntelliSense features for World of Warcraft API to VS Code. This extension uses [Sumneko's](https://marketplace.visualstudio.com/items?itemName=sumneko.lua) Lua [Language Server](https://microsoft.github.io/language-server-protocol/) with [EmmyLua](https://github.com/sumneko/lua-language-server/wiki/EmmyLua-Annotations) annotations.
 
