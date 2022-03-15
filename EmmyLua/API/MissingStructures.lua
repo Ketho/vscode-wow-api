@@ -28,6 +28,9 @@
 ---@class ChatChannelInfo
 ---@field Undocumented boolean
 
+---@class ClickBindingInfo
+---@field Undocumented boolean
+
 ---@class CalendarTime
 ---@field year number
 ---@field month number

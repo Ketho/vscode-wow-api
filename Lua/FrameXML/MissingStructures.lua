@@ -18,6 +18,8 @@ local Missing =
 		-- 9.1.5
 		{ Name = "MythicPlusRatingLinkInfo", Type = "Structure", Fields = Empty }, -- ChallengeModeInfoDocumentation.lua
 		{ Name = "ChatChannelInfo", Type = "Structure", Fields = Empty }, -- ChatInfoDocumentation.lua
+		-- 9.2.0
+		{ Name = "ClickBindingInfo", Type = "Structure", Fields = Empty }, -- ClickBindingsDocumentation.lua
 
 		{
 			-- C_Calendar; CalendarDocumentation.lua
