@@ -1,3 +1,8 @@
+CONSTANTS = {
+	LATEST_MAINLINE = "9.2.0",
+	--LATEST_CLASSIC = "2.5.2",
+}
+
 local Util = require("Lua/Util/Util")
 
 Util:MakeDir("Lua/Data")

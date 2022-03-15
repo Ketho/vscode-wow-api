@@ -1,6 +1,5 @@
 local lfs = require "lfs"
 
-local constants = require("Lua/Util/constants")
 local Util = require("Lua/Util/Util")
 local parser = require("Lua/Util/wowtoolsparser")
 
@@ -36,7 +35,7 @@ local function IsValidTableKey(s)
 end
 
 function m:ToTypeScript(locale)
-	local globalstrings = parser:ReadCSV("globalstrings", {header = true, build = constants.LATEST_MAINLINE, locale = locale})
+	local globalstrings = parser:ReadCSV("globalstrings", {header = true, build = CONSTANTS.LATEST_MAINLINE, locale = locale})
 	local stringsTable = {}
 	for line in globalstrings:lines() do
 		local flags = tonumber(line.Flags)
@@ -67,7 +66,7 @@ function m:ToTypeScript(locale)
 end
 
 function m:WriteLocales()
-	local latest = parser:FindBuild("globalstrings", constants.LATEST_MAINLINE)
+	local latest = parser:FindBuild("globalstrings", CONSTANTS.LATEST_MAINLINE)
 	local cache = string.format("Lua/Data/cache/globalstrings/globalstrings_%s_enUS.csv", latest)
 	if not lfs.attributes(cache) then -- skip if already exported
 		for _, locale in pairs(locales) do
