@@ -73,7 +73,7 @@ local function DownloadFile(url, path, isRetry)
 		DownloadFile(url, path)
 	elseif code == "wantread" and not isRetry then
 		print("wantread", path, status)
-		DownloadFile(url, path, true)
+		DownloadFile(url.."&useHotfixes=true", path, true)
 	elseif skip_codes[code] then
 		print("skip", path, status)
 		return false
