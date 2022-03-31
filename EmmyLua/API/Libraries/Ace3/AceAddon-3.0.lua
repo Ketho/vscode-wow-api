@@ -2,7 +2,7 @@
 ---@class AceAddon-3.0
 local AceAddon = {}
 
----@class AceAddon
+---@class AceAddon : AceAddon-3.0
 local addon = {}
 
 ---[Documentation](https://www.wowace.com/projects/ace3/pages/api/ace-addon-3-0#title-2)
