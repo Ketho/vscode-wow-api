@@ -31,3 +31,7 @@ local lib2 = LibStub:GetLibrary("WelcomeHome")
 
 local AceAddon = LibStub("AceAddon-3.0")
 local welcome = AceAddon:NewAddon("Welcome", "AceEvent-3.0")
+
+-- single templates
+local frame_backdrop = CreateFrame("Button", nil, UIParent, "BackdropTemplate")
+local bd = frame_backdrop:GetBackdrop()

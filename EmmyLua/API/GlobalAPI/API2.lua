@@ -911,13 +911,13 @@ function CopyToClipboard(text) end
 function CreateFont(name) end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_CreateFrame)
----@generic T
+---@generic T, Tp
 ---@param frameType `T` | FrameType
----@param name string
----@param parent Frame
----@param template string
----@param id number
----@return T frame
+---@param name? string
+---@param parent? Frame
+---@param template? `Tp` | TemplateType
+---@param id? number
+---@return T|Tp frame
 function CreateFrame(frameType, name, parent, template, id) end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_CreateMacro)
