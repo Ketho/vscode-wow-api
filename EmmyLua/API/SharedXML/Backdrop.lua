@@ -17,67 +17,67 @@
 ---[Documentation](https://wowpedia.fandom.com/wiki/BackdropTemplate)
 local BackdropTemplateMixin = {}
 
----[Documentation](https://github.com/Gethe/wow-ui-source/blob/9.2.0/Interface/SharedXML/Backdrop.lua#L144)
+---[FrameXML](https://www.townlong-yak.com/framexml/go/BackdropTemplateMixin:OnBackdropLoaded)
 function BackdropTemplateMixin:OnBackdropLoaded() end
 
----[Documentation](https://github.com/Gethe/wow-ui-source/blob/9.2.0/Interface/SharedXML/Backdrop.lua#L174)
+---[FrameXML](https://www.townlong-yak.com/framexml/go/BackdropTemplateMixin:OnBackdropSizeChanged)
 function BackdropTemplateMixin:OnBackdropSizeChanged() end
 
 ---@return number
----[Documentation](https://github.com/Gethe/wow-ui-source/blob/9.2.0/Interface/SharedXML/Backdrop.lua#L180)
+---[FrameXML](https://www.townlong-yak.com/framexml/go/BackdropTemplateMixin:GetEdgeSize)
 function BackdropTemplateMixin:GetEdgeSize() end
 
----[Documentation](https://github.com/Gethe/wow-ui-source/blob/9.2.0/Interface/SharedXML/Backdrop.lua#L206)
+---[FrameXML](https://www.townlong-yak.com/framexml/go/BackdropTemplateMixin:SetupTextureCoordinates)
 function BackdropTemplateMixin:SetupTextureCoordinates() end
 
----[Documentation](https://github.com/Gethe/wow-ui-source/blob/9.2.0/Interface/SharedXML/Backdrop.lua#L238)
+---[FrameXML](https://www.townlong-yak.com/framexml/go/BackdropTemplateMixin:SetupPieceVisuals)
 function BackdropTemplateMixin:SetupPieceVisuals(piece, setupInfo, pieceLayout) end
 
----[Documentation](https://github.com/Gethe/wow-ui-source/blob/9.2.0/Interface/SharedXML/Backdrop.lua#L258)
+---[FrameXML](https://www.townlong-yak.com/framexml/go/BackdropTemplateMixin:SetBorderBlendMode)
 function BackdropTemplateMixin:SetBorderBlendMode(blendMode) end
 
 ---@param backdropInfo backdropInfo
----[Documentation](https://github.com/Gethe/wow-ui-source/blob/9.2.0/Interface/SharedXML/Backdrop.lua#L270)
+---[FrameXML](https://www.townlong-yak.com/framexml/go/BackdropTemplateMixin:HasBackdropInfo)
 function BackdropTemplateMixin:HasBackdropInfo(backdropInfo) end
 
----[Documentation](https://github.com/Gethe/wow-ui-source/blob/9.2.0/Interface/SharedXML/Backdrop.lua#L274)
+---[FrameXML](https://www.townlong-yak.com/framexml/go/BackdropTemplateMixin:ClearBackdrop)
 function BackdropTemplateMixin:ClearBackdrop() end
 
----[Documentation](https://github.com/Gethe/wow-ui-source/blob/9.2.0/Interface/SharedXML/Backdrop.lua#L286)
+---[FrameXML](https://www.townlong-yak.com/framexml/go/BackdropTemplateMixin:ApplyBackdrop)
 function BackdropTemplateMixin:ApplyBackdrop() end
 
 ---@param backdropInfo backdropInfo
----[Documentation](https://github.com/Gethe/wow-ui-source/blob/9.2.0/Interface/SharedXML/Backdrop.lua#L321)
+---[FrameXML](https://www.townlong-yak.com/framexml/go/BackdropTemplateMixin:SetBackdrop)
 function BackdropTemplateMixin:SetBackdrop(backdropInfo) end
 
 ---@return backdropInfo
----[Documentation](https://github.com/Gethe/wow-ui-source/blob/9.2.0/Interface/SharedXML/Backdrop.lua#L339)
+---[FrameXML](https://www.townlong-yak.com/framexml/go/BackdropTemplateMixin:GetBackdrop)
 function BackdropTemplateMixin:GetBackdrop() end
 
 ---@return number r Returns nil if `self.backdropInfo` is not defined
 ---@return number g
 ---@return number b
 ---@return number a
----[Documentation](https://github.com/Gethe/wow-ui-source/blob/9.2.0/Interface/SharedXML/Backdrop.lua#L382)
+---[FrameXML](https://www.townlong-yak.com/framexml/go/BackdropTemplateMixin:GetBackdropColor)
 function BackdropTemplateMixin:GetBackdropColor() end
 
 ---@param r number
 ---@param g number
 ---@param b number
 ---@param a? number
----[Documentation](https://github.com/Gethe/wow-ui-source/blob/9.2.0/Interface/SharedXML/Backdrop.lua#L391)
+---[FrameXML](https://www.townlong-yak.com/framexml/go/BackdropTemplateMixin:SetBackdropColor)
 function BackdropTemplateMixin:SetBackdropColor(r, g, b, a) end
 
 ---@return number r Returns nil if `self.backdropInfo` is not defined
 ---@return number g
 ---@return number b
 ---@return number a
----[Documentation](https://github.com/Gethe/wow-ui-source/blob/9.2.0/Interface/SharedXML/Backdrop.lua#L401)
+---[FrameXML](https://www.townlong-yak.com/framexml/go/BackdropTemplateMixin:GetBackdropBorderColor)
 function BackdropTemplateMixin:GetBackdropBorderColor() end
 
 ---@param r number
 ---@param g number
 ---@param b number
 ---@param a? number
----[Documentation](https://github.com/Gethe/wow-ui-source/blob/9.2.0/Interface/SharedXML/Backdrop.lua#L414)
+---[FrameXML](https://www.townlong-yak.com/framexml/go/BackdropTemplateMixin:SetBackdropBorderColor)
 function BackdropTemplateMixin:SetBackdropBorderColor(r, g, b, a) end
