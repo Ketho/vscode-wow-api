@@ -51,7 +51,9 @@ function FontString:SetAlphaGradient(start, length) end
 function FontString:SetFixedColor() end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_FontString_SetFormattedText)
-function FontString:SetFormattedText(formatstring) end
+---@param formatstring string A string containing format specifiers (as with string.format()).
+---@param ... any arg A list of values to be included in the formatted string.
+function FontString:SetFormattedText(formatstring, ...) end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_FontString_SetMaxLines)
 function FontString:SetMaxLines() end
