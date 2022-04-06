@@ -1015,7 +1015,13 @@ function DestroyTotem(slot) end
 function DetectWowMouse() end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_DisableAddOn)
-function DisableAddOn() end
+---@param name string|number The filename (not title) of the AddOn to be disabled.
+---@param character? string|boolean The name of the character (without realm) for whom to disable the addon. Defaults to the current character.
+--- **Notes:**
+--- - First argument can also be a Integer - The index of the AddOn to disable in the user's AddOn list, from 1 to GetNumAddOns().
+--- - Takes effect only after reloading the UI - ReloadUI().
+--- - Passing true as the second argument will disable the addon for all characters on the realm.
+function DisableAddOn(name, character) end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_DisableAllAddOns)
 function DisableAllAddOns() end
