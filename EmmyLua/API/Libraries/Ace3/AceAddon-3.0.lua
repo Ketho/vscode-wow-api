@@ -5,18 +5,50 @@ local AceAddon = {}
 ---@class AceAddon : AceAddon-3.0
 local addon = {}
 
+---@return boolean @if possible, return true or false depending on success.
+-- @usage
+-- ```
+-- -- Disable MyAddon
+-- MyAddon = LibStub("AceAddon-3.0"):GetAddon("MyAddon")
+-- MyAddon:Disable()
+-- ```
+-- ---
 ---[Documentation](https://www.wowace.com/projects/ace3/pages/api/ace-addon-3-0#title-2)
 function addon:Disable() end
 
----[Documentation](https://www.wowace.com/projects/ace3/pages/api/ace-addon-3-0#title-3)
+---@return boolean @if possible, return true or false depending on success.
 ---@param name string
+-- ```
+-- -- Disable MyModule using the short-hand
+-- MyAddon = LibStub("AceAddon-3.0"):GetAddon("MyAddon")
+-- MyAddon:DisableModule("MyModule")
+-- ```
+-- ---
+---[Documentation](https://www.wowace.com/projects/ace3/pages/api/ace-addon-3-0#title-3)
 function addon:DisableModule(name) end
 
+---@return boolean @if possible, return true or false depending on success.
+-- Usage
+-- ```
+-- -- Enable MyAddon
+-- MyAddon = LibStub("AceAddon-3.0"):GetAddon("MyAddon")
+-- MyAddon:Enable()
+-- ```
+-- ---
 ---[Documentation](https://www.wowace.com/projects/ace3/pages/api/ace-addon-3-0#title-4)
 function addon:Enable() end
 
----[Documentation](https://www.wowace.com/projects/ace3/pages/api/ace-addon-3-0#title-5)
+
 ---@param name string
+---@return boolean @if possible, return true or false depending on success.
+-- ```
+-- -- Enable MyModule
+-- MyAddon = LibStub("AceAddon-3.0"):GetAddon("MyAddon")
+-- MyModule = MyAddon:GetModule("MyModule")
+-- MyModule:Enable()
+-- ```
+-- ---
+---[Documentation](https://www.wowace.com/projects/ace3/pages/api/ace-addon-3-0#title-5)
 function addon:EnableModule(name) end
 
 ---[Documentation](https://www.wowace.com/projects/ace3/pages/api/ace-addon-3-0#title-6)
