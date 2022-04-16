@@ -7,7 +7,7 @@
 ---and can be accessed directly, without having to explicitly call AceEvent itself.\\
 ---It is recommended to embed AceEvent, otherwise you'll have to specify a custom `self` on all calls you
 ---make into AceEvent.
----
+--- ---
 ---[Documentation](https://www.wowace.com/projects/ace3/pages/api/ace-event-3-0)
 ---@class AceEvent-3.0
 local AceEvent = {}
@@ -18,11 +18,13 @@ local AceEvent = {}
 ---@param event WowEvent The event to register for
 ---@param callback function The callback function to call when the event is triggered (funcref or method, defaults to a method with the event name)
 ---@param arg any An optional argument to pass to the callback function
+--- ---
 ---[Documentation](https://www.wowace.com/projects/ace3/pages/api/ace-event-3-0#title-1)
 function AceEvent:RegisterEvent(event, callback, arg) end
 
 ---Unregister an event.
 ---@param event WowEvent The event to unregister
+--- ---
 ---[Documentation](https://www.wowace.com/projects/ace3/pages/api/ace-event-3-0#title-4)
 function AceEvent:UnregisterEvent(event) end
 
@@ -32,11 +34,13 @@ function AceEvent:UnregisterEvent(event) end
 ---@param message string The message to register for
 ---@param callback function The callback function to call when the message is triggered (funcref or method, defaults to a method with the event name)
 ---@param arg any An optional argument to pass to the callback function
+--- ---
 ---[Documentation](https://www.wowace.com/projects/ace3/pages/api/ace-event-3-0#title-2)
 function AceEvent:RegisterMessage(message, callback, arg) end
 
 ---Unregister a message
 ---@param message string The message to unregister
+--- ---
 ---[Documentation](https://www.wowace.com/projects/ace3/pages/api/ace-event-3-0#title-5)
 function AceEvent:UnregisterMessage(message) end
 
@@ -44,12 +48,14 @@ function AceEvent:UnregisterMessage(message) end
 ---@name AceEvent:SendMessage
 ---@param message string The message to send
 ---@param  ... any Any arguments to the message
+--- ---
 ---[Documentation](https://www.wowace.com/projects/ace3/pages/api/ace-event-3-0#title-3)
 function AceEvent:SendMessage(message, ...) end
 
 
 ---Embeds AceEvent into the target object making the functions from the mixins list available on target:..
 ---@param target any target object to embed AceEvent in
+--- ---
 ---[Documentation](https://www.wowace.com/projects/ace3/pages/api/ace-event-3-0)
 function AceEvent:Embed(target) end
 
@@ -59,5 +65,6 @@ function AceEvent:Embed(target) end
 ---AceEvent:OnEmbedDisable( target )
 ---```
 ---@param target AceEvent-3.0
+--- ---
 ---[Documentation](https://www.wowace.com/projects/ace3/pages/api/ace-event-3-0)
 function AceEvent:OnEmbedDisable(target) end
