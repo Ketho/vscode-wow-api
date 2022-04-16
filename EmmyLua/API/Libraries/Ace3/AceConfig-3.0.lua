@@ -5,7 +5,7 @@ local AceConfig = {}
 ---You can supply a slash command (or a table of slash commands) to register with AceConfigCmd directly.
 ---@paramsig appName, options [, slashcmd]
 ---@param appName string The application name for the config table.
----@param options table|function|AceConfig-3.0OptionsTable The option table (or a function to generate one on demand). [Options table documentation](http://www.wowace.com/addons/ace3/pages/ace-config-3-0-options-tables/)
+---@param options table|function|AceConfigOptionsTable The option table (or a function to generate one on demand). [Options table documentation](http://www.wowace.com/addons/ace3/pages/ace-config-3-0-options-tables/)
 ---@param slashcmd? string|table A slash command to register for the option table, or a table of slash commands.
 ---```
 ---local AceConfig = LibStub("AceConfig-3.0")
@@ -33,12 +33,14 @@ function AceConfig:RegisterOptionsTable(appName, options, slashcmd) end
 ---| '"description"'
 ---| '"group"'
 
----@class AceConfig-3.0OptionsTable
+---@class AceConfigOptionsTable
 ---@field name string|function Display name for the option
 ---@field type AceConfigTypes Type of the option
+---@field args table<string, AceConfigOptionsTable> a table containing a list of options
+---@field childGroups '"tree"'|'"tab"'|'"select"' Child groups for the option
 ---@field desc? string|function description for the option (or nil for a self-describing name)
----@field descStyle? string "inline" if you want the description to show below the option in a GUI (rather than as a tooltip). Currently only supported by AceGUI "Toggle".
----@field order? number|string|function The order in the GUI that the option should be displayed in.
+---@field descStyle? string|nil "inline" if you want the description to show below the option in a GUI (rather than as a tooltip). Currently only supported by AceGUI "Toggle".
+---@field order? number|string|function relative position of item (default = 100, 0=first, -1=last)
 ---@field validate? string|function|false validate the input/value before setting it. return a string (error message) to indicate error.
 ---@field confirm? string|function|boolean prompt for confirmation before changing a value if true display "name - desc", or contents of .confirmText if supplied.
 ---@field confirmText? string text to display in the confirmation dialog
@@ -54,6 +56,16 @@ function AceConfig:RegisterOptionsTable(appName, options, slashcmd) end
 ---@field get? function getter function
 ---@field set? function setter function
 ---@field func? function
+---[Documentation](http://www.wowace.com/addons/ace3/pages/ace-config-3-0-options-tables/)
 local OptionsTable = {}
-OptionsTable.args = {} ---@type AceConfig-3.0OptionsTable
-OptionsTable.width = "normal" ---@type number|Ace3Width|nil If a number multiplier of the default width, ie. 0.5 equals "half", 2.0 equals "double"
+OptionsTable.width = "normal" ---@type number|Ace3Width If a number multiplier of the default width, ie. 0.5 equals "half", 2.0 equals "double"
+OptionsTable.descStyle = 100
+OptionsTable.order = 100
+OptionsTable.disabled = false
+OptionsTable.hidden = false
+OptionsTable.guiHidden = false
+OptionsTable.dialogHidden = false
+OptionsTable.dropdownHidden = false
+OptionsTable.dropdownHidden = false
+OptionsTable.cmdHidden = false
+
