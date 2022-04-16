@@ -32,11 +32,11 @@ function AceConsole:Printf(chatframe, format, ...) end
 
 ---Register a simple chat command
 ---@param command string Chat command to be registered WITHOUT leading "/"
----@param func|string function Function to call when the slash command is being used (funcref or methodname)
+---@param func function|string Function to call when the slash command is being used (funcref or methodname)
 ---@param persist? boolean if false, the command will be soft disabled/enabled when aceconsole is used as a mixin (default: true)
 ---@return boolean -- true if successful
 ---[Documentation](https://www.wowace.com/projects/ace3/pages/api/ace-console-3-0#title-5)
-function AceConsole:RegisterChatCommand( command, func, persist) end
+function AceConsole:RegisterChatCommand(command, func, persist) end
 
 ---Unregister a chatcommand
 ---@param command string Chat command to be unregistered WITHOUT leading "/"
