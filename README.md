@@ -68,6 +68,7 @@ You can also enable full IntelliSense for Ace3 options tables by defining what t
 ---@type AceConfigOptionsTable
 local options = {}
 ```
+Tip: If you have options spread out over multiple files you can attach the options table to your global addon object. This will allow IntelliSense to continue to work in any file without having to re-define the type.
 ![](https://github.com/Ketho/vscode-wow-api/raw/master/img/aceconfigoptionstable.gif)
 # Environment Setup
 If using WSL, it is HIGHLY recommended that you setup your WSL instance and handle all git operations within WSL.
