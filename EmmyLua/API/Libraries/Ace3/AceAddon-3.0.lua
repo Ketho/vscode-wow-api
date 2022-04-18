@@ -129,7 +129,5 @@ function AceAddon:IterateAddons() end
 --- local _, MyAddon = ...
 --- MyAddon = LibStub("AceAddon-3.0"):NewAddon(MyAddon, "MyAddon")
 --- ```
----@overload fun(name: string, lib: string, ...: any)
---- ---
 ---[Documentation](https://www.wowace.com/projects/ace3/pages/api/ace-addon-3-0#title-18)
 function AceAddon:NewAddon(object, name, lib, ...) end
