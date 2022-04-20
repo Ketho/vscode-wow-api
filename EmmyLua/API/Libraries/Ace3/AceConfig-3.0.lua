@@ -1,16 +1,10 @@
 ---@class AceConfig-3.0
 local AceConfig = {}
 
----Register a option table with the AceConfig registry.
----You can supply a slash command (or a table of slash commands) to register with AceConfigCmd directly.
 ---@paramsig appName, options [, slashcmd]
 ---@param appName string The application name for the config table.
 ---@param options table|function|AceConfigOptionsTable The option table (or a function to generate one on demand). [Options table documentation](http://www.wowace.com/addons/ace3/pages/ace-config-3-0-options-tables/)
 ---@param slashcmd? string|table A slash command to register for the option table, or a table of slash commands.
----```
----local AceConfig = LibStub("AceConfig-3.0")
----AceConfig:RegisterOptionsTable("MyAddon", myOptions, {"/myslash", "/my"})
----```
 ---[Documentation](https://www.wowace.com/projects/ace3/pages/api/ace-config-3-0#title-1)
 function AceConfig:RegisterOptionsTable(appName, options, slashcmd) end
 
