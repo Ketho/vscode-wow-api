@@ -2,89 +2,106 @@
 ---@class AceAddon-3.0
 local AceAddon = {}
 
----@class AceAddon
-local addon = {}
-
+---@return boolean @if possible, return true or false depending on success.
+-- ---
 ---[Documentation](https://www.wowace.com/projects/ace3/pages/api/ace-addon-3-0#title-2)
-function addon:Disable() end
+function AceAddon:Disable() end
 
+---@return boolean @if possible, return true or false depending on success.
+---@param name string
+-- ---
 ---[Documentation](https://www.wowace.com/projects/ace3/pages/api/ace-addon-3-0#title-3)
----@param name string
-function addon:DisableModule(name) end
+function AceAddon:DisableModule(name) end
 
+---@return boolean @if possible, return true or false depending on success.
+-- ---
 ---[Documentation](https://www.wowace.com/projects/ace3/pages/api/ace-addon-3-0#title-4)
-function addon:Enable() end
+function AceAddon:Enable() end
 
----[Documentation](https://www.wowace.com/projects/ace3/pages/api/ace-addon-3-0#title-5)
+
 ---@param name string
-function addon:EnableModule(name) end
+---@return boolean @if possible, return true or false depending on success.
+-- ---
+---[Documentation](https://www.wowace.com/projects/ace3/pages/api/ace-addon-3-0#title-5)
+function AceAddon:EnableModule(name) end
 
----[Documentation](https://www.wowace.com/projects/ace3/pages/api/ace-addon-3-0#title-6)
 ---@param name string
 ---@param silent? boolean
 ---@return table module
-function addon:GetModule(name, silent) end
+--- ---
+---[Documentation](https://www.wowace.com/projects/ace3/pages/api/ace-addon-3-0#title-6)
+function AceAddon:GetModule(name, silent) end
 
----[Documentation](https://www.wowace.com/projects/ace3/pages/api/ace-addon-3-0#title-7)
 ---@return string name
-function addon:GetName() end
+--- ---
+---[Documentation](https://www.wowace.com/projects/ace3/pages/api/ace-addon-3-0#title-7)
+function AceAddon:GetName() end
 
----[Documentation](https://www.wowace.com/projects/ace3/pages/api/ace-addon-3-0#title-8)
 ---@return boolean enabled
-function addon:IsEnabled() end
+--- ---
+---[Documentation](https://www.wowace.com/projects/ace3/pages/api/ace-addon-3-0#title-8)
+function AceAddon:IsEnabled() end
 
----[Documentation](https://www.wowace.com/projects/ace3/pages/api/ace-addon-3-0#title-9)
 ---@return function iter
 ---@return table invariant
 ---@return number init
-function addon:IterateModules() end
+--- ---
+---[Documentation](https://www.wowace.com/projects/ace3/pages/api/ace-addon-3-0#title-9)
+function AceAddon:IterateModules() end
 
----[Documentation](https://www.wowace.com/projects/ace3/pages/api/ace-addon-3-0#title-10)
 ---@param name string
 ---@param lib string
 ---@vararg string
+--- ---
+---[Documentation](https://www.wowace.com/projects/ace3/pages/api/ace-addon-3-0#title-10)
 function AceAddon:NewModule(name, lib, ...) end
 --function AceAddon:NewModule(name, prototype, lib, ...) end
 
----[Documentation](https://www.wowace.com/projects/ace3/pages/api/ace-addon-3-0#title-11)
 ---@param lib string
 ---@vararg string
+--- ---
+---[Documentation](https://www.wowace.com/projects/ace3/pages/api/ace-addon-3-0#title-11)
 function AceAddon:SetDefaultModuleLibraries(lib, ...) end
 
----[Documentation](https://www.wowace.com/projects/ace3/pages/api/ace-addon-3-0#title-12)
 ---@param prototype table
+--- ---
+---[Documentation](https://www.wowace.com/projects/ace3/pages/api/ace-addon-3-0#title-12)
 function AceAddon:SetDefaultModulePrototype(prototype) end
 
----[Documentation](https://www.wowace.com/projects/ace3/pages/api/ace-addon-3-0#title-13)
 ---@param state boolean
+--- ---
+---[Documentation](https://www.wowace.com/projects/ace3/pages/api/ace-addon-3-0#title-13)
 function AceAddon:SetDefaultModuleState(state) end
 
----[Documentation](https://www.wowace.com/projects/ace3/pages/api/ace-addon-3-0#title-14)
 ---@param state boolean
+---[Documentation](https://www.wowace.com/projects/ace3/pages/api/ace-addon-3-0#title-14)
 function AceAddon:SetEnabledState(state) end
 
----[Documentation](https://www.wowace.com/projects/ace3/pages/api/ace-addon-3-0#title-15)
 ---@param name string
 ---@param silent? boolean
----@return AceAddon addon
+---@return AceAddon-3.0
+--- ---
+---[Documentation](https://www.wowace.com/projects/ace3/pages/api/ace-addon-3-0#title-15)
 function AceAddon:GetAddon(name, silent) end
 
----[Documentation](https://www.wowace.com/projects/ace3/pages/api/ace-addon-3-0#title-16)
 ---@return function iter
 ---@return table invariant
 ---@return number init
+--- ---
+---[Documentation](https://www.wowace.com/projects/ace3/pages/api/ace-addon-3-0#title-16)
 function AceAddon:IterateAddonStatus() end
 
----[Documentation](https://www.wowace.com/projects/ace3/pages/api/ace-addon-3-0#title-17)
 ---@return function iter
 ---@return table invariant
 ---@return number init
+--- ---
+---[Documentation](https://www.wowace.com/projects/ace3/pages/api/ace-addon-3-0#title-17)
 function AceAddon:IterateAddons() end
 
----[Documentation](https://www.wowace.com/projects/ace3/pages/api/ace-addon-3-0#title-18)
+---@param object? table
 ---@param name string
 ---@param lib string
----@vararg string
----@return AceAddon addon
-function AceAddon:NewAddon(name, lib, ...) end
---function AceAddon:NewAddon(object, name, lib, ...) end
+---@param ... any
+---@return AceAddon-3.0
+---[Documentation](https://www.wowace.com/projects/ace3/pages/api/ace-addon-3-0#title-18)
+function AceAddon:NewAddon(object, name, lib, ...) end

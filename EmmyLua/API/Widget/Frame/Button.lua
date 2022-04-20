@@ -107,7 +107,9 @@ function Button:SetEnabled(boolean) end
 function Button:SetFontString(fontString) end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_Button_SetFormattedText)
-function Button:SetFormattedText(formatstring) end
+---@param formatstring string A string containing format specifiers (as with string.format()).
+---@param ... any arg A list of values to be included in the formatted string.
+function Button:SetFormattedText(formatstring, ...) end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_Button_SetHighlightAtlas)
 function Button:SetHighlightAtlas(atlasName, blendmode) end

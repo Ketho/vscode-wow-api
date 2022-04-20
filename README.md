@@ -34,7 +34,42 @@ See [Recommended settings](https://github.com/Ketho/vscode-wow-api/wiki/Recommen
 Shows completion for GlobalStrings at >3 uppercase letters to declutter fuzzy search.
 
 ![](https://github.com/Ketho/vscode-wow-api/raw/master/img/globalstring.gif)
+#### [Ace3](https://www.wowace.com/projects/ace3/pages/getting-started)
+Due to the way Ace3 is designed, it is not possible to get full IntelliSense out of the box. When defining your addon you need create a class for your addon and extend it with the `AceAddon-3.0` librarys you plan to use in order to get full functionality.
 
+Defining your addon example:
+
+`MyAddon.lua`
+```lua
+---@class MyAddon : AceAddon-3.0, AceConsole-3.0, AceEvent-3.0, AceTimer-3.0
+local MyAddon = LibStub("AceAddon-3.0"):NewAddon("MyAddon", "AceConsole-3.0", "AceEvent-3.0", "AceTimer-3.0")
+_G.MyAddon = MyAddon
+```
+Now your will be able to see the extended API that Ace3 offers via IntelliSense.
+
+
+In order to get full IntelliSense for Ace3 localizations you will need to give your localization a class then refrence that class in your addon.
+
+`enUS.lua`
+```lua
+---@class MyAddonLocale
+local L = LibStub('AceLocale-3.0'):NewLocale('MyAddon', 'enUS', true, debug)
+
+... Your Language Deffinitions
+```
+`MyAddon.lua`
+```lua
+MyAddon.L = LibStub('AceLocale-3.0'):GetLocale('MyAddon', true) ---@type MyAddonLocale
+```
+
+You can also enable full IntelliSense for Ace3 options tables by defining what table contains your ace options
+`options.lua`
+```lua
+---@type AceConfigOptionsTable
+local options = {}
+```
+Tip: If you have options spread out over multiple files you can attach the options table to your global addon object. This will allow IntelliSense to continue to work in any file without having to re-define the type.
+![](https://github.com/Ketho/vscode-wow-api/raw/master/img/aceconfigoptionstable.gif)
 # Environment Setup
 If using WSL, it is HIGHLY recommended that you setup your WSL instance and handle all git operations within WSL.
 
