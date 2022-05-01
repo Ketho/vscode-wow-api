@@ -3,11 +3,11 @@ name: Release
 # Controls when the workflow will run
 on:
   push:
-    tags: ["**"]
+    branches: ['**']
 
 env:
   CI: false #Without this, the build will fail. As Warnings in React will be treated as errors.
-  version: ${{ github.ref_name }}
+  version: 0.${{ github.run_number }}.${{ github.run_attempt }}
 
 jobs:
   build:
@@ -30,8 +30,7 @@ jobs:
 
       - run: vsce package
 
-      - name: Publish to Visual Studio Marketplace
-        uses: HaaLeo/publish-vscode-extension@v1
+      - uses: actions/upload-artifact@v3
         with:
-          pat: ${{ secrets.VS_MARKETPLACE_TOKEN }}
-          registryUrl: https://marketplace.visualstudio.com
+          name: build
+          path: ./*.vsix
