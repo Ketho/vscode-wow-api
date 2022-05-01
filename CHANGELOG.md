@@ -5,6 +5,11 @@
 - Frame templates are not completely supported, only BackdropTemplate ([#15](https://github.com/Ketho/vscode-wow-api/issues/15)) 
 - The Classic (TBC) API is not supported ([#13](https://github.com/Ketho/vscode-wow-api/issues/13))
 
+## [0.7.7] - 2022-05-02
+### Changed
+- 🌙 Added Ace3 libraries from ([#30](https://github.com/Ketho/vscode-wow-api/pull/30))
+- 📦 Package: Testing an action to publish the extension https://github.com/marketplace/actions/publish-vs-code-extension
+
 ## [0.7.6] - 2022-04-02
 ### Added
 - 🌙 EmmyLua: Added [BackdropTemplate](https://github.com/Gethe/wow-ui-source/blob/9.2.0/Interface/SharedXML/Backdrop.lua#L127) ([#15](https://github.com/Ketho/vscode-wow-api/issues/15), [#29](https://github.com/Ketho/vscode-wow-api/pull/29))
@@ -233,6 +238,7 @@
 ### Added
 - 🚧 Wip: Development work
 
+[0.7.7]: https://github.com/Ketho/vscode-wow-api/releases/tag/v0.7.7
 [0.7.6]: https://github.com/Ketho/vscode-wow-api/releases/tag/v0.7.6
 [0.7.5]: https://github.com/Ketho/vscode-wow-api/releases/tag/v0.7.5
 [0.7.4]: https://github.com/Ketho/vscode-wow-api/releases/tag/v0.7.4

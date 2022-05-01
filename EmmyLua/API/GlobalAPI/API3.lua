@@ -1,3 +1,6 @@
+---[Documentation](https://wowpedia.fandom.com/wiki/API_GetGuildTradeSkillInfo)
+function GetGuildTradeSkillInfo(index) end
+
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_GetHaste)
 function GetHaste() end
 
@@ -53,6 +56,8 @@ function GetInboxItem(index, itemIndex) end
 function GetInboxItemLink(index, itemIndex) end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_GetInboxNumItems)
+---@return number numItems
+---@return number totalItems
 function GetInboxNumItems() end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_GetInboxText)
@@ -391,7 +396,11 @@ function GetLFGRoleUpdateBattlegroundInfo() end
 function GetLFGRoleUpdateMember(memberIndex) end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_GetLFGRoleUpdateSlot)
-function GetLFGRoleUpdateSlot(slotIndex) end
+---@param index number
+---@return number dungeonID
+---@return number dungeonType
+---@return number dungeonSubType
+function GetLFGRoleUpdateSlot(index) end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_GetLFGRoles)
 function GetLFGRoles() end
@@ -429,12 +438,14 @@ function GetLatestUpdatedStats() end
 function GetLegacyRaidDifficultyID() end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_GetLifesteal)
+---@return number lifesteal
 function GetLifesteal() end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_GetLocalGameTime)
 function GetLocalGameTime() end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_GetLocale)
+---@return string locale
 function GetLocale() end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_GetLooseMacroIcons)
@@ -665,6 +676,7 @@ function GetMouseButtonName() end
 function GetMouseClickFocus() end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_GetMouseFocus)
+---@return table frame
 function GetMouseFocus() end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_GetMouseMotionFocus)
@@ -781,6 +793,9 @@ function GetNumComparisonCompletedAchievements(achievementID) end
 function GetNumCompletedAchievements() end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_GetNumDeclensionSets)
+---@param name string
+---@param gender number
+---@return number numDeclensionSets
 function GetNumDeclensionSets(name, gender) end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_GetNumDisplayChannels)
@@ -843,6 +858,7 @@ function GetNumGuildRewards() end
 function GetNumGuildTradeSkill() end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_GetNumLanguages)
+---@return number numLanguages
 function GetNumLanguages() end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_GetNumLootItems)
@@ -1003,6 +1019,7 @@ function GetNumWarGameTypes() end
 function GetNumWorldPVPAreas() end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_GetOSLocale)
+---@return string locale
 function GetOSLocale() end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_GetObjectIconTextureCoords)
@@ -1076,8 +1093,7 @@ function GetParryChanceFromAttribute() end
 ---@param assignment string
 ---@param raidmember string
 ---@param exactMatch boolean
----@return number raidIndex1
----@return number raidIndex2
+---@return boolean isAssigned
 function GetPartyAssignment(assignment, raidmember, exactMatch) end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_GetPartyLFGBackfillInfo)
@@ -1520,10 +1536,10 @@ function GetRealZoneText(instanceID) end
 function GetRealmID() end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_GetRealmName)
----@return string realmName
+---@return string realm
 function GetRealmName() end
 
----@return string? normalizedRealmName
+---@return string? normalizedRealm
 function GetNormalizedRealmName() end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_GetReleaseTimeRemaining)
@@ -1687,6 +1703,7 @@ function GetSelectedFaction() end
 function GetSelectedWarGameType() end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_GetSendMailCOD)
+---@return number amount
 function GetSendMailCOD() end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_GetSendMailItem)
@@ -2390,7 +2407,7 @@ function HasAPEffectsSpellPower() end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_HasAction)
 ---@param actionSlot number
----@return number hasAction
+---@return boolean hasAction
 function HasAction(actionSlot) end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_HasArtifactEquipped)
@@ -2495,17 +2512,4 @@ function InGuildParty() end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_InRepairMode)
 function InRepairMode() end
-
----[Documentation](https://wowpedia.fandom.com/wiki/API_InboxItemCanDelete)
-function InboxItemCanDelete(index) end
-
----[Documentation](https://wowpedia.fandom.com/wiki/API_InitiateRolePoll)
-function InitiateRolePoll() end
-
----[Documentation](https://wowpedia.fandom.com/wiki/API_InitiateTrade)
----@param unit string
-function InitiateTrade(unit) end
-
----[Documentation](https://wowpedia.fandom.com/wiki/API_InteractUnit)
-function InteractUnit(unitToken, exactMatch) end
 

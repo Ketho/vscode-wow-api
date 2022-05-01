@@ -26,6 +26,16 @@ function UnitCanCooperate(unit, otherUnit) end
 function UnitCanPetBattle() end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_UnitCastingInfo)
+---@param unit string
+---@return string name
+---@return string text
+---@return string texture
+---@return number startTimeMS
+---@return number endTimeMS
+---@return boolean isTradeSkill
+---@return string castID
+---@return boolean notInterruptible
+---@return number spellId
 function UnitCastingInfo(unit) end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_UnitChannelInfo)
@@ -413,9 +423,7 @@ function UnitSelectionColor(UnitId, useExtendedColors) end
 function UnitSelectionType(UnitId, useExtendedColors) end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_UnitSetRole)
----@param target string
----@param role string
-function UnitSetRole(target, role) end
+function UnitSetRole() end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_UnitShouldDisplayName)
 function UnitShouldDisplayName() end

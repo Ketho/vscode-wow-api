@@ -967,6 +967,14 @@ function DeclineGroup() end
 function DeclineGuild() end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_DeclineName)
+---@param name string
+---@param gender number
+---@param declensionSet number
+---@return string genitive
+---@return string dative
+---@return string accusative
+---@return string instrumental
+---@return string prepositional
 function DeclineName(name, gender, declensionSet) end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_DeclineQuest)
@@ -1013,15 +1021,6 @@ function DestroyTotem(slot) end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_DetectWowMouse)
 function DetectWowMouse() end
-
----[Documentation](https://wowpedia.fandom.com/wiki/API_DisableAddOn)
----@param name string|number The filename (not title) of the AddOn to be disabled.
----@param character? string|boolean The name of the character (without realm) for whom to disable the addon. Defaults to the current character.
---- **Notes:**
---- - First argument can also be a Integer - The index of the AddOn to disable in the user's AddOn list, from 1 to GetNumAddOns().
---- - Takes effect only after reloading the UI - ReloadUI().
---- - Passing true as the second argument will disable the addon for all characters on the realm.
-function DisableAddOn(name, character) end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_DisableAllAddOns)
 function DisableAllAddOns() end
@@ -1230,7 +1229,13 @@ function EditMacro(macroInfo, name, icon, body) end
 function EjectPassengerFromSeat(seat) end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_EnableAddOn)
-function EnableAddOn() end
+---@param indexOrName number|string
+---@param characterOrAll? string|boolean
+function EnableAddOn(indexOrName, characterOrAll) end
+
+---@param indexOrName number|string
+---@param characterOrAll? string|boolean
+function DisableAddOn(indexOrName, characterOrAll) end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_EnableAllAddOns)
 function EnableAllAddOns() end
@@ -1605,7 +1610,7 @@ function GetAvailableLevel(index) end
 function GetAvailableLocaleInfo(ignoreLocaleRestrictions) end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_GetAvailableLocales)
-function GetAvailableLocales() end
+function GetAvailableLocales(ignoreLocaleRestrictions) end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_GetAvailableQuestInfo)
 ---@param index number
@@ -1829,11 +1834,11 @@ function GetChatWindowSavedDimensions(index) end
 function GetChatWindowSavedPosition(index) end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_GetClassInfo)
----@param classIndex number
+---@param classID number
 ---@return string className
 ---@return string classFile
 ---@return number classID
-function GetClassInfo(classIndex) end
+function GetClassInfo(classID) end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_GetClickFrame)
 function GetClickFrame(name) end
@@ -2171,10 +2176,10 @@ function GetFramesRegisteredForEvent(event) end
 function GetFriendshipReputation(factionID) end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_GetFriendshipReputationRanks)
----@param friendID number
+---@param factionID number
 ---@return number currentRank
 ---@return number maxRank
-function GetFriendshipReputationRanks(friendID) end
+function GetFriendshipReputationRanks(factionID) end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_GetFunctionCPUUsage)
 function GetFunctionCPUUsage(func, includeSubroutines) end
@@ -2383,24 +2388,4 @@ function GetGuildRosterShowOffline() end
 ---@return number tabardBorderUpper
 ---@return number tabardBorderLower
 function GetGuildTabardFiles() end
-
----[Documentation](https://wowpedia.fandom.com/wiki/API_GetGuildTradeSkillInfo)
----@param index number
----@return number skillID
----@return boolean isCollapsed
----@return string iconTexture
----@return string headerName
----@return number numOnline
----@return number numVisible
----@return number numPlayers
----@return string playerName
----@return string playerNameWithRealm
----@return string class
----@return boolean online
----@return string zone
----@return number skill
----@return string classFileName
----@return boolean isMobile
----@return number isAway
-function GetGuildTradeSkillInfo(index) end
 

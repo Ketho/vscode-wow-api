@@ -1,3 +1,16 @@
+---[Documentation](https://wowpedia.fandom.com/wiki/API_InboxItemCanDelete)
+function InboxItemCanDelete(index) end
+
+---[Documentation](https://wowpedia.fandom.com/wiki/API_InitiateRolePoll)
+function InitiateRolePoll() end
+
+---[Documentation](https://wowpedia.fandom.com/wiki/API_InitiateTrade)
+---@param unit string
+function InitiateTrade(unit) end
+
+---[Documentation](https://wowpedia.fandom.com/wiki/API_InteractUnit)
+function InteractUnit(unitToken, exactMatch) end
+
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_Is64BitClient)
 function Is64BitClient() end
 
@@ -435,6 +448,7 @@ function IsPetActive() end
 function IsPetAttackAction(index) end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_IsPetAttackActive)
+---@return boolean isActive
 function IsPetAttackActive() end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_IsPlayerInWorld)
