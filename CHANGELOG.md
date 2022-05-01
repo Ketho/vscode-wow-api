@@ -5,7 +5,7 @@
 - Frame templates are not completely supported, only BackdropTemplate ([#15](https://github.com/Ketho/vscode-wow-api/issues/15)) 
 - The Classic (TBC) API is not supported ([#13](https://github.com/Ketho/vscode-wow-api/issues/13))
 
-## [0.8.1-2] - 2022-05-02
+## [0.8.2] - 2022-05-02
 ### Changed
 - 🌙 Added Ace3 libraries from ([#30](https://github.com/Ketho/vscode-wow-api/pull/30))
 - 📦 Package: Testing an action to publish the extension https://github.com/marketplace/actions/publish-vs-code-extension
