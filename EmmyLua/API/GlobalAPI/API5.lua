@@ -177,7 +177,7 @@ function UnitInParty(unit) end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_UnitInRaid)
 ---@param unit string
----@return number index
+---@return number? index
 function UnitInRaid(unit) end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_UnitInRange)
@@ -247,7 +247,7 @@ function UnitIsGroupAssistant() end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_UnitIsGroupLeader)
 ---@param unit string
----@param partyCategory number
+---@param partyCategory? number
 ---@return boolean isLeader
 function UnitIsGroupLeader(unit, partyCategory) end
 
@@ -409,7 +409,7 @@ function UnitRealmRelationship() end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_UnitSelectionColor)
 ---@param UnitId string
----@param useExtendedColors boolean
+---@param useExtendedColors? boolean
 ---@return number red
 ---@return number green
 ---@return number blue
@@ -418,7 +418,7 @@ function UnitSelectionColor(UnitId, useExtendedColors) end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_UnitSelectionType)
 ---@param UnitId string
----@param useExtendedColors boolean
+---@param useExtendedColors? boolean
 ---@return number type
 function UnitSelectionType(UnitId, useExtendedColors) end
 
@@ -453,8 +453,8 @@ function UnitThreatPercentageOfLead(unit, mobUnit) end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_UnitThreatSituation)
 ---@param unit string
----@param mobUnit string
----@return number status
+---@param mobUnit? string
+---@return number? status
 function UnitThreatSituation(unit, mobUnit) end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_UnitTrialBankedLevels)
@@ -520,8 +520,8 @@ function UseAction(slot, checkCursor, onSelf) end
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_UseContainerItem)
 ---@param bagID number
 ---@param slot number
----@param target string
----@param reagentBankAccessible boolean
+---@param target? string
+---@param reagentBankAccessible? boolean
 function UseContainerItem(bagID, slot, target, reagentBankAccessible) end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_UseHearthstone)
@@ -532,7 +532,7 @@ function UseInventoryItem(invSlot) end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_UseItemByName)
 ---@param name string
----@param target string
+---@param target? string
 function UseItemByName(name, target) end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_UseQuestLogSpecialItem)
@@ -638,10 +638,10 @@ function hooksecurefunc(tbl, name, hook) end
 function issecure() end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_issecurevariable)
----@param table table
+---@param table? table
 ---@param variable string
 ---@return boolean isSecure
----@return string taint
+---@return string? taint
 function issecurevariable(table, variable) end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_scrub)

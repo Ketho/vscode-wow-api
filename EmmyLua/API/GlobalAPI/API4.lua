@@ -1,3 +1,6 @@
+---[Documentation](https://wowpedia.fandom.com/wiki/API_InRepairMode)
+function InRepairMode() end
+
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_InboxItemCanDelete)
 function InboxItemCanDelete(index) end
 
@@ -283,7 +286,7 @@ function IsInAuthenticatedRank() end
 function IsInCinematicScene() end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_IsInGroup)
----@param groupType number
+---@param groupType? number
 ---@return boolean inGroup
 function IsInGroup(groupType) end
 
@@ -305,7 +308,7 @@ function IsInJailersTower() end
 function IsInLFGDungeon() end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_IsInRaid)
----@param groupType number
+---@param groupType? number
 ---@return boolean isInRaid
 function IsInRaid(groupType) end
 
@@ -332,7 +335,7 @@ function IsItemAction(slot) end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_IsItemInRange)
 ---@param item string
----@param unit string
+---@param unit? string
 ---@return boolean inRange
 function IsItemInRange(item, unit) end
 
@@ -391,7 +394,7 @@ function IsModifierKeyDown() end
 function IsMounted() end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_IsMouseButtonDown)
----@param button string
+---@param button? string
 ---@return boolean isDown
 function IsMouseButtonDown(button) end
 
@@ -699,11 +702,11 @@ function JoinBattlefield(index, asGroup, isRated) end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_JoinChannelByName)
 ---@param channelName string
----@param password string
----@param frameID number
+---@param password? string
+---@param frameID? number
 ---@param hasVoice boolean
 ---@return number type
----@return string name
+---@return string? name
 function JoinChannelByName(channelName, password, frameID, hasVoice) end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_JoinLFG)
@@ -791,7 +794,7 @@ function KBSetup_IsLoaded() end
 function KBSystem_GetMOTD() end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_KBSystem_GetServerNotice)
----@return string notice
+---@return string? notice
 function KBSystem_GetServerNotice() end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_KBSystem_GetServerStatus)
@@ -1317,7 +1320,6 @@ function RenamePetition(name) end
 function ReopenInteraction() end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_RepairAllItems)
----@param guildBankRepair boolean
 function RepairAllItems(guildBankRepair) end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_ReplaceEnchant)
@@ -1544,15 +1546,15 @@ function SellCursorItem() end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_SendChatMessage)
 ---@param msg string
----@param chatType string
----@param languageID number
----@param target string
+---@param chatType? string
+---@param languageID? number
+---@param target? string
 function SendChatMessage(msg, chatType, languageID, target) end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_SendMail)
 ---@param recipient string
 ---@param subject string
----@param body string
+---@param body? string
 function SendMail(recipient, subject, body) end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_SendSystemMessage)
@@ -2414,7 +2416,7 @@ function TurnRightStop() end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_UninviteUnit)
 ---@param name string
----@param reason string
+---@param reason? string
 function UninviteUnit(name, reason) end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_UnitAffectingCombat)

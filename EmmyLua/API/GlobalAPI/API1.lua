@@ -186,7 +186,7 @@ function BNGetFriendIndex(presenceID) end
 function BNGetFriendInviteInfo(inviteIndex) end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_BNGetInfo)
----@return number presenceID
+---@return number? presenceID
 ---@return string battleTag
 ---@return number toonID
 ---@return string currentBroadcast
@@ -336,7 +336,7 @@ function BuyGuildCharter(guildName) end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_BuyMerchantItem)
 ---@param index number
----@param quantity number
+---@param quantity? number
 function BuyMerchantItem(index, quantity) end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_BuyReagentBank)
@@ -1173,9 +1173,9 @@ function C_LFGList.AcceptInvite(resultID) end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_LFGList.ApplyToGroup)
 ---@param resultID number
----@param tankOK boolean
----@param healerOK boolean
----@param damageOK boolean
+---@param tankOK? boolean
+---@param healerOK? boolean
+---@param damageOK? boolean
 function C_LFGList.ApplyToGroup(resultID, tankOK, healerOK, damageOK) end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_LFGList.CancelApplication)
@@ -1188,9 +1188,9 @@ function C_LFGList.ClearSearchResults() end
 ---@param activityID number
 ---@param itemLevel number
 ---@param honorLevel number
----@param autoAccept boolean
----@param privateGroup boolean
----@param questID number
+---@param autoAccept? boolean
+---@param privateGroup? boolean
+---@param questID? number
 ---@return boolean success
 function C_LFGList.CreateListing(activityID, itemLevel, honorLevel, autoAccept, privateGroup, questID) end
 
@@ -1243,20 +1243,20 @@ function C_LFGList.GetApplicationInfo(searchResultID) end
 function C_LFGList.GetApplications() end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_LFGList.GetAvailableActivities)
----@param categoryID number
----@param groupID number
----@param filter number
+---@param categoryID? number
+---@param groupID? number
+---@param filter? number
 ---@return table activities
 function C_LFGList.GetAvailableActivities(categoryID, groupID, filter) end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_LFGList.GetAvailableActivityGroups)
 ---@param categoryID number
----@param filter number
+---@param filter? number
 ---@return table groups
 function C_LFGList.GetAvailableActivityGroups(categoryID, filter) end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_LFGList.GetAvailableCategories)
----@param filter number
+---@param filter? number
 ---@return table categories
 function C_LFGList.GetAvailableCategories(filter) end
 
@@ -2076,7 +2076,4 @@ function C_ToyBox.GetNumTotalDisplayedToys() end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_ToyBox.GetNumToys)
 function C_ToyBox.GetNumToys() end
-
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_ToyBox.GetToyFromIndex)
-function C_ToyBox.GetToyFromIndex(itemIndex) end
 

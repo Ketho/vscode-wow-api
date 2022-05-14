@@ -32,9 +32,9 @@ function GetInboxHeaderInfo(index) end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_GetInboxInvoiceInfo)
 ---@param index number
----@return string invoiceType
----@return string itemName
----@return string playerName
+---@return string? invoiceType
+---@return string? itemName
+---@return string? playerName
 ---@return number bid
 ---@return number buyout
 ---@return number deposit
@@ -185,9 +185,9 @@ function GetItemCooldown(itemId) end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_GetItemCount)
 ---@param itemInfo string
----@param includeBank boolean
----@param includeUses boolean
----@param includeReagentBank boolean
+---@param includeBank? boolean
+---@param includeUses? boolean
+---@param includeReagentBank? boolean
 ---@return number count
 function GetItemCount(itemInfo, includeBank, includeUses, includeReagentBank) end
 
@@ -1265,7 +1265,7 @@ function GetPvpTalentInfoBySpecialization() end
 function GetPvpTalentLink() end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_GetQuestBackgroundMaterial)
----@return string material
+---@return string? material
 function GetQuestBackgroundMaterial() end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_GetQuestCurrencyID)
@@ -1361,7 +1361,7 @@ function GetQuestLogRewardHonor() end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_GetQuestLogRewardInfo)
 ---@param itemIndex number
----@param questID number
+---@param questID? number
 ---@return string itemName
 ---@return string itemTexture
 ---@return number numItems
@@ -1495,7 +1495,7 @@ function GetRaidRosterInfo(index) end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_GetRaidTargetIndex)
 ---@param unit string
----@return number index
+---@return number? index
 function GetRaidTargetIndex(unit) end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_GetRandomDungeonBestChoice)
@@ -1527,7 +1527,7 @@ function GetReadyCheckTimeLeft() end
 function GetReagentBankCost() end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_GetRealZoneText)
----@param instanceID number
+---@param instanceID? number
 ---@return string zone
 function GetRealZoneText(instanceID) end
 
@@ -1926,6 +1926,7 @@ function GetSpellLink(spellName, spellRank) end
 function GetSpellLossOfControlCooldown(spellSlot) end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_GetSpellPenetration)
+---@return number spellPen
 function GetSpellPenetration() end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_GetSpellPowerCost)
@@ -2013,8 +2014,8 @@ function GetTalentLink(talentID, isInspect, specGroup, inspectID, classID) end
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_GetTalentTierInfo)
 ---@param tier number
 ---@param specGroupIndex number
----@param isInspect boolean
----@param inspectedUnit string
+---@param isInspect? boolean
+---@param inspectedUnit? string
 ---@return boolean tierAvailable
 ---@return number selectedTalent
 ---@return number tierUnlockLevel
@@ -2052,7 +2053,7 @@ function GetTempShapeshiftBarIndex() end
 function GetText() end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_GetThreatStatusColor)
----@param status number
+---@param status? number
 ---@return number r
 ---@return number g
 ---@return number b
@@ -2509,7 +2510,4 @@ function InCombatLockdown() end
 ---@return number numGuildRequired
 ---@return number xpMultiplier
 function InGuildParty() end
-
----[Documentation](https://wowpedia.fandom.com/wiki/API_InRepairMode)
-function InRepairMode() end
 

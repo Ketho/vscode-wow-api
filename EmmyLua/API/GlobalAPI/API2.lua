@@ -1,3 +1,6 @@
+---[Documentation](https://wowpedia.fandom.com/wiki/API_C_ToyBox.GetToyFromIndex)
+function C_ToyBox.GetToyFromIndex(itemIndex) end
+
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_ToyBox.GetToyInfo)
 ---@param itemID number
 ---@return number itemID
@@ -697,7 +700,7 @@ function ClearVoidTransferDepositSlot(slotIndex) end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_ClickSendMailItemButton)
 ---@param itemIndex number
----@param clearItem boolean
+---@param clearItem? boolean
 function ClickSendMailItemButton(itemIndex, clearItem) end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_ClickSocketButton)
@@ -711,7 +714,7 @@ function ClickTradeButton(index) end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_ClickVoidStorageSlot)
 ---@param slotIndex number
----@param isRightClick boolean
+---@param isRightClick? boolean
 function ClickVoidStorageSlot(slotIndex, isRightClick) end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_ClickVoidTransferDepositSlot)
@@ -743,7 +746,7 @@ function CloseGuildRoster() end
 function CloseItemText() end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_CloseLoot)
----@param errNum number
+---@param errNum? number
 function CloseLoot(errNum) end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_CloseMail)
@@ -885,7 +888,7 @@ function ConfirmNoRefundOnUse() end
 function ConfirmOnUse() end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_ConfirmReadyCheck)
----@param isReady number
+---@param isReady? number
 function ConfirmReadyCheck(isReady) end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_ConfirmTalentWipe)
@@ -918,13 +921,12 @@ function CreateFont(name) end
 ---@param template? `Tp` | TemplateType
 ---@param id? number
 ---@return T|Tp frame
-function CreateFrame(frameType, name, parent, template, id) end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_CreateMacro)
 ---@param name string
 ---@param iconFileID number
----@param body string
----@param perCharacter boolean
+---@param body? string
+---@param perCharacter? boolean
 ---@return number macroId
 function CreateMacro(name, iconFileID, body, perCharacter) end
 
@@ -1082,7 +1084,7 @@ function EJ_GetContentTuningID() end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_EJ_GetCreatureInfo)
 ---@param index number
----@param encounterID number
+---@param encounterID? number
 ---@return number id
 ---@return string name
 ---@return string description
@@ -1724,7 +1726,7 @@ function GetBinding(index) end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_GetBindingAction)
 ---@param binding string
----@param checkOverride boolean
+---@param checkOverride? boolean
 ---@return string action
 function GetBindingAction(binding, checkOverride) end
 
@@ -1737,9 +1739,9 @@ function GetBindingByKey(key) end
 function GetBindingKey(command) end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_GetBindingText)
----@param key string
----@param prefix string
----@param abbreviate boolean
+---@param key? string
+---@param prefix? string
+---@param abbreviate? boolean
 ---@return string text
 function GetBindingText(key, prefix, abbreviate) end
 
@@ -1848,7 +1850,7 @@ function GetCoinIcon(amount) end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_GetCoinText)
 ---@param amount number
----@param separator string
+---@param separator? string
 ---@return string formattedAmount
 function GetCoinText(amount, separator) end
 
@@ -2176,7 +2178,7 @@ function GetFramesRegisteredForEvent(event) end
 function GetFriendshipReputation(factionID) end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_GetFriendshipReputationRanks)
----@param factionID number
+---@param factionID? number
 ---@return number currentRank
 ---@return number maxRank
 function GetFriendshipReputationRanks(factionID) end
@@ -2193,8 +2195,8 @@ function GetGMTicket() end
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_GetGameMessageInfo)
 ---@param messageType number
 ---@return string stringId
----@return number soundKitID
----@return number voiceID
+---@return number? soundKitID
+---@return number? voiceID
 function GetGameMessageInfo(messageType) end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_GetGameTime)
@@ -2322,7 +2324,7 @@ function GetGuildFactionInfo() end
 ---@return string guildName
 ---@return string guildRankName
 ---@return number guildRankIndex
----@return string realm
+---@return string? realm
 function GetGuildInfo(unit) end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_GetGuildInfoText)
