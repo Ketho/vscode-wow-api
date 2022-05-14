@@ -30,6 +30,7 @@ function m:ConvertApi(wowpediaDocs)
 				newInfo.Arguments[i] = {
 					Name = param.name,
 					Type = GetType(param.type),
+					Nilable = param.optional,
 				}
 			end
 		end
@@ -39,6 +40,7 @@ function m:ConvertApi(wowpediaDocs)
 				newInfo.Returns[i] = {
 					Name = param.name,
 					Type = GetType(param.type),
+					Nilable = param.optional,
 				}
 			end
 		end

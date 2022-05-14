@@ -121,13 +121,14 @@ function m:ParsePages(options)
 				info.section = lineLower:match("==%s?(.-)%s?==") or info.section
 				-- look for params
 				if line:find("^:?;") and line:find(":") then
-					local name, valueType = self:ParseParam(line, info)
+					local name, valueType, optional = self:ParseParam(line, info)
 					if name then
 						local paramTbl = info.params[info.section]
 						if paramTbl then
 							table.insert(paramTbl, {
 								name = name,
-								type = valueType
+								type = valueType,
+								optional = optional,
 							})
 						end
 					end
@@ -194,6 +195,12 @@ function m:ParseSignature(lines, info)
 	end
 end
 
+local function IsOptional(s)
+	if s:find([["optional"]]) or s:find([["nilable"]]) or s:find([[</span>%?]]) then
+		return true
+	end
+end
+
 function m:ParseParam(line, info)
 	-- ;spellID : &lt;span class="apitype"&gt;number&lt;/span&gt; - Any valid spell ID.
 	line = line:match("(.-)%s?%-") or line -- remove any comment text
@@ -207,8 +214,9 @@ function m:ParseParam(line, info)
 	-- {{api|t=t|number}}
 	valueType = valueType:match("(%w+)}}") or valueType
 	name = name:match("(%w+)%]%]") or name
+	local optional = IsOptional(line)
 	valueType = valueType:lower()
-	return name, valueType
+	return name, valueType, optional
 end
 
 local function PrintApiParam(t)
