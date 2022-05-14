@@ -5,6 +5,10 @@
 - Frame templates are not completely supported, only BackdropTemplate ([#15](https://github.com/Ketho/vscode-wow-api/issues/15)) 
 - The Classic (TBC) API is not supported ([#13](https://github.com/Ketho/vscode-wow-api/issues/13))
 
+## [0.8.2] - 2022-05-14
+### Changed
+- 🌙 Fixed not pulling optional params from wikitext ([4e0cbfc](https://github.com/Ketho/vscode-wow-api/commit/4e0cbfce7152ceb6f5e14ade5f9655ea1a297e8e)).
+
 ## [0.8.1] - 2022-05-02
 ### Changed
 - 🌙 Added Ace3 libraries from ([#30](https://github.com/Ketho/vscode-wow-api/pull/30))
@@ -238,7 +242,8 @@
 ### Added
 - 🚧 Wip: Development work
 
-[0.8.1]: https://github.com/Ketho/vscode-wow-api/releases/tag/v0.8.3
+[0.8.2]: https://github.com/Ketho/vscode-wow-api/releases/tag/v0.8.2
+[0.8.1]: https://github.com/Ketho/vscode-wow-api/releases/tag/v0.8.1
 [0.7.6]: https://github.com/Ketho/vscode-wow-api/releases/tag/v0.7.6
 [0.7.5]: https://github.com/Ketho/vscode-wow-api/releases/tag/v0.7.5
 [0.7.4]: https://github.com/Ketho/vscode-wow-api/releases/tag/v0.7.4
