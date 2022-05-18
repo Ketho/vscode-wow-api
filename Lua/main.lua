@@ -30,4 +30,7 @@ require("Lua/ToTypeScript/GlobalString"):WriteLocales()
 -- parse the wiki
 require("Lua/WikiParser/WikiParser")
 
+-- add @meta to emmylua files
+require("Emmy/PrependMeta")
+
 print("done")
