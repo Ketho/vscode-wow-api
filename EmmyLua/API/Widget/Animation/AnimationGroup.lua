@@ -1,3 +1,4 @@
+---@meta
 ---@class AnimationGroup : ParentedObject, ScriptObject
 local AnimationGroup = {}
 

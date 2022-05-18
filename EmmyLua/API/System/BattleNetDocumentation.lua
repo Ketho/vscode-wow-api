@@ -1,3 +1,4 @@
+---@meta
 C_BattleNet = {}
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_BattleNet.GetAccountInfoByGUID)

@@ -1,3 +1,4 @@
+---@meta
 C_ReportSystem = {}
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_ReportSystem.CanReportPlayer)

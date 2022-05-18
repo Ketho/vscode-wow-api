@@ -1,3 +1,4 @@
+---@meta
 ---[FrameXML](https://www.townlong-yak.com/framexml/go/Mixin)
 --- Copies mixins into an existing object
 ---@param object table

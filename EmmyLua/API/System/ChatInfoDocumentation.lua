@@ -1,3 +1,4 @@
+---@meta
 C_ChatInfo = {}
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_ChatInfo.GetChannelInfoFromIdentifier)

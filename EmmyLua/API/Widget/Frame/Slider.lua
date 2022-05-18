@@ -1,3 +1,4 @@
+---@meta
 ---@class Slider : Frame
 local Slider = {}
 

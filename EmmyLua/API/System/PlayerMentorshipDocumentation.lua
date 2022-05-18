@@ -1,3 +1,4 @@
+---@meta
 C_PlayerMentorship = {}
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_PlayerMentorship.GetMentorLevelRequirement)

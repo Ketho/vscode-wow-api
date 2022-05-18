@@ -1,3 +1,4 @@
+---@meta
 ---@class Cooldown : Frame
 local Cooldown = {}
 

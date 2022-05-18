@@ -1,3 +1,4 @@
+---@meta
 ---@class backdropInfo
 ---@field bgFile string
 ---@field edgeFile string

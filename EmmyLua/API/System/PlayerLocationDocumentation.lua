@@ -1,3 +1,4 @@
+---@meta
 C_PlayerInfo = {}
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_PlayerInfo.GUIDIsPlayer)

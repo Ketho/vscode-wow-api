@@ -1,3 +1,4 @@
+---@meta
 C_MountJournal = {}
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_MountJournal.ApplyMountEquipment)

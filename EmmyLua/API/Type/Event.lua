@@ -1,3 +1,4 @@
+---@meta
 ---@alias WowEvent
 ---| '"ACHIEVEMENT_EARNED"' # `achievementID, alreadyEarned`
 ---| '"ACHIEVEMENT_PLAYER_NAME"' # `achievementID`

@@ -1,3 +1,4 @@
+---@meta
 ---@class EditBox : Frame
 local EditBox = {}
 

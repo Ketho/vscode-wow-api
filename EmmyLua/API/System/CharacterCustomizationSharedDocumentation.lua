@@ -1,3 +1,4 @@
+---@meta
 ---@class CharCustomizationChoice
 ---@field id number
 ---@field name string

@@ -1,3 +1,4 @@
+---@meta
 ---@class PlayerModel : Model
 local PlayerModel = {}
 

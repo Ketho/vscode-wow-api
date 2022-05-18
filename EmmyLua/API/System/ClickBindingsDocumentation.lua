@@ -1,3 +1,4 @@
+---@meta
 C_ClickBindings = {}
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_ClickBindings.CanSpellBeClickBound)

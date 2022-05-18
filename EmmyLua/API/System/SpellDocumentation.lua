@@ -1,3 +1,4 @@
+---@meta
 C_Spell = {}
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_Spell.DoesSpellExist)

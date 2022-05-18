@@ -1,3 +1,4 @@
+---@meta
 C_Calendar = {}
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_Calendar.AddEvent)

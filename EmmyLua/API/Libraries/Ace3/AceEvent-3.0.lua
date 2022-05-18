@@ -1,3 +1,4 @@
+---@meta
 ---[Documentation](https://www.wowace.com/projects/ace3/pages/api/ace-event-3-0)
 ---@class AceEvent-3.0
 local AceEvent = {}

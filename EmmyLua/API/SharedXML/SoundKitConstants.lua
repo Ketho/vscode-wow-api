@@ -1,3 +1,4 @@
+---@meta
 -- SOUND KITS
 SOUNDKIT = {
 	LOOT_WINDOW_COIN_SOUND = 120,

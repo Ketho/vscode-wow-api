@@ -1,3 +1,4 @@
+---@meta
 ---@class CharacterAlternateFormData
 ---@field Undocumented boolean
 

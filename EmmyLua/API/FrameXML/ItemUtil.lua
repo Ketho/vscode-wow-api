@@ -1,3 +1,4 @@
+---@meta
 ---[Documentation](https://wowpedia.fandom.com/wiki/ItemTransmogInfoMixin)
 ---@class ItemTransmogInfoMixin
 ItemTransmogInfoMixin = {}

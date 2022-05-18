@@ -1,3 +1,4 @@
+---@meta
 C_ArtifactUI = {}
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_ArtifactUI.AddPower)

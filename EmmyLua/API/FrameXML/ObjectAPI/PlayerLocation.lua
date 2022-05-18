@@ -1,3 +1,4 @@
+---@meta
 PlayerLocation = {}
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/PlayerLocationMixin)

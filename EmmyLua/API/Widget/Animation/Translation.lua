@@ -1,3 +1,4 @@
+---@meta
 ---@class Translation : Animation
 local Translation = {}
 

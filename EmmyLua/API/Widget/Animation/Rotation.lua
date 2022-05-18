@@ -1,3 +1,4 @@
+---@meta
 ---@class Rotation : Animation
 local Rotation = {}
 

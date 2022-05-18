@@ -1,3 +1,4 @@
+---@meta
 C_Map = {}
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_Map.CanSetUserWaypointOnMap)

@@ -1,3 +1,4 @@
+---@meta
 C_GossipInfo = {}
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_GossipInfo.CloseGossip)

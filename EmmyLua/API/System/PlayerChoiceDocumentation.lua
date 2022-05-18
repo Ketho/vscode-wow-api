@@ -1,3 +1,4 @@
+---@meta
 C_PlayerChoice = {}
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_PlayerChoice.GetCurrentPlayerChoiceInfo)

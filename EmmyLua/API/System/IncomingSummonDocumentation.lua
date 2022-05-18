@@ -1,3 +1,4 @@
+---@meta
 C_IncomingSummon = {}
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_IncomingSummon.HasIncomingSummon)

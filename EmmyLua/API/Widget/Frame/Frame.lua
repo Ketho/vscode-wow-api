@@ -1,3 +1,4 @@
+---@meta
 ---@class Frame : Region, ScriptObject
 local Frame = {}
 

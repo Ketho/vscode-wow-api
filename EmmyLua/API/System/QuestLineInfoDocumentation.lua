@@ -1,3 +1,4 @@
+---@meta
 C_QuestLine = {}
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_QuestLine.GetAvailableQuestLines)

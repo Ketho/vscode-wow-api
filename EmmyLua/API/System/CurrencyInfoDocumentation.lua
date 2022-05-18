@@ -1,3 +1,4 @@
+---@meta
 C_CurrencyInfo = {}
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_CurrencyInfo.DoesWarModeBonusApply)

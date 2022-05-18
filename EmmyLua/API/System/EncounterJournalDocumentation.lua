@@ -1,3 +1,4 @@
+---@meta
 C_EncounterJournal = {}
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_EncounterJournal.GetDungeonEntrancesForMap)

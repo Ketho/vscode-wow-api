@@ -1,3 +1,4 @@
+---@meta
 C_FrameManager = {}
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_FrameManager.GetFrameVisibilityState)

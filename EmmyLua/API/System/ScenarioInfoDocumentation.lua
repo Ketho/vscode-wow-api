@@ -1,3 +1,4 @@
+---@meta
 C_ScenarioInfo = {}
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_ScenarioInfo.GetJailersTowerTypeString)

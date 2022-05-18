@@ -1,3 +1,4 @@
+---@meta
 C_FriendList = {}
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_FriendList.AddFriend)

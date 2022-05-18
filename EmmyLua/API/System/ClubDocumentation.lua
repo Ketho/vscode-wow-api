@@ -1,3 +1,4 @@
+---@meta
 C_Club = {}
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_Club.AcceptInvitation)

@@ -1,3 +1,4 @@
+---@meta
 C_Garrison = {}
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_Garrison.AddFollowerToMission)

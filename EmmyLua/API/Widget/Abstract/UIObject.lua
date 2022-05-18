@@ -1,3 +1,4 @@
+---@meta
 ---@class UIObject
 local UIObject = {}
 

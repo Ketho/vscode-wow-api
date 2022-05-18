@@ -1,3 +1,4 @@
+---@meta
 C_TaskQuest = {}
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_TaskQuest.DoesMapShowTaskQuestObjectives)

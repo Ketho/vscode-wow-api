@@ -1,3 +1,4 @@
+---@meta
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_CanUpgradeExpansion)
 ---@return boolean canUpgradeExpansion
 function CanUpgradeExpansion() end

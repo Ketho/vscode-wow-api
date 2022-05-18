@@ -1,3 +1,4 @@
+---@meta
 C_SplashScreen = {}
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_SplashScreen.AcknowledgeSplash)

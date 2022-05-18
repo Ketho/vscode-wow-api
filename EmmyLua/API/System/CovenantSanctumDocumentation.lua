@@ -1,3 +1,4 @@
+---@meta
 C_CovenantSanctumUI = {}
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_CovenantSanctumUI.CanAccessReservoir)

@@ -1,3 +1,4 @@
+---@meta
 C_StableInfo = {}
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_StableInfo.GetNumActivePets)

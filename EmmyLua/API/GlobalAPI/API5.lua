@@ -1,3 +1,4 @@
+---@meta
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_UnitAuraBySlot)
 function UnitAuraBySlot(unit, slot) end
 

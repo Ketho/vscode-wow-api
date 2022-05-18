@@ -1,3 +1,4 @@
+---@meta
 C_ZoneAbility = {}
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_ZoneAbility.GetActiveAbilities)

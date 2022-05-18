@@ -1,3 +1,4 @@
+---@meta
 ItemLocation = {}
 
 ---@class ItemLocationMixin

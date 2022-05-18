@@ -1,3 +1,4 @@
+---@meta
 ---[FrameXML](https://www.townlong-yak.com/framexml/go/Vector3DMixin)
 ---@class Vector3DMixin
 ---@field x number|nil

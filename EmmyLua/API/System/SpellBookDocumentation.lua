@@ -1,3 +1,4 @@
+---@meta
 C_SpellBook = {}
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_SpellBook.ContainsAnyDisenchantSpell)

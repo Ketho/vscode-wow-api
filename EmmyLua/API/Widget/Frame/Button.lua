@@ -1,3 +1,4 @@
+---@meta
 ---@class Button : Frame
 local Button = {}
 

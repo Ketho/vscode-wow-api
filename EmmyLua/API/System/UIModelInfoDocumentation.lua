@@ -1,3 +1,4 @@
+---@meta
 C_ModelInfo = {}
 
 ---This function does nothing in public clients

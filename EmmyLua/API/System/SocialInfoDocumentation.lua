@@ -1,3 +1,4 @@
+---@meta
 C_Social = {}
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_Social.GetLastAchievement)

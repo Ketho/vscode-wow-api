@@ -1,3 +1,4 @@
+---@meta
 -- Inventory slots
 INVSLOT_AMMO		= 0
 INVSLOT_HEAD 		= 1

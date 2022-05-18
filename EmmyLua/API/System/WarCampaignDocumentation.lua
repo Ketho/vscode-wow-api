@@ -1,3 +1,4 @@
+---@meta
 C_CampaignInfo = {}
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_CampaignInfo.GetAvailableCampaigns)

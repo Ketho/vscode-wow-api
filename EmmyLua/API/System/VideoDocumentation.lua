@@ -1,3 +1,4 @@
+---@meta
 C_VideoOptions = {}
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_VideoOptions.GetGxAdapterInfo)

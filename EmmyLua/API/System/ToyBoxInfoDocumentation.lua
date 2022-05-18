@@ -1,3 +1,4 @@
+---@meta
 C_ToyBoxInfo = {}
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_ToyBoxInfo.ClearFanfare)

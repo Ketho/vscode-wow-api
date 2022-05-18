@@ -1,3 +1,4 @@
+---@meta
 C_MerchantFrame = {}
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_MerchantFrame.GetBuybackItemID)

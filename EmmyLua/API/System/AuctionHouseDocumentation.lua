@@ -1,3 +1,4 @@
+---@meta
 C_AuctionHouse = {}
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_AuctionHouse.CalculateCommodityDeposit)

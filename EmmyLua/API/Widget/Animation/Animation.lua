@@ -1,3 +1,4 @@
+---@meta
 ---@class Animation : ParentedObject, ScriptObject
 local Animation = {}
 

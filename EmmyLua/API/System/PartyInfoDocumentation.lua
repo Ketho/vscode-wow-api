@@ -1,3 +1,4 @@
+---@meta
 C_PartyInfo = {}
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_PartyInfo.AllowedToDoPartyConversion)

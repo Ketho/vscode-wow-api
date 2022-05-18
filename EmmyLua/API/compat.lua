@@ -1,3 +1,4 @@
+---@meta
 ---@diagnostic disable: deprecated
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_foreach)

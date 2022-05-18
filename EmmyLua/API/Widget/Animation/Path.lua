@@ -1,3 +1,4 @@
+---@meta
 ---@class Path : Animation
 local Path = {}
 

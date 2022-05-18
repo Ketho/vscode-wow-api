@@ -1,3 +1,4 @@
+---@meta
 C_PvP = {}
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_PvP.CanDisplayDamage)

@@ -1,3 +1,4 @@
+---@meta
 ---@class Texture : LayeredRegion
 ---[Documentation](https://wowpedia.fandom.com/wiki/UIOBJECT_Texture)
 local Texture = {}

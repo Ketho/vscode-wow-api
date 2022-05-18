@@ -1,3 +1,4 @@
+---@meta
 ---@class FontString : FontInstance, LayeredRegion
 ---[Documentation](https://wowpedia.fandom.com/wiki/UIOBJECT_FontString)
 local FontString = {}

@@ -1,3 +1,4 @@
+---@meta
 C_ChromieTime = {}
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_ChromieTime.CloseUI)

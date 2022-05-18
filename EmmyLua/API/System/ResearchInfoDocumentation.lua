@@ -1,3 +1,4 @@
+---@meta
 C_ResearchInfo = {}
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_ResearchInfo.GetDigSitesForMap)

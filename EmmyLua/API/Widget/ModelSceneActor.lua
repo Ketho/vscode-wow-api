@@ -1,3 +1,4 @@
+---@meta
 ---@class ModelSceneActor : ParentedObject
 local ModelSceneActor = {}
 

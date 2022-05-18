@@ -1,3 +1,4 @@
+---@meta
 C_EventToastManager = {}
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_EventToastManager.GetLevelUpDisplayToastsFromLevel)

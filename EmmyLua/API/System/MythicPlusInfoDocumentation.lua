@@ -1,3 +1,4 @@
+---@meta
 C_MythicPlus = {}
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_MythicPlus.GetCurrentAffixes)

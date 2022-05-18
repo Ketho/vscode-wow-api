@@ -1,3 +1,4 @@
+---@meta
 Spell = {}
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/SpellMixin)

@@ -1,3 +1,4 @@
+---@meta
 ---@class ControlPoint : ParentedObject
 local ControlPoint = {}
 

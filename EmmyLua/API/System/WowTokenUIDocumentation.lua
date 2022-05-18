@@ -1,3 +1,4 @@
+---@meta
 C_WowTokenUI = {}
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_WowTokenUI.StartTokenSell)

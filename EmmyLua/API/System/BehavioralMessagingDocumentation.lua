@@ -1,3 +1,4 @@
+---@meta
 C_BehavioralMessaging = {}
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_BehavioralMessaging.SendNotificationReceipt)

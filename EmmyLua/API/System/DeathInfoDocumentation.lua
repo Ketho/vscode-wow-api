@@ -1,3 +1,4 @@
+---@meta
 C_DeathInfo = {}
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_DeathInfo.GetCorpseMapPosition)

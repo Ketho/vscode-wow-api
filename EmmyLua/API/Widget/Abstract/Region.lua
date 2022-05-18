@@ -1,3 +1,4 @@
+---@meta
 ---@class Region : ParentedObject
 ---[Documentation](https://wowpedia.fandom.com/wiki/UIOBJECT_Region)
 local Region = {}

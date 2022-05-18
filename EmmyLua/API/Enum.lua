@@ -1,3 +1,4 @@
+---@meta
 Enum = {
 	---@class AddSoulbindConduitReason
 	AddSoulbindConduitReason = {

@@ -1,3 +1,4 @@
+---@meta
 C_SocialRestrictions = {}
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_SocialRestrictions.AcknowledgeRegionalChatDisabled)

@@ -1,3 +1,4 @@
+---@meta
 ---@class StatusBar : Frame
 local StatusBar = {}
 

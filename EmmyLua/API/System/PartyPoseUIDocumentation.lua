@@ -1,3 +1,4 @@
+---@meta
 C_PartyPose = {}
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_PartyPose.GetPartyPoseInfoByMapID)

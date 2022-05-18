@@ -1,3 +1,4 @@
+---@meta
 C_AccountInfo = {}
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_AccountInfo.GetIDFromBattleNetAccountGUID)

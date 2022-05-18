@@ -1,3 +1,4 @@
+---@meta
 ---@class DressUpModel : PlayerModel
 local DressUpModel = {}
 

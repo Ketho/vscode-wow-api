@@ -1,3 +1,4 @@
+---@meta
 ---@class ModelScene : Frame
 local ModelScene = {}
 

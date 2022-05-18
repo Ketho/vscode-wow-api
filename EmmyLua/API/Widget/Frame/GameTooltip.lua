@@ -1,3 +1,4 @@
+---@meta
 ---@class GameTooltip : Frame
 local GameTooltip = {}
 

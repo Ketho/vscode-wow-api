@@ -1,3 +1,4 @@
+---@meta
 C_ContributionCollector = {}
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_ContributionCollector.Close)

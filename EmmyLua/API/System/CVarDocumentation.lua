@@ -1,3 +1,4 @@
+---@meta
 C_CVar = {}
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_CVar.GetCVar)

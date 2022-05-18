@@ -1,3 +1,4 @@
+---@meta
 C_FogOfWar = {}
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_FogOfWar.GetFogOfWarForMap)

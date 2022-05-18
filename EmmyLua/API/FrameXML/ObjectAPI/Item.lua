@@ -1,3 +1,4 @@
+---@meta
 Item = {}
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/ItemMixin)

@@ -1,3 +1,4 @@
+---@meta
 C_AlliedRaces = {}
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_AlliedRaces.ClearAlliedRaceDetailsGiver)

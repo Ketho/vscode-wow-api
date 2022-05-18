@@ -1,3 +1,4 @@
+---@meta
 C_PetBattles = {}
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_PetBattles.GetBreedQuality)

@@ -1,3 +1,4 @@
+---@meta
 ---@deprecated
 ---Replaced by [C_TransmogCollection.GetIllusionInfo](https://github.com/Gethe/wow-ui-source/blob/9.1.5/Interface/AddOns/Blizzard_Deprecated/Deprecated_9_1_0.lua#L16)
 function C_TransmogCollection.GetIllusionSourceInfo() end

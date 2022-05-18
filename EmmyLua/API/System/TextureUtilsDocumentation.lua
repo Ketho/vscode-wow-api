@@ -1,3 +1,4 @@
+---@meta
 C_Texture = {}
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_Texture.GetAtlasInfo)

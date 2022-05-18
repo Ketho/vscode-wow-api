@@ -1,3 +1,4 @@
+---@meta
 ---@class AceDB-3.0
 local AceDB = {}
 

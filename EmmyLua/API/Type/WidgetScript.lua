@@ -1,3 +1,4 @@
+---@meta
 ---@alias ScriptType '"OnLoad"' | '"OnUpdate"'
 
 ---@alias ScriptAnimation '"OnFinished"' | '"OnPause"' | '"OnPlay"' | '"OnStop"'

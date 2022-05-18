@@ -1,3 +1,4 @@
+---@meta
 ---@class Alpha : Animation
 local Alpha = {}
 

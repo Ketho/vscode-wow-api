@@ -1,3 +1,4 @@
+---@meta
 C_ClubFinder = {}
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_ClubFinder.ApplicantAcceptClubInvite)

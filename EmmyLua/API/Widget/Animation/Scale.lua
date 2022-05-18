@@ -1,3 +1,4 @@
+---@meta
 ---@class Scale : Animation
 local Scale = {}
 

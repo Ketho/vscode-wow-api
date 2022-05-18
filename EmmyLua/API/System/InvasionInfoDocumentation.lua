@@ -1,3 +1,4 @@
+---@meta
 C_InvasionInfo = {}
 
 ---Returns true if invasions are active in the same physical area as the player.

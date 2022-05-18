@@ -1,3 +1,4 @@
+---@meta
 C_UserFeedback = {}
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_UserFeedback.SubmitBug)

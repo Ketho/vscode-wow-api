@@ -1,3 +1,4 @@
+---@meta
 C_QuestLog = {}
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_QuestLog.AbandonQuest)

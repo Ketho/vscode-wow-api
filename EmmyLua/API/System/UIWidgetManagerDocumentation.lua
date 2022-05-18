@@ -1,3 +1,4 @@
+---@meta
 C_UIWidgetManager = {}
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_UIWidgetManager.GetAllWidgetsBySetID)

@@ -1,3 +1,4 @@
+---@meta
 C_Commentator = {}
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_Commentator.AddPlayerOverrideName)

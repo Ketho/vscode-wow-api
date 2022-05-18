@@ -1,3 +1,4 @@
+---@meta
 C_LFGInfo = {}
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_LFGInfo.CanPlayerUseGroupFinder)

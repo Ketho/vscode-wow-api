@@ -1,3 +1,4 @@
+---@meta
 C_ItemInteraction = {}
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_ItemInteraction.ClearPendingItem)

@@ -1,3 +1,4 @@
+---@meta
 C_LossOfControl = {}
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_LossOfControl.GetActiveLossOfControlData)

@@ -1,3 +1,4 @@
+---@meta
 ---@class Font : FontInstance
 ---[Documentation](https://wowpedia.fandom.com/wiki/UIOBJECT_Font)
 local Font = {}

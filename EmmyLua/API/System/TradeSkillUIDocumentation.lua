@@ -1,3 +1,4 @@
+---@meta
 C_TradeSkillUI = {}
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_TradeSkillUI.CraftRecipe)

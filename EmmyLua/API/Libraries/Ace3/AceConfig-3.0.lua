@@ -1,3 +1,4 @@
+---@meta
 ---@class AceConfig-3.0
 local AceConfig = {}
 

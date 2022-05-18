@@ -1,3 +1,4 @@
+---@meta
 ---@class AceLocale-3.0
 local AceLocale = {}
 

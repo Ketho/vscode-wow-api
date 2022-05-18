@@ -1,3 +1,4 @@
+---@meta
 C_BarberShop = {}
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_BarberShop.ApplyCustomizationChoices)

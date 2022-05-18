@@ -1,3 +1,4 @@
+---@meta
 C_Covenants = {}
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_Covenants.GetActiveCovenantID)

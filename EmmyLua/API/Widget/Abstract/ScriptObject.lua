@@ -1,3 +1,4 @@
+---@meta
 ---@class ScriptObject
 ---[Documentation](https://wowpedia.fandom.com/wiki/UIOBJECT_ScriptObject)
 local ScriptObject = {}

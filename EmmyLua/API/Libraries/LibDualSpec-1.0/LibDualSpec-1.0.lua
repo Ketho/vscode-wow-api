@@ -1,3 +1,4 @@
+---@meta
 ---@class LibDualSpec-1.0
 local lib = {}
 

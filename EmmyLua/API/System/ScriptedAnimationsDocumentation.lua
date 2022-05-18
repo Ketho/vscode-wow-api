@@ -1,3 +1,4 @@
+---@meta
 C_ScriptedAnimations = {}
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_ScriptedAnimations.GetAllScriptedAnimationEffects)

@@ -1,3 +1,4 @@
+---@meta
 C_Minimap = {}
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_Minimap.GetDrawGroundTextures)

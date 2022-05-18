@@ -1,3 +1,4 @@
+---@meta
 C_TransmogSets = {}
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_TransmogSets.ClearLatestSource)
