@@ -2384,12 +2384,3 @@ function GetGuildRosterSelection() end
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_GetGuildRosterShowOffline)
 function GetGuildRosterShowOffline() end
 
----[Documentation](https://wowpedia.fandom.com/wiki/API_GetGuildTabardFiles)
----@return number tabardBackgroundUpper
----@return number tabardBackgroundLower
----@return number tabardEmblemUpper
----@return number tabardEmblemLower
----@return number tabardBorderUpper
----@return number tabardBorderLower
-function GetGuildTabardFiles() end
-

@@ -1,4 +1,13 @@
 ---@meta
+---[Documentation](https://wowpedia.fandom.com/wiki/API_GetGuildTabardFiles)
+---@return number tabardBackgroundUpper
+---@return number tabardBackgroundLower
+---@return number tabardEmblemUpper
+---@return number tabardEmblemLower
+---@return number tabardBorderUpper
+---@return number tabardBorderLower
+function GetGuildTabardFiles() end
+
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_GetGuildTradeSkillInfo)
 function GetGuildTradeSkillInfo(index) end
 
@@ -2501,14 +2510,4 @@ function HideRepairCursor() end
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_InCinematic)
 ---@return boolean inCinematic
 function InCinematic() end
-
----[Documentation](https://wowpedia.fandom.com/wiki/API_InCombatLockdown)
-function InCombatLockdown() end
-
----[Documentation](https://wowpedia.fandom.com/wiki/API_InGuildParty)
----@return boolean inGroup
----@return number numGuildPresent
----@return number numGuildRequired
----@return number xpMultiplier
-function InGuildParty() end
 
