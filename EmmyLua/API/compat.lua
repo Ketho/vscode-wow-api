@@ -140,12 +140,6 @@ date = os.date
 -- os.time
 time = os.time
 
--- dont know how to mark something as not existing
---debug = nil
---io = nil
---os = nil
---package = nil
-
 -- Table library
 local tab = table
 foreach = tab.foreach
@@ -177,7 +171,7 @@ max = math.max
 min = math.min
 mod = math.fmod
 PI = math.pi
---??? pow = math.pow
+--pow = math.pow
 rad = math.rad
 random = math.random
 sin = function (x) return math.sin(math.rad(x)) end
