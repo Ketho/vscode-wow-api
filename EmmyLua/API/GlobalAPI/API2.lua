@@ -921,6 +921,7 @@ function CreateFont(name) end
 ---@param template? `Tp` | TemplateType
 ---@param id? number
 ---@return T|Tp frame
+function CreateFrame(frameType, name, parent, template, id) end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_CreateMacro)
 ---@param name string
