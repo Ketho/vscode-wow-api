@@ -42,10 +42,9 @@ function strsplittable(delimiter, str, pieces) end
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_strjoin)
 ---@param delim string
 ---@param str1 string
----@param str2 string
 ---@vararg string
 ---@return string
-function strjoin(delim, str1, str2, ...) end
+function strjoin(delim, str1, ...) end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_difftime)
 ---@param time1 number
