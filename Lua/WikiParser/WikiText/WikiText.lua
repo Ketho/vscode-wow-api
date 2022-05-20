@@ -29,8 +29,8 @@ function m:GetWikitext(isRetail)
 	local text = handler.root.mediawiki.page.revision.text[1]
 	text = self:ReplaceHtml(text)
 	if isRetail then
-		local str_start = text:find("== API Reference ==")
-		local str_end = text:find("== Classic ==")
+		local str_start = text:find("==API Reference==")
+		local str_end = text:find("==Classic==")
 		return text:sub(str_start, str_end-1)
 	else
 		return text
