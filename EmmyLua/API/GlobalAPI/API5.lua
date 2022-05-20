@@ -1,4 +1,84 @@
 ---@meta
+---[Documentation](https://wowpedia.fandom.com/wiki/API_UnitAffectingCombat)
+---@param unit string
+---@return boolean affectingCombat
+function UnitAffectingCombat(unit) end
+
+---[Documentation](https://wowpedia.fandom.com/wiki/API_UnitArmor)
+function UnitArmor(unit) end
+
+---[Documentation](https://wowpedia.fandom.com/wiki/API_UnitAttackPower)
+function UnitAttackPower(unit) end
+
+---[Documentation](https://wowpedia.fandom.com/wiki/API_UnitAttackSpeed)
+function UnitAttackSpeed(unit) end
+
+---[Documentation](https://wowpedia.fandom.com/wiki/API_UnitAura)
+---@param unit number
+---@param index number
+---@param filter? number
+---@return string name
+---@return number icon
+---@return number count
+---@return string? dispelType
+---@return number duration
+---@return number expirationTime
+---@return string source
+---@return boolean isStealable
+---@return boolean nameplateShowPersonal
+---@return number spellId
+---@return boolean canApplyAura
+---@return boolean isBossDebuff
+---@return boolean castByPlayer
+---@return boolean nameplateShowAll
+---@return number timeMod
+---@return ...
+function UnitAura(unit, index, filter) end
+
+---[Documentation](https://wowpedia.fandom.com/wiki/API_UnitAura)
+---@param unit number
+---@param index number
+---@param filter? number
+---@return string name
+---@return number icon
+---@return number count
+---@return string? dispelType
+---@return number duration
+---@return number expirationTime
+---@return string source
+---@return boolean isStealable
+---@return boolean nameplateShowPersonal
+---@return number spellId
+---@return boolean canApplyAura
+---@return boolean isBossDebuff
+---@return boolean castByPlayer
+---@return boolean nameplateShowAll
+---@return number timeMod
+---@return ...
+function UnitBuff(unit, index, filter) end
+
+---[Documentation](https://wowpedia.fandom.com/wiki/API_UnitAura)
+---@param unit number
+---@param index number
+---@param filter? number
+---@return string name
+---@return number icon
+---@return number count
+---@return string? dispelType
+---@return number duration
+---@return number expirationTime
+---@return string source
+---@return boolean isStealable
+---@return boolean nameplateShowPersonal
+---@return number spellId
+---@return boolean canApplyAura
+---@return boolean isBossDebuff
+---@return boolean castByPlayer
+---@return boolean nameplateShowAll
+---@return number timeMod
+---@return ...
+function UnitDebuff(unit, index, filter) end
+
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_UnitAuraBySlot)
 function UnitAuraBySlot(unit, slot) end
 
@@ -435,7 +515,9 @@ function UnitShouldDisplayName() end
 function UnitSpellHaste(unit) end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_UnitStagger)
-function UnitStagger() end
+---@param unit string
+---@return number damage
+function UnitStagger(unit) end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_UnitStat)
 function UnitStat(unit, statIndex) end

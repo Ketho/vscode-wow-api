@@ -1786,9 +1786,9 @@ function GetSortBagsRightToLeft() end
 function GetSpecChangeCost() end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_GetSpecialization)
----@param isInspect boolean
----@param isPet boolean
----@param specGroup number
+---@param isInspect? boolean
+---@param isPet? boolean
+---@param specGroup? number
 ---@return number currentSpec
 function GetSpecialization(isInspect, isPet, specGroup) end
 
@@ -1892,16 +1892,32 @@ function GetSpellBookItemName() end
 function GetSpellBookItemTexture() end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_GetSpellCharges)
-function GetSpellCharges() end
+---@param spell number|string
+---@return number currentCharges
+---@return number maxCharges
+---@return number cooldownStart
+---@return number cooldownDuration
+---@return number chargeModRate
+---@overload fun(index: number, bookType: string)
+function GetSpellCharges(spell) end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_GetSpellConfirmationPromptsInfo)
 function GetSpellConfirmationPromptsInfo() end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_GetSpellCooldown)
-function GetSpellCooldown() end
+---@param spell number|string
+---@return number start
+---@return number duration
+---@return number enabled
+---@return number modRate
+---@overload fun(index: number, bookType: string)
+function GetSpellCooldown(spell) end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_GetSpellCount)
-function GetSpellCount() end
+---@param spell number|string
+---@return number numCasts
+---@overload fun(index: number, bookType: string)
+function GetSpellCount(spell) end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_GetSpellCritChance)
 function GetSpellCritChance(school) end
@@ -1916,7 +1932,7 @@ function GetSpellDescription(spellID) end
 function GetSpellHitModifier() end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_GetSpellInfo)
----@param spell number|string Spell ID or Name
+---@param spell number|string
 ---@return string name
 ---@return string rank
 ---@return number icon
@@ -1924,6 +1940,7 @@ function GetSpellHitModifier() end
 ---@return number minRange
 ---@return number maxRange
 ---@return number spellID
+---@overload fun(index: number, bookType: string)
 function GetSpellInfo(spell) end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_GetSpellLevelLearned)
@@ -1940,7 +1957,20 @@ function GetSpellLossOfControlCooldown(spellSlot) end
 function GetSpellPenetration() end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_GetSpellPowerCost)
-function GetSpellPowerCost() end
+---@param spell number|string
+---@return SpellPowerCost[] costs
+---@overload fun(index: number, bookType: string)
+function GetSpellPowerCost(spell) end
+
+---@class SpellPowerCost
+---@field minCost number
+---@field cost number
+---@field costPercent number
+---@field costPerSec number
+---@field type PowerType
+---@field name string
+---@field hasRequiredAura boolean
+---@field requiredAuraID number
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_GetSpellQueueWindow)
 function GetSpellQueueWindow() end
@@ -1962,7 +1992,10 @@ function GetSpellSubtext() end
 function GetSpellTabInfo(tabIndex) end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_GetSpellTexture)
-function GetSpellTexture() end
+---@param spell number|string
+---@return number icon
+---@overload fun(index: number, bookType: string)
+function GetSpellTexture(spell) end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_GetSpellTradeSkillLink)
 function GetSpellTradeSkillLink() end
@@ -2482,32 +2515,4 @@ function HasPetUI() end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_HasSPEffectsAttackPower)
 function HasSPEffectsAttackPower() end
-
----[Documentation](https://wowpedia.fandom.com/wiki/API_HasSendMailItem)
-function HasSendMailItem(index) end
-
----[Documentation](https://wowpedia.fandom.com/wiki/API_HasTempShapeshiftActionBar)
-function HasTempShapeshiftActionBar() end
-
----[Documentation](https://wowpedia.fandom.com/wiki/API_HasVehicleActionBar)
-function HasVehicleActionBar() end
-
----[Documentation](https://wowpedia.fandom.com/wiki/API_HasWandEquipped)
-function HasWandEquipped() end
-
----[Documentation](https://wowpedia.fandom.com/wiki/API_HaveQuestData)
-function HaveQuestData(questID) end
-
----[Documentation](https://wowpedia.fandom.com/wiki/API_HaveQuestRewardData)
-function HaveQuestRewardData(questID) end
-
----[Documentation](https://wowpedia.fandom.com/wiki/API_HearthAndResurrectFromArea)
-function HearthAndResurrectFromArea() end
-
----[Documentation](https://wowpedia.fandom.com/wiki/API_HideRepairCursor)
-function HideRepairCursor() end
-
----[Documentation](https://wowpedia.fandom.com/wiki/API_InCinematic)
----@return boolean inCinematic
-function InCinematic() end
 
