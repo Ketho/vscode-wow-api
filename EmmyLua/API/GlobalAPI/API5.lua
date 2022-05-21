@@ -1,4 +1,137 @@
 ---@meta
+---[Documentation](https://wowpedia.fandom.com/wiki/API_TargetNearestEnemyPlayer)
+function TargetNearestEnemyPlayer(reverseFlag) end
+
+---[Documentation](https://wowpedia.fandom.com/wiki/API_TargetNearestFriend)
+function TargetNearestFriend(reverseFlag) end
+
+---[Documentation](https://wowpedia.fandom.com/wiki/API_TargetNearestFriendPlayer)
+function TargetNearestFriendPlayer(reverseFlag) end
+
+---[Documentation](https://wowpedia.fandom.com/wiki/API_TargetNearestPartyMember)
+function TargetNearestPartyMember() end
+
+---[Documentation](https://wowpedia.fandom.com/wiki/API_TargetNearestRaidMember)
+function TargetNearestRaidMember() end
+
+---[Documentation](https://wowpedia.fandom.com/wiki/API_TargetPriorityHighlightEnd)
+function TargetPriorityHighlightEnd() end
+
+---[Documentation](https://wowpedia.fandom.com/wiki/API_TargetPriorityHighlightStart)
+function TargetPriorityHighlightStart() end
+
+---[Documentation](https://wowpedia.fandom.com/wiki/API_TargetSpellReplacesBonusTree)
+function TargetSpellReplacesBonusTree() end
+
+---[Documentation](https://wowpedia.fandom.com/wiki/API_TargetTotem)
+function TargetTotem(slot) end
+
+---[Documentation](https://wowpedia.fandom.com/wiki/API_TargetUnit)
+function TargetUnit(unit, exactMatch) end
+
+---[Documentation](https://wowpedia.fandom.com/wiki/API_TaxiGetDestX)
+function TaxiGetDestX(slot, hop) end
+
+---[Documentation](https://wowpedia.fandom.com/wiki/API_TaxiGetDestY)
+function TaxiGetDestY(slot, hop) end
+
+---[Documentation](https://wowpedia.fandom.com/wiki/API_TaxiGetNodeSlot)
+function TaxiGetNodeSlot() end
+
+---[Documentation](https://wowpedia.fandom.com/wiki/API_TaxiGetSrcX)
+function TaxiGetSrcX(slot, hop) end
+
+---[Documentation](https://wowpedia.fandom.com/wiki/API_TaxiGetSrcY)
+function TaxiGetSrcY(slot, hop) end
+
+---[Documentation](https://wowpedia.fandom.com/wiki/API_TaxiIsDirectFlight)
+function TaxiIsDirectFlight() end
+
+---[Documentation](https://wowpedia.fandom.com/wiki/API_TaxiNodeCost)
+---@param slot number
+---@return number cost
+function TaxiNodeCost(slot) end
+
+---[Documentation](https://wowpedia.fandom.com/wiki/API_TaxiNodeGetType)
+---@param index number
+---@return string type
+function TaxiNodeGetType(index) end
+
+---[Documentation](https://wowpedia.fandom.com/wiki/API_TaxiNodeName)
+---@param index number
+---@return string name
+function TaxiNodeName(index) end
+
+---[Documentation](https://wowpedia.fandom.com/wiki/API_TaxiNodePosition)
+function TaxiNodePosition(slot) end
+
+---[Documentation](https://wowpedia.fandom.com/wiki/API_TaxiRequestEarlyLanding)
+function TaxiRequestEarlyLanding() end
+
+---[Documentation](https://wowpedia.fandom.com/wiki/API_TimeoutResurrect)
+function TimeoutResurrect() end
+
+---[Documentation](https://wowpedia.fandom.com/wiki/API_ToggleAnimKitDisplay)
+function ToggleAnimKitDisplay() end
+
+---[Documentation](https://wowpedia.fandom.com/wiki/API_ToggleAutoRun)
+function ToggleAutoRun() end
+
+---[Documentation](https://wowpedia.fandom.com/wiki/API_ToggleDebugAIDisplay)
+function ToggleDebugAIDisplay() end
+
+---[Documentation](https://wowpedia.fandom.com/wiki/API_TogglePVP)
+function TogglePVP() end
+
+---[Documentation](https://wowpedia.fandom.com/wiki/API_TogglePetAutocast)
+function TogglePetAutocast(index) end
+
+---[Documentation](https://wowpedia.fandom.com/wiki/API_ToggleRun)
+function ToggleRun() end
+
+---[Documentation](https://wowpedia.fandom.com/wiki/API_ToggleSelfHighlight)
+function ToggleSelfHighlight() end
+
+---[Documentation](https://wowpedia.fandom.com/wiki/API_ToggleSheath)
+function ToggleSheath() end
+
+---[Documentation](https://wowpedia.fandom.com/wiki/API_ToggleSpellAutocast)
+function ToggleSpellAutocast() end
+
+---[Documentation](https://wowpedia.fandom.com/wiki/API_ToggleWindowed)
+function ToggleWindowed() end
+
+---[Documentation](https://wowpedia.fandom.com/wiki/API_TriggerTutorial)
+function TriggerTutorial(tutorial) end
+
+---[Documentation](https://wowpedia.fandom.com/wiki/API_TurnInGuildCharter)
+function TurnInGuildCharter() end
+
+---[Documentation](https://wowpedia.fandom.com/wiki/API_TurnLeftStart)
+---@param startTime number
+function TurnLeftStart(startTime) end
+
+---[Documentation](https://wowpedia.fandom.com/wiki/API_TurnLeftStop)
+function TurnLeftStop() end
+
+---[Documentation](https://wowpedia.fandom.com/wiki/API_TurnOrActionStart)
+function TurnOrActionStart() end
+
+---[Documentation](https://wowpedia.fandom.com/wiki/API_TurnOrActionStop)
+function TurnOrActionStop() end
+
+---[Documentation](https://wowpedia.fandom.com/wiki/API_TurnRightStart)
+---@param startTime number
+function TurnRightStart(startTime) end
+
+---[Documentation](https://wowpedia.fandom.com/wiki/API_TurnRightStop)
+function TurnRightStop() end
+
+---[Documentation](https://wowpedia.fandom.com/wiki/API_UninviteUnit)
+---@param name string
+---@param reason? string
+function UninviteUnit(name, reason) end
+
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_UnitAffectingCombat)
 ---@param unit string
 ---@return boolean affectingCombat
@@ -89,7 +222,9 @@ function UnitAuraSlots(unit, filter, maxSlots, continuationToken) end
 function UnitBattlePetLevel() end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_UnitBattlePetSpeciesID)
-function UnitBattlePetSpeciesID() end
+---@param unit string
+---@return number speciesID
+function UnitBattlePetSpeciesID(unit) end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_UnitBattlePetType)
 function UnitBattlePetType() end
@@ -228,9 +363,13 @@ function UnitHasVehiclePlayerFrameUI() end
 function UnitHasVehicleUI(unit) end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_UnitHealth)
+---@param unit string
+---@return number health
 function UnitHealth(unit) end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_UnitHealthMax)
+---@param unit string
+---@return number maxHealth
 function UnitHealthMax(unit) end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_UnitHonor)
@@ -324,7 +463,9 @@ function UnitIsFriend(unit, otherUnit) end
 function UnitIsGhost(unit) end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_UnitIsGroupAssistant)
-function UnitIsGroupAssistant() end
+---@param unit string
+---@return boolean isAssistant
+function UnitIsGroupAssistant(unit) end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_UnitIsGroupLeader)
 ---@param unit string
@@ -443,6 +584,8 @@ function UnitPVPName(unit) end
 function UnitPlayerControlled(unit) end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_UnitPlayerOrPetInParty)
+---@param unit string
+---@return boolean inMyParty
 function UnitPlayerOrPetInParty(unit) end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_UnitPlayerOrPetInRaid)
@@ -486,7 +629,9 @@ function UnitRangedDamage(unit) end
 function UnitReaction(unit, otherUnit) end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_UnitRealmRelationship)
-function UnitRealmRelationship() end
+---@param unit string
+---@return number realmRelationship
+function UnitRealmRelationship(unit) end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_UnitSelectionColor)
 ---@param UnitId string
@@ -504,7 +649,9 @@ function UnitSelectionColor(UnitId, useExtendedColors) end
 function UnitSelectionType(UnitId, useExtendedColors) end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_UnitSetRole)
-function UnitSetRole() end
+---@param unit string
+---@param role string
+function UnitSetRole(unit, role) end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_UnitShouldDisplayName)
 function UnitShouldDisplayName() end

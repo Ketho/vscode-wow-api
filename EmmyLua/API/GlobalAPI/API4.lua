@@ -1,4 +1,113 @@
 ---@meta
+---[Documentation](https://wowpedia.fandom.com/wiki/API_GuildInvite)
+function GuildInvite(name) end
+
+---[Documentation](https://wowpedia.fandom.com/wiki/API_GuildLeave)
+function GuildLeave() end
+
+---[Documentation](https://wowpedia.fandom.com/wiki/API_GuildMasterAbsent)
+function GuildMasterAbsent() end
+
+---[Documentation](https://wowpedia.fandom.com/wiki/API_GuildNewsSetSticky)
+function GuildNewsSetSticky(index, bool) end
+
+---[Documentation](https://wowpedia.fandom.com/wiki/API_GuildNewsSort)
+function GuildNewsSort(byDate) end
+
+---[Documentation](https://wowpedia.fandom.com/wiki/API_GuildPromote)
+---@param playername string
+function GuildPromote(playername) end
+
+---[Documentation](https://wowpedia.fandom.com/wiki/API_GuildRosterSetOfficerNote)
+function GuildRosterSetOfficerNote(index, note) end
+
+---[Documentation](https://wowpedia.fandom.com/wiki/API_GuildRosterSetPublicNote)
+function GuildRosterSetPublicNote(index, note) end
+
+---[Documentation](https://wowpedia.fandom.com/wiki/API_GuildSetLeader)
+---@param name string
+function GuildSetLeader(name) end
+
+---[Documentation](https://wowpedia.fandom.com/wiki/API_GuildSetMOTD)
+function GuildSetMOTD(note) end
+
+---[Documentation](https://wowpedia.fandom.com/wiki/API_GuildUninvite)
+---@param player string
+function GuildUninvite(player) end
+
+---[Documentation](https://wowpedia.fandom.com/wiki/API_HandleAtlasMemberCommand)
+function HandleAtlasMemberCommand() end
+
+---[Documentation](https://wowpedia.fandom.com/wiki/API_HasAPEffectsSpellPower)
+function HasAPEffectsSpellPower() end
+
+---[Documentation](https://wowpedia.fandom.com/wiki/API_HasAction)
+---@param actionSlot number
+---@return boolean hasAction
+function HasAction(actionSlot) end
+
+---[Documentation](https://wowpedia.fandom.com/wiki/API_HasArtifactEquipped)
+function HasArtifactEquipped() end
+
+---[Documentation](https://wowpedia.fandom.com/wiki/API_HasAttachedGlyph)
+function HasAttachedGlyph(spellID) end
+
+---[Documentation](https://wowpedia.fandom.com/wiki/API_HasBonusActionBar)
+function HasBonusActionBar() end
+
+---[Documentation](https://wowpedia.fandom.com/wiki/API_HasBoundGemProposed)
+function HasBoundGemProposed() end
+
+---[Documentation](https://wowpedia.fandom.com/wiki/API_HasCompletedAnyAchievement)
+function HasCompletedAnyAchievement(achievementID) end
+
+---[Documentation](https://wowpedia.fandom.com/wiki/API_HasDualWieldPenalty)
+function HasDualWieldPenalty() end
+
+---[Documentation](https://wowpedia.fandom.com/wiki/API_HasExtraActionBar)
+---@return boolean hasBar
+function HasExtraActionBar() end
+
+---[Documentation](https://wowpedia.fandom.com/wiki/API_HasFullControl)
+---@return boolean hasControl
+function HasFullControl() end
+
+---[Documentation](https://wowpedia.fandom.com/wiki/API_HasIgnoreDualWieldWeapon)
+function HasIgnoreDualWieldWeapon() end
+
+---[Documentation](https://wowpedia.fandom.com/wiki/API_HasInboxItem)
+function HasInboxItem() end
+
+---[Documentation](https://wowpedia.fandom.com/wiki/API_HasLFGRestrictions)
+---@return boolean isRestricted
+function HasLFGRestrictions() end
+
+---[Documentation](https://wowpedia.fandom.com/wiki/API_HasLoadedCUFProfiles)
+function HasLoadedCUFProfiles() end
+
+---[Documentation](https://wowpedia.fandom.com/wiki/API_HasNewMail)
+function HasNewMail() end
+
+---[Documentation](https://wowpedia.fandom.com/wiki/API_HasNoReleaseAura)
+function HasNoReleaseAura() end
+
+---[Documentation](https://wowpedia.fandom.com/wiki/API_HasOverrideActionBar)
+function HasOverrideActionBar() end
+
+---[Documentation](https://wowpedia.fandom.com/wiki/API_HasPendingGlyphCast)
+function HasPendingGlyphCast() end
+
+---[Documentation](https://wowpedia.fandom.com/wiki/API_HasPetSpells)
+function HasPetSpells() end
+
+---[Documentation](https://wowpedia.fandom.com/wiki/API_HasPetUI)
+---@return boolean hasUI
+---@return boolean isHunterPet
+function HasPetUI() end
+
+---[Documentation](https://wowpedia.fandom.com/wiki/API_HasSPEffectsAttackPower)
+function HasSPEffectsAttackPower() end
+
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_HasSendMailItem)
 function HasSendMailItem(index) end
 
@@ -143,6 +252,9 @@ function IsBagSlotFlagEnabledOnOtherBags(index, flagIndex) end
 function IsBagSlotFlagEnabledOnOtherBankBags() end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_IsBattlePayItem)
+---@param bag number
+---@param slot number
+---@return boolean isPayItem
 function IsBattlePayItem(bag, slot) end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_IsBindingForGamePad)
@@ -244,7 +356,9 @@ function IsEncounterSuppressingRelease() end
 function IsEquippableItem(item) end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_IsEquippedAction)
-function IsEquippedAction(slot) end
+---@param slotID number
+---@return boolean isEquipped
+function IsEquippedAction(slotID) end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_IsEquippedItem)
 function IsEquippedItem(item) end
@@ -591,6 +705,9 @@ function IsSpellClassOrSpec() end
 function IsSpellInRange(spellName, unit) end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_IsSpellKnown)
+---@param spellID number
+---@param isPetSpell boolean
+---@return boolean isKnown
 function IsSpellKnown(spellID, isPetSpell) end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_IsSpellKnownOrOverridesKnown)
@@ -667,7 +784,11 @@ function IsUsableAction(slot) end
 function IsUsableItem(item) end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_IsUsableSpell)
-function IsUsableSpell() end
+---@param spell number|string
+---@return boolean usable
+---@return boolean noMana
+---@overload fun(index: number, bookType: string)
+function IsUsableSpell(spell) end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_IsUsingFixedTimeStep)
 function IsUsingFixedTimeStep() end
@@ -874,7 +995,8 @@ function LeaveLFG(category) end
 function LeaveSingleLFG(category, lfgID) end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_ListChannelByName)
-function ListChannelByName(channelMatch) end
+---@param channelName string|number
+function ListChannelByName(channelName) end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_ListChannels)
 function ListChannels() end
@@ -1291,7 +1413,12 @@ function QuestLogShouldShowPortrait() end
 function QuestMapUpdateAllQuests() end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_QuestPOIGetIconInfo)
-function QuestPOIGetIconInfo(questID) end
+---@param questId number
+---@return boolean completed
+---@return number posX
+---@return number posY
+---@return number objective
+function QuestPOIGetIconInfo(questId) end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_QuestPOIGetSecondaryLocations)
 function QuestPOIGetSecondaryLocations(questID, table) end
@@ -1495,7 +1622,9 @@ function RetrieveCorpse() end
 function ReturnInboxItem(index) end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_RollOnLoot)
-function RollOnLoot(rollId, roll) end
+---@param rollID number
+---@param rollType? number
+function RollOnLoot(rollID, rollType) end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_RunBinding)
 ---@param command string
@@ -1601,7 +1730,9 @@ function SendMail(recipient, subject, body) end
 function SendSystemMessage(msg) end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_SetAchievementComparisonUnit)
-function SetAchievementComparisonUnit(unitId) end
+---@param unit string
+---@return boolean success
+function SetAchievementComparisonUnit(unit) end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_SetAchievementSearchString)
 ---@param searchText string
@@ -1624,7 +1755,8 @@ function SetAllowDangerousScripts() end
 function SetAllowLowLevelRaid(allowed) end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_SetAutoDeclineGuildInvites)
-function SetAutoDeclineGuildInvites(checked) end
+---@param decline string|number
+function SetAutoDeclineGuildInvites(decline) end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_SetBackpackAutosortDisabled)
 function SetBackpackAutosortDisabled(disable) end
@@ -1648,6 +1780,10 @@ function SetBarSlotFromIntro(slot) end
 function SetBattlefieldScoreFaction(faction) end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_SetBinding)
+---@param key string
+---@param command? string
+---@param mode number
+---@return boolean ok
 function SetBinding(key, command, mode) end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_SetBindingClick)
@@ -2196,7 +2332,10 @@ function SpellTargetUnit(unitId) end
 function SplashFrameCanBeShown() end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_SplitContainerItem)
-function SplitContainerItem(bagID, slot, amount) end
+---@param bagID number
+---@param slot number
+---@param count number
+function SplitContainerItem(bagID, slot, count) end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_SplitGuildBankItem)
 function SplitGuildBankItem(tab, slot, amount) end
@@ -2268,6 +2407,7 @@ function Stuck() end
 function SubmitRequiredGuildRename() end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_SummonFriend)
+---@param unit string
 function SummonFriend(unit) end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_SummonRandomCritter)
@@ -2324,137 +2464,4 @@ function TargetNearest() end
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_TargetNearestEnemy)
 ---@param reverse boolean
 function TargetNearestEnemy(reverse) end
-
----[Documentation](https://wowpedia.fandom.com/wiki/API_TargetNearestEnemyPlayer)
-function TargetNearestEnemyPlayer(reverseFlag) end
-
----[Documentation](https://wowpedia.fandom.com/wiki/API_TargetNearestFriend)
-function TargetNearestFriend(reverseFlag) end
-
----[Documentation](https://wowpedia.fandom.com/wiki/API_TargetNearestFriendPlayer)
-function TargetNearestFriendPlayer(reverseFlag) end
-
----[Documentation](https://wowpedia.fandom.com/wiki/API_TargetNearestPartyMember)
-function TargetNearestPartyMember() end
-
----[Documentation](https://wowpedia.fandom.com/wiki/API_TargetNearestRaidMember)
-function TargetNearestRaidMember() end
-
----[Documentation](https://wowpedia.fandom.com/wiki/API_TargetPriorityHighlightEnd)
-function TargetPriorityHighlightEnd() end
-
----[Documentation](https://wowpedia.fandom.com/wiki/API_TargetPriorityHighlightStart)
-function TargetPriorityHighlightStart() end
-
----[Documentation](https://wowpedia.fandom.com/wiki/API_TargetSpellReplacesBonusTree)
-function TargetSpellReplacesBonusTree() end
-
----[Documentation](https://wowpedia.fandom.com/wiki/API_TargetTotem)
-function TargetTotem(slot) end
-
----[Documentation](https://wowpedia.fandom.com/wiki/API_TargetUnit)
-function TargetUnit(unit, exactMatch) end
-
----[Documentation](https://wowpedia.fandom.com/wiki/API_TaxiGetDestX)
-function TaxiGetDestX(slot, hop) end
-
----[Documentation](https://wowpedia.fandom.com/wiki/API_TaxiGetDestY)
-function TaxiGetDestY(slot, hop) end
-
----[Documentation](https://wowpedia.fandom.com/wiki/API_TaxiGetNodeSlot)
-function TaxiGetNodeSlot() end
-
----[Documentation](https://wowpedia.fandom.com/wiki/API_TaxiGetSrcX)
-function TaxiGetSrcX(slot, hop) end
-
----[Documentation](https://wowpedia.fandom.com/wiki/API_TaxiGetSrcY)
-function TaxiGetSrcY(slot, hop) end
-
----[Documentation](https://wowpedia.fandom.com/wiki/API_TaxiIsDirectFlight)
-function TaxiIsDirectFlight() end
-
----[Documentation](https://wowpedia.fandom.com/wiki/API_TaxiNodeCost)
----@param slot number
----@return number cost
-function TaxiNodeCost(slot) end
-
----[Documentation](https://wowpedia.fandom.com/wiki/API_TaxiNodeGetType)
----@param index number
----@return string type
-function TaxiNodeGetType(index) end
-
----[Documentation](https://wowpedia.fandom.com/wiki/API_TaxiNodeName)
----@param index number
----@return string name
-function TaxiNodeName(index) end
-
----[Documentation](https://wowpedia.fandom.com/wiki/API_TaxiNodePosition)
-function TaxiNodePosition(slot) end
-
----[Documentation](https://wowpedia.fandom.com/wiki/API_TaxiRequestEarlyLanding)
-function TaxiRequestEarlyLanding() end
-
----[Documentation](https://wowpedia.fandom.com/wiki/API_TimeoutResurrect)
-function TimeoutResurrect() end
-
----[Documentation](https://wowpedia.fandom.com/wiki/API_ToggleAnimKitDisplay)
-function ToggleAnimKitDisplay() end
-
----[Documentation](https://wowpedia.fandom.com/wiki/API_ToggleAutoRun)
-function ToggleAutoRun() end
-
----[Documentation](https://wowpedia.fandom.com/wiki/API_ToggleDebugAIDisplay)
-function ToggleDebugAIDisplay() end
-
----[Documentation](https://wowpedia.fandom.com/wiki/API_TogglePVP)
-function TogglePVP() end
-
----[Documentation](https://wowpedia.fandom.com/wiki/API_TogglePetAutocast)
-function TogglePetAutocast(index) end
-
----[Documentation](https://wowpedia.fandom.com/wiki/API_ToggleRun)
-function ToggleRun() end
-
----[Documentation](https://wowpedia.fandom.com/wiki/API_ToggleSelfHighlight)
-function ToggleSelfHighlight() end
-
----[Documentation](https://wowpedia.fandom.com/wiki/API_ToggleSheath)
-function ToggleSheath() end
-
----[Documentation](https://wowpedia.fandom.com/wiki/API_ToggleSpellAutocast)
-function ToggleSpellAutocast() end
-
----[Documentation](https://wowpedia.fandom.com/wiki/API_ToggleWindowed)
-function ToggleWindowed() end
-
----[Documentation](https://wowpedia.fandom.com/wiki/API_TriggerTutorial)
-function TriggerTutorial(tutorial) end
-
----[Documentation](https://wowpedia.fandom.com/wiki/API_TurnInGuildCharter)
-function TurnInGuildCharter() end
-
----[Documentation](https://wowpedia.fandom.com/wiki/API_TurnLeftStart)
----@param startTime number
-function TurnLeftStart(startTime) end
-
----[Documentation](https://wowpedia.fandom.com/wiki/API_TurnLeftStop)
-function TurnLeftStop() end
-
----[Documentation](https://wowpedia.fandom.com/wiki/API_TurnOrActionStart)
-function TurnOrActionStart() end
-
----[Documentation](https://wowpedia.fandom.com/wiki/API_TurnOrActionStop)
-function TurnOrActionStop() end
-
----[Documentation](https://wowpedia.fandom.com/wiki/API_TurnRightStart)
----@param startTime number
-function TurnRightStart(startTime) end
-
----[Documentation](https://wowpedia.fandom.com/wiki/API_TurnRightStop)
-function TurnRightStop() end
-
----[Documentation](https://wowpedia.fandom.com/wiki/API_UninviteUnit)
----@param name string
----@param reason? string
-function UninviteUnit(name, reason) end
 

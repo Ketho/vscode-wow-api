@@ -88,7 +88,9 @@ local m = {}
 
 function m:ParsePages(options)
 	for k, v in pairs(handler.root.mediawiki.page) do
-		-- print(v.title) --debug
+		-- if options and options.debug then
+		-- 	print(v.title)
+		-- end
 		local info = {}
 		info.idx = k
 		info.apiName = GetApiName(v.title)
@@ -120,8 +122,8 @@ function m:ParsePages(options)
 				-- update current section
 				info.section = lineLower:match("==%s?(.-)%s?==") or info.section
 				-- look for params
-				if line:find("^:?;") and line:find(":") then
-					local name, valueType, optional = self:ParseParam(line, info)
+				if line:find("^[:;]") and line:find(":", 4) and not line:find("^:[:%*]") then
+					local name, valueType, optional, array = self:ParseParam(line, info)
 					if name then
 						local paramTbl = info.params[info.section]
 						if paramTbl then
@@ -129,6 +131,7 @@ function m:ParsePages(options)
 								name = name,
 								type = valueType,
 								optional = optional,
+								array = array,
 							})
 						end
 					end
@@ -137,7 +140,10 @@ function m:ParsePages(options)
 			if parsingCodeBlock then -- bug, signature was on the last line
 				self:ParseSignature(info.signature.lines, info)
 			end
-			-- self:PrintApi(info)
+			if options and options.debug then
+				self:PrintApi(info)
+			end
+			if options then info.debug = options.debug end
 			local hasError = self:ValidateApi(info)
 			if not hasError then
 				validatedApi[info.apiName] = info
@@ -201,22 +207,36 @@ local function IsOptional(s)
 	end
 end
 
+--[=[
+:; spellTreeID : Integer - the spell tree:
+;mapID : <span class="apitype">number</span> : [[UiMapID]]
+;instanceID : <span title="optional"><span class="apitype">number</span>?</span> : JournalInstance.ID - If
+;spellID : &lt;span class="apitype"&gt;number&lt;/span&gt; - Any valid spell ID.
+;[[achievementID]]: Number - ID of the achievement to add to tracking.
+]=]
+
+local function StripHyperlink(s)
+	return s:gsub("%[%[.-|?(.-)%]%]", "%1")
+end
+
 function m:ParseParam(line, info)
-	-- ;spellID : &lt;span class="apitype"&gt;number&lt;/span&gt; - Any valid spell ID.
-	line = line:match("(.-)%s?%-") or line -- remove any comment text
-	-- not sure if we should use patterns to handle multiple formats
-	local name, valueType = line:match(":?;%d*%.?%s?(.-)%s?:%s?(.+)")
-	if not valueType then
+	line = line:match("(.-)%s-%-") or line -- remove any comment text
+	line = StripHyperlink(line)
+	local name, pType = line:match("(%w+)%s-:%s-(.+)")
+	if not name then
 		return "UNKNOWN", "UNKNOWN"
 	end
-	-- <span class="apitype">number</span>
-	valueType = valueType:match("(%w+)</span>") or valueType
-	-- {{api|t=t|number}}
-	valueType = valueType:match("(%w+)}}") or valueType
-	name = name:match("(%w+)%]%]") or name
-	local optional = IsOptional(line)
-	valueType = valueType:lower()
-	return name, valueType, optional
+	pType = pType:match("(.-) :") or pType -- remove any subtype
+	pType = pType:match("(.-)%s-%(") or pType
+	pType = pType:match(">(%w+)<") or pType
+	pType = pType:lower():gsub("%s", "")
+	local isArray = pType:find("%[%]")
+	if isArray then
+		pType = pType:gsub("%[%]", "")
+	end
+	if info.apiName == "C_TradeSkillUI.GetCategories" then print(line, name, pType, isArray) end
+	local isOptional = IsOptional(line)
+	return name, pType, isOptional, isArray
 end
 
 local function PrintApiParam(t)
@@ -256,7 +276,9 @@ end
 
 local function ValidationError(info, msg)
 	info.hasError = true
-	-- print(msg)
+	if info.debug then
+		print(msg)
+	end
 end
 
 function m:ValidateApi(info)
@@ -286,7 +308,7 @@ function m:ValidateApi(info)
 		elseif info.signature.arguments[i] ~= param.name then
 			ValidationError(info, string.format("%d:%s - argument does not match: %s, %s", info.idx, info.apiName, info.signature.arguments[i], param.name))
 		end
-		if not validTypes[param.type] then
+		if not validTypes[param.type:match("%w+")] then -- trim []
 			ValidationError(info, string.format("%d:%s - argument type is not valid: %s, %s", info.idx, info.apiName, param.name, param.type))
 		end
 	end
@@ -306,7 +328,7 @@ function m:ValidateApi(info)
 		elseif info.signature.returns[i] ~= param.name then
 			ValidationError(info, string.format("%d:%s - return value does not match: %s, %s", info.idx, info.apiName, info.signature.returns[i], param.name))
 		end
-		if not validTypes[param.type] then
+		if not validTypes[param.type:match("%w+")] then
 			ValidationError(info, string.format("%d:%s - return type is not valid: %s, %s", info.idx, info.apiName, param.name, param.type))
 		end
 	end
@@ -315,7 +337,7 @@ end
 
 m:ParsePages()
 -- m:ParsePages({range = {844, 850}})
--- m:ParsePages({name = "C_Garrison.HasShipyard"})
+-- m:ParsePages({name = "GetItemInfoInstant", debug = true})
 
 -- for k, v in pairs(redirects) do
 -- 	print(k, v[1], v[2])

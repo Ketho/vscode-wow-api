@@ -31,6 +31,7 @@ function m:ConvertApi(wowpediaDocs)
 					Name = param.name,
 					Type = GetType(param.type),
 					Nilable = param.optional,
+					InnerType = param.array and param.type,
 				}
 			end
 		end
@@ -41,6 +42,7 @@ function m:ConvertApi(wowpediaDocs)
 					Name = param.name,
 					Type = GetType(param.type),
 					Nilable = param.optional,
+					InnerType = param.array and param.type,
 				}
 			end
 		end

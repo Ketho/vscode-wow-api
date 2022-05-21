@@ -1,4 +1,79 @@
 ---@meta
+---[Documentation](https://wowpedia.fandom.com/wiki/API_GetGuildEventInfo)
+function GetGuildEventInfo(index) end
+
+---[Documentation](https://wowpedia.fandom.com/wiki/API_GetGuildExpirationTime)
+function GetGuildExpirationTime() end
+
+---[Documentation](https://wowpedia.fandom.com/wiki/API_GetGuildFactionGroup)
+function GetGuildFactionGroup() end
+
+---[Documentation](https://wowpedia.fandom.com/wiki/API_GetGuildFactionInfo)
+function GetGuildFactionInfo() end
+
+---[Documentation](https://wowpedia.fandom.com/wiki/API_GetGuildInfo)
+---@param unit string
+---@return string guildName
+---@return string guildRankName
+---@return number guildRankIndex
+---@return string? realm
+function GetGuildInfo(unit) end
+
+---[Documentation](https://wowpedia.fandom.com/wiki/API_GetGuildInfoText)
+function GetGuildInfoText() end
+
+---[Documentation](https://wowpedia.fandom.com/wiki/API_GetGuildLogoInfo)
+function GetGuildLogoInfo() end
+
+---[Documentation](https://wowpedia.fandom.com/wiki/API_GetGuildMemberRecipes)
+function GetGuildMemberRecipes(name, skillLineID) end
+
+---[Documentation](https://wowpedia.fandom.com/wiki/API_GetGuildNewsFilters)
+function GetGuildNewsFilters() end
+
+---[Documentation](https://wowpedia.fandom.com/wiki/API_GetGuildNewsMemberName)
+function GetGuildNewsMemberName(index, nameIndex) end
+
+---[Documentation](https://wowpedia.fandom.com/wiki/API_GetGuildNewsSort)
+function GetGuildNewsSort() end
+
+---[Documentation](https://wowpedia.fandom.com/wiki/API_GetGuildPerkInfo)
+function GetGuildPerkInfo() end
+
+---[Documentation](https://wowpedia.fandom.com/wiki/API_GetGuildRecipeInfoPostQuery)
+function GetGuildRecipeInfoPostQuery() end
+
+---[Documentation](https://wowpedia.fandom.com/wiki/API_GetGuildRecipeMember)
+---@param index number
+---@return string name
+---@return boolean online
+function GetGuildRecipeMember(index) end
+
+---[Documentation](https://wowpedia.fandom.com/wiki/API_GetGuildRenameRequired)
+function GetGuildRenameRequired() end
+
+---[Documentation](https://wowpedia.fandom.com/wiki/API_GetGuildRewardInfo)
+function GetGuildRewardInfo(index) end
+
+---[Documentation](https://wowpedia.fandom.com/wiki/API_GetGuildRosterInfo)
+function GetGuildRosterInfo(index) end
+
+---[Documentation](https://wowpedia.fandom.com/wiki/API_GetGuildRosterLargestAchievementPoints)
+function GetGuildRosterLargestAchievementPoints() end
+
+---[Documentation](https://wowpedia.fandom.com/wiki/API_GetGuildRosterLastOnline)
+function GetGuildRosterLastOnline(index) end
+
+---[Documentation](https://wowpedia.fandom.com/wiki/API_GetGuildRosterMOTD)
+---@return string motd
+function GetGuildRosterMOTD() end
+
+---[Documentation](https://wowpedia.fandom.com/wiki/API_GetGuildRosterSelection)
+function GetGuildRosterSelection() end
+
+---[Documentation](https://wowpedia.fandom.com/wiki/API_GetGuildRosterShowOffline)
+function GetGuildRosterShowOffline() end
+
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_GetGuildTabardFiles)
 ---@return number tabardBackgroundUpper
 ---@return number tabardBackgroundLower
@@ -158,6 +233,10 @@ function GetInventoryItemDurability(slot) end
 function GetInventoryItemEquippedUnusable(unit, slot) end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_GetInventoryItemID)
+---@param unit string
+---@param invSlot number
+---@return number itemId
+---@return number unknown
 function GetInventoryItemID(unit, invSlot) end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_GetInventoryItemLink)
@@ -315,6 +394,7 @@ function GetLFGCompletionRewardItem(rewardIndex) end
 function GetLFGCompletionRewardItemLink(rewardIndex) end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_GetLFGDeserterExpiration)
+---@return number? expiryTime
 function GetLFGDeserterExpiration() end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_GetLFGDungeonEncounterInfo)
@@ -381,6 +461,7 @@ function GetLFGQueueStats(category, lfgID) end
 function GetLFGQueuedList(category, table) end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_GetLFGRandomCooldownExpiration)
+---@return number? expiryTime
 function GetLFGRandomCooldownExpiration() end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_GetLFGRandomDungeonInfo)
@@ -393,7 +474,16 @@ function GetLFGReadyCheckUpdate() end
 function GetLFGReadyCheckUpdateBattlegroundInfo() end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_GetLFGRoleShortageRewards)
-function GetLFGRoleShortageRewards(dungeonID, shortageIndex) end
+---@param dungeonID number
+---@param shortageSeverity number
+---@return boolean eligible
+---@return boolean forTank
+---@return boolean forHealer
+---@return boolean forDamage
+---@return number itemCount
+---@return number money
+---@return number xp
+function GetLFGRoleShortageRewards(dungeonID, shortageSeverity) end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_GetLFGRoleUpdate)
 function GetLFGRoleUpdate() end
@@ -413,6 +503,10 @@ function GetLFGRoleUpdateMember(memberIndex) end
 function GetLFGRoleUpdateSlot(index) end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_GetLFGRoles)
+---@return boolean isLeader
+---@return boolean isTank
+---@return boolean isHealer
+---@return boolean isDPS
 function GetLFGRoles() end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_GetLFGSuspendedPlayers)
@@ -465,9 +559,13 @@ function GetLooseMacroIcons() end
 function GetLooseMacroItemIcons() end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_GetLootInfo)
+---@return table[] info
 function GetLootInfo() end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_GetLootMethod)
+---@return string lootmethod
+---@return number masterlooterPartyID
+---@return number masterlooterRaidID
 function GetLootMethod() end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_GetLootRollItemInfo)
@@ -1259,6 +1357,7 @@ function GetProgressText() end
 function GetPromotionRank(index) end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_GetPvpPowerDamage)
+---@return number pvpDamage
 function GetPvpPowerDamage() end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_GetPvpPowerHealing)
@@ -1486,6 +1585,7 @@ function GetQuestUiMapID(questID) end
 function GetRFDungeonInfo(index) end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_GetRaidDifficultyID)
+---@return number difficultyID
 function GetRaidDifficultyID() end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_GetRaidProfileFlattenedOptions)
@@ -1701,6 +1801,14 @@ function GetScriptCPUUsage() end
 function GetSecondsUntilParentalControlsKick() end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_GetSelectedArtifactInfo)
+---@return string artifactName
+---@return string artifactDescription
+---@return number artifactRarity
+---@return number artifactIcon
+---@return string hoverDescription
+---@return number keystoneCount
+---@return number bgTexture
+---@return number spellID
 function GetSelectedArtifactInfo() end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_GetSelectedDisplayChannel)
@@ -1740,7 +1848,9 @@ function GetSessionTime() end
 function GetSetBonusesForSpecializationByItemID(specID, itemID) end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_GetShapeshiftForm)
-function GetShapeshiftForm(unknown) end
+---@param flag boolean
+---@return number index
+function GetShapeshiftForm(flag) end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_GetShapeshiftFormCooldown)
 function GetShapeshiftFormCooldown(index) end
@@ -2304,6 +2414,12 @@ function GetWarGameQueueStatus() end
 function GetWarGameTypeInfo(index) end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_GetWatchedFactionInfo)
+---@return string name
+---@return number standing
+---@return number min
+---@return number max
+---@return number value
+---@return number factionID
 function GetWatchedFactionInfo() end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_GetWeaponEnchantInfo)
@@ -2406,113 +2522,4 @@ function GuildDisband() end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_GuildInfo)
 function GuildInfo() end
-
----[Documentation](https://wowpedia.fandom.com/wiki/API_GuildInvite)
-function GuildInvite(name) end
-
----[Documentation](https://wowpedia.fandom.com/wiki/API_GuildLeave)
-function GuildLeave() end
-
----[Documentation](https://wowpedia.fandom.com/wiki/API_GuildMasterAbsent)
-function GuildMasterAbsent() end
-
----[Documentation](https://wowpedia.fandom.com/wiki/API_GuildNewsSetSticky)
-function GuildNewsSetSticky(index, bool) end
-
----[Documentation](https://wowpedia.fandom.com/wiki/API_GuildNewsSort)
-function GuildNewsSort(byDate) end
-
----[Documentation](https://wowpedia.fandom.com/wiki/API_GuildPromote)
----@param playername string
-function GuildPromote(playername) end
-
----[Documentation](https://wowpedia.fandom.com/wiki/API_GuildRosterSetOfficerNote)
-function GuildRosterSetOfficerNote(index, note) end
-
----[Documentation](https://wowpedia.fandom.com/wiki/API_GuildRosterSetPublicNote)
-function GuildRosterSetPublicNote(index, note) end
-
----[Documentation](https://wowpedia.fandom.com/wiki/API_GuildSetLeader)
----@param name string
-function GuildSetLeader(name) end
-
----[Documentation](https://wowpedia.fandom.com/wiki/API_GuildSetMOTD)
-function GuildSetMOTD(note) end
-
----[Documentation](https://wowpedia.fandom.com/wiki/API_GuildUninvite)
----@param player string
-function GuildUninvite(player) end
-
----[Documentation](https://wowpedia.fandom.com/wiki/API_HandleAtlasMemberCommand)
-function HandleAtlasMemberCommand() end
-
----[Documentation](https://wowpedia.fandom.com/wiki/API_HasAPEffectsSpellPower)
-function HasAPEffectsSpellPower() end
-
----[Documentation](https://wowpedia.fandom.com/wiki/API_HasAction)
----@param actionSlot number
----@return boolean hasAction
-function HasAction(actionSlot) end
-
----[Documentation](https://wowpedia.fandom.com/wiki/API_HasArtifactEquipped)
-function HasArtifactEquipped() end
-
----[Documentation](https://wowpedia.fandom.com/wiki/API_HasAttachedGlyph)
-function HasAttachedGlyph(spellID) end
-
----[Documentation](https://wowpedia.fandom.com/wiki/API_HasBonusActionBar)
-function HasBonusActionBar() end
-
----[Documentation](https://wowpedia.fandom.com/wiki/API_HasBoundGemProposed)
-function HasBoundGemProposed() end
-
----[Documentation](https://wowpedia.fandom.com/wiki/API_HasCompletedAnyAchievement)
-function HasCompletedAnyAchievement(achievementID) end
-
----[Documentation](https://wowpedia.fandom.com/wiki/API_HasDualWieldPenalty)
-function HasDualWieldPenalty() end
-
----[Documentation](https://wowpedia.fandom.com/wiki/API_HasExtraActionBar)
----@return boolean hasBar
-function HasExtraActionBar() end
-
----[Documentation](https://wowpedia.fandom.com/wiki/API_HasFullControl)
----@return boolean hasControl
-function HasFullControl() end
-
----[Documentation](https://wowpedia.fandom.com/wiki/API_HasIgnoreDualWieldWeapon)
-function HasIgnoreDualWieldWeapon() end
-
----[Documentation](https://wowpedia.fandom.com/wiki/API_HasInboxItem)
-function HasInboxItem() end
-
----[Documentation](https://wowpedia.fandom.com/wiki/API_HasLFGRestrictions)
----@return boolean isRestricted
-function HasLFGRestrictions() end
-
----[Documentation](https://wowpedia.fandom.com/wiki/API_HasLoadedCUFProfiles)
-function HasLoadedCUFProfiles() end
-
----[Documentation](https://wowpedia.fandom.com/wiki/API_HasNewMail)
-function HasNewMail() end
-
----[Documentation](https://wowpedia.fandom.com/wiki/API_HasNoReleaseAura)
-function HasNoReleaseAura() end
-
----[Documentation](https://wowpedia.fandom.com/wiki/API_HasOverrideActionBar)
-function HasOverrideActionBar() end
-
----[Documentation](https://wowpedia.fandom.com/wiki/API_HasPendingGlyphCast)
-function HasPendingGlyphCast() end
-
----[Documentation](https://wowpedia.fandom.com/wiki/API_HasPetSpells)
-function HasPetSpells() end
-
----[Documentation](https://wowpedia.fandom.com/wiki/API_HasPetUI)
----@return boolean hasUI
----@return boolean isHunterPet
-function HasPetUI() end
-
----[Documentation](https://wowpedia.fandom.com/wiki/API_HasSPEffectsAttackPower)
-function HasSPEffectsAttackPower() end
 

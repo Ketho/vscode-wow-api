@@ -697,6 +697,11 @@ function C_Garrison.GetFollowerIsTroop() end
 function C_Garrison.GetFollowerItemLevelAverage(followerID) end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_Garrison.GetFollowerItems)
+---@param followerID string
+---@return number weaponItemID
+---@return number weaponItemLevel
+---@return number armorItemID
+---@return number armorItemLevel
 function C_Garrison.GetFollowerItems(followerID) end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_Garrison.GetFollowerLevel)
@@ -814,7 +819,21 @@ function C_Garrison.GetLandingPageShipmentCount() end
 function C_Garrison.GetLandingPageShipmentInfo(buildingID) end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_Garrison.GetLandingPageShipmentInfoByContainerID)
-function C_Garrison.GetLandingPageShipmentInfoByContainerID(shipmentContainerID) end
+---@param containerID number
+---@return string name
+---@return number texture
+---@return number shipmentCapacity
+---@return number shipmentsReady
+---@return number shipmentsTotal
+---@return number creationTime
+---@return number duration
+---@return string timeleftString
+---@return string itemName
+---@return number itemTexture
+---@return number unk1
+---@return number itemID
+---@return number followerID
+function C_Garrison.GetLandingPageShipmentInfoByContainerID(containerID) end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_Garrison.GetLooseShipments)
 ---@param garrisonType number
@@ -1443,6 +1462,8 @@ function C_NewItems.ClearAll() end
 function C_NewItems.IsNewItem(bag, slot) end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_NewItems.RemoveNewItem)
+---@param bag number
+---@param slot number
 function C_NewItems.RemoveNewItem(bag, slot) end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_PetBattles.AcceptPVPDuel)
@@ -2065,16 +2086,4 @@ function C_ToyBox.GetCollectedShown() end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_ToyBox.GetIsFavorite)
 function C_ToyBox.GetIsFavorite(itemID) end
-
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_ToyBox.GetNumFilteredToys)
-function C_ToyBox.GetNumFilteredToys() end
-
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_ToyBox.GetNumLearnedDisplayedToys)
-function C_ToyBox.GetNumLearnedDisplayedToys() end
-
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_ToyBox.GetNumTotalDisplayedToys)
-function C_ToyBox.GetNumTotalDisplayedToys() end
-
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_ToyBox.GetNumToys)
-function C_ToyBox.GetNumToys() end
 
