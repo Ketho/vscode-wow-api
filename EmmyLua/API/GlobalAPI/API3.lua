@@ -1,4 +1,19 @@
 ---@meta
+---[Documentation](https://wowpedia.fandom.com/wiki/API_GetGuildBankWithdrawGoldLimit)
+function GetGuildBankWithdrawGoldLimit() end
+
+---[Documentation](https://wowpedia.fandom.com/wiki/API_GetGuildBankWithdrawMoney)
+function GetGuildBankWithdrawMoney() end
+
+---[Documentation](https://wowpedia.fandom.com/wiki/API_GetGuildCategoryList)
+function GetGuildCategoryList() end
+
+---[Documentation](https://wowpedia.fandom.com/wiki/API_GetGuildChallengeInfo)
+function GetGuildChallengeInfo(index) end
+
+---[Documentation](https://wowpedia.fandom.com/wiki/API_GetGuildCharterCost)
+function GetGuildCharterCost() end
+
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_GetGuildEventInfo)
 function GetGuildEventInfo(index) end
 
@@ -2203,7 +2218,11 @@ function GetTaxiMapID() end
 function GetTempShapeshiftBarIndex() end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_GetText)
-function GetText() end
+---@param token string
+---@param gender? number
+---@param ordinal? unknown
+---@return string text
+function GetText(token, gender, ordinal) end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_GetThreatStatusColor)
 ---@param status? number
@@ -2501,25 +2520,4 @@ function GuildControlSaveRank(name) end
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_GuildControlSetRank)
 ---@param rankOrder number
 function GuildControlSetRank(rankOrder) end
-
----[Documentation](https://wowpedia.fandom.com/wiki/API_GuildControlSetRankFlag)
----@param index number
----@param enabled boolean
-function GuildControlSetRankFlag(index, enabled) end
-
----[Documentation](https://wowpedia.fandom.com/wiki/API_GuildControlShiftRankDown)
-function GuildControlShiftRankDown(rankOrder) end
-
----[Documentation](https://wowpedia.fandom.com/wiki/API_GuildControlShiftRankUp)
-function GuildControlShiftRankUp(rankOrder) end
-
----[Documentation](https://wowpedia.fandom.com/wiki/API_GuildDemote)
----@param playername string
-function GuildDemote(playername) end
-
----[Documentation](https://wowpedia.fandom.com/wiki/API_GuildDisband)
-function GuildDisband() end
-
----[Documentation](https://wowpedia.fandom.com/wiki/API_GuildInfo)
-function GuildInfo() end
 

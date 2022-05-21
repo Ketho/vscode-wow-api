@@ -1,4 +1,26 @@
 ---@meta
+---[Documentation](https://wowpedia.fandom.com/wiki/API_TargetDirectionFinished)
+function TargetDirectionFinished() end
+
+---[Documentation](https://wowpedia.fandom.com/wiki/API_TargetDirectionFriend)
+function TargetDirectionFriend(facing) end
+
+---[Documentation](https://wowpedia.fandom.com/wiki/API_TargetLastEnemy)
+function TargetLastEnemy() end
+
+---[Documentation](https://wowpedia.fandom.com/wiki/API_TargetLastFriend)
+function TargetLastFriend() end
+
+---[Documentation](https://wowpedia.fandom.com/wiki/API_TargetLastTarget)
+function TargetLastTarget() end
+
+---[Documentation](https://wowpedia.fandom.com/wiki/API_TargetNearest)
+function TargetNearest() end
+
+---[Documentation](https://wowpedia.fandom.com/wiki/API_TargetNearestEnemy)
+---@param reverse boolean
+function TargetNearestEnemy(reverse) end
+
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_TargetNearestEnemyPlayer)
 function TargetNearestEnemyPlayer(reverseFlag) end
 
@@ -404,7 +426,10 @@ function UnitInRaid(unit) end
 function UnitInRange(unit) end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_UnitInSubgroup)
-function UnitInSubgroup() end
+---@param unit? string
+---@param overridePartyType? number
+---@return boolean inSubgroup
+function UnitInSubgroup(unit, overridePartyType) end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_UnitInVehicle)
 function UnitInVehicle(unit) end

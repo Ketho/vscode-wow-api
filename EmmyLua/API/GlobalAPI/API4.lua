@@ -1,4 +1,25 @@
 ---@meta
+---[Documentation](https://wowpedia.fandom.com/wiki/API_GuildControlSetRankFlag)
+---@param index number
+---@param enabled boolean
+function GuildControlSetRankFlag(index, enabled) end
+
+---[Documentation](https://wowpedia.fandom.com/wiki/API_GuildControlShiftRankDown)
+function GuildControlShiftRankDown(rankOrder) end
+
+---[Documentation](https://wowpedia.fandom.com/wiki/API_GuildControlShiftRankUp)
+function GuildControlShiftRankUp(rankOrder) end
+
+---[Documentation](https://wowpedia.fandom.com/wiki/API_GuildDemote)
+---@param playername string
+function GuildDemote(playername) end
+
+---[Documentation](https://wowpedia.fandom.com/wiki/API_GuildDisband)
+function GuildDisband() end
+
+---[Documentation](https://wowpedia.fandom.com/wiki/API_GuildInfo)
+function GuildInfo() end
+
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_GuildInvite)
 function GuildInvite(name) end
 
@@ -194,10 +215,11 @@ function IsActiveQuestTrivial(index) end
 function IsAddOnLoadOnDemand() end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_IsAddOnLoaded)
----@param addon number|string index or name
+---@param index number
 ---@return boolean loaded
 ---@return boolean finished
-function IsAddOnLoaded(addon) end
+---@overload fun(name: string)
+function IsAddOnLoaded(index) end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_IsAddonVersionCheckEnabled)
 function IsAddonVersionCheckEnabled() end
@@ -2381,7 +2403,7 @@ function StopMusic() end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_StopSound)
 ---@param soundHandle number
----@param fadeoutTime number
+---@param fadeoutTime? number
 function StopSound(soundHandle, fadeoutTime) end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_StoreSecureReference)
@@ -2442,26 +2464,4 @@ function TakeTaxiNode(index) end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_TargetDirectionEnemy)
 function TargetDirectionEnemy(facing) end
-
----[Documentation](https://wowpedia.fandom.com/wiki/API_TargetDirectionFinished)
-function TargetDirectionFinished() end
-
----[Documentation](https://wowpedia.fandom.com/wiki/API_TargetDirectionFriend)
-function TargetDirectionFriend(facing) end
-
----[Documentation](https://wowpedia.fandom.com/wiki/API_TargetLastEnemy)
-function TargetLastEnemy() end
-
----[Documentation](https://wowpedia.fandom.com/wiki/API_TargetLastFriend)
-function TargetLastFriend() end
-
----[Documentation](https://wowpedia.fandom.com/wiki/API_TargetLastTarget)
-function TargetLastTarget() end
-
----[Documentation](https://wowpedia.fandom.com/wiki/API_TargetNearest)
-function TargetNearest() end
-
----[Documentation](https://wowpedia.fandom.com/wiki/API_TargetNearestEnemy)
----@param reverse boolean
-function TargetNearestEnemy(reverse) end
 

@@ -1467,7 +1467,24 @@ function GetAchievementCriteriaInfoByID(achievementID, criteriaIndex) end
 function GetAchievementGuildRep() end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_GetAchievementInfo)
-function GetAchievementInfo() end
+---@param achievementID number
+---@return number id
+---@return string name
+---@return number points
+---@return boolean completed
+---@return number month
+---@return number day
+---@return number year
+---@return string description
+---@return number flags
+---@return number icon
+---@return string rewardText
+---@return boolean isGuild
+---@return boolean wasEarnedByMe
+---@return string earnedBy
+---@return boolean isStatistic
+---@overload fun(categoryID: number, index: number)
+function GetAchievementInfo(achievementID) end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_GetAchievementLink)
 function GetAchievementLink(achievementID) end
@@ -1556,7 +1573,10 @@ function GetAddOnCPUUsage() end
 function GetAddOnDependencies() end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_GetAddOnEnableState)
-function GetAddOnEnableState() end
+---@param character? string
+---@param addon number|string
+---@return number enabledState
+function GetAddOnEnableState(character, addon) end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_GetAddOnInfo)
 ---@param addon number|string index or name
@@ -1612,7 +1632,10 @@ function GetAreaSpiritHealerTime() end
 function GetAreaText() end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_GetArenaOpponentSpec)
-function GetArenaOpponentSpec() end
+---@param id number
+---@return number specID
+---@return number gender
+function GetArenaOpponentSpec(id) end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_GetArtifactInfoByRace)
 ---@param raceIndex number
@@ -2388,19 +2411,4 @@ function GetGuildBankText(tab) end
 ---@return number day
 ---@return number hour
 function GetGuildBankTransaction(tab, index) end
-
----[Documentation](https://wowpedia.fandom.com/wiki/API_GetGuildBankWithdrawGoldLimit)
-function GetGuildBankWithdrawGoldLimit() end
-
----[Documentation](https://wowpedia.fandom.com/wiki/API_GetGuildBankWithdrawMoney)
-function GetGuildBankWithdrawMoney() end
-
----[Documentation](https://wowpedia.fandom.com/wiki/API_GetGuildCategoryList)
-function GetGuildCategoryList() end
-
----[Documentation](https://wowpedia.fandom.com/wiki/API_GetGuildChallengeInfo)
-function GetGuildChallengeInfo(index) end
-
----[Documentation](https://wowpedia.fandom.com/wiki/API_GetGuildCharterCost)
-function GetGuildCharterCost() end
 
