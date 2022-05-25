@@ -1,6 +1,7 @@
 ---@meta
 ---@class Frame : Region, ScriptObject
 local Frame = {}
+---@class FRAME : Frame
 
 ---@param scriptType ScriptFrame
 ---@param bindingType LE_SCRIPT_BINDING_TYPE
