@@ -18,9 +18,11 @@ function FontInstance:SetFontObject(fontObject) end
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_FontInstance_GetIndentedWordWrap)
 function FontInstance:GetIndentedWordWrap() end
 
+---@return JustifyH
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_FontInstance_GetJustifyH)
 function FontInstance:GetJustifyH() end
 
+---@return JustifyV
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_FontInstance_GetJustifyV)
 function FontInstance:GetJustifyV() end
 
@@ -30,9 +32,11 @@ function FontInstance:GetSpacing() end
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_FontInstance_SetIndentedWordWrap)
 function FontInstance:SetIndentedWordWrap() end
 
+---@param justifyH JustifyH
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_FontInstance_SetJustifyH)
 function FontInstance:SetJustifyH(justifyH) end
 
+---@param justifyV JustifyV
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_FontInstance_SetJustifyV)
 function FontInstance:SetJustifyV(justifyV) end
 

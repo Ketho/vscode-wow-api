@@ -68,6 +68,16 @@
 ---| '"FULLSCREEN_DIALOG"'
 ---| '"TOOLTIP"'
 
+---@alias JustifyH
+---| '"LEFT"'
+---| '"RIGHT"'
+---| '"CENTER"'
+
+---@alias JustifyV
+---| '"TOP"'
+---| '"BOTTOM"'
+---| '"MIDDLE"'
+
 ---@alias TooltipAnchor
 ---| '"ANCHOR_TOP"'
 ---| '"ANCHOR_RIGHT"'
