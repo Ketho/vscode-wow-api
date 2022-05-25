@@ -1736,7 +1736,7 @@ function SellCursorItem() end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_SendChatMessage)
 ---@param msg string
----@param chatType? string
+---@param chatType? ChatType
 ---@param languageID? number
 ---@param target? string
 function SendChatMessage(msg, chatType, languageID, target) end

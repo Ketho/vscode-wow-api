@@ -112,3 +112,19 @@
 ---| "LE_SCRIPT_BINDING_TYPE_INTRINSIC_PRECALL"
 ---| "LE_SCRIPT_BINDING_TYPE_EXTRINSIC"
 ---| "LE_SCRIPT_BINDING_TYPE_INTRINSIC_POSTCALL"
+
+---@alias ChatType
+---| '"SAY"'
+---| '"EMOTE"'
+---| '"YELL"'
+---| '"PARTY"'
+---| '"RAID"'
+---| '"RAID_WARNING"'
+---| '"INSTANCE_CHAT"'
+---| '"GUILD"'
+---| '"OFFICER"'
+---| '"WHISPER"'
+---| '"CHANNEL"'
+---| '"AFK"'
+---| '"DND"'
+---| '"VOICE_TEXT"'
