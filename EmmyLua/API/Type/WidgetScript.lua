@@ -70,3 +70,8 @@
 ---@alias ScriptScrollFrame '"OnHorizontalScroll"' | '"OnScrollRangeChanged"' | '"OnVerticalScroll"'
 ---@alias ScriptSlider '"OnMinMaxChanged"' | '"OnValueChanged"'
 ---@alias ScriptStatusBar '"OnMinMaxChanged"' | '"OnValueChanged"'
+
+---@alias LE_SCRIPT_BINDING_TYPE
+---| "LE_SCRIPT_BINDING_TYPE_INTRINSIC_PRECALL"
+---| "LE_SCRIPT_BINDING_TYPE_EXTRINSIC"
+---| "LE_SCRIPT_BINDING_TYPE_INTRINSIC_POSTCALL"
