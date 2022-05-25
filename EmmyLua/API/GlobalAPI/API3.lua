@@ -2072,7 +2072,11 @@ function GetSpellInfo(spell) end
 function GetSpellLevelLearned() end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_GetSpellLink)
-function GetSpellLink(spellName, spellRank) end
+---@param spell number|string
+---@return string link
+---@return number spellID
+---@overload fun(index: number, bookType: string)
+function GetSpellLink(spell) end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_GetSpellLossOfControlCooldown)
 function GetSpellLossOfControlCooldown(spellSlot) end

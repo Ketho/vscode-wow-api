@@ -1063,7 +1063,11 @@ function Dismount() end
 function DisplayChannelOwner(channel) end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_DoEmote)
-function DoEmote(emote, target) end
+---@param token string
+---@param unit? string
+---@param hold? boolean
+---@return boolean? restricted
+function DoEmote(token, unit, hold) end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_DoMasterLootRoll)
 function DoMasterLootRoll(slot) end
