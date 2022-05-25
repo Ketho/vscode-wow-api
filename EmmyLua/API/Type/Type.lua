@@ -53,6 +53,19 @@
 ---| '"RIGHT"'
 ---| '"CENTER"'
 
+---@alias TooltipAnchor
+---| '"ANCHOR_TOP"'
+---| '"ANCHOR_RIGHT"'
+---| '"ANCHOR_BOTTOM"'
+---| '"ANCHOR_LEFT"'
+---| '"ANCHOR_TOPRIGHT"'
+---| '"ANCHOR_BOTTOMRIGHT"'
+---| '"ANCHOR_TOPLEFT"'
+---| '"ANCHOR_BOTTOMLEFT"'
+---| '"ANCHOR_CURSOR"'
+---| '"ANCHOR_PRESERVE"'
+---| '"ANCHOR_NONE"'
+
 ---@alias FrameStrata
 ---| '"BACKGROUND"'
 ---| '"LOW"'

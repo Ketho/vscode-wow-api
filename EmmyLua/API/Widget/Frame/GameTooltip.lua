@@ -221,6 +221,10 @@ function GameTooltip:SetMountBySpellID() end
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_GameTooltip_SetOwnedItemByID)
 function GameTooltip:SetOwnedItemByID(ID) end
 
+---@param owner Frame
+---@param anchor TooltipAnchor
+---@param x? number
+---@param y? number
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_GameTooltip_SetOwner)
 function GameTooltip:SetOwner(owner, anchor, x, y) end
 
