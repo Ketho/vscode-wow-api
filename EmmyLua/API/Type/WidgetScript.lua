@@ -1,77 +1,73 @@
 ---@meta
----@alias ScriptType '"OnLoad"' | '"OnUpdate"'
+---@alias ScriptType           "OnLoad" | "OnUpdate"
+---@alias ScriptAnimation      ScriptType | "OnFinished" | "OnPause" | "OnPlay" | "OnStop"
+---@alias ScriptAnimationGroup ScriptType | "OnFinished" | "OnPause" | "OnPlay" | "OnStop" | "OnLoop"
+---@alias ScriptFrame          ScriptType
+---|"OnAttributeChanged"
+---|"OnChar"
+---|"OnDisable"
+---|"OnDragStart"
+---|"OnDragStop"
+---|"OnEnable"
+---|"OnEnter"
+---|"OnEvent"
+---|"OnGamePadButtonDown"
+---|"OnGamePadButtonUp"
+---|"OnGamePadStick"
+---|"OnHide"
+---|"OnHyperlinkClick"
+---|"OnHyperlinkEnter"
+---|"OnHyperlinkLeave"
+---|"OnKeyDown"
+---|"OnKeyUp"
+---|"OnLeave"
+---|"OnMouseDown"
+---|"OnMouseUp"
+---|"OnMouseWheel"
+---|"OnReceiveDrag"
+---|"OnShow"
+---|"OnSizeChanged"
 
----@alias ScriptAnimation '"OnFinished"' | '"OnPause"' | '"OnPlay"' | '"OnStop"'
----@alias ScriptAnimationGroup '"OnFinished"' | '"OnLoop"' | '"OnPause"' | '"OnPlay"' | '"OnStop"'
----@alias ScriptBrowser '"OnButtonUpdate"' | '"OnEditFocusGained"' | '"OnEditFocusLost"' | '"OnError"' | '"OnEscapePressed"' | '"OnExternalLink"'
----@alias ScriptButton '"OnClick"' | '"OnDoubleClick"' | '"PostClick"' | '"PreClick"'
----@alias ScriptCheckout '"OnButtonUpdate"' | '"OnEditFocusGained"' | '"OnEditFocusLost"' | '"OnError"' | '"OnEscapePressed"' | '"OnExternalLink"' | '"OnRequestNewSize"'
----@alias ScriptCinematicModel '"OnPanFinished"'
----@alias ScriptColorSelect '"OnColorSelect"'
----@alias ScriptCooldown '"OnCooldownDone"'
----@alias ScriptDressUpModel '"OnDressModel"'
----@alias ScriptEditBox
----| '"OnArrowPressed"'
----| '"OnCharComposition"'
----| '"OnCursorChanged"'
----| '"OnEditFocusGained"'
----| '"OnEditFocusLost"'
----| '"OnEnterPressed"'
----| '"OnEscapePressed"'
----| '"OnInputLanguageChanged"'
----| '"OnSpacePressed"'
----| '"OnTabPressed"'
----| '"OnTextChanged"'
----| '"OnTextSet"'
+---@alias ScriptModel           ScriptFrame | "OnAnimFinished" | "OnAnimStarted" | "OnModelLoaded"
+---@alias ScriptCinematicModel  ScriptModel | "OnPanFinished"
+---@alias ScriptDressUpModel    ScriptModel | "OnDressModel"
+---@alias ScriptModelSceneActor "OnAnimFinished" | "OnModelLoaded" | "OnModelLoading"
 
----@alias ScriptFogOfWarFrame '"OnUiMapChanged"'
----@alias ScriptFrame
----| '"OnAttributeChanged"'
----| '"OnChar"'
----| '"OnDisable"'
----| '"OnDragStart"'
----| '"OnDragStop"'
----| '"OnEnable"'
----| '"OnEnter"'
----| '"OnEvent"'
----| '"OnGamePadButtonDown"'
----| '"OnGamePadButtonUp"'
----| '"OnGamePadStick"'
----| '"OnHide"'
----| '"OnHyperlinkClick"'
----| '"OnHyperlinkEnter"'
----| '"OnHyperlinkLeave"'
----| '"OnKeyDown"'
----| '"OnKeyUp"'
----| '"OnLeave"'
----| '"OnMouseDown"'
----| '"OnMouseUp"'
----| '"OnMouseWheel"'
----| '"OnReceiveDrag"'
----| '"OnShow"'
----| '"OnSizeChanged"'
+---@alias ScriptButton          ScriptFrame | "OnClick" | "OnDoubleClick" | "PostClick" | "PreClick"
+---@alias ScriptColorSelect     ScriptFrame | "OnColorSelect"
+---@alias ScriptCooldown        ScriptFrame | "OnCooldownDone"
+---@alias ScriptFogOfWarFrame   ScriptFrame | "OnUiMapChanged"
+---@alias ScriptMovieFrame      ScriptFrame | "OnMovieFinished" | "OnMovieHideSubtitle" | "OnMovieShowSubtitle"
+---@alias ScriptScrollFrame     ScriptFrame | "OnHorizontalScroll" | "OnScrollRangeChanged" | "OnVerticalScroll"
+---@alias ScriptSlider          ScriptFrame | "OnMinMaxChanged" | "OnValueChanged"
+---@alias ScriptStatusBar       ScriptFrame | "OnMinMaxChanged" | "OnValueChanged"
+---@alias ScriptGameTooltip     ScriptFrame
+---|"OnTooltipAddMoney"
+---|"OnTooltipCleared"
+---|"OnTooltipSetAchievement"
+---|"OnTooltipSetDefaultAnchor"
+---|"OnTooltipSetEquipmentSet"
+---|"OnTooltipSetFramestack"
+---|"OnTooltipSetItem"
+---|"OnTooltipSetQuest"
+---|"OnTooltipSetSpell"
+---|"OnTooltipSetUnit"
 
----@alias ScriptGameTooltip
----| '"OnTooltipAddMoney"'
----| '"OnTooltipCleared"'
----| '"OnTooltipSetAchievement"'
----| '"OnTooltipSetDefaultAnchor"'
----| '"OnTooltipSetEquipmentSet"'
----| '"OnTooltipSetFramestack"'
----| '"OnTooltipSetItem"'
----| '"OnTooltipSetQuest"'
----| '"OnTooltipSetSpell"'
----| '"OnTooltipSetUnit"'
-
----@alias ScriptModel '"OnAnimFinished"' | '"OnAnimStarted"' | '"OnModelLoaded"'
----@alias ScriptModelSceneActor '"OnAnimFinished"' | '"OnModelLoaded"' | '"OnModelLoading"'
----@alias ScriptMovieFrame '"OnMovieFinished"' | '"OnMovieHideSubtitle"' | '"OnMovieShowSubtitle"'
----@alias ScriptScriptObject '"OnLoad"' | '"OnUpdate"'
----@alias ScriptScrollFrame '"OnHorizontalScroll"' | '"OnScrollRangeChanged"' | '"OnVerticalScroll"'
----@alias ScriptSlider '"OnMinMaxChanged"' | '"OnValueChanged"'
----@alias ScriptStatusBar '"OnMinMaxChanged"' | '"OnValueChanged"'
+---@alias ScriptEditFocus "OnEditFocusGained" | "OnEditFocusLost" | "OnEscapePressed"
+---@alias ScriptBrowser   ScriptFrame | ScriptEditFocus | "OnButtonUpdate" | "OnError" | "OnExternalLink"
+---@alias ScriptCheckout  ScriptFrame | ScriptEditFocus | "OnButtonUpdate" | "OnError" | "OnExternalLink" | "OnRequestNewSize"
+---@alias ScriptEditBox   ScriptFrame | ScriptEditFocus
+---|"OnArrowPressed"
+---|"OnCharComposition"
+---|"OnCursorChanged"
+---|"OnEnterPressed"
+---|"OnInputLanguageChanged"
+---|"OnSpacePressed"
+---|"OnTabPressed"
+---|"OnTextChanged"
+---|"OnTextSet"
 
 ---@alias LE_SCRIPT_BINDING_TYPE
----| "LE_SCRIPT_BINDING_TYPE_INTRINSIC_PRECALL"
----| "LE_SCRIPT_BINDING_TYPE_EXTRINSIC"
----| "LE_SCRIPT_BINDING_TYPE_INTRINSIC_POSTCALL"
+---|"LE_SCRIPT_BINDING_TYPE_INTRINSIC_PRECALL"
+---|"LE_SCRIPT_BINDING_TYPE_EXTRINSIC"
+---|"LE_SCRIPT_BINDING_TYPE_INTRINSIC_POSTCALL"
