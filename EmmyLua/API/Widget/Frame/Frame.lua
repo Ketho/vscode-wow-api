@@ -35,7 +35,7 @@ function Frame:RegisterEvent(event) end
 
 ---@param event WowEvent
 ---@param unit1 WowUnit
----@param unit2 WowUnit
+---@param unit2? WowUnit
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_Frame_RegisterUnitEvent)
 function Frame:RegisterUnitEvent(event, unit1, unit2) end
 
@@ -201,7 +201,7 @@ function Frame:GetNumRegions() end
 function Frame:GetRegions() end
 
 ---@param name? string
----@param layer? string
+---@param layer? DrawLayer
 ---@param template? string
 ---@param subLayer? number
 ---@return FontString fontString
@@ -212,7 +212,7 @@ function Frame:CreateFontString(name, layer, template, subLayer) end
 function Frame:CreateMaskTexture() end
 
 ---@param name? string
----@param layer? string
+---@param layer? DrawLayer
 ---@param template? string
 ---@param subLayer? number
 ---@return Texture texture

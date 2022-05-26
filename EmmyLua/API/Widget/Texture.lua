@@ -53,6 +53,7 @@ function Texture:GetVertTile() end
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_Texture_IsDesaturated)
 function Texture:IsDesaturated() end
 
+---@return boolean
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_Texture_IsSnappingToPixelGrid)
 function Texture:IsSnappingToPixelGrid() end
 
@@ -86,8 +87,9 @@ function Texture:SetNonBlocking() end
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_Texture_SetRotation)
 function Texture:SetRotation(angle, cx, cy) end
 
+---@param bool? boolean
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_Texture_SetSnapToPixelGrid)
-function Texture:SetSnapToPixelGrid() end
+function Texture:SetSnapToPixelGrid(bool) end
 
 ---@param ULx number
 ---@param ULy number

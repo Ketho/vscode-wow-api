@@ -101,6 +101,7 @@ function EditBox:Insert(text) end
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_EditBox_IsAutoFocus)
 function EditBox:IsAutoFocus() end
 
+---@return boolean
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_EditBox_IsCountInvisibleLetters)
 function EditBox:IsCountInvisibleLetters() end
 
@@ -131,8 +132,9 @@ function EditBox:SetAutoFocus(state) end
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_EditBox_SetBlinkSpeed)
 function EditBox:SetBlinkSpeed(speed) end
 
+---@param bool boolean
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_EditBox_SetCountInvisibleLetters)
-function EditBox:SetCountInvisibleLetters() end
+function EditBox:SetCountInvisibleLetters(bool) end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_EditBox_SetCursorPosition)
 function EditBox:SetCursorPosition(position) end

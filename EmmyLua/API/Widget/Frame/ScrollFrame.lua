@@ -35,6 +35,7 @@ function ScrollFrame:GetHorizontalScroll() end
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_ScrollFrame_GetHorizontalScrollRange)
 function ScrollFrame:GetHorizontalScrollRange() end
 
+---@return Frame
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_ScrollFrame_GetScrollChild)
 function ScrollFrame:GetScrollChild() end
 
@@ -47,8 +48,9 @@ function ScrollFrame:GetVerticalScrollRange() end
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_ScrollFrame_SetHorizontalScroll)
 function ScrollFrame:SetHorizontalScroll(offset) end
 
+---@param frame Frame
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_ScrollFrame_SetScrollChild)
-function ScrollFrame:SetScrollChild() end
+function ScrollFrame:SetScrollChild(frame) end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_ScrollFrame_SetVerticalScroll)
 function ScrollFrame:SetVerticalScroll(offset) end
