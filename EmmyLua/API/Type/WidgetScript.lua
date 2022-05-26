@@ -34,8 +34,10 @@
 ---|"OnAnimFinished" # Model
 ---|"OnAnimStarted"  # Model
 ---|"OnModelLoaded"  # Model
----@alias ScriptCinematicModel  ScriptModel | "OnPanFinished" # CinematicModel
----@alias ScriptDressUpModel    ScriptModel | "OnDressModel"  # DressUpModel
+---@alias ScriptCinematicModel  ScriptModel
+---|"OnPanFinished"  # CinematicModel
+---@alias ScriptDressUpModel    ScriptModel
+---|"OnDressModel"  # DressUpModel
 ---@alias ScriptModelSceneActor
 ---|"OnAnimFinished" # ModelSceneActor
 ---|"OnModelLoaded"  # ModelSceneActor
@@ -45,9 +47,12 @@
 ---|"OnDoubleClick" # Button
 ---|"PostClick"     # Button
 ---|"PreClick"      # Button
----@alias ScriptColorSelect     ScriptFrame | "OnColorSelect"  # ColorSelect
----@alias ScriptCooldown        ScriptFrame | "OnCooldownDone" # Cooldown
----@alias ScriptFogOfWarFrame   ScriptFrame | "OnUiMapChanged" # FogOfWarFrame
+---@alias ScriptColorSelect     ScriptFrame
+---|"OnColorSelect" # ColorSelect
+---@alias ScriptCooldown        ScriptFrame
+---|"OnCooldownDone" # Cooldown
+---@alias ScriptFogOfWarFrame   ScriptFrame
+---|"OnUiMapChanged" # FogOfWarFrame
 ---@alias ScriptMovieFrame      ScriptFrame
 ---|"OnMovieFinished"     # MovieFrame
 ---|"OnMovieHideSubtitle" # MovieFrame
