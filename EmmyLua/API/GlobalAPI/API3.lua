@@ -1863,7 +1863,7 @@ function GetSessionTime() end
 function GetSetBonusesForSpecializationByItemID(specID, itemID) end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_GetShapeshiftForm)
----@param flag boolean
+---@param flag? boolean
 ---@return number index
 function GetShapeshiftForm(flag) end
 

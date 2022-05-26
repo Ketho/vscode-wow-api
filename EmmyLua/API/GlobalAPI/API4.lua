@@ -728,7 +728,7 @@ function IsSpellInRange(spellName, unit) end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_IsSpellKnown)
 ---@param spellID number
----@param isPetSpell boolean
+---@param isPetSpell? boolean
 ---@return boolean isKnown
 function IsSpellKnown(spellID, isPetSpell) end
 
