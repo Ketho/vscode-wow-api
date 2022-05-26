@@ -1,7 +1,9 @@
 ---@meta
----@class Texture : LayeredRegion
 ---[Documentation](https://wowpedia.fandom.com/wiki/UIOBJECT_Texture)
+---@class Texture : LayeredRegion
 local Texture = {}
+---@class texture : Texture
+---@class TEXTURE : Texture
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_Texture_GetAtlas)
 function Texture:GetAtlas() end

@@ -1,6 +1,9 @@
 ---@meta
+---[Documentation](https://wowpedia.fandom.com/wiki/UIOBJECT_EditBox)
 ---@class EditBox : Frame, FontInstance
 local EditBox = {}
+---@class editbox : EditBox
+---@class EDITBOX : EditBox
 
 ---@param scriptType ScriptEditBox
 ---@param bindingType? LE_SCRIPT_BINDING_TYPE

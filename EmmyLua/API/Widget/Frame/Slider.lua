@@ -1,6 +1,9 @@
 ---@meta
+---[Documentation](https://wowpedia.fandom.com/wiki/UIOBJECT_Slider)
 ---@class Slider : Frame
 local Slider = {}
+---@class slider : Slider
+---@class SLIDER : Slider
 
 ---@param scriptType ScriptSlider
 ---@param bindingType? LE_SCRIPT_BINDING_TYPE

@@ -1,7 +1,9 @@
 ---@meta
----@class FontString : FontInstance, LayeredRegion
 ---[Documentation](https://wowpedia.fandom.com/wiki/UIOBJECT_FontString)
+---@class FontString : FontInstance, LayeredRegion
 local FontString = {}
+---@class fontstring : FontString
+---@class FONTSTRING : FontString
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_FontString_CalculateScreenAreaFromCharacterSpan)
 function FontString:CalculateScreenAreaFromCharacterSpan(leftCharacterIndex, rightCharacterIndex) end

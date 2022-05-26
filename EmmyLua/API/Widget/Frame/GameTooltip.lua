@@ -1,6 +1,9 @@
 ---@meta
+---[Documentation](https://wowpedia.fandom.com/wiki/UIOBJECT_GameTooltip)
 ---@class GameTooltip : Frame
 local GameTooltip = {}
+---@class gametooltip : GameTooltip
+---@class GAMETOOLTIP : GameTooltip
 
 ---@param scriptType ScriptGameTooltip
 ---@param bindingType? LE_SCRIPT_BINDING_TYPE

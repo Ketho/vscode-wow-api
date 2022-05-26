@@ -1,4 +1,5 @@
 ---@meta
+---[Documentation](https://wowpedia.fandom.com/wiki/UIOBJECT_ModelSceneActor)
 ---@class ModelSceneActor : ParentedObject
 local ModelSceneActor = {}
 

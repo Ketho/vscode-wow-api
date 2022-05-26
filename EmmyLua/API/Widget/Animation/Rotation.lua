@@ -1,6 +1,9 @@
 ---@meta
+---[Documentation](https://wowpedia.fandom.com/wiki/UIOBJECT_Rotation)
 ---@class Rotation : Animation
 local Rotation = {}
+---@class rotation : Rotation
+---@class ROTATION : Rotation
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_Rotation_GetDegrees)
 function Rotation:GetDegrees() end

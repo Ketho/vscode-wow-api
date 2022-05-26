@@ -1,8 +1,9 @@
 ---@meta
+---[Documentation](https://wowpedia.fandom.com/wiki/UIOBJECT_ScrollFrame)
 ---@class ScrollFrame : Frame
 local ScrollFrame  = {}
----@class SCROLLFRAME : ScrollFrame
 ---@class scrollframe : ScrollFrame
+---@class SCROLLFRAME : ScrollFrame
 
 ---@param scriptType ScriptScrollFrame
 ---@param bindingType? LE_SCRIPT_BINDING_TYPE

@@ -1,6 +1,6 @@
 ---@meta
----@class ScriptObject
 ---[Documentation](https://wowpedia.fandom.com/wiki/UIOBJECT_ScriptObject)
+---@class ScriptObject
 local ScriptObject = {}
 
 ---@param scriptType ScriptType

@@ -1,6 +1,9 @@
 ---@meta
+---[Documentation](https://wowpedia.fandom.com/wiki/UIOBJECT_ModelScene)
 ---@class ModelScene : Frame
 local ModelScene = {}
+---@class modelscene : ModelScene
+---@class MODELSCENE : ModelScene
 
 function ModelScene:ClearFog() end
 

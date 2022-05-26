@@ -1,7 +1,9 @@
 ---@meta
----@class Font : FontInstance
 ---[Documentation](https://wowpedia.fandom.com/wiki/UIOBJECT_Font)
+---@class Font : FontInstance
 local Font = {}
+---@class font : Font
+---@class FONT : Font
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_Font_CopyFontObject)
 function Font:CopyFontObject(otherFont) end

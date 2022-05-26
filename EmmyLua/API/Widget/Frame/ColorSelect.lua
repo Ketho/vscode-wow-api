@@ -1,6 +1,9 @@
 ---@meta
+---[Documentation](https://wowpedia.fandom.com/wiki/UIOBJECT_ColorSelect)
 ---@class ColorSelect : Frame
 local ColorSelect = {}
+---@class colorselect : ColorSelect
+---@class COLORSELECT : ColorSelect
 
 ---@param scriptType ScriptColorSelect
 ---@param bindingType? LE_SCRIPT_BINDING_TYPE

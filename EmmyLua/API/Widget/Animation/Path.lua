@@ -1,6 +1,9 @@
 ---@meta
+---[Documentation](https://wowpedia.fandom.com/wiki/UIOBJECT_Path)
 ---@class Path : Animation
 local Path = {}
+---@class path : Path
+---@class PATH : Path
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_Path_CreateControlPoint)
 function Path:CreateControlPoint(name, template, order) end

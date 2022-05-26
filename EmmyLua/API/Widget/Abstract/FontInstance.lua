@@ -1,6 +1,6 @@
 ---@meta
----@class FontInstance : UIObject
 ---[Documentation](https://wowpedia.fandom.com/wiki/UIOBJECT_FontInstance)
+---@class FontInstance : UIObject
 local FontInstance = {}
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_FontInstance_GetFont)

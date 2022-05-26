@@ -1,6 +1,9 @@
 ---@meta
+---[Documentation](https://wowpedia.fandom.com/wiki/UIOBJECT_AnimationGroup)
 ---@class AnimationGroup : ParentedObject, ScriptObject
 local AnimationGroup = {}
+---@class animationgroup : AnimationGroup
+---@class ANIMATIONGROUP : AnimationGroup
 
 ---@param scriptType ScriptAnimationGroup
 ---@param bindingType? LE_SCRIPT_BINDING_TYPE

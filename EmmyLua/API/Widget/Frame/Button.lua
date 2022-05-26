@@ -1,6 +1,9 @@
 ---@meta
+---[Documentation](https://wowpedia.fandom.com/wiki/UIOBJECT_Button)
 ---@class Button : Frame
 local Button = {}
+---@class button : Button
+---@class BUTTON : Button
 
 ---@param scriptType ScriptButton
 ---@param bindingType? LE_SCRIPT_BINDING_TYPE

@@ -1,6 +1,9 @@
 ---@meta
+---[Documentation](https://wowpedia.fandom.com/wiki/UIOBJECT_DressUpModel)
 ---@class DressUpModel : PlayerModel
 local DressUpModel = {}
+---@class dressupmodel : DressUpModel
+---@class DRESSUPMODEL : DressUpModel
 
 ---@param scriptType ScriptDressUpModel
 ---@param bindingType? LE_SCRIPT_BINDING_TYPE

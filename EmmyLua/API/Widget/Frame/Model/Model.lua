@@ -1,6 +1,9 @@
 ---@meta
+---[Documentation](https://wowpedia.fandom.com/wiki/UIOBJECT_Model)
 ---@class Model : Frame
 local Model = {}
+---@class model : Model
+---@class MODEL : Model
 
 ---@param scriptType ScriptModel
 ---@param bindingType? LE_SCRIPT_BINDING_TYPE

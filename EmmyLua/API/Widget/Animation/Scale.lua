@@ -1,6 +1,9 @@
 ---@meta
+---[Documentation](https://wowpedia.fandom.com/wiki/UIOBJECT_Scale)
 ---@class Scale : Animation
 local Scale = {}
+---@class scale : Scale
+---@class SCALE : Scale
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_Scale_GetFromScale)
 function Scale:GetFromScale() end

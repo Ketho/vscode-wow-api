@@ -1,6 +1,9 @@
 ---@meta
+---[Documentation](https://wowpedia.fandom.com/wiki/UIOBJECT_StatusBar)
 ---@class StatusBar : Frame
 local StatusBar = {}
+---@class statusbar : StatusBar
+---@class STATUSBAR : StatusBar
 
 ---@param scriptType ScriptStatusBar
 ---@param bindingType? LE_SCRIPT_BINDING_TYPE

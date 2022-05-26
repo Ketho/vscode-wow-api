@@ -1,8 +1,9 @@
 ---@meta
+---[Documentation](https://wowpedia.fandom.com/wiki/UIOBJECT_MessageFrame)
 ---@class MessageFrame : Frame, FontInstance
 local MessageFrame  = {}
----@class MESSAGEFRAME : MessageFrame
 ---@class messageframe : MessageFrame
+---@class MESSAGEFRAME : MessageFrame
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_MessageFrame_AddMessage)
 function MessageFrame:AddMessage(text, r, g, b, messageGroup, holdTime) end

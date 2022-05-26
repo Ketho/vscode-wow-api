@@ -1,6 +1,9 @@
 ---@meta
+---[Documentation](https://wowpedia.fandom.com/wiki/UIOBJECT_PlayerModel)
 ---@class PlayerModel : Model
 local PlayerModel = {}
+---@class playermodel : PlayerModel
+---@class PLAYERMODEL : PlayerModel
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_PlayerModel_ApplySpellVisualKit)
 function PlayerModel:ApplySpellVisualKit(id,oneShot) end

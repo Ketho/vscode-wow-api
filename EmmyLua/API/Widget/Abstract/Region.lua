@@ -1,6 +1,6 @@
 ---@meta
----@class Region : ParentedObject
 ---[Documentation](https://wowpedia.fandom.com/wiki/UIOBJECT_Region)
+---@class Region : ParentedObject
 local Region = {}
 
 ---@return boolean canChange

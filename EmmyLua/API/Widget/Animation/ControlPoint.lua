@@ -1,6 +1,9 @@
 ---@meta
+---[Documentation](https://wowpedia.fandom.com/wiki/UIOBJECT_ControlPoint)
 ---@class ControlPoint : ParentedObject
 local ControlPoint = {}
+---@class controlpoint : ControlPoint
+---@class CONTROLPOINT : ControlPoint
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_ControlPoint_GetOffset)
 function ControlPoint:GetOffset() end

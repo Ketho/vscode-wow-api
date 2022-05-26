@@ -1,6 +1,9 @@
 ---@meta
+---[Documentation](https://wowpedia.fandom.com/wiki/UIOBJECT_Cooldown)
 ---@class Cooldown : Frame
 local Cooldown = {}
+---@class cooldown : Cooldown
+---@class COOLDOWN : Cooldown
 
 ---@param scriptType ScriptCooldown
 ---@param bindingType? LE_SCRIPT_BINDING_TYPE

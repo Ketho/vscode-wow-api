@@ -1,6 +1,8 @@
 ---@meta
+---[Documentation](https://wowpedia.fandom.com/wiki/UIOBJECT_Frame)
 ---@class Frame : Region, ScriptObject
 local Frame = {}
+---@class frame : Frame
 ---@class FRAME : Frame
 
 ---@param scriptType ScriptFrame

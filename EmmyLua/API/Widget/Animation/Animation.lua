@@ -1,6 +1,9 @@
 ---@meta
+---[Documentation](https://wowpedia.fandom.com/wiki/UIOBJECT_Animation)
 ---@class Animation : ParentedObject, ScriptObject
 local Animation = {}
+---@class animation : Animation
+---@class ANIMATION : Animation
 
 ---@param scriptType ScriptAnimation
 ---@param bindingType? LE_SCRIPT_BINDING_TYPE

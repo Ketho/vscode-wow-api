@@ -1,6 +1,9 @@
 ---@meta
+---[Documentation](https://wowpedia.fandom.com/wiki/UIOBJECT_Alpha)
 ---@class Alpha : Animation
 local Alpha = {}
+---@class alpha : Alpha
+---@class ALPHA : Alpha
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_Alpha_GetFromAlpha)
 function Alpha:GetFromAlpha() end
