@@ -160,8 +160,10 @@ function Region:SetParent(region) end
 ---@param point AnchorPoint
 ---@param relativeTo Region|string
 ---@param relativePoint string
----@param ofsx number
----@param ofsy number
+---@param ofsx? number
+---@param ofsy? number
+---@overload fun(self, point: AnchorPoint, relativeTo: Region|string, ofsx?: number, ofsy?: number)
+---@overload fun(self, point: AnchorPoint, ofsx?: number, ofsy?: number)
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_Region_SetPoint)
 function Region:SetPoint(point, relativeTo, relativePoint, ofsx, ofsy) end
 

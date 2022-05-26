@@ -200,10 +200,10 @@ function Frame:GetNumRegions() end
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_Frame_GetRegions)
 function Frame:GetRegions() end
 
----@param name string
----@param layer string
----@param template string
----@param subLayer number
+---@param name? string
+---@param layer? string
+---@param template? string
+---@param subLayer? number
 ---@return FontString fontString
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_Frame_CreateFontString)
 function Frame:CreateFontString(name, layer, template, subLayer) end
@@ -211,10 +211,10 @@ function Frame:CreateFontString(name, layer, template, subLayer) end
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_Frame_CreateMaskTexture)
 function Frame:CreateMaskTexture() end
 
----@param name string
----@param layer string
----@param template string
----@param subLayer number
+---@param name? string
+---@param layer? string
+---@param template? string
+---@param subLayer? number
 ---@return Texture texture
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_Frame_CreateTexture)
 function Frame:CreateTexture(name, layer, template, subLayer) end
