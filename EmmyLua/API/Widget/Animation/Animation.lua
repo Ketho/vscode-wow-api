@@ -4,6 +4,7 @@
 local Animation = {}
 ---@class animation : Animation
 ---@class ANIMATION : Animation
+---@class TextureCoordTranslation : Animation
 
 ---@param scriptType ScriptAnimation
 ---@param bindingType? LE_SCRIPT_BINDING_TYPE

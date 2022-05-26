@@ -300,6 +300,9 @@ function GameTooltip:SetSocketedRelic(relicSlotIndex) end
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_GameTooltip_SetSocketGem)
 function GameTooltip:SetSocketGem(index) end
 
+---[Documentation](https://wowpedia.fandom.com/wiki/API_GameTooltip_SetSpecialPvpBrawl)
+function GameTooltip:SetSpecialPvpBrawl() end
+
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_GameTooltip_SetSpellBookItem)
 function GameTooltip:SetSpellBookItem(spellId, bookType) end
 

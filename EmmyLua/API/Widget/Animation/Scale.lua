@@ -1,9 +1,10 @@
 ---@meta
----[Documentation](https://wowpedia.fandom.com/wiki/UIOBJECT_Scale)
+---[Documentation](https://wowpedia.fandom.com/wiki/UIOBJECT_Rotation)
 ---@class Scale : Animation
 local Scale = {}
 ---@class scale : Scale
 ---@class SCALE : Scale
+---@class LineScale : Scale
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_Scale_GetFromScale)
 function Scale:GetFromScale() end
@@ -28,3 +29,4 @@ function Scale:SetScale(x, y) end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_Scale_SetToScale)
 function Scale:SetToScale(x, y) end
+

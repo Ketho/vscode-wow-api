@@ -4,6 +4,7 @@
 local Translation = {}
 ---@class translation : Translation
 ---@class TRANSLATION : Translation
+---@class LineTranslation : Translation
 
 --[Documentation](https://wow.gamepedia.com/API_Translation_GetOffset)
 function Translation:GetOffset() end
