@@ -1,5 +1,5 @@
 ---@meta
----@class EditBox : Frame
+---@class EditBox : Frame, FontInstance
 local EditBox = {}
 
 ---@param scriptType ScriptEditBox
