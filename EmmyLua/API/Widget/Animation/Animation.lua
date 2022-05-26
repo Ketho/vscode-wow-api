@@ -3,7 +3,7 @@
 local Animation = {}
 
 ---@param scriptType ScriptAnimation
----@param bindingType LE_SCRIPT_BINDING_TYPE
+---@param bindingType? LE_SCRIPT_BINDING_TYPE
 ---@return function handler
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_ScriptObject_GetScript)
 function Animation:GetScript(scriptType, bindingType) end
@@ -15,7 +15,7 @@ function Animation:HasScript(scriptType) end
 
 ---@param scriptType ScriptAnimation
 ---@param handler function
----@param bindingType LE_SCRIPT_BINDING_TYPE
+---@param bindingType? LE_SCRIPT_BINDING_TYPE
 ---@return boolean success
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_ScriptObject_HookScript)
 function Animation:HookScript(scriptType, handler, bindingType) end

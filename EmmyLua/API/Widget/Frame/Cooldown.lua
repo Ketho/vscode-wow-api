@@ -3,7 +3,7 @@
 local Cooldown = {}
 
 ---@param scriptType ScriptCooldown
----@param bindingType LE_SCRIPT_BINDING_TYPE
+---@param bindingType? LE_SCRIPT_BINDING_TYPE
 ---@return function handler
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_ScriptObject_GetScript)
 function Cooldown:GetScript(scriptType, bindingType) end
@@ -15,7 +15,7 @@ function Cooldown:HasScript(scriptType) end
 
 ---@param scriptType ScriptCooldown
 ---@param handler function
----@param bindingType LE_SCRIPT_BINDING_TYPE
+---@param bindingType? LE_SCRIPT_BINDING_TYPE
 ---@return boolean success
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_ScriptObject_HookScript)
 function Cooldown:HookScript(scriptType, handler, bindingType) end

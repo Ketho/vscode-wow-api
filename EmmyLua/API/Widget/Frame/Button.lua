@@ -3,7 +3,7 @@
 local Button = {}
 
 ---@param scriptType ScriptButton
----@param bindingType LE_SCRIPT_BINDING_TYPE
+---@param bindingType? LE_SCRIPT_BINDING_TYPE
 ---@return function handler
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_ScriptObject_GetScript)
 function Button:GetScript(scriptType, bindingType) end
@@ -15,7 +15,7 @@ function Button:HasScript(scriptType) end
 
 ---@param scriptType ScriptButton
 ---@param handler function
----@param bindingType LE_SCRIPT_BINDING_TYPE
+---@param bindingType? LE_SCRIPT_BINDING_TYPE
 ---@return boolean success
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_ScriptObject_HookScript)
 function Button:HookScript(scriptType, handler, bindingType) end

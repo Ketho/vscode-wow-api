@@ -3,7 +3,7 @@
 local GameTooltip = {}
 
 ---@param scriptType ScriptGameTooltip
----@param bindingType LE_SCRIPT_BINDING_TYPE
+---@param bindingType? LE_SCRIPT_BINDING_TYPE
 ---@return function handler
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_ScriptObject_GetScript)
 function GameTooltip:GetScript(scriptType, bindingType) end
@@ -15,7 +15,7 @@ function GameTooltip:HasScript(scriptType) end
 
 ---@param scriptType ScriptGameTooltip
 ---@param handler function
----@param bindingType LE_SCRIPT_BINDING_TYPE
+---@param bindingType? LE_SCRIPT_BINDING_TYPE
 ---@return boolean success
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_ScriptObject_HookScript)
 function GameTooltip:HookScript(scriptType, handler, bindingType) end

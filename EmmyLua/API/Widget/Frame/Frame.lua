@@ -4,7 +4,7 @@ local Frame = {}
 ---@class FRAME : Frame
 
 ---@param scriptType ScriptFrame
----@param bindingType LE_SCRIPT_BINDING_TYPE
+---@param bindingType? LE_SCRIPT_BINDING_TYPE
 ---@return function handler
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_ScriptObject_GetScript)
 function Frame:GetScript(scriptType, bindingType) end
@@ -16,7 +16,7 @@ function Frame:HasScript(scriptType) end
 
 ---@param scriptType ScriptFrame
 ---@param handler function
----@param bindingType LE_SCRIPT_BINDING_TYPE
+---@param bindingType? LE_SCRIPT_BINDING_TYPE
 ---@return boolean success
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_ScriptObject_HookScript)
 function Frame:HookScript(scriptType, handler, bindingType) end

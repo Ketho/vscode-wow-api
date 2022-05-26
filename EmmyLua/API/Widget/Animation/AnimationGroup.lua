@@ -3,7 +3,7 @@
 local AnimationGroup = {}
 
 ---@param scriptType ScriptAnimationGroup
----@param bindingType LE_SCRIPT_BINDING_TYPE
+---@param bindingType? LE_SCRIPT_BINDING_TYPE
 ---@return function handler
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_ScriptObject_GetScript)
 function AnimationGroup:GetScript(scriptType, bindingType) end
@@ -15,7 +15,7 @@ function AnimationGroup:HasScript(scriptType) end
 
 ---@param scriptType ScriptAnimationGroup
 ---@param handler function
----@param bindingType LE_SCRIPT_BINDING_TYPE
+---@param bindingType? LE_SCRIPT_BINDING_TYPE
 ---@return boolean success
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_ScriptObject_HookScript)
 function AnimationGroup:HookScript(scriptType, handler, bindingType) end

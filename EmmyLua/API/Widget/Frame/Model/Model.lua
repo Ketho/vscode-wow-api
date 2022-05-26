@@ -3,7 +3,7 @@
 local Model = {}
 
 ---@param scriptType ScriptModel
----@param bindingType LE_SCRIPT_BINDING_TYPE
+---@param bindingType? LE_SCRIPT_BINDING_TYPE
 ---@return function handler
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_ScriptObject_GetScript)
 function Model:GetScript(scriptType, bindingType) end
@@ -15,7 +15,7 @@ function Model:HasScript(scriptType) end
 
 ---@param scriptType ScriptModel
 ---@param handler function
----@param bindingType LE_SCRIPT_BINDING_TYPE
+---@param bindingType? LE_SCRIPT_BINDING_TYPE
 ---@return boolean success
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_ScriptObject_HookScript)
 function Model:HookScript(scriptType, handler, bindingType) end

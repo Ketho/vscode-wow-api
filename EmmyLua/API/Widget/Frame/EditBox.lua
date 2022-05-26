@@ -3,7 +3,7 @@
 local EditBox = {}
 
 ---@param scriptType ScriptEditBox
----@param bindingType LE_SCRIPT_BINDING_TYPE
+---@param bindingType? LE_SCRIPT_BINDING_TYPE
 ---@return function handler
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_ScriptObject_GetScript)
 function EditBox:GetScript(scriptType, bindingType) end
@@ -15,7 +15,7 @@ function EditBox:HasScript(scriptType) end
 
 ---@param scriptType ScriptEditBox
 ---@param handler function
----@param bindingType LE_SCRIPT_BINDING_TYPE
+---@param bindingType? LE_SCRIPT_BINDING_TYPE
 ---@return boolean success
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_ScriptObject_HookScript)
 function EditBox:HookScript(scriptType, handler, bindingType) end

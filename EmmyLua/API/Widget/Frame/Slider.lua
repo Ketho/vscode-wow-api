@@ -3,7 +3,7 @@
 local Slider = {}
 
 ---@param scriptType ScriptSlider
----@param bindingType LE_SCRIPT_BINDING_TYPE
+---@param bindingType? LE_SCRIPT_BINDING_TYPE
 ---@return function handler
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_ScriptObject_GetScript)
 function Slider:GetScript(scriptType, bindingType) end
@@ -15,7 +15,7 @@ function Slider:HasScript(scriptType) end
 
 ---@param scriptType ScriptSlider
 ---@param handler function
----@param bindingType LE_SCRIPT_BINDING_TYPE
+---@param bindingType? LE_SCRIPT_BINDING_TYPE
 ---@return boolean success
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_ScriptObject_HookScript)
 function Slider:HookScript(scriptType, handler, bindingType) end
