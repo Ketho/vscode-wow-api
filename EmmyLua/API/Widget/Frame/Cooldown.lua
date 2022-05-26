@@ -38,6 +38,7 @@ function Cooldown:GetCooldownDuration() end
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_Cooldown_GetCooldownTimes)
 function Cooldown:GetCooldownTimes() end
 
+---@return boolean drawBling
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_Cooldown_GetDrawBling)
 function Cooldown:GetDrawBling() end
 
@@ -83,8 +84,9 @@ function Cooldown:SetCountdownAbbrevThreshold(seconds) end
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_Cooldown_SetCountdownFont)
 function Cooldown:SetCountdownFont(font) end
 
+---@param drawBling boolean
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_Cooldown_SetDrawBling)
-function Cooldown:SetDrawBling() end
+function Cooldown:SetDrawBling(drawBling) end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_Cooldown_SetDrawEdge)
 function Cooldown:SetDrawEdge(enable) end
