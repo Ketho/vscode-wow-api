@@ -10,29 +10,29 @@ local AceConfig = {}
 function AceConfig:RegisterOptionsTable(appName, options, slashcmd) end
 
 ---@alias Ace3Width
----| '"double"'
----| '"half"'
----| '"full"'
----| '"normal"'
+---|"double"
+---|"half"
+---|"full"
+---|"normal"
 
 ---@alias AceConfigTypes
----| '"execute"'
----| '"input"'
----| '"toggle"'
----| '"range"'
----| '"select"'
----| '"multiselect"'
----| '"color"'
----| '"keybinding"'
----| '"header"'
----| '"description"'
----| '"group"'
+---|"execute"
+---|"input"
+---|"toggle"
+---|"range"
+---|"select"
+---|"multiselect"
+---|"color"
+---|"keybinding"
+---|"header"
+---|"description"
+---|"group"
 
 ---@class AceConfigOptionsTable
 ---@field name string|function Display name for the option
 ---@field type AceConfigTypes Type of the option
 ---@field args table<string, AceConfigOptionsTable> a table containing a list of options
----@field childGroups '"tree"'|'"tab"'|'"select"' Child groups for the option
+---@field childGroups "tree"|"tab"|"select" Child groups for the option
 ---@field desc? string|function description for the option (or nil for a self-describing name)
 ---@field descStyle? string|nil "inline" if you want the description to show below the option in a GUI (rather than as a tooltip). Currently only supported by AceGUI "Toggle".
 ---@field order? number|string|function relative position of item (default = 100, 0=first, -1=last)
