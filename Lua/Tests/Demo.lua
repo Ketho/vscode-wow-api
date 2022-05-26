@@ -35,3 +35,6 @@ local welcome = AceAddon:NewAddon("Welcome", "AceEvent-3.0")
 -- single templates
 local frame_backdrop = CreateFrame("Button", nil, UIParent, "BackdropTemplate")
 local bd = frame_backdrop:GetBackdrop()
+
+local f2 = CreateFrame("Frame")
+local smooth = Mixin(f2, SmoothStatusBarMixin)

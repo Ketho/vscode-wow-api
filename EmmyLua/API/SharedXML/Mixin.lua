@@ -1,9 +1,10 @@
 ---@meta
 ---[FrameXML](https://www.townlong-yak.com/framexml/go/Mixin)
 --- Copies mixins into an existing object
----@param object table
----@vararg table
----@return table mixin
+---@generic T1, T2
+---@param object T1
+---@param ... T2
+---@return T1|T2 mixin
 function Mixin(object, ...)
 	for i = 1, select("#", ...) do
 		local mixin = select(i, ...);
@@ -16,9 +17,11 @@ end
 
 ---[FrameXML](https://www.townlong-yak.com/framexml/go/CreateFromMixins)
 --- Copies mixins into a new object
----@vararg table
----@return table mixin
-function CreateFromMixins(...)
+---@generic T1, T2
+---@param mixin T1
+---@param ... T2
+---@return T1|T2 mixin
+function CreateFromMixins(mixin, ...)
 	return Mixin({}, ...)
 end
 

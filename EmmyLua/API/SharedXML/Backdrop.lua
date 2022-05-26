@@ -16,7 +16,7 @@
 
 ---@class BackdropTemplate
 ---[Documentation](https://wowpedia.fandom.com/wiki/BackdropTemplate)
-local BackdropTemplateMixin = {}
+BackdropTemplateMixin = {}
 
 ---[FrameXML](https://www.townlong-yak.com/framexml/go/BackdropTemplateMixin:OnBackdropLoaded)
 function BackdropTemplateMixin:OnBackdropLoaded() end
