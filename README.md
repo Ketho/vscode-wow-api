@@ -34,47 +34,12 @@ See [Recommended settings](https://github.com/Ketho/vscode-wow-api/wiki/Recommen
 Shows completion for GlobalStrings at >3 uppercase letters to declutter fuzzy search.
 
 ![](https://github.com/Ketho/vscode-wow-api/raw/master/img/globalstring.gif)
-#### [Ace3](https://www.wowace.com/projects/ace3/pages/getting-started)
-Due to the way Ace3 is designed, it is not possible to get full IntelliSense out of the box. When defining your addon you need create a class for your addon and extend it with the `AceAddon-3.0` librarys you plan to use in order to get full functionality.
 
-Defining your addon example:
-
-`MyAddon.lua`
-```lua
----@class MyAddon : AceAddon-3.0, AceConsole-3.0, AceEvent-3.0, AceTimer-3.0
-local MyAddon = LibStub("AceAddon-3.0"):NewAddon("MyAddon", "AceConsole-3.0", "AceEvent-3.0", "AceTimer-3.0")
-_G.MyAddon = MyAddon
-```
-Now your will be able to see the extended API that Ace3 offers via IntelliSense.
-
-
-In order to get full IntelliSense for Ace3 localizations you will need to give your localization a class then refrence that class in your addon.
-
-`enUS.lua`
-```lua
----@class MyAddonLocale
-local L = LibStub('AceLocale-3.0'):NewLocale('MyAddon', 'enUS', true, debug)
-
-... Your Language Deffinitions
-```
-`MyAddon.lua`
-```lua
-MyAddon.L = LibStub('AceLocale-3.0'):GetLocale('MyAddon', true) ---@type MyAddonLocale
-```
-
-You can also enable full IntelliSense for Ace3 options tables by defining what table contains your ace options
-`options.lua`
-```lua
----@type AceConfigOptionsTable
-local options = {}
-```
-Tip: If you have options spread out over multiple files you can attach the options table to your global addon object. This will allow IntelliSense to continue to work in any file without having to re-define the type.
-![](https://github.com/Ketho/vscode-wow-api/raw/master/img/aceconfigoptionstable.gif)
 # Environment Setup
 If using WSL, it is HIGHLY recommended that you setup your WSL instance and handle all git operations within WSL.
 
 While using WSL is not required, the below setups are written around the assumption that WSL is being used. If you do not have WSL setup, you can start the install by running `wsl --install` from an elevated command prompt.  
-#
+
 ## Setting up a WSL Ubuntu Instance
 ### Windows Command Prompt (Elevated)
  * Start an elevated command prompt in Windows  
@@ -100,7 +65,7 @@ While using WSL is not required, the below setups are written around the assumpt
 *   This will open VS Code in windows and prompt you to install the Remote WSL extension
 *   You will then be able to use VS Code like you normally do but with the benefits of running an environment in Linux!
 *   Read more [here](https://code.visualstudio.com/docs/remote/wsl#:~:text=Alternatively%2C%20you%20can%20open%20a%20Remote%20WSL%20window,Use%20the%20File%20menu%20to%20open%20your%20folder.)!
-#
+
 ### Generating documentation
 * Blizzard documented functions are generated from [Blizzard_APIDocumentation](https://github.com/Gethe/wow-ui-source/tree/live/AddOns/Blizzard_APIDocumentation).
 * Non-Blizzard documented functions are [exported](https://wowpedia.fandom.com/wiki/Special:Export) and parsed from Wowpedia.
@@ -133,6 +98,7 @@ The following people contributed to the development resources or their work was 
 * [Resike](https://github.com/Resike)
 * [Stanzilla](https://github.com/Stanzilla)
 * [Sumneko](https://github.com/Sumneko)
+* [Wutname](https://github.com/Wutname1)
 * [Yuyuli](https://www.curseforge.com/members/yuyuli/projects)
 ---
 * [Blizzard Entertainment](https://www.blizzard.com/)

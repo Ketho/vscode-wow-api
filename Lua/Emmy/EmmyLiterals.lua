@@ -9,14 +9,14 @@ function EmmyLiterals:GetEventLiterals()
 	local t = {}
 	table.insert(t, "---@alias WowEvent")
 	for _, event in ipairs(APIDocumentation.events) do
-		local line = string.format("'\"%s\"'", event.LiteralName)
+		local line = string.format([["%s"]], event.LiteralName)
 		local payload = event:GetPayloadString(false, false)
 		if #payload > 0 then
 			line = line.." # `"..payload.."`"
 		end
 		table.insert(t, line)
 	end
-	return table.concat(t, "\n---| ").."\n"
+	return table.concat(t, "\n---|").."\n"
 end
 
 function EmmyLiterals:GetCVarLiterals()
@@ -28,9 +28,9 @@ function EmmyLiterals:GetCVarLiterals()
 	table.insert(t, "---@alias CVar")
 	local sorted = Util:SortTable(data[1].var)
 	for _, cvar in pairs(sorted) do
-		table.insert(t, string.format("'\"%s\"'", cvar))
+		table.insert(t, string.format([["%s"]], cvar))
 	end
-	return table.concat(t, "\n---| ").."\n"
+	return table.concat(t, "\n---|").."\n"
 end
 
 local function SortByValue(tbl)

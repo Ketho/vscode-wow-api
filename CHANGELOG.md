@@ -5,12 +5,17 @@
 - Frame templates are not completely supported, only BackdropTemplate ([#15](https://github.com/Ketho/vscode-wow-api/issues/15)) 
 - The Classic (TBC) API is not supported ([#13](https://github.com/Ketho/vscode-wow-api/issues/13))
 
+## [0.8.5] - 2022-05-28
+### Added
+- 🌙 EmmyLua: Added initial `Mixin()` support and fixed issue [#42](https://github.com/Ketho/vscode-wow-api/issues/42)
+
 ## [0.8.4] - 2022-05-26
 ### Added
 - 🌙 EmmyLua: Added widgets: Minimap, CheckButton, SimpleHTML, MovieFrame, CinematicModel, TabardModel, FogOfWarFrame, UnitPositionFrame, POIFrame, QuestPOIFrame ScenarioPOIFrame, LineScale, LineTranslation, TextureCoordTranslation
 - 🌙 EmmyLua: Added [EmoteToken](https://wowpedia.fandom.com/wiki/API_DoEmote#Emotes)
 - 🛠 Improvements: CreateFrame() now accepts lowercase/uppercase frame types e.g. "frame" or "FRAME".
 - 🛠 Improvements: Added comment to widget scripts what frame type they were inherited from.
+
 ### Changed
 - 🐞 Bug Fixes: Fixed widget scripts not inheriting from parent classes (regression).
 - 🌙 EmmyLua: Fixed warnings in issues [#39](https://github.com/Ketho/vscode-wow-api/issues/39), [#40](https://github.com/Ketho/vscode-wow-api/issues/40), [#41](https://github.com/Ketho/vscode-wow-api/issues/41); Fixed EditBox to inherit FontInstance; Fixed .SetTexture, .SetPoint
@@ -257,10 +262,11 @@
 ### Added
 - 🚧 Wip: Development work
 
-[0.8.4]: https://github.com/Ketho/vscode-wow-api/releases/tag/v0.8.4
-[0.8.3]: https://github.com/Ketho/vscode-wow-api/releases/tag/v0.8.3
-[0.8.2]: https://github.com/Ketho/vscode-wow-api/releases/tag/v0.8.2
-[0.8.1]: https://github.com/Ketho/vscode-wow-api/releases/tag/v0.8.1
+[0.8.5]: https://github.com/Ketho/vscode-wow-api/releases/tag/0.8.5
+[0.8.4]: https://github.com/Ketho/vscode-wow-api/releases/tag/0.8.4
+[0.8.3]: https://github.com/Ketho/vscode-wow-api/releases/tag/0.8.3
+[0.8.2]: https://github.com/Ketho/vscode-wow-api/releases/tag/0.8.2
+[0.8.1]: https://github.com/Ketho/vscode-wow-api/releases/tag/0.8.1
 [0.7.6]: https://github.com/Ketho/vscode-wow-api/releases/tag/v0.7.6
 [0.7.5]: https://github.com/Ketho/vscode-wow-api/releases/tag/v0.7.5
 [0.7.4]: https://github.com/Ketho/vscode-wow-api/releases/tag/v0.7.4
