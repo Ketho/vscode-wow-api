@@ -38,7 +38,7 @@ end
 -- Returns the index for a value in a table.
 ---@param tbl table
 ---@param item any
----@return number index
+---@return number? index
 function tIndexOf(tbl, item)
 	for i, v in ipairs(tbl) do
 		if item == v then
@@ -211,12 +211,12 @@ function FindInTableIf(tbl, pred)
 			return k, v;
 		end
 	end
-
+	---@diagnostic disable-next-line: return-type-mismatch
 	return nil;
 end
 
 ---[FrameXML](https://www.townlong-yak.com/framexml/go/SafePack)
----@vararg any
+---@param ... any
 ---@return table
 function SafePack(...)
 	local tbl = { ... };

@@ -5,11 +5,10 @@ local patches = require("Lua/FrameXML/Patches")
 local m = {}
 
 local missingFiles = {
-	["ClientSceneDocumentation.lua"] = true, -- 9.2.0 (42614); not exported and not searchable
-	["LootJournalDocumentation.lua"] = true, -- 9.2.0 (42698); not exported but searchable in wow.tools files
+	["GamePadConstDocumentation.lua"] = true, -- 9.2.5 (44015); not exported and not searchable in wow.tools
 }
 local ignoredFiles = {
-	["ConfigurationWarningsDocumentation.lua"] = true, -- C_ConfigurationWarnings does not exist
+	["ConfigurationWarningsDocumentation.lua"] = true, -- C_ConfigurationWarnings is apparently glues only
 }
 
 function m:ExportApiDocs(base)

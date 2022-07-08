@@ -4,11 +4,11 @@ ChatTypeInfo.SYSTEM = {}
 -- MessageFrame
 DEFAULT_CHAT_FRAME = {}
 
-function DEFAULT_CHAT_FRAME:AddMessage(msg)
+function DEFAULT_CHAT_FRAME:AddMessage(msg, r, g, b, id)
 	print(msg)
 end
 
-function DEFAULT_CHAT_FRAME:SetMaxLines()
+function DEFAULT_CHAT_FRAME:SetMaxLines(maxLines)
 end
 
 -- Lua 5.1

@@ -98,7 +98,7 @@ end
 ---@param amount number
 ---@return number
 function FrameDeltaLerp(startValue, endValue, amount)
-	--return DeltaLerp(startValue, endValue, amount, GetTickTime());
+	return DeltaLerp(startValue, endValue, amount, GetTickTime());
 end
 
 ---[FrameXML](https://www.townlong-yak.com/framexml/go/RandomFloatInRange)

@@ -42,7 +42,7 @@ function strsplittable(delimiter, str, pieces) end
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_strjoin)
 ---@param delim string
 ---@param str1 string
----@vararg string
+---@param ... string
 ---@return string
 function strjoin(delim, str1, ...) end
 
@@ -75,7 +75,7 @@ function newproxy(bool) end
 function strcmputf8i(str1, str2) end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_strconcat)
----@vararg string
+---@param ... string
 ---@return string
 function strconcat(...) end
 
@@ -93,19 +93,19 @@ function bit.bnot(a) end
 
 --- Returns the bitwise "AND" of the values
 ---@param a1 number
----@vararg number
+---@param ... number
 ---@return number
 function bit.band(a1, ...) end
 
 --- Returns the bitwise "OR" of the values
 ---@param a1 number
----@vararg number
+---@param ... number
 ---@return number
 function bit.bor(a1, ...) end
 
 --- Returns the bitwise "exclusive OR" of the values
 ---@param a1 number
----@vararg number
+---@param ... number
 ---@return number
 function bit.bxor(a1, ...) end
 

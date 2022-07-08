@@ -230,11 +230,10 @@ function m:ParseParam(line, info)
 	pType = pType:match("(.-)%s-%(") or pType
 	pType = pType:match(">(%w+)<") or pType
 	pType = pType:lower():gsub("%s", "")
-	local isArray = pType:find("%[%]")
+	local isArray = pType:find("%[%]") or line:find("</span>%[%]")
 	if isArray then
 		pType = pType:gsub("%[%]", "")
 	end
-	if info.apiName == "C_TradeSkillUI.GetCategories" then print(line, name, pType, isArray) end
 	local isOptional = IsOptional(line)
 	return name, pType, isOptional, isArray
 end

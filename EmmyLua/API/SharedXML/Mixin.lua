@@ -27,9 +27,10 @@ end
 
 ---[FrameXML](https://www.townlong-yak.com/framexml/go/CreateAndInitFromMixin)
 --- Copies mixins into a new object and initializes it
----@param mixin table
----@vararg table
----@return table mixin
+---@generic T
+---@param mixin T
+---@param ... any
+---@return T mixin
 function CreateAndInitFromMixin(mixin, ...)
 	local object = CreateFromMixins(mixin);
 	object:Init(...);
