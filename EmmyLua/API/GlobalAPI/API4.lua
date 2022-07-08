@@ -1829,7 +1829,7 @@ function SetBattlefieldScoreFaction(faction) end
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_SetBinding)
 ---@param key string
 ---@param command? string
----@param mode number
+---@param mode? number
 ---@return boolean ok
 function SetBinding(key, command, mode) end
 
