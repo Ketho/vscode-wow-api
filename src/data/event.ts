@@ -208,6 +208,11 @@ export const data: EventInterface = {
 			{Name: "auctionID", Type: "number"},
 		],
 	},
+	AUCTION_HOUSE_AUCTIONS_EXPIRED: {
+		Payload: [
+			{Name: "auctionID", Type: "number"},
+		],
+	},
 	AUCTION_HOUSE_AUCTION_CREATED: {
 		Documentation: "This signal is not used in the base UI but is included for AddOn ease-of-use.",
 		Payload: [
@@ -2115,6 +2120,12 @@ export const data: EventInterface = {
 			{Name: "showHighlights", Type: "boolean"},
 		],
 	},
+	CLIENT_SCENE_CLOSED: {},
+	CLIENT_SCENE_OPENED: {
+		Payload: [
+			{Name: "sceneType", Type: "ClientSceneType"},
+		],
+	},
 	CLOSE_INBOX_ITEM: {
 		Payload: [
 			{Name: "mailIndex", Type: "number"},
@@ -2142,6 +2153,11 @@ export const data: EventInterface = {
 		Payload: [
 			{Name: "type", Type: "ClubFinderRequestType"},
 			{Name: "clubFinderGUIDs", Type: "string[]"},
+		],
+	},
+	CLUB_FINDER_CAN_WHISPER_APPLICANT: {
+		Payload: [
+			{Name: "applicant", Type: "string"},
 		],
 	},
 	CLUB_FINDER_CLUB_LIST_RETURNED: {
@@ -2397,7 +2413,6 @@ export const data: EventInterface = {
 			{Name: "itemID", Type: "number"},
 		],
 	},
-	COMMUNITIES_STREAM_CURSOR_CLEAR: {},
 	COMPACT_UNIT_FRAME_PROFILES_LOADED: {},
 	COMPANION_LEARNED: {},
 	COMPANION_UNLEARNED: {},
@@ -2697,6 +2712,11 @@ export const data: EventInterface = {
 	GAME_PAD_CONFIGS_CHANGED: {},
 	GAME_PAD_CONNECTED: {},
 	GAME_PAD_DISCONNECTED: {},
+	GAME_PAD_POWER_CHANGED: {
+		Payload: [
+			{Name: "powerLevel", Type: "GamePadPowerLevel"},
+		],
+	},
 	GARRISON_ARCHITECT_CLOSED: {},
 	GARRISON_ARCHITECT_OPENED: {
 		Payload: [
@@ -3475,6 +3495,7 @@ export const data: EventInterface = {
 			{Name: "upgraded", Type: "boolean"},
 		],
 	},
+	LOOT_JOURNAL_ITEM_UPDATE: {},
 	LOOT_OPENED: {
 		Payload: [
 			{Name: "autoLoot", Type: "boolean"},
@@ -3717,13 +3738,6 @@ export const data: EventInterface = {
 	OBLITERUM_FORGE_PENDING_ITEM_CHANGED: {},
 	OBLITERUM_FORGE_SHOW: {},
 	OPEN_MASTER_LOOT_LIST: {},
-	OPEN_REPORT_PLAYER: {
-		Payload: [
-			{Name: "token", Type: "number"},
-			{Name: "reportType", Type: "string"},
-			{Name: "playerName", Type: "string"},
-		],
-	},
 	OPEN_SPLASH_SCREEN: {
 		Payload: [
 			{Name: "info", Type: "SplashScreenInfo", Nilable: true},
@@ -5052,6 +5066,8 @@ export const data: EventInterface = {
 	UNIT_AURA: {
 		Payload: [
 			{Name: "unitTarget", Type: "string"},
+			{Name: "isFullUpdate", Type: "boolean"},
+			{Name: "updatedAuras", Type: "UnitAuraUpdateInfo[]", Nilable: true},
 		],
 	},
 	UNIT_CHEAT_TOGGLE_EVENT: {},

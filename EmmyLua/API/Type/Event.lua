@@ -66,6 +66,7 @@
 ---|"ARTIFACT_UPDATE" # `newItem`
 ---|"ARTIFACT_XP_UPDATE"
 ---|"AUCTION_CANCELED" # `auctionID`
+---|"AUCTION_HOUSE_AUCTIONS_EXPIRED" # `auctionID`
 ---|"AUCTION_HOUSE_AUCTION_CREATED" # `auctionID`
 ---|"AUCTION_HOUSE_BROWSE_FAILURE"
 ---|"AUCTION_HOUSE_BROWSE_RESULTS_ADDED" # `addedBrowseResults`
@@ -287,12 +288,15 @@
 ---|"CLASS_TRIAL_UPGRADE_COMPLETE"
 ---|"CLEAR_BOSS_EMOTES"
 ---|"CLICKBINDINGS_SET_HIGHLIGHTS_SHOWN" # `showHighlights`
+---|"CLIENT_SCENE_CLOSED"
+---|"CLIENT_SCENE_OPENED" # `sceneType`
 ---|"CLOSE_INBOX_ITEM" # `mailIndex`
 ---|"CLOSE_TABARD_FRAME"
 ---|"CLUB_ADDED" # `clubId`
 ---|"CLUB_ERROR" # `action, error, clubType`
 ---|"CLUB_FINDER_APPLICANT_INVITE_RECIEVED" # `clubFinderGUIDs`
 ---|"CLUB_FINDER_APPLICATIONS_UPDATED" # `type, clubFinderGUIDs`
+---|"CLUB_FINDER_CAN_WHISPER_APPLICANT" # `applicant`
 ---|"CLUB_FINDER_CLUB_LIST_RETURNED" # `type`
 ---|"CLUB_FINDER_CLUB_REPORTED" # `type, clubFinderGUID`
 ---|"CLUB_FINDER_COMMUNITY_OFFLINE_JOIN" # `clubId`
@@ -348,7 +352,6 @@
 ---|"COMMODITY_PURCHASE_SUCCEEDED"
 ---|"COMMODITY_SEARCH_RESULTS_ADDED" # `itemID`
 ---|"COMMODITY_SEARCH_RESULTS_UPDATED" # `itemID`
----|"COMMUNITIES_STREAM_CURSOR_CLEAR"
 ---|"COMPACT_UNIT_FRAME_PROFILES_LOADED"
 ---|"COMPANION_LEARNED"
 ---|"COMPANION_UNLEARNED"
@@ -438,6 +441,7 @@
 ---|"GAME_PAD_CONFIGS_CHANGED"
 ---|"GAME_PAD_CONNECTED"
 ---|"GAME_PAD_DISCONNECTED"
+---|"GAME_PAD_POWER_CHANGED" # `powerLevel`
 ---|"GARRISON_ARCHITECT_CLOSED"
 ---|"GARRISON_ARCHITECT_OPENED" # `followerTypeID`
 ---|"GARRISON_BUILDING_ACTIVATABLE" # `buildingName, garrisonType`
@@ -668,6 +672,7 @@
 ---|"LOOT_HISTORY_ROLL_COMPLETE"
 ---|"LOOT_ITEM_AVAILABLE" # `itemTooltip, lootHandle`
 ---|"LOOT_ITEM_ROLL_WON" # `itemLink, rollQuantity, rollType, roll, upgraded`
+---|"LOOT_JOURNAL_ITEM_UPDATE"
 ---|"LOOT_OPENED" # `autoLoot, isFromItem`
 ---|"LOOT_READY" # `autoloot`
 ---|"LOOT_ROLLS_COMPLETE" # `lootHandle`
@@ -738,7 +743,6 @@
 ---|"OBLITERUM_FORGE_PENDING_ITEM_CHANGED"
 ---|"OBLITERUM_FORGE_SHOW"
 ---|"OPEN_MASTER_LOOT_LIST"
----|"OPEN_REPORT_PLAYER" # `token, reportType, playerName`
 ---|"OPEN_SPLASH_SCREEN" # `info`
 ---|"OPEN_TABARD_FRAME"
 ---|"OWNED_AUCTIONS_UPDATED"
@@ -1138,7 +1142,7 @@
 ---|"UNIT_ATTACK" # `unitTarget`
 ---|"UNIT_ATTACK_POWER" # `unitTarget`
 ---|"UNIT_ATTACK_SPEED" # `unitTarget`
----|"UNIT_AURA" # `unitTarget`
+---|"UNIT_AURA" # `unitTarget, isFullUpdate, updatedAuras`
 ---|"UNIT_CHEAT_TOGGLE_EVENT"
 ---|"UNIT_CLASSIFICATION_CHANGED" # `unitTarget`
 ---|"UNIT_COMBAT" # `unitTarget, event, flagText, amount, schoolMask`

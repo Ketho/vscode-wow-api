@@ -510,6 +510,12 @@ export const data: CVarInterface = {
 		category: 5,
 		help: "GamePad button that should emulate the Shift key",
 	},
+	gamepademulatetapwindowms: {
+		name: "GamePadEmulateTapWindowMs",
+		default: "350",
+		category: 5,
+		help: "GamePad buttons emulating Ctrl/Alt/Shift will be 'tapped' if released withing this time in MS",
+	},
 	gamepadenable: {
 		name: "GamePadEnable",
 		default: "0",
@@ -1492,7 +1498,7 @@ export const data: CVarInterface = {
 	terrainloddiv: {
 		name: "TerrainLodDiv",
 		default: "768",
-		category: 5,
+		category: 1,
 		help: "Terrain lod divisor",
 	},
 	turnspeed: {
@@ -2240,6 +2246,13 @@ export const data: CVarInterface = {
 		default: "0.5",
 		category: 5,
 		scope: "Character",
+	},
+	camerafov: {
+		name: "cameraFov",
+		default: "90",
+		category: 5,
+		scope: "Character",
+		help: "Default camera field of view",
 	},
 	cameragroundsmoothspeed: {
 		name: "cameraGroundSmoothSpeed",
@@ -4385,6 +4398,12 @@ export const data: CVarInterface = {
 		category: 5,
 		help: "Adjust the time the rune fades after it flashes when you spend it",
 	},
+	enablesourcelocationlookup: {
+		name: "enableSourceLocationLookup",
+		default: "0",
+		category: 0,
+		help: "Allows addon file name lookup for debugging help",
+	},
 	enabletwitter: {
 		name: "enableTwitter",
 		default: "0",
@@ -4425,7 +4444,7 @@ export const data: CVarInterface = {
 	entityshadowfadescale: {
 		name: "entityShadowFadeScale",
 		default: "50",
-		category: 5,
+		category: 1,
 		help: "Entity shadow fade scale",
 	},
 	expandupgradepanel: {
@@ -4825,31 +4844,31 @@ export const data: CVarInterface = {
 	graphicsdeptheffects: {
 		name: "graphicsDepthEffects",
 		default: "4",
-		category: 5,
+		category: 1,
 		help: "UI value of the graphics setting",
 	},
 	graphicsenvironmentdetail: {
 		name: "graphicsEnvironmentDetail",
 		default: "6",
-		category: 5,
+		category: 1,
 		help: "UI value of the graphics setting",
 	},
 	graphicsgroundclutter: {
 		name: "graphicsGroundClutter",
 		default: "6",
-		category: 5,
+		category: 1,
 		help: "UI value of the graphics setting",
 	},
 	graphicsliquiddetail: {
 		name: "graphicsLiquidDetail",
 		default: "4",
-		category: 5,
+		category: 1,
 		help: "UI value of the graphics setting",
 	},
 	graphicsoutlinemode: {
 		name: "graphicsOutlineMode",
 		default: "3",
-		category: 5,
+		category: 1,
 		help: "UI value of the graphics setting",
 	},
 	graphicsparticledensity: {
@@ -4861,7 +4880,7 @@ export const data: CVarInterface = {
 	graphicsprojectedtextures: {
 		name: "graphicsProjectedTextures",
 		default: "2",
-		category: 5,
+		category: 1,
 		help: "UI value of the graphics setting",
 	},
 	graphicsquality: {
@@ -5367,7 +5386,7 @@ export const data: CVarInterface = {
 	lodobjectminsize: {
 		name: "lodObjectMinSize",
 		default: "20",
-		category: 5,
+		category: 1,
 		help: "Lod object min size",
 	},
 	lodobjectsizescale: {
@@ -6016,7 +6035,7 @@ export const data: CVarInterface = {
 	particledensity: {
 		name: "particleDensity",
 		default: "100",
-		category: 5,
+		category: 1,
 		help: "Particle density",
 	},
 	particlemtdensity: {
@@ -6429,7 +6448,7 @@ export const data: CVarInterface = {
 	reflectionmode: {
 		name: "reflectionMode",
 		default: "3",
-		category: 5,
+		category: 1,
 		help: "Reflection mode",
 	},
 	refraction: {
@@ -6468,7 +6487,7 @@ export const data: CVarInterface = {
 	rippledetail: {
 		name: "rippleDetail",
 		default: "2",
-		category: 5,
+		category: 1,
 		help: "Ripple surface detail",
 	},
 	rotateminimap: {
