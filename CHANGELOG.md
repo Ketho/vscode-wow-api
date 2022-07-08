@@ -5,6 +5,10 @@
 - Frame templates are not completely supported, only BackdropTemplate ([#15](https://github.com/Ketho/vscode-wow-api/issues/15)) 
 - The Classic (TBC) API is not supported ([#13](https://github.com/Ketho/vscode-wow-api/issues/13))
 
+## [0.8.6] - 2022-07-08
+### Added
+- 🌙 EmmyLua: Updated definitions for Patch 9.2.5 (44232)
+
 ## [0.8.5] - 2022-05-28
 ### Added
 - 🌙 EmmyLua: Added initial `Mixin()` support and fixed issue [#42](https://github.com/Ketho/vscode-wow-api/issues/42)
@@ -262,6 +266,7 @@
 ### Added
 - 🚧 Wip: Development work
 
+[0.8.6]: https://github.com/Ketho/vscode-wow-api/releases/tag/0.8.6
 [0.8.5]: https://github.com/Ketho/vscode-wow-api/releases/tag/0.8.5
 [0.8.4]: https://github.com/Ketho/vscode-wow-api/releases/tag/0.8.4
 [0.8.3]: https://github.com/Ketho/vscode-wow-api/releases/tag/0.8.3

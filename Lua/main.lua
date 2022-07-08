@@ -1,6 +1,6 @@
 CONSTANTS = {
 	LATEST_MAINLINE = "9.2.5",
-	--LATEST_CLASSIC = "2.5.4",
+	LATEST_CLASSIC = "2.5.4",
 }
 
 local Util = require("Lua/Util/Util")
