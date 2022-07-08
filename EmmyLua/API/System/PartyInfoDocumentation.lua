@@ -6,6 +6,10 @@ C_PartyInfo = {}
 ---@return boolean allowed
 function C_PartyInfo.AllowedToDoPartyConversion(toRaid) end
 
+---[Documentation](https://wowpedia.fandom.com/wiki/API_C_PartyInfo.CanFormCrossFactionParties)
+---@return boolean canFormCrossFactionParties
+function C_PartyInfo.CanFormCrossFactionParties() end
+
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_PartyInfo.CanInvite)
 ---@return boolean allowedToInvite
 function C_PartyInfo.CanInvite() end
@@ -75,6 +79,11 @@ function C_PartyInfo.GetMinLevel(category) end
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_PartyInfo.InviteUnit)
 ---@param targetName string
 function C_PartyInfo.InviteUnit(targetName) end
+
+---[Documentation](https://wowpedia.fandom.com/wiki/API_C_PartyInfo.IsCrossFactionParty)
+---@param category? number
+---@return boolean isCrossFactionParty
+function C_PartyInfo.IsCrossFactionParty(category) end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_PartyInfo.IsPartyFull)
 ---@param category? number

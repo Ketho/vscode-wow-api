@@ -7,6 +7,14 @@ C_TransmogCollection = {}
 ---@return boolean canCollect
 function C_TransmogCollection.AccountCanCollectSource(sourceID) end
 
+---[Documentation](https://wowpedia.fandom.com/wiki/API_C_TransmogCollection.AreAllCollectionTypeFiltersChecked)
+---@return boolean areAllCollectionTypeFiltersChecked
+function C_TransmogCollection.AreAllCollectionTypeFiltersChecked() end
+
+---[Documentation](https://wowpedia.fandom.com/wiki/API_C_TransmogCollection.AreAllSourceTypeFiltersChecked)
+---@return boolean areAllSourceTypeFiltersChecked
+function C_TransmogCollection.AreAllSourceTypeFiltersChecked() end
+
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_TransmogCollection.CanAppearanceHaveIllusion)
 ---@param appearanceID number
 ---@return boolean canHaveIllusion
@@ -71,8 +79,9 @@ function C_TransmogCollection.GetAppearanceSourceInfo(itemModifiedAppearanceID) 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_TransmogCollection.GetAppearanceSources)
 ---@param appearanceID number
 ---@param categoryType? TransmogCollectionType
+---@param transmogLocation? TransmogLocationMixin
 ---@return AppearanceSourceInfo[] sources
-function C_TransmogCollection.GetAppearanceSources(appearanceID, categoryType) end
+function C_TransmogCollection.GetAppearanceSources(appearanceID, categoryType, transmogLocation) end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_TransmogCollection.GetArtifactAppearanceStrings)
 ---@param appearanceID number
@@ -82,13 +91,19 @@ function C_TransmogCollection.GetArtifactAppearanceStrings(appearanceID) end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_TransmogCollection.GetCategoryAppearances)
 ---@param category TransmogCollectionType
+---@param transmogLocation? TransmogLocationMixin
 ---@return TransmogCategoryAppearanceInfo[] appearances
-function C_TransmogCollection.GetCategoryAppearances(category) end
+function C_TransmogCollection.GetCategoryAppearances(category, transmogLocation) end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_TransmogCollection.GetCategoryCollectedCount)
 ---@param category TransmogCollectionType
 ---@return number count
 function C_TransmogCollection.GetCategoryCollectedCount(category) end
+
+---[Documentation](https://wowpedia.fandom.com/wiki/API_C_TransmogCollection.GetCategoryForItem)
+---@param itemModifiedAppearanceID number
+---@return TransmogCollectionType collectionCategory
+function C_TransmogCollection.GetCategoryForItem(itemModifiedAppearanceID) end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_TransmogCollection.GetCategoryInfo)
 ---@param category TransmogCollectionType
@@ -244,6 +259,10 @@ function C_TransmogCollection.IsSearchInProgress(searchType) end
 ---@return boolean checked
 function C_TransmogCollection.IsSourceTypeFilterChecked(index) end
 
+---[Documentation](https://wowpedia.fandom.com/wiki/API_C_TransmogCollection.IsUsingDefaultFilters)
+---@return boolean isUsingDefaultFilters
+function C_TransmogCollection.IsUsingDefaultFilters() end
+
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_TransmogCollection.ModifyOutfit)
 ---@param outfitID number
 ---@param itemTransmogInfoList table[]
@@ -298,6 +317,10 @@ function C_TransmogCollection.SearchProgress(searchType) end
 ---@return number size
 function C_TransmogCollection.SearchSize(searchType) end
 
+---[Documentation](https://wowpedia.fandom.com/wiki/API_C_TransmogCollection.SetAllCollectionTypeFilters)
+---@param checked boolean
+function C_TransmogCollection.SetAllCollectionTypeFilters(checked) end
+
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_TransmogCollection.SetAllSourceTypeFilters)
 ---@param checked boolean
 function C_TransmogCollection.SetAllSourceTypeFilters(checked) end
@@ -305,6 +328,9 @@ function C_TransmogCollection.SetAllSourceTypeFilters(checked) end
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_TransmogCollection.SetCollectedShown)
 ---@param shown boolean
 function C_TransmogCollection.SetCollectedShown(shown) end
+
+---[Documentation](https://wowpedia.fandom.com/wiki/API_C_TransmogCollection.SetDefaultFilters)
+function C_TransmogCollection.SetDefaultFilters() end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_TransmogCollection.SetIsAppearanceFavorite)
 ---@param itemAppearanceID number

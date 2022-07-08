@@ -146,15 +146,9 @@ function C_ClubFinder.PlayerReturnPendingGuildsList() end
 ---@param avatarId number
 ---@param specs number[]
 ---@param type ClubFinderRequestType
+---@param crossFaction boolean
 ---@return boolean succesful
-function C_ClubFinder.PostClub(clubId, itemLevelRequirement, name, description, avatarId, specs, type) end
-
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_ClubFinder.ReportPosting)
----@param reportType ClubFinderPostingReportType
----@param clubFinderGUID string
----@param playerGUID string
----@param complaintNote string
-function C_ClubFinder.ReportPosting(reportType, clubFinderGUID, playerGUID, complaintNote) end
+function C_ClubFinder.PostClub(clubId, itemLevelRequirement, name, description, avatarId, specs, type, crossFaction) end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_ClubFinder.RequestApplicantList)
 ---@param type ClubFinderRequestType
@@ -221,6 +215,13 @@ function C_ClubFinder.ReturnMatchingGuildList() end
 ---@return ClubFinderApplicantInfo[] info
 function C_ClubFinder.ReturnPendingClubApplicantList(clubId) end
 
+---[Documentation](https://wowpedia.fandom.com/wiki/API_C_ClubFinder.SendChatWhisper)
+---@param clubFinderGUID string
+---@param playerGUID string
+---@param applicantType ClubFinderRequestType
+---@param name string
+function C_ClubFinder.SendChatWhisper(clubFinderGUID, playerGUID, applicantType, name) end
+
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_ClubFinder.SetAllRecruitmentSettings)
 ---@param value number
 function C_ClubFinder.SetAllRecruitmentSettings(value) end
@@ -260,6 +261,7 @@ function C_ClubFinder.ShouldShowClubFinder() end
 ---@field requestStatus PlayerClubRequestStatus
 ---@field lookupSuccess boolean
 ---@field lastUpdatedTime number
+---@field faction number
 
 ---@class ClubSettingsInfo
 ---@field playStyleDungeon boolean
@@ -279,6 +281,7 @@ function C_ClubFinder.ShouldShowClubFinder() end
 ---@field sortMembers boolean
 ---@field sortNewest boolean
 ---@field autoAccept boolean
+---@field crossFaction boolean
 
 ---@class RecruitingClubInfo
 ---@field clubFinderGUID string
@@ -299,3 +302,4 @@ function C_ClubFinder.ShouldShowClubFinder() end
 ---@field lastPosterGUID string
 ---@field clubId string
 ---@field lastUpdatedTime number
+---@field isCrossFaction boolean

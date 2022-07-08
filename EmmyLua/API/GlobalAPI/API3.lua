@@ -1000,6 +1000,7 @@ function GetNumMembersInRank(index) end
 function GetNumModifiedClickActions() end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_GetNumPetitionNames)
+---@return number numNames
 function GetNumPetitionNames() end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_GetNumQuestChoices)
@@ -1616,7 +1617,20 @@ function GetRaidProfileOption(profile, optionName) end
 function GetRaidProfileSavedPosition(profile) end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_GetRaidRosterInfo)
-function GetRaidRosterInfo(index) end
+---@param raidIndex number
+---@return string name
+---@return number rank
+---@return number subgroup
+---@return number level
+---@return string class
+---@return string fileName
+---@return string? zone
+---@return boolean online
+---@return boolean isDead
+---@return string role
+---@return boolean isML
+---@return string combatRole
+function GetRaidRosterInfo(raidIndex) end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_GetRaidTargetIndex)
 ---@param unit string
@@ -2005,6 +2019,7 @@ function GetSpellBaseCooldown(spellid) end
 function GetSpellBonusDamage(spellTreeID) end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_GetSpellBonusHealing)
+---@return number bonusHeal
 function GetSpellBonusHealing() end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_GetSpellBookItemInfo)
@@ -2014,7 +2029,10 @@ function GetSpellBookItemInfo() end
 function GetSpellBookItemName() end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_GetSpellBookItemTexture)
-function GetSpellBookItemTexture() end
+---@param spell number|string
+---@return number icon
+---@overload fun(index: number, bookType: string)
+function GetSpellBookItemTexture(spell) end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_GetSpellCharges)
 ---@param spell number|string
@@ -2333,7 +2351,9 @@ function GetTrainerServiceInfo(index) end
 function GetTrainerServiceItemLink(index) end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_GetTrainerServiceLevelReq)
-function GetTrainerServiceLevelReq(index) end
+---@param id number
+---@return number reqLevel
+function GetTrainerServiceLevelReq(id) end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_GetTrainerServiceNumAbilityReq)
 function GetTrainerServiceNumAbilityReq() end
@@ -2508,20 +2528,4 @@ function GuildControlAddRank(name) end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_GuildControlDelRank)
 function GuildControlDelRank(name) end
-
----[Documentation](https://wowpedia.fandom.com/wiki/API_GuildControlGetAllowedShifts)
-function GuildControlGetAllowedShifts(rankOrder) end
-
----[Documentation](https://wowpedia.fandom.com/wiki/API_GuildControlGetNumRanks)
-function GuildControlGetNumRanks() end
-
----[Documentation](https://wowpedia.fandom.com/wiki/API_GuildControlGetRankName)
-function GuildControlGetRankName(index) end
-
----[Documentation](https://wowpedia.fandom.com/wiki/API_GuildControlSaveRank)
-function GuildControlSaveRank(name) end
-
----[Documentation](https://wowpedia.fandom.com/wiki/API_GuildControlSetRank)
----@param rankOrder number
-function GuildControlSetRank(rankOrder) end
 

@@ -48,7 +48,8 @@ function C_Club.CompareBattleNetDisplayName(clubId, lhsMemberId, rhsMemberId) en
 ---@param description string
 ---@param clubType ClubType
 ---@param avatarId number
-function C_Club.CreateClub(name, shortName, description, clubType, avatarId) end
+---@param isCrossFaction? boolean
+function C_Club.CreateClub(name, shortName, description, clubType, avatarId, isCrossFaction) end
 
 ---Check the canCreateStream privilege.
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_Club.CreateStream)
@@ -64,7 +65,8 @@ function C_Club.CreateStream(clubId, name, subject, leadersAndModeratorsOnly) en
 ---@param allowedRedeemCount? number
 ---@param duration? number
 ---@param defaultStreamId? string
-function C_Club.CreateTicket(clubId, allowedRedeemCount, duration, defaultStreamId) end
+---@param isCrossFaction? boolean
+function C_Club.CreateTicket(clubId, allowedRedeemCount, duration, defaultStreamId, isCrossFaction) end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_Club.DeclineInvitation)
 ---@param clubId string
@@ -93,6 +95,11 @@ function C_Club.DestroyStream(clubId, streamId) end
 ---@param ticketId string
 function C_Club.DestroyTicket(clubId, ticketId) end
 
+---[Documentation](https://wowpedia.fandom.com/wiki/API_C_Club.DoesCommunityHaveMembersOfTheOppositeFaction)
+---@param clubId string
+---@return boolean hasMembersOfOppositeFaction
+function C_Club.DoesCommunityHaveMembersOfTheOppositeFaction(clubId) end
+
 ---nil arguments will not change existing club data
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_Club.EditClub)
 ---@param clubId string
@@ -101,7 +108,8 @@ function C_Club.DestroyTicket(clubId, ticketId) end
 ---@param description? string
 ---@param avatarId? number
 ---@param broadcast? string
-function C_Club.EditClub(clubId, name, shortName, description, avatarId, broadcast) end
+---@param crossFaction? boolean
+function C_Club.EditClub(clubId, name, shortName, description, avatarId, broadcast, crossFaction) end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_Club.EditMessage)
 ---@param clubId string
@@ -460,6 +468,7 @@ function C_Club.ValidateText(clubType, text, clubFieldType) end
 ---@field favoriteTimeStamp number|nil
 ---@field joinTime number|nil
 ---@field socialQueueingEnabled boolean|nil
+---@field crossFaction boolean|nil
 
 ---@class ClubInvitationCandidateInfo
 ---@field memberId number
@@ -505,6 +514,7 @@ function C_Club.ValidateText(clubType, text, clubFieldType) end
 ---@field guildRankOrder number|nil
 ---@field isRemoteChat boolean|nil
 ---@field overallDungeonScore number|nil
+---@field faction PvPFaction|nil
 
 ---@class ClubMessageIdentifier
 ---@field epoch number

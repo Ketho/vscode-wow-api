@@ -25,7 +25,7 @@ function C_LFGList.CopyActiveEntryInfoToCreationFields() end
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_LFGList.DoesEntryTitleMatchPrebuiltTitle)
 ---@param activityID number
 ---@param groupID number
----@param playstyle? LfgEntryPlaystyle
+---@param playstyle? LFGEntryPlaystyle
 ---@return boolean matches
 function C_LFGList.DoesEntryTitleMatchPrebuiltTitle(activityID, groupID, playstyle) end
 
@@ -95,7 +95,7 @@ function C_LFGList.GetLfgCategoryInfo(categoryID) end
 function C_LFGList.GetOwnedKeystoneActivityAndGroupAndLevel(getTimewalking) end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_LFGList.GetPlaystyleString)
----@param playstyle LfgEntryPlaystyle
+---@param playstyle LFGEntryPlaystyle
 ---@param activityInfo GroupFinderActivityInfo
 ---@return string playstyleString
 function C_LFGList.GetPlaystyleString(playstyle, activityInfo) end
@@ -129,12 +129,13 @@ function C_LFGList.IsPlayerAuthenticatedForLFG(activityID) end
 ---@param filter number
 ---@param preferredFilters number
 ---@param languageFilter? WowLocale
-function C_LFGList.Search(categoryID, filter, preferredFilters, languageFilter) end
+---@param searchCrossFactionListings? boolean
+function C_LFGList.Search(categoryID, filter, preferredFilters, languageFilter, searchCrossFactionListings) end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_LFGList.SetEntryTitle)
 ---@param activityID number
 ---@param groupID number
----@param playstyle? LfgEntryPlaystyle
+---@param playstyle? LFGEntryPlaystyle
 function C_LFGList.SetEntryTitle(activityID, groupID, playstyle) end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_LFGList.SetSearchToActivity)
@@ -171,7 +172,7 @@ function C_LFGList.ValidateRequiredPvpRatingForActivity(activityID, rating) end
 ---@field filters number
 ---@field minLevel number
 ---@field maxNumPlayers number
----@field displayType LfgListDisplayType
+---@field displayType LFGListDisplayType
 ---@field orderIndex number
 ---@field useHonorLevel boolean
 ---@field showQuickJoinToast boolean
@@ -180,6 +181,7 @@ function C_LFGList.ValidateRequiredPvpRatingForActivity(activityID, rating) end
 ---@field isCurrentRaidActivity boolean
 ---@field isPvpActivity boolean
 ---@field isMythicActivity boolean
+---@field allowCrossFaction boolean
 
 ---@class LfgApplicantData
 ---@field applicantID number
@@ -197,6 +199,7 @@ function C_LFGList.ValidateRequiredPvpRatingForActivity(activityID, rating) end
 ---@field autoChooseActivity boolean
 ---@field preferCurrentArea boolean
 ---@field showPlaystyleDropdown boolean
+---@field allowCrossFaction boolean
 
 ---@class LfgEntryData
 ---@field activityID number
@@ -211,7 +214,8 @@ function C_LFGList.ValidateRequiredPvpRatingForActivity(activityID, rating) end
 ---@field questID number|nil
 ---@field requiredDungeonScore number|nil
 ---@field requiredPvpRating number|nil
----@field playstyle LfgEntryPlaystyle|nil
+---@field playstyle LFGEntryPlaystyle|nil
+---@field isCrossFactionListing boolean
 
 ---@class LfgSearchResultData
 ---@field searchResultID number
@@ -236,7 +240,9 @@ function C_LFGList.ValidateRequiredPvpRatingForActivity(activityID, rating) end
 ---@field leaderPvpRatingInfo PvpRatingInfo|nil
 ---@field requiredDungeonScore number|nil
 ---@field requiredPvpRating number|nil
----@field playstyle LfgEntryPlaystyle|nil
+---@field playstyle LFGEntryPlaystyle|nil
+---@field crossFactionListing boolean|nil
+---@field leaderFactionGroup number
 
 ---@class PvpRatingInfo
 ---@field bracket number

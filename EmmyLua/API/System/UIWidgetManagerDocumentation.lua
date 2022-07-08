@@ -639,6 +639,9 @@ function C_UIWidgetManager.UnregisterUnitForWidgetUpdates(unitToken, isGuid) end
 ---@field iconSizeType SpellDisplayIconSizeType
 ---@field iconDisplayType SpellDisplayIconDisplayType
 ---@field textShownState SpellDisplayTextShownStateType
+---@field textFontType UIWidgetFontType
+---@field textSizeType UIWidgetTextSizeType
+---@field hAlignType WidgetTextHorizontalAlignmentType
 
 ---@class UIWidgetStateIconInfo
 ---@field iconState IconState

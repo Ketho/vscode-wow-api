@@ -67,6 +67,10 @@ function C_AuctionHouse.GetBidInfo(bidIndex) end
 ---@return ItemKey? typeItemKey
 function C_AuctionHouse.GetBidType(bidTypeIndex) end
 
+---[Documentation](https://wowpedia.fandom.com/wiki/API_C_AuctionHouse.GetBids)
+---@return BidInfo[] bids
+function C_AuctionHouse.GetBids() end
+
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_AuctionHouse.GetBrowseResults)
 ---@return BrowseResultInfo[] browseResults
 function C_AuctionHouse.GetBrowseResults() end
@@ -198,6 +202,10 @@ function C_AuctionHouse.GetOwnedAuctionInfo(ownedAuctionIndex) end
 ---@param ownedAuctionTypeIndex number
 ---@return ItemKey? typeItemKey
 function C_AuctionHouse.GetOwnedAuctionType(ownedAuctionTypeIndex) end
+
+---[Documentation](https://wowpedia.fandom.com/wiki/API_C_AuctionHouse.GetOwnedAuctions)
+---@return OwnedAuctionInfo[] ownedAuctions
+function C_AuctionHouse.GetOwnedAuctions() end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_AuctionHouse.GetQuoteDurationRemaining)
 ---@return number quoteDurationSeconds
@@ -348,6 +356,9 @@ function C_AuctionHouse.RefreshItemSearchResults(itemKey, minLevelFilter, maxLev
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_AuctionHouse.ReplicateItems)
 function C_AuctionHouse.ReplicateItems() end
 
+---[Documentation](https://wowpedia.fandom.com/wiki/API_C_AuctionHouse.RequestFavorites)
+function C_AuctionHouse.RequestFavorites() end
+
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_AuctionHouse.RequestMoreBrowseResults)
 function C_AuctionHouse.RequestMoreBrowseResults() end
 
@@ -363,7 +374,7 @@ function C_AuctionHouse.RequestMoreItemSearchResults(itemKey) end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_AuctionHouse.RequestOwnedAuctionBidderInfo)
 ---@param auctionID number
----@return string? bidderName
+---@return string bidderName
 function C_AuctionHouse.RequestOwnedAuctionBidderInfo(auctionID) end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_AuctionHouse.SearchForFavorites)
@@ -420,7 +431,7 @@ function C_AuctionHouse.StartCommoditiesPurchase(itemID, quantity) end
 ---@class AuctionHouseItemClassFilter
 ---@field classID number
 ---@field subClassID number|nil
----@field inventoryType number|nil
+---@field inventoryType InventoryType|nil
 
 ---@class AuctionHouseSortType
 ---@field sortOrder AuctionHouseSortOrder

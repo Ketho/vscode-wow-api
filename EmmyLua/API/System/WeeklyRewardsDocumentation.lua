@@ -61,6 +61,9 @@ function C_WeeklyRewards.HasGeneratedRewards() end
 ---@return boolean isInteracting
 function C_WeeklyRewards.HasInteraction() end
 
+---[Documentation](https://wowpedia.fandom.com/wiki/API_C_WeeklyRewards.OnUIInteract)
+function C_WeeklyRewards.OnUIInteract() end
+
 ---@class ConquestWeeklyProgress
 ---@field progress number
 ---@field maxProgress number

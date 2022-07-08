@@ -314,9 +314,6 @@ function BattlefieldMgrQueueInviteResponse(queueId, accept) end
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_BattlefieldMgrQueueRequest)
 function BattlefieldMgrQueueRequest() end
 
----[Documentation](https://wowpedia.fandom.com/wiki/API_BattlefieldSetPendingReportTarget)
-function BattlefieldSetPendingReportTarget(index) end
-
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_BeginTrade)
 function BeginTrade() end
 
@@ -438,6 +435,9 @@ function C_BlackMarket.RequestItems() end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_CharacterServices.AssignPCTDistribution)
 function C_CharacterServices.AssignPCTDistribution() end
+
+---[Documentation](https://wowpedia.fandom.com/wiki/API_C_CharacterServices.AssignPFCDistribution)
+function C_CharacterServices.AssignPFCDistribution() end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_CharacterServices.AssignUpgradeDistribution)
 function C_CharacterServices.AssignUpgradeDistribution() end
@@ -1155,9 +1155,6 @@ function C_Heirloom.GetNumKnownHeirlooms() end
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_Heirloom.GetUncollectedHeirloomFilter)
 function C_Heirloom.GetUncollectedHeirloomFilter() end
 
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_Heirloom.IsHeirloomSourceValid)
-function C_Heirloom.IsHeirloomSourceValid(source) end
-
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_Heirloom.IsItemHeirloom)
 function C_Heirloom.IsItemHeirloom(itemID) end
 
@@ -1338,12 +1335,6 @@ function C_LFGList.RemoveApplicant(applicantID) end
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_LFGList.RemoveListing)
 function C_LFGList.RemoveListing() end
 
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_LFGList.ReportApplicant)
-function C_LFGList.ReportApplicant(applicantID) end
-
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_LFGList.ReportSearchResult)
-function C_LFGList.ReportSearchResult(resultID, complaintType) end
-
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_LFGList.RequestAvailableActivities)
 function C_LFGList.RequestAvailableActivities() end
 
@@ -1376,12 +1367,6 @@ function C_LootHistory.GiveMasterLoot(itemIndex, playerIndex) end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_LootHistory.SetExpiration)
 function C_LootHistory.SetExpiration(numItemsToSave, secondsToSave) end
-
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_LootJournal.GetItemSetItems)
-function C_LootJournal.GetItemSetItems() end
-
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_LootJournal.GetItemSets)
-function C_LootJournal.GetItemSets() end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_NamePlate.GetNamePlateEnemyClickThrough)
 function C_NamePlate.GetNamePlateEnemyClickThrough() end
@@ -2086,4 +2071,19 @@ function C_ToyBox.GetCollectedShown() end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_ToyBox.GetIsFavorite)
 function C_ToyBox.GetIsFavorite(itemID) end
+
+---[Documentation](https://wowpedia.fandom.com/wiki/API_C_ToyBox.GetNumFilteredToys)
+function C_ToyBox.GetNumFilteredToys() end
+
+---[Documentation](https://wowpedia.fandom.com/wiki/API_C_ToyBox.GetNumLearnedDisplayedToys)
+function C_ToyBox.GetNumLearnedDisplayedToys() end
+
+---[Documentation](https://wowpedia.fandom.com/wiki/API_C_ToyBox.GetNumTotalDisplayedToys)
+function C_ToyBox.GetNumTotalDisplayedToys() end
+
+---[Documentation](https://wowpedia.fandom.com/wiki/API_C_ToyBox.GetNumToys)
+function C_ToyBox.GetNumToys() end
+
+---[Documentation](https://wowpedia.fandom.com/wiki/API_C_ToyBox.GetToyFromIndex)
+function C_ToyBox.GetToyFromIndex(itemIndex) end
 

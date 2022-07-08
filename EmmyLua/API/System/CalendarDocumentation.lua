@@ -44,9 +44,6 @@ function C_Calendar.ContextMenuEventCanRemove(offsetMonths, monthDay, eventIndex
 ---@return boolean exists
 function C_Calendar.ContextMenuEventClipboard() end
 
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_Calendar.ContextMenuEventComplain)
-function C_Calendar.ContextMenuEventComplain() end
-
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_Calendar.ContextMenuEventCopy)
 function C_Calendar.ContextMenuEventCopy() end
 
@@ -404,10 +401,10 @@ function C_Calendar.UpdateEvent() end
 ---@field eventType CalendarEventType
 ---@field iconTexture number|nil
 ---@field modStatus string
----@field inviteStatus number
+---@field inviteStatus CalendarStatus
 ---@field invitedBy string
 ---@field difficulty number
----@field inviteType number
+---@field inviteType CalendarInviteType
 ---@field sequenceIndex number
 ---@field numSequenceDays number
 ---@field difficultyName string
@@ -426,7 +423,7 @@ function C_Calendar.UpdateEvent() end
 ---@field description string
 ---@field creator string|nil
 ---@field eventType CalendarEventType
----@field repeatOption number
+---@field repeatOption CalendarEventRepeatOptions
 ---@field maxSize number
 ---@field textureIndex number|nil
 ---@field time CalendarTime
@@ -434,8 +431,8 @@ function C_Calendar.UpdateEvent() end
 ---@field isLocked boolean
 ---@field isAutoApprove boolean
 ---@field hasPendingInvite boolean
----@field inviteStatus number|nil
----@field inviteType number|nil
+---@field inviteStatus CalendarStatus|nil
+---@field inviteType CalendarInviteType|nil
 ---@field calendarType string
 ---@field communityName string|nil
 
@@ -444,10 +441,10 @@ function C_Calendar.UpdateEvent() end
 ---@field level number
 ---@field className string|nil
 ---@field classFilename string|nil
----@field inviteStatus number|nil
+---@field inviteStatus CalendarStatus|nil
 ---@field modStatus string|nil
 ---@field inviteIsMine boolean
----@field type number
+---@field type CalendarInviteType
 ---@field notes string
 ---@field classID number|nil
 ---@field guid string
@@ -480,7 +477,7 @@ function C_Calendar.UpdateEvent() end
 ---@field title string
 ---@field calendarType string
 ---@field texture number
----@field inviteStatus number
+---@field inviteStatus CalendarStatus
 ---@field clubID string
 
 ---@class CalendarGuildFilterInfo

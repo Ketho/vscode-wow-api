@@ -160,6 +160,10 @@ function C_MountJournal.IsSourceChecked(filterIndex) end
 ---@return boolean isChecked
 function C_MountJournal.IsTypeChecked(filterIndex) end
 
+---[Documentation](https://wowpedia.fandom.com/wiki/API_C_MountJournal.IsUsingDefaultFilters)
+---@return boolean isUsingDefaultFilters
+function C_MountJournal.IsUsingDefaultFilters() end
+
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_MountJournal.IsValidSourceFilter)
 ---@param filterIndex number
 ---@return boolean isValid
@@ -191,6 +195,9 @@ function C_MountJournal.SetAllTypeFilters(isChecked) end
 ---@param filterIndex number
 ---@param isChecked boolean
 function C_MountJournal.SetCollectedFilterSetting(filterIndex, isChecked) end
+
+---[Documentation](https://wowpedia.fandom.com/wiki/API_C_MountJournal.SetDefaultFilters)
+function C_MountJournal.SetDefaultFilters() end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_MountJournal.SetIsFavorite)
 ---@param mountIndex number

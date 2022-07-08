@@ -1,6 +1,12 @@
 ---@meta
 C_GamePad = {}
 
+---[Documentation](https://wowpedia.fandom.com/wiki/API_C_GamePad.AddSDLMapping)
+---@param platform ClientPlatformType
+---@param mapping string
+---@return boolean success
+function C_GamePad.AddSDLMapping(platform, mapping) end
+
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_GamePad.ApplyConfigs)
 function C_GamePad.ApplyConfigs() end
 
@@ -65,6 +71,11 @@ function C_GamePad.GetDeviceRawState(deviceID) end
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_GamePad.GetLedColor)
 ---@return ColorMixin color
 function C_GamePad.GetLedColor() end
+
+---[Documentation](https://wowpedia.fandom.com/wiki/API_C_GamePad.GetPowerLevel)
+---@param deviceID? number
+---@return GamePadPowerLevel powerLevel
+function C_GamePad.GetPowerLevel(deviceID) end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_GamePad.IsEnabled)
 ---@return boolean enabled

@@ -89,6 +89,11 @@ function C_FriendList.IsIgnored(token) end
 ---@return boolean isIgnored
 function C_FriendList.IsIgnoredByGuid(guid) end
 
+---[Documentation](https://wowpedia.fandom.com/wiki/API_C_FriendList.IsOnIgnoredList)
+---@param token string
+---@return boolean isIgnored
+function C_FriendList.IsOnIgnoredList(token) end
+
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_FriendList.RemoveFriend)
 ---@param name string
 ---@return boolean removed

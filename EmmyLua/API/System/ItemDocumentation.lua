@@ -120,6 +120,15 @@ function C_Item.GetItemQualityByID(itemInfo) end
 ---@return number? limitCategoryID
 function C_Item.GetItemUniquenessByID(itemInfo) end
 
+---[Documentation](https://wowpedia.fandom.com/wiki/API_C_Item.GetLimitedCurrencyItemInfo)
+---@param itemInfo string
+---@return string name
+---@return number icon
+---@return number quantity
+---@return number maxQuantity
+---@return number totalEarned
+function C_Item.GetLimitedCurrencyItemInfo(itemInfo) end
+
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_Item.GetStackCount)
 ---@param itemLocation ItemLocationMixin
 ---@return number stackCount

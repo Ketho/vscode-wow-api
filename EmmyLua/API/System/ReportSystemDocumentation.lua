@@ -11,19 +11,26 @@ function C_ReportSystem.CanReportPlayer(playerLocation) end
 ---@return boolean canReport
 function C_ReportSystem.CanReportPlayerForLanguage(playerLocation) end
 
----Not allowed to be called by addons
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_ReportSystem.InitiateReportPlayer)
----@param complaintType string
----@param playerLocation? PlayerLocationMixin
----@return number token
-function C_ReportSystem.InitiateReportPlayer(complaintType, playerLocation) end
+---[Documentation](https://wowpedia.fandom.com/wiki/API_C_ReportSystem.GetMajorCategoriesForReportType)
+---@param reportType ReportType
+---@return ReportMajorCategory[] majorCategories
+function C_ReportSystem.GetMajorCategoriesForReportType(reportType) end
 
----Addons should use this to open the ReportPlayer dialog. InitiateReportPlayer and SendReportPlayer are no longer accessible to addons.
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_ReportSystem.OpenReportPlayerDialog)
----@param reportType string
----@param playerName string
----@param playerLocation? PlayerLocationMixin
-function C_ReportSystem.OpenReportPlayerDialog(reportType, playerName, playerLocation) end
+---[Documentation](https://wowpedia.fandom.com/wiki/API_C_ReportSystem.GetMajorCategoryString)
+---@param majorCategory ReportMajorCategory
+---@return string majorCategoryString
+function C_ReportSystem.GetMajorCategoryString(majorCategory) end
+
+---[Documentation](https://wowpedia.fandom.com/wiki/API_C_ReportSystem.GetMinorCategoriesForReportTypeAndMajorCategory)
+---@param reportType ReportType
+---@param majorCategory ReportMajorCategory
+---@return ReportMinorCategory[] minorCategories
+function C_ReportSystem.GetMinorCategoriesForReportTypeAndMajorCategory(reportType, majorCategory) end
+
+---[Documentation](https://wowpedia.fandom.com/wiki/API_C_ReportSystem.GetMinorCategoryString)
+---@param minorCategory ReportMinorCategory
+---@return string minorCategoryString
+function C_ReportSystem.GetMinorCategoryString(minorCategory) end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_ReportSystem.ReportServerLag)
 function C_ReportSystem.ReportServerLag() end
@@ -32,22 +39,7 @@ function C_ReportSystem.ReportServerLag() end
 function C_ReportSystem.ReportStuckInCombat() end
 
 ---Not allowed to be called by addons
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_ReportSystem.SendReportPlayer)
----@param token number
----@param comment? string
-function C_ReportSystem.SendReportPlayer(token, comment) end
-
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_ReportSystem.SetPendingReportPetTarget)
----@param target? string
----@return boolean set
-function C_ReportSystem.SetPendingReportPetTarget(target) end
-
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_ReportSystem.SetPendingReportTarget)
----@param target? string
----@return boolean set
-function C_ReportSystem.SetPendingReportTarget(target) end
-
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_ReportSystem.SetPendingReportTargetByGuid)
----@param guid? string
----@return boolean set
-function C_ReportSystem.SetPendingReportTargetByGuid(guid) end
+---[Documentation](https://wowpedia.fandom.com/wiki/API_C_ReportSystem.SendReport)
+---@param reportInfo ReportInfoMixin
+---@param playerLocation? PlayerLocationMixin
+function C_ReportSystem.SendReport(reportInfo, playerLocation) end

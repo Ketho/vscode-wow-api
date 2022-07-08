@@ -1,4 +1,29 @@
 ---@meta
+---[Documentation](https://wowpedia.fandom.com/wiki/API_SwapRaidSubgroup)
+---@param index1 number
+---@param index2 number
+function SwapRaidSubgroup(index1, index2) end
+
+---[Documentation](https://wowpedia.fandom.com/wiki/API_SwitchAchievementSearchTab)
+function SwitchAchievementSearchTab(index) end
+
+---[Documentation](https://wowpedia.fandom.com/wiki/API_TakeInboxItem)
+function TakeInboxItem(index, itemIndex) end
+
+---[Documentation](https://wowpedia.fandom.com/wiki/API_TakeInboxMoney)
+---@param index number
+function TakeInboxMoney(index) end
+
+---[Documentation](https://wowpedia.fandom.com/wiki/API_TakeInboxTextItem)
+function TakeInboxTextItem(index) end
+
+---[Documentation](https://wowpedia.fandom.com/wiki/API_TakeTaxiNode)
+---@param index number
+function TakeTaxiNode(index) end
+
+---[Documentation](https://wowpedia.fandom.com/wiki/API_TargetDirectionEnemy)
+function TargetDirectionEnemy(facing) end
+
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_TargetDirectionFinished)
 function TargetDirectionFinished() end
 
@@ -305,6 +330,14 @@ function UnitCreatureFamily(unit) end
 function UnitCreatureType(unit) end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_UnitDamage)
+---@param unit string
+---@return number lowDmg
+---@return number hiDmg
+---@return number offlowDmg
+---@return number offhiDmg
+---@return number posBuff
+---@return number negBuff
+---@return number percentmod
 function UnitDamage(unit) end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_UnitDetailedThreatSituation)

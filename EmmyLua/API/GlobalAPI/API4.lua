@@ -1,4 +1,20 @@
 ---@meta
+---[Documentation](https://wowpedia.fandom.com/wiki/API_GuildControlGetAllowedShifts)
+function GuildControlGetAllowedShifts(rankOrder) end
+
+---[Documentation](https://wowpedia.fandom.com/wiki/API_GuildControlGetNumRanks)
+function GuildControlGetNumRanks() end
+
+---[Documentation](https://wowpedia.fandom.com/wiki/API_GuildControlGetRankName)
+function GuildControlGetRankName(index) end
+
+---[Documentation](https://wowpedia.fandom.com/wiki/API_GuildControlSaveRank)
+function GuildControlSaveRank(name) end
+
+---[Documentation](https://wowpedia.fandom.com/wiki/API_GuildControlSetRank)
+---@param rankOrder number
+function GuildControlSetRank(rankOrder) end
+
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_GuildControlSetRankFlag)
 ---@param index number
 ---@param enabled boolean
@@ -21,7 +37,8 @@ function GuildDisband() end
 function GuildInfo() end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_GuildInvite)
-function GuildInvite(name) end
+---@param playername string
+function GuildInvite(playername) end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_GuildLeave)
 function GuildLeave() end
@@ -212,7 +229,10 @@ function IsActiveQuestLegendary(index) end
 function IsActiveQuestTrivial(index) end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_IsAddOnLoadOnDemand)
-function IsAddOnLoadOnDemand() end
+---@param index number
+---@return boolean loadDemand
+---@overload fun(name: string)
+function IsAddOnLoadOnDemand(index) end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_IsAddOnLoaded)
 ---@param index number
@@ -1024,10 +1044,11 @@ function ListChannelByName(channelName) end
 function ListChannels() end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_LoadAddOn)
----@param addonInfo number|string index or name
+---@param index number
 ---@return boolean loaded
 ---@return string? reason
-function LoadAddOn(addonInfo) end
+---@overload fun(name: string)
+function LoadAddOn(index) end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_LoadBindings)
 ---@param bindingSet number
@@ -1260,7 +1281,9 @@ function PickupInventoryItem(invSlot) end
 function PickupItem(item) end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_PickupMacro)
-function PickupMacro() end
+---@param index number
+---@overload fun(name: string)
+function PickupMacro(index) end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_PickupMerchantItem)
 function PickupMerchantItem(index) end
@@ -1661,6 +1684,7 @@ function RunMacro() end
 function RunMacroText(macro) end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_RunScript)
+---@param script string
 function RunScript(script) end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_SaveAddOns)
@@ -1799,6 +1823,7 @@ function SetBankBagSlotFlag() end
 function SetBarSlotFromIntro(slot) end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_SetBattlefieldScoreFaction)
+---@param faction number
 function SetBattlefieldScoreFaction(faction) end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_SetBinding)
@@ -2307,7 +2332,9 @@ function SpellCanTargetItemID() end
 function SpellCanTargetQuest() end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_SpellCanTargetUnit)
-function SpellCanTargetUnit(unit) end
+---@param unitId string
+---@return boolean canTarget
+function SpellCanTargetUnit(unitId) end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_SpellCancelQueuedSpell)
 function SpellCancelQueuedSpell() end
@@ -2440,28 +2467,4 @@ function SupportsClipCursor() end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_SurrenderArena)
 function SurrenderArena() end
-
----[Documentation](https://wowpedia.fandom.com/wiki/API_SwapRaidSubgroup)
----@param index1 number
----@param index2 number
-function SwapRaidSubgroup(index1, index2) end
-
----[Documentation](https://wowpedia.fandom.com/wiki/API_SwitchAchievementSearchTab)
-function SwitchAchievementSearchTab(index) end
-
----[Documentation](https://wowpedia.fandom.com/wiki/API_TakeInboxItem)
-function TakeInboxItem(index, itemIndex) end
-
----[Documentation](https://wowpedia.fandom.com/wiki/API_TakeInboxMoney)
-function TakeInboxMoney(index) end
-
----[Documentation](https://wowpedia.fandom.com/wiki/API_TakeInboxTextItem)
-function TakeInboxTextItem(index) end
-
----[Documentation](https://wowpedia.fandom.com/wiki/API_TakeTaxiNode)
----@param index number
-function TakeTaxiNode(index) end
-
----[Documentation](https://wowpedia.fandom.com/wiki/API_TargetDirectionEnemy)
-function TargetDirectionEnemy(facing) end
 

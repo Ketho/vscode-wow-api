@@ -55,6 +55,11 @@ function C_PlayerInfo.IsPlayerEligibleForNPEv2() end
 ---@return boolean inChromieTime
 function C_PlayerInfo.IsPlayerInChromieTime() end
 
+---[Documentation](https://wowpedia.fandom.com/wiki/API_C_PlayerInfo.IsPlayerInGuildFromGUID)
+---@param playerGUID string
+---@return boolean IsInGuild
+function C_PlayerInfo.IsPlayerInGuildFromGUID(playerGUID) end
+
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_PlayerInfo.IsPlayerNPERestricted)
 ---@return boolean isRestricted
 function C_PlayerInfo.IsPlayerNPERestricted() end

@@ -1,19 +1,4 @@
 ---@meta
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_ToyBox.GetNumFilteredToys)
-function C_ToyBox.GetNumFilteredToys() end
-
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_ToyBox.GetNumLearnedDisplayedToys)
-function C_ToyBox.GetNumLearnedDisplayedToys() end
-
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_ToyBox.GetNumTotalDisplayedToys)
-function C_ToyBox.GetNumTotalDisplayedToys() end
-
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_ToyBox.GetNumToys)
-function C_ToyBox.GetNumToys() end
-
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_ToyBox.GetToyFromIndex)
-function C_ToyBox.GetToyFromIndex(itemIndex) end
-
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_ToyBox.GetToyInfo)
 ---@param itemID number
 ---@return number itemID
@@ -112,7 +97,7 @@ function C_TradeSkillUI.DropPendingObliterateItemFromCursor() end
 function C_TradeSkillUI.GetAllFilterableInventorySlots() end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_TradeSkillUI.GetAllRecipeIDs)
----@return number recipeIDs
+---@return number[] recipeIDs
 function C_TradeSkillUI.GetAllRecipeIDs() end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_TradeSkillUI.GetCategories)
@@ -861,14 +846,14 @@ function CombatLogSetCurrentEntry(index, ignoreFilter) end
 function CombatLogSetRetentionTime(seconds) end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_CombatLog_Object_IsA)
-function CombatLog_Object_IsA() end
+---@param unitFlags number
+---@param mask number
+---@return boolean isMatch
+function CombatLog_Object_IsA(unitFlags, mask) end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_CombatTextSetActiveUnit)
 ---@param unit string
 function CombatTextSetActiveUnit(unit) end
-
----[Documentation](https://wowpedia.fandom.com/wiki/API_ComplainInboxItem)
-function ComplainInboxItem(index) end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_CompleteLFGReadyCheck)
 function CompleteLFGReadyCheck(isReady) end
@@ -1131,7 +1116,7 @@ function EJ_GetDifficulty() end
 function EJ_GetEncounterInfo(encounterID) end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_EJ_GetEncounterInfoByIndex)
-function EJ_GetEncounterInfoByIndex(index, instanceID) end
+function EJ_GetEncounterInfoByIndex(index, journalInstanceID) end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_EJ_GetInstanceByIndex)
 ---@param index number
@@ -1154,7 +1139,7 @@ function EJ_GetInstanceByIndex(index, isRaid) end
 function EJ_GetInstanceForMap(mapID) end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_EJ_GetInstanceInfo)
----@param instanceID? number
+---@param journalInstanceID? number
 ---@return string name
 ---@return string description
 ---@return number bgImage
@@ -1164,7 +1149,7 @@ function EJ_GetInstanceForMap(mapID) end
 ---@return number dungeonAreaMapID
 ---@return string link
 ---@return boolean shouldDisplayDifficulty
-function EJ_GetInstanceInfo(instanceID) end
+function EJ_GetInstanceInfo(journalInstanceID) end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_EJ_GetInvTypeSortOrder)
 ---@param invType number
@@ -1255,8 +1240,8 @@ function EJ_ResetLootFilter() end
 function EJ_SelectEncounter(encounterID) end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_EJ_SelectInstance)
----@param instanceID number
-function EJ_SelectInstance(instanceID) end
+---@param journalInstanceID number
+function EJ_SelectInstance(journalInstanceID) end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_EJ_SelectTier)
 ---@param index number
@@ -1287,13 +1272,15 @@ function EditMacro(macroInfo, name, icon, body) end
 function EjectPassengerFromSeat(seat) end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_EnableAddOn)
----@param indexOrName number|string
----@param characterOrAll? string|boolean
-function EnableAddOn(indexOrName, characterOrAll) end
+---@param index number
+---@param character? string|boolean
+---@overload fun(name: string, character?: string|boolean)
+function EnableAddOn(index, character) end
 
----@param indexOrName number|string
----@param characterOrAll? string|boolean
-function DisableAddOn(indexOrName, characterOrAll) end
+---@param index number
+---@param character? string|boolean
+---@overload fun(name: string, character?: string|boolean)
+function DisableAddOn(index, character) end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_EnableAllAddOns)
 function EnableAllAddOns() end
@@ -1342,7 +1329,8 @@ function ExpandQuestHeader() end
 function ExpandWarGameHeader(index) end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_FactionToggleAtWar)
-function FactionToggleAtWar(index) end
+---@param rowIndex number
+function FactionToggleAtWar(rowIndex) end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_FillLocalizedClassList)
 function FillLocalizedClassList(classTable, isFemale) end
@@ -1383,6 +1371,7 @@ function FlyoutHasSpell(flyoutID, spellID) end
 function FocusUnit(unit) end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_FollowUnit)
+---@param unit string
 function FollowUnit(unit) end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_ForceLogout)
@@ -1528,6 +1517,11 @@ function GetActionBarToggles() end
 function GetActionCharges(slot) end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_GetActionCooldown)
+---@param slot number
+---@return number start
+---@return number duration
+---@return number enable
+---@return number modRate
 function GetActionCooldown(slot) end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_GetActionCount)
@@ -1574,7 +1568,10 @@ function GetActiveTitle(index) end
 function GetAddOnCPUUsage() end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_GetAddOnDependencies)
-function GetAddOnDependencies() end
+---@param index number
+---@overload fun(name: string)
+---@return ... string
+function GetAddOnDependencies(index) end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_GetAddOnEnableState)
 ---@param character? string
@@ -1583,7 +1580,7 @@ function GetAddOnDependencies() end
 function GetAddOnEnableState(character, addon) end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_GetAddOnInfo)
----@param addon number|string index or name
+---@param index number
 ---@return string name
 ---@return string title
 ---@return string notes
@@ -1591,16 +1588,18 @@ function GetAddOnEnableState(character, addon) end
 ---@return string reason
 ---@return string security
 ---@return boolean newVersion
-function GetAddOnInfo(addon) end
+---@overload fun(name: string)
+function GetAddOnInfo(index) end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_GetAddOnMemoryUsage)
 function GetAddOnMemoryUsage() end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_GetAddOnMetadata)
----@param addon string
+---@param index number
 ---@param field string
----@return string value
-function GetAddOnMetadata(addon, field) end
+---@return string? value
+---@overload fun(name: string, field: string)
+function GetAddOnMetadata(index, field) end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_GetAddOnOptionalDependencies)
 function GetAddOnOptionalDependencies() end
@@ -1671,7 +1670,7 @@ function GetAttackPowerForStat(statId, amount) end
 function GetAutoCompletePresenceID(name) end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_GetAutoCompleteRealms)
----@param realmNames table
+---@param realmNames? table
 ---@return table realmNames
 function GetAutoCompleteRealms(realmNames) end
 
@@ -1887,6 +1886,7 @@ function GetCVarSettingValidity(cvar, settingsCount, isRaid) end
 function GetCallPetSpellInfo(spellID) end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_GetCameraZoom)
+---@return number zoom
 function GetCameraZoom() end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_GetCategoryAchievementPoints)
@@ -1921,6 +1921,7 @@ function GetChannelDisplayInfo(channelID) end
 ---@return number id
 ---@return string name
 ---@return boolean disabled
+---@return ...
 function GetChannelList() end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_GetChannelName)
@@ -2276,7 +2277,7 @@ function GetFollowerTypeIDFromSpell() end
 function GetFontInfo() end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_GetFonts)
----@return string fonts
+---@return string[] fonts
 function GetFonts() end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_GetFrameCPUUsage)

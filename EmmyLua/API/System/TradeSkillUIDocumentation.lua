@@ -21,8 +21,9 @@ function C_TradeSkillUI.GetOptionalReagentBonusText(recipeSpellID, optionalReage
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_TradeSkillUI.GetOptionalReagentInfo)
 ---@param recipeSpellID number
+---@param recipeLevel? number
 ---@return OptionalReagentSlot[] slots
-function C_TradeSkillUI.GetOptionalReagentInfo(recipeSpellID) end
+function C_TradeSkillUI.GetOptionalReagentInfo(recipeSpellID, recipeLevel) end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_TradeSkillUI.GetRecipeInfo)
 ---@param recipeSpellID number

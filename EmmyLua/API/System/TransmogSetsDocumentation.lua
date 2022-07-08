@@ -116,10 +116,17 @@ function C_TransmogSets.IsNewSource(sourceID) end
 ---@return boolean isVisible
 function C_TransmogSets.IsSetVisible(transmogSetID) end
 
+---[Documentation](https://wowpedia.fandom.com/wiki/API_C_TransmogSets.IsUsingDefaultBaseSetsFilters)
+---@return boolean isUsingDefaultBaseSetsFilters
+function C_TransmogSets.IsUsingDefaultBaseSetsFilters() end
+
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_TransmogSets.SetBaseSetsFilter)
 ---@param index number
 ---@param isChecked boolean
 function C_TransmogSets.SetBaseSetsFilter(index, isChecked) end
+
+---[Documentation](https://wowpedia.fandom.com/wiki/API_C_TransmogSets.SetDefaultBaseSetsFilters)
+function C_TransmogSets.SetDefaultBaseSetsFilters() end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_TransmogSets.SetHasNewSources)
 ---@param transmogSetID number

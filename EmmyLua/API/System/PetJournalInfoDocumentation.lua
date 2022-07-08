@@ -51,6 +51,10 @@ function C_PetJournal.GetPetLoadOutInfo(slot) end
 ---@return string errorText
 function C_PetJournal.GetPetSummonInfo(battlePetGUID) end
 
+---[Documentation](https://wowpedia.fandom.com/wiki/API_C_PetJournal.IsUsingDefaultFilters)
+---@return boolean isUsingDefaultFilters
+function C_PetJournal.IsUsingDefaultFilters() end
+
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_PetJournal.PetIsSummonable)
 ---@param battlePetGUID string
 ---@return boolean isSummonable
@@ -60,6 +64,9 @@ function C_PetJournal.PetIsSummonable(battlePetGUID) end
 ---@param speciesID number
 ---@return boolean? usesRandomDisplay
 function C_PetJournal.PetUsesRandomDisplay(speciesID) end
+
+---[Documentation](https://wowpedia.fandom.com/wiki/API_C_PetJournal.SetDefaultFilters)
+function C_PetJournal.SetDefaultFilters() end
 
 ---@class PetAbilityLevelInfo
 ---@field abilityID number
