@@ -77,6 +77,10 @@ function Region:GetScale() end
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_Region_GetScaledRect)
 function Region:GetScaledRect() end
 
+---@return string location
+---[Documentation](https://wowpedia.fandom.com/wiki/API_Region_GetSourceLocation)
+function Region:GetSourceLocation() end
+
 ---@return number width
 ---@return number height
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_Region_GetSize)

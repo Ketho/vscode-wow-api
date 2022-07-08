@@ -59,7 +59,8 @@ function FontString:SetFixedColor() end
 function FontString:SetFormattedText(formatstring, ...) end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_FontString_SetMaxLines)
-function FontString:SetMaxLines() end
+---@param maxLines number
+function FontString:SetMaxLines(maxLines) end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_FontString_SetNonSpaceWrap)
 function FontString:SetNonSpaceWrap(wrapFlag) end
