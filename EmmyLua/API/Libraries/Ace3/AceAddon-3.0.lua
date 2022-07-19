@@ -30,6 +30,10 @@ function lib:IterateAddons() end
 function lib:NewAddon(object, name, ...) end
 
 ---@class AceAddon
+---@field name string
+---@field modules table
+---@field orderedModules table
+---@field defaultModuleLibraries table
 local addon = {}
 
 ---@return boolean
