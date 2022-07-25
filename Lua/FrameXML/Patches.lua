@@ -1,26 +1,48 @@
--- not sure how to approach this
 local m = {}
 
+-- previously included the param index but rather do a reverse look up by name now
 m.data = {
 	["CVarDocumentation.lua"] = {
-		GetCVar = {ParamType = "Arguments", Index = 1, Type = "CVar"},
-		GetCVarBitfield = {ParamType = "Arguments", Index = 1, Type = "CVar"},
-		GetCVarBool = {ParamType = "Arguments", Index = 1, Type = "CVar"},
-		GetCVarDefault = {ParamType = "Arguments", Index = 1, Type = "CVar"},
-		RegisterCVar = {ParamType = "Arguments", Index = 1, Type = "CVar"},
-		SetCVar = {ParamType = "Arguments", Index = 1, Type = "CVar"},
-		SetCVarBitfield = {ParamType = "Arguments", Index = 1, Type = "CVar"},
-	}
+		GetCVar         = {Arguments = {name = {Type = "CVar"}}},
+		GetCVarBitfield = {Arguments = {name = {Type = "CVar"}}},
+		GetCVarBool     = {Arguments = {name = {Type = "CVar"}}},
+		GetCVarDefault  = {Arguments = {name = {Type = "CVar"}}},
+		RegisterCVar    = {Arguments = {name = {Type = "CVar"}}},
+		SetCVar         = {Arguments = {name = {Type = "CVar"}}},
+		SetCVarBitfield = {Arguments = {name = {Type = "CVar"}}},
+	},
+	["ClassColorDocumentation.lua"] = {
+		GetClassColor = {Arguments = {className = {Type = "ClassFile"}}},
+	},
 }
 
--- change the type of a documented param
-function m:ApplyPatch(blizzard, patch)
-	for _, func in pairs(blizzard.Functions) do
-		local entry = patch[func.Name]
-		if entry then
-			func[entry.ParamType][entry.Index].Type = entry.Type
+-- there are multiple ways to do this. this sure looks messy and unreadable anyhow
+function m:ApplyPatch(blizz_file, patch_file)
+	for _, blizz_func in pairs(blizz_file.Functions) do
+		-- check if there is a corresponding patch table
+		local patch_func = patch_file[blizz_func.Name]
+		if patch_func then
+			-- get Arguments/Returns field from patch table
+			for patch_argret_key, patch_argret_table in pairs(patch_func) do
+				-- and use that to index the blizzard one
+				for _, blizz_param_tbl in pairs(blizz_func[patch_argret_key]) do
+					-- check if the blizzard param tables have a corresponding patch table by name
+					local patch_param_tbl = patch_argret_table[blizz_param_tbl.Name]
+					if patch_param_tbl then
+						-- copy any patch fields like Name, Type, etc.
+						for patch_param_k, patch_param_v in pairs(patch_param_tbl) do
+							blizz_param_tbl[patch_param_k] = patch_param_v
+						end
+					end
+				end
+			end
 		end
 	end
 end
 
 return m
+
+-- for _, func in pairs(blizzard.Functions) do
+-- 	local entry = patch[func.Name]
+-- 	if entry then
+-- 		func[entry.ParamType][entry.Index].Type = entry.Type
