@@ -182,7 +182,7 @@ function BNGetFriendIndex(presenceID) end
 ---@return number inviteID
 ---@return number accountName
 ---@return boolean isBattleTag
----@return unknown unknown
+---@return string? message
 ---@return number sentTime
 function BNGetFriendInviteInfo(inviteIndex) end
 

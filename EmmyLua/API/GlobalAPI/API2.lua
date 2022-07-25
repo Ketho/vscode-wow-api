@@ -929,7 +929,7 @@ function CreateFrame(frameType, name, parent, template, id) end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_CreateMacro)
 ---@param name string
----@param iconFileID number
+---@param iconFileID number|string
 ---@param body? string
 ---@param perCharacter? boolean
 ---@return number macroId
@@ -1384,7 +1384,9 @@ function ForceQuit() end
 function ForfeitDuel() end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_FrameXML_Debug)
-function FrameXML_Debug(flag) end
+---@param enabled? number
+---@return number enabled
+function FrameXML_Debug(enabled) end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_GMEuropaBugsEnabled)
 function GMEuropaBugsEnabled() end
@@ -1675,7 +1677,14 @@ function GetAutoCompletePresenceID(name) end
 function GetAutoCompleteRealms(realmNames) end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_GetAutoCompleteResults)
-function GetAutoCompleteResults(text, include, exclude, maxResults, cursorPosition) end
+---@param text string
+---@param numResults number
+---@param cursorPosition number
+---@param allowFullMatch boolean
+---@param includeBitField number
+---@param excludeBitField number
+---@return table[] results
+function GetAutoCompleteResults(text, numResults, cursorPosition, allowFullMatch, includeBitField, excludeBitField) end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_GetAutoDeclineGuildInvites)
 ---@return number enabled
@@ -1694,6 +1703,8 @@ function GetAvailableBandwidth() end
 function GetAvailableLevel(index) end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_GetAvailableLocaleInfo)
+---@param ignoreLocaleRestrictions? boolean
+---@return table[] locales
 function GetAvailableLocaleInfo(ignoreLocaleRestrictions) end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_GetAvailableLocales)
@@ -1953,6 +1964,8 @@ function GetChatWindowSavedPosition(index) end
 function GetClassInfo(classID) end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_GetClickFrame)
+---@param name string
+---@return table? frame
 function GetClickFrame(name) end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_GetCoinIcon)
@@ -2034,7 +2047,10 @@ function GetContainerItemID(bag, slot) end
 function GetContainerItemInfo(bagID, slot) end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_GetContainerItemLink)
-function GetContainerItemLink(bagID, slot) end
+---@param bagID number
+---@param slotIndex number
+---@return string itemLink
+function GetContainerItemLink(bagID, slotIndex) end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_GetContainerItemPurchaseCurrency)
 function GetContainerItemPurchaseCurrency(bag, slot, itemIndex, isEquipped) end
@@ -2089,6 +2105,7 @@ function GetCriteriaSpell() end
 function GetCurrentArenaSeason() end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_GetCurrentBindingSet)
+---@return number which
 function GetCurrentBindingSet() end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_GetCurrentCombatTextEventInfo)
@@ -2274,7 +2291,9 @@ function GetFlyoutSlotInfo(flyoutID, slot) end
 function GetFollowerTypeIDFromSpell() end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_GetFontInfo)
-function GetFontInfo() end
+---@param font Font|string
+---@return FontInfo fontInfo
+function GetFontInfo(font) end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_GetFonts)
 ---@return string[] fonts
@@ -2398,22 +2417,4 @@ function GetGuildBankTabInfo(tab) end
 ---@return boolean canEdit
 ---@return number stacksPerDay
 function GetGuildBankTabPermissions(tab) end
-
----[Documentation](https://wowpedia.fandom.com/wiki/API_GetGuildBankText)
-function GetGuildBankText(tab) end
-
----[Documentation](https://wowpedia.fandom.com/wiki/API_GetGuildBankTransaction)
----@param tab number
----@param index number
----@return string type
----@return string name
----@return string itemLink
----@return number count
----@return number tab1
----@return number tab2
----@return number year
----@return number month
----@return number day
----@return number hour
-function GetGuildBankTransaction(tab, index) end
 

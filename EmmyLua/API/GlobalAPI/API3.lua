@@ -1,4 +1,22 @@
 ---@meta
+---[Documentation](https://wowpedia.fandom.com/wiki/API_GetGuildBankText)
+function GetGuildBankText(tab) end
+
+---[Documentation](https://wowpedia.fandom.com/wiki/API_GetGuildBankTransaction)
+---@param tab number
+---@param index number
+---@return string type
+---@return string name
+---@return string itemLink
+---@return number count
+---@return number tab1
+---@return number tab2
+---@return number year
+---@return number month
+---@return number day
+---@return number hour
+function GetGuildBankTransaction(tab, index) end
+
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_GetGuildBankWithdrawGoldLimit)
 function GetGuildBankWithdrawGoldLimit() end
 
@@ -99,6 +117,23 @@ function GetGuildRosterShowOffline() end
 function GetGuildTabardFiles() end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_GetGuildTradeSkillInfo)
+---@param index number
+---@return number skillID
+---@return boolean isCollapsed
+---@return string iconTexture
+---@return string headerName
+---@return number numOnline
+---@return number numVisible
+---@return number numPlayers
+---@return string playerName
+---@return string playerNameWithRealm
+---@return string class
+---@return boolean online
+---@return string zone
+---@return number skill
+---@return string classFileName
+---@return boolean isMobile
+---@return number isAway
 function GetGuildTradeSkillInfo(index) end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_GetHaste)
@@ -314,10 +349,28 @@ function GetItemGem(item, index) end
 function GetItemIcon(itemID) end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_GetItemInfo)
+---@param item number|string
+---@return string itemName
+---@return string itemLink
+---@return number itemQuality
+---@return number itemLevel
+---@return number itemMinLevel
+---@return string itemType
+---@return string itemSubType
+---@return number itemStackCount
+---@return string itemEquipLoc
+---@return number itemTexture
+---@return number sellPrice
+---@return number classID
+---@return number subclassID
+---@return number bindType
+---@return number expacID
+---@return number setID
+---@return boolean isCraftingReagent
 function GetItemInfo(item) end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_GetItemInfoInstant)
----@param itemInfo string
+---@param item number|string
 ---@return number itemID
 ---@return string itemType
 ---@return string itemSubType
@@ -325,7 +378,7 @@ function GetItemInfo(item) end
 ---@return number icon
 ---@return number classID
 ---@return number subclassID
-function GetItemInfoInstant(itemInfo) end
+function GetItemInfoInstant(item) end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_GetItemInventorySlotInfo)
 function GetItemInventorySlotInfo(inventorySlot) end
@@ -799,7 +852,7 @@ function GetMouseButtonName() end
 function GetMouseClickFocus() end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_GetMouseFocus)
----@return table frame
+---@return Frame frame
 function GetMouseFocus() end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_GetMouseMotionFocus)
@@ -831,6 +884,8 @@ function GetNewSocketInfo(id) end
 function GetNewSocketLink(id) end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_GetNextAchievement)
+---@param achievementID number
+---@return number nextAchievementID
 function GetNextAchievement(achievementID) end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_GetNextCompleatedTutorial)
@@ -1336,6 +1391,8 @@ function GetPowerRegenForPowerType(POWER_TYPE) end
 function GetPrevCompleatedTutorial(tutorial) end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_GetPreviousAchievement)
+---@param achievementID number
+---@return number previousAchievementID
 function GetPreviousAchievement(achievementID) end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_GetPreviousArenaSeason)
@@ -2023,10 +2080,19 @@ function GetSpellBonusDamage(spellTreeID) end
 function GetSpellBonusHealing() end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_GetSpellBookItemInfo)
-function GetSpellBookItemInfo() end
+---@param spellName string
+---@return string spellType
+---@return number id
+---@overload fun(index: number, bookType: string)
+function GetSpellBookItemInfo(spellName) end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_GetSpellBookItemName)
-function GetSpellBookItemName() end
+---@param spellName string
+---@return string spellName
+---@return string spellSubName
+---@return number spellID
+---@overload fun(index: number, bookType: string)
+function GetSpellBookItemName(spellName) end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_GetSpellBookItemTexture)
 ---@param spell number|string
@@ -2475,57 +2541,4 @@ function GetWatchedFactionInfo() end
 ---@return number offHandCharges
 ---@return number offHandEnchantID
 function GetWeaponEnchantInfo() end
-
----[Documentation](https://wowpedia.fandom.com/wiki/API_GetWebTicket)
-function GetWebTicket() end
-
----[Documentation](https://wowpedia.fandom.com/wiki/API_GetWorldElapsedTime)
-function GetWorldElapsedTime(timerID) end
-
----[Documentation](https://wowpedia.fandom.com/wiki/API_GetWorldElapsedTimers)
-function GetWorldElapsedTimers() end
-
----[Documentation](https://wowpedia.fandom.com/wiki/API_GetWorldMapActionButtonSpellInfo)
-function GetWorldMapActionButtonSpellInfo() end
-
----[Documentation](https://wowpedia.fandom.com/wiki/API_GetWorldPVPAreaInfo)
----@param index number
----@return number pvpID
----@return string localizedName
----@return boolean isActive
----@return boolean canQueue
----@return number startTime
----@return boolean canEnter
----@return number minLevel
----@return number maxLevel
-function GetWorldPVPAreaInfo(index) end
-
----[Documentation](https://wowpedia.fandom.com/wiki/API_GetWorldPVPQueueStatus)
-function GetWorldPVPQueueStatus(queueId) end
-
----[Documentation](https://wowpedia.fandom.com/wiki/API_GetXPExhaustion)
----@return number exhaustionThreshold
-function GetXPExhaustion() end
-
----[Documentation](https://wowpedia.fandom.com/wiki/API_GetZonePVPInfo)
----@return string pvpType
----@return boolean isFFA
----@return string faction
-function GetZonePVPInfo() end
-
----[Documentation](https://wowpedia.fandom.com/wiki/API_GetZoneText)
----@return string zoneName
-function GetZoneText() end
-
----[Documentation](https://wowpedia.fandom.com/wiki/API_GiveMasterLoot)
-function GiveMasterLoot(slot, index) end
-
----[Documentation](https://wowpedia.fandom.com/wiki/API_GroupHasOfflineMember)
-function GroupHasOfflineMember() end
-
----[Documentation](https://wowpedia.fandom.com/wiki/API_GuildControlAddRank)
-function GuildControlAddRank(name) end
-
----[Documentation](https://wowpedia.fandom.com/wiki/API_GuildControlDelRank)
-function GuildControlDelRank(name) end
 

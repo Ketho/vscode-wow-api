@@ -1,4 +1,62 @@
 ---@meta
+---[Documentation](https://wowpedia.fandom.com/wiki/API_StartWarGameByName)
+function StartWarGameByName(msg) end
+
+---[Documentation](https://wowpedia.fandom.com/wiki/API_StopAttack)
+function StopAttack() end
+
+---[Documentation](https://wowpedia.fandom.com/wiki/API_StopAutoRun)
+function StopAutoRun() end
+
+---[Documentation](https://wowpedia.fandom.com/wiki/API_StopCinematic)
+function StopCinematic() end
+
+---[Documentation](https://wowpedia.fandom.com/wiki/API_StopMacro)
+function StopMacro() end
+
+---[Documentation](https://wowpedia.fandom.com/wiki/API_StopMusic)
+function StopMusic() end
+
+---[Documentation](https://wowpedia.fandom.com/wiki/API_StopSound)
+---@param soundHandle number
+---@param fadeoutTime? number
+function StopSound(soundHandle, fadeoutTime) end
+
+---[Documentation](https://wowpedia.fandom.com/wiki/API_StoreSecureReference)
+function StoreSecureReference(name, obj) end
+
+---[Documentation](https://wowpedia.fandom.com/wiki/API_StrafeLeftStart)
+function StrafeLeftStart() end
+
+---[Documentation](https://wowpedia.fandom.com/wiki/API_StrafeLeftStop)
+function StrafeLeftStop() end
+
+---[Documentation](https://wowpedia.fandom.com/wiki/API_StrafeRightStart)
+---@param startTime number
+function StrafeRightStart(startTime) end
+
+---[Documentation](https://wowpedia.fandom.com/wiki/API_StrafeRightStop)
+function StrafeRightStop() end
+
+---[Documentation](https://wowpedia.fandom.com/wiki/API_Stuck)
+function Stuck() end
+
+---[Documentation](https://wowpedia.fandom.com/wiki/API_SubmitRequiredGuildRename)
+function SubmitRequiredGuildRename() end
+
+---[Documentation](https://wowpedia.fandom.com/wiki/API_SummonFriend)
+---@param unit string
+function SummonFriend(unit) end
+
+---[Documentation](https://wowpedia.fandom.com/wiki/API_SummonRandomCritter)
+function SummonRandomCritter() end
+
+---[Documentation](https://wowpedia.fandom.com/wiki/API_SupportsClipCursor)
+function SupportsClipCursor() end
+
+---[Documentation](https://wowpedia.fandom.com/wiki/API_SurrenderArena)
+function SurrenderArena() end
+
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_SwapRaidSubgroup)
 ---@param index1 number
 ---@param index2 number
@@ -263,6 +321,11 @@ function UnitDebuff(unit, index, filter) end
 function UnitAuraBySlot(unit, slot) end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_UnitAuraSlots)
+---@param unit string
+---@param filter string
+---@param maxSlots? number
+---@param continuationToken? number
+---@return number? continuationToken
 function UnitAuraSlots(unit, filter, maxSlots, continuationToken) end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_UnitBattlePetLevel)
@@ -911,7 +974,6 @@ function debugstack(start, count1, count2) end
 function forceinsecure() end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_geterrorhandler)
----@return function func
 function geterrorhandler() end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_hooksecurefunc)
@@ -942,7 +1004,9 @@ function securecall() end
 function securecallfunction() end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_secureexecuterange)
-function secureexecuterange() end
+---@param tbl table
+---@param func function
+function secureexecuterange(tbl, func) end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_seterrorhandler)
 ---@param errFunc function

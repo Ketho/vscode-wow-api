@@ -1,4 +1,57 @@
 ---@meta
+---[Documentation](https://wowpedia.fandom.com/wiki/API_GetWebTicket)
+function GetWebTicket() end
+
+---[Documentation](https://wowpedia.fandom.com/wiki/API_GetWorldElapsedTime)
+function GetWorldElapsedTime(timerID) end
+
+---[Documentation](https://wowpedia.fandom.com/wiki/API_GetWorldElapsedTimers)
+function GetWorldElapsedTimers() end
+
+---[Documentation](https://wowpedia.fandom.com/wiki/API_GetWorldMapActionButtonSpellInfo)
+function GetWorldMapActionButtonSpellInfo() end
+
+---[Documentation](https://wowpedia.fandom.com/wiki/API_GetWorldPVPAreaInfo)
+---@param index number
+---@return number pvpID
+---@return string localizedName
+---@return boolean isActive
+---@return boolean canQueue
+---@return number startTime
+---@return boolean canEnter
+---@return number minLevel
+---@return number maxLevel
+function GetWorldPVPAreaInfo(index) end
+
+---[Documentation](https://wowpedia.fandom.com/wiki/API_GetWorldPVPQueueStatus)
+function GetWorldPVPQueueStatus(queueId) end
+
+---[Documentation](https://wowpedia.fandom.com/wiki/API_GetXPExhaustion)
+---@return number exhaustionThreshold
+function GetXPExhaustion() end
+
+---[Documentation](https://wowpedia.fandom.com/wiki/API_GetZonePVPInfo)
+---@return string pvpType
+---@return boolean isFFA
+---@return string faction
+function GetZonePVPInfo() end
+
+---[Documentation](https://wowpedia.fandom.com/wiki/API_GetZoneText)
+---@return string zoneName
+function GetZoneText() end
+
+---[Documentation](https://wowpedia.fandom.com/wiki/API_GiveMasterLoot)
+function GiveMasterLoot(slot, index) end
+
+---[Documentation](https://wowpedia.fandom.com/wiki/API_GroupHasOfflineMember)
+function GroupHasOfflineMember() end
+
+---[Documentation](https://wowpedia.fandom.com/wiki/API_GuildControlAddRank)
+function GuildControlAddRank(name) end
+
+---[Documentation](https://wowpedia.fandom.com/wiki/API_GuildControlDelRank)
+function GuildControlDelRank(name) end
+
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_GuildControlGetAllowedShifts)
 function GuildControlGetAllowedShifts(rankOrder) end
 
@@ -276,7 +329,9 @@ function IsAttackAction(slot) end
 function IsAttackSpell(spell) end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_IsAutoRepeatAction)
-function IsAutoRepeatAction(slot) end
+---@param actionSlot number
+---@return boolean isRepeating
+function IsAutoRepeatAction(actionSlot) end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_IsAutoRepeatSpell)
 function IsAutoRepeatSpell(spell) end
@@ -925,7 +980,7 @@ function JoinSingleLFG(category, lfgID) end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_JoinSkirmish)
 ---@param arenaID number
----@param joinAsGroup boolean
+---@param joinAsGroup? boolean
 function JoinSkirmish(arenaID, joinAsGroup) end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_JoinTemporaryChannel)
@@ -1037,8 +1092,8 @@ function LeaveLFG(category) end
 function LeaveSingleLFG(category, lfgID) end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_ListChannelByName)
----@param channelName string|number
-function ListChannelByName(channelName) end
+---@param channel number|string
+function ListChannelByName(channel) end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_ListChannels)
 function ListChannels() end
@@ -1289,7 +1344,8 @@ function PickupMacro(index) end
 function PickupMerchantItem(index) end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_PickupPetAction)
-function PickupPetAction(slot) end
+---@param petActionSlot number
+function PickupPetAction(petActionSlot) end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_PickupPetSpell)
 ---@param spellID number
@@ -1531,6 +1587,7 @@ function RenamePetition(name) end
 function ReopenInteraction() end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_RepairAllItems)
+---@param guildBankRepair? boolean
 function RepairAllItems(guildBankRepair) end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_ReplaceEnchant)
@@ -1801,7 +1858,7 @@ function SetAllowDangerousScripts() end
 function SetAllowLowLevelRaid(allowed) end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_SetAutoDeclineGuildInvites)
----@param decline string|number
+---@param decline boolean
 function SetAutoDeclineGuildInvites(decline) end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_SetBackpackAutosortDisabled)
@@ -2409,62 +2466,4 @@ function StartSpectatorWarGame(target1, target2, size, area, isTournamentMode) e
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_StartWarGame)
 function StartWarGame(target, name, isTournament) end
-
----[Documentation](https://wowpedia.fandom.com/wiki/API_StartWarGameByName)
-function StartWarGameByName(msg) end
-
----[Documentation](https://wowpedia.fandom.com/wiki/API_StopAttack)
-function StopAttack() end
-
----[Documentation](https://wowpedia.fandom.com/wiki/API_StopAutoRun)
-function StopAutoRun() end
-
----[Documentation](https://wowpedia.fandom.com/wiki/API_StopCinematic)
-function StopCinematic() end
-
----[Documentation](https://wowpedia.fandom.com/wiki/API_StopMacro)
-function StopMacro() end
-
----[Documentation](https://wowpedia.fandom.com/wiki/API_StopMusic)
-function StopMusic() end
-
----[Documentation](https://wowpedia.fandom.com/wiki/API_StopSound)
----@param soundHandle number
----@param fadeoutTime? number
-function StopSound(soundHandle, fadeoutTime) end
-
----[Documentation](https://wowpedia.fandom.com/wiki/API_StoreSecureReference)
-function StoreSecureReference(name, obj) end
-
----[Documentation](https://wowpedia.fandom.com/wiki/API_StrafeLeftStart)
-function StrafeLeftStart() end
-
----[Documentation](https://wowpedia.fandom.com/wiki/API_StrafeLeftStop)
-function StrafeLeftStop() end
-
----[Documentation](https://wowpedia.fandom.com/wiki/API_StrafeRightStart)
----@param startTime number
-function StrafeRightStart(startTime) end
-
----[Documentation](https://wowpedia.fandom.com/wiki/API_StrafeRightStop)
-function StrafeRightStop() end
-
----[Documentation](https://wowpedia.fandom.com/wiki/API_Stuck)
-function Stuck() end
-
----[Documentation](https://wowpedia.fandom.com/wiki/API_SubmitRequiredGuildRename)
-function SubmitRequiredGuildRename() end
-
----[Documentation](https://wowpedia.fandom.com/wiki/API_SummonFriend)
----@param unit string
-function SummonFriend(unit) end
-
----[Documentation](https://wowpedia.fandom.com/wiki/API_SummonRandomCritter)
-function SummonRandomCritter() end
-
----[Documentation](https://wowpedia.fandom.com/wiki/API_SupportsClipCursor)
-function SupportsClipCursor() end
-
----[Documentation](https://wowpedia.fandom.com/wiki/API_SurrenderArena)
-function SurrenderArena() end
 
