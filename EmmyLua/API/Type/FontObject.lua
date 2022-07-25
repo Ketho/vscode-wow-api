@@ -258,7 +258,6 @@
 ---|"OptionsFontLeft"
 ---|"OptionsFontSmall"
 ---|"OptionsFontSmallLeft"
----|"PlayerChoiceTextFont" # loadondemand
 ---|"PriceFont"
 ---|"PriceFontGray"
 ---|"PriceFontGreen"
