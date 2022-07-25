@@ -5,6 +5,16 @@
 - Frame templates are not completely supported, only BackdropTemplate ([#15](https://github.com/Ketho/vscode-wow-api/issues/15)) 
 - The Classic (TBC) API is not supported ([#13](https://github.com/Ketho/vscode-wow-api/issues/13))
 
+## [0.8.7] - 2022-07-26
+### Added
+- 🌙 EmmyLua: [#46](https://github.com/Ketho/vscode-wow-api/issues/46) Added `GetFontInfo()` and FontObject types 
+- 🌙 EmmyLua: [#45](https://github.com/Ketho/vscode-wow-api/issues/45) Fixed `Texture:SetTexture()`
+- 🌙 EmmyLua: PR [#44](https://github.com/Ketho/vscode-wow-api/issues/44) Added `CallbackHandler-1.0` 
+- 🌙 EmmyLua: PR [#43](https://github.com/Ketho/vscode-wow-api/issues/43) Added `AceGUI`
+- 🌙 EmmyLua: [#41](https://github.com/Ketho/vscode-wow-api/issues/41) Added `classFile` types
+- 🌙 EmmyLua: Added `GetItemInfo()`
+- 🛠 EmmyLua: Refactored wiki parsing script.
+
 ## [0.8.6] - 2022-07-08
 ### Added
 - 🌙 EmmyLua: Updated definitions for Patch 9.2.5 (44232)
@@ -266,6 +276,7 @@
 ### Added
 - 🚧 Wip: Development work
 
+[0.8.7]: https://github.com/Ketho/vscode-wow-api/releases/tag/0.8.7
 [0.8.6]: https://github.com/Ketho/vscode-wow-api/releases/tag/0.8.6
 [0.8.5]: https://github.com/Ketho/vscode-wow-api/releases/tag/0.8.5
 [0.8.4]: https://github.com/Ketho/vscode-wow-api/releases/tag/0.8.4
