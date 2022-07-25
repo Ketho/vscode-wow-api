@@ -17,7 +17,9 @@ end
 local function SaveWowpediaExport(path, pages)
 	local url = "https://wowpedia.fandom.com/wiki/Special:Export"
 	local requestBody = string.format("pages=%s&curonly=1", pages)
-	Util:DownloadFilePost(path, url, requestBody)
+	-- this is maybe bad but lazy, downloads the export every single time
+	local body = Util:HttpPostRequest(url, requestBody)
+	Util:WriteFile(path, body)
 end
 
 local undoc = GetUndocumentedApi()
@@ -54,6 +56,10 @@ local validTypes = {
 	-- to fix
 	integer = true,
 	unknown = true,
+
+	Frame = true,
+	Font = true,
+	FontInfo = true,
 }
 
 local redirects = {}
@@ -122,16 +128,17 @@ function m:ParsePages(options)
 				-- update current section
 				info.section = lineLower:match("==%s?(.-)%s?==") or info.section
 				-- look for params
-				if line:find("^[:;]") and line:find(":", 4) and not line:find("^:[:%*]") then
-					local name, valueType, optional, array = self:ParseParam(line, info)
-					if name then
+				if line:find("^:;") and line:find("[%w%]]:{{") then
+					local paramInfo = self:ParseParam(line, info)
+					if paramInfo.name then
 						local paramTbl = info.params[info.section]
 						if paramTbl then
 							table.insert(paramTbl, {
-								name = name,
-								type = valueType,
-								optional = optional,
-								array = array,
+								name = paramInfo.name,
+								type = paramInfo.apiType,
+								subType = paramInfo.subType,
+								array = paramInfo.array,
+								optional = paramInfo.nilable,
 							})
 						end
 					end
@@ -168,14 +175,15 @@ end
 function m:ParseSignature(lines, info)
 	-- print("ParseSignature", info.apiName)
 	local isMultiline = (#lines > 1)
-	local sigRets, sigName, sigArgs
+	local sigRets = ""
+	local sigName, sigArgs
 	-- get signature parts
 	if isMultiline then
 		for _, line in pairs(lines) do
 			if line:find("=") then
 				sigName, sigArgs = line:match("^%s-=%s(%S-)%((.-)%)")
 			else
-				sigRets = line
+				sigRets = sigRets..line
 			end
 		end
 	else
@@ -201,18 +209,10 @@ function m:ParseSignature(lines, info)
 	end
 end
 
-local function IsOptional(s)
-	if s:find([["optional"]]) or s:find([["nilable"]]) or s:find([[</span>%?]]) then
-		return true
-	end
-end
-
 --[=[
-:; spellTreeID : Integer - the spell tree:
-;mapID : <span class="apitype">number</span> : [[UiMapID]]
-;instanceID : <span title="optional"><span class="apitype">number</span>?</span> : JournalInstance.ID - If
-;spellID : &lt;span class="apitype"&gt;number&lt;/span&gt; - Any valid spell ID.
-;[[achievementID]]: Number - ID of the achievement to add to tracking.
+:;slotID:{{apitype|number}} - The [[actionSlot|slot ID]] to test.
+:;[[API BNGetNumFriends|friendIndex]]:{{apitype|number}} - The index on the friends list for this RealID friend.
+:;1. itemName:{{apitype|string}} - The localized name of the item.
 ]=]
 
 local function StripHyperlink(s)
@@ -220,22 +220,29 @@ local function StripHyperlink(s)
 end
 
 function m:ParseParam(line, info)
-	line = line:match("(.-)%s-%-") or line -- remove any comment text
-	line = StripHyperlink(line)
-	local name, pType = line:match("(%w+)%s-:%s-(.+)")
-	if not name then
-		return "UNKNOWN", "UNKNOWN"
+	if line:find("^:;") then
+		line = line:gsub(" %-.*", "") -- remove any comment text
+		line = line:gsub("^:;%d+%. ", ":;") -- remove any numbering
+		line = StripHyperlink(line)
+		local name, apiType = line:match("(%w+):{{apitype|(.-)}}")
+		if not apiType then
+			-- print(line) --debug
+			apiType = "unknown"
+		end
+		apiType = apiType:gsub(",", '|') -- multiple types
+		local subType = line:match("}} : (%S+)")
+		if subType then
+			subType = StripHyperlink(subType)
+		end
+		local t = {
+			name = name,
+			apiType = apiType:match("[%w|]+") ,
+			subType = subType,
+			array = apiType:find("%[%]"),
+			nilable = apiType:find("%?"),
+		}
+		return t
 	end
-	pType = pType:match("(.-) :") or pType -- remove any subtype
-	pType = pType:match("(.-)%s-%(") or pType
-	pType = pType:match(">(%w+)<") or pType
-	pType = pType:lower():gsub("%s", "")
-	local isArray = pType:find("%[%]") or line:find("</span>%[%]")
-	if isArray then
-		pType = pType:gsub("%[%]", "")
-	end
-	local isOptional = IsOptional(line)
-	return name, pType, isOptional, isArray
 end
 
 local function PrintApiParam(t)
@@ -336,7 +343,7 @@ end
 
 m:ParsePages()
 -- m:ParsePages({range = {844, 850}})
--- m:ParsePages({name = "GetItemInfoInstant", debug = true})
+-- m:ParsePages({name = "GetLootInfo", debug = true})
 
 -- for k, v in pairs(redirects) do
 -- 	print(k, v[1], v[2])
