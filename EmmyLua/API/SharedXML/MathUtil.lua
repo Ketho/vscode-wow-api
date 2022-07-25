@@ -82,13 +82,13 @@ function ClampedPercentageBetween(value, startValue, endValue)
 end
 
 ---[FrameXML](https://www.townlong-yak.com/framexml/go/DeltaLerp)
----@param value number
 ---@param startValue number
 ---@param endValue number
+---@param amount number
 ---@param timeSec number
 ---@return number
-local TARGET_FRAME_PER_SEC = 60.0;
 function DeltaLerp(startValue, endValue, amount, timeSec)
+	local TARGET_FRAME_PER_SEC = 60.0;
 	return Lerp(startValue, endValue, Saturate(amount * timeSec * TARGET_FRAME_PER_SEC));
 end
 
