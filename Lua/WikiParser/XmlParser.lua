@@ -17,9 +17,7 @@ end
 local function SaveWowpediaExport(path, pages)
 	local url = "https://wowpedia.fandom.com/wiki/Special:Export"
 	local requestBody = string.format("pages=%s&curonly=1", pages)
-	-- this is maybe bad but lazy, downloads the export every single time
-	local body = Util:HttpPostRequest(url, requestBody)
-	Util:WriteFile(path, body)
+	Util:DownloadFilePost(path, url, requestBody, 10)
 end
 
 local undoc = GetUndocumentedApi()

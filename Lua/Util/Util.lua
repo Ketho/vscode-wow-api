@@ -26,9 +26,9 @@ end
 --- Downloads a file
 ---@param path string Path to write the file to
 ---@param url string URL to download from
----@param isCache boolean If the file should be redownloaded after `INVALIDATION_TIME`
-function Util:DownloadFile(path, url, isCache)
-	if self:ShouldDownload(path, isCache) then
+---@param cacheTime? number time until redownload, defaults to INVALIDATION_TIME; 0 to never redownload
+function Util:DownloadFile(path, url, cacheTime)
+	if self:ShouldDownload(path, cacheTime) then
 		local body = https.request(url)
 		self:WriteFile(path, body)
 	end
@@ -39,7 +39,7 @@ end
 ---@param url string URL to download from
 ---@return ... @ The values returned from the Lua file, if applicable
 function Util:DownloadAndRun(path, url)
-	self:DownloadFile(path, url, true)
+	self:DownloadFile(path, url)
 	return self:LoadFile(path)
 end
 
@@ -47,19 +47,24 @@ end
 ---@param path string Path to write the file to
 ---@param url string URL to download from
 ---@param requestBody string Contents of the request
-function Util:DownloadFilePost(path, url, requestBody)
-	if self:ShouldDownload(path, true) then
+---@param cacheTime? number time until redownload, defaults to INVALIDATION_TIME; 0 to never redownload
+function Util:DownloadFilePost(path, url, requestBody, cacheTime)
+	if self:ShouldDownload(path, cacheTime) then
 		local body = self:HttpPostRequest(url, requestBody)
 		self:WriteFile(path, body)
 	end
 end
 
-function Util:ShouldDownload(path, isCache)
+function Util:ShouldDownload(path, cacheTime)
 	local attr = lfs.attributes(path)
 	if not attr then
 		return true
-	elseif isCache and os.time() > attr.modification+INVALIDATION_TIME then
-		return true
+	elseif cacheTime == 0 then
+		return false
+	else
+		if os.time() > attr.modification+(cacheTime or INVALIDATION_TIME) then
+			return true
+		end
 	end
 end
 

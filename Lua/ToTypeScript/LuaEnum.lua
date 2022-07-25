@@ -2,7 +2,7 @@ local Util = require("Lua/Util/Util")
 
 local PATH = "Lua/Data/cache/LuaEnum.lua"
 local URL = "https://raw.githubusercontent.com/Ketho/BlizzardInterfaceResources/mainline/Resources/LuaEnum.lua"
-Util:DownloadFile(PATH, URL, true)
+Util:DownloadFile(PATH, URL)
 local file = io.open(PATH)
 
 local pre = [[interface LuaEnumInterface {
