@@ -18,6 +18,13 @@ function Util:WriteFile(path, text)
 	file:close()
 end
 
+-- while in a file with the meta tag it will not show completion context and ignores find references
+-- https://github.com/sumneko/lua-language-server/wiki/EmmyLua-Annotations#meta
+function Util:WriteFileMeta(path, text)
+	text = "---@meta\n"..text
+	self:WriteFile(path, text)
+end
+
 function Util:LoadFile(path)
 	local file = assert(loadfile(path))
 	return file()

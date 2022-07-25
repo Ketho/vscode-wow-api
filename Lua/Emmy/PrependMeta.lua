@@ -39,6 +39,7 @@ end
 local function PrependText(path, text)
     local contents = ReadFile(path)
     if not contents:find(text) then
+		print("rewriting", path)
         os.remove(path)
         WriteFile(path, text..contents)
     end

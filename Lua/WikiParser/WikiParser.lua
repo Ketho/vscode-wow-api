@@ -21,6 +21,7 @@ local function GetOutputFile()
 	local tempTbl = {}
 	fileIndex = fileIndex + 1
 	local file = io.open(string.format("EmmyLua/API/GlobalAPI/API%d.lua", fileIndex), "w")
+	file:write("---@meta\n")
 	return file, tempTbl
 end
 

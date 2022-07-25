@@ -27,7 +27,7 @@ function m:ExportApiDocs(base)
 				end
 				local text = Emmy:GetSystem(self.documentationInfo)
 				if #text > 0 then -- try not to create empty files as they take up the maxPreload limit
-					Util:WriteFile("EmmyLua/API/System/"..line, text.."\n")
+					Util:WriteFileMeta("EmmyLua/API/System/"..line, text.."\n")
 				end
 			end
 		elseif line == "# Start documentation files here" then
@@ -42,7 +42,7 @@ function m:ExportApiDocs(base)
 	toc:close()
 	require(base.."/MissingStructures")
 	local text = Emmy:GetSystem(self.documentationInfo)
-	Util:WriteFile("EmmyLua/API/MissingStructures.lua", text.."\n")
+	Util:WriteFileMeta("EmmyLua/API/MissingStructures.lua", text.."\n")
 end
 
 return m
