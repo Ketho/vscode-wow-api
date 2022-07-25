@@ -1,4 +1,12 @@
 ---@meta
+---[Documentation](https://wowpedia.fandom.com/wiki/API_GetGuildBankTabPermissions)
+---@param tab number
+---@return boolean canView
+---@return boolean canDeposit
+---@return boolean canEdit
+---@return number stacksPerDay
+function GetGuildBankTabPermissions(tab) end
+
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_GetGuildBankText)
 function GetGuildBankText(tab) end
 
@@ -2532,15 +2540,4 @@ function GetWarGameTypeInfo(index) end
 ---@return number value
 ---@return number factionID
 function GetWatchedFactionInfo() end
-
----[Documentation](https://wowpedia.fandom.com/wiki/API_GetWeaponEnchantInfo)
----@return boolean hasMainHandEnchant
----@return number mainHandExpiration
----@return number mainHandCharges
----@return number mainHandEnchantID
----@return boolean hasOffHandEnchant
----@return number offHandExpiration
----@return number offHandCharges
----@return number offHandEnchantID
-function GetWeaponEnchantInfo() end
 

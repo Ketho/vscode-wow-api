@@ -1,4 +1,13 @@
 ---@meta
+---[Documentation](https://wowpedia.fandom.com/wiki/API_StartSpectatorSoloShuffleWarGame)
+function StartSpectatorSoloShuffleWarGame() end
+
+---[Documentation](https://wowpedia.fandom.com/wiki/API_StartSpectatorWarGame)
+function StartSpectatorWarGame(target1, target2, size, area, isTournamentMode) end
+
+---[Documentation](https://wowpedia.fandom.com/wiki/API_StartWarGame)
+function StartWarGame(target, name, isTournament) end
+
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_StartWarGameByName)
 function StartWarGameByName(msg) end
 

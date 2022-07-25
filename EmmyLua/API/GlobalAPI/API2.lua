@@ -2291,9 +2291,26 @@ function GetFlyoutSlotInfo(flyoutID, slot) end
 function GetFollowerTypeIDFromSpell() end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_GetFontInfo)
----@param font Font|string
+---@param font Font|FontObject
 ---@return FontInfo fontInfo
 function GetFontInfo(font) end
+
+---@class FontInfo
+---@field height number	
+---@field outline string
+---@field color ColorInfo
+---@field shadow? FontShadow
+
+---@class FontShadow
+---@field x number	
+---@field y number
+---@field color ColorInfo
+
+---@class ColorInfo
+---@field r number	
+---@field g number
+---@field b number
+---@field a number
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_GetFonts)
 ---@return string[] fonts
@@ -2409,12 +2426,4 @@ function GetGuildBankTabCost() end
 ---@return number remainingWithdrawals
 ---@return boolean filtered
 function GetGuildBankTabInfo(tab) end
-
----[Documentation](https://wowpedia.fandom.com/wiki/API_GetGuildBankTabPermissions)
----@param tab number
----@return boolean canView
----@return boolean canDeposit
----@return boolean canEdit
----@return number stacksPerDay
-function GetGuildBankTabPermissions(tab) end
 

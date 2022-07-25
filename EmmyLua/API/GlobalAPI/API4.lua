@@ -1,4 +1,15 @@
 ---@meta
+---[Documentation](https://wowpedia.fandom.com/wiki/API_GetWeaponEnchantInfo)
+---@return boolean hasMainHandEnchant
+---@return number mainHandExpiration
+---@return number mainHandCharges
+---@return number mainHandEnchantID
+---@return boolean hasOffHandEnchant
+---@return number offHandExpiration
+---@return number offHandCharges
+---@return number offHandEnchantID
+function GetWeaponEnchantInfo() end
+
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_GetWebTicket)
 function GetWebTicket() end
 
@@ -2457,13 +2468,4 @@ function StartDuel(name) end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_StartSoloShuffleWarGameByName)
 function StartSoloShuffleWarGameByName() end
-
----[Documentation](https://wowpedia.fandom.com/wiki/API_StartSpectatorSoloShuffleWarGame)
-function StartSpectatorSoloShuffleWarGame() end
-
----[Documentation](https://wowpedia.fandom.com/wiki/API_StartSpectatorWarGame)
-function StartSpectatorWarGame(target1, target2, size, area, isTournamentMode) end
-
----[Documentation](https://wowpedia.fandom.com/wiki/API_StartWarGame)
-function StartWarGame(target, name, isTournament) end
 
