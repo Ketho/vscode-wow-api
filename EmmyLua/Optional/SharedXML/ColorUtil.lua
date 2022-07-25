@@ -38,7 +38,7 @@ function CreateColorFromBytes(r, g, b, a) end
 function AreColorsEqual(left, right) end
 
 ---[FrameXML](https://www.townlong-yak.com/framexml/go/GetClassColor)
----@param classFilename string
+---@param classFilename ClassFile
 ---@return number r
 ---@return number g
 ---@return number b

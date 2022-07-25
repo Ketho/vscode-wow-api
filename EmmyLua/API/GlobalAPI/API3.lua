@@ -1150,6 +1150,8 @@ function GetNumSpecGroups(b) end
 function GetNumSpecializations(isInspect, isPet) end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_GetNumSpecializationsForClassID)
+---@param classID number
+---@return number numSpecializations
 function GetNumSpecializationsForClassID(classID) end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_GetNumSpellTabs)

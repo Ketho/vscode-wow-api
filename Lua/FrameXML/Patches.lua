@@ -2,6 +2,9 @@ local m = {}
 
 -- previously included the param index but rather do a reverse look up by name now
 m.data = {
+	["ClassColorDocumentation.lua"] = {
+		GetClassColor = {Arguments = {className = {Type = "ClassFile"}}},
+	},
 	["CVarDocumentation.lua"] = {
 		GetCVar         = {Arguments = {name = {Type = "CVar"}}},
 		GetCVarBitfield = {Arguments = {name = {Type = "CVar"}}},
@@ -10,9 +13,6 @@ m.data = {
 		RegisterCVar    = {Arguments = {name = {Type = "CVar"}}},
 		SetCVar         = {Arguments = {name = {Type = "CVar"}}},
 		SetCVarBitfield = {Arguments = {name = {Type = "CVar"}}},
-	},
-	["ClassColorDocumentation.lua"] = {
-		GetClassColor = {Arguments = {className = {Type = "ClassFile"}}},
 	},
 }
 

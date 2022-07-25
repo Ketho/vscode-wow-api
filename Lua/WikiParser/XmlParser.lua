@@ -45,20 +45,28 @@ handler = handler:new() -- https://github.com/manoelcampos/xml2lua/issues/29#iss
 local parser = xml2lua.parser(handler)
 parser:parse(xmlstr)
 
+-- todo: need to refactor all this
 local validTypes = {
 	boolean = true,
 	number = true,
 	string = true,
 	table = true,
 	["function"] = true,
-	-- to fix
-	integer = true,
 	unknown = true,
 
 	Frame = true,
 	Font = true,
 	FontInfo = true,
 }
+
+local subTypeAlias = {
+	-- ClassId = true,
+	ClassFile = true,
+}
+
+for k in pairs(subTypeAlias) do
+	validTypes[k] = true
+end
 
 local redirects = {}
 local validatedApi = {}
@@ -231,6 +239,9 @@ function m:ParseParam(line, info)
 		local subType = line:match("}} : (%S+)")
 		if subType then
 			subType = StripHyperlink(subType)
+			if subTypeAlias[subType] then
+				apiType = subType
+			end
 		end
 		local t = {
 			name = name,
