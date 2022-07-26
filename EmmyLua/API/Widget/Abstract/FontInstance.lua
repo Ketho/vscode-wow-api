@@ -6,12 +6,14 @@ local FontInstance = {}
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_FontInstance_GetFont)
 function FontInstance:GetFont() end
 
+---@return Font
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_FontInstance_GetFontObject)
 function FontInstance:GetFontObject() end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_FontInstance_SetFont)
 function FontInstance:SetFont(path, height,flags) end
 
+---@param fontObject Font|FontObject
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_FontInstance_SetFontObject)
 function FontInstance:SetFontObject(fontObject) end
 
