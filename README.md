@@ -100,6 +100,7 @@ The following people contributed to the development resources or their work was 
 * [Sumneko](https://github.com/Sumneko)
 * [Wutname](https://github.com/Wutname1)
 * [Yuyuli](https://www.curseforge.com/members/yuyuli/projects)
+* [Xelnath](https://wowpedia.fandom.com/wiki/Alexander_Brazie)
 ---
 * [Blizzard Entertainment](https://www.blizzard.com/)
 * [EmmyLua](https://github.com/EmmyLua)
