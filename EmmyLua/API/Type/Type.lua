@@ -97,7 +97,7 @@
 
 ---@class WowObject
 
----@alias WowUnit
+---@alias UnitId
 ---|"player"
 ---|"target"
 ---|"focus"

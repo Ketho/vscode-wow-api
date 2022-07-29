@@ -1,4 +1,16 @@
 ---@meta
+---[Documentation](https://wowpedia.fandom.com/wiki/API_GetWarGameTypeInfo)
+function GetWarGameTypeInfo(index) end
+
+---[Documentation](https://wowpedia.fandom.com/wiki/API_GetWatchedFactionInfo)
+---@return string name
+---@return number standing
+---@return number min
+---@return number max
+---@return number value
+---@return number factionID
+function GetWatchedFactionInfo() end
+
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_GetWeaponEnchantInfo)
 ---@return boolean hasMainHandEnchant
 ---@return number mainHandExpiration
@@ -258,7 +270,7 @@ function InboxItemCanDelete(index) end
 function InitiateRolePoll() end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_InitiateTrade)
----@param unit string
+---@param unit UnitId
 function InitiateTrade(unit) end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_InteractUnit)
@@ -596,7 +608,7 @@ function IsItemAction(slot) end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_IsItemInRange)
 ---@param item string
----@param unit? string
+---@param unit? UnitId
 ---@return boolean inRange
 function IsItemInRange(item, unit) end
 
@@ -1236,7 +1248,7 @@ function NoPlayTime() end
 function NotWhileDeadError() end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_NotifyInspect)
----@param unit string
+---@param unit UnitId
 function NotifyInspect(unit) end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_NumTaxiNodes)
@@ -1844,7 +1856,7 @@ function SendMail(recipient, subject, body) end
 function SendSystemMessage(msg) end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_SetAchievementComparisonUnit)
----@param unit string
+---@param unit UnitId
 ---@return boolean success
 function SetAchievementComparisonUnit(unit) end
 
@@ -2191,7 +2203,7 @@ function SetRaidProfileSavedPosition(profile, isDynamic, topPoint, topOffset, bo
 function SetRaidSubgroup(index, subgroup) end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_SetRaidTarget)
----@param unit string
+---@param unit UnitId
 ---@param index number
 function SetRaidTarget(unit, index) end
 
@@ -2442,7 +2454,7 @@ function SpellStopTargeting() end
 function SpellTargetItem(item) end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_SpellTargetUnit)
----@param unitId string
+---@param unitId UnitId
 function SpellTargetUnit(unitId) end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_SplashFrameCanBeShown)
@@ -2459,13 +2471,4 @@ function SplitGuildBankItem(tab, slot, amount) end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_StartAttack)
 function StartAttack() end
-
----[Documentation](https://wowpedia.fandom.com/wiki/API_StartAutoRun)
-function StartAutoRun() end
-
----[Documentation](https://wowpedia.fandom.com/wiki/API_StartDuel)
-function StartDuel(name) end
-
----[Documentation](https://wowpedia.fandom.com/wiki/API_StartSoloShuffleWarGameByName)
-function StartSoloShuffleWarGameByName() end
 

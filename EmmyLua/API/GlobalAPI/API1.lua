@@ -112,7 +112,7 @@ function AreTalentsLocked() end
 function AscendStop() end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_AssistUnit)
----@param unit string
+---@param unit UnitId
 function AssistUnit(unit) end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_AttachGlyphToSpell)
@@ -1678,7 +1678,7 @@ function C_PetBattles.IsWaitingOnOpponent() end
 function C_PetBattles.SetPendingReportBattlePetTarget(petIndex) end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_PetBattles.SetPendingReportTargetFromUnit)
----@param unit string
+---@param unit UnitId
 function C_PetBattles.SetPendingReportTargetFromUnit(unit) end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_PetBattles.ShouldShowPetSelect)

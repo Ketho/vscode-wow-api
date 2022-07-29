@@ -53,7 +53,7 @@ function GetGuildFactionGroup() end
 function GetGuildFactionInfo() end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_GetGuildInfo)
----@param unit string
+---@param unit UnitId
 ---@return string guildName
 ---@return string guildRankName
 ---@return number guildRankIndex
@@ -234,7 +234,7 @@ function GetInspectHonorData() end
 function GetInspectRatedBGData() end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_GetInspectSpecialization)
----@param unit string
+---@param unit UnitId
 ---@return number id
 function GetInspectSpecialization(unit) end
 
@@ -276,29 +276,40 @@ function GetInventoryAlertStatus(index) end
 function GetInventoryItemBroken(unit, invSlot) end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_GetInventoryItemCooldown)
-function GetInventoryItemCooldown(unit, invSlot) end
+---@param unit UnitId
+---@param invSlotId number
+---@return number start
+---@return number duration
+---@return number enable
+function GetInventoryItemCooldown(unit, invSlotId) end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_GetInventoryItemCount)
-function GetInventoryItemCount(unit, invSlot) end
+---@param unit UnitId
+---@param invSlotId number
+---@return number count
+function GetInventoryItemCount(unit, invSlotId) end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_GetInventoryItemDurability)
----@param slot number
+---@param invSlotId number
 ---@return number current
 ---@return number maximum
-function GetInventoryItemDurability(slot) end
+function GetInventoryItemDurability(invSlotId) end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_GetInventoryItemEquippedUnusable)
 function GetInventoryItemEquippedUnusable(unit, slot) end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_GetInventoryItemID)
----@param unit string
----@param invSlot number
+---@param unit UnitId
+---@param invSlotId number
 ---@return number itemId
 ---@return number unknown
-function GetInventoryItemID(unit, invSlot) end
+function GetInventoryItemID(unit, invSlotId) end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_GetInventoryItemLink)
-function GetInventoryItemLink(unit, invSlot) end
+---@param unit UnitId
+---@param invSlotId number
+---@return string? itemLink
+function GetInventoryItemLink(unit, invSlotId) end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_GetInventoryItemQuality)
 function GetInventoryItemQuality(unit, invSlot) end
@@ -311,7 +322,7 @@ function GetInventoryItemsForSlot(slot, returnTable, transmogrify) end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_GetInventorySlotInfo)
 ---@param invSlotName InventorySlotName 
----@return number slotId
+---@return number invSlotId
 ---@return string textureName
 ---@return boolean checkRelic
 function GetInventorySlotInfo(invSlotName) end
@@ -1280,7 +1291,7 @@ function GetParryChanceFromAttribute() end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_GetPartyAssignment)
 ---@param assignment string
----@param raidmember string
+---@param raidmember UnitId
 ---@param exactMatch boolean
 ---@return boolean isAssigned
 function GetPartyAssignment(assignment, raidmember, exactMatch) end
@@ -1700,7 +1711,7 @@ function GetRaidProfileSavedPosition(profile) end
 function GetRaidRosterInfo(raidIndex) end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_GetRaidTargetIndex)
----@param unit string
+---@param unit UnitId
 ---@return number? index
 function GetRaidTargetIndex(unit) end
 
@@ -2209,7 +2220,7 @@ function GetSpellSubtext() end
 ---@return string name
 ---@return string texture
 ---@return number offset
----@return number numEntries
+---@return number numSlots
 ---@return boolean isGuild
 ---@return number offspecID
 function GetSpellTabInfo(tabIndex) end
@@ -2468,6 +2479,11 @@ function GetUnitMaxHealthModifier(unit) end
 function GetUnitPowerModifier(unit) end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_GetUnitSpeed)
+---@param unit UnitId
+---@return number currentSpeed
+---@return number runSpeed
+---@return number flightSpeed
+---@return number swimSpeed
 function GetUnitSpeed(unit) end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_GetVehicleBarIndex)
@@ -2528,16 +2544,4 @@ function GetVoidUnlockCost() end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_GetWarGameQueueStatus)
 function GetWarGameQueueStatus() end
-
----[Documentation](https://wowpedia.fandom.com/wiki/API_GetWarGameTypeInfo)
-function GetWarGameTypeInfo(index) end
-
----[Documentation](https://wowpedia.fandom.com/wiki/API_GetWatchedFactionInfo)
----@return string name
----@return number standing
----@return number min
----@return number max
----@return number value
----@return number factionID
-function GetWatchedFactionInfo() end
 

@@ -360,7 +360,7 @@ function CanAffordMerchantItem(index) end
 function CanAutoSetGamePadCursorControl() end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_CanBeRaidTarget)
----@param unit string
+---@param unit UnitId
 ---@return boolean canBeRaidTarget
 function CanBeRaidTarget(unit) end
 
@@ -430,7 +430,7 @@ function CanHearthAndResurrectFromArea() end
 function CanInitiateWarGame() end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_CanInspect)
----@param unit string
+---@param unit UnitId
 ---@param showError boolean
 ---@return boolean canInspect
 function CanInspect(unit, showError) end
@@ -480,7 +480,7 @@ function CanSignPetition() end
 function CanSolveArtifact() end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_CanSummonFriend)
----@param unit string
+---@param unit UnitId
 ---@return boolean summonable
 function CanSummonFriend(unit) end
 
@@ -554,7 +554,7 @@ function CancelTrade() end
 function CancelTradeAccept() end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_CancelUnitBuff)
----@param unit string
+---@param unit UnitId
 ---@param buffIndex number
 ---@param filter string
 function CancelUnitBuff(unit, buffIndex, filter) end
@@ -569,7 +569,7 @@ function CaseAccentInsensitiveParse(string) end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_CastPetAction)
 ---@param index number
----@param target string
+---@param target? UnitId
 function CastPetAction(index, target) end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_CastShapeshiftForm)
@@ -636,7 +636,7 @@ function CheckBinderDist() end
 function CheckInbox() end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_CheckInteractDistance)
----@param unit string
+---@param unit UnitId
 ---@param distIndex number
 ---@return boolean inRange
 function CheckInteractDistance(unit, distIndex) end
@@ -852,7 +852,7 @@ function CombatLogSetRetentionTime(seconds) end
 function CombatLog_Object_IsA(unitFlags, mask) end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_CombatTextSetActiveUnit)
----@param unit string
+---@param unit UnitId
 function CombatTextSetActiveUnit(unit) end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_CompleteLFGReadyCheck)
@@ -1368,10 +1368,11 @@ function FlipCameraYaw(angle) end
 function FlyoutHasSpell(flyoutID, spellID) end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_FocusUnit)
+---@param unit UnitId
 function FocusUnit(unit) end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_FollowUnit)
----@param unit string
+---@param unit UnitId
 function FollowUnit(unit) end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_ForceLogout)
@@ -1994,8 +1995,8 @@ function GetCombatRatingBonus(combatRatingIdentifier) end
 function GetCombatRatingBonusForCombatRatingValue(ratingIndex, value) end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_GetComboPoints)
----@param unit string
----@param target string
+---@param unit UnitId
+---@param target UnitId
 ---@return number comboPoints
 function GetComboPoints(unit, target) end
 
