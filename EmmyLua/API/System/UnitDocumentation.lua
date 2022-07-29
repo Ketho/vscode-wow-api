@@ -124,8 +124,8 @@ function UnitPhaseReason(unit) end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_UnitPower)
 ---@param unitToken string
----@param powerType PowerType
----@param unmodified boolean
+---@param powerType? PowerType
+---@param unmodified? boolean
 ---@return number power
 function UnitPower(unitToken, powerType, unmodified) end
 
