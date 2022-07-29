@@ -1,3 +1,4 @@
+---@diagnostic disable: deprecated
 local lfs = require "lfs"
 local https = require "ssl.https"
 local cjson = require "cjson"

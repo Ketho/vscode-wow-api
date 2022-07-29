@@ -12,6 +12,7 @@ function DEFAULT_CHAT_FRAME:SetMaxLines(maxLines)
 end
 
 -- Lua 5.1
+---@diagnostic disable-next-line: deprecated
 unpack = table.unpack
 
 -- why is WoW so backwards
