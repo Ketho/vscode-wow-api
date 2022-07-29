@@ -141,7 +141,7 @@ function UnitPowerDisplayMod(powerType) end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_UnitPowerMax)
 ---@param unitToken string
----@param powerType PowerType
+---@param powerType? PowerType
 ---@param unmodified boolean
 ---@return number maxPower
 function UnitPowerMax(unitToken, powerType, unmodified) end

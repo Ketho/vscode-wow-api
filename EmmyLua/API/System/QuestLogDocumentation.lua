@@ -418,7 +418,7 @@ function C_QuestLog.SortQuestWatches() end
 ---@field isHidden boolean
 ---@field isAutoComplete boolean
 ---@field overridesSortOrder boolean
----@field readyForTranslation boolean
+---@field readyForTranslation boolean|nil
 
 ---@class QuestObjectiveInfo
 ---@field text string

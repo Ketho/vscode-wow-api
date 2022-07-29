@@ -50,7 +50,7 @@ function C_ItemUpgrade.SetItemUpgradeFromCursorItem() end
 function C_ItemUpgrade.SetItemUpgradeFromLocation(itemToSet) end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_ItemUpgrade.UpgradeItem)
----@param numUpgrades number
+---@param numUpgrades? number
 function C_ItemUpgrade.UpgradeItem(numUpgrades) end
 
 ---@class ItemUpgradeCurrencyCost

@@ -73,7 +73,7 @@ function C_LFGList.GetApplicantInfo(applicantID) end
 function C_LFGList.GetApplicantPvpRatingInfoForListing(localID, applicantIndex, activityID) end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_LFGList.GetFilteredSearchResults)
----@return number totalResultsFound
+---@return number? totalResultsFound
 ---@return number[] filteredResults
 function C_LFGList.GetFilteredSearchResults() end
 
@@ -106,7 +106,7 @@ function C_LFGList.GetPlaystyleString(playstyle, activityInfo) end
 function C_LFGList.GetSearchResultInfo(searchResultID) end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_LFGList.GetSearchResults)
----@return number totalResultsFound
+---@return number? totalResultsFound
 ---@return number[] results
 function C_LFGList.GetSearchResults() end
 
@@ -126,8 +126,8 @@ function C_LFGList.IsPlayerAuthenticatedForLFG(activityID) end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_LFGList.Search)
 ---@param categoryID number
----@param filter number
----@param preferredFilters number
+---@param filter? number
+---@param preferredFilters? number
 ---@param languageFilter? WowLocale
 ---@param searchCrossFactionListings? boolean
 function C_LFGList.Search(categoryID, filter, preferredFilters, languageFilter, searchCrossFactionListings) end

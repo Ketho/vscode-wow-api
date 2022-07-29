@@ -283,7 +283,7 @@ function C_TransmogCollection.PlayerCanCollectSource(sourceID) end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_TransmogCollection.PlayerHasTransmog)
 ---@param itemID number
----@param itemAppearanceModID number
+---@param itemAppearanceModID? number
 ---@return boolean hasTransmog
 function C_TransmogCollection.PlayerHasTransmog(itemID, itemAppearanceModID) end
 

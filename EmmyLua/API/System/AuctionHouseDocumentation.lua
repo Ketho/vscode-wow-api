@@ -297,7 +297,7 @@ function C_AuctionHouse.IsFavoriteItem(itemKey) end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_AuctionHouse.IsSellItemValid)
 ---@param item ItemLocationMixin
----@param displayError boolean
+---@param displayError? boolean
 ---@return boolean valid
 function C_AuctionHouse.IsSellItemValid(item, displayError) end
 
@@ -307,9 +307,9 @@ function C_AuctionHouse.IsThrottledMessageSystemReady() end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_AuctionHouse.MakeItemKey)
 ---@param itemID number
----@param itemLevel number
----@param itemSuffix number
----@param battlePetSpeciesID number
+---@param itemLevel? number
+---@param itemSuffix? number
+---@param battlePetSpeciesID? number
 ---@return ItemKey itemKey
 function C_AuctionHouse.MakeItemKey(itemID, itemLevel, itemSuffix, battlePetSpeciesID) end
 
@@ -395,8 +395,8 @@ function C_AuctionHouse.SendBrowseQuery(query) end
 ---@param itemKey ItemKey
 ---@param sorts AuctionHouseSortType[]
 ---@param separateOwnerItems boolean
----@param minLevelFilter number
----@param maxLevelFilter number
+---@param minLevelFilter? number
+---@param maxLevelFilter? number
 function C_AuctionHouse.SendSearchQuery(itemKey, sorts, separateOwnerItems, minLevelFilter, maxLevelFilter) end
 
 ---Search queries are restricted to 100 calls per minute. These should not be used to query the entire auction house. See ReplicateItems
@@ -476,9 +476,9 @@ function C_AuctionHouse.StartCommoditiesPurchase(itemID, quantity) end
 
 ---@class ItemKey
 ---@field itemID number
----@field itemLevel number
----@field itemSuffix number
----@field battlePetSpeciesID number
+---@field itemLevel number|nil
+---@field itemSuffix number|nil
+---@field battlePetSpeciesID number|nil
 
 ---@class ItemKeyInfo
 ---@field itemName string

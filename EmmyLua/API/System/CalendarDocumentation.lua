@@ -307,7 +307,7 @@ function C_Calendar.GetMaxCreateDate() end
 function C_Calendar.GetMinDate() end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_Calendar.GetMonthInfo)
----@param offsetMonths number
+---@param offsetMonths? number
 ---@return CalendarMonthInfo monthInfo
 function C_Calendar.GetMonthInfo(offsetMonths) end
 
