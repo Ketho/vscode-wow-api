@@ -62,6 +62,10 @@ local validTypes = {
 local subTypeAlias = {
 	-- ClassId = true,
 	ClassFile = true,
+	UnitId = true,
+
+	-- enums
+	PowerType = true,
 }
 
 for k in pairs(subTypeAlias) do
@@ -134,7 +138,7 @@ function m:ParsePages(options)
 				-- update current section
 				info.section = lineLower:match("==%s?(.-)%s?==") or info.section
 				-- look for params
-				if line:find("^:;") and line:find("[%w%]]:{{") then
+				if line:find("^:;") and line:find("[%w%]]:[%[{]") then
 					local paramInfo = self:ParseParam(line, info)
 					if paramInfo.name then
 						local paramTbl = info.params[info.section]
@@ -231,10 +235,19 @@ function m:ParseParam(line, info)
 		line = line:gsub("^:;%d+%. ", ":;") -- remove any numbering
 		line = StripHyperlink(line)
 		local name, apiType = line:match("(%w+):{{apitype|(.-)}}")
+		-- if not apiType then
+		-- 	name, apiType = line:match("(%w+):(.-)")
+		-- 	print(line)
+		-- 	if apiType then
+		-- 		print(apiType)
+		-- 		apiType = apiType:gsub("Enum%.", "")
+		-- 	end
+		-- end
 		if not apiType then
 			-- print(line) --debug
 			apiType = "unknown"
 		end
+		local tempNilable = apiType:find("%?")
 		apiType = apiType:gsub(",", '|') -- multiple types
 		local subType = line:match("}} : (%S+)")
 		if subType then
@@ -245,10 +258,10 @@ function m:ParseParam(line, info)
 		end
 		local t = {
 			name = name,
-			apiType = apiType:match("[%w|]+") ,
+			apiType = apiType:match("[%w|]+"),
 			subType = subType,
 			array = apiType:find("%[%]"),
-			nilable = apiType:find("%?"),
+			nilable = tempNilable,
 		}
 		return t
 	end

@@ -16,7 +16,7 @@ FrameXML:ExportApiDocs("Lua/FrameXML")
 
 -- emmylua data
 local EmmyLiterals = require("Lua/Emmy/EmmyLiterals")
-Util:WriteFileMeta("EmmyLua/API/Type/Event.lua", EmmyLiterals:GetEventLiterals())
+Util:WriteFileMeta("EmmyLua/API/Type/WowEvent.lua", EmmyLiterals:GetEventLiterals())
 Util:WriteFileMeta("EmmyLua/API/Type/CVar.lua", EmmyLiterals:GetCVarLiterals())
 Util:WriteFileMeta("EmmyLua/API/Enum.lua", EmmyLiterals:GetEnumTable())
 

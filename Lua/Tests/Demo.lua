@@ -5,7 +5,7 @@ local num1 = bit.bor(0x1, 0x2)
 
 hooksecurefunc("test", function() end)
 -- api
-C_AccountInfo.GetIDFromBattleNetAccountGUID(1)
+C_AccountInfo.GetIDFromBattleNetAccountGUID("0x123")
 C_CVar.GetCVar("autoClearAFK")
 
 -- widgets
