@@ -57,23 +57,23 @@ function C_BattleNet.GetGameAccountInfoByID(id) end
 ---@field gameAccountInfo BNetGameAccountInfo
 
 ---@class BNetGameAccountInfo
----@field gameAccountID number|nil
+---@field gameAccountID number?
 ---@field clientProgram string
 ---@field isOnline boolean
 ---@field isGameBusy boolean
 ---@field isGameAFK boolean
----@field wowProjectID number|nil
----@field characterName string|nil
----@field realmName string|nil
----@field realmDisplayName string|nil
----@field realmID number|nil
----@field factionName string|nil
----@field raceName string|nil
----@field className string|nil
----@field areaName string|nil
----@field characterLevel number|nil
----@field richPresence string|nil
----@field playerGuid string|nil
+---@field wowProjectID number?
+---@field characterName string?
+---@field realmName string?
+---@field realmDisplayName string?
+---@field realmID number?
+---@field factionName string?
+---@field raceName string?
+---@field className string?
+---@field areaName string?
+---@field characterLevel number?
+---@field richPresence string?
+---@field playerGuid string?
 ---@field isWowMobile boolean
 ---@field canSummon boolean
 ---@field hasFocus boolean

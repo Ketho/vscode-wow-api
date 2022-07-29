@@ -386,11 +386,11 @@ function C_TransmogCollection.UpdateUsableAppearances() end
 ---@field isHideVisual boolean
 ---@field uiOrder number
 ---@field exclusions number
----@field restrictedSlotID number|nil
+---@field restrictedSlotID number?
 ---@field isUsable boolean
 ---@field hasRequiredHoliday boolean
 ---@field hasActiveRequiredHoliday boolean
----@field alwaysShowItem boolean|nil
+---@field alwaysShowItem boolean?
 
 ---@class TransmogIllusionInfo
 ---@field visualID number

@@ -36,17 +36,17 @@ function C_PlayerChoice.SendPlayerChoiceResponse(responseID) end
 ---@field hideWarboardHeader boolean
 ---@field keepOpenAfterChoice boolean
 ---@field options PlayerChoiceOptionInfo[]
----@field soundKitID number|nil
----@field closeUISoundKitID number|nil
+---@field soundKitID number?
+---@field closeUISoundKitID number?
 
 ---@class PlayerChoiceOptionButtonInfo
 ---@field id number
 ---@field text string
 ---@field disabled boolean
----@field confirmation string|nil
----@field tooltip string|nil
----@field rewardQuestID number|nil
----@field soundKitID number|nil
+---@field confirmation string?
+---@field tooltip string?
+---@field rewardQuestID number?
+---@field soundKitID number?
 
 ---@class PlayerChoiceOptionInfo
 ---@field id number
@@ -60,13 +60,13 @@ function C_PlayerChoice.SendPlayerChoiceResponse(responseID) end
 ---@field uiTextureKit string
 ---@field maxStacks number
 ---@field buttons PlayerChoiceOptionButtonInfo[]
----@field widgetSetID number|nil
----@field spellID number|nil
----@field rarity PlayerChoiceRarity|nil
----@field rarityColor ColorMixin|nil
----@field typeArtID number|nil
----@field headerIconAtlasElement string|nil
----@field subHeader string|nil
+---@field widgetSetID number?
+---@field spellID number?
+---@field rarity PlayerChoiceRarity?
+---@field rarityColor ColorMixin?
+---@field typeArtID number?
+---@field headerIconAtlasElement string?
+---@field subHeader string?
 
 ---@class PlayerChoiceOptionRewardInfo
 ---@field currencyRewards PlayerChoiceRewardCurrencyInfo[]

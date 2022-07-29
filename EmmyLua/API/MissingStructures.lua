@@ -64,7 +64,7 @@
 ---@field overTime boolean
 
 ---@class TradeSkillRecipeInfo
----@field alternateVerb string|nil
+---@field alternateVerb string?
 ---@field categoryID number
 ---@field craftable boolean
 ---@field difficulty string
@@ -74,11 +74,11 @@
 ---@field icon number
 ---@field learned boolean
 ---@field name string
----@field nextRecipeID number|nil
+---@field nextRecipeID number?
 ---@field numAvailable number
 ---@field numIndents number
 ---@field numSkillUps number
----@field previousRecipeID number|nil
+---@field previousRecipeID number?
 ---@field productQuality number
 ---@field recipeID number
 ---@field sourceType number
@@ -88,13 +88,13 @@
 ---@field categoryID number
 ---@field invType number
 ---@field isCollected boolean
----@field isHideVisual boolean|nil
+---@field isHideVisual boolean?
 ---@field itemID number
 ---@field itemModID number
----@field name string|nil
----@field quality number|nil
+---@field name string?
+---@field quality number?
 ---@field sourceID number
----@field sourceType number|nil
+---@field sourceType number?
 ---@field visualID number
 
 ---@class BountyInfo
@@ -102,7 +102,7 @@
 ---@field factionID number
 ---@field icon number
 ---@field numObjectives number
----@field turninRequirementText string|nil
+---@field turninRequirementText string?
 
 ---@class CharCustomizationCategory
 ---@field id number

@@ -79,15 +79,15 @@ function C_CovenantSanctumUI.RequestCatchUpState() end
 
 ---@class CovenantSanctumRenownRewardInfo
 ---@field uiOrder number
----@field itemID number|nil
----@field spellID number|nil
----@field mountID number|nil
----@field transmogID number|nil
----@field transmogSetID number|nil
----@field titleMaskID number|nil
----@field garrFollowerID number|nil
----@field transmogIllusionSourceID number|nil
----@field icon number|nil
----@field name string|nil
----@field description string|nil
----@field toastDescription string|nil
+---@field itemID number?
+---@field spellID number?
+---@field mountID number?
+---@field transmogID number?
+---@field transmogSetID number?
+---@field titleMaskID number?
+---@field garrFollowerID number?
+---@field transmogIllusionSourceID number?
+---@field icon number?
+---@field name string?
+---@field description string?
+---@field toastDescription string?

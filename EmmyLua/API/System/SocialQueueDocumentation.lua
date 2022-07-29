@@ -88,4 +88,4 @@ function C_SocialQueue.SignalToastDisplayed(groupGUID, priority) end
 
 ---@class SocialQueuePlayerInfo
 ---@field guid string
----@field clubId string|nil
+---@field clubId string?

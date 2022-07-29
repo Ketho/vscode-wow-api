@@ -147,15 +147,15 @@ function C_TransmogSets.SetIsFavorite(transmogSetID, isFavorite) end
 ---@class TransmogSetInfo
 ---@field setID number
 ---@field name string
----@field baseSetID number|nil
----@field description string|nil
----@field label string|nil
+---@field baseSetID number?
+---@field description string?
+---@field label string?
 ---@field expansionID number
 ---@field patchID number
 ---@field uiOrder number
 ---@field classMask number
 ---@field hiddenUntilCollected boolean
----@field requiredFaction string|nil
+---@field requiredFaction string?
 ---@field collected boolean
 ---@field favorite boolean
 ---@field limitedTimeSet boolean

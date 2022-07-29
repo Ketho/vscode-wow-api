@@ -202,8 +202,8 @@ function C_Soulbinds.UnmodifyNode(nodeID) end
 ---@field conduitType SoulbindConduitType
 ---@field conduitSpecSetID number
 ---@field conduitSpecIDs number[]
----@field conduitSpecName string|nil
----@field covenantID number|nil
+---@field conduitSpecName string?
+---@field covenantID number?
 ---@field conduitItemID number
 
 ---@class SoulbindConduitData
@@ -221,7 +221,7 @@ function C_Soulbinds.UnmodifyNode(nodeID) end
 ---@field tree SoulbindTree
 ---@field modelSceneData SoulbindModelSceneData
 ---@field activationSoundKitID number
----@field playerConditionReason string|nil
+---@field playerConditionReason string?
 
 ---@class SoulbindModelSceneData
 ---@field creatureDisplayInfoID number
@@ -233,14 +233,14 @@ function C_Soulbinds.UnmodifyNode(nodeID) end
 ---@field column number
 ---@field icon number
 ---@field spellID number
----@field playerConditionReason string|nil
+---@field playerConditionReason string?
 ---@field conduitID number
 ---@field conduitRank number
 ---@field state SoulbindNodeState
----@field conduitType SoulbindConduitType|nil
+---@field conduitType SoulbindConduitType?
 ---@field parentNodeIDs number[]
----@field failureRenownRequirement number|nil
----@field socketEnhanced boolean|nil
+---@field failureRenownRequirement number?
+---@field socketEnhanced boolean?
 
 ---@class SoulbindTree
 ---@field editable boolean

@@ -7,9 +7,9 @@ C_ModifiedInstance = {}
 function C_ModifiedInstance.GetModifiedInstanceInfoFromMapID(mapID) end
 
 ---@class ModifiedInstanceInfo
----@field lfrItemLevel number|nil
----@field normalItemLevel number|nil
----@field heroicItemLevel number|nil
----@field mythicItemLevel number|nil
+---@field lfrItemLevel number?
+---@field normalItemLevel number?
+---@field heroicItemLevel number?
+---@field mythicItemLevel number?
 ---@field uiTextureKit string
 ---@field description string

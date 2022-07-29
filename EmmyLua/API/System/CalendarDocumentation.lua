@@ -399,7 +399,7 @@ function C_Calendar.UpdateEvent() end
 ---@field calendarType string
 ---@field sequenceType string
 ---@field eventType CalendarEventType
----@field iconTexture number|nil
+---@field iconTexture number?
 ---@field modStatus string
 ---@field inviteStatus CalendarStatus
 ---@field invitedBy string
@@ -421,32 +421,32 @@ function C_Calendar.UpdateEvent() end
 ---@class CalendarEventInfo
 ---@field title string
 ---@field description string
----@field creator string|nil
+---@field creator string?
 ---@field eventType CalendarEventType
 ---@field repeatOption CalendarEventRepeatOptions
 ---@field maxSize number
----@field textureIndex number|nil
+---@field textureIndex number?
 ---@field time CalendarTime
 ---@field lockoutTime CalendarTime
 ---@field isLocked boolean
 ---@field isAutoApprove boolean
 ---@field hasPendingInvite boolean
----@field inviteStatus CalendarStatus|nil
----@field inviteType CalendarInviteType|nil
+---@field inviteStatus CalendarStatus?
+---@field inviteType CalendarInviteType?
 ---@field calendarType string
----@field communityName string|nil
+---@field communityName string?
 
 ---@class CalendarEventInviteInfo
----@field name string|nil
+---@field name string?
 ---@field level number
----@field className string|nil
----@field classFilename string|nil
----@field inviteStatus CalendarStatus|nil
----@field modStatus string|nil
+---@field className string?
+---@field classFilename string?
+---@field inviteStatus CalendarStatus?
+---@field modStatus string?
 ---@field inviteIsMine boolean
 ---@field type CalendarInviteType
 ---@field notes string
----@field classID number|nil
+---@field classID number?
 ---@field guid string
 
 ---@class CalendarEventStatusOption
@@ -457,9 +457,9 @@ function C_Calendar.UpdateEvent() end
 ---@field title string
 ---@field iconTexture number
 ---@field expansionLevel number
----@field difficultyId number|nil
----@field mapId number|nil
----@field isLfr boolean|nil
+---@field difficultyId number?
+---@field mapId number?
+---@field isLfr boolean?
 
 ---@class CalendarEventTypeDisplayInfo
 ---@field displayString string
@@ -489,8 +489,8 @@ function C_Calendar.UpdateEvent() end
 ---@field name string
 ---@field description string
 ---@field texture number
----@field startTime CalendarTime|nil
----@field endTime CalendarTime|nil
+---@field startTime CalendarTime?
+---@field endTime CalendarTime?
 
 ---@class CalendarMonthInfo
 ---@field month number
@@ -504,4 +504,4 @@ function C_Calendar.UpdateEvent() end
 ---@field raidID number
 ---@field time CalendarTime
 ---@field difficulty number
----@field difficultyName string|nil
+---@field difficultyName string?

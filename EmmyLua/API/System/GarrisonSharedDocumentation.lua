@@ -13,7 +13,7 @@
 ---@field isTrait boolean
 ---@field isSpecialization boolean
 ---@field temporary boolean
----@field category string|nil
+---@field category string?
 ---@field counters GarrisonAbilityEffect[]
 ---@field isEmptySlot boolean
 
@@ -29,7 +29,7 @@
 ---@field tier number
 ---@field uiOrder number
 ---@field type number
----@field prerequisiteTalentID number|nil
+---@field prerequisiteTalentID number?
 ---@field selected boolean
 ---@field researched boolean
 ---@field ignoreTalent boolean
@@ -44,8 +44,8 @@
 ---@field isBeingResearched boolean
 ---@field description string
 ---@field perkSpellID number
----@field researchDescription string|nil
----@field playerConditionReason string|nil
+---@field researchDescription string?
+---@field playerConditionReason string?
 ---@field socketInfo GarrisonTalentSocketInfo
 ---@field treeID number
 

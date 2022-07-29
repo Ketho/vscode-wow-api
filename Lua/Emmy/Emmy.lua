@@ -76,11 +76,7 @@ function Emmy:GetField(annotation, apiTable)
 	-- field annotations dont seem to support nilable params on hover
 	local nilable = ""
 	if apiTable.Nilable or apiTable.Default then
-		if annotation == "field" then
-			nilable = "|nil"
-		else
-			nilable = "?"
-		end
+		nilable = "?"
 	end
 	if annotation == "field" then
 		str = fs_field:format(annotation, apiTable.Name, paramType..nilable)

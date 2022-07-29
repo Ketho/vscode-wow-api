@@ -74,7 +74,7 @@ function C_PetJournal.SetDefaultFilters() end
 
 ---@class PetJournalPetInfo
 ---@field speciesID number
----@field customName string|nil
+---@field customName string?
 ---@field petLevel number
 ---@field xp number
 ---@field maxXP number
@@ -83,7 +83,7 @@ function C_PetJournal.SetDefaultFilters() end
 ---@field icon number
 ---@field petType number
 ---@field creatureID number
----@field name string|nil
+---@field name string?
 ---@field sourceText string
 ---@field description string
 ---@field isWild boolean

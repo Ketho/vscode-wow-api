@@ -62,9 +62,9 @@ function C_ItemInteraction.SetPendingItem(item) end
 ---@field buttonText string
 ---@field interactionType UIItemInteractionType
 ---@field flags number
----@field description string|nil
----@field buttonTooltip string|nil
----@field confirmationDescription string|nil
----@field cost number|nil
----@field currencyTypeId number|nil
----@field dropInSlotSoundKitId number|nil
+---@field description string?
+---@field buttonTooltip string?
+---@field confirmationDescription string?
+---@field cost number?
+---@field currencyTypeId number?
+---@field dropInSlotSoundKitId number?

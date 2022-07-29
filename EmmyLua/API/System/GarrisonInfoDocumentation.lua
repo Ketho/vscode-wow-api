@@ -235,11 +235,11 @@ function C_Garrison.SetAutoCombatSpellFastForward(state) end
 ---@field maxXP number
 ---@field height number
 ---@field scale number
----@field displayScale number|nil
----@field displayHeight number|nil
----@field classSpec number|nil
----@field className string|nil
----@field flavorText string|nil
+---@field displayScale number?
+---@field displayHeight number?
+---@field classSpec number?
+---@field className string?
+---@field flavorText string?
 ---@field classAtlas string
 ---@field portraitIconID number
 ---@field textureKit string
@@ -258,7 +258,7 @@ function C_Garrison.SetAutoCombatSpellFastForward(state) end
 ---@field oldHealth number
 ---@field newHealth number
 ---@field maxHealth number
----@field points number|nil
+---@field points number?
 
 ---@class AutoMissionEnvironmentEffect
 ---@field name string
@@ -304,15 +304,15 @@ function C_Garrison.SetAutoCombatSpellFastForward(state) end
 ---@field maxXP number
 ---@field height number
 ---@field scale number
----@field movementType number|nil
----@field impactDelay number|nil
----@field castID number|nil
----@field castSoundID number|nil
----@field impactID number|nil
----@field impactSoundID number|nil
----@field targetImpactID number|nil
----@field targetImpactSoundID number|nil
----@field className string|nil
+---@field movementType number?
+---@field impactDelay number?
+---@field castID number?
+---@field castSoundID number?
+---@field impactID number?
+---@field impactSoundID number?
+---@field targetImpactID number?
+---@field targetImpactSoundID number?
+---@field className string?
 ---@field classAtlas string
 ---@field portraitIconID number
 ---@field textureKit string
@@ -337,7 +337,7 @@ function C_Garrison.SetAutoCombatSpellFastForward(state) end
 ---@field isTrait boolean
 ---@field isSpecialization boolean
 ---@field temporary boolean
----@field category string|nil
+---@field category string?
 ---@field counters GarrisonAbilityCounterInfo[]
 ---@field isEmptySlot boolean
 
@@ -350,7 +350,7 @@ function C_Garrison.SetAutoCombatSpellFastForward(state) end
 ---@field height number
 ---@field mechanics GarrisonMechanicInfo[]
 ---@field autoCombatSpells AutoCombatSpellInfo[]
----@field autoCombatAutoAttack AutoCombatSpellInfo|nil
+---@field autoCombatAutoAttack AutoCombatSpellInfo?
 ---@field role number
 ---@field health number
 ---@field maxHealth number
@@ -368,7 +368,7 @@ function C_Garrison.SetAutoCombatSpellFastForward(state) end
 ---@field name string
 ---@field factor number
 ---@field description string
----@field ability GarrisonAbilityInfo|nil
+---@field ability GarrisonAbilityInfo?
 
 ---@class GarrisonPlotInstanceMapInfo
 ---@field buildingPlotInstanceID number
@@ -379,8 +379,8 @@ function C_Garrison.SetAutoCombatSpellFastForward(state) end
 ---@class MissionDeploymentInfo
 ---@field location string
 ---@field xp number
----@field environment string|nil
----@field environmentDesc string|nil
+---@field environment string?
+---@field environmentDesc string?
 ---@field environmentTexture number
 ---@field locTextureKit string
 ---@field isExhausting boolean

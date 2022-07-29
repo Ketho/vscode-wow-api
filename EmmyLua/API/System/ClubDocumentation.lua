@@ -459,16 +459,16 @@ function C_Club.ValidateText(clubType, text, clubFieldType) end
 ---@class ClubInfo
 ---@field clubId string
 ---@field name string
----@field shortName string|nil
+---@field shortName string?
 ---@field description string
 ---@field broadcast string
 ---@field clubType ClubType
 ---@field avatarId number
----@field memberCount number|nil
----@field favoriteTimeStamp number|nil
----@field joinTime number|nil
----@field socialQueueingEnabled boolean|nil
----@field crossFaction boolean|nil
+---@field memberCount number?
+---@field favoriteTimeStamp number?
+---@field joinTime number?
+---@field socialQueueingEnabled boolean?
+---@field crossFaction boolean?
 
 ---@class ClubInvitationCandidateInfo
 ---@field memberId number
@@ -487,34 +487,34 @@ function C_Club.ValidateText(clubType, text, clubFieldType) end
 ---@class ClubMemberInfo
 ---@field isSelf boolean
 ---@field memberId number
----@field name string|nil
----@field role ClubRoleIdentifier|nil
+---@field name string?
+---@field role ClubRoleIdentifier?
 ---@field presence ClubMemberPresence
----@field clubType ClubType|nil
----@field guid string|nil
----@field bnetAccountId number|nil
----@field memberNote string|nil
----@field officerNote string|nil
----@field classID number|nil
----@field race number|nil
----@field level number|nil
----@field zone string|nil
----@field achievementPoints number|nil
----@field profession1ID number|nil
----@field profession1Rank number|nil
----@field profession1Name string|nil
----@field profession2ID number|nil
----@field profession2Rank number|nil
----@field profession2Name string|nil
----@field lastOnlineYear number|nil
----@field lastOnlineMonth number|nil
----@field lastOnlineDay number|nil
----@field lastOnlineHour number|nil
----@field guildRank string|nil
----@field guildRankOrder number|nil
----@field isRemoteChat boolean|nil
----@field overallDungeonScore number|nil
----@field faction PvPFaction|nil
+---@field clubType ClubType?
+---@field guid string?
+---@field bnetAccountId number?
+---@field memberNote string?
+---@field officerNote string?
+---@field classID number?
+---@field race number?
+---@field level number?
+---@field zone string?
+---@field achievementPoints number?
+---@field profession1ID number?
+---@field profession1Rank number?
+---@field profession1Name string?
+---@field profession2ID number?
+---@field profession2Rank number?
+---@field profession2Name string?
+---@field lastOnlineYear number?
+---@field lastOnlineMonth number?
+---@field lastOnlineDay number?
+---@field lastOnlineHour number?
+---@field guildRank string?
+---@field guildRankOrder number?
+---@field isRemoteChat boolean?
+---@field overallDungeonScore number?
+---@field faction PvPFaction?
 
 ---@class ClubMessageIdentifier
 ---@field epoch number
@@ -524,7 +524,7 @@ function C_Club.ValidateText(clubType, text, clubFieldType) end
 ---@field messageId ClubMessageIdentifier
 ---@field content string
 ---@field author ClubMemberInfo
----@field destroyer ClubMemberInfo|nil
+---@field destroyer ClubMemberInfo?
 ---@field destroyed boolean
 ---@field edited boolean
 
@@ -600,5 +600,5 @@ function C_Club.ValidateText(clubType, text, clubFieldType) end
 ---@field currentRedeemCount number
 ---@field creationTime number
 ---@field expirationTime number
----@field defaultStreamId string|nil
+---@field defaultStreamId string?
 ---@field creator ClubMemberInfo

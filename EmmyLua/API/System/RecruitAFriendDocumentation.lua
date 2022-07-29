@@ -68,8 +68,8 @@ function C_RecruitAFriend.RequestUpdatedRecruitmentInfo() end
 ---@field availableMonths number
 ---@field claimInProgress boolean
 ---@field rewards RafReward[]
----@field nextReward RafReward|nil
----@field recruitmentInfo RafRecruitmentinfo|nil
+---@field nextReward RafReward?
+---@field recruitmentInfo RafRecruitmentinfo?
 ---@field recruits RafRecruit[]
 
 ---@class RafMountInfo
@@ -111,12 +111,12 @@ function C_RecruitAFriend.RequestUpdatedRecruitmentInfo() end
 ---@field rewardID number
 ---@field itemID number
 ---@field rewardType RafRewardType
----@field petInfo RafPetInfo|nil
----@field mountInfo RafMountInfo|nil
----@field appearanceInfo RafAppearanceInfo|nil
----@field titleInfo RafTitleInfo|nil
----@field appearanceSetInfo RafAppearanceSetInfo|nil
----@field illusionInfo RafIllusionInfo|nil
+---@field petInfo RafPetInfo?
+---@field mountInfo RafMountInfo?
+---@field appearanceInfo RafAppearanceInfo?
+---@field titleInfo RafTitleInfo?
+---@field appearanceSetInfo RafAppearanceSetInfo?
+---@field illusionInfo RafIllusionInfo?
 ---@field canClaim boolean
 ---@field claimed boolean
 ---@field repeatable boolean

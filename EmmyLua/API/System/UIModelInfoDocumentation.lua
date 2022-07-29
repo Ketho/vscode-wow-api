@@ -49,8 +49,8 @@ function C_ModelInfo.GetModelSceneInfoByID(modelSceneID) end
 ---@field animation number
 ---@field animationVariation number
 ---@field animSpeed number
----@field animationKitID number|nil
----@field spellVisualKitID number|nil
+---@field animationKitID number?
+---@field spellVisualKitID number?
 ---@field alpha number
 ---@field scale number
 
@@ -61,11 +61,11 @@ function C_ModelInfo.GetModelSceneInfoByID(modelSceneID) end
 ---@field yaw number
 ---@field pitch number
 ---@field roll number
----@field normalizeScaleAggressiveness number|nil
+---@field normalizeScaleAggressiveness number?
 ---@field useCenterForOriginX boolean
 ---@field useCenterForOriginY boolean
 ---@field useCenterForOriginZ boolean
----@field modelActorDisplayID number|nil
+---@field modelActorDisplayID number?
 
 ---@class UIModelSceneCameraInfo
 ---@field modelSceneCameraID number

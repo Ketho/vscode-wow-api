@@ -85,12 +85,12 @@ function C_WeeklyRewards.OnUIInteract() end
 ---@field progress number
 ---@field id number
 ---@field level number
----@field claimID number|nil
----@field raidString string|nil
+---@field claimID number?
+---@field raidString string?
 ---@field rewards WeeklyRewardActivityRewardInfo[]
 
 ---@class WeeklyRewardActivityRewardInfo
 ---@field type CachedRewardType
 ---@field id number
 ---@field quantity number
----@field itemDBID string|nil
+---@field itemDBID string?

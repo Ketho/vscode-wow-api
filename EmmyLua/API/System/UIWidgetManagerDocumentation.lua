@@ -625,7 +625,7 @@ function C_UIWidgetManager.UnregisterUnitForWidgetUpdates(unitToken, isGuid) end
 ---@field widgetID number
 ---@field widgetSetID number
 ---@field widgetType UIWidgetVisualizationType
----@field unitToken string|nil
+---@field unitToken string?
 
 ---@class UIWidgetSetInfo
 ---@field layoutDirection UIWidgetSetLayoutDirection

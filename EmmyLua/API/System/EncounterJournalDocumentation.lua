@@ -72,17 +72,17 @@ function C_EncounterJournal.SetSlotFilter(filterSlot) end
 
 ---@class EncounterJournalItemInfo
 ---@field itemID number
----@field encounterID number|nil
----@field name string|nil
----@field itemQuality string|nil
----@field filterType ItemSlotFilterType|nil
----@field icon number|nil
----@field slot string|nil
----@field armorType string|nil
----@field link string|nil
----@field handError boolean|nil
----@field weaponTypeError boolean|nil
----@field displayAsPerPlayerLoot boolean|nil
+---@field encounterID number?
+---@field name string?
+---@field itemQuality string?
+---@field filterType ItemSlotFilterType?
+---@field icon number?
+---@field slot string?
+---@field armorType string?
+---@field link string?
+---@field handError boolean?
+---@field weaponTypeError boolean?
+---@field displayAsPerPlayerLoot boolean?
 
 ---@class EncounterJournalMapEncounterInfo
 ---@field encounterID number
@@ -92,13 +92,13 @@ function C_EncounterJournal.SetSlotFilter(filterSlot) end
 ---@class EncounterJournalSectionInfo
 ---@field spellID number
 ---@field title string
----@field description string|nil
+---@field description string?
 ---@field headerType number
 ---@field abilityIcon number
 ---@field creatureDisplayID number
 ---@field uiModelSceneID number
----@field siblingSectionID number|nil
----@field firstChildSectionID number|nil
+---@field siblingSectionID number?
+---@field firstChildSectionID number?
 ---@field filteredByDifficulty boolean
 ---@field link string
 ---@field startsOpen boolean

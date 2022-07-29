@@ -36,9 +36,9 @@ function C_ScenarioInfo.GetScenarioStepInfo(scenarioStepID) end
 ---@field isForCurrentStepOnly boolean
 ---@field shouldShowBonusObjective boolean
 ---@field spells ScenarioStepSpellInfo[]
----@field weightedProgress number|nil
+---@field weightedProgress number?
 ---@field rewardQuestID number
----@field widgetSetID number|nil
+---@field widgetSetID number?
 
 ---@class ScenarioStepSpellInfo
 ---@field spellID number

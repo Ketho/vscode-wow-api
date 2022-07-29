@@ -206,7 +206,7 @@ function C_Map.SetUserWaypoint(point) end
 ---@field areaPoiID number
 ---@field name string
 ---@field atlasName string
----@field uiTextureKit string|nil
+---@field uiTextureKit string?
 
 ---@class MapLinkInfo
 ---@field areaPoiID number

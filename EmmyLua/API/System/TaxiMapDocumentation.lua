@@ -34,4 +34,4 @@ function C_TaxiMap.ShouldMapShowTaxiNodes(uiMapID) end
 ---@field slotIndex number
 ---@field textureKit string
 ---@field useSpecialIcon boolean
----@field specialIconCostString string|nil
+---@field specialIconCostString string?

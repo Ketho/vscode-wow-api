@@ -377,5 +377,5 @@ function C_ArtifactUI.ShouldSuppressForgeRotation() end
 ---@field isFinal boolean
 ---@field tier number
 ---@field position Vector2DMixin
----@field offset Vector2DMixin|nil
----@field linearIndex number|nil
+---@field offset Vector2DMixin?
+---@field linearIndex number?

@@ -72,7 +72,7 @@ function C_ItemUpgrade.UpgradeItem(numUpgrades) end
 ---@field itemLevelIncrement number
 ---@field levelStats ItemUpgradeStat[]
 ---@field costsToUpgrade ItemUpgradeCurrencyCost[]
----@field failureMessage string|nil
+---@field failureMessage string?
 
 ---@class ItemUpgradeStat
 ---@field displayString string

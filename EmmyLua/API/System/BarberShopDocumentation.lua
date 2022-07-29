@@ -106,4 +106,4 @@ function C_BarberShop.ZoomCamera(zoomAmount) end
 ---@class BarberShopRaceData
 ---@field name string
 ---@field fileName string
----@field alternateFormRaceData CharacterAlternateFormData|nil
+---@field alternateFormRaceData CharacterAlternateFormData?

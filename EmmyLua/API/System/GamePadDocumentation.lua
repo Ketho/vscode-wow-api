@@ -104,27 +104,27 @@ function C_GamePad.StopVibration() end
 
 ---@class GamePadAxisConfig
 ---@field axis string
----@field shift number|nil
----@field scale number|nil
----@field deadzone number|nil
----@field buttonThreshold number|nil
----@field buttonPos string|nil
----@field buttonNeg string|nil
----@field comment string|nil
+---@field shift number?
+---@field scale number?
+---@field deadzone number?
+---@field buttonThreshold number?
+---@field buttonPos string?
+---@field buttonNeg string?
+---@field comment string?
 
 ---@class GamePadConfig
----@field comment string|nil
----@field name string|nil
+---@field comment string?
+---@field name string?
 ---@field configID GamePadConfigID
----@field labelStyle string|nil
+---@field labelStyle string?
 ---@field rawButtonMappings GamePadRawButtonMapping[]
 ---@field rawAxisMappings GamePadRawAxisMapping[]
 ---@field axisConfigs GamePadAxisConfig[]
 ---@field stickConfigs GamePadStickConfig[]
 
 ---@class GamePadConfigID
----@field vendorID number|nil
----@field productID number|nil
+---@field vendorID number?
+---@field productID number?
 
 ---@class GamePadMappedState
 ---@field name string
@@ -138,15 +138,15 @@ function C_GamePad.StopVibration() end
 
 ---@class GamePadRawAxisMapping
 ---@field rawIndex number
----@field axis string|nil
----@field comment string|nil
+---@field axis string?
+---@field comment string?
 
 ---@class GamePadRawButtonMapping
 ---@field rawIndex number
----@field button string|nil
----@field axis string|nil
----@field axisValue number|nil
----@field comment string|nil
+---@field button string?
+---@field axis string?
+---@field axisValue number?
+---@field comment string?
 
 ---@class GamePadRawState
 ---@field name string
@@ -164,9 +164,9 @@ function C_GamePad.StopVibration() end
 
 ---@class GamePadStickConfig
 ---@field stick string
----@field axisX string|nil
----@field axisY string|nil
----@field deadzone number|nil
----@field deadzoneX number|nil
----@field deadzoneY number|nil
----@field comment string|nil
+---@field axisX string?
+---@field axisY string?
+---@field deadzone number?
+---@field deadzoneX number?
+---@field deadzoneY number?
+---@field comment string?

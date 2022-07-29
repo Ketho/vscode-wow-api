@@ -57,8 +57,8 @@ function C_CampaignInfo.UsesNormalQuestIcons(campaignID) end
 
 ---@class CampaignFailureReason
 ---@field text string
----@field questID number|nil
----@field mapID number|nil
+---@field questID number?
+---@field mapID number?
 
 ---@class CampaignInfo
 ---@field name string

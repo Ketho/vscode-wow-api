@@ -186,7 +186,7 @@ function C_LFGList.ValidateRequiredPvpRatingForActivity(activityID, rating) end
 ---@class LfgApplicantData
 ---@field applicantID number
 ---@field applicationStatus string
----@field pendingApplicationStatus string|nil
+---@field pendingApplicationStatus string?
 ---@field numMembers number
 ---@field isNew boolean
 ---@field comment string
@@ -194,7 +194,7 @@ function C_LFGList.ValidateRequiredPvpRatingForActivity(activityID, rating) end
 
 ---@class LfgCategoryData
 ---@field name string
----@field searchPromptOverride string|nil
+---@field searchPromptOverride string?
 ---@field separateRecommended boolean
 ---@field autoChooseActivity boolean
 ---@field preferCurrentArea boolean
@@ -211,16 +211,16 @@ function C_LFGList.ValidateRequiredPvpRatingForActivity(activityID, rating) end
 ---@field duration number
 ---@field autoAccept boolean
 ---@field privateGroup boolean
----@field questID number|nil
----@field requiredDungeonScore number|nil
----@field requiredPvpRating number|nil
----@field playstyle LFGEntryPlaystyle|nil
+---@field questID number?
+---@field requiredDungeonScore number?
+---@field requiredPvpRating number?
+---@field playstyle LFGEntryPlaystyle?
 ---@field isCrossFactionListing boolean
 
 ---@class LfgSearchResultData
 ---@field searchResultID number
 ---@field activityID number
----@field leaderName string|nil
+---@field leaderName string?
 ---@field name string
 ---@field comment string
 ---@field voiceChat string
@@ -234,14 +234,14 @@ function C_LFGList.ValidateRequiredPvpRatingForActivity(activityID, rating) end
 ---@field autoAccept boolean
 ---@field isWarMode boolean
 ---@field age number
----@field questID number|nil
----@field leaderOverallDungeonScore number|nil
----@field leaderDungeonScoreInfo BestDungeonScoreMapInfo|nil
----@field leaderPvpRatingInfo PvpRatingInfo|nil
----@field requiredDungeonScore number|nil
----@field requiredPvpRating number|nil
----@field playstyle LFGEntryPlaystyle|nil
----@field crossFactionListing boolean|nil
+---@field questID number?
+---@field leaderOverallDungeonScore number?
+---@field leaderDungeonScoreInfo BestDungeonScoreMapInfo?
+---@field leaderPvpRatingInfo PvpRatingInfo?
+---@field requiredDungeonScore number?
+---@field requiredPvpRating number?
+---@field playstyle LFGEntryPlaystyle?
+---@field crossFactionListing boolean?
 ---@field leaderFactionGroup number
 
 ---@class PvpRatingInfo

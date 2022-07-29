@@ -419,10 +419,10 @@ function C_AuctionHouse.StartCommoditiesPurchase(itemID, quantity) end
 ---@class AuctionHouseBrowseQuery
 ---@field searchString string
 ---@field sorts AuctionHouseSortType[]
----@field minLevel number|nil
----@field maxLevel number|nil
----@field filters AuctionHouseFilter[]|nil
----@field itemClassFilters AuctionHouseItemClassFilter[]|nil
+---@field minLevel number?
+---@field maxLevel number?
+---@field filters AuctionHouseFilter[]?
+---@field itemClassFilters AuctionHouseItemClassFilter[]?
 
 ---@class AuctionHouseFilterGroup
 ---@field category AuctionHouseFilterCategory
@@ -430,8 +430,8 @@ function C_AuctionHouse.StartCommoditiesPurchase(itemID, quantity) end
 
 ---@class AuctionHouseItemClassFilter
 ---@field classID number
----@field subClassID number|nil
----@field inventoryType InventoryType|nil
+---@field subClassID number?
+---@field inventoryType InventoryType?
 
 ---@class AuctionHouseSortType
 ---@field sortOrder AuctionHouseSortOrder
@@ -439,25 +439,25 @@ function C_AuctionHouse.StartCommoditiesPurchase(itemID, quantity) end
 
 ---@class AuctionInfo
 ---@field itemKey ItemKey
----@field itemLink string|nil
----@field minBid number|nil
----@field bidAmount number|nil
----@field buyoutAmount number|nil
----@field bidder string|nil
+---@field itemLink string?
+---@field minBid number?
+---@field bidAmount number?
+---@field buyoutAmount number?
+---@field bidder string?
 
 ---@class BidInfo
 ---@field auctionID number
 ---@field itemKey ItemKey
----@field itemLink string|nil
+---@field itemLink string?
 ---@field timeLeft AuctionHouseTimeLeftBand
----@field minBid number|nil
----@field bidAmount number|nil
----@field buyoutAmount number|nil
----@field bidder string|nil
+---@field minBid number?
+---@field bidAmount number?
+---@field buyoutAmount number?
+---@field bidder string?
 
 ---@class BrowseResultInfo
 ---@field itemKey ItemKey
----@field appearanceLink string|nil
+---@field appearanceLink string?
 ---@field totalQuantity number
 ---@field minPrice number
 ---@field containsOwnerItem boolean
@@ -469,21 +469,21 @@ function C_AuctionHouse.StartCommoditiesPurchase(itemID, quantity) end
 ---@field auctionID number
 ---@field owners string[]
 ---@field totalNumberOfOwners number
----@field timeLeftSeconds number|nil
+---@field timeLeftSeconds number?
 ---@field numOwnerItems number
 ---@field containsOwnerItem boolean
 ---@field containsAccountItem boolean
 
 ---@class ItemKey
 ---@field itemID number
----@field itemLevel number|nil
----@field itemSuffix number|nil
----@field battlePetSpeciesID number|nil
+---@field itemLevel number?
+---@field itemSuffix number?
+---@field battlePetSpeciesID number?
 
 ---@class ItemKeyInfo
 ---@field itemName string
----@field battlePetLink string|nil
----@field appearanceLink string|nil
+---@field battlePetLink string?
+---@field appearanceLink string?
 ---@field quality number
 ---@field iconFileID number
 ---@field isPet boolean
@@ -497,24 +497,24 @@ function C_AuctionHouse.StartCommoditiesPurchase(itemID, quantity) end
 ---@field timeLeft AuctionHouseTimeLeftBand
 ---@field auctionID number
 ---@field quantity number
----@field itemLink string|nil
+---@field itemLink string?
 ---@field containsOwnerItem boolean
 ---@field containsAccountItem boolean
 ---@field containsSocketedItem boolean
----@field bidder string|nil
----@field minBid number|nil
----@field bidAmount number|nil
----@field buyoutAmount number|nil
----@field timeLeftSeconds number|nil
+---@field bidder string?
+---@field minBid number?
+---@field bidAmount number?
+---@field buyoutAmount number?
+---@field timeLeftSeconds number?
 
 ---@class OwnedAuctionInfo
 ---@field auctionID number
 ---@field itemKey ItemKey
----@field itemLink string|nil
+---@field itemLink string?
 ---@field status AuctionStatus
 ---@field quantity number
----@field timeLeftSeconds number|nil
----@field timeLeft AuctionHouseTimeLeftBand|nil
----@field bidAmount number|nil
----@field buyoutAmount number|nil
----@field bidder string|nil
+---@field timeLeftSeconds number?
+---@field timeLeft AuctionHouseTimeLeftBand?
+---@field bidAmount number?
+---@field buyoutAmount number?
+---@field bidder string?

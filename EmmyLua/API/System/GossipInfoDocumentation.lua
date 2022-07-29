@@ -82,7 +82,7 @@ function C_GossipInfo.SelectOption(index, text, confirmed) end
 ---@field type string
 ---@field rewards GossipOptionRewardInfo[]
 ---@field status GossipOptionStatus
----@field spellID number|nil
+---@field spellID number?
 
 ---@class GossipPoiInfo
 ---@field name string
@@ -94,9 +94,9 @@ function C_GossipInfo.SelectOption(index, text, confirmed) end
 ---@field title string
 ---@field questLevel number
 ---@field isTrivial boolean
----@field frequency number|nil
----@field repeatable boolean|nil
----@field isComplete boolean|nil
+---@field frequency number?
+---@field repeatable boolean?
+---@field isComplete boolean?
 ---@field isLegendary boolean
 ---@field isIgnored boolean
 ---@field questID number

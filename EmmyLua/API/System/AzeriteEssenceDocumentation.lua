@@ -106,5 +106,5 @@ function C_AzeriteEssence.UnlockMilestone(milestoneID) end
 ---@field requiredLevel number
 ---@field canUnlock boolean
 ---@field unlocked boolean
----@field rank number|nil
----@field slot AzeriteEssenceSlot|nil
+---@field rank number?
+---@field slot AzeriteEssenceSlot?

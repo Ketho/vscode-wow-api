@@ -291,7 +291,7 @@ function C_ClubFinder.ShouldShowClubFinder() end
 ---@field guildLeader string
 ---@field isGuild boolean
 ---@field emblemInfo number
----@field tabardInfo GuildTabardInfo|nil
+---@field tabardInfo GuildTabardInfo?
 ---@field recruitingSpecIds number[]
 ---@field recruitmentFlags number
 ---@field localeSet boolean

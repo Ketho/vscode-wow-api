@@ -121,7 +121,7 @@ function C_MythicPlus.RequestRewards() end
 ---@field seasonID number
 
 ---@class MythicPlusMember
----@field name string|nil
+---@field name string?
 ---@field specID number
 ---@field classID number
 

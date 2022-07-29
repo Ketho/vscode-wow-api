@@ -398,7 +398,7 @@ function C_PvP.ToggleWarMode() end
 ---@field shortDescription string
 ---@field longDescription string
 ---@field canQueue boolean
----@field timeLeftUntilNextChange number|nil
+---@field timeLeftUntilNextChange number?
 ---@field brawlType BrawlType
 ---@field mapNames string[]
 ---@field includesAllArenas boolean
@@ -414,7 +414,7 @@ function C_PvP.ToggleWarMode() end
 ---@field lastWeeksBestRating number
 ---@field hasWonBracketToday boolean
 ---@field tier number
----@field ranking number|nil
+---@field ranking number?
 
 ---@class PVPPostMatchCurrencyReward
 ---@field currencyType number

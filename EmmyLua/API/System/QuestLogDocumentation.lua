@@ -401,11 +401,11 @@ function C_QuestLog.SortQuestWatches() end
 ---@field title string
 ---@field questLogIndex number
 ---@field questID number
----@field campaignID number|nil
+---@field campaignID number?
 ---@field level number
 ---@field difficultyLevel number
 ---@field suggestedGroup number
----@field frequency QuestFrequency|nil
+---@field frequency QuestFrequency?
 ---@field isHeader boolean
 ---@field isCollapsed boolean
 ---@field startEvent boolean
@@ -418,7 +418,7 @@ function C_QuestLog.SortQuestWatches() end
 ---@field isHidden boolean
 ---@field isAutoComplete boolean
 ---@field overridesSortOrder boolean
----@field readyForTranslation boolean|nil
+---@field readyForTranslation boolean?
 
 ---@class QuestObjectiveInfo
 ---@field text string
@@ -437,11 +437,11 @@ function C_QuestLog.SortQuestWatches() end
 ---@class QuestTagInfo
 ---@field tagName string
 ---@field tagID number
----@field worldQuestType number|nil
----@field quality WorldQuestQuality|nil
----@field tradeskillLineID number|nil
----@field isElite boolean|nil
----@field displayExpiration boolean|nil
+---@field worldQuestType number?
+---@field quality WorldQuestQuality?
+---@field tradeskillLineID number?
+---@field isElite boolean?
+---@field displayExpiration boolean?
 
 ---@class QuestTheme
 ---@field background string

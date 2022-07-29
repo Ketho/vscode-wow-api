@@ -36,4 +36,4 @@ function C_VignetteInfo.GetVignettes() end
 ---@field vignetteID number
 ---@field type VignetteType
 ---@field rewardQuestID number
----@field widgetSetID number|nil
+---@field widgetSetID number?
