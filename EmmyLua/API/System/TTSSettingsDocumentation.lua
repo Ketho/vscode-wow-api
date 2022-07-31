@@ -43,17 +43,17 @@ function C_TTSSettings.MarkCharacterSettingsSaved() end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_TTSSettings.SetChannelEnabled)
 ---@param channelInfo ChatChannelInfo
----@param newVal boolean
+---@param newVal? boolean Default = false
 function C_TTSSettings.SetChannelEnabled(channelInfo, newVal) end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_TTSSettings.SetChannelKeyEnabled)
 ---@param channelKey string
----@param newVal boolean
+---@param newVal? boolean Default = false
 function C_TTSSettings.SetChannelKeyEnabled(channelKey, newVal) end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_TTSSettings.SetChatTypeEnabled)
 ---@param chatName string
----@param newVal boolean
+---@param newVal? boolean Default = false
 function C_TTSSettings.SetChatTypeEnabled(chatName, newVal) end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_TTSSettings.SetDefaultSettings)
@@ -61,7 +61,7 @@ function C_TTSSettings.SetDefaultSettings() end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_TTSSettings.SetSetting)
 ---@param setting TtsBoolSetting
----@param newVal boolean
+---@param newVal? boolean Default = false
 function C_TTSSettings.SetSetting(setting, newVal) end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_TTSSettings.SetSpeechRate)

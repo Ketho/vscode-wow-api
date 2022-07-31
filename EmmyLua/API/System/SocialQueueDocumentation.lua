@@ -2,8 +2,8 @@
 C_SocialQueue = {}
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_SocialQueue.GetAllGroups)
----@param allowNonJoinable boolean
----@param allowNonQueuedGroups boolean
+---@param allowNonJoinable? boolean Default = false
+---@param allowNonQueuedGroups? boolean Default = false
 ---@return string[] groupGUIDs
 function C_SocialQueue.GetAllGroups(allowNonJoinable, allowNonQueuedGroups) end
 
@@ -41,9 +41,9 @@ function C_SocialQueue.GetGroupQueues(groupGUID) end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_SocialQueue.RequestToJoin)
 ---@param groupGUID string
----@param applyAsTank boolean
----@param applyAsHealer boolean
----@param applyAsDamage boolean
+---@param applyAsTank? boolean Default = false
+---@param applyAsHealer? boolean Default = false
+---@param applyAsDamage? boolean Default = false
 ---@return boolean requestSuccessful
 function C_SocialQueue.RequestToJoin(groupGUID, applyAsTank, applyAsHealer, applyAsDamage) end
 

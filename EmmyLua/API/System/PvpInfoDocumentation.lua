@@ -328,7 +328,7 @@ function C_PvP.IsWarModeDesired() end
 function C_PvP.IsWarModeFeatureEnabled() end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_PvP.JoinBrawl)
----@param isSpecialBrawl boolean
+---@param isSpecialBrawl? boolean Default = false
 function C_PvP.JoinBrawl(isSpecialBrawl) end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_PvP.RequestCrowdControlSpell)
@@ -401,7 +401,7 @@ function C_PvP.ToggleWarMode() end
 ---@field timeLeftUntilNextChange number?
 ---@field brawlType BrawlType
 ---@field mapNames string[]
----@field includesAllArenas boolean
+---@field includesAllArenas boolean? Default = false
 
 ---@class PVPPersonalRatedInfo
 ---@field personalRating number

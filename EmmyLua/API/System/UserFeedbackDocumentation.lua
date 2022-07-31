@@ -3,7 +3,7 @@ C_UserFeedback = {}
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_UserFeedback.SubmitBug)
 ---@param bugInfo string
----@param suppressNotification boolean
+---@param suppressNotification? boolean Default = false
 ---@return boolean success
 function C_UserFeedback.SubmitBug(bugInfo, suppressNotification) end
 

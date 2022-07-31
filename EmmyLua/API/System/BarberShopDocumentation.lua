@@ -9,7 +9,7 @@ function C_BarberShop.ApplyCustomizationChoices() end
 function C_BarberShop.Cancel() end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_BarberShop.ClearPreviewChoices)
----@param clearSavedChoices boolean
+---@param clearSavedChoices? boolean Default = false
 function C_BarberShop.ClearPreviewChoices(clearSavedChoices) end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_BarberShop.GetAvailableCustomizations)

@@ -108,10 +108,10 @@ function C_TransmogCollection.GetCategoryForItem(itemModifiedAppearanceID) end
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_TransmogCollection.GetCategoryInfo)
 ---@param category TransmogCollectionType
 ---@return string name
----@return boolean isWeapon
----@return boolean canHaveIllusions
----@return boolean canMainHand
----@return boolean canOffHand
+---@return boolean? isWeapon Default = false
+---@return boolean? canHaveIllusions Default = false
+---@return boolean? canMainHand Default = false
+---@return boolean? canOffHand Default = false
 function C_TransmogCollection.GetCategoryInfo(category) end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_TransmogCollection.GetCategoryTotal)
@@ -283,7 +283,7 @@ function C_TransmogCollection.PlayerCanCollectSource(sourceID) end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_TransmogCollection.PlayerHasTransmog)
 ---@param itemID number
----@param itemAppearanceModID? number
+---@param itemAppearanceModID? number Default = 0
 ---@return boolean hasTransmog
 function C_TransmogCollection.PlayerHasTransmog(itemID, itemAppearanceModID) end
 

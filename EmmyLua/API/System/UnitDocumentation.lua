@@ -124,8 +124,8 @@ function UnitPhaseReason(unit) end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_UnitPower)
 ---@param unitToken string
----@param powerType? PowerType
----@param unmodified? boolean
+---@param powerType? PowerType Default = NumPowerTypes
+---@param unmodified? boolean Default = false
 ---@return number power
 function UnitPower(unitToken, powerType, unmodified) end
 
@@ -141,8 +141,8 @@ function UnitPowerDisplayMod(powerType) end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_UnitPowerMax)
 ---@param unitToken string
----@param powerType? PowerType
----@param unmodified boolean
+---@param powerType? PowerType Default = NumPowerTypes
+---@param unmodified? boolean Default = false
 ---@return number maxPower
 function UnitPowerMax(unitToken, powerType, unmodified) end
 

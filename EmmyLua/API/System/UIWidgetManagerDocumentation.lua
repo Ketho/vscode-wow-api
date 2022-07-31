@@ -149,7 +149,7 @@ function C_UIWidgetManager.GetZoneControlVisualizationInfo(widgetID) end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_UIWidgetManager.RegisterUnitForWidgetUpdates)
 ---@param unitToken string
----@param isGuid boolean
+---@param isGuid? boolean Default = false
 function C_UIWidgetManager.RegisterUnitForWidgetUpdates(unitToken, isGuid) end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_UIWidgetManager.SetProcessingUnit)
@@ -162,7 +162,7 @@ function C_UIWidgetManager.SetProcessingUnitGuid(unit) end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_UIWidgetManager.UnregisterUnitForWidgetUpdates)
 ---@param unitToken string
----@param isGuid boolean
+---@param isGuid? boolean Default = false
 function C_UIWidgetManager.UnregisterUnitForWidgetUpdates(unitToken, isGuid) end
 
 ---@class BulletTextListWidgetVisualizationInfo

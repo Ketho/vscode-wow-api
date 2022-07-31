@@ -44,8 +44,8 @@ function C_MythicPlus.GetRewardLevelForDifficultyLevel(difficultyLevel) end
 function C_MythicPlus.GetRewardLevelFromKeystoneLevel(keystoneLevel) end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_MythicPlus.GetRunHistory)
----@param includePreviousWeeks boolean
----@param includeIncompleteRuns boolean
+---@param includePreviousWeeks? boolean Default = false
+---@param includeIncompleteRuns? boolean Default = false
 ---@return MythicPlusRunInfo[] runs
 function C_MythicPlus.GetRunHistory(includePreviousWeeks, includeIncompleteRuns) end
 

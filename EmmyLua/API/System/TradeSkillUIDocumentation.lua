@@ -3,7 +3,7 @@ C_TradeSkillUI = {}
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_TradeSkillUI.CraftRecipe)
 ---@param recipeSpellID number
----@param numCasts? number
+---@param numCasts? number Default = 1
 ---@param optionalReagents? OptionalReagentInfo[]
 ---@param recipeLevel? number
 function C_TradeSkillUI.CraftRecipe(recipeSpellID, numCasts, optionalReagents, recipeLevel) end
@@ -82,7 +82,7 @@ function C_TradeSkillUI.IsEmptySkillLineCategory(categoryID) end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_TradeSkillUI.SetRecipeRepeatCount)
 ---@param recipeSpellID number
----@param numCasts? number
+---@param numCasts? number Default = 1
 ---@param optionalReagents? OptionalReagentInfo[]
 function C_TradeSkillUI.SetRecipeRepeatCount(recipeSpellID, numCasts, optionalReagents) end
 

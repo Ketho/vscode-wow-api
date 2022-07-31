@@ -159,7 +159,7 @@ function C_ArtifactUI.GetEquippedArtifactInfo() end
 function C_ArtifactUI.GetEquippedArtifactItemID() end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_ArtifactUI.GetEquippedArtifactNumRelicSlots)
----@param onlyUnlocked boolean
+---@param onlyUnlocked? boolean Default = false
 ---@return number numRelicSlots
 function C_ArtifactUI.GetEquippedArtifactNumRelicSlots(onlyUnlocked) end
 
@@ -202,7 +202,7 @@ function C_ArtifactUI.GetNumAppearanceSets() end
 function C_ArtifactUI.GetNumObtainedArtifacts() end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_ArtifactUI.GetNumRelicSlots)
----@param onlyUnlocked boolean
+---@param onlyUnlocked? boolean Default = false
 ---@return number numRelicSlots
 function C_ArtifactUI.GetNumRelicSlots(onlyUnlocked) end
 
@@ -348,7 +348,7 @@ function C_ArtifactUI.SetForgeRotation(forgeRotationX, forgeRotationY, forgeRota
 
 ---Call without an argument to clear the preview.
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_ArtifactUI.SetPreviewAppearance)
----@param artifactAppearanceID? number
+---@param artifactAppearanceID? number Default = 0
 function C_ArtifactUI.SetPreviewAppearance(artifactAppearanceID) end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_ArtifactUI.ShouldSuppressForgeRotation)

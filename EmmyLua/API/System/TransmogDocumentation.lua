@@ -2,7 +2,7 @@
 C_Transmog = {}
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_Transmog.ApplyAllPending)
----@param currentSpecOnly boolean
+---@param currentSpecOnly? boolean Default = false
 ---@return boolean requestSent
 function C_Transmog.ApplyAllPending(currentSpecOnly) end
 

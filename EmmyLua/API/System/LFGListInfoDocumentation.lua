@@ -73,7 +73,7 @@ function C_LFGList.GetApplicantInfo(applicantID) end
 function C_LFGList.GetApplicantPvpRatingInfoForListing(localID, applicantIndex, activityID) end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_LFGList.GetFilteredSearchResults)
----@return number? totalResultsFound
+---@return number? totalResultsFound Default = 0
 ---@return number[] filteredResults
 function C_LFGList.GetFilteredSearchResults() end
 
@@ -88,7 +88,7 @@ function C_LFGList.GetKeystoneForActivity(activityID) end
 function C_LFGList.GetLfgCategoryInfo(categoryID) end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_LFGList.GetOwnedKeystoneActivityAndGroupAndLevel)
----@param getTimewalking boolean
+---@param getTimewalking? boolean Default = false
 ---@return number activityID
 ---@return number groupID
 ---@return number keystoneLevel
@@ -106,7 +106,7 @@ function C_LFGList.GetPlaystyleString(playstyle, activityInfo) end
 function C_LFGList.GetSearchResultInfo(searchResultID) end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_LFGList.GetSearchResults)
----@return number? totalResultsFound
+---@return number? totalResultsFound Default = 0
 ---@return number[] results
 function C_LFGList.GetSearchResults() end
 
@@ -126,10 +126,10 @@ function C_LFGList.IsPlayerAuthenticatedForLFG(activityID) end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_LFGList.Search)
 ---@param categoryID number
----@param filter? number
----@param preferredFilters? number
+---@param filter? number Default = 0
+---@param preferredFilters? number Default = 0
 ---@param languageFilter? WowLocale
----@param searchCrossFactionListings? boolean
+---@param searchCrossFactionListings? boolean Default = false
 function C_LFGList.Search(categoryID, filter, preferredFilters, languageFilter, searchCrossFactionListings) end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_LFGList.SetEntryTitle)
@@ -251,14 +251,14 @@ function C_LFGList.ValidateRequiredPvpRatingForActivity(activityID, rating) end
 ---@field tier number
 
 ---@class WowLocale
----@field enUS boolean
----@field koKR boolean
----@field frFR boolean
----@field deDE boolean
----@field zhCN boolean
----@field zhTW boolean
----@field esES boolean
----@field esMX boolean
----@field ruRU boolean
----@field ptBR boolean
----@field itIT boolean
+---@field enUS boolean? Default = false
+---@field koKR boolean? Default = false
+---@field frFR boolean? Default = false
+---@field deDE boolean? Default = false
+---@field zhCN boolean? Default = false
+---@field zhTW boolean? Default = false
+---@field esES boolean? Default = false
+---@field esMX boolean? Default = false
+---@field ruRU boolean? Default = false
+---@field ptBR boolean? Default = false
+---@field itIT boolean? Default = false

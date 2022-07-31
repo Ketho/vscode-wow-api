@@ -115,8 +115,8 @@ function C_Map.GetMapInfoAtPosition(uiMapID, x, y) end
 ---@param uiMapID number
 ---@return number playerMinLevel
 ---@return number playerMaxLevel
----@return number? petMinLevel
----@return number? petMaxLevel
+---@return number? petMinLevel Default = 0
+---@return number? petMaxLevel Default = 0
 function C_Map.GetMapLevels(uiMapID) end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_Map.GetMapLinksForMap)

@@ -14,12 +14,6 @@ m.data = {
 		SetCVar         = {Arguments = {name = {Type = "CVar"}}},
 		SetCVarBitfield = {Arguments = {name = {Type = "CVar"}}},
 	},
-	["UnitDocumentation.lua"] = {
-		UnitPower = {Arguments = {
-			powerType = {Nilable = true},
-			unmodified = {Nilable = true},
-		}},
-	},
 }
 
 -- there are multiple ways to do this. this sure looks messy and unreadable anyhow

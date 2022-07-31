@@ -146,7 +146,7 @@ function C_ClubFinder.PlayerReturnPendingGuildsList() end
 ---@param avatarId number
 ---@param specs number[]
 ---@param type ClubFinderRequestType
----@param crossFaction boolean
+---@param crossFaction? boolean Default = false
 ---@return boolean succesful
 function C_ClubFinder.PostClub(clubId, itemLevelRequirement, name, description, avatarId, specs, type, crossFaction) end
 

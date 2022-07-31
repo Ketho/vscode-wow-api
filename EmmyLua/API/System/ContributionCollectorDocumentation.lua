@@ -40,7 +40,7 @@ function C_ContributionCollector.GetContributionResult(contributionID) end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_ContributionCollector.GetDescription)
 ---@param contributionID number
----@return string? description
+---@return string? description Default = 
 function C_ContributionCollector.GetDescription(contributionID) end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_ContributionCollector.GetManagedContributionsForCreatureID)
@@ -50,7 +50,7 @@ function C_ContributionCollector.GetManagedContributionsForCreatureID(creatureID
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_ContributionCollector.GetName)
 ---@param contributionID number
----@return string? name
+---@return string? name Default = 
 function C_ContributionCollector.GetName(contributionID) end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_ContributionCollector.GetOrderIndex)
@@ -60,14 +60,14 @@ function C_ContributionCollector.GetOrderIndex(contributionID) end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_ContributionCollector.GetRequiredContributionCurrency)
 ---@param contributionID number
----@return number? currencyID
----@return number? currencyAmount
+---@return number? currencyID Default = 0
+---@return number? currencyAmount Default = 0
 function C_ContributionCollector.GetRequiredContributionCurrency(contributionID) end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_ContributionCollector.GetRequiredContributionItem)
 ---@param contributionID number
----@return number? itemID
----@return number? itemCount
+---@return number? itemID Default = 0
+---@return number? itemCount Default = 0
 function C_ContributionCollector.GetRequiredContributionItem(contributionID) end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_ContributionCollector.GetRewardQuestID)
@@ -77,7 +77,7 @@ function C_ContributionCollector.GetRewardQuestID(contributionID) end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_ContributionCollector.GetState)
 ---@param contributionID number
----@return ContributionState? contributionState
+---@return ContributionState? contributionState Default = None
 ---@return number contributionPercentageComplete
 ---@return number? timeOfNextStateChange
 ---@return number startTime
