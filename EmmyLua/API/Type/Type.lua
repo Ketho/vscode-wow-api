@@ -95,8 +95,6 @@
 ---|"RANGEDSLOT"
 ---|"TABARDSLOT"
 
----@class WowObject
-
 ---@alias UnitId
 ---|"player"
 ---|"target"
