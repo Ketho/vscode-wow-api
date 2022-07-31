@@ -5,6 +5,14 @@
 - Frame templates are not completely supported, only BackdropTemplate ([#15](https://github.com/Ketho/vscode-wow-api/issues/15)) 
 - The Classic (TBC) API is not supported ([#13](https://github.com/Ketho/vscode-wow-api/issues/13))
 
+## [0.8.8] - 2022-07-31
+### Added
+- 🌙 EmmyLua: [#47](https://github.com/Ketho/vscode-wow-api/issues/47) Updated `GetActiveSpecGroup, GetSpellLevelLearned, UIFrameFadeIn/Out, UnitBuff/Aura, PlaySoundFile, UnitPower/Max, UnitIsMercenary, SetSpecialization, GetAddOnCPU/MemoryUsage`
+- 🌙 EmmyLua: Added `UnitId` type
+### Changed
+- 🐞 Bug Fixes: Fixed some `Nilable` params and added the `Default` field as comment. ([718c97e](https://github.com/Ketho/vscode-wow-api/commit/718c97edc1538a0cfe437d71722550b06fb4223a)).
+- 🐞 Bug Fixes: Fixed enums by using `@enum` instead of `@class`
+
 ## [0.8.7] - 2022-07-26
 ### Added
 - 🌙 EmmyLua: [#46](https://github.com/Ketho/vscode-wow-api/issues/46) Added `GetFontInfo()` and FontObject types 
@@ -13,7 +21,7 @@
 - 🌙 EmmyLua: PR [#43](https://github.com/Ketho/vscode-wow-api/issues/43) Added `AceGUI`
 - 🌙 EmmyLua: [#41](https://github.com/Ketho/vscode-wow-api/issues/41) Added `classFile` types
 - 🌙 EmmyLua: Added `GetItemInfo()`
-- 🛠 EmmyLua: Refactored wiki parsing script.
+- 🛠 Improvements: Refactored wiki parsing script.
 
 ## [0.8.6] - 2022-07-08
 ### Added
@@ -29,7 +37,6 @@
 - 🌙 EmmyLua: Added [EmoteToken](https://wowpedia.fandom.com/wiki/API_DoEmote#Emotes)
 - 🛠 Improvements: CreateFrame() now accepts lowercase/uppercase frame types e.g. "frame" or "FRAME".
 - 🛠 Improvements: Added comment to widget scripts what frame type they were inherited from.
-
 ### Changed
 - 🐞 Bug Fixes: Fixed widget scripts not inheriting from parent classes (regression).
 - 🌙 EmmyLua: Fixed warnings in issues [#39](https://github.com/Ketho/vscode-wow-api/issues/39), [#40](https://github.com/Ketho/vscode-wow-api/issues/40), [#41](https://github.com/Ketho/vscode-wow-api/issues/41); Fixed EditBox to inherit FontInstance; Fixed .SetTexture, .SetPoint
@@ -103,7 +110,6 @@
 - 🌙 EmmyLua: Updated Blizzard_APIDocumentation to 9.1.0 (40000)
 - 🌙 EmmyLua: Added InventorySlotIDs (#14)
 - 📚 Documentation: Added [acknowledgements](https://github.com/Ketho/vscode-wow-api#acknowledgements) section
-
 ### Changed
 - 🛠 Bug Fixes: Reset `Hover: Enums Limit` option back to default if still set at 0
 - 🛠 Bug Fixes: Attempt to fix uninstall script path
@@ -127,7 +133,6 @@
 - 🌙 EmmyLua: Updated Blizzard_APIDocumentation to 9.0.5 (38134) and Wowpedia definitions
 - 🌙 EmmyLua: Added preliminary support for UnitID types
 - 📚 Documentation: Added wiki page for [Recommended settings](https://github.com/Ketho/vscode-wow-api/wiki/Recommended-settings)
-
 ### Changed
 - 🐞 Bug Fixes: Fixed regression for CVar hover tooltip
 - 🐞 Bug Fixes: Fixed globals being added to `Lua.diagnostics.globals` when already defined there
@@ -276,6 +281,7 @@
 ### Added
 - 🚧 Wip: Development work
 
+[0.8.8]: https://github.com/Ketho/vscode-wow-api/releases/tag/0.8.8
 [0.8.7]: https://github.com/Ketho/vscode-wow-api/releases/tag/0.8.7
 [0.8.6]: https://github.com/Ketho/vscode-wow-api/releases/tag/0.8.6
 [0.8.5]: https://github.com/Ketho/vscode-wow-api/releases/tag/0.8.5
