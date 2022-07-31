@@ -1,4 +1,7 @@
 ---@meta
+---[Documentation](https://wowpedia.fandom.com/wiki/API_GetWarGameQueueStatus)
+function GetWarGameQueueStatus() end
+
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_GetWarGameTypeInfo)
 function GetWarGameTypeInfo(index) end
 
@@ -1423,10 +1426,20 @@ function PlayAutoAcceptQuestSound() end
 function PlayMusic() end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_PlaySound)
+---@param soundKitID number
+---@param channel? string
+---@param forceNoDuplicates? boolean
+---@param runFinishCallback? boolean
+---@return boolean willPlay
+---@return number soundHandle
 function PlaySound(soundKitID, channel, forceNoDuplicates, runFinishCallback) end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_PlaySoundFile)
-function PlaySoundFile() end
+---@param sound number|string
+---@param channel? string
+---@return boolean willPlay
+---@return number soundHandle
+function PlaySoundFile(sound, channel) end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_PlayVocalErrorSoundID)
 function PlayVocalErrorSoundID(vocalErrorSoundID) end
@@ -2245,7 +2258,7 @@ function SetSortBagsRightToLeft(disable) end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_SetSpecialization)
 ---@param specIndex number
----@param isPet boolean
+---@param isPet? boolean
 function SetSpecialization(specIndex, isPet) end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_SetSpellbookPetAction)
@@ -2459,16 +2472,4 @@ function SpellTargetUnit(unitId) end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_SplashFrameCanBeShown)
 function SplashFrameCanBeShown() end
-
----[Documentation](https://wowpedia.fandom.com/wiki/API_SplitContainerItem)
----@param bagID number
----@param slot number
----@param count number
-function SplitContainerItem(bagID, slot, count) end
-
----[Documentation](https://wowpedia.fandom.com/wiki/API_SplitGuildBankItem)
-function SplitGuildBankItem(tab, slot, amount) end
-
----[Documentation](https://wowpedia.fandom.com/wiki/API_StartAttack)
-function StartAttack() end
 

@@ -2174,7 +2174,10 @@ function GetSpellHitModifier() end
 function GetSpellInfo(spell) end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_GetSpellLevelLearned)
-function GetSpellLevelLearned() end
+---@param spell number|string
+---@return number level
+---@overload fun(index: number, bookType: string)
+function GetSpellLevelLearned(spell) end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_GetSpellLink)
 ---@param spell number|string
@@ -2541,7 +2544,4 @@ function GetVoidTransferWithdrawalInfo(slotIndex) end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_GetVoidUnlockCost)
 function GetVoidUnlockCost() end
-
----[Documentation](https://wowpedia.fandom.com/wiki/API_GetWarGameQueueStatus)
-function GetWarGameQueueStatus() end
 

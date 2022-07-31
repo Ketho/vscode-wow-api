@@ -1,4 +1,16 @@
 ---@meta
+---[Documentation](https://wowpedia.fandom.com/wiki/API_SplitContainerItem)
+---@param bagID number
+---@param slot number
+---@param count number
+function SplitContainerItem(bagID, slot, count) end
+
+---[Documentation](https://wowpedia.fandom.com/wiki/API_SplitGuildBankItem)
+function SplitGuildBankItem(tab, slot, amount) end
+
+---[Documentation](https://wowpedia.fandom.com/wiki/API_StartAttack)
+function StartAttack() end
+
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_StartAutoRun)
 function StartAutoRun() end
 
@@ -274,7 +286,7 @@ function UnitAttackPower(unit) end
 function UnitAttackSpeed(unit) end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_UnitAura)
----@param unit number
+---@param unit UnitId
 ---@param index number
 ---@param filter? number
 ---@return string name
@@ -296,7 +308,7 @@ function UnitAttackSpeed(unit) end
 function UnitAura(unit, index, filter) end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_UnitAura)
----@param unit number
+---@param unit UnitId
 ---@param index number
 ---@param filter? number
 ---@return string name
@@ -318,7 +330,7 @@ function UnitAura(unit, index, filter) end
 function UnitBuff(unit, index, filter) end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_UnitAura)
----@param unit number
+---@param unit UnitId
 ---@param index number
 ---@param filter? number
 ---@return string name
@@ -628,7 +640,9 @@ function UnitIsGroupLeader(unit, partyCategory) end
 function UnitIsInMyGuild(unit) end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_UnitIsMercenary)
-function UnitIsMercenary() end
+---@param unit? UnitId
+---@return boolean isMercenary
+function UnitIsMercenary(unit) end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_UnitIsOtherPlayersBattlePet)
 ---@param unit UnitId

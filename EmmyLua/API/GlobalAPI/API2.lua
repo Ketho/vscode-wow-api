@@ -1560,7 +1560,7 @@ function GetActiveLootRollIDs() end
 function GetActiveQuestID(index) end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_GetActiveSpecGroup)
----@param isInspect boolean
+---@param isInspect? boolean
 ---@return number activeSpec
 function GetActiveSpecGroup(isInspect) end
 
@@ -1568,7 +1568,10 @@ function GetActiveSpecGroup(isInspect) end
 function GetActiveTitle(index) end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_GetAddOnCPUUsage)
-function GetAddOnCPUUsage() end
+---@param index number
+---@return number time
+---@overload fun(name: string)
+function GetAddOnCPUUsage(index) end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_GetAddOnDependencies)
 ---@param index number
@@ -1595,7 +1598,10 @@ function GetAddOnEnableState(character, addon) end
 function GetAddOnInfo(index) end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_GetAddOnMemoryUsage)
-function GetAddOnMemoryUsage() end
+---@param index number
+---@return number mem
+---@overload fun(name: string)
+function GetAddOnMemoryUsage(index) end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_GetAddOnMetadata)
 ---@param index number
