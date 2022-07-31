@@ -30,6 +30,6 @@ function GetItemInfoFromHyperlink(link) end
 function GetAchievementInfoFromHyperlink(link) end
 
 ---[FrameXML](https://www.townlong-yak.com/framexml/go/GetURLIndexAndLoadURL)
----@param self? WowObject used for discarding when called from blizzard xml
+---@param self? any unused
 ---@param link string
 function GetURLIndexAndLoadURL(self, link) end

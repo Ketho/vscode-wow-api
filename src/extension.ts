@@ -145,7 +145,7 @@ export function setExternalLibrary(folder: string, enable: boolean) {
 
 function updateConfigs() {
 	const sumneko = vscode.workspace.getConfiguration("Lua")
-	sumneko.update("completion.displayContext", 0, true) // hides the emmylua source from the hover tooltip
+	// sumneko.update("completion.displayContext", 0, true) // hides the emmylua source from the hover tooltip
 
 	const wowapi = vscode.workspace.getConfiguration("wowAPI")
 	globalstrings.data = require("./data/globalstring/"+wowapi.get("locale")).data
