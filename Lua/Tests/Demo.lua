@@ -39,4 +39,5 @@ local bd = frame_backdrop:GetBackdrop()
 local f2 = CreateFrame("Frame")
 local smooth = Mixin(f2, SmoothStatusBarMixin)
 
-local b = C_AuctionHouse.GetBidInfo(123)
+-- accepts enum
+local cat = C_TransmogCollection.GetCategoryInfo(Enum.TransmogCollectionType.Bow)

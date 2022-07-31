@@ -1,13 +1,13 @@
 ---@meta
 Enum = {
-	---@class AddSoulbindConduitReason
+	---@enum AddSoulbindConduitReason
 	AddSoulbindConduitReason = {
 		None = 0,
 		Cheat = 1,
 		SpellEffect = 2,
 		Upgrade = 3,
 	},
-	---@class AnimaDiversionNodeState
+	---@enum AnimaDiversionNodeState
 	AnimaDiversionNodeState = {
 		Unavailable = 0,
 		Available = 1,
@@ -15,12 +15,12 @@ Enum = {
 		SelectedPermanent = 3,
 		Cooldown = 4,
 	},
-	---@class AuctionHouseCommoditySortOrder
+	---@enum AuctionHouseCommoditySortOrder
 	AuctionHouseCommoditySortOrder = {
 		UnitPrice = 0,
 		Quantity = 1,
 	},
-	---@class AuctionHouseError
+	---@enum AuctionHouseError
 	AuctionHouseError = {
 		NotEnoughMoney = 0,
 		HigherBid = 1,
@@ -46,7 +46,7 @@ Enum = {
 		WrappedItem = 21,
 		LootItem = 22,
 	},
-	---@class AuctionHouseFilter
+	---@enum AuctionHouseFilter
 	AuctionHouseFilter = {
 		None = 0,
 		UncollectedOnly = 1,
@@ -62,18 +62,18 @@ Enum = {
 		ArtifactQuality = 11,
 		LegendaryCraftedItemOnly = 12,
 	},
-	---@class AuctionHouseFilterCategory
+	---@enum AuctionHouseFilterCategory
 	AuctionHouseFilterCategory = {
 		Uncategorized = 0,
 		Equipment = 1,
 		Rarity = 2,
 	},
-	---@class AuctionHouseItemSortOrder
+	---@enum AuctionHouseItemSortOrder
 	AuctionHouseItemSortOrder = {
 		Bid = 0,
 		Buyout = 1,
 	},
-	---@class AuctionHouseNotification
+	---@enum AuctionHouseNotification
 	AuctionHouseNotification = {
 		BidPlaced = 0,
 		AuctionRemoved = 1,
@@ -82,7 +82,7 @@ Enum = {
 		AuctionSold = 4,
 		AuctionExpired = 5,
 	},
-	---@class AuctionHouseSortOrder
+	---@enum AuctionHouseSortOrder
 	AuctionHouseSortOrder = {
 		Price = 0,
 		Name = 1,
@@ -91,32 +91,32 @@ Enum = {
 		Buyout = 4,
 		TimeRemaining = 5,
 	},
-	---@class AuctionHouseTimeLeftBand
+	---@enum AuctionHouseTimeLeftBand
 	AuctionHouseTimeLeftBand = {
 		Short = 0,
 		Medium = 1,
 		Long = 2,
 		VeryLong = 3,
 	},
-	---@class AuctionStatus
+	---@enum AuctionStatus
 	AuctionStatus = {
 		Active = 0,
 		Sold = 1,
 	},
-	---@class AzeriteEssenceSlot
+	---@enum AzeriteEssenceSlot
 	AzeriteEssenceSlot = {
 		MainSlot = 0,
 		PassiveOneSlot = 1,
 		PassiveTwoSlot = 2,
 		PassiveThreeSlot = 3,
 	},
-	---@class AzeritePowerLevel
+	---@enum AzeritePowerLevel
 	AzeritePowerLevel = {
 		Base = 0,
 		Upgraded = 1,
 		Downgraded = 2,
 	},
-	---@class BattlePetAbilityFlag
+	---@enum BattlePetAbilityFlag
 	BattlePetAbilityFlag = {
 		DisplayAsHostileDebuff = 1,
 		HideStrongWeakHints = 2,
@@ -125,13 +125,13 @@ Enum = {
 		ShowCast = 16,
 		StartOnCooldown = 32,
 	},
-	---@class BattlePetAbilitySlot
+	---@enum BattlePetAbilitySlot
 	BattlePetAbilitySlot = {
 		A = 0,
 		B = 1,
 		C = 2,
 	},
-	---@class BattlePetAbilityTargets
+	---@enum BattlePetAbilityTargets
 	BattlePetAbilityTargets = {
 		EnemyFrontPet = 0,
 		FriendlyFrontPet = 1,
@@ -147,7 +147,7 @@ Enum = {
 		Specific = 11,
 		ProcTarget = 12,
 	},
-	---@class BattlePetAbilityTurnFlag
+	---@enum BattlePetAbilityTurnFlag
 	BattlePetAbilityTurnFlag = {
 		CanProcFromProc = 1,
 		TriggerBySelf = 2,
@@ -156,17 +156,17 @@ Enum = {
 		TriggerByWeather = 16,
 		TriggerByAuraCaster = 32,
 	},
-	---@class BattlePetAbilityTurnType
+	---@enum BattlePetAbilityTurnType
 	BattlePetAbilityTurnType = {
 		Normal = 0,
 		TriggeredEffect = 1,
 	},
-	---@class BattlePetAbilityType
+	---@enum BattlePetAbilityType
 	BattlePetAbilityType = {
 		Ability = 0,
 		Aura = 1,
 	},
-	---@class BattlePetAction
+	---@enum BattlePetAction
 	BattlePetAction = {
 		None = 0,
 		Ability = 1,
@@ -174,7 +174,7 @@ Enum = {
 		Trap = 3,
 		Skip = 4,
 	},
-	---@class BattlePetBreedQuality
+	---@enum BattlePetBreedQuality
 	BattlePetBreedQuality = {
 		Poor = 0,
 		Common = 1,
@@ -183,17 +183,17 @@ Enum = {
 		Epic = 4,
 		Legendary = 5,
 	},
-	---@class BattlePetEffectFlags
+	---@enum BattlePetEffectFlags
 	BattlePetEffectFlags = {
 		EnableAbilityPicker = 1,
 		LuaNeedsAllPets = 2,
 	},
-	---@class BattlePetEffectParamType
+	---@enum BattlePetEffectParamType
 	BattlePetEffectParamType = {
 		Int = 0,
 		Ability = 1,
 	},
-	---@class BattlePetEvent
+	---@enum BattlePetEvent
 	BattlePetEvent = {
 		OnAuraApplied = 0,
 		OnDamageTaken = 1,
@@ -209,7 +209,7 @@ Enum = {
 		OnSwapOut = 11,
 		PostAuraTicks = 12,
 	},
-	---@class BattlePetNpcEmote
+	---@enum BattlePetNpcEmote
 	BattlePetNpcEmote = {
 		BattleUnused = 0,
 		BattleStart = 1,
@@ -220,18 +220,18 @@ Enum = {
 		PetDie = 6,
 		PetAbility = 7,
 	},
-	---@class BattlePetNpcTeamFlag
+	---@enum BattlePetNpcTeamFlag
 	BattlePetNpcTeamFlag = {
 		MatchPlayerHighPetLevel = 1,
 		NoPlayerXP = 2,
 	},
-	---@class BattlePetOwner
+	---@enum BattlePetOwner
 	BattlePetOwner = {
 		Weather = 0,
 		Ally = 1,
 		Enemy = 2,
 	},
-	---@class BattlePetSources
+	---@enum BattlePetSources
 	BattlePetSources = {
 		Drop = 0,
 		Quest = 1,
@@ -245,7 +245,7 @@ Enum = {
 		PetStore = 9,
 		Discovery = 10,
 	},
-	---@class BattlePetSpeciesFlags
+	---@enum BattlePetSpeciesFlags
 	BattlePetSpeciesFlags = {
 		NoRename = 1,
 		WellKnown = 2,
@@ -264,7 +264,7 @@ Enum = {
 		HideUntilLearned = 16384,
 		MatchPlayerHighPetLevel = 32768,
 	},
-	---@class BattlePetStateFlag
+	---@enum BattlePetStateFlag
 	BattlePetStateFlag = {
 		None = 0,
 		SwapOutLock = 1,
@@ -280,7 +280,7 @@ Enum = {
 		SwapInLock = 1024,
 		ServerOnly = 2048,
 	},
-	---@class BattlePetTypes
+	---@enum BattlePetTypes
 	BattlePetTypes = {
 		Humanoid = 0,
 		Dragonkin = 1,
@@ -293,13 +293,13 @@ Enum = {
 		Aquatic = 8,
 		Mechanical = 9,
 	},
-	---@class BattlePetVisualFlag
+	---@enum BattlePetVisualFlag
 	BattlePetVisualFlag = {
 		Test1 = 1,
 		Test2 = 2,
 		Test3 = 4,
 	},
-	---@class BattlePetVisualRange
+	---@enum BattlePetVisualRange
 	BattlePetVisualRange = {
 		Melee = 0,
 		Ranged = 1,
@@ -308,7 +308,7 @@ Enum = {
 		BehindMelee = 4,
 		BehindRanged = 5,
 	},
-	---@class BattlepetDbFlags
+	---@enum BattlepetDbFlags
 	BattlepetDbFlags = {
 		None = 0,
 		Favorite = 1,
@@ -322,7 +322,7 @@ Enum = {
 		FanfareNeeded = 128,
 		DisplayOverridden = 256,
 	},
-	---@class BattlepetDeletedReason
+	---@enum BattlepetDeletedReason
 	BattlepetDeletedReason = {
 		Unknown = 0,
 		PlayerReleased = 1,
@@ -331,7 +331,7 @@ Enum = {
 		CageError = 4,
 		DelJournal = 5,
 	},
-	---@class BattlepetSlotLockCheat
+	---@enum BattlepetSlotLockCheat
 	BattlepetSlotLockCheat = {
 		Cheat_2_Locked = -3,
 		Cheat_1_Locked = -2,
@@ -339,7 +339,7 @@ Enum = {
 		CheatOff = 0,
 		UnlockAll = 1,
 	},
-	---@class BrawlType
+	---@enum BrawlType
 	BrawlType = {
 		None = 0,
 		Battleground = 1,
@@ -347,14 +347,14 @@ Enum = {
 		LFG = 3,
 		SoloShuffle = 4,
 	},
-	---@class CachedRewardType
+	---@enum CachedRewardType
 	CachedRewardType = {
 		None = 0,
 		Item = 1,
 		Currency = 2,
 		Quest = 3,
 	},
-	---@class CalendarCommandType
+	---@enum CalendarCommandType
 	CalendarCommandType = {
 		Create = 0,
 		Invite = 1,
@@ -369,7 +369,7 @@ Enum = {
 		Complain = 10,
 		Notes = 11,
 	},
-	---@class CalendarErrorType
+	---@enum CalendarErrorType
 	CalendarErrorType = {
 		Success = 0,
 		CommunityEventsExceeded = 1,
@@ -423,7 +423,7 @@ Enum = {
 		Internal = 49,
 		ComplaintAdded = 50,
 	},
-	---@class CalendarEventBits
+	---@enum CalendarEventBits
 	CalendarEventBits = {
 		Player = 1,
 		GuildDeprecated = 2,
@@ -441,14 +441,14 @@ Enum = {
 		PlayerCreated = 3395,
 		CantComplain = 3788,
 	},
-	---@class CalendarEventRepeatOptions
+	---@enum CalendarEventRepeatOptions
 	CalendarEventRepeatOptions = {
 		Never = 0,
 		Weekly = 1,
 		Biweekly = 2,
 		Monthly = 3,
 	},
-	---@class CalendarEventType
+	---@enum CalendarEventType
 	CalendarEventType = {
 		Raid = 0,
 		Dungeon = 1,
@@ -457,7 +457,7 @@ Enum = {
 		Other = 4,
 		HeroicDeprecated = 5,
 	},
-	---@class CalendarFilterFlags
+	---@enum CalendarFilterFlags
 	CalendarFilterFlags = {
 		WeeklyHoliday = 1,
 		Darkmoon = 2,
@@ -465,26 +465,26 @@ Enum = {
 		RaidLockout = 8,
 		RaidReset = 16,
 	},
-	---@class CalendarGetEventType
+	---@enum CalendarGetEventType
 	CalendarGetEventType = {
 		Get = 0,
 		Add = 1,
 		Copy = 2,
 	},
-	---@class CalendarHolidayFilterType
+	---@enum CalendarHolidayFilterType
 	CalendarHolidayFilterType = {
 		Weekly = 0,
 		Darkmoon = 1,
 		Battleground = 2,
 	},
-	---@class CalendarInviteBits
+	---@enum CalendarInviteBits
 	CalendarInviteBits = {
 		PendingInvite = 1,
 		Moderator = 2,
 		Creator = 4,
 		Signup = 8,
 	},
-	---@class CalendarInviteSortType
+	---@enum CalendarInviteSortType
 	CalendarInviteSortType = {
 		Name = 0,
 		Level = 1,
@@ -493,18 +493,18 @@ Enum = {
 		Party = 4,
 		Notes = 5,
 	},
-	---@class CalendarInviteType
+	---@enum CalendarInviteType
 	CalendarInviteType = {
 		Normal = 0,
 		Signup = 1,
 	},
-	---@class CalendarModeratorStatus
+	---@enum CalendarModeratorStatus
 	CalendarModeratorStatus = {
 		None = 0,
 		Moderator = 1,
 		Creator = 2,
 	},
-	---@class CalendarStatus
+	---@enum CalendarStatus
 	CalendarStatus = {
 		Invited = 0,
 		Available = 1,
@@ -516,12 +516,12 @@ Enum = {
 		NotSignedup = 7,
 		Tentative = 8,
 	},
-	---@class CalendarTexturesType
+	---@enum CalendarTexturesType
 	CalendarTexturesType = {
 		Dungeons = 0,
 		Raid = 1,
 	},
-	---@class CalendarType
+	---@enum CalendarType
 	CalendarType = {
 		Player = 0,
 		Community = 1,
@@ -532,7 +532,7 @@ Enum = {
 		HolidayDarkmoon = 6,
 		HolidayBattleground = 7,
 	},
-	---@class CalendarWebActionType
+	---@enum CalendarWebActionType
 	CalendarWebActionType = {
 		Accept = 0,
 		Decline = 1,
@@ -542,34 +542,34 @@ Enum = {
 		Tentative = 5,
 		TentativeSignup = 6,
 	},
-	---@class CallingStates
+	---@enum CallingStates
 	CallingStates = {
 		QuestOffer = 0,
 		QuestActive = 1,
 		QuestCompleted = 2,
 	},
-	---@class CampaignState
+	---@enum CampaignState
 	CampaignState = {
 		Invalid = 0,
 		Complete = 1,
 		InProgress = 2,
 		Stalled = 3,
 	},
-	---@class CaptureBarWidgetFillDirectionType
+	---@enum CaptureBarWidgetFillDirectionType
 	CaptureBarWidgetFillDirectionType = {
 		RightToLeft = 0,
 		LeftToRight = 1,
 	},
-	---@class CaptureBarWidgetGlowAnimType
+	---@enum CaptureBarWidgetGlowAnimType
 	CaptureBarWidgetGlowAnimType = {
 		None = 0,
 		Pulse = 1,
 	},
-	---@class CharacterServiceInfoFlag
+	---@enum CharacterServiceInfoFlag
 	CharacterServiceInfoFlag = {
 		RestrictToRecommendedSpecs = 1,
 	},
-	---@class ChatChannelRuleset
+	---@enum ChatChannelRuleset
 	ChatChannelRuleset = {
 		None = 0,
 		Mentor = 1,
@@ -581,7 +581,7 @@ Enum = {
 		ChromieTimeWoD = 7,
 		ChromieTimeLegion = 8,
 	},
-	---@class ChatChannelType
+	---@enum ChatChannelType
 	ChatChannelType = {
 		None = 0,
 		Custom = 1,
@@ -589,39 +589,39 @@ Enum = {
 		Public_Party = 3,
 		Communities = 4,
 	},
-	---@class ChrCustomizationCategoryFlag
+	---@enum ChrCustomizationCategoryFlag
 	ChrCustomizationCategoryFlag = {
 		UndressModel = 1,
 	},
-	---@class ChrCustomizationOptionType
+	---@enum ChrCustomizationOptionType
 	ChrCustomizationOptionType = {
 		SelectionPopout = 0,
 		Checkbox = 1,
 		Slider = 2,
 	},
-	---@class ClickBindingInteraction
+	---@enum ClickBindingInteraction
 	ClickBindingInteraction = {
 		Target = 1,
 		OpenContextMenu = 2,
 	},
-	---@class ClickBindingType
+	---@enum ClickBindingType
 	ClickBindingType = {
 		None = 0,
 		Spell = 1,
 		Macro = 2,
 		Interaction = 3,
 	},
-	---@class ClientPlatformType
+	---@enum ClientPlatformType
 	ClientPlatformType = {
 		Windows = 0,
 		Macintosh = 1,
 	},
-	---@class ClientSceneType
+	---@enum ClientSceneType
 	ClientSceneType = {
 		DefaultSceneType = 0,
 		MinigameSceneType = 1,
 	},
-	---@class ClubActionType
+	---@enum ClubActionType
 	ClubActionType = {
 		ErrorClubActionSubscribe = 0,
 		ErrorClubActionCreate = 1,
@@ -651,7 +651,7 @@ Enum = {
 		ErrorClubActionEditMessage = 25,
 		ErrorClubActionDestroyMessage = 26,
 	},
-	---@class ClubErrorType
+	---@enum ClubErrorType
 	ClubErrorType = {
 		ErrorCommunitiesNone = 0,
 		ErrorCommunitiesUnknown = 1,
@@ -696,7 +696,7 @@ Enum = {
 		ErrorClubDoesntAllowCrossFaction = 40,
 		ErrorClubEditHasCrossFactionMembers = 41,
 	},
-	---@class ClubFieldType
+	---@enum ClubFieldType
 	ClubFieldType = {
 		ClubName = 0,
 		ClubShortName = 1,
@@ -706,14 +706,14 @@ Enum = {
 		ClubStreamSubject = 5,
 		NumTypes = 6,
 	},
-	---@class ClubFinderApplicationUpdateType
+	---@enum ClubFinderApplicationUpdateType
 	ClubFinderApplicationUpdateType = {
 		None = 0,
 		AcceptInvite = 1,
 		DeclineInvite = 2,
 		Cancel = 3,
 	},
-	---@class ClubFinderClubPostingStatusFlags
+	---@enum ClubFinderClubPostingStatusFlags
 	ClubFinderClubPostingStatusFlags = {
 		None = 0,
 		NeedsCacheUpdate = 1,
@@ -725,13 +725,13 @@ Enum = {
 		PendingDelete = 7,
 		PostDelisted = 8,
 	},
-	---@class ClubFinderDisableReason
+	---@enum ClubFinderDisableReason
 	ClubFinderDisableReason = {
 		Muted = 0,
 		Silenced = 1,
 		VeteranTrial = 2,
 	},
-	---@class ClubFinderPostingReportType
+	---@enum ClubFinderPostingReportType
 	ClubFinderPostingReportType = {
 		PostersName = 0,
 		ClubName = 1,
@@ -739,14 +739,14 @@ Enum = {
 		ApplicantsName = 3,
 		JoinNote = 4,
 	},
-	---@class ClubFinderRequestType
+	---@enum ClubFinderRequestType
 	ClubFinderRequestType = {
 		None = 0,
 		Guild = 1,
 		Community = 2,
 		All = 3,
 	},
-	---@class ClubFinderSettingFlags
+	---@enum ClubFinderSettingFlags
 	ClubFinderSettingFlags = {
 		None = 0,
 		Dungeons = 1,
@@ -775,13 +775,13 @@ Enum = {
 		LanguageReserved4 = 24,
 		LanguageReserved5 = 25,
 	},
-	---@class ClubInvitationCandidateStatus
+	---@enum ClubInvitationCandidateStatus
 	ClubInvitationCandidateStatus = {
 		Available = 0,
 		InvitePending = 1,
 		AlreadyMember = 2,
 	},
-	---@class ClubMemberPresence
+	---@enum ClubMemberPresence
 	ClubMemberPresence = {
 		Unknown = 0,
 		Online = 1,
@@ -790,57 +790,57 @@ Enum = {
 		Away = 4,
 		Busy = 5,
 	},
-	---@class ClubRemovedReason
+	---@enum ClubRemovedReason
 	ClubRemovedReason = {
 		None = 0,
 		Banned = 1,
 		Removed = 2,
 		ClubDestroyed = 3,
 	},
-	---@class ClubRestrictionReason
+	---@enum ClubRestrictionReason
 	ClubRestrictionReason = {
 		None = 0,
 		Unavailable = 1,
 	},
-	---@class ClubRoleIdentifier
+	---@enum ClubRoleIdentifier
 	ClubRoleIdentifier = {
 		Owner = 1,
 		Leader = 2,
 		Moderator = 3,
 		Member = 4,
 	},
-	---@class ClubStreamNotificationFilter
+	---@enum ClubStreamNotificationFilter
 	ClubStreamNotificationFilter = {
 		None = 0,
 		Mention = 1,
 		All = 2,
 	},
-	---@class ClubStreamType
+	---@enum ClubStreamType
 	ClubStreamType = {
 		General = 0,
 		Guild = 1,
 		Officer = 2,
 		Other = 3,
 	},
-	---@class ClubType
+	---@enum ClubType
 	ClubType = {
 		BattleNet = 0,
 		Character = 1,
 		Guild = 2,
 		Other = 3,
 	},
-	---@class CommunicationMode
+	---@enum CommunicationMode
 	CommunicationMode = {
 		PushToTalk = 0,
 		OpenMic = 1,
 	},
-	---@class ConquestProgressBarDisplayType
+	---@enum ConquestProgressBarDisplayType
 	ConquestProgressBarDisplayType = {
 		FirstChest = 0,
 		AdditionalChest = 1,
 		Seasonal = 2,
 	},
-	---@class ConsoleCategory
+	---@enum ConsoleCategory
 	ConsoleCategory = {
 		Debug = 0,
 		Graphics = 1,
@@ -854,7 +854,7 @@ Enum = {
 		Reveal = 9,
 		None = 10,
 	},
-	---@class ConsoleColorType
+	---@enum ConsoleColorType
 	ConsoleColorType = {
 		DefaultColor = 0,
 		InputColor = 1,
@@ -869,18 +869,18 @@ Enum = {
 		PrivateColor = 10,
 		DefaultGreen = 11,
 	},
-	---@class ConsoleCommandType
+	---@enum ConsoleCommandType
 	ConsoleCommandType = {
 		Cvar = 0,
 		Command = 1,
 		Macro = 2,
 		Script = 3,
 	},
-	---@class ContributionAppearanceFlags
+	---@enum ContributionAppearanceFlags
 	ContributionAppearanceFlags = {
 		TooltipUseTimeRemaining = 0,
 	},
-	---@class ContributionResult
+	---@enum ContributionResult
 	ContributionResult = {
 		Success = 0,
 		MustBeNearNpc = 1,
@@ -891,7 +891,7 @@ Enum = {
 		UnableToCompleteTurnIn = 6,
 		InternalError = 7,
 	},
-	---@class ContributionState
+	---@enum ContributionState
 	ContributionState = {
 		None = 0,
 		Building = 1,
@@ -899,20 +899,20 @@ Enum = {
 		UnderAttack = 3,
 		Destroyed = 4,
 	},
-	---@class CovenantAbilityType
+	---@enum CovenantAbilityType
 	CovenantAbilityType = {
 		Class = 0,
 		Signature = 1,
 		Soulbind = 2,
 	},
-	---@class CovenantSkill
+	---@enum CovenantSkill
 	CovenantSkill = {
 		Kyrian = 2730,
 		Venthyr = 2731,
 		NightFae = 2732,
 		Necrolord = 2733,
 	},
-	---@class CovenantType
+	---@enum CovenantType
 	CovenantType = {
 		None = 0,
 		Kyrian = 1,
@@ -920,7 +920,7 @@ Enum = {
 		NightFae = 3,
 		Necrolord = 4,
 	},
-	---@class CurrencyDestroyReason
+	---@enum CurrencyDestroyReason
 	CurrencyDestroyReason = {
 		Cheat = 0,
 		Spell = 1,
@@ -935,7 +935,7 @@ Enum = {
 		FactionConversion = 10,
 		Last = 11,
 	},
-	---@class CurrencyFlags
+	---@enum CurrencyFlags
 	CurrencyFlags = {
 		CurrencyTradable = 1,
 		CurrencyAppearsInLootWindow = 2,
@@ -970,19 +970,19 @@ Enum = {
 		CurrencyLimitWarmodeBonusOncePerTooltip = 1073741824,
 		DeprecatedCurrencyFlag = 2147483648,
 	},
-	---@class CurrencyFlagsB
+	---@enum CurrencyFlagsB
 	CurrencyFlagsB = {
 		CurrencyBUseTotalEarnedForEarned = 1,
 		CurrencyBShowQuestXPGainInTooltip = 2,
 		CurrencyBNoNotificationMailOnOfflineProgress = 4,
 	},
-	---@class CurrencyGainFlags
+	---@enum CurrencyGainFlags
 	CurrencyGainFlags = {
 		BonusAward = 1,
 		DroppedFromDeath = 2,
 		FromAccountServer = 4,
 	},
-	---@class CurrencySource
+	---@enum CurrencySource
 	CurrencySource = {
 		ConvertOldItem = 0,
 		ConvertOldPvPCurrency = 1,
@@ -1038,18 +1038,18 @@ Enum = {
 		AuctionDeposit = 51,
 		Last = 52,
 	},
-	---@class CurrencyTokenCategoryFlags
+	---@enum CurrencyTokenCategoryFlags
 	CurrencyTokenCategoryFlags = {
 		FlagSortLast = 1,
 		FlagPlayerItemAssignment = 2,
 		Hidden = 4,
 		Virtual = 8,
 	},
-	---@class CustomBindingType
+	---@enum CustomBindingType
 	CustomBindingType = {
 		VoicePushToTalk = 0,
 	},
-	---@class Damageclass
+	---@enum Damageclass
 	Damageclass = {
 		MaskNone = 0,
 		Physical = 0,
@@ -1099,17 +1099,17 @@ Enum = {
 		MaskMagical = 126,
 		All = 127,
 	},
-	---@class DamageclassType
+	---@enum DamageclassType
 	DamageclassType = {
 		Physical = 0,
 		Magical = 1,
 	},
-	---@class EnvironmentalDamageFlags
+	---@enum EnvironmentalDamageFlags
 	EnvironmentalDamageFlags = {
 		OneTime = 1,
 		DmgIsPct = 2,
 	},
-	---@class Environmentaldamagetype
+	---@enum Environmentaldamagetype
 	Environmentaldamagetype = {
 		Fatigue = 0,
 		Drowning = 1,
@@ -1118,7 +1118,7 @@ Enum = {
 		Slime = 4,
 		Fire = 5,
 	},
-	---@class EventToastDisplayType
+	---@enum EventToastDisplayType
 	EventToastDisplayType = {
 		NormalSingleLine = 0,
 		NormalBlockText = 1,
@@ -1130,7 +1130,7 @@ Enum = {
 		ChallengeMode = 7,
 		ScenarioClickExpand = 8,
 	},
-	---@class EventToastEventType
+	---@enum EventToastEventType
 	EventToastEventType = {
 		LevelUp = 0,
 		LevelUpSpell = 1,
@@ -1154,19 +1154,19 @@ Enum = {
 		CriteriaUpdated = 19,
 		PvPTierUpdate = 20,
 	},
-	---@class FlightPathFaction
+	---@enum FlightPathFaction
 	FlightPathFaction = {
 		Neutral = 0,
 		Horde = 1,
 		Alliance = 2,
 	},
-	---@class FlightPathState
+	---@enum FlightPathState
 	FlightPathState = {
 		Current = 0,
 		Reachable = 1,
 		Unreachable = 2,
 	},
-	---@class FollowerAbilityCastResult
+	---@enum FollowerAbilityCastResult
 	FollowerAbilityCastResult = {
 		Success = 0,
 		Failure = 1,
@@ -1184,7 +1184,7 @@ Enum = {
 		AlreadyAtMaxDurability = 13,
 		CannotTargetNonAutoMissionFollower = 14,
 	},
-	---@class GamePadPowerLevel
+	---@enum GamePadPowerLevel
 	GamePadPowerLevel = {
 		Critical = 0,
 		Low = 1,
@@ -1193,7 +1193,7 @@ Enum = {
 		Wired = 4,
 		Unknown = 5,
 	},
-	---@class GarrAutoBoardIndex
+	---@enum GarrAutoBoardIndex
 	GarrAutoBoardIndex = {
 		None = -1,
 		AllyLeftBack = 0,
@@ -1210,7 +1210,7 @@ Enum = {
 		EnemyCenterRightBack = 11,
 		EnemyRightBack = 12,
 	},
-	---@class GarrAutoCombatSpellTutorialFlag
+	---@enum GarrAutoCombatSpellTutorialFlag
 	GarrAutoCombatSpellTutorialFlag = {
 		None = 0,
 		Single = 1,
@@ -1218,7 +1218,7 @@ Enum = {
 		Row = 3,
 		All = 4,
 	},
-	---@class GarrAutoCombatTutorial
+	---@enum GarrAutoCombatTutorial
 	GarrAutoCombatTutorial = {
 		SelectMission = 1,
 		PlaceCompanion = 2,
@@ -1232,7 +1232,7 @@ Enum = {
 		TroopTutorial = 512,
 		EnvironmentalEffect = 1024,
 	},
-	---@class GarrAutoCombatantRole
+	---@enum GarrAutoCombatantRole
 	GarrAutoCombatantRole = {
 		None = 0,
 		Melee = 1,
@@ -1241,14 +1241,14 @@ Enum = {
 		HealSupport = 4,
 		Tank = 5,
 	},
-	---@class GarrAutoEventFlags
+	---@enum GarrAutoEventFlags
 	GarrAutoEventFlags = {
 		None = 0,
 		AutoAttack = 1,
 		Passive = 2,
 		Environment = 4,
 	},
-	---@class GarrAutoMissionEventType
+	---@enum GarrAutoMissionEventType
 	GarrAutoMissionEventType = {
 		MeleeDamage = 0,
 		RangeDamage = 1,
@@ -1261,7 +1261,7 @@ Enum = {
 		RemoveAura = 8,
 		Died = 9,
 	},
-	---@class GarrAutoPreviewTargetType
+	---@enum GarrAutoPreviewTargetType
 	GarrAutoPreviewTargetType = {
 		None = 0,
 		Damage = 1,
@@ -1269,14 +1269,14 @@ Enum = {
 		Buff = 4,
 		Debuff = 8,
 	},
-	---@class GarrFollowerMissionCompleteState
+	---@enum GarrFollowerMissionCompleteState
 	GarrFollowerMissionCompleteState = {
 		Alive = 0,
 		KilledByMissionFailure = 1,
 		SavedByPreventDeath = 2,
 		OutOfDurability = 3,
 	},
-	---@class GarrFollowerQuality
+	---@enum GarrFollowerQuality
 	GarrFollowerQuality = {
 		None = 0,
 		Common = 1,
@@ -1286,14 +1286,14 @@ Enum = {
 		Legendary = 5,
 		Title = 6,
 	},
-	---@class GarrTalentCostType
+	---@enum GarrTalentCostType
 	GarrTalentCostType = {
 		Initial = 0,
 		Respec = 1,
 		MakePermanent = 2,
 		TreeReset = 3,
 	},
-	---@class GarrTalentFeatureSubtype
+	---@enum GarrTalentFeatureSubtype
 	GarrTalentFeatureSubtype = {
 		Generic = 0,
 		Bastion = 1,
@@ -1301,7 +1301,7 @@ Enum = {
 		Ardenweald = 3,
 		Maldraxxus = 4,
 	},
-	---@class GarrTalentFeatureType
+	---@enum GarrTalentFeatureType
 	GarrTalentFeatureType = {
 		Generic = 0,
 		AnimaDiversion = 1,
@@ -1313,37 +1313,37 @@ Enum = {
 		AnimaDiversionMap = 7,
 		Cyphers = 8,
 	},
-	---@class GarrTalentResearchCostSource
+	---@enum GarrTalentResearchCostSource
 	GarrTalentResearchCostSource = {
 		Talent = 0,
 		Tree = 1,
 	},
-	---@class GarrTalentSocketType
+	---@enum GarrTalentSocketType
 	GarrTalentSocketType = {
 		None = 0,
 		Spell = 1,
 		Conduit = 2,
 	},
-	---@class GarrTalentTreeType
+	---@enum GarrTalentTreeType
 	GarrTalentTreeType = {
 		Tiers = 0,
 		Classic = 1,
 	},
-	---@class GarrTalentType
+	---@enum GarrTalentType
 	GarrTalentType = {
 		Standard = 0,
 		Minor = 1,
 		Major = 2,
 		Socket = 3,
 	},
-	---@class GarrTalentUI
+	---@enum GarrTalentUI
 	GarrTalentUI = {
 		Generic = 0,
 		CovenantSanctum = 1,
 		SoulBinds = 2,
 		AnimaDiversionMap = 3,
 	},
-	---@class GarrisonFollowerType
+	---@enum GarrisonFollowerType
 	GarrisonFollowerType = {
 		FollowerType_6_0 = 1,
 		FollowerType_6_2 = 2,
@@ -1351,7 +1351,7 @@ Enum = {
 		FollowerType_8_0 = 22,
 		FollowerType_9_0 = 123,
 	},
-	---@class GarrisonTalentAvailability
+	---@enum GarrisonTalentAvailability
 	GarrisonTalentAvailability = {
 		Available = 0,
 		Unavailable = 1,
@@ -1363,31 +1363,31 @@ Enum = {
 		UnavailableAlreadyHave = 7,
 		UnavailableRequiresPrerequisiteTalent = 8,
 	},
-	---@class GarrisonType
+	---@enum GarrisonType
 	GarrisonType = {
 		Type_6_0 = 2,
 		Type_7_0 = 3,
 		Type_8_0 = 9,
 		Type_9_0 = 111,
 	},
-	---@class GossipOptionRewardType
+	---@enum GossipOptionRewardType
 	GossipOptionRewardType = {
 		Item = 0,
 		Currency = 1,
 	},
-	---@class GossipOptionStatus
+	---@enum GossipOptionStatus
 	GossipOptionStatus = {
 		Available = 0,
 		Unavailable = 1,
 		Locked = 2,
 		AlreadyComplete = 3,
 	},
-	---@class HolidayCalendarFlags
+	---@enum HolidayCalendarFlags
 	HolidayCalendarFlags = {
 		Alliance = 1,
 		Horde = 2,
 	},
-	---@class HolidayFlags
+	---@enum HolidayFlags
 	HolidayFlags = {
 		IsRegionwide = 1,
 		DontShowInCalendar = 2,
@@ -1395,27 +1395,27 @@ Enum = {
 		DontDisplayBanner = 8,
 		NotAvailableClientSide = 16,
 	},
-	---@class IconAndTextWidgetState
+	---@enum IconAndTextWidgetState
 	IconAndTextWidgetState = {
 		Hidden = 0,
 		Shown = 1,
 		ShownWithDynamicIconFlashing = 2,
 		ShownWithDynamicIconNotFlashing = 3,
 	},
-	---@class IconState
+	---@enum IconState
 	IconState = {
 		Hidden = 0,
 		ShowState1 = 1,
 		ShowState2 = 2,
 	},
-	---@class InputContext
+	---@enum InputContext
 	InputContext = {
 		None = 0,
 		Keyboard = 1,
 		Mouse = 2,
 		GamePad = 3,
 	},
-	---@class InventoryType
+	---@enum InventoryType
 	InventoryType = {
 		IndexNonEquipType = 0,
 		IndexHeadType = 1,
@@ -1447,7 +1447,7 @@ Enum = {
 		IndexQuiverType = 27,
 		IndexRelicType = 28,
 	},
-	---@class ItemArmorSubclass
+	---@enum ItemArmorSubclass
 	ItemArmorSubclass = {
 		Generic = 0,
 		Cloth = 1,
@@ -1462,7 +1462,7 @@ Enum = {
 		Sigil = 10,
 		Relic = 11,
 	},
-	---@class ItemClass
+	---@enum ItemClass
 	ItemClass = {
 		Consumable = 0,
 		Container = 1,
@@ -1484,13 +1484,13 @@ Enum = {
 		Battlepet = 17,
 		WoWToken = 18,
 	},
-	---@class ItemCommodityStatus
+	---@enum ItemCommodityStatus
 	ItemCommodityStatus = {
 		Unknown = 0,
 		Item = 1,
 		Commodity = 2,
 	},
-	---@class ItemConsumableSubclass
+	---@enum ItemConsumableSubclass
 	ItemConsumableSubclass = {
 		Generic = 0,
 		Potion = 1,
@@ -1501,7 +1501,7 @@ Enum = {
 		Bandage = 6,
 		Other = 7,
 	},
-	---@class ItemCreationContext
+	---@enum ItemCreationContext
 	ItemCreationContext = {
 		None = 0,
 		DungeonNormal = 1,
@@ -1601,7 +1601,7 @@ Enum = {
 		RaidHeroicExtended_3 = 95,
 		RaidMythicExtended_3 = 96,
 	},
-	---@class ItemGemSubclass
+	---@enum ItemGemSubclass
 	ItemGemSubclass = {
 		Intellect = 0,
 		Agility = 1,
@@ -1616,7 +1616,7 @@ Enum = {
 		Multiplestats = 10,
 		Artifactrelic = 11,
 	},
-	---@class ItemMiscellaneousSubclass
+	---@enum ItemMiscellaneousSubclass
 	ItemMiscellaneousSubclass = {
 		Junk = 0,
 		Reagent = 1,
@@ -1626,7 +1626,7 @@ Enum = {
 		Mount = 5,
 		MountEquipment = 6,
 	},
-	---@class ItemModification
+	---@enum ItemModification
 	ItemModification = {
 		TransmogrifyItemModifiedAppearanceIDSpecAll = 0,
 		TransmogrifyItemModifiedAppearanceIDSpec_0 = 1,
@@ -1667,7 +1667,7 @@ Enum = {
 		TransmogrifySecondaryItemModifiedAppearanceIDSpec_4 = 36,
 		SoulbindConduitRank = 37,
 	},
-	---@class ItemQuality
+	---@enum ItemQuality
 	ItemQuality = {
 		Poor = 0,
 		Common = 1,
@@ -1679,13 +1679,13 @@ Enum = {
 		Heirloom = 7,
 		WoWToken = 8,
 	},
-	---@class ItemReagentSubclass
+	---@enum ItemReagentSubclass
 	ItemReagentSubclass = {
 		Reagent = 0,
 		Keystone = 1,
 		ContextToken = 2,
 	},
-	---@class ItemRecipeSubclass
+	---@enum ItemRecipeSubclass
 	ItemRecipeSubclass = {
 		Book = 0,
 		Leatherworking = 1,
@@ -1700,7 +1700,7 @@ Enum = {
 		Jewelcrafting = 10,
 		Inscription = 11,
 	},
-	---@class ItemSlotFilterType
+	---@enum ItemSlotFilterType
 	ItemSlotFilterType = {
 		Head = 0,
 		Neck = 1,
@@ -1719,14 +1719,14 @@ Enum = {
 		Other = 14,
 		NoFilter = 15,
 	},
-	---@class ItemTryOnReason
+	---@enum ItemTryOnReason
 	ItemTryOnReason = {
 		Success = 0,
 		WrongRace = 1,
 		NotEquippable = 2,
 		DataPending = 3,
 	},
-	---@class ItemWeaponSubclass
+	---@enum ItemWeaponSubclass
 	ItemWeaponSubclass = {
 		Axe1H = 0,
 		Axe2H = 1,
@@ -1750,7 +1750,7 @@ Enum = {
 		Wand = 19,
 		Fishingpole = 20,
 	},
-	---@class Itemclassfilterflags
+	---@enum Itemclassfilterflags
 	Itemclassfilterflags = {
 		Consumable = 1,
 		Container = 2,
@@ -1771,13 +1771,13 @@ Enum = {
 		Glyph = 65536,
 		Battlepet = 131072,
 	},
-	---@class Itemsetflags
+	---@enum Itemsetflags
 	Itemsetflags = {
 		Legacy = 1,
 		UseItemHistorySetSlots = 2,
 		RequiresPvPTalentsActive = 4,
 	},
-	---@class JailersTowerType
+	---@enum JailersTowerType
 	JailersTowerType = {
 		TwistingCorridors = 0,
 		SkoldusHalls = 1,
@@ -1795,14 +1795,14 @@ Enum = {
 		Ossuary = 13,
 		BossRush = 14,
 	},
-	---@class LFGEntryPlaystyle
+	---@enum LFGEntryPlaystyle
 	LFGEntryPlaystyle = {
 		None = 0,
 		Standard = 1,
 		Casual = 2,
 		Hardcore = 3,
 	},
-	---@class LFGListDisplayType
+	---@enum LFGListDisplayType
 	LFGListDisplayType = {
 		RoleCount = 0,
 		RoleEnumerate = 1,
@@ -1810,32 +1810,32 @@ Enum = {
 		HideAll = 3,
 		PlayerCount = 4,
 	},
-	---@class LFGListFilter
+	---@enum LFGListFilter
 	LFGListFilter = {
 		Recommended = 1,
 		NotRecommended = 2,
 		PvE = 4,
 		PvP = 8,
 	},
-	---@class LanguageFlag
+	---@enum LanguageFlag
 	LanguageFlag = {
 		IsExotic = 1,
 		HiddenFromPlayer = 2,
 	},
-	---@class LinkedCurrencyFlags
+	---@enum LinkedCurrencyFlags
 	LinkedCurrencyFlags = {
 		IgnoreAdd = 1,
 		IgnoreSubtract = 2,
 		SuppressChatLog = 4,
 	},
-	---@class ManipulatorEventType
+	---@enum ManipulatorEventType
 	ManipulatorEventType = {
 		Start = 0,
 		Move = 1,
 		Complete = 2,
 		Delete = 3,
 	},
-	---@class MapCanvasPosition
+	---@enum MapCanvasPosition
 	MapCanvasPosition = {
 		None = 0,
 		BottomLeft = 1,
@@ -1843,7 +1843,7 @@ Enum = {
 		TopLeft = 3,
 		TopRight = 4,
 	},
-	---@class MapOverlayDisplayLocation
+	---@enum MapOverlayDisplayLocation
 	MapOverlayDisplayLocation = {
 		Default = 0,
 		BottomLeft = 1,
@@ -1852,11 +1852,11 @@ Enum = {
 		TopRight = 4,
 		Hidden = 5,
 	},
-	---@class ModelSceneSetting
+	---@enum ModelSceneSetting
 	ModelSceneSetting = {
 		AlignLightToOrbitDelta = 1,
 	},
-	---@class ModelSceneType
+	---@enum ModelSceneType
 	ModelSceneType = {
 		MountJournal = 0,
 		PetJournalCard = 1,
@@ -1879,28 +1879,28 @@ Enum = {
 		Soulbinds = 18,
 		JailersTowerAnimaGlow = 19,
 	},
-	---@class MountType
+	---@enum MountType
 	MountType = {
 		Ground = 0,
 		Flying = 1,
 		Aquatic = 2,
 	},
-	---@class MountTypeFlag
+	---@enum MountTypeFlag
 	MountTypeFlag = {
 		IsFlyingMount = 1,
 		IsAquaticMount = 2,
 	},
-	---@class NavigationState
+	---@enum NavigationState
 	NavigationState = {
 		Invalid = 0,
 		Occluded = 1,
 		InRange = 2,
 	},
-	---@class OptionalReagentItemFlag
+	---@enum OptionalReagentItemFlag
 	OptionalReagentItemFlag = {
 		TooltipShowsAsStatModifications = 0,
 	},
-	---@class PartyRequestJoinRelation
+	---@enum PartyRequestJoinRelation
 	PartyRequestJoinRelation = {
 		None = 0,
 		Friend = 1,
@@ -1908,14 +1908,14 @@ Enum = {
 		Club = 3,
 		NumPartyRequestJoinRelations = 4,
 	},
-	---@class PermanentChatChannelType
+	---@enum PermanentChatChannelType
 	PermanentChatChannelType = {
 		None = 0,
 		Zone = 1,
 		Communities = 2,
 		Custom = 3,
 	},
-	---@class PetBattleQueueStatus
+	---@enum PetBattleQueueStatus
 	PetBattleQueueStatus = {
 		None = 0,
 		Queued = 1,
@@ -1940,7 +1940,7 @@ Enum = {
 		InBattle = 20,
 		NoBattlingHere = 21,
 	},
-	---@class PetJournalError
+	---@enum PetJournalError
 	PetJournalError = {
 		None = 0,
 		PetIsDead = 1,
@@ -1950,7 +1950,7 @@ Enum = {
 		NoValidRandomSummon = 5,
 		InvalidCovenant = 6,
 	},
-	---@class PetbattleAuraStateFlags
+	---@enum PetbattleAuraStateFlags
 	PetbattleAuraStateFlags = {
 		None = 0,
 		Infinite = 1,
@@ -1960,12 +1960,12 @@ Enum = {
 		JustApplied = 16,
 		RemoveEventHandled = 32,
 	},
-	---@class PetbattleCheatFlags
+	---@enum PetbattleCheatFlags
 	PetbattleCheatFlags = {
 		None = 0,
 		AutoPlay = 1,
 	},
-	---@class PetbattleEffectFlags
+	---@enum PetbattleEffectFlags
 	PetbattleEffectFlags = {
 		None = 0,
 		InvalidTarget = 1,
@@ -1983,7 +1983,7 @@ Enum = {
 		SuccessChain = 4096,
 		AuraReapply = 8192,
 	},
-	---@class PetbattleEffectType
+	---@enum PetbattleEffectType
 	PetbattleEffectType = {
 		SetHealth = 0,
 		AuraApply = 1,
@@ -2004,19 +2004,19 @@ Enum = {
 		OverrideAbility = 16,
 		WorldStateUpdate = 17,
 	},
-	---@class PetbattleEnviros
+	---@enum PetbattleEnviros
 	PetbattleEnviros = {
 		Pad0 = 0,
 		Pad1 = 1,
 		Weather = 2,
 	},
-	---@class PetbattleInputMoveMsgDebugFlag
+	---@enum PetbattleInputMoveMsgDebugFlag
 	PetbattleInputMoveMsgDebugFlag = {
 		None = 0,
 		DontValidate = 1,
 		EnemyCast = 2,
 	},
-	---@class PetbattleMoveType
+	---@enum PetbattleMoveType
 	PetbattleMoveType = {
 		Quit = 0,
 		Ability = 1,
@@ -2025,7 +2025,7 @@ Enum = {
 		FinalRoundOk = 4,
 		Pass = 5,
 	},
-	---@class PetbattlePboid
+	---@enum PetbattlePboid
 	PetbattlePboid = {
 		P0Pet_0 = 0,
 		P0Pet_1 = 1,
@@ -2037,7 +2037,7 @@ Enum = {
 		EnvPad_1 = 7,
 		EnvWeather = 8,
 	},
-	---@class PetbattlePetStatus
+	---@enum PetbattlePetStatus
 	PetbattlePetStatus = {
 		FlagNone = 0,
 		FlagTrapped = 1,
@@ -2045,12 +2045,12 @@ Enum = {
 		SwapOutLocked = 4,
 		SwapInLocked = 8,
 	},
-	---@class PetbattlePlayer
+	---@enum PetbattlePlayer
 	PetbattlePlayer = {
 		Player_0 = 0,
 		Player_1 = 1,
 	},
-	---@class PetbattlePlayerInputFlags
+	---@enum PetbattlePlayerInputFlags
 	PetbattlePlayerInputFlags = {
 		None = 0,
 		TurnInProgress = 1,
@@ -2058,7 +2058,7 @@ Enum = {
 		SwapLocked = 4,
 		WaitingForPet = 8,
 	},
-	---@class PetbattleResult
+	---@enum PetbattleResult
 	PetbattleResult = {
 		FailUnknown = 0,
 		FailNotHere = 1,
@@ -2085,19 +2085,19 @@ Enum = {
 		FailDisconnect = 22,
 		Success = 23,
 	},
-	---@class PetbattleSlot
+	---@enum PetbattleSlot
 	PetbattleSlot = {
 		Slot_0 = 0,
 		Slot_1 = 1,
 		Slot_2 = 2,
 	},
-	---@class PetbattleSlotAbility
+	---@enum PetbattleSlotAbility
 	PetbattleSlotAbility = {
 		Ability_0 = 0,
 		Ability_1 = 1,
 		Ability_2 = 2,
 	},
-	---@class PetbattleSlotResult
+	---@enum PetbattleSlotResult
 	PetbattleSlotResult = {
 		Success = 0,
 		SlotLocked = 1,
@@ -2109,7 +2109,7 @@ Enum = {
 		Dead = 7,
 		NoPet = 8,
 	},
-	---@class PetbattleState
+	---@enum PetbattleState
 	PetbattleState = {
 		Created = 0,
 		WaitingPreBattle = 1,
@@ -2119,7 +2119,7 @@ Enum = {
 		FinalRound = 5,
 		Finished = 6,
 	},
-	---@class PetbattleTrapstatus
+	---@enum PetbattleTrapstatus
 	PetbattleTrapstatus = {
 		Invalid = 0,
 		CanTrap = 1,
@@ -2131,28 +2131,28 @@ Enum = {
 		CantTrapTrainerBattle = 7,
 		CantTrapTwice = 8,
 	},
-	---@class PetbattleType
+	---@enum PetbattleType
 	PetbattleType = {
 		PvE = 0,
 		PvP = 1,
 		Lfpb = 2,
 		Npc = 3,
 	},
-	---@class PhaseReason
+	---@enum PhaseReason
 	PhaseReason = {
 		Phasing = 0,
 		Sharding = 1,
 		WarMode = 2,
 		ChromieTime = 3,
 	},
-	---@class PlayerChoiceRarity
+	---@enum PlayerChoiceRarity
 	PlayerChoiceRarity = {
 		Common = 0,
 		Uncommon = 1,
 		Rare = 2,
 		Epic = 3,
 	},
-	---@class PlayerClubRequestStatus
+	---@enum PlayerClubRequestStatus
 	PlayerClubRequestStatus = {
 		None = 0,
 		Pending = 1,
@@ -2163,12 +2163,12 @@ Enum = {
 		JoinedAnother = 6,
 		Canceled = 7,
 	},
-	---@class PlayerCurrencyFlags
+	---@enum PlayerCurrencyFlags
 	PlayerCurrencyFlags = {
 		Incremented = 1,
 		Loading = 2,
 	},
-	---@class PlayerCurrencyFlagsDbFlags
+	---@enum PlayerCurrencyFlagsDbFlags
 	PlayerCurrencyFlagsDbFlags = {
 		IgnoreMaxQtyOnload = 1,
 		Reuse1 = 2,
@@ -2176,19 +2176,19 @@ Enum = {
 		UnusedInUI = 8,
 		Reuse2 = 16,
 	},
-	---@class PlayerMentorshipApplicationResult
+	---@enum PlayerMentorshipApplicationResult
 	PlayerMentorshipApplicationResult = {
 		Success = 0,
 		AlreadyMentor = 1,
 		Ineligible = 2,
 	},
-	---@class PlayerMentorshipStatus
+	---@enum PlayerMentorshipStatus
 	PlayerMentorshipStatus = {
 		None = 0,
 		Newcomer = 1,
 		Mentor = 2,
 	},
-	---@class PowerType
+	---@enum PowerType
 	PowerType = {
 		HealthCost = -2,
 		None = -1,
@@ -2213,18 +2213,18 @@ Enum = {
 		Pain = 18,
 		NumPowerTypes = 19,
 	},
-	---@class PvPFaction
+	---@enum PvPFaction
 	PvPFaction = {
 		Horde = 0,
 		Alliance = 1,
 	},
-	---@class PvPMatchState
+	---@enum PvPMatchState
 	PvPMatchState = {
 		Inactive = 0,
 		Active = 1,
 		Complete = 2,
 	},
-	---@class PvPUnitClassification
+	---@enum PvPUnitClassification
 	PvPUnitClassification = {
 		FlagCarrierHorde = 0,
 		FlagCarrierAlliance = 1,
@@ -2238,32 +2238,32 @@ Enum = {
 		OrbCarrierOrange = 9,
 		OrbCarrierPurple = 10,
 	},
-	---@class QuestFrequency
+	---@enum QuestFrequency
 	QuestFrequency = {
 		Default = 0,
 		Daily = 1,
 		Weekly = 2,
 	},
-	---@class QuestLineFloorLocation
+	---@enum QuestLineFloorLocation
 	QuestLineFloorLocation = {
 		Above = 0,
 		Below = 1,
 		Same = 2,
 	},
-	---@class QuestPOIQuestTypes
+	---@enum QuestPOIQuestTypes
 	QuestPOIQuestTypes = {
 		Normal = 1,
 		Campaign = 2,
 		Calling = 3,
 	},
-	---@class QuestSessionCommand
+	---@enum QuestSessionCommand
 	QuestSessionCommand = {
 		None = 0,
 		Start = 1,
 		Stop = 2,
 		SessionActiveNoCommand = 3,
 	},
-	---@class QuestSessionResult
+	---@enum QuestSessionResult
 	QuestSessionResult = {
 		Ok = 0,
 		NotInParty = 1,
@@ -2301,7 +2301,7 @@ Enum = {
 		MemberInCombat = 33,
 		RestrictedCrossFaction = 34,
 	},
-	---@class QuestTag
+	---@enum QuestTag
 	QuestTag = {
 		Group = 1,
 		PvP = 41,
@@ -2315,7 +2315,7 @@ Enum = {
 		Account = 102,
 		CombatAlly = 266,
 	},
-	---@class QuestTagType
+	---@enum QuestTagType
 	QuestTagType = {
 		Tag = 0,
 		Profession = 1,
@@ -2334,31 +2334,31 @@ Enum = {
 		Threat = 14,
 		CovenantCalling = 15,
 	},
-	---@class QuestWatchType
+	---@enum QuestWatchType
 	QuestWatchType = {
 		Automatic = 0,
 		Manual = 1,
 	},
-	---@class RafLinkType
+	---@enum RafLinkType
 	RafLinkType = {
 		None = 0,
 		Recruit = 1,
 		Friend = 2,
 		Both = 3,
 	},
-	---@class RafRecruitActivityState
+	---@enum RafRecruitActivityState
 	RafRecruitActivityState = {
 		Incomplete = 0,
 		Complete = 1,
 		RewardClaimed = 2,
 	},
-	---@class RafRecruitSubStatus
+	---@enum RafRecruitSubStatus
 	RafRecruitSubStatus = {
 		Trial = 0,
 		Active = 1,
 		Inactive = 2,
 	},
-	---@class RafRewardType
+	---@enum RafRewardType
 	RafRewardType = {
 		Pet = 0,
 		Mount = 1,
@@ -2369,7 +2369,7 @@ Enum = {
 		Illusion = 6,
 		Invalid = 7,
 	},
-	---@class RelativeContentDifficulty
+	---@enum RelativeContentDifficulty
 	RelativeContentDifficulty = {
 		Trivial = 0,
 		Easy = 1,
@@ -2377,14 +2377,14 @@ Enum = {
 		Difficult = 3,
 		Impossible = 4,
 	},
-	---@class ReportMajorCategory
+	---@enum ReportMajorCategory
 	ReportMajorCategory = {
 		InappropriateCommunication = 0,
 		GameplaySabotage = 1,
 		Cheating = 2,
 		InappropriateName = 3,
 	},
-	---@class ReportMinorCategory
+	---@enum ReportMinorCategory
 	ReportMinorCategory = {
 		TextChat = 1,
 		Boosting = 2,
@@ -2402,7 +2402,7 @@ Enum = {
 		Description = 8192,
 		Name = 16384,
 	},
-	---@class ReportType
+	---@enum ReportType
 	ReportType = {
 		Chat = 0,
 		InWorld = 1,
@@ -2419,20 +2419,20 @@ Enum = {
 		Mail = 12,
 		PvP = 13,
 	},
-	---@class RuneforgePowerFilter
+	---@enum RuneforgePowerFilter
 	RuneforgePowerFilter = {
 		All = 0,
 		Relevant = 1,
 		Available = 2,
 		Unavailable = 3,
 	},
-	---@class RuneforgePowerState
+	---@enum RuneforgePowerState
 	RuneforgePowerState = {
 		Available = 0,
 		Unavailable = 1,
 		Invalid = 2,
 	},
-	---@class ScriptedAnimationBehavior
+	---@enum ScriptedAnimationBehavior
 	ScriptedAnimationBehavior = {
 		None = 0,
 		TargetShake = 1,
@@ -2441,11 +2441,11 @@ Enum = {
 		SourceCollideWithTarget = 4,
 		UIParentShake = 5,
 	},
-	---@class ScriptedAnimationFlags
+	---@enum ScriptedAnimationFlags
 	ScriptedAnimationFlags = {
 		UseTargetAsSource = 1,
 	},
-	---@class ScriptedAnimationTrajectory
+	---@enum ScriptedAnimationTrajectory
 	ScriptedAnimationTrajectory = {
 		AtSource = 0,
 		AtTarget = 1,
@@ -2455,12 +2455,12 @@ Enum = {
 		CurveRandom = 5,
 		HalfwayBetween = 6,
 	},
-	---@class SelfResurrectOptionType
+	---@enum SelfResurrectOptionType
 	SelfResurrectOptionType = {
 		Spell = 0,
 		Item = 1,
 	},
-	---@class SkinningState
+	---@enum SkinningState
 	SkinningState = {
 		None = 0,
 		Reserved = 1,
@@ -2468,11 +2468,11 @@ Enum = {
 		Looting = 3,
 		Skinned = 4,
 	},
-	---@class SoulbindConduitFlags
+	---@enum SoulbindConduitFlags
 	SoulbindConduitFlags = {
 		VisibleToGetallsoulbindconduitScript = 1,
 	},
-	---@class SoulbindConduitInstallResult
+	---@enum SoulbindConduitInstallResult
 	SoulbindConduitInstallResult = {
 		Success = 0,
 		InvalidItem = 1,
@@ -2482,49 +2482,49 @@ Enum = {
 		ForgeNotInProximity = 5,
 		SocketNotEmpty = 6,
 	},
-	---@class SoulbindConduitTransactionType
+	---@enum SoulbindConduitTransactionType
 	SoulbindConduitTransactionType = {
 		Install = 0,
 		Uninstall = 1,
 	},
-	---@class SoulbindConduitType
+	---@enum SoulbindConduitType
 	SoulbindConduitType = {
 		Finesse = 0,
 		Potency = 1,
 		Endurance = 2,
 		Flex = 3,
 	},
-	---@class SoulbindNodeState
+	---@enum SoulbindNodeState
 	SoulbindNodeState = {
 		Unavailable = 0,
 		Unselected = 1,
 		Selectable = 2,
 		Selected = 3,
 	},
-	---@class SpellDisplayIconDisplayType
+	---@enum SpellDisplayIconDisplayType
 	SpellDisplayIconDisplayType = {
 		Buff = 0,
 		Debuff = 1,
 		Circular = 2,
 		NoBorder = 3,
 	},
-	---@class SpellDisplayIconSizeType
+	---@enum SpellDisplayIconSizeType
 	SpellDisplayIconSizeType = {
 		Small = 0,
 		Medium = 1,
 		Large = 2,
 	},
-	---@class SpellDisplayTextShownStateType
+	---@enum SpellDisplayTextShownStateType
 	SpellDisplayTextShownStateType = {
 		Shown = 0,
 		Hidden = 1,
 	},
-	---@class SplashScreenType
+	---@enum SplashScreenType
 	SplashScreenType = {
 		WhatsNew = 0,
 		SeasonRollOver = 1,
 	},
-	---@class StatusBarColorTintValue
+	---@enum StatusBarColorTintValue
 	StatusBarColorTintValue = {
 		None = 0,
 		Black = 1,
@@ -2536,14 +2536,14 @@ Enum = {
 		Green = 7,
 		Blue = 8,
 	},
-	---@class StatusBarOverrideBarTextShownType
+	---@enum StatusBarOverrideBarTextShownType
 	StatusBarOverrideBarTextShownType = {
 		Never = 0,
 		Always = 1,
 		OnlyOnMouseover = 2,
 		OnlyNotOnMouseover = 3,
 	},
-	---@class StatusBarValueTextType
+	---@enum StatusBarValueTextType
 	StatusBarValueTextType = {
 		Hidden = 0,
 		Percentage = 1,
@@ -2553,40 +2553,40 @@ Enum = {
 		ValueOverMax = 5,
 		ValueOverMaxNormalized = 6,
 	},
-	---@class SubscriptionInterstitialResponseType
+	---@enum SubscriptionInterstitialResponseType
 	SubscriptionInterstitialResponseType = {
 		Clicked = 0,
 		Closed = 1,
 		WebRedirect = 2,
 	},
-	---@class SubscriptionInterstitialType
+	---@enum SubscriptionInterstitialType
 	SubscriptionInterstitialType = {
 		Standard = 0,
 		LeftNpeArea = 1,
 		MaxLevel = 2,
 	},
-	---@class SummonStatus
+	---@enum SummonStatus
 	SummonStatus = {
 		None = 0,
 		Pending = 1,
 		Accepted = 2,
 		Declined = 3,
 	},
-	---@class SuperTrackingType
+	---@enum SuperTrackingType
 	SuperTrackingType = {
 		Quest = 0,
 		UserWaypoint = 1,
 		Corpse = 2,
 		Scenario = 3,
 	},
-	---@class TooltipSide
+	---@enum TooltipSide
 	TooltipSide = {
 		Left = 0,
 		Right = 1,
 		Top = 2,
 		Bottom = 3,
 	},
-	---@class TooltipTextureAnchor
+	---@enum TooltipTextureAnchor
 	TooltipTextureAnchor = {
 		LeftTop = 0,
 		LeftCenter = 1,
@@ -2596,25 +2596,25 @@ Enum = {
 		RightBottom = 5,
 		All = 6,
 	},
-	---@class TooltipTextureRelativeRegion
+	---@enum TooltipTextureRelativeRegion
 	TooltipTextureRelativeRegion = {
 		LeftLine = 0,
 		RightLine = 1,
 	},
-	---@class TrackedSpellCategory
+	---@enum TrackedSpellCategory
 	TrackedSpellCategory = {
 		Offensive = 0,
 		Defensive = 1,
 		Debuff = 2,
 		Count = 3,
 	},
-	---@class TransmogCameraVariation
+	---@enum TransmogCameraVariation
 	TransmogCameraVariation = {
 		None = 0,
 		CloakBackpack = 1,
 		RightShoulder = 1,
 	},
-	---@class TransmogCollectionType
+	---@enum TransmogCollectionType
 	TransmogCollectionType = {
 		None = 0,
 		Head = 1,
@@ -2647,30 +2647,30 @@ Enum = {
 		Warglaives = 28,
 		Paired = 29,
 	},
-	---@class TransmogIllisionFlags
+	---@enum TransmogIllisionFlags
 	TransmogIllisionFlags = {
 		HideUntilCollected = 1,
 		PlayerConditionGrantsOnLogin = 2,
 	},
-	---@class TransmogModification
+	---@enum TransmogModification
 	TransmogModification = {
 		Main = 0,
 		Secondary = 1,
 	},
-	---@class TransmogPendingType
+	---@enum TransmogPendingType
 	TransmogPendingType = {
 		Apply = 0,
 		Revert = 1,
 		ToggleOn = 2,
 		ToggleOff = 3,
 	},
-	---@class TransmogSearchType
+	---@enum TransmogSearchType
 	TransmogSearchType = {
 		Items = 1,
 		BaseSets = 2,
 		UsableSets = 3,
 	},
-	---@class TransmogSlot
+	---@enum TransmogSlot
 	TransmogSlot = {
 		Head = 0,
 		Shoulder = 1,
@@ -2686,7 +2686,7 @@ Enum = {
 		Mainhand = 11,
 		Offhand = 12,
 	},
-	---@class TransmogSource
+	---@enum TransmogSource
 	TransmogSource = {
 		None = 0,
 		JournalEncounter = 1,
@@ -2699,12 +2699,12 @@ Enum = {
 		Profession = 8,
 		NotValidForTransmog = 9,
 	},
-	---@class TransmogType
+	---@enum TransmogType
 	TransmogType = {
 		Appearance = 0,
 		Illusion = 1,
 	},
-	---@class TransmogUseErrorType
+	---@enum TransmogUseErrorType
 	TransmogUseErrorType = {
 		None = 0,
 		PlayerCondition = 1,
@@ -2714,7 +2714,7 @@ Enum = {
 		Holiday = 5,
 		HotRecheckFailed = 6,
 	},
-	---@class TtsBoolSetting
+	---@enum TtsBoolSetting
 	TtsBoolSetting = {
 		PlaySoundSeparatingChatLineBreaks = 0,
 		AddCharacterNameToSpeech = 1,
@@ -2722,12 +2722,12 @@ Enum = {
 		AlternateSystemVoice = 3,
 		NarrateMyMessages = 4,
 	},
-	---@class TtsVoiceType
+	---@enum TtsVoiceType
 	TtsVoiceType = {
 		Standard = 0,
 		Alternate = 1,
 	},
-	---@class UICursorType
+	---@enum UICursorType
 	UICursorType = {
 		Default = 0,
 		Item = 1,
@@ -2750,18 +2750,18 @@ Enum = {
 		Toy = 19,
 		ConduitCollectionItem = 20,
 	},
-	---@class UIFrameType
+	---@enum UIFrameType
 	UIFrameType = {
 		JailersTowerBuffs = 0,
 	},
-	---@class UIItemInteractionFlags
+	---@enum UIItemInteractionFlags
 	UIItemInteractionFlags = {
 		DisplayWithInset = 1,
 		ConfirmationHasDelay = 2,
 		ConversionMode = 4,
 		ClickShowsFlyout = 8,
 	},
-	---@class UIItemInteractionType
+	---@enum UIItemInteractionType
 	UIItemInteractionType = {
 		None = 0,
 		CastSpell = 1,
@@ -2769,7 +2769,7 @@ Enum = {
 		RunecarverScrapping = 3,
 		ItemConversion = 4,
 	},
-	---@class UIMapFlag
+	---@enum UIMapFlag
 	UIMapFlag = {
 		NoHighlight = 1,
 		ShowOverlays = 2,
@@ -2789,14 +2789,14 @@ Enum = {
 		ForceOnNavbar = 32768,
 		AlwaysAllowUserWaypoints = 65536,
 	},
-	---@class UIMapSystem
+	---@enum UIMapSystem
 	UIMapSystem = {
 		World = 0,
 		Taxi = 1,
 		Adventure = 2,
 		Minimap = 3,
 	},
-	---@class UIMapType
+	---@enum UIMapType
 	UIMapType = {
 		Cosmic = 0,
 		World = 1,
@@ -2806,22 +2806,22 @@ Enum = {
 		Micro = 5,
 		Orphan = 6,
 	},
-	---@class UIWidgetBlendModeType
+	---@enum UIWidgetBlendModeType
 	UIWidgetBlendModeType = {
 		Opaque = 0,
 		Additive = 1,
 	},
-	---@class UIWidgetFlag
+	---@enum UIWidgetFlag
 	UIWidgetFlag = {
 		UniversalWidget = 1,
 	},
-	---@class UIWidgetFontType
+	---@enum UIWidgetFontType
 	UIWidgetFontType = {
 		Normal = 0,
 		Shadow = 1,
 		Outline = 2,
 	},
-	---@class UIWidgetLayoutDirection
+	---@enum UIWidgetLayoutDirection
 	UIWidgetLayoutDirection = {
 		Default = 0,
 		Vertical = 1,
@@ -2829,18 +2829,18 @@ Enum = {
 		Overlap = 3,
 		HorizontalForceNewRow = 4,
 	},
-	---@class UIWidgetModelSceneLayer
+	---@enum UIWidgetModelSceneLayer
 	UIWidgetModelSceneLayer = {
 		None = 0,
 		Front = 1,
 		Back = 2,
 	},
-	---@class UIWidgetMotionType
+	---@enum UIWidgetMotionType
 	UIWidgetMotionType = {
 		Instant = 0,
 		Smooth = 1,
 	},
-	---@class UIWidgetScale
+	---@enum UIWidgetScale
 	UIWidgetScale = {
 		OneHundred = 0,
 		Ninty = 1,
@@ -2849,12 +2849,12 @@ Enum = {
 		Sixty = 4,
 		Fifty = 5,
 	},
-	---@class UIWidgetSetLayoutDirection
+	---@enum UIWidgetSetLayoutDirection
 	UIWidgetSetLayoutDirection = {
 		Vertical = 0,
 		Horizontal = 1,
 	},
-	---@class UIWidgetTextSizeType
+	---@enum UIWidgetTextSizeType
 	UIWidgetTextSizeType = {
 		Small = 0,
 		Medium = 1,
@@ -2862,7 +2862,7 @@ Enum = {
 		Huge = 3,
 		Standard = 4,
 	},
-	---@class UIWidgetTooltipLocation
+	---@enum UIWidgetTooltipLocation
 	UIWidgetTooltipLocation = {
 		Default = 0,
 		BottomLeft = 1,
@@ -2874,7 +2874,7 @@ Enum = {
 		BottomRight = 7,
 		Bottom = 8,
 	},
-	---@class UIWidgetVisualizationType
+	---@enum UIWidgetVisualizationType
 	UIWidgetVisualizationType = {
 		IconAndText = 0,
 		CaptureBar = 1,
@@ -2901,14 +2901,14 @@ Enum = {
 		Spacer = 22,
 		UnitPowerBar = 23,
 	},
-	---@class UnitSex
+	---@enum UnitSex
 	UnitSex = {
 		Male = 0,
 		Female = 1,
 		None = 2,
 		Both = 3,
 	},
-	---@class ValidateNameResult
+	---@enum ValidateNameResult
 	ValidateNameResult = {
 		NameSuccess = 0,
 		NameFailure = 1,
@@ -2929,7 +2929,7 @@ Enum = {
 		NameDeclensionDoesntMatchBaseName = 16,
 		NameSpacesDisallowed = 17,
 	},
-	---@class VasPurchaseProgress
+	---@enum VasPurchaseProgress
 	VasPurchaseProgress = {
 		Invalid = 0,
 		PrePurchase = 1,
@@ -2940,19 +2940,19 @@ Enum = {
 		ProcessingFactionChange = 6,
 		Complete = 7,
 	},
-	---@class VignetteType
+	---@enum VignetteType
 	VignetteType = {
 		Normal = 0,
 		PvPBounty = 1,
 		Torghast = 2,
 		Treasure = 3,
 	},
-	---@class VoiceChannelErrorReason
+	---@enum VoiceChannelErrorReason
 	VoiceChannelErrorReason = {
 		Unknown = 0,
 		IsBattleNetChannel = 1,
 	},
-	---@class VoiceChatStatusCode
+	---@enum VoiceChatStatusCode
 	VoiceChatStatusCode = {
 		Success = 0,
 		OperationPending = 1,
@@ -2980,7 +2980,7 @@ Enum = {
 		InvalidInputDevice = 23,
 		InvalidOutputDevice = 24,
 	},
-	---@class VoiceTtsDestination
+	---@enum VoiceTtsDestination
 	VoiceTtsDestination = {
 		RemoteTransmission = 0,
 		LocalPlayback = 1,
@@ -2990,7 +2990,7 @@ Enum = {
 		QueuedRemoteTransmissionWithLocalPlayback = 5,
 		ScreenReader = 6,
 	},
-	---@class VoiceTtsStatusCode
+	---@enum VoiceTtsStatusCode
 	VoiceTtsStatusCode = {
 		Success = 0,
 		InvalidEngineType = 1,
@@ -3007,7 +3007,7 @@ Enum = {
 		InvalidArgument = 12,
 		InternalError = 13,
 	},
-	---@class WeeklyRewardChestThresholdType
+	---@enum WeeklyRewardChestThresholdType
 	WeeklyRewardChestThresholdType = {
 		None = 0,
 		MythicPlus = 1,
@@ -3016,17 +3016,17 @@ Enum = {
 		AlsoReceive = 4,
 		Concession = 5,
 	},
-	---@class WidgetAnimationType
+	---@enum WidgetAnimationType
 	WidgetAnimationType = {
 		None = 0,
 		Fade = 1,
 	},
-	---@class WidgetCurrencyClass
+	---@enum WidgetCurrencyClass
 	WidgetCurrencyClass = {
 		Currency = 0,
 		Item = 1,
 	},
-	---@class WidgetEnabledState
+	---@enum WidgetEnabledState
 	WidgetEnabledState = {
 		Disabled = 0,
 		Enabled = 1,
@@ -3036,24 +3036,24 @@ Enum = {
 		Gold = 5,
 		Black = 6,
 	},
-	---@class WidgetShownState
+	---@enum WidgetShownState
 	WidgetShownState = {
 		Hidden = 0,
 		Shown = 1,
 	},
-	---@class WidgetTextHorizontalAlignmentType
+	---@enum WidgetTextHorizontalAlignmentType
 	WidgetTextHorizontalAlignmentType = {
 		Left = 0,
 		Center = 1,
 		Right = 2,
 	},
-	---@class WidgetUnitPowerBarFlashMomentType
+	---@enum WidgetUnitPowerBarFlashMomentType
 	WidgetUnitPowerBarFlashMomentType = {
 		FlashWhenMax = 0,
 		FlashWhenMin = 1,
 		NeverFlash = 2,
 	},
-	---@class WoWEntitlementType
+	---@enum WoWEntitlementType
 	WoWEntitlementType = {
 		Item = 0,
 		Mount = 1,
@@ -3066,44 +3066,44 @@ Enum = {
 		Illusion = 8,
 		Invalid = 9,
 	},
-	---@class WorldQuestQuality
+	---@enum WorldQuestQuality
 	WorldQuestQuality = {
 		Common = 0,
 		Rare = 1,
 		Epic = 2,
 	},
-	---@class ZoneControlActiveState
+	---@enum ZoneControlActiveState
 	ZoneControlActiveState = {
 		Inactive = 0,
 		Active = 1,
 	},
-	---@class ZoneControlDangerFlashType
+	---@enum ZoneControlDangerFlashType
 	ZoneControlDangerFlashType = {
 		ShowOnGoodStates = 0,
 		ShowOnBadStates = 1,
 		ShowOnBoth = 2,
 		ShowOnNeither = 3,
 	},
-	---@class ZoneControlFillType
+	---@enum ZoneControlFillType
 	ZoneControlFillType = {
 		SingleFillClockwise = 0,
 		SingleFillCounterClockwise = 1,
 		DoubleFillClockwise = 2,
 		DoubleFillCounterClockwise = 3,
 	},
-	---@class ZoneControlLeadingEdgeType
+	---@enum ZoneControlLeadingEdgeType
 	ZoneControlLeadingEdgeType = {
 		NoLeadingEdge = 0,
 		UseLeadingEdge = 1,
 	},
-	---@class ZoneControlMode
+	---@enum ZoneControlMode
 	ZoneControlMode = {
 		BothStatesAreGood = 0,
 		State1IsGood = 1,
 		State2IsGood = 2,
 		NeitherStateIsGood = 3,
 	},
-	---@class ZoneControlState
+	---@enum ZoneControlState
 	ZoneControlState = {
 		State1 = 0,
 		State2 = 1,
