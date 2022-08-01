@@ -1,16 +1,4 @@
 ---@meta
----[Documentation](https://wowpedia.fandom.com/wiki/API_SplitContainerItem)
----@param bagID number
----@param slot number
----@param count number
-function SplitContainerItem(bagID, slot, count) end
-
----[Documentation](https://wowpedia.fandom.com/wiki/API_SplitGuildBankItem)
-function SplitGuildBankItem(tab, slot, amount) end
-
----[Documentation](https://wowpedia.fandom.com/wiki/API_StartAttack)
-function StartAttack() end
-
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_StartAutoRun)
 function StartAutoRun() end
 

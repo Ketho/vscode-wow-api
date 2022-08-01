@@ -327,9 +327,6 @@ function IsAddonVersionCheckEnabled() end
 ---@return boolean allowedToTeleport
 function IsAllowedToUserTeleport() end
 
----[Documentation](https://wowpedia.fandom.com/wiki/API_IsAltKeyDown)
-function IsAltKeyDown() end
-
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_IsArenaSkirmish)
 function IsArenaSkirmish() end
 
@@ -421,9 +418,6 @@ function IsContainerFiltered(index) end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_IsContainerItemAnUpgrade)
 function IsContainerItemAnUpgrade(index, slot) end
-
----[Documentation](https://wowpedia.fandom.com/wiki/API_IsControlKeyDown)
-function IsControlKeyDown() end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_IsCorruptedItem)
 function IsCorruptedItem(item) end
@@ -628,17 +622,8 @@ function IsLFGComplete() end
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_IsLFGDungeonJoinable)
 function IsLFGDungeonJoinable() end
 
----[Documentation](https://wowpedia.fandom.com/wiki/API_IsLeftAltKeyDown)
-function IsLeftAltKeyDown() end
-
----[Documentation](https://wowpedia.fandom.com/wiki/API_IsLeftControlKeyDown)
-function IsLeftControlKeyDown() end
-
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_IsLeftMetaKeyDown)
 function IsLeftMetaKeyDown() end
-
----[Documentation](https://wowpedia.fandom.com/wiki/API_IsLeftShiftKeyDown)
-function IsLeftShiftKeyDown() end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_IsLegacyDifficulty)
 function IsLegacyDifficulty(difficultyID) end
@@ -664,7 +649,35 @@ function IsMetaKeyDown() end
 function IsModifiedClick(action) end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_IsModifierKeyDown)
+---@return boolean isDown
 function IsModifierKeyDown() end
+
+---@return boolean isDown
+function IsControlKeyDown() end
+
+---@return boolean isDown
+function IsShiftKeyDown() end
+
+---@return boolean isDown
+function IsAltKeyDown() end
+
+---@return boolean isDown
+function IsLeftControlKeyDown() end
+
+---@return boolean isDown
+function IsLeftShiftKeyDown() end
+
+---@return boolean isDown
+function IsLeftAltKeyDown() end
+
+---@return boolean isDown
+function IsRightControlKeyDown() end
+
+---@return boolean isDown
+function IsRightShiftKeyDown() end
+
+---@return boolean isDown
+function IsRightAltKeyDown() end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_IsMounted)
 function IsMounted() end
@@ -800,26 +813,14 @@ function IsResting() end
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_IsRestrictedAccount)
 function IsRestrictedAccount() end
 
----[Documentation](https://wowpedia.fandom.com/wiki/API_IsRightAltKeyDown)
-function IsRightAltKeyDown() end
-
----[Documentation](https://wowpedia.fandom.com/wiki/API_IsRightControlKeyDown)
-function IsRightControlKeyDown() end
-
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_IsRightMetaKeyDown)
 function IsRightMetaKeyDown() end
-
----[Documentation](https://wowpedia.fandom.com/wiki/API_IsRightShiftKeyDown)
-function IsRightShiftKeyDown() end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_IsSelectedSpellBookItem)
 function IsSelectedSpellBookItem(spellSlot) end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_IsServerControlledBackfill)
 function IsServerControlledBackfill() end
-
----[Documentation](https://wowpedia.fandom.com/wiki/API_IsShiftKeyDown)
-function IsShiftKeyDown() end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_IsSpellClassOrSpec)
 function IsSpellClassOrSpec() end
@@ -2472,4 +2473,16 @@ function SpellTargetUnit(unitId) end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_SplashFrameCanBeShown)
 function SplashFrameCanBeShown() end
+
+---[Documentation](https://wowpedia.fandom.com/wiki/API_SplitContainerItem)
+---@param bagID number
+---@param slot number
+---@param count number
+function SplitContainerItem(bagID, slot, count) end
+
+---[Documentation](https://wowpedia.fandom.com/wiki/API_SplitGuildBankItem)
+function SplitGuildBankItem(tab, slot, amount) end
+
+---[Documentation](https://wowpedia.fandom.com/wiki/API_StartAttack)
+function StartAttack() end
 
