@@ -97,6 +97,24 @@ function GetGuildRenameRequired() end
 function GetGuildRewardInfo(index) end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_GetGuildRosterInfo)
+---@param index number
+---@return string name
+---@return string rankName
+---@return number rankIndex
+---@return number level
+---@return string classDisplayName
+---@return string zone
+---@return string publicNote
+---@return string officerNote
+---@return boolean isOnline
+---@return number status
+---@return string class
+---@return number achievementPoints
+---@return number achievementRank
+---@return boolean isMobile
+---@return boolean canSoR
+---@return number repStanding
+---@return string guid
 function GetGuildRosterInfo(index) end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_GetGuildRosterLargestAchievementPoints)
@@ -2529,19 +2547,4 @@ function GetVoidStorageSlotPageIndex(slot) end
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_GetVoidTransferCost)
 ---@return number cost
 function GetVoidTransferCost() end
-
----[Documentation](https://wowpedia.fandom.com/wiki/API_GetVoidTransferDepositInfo)
----@param slotIndex number
----@return number itemID
----@return string textureName
-function GetVoidTransferDepositInfo(slotIndex) end
-
----[Documentation](https://wowpedia.fandom.com/wiki/API_GetVoidTransferWithdrawalInfo)
----@param slotIndex number
----@return number itemID
----@return string textureName
-function GetVoidTransferWithdrawalInfo(slotIndex) end
-
----[Documentation](https://wowpedia.fandom.com/wiki/API_GetVoidUnlockCost)
-function GetVoidUnlockCost() end
 

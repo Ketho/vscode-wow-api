@@ -3,7 +3,7 @@
 [![](https://img.shields.io/github/v/release/Ketho/vscode-wow-api)](https://github.com/Ketho/vscode-wow-api/releases)
 [![](https://img.shields.io/badge/wow-9.2.5-yellow)](https://github.com/Gethe/wow-ui-source/tree/9.2.5)
 
-Adds IntelliSense features for World of Warcraft API to VS Code. This extension uses [Sumneko's](https://marketplace.visualstudio.com/items?itemName=sumneko.lua) Lua [Language Server](https://microsoft.github.io/language-server-protocol/) with [EmmyLua](https://github.com/sumneko/lua-language-server/wiki/Annotations) annotations.
+Adds IntelliSense features for World of Warcraft API to VS Code. This is a plugin extension for [Sumneko's](https://marketplace.visualstudio.com/items?itemName=sumneko.lua) Lua [Language Server](https://microsoft.github.io/language-server-protocol/) with [EmmyLua](https://github.com/sumneko/lua-language-server/wiki/Annotations) annotations.
 
 ### Features
 #### [API](https://wowpedia.fandom.com/wiki/World_of_Warcraft_API)
@@ -33,78 +33,41 @@ Shows completion for GlobalStrings at >3 uppercase letters to declutter fuzzy se
 
 ![](https://github.com/Ketho/vscode-wow-api/raw/master/img/globalstring.gif)
 
-# Environment Setup
-If using WSL, it is HIGHLY recommended that you setup your WSL instance and handle all git operations within WSL.
+### Contributing
+The extension *reflects* the state of the wiki, so if you create/update the wiki pages, it will be updated in the extension on the next release. Otherwise feel free to create an [issue](https://github.com/Ketho/vscode-wow-api/issues) with the false errors.
 
-While using WSL is not required, the below setups are written around the assumption that WSL is being used. If you do not have WSL setup, you can start the install by running `wsl --install` from an elevated command prompt.  
+For example [UnitLevel](https://wowpedia.fandom.com/wiki/API_UnitLevel) would be documented like so.
+```lua
+{{wowapi}}
+Returns the level of the unit.
+ level = UnitLevel(unit)
 
-## Setting up a WSL Ubuntu Instance
-### Windows Command Prompt (Elevated)
- * Start an elevated command prompt in Windows  
- * Execute `wsl --install -d Ubuntu-20.04`  
- * Follow the prompts to configure a username/password.  
- * You should be dropped into the bash shell.  
+==Arguments==
+:;unit:{{apitype|string}} : [[UnitId]]
 
-### WSL Ubuntu Bash Shell
-* Execute `sudo apt-get update`  
-    * Use the password you setup with WSL previously.  
-    * This updates the apt-get repos.  
-* Execute `sudo apt-get install pip unzip libreadline-dev libssl-dev`
-* Execute `git clone https://github.com/Ketho/vscode-wow-api/`
-* Execute `cd vscode-wow-api`
-* Execute `bin/setup.sh`  
-    This will setup an isolated [Lua 5.3](http://www.lua.org/) environment (using [hererocks](https://pypi.org/project/hererocks/) and [luarocks](https://luarocks.org/#quick-start)) within the `.lua` directory and install the below dependencies:
-    - [luafilesystem](https://luarocks.org/modules/hisham/luafilesystem)
-    - [luasocket](https://luarocks.org/modules/luasocket/luasocket)
-    - [luasec](https://luarocks.org/modules/brunoos/luasec)
-    - [lua-cjson](https://luarocks.org/modules/openresty/lua-cjson)
-    - [xml2lua](https://luarocks.org/modules/manoelcampos/xml2lua)
-* If using VS Code on Windows, you can execute `code .` while in the `vscode-wow-api` directory within WSL.
-*   This will open VS Code in windows and prompt you to install the Remote WSL extension
-*   You will then be able to use VS Code like you normally do but with the benefits of running an environment in Linux!
-*   Read more [here](https://code.visualstudio.com/docs/remote/wsl#:~:text=Alternatively%2C%20you%20can%20open%20a%20Remote%20WSL%20window,Use%20the%20File%20menu%20to%20open%20your%20folder.)!
-
-### Generating documentation
-* Blizzard documented functions are generated from [Blizzard_APIDocumentation](https://github.com/Gethe/wow-ui-source/tree/live/AddOns/Blizzard_APIDocumentation).
-* Non-Blizzard documented functions are [exported](https://wowpedia.fandom.com/wiki/Special:Export) and parsed from Wowpedia.
-* JSON data for the hover provider (Events, CVars and Enums) is generated from [Lua/ToTypeScript](Lua/ToTypeScript).
-```
-lua53 ./Lua/main.lua
-```
-or
-```
-./lua/bin/vscodewowapi
+==Returns==
+:;level:{{apitype|number}}
 ```
 
-#### Acknowledgements
-The following people contributed to the development resources or their work was of invaluable help.
-* [Andols](https://www.curseforge.com/members/andols/projects)
-* [Buds](https://github.com/mrbuds)
-* [ChrisKader](https://github.com/ChrisKader)
-* [DahkCeles](https://www.curseforge.com/members/dahkceles/projects)
-* [Ellypse](https://github.com/Ellypse)
-* [Ferronn](https://github.com/ferronn-dev)
-* [Foxlit](https://www.townlong-yak.com/)
-* [Gethe](https://github.com/Gethe)
-* [Iriel](https://wowpedia.fandom.com/wiki/Iriel)
-* [jnwhiteh](https://twitter.com/jnwhiteh)
-* [Kaydeethree](https://github.com/kaydeethree)
-* [Marlamin](https://github.com/Marlamin)
-* [Meorawr](https://github.com/Meorawr)
-* [nebula](https://github.com/nebularg)
-* [Nevcairiel](https://github.com/Nevcairiel)
-* [Resike](https://github.com/Resike)
-* [Stanzilla](https://github.com/Stanzilla)
-* [Sumneko](https://github.com/Sumneko)
-* [Wutname](https://github.com/Wutname1)
-* [Yuyuli](https://www.curseforge.com/members/yuyuli/projects)
-* [Xelnath](https://wowpedia.fandom.com/wiki/Alexander_Brazie)
----
-* [Blizzard Entertainment](https://www.blizzard.com/)
-* [EmmyLua](https://github.com/EmmyLua)
-* [ScreenToGif](https://github.com/NickeManarin/ScreenToGif)
-* [Townlong Yak](https://www.townlong-yak.com/)
-* [WoW.tools](https://wow.tools/)
-* [WoWInterface](https://wowinterface.com/)
-* [Wowpedia](https://wowpedia.fandom.com/)
-* [Wowprogramming](https://wowprogramming.com/)
+Alternatively, the script will look for a commented emmylua block if present.
+```lua
+<!-- emmylua
+---@param unit UnitId
+---@return number level
+function UnitLevel(unit) end
+-->
+```
+
+#### Setup
+Refer to [SETUP.md](SETUP.md) if you want to run the Lua scripts which generate the Emmylua documentation.
+
+### Acknowledgements
+* [Andols](https://www.curseforge.com/members/andols/projects), [Buds](https://github.com/mrbuds), [ChrisKader](https://github.com/ChrisKader)
+* [DahkCeles](https://www.curseforge.com/members/dahkceles/projects), [Ellypse](https://github.com/Ellypse), [Ferronn](https://github.com/ferronn-dev)
+* [Foxlit](https://www.townlong-yak.com/), [Gethe](https://github.com/Gethe), [Iriel](https://wowpedia.fandom.com/wiki/Iriel)
+* [jnwhiteh](https://twitter.com/jnwhiteh), [Kaydeethree](https://github.com/kaydeethree), [Marlamin](https://github.com/Marlamin)
+* [Meorawr](https://github.com/Meorawr), [nebula](https://github.com/nebularg), [Nevcairiel](https://github.com/Nevcairiel)
+* [Resike](https://github.com/Resike), [Stanzilla](https://github.com/Stanzilla), [Sumneko](https://github.com/Sumneko)
+* [Wutname](https://github.com/Wutname1), [Yuyuli](https://www.curseforge.com/members/yuyuli/projects), [Xelnath](https://wowpedia.fandom.com/wiki/Alexander_Brazie)  
+* [Blizzard Entertainment](https://www.blizzard.com/), [Townlong Yak](https://www.townlong-yak.com/), [WoW.tools](https://wow.tools/)
+* [WoWInterface](https://wowinterface.com/), [Wowpedia](https://wowpedia.fandom.com/), [Wowprogramming](https://wowprogramming.com/)

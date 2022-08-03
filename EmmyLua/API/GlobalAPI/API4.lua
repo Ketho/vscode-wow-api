@@ -1,4 +1,19 @@
 ---@meta
+---[Documentation](https://wowpedia.fandom.com/wiki/API_GetVoidTransferDepositInfo)
+---@param slotIndex number
+---@return number itemID
+---@return string textureName
+function GetVoidTransferDepositInfo(slotIndex) end
+
+---[Documentation](https://wowpedia.fandom.com/wiki/API_GetVoidTransferWithdrawalInfo)
+---@param slotIndex number
+---@return number itemID
+---@return string textureName
+function GetVoidTransferWithdrawalInfo(slotIndex) end
+
+---[Documentation](https://wowpedia.fandom.com/wiki/API_GetVoidUnlockCost)
+function GetVoidUnlockCost() end
+
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_GetWarGameQueueStatus)
 function GetWarGameQueueStatus() end
 
@@ -2470,19 +2485,4 @@ function SpellTargetItem(item) end
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_SpellTargetUnit)
 ---@param unitId UnitId
 function SpellTargetUnit(unitId) end
-
----[Documentation](https://wowpedia.fandom.com/wiki/API_SplashFrameCanBeShown)
-function SplashFrameCanBeShown() end
-
----[Documentation](https://wowpedia.fandom.com/wiki/API_SplitContainerItem)
----@param bagID number
----@param slot number
----@param count number
-function SplitContainerItem(bagID, slot, count) end
-
----[Documentation](https://wowpedia.fandom.com/wiki/API_SplitGuildBankItem)
-function SplitGuildBankItem(tab, slot, amount) end
-
----[Documentation](https://wowpedia.fandom.com/wiki/API_StartAttack)
-function StartAttack() end
 
