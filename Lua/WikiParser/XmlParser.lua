@@ -53,6 +53,7 @@ local validTypes = {
 	table = true,
 	["function"] = true,
 	unknown = true,
+	unk = true,
 
 	Frame = true,
 	Font = true,

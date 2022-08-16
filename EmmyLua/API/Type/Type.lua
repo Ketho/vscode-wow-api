@@ -1,4 +1,6 @@
 ---@meta
+---@class unk
+
 ---@alias ChatType
 ---|"SAY"
 ---|"EMOTE"

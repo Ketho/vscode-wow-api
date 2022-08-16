@@ -1,4 +1,24 @@
 ---@meta
+---[Documentation](https://wowpedia.fandom.com/wiki/API_SpellHasRange)
+function SpellHasRange(spell) end
+
+---[Documentation](https://wowpedia.fandom.com/wiki/API_SpellIsAlwaysShown)
+function SpellIsAlwaysShown(spellID) end
+
+---[Documentation](https://wowpedia.fandom.com/wiki/API_SpellIsPriorityAura)
+function SpellIsPriorityAura(spellID) end
+
+---[Documentation](https://wowpedia.fandom.com/wiki/API_SpellIsSelfBuff)
+function SpellIsSelfBuff(spellID) end
+
+---[Documentation](https://wowpedia.fandom.com/wiki/API_SpellIsTargeting)
+---@return boolean isTargeting
+function SpellIsTargeting() end
+
+---[Documentation](https://wowpedia.fandom.com/wiki/API_SpellStopCasting)
+---@return boolean stopped
+function SpellStopCasting() end
+
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_SpellStopTargeting)
 function SpellStopTargeting() end
 

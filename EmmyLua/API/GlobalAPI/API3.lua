@@ -2301,13 +2301,53 @@ function GetTabardCreationCost() end
 function GetTabardInfo() end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_GetTalentInfo)
+---@param tier number
+---@param column number
+---@param specGroupIndex? number
+---@param isInspect? boolean
+---@param inspectUnit? UnitId
+---@return number talentID
+---@return string name
+---@return number texture
+---@return boolean available
+---@return number spellID
+---@return unk unknown
+---@return number row
+---@return number column
+---@return boolean known
+---@return boolean grantedByAura
 function GetTalentInfo(tier, column, specGroupIndex, isInspect, inspectUnit) end
 
----[Documentation](https://wowpedia.fandom.com/wiki/API_GetTalentInfoByID)
+---@param talentID number
+---@param specGroupIndex number
+---@param isInspect? boolean
+---@param inspectUnit? UnitId
+---@return number talentID
+---@return string name
+---@return number texture
+---@return boolean available
+---@return number spellID
+---@return unk unknown
+---@return number row
+---@return number column
+---@return boolean known
+---@return boolean grantedByAura
 function GetTalentInfoByID(talentID, specGroupIndex, isInspect, inspectUnit) end
 
----[Documentation](https://wowpedia.fandom.com/wiki/API_GetTalentInfoBySpecialization)
-function GetTalentInfoBySpecialization(specGroupIndex, tier, column) end
+---@param specIndex number
+---@param tier number
+---@param column number
+---@return number talentID
+---@return string name
+---@return number texture
+---@return boolean available
+---@return number spellID
+---@return unk unknown
+---@return number row
+---@return number column
+---@return boolean known
+---@return boolean grantedByAura
+function GetTalentInfoBySpecialization(specIndex, tier, column) end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_GetTalentLink)
 function GetTalentLink(talentID, isInspect, specGroup, inspectID, classID) end
@@ -2525,29 +2565,4 @@ function GetVehicleUIIndicator(indicatorID) end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_GetVehicleUIIndicatorSeat)
 function GetVehicleUIIndicatorSeat(indicatorID, indicatorSeatIndex) end
-
----[Documentation](https://wowpedia.fandom.com/wiki/API_GetVersatilityBonus)
-function GetVersatilityBonus(COMBAT_RATING) end
-
----[Documentation](https://wowpedia.fandom.com/wiki/API_GetVideoCaps)
-function GetVideoCaps() end
-
----[Documentation](https://wowpedia.fandom.com/wiki/API_GetVideoOptions)
-function GetVideoOptions() end
-
----[Documentation](https://wowpedia.fandom.com/wiki/API_GetVoidItemHyperlinkString)
----@param voidSlot number
----@return string itemLink
-function GetVoidItemHyperlinkString(voidSlot) end
-
----[Documentation](https://wowpedia.fandom.com/wiki/API_GetVoidItemInfo)
----@param tabIndex number
----@param slotIndex number
----@return number itemID
----@return string textureName
----@return boolean locked
----@return boolean recentDeposit
----@return boolean isFiltered
----@return number quality
-function GetVoidItemInfo(tabIndex, slotIndex) end
 

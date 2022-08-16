@@ -1,4 +1,29 @@
 ---@meta
+---[Documentation](https://wowpedia.fandom.com/wiki/API_GetVersatilityBonus)
+function GetVersatilityBonus(COMBAT_RATING) end
+
+---[Documentation](https://wowpedia.fandom.com/wiki/API_GetVideoCaps)
+function GetVideoCaps() end
+
+---[Documentation](https://wowpedia.fandom.com/wiki/API_GetVideoOptions)
+function GetVideoOptions() end
+
+---[Documentation](https://wowpedia.fandom.com/wiki/API_GetVoidItemHyperlinkString)
+---@param voidSlot number
+---@return string itemLink
+function GetVoidItemHyperlinkString(voidSlot) end
+
+---[Documentation](https://wowpedia.fandom.com/wiki/API_GetVoidItemInfo)
+---@param tabIndex number
+---@param slotIndex number
+---@return number itemID
+---@return string textureName
+---@return boolean locked
+---@return boolean recentDeposit
+---@return boolean isFiltered
+---@return number quality
+function GetVoidItemInfo(tabIndex, slotIndex) end
+
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_GetVoidStorageSlotPageIndex)
 function GetVoidStorageSlotPageIndex(slot) end
 
@@ -2462,24 +2487,4 @@ function SpellCancelQueuedSpell() end
 ---@return boolean alwaysShowMine
 ---@return boolean showForMySpec
 function SpellGetVisibilityInfo(spellId, visType) end
-
----[Documentation](https://wowpedia.fandom.com/wiki/API_SpellHasRange)
-function SpellHasRange(spell) end
-
----[Documentation](https://wowpedia.fandom.com/wiki/API_SpellIsAlwaysShown)
-function SpellIsAlwaysShown(spellID) end
-
----[Documentation](https://wowpedia.fandom.com/wiki/API_SpellIsPriorityAura)
-function SpellIsPriorityAura(spellID) end
-
----[Documentation](https://wowpedia.fandom.com/wiki/API_SpellIsSelfBuff)
-function SpellIsSelfBuff(spellID) end
-
----[Documentation](https://wowpedia.fandom.com/wiki/API_SpellIsTargeting)
----@return boolean isTargeting
-function SpellIsTargeting() end
-
----[Documentation](https://wowpedia.fandom.com/wiki/API_SpellStopCasting)
----@return boolean stopped
-function SpellStopCasting() end
 
