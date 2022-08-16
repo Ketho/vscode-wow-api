@@ -1,4 +1,11 @@
 ---@meta
+---[Documentation](https://wowpedia.fandom.com/wiki/API_GetVoidStorageSlotPageIndex)
+function GetVoidStorageSlotPageIndex(slot) end
+
+---[Documentation](https://wowpedia.fandom.com/wiki/API_GetVoidTransferCost)
+---@return number cost
+function GetVoidTransferCost() end
+
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_GetVoidTransferDepositInfo)
 ---@param slotIndex number
 ---@return number itemID
@@ -2475,14 +2482,4 @@ function SpellIsTargeting() end
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_SpellStopCasting)
 ---@return boolean stopped
 function SpellStopCasting() end
-
----[Documentation](https://wowpedia.fandom.com/wiki/API_SpellStopTargeting)
-function SpellStopTargeting() end
-
----[Documentation](https://wowpedia.fandom.com/wiki/API_SpellTargetItem)
-function SpellTargetItem(item) end
-
----[Documentation](https://wowpedia.fandom.com/wiki/API_SpellTargetUnit)
----@param unitId UnitId
-function SpellTargetUnit(unitId) end
 

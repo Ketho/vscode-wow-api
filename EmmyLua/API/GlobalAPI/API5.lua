@@ -1,4 +1,14 @@
 ---@meta
+---[Documentation](https://wowpedia.fandom.com/wiki/API_SpellStopTargeting)
+function SpellStopTargeting() end
+
+---[Documentation](https://wowpedia.fandom.com/wiki/API_SpellTargetItem)
+function SpellTargetItem(item) end
+
+---[Documentation](https://wowpedia.fandom.com/wiki/API_SpellTargetUnit)
+---@param unitId UnitId
+function SpellTargetUnit(unitId) end
+
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_SplashFrameCanBeShown)
 function SplashFrameCanBeShown() end
 
@@ -280,6 +290,11 @@ function UninviteUnit(name, reason) end
 function UnitAffectingCombat(unit) end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_UnitArmor)
+---@param unit UnitId
+---@return number base
+---@return number effectiveArmor
+---@return number armor
+---@return number bonusArmor
 function UnitArmor(unit) end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_UnitAttackPower)
@@ -503,9 +518,13 @@ function UnitHPPerStamina() end
 function UnitHasIncomingResurrection(unit) end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_UnitHasLFGDeserter)
+---@param unit UnitId
+---@return boolean isDeserter
 function UnitHasLFGDeserter(unit) end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_UnitHasLFGRandomCooldown)
+---@param unit UnitId
+---@return boolean hasRandomCooldown
 function UnitHasLFGRandomCooldown(unit) end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_UnitHasRelicSlot)
@@ -889,6 +908,8 @@ function UnitWeaponAttackPower(unit) end
 function UnitXP(unit) end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_UnitXPMax)
+---@param unit UnitId
+---@return number nextXP
 function UnitXPMax(unit) end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_UnlearnSpecialization)

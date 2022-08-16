@@ -1196,6 +1196,8 @@ function GetNumSpecializationsForClassID(classID) end
 function GetNumSpellTabs() end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_GetNumSubgroupMembers)
+---@param groupType? number
+---@return number numSubgroupMembers
 function GetNumSubgroupMembers(groupType) end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_GetNumTitles)
@@ -1743,6 +1745,7 @@ function GetRandomScenarioBestChoice() end
 function GetRandomScenarioInfo(index) end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_GetRangedCritChance)
+---@return number critChance
 function GetRangedCritChance() end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_GetRangedHaste)
@@ -2423,7 +2426,14 @@ function GetTradePlayerItemInfo(id) end
 function GetTradePlayerItemLink(id) end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_GetTradeTargetItemInfo)
-function GetTradeTargetItemInfo(id) end
+---@param index number
+---@return string name
+---@return string texture
+---@return number quantity
+---@return number quality
+---@return number isUsable
+---@return string enchant
+function GetTradeTargetItemInfo(index) end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_GetTradeTargetItemLink)
 function GetTradeTargetItemLink(id) end
@@ -2540,11 +2550,4 @@ function GetVoidItemHyperlinkString(voidSlot) end
 ---@return boolean isFiltered
 ---@return number quality
 function GetVoidItemInfo(tabIndex, slotIndex) end
-
----[Documentation](https://wowpedia.fandom.com/wiki/API_GetVoidStorageSlotPageIndex)
-function GetVoidStorageSlotPageIndex(slot) end
-
----[Documentation](https://wowpedia.fandom.com/wiki/API_GetVoidTransferCost)
----@return number cost
-function GetVoidTransferCost() end
 
