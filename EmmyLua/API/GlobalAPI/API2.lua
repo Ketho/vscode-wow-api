@@ -431,7 +431,7 @@ function CanInitiateWarGame() end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_CanInspect)
 ---@param unit UnitId
----@param showError boolean
+---@param showError? boolean
 ---@return boolean canInspect
 function CanInspect(unit, showError) end
 
