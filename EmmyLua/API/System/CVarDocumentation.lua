@@ -24,7 +24,7 @@ function C_CVar.GetCVarDefault(name) end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_CVar.RegisterCVar)
 ---@param name CVar
----@param value? string
+---@param value? string|number
 function C_CVar.RegisterCVar(name, value) end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_CVar.ResetTestCVars)
@@ -32,7 +32,7 @@ function C_CVar.ResetTestCVars() end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_CVar.SetCVar)
 ---@param name CVar
----@param value? string
+---@param value? string|number
 ---@param scriptCVar? string
 ---@return boolean success
 function C_CVar.SetCVar(name, value, scriptCVar) end

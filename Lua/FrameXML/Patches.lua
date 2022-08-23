@@ -10,8 +10,8 @@ m.data = {
 		GetCVarBitfield = {Arguments = {name = {Type = "CVar"}}},
 		GetCVarBool     = {Arguments = {name = {Type = "CVar"}}},
 		GetCVarDefault  = {Arguments = {name = {Type = "CVar"}}},
-		RegisterCVar    = {Arguments = {name = {Type = "CVar"}}},
-		SetCVar         = {Arguments = {name = {Type = "CVar"}}},
+		RegisterCVar    = {Arguments = {name = {Type = "CVar"}, value = {Type = "string|number"}}},
+		SetCVar         = {Arguments = {name = {Type = "CVar"}, value = {Type = "string|number"}}},
 		SetCVarBitfield = {Arguments = {name = {Type = "CVar"}}},
 	},
 }
