@@ -4892,7 +4892,7 @@ export const data: CVarInterface = {
 	graphicsssao: {
 		name: "graphicsSSAO",
 		default: "4",
-		category: 5,
+		category: 1,
 		help: "UI value of the graphics setting",
 	},
 	graphicsshadowquality: {
@@ -4904,7 +4904,7 @@ export const data: CVarInterface = {
 	graphicsspelldensity: {
 		name: "graphicsSpellDensity",
 		default: "5",
-		category: 5,
+		category: 1,
 		help: "UI value of the graphics setting",
 	},
 	graphicstextureresolution: {
@@ -6120,7 +6120,7 @@ export const data: CVarInterface = {
 	playintromovie: {
 		name: "playIntroMovie",
 		default: "5",
-		category: 5,
+		category: 4,
 		help: "Starting expansion movie to play on startup",
 	},
 	playerstatleftdropdown: {

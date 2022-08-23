@@ -1,4 +1,23 @@
 ---@meta
+---[Documentation](https://wowpedia.fandom.com/wiki/API_SpellCanTargetQuest)
+function SpellCanTargetQuest() end
+
+---[Documentation](https://wowpedia.fandom.com/wiki/API_SpellCanTargetUnit)
+---@param unitId string
+---@return boolean canTarget
+function SpellCanTargetUnit(unitId) end
+
+---[Documentation](https://wowpedia.fandom.com/wiki/API_SpellCancelQueuedSpell)
+function SpellCancelQueuedSpell() end
+
+---[Documentation](https://wowpedia.fandom.com/wiki/API_SpellGetVisibilityInfo)
+---@param spellId number
+---@param visType string
+---@return boolean hasCustom
+---@return boolean alwaysShowMine
+---@return boolean showForMySpec
+function SpellGetVisibilityInfo(spellId, visType) end
+
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_SpellHasRange)
 function SpellHasRange(spell) end
 

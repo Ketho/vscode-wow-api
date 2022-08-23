@@ -1,4 +1,21 @@
 ---@meta
+---[Documentation](https://wowpedia.fandom.com/wiki/API_GetUnitSpeed)
+---@param unit UnitId
+---@return number currentSpeed
+---@return number runSpeed
+---@return number flightSpeed
+---@return number swimSpeed
+function GetUnitSpeed(unit) end
+
+---[Documentation](https://wowpedia.fandom.com/wiki/API_GetVehicleBarIndex)
+function GetVehicleBarIndex() end
+
+---[Documentation](https://wowpedia.fandom.com/wiki/API_GetVehicleUIIndicator)
+function GetVehicleUIIndicator(indicatorID) end
+
+---[Documentation](https://wowpedia.fandom.com/wiki/API_GetVehicleUIIndicatorSeat)
+function GetVehicleUIIndicatorSeat(indicatorID, indicatorSeatIndex) end
+
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_GetVersatilityBonus)
 function GetVersatilityBonus(COMBAT_RATING) end
 
@@ -691,7 +708,7 @@ function IsMasterLooter() end
 function IsMetaKeyDown() end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_IsModifiedClick)
----@param action string
+---@param action? string
 ---@return boolean isHeld
 function IsModifiedClick(action) end
 
@@ -2468,23 +2485,4 @@ function SpellCanTargetItem() end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_SpellCanTargetItemID)
 function SpellCanTargetItemID() end
-
----[Documentation](https://wowpedia.fandom.com/wiki/API_SpellCanTargetQuest)
-function SpellCanTargetQuest() end
-
----[Documentation](https://wowpedia.fandom.com/wiki/API_SpellCanTargetUnit)
----@param unitId string
----@return boolean canTarget
-function SpellCanTargetUnit(unitId) end
-
----[Documentation](https://wowpedia.fandom.com/wiki/API_SpellCancelQueuedSpell)
-function SpellCancelQueuedSpell() end
-
----[Documentation](https://wowpedia.fandom.com/wiki/API_SpellGetVisibilityInfo)
----@param spellId number
----@param visType string
----@return boolean hasCustom
----@return boolean alwaysShowMine
----@return boolean showForMySpec
-function SpellGetVisibilityInfo(spellId, visType) end
 

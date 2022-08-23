@@ -405,6 +405,12 @@ function C_AdventureMap.GetZoneChoiceInfo(choiceIndex) end
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_AdventureMap.StartQuest)
 function C_AdventureMap.StartQuest(questID) end
 
+---[Documentation](https://wowpedia.fandom.com/wiki/API_C_AuctionHouse.ConfirmPostCommodity)
+function C_AuctionHouse.ConfirmPostCommodity() end
+
+---[Documentation](https://wowpedia.fandom.com/wiki/API_C_AuctionHouse.ConfirmPostItem)
+function C_AuctionHouse.ConfirmPostItem() end
+
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_BlackMarket.Close)
 function C_BlackMarket.Close() end
 
@@ -2080,10 +2086,4 @@ function C_ToyBox.GetNumLearnedDisplayedToys() end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_ToyBox.GetNumTotalDisplayedToys)
 function C_ToyBox.GetNumTotalDisplayedToys() end
-
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_ToyBox.GetNumToys)
-function C_ToyBox.GetNumToys() end
-
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_ToyBox.GetToyFromIndex)
-function C_ToyBox.GetToyFromIndex(itemIndex) end
 

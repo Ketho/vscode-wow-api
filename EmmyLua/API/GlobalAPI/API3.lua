@@ -1,4 +1,21 @@
 ---@meta
+---[Documentation](https://wowpedia.fandom.com/wiki/API_GetGuildBankMoneyTransaction)
+function GetGuildBankMoneyTransaction(index) end
+
+---[Documentation](https://wowpedia.fandom.com/wiki/API_GetGuildBankTabCost)
+function GetGuildBankTabCost() end
+
+---[Documentation](https://wowpedia.fandom.com/wiki/API_GetGuildBankTabInfo)
+---@param tab number
+---@return string name
+---@return string icon
+---@return boolean isViewable
+---@return boolean canDeposit
+---@return number numWithdrawals
+---@return number remainingWithdrawals
+---@return boolean filtered
+function GetGuildBankTabInfo(tab) end
+
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_GetGuildBankTabPermissions)
 ---@param tab number
 ---@return boolean canView
@@ -2548,21 +2565,4 @@ function GetUnitMaxHealthModifier(unit) end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_GetUnitPowerModifier)
 function GetUnitPowerModifier(unit) end
-
----[Documentation](https://wowpedia.fandom.com/wiki/API_GetUnitSpeed)
----@param unit UnitId
----@return number currentSpeed
----@return number runSpeed
----@return number flightSpeed
----@return number swimSpeed
-function GetUnitSpeed(unit) end
-
----[Documentation](https://wowpedia.fandom.com/wiki/API_GetVehicleBarIndex)
-function GetVehicleBarIndex() end
-
----[Documentation](https://wowpedia.fandom.com/wiki/API_GetVehicleUIIndicator)
-function GetVehicleUIIndicator(indicatorID) end
-
----[Documentation](https://wowpedia.fandom.com/wiki/API_GetVehicleUIIndicatorSeat)
-function GetVehicleUIIndicatorSeat(indicatorID, indicatorSeatIndex) end
 

@@ -1,4 +1,10 @@
 ---@meta
+---[Documentation](https://wowpedia.fandom.com/wiki/API_C_ToyBox.GetNumToys)
+function C_ToyBox.GetNumToys() end
+
+---[Documentation](https://wowpedia.fandom.com/wiki/API_C_ToyBox.GetToyFromIndex)
+function C_ToyBox.GetToyFromIndex(itemIndex) end
+
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_ToyBox.GetToyInfo)
 ---@param itemID number
 ---@return number itemID
@@ -1985,6 +1991,9 @@ function GetCoinIcon(amount) end
 function GetCoinText(amount, separator) end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_GetCoinTextureString)
+---@param amount number
+---@param fontHeight? number
+---@return string formattedAmount
 function GetCoinTextureString(amount, fontHeight) end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_GetCombatRating)
@@ -2416,21 +2425,4 @@ function GetGuildBankItemLink(tab, slot) end
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_GetGuildBankMoney)
 ---@return number retVal1
 function GetGuildBankMoney() end
-
----[Documentation](https://wowpedia.fandom.com/wiki/API_GetGuildBankMoneyTransaction)
-function GetGuildBankMoneyTransaction(index) end
-
----[Documentation](https://wowpedia.fandom.com/wiki/API_GetGuildBankTabCost)
-function GetGuildBankTabCost() end
-
----[Documentation](https://wowpedia.fandom.com/wiki/API_GetGuildBankTabInfo)
----@param tab number
----@return string name
----@return string icon
----@return boolean isViewable
----@return boolean canDeposit
----@return number numWithdrawals
----@return number remainingWithdrawals
----@return boolean filtered
-function GetGuildBankTabInfo(tab) end
 
