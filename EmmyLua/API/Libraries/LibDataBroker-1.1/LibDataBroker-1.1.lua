@@ -1,6 +1,6 @@
 ---@meta
 ---[Documentation](https://github.com/tekkub/libdatabroker-1-1/wiki/API)
----@class LibDataBroker
+---@class LibDataBroker-1.1
 local lib = {}
 
 ---@param name string
