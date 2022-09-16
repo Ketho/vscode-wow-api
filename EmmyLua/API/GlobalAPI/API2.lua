@@ -180,7 +180,7 @@ function C_TradeSkillUI.GetSubCategories(categoryID) end
 function C_TradeSkillUI.GetTradeSkillLineForRecipe(recipeID) end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_TradeSkillUI.GetTradeSkillListLink)
----@return string link
+---@return string? link
 function C_TradeSkillUI.GetTradeSkillListLink() end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_TradeSkillUI.GetTradeSkillTexture)
@@ -927,7 +927,7 @@ function CreateFont(name) end
 ---@generic T, Tp
 ---@param frameType `T` | FrameType
 ---@param name? string
----@param parent? Frame
+---@param parent? any
 ---@param template? `Tp` | TemplateType
 ---@param id? number
 ---@return T|Tp frame
@@ -1036,6 +1036,12 @@ function DestroyTotem(slot) end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_DetectWowMouse)
 function DetectWowMouse() end
+
+---[Documentation](https://wowpedia.fandom.com/wiki/API_DisableAddOn)
+---@param index number
+---@param character? string|boolean
+---@overload fun(name: string, character?: string|boolean)
+function DisableAddOn(index, character) end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_DisableAllAddOns)
 function DisableAllAddOns() end
@@ -1282,11 +1288,6 @@ function EjectPassengerFromSeat(seat) end
 ---@param character? string|boolean
 ---@overload fun(name: string, character?: string|boolean)
 function EnableAddOn(index, character) end
-
----@param index number
----@param character? string|boolean
----@overload fun(name: string, character?: string|boolean)
-function DisableAddOn(index, character) end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_EnableAllAddOns)
 function EnableAllAddOns() end

@@ -377,7 +377,7 @@ function GetItemClassInfo(classID) end
 function GetItemCooldown(itemId) end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_GetItemCount)
----@param itemInfo string
+---@param itemInfo number|string
 ---@param includeBank? boolean
 ---@param includeUses? boolean
 ---@param includeReagentBank? boolean
@@ -1290,6 +1290,7 @@ function GetOverrideSpellPowerByAP() end
 function GetPOITextureCoords(textureIndex) end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_GetPVPDesired)
+---@return boolean ispvp
 function GetPVPDesired() end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_GetPVPGearStatRules)

@@ -2247,7 +2247,8 @@ function SetPOIIconOverlapDistance(index) end
 function SetPOIIconOverlapPushDistance(index) end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_SetPVP)
-function SetPVP(enable) end
+---@param flag number
+function SetPVP(flag) end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_SetPVPRoles)
 ---@param tank boolean
@@ -2390,8 +2391,8 @@ function ShowContainerSellCursor(index, slot) end
 function ShowInventorySellCursor() end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_ShowQuestComplete)
----@param questLogIndex number
-function ShowQuestComplete(questLogIndex) end
+---@param questID number
+function ShowQuestComplete(questID) end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_ShowQuestOffer)
 function ShowQuestOffer(index) end
@@ -2482,7 +2483,4 @@ function SpellCanTargetGarrisonMission() end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_SpellCanTargetItem)
 function SpellCanTargetItem() end
-
----[Documentation](https://wowpedia.fandom.com/wiki/API_SpellCanTargetItemID)
-function SpellCanTargetItemID() end
 

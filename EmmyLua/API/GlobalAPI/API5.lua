@@ -1,4 +1,7 @@
 ---@meta
+---[Documentation](https://wowpedia.fandom.com/wiki/API_SpellCanTargetItemID)
+function SpellCanTargetItemID() end
+
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_SpellCanTargetQuest)
 function SpellCanTargetQuest() end
 
@@ -1068,7 +1071,9 @@ function WithdrawGuildBankMoney(money) end
 function addframetext(text) end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_debuglocals)
-function debuglocals() end
+---@param level number
+---@return string? locals
+function debuglocals(level) end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_debugprofilestart)
 function debugprofilestart() end
