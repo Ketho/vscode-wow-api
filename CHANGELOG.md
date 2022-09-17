@@ -5,6 +5,14 @@
 - Frame templates are not completely supported, only BackdropTemplate ([#15](https://github.com/Ketho/vscode-wow-api/issues/15)) 
 - The Classic (TBC) API is not supported ([#13](https://github.com/Ketho/vscode-wow-api/issues/13))
 
+## [0.8.9] - 2022-09-17
+### Added
+- 🌙 EmmyLua: PR [#51](https://github.com/Ketho/vscode-wow-api/pull/51) Added `LibDataBroker-1.1` by Kozoaku
+### Changed
+- 🐞 Bug Fixes: [#50](https://github.com/Ketho/vscode-wow-api/issues/50) Fixed GetItemCount not accepting a number
+- 🐞 Bug Fixes: [#49](https://github.com/Ketho/vscode-wow-api/issues/49) Fixed integer not being accepted as argument (instead of an enum)
+- 🐞 Bug Fixes: [#48](https://github.com/Ketho/vscode-wow-api/issues/48) Fixed CVar functions `value` parameter not accepting a number
+
 ## [0.8.8] - 2022-07-31
 ### Added
 - 🌙 EmmyLua: [#47](https://github.com/Ketho/vscode-wow-api/issues/47) Updated `GetActiveSpecGroup, GetSpellLevelLearned, UIFrameFadeIn/Out, UnitBuff/Aura, PlaySoundFile, UnitPower/Max, UnitIsMercenary, SetSpecialization, GetAddOnCPU/MemoryUsage`
@@ -281,6 +289,7 @@
 ### Added
 - 🚧 Wip: Development work
 
+[0.8.9]: https://github.com/Ketho/vscode-wow-api/releases/tag/0.8.9
 [0.8.8]: https://github.com/Ketho/vscode-wow-api/releases/tag/0.8.8
 [0.8.7]: https://github.com/Ketho/vscode-wow-api/releases/tag/0.8.7
 [0.8.6]: https://github.com/Ketho/vscode-wow-api/releases/tag/0.8.6
