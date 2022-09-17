@@ -6,7 +6,7 @@ C_Console = {}
 function C_Console.GetAllCommands() end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_Console.GetColorFromType)
----@param colorType ConsoleColorType
+---@param colorType number|ConsoleColorType
 ---@return ColorMixin color
 function C_Console.GetColorFromType(colorType) end
 

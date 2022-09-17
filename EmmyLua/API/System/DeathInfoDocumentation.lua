@@ -21,7 +21,7 @@ function C_DeathInfo.GetGraveyardsForMap(uiMapID) end
 function C_DeathInfo.GetSelfResurrectOptions() end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_DeathInfo.UseSelfResurrectOption)
----@param optionType SelfResurrectOptionType
+---@param optionType number|SelfResurrectOptionType
 ---@param id number
 function C_DeathInfo.UseSelfResurrectOption(optionType, id) end
 

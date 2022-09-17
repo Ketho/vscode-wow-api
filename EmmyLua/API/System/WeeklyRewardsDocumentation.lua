@@ -17,12 +17,12 @@ function C_WeeklyRewards.ClaimReward(id) end
 function C_WeeklyRewards.CloseInteraction() end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_WeeklyRewards.GetActivities)
----@param type? WeeklyRewardChestThresholdType
+---@param type? number|WeeklyRewardChestThresholdType
 ---@return WeeklyRewardActivityInfo[] activities
 function C_WeeklyRewards.GetActivities(type) end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_WeeklyRewards.GetActivityEncounterInfo)
----@param type WeeklyRewardChestThresholdType
+---@param type number|WeeklyRewardChestThresholdType
 ---@param index number
 ---@return WeeklyRewardActivityEncounterInfo[] info
 function C_WeeklyRewards.GetActivityEncounterInfo(type, index) end

@@ -41,7 +41,7 @@ function Emmy:GetFunction(func)
 	table.insert(tbl, fs_doc:format("API_"..Util:GetFullName(func)))
 	if func.Arguments then
 		for _, arg in pairs(func.Arguments) do
-			table.insert(tbl, self:GetField("param", arg))
+			table.insert(tbl, self:GetField("param", arg, "function_arg"))
 		end
 	end
 	if func.Returns then
@@ -64,7 +64,7 @@ end
 
 local fs_field = "---@%s %s %s"
 
-function Emmy:GetField(annotation, apiTable)
+function Emmy:GetField(annotation, apiTable, argType)
 	local str, paramType
 	if apiTable.Mixin then
 		paramType = apiTable.Mixin
@@ -72,6 +72,9 @@ function Emmy:GetField(annotation, apiTable)
 		paramType = GetType(apiTable.InnerType).."[]"
 	else
 		paramType = GetType(apiTable.Type)
+	end
+	if argType == "function_arg" and Enum[apiTable.Type] then -- issue #49
+		paramType = "number|"..paramType
 	end
 	local nilable = ""
 	if apiTable.Nilable or apiTable.Default ~= nil then

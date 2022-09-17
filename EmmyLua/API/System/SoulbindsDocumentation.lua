@@ -61,7 +61,7 @@ function C_Soulbinds.FindNodeIDPendingUninstall(soulbindID, conduitID) end
 function C_Soulbinds.GetActiveSoulbindID() end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_Soulbinds.GetConduitCollection)
----@param conduitType SoulbindConduitType
+---@param conduitType number|SoulbindConduitType
 ---@return ConduitCollectionData[] collectionData
 function C_Soulbinds.GetConduitCollection(conduitType) end
 
@@ -184,7 +184,7 @@ function C_Soulbinds.IsUnselectedConduitPendingInSoulbind(soulbindID) end
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_Soulbinds.ModifyNode)
 ---@param nodeID number
 ---@param conduitID number
----@param type SoulbindConduitTransactionType
+---@param type number|SoulbindConduitTransactionType
 function C_Soulbinds.ModifyNode(nodeID, conduitID, type) end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_Soulbinds.SelectNode)

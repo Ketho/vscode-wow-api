@@ -41,11 +41,3 @@ end
 function CreateFromMixins(...)
 	return Mixin({}, ...)
 end
-
-Enum = {
-	-- used in CurrencyConstantsDocumentation.lua:CurrencyConsts
-	PlayerCurrencyFlagsDbFlags = {
-		InBackpack = 4,
-		UnusedInUI = 8,
-	}
-}

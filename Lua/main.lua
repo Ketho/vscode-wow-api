@@ -2,12 +2,19 @@ CONSTANTS = {
 	LATEST_MAINLINE = "9.2.5",
 	LATEST_CLASSIC = "2.5.4",
 }
+local BRANCH = "mainline"
 
 local Util = require("Lua/Util/Util")
 
 Util:MakeDir("Lua/Data")
 Util:MakeDir("Lua/Data/cache")
 Util:MakeDir("Lua/Data/output")
+
+-- load Enum table
+Util:DownloadAndRun(
+	string.format("Lua/data/cache/LuaEnum_%s.lua", BRANCH),
+	string.format("https://raw.githubusercontent.com/Ketho/BlizzardInterfaceResources/%s/Resources/LuaEnum.lua", BRANCH)
+)
 
 -- load blizzard apidocs
 local FrameXML = require("Lua/FrameXML/FrameXML")

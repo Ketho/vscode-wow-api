@@ -12,23 +12,23 @@ function C_ReportSystem.CanReportPlayer(playerLocation) end
 function C_ReportSystem.CanReportPlayerForLanguage(playerLocation) end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_ReportSystem.GetMajorCategoriesForReportType)
----@param reportType ReportType
+---@param reportType number|ReportType
 ---@return ReportMajorCategory[] majorCategories
 function C_ReportSystem.GetMajorCategoriesForReportType(reportType) end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_ReportSystem.GetMajorCategoryString)
----@param majorCategory ReportMajorCategory
+---@param majorCategory number|ReportMajorCategory
 ---@return string majorCategoryString
 function C_ReportSystem.GetMajorCategoryString(majorCategory) end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_ReportSystem.GetMinorCategoriesForReportTypeAndMajorCategory)
----@param reportType ReportType
----@param majorCategory ReportMajorCategory
+---@param reportType number|ReportType
+---@param majorCategory number|ReportMajorCategory
 ---@return ReportMinorCategory[] minorCategories
 function C_ReportSystem.GetMinorCategoriesForReportTypeAndMajorCategory(reportType, majorCategory) end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_ReportSystem.GetMinorCategoryString)
----@param minorCategory ReportMinorCategory
+---@param minorCategory number|ReportMinorCategory
 ---@return string minorCategoryString
 function C_ReportSystem.GetMinorCategoryString(minorCategory) end
 

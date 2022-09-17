@@ -59,7 +59,7 @@ function C_EncounterJournal.SetPreviewMythicPlusLevel(level) end
 function C_EncounterJournal.SetPreviewPvpTier(tier) end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_EncounterJournal.SetSlotFilter)
----@param filterSlot ItemSlotFilterType
+---@param filterSlot number|ItemSlotFilterType
 function C_EncounterJournal.SetSlotFilter(filterSlot) end
 
 ---@class DungeonEntranceMapInfo

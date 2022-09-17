@@ -55,7 +55,7 @@ function C_VoiceChat.GetAvailableOutputDevices() end
 function C_VoiceChat.GetChannel(channelID) end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_VoiceChat.GetChannelForChannelType)
----@param channelType ChatChannelType
+---@param channelType number|ChatChannelType
 ---@return VoiceChatChannel? channel
 function C_VoiceChat.GetChannelForChannelType(channelType) end
 
@@ -153,7 +153,7 @@ function C_VoiceChat.GetTtsVoices() end
 function C_VoiceChat.GetVADSensitivity() end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_VoiceChat.IsChannelJoinPending)
----@param channelType ChatChannelType
+---@param channelType number|ChatChannelType
 ---@param clubId? string
 ---@param streamId? string
 ---@return boolean isPending
@@ -249,12 +249,12 @@ function C_VoiceChat.MarkChannelsDiscovered() end
 function C_VoiceChat.RequestJoinAndActivateCommunityStreamChannel(clubId, streamId) end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_VoiceChat.RequestJoinChannelByChannelType)
----@param channelType ChatChannelType
+---@param channelType number|ChatChannelType
 ---@param autoActivate? boolean
 function C_VoiceChat.RequestJoinChannelByChannelType(channelType, autoActivate) end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_VoiceChat.SetCommunicationMode)
----@param communicationMode CommunicationMode
+---@param communicationMode number|CommunicationMode
 function C_VoiceChat.SetCommunicationMode(communicationMode) end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_VoiceChat.SetDeafened)
@@ -322,7 +322,7 @@ function C_VoiceChat.SpeakRemoteTextSample(text) end
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_VoiceChat.SpeakText)
 ---@param voiceID number
 ---@param text string
----@param destination VoiceTtsDestination
+---@param destination number|VoiceTtsDestination
 ---@param rate number
 ---@param volume number
 function C_VoiceChat.SpeakText(voiceID, text, destination, rate, volume) end

@@ -85,7 +85,7 @@ function C_ChatInfo.IsChannelRegional(channelIndex) end
 function C_ChatInfo.IsChannelRegionalForChannelID(channelID) end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_ChatInfo.IsPartyChannelType)
----@param channelType ChatChannelType
+---@param channelType number|ChatChannelType
 ---@return boolean isPartyChannelType
 function C_ChatInfo.IsPartyChannelType(channelType) end
 

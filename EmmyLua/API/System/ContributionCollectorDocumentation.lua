@@ -24,7 +24,7 @@ function C_ContributionCollector.GetBuffs(contributionID) end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_ContributionCollector.GetContributionAppearance)
 ---@param contributionID number
----@param contributionState ContributionState
+---@param contributionState number|ContributionState
 ---@return ContributionAppearance? appearance
 function C_ContributionCollector.GetContributionAppearance(contributionID, contributionState) end
 

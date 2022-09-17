@@ -6,13 +6,13 @@ function C_QuestLog.AbandonQuest() end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_QuestLog.AddQuestWatch)
 ---@param questID number
----@param watchType? QuestWatchType
+---@param watchType? number|QuestWatchType
 ---@return boolean wasWatched
 function C_QuestLog.AddQuestWatch(questID, watchType) end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_QuestLog.AddWorldQuestWatch)
 ---@param questID number
----@param watchType? QuestWatchType
+---@param watchType? number|QuestWatchType
 ---@return boolean wasWatched
 function C_QuestLog.AddWorldQuestWatch(questID, watchType) end
 

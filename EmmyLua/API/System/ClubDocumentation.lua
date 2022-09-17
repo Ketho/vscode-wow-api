@@ -18,7 +18,7 @@ function C_Club.AdvanceStreamViewMarker(clubId, streamId) end
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_Club.AssignMemberRole)
 ---@param clubId string
 ---@param memberId number
----@param roleId ClubRoleIdentifier
+---@param roleId number|ClubRoleIdentifier
 function C_Club.AssignMemberRole(clubId, memberId, roleId) end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_Club.CanResolvePlayerLocationFromClubMessageData)
@@ -46,7 +46,7 @@ function C_Club.CompareBattleNetDisplayName(clubId, lhsMemberId, rhsMemberId) en
 ---@param name string
 ---@param shortName? string
 ---@param description string
----@param clubType ClubType
+---@param clubType number|ClubType
 ---@param avatarId number
 ---@param isCrossFaction? boolean
 function C_Club.CreateClub(name, shortName, description, clubType, avatarId, isCrossFaction) end
@@ -147,7 +147,7 @@ function C_Club.GetAssignableRoles(clubId, memberId) end
 
 ---listen for AVATAR_LIST_UPDATED event. This can happen if we haven't downloaded the battle.net avatar list yet
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_Club.GetAvatarIdList)
----@param clubType ClubType
+---@param clubType number|ClubType
 ---@return number[]? avatarIds
 function C_Club.GetAvatarIdList(clubType) end
 
@@ -161,7 +161,7 @@ function C_Club.GetClubCapacity() end
 function C_Club.GetClubInfo(clubId) end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_Club.GetClubLimits)
----@param clubType ClubType
+---@param clubType number|ClubType
 ---@return ClubLimits clubLimits
 function C_Club.GetClubLimits(clubType) end
 
@@ -183,7 +183,7 @@ function C_Club.GetClubPrivileges(clubId) end
 function C_Club.GetClubStreamNotificationSettings(clubId) end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_Club.GetCommunityNameResultText)
----@param result ValidateNameResult
+---@param result number|ValidateNameResult
 ---@return string? errorCode
 function C_Club.GetCommunityNameResultText(result) end
 
@@ -405,7 +405,7 @@ function C_Club.SetAutoAdvanceStreamViewMarker(clubId, streamId) end
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_Club.SetAvatarTexture)
 ---@param texture table
 ---@param avatarId number
----@param clubType ClubType
+---@param clubType number|ClubType
 function C_Club.SetAvatarTexture(texture, avatarId, clubType) end
 
 ---Check the canSetOwnMemberNote and canSetOtherMemberNote privileges.
@@ -436,7 +436,7 @@ function C_Club.SetFavorite(clubId, isFavorite) end
 function C_Club.SetSocialQueueingEnabled(clubId, enabled) end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_Club.ShouldAllowClubType)
----@param clubType ClubType
+---@param clubType number|ClubType
 ---@return boolean clubTypeIsAllowed
 function C_Club.ShouldAllowClubType(clubType) end
 
@@ -450,9 +450,9 @@ function C_Club.UnfocusAllStreams(unsubscribe) end
 function C_Club.UnfocusStream(clubId, streamId) end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_Club.ValidateText)
----@param clubType ClubType
+---@param clubType number|ClubType
 ---@param text string
----@param clubFieldType ClubFieldType
+---@param clubFieldType number|ClubFieldType
 ---@return ValidateNameResult result
 function C_Club.ValidateText(clubType, text, clubFieldType) end
 

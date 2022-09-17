@@ -250,7 +250,7 @@ function C_AuctionHouse.GetReplicateItemLink(index) end
 function C_AuctionHouse.GetReplicateItemTimeLeft(index) end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_AuctionHouse.GetTimeLeftBandInfo)
----@param timeLeftBand AuctionHouseTimeLeftBand
+---@param timeLeftBand number|AuctionHouseTimeLeftBand
 ---@return number timeLeftMinSeconds
 ---@return number timeLeftMaxSeconds
 function C_AuctionHouse.GetTimeLeftBandInfo(timeLeftBand) end

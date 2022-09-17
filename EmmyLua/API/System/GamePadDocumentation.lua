@@ -2,7 +2,7 @@
 C_GamePad = {}
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_GamePad.AddSDLMapping)
----@param platform ClientPlatformType
+---@param platform number|ClientPlatformType
 ---@param mapping string
 ---@return boolean success
 function C_GamePad.AddSDLMapping(platform, mapping) end
