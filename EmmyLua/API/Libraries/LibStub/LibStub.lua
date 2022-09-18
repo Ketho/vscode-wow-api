@@ -2,8 +2,10 @@
 ---[Documentation](https://www.wowace.com/projects/libstub)
 LibStub = {}
 
----@param major string
+---@generic T
+---@param major `T`
 ---@param minor number
+---@return T library
 function LibStub:NewLibrary(major, minor) end
 
 ---@generic T
