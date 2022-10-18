@@ -8,6 +8,8 @@ local AceConfigDialog = {}
 ---@param name? string A descriptive name to display in the options tree. Defaults to appName
 ---@param parent? string The parent to use in the interface options tree
 ---@param ...? string The path in the options table to feed into the interface options panel
+---@return any # The reference to the frame registered into the Interface Options.
+---@return any # The registered category ID
 ---[Documentation](https://www.wowace.com/projects/ace3/pages/api/ace-config-dialog-3-0#title-1)
 function AceConfigDialog:AddToBlizOptions(appName, name, parent, ...) end
 
