@@ -6,6 +6,7 @@ LibStub = {}
 ---@param major `T`
 ---@param minor number
 ---@return T library
+---@return number? oldMinor
 function LibStub:NewLibrary(major, minor) end
 
 ---@generic T
