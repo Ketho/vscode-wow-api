@@ -49,7 +49,8 @@ Returns the level of the unit.
 :;level:{{apitype|number}}
 ```
 
-Alternatively, the script will look for a commented emmylua block if present.
+Alternatively, the script will look for a commented emmylua block if present.  
+(This only looks for global APIs not documented in Blizzard_APIDocumentationGenerated, it won't look for Widget APIs and FrameXML functions)
 ```lua
 <!-- emmylua
 ---@param unit UnitId
