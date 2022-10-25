@@ -3,7 +3,15 @@
 local AceDB = {}
 
 ---@class AceDBObject-3.0
----@field profile table Contains the active profile
+---@field char table Character-specific data. Every character has its own database.
+---@field realm table Realm-specific data. All of the players characters on the same realm share this database.
+---@field class table Class-specific data. All of the players characters of the same class share this database.
+---@field race table Race-specific data. All of the players characters of the same race share this database.
+---@field faction table Faction-specific data. All of the players characters of the same faction share this database.
+---@field factionrealm table Faction and realm specific data. All of the players characters on the same realm and of the same faction share this database.
+---@field locale table Locale specific data, based on the locale of the players game client.
+---@field global table Global Data. All characters on the same account share this database.
+---@field profile table Profile-specific data. All characters using the same profile share this database. The user can control which profile should be used.
 ---@field profiles table Contains all profiles
 ---@field keys table
 ---@field sv table
@@ -57,7 +65,7 @@ function DBObjectLib:ResetProfile(noChildren, noCallbacks) end
 function DBObjectLib:ResetDB(defaultProfile) end
 
 ---@param name string The name of the new namespace
----@param defaults table A table of values to use as defaults
+---@param defaults? table A table of values to use as defaults
 ---@return AceDBObject-3.0 The created database
 --- ---
 ---[Documentation](https://www.wowace.com/projects/ace3/pages/api/ace-db-3-0#title-9)
