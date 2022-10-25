@@ -1,7 +1,7 @@
 ---@meta
 ---@class AceTimerObj
 ---@field object table The object that the timer is registered on (self)
----@fiel func function Callback function
+---@field func function Callback function
 ---@field looping boolean If true, the timer will loop
 ---@field argsCount number number of arguments to pass to the callback function
 ---@field delay number delay in seconds
@@ -18,7 +18,7 @@ function AceTimer:CancelAllTimers() end
 ---[Documentation](https://www.wowace.com/projects/ace3/pages/api/ace-timer-3-0#title-2)
 function AceTimer:CancelTimer(id) end
 
----@param func function Callback function for the timer pulse (funcref or method name).
+---@param func function|string Callback function for the timer pulse (funcref or method name).
 ---@param delay number Delay for the timer, in seconds.
 ---@param ... any An optional, unlimited amount of arguments to pass to the callback function.
 ---@return AceTimerObj
