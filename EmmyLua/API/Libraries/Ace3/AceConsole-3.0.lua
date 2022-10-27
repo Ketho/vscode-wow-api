@@ -52,7 +52,7 @@ function AceConsole:IterateChatCommands() end
 ---@param str string The raw argument string
 ---@param numargs? number How many arguments to get (default 1)
 ---@param startpos? number Where in the string to start scanning (default  1)
----@return table
+---@return ...
 --- ---
 ---[Documentation](https://www.wowace.com/projects/ace3/pages/api/ace-console-3-0#title-1)
 function AceConsole:GetArgs(str, numargs, startpos) end
