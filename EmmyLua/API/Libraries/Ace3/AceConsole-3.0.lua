@@ -44,7 +44,7 @@ function AceConsole:RegisterChatCommand(command, func, persist) end
 ---[Documentation](https://www.wowace.com/projects/ace3/pages/api/ace-console-3-0#title-6)
 function AceConsole:UnregisterChatCommand(command) end
 
----@return table -- Iterator (pairs) over all commands
+---@return fun(table: table<string, string>, index?: string): string, string -- Iterator (pairs) over all commands
 --- ---
 ---[Documentation](https://www.wowace.com/projects/ace3/pages/api/ace-console-3-0#title-2)
 function AceConsole:IterateChatCommands() end
