@@ -23,7 +23,7 @@ function lib:IterateAddons() end
 
 ---@param object table
 ---@param name string
----@param ... string List of libraries to embed into the addon
+---@param ...? string List of libraries to embed into the addon
 ---@return AceAddon
 ---@overload fun(self, name: string, ...: string)
 ---[Documentation](https://www.wowace.com/projects/ace3/pages/api/ace-addon-3-0#title-18)
@@ -32,6 +32,8 @@ function lib:NewAddon(object, name, ...) end
 ---@class AceAddon
 ---@field name string
 ---@field modules table
+---@field enabledState boolean
+---@field defaultModuleState boolean
 ---@field orderedModules table
 ---@field defaultModuleLibraries table
 local addon = {}
@@ -68,6 +70,9 @@ function addon:GetName() end
 ---[Documentation](https://www.wowace.com/projects/ace3/pages/api/ace-addon-3-0#title-8)
 function addon:IsEnabled() end
 
+---@return boolean
+function addon:IsModule() end
+
 ---@return function iter
 ---@return table invariant
 ---@return number init
@@ -76,6 +81,7 @@ function addon:IterateModules() end
 
 ---@param name string
 ---@param ... string List of libraries to embed into the addon
+---@return AceModule
 ---@overload fun(self, name: string, prototype: table, ...: string)
 ---[Documentation](https://www.wowace.com/projects/ace3/pages/api/ace-addon-3-0#title-10)
 function addon:NewModule(name, ...) end
@@ -95,3 +101,7 @@ function addon:SetDefaultModuleState(state) end
 ---@param state boolean
 ---[Documentation](https://www.wowace.com/projects/ace3/pages/api/ace-addon-3-0#title-14)
 function addon:SetEnabledState(state) end
+
+---@class AceModule : AceAddon
+---@field moduleName string
+local module = {}
