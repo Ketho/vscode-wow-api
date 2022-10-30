@@ -72,7 +72,8 @@ function addon:IterateModules() end
 
 ---@param name string
 ---@param ... string List of libraries to embed into the addon
----@overload fun(self, name: string, prototype: table, ...: string)
+---@return AceAddon
+---@overload fun(self, name: string, prototype: table, ...: string): AceAddon
 ---[Documentation](https://www.wowace.com/projects/ace3/pages/api/ace-addon-3-0#title-10)
 function addon:NewModule(name, ...) end
 
