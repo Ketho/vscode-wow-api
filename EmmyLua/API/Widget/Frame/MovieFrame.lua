@@ -24,7 +24,7 @@ function MovieFrame:HasScript(scriptType) end
 function MovieFrame:HookScript(scriptType, handler, bindingType) end
 
 ---@param scriptType ScriptMovieFrame
----@param handler function
+---@param handler function|nil
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_ScriptObject_SetScript)
 function MovieFrame:SetScript(scriptType, handler) end
 

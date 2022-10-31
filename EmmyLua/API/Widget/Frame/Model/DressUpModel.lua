@@ -24,7 +24,7 @@ function DressUpModel:HasScript(scriptType) end
 function DressUpModel:HookScript(scriptType, handler, bindingType) end
 
 ---@param scriptType ScriptDressUpModel
----@param handler function
+---@param handler function|nil
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_ScriptObject_SetScript)
 function DressUpModel:SetScript(scriptType, handler) end
 

@@ -24,7 +24,7 @@ function CinematicModel:HasScript(scriptType) end
 function CinematicModel:HookScript(scriptType, handler, bindingType) end
 
 ---@param scriptType ScriptCinematicModel
----@param handler function
+---@param handler function|nil
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_ScriptObject_SetScript)
 function CinematicModel:SetScript(scriptType, handler) end
 

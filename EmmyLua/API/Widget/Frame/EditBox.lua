@@ -24,7 +24,7 @@ function EditBox:HasScript(scriptType) end
 function EditBox:HookScript(scriptType, handler, bindingType) end
 
 ---@param scriptType ScriptEditBox
----@param handler function
+---@param handler function|nil
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_ScriptObject_SetScript)
 function EditBox:SetScript(scriptType, handler) end
 

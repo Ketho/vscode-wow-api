@@ -24,7 +24,7 @@ function GameTooltip:HasScript(scriptType) end
 function GameTooltip:HookScript(scriptType, handler, bindingType) end
 
 ---@param scriptType ScriptGameTooltip
----@param handler function
+---@param handler function|nil
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_ScriptObject_SetScript)
 function GameTooltip:SetScript(scriptType, handler) end
 

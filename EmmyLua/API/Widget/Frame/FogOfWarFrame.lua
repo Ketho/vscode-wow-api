@@ -24,7 +24,7 @@ function FogOfWarFrame:HasScript(scriptType) end
 function FogOfWarFrame:HookScript(scriptType, handler, bindingType) end
 
 ---@param scriptType ScriptFogOfWarFrame
----@param handler function
+---@param handler function|nil
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_ScriptObject_SetScript)
 function FogOfWarFrame:SetScript(scriptType, handler) end
 

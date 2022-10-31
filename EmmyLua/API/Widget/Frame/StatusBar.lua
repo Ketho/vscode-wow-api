@@ -24,7 +24,7 @@ function StatusBar:HasScript(scriptType) end
 function StatusBar:HookScript(scriptType, handler, bindingType) end
 
 ---@param scriptType ScriptStatusBar
----@param handler function
+---@param handler function|nil
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_ScriptObject_SetScript)
 function StatusBar:SetScript(scriptType, handler) end
 

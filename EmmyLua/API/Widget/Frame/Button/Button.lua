@@ -24,7 +24,7 @@ function Button:HasScript(scriptType) end
 function Button:HookScript(scriptType, handler, bindingType) end
 
 ---@param scriptType ScriptButton
----@param handler function
+---@param handler function|nil
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_ScriptObject_SetScript)
 function Button:SetScript(scriptType, handler) end
 
