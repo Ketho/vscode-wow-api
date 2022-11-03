@@ -4,8 +4,8 @@
 local AceEvent = {}
 
 ---@param event WowEvent The event to register for
----@param callback function The callback function to call when the event is triggered (funcref or method, defaults to a method with the event name)
----@param arg any An optional argument to pass to the callback function
+---@param callback? function|string The callback function to call when the event is triggered (funcref or method, defaults to a method with the event name)
+---@param arg? any An optional argument to pass to the callback function
 --- ---
 ---[Documentation](https://www.wowace.com/projects/ace3/pages/api/ace-event-3-0#title-1)
 function AceEvent:RegisterEvent(event, callback, arg) end
@@ -16,8 +16,8 @@ function AceEvent:RegisterEvent(event, callback, arg) end
 function AceEvent:UnregisterEvent(event) end
 
 ---@param message string The message to register for
----@param callback function The callback function to call when the message is triggered (funcref or method, defaults to a method with the event name)
----@param arg any An optional argument to pass to the callback function
+---@param callback? function|string The callback function to call when the message is triggered (funcref or method, defaults to a method with the event name)
+---@param arg? any An optional argument to pass to the callback function
 --- ---
 ---[Documentation](https://www.wowace.com/projects/ace3/pages/api/ace-event-3-0#title-2)
 function AceEvent:RegisterMessage(message, callback, arg) end
