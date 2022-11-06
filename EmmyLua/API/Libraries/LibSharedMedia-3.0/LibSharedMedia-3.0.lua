@@ -17,42 +17,58 @@ LibSharedMedia.MediaType = {
 	SOUND = "sound",
 }
 
----@param mediatype string
+---@alias LibSharedMediaTypes
+---| '"background"' # Backgrounds
+---| '"border"' # Borders
+---| '"font"' # Fonts
+---| '"sound"' # Sounds
+---| '"statusbar"' # Statusbars
+
+---@param mediatype LibSharedMediaTypes
 ---@param key string
 ---@param data string
 ---@param langmask? number
+---[Documentation](https://www.wowace.com/projects/libsharedmedia-3-0/pages/api-documentation/)
 function LibSharedMedia:Register(mediatype, key, data, langmask) end
 
----@param mediatype string
+---@param mediatype LibSharedMediaTypes
 ---@param key string
 ---@param noDefault? boolean
 ---@return string?
+---[Documentation](https://www.wowace.com/projects/libsharedmedia-3-0/pages/api-documentation/)
 function LibSharedMedia:Fetch(mediatype, key, noDefault) end
 
----@param mediatype string
+---@param mediatype LibSharedMediaTypes
 ---@param key? string
+---[Documentation](https://www.wowace.com/projects/libsharedmedia-3-0/pages/api-documentation/)
 function LibSharedMedia:IsValid(mediatype, key) end
 
----@param mediatype string
+---@param mediatype LibSharedMediaTypes
 ---@return table<string, string>
+---[Documentation](https://www.wowace.com/projects/libsharedmedia-3-0/pages/api-documentation/)
 function LibSharedMedia:HashTable(mediatype) end
 
----@param mediatype string
+---@param mediatype LibSharedMediaTypes
 ---@return string[]
+---[Documentation](https://www.wowace.com/projects/libsharedmedia-3-0/pages/api-documentation/)
 function LibSharedMedia:List(mediatype) end
 
----@param mediatype string
+---@param mediatype LibSharedMediaTypes
 ---@return string?
+---[Documentation](https://www.wowace.com/projects/libsharedmedia-3-0/pages/api-documentation/)
 function LibSharedMedia:GetGlobal(mediatype) end
 
----@param mediatype string
+---@param mediatype LibSharedMediaTypes
 ---@param key? string
+---[Documentation](https://www.wowace.com/projects/libsharedmedia-3-0/pages/api-documentation/)
 function LibSharedMedia:SetGlobal(mediatype, key) end
 
----@param mediatype string
+---@param mediatype LibSharedMediaTypes
 ---@return string?
+---[Documentation](https://www.wowace.com/projects/libsharedmedia-3-0/pages/api-documentation/)
 function LibSharedMedia:GetDefault(mediatype) end
 
 ---@param type string
 ---@param handle string
+---[Documentation](https://www.wowace.com/projects/libsharedmedia-3-0/pages/api-documentation/)
 function LibSharedMedia:SetDefault(type, handle) end
