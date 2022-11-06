@@ -12,7 +12,7 @@ Util:MakeDir("Lua/Data/output")
 
 -- load Enum table
 Util:DownloadAndRun(
-	string.format("Lua/data/cache/LuaEnum_%s.lua", BRANCH),
+	string.format("Lua/Data/cache/LuaEnum_%s.lua", BRANCH),
 	string.format("https://raw.githubusercontent.com/Ketho/BlizzardInterfaceResources/%s/Resources/LuaEnum.lua", BRANCH)
 )
 
