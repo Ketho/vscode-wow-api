@@ -379,6 +379,17 @@ function C_TransmogCollection.UpdateUsableAppearances() end
 ---@field encounter string
 ---@field difficulties string[]
 
+---@class TransmogAppearanceSourceInfoData
+---@field category TransmogCollectionType
+---@field itemAppearanceID number
+---@field canHaveIllusion boolean
+---@field icon number
+---@field isCollected boolean
+---@field itemLink string
+---@field transmoglink string
+---@field sourceType number?
+---@field itemSubClass number
+
 ---@class TransmogCategoryAppearanceInfo
 ---@field visualID number
 ---@field isCollected boolean
@@ -392,6 +403,13 @@ function C_TransmogCollection.UpdateUsableAppearances() end
 ---@field hasActiveRequiredHoliday boolean
 ---@field alwaysShowItem boolean?
 
+---@class TransmogCategoryInfo
+---@field name string
+---@field isWeapon boolean? Default = false
+---@field canHaveIllusions boolean? Default = false
+---@field canMainHand boolean? Default = false
+---@field canOffHand boolean? Default = false
+
 ---@class TransmogIllusionInfo
 ---@field visualID number
 ---@field sourceID number
@@ -399,3 +417,7 @@ function C_TransmogCollection.UpdateUsableAppearances() end
 ---@field isCollected boolean
 ---@field isUsable boolean
 ---@field isHideVisual boolean
+
+---@class TransmogOutfitInfo
+---@field name string
+---@field icon number

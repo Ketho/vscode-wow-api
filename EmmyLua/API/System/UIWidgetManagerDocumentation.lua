@@ -45,6 +45,11 @@ function C_UIWidgetManager.GetDoubleStateIconRowVisualizationInfo(widgetID) end
 ---@return DoubleStatusBarWidgetVisualizationInfo? widgetInfo
 function C_UIWidgetManager.GetDoubleStatusBarWidgetVisualizationInfo(widgetID) end
 
+---[Documentation](https://wowpedia.fandom.com/wiki/API_C_UIWidgetManager.GetFillUpFramesWidgetVisualizationInfo)
+---@param widgetID number
+---@return FillUpFramesWidgetVisualizationInfo? widgetInfo
+function C_UIWidgetManager.GetFillUpFramesWidgetVisualizationInfo(widgetID) end
+
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_UIWidgetManager.GetHorizontalCurrenciesWidgetVisualizationInfo)
 ---@param widgetID number
 ---@return HorizontalCurrenciesWidgetVisualizationInfo? widgetInfo
@@ -112,6 +117,11 @@ function C_UIWidgetManager.GetTextColumnRowVisualizationInfo(widgetID) end
 ---@param widgetID number
 ---@return TextWithStateWidgetVisualizationInfo? widgetInfo
 function C_UIWidgetManager.GetTextWithStateWidgetVisualizationInfo(widgetID) end
+
+---[Documentation](https://wowpedia.fandom.com/wiki/API_C_UIWidgetManager.GetTextWithSubtextWidgetVisualizationInfo)
+---@param widgetID number
+---@return TextWithSubtextWidgetVisualizationInfo? widgetInfo
+function C_UIWidgetManager.GetTextWithSubtextWidgetVisualizationInfo(widgetID) end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_UIWidgetManager.GetTextureAndTextRowVisualizationInfo)
 ---@param widgetID number
@@ -301,6 +311,29 @@ function C_UIWidgetManager.UnregisterUnitForWidgetUpdates(unitToken, isGuid) end
 ---@field leftBarTooltipLoc UIWidgetTooltipLocation
 ---@field rightBarTooltipLoc UIWidgetTooltipLocation
 ---@field fillMotionType UIWidgetMotionType
+---@field widgetSizeSetting number
+---@field textureKit string
+---@field frameTextureKit string
+---@field hasTimer boolean
+---@field orderIndex number
+---@field widgetTag string
+---@field inAnimType WidgetAnimationType
+---@field outAnimType WidgetAnimationType
+---@field widgetScale UIWidgetScale
+---@field layoutDirection UIWidgetLayoutDirection
+---@field modelSceneLayer UIWidgetModelSceneLayer
+---@field scriptedAnimationEffectID number
+
+---@class FillUpFramesWidgetVisualizationInfo
+---@field shownState WidgetShownState
+---@field fillMin number
+---@field fillMax number
+---@field fillValue number
+---@field numTotalFrames number
+---@field numFullFrames number
+---@field pulseFillingFrame boolean
+---@field tooltip string
+---@field tooltipLoc UIWidgetTooltipLocation
 ---@field widgetSizeSetting number
 ---@field textureKit string
 ---@field frameTextureKit string
@@ -557,6 +590,35 @@ function C_UIWidgetManager.UnregisterUnitForWidgetUpdates(unitToken, isGuid) end
 ---@field modelSceneLayer UIWidgetModelSceneLayer
 ---@field scriptedAnimationEffectID number
 
+---@class TextWithSubtextWidgetVisualizationInfo
+---@field shownState WidgetShownState
+---@field enabledState WidgetEnabledState
+---@field text string
+---@field widgetWidth number
+---@field tooltip string
+---@field textSizeType UIWidgetTextSizeType
+---@field fontType UIWidgetFontType
+---@field tooltipLoc UIWidgetTooltipLocation
+---@field hAlign WidgetTextHorizontalAlignmentType
+---@field subText string
+---@field subTextSizeType UIWidgetTextSizeType
+---@field subTextFontType UIWidgetFontType
+---@field subTextHAlign WidgetTextHorizontalAlignmentType
+---@field subTextEnabledState WidgetEnabledState
+---@field widgetSizeSetting number
+---@field textureKit string
+---@field frameTextureKit string
+---@field hasTimer boolean
+---@field orderIndex number
+---@field widgetTag string
+---@field inAnimType WidgetAnimationType
+---@field outAnimType WidgetAnimationType
+---@field widgetScale UIWidgetScale
+---@field layoutDirection UIWidgetLayoutDirection
+---@field modelSceneLayer UIWidgetModelSceneLayer
+---@field scriptedAnimationEffectID number
+---@field spacing number
+
 ---@class TextureAndTextEntryInfo
 ---@field text string
 ---@field tooltip string
@@ -564,7 +626,8 @@ function C_UIWidgetManager.UnregisterUnitForWidgetUpdates(unitToken, isGuid) end
 ---@class TextureAndTextRowVisualizationInfo
 ---@field shownState WidgetShownState
 ---@field entries TextureAndTextEntryInfo[]
----@field textSizeType UIWidgetTextSizeType
+---@field textSizeType UIWidgetTextureAndTextSizeType
+---@field fixedWidth number?
 ---@field tooltipLoc UIWidgetTooltipLocation
 ---@field widgetSizeSetting number
 ---@field textureKit string
@@ -639,14 +702,20 @@ function C_UIWidgetManager.UnregisterUnitForWidgetUpdates(unitToken, isGuid) end
 ---@field iconSizeType SpellDisplayIconSizeType
 ---@field iconDisplayType SpellDisplayIconDisplayType
 ---@field textShownState SpellDisplayTextShownStateType
+---@field borderColor SpellDisplayBorderColor
 ---@field textFontType UIWidgetFontType
 ---@field textSizeType UIWidgetTextSizeType
 ---@field hAlignType WidgetTextHorizontalAlignmentType
+---@field isLootObject boolean
 
 ---@class UIWidgetStateIconInfo
 ---@field iconState IconState
 ---@field state1Tooltip string
 ---@field state2Tooltip string
+
+---@class UIWidgetTextTooltipPair
+---@field text string
+---@field tooltip string
 
 ---@class UnitPowerBarWidgetVisualizationInfo
 ---@field shownState WidgetShownState

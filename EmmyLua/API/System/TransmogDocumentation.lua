@@ -132,3 +132,24 @@ function C_Transmog.SetPending(transmogLocation, pendingInfo) end
 ---@class TransmogApplyWarningInfo
 ---@field itemLink string
 ---@field text string
+
+---@class TransmogSlotInfo
+---@field isTransmogrified boolean
+---@field hasPending boolean
+---@field isPendingCollected boolean
+---@field canTransmogrify boolean
+---@field cannotTransmogrifyReason number
+---@field hasUndo boolean
+---@field isHideVisual boolean
+---@field texture number?
+
+---@class TransmogSlotVisualInfo
+---@field baseSourceID number
+---@field baseVisualID number
+---@field appliedSourceID number
+---@field appliedVisualID number
+---@field pendingSourceID number
+---@field pendingVisualID number
+---@field hasUndo boolean
+---@field isHideVisual boolean
+---@field itemSubclass number

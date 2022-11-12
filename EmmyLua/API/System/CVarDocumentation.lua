@@ -33,14 +33,12 @@ function C_CVar.ResetTestCVars() end
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_CVar.SetCVar)
 ---@param name CVar
 ---@param value? string|number
----@param scriptCVar? string
 ---@return boolean success
-function C_CVar.SetCVar(name, value, scriptCVar) end
+function C_CVar.SetCVar(name, value) end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_CVar.SetCVarBitfield)
 ---@param name CVar
 ---@param index number
 ---@param value boolean
----@param scriptCVar? string
 ---@return boolean success
-function C_CVar.SetCVarBitfield(name, index, value, scriptCVar) end
+function C_CVar.SetCVarBitfield(name, index, value) end

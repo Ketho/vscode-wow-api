@@ -182,6 +182,7 @@ function C_LFGList.ValidateRequiredPvpRatingForActivity(activityID, rating) end
 ---@field isPvpActivity boolean
 ---@field isMythicActivity boolean
 ---@field allowCrossFaction boolean
+---@field useDungeonRoleExpectations boolean
 
 ---@class LfgApplicantData
 ---@field applicantID number
@@ -226,6 +227,7 @@ function C_LFGList.ValidateRequiredPvpRatingForActivity(activityID, rating) end
 ---@field voiceChat string
 ---@field requiredItemLevel number
 ---@field requiredHonorLevel number
+---@field hasSelf boolean
 ---@field numMembers number
 ---@field numBNetFriends number
 ---@field numCharFriends number

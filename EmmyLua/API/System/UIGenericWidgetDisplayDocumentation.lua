@@ -1,0 +1,7 @@
+---@meta
+---@class GenericWidgetDisplayFrameInfo
+---@field uiWidgetSetID number?
+---@field uiTextureKit string?
+---@field title string?
+---@field frameWidth number
+---@field frameHeight number

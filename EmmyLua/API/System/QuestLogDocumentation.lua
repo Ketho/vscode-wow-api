@@ -21,6 +21,12 @@ function C_QuestLog.AddWorldQuestWatch(questID, watchType) end
 ---@return boolean canAbandon
 function C_QuestLog.CanAbandonQuest(questID) end
 
+---[Documentation](https://wowpedia.fandom.com/wiki/API_C_QuestLog.DoesQuestAwardReputationWithFaction)
+---@param questID number
+---@param factionID number
+---@return boolean awardsReputation
+function C_QuestLog.DoesQuestAwardReputationWithFaction(questID, factionID) end
+
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_QuestLog.GetAbandonQuest)
 ---@return number questID
 function C_QuestLog.GetAbandonQuest() end
@@ -47,6 +53,7 @@ function C_QuestLog.GetBountiesForMapID(uiMapID) end
 ---@return MapOverlayDisplayLocation displayLocation
 ---@return number lockQuestID
 ---@return number bountySetID
+---@return boolean isActivitySet
 function C_QuestLog.GetBountySetInfoForMapID(uiMapID) end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_QuestLog.GetDistanceSqToQuest)
@@ -151,6 +158,11 @@ function C_QuestLog.GetQuestIDForQuestWatchIndex(questWatchIndex) end
 ---@param questWatchIndex number
 ---@return number? questID
 function C_QuestLog.GetQuestIDForWorldQuestWatchIndex(questWatchIndex) end
+
+---[Documentation](https://wowpedia.fandom.com/wiki/API_C_QuestLog.GetQuestLogMajorFactionReputationRewards)
+---@param questID number
+---@return QuestReputationRewardInfo[] reputationRewards
+function C_QuestLog.GetQuestLogMajorFactionReputationRewards(questID) end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_QuestLog.GetQuestLogPortraitGiver)
 ---@param questLogIndex? number
@@ -397,6 +409,11 @@ function C_QuestLog.ShouldShowQuestRewards(questID) end
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_QuestLog.SortQuestWatches)
 function C_QuestLog.SortQuestWatches() end
 
+---[Documentation](https://wowpedia.fandom.com/wiki/API_C_QuestLog.UnitIsRelatedToActiveQuest)
+---@param unit string
+---@return boolean isRelatedToActiveQuest
+function C_QuestLog.UnitIsRelatedToActiveQuest(unit) end
+
 ---@class QuestInfo
 ---@field title string
 ---@field questLogIndex number
@@ -407,6 +424,7 @@ function C_QuestLog.SortQuestWatches() end
 ---@field suggestedGroup number
 ---@field frequency QuestFrequency?
 ---@field isHeader boolean
+---@field useMinimalHeader boolean
 ---@field isCollapsed boolean
 ---@field startEvent boolean
 ---@field isTask boolean

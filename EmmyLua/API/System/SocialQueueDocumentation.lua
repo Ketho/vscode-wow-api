@@ -77,6 +77,16 @@ function C_SocialQueue.SignalToastDisplayed(groupGUID, priority) end
 ---@field THROTTLE_DF_MAX_ITEM_LEVEL number
 ---@field THROTTLE_DF_BEST_PRIORITY number
 
+---@class SocialQueueGroupInfo
+---@field canJoin boolean
+---@field numQueues number
+---@field needTank boolean
+---@field needHealer boolean
+---@field needDamage boolean
+---@field isSoloQueueParty boolean
+---@field questSessionActive boolean
+---@field leaderGUID string
+
 ---@class SocialQueueGroupQueueInfo
 ---@field clientID number
 ---@field eligible boolean

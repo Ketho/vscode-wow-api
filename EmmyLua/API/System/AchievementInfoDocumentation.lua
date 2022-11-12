@@ -11,6 +11,11 @@ function C_AchievementInfo.GetRewardItemID(achievementID) end
 ---@return number[] supercedingAchievements
 function C_AchievementInfo.GetSupercedingAchievements(achievementID) end
 
+---[Documentation](https://wowpedia.fandom.com/wiki/API_C_AchievementInfo.IsGuildAchievement)
+---@param achievementId number
+---@return boolean isGuild
+function C_AchievementInfo.IsGuildAchievement(achievementId) end
+
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_AchievementInfo.IsValidAchievement)
 ---@param achievementId number
 ---@return boolean isValidAchievement

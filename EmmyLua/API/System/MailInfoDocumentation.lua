@@ -6,6 +6,11 @@ C_Mail = {}
 ---@return number secondsUntilAllowed
 function C_Mail.CanCheckInbox() end
 
+---[Documentation](https://wowpedia.fandom.com/wiki/API_C_Mail.GetCraftingOrderMailInfo)
+---@param inboxIndex number
+---@return CraftingOrderMailInfo? info
+function C_Mail.GetCraftingOrderMailInfo(inboxIndex) end
+
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_Mail.HasInboxMoney)
 ---@param inboxIndex number
 ---@return boolean inboxItemHasMoneyAttached

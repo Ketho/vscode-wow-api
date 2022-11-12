@@ -227,6 +227,16 @@ function C_Map.SetUserWaypoint(point) end
 ---@field relativeHeightIndex number
 ---@field name string
 
+---@class UiMapHighlightInfo
+---@field fileDataID number
+---@field atlasID string
+---@field texturePercentageX number
+---@field texturePercentageY number
+---@field textureX number
+---@field textureY number
+---@field scrollChildX number
+---@field scrollChildY number
+
 ---@class UiMapLayerInfo
 ---@field layerWidth number
 ---@field layerHeight number

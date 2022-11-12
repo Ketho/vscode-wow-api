@@ -1,6 +1,15 @@
 ---@meta
 C_PaperDollInfo = {}
 
+---[Documentation](https://wowpedia.fandom.com/wiki/API_C_PaperDollInfo.CanAutoEquipCursorItem)
+---@return boolean canAutoEquip
+function C_PaperDollInfo.CanAutoEquipCursorItem() end
+
+---[Documentation](https://wowpedia.fandom.com/wiki/API_C_PaperDollInfo.CanCursorCanGoInSlot)
+---@param slotIndex number
+---@return boolean canOccupySlot
+function C_PaperDollInfo.CanCursorCanGoInSlot(slotIndex) end
+
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_PaperDollInfo.GetArmorEffectiveness)
 ---@param armor number
 ---@param attackerLevel number
@@ -23,6 +32,10 @@ function C_PaperDollInfo.GetInspectAzeriteItemEmpoweredChoices(unit, equipmentSl
 ---@return number equippedItemLevel
 function C_PaperDollInfo.GetInspectItemLevel(unit) end
 
+---[Documentation](https://wowpedia.fandom.com/wiki/API_C_PaperDollInfo.GetInspectRatedSoloShuffleData)
+---@return InspectPVPData ratedSoloShuffleData
+function C_PaperDollInfo.GetInspectRatedSoloShuffleData() end
+
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_PaperDollInfo.GetMinItemLevel)
 ---@return number? minItemLevel
 function C_PaperDollInfo.GetMinItemLevel() end
@@ -40,3 +53,10 @@ function C_PaperDollInfo.OffhandHasShield() end
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_PaperDollInfo.OffhandHasWeapon)
 ---@return boolean offhandHasWeapon
 function C_PaperDollInfo.OffhandHasWeapon() end
+
+---@class InspectPVPData
+---@field rating number
+---@field gamesWon number
+---@field gamesPlayed number
+---@field roundsWon number
+---@field roundsPlayed number

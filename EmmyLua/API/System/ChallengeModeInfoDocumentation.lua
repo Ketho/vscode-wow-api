@@ -131,9 +131,6 @@ function C_ChallengeMode.RequestLeaders(mapChallengeModeID) end
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_ChallengeMode.Reset)
 function C_ChallengeMode.Reset() end
 
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_ChallengeMode.SetKeystoneTooltip)
-function C_ChallengeMode.SetKeystoneTooltip() end
-
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_ChallengeMode.SlotKeystone)
 function C_ChallengeMode.SlotKeystone() end
 

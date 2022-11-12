@@ -576,6 +576,12 @@ function C_Club.ValidateText(clubType, text, clubFieldType) end
 ---@field canPinMessage boolean
 ---@field kickableRoleIds number[]
 
+---@class ClubRoleInfo
+---@field roleId number
+---@field name string
+---@field required boolean
+---@field unique boolean
+
 ---@class ClubSelfInvitationInfo
 ---@field invitationId string
 ---@field club ClubInfo

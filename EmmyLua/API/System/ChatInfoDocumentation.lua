@@ -136,3 +136,9 @@ function C_ChatInfo.SendAddonMessageLogged(prefix, message, chatType, target) en
 ---@param firstChannelIndex number
 ---@param secondChannelIndex number
 function C_ChatInfo.SwapChatChannelsByChannelIndex(firstChannelIndex, secondChannelIndex) end
+
+---@class AddonMessageParams
+---@field prefix string
+---@field message string
+---@field chatType string?
+---@field target string?

@@ -28,6 +28,14 @@ function C_BarberShop.GetCurrentCharacterData() end
 ---@return number cost
 function C_BarberShop.GetCurrentCost() end
 
+---[Documentation](https://wowpedia.fandom.com/wiki/API_C_BarberShop.GetCustomizationScope)
+---@return number customizationScope
+function C_BarberShop.GetCustomizationScope() end
+
+---[Documentation](https://wowpedia.fandom.com/wiki/API_C_BarberShop.GetViewingChrModel)
+---@return number? chrModelID
+function C_BarberShop.GetViewingChrModel() end
+
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_BarberShop.HasAnyChanges)
 ---@return boolean hasChanges
 function C_BarberShop.HasAnyChanges() end
@@ -91,6 +99,10 @@ function C_BarberShop.SetSelectedSex(sex) end
 ---@param isViewingAlteredForm boolean
 function C_BarberShop.SetViewingAlteredForm(isViewingAlteredForm) end
 
+---[Documentation](https://wowpedia.fandom.com/wiki/API_C_BarberShop.SetViewingChrModel)
+---@param chrModelID? number
+function C_BarberShop.SetViewingChrModel(chrModelID) end
+
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_BarberShop.SetViewingShapeshiftForm)
 ---@param shapeshiftFormID? number
 function C_BarberShop.SetViewingShapeshiftForm(shapeshiftFormID) end
@@ -107,3 +119,4 @@ function C_BarberShop.ZoomCamera(zoomAmount) end
 ---@field name string
 ---@field fileName string
 ---@field alternateFormRaceData CharacterAlternateFormData?
+---@field createScreenIconAtlas string

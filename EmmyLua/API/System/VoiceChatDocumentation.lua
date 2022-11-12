@@ -70,7 +70,7 @@ function C_VoiceChat.GetChannelForCommunityStream(clubId, streamId) end
 function C_VoiceChat.GetCommunicationMode() end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_VoiceChat.GetCurrentVoiceChatConnectionStatusCode)
----@return VoiceChatStatusCode statusCode
+---@return VoiceChatStatusCode? statusCode
 function C_VoiceChat.GetCurrentVoiceChatConnectionStatusCode() end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_VoiceChat.GetInputVolume)
@@ -226,6 +226,10 @@ function C_VoiceChat.IsSpeakForMeAllowed() end
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_VoiceChat.IsTranscriptionAllowed)
 ---@return boolean isAllowed
 function C_VoiceChat.IsTranscriptionAllowed() end
+
+---[Documentation](https://wowpedia.fandom.com/wiki/API_C_VoiceChat.IsVoiceChatConnected)
+---@return boolean connected
+function C_VoiceChat.IsVoiceChatConnected() end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_VoiceChat.LeaveChannel)
 ---@param channelID number

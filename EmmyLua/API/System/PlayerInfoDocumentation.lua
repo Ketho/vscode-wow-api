@@ -41,6 +41,16 @@ function C_PlayerInfo.GetInstancesUnlockedAtLevel(level, isRaid) end
 ---@return MythicPlusRatingSummary ratingSummary
 function C_PlayerInfo.GetPlayerMythicPlusRatingSummary(playerToken) end
 
+---[Documentation](https://wowpedia.fandom.com/wiki/API_C_PlayerInfo.HasVisibleInvSlot)
+---@param slot number
+---@return boolean isVisible
+function C_PlayerInfo.HasVisibleInvSlot(slot) end
+
+---[Documentation](https://wowpedia.fandom.com/wiki/API_C_PlayerInfo.IsExpansionLandingPageUnlockedForPlayer)
+---@param expansionID number
+---@return boolean isUnlocked
+function C_PlayerInfo.IsExpansionLandingPageUnlockedForPlayer(expansionID) end
+
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_PlayerInfo.IsPlayerEligibleForNPE)
 ---@return boolean isEligible
 ---@return string failureReason
@@ -54,11 +64,6 @@ function C_PlayerInfo.IsPlayerEligibleForNPEv2() end
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_PlayerInfo.IsPlayerInChromieTime)
 ---@return boolean inChromieTime
 function C_PlayerInfo.IsPlayerInChromieTime() end
-
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_PlayerInfo.IsPlayerInGuildFromGUID)
----@param playerGUID string
----@return boolean IsInGuild
-function C_PlayerInfo.IsPlayerInGuildFromGUID(playerGUID) end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_PlayerInfo.IsPlayerNPERestricted)
 ---@return boolean isRestricted

@@ -59,13 +59,18 @@ function C_Item.GetItemConversionOutputIcon(itemLoc) end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_Item.GetItemGUID)
 ---@param itemLocation ItemLocationMixin
----@return string itemGuid
+---@return string itemGUID
 function C_Item.GetItemGUID(itemLocation) end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_Item.GetItemID)
 ---@param itemLocation ItemLocationMixin
 ---@return number itemID
 function C_Item.GetItemID(itemLocation) end
+
+---[Documentation](https://wowpedia.fandom.com/wiki/API_C_Item.GetItemIDByGUID)
+---@param itemGUID string
+---@return number? itemID
+function C_Item.GetItemIDByGUID(itemGUID) end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_Item.GetItemIcon)
 ---@param itemLocation ItemLocationMixin
@@ -91,6 +96,26 @@ function C_Item.GetItemInventoryTypeByID(itemInfo) end
 ---@param itemLocation ItemLocationMixin
 ---@return string? itemLink
 function C_Item.GetItemLink(itemLocation) end
+
+---[Documentation](https://wowpedia.fandom.com/wiki/API_C_Item.GetItemLinkByGUID)
+---@param itemGUID string
+---@return string? itemLink
+function C_Item.GetItemLinkByGUID(itemGUID) end
+
+---[Documentation](https://wowpedia.fandom.com/wiki/API_C_Item.GetItemLocation)
+---@param itemGUID string
+---@return ItemLocationMixin? itemLocation
+function C_Item.GetItemLocation(itemGUID) end
+
+---[Documentation](https://wowpedia.fandom.com/wiki/API_C_Item.GetItemMaxStackSize)
+---@param itemLocation ItemLocationMixin
+---@return number? stackSize
+function C_Item.GetItemMaxStackSize(itemLocation) end
+
+---[Documentation](https://wowpedia.fandom.com/wiki/API_C_Item.GetItemMaxStackSizeByID)
+---@param itemInfo string
+---@return number? stackSize
+function C_Item.GetItemMaxStackSizeByID(itemInfo) end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_Item.GetItemName)
 ---@param itemLocation ItemLocationMixin
@@ -183,6 +208,11 @@ function C_Item.IsItemDataCached(itemLocation) end
 ---@param itemInfo string
 ---@return boolean isCached
 function C_Item.IsItemDataCachedByID(itemInfo) end
+
+---[Documentation](https://wowpedia.fandom.com/wiki/API_C_Item.IsItemGUIDInInventory)
+---@param itemGUID string
+---@return boolean valid
+function C_Item.IsItemGUIDInInventory(itemGUID) end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_Item.IsItemKeystoneByID)
 ---@param itemInfo string

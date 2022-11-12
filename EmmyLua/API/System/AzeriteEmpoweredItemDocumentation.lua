@@ -7,9 +7,6 @@ C_AzeriteEmpoweredItem = {}
 ---@return boolean canSelect
 function C_AzeriteEmpoweredItem.CanSelectPower(azeriteEmpoweredItemLocation, powerID) end
 
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_AzeriteEmpoweredItem.CloseAzeriteEmpoweredItemRespec)
-function C_AzeriteEmpoweredItem.CloseAzeriteEmpoweredItemRespec() end
-
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_AzeriteEmpoweredItem.ConfirmAzeriteEmpoweredItemRespec)
 ---@param azeriteEmpoweredItemLocation ItemLocationMixin
 function C_AzeriteEmpoweredItem.ConfirmAzeriteEmpoweredItemRespec(azeriteEmpoweredItemLocation) end

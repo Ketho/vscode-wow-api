@@ -45,7 +45,7 @@ function C_LegendaryCrafting.GetRuneforgeLegendaryUpgradeCost(runeforgeLegendary
 ---@param addedModifierIndex number
 ---@param modifiers number[]
 ---@return string name
----@return string description
+---@return string[] description
 function C_LegendaryCrafting.GetRuneforgeModifierInfo(baseItem, powerID, addedModifierIndex, modifiers) end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_LegendaryCrafting.GetRuneforgeModifiers)
