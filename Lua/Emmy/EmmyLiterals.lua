@@ -21,7 +21,7 @@ end
 
 function EmmyLiterals:GetCVarLiterals()
 	local data = Util:DownloadAndRun(
-		"Lua/Data/cache/CVars.lua",
+		string.format("Lua/Data/cache/CVars_%s.lua", BRANCH),
 		string.format("https://raw.githubusercontent.com/Ketho/BlizzardInterfaceResources/%s/Resources/CVars.lua", BRANCH)
 	)
 	local t = {}

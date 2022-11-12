@@ -1,8 +1,8 @@
 local Util = require("Lua/Util/Util")
 
 local globalApi = Util:DownloadAndRun(
-	"Lua/Data/cache/GlobalAPI.lua",
-	"https://raw.githubusercontent.com/Ketho/BlizzardInterfaceResources/mainline/Resources/GlobalAPI.lua"
+	string.format("Lua/Data/cache/GlobalAPI_%s.lua", BRANCH),
+	string.format("https://raw.githubusercontent.com/Ketho/BlizzardInterfaceResources/%s/Resources/GlobalAPI.lua", BRANCH)
 )
 
 local blizzDoc = {}

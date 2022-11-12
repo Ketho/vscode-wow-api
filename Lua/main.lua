@@ -6,15 +6,16 @@ CONSTANTS = {
 	LATEST_CLASSIC = "2.5.4",
 }
 
-local Util = require("Lua/Util/Util")
+local Util = require(Path.join("Lua", "Util", "Util"))
 
-Util:MakeDir("Lua/Data")
-Util:MakeDir("Lua/Data/cache")
-Util:MakeDir("Lua/Data/output")
+local path_luadata = Path.join("Lua", "Data")
+Util:MakeDir(path_luadata)
+Util:MakeDir(Path.join(path_luadata, "cache"))
+Util:MakeDir(Path.join(path_luadata, "output"))
 
 -- load Enum table
 Util:DownloadAndRun(
-	string.format("Lua/Data/cache/LuaEnum_%s.lua", BRANCH),
+	string.format(Path.join(path_luadata, "cache", "LuaEnum_%s.lua"), BRANCH),
 	string.format("https://raw.githubusercontent.com/Ketho/BlizzardInterfaceResources/%s/Resources/LuaEnum.lua", BRANCH)
 )
 
@@ -22,25 +23,27 @@ Util:DownloadAndRun(
 local WowDocLoader_path = Path.join("Lua", "WowDocLoader")
 local WowDocLoader = require(Path.join(WowDocLoader_path, "WowDocLoader"))
 WowDocLoader:main(WowDocLoader_path)
--- require("Lua/Tests/Emmy"):Run()
+-- require("Lua", "Tests", "Emmy"):Run()
 
 -- emmylua data
-local EmmyLiterals = require("Lua/Emmy/EmmyLiterals")
-Util:WriteFileMeta("EmmyLua/API/Type/WowEvent.lua", EmmyLiterals:GetEventLiterals())
-Util:WriteFileMeta("EmmyLua/API/Type/CVar.lua", EmmyLiterals:GetCVarLiterals())
-Util:WriteFileMeta("EmmyLua/API/Enum.lua", EmmyLiterals:GetEnumTable())
+local EmmyLiterals = require("Lua.Emmy.EmmyLiterals")
+local path_api = Path.join("EmmyLua", "API")
+Util:WriteFileMeta(Path.join(path_api, "Type", "WowEvent.lua"), EmmyLiterals:GetEventLiterals())
+Util:WriteFileMeta(Path.join(path_api, "Type", "CVar.lua"), EmmyLiterals:GetCVarLiterals())
+Util:WriteFileMeta(Path.join(path_api, "Enum.lua"), EmmyLiterals:GetEnumTable())
 
 -- typescript data
-Util:WriteFile("src/data/event.ts", require("Lua/ToTypeScript/Event")())
-Util:WriteFile("src/data/cvar.ts", require("Lua/ToTypeScript/CVar")())
-Util:WriteFile("src/data/enum.ts", require("Lua/ToTypeScript/LuaEnum")())
-Util:MakeDir("Lua/Data/cache/globalstrings")
-require("Lua/ToTypeScript/GlobalString"):WriteLocales()
+local path_tsdata = Path.join("src", "data")
+Util:WriteFile(Path.join(path_tsdata, "event.ts"), require("Lua.ToTypeScript.Event")())
+Util:WriteFile(Path.join(path_tsdata, "cvar.ts"), require("Lua.ToTypeScript.CVar")())
+Util:WriteFile(Path.join(path_tsdata, "enum.ts"), require("Lua.ToTypeScript.LuaEnum")())
+Util:MakeDir(Path.join(path_luadata, "cache", "globalstrings"))
+require("Lua.ToTypeScript.GlobalString"):WriteLocales()
 
 -- parse the wiki
-require("Lua/WikiParser/WikiParser")
+require("Lua.WikiParser.WikiParser")
 
 -- add @meta to emmylua files
-require("Lua/Emmy/PrependMeta")
+require("Lua.Emmy.PrependMeta")
 
 print("done")
