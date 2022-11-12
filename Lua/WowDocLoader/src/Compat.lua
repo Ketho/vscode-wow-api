@@ -1,5 +1,4 @@
----@diagnostic disable-next-line: deprecated
-unpack = table.unpack
+unpack = table.unpack ---@diagnostic disable-line: deprecated
 tinsert = table.insert
 format = string.format
 
@@ -15,7 +14,6 @@ end
 ChatTypeInfo = {}
 ChatTypeInfo.SYSTEM = {}
 
--- MessageFrame
 DEFAULT_CHAT_FRAME = {}
 
 function DEFAULT_CHAT_FRAME:AddMessage(msg)
