@@ -1,10 +1,10 @@
 local Path = require "path"
 
+BRANCH = "mainline_beta"
 CONSTANTS = {
-	LATEST_MAINLINE = "9.2.5",
+	LATEST_MAINLINE = "10.0.2",
 	LATEST_CLASSIC = "2.5.4",
 }
-local BRANCH = "mainline"
 
 local Util = require("Lua/Util/Util")
 

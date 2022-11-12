@@ -3,8 +3,8 @@ C_CraftingOrders = {}
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_CraftingOrders.CalculateCraftingOrderPostingFee)
 ---@param skillLineAbilityID number
----@param orderType CraftingOrderType
----@param orderDuration CraftingOrderDuration
+---@param orderType number|CraftingOrderType
+---@param orderDuration number|CraftingOrderDuration
 ---@return number deposit
 function C_CraftingOrders.CalculateCraftingOrderPostingFee(skillLineAbilityID, orderType, orderDuration) end
 

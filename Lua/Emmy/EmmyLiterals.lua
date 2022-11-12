@@ -22,7 +22,7 @@ end
 function EmmyLiterals:GetCVarLiterals()
 	local data = Util:DownloadAndRun(
 		"Lua/Data/cache/CVars.lua",
-		"https://raw.githubusercontent.com/Ketho/BlizzardInterfaceResources/mainline/Resources/CVars.lua"
+		string.format("https://raw.githubusercontent.com/Ketho/BlizzardInterfaceResources/%s/Resources/CVars.lua", BRANCH)
 	)
 	local t = {}
 	table.insert(t, "---@alias CVar")
@@ -50,8 +50,8 @@ end
 
 function EmmyLiterals:GetEnumTable()
 	Util:DownloadAndRun(
-		"Lua/Data/cache/Enum.lua",
-		"https://raw.githubusercontent.com/Ketho/BlizzardInterfaceResources/mainline/Resources/LuaEnum.lua"
+		string.format("Lua/Data/cache/Enum_%s.lua", BRANCH),
+		string.format("https://raw.githubusercontent.com/Ketho/BlizzardInterfaceResources/%s/Resources/LuaEnum.lua", BRANCH)
 	)
 	local t = {}
 	table.insert(t, "Enum = {")
@@ -69,7 +69,7 @@ function EmmyLiterals:GetEnumTable()
 	for _, name in pairs(Util:SortTable(Constants)) do
 		table.insert(t, string.format("\t%s = {", name))
 		for _, constTbl in pairs(SortByValue(Constants[name])) do
-			table.insert(t, string.format("\t\t%s = %d,", constTbl.key, constTbl.value))
+			table.insert(t, string.format("\t\t%s = %s,", constTbl.key, constTbl.value))
 		end
 		table.insert(t, "\t},")
 	end
