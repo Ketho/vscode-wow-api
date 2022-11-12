@@ -43,6 +43,12 @@ export const data: EventInterface = {
 			{Name: "spellID", Type: "number"},
 		],
 	},
+	ACTIVE_COMBAT_CONFIG_CHANGED: {
+		Payload: [
+			{Name: "configID", Type: "number"},
+		],
+	},
+	ACTIVE_PLAYER_SPECIALIZATION_CHANGED: {},
 	ACTIVE_TALENT_GROUP_CHANGED: {
 		Payload: [
 			{Name: "curr", Type: "number"},
@@ -240,6 +246,18 @@ export const data: EventInterface = {
 			{Name: "itemKey", Type: "ItemKey", Nilable: true},
 		],
 	},
+	AUCTION_HOUSE_POST_ERROR: {},
+	AUCTION_HOUSE_POST_WARNING: {},
+	AUCTION_HOUSE_PURCHASE_COMPLETED: {
+		Payload: [
+			{Name: "auctionID", Type: "number"},
+		],
+	},
+	AUCTION_HOUSE_PURCHASE_DELIVERY_DELAY_UPDATE: {
+		Payload: [
+			{Name: "purchasedItemDeliveryDelay", Type: "number"},
+		],
+	},
 	AUCTION_HOUSE_SCRIPT_DEPRECATED: {},
 	AUCTION_HOUSE_SHOW: {},
 	AUCTION_HOUSE_SHOW_COMMODITY_WON_NOTIFICATION: {
@@ -257,6 +275,7 @@ export const data: EventInterface = {
 		Payload: [
 			{Name: "notification", Type: "AuctionHouseNotification"},
 			{Name: "text", Type: "string"},
+			{Name: "auctionID", Type: "number", Nilable: true},
 		],
 	},
 	AUCTION_HOUSE_SHOW_NOTIFICATION: {
@@ -359,6 +378,7 @@ export const data: EventInterface = {
 			{Name: "bagID", Type: "number"},
 		],
 	},
+	BAG_CONTAINER_UPDATE: {},
 	BAG_NEW_ITEMS_UPDATED: {},
 	BAG_OPEN: {
 		Payload: [
@@ -403,6 +423,8 @@ export const data: EventInterface = {
 			{Name: "battleMasterListID", Type: "number", Nilable: true},
 		],
 	},
+	BATTLEFIELD_AUTO_QUEUE: {},
+	BATTLEFIELD_AUTO_QUEUE_EJECT: {},
 	BATTLEFIELD_QUEUE_TIMEOUT: {},
 	BATTLEGROUND_OBJECTIVES_UPDATE: {},
 	BATTLEGROUND_POINTS_UPDATE: {},
@@ -2104,8 +2126,6 @@ export const data: EventInterface = {
 		],
 	},
 	CHAT_SERVER_RECONNECTED: {},
-	CHROMIE_TIME_CLOSE: {},
-	CHROMIE_TIME_OPEN: {},
 	CINEMATIC_START: {
 		Payload: [
 			{Name: "canBeCancelled", Type: "boolean"},
@@ -2421,6 +2441,11 @@ export const data: EventInterface = {
 			{Name: "companionType", Type: "string", Nilable: true},
 		],
 	},
+	CONFIG_COMMIT_FAILED: {
+		Payload: [
+			{Name: "configID", Type: "number"},
+		],
+	},
 	CONFIRM_BEFORE_USE: {},
 	CONFIRM_BINDER: {
 		Payload: [
@@ -2475,8 +2500,6 @@ export const data: EventInterface = {
 			{Name: "contributionID", Type: "number"},
 		],
 	},
-	CONTRIBUTION_COLLECTOR_CLOSE: {},
-	CONTRIBUTION_COLLECTOR_OPEN: {},
 	CONTRIBUTION_COLLECTOR_PENDING: {
 		Payload: [
 			{Name: "contributionID", Type: "number"},
@@ -2511,16 +2534,74 @@ export const data: EventInterface = {
 		],
 	},
 	COVENANT_RENOWN_CATCH_UP_STATE_UPDATE: {},
-	COVENANT_RENOWN_INTERACTION_ENDED: {},
-	COVENANT_RENOWN_INTERACTION_STARTED: {},
-	COVENANT_SANCTUM_INTERACTION_ENDED: {},
-	COVENANT_SANCTUM_INTERACTION_STARTED: {},
 	COVENANT_SANCTUM_RENOWN_LEVEL_CHANGED: {
 		Payload: [
 			{Name: "newRenownLevel", Type: "number"},
 			{Name: "oldRenownLevel", Type: "number"},
 		],
 	},
+	CRAFTINGORDERS_CAN_REQUEST: {},
+	CRAFTINGORDERS_CLAIMED_ORDER_ADDED: {},
+	CRAFTINGORDERS_CLAIMED_ORDER_REMOVED: {},
+	CRAFTINGORDERS_CLAIMED_ORDER_UPDATED: {
+		Payload: [
+			{Name: "orderID", Type: "number"},
+		],
+	},
+	CRAFTINGORDERS_CLAIM_ORDER_RESPONSE: {
+		Payload: [
+			{Name: "result", Type: "CraftingOrderResult"},
+			{Name: "orderID", Type: "number"},
+		],
+	},
+	CRAFTINGORDERS_CUSTOMER_FAVORITES_CHANGED: {},
+	CRAFTINGORDERS_CUSTOMER_OPTIONS_PARSED: {},
+	CRAFTINGORDERS_FULFILL_ORDER_RESPONSE: {
+		Payload: [
+			{Name: "result", Type: "CraftingOrderResult"},
+			{Name: "orderID", Type: "number"},
+		],
+	},
+	CRAFTINGORDERS_HIDE_CRAFTER: {},
+	CRAFTINGORDERS_HIDE_CUSTOMER: {},
+	CRAFTINGORDERS_ORDER_CANCEL_RESPONSE: {
+		Payload: [
+			{Name: "result", Type: "CraftingOrderResult"},
+		],
+	},
+	CRAFTINGORDERS_ORDER_PLACEMENT_RESPONSE: {
+		Payload: [
+			{Name: "result", Type: "CraftingOrderResult"},
+		],
+	},
+	CRAFTINGORDERS_REJECT_ORDER_RESPONSE: {
+		Payload: [
+			{Name: "result", Type: "CraftingOrderResult"},
+			{Name: "orderID", Type: "number"},
+		],
+	},
+	CRAFTINGORDERS_RELEASE_ORDER_RESPONSE: {
+		Payload: [
+			{Name: "result", Type: "CraftingOrderResult"},
+			{Name: "orderID", Type: "number"},
+		],
+	},
+	CRAFTINGORDERS_SHOW_CRAFTER: {},
+	CRAFTINGORDERS_SHOW_CUSTOMER: {},
+	CRAFTINGORDERS_UPDATE_CUSTOMER_NAME: {
+		Payload: [
+			{Name: "customerName", Type: "string"},
+			{Name: "orderID", Type: "number"},
+		],
+	},
+	CRAFTINGORDERS_UPDATE_ORDER_COUNT: {
+		Payload: [
+			{Name: "orderType", Type: "CraftingOrderType"},
+			{Name: "numOrders", Type: "number"},
+		],
+	},
+	CRAFTING_DETAILS_UPDATE: {},
+	CRAFTING_HOUSE_DISABLED: {},
 	CRITERIA_COMPLETE: {
 		Payload: [
 			{Name: "criteriaID", Type: "number"},
@@ -2555,7 +2636,6 @@ export const data: EventInterface = {
 			{Name: "oldCursorVirtualID", Type: "number"},
 		],
 	},
-	CURSOR_UPDATE: {},
 	CVAR_UPDATE: {
 		Payload: [
 			{Name: "eventName", Type: "string"},
@@ -2590,6 +2670,12 @@ export const data: EventInterface = {
 		],
 	},
 	DYNAMIC_GOSSIP_POI_UPDATED: {},
+	EDIT_MODE_LAYOUTS_UPDATED: {
+		Payload: [
+			{Name: "layoutInfo", Type: "EditModeLayouts"},
+			{Name: "fromServer", Type: "boolean"},
+		],
+	},
 	EJ_DIFFICULTY_UPDATE: {
 		Payload: [
 			{Name: "difficultyID", Type: "number"},
@@ -2672,6 +2758,11 @@ export const data: EventInterface = {
 	EXECUTE_CHAT_LINE: {
 		Payload: [
 			{Name: "chatLine", Type: "string"},
+		],
+	},
+	EXPAND_BAG_BAR_CHANGED: {
+		Payload: [
+			{Name: "expandBagBar", Type: "boolean"},
 		],
 	},
 	EXTRA_BROWSE_INFO_RECEIVED: {
@@ -2977,6 +3068,11 @@ export const data: EventInterface = {
 			{Name: "errorMessage", Type: "string"},
 		],
 	},
+	GENERIC_WIDGET_DISPLAY_SHOW: {
+		Payload: [
+			{Name: "info", Type: "GenericWidgetDisplayFrameInfo"},
+		],
+	},
 	GET_ITEM_INFO_RECEIVED: {
 		Payload: [
 			{Name: "itemID", Type: "number"},
@@ -3008,7 +3104,7 @@ export const data: EventInterface = {
 	GOSSIP_CLOSED: {},
 	GOSSIP_CONFIRM: {
 		Payload: [
-			{Name: "gossipIndex", Type: "number"},
+			{Name: "gossipID", Type: "number"},
 			{Name: "text", Type: "string"},
 			{Name: "cost", Type: "number"},
 		],
@@ -3016,7 +3112,7 @@ export const data: EventInterface = {
 	GOSSIP_CONFIRM_CANCEL: {},
 	GOSSIP_ENTER_CODE: {
 		Payload: [
-			{Name: "gossipIndex", Type: "number"},
+			{Name: "gossipID", Type: "number"},
 		],
 	},
 	GOSSIP_OPTIONS_REFRESHED: {},
@@ -3126,6 +3222,7 @@ export const data: EventInterface = {
 			{Name: "pendingHeirloomUpgradeSpellcast", Type: "boolean"},
 		],
 	},
+	HIDE_HYPERLINK_TOOLTIP: {},
 	HIDE_SUBTITLE: {},
 	HONOR_LEVEL_UPDATE: {
 		Payload: [
@@ -3234,6 +3331,11 @@ export const data: EventInterface = {
 			{Name: "itemGUID", Type: "string"},
 		],
 	},
+	ITEM_COUNT_CHANGED: {
+		Payload: [
+			{Name: "itemID", Type: "number"},
+		],
+	},
 	ITEM_DATA_LOAD_RESULT: {
 		Payload: [
 			{Name: "itemID", Type: "number"},
@@ -3241,13 +3343,11 @@ export const data: EventInterface = {
 		],
 	},
 	ITEM_INTERACTION_CHARGE_INFO_UPDATED: {},
-	ITEM_INTERACTION_CLOSE: {},
 	ITEM_INTERACTION_ITEM_SELECTION_UPDATED: {
 		Payload: [
 			{Name: "itemLocation", Type: "ItemLocationMixin", Nilable: true},
 		],
 	},
-	ITEM_INTERACTION_OPEN: {},
 	ITEM_KEY_ITEM_INFO_RECEIVED: {
 		Payload: [
 			{Name: "itemID", Type: "number"},
@@ -3303,8 +3403,6 @@ export const data: EventInterface = {
 		],
 	},
 	ITEM_UPGRADE_FAILED: {},
-	ITEM_UPGRADE_MASTER_CLOSED: {},
-	ITEM_UPGRADE_MASTER_OPENED: {},
 	ITEM_UPGRADE_MASTER_SET_ITEM: {},
 	JAILERS_TOWER_LEVEL_UPDATE: {
 		Payload: [
@@ -3583,6 +3681,21 @@ export const data: EventInterface = {
 		],
 	},
 	MAIL_UNLOCK_SEND_ITEMS: {},
+	MAJOR_FACTION_INTERACTION_ENDED: {},
+	MAJOR_FACTION_INTERACTION_STARTED: {},
+	MAJOR_FACTION_RENOWN_CATCH_UP_STATE_UPDATE: {},
+	MAJOR_FACTION_RENOWN_LEVEL_CHANGED: {
+		Payload: [
+			{Name: "majorFactionID", Type: "number"},
+			{Name: "newRenownLevel", Type: "number"},
+			{Name: "oldRenownLevel", Type: "number"},
+		],
+	},
+	MAJOR_FACTION_UNLOCKED: {
+		Payload: [
+			{Name: "majorFactionID", Type: "number"},
+		],
+	},
 	MAP_EXPLORATION_UPDATED: {},
 	MASTERY_UPDATE: {},
 	MAX_EXPANSION_LEVEL_UPDATED: {},
@@ -3734,10 +3847,15 @@ export const data: EventInterface = {
 			{Name: "guid", Type: "string"},
 		],
 	},
-	OBLITERUM_FORGE_CLOSE: {},
 	OBLITERUM_FORGE_PENDING_ITEM_CHANGED: {},
-	OBLITERUM_FORGE_SHOW: {},
 	OPEN_MASTER_LOOT_LIST: {},
+	OPEN_RECIPE_RESPONSE: {
+		Payload: [
+			{Name: "recipeID", Type: "number"},
+			{Name: "skillLineID", Type: "number"},
+			{Name: "expansionSkillLineID", Type: "number"},
+		],
+	},
 	OPEN_SPLASH_SCREEN: {
 		Payload: [
 			{Name: "info", Type: "SplashScreenInfo", Nilable: true},
@@ -4017,6 +4135,16 @@ export const data: EventInterface = {
 			{Name: "unitTarget", Type: "string"},
 		],
 	},
+	PLAYER_INTERACTION_MANAGER_FRAME_HIDE: {
+		Payload: [
+			{Name: "type", Type: "PlayerInteractionType"},
+		],
+	},
+	PLAYER_INTERACTION_MANAGER_FRAME_SHOW: {
+		Payload: [
+			{Name: "type", Type: "PlayerInteractionType"},
+		],
+	},
 	PLAYER_LEARN_PVP_TALENT_FAILED: {},
 	PLAYER_LEARN_TALENT_FAILED: {},
 	PLAYER_LEAVE_COMBAT: {},
@@ -4076,6 +4204,15 @@ export const data: EventInterface = {
 			{Name: "hasFreeRepop", Type: "number"},
 		],
 	},
+	PLAYER_SOFT_ENEMY_CHANGED: {},
+	PLAYER_SOFT_FRIEND_CHANGED: {},
+	PLAYER_SOFT_INTERACT_CHANGED: {
+		Payload: [
+			{Name: "oldTarget", Type: "string"},
+			{Name: "newTarget", Type: "string"},
+		],
+	},
+	PLAYER_SOFT_TARGET_INTERACTION: {},
 	PLAYER_SPECIALIZATION_CHANGED: {
 		Payload: [
 			{Name: "unitTarget", Type: "string"},
@@ -4120,6 +4257,12 @@ export const data: EventInterface = {
 		],
 	},
 	POST_MATCH_ITEM_REWARD_UPDATE: {},
+	PROFESSION_EQUIPMENT_CHANGED: {
+		Payload: [
+			{Name: "skillLineID", Type: "number"},
+			{Name: "isTool", Type: "boolean"},
+		],
+	},
 	PROVING_GROUNDS_SCORE_UPDATE: {
 		Payload: [
 			{Name: "points", Type: "number"},
@@ -4162,6 +4305,7 @@ export const data: EventInterface = {
 			{Name: "wargameBattlegrounds", Type: "boolean"},
 			{Name: "ratedBattlegrounds", Type: "boolean"},
 			{Name: "ratedArenas", Type: "boolean"},
+			{Name: "ratedSoloShuffle", Type: "boolean"},
 		],
 	},
 	PVP_VEHICLE_INFO_UPDATED: {},
@@ -4371,10 +4515,17 @@ export const data: EventInterface = {
 			{Name: "replacementStr", Type: "string"},
 		],
 	},
+	REPLACE_TRADESKILL_ENCHANT: {
+		Payload: [
+			{Name: "existing", Type: "string"},
+			{Name: "replacement", Type: "string"},
+		],
+	},
 	REPLICATE_ITEM_LIST_UPDATE: {},
 	REPORT_PLAYER_RESULT: {
 		Payload: [
 			{Name: "success", Type: "boolean"},
+			{Name: "reportType", Type: "ReportType"},
 		],
 	},
 	REQUEST_CEMETERY_LIST_RESPONSE: {
@@ -4405,13 +4556,12 @@ export const data: EventInterface = {
 	RESEARCH_ARTIFACT_DIG_SITE_UPDATED: {},
 	RESEARCH_ARTIFACT_HISTORY_READY: {},
 	RESEARCH_ARTIFACT_UPDATE: {},
-	RESPEC_AZERITE_EMPOWERED_ITEM_CLOSED: {},
-	RESPEC_AZERITE_EMPOWERED_ITEM_OPENED: {},
 	RESURRECT_REQUEST: {
 		Payload: [
 			{Name: "inviter", Type: "string"},
 		],
 	},
+	RETURNING_PLAYER_PROMPT: {},
 	ROLE_CHANGED_INFORM: {
 		Payload: [
 			{Name: "changedName", Type: "string"},
@@ -4440,6 +4590,11 @@ export const data: EventInterface = {
 		Payload: [
 			{Name: "runeIndex", Type: "number"},
 			{Name: "added", Type: "boolean", Nilable: true},
+		],
+	},
+	RUNE_TYPE_UPDATE: {
+		Payload: [
+			{Name: "runeIndex", Type: "number"},
 		],
 	},
 	SAVED_VARIABLES_TOO_LARGE: {
@@ -4477,7 +4632,6 @@ export const data: EventInterface = {
 			{Name: "newStep", Type: "boolean", Nilable: true},
 		],
 	},
-	SCRAPPING_MACHINE_CLOSE: {},
 	SCRAPPING_MACHINE_ITEM_REMOVED_OR_CANCELLED: {
 		Payload: [
 			{Name: "index", Type: "number"},
@@ -4485,7 +4639,6 @@ export const data: EventInterface = {
 	},
 	SCRAPPING_MACHINE_PENDING_ITEM_CHANGED: {},
 	SCRAPPING_MACHINE_SCRAPPING_FINISHED: {},
-	SCRAPPING_MACHINE_SHOW: {},
 	SCREENSHOT_FAILED: {},
 	SCREENSHOT_STARTED: {},
 	SCREENSHOT_SUCCEEDED: {},
@@ -4497,6 +4650,7 @@ export const data: EventInterface = {
 	SELF_RES_SPELL_CHANGED: {},
 	SEND_MAIL_COD_CHANGED: {},
 	SEND_MAIL_MONEY_CHANGED: {},
+	SETTINGS_LOADED: {},
 	SHIPMENT_CRAFTER_CLOSED: {},
 	SHIPMENT_CRAFTER_INFO: {
 		Payload: [
@@ -4520,6 +4674,11 @@ export const data: EventInterface = {
 		],
 	},
 	SHOW_FACTION_SELECT_UI: {},
+	SHOW_HYPERLINK_TOOLTIP: {
+		Payload: [
+			{Name: "hyperlink", Type: "string"},
+		],
+	},
 	SHOW_LFG_EXPAND_SEARCH_PROMPT: {},
 	SHOW_LOOT_TOAST: {
 		Payload: [
@@ -4586,6 +4745,12 @@ export const data: EventInterface = {
 	SIMPLE_BROWSER_WEB_PROXY_FAILED: {},
 	SIMPLE_CHECKOUT_CLOSED: {},
 	SKILL_LINES_CHANGED: {},
+	SKILL_LINE_SPECS_UNLOCKED: {
+		Payload: [
+			{Name: "skillLineID", Type: "number"},
+			{Name: "tradeSkillID", Type: "number"},
+		],
+	},
 	SOCIAL_ITEM_RECEIVED: {},
 	SOCIAL_QUEUE_CONFIG_UPDATED: {},
 	SOCIAL_QUEUE_UPDATE: {
@@ -4659,6 +4824,7 @@ export const data: EventInterface = {
 		],
 	},
 	SOUND_DEVICE_UPDATE: {},
+	SPECIALIZATION_CHANGE_CAST_FAILED: {},
 	SPEC_INVOLUNTARILY_CHANGED: {
 		Payload: [
 			{Name: "isPet", Type: "boolean"},
@@ -4739,6 +4905,7 @@ export const data: EventInterface = {
 	SPELL_UPDATE_COOLDOWN: {},
 	SPELL_UPDATE_ICON: {},
 	SPELL_UPDATE_USABLE: {},
+	STARTER_BUILD_ACTIVATION_FAILED: {},
 	START_AUTOREPEAT_SPELL: {},
 	START_LOOT_ROLL: {
 		Payload: [
@@ -4756,6 +4923,11 @@ export const data: EventInterface = {
 	},
 	STOP_AUTOREPEAT_SPELL: {},
 	STOP_MOVIE: {},
+	STOP_TIMER_OF_TYPE: {
+		Payload: [
+			{Name: "timerType", Type: "number"},
+		],
+	},
 	STREAMING_ICON: {
 		Payload: [
 			{Name: "streamingStatus", Type: "number"},
@@ -4778,6 +4950,7 @@ export const data: EventInterface = {
 			{Name: "b", Type: "number"},
 		],
 	},
+	SYSTEM_VISIBILITY_CHANGED: {},
 	TABARD_CANSAVE_CHANGED: {},
 	TABARD_SAVE_PENDING: {},
 	TALENTS_INVOLUNTARILY_RESET: {
@@ -4849,6 +5022,9 @@ export const data: EventInterface = {
 		],
 	},
 	TOKEN_STATUS_CHANGED: {},
+	TOOLTIP_DATA_UPDATE: {
+		Documentation: "Sends an update to the UI that a sparse or cache lookup has resolved",
+	},
 	TOYS_UPDATED: {
 		Payload: [
 			{Name: "itemID", Type: "number", Nilable: true},
@@ -4868,6 +5044,12 @@ export const data: EventInterface = {
 			{Name: "criteriaID", Type: "number", Nilable: true},
 			{Name: "elapsed", Type: "number", Nilable: true},
 			{Name: "duration", Type: "number", Nilable: true},
+		],
+	},
+	TRACKED_RECIPE_UPDATE: {
+		Payload: [
+			{Name: "recipeID", Type: "number"},
+			{Name: "tracked", Type: "boolean"},
 		],
 	},
 	TRADE_ACCEPT_UPDATE: {
@@ -4909,16 +5091,37 @@ export const data: EventInterface = {
 	TRADE_REQUEST_CANCEL: {},
 	TRADE_SHOW: {},
 	TRADE_SKILL_CLOSE: {},
-	TRADE_SKILL_DATA_SOURCE_CHANGED: {},
-	TRADE_SKILL_DATA_SOURCE_CHANGING: {},
-	TRADE_SKILL_DETAILS_UPDATE: {},
-	TRADE_SKILL_LIST_UPDATE: {},
-	TRADE_SKILL_NAME_UPDATE: {},
-	TRADE_SKILL_OPTIONAL_REAGENT_BONUS_TEXT_UPDATED: {
+	TRADE_SKILL_CRAFTING_REAGENT_BONUS_TEXT_UPDATED: {
 		Payload: [
 			{Name: "itemID", Type: "number"},
 		],
 	},
+	TRADE_SKILL_CRAFT_BEGIN: {
+		Payload: [
+			{Name: "recipeSpellID", Type: "number"},
+		],
+	},
+	TRADE_SKILL_CURRENCY_REWARD_RESULT: {
+		Payload: [
+			{Name: "data", Type: "CraftingCurrencyResultData"},
+		],
+	},
+	TRADE_SKILL_DATA_SOURCE_CHANGED: {},
+	TRADE_SKILL_DATA_SOURCE_CHANGING: {},
+	TRADE_SKILL_DETAILS_UPDATE: {},
+	TRADE_SKILL_FAVORITES_CHANGED: {},
+	TRADE_SKILL_ITEM_CRAFTED_RESULT: {
+		Payload: [
+			{Name: "data", Type: "CraftingItemResultData"},
+		],
+	},
+	TRADE_SKILL_ITEM_UPDATE: {
+		Payload: [
+			{Name: "itemGUID", Type: "string"},
+		],
+	},
+	TRADE_SKILL_LIST_UPDATE: {},
+	TRADE_SKILL_NAME_UPDATE: {},
 	TRADE_SKILL_SHOW: {},
 	TRADE_TARGET_ITEM_CHANGED: {
 		Payload: [
@@ -4931,6 +5134,59 @@ export const data: EventInterface = {
 	TRAINER_SERVICE_INFO_NAME_UPDATE: {},
 	TRAINER_SHOW: {},
 	TRAINER_UPDATE: {},
+	TRAIT_COND_INFO_CHANGED: {
+		Payload: [
+			{Name: "condID", Type: "number"},
+		],
+	},
+	TRAIT_CONFIG_CREATED: {
+		Payload: [
+			{Name: "configInfo", Type: "TraitConfigInfo"},
+		],
+	},
+	TRAIT_CONFIG_DELETED: {
+		Payload: [
+			{Name: "configID", Type: "number"},
+		],
+	},
+	TRAIT_CONFIG_LIST_UPDATED: {},
+	TRAIT_CONFIG_UPDATED: {
+		Payload: [
+			{Name: "configID", Type: "number"},
+		],
+	},
+	TRAIT_NODE_CHANGED: {
+		Payload: [
+			{Name: "nodeID", Type: "number"},
+		],
+	},
+	TRAIT_NODE_CHANGED_PARTIAL: {
+		Payload: [
+			{Name: "ID", Type: "number"},
+			{Name: "info", Type: "TraitNodeInfoPartial"},
+		],
+	},
+	TRAIT_NODE_ENTRY_UPDATED: {
+		Payload: [
+			{Name: "nodeEntryID", Type: "number"},
+		],
+	},
+	TRAIT_SYSTEM_INTERACTION_STARTED: {
+		Payload: [
+			{Name: "treeID", Type: "number"},
+		],
+	},
+	TRAIT_SYSTEM_NPC_CLOSED: {},
+	TRAIT_TREE_CHANGED: {
+		Payload: [
+			{Name: "treeID", Type: "number"},
+		],
+	},
+	TRAIT_TREE_CURRENCY_INFO_UPDATED: {
+		Payload: [
+			{Name: "treeID", Type: "number"},
+		],
+	},
 	TRANSMOGRIFY_CLOSE: {},
 	TRANSMOGRIFY_ITEM_UPDATE: {},
 	TRANSMOGRIFY_OPEN: {},
@@ -5066,8 +5322,7 @@ export const data: EventInterface = {
 	UNIT_AURA: {
 		Payload: [
 			{Name: "unitTarget", Type: "string"},
-			{Name: "isFullUpdate", Type: "boolean"},
-			{Name: "updatedAuras", Type: "UnitAuraUpdateInfo[]", Nilable: true},
+			{Name: "updateInfo", Type: "UnitAuraUpdateInfo"},
 		],
 	},
 	UNIT_CHEAT_TOGGLE_EVENT: {},
@@ -5149,6 +5404,11 @@ export const data: EventInterface = {
 		],
 	},
 	UNIT_FLAGS: {
+		Payload: [
+			{Name: "unitTarget", Type: "string"},
+		],
+	},
+	UNIT_FORM_CHANGED: {
 		Payload: [
 			{Name: "unitTarget", Type: "string"},
 		],
@@ -5309,6 +5569,27 @@ export const data: EventInterface = {
 			{Name: "spellID", Type: "number"},
 		],
 	},
+	UNIT_SPELLCAST_EMPOWER_START: {
+		Payload: [
+			{Name: "unitTarget", Type: "string"},
+			{Name: "castGUID", Type: "string"},
+			{Name: "spellID", Type: "number"},
+		],
+	},
+	UNIT_SPELLCAST_EMPOWER_STOP: {
+		Payload: [
+			{Name: "unitTarget", Type: "string"},
+			{Name: "castGUID", Type: "string"},
+			{Name: "spellID", Type: "number"},
+		],
+	},
+	UNIT_SPELLCAST_EMPOWER_UPDATE: {
+		Payload: [
+			{Name: "unitTarget", Type: "string"},
+			{Name: "castGUID", Type: "string"},
+			{Name: "spellID", Type: "number"},
+		],
+	},
 	UNIT_SPELLCAST_FAILED: {
 		Payload: [
 			{Name: "unitTarget", Type: "string"},
@@ -5445,6 +5726,11 @@ export const data: EventInterface = {
 	UPDATE_SHAPESHIFT_USABLE: {},
 	UPDATE_STEALTH: {},
 	UPDATE_SUMMONPETS_ACTION: {},
+	UPDATE_TRADESKILL_CAST_COMPLETE: {
+		Payload: [
+			{Name: "isScrapping", Type: "boolean"},
+		],
+	},
 	UPDATE_TRADESKILL_RECAST: {},
 	UPDATE_UI_WIDGET: {
 		Payload: [
@@ -5464,6 +5750,11 @@ export const data: EventInterface = {
 	},
 	USER_WAYPOINT_UPDATED: {},
 	USE_BIND_CONFIRM: {},
+	USE_COMBINED_BAGS_CHANGED: {
+		Payload: [
+			{Name: "useCombinedBags", Type: "boolean"},
+		],
+	},
 	USE_GLYPH: {
 		Payload: [
 			{Name: "spellID", Type: "number"},
@@ -5724,20 +6015,19 @@ export const data: EventInterface = {
 		],
 	},
 	VOICE_CHAT_TTS_VOICES_UPDATE: {},
+	VOICE_CHAT_VAD_SETTINGS_UPDATED: {},
 	VOID_DEPOSIT_WARNING: {
 		Payload: [
 			{Name: "slot", Type: "number"},
 			{Name: "link", Type: "string"},
 		],
 	},
-	VOID_STORAGE_CLOSE: {},
 	VOID_STORAGE_CONTENTS_UPDATE: {},
 	VOID_STORAGE_DEPOSIT_UPDATE: {
 		Payload: [
 			{Name: "slot", Type: "number"},
 		],
 	},
-	VOID_STORAGE_OPEN: {},
 	VOID_STORAGE_UPDATE: {},
 	VOID_TRANSFER_DONE: {},
 	VOID_TRANSFER_SUCCESS: {},
@@ -5767,22 +6057,28 @@ export const data: EventInterface = {
 		],
 	},
 	WAYPOINT_UPDATE: {},
+	WEAPON_ENCHANT_CHANGED: {},
+	WEAPON_SLOT_CHANGED: {},
 	WEAR_EQUIPMENT_SET: {
 		Payload: [
 			{Name: "setID", Type: "number"},
 		],
 	},
-	WEEKLY_REWARDS_HIDE: {},
 	WEEKLY_REWARDS_ITEM_CHANGED: {},
-	WEEKLY_REWARDS_SHOW: {},
 	WEEKLY_REWARDS_UPDATE: {},
 	WHO_LIST_UPDATE: {},
-	WORLD_MAP_CLOSE: {},
+	WORLD_CURSOR_TOOLTIP_UPDATE: {
+		Documentation: "Sends an update when the mouse enters or leaves something in-world (object, unit, etc) that should display a tooltip",
+		Payload: [
+			{Name: "anchorType", Type: "WorldCursorAnchorType"},
+		],
+	},
 	WORLD_MAP_OPEN: {
 		Payload: [
 			{Name: "uiMapID", Type: "number"},
 		],
 	},
+	WORLD_PVP_QUEUE: {},
 	WORLD_QUEST_COMPLETED_BY_SPELL: {
 		Payload: [
 			{Name: "questID", Type: "number"},
