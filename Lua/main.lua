@@ -1,3 +1,5 @@
+local Path = require "path"
+
 CONSTANTS = {
 	LATEST_MAINLINE = "9.2.5",
 	LATEST_CLASSIC = "2.5.4",
@@ -17,9 +19,10 @@ Util:DownloadAndRun(
 )
 
 -- load blizzard apidocs
-local FrameXML = require("Lua/FrameXML/FrameXML")
-FrameXML:ExportApiDocs("Lua/FrameXML")
---require("Lua/Tests/Emmy"):Run()
+local WowDocLoader_path = Path.join("Lua", "WowDocLoader")
+local WowDocLoader = require(Path.join(WowDocLoader_path, "WowDocLoader"))
+WowDocLoader:main(WowDocLoader_path)
+-- require("Lua/Tests/Emmy"):Run()
 
 -- emmylua data
 local EmmyLiterals = require("Lua/Emmy/EmmyLiterals")

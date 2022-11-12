@@ -1,21 +1,8 @@
-ChatTypeInfo = {}
-ChatTypeInfo.SYSTEM = {}
-
--- MessageFrame
-DEFAULT_CHAT_FRAME = {}
-
-function DEFAULT_CHAT_FRAME:AddMessage(msg, r, g, b, id)
-	print(msg)
-end
-
-function DEFAULT_CHAT_FRAME:SetMaxLines(maxLines)
-end
-
--- Lua 5.1
 ---@diagnostic disable-next-line: deprecated
 unpack = table.unpack
+tinsert = table.insert
+format = string.format
 
--- why is WoW so backwards
 function string.split(delim, input)
 	delim = delim or "%s"
 	local t = {}
@@ -23,6 +10,19 @@ function string.split(delim, input)
 		table.insert(t, str)
 	end
 	return unpack(t)
+end
+
+ChatTypeInfo = {}
+ChatTypeInfo.SYSTEM = {}
+
+-- MessageFrame
+DEFAULT_CHAT_FRAME = {}
+
+function DEFAULT_CHAT_FRAME:AddMessage(msg)
+	print(msg)
+end
+
+function DEFAULT_CHAT_FRAME:SetMaxLines()
 end
 
 -- SharedXML\Mixin.lua
@@ -37,7 +37,20 @@ function Mixin(object, ...)
 	return object
 end
 
--- where ​... are the mixins to mixin
 function CreateFromMixins(...)
 	return Mixin({}, ...)
 end
+
+Enum = Enum or {
+	PlayerCurrencyFlagsDbFlags = {
+		InBackpack = 0,
+		UnusedInUI = 0,
+	}
+}
+
+Constants = Constants or {
+	CharCustomizationConstants = {
+		CHAR_CUSTOMIZE_CUSTOM_DISPLAY_OPTION_FIRST = 0,
+		CHAR_CUSTOMIZE_CUSTOM_DISPLAY_OPTION_LAST = 0,
+	}
+}
