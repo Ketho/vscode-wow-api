@@ -431,6 +431,9 @@ function C_PvP.ToggleWarMode() end
 ---@field shortDescription string
 ---@field longDescription string
 ---@field canQueue boolean
+---@field minLevel number
+---@field maxLevel number
+---@field groupsAllowed boolean
 ---@field timeLeftUntilNextChange number?
 ---@field brawlType BrawlType
 ---@field mapNames string[]
