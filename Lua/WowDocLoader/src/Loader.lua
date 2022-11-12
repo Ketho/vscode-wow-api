@@ -10,6 +10,10 @@ local GEN_DOC = "Blizzard_APIDocumentationGenerated"
 local loader_path = Path.join(WowDocLoader_Path, "src")
 local addons_path = Path.join(WowDocLoader_Path, "AddOns")
 
+local gluesSystems = {
+	["ConfigurationWarningsDocumentation.lua"] = true,
+}
+
 local function LoadFile(path)
 	if lfs.attributes(path) then
 		local file = loadfile(path)
@@ -21,7 +25,7 @@ local function LoadAddon(path, name)
 	local file = io.open(Path.join(path, name..".toc"))
 	if file then
 		for line in file:lines() do
-			if line:find("%.lua") then
+			if line:find("%.lua") and not gluesSystems[line] then
 				LoadFile(Path.join(path, line))
 				local docInfo = m.documentationInfo
 				if docInfo then
@@ -31,7 +35,7 @@ local function LoadAddon(path, name)
 					end
 					local text = Emmy:GetSystem(docInfo)
 					if #text > 0 then -- try not to create empty files as they take up the maxPreload limit
-						if docInfo.Type == "System" then
+						if docInfo.Type == "System" or not docInfo.Type then
 							Util:WriteFileMeta(Path.join("EmmyLua", "API", "System", line), text.."\n")
 						elseif docInfo.Type == "ScriptObject" then
 							print("skipped", docInfo.Name)
@@ -46,6 +50,7 @@ local function LoadAddon(path, name)
 end
 
 function m:main()
+	Util:MakeDir(Path.join("EmmyLua", "API", "System"))
 	require(Path.join(loader_path, "Compat"))
 	LoadAddon(Path.join(addons_path, API_DOC), API_DOC)
 	local old = APIDocumentation.AddDocumentationTable

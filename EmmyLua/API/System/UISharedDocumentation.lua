@@ -1,0 +1,13 @@
+---@meta
+---@class AnchorBinding
+---@field point FramePoint
+---@field relativeTo table
+---@field relativePoint FramePoint
+---@field offsetX number
+---@field offsetY number
+
+---@class uiRect
+---@field left number
+---@field bottom number
+---@field width number
+---@field height number
