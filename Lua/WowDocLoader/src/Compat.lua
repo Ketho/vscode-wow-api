@@ -1,3 +1,4 @@
+---@meta
 unpack = table.unpack ---@diagnostic disable-line: deprecated
 tinsert = table.insert
 format = string.format
@@ -16,11 +17,17 @@ ChatTypeInfo.SYSTEM = {}
 
 DEFAULT_CHAT_FRAME = {}
 
-function DEFAULT_CHAT_FRAME:AddMessage(msg)
+---@param msg string
+---@param r number
+---@param g number
+---@param b number
+---@param id number
+function DEFAULT_CHAT_FRAME:AddMessage(msg, r, g, b, id)
 	print(msg)
 end
 
-function DEFAULT_CHAT_FRAME:SetMaxLines()
+---@param lines number
+function DEFAULT_CHAT_FRAME:SetMaxLines(lines)
 end
 
 -- SharedXML\Mixin.lua
