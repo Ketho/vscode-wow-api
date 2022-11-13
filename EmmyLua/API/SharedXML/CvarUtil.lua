@@ -14,13 +14,12 @@ end
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_CVar.SetCVar)
 ---@param name CVar
 ---@param value? boolean|string
----@param eventName? string
 ---@return boolean success
-function SetCVar(name, value, eventName)
+function SetCVar(name, value)
 	if type(value) == "boolean" then
-		return C_CVar.SetCVar(name, value and "1" or "0", eventName);
+		return C_CVar.SetCVar(name, value and "1" or "0");
 	else
-		return C_CVar.SetCVar(name, value and tostring(value) or nil, eventName);
+		return C_CVar.SetCVar(name, value and tostring(value) or nil);
 	end
 end
 
@@ -35,10 +34,9 @@ end
 ---@param name CVar
 ---@param index number
 ---@param value boolean
----@param scriptCVar? string
 ---@return boolean success
-function SetCVarBitfield(name, index, value, scriptCVar)
-	return C_CVar.SetCVarBitfield(name, index, value, scriptCVar);
+function SetCVarBitfield(name, index, value)
+	return C_CVar.SetCVarBitfield(name, index, value);
 end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_CVar.GetCVarBitfield)
