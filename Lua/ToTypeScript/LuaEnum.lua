@@ -1,4 +1,4 @@
-local Util = require("Lua/Util/Util")
+local Util = require("Lua.Util.Util")
 
 local PATH = "Lua/Data/cache/LuaEnum.lua"
 local URL = "https://raw.githubusercontent.com/Ketho/BlizzardInterfaceResources/mainline/Resources/LuaEnum.lua"

@@ -1,4 +1,4 @@
-local Util = require("Lua/Util/Util")
+local Util = require("Lua.Util.Util")
 
 local EmmyLiterals = {}
 

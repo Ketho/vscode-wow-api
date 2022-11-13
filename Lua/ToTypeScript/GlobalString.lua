@@ -1,7 +1,7 @@
 local lfs = require "lfs"
 
-local Util = require("Lua/Util/Util")
-local parser = require("Lua/Util/wowtoolsparser")
+local Util = require("Lua.Util.Util")
+local parser = require("Lua.Util.wowtoolsparser")
 
 Util:MakeDir("src/data/globalstring")
 

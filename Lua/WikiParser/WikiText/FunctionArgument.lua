@@ -1,5 +1,5 @@
-local nonBlizzDocumented = require("Lua/WikiParser/WikiText/NonBlizzardDocumented")[1]
-local WikiText = require("Lua/WikiParser/WikiText/WikiText")
+local nonBlizzDocumented = require("Lua.WikiParser.WikiText.NonBlizzardDocumented")[1]
+local WikiText = require("Lua.WikiParser.WikiText.WikiText")
 
 -- this has to be done manually because symbols get turned into HTML char codes when downloaded
 -- local file			= io.open("Lua/DataInput/World_of_Warcraft_API.txt", "r")

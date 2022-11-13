@@ -1,11 +1,11 @@
 local xml2lua = require "xml2lua"
 local handler = require "xmlhandler.tree"
-local Util = require("Lua/Util/Util")
+local Util = require("Lua.Util.Util")
 
 local PATH = "Lua/Data/cache/Wowpedia_API.xml"
 
 local function GetUndocumentedApi()
-	local nonBlizzDocumented = unpack(require("Lua/WikiParser/WikiText/NonBlizzardDocumented"))
+	local nonBlizzDocumented = unpack(require("Lua.WikiParser.WikiText.NonBlizzardDocumented"))
 	local t = {}
 	for k in pairs(nonBlizzDocumented) do
 		table.insert(t, "API "..k)
@@ -26,7 +26,7 @@ SaveWowpediaExport(PATH, undoc)
 -- todo: refactor; still need to write these files for later
 local function WriteApiFiles()
 	local output = "Lua/Data/output/NonBlizzardDocumented.txt"
-	local nonBlizzDocumented, blizzDocumented = unpack(require("Lua/WikiParser/WikiText/NonBlizzardDocumented"))
+	local nonBlizzDocumented, blizzDocumented = unpack(require("Lua.WikiParser.WikiText.NonBlizzardDocumented"))
 	local file1 = io.open(output, "w")
 	for _, name in pairs(Util:SortTable(nonBlizzDocumented)) do
 		file1:write("API "..name.."\n")

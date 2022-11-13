@@ -1,6 +1,6 @@
 local xml2lua = require "xml2lua"
 local handler = require "xmlhandler.tree"
-local Util = require("Lua/Util/Util")
+local Util = require("Lua.Util.Util")
 --Util:MakeDir("cache_lua")
 
 local INPUT = "Lua/Data/cache/World_of_Warcraft_API.xml"

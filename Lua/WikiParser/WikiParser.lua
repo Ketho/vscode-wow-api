@@ -1,18 +1,18 @@
-local Util = require("Lua/Util/Util")
-local Emmy = require("Lua/Emmy/Emmy")
+local Util = require("Lua.Util.Util")
+local Emmy = require("Lua.Emmy.Emmy")
 
 -- this place is a mess
-local wowpedia_arguments = require("Lua/WikiParser/WikiText/FunctionArgument")
-local nonBlizzDocumented = require("Lua/WikiParser/WikiText/NonBlizzardDocumented")[1]
+local wowpedia_arguments = require("Lua.WikiParser.WikiText.FunctionArgument")
+local nonBlizzDocumented = require("Lua.WikiParser.WikiText.NonBlizzardDocumented")[1]
 
-local parserData = require("Lua/WikiParser/XmlParser")
+local parserData = require("Lua.WikiParser.XmlParser")
 local validated, nonvalidated, emmyLua
 if type(parserData) == "table" then
 	validated, nonvalidated, emmyLua, emmyLuaMulti = unpack(parserData)
 else
 	return
 end
-local converter = require("Lua/WikiParser/WikiText/WowpediaConverter")
+local converter = require("Lua.WikiParser.WikiText.WowpediaConverter")
 local convertedApi = converter:ConvertApi(validated)
 
 local fileIndex = 0
