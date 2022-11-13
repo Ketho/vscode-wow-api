@@ -23,17 +23,10 @@ function lib:GetNameByDataObject(dataObject) end
 ---[Documentation](https://github.com/tekkub/libdatabroker-1-1/wiki/API#ldbdataobjectiterator)
 function lib:DataObjectIterator() end
 
----@param self table
+---@param addon table|string
 ---@param eventName string
 ---@param method? string or function
----@param arg?? any
+---@param arg? any
 ---[Documentation](https://github.com/tekkub/libdatabroker-1-1/wiki/API#ldbregistercallbackmytable-or-myaddonid-eventname-method-arg)
-function lib:RegisterCallback(self, eventName, method, arg) end
-
----@param addonId string
----@param eventName string
----@param method? string or function
----@param arg?? any
----[Documentation](https://github.com/tekkub/libdatabroker-1-1/wiki/API#ldbregistercallbackmytable-or-myaddonid-eventname-method-arg)
-function lib:RegisterCallback(addonId, eventName, method, arg) end
+function lib:RegisterCallback(addon, eventName, method, arg) end
 
