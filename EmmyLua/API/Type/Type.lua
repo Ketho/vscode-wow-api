@@ -122,3 +122,5 @@
 ---|"LEFT"
 ---|"RIGHT"
 ---|"CENTER"
+
+---@alias InventorySlots number
