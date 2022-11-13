@@ -2,7 +2,7 @@
 C_GamePad = {}
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_GamePad.AddSDLMapping)
----@param platform number|ClientPlatformType
+---@param platform number|Enum.ClientPlatformType
 ---@param mapping string
 ---@return boolean success
 function C_GamePad.AddSDLMapping(platform, mapping) end
@@ -74,7 +74,7 @@ function C_GamePad.GetLedColor() end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_GamePad.GetPowerLevel)
 ---@param deviceID? number
----@return GamePadPowerLevel powerLevel
+---@return Enum.GamePadPowerLevel powerLevel
 function C_GamePad.GetPowerLevel(deviceID) end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_GamePad.IsEnabled)

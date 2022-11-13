@@ -97,7 +97,7 @@ function SetPortraitTextureFromCreatureDisplayID(textureObject, creatureDisplayI
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_SetUnitCursorTexture)
 ---@param textureObject table
 ---@param unit string
----@param style? number|CursorStyle
+---@param style? number|Enum.CursorStyle
 ---@param includeLowPriority? boolean
 ---@return boolean hasCursor
 function SetUnitCursorTexture(textureObject, unit, style, includeLowPriority) end
@@ -154,12 +154,12 @@ function UnitPercentHealthFromGUID(unitGUID) end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_UnitPhaseReason)
 ---@param unit string
----@return PhaseReason? reason
+---@return Enum.PhaseReason? reason
 function UnitPhaseReason(unit) end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_UnitPower)
 ---@param unitToken string
----@param powerType? number|PowerType Default = NumPowerTypes
+---@param powerType? number|Enum.PowerType Default = NumPowerTypes
 ---@param unmodified? boolean Default = false
 ---@return number power
 function UnitPower(unitToken, powerType, unmodified) end
@@ -170,20 +170,20 @@ function UnitPower(unitToken, powerType, unmodified) end
 function UnitPowerBarID(unitToken) end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_UnitPowerDisplayMod)
----@param powerType number|PowerType
+---@param powerType number|Enum.PowerType
 ---@return number displayMod
 function UnitPowerDisplayMod(powerType) end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_UnitPowerMax)
 ---@param unitToken string
----@param powerType? number|PowerType Default = NumPowerTypes
+---@param powerType? number|Enum.PowerType Default = NumPowerTypes
 ---@param unmodified? boolean Default = false
 ---@return number maxPower
 function UnitPowerMax(unitToken, powerType, unmodified) end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_UnitPvpClassification)
 ---@param unit string
----@return PvPUnitClassification? classification
+---@return Enum.PvPUnitClassification? classification
 function UnitPvpClassification(unit) end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_UnitQuestTrivialLevelRange)

@@ -34,7 +34,7 @@ function C_AzeriteEmpoweredItem.GetPowerInfo(powerID) end
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_AzeriteEmpoweredItem.GetPowerText)
 ---@param azeriteEmpoweredItemLocation ItemLocationMixin
 ---@param powerID number
----@param level number|AzeritePowerLevel
+---@param level number|Enum.AzeritePowerLevel
 ---@return AzeriteEmpoweredItemPowerText powerText
 function C_AzeriteEmpoweredItem.GetPowerText(azeriteEmpoweredItemLocation, powerID, level) end
 

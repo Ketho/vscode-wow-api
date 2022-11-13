@@ -54,7 +54,7 @@ function C_ItemInteraction.SetPendingItem(item) end
 ---@field titleText string
 ---@field tutorialText string
 ---@field buttonText string
----@field interactionType UIItemInteractionType
+---@field interactionType Enum.UIItemInteractionType
 ---@field flags number
 ---@field description string?
 ---@field buttonTooltip string?

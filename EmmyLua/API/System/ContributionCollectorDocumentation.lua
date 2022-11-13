@@ -24,7 +24,7 @@ function C_ContributionCollector.GetBuffs(contributionID) end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_ContributionCollector.GetContributionAppearance)
 ---@param contributionID number
----@param contributionState number|ContributionState
+---@param contributionState number|Enum.ContributionState
 ---@return ContributionAppearance? appearance
 function C_ContributionCollector.GetContributionAppearance(contributionID, contributionState) end
 
@@ -35,7 +35,7 @@ function C_ContributionCollector.GetContributionCollectorsForMap(uiMapID) end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_ContributionCollector.GetContributionResult)
 ---@param contributionID number
----@return ContributionResult result
+---@return Enum.ContributionResult result
 function C_ContributionCollector.GetContributionResult(contributionID) end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_ContributionCollector.GetDescription)
@@ -77,7 +77,7 @@ function C_ContributionCollector.GetRewardQuestID(contributionID) end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_ContributionCollector.GetState)
 ---@param contributionID number
----@return ContributionState? contributionState Default = None
+---@return Enum.ContributionState? contributionState Default = None
 ---@return number contributionPercentageComplete
 ---@return number? timeOfNextStateChange
 ---@return number startTime

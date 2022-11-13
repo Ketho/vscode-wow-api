@@ -85,19 +85,19 @@ function C_ProfSpecs.GetSpendEntryForPath(pathID) end
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_ProfSpecs.GetStateForPath)
 ---@param pathID number
 ---@param configID number
----@return ProfessionsSpecPathState state
+---@return Enum.ProfessionsSpecPathState state
 function C_ProfSpecs.GetStateForPath(pathID, configID) end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_ProfSpecs.GetStateForPerk)
 ---@param perkID number
 ---@param configID number
----@return ProfessionsSpecPerkState state
+---@return Enum.ProfessionsSpecPerkState state
 function C_ProfSpecs.GetStateForPerk(perkID, configID) end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_ProfSpecs.GetStateForTab)
 ---@param tabTreeID number
 ---@param configID number
----@return ProfessionsSpecTabState tabInfo
+---@return Enum.ProfessionsSpecTabState tabInfo
 function C_ProfSpecs.GetStateForTab(tabTreeID, configID) end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_ProfSpecs.GetTabInfo)

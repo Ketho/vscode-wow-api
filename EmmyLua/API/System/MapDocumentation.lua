@@ -39,7 +39,7 @@ function C_Map.GetMapArtBackgroundAtlas(uiMapID) end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_Map.GetMapArtHelpTextPosition)
 ---@param uiMapID number
----@return MapCanvasPosition position
+---@return Enum.MapCanvasPosition position
 function C_Map.GetMapArtHelpTextPosition(uiMapID) end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_Map.GetMapArtID)
@@ -65,7 +65,7 @@ function C_Map.GetMapBannersForMap(uiMapID) end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_Map.GetMapChildrenInfo)
 ---@param uiMapID number
----@param mapType? number|UIMapType
+---@param mapType? number|Enum.UIMapType
 ---@param allDescendants? boolean
 ---@return UiMapDetails[] info
 function C_Map.GetMapChildrenInfo(uiMapID, mapType, allDescendants) end
@@ -218,7 +218,7 @@ function C_Map.SetUserWaypoint(point) end
 ---@class UiMapDetails
 ---@field mapID number
 ---@field name string
----@field mapType UIMapType
+---@field mapType Enum.UIMapType
 ---@field parentMapID number
 ---@field flags number
 

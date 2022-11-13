@@ -23,8 +23,8 @@ function C_EventToastManager.RemoveCurrentToast() end
 ---@field link string
 ---@field qualityString string?
 ---@field quality number?
----@field eventType EventToastEventType
----@field displayType EventToastDisplayType
+---@field eventType Enum.EventToastEventType
+---@field displayType Enum.EventToastDisplayType
 ---@field uiTextureKit string
 ---@field sortOrder number
 ---@field time number?

@@ -23,14 +23,14 @@ function C_TaxiMap.ShouldMapShowTaxiNodes(uiMapID) end
 ---@field position Vector2DMixin
 ---@field name string
 ---@field atlasName string
----@field faction FlightPathFaction
+---@field faction Enum.FlightPathFaction
 ---@field textureKit string
 
 ---@class TaxiNodeInfo
 ---@field nodeID number
 ---@field position Vector2DMixin
 ---@field name string
----@field state FlightPathState
+---@field state Enum.FlightPathState
 ---@field slotIndex number
 ---@field textureKit string
 ---@field useSpecialIcon boolean

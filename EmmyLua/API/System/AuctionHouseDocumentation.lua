@@ -117,7 +117,7 @@ function C_AuctionHouse.GetFilterGroups() end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_AuctionHouse.GetItemCommodityStatus)
 ---@param item ItemLocationMixin
----@return ItemCommodityStatus isCommodity
+---@return Enum.ItemCommodityStatus isCommodity
 function C_AuctionHouse.GetItemCommodityStatus(item) end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_AuctionHouse.GetItemKeyFromItem)
@@ -265,7 +265,7 @@ function C_AuctionHouse.GetReplicateItemLink(index) end
 function C_AuctionHouse.GetReplicateItemTimeLeft(index) end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_AuctionHouse.GetTimeLeftBandInfo)
----@param timeLeftBand number|AuctionHouseTimeLeftBand
+---@param timeLeftBand number|Enum.AuctionHouseTimeLeftBand
 ---@return number timeLeftMinSeconds
 ---@return number timeLeftMaxSeconds
 function C_AuctionHouse.GetTimeLeftBandInfo(timeLeftBand) end
@@ -438,20 +438,20 @@ function C_AuctionHouse.StartCommoditiesPurchase(itemID, quantity) end
 ---@field sorts AuctionHouseSortType[]
 ---@field minLevel number?
 ---@field maxLevel number?
----@field filters AuctionHouseFilter[]?
+---@field filters Enum.AuctionHouseFilter[]?
 ---@field itemClassFilters AuctionHouseItemClassFilter[]?
 
 ---@class AuctionHouseFilterGroup
----@field category AuctionHouseFilterCategory
----@field filters AuctionHouseFilter[]
+---@field category Enum.AuctionHouseFilterCategory
+---@field filters Enum.AuctionHouseFilter[]
 
 ---@class AuctionHouseItemClassFilter
 ---@field classID number
 ---@field subClassID number?
----@field inventoryType InventoryType?
+---@field inventoryType Enum.InventoryType?
 
 ---@class AuctionHouseSortType
----@field sortOrder AuctionHouseSortOrder
+---@field sortOrder Enum.AuctionHouseSortOrder
 ---@field reverseSort boolean
 
 ---@class AuctionInfo
@@ -466,7 +466,7 @@ function C_AuctionHouse.StartCommoditiesPurchase(itemID, quantity) end
 ---@field auctionID number
 ---@field itemKey ItemKey
 ---@field itemLink string?
----@field timeLeft AuctionHouseTimeLeftBand
+---@field timeLeft Enum.AuctionHouseTimeLeftBand
 ---@field minBid number?
 ---@field bidAmount number?
 ---@field buyoutAmount number?
@@ -513,7 +513,7 @@ function C_AuctionHouse.StartCommoditiesPurchase(itemID, quantity) end
 ---@field itemKey ItemKey
 ---@field owners string[]
 ---@field totalNumberOfOwners number
----@field timeLeft AuctionHouseTimeLeftBand
+---@field timeLeft Enum.AuctionHouseTimeLeftBand
 ---@field auctionID number
 ---@field quantity number
 ---@field itemLink string?
@@ -530,10 +530,10 @@ function C_AuctionHouse.StartCommoditiesPurchase(itemID, quantity) end
 ---@field auctionID number
 ---@field itemKey ItemKey
 ---@field itemLink string?
----@field status AuctionStatus
+---@field status Enum.AuctionStatus
 ---@field quantity number
 ---@field timeLeftSeconds number?
----@field timeLeft AuctionHouseTimeLeftBand?
+---@field timeLeft Enum.AuctionHouseTimeLeftBand?
 ---@field bidAmount number?
 ---@field buyoutAmount number?
 ---@field bidder string?

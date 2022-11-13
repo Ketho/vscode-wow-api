@@ -15,6 +15,6 @@ function C_TooltipComparison.GetItemComparisonDelta(comparisonItem, equippedItem
 function C_TooltipComparison.GetItemComparisonInfo(comparisonItem) end
 
 ---@class TooltipItemComparisonInfo
----@field method TooltipComparisonMethod? Default = Single
+---@field method Enum.TooltipComparisonMethod? Default = Single
 ---@field item table
 ---@field additionalItems table[]

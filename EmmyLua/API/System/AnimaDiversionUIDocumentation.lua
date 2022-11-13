@@ -45,4 +45,4 @@ function C_AnimaDiversion.SelectAnimaNode(talentID, temporary) end
 ---@field currencyID number
 ---@field icon number
 ---@field normalizedPosition Vector2DMixin
----@field state AnimaDiversionNodeState
+---@field state Enum.AnimaDiversionNodeState

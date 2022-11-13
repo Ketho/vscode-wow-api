@@ -15,7 +15,7 @@ function C_ClickBindings.ExecuteBinding(targetToken, button, modifiers) end
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_ClickBindings.GetBindingType)
 ---@param button string
 ---@param modifiers number
----@return ClickBindingType type
+---@return Enum.ClickBindingType type
 function C_ClickBindings.GetBindingType(button, modifiers) end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_ClickBindings.GetEffectiveInteractionButton)

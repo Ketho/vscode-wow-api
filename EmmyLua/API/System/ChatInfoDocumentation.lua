@@ -17,12 +17,12 @@ function C_ChatInfo.GetChannelRosterInfo(channelIndex, rosterIndex) end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_ChatInfo.GetChannelRuleset)
 ---@param channelIndex number
----@return ChatChannelRuleset ruleset
+---@return Enum.ChatChannelRuleset ruleset
 function C_ChatInfo.GetChannelRuleset(channelIndex) end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_ChatInfo.GetChannelRulesetForChannelID)
 ---@param channelID number
----@return ChatChannelRuleset ruleset
+---@return Enum.ChatChannelRuleset ruleset
 function C_ChatInfo.GetChannelRulesetForChannelID(channelID) end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_ChatInfo.GetChannelShortcut)
@@ -85,7 +85,7 @@ function C_ChatInfo.IsChannelRegional(channelIndex) end
 function C_ChatInfo.IsChannelRegionalForChannelID(channelID) end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_ChatInfo.IsPartyChannelType)
----@param channelType number|ChatChannelType
+---@param channelType number|Enum.ChatChannelType
 ---@return boolean isPartyChannelType
 function C_ChatInfo.IsPartyChannelType(channelType) end
 

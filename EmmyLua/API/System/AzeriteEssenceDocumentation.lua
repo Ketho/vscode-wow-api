@@ -107,4 +107,4 @@ function C_AzeriteEssence.UnlockMilestone(milestoneID) end
 ---@field canUnlock boolean
 ---@field unlocked boolean
 ---@field rank number?
----@field slot AzeriteEssenceSlot?
+---@field slot Enum.AzeriteEssenceSlot?

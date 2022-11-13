@@ -6,13 +6,13 @@ function C_QuestLog.AbandonQuest() end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_QuestLog.AddQuestWatch)
 ---@param questID number
----@param watchType? number|QuestWatchType
+---@param watchType? number|Enum.QuestWatchType
 ---@return boolean wasWatched
 function C_QuestLog.AddQuestWatch(questID, watchType) end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_QuestLog.AddWorldQuestWatch)
 ---@param questID number
----@param watchType? number|QuestWatchType
+---@param watchType? number|Enum.QuestWatchType
 ---@return boolean wasWatched
 function C_QuestLog.AddWorldQuestWatch(questID, watchType) end
 
@@ -50,7 +50,7 @@ function C_QuestLog.GetBountiesForMapID(uiMapID) end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_QuestLog.GetBountySetInfoForMapID)
 ---@param uiMapID number
----@return MapOverlayDisplayLocation displayLocation
+---@return Enum.MapOverlayDisplayLocation displayLocation
 ---@return number lockQuestID
 ---@return number bountySetID
 ---@return boolean isActivitySet
@@ -190,7 +190,7 @@ function C_QuestLog.GetQuestType(questID) end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_QuestLog.GetQuestWatchType)
 ---@param questID number
----@return QuestWatchType? watchType
+---@return Enum.QuestWatchType? watchType
 function C_QuestLog.GetQuestWatchType(questID) end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_QuestLog.GetQuestsOnMap)
@@ -422,7 +422,7 @@ function C_QuestLog.UnitIsRelatedToActiveQuest(unit) end
 ---@field level number
 ---@field difficultyLevel number
 ---@field suggestedGroup number
----@field frequency QuestFrequency?
+---@field frequency Enum.QuestFrequency?
 ---@field isHeader boolean
 ---@field useMinimalHeader boolean
 ---@field isCollapsed boolean
@@ -456,7 +456,7 @@ function C_QuestLog.UnitIsRelatedToActiveQuest(unit) end
 ---@field tagName string
 ---@field tagID number
 ---@field worldQuestType number?
----@field quality WorldQuestQuality?
+---@field quality Enum.WorldQuestQuality?
 ---@field tradeskillLineID number?
 ---@field isElite boolean?
 ---@field displayExpiration boolean?

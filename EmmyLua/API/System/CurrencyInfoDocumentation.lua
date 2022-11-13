@@ -131,7 +131,7 @@ function C_CurrencyInfo.SetCurrencyUnused(index, unused) end
 ---@field canEarnPerWeek boolean
 ---@field quantityEarnedThisWeek number
 ---@field isTradeable boolean
----@field quality ItemQuality
+---@field quality Enum.ItemQuality
 ---@field maxWeeklyQuantity number
 ---@field totalEarned number
 ---@field discovered boolean

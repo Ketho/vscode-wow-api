@@ -11,7 +11,7 @@ function C_CovenantPreview.GetCovenantInfoForPlayerChoiceResponseID(playerChoice
 
 ---@class CovenantAbilityInfo
 ---@field spellID number
----@field type CovenantAbilityType
+---@field type Enum.CovenantAbilityType
 
 ---@class CovenantFeatureInfo
 ---@field name string

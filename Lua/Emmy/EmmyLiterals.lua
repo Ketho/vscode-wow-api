@@ -56,7 +56,7 @@ function EmmyLiterals:GetEnumTable()
 	local t = {}
 	table.insert(t, "Enum = {")
 	for _, name in pairs(Util:SortTable(Enum)) do
-		table.insert(t, string.format("\t---@enum %s", name))
+		table.insert(t, string.format("\t---@enum Enum.%s", name))
 		table.insert(t, string.format("\t%s = {", name))
 		for _, enumTbl in pairs(SortByValue(Enum[name])) do
 			table.insert(t, string.format("\t\t%s = %d,", enumTbl.key, enumTbl.value))

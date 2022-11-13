@@ -23,19 +23,19 @@ function ReportInfoMixin:SetGroupFinderSearchResultID(groupFinderSearchResultID)
 ---@param groupFinderApplicantID number
 function ReportInfoMixin:SetGroupFinderApplicantID(groupFinderApplicantID) end
 
----@param reportType ReportType
+---@param reportType Enum.ReportType
 function ReportInfoMixin:SetReportType(reportType) end
 
----@param majorCategory ReportMajorCategory
+---@param majorCategory Enum.ReportMajorCategory
 function ReportInfoMixin:SetReportMajorCategory(majorCategory) end
 
----@param minorCategoryFlags ReportMinorCategory
+---@param minorCategoryFlags Enum.ReportMinorCategory
 function ReportInfoMixin:SetMinorCategoryFlags(minorCategoryFlags) end
 
 ---@param petGUID string
 function ReportInfoMixin:SetPetGUID(petGUID) end
 
----@param reportType? ReportType
----@param majorCategory ReportMajorCategory
----@param minorCategoryFlags ReportMinorCategory
+---@param reportType? Enum.ReportType
+---@param majorCategory Enum.ReportMajorCategory
+---@param minorCategoryFlags Enum.ReportMinorCategory
 function ReportInfoMixin:SetBasicReportInfo(reportType, majorCategory, minorCategoryFlags) end

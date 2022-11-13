@@ -5,4 +5,4 @@
 ---@field localID number
 ---@field instanceID number
 ---@field zoneChannelID number
----@field channelType PermanentChatChannelType
+---@field channelType Enum.PermanentChatChannelType

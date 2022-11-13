@@ -98,14 +98,14 @@ function C_GossipInfo.SelectOption(optionID, text, confirmed) end
 ---@class GossipOptionRewardInfo
 ---@field id number
 ---@field quantity number
----@field rewardType GossipOptionRewardType
+---@field rewardType Enum.GossipOptionRewardType
 
 ---@class GossipOptionUIInfo
 ---@field gossipOptionID number
 ---@field name string
 ---@field icon number
 ---@field rewards GossipOptionRewardInfo[]
----@field status GossipOptionStatus
+---@field status Enum.GossipOptionStatus
 ---@field spellID number?
 ---@field flags number
 ---@field overrideIconID number?

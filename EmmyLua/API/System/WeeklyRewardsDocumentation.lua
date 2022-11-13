@@ -17,12 +17,12 @@ function C_WeeklyRewards.ClaimReward(id) end
 function C_WeeklyRewards.CloseInteraction() end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_WeeklyRewards.GetActivities)
----@param type? number|WeeklyRewardChestThresholdType
+---@param type? number|Enum.WeeklyRewardChestThresholdType
 ---@return WeeklyRewardActivityInfo[] activities
 function C_WeeklyRewards.GetActivities(type) end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_WeeklyRewards.GetActivityEncounterInfo)
----@param type number|WeeklyRewardChestThresholdType
+---@param type number|Enum.WeeklyRewardChestThresholdType
 ---@param index number
 ---@return WeeklyRewardActivityEncounterInfo[] info
 function C_WeeklyRewards.GetActivityEncounterInfo(type, index) end
@@ -83,7 +83,7 @@ function C_WeeklyRewards.ShouldShowRetirementMessage() end
 ---@class ConquestWeeklyProgress
 ---@field progress number
 ---@field maxProgress number
----@field displayType ConquestProgressBarDisplayType
+---@field displayType Enum.ConquestProgressBarDisplayType
 ---@field unlocksCompleted number
 ---@field maxUnlocks number
 ---@field sampleItemHyperlink string
@@ -95,7 +95,7 @@ function C_WeeklyRewards.ShouldShowRetirementMessage() end
 ---@field instanceID number
 
 ---@class WeeklyRewardActivityInfo
----@field type WeeklyRewardChestThresholdType
+---@field type Enum.WeeklyRewardChestThresholdType
 ---@field index number
 ---@field threshold number
 ---@field progress number
@@ -106,7 +106,7 @@ function C_WeeklyRewards.ShouldShowRetirementMessage() end
 ---@field rewards WeeklyRewardActivityRewardInfo[]
 
 ---@class WeeklyRewardActivityRewardInfo
----@field type CachedRewardType
+---@field type Enum.CachedRewardType
 ---@field id number
 ---@field quantity number
 ---@field itemDBID string?

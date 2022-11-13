@@ -62,7 +62,7 @@ function C_PlayerChoice.SendPlayerChoiceResponse(responseID) end
 ---@field buttons PlayerChoiceOptionButtonInfo[]
 ---@field widgetSetID number?
 ---@field spellID number?
----@field rarity PlayerChoiceRarity?
+---@field rarity Enum.PlayerChoiceRarity?
 ---@field rarityColor ColorMixin?
 ---@field typeArtID number?
 ---@field headerIconAtlasElement string?

@@ -44,7 +44,7 @@ function C_CovenantSanctumUI.GetRenownLevels(covenantID) end
 function C_CovenantSanctumUI.GetRenownRewardsForLevel(covenantID, renownLevel) end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_CovenantSanctumUI.GetSanctumType)
----@return GarrTalentFeatureSubtype? sanctumType
+---@return Enum.GarrTalentFeatureSubtype? sanctumType
 function C_CovenantSanctumUI.GetSanctumType() end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_CovenantSanctumUI.GetSoulCurrencies)

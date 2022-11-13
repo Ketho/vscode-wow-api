@@ -7,7 +7,13 @@ local types = {
 }
 
 local function GetType(paramType)
-	return types[paramType] or paramType
+	if types[paramType] then
+		return types[paramType]
+	elseif Enum[paramType] then
+		return "Enum."..paramType
+	else
+		return paramType
+	end
 end
 
 function Emmy:GetSystem(system)

@@ -59,7 +59,7 @@ function C_Traits.GetConfigIDByTreeID(treeID) end
 function C_Traits.GetConfigInfo(configID) end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_Traits.GetConfigsByType)
----@param configType number|TraitConfigType
+---@param configType number|Enum.TraitConfigType
 ---@return number[] configIDs
 function C_Traits.GetConfigsByType(configType) end
 
@@ -206,7 +206,7 @@ function C_Traits.TalentTestUnlearnSpells() end
 
 ---@class TraitConfigInfo
 ---@field ID number
----@field type TraitConfigType
+---@field type Enum.TraitConfigType
 ---@field name string
 ---@field treeIDs number[]
 ---@field usesSharedActionBars boolean
@@ -222,11 +222,11 @@ function C_Traits.TalentTestUnlearnSpells() end
 ---@field overrideDescription string?
 ---@field overrideIcon number?
 ---@field overriddenSpellID number?
----@field subType TraitDefinitionSubType?
+---@field subType Enum.TraitDefinitionSubType?
 
 ---@class TraitEntryInfo
 ---@field definitionID number
----@field type TraitNodeEntryType
+---@field type Enum.TraitNodeEntryType
 ---@field maxRanks number
 ---@field isAvailable boolean
 ---@field conditionIDs number[]
@@ -256,7 +256,7 @@ function C_Traits.TalentTestUnlearnSpells() end
 ---@field activeEntry TraitEntryRankInfo?
 ---@field nextEntry TraitEntryRankInfo?
 ---@field maxRanks number
----@field type TraitNodeType
+---@field type Enum.TraitNodeType
 ---@field visibleEdges TraitOutEdgeInfo[]
 ---@field meetsEdgeRequirements boolean
 ---@field groupIDs number[]

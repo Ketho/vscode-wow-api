@@ -38,7 +38,7 @@
 ---@field timeRemaining number
 ---@field researchGoldCost number
 ---@field researchCurrencyCosts GarrisonTalentCurrencyCostInfo[]
----@field talentAvailability GarrisonTalentAvailability
+---@field talentAvailability Enum.GarrisonTalentAvailability
 ---@field talentRank number
 ---@field talentMaxRank number
 ---@field isBeingResearched boolean

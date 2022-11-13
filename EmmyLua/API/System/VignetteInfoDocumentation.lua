@@ -34,6 +34,6 @@ function C_VignetteInfo.GetVignettes() end
 ---@field atlasName string
 ---@field hasTooltip boolean
 ---@field vignetteID number
----@field type VignetteType
+---@field type Enum.VignetteType
 ---@field rewardQuestID number
 ---@field widgetSetID number?

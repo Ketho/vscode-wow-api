@@ -132,7 +132,7 @@ function C_TradeSkillUI.GetOriginalCraftRecipeID(itemGUID) end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_TradeSkillUI.GetProfessionByInventorySlot)
 ---@param slot number
----@return Profession? profession
+---@return Enum.Profession? profession
 function C_TradeSkillUI.GetProfessionByInventorySlot(slot) end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_TradeSkillUI.GetProfessionChildSkillLineID)
@@ -140,7 +140,7 @@ function C_TradeSkillUI.GetProfessionByInventorySlot(slot) end
 function C_TradeSkillUI.GetProfessionChildSkillLineID() end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_TradeSkillUI.GetProfessionForCursorItem)
----@return Profession? profession
+---@return Enum.Profession? profession
 function C_TradeSkillUI.GetProfessionForCursorItem() end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_TradeSkillUI.GetProfessionInfoBySkillLineID)
@@ -158,12 +158,12 @@ function C_TradeSkillUI.GetProfessionInventorySlots() end
 function C_TradeSkillUI.GetProfessionNameForSkillLineAbility(skillLineAbilityID) end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_TradeSkillUI.GetProfessionSkillLineID)
----@param profession number|Profession
+---@param profession number|Enum.Profession
 ---@return number skillLineID
 function C_TradeSkillUI.GetProfessionSkillLineID(profession) end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_TradeSkillUI.GetProfessionSlots)
----@param profession number|Profession
+---@param profession number|Enum.Profession
 ---@return number[] slots
 function C_TradeSkillUI.GetProfessionSlots(profession) end
 
@@ -302,7 +302,7 @@ function C_TradeSkillUI.HasRecipesTracked() end
 function C_TradeSkillUI.IsNPCCrafting() end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_TradeSkillUI.IsNearProfessionSpellFocus)
----@param profession number|Profession
+---@param profession number|Enum.Profession
 ---@return boolean nearFocus
 function C_TradeSkillUI.IsNearProfessionSpellFocus(profession) end
 

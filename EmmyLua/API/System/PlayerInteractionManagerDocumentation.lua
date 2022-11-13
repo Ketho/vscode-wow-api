@@ -2,11 +2,11 @@
 C_PlayerInteractionManager = {}
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_PlayerInteractionManager.ClearInteraction)
----@param type? number|PlayerInteractionType
+---@param type? number|Enum.PlayerInteractionType
 function C_PlayerInteractionManager.ClearInteraction(type) end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_PlayerInteractionManager.ConfirmationInteraction)
----@param type? number|PlayerInteractionType
+---@param type? number|Enum.PlayerInteractionType
 function C_PlayerInteractionManager.ConfirmationInteraction(type) end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_PlayerInteractionManager.InteractUnit)
@@ -16,7 +16,7 @@ function C_PlayerInteractionManager.ConfirmationInteraction(type) end
 function C_PlayerInteractionManager.InteractUnit(unit, exactMatch) end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_PlayerInteractionManager.IsInteractingWithNpcOfType)
----@param type number|PlayerInteractionType
+---@param type number|Enum.PlayerInteractionType
 ---@return boolean interacting
 function C_PlayerInteractionManager.IsInteractingWithNpcOfType(type) end
 
@@ -25,7 +25,7 @@ function C_PlayerInteractionManager.IsInteractingWithNpcOfType(type) end
 function C_PlayerInteractionManager.IsReplacingUnit() end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_PlayerInteractionManager.IsValidNPCInteraction)
----@param type number|PlayerInteractionType
+---@param type number|Enum.PlayerInteractionType
 ---@return boolean isValidInteraction
 function C_PlayerInteractionManager.IsValidNPCInteraction(type) end
 

@@ -2023,7 +2023,7 @@ function GetSpellPowerCost(spell) end
 ---@field cost number
 ---@field costPercent number
 ---@field costPerSec number
----@field type PowerType
+---@field type Enum.PowerType
 ---@field name string
 ---@field hasRequiredAura boolean
 ---@field requiredAuraID number

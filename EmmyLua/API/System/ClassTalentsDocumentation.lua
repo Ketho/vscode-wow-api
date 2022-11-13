@@ -78,7 +78,7 @@ function C_ClassTalents.IsConfigPopulated(configID) end
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_ClassTalents.LoadConfig)
 ---@param configID number
 ---@param autoApply boolean
----@return LoadConfigResult result
+---@return Enum.LoadConfigResult result
 function C_ClassTalents.LoadConfig(configID, autoApply) end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_ClassTalents.RenameConfig)
@@ -99,7 +99,7 @@ function C_ClassTalents.SaveConfig(configID) end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_ClassTalents.SetStarterBuildActive)
 ---@param active boolean
----@return LoadConfigResult result
+---@return Enum.LoadConfigResult result
 function C_ClassTalents.SetStarterBuildActive(active) end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_ClassTalents.SetUsesSharedActionBars)

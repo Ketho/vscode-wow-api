@@ -8,5 +8,5 @@ function C_IncomingSummon.HasIncomingSummon(unit) end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_IncomingSummon.IncomingSummonStatus)
 ---@param unit string
----@return SummonStatus status
+---@return Enum.SummonStatus status
 function C_IncomingSummon.IncomingSummonStatus(unit) end

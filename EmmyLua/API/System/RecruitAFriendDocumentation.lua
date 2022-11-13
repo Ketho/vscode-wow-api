@@ -88,14 +88,14 @@ function C_RecruitAFriend.RequestUpdatedRecruitmentInfo() end
 ---@field wowAccountGUID string
 ---@field battleTag string
 ---@field monthsRemaining number
----@field subStatus RafRecruitSubStatus
+---@field subStatus Enum.RafRecruitSubStatus
 ---@field acceptanceID string
 ---@field activities RafRecruitActivity[]
 
 ---@class RafRecruitActivity
 ---@field activityID number
 ---@field rewardQuestID number
----@field state RafRecruitActivityState
+---@field state Enum.RafRecruitActivityState
 
 ---@class RafRecruitmentinfo
 ---@field recruitmentCode string
@@ -110,7 +110,7 @@ function C_RecruitAFriend.RequestUpdatedRecruitmentInfo() end
 ---@class RafReward
 ---@field rewardID number
 ---@field itemID number
----@field rewardType RafRewardType
+---@field rewardType Enum.RafRewardType
 ---@field petInfo RafPetInfo?
 ---@field mountInfo RafMountInfo?
 ---@field appearanceInfo RafAppearanceInfo?

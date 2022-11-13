@@ -23,7 +23,7 @@ function C_Container.GetBagName(bagIndex) end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_Container.GetBagSlotFlag)
 ---@param bagIndex number
----@param flag number|BagSlotFlags
+---@param flag number|Enum.BagSlotFlags
 ---@return boolean isSet
 function C_Container.GetBagSlotFlag(bagIndex, flag) end
 
@@ -166,7 +166,7 @@ function C_Container.SetBagPortraitTexture(texture, bagIndex) end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_Container.SetBagSlotFlag)
 ---@param bagIndex number
----@param flag number|BagSlotFlags
+---@param flag number|Enum.BagSlotFlags
 ---@param isSet boolean
 function C_Container.SetBagSlotFlag(bagIndex, flag, isSet) end
 
@@ -227,7 +227,7 @@ function C_Container.UseHearthstone() end
 ---@field iconFileID number
 ---@field stackCount number
 ---@field isLocked boolean
----@field quality ItemQuality?
+---@field quality Enum.ItemQuality?
 ---@field isReadable boolean
 ---@field hasLoot boolean
 ---@field hyperlink string

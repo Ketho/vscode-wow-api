@@ -540,7 +540,7 @@ function UnitPowerBarTimerInfo() end
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_UnitPowerType)
 ---@param unit UnitId
 ---@param index? number
----@return PowerType powerType
+---@return Enum.PowerType powerType
 ---@return string powerToken
 ---@return number altR
 ---@return number altG

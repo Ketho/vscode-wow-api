@@ -10,7 +10,7 @@ function C_Navigation.GetDistance() end
 function C_Navigation.GetFrame() end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_Navigation.GetTargetState)
----@return NavigationState state
+---@return Enum.NavigationState state
 function C_Navigation.GetTargetState() end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_Navigation.HasValidScreenPosition)

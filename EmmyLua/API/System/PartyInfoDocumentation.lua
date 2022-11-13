@@ -65,7 +65,7 @@ function C_PartyInfo.GetInviteConfirmationInvalidQueues(inviteGUID) end
 ---@param inviteGUID string
 ---@return string outReferredByGuid
 ---@return string outReferredByName
----@return PartyRequestJoinRelation outRelationType
+---@return Enum.PartyRequestJoinRelation outRelationType
 ---@return boolean outIsQuickJoin
 ---@return string outClubId
 function C_PartyInfo.GetInviteReferralInfo(inviteGUID) end

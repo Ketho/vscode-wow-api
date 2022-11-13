@@ -47,7 +47,7 @@ function C_PetJournal.GetPetLoadOutInfo(slot) end
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_PetJournal.GetPetSummonInfo)
 ---@param battlePetGUID string
 ---@return boolean isSummonable
----@return PetJournalError error
+---@return Enum.PetJournalError error
 ---@return string errorText
 function C_PetJournal.GetPetSummonInfo(battlePetGUID) end
 

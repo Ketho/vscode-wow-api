@@ -53,7 +53,7 @@ function C_BattleNet.GetGameAccountInfoByID(id) end
 ---@field customMessage string
 ---@field customMessageTime number
 ---@field note string
----@field rafLinkType RafLinkType
+---@field rafLinkType Enum.RafLinkType
 ---@field gameAccountInfo BNetGameAccountInfo
 
 ---@class BNetGameAccountInfo

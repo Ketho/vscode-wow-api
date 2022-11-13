@@ -37,4 +37,4 @@ function C_QuestLine.RequestQuestLinesForMap(uiMapID) end
 ---@field isLegendary boolean
 ---@field isDaily boolean
 ---@field isCampaign boolean
----@field floorLocation QuestLineFloorLocation
+---@field floorLocation Enum.QuestLineFloorLocation

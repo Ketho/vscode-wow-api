@@ -14,11 +14,11 @@ function C_QuestSession.CanStop() end
 function C_QuestSession.Exists() end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_QuestSession.GetAvailableSessionCommand)
----@return QuestSessionCommand command
+---@return Enum.QuestSessionCommand command
 function C_QuestSession.GetAvailableSessionCommand() end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_QuestSession.GetPendingCommand)
----@return QuestSessionCommand command
+---@return Enum.QuestSessionCommand command
 function C_QuestSession.GetPendingCommand() end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_QuestSession.GetProposedMaxLevelForSession)

@@ -40,7 +40,7 @@ function C_ModelInfo.GetModelSceneCameraInfoByID(modelSceneCameraID) end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_ModelInfo.GetModelSceneInfoByID)
 ---@param modelSceneID number
----@return ModelSceneType modelSceneType
+---@return Enum.ModelSceneType modelSceneType
 ---@return number[] modelCameraIDs
 ---@return number[] modelActorsIDs
 function C_ModelInfo.GetModelSceneInfoByID(modelSceneID) end
@@ -82,4 +82,4 @@ function C_ModelInfo.GetModelSceneInfoByID(modelSceneID) end
 ---@field zoomedYawOffset number
 ---@field zoomedPitchOffset number
 ---@field zoomedRollOffset number
----@field flags ModelSceneSetting
+---@field flags Enum.ModelSceneSetting

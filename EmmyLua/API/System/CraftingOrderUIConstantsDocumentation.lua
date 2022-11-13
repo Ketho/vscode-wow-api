@@ -17,7 +17,7 @@
 ---@field uiSortOrder number
 ---@field primaryCategorySortOrder number?
 ---@field secondaryCategorySortOrder number?
----@field type CraftingOrderCustomerCategoryType
+---@field type Enum.CraftingOrderCustomerCategoryType
 
 ---@class CraftingOrderCustomerCategoryFilters
 ---@field primaryCategoryID number?
@@ -35,7 +35,7 @@
 ---@field iLvl number
 ---@field qualityIlvlBonuses number[]?
 ---@field craftingQualityIDs number[]?
----@field quality ItemQuality?
+---@field quality Enum.ItemQuality?
 ---@field slots number?
 ---@field level number?
 ---@field skill number?
@@ -61,15 +61,15 @@
 
 ---@class CraftingOrderCustomerSearchResults
 ---@field options CraftingOrderCustomerOptionInfo[]
----@field extraColumnType AuctionHouseExtraColumn?
+---@field extraColumnType Enum.AuctionHouseExtraColumn?
 
 ---@class CraftingOrderInfo
 ---@field orderID number
 ---@field itemID number
 ---@field spellID number
 ---@field skillLineAbilityID number
----@field orderType CraftingOrderType
----@field orderState CraftingOrderState
+---@field orderType Enum.CraftingOrderType
+---@field orderState Enum.CraftingOrderState
 ---@field expirationTime number
 ---@field claimEndTime number
 ---@field minQuality number
@@ -77,7 +77,7 @@
 ---@field consortiumCut number
 ---@field isRecraft boolean
 ---@field isFulfillable boolean
----@field reagentState CraftingOrderReagentsType
+---@field reagentState Enum.CraftingOrderReagentsType
 ---@field customerGuid string?
 ---@field customerName string?
 ---@field crafterGuid string?
@@ -89,7 +89,7 @@
 ---@field recraftItemHyperlink string?
 
 ---@class CraftingOrderMailInfo
----@field reason RcoCloseReason
+---@field reason Enum.RcoCloseReason
 ---@field recipeName string
 ---@field commissionPaid number?
 ---@field crafterNote string?
@@ -101,17 +101,17 @@
 ---@class CraftingOrderReagentInfo
 ---@field reagent CraftingReagentInfo
 ---@field reagentSlot number
----@field source CraftingOrderReagentSource
+---@field source Enum.CraftingOrderReagentSource
 ---@field isBasicReagent boolean
 
 ---@class CraftingOrderSortInfo
----@field sortType CraftingOrderSortType
+---@field sortType Enum.CraftingOrderSortType
 ---@field reversed boolean
 
 ---@class NewCraftingOrderInfo
 ---@field skillLineAbilityID number
----@field orderType CraftingOrderType
----@field orderDuration CraftingOrderDuration
+---@field orderType Enum.CraftingOrderType
+---@field orderDuration Enum.CraftingOrderDuration
 ---@field tipAmount number
 ---@field customerNotes string
 ---@field reagentItems RegularReagentInfo[]

@@ -61,7 +61,7 @@ function C_Soulbinds.FindNodeIDPendingUninstall(soulbindID, conduitID) end
 function C_Soulbinds.GetActiveSoulbindID() end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_Soulbinds.GetConduitCollection)
----@param conduitType number|SoulbindConduitType
+---@param conduitType number|Enum.SoulbindConduitType
 ---@return ConduitCollectionData[] collectionData
 function C_Soulbinds.GetConduitCollection(conduitType) end
 
@@ -184,7 +184,7 @@ function C_Soulbinds.IsUnselectedConduitPendingInSoulbind(soulbindID) end
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_Soulbinds.ModifyNode)
 ---@param nodeID number
 ---@param conduitID number
----@param type number|SoulbindConduitTransactionType
+---@param type number|Enum.SoulbindConduitTransactionType
 function C_Soulbinds.ModifyNode(nodeID, conduitID, type) end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_Soulbinds.SelectNode)
@@ -199,7 +199,7 @@ function C_Soulbinds.UnmodifyNode(nodeID) end
 ---@field conduitID number
 ---@field conduitRank number
 ---@field conduitItemLevel number
----@field conduitType SoulbindConduitType
+---@field conduitType Enum.SoulbindConduitType
 ---@field conduitSpecSetID number
 ---@field conduitSpecIDs number[]
 ---@field conduitSpecName string?
@@ -236,8 +236,8 @@ function C_Soulbinds.UnmodifyNode(nodeID) end
 ---@field playerConditionReason string?
 ---@field conduitID number
 ---@field conduitRank number
----@field state SoulbindNodeState
----@field conduitType SoulbindConduitType?
+---@field state Enum.SoulbindNodeState
+---@field conduitType Enum.SoulbindConduitType?
 ---@field parentNodeIDs number[]
 ---@field failureRenownRequirement number?
 ---@field socketEnhanced boolean?

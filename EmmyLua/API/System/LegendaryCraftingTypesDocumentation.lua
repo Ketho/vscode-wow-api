@@ -19,7 +19,7 @@
 
 ---@class RuneforgePower
 ---@field runeforgePowerID number
----@field state RuneforgePowerState
+---@field state Enum.RuneforgePowerState
 ---@field name string
 ---@field descriptionSpellID number
 ---@field description string

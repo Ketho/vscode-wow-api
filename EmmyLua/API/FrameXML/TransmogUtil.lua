@@ -4,7 +4,7 @@
 TransmogPendingInfoMixin = {}
 
 --- See [CreateAndInitFromMixin](https://www.townlong-yak.com/framexml/go/CreateAndInitFromMixin)
----@param pendingType TransmogPendingType
+---@param pendingType Enum.TransmogPendingType
 ---@param transmogID number
 ---@param category number
 function TransmogPendingInfoMixin:Init(pendingType, transmogID, category) end
@@ -14,8 +14,8 @@ function TransmogPendingInfoMixin:Init(pendingType, transmogID, category) end
 TransmogLocationMixin = {}
 
 ---@param slotID number
----@param transmogType TransmogType
----@param modification TransmogModification
+---@param transmogType Enum.TransmogType
+---@param modification Enum.TransmogModification
 function TransmogLocationMixin:Set(slotID, transmogType, modification) end
 
 ---@return boolean

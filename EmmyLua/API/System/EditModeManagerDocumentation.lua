@@ -35,7 +35,7 @@ function C_EditMode.OnLayoutDeleted(deletedLayoutIndex) end
 function C_EditMode.SaveLayouts(saveInfo) end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_EditMode.SetAccountSetting)
----@param setting number|EditModeAccountSetting
+---@param setting number|Enum.EditModeAccountSetting
 ---@param value number
 function C_EditMode.SetAccountSetting(setting, value) end
 
@@ -52,7 +52,7 @@ function C_EditMode.SetActiveLayout(activeLayout) end
 
 ---@class EditModeLayoutInfo
 ---@field layoutName string
----@field layoutType EditModeLayoutType
+---@field layoutType Enum.EditModeLayoutType
 ---@field systems EditModeSystemInfo[]
 
 ---@class EditModeLayouts
@@ -64,7 +64,7 @@ function C_EditMode.SetActiveLayout(activeLayout) end
 ---@field value number
 
 ---@class EditModeSystemInfo
----@field system EditModeSystem
+---@field system Enum.EditModeSystem
 ---@field systemIndex number?
 ---@field anchorInfo EditModeAnchorInfo
 ---@field anchorInfo2 EditModeAnchorInfo?

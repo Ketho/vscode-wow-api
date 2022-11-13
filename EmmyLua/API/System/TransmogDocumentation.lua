@@ -51,7 +51,7 @@ function C_Transmog.GetApplyWarnings() end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_Transmog.GetBaseCategory)
 ---@param transmogID number
----@return TransmogCollectionType categoryID
+---@return Enum.TransmogCollectionType categoryID
 function C_Transmog.GetBaseCategory(transmogID) end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_Transmog.GetCreatureDisplayIDForSource)
@@ -71,7 +71,7 @@ function C_Transmog.GetPending(transmogLocation) end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_Transmog.GetSlotEffectiveCategory)
 ---@param transmogLocation TransmogLocationMixin
----@return TransmogCollectionType categoryID
+---@return Enum.TransmogCollectionType categoryID
 function C_Transmog.GetSlotEffectiveCategory(transmogLocation) end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_Transmog.GetSlotForInventoryType)

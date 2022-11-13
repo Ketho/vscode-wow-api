@@ -16,7 +16,7 @@ function C_TTSSettings.GetCharacterSettingsSaved() end
 function C_TTSSettings.GetChatTypeEnabled(chatName) end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_TTSSettings.GetSetting)
----@param setting number|TtsBoolSetting
+---@param setting number|Enum.TtsBoolSetting
 ---@return boolean enabled
 function C_TTSSettings.GetSetting(setting) end
 
@@ -29,12 +29,12 @@ function C_TTSSettings.GetSpeechRate() end
 function C_TTSSettings.GetSpeechVolume() end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_TTSSettings.GetVoiceOptionID)
----@param voiceType number|TtsVoiceType
+---@param voiceType number|Enum.TtsVoiceType
 ---@return number voiceID
 function C_TTSSettings.GetVoiceOptionID(voiceType) end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_TTSSettings.GetVoiceOptionName)
----@param voiceType number|TtsVoiceType
+---@param voiceType number|Enum.TtsVoiceType
 ---@return string voiceName
 function C_TTSSettings.GetVoiceOptionName(voiceType) end
 
@@ -60,7 +60,7 @@ function C_TTSSettings.SetChatTypeEnabled(chatName, newVal) end
 function C_TTSSettings.SetDefaultSettings() end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_TTSSettings.SetSetting)
----@param setting number|TtsBoolSetting
+---@param setting number|Enum.TtsBoolSetting
 ---@param newVal? boolean Default = false
 function C_TTSSettings.SetSetting(setting, newVal) end
 
@@ -73,12 +73,12 @@ function C_TTSSettings.SetSpeechRate(newVal) end
 function C_TTSSettings.SetSpeechVolume(newVal) end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_TTSSettings.SetVoiceOption)
----@param voiceType number|TtsVoiceType
+---@param voiceType number|Enum.TtsVoiceType
 ---@param voiceID number
 function C_TTSSettings.SetVoiceOption(voiceType, voiceID) end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_TTSSettings.SetVoiceOptionName)
----@param voiceType number|TtsVoiceType
+---@param voiceType number|Enum.TtsVoiceType
 ---@param voiceName string
 function C_TTSSettings.SetVoiceOptionName(voiceType, voiceName) end
 

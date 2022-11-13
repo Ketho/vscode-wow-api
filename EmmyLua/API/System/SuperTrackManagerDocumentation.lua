@@ -2,7 +2,7 @@
 C_SuperTrack = {}
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_SuperTrack.GetHighestPrioritySuperTrackingType)
----@return SuperTrackingType? type
+---@return Enum.SuperTrackingType? type
 function C_SuperTrack.GetHighestPrioritySuperTrackingType() end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_SuperTrack.GetSuperTrackedQuestID)

@@ -64,13 +64,13 @@
 
 ---@class CraftingReagentSlotSchematic
 ---@field reagents CraftingReagent[]
----@field reagentType CraftingReagentType
+---@field reagentType Enum.CraftingReagentType
 ---@field quantityRequired number
 ---@field slotInfo CraftingReagentSlotInfo?
----@field dataSlotType TradeskillSlotDataType? Default = Reagent
+---@field dataSlotType Enum.TradeskillSlotDataType? Default = Reagent
 ---@field dataSlotIndex number
 ---@field slotIndex number
----@field orderSource CraftingOrderReagentSource?
+---@field orderSource Enum.CraftingOrderReagentSource?
 
 ---@class CraftingRecipeOutputInfo
 ---@field icon number
@@ -80,7 +80,7 @@
 ---@class CraftingRecipeRequirement
 ---@field name string
 ---@field met boolean
----@field type RecipeRequirementType
+---@field type Enum.RecipeRequirementType
 
 ---@class CraftingRecipeSchematic
 ---@field recipeID number
@@ -88,7 +88,7 @@
 ---@field quantityMin number
 ---@field quantityMax number
 ---@field name string
----@field recipeType TradeskillRecipeType? Default = Item
+---@field recipeType Enum.TradeskillRecipeType? Default = Item
 ---@field productQuality number?
 ---@field outputItemID number?
 ---@field reagentSlotSchematics CraftingReagentSlotSchematic[]
@@ -125,7 +125,7 @@
 ---@field bonusStats GatheringOperationBonusStatInfo[]
 
 ---@class ProfessionInfo
----@field profession Profession?
+---@field profession Enum.Profession?
 ---@field professionID number
 ---@field professionName string
 ---@field expansionName string
@@ -143,7 +143,7 @@
 ---@class TradeSkillRecipeInfo
 ---@field categoryID number
 ---@field name string
----@field relativeDifficulty TradeskillRelativeDifficulty?
+---@field relativeDifficulty Enum.TradeskillRelativeDifficulty?
 ---@field maxTrivialLevel number
 ---@field itemLevel number
 ---@field alternateVerb string?

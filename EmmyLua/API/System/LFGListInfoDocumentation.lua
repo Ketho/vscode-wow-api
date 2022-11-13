@@ -25,7 +25,7 @@ function C_LFGList.CopyActiveEntryInfoToCreationFields() end
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_LFGList.DoesEntryTitleMatchPrebuiltTitle)
 ---@param activityID number
 ---@param groupID number
----@param playstyle? number|LFGEntryPlaystyle
+---@param playstyle? number|Enum.LFGEntryPlaystyle
 ---@return boolean matches
 function C_LFGList.DoesEntryTitleMatchPrebuiltTitle(activityID, groupID, playstyle) end
 
@@ -95,7 +95,7 @@ function C_LFGList.GetLfgCategoryInfo(categoryID) end
 function C_LFGList.GetOwnedKeystoneActivityAndGroupAndLevel(getTimewalking) end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_LFGList.GetPlaystyleString)
----@param playstyle number|LFGEntryPlaystyle
+---@param playstyle number|Enum.LFGEntryPlaystyle
 ---@param activityInfo GroupFinderActivityInfo
 ---@return string playstyleString
 function C_LFGList.GetPlaystyleString(playstyle, activityInfo) end
@@ -135,7 +135,7 @@ function C_LFGList.Search(categoryID, filter, preferredFilters, languageFilter, 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_LFGList.SetEntryTitle)
 ---@param activityID number
 ---@param groupID number
----@param playstyle? number|LFGEntryPlaystyle
+---@param playstyle? number|Enum.LFGEntryPlaystyle
 function C_LFGList.SetEntryTitle(activityID, groupID, playstyle) end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_LFGList.SetSearchToActivity)
@@ -172,7 +172,7 @@ function C_LFGList.ValidateRequiredPvpRatingForActivity(activityID, rating) end
 ---@field filters number
 ---@field minLevel number
 ---@field maxNumPlayers number
----@field displayType LFGListDisplayType
+---@field displayType Enum.LFGListDisplayType
 ---@field orderIndex number
 ---@field useHonorLevel boolean
 ---@field showQuickJoinToast boolean
@@ -215,7 +215,7 @@ function C_LFGList.ValidateRequiredPvpRatingForActivity(activityID, rating) end
 ---@field questID number?
 ---@field requiredDungeonScore number?
 ---@field requiredPvpRating number?
----@field playstyle LFGEntryPlaystyle?
+---@field playstyle Enum.LFGEntryPlaystyle?
 ---@field isCrossFactionListing boolean
 
 ---@class LfgSearchResultData
@@ -242,7 +242,7 @@ function C_LFGList.ValidateRequiredPvpRatingForActivity(activityID, rating) end
 ---@field leaderPvpRatingInfo PvpRatingInfo?
 ---@field requiredDungeonScore number?
 ---@field requiredPvpRating number?
----@field playstyle LFGEntryPlaystyle?
+---@field playstyle Enum.LFGEntryPlaystyle?
 ---@field crossFactionListing boolean?
 ---@field leaderFactionGroup number
 

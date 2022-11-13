@@ -6,7 +6,7 @@ C_Console = {}
 function C_Console.GetAllCommands() end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_Console.GetColorFromType)
----@param colorType number|ConsoleColorType
+---@param colorType number|Enum.ConsoleColorType
 ---@return ColorMixin color
 function C_Console.GetColorFromType(colorType) end
 
@@ -25,7 +25,7 @@ function C_Console.SetFontHeight(fontHeightInPixels) end
 ---@class ConsoleCommandInfo
 ---@field command string
 ---@field help string
----@field category ConsoleCategory
----@field commandType ConsoleCommandType
+---@field category Enum.ConsoleCategory
+---@field commandType Enum.ConsoleCommandType
 ---@field scriptContents string
 ---@field scriptParameters string

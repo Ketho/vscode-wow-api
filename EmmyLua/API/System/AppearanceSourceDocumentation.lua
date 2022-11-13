@@ -6,12 +6,12 @@
 ---@field itemID number
 ---@field itemModID number
 ---@field invType number? Default = 0
----@field categoryID TransmogCollectionType? Default = None
+---@field categoryID Enum.TransmogCollectionType? Default = None
 ---@field inventorySlot number?
 ---@field sourceType number?
 ---@field name string?
 ---@field quality number?
 ---@field useError string?
----@field useErrorType TransmogUseErrorType?
+---@field useErrorType Enum.TransmogUseErrorType?
 ---@field meetsTransmogPlayerCondition boolean?
 ---@field isHideVisual boolean?

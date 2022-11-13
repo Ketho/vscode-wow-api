@@ -84,12 +84,12 @@ function C_Item.GetItemIconByID(itemInfo) end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_Item.GetItemInventoryType)
 ---@param itemLocation ItemLocationMixin
----@return InventoryType? inventoryType
+---@return Enum.InventoryType? inventoryType
 function C_Item.GetItemInventoryType(itemLocation) end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_Item.GetItemInventoryTypeByID)
 ---@param itemInfo string
----@return InventoryType? inventoryType
+---@return Enum.InventoryType? inventoryType
 function C_Item.GetItemInventoryTypeByID(itemInfo) end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_Item.GetItemLink)
@@ -129,12 +129,12 @@ function C_Item.GetItemNameByID(itemInfo) end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_Item.GetItemQuality)
 ---@param itemLocation ItemLocationMixin
----@return ItemQuality? itemQuality
+---@return Enum.ItemQuality? itemQuality
 function C_Item.GetItemQuality(itemLocation) end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_Item.GetItemQualityByID)
 ---@param itemInfo string
----@return ItemQuality? itemQuality
+---@return Enum.ItemQuality? itemQuality
 function C_Item.GetItemQualityByID(itemInfo) end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_Item.GetItemUniquenessByID)

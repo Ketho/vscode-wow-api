@@ -37,7 +37,7 @@ function C_CampaignInfo.GetFailureReason(campaignID) end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_CampaignInfo.GetState)
 ---@param campaignID number
----@return CampaignState state
+---@return Enum.CampaignState state
 function C_CampaignInfo.GetState(campaignID) end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_CampaignInfo.IsCampaignQuest)

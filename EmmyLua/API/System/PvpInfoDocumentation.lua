@@ -52,7 +52,7 @@ function C_PvP.GetActiveMatchBracket() end
 function C_PvP.GetActiveMatchDuration() end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_PvP.GetActiveMatchState)
----@return PvPMatchState state
+---@return Enum.PvPMatchState state
 function C_PvP.GetActiveMatchState() end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_PvP.GetActiveMatchWinner)
@@ -106,7 +106,7 @@ function C_PvP.GetBattlefieldVehicleInfo(vehicleIndex, uiMapID) end
 function C_PvP.GetBattlefieldVehicles(uiMapID) end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_PvP.GetBrawlRewards)
----@param brawlType number|BrawlType
+---@param brawlType number|Enum.BrawlType
 ---@return number honor
 ---@return number experience
 ---@return BattlefieldItemReward[]? itemRewards
@@ -435,7 +435,7 @@ function C_PvP.ToggleWarMode() end
 ---@field maxLevel number
 ---@field groupsAllowed boolean
 ---@field timeLeftUntilNextChange number?
----@field brawlType BrawlType
+---@field brawlType Enum.BrawlType
 ---@field mapNames string[]
 ---@field includesAllArenas boolean? Default = false
 

@@ -81,7 +81,7 @@ function IsTrialAccount() end
 function IsVeteranTrialAccount() end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_SendSubscriptionInterstitialResponse)
----@param response number|SubscriptionInterstitialResponseType
+---@param response number|Enum.SubscriptionInterstitialResponseType
 function SendSubscriptionInterstitialResponse(response) end
 
 ---@class ExpansionDisplayInfo

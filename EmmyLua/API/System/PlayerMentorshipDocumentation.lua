@@ -13,7 +13,7 @@ function C_PlayerMentorship.GetMentorRequirements() end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_PlayerMentorship.GetMentorshipStatus)
 ---@param playerLocation PlayerLocationMixin
----@return PlayerMentorshipStatus status
+---@return Enum.PlayerMentorshipStatus status
 function C_PlayerMentorship.GetMentorshipStatus(playerLocation) end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_PlayerMentorship.IsActivePlayerConsideredNewcomer)

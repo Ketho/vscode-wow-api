@@ -149,7 +149,7 @@ function C_Calendar.EventGetSelectedInvite() end
 function C_Calendar.EventGetStatusOptions(eventIndex) end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_Calendar.EventGetTextures)
----@param eventType number|CalendarEventType
+---@param eventType number|Enum.CalendarEventType
 ---@return CalendarEventTextureInfo[] textures
 function C_Calendar.EventGetTextures(eventType) end
 
@@ -204,7 +204,7 @@ function C_Calendar.EventSetDescription(description) end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_Calendar.EventSetInviteStatus)
 ---@param eventIndex number
----@param status number|CalendarStatus
+---@param status number|Enum.CalendarStatus
 function C_Calendar.EventSetInviteStatus(eventIndex, status) end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_Calendar.EventSetLocked)
@@ -228,7 +228,7 @@ function C_Calendar.EventSetTime(hour, minute) end
 function C_Calendar.EventSetTitle(title) end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_Calendar.EventSetType)
----@param typeIndex number|CalendarEventType
+---@param typeIndex number|Enum.CalendarEventType
 function C_Calendar.EventSetType(typeIndex) end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_Calendar.EventSignUp)
@@ -398,13 +398,13 @@ function C_Calendar.UpdateEvent() end
 ---@field endTime CalendarTime
 ---@field calendarType string
 ---@field sequenceType string
----@field eventType CalendarEventType
+---@field eventType Enum.CalendarEventType
 ---@field iconTexture number?
 ---@field modStatus string
----@field inviteStatus CalendarStatus
+---@field inviteStatus Enum.CalendarStatus
 ---@field invitedBy string
 ---@field difficulty number
----@field inviteType CalendarInviteType
+---@field inviteType Enum.CalendarInviteType
 ---@field sequenceIndex number
 ---@field numSequenceDays number
 ---@field difficultyName string
@@ -422,8 +422,8 @@ function C_Calendar.UpdateEvent() end
 ---@field title string
 ---@field description string
 ---@field creator string?
----@field eventType CalendarEventType
----@field repeatOption CalendarEventRepeatOptions
+---@field eventType Enum.CalendarEventType
+---@field repeatOption Enum.CalendarEventRepeatOptions
 ---@field maxSize number
 ---@field textureIndex number?
 ---@field time CalendarTime
@@ -431,8 +431,8 @@ function C_Calendar.UpdateEvent() end
 ---@field isLocked boolean
 ---@field isAutoApprove boolean
 ---@field hasPendingInvite boolean
----@field inviteStatus CalendarStatus?
----@field inviteType CalendarInviteType?
+---@field inviteStatus Enum.CalendarStatus?
+---@field inviteType Enum.CalendarInviteType?
 ---@field calendarType string
 ---@field communityName string?
 
@@ -441,16 +441,16 @@ function C_Calendar.UpdateEvent() end
 ---@field level number
 ---@field className string?
 ---@field classFilename string?
----@field inviteStatus CalendarStatus?
+---@field inviteStatus Enum.CalendarStatus?
 ---@field modStatus string?
 ---@field inviteIsMine boolean
----@field type CalendarInviteType
+---@field type Enum.CalendarInviteType
 ---@field notes string
 ---@field classID number?
 ---@field guid string
 
 ---@class CalendarEventStatusOption
----@field status CalendarStatus
+---@field status Enum.CalendarStatus
 ---@field statusString string
 
 ---@class CalendarEventTextureInfo
@@ -463,7 +463,7 @@ function C_Calendar.UpdateEvent() end
 
 ---@class CalendarEventTypeDisplayInfo
 ---@field displayString string
----@field eventType CalendarEventType
+---@field eventType Enum.CalendarEventType
 
 ---@class CalendarGuildEventInfo
 ---@field eventID string
@@ -473,11 +473,11 @@ function C_Calendar.UpdateEvent() end
 ---@field weekday number
 ---@field hour number
 ---@field minute number
----@field eventType CalendarEventType
+---@field eventType Enum.CalendarEventType
 ---@field title string
 ---@field calendarType string
 ---@field texture number
----@field inviteStatus CalendarStatus
+---@field inviteStatus Enum.CalendarStatus
 ---@field clubID string
 
 ---@class CalendarGuildFilterInfo

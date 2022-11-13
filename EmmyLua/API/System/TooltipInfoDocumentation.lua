@@ -27,7 +27,7 @@ function C_TooltipInfo.GetArtifactPowerByID(powerID) end
 function C_TooltipInfo.GetAzeriteEssence(essenceID, rank) end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_TooltipInfo.GetAzeriteEssenceSlot)
----@param slot number|AzeriteEssenceSlot
+---@param slot number|Enum.AzeriteEssenceSlot
 ---@return TooltipData data
 function C_TooltipInfo.GetAzeriteEssenceSlot(slot) end
 

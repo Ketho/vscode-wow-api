@@ -7,12 +7,12 @@ MapUtil = {}
 function MapUtil.IsMapTypeZone(mapID) end
 
 ---@param mapID number
----@param mapType UIMapType
+---@param mapType Enum.UIMapType
 ---@param topMost? boolean
 ---@return UiMapDetails
 function MapUtil.GetMapParentInfo(mapID, mapType, topMost) end
 
----@param mapType UIMapType
+---@param mapType Enum.UIMapType
 ---@return boolean
 function MapUtil.ShouldMapTypeShowQuests(mapType) end
 

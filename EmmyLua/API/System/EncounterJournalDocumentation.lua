@@ -34,7 +34,7 @@ function C_EncounterJournal.GetSectionIconFlags(sectionID) end
 function C_EncounterJournal.GetSectionInfo(sectionID) end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_EncounterJournal.GetSlotFilter)
----@return ItemSlotFilterType filter
+---@return Enum.ItemSlotFilterType filter
 function C_EncounterJournal.GetSlotFilter() end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_EncounterJournal.InstanceHasLoot)
@@ -59,7 +59,7 @@ function C_EncounterJournal.SetPreviewMythicPlusLevel(level) end
 function C_EncounterJournal.SetPreviewPvpTier(tier) end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_EncounterJournal.SetSlotFilter)
----@param filterSlot number|ItemSlotFilterType
+---@param filterSlot number|Enum.ItemSlotFilterType
 function C_EncounterJournal.SetSlotFilter(filterSlot) end
 
 ---@class DungeonEntranceMapInfo
@@ -75,7 +75,7 @@ function C_EncounterJournal.SetSlotFilter(filterSlot) end
 ---@field encounterID number?
 ---@field name string?
 ---@field itemQuality string?
----@field filterType ItemSlotFilterType?
+---@field filterType Enum.ItemSlotFilterType?
 ---@field icon number?
 ---@field slot string?
 ---@field armorType string?

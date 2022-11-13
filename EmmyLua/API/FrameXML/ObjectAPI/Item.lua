@@ -72,7 +72,7 @@ function ItemMixin:GetItemName() end
 ---@return string
 function ItemMixin:GetItemLink() end
 
----@return ItemQuality
+---@return Enum.ItemQuality
 function ItemMixin:GetItemQuality() end
 
 ---@return number
@@ -81,7 +81,7 @@ function ItemMixin:GetCurrentItemLevel() end
 ---@return table
 function ItemMixin:GetItemQualityColor() end
 
----@return InventoryType
+---@return Enum.InventoryType
 function ItemMixin:GetInventoryType() end
 
 ---@return string

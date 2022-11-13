@@ -12,6 +12,6 @@ function C_Sound.GetSoundScaledVolume(soundHandle) end
 function C_Sound.IsPlaying(soundHandle) end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_Sound.PlayItemSound)
----@param soundType number|ItemSoundType
+---@param soundType number|Enum.ItemSoundType
 ---@param itemLocation ItemLocationMixin
 function C_Sound.PlayItemSound(soundType, itemLocation) end

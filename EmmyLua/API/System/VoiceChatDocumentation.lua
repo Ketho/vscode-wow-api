@@ -19,7 +19,7 @@ function C_VoiceChat.CanPlayerUseVoiceChat() end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_VoiceChat.CreateChannel)
 ---@param channelDisplayName string
----@return VoiceChatStatusCode status
+---@return Enum.VoiceChatStatusCode status
 function C_VoiceChat.CreateChannel(channelDisplayName) end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_VoiceChat.DeactivateChannel)
@@ -38,7 +38,7 @@ function C_VoiceChat.EndLocalCapture() end
 function C_VoiceChat.GetActiveChannelID() end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_VoiceChat.GetActiveChannelType)
----@return ChatChannelType? channelType
+---@return Enum.ChatChannelType? channelType
 function C_VoiceChat.GetActiveChannelType() end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_VoiceChat.GetAvailableInputDevices)
@@ -55,7 +55,7 @@ function C_VoiceChat.GetAvailableOutputDevices() end
 function C_VoiceChat.GetChannel(channelID) end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_VoiceChat.GetChannelForChannelType)
----@param channelType number|ChatChannelType
+---@param channelType number|Enum.ChatChannelType
 ---@return VoiceChatChannel? channel
 function C_VoiceChat.GetChannelForChannelType(channelType) end
 
@@ -66,11 +66,11 @@ function C_VoiceChat.GetChannelForChannelType(channelType) end
 function C_VoiceChat.GetChannelForCommunityStream(clubId, streamId) end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_VoiceChat.GetCommunicationMode)
----@return CommunicationMode? communicationMode
+---@return Enum.CommunicationMode? communicationMode
 function C_VoiceChat.GetCommunicationMode() end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_VoiceChat.GetCurrentVoiceChatConnectionStatusCode)
----@return VoiceChatStatusCode? statusCode
+---@return Enum.VoiceChatStatusCode? statusCode
 function C_VoiceChat.GetCurrentVoiceChatConnectionStatusCode() end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_VoiceChat.GetInputVolume)
@@ -79,7 +79,7 @@ function C_VoiceChat.GetInputVolume() end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_VoiceChat.GetJoinClubVoiceChannelError)
 ---@param clubId string
----@return VoiceChannelErrorReason? errorReason
+---@return Enum.VoiceChannelErrorReason? errorReason
 function C_VoiceChat.GetJoinClubVoiceChannelError(clubId) end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_VoiceChat.GetLocalPlayerActiveChannelMemberInfo)
@@ -153,7 +153,7 @@ function C_VoiceChat.GetTtsVoices() end
 function C_VoiceChat.GetVADSensitivity() end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_VoiceChat.IsChannelJoinPending)
----@param channelType number|ChatChannelType
+---@param channelType number|Enum.ChatChannelType
 ---@param clubId? string
 ---@param streamId? string
 ---@return boolean isPending
@@ -236,11 +236,11 @@ function C_VoiceChat.IsVoiceChatConnected() end
 function C_VoiceChat.LeaveChannel(channelID) end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_VoiceChat.Login)
----@return VoiceChatStatusCode status
+---@return Enum.VoiceChatStatusCode status
 function C_VoiceChat.Login() end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_VoiceChat.Logout)
----@return VoiceChatStatusCode status
+---@return Enum.VoiceChatStatusCode status
 function C_VoiceChat.Logout() end
 
 ---Once the UI has enumerated all channels, use this to reset the channel discovery state, it will be updated again if appropriate
@@ -253,12 +253,12 @@ function C_VoiceChat.MarkChannelsDiscovered() end
 function C_VoiceChat.RequestJoinAndActivateCommunityStreamChannel(clubId, streamId) end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_VoiceChat.RequestJoinChannelByChannelType)
----@param channelType number|ChatChannelType
+---@param channelType number|Enum.ChatChannelType
 ---@param autoActivate? boolean
 function C_VoiceChat.RequestJoinChannelByChannelType(channelType, autoActivate) end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_VoiceChat.SetCommunicationMode)
----@param communicationMode number|CommunicationMode
+---@param communicationMode number|Enum.CommunicationMode
 function C_VoiceChat.SetCommunicationMode(communicationMode) end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_VoiceChat.SetDeafened)
@@ -326,7 +326,7 @@ function C_VoiceChat.SpeakRemoteTextSample(text) end
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_VoiceChat.SpeakText)
 ---@param voiceID number
 ---@param text string
----@param destination number|VoiceTtsDestination
+---@param destination number|Enum.VoiceTtsDestination
 ---@param rate number
 ---@param volume number
 function C_VoiceChat.SpeakText(voiceID, text, destination, rate, volume) end
@@ -354,7 +354,7 @@ function C_VoiceChat.ToggleMuted() end
 ---@class VoiceChatChannel
 ---@field name string
 ---@field channelID number
----@field channelType ChatChannelType
+---@field channelType Enum.ChatChannelType
 ---@field clubId string
 ---@field streamId string
 ---@field volume number

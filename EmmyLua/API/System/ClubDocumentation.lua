@@ -18,7 +18,7 @@ function C_Club.AdvanceStreamViewMarker(clubId, streamId) end
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_Club.AssignMemberRole)
 ---@param clubId string
 ---@param memberId number
----@param roleId number|ClubRoleIdentifier
+---@param roleId number|Enum.ClubRoleIdentifier
 function C_Club.AssignMemberRole(clubId, memberId, roleId) end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_Club.CanResolvePlayerLocationFromClubMessageData)
@@ -46,7 +46,7 @@ function C_Club.CompareBattleNetDisplayName(clubId, lhsMemberId, rhsMemberId) en
 ---@param name string
 ---@param shortName? string
 ---@param description string
----@param clubType number|ClubType
+---@param clubType number|Enum.ClubType
 ---@param avatarId number
 ---@param isCrossFaction? boolean
 function C_Club.CreateClub(name, shortName, description, clubType, avatarId, isCrossFaction) end
@@ -142,12 +142,12 @@ function C_Club.FocusStream(clubId, streamId) end
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_Club.GetAssignableRoles)
 ---@param clubId string
 ---@param memberId number
----@return ClubRoleIdentifier[] assignableRoles
+---@return Enum.ClubRoleIdentifier[] assignableRoles
 function C_Club.GetAssignableRoles(clubId, memberId) end
 
 ---listen for AVATAR_LIST_UPDATED event. This can happen if we haven't downloaded the battle.net avatar list yet
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_Club.GetAvatarIdList)
----@param clubType number|ClubType
+---@param clubType number|Enum.ClubType
 ---@return number[]? avatarIds
 function C_Club.GetAvatarIdList(clubType) end
 
@@ -161,7 +161,7 @@ function C_Club.GetClubCapacity() end
 function C_Club.GetClubInfo(clubId) end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_Club.GetClubLimits)
----@param clubType number|ClubType
+---@param clubType number|Enum.ClubType
 ---@return ClubLimits clubLimits
 function C_Club.GetClubLimits(clubType) end
 
@@ -183,7 +183,7 @@ function C_Club.GetClubPrivileges(clubId) end
 function C_Club.GetClubStreamNotificationSettings(clubId) end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_Club.GetCommunityNameResultText)
----@param result number|ValidateNameResult
+---@param result number|Enum.ValidateNameResult
 ---@return string? errorCode
 function C_Club.GetCommunityNameResultText(result) end
 
@@ -195,7 +195,7 @@ function C_Club.GetGuildClubId() end
 ---@return ClubMessageInfo messageInfo
 ---@return string clubId
 ---@return string streamId
----@return ClubType clubType
+---@return Enum.ClubType clubType
 function C_Club.GetInfoFromLastCommunityChatLine() end
 
 ---Returns a list of players that you can send a request to a Battle.net club. Returns an empty list for Character based clubs
@@ -227,7 +227,7 @@ function C_Club.GetInvitationsForSelf() end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_Club.GetLastTicketResponse)
 ---@param ticket string
----@return ClubErrorType error
+---@return Enum.ClubErrorType error
 ---@return ClubInfo? info
 ---@return boolean showError
 function C_Club.GetLastTicketResponse(ticket) end
@@ -322,7 +322,7 @@ function C_Club.IsBeginningOfStream(clubId, streamId, messageId) end
 function C_Club.IsEnabled() end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_Club.IsRestricted)
----@return ClubRestrictionReason restrictionReason
+---@return Enum.ClubRestrictionReason restrictionReason
 function C_Club.IsRestricted() end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_Club.IsSubscribedToStream)
@@ -405,7 +405,7 @@ function C_Club.SetAutoAdvanceStreamViewMarker(clubId, streamId) end
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_Club.SetAvatarTexture)
 ---@param texture table
 ---@param avatarId number
----@param clubType number|ClubType
+---@param clubType number|Enum.ClubType
 function C_Club.SetAvatarTexture(texture, avatarId, clubType) end
 
 ---Check the canSetOwnMemberNote and canSetOtherMemberNote privileges.
@@ -436,7 +436,7 @@ function C_Club.SetFavorite(clubId, isFavorite) end
 function C_Club.SetSocialQueueingEnabled(clubId, enabled) end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_Club.ShouldAllowClubType)
----@param clubType number|ClubType
+---@param clubType number|Enum.ClubType
 ---@return boolean clubTypeIsAllowed
 function C_Club.ShouldAllowClubType(clubType) end
 
@@ -450,10 +450,10 @@ function C_Club.UnfocusAllStreams(unsubscribe) end
 function C_Club.UnfocusStream(clubId, streamId) end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_Club.ValidateText)
----@param clubType number|ClubType
+---@param clubType number|Enum.ClubType
 ---@param text string
----@param clubFieldType number|ClubFieldType
----@return ValidateNameResult result
+---@param clubFieldType number|Enum.ClubFieldType
+---@return Enum.ValidateNameResult result
 function C_Club.ValidateText(clubType, text, clubFieldType) end
 
 ---@class ClubInfo
@@ -462,7 +462,7 @@ function C_Club.ValidateText(clubType, text, clubFieldType) end
 ---@field shortName string?
 ---@field description string
 ---@field broadcast string
----@field clubType ClubType
+---@field clubType Enum.ClubType
 ---@field avatarId number
 ---@field memberCount number?
 ---@field favoriteTimeStamp number?
@@ -474,7 +474,7 @@ function C_Club.ValidateText(clubType, text, clubFieldType) end
 ---@field memberId number
 ---@field name string
 ---@field priority number
----@field status ClubInvitationCandidateStatus
+---@field status Enum.ClubInvitationCandidateStatus
 
 ---@class ClubInvitationInfo
 ---@field invitationId string
@@ -488,9 +488,9 @@ function C_Club.ValidateText(clubType, text, clubFieldType) end
 ---@field isSelf boolean
 ---@field memberId number
 ---@field name string?
----@field role ClubRoleIdentifier?
----@field presence ClubMemberPresence
----@field clubType ClubType?
+---@field role Enum.ClubRoleIdentifier?
+---@field presence Enum.ClubMemberPresence
+---@field clubType Enum.ClubType?
 ---@field guid string?
 ---@field bnetAccountId number?
 ---@field memberNote string?
@@ -514,7 +514,7 @@ function C_Club.ValidateText(clubType, text, clubFieldType) end
 ---@field guildRankOrder number?
 ---@field isRemoteChat boolean?
 ---@field overallDungeonScore number?
----@field faction PvPFaction?
+---@field faction Enum.PvPFaction?
 
 ---@class ClubMessageIdentifier
 ---@field epoch number
@@ -593,12 +593,12 @@ function C_Club.ValidateText(clubType, text, clubFieldType) end
 ---@field name string
 ---@field subject string
 ---@field leadersAndModeratorsOnly boolean
----@field streamType ClubStreamType
+---@field streamType Enum.ClubStreamType
 ---@field creationTime number
 
 ---@class ClubStreamNotificationSetting
 ---@field streamId string
----@field filter ClubStreamNotificationFilter
+---@field filter Enum.ClubStreamNotificationFilter
 
 ---@class ClubTicketInfo
 ---@field ticketId string

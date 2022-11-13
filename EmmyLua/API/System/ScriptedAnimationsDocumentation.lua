@@ -10,7 +10,7 @@ function C_ScriptedAnimations.GetAllScriptedAnimationEffects() end
 ---@field visual number
 ---@field visualScale number
 ---@field duration number
----@field trajectory ScriptedAnimationTrajectory
+---@field trajectory Enum.ScriptedAnimationTrajectory
 ---@field yawRadians number
 ---@field pitchRadians number
 ---@field rollRadians number
@@ -21,10 +21,10 @@ function C_ScriptedAnimations.GetAllScriptedAnimationEffects() end
 ---@field animationSpeed number
 ---@field alpha number
 ---@field useTargetAsSource boolean
----@field startBehavior ScriptedAnimationBehavior?
+---@field startBehavior Enum.ScriptedAnimationBehavior?
 ---@field startSoundKitID number?
 ---@field finishEffectID number?
----@field finishBehavior ScriptedAnimationBehavior?
+---@field finishBehavior Enum.ScriptedAnimationBehavior?
 ---@field finishSoundKitID number?
 ---@field startAlphaFade number?
 ---@field startAlphaFadeDuration number?

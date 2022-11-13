@@ -27,7 +27,7 @@
 ---@field id number
 ---@field name string
 ---@field orderIndex number
----@field optionType ChrCustomizationOptionType
+---@field optionType Enum.ChrCustomizationOptionType
 ---@field choices CharCustomizationChoice[]
 ---@field currentChoiceIndex number?
 ---@field hasNewChoices boolean

@@ -21,12 +21,12 @@ function C_PlayerInfo.GetAlternateFormInfo() end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_PlayerInfo.GetContentDifficultyCreatureForPlayer)
 ---@param unitToken string
----@return RelativeContentDifficulty difficulty
+---@return Enum.RelativeContentDifficulty difficulty
 function C_PlayerInfo.GetContentDifficultyCreatureForPlayer(unitToken) end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_PlayerInfo.GetContentDifficultyQuestForPlayer)
 ---@param questID number
----@return RelativeContentDifficulty difficulty
+---@return Enum.RelativeContentDifficulty difficulty
 function C_PlayerInfo.GetContentDifficultyQuestForPlayer(questID) end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_PlayerInfo.GetInstancesUnlockedAtLevel)
