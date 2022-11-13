@@ -1,3 +1,4 @@
+---@meta
 ---@class LibDBIcon-1.0
 ---@field loggedIn boolean
 ---@field callbackRegistered boolean
@@ -49,7 +50,6 @@ end
 ---@param name string
 ---@return boolean
 function lib:IsRegistered(name)
-    return false
 end
 
 ---@param name string
@@ -60,14 +60,10 @@ end
 ---@param name string
 ---@return LibDBIcon.button
 function lib:GetMinimapButton(name)
-    local obj = {} ---@type LibDBIcon.button
-    return obj
 end
 
 ---@return table<integer, LibDBIcon.button>
 function lib:GetButtonList()
-    local obj = {} ---@type table<integer, LibDBIcon.button>
-    return obj
 end
 
 ---Use to set the radius of the minimap
