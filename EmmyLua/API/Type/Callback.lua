@@ -1,0 +1,2 @@
+---@meta
+---@alias CraftingOrderRequestCallback fun(result: CraftingOrderResult, orderType: CraftingOrderType, displayBuckets: boolean, expectMoreRows: boolean, offset: number, isSorted: boolean)
