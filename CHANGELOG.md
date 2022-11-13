@@ -4,6 +4,20 @@
 - Uninstalling the extension does not appear to work ([#20](https://github.com/Ketho/vscode-wow-api/issues/20))
 - Frame templates are not completely supported, only BackdropTemplate ([#15](https://github.com/Ketho/vscode-wow-api/issues/15)) 
 - The Classic (TBC) API is not supported ([#13](https://github.com/Ketho/vscode-wow-api/issues/13))
+- Widget API is not yet updated from 10.0.2 Blizzard_APIDocumentationGenerated
+
+## [0.9.0] - 2022-11-13
+### Added
+- 🌙 EmmyLua: Updated for Patch 10.0.2 (46619)
+Libraries
+- 🌙 EmmyLua: PR [#58](https://github.com/Ketho/vscode-wow-api/pull/58), [#61](https://github.com/Ketho/vscode-wow-api/pull/61) Added LibSharedMedia-3.0
+- 🌙 EmmyLua: PR [#55](https://github.com/Ketho/vscode-wow-api/pull/55), [#62](https://github.com/Ketho/vscode-wow-api/pull/62) Added LibDBIcon-1.0
+- 🌙 EmmyLua: PR [#52](https://github.com/Ketho/vscode-wow-api/pull/52), [#57](https://github.com/Ketho/vscode-wow-api/pull/57), [#54](https://github.com/Ketho/vscode-wow-api/pull/54) Updated Ace3 libraries
+- 🌙 EmmyLua: PR [#53](https://github.com/Ketho/vscode-wow-api/pull/53) Update LibStub:NewLibrary
+### Changed
+- 🐞 Bug Fixes: Fixed event hover tooltip formatting (regression)
+- 🐞 Bug Fixes: PR [#59](https://github.com/Ketho/vscode-wow-api/pull/59) Fixed file path casing
+- 🐞 Bug Fixes: [#56](https://github.com/Ketho/vscode-wow-api/issues/56) Fixed warning for SetScript second param being nil
 
 ## [0.8.9] - 2022-09-17
 ### Added
@@ -289,6 +303,7 @@
 ### Added
 - 🚧 Wip: Development work
 
+[0.9.0]: https://github.com/Ketho/vscode-wow-api/releases/tag/0.9.0
 [0.8.9]: https://github.com/Ketho/vscode-wow-api/releases/tag/0.8.9
 [0.8.8]: https://github.com/Ketho/vscode-wow-api/releases/tag/0.8.8
 [0.8.7]: https://github.com/Ketho/vscode-wow-api/releases/tag/0.8.7
