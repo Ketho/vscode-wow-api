@@ -13,20 +13,17 @@ function getMarkdown(name: string) {
 
 	let payload = event.Payload;
 	if (payload) {
-		let params = "";
+		let params = "```";
 		for (let i = 0; i < payload.length; i++) {
 			const el = payload[i];
-			params += "```\n"+el.Name;
+			params += "\n"+(i+1)+". "+el.Name;
 			params += ": "+el.Type;
 			if (el.Nilable) {
 				params += "?";
 			}
-			params += "\n```";
-			if (el.Documentation) {
-				params += `\n &nbsp; &nbsp; ${el.Documentation}`;
-			}
-			params += "\n";
+			params += "  ";
 		}
+		params += "\n```";
 		s += params;
 	};
 	let doc = `\n[Documentation](https://wowpedia.fandom.com/wiki/${name})`;
