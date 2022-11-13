@@ -2,13 +2,11 @@ local lfs = require "lfs"
 local Path = require "path"
 local Util = require("Lua.Util.Util")
 local Emmy = require("Lua.Emmy.Emmy")
-local patches = require("Lua.WowDocLoader.src.Patches")
+local patches = require("Lua.WowDocLoader.Patches")
 local m = {}
 
 local API_DOC = "Blizzard_APIDocumentation"
 local GEN_DOC = "Blizzard_APIDocumentationGenerated"
-local loader_path = Path.join(WowDocLoader_Path, "src")
-local addons_path = Path.join(WowDocLoader_Path, "AddOns")
 
 local gluesSystems = {
 	["ConfigurationWarningsDocumentation.lua"] = true,
@@ -52,15 +50,15 @@ end
 
 function m:main()
 	Util:MakeDir(Path.join("EmmyLua", "API", "System"))
-	require(Path.join(loader_path, "Compat"))
-	LoadAddon(Path.join(addons_path, API_DOC), API_DOC)
+	require(Path.join(WowDocLoader_Path, "Compat"))
+	LoadAddon(Path.join(WowDocLoader_Path, API_DOC), API_DOC)
 	local old = APIDocumentation.AddDocumentationTable
 	APIDocumentation.AddDocumentationTable = function(APIDocumentation, info)
 		old(APIDocumentation, info)
 		self.documentationInfo = info -- set current apidoc
 	end
-	require(Path.join(loader_path, "MissingDocumentation"))
-	LoadAddon(Path.join(addons_path, GEN_DOC), GEN_DOC)
+	require(Path.join(WowDocLoader_Path, "MissingDocumentation"))
+	LoadAddon(Path.join(WowDocLoader_Path, GEN_DOC), GEN_DOC)
 end
 
 return m
