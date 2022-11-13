@@ -23,7 +23,7 @@ function DBObjectLib:RegisterDefaults(defaults) end
 function DBObjectLib:SetProfile(name) end
 
 ---@return table #Contains the names of the existing profiles in the database.
----@param tbl table A table to store the profile names in (optional)
+---@param tbl? table A table to store the profile names in (optional)
 --- ---
 ---[Documentation](https://www.wowace.com/projects/ace3/pages/api/ace-db-3-0#title-7)
 function DBObjectLib:GetProfiles(tbl) end
@@ -45,13 +45,13 @@ function DBObjectLib:DeleteProfile(name, silent) end
 ---[Documentation](https://www.wowace.com/projects/ace3/pages/api/ace-db-3-0#title-3)
 function DBObjectLib:CopyProfile(name, silent) end
 
----@param noChildren boolean if set to true, the reset will not be populated to the child namespaces of this DB object
----@param noCallbacks boolean if set to true, won't fire the OnProfileReset callback
+---@param noChildren? boolean if set to true, the reset will not be populated to the child namespaces of this DB object
+---@param noCallbacks? boolean if set to true, won't fire the OnProfileReset callback
 --- ---
 ---[Documentation](https://www.wowace.com/projects/ace3/pages/api/ace-db-3-0#title-11)
 function DBObjectLib:ResetProfile(noChildren, noCallbacks) end
 
----@param defaultProfile string The profile name to use as the default
+---@param defaultProfile? string The profile name to use as the default
 --- ---
 ---[Documentation](https://www.wowace.com/projects/ace3/pages/api/ace-db-3-0#title-10)
 function DBObjectLib:ResetDB(defaultProfile) end
