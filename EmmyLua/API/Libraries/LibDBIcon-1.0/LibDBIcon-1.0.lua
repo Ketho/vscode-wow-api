@@ -11,11 +11,6 @@ local lib = {}
 
 ---@alias LibDBIcon.CallbackKey "'icon'"|"'iconCoords'"|"'iconR'"|"'iconG'"|"'iconB'"
 
----@class LibDBIcon.button.DB
----@field hide boolean
----@field lock boolean
----@field minimapPos integer
-
 ---@param event any
 ---@param name string
 ---@param key LibDBIcon.CallbackKey
@@ -27,17 +22,6 @@ end
 ---@param object LibDBIcon.dataObject
 ---@param db LibDBIcon.button.DB
 local function createButton(name, object, db)
-	---@class LibDBIcon.button : Button
-	---@param dataObject LibDBIcon.dataObject
-	---@param db LibDBIcon.button.DB
-	---@param icon LibDBIcon.button.icon
-	---@param isMouseDown boolean
-	---@param fadeOut AnimationGroup
-	local button = CreateFrame('Button', 'LibDBIcon10_' .. name, Minimap)
-
-	---@class LibDBIcon.button.icon : Texture
-	---@param UpdateCoord function
-	local icon = button:CreateTexture(nil, 'ARTWORK')
 end
 
 ---@param name string
@@ -65,6 +49,7 @@ end
 ---@param name string
 ---@return boolean
 function lib:IsRegistered(name)
+    return false
 end
 
 ---@param name string
@@ -75,10 +60,14 @@ end
 ---@param name string
 ---@return LibDBIcon.button
 function lib:GetMinimapButton(name)
+    local obj = {} ---@type LibDBIcon.button
+    return obj
 end
 
 ---@return table<integer, LibDBIcon.button>
 function lib:GetButtonList()
+    local obj = {} ---@type table<integer, LibDBIcon.button>
+    return obj
 end
 
 ---Use to set the radius of the minimap
@@ -91,6 +80,12 @@ end
 function lib:SetButtonToPosition(button, position)
 end
 
+---@class LibDBIcon.button.DB
+---@field hide boolean
+---@field lock boolean
+---@field minimapPos integer
+local DB = {}
+
 ---@class LibDBIcon.dataObject
 ---@field OnClick function
 ---@field icon string|number
@@ -98,3 +93,15 @@ end
 ---@field iconG integer
 ---@field iconB integer
 local dataObject = {}
+
+---@class LibDBIcon.button.icon : Texture
+local icon = {}
+icon.UpdateCoord = function() end
+
+---@class LibDBIcon.button : Button
+local button = {}
+button.dataObject = dataObject
+button.db = DB
+button.icon = icon
+button.isMouseDown = false
+button.fadeOut = {} ---@type AnimationGroup
