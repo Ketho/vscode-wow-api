@@ -111,3 +111,14 @@
 ---|"nameplate1"
 ---|"arena1"
 ---|"boss1"
+
+---@alias FramePoint
+---|"TOPLEFT"
+---|"TOPRIGHT"
+---|"BOTTOMLEFT"
+---|"BOTTOMRIGHT"
+---|"TOP"
+---|"BOTTOM"
+---|"LEFT"
+---|"RIGHT"
+---|"CENTER"
