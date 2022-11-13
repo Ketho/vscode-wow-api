@@ -8,7 +8,7 @@
 ---|"Button"
 ---|"CheckBox"
 ---|"ColorPicker"
----|"DropDown"
+---|"Dropdown"
 ---|"EditBox"
 ---|"Heading"
 ---|"Icon"
