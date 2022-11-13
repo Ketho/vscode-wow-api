@@ -45,6 +45,11 @@ function C_CampaignInfo.GetState(campaignID) end
 ---@return boolean isCampaignQuest
 function C_CampaignInfo.IsCampaignQuest(questID) end
 
+---[Documentation](https://wowpedia.fandom.com/wiki/API_C_CampaignInfo.SortAsNormalQuest)
+---@param campaignID number
+---@return boolean sortAsNormalQuest
+function C_CampaignInfo.SortAsNormalQuest(campaignID) end
+
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_CampaignInfo.UsesNormalQuestIcons)
 ---@param campaignID number
 ---@return boolean useNormalQuestIcons

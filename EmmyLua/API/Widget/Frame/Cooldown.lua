@@ -24,7 +24,7 @@ function Cooldown:HasScript(scriptType) end
 function Cooldown:HookScript(scriptType, handler, bindingType) end
 
 ---@param scriptType ScriptCooldown
----@param handler function
+---@param handler function|nil
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_ScriptObject_SetScript)
 function Cooldown:SetScript(scriptType, handler) end
 

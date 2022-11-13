@@ -160,6 +160,10 @@ function C_PvP.GetPVPActiveMatchPersonalRatedInfo() end
 ---@return number achievementID
 function C_PvP.GetPVPSeasonRewardAchievementID() end
 
+---[Documentation](https://wowpedia.fandom.com/wiki/API_C_PvP.GetPersonalRatedSoloShuffleSpecStats)
+---@return RatedSoloShuffleSpecStats? specStats
+function C_PvP.GetPersonalRatedSoloShuffleSpecStats() end
+
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_PvP.GetPostMatchCurrencyRewards)
 ---@return PVPPostMatchCurrencyReward[] rewards
 function C_PvP.GetPostMatchCurrencyRewards() end
@@ -208,6 +212,17 @@ function C_PvP.GetRandomEpicBGRewards() end
 ---@return BattlefieldCurrencyReward[]? currencyRewards
 function C_PvP.GetRatedBGRewards() end
 
+---[Documentation](https://wowpedia.fandom.com/wiki/API_C_PvP.GetRatedSoloShuffleMinItemLevel)
+---@return number minItemLevel
+function C_PvP.GetRatedSoloShuffleMinItemLevel() end
+
+---[Documentation](https://wowpedia.fandom.com/wiki/API_C_PvP.GetRatedSoloShuffleRewards)
+---@return number honor
+---@return number experience
+---@return BattlefieldItemReward[]? itemRewards
+---@return BattlefieldCurrencyReward[]? currencyRewards
+function C_PvP.GetRatedSoloShuffleRewards() end
+
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_PvP.GetRewardItemLevelsByTierEnum)
 ---@param pvpTierEnum number
 ---@return number activityItemLevel
@@ -242,6 +257,10 @@ function C_PvP.GetSpecialEventBrawlInfo() end
 ---@param factionIndex number
 ---@return PVPTeamInfo? info
 function C_PvP.GetTeamInfo(factionIndex) end
+
+---[Documentation](https://wowpedia.fandom.com/wiki/API_C_PvP.GetUIDisplaySeason)
+---@return number uiDisplaySeason
+function C_PvP.GetUIDisplaySeason() end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_PvP.GetWarModeRewardBonus)
 ---@return number rewardBonus
@@ -283,6 +302,10 @@ function C_PvP.IsBattleground() end
 ---@return boolean brawlActive
 function C_PvP.IsBattlegroundEnlistmentBonusActive() end
 
+---[Documentation](https://wowpedia.fandom.com/wiki/API_C_PvP.IsBrawlSoloShuffle)
+---@return boolean isBrawlSoloShuffle
+function C_PvP.IsBrawlSoloShuffle() end
+
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_PvP.IsInBrawl)
 ---@return boolean isInBrawl
 function C_PvP.IsInBrawl() end
@@ -310,6 +333,10 @@ function C_PvP.IsRatedBattleground() end
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_PvP.IsRatedMap)
 ---@return boolean isRatedMap
 function C_PvP.IsRatedMap() end
+
+---[Documentation](https://wowpedia.fandom.com/wiki/API_C_PvP.IsRatedSoloShuffle)
+---@return boolean isRatedSoloShuffle
+function C_PvP.IsRatedSoloShuffle() end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_PvP.IsSoloShuffle)
 ---@return boolean isSoloShuffle
@@ -351,6 +378,12 @@ function C_PvP.ToggleWarMode() end
 ---@field name string
 ---@field texture number
 ---@field quantity number
+
+---@class BattlefieldRewards
+---@field honor number
+---@field experience number
+---@field itemRewards BattlefieldItemReward[]?
+---@field currencyRewards BattlefieldCurrencyReward[]?
 
 ---@class BattlefieldVehicleInfo
 ---@field x number
@@ -398,6 +431,9 @@ function C_PvP.ToggleWarMode() end
 ---@field shortDescription string
 ---@field longDescription string
 ---@field canQueue boolean
+---@field minLevel number
+---@field maxLevel number
+---@field groupsAllowed boolean
 ---@field timeLeftUntilNextChange number?
 ---@field brawlType BrawlType
 ---@field mapNames string[]
@@ -415,6 +451,10 @@ function C_PvP.ToggleWarMode() end
 ---@field hasWonBracketToday boolean
 ---@field tier number
 ---@field ranking number?
+---@field roundsSeasonPlayed number
+---@field roundsSeasonWon number
+---@field roundsWeeklyPlayed number
+---@field roundsWeeklyWon number
 
 ---@class PVPPostMatchCurrencyReward
 ---@field currencyType number
@@ -492,3 +532,9 @@ function C_PvP.ToggleWarMode() end
 ---@field hasRandomWinToday boolean
 ---@field minLevel number
 ---@field maxLevel number
+
+---@class RatedSoloShuffleSpecStats
+---@field weeklyMostPlayedSpecID number
+---@field weeklyMostPlayedSpecRounds number
+---@field seasonMostPlayedSpecID number
+---@field seasonMostPlayedSpecRounds number

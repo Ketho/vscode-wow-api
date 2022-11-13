@@ -8,6 +8,22 @@ function GetNegativeCorruptionEffectInfo() end
 ---@return number[] pointIndices
 function GetUnitChargedPowerPoints(unit) end
 
+---[Documentation](https://wowpedia.fandom.com/wiki/API_GetUnitEmpowerHoldAtMaxTime)
+---@param unit string
+---@return number holdAtMaxTime
+function GetUnitEmpowerHoldAtMaxTime(unit) end
+
+---[Documentation](https://wowpedia.fandom.com/wiki/API_GetUnitEmpowerMinHoldTime)
+---@param unit string
+---@return number minHoldTime
+function GetUnitEmpowerMinHoldTime(unit) end
+
+---[Documentation](https://wowpedia.fandom.com/wiki/API_GetUnitEmpowerStageDuration)
+---@param unit string
+---@param index number
+---@return number duration
+function GetUnitEmpowerStageDuration(unit, index) end
+
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_GetUnitPowerBarInfo)
 ---@param unitToken string
 ---@return UnitPowerBarInfo info
@@ -53,6 +69,11 @@ function GetUnitPowerBarTextureInfo(unitToken, textureIndex, timerIndex) end
 ---@return number colorA
 function GetUnitPowerBarTextureInfoByID(barID, textureIndex) end
 
+---[Documentation](https://wowpedia.fandom.com/wiki/API_IsPlayerInGuildFromGUID)
+---@param playerGUID string
+---@return boolean IsInGuild
+function IsPlayerInGuildFromGUID(playerGUID) end
+
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_IsUnitModelReadyForUI)
 ---@param unitToken string
 ---@return boolean isReady
@@ -65,12 +86,21 @@ function PlayerVehicleHasComboPoints() end
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_SetPortraitTexture)
 ---@param textureObject table
 ---@param unitToken string
-function SetPortraitTexture(textureObject, unitToken) end
+---@param disableMasking? boolean Default = false
+function SetPortraitTexture(textureObject, unitToken, disableMasking) end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_SetPortraitTextureFromCreatureDisplayID)
 ---@param textureObject table
 ---@param creatureDisplayID number
 function SetPortraitTextureFromCreatureDisplayID(textureObject, creatureDisplayID) end
+
+---[Documentation](https://wowpedia.fandom.com/wiki/API_SetUnitCursorTexture)
+---@param textureObject table
+---@param unit string
+---@param style? number|CursorStyle
+---@param includeLowPriority? boolean
+---@return boolean hasCursor
+function SetUnitCursorTexture(textureObject, unit, style, includeLowPriority) end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_UnitAlliedRaceInfo)
 ---@param unit string
@@ -116,6 +146,11 @@ function UnitIsOwnerOrControllerOfUnit(controllingUnit, controlledUnit) end
 ---@param unit string
 ---@return boolean nameplateShowsWidgetsOnly
 function UnitNameplateShowsWidgetsOnly(unit) end
+
+---[Documentation](https://wowpedia.fandom.com/wiki/API_UnitPercentHealthFromGUID)
+---@param unitGUID string
+---@return number? percentHealth
+function UnitPercentHealthFromGUID(unitGUID) end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_UnitPhaseReason)
 ---@param unit string
@@ -165,6 +200,11 @@ function UnitQuestTrivialLevelRangeScaling(unit) end
 ---@param unit string
 ---@return number? sex
 function UnitSex(unit) end
+
+---[Documentation](https://wowpedia.fandom.com/wiki/API_UnitTokenFromGUID)
+---@param unitGUID string
+---@return string? unitToken
+function UnitTokenFromGUID(unitGUID) end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_UnitTreatAsPlayerForDisplay)
 ---@param unit string

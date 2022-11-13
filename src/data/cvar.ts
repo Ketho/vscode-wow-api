@@ -37,6 +37,19 @@ export const data: CVarInterface = {
 		scope: "Character",
 		help: "Activate the action button on a keydown",
 	},
+	actionbuttonusekeyheldspell: {
+		name: "ActionButtonUseKeyHeldSpell",
+		default: "0",
+		category: 4,
+		scope: "Character",
+		help: "Activate the press and hold cast option on a keydown",
+	},
+	advflyingdynamicfovenabled: {
+		name: "AdvFlyingDynamicFOVEnabled",
+		default: "1",
+		category: 4,
+		help: "Enables adjustment of camera field of view based on gliding speed",
+	},
 	areatriggereventlog: {
 		name: "AreaTriggerEventLog",
 		default: "0",
@@ -86,9 +99,15 @@ export const data: CVarInterface = {
 		category: 1,
 		help: "Set to 1 to preserve even more text and shape clarity at the expense of less AA",
 	},
+	cmaa2halffloat: {
+		name: "CMAA2HalfFloat",
+		default: "0",
+		category: 1,
+		help: "0: 32-bit Float. 1: 16-bit Float.",
+	},
 	cmaa2quality: {
 		name: "CMAA2Quality",
-		default: "2",
+		default: "3",
 		category: 1,
 		help: "CMAA2 Quality Level. 0 - LOW, 1 - MEDIUM, 2 - HIGH, 3 - ULTRA",
 	},
@@ -287,6 +306,12 @@ export const data: CVarInterface = {
 		category: 1,
 		help: "Lowest render scale DynamicRenderScale can use",
 	},
+	dynamicvrssensitivitythreshold: {
+		name: "DynamicVRSSensitivityThreshold",
+		default: "0",
+		category: 1,
+		help: "Enable dynamic sensitivity threshold based on target FPS for VRS",
+	},
 	ejdungeondifficulty: {
 		name: "EJDungeonDifficulty",
 		default: "0",
@@ -315,12 +340,33 @@ export const data: CVarInterface = {
 		scope: "Account",
 		help: "Stores the last raid difficulty viewed in the encounter journal",
 	},
+	ejselectedtier: {
+		name: "EJSelectedTier",
+		default: "0",
+		category: 4,
+		scope: "Account",
+		help: "Stores the last manually selected journal tier in the encounter journal",
+	},
 	emittercombatrange: {
 		name: "EmitterCombatRange",
 		default: "900",
 		category: 4,
 		scope: "Character",
 		help: "Range to stop shoulder/weapon emissions during combat",
+	},
+	empowerminholdstagepercent: {
+		name: "EmpowerMinHoldStagePercent",
+		default: "1.000000",
+		category: 4,
+		scope: "Character",
+		help: "Sets a percentage of the first empower stage [0.0,1.0]. Before this point, the spell will be auto-held. After it, releases will be accepted.",
+	},
+	empowertapcontrolsreleasethreshold: {
+		name: "EmpowerTapControlsReleaseThreshold",
+		default: "300",
+		category: 4,
+		scope: "Character",
+		help: "Sets the time in milliseconds after which release/re-hold requests will be registered for press-and-tap empowers. Begins when the cast is sent from the client.",
 	},
 	enableblinkapplicationicon: {
 		name: "EnableBlinkApplicationIcon",
@@ -360,6 +406,12 @@ export const data: CVarInterface = {
 		category: 1,
 		help: "Force Direct X 12 on Windows 7 to not disable Aero theme. You are opting into crashing in some edge cases",
 	},
+	forcegenerateslug: {
+		name: "ForceGenerateSlug",
+		default: "0",
+		category: 0,
+		help: "Generate .slug files for all loaded fonts before they are actually used rather than deferred load.",
+	},
 	forceresolutiondefaulttomaxsize: {
 		name: "ForceResolutionDefaultToMaxSize",
 		default: "0",
@@ -372,11 +424,10 @@ export const data: CVarInterface = {
 		category: 1,
 		help: "Disable use of texture heaps and force the fallback path",
 	},
-	gamepadabbreviatedbindingreverse: {
-		name: "GamePadAbbreviatedBindingReverse",
-		default: "1",
+	gamedatavisualizer: {
+		name: "GameDataVisualizer",
+		default: "0",
 		category: 5,
-		help: "Display main binding button first so it's visible even if truncated on action bar",
 	},
 	gamepadanalogmovement: {
 		name: "GamePadAnalogMovement",
@@ -498,12 +549,6 @@ export const data: CVarInterface = {
 		category: 5,
 		help: "GamePad button that should emulate the Ctrl key",
 	},
-	gamepademulateesc: {
-		name: "GamePadEmulateEsc",
-		default: "PADBACK",
-		category: 5,
-		help: "GamePad button that should emulate the Esc key",
-	},
 	gamepademulateshift: {
 		name: "GamePadEmulateShift",
 		default: "PADLTRIGGER",
@@ -539,6 +584,18 @@ export const data: CVarInterface = {
 		default: "1",
 		category: 5,
 		help: "Enable setting GamePad's led color to match current faction",
+	},
+	gamepadoverlapmousems: {
+		name: "GamePadOverlapMouseMs",
+		default: "2000",
+		category: 5,
+		help: "Duration after gamepad+mouse input to switch to just one or the other.",
+	},
+	gamepadrunthreshold: {
+		name: "GamePadRunThreshold",
+		default: "0.5",
+		category: 5,
+		help: "0-1 Amount of stick movement before character transitions from walk to run",
 	},
 	gamepadsingleactiveid: {
 		name: "GamePadSingleActiveID",
@@ -586,6 +643,12 @@ export const data: CVarInterface = {
 		default: "1.000000",
 		category: 1,
 		help: "Gamma correction. Range: [0.3 - 2.8]",
+	},
+	gxallowcachelessshadermode: {
+		name: "GxAllowCachelessShaderMode",
+		default: "0",
+		category: 1,
+		help: "CPU memory saving mode, if supported by backend. When enabled, shaders are fetched from disk as needed instead of being kept resident. This mode may slightly increase the time objects take to appear the first time they are encountered. Computers without solid state drives may want to disable this feature",
 	},
 	gxprismenabled: {
 		name: "GxPrismEnabled",
@@ -640,6 +703,12 @@ export const data: CVarInterface = {
 		name: "KioskLobbyKickSeconds",
 		default: "",
 		category: 5,
+	},
+	lowlatencymode: {
+		name: "LowLatencyMode",
+		default: "0",
+		category: 1,
+		help: "0=None, 1=BuiltIn, 2=Reflex",
 	},
 	m2forceadditiveparticlesort: {
 		name: "M2ForceAdditiveParticleSort",
@@ -879,7 +948,7 @@ export const data: CVarInterface = {
 	},
 	raidvolumefog: {
 		name: "RAIDVolumeFog",
-		default: "1",
+		default: "0",
 		category: 1,
 		help: "Volume Fog",
 	},
@@ -1047,7 +1116,7 @@ export const data: CVarInterface = {
 	raidshadowtexturesize: {
 		name: "RAIDshadowTextureSize",
 		default: "1024",
-		category: 5,
+		category: 1,
 		help: "Shadow texture size (1024-2048)",
 	},
 	raidspellclutter: {
@@ -1065,7 +1134,7 @@ export const data: CVarInterface = {
 	raidterrainloddist: {
 		name: "RAIDterrainLodDist",
 		default: "400",
-		category: 5,
+		category: 1,
 		help: "Raid Terrain level of detail distance",
 	},
 	raidterrainmiplevel: {
@@ -1117,7 +1186,7 @@ export const data: CVarInterface = {
 	},
 	resolvedssaotype: {
 		name: "ResolvedSSAOType",
-		default: "1",
+		default: "0",
 		category: 1,
 	},
 	ssao: {
@@ -1185,6 +1254,220 @@ export const data: CVarInterface = {
 		category: 1,
 		help: "Texture resolution for clouds",
 	},
+	slugopticalweight: {
+		name: "SlugOpticalWeight",
+		default: "0",
+		category: 0,
+		help: "When rendering, coverage values are remapped to increase the optical weight of the glyphs. This can improve the appearance of small text, but usually looks good only for dark text on a light background.",
+	},
+	slugsupersampling: {
+		name: "SlugSupersampling",
+		default: "1",
+		category: 0,
+		help: "The slug glyph shader performs adaptive supersampling for high-quality rendering at small font sizes",
+	},
+	softtargetenemy: {
+		name: "SoftTargetEnemy",
+		default: "1",
+		category: 4,
+		scope: "Account",
+		help: "Sets when enemy soft targeting should be enabled. 0=off, 1=gamepad, 2=KBM, 3=always",
+	},
+	softtargetenemyarc: {
+		name: "SoftTargetEnemyArc",
+		default: "2",
+		category: 4,
+		scope: "Account",
+		help: "0 = No yaw arc allowance, must be directly in front. 1 = Must be in front yaw arc. 2 = Can be anywhere in targeting area.",
+	},
+	softtargetenemyrange: {
+		name: "SoftTargetEnemyRange",
+		default: "45",
+		category: 4,
+		scope: "Account",
+	},
+	softtargetforce: {
+		name: "SoftTargetForce",
+		default: "1",
+		category: 4,
+		help: "Auto-set target to match soft target. 1 = for enemies, 2 = for friends",
+	},
+	softtargetfriend: {
+		name: "SoftTargetFriend",
+		default: "0",
+		category: 4,
+		scope: "Account",
+		help: "Sets when friend soft targeting should be enabled. 0=off, 1=gamepad, 2=KBM, 3=always",
+	},
+	softtargetfriendarc: {
+		name: "SoftTargetFriendArc",
+		default: "2",
+		category: 4,
+		scope: "Account",
+		help: "0 = No yaw arc allowance, must be directly in front. 1 = Must be in front yaw arc. 2 = Can be anywhere in targeting area.",
+	},
+	softtargetfriendrange: {
+		name: "SoftTargetFriendRange",
+		default: "45",
+		category: 4,
+		scope: "Account",
+	},
+	softtargeticonenemy: {
+		name: "SoftTargetIconEnemy",
+		default: "0",
+		category: 4,
+		scope: "Character",
+		help: "Show icon for soft enemy target",
+	},
+	softtargeticonfriend: {
+		name: "SoftTargetIconFriend",
+		default: "0",
+		category: 4,
+		scope: "Character",
+		help: "Show icon for soft friend target",
+	},
+	softtargeticongameobject: {
+		name: "SoftTargetIconGameObject",
+		default: "0",
+		category: 4,
+		scope: "Character",
+		help: "Show icon for sot interact game objects (interactable objects you cannot normally target)",
+	},
+	softtargeticoninteract: {
+		name: "SoftTargetIconInteract",
+		default: "1",
+		category: 4,
+		scope: "Character",
+		help: "Show icon for soft interact target",
+	},
+	softtargetinteract: {
+		name: "SoftTargetInteract",
+		default: "1",
+		category: 4,
+		scope: "Character",
+		help: "Sets when soft interact should be enabled. 0=off, 1=gamepad, 2=KBM, 3=always",
+	},
+	softtargetinteractarc: {
+		name: "SoftTargetInteractArc",
+		default: "0",
+		category: 4,
+		scope: "Character",
+		help: "0 = No yaw arc allowance, must be directly in front. 1 = Must be in front yaw arc. 2 = Can be anywhere in targeting area.",
+	},
+	softtargetinteractrange: {
+		name: "SoftTargetInteractRange",
+		default: "10",
+		category: 4,
+		scope: "Character",
+	},
+	softtargetinteractrangeishard: {
+		name: "SoftTargetInteractRangeIsHard",
+		default: "0",
+		category: 4,
+		scope: "Character",
+		help: "Sets if it should be a hard range cutoff, even for something you can interact with right now.",
+	},
+	softtargetlowpriorityicons: {
+		name: "SoftTargetLowPriorityIcons",
+		default: "0",
+		category: 4,
+		scope: "Character",
+		help: "Show interact icons even when there is other visual indicators, such as quest or loot effects",
+	},
+	softtargetmatchlocked: {
+		name: "SoftTargetMatchLocked",
+		default: "1",
+		category: 4,
+		help: "Match appropriate soft target to locked target. 1 = hard locked target only, 2 = for targets you attack",
+	},
+	softtargetnameplateenemy: {
+		name: "SoftTargetNameplateEnemy",
+		default: "1",
+		category: 4,
+		scope: "Character",
+		help: "Always show nameplates for soft enemy target",
+	},
+	softtargetnameplatefriend: {
+		name: "SoftTargetNameplateFriend",
+		default: "0",
+		category: 4,
+		scope: "Character",
+		help: "Always show nameplates for soft friend target",
+	},
+	softtargetnameplateinteract: {
+		name: "SoftTargetNameplateInteract",
+		default: "0",
+		category: 4,
+		scope: "Character",
+		help: "Always show nameplates for soft interact target",
+	},
+	softtargetnameplatesize: {
+		name: "SoftTargetNameplateSize",
+		default: "19",
+		category: 4,
+		scope: "Character",
+		help: "Size of soft target icon on nameplate (0 to disable)",
+	},
+	softtargettooltipdurationms: {
+		name: "SoftTargetTooltipDurationMs",
+		default: "2000",
+		category: 4,
+		scope: "Character",
+	},
+	softtargettooltipenemy: {
+		name: "SoftTargetTooltipEnemy",
+		default: "0",
+		category: 4,
+		scope: "Character",
+	},
+	softtargettooltipfriend: {
+		name: "SoftTargetTooltipFriend",
+		default: "0",
+		category: 4,
+		scope: "Character",
+	},
+	softtargettooltipinteract: {
+		name: "SoftTargetTooltipInteract",
+		default: "0",
+		category: 4,
+		scope: "Character",
+	},
+	softtargettooltiplocked: {
+		name: "SoftTargetTooltipLocked",
+		default: "0",
+		category: 4,
+		scope: "Character",
+	},
+	softtargetwithlocked: {
+		name: "SoftTargetWithLocked",
+		default: "1",
+		category: 4,
+		help: "Allows soft target selection while player has a locked target. 2 = always do soft targeting",
+	},
+	softtargetworldtextfardist: {
+		name: "SoftTargetWorldtextFarDist",
+		default: "40",
+		category: 4,
+		scope: "Character",
+	},
+	softtargetworldtextneardist: {
+		name: "SoftTargetWorldtextNearDist",
+		default: "4",
+		category: 4,
+		scope: "Character",
+	},
+	softtargetworldtextnearscale: {
+		name: "SoftTargetWorldtextNearScale",
+		default: "1",
+		category: 4,
+		scope: "Character",
+	},
+	softtargetworldtextsize: {
+		name: "SoftTargetWorldtextSize",
+		default: "32",
+		category: 4,
+		scope: "Character",
+	},
 	soundperf_variationcap: {
 		name: "SoundPerf_VariationCap",
 		default: "32",
@@ -1212,7 +1495,8 @@ export const data: CVarInterface = {
 	sound_ambiencevolume: {
 		name: "Sound_AmbienceVolume",
 		default: "0.6",
-		category: 5,
+		category: 7,
+		help: "Ambience Volume (0.0 to 1.0)",
 	},
 	sound_dspbuffersize: {
 		name: "Sound_DSPBufferSize",
@@ -1348,7 +1632,8 @@ export const data: CVarInterface = {
 	sound_musicvolume: {
 		name: "Sound_MusicVolume",
 		default: "0.4",
-		category: 5,
+		category: 7,
+		help: "music volume (0.0 to 1.0)",
 	},
 	sound_npchighpassdspcutoff: {
 		name: "Sound_NPCHighpassDSPCutoff",
@@ -1458,6 +1743,27 @@ export const data: CVarInterface = {
 		category: 5,
 		scope: "Account",
 		help: "If character-specific TTS settings are being used.",
+	},
+	targetautoenemy: {
+		name: "TargetAutoEnemy",
+		default: "1",
+		category: 4,
+		scope: "Account",
+		help: "Auto-Target from your single target helpful spells",
+	},
+	targetautofriend: {
+		name: "TargetAutoFriend",
+		default: "1",
+		category: 4,
+		scope: "Account",
+		help: "Auto-Target from your single target helpful spells",
+	},
+	targetenemyattacker: {
+		name: "TargetEnemyAttacker",
+		default: "1",
+		category: 4,
+		scope: "Account",
+		help: "Auto-Target Enemy when they attack you",
 	},
 	targetnearestusenew: {
 		name: "TargetNearestUseNew",
@@ -1639,6 +1945,19 @@ export const data: CVarInterface = {
 		category: 4,
 		scope: "Character",
 	},
+	usekeyheldspellerrorpolltime: {
+		name: "UseKeyHeldSpellErrorPollTime",
+		default: "500",
+		category: 4,
+		scope: "Character",
+		help: "(Internal only) Time between a failed cast and when it should attempt to cast again in ms. (Clamped to 100 and 10000)",
+	},
+	useslug: {
+		name: "UseSlug",
+		default: "1",
+		category: 0,
+		help: "Render with slug text",
+	},
 	verbosespellscripteventlog: {
 		name: "VerboseSpellScriptEventLog",
 		default: "0",
@@ -1726,6 +2045,18 @@ export const data: CVarInterface = {
 	worldtextgravity: {
 		name: "WorldTextGravity",
 		default: "0.5",
+		category: 4,
+		scope: "Character",
+	},
+	worldtextminalpha: {
+		name: "WorldTextMinAlpha",
+		default: "0.5",
+		category: 4,
+		scope: "Character",
+	},
+	worldtextminsize: {
+		name: "WorldTextMinSize",
+		default: "0",
 		category: 4,
 		scope: "Character",
 	},
@@ -1832,7 +2163,7 @@ export const data: CVarInterface = {
 	},
 	agentuid: {
 		name: "agentUID",
-		default: "",
+		default: "wow_beta",
 		category: 4,
 		help: "The UID provided by Battle.net to be passed to Agent",
 	},
@@ -2152,12 +2483,6 @@ export const data: CVarInterface = {
 		scope: "Character",
 		help: "Toggles using commas in large numbers",
 	},
-	bspcache: {
-		name: "bspcache",
-		default: "1",
-		category: 1,
-		help: "BSP node caching",
-	},
 	buffdurations: {
 		name: "buffDurations",
 		default: "1",
@@ -2198,6 +2523,13 @@ export const data: CVarInterface = {
 		category: 4,
 		scope: "Account",
 		help: "Whether raid lockouts should appear in the calendar",
+	},
+	calendarshowresets: {
+		name: "calendarShowResets",
+		default: "0",
+		category: 4,
+		scope: "Account",
+		help: "Whether raid resets should appear in the calendar",
 	},
 	calendarshowweeklyholidays: {
 		name: "calendarShowWeeklyHolidays",
@@ -2250,8 +2582,7 @@ export const data: CVarInterface = {
 	camerafov: {
 		name: "cameraFov",
 		default: "90",
-		category: 5,
-		scope: "Character",
+		category: 1,
 		help: "Default camera field of view",
 	},
 	cameragroundsmoothspeed: {
@@ -4096,6 +4427,13 @@ export const data: CVarInterface = {
 		category: 4,
 		help: "Write combat log file with a timestamped name per client launch",
 	},
+	combinedbags: {
+		name: "combinedBags",
+		default: "0",
+		category: 4,
+		scope: "Character",
+		help: "Use combined bag frame for all bags",
+	},
 	combopointlocation: {
 		name: "comboPointLocation",
 		default: "2",
@@ -4249,7 +4587,7 @@ export const data: CVarInterface = {
 	deselectonclick: {
 		name: "deselectOnClick",
 		default: "0",
-		category: 5,
+		category: 4,
 		scope: "Character",
 		help: "Clear the target when clicking on terrain",
 	},
@@ -4326,6 +4664,18 @@ export const data: CVarInterface = {
 		category: 1,
 		help: "Doodad level of detail scale",
 	},
+	dragonridingpitchsensitivity: {
+		name: "dragonRidingPitchSensitivity",
+		default: "2.5",
+		category: 4,
+		help: "Changes the sensitivity of pitch down/up keys",
+	},
+	dragonridingturnsensitivity: {
+		name: "dragonRidingTurnSensitivity",
+		default: "5",
+		category: 4,
+		help: "Changes the sensitivity of turn left/right keys",
+	},
 	dynamiclod: {
 		name: "dynamicLod",
 		default: "1",
@@ -4338,6 +4688,13 @@ export const data: CVarInterface = {
 		category: 4,
 		scope: "Character",
 		help: "Whether other player's spell impacts are toned down or not.",
+	},
+	empowertapcontrols: {
+		name: "empowerTapControls",
+		default: "0",
+		category: 4,
+		scope: "Account",
+		help: "By default, Empower spells use a press-hold-release control scheme. Set this CVar to use a tap-tap scheme instead.",
 	},
 	enableassettracking: {
 		name: "enableAssetTracking",
@@ -4400,7 +4757,7 @@ export const data: CVarInterface = {
 	},
 	enablesourcelocationlookup: {
 		name: "enableSourceLocationLookup",
-		default: "0",
+		default: "1",
 		category: 0,
 		help: "Allows addon file name lookup for debugging help",
 	},
@@ -4420,7 +4777,7 @@ export const data: CVarInterface = {
 	enginesurvey: {
 		name: "engineSurvey",
 		default: "0",
-		category: 5,
+		category: 4,
 		help: "Whether to send the engine survey to the servers",
 	},
 	enginesurveypatch: {
@@ -4446,6 +4803,13 @@ export const data: CVarInterface = {
 		default: "50",
 		category: 1,
 		help: "Entity shadow fade scale",
+	},
+	expandbagbar: {
+		name: "expandBagBar",
+		default: "1",
+		category: 4,
+		scope: "Character",
+		help: "Expand the main menu bar that shows the bags so you can see all equipped bags instead of just the backpack and reagent bag",
 	},
 	expandupgradepanel: {
 		name: "expandUpgradePanel",
@@ -4770,6 +5134,12 @@ export const data: CVarInterface = {
 		scope: "Account",
 		help: "Whether to show the friends list view buttons",
 	},
+	fstack_enabled: {
+		name: "fstack_enabled",
+		default: "0",
+		category: 0,
+		help: "0: Hide Framestack Tooltip (Default), 1: Show Framestack Tooltip.",
+	},
 	fstack_preferparentkeys: {
 		name: "fstack_preferParentKeys",
 		default: "0",
@@ -4812,13 +5182,6 @@ export const data: CVarInterface = {
 		category: 0,
 		help: "When you crash, generate a full memory dump",
 	},
-	fullsizefocusframe: {
-		name: "fullSizeFocusFrame",
-		default: "1",
-		category: 4,
-		scope: "Account",
-		help: "Increases the size of the focus frame to that of the target frame",
-	},
 	gametip: {
 		name: "gameTip",
 		default: "0",
@@ -4838,48 +5201,48 @@ export const data: CVarInterface = {
 	},
 	graphicscomputeeffects: {
 		name: "graphicsComputeEffects",
-		default: "4",
+		default: "2",
 		category: 5,
 	},
 	graphicsdeptheffects: {
 		name: "graphicsDepthEffects",
-		default: "4",
+		default: "2",
 		category: 1,
 		help: "UI value of the graphics setting",
 	},
 	graphicsenvironmentdetail: {
 		name: "graphicsEnvironmentDetail",
-		default: "6",
+		default: "4",
 		category: 1,
 		help: "UI value of the graphics setting",
 	},
 	graphicsgroundclutter: {
 		name: "graphicsGroundClutter",
-		default: "6",
+		default: "4",
 		category: 1,
 		help: "UI value of the graphics setting",
 	},
 	graphicsliquiddetail: {
 		name: "graphicsLiquidDetail",
-		default: "4",
+		default: "2",
 		category: 1,
 		help: "UI value of the graphics setting",
 	},
 	graphicsoutlinemode: {
 		name: "graphicsOutlineMode",
-		default: "3",
+		default: "1",
 		category: 1,
 		help: "UI value of the graphics setting",
 	},
 	graphicsparticledensity: {
 		name: "graphicsParticleDensity",
 		default: "3",
-		category: 5,
+		category: 1,
 		help: "UI value of the graphics setting",
 	},
 	graphicsprojectedtextures: {
 		name: "graphicsProjectedTextures",
-		default: "2",
+		default: "1",
 		category: 1,
 		help: "UI value of the graphics setting",
 	},
@@ -4891,31 +5254,31 @@ export const data: CVarInterface = {
 	},
 	graphicsssao: {
 		name: "graphicsSSAO",
-		default: "4",
-		category: 1,
+		default: "2",
+		category: 5,
 		help: "UI value of the graphics setting",
 	},
 	graphicsshadowquality: {
 		name: "graphicsShadowQuality",
-		default: "5",
+		default: "2",
 		category: 5,
 		help: "UI value of the graphics setting",
 	},
 	graphicsspelldensity: {
 		name: "graphicsSpellDensity",
-		default: "5",
-		category: 1,
+		default: "4",
+		category: 5,
 		help: "UI value of the graphics setting",
 	},
 	graphicstextureresolution: {
 		name: "graphicsTextureResolution",
-		default: "5",
+		default: "2",
 		category: 5,
 		help: "UI value of the graphics setting",
 	},
 	graphicsviewdistance: {
 		name: "graphicsViewDistance",
-		default: "7",
+		default: "4",
 		category: 1,
 		help: "UI value of the graphics setting",
 	},
@@ -5167,12 +5530,25 @@ export const data: CVarInterface = {
 		category: 5,
 		help: "How long to wait for the initial realm list before failing login (in seconds)",
 	},
+	interactkeywarningtutorial: {
+		name: "interactKeyWarningTutorial",
+		default: "0",
+		category: 4,
+		help: "Has the player seen the interact key warning tutorial since they have logged in",
+	},
 	interactonleftclick: {
 		name: "interactOnLeftClick",
 		default: "1",
 		category: 4,
 		scope: "Character",
 		help: "Test CVar for interacting with NPC's on left click",
+	},
+	interactquestitems: {
+		name: "interactQuestItems",
+		default: "1",
+		category: 4,
+		scope: "Character",
+		help: "Enable Quest Item use as an interaction",
 	},
 	lastaddonversion: {
 		name: "lastAddonVersion",
@@ -5226,6 +5602,34 @@ export const data: CVarInterface = {
 		category: 4,
 		scope: "Account",
 		help: "Stores the Necrolord renown when Renown UI is closed",
+	},
+	lastrenownformajorfaction2503: {
+		name: "lastRenownForMajorFaction2503",
+		default: "0",
+		category: 4,
+		scope: "Account",
+		help: "Stores the Maruuk Centaur renown when Renown UI is closed",
+	},
+	lastrenownformajorfaction2507: {
+		name: "lastRenownForMajorFaction2507",
+		default: "0",
+		category: 4,
+		scope: "Account",
+		help: "Stores the Dragonscale Expedition renown when Renown UI is closed",
+	},
+	lastrenownformajorfaction2510: {
+		name: "lastRenownForMajorFaction2510",
+		default: "0",
+		category: 4,
+		scope: "Account",
+		help: "Stores the Valdrakken Accord renown when Renown UI is closed",
+	},
+	lastrenownformajorfaction2511: {
+		name: "lastRenownForMajorFaction2511",
+		default: "0",
+		category: 4,
+		scope: "Account",
+		help: "Stores the Iskaara Tuskarr renown when Renown UI is closed",
 	},
 	lastselectedclubid: {
 		name: "lastSelectedClubId",
@@ -5444,6 +5848,12 @@ export const data: CVarInterface = {
 		scope: "Account",
 		help: "Setting for Loss of Control - Silence",
 	},
+	luaerrorexceptions: {
+		name: "luaErrorExceptions",
+		default: "1",
+		category: 4,
+		help: "Enable exceptions for non-tainted lua errors",
+	},
 	mapanimduration: {
 		name: "mapAnimDuration",
 		default: "0.12",
@@ -5474,7 +5884,7 @@ export const data: CVarInterface = {
 	},
 	maxfps: {
 		name: "maxFPS",
-		default: "100",
+		default: "120",
 		category: 1,
 		help: "Set FPS limit",
 	},
@@ -5489,6 +5899,13 @@ export const data: CVarInterface = {
 		default: "10",
 		category: 1,
 		help: "Set loading screen max FPS",
+	},
+	maxlevelspecsused: {
+		name: "maxLevelSpecsUsed",
+		default: "0",
+		category: 4,
+		scope: "Account",
+		help: "The specs the player has switched to at max level",
 	},
 	maxlightcount: {
 		name: "maxLightCount",
@@ -5565,10 +5982,28 @@ export const data: CVarInterface = {
 	},
 	minimaptrackedinfov2: {
 		name: "minimapTrackedInfov2",
-		default: "491528",
+		default: "",
+		category: 4,
+		help: "Stores the minimap tracking that was active last session.",
+	},
+	minimaptrackedinfov3: {
+		name: "minimapTrackedInfov3",
+		default: "1006319",
 		category: 4,
 		scope: "Account",
 		help: "Stores the minimap tracking that was active last session.",
+	},
+	minimaptrackingclosestonly: {
+		name: "minimapTrackingClosestOnly",
+		default: "1",
+		category: 4,
+		help: "If enabled, show only the closest tracked icon for certain minimap icon types.",
+	},
+	minimaptrackingshowall: {
+		name: "minimapTrackingShowAll",
+		default: "0",
+		category: 4,
+		help: "If enabled, show dropdown for configuring all possible minimap tracking options.",
 	},
 	minimapzoom: {
 		name: "minimapZoom",
@@ -5627,20 +6062,13 @@ export const data: CVarInterface = {
 	mousespeed: {
 		name: "mouseSpeed",
 		default: "1.0",
-		category: 5,
+		category: 4,
 	},
 	moviesubtitle: {
 		name: "movieSubtitle",
 		default: "1",
 		category: 4,
 		help: "Show movie subtitles",
-	},
-	multibarrightverticallayout: {
-		name: "multiBarRightVerticalLayout",
-		default: "0",
-		category: 4,
-		scope: "Account",
-		help: "Whether to force the right action bars to always align horizontally instead of vertically",
 	},
 	nameplateclassresourcetopinset: {
 		name: "nameplateClassResourceTopInset",
@@ -5655,6 +6083,12 @@ export const data: CVarInterface = {
 		category: 1,
 		scope: "Account",
 		help: "Applies global scaling to non-self nameplates, this is applied AFTER selected, min, and max scale.",
+	},
+	nameplatehidehealthandpower: {
+		name: "nameplateHideHealthAndPower",
+		default: "0",
+		category: 4,
+		scope: "Account",
 	},
 	nameplatelargebottominset: {
 		name: "nameplateLargeBottomInset",
@@ -5796,6 +6230,20 @@ export const data: CVarInterface = {
 		scope: "Character",
 		help: "Percentage amount for vertical overlap of nameplates",
 	},
+	nameplateplayerlargerscale: {
+		name: "nameplatePlayerLargerScale",
+		default: "1.8",
+		category: 1,
+		scope: "Account",
+		help: "An additional scale modifier for players.",
+	},
+	nameplateplayermaxdistance: {
+		name: "nameplatePlayerMaxDistance",
+		default: "",
+		category: 1,
+		scope: "Account",
+		help: "The max distance to show player nameplates.",
+	},
 	nameplateresourceontarget: {
 		name: "nameplateResourceOnTarget",
 		default: "0",
@@ -5893,6 +6341,12 @@ export const data: CVarInterface = {
 		category: 4,
 		scope: "Account",
 	},
+	nameplateshowfriendlybuffs: {
+		name: "nameplateShowFriendlyBuffs",
+		default: "0",
+		category: 4,
+		scope: "Account",
+	},
 	nameplateshowfriendlyguardians: {
 		name: "nameplateShowFriendlyGuardians",
 		default: "0",
@@ -5935,6 +6389,12 @@ export const data: CVarInterface = {
 		category: 4,
 		scope: "Account",
 		help: "Whether to hide the nameplate bars",
+	},
+	nameplateshowpersonalcooldowns: {
+		name: "nameplateShowPersonalCooldowns",
+		default: "0",
+		category: 4,
+		scope: "Account",
 	},
 	nameplateshowself: {
 		name: "nameplateShowSelf",
@@ -6017,6 +6477,11 @@ export const data: CVarInterface = {
 	outlineselectionfadeduration: {
 		name: "outlineSelectionFadeDuration",
 		default: "0.32",
+		category: 0,
+	},
+	outlinesoftinteractfadeduration: {
+		name: "outlineSoftInteractFadeDuration",
+		default: "0.3",
 		category: 0,
 	},
 	overridearchive: {
@@ -6119,7 +6584,7 @@ export const data: CVarInterface = {
 	},
 	playintromovie: {
 		name: "playIntroMovie",
-		default: "5",
+		default: "0",
 		category: 4,
 		help: "Starting expansion movie to play on startup",
 	},
@@ -6196,9 +6661,51 @@ export const data: CVarInterface = {
 	profanityfilter: {
 		name: "profanityFilter",
 		default: "1",
-		category: 5,
+		category: 4,
 		scope: "Character",
 		help: "Whether to enable mature language filtering",
+	},
+	professionaccessoryslotsexampleshown: {
+		name: "professionAccessorySlotsExampleShown",
+		default: "0",
+		category: 4,
+		scope: "Account",
+		help: "If the profession gear slots example has been shown",
+	},
+	professiontoolslotsexampleshown: {
+		name: "professionToolSlotsExampleShown",
+		default: "0",
+		category: 4,
+		scope: "Account",
+		help: "If the profession gear slots example has been shown",
+	},
+	professionsallocatebestqualityreagents: {
+		name: "professionsAllocateBestQualityReagents",
+		default: "1",
+		category: 4,
+		scope: "Character",
+		help: "Indicates if best quality reagents should be automatically allocated in the crafting UI.",
+	},
+	professionsflyouthideunowned: {
+		name: "professionsFlyoutHideUnowned",
+		default: "0",
+		category: 4,
+		scope: "Account",
+		help: "Boolean indicating if unowned items are hidden in the profession slot flyouts",
+	},
+	professionsorderdurationdropdown: {
+		name: "professionsOrderDurationDropdown",
+		default: "2",
+		category: 4,
+		scope: "Character",
+		help: "The previously selected duration index in the professions customer order form dropdown",
+	},
+	professionsorderrecipientdropdown: {
+		name: "professionsOrderRecipientDropdown",
+		default: "1",
+		category: 4,
+		scope: "Character",
+		help: "The previously selected order recipient index in the professions customer order form dropdown",
 	},
 	projectedtextures: {
 		name: "projectedTextures",
@@ -6247,6 +6754,20 @@ export const data: CVarInterface = {
 		scope: "Account",
 		help: "Colors raid frames with the class color",
 	},
+	raidframesdisplaydebuffs: {
+		name: "raidFramesDisplayDebuffs",
+		default: "1",
+		category: 4,
+		scope: "Account",
+		help: "Whether to display debuffs on Raid Frames",
+	},
+	raidframesdisplayincomingheals: {
+		name: "raidFramesDisplayIncomingHeals",
+		default: "1",
+		category: 4,
+		scope: "Account",
+		help: "Whether to display incoming heals on Raid Frames",
+	},
 	raidframesdisplayonlydispellabledebuffs: {
 		name: "raidFramesDisplayOnlyDispellableDebuffs",
 		default: "0",
@@ -6291,24 +6812,24 @@ export const data: CVarInterface = {
 	},
 	raidgraphicscomputeeffects: {
 		name: "raidGraphicsComputeEffects",
-		default: "1",
+		default: "2",
 		category: 5,
 	},
 	raidgraphicsdeptheffects: {
 		name: "raidGraphicsDepthEffects",
-		default: "1",
+		default: "2",
 		category: 5,
 		help: "UI value of the raidGraphics setting",
 	},
 	raidgraphicsenvironmentdetail: {
 		name: "raidGraphicsEnvironmentDetail",
-		default: "6",
+		default: "4",
 		category: 5,
 		help: "UI value of the raidGraphics setting",
 	},
 	raidgraphicsgroundclutter: {
 		name: "raidGraphicsGroundClutter",
-		default: "6",
+		default: "4",
 		category: 5,
 		help: "UI value of the raidGraphics setting",
 	},
@@ -6326,7 +6847,7 @@ export const data: CVarInterface = {
 	},
 	raidgraphicsparticledensity: {
 		name: "raidGraphicsParticleDensity",
-		default: "2",
+		default: "3",
 		category: 5,
 		help: "UI value of the raidGraphics setting",
 	},
@@ -6344,25 +6865,25 @@ export const data: CVarInterface = {
 	},
 	raidgraphicsshadowquality: {
 		name: "raidGraphicsShadowQuality",
-		default: "3",
+		default: "2",
 		category: 5,
 		help: "UI value of the raidGraphics setting",
 	},
 	raidgraphicsspelldensity: {
 		name: "raidGraphicsSpellDensity",
-		default: "5",
+		default: "4",
 		category: 5,
 		help: "UI value of the raidGraphics setting",
 	},
 	raidgraphicstextureresolution: {
 		name: "raidGraphicsTextureResolution",
-		default: "3",
+		default: "2",
 		category: 5,
 		help: "UI value of the raidGraphics setting",
 	},
 	raidgraphicsviewdistance: {
 		name: "raidGraphicsViewDistance",
-		default: "5",
+		default: "4",
 		category: 5,
 		help: "UI value of the raidGraphics setting",
 	},
@@ -6455,6 +6976,12 @@ export const data: CVarInterface = {
 		name: "refraction",
 		default: "0",
 		category: 5,
+	},
+	reloaduionaspectchange: {
+		name: "reloadUIOnAspectChange",
+		default: "0",
+		category: 1,
+		help: "Reload the UI on aspect change",
 	},
 	remotetexttospeech: {
 		name: "remoteTextToSpeech",
@@ -6676,7 +7203,7 @@ export const data: CVarInterface = {
 	shadowtexturesize: {
 		name: "shadowTextureSize",
 		default: "1024",
-		category: 5,
+		category: 1,
 		help: "Shadow texture size (1024-2048)",
 	},
 	shipyardmissiontutorialareabuff: {
@@ -6794,13 +7321,6 @@ export const data: CVarInterface = {
 		scope: "Account",
 		help: "Whether or not to show outfit details when the dressing room is opened in maximized mode, default on",
 	},
-	showpartybackground: {
-		name: "showPartyBackground",
-		default: "0",
-		category: 4,
-		scope: "Character",
-		help: "Show a background behind party members",
-	},
 	showpartypets: {
 		name: "showPartyPets",
 		default: "0",
@@ -6844,7 +7364,7 @@ export const data: CVarInterface = {
 	showtargetoftarget: {
 		name: "showTargetOfTarget",
 		default: "0",
-		category: 5,
+		category: 4,
 		scope: "Character",
 		help: "Whether the target of target frame should be shown",
 	},
@@ -7009,6 +7529,19 @@ export const data: CVarInterface = {
 		default: "1000",
 		category: 4,
 		help: "Extra time to wait before releasing a vehicle, after it has smooth phased. This allows it's passengers to smooth phase as well.",
+	},
+	softtargetinteractiontutorialtotalinteractions: {
+		name: "softTargetInteractionTutorialTotalInteractions",
+		default: "0",
+		category: 4,
+		help: "total interactions that the player has used in soft targetting",
+	},
+	softtargettinginteractkeysound: {
+		name: "softTargettingInteractKeySound",
+		default: "0",
+		category: 4,
+		scope: "Character",
+		help: "Setting for soft targeting that enables sound cues",
 	},
 	sortdiskreads: {
 		name: "sortDiskReads",
@@ -7214,7 +7747,7 @@ export const data: CVarInterface = {
 	},
 	targetfps: {
 		name: "targetFPS",
-		default: "0",
+		default: "60",
 		category: 1,
 		help: "Set target FPS. Dynamic actions will be taken if you fall below the FPS target",
 	},
@@ -7233,7 +7766,7 @@ export const data: CVarInterface = {
 	terrainloddist: {
 		name: "terrainLodDist",
 		default: "400",
-		category: 5,
+		category: 1,
 		help: "Terrain level of detail distance",
 	},
 	terrainmiplevel: {
@@ -7359,6 +7892,12 @@ export const data: CVarInterface = {
 		scope: "Character",
 		help: "Reads chat text out loud using the voice text to speech system based on the selected options",
 	},
+	textureerrorcolors: {
+		name: "textureErrorColors",
+		default: "1",
+		category: 1,
+		help: "If enabled, replaceable textures that aren't specified will be purple",
+	},
 	texturefilteringmode: {
 		name: "textureFilteringMode",
 		default: "5",
@@ -7482,6 +8021,13 @@ export const data: CVarInterface = {
 		scope: "Account",
 		help: "Internal cvar for saving tracked achievements in order",
 	},
+	trackedprofessionrecipes: {
+		name: "trackedProfessionRecipes",
+		default: "",
+		category: 4,
+		scope: "Account",
+		help: "Internal cvar for saving tracked recipes in order",
+	},
 	trackedquests: {
 		name: "trackedQuests",
 		default: "",
@@ -7554,6 +8100,12 @@ export const data: CVarInterface = {
 		category: 4,
 		help: "A multiplier for the default UI scale. -1=determine based on system/monitor DPI, 0.5-2.0=multiplier to use when calculating UI scale. Only applied when useUIScale is 0.",
 	},
+	uieditor_enabled: {
+		name: "uieditor_enabled",
+		default: "0",
+		category: 0,
+		help: "0: Hide UI Editor (default), 1: Show UI Editor.",
+	},
 	unitclutter: {
 		name: "unitClutter",
 		default: "1",
@@ -7584,11 +8136,24 @@ export const data: CVarInterface = {
 		category: 4,
 		help: "Enables units turning their head to look at players",
 	},
-	usecompactpartyframes: {
-		name: "useCompactPartyFrames",
-		default: "0",
+	unlockedexpansionlandingpages: {
+		name: "unlockedExpansionLandingPages",
+		default: "",
 		category: 4,
 		scope: "Account",
+		help: "Bitfield for which expansion landing pages have been unlocked/seen by the user",
+	},
+	unlockedmajorfactions: {
+		name: "unlockedMajorFactions",
+		default: "",
+		category: 4,
+		scope: "Account",
+		help: "Internal cvar for tracking unlocked Major Factions. Used to play a toast when a new faction has been unlocked.",
+	},
+	usecompactpartyframes: {
+		name: "useCompactPartyFrames",
+		default: "",
+		category: 4,
 		help: "Use the new raid frames for parties",
 	},
 	usehighresolutionuitextures: {
@@ -7603,11 +8168,35 @@ export const data: CVarInterface = {
 		category: 6,
 		help: "Enable the usage of IPv6 sockets",
 	},
+	usemaxfps: {
+		name: "useMaxFPS",
+		default: "0",
+		category: 1,
+		help: "Enables or disables FPS limit",
+	},
+	usemaxfpsbk: {
+		name: "useMaxFPSBk",
+		default: "1",
+		category: 1,
+		help: "Enables or disables background FPS limit",
+	},
+	usetargetfps: {
+		name: "useTargetFPS",
+		default: "1",
+		category: 1,
+		help: "Enables or disables background FPS limit",
+	},
 	useuiscale: {
 		name: "useUiScale",
 		default: "0",
 		category: 4,
 		help: "Whether or not the UI scale should be used",
+	},
+	validateframexml: {
+		name: "validateFrameXML",
+		default: "1",
+		category: 5,
+		help: "Display warning when FrameXML detects unparsed elements",
 	},
 	videooptionsversion: {
 		name: "videoOptionsVersion",
@@ -7629,7 +8218,7 @@ export const data: CVarInterface = {
 	},
 	volumefog: {
 		name: "volumeFog",
-		default: "1",
+		default: "0",
 		category: 1,
 		help: "Volume Fog",
 	},
@@ -7778,12 +8367,6 @@ export const data: CVarInterface = {
 		default: "0",
 		category: 1,
 		help: "World texture base mip",
-	},
-	worldentitylinkmode: {
-		name: "worldEntityLinkMode",
-		default: "1",
-		category: 1,
-		help: "Entity link mode",
 	},
 	worldloadsort: {
 		name: "worldLoadSort",

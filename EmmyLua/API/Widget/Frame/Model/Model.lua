@@ -24,7 +24,7 @@ function Model:HasScript(scriptType) end
 function Model:HookScript(scriptType, handler, bindingType) end
 
 ---@param scriptType ScriptModel
----@param handler function
+---@param handler function|nil
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_ScriptObject_SetScript)
 function Model:SetScript(scriptType, handler) end
 

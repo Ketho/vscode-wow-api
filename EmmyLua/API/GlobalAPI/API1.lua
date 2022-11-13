@@ -39,9 +39,6 @@ function AcceptSpellConfirmationPrompt(spellID) end
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_AcceptTrade)
 function AcceptTrade() end
 
----[Documentation](https://wowpedia.fandom.com/wiki/API_AcceptXPLoss)
-function AcceptXPLoss() end
-
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_AcknowledgeAutoAcceptQuest)
 function AcknowledgeAutoAcceptQuest() end
 
@@ -405,12 +402,6 @@ function C_AdventureMap.GetZoneChoiceInfo(choiceIndex) end
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_AdventureMap.StartQuest)
 function C_AdventureMap.StartQuest(questID) end
 
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_AuctionHouse.ConfirmPostCommodity)
-function C_AuctionHouse.ConfirmPostCommodity() end
-
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_AuctionHouse.ConfirmPostItem)
-function C_AuctionHouse.ConfirmPostItem() end
-
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_BlackMarket.Close)
 function C_BlackMarket.Close() end
 
@@ -502,11 +493,17 @@ function C_Debug.GetAllPortLocsForMap(uiMapID) end
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_Debug.GetMapDebugObjects)
 function C_Debug.GetMapDebugObjects(uiMapID) end
 
+---[Documentation](https://wowpedia.fandom.com/wiki/API_C_Debug.PrintToDebugWindow)
+function C_Debug.PrintToDebugWindow() end
+
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_Debug.TeleportToMapDebugObject)
 function C_Debug.TeleportToMapDebugObject(pinIndex) end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_Debug.TeleportToMapLocation)
 function C_Debug.TeleportToMapLocation(uiMapID, mapX, mapY) end
+
+---[Documentation](https://wowpedia.fandom.com/wiki/API_C_FunctionContainers.CreateCallback)
+function C_FunctionContainers.CreateCallback() end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_Garrison.AllowMissionStartAboveSoftCap)
 function C_Garrison.AllowMissionStartAboveSoftCap(garrFollowerTypeID) end
@@ -1443,20 +1440,6 @@ function C_NamePlate.SetNamePlateSelfSize(width, height) end
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_NamePlate.SetTargetClampingInsets)
 function C_NamePlate.SetTargetClampingInsets(clickthrough) end
 
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_NewItems.ClearAll)
-function C_NewItems.ClearAll() end
-
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_NewItems.IsNewItem)
----@param bag number
----@param slot number
----@return boolean isNewItem
-function C_NewItems.IsNewItem(bag, slot) end
-
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_NewItems.RemoveNewItem)
----@param bag number
----@param slot number
-function C_NewItems.RemoveNewItem(bag, slot) end
-
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_PetBattles.AcceptPVPDuel)
 function C_PetBattles.AcceptPVPDuel() end
 
@@ -2064,11 +2047,6 @@ function C_TalkingHead.IsCurrentTalkingHeadIgnored() end
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_TalkingHead.SetConversationsDeferred)
 function C_TalkingHead.SetConversationsDeferred(deferred) end
 
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_Timer.After)
----@param duration number
----@param callback function
-function C_Timer.After(duration, callback) end
-
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_ToyBox.ForceToyRefilter)
 function C_ToyBox.ForceToyRefilter() end
 
@@ -2086,4 +2064,26 @@ function C_ToyBox.GetNumLearnedDisplayedToys() end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_ToyBox.GetNumTotalDisplayedToys)
 function C_ToyBox.GetNumTotalDisplayedToys() end
+
+---[Documentation](https://wowpedia.fandom.com/wiki/API_C_ToyBox.GetNumToys)
+function C_ToyBox.GetNumToys() end
+
+---[Documentation](https://wowpedia.fandom.com/wiki/API_C_ToyBox.GetToyFromIndex)
+function C_ToyBox.GetToyFromIndex(itemIndex) end
+
+---[Documentation](https://wowpedia.fandom.com/wiki/API_C_ToyBox.GetToyInfo)
+---@param itemID number
+---@return number itemID
+---@return string toyName
+---@return number icon
+---@return boolean isFavorite
+---@return boolean hasFanfare
+---@return number itemQuality
+function C_ToyBox.GetToyInfo(itemID) end
+
+---[Documentation](https://wowpedia.fandom.com/wiki/API_C_ToyBox.GetToyLink)
+function C_ToyBox.GetToyLink(itemID) end
+
+---[Documentation](https://wowpedia.fandom.com/wiki/API_C_ToyBox.GetUncollectedShown)
+function C_ToyBox.GetUncollectedShown() end
 

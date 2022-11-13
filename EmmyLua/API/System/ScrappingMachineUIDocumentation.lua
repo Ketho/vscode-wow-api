@@ -38,9 +38,5 @@ function C_ScrappingMachineUI.RemoveItemToScrap(index) end
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_ScrappingMachineUI.ScrapItems)
 function C_ScrappingMachineUI.ScrapItems() end
 
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_ScrappingMachineUI.SetScrappingMachine)
----@param gameObject string
-function C_ScrappingMachineUI.SetScrappingMachine(gameObject) end
-
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_ScrappingMachineUI.ValidateScrappingList)
 function C_ScrappingMachineUI.ValidateScrappingList() end

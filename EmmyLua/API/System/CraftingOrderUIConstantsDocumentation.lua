@@ -1,0 +1,121 @@
+---@meta
+---@class CraftingOrderBucketInfo
+---@field itemID number
+---@field spellID number
+---@field skillLineAbilityID number
+---@field tipAmountAvg number
+---@field tipAmountMax number
+---@field numAvailable number
+
+---@class CraftingOrderClaimsRemainingInfo
+---@field claimsRemaining number? Default = 0
+---@field hoursToRecharge number?
+
+---@class CraftingOrderCustomerCategory
+---@field categoryName string
+---@field categoryID number
+---@field uiSortOrder number
+---@field primaryCategorySortOrder number?
+---@field secondaryCategorySortOrder number?
+---@field type CraftingOrderCustomerCategoryType
+
+---@class CraftingOrderCustomerCategoryFilters
+---@field primaryCategoryID number?
+---@field secondaryCategoryID number?
+---@field tertiaryCategoryID number?
+
+---@class CraftingOrderCustomerOptionInfo
+---@field skillLineAbilityID number
+---@field professionID number
+---@field skillUpSkillLineID number
+---@field spellID number
+---@field itemID number
+---@field itemName string
+---@field primaryCategoryID number
+---@field iLvl number
+---@field qualityIlvlBonuses number[]?
+---@field craftingQualityIDs number[]?
+---@field quality ItemQuality?
+---@field slots number?
+---@field level number?
+---@field skill number?
+---@field secondaryCategoryID number?
+---@field tertiaryCategoryID number?
+
+---@class CraftingOrderCustomerSearchParams
+---@field categoryFilters CraftingOrderCustomerCategoryFilters
+---@field searchText string?
+---@field minLevel number
+---@field maxLevel number
+---@field uncollectedOnly boolean
+---@field usableOnly boolean
+---@field upgradesOnly boolean
+---@field includePoor boolean
+---@field includeCommon boolean
+---@field includeUncommon boolean
+---@field includeRare boolean
+---@field includeEpic boolean
+---@field includeLegendary boolean
+---@field includeArtifact boolean
+---@field isFavoritesSearch boolean
+
+---@class CraftingOrderCustomerSearchResults
+---@field options CraftingOrderCustomerOptionInfo[]
+---@field extraColumnType AuctionHouseExtraColumn?
+
+---@class CraftingOrderInfo
+---@field orderID number
+---@field itemID number
+---@field spellID number
+---@field skillLineAbilityID number
+---@field orderType CraftingOrderType
+---@field orderState CraftingOrderState
+---@field expirationTime number
+---@field claimEndTime number
+---@field minQuality number
+---@field tipAmount number
+---@field consortiumCut number
+---@field isRecraft boolean
+---@field isFulfillable boolean
+---@field reagentState CraftingOrderReagentsType
+---@field customerGuid string?
+---@field customerName string?
+---@field crafterGuid string?
+---@field crafterName string?
+---@field customerNotes string
+---@field reagents CraftingOrderReagentInfo[]
+---@field outputItemHyperlink string?
+---@field outputItemGUID string?
+---@field recraftItemHyperlink string?
+
+---@class CraftingOrderMailInfo
+---@field reason RcoCloseReason
+---@field recipeName string
+---@field commissionPaid number?
+---@field crafterNote string?
+---@field crafterGUID string?
+---@field crafterName string?
+---@field customerGUID string?
+---@field customerName string?
+
+---@class CraftingOrderReagentInfo
+---@field reagent CraftingReagentInfo
+---@field reagentSlot number
+---@field source CraftingOrderReagentSource
+---@field isBasicReagent boolean
+
+---@class CraftingOrderSortInfo
+---@field sortType CraftingOrderSortType
+---@field reversed boolean
+
+---@class NewCraftingOrderInfo
+---@field skillLineAbilityID number
+---@field orderType CraftingOrderType
+---@field orderDuration CraftingOrderDuration
+---@field tipAmount number
+---@field customerNotes string
+---@field reagentItems RegularReagentInfo[]
+---@field craftingReagentItems CraftingReagentInfo[]
+---@field minCraftingQualityID number?
+---@field orderTarget string?
+---@field recraftItem string?

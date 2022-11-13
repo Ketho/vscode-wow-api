@@ -24,7 +24,7 @@ function ScrollFrame:HasScript(scriptType) end
 function ScrollFrame:HookScript(scriptType, handler, bindingType) end
 
 ---@param scriptType ScriptScrollFrame
----@param handler function
+---@param handler function|nil
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_ScriptObject_SetScript)
 function ScrollFrame:SetScript(scriptType, handler) end
 

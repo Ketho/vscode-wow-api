@@ -355,6 +355,25 @@ function C_ArtifactUI.SetPreviewAppearance(artifactAppearanceID) end
 ---@return boolean shouldSuppressForgeRotation
 function C_ArtifactUI.ShouldSuppressForgeRotation() end
 
+---@class ArtifactAppearanceInfo
+---@field artifactAppearanceID number
+---@field appearanceName string
+---@field displayIndex number
+---@field unlocked boolean
+---@field failureDescription string?
+---@field uiCameraID number
+---@field altHandCameraID number?
+---@field swatchColor ColorMixin
+---@field modelOpacity number
+---@field modelSaturation number
+---@field obtainable boolean
+
+---@class ArtifactAppearanceSetInfo
+---@field artifactAppearanceSetID number
+---@field appearanceSetName string
+---@field appearanceSetDescription string
+---@field numAppearances number
+
 ---@class ArtifactArtInfo
 ---@field textureKit string
 ---@field titleName string
@@ -363,6 +382,26 @@ function C_ArtifactUI.ShouldSuppressForgeRotation() end
 ---@field barDisconnectedColor ColorMixin
 ---@field uiModelSceneID number
 ---@field spellVisualKitID number
+
+---@class ArtifactInfo
+---@field itemID number
+---@field altItemID number?
+---@field name string
+---@field icon number
+---@field xp number
+---@field pointsSpent number
+---@field quality number
+---@field artifactAppearanceID number
+---@field appearanceModID number
+---@field itemAppearanceID number?
+---@field altItemAppearanceID number?
+---@field altOnTop boolean
+---@field tier number
+
+---@class ArtifactMetaPowerInfo
+---@field spellID number
+---@field powerCost number
+---@field currentRank number
 
 ---@class ArtifactPowerInfo
 ---@field spellID number
@@ -379,3 +418,9 @@ function C_ArtifactUI.ShouldSuppressForgeRotation() end
 ---@field position Vector2DMixin
 ---@field offset Vector2DMixin?
 ---@field linearIndex number?
+
+---@class ArtifactRelicInfo
+---@field name string
+---@field icon number
+---@field slotTypeName string
+---@field link string

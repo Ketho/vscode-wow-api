@@ -54,3 +54,13 @@
 ---@field socketSubtype number
 ---@field misc0 number
 ---@field misc1 number
+
+---@class GarrisonTalentTreeInfo
+---@field treeID number
+---@field title string
+---@field textureKit string
+---@field talents GarrisonTalentInfo[]
+---@field isClassAgnostic boolean
+---@field isThemed boolean
+---@field featureType number
+---@field featureSubtype number

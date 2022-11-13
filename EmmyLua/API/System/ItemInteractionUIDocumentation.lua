@@ -33,12 +33,6 @@ function C_ItemInteraction.PerformItemInteraction() end
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_ItemInteraction.Reset)
 function C_ItemInteraction.Reset() end
 
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_ItemInteraction.SetCorruptionReforgerItemTooltip)
-function C_ItemInteraction.SetCorruptionReforgerItemTooltip() end
-
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_ItemInteraction.SetItemConversionOutputTooltip)
-function C_ItemInteraction.SetItemConversionOutputTooltip() end
-
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_ItemInteraction.SetPendingItem)
 ---@param item? ItemLocationMixin
 ---@return boolean success
@@ -65,6 +59,7 @@ function C_ItemInteraction.SetPendingItem(item) end
 ---@field description string?
 ---@field buttonTooltip string?
 ---@field confirmationDescription string?
+---@field slotTooltip string?
 ---@field cost number?
 ---@field currencyTypeId number?
 ---@field dropInSlotSoundKitId number?

@@ -1,3 +1,4 @@
+---@meta
 ---[FrameXML](https://www.townlong-yak.com/framexml/live/EasingUtil.lua)
 EasingUtil = {}
 

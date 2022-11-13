@@ -49,6 +49,10 @@ function C_WeeklyRewards.GetItemHyperlink(itemDBID) end
 ---@return number? itemLevel
 function C_WeeklyRewards.GetNextMythicPlusIncrease(mythicPlusLevel) end
 
+---[Documentation](https://wowpedia.fandom.com/wiki/API_C_WeeklyRewards.GetWeeklyRewardTextureKit)
+---@return string uiTextureKit
+function C_WeeklyRewards.GetWeeklyRewardTextureKit() end
+
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_WeeklyRewards.HasAvailableRewards)
 ---@return boolean hasAvailableRewards
 function C_WeeklyRewards.HasAvailableRewards() end
@@ -61,8 +65,20 @@ function C_WeeklyRewards.HasGeneratedRewards() end
 ---@return boolean isInteracting
 function C_WeeklyRewards.HasInteraction() end
 
+---[Documentation](https://wowpedia.fandom.com/wiki/API_C_WeeklyRewards.IsWeeklyChestRetired)
+---@return boolean isRetired
+function C_WeeklyRewards.IsWeeklyChestRetired() end
+
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_WeeklyRewards.OnUIInteract)
 function C_WeeklyRewards.OnUIInteract() end
+
+---[Documentation](https://wowpedia.fandom.com/wiki/API_C_WeeklyRewards.ShouldShowFinalRetirementMessage)
+---@return boolean showRetirementMessage
+function C_WeeklyRewards.ShouldShowFinalRetirementMessage() end
+
+---[Documentation](https://wowpedia.fandom.com/wiki/API_C_WeeklyRewards.ShouldShowRetirementMessage)
+---@return boolean showRetirementMessage
+function C_WeeklyRewards.ShouldShowRetirementMessage() end
 
 ---@class ConquestWeeklyProgress
 ---@field progress number

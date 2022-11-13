@@ -25,7 +25,7 @@ function Animation:HasScript(scriptType) end
 function Animation:HookScript(scriptType, handler, bindingType) end
 
 ---@param scriptType ScriptAnimation
----@param handler function
+---@param handler function|nil
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_ScriptObject_SetScript)
 function Animation:SetScript(scriptType, handler) end
 

@@ -24,7 +24,7 @@ function Slider:HasScript(scriptType) end
 function Slider:HookScript(scriptType, handler, bindingType) end
 
 ---@param scriptType ScriptSlider
----@param handler function
+---@param handler function|nil
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_ScriptObject_SetScript)
 function Slider:SetScript(scriptType, handler) end
 

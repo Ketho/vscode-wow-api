@@ -88,6 +88,8 @@ function SendSubscriptionInterstitialResponse(response) end
 ---@field logo number
 ---@field banner string
 ---@field features ExpansionDisplayInfoFeature[]
+---@field highResBackgroundID number
+---@field lowResBackgroundID number
 
 ---@class ExpansionDisplayInfoFeature
 ---@field icon number

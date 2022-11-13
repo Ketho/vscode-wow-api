@@ -15,6 +15,10 @@ function C_MythicPlus.GetCurrentSeason() end
 ---@return number rewardSeasonID
 function C_MythicPlus.GetCurrentSeasonValues() end
 
+---[Documentation](https://wowpedia.fandom.com/wiki/API_C_MythicPlus.GetCurrentUIDisplaySeason)
+---@return number? seasonID
+function C_MythicPlus.GetCurrentUIDisplaySeason() end
+
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_MythicPlus.GetLastWeeklyBestInformation)
 ---@return number challengeMapId
 ---@return number level

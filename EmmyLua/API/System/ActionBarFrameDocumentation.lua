@@ -21,6 +21,11 @@ function C_ActionBar.FindSpellActionButtons(spellID) end
 ---@return number? bonusBarIndex
 function C_ActionBar.GetBonusBarIndexForSlot(slotID) end
 
+---[Documentation](https://wowpedia.fandom.com/wiki/API_C_ActionBar.GetItemActionOnEquipSpellID)
+---@param actionID number
+---@return number? onEquipSpellID
+function C_ActionBar.GetItemActionOnEquipSpellID(actionID) end
+
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_ActionBar.GetPetActionPetBarIndices)
 ---@param petActionID number
 ---@return number[] slots

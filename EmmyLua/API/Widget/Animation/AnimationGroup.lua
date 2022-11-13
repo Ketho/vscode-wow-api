@@ -24,7 +24,7 @@ function AnimationGroup:HasScript(scriptType) end
 function AnimationGroup:HookScript(scriptType, handler, bindingType) end
 
 ---@param scriptType ScriptAnimationGroup
----@param handler function
+---@param handler function|nil
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_ScriptObject_SetScript)
 function AnimationGroup:SetScript(scriptType, handler) end
 

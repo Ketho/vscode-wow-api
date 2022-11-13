@@ -22,6 +22,6 @@ function ScriptObject:HasScript(scriptType) end
 function ScriptObject:HookScript(scriptType, handler, bindingType) end
 
 ---@param scriptType ScriptType
----@param handler function
+---@param handler function|nil
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_ScriptObject_SetScript)
 function ScriptObject:SetScript(scriptType, handler) end

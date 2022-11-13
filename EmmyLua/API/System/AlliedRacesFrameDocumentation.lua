@@ -1,9 +1,6 @@
 ---@meta
 C_AlliedRaces = {}
 
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_AlliedRaces.ClearAlliedRaceDetailsGiver)
-function C_AlliedRaces.ClearAlliedRaceDetailsGiver() end
-
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_AlliedRaces.GetAllRacialAbilitiesFromID)
 ---@param raceID number
 ---@return AlliedRaceRacialAbility[] allDisplayInfo

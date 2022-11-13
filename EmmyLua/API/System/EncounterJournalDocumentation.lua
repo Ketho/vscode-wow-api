@@ -83,6 +83,8 @@ function C_EncounterJournal.SetSlotFilter(filterSlot) end
 ---@field handError boolean?
 ---@field weaponTypeError boolean?
 ---@field displayAsPerPlayerLoot boolean?
+---@field displayAsVeryRare boolean?
+---@field displayAsExtremelyRare boolean?
 
 ---@class EncounterJournalMapEncounterInfo
 ---@field encounterID number

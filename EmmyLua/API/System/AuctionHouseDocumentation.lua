@@ -38,6 +38,21 @@ function C_AuctionHouse.CloseAuctionHouse() end
 ---@param quantity number
 function C_AuctionHouse.ConfirmCommoditiesPurchase(itemID, quantity) end
 
+---[Documentation](https://wowpedia.fandom.com/wiki/API_C_AuctionHouse.ConfirmPostCommodity)
+---@param item ItemLocationMixin
+---@param duration number
+---@param quantity number
+---@param unitPrice number
+function C_AuctionHouse.ConfirmPostCommodity(item, duration, quantity, unitPrice) end
+
+---[Documentation](https://wowpedia.fandom.com/wiki/API_C_AuctionHouse.ConfirmPostItem)
+---@param item ItemLocationMixin
+---@param duration number
+---@param quantity number
+---@param bid? number
+---@param buyout? number
+function C_AuctionHouse.ConfirmPostItem(item, duration, quantity, bid, buyout) end
+
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_AuctionHouse.FavoritesAreAvailable)
 ---@return boolean favoritesAreAvailable
 function C_AuctionHouse.FavoritesAreAvailable() end
@@ -323,6 +338,7 @@ function C_AuctionHouse.PlaceBid(auctionID, bidAmount) end
 ---@param duration number
 ---@param quantity number
 ---@param unitPrice number
+---@return boolean needsConfirmation
 function C_AuctionHouse.PostCommodity(item, duration, quantity, unitPrice) end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_AuctionHouse.PostItem)
@@ -331,6 +347,7 @@ function C_AuctionHouse.PostCommodity(item, duration, quantity, unitPrice) end
 ---@param quantity number
 ---@param bid? number
 ---@param buyout? number
+---@return boolean needsConfirmation
 function C_AuctionHouse.PostItem(item, duration, quantity, bid, buyout) end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_AuctionHouse.QueryBids)
@@ -399,7 +416,7 @@ function C_AuctionHouse.SendBrowseQuery(query) end
 ---@param maxLevelFilter? number Default = 0
 function C_AuctionHouse.SendSearchQuery(itemKey, sorts, separateOwnerItems, minLevelFilter, maxLevelFilter) end
 
----Search queries are restricted to 100 calls per minute. These should not be used to query the entire auction house. See ReplicateItems
+---Search queries are restricted to 100 calls per minute. These should not be used to query the entire auction house. See ReplicateItems. ItemKey should have its iLVL and suffix cleared before calling.
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_AuctionHouse.SendSellSearchQuery)
 ---@param itemKey ItemKey
 ---@param sorts AuctionHouseSortType[]
@@ -481,6 +498,8 @@ function C_AuctionHouse.StartCommoditiesPurchase(itemID, quantity) end
 ---@field battlePetSpeciesID number? Default = 0
 
 ---@class ItemKeyInfo
+---@field itemID number
+---@field battlePetSpeciesID number
 ---@field itemName string
 ---@field battlePetLink string?
 ---@field appearanceLink string?
@@ -518,3 +537,23 @@ function C_AuctionHouse.StartCommoditiesPurchase(itemID, quantity) end
 ---@field bidAmount number?
 ---@field buyoutAmount number?
 ---@field bidder string?
+
+---@class ReplicateItemInfo
+---@field name string?
+---@field texture number?
+---@field count number
+---@field qualityID number
+---@field usable boolean?
+---@field level number
+---@field levelType string?
+---@field minBid number
+---@field minIncrement number
+---@field buyoutPrice number
+---@field bidAmount number
+---@field highBidder string?
+---@field bidderFullName string?
+---@field owner string?
+---@field ownerFullName string?
+---@field saleStatus number
+---@field itemID number
+---@field hasAllInfo boolean?

@@ -24,7 +24,7 @@ function ColorSelect:HasScript(scriptType) end
 function ColorSelect:HookScript(scriptType, handler, bindingType) end
 
 ---@param scriptType ScriptColorSelect
----@param handler function
+---@param handler function|nil
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_ScriptObject_SetScript)
 function ColorSelect:SetScript(scriptType, handler) end
 

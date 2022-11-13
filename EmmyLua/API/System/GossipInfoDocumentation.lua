@@ -24,6 +24,16 @@ function C_GossipInfo.GetCompletedOptionDescriptionString() end
 ---@return string? description
 function C_GossipInfo.GetCustomGossipDescriptionString() end
 
+---[Documentation](https://wowpedia.fandom.com/wiki/API_C_GossipInfo.GetFriendshipReputation)
+---@param friendshipFactionID number
+---@return FriendshipReputationInfo reputationInfo
+function C_GossipInfo.GetFriendshipReputation(friendshipFactionID) end
+
+---[Documentation](https://wowpedia.fandom.com/wiki/API_C_GossipInfo.GetFriendshipReputationRanks)
+---@param friendshipFactionID number
+---@return FriendshipReputationRankInfo rankInfo
+function C_GossipInfo.GetFriendshipReputationRanks(friendshipFactionID) end
+
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_GossipInfo.GetNumActiveQuests)
 ---@return number numQuests
 function C_GossipInfo.GetNumActiveQuests() end
@@ -31,10 +41,6 @@ function C_GossipInfo.GetNumActiveQuests() end
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_GossipInfo.GetNumAvailableQuests)
 ---@return number numQuests
 function C_GossipInfo.GetNumAvailableQuests() end
-
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_GossipInfo.GetNumOptions)
----@return number numOptions
-function C_GossipInfo.GetNumOptions() end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_GossipInfo.GetOptions)
 ---@return GossipOptionUIInfo[] info
@@ -59,18 +65,35 @@ function C_GossipInfo.GetText() end
 function C_GossipInfo.RefreshOptions() end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_GossipInfo.SelectActiveQuest)
----@param index number
-function C_GossipInfo.SelectActiveQuest(index) end
+---@param optionID number
+function C_GossipInfo.SelectActiveQuest(optionID) end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_GossipInfo.SelectAvailableQuest)
----@param index number
-function C_GossipInfo.SelectAvailableQuest(index) end
+---@param optionID number
+function C_GossipInfo.SelectAvailableQuest(optionID) end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_GossipInfo.SelectOption)
----@param index number
+---@param optionID number
 ---@param text? string
 ---@param confirmed? boolean
-function C_GossipInfo.SelectOption(index, text, confirmed) end
+function C_GossipInfo.SelectOption(optionID, text, confirmed) end
+
+---@class FriendshipReputationInfo
+---@field friendshipFactionID number
+---@field standing number
+---@field maxRep number
+---@field name string?
+---@field text string
+---@field texture number
+---@field reaction string
+---@field reactionThreshold number
+---@field nextThreshold number?
+---@field reversedColor boolean
+---@field overrideColor number?
+
+---@class FriendshipReputationRankInfo
+---@field currentLevel number
+---@field maxLevel number
 
 ---@class GossipOptionRewardInfo
 ---@field id number
@@ -78,11 +101,16 @@ function C_GossipInfo.SelectOption(index, text, confirmed) end
 ---@field rewardType GossipOptionRewardType
 
 ---@class GossipOptionUIInfo
+---@field gossipOptionID number
 ---@field name string
----@field type string
+---@field icon number
 ---@field rewards GossipOptionRewardInfo[]
 ---@field status GossipOptionStatus
 ---@field spellID number?
+---@field flags number
+---@field overrideIconID number?
+---@field selectOptionWhenOnlyOption boolean
+---@field orderIndex number
 
 ---@class GossipPoiInfo
 ---@field name string

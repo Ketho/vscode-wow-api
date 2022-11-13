@@ -24,5 +24,6 @@ function C_MapExplorationInfo.GetExploredMapTextures(uiMapID) end
 ---@field offsetX number
 ---@field offsetY number
 ---@field isShownByMouseOver boolean
+---@field isDrawOnTopLayer boolean
 ---@field fileDataIDs number[]
 ---@field hitRect UiMapExplorationHitRect

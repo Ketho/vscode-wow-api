@@ -31,6 +31,11 @@ function C_SpecializationInfo.GetInspectSelectedPvpTalent(inspectedUnit, talentI
 ---@return boolean hasNewTalent
 function C_SpecializationInfo.GetPvpTalentAlertStatus() end
 
+---[Documentation](https://wowpedia.fandom.com/wiki/API_C_SpecializationInfo.GetPvpTalentInfo)
+---@param talentID number
+---@return PvpTalentInfo? talentInfo
+function C_SpecializationInfo.GetPvpTalentInfo(talentID) end
+
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_SpecializationInfo.GetPvpTalentSlotInfo)
 ---@param talentIndex number
 ---@return PvpTalentSlotInfo? slotInfo
@@ -74,6 +79,19 @@ function C_SpecializationInfo.MatchesCurrentSpecSet(specSetID) end
 ---@param talentID number
 ---@param locked boolean
 function C_SpecializationInfo.SetPvpTalentLocked(talentID, locked) end
+
+---@class PvpTalentInfo
+---@field talentID number
+---@field name string
+---@field icon number
+---@field selected boolean
+---@field available boolean
+---@field spellID number
+---@field unlocked boolean
+---@field known boolean
+---@field grantedByAura boolean
+---@field dependenciesUnmet boolean
+---@field dependenciesUnmetReason string?
 
 ---@class PvpTalentSlotInfo
 ---@field enabled boolean

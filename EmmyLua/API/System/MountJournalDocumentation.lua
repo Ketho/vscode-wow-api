@@ -24,6 +24,10 @@ function C_MountJournal.Dismiss() end
 ---@return number? itemID
 function C_MountJournal.GetAppliedMountEquipmentID() end
 
+---[Documentation](https://wowpedia.fandom.com/wiki/API_C_MountJournal.GetCollectedDragonridingMounts)
+---@return number[] mountIDs
+function C_MountJournal.GetCollectedDragonridingMounts() end
+
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_MountJournal.GetCollectedFilterSetting)
 ---@param filterIndex number
 ---@return boolean isChecked
@@ -33,6 +37,11 @@ function C_MountJournal.GetCollectedFilterSetting(filterIndex) end
 ---@param mountIndex number
 ---@return MountCreatureDisplayInfo[] allDisplayInfo
 function C_MountJournal.GetDisplayedMountAllCreatureDisplayInfo(mountIndex) end
+
+---[Documentation](https://wowpedia.fandom.com/wiki/API_C_MountJournal.GetDisplayedMountID)
+---@param displayIndex number
+---@return number mountID
+function C_MountJournal.GetDisplayedMountID(displayIndex) end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_MountJournal.GetDisplayedMountInfo)
 ---@param displayIndex number
@@ -48,6 +57,7 @@ function C_MountJournal.GetDisplayedMountAllCreatureDisplayInfo(mountIndex) end
 ---@return boolean shouldHideOnChar
 ---@return boolean isCollected
 ---@return number mountID
+---@return boolean isForDragonriding
 function C_MountJournal.GetDisplayedMountInfo(displayIndex) end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_MountJournal.GetDisplayedMountInfoExtra)
@@ -106,6 +116,7 @@ function C_MountJournal.GetMountIDs() end
 ---@return boolean shouldHideOnChar
 ---@return boolean isCollected
 ---@return number mountID
+---@return boolean isForDragonriding
 function C_MountJournal.GetMountInfoByID(mountID) end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_MountJournal.GetMountInfoExtraByID)
@@ -120,6 +131,11 @@ function C_MountJournal.GetMountInfoByID(mountID) end
 ---@return number spellVisualKitID
 ---@return boolean disablePlayerMountPreview
 function C_MountJournal.GetMountInfoExtraByID(mountID) end
+
+---[Documentation](https://wowpedia.fandom.com/wiki/API_C_MountJournal.GetMountLink)
+---@param spellID number
+---@return string? mountCreatureDisplayInfoLink
+function C_MountJournal.GetMountLink(spellID) end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_MountJournal.GetMountUsabilityByID)
 ---@param mountID number
@@ -225,3 +241,29 @@ function C_MountJournal.SummonByID(mountID) end
 ---@class MountCreatureDisplayInfo
 ---@field creatureDisplayID number
 ---@field isVisible boolean
+
+---@class MountInfo
+---@field name string
+---@field spellID number
+---@field icon number
+---@field isActive boolean
+---@field isUsable boolean
+---@field sourceType number
+---@field isFavorite boolean
+---@field isFactionSpecific boolean
+---@field faction number?
+---@field shouldHideOnChar boolean
+---@field isCollected boolean
+---@field mountID number
+---@field isForDragonriding boolean
+
+---@class MountInfoExtra
+---@field creatureDisplayInfoID number?
+---@field description string
+---@field source string
+---@field isSelfMount boolean
+---@field mountTypeID number
+---@field uiModelSceneID number
+---@field animID number
+---@field spellVisualKitID number
+---@field disablePlayerMountPreview boolean

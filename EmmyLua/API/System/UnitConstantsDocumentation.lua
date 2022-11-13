@@ -1,0 +1,6 @@
+---@meta
+---@class UnitAuraUpdateInfo
+---@field isFullUpdate boolean? Default = false
+---@field removedAuraInstanceIDs number[]?
+---@field addedAuras table[]?
+---@field updatedAuraInstanceIDs number[]?

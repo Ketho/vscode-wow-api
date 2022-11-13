@@ -1,3 +1,4 @@
+---@meta
 ---[FrameXML](https://www.townlong-yak.com/framexml/go/RegisterNewSlashCommand)
 ---@param callback function
 ---@param command string

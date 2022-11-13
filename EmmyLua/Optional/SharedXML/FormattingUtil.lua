@@ -1,3 +1,4 @@
+---@meta
 ---[FrameXML](https://www.townlong-yak.com/framexml/go/SplitTextIntoLines)
 ---@param text string
 ---@param delimiter string
