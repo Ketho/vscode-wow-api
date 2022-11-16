@@ -1253,7 +1253,7 @@ function GetPvpPowerHealing() end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_GetPvpTalentInfoByID)
 ---@param talentID number
----@param specGroupIndex number
+---@param specGroupIndex? number
 ---@param isInspect? boolean
 ---@param inspectUnit? UnitId
 ---@return number talentID
