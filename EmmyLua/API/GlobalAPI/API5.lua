@@ -202,6 +202,7 @@ function UnitDetailedThreatSituation(unit, mobUnit) end
 function UnitDistanceSquared(unit) end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_UnitEffectiveLevel)
+---@param unit UnitId
 ---@return number level
 function UnitEffectiveLevel(unit) end
 
