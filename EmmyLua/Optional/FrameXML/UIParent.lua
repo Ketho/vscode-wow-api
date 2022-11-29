@@ -23,17 +23,17 @@ function UIFrameFade(frame, fadeInfo) end
 ---[FrameXML](https://www.townlong-yak.com/framexml/go/UIFrameFadeIn)
 --- Convenience function to do a simple fade in
 ---@param frame Frame
----@param timeToFade table
----@param startAlpha table
----@param endAlpha table
+---@param timeToFade number
+---@param startAlpha number
+---@param endAlpha number
 function UIFrameFadeIn(frame, timeToFade, startAlpha, endAlpha) end
 
 ---[FrameXML](https://www.townlong-yak.com/framexml/go/UIFrameFadeOut)
 --- Convenience function to do a simple fade out
 ---@param frame Frame
----@param timeToFade table
----@param startAlpha table
----@param endAlpha table
+---@param timeToFade number
+---@param startAlpha number
+---@param endAlpha number
 function UIFrameFadeOut(frame, timeToFade, startAlpha, endAlpha) end
 
 ---[FrameXML](https://www.townlong-yak.com/framexml/go/getglobal)
