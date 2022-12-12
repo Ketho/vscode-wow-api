@@ -48,8 +48,8 @@ function AceConfig:RegisterOptionsTable(appName, options, slashcmd) end
 ---@field icon? string|function
 ---@field iconCoords? table|string|function
 ---@field handler? table
----@field get? function getter function
----@field set? function setter function
+---@field get? string|function getter function
+---@field set? string|function setter function
 ---@field func? function
 ---[Documentation](http://www.wowace.com/addons/ace3/pages/ace-config-3-0-options-tables/)
 local OptionsTable = {}
