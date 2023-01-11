@@ -11,15 +11,15 @@ export const data: GlobalStringInterface = {
 ]]
 
 local locales = {
-	"deDE",
+	-- "deDE",
 	"enUS", -- same as enGB
-	"esES", "esMX",
-	"frFR",
-	"itIT",
-	"koKR",
-	"ptBR", -- same as ptPT
-	"ruRU",
-	"zhCN",	"zhTW",
+	-- "esES", "esMX",
+	-- "frFR",
+	-- "itIT",
+	-- "koKR",
+	-- "ptBR", -- same as ptPT
+	-- "ruRU",
+	-- "zhCN",	"zhTW",
 }
 
 -- its fine not escaping symbols, except single backslashes and backquotes

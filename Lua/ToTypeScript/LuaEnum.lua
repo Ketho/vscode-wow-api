@@ -21,7 +21,7 @@ local function ToTypeScript()
 			table.insert(t, string.format("\t%s: %s,", enum, value))
 		end
 	end
-	table.insert(t, "}\n")
+	table.insert(t, "};\n")
 	return pre..table.concat(t, "\n")
 end
 
