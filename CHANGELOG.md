@@ -6,9 +6,20 @@
 - The Classic (TBC) API is not supported ([#13](https://github.com/Ketho/vscode-wow-api/issues/13))
 - Widget API is not yet updated from 10.0.2 Blizzard_APIDocumentationGenerated
 
+## [0.9.1] - 2023-01-11
+### Added
+- 🛠 Improvements: Automatically resolves "undefined globals" warnings by marking them as global.
+
+### Changed
+- 🌙 EmmyLua: PR [#67](https://github.com/Ketho/vscode-wow-api/pull/67) Fix warning on AceConfigOptionsTable get and set
+- 🌙 EmmyLua: PR [#66](https://github.com/Ketho/vscode-wow-api/pull/66) Added missing Ace3 components, AceComm-3.0 and AceBucket-3.0
+- 🌙 EmmyLua: PR [#65](https://github.com/Ketho/vscode-wow-api/pull/65) Fixed UIFrameFadeIn/Out
+- 🌙 EmmyLua: PR [#63](https://github.com/Ketho/vscode-wow-api/pull/63), [#64](https://github.com/Ketho/vscode-wow-api/pull/64) Update GetPvpTalentInfoByID, UnitEffectiveLevel
+
 ## [0.9.0] - 2022-11-13
 ### Added
 - 🌙 EmmyLua: Updated for Patch 10.0.2 (46619)
+
 Libraries
 - 🌙 EmmyLua: PR [#58](https://github.com/Ketho/vscode-wow-api/pull/58), [#61](https://github.com/Ketho/vscode-wow-api/pull/61) Added LibSharedMedia-3.0
 - 🌙 EmmyLua: PR [#55](https://github.com/Ketho/vscode-wow-api/pull/55), [#62](https://github.com/Ketho/vscode-wow-api/pull/62) Added LibDBIcon-1.0
@@ -303,6 +314,7 @@ Libraries
 ### Added
 - 🚧 Wip: Development work
 
+[0.9.1]: https://github.com/Ketho/vscode-wow-api/releases/tag/0.9.1
 [0.9.0]: https://github.com/Ketho/vscode-wow-api/releases/tag/0.9.0
 [0.8.9]: https://github.com/Ketho/vscode-wow-api/releases/tag/0.8.9
 [0.8.8]: https://github.com/Ketho/vscode-wow-api/releases/tag/0.8.8
