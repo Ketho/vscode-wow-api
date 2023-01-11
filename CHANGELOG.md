@@ -6,10 +6,11 @@
 - The Classic (TBC) API is not supported ([#13](https://github.com/Ketho/vscode-wow-api/issues/13))
 - Widget API is not yet updated from 10.0.2 Blizzard_APIDocumentationGenerated
 
-## [0.9.2] - 2023-01-11
+## [0.9.3] - 2023-01-11
 ### Added
 - 🛠 Improvements: Automatically resolves the warnings for undefined WoW globals. ([#28](https://github.com/Ketho/vscode-wow-api/issues/28), [#68](https://github.com/Ketho/vscode-wow-api/issues/68))
 - 🛠 Improvements: Automatically ignores "param type mismatch" warnings, for example in `:SetPoint("TOPLEFT", SomeFrame)`
+- 📦 Package: Skipped 0.9.1 and 0.9.2 because of packaging problems.
 
 ### Changed
 - 🌙 EmmyLua: PR [#67](https://github.com/Ketho/vscode-wow-api/pull/67) Fix warning on AceConfigOptionsTable get and set
@@ -315,7 +316,7 @@ Libraries
 ### Added
 - 🚧 Wip: Development work
 
-[0.9.2]: https://github.com/Ketho/vscode-wow-api/releases/tag/v0.9.2
+[0.9.3]: https://github.com/Ketho/vscode-wow-api/releases/tag/v0.9.3
 [0.9.0]: https://github.com/Ketho/vscode-wow-api/releases/tag/0.9.0
 [0.8.9]: https://github.com/Ketho/vscode-wow-api/releases/tag/0.8.9
 [0.8.8]: https://github.com/Ketho/vscode-wow-api/releases/tag/0.8.8
