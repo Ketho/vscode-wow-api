@@ -1,6 +1,6 @@
 local Path = require "path"
 
-BRANCH = "mainline_beta"
+BRANCH = "mainline"
 CONSTANTS = {
 	LATEST_MAINLINE = "10.0.2",
 	LATEST_CLASSIC = "2.5.4",

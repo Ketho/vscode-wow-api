@@ -22,19 +22,12 @@ function m:ReplaceHtml(text)
 	return text:gsub("&.-;", symbols)
 end
 
-function m:GetWikitext(isRetail)
+function m:GetWikitext()
 	local xmlstr = xml2lua.loadFile(INPUT)
 	local parser = xml2lua.parser(handler)
 	parser:parse(xmlstr)
 	local text = handler.root.mediawiki.page.revision.text[1]
-	text = self:ReplaceHtml(text)
-	if isRetail then
-		local str_start = text:find("==API Reference==")
-		local str_end = text:find("==Classic==")
-		return text:sub(str_start, str_end-1)
-	else
-		return text
-	end
+	return self:ReplaceHtml(text)
 end
 
 return m

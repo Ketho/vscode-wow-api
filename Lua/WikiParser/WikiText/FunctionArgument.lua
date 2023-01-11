@@ -10,7 +10,7 @@ local file_invalid	= io.open("Lua/Data/output/World_of_Warcraft_API_invalid.txt"
 local api = {}
 
 WikiText:SaveExport()
-local text = WikiText:GetWikitext(true)
+local text = WikiText:GetWikitext()
 
 for line in text:gmatch(".-\n") do
 	if line:match("^: (.-)") then
