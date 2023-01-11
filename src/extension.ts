@@ -26,6 +26,8 @@ const globalstrings = {
 	hover: globalstring_provider.getHover,
 };
 
+const wow_globals = require("./data/globals").data;
+
 function isHoverString(document: vscode.TextDocument, range: vscode.Range) { 
 	if (range.start.character > 0) {
 		const leftPos = new vscode.Position(range.start.line, range.start.character-1);
@@ -107,6 +109,24 @@ export function activate(context: vscode.ExtensionContext) {
 			globalstrings.data = require("./data/globalstring/"+wowapi.get("locale")).data;
 		}
 	});
+
+	// automatically mark wow globals as defined if there is a language server warning
+	vscode.languages.onDidChangeDiagnostics((event: vscode.DiagnosticChangeEvent) => {
+		const config = vscode.workspace.getConfiguration("Lua");
+		const globals: string[] | undefined = config.get("diagnostics.globals");
+		event.uris.forEach(function(uri) {
+			let diags = vscode.languages.getDiagnostics(uri);
+			diags.forEach(function(diag) {
+				if (diag.code === "undefined-global" && globals) {
+					let glob = diag.message.match("Undefined global `(.+)`\.");
+					if (glob && globals.indexOf(glob[1]) === -1 && wow_globals[glob[1]]) {
+						globals?.push(glob[1]);
+						config.update("diagnostics.globals", globals);
+					}
+				}
+			});
+		});
+	});
 }
 
 export function deactivate() {
@@ -116,7 +136,7 @@ export function deactivate() {
 }
 
 export function setExternalLibrary(folder: string, enable: boolean) {
-	console.log("setExternalLibrary", folder, enable);
+	// console.log("setExternalLibrary", folder, enable);
 	const extensionId = "ketho.wow-api";
 	const extensionPath = vscode.extensions.getExtension(extensionId)?.extensionPath;
 	// Use path.join to ensure the proper path seperators (\ for windows, / for anything else) are used.
@@ -154,6 +174,15 @@ function updateConfigs() {
 
 	const wowapi = vscode.workspace.getConfiguration("wowAPI");
 	globalstrings.data = require("./data/globalstring/"+wowapi.get("locale")).data;
+
+	// cannot seem to easily fix warnings like these in emmylua wow
+	// Cannot assign `CheckButton|InterfaceOptionsCheckButtonTemplate` to parameter `string|Region`."
+	const diag_disable: string[] | undefined = sumneko.get("diagnostics.disable");
+	const param_mismatch = "param-type-mismatch";
+	if (diag_disable?.indexOf(param_mismatch)) {
+		diag_disable.push(param_mismatch);
+		sumneko.update("diagnostics.disable", diag_disable);
+	}
 }
 
 function onCustomCompletion() {
@@ -171,5 +200,5 @@ function onCustomCompletion() {
 			globals.push(word);
 			config.update("diagnostics.globals", globals);
 		}
-	});
+});
 }
