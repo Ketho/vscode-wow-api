@@ -73,6 +73,15 @@ for k in pairs(subTypeAlias) do
 	validTypes[k] = true
 end
 
+local function IsValidType(s)
+	if s:find("Enum%.") then
+		return true
+	elseif validTypes[s] then
+		return true
+	end
+	return false
+end
+
 local redirects = {}
 local validatedApi = {}
 local nonValidatedApi = {}
@@ -259,7 +268,7 @@ function m:ParseParam(line, info)
 		end
 		local t = {
 			name = name,
-			apiType = apiType:match("[%w|]+"),
+			apiType = apiType:match("[%w|%.]+"),
 			subType = subType,
 			array = apiType:find("%[%]"),
 			nilable = tempNilable,
@@ -306,6 +315,7 @@ end
 local function ValidationError(info, msg)
 	info.hasError = true
 	if info.debug then
+	-- if true then
 		print(msg)
 	end
 end
@@ -337,7 +347,7 @@ function m:ValidateApi(info)
 		elseif info.signature.arguments[i] ~= param.name then
 			ValidationError(info, string.format("%d:%s - argument does not match: %s, %s", info.idx, info.apiName, info.signature.arguments[i], param.name))
 		end
-		if not validTypes[param.type:match("%w+")] then -- trim []
+		if not IsValidType(param.type:match("[%w%.]+")) then -- trim []
 			ValidationError(info, string.format("%d:%s - argument type is not valid: %s, %s", info.idx, info.apiName, param.name, param.type))
 		end
 	end
@@ -357,7 +367,7 @@ function m:ValidateApi(info)
 		elseif info.signature.returns[i] ~= param.name then
 			ValidationError(info, string.format("%d:%s - return value does not match: %s, %s", info.idx, info.apiName, info.signature.returns[i], param.name))
 		end
-		if not validTypes[param.type:match("%w+")] then
+		if not IsValidType(param.type:match("[%w%.]+")) then
 			ValidationError(info, string.format("%d:%s - return type is not valid: %s, %s", info.idx, info.apiName, param.name, param.type))
 		end
 	end

@@ -1,4 +1,48 @@
 ---@meta
+---[Documentation](https://wowpedia.fandom.com/wiki/API_GuildMasterAbsent)
+function GuildMasterAbsent() end
+
+---[Documentation](https://wowpedia.fandom.com/wiki/API_GuildNewsSetSticky)
+function GuildNewsSetSticky(index, bool) end
+
+---[Documentation](https://wowpedia.fandom.com/wiki/API_GuildNewsSort)
+function GuildNewsSort(byDate) end
+
+---[Documentation](https://wowpedia.fandom.com/wiki/API_GuildPromote)
+---@param playername string
+function GuildPromote(playername) end
+
+---[Documentation](https://wowpedia.fandom.com/wiki/API_GuildRosterSetOfficerNote)
+function GuildRosterSetOfficerNote(index, note) end
+
+---[Documentation](https://wowpedia.fandom.com/wiki/API_GuildRosterSetPublicNote)
+function GuildRosterSetPublicNote(index, note) end
+
+---[Documentation](https://wowpedia.fandom.com/wiki/API_GuildSetLeader)
+---@param name string
+function GuildSetLeader(name) end
+
+---[Documentation](https://wowpedia.fandom.com/wiki/API_GuildSetMOTD)
+function GuildSetMOTD(note) end
+
+---[Documentation](https://wowpedia.fandom.com/wiki/API_GuildUninvite)
+---@param name string
+function GuildUninvite(name) end
+
+---[Documentation](https://wowpedia.fandom.com/wiki/API_HandleAtlasMemberCommand)
+function HandleAtlasMemberCommand() end
+
+---[Documentation](https://wowpedia.fandom.com/wiki/API_HasAPEffectsSpellPower)
+function HasAPEffectsSpellPower() end
+
+---[Documentation](https://wowpedia.fandom.com/wiki/API_HasAction)
+---@param actionSlot number
+---@return boolean hasAction
+function HasAction(actionSlot) end
+
+---[Documentation](https://wowpedia.fandom.com/wiki/API_HasArtifactEquipped)
+function HasArtifactEquipped() end
+
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_HasAttachedGlyph)
 function HasAttachedGlyph(spellID) end
 
@@ -250,7 +294,7 @@ function IsCurrentItem(item) end
 function IsCurrentQuestFailed() end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_IsCurrentSpell)
----@param spellID boolean
+---@param spellID number
 ---@return boolean isCurrent
 function IsCurrentSpell(spellID) end
 
@@ -692,6 +736,7 @@ function IsSwimming() end
 function IsTalentSpell(slot, bookType) end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_IsTargetLoose)
+---@return boolean isLoose
 function IsTargetLoose() end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_IsTestBuild)
@@ -2059,6 +2104,7 @@ function SetTaxiMap(texture) end
 function SetTradeCurrency(type, amount) end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_SetTradeMoney)
+---@param copper number
 function SetTradeMoney(copper) end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_SetTrainerServiceTypeFilter)
@@ -2442,53 +2488,4 @@ function TaxiRequestEarlyLanding() end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_TimeoutResurrect)
 function TimeoutResurrect() end
-
----[Documentation](https://wowpedia.fandom.com/wiki/API_ToggleAnimKitDisplay)
-function ToggleAnimKitDisplay() end
-
----[Documentation](https://wowpedia.fandom.com/wiki/API_ToggleAutoRun)
-function ToggleAutoRun() end
-
----[Documentation](https://wowpedia.fandom.com/wiki/API_ToggleDebugAIDisplay)
-function ToggleDebugAIDisplay() end
-
----[Documentation](https://wowpedia.fandom.com/wiki/API_TogglePVP)
-function TogglePVP() end
-
----[Documentation](https://wowpedia.fandom.com/wiki/API_TogglePetAutocast)
-function TogglePetAutocast(index) end
-
----[Documentation](https://wowpedia.fandom.com/wiki/API_ToggleRun)
-function ToggleRun() end
-
----[Documentation](https://wowpedia.fandom.com/wiki/API_ToggleSelfHighlight)
-function ToggleSelfHighlight() end
-
----[Documentation](https://wowpedia.fandom.com/wiki/API_ToggleSheath)
-function ToggleSheath() end
-
----[Documentation](https://wowpedia.fandom.com/wiki/API_ToggleSpellAutocast)
-function ToggleSpellAutocast() end
-
----[Documentation](https://wowpedia.fandom.com/wiki/API_ToggleWindowed)
-function ToggleWindowed() end
-
----[Documentation](https://wowpedia.fandom.com/wiki/API_TriggerTutorial)
-function TriggerTutorial(tutorial) end
-
----[Documentation](https://wowpedia.fandom.com/wiki/API_TurnInGuildCharter)
-function TurnInGuildCharter() end
-
----[Documentation](https://wowpedia.fandom.com/wiki/API_TurnLeftStart)
----@param startTime number
-function TurnLeftStart(startTime) end
-
----[Documentation](https://wowpedia.fandom.com/wiki/API_TurnLeftStop)
-function TurnLeftStop() end
-
----[Documentation](https://wowpedia.fandom.com/wiki/API_TurnOrActionStart)
-function TurnOrActionStart() end
-
----[Documentation](https://wowpedia.fandom.com/wiki/API_TurnOrActionStop)
-function TurnOrActionStop() end
 

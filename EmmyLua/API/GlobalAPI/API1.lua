@@ -345,6 +345,11 @@ function BuyTrainerService(index) end
 ---@param slot number
 function BuybackItem(slot) end
 
+---[Documentation](https://wowpedia.fandom.com/wiki/API_C_ActionBar.GetProfessionQuality)
+---@param actionID number
+---@return number? quality
+function C_ActionBar.GetProfessionQuality(actionID) end
+
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_AdventureJournal.ActivateEntry)
 function C_AdventureJournal.ActivateEntry(index) end
 
@@ -401,6 +406,9 @@ function C_AdventureMap.GetZoneChoiceInfo(choiceIndex) end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_AdventureMap.StartQuest)
 function C_AdventureMap.StartQuest(questID) end
+
+---[Documentation](https://wowpedia.fandom.com/wiki/API_C_ArtifactUI.IsArtifactItem)
+function C_ArtifactUI.IsArtifactItem(itemLocation) end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_BlackMarket.Close)
 function C_BlackMarket.Close() end
@@ -483,6 +491,10 @@ function C_ClassTrial.GetClassTrialLogoutTimeSeconds() end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_ClassTrial.IsClassTrialCharacter)
 function C_ClassTrial.IsClassTrialCharacter() end
+
+---[Documentation](https://wowpedia.fandom.com/wiki/API_C_CraftingOrders.AreOrderNotesDisabled)
+---@return boolean areNotesDisabled
+function C_CraftingOrders.AreOrderNotesDisabled() end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_Debug.DashboardIsEnabled)
 function C_Debug.DashboardIsEnabled() end
@@ -1371,6 +1383,11 @@ function C_LootHistory.GiveMasterLoot(itemIndex, playerIndex) end
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_LootHistory.SetExpiration)
 function C_LootHistory.SetExpiration(numItemsToSave, secondsToSave) end
 
+---[Documentation](https://wowpedia.fandom.com/wiki/API_C_MythicPlus.GetEndOfRunGearSequenceLevel)
+---@param keystoneLevel number
+---@return number? sequenceLevel
+function C_MythicPlus.GetEndOfRunGearSequenceLevel(keystoneLevel) end
+
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_NamePlate.GetNamePlateEnemyClickThrough)
 function C_NamePlate.GetNamePlateEnemyClickThrough() end
 
@@ -1745,6 +1762,11 @@ function C_PetJournal.GetNumPetsNeedingFanfare() end
 function C_PetJournal.GetOwnedBattlePetString(speciesId) end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_PetJournal.GetPetAbilityList)
+---@param speciesID number
+---@param idTable? table
+---@param levelTable? table
+---@return number[] idTable
+---@return number[] levelTable
 function C_PetJournal.GetPetAbilityList(speciesID, idTable, levelTable) end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_PetJournal.GetPetCooldownByGUID)
@@ -2061,29 +2083,4 @@ function C_ToyBox.GetNumFilteredToys() end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_ToyBox.GetNumLearnedDisplayedToys)
 function C_ToyBox.GetNumLearnedDisplayedToys() end
-
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_ToyBox.GetNumTotalDisplayedToys)
-function C_ToyBox.GetNumTotalDisplayedToys() end
-
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_ToyBox.GetNumToys)
-function C_ToyBox.GetNumToys() end
-
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_ToyBox.GetToyFromIndex)
-function C_ToyBox.GetToyFromIndex(itemIndex) end
-
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_ToyBox.GetToyInfo)
----@param itemID number
----@return number itemID
----@return string toyName
----@return number icon
----@return boolean isFavorite
----@return boolean hasFanfare
----@return number itemQuality
-function C_ToyBox.GetToyInfo(itemID) end
-
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_ToyBox.GetToyLink)
-function C_ToyBox.GetToyLink(itemID) end
-
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_ToyBox.GetUncollectedShown)
-function C_ToyBox.GetUncollectedShown() end
 

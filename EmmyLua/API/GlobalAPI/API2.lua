@@ -1,4 +1,29 @@
 ---@meta
+---[Documentation](https://wowpedia.fandom.com/wiki/API_C_ToyBox.GetNumTotalDisplayedToys)
+function C_ToyBox.GetNumTotalDisplayedToys() end
+
+---[Documentation](https://wowpedia.fandom.com/wiki/API_C_ToyBox.GetNumToys)
+function C_ToyBox.GetNumToys() end
+
+---[Documentation](https://wowpedia.fandom.com/wiki/API_C_ToyBox.GetToyFromIndex)
+function C_ToyBox.GetToyFromIndex(itemIndex) end
+
+---[Documentation](https://wowpedia.fandom.com/wiki/API_C_ToyBox.GetToyInfo)
+---@param itemID number
+---@return number itemID
+---@return string toyName
+---@return number icon
+---@return boolean isFavorite
+---@return boolean hasFanfare
+---@return Enum.ItemQuality itemQuality
+function C_ToyBox.GetToyInfo(itemID) end
+
+---[Documentation](https://wowpedia.fandom.com/wiki/API_C_ToyBox.GetToyLink)
+function C_ToyBox.GetToyLink(itemID) end
+
+---[Documentation](https://wowpedia.fandom.com/wiki/API_C_ToyBox.GetUncollectedShown)
+function C_ToyBox.GetUncollectedShown() end
+
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_ToyBox.GetUnusableShown)
 function C_ToyBox.GetUnusableShown() end
 
@@ -1810,7 +1835,7 @@ function GetBuybackItemLink(index) end
 ---@return boolean account
 ---@return boolean character
 ---@return boolean unknown5
----@return boolean setCvarOnly
+---@return boolean secure
 ---@return boolean readOnly
 function GetCVarInfo(name) end
 
@@ -2130,6 +2155,13 @@ function GetFlyoutID(index) end
 function GetFlyoutInfo(flyoutID) end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_GetFlyoutSlotInfo)
+---@param flyoutID number
+---@param slot number
+---@return number flyoutSpellID
+---@return number overrideSpellID
+---@return boolean isKnown
+---@return string spellName
+---@return number slotSpecID
 function GetFlyoutSlotInfo(flyoutID, slot) end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_GetFollowerTypeIDFromSpell)
@@ -2165,6 +2197,7 @@ function GetFonts() end
 function GetFrameCPUUsage(frame, includeChildren) end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_GetFramerate)
+---@return number framerate
 function GetFramerate() end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_GetFramesRegisteredForEvent)
@@ -2415,45 +2448,4 @@ function GetGuildTabardFiles() end
 ---@return boolean isMobile
 ---@return number isAway
 function GetGuildTradeSkillInfo(index) end
-
----[Documentation](https://wowpedia.fandom.com/wiki/API_GetHaste)
----@return number haste
-function GetHaste() end
-
----[Documentation](https://wowpedia.fandom.com/wiki/API_GetHitModifier)
----@return number hitModifier
-function GetHitModifier() end
-
----[Documentation](https://wowpedia.fandom.com/wiki/API_GetHomePartyInfo)
----@param homePlayers table
----@return table homePlayers
-function GetHomePartyInfo(homePlayers) end
-
----[Documentation](https://wowpedia.fandom.com/wiki/API_GetInboxHeaderInfo)
----@param index number
----@return string packageIcon
----@return string stationeryIcon
----@return string sender
----@return string subject
----@return number money
----@return number CODAmount
----@return number daysLeft
----@return number hasItem
----@return boolean wasRead
----@return boolean wasReturned
----@return boolean textCreated
----@return boolean canReply
----@return boolean isGM
-function GetInboxHeaderInfo(index) end
-
----[Documentation](https://wowpedia.fandom.com/wiki/API_GetInboxInvoiceInfo)
----@param index number
----@return string? invoiceType
----@return string? itemName
----@return string? playerName
----@return number bid
----@return number buyout
----@return number deposit
----@return number consignment
-function GetInboxInvoiceInfo(index) end
 

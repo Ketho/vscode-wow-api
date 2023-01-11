@@ -1,4 +1,45 @@
 ---@meta
+---[Documentation](https://wowpedia.fandom.com/wiki/API_GetHaste)
+---@return number haste
+function GetHaste() end
+
+---[Documentation](https://wowpedia.fandom.com/wiki/API_GetHitModifier)
+---@return number hitModifier
+function GetHitModifier() end
+
+---[Documentation](https://wowpedia.fandom.com/wiki/API_GetHomePartyInfo)
+---@param homePlayers table
+---@return table homePlayers
+function GetHomePartyInfo(homePlayers) end
+
+---[Documentation](https://wowpedia.fandom.com/wiki/API_GetInboxHeaderInfo)
+---@param index number
+---@return string packageIcon
+---@return string stationeryIcon
+---@return string sender
+---@return string subject
+---@return number money
+---@return number CODAmount
+---@return number daysLeft
+---@return number hasItem
+---@return boolean wasRead
+---@return boolean wasReturned
+---@return boolean textCreated
+---@return boolean canReply
+---@return boolean isGM
+function GetInboxHeaderInfo(index) end
+
+---[Documentation](https://wowpedia.fandom.com/wiki/API_GetInboxInvoiceInfo)
+---@param index number
+---@return string? invoiceType
+---@return string? itemName
+---@return string? playerName
+---@return number bid
+---@return number buyout
+---@return number deposit
+---@return number consignment
+function GetInboxInvoiceInfo(index) end
+
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_GetInboxItem)
 ---@param index number
 ---@param itemIndex number
@@ -124,7 +165,10 @@ function GetInventoryItemID(unit, invSlotId) end
 function GetInventoryItemLink(unit, invSlotId) end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_GetInventoryItemQuality)
-function GetInventoryItemQuality(unit, invSlot) end
+---@param unitId UnitId
+---@param invSlotId number
+---@return Enum.ItemQuality quality
+function GetInventoryItemQuality(unitId, invSlotId) end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_GetInventoryItemTexture)
 function GetInventoryItemTexture(unit, invSlot) end
@@ -183,7 +227,7 @@ function GetItemIcon(itemID) end
 ---@param item number|string
 ---@return string itemName
 ---@return string itemLink
----@return number itemQuality
+---@return Enum.ItemQuality itemQuality
 ---@return number itemLevel
 ---@return number itemMinLevel
 ---@return string itemType
@@ -218,7 +262,7 @@ function GetItemInventorySlotInfo(inventorySlot) end
 function GetItemLevelColor() end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_GetItemQualityColor)
----@param quality number
+---@param quality Enum.ItemQuality
 ---@return number r
 ---@return number g
 ---@return number b
@@ -774,6 +818,7 @@ function GetNumBattlegroundTypes() end
 function GetNumBindings() end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_GetNumBuybackItems)
+---@return number numItems
 function GetNumBuybackItems() end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_GetNumChannelMembers)
@@ -1307,10 +1352,11 @@ function GetQuestID() end
 ---@param type string
 ---@param index number
 ---@return string name
----@return string texture
+---@return number texture
 ---@return number count
----@return number quality
+---@return Enum.ItemQuality quality
 ---@return boolean isUsable
+---@return number itemID
 function GetQuestItemInfo(type, index) end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_GetQuestItemInfoLootType)
@@ -2242,6 +2288,13 @@ function GetTotemTimeLeft(slot) end
 function GetTrackedAchievements() end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_GetTradePlayerItemInfo)
+---@param id number
+---@return string name
+---@return number texture
+---@return number numItems
+---@return Enum.ItemQuality quality
+---@return string enchantment
+---@return boolean canLoseTransmog
 function GetTradePlayerItemInfo(id) end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_GetTradePlayerItemLink)
@@ -2514,48 +2567,4 @@ function GuildInvite(playername) end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_GuildLeave)
 function GuildLeave() end
-
----[Documentation](https://wowpedia.fandom.com/wiki/API_GuildMasterAbsent)
-function GuildMasterAbsent() end
-
----[Documentation](https://wowpedia.fandom.com/wiki/API_GuildNewsSetSticky)
-function GuildNewsSetSticky(index, bool) end
-
----[Documentation](https://wowpedia.fandom.com/wiki/API_GuildNewsSort)
-function GuildNewsSort(byDate) end
-
----[Documentation](https://wowpedia.fandom.com/wiki/API_GuildPromote)
----@param playername string
-function GuildPromote(playername) end
-
----[Documentation](https://wowpedia.fandom.com/wiki/API_GuildRosterSetOfficerNote)
-function GuildRosterSetOfficerNote(index, note) end
-
----[Documentation](https://wowpedia.fandom.com/wiki/API_GuildRosterSetPublicNote)
-function GuildRosterSetPublicNote(index, note) end
-
----[Documentation](https://wowpedia.fandom.com/wiki/API_GuildSetLeader)
----@param name string
-function GuildSetLeader(name) end
-
----[Documentation](https://wowpedia.fandom.com/wiki/API_GuildSetMOTD)
-function GuildSetMOTD(note) end
-
----[Documentation](https://wowpedia.fandom.com/wiki/API_GuildUninvite)
----@param name string
-function GuildUninvite(name) end
-
----[Documentation](https://wowpedia.fandom.com/wiki/API_HandleAtlasMemberCommand)
-function HandleAtlasMemberCommand() end
-
----[Documentation](https://wowpedia.fandom.com/wiki/API_HasAPEffectsSpellPower)
-function HasAPEffectsSpellPower() end
-
----[Documentation](https://wowpedia.fandom.com/wiki/API_HasAction)
----@param actionSlot number
----@return boolean hasAction
-function HasAction(actionSlot) end
-
----[Documentation](https://wowpedia.fandom.com/wiki/API_HasArtifactEquipped)
-function HasArtifactEquipped() end
 

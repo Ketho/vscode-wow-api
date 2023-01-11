@@ -1,4 +1,53 @@
 ---@meta
+---[Documentation](https://wowpedia.fandom.com/wiki/API_ToggleAnimKitDisplay)
+function ToggleAnimKitDisplay() end
+
+---[Documentation](https://wowpedia.fandom.com/wiki/API_ToggleAutoRun)
+function ToggleAutoRun() end
+
+---[Documentation](https://wowpedia.fandom.com/wiki/API_ToggleDebugAIDisplay)
+function ToggleDebugAIDisplay() end
+
+---[Documentation](https://wowpedia.fandom.com/wiki/API_TogglePVP)
+function TogglePVP() end
+
+---[Documentation](https://wowpedia.fandom.com/wiki/API_TogglePetAutocast)
+function TogglePetAutocast(index) end
+
+---[Documentation](https://wowpedia.fandom.com/wiki/API_ToggleRun)
+function ToggleRun() end
+
+---[Documentation](https://wowpedia.fandom.com/wiki/API_ToggleSelfHighlight)
+function ToggleSelfHighlight() end
+
+---[Documentation](https://wowpedia.fandom.com/wiki/API_ToggleSheath)
+function ToggleSheath() end
+
+---[Documentation](https://wowpedia.fandom.com/wiki/API_ToggleSpellAutocast)
+function ToggleSpellAutocast() end
+
+---[Documentation](https://wowpedia.fandom.com/wiki/API_ToggleWindowed)
+function ToggleWindowed() end
+
+---[Documentation](https://wowpedia.fandom.com/wiki/API_TriggerTutorial)
+function TriggerTutorial(tutorial) end
+
+---[Documentation](https://wowpedia.fandom.com/wiki/API_TurnInGuildCharter)
+function TurnInGuildCharter() end
+
+---[Documentation](https://wowpedia.fandom.com/wiki/API_TurnLeftStart)
+---@param startTime number
+function TurnLeftStart(startTime) end
+
+---[Documentation](https://wowpedia.fandom.com/wiki/API_TurnLeftStop)
+function TurnLeftStop() end
+
+---[Documentation](https://wowpedia.fandom.com/wiki/API_TurnOrActionStart)
+function TurnOrActionStart() end
+
+---[Documentation](https://wowpedia.fandom.com/wiki/API_TurnOrActionStop)
+function TurnOrActionStop() end
+
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_TurnRightStart)
 ---@param startTime number
 function TurnRightStart(startTime) end
