@@ -22,6 +22,9 @@ local tex = f:CreateTexture()
 local fs = f:CreateFontString()
 f:RegisterEvent("ACHIEVEMENT_EARNED")
 
+local cb = CreateFrame("CheckButton", nil, UIParent, "InterfaceOptionsCheckButtonTemplate")
+cb:SetPoint("TOPLEFT", UIParent, "TOPLEFT", 20, -20)
+
 -- frames
 local isVisible = UIParent:IsVisible()
 

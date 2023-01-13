@@ -137,7 +137,7 @@ function Region:IsShown() end
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_Region_IsVisible)
 function Region:IsVisible() end
 
----@param region Region|string|nil
+---@param region any
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_Region_SetAllPoints)
 function Region:SetAllPoints(region) end
 
@@ -157,16 +157,16 @@ function Region:SetIgnoreParentAlpha(ignoreAlpha) end
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_Region_SetIgnoreParentScale)
 function Region:SetIgnoreParentScale(ignoreScale) end
 
----@param region Region|string|nil
+---@param region any
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_Region_SetParent)
 function Region:SetParent(region) end
 
 ---@param point AnchorPoint
----@param relativeTo Region|string
+---@param relativeTo any
 ---@param relativePoint string
 ---@param ofsx? number
 ---@param ofsy? number
----@overload fun(self, point: AnchorPoint, relativeTo: Region|string, ofsx?: number, ofsy?: number)
+---@overload fun(self, point: AnchorPoint, relativeTo: any, ofsx?: number, ofsy?: number)
 ---@overload fun(self, point: AnchorPoint, ofsx?: number, ofsy?: number)
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_Region_SetPoint)
 function Region:SetPoint(point, relativeTo, relativePoint, ofsx, ofsy) end

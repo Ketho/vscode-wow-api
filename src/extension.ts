@@ -110,7 +110,6 @@ export function activate(context: vscode.ExtensionContext) {
 
 	const config = vscode.workspace.getConfiguration("Lua");
 	const diag_globals: string[] = config.get("diagnostics.globals")!;
-	const diag_disable: string[] = config.get("diagnostics.disable")!;
 
 	vscode.languages.onDidChangeDiagnostics((event: vscode.DiagnosticChangeEvent) => {
 		event.uris.forEach(function(uri) {
@@ -122,14 +121,6 @@ export function activate(context: vscode.ExtensionContext) {
 					if (glob && wow_globals[glob[1]] && !diag_globals.includes(glob[1])) {
 						diag_globals.push(glob[1]);
 						config.update("diagnostics.globals", diag_globals);
-					}
-				}
-				// cannot seem to easily fix warnings like these in emmylua wow
-				// "Cannot assign `CheckButton|InterfaceOptionsCheckButtonTemplate` to parameter `string|Region`"
-				else if (diag.code === "param-type-mismatch") {
-					if (diag.message.includes("Template") && !diag_disable.includes("param-type-mismatch")) {
-						diag_disable.push("param-type-mismatch");
-						config.update("diagnostics.disable", diag_disable);
 					}
 				}
 			});
