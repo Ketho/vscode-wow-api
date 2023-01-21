@@ -1,6 +1,5 @@
 import * as path from "path";
 import * as vscode from "vscode";
-import type { GlobalStringInterface } from "./data/globalstring/GlobalStringInterface";
 
 const events = {
 	data: require("./data/event").data,
@@ -20,6 +19,7 @@ const enums = {
 };
 
 import globalstring_provider = require("./providers/globalstring");
+import type { GlobalStringInterface } from "./data/globalstring/GlobalStringInterface";
 const globalstrings = {
 	data: {} as GlobalStringInterface,
 	completion: globalstring_provider.completion,
@@ -112,6 +112,7 @@ export function activate(context: vscode.ExtensionContext) {
 	const diag_globals: string[] = config.get("diagnostics.globals")!;
 
 	vscode.languages.onDidChangeDiagnostics((event: vscode.DiagnosticChangeEvent) => {
+		let hasUpdate = false;
 		event.uris.forEach(function(uri) {
 			let diags = vscode.languages.getDiagnostics(uri);
 			diags.forEach(function(diag) {
@@ -119,12 +120,15 @@ export function activate(context: vscode.ExtensionContext) {
 				if (diag.code === "undefined-global") {
 					let glob = diag.message.match("`(.+)`");
 					if (glob && wow_globals[glob[1]] && !diag_globals.includes(glob[1])) {
+						hasUpdate = true;
 						diag_globals.push(glob[1]);
-						config.update("diagnostics.globals", diag_globals);
 					}
 				}
 			});
 		});
+		if (hasUpdate) {
+			config.update("diagnostics.globals", diag_globals);
+		};
 	});
 }
 

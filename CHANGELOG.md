@@ -6,6 +6,10 @@
 - The Classic (TBC) API is not supported ([#13](https://github.com/Ketho/vscode-wow-api/issues/13))
 - Widget API is not yet updated from 10.0.2 Blizzard_APIDocumentationGenerated
 
+## [0.9.7] - 2023-01-21
+### Changed
+- 🛠 Improvements: Optimized performance for automatically marking WoW globals
+
 ## [0.9.6] - 2023-01-13
 ### Changed
 - 🐞 Bug Fixes: Rather fixing the "param-type-mismatch" warning for `:SetPoint` in emmylua by being less strict
@@ -326,9 +330,10 @@ Libraries
 ### Added
 - 🚧 Wip: Development work
 
+[v0.9.7]: https://github.com/Ketho/vscode-wow-api/releases/tag/v0.9.7
 [v0.9.6]: https://github.com/Ketho/vscode-wow-api/releases/tag/v0.9.6
 [v0.9.4]: https://github.com/Ketho/vscode-wow-api/releases/tag/v0.9.4
-[v0.9.3]: https://github.com/Ketho/vscode-wow-api/releases/tag/v0.9.3
+[0.9.3]: https://github.com/Ketho/vscode-wow-api/releases/tag/0.9.3
 [0.9.0]: https://github.com/Ketho/vscode-wow-api/releases/tag/0.9.0
 [0.8.9]: https://github.com/Ketho/vscode-wow-api/releases/tag/0.8.9
 [0.8.8]: https://github.com/Ketho/vscode-wow-api/releases/tag/0.8.8
