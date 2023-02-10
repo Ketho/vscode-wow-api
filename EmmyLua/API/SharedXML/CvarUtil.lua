@@ -13,7 +13,7 @@ end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_CVar.SetCVar)
 ---@param name CVar
----@param value? boolean|string
+---@param value? boolean|string|number
 ---@return boolean success
 function SetCVar(name, value)
 	if type(value) == "boolean" then
