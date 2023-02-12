@@ -26,7 +26,7 @@ local function createButton(name, object, db)
 end
 
 ---@param name string
----@param object string
+---@param object LibDBIcon.dataObject
 ---@param db? LibDBIcon.button.DB
 function lib:Register(name, object, db)
 end
