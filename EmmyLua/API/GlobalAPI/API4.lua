@@ -1,23 +1,4 @@
 ---@meta
----[Documentation](https://wowpedia.fandom.com/wiki/API_GuildMasterAbsent)
-function GuildMasterAbsent() end
-
----[Documentation](https://wowpedia.fandom.com/wiki/API_GuildNewsSetSticky)
-function GuildNewsSetSticky(index, bool) end
-
----[Documentation](https://wowpedia.fandom.com/wiki/API_GuildNewsSort)
-function GuildNewsSort(byDate) end
-
----[Documentation](https://wowpedia.fandom.com/wiki/API_GuildPromote)
----@param playername string
-function GuildPromote(playername) end
-
----[Documentation](https://wowpedia.fandom.com/wiki/API_GuildRosterSetOfficerNote)
-function GuildRosterSetOfficerNote(index, note) end
-
----[Documentation](https://wowpedia.fandom.com/wiki/API_GuildRosterSetPublicNote)
-function GuildRosterSetPublicNote(index, note) end
-
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_GuildSetLeader)
 ---@param name string
 function GuildSetLeader(name) end
@@ -360,6 +341,7 @@ function IsFalling() end
 function IsFishingLoot() end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_IsFlyableArea)
+---@return boolean flyable
 function IsFlyableArea() end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_IsFlying)
@@ -449,6 +431,7 @@ function IsInRaid(groupType) end
 function IsInScenarioGroup() end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_IsIndoors)
+---@return boolean indoors
 function IsIndoors() end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_IsInsane)
@@ -574,6 +557,7 @@ function IsOnTournamentRealm() end
 function IsOutOfBounds() end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_IsOutdoors)
+---@return boolean outdoors
 function IsOutdoors() end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_IsOutlineModeSupported)
@@ -777,6 +761,12 @@ function IsUsableSpell(spell) end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_IsUsingFixedTimeStep)
 function IsUsingFixedTimeStep() end
+
+---[Documentation](https://wowpedia.fandom.com/wiki/API_IsUsingGamepad)
+function IsUsingGamepad() end
+
+---[Documentation](https://wowpedia.fandom.com/wiki/API_IsUsingMouse)
+function IsUsingMouse() end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_IsUsingVehicleControls)
 function IsUsingVehicleControls() end
@@ -2136,8 +2126,8 @@ function ShouldShowIslandsWeeklyPOI() end
 function ShouldShowSpecialSplashScreen() end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_ShowAccountAchievements)
----@param show boolean
-function ShowAccountAchievements(show) end
+---@param hide boolean
+function ShowAccountAchievements(hide) end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_ShowBossFrameWhenUninteractable)
 function ShowBossFrameWhenUninteractable(unit) end
@@ -2488,4 +2478,19 @@ function TaxiRequestEarlyLanding() end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_TimeoutResurrect)
 function TimeoutResurrect() end
+
+---[Documentation](https://wowpedia.fandom.com/wiki/API_ToggleAnimKitDisplay)
+function ToggleAnimKitDisplay() end
+
+---[Documentation](https://wowpedia.fandom.com/wiki/API_ToggleAutoRun)
+function ToggleAutoRun() end
+
+---[Documentation](https://wowpedia.fandom.com/wiki/API_ToggleDebugAIDisplay)
+function ToggleDebugAIDisplay() end
+
+---[Documentation](https://wowpedia.fandom.com/wiki/API_TogglePVP)
+function TogglePVP() end
+
+---[Documentation](https://wowpedia.fandom.com/wiki/API_TogglePetAutocast)
+function TogglePetAutocast(index) end
 

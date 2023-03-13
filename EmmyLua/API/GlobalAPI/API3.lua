@@ -1,34 +1,4 @@
 ---@meta
----[Documentation](https://wowpedia.fandom.com/wiki/API_GetHaste)
----@return number haste
-function GetHaste() end
-
----[Documentation](https://wowpedia.fandom.com/wiki/API_GetHitModifier)
----@return number hitModifier
-function GetHitModifier() end
-
----[Documentation](https://wowpedia.fandom.com/wiki/API_GetHomePartyInfo)
----@param homePlayers table
----@return table homePlayers
-function GetHomePartyInfo(homePlayers) end
-
----[Documentation](https://wowpedia.fandom.com/wiki/API_GetInboxHeaderInfo)
----@param index number
----@return string packageIcon
----@return string stationeryIcon
----@return string sender
----@return string subject
----@return number money
----@return number CODAmount
----@return number daysLeft
----@return number hasItem
----@return boolean wasRead
----@return boolean wasReturned
----@return boolean textCreated
----@return boolean canReply
----@return boolean isGM
-function GetInboxHeaderInfo(index) end
-
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_GetInboxInvoiceInfo)
 ---@param index number
 ---@return string? invoiceType
@@ -240,7 +210,7 @@ function GetItemIcon(itemID) end
 ---@return number subclassID
 ---@return number bindType
 ---@return number expacID
----@return number setID
+---@return number? setID
 ---@return boolean isCraftingReagent
 function GetItemInfo(item) end
 
@@ -589,7 +559,10 @@ function GetMacroSpell() end
 function GetManaRegen() end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_GetMasterLootCandidate)
-function GetMasterLootCandidate(index) end
+---@param slot number
+---@param index number
+---@return string candidate
+function GetMasterLootCandidate(slot, index) end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_GetMastery)
 ---@return number mastery
@@ -1728,9 +1701,9 @@ function GetSavedInstanceEncounterInfo(instanceIndex, encounterIndex) end
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_GetSavedInstanceInfo)
 ---@param index number
 ---@return string name
----@return number id
+---@return number lockoutId
 ---@return number reset
----@return number difficulty
+---@return number difficultyId
 ---@return boolean locked
 ---@return boolean extended
 ---@return number instanceIDMostSig
@@ -1740,6 +1713,7 @@ function GetSavedInstanceEncounterInfo(instanceIndex, encounterIndex) end
 ---@return number numEncounters
 ---@return number encounterProgress
 ---@return boolean extendDisabled
+---@return number instanceId
 function GetSavedInstanceInfo(index) end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_GetSavedWorldBossInfo)
@@ -2567,4 +2541,23 @@ function GuildInvite(playername) end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_GuildLeave)
 function GuildLeave() end
+
+---[Documentation](https://wowpedia.fandom.com/wiki/API_GuildMasterAbsent)
+function GuildMasterAbsent() end
+
+---[Documentation](https://wowpedia.fandom.com/wiki/API_GuildNewsSetSticky)
+function GuildNewsSetSticky(index, bool) end
+
+---[Documentation](https://wowpedia.fandom.com/wiki/API_GuildNewsSort)
+function GuildNewsSort(byDate) end
+
+---[Documentation](https://wowpedia.fandom.com/wiki/API_GuildPromote)
+---@param playername string
+function GuildPromote(playername) end
+
+---[Documentation](https://wowpedia.fandom.com/wiki/API_GuildRosterSetOfficerNote)
+function GuildRosterSetOfficerNote(index, note) end
+
+---[Documentation](https://wowpedia.fandom.com/wiki/API_GuildRosterSetPublicNote)
+function GuildRosterSetPublicNote(index, note) end
 

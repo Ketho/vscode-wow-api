@@ -1,19 +1,4 @@
 ---@meta
----[Documentation](https://wowpedia.fandom.com/wiki/API_ToggleAnimKitDisplay)
-function ToggleAnimKitDisplay() end
-
----[Documentation](https://wowpedia.fandom.com/wiki/API_ToggleAutoRun)
-function ToggleAutoRun() end
-
----[Documentation](https://wowpedia.fandom.com/wiki/API_ToggleDebugAIDisplay)
-function ToggleDebugAIDisplay() end
-
----[Documentation](https://wowpedia.fandom.com/wiki/API_TogglePVP)
-function TogglePVP() end
-
----[Documentation](https://wowpedia.fandom.com/wiki/API_TogglePetAutocast)
-function TogglePetAutocast(index) end
-
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_ToggleRun)
 function ToggleRun() end
 
@@ -672,9 +657,6 @@ function UnitThreatPercentageOfLead(unit, mobUnit) end
 ---@param mobUnit? UnitId
 ---@return number? status
 function UnitThreatSituation(unit, mobUnit) end
-
----[Documentation](https://wowpedia.fandom.com/wiki/API_UnitTrialBankedLevels)
-function UnitTrialBankedLevels(unit) end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_UnitTrialXP)
 function UnitTrialXP(unit) end

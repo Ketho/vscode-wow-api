@@ -371,6 +371,7 @@ export const data: EventInterface = {
 			{Name: "oldPowerLevel", Type: "number"},
 			{Name: "newPowerLevel", Type: "number"},
 			{Name: "unlockedEmpoweredItemsInfo", Type: "UnlockedAzeriteEmpoweredItems[]"},
+			{Name: "azeriteItemID", Type: "number"},
 		],
 	},
 	BAG_CLOSED: {
@@ -2126,6 +2127,7 @@ export const data: EventInterface = {
 		],
 	},
 	CHAT_SERVER_RECONNECTED: {},
+	CHEST_REWARDS_UPDATED_FROM_SERVER: {},
 	CINEMATIC_START: {
 		Payload: [
 			{Name: "canBeCancelled", Type: "boolean"},
@@ -2588,6 +2590,7 @@ export const data: EventInterface = {
 	},
 	CRAFTINGORDERS_SHOW_CRAFTER: {},
 	CRAFTINGORDERS_SHOW_CUSTOMER: {},
+	CRAFTINGORDERS_UNEXPECTED_ERROR: {},
 	CRAFTINGORDERS_UPDATE_CUSTOMER_NAME: {
 		Payload: [
 			{Name: "customerName", Type: "string"},
@@ -2600,6 +2603,7 @@ export const data: EventInterface = {
 			{Name: "numOrders", Type: "number"},
 		],
 	},
+	CRAFTINGORDERS_UPDATE_PERSONAL_ORDER_COUNTS: {},
 	CRAFTING_DETAILS_UPDATE: {},
 	CRAFTING_HOUSE_DISABLED: {},
 	CRITERIA_COMPLETE: {
@@ -2673,7 +2677,7 @@ export const data: EventInterface = {
 	EDIT_MODE_LAYOUTS_UPDATED: {
 		Payload: [
 			{Name: "layoutInfo", Type: "EditModeLayouts"},
-			{Name: "fromServer", Type: "boolean"},
+			{Name: "reconcileLayouts", Type: "boolean"},
 		],
 	},
 	EJ_DIFFICULTY_UPDATE: {
@@ -3900,6 +3904,56 @@ export const data: EventInterface = {
 			{Name: "essenceID", Type: "number", Nilable: true},
 		],
 	},
+	PERKS_ACTIVITIES_TRACKED_UPDATED: {
+		Payload: [
+			{Name: "trackedPerksActivities", Type: "PerksActivitiesTracked"},
+		],
+	},
+	PERKS_ACTIVITIES_UPDATED: {
+		Payload: [
+			{Name: "info", Type: "PerksActivitiesInfo"},
+		],
+	},
+	PERKS_ACTIVITY_COMPLETED: {
+		Payload: [
+			{Name: "perksActivityID", Type: "number"},
+		],
+	},
+	PERKS_PROGRAM_CLOSE: {},
+	PERKS_PROGRAM_CURRENCY_AWARDED: {
+		Payload: [
+			{Name: "value", Type: "number"},
+		],
+	},
+	PERKS_PROGRAM_CURRENCY_REFRESH: {
+		Payload: [
+			{Name: "oldValue", Type: "number"},
+			{Name: "newValue", Type: "number"},
+		],
+	},
+	PERKS_PROGRAM_DATA_REFRESH: {},
+	PERKS_PROGRAM_DATA_SPECIFIC_ITEM_REFRESH: {
+		Payload: [
+			{Name: "vendorItemID", Type: "number"},
+		],
+	},
+	PERKS_PROGRAM_DISABLED: {},
+	PERKS_PROGRAM_OPEN: {},
+	PERKS_PROGRAM_PURCHASE_SUCCESS: {
+		Payload: [
+			{Name: "vendorItemID", Type: "number"},
+		],
+	},
+	PERKS_PROGRAM_REFUND_SUCCESS: {
+		Payload: [
+			{Name: "vendorItemID", Type: "number"},
+		],
+	},
+	PERKS_PROGRAM_SET_FROZEN_ITEM: {
+		Payload: [
+			{Name: "vendorItemID", Type: "number"},
+		],
+	},
 	PETITION_CLOSED: {},
 	PETITION_SHOW: {},
 	PET_ATTACK_START: {},
@@ -4092,6 +4146,11 @@ export const data: EventInterface = {
 	PLAYER_ALIVE: {},
 	PLAYER_AVG_ITEM_LEVEL_UPDATE: {},
 	PLAYER_CAMPING: {},
+	PLAYER_CAN_GLIDE_CHANGED: {
+		Payload: [
+			{Name: "canGlide", Type: "boolean"},
+		],
+	},
 	PLAYER_CHOICE_CLOSE: {},
 	PLAYER_CHOICE_UPDATE: {},
 	PLAYER_CONTROL_GAINED: {},
@@ -4284,13 +4343,13 @@ export const data: EventInterface = {
 	PVP_REWARDS_UPDATE: {},
 	PVP_ROLE_POPUP_HIDE: {
 		Payload: [
-			{Name: "roleQueueInfo", Type: "PvpRoleQueueInfo[]"},
+			{Name: "readyCheckInfo", Type: "PvpReadyCheckInfo"},
 		],
 	},
 	PVP_ROLE_POPUP_JOINED_MATCH: {},
 	PVP_ROLE_POPUP_SHOW: {
 		Payload: [
-			{Name: "roleQueueInfo", Type: "PvpRoleQueueInfo[]"},
+			{Name: "readyCheckInfo", Type: "PvpReadyCheckInfo"},
 		],
 	},
 	PVP_ROLE_UPDATE: {},
@@ -6059,11 +6118,6 @@ export const data: EventInterface = {
 	WAYPOINT_UPDATE: {},
 	WEAPON_ENCHANT_CHANGED: {},
 	WEAPON_SLOT_CHANGED: {},
-	WEAR_EQUIPMENT_SET: {
-		Payload: [
-			{Name: "setID", Type: "number"},
-		],
-	},
 	WEEKLY_REWARDS_ITEM_CHANGED: {},
 	WEEKLY_REWARDS_UPDATE: {},
 	WHO_LIST_UPDATE: {},

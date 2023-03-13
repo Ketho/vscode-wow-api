@@ -189,6 +189,18 @@ Enum = {
 		BagSlotPriorityFlagsAll = 62,
 		BagSlotValidFlagsAll = 63,
 	},
+	---@enum Enum.BagsDirection
+	BagsDirection = {
+		Left = 0,
+		Up = 0,
+		Down = 1,
+		Right = 1,
+	},
+	---@enum Enum.BagsOrientation
+	BagsOrientation = {
+		Horizontal = 0,
+		Vertical = 1,
+	},
 	---@enum Enum.BattlePetAbilityFlag
 	BattlePetAbilityFlag = {
 		DisplayAsHostileDebuff = 1,
@@ -396,6 +408,7 @@ Enum = {
 		FanfareNeeded = 128,
 		DisplayOverridden = 256,
 		AcquiredViaLicense = 512,
+		TradingPost = 1024,
 	},
 	---@enum Enum.BattlepetDeletedReason
 	BattlepetDeletedReason = {
@@ -1206,6 +1219,7 @@ Enum = {
 		CurrencyBUseTotalEarnedForEarned = 1,
 		CurrencyBShowQuestXPGainInTooltip = 2,
 		CurrencyBNoNotificationMailOnOfflineProgress = 4,
+		CurrencyBBattlenetVirtualCurrency = 8,
 	},
 	---@enum Enum.CurrencyGainFlags
 	CurrencyGainFlags = {
@@ -1441,7 +1455,9 @@ Enum = {
 		ShowArenaFrames = 17,
 		ShowLootFrame = 18,
 		ShowHudTooltip = 19,
-		EnableSnap = 20,
+		ShowReputationBar = 20,
+		ShowDurabilityFrame = 21,
+		EnableSnap = 22,
 	},
 	---@enum Enum.EditModeActionBarSetting
 	EditModeActionBarSetting = {
@@ -1479,12 +1495,18 @@ Enum = {
 		IconLimitDebuffFrame = 4,
 		IconSize = 5,
 		IconPadding = 6,
-		ShowFull = 7,
+		DeprecatedShowFull = 7,
 	},
 	---@enum Enum.EditModeAuraFrameSystemIndices
 	EditModeAuraFrameSystemIndices = {
 		BuffFrame = 1,
 		DebuffFrame = 2,
+	},
+	---@enum Enum.EditModeBagsSetting
+	EditModeBagsSetting = {
+		Orientation = 0,
+		Direction = 1,
+		Size = 2,
 	},
 	---@enum Enum.EditModeCastBarSetting
 	EditModeCastBarSetting = {
@@ -1498,11 +1520,21 @@ Enum = {
 		HeightHundreds = 2,
 		HeightTensAndOnes = 3,
 	},
+	---@enum Enum.EditModeDurabilityFrameSetting
+	EditModeDurabilityFrameSetting = {
+		Size = 0,
+	},
 	---@enum Enum.EditModeLayoutType
 	EditModeLayoutType = {
 		Preset = 0,
 		Account = 1,
 		Character = 2,
+	},
+	---@enum Enum.EditModeMicroMenuSetting
+	EditModeMicroMenuSetting = {
+		Orientation = 0,
+		Order = 1,
+		Size = 2,
 	},
 	---@enum Enum.EditModeMinimapSetting
 	EditModeMinimapSetting = {
@@ -1524,6 +1556,17 @@ Enum = {
 		Checkbox = 1,
 		Slider = 2,
 	},
+	---@enum Enum.EditModeStatusTrackingBarSetting
+	EditModeStatusTrackingBarSetting = {
+		Height = 0,
+		Width = 1,
+		TextSize = 2,
+	},
+	---@enum Enum.EditModeStatusTrackingBarSystemIndices
+	EditModeStatusTrackingBarSystemIndices = {
+		ExperienceBar = 1,
+		ReputationBar = 2,
+	},
 	---@enum Enum.EditModeSystem
 	EditModeSystem = {
 		ActionBar = 0,
@@ -1539,6 +1582,10 @@ Enum = {
 		LootFrame = 10,
 		HudTooltip = 11,
 		ObjectiveTracker = 12,
+		MicroMenu = 13,
+		Bags = 14,
+		StatusTrackingBar = 15,
+		DurabilityFrame = 16,
 	},
 	---@enum Enum.EditModeUnitFrameSetting
 	EditModeUnitFrameSetting = {
@@ -1978,6 +2025,7 @@ Enum = {
 		DontDisplayBanner = 8,
 		NotAvailableClientSide = 16,
 		DurationUseMinutes = 32,
+		BeginEventOnlyOnStageChange = 64,
 	},
 	---@enum Enum.IconAndTextWidgetState
 	IconAndTextWidgetState = {
@@ -2591,6 +2639,16 @@ Enum = {
 		TopRight = 4,
 		Hidden = 5,
 	},
+	---@enum Enum.MicroMenuOrder
+	MicroMenuOrder = {
+		Default = 0,
+		Reverse = 1,
+	},
+	---@enum Enum.MicroMenuOrientation
+	MicroMenuOrientation = {
+		Horizontal = 0,
+		Vertical = 1,
+	},
 	---@enum Enum.MinimapTrackingFilter
 	MinimapTrackingFilter = {
 		Unfiltered = 0,
@@ -2698,6 +2756,15 @@ Enum = {
 		Guild = 2,
 		Club = 3,
 		NumPartyRequestJoinRelations = 4,
+	},
+	---@enum Enum.PerksVendorCategoryType
+	PerksVendorCategoryType = {
+		Transmog = 1,
+		Mount = 2,
+		Pet = 3,
+		Toy = 5,
+		Illusion = 7,
+		Transmogset = 8,
 	},
 	---@enum Enum.PermanentChatChannelType
 	PermanentChatChannelType = {
@@ -3355,6 +3422,7 @@ Enum = {
 		Islands = 13,
 		Threat = 14,
 		CovenantCalling = 15,
+		DragonRiderRacing = 16,
 	},
 	---@enum Enum.QuestWatchType
 	QuestWatchType = {
@@ -3464,6 +3532,7 @@ Enum = {
 		Mail = 12,
 		PvP = 13,
 		PvPScoreboard = 14,
+		PvPGroupMember = 15,
 	},
 	---@enum Enum.RuneforgePowerFilter
 	RuneforgePowerFilter = {
@@ -3711,6 +3780,15 @@ Enum = {
 		QuestPlayer = 18,
 		NestedBlock = 19,
 		ItemBinding = 20,
+		RestrictedRaceClass = 21,
+		RestrictedFaction = 22,
+		RestrictedSkill = 23,
+		RestrictedPvPMedal = 24,
+		RestrictedReputation = 25,
+		RestrictedSpellKnown = 26,
+		RestrictedLevel = 27,
+		EquipSlot = 28,
+		ItemName = 29,
 	},
 	---@enum Enum.TooltipDataType
 	TooltipDataType = {
@@ -3769,7 +3847,8 @@ Enum = {
 		Offensive = 0,
 		Defensive = 1,
 		Debuff = 2,
-		Count = 3,
+		RacialAbility = 3,
+		Count = 4,
 	},
 	---@enum Enum.TradeskillOrderDuration
 	TradeskillOrderDuration = {
@@ -3796,6 +3875,7 @@ Enum = {
 		Salvage = 2,
 		Enchant = 3,
 		Recraft = 4,
+		Gathering = 5,
 	},
 	---@enum Enum.TradeskillRelativeDifficulty
 	TradeskillRelativeDifficulty = {
@@ -4064,6 +4144,7 @@ Enum = {
 		Mount = 18,
 		Toy = 19,
 		ConduitCollectionItem = 20,
+		PerksProgramVendorItem = 21,
 	},
 	---@enum Enum.UIFrameType
 	UIFrameType = {
@@ -4122,6 +4203,17 @@ Enum = {
 		Dungeon = 4,
 		Micro = 5,
 		Orphan = 6,
+	},
+	---@enum Enum.UIModelSceneContext
+	UIModelSceneContext = {
+		None = -1,
+		PerksProgram = 0,
+	},
+	---@enum Enum.UIModelSceneFlags
+	UIModelSceneFlags = {
+		SheatheWeapon = 1,
+		HideWeapon = 2,
+		Autodress = 4,
 	},
 	---@enum Enum.UISystemType
 	UISystemType = {
@@ -4474,6 +4566,9 @@ Constants = {
 		CHAR_CUSTOMIZE_CUSTOM_DISPLAY_OPTION_FIRST = 5,
 		CHAR_CUSTOMIZE_CUSTOM_DISPLAY_OPTION_LAST = 8,
 	},
+	CraftingOrderConsts = {
+		MAX_CRAFTING_ORDER_FAVORITE_RECIPES = 100,
+	},
 	CurrencyConsts = {
 		CATALYST_CHARGE_CAP = 6,
 		HONOR_PER_CURRENCY = 10,
@@ -4497,6 +4592,7 @@ Constants = {
 		CURRENCY_ID_RENOWN_NECROLORD = 1832,
 		CLASSIC_ARENA_POINTS_CURRENCY_ID = 1900,
 		CLASSIC_HONOR_CURRENCY_ID = 1901,
+		CURRENCY_ID_PERKS_PROGRAM_DISPLAY_INFO = 2032,
 		CURRENCY_ID_ACCOUNT_WIDE_CATALYST_CHARGES = 2166,
 		CURRENCY_ID_PERSONAL_CATALYST_CHARGES = 2167,
 		QUESTIONMARK_INV_ICON = 134400,
@@ -4531,6 +4627,7 @@ Constants = {
 		NUM_PRIMARY_PROFESSIONS = 2,
 		CLASSIC_PROFESSION_PARENT_TIER_INDEX = 4,
 		MAX_CRAFTING_REAGENT_SLOTS = 12,
+		CRAFTING_ORDER_ITEM_RETENTION = 30,
 		RUNEFORGING_ROOT_CATEGORY_ID = 210,
 		RUNEFORGING_SKILL_LINE_ID = 960,
 		CRAFTING_ORDER_CLAIM_DURATION = 1800,
