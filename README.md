@@ -3,7 +3,7 @@
 [![](https://img.shields.io/github/v/release/Ketho/vscode-wow-api)](https://github.com/Ketho/vscode-wow-api/releases)
 [![](https://img.shields.io/badge/wow-10.0.5-yellow)](https://github.com/Gethe/wow-ui-source/tree/10.0.5)
 
-Adds IntelliSense features for World of Warcraft API to VS Code. This is a plugin extension for [Sumneko's](https://marketplace.visualstudio.com/items?itemName=sumneko.lua) Lua [Language Server](https://microsoft.github.io/language-server-protocol/) with [EmmyLua](https://github.com/sumneko/lua-language-server/wiki/Annotations) annotations.
+Adds IntelliSense features for World of Warcraft API to VS Code. This is a plugin extension for [Sumneko's](https://marketplace.visualstudio.com/items?itemName=sumneko.lua) Lua [Language Server](https://microsoft.github.io/language-server-protocol/) with [LuaCats](https://github.com/LuaLS/lua-language-server/wiki/Annotations) annotations.
 
 ### Features
 #### [API](https://wowpedia.fandom.com/wiki/World_of_Warcraft_API)
@@ -49,10 +49,10 @@ Returns the level of the unit.
 :;level:{{apitype|number}}
 ```
 
-Alternatively, the script will look for a commented emmylua block if present.  
+Alternatively, the script will look for a commented LuaCats block if present.  
 (This only looks for global APIs not documented in [Blizzard_APIDocumentationGenerated](https://github.com/Gethe/wow-ui-source/tree/beta/Interface/AddOns/Blizzard_APIDocumentationGenerated), it won't look for Widget APIs and FrameXML functions)
 ```lua
-<!-- emmylua
+<!-- luacats
 ---@param unit UnitId
 ---@return number level
 function UnitLevel(unit) end
@@ -60,7 +60,7 @@ function UnitLevel(unit) end
 ```
 
 #### Setup
-Refer to [SETUP.md](SETUP.md) if you want to run the Lua scripts which generate the Emmylua documentation.
+Refer to [SETUP.md](SETUP.md) if you want to run the Lua scripts which generate the LuaCats documentation.
 
 ### Acknowledgements
 * [Andols](https://www.curseforge.com/members/andols/projects), [Buds](https://github.com/mrbuds), [ChrisKader](https://github.com/ChrisKader)
