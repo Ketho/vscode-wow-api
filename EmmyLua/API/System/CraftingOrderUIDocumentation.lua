@@ -1,6 +1,10 @@
 ---@meta
 C_CraftingOrders = {}
 
+---[Documentation](https://wowpedia.fandom.com/wiki/API_C_CraftingOrders.AreOrderNotesDisabled)
+---@return boolean areNotesDisabled
+function C_CraftingOrders.AreOrderNotesDisabled() end
+
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_CraftingOrders.CalculateCraftingOrderPostingFee)
 ---@param skillLineAbilityID number
 ---@param orderType number|Enum.CraftingOrderType
@@ -71,10 +75,18 @@ function C_CraftingOrders.GetDefaultOrdersSkillLine() end
 ---@return CraftingOrderInfo[] myOrders
 function C_CraftingOrders.GetMyOrders() end
 
+---[Documentation](https://wowpedia.fandom.com/wiki/API_C_CraftingOrders.GetNumFavoriteCustomerOptions)
+---@return number numFavorites
+function C_CraftingOrders.GetNumFavoriteCustomerOptions() end
+
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_CraftingOrders.GetOrderClaimInfo)
 ---@param profession number|Enum.Profession
 ---@return CraftingOrderClaimsRemainingInfo claimInfo
 function C_CraftingOrders.GetOrderClaimInfo(profession) end
+
+---[Documentation](https://wowpedia.fandom.com/wiki/API_C_CraftingOrders.GetPersonalOrdersInfo)
+---@return CraftingOrderPersonalOrdersInfo[] infos
+function C_CraftingOrders.GetPersonalOrdersInfo() end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_CraftingOrders.HasFavoriteCustomerOptions)
 ---@return boolean hasFavorites

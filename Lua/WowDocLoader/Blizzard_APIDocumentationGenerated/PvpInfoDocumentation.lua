@@ -7,6 +7,15 @@ local PvpInfo =
 	Functions =
 	{
 		{
+			Name = "ArePvpTalentsUnlocked",
+			Type = "Function",
+
+			Returns =
+			{
+				{ Name = "arePvpTalentsUnlocked", Type = "bool", Nilable = false },
+			},
+		},
+		{
 			Name = "CanDisplayDamage",
 			Type = "Function",
 
@@ -369,6 +378,15 @@ local PvpInfo =
 			},
 		},
 		{
+			Name = "GetPVPActiveRatedMatchDeserterPenalty",
+			Type = "Function",
+
+			Returns =
+			{
+				{ Name = "deserterPenalty", Type = "RatedMatchDeserterPenalty", Nilable = true },
+			},
+		},
+		{
 			Name = "GetPVPSeasonRewardAchievementID",
 			Type = "Function",
 
@@ -402,6 +420,15 @@ local PvpInfo =
 			Returns =
 			{
 				{ Name = "rewards", Type = "table", InnerType = "PVPPostMatchItemReward", Nilable = false },
+			},
+		},
+		{
+			Name = "GetPvpTalentsUnlockedLevel",
+			Type = "Function",
+
+			Returns =
+			{
+				{ Name = "unlockLevel", Type = "number", Nilable = false },
 			},
 		},
 		{
@@ -711,6 +738,15 @@ local PvpInfo =
 			},
 		},
 		{
+			Name = "IsInRatedMatchWithDeserterPenalty",
+			Type = "Function",
+
+			Returns =
+			{
+				{ Name = "isInRatedMatchWithDeserterPenalty", Type = "bool", Nilable = false },
+			},
+		},
+		{
 			Name = "IsMatchConsideredArena",
 			Type = "Function",
 
@@ -989,7 +1025,7 @@ local PvpInfo =
 			LiteralName = "PVP_ROLE_POPUP_HIDE",
 			Payload =
 			{
-				{ Name = "roleQueueInfo", Type = "table", InnerType = "PvpRoleQueueInfo", Nilable = false },
+				{ Name = "readyCheckInfo", Type = "PvpReadyCheckInfo", Nilable = false },
 			},
 		},
 		{
@@ -1003,7 +1039,7 @@ local PvpInfo =
 			LiteralName = "PVP_ROLE_POPUP_SHOW",
 			Payload =
 			{
-				{ Name = "roleQueueInfo", Type = "table", InnerType = "PvpRoleQueueInfo", Nilable = false },
+				{ Name = "readyCheckInfo", Type = "PvpReadyCheckInfo", Nilable = false },
 			},
 		},
 		{
@@ -1285,6 +1321,17 @@ local PvpInfo =
 			},
 		},
 		{
+			Name = "PvpReadyCheckInfo",
+			Type = "Structure",
+			Fields =
+			{
+				{ Name = "roles", Type = "table", InnerType = "PvpRoleQueueInfo", Nilable = false },
+				{ Name = "numPlayersAccepted", Type = "number", Nilable = false },
+				{ Name = "numPlayersDeclined", Type = "number", Nilable = false },
+				{ Name = "totalNumPlayers", Type = "number", Nilable = false },
+			},
+		},
+		{
 			Name = "PvpRoleQueueInfo",
 			Type = "Structure",
 			Fields =
@@ -1382,6 +1429,16 @@ local PvpInfo =
 				{ Name = "hasRandomWinToday", Type = "bool", Nilable = false },
 				{ Name = "minLevel", Type = "number", Nilable = false },
 				{ Name = "maxLevel", Type = "number", Nilable = false },
+			},
+		},
+		{
+			Name = "RatedMatchDeserterPenalty",
+			Type = "Structure",
+			Fields =
+			{
+				{ Name = "personalRatingChange", Type = "number", Nilable = false },
+				{ Name = "queuePenaltySpellID", Type = "number", Nilable = false },
+				{ Name = "queuePenaltyDuration", Type = "number", Nilable = false },
 			},
 		},
 		{

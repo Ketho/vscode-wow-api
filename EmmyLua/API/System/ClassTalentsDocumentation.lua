@@ -79,6 +79,8 @@ function C_ClassTalents.IsConfigPopulated(configID) end
 ---@param configID number
 ---@param autoApply boolean
 ---@return Enum.LoadConfigResult result
+---@return string changeError
+---@return number[] newLearnedNodeIDs
 function C_ClassTalents.LoadConfig(configID, autoApply) end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_ClassTalents.RenameConfig)

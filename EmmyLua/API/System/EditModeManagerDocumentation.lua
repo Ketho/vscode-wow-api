@@ -24,7 +24,9 @@ function C_EditMode.OnEditModeExit() end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_EditMode.OnLayoutAdded)
 ---@param addedLayoutIndex number
-function C_EditMode.OnLayoutAdded(addedLayoutIndex) end
+---@param activateNewLayout boolean
+---@param isLayoutImported boolean
+function C_EditMode.OnLayoutAdded(addedLayoutIndex, activateNewLayout, isLayoutImported) end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_EditMode.OnLayoutDeleted)
 ---@param deletedLayoutIndex number

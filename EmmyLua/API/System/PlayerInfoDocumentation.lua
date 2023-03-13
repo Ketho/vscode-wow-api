@@ -14,6 +14,11 @@ function C_PlayerInfo.CanPlayerUseAreaLoot() end
 ---@return string failureReason
 function C_PlayerInfo.CanPlayerUseMountEquipment() end
 
+---[Documentation](https://wowpedia.fandom.com/wiki/API_C_PlayerInfo.CanUseItem)
+---@param itemID number
+---@return boolean isUseable
+function C_PlayerInfo.CanUseItem(itemID) end
+
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_PlayerInfo.GetAlternateFormInfo)
 ---@return boolean hasAlternateForm
 ---@return boolean inAlternateForm
@@ -29,11 +34,25 @@ function C_PlayerInfo.GetContentDifficultyCreatureForPlayer(unitToken) end
 ---@return Enum.RelativeContentDifficulty difficulty
 function C_PlayerInfo.GetContentDifficultyQuestForPlayer(questID) end
 
+---[Documentation](https://wowpedia.fandom.com/wiki/API_C_PlayerInfo.GetDisplayID)
+---@return number displayID
+function C_PlayerInfo.GetDisplayID() end
+
+---[Documentation](https://wowpedia.fandom.com/wiki/API_C_PlayerInfo.GetGlidingInfo)
+---@return boolean isGliding
+---@return boolean canGlide
+---@return number forwardSpeed
+function C_PlayerInfo.GetGlidingInfo() end
+
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_PlayerInfo.GetInstancesUnlockedAtLevel)
 ---@param level number
 ---@param isRaid boolean
 ---@return number[] dungeonID
 function C_PlayerInfo.GetInstancesUnlockedAtLevel(level, isRaid) end
+
+---[Documentation](https://wowpedia.fandom.com/wiki/API_C_PlayerInfo.GetPlayerCharacterData)
+---@return PlayerInfoCharacterData characterData
+function C_PlayerInfo.GetPlayerCharacterData() end
 
 ---Returns the players mythic+ rating summary which includes the runs they've completed as well as their current season m+ rating
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_PlayerInfo.GetPlayerMythicPlusRatingSummary)
@@ -68,6 +87,14 @@ function C_PlayerInfo.IsPlayerInChromieTime() end
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_PlayerInfo.IsPlayerNPERestricted)
 ---@return boolean isRestricted
 function C_PlayerInfo.IsPlayerNPERestricted() end
+
+---[Documentation](https://wowpedia.fandom.com/wiki/API_C_PlayerInfo.IsTradingPostAvailable)
+---@return boolean isAvailable
+function C_PlayerInfo.IsTradingPostAvailable() end
+
+---[Documentation](https://wowpedia.fandom.com/wiki/API_C_PlayerInfo.IsTravelersLogAvailable)
+---@return boolean isAvailable
+function C_PlayerInfo.IsTravelersLogAvailable() end
 
 ---@class MythicPlusRatingMapSummary
 ---@field challengeModeID number

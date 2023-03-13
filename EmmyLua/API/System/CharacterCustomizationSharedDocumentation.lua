@@ -32,9 +32,3 @@
 ---@field currentChoiceIndex number?
 ---@field hasNewChoices boolean
 ---@field isSound boolean
-
----@class CharacterAlternateFormData
----@field raceID number
----@field name string
----@field fileName string
----@field createScreenIconAtlas string

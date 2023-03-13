@@ -57,6 +57,10 @@ function C_ItemUpgrade.UpgradeItem(numUpgrades) end
 ---@field cost number
 ---@field currencyID number
 
+---@class ItemUpgradeItemCost
+---@field cost number
+---@field itemID number
+
 ---@class ItemUpgradeItemInfo
 ---@field iconID number
 ---@field name string
@@ -71,7 +75,8 @@ function C_ItemUpgrade.UpgradeItem(numUpgrades) end
 ---@field displayQuality number
 ---@field itemLevelIncrement number
 ---@field levelStats ItemUpgradeStat[]
----@field costsToUpgrade ItemUpgradeCurrencyCost[]
+---@field currencyCostsToUpgrade ItemUpgradeCurrencyCost[]
+---@field itemCostsToUpgrade ItemUpgradeItemCost[]
 ---@field failureMessage string?
 
 ---@class ItemUpgradeStat

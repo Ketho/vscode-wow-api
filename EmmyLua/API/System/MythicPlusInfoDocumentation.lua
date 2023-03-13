@@ -19,6 +19,11 @@ function C_MythicPlus.GetCurrentSeasonValues() end
 ---@return number? seasonID
 function C_MythicPlus.GetCurrentUIDisplaySeason() end
 
+---[Documentation](https://wowpedia.fandom.com/wiki/API_C_MythicPlus.GetEndOfRunGearSequenceLevel)
+---@param keystoneLevel number
+---@return number? sequenceLevel
+function C_MythicPlus.GetEndOfRunGearSequenceLevel(keystoneLevel) end
+
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_MythicPlus.GetLastWeeklyBestInformation)
 ---@return number challengeMapId
 ---@return number level

@@ -43,6 +43,7 @@ function C_ModelInfo.GetModelSceneCameraInfoByID(modelSceneCameraID) end
 ---@return Enum.ModelSceneType modelSceneType
 ---@return number[] modelCameraIDs
 ---@return number[] modelActorsIDs
+---@return number flags
 function C_ModelInfo.GetModelSceneInfoByID(modelSceneID) end
 
 ---@class UIModelSceneActorDisplayInfo

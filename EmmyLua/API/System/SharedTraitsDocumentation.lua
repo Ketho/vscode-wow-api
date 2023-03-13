@@ -37,6 +37,11 @@ function C_Traits.CommitConfig(configID) end
 ---@return boolean hasChanges
 function C_Traits.ConfigHasStagedChanges(configID) end
 
+---[Documentation](https://wowpedia.fandom.com/wiki/API_C_Traits.GenerateInspectImportString)
+---@param target string
+---@return string importString
+function C_Traits.GenerateInspectImportString(target) end
+
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_Traits.GetConditionInfo)
 ---@param configID number
 ---@param condID number
@@ -115,8 +120,9 @@ function C_Traits.GetTraitCurrencyInfo(traitCurrencyID) end
 function C_Traits.GetTraitDescription(entryID, rank) end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_Traits.GetTraitSystemWidgetSetID)
+---@param configID number
 ---@return number uiWidgetSetID
-function C_Traits.GetTraitSystemWidgetSetID() end
+function C_Traits.GetTraitSystemWidgetSetID(configID) end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_Traits.GetTreeCurrencyInfo)
 ---@param configID number
@@ -169,6 +175,13 @@ function C_Traits.RefundRank(configID, nodeID) end
 ---@param treeID number
 ---@return boolean success
 function C_Traits.ResetTree(configID, treeID) end
+
+---[Documentation](https://wowpedia.fandom.com/wiki/API_C_Traits.ResetTreeByCurrency)
+---@param configID number
+---@param treeID number
+---@param traitCurrencyID number
+---@return boolean success
+function C_Traits.ResetTreeByCurrency(configID, treeID, traitCurrencyID) end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_Traits.RollbackConfig)
 ---@param configID number

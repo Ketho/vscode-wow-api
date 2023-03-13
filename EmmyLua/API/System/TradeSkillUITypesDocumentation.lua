@@ -9,6 +9,7 @@
 ---@class CraftingItemResultData
 ---@field resourcesReturned CraftingResourceReturnInfo[]?
 ---@field craftingQuality number?
+---@field qualityProgress number? Default = 0
 ---@field itemID number? Default = 0
 ---@field itemGUID string
 ---@field quantity number? Default = 0
@@ -20,6 +21,7 @@
 ---@field multicraft number? Default = 0
 ---@field operationID number? Default = 0
 ---@field firstCraftReward boolean? Default = false
+---@field isEnchant boolean? Default = false
 
 ---@class CraftingItemSlotModification
 ---@field dataSlotIndex number
@@ -94,7 +96,6 @@
 ---@field reagentSlotSchematics CraftingReagentSlotSchematic[]
 ---@field isRecraft boolean
 ---@field hasCraftingOperationInfo boolean
----@field hasGatheringOperationInfo boolean
 
 ---@class CraftingRecipeSkillLineInfo
 ---@field professionSkillLineID number
@@ -173,7 +174,7 @@
 ---@field qualityIlvlBonuses number[]?
 ---@field maxQuality number?
 ---@field qualityIDs number[]?
----@field createsItem boolean? Default = true
+---@field canCreateMultiple boolean? Default = true
 ---@field abilityVerb string?
 ---@field abilityAllVerb string?
 ---@field isRecraft boolean? Default = false

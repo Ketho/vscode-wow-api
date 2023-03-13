@@ -23,7 +23,7 @@ function C_CVar.GetCVarBool(name) end
 function C_CVar.GetCVarDefault(name) end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_CVar.RegisterCVar)
----@param name CVar
+---@param name string
 ---@param value? string|number
 function C_CVar.RegisterCVar(name, value) end
 

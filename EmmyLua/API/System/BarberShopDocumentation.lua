@@ -21,7 +21,7 @@ function C_BarberShop.GetAvailableCustomizations() end
 function C_BarberShop.GetCurrentCameraZoom() end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_BarberShop.GetCurrentCharacterData)
----@return BarberShopCharacterData characterData
+---@return PlayerInfoCharacterData characterData
 function C_BarberShop.GetCurrentCharacterData() end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_BarberShop.GetCurrentCost)
@@ -110,13 +110,3 @@ function C_BarberShop.SetViewingShapeshiftForm(shapeshiftFormID) end
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_BarberShop.ZoomCamera)
 ---@param zoomAmount number
 function C_BarberShop.ZoomCamera(zoomAmount) end
-
----@class BarberShopCharacterData
----@field raceData BarberShopRaceData
----@field sex number
-
----@class BarberShopRaceData
----@field name string
----@field fileName string
----@field alternateFormRaceData CharacterAlternateFormData?
----@field createScreenIconAtlas string

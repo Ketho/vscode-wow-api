@@ -1,0 +1,13 @@
+---@meta
+---@class CharacterAlternateFormData
+---@field raceID number
+---@field name string
+---@field fileName string
+---@field createScreenIconAtlas string
+
+---@class PlayerInfoCharacterData
+---@field name string
+---@field fileName string
+---@field alternateFormRaceData CharacterAlternateFormData?
+---@field createScreenIconAtlas string
+---@field sex Enum.UnitSex

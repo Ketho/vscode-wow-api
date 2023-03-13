@@ -1,6 +1,10 @@
 ---@meta
 C_PvP = {}
 
+---[Documentation](https://wowpedia.fandom.com/wiki/API_C_PvP.ArePvpTalentsUnlocked)
+---@return boolean arePvpTalentsUnlocked
+function C_PvP.ArePvpTalentsUnlocked() end
+
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_PvP.CanDisplayDamage)
 ---@return boolean canDisplay
 function C_PvP.CanDisplayDamage() end
@@ -156,6 +160,10 @@ function C_PvP.GetOutdoorPvPWaitTime(uiMapID) end
 ---@return PVPPersonalRatedInfo? info
 function C_PvP.GetPVPActiveMatchPersonalRatedInfo() end
 
+---[Documentation](https://wowpedia.fandom.com/wiki/API_C_PvP.GetPVPActiveRatedMatchDeserterPenalty)
+---@return RatedMatchDeserterPenalty? deserterPenalty
+function C_PvP.GetPVPActiveRatedMatchDeserterPenalty() end
+
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_PvP.GetPVPSeasonRewardAchievementID)
 ---@return number achievementID
 function C_PvP.GetPVPSeasonRewardAchievementID() end
@@ -171,6 +179,10 @@ function C_PvP.GetPostMatchCurrencyRewards() end
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_PvP.GetPostMatchItemRewards)
 ---@return PVPPostMatchItemReward[] rewards
 function C_PvP.GetPostMatchItemRewards() end
+
+---[Documentation](https://wowpedia.fandom.com/wiki/API_C_PvP.GetPvpTalentsUnlockedLevel)
+---@return number unlockLevel
+function C_PvP.GetPvpTalentsUnlockedLevel() end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_PvP.GetPvpTierID)
 ---@param tierEnum number
@@ -309,6 +321,10 @@ function C_PvP.IsBrawlSoloShuffle() end
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_PvP.IsInBrawl)
 ---@return boolean isInBrawl
 function C_PvP.IsInBrawl() end
+
+---[Documentation](https://wowpedia.fandom.com/wiki/API_C_PvP.IsInRatedMatchWithDeserterPenalty)
+---@return boolean isInRatedMatchWithDeserterPenalty
+function C_PvP.IsInRatedMatchWithDeserterPenalty() end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_PvP.IsMatchConsideredArena)
 ---@return boolean asArena
@@ -468,6 +484,12 @@ function C_PvP.ToggleWarMode() end
 ---@field sex number
 ---@field isUpgraded boolean
 
+---@class PvpReadyCheckInfo
+---@field roles PvpRoleQueueInfo[]
+---@field numPlayersAccepted number
+---@field numPlayersDeclined number
+---@field totalNumPlayers number
+
 ---@class PvpRoleQueueInfo
 ---@field role string
 ---@field totalRole number
@@ -532,6 +554,11 @@ function C_PvP.ToggleWarMode() end
 ---@field hasRandomWinToday boolean
 ---@field minLevel number
 ---@field maxLevel number
+
+---@class RatedMatchDeserterPenalty
+---@field personalRatingChange number
+---@field queuePenaltySpellID number
+---@field queuePenaltyDuration number
 
 ---@class RatedSoloShuffleSpecStats
 ---@field weeklyMostPlayedSpecID number

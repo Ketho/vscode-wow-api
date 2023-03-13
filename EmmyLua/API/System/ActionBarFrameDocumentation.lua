@@ -31,6 +31,11 @@ function C_ActionBar.GetItemActionOnEquipSpellID(actionID) end
 ---@return number[] slots
 function C_ActionBar.GetPetActionPetBarIndices(petActionID) end
 
+---[Documentation](https://wowpedia.fandom.com/wiki/API_C_ActionBar.GetProfessionQuality)
+---@param actionID number
+---@return number? quality
+function C_ActionBar.GetProfessionQuality(actionID) end
+
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_ActionBar.HasFlyoutActionButtons)
 ---@param flyoutID number
 ---@return boolean hasFlyoutActionButtons

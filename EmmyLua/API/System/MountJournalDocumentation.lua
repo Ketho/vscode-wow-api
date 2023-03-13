@@ -20,6 +20,11 @@ function C_MountJournal.ClearRecentFanfares() end
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_MountJournal.Dismiss)
 function C_MountJournal.Dismiss() end
 
+---[Documentation](https://wowpedia.fandom.com/wiki/API_C_MountJournal.GetAllCreatureDisplayIDsForMountID)
+---@param mountID number
+---@return number[] creatureDisplayIDs
+function C_MountJournal.GetAllCreatureDisplayIDsForMountID(mountID) end
+
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_MountJournal.GetAppliedMountEquipmentID)
 ---@return number? itemID
 function C_MountJournal.GetAppliedMountEquipmentID() end

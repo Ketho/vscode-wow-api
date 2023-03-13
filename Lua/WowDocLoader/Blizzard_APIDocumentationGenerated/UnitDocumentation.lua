@@ -363,6 +363,22 @@ local Unit =
 			},
 		},
 		{
+			Name = "UnitPartialPower",
+			Type = "Function",
+
+			Arguments =
+			{
+				{ Name = "unitToken", Type = "string", Nilable = false },
+				{ Name = "powerType", Type = "PowerType", Nilable = false, Default = "NumPowerTypes" },
+				{ Name = "unmodified", Type = "bool", Nilable = false, Default = false },
+			},
+
+			Returns =
+			{
+				{ Name = "partialPower", Type = "number", Nilable = false },
+			},
+		},
+		{
 			Name = "UnitPercentHealthFromGUID",
 			Type = "Function",
 
@@ -532,6 +548,22 @@ local Unit =
 			Returns =
 			{
 				{ Name = "treatAsPlayer", Type = "bool", Nilable = false },
+			},
+		},
+		{
+			Name = "UnitTrialBankedLevels",
+			Type = "Function",
+
+			Arguments =
+			{
+				{ Name = "unit", Type = "string", Nilable = false },
+			},
+
+			Returns =
+			{
+				{ Name = "bankedLevels", Type = "number", Nilable = false },
+				{ Name = "xpIntoCurrentLevel", Type = "number", Nilable = false },
+				{ Name = "xpForNextLevel", Type = "number", Nilable = false },
 			},
 		},
 		{
@@ -729,6 +761,15 @@ local Unit =
 			Name = "PetUiUpdate",
 			Type = "Event",
 			LiteralName = "PET_UI_UPDATE",
+		},
+		{
+			Name = "PlayerCanGlideChanged",
+			Type = "Event",
+			LiteralName = "PLAYER_CAN_GLIDE_CHANGED",
+			Payload =
+			{
+				{ Name = "canGlide", Type = "bool", Nilable = false },
+			},
 		},
 		{
 			Name = "PlayerDamageDoneMods",

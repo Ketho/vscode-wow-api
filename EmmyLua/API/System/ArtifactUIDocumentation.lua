@@ -308,6 +308,11 @@ function C_ArtifactUI.GetTotalPurchasedRanks() end
 ---@return boolean artifactDisabled
 function C_ArtifactUI.IsArtifactDisabled() end
 
+---[Documentation](https://wowpedia.fandom.com/wiki/API_C_ArtifactUI.IsArtifactItem)
+---@param itemLocation ItemLocationMixin
+---@return boolean isArtifact
+function C_ArtifactUI.IsArtifactItem(itemLocation) end
+
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_ArtifactUI.IsAtForge)
 ---@return boolean isAtForge
 function C_ArtifactUI.IsAtForge() end

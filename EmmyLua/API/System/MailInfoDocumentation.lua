@@ -19,3 +19,7 @@ function C_Mail.HasInboxMoney(inboxIndex) end
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_Mail.IsCommandPending)
 ---@return boolean isCommandPending
 function C_Mail.IsCommandPending() end
+
+---[Documentation](https://wowpedia.fandom.com/wiki/API_C_Mail.SetOpeningAll)
+---@param openingAll boolean
+function C_Mail.SetOpeningAll(openingAll) end

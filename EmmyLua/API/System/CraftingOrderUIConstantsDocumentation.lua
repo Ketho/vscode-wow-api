@@ -33,6 +33,8 @@
 ---@field itemName string
 ---@field primaryCategoryID number
 ---@field iLvl number
+---@field canUse boolean
+---@field bindOnPickup boolean
 ---@field qualityIlvlBonuses number[]?
 ---@field craftingQualityIDs number[]?
 ---@field quality Enum.ItemQuality?
@@ -97,6 +99,11 @@
 ---@field crafterName string?
 ---@field customerGUID string?
 ---@field customerName string?
+
+---@class CraftingOrderPersonalOrdersInfo
+---@field profession Enum.Profession
+---@field numPersonalOrders number
+---@field professionName string
 
 ---@class CraftingOrderReagentInfo
 ---@field reagent CraftingReagentInfo

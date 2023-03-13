@@ -147,6 +147,13 @@ function UnitIsOwnerOrControllerOfUnit(controllingUnit, controlledUnit) end
 ---@return boolean nameplateShowsWidgetsOnly
 function UnitNameplateShowsWidgetsOnly(unit) end
 
+---[Documentation](https://wowpedia.fandom.com/wiki/API_UnitPartialPower)
+---@param unitToken string
+---@param powerType? number|Enum.PowerType Default = NumPowerTypes
+---@param unmodified? boolean Default = false
+---@return number partialPower
+function UnitPartialPower(unitToken, powerType, unmodified) end
+
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_UnitPercentHealthFromGUID)
 ---@param unitGUID string
 ---@return number? percentHealth
@@ -210,6 +217,13 @@ function UnitTokenFromGUID(unitGUID) end
 ---@param unit string
 ---@return boolean treatAsPlayer
 function UnitTreatAsPlayerForDisplay(unit) end
+
+---[Documentation](https://wowpedia.fandom.com/wiki/API_UnitTrialBankedLevels)
+---@param unit string
+---@return number bankedLevels
+---@return number xpIntoCurrentLevel
+---@return number xpForNextLevel
+function UnitTrialBankedLevels(unit) end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_UnitWidgetSet)
 ---@param unit string
