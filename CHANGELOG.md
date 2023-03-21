@@ -6,6 +6,11 @@
 - The Classic (TBC) API is not supported ([#13](https://github.com/Ketho/vscode-wow-api/issues/13))
 - Widget API is not yet updated from 10.0.2 Blizzard_APIDocumentationGenerated
 
+## [0.9.9] - 2023-03-21
+### Added
+- 🌙 LuaCats: PR [#75](https://github.com/Ketho/vscode-wow-api/pull/75) AceConfig-3.0 Update
+- 🌙 LuaCats: PR [#74](https://github.com/Ketho/vscode-wow-api/pull/74) Add type definitions for HereBeDragons-2.0
+
 ## [0.9.8] - 2023-03-13
 ### Added
 - 🌙 LuaCats: Cumulative updates for patch 10.0.5 (48397)
@@ -340,6 +345,7 @@ Libraries
 ### Added
 - 🚧 Wip: Development work
 
+[0.9.9]: https://github.com/Ketho/vscode-wow-api/releases/tag/v0.9.9
 [0.9.8]: https://github.com/Ketho/vscode-wow-api/releases/tag/v0.9.8
 [0.9.7]: https://github.com/Ketho/vscode-wow-api/releases/tag/v0.9.7
 [0.9.6]: https://github.com/Ketho/vscode-wow-api/releases/tag/v0.9.6
