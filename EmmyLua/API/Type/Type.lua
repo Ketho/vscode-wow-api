@@ -105,6 +105,7 @@
 ---|"pet"
 ---|"vehicle"
 ---|"npc"
+---|"questnpc"
 ---|"none"
 ---|"party1"
 ---|"raid1"
