@@ -854,6 +854,8 @@ function ConsoleExec(command) end
 function CopyToClipboard(text) end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_CreateFont)
+---@param name string
+---@return Font fontObject
 function CreateFont(name) end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_CreateFrame)
