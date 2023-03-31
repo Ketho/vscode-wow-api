@@ -48,22 +48,22 @@ function AceConfig:RegisterOptionsTable(appName, options, slashcmd) end
 
 ---@class AceConfig.OptionsTable
 ---@field args table<string, AceConfig.OptionsTable> a table containing a list of options
----@field childGroups AceConfig.OptionsTable.ChildGroup Child groups for the option
----@field cmdHidden? boolean
+---@field childGroups AceConfig.OptionsTable.ChildGroup decides how children groups of this group are displayed
+---@field cmdHidden? boolean hide this from commandline
 ---@field confirm? string|function|boolean prompt for confirmation before changing a value if true display "name - desc", or contents of .confirmText if supplied.
 ---@field confirmText? string text to display in the confirmation dialog
 ---@field desc? string|function description for the option (or nil for a self-describing name)
 ---@field descStyle? AceConfig.OptionsTable.DescStyle "inline" if you want the description to show below the option in a GUI (rather than as a tooltip). Currently only supported by AceGUI "Toggle".
----@field dialogHidden? boolean
----@field disabled? string|function|boolean
----@field dropdownHidden? boolean
----@field func? function
+---@field dialogHidden? boolean hide this from dialog UIs
+---@field disabled? string|function|boolean disabled but visible
+---@field dropdownHidden? boolean hide this from dropdown UIs
+---@field func? function function to execute
 ---@field get? string|function getter function
----@field guiHidden? boolean
----@field handler? table
----@field hidden? string|function|boolean
----@field icon? string|function
----@field iconCoords? table|string|function
+---@field guiHidden? boolean hide this from graphical UIs (dialog, dropdown)
+---@field handler? table object on which getter/setter functions are called if they are declared as strings rather than function references
+---@field hidden? string|function|boolean hidden (but usable if you can get to it, i.e. via commandline)
+---@field icon? string|function path to icon texture
+---@field iconCoords? table|string|function arguments to pass to SetTexCoord, e.g. {0.1,0.9,0.1,0.9}.
 ---@field name string|function Display name for the option
 ---@field order? number|string|function relative position of item (default = 100, 0=first, -1=last)
 ---@field set? string|function setter function
