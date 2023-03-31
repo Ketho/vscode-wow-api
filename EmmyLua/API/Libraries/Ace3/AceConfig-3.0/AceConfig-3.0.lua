@@ -16,11 +16,6 @@ function AceConfig:RegisterOptionsTable(appName, options, slashcmd) end
 -- ----------------------------------------------------------------------------
 -- AceConfig.OptionsTable
 -- ----------------------------------------------------------------------------
----@alias Ace3Width
----|"double"
----|"half"
----|"full"
----|"normal"
 
 ---@alias AceConfig.OptionsTable.Type
 ---|"color"
@@ -34,6 +29,12 @@ function AceConfig:RegisterOptionsTable(appName, options, slashcmd) end
 ---|"range"
 ---|"select"
 ---|"toggle"
+
+---@alias AceConfig.OptionsTable.Width
+---|"double"
+---|"full"
+---|"half"
+---|"normal"
 
 ---@class AceConfig.OptionsTable
 ---@field args table<string, AceConfig.OptionsTable> a table containing a list of options
@@ -58,6 +59,6 @@ function AceConfig:RegisterOptionsTable(appName, options, slashcmd) end
 ---@field set? string|function setter function
 ---@field type AceConfig.OptionsTable.Type Type of the option
 ---@field validate? string|function|false validate the input/value before setting it. return a string (error message) to indicate error.
----@field width? number|Ace3Width If a number multiplier of the default width, ie. 0.5 equals "half", 2.0 equals "double"
+---@field width? number|AceConfig.OptionsTable.Width If a number multiplier of the default width, ie. 0.5 equals "half", 2.0 equals "double"
 ---[Documentation](http://www.wowace.com/addons/ace3/pages/ace-config-3-0-options-tables/)
 local OptionsTable = {}
