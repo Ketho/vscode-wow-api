@@ -1,4 +1,8 @@
 ---@meta
+
+-- ----------------------------------------------------------------------------
+-- AceConfig-3.0
+-- ----------------------------------------------------------------------------
 ---@class AceConfig-3.0
 local AceConfig = {}
 
@@ -9,6 +13,9 @@ local AceConfig = {}
 ---[Documentation](https://www.wowace.com/projects/ace3/pages/api/ace-config-3-0#title-1)
 function AceConfig:RegisterOptionsTable(appName, options, slashcmd) end
 
+-- ----------------------------------------------------------------------------
+-- AceConfigOptionsTable
+-- ----------------------------------------------------------------------------
 ---@alias Ace3Width
 ---|"double"
 ---|"half"
@@ -63,4 +70,3 @@ OptionsTable.dialogHidden = false
 OptionsTable.dropdownHidden = false
 OptionsTable.dropdownHidden = false
 OptionsTable.cmdHidden = false
-
