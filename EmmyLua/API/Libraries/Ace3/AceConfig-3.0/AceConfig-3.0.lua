@@ -17,6 +17,11 @@ function AceConfig:RegisterOptionsTable(appName, options, slashcmd) end
 -- AceConfig.OptionsTable
 -- ----------------------------------------------------------------------------
 
+---@alias AceConfig.OptionsTable.ChildGroup
+---|"select"
+---|"tab"
+---|"tree"
+
 ---@alias AceConfig.OptionsTable.Type
 ---|"color"
 ---|"description"
@@ -38,7 +43,7 @@ function AceConfig:RegisterOptionsTable(appName, options, slashcmd) end
 
 ---@class AceConfig.OptionsTable
 ---@field args table<string, AceConfig.OptionsTable> a table containing a list of options
----@field childGroups "tree"|"tab"|"select" Child groups for the option
+---@field childGroups AceConfig.OptionsTable.ChildGroup Child groups for the option
 ---@field cmdHidden? boolean
 ---@field confirm? string|function|boolean prompt for confirmation before changing a value if true display "name - desc", or contents of .confirmText if supplied.
 ---@field confirmText? string text to display in the confirmation dialog
