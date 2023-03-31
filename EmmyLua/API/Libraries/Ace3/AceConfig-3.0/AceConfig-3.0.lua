@@ -22,6 +22,10 @@ function AceConfig:RegisterOptionsTable(appName, options, slashcmd) end
 ---|"tab"
 ---|"tree"
 
+---@alias AceConfig.OptionsTable.DescStyle
+---|"inline"
+---|"tooltip"
+
 ---@alias AceConfig.OptionsTable.Type
 ---|"color"
 ---|"description"
@@ -48,7 +52,7 @@ function AceConfig:RegisterOptionsTable(appName, options, slashcmd) end
 ---@field confirm? string|function|boolean prompt for confirmation before changing a value if true display "name - desc", or contents of .confirmText if supplied.
 ---@field confirmText? string text to display in the confirmation dialog
 ---@field desc? string|function description for the option (or nil for a self-describing name)
----@field descStyle? string|nil "inline" if you want the description to show below the option in a GUI (rather than as a tooltip). Currently only supported by AceGUI "Toggle".
+---@field descStyle? AceConfig.OptionsTable.DescStyle "inline" if you want the description to show below the option in a GUI (rather than as a tooltip). Currently only supported by AceGUI "Toggle".
 ---@field dialogHidden? boolean
 ---@field disabled? string|function|boolean
 ---@field dropdownHidden? boolean
