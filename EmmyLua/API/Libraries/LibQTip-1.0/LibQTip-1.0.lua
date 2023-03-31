@@ -1,7 +1,8 @@
+---@meta
+
 -- ----------------------------------------------------------------------------
 -- LibQTip-1.0
 -- ----------------------------------------------------------------------------
----@meta
 ---@class LibQTip-1.0
 ---@field LabelProvider LibQTip.CellProvider The default CellProvider used to create tooltip cells.
 local lib = {}
@@ -56,7 +57,6 @@ function lib:Release(tooltip) end
 -- ----------------------------------------------------------------------------
 -- LibQTip.Tooltip
 -- ----------------------------------------------------------------------------
----@meta
 ---@class LibQTip.Tooltip: BackdropTemplate, Frame
 local tooltip = {}
 
@@ -69,7 +69,7 @@ function tooltip:AddColumn(justification) end
 ---@param ... unknown Value to be displayed in each column of the line.
 ---@return number lineIndex The index of the newly added line.
 ---@return number columnIndex The index of the next empty cell in the line or nil if it is full.
-function tooltip:AddHeaderLine(...) end
+function tooltip:AddHeader(...) end
 
 --- Add a new line at the bottom of the tooltip.
 --- Provided values are displayed on the line with the regular font. Nil values are ignored. If the number of values is greater than the number of columns, an error is raised.
@@ -117,6 +117,8 @@ function tooltip:GetLineCount() end
 ---@param releaseHandler? fun(frame: Frame, delay: number) Called when the tooltip is released. Generally used to clean up a reference an AddOn has to the tooltip frame, since another AddOn can subsequently acquire it.
 function tooltip:SetAutoHideDelay(delay, alternateFrame, releaseHandler) end
 
+-- stylua: ignore start
+
 --- Add or replace a cell at the given line and column indices. The additional arguments override the tooltip defaults.
 ---@param lineNum number The line index of the cell. Indexes greater than tooltip:GetLineCount() raise an error.
 ---@param colNum number The column index of the cell. Indexes greater than tooltip:GetColumnCount() raise an error.
@@ -134,6 +136,8 @@ function tooltip:SetAutoHideDelay(delay, alternateFrame, releaseHandler) end
 ---@return number columnIndex The index of the next empty cell in the line or nil if it is full.
 function tooltip:SetCell(lineNum, colNum, value, font, justification, colSpan, provider, leftPadding, rightPadding, maxWidth, minWidth, ...) end
 
+-- stylua: ignore end
+
 --- Sets the horizontal margin size of all cells within the tooltip. This function can only be used before the tooltip has had lines set.
 ---@param size number The desired margin size. Must be a positive number or zero.
 function tooltip:SetCellMarginH(size) end
@@ -147,7 +151,7 @@ function tooltip:SetCellMarginV(size) end
 ---@param colNum number Column index of the cell.
 ---@param scriptType LibQTip.ScriptType The cell ScriptType.
 ---@param func fun(frame: Frame, ...) The function called when the script is run. Parameters conform to the given ScriptType.
----@param arg? unknown Data to be passed to the script function. 
+---@param arg? unknown Data to be passed to the script function.
 function tooltip:SetCellScript(lineNum, colNum, scriptType, func, arg) end
 
 --- Sets the color of the specified column of the tooltip.
@@ -172,7 +176,7 @@ function tooltip:SetColumnLayout(numColumns, ...) end
 ---@param colNum number Index of the column.
 ---@param scriptType LibQTip.ScriptType The column ScriptType.
 ---@param func fun(frame: Frame, ...) The function called when the script is run. Parameters conform to the given ScriptType.
----@param arg? unknown Data to be passed to the script function. 
+---@param arg? unknown Data to be passed to the script function.
 function tooltip:SetColumnScript(colNum, scriptType, func, arg) end
 
 --- Sets the color of the text for the specified column of the tooltip.
@@ -228,7 +232,7 @@ function tooltip:SetLineColor(lineNum, r, g, b, a) end
 ---@param lineNum number Index of the line.
 ---@param scriptType LibQTip.ScriptType The column ScriptType.
 ---@param func fun(frame: Frame, ...) The function called when the script is run. Parameters conform to the given ScriptType.
----@param arg? unknown Data to be passed to the script function. 
+---@param arg? unknown Data to be passed to the script function.
 function tooltip:SetLineScript(lineNum, scriptType, func, arg) end
 
 --- Sets the color of the text for the specified line of the tooltip.
@@ -254,7 +258,6 @@ function tooltip:UpdateScrolling(maxheight) end
 -- ----------------------------------------------------------------------------
 -- LibQTip.Cell
 -- ----------------------------------------------------------------------------
----@meta
 ---@class LibQTip.Cell: Frame
 local cell = {}
 
@@ -280,7 +283,6 @@ function cell:SetupCell(tooltip, value, justification, font, leftPadding, rightP
 -- ----------------------------------------------------------------------------
 -- LibQTip.CellProvider
 -- ----------------------------------------------------------------------------
----@meta
 ---@class LibQTip.CellProvider
 local cellProvider = {}
 
@@ -303,4 +305,3 @@ function cellProvider:IterateCells() end
 --- Release a cell that LibQTip is no longer using. The cell has already been hidden, unanchored and orphaned by LibQTip.
 ---@param cell LibQTip.Cell The cell to release.
 function cellProvider:ReleaseCell(cell) end
-
