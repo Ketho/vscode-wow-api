@@ -18,6 +18,6 @@ Usage:
 ---@paramsig db, noDefaultProfiles
 ---@param db AceDBObject-3.0 The database object to create the options table for.
 ---@param noDefaultProfiles? boolean
----@return AceConfigOptionsTable # The options table to be used in AceConfig-3.0
+---@return AceConfig.OptionsTable optionsTable The options table to be used in AceConfig-3.0
 ---[Documentation](https://www.wowace.com/projects/ace3/pages/api/ace-dboptions-3-0#title-1)
 function AceDBOptions:GetOptionsTable(db, noDefaultProfiles) end
