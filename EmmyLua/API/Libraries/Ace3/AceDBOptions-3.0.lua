@@ -1,7 +1,10 @@
 ---@meta
+
+-- ----------------------------------------------------------------------------
+-- AceDBOptions-3.0
+-- ----------------------------------------------------------------------------
 ---@class AceDBOptions-3.0
 local AceDBOptions = {}
-
 
 --[[ 
 Get/Create a option table that you can use in your addon to control the profiles of AceDB-3.0.
