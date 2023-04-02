@@ -1,4 +1,8 @@
 ---@meta
+
+-- ----------------------------------------------------------------------------
+-- AceLocale-3.0
+-- ----------------------------------------------------------------------------
 ---@class AceLocale-3.0
 local AceLocale = {}
 
@@ -19,6 +23,9 @@ function AceLocale:GetLocale(application, silent) end
 ---[Documentation](https://www.wowace.com/projects/ace3/pages/api/ace-locale-3-0#title-2)
 function AceLocale:NewLocale(application, locale, isDefault, silent) end
 
+-- ----------------------------------------------------------------------------
+-- AceLocale-3.0 Types
+-- ----------------------------------------------------------------------------
 
 ---@alias GAME_LOCALE
 ---|"frFR" French (France)
