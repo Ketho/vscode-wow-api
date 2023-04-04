@@ -1,6 +1,11 @@
 ---@meta
----[Documentation](https://www.wowace.com/projects/ace3/pages/api/ace-addon-3-0)
+
+-- ----------------------------------------------------------------------------
+-- AceAddon-3.0
+-- ----------------------------------------------------------------------------
+
 ---@class AceAddon-3.0
+---[Documentation](https://www.wowace.com/projects/ace3/pages/api/ace-addon-3-0)
 local lib = {}
 
 ---@param name string
@@ -28,6 +33,10 @@ function lib:IterateAddons() end
 ---@overload fun(self, name: string, ...: string)
 ---[Documentation](https://www.wowace.com/projects/ace3/pages/api/ace-addon-3-0#title-18)
 function lib:NewAddon(object, name, ...) end
+
+-- ----------------------------------------------------------------------------
+-- AceAddon
+-- ----------------------------------------------------------------------------
 
 ---@class AceAddon
 ---@field name string
@@ -101,6 +110,10 @@ function addon:SetDefaultModuleState(state) end
 ---@param state boolean
 ---[Documentation](https://www.wowace.com/projects/ace3/pages/api/ace-addon-3-0#title-14)
 function addon:SetEnabledState(state) end
+
+-- ----------------------------------------------------------------------------
+-- AceModule
+-- ----------------------------------------------------------------------------
 
 ---@class AceModule : AceAddon
 ---@field moduleName string
