@@ -39,12 +39,12 @@ function lib:NewAddon(object, name, ...) end
 -- ----------------------------------------------------------------------------
 
 ---@class AceAddon
----@field name string
----@field modules { [string]: AceModule }
----@field enabledState boolean
----@field defaultModuleState boolean
----@field orderedModules AceModule[]
 ---@field defaultModuleLibraries table
+---@field defaultModuleState boolean
+---@field enabledState boolean
+---@field modules { [string]: AceModule }
+---@field name string
+---@field orderedModules AceModule[]
 local addon = {}
 
 ---@return boolean
