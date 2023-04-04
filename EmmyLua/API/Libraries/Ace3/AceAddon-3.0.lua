@@ -67,7 +67,7 @@ function addon:EnableModule(name) end
 
 ---@param name string
 ---@param silent? boolean
----@return table module
+---@return AceModule module
 ---[Documentation](https://www.wowace.com/projects/ace3/pages/api/ace-addon-3-0#title-6)
 function addon:GetModule(name, silent) end
 
