@@ -95,6 +95,15 @@ function addon:IterateModules() end
 ---[Documentation](https://www.wowace.com/projects/ace3/pages/api/ace-addon-3-0#title-10)
 function addon:NewModule(name, ...) end
 
+-- Callback function called when your addon is manually being disabled.
+function addon:OnDisable() end
+
+-- Callback function called during the PLAYER_LOGIN event, when most of the data provided by the game is already present.
+function addon:OnEnable() end
+
+-- Callback function called directly after the addon is fully loaded.
+function addon:OnInitialize() end
+
 ---@param ... string List of libraries to embed into the addon
 ---[Documentation](https://www.wowace.com/projects/ace3/pages/api/ace-addon-3-0#title-11)
 function addon:SetDefaultModuleLibraries(...) end
