@@ -11,6 +11,8 @@ function CallbackHandler:New(target, RegisterName, UnregisterName, UnregisterAll
 end
 
 ---@class CallbackHandlerRegistry
+---@field OnUnused? fun(registry: CallbackHandlerRegistry, target: table, eventName: string) If defined, called when an event stops.
+---@field OnUsed? fun(registry: CallbackHandlerRegistry, target: table, eventName: string) If defined, called when an event starts.
 local CallbackHandlerRegistry = {}
 
 ---fires the given event/message into the registry
