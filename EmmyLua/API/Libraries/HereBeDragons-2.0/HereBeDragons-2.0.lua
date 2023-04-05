@@ -1,8 +1,11 @@
+---@meta
+
 -- ----------------------------------------------------------------------------
 -- HereBeDragons-2.0
 -- ----------------------------------------------------------------------------
----@meta
+
 ---@class HereBeDragons-2.0
+---[Documentation](https://www.wowace.com/projects/herebedragons/pages/api/here-be-dragons-2-0)
 local lib = {}
 
 -- ----------------------------------------------------------------------------
@@ -120,7 +123,6 @@ function lib:TranslateZoneCoordinates(x, y, oZone, dZone, allowOutOfBounds) end
 ---@return number y Y coordinate of the player's position
 ---@return number instance Instance ID of the World Coordinate system the player is in
 function lib:GetPlayerWorldPosition() end
-
 
 --- Retrieve the zone information the player is currently in.
 ---
