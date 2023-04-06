@@ -94,9 +94,9 @@ function DBObjectLib:RegisterNamespace(name, defaults) end
 function DBObjectLib:GetNamespace(name, silent) end
 
 ---@param addon AceAddon The addon created by AceAddon-3.0:NewAddon
----@param eventname string The name of the event triggering the callback
+---@param eventName string The name of the event triggering the callback
 ---@param funcname string The name of the function, exposed by addon, to call
 --- ---
 ---[Documentation](https://www.wowace.com/projects/ace3/pages/ace-db-3-0-tutorial#title-5)
-function DBObjectLib:RegisterCallback(addon, eventname, funcname) end
+function DBObjectLib.RegisterCallback(addon, eventName, funcname) end
 
