@@ -20,27 +20,11 @@ function AceDB:New(tbl, defaults, defaultProfile) end
 ---@class AceDBObject-3.0: AceDB.Schema
 local DBObjectLib = {}
 
----@param defaults table A table of defaults for this database
+---@param name string The name of the profile to be copied into the current profile
+---@param silent? boolean If true, do not raise an error when the profile does not exist
 --- ---
----[Documentation](https://www.wowace.com/projects/ace3/pages/api/ace-db-3-0#title-8)
-function DBObjectLib:RegisterDefaults(defaults) end
-
----@param name string The name of the profile to set as the current profile
---- Callback: OnProfileChanged, database, newProfileKey
---- ---
----[Documentation](https://www.wowace.com/projects/ace3/pages/api/ace-db-3-0#title-12)
-function DBObjectLib:SetProfile(name) end
-
----@return table #Contains the names of the existing profiles in the database.
----@param tbl? table A table to store the profile names in (optional)
---- ---
----[Documentation](https://www.wowace.com/projects/ace3/pages/api/ace-db-3-0#title-7)
-function DBObjectLib:GetProfiles(tbl) end
-
----@return string -- Returns the current profile name used by the database
---- ---
----[Documentation](https://www.wowace.com/projects/ace3/pages/api/ace-db-3-0#title-5)
-function DBObjectLib:GetCurrentProfile() end
+---[Documentation](https://www.wowace.com/projects/ace3/pages/api/ace-db-3-0#title-3)
+function DBObjectLib:CopyProfile(name, silent) end
 
 ---@param name string The name of the profile to be deleted
 ---@param silent? boolean If true, do not raise an error when the profile does not exist
@@ -48,29 +32,10 @@ function DBObjectLib:GetCurrentProfile() end
 ---[Documentation](https://www.wowace.com/projects/ace3/pages/api/ace-db-3-0#title-4)
 function DBObjectLib:DeleteProfile(name, silent) end
 
----@param name string The name of the profile to be copied into the current profile
----@param silent? boolean If true, do not raise an error when the profile does not exist
+---@return string -- Returns the current profile name used by the database
 --- ---
----[Documentation](https://www.wowace.com/projects/ace3/pages/api/ace-db-3-0#title-3)
-function DBObjectLib:CopyProfile(name, silent) end
-
----@param noChildren? boolean if set to true, the reset will not be populated to the child namespaces of this DB object
----@param noCallbacks? boolean if set to true, won't fire the OnProfileReset callback
---- ---
----[Documentation](https://www.wowace.com/projects/ace3/pages/api/ace-db-3-0#title-11)
-function DBObjectLib:ResetProfile(noChildren, noCallbacks) end
-
----@param defaultProfile? string The profile name to use as the default
---- ---
----[Documentation](https://www.wowace.com/projects/ace3/pages/api/ace-db-3-0#title-10)
-function DBObjectLib:ResetDB(defaultProfile) end
-
----@param name string The name of the new namespace
----@param defaults? table A table of values to use as defaults
----@return AceDBObject-3.0 The created database
---- ---
----[Documentation](https://www.wowace.com/projects/ace3/pages/api/ace-db-3-0#title-9)
-function DBObjectLib:RegisterNamespace(name, defaults) end
+---[Documentation](https://www.wowace.com/projects/ace3/pages/api/ace-db-3-0#title-5)
+function DBObjectLib:GetCurrentProfile() end
 
 ---@param name string The name of the new namespace
 ---@param silent? boolean if true, the addon is optional, silently return nil if its not found
@@ -79,6 +44,12 @@ function DBObjectLib:RegisterNamespace(name, defaults) end
 ---[Documentation](https://www.wowace.com/projects/ace3/pages/api/ace-db-3-0#title-6)
 function DBObjectLib:GetNamespace(name, silent) end
 
+---@return table #Contains the names of the existing profiles in the database.
+---@param tbl? table A table to store the profile names in (optional)
+--- ---
+---[Documentation](https://www.wowace.com/projects/ace3/pages/api/ace-db-3-0#title-7)
+function DBObjectLib:GetProfiles(tbl) end
+
 ---@param addon AceAddon The addon created by AceAddon-3.0:NewAddon
 ---@param eventName AceDB.EventName The name of the event triggering the callback
 ---@param funcname string The name of the function, exposed by addon, to call
@@ -86,20 +57,48 @@ function DBObjectLib:GetNamespace(name, silent) end
 ---[Documentation](https://www.wowace.com/projects/ace3/pages/ace-db-3-0-tutorial#title-5)
 function DBObjectLib.RegisterCallback(addon, eventName, funcname) end
 
+---@param defaults table A table of defaults for this database
+--- ---
+---[Documentation](https://www.wowace.com/projects/ace3/pages/api/ace-db-3-0#title-8)
+function DBObjectLib:RegisterDefaults(defaults) end
+
+---@param name string The name of the new namespace
+---@param defaults? table A table of values to use as defaults
+---@return AceDBObject-3.0 The created database
+--- ---
+---[Documentation](https://www.wowace.com/projects/ace3/pages/api/ace-db-3-0#title-9)
+function DBObjectLib:RegisterNamespace(name, defaults) end
+
+---@param defaultProfile? string The profile name to use as the default
+--- ---
+---[Documentation](https://www.wowace.com/projects/ace3/pages/api/ace-db-3-0#title-10)
+function DBObjectLib:ResetDB(defaultProfile) end
+
+---@param noChildren? boolean if set to true, the reset will not be populated to the child namespaces of this DB object
+---@param noCallbacks? boolean if set to true, won't fire the OnProfileReset callback
+--- ---
+---[Documentation](https://www.wowace.com/projects/ace3/pages/api/ace-db-3-0#title-11)
+function DBObjectLib:ResetProfile(noChildren, noCallbacks) end
+
+---@param name string The name of the profile to set as the current profile
+--- Callback: OnProfileChanged, database, newProfileKey
+--- ---
+---[Documentation](https://www.wowace.com/projects/ace3/pages/api/ace-db-3-0#title-12)
+function DBObjectLib:SetProfile(name) end
+
 -- ----------------------------------------------------------------------------
 -- Types
 -- ----------------------------------------------------------------------------
 
 ---@alias AceDB.EventName
----|"OnNewProfile"
----|"OnDatabaseShutdown"
----|"OnProfileShutdown"
----|"OnProfileChanged"
----|"OnProfileDeleted"
----|"OnProfileCopied"
----|"OnProfileReset"
 ---|"OnDatabaseReset"
+---|"OnDatabaseShutdown"
+---|"OnNewProfile"
 ---|"OnProfileChanged"
+---|"OnProfileCopied"
+---|"OnProfileDeleted"
+---|"OnProfileReset"
+---|"OnProfileShutdown"
 
 ---@class AceDB.Schema
 ---@field char table Character-specific data. Every character has its own database.
