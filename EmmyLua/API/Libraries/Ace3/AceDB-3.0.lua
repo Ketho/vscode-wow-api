@@ -1,7 +1,14 @@
 ---@meta
+
+-- ----------------------------------------------------------------------------
+-- AceDB-3.0
+-- ----------------------------------------------------------------------------
 ---@class AceDB-3.0
 local AceDB = {}
 
+-- ----------------------------------------------------------------------------
+-- AceDBObject-3.0
+-- ----------------------------------------------------------------------------
 ---@class AceDBObject-3.0
 ---@field char table Character-specific data. Every character has its own database.
 ---@field realm table Realm-specific data. All of the players characters on the same realm share this database.
