@@ -7,7 +7,7 @@
 local AceDB = {}
 
 ---@param tbl string|table The name of variable, or table to use for the database
----@param defaults? table A table of database defaults
+---@param defaults? AceDB.Schema A table of database defaults
 ---@param defaultProfile? string|true The name of the default profile. If not set, a character specific profile will be used as the default. You can also pass true to use a shared global profile called "Default".
 ---@return AceDBObject-3.0 DB
 --- ---
@@ -17,21 +17,7 @@ function AceDB:New(tbl, defaults, defaultProfile) end
 -- ----------------------------------------------------------------------------
 -- AceDBObject-3.0
 -- ----------------------------------------------------------------------------
----@class AceDBObject-3.0
----@field char table Character-specific data. Every character has its own database.
----@field realm table Realm-specific data. All of the players characters on the same realm share this database.
----@field class table Class-specific data. All of the players characters of the same class share this database.
----@field race table Race-specific data. All of the players characters of the same race share this database.
----@field faction table Faction-specific data. All of the players characters of the same faction share this database.
----@field factionrealm table Faction and realm specific data. All of the players characters on the same realm and of the same faction share this database.
----@field locale table Locale specific data, based on the locale of the players game client.
----@field global table Global Data. All characters on the same account share this database.
----@field profile table Profile-specific data. All characters using the same profile share this database. The user can control which profile should be used.
----@field profiles table Contains all profiles
----@field keys table
----@field sv table
----@field defaults table Cache of defaults
----@field parent table
+---@class AceDBObject-3.0: AceDB.Schema
 local DBObjectLib = {}
 
 ---@param defaults table A table of defaults for this database
@@ -100,3 +86,22 @@ function DBObjectLib:GetNamespace(name, silent) end
 ---[Documentation](https://www.wowace.com/projects/ace3/pages/ace-db-3-0-tutorial#title-5)
 function DBObjectLib.RegisterCallback(addon, eventName, funcname) end
 
+-- ----------------------------------------------------------------------------
+-- Types
+-- ----------------------------------------------------------------------------
+
+---@class AceDB.Schema
+---@field char table Character-specific data. Every character has its own database.
+---@field realm table Realm-specific data. All of the players characters on the same realm share this database.
+---@field class table Class-specific data. All of the players characters of the same class share this database.
+---@field race table Race-specific data. All of the players characters of the same race share this database.
+---@field faction table Faction-specific data. All of the players characters of the same faction share this database.
+---@field factionrealm table Faction and realm specific data. All of the players characters on the same realm and of the same faction share this database.
+---@field locale table Locale specific data, based on the locale of the players game client.
+---@field global table Global Data. All characters on the same account share this database.
+---@field profile table Profile-specific data. All characters using the same profile share this database. The user can control which profile should be used.
+---@field profiles table Contains all profiles
+---@field keys table
+---@field sv table
+---@field defaults table Cache of defaults
+---@field parent table
