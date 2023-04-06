@@ -6,6 +6,14 @@
 ---@class AceDB-3.0
 local AceDB = {}
 
+---@param tbl string|table The name of variable, or table to use for the database
+---@param defaults? table A table of database defaults
+---@param defaultProfile? string|boolean The name of the default profile. If not set, a character specific profile will be used as the default.
+---@return AceDBObject-3.0 DB
+--- ---
+---[Documentation](https://www.wowace.com/projects/ace3/pages/api/ace-db-3-0#title-2)
+function AceDB:New(tbl, defaults, defaultProfile) end
+
 -- ----------------------------------------------------------------------------
 -- AceDBObject-3.0
 -- ----------------------------------------------------------------------------
@@ -92,13 +100,3 @@ function DBObjectLib:GetNamespace(name, silent) end
 ---[Documentation](https://www.wowace.com/projects/ace3/pages/ace-db-3-0-tutorial#title-5)
 function DBObjectLib:RegisterCallback(addon, eventname, funcname) end
 
---[[-------------------------------------------------------------------------
-	AceDB Exposed Methods
----------------------------------------------------------------------------]]
----@param tbl string|table The name of variable, or table to use for the database
----@param defaults? table A table of database defaults
----@param defaultProfile? string|boolean The name of the default profile. If not set, a character specific profile will be used as the default.
----@return AceDBObject-3.0 DB
---- ---
----[Documentation](https://www.wowace.com/projects/ace3/pages/api/ace-db-3-0#title-2)
-function AceDB:New(tbl, defaults, defaultProfile) end
