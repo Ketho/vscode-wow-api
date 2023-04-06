@@ -8,7 +8,7 @@ local AceDB = {}
 
 ---@param tbl string|table The name of variable, or table to use for the database
 ---@param defaults? table A table of database defaults
----@param defaultProfile? string|boolean The name of the default profile. If not set, a character specific profile will be used as the default.
+---@param defaultProfile? string|true The name of the default profile. If not set, a character specific profile will be used as the default. You can also pass true to use a shared global profile called "Default".
 ---@return AceDBObject-3.0 DB
 --- ---
 ---[Documentation](https://www.wowace.com/projects/ace3/pages/api/ace-db-3-0#title-2)
