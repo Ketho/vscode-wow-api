@@ -67,10 +67,10 @@ function DBObjectLib:GetProfiles(tbl) end
 
 ---@param addon AceAddon The addon created by AceAddon-3.0:NewAddon
 ---@param eventName AceDB.EventName The name of the event triggering the callback
----@param funcname string The name of the function, exposed by addon, to call
+---@param method string|function The method to call when the event is fired.
 --- ---
 ---[Documentation](https://www.wowace.com/projects/ace3/pages/ace-db-3-0-tutorial#title-5)
-function DBObjectLib.RegisterCallback(addon, eventName, funcname) end
+function DBObjectLib.RegisterCallback(addon, eventName, method) end
 
 --Sets the defaults table for the given database object by clearing any that are currently set, and then setting the new defaults.
 ---@param defaults table A table of defaults for this database
