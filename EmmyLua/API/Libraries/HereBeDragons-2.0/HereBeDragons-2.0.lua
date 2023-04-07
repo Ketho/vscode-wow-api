@@ -1,8 +1,11 @@
+---@meta
+
 -- ----------------------------------------------------------------------------
 -- HereBeDragons-2.0
 -- ----------------------------------------------------------------------------
----@meta
+
 ---@class HereBeDragons-2.0
+---[Documentation](https://www.wowace.com/projects/herebedragons/pages/api/here-be-dragons-2-0)
 local lib = {}
 
 -- ----------------------------------------------------------------------------
@@ -121,7 +124,6 @@ function lib:TranslateZoneCoordinates(x, y, oZone, dZone, allowOutOfBounds) end
 ---@return number instance Instance ID of the World Coordinate system the player is in
 function lib:GetPlayerWorldPosition() end
 
-
 --- Retrieve the zone information the player is currently in.
 ---
 --- This function does not rely on the world map to retrieve the player's current position.
@@ -144,3 +146,19 @@ function lib:GetPlayerZonePosition() end
 ---@return number y Y coordinate of the unit's position
 ---@return number instance Instance ID of the World Coordinate system the unit is in
 function lib:GetUnitWorldPosition(unitID) end
+
+-- ----------------------------------------------------------------------------
+-- Callbacks
+-- ----------------------------------------------------------------------------
+
+---@alias HereBeDragons.EventName
+---|"PlayerZoneChanged"
+
+---@param target table The object registering to listen for the callback.
+---@param eventName HereBeDragons.EventName The event to register.
+---@param method string|function The method to call when the event is fired.
+function lib.RegisterCallback(target, eventName, method) end
+
+---@param target table The object unregistering to listen for the callback.
+---@param eventName HereBeDragons.EventName The event to unregister.
+function lib.UnregisterCallback(target, eventName) end
