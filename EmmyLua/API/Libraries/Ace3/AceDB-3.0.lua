@@ -109,6 +109,13 @@ function DBObjectLib:ResetProfile(noChildren, noCallbacks) end
 ---[Documentation](https://www.wowace.com/projects/ace3/pages/api/ace-db-3-0#title-12)
 function DBObjectLib:SetProfile(name) end
 
+---@param target table The object unregistering to listen for callbacks.
+function DBObjectLib.UnregisterAllCallbacks(target) end
+
+---@param target table The object unregistering to listen for the callback.
+---@param eventName AceDB.EventName The event to unregister.
+function DBObjectLib.UnregisterCallback(target, eventName) end
+
 -- ----------------------------------------------------------------------------
 -- Types
 -- ----------------------------------------------------------------------------
