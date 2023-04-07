@@ -73,7 +73,7 @@ function DBObjectLib:GetProfiles(tbl) end
 function DBObjectLib.RegisterCallback(addon, eventName, method) end
 
 --Sets the defaults table for the given database object by clearing any that are currently set, and then setting the new defaults.
----@param defaults table A table of defaults for this database
+---@param defaults AceDB.Schema A table of defaults for this database
 --- ---
 ---[Documentation](https://www.wowace.com/projects/ace3/pages/api/ace-db-3-0#title-8)
 function DBObjectLib:RegisterDefaults(defaults) end
@@ -82,7 +82,7 @@ function DBObjectLib:RegisterDefaults(defaults) end
 --
 -- This is a full scale database in it's own rights other than the fact that it cannot control its profile individually
 ---@param name string The name of the new namespace
----@param defaults? table A table of values to use as defaults
+---@param defaults? AceDB.Schema A table of values to use as defaults
 ---@return AceDBObject-3.0 namespace The created database namespace
 --- ---
 ---[Documentation](https://www.wowace.com/projects/ace3/pages/api/ace-db-3-0#title-9)
