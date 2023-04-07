@@ -51,7 +51,7 @@ function DBObjectLib:GetCurrentProfile() end
 -- Returns an already existing namespace from the database object.
 ---@param name string The name of the existing namespace
 ---@param silent? boolean if true, the addon is optional, silently return nil if its not found
----@return table -- the namespace object if found
+---@return table|nil namespace the namespace object if found
 --- ---
 ---[Documentation](https://www.wowace.com/projects/ace3/pages/api/ace-db-3-0#title-6)
 function DBObjectLib:GetNamespace(name, silent) end
