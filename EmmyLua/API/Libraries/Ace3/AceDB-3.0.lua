@@ -65,12 +65,12 @@ function DBObjectLib:GetNamespace(name, silent) end
 ---[Documentation](https://www.wowace.com/projects/ace3/pages/api/ace-db-3-0#title-7)
 function DBObjectLib:GetProfiles(tbl) end
 
----@param addon AceAddon The addon created by AceAddon-3.0:NewAddon
+---@param target table The object registering to listen for the callback.
 ---@param eventName AceDB.EventName The name of the event triggering the callback
 ---@param method string|function The method to call when the event is fired.
 --- ---
 ---[Documentation](https://www.wowace.com/projects/ace3/pages/ace-db-3-0-tutorial#title-5)
-function DBObjectLib.RegisterCallback(addon, eventName, method) end
+function DBObjectLib.RegisterCallback(target, eventName, method) end
 
 --Sets the defaults table for the given database object by clearing any that are currently set, and then setting the new defaults.
 ---@param defaults AceDB.Schema A table of defaults for this database
