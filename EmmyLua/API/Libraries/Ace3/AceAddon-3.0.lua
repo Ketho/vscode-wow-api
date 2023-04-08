@@ -30,7 +30,7 @@ function lib:IterateAddons() end
 ---@param name string
 ---@param ...? string List of libraries to embed into the addon
 ---@return AceAddon
----@overload fun(self, name: string, ...: string)
+---@overload fun(self, name: string, ...: string): AceAddon
 ---[Documentation](https://www.wowace.com/projects/ace3/pages/api/ace-addon-3-0#title-18)
 function lib:NewAddon(object, name, ...) end
 
