@@ -41,4 +41,4 @@ function AceLocale:NewLocale(application, locale, isDefault, silent) end
 ---|"zhCN": Chinese (China) (simplified) implemented LTR left-to-right in WoW
 ---|"zhTW": Chinese (Taiwan) (traditional) implemented LTR left-to-right in WoW
 
----@alias AceLocale.Localizations { [string]: string }
+---@alias AceLocale.Localizations { [string]: string|true }
