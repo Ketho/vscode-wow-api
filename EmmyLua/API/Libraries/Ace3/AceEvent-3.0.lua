@@ -1,4 +1,8 @@
 ---@meta
+
+--------------------------------------------------------------------------------
+---- AceEvent-3.0
+--------------------------------------------------------------------------------
 ---[Documentation](https://www.wowace.com/projects/ace3/pages/api/ace-event-3-0)
 ---@class AceEvent-3.0
 local AceEvent = {}
@@ -34,8 +38,9 @@ function AceEvent:UnregisterMessage(message) end
 ---[Documentation](https://www.wowace.com/projects/ace3/pages/api/ace-event-3-0#title-3)
 function AceEvent:SendMessage(message, ...) end
 
-
----@param target any target object to embed AceEvent in
+---@generic T
+---@param target T target object to embed AceEvent in
+---@return T|AceEvent-3.0 augmentedTarget
 --- ---
 ---[Documentation](https://www.wowace.com/projects/ace3/pages/api/ace-event-3-0)
 function AceEvent:Embed(target) end
