@@ -40,7 +40,7 @@ function AceEvent:SendMessage(message, ...) end
 
 ---@generic T
 ---@param target T target object to embed AceEvent in
----@return T augmentedTarget
+---@return T|AceEvent-3.0 augmentedTarget
 --- ---
 ---[Documentation](https://www.wowace.com/projects/ace3/pages/api/ace-event-3-0)
 function AceEvent:Embed(target) end
