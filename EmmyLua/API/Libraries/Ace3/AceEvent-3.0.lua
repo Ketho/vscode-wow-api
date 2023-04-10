@@ -39,7 +39,7 @@ function AceEvent:UnregisterMessage(message) end
 function AceEvent:SendMessage(message, ...) end
 
 ---@generic T
----@param target `T` target object to embed AceEvent in
+---@param target T target object to embed AceEvent in
 ---@return T augmentedTarget
 --- ---
 ---[Documentation](https://www.wowace.com/projects/ace3/pages/api/ace-event-3-0)
