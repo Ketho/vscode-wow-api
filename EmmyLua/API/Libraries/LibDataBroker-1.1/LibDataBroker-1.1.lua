@@ -25,7 +25,7 @@ function lib:DataObjectIterator() end
 
 ---@param addon table|string
 ---@param eventName string
----@param method? string or function
+---@param method? string|function
 ---@param arg? any
 ---[Documentation](https://github.com/tekkub/libdatabroker-1-1/wiki/API#ldbregistercallbackmytable-or-myaddonid-eventname-method-arg)
 function lib:RegisterCallback(addon, eventName, method, arg) end
