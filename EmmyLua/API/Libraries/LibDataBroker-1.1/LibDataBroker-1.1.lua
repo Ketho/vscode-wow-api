@@ -1,20 +1,25 @@
 ---@meta
+
+--------------------------------------------------------------------------------
+---- LibDataBroker-1.1
+--------------------------------------------------------------------------------
+
 ---[Documentation](https://github.com/tekkub/libdatabroker-1-1/wiki/API)
 ---@class LibDataBroker-1.1
 local lib = {}
 
 ---@param name string
----@param dataObject? table
----@return table 
+---@param dataObject? LibDataBroker.DataObject
+---@return LibDataBroker.DataObject
 ---[Documentation](https://github.com/tekkub/libdatabroker-1-1/wiki/API#ldbnewdataobjectname-dataobject--dataobject)
 function lib:NewDataObject(name, dataObject) end
 
 ---@param dataObjectName string
----@return table
+---@return LibDataBroker.DataObject
 ---[Documentation](https://github.com/tekkub/libdatabroker-1-1/wiki/API#ldbgetdataobjectbynamedataobjectname--dataobject)
 function lib:GetDataObjectByName(dataObjectName) end
 
----@param dataObject table
+---@param dataObject LibDataBroker.DataObject
 ---@return string
 ---[Documentation](https://github.com/tekkub/libdatabroker-1-1/wiki/API#ldbgetnamebydataobjectdataobject--name)
 function lib:GetNameByDataObject(dataObject) end
