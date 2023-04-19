@@ -1,4 +1,100 @@
 ---@meta
+---[Documentation](https://wowpedia.fandom.com/wiki/API_TargetNearestEnemy)
+---@param reverse boolean
+function TargetNearestEnemy(reverse) end
+
+---[Documentation](https://wowpedia.fandom.com/wiki/API_TargetNearestEnemyPlayer)
+function TargetNearestEnemyPlayer(reverseFlag) end
+
+---[Documentation](https://wowpedia.fandom.com/wiki/API_TargetNearestFriend)
+function TargetNearestFriend(reverseFlag) end
+
+---[Documentation](https://wowpedia.fandom.com/wiki/API_TargetNearestFriendPlayer)
+function TargetNearestFriendPlayer(reverseFlag) end
+
+---[Documentation](https://wowpedia.fandom.com/wiki/API_TargetNearestPartyMember)
+function TargetNearestPartyMember() end
+
+---[Documentation](https://wowpedia.fandom.com/wiki/API_TargetNearestRaidMember)
+function TargetNearestRaidMember() end
+
+---[Documentation](https://wowpedia.fandom.com/wiki/API_TargetPriorityHighlightEnd)
+function TargetPriorityHighlightEnd() end
+
+---[Documentation](https://wowpedia.fandom.com/wiki/API_TargetPriorityHighlightStart)
+function TargetPriorityHighlightStart() end
+
+---[Documentation](https://wowpedia.fandom.com/wiki/API_TargetSpellReplacesBonusTree)
+function TargetSpellReplacesBonusTree() end
+
+---[Documentation](https://wowpedia.fandom.com/wiki/API_TargetToggle)
+function TargetToggle() end
+
+---[Documentation](https://wowpedia.fandom.com/wiki/API_TargetTotem)
+function TargetTotem(slot) end
+
+---[Documentation](https://wowpedia.fandom.com/wiki/API_TargetUnit)
+---@param unit string
+---@overload fun(name: string, exactMatch?: boolean)
+function TargetUnit(unit) end
+
+---[Documentation](https://wowpedia.fandom.com/wiki/API_TaxiGetDestX)
+function TaxiGetDestX(slot, hop) end
+
+---[Documentation](https://wowpedia.fandom.com/wiki/API_TaxiGetDestY)
+function TaxiGetDestY(slot, hop) end
+
+---[Documentation](https://wowpedia.fandom.com/wiki/API_TaxiGetNodeSlot)
+function TaxiGetNodeSlot() end
+
+---[Documentation](https://wowpedia.fandom.com/wiki/API_TaxiGetSrcX)
+function TaxiGetSrcX(slot, hop) end
+
+---[Documentation](https://wowpedia.fandom.com/wiki/API_TaxiGetSrcY)
+function TaxiGetSrcY(slot, hop) end
+
+---[Documentation](https://wowpedia.fandom.com/wiki/API_TaxiIsDirectFlight)
+function TaxiIsDirectFlight() end
+
+---[Documentation](https://wowpedia.fandom.com/wiki/API_TaxiNodeCost)
+---@param slot number
+---@return number cost
+function TaxiNodeCost(slot) end
+
+---[Documentation](https://wowpedia.fandom.com/wiki/API_TaxiNodeGetType)
+---@param index number
+---@return string type
+function TaxiNodeGetType(index) end
+
+---[Documentation](https://wowpedia.fandom.com/wiki/API_TaxiNodeName)
+---@param index number
+---@return string name
+function TaxiNodeName(index) end
+
+---[Documentation](https://wowpedia.fandom.com/wiki/API_TaxiNodePosition)
+function TaxiNodePosition(slot) end
+
+---[Documentation](https://wowpedia.fandom.com/wiki/API_TaxiRequestEarlyLanding)
+function TaxiRequestEarlyLanding() end
+
+---[Documentation](https://wowpedia.fandom.com/wiki/API_TimeoutResurrect)
+function TimeoutResurrect() end
+
+---[Documentation](https://wowpedia.fandom.com/wiki/API_ToggleAnimKitDisplay)
+function ToggleAnimKitDisplay() end
+
+---[Documentation](https://wowpedia.fandom.com/wiki/API_ToggleAutoRun)
+function ToggleAutoRun() end
+
+---[Documentation](https://wowpedia.fandom.com/wiki/API_ToggleDebugAIDisplay)
+function ToggleDebugAIDisplay() end
+
+---[Documentation](https://wowpedia.fandom.com/wiki/API_TogglePVP)
+function TogglePVP() end
+
+---[Documentation](https://wowpedia.fandom.com/wiki/API_TogglePetAutocast)
+function TogglePetAutocast(index) end
+
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_ToggleRun)
 function ToggleRun() end
 

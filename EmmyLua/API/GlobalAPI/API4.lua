@@ -1,4 +1,93 @@
 ---@meta
+---[Documentation](https://wowpedia.fandom.com/wiki/API_GetXPExhaustion)
+---@return number exhaustionThreshold
+function GetXPExhaustion() end
+
+---[Documentation](https://wowpedia.fandom.com/wiki/API_GetZonePVPInfo)
+---@return string pvpType
+---@return boolean isFFA
+---@return string faction
+function GetZonePVPInfo() end
+
+---[Documentation](https://wowpedia.fandom.com/wiki/API_GetZoneText)
+---@return string zoneName
+function GetZoneText() end
+
+---[Documentation](https://wowpedia.fandom.com/wiki/API_GiveMasterLoot)
+function GiveMasterLoot(slot, index) end
+
+---[Documentation](https://wowpedia.fandom.com/wiki/API_GroupHasOfflineMember)
+function GroupHasOfflineMember() end
+
+---[Documentation](https://wowpedia.fandom.com/wiki/API_GuildControlAddRank)
+function GuildControlAddRank(name) end
+
+---[Documentation](https://wowpedia.fandom.com/wiki/API_GuildControlDelRank)
+function GuildControlDelRank(name) end
+
+---[Documentation](https://wowpedia.fandom.com/wiki/API_GuildControlGetAllowedShifts)
+function GuildControlGetAllowedShifts(rankOrder) end
+
+---[Documentation](https://wowpedia.fandom.com/wiki/API_GuildControlGetNumRanks)
+function GuildControlGetNumRanks() end
+
+---[Documentation](https://wowpedia.fandom.com/wiki/API_GuildControlGetRankName)
+function GuildControlGetRankName(index) end
+
+---[Documentation](https://wowpedia.fandom.com/wiki/API_GuildControlSaveRank)
+function GuildControlSaveRank(name) end
+
+---[Documentation](https://wowpedia.fandom.com/wiki/API_GuildControlSetRank)
+---@param rankOrder number
+function GuildControlSetRank(rankOrder) end
+
+---[Documentation](https://wowpedia.fandom.com/wiki/API_GuildControlSetRankFlag)
+---@param index number
+---@param enabled boolean
+function GuildControlSetRankFlag(index, enabled) end
+
+---[Documentation](https://wowpedia.fandom.com/wiki/API_GuildControlShiftRankDown)
+function GuildControlShiftRankDown(rankOrder) end
+
+---[Documentation](https://wowpedia.fandom.com/wiki/API_GuildControlShiftRankUp)
+function GuildControlShiftRankUp(rankOrder) end
+
+---[Documentation](https://wowpedia.fandom.com/wiki/API_GuildDemote)
+---@param playername string
+function GuildDemote(playername) end
+
+---[Documentation](https://wowpedia.fandom.com/wiki/API_GuildDisband)
+function GuildDisband() end
+
+---[Documentation](https://wowpedia.fandom.com/wiki/API_GuildInfo)
+function GuildInfo() end
+
+---[Documentation](https://wowpedia.fandom.com/wiki/API_GuildInvite)
+---@param playername string
+function GuildInvite(playername) end
+
+---[Documentation](https://wowpedia.fandom.com/wiki/API_GuildLeave)
+function GuildLeave() end
+
+---[Documentation](https://wowpedia.fandom.com/wiki/API_GuildMasterAbsent)
+function GuildMasterAbsent() end
+
+---[Documentation](https://wowpedia.fandom.com/wiki/API_GuildNewsSetSticky)
+function GuildNewsSetSticky(index, bool) end
+
+---[Documentation](https://wowpedia.fandom.com/wiki/API_GuildNewsSort)
+function GuildNewsSort(byDate) end
+
+---[Documentation](https://wowpedia.fandom.com/wiki/API_GuildPromote)
+---@param playername string
+function GuildPromote(playername) end
+
+---[Documentation](https://wowpedia.fandom.com/wiki/API_GuildRosterSetOfficerNote)
+function GuildRosterSetOfficerNote(index, note) end
+
+---[Documentation](https://wowpedia.fandom.com/wiki/API_GuildRosterSetPublicNote)
+function GuildRosterSetPublicNote(index, note) end
+
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_GuildSetLeader)
 ---@param name string
 function GuildSetLeader(name) end
@@ -178,6 +267,10 @@ function IsAddOnLoaded(index) end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_IsAddonVersionCheckEnabled)
 function IsAddonVersionCheckEnabled() end
+
+---[Documentation](https://wowpedia.fandom.com/wiki/API_IsAdvancedFlyableArea)
+---@return boolean flyable
+function IsAdvancedFlyableArea() end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_IsAllowedToUserTeleport)
 ---@return boolean allowedToTeleport
@@ -2344,7 +2437,9 @@ function Stuck() end
 function SubmitRequiredGuildRename() end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_SummonFriend)
-function SummonFriend(unit) end
+---@param guid string
+---@param name string
+function SummonFriend(guid, name) end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_SummonRandomCritter)
 function SummonRandomCritter() end
@@ -2397,100 +2492,4 @@ function TargetLastTarget() end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_TargetNearest)
 function TargetNearest() end
-
----[Documentation](https://wowpedia.fandom.com/wiki/API_TargetNearestEnemy)
----@param reverse boolean
-function TargetNearestEnemy(reverse) end
-
----[Documentation](https://wowpedia.fandom.com/wiki/API_TargetNearestEnemyPlayer)
-function TargetNearestEnemyPlayer(reverseFlag) end
-
----[Documentation](https://wowpedia.fandom.com/wiki/API_TargetNearestFriend)
-function TargetNearestFriend(reverseFlag) end
-
----[Documentation](https://wowpedia.fandom.com/wiki/API_TargetNearestFriendPlayer)
-function TargetNearestFriendPlayer(reverseFlag) end
-
----[Documentation](https://wowpedia.fandom.com/wiki/API_TargetNearestPartyMember)
-function TargetNearestPartyMember() end
-
----[Documentation](https://wowpedia.fandom.com/wiki/API_TargetNearestRaidMember)
-function TargetNearestRaidMember() end
-
----[Documentation](https://wowpedia.fandom.com/wiki/API_TargetPriorityHighlightEnd)
-function TargetPriorityHighlightEnd() end
-
----[Documentation](https://wowpedia.fandom.com/wiki/API_TargetPriorityHighlightStart)
-function TargetPriorityHighlightStart() end
-
----[Documentation](https://wowpedia.fandom.com/wiki/API_TargetSpellReplacesBonusTree)
-function TargetSpellReplacesBonusTree() end
-
----[Documentation](https://wowpedia.fandom.com/wiki/API_TargetToggle)
-function TargetToggle() end
-
----[Documentation](https://wowpedia.fandom.com/wiki/API_TargetTotem)
-function TargetTotem(slot) end
-
----[Documentation](https://wowpedia.fandom.com/wiki/API_TargetUnit)
----@param unit string
----@overload fun(name: string, exactMatch?: boolean)
-function TargetUnit(unit) end
-
----[Documentation](https://wowpedia.fandom.com/wiki/API_TaxiGetDestX)
-function TaxiGetDestX(slot, hop) end
-
----[Documentation](https://wowpedia.fandom.com/wiki/API_TaxiGetDestY)
-function TaxiGetDestY(slot, hop) end
-
----[Documentation](https://wowpedia.fandom.com/wiki/API_TaxiGetNodeSlot)
-function TaxiGetNodeSlot() end
-
----[Documentation](https://wowpedia.fandom.com/wiki/API_TaxiGetSrcX)
-function TaxiGetSrcX(slot, hop) end
-
----[Documentation](https://wowpedia.fandom.com/wiki/API_TaxiGetSrcY)
-function TaxiGetSrcY(slot, hop) end
-
----[Documentation](https://wowpedia.fandom.com/wiki/API_TaxiIsDirectFlight)
-function TaxiIsDirectFlight() end
-
----[Documentation](https://wowpedia.fandom.com/wiki/API_TaxiNodeCost)
----@param slot number
----@return number cost
-function TaxiNodeCost(slot) end
-
----[Documentation](https://wowpedia.fandom.com/wiki/API_TaxiNodeGetType)
----@param index number
----@return string type
-function TaxiNodeGetType(index) end
-
----[Documentation](https://wowpedia.fandom.com/wiki/API_TaxiNodeName)
----@param index number
----@return string name
-function TaxiNodeName(index) end
-
----[Documentation](https://wowpedia.fandom.com/wiki/API_TaxiNodePosition)
-function TaxiNodePosition(slot) end
-
----[Documentation](https://wowpedia.fandom.com/wiki/API_TaxiRequestEarlyLanding)
-function TaxiRequestEarlyLanding() end
-
----[Documentation](https://wowpedia.fandom.com/wiki/API_TimeoutResurrect)
-function TimeoutResurrect() end
-
----[Documentation](https://wowpedia.fandom.com/wiki/API_ToggleAnimKitDisplay)
-function ToggleAnimKitDisplay() end
-
----[Documentation](https://wowpedia.fandom.com/wiki/API_ToggleAutoRun)
-function ToggleAutoRun() end
-
----[Documentation](https://wowpedia.fandom.com/wiki/API_ToggleDebugAIDisplay)
-function ToggleDebugAIDisplay() end
-
----[Documentation](https://wowpedia.fandom.com/wiki/API_TogglePVP)
-function TogglePVP() end
-
----[Documentation](https://wowpedia.fandom.com/wiki/API_TogglePetAutocast)
-function TogglePetAutocast(index) end
 

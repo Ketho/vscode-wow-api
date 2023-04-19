@@ -1,5 +1,22 @@
 ---@meta
 Enum = {
+	---@enum Enum.AccountExportResult
+	AccountExportResult = {
+		Success = 0,
+		UnknownError = 1,
+		Cancelled = 2,
+		ShuttingDown = 3,
+		TimedOut = 4,
+		NoAccountFound = 5,
+		RequestedInvalidCharacter = 6,
+		RpcError = 7,
+		FileInvalid = 8,
+		FileWriteFailed = 9,
+		Unavailable = 10,
+		AlreadyInProgress = 11,
+		FailedToLockAccount = 12,
+		FailedToGenerateFile = 13,
+	},
 	---@enum Enum.ActionBarOrientation
 	ActionBarOrientation = {
 		Horizontal = 0,
@@ -698,6 +715,19 @@ Enum = {
 		Private_Party = 2,
 		Public_Party = 3,
 		Communities = 4,
+	},
+	---@enum Enum.ChatToxityFilterOptOut
+	ChatToxityFilterOptOut = {
+		FilterAll = 0,
+		ExcludeFilterFriend = 1,
+		ExcludeFilterGuild = 2,
+		ExcludeFilterAll = 4294967295,
+	},
+	---@enum Enum.ChatWhisperTargetStatus
+	ChatWhisperTargetStatus = {
+		CanWhisper = 0,
+		Offline = 1,
+		WrongFaction = 2,
 	},
 	---@enum Enum.ChrCustomizationCategoryFlag
 	ChrCustomizationCategoryFlag = {
@@ -1669,6 +1699,19 @@ Enum = {
 		SpellLearned = 21,
 		TreasureItem = 22,
 	},
+	---@enum Enum.ExcludedCensorSources
+	ExcludedCensorSources = {
+		None = 0,
+		Friends = 1,
+		Guild = 2,
+		Reserve1 = 4,
+		Reserve2 = 8,
+		Reserve3 = 16,
+		Reserve4 = 32,
+		Reserve5 = 64,
+		Reserve6 = 128,
+		All = 255,
+	},
 	---@enum Enum.ExpansionLandingPageType
 	ExpansionLandingPageType = {
 		None = 0,
@@ -1865,11 +1908,11 @@ Enum = {
 	},
 	---@enum Enum.GarrisonFollowerType
 	GarrisonFollowerType = {
-		FollowerType_6_0 = 1,
-		FollowerType_6_2 = 2,
-		FollowerType_7_0 = 4,
-		FollowerType_8_0 = 22,
-		FollowerType_9_0 = 123,
+		FollowerType_6_0_GarrisonFollower = 1,
+		FollowerType_6_0_Boat = 2,
+		FollowerType_7_0_GarrisonFollower = 4,
+		FollowerType_8_0_GarrisonFollower = 22,
+		FollowerType_9_0_GarrisonFollower = 123,
 	},
 	---@enum Enum.GarrisonTalentAvailability
 	GarrisonTalentAvailability = {
@@ -1885,10 +1928,10 @@ Enum = {
 	},
 	---@enum Enum.GarrisonType
 	GarrisonType = {
-		Type_6_0 = 2,
-		Type_7_0 = 3,
-		Type_8_0 = 9,
-		Type_9_0 = 111,
+		Type_6_0_Garrison = 2,
+		Type_7_0_Garrison = 3,
+		Type_8_0_Garrison = 9,
+		Type_9_0_Garrison = 111,
 	},
 	---@enum Enum.GossipNpcOption
 	GossipNpcOption = {
@@ -1954,6 +1997,7 @@ Enum = {
 	---@enum Enum.GossipOptionRecFlags
 	GossipOptionRecFlags = {
 		QuestLabelPrepend = 1,
+		HideOptionIDFromClient = 2,
 	},
 	---@enum Enum.GossipOptionRewardType
 	GossipOptionRewardType = {
@@ -2271,6 +2315,7 @@ Enum = {
 		DominationUnholy = 4194304,
 		Cypher = 8388608,
 		Tinker = 16777216,
+		Primordial = 33554432,
 	},
 	---@enum Enum.ItemGemSubclass
 	ItemGemSubclass = {
@@ -2449,6 +2494,7 @@ Enum = {
 		Domination = 22,
 		Cypher = 23,
 		Tinker = 24,
+		Primordial = 25,
 	},
 	---@enum Enum.ItemSoundType
 	ItemSoundType = {
@@ -2580,6 +2626,7 @@ Enum = {
 	LanguageFlag = {
 		IsExotic = 1,
 		HiddenFromPlayer = 2,
+		HideLanguageNameInChat = 4,
 	},
 	---@enum Enum.LinkedCurrencyFlags
 	LinkedCurrencyFlags = {
@@ -3482,6 +3529,13 @@ Enum = {
 		Totem = 1,
 		Area = 2,
 	},
+	---@enum Enum.RecruitAFriendRewardsVersion
+	RecruitAFriendRewardsVersion = {
+		InvalidVersion = 0,
+		UnusedVersionOne = 1,
+		VersionTwo = 2,
+		VersionThree = 3,
+	},
 	---@enum Enum.RelativeContentDifficulty
 	RelativeContentDifficulty = {
 		Trivial = 0,
@@ -3737,6 +3791,16 @@ Enum = {
 		UserWaypoint = 1,
 		Corpse = 2,
 		Scenario = 3,
+	},
+	---@enum Enum.TimeEventFlag
+	TimeEventFlag = {
+		GlueScreenShortcut = 1,
+	},
+	---@enum Enum.TitleIconVersion
+	TitleIconVersion = {
+		Small = 0,
+		Medium = 1,
+		Large = 2,
 	},
 	---@enum Enum.TooltipComparisonMethod
 	TooltipComparisonMethod = {
@@ -3997,6 +4061,7 @@ Enum = {
 	---@enum Enum.TraitSystemFlag
 	TraitSystemFlag = {
 		AllowMultipleLoadoutsPerTree = 1,
+		ShowSpendConfirmation = 2,
 	},
 	---@enum Enum.TraitTreeFlag
 	TraitTreeFlag = {

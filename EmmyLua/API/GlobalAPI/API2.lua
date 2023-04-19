@@ -1,4 +1,65 @@
 ---@meta
+---[Documentation](https://wowpedia.fandom.com/wiki/API_C_TalkingHead.GetCurrentLineInfo)
+function C_TalkingHead.GetCurrentLineInfo() end
+
+---[Documentation](https://wowpedia.fandom.com/wiki/API_C_TalkingHead.IgnoreCurrentTalkingHead)
+function C_TalkingHead.IgnoreCurrentTalkingHead() end
+
+---[Documentation](https://wowpedia.fandom.com/wiki/API_C_TalkingHead.IsCurrentTalkingHeadIgnored)
+function C_TalkingHead.IsCurrentTalkingHeadIgnored() end
+
+---[Documentation](https://wowpedia.fandom.com/wiki/API_C_TalkingHead.SetConversationsDeferred)
+function C_TalkingHead.SetConversationsDeferred(deferred) end
+
+---[Documentation](https://wowpedia.fandom.com/wiki/API_C_Texture.ClearTitleIconTexture)
+function C_Texture.ClearTitleIconTexture() end
+
+---[Documentation](https://wowpedia.fandom.com/wiki/API_C_Texture.GetTitleIconTexture)
+function C_Texture.GetTitleIconTexture() end
+
+---[Documentation](https://wowpedia.fandom.com/wiki/API_C_Texture.IsTitleIconTextureReady)
+function C_Texture.IsTitleIconTextureReady() end
+
+---[Documentation](https://wowpedia.fandom.com/wiki/API_C_Texture.SetTitleIconTexture)
+function C_Texture.SetTitleIconTexture() end
+
+---[Documentation](https://wowpedia.fandom.com/wiki/API_C_ToyBox.ForceToyRefilter)
+function C_ToyBox.ForceToyRefilter() end
+
+---[Documentation](https://wowpedia.fandom.com/wiki/API_C_ToyBox.GetCollectedShown)
+function C_ToyBox.GetCollectedShown() end
+
+---[Documentation](https://wowpedia.fandom.com/wiki/API_C_ToyBox.GetIsFavorite)
+function C_ToyBox.GetIsFavorite(itemID) end
+
+---[Documentation](https://wowpedia.fandom.com/wiki/API_C_ToyBox.GetNumFilteredToys)
+function C_ToyBox.GetNumFilteredToys() end
+
+---[Documentation](https://wowpedia.fandom.com/wiki/API_C_ToyBox.GetNumLearnedDisplayedToys)
+function C_ToyBox.GetNumLearnedDisplayedToys() end
+
+---[Documentation](https://wowpedia.fandom.com/wiki/API_C_ToyBox.GetNumTotalDisplayedToys)
+function C_ToyBox.GetNumTotalDisplayedToys() end
+
+---[Documentation](https://wowpedia.fandom.com/wiki/API_C_ToyBox.GetNumToys)
+function C_ToyBox.GetNumToys() end
+
+---[Documentation](https://wowpedia.fandom.com/wiki/API_C_ToyBox.GetToyFromIndex)
+function C_ToyBox.GetToyFromIndex(itemIndex) end
+
+---[Documentation](https://wowpedia.fandom.com/wiki/API_C_ToyBox.GetToyInfo)
+---@param itemID number
+---@return number itemID
+---@return string toyName
+---@return number icon
+---@return boolean isFavorite
+---@return boolean hasFanfare
+---@return Enum.ItemQuality itemQuality
+function C_ToyBox.GetToyInfo(itemID) end
+
+---[Documentation](https://wowpedia.fandom.com/wiki/API_C_ToyBox.GetToyLink)
+function C_ToyBox.GetToyLink(itemID) end
+
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_ToyBox.GetUncollectedShown)
 function C_ToyBox.GetUncollectedShown() end
 
@@ -230,6 +291,12 @@ function C_TradeSkillUI.SetRecipeSourceTypeFilter(sourceType, filtered) end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_TradeSkillUI.StopRecipeRepeat)
 function C_TradeSkillUI.StopRecipeRepeat() end
+
+---[Documentation](https://wowpedia.fandom.com/wiki/API_C_Traits.GetTraitSystemFlags)
+function C_Traits.GetTraitSystemFlags() end
+
+---[Documentation](https://wowpedia.fandom.com/wiki/API_C_Traits.IsReadyForCommit)
+function C_Traits.IsReadyForCommit() end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_Trophy.MonumentChangeAppearanceToTrophyID)
 function C_Trophy.MonumentChangeAppearanceToTrophyID(trophyID) end
@@ -1997,6 +2064,9 @@ function GetCurrentEventID() end
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_GetCurrentGlyphNameForSpell)
 function GetCurrentGlyphNameForSpell(spellID) end
 
+---[Documentation](https://wowpedia.fandom.com/wiki/API_GetCurrentGraphicsAPI)
+function GetCurrentGraphicsAPI() end
+
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_GetCurrentGraphicsSetting)
 function GetCurrentGraphicsSetting() end
 
@@ -2366,106 +2436,4 @@ function GetGuildRecipeInfoPostQuery() end
 ---@return string name
 ---@return boolean online
 function GetGuildRecipeMember(index) end
-
----[Documentation](https://wowpedia.fandom.com/wiki/API_GetGuildRenameRequired)
-function GetGuildRenameRequired() end
-
----[Documentation](https://wowpedia.fandom.com/wiki/API_GetGuildRewardInfo)
-function GetGuildRewardInfo(index) end
-
----[Documentation](https://wowpedia.fandom.com/wiki/API_GetGuildRosterInfo)
----@param index number
----@return string name
----@return string rankName
----@return number rankIndex
----@return number level
----@return string classDisplayName
----@return string zone
----@return string publicNote
----@return string officerNote
----@return boolean isOnline
----@return number status
----@return string class
----@return number achievementPoints
----@return number achievementRank
----@return boolean isMobile
----@return boolean canSoR
----@return number repStanding
----@return string guid
-function GetGuildRosterInfo(index) end
-
----[Documentation](https://wowpedia.fandom.com/wiki/API_GetGuildRosterLargestAchievementPoints)
-function GetGuildRosterLargestAchievementPoints() end
-
----[Documentation](https://wowpedia.fandom.com/wiki/API_GetGuildRosterLastOnline)
-function GetGuildRosterLastOnline(index) end
-
----[Documentation](https://wowpedia.fandom.com/wiki/API_GetGuildRosterMOTD)
----@return string motd
-function GetGuildRosterMOTD() end
-
----[Documentation](https://wowpedia.fandom.com/wiki/API_GetGuildRosterSelection)
-function GetGuildRosterSelection() end
-
----[Documentation](https://wowpedia.fandom.com/wiki/API_GetGuildRosterShowOffline)
-function GetGuildRosterShowOffline() end
-
----[Documentation](https://wowpedia.fandom.com/wiki/API_GetGuildTabardFiles)
----@return number tabardBackgroundUpper
----@return number tabardBackgroundLower
----@return number tabardEmblemUpper
----@return number tabardEmblemLower
----@return number tabardBorderUpper
----@return number tabardBorderLower
-function GetGuildTabardFiles() end
-
----[Documentation](https://wowpedia.fandom.com/wiki/API_GetGuildTradeSkillInfo)
----@param index number
----@return number skillID
----@return boolean isCollapsed
----@return string iconTexture
----@return string headerName
----@return number numOnline
----@return number numVisible
----@return number numPlayers
----@return string playerName
----@return string playerNameWithRealm
----@return string class
----@return boolean online
----@return string zone
----@return number skill
----@return string classFileName
----@return boolean isMobile
----@return number isAway
-function GetGuildTradeSkillInfo(index) end
-
----[Documentation](https://wowpedia.fandom.com/wiki/API_GetHaste)
----@return number haste
-function GetHaste() end
-
----[Documentation](https://wowpedia.fandom.com/wiki/API_GetHitModifier)
----@return number hitModifier
-function GetHitModifier() end
-
----[Documentation](https://wowpedia.fandom.com/wiki/API_GetHomePartyInfo)
----@param homePlayers table
----@return table homePlayers
-function GetHomePartyInfo(homePlayers) end
-
----[Documentation](https://wowpedia.fandom.com/wiki/API_GetInboxHeaderInfo)
----@param index number
----@return string packageIcon
----@return string stationeryIcon
----@return string sender
----@return string subject
----@return number money
----@return number CODAmount
----@return number daysLeft
----@return number hasItem
----@return boolean wasRead
----@return boolean wasReturned
----@return boolean textCreated
----@return boolean canReply
----@return boolean isGM
-function GetInboxHeaderInfo(index) end
 
