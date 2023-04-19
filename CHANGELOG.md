@@ -6,20 +6,25 @@
 - The Classic (TBC) API is not supported ([#13](https://github.com/Ketho/vscode-wow-api/issues/13))
 - Widget API is not yet updated from 10.0.2 Blizzard_APIDocumentationGenerated
 
+## [0.9.10] - 2023-04-19
+### Added
+- 🌙 Definitions: Updated Ace3, LibSink, HereBeDragons by [Torhal](https://github.com/Ketho/vscode-wow-api/pulls?q=is%3Apr+author%3ATorhal)
+- 🌙 Definitions: [#76](https://github.com/Ketho/vscode-wow-api/pull/76) Added "questnpc" UnitId
+
 ## [0.9.9] - 2023-03-21
 ### Added
-- 🌙 LuaCats: PR [#75](https://github.com/Ketho/vscode-wow-api/pull/75) AceConfig-3.0 Update
-- 🌙 LuaCats: PR [#74](https://github.com/Ketho/vscode-wow-api/pull/74) Add type definitions for HereBeDragons-2.0
+- 🌙 Definitions: PR [#75](https://github.com/Ketho/vscode-wow-api/pull/75) AceConfig-3.0 Update
+- 🌙 Definitions: PR [#74](https://github.com/Ketho/vscode-wow-api/pull/74) Add type definitions for HereBeDragons-2.0
 
 ## [0.9.8] - 2023-03-13
 ### Added
-- 🌙 LuaCats: Cumulative updates for patch 10.0.5 (48397)
-- 🌙 LuaCats: Updated `FrameXML/Constants.lua`
-- 🌙 LuaCats: PR [#73](https://github.com/Ketho/vscode-wow-api/pull/73) Add type definitions for LibQTip-1.0
-- 🌙 LuaCats: PR [#72](https://github.com/Ketho/vscode-wow-api/pull/72) Add type definitions for LibDialog-1.0
-- 🌙 LuaCats: PR [#71](https://github.com/Ketho/vscode-wow-api/pull/71) Add type definitions for LibTextDump-1.0
-- 🌙 LuaCats: PR [#70](https://github.com/Ketho/vscode-wow-api/pull/70) Fix the event and message parameter for for RegisterBucketEvent
-- 🌙 LuaCats: PR [#69](https://github.com/Ketho/vscode-wow-api/pull/69) Add RegisterCallback to AceDBObject-3.0
+- 🌙 Definitions: Cumulative updates for patch 10.0.5 (48397)
+- 🌙 Definitions: Updated `FrameXML/Constants.lua`
+- 🌙 Definitions: PR [#73](https://github.com/Ketho/vscode-wow-api/pull/73) Add type definitions for LibQTip-1.0
+- 🌙 Definitions: PR [#72](https://github.com/Ketho/vscode-wow-api/pull/72) Add type definitions for LibDialog-1.0
+- 🌙 Definitions: PR [#71](https://github.com/Ketho/vscode-wow-api/pull/71) Add type definitions for LibTextDump-1.0
+- 🌙 Definitions: PR [#70](https://github.com/Ketho/vscode-wow-api/pull/70) Fix the event and message parameter for for RegisterBucketEvent
+- 🌙 Definitions: PR [#69](https://github.com/Ketho/vscode-wow-api/pull/69) Add RegisterCallback to AceDBObject-3.0
 
 ## [0.9.7] - 2023-01-21
 ### Added
@@ -41,21 +46,21 @@
 - 📦 Package: Skipped 0.9.1 and 0.9.2 because of packaging issues
 
 ### Changed
-- 🌙 EmmyLua: PR [#67](https://github.com/Ketho/vscode-wow-api/pull/67) Fix warning on AceConfigOptionsTable get and set
-- 🌙 EmmyLua: PR [#66](https://github.com/Ketho/vscode-wow-api/pull/66) Added missing Ace3 components, AceComm-3.0 and AceBucket-3.0
-- 🌙 EmmyLua: PR [#65](https://github.com/Ketho/vscode-wow-api/pull/65) Fixed UIFrameFadeIn/Out
-- 🌙 EmmyLua: PR [#63](https://github.com/Ketho/vscode-wow-api/pull/63), [#64](https://github.com/Ketho/vscode-wow-api/pull/64) Update GetPvpTalentInfoByID, UnitEffectiveLevel
-- 🌙 EmmyLua: PR [#62](https://github.com/Ketho/vscode-wow-api/pull/62) LibDBIcon organize and move all return & input type classes to bottom
+- 🌙 Definitions: PR [#67](https://github.com/Ketho/vscode-wow-api/pull/67) Fix warning on AceConfigOptionsTable get and set
+- 🌙 Definitions: PR [#66](https://github.com/Ketho/vscode-wow-api/pull/66) Added missing Ace3 components, AceComm-3.0 and AceBucket-3.0
+- 🌙 Definitions: PR [#65](https://github.com/Ketho/vscode-wow-api/pull/65) Fixed UIFrameFadeIn/Out
+- 🌙 Definitions: PR [#63](https://github.com/Ketho/vscode-wow-api/pull/63), [#64](https://github.com/Ketho/vscode-wow-api/pull/64) Update GetPvpTalentInfoByID, UnitEffectiveLevel
+- 🌙 Definitions: PR [#62](https://github.com/Ketho/vscode-wow-api/pull/62) LibDBIcon organize and move all return & input type classes to bottom
 
 ## [0.9.0] - 2022-11-13
 ### Added
-- 🌙 EmmyLua: Updated for Patch 10.0.2 (46619)
+- 🌙 Definitions: Updated for Patch 10.0.2 (46619)
 
 Libraries
-- 🌙 EmmyLua: PR [#58](https://github.com/Ketho/vscode-wow-api/pull/58), [#61](https://github.com/Ketho/vscode-wow-api/pull/61) Added LibSharedMedia-3.0
-- 🌙 EmmyLua: PR [#55](https://github.com/Ketho/vscode-wow-api/pull/55), [#62](https://github.com/Ketho/vscode-wow-api/pull/62) Added LibDBIcon-1.0
-- 🌙 EmmyLua: PR [#52](https://github.com/Ketho/vscode-wow-api/pull/52), [#57](https://github.com/Ketho/vscode-wow-api/pull/57), [#54](https://github.com/Ketho/vscode-wow-api/pull/54) Updated Ace3 libraries
-- 🌙 EmmyLua: PR [#53](https://github.com/Ketho/vscode-wow-api/pull/53) Update LibStub:NewLibrary
+- 🌙 Definitions: PR [#58](https://github.com/Ketho/vscode-wow-api/pull/58), [#61](https://github.com/Ketho/vscode-wow-api/pull/61) Added LibSharedMedia-3.0
+- 🌙 Definitions: PR [#55](https://github.com/Ketho/vscode-wow-api/pull/55), [#62](https://github.com/Ketho/vscode-wow-api/pull/62) Added LibDBIcon-1.0
+- 🌙 Definitions: PR [#52](https://github.com/Ketho/vscode-wow-api/pull/52), [#57](https://github.com/Ketho/vscode-wow-api/pull/57), [#54](https://github.com/Ketho/vscode-wow-api/pull/54) Updated Ace3 libraries
+- 🌙 Definitions: PR [#53](https://github.com/Ketho/vscode-wow-api/pull/53) Update LibStub:NewLibrary
 ### Changed
 - 🐞 Bug Fixes: Fixed event hover tooltip formatting (regression)
 - 🐞 Bug Fixes: PR [#59](https://github.com/Ketho/vscode-wow-api/pull/59) Fixed file path casing
@@ -345,6 +350,7 @@ Libraries
 ### Added
 - 🚧 Wip: Development work
 
+[0.9.10]: https://github.com/Ketho/vscode-wow-api/releases/tag/v0.9.10
 [0.9.9]: https://github.com/Ketho/vscode-wow-api/releases/tag/v0.9.9
 [0.9.8]: https://github.com/Ketho/vscode-wow-api/releases/tag/v0.9.8
 [0.9.7]: https://github.com/Ketho/vscode-wow-api/releases/tag/v0.9.7
@@ -358,7 +364,7 @@ Libraries
 [0.8.6]: https://github.com/Ketho/vscode-wow-api/releases/tag/0.8.6
 [0.8.5]: https://github.com/Ketho/vscode-wow-api/releases/tag/0.8.5
 [0.8.4]: https://github.com/Ketho/vscode-wow-api/releases/tag/0.8.4
-[0.8.3]: https://github.com/Ketho/vscode-wow-api/releases/tag/0.8.3
+[0.8.3]: https://github.com/Ketho/vscode-wow-api/relegitases/tag/0.8.3
 [0.8.2]: https://github.com/Ketho/vscode-wow-api/releases/tag/0.8.2
 [0.8.1]: https://github.com/Ketho/vscode-wow-api/releases/tag/0.8.1
 [0.7.6]: https://github.com/Ketho/vscode-wow-api/releases/tag/v0.7.6
