@@ -1,6 +1,6 @@
 local Util = require("Lua.Util.Util")
 -- cache should already be created at this point
-local data = require("Lua.Data.cache.CVars")
+local data = require("Lua.Data.cache.CVars_mainline")
 
 local pre = [[
 interface CVarInterface {
