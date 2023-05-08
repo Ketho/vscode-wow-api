@@ -12,6 +12,7 @@ dependencies = {
   'luasec',
   'xml2lua',
   'lua-cjson = 2.1.0-1',
+  'lua-path',
 }
 build = {
   type = 'builtin',
