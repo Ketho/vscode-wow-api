@@ -76,6 +76,20 @@ end
 function lib:SetButtonToPosition(button, position)
 end
 
+---@param buttonName string
+---@return boolean
+function lib:IsButtonInCompartment(buttonName)
+end
+
+---@param buttonName string
+---@param customIcon? string|number
+function lib:AddButtonToCompartment(buttonName, customIcon)
+end
+
+---@param buttonName string
+function lib:RemoveButtonFromCompartment(buttonName)
+end
+
 ---@class LibDBIcon.button.DB
 ---@field hide boolean
 ---@field lock boolean
