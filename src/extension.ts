@@ -40,12 +40,12 @@ function isHoverString(document: vscode.TextDocument, range: vscode.Range) {
 	return false;
 }
 
-export function activate(context: vscode.ExtensionContext) {
+export async function activate(context: vscode.ExtensionContext) {
 	console.log("loaded ketho.wow-api", context.extension.id);
 
-	setExternalLibrary("API", true);
+	await setExternalLibrary("API", true);
 	const loadFrameXML = vscode.workspace.getConfiguration("wowAPI").get("emmyLua.loadFrameXML");
-	setExternalLibrary("Optional", loadFrameXML ? true : false);
+	await setExternalLibrary("Optional", loadFrameXML ? true : false);
 
 	const completion = vscode.languages.registerCompletionItemProvider(
 		"lua",
@@ -132,20 +132,24 @@ export function activate(context: vscode.ExtensionContext) {
 	});
 }
 
-export function deactivate() {
+export async function deactivate() {
 	console.log("deactivated ketho.wow-api");
-	setExternalLibrary("API", false);
-	setExternalLibrary("Optional", false);
+
+	await setExternalLibrary("API", false);
+	await setExternalLibrary("Optional", false);
 }
 
-export function setExternalLibrary(folder: string, enable: boolean) {
+// Sets external library and then returns a Thenable to the consumer.
+export function setExternalLibrary(folder: string, enable: boolean): Thenable<void> {
 	// console.log("setExternalLibrary", folder, enable);
+	const config = vscode.workspace.getConfiguration("Lua");
+	const library: string[] = config.get("workspace.library")!;
+
 	const extensionId = "ketho.wow-api";
 	const extensionPath = vscode.extensions.getExtension(extensionId)!.extensionPath;
 	// Use path.join to ensure the proper path seperators (\ for windows, / for anything else) are used.
 	const folderPath = path.join(extensionPath, "EmmyLua", folder);
-	const config = vscode.workspace.getConfiguration("Lua");
-	const library: string[] = config.get("workspace.library")!;
+
 	// remove any older versions of our path e.g. "publisher.name-0.0.1"
 	for (let i = library.length-1; i >= 0; i--) {
 		const el = library[i];
@@ -166,5 +170,6 @@ export function setExternalLibrary(folder: string, enable: boolean) {
 			library.splice(index, 1);
 		}
 	}
-	config.update("workspace.library", library, true);
+
+	return config.update("workspace.library", library, true);
 }
