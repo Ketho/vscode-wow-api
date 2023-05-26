@@ -18,6 +18,8 @@ export const data: EventInterface = {
 
 local types = {
 	bool = "boolean",
+	cstring = "string",
+	luaIndex = "number",
 }
 
 local function GetType(paramType)
@@ -60,7 +62,7 @@ local function ToTypeScript()
 			table.insert(t, "\t},")
 		end
 	end
-	table.insert(t, "}\n")
+	table.insert(t, "};\n")
 	return pre..table.concat(t, "\n")
 end
 

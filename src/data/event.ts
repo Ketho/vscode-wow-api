@@ -76,6 +76,7 @@ export const data: EventInterface = {
 	ADDON_LOADED: {
 		Payload: [
 			{Name: "addOnName", Type: "string"},
+			{Name: "containsBindings", Type: "boolean"},
 		],
 	},
 	ADVENTURE_MAP_CLOSE: {},
@@ -160,12 +161,12 @@ export const data: EventInterface = {
 	AREA_SPIRIT_HEALER_OUT_OF_RANGE: {},
 	ARENA_COOLDOWNS_UPDATE: {
 		Payload: [
-			{Name: "unitTarget", Type: "string"},
+			{Name: "unitTarget", Type: "UnitToken"},
 		],
 	},
 	ARENA_CROWD_CONTROL_SPELL_UPDATE: {
 		Payload: [
-			{Name: "unitTarget", Type: "string"},
+			{Name: "unitTarget", Type: "UnitToken"},
 			{Name: "spellID", Type: "number"},
 		],
 	},
@@ -376,7 +377,7 @@ export const data: EventInterface = {
 	},
 	BAG_CLOSED: {
 		Payload: [
-			{Name: "bagID", Type: "number"},
+			{Name: "bagID", Type: "BagIndex"},
 		],
 	},
 	BAG_CONTAINER_UPDATE: {},
@@ -394,7 +395,7 @@ export const data: EventInterface = {
 	},
 	BAG_UPDATE: {
 		Payload: [
-			{Name: "bagID", Type: "number"},
+			{Name: "bagID", Type: "BagIndex"},
 		],
 	},
 	BAG_UPDATE_COOLDOWN: {},
@@ -432,7 +433,7 @@ export const data: EventInterface = {
 	BATTLEPET_FORCE_NAME_DECLENSION: {
 		Payload: [
 			{Name: "name", Type: "string"},
-			{Name: "battlePetGUID", Type: "string"},
+			{Name: "battlePetGUID", Type: "WOWGUID"},
 		],
 	},
 	BATTLETAG_INVITE_SHOW: {
@@ -444,7 +445,7 @@ export const data: EventInterface = {
 	BEHAVIORAL_NOTIFICATION: {
 		Payload: [
 			{Name: "notificationType", Type: "string"},
-			{Name: "dbId", Type: "string"},
+			{Name: "dbId", Type: "NotificationDbId"},
 		],
 	},
 	BIDS_UPDATED: {},
@@ -635,6 +636,18 @@ export const data: EventInterface = {
 		],
 	},
 	CANCEL_SUMMON: {},
+	CAN_LOCAL_WHISPER_TARGET_RESPONSE: {
+		Payload: [
+			{Name: "whisperTarget", Type: "WOWGUID"},
+			{Name: "status", Type: "ChatWhisperTargetStatus"},
+		],
+	},
+	CAN_PLAYER_SPEAK_LANGUAGE_CHANGED: {
+		Payload: [
+			{Name: "languageId", Type: "number"},
+			{Name: "canSpeakLanguage", Type: "boolean"},
+		],
+	},
 	CAPTUREFRAMES_FAILED: {},
 	CAPTUREFRAMES_SUCCEEDED: {},
 	CEMETERY_PREFERENCE_UPDATED: {},
@@ -722,7 +735,7 @@ export const data: EventInterface = {
 			{Name: "channelBaseName", Type: "string"},
 			{Name: "languageID", Type: "number"},
 			{Name: "lineID", Type: "number"},
-			{Name: "guid", Type: "string"},
+			{Name: "guid", Type: "WOWGUID"},
 			{Name: "bnSenderID", Type: "number"},
 			{Name: "isMobile", Type: "boolean"},
 			{Name: "isSubtitle", Type: "boolean"},
@@ -753,7 +766,7 @@ export const data: EventInterface = {
 			{Name: "channelBaseName", Type: "string"},
 			{Name: "languageID", Type: "number"},
 			{Name: "lineID", Type: "number"},
-			{Name: "guid", Type: "string"},
+			{Name: "guid", Type: "WOWGUID"},
 			{Name: "bnSenderID", Type: "number"},
 			{Name: "isMobile", Type: "boolean"},
 			{Name: "isSubtitle", Type: "boolean"},
@@ -800,7 +813,7 @@ export const data: EventInterface = {
 			{Name: "channelBaseName", Type: "string"},
 			{Name: "languageID", Type: "number"},
 			{Name: "lineID", Type: "number"},
-			{Name: "guid", Type: "string"},
+			{Name: "guid", Type: "WOWGUID"},
 			{Name: "bnSenderID", Type: "number"},
 			{Name: "isMobile", Type: "boolean"},
 			{Name: "isSubtitle", Type: "boolean"},
@@ -821,7 +834,7 @@ export const data: EventInterface = {
 			{Name: "channelBaseName", Type: "string"},
 			{Name: "languageID", Type: "number"},
 			{Name: "lineID", Type: "number"},
-			{Name: "guid", Type: "string"},
+			{Name: "guid", Type: "WOWGUID"},
 			{Name: "bnSenderID", Type: "number"},
 			{Name: "isMobile", Type: "boolean"},
 			{Name: "isSubtitle", Type: "boolean"},
@@ -842,7 +855,7 @@ export const data: EventInterface = {
 			{Name: "channelBaseName", Type: "string"},
 			{Name: "languageID", Type: "number"},
 			{Name: "lineID", Type: "number"},
-			{Name: "guid", Type: "string"},
+			{Name: "guid", Type: "WOWGUID"},
 			{Name: "bnSenderID", Type: "number"},
 			{Name: "isMobile", Type: "boolean"},
 			{Name: "isSubtitle", Type: "boolean"},
@@ -863,7 +876,7 @@ export const data: EventInterface = {
 			{Name: "channelBaseName", Type: "string"},
 			{Name: "languageID", Type: "number"},
 			{Name: "lineID", Type: "number"},
-			{Name: "guid", Type: "string"},
+			{Name: "guid", Type: "WOWGUID"},
 			{Name: "bnSenderID", Type: "number"},
 			{Name: "isMobile", Type: "boolean"},
 			{Name: "isSubtitle", Type: "boolean"},
@@ -884,7 +897,7 @@ export const data: EventInterface = {
 			{Name: "channelBaseName", Type: "string"},
 			{Name: "languageID", Type: "number"},
 			{Name: "lineID", Type: "number"},
-			{Name: "guid", Type: "string"},
+			{Name: "guid", Type: "WOWGUID"},
 			{Name: "bnSenderID", Type: "number"},
 			{Name: "isMobile", Type: "boolean"},
 			{Name: "isSubtitle", Type: "boolean"},
@@ -905,7 +918,7 @@ export const data: EventInterface = {
 			{Name: "channelBaseName", Type: "string"},
 			{Name: "languageID", Type: "number"},
 			{Name: "lineID", Type: "number"},
-			{Name: "guid", Type: "string"},
+			{Name: "guid", Type: "WOWGUID"},
 			{Name: "bnSenderID", Type: "number"},
 			{Name: "isMobile", Type: "boolean"},
 			{Name: "isSubtitle", Type: "boolean"},
@@ -926,7 +939,7 @@ export const data: EventInterface = {
 			{Name: "channelBaseName", Type: "string"},
 			{Name: "languageID", Type: "number"},
 			{Name: "lineID", Type: "number"},
-			{Name: "guid", Type: "string"},
+			{Name: "guid", Type: "WOWGUID"},
 			{Name: "bnSenderID", Type: "number"},
 			{Name: "isMobile", Type: "boolean"},
 			{Name: "isSubtitle", Type: "boolean"},
@@ -947,7 +960,7 @@ export const data: EventInterface = {
 			{Name: "channelBaseName", Type: "string"},
 			{Name: "languageID", Type: "number"},
 			{Name: "lineID", Type: "number"},
-			{Name: "guid", Type: "string"},
+			{Name: "guid", Type: "WOWGUID"},
 			{Name: "bnSenderID", Type: "number"},
 			{Name: "isMobile", Type: "boolean"},
 			{Name: "isSubtitle", Type: "boolean"},
@@ -968,7 +981,7 @@ export const data: EventInterface = {
 			{Name: "channelBaseName", Type: "string"},
 			{Name: "languageID", Type: "number"},
 			{Name: "lineID", Type: "number"},
-			{Name: "guid", Type: "string"},
+			{Name: "guid", Type: "WOWGUID"},
 			{Name: "bnSenderID", Type: "number"},
 			{Name: "isMobile", Type: "boolean"},
 			{Name: "isSubtitle", Type: "boolean"},
@@ -989,7 +1002,7 @@ export const data: EventInterface = {
 			{Name: "channelBaseName", Type: "string"},
 			{Name: "languageID", Type: "number"},
 			{Name: "lineID", Type: "number"},
-			{Name: "guid", Type: "string"},
+			{Name: "guid", Type: "WOWGUID"},
 			{Name: "bnSenderID", Type: "number"},
 			{Name: "isMobile", Type: "boolean"},
 			{Name: "isSubtitle", Type: "boolean"},
@@ -1010,7 +1023,7 @@ export const data: EventInterface = {
 			{Name: "channelBaseName", Type: "string"},
 			{Name: "languageID", Type: "number"},
 			{Name: "lineID", Type: "number"},
-			{Name: "guid", Type: "string"},
+			{Name: "guid", Type: "WOWGUID"},
 			{Name: "bnSenderID", Type: "number"},
 			{Name: "isMobile", Type: "boolean"},
 			{Name: "isSubtitle", Type: "boolean"},
@@ -1031,7 +1044,7 @@ export const data: EventInterface = {
 			{Name: "channelBaseName", Type: "string"},
 			{Name: "languageID", Type: "number"},
 			{Name: "lineID", Type: "number"},
-			{Name: "guid", Type: "string"},
+			{Name: "guid", Type: "WOWGUID"},
 			{Name: "bnSenderID", Type: "number"},
 			{Name: "isMobile", Type: "boolean"},
 			{Name: "isSubtitle", Type: "boolean"},
@@ -1052,7 +1065,7 @@ export const data: EventInterface = {
 			{Name: "channelBaseName", Type: "string"},
 			{Name: "languageID", Type: "number"},
 			{Name: "lineID", Type: "number"},
-			{Name: "guid", Type: "string"},
+			{Name: "guid", Type: "WOWGUID"},
 			{Name: "bnSenderID", Type: "number"},
 			{Name: "isMobile", Type: "boolean"},
 			{Name: "isSubtitle", Type: "boolean"},
@@ -1073,7 +1086,7 @@ export const data: EventInterface = {
 			{Name: "channelBaseName", Type: "string"},
 			{Name: "languageID", Type: "number"},
 			{Name: "lineID", Type: "number"},
-			{Name: "guid", Type: "string"},
+			{Name: "guid", Type: "WOWGUID"},
 			{Name: "bnSenderID", Type: "number"},
 			{Name: "isMobile", Type: "boolean"},
 			{Name: "isSubtitle", Type: "boolean"},
@@ -1094,7 +1107,7 @@ export const data: EventInterface = {
 			{Name: "channelBaseName", Type: "string"},
 			{Name: "languageID", Type: "number"},
 			{Name: "lineID", Type: "number"},
-			{Name: "guid", Type: "string"},
+			{Name: "guid", Type: "WOWGUID"},
 			{Name: "bnSenderID", Type: "number"},
 			{Name: "isMobile", Type: "boolean"},
 			{Name: "isSubtitle", Type: "boolean"},
@@ -1120,7 +1133,7 @@ export const data: EventInterface = {
 			{Name: "channelBaseName", Type: "string"},
 			{Name: "languageID", Type: "number"},
 			{Name: "lineID", Type: "number"},
-			{Name: "guid", Type: "string"},
+			{Name: "guid", Type: "WOWGUID"},
 			{Name: "bnSenderID", Type: "number"},
 			{Name: "isMobile", Type: "boolean"},
 			{Name: "isSubtitle", Type: "boolean"},
@@ -1141,7 +1154,7 @@ export const data: EventInterface = {
 			{Name: "channelBaseName", Type: "string"},
 			{Name: "languageID", Type: "number"},
 			{Name: "lineID", Type: "number"},
-			{Name: "guid", Type: "string"},
+			{Name: "guid", Type: "WOWGUID"},
 			{Name: "bnSenderID", Type: "number"},
 			{Name: "isMobile", Type: "boolean"},
 			{Name: "isSubtitle", Type: "boolean"},
@@ -1162,7 +1175,7 @@ export const data: EventInterface = {
 			{Name: "channelBaseName", Type: "string"},
 			{Name: "languageID", Type: "number"},
 			{Name: "lineID", Type: "number"},
-			{Name: "guid", Type: "string"},
+			{Name: "guid", Type: "WOWGUID"},
 			{Name: "bnSenderID", Type: "number"},
 			{Name: "isMobile", Type: "boolean"},
 			{Name: "isSubtitle", Type: "boolean"},
@@ -1183,7 +1196,7 @@ export const data: EventInterface = {
 			{Name: "channelBaseName", Type: "string"},
 			{Name: "languageID", Type: "number"},
 			{Name: "lineID", Type: "number"},
-			{Name: "guid", Type: "string"},
+			{Name: "guid", Type: "WOWGUID"},
 			{Name: "bnSenderID", Type: "number"},
 			{Name: "isMobile", Type: "boolean"},
 			{Name: "isSubtitle", Type: "boolean"},
@@ -1204,7 +1217,7 @@ export const data: EventInterface = {
 			{Name: "channelBaseName", Type: "string"},
 			{Name: "languageID", Type: "number"},
 			{Name: "lineID", Type: "number"},
-			{Name: "guid", Type: "string"},
+			{Name: "guid", Type: "WOWGUID"},
 			{Name: "bnSenderID", Type: "number"},
 			{Name: "isMobile", Type: "boolean"},
 			{Name: "isSubtitle", Type: "boolean"},
@@ -1225,7 +1238,7 @@ export const data: EventInterface = {
 			{Name: "channelBaseName", Type: "string"},
 			{Name: "languageID", Type: "number"},
 			{Name: "lineID", Type: "number"},
-			{Name: "guid", Type: "string"},
+			{Name: "guid", Type: "WOWGUID"},
 			{Name: "bnSenderID", Type: "number"},
 			{Name: "isMobile", Type: "boolean"},
 			{Name: "isSubtitle", Type: "boolean"},
@@ -1246,7 +1259,7 @@ export const data: EventInterface = {
 			{Name: "channelBaseName", Type: "string"},
 			{Name: "languageID", Type: "number"},
 			{Name: "lineID", Type: "number"},
-			{Name: "guid", Type: "string"},
+			{Name: "guid", Type: "WOWGUID"},
 			{Name: "bnSenderID", Type: "number"},
 			{Name: "isMobile", Type: "boolean"},
 			{Name: "isSubtitle", Type: "boolean"},
@@ -1267,7 +1280,7 @@ export const data: EventInterface = {
 			{Name: "channelBaseName", Type: "string"},
 			{Name: "languageID", Type: "number"},
 			{Name: "lineID", Type: "number"},
-			{Name: "guid", Type: "string"},
+			{Name: "guid", Type: "WOWGUID"},
 			{Name: "bnSenderID", Type: "number"},
 			{Name: "isMobile", Type: "boolean"},
 			{Name: "isSubtitle", Type: "boolean"},
@@ -1288,7 +1301,7 @@ export const data: EventInterface = {
 			{Name: "channelBaseName", Type: "string"},
 			{Name: "languageID", Type: "number"},
 			{Name: "lineID", Type: "number"},
-			{Name: "guid", Type: "string"},
+			{Name: "guid", Type: "WOWGUID"},
 			{Name: "bnSenderID", Type: "number"},
 			{Name: "isMobile", Type: "boolean"},
 			{Name: "isSubtitle", Type: "boolean"},
@@ -1309,7 +1322,7 @@ export const data: EventInterface = {
 			{Name: "channelBaseName", Type: "string"},
 			{Name: "languageID", Type: "number"},
 			{Name: "lineID", Type: "number"},
-			{Name: "guid", Type: "string"},
+			{Name: "guid", Type: "WOWGUID"},
 			{Name: "bnSenderID", Type: "number"},
 			{Name: "isMobile", Type: "boolean"},
 			{Name: "isSubtitle", Type: "boolean"},
@@ -1330,7 +1343,7 @@ export const data: EventInterface = {
 			{Name: "channelBaseName", Type: "string"},
 			{Name: "languageID", Type: "number"},
 			{Name: "lineID", Type: "number"},
-			{Name: "guid", Type: "string"},
+			{Name: "guid", Type: "WOWGUID"},
 			{Name: "bnSenderID", Type: "number"},
 			{Name: "isMobile", Type: "boolean"},
 			{Name: "isSubtitle", Type: "boolean"},
@@ -1351,7 +1364,7 @@ export const data: EventInterface = {
 			{Name: "channelBaseName", Type: "string"},
 			{Name: "languageID", Type: "number"},
 			{Name: "lineID", Type: "number"},
-			{Name: "guid", Type: "string"},
+			{Name: "guid", Type: "WOWGUID"},
 			{Name: "bnSenderID", Type: "number"},
 			{Name: "isMobile", Type: "boolean"},
 			{Name: "isSubtitle", Type: "boolean"},
@@ -1372,7 +1385,7 @@ export const data: EventInterface = {
 			{Name: "channelBaseName", Type: "string"},
 			{Name: "languageID", Type: "number"},
 			{Name: "lineID", Type: "number"},
-			{Name: "guid", Type: "string"},
+			{Name: "guid", Type: "WOWGUID"},
 			{Name: "bnSenderID", Type: "number"},
 			{Name: "isMobile", Type: "boolean"},
 			{Name: "isSubtitle", Type: "boolean"},
@@ -1393,7 +1406,7 @@ export const data: EventInterface = {
 			{Name: "channelBaseName", Type: "string"},
 			{Name: "languageID", Type: "number"},
 			{Name: "lineID", Type: "number"},
-			{Name: "guid", Type: "string"},
+			{Name: "guid", Type: "WOWGUID"},
 			{Name: "bnSenderID", Type: "number"},
 			{Name: "isMobile", Type: "boolean"},
 			{Name: "isSubtitle", Type: "boolean"},
@@ -1414,7 +1427,7 @@ export const data: EventInterface = {
 			{Name: "channelBaseName", Type: "string"},
 			{Name: "languageID", Type: "number"},
 			{Name: "lineID", Type: "number"},
-			{Name: "guid", Type: "string"},
+			{Name: "guid", Type: "WOWGUID"},
 			{Name: "bnSenderID", Type: "number"},
 			{Name: "isMobile", Type: "boolean"},
 			{Name: "isSubtitle", Type: "boolean"},
@@ -1435,7 +1448,7 @@ export const data: EventInterface = {
 			{Name: "channelBaseName", Type: "string"},
 			{Name: "languageID", Type: "number"},
 			{Name: "lineID", Type: "number"},
-			{Name: "guid", Type: "string"},
+			{Name: "guid", Type: "WOWGUID"},
 			{Name: "bnSenderID", Type: "number"},
 			{Name: "isMobile", Type: "boolean"},
 			{Name: "isSubtitle", Type: "boolean"},
@@ -1456,7 +1469,7 @@ export const data: EventInterface = {
 			{Name: "channelBaseName", Type: "string"},
 			{Name: "languageID", Type: "number"},
 			{Name: "lineID", Type: "number"},
-			{Name: "guid", Type: "string"},
+			{Name: "guid", Type: "WOWGUID"},
 			{Name: "bnSenderID", Type: "number"},
 			{Name: "isMobile", Type: "boolean"},
 			{Name: "isSubtitle", Type: "boolean"},
@@ -1477,7 +1490,7 @@ export const data: EventInterface = {
 			{Name: "channelBaseName", Type: "string"},
 			{Name: "languageID", Type: "number"},
 			{Name: "lineID", Type: "number"},
-			{Name: "guid", Type: "string"},
+			{Name: "guid", Type: "WOWGUID"},
 			{Name: "bnSenderID", Type: "number"},
 			{Name: "isMobile", Type: "boolean"},
 			{Name: "isSubtitle", Type: "boolean"},
@@ -1498,7 +1511,7 @@ export const data: EventInterface = {
 			{Name: "channelBaseName", Type: "string"},
 			{Name: "languageID", Type: "number"},
 			{Name: "lineID", Type: "number"},
-			{Name: "guid", Type: "string"},
+			{Name: "guid", Type: "WOWGUID"},
 			{Name: "bnSenderID", Type: "number"},
 			{Name: "isMobile", Type: "boolean"},
 			{Name: "isSubtitle", Type: "boolean"},
@@ -1519,7 +1532,7 @@ export const data: EventInterface = {
 			{Name: "channelBaseName", Type: "string"},
 			{Name: "languageID", Type: "number"},
 			{Name: "lineID", Type: "number"},
-			{Name: "guid", Type: "string"},
+			{Name: "guid", Type: "WOWGUID"},
 			{Name: "bnSenderID", Type: "number"},
 			{Name: "isMobile", Type: "boolean"},
 			{Name: "isSubtitle", Type: "boolean"},
@@ -1540,7 +1553,7 @@ export const data: EventInterface = {
 			{Name: "channelBaseName", Type: "string"},
 			{Name: "languageID", Type: "number"},
 			{Name: "lineID", Type: "number"},
-			{Name: "guid", Type: "string"},
+			{Name: "guid", Type: "WOWGUID"},
 			{Name: "bnSenderID", Type: "number"},
 			{Name: "isMobile", Type: "boolean"},
 			{Name: "isSubtitle", Type: "boolean"},
@@ -1561,7 +1574,7 @@ export const data: EventInterface = {
 			{Name: "channelBaseName", Type: "string"},
 			{Name: "languageID", Type: "number"},
 			{Name: "lineID", Type: "number"},
-			{Name: "guid", Type: "string"},
+			{Name: "guid", Type: "WOWGUID"},
 			{Name: "bnSenderID", Type: "number"},
 			{Name: "isMobile", Type: "boolean"},
 			{Name: "isSubtitle", Type: "boolean"},
@@ -1582,7 +1595,7 @@ export const data: EventInterface = {
 			{Name: "channelBaseName", Type: "string"},
 			{Name: "languageID", Type: "number"},
 			{Name: "lineID", Type: "number"},
-			{Name: "guid", Type: "string"},
+			{Name: "guid", Type: "WOWGUID"},
 			{Name: "bnSenderID", Type: "number"},
 			{Name: "isMobile", Type: "boolean"},
 			{Name: "isSubtitle", Type: "boolean"},
@@ -1603,7 +1616,7 @@ export const data: EventInterface = {
 			{Name: "channelBaseName", Type: "string"},
 			{Name: "languageID", Type: "number"},
 			{Name: "lineID", Type: "number"},
-			{Name: "guid", Type: "string"},
+			{Name: "guid", Type: "WOWGUID"},
 			{Name: "bnSenderID", Type: "number"},
 			{Name: "isMobile", Type: "boolean"},
 			{Name: "isSubtitle", Type: "boolean"},
@@ -1624,7 +1637,7 @@ export const data: EventInterface = {
 			{Name: "channelBaseName", Type: "string"},
 			{Name: "languageID", Type: "number"},
 			{Name: "lineID", Type: "number"},
-			{Name: "guid", Type: "string"},
+			{Name: "guid", Type: "WOWGUID"},
 			{Name: "bnSenderID", Type: "number"},
 			{Name: "isMobile", Type: "boolean"},
 			{Name: "isSubtitle", Type: "boolean"},
@@ -1645,7 +1658,7 @@ export const data: EventInterface = {
 			{Name: "channelBaseName", Type: "string"},
 			{Name: "languageID", Type: "number"},
 			{Name: "lineID", Type: "number"},
-			{Name: "guid", Type: "string"},
+			{Name: "guid", Type: "WOWGUID"},
 			{Name: "bnSenderID", Type: "number"},
 			{Name: "isMobile", Type: "boolean"},
 			{Name: "isSubtitle", Type: "boolean"},
@@ -1666,7 +1679,7 @@ export const data: EventInterface = {
 			{Name: "channelBaseName", Type: "string"},
 			{Name: "languageID", Type: "number"},
 			{Name: "lineID", Type: "number"},
-			{Name: "guid", Type: "string"},
+			{Name: "guid", Type: "WOWGUID"},
 			{Name: "bnSenderID", Type: "number"},
 			{Name: "isMobile", Type: "boolean"},
 			{Name: "isSubtitle", Type: "boolean"},
@@ -1687,7 +1700,7 @@ export const data: EventInterface = {
 			{Name: "channelBaseName", Type: "string"},
 			{Name: "languageID", Type: "number"},
 			{Name: "lineID", Type: "number"},
-			{Name: "guid", Type: "string"},
+			{Name: "guid", Type: "WOWGUID"},
 			{Name: "bnSenderID", Type: "number"},
 			{Name: "isMobile", Type: "boolean"},
 			{Name: "isSubtitle", Type: "boolean"},
@@ -1708,7 +1721,7 @@ export const data: EventInterface = {
 			{Name: "channelBaseName", Type: "string"},
 			{Name: "languageID", Type: "number"},
 			{Name: "lineID", Type: "number"},
-			{Name: "guid", Type: "string"},
+			{Name: "guid", Type: "WOWGUID"},
 			{Name: "bnSenderID", Type: "number"},
 			{Name: "isMobile", Type: "boolean"},
 			{Name: "isSubtitle", Type: "boolean"},
@@ -1729,7 +1742,7 @@ export const data: EventInterface = {
 			{Name: "channelBaseName", Type: "string"},
 			{Name: "languageID", Type: "number"},
 			{Name: "lineID", Type: "number"},
-			{Name: "guid", Type: "string"},
+			{Name: "guid", Type: "WOWGUID"},
 			{Name: "bnSenderID", Type: "number"},
 			{Name: "isMobile", Type: "boolean"},
 			{Name: "isSubtitle", Type: "boolean"},
@@ -1750,7 +1763,7 @@ export const data: EventInterface = {
 			{Name: "channelBaseName", Type: "string"},
 			{Name: "languageID", Type: "number"},
 			{Name: "lineID", Type: "number"},
-			{Name: "guid", Type: "string"},
+			{Name: "guid", Type: "WOWGUID"},
 			{Name: "bnSenderID", Type: "number"},
 			{Name: "isMobile", Type: "boolean"},
 			{Name: "isSubtitle", Type: "boolean"},
@@ -1771,7 +1784,7 @@ export const data: EventInterface = {
 			{Name: "channelBaseName", Type: "string"},
 			{Name: "languageID", Type: "number"},
 			{Name: "lineID", Type: "number"},
-			{Name: "guid", Type: "string"},
+			{Name: "guid", Type: "WOWGUID"},
 			{Name: "bnSenderID", Type: "number"},
 			{Name: "isMobile", Type: "boolean"},
 			{Name: "isSubtitle", Type: "boolean"},
@@ -1792,7 +1805,7 @@ export const data: EventInterface = {
 			{Name: "channelBaseName", Type: "string"},
 			{Name: "languageID", Type: "number"},
 			{Name: "lineID", Type: "number"},
-			{Name: "guid", Type: "string"},
+			{Name: "guid", Type: "WOWGUID"},
 			{Name: "bnSenderID", Type: "number"},
 			{Name: "isMobile", Type: "boolean"},
 			{Name: "isSubtitle", Type: "boolean"},
@@ -1813,7 +1826,7 @@ export const data: EventInterface = {
 			{Name: "channelBaseName", Type: "string"},
 			{Name: "languageID", Type: "number"},
 			{Name: "lineID", Type: "number"},
-			{Name: "guid", Type: "string"},
+			{Name: "guid", Type: "WOWGUID"},
 			{Name: "bnSenderID", Type: "number"},
 			{Name: "isMobile", Type: "boolean"},
 			{Name: "isSubtitle", Type: "boolean"},
@@ -1834,7 +1847,7 @@ export const data: EventInterface = {
 			{Name: "channelBaseName", Type: "string"},
 			{Name: "languageID", Type: "number"},
 			{Name: "lineID", Type: "number"},
-			{Name: "guid", Type: "string"},
+			{Name: "guid", Type: "WOWGUID"},
 			{Name: "bnSenderID", Type: "number"},
 			{Name: "isMobile", Type: "boolean"},
 			{Name: "isSubtitle", Type: "boolean"},
@@ -1855,7 +1868,7 @@ export const data: EventInterface = {
 			{Name: "channelBaseName", Type: "string"},
 			{Name: "languageID", Type: "number"},
 			{Name: "lineID", Type: "number"},
-			{Name: "guid", Type: "string"},
+			{Name: "guid", Type: "WOWGUID"},
 			{Name: "bnSenderID", Type: "number"},
 			{Name: "isMobile", Type: "boolean"},
 			{Name: "isSubtitle", Type: "boolean"},
@@ -1876,7 +1889,7 @@ export const data: EventInterface = {
 			{Name: "channelBaseName", Type: "string"},
 			{Name: "languageID", Type: "number"},
 			{Name: "lineID", Type: "number"},
-			{Name: "guid", Type: "string"},
+			{Name: "guid", Type: "WOWGUID"},
 			{Name: "bnSenderID", Type: "number"},
 			{Name: "isMobile", Type: "boolean"},
 			{Name: "isSubtitle", Type: "boolean"},
@@ -1897,7 +1910,7 @@ export const data: EventInterface = {
 			{Name: "channelBaseName", Type: "string"},
 			{Name: "languageID", Type: "number"},
 			{Name: "lineID", Type: "number"},
-			{Name: "guid", Type: "string"},
+			{Name: "guid", Type: "WOWGUID"},
 			{Name: "bnSenderID", Type: "number"},
 			{Name: "isMobile", Type: "boolean"},
 			{Name: "isSubtitle", Type: "boolean"},
@@ -1918,7 +1931,7 @@ export const data: EventInterface = {
 			{Name: "channelBaseName", Type: "string"},
 			{Name: "languageID", Type: "number"},
 			{Name: "lineID", Type: "number"},
-			{Name: "guid", Type: "string"},
+			{Name: "guid", Type: "WOWGUID"},
 			{Name: "bnSenderID", Type: "number"},
 			{Name: "isMobile", Type: "boolean"},
 			{Name: "isSubtitle", Type: "boolean"},
@@ -1939,7 +1952,7 @@ export const data: EventInterface = {
 			{Name: "channelBaseName", Type: "string"},
 			{Name: "languageID", Type: "number"},
 			{Name: "lineID", Type: "number"},
-			{Name: "guid", Type: "string"},
+			{Name: "guid", Type: "WOWGUID"},
 			{Name: "bnSenderID", Type: "number"},
 			{Name: "isMobile", Type: "boolean"},
 			{Name: "isSubtitle", Type: "boolean"},
@@ -1960,7 +1973,7 @@ export const data: EventInterface = {
 			{Name: "channelBaseName", Type: "string"},
 			{Name: "languageID", Type: "number"},
 			{Name: "lineID", Type: "number"},
-			{Name: "guid", Type: "string"},
+			{Name: "guid", Type: "WOWGUID"},
 			{Name: "bnSenderID", Type: "number"},
 			{Name: "isMobile", Type: "boolean"},
 			{Name: "isSubtitle", Type: "boolean"},
@@ -1981,7 +1994,7 @@ export const data: EventInterface = {
 			{Name: "channelBaseName", Type: "string"},
 			{Name: "languageID", Type: "number"},
 			{Name: "lineID", Type: "number"},
-			{Name: "guid", Type: "string"},
+			{Name: "guid", Type: "WOWGUID"},
 			{Name: "bnSenderID", Type: "number"},
 			{Name: "isMobile", Type: "boolean"},
 			{Name: "isSubtitle", Type: "boolean"},
@@ -2002,7 +2015,7 @@ export const data: EventInterface = {
 			{Name: "channelBaseName", Type: "string"},
 			{Name: "languageID", Type: "number"},
 			{Name: "lineID", Type: "number"},
-			{Name: "guid", Type: "string"},
+			{Name: "guid", Type: "WOWGUID"},
 			{Name: "bnSenderID", Type: "number"},
 			{Name: "isMobile", Type: "boolean"},
 			{Name: "isSubtitle", Type: "boolean"},
@@ -2023,7 +2036,7 @@ export const data: EventInterface = {
 			{Name: "channelBaseName", Type: "string"},
 			{Name: "languageID", Type: "number"},
 			{Name: "lineID", Type: "number"},
-			{Name: "guid", Type: "string"},
+			{Name: "guid", Type: "WOWGUID"},
 			{Name: "bnSenderID", Type: "number"},
 			{Name: "isMobile", Type: "boolean"},
 			{Name: "isSubtitle", Type: "boolean"},
@@ -2044,7 +2057,7 @@ export const data: EventInterface = {
 			{Name: "channelBaseName", Type: "string"},
 			{Name: "languageID", Type: "number"},
 			{Name: "lineID", Type: "number"},
-			{Name: "guid", Type: "string"},
+			{Name: "guid", Type: "WOWGUID"},
 			{Name: "bnSenderID", Type: "number"},
 			{Name: "isMobile", Type: "boolean"},
 			{Name: "isSubtitle", Type: "boolean"},
@@ -2065,7 +2078,7 @@ export const data: EventInterface = {
 			{Name: "channelBaseName", Type: "string"},
 			{Name: "languageID", Type: "number"},
 			{Name: "lineID", Type: "number"},
-			{Name: "guid", Type: "string"},
+			{Name: "guid", Type: "WOWGUID"},
 			{Name: "bnSenderID", Type: "number"},
 			{Name: "isMobile", Type: "boolean"},
 			{Name: "isSubtitle", Type: "boolean"},
@@ -2086,7 +2099,7 @@ export const data: EventInterface = {
 			{Name: "channelBaseName", Type: "string"},
 			{Name: "languageID", Type: "number"},
 			{Name: "lineID", Type: "number"},
-			{Name: "guid", Type: "string"},
+			{Name: "guid", Type: "WOWGUID"},
 			{Name: "bnSenderID", Type: "number"},
 			{Name: "isMobile", Type: "boolean"},
 			{Name: "isSubtitle", Type: "boolean"},
@@ -2107,7 +2120,7 @@ export const data: EventInterface = {
 			{Name: "channelBaseName", Type: "string"},
 			{Name: "languageID", Type: "number"},
 			{Name: "lineID", Type: "number"},
-			{Name: "guid", Type: "string"},
+			{Name: "guid", Type: "WOWGUID"},
 			{Name: "bnSenderID", Type: "number"},
 			{Name: "isMobile", Type: "boolean"},
 			{Name: "isSubtitle", Type: "boolean"},
@@ -2156,7 +2169,7 @@ export const data: EventInterface = {
 	CLOSE_TABARD_FRAME: {},
 	CLUB_ADDED: {
 		Payload: [
-			{Name: "clubId", Type: "string"},
+			{Name: "clubId", Type: "ClubId"},
 		],
 	},
 	CLUB_ERROR: {
@@ -2168,18 +2181,18 @@ export const data: EventInterface = {
 	},
 	CLUB_FINDER_APPLICANT_INVITE_RECIEVED: {
 		Payload: [
-			{Name: "clubFinderGUIDs", Type: "string[]"},
+			{Name: "clubFinderGUIDs", Type: "WOWGUID[]"},
 		],
 	},
 	CLUB_FINDER_APPLICATIONS_UPDATED: {
 		Payload: [
 			{Name: "type", Type: "ClubFinderRequestType"},
-			{Name: "clubFinderGUIDs", Type: "string[]"},
+			{Name: "clubFinderGUIDs", Type: "WOWGUID[]"},
 		],
 	},
 	CLUB_FINDER_CAN_WHISPER_APPLICANT: {
 		Payload: [
-			{Name: "applicant", Type: "string"},
+			{Name: "applicant", Type: "WOWGUID"},
 		],
 	},
 	CLUB_FINDER_CLUB_LIST_RETURNED: {
@@ -2192,13 +2205,13 @@ export const data: EventInterface = {
 		Documentation: "Sends an update to the UI about a reported guild or community.",
 		Payload: [
 			{Name: "type", Type: "ClubFinderRequestType"},
-			{Name: "clubFinderGUID", Type: "string"},
+			{Name: "clubFinderGUID", Type: "WOWGUID"},
 		],
 	},
 	CLUB_FINDER_COMMUNITY_OFFLINE_JOIN: {
 		Documentation: "Signals to the UI that you (the player) have joined a community offline.",
 		Payload: [
-			{Name: "clubId", Type: "string"},
+			{Name: "clubId", Type: "ClubId"},
 		],
 	},
 	CLUB_FINDER_ENABLED_OR_DISABLED: {
@@ -2218,7 +2231,7 @@ export const data: EventInterface = {
 	},
 	CLUB_FINDER_POST_UPDATED: {
 		Payload: [
-			{Name: "clubFinderGUIDs", Type: "string[]"},
+			{Name: "clubFinderGUIDs", Type: "WOWGUID[]"},
 		],
 	},
 	CLUB_FINDER_RECRUITMENT_POST_RETURNED: {
@@ -2236,7 +2249,7 @@ export const data: EventInterface = {
 	CLUB_FINDER_RECRUIT_LIST_CHANGED: {},
 	CLUB_INVITATIONS_RECEIVED_FOR_CLUB: {
 		Payload: [
-			{Name: "clubId", Type: "string"},
+			{Name: "clubId", Type: "ClubId"},
 		],
 	},
 	CLUB_INVITATION_ADDED_FOR_SELF: {
@@ -2246,66 +2259,66 @@ export const data: EventInterface = {
 	},
 	CLUB_INVITATION_REMOVED_FOR_SELF: {
 		Payload: [
-			{Name: "invitationId", Type: "string"},
+			{Name: "invitationId", Type: "ClubInvitationId"},
 		],
 	},
 	CLUB_MEMBER_ADDED: {
 		Payload: [
-			{Name: "clubId", Type: "string"},
+			{Name: "clubId", Type: "ClubId"},
 			{Name: "memberId", Type: "number"},
 		],
 	},
 	CLUB_MEMBER_PRESENCE_UPDATED: {
 		Payload: [
-			{Name: "clubId", Type: "string"},
+			{Name: "clubId", Type: "ClubId"},
 			{Name: "memberId", Type: "number"},
 			{Name: "presence", Type: "ClubMemberPresence"},
 		],
 	},
 	CLUB_MEMBER_REMOVED: {
 		Payload: [
-			{Name: "clubId", Type: "string"},
+			{Name: "clubId", Type: "ClubId"},
 			{Name: "memberId", Type: "number"},
 		],
 	},
 	CLUB_MEMBER_ROLE_UPDATED: {
 		Payload: [
-			{Name: "clubId", Type: "string"},
+			{Name: "clubId", Type: "ClubId"},
 			{Name: "memberId", Type: "number"},
 			{Name: "roleId", Type: "number"},
 		],
 	},
 	CLUB_MEMBER_UPDATED: {
 		Payload: [
-			{Name: "clubId", Type: "string"},
+			{Name: "clubId", Type: "ClubId"},
 			{Name: "memberId", Type: "number"},
 		],
 	},
 	CLUB_MESSAGE_ADDED: {
 		Payload: [
-			{Name: "clubId", Type: "string"},
-			{Name: "streamId", Type: "string"},
+			{Name: "clubId", Type: "ClubId"},
+			{Name: "streamId", Type: "ClubStreamId"},
 			{Name: "messageId", Type: "ClubMessageIdentifier"},
 		],
 	},
 	CLUB_MESSAGE_HISTORY_RECEIVED: {
 		Payload: [
-			{Name: "clubId", Type: "string"},
-			{Name: "streamId", Type: "string"},
+			{Name: "clubId", Type: "ClubId"},
+			{Name: "streamId", Type: "ClubStreamId"},
 			{Name: "downloadedRange", Type: "ClubMessageRange", Documentation: "Range of history messages received."},
 			{Name: "contiguousRange", Type: "ClubMessageRange", Documentation: "Range of contiguous messages that the received messages are in."},
 		],
 	},
 	CLUB_MESSAGE_UPDATED: {
 		Payload: [
-			{Name: "clubId", Type: "string"},
-			{Name: "streamId", Type: "string"},
+			{Name: "clubId", Type: "ClubId"},
+			{Name: "streamId", Type: "ClubStreamId"},
 			{Name: "messageId", Type: "ClubMessageIdentifier"},
 		],
 	},
 	CLUB_REMOVED: {
 		Payload: [
-			{Name: "clubId", Type: "string"},
+			{Name: "clubId", Type: "ClubId"},
 		],
 	},
 	CLUB_REMOVED_MESSAGE: {
@@ -2316,53 +2329,53 @@ export const data: EventInterface = {
 	},
 	CLUB_SELF_MEMBER_ROLE_UPDATED: {
 		Payload: [
-			{Name: "clubId", Type: "string"},
+			{Name: "clubId", Type: "ClubId"},
 			{Name: "roleId", Type: "number"},
 		],
 	},
 	CLUB_STREAMS_LOADED: {
 		Payload: [
-			{Name: "clubId", Type: "string"},
+			{Name: "clubId", Type: "ClubId"},
 		],
 	},
 	CLUB_STREAM_ADDED: {
 		Payload: [
-			{Name: "clubId", Type: "string"},
-			{Name: "streamId", Type: "string"},
+			{Name: "clubId", Type: "ClubId"},
+			{Name: "streamId", Type: "ClubStreamId"},
 		],
 	},
 	CLUB_STREAM_REMOVED: {
 		Payload: [
-			{Name: "clubId", Type: "string"},
-			{Name: "streamId", Type: "string"},
+			{Name: "clubId", Type: "ClubId"},
+			{Name: "streamId", Type: "ClubStreamId"},
 		],
 	},
 	CLUB_STREAM_SUBSCRIBED: {
 		Payload: [
-			{Name: "clubId", Type: "string"},
-			{Name: "streamId", Type: "string"},
+			{Name: "clubId", Type: "ClubId"},
+			{Name: "streamId", Type: "ClubStreamId"},
 		],
 	},
 	CLUB_STREAM_UNSUBSCRIBED: {
 		Payload: [
-			{Name: "clubId", Type: "string"},
-			{Name: "streamId", Type: "string"},
+			{Name: "clubId", Type: "ClubId"},
+			{Name: "streamId", Type: "ClubStreamId"},
 		],
 	},
 	CLUB_STREAM_UPDATED: {
 		Payload: [
-			{Name: "clubId", Type: "string"},
-			{Name: "streamId", Type: "string"},
+			{Name: "clubId", Type: "ClubId"},
+			{Name: "streamId", Type: "ClubStreamId"},
 		],
 	},
 	CLUB_TICKETS_RECEIVED: {
 		Payload: [
-			{Name: "clubId", Type: "string"},
+			{Name: "clubId", Type: "ClubId"},
 		],
 	},
 	CLUB_TICKET_CREATED: {
 		Payload: [
-			{Name: "clubId", Type: "string"},
+			{Name: "clubId", Type: "ClubId"},
 			{Name: "ticketInfo", Type: "ClubTicketInfo"},
 		],
 	},
@@ -2373,7 +2386,7 @@ export const data: EventInterface = {
 	},
 	CLUB_UPDATED: {
 		Payload: [
-			{Name: "clubId", Type: "string"},
+			{Name: "clubId", Type: "ClubId"},
 		],
 	},
 	COMBAT_LOG_EVENT: {},
@@ -2413,8 +2426,8 @@ export const data: EventInterface = {
 	COMMODITY_PRICE_UNAVAILABLE: {},
 	COMMODITY_PRICE_UPDATED: {
 		Payload: [
-			{Name: "updatedUnitPrice", Type: "number"},
-			{Name: "updatedTotalPrice", Type: "number"},
+			{Name: "updatedUnitPrice", Type: "BigUInteger"},
+			{Name: "updatedTotalPrice", Type: "BigUInteger"},
 		],
 	},
 	COMMODITY_PURCHASED: {
@@ -2547,21 +2560,30 @@ export const data: EventInterface = {
 	CRAFTINGORDERS_CLAIMED_ORDER_REMOVED: {},
 	CRAFTINGORDERS_CLAIMED_ORDER_UPDATED: {
 		Payload: [
-			{Name: "orderID", Type: "number"},
+			{Name: "orderID", Type: "BigUInteger"},
 		],
 	},
 	CRAFTINGORDERS_CLAIM_ORDER_RESPONSE: {
 		Payload: [
 			{Name: "result", Type: "CraftingOrderResult"},
-			{Name: "orderID", Type: "number"},
+			{Name: "orderID", Type: "BigUInteger"},
 		],
 	},
 	CRAFTINGORDERS_CUSTOMER_FAVORITES_CHANGED: {},
 	CRAFTINGORDERS_CUSTOMER_OPTIONS_PARSED: {},
+	CRAFTINGORDERS_DISPLAY_CRAFTER_FULFILLED_MSG: {
+		Payload: [
+			{Name: "orderTypeString", Type: "string"},
+			{Name: "itemNameString", Type: "string"},
+			{Name: "playerNameString", Type: "string"},
+			{Name: "tipAmount", Type: "WOWMONEY"},
+			{Name: "quantityCrafted", Type: "number"},
+		],
+	},
 	CRAFTINGORDERS_FULFILL_ORDER_RESPONSE: {
 		Payload: [
 			{Name: "result", Type: "CraftingOrderResult"},
-			{Name: "orderID", Type: "number"},
+			{Name: "orderID", Type: "BigUInteger"},
 		],
 	},
 	CRAFTINGORDERS_HIDE_CRAFTER: {},
@@ -2579,13 +2601,13 @@ export const data: EventInterface = {
 	CRAFTINGORDERS_REJECT_ORDER_RESPONSE: {
 		Payload: [
 			{Name: "result", Type: "CraftingOrderResult"},
-			{Name: "orderID", Type: "number"},
+			{Name: "orderID", Type: "BigUInteger"},
 		],
 	},
 	CRAFTINGORDERS_RELEASE_ORDER_RESPONSE: {
 		Payload: [
 			{Name: "result", Type: "CraftingOrderResult"},
-			{Name: "orderID", Type: "number"},
+			{Name: "orderID", Type: "BigUInteger"},
 		],
 	},
 	CRAFTINGORDERS_SHOW_CRAFTER: {},
@@ -2594,7 +2616,7 @@ export const data: EventInterface = {
 	CRAFTINGORDERS_UPDATE_CUSTOMER_NAME: {
 		Payload: [
 			{Name: "customerName", Type: "string"},
-			{Name: "orderID", Type: "number"},
+			{Name: "orderID", Type: "BigUInteger"},
 		],
 	},
 	CRAFTINGORDERS_UPDATE_ORDER_COUNT: {
@@ -2778,7 +2800,7 @@ export const data: EventInterface = {
 	FOG_OF_WAR_UPDATED: {},
 	FORBIDDEN_NAME_PLATE_CREATED: {
 		Payload: [
-			{Name: "namePlateFrame", Type: "table"},
+			{Name: "namePlateFrame", Type: "NamePlateFrame"},
 		],
 	},
 	FORBIDDEN_NAME_PLATE_UNIT_ADDED: {
@@ -2856,13 +2878,13 @@ export const data: EventInterface = {
 	},
 	GARRISON_FOLLOWER_ADDED: {
 		Payload: [
-			{Name: "followerDbID", Type: "string"},
+			{Name: "followerDbID", Type: "GarrisonFollower"},
 			{Name: "followerName", Type: "string"},
 			{Name: "followerClassName", Type: "string"},
 			{Name: "followerLevel", Type: "number"},
 			{Name: "followerQuality", Type: "number"},
 			{Name: "isUpgraded", Type: "boolean"},
-			{Name: "textureKit", Type: "string"},
+			{Name: "textureKit", Type: "textureKit"},
 			{Name: "followerTypeID", Type: "number"},
 		],
 	},
@@ -2870,13 +2892,13 @@ export const data: EventInterface = {
 	GARRISON_FOLLOWER_DURABILITY_CHANGED: {
 		Payload: [
 			{Name: "garrFollowerTypeID", Type: "number"},
-			{Name: "followerDbID", Type: "string"},
+			{Name: "followerDbID", Type: "GarrisonFollower"},
 			{Name: "followerDurability", Type: "number"},
 		],
 	},
 	GARRISON_FOLLOWER_HEALED: {
 		Payload: [
-			{Name: "followerID", Type: "string"},
+			{Name: "followerID", Type: "GarrisonFollower"},
 		],
 	},
 	GARRISON_FOLLOWER_LIST_UPDATE: {
@@ -2891,13 +2913,13 @@ export const data: EventInterface = {
 	},
 	GARRISON_FOLLOWER_UPGRADED: {
 		Payload: [
-			{Name: "followerDbID", Type: "string"},
+			{Name: "followerDbID", Type: "GarrisonFollower"},
 		],
 	},
 	GARRISON_FOLLOWER_XP_CHANGED: {
 		Payload: [
 			{Name: "garrFollowerTypeID", Type: "number"},
-			{Name: "followerDbID", Type: "string"},
+			{Name: "followerDbID", Type: "GarrisonFollower"},
 			{Name: "xpChange", Type: "number"},
 			{Name: "oldFollowerXp", Type: "number"},
 			{Name: "oldFollowerLevel", Type: "number"},
@@ -2955,7 +2977,7 @@ export const data: EventInterface = {
 	GARRISON_MISSION_REWARD_INFO: {
 		Payload: [
 			{Name: "missionID", Type: "number"},
-			{Name: "followerDbID", Type: "string"},
+			{Name: "followerDbID", Type: "GarrisonFollower"},
 		],
 	},
 	GARRISON_MISSION_STARTED: {
@@ -3122,26 +3144,26 @@ export const data: EventInterface = {
 	GOSSIP_OPTIONS_REFRESHED: {},
 	GOSSIP_SHOW: {
 		Payload: [
-			{Name: "uiTextureKit", Type: "string", Nilable: true},
+			{Name: "uiTextureKit", Type: "textureKit", Nilable: true},
 		],
 	},
 	GROUP_FORMED: {
 		Payload: [
 			{Name: "category", Type: "number"},
-			{Name: "partyGUID", Type: "string"},
+			{Name: "partyGUID", Type: "WOWGUID"},
 		],
 	},
 	GROUP_INVITE_CONFIRMATION: {},
 	GROUP_JOINED: {
 		Payload: [
 			{Name: "category", Type: "number"},
-			{Name: "partyGUID", Type: "string"},
+			{Name: "partyGUID", Type: "WOWGUID"},
 		],
 	},
 	GROUP_LEFT: {
 		Payload: [
 			{Name: "category", Type: "number"},
-			{Name: "partyGUID", Type: "string"},
+			{Name: "partyGUID", Type: "WOWGUID"},
 		],
 	},
 	GROUP_ROSTER_UPDATE: {},
@@ -3235,31 +3257,31 @@ export const data: EventInterface = {
 	},
 	HONOR_XP_UPDATE: {
 		Payload: [
-			{Name: "unitTarget", Type: "string"},
+			{Name: "unitTarget", Type: "UnitToken"},
 		],
 	},
 	IGNORELIST_UPDATE: {},
 	INCOMING_RESURRECT_CHANGED: {
 		Payload: [
-			{Name: "unitTarget", Type: "string"},
+			{Name: "unitTarget", Type: "UnitToken"},
 		],
 	},
 	INCOMING_SUMMON_CHANGED: {
 		Payload: [
-			{Name: "unitTarget", Type: "string"},
+			{Name: "unitTarget", Type: "UnitToken"},
 		],
 	},
 	INITIAL_CLUBS_LOADED: {},
 	INITIAL_HOTFIXES_APPLIED: {},
 	INSPECT_ACHIEVEMENT_READY: {
 		Payload: [
-			{Name: "guid", Type: "string"},
+			{Name: "guid", Type: "WOWGUID"},
 		],
 	},
 	INSPECT_HONOR_UPDATE: {},
 	INSPECT_READY: {
 		Payload: [
-			{Name: "inspecteeGUID", Type: "string"},
+			{Name: "inspecteeGUID", Type: "WOWGUID"},
 		],
 	},
 	INSTANCE_BOOT_START: {},
@@ -3302,7 +3324,7 @@ export const data: EventInterface = {
 	INVITE_TRAVEL_PASS_CONFIRMATION: {
 		Payload: [
 			{Name: "targetName", Type: "string"},
-			{Name: "targetGUID", Type: "string"},
+			{Name: "targetGUID", Type: "WOWGUID"},
 			{Name: "willConvertToRaid", Type: "boolean"},
 			{Name: "questSessionActive", Type: "boolean"},
 		],
@@ -3314,8 +3336,8 @@ export const data: EventInterface = {
 			{Name: "amount", Type: "number"},
 			{Name: "gainedByPlayer", Type: "boolean"},
 			{Name: "factionIndex", Type: "number"},
-			{Name: "gainedBy", Type: "string"},
-			{Name: "gainedFrom", Type: "string"},
+			{Name: "gainedBy", Type: "WOWGUID"},
+			{Name: "gainedFrom", Type: "WOWGUID"},
 		],
 	},
 	ISLAND_COMPLETED: {
@@ -3332,7 +3354,7 @@ export const data: EventInterface = {
 	},
 	ITEM_CONVERSION_DATA_READY: {
 		Payload: [
-			{Name: "itemGUID", Type: "string"},
+			{Name: "itemGUID", Type: "WOWGUID"},
 		],
 	},
 	ITEM_COUNT_CHANGED: {
@@ -3359,13 +3381,13 @@ export const data: EventInterface = {
 	},
 	ITEM_LOCKED: {
 		Payload: [
-			{Name: "bagOrSlotIndex", Type: "number"},
+			{Name: "bagOrSlotIndex", Type: "BagIndex"},
 			{Name: "slotIndex", Type: "number", Nilable: true},
 		],
 	},
 	ITEM_LOCK_CHANGED: {
 		Payload: [
-			{Name: "bagOrSlotIndex", Type: "number"},
+			{Name: "bagOrSlotIndex", Type: "BagIndex"},
 			{Name: "slotIndex", Type: "number", Nilable: true},
 		],
 	},
@@ -3402,7 +3424,7 @@ export const data: EventInterface = {
 	},
 	ITEM_UNLOCKED: {
 		Payload: [
-			{Name: "bagOrSlotIndex", Type: "number"},
+			{Name: "bagOrSlotIndex", Type: "BagIndex"},
 			{Name: "slotIndex", Type: "number", Nilable: true},
 		],
 	},
@@ -3424,7 +3446,7 @@ export const data: EventInterface = {
 	KNOWLEDGE_BASE_SYSTEM_MOTD_UPDATED: {},
 	KNOWN_TITLES_UPDATE: {
 		Payload: [
-			{Name: "unitTarget", Type: "string"},
+			{Name: "unitTarget", Type: "UnitToken"},
 		],
 	},
 	LANGUAGE_LIST_CHANGED: {},
@@ -3473,7 +3495,7 @@ export const data: EventInterface = {
 			{Name: "searchResultID", Type: "number"},
 			{Name: "newStatus", Type: "string"},
 			{Name: "oldStatus", Type: "string"},
-			{Name: "groupName", Type: "string"},
+			{Name: "groupName", Type: "kstringLfgListChat"},
 		],
 	},
 	LFG_LIST_AVAILABILITY_UPDATE: {},
@@ -3483,7 +3505,7 @@ export const data: EventInterface = {
 	LFG_LIST_JOINED_GROUP: {
 		Payload: [
 			{Name: "searchResultID", Type: "number"},
-			{Name: "groupName", Type: "string"},
+			{Name: "groupName", Type: "kstringLfgListChat"},
 		],
 	},
 	LFG_LIST_SEARCH_FAILED: {
@@ -3568,20 +3590,23 @@ export const data: EventInterface = {
 		],
 	},
 	LOOT_CLOSED: {},
-	LOOT_HISTORY_AUTO_SHOW: {
+	LOOT_HISTORY_CLEAR_HISTORY: {},
+	LOOT_HISTORY_GO_TO_ENCOUNTER: {
 		Payload: [
-			{Name: "rollID", Type: "number"},
-			{Name: "isMasterLoot", Type: "boolean"},
+			{Name: "encounterID", Type: "number"},
 		],
 	},
-	LOOT_HISTORY_FULL_UPDATE: {},
-	LOOT_HISTORY_ROLL_CHANGED: {
+	LOOT_HISTORY_UPDATE_DROP: {
 		Payload: [
-			{Name: "historyIndex", Type: "number"},
-			{Name: "playerIndex", Type: "number"},
+			{Name: "encounterID", Type: "number"},
+			{Name: "lootListID", Type: "number"},
 		],
 	},
-	LOOT_HISTORY_ROLL_COMPLETE: {},
+	LOOT_HISTORY_UPDATE_ENCOUNTER: {
+		Payload: [
+			{Name: "encounterID", Type: "number"},
+		],
+	},
 	LOOT_ITEM_AVAILABLE: {
 		Payload: [
 			{Name: "itemTooltip", Type: "string"},
@@ -3637,13 +3662,13 @@ export const data: EventInterface = {
 	},
 	LOSS_OF_CONTROL_COMMENTATOR_ADDED: {
 		Payload: [
-			{Name: "victim", Type: "string"},
+			{Name: "victim", Type: "WOWGUID"},
 			{Name: "effectIndex", Type: "number"},
 		],
 	},
 	LOSS_OF_CONTROL_COMMENTATOR_UPDATE: {
 		Payload: [
-			{Name: "victim", Type: "string"},
+			{Name: "victim", Type: "WOWGUID"},
 		],
 	},
 	LOSS_OF_CONTROL_UPDATE: {},
@@ -3724,7 +3749,7 @@ export const data: EventInterface = {
 	MERCHANT_UPDATE: {},
 	MINIMAP_PING: {
 		Payload: [
-			{Name: "unitTarget", Type: "string"},
+			{Name: "unitTarget", Type: "UnitToken"},
 			{Name: "y", Type: "number"},
 			{Name: "x", Type: "number"},
 		],
@@ -3778,7 +3803,7 @@ export const data: EventInterface = {
 	},
 	NAME_PLATE_CREATED: {
 		Payload: [
-			{Name: "namePlateFrame", Type: "table"},
+			{Name: "namePlateFrame", Type: "NamePlateFrame"},
 		],
 	},
 	NAME_PLATE_UNIT_ADDED: {
@@ -3793,7 +3818,7 @@ export const data: EventInterface = {
 	},
 	NAVIGATION_FRAME_CREATED: {
 		Payload: [
-			{Name: "region", Type: "table"},
+			{Name: "region", Type: "ScriptRegion"},
 		],
 	},
 	NAVIGATION_FRAME_DESTROYED: {},
@@ -3803,6 +3828,7 @@ export const data: EventInterface = {
 		],
 	},
 	NEWCOMER_GRADUATION: {},
+	NEW_MATCHMAKING_PARTY_INVITE: {},
 	NEW_MOUNT_ADDED: {
 		Payload: [
 			{Name: "mountID", Type: "number"},
@@ -3810,7 +3836,7 @@ export const data: EventInterface = {
 	},
 	NEW_PET_ADDED: {
 		Payload: [
-			{Name: "battlePetGUID", Type: "string"},
+			{Name: "battlePetGUID", Type: "WOWGUID"},
 		],
 	},
 	NEW_RECIPE_LEARNED: {
@@ -3843,12 +3869,12 @@ export const data: EventInterface = {
 	NPE_TUTORIAL_UPDATE: {},
 	OBJECT_ENTERED_AOI: {
 		Payload: [
-			{Name: "guid", Type: "string"},
+			{Name: "guid", Type: "WOWGUID"},
 		],
 	},
 	OBJECT_LEFT_AOI: {
 		Payload: [
-			{Name: "guid", Type: "string"},
+			{Name: "guid", Type: "WOWGUID"},
 		],
 	},
 	OBLITERUM_FORGE_PENDING_ITEM_CHANGED: {},
@@ -3882,7 +3908,7 @@ export const data: EventInterface = {
 			{Name: "isDamage", Type: "boolean"},
 			{Name: "isNativeRealm", Type: "boolean"},
 			{Name: "allowMultipleRoles", Type: "boolean"},
-			{Name: "inviterGUID", Type: "string"},
+			{Name: "inviterGUID", Type: "WOWGUID"},
 			{Name: "questSessionActive", Type: "boolean"},
 		],
 	},
@@ -3891,12 +3917,12 @@ export const data: EventInterface = {
 	PARTY_LOOT_METHOD_CHANGED: {},
 	PARTY_MEMBER_DISABLE: {
 		Payload: [
-			{Name: "unitTarget", Type: "string"},
+			{Name: "unitTarget", Type: "UnitToken"},
 		],
 	},
 	PARTY_MEMBER_ENABLE: {
 		Payload: [
-			{Name: "unitTarget", Type: "string"},
+			{Name: "unitTarget", Type: "UnitToken"},
 		],
 	},
 	PENDING_AZERITE_ESSENCE_CHANGED: {
@@ -4097,7 +4123,7 @@ export const data: EventInterface = {
 	PET_JOURNAL_AUTO_SLOTTED_PET: {
 		Payload: [
 			{Name: "slotIndex", Type: "number"},
-			{Name: "battlePetGUID", Type: "string"},
+			{Name: "battlePetGUID", Type: "WOWGUID"},
 		],
 	},
 	PET_JOURNAL_CAGE_FAILED: {},
@@ -4106,17 +4132,17 @@ export const data: EventInterface = {
 	PET_JOURNAL_PETS_HEALED: {},
 	PET_JOURNAL_PET_DELETED: {
 		Payload: [
-			{Name: "battlePetGUID", Type: "string"},
+			{Name: "battlePetGUID", Type: "WOWGUID"},
 		],
 	},
 	PET_JOURNAL_PET_RESTORED: {
 		Payload: [
-			{Name: "battlePetGUID", Type: "string"},
+			{Name: "battlePetGUID", Type: "WOWGUID"},
 		],
 	},
 	PET_JOURNAL_PET_REVOKED: {
 		Payload: [
-			{Name: "battlePetGUID", Type: "string"},
+			{Name: "battlePetGUID", Type: "WOWGUID"},
 		],
 	},
 	PET_JOURNAL_TRAP_LEVEL_SET: {
@@ -4157,7 +4183,7 @@ export const data: EventInterface = {
 	PLAYER_CONTROL_LOST: {},
 	PLAYER_DAMAGE_DONE_MODS: {
 		Payload: [
-			{Name: "unitTarget", Type: "string"},
+			{Name: "unitTarget", Type: "UnitToken"},
 		],
 	},
 	PLAYER_DEAD: {},
@@ -4179,19 +4205,19 @@ export const data: EventInterface = {
 	PLAYER_FARSIGHT_FOCUS_CHANGED: {},
 	PLAYER_FLAGS_CHANGED: {
 		Payload: [
-			{Name: "unitTarget", Type: "string"},
+			{Name: "unitTarget", Type: "UnitToken"},
 		],
 	},
 	PLAYER_FOCUS_CHANGED: {},
 	PLAYER_GAINS_VEHICLE_DATA: {
 		Payload: [
-			{Name: "unitTarget", Type: "string"},
+			{Name: "unitTarget", Type: "UnitToken"},
 			{Name: "vehicleUIIndicatorID", Type: "number"},
 		],
 	},
 	PLAYER_GUILD_UPDATE: {
 		Payload: [
-			{Name: "unitTarget", Type: "string"},
+			{Name: "unitTarget", Type: "UnitToken"},
 		],
 	},
 	PLAYER_INTERACTION_MANAGER_FRAME_HIDE: {
@@ -4204,6 +4230,7 @@ export const data: EventInterface = {
 			{Name: "type", Type: "PlayerInteractionType"},
 		],
 	},
+	PLAYER_JOINED_PVP_MATCH: {},
 	PLAYER_LEARN_PVP_TALENT_FAILED: {},
 	PLAYER_LEARN_TALENT_FAILED: {},
 	PLAYER_LEAVE_COMBAT: {},
@@ -4233,19 +4260,19 @@ export const data: EventInterface = {
 	PLAYER_LOOT_SPEC_UPDATED: {},
 	PLAYER_LOSES_VEHICLE_DATA: {
 		Payload: [
-			{Name: "unitTarget", Type: "string"},
+			{Name: "unitTarget", Type: "UnitToken"},
 		],
 	},
 	PLAYER_MONEY: {},
 	PLAYER_MOUNT_DISPLAY_CHANGED: {},
 	PLAYER_PVP_KILLS_CHANGED: {
 		Payload: [
-			{Name: "unitTarget", Type: "string"},
+			{Name: "unitTarget", Type: "UnitToken"},
 		],
 	},
 	PLAYER_PVP_RANK_CHANGED: {
 		Payload: [
-			{Name: "unitTarget", Type: "string"},
+			{Name: "unitTarget", Type: "UnitToken"},
 		],
 	},
 	PLAYER_PVP_TALENT_UPDATE: {},
@@ -4254,7 +4281,7 @@ export const data: EventInterface = {
 	PLAYER_REGEN_ENABLED: {},
 	PLAYER_REPORT_SUBMITTED: {
 		Payload: [
-			{Name: "invitedByGUID", Type: "string"},
+			{Name: "invitedByGUID", Type: "WOWGUID"},
 		],
 	},
 	PLAYER_ROLES_ASSIGNED: {},
@@ -4267,14 +4294,14 @@ export const data: EventInterface = {
 	PLAYER_SOFT_FRIEND_CHANGED: {},
 	PLAYER_SOFT_INTERACT_CHANGED: {
 		Payload: [
-			{Name: "oldTarget", Type: "string"},
-			{Name: "newTarget", Type: "string"},
+			{Name: "oldTarget", Type: "WOWGUID"},
+			{Name: "newTarget", Type: "WOWGUID"},
 		],
 	},
 	PLAYER_SOFT_TARGET_INTERACTION: {},
 	PLAYER_SPECIALIZATION_CHANGED: {
 		Payload: [
-			{Name: "unitTarget", Type: "string"},
+			{Name: "unitTarget", Type: "UnitToken"},
 		],
 	},
 	PLAYER_STARTED_LOOKING: {},
@@ -4294,14 +4321,14 @@ export const data: EventInterface = {
 	PLAYER_TRADE_MONEY: {},
 	PLAYER_TRIAL_XP_UPDATE: {
 		Payload: [
-			{Name: "unitTarget", Type: "string"},
+			{Name: "unitTarget", Type: "UnitToken"},
 		],
 	},
 	PLAYER_UNGHOST: {},
 	PLAYER_UPDATE_RESTING: {},
 	PLAYER_XP_UPDATE: {
 		Payload: [
-			{Name: "unitTarget", Type: "string"},
+			{Name: "unitTarget", Type: "UnitToken"},
 		],
 	},
 	PLAY_MOVIE: {
@@ -4334,7 +4361,7 @@ export const data: EventInterface = {
 	PVP_MATCH_COMPLETE: {
 		Payload: [
 			{Name: "winner", Type: "number"},
-			{Name: "duration", Type: "number"},
+			{Name: "duration", Type: "time_t"},
 		],
 	},
 	PVP_MATCH_INACTIVE: {},
@@ -4346,7 +4373,6 @@ export const data: EventInterface = {
 			{Name: "readyCheckInfo", Type: "PvpReadyCheckInfo"},
 		],
 	},
-	PVP_ROLE_POPUP_JOINED_MATCH: {},
 	PVP_ROLE_POPUP_SHOW: {
 		Payload: [
 			{Name: "readyCheckInfo", Type: "PvpReadyCheckInfo"},
@@ -4356,7 +4382,7 @@ export const data: EventInterface = {
 	PVP_SPECIAL_EVENT_INFO_UPDATED: {},
 	PVP_TIMER_UPDATE: {
 		Payload: [
-			{Name: "unitTarget", Type: "string"},
+			{Name: "unitTarget", Type: "UnitToken"},
 		],
 	},
 	PVP_TYPES_ENABLED: {
@@ -4457,14 +4483,14 @@ export const data: EventInterface = {
 	QUEST_SESSION_MEMBER_CONFIRM: {},
 	QUEST_SESSION_MEMBER_START_RESPONSE: {
 		Payload: [
-			{Name: "guid", Type: "string"},
+			{Name: "guid", Type: "WOWGUID"},
 			{Name: "response", Type: "boolean"},
 		],
 	},
 	QUEST_SESSION_NOTIFICATION: {
 		Payload: [
 			{Name: "result", Type: "QuestSessionResult"},
-			{Name: "guid", Type: "string"},
+			{Name: "guid", Type: "WOWGUID"},
 		],
 	},
 	QUEST_TURNED_IN: {
@@ -4494,6 +4520,7 @@ export const data: EventInterface = {
 			{Name: "name", Type: "string"},
 			{Name: "payloadID", Type: "number", Nilable: true},
 			{Name: "showFancyToast", Type: "boolean"},
+			{Name: "rafVersion", Type: "RecruitAFriendRewardsVersion"},
 		],
 	},
 	RAF_INFO_UPDATED: {
@@ -4506,6 +4533,7 @@ export const data: EventInterface = {
 			{Name: "enabled", Type: "boolean"},
 		],
 	},
+	RAF_REWARD_CLAIM_FAILED: {},
 	RAF_SYSTEM_ENABLED_STATUS: {
 		Payload: [
 			{Name: "enabled", Type: "boolean"},
@@ -4546,12 +4574,12 @@ export const data: EventInterface = {
 	READY_CHECK: {
 		Payload: [
 			{Name: "initiatorName", Type: "string"},
-			{Name: "readyCheckTimeLeft", Type: "number"},
+			{Name: "readyCheckTimeLeft", Type: "time_t"},
 		],
 	},
 	READY_CHECK_CONFIRM: {
 		Payload: [
-			{Name: "unitTarget", Type: "string"},
+			{Name: "unitTarget", Type: "UnitToken"},
 			{Name: "isReady", Type: "boolean"},
 		],
 	},
@@ -4566,6 +4594,11 @@ export const data: EventInterface = {
 	RECEIVED_ACHIEVEMENT_MEMBER_LIST: {
 		Payload: [
 			{Name: "achievementID", Type: "number"},
+		],
+	},
+	REJECTED_MATCHMAKING_PARTY_INVITE: {
+		Payload: [
+			{Name: "name", Type: "string"},
 		],
 	},
 	REPLACE_ENCHANT: {
@@ -4706,6 +4739,7 @@ export const data: EventInterface = {
 	SECURE_TRANSFER_CANCEL: {},
 	SECURE_TRANSFER_CONFIRM_SEND_MAIL: {},
 	SECURE_TRANSFER_CONFIRM_TRADE_ACCEPT: {},
+	SELECTED_LOADOUT_CHANGED: {},
 	SELF_RES_SPELL_CHANGED: {},
 	SEND_MAIL_COD_CHANGED: {},
 	SEND_MAIL_MONEY_CHANGED: {},
@@ -4769,6 +4803,12 @@ export const data: EventInterface = {
 			{Name: "lessAwesome", Type: "boolean"},
 		],
 	},
+	SHOW_PARTY_POSE_UI: {
+		Payload: [
+			{Name: "mapID", Type: "number"},
+			{Name: "won", Type: "boolean"},
+		],
+	},
 	SHOW_PVP_FACTION_LOOT_TOAST: {
 		Payload: [
 			{Name: "typeIdentifier", Type: "string"},
@@ -4804,17 +4844,17 @@ export const data: EventInterface = {
 	SIMPLE_BROWSER_WEB_PROXY_FAILED: {},
 	SIMPLE_CHECKOUT_CLOSED: {},
 	SKILL_LINES_CHANGED: {},
+	SKILL_LINE_SPECS_RANKS_CHANGED: {},
 	SKILL_LINE_SPECS_UNLOCKED: {
 		Payload: [
 			{Name: "skillLineID", Type: "number"},
 			{Name: "tradeSkillID", Type: "number"},
 		],
 	},
-	SOCIAL_ITEM_RECEIVED: {},
 	SOCIAL_QUEUE_CONFIG_UPDATED: {},
 	SOCIAL_QUEUE_UPDATE: {
 		Payload: [
-			{Name: "groupGUID", Type: "string"},
+			{Name: "groupGUID", Type: "WOWGUID"},
 			{Name: "numAddedItems", Type: "number", Nilable: true},
 		],
 	},
@@ -4976,8 +5016,8 @@ export const data: EventInterface = {
 	START_TIMER: {
 		Payload: [
 			{Name: "timerType", Type: "number"},
-			{Name: "timeRemaining", Type: "number"},
-			{Name: "totalTime", Type: "number"},
+			{Name: "timeRemaining", Type: "time_t"},
+			{Name: "totalTime", Type: "time_t"},
 		],
 	},
 	STOP_AUTOREPEAT_SPELL: {},
@@ -4994,9 +5034,9 @@ export const data: EventInterface = {
 	},
 	STREAM_VIEW_MARKER_UPDATED: {
 		Payload: [
-			{Name: "clubId", Type: "string"},
-			{Name: "streamId", Type: "string"},
-			{Name: "lastReadTime", Type: "number", Nilable: true, Documentation: "nil if stream view is at current"},
+			{Name: "clubId", Type: "ClubId"},
+			{Name: "streamId", Type: "ClubStreamId"},
+			{Name: "lastReadTime", Type: "BigUInteger", Nilable: true, Documentation: "nil if stream view is at current"},
 		],
 	},
 	STURDINESS_UPDATE: {},
@@ -5083,6 +5123,9 @@ export const data: EventInterface = {
 	TOKEN_STATUS_CHANGED: {},
 	TOOLTIP_DATA_UPDATE: {
 		Documentation: "Sends an update to the UI that a sparse or cache lookup has resolved",
+		Payload: [
+			{Name: "dataInstanceID", Type: "number", Nilable: true},
+		],
 	},
 	TOYS_UPDATED: {
 		Payload: [
@@ -5101,7 +5144,7 @@ export const data: EventInterface = {
 		Payload: [
 			{Name: "achievementID", Type: "number"},
 			{Name: "criteriaID", Type: "number", Nilable: true},
-			{Name: "elapsed", Type: "number", Nilable: true},
+			{Name: "elapsed", Type: "time_t", Nilable: true},
 			{Name: "duration", Type: "number", Nilable: true},
 		],
 	},
@@ -5176,7 +5219,7 @@ export const data: EventInterface = {
 	},
 	TRADE_SKILL_ITEM_UPDATE: {
 		Payload: [
-			{Name: "itemGUID", Type: "string"},
+			{Name: "itemGUID", Type: "WOWGUID"},
 		],
 	},
 	TRADE_SKILL_LIST_UPDATE: {},
@@ -5314,25 +5357,6 @@ export const data: EventInterface = {
 		],
 	},
 	TUTORIAL_UNHIGHLIGHT_SPELL: {},
-	TWITTER_LINK_RESULT: {
-		Payload: [
-			{Name: "isLinked", Type: "boolean"},
-			{Name: "screenName", Type: "string"},
-			{Name: "error", Type: "string"},
-		],
-	},
-	TWITTER_POST_RESULT: {
-		Payload: [
-			{Name: "result", Type: "number"},
-		],
-	},
-	TWITTER_STATUS_UPDATE: {
-		Payload: [
-			{Name: "isTwitterEnabled", Type: "boolean"},
-			{Name: "isLinked", Type: "boolean"},
-			{Name: "screenName", Type: "string"},
-		],
-	},
 	UI_ERROR_MESSAGE: {
 		Payload: [
 			{Name: "errorType", Type: "number"},
@@ -5355,44 +5379,44 @@ export const data: EventInterface = {
 	UI_SCALE_CHANGED: {},
 	UNIT_ABSORB_AMOUNT_CHANGED: {
 		Payload: [
-			{Name: "unitTarget", Type: "string"},
+			{Name: "unitTarget", Type: "UnitToken"},
 		],
 	},
 	UNIT_AREA_CHANGED: {
 		Payload: [
-			{Name: "unitTarget", Type: "string"},
+			{Name: "unitTarget", Type: "UnitToken"},
 		],
 	},
 	UNIT_ATTACK: {
 		Payload: [
-			{Name: "unitTarget", Type: "string"},
+			{Name: "unitTarget", Type: "UnitToken"},
 		],
 	},
 	UNIT_ATTACK_POWER: {
 		Payload: [
-			{Name: "unitTarget", Type: "string"},
+			{Name: "unitTarget", Type: "UnitToken"},
 		],
 	},
 	UNIT_ATTACK_SPEED: {
 		Payload: [
-			{Name: "unitTarget", Type: "string"},
+			{Name: "unitTarget", Type: "UnitToken"},
 		],
 	},
 	UNIT_AURA: {
 		Payload: [
-			{Name: "unitTarget", Type: "string"},
+			{Name: "unitTarget", Type: "UnitToken"},
 			{Name: "updateInfo", Type: "UnitAuraUpdateInfo"},
 		],
 	},
 	UNIT_CHEAT_TOGGLE_EVENT: {},
 	UNIT_CLASSIFICATION_CHANGED: {
 		Payload: [
-			{Name: "unitTarget", Type: "string"},
+			{Name: "unitTarget", Type: "UnitToken"},
 		],
 	},
 	UNIT_COMBAT: {
 		Payload: [
-			{Name: "unitTarget", Type: "string"},
+			{Name: "unitTarget", Type: "UnitToken"},
 			{Name: "event", Type: "string"},
 			{Name: "flagText", Type: "string"},
 			{Name: "amount", Type: "number"},
@@ -5401,342 +5425,342 @@ export const data: EventInterface = {
 	},
 	UNIT_CONNECTION: {
 		Payload: [
-			{Name: "unitTarget", Type: "string"},
+			{Name: "unitTarget", Type: "UnitToken"},
 			{Name: "isConnected", Type: "boolean"},
 		],
 	},
 	UNIT_CTR_OPTIONS: {
 		Payload: [
-			{Name: "unitTarget", Type: "string"},
+			{Name: "unitTarget", Type: "UnitToken"},
 		],
 	},
 	UNIT_DAMAGE: {
 		Payload: [
-			{Name: "unitTarget", Type: "string"},
+			{Name: "unitTarget", Type: "UnitToken"},
 		],
 	},
 	UNIT_DEFENSE: {
 		Payload: [
-			{Name: "unitTarget", Type: "string"},
+			{Name: "unitTarget", Type: "UnitToken"},
 		],
 	},
 	UNIT_DISPLAYPOWER: {
 		Payload: [
-			{Name: "unitTarget", Type: "string"},
+			{Name: "unitTarget", Type: "UnitToken"},
 		],
 	},
 	UNIT_ENTERED_VEHICLE: {
 		Payload: [
-			{Name: "unitTarget", Type: "string"},
+			{Name: "unitTarget", Type: "UnitToken"},
 			{Name: "showVehicleFrame", Type: "boolean"},
 			{Name: "isControlSeat", Type: "boolean"},
 			{Name: "vehicleUIIndicatorID", Type: "number"},
-			{Name: "vehicleGUID", Type: "string"},
+			{Name: "vehicleGUID", Type: "WOWGUID"},
 			{Name: "mayChooseExit", Type: "boolean"},
 			{Name: "hasPitch", Type: "boolean"},
 		],
 	},
 	UNIT_ENTERING_VEHICLE: {
 		Payload: [
-			{Name: "unitTarget", Type: "string"},
+			{Name: "unitTarget", Type: "UnitToken"},
 			{Name: "showVehicleFrame", Type: "boolean"},
 			{Name: "isControlSeat", Type: "boolean"},
 			{Name: "vehicleUIIndicatorID", Type: "number"},
-			{Name: "vehicleGUID", Type: "string"},
+			{Name: "vehicleGUID", Type: "WOWGUID"},
 			{Name: "mayChooseExit", Type: "boolean"},
 			{Name: "hasPitch", Type: "boolean"},
 		],
 	},
 	UNIT_EXITED_VEHICLE: {
 		Payload: [
-			{Name: "unitTarget", Type: "string"},
+			{Name: "unitTarget", Type: "UnitToken"},
 		],
 	},
 	UNIT_EXITING_VEHICLE: {
 		Payload: [
-			{Name: "unitTarget", Type: "string"},
+			{Name: "unitTarget", Type: "UnitToken"},
 		],
 	},
 	UNIT_FACTION: {
 		Payload: [
-			{Name: "unitTarget", Type: "string"},
+			{Name: "unitTarget", Type: "UnitToken"},
 		],
 	},
 	UNIT_FLAGS: {
 		Payload: [
-			{Name: "unitTarget", Type: "string"},
+			{Name: "unitTarget", Type: "UnitToken"},
 		],
 	},
 	UNIT_FORM_CHANGED: {
 		Payload: [
-			{Name: "unitTarget", Type: "string"},
+			{Name: "unitTarget", Type: "UnitToken"},
 		],
 	},
 	UNIT_HEALTH: {
 		Payload: [
-			{Name: "unitTarget", Type: "string"},
+			{Name: "unitTarget", Type: "UnitToken"},
 		],
 	},
 	UNIT_HEAL_ABSORB_AMOUNT_CHANGED: {
 		Payload: [
-			{Name: "unitTarget", Type: "string"},
+			{Name: "unitTarget", Type: "UnitToken"},
 		],
 	},
 	UNIT_HEAL_PREDICTION: {
 		Payload: [
-			{Name: "unitTarget", Type: "string"},
+			{Name: "unitTarget", Type: "UnitToken"},
 		],
 	},
 	UNIT_INVENTORY_CHANGED: {
 		Payload: [
-			{Name: "unitTarget", Type: "string"},
+			{Name: "unitTarget", Type: "UnitToken"},
 		],
 	},
 	UNIT_LEVEL: {
 		Payload: [
-			{Name: "unitTarget", Type: "string"},
+			{Name: "unitTarget", Type: "UnitToken"},
 		],
 	},
 	UNIT_MANA: {
 		Payload: [
-			{Name: "unitTarget", Type: "string"},
+			{Name: "unitTarget", Type: "UnitToken"},
 		],
 	},
 	UNIT_MAXHEALTH: {
 		Payload: [
-			{Name: "unitTarget", Type: "string"},
+			{Name: "unitTarget", Type: "UnitToken"},
 		],
 	},
 	UNIT_MAXPOWER: {
 		Payload: [
-			{Name: "unitTarget", Type: "string"},
+			{Name: "unitTarget", Type: "UnitToken"},
 			{Name: "powerType", Type: "string"},
 		],
 	},
 	UNIT_MODEL_CHANGED: {
 		Payload: [
-			{Name: "unitTarget", Type: "string"},
+			{Name: "unitTarget", Type: "UnitToken"},
 		],
 	},
 	UNIT_NAME_UPDATE: {
 		Payload: [
-			{Name: "unitTarget", Type: "string"},
+			{Name: "unitTarget", Type: "UnitToken"},
 		],
 	},
 	UNIT_OTHER_PARTY_CHANGED: {
 		Payload: [
-			{Name: "unitTarget", Type: "string"},
+			{Name: "unitTarget", Type: "UnitToken"},
 		],
 	},
 	UNIT_PET: {
 		Payload: [
-			{Name: "unitTarget", Type: "string"},
+			{Name: "unitTarget", Type: "UnitToken"},
 		],
 	},
 	UNIT_PET_EXPERIENCE: {
 		Payload: [
-			{Name: "unitTarget", Type: "string"},
+			{Name: "unitTarget", Type: "UnitToken"},
 		],
 	},
 	UNIT_PHASE: {
 		Payload: [
-			{Name: "unitTarget", Type: "string"},
+			{Name: "unitTarget", Type: "UnitToken"},
 		],
 	},
 	UNIT_PORTRAIT_UPDATE: {
 		Payload: [
-			{Name: "unitTarget", Type: "string"},
+			{Name: "unitTarget", Type: "UnitToken"},
 		],
 	},
 	UNIT_POWER_BAR_HIDE: {
 		Payload: [
-			{Name: "unitTarget", Type: "string"},
+			{Name: "unitTarget", Type: "UnitToken"},
 		],
 	},
 	UNIT_POWER_BAR_SHOW: {
 		Payload: [
-			{Name: "unitTarget", Type: "string"},
+			{Name: "unitTarget", Type: "UnitToken"},
 		],
 	},
 	UNIT_POWER_BAR_TIMER_UPDATE: {
 		Payload: [
-			{Name: "unitTarget", Type: "string"},
+			{Name: "unitTarget", Type: "UnitToken"},
 		],
 	},
 	UNIT_POWER_FREQUENT: {
 		Payload: [
-			{Name: "unitTarget", Type: "string"},
+			{Name: "unitTarget", Type: "UnitToken"},
 			{Name: "powerType", Type: "string"},
 		],
 	},
 	UNIT_POWER_POINT_CHARGE: {
 		Payload: [
-			{Name: "unitTarget", Type: "string"},
+			{Name: "unitTarget", Type: "UnitToken"},
 		],
 	},
 	UNIT_POWER_UPDATE: {
 		Payload: [
-			{Name: "unitTarget", Type: "string"},
+			{Name: "unitTarget", Type: "UnitToken"},
 			{Name: "powerType", Type: "string"},
 		],
 	},
 	UNIT_QUEST_LOG_CHANGED: {
 		Payload: [
-			{Name: "unitTarget", Type: "string"},
+			{Name: "unitTarget", Type: "UnitToken"},
 		],
 	},
 	UNIT_RANGEDDAMAGE: {
 		Payload: [
-			{Name: "unitTarget", Type: "string"},
+			{Name: "unitTarget", Type: "UnitToken"},
 		],
 	},
 	UNIT_RANGED_ATTACK_POWER: {
 		Payload: [
-			{Name: "unitTarget", Type: "string"},
+			{Name: "unitTarget", Type: "UnitToken"},
 		],
 	},
 	UNIT_RESISTANCES: {
 		Payload: [
-			{Name: "unitTarget", Type: "string"},
+			{Name: "unitTarget", Type: "UnitToken"},
 		],
 	},
 	UNIT_SPELLCAST_CHANNEL_START: {
 		Payload: [
-			{Name: "unitTarget", Type: "string"},
-			{Name: "castGUID", Type: "string"},
+			{Name: "unitTarget", Type: "UnitToken"},
+			{Name: "castGUID", Type: "WOWGUID"},
 			{Name: "spellID", Type: "number"},
 		],
 	},
 	UNIT_SPELLCAST_CHANNEL_STOP: {
 		Payload: [
-			{Name: "unitTarget", Type: "string"},
-			{Name: "castGUID", Type: "string"},
+			{Name: "unitTarget", Type: "UnitToken"},
+			{Name: "castGUID", Type: "WOWGUID"},
 			{Name: "spellID", Type: "number"},
 		],
 	},
 	UNIT_SPELLCAST_CHANNEL_UPDATE: {
 		Payload: [
-			{Name: "unitTarget", Type: "string"},
-			{Name: "castGUID", Type: "string"},
+			{Name: "unitTarget", Type: "UnitToken"},
+			{Name: "castGUID", Type: "WOWGUID"},
 			{Name: "spellID", Type: "number"},
 		],
 	},
 	UNIT_SPELLCAST_DELAYED: {
 		Payload: [
-			{Name: "unitTarget", Type: "string"},
-			{Name: "castGUID", Type: "string"},
+			{Name: "unitTarget", Type: "UnitToken"},
+			{Name: "castGUID", Type: "WOWGUID"},
 			{Name: "spellID", Type: "number"},
 		],
 	},
 	UNIT_SPELLCAST_EMPOWER_START: {
 		Payload: [
-			{Name: "unitTarget", Type: "string"},
-			{Name: "castGUID", Type: "string"},
+			{Name: "unitTarget", Type: "UnitToken"},
+			{Name: "castGUID", Type: "WOWGUID"},
 			{Name: "spellID", Type: "number"},
 		],
 	},
 	UNIT_SPELLCAST_EMPOWER_STOP: {
 		Payload: [
-			{Name: "unitTarget", Type: "string"},
-			{Name: "castGUID", Type: "string"},
+			{Name: "unitTarget", Type: "UnitToken"},
+			{Name: "castGUID", Type: "WOWGUID"},
 			{Name: "spellID", Type: "number"},
 		],
 	},
 	UNIT_SPELLCAST_EMPOWER_UPDATE: {
 		Payload: [
-			{Name: "unitTarget", Type: "string"},
-			{Name: "castGUID", Type: "string"},
+			{Name: "unitTarget", Type: "UnitToken"},
+			{Name: "castGUID", Type: "WOWGUID"},
 			{Name: "spellID", Type: "number"},
 		],
 	},
 	UNIT_SPELLCAST_FAILED: {
 		Payload: [
-			{Name: "unitTarget", Type: "string"},
-			{Name: "castGUID", Type: "string"},
+			{Name: "unitTarget", Type: "UnitToken"},
+			{Name: "castGUID", Type: "WOWGUID"},
 			{Name: "spellID", Type: "number"},
 		],
 	},
 	UNIT_SPELLCAST_FAILED_QUIET: {
 		Payload: [
-			{Name: "unitTarget", Type: "string"},
-			{Name: "castGUID", Type: "string"},
+			{Name: "unitTarget", Type: "UnitToken"},
+			{Name: "castGUID", Type: "WOWGUID"},
 			{Name: "spellID", Type: "number"},
 		],
 	},
 	UNIT_SPELLCAST_INTERRUPTED: {
 		Payload: [
-			{Name: "unitTarget", Type: "string"},
-			{Name: "castGUID", Type: "string"},
+			{Name: "unitTarget", Type: "UnitToken"},
+			{Name: "castGUID", Type: "WOWGUID"},
 			{Name: "spellID", Type: "number"},
 		],
 	},
 	UNIT_SPELLCAST_INTERRUPTIBLE: {
 		Payload: [
-			{Name: "unitTarget", Type: "string"},
+			{Name: "unitTarget", Type: "UnitToken"},
 		],
 	},
 	UNIT_SPELLCAST_NOT_INTERRUPTIBLE: {
 		Payload: [
-			{Name: "unitTarget", Type: "string"},
+			{Name: "unitTarget", Type: "UnitToken"},
 		],
 	},
 	UNIT_SPELLCAST_SENT: {
 		Payload: [
 			{Name: "unit", Type: "string"},
 			{Name: "target", Type: "string"},
-			{Name: "castGUID", Type: "string"},
+			{Name: "castGUID", Type: "WOWGUID"},
 			{Name: "spellID", Type: "number"},
 		],
 	},
 	UNIT_SPELLCAST_START: {
 		Payload: [
-			{Name: "unitTarget", Type: "string"},
-			{Name: "castGUID", Type: "string"},
+			{Name: "unitTarget", Type: "UnitToken"},
+			{Name: "castGUID", Type: "WOWGUID"},
 			{Name: "spellID", Type: "number"},
 		],
 	},
 	UNIT_SPELLCAST_STOP: {
 		Payload: [
-			{Name: "unitTarget", Type: "string"},
-			{Name: "castGUID", Type: "string"},
+			{Name: "unitTarget", Type: "UnitToken"},
+			{Name: "castGUID", Type: "WOWGUID"},
 			{Name: "spellID", Type: "number"},
 		],
 	},
 	UNIT_SPELLCAST_SUCCEEDED: {
 		Payload: [
-			{Name: "unitTarget", Type: "string"},
-			{Name: "castGUID", Type: "string"},
+			{Name: "unitTarget", Type: "UnitToken"},
+			{Name: "castGUID", Type: "WOWGUID"},
 			{Name: "spellID", Type: "number"},
 		],
 	},
 	UNIT_SPELL_HASTE: {
 		Payload: [
-			{Name: "unitTarget", Type: "string"},
+			{Name: "unitTarget", Type: "UnitToken"},
 		],
 	},
 	UNIT_STATS: {
 		Payload: [
-			{Name: "unitTarget", Type: "string"},
+			{Name: "unitTarget", Type: "UnitToken"},
 		],
 	},
 	UNIT_TARGET: {
 		Payload: [
-			{Name: "unitTarget", Type: "string"},
+			{Name: "unitTarget", Type: "UnitToken"},
 		],
 	},
 	UNIT_TARGETABLE_CHANGED: {
 		Payload: [
-			{Name: "unitTarget", Type: "string"},
+			{Name: "unitTarget", Type: "UnitToken"},
 		],
 	},
 	UNIT_THREAT_LIST_UPDATE: {
 		Payload: [
-			{Name: "unitTarget", Type: "string"},
+			{Name: "unitTarget", Type: "UnitToken"},
 		],
 	},
 	UNIT_THREAT_SITUATION_UPDATE: {
 		Payload: [
-			{Name: "unitTarget", Type: "string"},
+			{Name: "unitTarget", Type: "UnitToken"},
 		],
 	},
 	UPDATE_ACTIVE_BATTLEFIELD: {},
@@ -5842,7 +5866,7 @@ export const data: EventInterface = {
 	VIGNETTES_UPDATED: {},
 	VIGNETTE_MINIMAP_UPDATED: {
 		Payload: [
-			{Name: "vignetteGUID", Type: "string"},
+			{Name: "vignetteGUID", Type: "WOWGUID"},
 			{Name: "onMinimap", Type: "boolean"},
 		],
 	},
@@ -5877,8 +5901,8 @@ export const data: EventInterface = {
 			{Name: "status", Type: "VoiceChatStatusCode"},
 			{Name: "channelID", Type: "number"},
 			{Name: "channelType", Type: "ChatChannelType"},
-			{Name: "clubId", Type: "string", Nilable: true},
-			{Name: "streamId", Type: "string", Nilable: true},
+			{Name: "clubId", Type: "ClubId", Nilable: true},
+			{Name: "streamId", Type: "ClubStreamId", Nilable: true},
 		],
 	},
 	VOICE_CHAT_CHANNEL_MEMBER_ACTIVE_STATE_CHANGED: {
@@ -6028,8 +6052,8 @@ export const data: EventInterface = {
 	VOICE_CHAT_PENDING_CHANNEL_JOIN_STATE: {
 		Payload: [
 			{Name: "channelType", Type: "ChatChannelType"},
-			{Name: "clubId", Type: "string", Nilable: true},
-			{Name: "streamId", Type: "string", Nilable: true},
+			{Name: "clubId", Type: "ClubId", Nilable: true},
+			{Name: "streamId", Type: "ClubStreamId", Nilable: true},
 			{Name: "pendingJoin", Type: "boolean"},
 		],
 	},
@@ -6093,7 +6117,7 @@ export const data: EventInterface = {
 	VOTE_KICK_REASON_NEEDED: {
 		Payload: [
 			{Name: "name", Type: "string"},
-			{Name: "resultGUID", Type: "string"},
+			{Name: "resultGUID", Type: "WOWGUID"},
 		],
 	},
 	WARFRONT_COMPLETED: {
@@ -6106,7 +6130,7 @@ export const data: EventInterface = {
 		Payload: [
 			{Name: "opposingPartyMemberName", Type: "string"},
 			{Name: "battlegroundName", Type: "string"},
-			{Name: "timeoutSeconds", Type: "number"},
+			{Name: "timeoutSeconds", Type: "time_t"},
 			{Name: "tournamentRules", Type: "boolean"},
 		],
 	},
@@ -6152,4 +6176,4 @@ export const data: EventInterface = {
 	ZONE_CHANGED: {},
 	ZONE_CHANGED_INDOORS: {},
 	ZONE_CHANGED_NEW_AREA: {},
-}
+};

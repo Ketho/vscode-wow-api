@@ -20,7 +20,7 @@
 ---|"ADDONS_UNLOADING" # `closingClient`
 ---|"ADDON_ACTION_BLOCKED" # `isTainted, function`
 ---|"ADDON_ACTION_FORBIDDEN" # `isTainted, function`
----|"ADDON_LOADED" # `addOnName`
+---|"ADDON_LOADED" # `addOnName, containsBindings`
 ---|"ADVENTURE_MAP_CLOSE"
 ---|"ADVENTURE_MAP_OPEN" # `followerTypeID`
 ---|"ADVENTURE_MAP_QUEST_UPDATE" # `questID`
@@ -193,6 +193,8 @@
 ---|"CANCEL_GLYPH_CAST"
 ---|"CANCEL_LOOT_ROLL" # `rollID`
 ---|"CANCEL_SUMMON"
+---|"CAN_LOCAL_WHISPER_TARGET_RESPONSE" # `whisperTarget, status`
+---|"CAN_PLAYER_SPEAK_LANGUAGE_CHANGED" # `languageId, canSpeakLanguage`
 ---|"CAPTUREFRAMES_FAILED"
 ---|"CAPTUREFRAMES_SUCCEEDED"
 ---|"CEMETERY_PREFERENCE_UPDATED"
@@ -398,6 +400,7 @@
 ---|"CRAFTINGORDERS_CLAIM_ORDER_RESPONSE" # `result, orderID`
 ---|"CRAFTINGORDERS_CUSTOMER_FAVORITES_CHANGED"
 ---|"CRAFTINGORDERS_CUSTOMER_OPTIONS_PARSED"
+---|"CRAFTINGORDERS_DISPLAY_CRAFTER_FULFILLED_MSG" # `orderTypeString, itemNameString, playerNameString, tipAmount, quantityCrafted`
 ---|"CRAFTINGORDERS_FULFILL_ORDER_RESPONSE" # `result, orderID`
 ---|"CRAFTINGORDERS_HIDE_CRAFTER"
 ---|"CRAFTINGORDERS_HIDE_CUSTOMER"
@@ -691,10 +694,10 @@
 ---|"LOGOUT_CANCEL"
 ---|"LOOT_BIND_CONFIRM" # `lootSlot`
 ---|"LOOT_CLOSED"
----|"LOOT_HISTORY_AUTO_SHOW" # `rollID, isMasterLoot`
----|"LOOT_HISTORY_FULL_UPDATE"
----|"LOOT_HISTORY_ROLL_CHANGED" # `historyIndex, playerIndex`
----|"LOOT_HISTORY_ROLL_COMPLETE"
+---|"LOOT_HISTORY_CLEAR_HISTORY"
+---|"LOOT_HISTORY_GO_TO_ENCOUNTER" # `encounterID`
+---|"LOOT_HISTORY_UPDATE_DROP" # `encounterID, lootListID`
+---|"LOOT_HISTORY_UPDATE_ENCOUNTER" # `encounterID`
 ---|"LOOT_ITEM_AVAILABLE" # `itemTooltip, lootHandle`
 ---|"LOOT_ITEM_ROLL_WON" # `itemLink, rollQuantity, rollType, roll, upgraded`
 ---|"LOOT_JOURNAL_ITEM_UPDATE"
@@ -757,6 +760,7 @@
 ---|"NAVIGATION_FRAME_DESTROYED"
 ---|"NEUTRAL_FACTION_SELECT_RESULT" # `success`
 ---|"NEWCOMER_GRADUATION"
+---|"NEW_MATCHMAKING_PARTY_INVITE"
 ---|"NEW_MOUNT_ADDED" # `mountID`
 ---|"NEW_PET_ADDED" # `battlePetGUID`
 ---|"NEW_RECIPE_LEARNED" # `recipeID, recipeLevel, baseRecipeID`
@@ -877,6 +881,7 @@
 ---|"PLAYER_GUILD_UPDATE" # `unitTarget`
 ---|"PLAYER_INTERACTION_MANAGER_FRAME_HIDE" # `type`
 ---|"PLAYER_INTERACTION_MANAGER_FRAME_SHOW" # `type`
+---|"PLAYER_JOINED_PVP_MATCH"
 ---|"PLAYER_LEARN_PVP_TALENT_FAILED"
 ---|"PLAYER_LEARN_TALENT_FAILED"
 ---|"PLAYER_LEAVE_COMBAT"
@@ -934,7 +939,6 @@
 ---|"PVP_RATED_STATS_UPDATE"
 ---|"PVP_REWARDS_UPDATE"
 ---|"PVP_ROLE_POPUP_HIDE" # `readyCheckInfo`
----|"PVP_ROLE_POPUP_JOINED_MATCH"
 ---|"PVP_ROLE_POPUP_SHOW" # `readyCheckInfo`
 ---|"PVP_ROLE_UPDATE"
 ---|"PVP_SPECIAL_EVENT_INFO_UPDATED"
@@ -973,9 +977,10 @@
 ---|"QUEST_WATCH_UPDATE" # `questID`
 ---|"QUICK_TICKET_SYSTEM_STATUS"
 ---|"QUICK_TICKET_THROTTLE_CHANGED"
----|"RAF_ENTITLEMENT_DELIVERED" # `entitlementType, textureID, name, payloadID, showFancyToast`
+---|"RAF_ENTITLEMENT_DELIVERED" # `entitlementType, textureID, name, payloadID, showFancyToast, rafVersion`
 ---|"RAF_INFO_UPDATED" # `info`
 ---|"RAF_RECRUITING_ENABLED_STATUS" # `enabled`
+---|"RAF_REWARD_CLAIM_FAILED"
 ---|"RAF_SYSTEM_ENABLED_STATUS" # `enabled`
 ---|"RAF_SYSTEM_INFO_UPDATED" # `systemInfo`
 ---|"RAID_BOSS_EMOTE" # `text, playerName, displayTime, enableBossEmoteWarningSound`
@@ -991,6 +996,7 @@
 ---|"REAGENTBANK_UPDATE"
 ---|"RECEIVED_ACHIEVEMENT_LIST"
 ---|"RECEIVED_ACHIEVEMENT_MEMBER_LIST" # `achievementID`
+---|"REJECTED_MATCHMAKING_PARTY_INVITE" # `name`
 ---|"REPLACE_ENCHANT" # `existingStr, replacementStr`
 ---|"REPLACE_TRADESKILL_ENCHANT" # `existing, replacement`
 ---|"REPLICATE_ITEM_LIST_UPDATE"
@@ -1031,6 +1037,7 @@
 ---|"SECURE_TRANSFER_CANCEL"
 ---|"SECURE_TRANSFER_CONFIRM_SEND_MAIL"
 ---|"SECURE_TRANSFER_CONFIRM_TRADE_ACCEPT"
+---|"SELECTED_LOADOUT_CHANGED"
 ---|"SELF_RES_SPELL_CHANGED"
 ---|"SEND_MAIL_COD_CHANGED"
 ---|"SEND_MAIL_MONEY_CHANGED"
@@ -1046,6 +1053,7 @@
 ---|"SHOW_LOOT_TOAST" # `typeIdentifier, itemLink, quantity, specID, sex, personalLootToast, toastMethod, lessAwesome, upgraded, corrupted`
 ---|"SHOW_LOOT_TOAST_LEGENDARY_LOOTED" # `itemLink`
 ---|"SHOW_LOOT_TOAST_UPGRADE" # `itemLink, quantity, specID, sex, baseQuality, personalLootToast, lessAwesome`
+---|"SHOW_PARTY_POSE_UI" # `mapID, won`
 ---|"SHOW_PVP_FACTION_LOOT_TOAST" # `typeIdentifier, itemLink, quantity, specID, sex, personalLootToast, lessAwesome`
 ---|"SHOW_RATED_PVP_REWARD_TOAST" # `typeIdentifier, itemLink, quantity, specID, sex, personalLootToast, lessAwesome`
 ---|"SHOW_SUBSCRIPTION_INTERSTITIAL" # `type`
@@ -1053,8 +1061,8 @@
 ---|"SIMPLE_BROWSER_WEB_PROXY_FAILED"
 ---|"SIMPLE_CHECKOUT_CLOSED"
 ---|"SKILL_LINES_CHANGED"
+---|"SKILL_LINE_SPECS_RANKS_CHANGED"
 ---|"SKILL_LINE_SPECS_UNLOCKED" # `skillLineID, tradeSkillID`
----|"SOCIAL_ITEM_RECEIVED"
 ---|"SOCIAL_QUEUE_CONFIG_UPDATED"
 ---|"SOCIAL_QUEUE_UPDATE" # `groupGUID, numAddedItems`
 ---|"SOCKET_INFO_ACCEPT"
@@ -1136,7 +1144,7 @@
 ---|"TOKEN_SELL_CONFIRM_REQUIRED"
 ---|"TOKEN_SELL_RESULT" # `result`
 ---|"TOKEN_STATUS_CHANGED"
----|"TOOLTIP_DATA_UPDATE"
+---|"TOOLTIP_DATA_UPDATE" # `dataInstanceID`
 ---|"TOYS_UPDATED" # `itemID, isNew, hasFanfare`
 ---|"TRACKED_ACHIEVEMENT_LIST_CHANGED" # `achievementID, added`
 ---|"TRACKED_ACHIEVEMENT_UPDATE" # `achievementID, criteriaID, elapsed, duration`
@@ -1204,9 +1212,6 @@
 ---|"TUTORIAL_HIGHLIGHT_SPELL" # `spellID, tutorialGlobalStringTag`
 ---|"TUTORIAL_TRIGGER" # `tutorialIndex, forceShow`
 ---|"TUTORIAL_UNHIGHLIGHT_SPELL"
----|"TWITTER_LINK_RESULT" # `isLinked, screenName, error`
----|"TWITTER_POST_RESULT" # `result`
----|"TWITTER_STATUS_UPDATE" # `isTwitterEnabled, isLinked, screenName`
 ---|"UI_ERROR_MESSAGE" # `errorType, message`
 ---|"UI_ERROR_POPUP" # `errorType, message`
 ---|"UI_INFO_MESSAGE" # `errorType, message`

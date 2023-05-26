@@ -4,6 +4,8 @@ local Emmy = {}
 
 local types = {
 	bool = "boolean",
+	cstring = "string",
+	luaIndex = "number",
 }
 
 local function GetType(paramType)

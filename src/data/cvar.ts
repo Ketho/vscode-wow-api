@@ -289,6 +289,13 @@ export const data: CVarInterface = {
 		category: 1,
 		help: "Enable/Disable Soft Edge Effect",
 	},
+	disableadvancedflyingvelocityvfx: {
+		name: "DisableAdvancedFlyingVelocityVFX",
+		default: "0",
+		category: 4,
+		scope: "Character",
+		help: "Disable the advanced flying velocity VFX",
+	},
 	driverversioncheck: {
 		name: "DriverVersionCheck",
 		default: "1",
@@ -305,12 +312,6 @@ export const data: CVarInterface = {
 		default: "0.333333",
 		category: 1,
 		help: "Lowest render scale DynamicRenderScale can use",
-	},
-	dynamicvrssensitivitythreshold: {
-		name: "DynamicVRSSensitivityThreshold",
-		default: "0",
-		category: 1,
-		help: "Enable dynamic sensitivity threshold based on target FPS for VRS",
 	},
 	ejdungeondifficulty: {
 		name: "EJDungeonDifficulty",
@@ -367,6 +368,12 @@ export const data: CVarInterface = {
 		category: 4,
 		scope: "Character",
 		help: "Sets the time in milliseconds after which release/re-hold requests will be registered for press-and-tap empowers. Begins when the cast is sent from the client.",
+	},
+	enableairlocklogging: {
+		name: "EnableAirlockLogging",
+		default: "0",
+		category: 4,
+		help: "If 1, enables airlock logging, which will print out the various steps as they happen so that timing can be done.",
 	},
 	enableblinkapplicationicon: {
 		name: "EnableBlinkApplicationIcon",
@@ -649,6 +656,12 @@ export const data: CVarInterface = {
 		default: "0",
 		category: 1,
 		help: "CPU memory saving mode, if supported by backend. When enabled, shaders are fetched from disk as needed instead of being kept resident. This mode may slightly increase the time objects take to appear the first time they are encountered. Computers without solid state drives may want to disable this feature",
+	},
+	gxframeendmode: {
+		name: "GxFrameEndMode",
+		default: "0",
+		category: 1,
+		help: "Allow GxFrameEnd to overlap next frame (0=Disabled, 1=Safe, 2=Experimental)",
 	},
 	gxprismenabled: {
 		name: "GxPrismEnabled",
@@ -996,7 +1009,7 @@ export const data: CVarInterface = {
 	},
 	raidgraphicsquality: {
 		name: "RAIDgraphicsQuality",
-		default: "4",
+		default: "6",
 		category: 5,
 		help: "save for Raid Graphics Quality Selection",
 	},
@@ -1094,6 +1107,12 @@ export const data: CVarInterface = {
 		default: "0",
 		category: 1,
 		help: "Raid graphic settings are available",
+	},
+	raidshadowblendcascades: {
+		name: "RAIDshadowBlendCascades",
+		default: "0",
+		category: 1,
+		help: "Blend between shadow cascades (0/1)",
 	},
 	raidshadowmode: {
 		name: "RAIDshadowMode",
@@ -1278,13 +1297,14 @@ export const data: CVarInterface = {
 		default: "2",
 		category: 4,
 		scope: "Account",
-		help: "0 = No yaw arc allowance, must be directly in front. 1 = Must be in front yaw arc. 2 = Can be anywhere in targeting area.",
+		help: "0 = No yaw arc allowance, must be directly in front. 1 = Must be in front yaw arc. 2 = Can be anywhere in tab targeting area.",
 	},
 	softtargetenemyrange: {
 		name: "SoftTargetEnemyRange",
-		default: "45",
+		default: "45.000000",
 		category: 4,
 		scope: "Account",
+		help: "Max range to soft target enemies (limited to tab targeting range)",
 	},
 	softtargetforce: {
 		name: "SoftTargetForce",
@@ -1308,9 +1328,10 @@ export const data: CVarInterface = {
 	},
 	softtargetfriendrange: {
 		name: "SoftTargetFriendRange",
-		default: "45",
+		default: "45.000000",
 		category: 4,
 		scope: "Account",
+		help: "Max range to soft target friends (limited to tab targeting range)",
 	},
 	softtargeticonenemy: {
 		name: "SoftTargetIconEnemy",
@@ -1356,9 +1377,10 @@ export const data: CVarInterface = {
 	},
 	softtargetinteractrange: {
 		name: "SoftTargetInteractRange",
-		default: "10",
+		default: "10.000000",
 		category: 4,
 		scope: "Character",
+		help: "Max range to soft target interacts (limited to tab targeting and individual interact ranges)",
 	},
 	softtargetinteractrangeishard: {
 		name: "SoftTargetInteractRangeIsHard",
@@ -1446,25 +1468,25 @@ export const data: CVarInterface = {
 	},
 	softtargetworldtextfardist: {
 		name: "SoftTargetWorldtextFarDist",
-		default: "40",
+		default: "40.000000",
 		category: 4,
 		scope: "Character",
 	},
 	softtargetworldtextneardist: {
 		name: "SoftTargetWorldtextNearDist",
-		default: "4",
+		default: "4.000000",
 		category: 4,
 		scope: "Character",
 	},
 	softtargetworldtextnearscale: {
 		name: "SoftTargetWorldtextNearScale",
-		default: "1",
+		default: "1.000000",
 		category: 4,
 		scope: "Character",
 	},
 	softtargetworldtextsize: {
 		name: "SoftTargetWorldtextSize",
-		default: "32",
+		default: "32.000000",
 		category: 4,
 		scope: "Character",
 	},
@@ -1795,12 +1817,6 @@ export const data: CVarInterface = {
 		category: 4,
 		help: "When in pvp, give higher priority to players and important pvp targets (1 = players & npc bosses, 2 = all pvp targets, 3 = players only)",
 	},
-	targetpriorityvaluebank: {
-		name: "TargetPriorityValueBank",
-		default: "1",
-		category: 4,
-		help: "Selects the active targeting values bank for calculating target priority order",
-	},
 	terrainloddiv: {
 		name: "TerrainLodDiv",
 		default: "768",
@@ -2031,6 +2047,11 @@ export const data: CVarInterface = {
 		category: 7,
 		help: "How sensitive voice activity detection is.  Value ranges from 0 to 100, smaller values will transmit at a lower noise threshold.",
 	},
+	walkablesurfacesvalidationlog: {
+		name: "WalkableSurfacesValidationLog",
+		default: "0",
+		category: 5,
+	},
 	worldactionslog: {
 		name: "WorldActionsLog",
 		default: "0",
@@ -2120,6 +2141,13 @@ export const data: CVarInterface = {
 		category: 4,
 		scope: "Character",
 	},
+	acknowledgedarrowcallouts: {
+		name: "acknowledgedArrowCallouts",
+		default: "0",
+		category: 4,
+		scope: "Account",
+		help: "Bit field of Looking for guild player settings",
+	},
 	actionedadventurejournalentries: {
 		name: "actionedAdventureJournalEntries",
 		default: "",
@@ -2163,7 +2191,7 @@ export const data: CVarInterface = {
 	},
 	agentuid: {
 		name: "agentUID",
-		default: "wow_beta",
+		default: "wow_ptr",
 		category: 4,
 		help: "The UID provided by Battle.net to be passed to Agent",
 	},
@@ -2392,13 +2420,6 @@ export const data: CVarInterface = {
 		category: 4,
 		scope: "Account",
 		help: "Rate in milliseconds to tick auto loot",
-	},
-	autoopenloothistory: {
-		name: "autoOpenLootHistory",
-		default: "0",
-		category: 4,
-		scope: "Character",
-		help: "Automatically opens the Loot History window when certain items drop",
 	},
 	autoquestpopups: {
 		name: "autoQuestPopUps",
@@ -4616,13 +4637,6 @@ export const data: CVarInterface = {
 		category: 6,
 		help: "Disable server-side nagle algorithm",
 	},
-	displayfreebagslots: {
-		name: "displayFreeBagSlots",
-		default: "1",
-		category: 4,
-		scope: "Character",
-		help: "Whether or not the backpack button should indicate how many inventory slots you've got free",
-	},
 	displayspellactivationoverlays: {
 		name: "displaySpellActivationOverlays",
 		default: "1",
@@ -4643,6 +4657,12 @@ export const data: CVarInterface = {
 		category: 4,
 		scope: "Character",
 		help: "Stores whether we already told a recruited person about their new BattleTag friend",
+	},
+	dnmtupdate: {
+		name: "dnMTUpdate",
+		default: "1",
+		category: 1,
+		help: "Update Daynight in parralel.",
 	},
 	donotflashlowhealthwarning: {
 		name: "doNotFlashLowHealthWarning",
@@ -4803,6 +4823,13 @@ export const data: CVarInterface = {
 		default: "50",
 		category: 1,
 		help: "Entity shadow fade scale",
+	},
+	excludedcensorsources: {
+		name: "excludedCensorSources",
+		default: "1",
+		category: 4,
+		scope: "Character",
+		help: "Inappropriate message source exemptions. 0 = Exempt nobody, 1 = Exempt Friends, 3 = Exempt Friends and Guildmates, 255 = Exempt All",
 	},
 	expandbagbar: {
 		name: "expandBagBar",
@@ -5120,6 +5147,12 @@ export const data: CVarInterface = {
 		scope: "Character",
 		help: "Whether friend invites are hidden in the friends list",
 	},
+	friendinvitescollapsed_wowlabs: {
+		name: "friendInvitesCollapsed_WowLabs",
+		default: "0",
+		category: 4,
+		help: "The info for pending invites has been shown",
+	},
 	friendssmallview: {
 		name: "friendsSmallView",
 		default: "0",
@@ -5133,6 +5166,12 @@ export const data: CVarInterface = {
 		category: 4,
 		scope: "Account",
 		help: "Whether to show the friends list view buttons",
+	},
+	frontendmatchingmodes_wowlabs: {
+		name: "frontendMatchingModes_WowLabs",
+		default: "1",
+		category: 4,
+		help: "0=All,1=DuoOnly,2=TrioOnly,3=DuoAndTrio",
 	},
 	fstack_enabled: {
 		name: "fstack_enabled",
@@ -5201,24 +5240,24 @@ export const data: CVarInterface = {
 	},
 	graphicscomputeeffects: {
 		name: "graphicsComputeEffects",
-		default: "2",
+		default: "3",
 		category: 5,
 	},
 	graphicsdeptheffects: {
 		name: "graphicsDepthEffects",
-		default: "2",
+		default: "3",
 		category: 1,
 		help: "UI value of the graphics setting",
 	},
 	graphicsenvironmentdetail: {
 		name: "graphicsEnvironmentDetail",
-		default: "4",
+		default: "6",
 		category: 1,
 		help: "UI value of the graphics setting",
 	},
 	graphicsgroundclutter: {
 		name: "graphicsGroundClutter",
-		default: "4",
+		default: "6",
 		category: 1,
 		help: "UI value of the graphics setting",
 	},
@@ -5230,13 +5269,13 @@ export const data: CVarInterface = {
 	},
 	graphicsoutlinemode: {
 		name: "graphicsOutlineMode",
-		default: "1",
+		default: "2",
 		category: 1,
 		help: "UI value of the graphics setting",
 	},
 	graphicsparticledensity: {
 		name: "graphicsParticleDensity",
-		default: "3",
+		default: "4",
 		category: 1,
 		help: "UI value of the graphics setting",
 	},
@@ -5248,19 +5287,19 @@ export const data: CVarInterface = {
 	},
 	graphicsquality: {
 		name: "graphicsQuality",
-		default: "4",
+		default: "6",
 		category: 5,
 		help: "save for Graphics Quality Selection",
 	},
 	graphicsssao: {
 		name: "graphicsSSAO",
-		default: "2",
+		default: "3",
 		category: 5,
 		help: "UI value of the graphics setting",
 	},
 	graphicsshadowquality: {
 		name: "graphicsShadowQuality",
-		default: "2",
+		default: "3",
 		category: 5,
 		help: "UI value of the graphics setting",
 	},
@@ -5278,7 +5317,7 @@ export const data: CVarInterface = {
 	},
 	graphicsviewdistance: {
 		name: "graphicsViewDistance",
-		default: "4",
+		default: "6",
 		category: 1,
 		help: "UI value of the graphics setting",
 	},
@@ -5762,6 +5801,12 @@ export const data: CVarInterface = {
 		category: 5,
 		help: "Set the game locale",
 	},
+	locateviewermaxjobs: {
+		name: "locateViewerMaxJobs",
+		default: "32",
+		category: 1,
+		help: "Maximum job threads for LocateViewer",
+	},
 	lockactionbars: {
 		name: "lockActionBars",
 		default: "1",
@@ -5983,8 +6028,7 @@ export const data: CVarInterface = {
 	minimaptrackedinfov2: {
 		name: "minimapTrackedInfov2",
 		default: "",
-		category: 4,
-		help: "Stores the minimap tracking that was active last session.",
+		category: 5,
 	},
 	minimaptrackedinfov3: {
 		name: "minimapTrackedInfov3",
@@ -6018,6 +6062,20 @@ export const data: CVarInterface = {
 		category: 4,
 		scope: "Account",
 		help: "Whether to show if you have collected the appearance of an item but not from that item itself",
+	},
+	motionsicknessfocalcircle: {
+		name: "motionSicknessFocalCircle",
+		default: "0",
+		category: 4,
+		scope: "Character",
+		help: "Enables a focal circle showing up when mounted",
+	},
+	motionsicknesslandscapedarkening: {
+		name: "motionSicknessLandscapeDarkening",
+		default: "0",
+		category: 4,
+		scope: "Character",
+		help: "Enables landscape darkening at higher speeds",
 	},
 	mountjournalgeneralfilters: {
 		name: "mountJournalGeneralFilters",
@@ -6076,6 +6134,13 @@ export const data: CVarInterface = {
 		category: 1,
 		scope: "Account",
 		help: "The inset from the top (in screen percent) that nameplates are clamped to when class resources are being displayed on them.",
+	},
+	nameplategameobjectmaxdistance: {
+		name: "nameplateGameObjectMaxDistance",
+		default: "30",
+		category: 1,
+		scope: "Account",
+		help: "The max distance to show player nameplates for game objects",
 	},
 	nameplateglobalscale: {
 		name: "nameplateGlobalScale",
@@ -6387,7 +6452,6 @@ export const data: CVarInterface = {
 		name: "nameplateShowOnlyNames",
 		default: "0",
 		category: 4,
-		scope: "Account",
 		help: "Whether to hide the nameplate bars",
 	},
 	nameplateshowpersonalcooldowns: {
@@ -6522,6 +6586,12 @@ export const data: CVarInterface = {
 		scope: "Character",
 		help: "The opacity of the party background",
 	},
+	partyinvitescollapsed_wowlabs: {
+		name: "partyInvitesCollapsed_WowLabs",
+		default: "0",
+		category: 4,
+		help: "The info for pending invites has been shown",
+	},
 	pathsmoothing: {
 		name: "pathSmoothing",
 		default: "1",
@@ -6534,6 +6604,33 @@ export const data: CVarInterface = {
 		category: 4,
 		scope: "Character",
 		help: "The info for pending invites has been shown",
+	},
+	pendinginviteinfoshown_wowlabs: {
+		name: "pendingInviteInfoShown_WowLabs",
+		default: "0",
+		category: 4,
+		help: "The info for pending invites has been shown",
+	},
+	perksactivitiescurrentmonth: {
+		name: "perksActivitiesCurrentMonth",
+		default: "0",
+		category: 4,
+		scope: "Character",
+		help: "Current month for perks activities",
+	},
+	perksactivitieslastpoints: {
+		name: "perksActivitiesLastPoints",
+		default: "0",
+		category: 4,
+		scope: "Character",
+		help: "Last seen number of influence points in the perks progress bar",
+	},
+	perksactivitiespendingcompletion: {
+		name: "perksActivitiesPendingCompletion",
+		default: "",
+		category: 4,
+		scope: "Character",
+		help: "List of completed activities that are pending completion animation in the UI",
 	},
 	persistmovelogontransfer: {
 		name: "persistMoveLogOnTransfer",
@@ -6686,6 +6783,13 @@ export const data: CVarInterface = {
 		scope: "Character",
 		help: "Indicates if best quality reagents should be automatically allocated in the crafting UI.",
 	},
+	professionsallocatebestqualityreagentscustomer: {
+		name: "professionsAllocateBestQualityReagentsCustomer",
+		default: "1",
+		category: 4,
+		scope: "Character",
+		help: "Indicates if best quality reagents should be automatically allocated in the customer crafting order UI.",
+	},
 	professionsflyouthideunowned: {
 		name: "professionsFlyoutHideUnowned",
 		default: "0",
@@ -6812,24 +6916,24 @@ export const data: CVarInterface = {
 	},
 	raidgraphicscomputeeffects: {
 		name: "raidGraphicsComputeEffects",
-		default: "2",
+		default: "3",
 		category: 5,
 	},
 	raidgraphicsdeptheffects: {
 		name: "raidGraphicsDepthEffects",
-		default: "2",
+		default: "3",
 		category: 5,
 		help: "UI value of the raidGraphics setting",
 	},
 	raidgraphicsenvironmentdetail: {
 		name: "raidGraphicsEnvironmentDetail",
-		default: "4",
+		default: "6",
 		category: 5,
 		help: "UI value of the raidGraphics setting",
 	},
 	raidgraphicsgroundclutter: {
 		name: "raidGraphicsGroundClutter",
-		default: "4",
+		default: "6",
 		category: 5,
 		help: "UI value of the raidGraphics setting",
 	},
@@ -6841,13 +6945,13 @@ export const data: CVarInterface = {
 	},
 	raidgraphicsoutlinemode: {
 		name: "raidGraphicsOutlineMode",
-		default: "1",
+		default: "2",
 		category: 5,
 		help: "UI value of the raidGraphics setting",
 	},
 	raidgraphicsparticledensity: {
 		name: "raidGraphicsParticleDensity",
-		default: "3",
+		default: "4",
 		category: 5,
 		help: "UI value of the raidGraphics setting",
 	},
@@ -6859,13 +6963,13 @@ export const data: CVarInterface = {
 	},
 	raidgraphicsssao: {
 		name: "raidGraphicsSSAO",
-		default: "2",
+		default: "3",
 		category: 5,
 		help: "UI value of the raidGraphics setting",
 	},
 	raidgraphicsshadowquality: {
 		name: "raidGraphicsShadowQuality",
-		default: "2",
+		default: "3",
 		category: 5,
 		help: "UI value of the raidGraphics setting",
 	},
@@ -6883,7 +6987,7 @@ export const data: CVarInterface = {
 	},
 	raidgraphicsviewdistance: {
 		name: "raidGraphicsViewDistance",
-		default: "4",
+		default: "6",
 		category: 5,
 		help: "UI value of the raidGraphics setting",
 	},
@@ -7163,6 +7267,12 @@ export const data: CVarInterface = {
 		category: 4,
 		scope: "Character",
 		help: "Which trainer services to show",
+	},
+	shadowblendcascades: {
+		name: "shadowBlendCascades",
+		default: "0",
+		category: 1,
+		help: "Blend between shadow cascades (0/1)",
 	},
 	shadowcull: {
 		name: "shadowCull",
@@ -8021,12 +8131,26 @@ export const data: CVarInterface = {
 		scope: "Account",
 		help: "Internal cvar for saving tracked achievements in order",
 	},
+	trackedperksactivities: {
+		name: "trackedPerksActivities",
+		default: "",
+		category: 4,
+		scope: "Account",
+		help: "Internal cvar for saving tracked perks activities in order",
+	},
 	trackedprofessionrecipes: {
 		name: "trackedProfessionRecipes",
 		default: "",
 		category: 4,
 		scope: "Account",
 		help: "Internal cvar for saving tracked recipes in order",
+	},
+	trackedprofessionrecraftrecipes: {
+		name: "trackedProfessionRecraftRecipes",
+		default: "",
+		category: 4,
+		scope: "Account",
+		help: "Internal cvar for saving tracked recraft recipes in order",
 	},
 	trackedquests: {
 		name: "trackedQuests",
@@ -8150,12 +8274,6 @@ export const data: CVarInterface = {
 		scope: "Account",
 		help: "Internal cvar for tracking unlocked Major Factions. Used to play a toast when a new faction has been unlocked.",
 	},
-	usecompactpartyframes: {
-		name: "useCompactPartyFrames",
-		default: "",
-		category: 4,
-		help: "Use the new raid frames for parties",
-	},
 	usehighresolutionuitextures: {
 		name: "useHighResolutionUITextures",
 		default: "0",
@@ -8236,13 +8354,61 @@ export const data: CVarInterface = {
 	},
 	vrsparticles: {
 		name: "vrsParticles",
-		default: "",
+		default: "1x1",
 		category: 1,
 		help: "Render scale like effect for particles. Only used if lots of particles are on screen",
 	},
+	vrsvalar: {
+		name: "vrsValar",
+		default: "0",
+		category: 1,
+		help: "Generate a shading rate mask based on velocity and luminance. Requires VRS Tier 2.",
+	},
+	vrsvalarenvluma: {
+		name: "vrsValarEnvLuma",
+		default: "0.05",
+		category: 1,
+		help: "Env. Luma for VALAR",
+	},
+	vrsvalark: {
+		name: "vrsValarK",
+		default: "2.13",
+		category: 1,
+		help: "Quarter Rate Sensitivity (K) for VALAR",
+	},
+	vrsvalarsensitivitythreshold: {
+		name: "vrsValarSensitivityThreshold",
+		default: "0.31",
+		category: 1,
+		help: "Sensitivity Threshold for VALAR",
+	},
+	vrsvalaruseasynccompute: {
+		name: "vrsValarUseAsyncCompute",
+		default: "0",
+		category: 1,
+		help: "Use async compute for VALAR",
+	},
+	vrsvalarusemotionvectors: {
+		name: "vrsValarUseMotionVectors",
+		default: "0",
+		category: 1,
+		help: "Use motion vectors for VALAR",
+	},
+	vrsvalaruseweberfechner: {
+		name: "vrsValarUseWeberFechner",
+		default: "0",
+		category: 1,
+		help: "Use Weber-Fechner Algo for VALAR",
+	},
+	vrsvalarweberfechnerconstant: {
+		name: "vrsValarWeberFechnerConstant",
+		default: "1.0",
+		category: 1,
+		help: "Weber-Fechner Constant for VALAR",
+	},
 	vrsworldgeo: {
 		name: "vrsWorldGeo",
-		default: "",
+		default: "1x1",
 		category: 1,
 		help: "Render scale like effect for terrain, buildings and liquids",
 	},
@@ -8368,6 +8534,12 @@ export const data: CVarInterface = {
 		category: 1,
 		help: "World texture base mip",
 	},
+	worldintersectmaxjobs: {
+		name: "worldIntersectMaxJobs",
+		default: "32",
+		category: 1,
+		help: "Maximum job threads for culling",
+	},
 	worldloadsort: {
 		name: "worldLoadSort",
 		default: "1",
@@ -8458,6 +8630,13 @@ export const data: CVarInterface = {
 		default: "32",
 		category: 1,
 		help: "Maximum job threads for culling",
+	},
+	wowlabsclosedtutorials: {
+		name: "wowLabsClosedTutorials",
+		default: "",
+		category: 4,
+		scope: "Account",
+		help: "Bitfield for which help frames have been acknowledged by the user, specifically for WoW Labs",
 	},
 	xpbartext: {
 		name: "xpBarText",
