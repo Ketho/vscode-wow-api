@@ -31,7 +31,7 @@ local Spell =
 
 			Returns =
 			{
-				{ Name = "rarityBorderAtlas", Type = "string", Nilable = false },
+				{ Name = "rarityBorderAtlas", Type = "textureAtlas", Nilable = false },
 			},
 		},
 		{
@@ -55,6 +55,15 @@ local Spell =
 			Arguments =
 			{
 				{ Name = "spellID", Type = "number", Nilable = false },
+			},
+		},
+		{
+			Name = "TargetSpellJumpsUpgradeTrack",
+			Type = "Function",
+
+			Returns =
+			{
+				{ Name = "jumpsUpgradeTrack", Type = "bool", Nilable = false },
 			},
 		},
 	},

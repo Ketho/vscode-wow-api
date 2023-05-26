@@ -25,7 +25,7 @@ local Loot =
 			LiteralName = "AZERITE_EMPOWERED_ITEM_LOOTED",
 			Payload =
 			{
-				{ Name = "itemLink", Type = "string", Nilable = false },
+				{ Name = "itemLink", Type = "cstring", Nilable = false },
 			},
 		},
 		{
@@ -49,8 +49,8 @@ local Loot =
 			LiteralName = "BONUS_ROLL_RESULT",
 			Payload =
 			{
-				{ Name = "typeIdentifier", Type = "string", Nilable = false },
-				{ Name = "itemLink", Type = "string", Nilable = false },
+				{ Name = "typeIdentifier", Type = "cstring", Nilable = false },
+				{ Name = "itemLink", Type = "cstring", Nilable = false },
 				{ Name = "quantity", Type = "number", Nilable = false },
 				{ Name = "specID", Type = "number", Nilable = false },
 				{ Name = "sex", Type = "number", Nilable = false },
@@ -92,7 +92,7 @@ local Loot =
 			{
 				{ Name = "rollID", Type = "number", Nilable = false },
 				{ Name = "rollType", Type = "number", Nilable = false },
-				{ Name = "confirmReason", Type = "string", Nilable = false },
+				{ Name = "confirmReason", Type = "cstring", Nilable = false },
 			},
 		},
 		{
@@ -103,10 +103,10 @@ local Loot =
 			{
 				{ Name = "encounterID", Type = "number", Nilable = false },
 				{ Name = "itemID", Type = "number", Nilable = false },
-				{ Name = "itemLink", Type = "string", Nilable = false },
+				{ Name = "itemLink", Type = "cstring", Nilable = false },
 				{ Name = "quantity", Type = "number", Nilable = false },
-				{ Name = "itemName", Type = "string", Nilable = false },
-				{ Name = "fileName", Type = "string", Nilable = false },
+				{ Name = "itemName", Type = "cstring", Nilable = false },
+				{ Name = "fileName", Type = "cstring", Nilable = false },
 			},
 		},
 		{
@@ -125,7 +125,7 @@ local Loot =
 			LiteralName = "ITEM_PUSH",
 			Payload =
 			{
-				{ Name = "bagSlot", Type = "number", Nilable = false },
+				{ Name = "bagSlot", Type = "luaIndex", Nilable = false },
 				{ Name = "iconFileID", Type = "number", Nilable = false },
 			},
 		},
@@ -135,7 +135,7 @@ local Loot =
 			LiteralName = "LOOT_BIND_CONFIRM",
 			Payload =
 			{
-				{ Name = "lootSlot", Type = "number", Nilable = false },
+				{ Name = "lootSlot", Type = "luaIndex", Nilable = false },
 			},
 		},
 		{
@@ -144,42 +144,12 @@ local Loot =
 			LiteralName = "LOOT_CLOSED",
 		},
 		{
-			Name = "LootHistoryAutoShow",
-			Type = "Event",
-			LiteralName = "LOOT_HISTORY_AUTO_SHOW",
-			Payload =
-			{
-				{ Name = "rollID", Type = "number", Nilable = false },
-				{ Name = "isMasterLoot", Type = "bool", Nilable = false },
-			},
-		},
-		{
-			Name = "LootHistoryFullUpdate",
-			Type = "Event",
-			LiteralName = "LOOT_HISTORY_FULL_UPDATE",
-		},
-		{
-			Name = "LootHistoryRollChanged",
-			Type = "Event",
-			LiteralName = "LOOT_HISTORY_ROLL_CHANGED",
-			Payload =
-			{
-				{ Name = "historyIndex", Type = "number", Nilable = false },
-				{ Name = "playerIndex", Type = "number", Nilable = false },
-			},
-		},
-		{
-			Name = "LootHistoryRollComplete",
-			Type = "Event",
-			LiteralName = "LOOT_HISTORY_ROLL_COMPLETE",
-		},
-		{
 			Name = "LootItemAvailable",
 			Type = "Event",
 			LiteralName = "LOOT_ITEM_AVAILABLE",
 			Payload =
 			{
-				{ Name = "itemTooltip", Type = "string", Nilable = false },
+				{ Name = "itemTooltip", Type = "cstring", Nilable = false },
 				{ Name = "lootHandle", Type = "number", Nilable = false },
 			},
 		},
@@ -189,7 +159,7 @@ local Loot =
 			LiteralName = "LOOT_ITEM_ROLL_WON",
 			Payload =
 			{
-				{ Name = "itemLink", Type = "string", Nilable = false },
+				{ Name = "itemLink", Type = "cstring", Nilable = false },
 				{ Name = "rollQuantity", Type = "number", Nilable = false },
 				{ Name = "rollType", Type = "number", Nilable = false },
 				{ Name = "roll", Type = "number", Nilable = false },
@@ -230,7 +200,7 @@ local Loot =
 			LiteralName = "LOOT_SLOT_CHANGED",
 			Payload =
 			{
-				{ Name = "lootSlot", Type = "number", Nilable = false },
+				{ Name = "lootSlot", Type = "luaIndex", Nilable = false },
 			},
 		},
 		{
@@ -239,7 +209,7 @@ local Loot =
 			LiteralName = "LOOT_SLOT_CLEARED",
 			Payload =
 			{
-				{ Name = "lootSlot", Type = "number", Nilable = false },
+				{ Name = "lootSlot", Type = "luaIndex", Nilable = false },
 			},
 		},
 		{
@@ -253,8 +223,8 @@ local Loot =
 			LiteralName = "PET_BATTLE_LOOT_RECEIVED",
 			Payload =
 			{
-				{ Name = "typeIdentifier", Type = "string", Nilable = false },
-				{ Name = "itemLink", Type = "string", Nilable = false },
+				{ Name = "typeIdentifier", Type = "cstring", Nilable = false },
+				{ Name = "itemLink", Type = "cstring", Nilable = false },
 				{ Name = "quantity", Type = "number", Nilable = false },
 			},
 		},
@@ -281,7 +251,7 @@ local Loot =
 			Payload =
 			{
 				{ Name = "questID", Type = "number", Nilable = false },
-				{ Name = "itemLink", Type = "string", Nilable = false },
+				{ Name = "itemLink", Type = "cstring", Nilable = false },
 				{ Name = "quantity", Type = "number", Nilable = false },
 			},
 		},
@@ -291,8 +261,8 @@ local Loot =
 			LiteralName = "SHOW_LOOT_TOAST",
 			Payload =
 			{
-				{ Name = "typeIdentifier", Type = "string", Nilable = false },
-				{ Name = "itemLink", Type = "string", Nilable = false },
+				{ Name = "typeIdentifier", Type = "cstring", Nilable = false },
+				{ Name = "itemLink", Type = "cstring", Nilable = false },
 				{ Name = "quantity", Type = "number", Nilable = false },
 				{ Name = "specID", Type = "number", Nilable = false },
 				{ Name = "sex", Type = "number", Nilable = false },
@@ -309,7 +279,7 @@ local Loot =
 			LiteralName = "SHOW_LOOT_TOAST_LEGENDARY_LOOTED",
 			Payload =
 			{
-				{ Name = "itemLink", Type = "string", Nilable = false },
+				{ Name = "itemLink", Type = "cstring", Nilable = false },
 			},
 		},
 		{
@@ -318,7 +288,7 @@ local Loot =
 			LiteralName = "SHOW_LOOT_TOAST_UPGRADE",
 			Payload =
 			{
-				{ Name = "itemLink", Type = "string", Nilable = false },
+				{ Name = "itemLink", Type = "cstring", Nilable = false },
 				{ Name = "quantity", Type = "number", Nilable = false },
 				{ Name = "specID", Type = "number", Nilable = false },
 				{ Name = "sex", Type = "number", Nilable = false },
@@ -333,8 +303,8 @@ local Loot =
 			LiteralName = "SHOW_PVP_FACTION_LOOT_TOAST",
 			Payload =
 			{
-				{ Name = "typeIdentifier", Type = "string", Nilable = false },
-				{ Name = "itemLink", Type = "string", Nilable = false },
+				{ Name = "typeIdentifier", Type = "cstring", Nilable = false },
+				{ Name = "itemLink", Type = "cstring", Nilable = false },
 				{ Name = "quantity", Type = "number", Nilable = false },
 				{ Name = "specID", Type = "number", Nilable = false },
 				{ Name = "sex", Type = "number", Nilable = false },
@@ -348,8 +318,8 @@ local Loot =
 			LiteralName = "SHOW_RATED_PVP_REWARD_TOAST",
 			Payload =
 			{
-				{ Name = "typeIdentifier", Type = "string", Nilable = false },
-				{ Name = "itemLink", Type = "string", Nilable = false },
+				{ Name = "typeIdentifier", Type = "cstring", Nilable = false },
+				{ Name = "itemLink", Type = "cstring", Nilable = false },
 				{ Name = "quantity", Type = "number", Nilable = false },
 				{ Name = "specID", Type = "number", Nilable = false },
 				{ Name = "sex", Type = "number", Nilable = false },

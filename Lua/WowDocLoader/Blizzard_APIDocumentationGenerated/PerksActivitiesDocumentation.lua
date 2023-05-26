@@ -57,7 +57,7 @@ local PerksActivities =
 
 			Returns =
 			{
-				{ Name = "link", Type = "string", Nilable = false },
+				{ Name = "link", Type = "cstring", Nilable = false },
 			},
 		},
 		{
@@ -133,7 +133,8 @@ local PerksActivities =
 			Fields =
 			{
 				{ Name = "activePerksMonth", Type = "number", Nilable = false },
-				{ Name = "displayMonthName", Type = "string", Nilable = false },
+				{ Name = "displayMonthName", Type = "cstring", Nilable = false },
+				{ Name = "secondsRemaining", Type = "time_t", Nilable = false },
 				{ Name = "activities", Type = "table", InnerType = "PerksActivityInfo", Nilable = false },
 				{ Name = "thresholds", Type = "table", InnerType = "PerksActivityThresholdInfo", Nilable = false },
 			},
@@ -155,17 +156,29 @@ local PerksActivities =
 			},
 		},
 		{
+			Name = "PerksActivityCriteria",
+			Type = "Structure",
+			Fields =
+			{
+				{ Name = "criteriaID", Type = "number", Nilable = false },
+				{ Name = "requiredValue", Type = "number", Nilable = false },
+			},
+		},
+		{
 			Name = "PerksActivityInfo",
 			Type = "Structure",
 			Fields =
 			{
 				{ Name = "ID", Type = "number", Nilable = false },
-				{ Name = "activityName", Type = "string", Nilable = false },
-				{ Name = "description", Type = "string", Nilable = false },
+				{ Name = "activityName", Type = "cstring", Nilable = false },
+				{ Name = "description", Type = "cstring", Nilable = false },
 				{ Name = "thresholdContributionAmount", Type = "number", Nilable = false },
 				{ Name = "completed", Type = "bool", Nilable = false },
 				{ Name = "tracked", Type = "bool", Nilable = false },
+				{ Name = "supersedes", Type = "number", Nilable = false },
+				{ Name = "uiPriority", Type = "number", Nilable = false },
 				{ Name = "requirementsList", Type = "table", InnerType = "PerksActivityRequirement", Nilable = false },
+				{ Name = "criteriaList", Type = "table", InnerType = "PerksActivityCriteria", Nilable = false },
 				{ Name = "tagNames", Type = "table", InnerType = "string", Nilable = false },
 			},
 		},
@@ -191,7 +204,7 @@ local PerksActivities =
 			Type = "Structure",
 			Fields =
 			{
-				{ Name = "thresholdID", Type = "number", Nilable = false },
+				{ Name = "thresholdOrderIndex", Type = "number", Nilable = false },
 				{ Name = "currencyAwardAmount", Type = "number", Nilable = false },
 				{ Name = "requiredContributionAmount", Type = "number", Nilable = false },
 				{ Name = "pendingReward", Type = "bool", Nilable = false },

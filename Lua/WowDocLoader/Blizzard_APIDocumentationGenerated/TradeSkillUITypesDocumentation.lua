@@ -118,7 +118,7 @@ local TradeSkillUITypes =
 				{ Name = "craftingQuality", Type = "number", Nilable = true },
 				{ Name = "qualityProgress", Type = "number", Nilable = false, Default = 0 },
 				{ Name = "itemID", Type = "number", Nilable = false, Default = 0 },
-				{ Name = "itemGUID", Type = "string", Nilable = false },
+				{ Name = "itemGUID", Type = "WOWGUID", Nilable = false },
 				{ Name = "quantity", Type = "number", Nilable = false, Default = 0 },
 				{ Name = "hyperlink", Type = "string", Nilable = false },
 				{ Name = "isCrit", Type = "bool", Nilable = false, Default = false },
@@ -136,7 +136,7 @@ local TradeSkillUITypes =
 			Type = "Structure",
 			Fields =
 			{
-				{ Name = "dataSlotIndex", Type = "number", Nilable = false },
+				{ Name = "dataSlotIndex", Type = "luaIndex", Nilable = false },
 				{ Name = "itemID", Type = "number", Nilable = false, Default = 0 },
 			},
 		},
@@ -188,7 +188,7 @@ local TradeSkillUITypes =
 			Fields =
 			{
 				{ Name = "itemID", Type = "number", Nilable = false },
-				{ Name = "dataSlotIndex", Type = "number", Nilable = false },
+				{ Name = "dataSlotIndex", Type = "luaIndex", Nilable = false },
 				{ Name = "quantity", Type = "number", Nilable = false },
 			},
 		},
@@ -199,7 +199,7 @@ local TradeSkillUITypes =
 			{
 				{ Name = "mcrSlotID", Type = "number", Nilable = false },
 				{ Name = "requiredSkillRank", Type = "number", Nilable = false },
-				{ Name = "slotText", Type = "string", Nilable = true },
+				{ Name = "slotText", Type = "cstring", Nilable = true },
 			},
 		},
 		{
@@ -212,9 +212,10 @@ local TradeSkillUITypes =
 				{ Name = "quantityRequired", Type = "number", Nilable = false },
 				{ Name = "slotInfo", Type = "CraftingReagentSlotInfo", Nilable = true },
 				{ Name = "dataSlotType", Type = "TradeskillSlotDataType", Nilable = false, Default = "Reagent" },
-				{ Name = "dataSlotIndex", Type = "number", Nilable = false },
-				{ Name = "slotIndex", Type = "number", Nilable = false },
+				{ Name = "dataSlotIndex", Type = "luaIndex", Nilable = false },
+				{ Name = "slotIndex", Type = "luaIndex", Nilable = false },
 				{ Name = "orderSource", Type = "CraftingOrderReagentSource", Nilable = true },
+				{ Name = "required", Type = "bool", Nilable = false },
 			},
 		},
 		{
@@ -223,7 +224,7 @@ local TradeSkillUITypes =
 			Fields =
 			{
 				{ Name = "icon", Type = "number", Nilable = false },
-				{ Name = "hyperlink", Type = "string", Nilable = true },
+				{ Name = "hyperlink", Type = "cstring", Nilable = true },
 				{ Name = "itemID", Type = "number", Nilable = true },
 			},
 		},
@@ -232,7 +233,7 @@ local TradeSkillUITypes =
 			Type = "Structure",
 			Fields =
 			{
-				{ Name = "name", Type = "string", Nilable = false },
+				{ Name = "name", Type = "cstring", Nilable = false },
 				{ Name = "met", Type = "bool", Nilable = false },
 				{ Name = "type", Type = "RecipeRequirementType", Nilable = false },
 			},
@@ -246,7 +247,7 @@ local TradeSkillUITypes =
 				{ Name = "icon", Type = "number", Nilable = false },
 				{ Name = "quantityMin", Type = "number", Nilable = false },
 				{ Name = "quantityMax", Type = "number", Nilable = false },
-				{ Name = "name", Type = "string", Nilable = false },
+				{ Name = "name", Type = "cstring", Nilable = false },
 				{ Name = "recipeType", Type = "TradeskillRecipeType", Nilable = false, Default = "Item" },
 				{ Name = "productQuality", Type = "number", Nilable = true },
 				{ Name = "outputItemID", Type = "number", Nilable = true },
@@ -279,7 +280,7 @@ local TradeSkillUITypes =
 			Fields =
 			{
 				{ Name = "itemID", Type = "number", Nilable = false },
-				{ Name = "itemGUID", Type = "string", Nilable = false },
+				{ Name = "itemGUID", Type = "WOWGUID", Nilable = false },
 				{ Name = "hyperlink", Type = "string", Nilable = true },
 				{ Name = "quantity", Type = "number", Nilable = false },
 			},
@@ -315,14 +316,15 @@ local TradeSkillUITypes =
 			{
 				{ Name = "profession", Type = "Profession", Nilable = true },
 				{ Name = "professionID", Type = "number", Nilable = false },
-				{ Name = "professionName", Type = "string", Nilable = false },
-				{ Name = "expansionName", Type = "string", Nilable = false },
+				{ Name = "sourceCounter", Type = "number", Nilable = false },
+				{ Name = "professionName", Type = "cstring", Nilable = false },
+				{ Name = "expansionName", Type = "cstring", Nilable = false },
 				{ Name = "skillLevel", Type = "number", Nilable = false },
 				{ Name = "maxSkillLevel", Type = "number", Nilable = false },
 				{ Name = "skillModifier", Type = "number", Nilable = false },
 				{ Name = "isPrimaryProfession", Type = "bool", Nilable = false },
 				{ Name = "parentProfessionID", Type = "number", Nilable = true },
-				{ Name = "parentProfessionName", Type = "string", Nilable = true },
+				{ Name = "parentProfessionName", Type = "cstring", Nilable = true },
 			},
 		},
 		{
@@ -340,11 +342,11 @@ local TradeSkillUITypes =
 			Fields =
 			{
 				{ Name = "categoryID", Type = "number", Nilable = false },
-				{ Name = "name", Type = "string", Nilable = false },
+				{ Name = "name", Type = "cstring", Nilable = false },
 				{ Name = "relativeDifficulty", Type = "TradeskillRelativeDifficulty", Nilable = true },
 				{ Name = "maxTrivialLevel", Type = "number", Nilable = false },
 				{ Name = "itemLevel", Type = "number", Nilable = false },
-				{ Name = "alternateVerb", Type = "string", Nilable = true },
+				{ Name = "alternateVerb", Type = "cstring", Nilable = true },
 				{ Name = "numSkillUps", Type = "number", Nilable = false },
 				{ Name = "canSkillUp", Type = "bool", Nilable = false },
 				{ Name = "firstCraft", Type = "bool", Nilable = false },
@@ -354,13 +356,13 @@ local TradeSkillUITypes =
 				{ Name = "favorite", Type = "bool", Nilable = false },
 				{ Name = "supportsQualities", Type = "bool", Nilable = false },
 				{ Name = "craftable", Type = "bool", Nilable = false, Default = true },
-				{ Name = "disabledReason", Type = "string", Nilable = true },
+				{ Name = "disabledReason", Type = "cstring", Nilable = true },
 				{ Name = "recipeID", Type = "number", Nilable = false },
 				{ Name = "skillLineAbilityID", Type = "number", Nilable = false },
 				{ Name = "previousRecipeID", Type = "number", Nilable = true },
 				{ Name = "nextRecipeID", Type = "number", Nilable = true },
 				{ Name = "icon", Type = "number", Nilable = true },
-				{ Name = "hyperlink", Type = "string", Nilable = true },
+				{ Name = "hyperlink", Type = "cstring", Nilable = true },
 				{ Name = "currentRecipeExperience", Type = "number", Nilable = true },
 				{ Name = "nextLevelRecipeExperience", Type = "number", Nilable = true },
 				{ Name = "unlockedRecipeLevel", Type = "number", Nilable = true },
@@ -369,11 +371,12 @@ local TradeSkillUITypes =
 				{ Name = "hasSingleItemOutput", Type = "bool", Nilable = false, Default = false },
 				{ Name = "qualityItemIDs", Type = "table", InnerType = "number", Nilable = true },
 				{ Name = "qualityIlvlBonuses", Type = "table", InnerType = "number", Nilable = true },
+				{ Name = "alwaysUsesLowestQuality", Type = "bool", Nilable = false, Default = false },
 				{ Name = "maxQuality", Type = "number", Nilable = true },
 				{ Name = "qualityIDs", Type = "table", InnerType = "number", Nilable = true },
 				{ Name = "canCreateMultiple", Type = "bool", Nilable = false, Default = true },
-				{ Name = "abilityVerb", Type = "string", Nilable = true },
-				{ Name = "abilityAllVerb", Type = "string", Nilable = true },
+				{ Name = "abilityVerb", Type = "cstring", Nilable = true },
+				{ Name = "abilityAllVerb", Type = "cstring", Nilable = true },
 				{ Name = "isRecraft", Type = "bool", Nilable = false, Default = false },
 				{ Name = "isDummyRecipe", Type = "bool", Nilable = false, Default = false },
 				{ Name = "isGatheringRecipe", Type = "bool", Nilable = false, Default = false },
