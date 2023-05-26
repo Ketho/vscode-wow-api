@@ -48,7 +48,7 @@ export function activate(context: vscode.ExtensionContext) {
 
 	setExternalLibrary("API", true, library);
 	const loadFrameXML = vscode.workspace.getConfiguration("wowAPI").get("emmyLua.loadFrameXML");
-	setExternalLibrary("Optional", loadFrameXML, library);
+	setExternalLibrary("Optional", loadFrameXML ? true : false, library);
 
 	config.update("workspace.library", library, true);
 
