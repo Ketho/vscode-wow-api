@@ -2,7 +2,7 @@
 C_PlayerInfo = {}
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_PlayerInfo.GUIDIsPlayer)
----@param guid string
+---@param guid WOWGUID
 ---@return boolean isPlayer
 function C_PlayerInfo.GUIDIsPlayer(guid) end
 

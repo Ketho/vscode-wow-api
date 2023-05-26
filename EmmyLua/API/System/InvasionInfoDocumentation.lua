@@ -25,5 +25,5 @@ function C_InvasionInfo.GetInvasionTimeLeft(invasionID) end
 ---@field invasionID number
 ---@field name string
 ---@field position Vector2DMixin
----@field atlasName string
+---@field atlasName textureAtlas
 ---@field rewardQuestID number?

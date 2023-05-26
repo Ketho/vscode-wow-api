@@ -35,7 +35,7 @@ function C_AzeriteItem.IsAzeriteItem(itemLocation) end
 function C_AzeriteItem.IsAzeriteItemAtMaxLevel() end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_AzeriteItem.IsAzeriteItemByID)
----@param itemInfo string
+---@param itemInfo ItemInfo
 ---@return boolean isAzeriteItem
 function C_AzeriteItem.IsAzeriteItemByID(itemInfo) end
 
@@ -43,6 +43,10 @@ function C_AzeriteItem.IsAzeriteItemByID(itemInfo) end
 ---@param azeriteItemLocation ItemLocationMixin
 ---@return boolean isEnabled
 function C_AzeriteItem.IsAzeriteItemEnabled(azeriteItemLocation) end
+
+---[Documentation](https://wowpedia.fandom.com/wiki/API_C_AzeriteItem.IsUnlimitedLevelingUnlocked)
+---@return boolean isUnlimitedLevelingUnlocked
+function C_AzeriteItem.IsUnlimitedLevelingUnlocked() end
 
 ---@class UnlockedAzeriteEmpoweredItems
 ---@field unlockedItem ItemLocationMixin

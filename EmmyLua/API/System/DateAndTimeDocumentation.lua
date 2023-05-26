@@ -13,6 +13,12 @@ function C_DateAndTime.AdjustTimeByDays(date, days) end
 ---@return CalendarTime newDate
 function C_DateAndTime.AdjustTimeByMinutes(date, minutes) end
 
+---[Documentation](https://wowpedia.fandom.com/wiki/API_C_DateAndTime.AdjustTimeByMonths)
+---@param date CalendarTime
+---@param months number
+---@return CalendarTime newDate
+function C_DateAndTime.AdjustTimeByMonths(date, months) end
+
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_DateAndTime.CompareCalendarTime)
 ---@param lhsCalendarTime CalendarTime
 ---@param rhsCalendarTime CalendarTime
@@ -20,7 +26,7 @@ function C_DateAndTime.AdjustTimeByMinutes(date, minutes) end
 function C_DateAndTime.CompareCalendarTime(lhsCalendarTime, rhsCalendarTime) end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_DateAndTime.GetCalendarTimeFromEpoch)
----@param epoch number
+---@param epoch BigUInteger
 ---@return CalendarTime date
 function C_DateAndTime.GetCalendarTimeFromEpoch(epoch) end
 
@@ -29,13 +35,13 @@ function C_DateAndTime.GetCalendarTimeFromEpoch(epoch) end
 function C_DateAndTime.GetCurrentCalendarTime() end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_DateAndTime.GetSecondsUntilDailyReset)
----@return number seconds
+---@return time_t seconds
 function C_DateAndTime.GetSecondsUntilDailyReset() end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_DateAndTime.GetSecondsUntilWeeklyReset)
----@return number seconds
+---@return time_t seconds
 function C_DateAndTime.GetSecondsUntilWeeklyReset() end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_DateAndTime.GetServerTimeLocal)
----@return number serverTimeLocal
+---@return time_t serverTimeLocal
 function C_DateAndTime.GetServerTimeLocal() end

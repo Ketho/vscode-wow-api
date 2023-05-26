@@ -11,7 +11,7 @@
 ---@field craftingQuality number?
 ---@field qualityProgress number? Default = 0
 ---@field itemID number? Default = 0
----@field itemGUID string
+---@field itemGUID WOWGUID
 ---@field quantity number? Default = 0
 ---@field hyperlink string
 ---@field isCrit boolean? Default = false
@@ -73,6 +73,7 @@
 ---@field dataSlotIndex number
 ---@field slotIndex number
 ---@field orderSource Enum.CraftingOrderReagentSource?
+---@field required boolean
 
 ---@class CraftingRecipeOutputInfo
 ---@field icon number
@@ -107,7 +108,7 @@
 
 ---@class CraftingTargetItem
 ---@field itemID number
----@field itemGUID string
+---@field itemGUID WOWGUID
 ---@field hyperlink string?
 ---@field quantity number
 
@@ -128,6 +129,7 @@
 ---@class ProfessionInfo
 ---@field profession Enum.Profession?
 ---@field professionID number
+---@field sourceCounter number
 ---@field professionName string
 ---@field expansionName string
 ---@field skillLevel number
@@ -172,6 +174,7 @@
 ---@field hasSingleItemOutput boolean? Default = false
 ---@field qualityItemIDs number[]?
 ---@field qualityIlvlBonuses number[]?
+---@field alwaysUsesLowestQuality boolean? Default = false
 ---@field maxQuality number?
 ---@field qualityIDs number[]?
 ---@field canCreateMultiple boolean? Default = true

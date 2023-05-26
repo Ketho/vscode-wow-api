@@ -19,7 +19,7 @@ function C_Map.GetAreaInfo(areaID) end
 
 ---Only works for the player and party members.
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_Map.GetBestMapForUnit)
----@param unitToken string
+---@param unitToken UnitToken
 ---@return number? uiMapID
 function C_Map.GetBestMapForUnit(unitToken) end
 
@@ -34,7 +34,7 @@ function C_Map.GetFallbackWorldMapID() end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_Map.GetMapArtBackgroundAtlas)
 ---@param uiMapID number
----@return string atlasName
+---@return textureAtlas atlasName
 function C_Map.GetMapArtBackgroundAtlas(uiMapID) end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_Map.GetMapArtHelpTextPosition)
@@ -50,7 +50,7 @@ function C_Map.GetMapArtID(uiMapID) end
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_Map.GetMapArtLayerTextures)
 ---@param uiMapID number
 ---@param layerIndex number
----@return number[] textures
+---@return fileID[] textures
 function C_Map.GetMapArtLayerTextures(uiMapID, layerIndex) end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_Map.GetMapArtLayers)
@@ -89,8 +89,8 @@ function C_Map.GetMapGroupMembersInfo(uiMapGroupID) end
 ---@param uiMapID number
 ---@param x number
 ---@param y number
----@return number fileDataID
----@return string atlasID
+---@return fileID fileDataID
+---@return textureAtlas atlasID
 ---@return number texturePercentageX
 ---@return number texturePercentageY
 ---@return number textureX
@@ -98,6 +98,18 @@ function C_Map.GetMapGroupMembersInfo(uiMapGroupID) end
 ---@return number scrollChildX
 ---@return number scrollChildY
 function C_Map.GetMapHighlightInfoAtPosition(uiMapID, x, y) end
+
+---[Documentation](https://wowpedia.fandom.com/wiki/API_C_Map.GetMapHighlightPulseInfo)
+---@param uiMapID number
+---@return fileID fileDataID
+---@return textureAtlas atlasID
+---@return number texturePercentageX
+---@return number texturePercentageY
+---@return number textureX
+---@return number textureY
+---@return number scrollChildX
+---@return number scrollChildY
+function C_Map.GetMapHighlightPulseInfo(uiMapID) end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_Map.GetMapInfo)
 ---@param uiMapID number
@@ -108,8 +120,9 @@ function C_Map.GetMapInfo(uiMapID) end
 ---@param uiMapID number
 ---@param x number
 ---@param y number
+---@param ignoreZoneMapPositionData? boolean
 ---@return UiMapDetails info
-function C_Map.GetMapInfoAtPosition(uiMapID, x, y) end
+function C_Map.GetMapInfoAtPosition(uiMapID, x, y, ignoreZoneMapPositionData) end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_Map.GetMapLevels)
 ---@param uiMapID number
@@ -151,17 +164,17 @@ function C_Map.GetMapWorldSize(uiMapID) end
 ---Only works for the player and party members.
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_Map.GetPlayerMapPosition)
 ---@param uiMapID number
----@param unitToken string
+---@param unitToken UnitToken
 ---@return Vector2DMixin? position
 function C_Map.GetPlayerMapPosition(uiMapID, unitToken) end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_Map.GetUserWaypoint)
----@return table point
+---@return UiMapPoint point
 function C_Map.GetUserWaypoint() end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_Map.GetUserWaypointFromHyperlink)
 ---@param hyperlink string
----@return table point
+---@return UiMapPoint point
 function C_Map.GetUserWaypointFromHyperlink(hyperlink) end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_Map.GetUserWaypointHyperlink)
@@ -199,14 +212,14 @@ function C_Map.MapHasArt(uiMapID) end
 function C_Map.RequestPreloadMap(uiMapID) end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_Map.SetUserWaypoint)
----@param point table
+---@param point UiMapPoint
 function C_Map.SetUserWaypoint(point) end
 
 ---@class MapBannerInfo
 ---@field areaPoiID number
 ---@field name string
 ---@field atlasName string
----@field uiTextureKit string?
+---@field uiTextureKit textureKit?
 
 ---@class MapLinkInfo
 ---@field areaPoiID number
@@ -220,7 +233,7 @@ function C_Map.SetUserWaypoint(point) end
 ---@field name string
 ---@field mapType Enum.UIMapType
 ---@field parentMapID number
----@field flags number
+---@field flags Enum.UIMapFlag
 
 ---@class UiMapGroupMemberInfo
 ---@field mapID number
@@ -228,8 +241,8 @@ function C_Map.SetUserWaypoint(point) end
 ---@field name string
 
 ---@class UiMapHighlightInfo
----@field fileDataID number
----@field atlasID string
+---@field fileDataID fileID
+---@field atlasID textureAtlas
 ---@field texturePercentageX number
 ---@field texturePercentageY number
 ---@field textureX number

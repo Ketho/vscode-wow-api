@@ -35,8 +35,9 @@ function C_SpellBook.GetSpellInfo(spellID) end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_SpellBook.GetSpellLinkFromSpellID)
 ---@param spellID number
+---@param glyphID? number
 ---@return string spellLink
-function C_SpellBook.GetSpellLinkFromSpellID(spellID) end
+function C_SpellBook.GetSpellLinkFromSpellID(spellID, glyphID) end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_SpellBook.GetTrackedNameplateCooldownSpells)
 ---@return number[] spellIDs
@@ -55,7 +56,7 @@ function C_SpellBook.IsSpellDisabled(spellID) end
 
 ---@class SpellInfo
 ---@field name string
----@field iconID number
+---@field iconID fileID
 ---@field castTime number
 ---@field minRange number
 ---@field maxRange number

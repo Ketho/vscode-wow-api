@@ -54,7 +54,7 @@ function C_Commentator.EnterInstance() end
 function C_Commentator.ExitInstance() end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_Commentator.FindSpectatedUnit)
----@param unitToken string
+---@param unitToken UnitToken
 ---@return number playerIndex
 ---@return number teamIndex
 ---@return boolean isPet
@@ -92,7 +92,7 @@ function C_Commentator.ForceFollowTransition() end
 function C_Commentator.GetAdditionalCameraWeight() end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_Commentator.GetAdditionalCameraWeightByToken)
----@param unitToken string
+---@param unitToken UnitToken
 ---@return number weight
 function C_Commentator.GetAdditionalCameraWeightByToken(unitToken) end
 
@@ -180,7 +180,7 @@ function C_Commentator.GetLookAtLerpAmount() end
 function C_Commentator.GetMapInfo(mapIndex) end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_Commentator.GetMatchDuration)
----@return number seconds
+---@return time_t seconds
 function C_Commentator.GetMatchDuration() end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_Commentator.GetMaxNumPlayersPerTeam)
@@ -236,7 +236,7 @@ function C_Commentator.GetOrCreateSeries(teamName1, teamName2) end
 function C_Commentator.GetPlayerAuraInfo(teamIndex, playerIndex, spellID) end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_Commentator.GetPlayerAuraInfoByUnit)
----@param token string
+---@param token UnitToken
 ---@param spellID number
 ---@return number startTime
 ---@return number duration
@@ -253,7 +253,7 @@ function C_Commentator.GetPlayerAuraInfoByUnit(token, spellID) end
 function C_Commentator.GetPlayerCooldownInfo(teamIndex, playerIndex, spellID) end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_Commentator.GetPlayerCooldownInfoByUnit)
----@param unitToken string
+---@param unitToken UnitToken
 ---@param spellID number
 ---@return number startTime
 ---@return number duration
@@ -269,7 +269,7 @@ function C_Commentator.GetPlayerCooldownInfoByUnit(unitToken, spellID) end
 function C_Commentator.GetPlayerCrowdControlInfo(teamIndex, playerIndex) end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_Commentator.GetPlayerCrowdControlInfoByUnit)
----@param token string
+---@param token UnitToken
 ---@return number spellID
 ---@return number expiration
 ---@return number duration
@@ -288,7 +288,7 @@ function C_Commentator.GetPlayerData(teamIndex, playerIndex) end
 function C_Commentator.GetPlayerFlagInfo(teamIndex, playerIndex) end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_Commentator.GetPlayerFlagInfoByUnit)
----@param unitToken string
+---@param unitToken UnitToken
 ---@return boolean hasFlag
 function C_Commentator.GetPlayerFlagInfoByUnit(unitToken) end
 
@@ -308,7 +308,7 @@ function C_Commentator.GetPlayerOverrideName(originalName) end
 function C_Commentator.GetPlayerSpellCharges(teamIndex, playerIndex, spellID) end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_Commentator.GetPlayerSpellChargesByUnit)
----@param unitToken string
+---@param unitToken UnitToken
 ---@param spellID number
 ---@return number charges
 ---@return number maxCharges
@@ -343,7 +343,7 @@ function C_Commentator.GetStartLocation(mapID) end
 function C_Commentator.GetTeamColor(teamIndex) end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_Commentator.GetTeamColorByUnit)
----@param unitToken string
+---@param unitToken UnitToken
 ---@return ColorMixin color
 function C_Commentator.GetTeamColorByUnit(unitToken) end
 
@@ -364,13 +364,13 @@ function C_Commentator.GetTrackedSpellID(indirectSpellID) end
 function C_Commentator.GetTrackedSpells(teamIndex, playerIndex, category) end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_Commentator.GetTrackedSpellsByUnit)
----@param unitToken string
+---@param unitToken UnitToken
 ---@param category number|Enum.TrackedSpellCategory
 ---@return number[]? spells
 function C_Commentator.GetTrackedSpellsByUnit(unitToken, category) end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_Commentator.GetUnitData)
----@param unitToken string
+---@param unitToken UnitToken
 ---@return CommentatorUnitData data
 function C_Commentator.GetUnitData(unitToken) end
 
@@ -383,7 +383,7 @@ function C_Commentator.GetUnitData(unitToken) end
 function C_Commentator.GetWargameInfo(listID) end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_Commentator.HasTrackedAuras)
----@param token string
+---@param token UnitToken
 ---@return boolean hasOffensiveAura
 ---@return boolean hasDefensiveAura
 function C_Commentator.HasTrackedAuras(token) end
@@ -415,7 +415,7 @@ function C_Commentator.IsTrackedOffensiveAura(spellID) end
 function C_Commentator.IsTrackedSpell(teamIndex, playerIndex, spellID, category) end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_Commentator.IsTrackedSpellByUnit)
----@param unitToken string
+---@param unitToken UnitToken
 ---@param spellID number
 ---@param category number|Enum.TrackedSpellCategory
 ---@return boolean isTracked
@@ -464,7 +464,7 @@ function C_Commentator.ResetTrackedAuras() end
 function C_Commentator.SetAdditionalCameraWeight(teamIndex, playerIndex, weight) end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_Commentator.SetAdditionalCameraWeightByToken)
----@param unitToken string
+---@param unitToken UnitToken
 ---@param weight number
 function C_Commentator.SetAdditionalCameraWeightByToken(unitToken, weight) end
 

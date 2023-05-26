@@ -14,7 +14,7 @@ function C_LootJournal.GetItemSets(classID, specID) end
 
 ---@class LootJournalItemInfo
 ---@field itemID number
----@field icon number
+---@field icon fileID
 ---@field invType number
 
 ---@class LootJournalItemSetInfo

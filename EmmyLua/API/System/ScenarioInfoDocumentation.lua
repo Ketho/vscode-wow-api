@@ -25,7 +25,7 @@ function C_ScenarioInfo.GetScenarioStepInfo(scenarioStepID) end
 ---@field money number
 ---@field type number
 ---@field area string
----@field uiTextureKit string
+---@field uiTextureKit textureKit
 
 ---@class ScenarioStepInfo
 ---@field title string

@@ -18,10 +18,16 @@ function C_PetJournal.GetDisplayProbabilityByIndex(speciesID, index) end
 ---@return number? numDisplays
 function C_PetJournal.GetNumDisplays(speciesID) end
 
+---[Documentation](https://wowpedia.fandom.com/wiki/API_C_PetJournal.GetNumPetsInJournal)
+---@param creatureID number
+---@return number maxAllowed
+---@return number numPets
+function C_PetJournal.GetNumPetsInJournal(creatureID) end
+
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_PetJournal.GetPetAbilityInfo)
 ---@param abilityID number
 ---@return string name
----@return number icon
+---@return fileID icon
 ---@return number petType
 function C_PetJournal.GetPetAbilityInfo(abilityID) end
 
@@ -31,13 +37,13 @@ function C_PetJournal.GetPetAbilityInfo(abilityID) end
 function C_PetJournal.GetPetAbilityListTable(speciesID) end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_PetJournal.GetPetInfoTableByPetID)
----@param petID string
+---@param petID WOWGUID
 ---@return PetJournalPetInfo info
 function C_PetJournal.GetPetInfoTableByPetID(petID) end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_PetJournal.GetPetLoadOutInfo)
 ---@param slot number
----@return string? petID
+---@return WOWGUID? petID
 ---@return number ability1ID
 ---@return number ability2ID
 ---@return number ability3ID
@@ -45,7 +51,7 @@ function C_PetJournal.GetPetInfoTableByPetID(petID) end
 function C_PetJournal.GetPetLoadOutInfo(slot) end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_PetJournal.GetPetSummonInfo)
----@param battlePetGUID string
+---@param battlePetGUID WOWGUID
 ---@return boolean isSummonable
 ---@return Enum.PetJournalError error
 ---@return string errorText
@@ -60,7 +66,7 @@ function C_PetJournal.HasFavoritePets() end
 function C_PetJournal.IsUsingDefaultFilters() end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_PetJournal.PetIsSummonable)
----@param battlePetGUID string
+---@param battlePetGUID WOWGUID
 ---@return boolean isSummonable
 function C_PetJournal.PetIsSummonable(battlePetGUID) end
 
@@ -73,7 +79,7 @@ function C_PetJournal.PetUsesRandomDisplay(speciesID) end
 function C_PetJournal.SetDefaultFilters() end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_PetJournal.SpellTargetBattlePet)
----@param battlePetGUID string
+---@param battlePetGUID WOWGUID
 function C_PetJournal.SpellTargetBattlePet(battlePetGUID) end
 
 ---@class PetAbilityLevelInfo
@@ -88,7 +94,7 @@ function C_PetJournal.SpellTargetBattlePet(battlePetGUID) end
 ---@field maxXP number
 ---@field displayID number
 ---@field isFavorite boolean
----@field icon number
+---@field icon fileID
 ---@field petType number
 ---@field creatureID number
 ---@field name string?

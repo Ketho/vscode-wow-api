@@ -14,7 +14,7 @@ function C_ContributionCollector.GetActive() end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_ContributionCollector.GetAtlases)
 ---@param contributionID number
----@return string[] atlasName
+---@return textureAtlas[] atlasName
 function C_ContributionCollector.GetAtlases(contributionID) end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_ContributionCollector.GetBuffs)
@@ -79,8 +79,8 @@ function C_ContributionCollector.GetRewardQuestID(contributionID) end
 ---@param contributionID number
 ---@return Enum.ContributionState? contributionState Default = None
 ---@return number contributionPercentageComplete
----@return number? timeOfNextStateChange
----@return number startTime
+---@return time_t? timeOfNextStateChange
+---@return time_t startTime
 function C_ContributionCollector.GetState(contributionID) end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_ContributionCollector.HasPendingContribution)
@@ -98,9 +98,9 @@ function C_ContributionCollector.IsAwaitingRewardQuestData(contributionID) end
 ---@field stateColor ColorMixin
 ---@field tooltipLine string
 ---@field tooltipUseTimeRemaining boolean
----@field statusBarAtlas string
----@field borderAtlas string
----@field bannerAtlas string
+---@field statusBarAtlas textureAtlas
+---@field borderAtlas textureAtlas
+---@field bannerAtlas textureAtlas
 
 ---@class ContributionMapInfo
 ---@field areaPoiID number

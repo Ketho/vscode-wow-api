@@ -28,11 +28,11 @@ function C_PlayerChoice.RequestRerollPlayerChoice() end
 function C_PlayerChoice.SendPlayerChoiceResponse(responseID) end
 
 ---@class PlayerChoiceInfo
----@field objectGUID string
+---@field objectGUID WOWGUID
 ---@field choiceID number
 ---@field questionText string
 ---@field pendingChoiceText string
----@field uiTextureKit string
+---@field uiTextureKit textureKit
 ---@field hideWarboardHeader boolean
 ---@field keepOpenAfterChoice boolean
 ---@field options PlayerChoiceOptionInfo[]
@@ -57,7 +57,7 @@ function C_PlayerChoice.SendPlayerChoiceResponse(responseID) end
 ---@field disabledOption boolean
 ---@field hasRewards boolean
 ---@field rewardInfo PlayerChoiceOptionRewardInfo
----@field uiTextureKit string
+---@field uiTextureKit textureKit
 ---@field maxStacks number
 ---@field buttons PlayerChoiceOptionButtonInfo[]
 ---@field widgetSetID number?

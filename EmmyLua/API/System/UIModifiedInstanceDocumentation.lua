@@ -11,5 +11,5 @@ function C_ModifiedInstance.GetModifiedInstanceInfoFromMapID(mapID) end
 ---@field normalItemLevel number?
 ---@field heroicItemLevel number?
 ---@field mythicItemLevel number?
----@field uiTextureKit string
+---@field uiTextureKit textureKit
 ---@field description string

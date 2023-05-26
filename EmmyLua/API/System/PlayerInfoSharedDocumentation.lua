@@ -3,11 +3,11 @@
 ---@field raceID number
 ---@field name string
 ---@field fileName string
----@field createScreenIconAtlas string
+---@field createScreenIconAtlas textureAtlas
 
 ---@class PlayerInfoCharacterData
 ---@field name string
 ---@field fileName string
 ---@field alternateFormRaceData CharacterAlternateFormData?
----@field createScreenIconAtlas string
+---@field createScreenIconAtlas textureAtlas
 ---@field sex Enum.UnitSex

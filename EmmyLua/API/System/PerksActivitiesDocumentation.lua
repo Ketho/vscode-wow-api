@@ -41,6 +41,7 @@ function C_PerksActivities.RemoveTrackedPerksActivity(perksActivityID) end
 ---@class PerksActivitiesInfo
 ---@field activePerksMonth number
 ---@field displayMonthName string
+---@field secondsRemaining time_t
 ---@field activities PerksActivityInfo[]
 ---@field thresholds PerksActivityThresholdInfo[]
 
@@ -50,6 +51,10 @@ function C_PerksActivities.RemoveTrackedPerksActivity(perksActivityID) end
 ---@class PerksActivitiesTracked
 ---@field trackedIDs number[]
 
+---@class PerksActivityCriteria
+---@field criteriaID number
+---@field requiredValue number
+
 ---@class PerksActivityInfo
 ---@field ID number
 ---@field activityName string
@@ -57,7 +62,10 @@ function C_PerksActivities.RemoveTrackedPerksActivity(perksActivityID) end
 ---@field thresholdContributionAmount number
 ---@field completed boolean
 ---@field tracked boolean
+---@field supersedes number
+---@field uiPriority number
 ---@field requirementsList PerksActivityRequirement[]
+---@field criteriaList PerksActivityCriteria[]
 ---@field tagNames string[]
 
 ---@class PerksActivityRequirement
@@ -68,7 +76,7 @@ function C_PerksActivities.RemoveTrackedPerksActivity(perksActivityID) end
 ---@field tagName string[]
 
 ---@class PerksActivityThresholdInfo
----@field thresholdID number
+---@field thresholdOrderIndex number
 ---@field currencyAwardAmount number
 ---@field requiredContributionAmount number
 ---@field pendingReward boolean

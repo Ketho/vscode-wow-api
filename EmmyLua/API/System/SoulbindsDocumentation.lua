@@ -167,7 +167,7 @@ function C_Soulbinds.IsConduitInstalled(nodeID) end
 function C_Soulbinds.IsConduitInstalledInSoulbind(soulbindID, conduitID) end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_Soulbinds.IsItemConduitByItemInfo)
----@param itemInfo string
+---@param itemInfo ItemInfo
 ---@return boolean result
 function C_Soulbinds.IsItemConduitByItemInfo(itemInfo) end
 
@@ -215,7 +215,7 @@ function C_Soulbinds.UnmodifyNode(nodeID) end
 ---@field covenantID number
 ---@field name string
 ---@field description string
----@field textureKit string
+---@field textureKit textureKit
 ---@field unlocked boolean
 ---@field cvarIndex number
 ---@field tree SoulbindTree
@@ -231,7 +231,7 @@ function C_Soulbinds.UnmodifyNode(nodeID) end
 ---@field ID number
 ---@field row number
 ---@field column number
----@field icon number
+---@field icon fileID
 ---@field spellID number
 ---@field playerConditionReason string?
 ---@field conduitID number

@@ -3,7 +3,7 @@ C_Garrison = {}
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_Garrison.AddFollowerToMission)
 ---@param missionID number
----@param followerID string
+---@param followerID GarrisonFollower
 ---@param boardIndex? number
 ---@return boolean followerAdded
 function C_Garrison.AddFollowerToMission(missionID, followerID, boardIndex) end
@@ -24,7 +24,7 @@ function C_Garrison.GetAutoMissionEnvironmentEffect(missionID) end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_Garrison.GetAutoMissionTargetingInfo)
 ---@param missionID number
----@param followerID string
+---@param followerID GarrisonFollower
 ---@param casterBoardIndex number
 ---@return AutoMissionTargetingInfo[] targetInfo
 function C_Garrison.GetAutoMissionTargetingInfo(missionID, followerID, casterBoardIndex) end
@@ -63,19 +63,19 @@ function C_Garrison.GetCurrentGarrTalentTreeID() end
 function C_Garrison.GetCyphersToNextEquipmentLevel() end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_Garrison.GetFollowerAutoCombatSpells)
----@param garrFollowerID string
+---@param garrFollowerID GarrisonFollower
 ---@param followerLevel number
 ---@return AutoCombatSpellInfo[] autoCombatSpells
 ---@return AutoCombatSpellInfo? autoCombatAutoAttack
 function C_Garrison.GetFollowerAutoCombatSpells(garrFollowerID, followerLevel) end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_Garrison.GetFollowerAutoCombatStats)
----@param garrFollowerID string
+---@param garrFollowerID GarrisonFollower
 ---@return FollowerAutoCombatStatsInfo? autoCombatInfo
 function C_Garrison.GetFollowerAutoCombatStats(garrFollowerID) end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_Garrison.GetFollowerMissionCompleteInfo)
----@param followerID string
+---@param followerID GarrisonFollower
 ---@return FollowerMissionCompleteInfo followerMissionCompleteInfo
 function C_Garrison.GetFollowerMissionCompleteInfo(followerID) end
 
@@ -170,7 +170,7 @@ function C_Garrison.IsAtGarrisonMissionNPC() end
 function C_Garrison.IsEnvironmentCountered(missionID) end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_Garrison.IsFollowerOnCompletedMission)
----@param followerID string
+---@param followerID GarrisonFollower
 ---@return boolean followerOnCompletedMission
 function C_Garrison.IsFollowerOnCompletedMission(followerID) end
 
@@ -187,7 +187,7 @@ function C_Garrison.RegenerateCombatLog(missionID) end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_Garrison.RemoveFollowerFromMission)
 ---@param missionID number
----@param followerID string
+---@param followerID GarrisonFollower
 ---@param boardIndex? number
 function C_Garrison.RemoveFollowerFromMission(missionID, followerID, boardIndex) end
 
@@ -196,7 +196,7 @@ function C_Garrison.RemoveFollowerFromMission(missionID, followerID, boardIndex)
 function C_Garrison.RushHealAllFollowers(followerType) end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_Garrison.RushHealFollower)
----@param garrFollowerID string
+---@param garrFollowerID GarrisonFollower
 function C_Garrison.RushHealFollower(garrFollowerID) end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_Garrison.SetAutoCombatSpellFastForward)
@@ -219,14 +219,14 @@ function C_Garrison.SetAutoCombatSpellFastForward(state) end
 ---@field duration number
 ---@field schoolMask number
 ---@field previewMask number
----@field icon number
+---@field icon fileID
 ---@field spellTutorialFlag number
 ---@field hasThornsEffect boolean
 
 ---@class AutoCombatTroopInfo
 ---@field name string
----@field followerID string
----@field garrFollowerID string
+---@field followerID GarrisonFollower
+---@field garrFollowerID GarrisonFollower
 ---@field followerTypeID number
 ---@field displayIDs FollowerDisplayID[]
 ---@field level number
@@ -240,9 +240,9 @@ function C_Garrison.SetAutoCombatSpellFastForward(state) end
 ---@field classSpec number?
 ---@field className string?
 ---@field flavorText string?
----@field classAtlas string
----@field portraitIconID number
----@field textureKit string
+---@field classAtlas textureAtlas
+---@field portraitIconID fileID
+---@field textureKit textureKit
 ---@field isTroop boolean
 ---@field raceID number
 ---@field health number
@@ -286,7 +286,7 @@ function C_Garrison.SetAutoCombatSpellFastForward(state) end
 ---@field currentHealth number
 ---@field maxHealth number
 ---@field attack number
----@field healingTimestamp number
+---@field healingTimestamp time_t
 ---@field healCost number
 ---@field minutesHealingRemaining number
 
@@ -313,9 +313,9 @@ function C_Garrison.SetAutoCombatSpellFastForward(state) end
 ---@field targetImpactID number?
 ---@field targetImpactSoundID number?
 ---@field className string?
----@field classAtlas string
----@field portraitIconID number
----@field textureKit string
+---@field classAtlas textureAtlas
+---@field portraitIconID fileID
+---@field textureKit textureKit
 ---@field isTroop boolean
 ---@field boardIndex number
 ---@field health number
@@ -324,7 +324,7 @@ function C_Garrison.SetAutoCombatSpellFastForward(state) end
 
 ---@class GarrisonAbilityCounterInfo
 ---@field id number
----@field icon number
+---@field icon fileID
 ---@field name string
 ---@field factor number
 ---@field description string
@@ -333,7 +333,7 @@ function C_Garrison.SetAutoCombatSpellFastForward(state) end
 ---@field id number
 ---@field name string
 ---@field description string
----@field icon number
+---@field icon fileID
 ---@field isTrait boolean
 ---@field isSpecialization boolean
 ---@field temporary boolean
@@ -343,9 +343,9 @@ function C_Garrison.SetAutoCombatSpellFastForward(state) end
 
 ---@class GarrisonEnemyEncounterInfo
 ---@field name string
----@field displayID number
----@field portraitFileDataID number
----@field textureKit string
+---@field displayID fileID
+---@field portraitFileDataID fileID
+---@field textureKit textureKit
 ---@field scale number
 ---@field height number
 ---@field mechanics GarrisonMechanicInfo[]
@@ -359,12 +359,12 @@ function C_Garrison.SetAutoCombatSpellFastForward(state) end
 ---@field isElite boolean
 
 ---@class GarrisonFollowerDeathInfo
----@field followerID string
+---@field followerID GarrisonFollower
 ---@field state number
 
 ---@class GarrisonMechanicInfo
 ---@field mechanicTypeID number
----@field icon number
+---@field icon fileID
 ---@field name string
 ---@field factor number
 ---@field description string
@@ -374,20 +374,20 @@ function C_Garrison.SetAutoCombatSpellFastForward(state) end
 ---@field buildingPlotInstanceID number
 ---@field position Vector2DMixin
 ---@field name string
----@field atlasName string
+---@field atlasName textureAtlas
 
 ---@class MissionDeploymentInfo
 ---@field location string
 ---@field xp number
 ---@field environment string?
 ---@field environmentDesc string?
----@field environmentTexture number
----@field locTextureKit string
+---@field environmentTexture fileID
+---@field locTextureKit textureKit
 ---@field isExhausting boolean
 ---@field enemies GarrisonEnemyEncounterInfo[]
 
 ---@class MissionEncounterIconInfo
----@field portraitFileDataID number
+---@field portraitFileDataID fileID
 ---@field missionScalar number
 ---@field isElite boolean
 ---@field isRare boolean

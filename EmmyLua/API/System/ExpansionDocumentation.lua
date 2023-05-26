@@ -35,7 +35,7 @@ function GetExpansionLevel() end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_GetExpansionTrialInfo)
 ---@return boolean isExpansionTrialAccount
----@return number? expansionTrialRemainingSeconds
+---@return time_t? expansionTrialRemainingSeconds
 function GetExpansionTrialInfo() end
 
 ---Maps an expansion level to a maximum character level for that expansion.
@@ -85,12 +85,12 @@ function IsVeteranTrialAccount() end
 function SendSubscriptionInterstitialResponse(response) end
 
 ---@class ExpansionDisplayInfo
----@field logo number
----@field banner string
+---@field logo fileID
+---@field banner textureAtlas
 ---@field features ExpansionDisplayInfoFeature[]
----@field highResBackgroundID number
----@field lowResBackgroundID number
+---@field highResBackgroundID fileID
+---@field lowResBackgroundID fileID
 
 ---@class ExpansionDisplayInfoFeature
----@field icon number
+---@field icon fileID
 ---@field text string

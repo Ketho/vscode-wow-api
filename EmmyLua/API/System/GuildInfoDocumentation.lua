@@ -19,12 +19,12 @@ function C_GuildInfo.CanViewOfficerNote() end
 function C_GuildInfo.GetGuildNewsInfo(index) end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_GuildInfo.GetGuildRankOrder)
----@param guid string
+---@param guid WOWGUID
 ---@return number rankOrder
 function C_GuildInfo.GetGuildRankOrder(guid) end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_GuildInfo.GetGuildTabardInfo)
----@param unit? string
+---@param unit? UnitToken
 ---@return GuildTabardInfo? tabardInfo
 function C_GuildInfo.GetGuildTabardInfo(unit) end
 
@@ -41,13 +41,18 @@ function C_GuildInfo.GuildRoster() end
 function C_GuildInfo.IsGuildOfficer() end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_GuildInfo.IsGuildRankAssignmentAllowed)
----@param guid string
+---@param guid WOWGUID
 ---@param rankOrder number
 ---@return boolean isGuildRankAssignmentAllowed
 function C_GuildInfo.IsGuildRankAssignmentAllowed(guid, rankOrder) end
 
+---[Documentation](https://wowpedia.fandom.com/wiki/API_C_GuildInfo.MemberExistsByName)
+---@param name string
+---@return boolean exists
+function C_GuildInfo.MemberExistsByName(name) end
+
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_GuildInfo.QueryGuildMemberRecipes)
----@param guildMemberGUID string
+---@param guildMemberGUID WOWGUID
 ---@param skillLineID number
 function C_GuildInfo.QueryGuildMemberRecipes(guildMemberGUID, skillLineID) end
 
@@ -59,16 +64,16 @@ function C_GuildInfo.QueryGuildMemberRecipes(guildMemberGUID, skillLineID) end
 function C_GuildInfo.QueryGuildMembersForRecipe(skillLineID, recipeSpellID, recipeLevel) end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_GuildInfo.RemoveFromGuild)
----@param guid string
+---@param guid WOWGUID
 function C_GuildInfo.RemoveFromGuild(guid) end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_GuildInfo.SetGuildRankOrder)
----@param guid string
+---@param guid WOWGUID
 ---@param rankOrder number
 function C_GuildInfo.SetGuildRankOrder(guid, rankOrder) end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_GuildInfo.SetNote)
----@param guid string
+---@param guid WOWGUID
 ---@param note string
 ---@param isPublic boolean
 function C_GuildInfo.SetNote(guid, note, isPublic) end

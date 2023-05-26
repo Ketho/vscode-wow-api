@@ -8,7 +8,7 @@ function C_Spell.DoesSpellExist(spellID) end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_Spell.GetMawPowerBorderAtlasBySpellID)
 ---@param spellID number
----@return string rarityBorderAtlas
+---@return textureAtlas rarityBorderAtlas
 function C_Spell.GetMawPowerBorderAtlasBySpellID(spellID) end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_Spell.IsSpellDataCached)
@@ -19,3 +19,7 @@ function C_Spell.IsSpellDataCached(spellID) end
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_Spell.RequestLoadSpellData)
 ---@param spellID number
 function C_Spell.RequestLoadSpellData(spellID) end
+
+---[Documentation](https://wowpedia.fandom.com/wiki/API_C_Spell.TargetSpellJumpsUpgradeTrack)
+---@return boolean jumpsUpgradeTrack
+function C_Spell.TargetSpellJumpsUpgradeTrack() end

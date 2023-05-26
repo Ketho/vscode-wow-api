@@ -17,7 +17,7 @@ function C_AnimaDiversion.GetOriginPosition() end
 function C_AnimaDiversion.GetReinforceProgress() end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_AnimaDiversion.GetTextureKit)
----@return string textureKit
+---@return textureKit textureKit
 function C_AnimaDiversion.GetTextureKit() end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_AnimaDiversion.OpenAnimaDiversionUI)
@@ -33,7 +33,7 @@ function C_AnimaDiversion.SelectAnimaNode(talentID, temporary) end
 ---@field quantity number
 
 ---@class AnimaDiversionFrameInfo
----@field textureKit string
+---@field textureKit textureKit
 ---@field title string
 ---@field mapID number
 

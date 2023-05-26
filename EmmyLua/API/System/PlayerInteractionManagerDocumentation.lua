@@ -12,8 +12,9 @@ function C_PlayerInteractionManager.ConfirmationInteraction(type) end
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_PlayerInteractionManager.InteractUnit)
 ---@param unit string
 ---@param exactMatch? boolean Default = false
+---@param looseTargeting? boolean Default = true
 ---@return boolean success
-function C_PlayerInteractionManager.InteractUnit(unit, exactMatch) end
+function C_PlayerInteractionManager.InteractUnit(unit, exactMatch, looseTargeting) end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_PlayerInteractionManager.IsInteractingWithNpcOfType)
 ---@param type number|Enum.PlayerInteractionType

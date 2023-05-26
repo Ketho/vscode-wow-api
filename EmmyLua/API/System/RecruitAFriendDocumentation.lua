@@ -3,13 +3,14 @@ C_RecruitAFriend = {}
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_RecruitAFriend.ClaimActivityReward)
 ---@param activityID number
----@param acceptanceID string
+---@param acceptanceID RecruitAcceptanceID
 ---@return boolean success
 function C_RecruitAFriend.ClaimActivityReward(activityID, acceptanceID) end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_RecruitAFriend.ClaimNextReward)
+---@param rafVersion? number|Enum.RecruitAFriendRewardsVersion
 ---@return boolean success
-function C_RecruitAFriend.ClaimNextReward() end
+function C_RecruitAFriend.ClaimNextReward(rafVersion) end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_RecruitAFriend.GenerateRecruitmentLink)
 ---@return boolean success
@@ -25,7 +26,7 @@ function C_RecruitAFriend.GetRAFSystemInfo() end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_RecruitAFriend.GetRecruitActivityRequirementsText)
 ---@param activityID number
----@param acceptanceID string
+---@param acceptanceID RecruitAcceptanceID
 ---@return string[] requirementsText
 function C_RecruitAFriend.GetRecruitActivityRequirementsText(activityID, acceptanceID) end
 
@@ -43,7 +44,7 @@ function C_RecruitAFriend.IsEnabled() end
 function C_RecruitAFriend.IsRecruitingEnabled() end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_RecruitAFriend.RemoveRAFRecruit)
----@param wowAccountGUID string
+---@param wowAccountGUID WOWGUID
 ---@return boolean success
 function C_RecruitAFriend.RemoveRAFRecruit(wowAccountGUID) end
 
@@ -63,14 +64,15 @@ function C_RecruitAFriend.RequestUpdatedRecruitmentInfo() end
 ---@field spellItemEnchantmentID number
 
 ---@class RafInfo
+---@field versions RafVersionInfo[]
+---@field recruitmentInfo RafRecruitmentinfo?
+---@field recruits RafRecruit[]
+---@field claimInProgress boolean
+
+---@class RafMonthCount
 ---@field lifetimeMonths number
 ---@field spentMonths number
 ---@field availableMonths number
----@field claimInProgress boolean
----@field rewards RafReward[]
----@field nextReward RafReward?
----@field recruitmentInfo RafRecruitmentinfo?
----@field recruits RafRecruit[]
 
 ---@class RafMountInfo
 ---@field spellID number
@@ -85,11 +87,12 @@ function C_RecruitAFriend.RequestUpdatedRecruitmentInfo() end
 
 ---@class RafRecruit
 ---@field bnetAccountID number
----@field wowAccountGUID string
+---@field wowAccountGUID WOWGUID
 ---@field battleTag string
 ---@field monthsRemaining number
 ---@field subStatus Enum.RafRecruitSubStatus
----@field acceptanceID string
+---@field acceptanceID RecruitAcceptanceID
+---@field versionRecruited Enum.RecruitAFriendRewardsVersion
 ---@field activities RafRecruitActivity[]
 
 ---@class RafRecruitActivity
@@ -109,6 +112,7 @@ function C_RecruitAFriend.RequestUpdatedRecruitmentInfo() end
 
 ---@class RafReward
 ---@field rewardID number
+---@field rafVersion Enum.RecruitAFriendRewardsVersion
 ---@field itemID number
 ---@field rewardType Enum.RafRewardType
 ---@field petInfo RafPetInfo?
@@ -119,12 +123,13 @@ function C_RecruitAFriend.RequestUpdatedRecruitmentInfo() end
 ---@field illusionInfo RafIllusionInfo?
 ---@field canClaim boolean
 ---@field claimed boolean
+---@field canAfford boolean
 ---@field repeatable boolean
 ---@field repeatableClaimCount number
 ---@field monthsRequired number
 ---@field monthCost number
 ---@field availableInMonths number
----@field iconID number
+---@field iconID fileID
 
 ---@class RafSystemInfo
 ---@field maxRecruits number
@@ -134,3 +139,11 @@ function C_RecruitAFriend.RequestUpdatedRecruitmentInfo() end
 
 ---@class RafTitleInfo
 ---@field titleMaskID number
+
+---@class RafVersionInfo
+---@field rafVersion Enum.RecruitAFriendRewardsVersion
+---@field monthCount RafMonthCount
+---@field rewards RafReward[]
+---@field nextReward RafReward?
+---@field numAffordableRewards number
+---@field numRecruits number

@@ -9,5 +9,5 @@ function C_ZoneAbility.GetActiveAbilities() end
 ---@field zoneAbilityID number
 ---@field uiPriority number
 ---@field spellID number
----@field textureKit string
+---@field textureKit textureKit
 ---@field tutorialText string?

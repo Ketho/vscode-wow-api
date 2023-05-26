@@ -68,7 +68,7 @@ function C_MajorFactions.RequestCatchUpState() end
 ---@field renownLevel number
 ---@field renownReputationEarned number
 ---@field renownLevelThreshold number
----@field textureKit string
+---@field textureKit textureKit
 ---@field celebrationSoundKit number
 ---@field renownFanfareSoundKitID number
 
@@ -93,7 +93,7 @@ function C_MajorFactions.RequestCatchUpState() end
 ---@field transmogSetID number?
 ---@field titleMaskID number?
 ---@field transmogIllusionSourceID number?
----@field icon number?
+---@field icon fileID?
 ---@field name string?
 ---@field description string?
 ---@field toastDescription string?

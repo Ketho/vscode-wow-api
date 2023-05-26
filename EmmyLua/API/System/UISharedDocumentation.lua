@@ -1,13 +1,13 @@
 ---@meta
 ---@class AnchorBinding
 ---@field point FramePoint
----@field relativeTo table
+---@field relativeTo ScriptRegion
 ---@field relativePoint FramePoint
----@field offsetX number
----@field offsetY number
+---@field offsetX uiUnit
+---@field offsetY uiUnit
 
 ---@class uiRect
----@field left number
----@field bottom number
----@field width number
----@field height number
+---@field left uiUnit
+---@field bottom uiUnit
+---@field width uiUnit
+---@field height uiUnit

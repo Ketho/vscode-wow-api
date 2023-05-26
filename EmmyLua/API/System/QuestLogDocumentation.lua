@@ -339,7 +339,7 @@ function C_QuestLog.IsRepeatableQuest(questID) end
 function C_QuestLog.IsThreatQuest(questID) end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_QuestLog.IsUnitOnQuest)
----@param unit string
+---@param unit UnitToken
 ---@param questID number
 ---@return boolean isOnQuest
 function C_QuestLog.IsUnitOnQuest(unit, questID) end
@@ -410,7 +410,7 @@ function C_QuestLog.ShouldShowQuestRewards(questID) end
 function C_QuestLog.SortQuestWatches() end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_QuestLog.UnitIsRelatedToActiveQuest)
----@param unit string
+---@param unit UnitToken
 ---@return boolean isRelatedToActiveQuest
 function C_QuestLog.UnitIsRelatedToActiveQuest(unit) end
 
@@ -437,6 +437,7 @@ function C_QuestLog.UnitIsRelatedToActiveQuest(unit) end
 ---@field isAutoComplete boolean
 ---@field overridesSortOrder boolean
 ---@field readyForTranslation boolean? Default = true
+---@field isLegendarySort boolean
 
 ---@class QuestObjectiveInfo
 ---@field text string
@@ -462,7 +463,7 @@ function C_QuestLog.UnitIsRelatedToActiveQuest(unit) end
 ---@field displayExpiration boolean?
 
 ---@class QuestTheme
----@field background string
----@field seal string
+---@field background textureAtlas
+---@field seal textureAtlas
 ---@field signature string
----@field poiIcon string
+---@field poiIcon textureAtlas

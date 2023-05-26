@@ -106,7 +106,7 @@ function C_CurrencyInfo.SetCurrencyUnused(index, unused) end
 ---@class BackpackCurrencyInfo
 ---@field name string
 ---@field quantity number
----@field iconFileID number
+---@field iconFileID fileID
 ---@field currencyTypesID number
 
 ---@class CurrencyDisplayInfo
@@ -126,7 +126,7 @@ function C_CurrencyInfo.SetCurrencyUnused(index, unused) end
 ---@field isShowInBackpack boolean
 ---@field quantity number
 ---@field trackedQuantity number
----@field iconFileID number
+---@field iconFileID fileID
 ---@field maxQuantity number
 ---@field canEarnPerWeek boolean
 ---@field quantityEarnedThisWeek number

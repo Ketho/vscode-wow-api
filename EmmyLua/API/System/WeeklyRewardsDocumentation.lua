@@ -38,7 +38,7 @@ function C_WeeklyRewards.GetConquestWeeklyProgress() end
 function C_WeeklyRewards.GetExampleRewardItemHyperlinks(id) end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_WeeklyRewards.GetItemHyperlink)
----@param itemDBID string
+---@param itemDBID WeeklyRewardItemDBID
 ---@return string hyperlink
 function C_WeeklyRewards.GetItemHyperlink(itemDBID) end
 
@@ -50,7 +50,7 @@ function C_WeeklyRewards.GetItemHyperlink(itemDBID) end
 function C_WeeklyRewards.GetNextMythicPlusIncrease(mythicPlusLevel) end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_WeeklyRewards.GetWeeklyRewardTextureKit)
----@return string uiTextureKit
+---@return textureKit uiTextureKit
 function C_WeeklyRewards.GetWeeklyRewardTextureKit() end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_WeeklyRewards.HasAvailableRewards)
@@ -109,4 +109,4 @@ function C_WeeklyRewards.ShouldShowRetirementMessage() end
 ---@field type Enum.CachedRewardType
 ---@field id number
 ---@field quantity number
----@field itemDBID string?
+---@field itemDBID WeeklyRewardItemDBID?

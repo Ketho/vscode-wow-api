@@ -55,7 +55,7 @@ function C_LFGInfo.HideNameFromUI(dungeonID) end
 
 ---@class LFGDungeonInfo
 ---@field name string
----@field iconID number
+---@field iconID fileID
 ---@field link string?
 
 ---@class LFGLockInfo

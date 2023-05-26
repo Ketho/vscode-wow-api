@@ -2,19 +2,19 @@
 C_BattleNet = {}
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_BattleNet.GetAccountInfoByGUID)
----@param guid string
+---@param guid WOWGUID
 ---@return BNetAccountInfo? accountInfo
 function C_BattleNet.GetAccountInfoByGUID(guid) end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_BattleNet.GetAccountInfoByID)
 ---@param id number
----@param wowAccountGUID? string
+---@param wowAccountGUID? WOWGUID
 ---@return BNetAccountInfo? accountInfo
 function C_BattleNet.GetAccountInfoByID(id, wowAccountGUID) end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_BattleNet.GetFriendAccountInfo)
 ---@param friendIndex number
----@param wowAccountGUID? string
+---@param wowAccountGUID? WOWGUID
 ---@return BNetAccountInfo? accountInfo
 function C_BattleNet.GetFriendAccountInfo(friendIndex, wowAccountGUID) end
 
@@ -30,7 +30,7 @@ function C_BattleNet.GetFriendGameAccountInfo(friendIndex, accountIndex) end
 function C_BattleNet.GetFriendNumGameAccounts(friendIndex) end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_BattleNet.GetGameAccountInfoByGUID)
----@param guid string
+---@param guid WOWGUID
 ---@return BNetGameAccountInfo? gameAccountInfo
 function C_BattleNet.GetGameAccountInfoByGUID(guid) end
 
@@ -57,7 +57,7 @@ function C_BattleNet.GetGameAccountInfoByID(id) end
 ---@field gameAccountInfo BNetGameAccountInfo
 
 ---@class BNetGameAccountInfo
----@field gameAccountID number?
+---@field gameAccountID number
 ---@field clientProgram string
 ---@field isOnline boolean
 ---@field isGameBusy boolean
@@ -73,7 +73,7 @@ function C_BattleNet.GetGameAccountInfoByID(id) end
 ---@field areaName string?
 ---@field characterLevel number?
 ---@field richPresence string?
----@field playerGuid string?
+---@field playerGuid WOWGUID?
 ---@field isWowMobile boolean
 ---@field canSummon boolean
 ---@field hasFocus boolean

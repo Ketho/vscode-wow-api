@@ -43,7 +43,7 @@ function C_PerksProgram.GetPerksProgramItemDisplayInfo(id) end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_PerksProgram.GetTimeRemaining)
 ---@param vendorItemID number
----@return number timeRemaining
+---@return time_t timeRemaining
 function C_PerksProgram.GetTimeRemaining(vendorItemID) end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_PerksProgram.GetVendorItemInfo)
@@ -53,7 +53,7 @@ function C_PerksProgram.GetVendorItemInfo(vendorItemID) end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_PerksProgram.GetVendorItemInfoRefundTimeLeft)
 ---@param vendorItemID number
----@return number refundTimeRemaining
+---@return time_t refundTimeRemaining
 function C_PerksProgram.GetVendorItemInfoRefundTimeLeft(vendorItemID) end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_PerksProgram.ItemSelectedTelemetry)
@@ -114,7 +114,7 @@ function C_PerksProgram.SetFrozenPerksVendorItem() end
 ---@field rewardAmount number
 ---@field monthRewarded string?
 ---@field activityMonthID number
----@field activityThresholdID number
+---@field thresholdOrderIndex number
 
 ---@class PerksVendorCategoryInfo
 ---@field ID number
@@ -125,7 +125,7 @@ function C_PerksProgram.SetFrozenPerksVendorItem() end
 ---@field name string
 ---@field perksVendorCategoryID number
 ---@field description string
----@field timeRemaining number
+---@field timeRemaining time_t
 ---@field purchased boolean
 ---@field refundable boolean
 ---@field price number

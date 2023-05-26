@@ -13,7 +13,7 @@ function C_SplashScreen.CanViewSplashScreen() end
 function C_SplashScreen.RequestLatestSplashScreen(fromGameMenu) end
 
 ---@class SplashScreenInfo
----@field textureKit string
+---@field textureKit textureKit
 ---@field minDisplayCharLevel number
 ---@field minQuestDisplayLevel number
 ---@field soundKitID number

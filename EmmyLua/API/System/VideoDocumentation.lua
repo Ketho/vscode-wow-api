@@ -13,7 +13,7 @@ function C_VideoOptions.GetDefaultGameWindowSize(monitor) end
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_VideoOptions.GetGameWindowSizes)
 ---@param monitor number
 ---@param fullscreen boolean
----@return table[] sizes
+---@return vector2[] sizes
 function C_VideoOptions.GetGameWindowSizes(monitor, fullscreen) end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_VideoOptions.GetGxAdapterInfo)

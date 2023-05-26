@@ -119,6 +119,11 @@ function C_Traits.GetTraitCurrencyInfo(traitCurrencyID) end
 ---@return string description
 function C_Traits.GetTraitDescription(entryID, rank) end
 
+---[Documentation](https://wowpedia.fandom.com/wiki/API_C_Traits.GetTraitSystemFlags)
+---@param configID number
+---@return number flags
+function C_Traits.GetTraitSystemFlags(configID) end
+
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_Traits.GetTraitSystemWidgetSetID)
 ---@param configID number
 ---@return number uiWidgetSetID
@@ -151,6 +156,10 @@ function C_Traits.GetTreeNodes(treeID) end
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_Traits.HasValidInspectData)
 ---@return boolean hasValidInspectData
 function C_Traits.HasValidInspectData() end
+
+---[Documentation](https://wowpedia.fandom.com/wiki/API_C_Traits.IsReadyForCommit)
+---@return boolean isReadyForCommit
+function C_Traits.IsReadyForCommit() end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_Traits.PurchaseRank)
 ---@param configID number

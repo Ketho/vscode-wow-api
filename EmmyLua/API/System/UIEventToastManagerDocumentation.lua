@@ -18,14 +18,14 @@ function C_EventToastManager.RemoveCurrentToast() end
 ---@field title string
 ---@field subtitle string
 ---@field instructionText string
----@field iconFileID number
----@field subIcon string?
+---@field iconFileID fileID
+---@field subIcon textureAtlas?
 ---@field link string
 ---@field qualityString string?
 ---@field quality number?
 ---@field eventType Enum.EventToastEventType
 ---@field displayType Enum.EventToastDisplayType
----@field uiTextureKit string
+---@field uiTextureKit textureKit
 ---@field sortOrder number
 ---@field time number?
 ---@field uiWidgetSetID number?

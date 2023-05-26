@@ -12,6 +12,23 @@ function C_ItemUpgrade.ClearItemUpgrade() end
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_ItemUpgrade.CloseItemUpgrade)
 function C_ItemUpgrade.CloseItemUpgrade() end
 
+---[Documentation](https://wowpedia.fandom.com/wiki/API_C_ItemUpgrade.GetHighWatermarkForItem)
+---@param itemInfo ItemInfo
+---@return number characterHighWatermark
+---@return number accountHighWatermark
+function C_ItemUpgrade.GetHighWatermarkForItem(itemInfo) end
+
+---[Documentation](https://wowpedia.fandom.com/wiki/API_C_ItemUpgrade.GetHighWatermarkForSlot)
+---@param itemRedundancySlot number
+---@return number characterHighWatermark
+---@return number accountHighWatermark
+function C_ItemUpgrade.GetHighWatermarkForSlot(itemRedundancySlot) end
+
+---[Documentation](https://wowpedia.fandom.com/wiki/API_C_ItemUpgrade.GetHighWatermarkSlotForItem)
+---@param itemInfo ItemInfo
+---@return number itemRedundancySlot
+function C_ItemUpgrade.GetHighWatermarkSlotForItem(itemInfo) end
+
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_ItemUpgrade.GetItemHyperlink)
 ---@return string link
 function C_ItemUpgrade.GetItemHyperlink() end
@@ -42,6 +59,10 @@ function C_ItemUpgrade.GetItemUpgradePvpItemLevelDeltaValues(numUpgradeLevels) e
 ---@return number numItemUpgradeEffects
 function C_ItemUpgrade.GetNumItemUpgradeEffects() end
 
+---[Documentation](https://wowpedia.fandom.com/wiki/API_C_ItemUpgrade.IsItemBound)
+---@return boolean isBound
+function C_ItemUpgrade.IsItemBound() end
+
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_ItemUpgrade.SetItemUpgradeFromCursorItem)
 function C_ItemUpgrade.SetItemUpgradeFromCursorItem() end
 
@@ -53,22 +74,36 @@ function C_ItemUpgrade.SetItemUpgradeFromLocation(itemToSet) end
 ---@param numUpgrades? number Default = 1
 function C_ItemUpgrade.UpgradeItem(numUpgrades) end
 
+---@class ItemUpgradeCostDiscountInfo
+---@field isDiscounted boolean
+---@field discountHighWatermark number
+---@field isPartialTwoHandDiscount boolean
+---@field isAccountWideDiscount boolean
+---@field doesCurrentCharacterMeetHighWatermark boolean
+
 ---@class ItemUpgradeCurrencyCost
 ---@field cost number
 ---@field currencyID number
+---@field discountInfo ItemUpgradeCostDiscountInfo
 
 ---@class ItemUpgradeItemCost
 ---@field cost number
 ---@field itemID number
+---@field discountInfo ItemUpgradeCostDiscountInfo
 
 ---@class ItemUpgradeItemInfo
 ---@field iconID number
 ---@field name string
 ---@field itemUpgradeable boolean
 ---@field displayQuality number
+---@field highWatermarkSlot number
 ---@field currUpgrade number
 ---@field maxUpgrade number
+---@field minItemLevel number
+---@field maxItemLevel number
 ---@field upgradeLevelInfos ItemUpgradeLevelInfo[]
+---@field customUpgradeString string?
+---@field upgradeCostTypesForSeason ItemUpgradeSeasonalCostType[]
 
 ---@class ItemUpgradeLevelInfo
 ---@field upgradeLevel number
@@ -78,6 +113,11 @@ function C_ItemUpgrade.UpgradeItem(numUpgrades) end
 ---@field currencyCostsToUpgrade ItemUpgradeCurrencyCost[]
 ---@field itemCostsToUpgrade ItemUpgradeItemCost[]
 ---@field failureMessage string?
+
+---@class ItemUpgradeSeasonalCostType
+---@field itemID number
+---@field orderIndex number
+---@field sourceString string?
 
 ---@class ItemUpgradeStat
 ---@field displayString string

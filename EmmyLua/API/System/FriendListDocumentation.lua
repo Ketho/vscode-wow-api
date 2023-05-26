@@ -75,7 +75,7 @@ function C_FriendList.GetSelectedIgnore() end
 function C_FriendList.GetWhoInfo(index) end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_FriendList.IsFriend)
----@param guid string
+---@param guid WOWGUID
 ---@return boolean isFriend
 function C_FriendList.IsFriend(guid) end
 
@@ -85,7 +85,7 @@ function C_FriendList.IsFriend(guid) end
 function C_FriendList.IsIgnored(token) end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_FriendList.IsIgnoredByGuid)
----@param guid string
+---@param guid WOWGUID
 ---@return boolean isIgnored
 function C_FriendList.IsIgnoredByGuid(guid) end
 
@@ -143,7 +143,7 @@ function C_FriendList.SortWho(sorting) end
 ---@field className string?
 ---@field area string?
 ---@field notes string?
----@field guid string
+---@field guid WOWGUID
 ---@field level number
 ---@field dnd boolean
 ---@field afk boolean

@@ -190,7 +190,7 @@ function C_LFGList.ValidateRequiredPvpRatingForActivity(activityID, rating) end
 ---@field pendingApplicationStatus string?
 ---@field numMembers number
 ---@field isNew boolean
----@field comment string
+---@field comment kstringLfgListApplicant
 ---@field displayOrderID number
 
 ---@class LfgCategoryData
@@ -206,10 +206,10 @@ function C_LFGList.ValidateRequiredPvpRatingForActivity(activityID, rating) end
 ---@field activityID number
 ---@field requiredItemLevel number
 ---@field requiredHonorLevel number
----@field name string
----@field comment string
----@field voiceChat string
----@field duration number
+---@field name kstringLfgListApplicant
+---@field comment kstringLfgListApplicant
+---@field voiceChat kstringLfgListApplicant
+---@field duration time_t
 ---@field autoAccept boolean
 ---@field privateGroup boolean
 ---@field questID number?
@@ -222,9 +222,9 @@ function C_LFGList.ValidateRequiredPvpRatingForActivity(activityID, rating) end
 ---@field searchResultID number
 ---@field activityID number
 ---@field leaderName string?
----@field name string
----@field comment string
----@field voiceChat string
+---@field name kstringLfgListSearch
+---@field comment kstringLfgListSearch
+---@field voiceChat kstringLfgListSearch
 ---@field requiredItemLevel number
 ---@field requiredHonorLevel number
 ---@field hasSelf boolean
@@ -235,7 +235,7 @@ function C_LFGList.ValidateRequiredPvpRatingForActivity(activityID, rating) end
 ---@field isDelisted boolean
 ---@field autoAccept boolean
 ---@field isWarMode boolean
----@field age number
+---@field age time_t
 ---@field questID number?
 ---@field leaderOverallDungeonScore number?
 ---@field leaderDungeonScoreInfo BestDungeonScoreMapInfo?

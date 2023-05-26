@@ -139,7 +139,7 @@ function C_ChallengeMode.SlotKeystone() end
 function C_ChallengeMode.StartChallengeMode() end
 
 ---@class ChallengeModeCompletionMemberInfo
----@field memberGUID string
+---@field memberGUID WOWGUID
 ---@field name string
 
 ---@class ChallengeModeGuildAttemptMember

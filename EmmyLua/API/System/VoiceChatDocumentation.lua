@@ -60,8 +60,8 @@ function C_VoiceChat.GetChannel(channelID) end
 function C_VoiceChat.GetChannelForChannelType(channelType) end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_VoiceChat.GetChannelForCommunityStream)
----@param clubId string
----@param streamId string
+---@param clubId ClubId
+---@param streamId ClubStreamId
 ---@return VoiceChatChannel? channel
 function C_VoiceChat.GetChannelForCommunityStream(clubId, streamId) end
 
@@ -78,7 +78,7 @@ function C_VoiceChat.GetCurrentVoiceChatConnectionStatusCode() end
 function C_VoiceChat.GetInputVolume() end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_VoiceChat.GetJoinClubVoiceChannelError)
----@param clubId string
+---@param clubId ClubId
 ---@return Enum.VoiceChannelErrorReason? errorReason
 function C_VoiceChat.GetJoinClubVoiceChannelError(clubId) end
 
@@ -98,12 +98,12 @@ function C_VoiceChat.GetMasterVolumeScale() end
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_VoiceChat.GetMemberGUID)
 ---@param memberID number
 ---@param channelID number
----@return string memberGUID
+---@return WOWGUID memberGUID
 function C_VoiceChat.GetMemberGUID(memberID, channelID) end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_VoiceChat.GetMemberID)
 ---@param channelID number
----@param memberGUID string
+---@param memberGUID WOWGUID
 ---@return number? memberID
 function C_VoiceChat.GetMemberID(channelID, memberGUID) end
 
@@ -154,8 +154,8 @@ function C_VoiceChat.GetVADSensitivity() end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_VoiceChat.IsChannelJoinPending)
 ---@param channelType number|Enum.ChatChannelType
----@param clubId? string
----@param streamId? string
+---@param clubId? ClubId
+---@param streamId? ClubStreamId
 ---@return boolean isPending
 function C_VoiceChat.IsChannelJoinPending(channelType, clubId, streamId) end
 
@@ -248,8 +248,8 @@ function C_VoiceChat.Logout() end
 function C_VoiceChat.MarkChannelsDiscovered() end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_VoiceChat.RequestJoinAndActivateCommunityStreamChannel)
----@param clubId string
----@param streamId string
+---@param clubId ClubId
+---@param streamId ClubStreamId
 function C_VoiceChat.RequestJoinAndActivateCommunityStreamChannel(clubId, streamId) end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_VoiceChat.RequestJoinChannelByChannelType)
@@ -301,7 +301,7 @@ function C_VoiceChat.SetOutputDevice(deviceID) end
 function C_VoiceChat.SetOutputVolume(volume) end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_VoiceChat.SetPortraitTexture)
----@param textureObject table
+---@param textureObject SimpleTexture
 ---@param memberID number
 ---@param channelID number
 function C_VoiceChat.SetPortraitTexture(textureObject, memberID, channelID) end
@@ -355,8 +355,8 @@ function C_VoiceChat.ToggleMuted() end
 ---@field name string
 ---@field channelID number
 ---@field channelType Enum.ChatChannelType
----@field clubId string
----@field streamId string
+---@field clubId ClubId
+---@field streamId ClubStreamId
 ---@field volume number
 ---@field isActive boolean
 ---@field isMuted boolean

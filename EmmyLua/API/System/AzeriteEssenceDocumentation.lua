@@ -99,7 +99,7 @@ function C_AzeriteEssence.UnlockMilestone(milestoneID) end
 ---@field rank number
 ---@field unlocked boolean
 ---@field valid boolean
----@field icon number
+---@field icon fileID
 
 ---@class AzeriteMilestoneInfo
 ---@field ID number

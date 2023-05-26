@@ -52,7 +52,7 @@ function C_PvP.GetActiveBrawlInfo() end
 function C_PvP.GetActiveMatchBracket() end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_PvP.GetActiveMatchDuration)
----@return number seconds
+---@return time_t seconds
 function C_PvP.GetActiveMatchDuration() end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_PvP.GetActiveMatchState)
@@ -64,7 +64,7 @@ function C_PvP.GetActiveMatchState() end
 function C_PvP.GetActiveMatchWinner() end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_PvP.GetArenaCrowdControlInfo)
----@param playerToken string
+---@param playerToken UnitToken
 ---@return number spellID
 ---@return number startTime
 ---@return number duration
@@ -84,6 +84,11 @@ function C_PvP.GetArenaRewards(teamSize) end
 ---@return BattlefieldItemReward[]? itemRewards
 ---@return BattlefieldCurrencyReward[]? currencyRewards
 function C_PvP.GetArenaSkirmishRewards() end
+
+---[Documentation](https://wowpedia.fandom.com/wiki/API_C_PvP.GetAssignedSpecForBattlefieldQueue)
+---@param queueID number
+---@return number? specializationID
+function C_PvP.GetAssignedSpecForBattlefieldQueue(queueID) end
 
 ---If nil is returned, PVP_BRAWL_INFO_UPDATED event will be sent when the data is ready.
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_PvP.GetAvailableBrawlInfo)
@@ -153,7 +158,7 @@ function C_PvP.GetNextHonorLevelForReward(honorLevel) end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_PvP.GetOutdoorPvPWaitTime)
 ---@param uiMapID number
----@return number pvpWaitTime
+---@return time_t pvpWaitTime
 function C_PvP.GetOutdoorPvPWaitTime(uiMapID) end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_PvP.GetPVPActiveMatchPersonalRatedInfo)
@@ -247,7 +252,7 @@ function C_PvP.GetRewardItemLevelsByTierEnum(pvpTierEnum) end
 function C_PvP.GetScoreInfo(offsetIndex) end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_PvP.GetScoreInfoByPlayerGuid)
----@param guid string
+---@param guid WOWGUID
 ---@return PVPScoreInfo? info
 function C_PvP.GetScoreInfoByPlayerGuid(guid) end
 
@@ -375,7 +380,7 @@ function C_PvP.IsWarModeFeatureEnabled() end
 function C_PvP.JoinBrawl(isSpecialBrawl) end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_PvP.RequestCrowdControlSpell)
----@param playerToken string
+---@param playerToken UnitToken
 function C_PvP.RequestCrowdControlSpell(playerToken) end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_PvP.SetWarModeDesired)
@@ -392,7 +397,7 @@ function C_PvP.ToggleWarMode() end
 ---@class BattlefieldItemReward
 ---@field id number
 ---@field name string
----@field texture number
+---@field texture fileID
 ---@field quantity number
 
 ---@class BattlefieldRewards
@@ -406,7 +411,7 @@ function C_PvP.ToggleWarMode() end
 ---@field y number
 ---@field name string
 ---@field isOccupied boolean
----@field atlas string
+---@field atlas textureAtlas
 ---@field textureWidth number
 ---@field textureHeight number
 ---@field facing number
@@ -419,18 +424,18 @@ function C_PvP.ToggleWarMode() end
 ---@field instanceType number
 ---@field minPlayers number
 ---@field maxPlayers number
----@field icon number
+---@field icon fileID
 ---@field longDescription string
 ---@field shortDescription string
 
 ---@class HonorRewardInfo
 ---@field honorLevelName string
----@field badgeFileDataID number
+---@field badgeFileDataID fileID
 ---@field achievementRewardedID number
 
 ---@class LevelUpBattlegroundInfo
 ---@field id number
----@field icon number
+---@field icon fileID
 ---@field name string
 ---@field isEpic boolean
 
@@ -439,6 +444,7 @@ function C_PvP.ToggleWarMode() end
 ---@field columnHeaderID number
 ---@field orderIndex number
 ---@field name string
+---@field tooltipTitle string
 ---@field tooltip string
 
 ---@class PvpBrawlInfo
@@ -504,7 +510,7 @@ function C_PvP.ToggleWarMode() end
 
 ---@class PVPScoreInfo
 ---@field name string
----@field guid string
+---@field guid WOWGUID
 ---@field killingBlows number
 ---@field honorableKills number
 ---@field deaths number
@@ -519,6 +525,7 @@ function C_PvP.ToggleWarMode() end
 ---@field ratingChange number
 ---@field prematchMMR number
 ---@field mmrChange number
+---@field postmatchMMR number
 ---@field talentSpec string
 ---@field honorLevel number
 ---@field roleAssigned number
@@ -546,7 +553,7 @@ function C_PvP.ToggleWarMode() end
 ---@field descendTier number
 ---@field ascendTier number
 ---@field pvpTierEnum number
----@field tierIconID number
+---@field tierIconID fileID
 
 ---@class RandomBGInfo
 ---@field canQueue boolean

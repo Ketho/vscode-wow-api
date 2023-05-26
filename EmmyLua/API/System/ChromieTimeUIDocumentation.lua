@@ -21,7 +21,7 @@ function C_ChromieTime.SelectChromieTimeOption(chromieTimeExpansionInfoId) end
 ---@field id number
 ---@field name string
 ---@field description string
----@field mapAtlas string
----@field previewAtlas string
+---@field mapAtlas textureAtlas
+---@field previewAtlas textureAtlas
 ---@field completed boolean
 ---@field alreadyOn boolean

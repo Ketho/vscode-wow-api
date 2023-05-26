@@ -70,6 +70,11 @@ function C_UIWidgetManager.GetIconTextAndBackgroundWidgetVisualizationInfo(widge
 ---@return IconTextAndCurrenciesWidgetVisualizationInfo? widgetInfo
 function C_UIWidgetManager.GetIconTextAndCurrenciesWidgetVisualizationInfo(widgetID) end
 
+---[Documentation](https://wowpedia.fandom.com/wiki/API_C_UIWidgetManager.GetItemDisplayVisualizationInfo)
+---@param widgetID number
+---@return ItemDisplayVisualizationInfo? widgetInfo
+function C_UIWidgetManager.GetItemDisplayVisualizationInfo(widgetID) end
+
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_UIWidgetManager.GetObjectiveTrackerWidgetSetID)
 ---@return number setID
 function C_UIWidgetManager.GetObjectiveTrackerWidgetSetID() end
@@ -163,11 +168,11 @@ function C_UIWidgetManager.GetZoneControlVisualizationInfo(widgetID) end
 function C_UIWidgetManager.RegisterUnitForWidgetUpdates(unitToken, isGuid) end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_UIWidgetManager.SetProcessingUnit)
----@param unit? string
+---@param unit? UnitToken
 function C_UIWidgetManager.SetProcessingUnit(unit) end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_UIWidgetManager.SetProcessingUnitGuid)
----@param unit? string
+---@param unit? WOWGUID
 function C_UIWidgetManager.SetProcessingUnitGuid(unit) end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_UIWidgetManager.UnregisterUnitForWidgetUpdates)
@@ -180,8 +185,8 @@ function C_UIWidgetManager.UnregisterUnitForWidgetUpdates(unitToken, isGuid) end
 ---@field enabledState Enum.WidgetEnabledState
 ---@field lines string[]
 ---@field widgetSizeSetting number
----@field textureKit string
----@field frameTextureKit string
+---@field textureKit textureKit
+---@field frameTextureKit textureKit
 ---@field hasTimer boolean
 ---@field orderIndex number
 ---@field widgetTag string
@@ -204,8 +209,8 @@ function C_UIWidgetManager.UnregisterUnitForWidgetUpdates(unitToken, isGuid) end
 ---@field fillDirectionType Enum.CaptureBarWidgetFillDirectionType
 ---@field tooltipLoc Enum.UIWidgetTooltipLocation
 ---@field widgetSizeSetting number
----@field textureKit string
----@field frameTextureKit string
+---@field textureKit textureKit
+---@field frameTextureKit textureKit
 ---@field hasTimer boolean
 ---@field orderIndex number
 ---@field widgetTag string
@@ -224,8 +229,8 @@ function C_UIWidgetManager.UnregisterUnitForWidgetUpdates(unitToken, isGuid) end
 ---@field zoneInfo ZoneEntry
 ---@field tooltipLoc Enum.UIWidgetTooltipLocation
 ---@field widgetSizeSetting number
----@field textureKit string
----@field frameTextureKit string
+---@field textureKit textureKit
+---@field frameTextureKit textureKit
 ---@field hasTimer boolean
 ---@field orderIndex number
 ---@field widgetTag string
@@ -245,8 +250,8 @@ function C_UIWidgetManager.UnregisterUnitForWidgetUpdates(unitToken, isGuid) end
 ---@field numSteps number
 ---@field tooltipLoc Enum.UIWidgetTooltipLocation
 ---@field widgetSizeSetting number
----@field textureKit string
----@field frameTextureKit string
+---@field textureKit textureKit
+---@field frameTextureKit textureKit
 ---@field hasTimer boolean
 ---@field orderIndex number
 ---@field widgetTag string
@@ -266,8 +271,8 @@ function C_UIWidgetManager.UnregisterUnitForWidgetUpdates(unitToken, isGuid) end
 ---@field rightTooltip string
 ---@field tooltipLoc Enum.UIWidgetTooltipLocation
 ---@field widgetSizeSetting number
----@field textureKit string
----@field frameTextureKit string
+---@field textureKit textureKit
+---@field frameTextureKit textureKit
 ---@field hasTimer boolean
 ---@field orderIndex number
 ---@field widgetTag string
@@ -284,8 +289,8 @@ function C_UIWidgetManager.UnregisterUnitForWidgetUpdates(unitToken, isGuid) end
 ---@field rightIcons UIWidgetStateIconInfo[]
 ---@field tooltipLoc Enum.UIWidgetTooltipLocation
 ---@field widgetSizeSetting number
----@field textureKit string
----@field frameTextureKit string
+---@field textureKit textureKit
+---@field frameTextureKit textureKit
 ---@field hasTimer boolean
 ---@field orderIndex number
 ---@field widgetTag string
@@ -312,8 +317,8 @@ function C_UIWidgetManager.UnregisterUnitForWidgetUpdates(unitToken, isGuid) end
 ---@field rightBarTooltipLoc Enum.UIWidgetTooltipLocation
 ---@field fillMotionType Enum.UIWidgetMotionType
 ---@field widgetSizeSetting number
----@field textureKit string
----@field frameTextureKit string
+---@field textureKit textureKit
+---@field frameTextureKit textureKit
 ---@field hasTimer boolean
 ---@field orderIndex number
 ---@field widgetTag string
@@ -335,8 +340,8 @@ function C_UIWidgetManager.UnregisterUnitForWidgetUpdates(unitToken, isGuid) end
 ---@field tooltip string
 ---@field tooltipLoc Enum.UIWidgetTooltipLocation
 ---@field widgetSizeSetting number
----@field textureKit string
----@field frameTextureKit string
+---@field textureKit textureKit
+---@field frameTextureKit textureKit
 ---@field hasTimer boolean
 ---@field orderIndex number
 ---@field widgetTag string
@@ -352,8 +357,8 @@ function C_UIWidgetManager.UnregisterUnitForWidgetUpdates(unitToken, isGuid) end
 ---@field currencies UIWidgetCurrencyInfo[]
 ---@field tooltipLoc Enum.UIWidgetTooltipLocation
 ---@field widgetSizeSetting number
----@field textureKit string
----@field frameTextureKit string
+---@field textureKit textureKit
+---@field frameTextureKit textureKit
 ---@field hasTimer boolean
 ---@field orderIndex number
 ---@field widgetTag string
@@ -371,8 +376,8 @@ function C_UIWidgetManager.UnregisterUnitForWidgetUpdates(unitToken, isGuid) end
 ---@field dynamicTooltip string
 ---@field tooltipLoc Enum.UIWidgetTooltipLocation
 ---@field widgetSizeSetting number
----@field textureKit string
----@field frameTextureKit string
+---@field textureKit textureKit
+---@field frameTextureKit textureKit
 ---@field hasTimer boolean
 ---@field orderIndex number
 ---@field widgetTag string
@@ -387,8 +392,8 @@ function C_UIWidgetManager.UnregisterUnitForWidgetUpdates(unitToken, isGuid) end
 ---@field shownState Enum.WidgetShownState
 ---@field text string
 ---@field widgetSizeSetting number
----@field textureKit string
----@field frameTextureKit string
+---@field textureKit textureKit
+---@field frameTextureKit textureKit
 ---@field hasTimer boolean
 ---@field orderIndex number
 ---@field widgetTag string
@@ -409,8 +414,25 @@ function C_UIWidgetManager.UnregisterUnitForWidgetUpdates(unitToken, isGuid) end
 ---@field currencies UIWidgetCurrencyInfo[]
 ---@field tooltipLoc Enum.UIWidgetTooltipLocation
 ---@field widgetSizeSetting number
----@field textureKit string
----@field frameTextureKit string
+---@field textureKit textureKit
+---@field frameTextureKit textureKit
+---@field hasTimer boolean
+---@field orderIndex number
+---@field widgetTag string
+---@field inAnimType Enum.WidgetAnimationType
+---@field outAnimType Enum.WidgetAnimationType
+---@field widgetScale Enum.UIWidgetScale
+---@field layoutDirection Enum.UIWidgetLayoutDirection
+---@field modelSceneLayer Enum.UIWidgetModelSceneLayer
+---@field scriptedAnimationEffectID number
+
+---@class ItemDisplayVisualizationInfo
+---@field shownState Enum.WidgetShownState
+---@field tooltipLoc Enum.UIWidgetTooltipLocation
+---@field itemInfo UIWidgetItemInfo
+---@field widgetSizeSetting number
+---@field textureKit textureKit
+---@field frameTextureKit textureKit
 ---@field hasTimer boolean
 ---@field orderIndex number
 ---@field widgetTag string
@@ -426,8 +448,8 @@ function C_UIWidgetManager.UnregisterUnitForWidgetUpdates(unitToken, isGuid) end
 ---@field currencies UIWidgetCurrencyInfo[]
 ---@field headerText string
 ---@field widgetSizeSetting number
----@field textureKit string
----@field frameTextureKit string
+---@field textureKit textureKit
+---@field frameTextureKit textureKit
 ---@field hasTimer boolean
 ---@field orderIndex number
 ---@field widgetTag string
@@ -446,8 +468,8 @@ function C_UIWidgetManager.UnregisterUnitForWidgetUpdates(unitToken, isGuid) end
 ---@field headerText string
 ---@field timerTooltip string
 ---@field widgetSizeSetting number
----@field textureKit string
----@field frameTextureKit string
+---@field textureKit textureKit
+---@field frameTextureKit textureKit
 ---@field hasTimer boolean
 ---@field orderIndex number
 ---@field widgetTag string
@@ -463,8 +485,8 @@ function C_UIWidgetManager.UnregisterUnitForWidgetUpdates(unitToken, isGuid) end
 ---@field widgetWidth number
 ---@field widgetHeight number
 ---@field widgetSizeSetting number
----@field textureKit string
----@field frameTextureKit string
+---@field textureKit textureKit
+---@field frameTextureKit textureKit
 ---@field hasTimer boolean
 ---@field orderIndex number
 ---@field widgetTag string
@@ -481,8 +503,8 @@ function C_UIWidgetManager.UnregisterUnitForWidgetUpdates(unitToken, isGuid) end
 ---@field spellInfo UIWidgetSpellInfo
 ---@field tooltipLoc Enum.UIWidgetTooltipLocation
 ---@field widgetSizeSetting number
----@field textureKit string
----@field frameTextureKit string
+---@field textureKit textureKit
+---@field frameTextureKit textureKit
 ---@field hasTimer boolean
 ---@field orderIndex number
 ---@field widgetTag string
@@ -498,8 +520,8 @@ function C_UIWidgetManager.UnregisterUnitForWidgetUpdates(unitToken, isGuid) end
 ---@field resources UIWidgetCurrencyInfo[]
 ---@field tooltipLoc Enum.UIWidgetTooltipLocation
 ---@field widgetSizeSetting number
----@field textureKit string
----@field frameTextureKit string
+---@field textureKit textureKit
+---@field frameTextureKit textureKit
 ---@field hasTimer boolean
 ---@field orderIndex number
 ---@field widgetTag string
@@ -527,9 +549,12 @@ function C_UIWidgetManager.UnregisterUnitForWidgetUpdates(unitToken, isGuid) end
 ---@field barTextEnabledState Enum.WidgetEnabledState
 ---@field barTextFontType Enum.UIWidgetFontType
 ---@field barTextSizeType Enum.UIWidgetTextSizeType
+---@field textEnabledState Enum.WidgetEnabledState
+---@field textFontType Enum.UIWidgetFontType
+---@field textSizeType Enum.UIWidgetTextSizeType
 ---@field widgetSizeSetting number
----@field textureKit string
----@field frameTextureKit string
+---@field textureKit textureKit
+---@field frameTextureKit textureKit
 ---@field hasTimer boolean
 ---@field orderIndex number
 ---@field widgetTag string
@@ -555,8 +580,8 @@ function C_UIWidgetManager.UnregisterUnitForWidgetUpdates(unitToken, isGuid) end
 ---@field tooltipLoc Enum.UIWidgetTooltipLocation
 ---@field bottomPadding number
 ---@field widgetSizeSetting number
----@field textureKit string
----@field frameTextureKit string
+---@field textureKit textureKit
+---@field frameTextureKit textureKit
 ---@field hasTimer boolean
 ---@field orderIndex number
 ---@field widgetTag string
@@ -578,8 +603,8 @@ function C_UIWidgetManager.UnregisterUnitForWidgetUpdates(unitToken, isGuid) end
 ---@field tooltipLoc Enum.UIWidgetTooltipLocation
 ---@field hAlign Enum.WidgetTextHorizontalAlignmentType
 ---@field widgetSizeSetting number
----@field textureKit string
----@field frameTextureKit string
+---@field textureKit textureKit
+---@field frameTextureKit textureKit
 ---@field hasTimer boolean
 ---@field orderIndex number
 ---@field widgetTag string
@@ -606,8 +631,8 @@ function C_UIWidgetManager.UnregisterUnitForWidgetUpdates(unitToken, isGuid) end
 ---@field subTextHAlign Enum.WidgetTextHorizontalAlignmentType
 ---@field subTextEnabledState Enum.WidgetEnabledState
 ---@field widgetSizeSetting number
----@field textureKit string
----@field frameTextureKit string
+---@field textureKit textureKit
+---@field frameTextureKit textureKit
 ---@field hasTimer boolean
 ---@field orderIndex number
 ---@field widgetTag string
@@ -630,8 +655,8 @@ function C_UIWidgetManager.UnregisterUnitForWidgetUpdates(unitToken, isGuid) end
 ---@field fixedWidth number?
 ---@field tooltipLoc Enum.UIWidgetTooltipLocation
 ---@field widgetSizeSetting number
----@field textureKit string
----@field frameTextureKit string
+---@field textureKit textureKit
+---@field frameTextureKit textureKit
 ---@field hasTimer boolean
 ---@field orderIndex number
 ---@field widgetTag string
@@ -648,8 +673,8 @@ function C_UIWidgetManager.UnregisterUnitForWidgetUpdates(unitToken, isGuid) end
 ---@field tooltip string
 ---@field tooltipLoc Enum.UIWidgetTooltipLocation
 ---@field widgetSizeSetting number
----@field textureKit string
----@field frameTextureKit string
+---@field textureKit textureKit
+---@field frameTextureKit textureKit
 ---@field hasTimer boolean
 ---@field orderIndex number
 ---@field widgetTag string
@@ -665,8 +690,8 @@ function C_UIWidgetManager.UnregisterUnitForWidgetUpdates(unitToken, isGuid) end
 ---@field tooltip string
 ---@field tooltipLoc Enum.UIWidgetTooltipLocation
 ---@field widgetSizeSetting number
----@field textureKit string
----@field frameTextureKit string
+---@field textureKit textureKit
+---@field frameTextureKit textureKit
 ---@field hasTimer boolean
 ---@field orderIndex number
 ---@field widgetTag string
@@ -678,7 +703,7 @@ function C_UIWidgetManager.UnregisterUnitForWidgetUpdates(unitToken, isGuid) end
 ---@field scriptedAnimationEffectID number
 
 ---@class UIWidgetCurrencyInfo
----@field iconFileID number
+---@field iconFileID fileID
 ---@field leadingText string
 ---@field text string
 ---@field tooltip string
@@ -690,6 +715,17 @@ function C_UIWidgetManager.UnregisterUnitForWidgetUpdates(unitToken, isGuid) end
 ---@field widgetType Enum.UIWidgetVisualizationType
 ---@field unitToken string?
 
+---@class UIWidgetItemInfo
+---@field itemID number
+---@field stackCount number?
+---@field overrideItemName string?
+---@field infoText string?
+---@field overrideTooltip string?
+---@field textDisplayStyle Enum.ItemDisplayTextDisplayStyle
+---@field tooltipEnabled boolean
+---@field iconSizeType Enum.WidgetIconSizeType
+---@field infoTextEnabledState Enum.WidgetEnabledState
+
 ---@class UIWidgetSetInfo
 ---@field layoutDirection Enum.UIWidgetSetLayoutDirection
 ---@field verticalPadding number
@@ -699,7 +735,7 @@ function C_UIWidgetManager.UnregisterUnitForWidgetUpdates(unitToken, isGuid) end
 ---@field tooltip string
 ---@field text string
 ---@field stackDisplay number
----@field iconSizeType Enum.SpellDisplayIconSizeType
+---@field iconSizeType Enum.WidgetIconSizeType
 ---@field iconDisplayType Enum.SpellDisplayIconDisplayType
 ---@field textShownState Enum.SpellDisplayTextShownStateType
 ---@field borderColor Enum.SpellDisplayBorderColor
@@ -732,8 +768,8 @@ function C_UIWidgetManager.UnregisterUnitForWidgetUpdates(unitToken, isGuid) end
 ---@field sparkBlendModeType Enum.UIWidgetBlendModeType
 ---@field flashMomentType Enum.WidgetUnitPowerBarFlashMomentType
 ---@field widgetSizeSetting number
----@field textureKit string
----@field frameTextureKit string
+---@field textureKit textureKit
+---@field frameTextureKit textureKit
 ---@field hasTimer boolean
 ---@field orderIndex number
 ---@field widgetTag string
@@ -752,8 +788,8 @@ function C_UIWidgetManager.UnregisterUnitForWidgetUpdates(unitToken, isGuid) end
 ---@field zoneEntries ZoneEntry[]
 ---@field tooltipLoc Enum.UIWidgetTooltipLocation
 ---@field widgetSizeSetting number
----@field textureKit string
----@field frameTextureKit string
+---@field textureKit textureKit
+---@field frameTextureKit textureKit
 ---@field hasTimer boolean
 ---@field orderIndex number
 ---@field widgetTag string

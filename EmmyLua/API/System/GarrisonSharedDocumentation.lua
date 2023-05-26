@@ -33,9 +33,9 @@
 ---@field selected boolean
 ---@field researched boolean
 ---@field ignoreTalent boolean
----@field researchDuration number
----@field startTime number
----@field timeRemaining number
+---@field researchDuration time_t
+---@field startTime time_t
+---@field timeRemaining time_t
 ---@field researchGoldCost number
 ---@field researchCurrencyCosts GarrisonTalentCurrencyCostInfo[]
 ---@field talentAvailability Enum.GarrisonTalentAvailability
@@ -58,7 +58,7 @@
 ---@class GarrisonTalentTreeInfo
 ---@field treeID number
 ---@field title string
----@field textureKit string
+---@field textureKit textureKit
 ---@field talents GarrisonTalentInfo[]
 ---@field isClassAgnostic boolean
 ---@field isThemed boolean

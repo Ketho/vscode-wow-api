@@ -7,7 +7,7 @@ function C_ScriptedAnimations.GetAllScriptedAnimationEffects() end
 
 ---@class ScriptedAnimationEffect
 ---@field id number
----@field visual number
+---@field visual fileID
 ---@field visualScale number
 ---@field duration number
 ---@field trajectory Enum.ScriptedAnimationTrajectory

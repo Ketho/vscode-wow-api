@@ -1,6 +1,11 @@
 ---@meta
 C_ChatInfo = {}
 
+---[Documentation](https://wowpedia.fandom.com/wiki/API_C_ChatInfo.CanPlayerSpeakLanguage)
+---@param languageId number
+---@return boolean canSpeakLanguage
+function C_ChatInfo.CanPlayerSpeakLanguage(languageId) end
+
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_ChatInfo.GetChannelInfoFromIdentifier)
 ---@param channelIdentifier string
 ---@return ChatChannelInfo? info
@@ -12,7 +17,7 @@ function C_ChatInfo.GetChannelInfoFromIdentifier(channelIdentifier) end
 ---@return string name
 ---@return boolean owner
 ---@return boolean moderator
----@return string guid
+---@return WOWGUID guid
 function C_ChatInfo.GetChannelRosterInfo(channelIndex, rosterIndex) end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_ChatInfo.GetChannelRuleset)
@@ -35,15 +40,35 @@ function C_ChatInfo.GetChannelShortcut(channelIndex) end
 ---@return string shortcut
 function C_ChatInfo.GetChannelShortcutForChannelID(channelID) end
 
+---[Documentation](https://wowpedia.fandom.com/wiki/API_C_ChatInfo.GetChatLineSenderGUID)
+---@param chatLine number
+---@return WOWGUID guid
+function C_ChatInfo.GetChatLineSenderGUID(chatLine) end
+
+---[Documentation](https://wowpedia.fandom.com/wiki/API_C_ChatInfo.GetChatLineSenderName)
+---@param chatLine number
+---@return string name
+function C_ChatInfo.GetChatLineSenderName(chatLine) end
+
+---[Documentation](https://wowpedia.fandom.com/wiki/API_C_ChatInfo.GetChatLineText)
+---@param chatLine number
+---@return string text
+function C_ChatInfo.GetChatLineText(chatLine) end
+
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_ChatInfo.GetChatTypeName)
 ---@param typeID number
 ---@return string? name
 function C_ChatInfo.GetChatTypeName(typeID) end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_ChatInfo.GetClubStreamIDs)
----@param clubID string
----@return string[] ids
+---@param clubID ClubId
+---@return ClubStreamId[] ids
 function C_ChatInfo.GetClubStreamIDs(clubID) end
+
+---[Documentation](https://wowpedia.fandom.com/wiki/API_C_ChatInfo.GetColorForChatType)
+---@param chatType string
+---@return ColorMixin? color
+function C_ChatInfo.GetColorForChatType(chatType) end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_ChatInfo.GetGeneralChannelID)
 ---@return number channelID
@@ -84,6 +109,11 @@ function C_ChatInfo.IsChannelRegional(channelIndex) end
 ---@return boolean isRegional
 function C_ChatInfo.IsChannelRegionalForChannelID(channelID) end
 
+---[Documentation](https://wowpedia.fandom.com/wiki/API_C_ChatInfo.IsChatLineCensored)
+---@param chatLine number
+---@return boolean isCensored
+function C_ChatInfo.IsChatLineCensored(chatLine) end
+
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_ChatInfo.IsPartyChannelType)
 ---@param channelType number|Enum.ChatChannelType
 ---@return boolean isPartyChannelType
@@ -111,6 +141,10 @@ function C_ChatInfo.RegisterAddonMessagePrefix(prefix) end
 ---@return string output
 function C_ChatInfo.ReplaceIconAndGroupExpressions(input, noIconReplacement, noGroupReplacement) end
 
+---[Documentation](https://wowpedia.fandom.com/wiki/API_C_ChatInfo.RequestCanLocalWhisperTarget)
+---@param whisperTarget WOWGUID
+function C_ChatInfo.RequestCanLocalWhisperTarget(whisperTarget) end
+
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_ChatInfo.ResetDefaultZoneChannels)
 function C_ChatInfo.ResetDefaultZoneChannels() end
 
@@ -136,6 +170,10 @@ function C_ChatInfo.SendAddonMessageLogged(prefix, message, chatType, target) en
 ---@param firstChannelIndex number
 ---@param secondChannelIndex number
 function C_ChatInfo.SwapChatChannelsByChannelIndex(firstChannelIndex, secondChannelIndex) end
+
+---[Documentation](https://wowpedia.fandom.com/wiki/API_C_ChatInfo.UncensorChatLine)
+---@param chatLine number
+function C_ChatInfo.UncensorChatLine(chatLine) end
 
 ---@class AddonMessageParams
 ---@field prefix string

@@ -23,7 +23,7 @@ function C_Item.CanViewItemPowers(itemLoc) end
 function C_Item.DoesItemExist(emptiableItemLocation) end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_Item.DoesItemExistByID)
----@param itemInfo string
+---@param itemInfo ItemInfo
 ---@return boolean itemExists
 function C_Item.DoesItemExistByID(itemInfo) end
 
@@ -31,6 +31,11 @@ function C_Item.DoesItemExistByID(itemInfo) end
 ---@param itemLoc ItemLocationMixin
 ---@return boolean matchesBonusTree
 function C_Item.DoesItemMatchBonusTreeReplacement(itemLoc) end
+
+---[Documentation](https://wowpedia.fandom.com/wiki/API_C_Item.DoesItemMatchTrackJump)
+---@param itemLoc ItemLocationMixin
+---@return boolean matchesTrackJump
+function C_Item.DoesItemMatchTrackJump(itemLoc) end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_Item.GetAppliedItemTransmogInfo)
 ---@param itemLoc ItemLocationMixin
@@ -54,12 +59,12 @@ function C_Item.GetCurrentItemTransmogInfo(itemLoc) end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_Item.GetItemConversionOutputIcon)
 ---@param itemLoc ItemLocationMixin
----@return number? icon
+---@return fileID? icon
 function C_Item.GetItemConversionOutputIcon(itemLoc) end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_Item.GetItemGUID)
 ---@param itemLocation ItemLocationMixin
----@return string itemGUID
+---@return WOWGUID itemGUID
 function C_Item.GetItemGUID(itemLocation) end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_Item.GetItemID)
@@ -68,18 +73,18 @@ function C_Item.GetItemGUID(itemLocation) end
 function C_Item.GetItemID(itemLocation) end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_Item.GetItemIDByGUID)
----@param itemGUID string
+---@param itemGUID WOWGUID
 ---@return number? itemID
 function C_Item.GetItemIDByGUID(itemGUID) end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_Item.GetItemIcon)
 ---@param itemLocation ItemLocationMixin
----@return number? icon
+---@return fileID? icon
 function C_Item.GetItemIcon(itemLocation) end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_Item.GetItemIconByID)
----@param itemInfo string
----@return number? icon
+---@param itemInfo ItemInfo
+---@return fileID? icon
 function C_Item.GetItemIconByID(itemInfo) end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_Item.GetItemInventoryType)
@@ -88,7 +93,7 @@ function C_Item.GetItemIconByID(itemInfo) end
 function C_Item.GetItemInventoryType(itemLocation) end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_Item.GetItemInventoryTypeByID)
----@param itemInfo string
+---@param itemInfo ItemInfo
 ---@return Enum.InventoryType? inventoryType
 function C_Item.GetItemInventoryTypeByID(itemInfo) end
 
@@ -98,12 +103,12 @@ function C_Item.GetItemInventoryTypeByID(itemInfo) end
 function C_Item.GetItemLink(itemLocation) end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_Item.GetItemLinkByGUID)
----@param itemGUID string
+---@param itemGUID WOWGUID
 ---@return string? itemLink
 function C_Item.GetItemLinkByGUID(itemGUID) end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_Item.GetItemLocation)
----@param itemGUID string
+---@param itemGUID WOWGUID
 ---@return ItemLocationMixin? itemLocation
 function C_Item.GetItemLocation(itemGUID) end
 
@@ -113,7 +118,7 @@ function C_Item.GetItemLocation(itemGUID) end
 function C_Item.GetItemMaxStackSize(itemLocation) end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_Item.GetItemMaxStackSizeByID)
----@param itemInfo string
+---@param itemInfo ItemInfo
 ---@return number? stackSize
 function C_Item.GetItemMaxStackSizeByID(itemInfo) end
 
@@ -123,7 +128,7 @@ function C_Item.GetItemMaxStackSizeByID(itemInfo) end
 function C_Item.GetItemName(itemLocation) end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_Item.GetItemNameByID)
----@param itemInfo string
+---@param itemInfo ItemInfo
 ---@return string? itemName
 function C_Item.GetItemNameByID(itemInfo) end
 
@@ -133,12 +138,12 @@ function C_Item.GetItemNameByID(itemInfo) end
 function C_Item.GetItemQuality(itemLocation) end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_Item.GetItemQualityByID)
----@param itemInfo string
+---@param itemInfo ItemInfo
 ---@return Enum.ItemQuality? itemQuality
 function C_Item.GetItemQualityByID(itemInfo) end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_Item.GetItemUniquenessByID)
----@param itemInfo string
+---@param itemInfo ItemInfo
 ---@return boolean isUnique
 ---@return string? limitCategoryName
 ---@return number? limitCategoryCount
@@ -146,9 +151,9 @@ function C_Item.GetItemQualityByID(itemInfo) end
 function C_Item.GetItemUniquenessByID(itemInfo) end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_Item.GetLimitedCurrencyItemInfo)
----@param itemInfo string
+---@param itemInfo ItemInfo
 ---@return string name
----@return number icon
+---@return fileID icon
 ---@return number quantity
 ---@return number maxQuantity
 ---@return number totalEarned
@@ -160,7 +165,7 @@ function C_Item.GetLimitedCurrencyItemInfo(itemInfo) end
 function C_Item.GetStackCount(itemLocation) end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_Item.IsAnimaItemByID)
----@param itemInfo string
+---@param itemInfo ItemInfo
 ---@return boolean isAnimaItem
 function C_Item.IsAnimaItemByID(itemInfo) end
 
@@ -170,7 +175,7 @@ function C_Item.IsAnimaItemByID(itemInfo) end
 function C_Item.IsBound(itemLocation) end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_Item.IsDressableItemByID)
----@param itemInfo string
+---@param itemInfo ItemInfo
 ---@return boolean isDressableItem
 function C_Item.IsDressableItemByID(itemInfo) end
 
@@ -205,22 +210,22 @@ function C_Item.IsItemCorruptionResistant(itemLoc) end
 function C_Item.IsItemDataCached(itemLocation) end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_Item.IsItemDataCachedByID)
----@param itemInfo string
+---@param itemInfo ItemInfo
 ---@return boolean isCached
 function C_Item.IsItemDataCachedByID(itemInfo) end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_Item.IsItemGUIDInInventory)
----@param itemGUID string
+---@param itemGUID WOWGUID
 ---@return boolean valid
 function C_Item.IsItemGUIDInInventory(itemGUID) end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_Item.IsItemKeystoneByID)
----@param itemInfo string
+---@param itemInfo ItemInfo
 ---@return boolean isKeystone
 function C_Item.IsItemKeystoneByID(itemInfo) end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_Item.IsItemSpecificToPlayerClass)
----@param itemInfo string
+---@param itemInfo ItemInfo
 ---@return boolean isItemSpecificToPlayerClass
 function C_Item.IsItemSpecificToPlayerClass(itemInfo) end
 
@@ -234,7 +239,7 @@ function C_Item.IsLocked(itemLocation) end
 function C_Item.LockItem(itemLocation) end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_Item.LockItemByGUID)
----@param itemGUID string
+---@param itemGUID WOWGUID
 function C_Item.LockItemByGUID(itemGUID) end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_Item.RequestLoadItemData)
@@ -242,7 +247,7 @@ function C_Item.LockItemByGUID(itemGUID) end
 function C_Item.RequestLoadItemData(itemLocation) end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_Item.RequestLoadItemDataByID)
----@param itemInfo string
+---@param itemInfo ItemInfo
 function C_Item.RequestLoadItemDataByID(itemInfo) end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_Item.UnlockItem)
@@ -250,5 +255,5 @@ function C_Item.RequestLoadItemDataByID(itemInfo) end
 function C_Item.UnlockItem(itemLocation) end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_Item.UnlockItemByGUID)
----@param itemGUID string
+---@param itemGUID WOWGUID
 function C_Item.UnlockItemByGUID(itemGUID) end

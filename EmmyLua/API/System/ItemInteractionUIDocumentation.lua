@@ -48,7 +48,7 @@ function C_ItemInteraction.SetPendingItem(item) end
 ---@field timeToNextCharge number
 
 ---@class ItemInteractionFrameInfo
----@field textureKit string
+---@field textureKit textureKit
 ---@field openSoundKitID number
 ---@field closeSoundKitID number
 ---@field titleText string

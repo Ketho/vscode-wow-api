@@ -45,13 +45,13 @@ function C_TooltipInfo.GetAzeritePower(itemID, itemLevel, powerID, owningItemLin
 function C_TooltipInfo.GetBackpackToken(index) end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_TooltipInfo.GetBagItem)
----@param bagIndex number
+---@param bagIndex number|Enum.BagIndex
 ---@param slotIndex number
 ---@return TooltipData data
 function C_TooltipInfo.GetBagItem(bagIndex, slotIndex) end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_TooltipInfo.GetBagItemChild)
----@param bagIndex number
+---@param bagIndex number|Enum.BagIndex
 ---@param slotIndex number
 ---@param equipSlotIndex number
 ---@return TooltipData data
@@ -63,7 +63,7 @@ function C_TooltipInfo.GetBagItemChild(bagIndex, slotIndex, equipSlotIndex) end
 function C_TooltipInfo.GetBuybackItem(index) end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_TooltipInfo.GetCompanionPet)
----@param petGUID string
+---@param petGUID WOWGUID
 ---@return TooltipData data
 function C_TooltipInfo.GetCompanionPet(petGUID) end
 
@@ -132,7 +132,7 @@ function C_TooltipInfo.GetInboxItem(messageIndex, attachmentIndex) end
 function C_TooltipInfo.GetInstanceLockEncountersComplete(index) end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_TooltipInfo.GetInventoryItem)
----@param unit string
+---@param unit UnitToken
 ---@param slot number
 ---@param hideUselessStats? boolean
 ---@return TooltipData data
@@ -144,7 +144,7 @@ function C_TooltipInfo.GetInventoryItem(unit, slot, hideUselessStats) end
 function C_TooltipInfo.GetInventoryItemByID(itemID) end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_TooltipInfo.GetItemByGUID)
----@param guid string
+---@param guid WOWGUID
 ---@return TooltipData data
 function C_TooltipInfo.GetItemByGUID(guid) end
 
@@ -271,12 +271,6 @@ function C_TooltipInfo.GetQuestLogCurrency(type, currencyIndex, questID) end
 ---@return TooltipData data
 function C_TooltipInfo.GetQuestLogItem(type, itemIndex, questID, allowCollectionText) end
 
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_TooltipInfo.GetQuestLogRewardSpell)
----@param spellIndex number
----@param questID? number
----@return TooltipData data
-function C_TooltipInfo.GetQuestLogRewardSpell(spellIndex, questID) end
-
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_TooltipInfo.GetQuestLogSpecialItem)
 ---@param questIndex number
 ---@return TooltipData data
@@ -288,11 +282,6 @@ function C_TooltipInfo.GetQuestLogSpecialItem(questIndex) end
 ---@param ignoreActivePlayer? boolean
 ---@return TooltipData data
 function C_TooltipInfo.GetQuestPartyProgress(questID, omitTitle, ignoreActivePlayer) end
-
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_TooltipInfo.GetQuestRewardSpell)
----@param spellIndex number
----@return TooltipData data
-function C_TooltipInfo.GetQuestRewardSpell(spellIndex) end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_TooltipInfo.GetRecipeRankInfo)
 ---@param recipeID number
@@ -309,7 +298,7 @@ function C_TooltipInfo.GetRecipeReagentItem(recipeSpellID, dataSlotIndex) end
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_TooltipInfo.GetRecipeResultItem)
 ---@param recipeID number
 ---@param craftingReagents? CraftingReagentInfo[]
----@param recraftItemGUID? string
+---@param recraftItemGUID? WOWGUID
 ---@param recipeLevel? number
 ---@param overrideQualityID? number
 ---@return TooltipData data
@@ -318,14 +307,14 @@ function C_TooltipInfo.GetRecipeResultItem(recipeID, craftingReagents, recraftIt
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_TooltipInfo.GetRecipeResultItemForOrder)
 ---@param recipeID number
 ---@param craftingReagents? CraftingReagentInfo[]
----@param orderID? number
+---@param orderID? BigUInteger
 ---@param recipeLevel? number
 ---@param overrideQualityID? number
 ---@return TooltipData data
 function C_TooltipInfo.GetRecipeResultItemForOrder(recipeID, craftingReagents, orderID, recipeLevel, overrideQualityID) end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_TooltipInfo.GetRuneforgeResultItem)
----@param itemGUID string
+---@param itemGUID WOWGUID
 ---@param itemLevel number
 ---@param powerID? number
 ---@param modifiers? number[]
@@ -420,20 +409,20 @@ function C_TooltipInfo.GetTraitEntry(entryID, rank) end
 function C_TooltipInfo.GetTransmogrifyItem(transmogLocation) end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_TooltipInfo.GetUnit)
----@param unit string
+---@param unit UnitToken
 ---@param hideStatus? boolean
 ---@return TooltipData data
 function C_TooltipInfo.GetUnit(unit, hideStatus) end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_TooltipInfo.GetUnitAura)
----@param unitToken string
+---@param unitToken UnitToken
 ---@param index number
 ---@param filter? string
 ---@return TooltipData data
 function C_TooltipInfo.GetUnitAura(unitToken, index, filter) end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_TooltipInfo.GetUnitBuff)
----@param unitToken string
+---@param unitToken UnitToken
 ---@param index number
 ---@param filter? string
 ---@return TooltipData data
@@ -447,7 +436,7 @@ function C_TooltipInfo.GetUnitBuff(unitToken, index, filter) end
 function C_TooltipInfo.GetUnitBuffByAuraInstanceID(unitTokenString, auraInstanceID, filter) end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_TooltipInfo.GetUnitDebuff)
----@param unitToken string
+---@param unitToken UnitToken
 ---@param index number
 ---@param filter? string
 ---@return TooltipData data
@@ -481,10 +470,15 @@ function C_TooltipInfo.GetVoidItem(tab, slot) end
 function C_TooltipInfo.GetVoidWithdrawalItem(slot) end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_TooltipInfo.GetWeeklyReward)
----@param itemDBID string
+---@param itemDBID WeeklyRewardItemDBID
 ---@return TooltipData data
 function C_TooltipInfo.GetWeeklyReward(itemDBID) end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_TooltipInfo.GetWorldCursor)
 ---@return TooltipData data
 function C_TooltipInfo.GetWorldCursor() end
+
+---[Documentation](https://wowpedia.fandom.com/wiki/API_C_TooltipInfo.GetWorldLootObject)
+---@param unitTokenString string
+---@return TooltipData data
+function C_TooltipInfo.GetWorldLootObject(unitTokenString) end

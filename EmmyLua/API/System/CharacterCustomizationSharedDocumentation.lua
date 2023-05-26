@@ -3,8 +3,8 @@
 ---@field id number
 ---@field orderIndex number
 ---@field name string
----@field icon string
----@field selectedIcon string
+---@field icon textureAtlas
+---@field selectedIcon textureAtlas
 ---@field undressModel boolean
 ---@field cameraZoomLevel number
 ---@field cameraDistanceOffset number
@@ -20,6 +20,7 @@
 ---@field isNew boolean
 ---@field swatchColor1 ColorMixin?
 ---@field swatchColor2 ColorMixin?
+---@field soundKit number?
 ---@field isLocked boolean
 ---@field lockedText string?
 

@@ -22,6 +22,7 @@ function C_AreaPoiInfo.GetAreaPOISecondsLeft(areaPoiID) end
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_AreaPoiInfo.IsAreaPOITimed)
 ---@param areaPoiID number
 ---@return boolean isTimed
+---@return boolean? hideTimerInTooltip
 function C_AreaPoiInfo.IsAreaPOITimed(areaPoiID) end
 
 ---@class AreaPOIInfo
@@ -32,8 +33,9 @@ function C_AreaPoiInfo.IsAreaPOITimed(areaPoiID) end
 ---@field textureIndex number?
 ---@field widgetSetID number?
 ---@field atlasName string?
----@field uiTextureKit string?
+---@field uiTextureKit textureKit?
 ---@field shouldGlow boolean
 ---@field factionID number?
 ---@field isPrimaryMapForPOI boolean
 ---@field isAlwaysOnFlightmap boolean
+---@field addPaddingAboveWidgets boolean?

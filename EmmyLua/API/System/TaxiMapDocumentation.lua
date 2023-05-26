@@ -24,7 +24,7 @@ function C_TaxiMap.ShouldMapShowTaxiNodes(uiMapID) end
 ---@field name string
 ---@field atlasName string
 ---@field faction Enum.FlightPathFaction
----@field textureKit string
+---@field textureKit textureKit
 
 ---@class TaxiNodeInfo
 ---@field nodeID number
@@ -32,6 +32,7 @@ function C_TaxiMap.ShouldMapShowTaxiNodes(uiMapID) end
 ---@field name string
 ---@field state Enum.FlightPathState
 ---@field slotIndex number
----@field textureKit string
+---@field textureKit textureKit
 ---@field useSpecialIcon boolean
 ---@field specialIconCostString string?
+---@field isMapLayerTransition boolean

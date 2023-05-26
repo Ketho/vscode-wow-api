@@ -102,7 +102,7 @@ function C_ArtifactUI.GetArtifactArtInfo() end
 ---@return number itemID
 ---@return number? altItemID
 ---@return string name
----@return number icon
+---@return fileID icon
 ---@return number xp
 ---@return number pointsSpent
 ---@return number quality
@@ -125,7 +125,7 @@ function C_ArtifactUI.GetArtifactTier() end
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_ArtifactUI.GetArtifactXPRewardTargetInfo)
 ---@param artifactCategoryID number
 ---@return string name
----@return number icon
+---@return fileID icon
 function C_ArtifactUI.GetArtifactXPRewardTargetInfo(artifactCategoryID) end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_ArtifactUI.GetCostForPointAtRank)
@@ -142,7 +142,7 @@ function C_ArtifactUI.GetEquippedArtifactArtInfo() end
 ---@return number itemID
 ---@return number? altItemID
 ---@return string name
----@return number icon
+---@return fileID icon
 ---@return number xp
 ---@return number pointsSpent
 ---@return number quality
@@ -166,7 +166,7 @@ function C_ArtifactUI.GetEquippedArtifactNumRelicSlots(onlyUnlocked) end
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_ArtifactUI.GetEquippedArtifactRelicInfo)
 ---@param relicSlotIndex number
 ---@return string name
----@return number icon
+---@return fileID icon
 ---@return string slotTypeName
 ---@return string link
 function C_ArtifactUI.GetEquippedArtifactRelicInfo(relicSlotIndex) end
@@ -183,7 +183,7 @@ function C_ArtifactUI.GetEquippedRelicLockedReason(relicSlotIndex) end
 function C_ArtifactUI.GetForgeRotation() end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_ArtifactUI.GetItemLevelIncreaseProvidedByRelic)
----@param itemLinkOrID string
+---@param itemLinkOrID ItemInfo
 ---@return number itemIevelIncrease
 function C_ArtifactUI.GetItemLevelIncreaseProvidedByRelic(itemLinkOrID) end
 
@@ -235,7 +235,7 @@ function C_ArtifactUI.GetPowers() end
 function C_ArtifactUI.GetPowersAffectedByRelic(relicSlotIndex) end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_ArtifactUI.GetPowersAffectedByRelicItemLink)
----@param relicItemInfo string
+---@param relicItemInfo ItemInfo
 ---@return number powerIDs
 function C_ArtifactUI.GetPowersAffectedByRelicItemLink(relicItemInfo) end
 
@@ -246,7 +246,7 @@ function C_ArtifactUI.GetPreviewAppearance() end
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_ArtifactUI.GetRelicInfo)
 ---@param relicSlotIndex number
 ---@return string name
----@return number icon
+---@return fileID icon
 ---@return string slotTypeName
 ---@return string link
 function C_ArtifactUI.GetRelicInfo(relicSlotIndex) end
@@ -254,7 +254,7 @@ function C_ArtifactUI.GetRelicInfo(relicSlotIndex) end
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_ArtifactUI.GetRelicInfoByItemID)
 ---@param itemID number
 ---@return string name
----@return number icon
+---@return fileID icon
 ---@return string slotTypeName
 ---@return string link
 function C_ArtifactUI.GetRelicInfoByItemID(itemID) end
@@ -277,7 +277,7 @@ function C_ArtifactUI.GetRespecArtifactArtInfo() end
 ---@return number itemID
 ---@return number? altItemID
 ---@return string name
----@return number icon
+---@return fileID icon
 ---@return number xp
 ---@return number pointsSpent
 ---@return number quality
@@ -380,7 +380,7 @@ function C_ArtifactUI.ShouldSuppressForgeRotation() end
 ---@field numAppearances number
 
 ---@class ArtifactArtInfo
----@field textureKit string
+---@field textureKit textureKit
 ---@field titleName string
 ---@field titleColor ColorMixin
 ---@field barConnectedColor ColorMixin
@@ -392,7 +392,7 @@ function C_ArtifactUI.ShouldSuppressForgeRotation() end
 ---@field itemID number
 ---@field altItemID number?
 ---@field name string
----@field icon number
+---@field icon fileID
 ---@field xp number
 ---@field pointsSpent number
 ---@field quality number
@@ -426,6 +426,6 @@ function C_ArtifactUI.ShouldSuppressForgeRotation() end
 
 ---@class ArtifactRelicInfo
 ---@field name string
----@field icon number
+---@field icon fileID
 ---@field slotTypeName string
 ---@field link string

@@ -10,7 +10,7 @@ function C_PetBattles.GetBreedQuality(petOwner, slot) end
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_PetBattles.GetIcon)
 ---@param petOwner number
 ---@param slot number
----@return number iconFileID
+---@return fileID iconFileID
 function C_PetBattles.GetIcon(petOwner, slot) end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_PetBattles.GetName)

@@ -25,7 +25,7 @@ function C_PlayerInfo.CanUseItem(itemID) end
 function C_PlayerInfo.GetAlternateFormInfo() end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_PlayerInfo.GetContentDifficultyCreatureForPlayer)
----@param unitToken string
+---@param unitToken UnitToken
 ---@return Enum.RelativeContentDifficulty difficulty
 function C_PlayerInfo.GetContentDifficultyCreatureForPlayer(unitToken) end
 
@@ -56,7 +56,7 @@ function C_PlayerInfo.GetPlayerCharacterData() end
 
 ---Returns the players mythic+ rating summary which includes the runs they've completed as well as their current season m+ rating
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_PlayerInfo.GetPlayerMythicPlusRatingSummary)
----@param playerToken string
+---@param playerToken UnitToken
 ---@return MythicPlusRatingSummary ratingSummary
 function C_PlayerInfo.GetPlayerMythicPlusRatingSummary(playerToken) end
 

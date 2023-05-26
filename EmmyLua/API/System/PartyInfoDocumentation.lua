@@ -20,7 +20,7 @@ function C_PartyInfo.ConfirmConvertToRaid() end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_PartyInfo.ConfirmInviteTravelPass)
 ---@param targetName string
----@param targetGUID string
+---@param targetGUID WOWGUID
 function C_PartyInfo.ConfirmInviteTravelPass(targetName, targetGUID) end
 
 ---Immediately invites the named unit to a party, with no regard for potentially destructive actions.
@@ -57,17 +57,17 @@ function C_PartyInfo.DoCountdown(seconds) end
 function C_PartyInfo.GetActiveCategories() end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_PartyInfo.GetInviteConfirmationInvalidQueues)
----@param inviteGUID string
+---@param inviteGUID WOWGUID
 ---@return QueueSpecificInfo[] invalidQueues
 function C_PartyInfo.GetInviteConfirmationInvalidQueues(inviteGUID) end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_PartyInfo.GetInviteReferralInfo)
----@param inviteGUID string
----@return string outReferredByGuid
+---@param inviteGUID WOWGUID
+---@return WOWGUID outReferredByGuid
 ---@return string outReferredByName
 ---@return Enum.PartyRequestJoinRelation outRelationType
 ---@return boolean outIsQuickJoin
----@return string outClubId
+---@return ClubId outClubId
 function C_PartyInfo.GetInviteReferralInfo(inviteGUID) end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_PartyInfo.GetMinLevel)

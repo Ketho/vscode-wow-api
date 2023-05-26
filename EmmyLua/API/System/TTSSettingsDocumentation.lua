@@ -84,5 +84,6 @@ function C_TTSSettings.SetVoiceOptionName(voiceType, voiceName) end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_TTSSettings.ShouldOverrideMessage)
 ---@param language number
+---@param messageText string
 ---@return boolean overrideMessage
-function C_TTSSettings.ShouldOverrideMessage(language) end
+function C_TTSSettings.ShouldOverrideMessage(language, messageText) end

@@ -2,15 +2,15 @@
 C_ClubFinder = {}
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_ClubFinder.ApplicantAcceptClubInvite)
----@param clubFinderGUID string
+---@param clubFinderGUID WOWGUID
 function C_ClubFinder.ApplicantAcceptClubInvite(clubFinderGUID) end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_ClubFinder.ApplicantDeclineClubInvite)
----@param clubFinderGUID string
+---@param clubFinderGUID WOWGUID
 function C_ClubFinder.ApplicantDeclineClubInvite(clubFinderGUID) end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_ClubFinder.CancelMembershipRequest)
----@param clubFinderGUID string
+---@param clubFinderGUID WOWGUID
 function C_ClubFinder.CancelMembershipRequest(clubFinderGUID) end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_ClubFinder.CheckAllPlayerApplicantSettings)
@@ -26,7 +26,7 @@ function C_ClubFinder.ClearClubApplicantsCache() end
 function C_ClubFinder.ClearClubFinderPostingsCache() end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_ClubFinder.DoesPlayerBelongToClubFromClubGUID)
----@param clubFinderGUID string
+---@param clubFinderGUID WOWGUID
 ---@return boolean belongsToClub
 function C_ClubFinder.DoesPlayerBelongToClubFromClubGUID(clubFinderGUID) end
 
@@ -39,7 +39,7 @@ function C_ClubFinder.GetClubFinderDisableReason() end
 function C_ClubFinder.GetClubRecruitmentSettings() end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_ClubFinder.GetClubTypeFromFinderGUID)
----@param clubFinderGUID string
+---@param clubFinderGUID WOWGUID
 ---@return Enum.ClubFinderRequestType clubType
 function C_ClubFinder.GetClubTypeFromFinderGUID(clubFinderGUID) end
 
@@ -57,7 +57,7 @@ function C_ClubFinder.GetPlayerApplicantLocaleFlags() end
 function C_ClubFinder.GetPlayerApplicantSettings() end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_ClubFinder.GetPlayerClubApplicationStatus)
----@param clubFinderGUID string
+---@param clubFinderGUID WOWGUID
 ---@return Enum.PlayerClubRequestStatus clubStatus
 function C_ClubFinder.GetPlayerClubApplicationStatus(clubFinderGUID) end
 
@@ -66,22 +66,22 @@ function C_ClubFinder.GetPlayerClubApplicationStatus(clubFinderGUID) end
 function C_ClubFinder.GetPlayerSettingsFocusFlagsSelectedCount() end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_ClubFinder.GetPostingIDFromClubFinderGUID)
----@param clubFinderGUID string
+---@param clubFinderGUID WOWGUID
 ---@return number? postingID
 function C_ClubFinder.GetPostingIDFromClubFinderGUID(clubFinderGUID) end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_ClubFinder.GetRecruitingClubInfoFromClubID)
----@param clubId string
+---@param clubId ClubId
 ---@return RecruitingClubInfo? clubInfo
 function C_ClubFinder.GetRecruitingClubInfoFromClubID(clubId) end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_ClubFinder.GetRecruitingClubInfoFromFinderGUID)
----@param clubFinderGUID string
+---@param clubFinderGUID WOWGUID
 ---@return RecruitingClubInfo clubInfo
 function C_ClubFinder.GetRecruitingClubInfoFromFinderGUID(clubFinderGUID) end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_ClubFinder.GetStatusOfPostingFromClubId)
----@param postingID string
+---@param postingID ClubId
 ---@return Enum.ClubFinderClubPostingStatusFlags[] postingFlags
 function C_ClubFinder.GetStatusOfPostingFromClubId(postingID) end
 
@@ -94,12 +94,12 @@ function C_ClubFinder.GetTotalMatchingCommunityListSize() end
 function C_ClubFinder.GetTotalMatchingGuildListSize() end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_ClubFinder.HasAlreadyAppliedToLinkedPosting)
----@param clubFinderGUID string
+---@param clubFinderGUID WOWGUID
 ---@return boolean hasAlreadyApplied
 function C_ClubFinder.HasAlreadyAppliedToLinkedPosting(clubFinderGUID) end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_ClubFinder.HasPostingBeenDelisted)
----@param postingID string
+---@param postingID ClubId
 ---@return boolean postingDelisted
 function C_ClubFinder.HasPostingBeenDelisted(postingID) end
 
@@ -113,12 +113,12 @@ function C_ClubFinder.IsEnabled() end
 function C_ClubFinder.IsListingEnabledFromFlags(flags) end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_ClubFinder.IsPostingBanned)
----@param postingID string
+---@param postingID ClubId
 ---@return boolean postingBanned
 function C_ClubFinder.IsPostingBanned(postingID) end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_ClubFinder.LookupClubPostingFromClubFinderGUID)
----@param clubFinderGUID string
+---@param clubFinderGUID WOWGUID
 ---@param isLinkedPosting boolean
 function C_ClubFinder.LookupClubPostingFromClubFinderGUID(clubFinderGUID, isLinkedPosting) end
 
@@ -139,7 +139,7 @@ function C_ClubFinder.PlayerReturnPendingCommunitiesList() end
 function C_ClubFinder.PlayerReturnPendingGuildsList() end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_ClubFinder.PostClub)
----@param clubId string
+---@param clubId ClubId
 ---@param itemLevelRequirement number
 ---@param name string
 ---@param description string
@@ -161,7 +161,7 @@ function C_ClubFinder.RequestApplicantList(type) end
 function C_ClubFinder.RequestClubsList(guildListRequested, searchString, specIDs) end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_ClubFinder.RequestMembershipToClub)
----@param clubFinderGUID string
+---@param clubFinderGUID WOWGUID
 ---@param comment string
 ---@param specIDs number[]
 function C_ClubFinder.RequestMembershipToClub(clubFinderGUID, comment, specIDs) end
@@ -177,7 +177,7 @@ function C_ClubFinder.RequestNextCommunityPage(startingIndex, pageSize) end
 function C_ClubFinder.RequestNextGuildPage(startingIndex, pageSize) end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_ClubFinder.RequestPostingInformationFromClubId)
----@param clubId string
+---@param clubId ClubId
 ---@return boolean success
 function C_ClubFinder.RequestPostingInformationFromClubId(clubId) end
 
@@ -188,8 +188,8 @@ function C_ClubFinder.RequestSubscribedClubPostingIDs() end
 function C_ClubFinder.ResetClubPostingMapCache() end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_ClubFinder.RespondToApplicant)
----@param clubFinderGUID string
----@param playerGUID string
+---@param clubFinderGUID WOWGUID
+---@param playerGUID WOWGUID
 ---@param shouldAccept boolean
 ---@param requestType number|Enum.ClubFinderRequestType
 ---@param playerName string
@@ -198,7 +198,7 @@ function C_ClubFinder.ResetClubPostingMapCache() end
 function C_ClubFinder.RespondToApplicant(clubFinderGUID, playerGUID, shouldAccept, requestType, playerName, forceAccept, reported) end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_ClubFinder.ReturnClubApplicantList)
----@param clubId string
+---@param clubId ClubId
 ---@return ClubFinderApplicantInfo[] info
 function C_ClubFinder.ReturnClubApplicantList(clubId) end
 
@@ -211,13 +211,13 @@ function C_ClubFinder.ReturnMatchingCommunityList() end
 function C_ClubFinder.ReturnMatchingGuildList() end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_ClubFinder.ReturnPendingClubApplicantList)
----@param clubId string
+---@param clubId ClubId
 ---@return ClubFinderApplicantInfo[] info
 function C_ClubFinder.ReturnPendingClubApplicantList(clubId) end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_ClubFinder.SendChatWhisper)
----@param clubFinderGUID string
----@param playerGUID string
+---@param clubFinderGUID WOWGUID
+---@param playerGUID WOWGUID
 ---@param applicantType number|Enum.ClubFinderRequestType
 ---@param name string
 function C_ClubFinder.SendChatWhisper(clubFinderGUID, playerGUID, applicantType, name) end
@@ -249,8 +249,8 @@ function C_ClubFinder.SetRecruitmentSettings(index, checked) end
 function C_ClubFinder.ShouldShowClubFinder() end
 
 ---@class ClubFinderApplicantInfo
----@field clubFinderGUID string
----@field playerGUID string
+---@field clubFinderGUID WOWGUID
+---@field playerGUID WOWGUID
 ---@field closed number
 ---@field name string
 ---@field message string
@@ -260,7 +260,7 @@ function C_ClubFinder.ShouldShowClubFinder() end
 ---@field specIds number[]
 ---@field requestStatus Enum.PlayerClubRequestStatus
 ---@field lookupSuccess boolean
----@field lastUpdatedTime number
+---@field lastUpdatedTime BigInteger
 ---@field faction number
 
 ---@class ClubSettingsInfo
@@ -284,7 +284,7 @@ function C_ClubFinder.ShouldShowClubFinder() end
 ---@field crossFaction boolean
 
 ---@class RecruitingClubInfo
----@field clubFinderGUID string
+---@field clubFinderGUID WOWGUID
 ---@field numActiveMembers number
 ---@field name string
 ---@field comment string
@@ -299,7 +299,7 @@ function C_ClubFinder.ShouldShowClubFinder() end
 ---@field minILvl number
 ---@field cached number
 ---@field cacheRequested number
----@field lastPosterGUID string
----@field clubId string
----@field lastUpdatedTime number
+---@field lastPosterGUID WOWGUID
+---@field clubId ClubId
+---@field lastUpdatedTime BigInteger
 ---@field isCrossFaction boolean

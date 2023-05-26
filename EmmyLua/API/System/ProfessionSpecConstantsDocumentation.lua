@@ -1,8 +1,13 @@
 ---@meta
+---@class ProfTabHighlight
+---@field description string
+
 ---@class ProfTabInfo
 ---@field rootNodeID number
 ---@field name string
 ---@field description string
+---@field rootIconID number
+---@field highlights ProfTabHighlight[]
 
 ---@class SpecPerkInfo
 ---@field perkID number

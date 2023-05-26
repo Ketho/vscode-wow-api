@@ -12,7 +12,7 @@ function C_Transmog.ApplyAllPending(currentSpecOnly) end
 function C_Transmog.CanHaveSecondaryAppearanceForSlotID(slotID) end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_Transmog.CanTransmogItem)
----@param itemInfo string
+---@param itemInfo ItemInfo
 ---@return boolean canBeTransmogged
 ---@return string? selfFailureReason
 ---@return boolean canTransmogOthers
@@ -20,8 +20,8 @@ function C_Transmog.CanHaveSecondaryAppearanceForSlotID(slotID) end
 function C_Transmog.CanTransmogItem(itemInfo) end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_Transmog.CanTransmogItemWithItem)
----@param targetItemInfo string
----@param sourceItemInfo string
+---@param targetItemInfo ItemInfo
+---@param sourceItemInfo ItemInfo
 ---@return boolean canTransmog
 ---@return string? failureReason
 function C_Transmog.CanTransmogItemWithItem(targetItemInfo, sourceItemInfo) end
@@ -88,7 +88,7 @@ function C_Transmog.GetSlotForInventoryType(inventoryType) end
 ---@return number cannotTransmogrifyReason
 ---@return boolean hasUndo
 ---@return boolean isHideVisual
----@return number? texture
+---@return fileID? texture
 function C_Transmog.GetSlotInfo(transmogLocation) end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_Transmog.GetSlotUseError)
@@ -141,7 +141,7 @@ function C_Transmog.SetPending(transmogLocation, pendingInfo) end
 ---@field cannotTransmogrifyReason number
 ---@field hasUndo boolean
 ---@field isHideVisual boolean
----@field texture number?
+---@field texture fileID?
 
 ---@class TransmogSlotVisualInfo
 ---@field baseSourceID number

@@ -42,15 +42,15 @@ function C_AuctionHouse.ConfirmCommoditiesPurchase(itemID, quantity) end
 ---@param item ItemLocationMixin
 ---@param duration number
 ---@param quantity number
----@param unitPrice number
+---@param unitPrice BigUInteger
 function C_AuctionHouse.ConfirmPostCommodity(item, duration, quantity, unitPrice) end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_AuctionHouse.ConfirmPostItem)
 ---@param item ItemLocationMixin
 ---@param duration number
 ---@param quantity number
----@param bid? number
----@param buyout? number
+---@param bid? BigUInteger
+---@param buyout? BigUInteger
 function C_AuctionHouse.ConfirmPostItem(item, duration, quantity, bid, buyout) end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_AuctionHouse.FavoritesAreAvailable)
@@ -92,7 +92,7 @@ function C_AuctionHouse.GetBrowseResults() end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_AuctionHouse.GetCancelCost)
 ---@param ownedAuctionID number
----@return number cancelCost
+---@return BigUInteger cancelCost
 function C_AuctionHouse.GetCancelCost(ownedAuctionID) end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_AuctionHouse.GetCommoditySearchResultInfo)
@@ -148,34 +148,34 @@ function C_AuctionHouse.GetItemSearchResultInfo(itemKey, itemSearchResultIndex) 
 function C_AuctionHouse.GetItemSearchResultsQuantity(itemKey) end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_AuctionHouse.GetMaxBidItemBid)
----@return number? maxBid
+---@return BigUInteger? maxBid
 function C_AuctionHouse.GetMaxBidItemBid() end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_AuctionHouse.GetMaxBidItemBuyout)
----@return number? maxBuyout
+---@return BigUInteger? maxBuyout
 function C_AuctionHouse.GetMaxBidItemBuyout() end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_AuctionHouse.GetMaxCommoditySearchResultPrice)
 ---@param itemID number
----@return number? maxUnitPrice
+---@return BigUInteger? maxUnitPrice
 function C_AuctionHouse.GetMaxCommoditySearchResultPrice(itemID) end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_AuctionHouse.GetMaxItemSearchResultBid)
 ---@param itemKey ItemKey
----@return number? maxBid
+---@return BigUInteger? maxBid
 function C_AuctionHouse.GetMaxItemSearchResultBid(itemKey) end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_AuctionHouse.GetMaxItemSearchResultBuyout)
 ---@param itemKey ItemKey
----@return number? maxBuyout
+---@return BigUInteger? maxBuyout
 function C_AuctionHouse.GetMaxItemSearchResultBuyout(itemKey) end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_AuctionHouse.GetMaxOwnedAuctionBid)
----@return number? maxBid
+---@return BigUInteger? maxBid
 function C_AuctionHouse.GetMaxOwnedAuctionBid() end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_AuctionHouse.GetMaxOwnedAuctionBuyout)
----@return number? maxBuyout
+---@return BigUInteger? maxBuyout
 function C_AuctionHouse.GetMaxOwnedAuctionBuyout() end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_AuctionHouse.GetNumBidTypes)
@@ -235,16 +235,16 @@ function C_AuctionHouse.GetReplicateItemBattlePetInfo(index) end
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_AuctionHouse.GetReplicateItemInfo)
 ---@param index number
 ---@return string? name
----@return number? texture
+---@return fileID? texture
 ---@return number count
 ---@return number qualityID
 ---@return boolean? usable
 ---@return number level
 ---@return string? levelType
----@return number minBid
----@return number minIncrement
----@return number buyoutPrice
----@return number bidAmount
+---@return BigUInteger minBid
+---@return BigUInteger minIncrement
+---@return BigUInteger buyoutPrice
+---@return BigUInteger bidAmount
 ---@return string? highBidder
 ---@return string? bidderFullName
 ---@return string? owner
@@ -330,14 +330,14 @@ function C_AuctionHouse.MakeItemKey(itemID, itemLevel, itemSuffix, battlePetSpec
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_AuctionHouse.PlaceBid)
 ---@param auctionID number
----@param bidAmount number
+---@param bidAmount BigUInteger
 function C_AuctionHouse.PlaceBid(auctionID, bidAmount) end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_AuctionHouse.PostCommodity)
 ---@param item ItemLocationMixin
 ---@param duration number
 ---@param quantity number
----@param unitPrice number
+---@param unitPrice BigUInteger
 ---@return boolean needsConfirmation
 function C_AuctionHouse.PostCommodity(item, duration, quantity, unitPrice) end
 
@@ -345,8 +345,8 @@ function C_AuctionHouse.PostCommodity(item, duration, quantity, unitPrice) end
 ---@param item ItemLocationMixin
 ---@param duration number
 ---@param quantity number
----@param bid? number
----@param buyout? number
+---@param bid? BigUInteger
+---@param buyout? BigUInteger
 ---@return boolean needsConfirmation
 function C_AuctionHouse.PostItem(item, duration, quantity, bid, buyout) end
 
@@ -457,32 +457,32 @@ function C_AuctionHouse.StartCommoditiesPurchase(itemID, quantity) end
 ---@class AuctionInfo
 ---@field itemKey ItemKey
 ---@field itemLink string?
----@field minBid number?
----@field bidAmount number?
----@field buyoutAmount number?
----@field bidder string?
+---@field minBid WOWMONEY?
+---@field bidAmount WOWMONEY?
+---@field buyoutAmount WOWMONEY?
+---@field bidder WOWGUID?
 
 ---@class BidInfo
 ---@field auctionID number
 ---@field itemKey ItemKey
 ---@field itemLink string?
 ---@field timeLeft Enum.AuctionHouseTimeLeftBand
----@field minBid number?
----@field bidAmount number?
----@field buyoutAmount number?
----@field bidder string?
+---@field minBid BigUInteger?
+---@field bidAmount BigUInteger?
+---@field buyoutAmount BigUInteger?
+---@field bidder WOWGUID?
 
 ---@class BrowseResultInfo
 ---@field itemKey ItemKey
 ---@field appearanceLink string?
 ---@field totalQuantity number
----@field minPrice number
+---@field minPrice BigUInteger
 ---@field containsOwnerItem boolean
 
 ---@class CommoditySearchResultInfo
 ---@field itemID number
 ---@field quantity number
----@field unitPrice number
+---@field unitPrice BigUInteger
 ---@field auctionID number
 ---@field owners string[]
 ---@field totalNumberOfOwners number
@@ -503,7 +503,7 @@ function C_AuctionHouse.StartCommoditiesPurchase(itemID, quantity) end
 ---@field itemName string
 ---@field battlePetLink string?
 ---@field appearanceLink string?
----@field quality number
+---@field quality Enum.ItemQuality
 ---@field iconFileID number
 ---@field isPet boolean
 ---@field isCommodity boolean
@@ -520,10 +520,10 @@ function C_AuctionHouse.StartCommoditiesPurchase(itemID, quantity) end
 ---@field containsOwnerItem boolean
 ---@field containsAccountItem boolean
 ---@field containsSocketedItem boolean
----@field bidder string?
----@field minBid number?
----@field bidAmount number?
----@field buyoutAmount number?
+---@field bidder WOWGUID?
+---@field minBid BigUInteger?
+---@field bidAmount BigUInteger?
+---@field buyoutAmount BigUInteger?
 ---@field timeLeftSeconds number?
 
 ---@class OwnedAuctionInfo
@@ -534,22 +534,22 @@ function C_AuctionHouse.StartCommoditiesPurchase(itemID, quantity) end
 ---@field quantity number
 ---@field timeLeftSeconds number?
 ---@field timeLeft Enum.AuctionHouseTimeLeftBand?
----@field bidAmount number?
----@field buyoutAmount number?
+---@field bidAmount BigUInteger?
+---@field buyoutAmount BigUInteger?
 ---@field bidder string?
 
 ---@class ReplicateItemInfo
 ---@field name string?
----@field texture number?
+---@field texture fileID?
 ---@field count number
 ---@field qualityID number
 ---@field usable boolean?
 ---@field level number
 ---@field levelType string?
----@field minBid number
----@field minIncrement number
----@field buyoutPrice number
----@field bidAmount number
+---@field minBid BigUInteger
+---@field minIncrement BigUInteger
+---@field buyoutPrice BigUInteger
+---@field bidAmount BigUInteger
 ---@field highBidder string?
 ---@field bidderFullName string?
 ---@field owner string?

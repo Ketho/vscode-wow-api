@@ -22,5 +22,5 @@ function C_AchievementInfo.IsGuildAchievement(achievementId) end
 function C_AchievementInfo.IsValidAchievement(achievementId) end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_AchievementInfo.SetPortraitTexture)
----@param textureObject table
+---@param textureObject SimpleTexture
 function C_AchievementInfo.SetPortraitTexture(textureObject) end

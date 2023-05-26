@@ -121,7 +121,7 @@ function C_Calendar.EventDecline() end
 function C_Calendar.EventGetCalendarType() end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_Calendar.EventGetClubId)
----@return string? info
+---@return ClubId? info
 function C_Calendar.EventGetClubId() end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_Calendar.EventGetInvite)
@@ -178,7 +178,7 @@ function C_Calendar.EventInvite(name) end
 function C_Calendar.EventRemoveInvite(inviteIndex) end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_Calendar.EventRemoveInviteByGuid)
----@param guid string
+---@param guid WOWGUID
 function C_Calendar.EventRemoveInviteByGuid(guid) end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_Calendar.EventSelectInvite)
@@ -189,7 +189,7 @@ function C_Calendar.EventSelectInvite(inviteIndex) end
 function C_Calendar.EventSetAutoApprove() end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_Calendar.EventSetClubId)
----@param clubId? string
+---@param clubId? ClubId
 function C_Calendar.EventSetClubId(clubId) end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_Calendar.EventSetDate)
@@ -243,7 +243,7 @@ function C_Calendar.EventSortInvites(criterion, reverse) end
 function C_Calendar.EventTentative() end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_Calendar.GetClubCalendarEvents)
----@param clubId string
+---@param clubId ClubId
 ---@param startTime CalendarTime
 ---@param endTime CalendarTime
 ---@return CalendarDayEvent[] events
@@ -265,7 +265,7 @@ function C_Calendar.GetDefaultGuildFilter() end
 function C_Calendar.GetEventIndex() end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_Calendar.GetEventIndexInfo)
----@param eventID string
+---@param eventID CalendarEventID
 ---@param monthOffset? number
 ---@param monthDay? number
 ---@return CalendarEventIndexInfo? eventIndexInfo
@@ -312,7 +312,7 @@ function C_Calendar.GetMinDate() end
 function C_Calendar.GetMonthInfo(offsetMonths) end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_Calendar.GetNextClubId)
----@return string? clubId
+---@return ClubId? clubId
 function C_Calendar.GetNextClubId() end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_Calendar.GetNumDayEvents)
@@ -349,7 +349,7 @@ function C_Calendar.IsActionPending() end
 function C_Calendar.IsEventOpen() end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_Calendar.MassInviteCommunity)
----@param clubId string
+---@param clubId ClubId
 ---@param minLevel number
 ---@param maxLevel number
 ---@param maxRankOrder? number
@@ -384,14 +384,14 @@ function C_Calendar.SetAbsMonth(month, year) end
 function C_Calendar.SetMonth(offsetMonths) end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_Calendar.SetNextClubId)
----@param clubId? string
+---@param clubId? ClubId
 function C_Calendar.SetNextClubId(clubId) end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_Calendar.UpdateEvent)
 function C_Calendar.UpdateEvent() end
 
 ---@class CalendarDayEvent
----@field eventID string
+---@field eventID CalendarEventID
 ---@field title string
 ---@field isCustomTitle boolean
 ---@field startTime CalendarTime
@@ -399,7 +399,7 @@ function C_Calendar.UpdateEvent() end
 ---@field calendarType string
 ---@field sequenceType string
 ---@field eventType Enum.CalendarEventType
----@field iconTexture number?
+---@field iconTexture fileID?
 ---@field modStatus string
 ---@field inviteStatus Enum.CalendarStatus
 ---@field invitedBy string
@@ -410,7 +410,7 @@ function C_Calendar.UpdateEvent() end
 ---@field difficultyName string
 ---@field dontDisplayBanner boolean
 ---@field dontDisplayEnd boolean
----@field clubID string
+---@field clubID ClubId
 ---@field isLocked boolean
 
 ---@class CalendarEventIndexInfo
@@ -447,7 +447,7 @@ function C_Calendar.UpdateEvent() end
 ---@field type Enum.CalendarInviteType
 ---@field notes string
 ---@field classID number?
----@field guid string
+---@field guid WOWGUID
 
 ---@class CalendarEventStatusOption
 ---@field status Enum.CalendarStatus
@@ -455,7 +455,7 @@ function C_Calendar.UpdateEvent() end
 
 ---@class CalendarEventTextureInfo
 ---@field title string
----@field iconTexture number
+---@field iconTexture fileID
 ---@field expansionLevel number
 ---@field difficultyId number?
 ---@field mapId number?
@@ -466,7 +466,7 @@ function C_Calendar.UpdateEvent() end
 ---@field eventType Enum.CalendarEventType
 
 ---@class CalendarGuildEventInfo
----@field eventID string
+---@field eventID CalendarEventID
 ---@field year number
 ---@field month number
 ---@field monthDay number
@@ -476,9 +476,9 @@ function C_Calendar.UpdateEvent() end
 ---@field eventType Enum.CalendarEventType
 ---@field title string
 ---@field calendarType string
----@field texture number
+---@field texture fileID
 ---@field inviteStatus Enum.CalendarStatus
----@field clubID string
+---@field clubID ClubId
 
 ---@class CalendarGuildFilterInfo
 ---@field minLevel number
@@ -488,7 +488,7 @@ function C_Calendar.UpdateEvent() end
 ---@class CalendarHolidayInfo
 ---@field name string
 ---@field description string
----@field texture number
+---@field texture fileID
 ---@field startTime CalendarTime?
 ---@field endTime CalendarTime?
 

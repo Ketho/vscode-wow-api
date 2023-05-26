@@ -19,13 +19,13 @@ function C_CovenantPreview.GetCovenantInfoForPlayerChoiceResponseID(playerChoice
 ---@field texture number
 
 ---@class CovenantPreviewInfo
----@field textureKit string
+---@field textureKit textureKit
 ---@field transmogSetID number
 ---@field mountID number
 ---@field covenantName string
 ---@field covenantZone string
 ---@field description string
----@field covenantCrest string
+---@field covenantCrest textureAtlas
 ---@field covenantAbilities CovenantAbilityInfo[]
 ---@field fromPlayerChoice boolean
 ---@field covenantSoulbinds CovenantSoulbindInfo[]
@@ -33,7 +33,7 @@ function C_CovenantPreview.GetCovenantInfoForPlayerChoiceResponseID(playerChoice
 
 ---@class CovenantSoulbindInfo
 ---@field spellID number
----@field uiTextureKit string
+---@field uiTextureKit textureKit
 ---@field name string
 ---@field description string
 ---@field sortOrder number

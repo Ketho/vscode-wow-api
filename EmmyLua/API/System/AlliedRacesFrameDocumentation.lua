@@ -20,11 +20,11 @@ function C_AlliedRaces.GetRaceInfoByID(raceID) end
 ---@field femaleName string
 ---@field description string
 ---@field raceFileString string
----@field crestAtlas string
----@field modelBackgroundAtlas string
+---@field crestAtlas textureAtlas
+---@field modelBackgroundAtlas textureAtlas
 ---@field bannerColor ColorMixin
 
 ---@class AlliedRaceRacialAbility
 ---@field description string
 ---@field name string
----@field icon number
+---@field icon fileID

@@ -55,6 +55,11 @@ function C_ClassTalents.GetNextStarterBuildPurchase() end
 ---@return boolean isActive
 function C_ClassTalents.GetStarterBuildActive() end
 
+---[Documentation](https://wowpedia.fandom.com/wiki/API_C_ClassTalents.GetTraitTreeForSpec)
+---@param specID number
+---@return number? treeID
+function C_ClassTalents.GetTraitTreeForSpec(specID) end
+
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_ClassTalents.HasUnspentTalentPoints)
 ---@return boolean hasUnspentPoints
 ---@return number numClassPoints
@@ -68,6 +73,11 @@ function C_ClassTalents.HasUnspentTalentPoints() end
 ---@return boolean success
 ---@return string importError
 function C_ClassTalents.ImportLoadout(configID, entries, name) end
+
+---[Documentation](https://wowpedia.fandom.com/wiki/API_C_ClassTalents.InitializeViewLoadout)
+---@param specID number
+---@param level number
+function C_ClassTalents.InitializeViewLoadout(specID, level) end
 
 ---New configs may or may not be populated and ready to load immediately after creation. Avoid calling for configs intentionally created empty.
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_ClassTalents.IsConfigPopulated)
@@ -113,6 +123,11 @@ function C_ClassTalents.SetUsesSharedActionBars(configID, usesShared) end
 ---@param specID number
 ---@param configID? number
 function C_ClassTalents.UpdateLastSelectedSavedConfigID(specID, configID) end
+
+---[Documentation](https://wowpedia.fandom.com/wiki/API_C_ClassTalents.ViewLoadout)
+---@param entries ImportLoadoutEntryInfo[]
+---@return boolean success
+function C_ClassTalents.ViewLoadout(entries) end
 
 ---@class ImportLoadoutEntryInfo
 ---@field nodeID number

@@ -68,5 +68,5 @@ function C_CampaignInfo.UsesNormalQuestIcons(campaignID) end
 ---@class CampaignInfo
 ---@field name string
 ---@field description string
----@field uiTextureKit string
+---@field uiTextureKit textureKit
 ---@field isWarCampaign boolean

@@ -3,8 +3,8 @@
 ---@field itemID number
 ---@field spellID number
 ---@field skillLineAbilityID number
----@field tipAmountAvg number
----@field tipAmountMax number
+---@field tipAmountAvg WOWMONEY
+---@field tipAmountMax WOWMONEY
 ---@field numAvailable number
 
 ---@class CraftingOrderClaimsRemainingInfo
@@ -32,7 +32,8 @@
 ---@field itemID number
 ---@field itemName string
 ---@field primaryCategoryID number
----@field iLvl number
+---@field iLvlMin number
+---@field iLvlMax number?
 ---@field canUse boolean
 ---@field bindOnPickup boolean
 ---@field qualityIlvlBonuses number[]?
@@ -66,38 +67,38 @@
 ---@field extraColumnType Enum.AuctionHouseExtraColumn?
 
 ---@class CraftingOrderInfo
----@field orderID number
+---@field orderID BigUInteger
 ---@field itemID number
 ---@field spellID number
 ---@field skillLineAbilityID number
 ---@field orderType Enum.CraftingOrderType
 ---@field orderState Enum.CraftingOrderState
----@field expirationTime number
----@field claimEndTime number
+---@field expirationTime time_t
+---@field claimEndTime time_t
 ---@field minQuality number
----@field tipAmount number
----@field consortiumCut number
+---@field tipAmount WOWMONEY
+---@field consortiumCut WOWMONEY
 ---@field isRecraft boolean
 ---@field isFulfillable boolean
 ---@field reagentState Enum.CraftingOrderReagentsType
----@field customerGuid string?
+---@field customerGuid WOWGUID?
 ---@field customerName string?
----@field crafterGuid string?
+---@field crafterGuid WOWGUID?
 ---@field crafterName string?
 ---@field customerNotes string
 ---@field reagents CraftingOrderReagentInfo[]
 ---@field outputItemHyperlink string?
----@field outputItemGUID string?
+---@field outputItemGUID WOWGUID?
 ---@field recraftItemHyperlink string?
 
 ---@class CraftingOrderMailInfo
 ---@field reason Enum.RcoCloseReason
 ---@field recipeName string
----@field commissionPaid number?
+---@field commissionPaid WOWMONEY?
 ---@field crafterNote string?
----@field crafterGUID string?
+---@field crafterGUID WOWGUID?
 ---@field crafterName string?
----@field customerGUID string?
+---@field customerGUID WOWGUID?
 ---@field customerName string?
 
 ---@class CraftingOrderPersonalOrdersInfo
@@ -119,10 +120,10 @@
 ---@field skillLineAbilityID number
 ---@field orderType Enum.CraftingOrderType
 ---@field orderDuration Enum.CraftingOrderDuration
----@field tipAmount number
+---@field tipAmount WOWMONEY
 ---@field customerNotes string
 ---@field reagentItems RegularReagentInfo[]
 ---@field craftingReagentItems CraftingReagentInfo[]
 ---@field minCraftingQualityID number?
 ---@field orderTarget string?
----@field recraftItem string?
+---@field recraftItem WOWGUID?

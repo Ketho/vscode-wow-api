@@ -6,7 +6,7 @@ C_Navigation = {}
 function C_Navigation.GetDistance() end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_Navigation.GetFrame)
----@return table? frame
+---@return ScriptRegion? frame
 function C_Navigation.GetFrame() end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_Navigation.GetTargetState)

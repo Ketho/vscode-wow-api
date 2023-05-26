@@ -9,7 +9,7 @@ function C_CraftingOrders.AreOrderNotesDisabled() end
 ---@param skillLineAbilityID number
 ---@param orderType number|Enum.CraftingOrderType
 ---@param orderDuration number|Enum.CraftingOrderDuration
----@return number deposit
+---@return WOWMONEY deposit
 function C_CraftingOrders.CalculateCraftingOrderPostingFee(skillLineAbilityID, orderType, orderDuration) end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_CraftingOrders.CanOrderSkillAbility)
@@ -18,11 +18,11 @@ function C_CraftingOrders.CalculateCraftingOrderPostingFee(skillLineAbilityID, o
 function C_CraftingOrders.CanOrderSkillAbility(skillLineAbilityID) end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_CraftingOrders.CancelOrder)
----@param orderID number
+---@param orderID BigUInteger
 function C_CraftingOrders.CancelOrder(orderID) end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_CraftingOrders.ClaimOrder)
----@param orderID number
+---@param orderID BigUInteger
 ---@param profession number|Enum.Profession
 function C_CraftingOrders.ClaimOrder(orderID, profession) end
 
@@ -33,7 +33,7 @@ function C_CraftingOrders.CloseCrafterCraftingOrders() end
 function C_CraftingOrders.CloseCustomerCraftingOrders() end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_CraftingOrders.FulfillOrder)
----@param orderID number
+---@param orderID BigUInteger
 ---@param crafterNote string
 ---@param profession number|Enum.Profession
 function C_CraftingOrders.FulfillOrder(orderID, crafterNote, profession) end
@@ -51,7 +51,7 @@ function C_CraftingOrders.GetCrafterBuckets() end
 function C_CraftingOrders.GetCrafterOrders() end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_CraftingOrders.GetCraftingOrderTime)
----@return number time
+---@return BigUInteger time
 function C_CraftingOrders.GetCraftingOrderTime() end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_CraftingOrders.GetCustomerCategories)
@@ -76,7 +76,7 @@ function C_CraftingOrders.GetDefaultOrdersSkillLine() end
 function C_CraftingOrders.GetMyOrders() end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_CraftingOrders.GetNumFavoriteCustomerOptions)
----@return number numFavorites
+---@return BigUInteger numFavorites
 function C_CraftingOrders.GetNumFavoriteCustomerOptions() end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_CraftingOrders.GetOrderClaimInfo)
@@ -108,7 +108,7 @@ function C_CraftingOrders.OpenCrafterCraftingOrders() end
 function C_CraftingOrders.OpenCustomerCraftingOrders() end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_CraftingOrders.OrderCanBeRecrafted)
----@param orderID number
+---@param orderID BigUInteger
 ---@return boolean recraftable
 function C_CraftingOrders.OrderCanBeRecrafted(orderID) end
 
@@ -120,13 +120,13 @@ function C_CraftingOrders.ParseCustomerOptions() end
 function C_CraftingOrders.PlaceNewOrder(orderInfo) end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_CraftingOrders.RejectOrder)
----@param orderID number
+---@param orderID BigUInteger
 ---@param crafterNote string
 ---@param profession number|Enum.Profession
 function C_CraftingOrders.RejectOrder(orderID, crafterNote, profession) end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_CraftingOrders.ReleaseOrder)
----@param orderID number
+---@param orderID BigUInteger
 ---@param profession number|Enum.Profession
 function C_CraftingOrders.ReleaseOrder(orderID, profession) end
 

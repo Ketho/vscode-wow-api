@@ -47,6 +47,12 @@ function C_EncounterJournal.InstanceHasLoot(instanceID) end
 ---@return boolean isEncounterComplete
 function C_EncounterJournal.IsEncounterComplete(journalEncounterID) end
 
+---[Documentation](https://wowpedia.fandom.com/wiki/API_C_EncounterJournal.OnClose)
+function C_EncounterJournal.OnClose() end
+
+---[Documentation](https://wowpedia.fandom.com/wiki/API_C_EncounterJournal.OnOpen)
+function C_EncounterJournal.OnOpen() end
+
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_EncounterJournal.ResetSlotFilter)
 function C_EncounterJournal.ResetSlotFilter() end
 
@@ -62,6 +68,10 @@ function C_EncounterJournal.SetPreviewPvpTier(tier) end
 ---@param filterSlot number|Enum.ItemSlotFilterType
 function C_EncounterJournal.SetSlotFilter(filterSlot) end
 
+---[Documentation](https://wowpedia.fandom.com/wiki/API_C_EncounterJournal.SetTab)
+---@param tabIdx number
+function C_EncounterJournal.SetTab(tabIdx) end
+
 ---@class DungeonEntranceMapInfo
 ---@field areaPoiID number
 ---@field position Vector2DMixin
@@ -76,7 +86,7 @@ function C_EncounterJournal.SetSlotFilter(filterSlot) end
 ---@field name string?
 ---@field itemQuality string?
 ---@field filterType Enum.ItemSlotFilterType?
----@field icon number?
+---@field icon fileID?
 ---@field slot string?
 ---@field armorType string?
 ---@field link string?
@@ -96,7 +106,7 @@ function C_EncounterJournal.SetSlotFilter(filterSlot) end
 ---@field title string
 ---@field description string?
 ---@field headerType number
----@field abilityIcon number
+---@field abilityIcon fileID
 ---@field creatureDisplayID number
 ---@field uiModelSceneID number
 ---@field siblingSectionID number?

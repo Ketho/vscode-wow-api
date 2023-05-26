@@ -87,7 +87,7 @@ function C_CovenantSanctumUI.RequestCatchUpState() end
 ---@field titleMaskID number?
 ---@field garrFollowerID number?
 ---@field transmogIllusionSourceID number?
----@field icon number?
+---@field icon fileID?
 ---@field name string?
 ---@field description string?
 ---@field toastDescription string?

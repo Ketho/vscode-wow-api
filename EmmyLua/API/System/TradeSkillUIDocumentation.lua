@@ -16,7 +16,7 @@ function C_TradeSkillUI.CraftEnchant(recipeSpellID, numCasts, craftingReagents, 
 ---@param numCasts? number Default = 1
 ---@param craftingReagents? CraftingReagentInfo[]
 ---@param recipeLevel? number
----@param orderID? number
+---@param orderID? BigUInteger
 function C_TradeSkillUI.CraftRecipe(recipeSpellID, numCasts, craftingReagents, recipeLevel, orderID) end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_TradeSkillUI.CraftSalvage)
@@ -56,14 +56,14 @@ function C_TradeSkillUI.GetCraftableCount(recipeSpellID, recipeLevel) end
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_TradeSkillUI.GetCraftingOperationInfo)
 ---@param recipeID number
 ---@param craftingReagents CraftingReagentInfo[]
----@param allocationItemGUID? string
+---@param allocationItemGUID? WOWGUID
 ---@return CraftingOperationInfo? info
 function C_TradeSkillUI.GetCraftingOperationInfo(recipeID, craftingReagents, allocationItemGUID) end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_TradeSkillUI.GetCraftingOperationInfoForOrder)
 ---@param recipeID number
 ---@param craftingReagents CraftingReagentInfo[]
----@param orderID number
+---@param orderID BigUInteger
 ---@return CraftingOperationInfo? info
 function C_TradeSkillUI.GetCraftingOperationInfoForOrder(recipeID, craftingReagents, orderID) end
 
@@ -71,7 +71,7 @@ function C_TradeSkillUI.GetCraftingOperationInfoForOrder(recipeID, craftingReage
 ---@param recipeSpellID number
 ---@param craftingReagentIndex number
 ---@param craftingReagents CraftingReagentInfo[]
----@param allocationItemGUID? string
+---@param allocationItemGUID? WOWGUID
 ---@return string[] bonusText
 function C_TradeSkillUI.GetCraftingReagentBonusText(recipeSpellID, craftingReagentIndex, craftingReagents, allocationItemGUID) end
 
@@ -82,7 +82,7 @@ function C_TradeSkillUI.GetCraftingTargetItems(itemIDs) end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_TradeSkillUI.GetEnchantItems)
 ---@param recipeID number
----@return string[] items
+---@return WOWGUID[] items
 function C_TradeSkillUI.GetEnchantItems(recipeID) end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_TradeSkillUI.GetFactionSpecificOutputItem)
@@ -102,27 +102,27 @@ function C_TradeSkillUI.GetGatheringOperationInfo(recipeID) end
 function C_TradeSkillUI.GetHideUnownedFlags(recipeID) end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_TradeSkillUI.GetItemCraftedQualityByItemInfo)
----@param itemInfo string
+---@param itemInfo ItemInfo
 ---@return number? quality
 function C_TradeSkillUI.GetItemCraftedQualityByItemInfo(itemInfo) end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_TradeSkillUI.GetItemReagentQualityByItemInfo)
----@param itemInfo string
+---@param itemInfo ItemInfo
 ---@return number? quality
 function C_TradeSkillUI.GetItemReagentQualityByItemInfo(itemInfo) end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_TradeSkillUI.GetItemSlotModifications)
----@param itemGUID string
+---@param itemGUID WOWGUID
 ---@return CraftingItemSlotModification[] slotMods
 function C_TradeSkillUI.GetItemSlotModifications(itemGUID) end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_TradeSkillUI.GetItemSlotModificationsForOrder)
----@param orderID number
+---@param orderID BigUInteger
 ---@return CraftingItemSlotModification[] slotMods
 function C_TradeSkillUI.GetItemSlotModificationsForOrder(orderID) end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_TradeSkillUI.GetOriginalCraftRecipeID)
----@param itemGUID string
+---@param itemGUID WOWGUID
 ---@return number? recipeID
 ---@return number? skillLineAbilityID
 function C_TradeSkillUI.GetOriginalCraftRecipeID(itemGUID) end
@@ -139,6 +139,11 @@ function C_TradeSkillUI.GetProfessionChildSkillLineID() end
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_TradeSkillUI.GetProfessionForCursorItem)
 ---@return Enum.Profession? profession
 function C_TradeSkillUI.GetProfessionForCursorItem() end
+
+---[Documentation](https://wowpedia.fandom.com/wiki/API_C_TradeSkillUI.GetProfessionInfoByRecipeID)
+---@param recipeID number
+---@return ProfessionInfo info
+function C_TradeSkillUI.GetProfessionInfoByRecipeID(recipeID) end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_TradeSkillUI.GetProfessionInfoBySkillLineID)
 ---@param skillLineID number
@@ -181,6 +186,11 @@ function C_TradeSkillUI.GetQualitiesForRecipe(recipeID) end
 ---@return string bonusText
 function C_TradeSkillUI.GetReagentDifficultyText(craftingReagentIndex, craftingReagents) end
 
+---[Documentation](https://wowpedia.fandom.com/wiki/API_C_TradeSkillUI.GetReagentRequirementItemIDs)
+---@param itemID number
+---@return number[] itemIDs
+function C_TradeSkillUI.GetReagentRequirementItemIDs(itemID) end
+
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_TradeSkillUI.GetReagentSlotStatus)
 ---@param mcrSlotID number
 ---@param recipeSpellID number
@@ -192,7 +202,7 @@ function C_TradeSkillUI.GetReagentSlotStatus(mcrSlotID, recipeSpellID, skillLine
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_TradeSkillUI.GetRecipeDescription)
 ---@param recipeID number
 ---@param craftingReagents CraftingReagentInfo[]
----@param allocationItemGUID? string
+---@param allocationItemGUID? WOWGUID
 ---@return string description
 function C_TradeSkillUI.GetRecipeDescription(recipeID, craftingReagents, allocationItemGUID) end
 
@@ -217,9 +227,9 @@ function C_TradeSkillUI.GetRecipeInfoForSkillLineAbility(skillLineAbilityID, rec
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_TradeSkillUI.GetRecipeOutputItemData)
 ---@param recipeSpellID number
 ---@param reagents? CraftingReagentInfo[]
----@param allocationItemGUID? string
+---@param allocationItemGUID? WOWGUID
 ---@param overrideQualityID? number
----@param recraftOrderID? number
+---@param recraftOrderID? BigUInteger
 ---@return CraftingRecipeOutputInfo outputInfo
 function C_TradeSkillUI.GetRecipeOutputItemData(recipeSpellID, reagents, allocationItemGUID, overrideQualityID, recraftOrderID) end
 
@@ -254,8 +264,14 @@ function C_TradeSkillUI.GetRecipesTracked(isRecraft) end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_TradeSkillUI.GetRecraftItems)
 ---@param recipeID? number
----@return string[] items
+---@return WOWGUID[] items
 function C_TradeSkillUI.GetRecraftItems(recipeID) end
+
+---[Documentation](https://wowpedia.fandom.com/wiki/API_C_TradeSkillUI.GetRecraftRemovalWarnings)
+---@param itemGUID WOWGUID
+---@param replacedItemIDs number[]
+---@return string[] warnings
+function C_TradeSkillUI.GetRecraftRemovalWarnings(itemGUID, replacedItemIDs) end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_TradeSkillUI.GetRemainingRecasts)
 ---@return number remaining
@@ -275,7 +291,7 @@ function C_TradeSkillUI.GetShowLearned() end
 function C_TradeSkillUI.GetShowUnlearned() end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_TradeSkillUI.GetSkillLineForGear)
----@param itemInfo string
+---@param itemInfo ItemInfo
 ---@return number? skillLineID
 function C_TradeSkillUI.GetSkillLineForGear(itemInfo) end
 
@@ -292,6 +308,12 @@ function C_TradeSkillUI.GetTradeSkillDisplayName(skillLineID) end
 ---@return boolean hasFavorites
 function C_TradeSkillUI.HasFavoriteOrderRecipes() end
 
+---[Documentation](https://wowpedia.fandom.com/wiki/API_C_TradeSkillUI.IsEnchantTargetValid)
+---@param recipeID number
+---@param itemGUID WOWGUID
+---@return boolean valid
+function C_TradeSkillUI.IsEnchantTargetValid(recipeID, itemGUID) end
+
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_TradeSkillUI.IsNPCCrafting)
 ---@return boolean result
 function C_TradeSkillUI.IsNPCCrafting() end
@@ -302,7 +324,7 @@ function C_TradeSkillUI.IsNPCCrafting() end
 function C_TradeSkillUI.IsNearProfessionSpellFocus(profession) end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_TradeSkillUI.IsOriginalCraftRecipeLearned)
----@param itemGUID string
+---@param itemGUID WOWGUID
 ---@return boolean learned
 function C_TradeSkillUI.IsOriginalCraftRecipeLearned(itemGUID) end
 
@@ -334,9 +356,15 @@ function C_TradeSkillUI.IsRecipeProfessionLearned(recipeID) end
 function C_TradeSkillUI.IsRecipeTracked(recipeID, isRecraft) end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_TradeSkillUI.IsRecraftItemEquipped)
----@param recraftItemGUID string
+---@param recraftItemGUID WOWGUID
 ---@return boolean isEquipped
 function C_TradeSkillUI.IsRecraftItemEquipped(recraftItemGUID) end
+
+---[Documentation](https://wowpedia.fandom.com/wiki/API_C_TradeSkillUI.IsRecraftReagentValid)
+---@param itemGUID WOWGUID
+---@param itemID number
+---@return boolean valid
+function C_TradeSkillUI.IsRecraftReagentValid(itemGUID, itemID) end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_TradeSkillUI.IsRuneforging)
 ---@return boolean result
@@ -357,17 +385,19 @@ function C_TradeSkillUI.OpenTradeSkill(skillLineID) end
 function C_TradeSkillUI.RecraftLimitCategoryValid(reagentItemID) end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_TradeSkillUI.RecraftRecipe)
----@param itemGUID string
+---@param itemGUID WOWGUID
 ---@param craftingReagents? CraftingReagentInfo[]
+---@param removedModifications? CraftingItemSlotModification[]
 ---@return boolean result
-function C_TradeSkillUI.RecraftRecipe(itemGUID, craftingReagents) end
+function C_TradeSkillUI.RecraftRecipe(itemGUID, craftingReagents, removedModifications) end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_TradeSkillUI.RecraftRecipeForOrder)
----@param orderID number
----@param itemGUID string
+---@param orderID BigUInteger
+---@param itemGUID WOWGUID
 ---@param craftingReagents? CraftingReagentInfo[]
+---@param removedModifications? CraftingItemSlotModification[]
 ---@return boolean result
-function C_TradeSkillUI.RecraftRecipeForOrder(orderID, itemGUID, craftingReagents) end
+function C_TradeSkillUI.RecraftRecipeForOrder(orderID, itemGUID, craftingReagents, removedModifications) end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_TradeSkillUI.SetOnlyShowAvailableForOrders)
 ---@param flag boolean

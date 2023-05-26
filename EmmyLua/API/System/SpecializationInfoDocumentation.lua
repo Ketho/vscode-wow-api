@@ -21,7 +21,7 @@ function C_SpecializationInfo.CanPlayerUseTalentUI() end
 function C_SpecializationInfo.GetAllSelectedPvpTalentIDs() end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_SpecializationInfo.GetInspectSelectedPvpTalent)
----@param inspectedUnit string
+---@param inspectedUnit UnitToken
 ---@param talentIndex number
 ---@return number? selectedTalentID
 function C_SpecializationInfo.GetInspectSelectedPvpTalent(inspectedUnit, talentIndex) end

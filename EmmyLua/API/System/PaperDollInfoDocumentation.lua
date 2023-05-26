@@ -22,13 +22,13 @@ function C_PaperDollInfo.GetArmorEffectiveness(armor, attackerLevel) end
 function C_PaperDollInfo.GetArmorEffectivenessAgainstTarget(armor) end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_PaperDollInfo.GetInspectAzeriteItemEmpoweredChoices)
----@param unit string
+---@param unit UnitToken
 ---@param equipmentSlotIndex number
 ---@return number[] azeritePowerIDs
 function C_PaperDollInfo.GetInspectAzeriteItemEmpoweredChoices(unit, equipmentSlotIndex) end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_PaperDollInfo.GetInspectItemLevel)
----@param unit string
+---@param unit UnitToken
 ---@return number equippedItemLevel
 function C_PaperDollInfo.GetInspectItemLevel(unit) end
 
@@ -41,7 +41,7 @@ function C_PaperDollInfo.GetInspectRatedSoloShuffleData() end
 function C_PaperDollInfo.GetMinItemLevel() end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_PaperDollInfo.GetStaggerPercentage)
----@param unit string
+---@param unit UnitToken
 ---@return number stagger
 ---@return number? staggerAgainstTarget
 function C_PaperDollInfo.GetStaggerPercentage(unit) end

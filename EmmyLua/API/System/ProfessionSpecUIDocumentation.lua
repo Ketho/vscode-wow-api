@@ -47,6 +47,10 @@ function C_ProfSpecs.GetDescriptionForPerk(perkID) end
 ---@return number entryID
 function C_ProfSpecs.GetEntryIDForPerk(perkID) end
 
+---[Documentation](https://wowpedia.fandom.com/wiki/API_C_ProfSpecs.GetNewSpecReminderProfName)
+---@return string? profName
+function C_ProfSpecs.GetNewSpecReminderProfName() end
+
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_ProfSpecs.GetPerksForPath)
 ---@param pathID number
 ---@return SpecPerkInfo[] perkInfos

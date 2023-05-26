@@ -44,7 +44,7 @@ function C_Minimap.GetTrackingFilter(spellIndex) end
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_Minimap.GetTrackingInfo)
 ---@param spellIndex number
 ---@return string name
----@return number textureFileID
+---@return fileID textureFileID
 ---@return boolean active
 ---@return string type
 ---@return number subType
@@ -99,7 +99,7 @@ function C_Minimap.ShouldUseHybridMinimap() end
 
 ---@class MinimapScriptTrackingInfo
 ---@field name string
----@field textureFileID number
+---@field textureFileID fileID
 ---@field active boolean
 ---@field type string
 ---@field subType number

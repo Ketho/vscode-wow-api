@@ -2,11 +2,11 @@
 C_IncomingSummon = {}
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_IncomingSummon.HasIncomingSummon)
----@param unit string
+---@param unit UnitToken
 ---@return boolean summon
 function C_IncomingSummon.HasIncomingSummon(unit) end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_IncomingSummon.IncomingSummonStatus)
----@param unit string
+---@param unit UnitToken
 ---@return Enum.SummonStatus status
 function C_IncomingSummon.IncomingSummonStatus(unit) end

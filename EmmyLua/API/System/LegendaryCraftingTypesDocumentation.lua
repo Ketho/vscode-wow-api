@@ -4,7 +4,7 @@
 ---@field amount number
 
 ---@class RuneforgeItemPreviewInfo
----@field itemGUID string
+---@field itemGUID WOWGUID
 ---@field itemLevel number
 ---@field itemName string
 
@@ -24,7 +24,7 @@
 ---@field descriptionSpellID number
 ---@field description string
 ---@field source string?
----@field iconFileID number
+---@field iconFileID fileID
 ---@field specName string?
 ---@field matchesSpec boolean
 ---@field matchesCovenant boolean

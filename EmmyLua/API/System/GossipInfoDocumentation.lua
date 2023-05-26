@@ -78,6 +78,12 @@ function C_GossipInfo.SelectAvailableQuest(optionID) end
 ---@param confirmed? boolean
 function C_GossipInfo.SelectOption(optionID, text, confirmed) end
 
+---[Documentation](https://wowpedia.fandom.com/wiki/API_C_GossipInfo.SelectOptionByIndex)
+---@param optionID number
+---@param text? string
+---@param confirmed? boolean
+function C_GossipInfo.SelectOptionByIndex(optionID, text, confirmed) end
+
 ---@class FriendshipReputationInfo
 ---@field friendshipFactionID number
 ---@field standing number
@@ -101,14 +107,14 @@ function C_GossipInfo.SelectOption(optionID, text, confirmed) end
 ---@field rewardType Enum.GossipOptionRewardType
 
 ---@class GossipOptionUIInfo
----@field gossipOptionID number
+---@field gossipOptionID number?
 ---@field name string
----@field icon number
+---@field icon fileID
 ---@field rewards GossipOptionRewardInfo[]
 ---@field status Enum.GossipOptionStatus
 ---@field spellID number?
 ---@field flags number
----@field overrideIconID number?
+---@field overrideIconID fileID?
 ---@field selectOptionWhenOnlyOption boolean
 ---@field orderIndex number
 

@@ -52,7 +52,7 @@ function C_MountJournal.GetDisplayedMountID(displayIndex) end
 ---@param displayIndex number
 ---@return string name
 ---@return number spellID
----@return number icon
+---@return fileID icon
 ---@return boolean isActive
 ---@return boolean isUsable
 ---@return number sourceType
@@ -111,7 +111,7 @@ function C_MountJournal.GetMountIDs() end
 ---@param mountID number
 ---@return string name
 ---@return number spellID
----@return number icon
+---@return fileID icon
 ---@return boolean isActive
 ---@return boolean isUsable
 ---@return number sourceType
@@ -250,7 +250,7 @@ function C_MountJournal.SummonByID(mountID) end
 ---@class MountInfo
 ---@field name string
 ---@field spellID number
----@field icon number
+---@field icon fileID
 ---@field isActive boolean
 ---@field isUsable boolean
 ---@field sourceType number
