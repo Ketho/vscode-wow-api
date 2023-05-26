@@ -1,15 +1,66 @@
 import * as assert from 'assert';
-
-// You can import and use all API from the 'vscode' module
-// as well as import your extension to test it
+import { expect } from 'chai';
+import * as path from 'path'
 import * as vscode from 'vscode';
-// import * as myExtension from '../extension';
+import * as wowApiExtension from '../../extension';
 
-suite('Extension Test Suite', () => {
+
+function delay(ms: number) {
+    return new Promise( resolve => setTimeout(resolve, ms) );
+}
+
+suite('Config Tests', () => {
 	vscode.window.showInformationMessage('Start all tests.');
 
-	test('Sample test', () => {
-		assert.equal(-1, [1, 2, 3].indexOf(5));
-		assert.equal(-1, [1, 2, 3].indexOf(0));
+	test('By default, it sets both WoW API and FrameXML libraries', async () => {
+		await vscode.workspace.getConfiguration("Lua").update("workspace.library", undefined, true)	
+		await vscode.workspace.getConfiguration("wowAPI").update("emmyLua.loadFrameXML", undefined, true)
+		const document = await vscode.workspace.openTextDocument({
+			language: "lua"
+		})
+		await vscode.window.showTextDocument(document)
+		await delay(3000)
+
+		const luaConfig = vscode.workspace.getConfiguration("Lua")
+		
+		try {
+			expect(luaConfig.get("workspace.library")).to.have.all.members([
+				path.resolve(__dirname, '../../../') + "/EmmyLua/Optional",
+				path.resolve(__dirname, '../../../') + "/EmmyLua/API"
+			])
+		} finally {
+			for (const td of vscode.workspace.textDocuments) {
+				await vscode.commands.executeCommand('workbench.action.closeActiveEditor');
+			}
+		}
 	});
+
+	// TODO: Fix extension reactivation between tests
+
+	// test('It does not set FrameXML libraries when disabled', async () => {
+	// 	await vscode.workspace.getConfiguration("Lua").update("workspace.library", undefined, true)	
+	// 	await vscode.workspace.getConfiguration("wowAPI").update("emmyLua.loadFrameXML", false, true)
+
+	// 	const document = await vscode.workspace.openTextDocument({
+	// 		language: "lua"
+	// 	})
+	// 	await vscode.window.showTextDocument(document)
+	// 	await delay(5000)
+
+	// 	const luaConfig = vscode.workspace.getConfiguration("Lua")
+	// 	const wowAPIConfig = vscode.workspace.getConfiguration("wowAPI")
+
+	// 	try {
+	// 		expect(luaConfig.get("workspace.library")).to.equal([
+	// 			"/home/josh/workspace/vscode-wow-api/EmmyLua/API",
+	// 		])
+	// 	} finally {
+	// 		const filteredTextDocuments = vscode.workspace.textDocuments //.filter(td => td.fileName === 'scratchFileName')
+
+	// 		for (const _ of filteredTextDocuments) {
+	// 			// await vscode.window.showTextDocument(td, { preview: true, preserveFocus: false });
+	// 			await vscode.commands.executeCommand('workbench.action.closeActiveEditor');
+	// 		}
+	// 	}
+	// });
 });
