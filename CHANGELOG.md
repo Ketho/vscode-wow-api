@@ -6,13 +6,16 @@
 - The Classic (TBC) API is not supported ([#13](https://github.com/Ketho/vscode-wow-api/issues/13))
 - Widget API is not yet updated from 10.0.2 Blizzard_APIDocumentationGenerated
 
+## [0.9.11] - 2023-05-27
+- 🐞 Bug Fixes: PR [#101](https://github.com/Ketho/vscode-wow-api/pull/101), [#100](https://github.com/Ketho/vscode-wow-api/issues/100) Fixed loading of Lua definitions
+- 🌙 Definitions: Updated to patch 10.1.0 from Wowpedia and Blizzard_APIDocumentation
+- 🌙 Definitions: PR [#98](https://github.com/Ketho/vscode-wow-api/pull/98), [#99](https://github.com/Ketho/vscode-wow-api/pull/99) Updated LibDBIcon, AceGUI
+
 ## [0.9.10] - 2023-04-19
-### Added
 - 🌙 Definitions: Updated Ace3, LibSink, HereBeDragons by [Torhal](https://github.com/Ketho/vscode-wow-api/pulls?q=is%3Apr+author%3ATorhal)
 - 🌙 Definitions: [#76](https://github.com/Ketho/vscode-wow-api/pull/76) Added "questnpc" UnitId
 
 ## [0.9.9] - 2023-03-21
-### Added
 - 🌙 Definitions: PR [#75](https://github.com/Ketho/vscode-wow-api/pull/75) AceConfig-3.0 Update
 - 🌙 Definitions: PR [#74](https://github.com/Ketho/vscode-wow-api/pull/74) Add type definitions for HereBeDragons-2.0
 
@@ -350,6 +353,7 @@ Libraries
 ### Added
 - 🚧 Wip: Development work
 
+[0.9.11]: https://github.com/Ketho/vscode-wow-api/releases/tag/v0.9.11
 [0.9.10]: https://github.com/Ketho/vscode-wow-api/releases/tag/v0.9.10
 [0.9.9]: https://github.com/Ketho/vscode-wow-api/releases/tag/v0.9.9
 [0.9.8]: https://github.com/Ketho/vscode-wow-api/releases/tag/v0.9.8
