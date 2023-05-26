@@ -43,9 +43,14 @@ function isHoverString(document: vscode.TextDocument, range: vscode.Range) {
 export function activate(context: vscode.ExtensionContext) {
 	console.log("loaded ketho.wow-api", context.extension.id);
 
-	setExternalLibrary("API", true);
+	const config = vscode.workspace.getConfiguration("Lua");
+	const library: string[] = config.get("workspace.library")!;
+
+	setExternalLibrary("API", true, library);
 	const loadFrameXML = vscode.workspace.getConfiguration("wowAPI").get("emmyLua.loadFrameXML");
-	setExternalLibrary("Optional", loadFrameXML ? true : false);
+	setExternalLibrary("Optional", loadFrameXML, library);
+
+	config.update("workspace.library", library, true);
 
 	const completion = vscode.languages.registerCompletionItemProvider(
 		"lua",
@@ -100,7 +105,7 @@ export function activate(context: vscode.ExtensionContext) {
 	vscode.workspace.onDidChangeConfiguration((event: vscode.ConfigurationChangeEvent) => {
 		if (event.affectsConfiguration("wowAPI.emmyLua.loadFrameXML")) {
 			const loadFrameXML = vscode.workspace.getConfiguration("wowAPI").get("emmyLua.loadFrameXML");
-			setExternalLibrary("Optional", loadFrameXML ? true : false);
+			setExternalLibrary("Optional", loadFrameXML ? true : false, library);
 		}
 		else if (event.affectsConfiguration("wowAPI.locale")) {
 			const wowapi = vscode.workspace.getConfiguration("wowAPI");
@@ -108,7 +113,6 @@ export function activate(context: vscode.ExtensionContext) {
 		}
 	});
 
-	const config = vscode.workspace.getConfiguration("Lua");
 	const diag_globals: string[] = config.get("diagnostics.globals")!;
 
 	vscode.languages.onDidChangeDiagnostics((event: vscode.DiagnosticChangeEvent) => {
@@ -134,18 +138,20 @@ export function activate(context: vscode.ExtensionContext) {
 
 export function deactivate() {
 	console.log("deactivated ketho.wow-api");
-	setExternalLibrary("API", false);
-	setExternalLibrary("Optional", false);
+	const config = vscode.workspace.getConfiguration("Lua");
+	const library: string[] = config.get("workspace.library")!;
+
+	setExternalLibrary("API", false, library);
+	setExternalLibrary("Optional", false, library);
 }
 
-export function setExternalLibrary(folder: string, enable: boolean) {
+export function setExternalLibrary(folder: string, enable: boolean, library: string[]) {
 	// console.log("setExternalLibrary", folder, enable);
 	const extensionId = "ketho.wow-api";
 	const extensionPath = vscode.extensions.getExtension(extensionId)!.extensionPath;
 	// Use path.join to ensure the proper path seperators (\ for windows, / for anything else) are used.
 	const folderPath = path.join(extensionPath, "EmmyLua", folder);
-	const config = vscode.workspace.getConfiguration("Lua");
-	const library: string[] = config.get("workspace.library")!;
+
 	// remove any older versions of our path e.g. "publisher.name-0.0.1"
 	for (let i = library.length-1; i >= 0; i--) {
 		const el = library[i];
@@ -166,5 +172,4 @@ export function setExternalLibrary(folder: string, enable: boolean) {
 			library.splice(index, 1);
 		}
 	}
-	config.update("workspace.library", library, true);
 }
