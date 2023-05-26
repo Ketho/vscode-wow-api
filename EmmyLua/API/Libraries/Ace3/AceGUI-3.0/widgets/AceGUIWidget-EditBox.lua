@@ -29,8 +29,8 @@ function AceGUIEditBox:SetMaxLetters(num) end
 function AceGUIEditBox:SetFocus() end
 
 ---[Documentation](https://www.wowace.com/projects/ace3/pages/ace-gui-3-0-widgets#title-2-5-1)
----@param from number
----@param to number
+---@param from? number
+---@param to? number
 function AceGUIEditBox:HighlightText(from, to) end
 
 function AceGUIEditBox:ClearFocus() end

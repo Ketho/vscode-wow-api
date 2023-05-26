@@ -33,8 +33,8 @@ function AceGUIMultiLineEditBox:DisableButton(flag) end
 function AceGUIMultiLineEditBox:SetFocus() end
 
 ---[Documentation](https://www.wowace.com/projects/ace3/pages/ace-gui-3-0-widgets#title-2-11-1)
----@param from number
----@param to number
+---@param from? number
+---@param to? number
 function AceGUIMultiLineEditBox:HighlightText(from, to) end
 
 function AceGUIMultiLineEditBox:ClearFocus() end
