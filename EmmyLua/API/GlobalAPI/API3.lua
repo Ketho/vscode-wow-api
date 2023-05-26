@@ -1,89 +1,4 @@
 ---@meta
----[Documentation](https://wowpedia.fandom.com/wiki/API_GetGuildRenameRequired)
-function GetGuildRenameRequired() end
-
----[Documentation](https://wowpedia.fandom.com/wiki/API_GetGuildRewardInfo)
-function GetGuildRewardInfo(index) end
-
----[Documentation](https://wowpedia.fandom.com/wiki/API_GetGuildRosterInfo)
----@param index number
----@return string name
----@return string rankName
----@return number rankIndex
----@return number level
----@return string classDisplayName
----@return string zone
----@return string publicNote
----@return string officerNote
----@return boolean isOnline
----@return number status
----@return string class
----@return number achievementPoints
----@return number achievementRank
----@return boolean isMobile
----@return boolean canSoR
----@return number repStanding
----@return string guid
-function GetGuildRosterInfo(index) end
-
----[Documentation](https://wowpedia.fandom.com/wiki/API_GetGuildRosterLargestAchievementPoints)
-function GetGuildRosterLargestAchievementPoints() end
-
----[Documentation](https://wowpedia.fandom.com/wiki/API_GetGuildRosterLastOnline)
-function GetGuildRosterLastOnline(index) end
-
----[Documentation](https://wowpedia.fandom.com/wiki/API_GetGuildRosterMOTD)
----@return string motd
-function GetGuildRosterMOTD() end
-
----[Documentation](https://wowpedia.fandom.com/wiki/API_GetGuildRosterSelection)
-function GetGuildRosterSelection() end
-
----[Documentation](https://wowpedia.fandom.com/wiki/API_GetGuildRosterShowOffline)
-function GetGuildRosterShowOffline() end
-
----[Documentation](https://wowpedia.fandom.com/wiki/API_GetGuildTabardFiles)
----@return number tabardBackgroundUpper
----@return number tabardBackgroundLower
----@return number tabardEmblemUpper
----@return number tabardEmblemLower
----@return number tabardBorderUpper
----@return number tabardBorderLower
-function GetGuildTabardFiles() end
-
----[Documentation](https://wowpedia.fandom.com/wiki/API_GetGuildTradeSkillInfo)
----@param index number
----@return number skillID
----@return boolean isCollapsed
----@return string iconTexture
----@return string headerName
----@return number numOnline
----@return number numVisible
----@return number numPlayers
----@return string playerName
----@return string playerNameWithRealm
----@return string class
----@return boolean online
----@return string zone
----@return number skill
----@return string classFileName
----@return boolean isMobile
----@return number isAway
-function GetGuildTradeSkillInfo(index) end
-
----[Documentation](https://wowpedia.fandom.com/wiki/API_GetHaste)
----@return number haste
-function GetHaste() end
-
----[Documentation](https://wowpedia.fandom.com/wiki/API_GetHitModifier)
----@return number hitModifier
-function GetHitModifier() end
-
----[Documentation](https://wowpedia.fandom.com/wiki/API_GetHomePartyInfo)
----@param homePlayers table
----@return table homePlayers
-function GetHomePartyInfo(homePlayers) end
-
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_GetInboxHeaderInfo)
 ---@param index number
 ---@return string packageIcon
@@ -597,6 +512,7 @@ function GetLootMethod() end
 ---@return number reasonGreed
 ---@return number reasonDisenchant
 ---@return number deSkillRequired
+---@return boolean canTransmog
 function GetLootRollItemInfo(rollID) end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_GetLootRollItemLink)
@@ -796,15 +712,9 @@ function GetMouseButtonClicked() end
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_GetMouseButtonName)
 function GetMouseButtonName() end
 
----[Documentation](https://wowpedia.fandom.com/wiki/API_GetMouseClickFocus)
-function GetMouseClickFocus() end
-
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_GetMouseFocus)
 ---@return Frame frame
 function GetMouseFocus() end
-
----[Documentation](https://wowpedia.fandom.com/wiki/API_GetMouseMotionFocus)
-function GetMouseMotionFocus() end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_GetMovieDownloadProgress)
 function GetMovieDownloadProgress(movieId) end
@@ -945,10 +855,6 @@ function GetNumFlexRaidDungeons() end
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_GetNumFlyouts)
 function GetNumFlyouts() end
 
----[Documentation](https://wowpedia.fandom.com/wiki/API_GetNumFrames)
----@return number numFrames
-function GetNumFrames() end
-
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_GetNumGroupChannels)
 function GetNumGroupChannels() end
 
@@ -1034,9 +940,6 @@ function GetNumQuestLogRewardCurrencies() end
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_GetNumQuestLogRewardFactions)
 function GetNumQuestLogRewardFactions() end
 
----[Documentation](https://wowpedia.fandom.com/wiki/API_GetNumQuestLogRewardSpells)
-function GetNumQuestLogRewardSpells() end
-
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_GetNumQuestLogRewards)
 ---@return number numQuestRewards
 function GetNumQuestLogRewards() end
@@ -1064,9 +967,6 @@ function GetNumRandomScenarios() end
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_GetNumRewardCurrencies)
 ---@return number numCurrencies
 function GetNumRewardCurrencies() end
-
----[Documentation](https://wowpedia.fandom.com/wiki/API_GetNumRewardSpells)
-function GetNumRewardSpells() end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_GetNumRoutes)
 function GetNumRoutes(slot) end
@@ -1510,20 +1410,6 @@ function GetQuestLogRewardMoney() end
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_GetQuestLogRewardSkillPoints)
 function GetQuestLogRewardSkillPoints() end
 
----[Documentation](https://wowpedia.fandom.com/wiki/API_GetQuestLogRewardSpell)
----@param rewardIndex number
----@param questID number
----@return string texture
----@return string name
----@return boolean isTradeskillSpell
----@return boolean isSpellLearned
----@return unknown hideSpellLearnText
----@return boolean isBoostSpell
----@return number garrFollowerID
----@return unknown genericUnlock
----@return number spellID
-function GetQuestLogRewardSpell(rewardIndex, questID) end
-
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_GetQuestLogRewardTitle)
 function GetQuestLogRewardTitle() end
 
@@ -1544,9 +1430,6 @@ function GetQuestLogSpecialItemCooldown(questLogIndex) end
 ---@return number charges
 ---@return boolean showItemWhenComplete
 function GetQuestLogSpecialItemInfo(questLogIndex) end
-
----[Documentation](https://wowpedia.fandom.com/wiki/API_GetQuestLogSpellLink)
-function GetQuestLogSpellLink(rewardSpellIndex) end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_GetQuestLogTimeLeft)
 function GetQuestLogTimeLeft() end
@@ -1587,9 +1470,6 @@ function GetQuestReward(itemChoice) end
 ---@param questLogIndex number
 ---@return number sortIndex
 function GetQuestSortIndex(questLogIndex) end
-
----[Documentation](https://wowpedia.fandom.com/wiki/API_GetQuestSpellLink)
-function GetQuestSpellLink(rewardSpellIndex) end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_GetQuestText)
 function GetQuestText() end
@@ -1758,9 +1638,6 @@ function GetRewardSkillLineID() end
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_GetRewardSkillPoints)
 function GetRewardSkillPoints() end
 
----[Documentation](https://wowpedia.fandom.com/wiki/API_GetRewardSpell)
-function GetRewardSpell() end
-
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_GetRewardText)
 function GetRewardText() end
 
@@ -1844,9 +1721,6 @@ function GetScreenHeight() end
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_GetScreenWidth)
 ---@return number screenWidth
 function GetScreenWidth() end
-
----[Documentation](https://wowpedia.fandom.com/wiki/API_GetScriptCPUUsage)
-function GetScriptCPUUsage() end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_GetSecondsUntilParentalControlsKick)
 function GetSecondsUntilParentalControlsKick() end
@@ -1939,6 +1813,11 @@ function GetSocketItemRefundable() end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_GetSocketTypes)
 function GetSocketTypes(id) end
+
+---[Documentation](https://wowpedia.fandom.com/wiki/API_GetSoundEntryCount)
+---@param soundKit number
+---@return number? entryCount
+function GetSoundEntryCount(soundKit) end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_GetSpecChangeCost)
 function GetSpecChangeCost() end
@@ -2574,4 +2453,118 @@ function GetWorldPVPAreaInfo(index) end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_GetWorldPVPQueueStatus)
 function GetWorldPVPQueueStatus(queueId) end
+
+---[Documentation](https://wowpedia.fandom.com/wiki/API_GetXPExhaustion)
+---@return number exhaustionThreshold
+function GetXPExhaustion() end
+
+---[Documentation](https://wowpedia.fandom.com/wiki/API_GetZonePVPInfo)
+---@return string pvpType
+---@return boolean isFFA
+---@return string faction
+function GetZonePVPInfo() end
+
+---[Documentation](https://wowpedia.fandom.com/wiki/API_GetZoneText)
+---@return string zoneName
+function GetZoneText() end
+
+---[Documentation](https://wowpedia.fandom.com/wiki/API_GiveMasterLoot)
+function GiveMasterLoot(slot, index) end
+
+---[Documentation](https://wowpedia.fandom.com/wiki/API_GroupHasOfflineMember)
+function GroupHasOfflineMember() end
+
+---[Documentation](https://wowpedia.fandom.com/wiki/API_GuildControlAddRank)
+function GuildControlAddRank(name) end
+
+---[Documentation](https://wowpedia.fandom.com/wiki/API_GuildControlDelRank)
+function GuildControlDelRank(name) end
+
+---[Documentation](https://wowpedia.fandom.com/wiki/API_GuildControlGetAllowedShifts)
+function GuildControlGetAllowedShifts(rankOrder) end
+
+---[Documentation](https://wowpedia.fandom.com/wiki/API_GuildControlGetNumRanks)
+function GuildControlGetNumRanks() end
+
+---[Documentation](https://wowpedia.fandom.com/wiki/API_GuildControlGetRankName)
+function GuildControlGetRankName(index) end
+
+---[Documentation](https://wowpedia.fandom.com/wiki/API_GuildControlSaveRank)
+function GuildControlSaveRank(name) end
+
+---[Documentation](https://wowpedia.fandom.com/wiki/API_GuildControlSetRank)
+---@param rankOrder number
+function GuildControlSetRank(rankOrder) end
+
+---[Documentation](https://wowpedia.fandom.com/wiki/API_GuildControlSetRankFlag)
+---@param index number
+---@param enabled boolean
+function GuildControlSetRankFlag(index, enabled) end
+
+---[Documentation](https://wowpedia.fandom.com/wiki/API_GuildControlShiftRankDown)
+function GuildControlShiftRankDown(rankOrder) end
+
+---[Documentation](https://wowpedia.fandom.com/wiki/API_GuildControlShiftRankUp)
+function GuildControlShiftRankUp(rankOrder) end
+
+---[Documentation](https://wowpedia.fandom.com/wiki/API_GuildDemote)
+---@param playername string
+function GuildDemote(playername) end
+
+---[Documentation](https://wowpedia.fandom.com/wiki/API_GuildDisband)
+function GuildDisband() end
+
+---[Documentation](https://wowpedia.fandom.com/wiki/API_GuildInfo)
+function GuildInfo() end
+
+---[Documentation](https://wowpedia.fandom.com/wiki/API_GuildInvite)
+---@param playername string
+function GuildInvite(playername) end
+
+---[Documentation](https://wowpedia.fandom.com/wiki/API_GuildLeave)
+function GuildLeave() end
+
+---[Documentation](https://wowpedia.fandom.com/wiki/API_GuildMasterAbsent)
+function GuildMasterAbsent() end
+
+---[Documentation](https://wowpedia.fandom.com/wiki/API_GuildNewsSetSticky)
+function GuildNewsSetSticky(index, bool) end
+
+---[Documentation](https://wowpedia.fandom.com/wiki/API_GuildNewsSort)
+function GuildNewsSort(byDate) end
+
+---[Documentation](https://wowpedia.fandom.com/wiki/API_GuildPromote)
+---@param playername string
+function GuildPromote(playername) end
+
+---[Documentation](https://wowpedia.fandom.com/wiki/API_GuildRosterSetOfficerNote)
+function GuildRosterSetOfficerNote(index, note) end
+
+---[Documentation](https://wowpedia.fandom.com/wiki/API_GuildRosterSetPublicNote)
+function GuildRosterSetPublicNote(index, note) end
+
+---[Documentation](https://wowpedia.fandom.com/wiki/API_GuildSetLeader)
+---@param name string
+function GuildSetLeader(name) end
+
+---[Documentation](https://wowpedia.fandom.com/wiki/API_GuildSetMOTD)
+function GuildSetMOTD(note) end
+
+---[Documentation](https://wowpedia.fandom.com/wiki/API_GuildUninvite)
+---@param name string
+function GuildUninvite(name) end
+
+---[Documentation](https://wowpedia.fandom.com/wiki/API_HandleAtlasMemberCommand)
+function HandleAtlasMemberCommand() end
+
+---[Documentation](https://wowpedia.fandom.com/wiki/API_HasAPEffectsSpellPower)
+function HasAPEffectsSpellPower() end
+
+---[Documentation](https://wowpedia.fandom.com/wiki/API_HasAction)
+---@param actionSlot number
+---@return boolean hasAction
+function HasAction(actionSlot) end
+
+---[Documentation](https://wowpedia.fandom.com/wiki/API_HasArtifactEquipped)
+function HasArtifactEquipped() end
 

@@ -411,6 +411,21 @@ function C_AdventureMap.GetZoneChoiceInfo(choiceIndex) end
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_AdventureMap.StartQuest)
 function C_AdventureMap.StartQuest(questID) end
 
+---[Documentation](https://wowpedia.fandom.com/wiki/API_C_ArrowCalloutManager.AcknowledgeCallout)
+function C_ArrowCalloutManager.AcknowledgeCallout() end
+
+---[Documentation](https://wowpedia.fandom.com/wiki/API_C_ArrowCalloutManager.HideCallout)
+function C_ArrowCalloutManager.HideCallout() end
+
+---[Documentation](https://wowpedia.fandom.com/wiki/API_C_ArrowCalloutManager.HideWorldLootObjectCallout)
+function C_ArrowCalloutManager.HideWorldLootObjectCallout() end
+
+---[Documentation](https://wowpedia.fandom.com/wiki/API_C_ArrowCalloutManager.SetWorldLootObjectCalloutFromGUID)
+function C_ArrowCalloutManager.SetWorldLootObjectCalloutFromGUID() end
+
+---[Documentation](https://wowpedia.fandom.com/wiki/API_C_ArrowCalloutManager.SwapWorldLootObjectCallout)
+function C_ArrowCalloutManager.SwapWorldLootObjectCallout() end
+
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_BlackMarket.Close)
 function C_BlackMarket.Close() end
 
@@ -442,8 +457,8 @@ function C_BlackMarket.RequestItems() end
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_CharacterServices.AssignPCTDistribution)
 function C_CharacterServices.AssignPCTDistribution() end
 
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_CharacterServices.AssignPFCDistribution)
-function C_CharacterServices.AssignPFCDistribution() end
+---[Documentation](https://wowpedia.fandom.com/wiki/API_C_CharacterServices.AssignRaceOrFactionChangeDistribution)
+function C_CharacterServices.AssignRaceOrFactionChangeDistribution() end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_CharacterServices.AssignUpgradeDistribution)
 function C_CharacterServices.AssignUpgradeDistribution() end
@@ -487,44 +502,11 @@ function C_CharacterServices.SetAutomaticBoostCharacter() end
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_CharacterServicesPublic.ShouldSeeControlPopup)
 function C_CharacterServicesPublic.ShouldSeeControlPopup() end
 
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_ChatInfo.CanPlayerSpeakLanguage)
-function C_ChatInfo.CanPlayerSpeakLanguage() end
-
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_ChatInfo.GetChatLineSenderGUID)
-function C_ChatInfo.GetChatLineSenderGUID() end
-
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_ChatInfo.GetChatLineSenderName)
-function C_ChatInfo.GetChatLineSenderName() end
-
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_ChatInfo.GetChatLineText)
-function C_ChatInfo.GetChatLineText() end
-
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_ChatInfo.IsChatLineCensored)
-function C_ChatInfo.IsChatLineCensored() end
-
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_ChatInfo.RequestCanLocalWhisperTarget)
-function C_ChatInfo.RequestCanLocalWhisperTarget() end
-
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_ChatInfo.UncensorChatLine)
-function C_ChatInfo.UncensorChatLine() end
-
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_ClassTrial.GetClassTrialLogoutTimeSeconds)
 function C_ClassTrial.GetClassTrialLogoutTimeSeconds() end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_ClassTrial.IsClassTrialCharacter)
 function C_ClassTrial.IsClassTrialCharacter() end
-
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_ConsoleScriptCollection.GetCollectionDataByID)
-function C_ConsoleScriptCollection.GetCollectionDataByID() end
-
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_ConsoleScriptCollection.GetCollectionDataByTag)
-function C_ConsoleScriptCollection.GetCollectionDataByTag() end
-
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_ConsoleScriptCollection.GetElements)
-function C_ConsoleScriptCollection.GetElements() end
-
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_ConsoleScriptCollection.GetScriptData)
-function C_ConsoleScriptCollection.GetScriptData() end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_Debug.DashboardIsEnabled)
 function C_Debug.DashboardIsEnabled() end
@@ -543,6 +525,9 @@ function C_Debug.TeleportToMapDebugObject(pinIndex) end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_Debug.TeleportToMapLocation)
 function C_Debug.TeleportToMapLocation(uiMapID, mapX, mapY) end
+
+---[Documentation](https://wowpedia.fandom.com/wiki/API_C_Debug.ViewInDebugWindow)
+function C_Debug.ViewInDebugWindow() end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_FunctionContainers.CreateCallback)
 function C_FunctionContainers.CreateCallback() end
@@ -1147,9 +1132,6 @@ function C_Garrison.UpgradeBuilding(plotInstanceID) end
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_Garrison.UpgradeGarrison)
 function C_Garrison.UpgradeGarrison(followerType) end
 
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_GossipInfo.SelectOptionByIndex)
-function C_GossipInfo.SelectOptionByIndex() end
-
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_Heirloom.CanHeirloomUpgradeFromPending)
 function C_Heirloom.CanHeirloomUpgradeFromPending(itemID) end
 
@@ -1394,27 +1376,6 @@ function C_LFGList.SetApplicantMemberRole(applicantID, memberIndex, role) end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_LFGList.UpdateListing)
 function C_LFGList.UpdateListing(lfgID, itemLevel, honorLevel, autoAccept, private, questID) end
-
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_LootHistory.CanMasterLoot)
-function C_LootHistory.CanMasterLoot(itemIndex, playerIndex) end
-
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_LootHistory.GetExpiration)
-function C_LootHistory.GetExpiration() end
-
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_LootHistory.GetItem)
-function C_LootHistory.GetItem(itemIndex) end
-
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_LootHistory.GetNumItems)
-function C_LootHistory.GetNumItems() end
-
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_LootHistory.GetPlayerInfo)
-function C_LootHistory.GetPlayerInfo(itemIndex, playerIndex) end
-
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_LootHistory.GiveMasterLoot)
-function C_LootHistory.GiveMasterLoot(itemIndex, playerIndex) end
-
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_LootHistory.SetExpiration)
-function C_LootHistory.SetExpiration(numItemsToSave, secondsToSave) end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_NamePlate.GetNamePlateEnemyClickThrough)
 function C_NamePlate.GetNamePlateEnemyClickThrough() end
@@ -1781,9 +1742,6 @@ function C_PetJournal.GetNumPetTypes() end
 ---@return number numOwned
 function C_PetJournal.GetNumPets() end
 
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_PetJournal.GetNumPetsInJournal)
-function C_PetJournal.GetNumPetsInJournal() end
-
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_PetJournal.GetNumPetsNeedingFanfare)
 function C_PetJournal.GetNumPetsNeedingFanfare() end
 
@@ -1988,9 +1946,6 @@ function C_PetJournal.SummonPetByGUID(petID) end
 ---@param favoritePets boolean
 function C_PetJournal.SummonRandomPet(favoritePets) end
 
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_ProfSpecs.GetNewSpecReminderProfName)
-function C_ProfSpecs.GetNewSpecReminderProfName() end
-
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_PrototypeDialog.EnsureRemoved)
 ---@param instanceID number
 function C_PrototypeDialog.EnsureRemoved(instanceID) end
@@ -1999,12 +1954,6 @@ function C_PrototypeDialog.EnsureRemoved(instanceID) end
 ---@param instanceID number
 ---@param optionIndex number
 function C_PrototypeDialog.SelectOption(instanceID, optionIndex) end
-
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_PvP.GetAssignedSpecForBattlefieldQueue)
-function C_PvP.GetAssignedSpecForBattlefieldQueue() end
-
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_QuestOffer.GetHideRequiredItems)
-function C_QuestOffer.GetHideRequiredItems() end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_Scenario.GetBonusStepRewardQuestID)
 function C_Scenario.GetBonusStepRewardQuestID(stepIndex) end
@@ -2076,9 +2025,64 @@ function C_SharedCharacterServices.SetExpansionTrialPopupSeen(expansion_id) end
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_SharedCharacterServices.SetPromotionalPopupSeen)
 function C_SharedCharacterServices.SetPromotionalPopupSeen(seen) end
 
+---[Documentation](https://wowpedia.fandom.com/wiki/API_C_SpectatingUI.IsSpectating)
+function C_SpectatingUI.IsSpectating() end
+
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_TalkingHead.GetConversationsDeferred)
 function C_TalkingHead.GetConversationsDeferred() end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_TalkingHead.GetCurrentLineAnimationInfo)
 function C_TalkingHead.GetCurrentLineAnimationInfo() end
+
+---[Documentation](https://wowpedia.fandom.com/wiki/API_C_TalkingHead.GetCurrentLineInfo)
+function C_TalkingHead.GetCurrentLineInfo() end
+
+---[Documentation](https://wowpedia.fandom.com/wiki/API_C_TalkingHead.IgnoreCurrentTalkingHead)
+function C_TalkingHead.IgnoreCurrentTalkingHead() end
+
+---[Documentation](https://wowpedia.fandom.com/wiki/API_C_TalkingHead.IsCurrentTalkingHeadIgnored)
+function C_TalkingHead.IsCurrentTalkingHeadIgnored() end
+
+---[Documentation](https://wowpedia.fandom.com/wiki/API_C_TalkingHead.SetConversationsDeferred)
+function C_TalkingHead.SetConversationsDeferred(deferred) end
+
+---[Documentation](https://wowpedia.fandom.com/wiki/API_C_ToyBox.ForceToyRefilter)
+function C_ToyBox.ForceToyRefilter() end
+
+---[Documentation](https://wowpedia.fandom.com/wiki/API_C_ToyBox.GetCollectedShown)
+function C_ToyBox.GetCollectedShown() end
+
+---[Documentation](https://wowpedia.fandom.com/wiki/API_C_ToyBox.GetIsFavorite)
+function C_ToyBox.GetIsFavorite(itemID) end
+
+---[Documentation](https://wowpedia.fandom.com/wiki/API_C_ToyBox.GetNumFilteredToys)
+function C_ToyBox.GetNumFilteredToys() end
+
+---[Documentation](https://wowpedia.fandom.com/wiki/API_C_ToyBox.GetNumLearnedDisplayedToys)
+function C_ToyBox.GetNumLearnedDisplayedToys() end
+
+---[Documentation](https://wowpedia.fandom.com/wiki/API_C_ToyBox.GetNumTotalDisplayedToys)
+function C_ToyBox.GetNumTotalDisplayedToys() end
+
+---[Documentation](https://wowpedia.fandom.com/wiki/API_C_ToyBox.GetNumToys)
+function C_ToyBox.GetNumToys() end
+
+---[Documentation](https://wowpedia.fandom.com/wiki/API_C_ToyBox.GetToyFromIndex)
+function C_ToyBox.GetToyFromIndex(itemIndex) end
+
+---[Documentation](https://wowpedia.fandom.com/wiki/API_C_ToyBox.GetToyInfo)
+---@param itemID number
+---@return number itemID
+---@return string toyName
+---@return number icon
+---@return boolean isFavorite
+---@return boolean hasFanfare
+---@return Enum.ItemQuality itemQuality
+function C_ToyBox.GetToyInfo(itemID) end
+
+---[Documentation](https://wowpedia.fandom.com/wiki/API_C_ToyBox.GetToyLink)
+function C_ToyBox.GetToyLink(itemID) end
+
+---[Documentation](https://wowpedia.fandom.com/wiki/API_C_ToyBox.GetUncollectedShown)
+function C_ToyBox.GetUncollectedShown() end
 
