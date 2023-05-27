@@ -8645,4 +8645,4 @@ export const data: CVarInterface = {
 		scope: "Character",
 		help: "Whether the XP bar shows the numeric experience value",
 	},
-}
+};
