@@ -1,0 +1,39 @@
+name: CI Tests
+
+# Controls when the workflow will run
+on:
+  workflow_dispatch:
+  pull_request:
+    types: [opened, push, synchronize, reopened, ready_for_review]
+  push:
+    branches:
+      - main
+
+jobs:
+  test:
+    name: Test
+    strategy:
+      matrix:
+        os: [ubuntu-latest, windows-latest, macos-latest]
+
+    runs-on: ${{ matrix.os }}
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3
+      - name: Install Node.js
+        uses: actions/setup-node@v3
+        with:
+            node-version: 16.x
+            cache: 'npm'
+      - name: Install dependencies
+        run: |
+          npm ci
+        shell: bash
+      - name: Run Tests (Linux)
+        if: runner.os == 'Linux'
+        run: |
+            unset DBUS_SESSION_BUS_ADDRESS
+            xvfb-run npm run test
+      - name: Run Tests (Windows/macOS)
+        run: npm test
+        if: matrix.os == 'windows-latest' || matrix.os == 'macos-latest'

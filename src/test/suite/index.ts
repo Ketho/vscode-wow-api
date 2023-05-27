@@ -8,10 +8,6 @@ export function run(): Promise<void> {
 		ui: 'tdd',
 		color: true
 	});
-	
-	// Provide enough time to run tests.
-	// TODO: override only where necessary
-	mocha.timeout(1000000);
 
 	const testsRoot = path.resolve(__dirname, '..');
 
