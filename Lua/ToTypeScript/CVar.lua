@@ -35,7 +35,7 @@ local function ToTypeScript()
 		end
 		table.insert(t, "\t},")
 	end
-	table.insert(t, "}\n")
+	table.insert(t, "};\n")
 	return pre..table.concat(t, "\n")
 end
 

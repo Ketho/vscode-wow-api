@@ -61,7 +61,7 @@ function m:ToTypeScript(locale)
 		local fs = IsValidTableKey(key) and fs1 or fs2
 		table.insert(t, fs:format(key, value))
 	end
-	table.insert(t, "}\n")
+	table.insert(t, "};\n")
 	return pre..table.concat(t, "\n")
 end
 
