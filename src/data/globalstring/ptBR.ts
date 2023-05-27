@@ -1,4 +1,4 @@
-import type { GlobalStringInterface } from "./GlobalStringInterface"
+import type { GlobalStringInterface } from "./GlobalStringInterface";
 
 export const data: GlobalStringInterface = {
 	"8.0_WARFRONTS_-_ARATHI_-_CONSTRUCT_BUILDING_-_BARRACKS": String.raw`Test`,
@@ -20023,4 +20023,4 @@ para adquirir talentos especiais que aprimoram e personalizam seu personagem.`,
 	_JKL_TEST: String.raw`_JKL_TEST`,
 	_RECORDING_WARNING_CORRUPTED: String.raw`Este arquivo de vídeo não é válido.`,
 	_RK_TEST: String.raw`Just a test`,
-}
+};

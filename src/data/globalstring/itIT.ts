@@ -1,4 +1,4 @@
-import type { GlobalStringInterface } from "./GlobalStringInterface"
+import type { GlobalStringInterface } from "./GlobalStringInterface";
 
 export const data: GlobalStringInterface = {
 	"8.0_WARFRONTS_-_ARATHI_-_CONSTRUCT_BUILDING_-_BARRACKS": String.raw`Prova`,
@@ -20376,4 +20376,4 @@ Puoi anche vedere tutte le tue missioni cliccando su "Mondo".`,
 	_JKL_TEST: String.raw``,
 	_RECORDING_WARNING_CORRUPTED: String.raw`Questo filmato non è valido.`,
 	_RK_TEST: String.raw`Just a test`,
-}
+};

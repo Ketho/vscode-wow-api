@@ -1,4 +1,4 @@
-import type { GlobalStringInterface } from "./GlobalStringInterface"
+import type { GlobalStringInterface } from "./GlobalStringInterface";
 
 export const data: GlobalStringInterface = {
 	"8.0_WARFRONTS_-_ARATHI_-_CONSTRUCT_BUILDING_-_BARRACKS": String.raw`Test`,
@@ -19997,4 +19997,4 @@ de la discipline.`,
 	_JKL_TEST: String.raw`_JKL_TEST`,
 	_RECORDING_WARNING_CORRUPTED: String.raw`Fichier vidéo non valide.`,
 	_RK_TEST: String.raw`Just a test`,
-}
+};

@@ -1,4 +1,4 @@
-import type { GlobalStringInterface } from "./GlobalStringInterface"
+import type { GlobalStringInterface } from "./GlobalStringInterface";
 
 export const data: GlobalStringInterface = {
 	"8.0_WARFRONTS_-_ARATHI_-_CONSTRUCT_BUILDING_-_BARRACKS": String.raw`Test`,
@@ -20002,4 +20002,4 @@ You can gain skill while recrafting, but at a reduced chance.`,
 	_JKL_TEST: String.raw`_JKL_TEST`,
 	_RECORDING_WARNING_CORRUPTED: String.raw`동영상 파일이 올바르지 않습니다.`,
 	_RK_TEST: String.raw`Just a test`,
-}
+};
