@@ -1,66 +1,51 @@
-import * as assert from 'assert';
 import { expect } from 'chai';
-import * as path from 'path'
+import * as path from 'path';
 import * as vscode from 'vscode';
 import * as wowApiExtension from '../../extension';
 
-
-function delay(ms: number) {
-    return new Promise( resolve => setTimeout(resolve, ms) );
-}
+const extensionPath = vscode.extensions.getExtension("ketho.wow-api")!.extensionPath;
 
 suite('Config Tests', () => {
-	vscode.window.showInformationMessage('Start all tests.');
+    vscode.window.showInformationMessage('Start all tests.');
 
-	test('By default, it sets both WoW API and FrameXML libraries', async () => {
-		await vscode.workspace.getConfiguration("Lua").update("workspace.library", undefined, true)	
-		await vscode.workspace.getConfiguration("wowAPI").update("emmyLua.loadFrameXML", undefined, true)
-		const document = await vscode.workspace.openTextDocument({
-			language: "lua"
-		})
-		await vscode.window.showTextDocument(document)
-		await delay(3000)
+    test('Default Behaviour - It can set both WoW API and FrameXML libraries', async () => {
+        await vscode.workspace.getConfiguration("Lua").update("workspace.library", undefined, true);
+        await wowApiExtension.setExternalLibrary("API", true);
+        await wowApiExtension.setExternalLibrary("Optional", true);
 
-		const luaConfig = vscode.workspace.getConfiguration("Lua")
-		
-		try {
-			expect(luaConfig.get("workspace.library")).to.have.all.members([
-				path.resolve(__dirname, '../../../') + "/EmmyLua/Optional",
-				path.resolve(__dirname, '../../../') + "/EmmyLua/API"
-			])
-		} finally {
-			for (const td of vscode.workspace.textDocuments) {
-				await vscode.commands.executeCommand('workbench.action.closeActiveEditor');
-			}
-		}
-	});
+        const luaConfig = vscode.workspace.getConfiguration("Lua");
 
-	// TODO: Fix extension reactivation between tests
+        expect(luaConfig.get("workspace.library")).to.have.all.members([
+            path.join(extensionPath, "/EmmyLua/Optional"),
+            path.join(extensionPath, "/EmmyLua/API")
+        ]);
+    });
 
-	// test('It does not set FrameXML libraries when disabled', async () => {
-	// 	await vscode.workspace.getConfiguration("Lua").update("workspace.library", undefined, true)	
-	// 	await vscode.workspace.getConfiguration("wowAPI").update("emmyLua.loadFrameXML", false, true)
+    test('It can set only WoW API libraries', async () => {
+        await vscode.workspace.getConfiguration("Lua").update("workspace.library", undefined, true);
 
-	// 	const document = await vscode.workspace.openTextDocument({
-	// 		language: "lua"
-	// 	})
-	// 	await vscode.window.showTextDocument(document)
-	// 	await delay(5000)
+        await wowApiExtension.setExternalLibrary("API", true);
+        await wowApiExtension.setExternalLibrary("Optional", false);
 
-	// 	const luaConfig = vscode.workspace.getConfiguration("Lua")
-	// 	const wowAPIConfig = vscode.workspace.getConfiguration("wowAPI")
+        const luaConfig = vscode.workspace.getConfiguration("Lua");
 
-	// 	try {
-	// 		expect(luaConfig.get("workspace.library")).to.equal([
-	// 			"/home/josh/workspace/vscode-wow-api/EmmyLua/API",
-	// 		])
-	// 	} finally {
-	// 		const filteredTextDocuments = vscode.workspace.textDocuments //.filter(td => td.fileName === 'scratchFileName')
+        expect(luaConfig.get("workspace.library")).to.have.all.members([
+            path.join(extensionPath, "/EmmyLua/API")
+        ]);
+    });
 
-	// 		for (const _ of filteredTextDocuments) {
-	// 			// await vscode.window.showTextDocument(td, { preview: true, preserveFocus: false });
-	// 			await vscode.commands.executeCommand('workbench.action.closeActiveEditor');
-	// 		}
-	// 	}
-	// });
+    test('It can set additional libraries', async () => {
+        await vscode.workspace.getConfiguration("Lua").update("workspace.library", [path.resolve("/foo/bar")], true);
+
+        await wowApiExtension.setExternalLibrary("API", true);
+        await wowApiExtension.setExternalLibrary("Optional", true);
+
+        const luaConfig = vscode.workspace.getConfiguration("Lua");
+
+        expect(luaConfig.get("workspace.library")).to.have.all.members([
+            path.resolve("/foo/bar"),
+            path.join(extensionPath, "/EmmyLua/API"),
+            path.join(extensionPath, "/EmmyLua/Optional")
+        ]);
+    });
 });
