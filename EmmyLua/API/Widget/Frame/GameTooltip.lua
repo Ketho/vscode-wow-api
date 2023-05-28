@@ -1,7 +1,7 @@
 ---@meta
 ---[Documentation](https://wowpedia.fandom.com/wiki/UIOBJECT_GameTooltip)
 ---@class GameTooltip : Frame
-local GameTooltip = {}
+GameTooltip = {}
 ---@class gametooltip : GameTooltip
 ---@class GAMETOOLTIP : GameTooltip
 
