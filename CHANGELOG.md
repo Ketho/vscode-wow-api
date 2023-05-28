@@ -6,14 +6,18 @@
 - The Classic (TBC) API is not supported ([#13](https://github.com/Ketho/vscode-wow-api/issues/13))
 - Widget API is not yet updated from 10.0.2 Blizzard_APIDocumentationGenerated
 
+## [0.9.13] - 2023-05-28
+- 🌙 Definitions: [#106](https://github.com/Ketho/vscode-wow-api/issues/106) Update Globals and GlobalStrings for patch 10.1.0
+- 🌙 Definitions: [#105](https://github.com/Ketho/vscode-wow-api/issues/105) Made `GameTooltip` class global
+
 ## [0.9.12] - 2023-05-27
 - 📦 Package: Test release workflow
-- 📦 Package: PR [#103](https://github.com/Ketho/vscode-wow-api/pull/103) Added unit tests
+- 📦 Package: PR [#103](https://github.com/Ketho/vscode-wow-api/pull/103) Add unit tests for updating `Lua.workspace.library`
 
 ## [0.9.11] - 2023-05-27
-- 🐞 Bug Fixes: PR [#101](https://github.com/Ketho/vscode-wow-api/pull/101), [#100](https://github.com/Ketho/vscode-wow-api/issues/100) Fixed loading of Lua definitions
-- 🌙 Definitions: Updated to patch 10.1.0 from Wowpedia and Blizzard_APIDocumentation
-- 🌙 Definitions: PR [#98](https://github.com/Ketho/vscode-wow-api/pull/98), [#99](https://github.com/Ketho/vscode-wow-api/pull/99) Updated LibDBIcon, AceGUI
+- 🐞 Bug Fixes: PR [#101](https://github.com/Ketho/vscode-wow-api/pull/101), [#100](https://github.com/Ketho/vscode-wow-api/issues/100) Fix loading of Lua definitions
+- 🌙 Definitions: Update to patch 10.1.0 from Wowpedia and Blizzard_APIDocumentation
+- 🌙 Definitions: PR [#98](https://github.com/Ketho/vscode-wow-api/pull/98), [#99](https://github.com/Ketho/vscode-wow-api/pull/99) Update LibDBIcon, AceGUI
 
 ## [0.9.10] - 2023-04-19
 - 🌙 Definitions: Updated Ace3, LibSink, HereBeDragons by [Torhal](https://github.com/Ketho/vscode-wow-api/pulls?q=is%3Apr+author%3ATorhal)
@@ -357,7 +361,8 @@ Libraries
 ### Added
 - 🚧 Wip: Development work
 
-[0.9.12]: https://github.com/Ketho/vscode-wow-api/releases/tag/v0.9.12
+[0.9.13]: https://github.com/Ketho/vscode-wow-api/releases/tag/0.9.13
+[0.9.12]: https://github.com/Ketho/vscode-wow-api/releases/tag/0.9.12
 [0.9.11]: https://github.com/Ketho/vscode-wow-api/releases/tag/v0.9.11
 [0.9.10]: https://github.com/Ketho/vscode-wow-api/releases/tag/v0.9.10
 [0.9.9]: https://github.com/Ketho/vscode-wow-api/releases/tag/v0.9.9
