@@ -7,8 +7,8 @@
 - Widget API is not yet updated from 10.0.2 Blizzard_APIDocumentationGenerated
 
 ## [0.9.13] - 2023-05-28
-- 🌙 Definitions: [#106](https://github.com/Ketho/vscode-wow-api/issues/106) Update Globals and GlobalStrings for patch 10.1.0
-- 🌙 Definitions: [#105](https://github.com/Ketho/vscode-wow-api/issues/105) Made `GameTooltip` class global
+- 🌙 Definitions: [#106](https://github.com/Ketho/vscode-wow-api/issues/106) Made `GameTooltip` class global
+- 🌙 Definitions: [#105](https://github.com/Ketho/vscode-wow-api/issues/105) Update Globals and GlobalStrings for patch 10.1.0
 
 ## [0.9.12] - 2023-05-27
 - 📦 Package: Test release workflow
