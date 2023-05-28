@@ -121,23 +121,32 @@ end
 -- @param options.locale (optional) the locale, otherwise uses english
 -- @return function the csv iterator
 -- @return string the used build
-function parser:ReadCSV(name, options)
+function parser:ReadCSV(name, options, wago, wagobuild)
 	options = options or {}
 	CreateFolder(self.CACHE_PATH..name)
-	local build = self:FindBuild(name, options.build)
-	local base = GetBaseName(name, build, options)
-	local path = csv_cache:format(name, base)
-	if not lfs.attributes(path) then
-		local url = csv_url:format(name, build)
-		if options.locale then
-			url = url.."&locale="..options.locale
+	if wago then -- hack
+		local url = string.format("https://wago.tools/db2/%s/csv?build=%s", name, wagobuild)
+		local path = csv_cache:format(name, name.."_wago_"..wagobuild)
+		DownloadFile(url, path)
+		print("reading "..path)
+		local iter = csv.open(path, {header = options.header, buffer_size = 1024*4})
+		return iter, "wago"
+	else
+		local build = self:FindBuild(name, options.build)
+		local base = GetBaseName(name, build, options)
+		local path = csv_cache:format(name, base)
+		if not lfs.attributes(path) then
+			local url = csv_url:format(name, build)
+			if options.locale then
+				url = url.."&locale="..options.locale
+			end
+			local success = DownloadFile(url, path)
+			if not success then return false end
 		end
-		local success = DownloadFile(url, path)
-		if not success then return false end
+		print("reading "..path)
+		local iter = csv.open(path, {header = options.header, buffer_size = 1024*4})
+		return iter, build
 	end
-	print("reading "..path)
-	local iter = csv.open(path, {header = options.header, buffer_size = 1024*4})
-	return iter, build
 end
 
 --- Parses the DBC from JSON

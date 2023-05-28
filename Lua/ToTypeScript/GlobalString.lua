@@ -10,6 +10,8 @@ local pre = [[import type { GlobalStringInterface } from "./GlobalStringInterfac
 export const data: GlobalStringInterface = {
 ]]
 
+local LATEST = "10.1.0.49801"
+
 local locales = {
 	-- "deDE",
 	"enUS", -- same as enGB
@@ -35,7 +37,7 @@ local function IsValidTableKey(s)
 end
 
 function m:ToTypeScript(locale)
-	local globalstrings = parser:ReadCSV("globalstrings", {header = true, build = CONSTANTS.LATEST_MAINLINE, locale = locale})
+	local globalstrings = parser:ReadCSV("globalstrings", {header = true, build = CONSTANTS.LATEST_MAINLINE, locale = locale}, true, LATEST)
 	local stringsTable = {}
 	for line in globalstrings:lines() do
 		local flags = tonumber(line.Flags)
@@ -66,8 +68,9 @@ function m:ToTypeScript(locale)
 end
 
 function m:WriteLocales()
-	local latest = parser:FindBuild("globalstrings", CONSTANTS.LATEST_MAINLINE)
-	local cache = string.format("Lua/Data/cache/globalstrings/globalstrings_%s_enUS.csv", latest)
+	-- local latest = parser:FindBuild("globalstrings", CONSTANTS.LATEST_MAINLINE)
+	-- local cache = string.format("Lua/Data/cache/globalstrings/globalstrings_%s_enUS.csv", latest)
+	local cache = string.format("Lua/Data/cache/globalstrings/globalstrings_wago_%s.csv", LATEST)
 	if not lfs.attributes(cache) then -- skip if already exported
 		for _, locale in pairs(locales) do
 			local path = string.format("src/data/globalstring/%s.ts", locale)
