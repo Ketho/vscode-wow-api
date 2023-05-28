@@ -23,20 +23,21 @@ function getMarkdown(name: string) {
 	if (cvar.help) {
         s += " - "+cvar.help;
     }
+	s += "\n```";
 
-	s += "\n";
 	// need to use the whole line for a code block, cannot mix it with normal text
 	if (cvar.default) {
-        s += "* ```\nDefault: "+cvar.default+"\n```\n";
+        s += "\n- Default: "+cvar.default;
     }
 
-	if (cvar.category != 5) {
-        s += "* ```\nCategory: "+ConsoleCategory[cvar.category]+"\n```\n";
+	if (cvar.category !== 5) {
+        s += "\n- Category: "+ConsoleCategory[cvar.category];
     }
 
 	if (cvar.scope) {
-        s += "* ```\nScope: "+cvar.scope+"\n```\n";
+        s += "\n- Scope: "+cvar.scope;
     }
+	s += "\n```";
 
 	let doc = `\n[GitHub](https://github.com/Gethe/wow-ui-source/search?q=${cvar.name})`;
 	return s+doc;

@@ -4,6 +4,7 @@ import { GlobalStringInterface } from "../data/globalstring/GlobalStringInterfac
 let data = {} as GlobalStringInterface;
 export const completion: vscode.CompletionItem[] = [];
 
+// todo: fix so that changing locale doesn't require a restart
 vscode.workspace.onDidChangeConfiguration((event: vscode.ConfigurationChangeEvent) => {
 	if (event.affectsConfiguration("wowAPI.locale")) {
 		updateGlobalStrings();

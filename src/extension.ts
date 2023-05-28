@@ -19,9 +19,8 @@ const enums = {
 };
 
 import globalstring_provider = require("./providers/globalstring");
-import type { GlobalStringInterface } from "./data/globalstring/GlobalStringInterface";
 const globalstrings = {
-	data: {} as GlobalStringInterface,
+	data: require("./data/globalstring/"+vscode.workspace.getConfiguration("wowAPI").get("locale")).data,
 	completion: globalstring_provider.completion,
 	hover: globalstring_provider.getHover,
 };

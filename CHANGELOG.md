@@ -6,6 +6,9 @@
 - The Classic (TBC) API is not supported ([#13](https://github.com/Ketho/vscode-wow-api/issues/13))
 - Widget API is not yet updated from 10.0.2 Blizzard_APIDocumentationGenerated
 
+## [0.9.14] - 2023-05-28
+- 🐞 Bug Fixes: Fixed hover tooltip for CVars and GlobalStrings
+
 ## [0.9.13] - 2023-05-28
 - 🌙 Definitions: [#106](https://github.com/Ketho/vscode-wow-api/issues/106) Made `GameTooltip` class global
 - 🌙 Definitions: [#105](https://github.com/Ketho/vscode-wow-api/issues/105) Update Globals and GlobalStrings for patch 10.1.0
@@ -361,6 +364,7 @@ Libraries
 ### Added
 - 🚧 Wip: Development work
 
+[0.9.14]: https://github.com/Ketho/vscode-wow-api/releases/tag/0.9.14
 [0.9.13]: https://github.com/Ketho/vscode-wow-api/releases/tag/0.9.13
 [0.9.12]: https://github.com/Ketho/vscode-wow-api/releases/tag/0.9.12
 [0.9.11]: https://github.com/Ketho/vscode-wow-api/releases/tag/v0.9.11
