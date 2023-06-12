@@ -55,7 +55,7 @@ function UnitAttackSpeed(unit) end
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_UnitAura)
 ---@param unit UnitId
 ---@param index number
----@param filter? number
+---@param filter? string
 ---@return string name
 ---@return number icon
 ---@return number count
@@ -77,7 +77,7 @@ function UnitAura(unit, index, filter) end
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_UnitAura)
 ---@param unit UnitId
 ---@param index number
----@param filter? number
+---@param filter? string
 ---@return string name
 ---@return number icon
 ---@return number count
@@ -99,7 +99,7 @@ function UnitBuff(unit, index, filter) end
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_UnitAura)
 ---@param unit UnitId
 ---@param index number
----@param filter? number
+---@param filter? string
 ---@return string name
 ---@return number icon
 ---@return number count
