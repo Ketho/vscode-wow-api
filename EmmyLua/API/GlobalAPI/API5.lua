@@ -55,14 +55,14 @@ function UnitAttackSpeed(unit) end
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_UnitAura)
 ---@param unit UnitId
 ---@param index number
----@param filter? number
+---@param filter? string
 ---@return string name
 ---@return number icon
 ---@return number count
 ---@return string? dispelType
 ---@return number duration
 ---@return number expirationTime
----@return string source
+---@return UnitId source
 ---@return boolean isStealable
 ---@return boolean nameplateShowPersonal
 ---@return number spellId
@@ -77,14 +77,14 @@ function UnitAura(unit, index, filter) end
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_UnitAura)
 ---@param unit UnitId
 ---@param index number
----@param filter? number
+---@param filter? string
 ---@return string name
 ---@return number icon
 ---@return number count
 ---@return string? dispelType
 ---@return number duration
 ---@return number expirationTime
----@return string source
+---@return UnitId source
 ---@return boolean isStealable
 ---@return boolean nameplateShowPersonal
 ---@return number spellId
@@ -99,14 +99,14 @@ function UnitBuff(unit, index, filter) end
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_UnitAura)
 ---@param unit UnitId
 ---@param index number
----@param filter? number
+---@param filter? string
 ---@return string name
 ---@return number icon
 ---@return number count
 ---@return string? dispelType
 ---@return number duration
 ---@return number expirationTime
----@return string source
+---@return UnitId source
 ---@return boolean isStealable
 ---@return boolean nameplateShowPersonal
 ---@return number spellId
