@@ -5,7 +5,7 @@ local parser = require("Lua.Util.wowtoolsparser")
 
 Util:MakeDir("src/data/globalstring")
 
-local pre = [[import type { GlobalStringInterface } from "./GlobalStringInterface"
+local pre = [[import type { GlobalStringInterface } from "./GlobalStringInterface";
 
 export const data: GlobalStringInterface = {
 ]]
@@ -71,13 +71,13 @@ function m:WriteLocales()
 	-- local latest = parser:FindBuild("globalstrings", CONSTANTS.LATEST_MAINLINE)
 	-- local cache = string.format("Lua/Data/cache/globalstrings/globalstrings_%s_enUS.csv", latest)
 	local cache = string.format("Lua/Data/cache/globalstrings/globalstrings_wago_%s.csv", LATEST)
-	if not lfs.attributes(cache) then -- skip if already exported
-		for _, locale in pairs(locales) do
-			local path = string.format("src/data/globalstring/%s.ts", locale)
-			local data = self:ToTypeScript(locale)
-			Util:WriteFile(path, data)
-		end
+	-- if not lfs.attributes(cache) then -- skip if already exported
+	for _, locale in pairs(locales) do
+		local path = string.format("src/data/globalstring/%s.ts", locale)
+		local data = self:ToTypeScript(locale)
+		Util:WriteFile(path, data)
 	end
+	-- end
 end
 
 return m

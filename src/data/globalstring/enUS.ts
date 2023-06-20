@@ -1,4 +1,4 @@
-import type { GlobalStringInterface } from "./GlobalStringInterface"
+import type { GlobalStringInterface } from "./GlobalStringInterface";
 
 export const data: GlobalStringInterface = {
 	"101_CutsceneName_Ref": String.raw`Nasz'uro`,
