@@ -388,6 +388,7 @@ function IsInGroup(groupType) end
 function IsInGuild() end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_IsInGuildGroup)
+---@return boolean inGuildGroup
 function IsInGuildGroup() end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_IsInInstance)
