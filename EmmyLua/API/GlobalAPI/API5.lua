@@ -44,6 +44,10 @@ function UnitAffectingCombat(unit) end
 function UnitArmor(unit) end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_UnitAttackPower)
+---@param unit UnitId
+---@return number base
+---@return number posBuff
+---@return number negBuff
 function UnitAttackPower(unit) end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_UnitAttackSpeed)
