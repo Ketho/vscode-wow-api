@@ -112,6 +112,12 @@
 ---|"nameplate1"
 ---|"arena1"
 ---|"boss1"
+---|"anyenemy"
+---|"anyfriend"
+---|"anyinteract"
+---|"softenemy"
+---|"softfriend"
+---|"softinteract"
 
 ---@alias FramePoint
 ---|"TOPLEFT"
