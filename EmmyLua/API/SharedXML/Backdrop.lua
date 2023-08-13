@@ -1,12 +1,12 @@
 ---@meta
 ---@class backdropInfo
----@field bgFile string
----@field edgeFile string
----@field tile boolean
----@field tileSize number
----@field tileEdge boolean
----@field edgeSize number
----@field insets backdropInsets
+---@field bgFile? string
+---@field edgeFile? string
+---@field tile? boolean
+---@field tileSize? number
+---@field tileEdge? boolean
+---@field edgeSize? number
+---@field insets? backdropInsets
 
 ---@class backdropInsets
 ---@field left number
