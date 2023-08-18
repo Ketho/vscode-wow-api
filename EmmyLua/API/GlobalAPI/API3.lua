@@ -1,4 +1,17 @@
 ---@meta
+---[Documentation](https://wowpedia.fandom.com/wiki/API_GetHaste)
+---@return number haste
+function GetHaste() end
+
+---[Documentation](https://wowpedia.fandom.com/wiki/API_GetHitModifier)
+---@return number hitModifier
+function GetHitModifier() end
+
+---[Documentation](https://wowpedia.fandom.com/wiki/API_GetHomePartyInfo)
+---@param homePlayers table
+---@return table homePlayers
+function GetHomePartyInfo(homePlayers) end
+
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_GetInboxHeaderInfo)
 ---@param index number
 ---@return string packageIcon
@@ -549,7 +562,9 @@ function GetLootSpecialization() end
 function GetLootThreshold() end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_GetMacroBody)
-function GetMacroBody() end
+---@param macro number|string
+---@return string? body
+function GetMacroBody(macro) end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_GetMacroIcons)
 function GetMacroIcons(table) end
@@ -842,6 +857,7 @@ function GetNumDisplayChannels() end
 function GetNumDungeonForRandomSlot(randomID) end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_GetNumFactions)
+---@return number numFactions
 function GetNumFactions() end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_GetNumFilteredAchievements)
@@ -1013,10 +1029,6 @@ function GetNumSubgroupMembers(groupType) end
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_GetNumTitles)
 ---@return number numTitles
 function GetNumTitles() end
-
----[Documentation](https://wowpedia.fandom.com/wiki/API_GetNumTrackedAchievements)
----@return number numTracked
-function GetNumTrackedAchievements() end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_GetNumTrainerServices)
 function GetNumTrainerServices() end
@@ -1759,6 +1771,7 @@ function GetSendMailItemLink(index) end
 function GetSendMailMoney() end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_GetSendMailPrice)
+---@return number sendPrice
 function GetSendMailPrice() end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_GetServerTime)
@@ -2065,6 +2078,12 @@ function GetSpellsForCharacterUpgradeTier(tierIndex) end
 function GetStablePetFoodTypes(index) end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_GetStablePetInfo)
+---@param index number
+---@return string petIcon
+---@return string petName
+---@return number petLevel
+---@return string petType
+---@return string petTalents
 function GetStablePetInfo(index) end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_GetStatistic)
@@ -2240,9 +2259,6 @@ function GetTotemInfo(slot) end
 ---@return number seconds
 function GetTotemTimeLeft(slot) end
 
----[Documentation](https://wowpedia.fandom.com/wiki/API_GetTrackedAchievements)
-function GetTrackedAchievements() end
-
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_GetTradePlayerItemInfo)
 ---@param id number
 ---@return string name
@@ -2297,6 +2313,8 @@ function GetTrainerServiceIcon(index) end
 function GetTrainerServiceInfo(index) end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_GetTrainerServiceItemLink)
+---@param index number
+---@return string link
 function GetTrainerServiceItemLink(index) end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_GetTrainerServiceLevelReq)
@@ -2553,18 +2571,4 @@ function GuildSetMOTD(note) end
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_GuildUninvite)
 ---@param name string
 function GuildUninvite(name) end
-
----[Documentation](https://wowpedia.fandom.com/wiki/API_HandleAtlasMemberCommand)
-function HandleAtlasMemberCommand() end
-
----[Documentation](https://wowpedia.fandom.com/wiki/API_HasAPEffectsSpellPower)
-function HasAPEffectsSpellPower() end
-
----[Documentation](https://wowpedia.fandom.com/wiki/API_HasAction)
----@param actionSlot number
----@return boolean hasAction
-function HasAction(actionSlot) end
-
----[Documentation](https://wowpedia.fandom.com/wiki/API_HasArtifactEquipped)
-function HasArtifactEquipped() end
 

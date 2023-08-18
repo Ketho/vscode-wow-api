@@ -1,4 +1,10 @@
 ---@meta
+---[Documentation](https://wowpedia.fandom.com/wiki/API_C_ToyBox.GetToyLink)
+function C_ToyBox.GetToyLink(itemID) end
+
+---[Documentation](https://wowpedia.fandom.com/wiki/API_C_ToyBox.GetUncollectedShown)
+function C_ToyBox.GetUncollectedShown() end
+
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_ToyBox.GetUnusableShown)
 function C_ToyBox.GetUnusableShown() end
 
@@ -227,6 +233,11 @@ function C_TradeSkillUI.SetRecipeSourceTypeFilter(sourceType, filtered) end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_TradeSkillUI.StopRecipeRepeat)
 function C_TradeSkillUI.StopRecipeRepeat() end
+
+---[Documentation](https://wowpedia.fandom.com/wiki/API_C_Traits.GenerateImportString)
+---@param configID number
+---@return string importString
+function C_Traits.GenerateImportString(configID) end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_Trophy.MonumentChangeAppearanceToTrophyID)
 function C_Trophy.MonumentChangeAppearanceToTrophyID(trophyID) end
@@ -1245,6 +1256,7 @@ function EquipCursorItem(invSlot) end
 function EquipItemByName(item, invSlot) end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_EquipPendingItem)
+---@param invSlot number
 function EquipPendingItem(invSlot) end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_ExecuteVoidTransfer)
@@ -1685,6 +1697,7 @@ function GetBattlefieldArenaFaction() end
 function GetBattlefieldEstimatedWaitTime() end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_GetBattlefieldInstanceExpiration)
+---@return number expiration
 function GetBattlefieldInstanceExpiration() end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_GetBattlefieldInstanceRunTime)
@@ -2441,17 +2454,4 @@ function GetGuildTabardFiles() end
 ---@return boolean isMobile
 ---@return number isAway
 function GetGuildTradeSkillInfo(index) end
-
----[Documentation](https://wowpedia.fandom.com/wiki/API_GetHaste)
----@return number haste
-function GetHaste() end
-
----[Documentation](https://wowpedia.fandom.com/wiki/API_GetHitModifier)
----@return number hitModifier
-function GetHitModifier() end
-
----[Documentation](https://wowpedia.fandom.com/wiki/API_GetHomePartyInfo)
----@param homePlayers table
----@return table homePlayers
-function GetHomePartyInfo(homePlayers) end
 

@@ -1,4 +1,18 @@
 ---@meta
+---[Documentation](https://wowpedia.fandom.com/wiki/API_HandleAtlasMemberCommand)
+function HandleAtlasMemberCommand() end
+
+---[Documentation](https://wowpedia.fandom.com/wiki/API_HasAPEffectsSpellPower)
+function HasAPEffectsSpellPower() end
+
+---[Documentation](https://wowpedia.fandom.com/wiki/API_HasAction)
+---@param actionSlot number
+---@return boolean hasAction
+function HasAction(actionSlot) end
+
+---[Documentation](https://wowpedia.fandom.com/wiki/API_HasArtifactEquipped)
+function HasArtifactEquipped() end
+
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_HasAttachedGlyph)
 function HasAttachedGlyph(spellID) end
 
@@ -713,9 +727,6 @@ function IsThreatWarningEnabled() end
 ---@param titleId number
 ---@return boolean isKnown
 function IsTitleKnown(titleId) end
-
----[Documentation](https://wowpedia.fandom.com/wiki/API_IsTrackedAchievement)
-function IsTrackedAchievement(achievementID) end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_IsTradeskillTrainer)
 function IsTradeskillTrainer() end
@@ -1446,9 +1457,6 @@ function RemovePvpTalent() end
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_RemoveTalent)
 function RemoveTalent(talentID) end
 
----[Documentation](https://wowpedia.fandom.com/wiki/API_RemoveTrackedAchievement)
-function RemoveTrackedAchievement(achievementID) end
-
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_RenamePetition)
 ---@param name string
 function RenamePetition(name) end
@@ -1480,9 +1488,6 @@ function ReportPlayerIsPVPAFK(unit) end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_ReportSuggestion)
 function ReportSuggestion(description) end
-
----[Documentation](https://wowpedia.fandom.com/wiki/API_RequestArtifactCompletionHistory)
-function RequestArtifactCompletionHistory() end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_RequestBattlefieldScoreData)
 function RequestBattlefieldScoreData() end
@@ -2490,7 +2495,4 @@ function ToggleSheath() end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_ToggleSpellAutocast)
 function ToggleSpellAutocast() end
-
----[Documentation](https://wowpedia.fandom.com/wiki/API_ToggleWindowed)
-function ToggleWindowed() end
 

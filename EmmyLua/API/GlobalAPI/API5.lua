@@ -1,4 +1,7 @@
 ---@meta
+---[Documentation](https://wowpedia.fandom.com/wiki/API_ToggleWindowed)
+function ToggleWindowed() end
+
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_TriggerTutorial)
 function TriggerTutorial(tutorial) end
 
@@ -148,10 +151,16 @@ function UnitBattlePetType() end
 function UnitCanAssist(unit, otherUnit) end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_UnitCanAttack)
-function UnitCanAttack(unit, otherUnit) end
+---@param unit1 UnitId
+---@param unit2 UnitId
+---@return boolean canAttack
+function UnitCanAttack(unit1, unit2) end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_UnitCanCooperate)
-function UnitCanCooperate(unit, otherUnit) end
+---@param unit1 UnitId
+---@param unit2 UnitId
+---@return boolean cancooperate
+function UnitCanCooperate(unit1, unit2) end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_UnitCanPetBattle)
 function UnitCanPetBattle() end
@@ -217,12 +226,6 @@ function UnitDamage(unit) end
 ---@return number rawPercentage
 ---@return number threatValue
 function UnitDetailedThreatSituation(unit, mobUnit) end
-
----[Documentation](https://wowpedia.fandom.com/wiki/API_UnitDistanceSquared)
----@param unit UnitId
----@return number distanceSquared
----@return boolean checkedDistance
-function UnitDistanceSquared(unit) end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_UnitEffectiveLevel)
 ---@param unit UnitId
@@ -333,9 +336,6 @@ function UnitInParty(unit) end
 ---@return number? index
 function UnitInRaid(unit) end
 
----[Documentation](https://wowpedia.fandom.com/wiki/API_UnitInRange)
-function UnitInRange(unit) end
-
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_UnitInSubgroup)
 ---@param unit? UnitId
 ---@param overridePartyType? number
@@ -394,7 +394,10 @@ function UnitIsDead(unit) end
 function UnitIsDeadOrGhost(unit) end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_UnitIsEnemy)
-function UnitIsEnemy(unit, otherUnit) end
+---@param unit1 UnitId
+---@param unit2 UnitId
+---@return boolean isEnemy
+function UnitIsEnemy(unit1, unit2) end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_UnitIsFeignDeath)
 ---@param unit UnitId
@@ -402,7 +405,10 @@ function UnitIsEnemy(unit, otherUnit) end
 function UnitIsFeignDeath(unit) end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_UnitIsFriend)
-function UnitIsFriend(unit, otherUnit) end
+---@param unit1 UnitId
+---@param unit2 UnitId
+---@return boolean isFriend
+function UnitIsFriend(unit1, unit2) end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_UnitIsGameObject)
 function UnitIsGameObject() end
@@ -453,7 +459,7 @@ function UnitIsPVPSanctuary(unit) end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_UnitIsPlayer)
 ---@param unit UnitId
----@return boolean isTrue
+---@return boolean isPlayer
 function UnitIsPlayer(unit) end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_UnitIsPossessed)
@@ -695,6 +701,9 @@ function UpdateAddOnMemoryUsage() end
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_UpdateInventoryAlertStatus)
 function UpdateInventoryAlertStatus() end
 
+---[Documentation](https://wowpedia.fandom.com/wiki/API_UpdateUIParentPosition)
+function UpdateUIParentPosition() end
+
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_UpdateWarGamesList)
 function UpdateWarGamesList() end
 
@@ -797,6 +806,7 @@ function debugstack(start, count1, count2) end
 function forceinsecure() end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_geterrorhandler)
+---@return function handler
 function geterrorhandler() end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_hooksecurefunc)

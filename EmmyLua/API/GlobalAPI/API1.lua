@@ -68,10 +68,6 @@ function AddChatWindowChannel(windowId, channelName) end
 ---@param messageGroup string
 function AddChatWindowMessages(index, messageGroup) end
 
----[Documentation](https://wowpedia.fandom.com/wiki/API_AddTrackedAchievement)
----@param achievementID number
-function AddTrackedAchievement(achievementID) end
-
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_AddTradeMoney)
 function AddTradeMoney() end
 
@@ -454,6 +450,9 @@ function C_BlackMarket.ItemPlaceBid(marketID, bid) end
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_BlackMarket.RequestItems)
 function C_BlackMarket.RequestItems() end
 
+---[Documentation](https://wowpedia.fandom.com/wiki/API_C_CharacterServices.AssignNameChangeDistribution)
+function C_CharacterServices.AssignNameChangeDistribution() end
+
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_CharacterServices.AssignPCTDistribution)
 function C_CharacterServices.AssignPCTDistribution() end
 
@@ -462,6 +461,9 @@ function C_CharacterServices.AssignRaceOrFactionChangeDistribution() end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_CharacterServices.AssignUpgradeDistribution)
 function C_CharacterServices.AssignUpgradeDistribution() end
+
+---[Documentation](https://wowpedia.fandom.com/wiki/API_C_CharacterServices.CapitalizeCharName)
+function C_CharacterServices.CapitalizeCharName() end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_CharacterServices.GetActiveCharacterUpgradeBoostType)
 function C_CharacterServices.GetActiveCharacterUpgradeBoostType() end
@@ -493,6 +495,9 @@ function C_CharacterServices.HasRequiredBoostForClassTrial() end
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_CharacterServices.HasRequiredBoostForUnrevoke)
 function C_CharacterServices.HasRequiredBoostForUnrevoke() end
 
+---[Documentation](https://wowpedia.fandom.com/wiki/API_C_CharacterServices.RPEResetCharacter)
+function C_CharacterServices.RPEResetCharacter() end
+
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_CharacterServices.SetAutomaticBoost)
 function C_CharacterServices.SetAutomaticBoost() end
 
@@ -507,6 +512,10 @@ function C_ClassTrial.GetClassTrialLogoutTimeSeconds() end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_ClassTrial.IsClassTrialCharacter)
 function C_ClassTrial.IsClassTrialCharacter() end
+
+---[Documentation](https://wowpedia.fandom.com/wiki/API_C_Club.DoesAnyCommunityHaveUnreadMessages)
+---@return boolean hasUnreadMessages
+function C_Club.DoesAnyCommunityHaveUnreadMessages() end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_Debug.DashboardIsEnabled)
 function C_Debug.DashboardIsEnabled() end
@@ -2079,10 +2088,4 @@ function C_ToyBox.GetToyFromIndex(itemIndex) end
 ---@return boolean hasFanfare
 ---@return Enum.ItemQuality itemQuality
 function C_ToyBox.GetToyInfo(itemID) end
-
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_ToyBox.GetToyLink)
-function C_ToyBox.GetToyLink(itemID) end
-
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_ToyBox.GetUncollectedShown)
-function C_ToyBox.GetUncollectedShown() end
 
