@@ -26,6 +26,7 @@ function C_ScenarioInfo.GetScenarioStepInfo(scenarioStepID) end
 ---@field type number
 ---@field area string
 ---@field uiTextureKit textureKit
+---@field scenarioID number
 
 ---@class ScenarioStepInfo
 ---@field title string

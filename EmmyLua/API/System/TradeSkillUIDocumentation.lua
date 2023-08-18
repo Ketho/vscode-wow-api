@@ -1,6 +1,11 @@
 ---@meta
 C_TradeSkillUI = {}
 
+---[Documentation](https://wowpedia.fandom.com/wiki/API_C_TradeSkillUI.CanStoreEnchantInItem)
+---@param itemGUID WOWGUID
+---@return boolean canStore
+function C_TradeSkillUI.CanStoreEnchantInItem(itemGUID) end
+
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_TradeSkillUI.CloseTradeSkill)
 function C_TradeSkillUI.CloseTradeSkill() end
 
@@ -311,8 +316,9 @@ function C_TradeSkillUI.HasFavoriteOrderRecipes() end
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_TradeSkillUI.IsEnchantTargetValid)
 ---@param recipeID number
 ---@param itemGUID WOWGUID
+---@param craftingReagents? CraftingReagentInfo[]
 ---@return boolean valid
-function C_TradeSkillUI.IsEnchantTargetValid(recipeID, itemGUID) end
+function C_TradeSkillUI.IsEnchantTargetValid(recipeID, itemGUID, craftingReagents) end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_TradeSkillUI.IsNPCCrafting)
 ---@return boolean result

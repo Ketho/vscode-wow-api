@@ -147,6 +147,11 @@ function C_UIWidgetManager.GetTextureWithAnimationVisualizationInfo(widgetID) en
 ---@return number setID
 function C_UIWidgetManager.GetTopCenterWidgetSetID() end
 
+---[Documentation](https://wowpedia.fandom.com/wiki/API_C_UIWidgetManager.GetTugOfWarWidgetVisualizationInfo)
+---@param widgetID number
+---@return TugOfWarWidgetVisualizationInfo? widgetInfo
+function C_UIWidgetManager.GetTugOfWarWidgetVisualizationInfo(widgetID) end
+
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_UIWidgetManager.GetUnitPowerBarWidgetVisualizationInfo)
 ---@param widgetID number
 ---@return UnitPowerBarWidgetVisualizationInfo? widgetInfo
@@ -205,7 +210,7 @@ function C_UIWidgetManager.UnregisterUnitForWidgetUpdates(unitToken, isGuid) end
 ---@field neutralZoneSize number
 ---@field neutralZoneCenter number
 ---@field tooltip string
----@field glowAnimType CaptureBarWidgetGlowAnimType
+---@field glowAnimType Enum.WidgetGlowAnimType
 ---@field fillDirectionType Enum.CaptureBarWidgetFillDirectionType
 ---@field tooltipLoc Enum.UIWidgetTooltipLocation
 ---@field widgetSizeSetting number
@@ -702,12 +707,44 @@ function C_UIWidgetManager.UnregisterUnitForWidgetUpdates(unitToken, isGuid) end
 ---@field modelSceneLayer Enum.UIWidgetModelSceneLayer
 ---@field scriptedAnimationEffectID number
 
+---@class TugOfWarWidgetVisualizationInfo
+---@field shownState Enum.WidgetShownState
+---@field minValue number
+---@field maxValue number
+---@field currentValue number
+---@field neutralZoneCenter number
+---@field neutralZoneSize number
+---@field leftIconInfo UIWidgetIconInfo
+---@field rightIconInfo UIWidgetIconInfo
+---@field glowAnimType Enum.WidgetGlowAnimType
+---@field tooltip string
+---@field tooltipLoc Enum.UIWidgetTooltipLocation
+---@field widgetSizeSetting number
+---@field textureKit textureKit
+---@field frameTextureKit textureKit
+---@field hasTimer boolean
+---@field orderIndex number
+---@field widgetTag string
+---@field inAnimType Enum.WidgetAnimationType
+---@field outAnimType Enum.WidgetAnimationType
+---@field widgetScale Enum.UIWidgetScale
+---@field layoutDirection Enum.UIWidgetLayoutDirection
+---@field modelSceneLayer Enum.UIWidgetModelSceneLayer
+---@field scriptedAnimationEffectID number
+
 ---@class UIWidgetCurrencyInfo
 ---@field iconFileID fileID
 ---@field leadingText string
 ---@field text string
 ---@field tooltip string
 ---@field isCurrencyMaxed boolean
+
+---@class UIWidgetIconInfo
+---@field sourceType Enum.WidgetIconSourceType
+---@field sourceID number
+---@field sizeType Enum.WidgetIconSizeType
+---@field tooltip string
+---@field tooltipLoc Enum.UIWidgetTooltipLocation
 
 ---@class UIWidgetInfo
 ---@field widgetID number

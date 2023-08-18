@@ -77,6 +77,11 @@ function C_Item.GetItemID(itemLocation) end
 ---@return number? itemID
 function C_Item.GetItemIDByGUID(itemGUID) end
 
+---[Documentation](https://wowpedia.fandom.com/wiki/API_C_Item.GetItemIDForItemInfo)
+---@param itemInfo ItemInfo
+---@return number itemID
+function C_Item.GetItemIDForItemInfo(itemInfo) end
+
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_Item.GetItemIcon)
 ---@param itemLocation ItemLocationMixin
 ---@return fileID? icon

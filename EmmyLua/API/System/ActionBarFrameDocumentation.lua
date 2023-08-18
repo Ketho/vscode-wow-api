@@ -1,6 +1,11 @@
 ---@meta
 C_ActionBar = {}
 
+---[Documentation](https://wowpedia.fandom.com/wiki/API_C_ActionBar.EnableActionRangeCheck)
+---@param actionID number
+---@param enable boolean
+function C_ActionBar.EnableActionRangeCheck(actionID, enable) end
+
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_ActionBar.FindFlyoutActionButtons)
 ---@param flyoutID number
 ---@return number[] slots

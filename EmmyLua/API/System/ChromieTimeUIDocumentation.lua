@@ -25,3 +25,5 @@ function C_ChromieTime.SelectChromieTimeOption(chromieTimeExpansionInfoId) end
 ---@field previewAtlas textureAtlas
 ---@field completed boolean
 ---@field alreadyOn boolean
+---@field recommended boolean
+---@field sortPriority number

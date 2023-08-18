@@ -50,11 +50,6 @@ function C_CampaignInfo.IsCampaignQuest(questID) end
 ---@return boolean sortAsNormalQuest
 function C_CampaignInfo.SortAsNormalQuest(campaignID) end
 
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_CampaignInfo.UsesNormalQuestIcons)
----@param campaignID number
----@return boolean useNormalQuestIcons
-function C_CampaignInfo.UsesNormalQuestIcons(campaignID) end
-
 ---@class CampaignChapterInfo
 ---@field name string
 ---@field description string
@@ -70,3 +65,5 @@ function C_CampaignInfo.UsesNormalQuestIcons(campaignID) end
 ---@field description string
 ---@field uiTextureKit textureKit
 ---@field isWarCampaign boolean
+---@field usesNormalQuestIcons boolean
+---@field isContainerCampaign boolean

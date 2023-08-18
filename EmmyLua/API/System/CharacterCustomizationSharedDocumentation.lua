@@ -12,6 +12,7 @@
 ---@field chrModelID number?
 ---@field options CharCustomizationOption[]
 ---@field hasNewChoices boolean
+---@field needsNativeFormCategory boolean
 
 ---@class CharCustomizationChoice
 ---@field id number

@@ -1,9 +1,17 @@
 ---@meta
 C_SuperTrack = {}
 
+---[Documentation](https://wowpedia.fandom.com/wiki/API_C_SuperTrack.ClearSuperTrackedContent)
+function C_SuperTrack.ClearSuperTrackedContent() end
+
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_SuperTrack.GetHighestPrioritySuperTrackingType)
 ---@return Enum.SuperTrackingType? type
 function C_SuperTrack.GetHighestPrioritySuperTrackingType() end
+
+---[Documentation](https://wowpedia.fandom.com/wiki/API_C_SuperTrack.GetSuperTrackedContent)
+---@return Enum.ContentTrackingType trackableType
+---@return number trackableID
+function C_SuperTrack.GetSuperTrackedContent() end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_SuperTrack.GetSuperTrackedQuestID)
 ---@return number? questID
@@ -12,6 +20,10 @@ function C_SuperTrack.GetSuperTrackedQuestID() end
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_SuperTrack.IsSuperTrackingAnything)
 ---@return boolean isSuperTracking
 function C_SuperTrack.IsSuperTrackingAnything() end
+
+---[Documentation](https://wowpedia.fandom.com/wiki/API_C_SuperTrack.IsSuperTrackingContent)
+---@return boolean isSuperTracking
+function C_SuperTrack.IsSuperTrackingContent() end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_SuperTrack.IsSuperTrackingCorpse)
 ---@return boolean isSuperTracking
@@ -24,6 +36,11 @@ function C_SuperTrack.IsSuperTrackingQuest() end
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_SuperTrack.IsSuperTrackingUserWaypoint)
 ---@return boolean isSuperTracking
 function C_SuperTrack.IsSuperTrackingUserWaypoint() end
+
+---[Documentation](https://wowpedia.fandom.com/wiki/API_C_SuperTrack.SetSuperTrackedContent)
+---@param trackableType number|Enum.ContentTrackingType
+---@param trackableID number
+function C_SuperTrack.SetSuperTrackedContent(trackableType, trackableID) end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_SuperTrack.SetSuperTrackedQuestID)
 ---@param questID number

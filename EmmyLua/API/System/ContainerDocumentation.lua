@@ -235,6 +235,7 @@ function C_Container.UseHearthstone() end
 ---@field hasNoValue boolean
 ---@field itemID number
 ---@field isBound boolean
+---@field itemName string
 
 ---@class ItemPurchaseCurrency
 ---@field iconFileID number?

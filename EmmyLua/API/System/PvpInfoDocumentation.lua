@@ -76,6 +76,7 @@ function C_PvP.GetArenaCrowdControlInfo(playerToken) end
 ---@return number experience
 ---@return BattlefieldItemReward[]? itemRewards
 ---@return BattlefieldCurrencyReward[]? currencyRewards
+---@return RoleShortageReward? roleShortageBonus
 function C_PvP.GetArenaRewards(teamSize) end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_PvP.GetArenaSkirmishRewards)
@@ -83,6 +84,7 @@ function C_PvP.GetArenaRewards(teamSize) end
 ---@return number experience
 ---@return BattlefieldItemReward[]? itemRewards
 ---@return BattlefieldCurrencyReward[]? currencyRewards
+---@return RoleShortageReward? roleShortageBonus
 function C_PvP.GetArenaSkirmishRewards() end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_PvP.GetAssignedSpecForBattlefieldQueue)
@@ -120,6 +122,7 @@ function C_PvP.GetBattlefieldVehicles(uiMapID) end
 ---@return number experience
 ---@return BattlefieldItemReward[]? itemRewards
 ---@return BattlefieldCurrencyReward[]? currencyRewards
+---@return RoleShortageReward? roleShortageBonus
 ---@return boolean hasWon
 function C_PvP.GetBrawlRewards(brawlType) end
 
@@ -209,6 +212,7 @@ function C_PvP.GetRandomBGInfo() end
 ---@return number experience
 ---@return BattlefieldItemReward[]? itemRewards
 ---@return BattlefieldCurrencyReward[]? currencyRewards
+---@return RoleShortageReward? roleShortageBonus
 function C_PvP.GetRandomBGRewards() end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_PvP.GetRandomEpicBGInfo)
@@ -220,6 +224,7 @@ function C_PvP.GetRandomEpicBGInfo() end
 ---@return number experience
 ---@return BattlefieldItemReward[]? itemRewards
 ---@return BattlefieldCurrencyReward[]? currencyRewards
+---@return RoleShortageReward? roleShortageBonus
 function C_PvP.GetRandomEpicBGRewards() end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_PvP.GetRatedBGRewards)
@@ -227,6 +232,7 @@ function C_PvP.GetRandomEpicBGRewards() end
 ---@return number experience
 ---@return BattlefieldItemReward[]? itemRewards
 ---@return BattlefieldCurrencyReward[]? currencyRewards
+---@return RoleShortageReward? roleShortageBonus
 function C_PvP.GetRatedBGRewards() end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_PvP.GetRatedSoloShuffleMinItemLevel)
@@ -238,6 +244,7 @@ function C_PvP.GetRatedSoloShuffleMinItemLevel() end
 ---@return number experience
 ---@return BattlefieldItemReward[]? itemRewards
 ---@return BattlefieldCurrencyReward[]? currencyRewards
+---@return RoleShortageReward? roleShortageBonus
 function C_PvP.GetRatedSoloShuffleRewards() end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_PvP.GetRewardItemLevelsByTierEnum)
@@ -331,6 +338,14 @@ function C_PvP.IsInBrawl() end
 ---@return boolean isInRatedMatchWithDeserterPenalty
 function C_PvP.IsInRatedMatchWithDeserterPenalty() end
 
+---[Documentation](https://wowpedia.fandom.com/wiki/API_C_PvP.IsMatchActive)
+---@return boolean isActive
+function C_PvP.IsMatchActive() end
+
+---[Documentation](https://wowpedia.fandom.com/wiki/API_C_PvP.IsMatchComplete)
+---@return boolean isComplete
+function C_PvP.IsMatchComplete() end
+
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_PvP.IsMatchConsideredArena)
 ---@return boolean asArena
 function C_PvP.IsMatchConsideredArena() end
@@ -405,6 +420,7 @@ function C_PvP.ToggleWarMode() end
 ---@field experience number
 ---@field itemRewards BattlefieldItemReward[]?
 ---@field currencyRewards BattlefieldCurrencyReward[]?
+---@field roleShortageBonus RoleShortageReward?
 
 ---@class BattlefieldVehicleInfo
 ---@field x number
@@ -572,3 +588,8 @@ function C_PvP.ToggleWarMode() end
 ---@field weeklyMostPlayedSpecRounds number
 ---@field seasonMostPlayedSpecID number
 ---@field seasonMostPlayedSpecRounds number
+
+---@class RoleShortageReward
+---@field validRoles string[]
+---@field rewardSpellID number
+---@field rewardItemID number

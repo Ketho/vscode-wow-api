@@ -292,6 +292,23 @@ function C_Commentator.GetPlayerFlagInfo(teamIndex, playerIndex) end
 ---@return boolean hasFlag
 function C_Commentator.GetPlayerFlagInfoByUnit(unitToken) end
 
+---[Documentation](https://wowpedia.fandom.com/wiki/API_C_Commentator.GetPlayerItemCooldownInfo)
+---@param teamIndex number
+---@param playerIndex number
+---@param itemID number
+---@return number startTime
+---@return number duration
+---@return boolean enable
+function C_Commentator.GetPlayerItemCooldownInfo(teamIndex, playerIndex, itemID) end
+
+---[Documentation](https://wowpedia.fandom.com/wiki/API_C_Commentator.GetPlayerItemCooldownInfoByUnit)
+---@param unitToken UnitToken
+---@param itemID number
+---@return number startTime
+---@return number duration
+---@return boolean enable
+function C_Commentator.GetPlayerItemCooldownInfoByUnit(unitToken, itemID) end
+
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_Commentator.GetPlayerOverrideName)
 ---@param originalName string
 ---@return string overrideName
@@ -477,6 +494,10 @@ function C_Commentator.SetBlocklistedAuras(spellIDs) end
 ---@param spellIDs number[]
 function C_Commentator.SetBlocklistedCooldowns(specID, spellIDs) end
 
+---[Documentation](https://wowpedia.fandom.com/wiki/API_C_Commentator.SetBlocklistedItemCooldowns)
+---@param itemIDs number[]
+function C_Commentator.SetBlocklistedItemCooldowns(itemIDs) end
+
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_Commentator.SetCamera)
 ---@param xPos number
 ---@param yPos number
@@ -577,6 +598,10 @@ function C_Commentator.SetRequestedDebuffCooldowns(specID, spellIDs) end
 ---@param specID number
 ---@param spellIDs number[]
 function C_Commentator.SetRequestedDefensiveCooldowns(specID, spellIDs) end
+
+---[Documentation](https://wowpedia.fandom.com/wiki/API_C_Commentator.SetRequestedItemCooldowns)
+---@param itemIDs number[]
+function C_Commentator.SetRequestedItemCooldowns(itemIDs) end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_Commentator.SetRequestedOffensiveCooldowns)
 ---@param specID number
@@ -684,6 +709,10 @@ function C_Commentator.ZoomOut() end
 ---@class CommentatorTeamDirectoryEntry
 ---@field playerName string
 ---@field teamName string
+
+---@class CommentatorTrackedItemCooldown
+---@field spellID number
+---@field category Enum.TrackedSpellCategory
 
 ---@class CommentatorUnitData
 ---@field healthMax number

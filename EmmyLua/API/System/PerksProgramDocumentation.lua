@@ -107,6 +107,7 @@ function C_PerksProgram.SetFrozenPerksVendorItem() end
 
 ---@class PerksProgramItemDisplayInfo
 ---@field overrideModelSceneID number?
+---@field creatureDisplayInfoID number?
 
 ---@class PerksProgramPendingChestRewards
 ---@field rewardTypeID number
@@ -128,6 +129,7 @@ function C_PerksProgram.SetFrozenPerksVendorItem() end
 ---@field timeRemaining time_t
 ---@field purchased boolean
 ---@field refundable boolean
+---@field pending boolean
 ---@field price number
 ---@field perksVendorItemID number
 ---@field itemID number

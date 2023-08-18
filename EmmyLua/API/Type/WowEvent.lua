@@ -11,6 +11,7 @@
 ---|"ACTIONBAR_UPDATE_COOLDOWN"
 ---|"ACTIONBAR_UPDATE_STATE"
 ---|"ACTIONBAR_UPDATE_USABLE"
+---|"ACTION_RANGE_CHECK_UPDATE" # `slot, isInRange, checksRange`
 ---|"ACTION_WILL_BIND_ITEM"
 ---|"ACTIVATE_GLYPH" # `spellID`
 ---|"ACTIVE_COMBAT_CONFIG_CHANGED" # `configID`
@@ -28,6 +29,7 @@
 ---|"ADVENTURE_MAP_UPDATE_POIS"
 ---|"AJ_DUNGEON_ACTION" # `lfgDungeonID`
 ---|"AJ_OPEN"
+---|"AJ_OPEN_COLLECTIONS_ACTION"
 ---|"AJ_PVE_LFG_ACTION"
 ---|"AJ_PVP_ACTION" # `battleMasterListID`
 ---|"AJ_PVP_LFG_ACTION"
@@ -76,12 +78,12 @@
 ---|"AUCTION_HOUSE_CLOSED"
 ---|"AUCTION_HOUSE_DISABLED"
 ---|"AUCTION_HOUSE_FAVORITES_UPDATED"
+---|"AUCTION_HOUSE_ITEM_DELIVERY_DELAY_UPDATE" # `purchasedItemDeliveryDelay, cancelledItemDeliveryDelay`
 ---|"AUCTION_HOUSE_NEW_BID_RECEIVED" # `auctionID`
 ---|"AUCTION_HOUSE_NEW_RESULTS_RECEIVED" # `itemKey`
 ---|"AUCTION_HOUSE_POST_ERROR"
 ---|"AUCTION_HOUSE_POST_WARNING"
 ---|"AUCTION_HOUSE_PURCHASE_COMPLETED" # `auctionID`
----|"AUCTION_HOUSE_PURCHASE_DELIVERY_DELAY_UPDATE" # `purchasedItemDeliveryDelay`
 ---|"AUCTION_HOUSE_SCRIPT_DEPRECATED"
 ---|"AUCTION_HOUSE_SHOW"
 ---|"AUCTION_HOUSE_SHOW_COMMODITY_WON_NOTIFICATION" # `commodityName, commodityQuantity`
@@ -190,6 +192,7 @@
 ---|"CALENDAR_UPDATE_GUILD_EVENTS"
 ---|"CALENDAR_UPDATE_INVITE_LIST" # `hasCompleteList`
 ---|"CALENDAR_UPDATE_PENDING_INVITES"
+---|"CANCEL_ALL_LOOT_ROLLS"
 ---|"CANCEL_GLYPH_CAST"
 ---|"CANCEL_LOOT_ROLL" # `rollID`
 ---|"CANCEL_SUMMON"
@@ -271,6 +274,7 @@
 ---|"CHAT_MSG_PET_BATTLE_COMBAT_LOG" # `text, playerName, languageName, channelName, playerName2, specialFlags, zoneChannelID, channelIndex, channelBaseName, languageID, lineID, guid, bnSenderID, isMobile, isSubtitle, hideSenderInLetterbox, supressRaidIcons`
 ---|"CHAT_MSG_PET_BATTLE_INFO" # `text, playerName, languageName, channelName, playerName2, specialFlags, zoneChannelID, channelIndex, channelBaseName, languageID, lineID, guid, bnSenderID, isMobile, isSubtitle, hideSenderInLetterbox, supressRaidIcons`
 ---|"CHAT_MSG_PET_INFO" # `text, playerName, languageName, channelName, playerName2, specialFlags, zoneChannelID, channelIndex, channelBaseName, languageID, lineID, guid, bnSenderID, isMobile, isSubtitle, hideSenderInLetterbox, supressRaidIcons`
+---|"CHAT_MSG_PING" # `text, playerName, languageName, channelName, playerName2, specialFlags, zoneChannelID, channelIndex, channelBaseName, languageID, lineID, guid, bnSenderID, isMobile, isSubtitle, hideSenderInLetterbox, supressRaidIcons`
 ---|"CHAT_MSG_RAID" # `text, playerName, languageName, channelName, playerName2, specialFlags, zoneChannelID, channelIndex, channelBaseName, languageID, lineID, guid, bnSenderID, isMobile, isSubtitle, hideSenderInLetterbox, supressRaidIcons`
 ---|"CHAT_MSG_RAID_BOSS_EMOTE" # `text, playerName, languageName, channelName, playerName2, specialFlags, zoneChannelID, channelIndex, channelBaseName, languageID, lineID, guid, bnSenderID, isMobile, isSubtitle, hideSenderInLetterbox, supressRaidIcons`
 ---|"CHAT_MSG_RAID_BOSS_WHISPER" # `text, playerName, languageName, channelName, playerName2, specialFlags, zoneChannelID, channelIndex, channelBaseName, languageID, lineID, guid, bnSenderID, isMobile, isSubtitle, hideSenderInLetterbox, supressRaidIcons`
@@ -292,7 +296,7 @@
 ---|"CHAT_SERVER_DISCONNECTED" # `isInitialMessage`
 ---|"CHAT_SERVER_RECONNECTED"
 ---|"CHEST_REWARDS_UPDATED_FROM_SERVER"
----|"CINEMATIC_START" # `canBeCancelled`
+---|"CINEMATIC_START" # `canBeCancelled, forcedAspectRatio`
 ---|"CINEMATIC_STOP"
 ---|"CLASS_TRIAL_TIMER_START"
 ---|"CLASS_TRIAL_UPGRADE_COMPLETE"
@@ -379,6 +383,9 @@
 ---|"CONSOLE_FONT_SIZE_CHANGED"
 ---|"CONSOLE_LOG" # `message`
 ---|"CONSOLE_MESSAGE" # `message, colorType`
+---|"CONTENT_TRACKING_IS_ENABLED_UPDATE" # `isEnabled`
+---|"CONTENT_TRACKING_LIST_UPDATE"
+---|"CONTENT_TRACKING_UPDATE" # `type, id, isTracked`
 ---|"CONTRIBUTION_CHANGED" # `state, result, name, contributionID`
 ---|"CONTRIBUTION_COLLECTOR_PENDING" # `contributionID, isPending, result`
 ---|"CONTRIBUTION_COLLECTOR_UPDATE"
@@ -435,6 +442,7 @@
 ---|"DUEL_INBOUNDS"
 ---|"DUEL_OUTOFBOUNDS"
 ---|"DUEL_REQUESTED" # `playerName`
+---|"DUEL_TO_THE_DEATH_REQUESTED" # `playerName`
 ---|"DYNAMIC_GOSSIP_POI_UPDATED"
 ---|"EDIT_MODE_LAYOUTS_UPDATED" # `layoutInfo, reconcileLayouts`
 ---|"EJ_DIFFICULTY_UPDATE" # `difficultyID`
@@ -707,10 +715,10 @@
 ---|"LOOT_SLOT_CHANGED" # `lootSlot`
 ---|"LOOT_SLOT_CLEARED" # `lootSlot`
 ---|"LORE_TEXT_UPDATED_CAMPAIGN" # `campaignID, textEntries`
----|"LOSS_OF_CONTROL_ADDED" # `effectIndex`
+---|"LOSS_OF_CONTROL_ADDED" # `unitTarget, effectIndex`
 ---|"LOSS_OF_CONTROL_COMMENTATOR_ADDED" # `victim, effectIndex`
 ---|"LOSS_OF_CONTROL_COMMENTATOR_UPDATE" # `victim`
----|"LOSS_OF_CONTROL_UPDATE"
+---|"LOSS_OF_CONTROL_UPDATE" # `unitTarget`
 ---|"LUA_WARNING" # `warnType, warningText`
 ---|"MACRO_ACTION_BLOCKED" # `function`
 ---|"MACRO_ACTION_FORBIDDEN" # `function`
@@ -723,6 +731,7 @@
 ---|"MAIL_SHOW"
 ---|"MAIL_SUCCESS" # `itemID`
 ---|"MAIL_UNLOCK_SEND_ITEMS"
+---|"MAIN_SPEC_NEED_ROLL" # `rollID, roll, isWinning`
 ---|"MAJOR_FACTION_INTERACTION_ENDED"
 ---|"MAJOR_FACTION_INTERACTION_STARTED"
 ---|"MAJOR_FACTION_RENOWN_CATCH_UP_STATE_UPDATE"
@@ -788,9 +797,11 @@
 ---|"PARTY_MEMBER_DISABLE" # `unitTarget`
 ---|"PARTY_MEMBER_ENABLE" # `unitTarget`
 ---|"PENDING_AZERITE_ESSENCE_CHANGED" # `essenceID`
+---|"PENDING_PING_OFF_SCREEN"
 ---|"PERKS_ACTIVITIES_TRACKED_UPDATED" # `trackedPerksActivities`
 ---|"PERKS_ACTIVITIES_UPDATED" # `info`
 ---|"PERKS_ACTIVITY_COMPLETED" # `perksActivityID`
+---|"PERKS_PROGRAM_ADD_PENDING_SHOP_ITEM" # `vendorItemID`
 ---|"PERKS_PROGRAM_CLOSE"
 ---|"PERKS_PROGRAM_CURRENCY_AWARDED" # `value`
 ---|"PERKS_PROGRAM_CURRENCY_REFRESH" # `oldValue, newValue`
@@ -800,6 +811,7 @@
 ---|"PERKS_PROGRAM_OPEN"
 ---|"PERKS_PROGRAM_PURCHASE_SUCCESS" # `vendorItemID`
 ---|"PERKS_PROGRAM_REFUND_SUCCESS" # `vendorItemID`
+---|"PERKS_PROGRAM_REMOVE_PENDING_SHOP_ITEM" # `vendorItemID`
 ---|"PERKS_PROGRAM_SET_FROZEN_ITEM" # `vendorItemID`
 ---|"PETITION_CLOSED"
 ---|"PETITION_SHOW"
@@ -856,6 +868,11 @@
 ---|"PET_STABLE_UPDATE_PAPERDOLL"
 ---|"PET_UI_CLOSE"
 ---|"PET_UI_UPDATE"
+---|"PING_PIN_FRAME_ADDED" # `region, uiTextureKit, isWorldPoint`
+---|"PING_PIN_FRAME_REMOVED" # `region`
+---|"PING_PIN_FRAME_SCREEN_CLAMP_STATE_UPDATED" # `region, state`
+---|"PING_RADIAL_WHEEL_FRAME_CREATED" # `region`
+---|"PING_RADIAL_WHEEL_FRAME_DESTROYED"
 ---|"PLAYERBANKBAGSLOTS_CHANGED"
 ---|"PLAYERBANKSLOTS_CHANGED" # `slot`
 ---|"PLAYERREAGENTBANKSLOTS_CHANGED" # `slot`
@@ -1006,7 +1023,6 @@
 ---|"REQUIRED_GUILD_RENAME_RESULT" # `success`
 ---|"RESEARCH_ARTIFACT_COMPLETE" # `name`
 ---|"RESEARCH_ARTIFACT_DIG_SITE_UPDATED"
----|"RESEARCH_ARTIFACT_HISTORY_READY"
 ---|"RESEARCH_ARTIFACT_UPDATE"
 ---|"RESURRECT_REQUEST" # `inviter`
 ---|"RETURNING_PLAYER_PROMPT"
@@ -1146,9 +1162,11 @@
 ---|"TOKEN_STATUS_CHANGED"
 ---|"TOOLTIP_DATA_UPDATE" # `dataInstanceID`
 ---|"TOYS_UPDATED" # `itemID, isNew, hasFanfare`
+---|"TRACKABLE_INFO_UPDATE" # `type, id`
 ---|"TRACKED_ACHIEVEMENT_LIST_CHANGED" # `achievementID, added`
 ---|"TRACKED_ACHIEVEMENT_UPDATE" # `achievementID, criteriaID, elapsed, duration`
 ---|"TRACKED_RECIPE_UPDATE" # `recipeID, tracked`
+---|"TRACKING_TARGET_INFO_UPDATE" # `targetType, targetID`
 ---|"TRADE_ACCEPT_UPDATE" # `playerAccepted, targetAccepted`
 ---|"TRADE_CLOSED"
 ---|"TRADE_CURRENCY_CHANGED"
@@ -1231,6 +1249,7 @@
 ---|"UNIT_DAMAGE" # `unitTarget`
 ---|"UNIT_DEFENSE" # `unitTarget`
 ---|"UNIT_DISPLAYPOWER" # `unitTarget`
+---|"UNIT_DISTANCE_CHECK_UPDATE" # `unitTarget, isInDistance`
 ---|"UNIT_ENTERED_VEHICLE" # `unitTarget, showVehicleFrame, isControlSeat, vehicleUIIndicatorID, vehicleGUID, mayChooseExit, hasPitch`
 ---|"UNIT_ENTERING_VEHICLE" # `unitTarget, showVehicleFrame, isControlSeat, vehicleUIIndicatorID, vehicleGUID, mayChooseExit, hasPitch`
 ---|"UNIT_EXITED_VEHICLE" # `unitTarget`
@@ -1242,6 +1261,7 @@
 ---|"UNIT_HEAL_ABSORB_AMOUNT_CHANGED" # `unitTarget`
 ---|"UNIT_HEAL_PREDICTION" # `unitTarget`
 ---|"UNIT_INVENTORY_CHANGED" # `unitTarget`
+---|"UNIT_IN_RANGE_UPDATE" # `unitTarget, isInRange`
 ---|"UNIT_LEVEL" # `unitTarget`
 ---|"UNIT_MANA" # `unitTarget`
 ---|"UNIT_MAXHEALTH" # `unitTarget`
@@ -1268,13 +1288,15 @@
 ---|"UNIT_SPELLCAST_CHANNEL_UPDATE" # `unitTarget, castGUID, spellID`
 ---|"UNIT_SPELLCAST_DELAYED" # `unitTarget, castGUID, spellID`
 ---|"UNIT_SPELLCAST_EMPOWER_START" # `unitTarget, castGUID, spellID`
----|"UNIT_SPELLCAST_EMPOWER_STOP" # `unitTarget, castGUID, spellID`
+---|"UNIT_SPELLCAST_EMPOWER_STOP" # `unitTarget, castGUID, spellID, complete`
 ---|"UNIT_SPELLCAST_EMPOWER_UPDATE" # `unitTarget, castGUID, spellID`
 ---|"UNIT_SPELLCAST_FAILED" # `unitTarget, castGUID, spellID`
 ---|"UNIT_SPELLCAST_FAILED_QUIET" # `unitTarget, castGUID, spellID`
 ---|"UNIT_SPELLCAST_INTERRUPTED" # `unitTarget, castGUID, spellID`
 ---|"UNIT_SPELLCAST_INTERRUPTIBLE" # `unitTarget`
 ---|"UNIT_SPELLCAST_NOT_INTERRUPTIBLE" # `unitTarget`
+---|"UNIT_SPELLCAST_RETICLE_CLEAR" # `unitTarget, castGUID, spellID`
+---|"UNIT_SPELLCAST_RETICLE_TARGET" # `unitTarget, castGUID, spellID`
 ---|"UNIT_SPELLCAST_SENT" # `unit, target, castGUID, spellID`
 ---|"UNIT_SPELLCAST_START" # `unitTarget, castGUID, spellID`
 ---|"UNIT_SPELLCAST_STOP" # `unitTarget, castGUID, spellID`
@@ -1315,8 +1337,7 @@
 ---|"UPDATE_SHAPESHIFT_USABLE"
 ---|"UPDATE_STEALTH"
 ---|"UPDATE_SUMMONPETS_ACTION"
----|"UPDATE_TRADESKILL_CAST_COMPLETE" # `isScrapping`
----|"UPDATE_TRADESKILL_RECAST"
+---|"UPDATE_TRADESKILL_CAST_STOPPED" # `isScrapping`
 ---|"UPDATE_UI_WIDGET" # `widgetInfo`
 ---|"UPDATE_VEHICLE_ACTIONBAR"
 ---|"UPDATE_WEB_TICKET" # `hasTicket, numTickets, ticketStatus, caseIndex, waitTimeMinutes, waitMessage`

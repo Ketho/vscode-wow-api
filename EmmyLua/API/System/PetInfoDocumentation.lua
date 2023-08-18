@@ -6,6 +6,11 @@ C_PetInfo = {}
 ---@return PetTamerMapInfo[] petTamers
 function C_PetInfo.GetPetTamersForMap(uiMapID) end
 
+---[Documentation](https://wowpedia.fandom.com/wiki/API_C_PetInfo.GetSpellForPetAction)
+---@param actionID number
+---@return number? spellID
+function C_PetInfo.GetSpellForPetAction(actionID) end
+
 ---@class PetTamerMapInfo
 ---@field areaPoiID number
 ---@field position Vector2DMixin

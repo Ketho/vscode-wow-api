@@ -37,6 +37,13 @@ export const data: EventInterface = {
 	ACTIONBAR_UPDATE_COOLDOWN: {},
 	ACTIONBAR_UPDATE_STATE: {},
 	ACTIONBAR_UPDATE_USABLE: {},
+	ACTION_RANGE_CHECK_UPDATE: {
+		Payload: [
+			{Name: "slot", Type: "number"},
+			{Name: "isInRange", Type: "boolean"},
+			{Name: "checksRange", Type: "boolean"},
+		],
+	},
 	ACTION_WILL_BIND_ITEM: {},
 	ACTIVATE_GLYPH: {
 		Payload: [
@@ -98,6 +105,7 @@ export const data: EventInterface = {
 		],
 	},
 	AJ_OPEN: {},
+	AJ_OPEN_COLLECTIONS_ACTION: {},
 	AJ_PVE_LFG_ACTION: {},
 	AJ_PVP_ACTION: {
 		Payload: [
@@ -236,6 +244,12 @@ export const data: EventInterface = {
 	AUCTION_HOUSE_CLOSED: {},
 	AUCTION_HOUSE_DISABLED: {},
 	AUCTION_HOUSE_FAVORITES_UPDATED: {},
+	AUCTION_HOUSE_ITEM_DELIVERY_DELAY_UPDATE: {
+		Payload: [
+			{Name: "purchasedItemDeliveryDelay", Type: "number"},
+			{Name: "cancelledItemDeliveryDelay", Type: "number"},
+		],
+	},
 	AUCTION_HOUSE_NEW_BID_RECEIVED: {
 		Payload: [
 			{Name: "auctionID", Type: "number"},
@@ -252,11 +266,6 @@ export const data: EventInterface = {
 	AUCTION_HOUSE_PURCHASE_COMPLETED: {
 		Payload: [
 			{Name: "auctionID", Type: "number"},
-		],
-	},
-	AUCTION_HOUSE_PURCHASE_DELIVERY_DELAY_UPDATE: {
-		Payload: [
-			{Name: "purchasedItemDeliveryDelay", Type: "number"},
 		],
 	},
 	AUCTION_HOUSE_SCRIPT_DEPRECATED: {},
@@ -629,6 +638,7 @@ export const data: EventInterface = {
 		],
 	},
 	CALENDAR_UPDATE_PENDING_INVITES: {},
+	CANCEL_ALL_LOOT_ROLLS: {},
 	CANCEL_GLYPH_CAST: {},
 	CANCEL_LOOT_ROLL: {
 		Payload: [
@@ -1792,6 +1802,27 @@ export const data: EventInterface = {
 			{Name: "supressRaidIcons", Type: "boolean"},
 		],
 	},
+	CHAT_MSG_PING: {
+		Payload: [
+			{Name: "text", Type: "string"},
+			{Name: "playerName", Type: "string"},
+			{Name: "languageName", Type: "string"},
+			{Name: "channelName", Type: "string"},
+			{Name: "playerName2", Type: "string"},
+			{Name: "specialFlags", Type: "string"},
+			{Name: "zoneChannelID", Type: "number"},
+			{Name: "channelIndex", Type: "number"},
+			{Name: "channelBaseName", Type: "string"},
+			{Name: "languageID", Type: "number"},
+			{Name: "lineID", Type: "number"},
+			{Name: "guid", Type: "WOWGUID"},
+			{Name: "bnSenderID", Type: "number"},
+			{Name: "isMobile", Type: "boolean"},
+			{Name: "isSubtitle", Type: "boolean"},
+			{Name: "hideSenderInLetterbox", Type: "boolean"},
+			{Name: "supressRaidIcons", Type: "boolean"},
+		],
+	},
 	CHAT_MSG_RAID: {
 		Payload: [
 			{Name: "text", Type: "string"},
@@ -2144,6 +2175,7 @@ export const data: EventInterface = {
 	CINEMATIC_START: {
 		Payload: [
 			{Name: "canBeCancelled", Type: "boolean"},
+			{Name: "forcedAspectRatio", Type: "CameraModeAspectRatio"},
 		],
 	},
 	CINEMATIC_STOP: {},
@@ -2507,6 +2539,19 @@ export const data: EventInterface = {
 			{Name: "colorType", Type: "number"},
 		],
 	},
+	CONTENT_TRACKING_IS_ENABLED_UPDATE: {
+		Payload: [
+			{Name: "isEnabled", Type: "boolean"},
+		],
+	},
+	CONTENT_TRACKING_LIST_UPDATE: {},
+	CONTENT_TRACKING_UPDATE: {
+		Payload: [
+			{Name: "type", Type: "ContentTrackingType"},
+			{Name: "id", Type: "number"},
+			{Name: "isTracked", Type: "boolean"},
+		],
+	},
 	CONTRIBUTION_CHANGED: {
 		Payload: [
 			{Name: "state", Type: "ContributionState"},
@@ -2691,6 +2736,11 @@ export const data: EventInterface = {
 	DUEL_INBOUNDS: {},
 	DUEL_OUTOFBOUNDS: {},
 	DUEL_REQUESTED: {
+		Payload: [
+			{Name: "playerName", Type: "string"},
+		],
+	},
+	DUEL_TO_THE_DEATH_REQUESTED: {
 		Payload: [
 			{Name: "playerName", Type: "string"},
 		],
@@ -3657,6 +3707,7 @@ export const data: EventInterface = {
 	},
 	LOSS_OF_CONTROL_ADDED: {
 		Payload: [
+			{Name: "unitTarget", Type: "UnitToken"},
 			{Name: "effectIndex", Type: "number"},
 		],
 	},
@@ -3671,7 +3722,11 @@ export const data: EventInterface = {
 			{Name: "victim", Type: "WOWGUID"},
 		],
 	},
-	LOSS_OF_CONTROL_UPDATE: {},
+	LOSS_OF_CONTROL_UPDATE: {
+		Payload: [
+			{Name: "unitTarget", Type: "UnitToken"},
+		],
+	},
 	LUA_WARNING: {
 		Payload: [
 			{Name: "warnType", Type: "number"},
@@ -3710,6 +3765,13 @@ export const data: EventInterface = {
 		],
 	},
 	MAIL_UNLOCK_SEND_ITEMS: {},
+	MAIN_SPEC_NEED_ROLL: {
+		Payload: [
+			{Name: "rollID", Type: "number"},
+			{Name: "roll", Type: "number"},
+			{Name: "isWinning", Type: "boolean"},
+		],
+	},
 	MAJOR_FACTION_INTERACTION_ENDED: {},
 	MAJOR_FACTION_INTERACTION_STARTED: {},
 	MAJOR_FACTION_RENOWN_CATCH_UP_STATE_UPDATE: {},
@@ -3930,6 +3992,7 @@ export const data: EventInterface = {
 			{Name: "essenceID", Type: "number", Nilable: true},
 		],
 	},
+	PENDING_PING_OFF_SCREEN: {},
 	PERKS_ACTIVITIES_TRACKED_UPDATED: {
 		Payload: [
 			{Name: "trackedPerksActivities", Type: "PerksActivitiesTracked"},
@@ -3943,6 +4006,11 @@ export const data: EventInterface = {
 	PERKS_ACTIVITY_COMPLETED: {
 		Payload: [
 			{Name: "perksActivityID", Type: "number"},
+		],
+	},
+	PERKS_PROGRAM_ADD_PENDING_SHOP_ITEM: {
+		Payload: [
+			{Name: "vendorItemID", Type: "number"},
 		],
 	},
 	PERKS_PROGRAM_CLOSE: {},
@@ -3971,6 +4039,11 @@ export const data: EventInterface = {
 		],
 	},
 	PERKS_PROGRAM_REFUND_SUCCESS: {
+		Payload: [
+			{Name: "vendorItemID", Type: "number"},
+		],
+	},
+	PERKS_PROGRAM_REMOVE_PENDING_SHOP_ITEM: {
 		Payload: [
 			{Name: "vendorItemID", Type: "number"},
 		],
@@ -4158,6 +4231,30 @@ export const data: EventInterface = {
 	PET_STABLE_UPDATE_PAPERDOLL: {},
 	PET_UI_CLOSE: {},
 	PET_UI_UPDATE: {},
+	PING_PIN_FRAME_ADDED: {
+		Payload: [
+			{Name: "region", Type: "ScriptRegion"},
+			{Name: "uiTextureKit", Type: "textureKit"},
+			{Name: "isWorldPoint", Type: "boolean"},
+		],
+	},
+	PING_PIN_FRAME_REMOVED: {
+		Payload: [
+			{Name: "region", Type: "ScriptRegion"},
+		],
+	},
+	PING_PIN_FRAME_SCREEN_CLAMP_STATE_UPDATED: {
+		Payload: [
+			{Name: "region", Type: "ScriptRegion"},
+			{Name: "state", Type: "boolean"},
+		],
+	},
+	PING_RADIAL_WHEEL_FRAME_CREATED: {
+		Payload: [
+			{Name: "region", Type: "ScriptRegion"},
+		],
+	},
+	PING_RADIAL_WHEEL_FRAME_DESTROYED: {},
 	PLAYERBANKBAGSLOTS_CHANGED: {},
 	PLAYERBANKSLOTS_CHANGED: {
 		Payload: [
@@ -4646,7 +4743,6 @@ export const data: EventInterface = {
 		],
 	},
 	RESEARCH_ARTIFACT_DIG_SITE_UPDATED: {},
-	RESEARCH_ARTIFACT_HISTORY_READY: {},
 	RESEARCH_ARTIFACT_UPDATE: {},
 	RESURRECT_REQUEST: {
 		Payload: [
@@ -5134,6 +5230,12 @@ export const data: EventInterface = {
 			{Name: "hasFanfare", Type: "boolean", Nilable: true},
 		],
 	},
+	TRACKABLE_INFO_UPDATE: {
+		Payload: [
+			{Name: "type", Type: "ContentTrackingType"},
+			{Name: "id", Type: "number"},
+		],
+	},
 	TRACKED_ACHIEVEMENT_LIST_CHANGED: {
 		Payload: [
 			{Name: "achievementID", Type: "number", Nilable: true},
@@ -5152,6 +5254,12 @@ export const data: EventInterface = {
 		Payload: [
 			{Name: "recipeID", Type: "number"},
 			{Name: "tracked", Type: "boolean"},
+		],
+	},
+	TRACKING_TARGET_INFO_UPDATE: {
+		Payload: [
+			{Name: "targetType", Type: "ContentTrackingTargetType"},
+			{Name: "targetID", Type: "number"},
 		],
 	},
 	TRADE_ACCEPT_UPDATE: {
@@ -5449,6 +5557,12 @@ export const data: EventInterface = {
 			{Name: "unitTarget", Type: "UnitToken"},
 		],
 	},
+	UNIT_DISTANCE_CHECK_UPDATE: {
+		Payload: [
+			{Name: "unitTarget", Type: "UnitToken"},
+			{Name: "isInDistance", Type: "boolean"},
+		],
+	},
 	UNIT_ENTERED_VEHICLE: {
 		Payload: [
 			{Name: "unitTarget", Type: "UnitToken"},
@@ -5514,6 +5628,12 @@ export const data: EventInterface = {
 	UNIT_INVENTORY_CHANGED: {
 		Payload: [
 			{Name: "unitTarget", Type: "UnitToken"},
+		],
+	},
+	UNIT_IN_RANGE_UPDATE: {
+		Payload: [
+			{Name: "unitTarget", Type: "UnitToken"},
+			{Name: "isInRange", Type: "boolean"},
 		],
 	},
 	UNIT_LEVEL: {
@@ -5664,6 +5784,7 @@ export const data: EventInterface = {
 			{Name: "unitTarget", Type: "UnitToken"},
 			{Name: "castGUID", Type: "WOWGUID"},
 			{Name: "spellID", Type: "number"},
+			{Name: "complete", Type: "boolean"},
 		],
 	},
 	UNIT_SPELLCAST_EMPOWER_UPDATE: {
@@ -5702,6 +5823,20 @@ export const data: EventInterface = {
 	UNIT_SPELLCAST_NOT_INTERRUPTIBLE: {
 		Payload: [
 			{Name: "unitTarget", Type: "UnitToken"},
+		],
+	},
+	UNIT_SPELLCAST_RETICLE_CLEAR: {
+		Payload: [
+			{Name: "unitTarget", Type: "UnitToken"},
+			{Name: "castGUID", Type: "WOWGUID"},
+			{Name: "spellID", Type: "number"},
+		],
+	},
+	UNIT_SPELLCAST_RETICLE_TARGET: {
+		Payload: [
+			{Name: "unitTarget", Type: "UnitToken"},
+			{Name: "castGUID", Type: "WOWGUID"},
+			{Name: "spellID", Type: "number"},
 		],
 	},
 	UNIT_SPELLCAST_SENT: {
@@ -5809,12 +5944,11 @@ export const data: EventInterface = {
 	UPDATE_SHAPESHIFT_USABLE: {},
 	UPDATE_STEALTH: {},
 	UPDATE_SUMMONPETS_ACTION: {},
-	UPDATE_TRADESKILL_CAST_COMPLETE: {
+	UPDATE_TRADESKILL_CAST_STOPPED: {
 		Payload: [
 			{Name: "isScrapping", Type: "boolean"},
 		],
 	},
-	UPDATE_TRADESKILL_RECAST: {},
 	UPDATE_UI_WIDGET: {
 		Payload: [
 			{Name: "widgetInfo", Type: "UIWidgetInfo"},

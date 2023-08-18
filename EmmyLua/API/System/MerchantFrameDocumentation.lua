@@ -6,6 +6,10 @@ C_MerchantFrame = {}
 ---@return number buybackItemID
 function C_MerchantFrame.GetBuybackItemID(buybackSlotIndex) end
 
+---[Documentation](https://wowpedia.fandom.com/wiki/API_C_MerchantFrame.GetNumJunkItems)
+---@return number numJunkItems
+function C_MerchantFrame.GetNumJunkItems() end
+
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_MerchantFrame.IsMerchantItemRefundable)
 ---@param index number
 ---@return boolean refundable

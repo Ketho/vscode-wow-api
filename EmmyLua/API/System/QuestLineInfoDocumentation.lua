@@ -6,6 +6,11 @@ C_QuestLine = {}
 ---@return QuestLineInfo[] questLines
 function C_QuestLine.GetAvailableQuestLines(uiMapID) end
 
+---[Documentation](https://wowpedia.fandom.com/wiki/API_C_QuestLine.GetForceVisibleQuests)
+---@param uiMapID number
+---@return number[] questIDs
+function C_QuestLine.GetForceVisibleQuests(uiMapID) end
+
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_QuestLine.GetQuestLineInfo)
 ---@param questID number
 ---@param uiMapID number
@@ -37,4 +42,5 @@ function C_QuestLine.RequestQuestLinesForMap(uiMapID) end
 ---@field isLegendary boolean
 ---@field isDaily boolean
 ---@field isCampaign boolean
+---@field isImportant boolean
 ---@field floorLocation Enum.QuestLineFloorLocation

@@ -6,10 +6,24 @@ C_EncounterJournal = {}
 ---@return DungeonEntranceMapInfo[] dungeonEntrances
 function C_EncounterJournal.GetDungeonEntrancesForMap(uiMapID) end
 
+---[Documentation](https://wowpedia.fandom.com/wiki/API_C_EncounterJournal.GetEncounterJournalLink)
+---@param linkType number|Enum.JournalLinkTypes
+---@param ID number
+---@param displayText string
+---@param difficultyID number
+---@return string link
+function C_EncounterJournal.GetEncounterJournalLink(linkType, ID, displayText, difficultyID) end
+
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_EncounterJournal.GetEncountersOnMap)
 ---@param uiMapID number
 ---@return EncounterJournalMapEncounterInfo[] encounters
 function C_EncounterJournal.GetEncountersOnMap(uiMapID) end
+
+---GameMap as opposed to UIMap since we use a mapID not a uiMapID.
+---[Documentation](https://wowpedia.fandom.com/wiki/API_C_EncounterJournal.GetInstanceForGameMap)
+---@param mapID number
+---@return number? journalInstanceID
+function C_EncounterJournal.GetInstanceForGameMap(mapID) end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_EncounterJournal.GetLootInfo)
 ---@param id number

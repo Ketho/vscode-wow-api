@@ -9,7 +9,7 @@
 
 ---@class CraftingOrderClaimsRemainingInfo
 ---@field claimsRemaining number? Default = 0
----@field hoursToRecharge number?
+---@field secondsToRecharge number?
 
 ---@class CraftingOrderCustomerCategory
 ---@field categoryName string
@@ -108,7 +108,7 @@
 
 ---@class CraftingOrderReagentInfo
 ---@field reagent CraftingReagentInfo
----@field reagentSlot number
+---@field slotIndex number
 ---@field source Enum.CraftingOrderReagentSource
 ---@field isBasicReagent boolean
 

@@ -256,6 +256,11 @@ function C_QuestLog.IsComplete(questID) end
 ---@return boolean isFailed
 function C_QuestLog.IsFailed(questID) end
 
+---[Documentation](https://wowpedia.fandom.com/wiki/API_C_QuestLog.IsImportantQuest)
+---@param questID number
+---@return boolean isImportant
+function C_QuestLog.IsImportantQuest(questID) end
+
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_QuestLog.IsLegendaryQuest)
 ---@param questID number
 ---@return boolean isLegendaryQuest

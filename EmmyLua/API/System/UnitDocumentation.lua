@@ -1,9 +1,4 @@
 ---@meta
----[Documentation](https://wowpedia.fandom.com/wiki/API_GetClassIDFromSpecID)
----@param specID number
----@return number? classID
-function GetClassIDFromSpecID(specID) end
-
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_GetNegativeCorruptionEffectInfo)
 ---@return CorruptionEffectInfo[] corruptionEffects
 function GetNegativeCorruptionEffectInfo() end
@@ -131,10 +126,22 @@ function UnitClass(unit) end
 ---@return number classID
 function UnitClassBase(unit) end
 
+---[Documentation](https://wowpedia.fandom.com/wiki/API_UnitDistanceSquared)
+---@param unit UnitToken
+---@return number distance
+---@return boolean checkedDistance
+function UnitDistanceSquared(unit) end
+
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_UnitInPartyShard)
 ---@param unit UnitToken
 ---@return boolean inPartyShard
 function UnitInPartyShard(unit) end
+
+---[Documentation](https://wowpedia.fandom.com/wiki/API_UnitInRange)
+---@param unit UnitToken
+---@return boolean inRange
+---@return boolean checkedRange
+function UnitInRange(unit) end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_UnitIsConnected)
 ---@param unit UnitToken

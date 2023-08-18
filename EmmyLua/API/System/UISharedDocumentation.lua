@@ -6,7 +6,7 @@
 ---@field offsetX uiUnit
 ---@field offsetY uiUnit
 
----@class uiRect
+---@class uiBoundsRect
 ---@field left uiUnit
 ---@field bottom uiUnit
 ---@field width uiUnit
