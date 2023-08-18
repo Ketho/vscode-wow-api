@@ -205,7 +205,7 @@ function C_UIWidgetManager.UnregisterUnitForWidgetUpdates(unitToken, isGuid) end
 ---@field neutralZoneSize number
 ---@field neutralZoneCenter number
 ---@field tooltip string
----@field glowAnimType Enum.CaptureBarWidgetGlowAnimType
+---@field glowAnimType CaptureBarWidgetGlowAnimType
 ---@field fillDirectionType Enum.CaptureBarWidgetFillDirectionType
 ---@field tooltipLoc Enum.UIWidgetTooltipLocation
 ---@field widgetSizeSetting number
