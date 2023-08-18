@@ -1,4 +1,10 @@
 ---@meta
+---[Documentation](https://wowpedia.fandom.com/wiki/API_ToggleSheath)
+function ToggleSheath() end
+
+---[Documentation](https://wowpedia.fandom.com/wiki/API_ToggleSpellAutocast)
+function ToggleSpellAutocast() end
+
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_ToggleWindowed)
 function ToggleWindowed() end
 
@@ -318,7 +324,9 @@ function UnitHonorLevel(unit) end
 function UnitHonorMax(unit) end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_UnitInAnyGroup)
-function UnitInAnyGroup() end
+---@param unit UnitToken
+---@return boolean inGroup
+function UnitInAnyGroup(unit) end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_UnitInBattleground)
 function UnitInBattleground(unit) end

@@ -575,7 +575,11 @@ function GetMacroIcons(table) end
 function GetMacroIndexByName(name) end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_GetMacroInfo)
-function GetMacroInfo() end
+---@param macro number|string
+---@return string name
+---@return fileID icon
+---@return string body
+function GetMacroInfo(macro) end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_GetMacroItem)
 function GetMacroItem() end
@@ -2567,8 +2571,4 @@ function GuildSetLeader(name) end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_GuildSetMOTD)
 function GuildSetMOTD(note) end
-
----[Documentation](https://wowpedia.fandom.com/wiki/API_GuildUninvite)
----@param name string
-function GuildUninvite(name) end
 

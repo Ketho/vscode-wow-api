@@ -1,4 +1,8 @@
 ---@meta
+---[Documentation](https://wowpedia.fandom.com/wiki/API_GuildUninvite)
+---@param name string
+function GuildUninvite(name) end
+
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_HandleAtlasMemberCommand)
 function HandleAtlasMemberCommand() end
 
@@ -2489,10 +2493,4 @@ function ToggleRun() end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_ToggleSelfHighlight)
 function ToggleSelfHighlight() end
-
----[Documentation](https://wowpedia.fandom.com/wiki/API_ToggleSheath)
-function ToggleSheath() end
-
----[Documentation](https://wowpedia.fandom.com/wiki/API_ToggleSpellAutocast)
-function ToggleSpellAutocast() end
 

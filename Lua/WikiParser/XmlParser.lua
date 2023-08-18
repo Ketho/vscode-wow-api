@@ -58,6 +58,8 @@ local validTypes = {
 	Frame = true,
 	Font = true,
 	FontInfo = true,
+	fileID = true,
+	UnitToken = true,
 }
 
 local subTypeAlias = {
