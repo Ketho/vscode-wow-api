@@ -1,7 +1,7 @@
 local lfs = require "lfs"
 
 local Util = require("Lua.Util.Util")
-local parser = require("Lua.Util.wowtoolsparser")
+local parser = require("Lua.Util.wago_csv")
 
 Util:MakeDir("src/data/globalstring")
 
@@ -10,18 +10,16 @@ local pre = [[import type { GlobalStringInterface } from "./GlobalStringInterfac
 export const data: GlobalStringInterface = {
 ]]
 
-local LATEST = "10.1.0.49801"
-
 local locales = {
-	-- "deDE",
+	"deDE",
 	"enUS", -- same as enGB
-	-- "esES", "esMX",
-	-- "frFR",
-	-- "itIT",
-	-- "koKR",
-	-- "ptBR", -- same as ptPT
-	-- "ruRU",
-	-- "zhCN",	"zhTW",
+	"esES", "esMX",
+	"frFR",
+	"itIT",
+	"koKR",
+	"ptBR", -- same as ptPT
+	"ruRU",
+	"zhCN",	"zhTW",
 }
 
 -- its fine not escaping symbols, except single backslashes and backquotes
@@ -36,8 +34,8 @@ local function IsValidTableKey(s)
 	return not s:find("-") and not s:find("^%d")
 end
 
-function m:ToTypeScript(locale)
-	local globalstrings = parser:ReadCSV("globalstrings", {header = true, build = CONSTANTS.LATEST_MAINLINE, locale = locale}, true, LATEST)
+function m:ToTypeScript(locale, build)
+	local globalstrings = parser:ReadCSV("globalstrings", {header = true, locale = locale, build = build})
 	local stringsTable = {}
 	for line in globalstrings:lines() do
 		local flags = tonumber(line.Flags)
@@ -67,17 +65,13 @@ function m:ToTypeScript(locale)
 	return pre..table.concat(t, "\n")
 end
 
-function m:WriteLocales()
-	-- local latest = parser:FindBuild("globalstrings", CONSTANTS.LATEST_MAINLINE)
-	-- local cache = string.format("Lua/Data/cache/globalstrings/globalstrings_%s_enUS.csv", latest)
-	local cache = string.format("Lua/Data/cache/globalstrings/globalstrings_wago_%s.csv", LATEST)
-	-- if not lfs.attributes(cache) then -- skip if already exported
+function m:WriteLocales(branch)
+	local latestBuild = parser:FindBuild(branch)
 	for _, locale in pairs(locales) do
 		local path = string.format("src/data/globalstring/%s.ts", locale)
-		local data = self:ToTypeScript(locale)
+		local data = self:ToTypeScript(locale, latestBuild)
 		Util:WriteFile(path, data)
 	end
-	-- end
 end
 
 return m

@@ -1,10 +1,19 @@
 local Path = require "path"
 
-BRANCH = "mainline"
+BRANCH = "mainline_ptr"
 CONSTANTS = {
-	LATEST_MAINLINE = "10.0.2",
+	LATEST_MAINLINE = "10.1.7",
 	LATEST_CLASSIC = "2.5.4",
 }
+
+local wagoBranch = {
+	mainline_ptr = "wowt",
+	mainline = "wow",
+}
+
+local function GetWagoBranch(flavor)
+	return wagoBranch[flavor]
+end
 
 local Util = require(Path.join("Lua", "Util", "Util"))
 
@@ -38,7 +47,7 @@ Util:WriteFile(Path.join(path_tsdata, "event.ts"), require("Lua.ToTypeScript.Eve
 Util:WriteFile(Path.join(path_tsdata, "cvar.ts"), require("Lua.ToTypeScript.CVar")())
 Util:WriteFile(Path.join(path_tsdata, "enum.ts"), require("Lua.ToTypeScript.LuaEnum")())
 Util:MakeDir(Path.join(path_luadata, "cache", "globalstrings"))
-require("Lua.ToTypeScript.GlobalString"):WriteLocales()
+require("Lua.ToTypeScript.GlobalString"):WriteLocales(GetWagoBranch(BRANCH))
 
 -- parse the wiki
 require("Lua.WikiParser.WikiParser")
