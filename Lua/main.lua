@@ -7,8 +7,8 @@ CONSTANTS = {
 }
 
 local wagoBranch = {
-	mainline_ptr = "wowt",
 	mainline = "wow",
+	mainline_ptr = "wowt",
 }
 
 local function GetWagoBranch(flavor)
@@ -44,8 +44,8 @@ Util:WriteFileMeta(Path.join(path_api, "Enum.lua"), EmmyLiterals:GetEnumTable())
 -- typescript data
 local path_tsdata = Path.join("src", "data")
 Util:WriteFile(Path.join(path_tsdata, "event.ts"), require("Lua.ToTypeScript.Event")())
-Util:WriteFile(Path.join(path_tsdata, "cvar.ts"), require("Lua.ToTypeScript.CVar")())
-Util:WriteFile(Path.join(path_tsdata, "enum.ts"), require("Lua.ToTypeScript.LuaEnum")())
+Util:WriteFile(Path.join(path_tsdata, "cvar.ts"), require("Lua.ToTypeScript.CVar")(BRANCH))
+Util:WriteFile(Path.join(path_tsdata, "enum.ts"), require("Lua.ToTypeScript.LuaEnum")(BRANCH))
 Util:MakeDir(Path.join(path_luadata, "cache", "globalstrings"))
 require("Lua.ToTypeScript.GlobalString"):WriteLocales(GetWagoBranch(BRANCH))
 

@@ -1,6 +1,5 @@
 local Util = require("Lua.Util.Util")
 -- cache should already be created at this point
-local data = require("Lua.Data.cache.CVars_mainline")
 
 local pre = [[
 interface CVarInterface {
@@ -17,11 +16,13 @@ interface CVarInterface {
 export const data: CVarInterface = {
 ]]
 
-local function ToTypeScript()
+local function ToTypeScript(branch)
+	local data = require("Lua.Data.cache.CVars_"..branch)
+
 	local t = {}
 	local sorted = Util:SortTable(data[1].var)
 	for _, name in pairs(sorted) do
-		local default, category, character, server, help = unpack(data[1].var[name])
+		local default, category, character, server, secure, help = unpack(data[1].var[name])
 		table.insert(t, string.format("\t%s: {", name:lower()))
 		table.insert(t, string.format('\t\tname: "%s",', name))
 		table.insert(t, string.format('\t\tdefault: "%s",', default))
