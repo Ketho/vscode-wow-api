@@ -3,7 +3,7 @@ local lfs = require "lfs"
 local https = require "ssl.https"
 local cjson = require "cjson"
 local cjsonutil = require "cjson.util"
-local csv = require("Lua.Util.csv.csv")
+local csv = require("Lua/Util/csv/csv")
 
 local parser = {}
 
