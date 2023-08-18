@@ -738,6 +738,13 @@ Enum = {
 		QuestActive = 1,
 		QuestCompleted = 2,
 	},
+	---@enum Enum.CameraModeAspectRatio
+	CameraModeAspectRatio = {
+		Default = 0,
+		LegacyLetterbox = 1,
+		HighDefinition_16_X_9 = 2,
+		Cinemascope_2_Dot_4_X_1 = 3,
+	},
 	---@enum Enum.CampaignState
 	CampaignState = {
 		Invalid = 0,
@@ -749,11 +756,6 @@ Enum = {
 	CaptureBarWidgetFillDirectionType = {
 		RightToLeft = 0,
 		LeftToRight = 1,
-	},
-	---@enum Enum.CaptureBarWidgetGlowAnimType
-	CaptureBarWidgetGlowAnimType = {
-		None = 0,
-		Pulse = 1,
 	},
 	---@enum Enum.CharCustomizationType
 	CharCustomizationType = {
@@ -804,8 +806,9 @@ Enum = {
 	---@enum Enum.ChatWhisperTargetStatus
 	ChatWhisperTargetStatus = {
 		CanWhisper = 0,
-		Offline = 1,
-		WrongFaction = 2,
+		CanWhisperGuild = 1,
+		Offline = 2,
+		WrongFaction = 3,
 	},
 	---@enum Enum.ChrCustomizationCategoryFlag
 	ChrCustomizationCategoryFlag = {
@@ -816,6 +819,21 @@ Enum = {
 		SelectionPopout = 0,
 		Checkbox = 1,
 		Slider = 2,
+	},
+	---@enum Enum.ChrModelFeatureFlags
+	ChrModelFeatureFlags = {
+		Summons = 1,
+		Forms = 2,
+		Identity = 4,
+		DragonCompanions = 8,
+		Mounts = 16,
+		HunterPets = 32,
+	},
+	---@enum Enum.ChrRacesAllianceType
+	ChrRacesAllianceType = {
+		Alliance = 0,
+		Horde = 1,
+		NeutralOrNpc = 2,
 	},
 	---@enum Enum.ClickBindingInteraction
 	ClickBindingInteraction = {
@@ -828,6 +846,7 @@ Enum = {
 		Spell = 1,
 		Macro = 2,
 		Interaction = 3,
+		PetAction = 4,
 	},
 	---@enum Enum.ClientPlatformType
 	ClientPlatformType = {
@@ -1094,6 +1113,38 @@ Enum = {
 		Macro = 2,
 		Script = 3,
 	},
+	---@enum Enum.ContentTrackingError
+	ContentTrackingError = {
+		Untrackable = 0,
+		MaxTracked = 1,
+		AlreadyTracked = 2,
+	},
+	---@enum Enum.ContentTrackingResult
+	ContentTrackingResult = {
+		Success = 0,
+		DataPending = 1,
+		Failure = 2,
+	},
+	---@enum Enum.ContentTrackingStopType
+	ContentTrackingStopType = {
+		Invalidated = 0,
+		Collected = 1,
+		Manual = 2,
+	},
+	---@enum Enum.ContentTrackingTargetType
+	ContentTrackingTargetType = {
+		JournalEncounter = 0,
+		Vendor = 1,
+		Achievement = 2,
+		Profession = 3,
+		Quest = 4,
+	},
+	---@enum Enum.ContentTrackingType
+	ContentTrackingType = {
+		Appearance = 0,
+		Mount = 1,
+		Achievement = 2,
+	},
 	---@enum Enum.ContributionAppearanceFlags
 	ContributionAppearanceFlags = {
 		TooltipUseTimeRemaining = 0,
@@ -1163,6 +1214,7 @@ Enum = {
 		Reagent = 0,
 		Recraft = 1,
 		CraftedResult = 2,
+		RemoveReagent = 3,
 	},
 	---@enum Enum.CraftingOrderReagentSource
 	CraftingOrderReagentSource = {
@@ -1329,6 +1381,8 @@ Enum = {
 		CurrencyBShowQuestXPGainInTooltip = 2,
 		CurrencyBNoNotificationMailOnOfflineProgress = 4,
 		CurrencyBBattlenetVirtualCurrency = 8,
+		FutureCurrencyFlag = 16,
+		CurrencyBDontDisplayIfZero = 32,
 	},
 	---@enum Enum.CurrencyGainFlags
 	CurrencyGainFlags = {
@@ -1408,6 +1462,7 @@ Enum = {
 		FlagPlayerItemAssignment = 2,
 		Hidden = 4,
 		Virtual = 8,
+		StartsCollapsed = 16,
 	},
 	---@enum Enum.CursorStyle
 	CursorStyle = {
@@ -1446,42 +1501,46 @@ Enum = {
 		QuestTurninCursor = 27,
 		QuestLegendaryCursor = 28,
 		QuestLegendaryTurninCursor = 29,
-		VehicleCursor = 30,
-		MapPinCursor = 31,
-		UIMoveCursor = 32,
-		UIResizeCursor = 33,
-		PointErrorCursor = 34,
-		CastErrorCursor = 35,
-		BuyErrorCursor = 36,
-		AttackErrorCursor = 37,
-		InteractErrorCursor = 38,
-		SpeakErrorCursor = 39,
-		InspectErrorCursor = 40,
-		PickupErrorCursor = 41,
-		TaxiErrorCursor = 42,
-		TrainerErrorCursor = 43,
-		MineErrorCursor = 44,
-		SkinErrorCursor = 45,
-		GatherErrorCursor = 46,
-		LockErrorCursor = 47,
-		MailErrorCursor = 48,
-		LootAllErrorCursor = 49,
-		RepairErrorCursor = 50,
-		RepairnpcErrorCursor = 51,
-		ItemErrorCursor = 52,
-		SkinHordeErrorCursor = 53,
-		SkinAllianceErrorCursor = 54,
-		InnkeeperErrorCursor = 55,
-		CampaignQuestErrorCursor = 56,
-		CampaignQuestTurninErrorCursor = 57,
-		QuestErrorCursor = 58,
-		QuestRepeatableErrorCursor = 59,
-		QuestTurninErrorCursor = 60,
-		QuestLegendaryErrorCursor = 61,
-		QuestLegendaryTurninErrorCursor = 62,
-		VehicleErrorCursor = 63,
-		MapPinErrorCursor = 64,
-		CustomCursor = 65,
+		QuestImportantCursor = 30,
+		QuestImportantTurninCursor = 31,
+		VehicleCursor = 32,
+		MapPinCursor = 33,
+		UIMoveCursor = 34,
+		UIResizeCursor = 35,
+		PointErrorCursor = 36,
+		CastErrorCursor = 37,
+		BuyErrorCursor = 38,
+		AttackErrorCursor = 39,
+		InteractErrorCursor = 40,
+		SpeakErrorCursor = 41,
+		InspectErrorCursor = 42,
+		PickupErrorCursor = 43,
+		TaxiErrorCursor = 44,
+		TrainerErrorCursor = 45,
+		MineErrorCursor = 46,
+		SkinErrorCursor = 47,
+		GatherErrorCursor = 48,
+		LockErrorCursor = 49,
+		MailErrorCursor = 50,
+		LootAllErrorCursor = 51,
+		RepairErrorCursor = 52,
+		RepairnpcErrorCursor = 53,
+		ItemErrorCursor = 54,
+		SkinHordeErrorCursor = 55,
+		SkinAllianceErrorCursor = 56,
+		InnkeeperErrorCursor = 57,
+		CampaignQuestErrorCursor = 58,
+		CampaignQuestTurninErrorCursor = 59,
+		QuestErrorCursor = 60,
+		QuestRepeatableErrorCursor = 61,
+		QuestTurninErrorCursor = 62,
+		QuestLegendaryErrorCursor = 63,
+		QuestLegendaryTurninErrorCursor = 64,
+		QuestImportantErrorCursor = 65,
+		QuestImportantTurninErrorCursor = 66,
+		VehicleErrorCursor = 67,
+		MapPinErrorCursor = 68,
+		CustomCursor = 69,
 	},
 	---@enum Enum.CustomBindingType
 	CustomBindingType = {
@@ -1547,6 +1606,15 @@ Enum = {
 		Physical = 0,
 		Magical = 1,
 	},
+	---@enum Enum.DisableAccountProfilesFlags
+	DisableAccountProfilesFlags = {
+		None = 0,
+		Document = 1,
+		SharedCollections = 2,
+		MountsCollections = 4,
+		PetsCollections = 8,
+		ItemsCollections = 16,
+	},
 	---@enum Enum.EditModeAccountSetting
 	EditModeAccountSetting = {
 		ShowGrid = 0,
@@ -1574,6 +1642,9 @@ Enum = {
 		EnableSnap = 22,
 		EnableAdvancedOptions = 23,
 		ShowPetFrame = 24,
+		ShowTimerBars = 25,
+		ShowVehicleSeatIndicator = 26,
+		ShowArchaeologyBar = 27,
 	},
 	---@enum Enum.EditModeActionBarSetting
 	EditModeActionBarSetting = {
@@ -1602,6 +1673,10 @@ Enum = {
 		PetActionBar = 12,
 		PossessActionBar = 13,
 	},
+	---@enum Enum.EditModeArchaeologyBarSetting
+	EditModeArchaeologyBarSetting = {
+		Size = 0,
+	},
 	---@enum Enum.EditModeAuraFrameSetting
 	EditModeAuraFrameSetting = {
 		Orientation = 0,
@@ -1629,6 +1704,11 @@ Enum = {
 		BarSize = 0,
 		LockToPlayerFrame = 1,
 		ShowCastTime = 2,
+	},
+	---@enum Enum.EditModeChatFrameDisplayOnlySetting
+	EditModeChatFrameDisplayOnlySetting = {
+		Width = 4,
+		Height = 5,
 	},
 	---@enum Enum.EditModeChatFrameSetting
 	EditModeChatFrameSetting = {
@@ -1707,6 +1787,13 @@ Enum = {
 		Bags = 14,
 		StatusTrackingBar = 15,
 		DurabilityFrame = 16,
+		TimerBars = 17,
+		VehicleSeatIndicator = 18,
+		ArchaeologyBar = 19,
+	},
+	---@enum Enum.EditModeTimerBarsSetting
+	EditModeTimerBarsSetting = {
+		Size = 0,
 	},
 	---@enum Enum.EditModeUnitFrameSetting
 	EditModeUnitFrameSetting = {
@@ -1727,6 +1814,7 @@ Enum = {
 		SortPlayersBy = 14,
 		RowSize = 15,
 		FrameSize = 16,
+		ViewArenaSize = 17,
 	},
 	---@enum Enum.EditModeUnitFrameSystemIndices
 	EditModeUnitFrameSystemIndices = {
@@ -1738,6 +1826,10 @@ Enum = {
 		Boss = 6,
 		Arena = 7,
 		Pet = 8,
+	},
+	---@enum Enum.EditModeVehicleSeatIndicatorSetting
+	EditModeVehicleSeatIndicatorSetting = {
+		Size = 0,
 	},
 	---@enum Enum.EncounterLootDropRollState
 	EncounterLootDropRollState = {
@@ -2245,6 +2337,16 @@ Enum = {
 		Sigil = 10,
 		Relic = 11,
 	},
+	---@enum Enum.ItemBind
+	ItemBind = {
+		None = 0,
+		OnAcquire = 1,
+		OnEquip = 2,
+		OnUse = 3,
+		Quest = 4,
+		Unused1 = 5,
+		Unused2 = 6,
+	},
 	---@enum Enum.ItemClass
 	ItemClass = {
 		Consumable = 0,
@@ -2740,6 +2842,68 @@ Enum = {
 		Ossuary = 13,
 		BossRush = 14,
 	},
+	---@enum Enum.JournalEncounterFlags
+	JournalEncounterFlags = {
+		Obsolete = 1,
+		LimitDifficulties = 2,
+		AllianceOnly = 4,
+		HordeOnly = 8,
+		NoMap = 16,
+		InternalOnly = 32,
+	},
+	---@enum Enum.JournalEncounterIconFlags
+	JournalEncounterIconFlags = {
+		Tank = 1,
+		Dps = 2,
+		Healer = 4,
+		Heroic = 8,
+		Deadly = 16,
+		Important = 32,
+		Interruptible = 64,
+		Magic = 128,
+		Curse = 256,
+		Poison = 512,
+		Disease = 1024,
+		Enrage = 2048,
+		Mythic = 4096,
+		Bleed = 8192,
+	},
+	---@enum Enum.JournalEncounterItemFlags
+	JournalEncounterItemFlags = {
+		Obsolete = 1,
+		LimitDifficulties = 2,
+		DisplayAsPerPlayerLoot = 4,
+		DisplayAsVeryRare = 8,
+		DisplayAsExtremelyRare = 16,
+	},
+	---@enum Enum.JournalEncounterLocFlags
+	JournalEncounterLocFlags = {
+		Primary = 1,
+	},
+	---@enum Enum.JournalEncounterSecTypes
+	JournalEncounterSecTypes = {
+		Generic = 0,
+		Creature = 1,
+		Ability = 2,
+		Overview = 3,
+	},
+	---@enum Enum.JournalEncounterSectionFlags
+	JournalEncounterSectionFlags = {
+		StartExpanded = 1,
+		LimitDifficulties = 2,
+	},
+	---@enum Enum.JournalInstanceFlags
+	JournalInstanceFlags = {
+		Timewalker = 1,
+		HideUserSelectableDifficulty = 2,
+	},
+	---@enum Enum.JournalLinkTypes
+	JournalLinkTypes = {
+		Instance = 0,
+		Encounter = 1,
+		Section = 2,
+		Tier = 3,
+	},
 	---@enum Enum.LFGEntryPlaystyle
 	LFGEntryPlaystyle = {
 		None = 0,
@@ -2861,6 +3025,16 @@ Enum = {
 		Barber = 262144,
 		ItemUpgrade = 524288,
 		VendorPoison = 1048576,
+	},
+	---@enum Enum.ModelBlendOperation
+	ModelBlendOperation = {
+		None = 0,
+		Anim = 1,
+	},
+	---@enum Enum.ModelLightType
+	ModelLightType = {
+		Directional = 0,
+		Point = 1,
 	},
 	---@enum Enum.ModelSceneSetting
 	ModelSceneSetting = {
@@ -3191,6 +3365,39 @@ Enum = {
 		WarMode = 2,
 		ChromieTime = 3,
 	},
+	---@enum Enum.PingMode
+	PingMode = {
+		KeyDown = 0,
+		ClickDrag = 1,
+	},
+	---@enum Enum.PingResult
+	PingResult = {
+		Success = 0,
+		FailedGeneric = 1,
+		FailedSpamming = 2,
+		FailedDisabledByLeader = 3,
+		FailedDisabledBySettings = 4,
+		FailedUnspecified = 5,
+	},
+	---@enum Enum.PingSubjectType
+	PingSubjectType = {
+		Attack = 0,
+		Warning = 1,
+		Assist = 2,
+		OnMyWay = 3,
+		AlertThreat = 4,
+		AlertNotThreat = 5,
+	},
+	---@enum Enum.PingTextureType
+	PingTextureType = {
+		Center = 0,
+		Expand = 1,
+		Rotation = 2,
+	},
+	---@enum Enum.PingTypeFlags
+	PingTypeFlags = {
+		DefaultPing = 1,
+	},
 	---@enum Enum.PlayerChoiceRarity
 	PlayerChoiceRarity = {
 		Common = 0,
@@ -3502,8 +3709,11 @@ Enum = {
 	---@enum Enum.PvPMatchState
 	PvPMatchState = {
 		Inactive = 0,
-		Active = 1,
-		Complete = 2,
+		Waiting = 1,
+		StartUp = 2,
+		Engaged = 3,
+		PostRound = 4,
+		Complete = 5,
 	},
 	---@enum Enum.PvPUnitClassification
 	PvPUnitClassification = {
@@ -3541,12 +3751,6 @@ Enum = {
 		Above = 0,
 		Below = 1,
 		Same = 2,
-	},
-	---@enum Enum.QuestPOIQuestTypes
-	QuestPOIQuestTypes = {
-		Normal = 1,
-		Campaign = 2,
-		Calling = 3,
 	},
 	---@enum Enum.QuestSessionCommand
 	QuestSessionCommand = {
@@ -3725,6 +3929,11 @@ Enum = {
 		Description = 8192,
 		Name = 16384,
 	},
+	---@enum Enum.ReportSubComplaintTypes
+	ReportSubComplaintTypes = {
+		Inappropriate = 0,
+		Advertising = 1,
+	},
 	---@enum Enum.ReportType
 	ReportType = {
 		Chat = 0,
@@ -3743,6 +3952,7 @@ Enum = {
 		PvP = 13,
 		PvPScoreboard = 14,
 		PvPGroupMember = 15,
+		CraftingOrder = 16,
 	},
 	---@enum Enum.RuneforgePowerFilter
 	RuneforgePowerFilter = {
@@ -3941,6 +4151,7 @@ Enum = {
 		UserWaypoint = 1,
 		Corpse = 2,
 		Scenario = 3,
+		Content = 4,
 	},
 	---@enum Enum.TimeEventFlag
 	TimeEventFlag = {
@@ -4004,6 +4215,15 @@ Enum = {
 		EquipSlot = 28,
 		ItemName = 29,
 		Separator = 30,
+		ToyName = 31,
+		ToyText = 32,
+		ToyEffect = 33,
+		ToyDuration = 34,
+		RestrictedArena = 35,
+		RestrictedBg = 36,
+		ToyFlavorText = 37,
+		ToyDescription = 38,
+		ToySource = 39,
 	},
 	---@enum Enum.TooltipDataType
 	TooltipDataType = {
@@ -4059,11 +4279,11 @@ Enum = {
 	},
 	---@enum Enum.TrackedSpellCategory
 	TrackedSpellCategory = {
-		Offensive = 0,
-		Defensive = 1,
-		Debuff = 2,
-		RacialAbility = 3,
-		Count = 4,
+		None = 0,
+		Offensive = 1,
+		Defensive = 2,
+		Debuff = 3,
+		RacialAbility = 4,
 	},
 	---@enum Enum.TradeskillOrderDuration
 	TradeskillOrderDuration = {
@@ -4403,6 +4623,7 @@ Enum = {
 		ForceOnNavbar = 32768,
 		AlwaysAllowUserWaypoints = 65536,
 		AlwaysAllowTaxiPathing = 131072,
+		ForceAllowMapLinks = 262144,
 	},
 	---@enum Enum.UIMapSystem
 	UIMapSystem = {
@@ -4553,6 +4774,7 @@ Enum = {
 		TextWithSubtext = 25,
 		WorldLootObject = 26,
 		ItemDisplay = 27,
+		TugOfWar = 28,
 	},
 	---@enum Enum.UnitSex
 	UnitSex = {
@@ -4593,6 +4815,12 @@ Enum = {
 		Ready = 5,
 		ProcessingFactionChange = 6,
 		Complete = 7,
+	},
+	---@enum Enum.ViewArenaSize
+	ViewArenaSize = {
+		Two = 0,
+		Three = 1,
+		Five = 2,
 	},
 	---@enum Enum.ViewRaidSize
 	ViewRaidSize = {
@@ -4697,12 +4925,22 @@ Enum = {
 		Artifact = 5,
 		Black = 6,
 	},
+	---@enum Enum.WidgetGlowAnimType
+	WidgetGlowAnimType = {
+		None = 0,
+		Pulse = 1,
+	},
 	---@enum Enum.WidgetIconSizeType
 	WidgetIconSizeType = {
 		Small = 0,
 		Medium = 1,
 		Large = 2,
 		Standard = 3,
+	},
+	---@enum Enum.WidgetIconSourceType
+	WidgetIconSourceType = {
+		Spell = 0,
+		Item = 1,
 	},
 	---@enum Enum.WidgetShownState
 	WidgetShownState = {
@@ -4800,11 +5038,14 @@ Constants = {
 		CHAR_CUSTOMIZE_CUSTOM_DISPLAY_OPTION_FIRST = 5,
 		CHAR_CUSTOMIZE_CUSTOM_DISPLAY_OPTION_LAST = 8,
 	},
+	ContentTrackingConsts = {
+		MaxTrackedAchievements = 10,
+		MaxTrackedCollectableSources = 15,
+	},
 	CraftingOrderConsts = {
 		MAX_CRAFTING_ORDER_FAVORITE_RECIPES = 100,
 	},
 	CurrencyConsts = {
-		CATALYST_CHARGE_CAP = 6,
 		HONOR_PER_CURRENCY = 10,
 		PLAYER_CURRENCY_CLIENT_FLAGS = 12,
 		CONQUEST_ARENA_AND_BG_META_CURRENCY_ID = 483,
@@ -4827,8 +5068,6 @@ Constants = {
 		CLASSIC_ARENA_POINTS_CURRENCY_ID = 1900,
 		CLASSIC_HONOR_CURRENCY_ID = 1901,
 		CURRENCY_ID_PERKS_PROGRAM_DISPLAY_INFO = 2032,
-		CURRENCY_ID_ACCOUNT_WIDE_CATALYST_CHARGES = 2166,
-		CURRENCY_ID_PERSONAL_CATALYST_CHARGES = 2167,
 		QUESTIONMARK_INV_ICON = 134400,
 		MAX_CURRENCY_QUANTITY = 100000000,
 	},

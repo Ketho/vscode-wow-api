@@ -1,9 +1,6 @@
 local Util = require("Lua.Util.Util")
 
 local PATH = "Lua/Data/cache/LuaEnum.lua"
-local URL = "https://raw.githubusercontent.com/Ketho/BlizzardInterfaceResources/mainline/Resources/LuaEnum.lua"
-Util:DownloadFile(PATH, URL)
-local file = io.open(PATH)
 
 local pre = [[interface LuaEnumInterface {
 	[key: string]: number
@@ -12,7 +9,11 @@ local pre = [[interface LuaEnumInterface {
 export const data: LuaEnumInterface = {
 ]]
 
-local function ToTypeScript()
+local function ToTypeScript(branch)
+	local URL = string.format("https://raw.githubusercontent.com/Ketho/BlizzardInterfaceResources/%s/Resources/LuaEnum.lua", branch)
+	Util:DownloadFile(PATH, URL)
+	local file = io.open(PATH)
+
 	local t = {}
 	-- parse instead of loading file since its already sorted
 	for line in file:lines() do
