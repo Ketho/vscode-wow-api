@@ -342,6 +342,9 @@ function GameTooltip:SetUnitAura(unit, auraIndex, filter) end
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_GameTooltip_SetUnitBuff)
 function GameTooltip:SetUnitBuff(unit, buffIndex, raidFilter) end
 
+---[Documentation](https://wowpedia.fandom.com/wiki/API_GameTooltip_SetUnitBuffByAuraInstanceID)
+function GameTooltip:SetUnitBuffByAuraInstanceID(unit, auraInstanceID, filter) end
+
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_GameTooltip_SetUnitDebuff)
 function GameTooltip:SetUnitDebuff(unit, buffIndex, raidFilter) end
 
