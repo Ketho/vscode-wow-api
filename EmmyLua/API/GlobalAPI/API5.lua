@@ -1,7 +1,4 @@
 ---@meta
----[Documentation](https://wowpedia.fandom.com/wiki/API_ToggleSheath)
-function ToggleSheath() end
-
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_ToggleSpellAutocast)
 function ToggleSpellAutocast() end
 

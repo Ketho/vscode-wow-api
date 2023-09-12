@@ -75,9 +75,9 @@ function C_PartyInfo.GetInviteReferralInfo(inviteGUID) end
 ---@return number minLevel
 function C_PartyInfo.GetMinLevel(category) end
 
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_PartyInfo.GetRestrictRaidPings)
+---[Documentation](https://wowpedia.fandom.com/wiki/API_C_PartyInfo.GetRestrictPings)
 ---@return boolean restrictToAssistants
-function C_PartyInfo.GetRestrictRaidPings() end
+function C_PartyInfo.GetRestrictPings() end
 
 ---Attempt to invite the named unit to a party, requires confirmation in some cases (e.g. the party will convert to a raid, or if there is a party sync in progress).
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_PartyInfo.InviteUnit)
@@ -111,6 +111,6 @@ function C_PartyInfo.LeaveParty(category) end
 ---@param dps? boolean
 function C_PartyInfo.RequestInviteFromUnit(targetName, tank, healer, dps) end
 
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_PartyInfo.SetRestrictRaidPings)
+---[Documentation](https://wowpedia.fandom.com/wiki/API_C_PartyInfo.SetRestrictPings)
 ---@param restrictToAssistants boolean
-function C_PartyInfo.SetRestrictRaidPings(restrictToAssistants) end
+function C_PartyInfo.SetRestrictPings(restrictToAssistants) end

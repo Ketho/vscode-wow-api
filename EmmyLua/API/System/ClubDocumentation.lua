@@ -95,6 +95,10 @@ function C_Club.DestroyStream(clubId, streamId) end
 ---@param ticketId string
 function C_Club.DestroyTicket(clubId, ticketId) end
 
+---[Documentation](https://wowpedia.fandom.com/wiki/API_C_Club.DoesAnyCommunityHaveUnreadMessages)
+---@return boolean hasUnreadMessages
+function C_Club.DoesAnyCommunityHaveUnreadMessages() end
+
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_Club.DoesCommunityHaveMembersOfTheOppositeFaction)
 ---@param clubId ClubId
 ---@return boolean hasMembersOfOppositeFaction

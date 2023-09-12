@@ -22,6 +22,14 @@ function C_UI.GetTopLeftNotchSafeRegion() end
 ---@return number bottom
 function C_UI.GetTopRightNotchSafeRegion() end
 
+---[Documentation](https://wowpedia.fandom.com/wiki/API_C_UI.GetUIParent)
+---@return SimpleFrame uiParent
+function C_UI.GetUIParent() end
+
+---[Documentation](https://wowpedia.fandom.com/wiki/API_C_UI.GetWorldFrame)
+---@return SimpleFrame worldFrame
+function C_UI.GetWorldFrame() end
+
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_UI.Reload)
 function C_UI.Reload() end
 

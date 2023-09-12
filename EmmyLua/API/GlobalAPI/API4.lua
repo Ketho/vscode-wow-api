@@ -1,8 +1,4 @@
 ---@meta
----[Documentation](https://wowpedia.fandom.com/wiki/API_GuildUninvite)
----@param name string
-function GuildUninvite(name) end
-
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_HandleAtlasMemberCommand)
 function HandleAtlasMemberCommand() end
 
@@ -332,7 +328,9 @@ function IsEveryoneAssistant() end
 function IsFactionInactive(index) end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_IsFalling)
-function IsFalling() end
+---@param unit? UnitId
+---@return boolean falling
+function IsFalling(unit) end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_IsFishingLoot)
 function IsFishingLoot() end
@@ -2493,4 +2491,7 @@ function ToggleRun() end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_ToggleSelfHighlight)
 function ToggleSelfHighlight() end
+
+---[Documentation](https://wowpedia.fandom.com/wiki/API_ToggleSheath)
+function ToggleSheath() end
 

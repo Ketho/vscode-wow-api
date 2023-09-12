@@ -513,10 +513,6 @@ function C_ClassTrial.GetClassTrialLogoutTimeSeconds() end
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_ClassTrial.IsClassTrialCharacter)
 function C_ClassTrial.IsClassTrialCharacter() end
 
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_Club.DoesAnyCommunityHaveUnreadMessages)
----@return boolean hasUnreadMessages
-function C_Club.DoesAnyCommunityHaveUnreadMessages() end
-
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_Debug.DashboardIsEnabled)
 function C_Debug.DashboardIsEnabled() end
 

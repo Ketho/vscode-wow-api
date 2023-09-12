@@ -102,10 +102,12 @@ function C_ContentTracking.StartTracking(type, id) end
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_ContentTracking.StopTracking)
 ---@param type number|Enum.ContentTrackingType
 ---@param id number
-function C_ContentTracking.StopTracking(type, id) end
+---@param stopType number|Enum.ContentTrackingStopType
+function C_ContentTracking.StopTracking(type, id, stopType) end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_ContentTracking.ToggleTracking)
 ---@param type number|Enum.ContentTrackingType
 ---@param id number
+---@param stopType number|Enum.ContentTrackingStopType
 ---@return Enum.ContentTrackingError? error
-function C_ContentTracking.ToggleTracking(type, id) end
+function C_ContentTracking.ToggleTracking(type, id, stopType) end

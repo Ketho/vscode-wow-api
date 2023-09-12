@@ -797,7 +797,6 @@
 ---|"PARTY_MEMBER_DISABLE" # `unitTarget`
 ---|"PARTY_MEMBER_ENABLE" # `unitTarget`
 ---|"PENDING_AZERITE_ESSENCE_CHANGED" # `essenceID`
----|"PENDING_PING_OFF_SCREEN"
 ---|"PERKS_ACTIVITIES_TRACKED_UPDATED" # `trackedPerksActivities`
 ---|"PERKS_ACTIVITIES_UPDATED" # `info`
 ---|"PERKS_ACTIVITY_COMPLETED" # `perksActivityID`
@@ -868,11 +867,7 @@
 ---|"PET_STABLE_UPDATE_PAPERDOLL"
 ---|"PET_UI_CLOSE"
 ---|"PET_UI_UPDATE"
----|"PING_PIN_FRAME_ADDED" # `region, uiTextureKit, isWorldPoint`
----|"PING_PIN_FRAME_REMOVED" # `region`
----|"PING_PIN_FRAME_SCREEN_CLAMP_STATE_UPDATED" # `region, state`
----|"PING_RADIAL_WHEEL_FRAME_CREATED" # `region`
----|"PING_RADIAL_WHEEL_FRAME_DESTROYED"
+---|"PING_SYSTEM_ERROR" # `error`
 ---|"PLAYERBANKBAGSLOTS_CHANGED"
 ---|"PLAYERBANKSLOTS_CHANGED" # `slot`
 ---|"PLAYERREAGENTBANKSLOTS_CHANGED" # `slot`
@@ -952,6 +947,7 @@
 ---|"PVP_MATCH_ACTIVE"
 ---|"PVP_MATCH_COMPLETE" # `winner, duration`
 ---|"PVP_MATCH_INACTIVE"
+---|"PVP_MATCH_STATE_CHANGED"
 ---|"PVP_POWER_UPDATE"
 ---|"PVP_RATED_STATS_UPDATE"
 ---|"PVP_REWARDS_UPDATE"
@@ -1408,7 +1404,9 @@
 ---|"VOID_TRANSFER_SUCCESS"
 ---|"VOTE_KICK_REASON_NEEDED" # `name, resultGUID`
 ---|"WARFRONT_COMPLETED" # `mapID, winner`
+---|"WARGAME_INVITE_SENT"
 ---|"WARGAME_REQUESTED" # `opposingPartyMemberName, battlegroundName, timeoutSeconds, tournamentRules`
+---|"WARGAME_REQUEST_RESPONSE" # `responderGUID, responderName, accepted`
 ---|"WAR_MODE_STATUS_UPDATE" # `warModeEnabled`
 ---|"WAYPOINT_UPDATE"
 ---|"WEAPON_ENCHANT_CHANGED"

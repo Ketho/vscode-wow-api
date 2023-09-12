@@ -14,3 +14,10 @@ function C_MerchantFrame.GetNumJunkItems() end
 ---@param index number
 ---@return boolean refundable
 function C_MerchantFrame.IsMerchantItemRefundable(index) end
+
+---[Documentation](https://wowpedia.fandom.com/wiki/API_C_MerchantFrame.IsSellAllJunkEnabled)
+---@return boolean enabled
+function C_MerchantFrame.IsSellAllJunkEnabled() end
+
+---[Documentation](https://wowpedia.fandom.com/wiki/API_C_MerchantFrame.SellAllJunkItems)
+function C_MerchantFrame.SellAllJunkItems() end

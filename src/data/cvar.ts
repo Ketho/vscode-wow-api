@@ -2236,7 +2236,7 @@ export const data: CVarInterface = {
 	},
 	agentuid: {
 		name: "agentUID",
-		default: "wow_ptr",
+		default: "",
 		category: 4,
 		help: "The UID provided by Battle.net to be passed to Agent",
 	},
@@ -2624,7 +2624,7 @@ export const data: CVarInterface = {
 	cameradistancemaxzoomfactor: {
 		name: "cameraDistanceMaxZoomFactor",
 		default: "1.900000",
-		category: 4,
+		category: 5,
 		scope: "Character",
 	},
 	cameradistanceratemult: {
@@ -3164,7 +3164,7 @@ export const data: CVarInterface = {
 	camerasmoothstyle: {
 		name: "cameraSmoothStyle",
 		default: "4",
-		category: 4,
+		category: 5,
 		scope: "Character",
 	},
 	camerasmoothtimemax: {
@@ -4310,7 +4310,7 @@ export const data: CVarInterface = {
 	cameraview: {
 		name: "cameraView",
 		default: "2",
-		category: 4,
+		category: 5,
 		scope: "Character",
 	},
 	cameraviewblendstyle: {
@@ -6102,11 +6102,6 @@ export const data: CVarInterface = {
 		scope: "Account",
 		help: "Stores whether to show the quest blobs on the minimap.",
 	},
-	minimaptrackedinfov2: {
-		name: "minimapTrackedInfov2",
-		default: "",
-		category: 5,
-	},
 	minimaptrackedinfov3: {
 		name: "minimapTrackedInfov3",
 		default: "1006319",
@@ -6503,7 +6498,7 @@ export const data: CVarInterface = {
 	},
 	nameplateshowfriendlynpcs: {
 		name: "nameplateShowFriendlyNPCs",
-		default: "1",
+		default: "0",
 		category: 4,
 		scope: "Account",
 	},
@@ -6762,6 +6757,12 @@ export const data: CVarInterface = {
 		default: "1",
 		category: 1,
 		help: "Level of physics world interaction",
+	},
+	pingcategorytutorialshown: {
+		name: "pingCategoryTutorialShown",
+		default: "0",
+		category: 4,
+		help: "Has shown the ping category tutorial dialog",
 	},
 	pingmode: {
 		name: "pingMode",
@@ -7247,6 +7248,13 @@ export const data: CVarInterface = {
 		scope: "Account",
 		help: "List of reputation categories that have been collapsed in the Reputation tab",
 	},
+	restrictcalendarinvites: {
+		name: "restrictCalendarInvites",
+		default: "1",
+		category: 4,
+		scope: "Character",
+		help: "Whether to restrict calendar invites to friends and guilds only.",
+	},
 	rippledetail: {
 		name: "rippleDetail",
 		default: "2",
@@ -7311,7 +7319,7 @@ export const data: CVarInterface = {
 	},
 	scripterrors: {
 		name: "scriptErrors",
-		default: "1",
+		default: "0",
 		category: 5,
 		scope: "Character",
 		help: "Whether or not the UI shows Lua errors",
@@ -8001,7 +8009,7 @@ export const data: CVarInterface = {
 	},
 	telemetrytargetpackage: {
 		name: "telemetryTargetPackage",
-		default: "Blizzard.Telemetry.Wow_Mainline_PTR",
+		default: "Blizzard.Telemetry.Wow_Mainline",
 		category: 5,
 		help: "The Package we want to send telemetry to e.g. Wow_Mainline or Wow_Classic",
 	},

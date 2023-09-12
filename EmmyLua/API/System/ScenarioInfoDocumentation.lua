@@ -40,6 +40,7 @@ function C_ScenarioInfo.GetScenarioStepInfo(scenarioStepID) end
 ---@field weightedProgress number?
 ---@field rewardQuestID number
 ---@field widgetSetID number?
+---@field stepID number
 
 ---@class ScenarioStepSpellInfo
 ---@field spellID number

@@ -39,3 +39,5 @@ function C_AreaPoiInfo.IsAreaPOITimed(areaPoiID) end
 ---@field isPrimaryMapForPOI boolean
 ---@field isAlwaysOnFlightmap boolean
 ---@field addPaddingAboveWidgets boolean?
+---@field highlightWorldQuestsOnHover boolean
+---@field highlightVignettesOnHover boolean

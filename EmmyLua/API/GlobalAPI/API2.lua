@@ -234,11 +234,6 @@ function C_TradeSkillUI.SetRecipeSourceTypeFilter(sourceType, filtered) end
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_TradeSkillUI.StopRecipeRepeat)
 function C_TradeSkillUI.StopRecipeRepeat() end
 
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_Traits.GenerateImportString)
----@param configID number
----@return string importString
-function C_Traits.GenerateImportString(configID) end
-
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_Trophy.MonumentChangeAppearanceToTrophyID)
 function C_Trophy.MonumentChangeAppearanceToTrophyID(trophyID) end
 
@@ -2454,4 +2449,8 @@ function GetGuildTabardFiles() end
 ---@return boolean isMobile
 ---@return number isAway
 function GetGuildTradeSkillInfo(index) end
+
+---[Documentation](https://wowpedia.fandom.com/wiki/API_GetHaste)
+---@return number haste
+function GetHaste() end
 

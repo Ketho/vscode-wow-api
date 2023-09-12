@@ -3992,7 +3992,6 @@ export const data: EventInterface = {
 			{Name: "essenceID", Type: "number", Nilable: true},
 		],
 	},
-	PENDING_PING_OFF_SCREEN: {},
 	PERKS_ACTIVITIES_TRACKED_UPDATED: {
 		Payload: [
 			{Name: "trackedPerksActivities", Type: "PerksActivitiesTracked"},
@@ -4231,30 +4230,11 @@ export const data: EventInterface = {
 	PET_STABLE_UPDATE_PAPERDOLL: {},
 	PET_UI_CLOSE: {},
 	PET_UI_UPDATE: {},
-	PING_PIN_FRAME_ADDED: {
+	PING_SYSTEM_ERROR: {
 		Payload: [
-			{Name: "region", Type: "ScriptRegion"},
-			{Name: "uiTextureKit", Type: "textureKit"},
-			{Name: "isWorldPoint", Type: "boolean"},
+			{Name: "error", Type: "string"},
 		],
 	},
-	PING_PIN_FRAME_REMOVED: {
-		Payload: [
-			{Name: "region", Type: "ScriptRegion"},
-		],
-	},
-	PING_PIN_FRAME_SCREEN_CLAMP_STATE_UPDATED: {
-		Payload: [
-			{Name: "region", Type: "ScriptRegion"},
-			{Name: "state", Type: "boolean"},
-		],
-	},
-	PING_RADIAL_WHEEL_FRAME_CREATED: {
-		Payload: [
-			{Name: "region", Type: "ScriptRegion"},
-		],
-	},
-	PING_RADIAL_WHEEL_FRAME_DESTROYED: {},
 	PLAYERBANKBAGSLOTS_CHANGED: {},
 	PLAYERBANKSLOTS_CHANGED: {
 		Payload: [
@@ -4462,6 +4442,7 @@ export const data: EventInterface = {
 		],
 	},
 	PVP_MATCH_INACTIVE: {},
+	PVP_MATCH_STATE_CHANGED: {},
 	PVP_POWER_UPDATE: {},
 	PVP_RATED_STATS_UPDATE: {},
 	PVP_REWARDS_UPDATE: {},
@@ -6260,12 +6241,20 @@ export const data: EventInterface = {
 			{Name: "winner", Type: "number"},
 		],
 	},
+	WARGAME_INVITE_SENT: {},
 	WARGAME_REQUESTED: {
 		Payload: [
 			{Name: "opposingPartyMemberName", Type: "string"},
 			{Name: "battlegroundName", Type: "string"},
 			{Name: "timeoutSeconds", Type: "time_t"},
 			{Name: "tournamentRules", Type: "boolean"},
+		],
+	},
+	WARGAME_REQUEST_RESPONSE: {
+		Payload: [
+			{Name: "responderGUID", Type: "WOWGUID"},
+			{Name: "responderName", Type: "string", Nilable: true},
+			{Name: "accepted", Type: "boolean"},
 		],
 	},
 	WAR_MODE_STATUS_UPDATE: {

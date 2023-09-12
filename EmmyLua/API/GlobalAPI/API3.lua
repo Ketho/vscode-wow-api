@@ -1,8 +1,4 @@
 ---@meta
----[Documentation](https://wowpedia.fandom.com/wiki/API_GetHaste)
----@return number haste
-function GetHaste() end
-
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_GetHitModifier)
 ---@return number hitModifier
 function GetHitModifier() end
@@ -2571,4 +2567,8 @@ function GuildSetLeader(name) end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_GuildSetMOTD)
 function GuildSetMOTD(note) end
+
+---[Documentation](https://wowpedia.fandom.com/wiki/API_GuildUninvite)
+---@param name string
+function GuildUninvite(name) end
 

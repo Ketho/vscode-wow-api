@@ -16,6 +16,10 @@ function C_Container.ContainerRefundItemPurchase(containerIndex, slotIndex, isEq
 ---@return boolean isDisabled
 function C_Container.GetBackpackAutosortDisabled() end
 
+---[Documentation](https://wowpedia.fandom.com/wiki/API_C_Container.GetBackpackSellJunkDisabled)
+---@return boolean isDisabled
+function C_Container.GetBackpackSellJunkDisabled() end
+
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_Container.GetBagName)
 ---@param bagIndex number|Enum.BagIndex
 ---@return string name
@@ -158,6 +162,10 @@ function C_Container.PlayerHasHearthstone() end
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_Container.SetBackpackAutosortDisabled)
 ---@param disable boolean
 function C_Container.SetBackpackAutosortDisabled(disable) end
+
+---[Documentation](https://wowpedia.fandom.com/wiki/API_C_Container.SetBackpackSellJunkDisabled)
+---@param disable boolean
+function C_Container.SetBackpackSellJunkDisabled(disable) end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_Container.SetBagPortraitTexture)
 ---@param texture SimpleTexture
