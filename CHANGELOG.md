@@ -5,11 +5,14 @@
 - The Classic (TBC) API is not supported ([#13](https://github.com/Ketho/vscode-wow-api/issues/13))
 - Frame templates are not completely supported, only BackdropTemplate ([#15](https://github.com/Ketho/vscode-wow-api/issues/15)) 
 
+## [0.10.2] - 2023-09-13
+- 🌙 Definitions: Update for 10.1.7 (51261)
+
 ## [0.10.1] - 2023-08-18
-- 🌙 Definitions: Update to PTR Patch 10.1.7.50893
-- 🌙 Definitions: [#107](https://github.com/Ketho/vscode-wow-api/issues/107) Fix UnitAura documentation
-- 🌙 Definitions: [#108](https://github.com/Ketho/vscode-wow-api/issues/108) Update UnitAttackPower
+- 🌙 Definitions: Update for PTR Patch 10.1.7.50893
 - 🌙 Definitions: [#110](https://github.com/Ketho/vscode-wow-api/issues/110) Add missing unitIds
+- 🌙 Definitions: [#108](https://github.com/Ketho/vscode-wow-api/issues/108) Update UnitAttackPower
+- 🌙 Definitions: [#107](https://github.com/Ketho/vscode-wow-api/issues/107) Fix UnitAura documentation
 
 ## [0.9.14] - 2023-05-28
 - 🐞 Bug Fixes: Fixed hover tooltip for CVars and GlobalStrings
@@ -369,6 +372,7 @@ Libraries
 ### Added
 - 🚧 Wip: Development work
 
+[0.10.2]: https://github.com/Ketho/vscode-wow-api/releases/tag/0.10.2
 [0.10.1]: https://github.com/Ketho/vscode-wow-api/releases/tag/0.10.1
 [0.9.14]: https://github.com/Ketho/vscode-wow-api/releases/tag/0.9.14
 [0.9.13]: https://github.com/Ketho/vscode-wow-api/releases/tag/0.9.13
