@@ -14,6 +14,10 @@ m.data = {
 		SetCVar         = {Arguments = {name = {Type = "CVar"}, value = {Type = "string|number"}}},
 		SetCVarBitfield = {Arguments = {name = {Type = "CVar"}}},
 	},
+	["UITimerDocumentation.lua"] = {
+		NewTimer        = {Returns = {cbObject = {Type = "cbObject"}}},
+		NewTicker       = {Returns = {cbObject = {Type = "cbObject"}}},
+	},
 }
 
 -- there are multiple ways to do this. this sure looks messy and unreadable anyhow
