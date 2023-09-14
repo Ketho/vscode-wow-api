@@ -1,6 +1,6 @@
 ---@meta
 ---[Documentation](https://wowpedia.fandom.com/wiki/UIOBJECT_ModelSceneActor)
----@class ModelSceneActor : ParentedObject
+---@class ModelSceneActor : Object
 local ModelSceneActor = {}
 
 function ModelSceneActor:AttachToMount() end

@@ -215,8 +215,8 @@ function tooltip:SetHighlightTexCoord(ULx, ULy, LLx, LLy, URx, URy, LRx, LRy) en
 ---
 --- Works identically to the default UI's texture:SetTexture() API.
 ---@param file string|number
----@param horizWrap? HorizWrap
----@param vertWrap? string
+---@param horizWrap? WrapMode
+---@param vertWrap? WrapMode
 ---@param filterMode? FilterMode
 function tooltip:SetHighlightTexture(file, horizWrap, vertWrap, filterMode) end
 

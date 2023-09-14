@@ -130,4 +130,26 @@
 ---|"RIGHT"
 ---|"CENTER"
 
+---@alias uiRect
+---|"left"
+---|"bottom"
+---|"width"
+---|"height"
+
 ---@alias InventorySlots number
+
+---@alias CScriptObject Object
+---@alias SimpleAnimGroup AnimationGroup
+---@alias SimpleFont Font
+---@alias SimpleMaskTexture MaskTexture
+---@alias SimpleFontString FontString
+---@alias SimpleLine Line
+
+---@alias luaFunction function
+---@alias SingleColorValue number
+---@alias uiFontHeight number
+---@alias TBFFlags string
+---@alias normalizedValue number [0.0 - 1.0]
+---@alias size number
+---@alias SmoothingType string
+---@alias LoopType string

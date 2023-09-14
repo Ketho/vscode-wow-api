@@ -1,6 +1,6 @@
 ---@meta
 ---[Documentation](https://wowpedia.fandom.com/wiki/UIOBJECT_ControlPoint)
----@class ControlPoint : ParentedObject
+---@class ControlPoint : Object
 local ControlPoint = {}
 ---@class controlpoint : ControlPoint
 ---@class CONTROLPOINT : ControlPoint

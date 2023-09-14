@@ -73,7 +73,7 @@
 ---|"FULLSCREEN_DIALOG"
 ---|"TOOLTIP"
 
----@alias HorizWrap
+---@alias WrapMode
 ---|"CLAMP"
 ---|"CLAMPTOBLACK"
 ---|"CLAMPTOBLACKADDITIVE"
@@ -103,3 +103,14 @@
 ---|"ANCHOR_CURSOR"
 ---|"ANCHOR_PRESERVE"
 ---|"ANCHOR_NONE"
+
+---@alias BlendMode
+---|"DISABLE"
+---|"BLEND"
+---|"ALPHAKEY"
+---|"ADD"
+---|"MOD"
+
+---@alias Orientation
+---|"HORIZONTAL"
+---|"VERTICAL"

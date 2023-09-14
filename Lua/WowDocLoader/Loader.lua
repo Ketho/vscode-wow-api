@@ -12,6 +12,8 @@ local gluesSystems = {
 	["ConfigurationWarningsDocumentation.lua"] = true,
 }
 
+Util:MakeDir(Path.join("Lua", "Data", "widget"))
+
 local function LoadFile(path)
 	if lfs.attributes(path) then
 		local file = loadfile(path)
@@ -38,7 +40,7 @@ local function LoadAddon(path, name)
 					if docInfo.Type == "System" or not docInfo.Type then
 						Util:WriteFileMeta(Path.join("EmmyLua", "API", "System", line), text.."\n")
 					elseif docInfo.Type == "ScriptObject" then
-						print("skipped", docInfo.Name)
+						Util:WriteFileMeta(Path.join("Lua", "Data", "widget", line), text.."\n")
 					end
 				end
 				m.documentationInfo = nil

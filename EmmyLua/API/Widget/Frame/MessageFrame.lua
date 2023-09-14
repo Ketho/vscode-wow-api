@@ -1,6 +1,6 @@
 ---@meta
 ---[Documentation](https://wowpedia.fandom.com/wiki/UIOBJECT_MessageFrame)
----@class MessageFrame : Frame, FontInstance
+---@class MessageFrame : Frame
 local MessageFrame  = {}
 ---@class messageframe : MessageFrame
 ---@class MESSAGEFRAME : MessageFrame

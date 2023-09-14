@@ -1,6 +1,6 @@
 ---@meta
 ---[Documentation](https://wowpedia.fandom.com/wiki/UIOBJECT_EditBox)
----@class EditBox : Frame, FontInstance
+---@class EditBox : Frame
 local EditBox = {}
 ---@class editbox : EditBox
 ---@class EDITBOX : EditBox

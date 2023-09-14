@@ -1,6 +1,6 @@
 ---@meta
 ---[Documentation](https://wowpedia.fandom.com/wiki/UIOBJECT_SimpleHTML)
----@class SimpleHTML : Frame, FontInstance
+---@class SimpleHTML : Frame
 local SimpleHTML  = {}
 ---@class simplehtml : SimpleHTML
 ---@class SIMPLEHTML : SimpleHTML

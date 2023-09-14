@@ -29,101 +29,249 @@ function Frame:HookScript(scriptType, handler, bindingType) end
 function Frame:SetScript(scriptType, handler) end
 
 
----@param event WowEvent
----[Documentation](https://wowpedia.fandom.com/wiki/API_Frame_RegisterEvent)
-function Frame:RegisterEvent(event) end
+---[Documentation](https://wowpedia.fandom.com/wiki/API_Frame_AbortDrag)
+function Frame:AbortDrag() end
 
----@param event WowEvent
----@param unit1 UnitId
----@param unit2? UnitId
----[Documentation](https://wowpedia.fandom.com/wiki/API_Frame_RegisterUnitEvent)
-function Frame:RegisterUnitEvent(event, unit1, unit2) end
+---[Documentation](https://wowpedia.fandom.com/wiki/API_Frame_CanChangeAttribute)
+---@return boolean canChangeAttributes
+function Frame:CanChangeAttribute() end
 
----[Documentation](https://wowpedia.fandom.com/wiki/API_Frame_RegisterAllEvents)
-function Frame:RegisterAllEvents() end
+---[Documentation](https://wowpedia.fandom.com/wiki/API_Frame_CreateFontString)
+---@param name? string
+---@param drawLayer? DrawLayer
+---@param templateName? string
+---@return SimpleFontString line
+function Frame:CreateFontString(name, drawLayer, templateName) end
 
----@param event WowEvent
----[Documentation](https://wowpedia.fandom.com/wiki/API_Frame_UnregisterEvent)
-function Frame:UnregisterEvent(event) end
+---[Documentation](https://wowpedia.fandom.com/wiki/API_Frame_CreateLine)
+---@param name? string
+---@param drawLayer? DrawLayer
+---@param templateName? string
+---@param subLevel? number
+---@return SimpleLine line
+function Frame:CreateLine(name, drawLayer, templateName, subLevel) end
 
----[Documentation](https://wowpedia.fandom.com/wiki/API_Frame_UnregisterAllEvents)
-function Frame:UnregisterAllEvents() end
+---[Documentation](https://wowpedia.fandom.com/wiki/API_Frame_CreateMaskTexture)
+---@param name? string
+---@param drawLayer? DrawLayer
+---@param templateName? string
+---@param subLevel? number
+---@return SimpleMaskTexture maskTexture
+function Frame:CreateMaskTexture(name, drawLayer, templateName, subLevel) end
 
----@param event WowEvent
----[Documentation](https://wowpedia.fandom.com/wiki/API_Frame_IsEventRegistered)
-function Frame:IsEventRegistered(event) end
+---[Documentation](https://wowpedia.fandom.com/wiki/API_Frame_CreateTexture)
+---@param name? string
+---@param drawLayer? DrawLayer
+---@param templateName? string
+---@param subLevel? number
+---@return SimpleTexture texture
+function Frame:CreateTexture(name, drawLayer, templateName, subLevel) end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_Frame_DesaturateHierarchy)
-function Frame:DesaturateHierarchy(desaturation) end
+---@param desaturation number
+---@param excludeRoot? boolean Default = false
+function Frame:DesaturateHierarchy(desaturation, excludeRoot) end
 
----@param layer DrawLayer
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_Frame_DisableDrawLayer)
+---@param layer DrawLayer
 function Frame:DisableDrawLayer(layer) end
 
----@param layer DrawLayer
+---[Documentation](https://wowpedia.fandom.com/wiki/API_Frame_DoesClipChildren)
+---@return boolean clipsChildren
+function Frame:DoesClipChildren() end
+
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_Frame_EnableDrawLayer)
+---@param layer DrawLayer
 function Frame:EnableDrawLayer(layer) end
 
+---[Documentation](https://wowpedia.fandom.com/wiki/API_Frame_EnableGamePadButton)
+---@param enable? boolean Default = false
+function Frame:EnableGamePadButton(enable) end
+
+---[Documentation](https://wowpedia.fandom.com/wiki/API_Frame_EnableGamePadStick)
+---@param enable? boolean Default = false
+function Frame:EnableGamePadStick(enable) end
+
+---[Documentation](https://wowpedia.fandom.com/wiki/API_Frame_EnableKeyboard)
+---@param enable? boolean Default = false
+function Frame:EnableKeyboard(enable) end
+
+---[Documentation](https://wowpedia.fandom.com/wiki/API_Frame_ExecuteAttribute)
+---@param attributeName string
+---@param unpackedPrimitiveType string
+---@return boolean success
+---@return string unpackedPrimitiveType
+function Frame:ExecuteAttribute(attributeName, unpackedPrimitiveType) end
+
+---[Documentation](https://wowpedia.fandom.com/wiki/API_Frame_GetAlpha)
+---@return SingleColorValue alpha
+function Frame:GetAlpha() end
+
+---[Documentation](https://wowpedia.fandom.com/wiki/API_Frame_GetAttribute)
+---@param attributeName string
+---@return string value
+function Frame:GetAttribute(attributeName) end
+
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_Frame_GetBoundsRect)
+---@return uiUnit left
+---@return uiUnit bottom
+---@return uiUnit width
+---@return uiUnit height
 function Frame:GetBoundsRect() end
 
+---[Documentation](https://wowpedia.fandom.com/wiki/API_Frame_GetChildren)
+---@return ScriptObject scriptObject
+function Frame:GetChildren() end
+
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_Frame_GetClampRectInsets)
+---@return uiUnit left
+---@return uiUnit right
+---@return uiUnit top
+---@return uiUnit bottom
 function Frame:GetClampRectInsets() end
 
----[Documentation](https://wowpedia.fandom.com/wiki/API_Frame_GetDepth)
-function Frame:GetDepth() end
-
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_Frame_GetDontSavePosition)
+---@return boolean dontSave
 function Frame:GetDontSavePosition() end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_Frame_GetEffectiveAlpha)
+---@return SingleColorValue effectiveAlpha
 function Frame:GetEffectiveAlpha() end
 
----[Documentation](https://wowpedia.fandom.com/wiki/API_Frame_GetEffectiveDepth)
-function Frame:GetEffectiveDepth() end
+---[Documentation](https://wowpedia.fandom.com/wiki/API_Frame_GetEffectiveScale)
+---@return number effectiveScale
+function Frame:GetEffectiveScale() end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_Frame_GetEffectivelyFlattensRenderLayers)
+---@return boolean flatten
 function Frame:GetEffectivelyFlattensRenderLayers() end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_Frame_GetFlattensRenderLayers)
+---@return boolean flatten
 function Frame:GetFlattensRenderLayers() end
 
----@return number level
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_Frame_GetFrameLevel)
+---@return number frameLevel
 function Frame:GetFrameLevel() end
 
----@return FrameStrata strata
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_Frame_GetFrameStrata)
+---@return FrameStrata strata
 function Frame:GetFrameStrata() end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_Frame_GetHitRectInsets)
-function Frame:GetHitRectInsets(l, r, t, b) end
+---@return uiUnit left
+---@return uiUnit right
+---@return uiUnit top
+---@return uiUnit bottom
+function Frame:GetHitRectInsets() end
 
----[Documentation](https://wowpedia.fandom.com/wiki/API_Frame_GetMaxResize)
-function Frame:GetMaxResize(w, h) end
+---[Documentation](https://wowpedia.fandom.com/wiki/API_Frame_GetHyperlinksEnabled)
+---@return boolean enabled
+function Frame:GetHyperlinksEnabled() end
 
----[Documentation](https://wowpedia.fandom.com/wiki/API_Frame_GetMinResize)
-function Frame:GetMinResize(w, h) end
+---[Documentation](https://wowpedia.fandom.com/wiki/API_Frame_GetID)
+---@return number id
+function Frame:GetID() end
 
----@return boolean
+---[Documentation](https://wowpedia.fandom.com/wiki/API_Frame_GetNumChildren)
+---@return number numChildren
+function Frame:GetNumChildren() end
+
+---[Documentation](https://wowpedia.fandom.com/wiki/API_Frame_GetNumRegions)
+---@return number numRegions
+function Frame:GetNumRegions() end
+
+---[Documentation](https://wowpedia.fandom.com/wiki/API_Frame_GetPropagateKeyboardInput)
+---@return boolean propagate
+function Frame:GetPropagateKeyboardInput() end
+
+---[Documentation](https://wowpedia.fandom.com/wiki/API_Frame_GetRegions)
+---@return ScriptObject scriptObject
+function Frame:GetRegions() end
+
+---[Documentation](https://wowpedia.fandom.com/wiki/API_Frame_GetResizeBounds)
+---@return uiUnit minWidth
+---@return uiUnit minHeight
+---@return uiUnit maxWidth
+---@return uiUnit maxHeight
+function Frame:GetResizeBounds() end
+
+---[Documentation](https://wowpedia.fandom.com/wiki/API_Frame_GetScale)
+---@return number frameScale
+function Frame:GetScale() end
+
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_Frame_HasFixedFrameLevel)
+---@return boolean isFixed
 function Frame:HasFixedFrameLevel() end
 
----@return boolean
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_Frame_HasFixedFrameStrata)
+---@return boolean isFixed
 function Frame:HasFixedFrameStrata() end
 
----[Documentation](https://wowpedia.fandom.com/wiki/API_Frame_IgnoreDepth)
-function Frame:IgnoreDepth(ignoreFlag) end
+---[Documentation](https://wowpedia.fandom.com/wiki/API_Frame_Hide)
+function Frame:Hide() end
+
+---[Documentation](https://wowpedia.fandom.com/wiki/API_Frame_InterceptStartDrag)
+---@param delegate SimpleFrame
+function Frame:InterceptStartDrag(delegate) end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_Frame_IsClampedToScreen)
+---@return boolean clampedToScreen
 function Frame:IsClampedToScreen() end
 
----[Documentation](https://wowpedia.fandom.com/wiki/API_Frame_IsIgnoringDepth)
-function Frame:IsIgnoringDepth() end
+---[Documentation](https://wowpedia.fandom.com/wiki/API_Frame_IsEventRegistered)
+---@param eventName WowEvent
+---@return boolean isRegistered
+---@return UnitId? units
+function Frame:IsEventRegistered(eventName) end
+
+---[Documentation](https://wowpedia.fandom.com/wiki/API_Frame_IsGamePadButtonEnabled)
+---@return boolean enabled
+function Frame:IsGamePadButtonEnabled() end
+
+---[Documentation](https://wowpedia.fandom.com/wiki/API_Frame_IsGamePadStickEnabled)
+---@return boolean enabled
+function Frame:IsGamePadStickEnabled() end
+
+---[Documentation](https://wowpedia.fandom.com/wiki/API_Frame_IsIgnoringParentAlpha)
+---@return boolean ignore
+function Frame:IsIgnoringParentAlpha() end
+
+---[Documentation](https://wowpedia.fandom.com/wiki/API_Frame_IsIgnoringParentScale)
+---@return boolean ignore
+function Frame:IsIgnoringParentScale() end
+
+---[Documentation](https://wowpedia.fandom.com/wiki/API_Frame_IsKeyboardEnabled)
+---@return boolean enabled
+function Frame:IsKeyboardEnabled() end
+
+---[Documentation](https://wowpedia.fandom.com/wiki/API_Frame_IsMovable)
+---@return boolean isMovable
+function Frame:IsMovable() end
+
+---[Documentation](https://wowpedia.fandom.com/wiki/API_Frame_IsObjectLoaded)
+---@return boolean isLoaded
+function Frame:IsObjectLoaded() end
+
+---[Documentation](https://wowpedia.fandom.com/wiki/API_Frame_IsResizable)
+---@return boolean resizable
+function Frame:IsResizable() end
+
+---[Documentation](https://wowpedia.fandom.com/wiki/API_Frame_IsShown)
+---@return boolean isShown
+function Frame:IsShown() end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_Frame_IsToplevel)
+---@return boolean isTopLevel
 function Frame:IsToplevel() end
+
+---[Documentation](https://wowpedia.fandom.com/wiki/API_Frame_IsUserPlaced)
+---@return boolean isUserPlaced
+function Frame:IsUserPlaced() end
+
+---[Documentation](https://wowpedia.fandom.com/wiki/API_Frame_IsVisible)
+---@return boolean isVisible
+function Frame:IsVisible() end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_Frame_Lower)
 function Frame:Lower() end
@@ -131,192 +279,169 @@ function Frame:Lower() end
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_Frame_Raise)
 function Frame:Raise() end
 
----[Documentation](https://wowpedia.fandom.com/wiki/API_Frame_RotateTextures)
-function Frame:RotateTextures(angleRadians, pivotX, pivotY) end
+---[Documentation](https://wowpedia.fandom.com/wiki/API_Frame_RegisterAllEvents)
+function Frame:RegisterAllEvents() end
 
----[Documentation](https://wowpedia.fandom.com/wiki/API_Frame_SetClampedToScreen)
-function Frame:SetClampedToScreen(clamped) end
+---[Documentation](https://wowpedia.fandom.com/wiki/API_Frame_RegisterEvent)
+---@param eventName WowEvent
+---@return boolean registered
+function Frame:RegisterEvent(eventName) end
+
+---[Documentation](https://wowpedia.fandom.com/wiki/API_Frame_RegisterForDrag)
+---@param unpackedPrimitiveType number
+function Frame:RegisterForDrag(unpackedPrimitiveType) end
+
+---[Documentation](https://wowpedia.fandom.com/wiki/API_Frame_RegisterUnitEvent)
+---@param eventName WowEvent
+---@param units UnitId
+---@return boolean registered
+function Frame:RegisterUnitEvent(eventName, units) end
+
+---[Documentation](https://wowpedia.fandom.com/wiki/API_Frame_RotateTextures)
+---@param radians number
+---@param x? number Default = 0.5
+---@param y? number Default = 0.5
+function Frame:RotateTextures(radians, x, y) end
+
+---[Documentation](https://wowpedia.fandom.com/wiki/API_Frame_SetAlpha)
+---@param alpha SingleColorValue
+function Frame:SetAlpha(alpha) end
+
+---[Documentation](https://wowpedia.fandom.com/wiki/API_Frame_SetAttribute)
+---@param attributeName string
+---@param value string
+function Frame:SetAttribute(attributeName, value) end
+
+---[Documentation](https://wowpedia.fandom.com/wiki/API_Frame_SetAttributeNoHandler)
+---@param attributeName string
+---@param value string
+function Frame:SetAttributeNoHandler(attributeName, value) end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_Frame_SetClampRectInsets)
+---@param left uiUnit
+---@param right uiUnit
+---@param top uiUnit
+---@param bottom uiUnit
 function Frame:SetClampRectInsets(left, right, top, bottom) end
 
----[Documentation](https://wowpedia.fandom.com/wiki/API_Frame_SetDepth)
-function Frame:SetDepth(depth) end
+---[Documentation](https://wowpedia.fandom.com/wiki/API_Frame_SetClampedToScreen)
+---@param clampedToScreen boolean
+function Frame:SetClampedToScreen(clampedToScreen) end
+
+---[Documentation](https://wowpedia.fandom.com/wiki/API_Frame_SetClipsChildren)
+---@param clipsChildren boolean
+function Frame:SetClipsChildren(clipsChildren) end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_Frame_SetDontSavePosition)
-function Frame:SetDontSavePosition() end
+---@param dontSave boolean
+function Frame:SetDontSavePosition(dontSave) end
 
----@param layer DrawLayer
----@param mouseOver boolean
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_Frame_SetDrawLayerEnabled)
-function Frame:SetDrawLayerEnabled(layer, mouseOver) end
+---@param layer DrawLayer
+---@param isEnabled? boolean Default = false
+function Frame:SetDrawLayerEnabled(layer, isEnabled) end
 
----@param bool boolean
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_Frame_SetFixedFrameLevel)
-function Frame:SetFixedFrameLevel(bool) end
+---@param isFixed boolean
+function Frame:SetFixedFrameLevel(isFixed) end
 
----@param bool boolean
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_Frame_SetFixedFrameStrata)
-function Frame:SetFixedFrameStrata(bool) end
+---@param isFixed boolean
+function Frame:SetFixedFrameStrata(isFixed) end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_Frame_SetFlattensRenderLayers)
-function Frame:SetFlattensRenderLayers() end
+---@param flatten boolean
+function Frame:SetFlattensRenderLayers(flatten) end
 
----@param level number
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_Frame_SetFrameLevel)
-function Frame:SetFrameLevel(level) end
+---@param frameLevel number
+function Frame:SetFrameLevel(frameLevel) end
 
----@param strata FrameStrata
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_Frame_SetFrameStrata)
+---@param strata FrameStrata
 function Frame:SetFrameStrata(strata) end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_Frame_SetHitRectInsets)
+---@param left uiUnit
+---@param right uiUnit
+---@param top uiUnit
+---@param bottom uiUnit
 function Frame:SetHitRectInsets(left, right, top, bottom) end
 
----[Documentation](https://wowpedia.fandom.com/wiki/API_Frame_SetMaxResize)
-function Frame:SetMaxResize(maxWidth, maxHeight) end
-
----[Documentation](https://wowpedia.fandom.com/wiki/API_Frame_SetMinResize)
-function Frame:SetMinResize(minWidth, minHeight) end
-
----[Documentation](https://wowpedia.fandom.com/wiki/API_Frame_SetToplevel)
-function Frame:SetToplevel(isTopLevel) end
-
----[Documentation](https://wowpedia.fandom.com/wiki/API_Frame_GetChildren)
-function Frame:GetChildren() end
-
----[Documentation](https://wowpedia.fandom.com/wiki/API_Frame_GetNumChildren)
-function Frame:GetNumChildren() end
-
----[Documentation](https://wowpedia.fandom.com/wiki/API_Frame_DoesClipChildren)
-function Frame:DoesClipChildren() end
-
----[Documentation](https://wowpedia.fandom.com/wiki/API_Frame_SetClipsChildren)
-function Frame:SetClipsChildren(clipped) end
-
----[Documentation](https://wowpedia.fandom.com/wiki/API_Frame_GetNumRegions)
-function Frame:GetNumRegions() end
-
----[Documentation](https://wowpedia.fandom.com/wiki/API_Frame_GetRegions)
-function Frame:GetRegions() end
-
----@param name? string
----@param layer? DrawLayer
----@param template? string
----@param subLayer? number
----@return FontString fontString
----[Documentation](https://wowpedia.fandom.com/wiki/API_Frame_CreateFontString)
-function Frame:CreateFontString(name, layer, template, subLayer) end
-
----[Documentation](https://wowpedia.fandom.com/wiki/API_Frame_CreateMaskTexture)
-function Frame:CreateMaskTexture() end
-
----@param name? string
----@param layer? DrawLayer
----@param template? string
----@param subLayer? number
----@return Texture texture
----[Documentation](https://wowpedia.fandom.com/wiki/API_Frame_CreateTexture)
-function Frame:CreateTexture(name, layer, template, subLayer) end
-
----[Documentation](https://wowpedia.fandom.com/wiki/API_Frame_EnableKeyboard)
-function Frame:EnableKeyboard(enableFlag) end
-
----[Documentation](https://wowpedia.fandom.com/wiki/API_Frame_EnableMouse)
-function Frame:EnableMouse(enableFlag) end
-
----[Documentation](https://wowpedia.fandom.com/wiki/API_Frame_EnableMouseWheel)
-function Frame:EnableMouseWheel(enableFlag) end
-
----[Documentation](https://wowpedia.fandom.com/wiki/API_Frame_GetHyperlinksEnabled)
-function Frame:GetHyperlinksEnabled() end
-
----[Documentation](https://wowpedia.fandom.com/wiki/API_Frame_GetPropagateKeyboardInput)
-function Frame:GetPropagateKeyboardInput() end
-
----[Documentation](https://wowpedia.fandom.com/wiki/API_Frame_IsKeyboardEnabled)
-function Frame:IsKeyboardEnabled() end
-
----[Documentation](https://wowpedia.fandom.com/wiki/API_Frame_IsMouseClickEnabled)
-function Frame:IsMouseClickEnabled() end
-
----[Documentation](https://wowpedia.fandom.com/wiki/API_Frame_IsMouseEnabled)
-function Frame:IsMouseEnabled() end
-
----[Documentation](https://wowpedia.fandom.com/wiki/API_Frame_IsMouseMotionEnabled)
-function Frame:IsMouseMotionEnabled() end
-
----[Documentation](https://wowpedia.fandom.com/wiki/API_Frame_IsMouseWheelEnabled)
-function Frame:IsMouseWheelEnabled() end
-
----[Documentation](https://wowpedia.fandom.com/wiki/API_Frame_IsMovable)
-function Frame:IsMovable() end
-
----[Documentation](https://wowpedia.fandom.com/wiki/API_Frame_IsResizable)
-function Frame:IsResizable() end
-
----[Documentation](https://wowpedia.fandom.com/wiki/API_Frame_IsUserPlaced)
-function Frame:IsUserPlaced() end
-
----[Documentation](https://wowpedia.fandom.com/wiki/API_Frame_RegisterForDrag)
-function Frame:RegisterForDrag(buttonType,buttonType) end
-
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_Frame_SetHyperlinksEnabled)
-function Frame:SetHyperlinksEnabled() end
+---@param enabled? boolean Default = false
+function Frame:SetHyperlinksEnabled(enabled) end
 
----[Documentation](https://wowpedia.fandom.com/wiki/API_Frame_SetMouseClickEnabled)
-function Frame:SetMouseClickEnabled() end
+---[Documentation](https://wowpedia.fandom.com/wiki/API_Frame_SetID)
+---@param id number
+function Frame:SetID(id) end
 
----[Documentation](https://wowpedia.fandom.com/wiki/API_Frame_SetMouseMotionEnabled)
-function Frame:SetMouseMotionEnabled() end
+---[Documentation](https://wowpedia.fandom.com/wiki/API_Frame_SetIgnoreParentAlpha)
+---@param ignore boolean
+function Frame:SetIgnoreParentAlpha(ignore) end
+
+---[Documentation](https://wowpedia.fandom.com/wiki/API_Frame_SetIgnoreParentScale)
+---@param ignore boolean
+function Frame:SetIgnoreParentScale(ignore) end
+
+---[Documentation](https://wowpedia.fandom.com/wiki/API_Frame_SetIsFrameBuffer)
+---@param isFrameBuffer boolean
+function Frame:SetIsFrameBuffer(isFrameBuffer) end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_Frame_SetMovable)
-function Frame:SetMovable(isMovable) end
+---@param movable boolean
+function Frame:SetMovable(movable) end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_Frame_SetPropagateKeyboardInput)
+---@param propagate boolean
 function Frame:SetPropagateKeyboardInput(propagate) end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_Frame_SetResizable)
-function Frame:SetResizable(isResizable) end
+---@param resizable boolean
+function Frame:SetResizable(resizable) end
+
+---[Documentation](https://wowpedia.fandom.com/wiki/API_Frame_SetResizeBounds)
+---@param minWidth uiUnit
+---@param minHeight uiUnit
+---@param maxWidth? uiUnit
+---@param maxHeight? uiUnit
+function Frame:SetResizeBounds(minWidth, minHeight, maxWidth, maxHeight) end
+
+---[Documentation](https://wowpedia.fandom.com/wiki/API_Frame_SetScale)
+---@param scale number
+function Frame:SetScale(scale) end
+
+---[Documentation](https://wowpedia.fandom.com/wiki/API_Frame_SetShown)
+---@param shown? boolean Default = false
+function Frame:SetShown(shown) end
+
+---[Documentation](https://wowpedia.fandom.com/wiki/API_Frame_SetToplevel)
+---@param topLevel boolean
+function Frame:SetToplevel(topLevel) end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_Frame_SetUserPlaced)
-function Frame:SetUserPlaced(isUserPlaced) end
+---@param userPlaced boolean
+function Frame:SetUserPlaced(userPlaced) end
+
+---[Documentation](https://wowpedia.fandom.com/wiki/API_Frame_Show)
+function Frame:Show() end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_Frame_StartMoving)
-function Frame:StartMoving() end
+---@param alwaysStartFromMouse? boolean Default = false
+function Frame:StartMoving(alwaysStartFromMouse) end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_Frame_StartSizing)
-function Frame:StartSizing(point) end
+---@param resizePoint? FramePoint
+---@param alwaysStartFromMouse? boolean Default = false
+function Frame:StartSizing(resizePoint, alwaysStartFromMouse) end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_Frame_StopMovingOrSizing)
 function Frame:StopMovingOrSizing() end
 
----[Documentation](https://wowpedia.fandom.com/wiki/API_Frame_EnableGamePadButton)
-function Frame:EnableGamePadButton(enabled) end
+---[Documentation](https://wowpedia.fandom.com/wiki/API_Frame_UnregisterAllEvents)
+function Frame:UnregisterAllEvents() end
 
----[Documentation](https://wowpedia.fandom.com/wiki/API_Frame_EnableGamePadStick)
-function Frame:EnableGamePadStick(enabled) end
-
----[Documentation](https://wowpedia.fandom.com/wiki/API_Frame_IsGamePadButtonEnabled)
-function Frame:IsGamePadButtonEnabled() end
-
----[Documentation](https://wowpedia.fandom.com/wiki/API_Frame_IsGamePadStickEnabled)
-function Frame:IsGamePadStickEnabled() end
-
----[Documentation](https://wowpedia.fandom.com/wiki/API_Frame_GetAttribute)
-function Frame:GetAttribute(prefix, name, suffix) end
-
----[Documentation](https://wowpedia.fandom.com/wiki/API_Frame_SetAttribute)
-function Frame:SetAttribute(name, value) end
-
----[Documentation](https://wowpedia.fandom.com/wiki/API_Frame_ExecuteAttribute)
-function Frame:ExecuteAttribute(name) end
-
----[Documentation](https://wowpedia.fandom.com/wiki/API_Frame_CanChangeAttribute)
-function Frame:CanChangeAttribute() end
-
----[Documentation](https://wowpedia.fandom.com/wiki/API_Frame_GetID)
-function Frame:GetID() end
-
----[Documentation](https://wowpedia.fandom.com/wiki/API_Frame_SetID)
-function Frame:SetID(id) end
+---[Documentation](https://wowpedia.fandom.com/wiki/API_Frame_UnregisterEvent)
+---@param eventName WowEvent
+---@return boolean registered
+function Frame:UnregisterEvent(eventName) end
