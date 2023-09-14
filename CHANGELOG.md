@@ -5,6 +5,9 @@
 - The Classic (TBC) API is not supported ([#13](https://github.com/Ketho/vscode-wow-api/issues/13))
 - Frame templates are not completely supported, only BackdropTemplate ([#15](https://github.com/Ketho/vscode-wow-api/issues/15)) 
 
+## [0.10.3] - 2023-09-15
+- 🌙 Definitions: Partially updated Widget API for base objects, Frame, Animation, Texture, AnimationGroup, ModelScene. This may be rough and untested.
+
 ## [0.10.2] - 2023-09-13
 - 🌙 Definitions: Update for 10.1.7 (51261)
 
@@ -372,6 +375,7 @@ Libraries
 ### Added
 - 🚧 Wip: Development work
 
+[0.10.3]: https://github.com/Ketho/vscode-wow-api/releases/tag/0.10.3
 [0.10.2]: https://github.com/Ketho/vscode-wow-api/releases/tag/0.10.2
 [0.10.1]: https://github.com/Ketho/vscode-wow-api/releases/tag/0.10.1
 [0.9.14]: https://github.com/Ketho/vscode-wow-api/releases/tag/0.9.14
