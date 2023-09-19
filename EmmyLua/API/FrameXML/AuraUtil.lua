@@ -30,6 +30,7 @@ function AuraUtil.FindAuraByName(auraName, unit, filter) end
 ---@param filter string
 ---@param maxCount? any
 ---@param func function
+---@param usePackedAura? boolean
 ---@return string name
 ---@return number icon
 ---@return number count
@@ -46,4 +47,4 @@ function AuraUtil.FindAuraByName(auraName, unit, filter) end
 ---@return boolean nameplateShowAll
 ---@return number timeMod
 ---@return ...
-function AuraUtil.ForEachAura(unit, filter, maxCount, func) end
+function AuraUtil.ForEachAura(unit, filter, maxCount, func, usePackedAura) end
