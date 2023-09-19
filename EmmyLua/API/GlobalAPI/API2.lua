@@ -1768,7 +1768,14 @@ function GetBillingTimeRested() end
 function GetBindLocation() end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_GetBinding)
-function GetBinding(index) end
+---@param index number
+---@param alwaysIncludeGamepad? boolean
+---@return string command
+---@return string category
+---@return string? key1
+---@return string? key2
+---@return string? ...
+function GetBinding(index, alwaysIncludeGamepad) end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_GetBindingAction)
 ---@param binding string
