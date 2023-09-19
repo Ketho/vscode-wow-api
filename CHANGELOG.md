@@ -5,6 +5,9 @@
 - The Classic (TBC) API is not supported ([#13](https://github.com/Ketho/vscode-wow-api/issues/13))
 - Frame templates are not completely supported, only BackdropTemplate ([#15](https://github.com/Ketho/vscode-wow-api/issues/15)) 
 
+## [0.10.4] - 2023-09-19
+- 🌙 Definitions: Updated `AuraUtil.ForEachAura()` usePackedAura arg, `GetBinding()`, `TooltipData.lines`
+
 ## [0.10.3] - 2023-09-15
 - 🌙 Definitions: Partially updated Widget API for base objects, Frame, Animation, Texture, AnimationGroup, ModelScene. This may be rough and untested.
 
@@ -375,6 +378,7 @@ Libraries
 ### Added
 - 🚧 Wip: Development work
 
+[0.10.4]: https://github.com/Ketho/vscode-wow-api/releases/tag/0.10.4
 [0.10.3]: https://github.com/Ketho/vscode-wow-api/releases/tag/0.10.3
 [0.10.2]: https://github.com/Ketho/vscode-wow-api/releases/tag/0.10.2
 [0.10.1]: https://github.com/Ketho/vscode-wow-api/releases/tag/0.10.1
