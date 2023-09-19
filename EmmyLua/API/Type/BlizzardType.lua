@@ -51,7 +51,7 @@
 ---@class TooltipData
 ---@field type Enum.TooltipDataType?
 ---@field dataInstanceID number
----@field lines TooltipDataLine
+---@field lines TooltipDataLine[]
 ---@field hyperlink string?
 ---@field guid WOWGUID?
 ---@field isAzeriteItem boolean?
