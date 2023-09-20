@@ -2073,7 +2073,9 @@ function C_ToyBox.GetNumTotalDisplayedToys() end
 function C_ToyBox.GetNumToys() end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_ToyBox.GetToyFromIndex)
-function C_ToyBox.GetToyFromIndex(itemIndex) end
+---@param index number
+---@return number itemID
+function C_ToyBox.GetToyFromIndex(index) end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_ToyBox.GetToyInfo)
 ---@param itemID number
