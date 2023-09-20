@@ -2070,6 +2070,7 @@ function C_ToyBox.GetNumLearnedDisplayedToys() end
 function C_ToyBox.GetNumTotalDisplayedToys() end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_ToyBox.GetNumToys)
+---@return number numToys
 function C_ToyBox.GetNumToys() end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_ToyBox.GetToyFromIndex)
