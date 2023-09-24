@@ -5,6 +5,9 @@
 - The Classic (TBC) API is not supported ([#13](https://github.com/Ketho/vscode-wow-api/issues/13))
 - Frame templates are not completely supported, only BackdropTemplate ([#15](https://github.com/Ketho/vscode-wow-api/issues/15)) 
 
+## [0.10.6] - 2023-09-25
+- 🌙 Definitions: Fixed `:SetAllPoints()`, `MouseButton` type, `Scale` widget, `C_Heirloom.GetHeirloomItemIDs()`
+
 ## [0.10.5] - 2023-09-20
 - 🌙 Definitions: Added `C_ToyBox.GetToyFromIndex()`, `C_ToyBox.GetNumToys()`
 
@@ -381,6 +384,7 @@ Libraries
 ### Added
 - 🚧 Wip: Development work
 
+[0.10.6]: https://github.com/Ketho/vscode-wow-api/releases/tag/0.10.6
 [0.10.5]: https://github.com/Ketho/vscode-wow-api/releases/tag/0.10.5
 [0.10.4]: https://github.com/Ketho/vscode-wow-api/releases/tag/0.10.4
 [0.10.3]: https://github.com/Ketho/vscode-wow-api/releases/tag/0.10.3
