@@ -1167,6 +1167,7 @@ function C_Heirloom.GetHeirloomInfo(itemID) end
 function C_Heirloom.GetHeirloomItemIDFromDisplayedIndex(heirloomIndex) end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_Heirloom.GetHeirloomItemIDs)
+---@return number[] itemIDs
 function C_Heirloom.GetHeirloomItemIDs() end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_C_Heirloom.GetHeirloomLink)
