@@ -98,10 +98,10 @@ function Frame:EnableKeyboard(enable) end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_Frame_ExecuteAttribute)
 ---@param attributeName string
----@param unpackedPrimitiveType string
+---@param ... MouseButton
 ---@return boolean success
----@return string unpackedPrimitiveType
-function Frame:ExecuteAttribute(attributeName, unpackedPrimitiveType) end
+---@return MouseButton ...
+function Frame:ExecuteAttribute(attributeName, ...) end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_Frame_GetAlpha)
 ---@return SingleColorValue alpha
@@ -288,8 +288,8 @@ function Frame:RegisterAllEvents() end
 function Frame:RegisterEvent(eventName) end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_Frame_RegisterForDrag)
----@param unpackedPrimitiveType number
-function Frame:RegisterForDrag(unpackedPrimitiveType) end
+---@param ... MouseButton
+function Frame:RegisterForDrag(...) end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_Frame_RegisterUnitEvent)
 ---@param eventName WowEvent

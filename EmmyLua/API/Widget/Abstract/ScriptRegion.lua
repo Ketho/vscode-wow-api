@@ -160,8 +160,8 @@ function ScriptRegion:SetMouseMotionEnabled(enabled) end
 function ScriptRegion:SetParent(parent) end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_ScriptRegion_SetPassThroughButtons)
----@param unpackedPrimitiveType number
-function ScriptRegion:SetPassThroughButtons(unpackedPrimitiveType) end
+---@param ... MouseButton
+function ScriptRegion:SetPassThroughButtons(...) end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_ScriptRegion_SetProtected)
 function ScriptRegion:SetProtected() end

@@ -136,6 +136,13 @@
 ---|"width"
 ---|"height"
 
+---@alias MouseButton
+---|"LeftButton"
+---|"RightButton"
+---|"MiddleButton"
+---|"Button4"
+---|"Button5"
+
 ---@alias InventorySlots number
 
 ---@alias CScriptObject Object
