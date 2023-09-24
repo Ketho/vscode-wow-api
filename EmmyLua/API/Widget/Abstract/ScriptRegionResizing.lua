@@ -36,7 +36,7 @@ function ScriptRegionResizing:GetPoint(anchorIndex) end
 function ScriptRegionResizing:GetPointByName(point) end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_ScriptRegionResizing_SetAllPoints)
----@param relativeTo ScriptRegion
+---@param relativeTo? ScriptRegion
 ---@param doResize? boolean Default = true
 function ScriptRegionResizing:SetAllPoints(relativeTo, doResize) end
 
