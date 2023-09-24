@@ -1,32 +1,50 @@
 ---@meta
----[Documentation](https://wowpedia.fandom.com/wiki/UIOBJECT_Rotation)
+---[Documentation](https://wowpedia.fandom.com/wiki/UIOBJECT_Scale)
 ---@class Scale : Animation
 local Scale = {}
 ---@class scale : Scale
 ---@class SCALE : Scale
 ---@class LineScale : Scale
 
----[Documentation](https://wowpedia.fandom.com/wiki/API_Scale_GetFromScale)
-function Scale:GetFromScale() end
-
+---@meta
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_Scale_GetOrigin)
+---@return FramePoint point
+---@return number originX
+---@return number originY
 function Scale:GetOrigin() end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_Scale_GetScale)
+---@return number scaleX
+---@return number scaleY
 function Scale:GetScale() end
 
----[Documentation](https://wowpedia.fandom.com/wiki/API_Scale_GetToScale)
-function Scale:GetToScale() end
+---[Documentation](https://wowpedia.fandom.com/wiki/API_Scale_GetScaleFrom)
+---@return number scaleX
+---@return number scaleY
+function Scale:GetScaleFrom() end
 
----[Documentation](https://wowpedia.fandom.com/wiki/API_Scale_SetFromScale)
-function Scale:SetFromScale(x, y) end
+---[Documentation](https://wowpedia.fandom.com/wiki/API_Scale_GetScaleTo)
+---@return number scaleX
+---@return number scaleY
+function Scale:GetScaleTo() end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_Scale_SetOrigin)
-function Scale:SetOrigin(point, offsetX, offsetY) end
+---@param point FramePoint
+---@param originX number
+---@param originY number
+function Scale:SetOrigin(point, originX, originY) end
 
 ---[Documentation](https://wowpedia.fandom.com/wiki/API_Scale_SetScale)
-function Scale:SetScale(x, y) end
+---@param scaleX number
+---@param scaleY number
+function Scale:SetScale(scaleX, scaleY) end
 
----[Documentation](https://wowpedia.fandom.com/wiki/API_Scale_SetToScale)
-function Scale:SetToScale(x, y) end
+---[Documentation](https://wowpedia.fandom.com/wiki/API_Scale_SetScaleFrom)
+---@param scaleX number
+---@param scaleY number
+function Scale:SetScaleFrom(scaleX, scaleY) end
 
+---[Documentation](https://wowpedia.fandom.com/wiki/API_Scale_SetScaleTo)
+---@param scaleX number
+---@param scaleY number
+function Scale:SetScaleTo(scaleX, scaleY) end
