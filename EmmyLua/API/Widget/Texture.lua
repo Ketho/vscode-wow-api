@@ -1,6 +1,6 @@
 ---@meta
 ---[Documentation](https://wowpedia.fandom.com/wiki/UIOBJECT_Texture)
----@class Texture : Region
+---@class Texture : TextureBase
 local Texture = {}
 ---@class texture : Texture
 ---@class TEXTURE : Texture
