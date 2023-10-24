@@ -18,7 +18,7 @@ for line in body:gmatch("[^\r\n]+") do
 	end
 end
 
-local fs = "---[Documentation](https://wowpedia.fandom.com/wiki/API_%s_%s)\nfunction %s:%s(%s) end\n\n"
+local fs = "---[Documentation](https://warcraft.wiki.gg/wiki/API_%s_%s)\nfunction %s:%s(%s) end\n\n"
 local file = io.open("Lua/Data/output/widget.lua", "w")
 
 for _, v in pairs(api) do

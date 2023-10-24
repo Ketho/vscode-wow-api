@@ -26,7 +26,7 @@ function getMarkdown(name: string) {
 		params += "\n```";
 		s += params;
 	};
-	let doc = `\n[Documentation](https://wowpedia.fandom.com/wiki/${name})`;
+	let doc = `\n[Documentation](https://warcraft.wiki.gg/wiki/${name})`;
 	return s+doc;
 }
 

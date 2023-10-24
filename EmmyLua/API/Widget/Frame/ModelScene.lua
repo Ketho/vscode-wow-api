@@ -1,126 +1,126 @@
 ---@meta
----[Documentation](https://wowpedia.fandom.com/wiki/UIOBJECT_ModelScene)
+---[Documentation](https://warcraft.wiki.gg/wiki/UIOBJECT_ModelScene)
 ---@class ModelScene : Frame
 local ModelScene = {}
 ---@class modelscene : ModelScene
 ---@class MODELSCENE : ModelScene
 
----[Documentation](https://wowpedia.fandom.com/wiki/API_ModelScene_ClearFog)
+---[Documentation](https://warcraft.wiki.gg/wiki/API_ModelScene_ClearFog)
 function ModelScene:ClearFog() end
 
----[Documentation](https://wowpedia.fandom.com/wiki/API_ModelScene_CreateActor)
+---[Documentation](https://warcraft.wiki.gg/wiki/API_ModelScene_CreateActor)
 ---@param name string
 ---@param template string
 ---@return ModelSceneActor actor
 function ModelScene:CreateActor(name, template) end
 
----[Documentation](https://wowpedia.fandom.com/wiki/API_ModelScene_GetActorAtIndex)
+---[Documentation](https://warcraft.wiki.gg/wiki/API_ModelScene_GetActorAtIndex)
 ---@param index number
 ---@return ModelSceneActor actor
 function ModelScene:GetActorAtIndex(index) end
 
----[Documentation](https://wowpedia.fandom.com/wiki/API_ModelScene_GetCameraFarClip)
+---[Documentation](https://warcraft.wiki.gg/wiki/API_ModelScene_GetCameraFarClip)
 ---@return number farClip
 function ModelScene:GetCameraFarClip() end
 
 ---Field of view in radians
----[Documentation](https://wowpedia.fandom.com/wiki/API_ModelScene_GetCameraFieldOfView)
+---[Documentation](https://warcraft.wiki.gg/wiki/API_ModelScene_GetCameraFieldOfView)
 ---@return number fov
 function ModelScene:GetCameraFieldOfView() end
 
----[Documentation](https://wowpedia.fandom.com/wiki/API_ModelScene_GetCameraForward)
+---[Documentation](https://warcraft.wiki.gg/wiki/API_ModelScene_GetCameraForward)
 ---@return number forwardX
 ---@return number forwardY
 ---@return number forwardZ
 function ModelScene:GetCameraForward() end
 
----[Documentation](https://wowpedia.fandom.com/wiki/API_ModelScene_GetCameraNearClip)
+---[Documentation](https://warcraft.wiki.gg/wiki/API_ModelScene_GetCameraNearClip)
 ---@return number nearClip
 function ModelScene:GetCameraNearClip() end
 
----[Documentation](https://wowpedia.fandom.com/wiki/API_ModelScene_GetCameraPosition)
+---[Documentation](https://warcraft.wiki.gg/wiki/API_ModelScene_GetCameraPosition)
 ---@return number positionX
 ---@return number positionY
 ---@return number positionZ
 function ModelScene:GetCameraPosition() end
 
----[Documentation](https://wowpedia.fandom.com/wiki/API_ModelScene_GetCameraRight)
+---[Documentation](https://warcraft.wiki.gg/wiki/API_ModelScene_GetCameraRight)
 ---@return number rightX
 ---@return number rightY
 ---@return number rightZ
 function ModelScene:GetCameraRight() end
 
----[Documentation](https://wowpedia.fandom.com/wiki/API_ModelScene_GetCameraUp)
+---[Documentation](https://warcraft.wiki.gg/wiki/API_ModelScene_GetCameraUp)
 ---@return number upX
 ---@return number upY
 ---@return number upZ
 function ModelScene:GetCameraUp() end
 
----[Documentation](https://wowpedia.fandom.com/wiki/API_ModelScene_GetDrawLayer)
+---[Documentation](https://warcraft.wiki.gg/wiki/API_ModelScene_GetDrawLayer)
 ---@return DrawLayer layer
 ---@return number sublevel
 function ModelScene:GetDrawLayer() end
 
----[Documentation](https://wowpedia.fandom.com/wiki/API_ModelScene_GetFogColor)
+---[Documentation](https://warcraft.wiki.gg/wiki/API_ModelScene_GetFogColor)
 ---@return number colorR
 ---@return number colorG
 ---@return number colorB
 function ModelScene:GetFogColor() end
 
----[Documentation](https://wowpedia.fandom.com/wiki/API_ModelScene_GetFogFar)
+---[Documentation](https://warcraft.wiki.gg/wiki/API_ModelScene_GetFogFar)
 ---@return number far
 function ModelScene:GetFogFar() end
 
----[Documentation](https://wowpedia.fandom.com/wiki/API_ModelScene_GetFogNear)
+---[Documentation](https://warcraft.wiki.gg/wiki/API_ModelScene_GetFogNear)
 ---@return number near
 function ModelScene:GetFogNear() end
 
----[Documentation](https://wowpedia.fandom.com/wiki/API_ModelScene_GetLightAmbientColor)
+---[Documentation](https://warcraft.wiki.gg/wiki/API_ModelScene_GetLightAmbientColor)
 ---@return number colorR
 ---@return number colorG
 ---@return number colorB
 function ModelScene:GetLightAmbientColor() end
 
----[Documentation](https://wowpedia.fandom.com/wiki/API_ModelScene_GetLightDiffuseColor)
+---[Documentation](https://warcraft.wiki.gg/wiki/API_ModelScene_GetLightDiffuseColor)
 ---@return number colorR
 ---@return number colorG
 ---@return number colorB
 function ModelScene:GetLightDiffuseColor() end
 
----[Documentation](https://wowpedia.fandom.com/wiki/API_ModelScene_GetLightDirection)
+---[Documentation](https://warcraft.wiki.gg/wiki/API_ModelScene_GetLightDirection)
 ---@return number directionX
 ---@return number directionY
 ---@return number directionZ
 function ModelScene:GetLightDirection() end
 
----[Documentation](https://wowpedia.fandom.com/wiki/API_ModelScene_GetLightPosition)
+---[Documentation](https://warcraft.wiki.gg/wiki/API_ModelScene_GetLightPosition)
 ---@return number positionX
 ---@return number positionY
 ---@return number positionZ
 function ModelScene:GetLightPosition() end
 
----[Documentation](https://wowpedia.fandom.com/wiki/API_ModelScene_GetLightType)
+---[Documentation](https://warcraft.wiki.gg/wiki/API_ModelScene_GetLightType)
 ---@return Enum.ModelLightType? lightType
 function ModelScene:GetLightType() end
 
----[Documentation](https://wowpedia.fandom.com/wiki/API_ModelScene_GetNumActors)
+---[Documentation](https://warcraft.wiki.gg/wiki/API_ModelScene_GetNumActors)
 ---@return number numActors
 function ModelScene:GetNumActors() end
 
----[Documentation](https://wowpedia.fandom.com/wiki/API_ModelScene_GetViewInsets)
+---[Documentation](https://warcraft.wiki.gg/wiki/API_ModelScene_GetViewInsets)
 ---@return uiRect insets
 function ModelScene:GetViewInsets() end
 
----[Documentation](https://wowpedia.fandom.com/wiki/API_ModelScene_GetViewTranslation)
+---[Documentation](https://warcraft.wiki.gg/wiki/API_ModelScene_GetViewTranslation)
 ---@return number translationX
 ---@return number translationY
 function ModelScene:GetViewTranslation() end
 
----[Documentation](https://wowpedia.fandom.com/wiki/API_ModelScene_IsLightVisible)
+---[Documentation](https://warcraft.wiki.gg/wiki/API_ModelScene_IsLightVisible)
 ---@return boolean isVisible
 function ModelScene:IsLightVisible() end
 
----[Documentation](https://wowpedia.fandom.com/wiki/API_ModelScene_Project3DPointTo2D)
+---[Documentation](https://warcraft.wiki.gg/wiki/API_ModelScene_Project3DPointTo2D)
 ---@param pointX number
 ---@param pointY number
 ---@param pointZ number
@@ -129,20 +129,20 @@ function ModelScene:IsLightVisible() end
 ---@return number depth
 function ModelScene:Project3DPointTo2D(pointX, pointY, pointZ) end
 
----[Documentation](https://wowpedia.fandom.com/wiki/API_ModelScene_SetCameraFarClip)
+---[Documentation](https://warcraft.wiki.gg/wiki/API_ModelScene_SetCameraFarClip)
 ---@param farClip number
 function ModelScene:SetCameraFarClip(farClip) end
 
 ---Field of view in radians
----[Documentation](https://wowpedia.fandom.com/wiki/API_ModelScene_SetCameraFieldOfView)
+---[Documentation](https://warcraft.wiki.gg/wiki/API_ModelScene_SetCameraFieldOfView)
 ---@param fov number
 function ModelScene:SetCameraFieldOfView(fov) end
 
----[Documentation](https://wowpedia.fandom.com/wiki/API_ModelScene_SetCameraNearClip)
+---[Documentation](https://warcraft.wiki.gg/wiki/API_ModelScene_SetCameraNearClip)
 ---@param nearClip number
 function ModelScene:SetCameraNearClip(nearClip) end
 
----[Documentation](https://wowpedia.fandom.com/wiki/API_ModelScene_SetCameraOrientationByAxisVectors)
+---[Documentation](https://warcraft.wiki.gg/wiki/API_ModelScene_SetCameraOrientationByAxisVectors)
 ---@param forwardX number
 ---@param forwardY number
 ---@param forwardZ number
@@ -154,85 +154,85 @@ function ModelScene:SetCameraNearClip(nearClip) end
 ---@param upZ number
 function ModelScene:SetCameraOrientationByAxisVectors(forwardX, forwardY, forwardZ, rightX, rightY, rightZ, upX, upY, upZ) end
 
----[Documentation](https://wowpedia.fandom.com/wiki/API_ModelScene_SetCameraOrientationByYawPitchRoll)
+---[Documentation](https://warcraft.wiki.gg/wiki/API_ModelScene_SetCameraOrientationByYawPitchRoll)
 ---@param yaw number
 ---@param pitch number
 ---@param roll number
 function ModelScene:SetCameraOrientationByYawPitchRoll(yaw, pitch, roll) end
 
----[Documentation](https://wowpedia.fandom.com/wiki/API_ModelScene_SetCameraPosition)
+---[Documentation](https://warcraft.wiki.gg/wiki/API_ModelScene_SetCameraPosition)
 ---@param positionX number
 ---@param positionY number
 ---@param positionZ number
 function ModelScene:SetCameraPosition(positionX, positionY, positionZ) end
 
----[Documentation](https://wowpedia.fandom.com/wiki/API_ModelScene_SetDesaturation)
+---[Documentation](https://warcraft.wiki.gg/wiki/API_ModelScene_SetDesaturation)
 ---@param strength number
 function ModelScene:SetDesaturation(strength) end
 
----[Documentation](https://wowpedia.fandom.com/wiki/API_ModelScene_SetDrawLayer)
+---[Documentation](https://warcraft.wiki.gg/wiki/API_ModelScene_SetDrawLayer)
 ---@param layer DrawLayer
 function ModelScene:SetDrawLayer(layer) end
 
----[Documentation](https://wowpedia.fandom.com/wiki/API_ModelScene_SetFogColor)
+---[Documentation](https://warcraft.wiki.gg/wiki/API_ModelScene_SetFogColor)
 ---@param colorR number
 ---@param colorG number
 ---@param colorB number
 function ModelScene:SetFogColor(colorR, colorG, colorB) end
 
----[Documentation](https://wowpedia.fandom.com/wiki/API_ModelScene_SetFogFar)
+---[Documentation](https://warcraft.wiki.gg/wiki/API_ModelScene_SetFogFar)
 ---@param far number
 function ModelScene:SetFogFar(far) end
 
----[Documentation](https://wowpedia.fandom.com/wiki/API_ModelScene_SetFogNear)
+---[Documentation](https://warcraft.wiki.gg/wiki/API_ModelScene_SetFogNear)
 ---@param near number
 function ModelScene:SetFogNear(near) end
 
----[Documentation](https://wowpedia.fandom.com/wiki/API_ModelScene_SetLightAmbientColor)
+---[Documentation](https://warcraft.wiki.gg/wiki/API_ModelScene_SetLightAmbientColor)
 ---@param colorR number
 ---@param colorG number
 ---@param colorB number
 function ModelScene:SetLightAmbientColor(colorR, colorG, colorB) end
 
----[Documentation](https://wowpedia.fandom.com/wiki/API_ModelScene_SetLightDiffuseColor)
+---[Documentation](https://warcraft.wiki.gg/wiki/API_ModelScene_SetLightDiffuseColor)
 ---@param colorR number
 ---@param colorG number
 ---@param colorB number
 function ModelScene:SetLightDiffuseColor(colorR, colorG, colorB) end
 
----[Documentation](https://wowpedia.fandom.com/wiki/API_ModelScene_SetLightDirection)
+---[Documentation](https://warcraft.wiki.gg/wiki/API_ModelScene_SetLightDirection)
 ---@param directionX number
 ---@param directionY number
 ---@param directionZ number
 function ModelScene:SetLightDirection(directionX, directionY, directionZ) end
 
----[Documentation](https://wowpedia.fandom.com/wiki/API_ModelScene_SetLightPosition)
+---[Documentation](https://warcraft.wiki.gg/wiki/API_ModelScene_SetLightPosition)
 ---@param positionX number
 ---@param positionY number
 ---@param positionZ number
 function ModelScene:SetLightPosition(positionX, positionY, positionZ) end
 
----[Documentation](https://wowpedia.fandom.com/wiki/API_ModelScene_SetLightType)
+---[Documentation](https://warcraft.wiki.gg/wiki/API_ModelScene_SetLightType)
 ---@param lightType number|Enum.ModelLightType
 function ModelScene:SetLightType(lightType) end
 
----[Documentation](https://wowpedia.fandom.com/wiki/API_ModelScene_SetLightVisible)
+---[Documentation](https://warcraft.wiki.gg/wiki/API_ModelScene_SetLightVisible)
 ---@param visible? boolean Default = false
 function ModelScene:SetLightVisible(visible) end
 
----[Documentation](https://wowpedia.fandom.com/wiki/API_ModelScene_SetPaused)
+---[Documentation](https://warcraft.wiki.gg/wiki/API_ModelScene_SetPaused)
 ---@param paused boolean
 ---@param affectsGlobalPause? boolean Default = true
 function ModelScene:SetPaused(paused, affectsGlobalPause) end
 
----[Documentation](https://wowpedia.fandom.com/wiki/API_ModelScene_SetViewInsets)
+---[Documentation](https://warcraft.wiki.gg/wiki/API_ModelScene_SetViewInsets)
 ---@param insets uiRect
 function ModelScene:SetViewInsets(insets) end
 
----[Documentation](https://wowpedia.fandom.com/wiki/API_ModelScene_SetViewTranslation)
+---[Documentation](https://warcraft.wiki.gg/wiki/API_ModelScene_SetViewTranslation)
 ---@param translationX number
 ---@param translationY number
 function ModelScene:SetViewTranslation(translationX, translationY) end
 
----[Documentation](https://wowpedia.fandom.com/wiki/API_ModelScene_TakeActor)
+---[Documentation](https://warcraft.wiki.gg/wiki/API_ModelScene_TakeActor)
 function ModelScene:TakeActor() end

@@ -1,105 +1,105 @@
 ---@meta
 C_GamePad = {}
 
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_GamePad.AddSDLMapping)
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_GamePad.AddSDLMapping)
 ---@param platform number|Enum.ClientPlatformType
 ---@param mapping string
 ---@return boolean success
 function C_GamePad.AddSDLMapping(platform, mapping) end
 
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_GamePad.ApplyConfigs)
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_GamePad.ApplyConfigs)
 function C_GamePad.ApplyConfigs() end
 
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_GamePad.AxisIndexToConfigName)
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_GamePad.AxisIndexToConfigName)
 ---@param axisIndex number
 ---@return string? configName
 function C_GamePad.AxisIndexToConfigName(axisIndex) end
 
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_GamePad.ButtonBindingToIndex)
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_GamePad.ButtonBindingToIndex)
 ---@param bindingName string
 ---@return number? buttonIndex
 function C_GamePad.ButtonBindingToIndex(bindingName) end
 
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_GamePad.ButtonIndexToBinding)
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_GamePad.ButtonIndexToBinding)
 ---@param buttonIndex number
 ---@return string? bindingName
 function C_GamePad.ButtonIndexToBinding(buttonIndex) end
 
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_GamePad.ButtonIndexToConfigName)
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_GamePad.ButtonIndexToConfigName)
 ---@param buttonIndex number
 ---@return string? configName
 function C_GamePad.ButtonIndexToConfigName(buttonIndex) end
 
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_GamePad.ClearLedColor)
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_GamePad.ClearLedColor)
 function C_GamePad.ClearLedColor() end
 
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_GamePad.DeleteConfig)
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_GamePad.DeleteConfig)
 ---@param configID GamePadConfigID
 function C_GamePad.DeleteConfig(configID) end
 
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_GamePad.GetActiveDeviceID)
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_GamePad.GetActiveDeviceID)
 ---@return number deviceID
 function C_GamePad.GetActiveDeviceID() end
 
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_GamePad.GetAllConfigIDs)
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_GamePad.GetAllConfigIDs)
 ---@return GamePadConfigID[] configIDs
 function C_GamePad.GetAllConfigIDs() end
 
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_GamePad.GetAllDeviceIDs)
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_GamePad.GetAllDeviceIDs)
 ---@return number[] deviceIDs
 function C_GamePad.GetAllDeviceIDs() end
 
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_GamePad.GetCombinedDeviceID)
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_GamePad.GetCombinedDeviceID)
 ---@return number deviceID
 function C_GamePad.GetCombinedDeviceID() end
 
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_GamePad.GetConfig)
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_GamePad.GetConfig)
 ---@param configID GamePadConfigID
 ---@return GamePadConfig? config
 function C_GamePad.GetConfig(configID) end
 
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_GamePad.GetDeviceMappedState)
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_GamePad.GetDeviceMappedState)
 ---@param deviceID? number
 ---@return GamePadMappedState? state
 function C_GamePad.GetDeviceMappedState(deviceID) end
 
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_GamePad.GetDeviceRawState)
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_GamePad.GetDeviceRawState)
 ---@param deviceID number
 ---@return GamePadRawState? rawState
 function C_GamePad.GetDeviceRawState(deviceID) end
 
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_GamePad.GetLedColor)
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_GamePad.GetLedColor)
 ---@return ColorMixin color
 function C_GamePad.GetLedColor() end
 
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_GamePad.GetPowerLevel)
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_GamePad.GetPowerLevel)
 ---@param deviceID? number
 ---@return Enum.GamePadPowerLevel powerLevel
 function C_GamePad.GetPowerLevel(deviceID) end
 
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_GamePad.IsEnabled)
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_GamePad.IsEnabled)
 ---@return boolean enabled
 function C_GamePad.IsEnabled() end
 
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_GamePad.SetConfig)
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_GamePad.SetConfig)
 ---@param config GamePadConfig
 function C_GamePad.SetConfig(config) end
 
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_GamePad.SetLedColor)
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_GamePad.SetLedColor)
 ---@param color ColorMixin
 function C_GamePad.SetLedColor(color) end
 
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_GamePad.SetVibration)
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_GamePad.SetVibration)
 ---@param vibrationType string
 ---@param intensity number
 function C_GamePad.SetVibration(vibrationType, intensity) end
 
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_GamePad.StickIndexToConfigName)
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_GamePad.StickIndexToConfigName)
 ---@param stickIndex number
 ---@return string? configName
 function C_GamePad.StickIndexToConfigName(stickIndex) end
 
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_GamePad.StopVibration)
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_GamePad.StopVibration)
 function C_GamePad.StopVibration() end
 
 ---@class GamePadAxisConfig

@@ -1,7 +1,7 @@
 ---@meta
 PlayerLocation = {}
 
----[Documentation](https://wowpedia.fandom.com/wiki/PlayerLocationMixin)
+---[Documentation](https://warcraft.wiki.gg/wiki/PlayerLocationMixin)
 ---@class PlayerLocationMixin
 PlayerLocationMixin = {}
 

@@ -1,12 +1,12 @@
 ---@meta
 C_EncounterJournal = {}
 
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_EncounterJournal.GetDungeonEntrancesForMap)
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_EncounterJournal.GetDungeonEntrancesForMap)
 ---@param uiMapID number
 ---@return DungeonEntranceMapInfo[] dungeonEntrances
 function C_EncounterJournal.GetDungeonEntrancesForMap(uiMapID) end
 
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_EncounterJournal.GetEncounterJournalLink)
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_EncounterJournal.GetEncounterJournalLink)
 ---@param linkType number|Enum.JournalLinkTypes
 ---@param ID number
 ---@param displayText string
@@ -14,75 +14,75 @@ function C_EncounterJournal.GetDungeonEntrancesForMap(uiMapID) end
 ---@return string link
 function C_EncounterJournal.GetEncounterJournalLink(linkType, ID, displayText, difficultyID) end
 
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_EncounterJournal.GetEncountersOnMap)
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_EncounterJournal.GetEncountersOnMap)
 ---@param uiMapID number
 ---@return EncounterJournalMapEncounterInfo[] encounters
 function C_EncounterJournal.GetEncountersOnMap(uiMapID) end
 
 ---GameMap as opposed to UIMap since we use a mapID not a uiMapID.
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_EncounterJournal.GetInstanceForGameMap)
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_EncounterJournal.GetInstanceForGameMap)
 ---@param mapID number
 ---@return number? journalInstanceID
 function C_EncounterJournal.GetInstanceForGameMap(mapID) end
 
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_EncounterJournal.GetLootInfo)
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_EncounterJournal.GetLootInfo)
 ---@param id number
 ---@return EncounterJournalItemInfo itemInfo
 function C_EncounterJournal.GetLootInfo(id) end
 
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_EncounterJournal.GetLootInfoByIndex)
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_EncounterJournal.GetLootInfoByIndex)
 ---@param index number
 ---@param encounterIndex? number
 ---@return EncounterJournalItemInfo itemInfo
 function C_EncounterJournal.GetLootInfoByIndex(index, encounterIndex) end
 
 ---Represents the icon indices for this EJ section.  An icon index can be used to arrive at texture coordinates for specific encounter types, e.g.: EncounterJournal_SetFlagIcon
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_EncounterJournal.GetSectionIconFlags)
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_EncounterJournal.GetSectionIconFlags)
 ---@param sectionID number
 ---@return number[]? iconFlags
 function C_EncounterJournal.GetSectionIconFlags(sectionID) end
 
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_EncounterJournal.GetSectionInfo)
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_EncounterJournal.GetSectionInfo)
 ---@param sectionID number
 ---@return EncounterJournalSectionInfo info
 function C_EncounterJournal.GetSectionInfo(sectionID) end
 
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_EncounterJournal.GetSlotFilter)
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_EncounterJournal.GetSlotFilter)
 ---@return Enum.ItemSlotFilterType filter
 function C_EncounterJournal.GetSlotFilter() end
 
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_EncounterJournal.InstanceHasLoot)
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_EncounterJournal.InstanceHasLoot)
 ---@param instanceID? number
 ---@return boolean hasLoot
 function C_EncounterJournal.InstanceHasLoot(instanceID) end
 
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_EncounterJournal.IsEncounterComplete)
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_EncounterJournal.IsEncounterComplete)
 ---@param journalEncounterID number
 ---@return boolean isEncounterComplete
 function C_EncounterJournal.IsEncounterComplete(journalEncounterID) end
 
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_EncounterJournal.OnClose)
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_EncounterJournal.OnClose)
 function C_EncounterJournal.OnClose() end
 
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_EncounterJournal.OnOpen)
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_EncounterJournal.OnOpen)
 function C_EncounterJournal.OnOpen() end
 
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_EncounterJournal.ResetSlotFilter)
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_EncounterJournal.ResetSlotFilter)
 function C_EncounterJournal.ResetSlotFilter() end
 
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_EncounterJournal.SetPreviewMythicPlusLevel)
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_EncounterJournal.SetPreviewMythicPlusLevel)
 ---@param level number
 function C_EncounterJournal.SetPreviewMythicPlusLevel(level) end
 
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_EncounterJournal.SetPreviewPvpTier)
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_EncounterJournal.SetPreviewPvpTier)
 ---@param tier number
 function C_EncounterJournal.SetPreviewPvpTier(tier) end
 
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_EncounterJournal.SetSlotFilter)
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_EncounterJournal.SetSlotFilter)
 ---@param filterSlot number|Enum.ItemSlotFilterType
 function C_EncounterJournal.SetSlotFilter(filterSlot) end
 
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_EncounterJournal.SetTab)
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_EncounterJournal.SetTab)
 ---@param tabIdx number
 function C_EncounterJournal.SetTab(tabIdx) end
 

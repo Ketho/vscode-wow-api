@@ -1,24 +1,24 @@
 ---@meta
----[Documentation](https://wowpedia.fandom.com/wiki/UIOBJECT_Rotation)
+---[Documentation](https://warcraft.wiki.gg/wiki/UIOBJECT_Rotation)
 ---@class Rotation : Animation
 local Rotation = {}
 ---@class rotation : Rotation
 ---@class ROTATION : Rotation
 
----[Documentation](https://wowpedia.fandom.com/wiki/API_Rotation_GetDegrees)
+---[Documentation](https://warcraft.wiki.gg/wiki/API_Rotation_GetDegrees)
 function Rotation:GetDegrees() end
 
----[Documentation](https://wowpedia.fandom.com/wiki/API_Rotation_GetOrigin)
+---[Documentation](https://warcraft.wiki.gg/wiki/API_Rotation_GetOrigin)
 function Rotation:GetOrigin() end
 
----[Documentation](https://wowpedia.fandom.com/wiki/API_Rotation_GetRadians)
+---[Documentation](https://warcraft.wiki.gg/wiki/API_Rotation_GetRadians)
 function Rotation:GetRadians() end
 
----[Documentation](https://wowpedia.fandom.com/wiki/API_Rotation_SetDegrees)
+---[Documentation](https://warcraft.wiki.gg/wiki/API_Rotation_SetDegrees)
 function Rotation:SetDegrees(degrees) end
 
----[Documentation](https://wowpedia.fandom.com/wiki/API_Rotation_SetOrigin)
+---[Documentation](https://warcraft.wiki.gg/wiki/API_Rotation_SetOrigin)
 function Rotation:SetOrigin(point, offsetX, offsetY) end
 
----[Documentation](https://wowpedia.fandom.com/wiki/API_Rotation_SetRadians)
+---[Documentation](https://warcraft.wiki.gg/wiki/API_Rotation_SetRadians)
 function Rotation:SetRadians(radians) end

@@ -1,124 +1,124 @@
 ---@meta
----[Documentation](https://wowpedia.fandom.com/wiki/UIOBJECT_ScriptRegion)
+---[Documentation](https://warcraft.wiki.gg/wiki/UIOBJECT_ScriptRegion)
 ---@class ScriptRegion : Object
 local ScriptRegion = {}
 
----[Documentation](https://wowpedia.fandom.com/wiki/API_ScriptRegion_CanChangeProtectedState)
+---[Documentation](https://warcraft.wiki.gg/wiki/API_ScriptRegion_CanChangeProtectedState)
 ---@return boolean canChange
 function ScriptRegion:CanChangeProtectedState() end
 
----[Documentation](https://wowpedia.fandom.com/wiki/API_ScriptRegion_EnableMouse)
+---[Documentation](https://warcraft.wiki.gg/wiki/API_ScriptRegion_EnableMouse)
 ---@param enable? boolean Default = false
 function ScriptRegion:EnableMouse(enable) end
 
----[Documentation](https://wowpedia.fandom.com/wiki/API_ScriptRegion_EnableMouseMotion)
+---[Documentation](https://warcraft.wiki.gg/wiki/API_ScriptRegion_EnableMouseMotion)
 ---@param enable? boolean Default = false
 function ScriptRegion:EnableMouseMotion(enable) end
 
----[Documentation](https://wowpedia.fandom.com/wiki/API_ScriptRegion_EnableMouseWheel)
+---[Documentation](https://warcraft.wiki.gg/wiki/API_ScriptRegion_EnableMouseWheel)
 ---@param enable? boolean Default = false
 function ScriptRegion:EnableMouseWheel(enable) end
 
----[Documentation](https://wowpedia.fandom.com/wiki/API_ScriptRegion_GetBottom)
+---[Documentation](https://warcraft.wiki.gg/wiki/API_ScriptRegion_GetBottom)
 ---@return uiUnit bottom
 function ScriptRegion:GetBottom() end
 
----[Documentation](https://wowpedia.fandom.com/wiki/API_ScriptRegion_GetCenter)
+---[Documentation](https://warcraft.wiki.gg/wiki/API_ScriptRegion_GetCenter)
 ---@return uiUnit x
 ---@return uiUnit y
 function ScriptRegion:GetCenter() end
 
----[Documentation](https://wowpedia.fandom.com/wiki/API_ScriptRegion_GetHeight)
+---[Documentation](https://warcraft.wiki.gg/wiki/API_ScriptRegion_GetHeight)
 ---@param ignoreRect? boolean Default = false
 ---@return uiUnit height
 function ScriptRegion:GetHeight(ignoreRect) end
 
----[Documentation](https://wowpedia.fandom.com/wiki/API_ScriptRegion_GetLeft)
+---[Documentation](https://warcraft.wiki.gg/wiki/API_ScriptRegion_GetLeft)
 ---@return uiUnit left
 function ScriptRegion:GetLeft() end
 
----[Documentation](https://wowpedia.fandom.com/wiki/API_ScriptRegion_GetRect)
+---[Documentation](https://warcraft.wiki.gg/wiki/API_ScriptRegion_GetRect)
 ---@return uiUnit left
 ---@return uiUnit bottom
 ---@return uiUnit width
 ---@return uiUnit height
 function ScriptRegion:GetRect() end
 
----[Documentation](https://wowpedia.fandom.com/wiki/API_ScriptRegion_GetRight)
+---[Documentation](https://warcraft.wiki.gg/wiki/API_ScriptRegion_GetRight)
 ---@return uiUnit right
 function ScriptRegion:GetRight() end
 
----[Documentation](https://wowpedia.fandom.com/wiki/API_ScriptRegion_GetScaledRect)
+---[Documentation](https://warcraft.wiki.gg/wiki/API_ScriptRegion_GetScaledRect)
 ---@return uiUnit left
 ---@return uiUnit bottom
 ---@return uiUnit width
 ---@return uiUnit height
 function ScriptRegion:GetScaledRect() end
 
----[Documentation](https://wowpedia.fandom.com/wiki/API_ScriptRegion_GetScript)
+---[Documentation](https://warcraft.wiki.gg/wiki/API_ScriptRegion_GetScript)
 ---@param scriptTypeName ScriptType
 ---@param bindingType? LE_SCRIPT_BINDING_TYPE
 ---@return luaFunction script
 function ScriptRegion:GetScript(scriptTypeName, bindingType) end
 
----[Documentation](https://wowpedia.fandom.com/wiki/API_ScriptRegion_GetSize)
+---[Documentation](https://warcraft.wiki.gg/wiki/API_ScriptRegion_GetSize)
 ---@param ignoreRect? boolean Default = false
 ---@return uiUnit width
 ---@return uiUnit height
 function ScriptRegion:GetSize(ignoreRect) end
 
----[Documentation](https://wowpedia.fandom.com/wiki/API_ScriptRegion_GetSourceLocation)
+---[Documentation](https://warcraft.wiki.gg/wiki/API_ScriptRegion_GetSourceLocation)
 ---@return string location
 function ScriptRegion:GetSourceLocation() end
 
----[Documentation](https://wowpedia.fandom.com/wiki/API_ScriptRegion_GetTop)
+---[Documentation](https://warcraft.wiki.gg/wiki/API_ScriptRegion_GetTop)
 ---@return uiUnit top
 function ScriptRegion:GetTop() end
 
----[Documentation](https://wowpedia.fandom.com/wiki/API_ScriptRegion_GetWidth)
+---[Documentation](https://warcraft.wiki.gg/wiki/API_ScriptRegion_GetWidth)
 ---@param ignoreRect? boolean Default = false
 ---@return uiUnit width
 function ScriptRegion:GetWidth(ignoreRect) end
 
----[Documentation](https://wowpedia.fandom.com/wiki/API_ScriptRegion_HasScript)
+---[Documentation](https://warcraft.wiki.gg/wiki/API_ScriptRegion_HasScript)
 ---@param scriptName ScriptType
 ---@return boolean hasScript
 function ScriptRegion:HasScript(scriptName) end
 
----[Documentation](https://wowpedia.fandom.com/wiki/API_ScriptRegion_Hide)
+---[Documentation](https://warcraft.wiki.gg/wiki/API_ScriptRegion_Hide)
 function ScriptRegion:Hide() end
 
----[Documentation](https://wowpedia.fandom.com/wiki/API_ScriptRegion_HookScript)
+---[Documentation](https://warcraft.wiki.gg/wiki/API_ScriptRegion_HookScript)
 ---@param scriptTypeName ScriptType
 ---@param script luaFunction
 ---@param bindingType? LE_SCRIPT_BINDING_TYPE
 function ScriptRegion:HookScript(scriptTypeName, script, bindingType) end
 
----[Documentation](https://wowpedia.fandom.com/wiki/API_ScriptRegion_IsAnchoringRestricted)
+---[Documentation](https://warcraft.wiki.gg/wiki/API_ScriptRegion_IsAnchoringRestricted)
 ---@return boolean isRestricted
 function ScriptRegion:IsAnchoringRestricted() end
 
----[Documentation](https://wowpedia.fandom.com/wiki/API_ScriptRegion_IsDragging)
+---[Documentation](https://warcraft.wiki.gg/wiki/API_ScriptRegion_IsDragging)
 ---@return boolean isDragging
 function ScriptRegion:IsDragging() end
 
----[Documentation](https://wowpedia.fandom.com/wiki/API_ScriptRegion_IsMouseClickEnabled)
+---[Documentation](https://warcraft.wiki.gg/wiki/API_ScriptRegion_IsMouseClickEnabled)
 ---@return boolean enabled
 function ScriptRegion:IsMouseClickEnabled() end
 
----[Documentation](https://wowpedia.fandom.com/wiki/API_ScriptRegion_IsMouseEnabled)
+---[Documentation](https://warcraft.wiki.gg/wiki/API_ScriptRegion_IsMouseEnabled)
 ---@return boolean enabled
 function ScriptRegion:IsMouseEnabled() end
 
----[Documentation](https://wowpedia.fandom.com/wiki/API_ScriptRegion_IsMouseMotionEnabled)
+---[Documentation](https://warcraft.wiki.gg/wiki/API_ScriptRegion_IsMouseMotionEnabled)
 ---@return boolean enabled
 function ScriptRegion:IsMouseMotionEnabled() end
 
----[Documentation](https://wowpedia.fandom.com/wiki/API_ScriptRegion_IsMouseMotionFocus)
+---[Documentation](https://warcraft.wiki.gg/wiki/API_ScriptRegion_IsMouseMotionFocus)
 ---@return boolean isMouseMotionFocus
 function ScriptRegion:IsMouseMotionFocus() end
 
----[Documentation](https://wowpedia.fandom.com/wiki/API_ScriptRegion_IsMouseOver)
+---[Documentation](https://warcraft.wiki.gg/wiki/API_ScriptRegion_IsMouseOver)
 ---@param offsetTop? uiUnit Default = 0
 ---@param offsetBottom? uiUnit Default = 0
 ---@param offsetLeft? uiUnit Default = 0
@@ -126,59 +126,59 @@ function ScriptRegion:IsMouseMotionFocus() end
 ---@return boolean isMouseOver
 function ScriptRegion:IsMouseOver(offsetTop, offsetBottom, offsetLeft, offsetRight) end
 
----[Documentation](https://wowpedia.fandom.com/wiki/API_ScriptRegion_IsMouseWheelEnabled)
+---[Documentation](https://warcraft.wiki.gg/wiki/API_ScriptRegion_IsMouseWheelEnabled)
 ---@return boolean enabled
 function ScriptRegion:IsMouseWheelEnabled() end
 
----[Documentation](https://wowpedia.fandom.com/wiki/API_ScriptRegion_IsProtected)
+---[Documentation](https://warcraft.wiki.gg/wiki/API_ScriptRegion_IsProtected)
 ---@return boolean isProtected
 ---@return boolean isProtectedExplicitly
 function ScriptRegion:IsProtected() end
 
----[Documentation](https://wowpedia.fandom.com/wiki/API_ScriptRegion_IsRectValid)
+---[Documentation](https://warcraft.wiki.gg/wiki/API_ScriptRegion_IsRectValid)
 ---@return boolean isValid
 function ScriptRegion:IsRectValid() end
 
----[Documentation](https://wowpedia.fandom.com/wiki/API_ScriptRegion_IsShown)
+---[Documentation](https://warcraft.wiki.gg/wiki/API_ScriptRegion_IsShown)
 ---@return boolean isShown
 function ScriptRegion:IsShown() end
 
----[Documentation](https://wowpedia.fandom.com/wiki/API_ScriptRegion_IsVisible)
+---[Documentation](https://warcraft.wiki.gg/wiki/API_ScriptRegion_IsVisible)
 ---@return boolean isVisible
 function ScriptRegion:IsVisible() end
 
----[Documentation](https://wowpedia.fandom.com/wiki/API_ScriptRegion_SetMouseClickEnabled)
+---[Documentation](https://warcraft.wiki.gg/wiki/API_ScriptRegion_SetMouseClickEnabled)
 ---@param enabled? boolean Default = false
 function ScriptRegion:SetMouseClickEnabled(enabled) end
 
----[Documentation](https://wowpedia.fandom.com/wiki/API_ScriptRegion_SetMouseMotionEnabled)
+---[Documentation](https://warcraft.wiki.gg/wiki/API_ScriptRegion_SetMouseMotionEnabled)
 ---@param enabled? boolean Default = false
 function ScriptRegion:SetMouseMotionEnabled(enabled) end
 
----[Documentation](https://wowpedia.fandom.com/wiki/API_ScriptRegion_SetParent)
+---[Documentation](https://warcraft.wiki.gg/wiki/API_ScriptRegion_SetParent)
 ---@param parent? SimpleFrame
 function ScriptRegion:SetParent(parent) end
 
----[Documentation](https://wowpedia.fandom.com/wiki/API_ScriptRegion_SetPassThroughButtons)
+---[Documentation](https://warcraft.wiki.gg/wiki/API_ScriptRegion_SetPassThroughButtons)
 ---@param ... MouseButton
 function ScriptRegion:SetPassThroughButtons(...) end
 
----[Documentation](https://wowpedia.fandom.com/wiki/API_ScriptRegion_SetProtected)
+---[Documentation](https://warcraft.wiki.gg/wiki/API_ScriptRegion_SetProtected)
 function ScriptRegion:SetProtected() end
 
----[Documentation](https://wowpedia.fandom.com/wiki/API_ScriptRegion_SetScript)
+---[Documentation](https://warcraft.wiki.gg/wiki/API_ScriptRegion_SetScript)
 ---@param scriptTypeName ScriptType
 ---@param script? luaFunction
 function ScriptRegion:SetScript(scriptTypeName, script) end
 
----[Documentation](https://wowpedia.fandom.com/wiki/API_ScriptRegion_SetShown)
+---[Documentation](https://warcraft.wiki.gg/wiki/API_ScriptRegion_SetShown)
 ---@param show? boolean Default = false
 function ScriptRegion:SetShown(show) end
 
----[Documentation](https://wowpedia.fandom.com/wiki/API_ScriptRegion_Show)
+---[Documentation](https://warcraft.wiki.gg/wiki/API_ScriptRegion_Show)
 function ScriptRegion:Show() end
 
----[Documentation](https://wowpedia.fandom.com/wiki/API_ScriptRegionResizing_AdjustPointsOffset)
+---[Documentation](https://warcraft.wiki.gg/wiki/API_ScriptRegionResizing_AdjustPointsOffset)
 ---@param x uiUnit
 ---@param y uiUnit
 function ScriptRegion:AdjustPointsOffset(x, y) end

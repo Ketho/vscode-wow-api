@@ -1,25 +1,25 @@
 ---@meta
 C_Mail = {}
 
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_Mail.CanCheckInbox)
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_Mail.CanCheckInbox)
 ---@return boolean canCheckInbox
 ---@return number secondsUntilAllowed
 function C_Mail.CanCheckInbox() end
 
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_Mail.GetCraftingOrderMailInfo)
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_Mail.GetCraftingOrderMailInfo)
 ---@param inboxIndex number
 ---@return CraftingOrderMailInfo? info
 function C_Mail.GetCraftingOrderMailInfo(inboxIndex) end
 
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_Mail.HasInboxMoney)
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_Mail.HasInboxMoney)
 ---@param inboxIndex number
 ---@return boolean inboxItemHasMoneyAttached
 function C_Mail.HasInboxMoney(inboxIndex) end
 
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_Mail.IsCommandPending)
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_Mail.IsCommandPending)
 ---@return boolean isCommandPending
 function C_Mail.IsCommandPending() end
 
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_Mail.SetOpeningAll)
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_Mail.SetOpeningAll)
 ---@param openingAll boolean
 function C_Mail.SetOpeningAll(openingAll) end

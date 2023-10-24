@@ -1,88 +1,88 @@
 ---@meta
 C_TTSSettings = {}
 
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_TTSSettings.GetChannelEnabled)
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_TTSSettings.GetChannelEnabled)
 ---@param channelInfo ChatChannelInfo
 ---@return boolean enabled
 function C_TTSSettings.GetChannelEnabled(channelInfo) end
 
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_TTSSettings.GetCharacterSettingsSaved)
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_TTSSettings.GetCharacterSettingsSaved)
 ---@return boolean settingsBeenSaved
 function C_TTSSettings.GetCharacterSettingsSaved() end
 
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_TTSSettings.GetChatTypeEnabled)
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_TTSSettings.GetChatTypeEnabled)
 ---@param chatName string
 ---@return boolean enabled
 function C_TTSSettings.GetChatTypeEnabled(chatName) end
 
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_TTSSettings.GetSetting)
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_TTSSettings.GetSetting)
 ---@param setting number|Enum.TtsBoolSetting
 ---@return boolean enabled
 function C_TTSSettings.GetSetting(setting) end
 
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_TTSSettings.GetSpeechRate)
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_TTSSettings.GetSpeechRate)
 ---@return number rate
 function C_TTSSettings.GetSpeechRate() end
 
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_TTSSettings.GetSpeechVolume)
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_TTSSettings.GetSpeechVolume)
 ---@return number volume
 function C_TTSSettings.GetSpeechVolume() end
 
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_TTSSettings.GetVoiceOptionID)
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_TTSSettings.GetVoiceOptionID)
 ---@param voiceType number|Enum.TtsVoiceType
 ---@return number voiceID
 function C_TTSSettings.GetVoiceOptionID(voiceType) end
 
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_TTSSettings.GetVoiceOptionName)
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_TTSSettings.GetVoiceOptionName)
 ---@param voiceType number|Enum.TtsVoiceType
 ---@return string voiceName
 function C_TTSSettings.GetVoiceOptionName(voiceType) end
 
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_TTSSettings.MarkCharacterSettingsSaved)
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_TTSSettings.MarkCharacterSettingsSaved)
 function C_TTSSettings.MarkCharacterSettingsSaved() end
 
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_TTSSettings.SetChannelEnabled)
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_TTSSettings.SetChannelEnabled)
 ---@param channelInfo ChatChannelInfo
 ---@param newVal? boolean Default = false
 function C_TTSSettings.SetChannelEnabled(channelInfo, newVal) end
 
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_TTSSettings.SetChannelKeyEnabled)
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_TTSSettings.SetChannelKeyEnabled)
 ---@param channelKey string
 ---@param newVal? boolean Default = false
 function C_TTSSettings.SetChannelKeyEnabled(channelKey, newVal) end
 
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_TTSSettings.SetChatTypeEnabled)
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_TTSSettings.SetChatTypeEnabled)
 ---@param chatName string
 ---@param newVal? boolean Default = false
 function C_TTSSettings.SetChatTypeEnabled(chatName, newVal) end
 
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_TTSSettings.SetDefaultSettings)
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_TTSSettings.SetDefaultSettings)
 function C_TTSSettings.SetDefaultSettings() end
 
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_TTSSettings.SetSetting)
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_TTSSettings.SetSetting)
 ---@param setting number|Enum.TtsBoolSetting
 ---@param newVal? boolean Default = false
 function C_TTSSettings.SetSetting(setting, newVal) end
 
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_TTSSettings.SetSpeechRate)
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_TTSSettings.SetSpeechRate)
 ---@param newVal number
 function C_TTSSettings.SetSpeechRate(newVal) end
 
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_TTSSettings.SetSpeechVolume)
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_TTSSettings.SetSpeechVolume)
 ---@param newVal number
 function C_TTSSettings.SetSpeechVolume(newVal) end
 
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_TTSSettings.SetVoiceOption)
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_TTSSettings.SetVoiceOption)
 ---@param voiceType number|Enum.TtsVoiceType
 ---@param voiceID number
 function C_TTSSettings.SetVoiceOption(voiceType, voiceID) end
 
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_TTSSettings.SetVoiceOptionName)
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_TTSSettings.SetVoiceOptionName)
 ---@param voiceType number|Enum.TtsVoiceType
 ---@param voiceName string
 function C_TTSSettings.SetVoiceOptionName(voiceType, voiceName) end
 
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_TTSSettings.ShouldOverrideMessage)
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_TTSSettings.ShouldOverrideMessage)
 ---@param language number
 ---@param messageText string
 ---@return boolean overrideMessage

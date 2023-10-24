@@ -1,5 +1,5 @@
 ---@meta
----[Documentation](https://wowpedia.fandom.com/wiki/EventRegistry)
+---[Documentation](https://warcraft.wiki.gg/wiki/EventRegistry)
 EventRegistry = CreateFromMixins(CallbackRegistryMixin)
 
 -- function EventRegistry:OnLoad() end

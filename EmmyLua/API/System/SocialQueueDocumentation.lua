@@ -1,23 +1,23 @@
 ---@meta
 C_SocialQueue = {}
 
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_SocialQueue.GetAllGroups)
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_SocialQueue.GetAllGroups)
 ---@param allowNonJoinable? boolean Default = false
 ---@param allowNonQueuedGroups? boolean Default = false
 ---@return WOWGUID[] groupGUIDs
 function C_SocialQueue.GetAllGroups(allowNonJoinable, allowNonQueuedGroups) end
 
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_SocialQueue.GetConfig)
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_SocialQueue.GetConfig)
 ---@return SocialQueueConfig config
 function C_SocialQueue.GetConfig() end
 
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_SocialQueue.GetGroupForPlayer)
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_SocialQueue.GetGroupForPlayer)
 ---@param playerGUID WOWGUID
 ---@return WOWGUID groupGUID
 ---@return boolean isSoloQueueParty
 function C_SocialQueue.GetGroupForPlayer(playerGUID) end
 
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_SocialQueue.GetGroupInfo)
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_SocialQueue.GetGroupInfo)
 ---@param groupGUID WOWGUID
 ---@return boolean canJoin
 ---@return number numQueues
@@ -29,17 +29,17 @@ function C_SocialQueue.GetGroupForPlayer(playerGUID) end
 ---@return WOWGUID leaderGUID
 function C_SocialQueue.GetGroupInfo(groupGUID) end
 
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_SocialQueue.GetGroupMembers)
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_SocialQueue.GetGroupMembers)
 ---@param groupGUID WOWGUID
 ---@return SocialQueuePlayerInfo[] groupMembers
 function C_SocialQueue.GetGroupMembers(groupGUID) end
 
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_SocialQueue.GetGroupQueues)
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_SocialQueue.GetGroupQueues)
 ---@param groupGUID WOWGUID
 ---@return SocialQueueGroupQueueInfo[] queues
 function C_SocialQueue.GetGroupQueues(groupGUID) end
 
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_SocialQueue.RequestToJoin)
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_SocialQueue.RequestToJoin)
 ---@param groupGUID WOWGUID
 ---@param applyAsTank? boolean Default = false
 ---@param applyAsHealer? boolean Default = false
@@ -47,7 +47,7 @@ function C_SocialQueue.GetGroupQueues(groupGUID) end
 ---@return boolean requestSuccessful
 function C_SocialQueue.RequestToJoin(groupGUID, applyAsTank, applyAsHealer, applyAsDamage) end
 
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_SocialQueue.SignalToastDisplayed)
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_SocialQueue.SignalToastDisplayed)
 ---@param groupGUID WOWGUID
 ---@param priority number
 function C_SocialQueue.SignalToastDisplayed(groupGUID, priority) end

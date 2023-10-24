@@ -1,7 +1,7 @@
 ---@meta
 C_QuestItemUse = {}
 
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_QuestItemUse.CanUseQuestItemOnObject)
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_QuestItemUse.CanUseQuestItemOnObject)
 ---@param item ItemLocationMixin
 ---@param unit UnitToken
 ---@param checkRange? boolean

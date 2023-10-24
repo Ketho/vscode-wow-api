@@ -140,7 +140,7 @@ Libraries
 ## [0.8.4] - 2022-05-26
 ### Added
 - 🌙 EmmyLua: Added widgets: Minimap, CheckButton, SimpleHTML, MovieFrame, CinematicModel, TabardModel, FogOfWarFrame, UnitPositionFrame, POIFrame, QuestPOIFrame ScenarioPOIFrame, LineScale, LineTranslation, TextureCoordTranslation
-- 🌙 EmmyLua: Added [EmoteToken](https://wowpedia.fandom.com/wiki/API_DoEmote#Emotes)
+- 🌙 EmmyLua: Added [EmoteToken](https://warcraft.wiki.gg/wiki/API_DoEmote#Emotes)
 - 🛠 Improvements: CreateFrame() now accepts lowercase/uppercase frame types e.g. "frame" or "FRAME".
 - 🛠 Improvements: Added comment to widget scripts what frame type they were inherited from.
 ### Changed
@@ -167,7 +167,7 @@ Libraries
 
 ## [0.7.5] - 2022-03-15
 ### Added
-- 🌙 EmmyLua: Updated for [Patch 9.2.0](https://wowpedia.fandom.com/wiki/Patch_9.2.0/API_changes)
+- 🌙 EmmyLua: Updated for [Patch 9.2.0](https://warcraft.wiki.gg/wiki/Patch_9.2.0/API_changes)
 - 🌙 EmmyLua: Updated Wowpedia definitions
 - 🛠 Improvements: Refactoring
 
@@ -196,14 +196,14 @@ Libraries
 
 ## [0.7.0] - 2021-11-11
 ### Added
-- 🌙 EmmyLua: Updated for [Patch 9.1.5](https://wowpedia.fandom.com/wiki/Patch_9.1.5/API_changes), except widget API
+- 🌙 EmmyLua: Updated for [Patch 9.1.5](https://warcraft.wiki.gg/wiki/Patch_9.1.5/API_changes), except widget API
 - 🌙 EmmyLua: Improved the EmmyLua `Enum` types to use a single file and added the `Constants` table
 - 🌙 EmmyLua: Added [TransmogLocationMixin](https://github.com/Gethe/wow-ui-source/blob/9.1.5/Interface/FrameXML/TransmogUtil.lua#L322)
 - 🛠 Improvements: Parsing Wowpedia pages automatically instead of exporting the XML manually; refactored Lua code
 
 ## [0.6.2] - 2021-10-05
 ### Added
-- 🛠 Improvements: Parse emmylua directly from wikitext, testing with [GetSpellInfo](https://wowpedia.fandom.com/wiki/API_GetSpellInfo)
+- 🛠 Improvements: Parse emmylua directly from wikitext, testing with [GetSpellInfo](https://warcraft.wiki.gg/wiki/API_GetSpellInfo)
 - 🌙 EmmyLua: Updated https://wow.gamepedia.com URLs to https://wowpedia.fandom.com
 - 🌙 EmmyLua: Added `ItemTransmogInfoMixin`, `TransmogPendingInfoMixin`
 

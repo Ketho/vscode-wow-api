@@ -1,11 +1,11 @@
 ---@meta
 C_ArdenwealdGardening = {}
 
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_ArdenwealdGardening.GetGardenData)
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_ArdenwealdGardening.GetGardenData)
 ---@return ArdenwealdGardenData data
 function C_ArdenwealdGardening.GetGardenData() end
 
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_ArdenwealdGardening.IsGardenAccessible)
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_ArdenwealdGardening.IsGardenAccessible)
 ---@return boolean accessible
 function C_ArdenwealdGardening.IsGardenAccessible() end
 

@@ -1,22 +1,22 @@
 ---@meta
 C_ConsoleScriptCollection = {}
 
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_ConsoleScriptCollection.GetCollectionDataByID)
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_ConsoleScriptCollection.GetCollectionDataByID)
 ---@param collectionID number
 ---@return ConsoleScriptCollectionData? data
 function C_ConsoleScriptCollection.GetCollectionDataByID(collectionID) end
 
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_ConsoleScriptCollection.GetCollectionDataByTag)
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_ConsoleScriptCollection.GetCollectionDataByTag)
 ---@param collectionTag string
 ---@return ConsoleScriptCollectionData? data
 function C_ConsoleScriptCollection.GetCollectionDataByTag(collectionTag) end
 
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_ConsoleScriptCollection.GetElements)
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_ConsoleScriptCollection.GetElements)
 ---@param collectionID number
 ---@return ConsoleScriptCollectionElementData[] elementIDs
 function C_ConsoleScriptCollection.GetElements(collectionID) end
 
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_ConsoleScriptCollection.GetScriptData)
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_ConsoleScriptCollection.GetScriptData)
 ---@param consoleScriptID number
 ---@return ConsoleScriptData data
 function C_ConsoleScriptCollection.GetScriptData(consoleScriptID) end

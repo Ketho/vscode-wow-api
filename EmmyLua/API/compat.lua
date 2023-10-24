@@ -1,27 +1,27 @@
 ---@meta
 ---@diagnostic disable: deprecated
 
----[Documentation](https://wowpedia.fandom.com/wiki/API_foreach)
+---[Documentation](https://warcraft.wiki.gg/wiki/API_foreach)
 ---@param tbl table
 ---@param func function
 function table.foreach(tbl, func) end
 
----[Documentation](https://wowpedia.fandom.com/wiki/API_foreachi)
+---[Documentation](https://warcraft.wiki.gg/wiki/API_foreachi)
 ---@param tbl table
 ---@param func function
 function table.foreachi(tbl, func) end
 
----[Documentation](https://wowpedia.fandom.com/wiki/API_getn)
+---[Documentation](https://warcraft.wiki.gg/wiki/API_getn)
 ---@param tbl table
 ---@return number size
 function table.getn(tbl) end
 
----[Documentation](https://wowpedia.fandom.com/wiki/API_wipe)
+---[Documentation](https://warcraft.wiki.gg/wiki/API_wipe)
 ---@param tbl table
 ---@return table
 function table.wipe(tbl) end
 
----[Documentation](https://wowpedia.fandom.com/wiki/API_strtrim)
+---[Documentation](https://warcraft.wiki.gg/wiki/API_strtrim)
 ---@param str string
 ---@param chars? string
 ---@return string
@@ -39,47 +39,47 @@ function strsplit(delimiter, str, pieces) end
 ---@return string[] chunks
 function strsplittable(delimiter, str, pieces) end
 
----[Documentation](https://wowpedia.fandom.com/wiki/API_strjoin)
+---[Documentation](https://warcraft.wiki.gg/wiki/API_strjoin)
 ---@param delim string
 ---@param str1 string
 ---@param ... string
 ---@return string
 function strjoin(delim, str1, ...) end
 
----[Documentation](https://wowpedia.fandom.com/wiki/API_difftime)
+---[Documentation](https://warcraft.wiki.gg/wiki/API_difftime)
 ---@param time1 number
 ---@param time2 number
 ---@return number
 function difftime(time1, time2) end
 
----[Documentation](https://wowpedia.fandom.com/wiki/API_fastrandom)
+---[Documentation](https://warcraft.wiki.gg/wiki/API_fastrandom)
 ---@param lower? number
 ---@param upper? number
 ---@return number
 function fastrandom(lower, upper) end
 
----[Documentation](https://wowpedia.fandom.com/wiki/API_gcinfo)
+---[Documentation](https://warcraft.wiki.gg/wiki/API_gcinfo)
 ---@return number memoryInUse
 function gcinfo() end
 
----[Documentation](https://wowpedia.fandom.com/wiki/API_newproxy)
+---[Documentation](https://warcraft.wiki.gg/wiki/API_newproxy)
 ---@param bool boolean
 ---@return userdata
 ---@overload fun(otherproxy: userdata): userdata
 function newproxy(bool) end
 
----[Documentation](https://wowpedia.fandom.com/wiki/API_strcmputf8i)
+---[Documentation](https://warcraft.wiki.gg/wiki/API_strcmputf8i)
 ---@param str1 string
 ---@param str2 string
 ---@return string
 function strcmputf8i(str1, str2) end
 
----[Documentation](https://wowpedia.fandom.com/wiki/API_strconcat)
+---[Documentation](https://warcraft.wiki.gg/wiki/API_strconcat)
 ---@param ... string
 ---@return string
 function strconcat(...) end
 
----[Documentation](https://wowpedia.fandom.com/wiki/API_strlenutf8)
+---[Documentation](https://warcraft.wiki.gg/wiki/API_strlenutf8)
 ---@param str string
 ---@return number
 function strlenutf8(str) end
@@ -133,7 +133,7 @@ function bit.arshift(a, n) end
 ---@return number
 function bit.mod(a, n) end
 
----[Documentation](https://wowpedia.fandom.com/wiki/API_xpcall)
+---[Documentation](https://warcraft.wiki.gg/wiki/API_xpcall)
 ---@param f function
 ---@param err function
 ---@vararg any

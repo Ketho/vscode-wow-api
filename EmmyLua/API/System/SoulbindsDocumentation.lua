@@ -1,197 +1,197 @@
 ---@meta
 C_Soulbinds = {}
 
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_Soulbinds.ActivateSoulbind)
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_Soulbinds.ActivateSoulbind)
 ---@param soulbindID number
 function C_Soulbinds.ActivateSoulbind(soulbindID) end
 
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_Soulbinds.CanActivateSoulbind)
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_Soulbinds.CanActivateSoulbind)
 ---@param soulbindID number
 ---@return boolean result
 ---@return string? errorDescription
 function C_Soulbinds.CanActivateSoulbind(soulbindID) end
 
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_Soulbinds.CanModifySoulbind)
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_Soulbinds.CanModifySoulbind)
 ---@return boolean result
 function C_Soulbinds.CanModifySoulbind() end
 
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_Soulbinds.CanResetConduitsInSoulbind)
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_Soulbinds.CanResetConduitsInSoulbind)
 ---@param soulbindID number
 ---@return boolean result
 ---@return string? errorDescription
 function C_Soulbinds.CanResetConduitsInSoulbind(soulbindID) end
 
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_Soulbinds.CanSwitchActiveSoulbindTreeBranch)
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_Soulbinds.CanSwitchActiveSoulbindTreeBranch)
 ---@return boolean result
 function C_Soulbinds.CanSwitchActiveSoulbindTreeBranch() end
 
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_Soulbinds.CloseUI)
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_Soulbinds.CloseUI)
 function C_Soulbinds.CloseUI() end
 
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_Soulbinds.CommitPendingConduitsInSoulbind)
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_Soulbinds.CommitPendingConduitsInSoulbind)
 ---@param soulbindID number
 function C_Soulbinds.CommitPendingConduitsInSoulbind(soulbindID) end
 
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_Soulbinds.FindNodeIDActuallyInstalled)
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_Soulbinds.FindNodeIDActuallyInstalled)
 ---@param soulbindID number
 ---@param conduitID number
 ---@return number nodeID
 function C_Soulbinds.FindNodeIDActuallyInstalled(soulbindID, conduitID) end
 
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_Soulbinds.FindNodeIDAppearingInstalled)
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_Soulbinds.FindNodeIDAppearingInstalled)
 ---@param soulbindID number
 ---@param conduitID number
 ---@return number nodeID
 function C_Soulbinds.FindNodeIDAppearingInstalled(soulbindID, conduitID) end
 
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_Soulbinds.FindNodeIDPendingInstall)
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_Soulbinds.FindNodeIDPendingInstall)
 ---@param soulbindID number
 ---@param conduitID number
 ---@return number nodeID
 function C_Soulbinds.FindNodeIDPendingInstall(soulbindID, conduitID) end
 
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_Soulbinds.FindNodeIDPendingUninstall)
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_Soulbinds.FindNodeIDPendingUninstall)
 ---@param soulbindID number
 ---@param conduitID number
 ---@return number nodeID
 function C_Soulbinds.FindNodeIDPendingUninstall(soulbindID, conduitID) end
 
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_Soulbinds.GetActiveSoulbindID)
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_Soulbinds.GetActiveSoulbindID)
 ---@return number soulbindID
 function C_Soulbinds.GetActiveSoulbindID() end
 
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_Soulbinds.GetConduitCollection)
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_Soulbinds.GetConduitCollection)
 ---@param conduitType number|Enum.SoulbindConduitType
 ---@return ConduitCollectionData[] collectionData
 function C_Soulbinds.GetConduitCollection(conduitType) end
 
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_Soulbinds.GetConduitCollectionCount)
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_Soulbinds.GetConduitCollectionCount)
 ---@return number count
 function C_Soulbinds.GetConduitCollectionCount() end
 
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_Soulbinds.GetConduitCollectionData)
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_Soulbinds.GetConduitCollectionData)
 ---@param conduitID number
 ---@return ConduitCollectionData? collectionData
 function C_Soulbinds.GetConduitCollectionData(conduitID) end
 
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_Soulbinds.GetConduitCollectionDataAtCursor)
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_Soulbinds.GetConduitCollectionDataAtCursor)
 ---@return ConduitCollectionData? collectionData
 function C_Soulbinds.GetConduitCollectionDataAtCursor() end
 
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_Soulbinds.GetConduitCollectionDataByVirtualID)
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_Soulbinds.GetConduitCollectionDataByVirtualID)
 ---@param virtualID number
 ---@return ConduitCollectionData? collectionData
 function C_Soulbinds.GetConduitCollectionDataByVirtualID(virtualID) end
 
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_Soulbinds.GetConduitDisplayed)
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_Soulbinds.GetConduitDisplayed)
 ---@param nodeID number
 ---@return number conduitID
 function C_Soulbinds.GetConduitDisplayed(nodeID) end
 
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_Soulbinds.GetConduitHyperlink)
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_Soulbinds.GetConduitHyperlink)
 ---@param conduitID number
 ---@param rank number
 ---@return string link
 function C_Soulbinds.GetConduitHyperlink(conduitID, rank) end
 
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_Soulbinds.GetConduitIDPendingInstall)
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_Soulbinds.GetConduitIDPendingInstall)
 ---@param nodeID number
 ---@return number conduitID
 function C_Soulbinds.GetConduitIDPendingInstall(nodeID) end
 
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_Soulbinds.GetConduitQuality)
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_Soulbinds.GetConduitQuality)
 ---@param conduitID number
 ---@param rank number
 ---@return number quality
 function C_Soulbinds.GetConduitQuality(conduitID, rank) end
 
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_Soulbinds.GetConduitRank)
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_Soulbinds.GetConduitRank)
 ---@param conduitID number
 ---@return number conduitRank
 function C_Soulbinds.GetConduitRank(conduitID) end
 
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_Soulbinds.GetConduitSpellID)
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_Soulbinds.GetConduitSpellID)
 ---@param conduitID number
 ---@param conduitRank number
 ---@return number spellID
 function C_Soulbinds.GetConduitSpellID(conduitID, conduitRank) end
 
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_Soulbinds.GetInstalledConduitID)
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_Soulbinds.GetInstalledConduitID)
 ---@param nodeID number
 ---@return number conduitID
 function C_Soulbinds.GetInstalledConduitID(nodeID) end
 
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_Soulbinds.GetNode)
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_Soulbinds.GetNode)
 ---@param nodeID number
 ---@return SoulbindNode node
 function C_Soulbinds.GetNode(nodeID) end
 
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_Soulbinds.GetSoulbindData)
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_Soulbinds.GetSoulbindData)
 ---@param soulbindID number
 ---@return SoulbindData data
 function C_Soulbinds.GetSoulbindData(soulbindID) end
 
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_Soulbinds.GetSpecsAssignedToSoulbind)
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_Soulbinds.GetSpecsAssignedToSoulbind)
 ---@param soulbindID number
 ---@return number[] specIDs
 function C_Soulbinds.GetSpecsAssignedToSoulbind(soulbindID) end
 
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_Soulbinds.GetTree)
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_Soulbinds.GetTree)
 ---@param treeID number
 ---@return SoulbindTree tree
 function C_Soulbinds.GetTree(treeID) end
 
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_Soulbinds.HasAnyInstalledConduitInSoulbind)
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_Soulbinds.HasAnyInstalledConduitInSoulbind)
 ---@param soulbindID number
 ---@return boolean result
 function C_Soulbinds.HasAnyInstalledConduitInSoulbind(soulbindID) end
 
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_Soulbinds.HasAnyPendingConduits)
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_Soulbinds.HasAnyPendingConduits)
 ---@return boolean result
 function C_Soulbinds.HasAnyPendingConduits() end
 
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_Soulbinds.HasPendingConduitsInSoulbind)
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_Soulbinds.HasPendingConduitsInSoulbind)
 ---@param soulbindID number
 ---@return boolean result
 function C_Soulbinds.HasPendingConduitsInSoulbind(soulbindID) end
 
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_Soulbinds.IsConduitInstalled)
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_Soulbinds.IsConduitInstalled)
 ---@param nodeID number
 ---@return boolean result
 function C_Soulbinds.IsConduitInstalled(nodeID) end
 
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_Soulbinds.IsConduitInstalledInSoulbind)
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_Soulbinds.IsConduitInstalledInSoulbind)
 ---@param soulbindID number
 ---@param conduitID number
 ---@return boolean result
 function C_Soulbinds.IsConduitInstalledInSoulbind(soulbindID, conduitID) end
 
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_Soulbinds.IsItemConduitByItemInfo)
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_Soulbinds.IsItemConduitByItemInfo)
 ---@param itemInfo ItemInfo
 ---@return boolean result
 function C_Soulbinds.IsItemConduitByItemInfo(itemInfo) end
 
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_Soulbinds.IsNodePendingModify)
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_Soulbinds.IsNodePendingModify)
 ---@param nodeID number
 ---@return boolean result
 function C_Soulbinds.IsNodePendingModify(nodeID) end
 
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_Soulbinds.IsUnselectedConduitPendingInSoulbind)
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_Soulbinds.IsUnselectedConduitPendingInSoulbind)
 ---@param soulbindID number
 ---@return boolean result
 function C_Soulbinds.IsUnselectedConduitPendingInSoulbind(soulbindID) end
 
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_Soulbinds.ModifyNode)
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_Soulbinds.ModifyNode)
 ---@param nodeID number
 ---@param conduitID number
 ---@param type number|Enum.SoulbindConduitTransactionType
 function C_Soulbinds.ModifyNode(nodeID, conduitID, type) end
 
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_Soulbinds.SelectNode)
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_Soulbinds.SelectNode)
 ---@param nodeID number
 function C_Soulbinds.SelectNode(nodeID) end
 
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_Soulbinds.UnmodifyNode)
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_Soulbinds.UnmodifyNode)
 ---@param nodeID number
 function C_Soulbinds.UnmodifyNode(nodeID) end
 

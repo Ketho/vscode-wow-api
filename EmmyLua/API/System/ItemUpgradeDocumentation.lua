@@ -1,76 +1,76 @@
 ---@meta
 C_ItemUpgrade = {}
 
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_ItemUpgrade.CanUpgradeItem)
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_ItemUpgrade.CanUpgradeItem)
 ---@param baseItem ItemLocationMixin
 ---@return boolean isValid
 function C_ItemUpgrade.CanUpgradeItem(baseItem) end
 
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_ItemUpgrade.ClearItemUpgrade)
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_ItemUpgrade.ClearItemUpgrade)
 function C_ItemUpgrade.ClearItemUpgrade() end
 
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_ItemUpgrade.CloseItemUpgrade)
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_ItemUpgrade.CloseItemUpgrade)
 function C_ItemUpgrade.CloseItemUpgrade() end
 
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_ItemUpgrade.GetHighWatermarkForItem)
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_ItemUpgrade.GetHighWatermarkForItem)
 ---@param itemInfo ItemInfo
 ---@return number characterHighWatermark
 ---@return number accountHighWatermark
 function C_ItemUpgrade.GetHighWatermarkForItem(itemInfo) end
 
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_ItemUpgrade.GetHighWatermarkForSlot)
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_ItemUpgrade.GetHighWatermarkForSlot)
 ---@param itemRedundancySlot number
 ---@return number characterHighWatermark
 ---@return number accountHighWatermark
 function C_ItemUpgrade.GetHighWatermarkForSlot(itemRedundancySlot) end
 
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_ItemUpgrade.GetHighWatermarkSlotForItem)
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_ItemUpgrade.GetHighWatermarkSlotForItem)
 ---@param itemInfo ItemInfo
 ---@return number itemRedundancySlot
 function C_ItemUpgrade.GetHighWatermarkSlotForItem(itemInfo) end
 
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_ItemUpgrade.GetItemHyperlink)
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_ItemUpgrade.GetItemHyperlink)
 ---@return string link
 function C_ItemUpgrade.GetItemHyperlink() end
 
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_ItemUpgrade.GetItemUpgradeCurrentLevel)
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_ItemUpgrade.GetItemUpgradeCurrentLevel)
 ---@return number itemLevel
 ---@return boolean isPvpItemLevel
 function C_ItemUpgrade.GetItemUpgradeCurrentLevel() end
 
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_ItemUpgrade.GetItemUpgradeEffect)
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_ItemUpgrade.GetItemUpgradeEffect)
 ---@param effectIndex number
 ---@param numUpgradeLevels? number
 ---@return string outBaseEffect
 ---@return string outUpgradedEffect
 function C_ItemUpgrade.GetItemUpgradeEffect(effectIndex, numUpgradeLevels) end
 
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_ItemUpgrade.GetItemUpgradeItemInfo)
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_ItemUpgrade.GetItemUpgradeItemInfo)
 ---@return ItemUpgradeItemInfo itemInfo
 function C_ItemUpgrade.GetItemUpgradeItemInfo() end
 
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_ItemUpgrade.GetItemUpgradePvpItemLevelDeltaValues)
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_ItemUpgrade.GetItemUpgradePvpItemLevelDeltaValues)
 ---@param numUpgradeLevels number
 ---@return number currentPvPItemLevel
 ---@return number upgradedPvPItemLevel
 function C_ItemUpgrade.GetItemUpgradePvpItemLevelDeltaValues(numUpgradeLevels) end
 
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_ItemUpgrade.GetNumItemUpgradeEffects)
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_ItemUpgrade.GetNumItemUpgradeEffects)
 ---@return number numItemUpgradeEffects
 function C_ItemUpgrade.GetNumItemUpgradeEffects() end
 
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_ItemUpgrade.IsItemBound)
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_ItemUpgrade.IsItemBound)
 ---@return boolean isBound
 function C_ItemUpgrade.IsItemBound() end
 
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_ItemUpgrade.SetItemUpgradeFromCursorItem)
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_ItemUpgrade.SetItemUpgradeFromCursorItem)
 function C_ItemUpgrade.SetItemUpgradeFromCursorItem() end
 
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_ItemUpgrade.SetItemUpgradeFromLocation)
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_ItemUpgrade.SetItemUpgradeFromLocation)
 ---@param itemToSet ItemLocationMixin
 function C_ItemUpgrade.SetItemUpgradeFromLocation(itemToSet) end
 
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_ItemUpgrade.UpgradeItem)
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_ItemUpgrade.UpgradeItem)
 ---@param numUpgrades? number Default = 1
 function C_ItemUpgrade.UpgradeItem(numUpgrades) end
 

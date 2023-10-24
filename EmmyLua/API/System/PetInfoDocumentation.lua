@@ -1,12 +1,12 @@
 ---@meta
 C_PetInfo = {}
 
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_PetInfo.GetPetTamersForMap)
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_PetInfo.GetPetTamersForMap)
 ---@param uiMapID number
 ---@return PetTamerMapInfo[] petTamers
 function C_PetInfo.GetPetTamersForMap(uiMapID) end
 
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_PetInfo.GetSpellForPetAction)
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_PetInfo.GetSpellForPetAction)
 ---@param actionID number
 ---@return number? spellID
 function C_PetInfo.GetSpellForPetAction(actionID) end

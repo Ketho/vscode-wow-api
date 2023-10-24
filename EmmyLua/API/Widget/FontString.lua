@@ -1,208 +1,208 @@
 ---@meta
----[Documentation](https://wowpedia.fandom.com/wiki/UIOBJECT_FontString)
+---[Documentation](https://warcraft.wiki.gg/wiki/UIOBJECT_FontString)
 ---@class FontString : Region
 local FontString = {}
 ---@class fontstring : FontString
 ---@class FONTSTRING : FontString
 
 ---@meta
----[Documentation](https://wowpedia.fandom.com/wiki/API_FontString_CalculateScreenAreaFromCharacterSpan)
+---[Documentation](https://warcraft.wiki.gg/wiki/API_FontString_CalculateScreenAreaFromCharacterSpan)
 ---@param leftIndex number
 ---@param rightIndex number
 ---@return uiBoundsRect[]? areas
 function FontString:CalculateScreenAreaFromCharacterSpan(leftIndex, rightIndex) end
 
----[Documentation](https://wowpedia.fandom.com/wiki/API_FontString_CanNonSpaceWrap)
+---[Documentation](https://warcraft.wiki.gg/wiki/API_FontString_CanNonSpaceWrap)
 ---@return boolean wrap
 function FontString:CanNonSpaceWrap() end
 
----[Documentation](https://wowpedia.fandom.com/wiki/API_FontString_CanWordWrap)
+---[Documentation](https://warcraft.wiki.gg/wiki/API_FontString_CanWordWrap)
 ---@return boolean wrap
 function FontString:CanWordWrap() end
 
----[Documentation](https://wowpedia.fandom.com/wiki/API_FontString_FindCharacterIndexAtCoordinate)
+---[Documentation](https://warcraft.wiki.gg/wiki/API_FontString_FindCharacterIndexAtCoordinate)
 ---@param x uiUnit
 ---@param y uiUnit
 ---@return number characterIndex
 ---@return boolean inside
 function FontString:FindCharacterIndexAtCoordinate(x, y) end
 
----[Documentation](https://wowpedia.fandom.com/wiki/API_FontString_GetFieldSize)
+---[Documentation](https://warcraft.wiki.gg/wiki/API_FontString_GetFieldSize)
 ---@return number fieldSize
 function FontString:GetFieldSize() end
 
----[Documentation](https://wowpedia.fandom.com/wiki/API_FontString_GetFont)
+---[Documentation](https://warcraft.wiki.gg/wiki/API_FontString_GetFont)
 ---@return string? fontFile
 ---@return uiUnit fontHeight
 ---@return TBFFlags flags
 function FontString:GetFont() end
 
----[Documentation](https://wowpedia.fandom.com/wiki/API_FontString_GetFontObject)
+---[Documentation](https://warcraft.wiki.gg/wiki/API_FontString_GetFontObject)
 ---@return SimpleFont font
 function FontString:GetFontObject() end
 
----[Documentation](https://wowpedia.fandom.com/wiki/API_FontString_GetIndentedWordWrap)
+---[Documentation](https://warcraft.wiki.gg/wiki/API_FontString_GetIndentedWordWrap)
 ---@return boolean wrap
 function FontString:GetIndentedWordWrap() end
 
----[Documentation](https://wowpedia.fandom.com/wiki/API_FontString_GetJustifyH)
+---[Documentation](https://warcraft.wiki.gg/wiki/API_FontString_GetJustifyH)
 ---@return TBFStyleFlags justifyH
 function FontString:GetJustifyH() end
 
----[Documentation](https://wowpedia.fandom.com/wiki/API_FontString_GetJustifyV)
+---[Documentation](https://warcraft.wiki.gg/wiki/API_FontString_GetJustifyV)
 ---@return TBFStyleFlags justifyH
 function FontString:GetJustifyV() end
 
----[Documentation](https://wowpedia.fandom.com/wiki/API_FontString_GetLineHeight)
+---[Documentation](https://warcraft.wiki.gg/wiki/API_FontString_GetLineHeight)
 ---@return uiUnit lineHeight
 function FontString:GetLineHeight() end
 
----[Documentation](https://wowpedia.fandom.com/wiki/API_FontString_GetMaxLines)
+---[Documentation](https://warcraft.wiki.gg/wiki/API_FontString_GetMaxLines)
 ---@return number maxLines
 function FontString:GetMaxLines() end
 
----[Documentation](https://wowpedia.fandom.com/wiki/API_FontString_GetNumLines)
+---[Documentation](https://warcraft.wiki.gg/wiki/API_FontString_GetNumLines)
 ---@return number numLines
 function FontString:GetNumLines() end
 
----[Documentation](https://wowpedia.fandom.com/wiki/API_FontString_GetRotation)
+---[Documentation](https://warcraft.wiki.gg/wiki/API_FontString_GetRotation)
 ---@return number radians
 function FontString:GetRotation() end
 
----[Documentation](https://wowpedia.fandom.com/wiki/API_FontString_GetShadowColor)
+---[Documentation](https://warcraft.wiki.gg/wiki/API_FontString_GetShadowColor)
 ---@return number colorR
 ---@return number colorG
 ---@return number colorB
 ---@return number colorA
 function FontString:GetShadowColor() end
 
----[Documentation](https://wowpedia.fandom.com/wiki/API_FontString_GetShadowOffset)
+---[Documentation](https://warcraft.wiki.gg/wiki/API_FontString_GetShadowOffset)
 ---@return number offsetX
 ---@return number offsetY
 function FontString:GetShadowOffset() end
 
----[Documentation](https://wowpedia.fandom.com/wiki/API_FontString_GetSpacing)
+---[Documentation](https://warcraft.wiki.gg/wiki/API_FontString_GetSpacing)
 ---@return uiUnit spacing
 function FontString:GetSpacing() end
 
----[Documentation](https://wowpedia.fandom.com/wiki/API_FontString_GetStringHeight)
+---[Documentation](https://warcraft.wiki.gg/wiki/API_FontString_GetStringHeight)
 ---@return uiUnit height
 function FontString:GetStringHeight() end
 
----[Documentation](https://wowpedia.fandom.com/wiki/API_FontString_GetStringWidth)
+---[Documentation](https://warcraft.wiki.gg/wiki/API_FontString_GetStringWidth)
 ---@return uiUnit width
 function FontString:GetStringWidth() end
 
----[Documentation](https://wowpedia.fandom.com/wiki/API_FontString_GetText)
+---[Documentation](https://warcraft.wiki.gg/wiki/API_FontString_GetText)
 ---@return string text
 function FontString:GetText() end
 
----[Documentation](https://wowpedia.fandom.com/wiki/API_FontString_GetTextColor)
+---[Documentation](https://warcraft.wiki.gg/wiki/API_FontString_GetTextColor)
 ---@return number colorR
 ---@return number colorG
 ---@return number colorB
 ---@return number colorA
 function FontString:GetTextColor() end
 
----[Documentation](https://wowpedia.fandom.com/wiki/API_FontString_GetTextScale)
+---[Documentation](https://warcraft.wiki.gg/wiki/API_FontString_GetTextScale)
 ---@return number textScale
 function FontString:GetTextScale() end
 
----[Documentation](https://wowpedia.fandom.com/wiki/API_FontString_GetUnboundedStringWidth)
+---[Documentation](https://warcraft.wiki.gg/wiki/API_FontString_GetUnboundedStringWidth)
 ---@return uiUnit width
 function FontString:GetUnboundedStringWidth() end
 
----[Documentation](https://wowpedia.fandom.com/wiki/API_FontString_GetWrappedWidth)
+---[Documentation](https://warcraft.wiki.gg/wiki/API_FontString_GetWrappedWidth)
 ---@return uiUnit width
 function FontString:GetWrappedWidth() end
 
----[Documentation](https://wowpedia.fandom.com/wiki/API_FontString_IsTruncated)
+---[Documentation](https://warcraft.wiki.gg/wiki/API_FontString_IsTruncated)
 ---@return boolean isTruncated
 function FontString:IsTruncated() end
 
----[Documentation](https://wowpedia.fandom.com/wiki/API_FontString_SetAlphaGradient)
+---[Documentation](https://warcraft.wiki.gg/wiki/API_FontString_SetAlphaGradient)
 ---@param start number
 ---@param length number
 ---@return boolean isWithinText
 function FontString:SetAlphaGradient(start, length) end
 
----[Documentation](https://wowpedia.fandom.com/wiki/API_FontString_SetFixedColor)
+---[Documentation](https://warcraft.wiki.gg/wiki/API_FontString_SetFixedColor)
 ---@param fixedColor boolean
 function FontString:SetFixedColor(fixedColor) end
 
----[Documentation](https://wowpedia.fandom.com/wiki/API_FontString_SetFont)
+---[Documentation](https://warcraft.wiki.gg/wiki/API_FontString_SetFont)
 ---@param fontFile string
 ---@param fontHeight uiUnit
 ---@param flags TBFFlags
 function FontString:SetFont(fontFile, fontHeight, flags) end
 
----[Documentation](https://wowpedia.fandom.com/wiki/API_FontString_SetFontObject)
+---[Documentation](https://warcraft.wiki.gg/wiki/API_FontString_SetFontObject)
 ---@param font SimpleFont
 function FontString:SetFontObject(font) end
 
----[Documentation](https://wowpedia.fandom.com/wiki/API_FontString_SetFormattedText)
+---[Documentation](https://warcraft.wiki.gg/wiki/API_FontString_SetFormattedText)
 ---@param text string
 function FontString:SetFormattedText(text) end
 
----[Documentation](https://wowpedia.fandom.com/wiki/API_FontString_SetIndentedWordWrap)
+---[Documentation](https://warcraft.wiki.gg/wiki/API_FontString_SetIndentedWordWrap)
 ---@param wrap boolean
 function FontString:SetIndentedWordWrap(wrap) end
 
----[Documentation](https://wowpedia.fandom.com/wiki/API_FontString_SetJustifyH)
+---[Documentation](https://warcraft.wiki.gg/wiki/API_FontString_SetJustifyH)
 ---@param justifyH TBFStyleFlags
 function FontString:SetJustifyH(justifyH) end
 
----[Documentation](https://wowpedia.fandom.com/wiki/API_FontString_SetJustifyV)
+---[Documentation](https://warcraft.wiki.gg/wiki/API_FontString_SetJustifyV)
 ---@param justifyV TBFStyleFlags
 function FontString:SetJustifyV(justifyV) end
 
----[Documentation](https://wowpedia.fandom.com/wiki/API_FontString_SetMaxLines)
+---[Documentation](https://warcraft.wiki.gg/wiki/API_FontString_SetMaxLines)
 ---@param maxLines number
 function FontString:SetMaxLines(maxLines) end
 
----[Documentation](https://wowpedia.fandom.com/wiki/API_FontString_SetNonSpaceWrap)
+---[Documentation](https://warcraft.wiki.gg/wiki/API_FontString_SetNonSpaceWrap)
 ---@param wrap boolean
 function FontString:SetNonSpaceWrap(wrap) end
 
----[Documentation](https://wowpedia.fandom.com/wiki/API_FontString_SetRotation)
+---[Documentation](https://warcraft.wiki.gg/wiki/API_FontString_SetRotation)
 ---@param radians number
 function FontString:SetRotation(radians) end
 
----[Documentation](https://wowpedia.fandom.com/wiki/API_FontString_SetShadowColor)
+---[Documentation](https://warcraft.wiki.gg/wiki/API_FontString_SetShadowColor)
 ---@param colorR number
 ---@param colorG number
 ---@param colorB number
 ---@param a? SingleColorValue
 function FontString:SetShadowColor(colorR, colorG, colorB, a) end
 
----[Documentation](https://wowpedia.fandom.com/wiki/API_FontString_SetShadowOffset)
+---[Documentation](https://warcraft.wiki.gg/wiki/API_FontString_SetShadowOffset)
 ---@param offsetX number
 ---@param offsetY number
 function FontString:SetShadowOffset(offsetX, offsetY) end
 
----[Documentation](https://wowpedia.fandom.com/wiki/API_FontString_SetSpacing)
+---[Documentation](https://warcraft.wiki.gg/wiki/API_FontString_SetSpacing)
 ---@param spacing uiUnit
 function FontString:SetSpacing(spacing) end
 
----[Documentation](https://wowpedia.fandom.com/wiki/API_FontString_SetText)
+---[Documentation](https://warcraft.wiki.gg/wiki/API_FontString_SetText)
 ---@param text? string Default = 
 function FontString:SetText(text) end
 
----[Documentation](https://wowpedia.fandom.com/wiki/API_FontString_SetTextColor)
+---[Documentation](https://warcraft.wiki.gg/wiki/API_FontString_SetTextColor)
 ---@param colorR number
 ---@param colorG number
 ---@param colorB number
 ---@param a? SingleColorValue
 function FontString:SetTextColor(colorR, colorG, colorB, a) end
 
----[Documentation](https://wowpedia.fandom.com/wiki/API_FontString_SetTextHeight)
+---[Documentation](https://warcraft.wiki.gg/wiki/API_FontString_SetTextHeight)
 ---@param height uiUnit
 function FontString:SetTextHeight(height) end
 
----[Documentation](https://wowpedia.fandom.com/wiki/API_FontString_SetTextScale)
+---[Documentation](https://warcraft.wiki.gg/wiki/API_FontString_SetTextScale)
 ---@param textScale number
 function FontString:SetTextScale(textScale) end
 
----[Documentation](https://wowpedia.fandom.com/wiki/API_FontString_SetWordWrap)
+---[Documentation](https://warcraft.wiki.gg/wiki/API_FontString_SetWordWrap)
 ---@param wrap boolean
 function FontString:SetWordWrap(wrap) end

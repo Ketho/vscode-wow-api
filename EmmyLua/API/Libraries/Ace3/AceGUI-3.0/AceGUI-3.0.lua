@@ -127,7 +127,7 @@ function AceGUIWidget:Release() end
 ---@param ofsy? number
 ---@overload fun(self, point: AnchorPoint, relativeTo: Region|string, ofsx?: number, ofsy?: number)
 ---@overload fun(self, point: AnchorPoint, ofsx?: number, ofsy?: number)
----[Documentation](https://wowpedia.fandom.com/wiki/API_Region_SetPoint)
+---[Documentation](https://warcraft.wiki.gg/wiki/API_Region_SetPoint)
 function AceGUIWidget:SetPoint(point, relativeTo, relativePoint, ofsx, ofsy) end
 
 ---[Documentation](https://www.wowace.com/projects/ace3/pages/ace-gui-3-0-widgets#title-1-9)
@@ -143,7 +143,7 @@ function AceGUIWidget:GetNumPoints() end
 ---@return string relativePoint
 ---@return number xOfs
 ---@return number yOfs
----[Documentation](https://wowpedia.fandom.com/wiki/API_Region_GetPoint)
+---[Documentation](https://warcraft.wiki.gg/wiki/API_Region_GetPoint)
 function AceGUIWidget:GetPoint(index) end
 
 ---@return table

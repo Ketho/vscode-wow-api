@@ -1,7 +1,7 @@
 ---@meta
 Spell = {}
 
----[Documentation](https://wowpedia.fandom.com/wiki/SpellMixin)
+---[Documentation](https://warcraft.wiki.gg/wiki/SpellMixin)
 ---@class SpellMixin
 SpellMixin = {}
 

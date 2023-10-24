@@ -1,17 +1,17 @@
 ---@meta
 C_ChatInfo = {}
 
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_ChatInfo.CanPlayerSpeakLanguage)
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_ChatInfo.CanPlayerSpeakLanguage)
 ---@param languageId number
 ---@return boolean canSpeakLanguage
 function C_ChatInfo.CanPlayerSpeakLanguage(languageId) end
 
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_ChatInfo.GetChannelInfoFromIdentifier)
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_ChatInfo.GetChannelInfoFromIdentifier)
 ---@param channelIdentifier string
 ---@return ChatChannelInfo? info
 function C_ChatInfo.GetChannelInfoFromIdentifier(channelIdentifier) end
 
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_ChatInfo.GetChannelRosterInfo)
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_ChatInfo.GetChannelRosterInfo)
 ---@param channelIndex number
 ---@param rosterIndex number
 ---@return string name
@@ -20,136 +20,136 @@ function C_ChatInfo.GetChannelInfoFromIdentifier(channelIdentifier) end
 ---@return WOWGUID guid
 function C_ChatInfo.GetChannelRosterInfo(channelIndex, rosterIndex) end
 
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_ChatInfo.GetChannelRuleset)
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_ChatInfo.GetChannelRuleset)
 ---@param channelIndex number
 ---@return Enum.ChatChannelRuleset ruleset
 function C_ChatInfo.GetChannelRuleset(channelIndex) end
 
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_ChatInfo.GetChannelRulesetForChannelID)
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_ChatInfo.GetChannelRulesetForChannelID)
 ---@param channelID number
 ---@return Enum.ChatChannelRuleset ruleset
 function C_ChatInfo.GetChannelRulesetForChannelID(channelID) end
 
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_ChatInfo.GetChannelShortcut)
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_ChatInfo.GetChannelShortcut)
 ---@param channelIndex number
 ---@return string shortcut
 function C_ChatInfo.GetChannelShortcut(channelIndex) end
 
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_ChatInfo.GetChannelShortcutForChannelID)
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_ChatInfo.GetChannelShortcutForChannelID)
 ---@param channelID number
 ---@return string shortcut
 function C_ChatInfo.GetChannelShortcutForChannelID(channelID) end
 
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_ChatInfo.GetChatLineSenderGUID)
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_ChatInfo.GetChatLineSenderGUID)
 ---@param chatLine number
 ---@return WOWGUID guid
 function C_ChatInfo.GetChatLineSenderGUID(chatLine) end
 
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_ChatInfo.GetChatLineSenderName)
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_ChatInfo.GetChatLineSenderName)
 ---@param chatLine number
 ---@return string name
 function C_ChatInfo.GetChatLineSenderName(chatLine) end
 
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_ChatInfo.GetChatLineText)
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_ChatInfo.GetChatLineText)
 ---@param chatLine number
 ---@return string text
 function C_ChatInfo.GetChatLineText(chatLine) end
 
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_ChatInfo.GetChatTypeName)
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_ChatInfo.GetChatTypeName)
 ---@param typeID number
 ---@return string? name
 function C_ChatInfo.GetChatTypeName(typeID) end
 
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_ChatInfo.GetClubStreamIDs)
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_ChatInfo.GetClubStreamIDs)
 ---@param clubID ClubId
 ---@return ClubStreamId[] ids
 function C_ChatInfo.GetClubStreamIDs(clubID) end
 
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_ChatInfo.GetColorForChatType)
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_ChatInfo.GetColorForChatType)
 ---@param chatType string
 ---@return ColorMixin? color
 function C_ChatInfo.GetColorForChatType(chatType) end
 
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_ChatInfo.GetGeneralChannelID)
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_ChatInfo.GetGeneralChannelID)
 ---@return number channelID
 function C_ChatInfo.GetGeneralChannelID() end
 
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_ChatInfo.GetGeneralChannelLocalID)
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_ChatInfo.GetGeneralChannelLocalID)
 ---@return number? localID
 function C_ChatInfo.GetGeneralChannelLocalID() end
 
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_ChatInfo.GetMentorChannelID)
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_ChatInfo.GetMentorChannelID)
 ---@return number channelID
 function C_ChatInfo.GetMentorChannelID() end
 
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_ChatInfo.GetNumActiveChannels)
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_ChatInfo.GetNumActiveChannels)
 ---@return number numChannels
 function C_ChatInfo.GetNumActiveChannels() end
 
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_ChatInfo.GetNumReservedChatWindows)
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_ChatInfo.GetNumReservedChatWindows)
 ---@return number numReserved
 function C_ChatInfo.GetNumReservedChatWindows() end
 
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_ChatInfo.GetRegisteredAddonMessagePrefixes)
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_ChatInfo.GetRegisteredAddonMessagePrefixes)
 ---@return string[] registeredPrefixes
 function C_ChatInfo.GetRegisteredAddonMessagePrefixes() end
 
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_ChatInfo.IsAddonMessagePrefixRegistered)
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_ChatInfo.IsAddonMessagePrefixRegistered)
 ---@param prefix string
 ---@return boolean isRegistered
 function C_ChatInfo.IsAddonMessagePrefixRegistered(prefix) end
 
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_ChatInfo.IsChannelRegional)
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_ChatInfo.IsChannelRegional)
 ---@param channelIndex number
 ---@return boolean isRegional
 function C_ChatInfo.IsChannelRegional(channelIndex) end
 
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_ChatInfo.IsChannelRegionalForChannelID)
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_ChatInfo.IsChannelRegionalForChannelID)
 ---@param channelID number
 ---@return boolean isRegional
 function C_ChatInfo.IsChannelRegionalForChannelID(channelID) end
 
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_ChatInfo.IsChatLineCensored)
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_ChatInfo.IsChatLineCensored)
 ---@param chatLine number
 ---@return boolean isCensored
 function C_ChatInfo.IsChatLineCensored(chatLine) end
 
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_ChatInfo.IsPartyChannelType)
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_ChatInfo.IsPartyChannelType)
 ---@param channelType number|Enum.ChatChannelType
 ---@return boolean isPartyChannelType
 function C_ChatInfo.IsPartyChannelType(channelType) end
 
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_ChatInfo.IsRegionalServiceAvailable)
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_ChatInfo.IsRegionalServiceAvailable)
 ---@return boolean available
 function C_ChatInfo.IsRegionalServiceAvailable() end
 
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_ChatInfo.IsValidChatLine)
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_ChatInfo.IsValidChatLine)
 ---@param chatLine? number
 ---@return boolean isValid
 function C_ChatInfo.IsValidChatLine(chatLine) end
 
 ---Registers interest in addon messages with this prefix, cannot be an empty string.
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_ChatInfo.RegisterAddonMessagePrefix)
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_ChatInfo.RegisterAddonMessagePrefix)
 ---@param prefix string
 ---@return boolean successfulRequest
 function C_ChatInfo.RegisterAddonMessagePrefix(prefix) end
 
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_ChatInfo.ReplaceIconAndGroupExpressions)
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_ChatInfo.ReplaceIconAndGroupExpressions)
 ---@param input string
 ---@param noIconReplacement? boolean
 ---@param noGroupReplacement? boolean
 ---@return string output
 function C_ChatInfo.ReplaceIconAndGroupExpressions(input, noIconReplacement, noGroupReplacement) end
 
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_ChatInfo.RequestCanLocalWhisperTarget)
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_ChatInfo.RequestCanLocalWhisperTarget)
 ---@param whisperTarget WOWGUID
 function C_ChatInfo.RequestCanLocalWhisperTarget(whisperTarget) end
 
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_ChatInfo.ResetDefaultZoneChannels)
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_ChatInfo.ResetDefaultZoneChannels)
 function C_ChatInfo.ResetDefaultZoneChannels() end
 
 ---Sends a text payload to other clients specified by chatChannel and target which are registered to listen for prefix.
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_ChatInfo.SendAddonMessage)
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_ChatInfo.SendAddonMessage)
 ---@param prefix string
 ---@param message string
 ---@param chatType? string
@@ -158,7 +158,7 @@ function C_ChatInfo.ResetDefaultZoneChannels() end
 function C_ChatInfo.SendAddonMessage(prefix, message, chatType, target) end
 
 ---Sends a text payload to other clients specified by chatChannel and target which are registered to listen for prefix. Intended for plain text payloads; logged and throttled.
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_ChatInfo.SendAddonMessageLogged)
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_ChatInfo.SendAddonMessageLogged)
 ---@param prefix string
 ---@param message string
 ---@param chatType? string
@@ -166,12 +166,12 @@ function C_ChatInfo.SendAddonMessage(prefix, message, chatType, target) end
 ---@return boolean success
 function C_ChatInfo.SendAddonMessageLogged(prefix, message, chatType, target) end
 
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_ChatInfo.SwapChatChannelsByChannelIndex)
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_ChatInfo.SwapChatChannelsByChannelIndex)
 ---@param firstChannelIndex number
 ---@param secondChannelIndex number
 function C_ChatInfo.SwapChatChannelsByChannelIndex(firstChannelIndex, secondChannelIndex) end
 
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_ChatInfo.UncensorChatLine)
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_ChatInfo.UncensorChatLine)
 ---@param chatLine number
 function C_ChatInfo.UncensorChatLine(chatLine) end
 

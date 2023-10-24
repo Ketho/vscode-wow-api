@@ -1,14 +1,14 @@
 ---@meta
 C_SplashScreen = {}
 
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_SplashScreen.AcknowledgeSplash)
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_SplashScreen.AcknowledgeSplash)
 function C_SplashScreen.AcknowledgeSplash() end
 
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_SplashScreen.CanViewSplashScreen)
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_SplashScreen.CanViewSplashScreen)
 ---@return boolean canView
 function C_SplashScreen.CanViewSplashScreen() end
 
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_SplashScreen.RequestLatestSplashScreen)
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_SplashScreen.RequestLatestSplashScreen)
 ---@param fromGameMenu boolean
 function C_SplashScreen.RequestLatestSplashScreen(fromGameMenu) end
 

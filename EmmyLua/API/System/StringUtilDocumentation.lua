@@ -1,5 +1,5 @@
 ---@meta
----[Documentation](https://wowpedia.fandom.com/wiki/API_StripHyperlinks)
+---[Documentation](https://warcraft.wiki.gg/wiki/API_StripHyperlinks)
 ---@param text string
 ---@param maintainColor? boolean Default = false
 ---@param maintainBrackets? boolean Default = false

@@ -1,47 +1,47 @@
 ---@meta
 C_EditMode = {}
 
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_EditMode.ConvertLayoutInfoToString)
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_EditMode.ConvertLayoutInfoToString)
 ---@param layoutInfo EditModeLayoutInfo
 ---@return string layoutInfoAsString
 function C_EditMode.ConvertLayoutInfoToString(layoutInfo) end
 
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_EditMode.ConvertStringToLayoutInfo)
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_EditMode.ConvertStringToLayoutInfo)
 ---@param layoutInfoAsString string
 ---@return EditModeLayoutInfo layoutInfo
 function C_EditMode.ConvertStringToLayoutInfo(layoutInfoAsString) end
 
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_EditMode.GetAccountSettings)
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_EditMode.GetAccountSettings)
 ---@return EditModeSettingInfo[] accountSettings
 function C_EditMode.GetAccountSettings() end
 
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_EditMode.GetLayouts)
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_EditMode.GetLayouts)
 ---@return EditModeLayouts layoutInfo
 function C_EditMode.GetLayouts() end
 
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_EditMode.OnEditModeExit)
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_EditMode.OnEditModeExit)
 function C_EditMode.OnEditModeExit() end
 
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_EditMode.OnLayoutAdded)
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_EditMode.OnLayoutAdded)
 ---@param addedLayoutIndex number
 ---@param activateNewLayout boolean
 ---@param isLayoutImported boolean
 function C_EditMode.OnLayoutAdded(addedLayoutIndex, activateNewLayout, isLayoutImported) end
 
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_EditMode.OnLayoutDeleted)
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_EditMode.OnLayoutDeleted)
 ---@param deletedLayoutIndex number
 function C_EditMode.OnLayoutDeleted(deletedLayoutIndex) end
 
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_EditMode.SaveLayouts)
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_EditMode.SaveLayouts)
 ---@param saveInfo EditModeLayouts
 function C_EditMode.SaveLayouts(saveInfo) end
 
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_EditMode.SetAccountSetting)
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_EditMode.SetAccountSetting)
 ---@param setting number|Enum.EditModeAccountSetting
 ---@param value number
 function C_EditMode.SetAccountSetting(setting, value) end
 
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_EditMode.SetActiveLayout)
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_EditMode.SetActiveLayout)
 ---@param activeLayout number
 function C_EditMode.SetActiveLayout(activeLayout) end
 

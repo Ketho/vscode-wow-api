@@ -1,26 +1,26 @@
 ---@meta
 C_DeathInfo = {}
 
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_DeathInfo.GetCorpseMapPosition)
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_DeathInfo.GetCorpseMapPosition)
 ---@param uiMapID number
 ---@return Vector2DMixin? position
 function C_DeathInfo.GetCorpseMapPosition(uiMapID) end
 
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_DeathInfo.GetDeathReleasePosition)
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_DeathInfo.GetDeathReleasePosition)
 ---@param uiMapID number
 ---@return Vector2DMixin? position
 function C_DeathInfo.GetDeathReleasePosition(uiMapID) end
 
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_DeathInfo.GetGraveyardsForMap)
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_DeathInfo.GetGraveyardsForMap)
 ---@param uiMapID number
 ---@return GraveyardMapInfo[] graveyards
 function C_DeathInfo.GetGraveyardsForMap(uiMapID) end
 
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_DeathInfo.GetSelfResurrectOptions)
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_DeathInfo.GetSelfResurrectOptions)
 ---@return SelfResurrectOption[] options
 function C_DeathInfo.GetSelfResurrectOptions() end
 
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_DeathInfo.UseSelfResurrectOption)
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_DeathInfo.UseSelfResurrectOption)
 ---@param optionType number|Enum.SelfResurrectOptionType
 ---@param id number
 function C_DeathInfo.UseSelfResurrectOption(optionType, id) end

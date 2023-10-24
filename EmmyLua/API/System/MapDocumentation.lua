@@ -1,91 +1,91 @@
 ---@meta
 C_Map = {}
 
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_Map.CanSetUserWaypointOnMap)
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_Map.CanSetUserWaypointOnMap)
 ---@param uiMapID number
 ---@return boolean canSet
 function C_Map.CanSetUserWaypointOnMap(uiMapID) end
 
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_Map.ClearUserWaypoint)
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_Map.ClearUserWaypoint)
 function C_Map.ClearUserWaypoint() end
 
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_Map.CloseWorldMapInteraction)
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_Map.CloseWorldMapInteraction)
 function C_Map.CloseWorldMapInteraction() end
 
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_Map.GetAreaInfo)
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_Map.GetAreaInfo)
 ---@param areaID number
 ---@return string name
 function C_Map.GetAreaInfo(areaID) end
 
 ---Only works for the player and party members.
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_Map.GetBestMapForUnit)
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_Map.GetBestMapForUnit)
 ---@param unitToken UnitToken
 ---@return number? uiMapID
 function C_Map.GetBestMapForUnit(unitToken) end
 
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_Map.GetBountySetMaps)
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_Map.GetBountySetMaps)
 ---@param bountySetID number
 ---@return number[] mapIDs
 function C_Map.GetBountySetMaps(bountySetID) end
 
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_Map.GetFallbackWorldMapID)
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_Map.GetFallbackWorldMapID)
 ---@return number uiMapID
 function C_Map.GetFallbackWorldMapID() end
 
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_Map.GetMapArtBackgroundAtlas)
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_Map.GetMapArtBackgroundAtlas)
 ---@param uiMapID number
 ---@return textureAtlas atlasName
 function C_Map.GetMapArtBackgroundAtlas(uiMapID) end
 
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_Map.GetMapArtHelpTextPosition)
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_Map.GetMapArtHelpTextPosition)
 ---@param uiMapID number
 ---@return Enum.MapCanvasPosition position
 function C_Map.GetMapArtHelpTextPosition(uiMapID) end
 
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_Map.GetMapArtID)
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_Map.GetMapArtID)
 ---@param uiMapID number
 ---@return number uiMapArtID
 function C_Map.GetMapArtID(uiMapID) end
 
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_Map.GetMapArtLayerTextures)
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_Map.GetMapArtLayerTextures)
 ---@param uiMapID number
 ---@param layerIndex number
 ---@return fileID[] textures
 function C_Map.GetMapArtLayerTextures(uiMapID, layerIndex) end
 
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_Map.GetMapArtLayers)
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_Map.GetMapArtLayers)
 ---@param uiMapID number
 ---@return UiMapLayerInfo[] layerInfo
 function C_Map.GetMapArtLayers(uiMapID) end
 
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_Map.GetMapBannersForMap)
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_Map.GetMapBannersForMap)
 ---@param uiMapID number
 ---@return MapBannerInfo[] mapBanners
 function C_Map.GetMapBannersForMap(uiMapID) end
 
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_Map.GetMapChildrenInfo)
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_Map.GetMapChildrenInfo)
 ---@param uiMapID number
 ---@param mapType? number|Enum.UIMapType
 ---@param allDescendants? boolean
 ---@return UiMapDetails[] info
 function C_Map.GetMapChildrenInfo(uiMapID, mapType, allDescendants) end
 
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_Map.GetMapDisplayInfo)
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_Map.GetMapDisplayInfo)
 ---@param uiMapID number
 ---@return boolean hideIcons
 function C_Map.GetMapDisplayInfo(uiMapID) end
 
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_Map.GetMapGroupID)
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_Map.GetMapGroupID)
 ---@param uiMapID number
 ---@return number uiMapGroupID
 function C_Map.GetMapGroupID(uiMapID) end
 
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_Map.GetMapGroupMembersInfo)
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_Map.GetMapGroupMembersInfo)
 ---@param uiMapGroupID number
 ---@return UiMapGroupMemberInfo[] info
 function C_Map.GetMapGroupMembersInfo(uiMapGroupID) end
 
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_Map.GetMapHighlightInfoAtPosition)
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_Map.GetMapHighlightInfoAtPosition)
 ---@param uiMapID number
 ---@param x number
 ---@param y number
@@ -99,7 +99,7 @@ function C_Map.GetMapGroupMembersInfo(uiMapGroupID) end
 ---@return number scrollChildY
 function C_Map.GetMapHighlightInfoAtPosition(uiMapID, x, y) end
 
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_Map.GetMapHighlightPulseInfo)
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_Map.GetMapHighlightPulseInfo)
 ---@param uiMapID number
 ---@return fileID fileDataID
 ---@return textureAtlas atlasID
@@ -111,12 +111,12 @@ function C_Map.GetMapHighlightInfoAtPosition(uiMapID, x, y) end
 ---@return number scrollChildY
 function C_Map.GetMapHighlightPulseInfo(uiMapID) end
 
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_Map.GetMapInfo)
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_Map.GetMapInfo)
 ---@param uiMapID number
 ---@return UiMapDetails info
 function C_Map.GetMapInfo(uiMapID) end
 
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_Map.GetMapInfoAtPosition)
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_Map.GetMapInfoAtPosition)
 ---@param uiMapID number
 ---@param x number
 ---@param y number
@@ -124,7 +124,7 @@ function C_Map.GetMapInfo(uiMapID) end
 ---@return UiMapDetails info
 function C_Map.GetMapInfoAtPosition(uiMapID, x, y, ignoreZoneMapPositionData) end
 
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_Map.GetMapLevels)
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_Map.GetMapLevels)
 ---@param uiMapID number
 ---@return number playerMinLevel
 ---@return number playerMaxLevel
@@ -132,12 +132,12 @@ function C_Map.GetMapInfoAtPosition(uiMapID, x, y, ignoreZoneMapPositionData) en
 ---@return number? petMaxLevel Default = 0
 function C_Map.GetMapLevels(uiMapID) end
 
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_Map.GetMapLinksForMap)
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_Map.GetMapLinksForMap)
 ---@param uiMapID number
 ---@return MapLinkInfo[] mapLinks
 function C_Map.GetMapLinksForMap(uiMapID) end
 
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_Map.GetMapPosFromWorldPos)
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_Map.GetMapPosFromWorldPos)
 ---@param continentID number
 ---@param worldPosition Vector2DMixin
 ---@param overrideUiMapID? number
@@ -145,7 +145,7 @@ function C_Map.GetMapLinksForMap(uiMapID) end
 ---@return Vector2DMixin mapPosition
 function C_Map.GetMapPosFromWorldPos(continentID, worldPosition, overrideUiMapID) end
 
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_Map.GetMapRectOnMap)
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_Map.GetMapRectOnMap)
 ---@param uiMapID number
 ---@param topUiMapID number
 ---@return number minX
@@ -155,63 +155,63 @@ function C_Map.GetMapPosFromWorldPos(continentID, worldPosition, overrideUiMapID
 function C_Map.GetMapRectOnMap(uiMapID, topUiMapID) end
 
 ---Returns the size in yards of the area represented by the map.
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_Map.GetMapWorldSize)
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_Map.GetMapWorldSize)
 ---@param uiMapID number
 ---@return number width
 ---@return number height
 function C_Map.GetMapWorldSize(uiMapID) end
 
 ---Only works for the player and party members.
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_Map.GetPlayerMapPosition)
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_Map.GetPlayerMapPosition)
 ---@param uiMapID number
 ---@param unitToken UnitToken
 ---@return Vector2DMixin? position
 function C_Map.GetPlayerMapPosition(uiMapID, unitToken) end
 
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_Map.GetUserWaypoint)
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_Map.GetUserWaypoint)
 ---@return UiMapPoint point
 function C_Map.GetUserWaypoint() end
 
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_Map.GetUserWaypointFromHyperlink)
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_Map.GetUserWaypointFromHyperlink)
 ---@param hyperlink string
 ---@return UiMapPoint point
 function C_Map.GetUserWaypointFromHyperlink(hyperlink) end
 
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_Map.GetUserWaypointHyperlink)
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_Map.GetUserWaypointHyperlink)
 ---@return string hyperlink
 function C_Map.GetUserWaypointHyperlink() end
 
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_Map.GetUserWaypointPositionForMap)
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_Map.GetUserWaypointPositionForMap)
 ---@param uiMapID number
 ---@return Vector2DMixin mapPosition
 function C_Map.GetUserWaypointPositionForMap(uiMapID) end
 
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_Map.GetWorldPosFromMapPos)
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_Map.GetWorldPosFromMapPos)
 ---@param uiMapID number
 ---@param mapPosition Vector2DMixin
 ---@return number continentID
 ---@return Vector2DMixin worldPosition
 function C_Map.GetWorldPosFromMapPos(uiMapID, mapPosition) end
 
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_Map.HasUserWaypoint)
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_Map.HasUserWaypoint)
 ---@return boolean hasUserWaypoint
 function C_Map.HasUserWaypoint() end
 
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_Map.IsMapValidForNavBarDropDown)
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_Map.IsMapValidForNavBarDropDown)
 ---@param uiMapID number
 ---@return boolean isValid
 function C_Map.IsMapValidForNavBarDropDown(uiMapID) end
 
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_Map.MapHasArt)
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_Map.MapHasArt)
 ---@param uiMapID number
 ---@return boolean hasArt
 function C_Map.MapHasArt(uiMapID) end
 
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_Map.RequestPreloadMap)
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_Map.RequestPreloadMap)
 ---@param uiMapID number
 function C_Map.RequestPreloadMap(uiMapID) end
 
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_Map.SetUserWaypoint)
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_Map.SetUserWaypoint)
 ---@param point UiMapPoint
 function C_Map.SetUserWaypoint(point) end
 

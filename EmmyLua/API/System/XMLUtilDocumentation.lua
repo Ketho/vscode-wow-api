@@ -1,12 +1,12 @@
 ---@meta
 C_XMLUtil = {}
 
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_XMLUtil.GetTemplateInfo)
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_XMLUtil.GetTemplateInfo)
 ---@param name string
 ---@return XMLTemplateInfo info
 function C_XMLUtil.GetTemplateInfo(name) end
 
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_XMLUtil.GetTemplates)
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_XMLUtil.GetTemplates)
 ---@return XMLTemplateListInfo[] templates
 function C_XMLUtil.GetTemplates() end
 

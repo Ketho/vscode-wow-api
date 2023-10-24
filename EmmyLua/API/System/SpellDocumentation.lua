@@ -1,25 +1,25 @@
 ---@meta
 C_Spell = {}
 
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_Spell.DoesSpellExist)
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_Spell.DoesSpellExist)
 ---@param spellID number
 ---@return boolean spellExists
 function C_Spell.DoesSpellExist(spellID) end
 
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_Spell.GetMawPowerBorderAtlasBySpellID)
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_Spell.GetMawPowerBorderAtlasBySpellID)
 ---@param spellID number
 ---@return textureAtlas rarityBorderAtlas
 function C_Spell.GetMawPowerBorderAtlasBySpellID(spellID) end
 
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_Spell.IsSpellDataCached)
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_Spell.IsSpellDataCached)
 ---@param spellID number
 ---@return boolean isCached
 function C_Spell.IsSpellDataCached(spellID) end
 
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_Spell.RequestLoadSpellData)
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_Spell.RequestLoadSpellData)
 ---@param spellID number
 function C_Spell.RequestLoadSpellData(spellID) end
 
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_Spell.TargetSpellJumpsUpgradeTrack)
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_Spell.TargetSpellJumpsUpgradeTrack)
 ---@return boolean jumpsUpgradeTrack
 function C_Spell.TargetSpellJumpsUpgradeTrack() end

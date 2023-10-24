@@ -1,7 +1,7 @@
 ---@meta
 C_UIColor = {}
 
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_UIColor.GetColors)
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_UIColor.GetColors)
 ---@return DBColorExport[] colors
 function C_UIColor.GetColors() end
 

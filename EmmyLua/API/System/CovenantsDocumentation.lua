@@ -1,16 +1,16 @@
 ---@meta
 C_Covenants = {}
 
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_Covenants.GetActiveCovenantID)
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_Covenants.GetActiveCovenantID)
 ---@return number covenantID
 function C_Covenants.GetActiveCovenantID() end
 
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_Covenants.GetCovenantData)
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_Covenants.GetCovenantData)
 ---@param covenantID number
 ---@return CovenantData? data
 function C_Covenants.GetCovenantData(covenantID) end
 
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_Covenants.GetCovenantIDs)
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_Covenants.GetCovenantIDs)
 ---@return number[] covenantID
 function C_Covenants.GetCovenantIDs() end
 

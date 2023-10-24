@@ -1,16 +1,16 @@
 ---@meta
 C_ScenarioInfo = {}
 
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_ScenarioInfo.GetJailersTowerTypeString)
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_ScenarioInfo.GetJailersTowerTypeString)
 ---@param runType number|Enum.JailersTowerType
 ---@return string? typeString
 function C_ScenarioInfo.GetJailersTowerTypeString(runType) end
 
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_ScenarioInfo.GetScenarioInfo)
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_ScenarioInfo.GetScenarioInfo)
 ---@return ScenarioInformation scenarioInfo
 function C_ScenarioInfo.GetScenarioInfo() end
 
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_ScenarioInfo.GetScenarioStepInfo)
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_ScenarioInfo.GetScenarioStepInfo)
 ---@param scenarioStepID? number
 ---@return ScenarioStepInfo scenarioStepInfo
 function C_ScenarioInfo.GetScenarioStepInfo(scenarioStepID) end

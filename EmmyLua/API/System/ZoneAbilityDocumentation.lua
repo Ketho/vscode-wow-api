@@ -1,7 +1,7 @@
 ---@meta
 C_ZoneAbility = {}
 
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_ZoneAbility.GetActiveAbilities)
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_ZoneAbility.GetActiveAbilities)
 ---@return ZoneAbilityInfo[] zoneAbilities
 function C_ZoneAbility.GetActiveAbilities() end
 

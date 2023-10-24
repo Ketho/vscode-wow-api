@@ -1,40 +1,40 @@
 ---@meta
 C_BattleNet = {}
 
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_BattleNet.GetAccountInfoByGUID)
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_BattleNet.GetAccountInfoByGUID)
 ---@param guid WOWGUID
 ---@return BNetAccountInfo? accountInfo
 function C_BattleNet.GetAccountInfoByGUID(guid) end
 
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_BattleNet.GetAccountInfoByID)
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_BattleNet.GetAccountInfoByID)
 ---@param id number
 ---@param wowAccountGUID? WOWGUID
 ---@return BNetAccountInfo? accountInfo
 function C_BattleNet.GetAccountInfoByID(id, wowAccountGUID) end
 
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_BattleNet.GetFriendAccountInfo)
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_BattleNet.GetFriendAccountInfo)
 ---@param friendIndex number
 ---@param wowAccountGUID? WOWGUID
 ---@return BNetAccountInfo? accountInfo
 function C_BattleNet.GetFriendAccountInfo(friendIndex, wowAccountGUID) end
 
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_BattleNet.GetFriendGameAccountInfo)
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_BattleNet.GetFriendGameAccountInfo)
 ---@param friendIndex number
 ---@param accountIndex number
 ---@return BNetGameAccountInfo? gameAccountInfo
 function C_BattleNet.GetFriendGameAccountInfo(friendIndex, accountIndex) end
 
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_BattleNet.GetFriendNumGameAccounts)
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_BattleNet.GetFriendNumGameAccounts)
 ---@param friendIndex number
 ---@return number numGameAccounts
 function C_BattleNet.GetFriendNumGameAccounts(friendIndex) end
 
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_BattleNet.GetGameAccountInfoByGUID)
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_BattleNet.GetGameAccountInfoByGUID)
 ---@param guid WOWGUID
 ---@return BNetGameAccountInfo? gameAccountInfo
 function C_BattleNet.GetGameAccountInfoByGUID(guid) end
 
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_BattleNet.GetGameAccountInfoByID)
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_BattleNet.GetGameAccountInfoByID)
 ---@param id number
 ---@return BNetGameAccountInfo? gameAccountInfo
 function C_BattleNet.GetGameAccountInfoByID(id) end

@@ -1,130 +1,130 @@
 ---@meta
 C_LFGList = {}
 
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_LFGList.CanActiveEntryUseAutoAccept)
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_LFGList.CanActiveEntryUseAutoAccept)
 ---@return boolean canUseAutoAccept
 function C_LFGList.CanActiveEntryUseAutoAccept() end
 
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_LFGList.CanCreateQuestGroup)
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_LFGList.CanCreateQuestGroup)
 ---@param questID number
 ---@return boolean canCreate
 function C_LFGList.CanCreateQuestGroup(questID) end
 
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_LFGList.ClearApplicationTextFields)
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_LFGList.ClearApplicationTextFields)
 function C_LFGList.ClearApplicationTextFields() end
 
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_LFGList.ClearCreationTextFields)
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_LFGList.ClearCreationTextFields)
 function C_LFGList.ClearCreationTextFields() end
 
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_LFGList.ClearSearchTextFields)
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_LFGList.ClearSearchTextFields)
 function C_LFGList.ClearSearchTextFields() end
 
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_LFGList.CopyActiveEntryInfoToCreationFields)
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_LFGList.CopyActiveEntryInfoToCreationFields)
 function C_LFGList.CopyActiveEntryInfoToCreationFields() end
 
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_LFGList.DoesEntryTitleMatchPrebuiltTitle)
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_LFGList.DoesEntryTitleMatchPrebuiltTitle)
 ---@param activityID number
 ---@param groupID number
 ---@param playstyle? number|Enum.LFGEntryPlaystyle
 ---@return boolean matches
 function C_LFGList.DoesEntryTitleMatchPrebuiltTitle(activityID, groupID, playstyle) end
 
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_LFGList.GetActiveEntryInfo)
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_LFGList.GetActiveEntryInfo)
 ---@return LfgEntryData entryData
 function C_LFGList.GetActiveEntryInfo() end
 
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_LFGList.GetActivityFullName)
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_LFGList.GetActivityFullName)
 ---@param activityID number
 ---@param questID? number
 ---@param showWarmode? boolean
 ---@return string fullName
 function C_LFGList.GetActivityFullName(activityID, questID, showWarmode) end
 
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_LFGList.GetActivityGroupInfo)
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_LFGList.GetActivityGroupInfo)
 ---@param groupID number
 ---@return string name
 ---@return number orderIndex
 function C_LFGList.GetActivityGroupInfo(groupID) end
 
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_LFGList.GetActivityInfoTable)
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_LFGList.GetActivityInfoTable)
 ---@param activityID number
 ---@param questID? number
 ---@param showWarmode? boolean
 ---@return GroupFinderActivityInfo activityInfo
 function C_LFGList.GetActivityInfoTable(activityID, questID, showWarmode) end
 
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_LFGList.GetApplicantDungeonScoreForListing)
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_LFGList.GetApplicantDungeonScoreForListing)
 ---@param localID number
 ---@param applicantIndex number
 ---@param activityID number
 ---@return BestDungeonScoreMapInfo bestDungeonScoreForListing
 function C_LFGList.GetApplicantDungeonScoreForListing(localID, applicantIndex, activityID) end
 
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_LFGList.GetApplicantInfo)
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_LFGList.GetApplicantInfo)
 ---@param applicantID number
 ---@return LfgApplicantData applicantData
 function C_LFGList.GetApplicantInfo(applicantID) end
 
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_LFGList.GetApplicantPvpRatingInfoForListing)
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_LFGList.GetApplicantPvpRatingInfoForListing)
 ---@param localID number
 ---@param applicantIndex number
 ---@param activityID number
 ---@return PvpRatingInfo pvpRatingInfo
 function C_LFGList.GetApplicantPvpRatingInfoForListing(localID, applicantIndex, activityID) end
 
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_LFGList.GetFilteredSearchResults)
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_LFGList.GetFilteredSearchResults)
 ---@return number? totalResultsFound Default = 0
 ---@return number[] filteredResults
 function C_LFGList.GetFilteredSearchResults() end
 
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_LFGList.GetKeystoneForActivity)
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_LFGList.GetKeystoneForActivity)
 ---@param activityID number
 ---@return number level
 function C_LFGList.GetKeystoneForActivity(activityID) end
 
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_LFGList.GetLfgCategoryInfo)
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_LFGList.GetLfgCategoryInfo)
 ---@param categoryID number
 ---@return LfgCategoryData categoryData
 function C_LFGList.GetLfgCategoryInfo(categoryID) end
 
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_LFGList.GetOwnedKeystoneActivityAndGroupAndLevel)
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_LFGList.GetOwnedKeystoneActivityAndGroupAndLevel)
 ---@param getTimewalking? boolean Default = false
 ---@return number activityID
 ---@return number groupID
 ---@return number keystoneLevel
 function C_LFGList.GetOwnedKeystoneActivityAndGroupAndLevel(getTimewalking) end
 
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_LFGList.GetPlaystyleString)
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_LFGList.GetPlaystyleString)
 ---@param playstyle number|Enum.LFGEntryPlaystyle
 ---@param activityInfo GroupFinderActivityInfo
 ---@return string playstyleString
 function C_LFGList.GetPlaystyleString(playstyle, activityInfo) end
 
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_LFGList.GetSearchResultInfo)
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_LFGList.GetSearchResultInfo)
 ---@param searchResultID number
 ---@return LfgSearchResultData searchResultData
 function C_LFGList.GetSearchResultInfo(searchResultID) end
 
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_LFGList.GetSearchResults)
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_LFGList.GetSearchResults)
 ---@return number? totalResultsFound Default = 0
 ---@return number[] results
 function C_LFGList.GetSearchResults() end
 
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_LFGList.HasActiveEntryInfo)
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_LFGList.HasActiveEntryInfo)
 ---@return boolean hasActiveEntryInfo
 function C_LFGList.HasActiveEntryInfo() end
 
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_LFGList.HasSearchResultInfo)
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_LFGList.HasSearchResultInfo)
 ---@param searchResultID number
 ---@return boolean hasSearchResultInfo
 function C_LFGList.HasSearchResultInfo(searchResultID) end
 
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_LFGList.IsPlayerAuthenticatedForLFG)
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_LFGList.IsPlayerAuthenticatedForLFG)
 ---@param activityID? number
 ---@return boolean isAuthenticated
 function C_LFGList.IsPlayerAuthenticatedForLFG(activityID) end
 
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_LFGList.Search)
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_LFGList.Search)
 ---@param categoryID number
 ---@param filter? number Default = 0
 ---@param preferredFilters? number Default = 0
@@ -132,26 +132,26 @@ function C_LFGList.IsPlayerAuthenticatedForLFG(activityID) end
 ---@param searchCrossFactionListings? boolean Default = false
 function C_LFGList.Search(categoryID, filter, preferredFilters, languageFilter, searchCrossFactionListings) end
 
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_LFGList.SetEntryTitle)
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_LFGList.SetEntryTitle)
 ---@param activityID number
 ---@param groupID number
 ---@param playstyle? number|Enum.LFGEntryPlaystyle
 function C_LFGList.SetEntryTitle(activityID, groupID, playstyle) end
 
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_LFGList.SetSearchToActivity)
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_LFGList.SetSearchToActivity)
 ---@param activityID number
 function C_LFGList.SetSearchToActivity(activityID) end
 
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_LFGList.SetSearchToQuestID)
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_LFGList.SetSearchToQuestID)
 ---@param questID number
 function C_LFGList.SetSearchToQuestID(questID) end
 
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_LFGList.ValidateRequiredDungeonScore)
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_LFGList.ValidateRequiredDungeonScore)
 ---@param dungeonScore number
 ---@return boolean passes
 function C_LFGList.ValidateRequiredDungeonScore(dungeonScore) end
 
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_LFGList.ValidateRequiredPvpRatingForActivity)
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_LFGList.ValidateRequiredPvpRatingForActivity)
 ---@param activityID number
 ---@param rating number
 ---@return boolean passes

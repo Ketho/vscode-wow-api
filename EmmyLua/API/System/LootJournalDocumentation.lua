@@ -1,12 +1,12 @@
 ---@meta
 C_LootJournal = {}
 
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_LootJournal.GetItemSetItems)
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_LootJournal.GetItemSetItems)
 ---@param setID number
 ---@return LootJournalItemInfo[] items
 function C_LootJournal.GetItemSetItems(setID) end
 
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_LootJournal.GetItemSets)
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_LootJournal.GetItemSets)
 ---@param classID? number
 ---@param specID? number
 ---@return LootJournalItemSetInfo[] itemSets

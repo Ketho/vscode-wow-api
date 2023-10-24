@@ -1,12 +1,12 @@
 ---@meta
 C_AlliedRaces = {}
 
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_AlliedRaces.GetAllRacialAbilitiesFromID)
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_AlliedRaces.GetAllRacialAbilitiesFromID)
 ---@param raceID number
 ---@return AlliedRaceRacialAbility[] allDisplayInfo
 function C_AlliedRaces.GetAllRacialAbilitiesFromID(raceID) end
 
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_AlliedRaces.GetRaceInfoByID)
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_AlliedRaces.GetRaceInfoByID)
 ---@param raceID number
 ---@return AlliedRaceInfo info
 function C_AlliedRaces.GetRaceInfoByID(raceID) end

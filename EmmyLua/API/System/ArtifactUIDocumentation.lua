@@ -1,56 +1,56 @@
 ---@meta
 C_ArtifactUI = {}
 
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_ArtifactUI.AddPower)
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_ArtifactUI.AddPower)
 ---@param powerID number
 ---@return boolean success
 function C_ArtifactUI.AddPower(powerID) end
 
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_ArtifactUI.ApplyCursorRelicToSlot)
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_ArtifactUI.ApplyCursorRelicToSlot)
 ---@param relicSlotIndex number
 function C_ArtifactUI.ApplyCursorRelicToSlot(relicSlotIndex) end
 
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_ArtifactUI.CanApplyArtifactRelic)
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_ArtifactUI.CanApplyArtifactRelic)
 ---@param relicItemID number
 ---@param onlyUnlocked boolean
 ---@return boolean canApply
 function C_ArtifactUI.CanApplyArtifactRelic(relicItemID, onlyUnlocked) end
 
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_ArtifactUI.CanApplyCursorRelicToSlot)
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_ArtifactUI.CanApplyCursorRelicToSlot)
 ---@param relicSlotIndex number
 ---@return boolean canApply
 function C_ArtifactUI.CanApplyCursorRelicToSlot(relicSlotIndex) end
 
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_ArtifactUI.CanApplyRelicItemIDToEquippedArtifactSlot)
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_ArtifactUI.CanApplyRelicItemIDToEquippedArtifactSlot)
 ---@param relicItemID number
 ---@param relicSlotIndex number
 ---@return boolean canApply
 function C_ArtifactUI.CanApplyRelicItemIDToEquippedArtifactSlot(relicItemID, relicSlotIndex) end
 
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_ArtifactUI.CanApplyRelicItemIDToSlot)
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_ArtifactUI.CanApplyRelicItemIDToSlot)
 ---@param relicItemID number
 ---@param relicSlotIndex number
 ---@return boolean canApply
 function C_ArtifactUI.CanApplyRelicItemIDToSlot(relicItemID, relicSlotIndex) end
 
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_ArtifactUI.CheckRespecNPC)
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_ArtifactUI.CheckRespecNPC)
 ---@return boolean canRespec
 function C_ArtifactUI.CheckRespecNPC() end
 
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_ArtifactUI.Clear)
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_ArtifactUI.Clear)
 function C_ArtifactUI.Clear() end
 
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_ArtifactUI.ClearForgeCamera)
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_ArtifactUI.ClearForgeCamera)
 function C_ArtifactUI.ClearForgeCamera() end
 
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_ArtifactUI.ConfirmRespec)
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_ArtifactUI.ConfirmRespec)
 function C_ArtifactUI.ConfirmRespec() end
 
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_ArtifactUI.DoesEquippedArtifactHaveAnyRelicsSlotted)
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_ArtifactUI.DoesEquippedArtifactHaveAnyRelicsSlotted)
 ---@return boolean hasAnyRelicsSlotted
 function C_ArtifactUI.DoesEquippedArtifactHaveAnyRelicsSlotted() end
 
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_ArtifactUI.GetAppearanceInfo)
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_ArtifactUI.GetAppearanceInfo)
 ---@param appearanceSetIndex number
 ---@param appearanceIndex number
 ---@return number artifactAppearanceID
@@ -68,7 +68,7 @@ function C_ArtifactUI.DoesEquippedArtifactHaveAnyRelicsSlotted() end
 ---@return boolean obtainable
 function C_ArtifactUI.GetAppearanceInfo(appearanceSetIndex, appearanceIndex) end
 
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_ArtifactUI.GetAppearanceInfoByID)
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_ArtifactUI.GetAppearanceInfoByID)
 ---@param artifactAppearanceID number
 ---@return number artifactAppearanceSetID
 ---@return number artifactAppearanceID
@@ -86,7 +86,7 @@ function C_ArtifactUI.GetAppearanceInfo(appearanceSetIndex, appearanceIndex) end
 ---@return boolean obtainable
 function C_ArtifactUI.GetAppearanceInfoByID(artifactAppearanceID) end
 
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_ArtifactUI.GetAppearanceSetInfo)
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_ArtifactUI.GetAppearanceSetInfo)
 ---@param appearanceSetIndex number
 ---@return number artifactAppearanceSetID
 ---@return string appearanceSetName
@@ -94,11 +94,11 @@ function C_ArtifactUI.GetAppearanceInfoByID(artifactAppearanceID) end
 ---@return number numAppearances
 function C_ArtifactUI.GetAppearanceSetInfo(appearanceSetIndex) end
 
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_ArtifactUI.GetArtifactArtInfo)
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_ArtifactUI.GetArtifactArtInfo)
 ---@return ArtifactArtInfo artifactArtInfo
 function C_ArtifactUI.GetArtifactArtInfo() end
 
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_ArtifactUI.GetArtifactInfo)
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_ArtifactUI.GetArtifactInfo)
 ---@return number itemID
 ---@return number? altItemID
 ---@return string name
@@ -114,31 +114,31 @@ function C_ArtifactUI.GetArtifactArtInfo() end
 ---@return number tier
 function C_ArtifactUI.GetArtifactInfo() end
 
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_ArtifactUI.GetArtifactItemID)
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_ArtifactUI.GetArtifactItemID)
 ---@return number itemID
 function C_ArtifactUI.GetArtifactItemID() end
 
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_ArtifactUI.GetArtifactTier)
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_ArtifactUI.GetArtifactTier)
 ---@return number? tier
 function C_ArtifactUI.GetArtifactTier() end
 
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_ArtifactUI.GetArtifactXPRewardTargetInfo)
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_ArtifactUI.GetArtifactXPRewardTargetInfo)
 ---@param artifactCategoryID number
 ---@return string name
 ---@return fileID icon
 function C_ArtifactUI.GetArtifactXPRewardTargetInfo(artifactCategoryID) end
 
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_ArtifactUI.GetCostForPointAtRank)
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_ArtifactUI.GetCostForPointAtRank)
 ---@param rank number
 ---@param tier number
 ---@return number cost
 function C_ArtifactUI.GetCostForPointAtRank(rank, tier) end
 
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_ArtifactUI.GetEquippedArtifactArtInfo)
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_ArtifactUI.GetEquippedArtifactArtInfo)
 ---@return ArtifactArtInfo artifactArtInfo
 function C_ArtifactUI.GetEquippedArtifactArtInfo() end
 
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_ArtifactUI.GetEquippedArtifactInfo)
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_ArtifactUI.GetEquippedArtifactInfo)
 ---@return number itemID
 ---@return number? altItemID
 ---@return string name
@@ -154,16 +154,16 @@ function C_ArtifactUI.GetEquippedArtifactArtInfo() end
 ---@return number tier
 function C_ArtifactUI.GetEquippedArtifactInfo() end
 
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_ArtifactUI.GetEquippedArtifactItemID)
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_ArtifactUI.GetEquippedArtifactItemID)
 ---@return number itemID
 function C_ArtifactUI.GetEquippedArtifactItemID() end
 
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_ArtifactUI.GetEquippedArtifactNumRelicSlots)
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_ArtifactUI.GetEquippedArtifactNumRelicSlots)
 ---@param onlyUnlocked? boolean Default = false
 ---@return number numRelicSlots
 function C_ArtifactUI.GetEquippedArtifactNumRelicSlots(onlyUnlocked) end
 
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_ArtifactUI.GetEquippedArtifactRelicInfo)
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_ArtifactUI.GetEquippedArtifactRelicInfo)
 ---@param relicSlotIndex number
 ---@return string name
 ---@return fileID icon
@@ -171,79 +171,79 @@ function C_ArtifactUI.GetEquippedArtifactNumRelicSlots(onlyUnlocked) end
 ---@return string link
 function C_ArtifactUI.GetEquippedArtifactRelicInfo(relicSlotIndex) end
 
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_ArtifactUI.GetEquippedRelicLockedReason)
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_ArtifactUI.GetEquippedRelicLockedReason)
 ---@param relicSlotIndex number
 ---@return string? lockedReason
 function C_ArtifactUI.GetEquippedRelicLockedReason(relicSlotIndex) end
 
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_ArtifactUI.GetForgeRotation)
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_ArtifactUI.GetForgeRotation)
 ---@return number forgeRotationX
 ---@return number forgeRotationY
 ---@return number forgeRotationZ
 function C_ArtifactUI.GetForgeRotation() end
 
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_ArtifactUI.GetItemLevelIncreaseProvidedByRelic)
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_ArtifactUI.GetItemLevelIncreaseProvidedByRelic)
 ---@param itemLinkOrID ItemInfo
 ---@return number itemIevelIncrease
 function C_ArtifactUI.GetItemLevelIncreaseProvidedByRelic(itemLinkOrID) end
 
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_ArtifactUI.GetMetaPowerInfo)
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_ArtifactUI.GetMetaPowerInfo)
 ---@return number spellID
 ---@return number powerCost
 ---@return number currentRank
 function C_ArtifactUI.GetMetaPowerInfo() end
 
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_ArtifactUI.GetNumAppearanceSets)
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_ArtifactUI.GetNumAppearanceSets)
 ---@return number numAppearanceSets
 function C_ArtifactUI.GetNumAppearanceSets() end
 
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_ArtifactUI.GetNumObtainedArtifacts)
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_ArtifactUI.GetNumObtainedArtifacts)
 ---@return number numObtainedArtifacts
 function C_ArtifactUI.GetNumObtainedArtifacts() end
 
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_ArtifactUI.GetNumRelicSlots)
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_ArtifactUI.GetNumRelicSlots)
 ---@param onlyUnlocked? boolean Default = false
 ---@return number numRelicSlots
 function C_ArtifactUI.GetNumRelicSlots(onlyUnlocked) end
 
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_ArtifactUI.GetPointsRemaining)
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_ArtifactUI.GetPointsRemaining)
 ---@return number pointsRemaining
 function C_ArtifactUI.GetPointsRemaining() end
 
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_ArtifactUI.GetPowerHyperlink)
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_ArtifactUI.GetPowerHyperlink)
 ---@param powerID number
 ---@return string link
 function C_ArtifactUI.GetPowerHyperlink(powerID) end
 
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_ArtifactUI.GetPowerInfo)
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_ArtifactUI.GetPowerInfo)
 ---@param powerID number
 ---@return ArtifactPowerInfo powerInfo
 function C_ArtifactUI.GetPowerInfo(powerID) end
 
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_ArtifactUI.GetPowerLinks)
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_ArtifactUI.GetPowerLinks)
 ---@param powerID number
 ---@return number[] linkingPowerID
 function C_ArtifactUI.GetPowerLinks(powerID) end
 
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_ArtifactUI.GetPowers)
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_ArtifactUI.GetPowers)
 ---@return number[] powerID
 function C_ArtifactUI.GetPowers() end
 
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_ArtifactUI.GetPowersAffectedByRelic)
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_ArtifactUI.GetPowersAffectedByRelic)
 ---@param relicSlotIndex number
 ---@return number powerIDs
 function C_ArtifactUI.GetPowersAffectedByRelic(relicSlotIndex) end
 
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_ArtifactUI.GetPowersAffectedByRelicItemLink)
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_ArtifactUI.GetPowersAffectedByRelicItemLink)
 ---@param relicItemInfo ItemInfo
 ---@return number powerIDs
 function C_ArtifactUI.GetPowersAffectedByRelicItemLink(relicItemInfo) end
 
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_ArtifactUI.GetPreviewAppearance)
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_ArtifactUI.GetPreviewAppearance)
 ---@return number? artifactAppearanceID
 function C_ArtifactUI.GetPreviewAppearance() end
 
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_ArtifactUI.GetRelicInfo)
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_ArtifactUI.GetRelicInfo)
 ---@param relicSlotIndex number
 ---@return string name
 ---@return fileID icon
@@ -251,7 +251,7 @@ function C_ArtifactUI.GetPreviewAppearance() end
 ---@return string link
 function C_ArtifactUI.GetRelicInfo(relicSlotIndex) end
 
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_ArtifactUI.GetRelicInfoByItemID)
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_ArtifactUI.GetRelicInfoByItemID)
 ---@param itemID number
 ---@return string name
 ---@return fileID icon
@@ -259,21 +259,21 @@ function C_ArtifactUI.GetRelicInfo(relicSlotIndex) end
 ---@return string link
 function C_ArtifactUI.GetRelicInfoByItemID(itemID) end
 
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_ArtifactUI.GetRelicLockedReason)
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_ArtifactUI.GetRelicLockedReason)
 ---@param relicSlotIndex number
 ---@return string? lockedReason
 function C_ArtifactUI.GetRelicLockedReason(relicSlotIndex) end
 
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_ArtifactUI.GetRelicSlotType)
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_ArtifactUI.GetRelicSlotType)
 ---@param relicSlotIndex number
 ---@return string slotTypeName
 function C_ArtifactUI.GetRelicSlotType(relicSlotIndex) end
 
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_ArtifactUI.GetRespecArtifactArtInfo)
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_ArtifactUI.GetRespecArtifactArtInfo)
 ---@return ArtifactArtInfo artifactArtInfo
 function C_ArtifactUI.GetRespecArtifactArtInfo() end
 
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_ArtifactUI.GetRespecArtifactInfo)
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_ArtifactUI.GetRespecArtifactInfo)
 ---@return number itemID
 ---@return number? altItemID
 ---@return string name
@@ -289,74 +289,74 @@ function C_ArtifactUI.GetRespecArtifactArtInfo() end
 ---@return number tier
 function C_ArtifactUI.GetRespecArtifactInfo() end
 
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_ArtifactUI.GetRespecCost)
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_ArtifactUI.GetRespecCost)
 ---@return number cost
 function C_ArtifactUI.GetRespecCost() end
 
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_ArtifactUI.GetTotalPowerCost)
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_ArtifactUI.GetTotalPowerCost)
 ---@param startingTrait number
 ---@param numTraits number
 ---@param artifactTier number
 ---@return number totalArtifactPowerCost
 function C_ArtifactUI.GetTotalPowerCost(startingTrait, numTraits, artifactTier) end
 
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_ArtifactUI.GetTotalPurchasedRanks)
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_ArtifactUI.GetTotalPurchasedRanks)
 ---@return number totalPurchasedRanks
 function C_ArtifactUI.GetTotalPurchasedRanks() end
 
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_ArtifactUI.IsArtifactDisabled)
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_ArtifactUI.IsArtifactDisabled)
 ---@return boolean artifactDisabled
 function C_ArtifactUI.IsArtifactDisabled() end
 
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_ArtifactUI.IsArtifactItem)
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_ArtifactUI.IsArtifactItem)
 ---@param itemLocation ItemLocationMixin
 ---@return boolean isArtifact
 function C_ArtifactUI.IsArtifactItem(itemLocation) end
 
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_ArtifactUI.IsAtForge)
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_ArtifactUI.IsAtForge)
 ---@return boolean isAtForge
 function C_ArtifactUI.IsAtForge() end
 
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_ArtifactUI.IsEquippedArtifactDisabled)
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_ArtifactUI.IsEquippedArtifactDisabled)
 ---@return boolean artifactDisabled
 function C_ArtifactUI.IsEquippedArtifactDisabled() end
 
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_ArtifactUI.IsEquippedArtifactMaxed)
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_ArtifactUI.IsEquippedArtifactMaxed)
 ---@return boolean artifactMaxed
 function C_ArtifactUI.IsEquippedArtifactMaxed() end
 
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_ArtifactUI.IsMaxedByRulesOrEffect)
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_ArtifactUI.IsMaxedByRulesOrEffect)
 ---@return boolean isEffectivelyMaxed
 function C_ArtifactUI.IsMaxedByRulesOrEffect() end
 
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_ArtifactUI.IsPowerKnown)
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_ArtifactUI.IsPowerKnown)
 ---@param powerID number
 ---@return boolean known
 function C_ArtifactUI.IsPowerKnown(powerID) end
 
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_ArtifactUI.IsViewedArtifactEquipped)
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_ArtifactUI.IsViewedArtifactEquipped)
 ---@return boolean isViewedArtifactEquipped
 function C_ArtifactUI.IsViewedArtifactEquipped() end
 
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_ArtifactUI.SetAppearance)
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_ArtifactUI.SetAppearance)
 ---@param artifactAppearanceID number
 function C_ArtifactUI.SetAppearance(artifactAppearanceID) end
 
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_ArtifactUI.SetForgeCamera)
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_ArtifactUI.SetForgeCamera)
 function C_ArtifactUI.SetForgeCamera() end
 
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_ArtifactUI.SetForgeRotation)
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_ArtifactUI.SetForgeRotation)
 ---@param forgeRotationX number
 ---@param forgeRotationY number
 ---@param forgeRotationZ number
 function C_ArtifactUI.SetForgeRotation(forgeRotationX, forgeRotationY, forgeRotationZ) end
 
 ---Call without an argument to clear the preview.
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_ArtifactUI.SetPreviewAppearance)
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_ArtifactUI.SetPreviewAppearance)
 ---@param artifactAppearanceID? number Default = 0
 function C_ArtifactUI.SetPreviewAppearance(artifactAppearanceID) end
 
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_ArtifactUI.ShouldSuppressForgeRotation)
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_ArtifactUI.ShouldSuppressForgeRotation)
 ---@return boolean shouldSuppressForgeRotation
 function C_ArtifactUI.ShouldSuppressForgeRotation() end
 

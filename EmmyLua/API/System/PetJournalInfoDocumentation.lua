@@ -1,47 +1,47 @@
 ---@meta
 C_PetJournal = {}
 
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_PetJournal.GetDisplayIDByIndex)
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_PetJournal.GetDisplayIDByIndex)
 ---@param speciesID number
 ---@param index number
 ---@return number? displayID
 function C_PetJournal.GetDisplayIDByIndex(speciesID, index) end
 
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_PetJournal.GetDisplayProbabilityByIndex)
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_PetJournal.GetDisplayProbabilityByIndex)
 ---@param speciesID number
 ---@param index number
 ---@return number? displayProbability
 function C_PetJournal.GetDisplayProbabilityByIndex(speciesID, index) end
 
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_PetJournal.GetNumDisplays)
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_PetJournal.GetNumDisplays)
 ---@param speciesID number
 ---@return number? numDisplays
 function C_PetJournal.GetNumDisplays(speciesID) end
 
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_PetJournal.GetNumPetsInJournal)
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_PetJournal.GetNumPetsInJournal)
 ---@param creatureID number
 ---@return number maxAllowed
 ---@return number numPets
 function C_PetJournal.GetNumPetsInJournal(creatureID) end
 
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_PetJournal.GetPetAbilityInfo)
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_PetJournal.GetPetAbilityInfo)
 ---@param abilityID number
 ---@return string name
 ---@return fileID icon
 ---@return number petType
 function C_PetJournal.GetPetAbilityInfo(abilityID) end
 
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_PetJournal.GetPetAbilityListTable)
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_PetJournal.GetPetAbilityListTable)
 ---@param speciesID number
 ---@return PetAbilityLevelInfo[] info
 function C_PetJournal.GetPetAbilityListTable(speciesID) end
 
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_PetJournal.GetPetInfoTableByPetID)
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_PetJournal.GetPetInfoTableByPetID)
 ---@param petID WOWGUID
 ---@return PetJournalPetInfo info
 function C_PetJournal.GetPetInfoTableByPetID(petID) end
 
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_PetJournal.GetPetLoadOutInfo)
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_PetJournal.GetPetLoadOutInfo)
 ---@param slot number
 ---@return WOWGUID? petID
 ---@return number ability1ID
@@ -50,35 +50,35 @@ function C_PetJournal.GetPetInfoTableByPetID(petID) end
 ---@return boolean locked
 function C_PetJournal.GetPetLoadOutInfo(slot) end
 
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_PetJournal.GetPetSummonInfo)
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_PetJournal.GetPetSummonInfo)
 ---@param battlePetGUID WOWGUID
 ---@return boolean isSummonable
 ---@return Enum.PetJournalError error
 ---@return string errorText
 function C_PetJournal.GetPetSummonInfo(battlePetGUID) end
 
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_PetJournal.HasFavoritePets)
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_PetJournal.HasFavoritePets)
 ---@return boolean hasFavorites
 function C_PetJournal.HasFavoritePets() end
 
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_PetJournal.IsUsingDefaultFilters)
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_PetJournal.IsUsingDefaultFilters)
 ---@return boolean isUsingDefaultFilters
 function C_PetJournal.IsUsingDefaultFilters() end
 
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_PetJournal.PetIsSummonable)
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_PetJournal.PetIsSummonable)
 ---@param battlePetGUID WOWGUID
 ---@return boolean isSummonable
 function C_PetJournal.PetIsSummonable(battlePetGUID) end
 
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_PetJournal.PetUsesRandomDisplay)
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_PetJournal.PetUsesRandomDisplay)
 ---@param speciesID number
 ---@return boolean? usesRandomDisplay
 function C_PetJournal.PetUsesRandomDisplay(speciesID) end
 
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_PetJournal.SetDefaultFilters)
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_PetJournal.SetDefaultFilters)
 function C_PetJournal.SetDefaultFilters() end
 
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_PetJournal.SpellTargetBattlePet)
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_PetJournal.SpellTargetBattlePet)
 ---@param battlePetGUID WOWGUID
 function C_PetJournal.SpellTargetBattlePet(battlePetGUID) end
 

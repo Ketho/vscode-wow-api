@@ -1,7 +1,7 @@
 ---@meta
 C_LoreText = {}
 
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_LoreText.RequestLoreTextForCampaignID)
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_LoreText.RequestLoreTextForCampaignID)
 ---@param campaignID number
 function C_LoreText.RequestLoreTextForCampaignID(campaignID) end
 

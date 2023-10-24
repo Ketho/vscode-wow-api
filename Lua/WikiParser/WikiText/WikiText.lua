@@ -7,7 +7,7 @@ local INPUT = "Lua/Data/cache/World_of_Warcraft_API.xml"
 local m = {}
 
 function m:SaveExport()
-	local url = "https://wowpedia.fandom.com/wiki/Special:Export"
+	local url = "https://warcraft.wiki.gg/wiki/Special:Export"
 	local requestBody = "pages=World_of_Warcraft_API&curonly=1"
 	Util:DownloadFilePost(INPUT, url, requestBody)
 end

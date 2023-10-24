@@ -1,30 +1,30 @@
 ---@meta
 C_HeirloomInfo = {}
 
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_HeirloomInfo.AreAllCollectionFiltersChecked)
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_HeirloomInfo.AreAllCollectionFiltersChecked)
 ---@return boolean areAllCollectionFiltersChecked
 function C_HeirloomInfo.AreAllCollectionFiltersChecked() end
 
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_HeirloomInfo.AreAllSourceFiltersChecked)
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_HeirloomInfo.AreAllSourceFiltersChecked)
 ---@return boolean areAllSourceFiltersChecked
 function C_HeirloomInfo.AreAllSourceFiltersChecked() end
 
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_HeirloomInfo.IsHeirloomSourceValid)
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_HeirloomInfo.IsHeirloomSourceValid)
 ---@param source number
 ---@return boolean isHeirloomSourceValid
 function C_HeirloomInfo.IsHeirloomSourceValid(source) end
 
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_HeirloomInfo.IsUsingDefaultFilters)
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_HeirloomInfo.IsUsingDefaultFilters)
 ---@return boolean isUsingDefaultFilters
 function C_HeirloomInfo.IsUsingDefaultFilters() end
 
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_HeirloomInfo.SetAllCollectionFilters)
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_HeirloomInfo.SetAllCollectionFilters)
 ---@param checked boolean
 function C_HeirloomInfo.SetAllCollectionFilters(checked) end
 
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_HeirloomInfo.SetAllSourceFilters)
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_HeirloomInfo.SetAllSourceFilters)
 ---@param checked boolean
 function C_HeirloomInfo.SetAllSourceFilters(checked) end
 
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_HeirloomInfo.SetDefaultFilters)
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_HeirloomInfo.SetDefaultFilters)
 function C_HeirloomInfo.SetDefaultFilters() end

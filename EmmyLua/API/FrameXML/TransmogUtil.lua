@@ -1,5 +1,5 @@
 ---@meta
----[Documentation](https://wowpedia.fandom.com/wiki/TransmogLocationMixin)
+---[Documentation](https://warcraft.wiki.gg/wiki/TransmogLocationMixin)
 ---@class TransmogPendingInfoMixin
 TransmogPendingInfoMixin = {}
 
@@ -9,7 +9,7 @@ TransmogPendingInfoMixin = {}
 ---@param category number
 function TransmogPendingInfoMixin:Init(pendingType, transmogID, category) end
 
----[Documentation](https://wowpedia.fandom.com/wiki/TransmogLocationMixin)
+---[Documentation](https://warcraft.wiki.gg/wiki/TransmogLocationMixin)
 ---@class TransmogLocationMixin
 TransmogLocationMixin = {}
 

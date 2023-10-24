@@ -1,10 +1,10 @@
 ---@meta
 C_CovenantPreview = {}
 
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_CovenantPreview.CloseFromUI)
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_CovenantPreview.CloseFromUI)
 function C_CovenantPreview.CloseFromUI() end
 
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_CovenantPreview.GetCovenantInfoForPlayerChoiceResponseID)
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_CovenantPreview.GetCovenantInfoForPlayerChoiceResponseID)
 ---@param playerChoiceResponseID number
 ---@return CovenantPreviewInfo previewInfo
 function C_CovenantPreview.GetCovenantInfoForPlayerChoiceResponseID(playerChoiceResponseID) end

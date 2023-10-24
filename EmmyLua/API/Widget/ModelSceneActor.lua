@@ -1,5 +1,5 @@
 ---@meta
----[Documentation](https://wowpedia.fandom.com/wiki/UIOBJECT_ModelSceneActor)
+---[Documentation](https://warcraft.wiki.gg/wiki/UIOBJECT_ModelSceneActor)
 ---@class ModelSceneActor : Object
 local ModelSceneActor = {}
 

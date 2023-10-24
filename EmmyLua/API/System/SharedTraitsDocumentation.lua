@@ -1,116 +1,116 @@
 ---@meta
 C_Traits = {}
 
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_Traits.CanPurchaseRank)
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_Traits.CanPurchaseRank)
 ---@param configID number
 ---@param nodeID number
 ---@param nodeEntryID number
 ---@return boolean canPurchase
 function C_Traits.CanPurchaseRank(configID, nodeID, nodeEntryID) end
 
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_Traits.CanRefundRank)
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_Traits.CanRefundRank)
 ---@param configID number
 ---@param nodeID number
 ---@return boolean canRefund
 function C_Traits.CanRefundRank(configID, nodeID) end
 
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_Traits.CascadeRepurchaseRanks)
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_Traits.CascadeRepurchaseRanks)
 ---@param configID number
 ---@param nodeID number
 ---@return boolean success
 function C_Traits.CascadeRepurchaseRanks(configID, nodeID) end
 
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_Traits.ClearCascadeRepurchaseHistory)
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_Traits.ClearCascadeRepurchaseHistory)
 ---@param configID number
 function C_Traits.ClearCascadeRepurchaseHistory(configID) end
 
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_Traits.CloseTraitSystemInteraction)
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_Traits.CloseTraitSystemInteraction)
 function C_Traits.CloseTraitSystemInteraction() end
 
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_Traits.CommitConfig)
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_Traits.CommitConfig)
 ---@param configID number
 ---@return boolean success
 function C_Traits.CommitConfig(configID) end
 
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_Traits.ConfigHasStagedChanges)
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_Traits.ConfigHasStagedChanges)
 ---@param configID number
 ---@return boolean hasChanges
 function C_Traits.ConfigHasStagedChanges(configID) end
 
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_Traits.GenerateImportString)
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_Traits.GenerateImportString)
 ---@param configID number
 ---@return string importString
 function C_Traits.GenerateImportString(configID) end
 
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_Traits.GenerateInspectImportString)
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_Traits.GenerateInspectImportString)
 ---@param target string
 ---@return string importString
 function C_Traits.GenerateInspectImportString(target) end
 
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_Traits.GetConditionInfo)
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_Traits.GetConditionInfo)
 ---@param configID number
 ---@param condID number
 ---@return TraitCondInfo condInfo
 function C_Traits.GetConditionInfo(configID, condID) end
 
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_Traits.GetConfigIDBySystemID)
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_Traits.GetConfigIDBySystemID)
 ---@param systemID number
 ---@return number configID
 function C_Traits.GetConfigIDBySystemID(systemID) end
 
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_Traits.GetConfigIDByTreeID)
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_Traits.GetConfigIDByTreeID)
 ---@param treeID number
 ---@return number configID
 function C_Traits.GetConfigIDByTreeID(treeID) end
 
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_Traits.GetConfigInfo)
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_Traits.GetConfigInfo)
 ---@param configID number
 ---@return TraitConfigInfo configInfo
 function C_Traits.GetConfigInfo(configID) end
 
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_Traits.GetConfigsByType)
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_Traits.GetConfigsByType)
 ---@param configType number|Enum.TraitConfigType
 ---@return number[] configIDs
 function C_Traits.GetConfigsByType(configType) end
 
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_Traits.GetDefinitionInfo)
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_Traits.GetDefinitionInfo)
 ---@param definitionID number
 ---@return TraitDefinitionInfo definitionInfo
 function C_Traits.GetDefinitionInfo(definitionID) end
 
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_Traits.GetEntryInfo)
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_Traits.GetEntryInfo)
 ---@param configID number
 ---@param entryID number
 ---@return TraitEntryInfo entryInfo
 function C_Traits.GetEntryInfo(configID, entryID) end
 
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_Traits.GetLoadoutSerializationVersion)
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_Traits.GetLoadoutSerializationVersion)
 ---@return number serializationVersion
 function C_Traits.GetLoadoutSerializationVersion() end
 
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_Traits.GetNodeCost)
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_Traits.GetNodeCost)
 ---@param configID number
 ---@param nodeID number
 ---@return TraitCurrencyCost[] costs
 function C_Traits.GetNodeCost(configID, nodeID) end
 
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_Traits.GetNodeInfo)
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_Traits.GetNodeInfo)
 ---@param configID number
 ---@param nodeID number
 ---@return TraitNodeInfo nodeInfo
 function C_Traits.GetNodeInfo(configID, nodeID) end
 
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_Traits.GetStagedChangesCost)
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_Traits.GetStagedChangesCost)
 ---@param configID number
 ---@return TraitCurrencyCost[] costs
 function C_Traits.GetStagedChangesCost(configID) end
 
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_Traits.GetStagedPurchases)
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_Traits.GetStagedPurchases)
 ---@param configID number
 ---@return number[] nodeIDsWithPurchases
 function C_Traits.GetStagedPurchases(configID) end
 
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_Traits.GetTraitCurrencyInfo)
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_Traits.GetTraitCurrencyInfo)
 ---@param traitCurrencyID number
 ---@return number flags
 ---@return number type
@@ -118,103 +118,103 @@ function C_Traits.GetStagedPurchases(configID) end
 ---@return number? icon
 function C_Traits.GetTraitCurrencyInfo(traitCurrencyID) end
 
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_Traits.GetTraitDescription)
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_Traits.GetTraitDescription)
 ---@param entryID number
 ---@param rank number
 ---@return string description
 function C_Traits.GetTraitDescription(entryID, rank) end
 
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_Traits.GetTraitSystemFlags)
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_Traits.GetTraitSystemFlags)
 ---@param configID number
 ---@return number flags
 function C_Traits.GetTraitSystemFlags(configID) end
 
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_Traits.GetTraitSystemWidgetSetID)
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_Traits.GetTraitSystemWidgetSetID)
 ---@param configID number
 ---@return number uiWidgetSetID
 function C_Traits.GetTraitSystemWidgetSetID(configID) end
 
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_Traits.GetTreeCurrencyInfo)
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_Traits.GetTreeCurrencyInfo)
 ---@param configID number
 ---@param treeID number
 ---@param excludeStagedChanges boolean
 ---@return TreeCurrencyInfo[] treeCurrencyInfo
 function C_Traits.GetTreeCurrencyInfo(configID, treeID, excludeStagedChanges) end
 
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_Traits.GetTreeHash)
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_Traits.GetTreeHash)
 ---@param treeID number
 ---@return number[] result
 function C_Traits.GetTreeHash(treeID) end
 
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_Traits.GetTreeInfo)
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_Traits.GetTreeInfo)
 ---@param configID number
 ---@param treeID number
 ---@return TraitTreeInfo treeInfo
 function C_Traits.GetTreeInfo(configID, treeID) end
 
 ---Returns a list of nodeIDs, sorted ascending, for a given treeID. Contains nodes for all class specializations.
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_Traits.GetTreeNodes)
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_Traits.GetTreeNodes)
 ---@param treeID number
 ---@return number[] nodeIDs
 function C_Traits.GetTreeNodes(treeID) end
 
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_Traits.HasValidInspectData)
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_Traits.HasValidInspectData)
 ---@return boolean hasValidInspectData
 function C_Traits.HasValidInspectData() end
 
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_Traits.IsReadyForCommit)
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_Traits.IsReadyForCommit)
 ---@return boolean isReadyForCommit
 function C_Traits.IsReadyForCommit() end
 
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_Traits.PurchaseRank)
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_Traits.PurchaseRank)
 ---@param configID number
 ---@param nodeID number
 ---@return boolean success
 function C_Traits.PurchaseRank(configID, nodeID) end
 
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_Traits.RefundAllRanks)
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_Traits.RefundAllRanks)
 ---@param configID number
 ---@param nodeID number
 ---@return boolean success
 function C_Traits.RefundAllRanks(configID, nodeID) end
 
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_Traits.RefundRank)
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_Traits.RefundRank)
 ---@param configID number
 ---@param nodeID number
 ---@return boolean success
 function C_Traits.RefundRank(configID, nodeID) end
 
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_Traits.ResetTree)
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_Traits.ResetTree)
 ---@param configID number
 ---@param treeID number
 ---@return boolean success
 function C_Traits.ResetTree(configID, treeID) end
 
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_Traits.ResetTreeByCurrency)
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_Traits.ResetTreeByCurrency)
 ---@param configID number
 ---@param treeID number
 ---@param traitCurrencyID number
 ---@return boolean success
 function C_Traits.ResetTreeByCurrency(configID, treeID, traitCurrencyID) end
 
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_Traits.RollbackConfig)
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_Traits.RollbackConfig)
 ---@param configID number
 ---@return boolean success
 function C_Traits.RollbackConfig(configID) end
 
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_Traits.SetSelection)
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_Traits.SetSelection)
 ---@param configID number
 ---@param nodeID number
 ---@param nodeEntryID? number
 ---@return boolean success
 function C_Traits.SetSelection(configID, nodeID, nodeEntryID) end
 
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_Traits.StageConfig)
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_Traits.StageConfig)
 ---@param configID number
 ---@return boolean success
 function C_Traits.StageConfig(configID) end
 
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_Traits.TalentTestUnlearnSpells)
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_Traits.TalentTestUnlearnSpells)
 function C_Traits.TalentTestUnlearnSpells() end
 
 ---@class TraitCondInfo

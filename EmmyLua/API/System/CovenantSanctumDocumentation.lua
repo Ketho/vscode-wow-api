@@ -1,69 +1,69 @@
 ---@meta
 C_CovenantSanctumUI = {}
 
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_CovenantSanctumUI.CanAccessReservoir)
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_CovenantSanctumUI.CanAccessReservoir)
 ---@return boolean canAccess
 function C_CovenantSanctumUI.CanAccessReservoir() end
 
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_CovenantSanctumUI.CanDepositAnima)
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_CovenantSanctumUI.CanDepositAnima)
 ---@return boolean canDeposit
 function C_CovenantSanctumUI.CanDepositAnima() end
 
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_CovenantSanctumUI.DepositAnima)
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_CovenantSanctumUI.DepositAnima)
 function C_CovenantSanctumUI.DepositAnima() end
 
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_CovenantSanctumUI.EndInteraction)
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_CovenantSanctumUI.EndInteraction)
 function C_CovenantSanctumUI.EndInteraction() end
 
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_CovenantSanctumUI.GetAnimaInfo)
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_CovenantSanctumUI.GetAnimaInfo)
 ---@return number currencyID
 ---@return number maxDisplayableValue
 function C_CovenantSanctumUI.GetAnimaInfo() end
 
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_CovenantSanctumUI.GetCurrentTalentTreeID)
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_CovenantSanctumUI.GetCurrentTalentTreeID)
 ---@return number? currentTalentTreeID
 function C_CovenantSanctumUI.GetCurrentTalentTreeID() end
 
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_CovenantSanctumUI.GetFeatures)
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_CovenantSanctumUI.GetFeatures)
 ---@return CovenantSanctumFeatureInfo[] features
 function C_CovenantSanctumUI.GetFeatures() end
 
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_CovenantSanctumUI.GetRenownLevel)
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_CovenantSanctumUI.GetRenownLevel)
 ---@return number level
 function C_CovenantSanctumUI.GetRenownLevel() end
 
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_CovenantSanctumUI.GetRenownLevels)
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_CovenantSanctumUI.GetRenownLevels)
 ---@param covenantID number
 ---@return CovenantSanctumRenownLevelInfo[] levels
 function C_CovenantSanctumUI.GetRenownLevels(covenantID) end
 
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_CovenantSanctumUI.GetRenownRewardsForLevel)
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_CovenantSanctumUI.GetRenownRewardsForLevel)
 ---@param covenantID number
 ---@param renownLevel number
 ---@return CovenantSanctumRenownRewardInfo[] rewards
 function C_CovenantSanctumUI.GetRenownRewardsForLevel(covenantID, renownLevel) end
 
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_CovenantSanctumUI.GetSanctumType)
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_CovenantSanctumUI.GetSanctumType)
 ---@return Enum.GarrTalentFeatureSubtype? sanctumType
 function C_CovenantSanctumUI.GetSanctumType() end
 
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_CovenantSanctumUI.GetSoulCurrencies)
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_CovenantSanctumUI.GetSoulCurrencies)
 ---@return number[] currencyIDs
 function C_CovenantSanctumUI.GetSoulCurrencies() end
 
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_CovenantSanctumUI.HasMaximumRenown)
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_CovenantSanctumUI.HasMaximumRenown)
 ---@return boolean hasMaxRenown
 function C_CovenantSanctumUI.HasMaximumRenown() end
 
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_CovenantSanctumUI.IsPlayerInRenownCatchUpMode)
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_CovenantSanctumUI.IsPlayerInRenownCatchUpMode)
 ---@return boolean isInCatchUpMode
 function C_CovenantSanctumUI.IsPlayerInRenownCatchUpMode() end
 
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_CovenantSanctumUI.IsWeeklyRenownCapped)
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_CovenantSanctumUI.IsWeeklyRenownCapped)
 ---@return boolean isWeeklyCapped
 function C_CovenantSanctumUI.IsWeeklyRenownCapped() end
 
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_CovenantSanctumUI.RequestCatchUpState)
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_CovenantSanctumUI.RequestCatchUpState)
 function C_CovenantSanctumUI.RequestCatchUpState() end
 
 ---@class CovenantSanctumFeatureInfo

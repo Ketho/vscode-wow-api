@@ -1,78 +1,78 @@
 ---@meta
 C_GuildInfo = {}
 
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_GuildInfo.CanEditOfficerNote)
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_GuildInfo.CanEditOfficerNote)
 ---@return boolean canEditOfficerNote
 function C_GuildInfo.CanEditOfficerNote() end
 
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_GuildInfo.CanSpeakInGuildChat)
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_GuildInfo.CanSpeakInGuildChat)
 ---@return boolean canSpeakInGuildChat
 function C_GuildInfo.CanSpeakInGuildChat() end
 
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_GuildInfo.CanViewOfficerNote)
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_GuildInfo.CanViewOfficerNote)
 ---@return boolean canViewOfficerNote
 function C_GuildInfo.CanViewOfficerNote() end
 
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_GuildInfo.GetGuildNewsInfo)
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_GuildInfo.GetGuildNewsInfo)
 ---@param index number
 ---@return GuildNewsInfo newsInfo
 function C_GuildInfo.GetGuildNewsInfo(index) end
 
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_GuildInfo.GetGuildRankOrder)
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_GuildInfo.GetGuildRankOrder)
 ---@param guid WOWGUID
 ---@return number rankOrder
 function C_GuildInfo.GetGuildRankOrder(guid) end
 
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_GuildInfo.GetGuildTabardInfo)
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_GuildInfo.GetGuildTabardInfo)
 ---@param unit? UnitToken
 ---@return GuildTabardInfo? tabardInfo
 function C_GuildInfo.GetGuildTabardInfo(unit) end
 
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_GuildInfo.GuildControlGetRankFlags)
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_GuildInfo.GuildControlGetRankFlags)
 ---@param rankOrder number
 ---@return boolean[] permissions
 function C_GuildInfo.GuildControlGetRankFlags(rankOrder) end
 
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_GuildInfo.GuildRoster)
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_GuildInfo.GuildRoster)
 function C_GuildInfo.GuildRoster() end
 
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_GuildInfo.IsGuildOfficer)
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_GuildInfo.IsGuildOfficer)
 ---@return boolean isOfficer
 function C_GuildInfo.IsGuildOfficer() end
 
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_GuildInfo.IsGuildRankAssignmentAllowed)
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_GuildInfo.IsGuildRankAssignmentAllowed)
 ---@param guid WOWGUID
 ---@param rankOrder number
 ---@return boolean isGuildRankAssignmentAllowed
 function C_GuildInfo.IsGuildRankAssignmentAllowed(guid, rankOrder) end
 
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_GuildInfo.MemberExistsByName)
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_GuildInfo.MemberExistsByName)
 ---@param name string
 ---@return boolean exists
 function C_GuildInfo.MemberExistsByName(name) end
 
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_GuildInfo.QueryGuildMemberRecipes)
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_GuildInfo.QueryGuildMemberRecipes)
 ---@param guildMemberGUID WOWGUID
 ---@param skillLineID number
 function C_GuildInfo.QueryGuildMemberRecipes(guildMemberGUID, skillLineID) end
 
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_GuildInfo.QueryGuildMembersForRecipe)
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_GuildInfo.QueryGuildMembersForRecipe)
 ---@param skillLineID number
 ---@param recipeSpellID number
 ---@param recipeLevel? number
 ---@return number updatedRecipeSpellID
 function C_GuildInfo.QueryGuildMembersForRecipe(skillLineID, recipeSpellID, recipeLevel) end
 
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_GuildInfo.RemoveFromGuild)
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_GuildInfo.RemoveFromGuild)
 ---@param guid WOWGUID
 function C_GuildInfo.RemoveFromGuild(guid) end
 
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_GuildInfo.SetGuildRankOrder)
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_GuildInfo.SetGuildRankOrder)
 ---@param guid WOWGUID
 ---@param rankOrder number
 function C_GuildInfo.SetGuildRankOrder(guid, rankOrder) end
 
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_GuildInfo.SetNote)
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_GuildInfo.SetNote)
 ---@param guid WOWGUID
 ---@param note string
 ---@param isPublic boolean

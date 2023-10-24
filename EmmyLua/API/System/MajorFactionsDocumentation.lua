@@ -1,60 +1,60 @@
 ---@meta
 C_MajorFactions = {}
 
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_MajorFactions.GetCovenantIDForMajorFaction)
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_MajorFactions.GetCovenantIDForMajorFaction)
 ---@param majorFactionID number
 ---@return number covenantID
 function C_MajorFactions.GetCovenantIDForMajorFaction(majorFactionID) end
 
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_MajorFactions.GetCurrentRenownLevel)
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_MajorFactions.GetCurrentRenownLevel)
 ---@param majorFactionID number
 ---@return number level
 function C_MajorFactions.GetCurrentRenownLevel(majorFactionID) end
 
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_MajorFactions.GetFeatureAbilities)
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_MajorFactions.GetFeatureAbilities)
 ---@return MajorFactionFeatureAbilityInfo[] featureAbilities
 function C_MajorFactions.GetFeatureAbilities() end
 
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_MajorFactions.GetMajorFactionData)
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_MajorFactions.GetMajorFactionData)
 ---@param majorFactionID number
 ---@return MajorFactionData? data
 function C_MajorFactions.GetMajorFactionData(majorFactionID) end
 
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_MajorFactions.GetMajorFactionIDs)
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_MajorFactions.GetMajorFactionIDs)
 ---@param expansionID? number
 ---@return number[] majorFactionIDs
 function C_MajorFactions.GetMajorFactionIDs(expansionID) end
 
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_MajorFactions.GetRenownLevels)
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_MajorFactions.GetRenownLevels)
 ---@param majorFactionID number
 ---@return MajorFactionRenownLevelInfo[] levels
 function C_MajorFactions.GetRenownLevels(majorFactionID) end
 
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_MajorFactions.GetRenownNPCFactionID)
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_MajorFactions.GetRenownNPCFactionID)
 ---@return number renownNPCFactionID
 function C_MajorFactions.GetRenownNPCFactionID() end
 
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_MajorFactions.GetRenownRewardsForLevel)
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_MajorFactions.GetRenownRewardsForLevel)
 ---@param majorFactionID number
 ---@param renownLevel number
 ---@return MajorFactionRenownRewardInfo[] rewards
 function C_MajorFactions.GetRenownRewardsForLevel(majorFactionID, renownLevel) end
 
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_MajorFactions.HasMaximumRenown)
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_MajorFactions.HasMaximumRenown)
 ---@param majorFactionID number
 ---@return boolean hasMaxRenown
 function C_MajorFactions.HasMaximumRenown(majorFactionID) end
 
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_MajorFactions.IsPlayerInRenownCatchUpMode)
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_MajorFactions.IsPlayerInRenownCatchUpMode)
 ---@return boolean isInCatchUpMode
 function C_MajorFactions.IsPlayerInRenownCatchUpMode() end
 
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_MajorFactions.IsWeeklyRenownCapped)
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_MajorFactions.IsWeeklyRenownCapped)
 ---@param majorFactionID number
 ---@return boolean isWeeklyCapped
 function C_MajorFactions.IsWeeklyRenownCapped(majorFactionID) end
 
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_MajorFactions.RequestCatchUpState)
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_MajorFactions.RequestCatchUpState)
 function C_MajorFactions.RequestCatchUpState() end
 
 ---@class MajorFactionData

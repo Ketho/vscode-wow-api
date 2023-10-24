@@ -1,7 +1,7 @@
 ---@meta
 C_ScriptedAnimations = {}
 
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_ScriptedAnimations.GetAllScriptedAnimationEffects)
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_ScriptedAnimations.GetAllScriptedAnimationEffects)
 ---@return ScriptedAnimationEffect[] scriptedAnimationEffects
 function C_ScriptedAnimations.GetAllScriptedAnimationEffects() end
 

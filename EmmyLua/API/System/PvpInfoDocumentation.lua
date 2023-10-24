@@ -1,76 +1,76 @@
 ---@meta
 C_PvP = {}
 
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_PvP.ArePvpTalentsUnlocked)
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_PvP.ArePvpTalentsUnlocked)
 ---@return boolean arePvpTalentsUnlocked
 function C_PvP.ArePvpTalentsUnlocked() end
 
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_PvP.CanDisplayDamage)
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_PvP.CanDisplayDamage)
 ---@return boolean canDisplay
 function C_PvP.CanDisplayDamage() end
 
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_PvP.CanDisplayDeaths)
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_PvP.CanDisplayDeaths)
 ---@return boolean canDisplay
 function C_PvP.CanDisplayDeaths() end
 
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_PvP.CanDisplayHealing)
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_PvP.CanDisplayHealing)
 ---@return boolean canDisplay
 function C_PvP.CanDisplayHealing() end
 
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_PvP.CanDisplayHonorableKills)
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_PvP.CanDisplayHonorableKills)
 ---@return boolean canDisplay
 function C_PvP.CanDisplayHonorableKills() end
 
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_PvP.CanDisplayKillingBlows)
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_PvP.CanDisplayKillingBlows)
 ---@return boolean canDisplay
 function C_PvP.CanDisplayKillingBlows() end
 
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_PvP.CanPlayerUseRatedPVPUI)
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_PvP.CanPlayerUseRatedPVPUI)
 ---@return boolean canUse
 ---@return string failureReason
 function C_PvP.CanPlayerUseRatedPVPUI() end
 
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_PvP.CanToggleWarMode)
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_PvP.CanToggleWarMode)
 ---@param toggle boolean
 ---@return boolean canTogglePvP
 function C_PvP.CanToggleWarMode(toggle) end
 
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_PvP.CanToggleWarModeInArea)
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_PvP.CanToggleWarModeInArea)
 ---@return boolean canTogglePvPInArea
 function C_PvP.CanToggleWarModeInArea() end
 
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_PvP.DoesMatchOutcomeAffectRating)
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_PvP.DoesMatchOutcomeAffectRating)
 ---@return boolean doesAffect
 function C_PvP.DoesMatchOutcomeAffectRating() end
 
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_PvP.GetActiveBrawlInfo)
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_PvP.GetActiveBrawlInfo)
 ---@return PvpBrawlInfo? brawlInfo
 function C_PvP.GetActiveBrawlInfo() end
 
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_PvP.GetActiveMatchBracket)
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_PvP.GetActiveMatchBracket)
 ---@return number bracket
 function C_PvP.GetActiveMatchBracket() end
 
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_PvP.GetActiveMatchDuration)
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_PvP.GetActiveMatchDuration)
 ---@return time_t seconds
 function C_PvP.GetActiveMatchDuration() end
 
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_PvP.GetActiveMatchState)
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_PvP.GetActiveMatchState)
 ---@return Enum.PvPMatchState state
 function C_PvP.GetActiveMatchState() end
 
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_PvP.GetActiveMatchWinner)
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_PvP.GetActiveMatchWinner)
 ---@return number winner
 function C_PvP.GetActiveMatchWinner() end
 
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_PvP.GetArenaCrowdControlInfo)
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_PvP.GetArenaCrowdControlInfo)
 ---@param playerToken UnitToken
 ---@return number spellID
 ---@return number startTime
 ---@return number duration
 function C_PvP.GetArenaCrowdControlInfo(playerToken) end
 
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_PvP.GetArenaRewards)
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_PvP.GetArenaRewards)
 ---@param teamSize number
 ---@return number honor
 ---@return number experience
@@ -79,7 +79,7 @@ function C_PvP.GetArenaCrowdControlInfo(playerToken) end
 ---@return RoleShortageReward? roleShortageBonus
 function C_PvP.GetArenaRewards(teamSize) end
 
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_PvP.GetArenaSkirmishRewards)
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_PvP.GetArenaSkirmishRewards)
 ---@return number honor
 ---@return number experience
 ---@return BattlefieldItemReward[]? itemRewards
@@ -87,17 +87,17 @@ function C_PvP.GetArenaRewards(teamSize) end
 ---@return RoleShortageReward? roleShortageBonus
 function C_PvP.GetArenaSkirmishRewards() end
 
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_PvP.GetAssignedSpecForBattlefieldQueue)
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_PvP.GetAssignedSpecForBattlefieldQueue)
 ---@param queueID number
 ---@return number? specializationID
 function C_PvP.GetAssignedSpecForBattlefieldQueue(queueID) end
 
 ---If nil is returned, PVP_BRAWL_INFO_UPDATED event will be sent when the data is ready.
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_PvP.GetAvailableBrawlInfo)
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_PvP.GetAvailableBrawlInfo)
 ---@return PvpBrawlInfo? brawlInfo
 function C_PvP.GetAvailableBrawlInfo() end
 
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_PvP.GetBattlefieldFlagPosition)
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_PvP.GetBattlefieldFlagPosition)
 ---@param flagIndex number
 ---@param uiMapId number
 ---@return number? uiPosx
@@ -105,18 +105,18 @@ function C_PvP.GetAvailableBrawlInfo() end
 ---@return number flagTexture
 function C_PvP.GetBattlefieldFlagPosition(flagIndex, uiMapId) end
 
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_PvP.GetBattlefieldVehicleInfo)
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_PvP.GetBattlefieldVehicleInfo)
 ---@param vehicleIndex number
 ---@param uiMapID number
 ---@return BattlefieldVehicleInfo info
 function C_PvP.GetBattlefieldVehicleInfo(vehicleIndex, uiMapID) end
 
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_PvP.GetBattlefieldVehicles)
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_PvP.GetBattlefieldVehicles)
 ---@param uiMapID number
 ---@return BattlefieldVehicleInfo[] vehicles
 function C_PvP.GetBattlefieldVehicles(uiMapID) end
 
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_PvP.GetBrawlRewards)
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_PvP.GetBrawlRewards)
 ---@param brawlType number|Enum.BrawlType
 ---@return number honor
 ---@return number experience
@@ -126,88 +126,88 @@ function C_PvP.GetBattlefieldVehicles(uiMapID) end
 ---@return boolean hasWon
 function C_PvP.GetBrawlRewards(brawlType) end
 
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_PvP.GetCustomVictoryStatID)
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_PvP.GetCustomVictoryStatID)
 ---@return number statID
 function C_PvP.GetCustomVictoryStatID() end
 
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_PvP.GetGlobalPvpScalingInfoForSpecID)
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_PvP.GetGlobalPvpScalingInfoForSpecID)
 ---@param specializationID number
 ---@return PvpScalingData[] pvpScalingData
 function C_PvP.GetGlobalPvpScalingInfoForSpecID(specializationID) end
 
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_PvP.GetHonorRewardInfo)
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_PvP.GetHonorRewardInfo)
 ---@param honorLevel number
 ---@return HonorRewardInfo? info
 function C_PvP.GetHonorRewardInfo(honorLevel) end
 
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_PvP.GetLevelUpBattlegrounds)
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_PvP.GetLevelUpBattlegrounds)
 ---@param level number
 ---@return LevelUpBattlegroundInfo[] battlefields
 function C_PvP.GetLevelUpBattlegrounds(level) end
 
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_PvP.GetMatchPVPStatColumn)
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_PvP.GetMatchPVPStatColumn)
 ---@param pvpStatID number
 ---@return MatchPVPStatColumn? info
 function C_PvP.GetMatchPVPStatColumn(pvpStatID) end
 
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_PvP.GetMatchPVPStatColumns)
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_PvP.GetMatchPVPStatColumns)
 ---@return MatchPVPStatColumn[] columns
 function C_PvP.GetMatchPVPStatColumns() end
 
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_PvP.GetNextHonorLevelForReward)
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_PvP.GetNextHonorLevelForReward)
 ---@param honorLevel number
 ---@return number? nextHonorLevelWithReward
 function C_PvP.GetNextHonorLevelForReward(honorLevel) end
 
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_PvP.GetOutdoorPvPWaitTime)
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_PvP.GetOutdoorPvPWaitTime)
 ---@param uiMapID number
 ---@return time_t pvpWaitTime
 function C_PvP.GetOutdoorPvPWaitTime(uiMapID) end
 
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_PvP.GetPVPActiveMatchPersonalRatedInfo)
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_PvP.GetPVPActiveMatchPersonalRatedInfo)
 ---@return PVPPersonalRatedInfo? info
 function C_PvP.GetPVPActiveMatchPersonalRatedInfo() end
 
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_PvP.GetPVPActiveRatedMatchDeserterPenalty)
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_PvP.GetPVPActiveRatedMatchDeserterPenalty)
 ---@return RatedMatchDeserterPenalty? deserterPenalty
 function C_PvP.GetPVPActiveRatedMatchDeserterPenalty() end
 
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_PvP.GetPVPSeasonRewardAchievementID)
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_PvP.GetPVPSeasonRewardAchievementID)
 ---@return number achievementID
 function C_PvP.GetPVPSeasonRewardAchievementID() end
 
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_PvP.GetPersonalRatedSoloShuffleSpecStats)
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_PvP.GetPersonalRatedSoloShuffleSpecStats)
 ---@return RatedSoloShuffleSpecStats? specStats
 function C_PvP.GetPersonalRatedSoloShuffleSpecStats() end
 
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_PvP.GetPostMatchCurrencyRewards)
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_PvP.GetPostMatchCurrencyRewards)
 ---@return PVPPostMatchCurrencyReward[] rewards
 function C_PvP.GetPostMatchCurrencyRewards() end
 
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_PvP.GetPostMatchItemRewards)
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_PvP.GetPostMatchItemRewards)
 ---@return PVPPostMatchItemReward[] rewards
 function C_PvP.GetPostMatchItemRewards() end
 
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_PvP.GetPvpTalentsUnlockedLevel)
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_PvP.GetPvpTalentsUnlockedLevel)
 ---@return number unlockLevel
 function C_PvP.GetPvpTalentsUnlockedLevel() end
 
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_PvP.GetPvpTierID)
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_PvP.GetPvpTierID)
 ---@param tierEnum number
 ---@param bracketEnum number
 ---@return number? id
 function C_PvP.GetPvpTierID(tierEnum, bracketEnum) end
 
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_PvP.GetPvpTierInfo)
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_PvP.GetPvpTierInfo)
 ---@param tierID number
 ---@return PvpTierInfo? pvpTierInfo
 function C_PvP.GetPvpTierInfo(tierID) end
 
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_PvP.GetRandomBGInfo)
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_PvP.GetRandomBGInfo)
 ---@return RandomBGInfo info
 function C_PvP.GetRandomBGInfo() end
 
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_PvP.GetRandomBGRewards)
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_PvP.GetRandomBGRewards)
 ---@return number honor
 ---@return number experience
 ---@return BattlefieldItemReward[]? itemRewards
@@ -215,11 +215,11 @@ function C_PvP.GetRandomBGInfo() end
 ---@return RoleShortageReward? roleShortageBonus
 function C_PvP.GetRandomBGRewards() end
 
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_PvP.GetRandomEpicBGInfo)
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_PvP.GetRandomEpicBGInfo)
 ---@return RandomBGInfo info
 function C_PvP.GetRandomEpicBGInfo() end
 
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_PvP.GetRandomEpicBGRewards)
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_PvP.GetRandomEpicBGRewards)
 ---@return number honor
 ---@return number experience
 ---@return BattlefieldItemReward[]? itemRewards
@@ -227,7 +227,7 @@ function C_PvP.GetRandomEpicBGInfo() end
 ---@return RoleShortageReward? roleShortageBonus
 function C_PvP.GetRandomEpicBGRewards() end
 
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_PvP.GetRatedBGRewards)
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_PvP.GetRatedBGRewards)
 ---@return number honor
 ---@return number experience
 ---@return BattlefieldItemReward[]? itemRewards
@@ -235,11 +235,11 @@ function C_PvP.GetRandomEpicBGRewards() end
 ---@return RoleShortageReward? roleShortageBonus
 function C_PvP.GetRatedBGRewards() end
 
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_PvP.GetRatedSoloShuffleMinItemLevel)
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_PvP.GetRatedSoloShuffleMinItemLevel)
 ---@return number minItemLevel
 function C_PvP.GetRatedSoloShuffleMinItemLevel() end
 
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_PvP.GetRatedSoloShuffleRewards)
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_PvP.GetRatedSoloShuffleRewards)
 ---@return number honor
 ---@return number experience
 ---@return BattlefieldItemReward[]? itemRewards
@@ -247,162 +247,162 @@ function C_PvP.GetRatedSoloShuffleMinItemLevel() end
 ---@return RoleShortageReward? roleShortageBonus
 function C_PvP.GetRatedSoloShuffleRewards() end
 
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_PvP.GetRewardItemLevelsByTierEnum)
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_PvP.GetRewardItemLevelsByTierEnum)
 ---@param pvpTierEnum number
 ---@return number activityItemLevel
 ---@return number weeklyItemLevel
 function C_PvP.GetRewardItemLevelsByTierEnum(pvpTierEnum) end
 
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_PvP.GetScoreInfo)
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_PvP.GetScoreInfo)
 ---@param offsetIndex number
 ---@return PVPScoreInfo? info
 function C_PvP.GetScoreInfo(offsetIndex) end
 
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_PvP.GetScoreInfoByPlayerGuid)
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_PvP.GetScoreInfoByPlayerGuid)
 ---@param guid WOWGUID
 ---@return PVPScoreInfo? info
 function C_PvP.GetScoreInfoByPlayerGuid(guid) end
 
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_PvP.GetSeasonBestInfo)
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_PvP.GetSeasonBestInfo)
 ---@return number tierID
 ---@return number? nextTierID
 function C_PvP.GetSeasonBestInfo() end
 
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_PvP.GetSkirmishInfo)
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_PvP.GetSkirmishInfo)
 ---@param pvpBracket number
 ---@return BattlemasterListInfo battlemasterListInfo
 function C_PvP.GetSkirmishInfo(pvpBracket) end
 
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_PvP.GetSpecialEventBrawlInfo)
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_PvP.GetSpecialEventBrawlInfo)
 ---@return PvpBrawlInfo? brawlInfo
 function C_PvP.GetSpecialEventBrawlInfo() end
 
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_PvP.GetTeamInfo)
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_PvP.GetTeamInfo)
 ---@param factionIndex number
 ---@return PVPTeamInfo? info
 function C_PvP.GetTeamInfo(factionIndex) end
 
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_PvP.GetUIDisplaySeason)
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_PvP.GetUIDisplaySeason)
 ---@return number uiDisplaySeason
 function C_PvP.GetUIDisplaySeason() end
 
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_PvP.GetWarModeRewardBonus)
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_PvP.GetWarModeRewardBonus)
 ---@return number rewardBonus
 function C_PvP.GetWarModeRewardBonus() end
 
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_PvP.GetWarModeRewardBonusDefault)
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_PvP.GetWarModeRewardBonusDefault)
 ---@return number defaultBonus
 function C_PvP.GetWarModeRewardBonusDefault() end
 
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_PvP.GetWeeklyChestInfo)
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_PvP.GetWeeklyChestInfo)
 ---@return boolean rewardAchieved
 ---@return boolean lastWeekRewardAchieved
 ---@return boolean lastWeekRewardClaimed
 ---@return number pvpTierMaxFromWins
 function C_PvP.GetWeeklyChestInfo() end
 
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_PvP.HasArenaSkirmishWinToday)
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_PvP.HasArenaSkirmishWinToday)
 ---@return boolean hasArenaSkirmishWinToday
 function C_PvP.HasArenaSkirmishWinToday() end
 
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_PvP.IsActiveBattlefield)
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_PvP.IsActiveBattlefield)
 ---@return boolean isActiveBattlefield
 function C_PvP.IsActiveBattlefield() end
 
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_PvP.IsActiveMatchRegistered)
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_PvP.IsActiveMatchRegistered)
 ---@return boolean registered
 function C_PvP.IsActiveMatchRegistered() end
 
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_PvP.IsArena)
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_PvP.IsArena)
 ---@return boolean isArena
 function C_PvP.IsArena() end
 
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_PvP.IsBattleground)
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_PvP.IsBattleground)
 ---@return boolean isBattleground
 function C_PvP.IsBattleground() end
 
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_PvP.IsBattlegroundEnlistmentBonusActive)
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_PvP.IsBattlegroundEnlistmentBonusActive)
 ---@return boolean battlegroundActive
 ---@return boolean brawlActive
 function C_PvP.IsBattlegroundEnlistmentBonusActive() end
 
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_PvP.IsBrawlSoloShuffle)
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_PvP.IsBrawlSoloShuffle)
 ---@return boolean isBrawlSoloShuffle
 function C_PvP.IsBrawlSoloShuffle() end
 
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_PvP.IsInBrawl)
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_PvP.IsInBrawl)
 ---@return boolean isInBrawl
 function C_PvP.IsInBrawl() end
 
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_PvP.IsInRatedMatchWithDeserterPenalty)
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_PvP.IsInRatedMatchWithDeserterPenalty)
 ---@return boolean isInRatedMatchWithDeserterPenalty
 function C_PvP.IsInRatedMatchWithDeserterPenalty() end
 
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_PvP.IsMatchActive)
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_PvP.IsMatchActive)
 ---@return boolean isActive
 function C_PvP.IsMatchActive() end
 
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_PvP.IsMatchComplete)
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_PvP.IsMatchComplete)
 ---@return boolean isComplete
 function C_PvP.IsMatchComplete() end
 
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_PvP.IsMatchConsideredArena)
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_PvP.IsMatchConsideredArena)
 ---@return boolean asArena
 function C_PvP.IsMatchConsideredArena() end
 
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_PvP.IsMatchFactional)
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_PvP.IsMatchFactional)
 ---@return boolean isFactional
 function C_PvP.IsMatchFactional() end
 
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_PvP.IsPVPMap)
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_PvP.IsPVPMap)
 ---@return boolean isPVPMap
 function C_PvP.IsPVPMap() end
 
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_PvP.IsRatedArena)
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_PvP.IsRatedArena)
 ---@return boolean isRatedArena
 function C_PvP.IsRatedArena() end
 
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_PvP.IsRatedBattleground)
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_PvP.IsRatedBattleground)
 ---@return boolean isRatedBattleground
 function C_PvP.IsRatedBattleground() end
 
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_PvP.IsRatedMap)
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_PvP.IsRatedMap)
 ---@return boolean isRatedMap
 function C_PvP.IsRatedMap() end
 
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_PvP.IsRatedSoloShuffle)
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_PvP.IsRatedSoloShuffle)
 ---@return boolean isRatedSoloShuffle
 function C_PvP.IsRatedSoloShuffle() end
 
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_PvP.IsSoloShuffle)
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_PvP.IsSoloShuffle)
 ---@return boolean isSoloShuffle
 function C_PvP.IsSoloShuffle() end
 
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_PvP.IsWarModeActive)
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_PvP.IsWarModeActive)
 ---@return boolean warModeActive
 function C_PvP.IsWarModeActive() end
 
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_PvP.IsWarModeDesired)
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_PvP.IsWarModeDesired)
 ---@return boolean warModeDesired
 function C_PvP.IsWarModeDesired() end
 
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_PvP.IsWarModeFeatureEnabled)
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_PvP.IsWarModeFeatureEnabled)
 ---@return boolean warModeEnabled
 function C_PvP.IsWarModeFeatureEnabled() end
 
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_PvP.JoinBrawl)
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_PvP.JoinBrawl)
 ---@param isSpecialBrawl? boolean Default = false
 function C_PvP.JoinBrawl(isSpecialBrawl) end
 
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_PvP.RequestCrowdControlSpell)
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_PvP.RequestCrowdControlSpell)
 ---@param playerToken UnitToken
 function C_PvP.RequestCrowdControlSpell(playerToken) end
 
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_PvP.SetWarModeDesired)
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_PvP.SetWarModeDesired)
 ---@param warModeDesired boolean
 function C_PvP.SetWarModeDesired(warModeDesired) end
 
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_PvP.ToggleWarMode)
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_PvP.ToggleWarMode)
 function C_PvP.ToggleWarMode() end
 
 ---@class BattlefieldCurrencyReward

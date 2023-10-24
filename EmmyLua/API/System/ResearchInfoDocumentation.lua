@@ -1,7 +1,7 @@
 ---@meta
 C_ResearchInfo = {}
 
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_ResearchInfo.GetDigSitesForMap)
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_ResearchInfo.GetDigSitesForMap)
 ---@param uiMapID number
 ---@return DigSiteMapInfo[] digSites
 function C_ResearchInfo.GetDigSitesForMap(uiMapID) end

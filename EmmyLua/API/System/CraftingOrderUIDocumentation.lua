@@ -1,158 +1,158 @@
 ---@meta
 C_CraftingOrders = {}
 
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_CraftingOrders.AreOrderNotesDisabled)
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_CraftingOrders.AreOrderNotesDisabled)
 ---@return boolean areNotesDisabled
 function C_CraftingOrders.AreOrderNotesDisabled() end
 
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_CraftingOrders.CalculateCraftingOrderPostingFee)
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_CraftingOrders.CalculateCraftingOrderPostingFee)
 ---@param skillLineAbilityID number
 ---@param orderType number|Enum.CraftingOrderType
 ---@param orderDuration number|Enum.CraftingOrderDuration
 ---@return WOWMONEY deposit
 function C_CraftingOrders.CalculateCraftingOrderPostingFee(skillLineAbilityID, orderType, orderDuration) end
 
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_CraftingOrders.CanOrderSkillAbility)
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_CraftingOrders.CanOrderSkillAbility)
 ---@param skillLineAbilityID number
 ---@return boolean canOrder
 function C_CraftingOrders.CanOrderSkillAbility(skillLineAbilityID) end
 
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_CraftingOrders.CancelOrder)
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_CraftingOrders.CancelOrder)
 ---@param orderID BigUInteger
 function C_CraftingOrders.CancelOrder(orderID) end
 
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_CraftingOrders.ClaimOrder)
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_CraftingOrders.ClaimOrder)
 ---@param orderID BigUInteger
 ---@param profession number|Enum.Profession
 function C_CraftingOrders.ClaimOrder(orderID, profession) end
 
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_CraftingOrders.CloseCrafterCraftingOrders)
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_CraftingOrders.CloseCrafterCraftingOrders)
 function C_CraftingOrders.CloseCrafterCraftingOrders() end
 
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_CraftingOrders.CloseCustomerCraftingOrders)
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_CraftingOrders.CloseCustomerCraftingOrders)
 function C_CraftingOrders.CloseCustomerCraftingOrders() end
 
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_CraftingOrders.FulfillOrder)
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_CraftingOrders.FulfillOrder)
 ---@param orderID BigUInteger
 ---@param crafterNote string
 ---@param profession number|Enum.Profession
 function C_CraftingOrders.FulfillOrder(orderID, crafterNote, profession) end
 
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_CraftingOrders.GetClaimedOrder)
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_CraftingOrders.GetClaimedOrder)
 ---@return CraftingOrderInfo? order
 function C_CraftingOrders.GetClaimedOrder() end
 
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_CraftingOrders.GetCrafterBuckets)
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_CraftingOrders.GetCrafterBuckets)
 ---@return CraftingOrderBucketInfo[] buckets
 function C_CraftingOrders.GetCrafterBuckets() end
 
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_CraftingOrders.GetCrafterOrders)
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_CraftingOrders.GetCrafterOrders)
 ---@return CraftingOrderInfo[] orders
 function C_CraftingOrders.GetCrafterOrders() end
 
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_CraftingOrders.GetCraftingOrderTime)
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_CraftingOrders.GetCraftingOrderTime)
 ---@return BigUInteger time
 function C_CraftingOrders.GetCraftingOrderTime() end
 
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_CraftingOrders.GetCustomerCategories)
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_CraftingOrders.GetCustomerCategories)
 ---@return CraftingOrderCustomerCategory[] categories
 function C_CraftingOrders.GetCustomerCategories() end
 
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_CraftingOrders.GetCustomerOptions)
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_CraftingOrders.GetCustomerOptions)
 ---@param params CraftingOrderCustomerSearchParams
 ---@return CraftingOrderCustomerSearchResults results
 function C_CraftingOrders.GetCustomerOptions(params) end
 
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_CraftingOrders.GetCustomerOrders)
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_CraftingOrders.GetCustomerOrders)
 ---@return CraftingOrderInfo[] customerOrders
 function C_CraftingOrders.GetCustomerOrders() end
 
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_CraftingOrders.GetDefaultOrdersSkillLine)
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_CraftingOrders.GetDefaultOrdersSkillLine)
 ---@return number? skillLineID
 function C_CraftingOrders.GetDefaultOrdersSkillLine() end
 
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_CraftingOrders.GetMyOrders)
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_CraftingOrders.GetMyOrders)
 ---@return CraftingOrderInfo[] myOrders
 function C_CraftingOrders.GetMyOrders() end
 
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_CraftingOrders.GetNumFavoriteCustomerOptions)
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_CraftingOrders.GetNumFavoriteCustomerOptions)
 ---@return BigUInteger numFavorites
 function C_CraftingOrders.GetNumFavoriteCustomerOptions() end
 
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_CraftingOrders.GetOrderClaimInfo)
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_CraftingOrders.GetOrderClaimInfo)
 ---@param profession number|Enum.Profession
 ---@return CraftingOrderClaimsRemainingInfo claimInfo
 function C_CraftingOrders.GetOrderClaimInfo(profession) end
 
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_CraftingOrders.GetPersonalOrdersInfo)
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_CraftingOrders.GetPersonalOrdersInfo)
 ---@return CraftingOrderPersonalOrdersInfo[] infos
 function C_CraftingOrders.GetPersonalOrdersInfo() end
 
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_CraftingOrders.HasFavoriteCustomerOptions)
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_CraftingOrders.HasFavoriteCustomerOptions)
 ---@return boolean hasFavorites
 function C_CraftingOrders.HasFavoriteCustomerOptions() end
 
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_CraftingOrders.IsCustomerOptionFavorited)
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_CraftingOrders.IsCustomerOptionFavorited)
 ---@param recipeID number
 ---@return boolean favorited
 function C_CraftingOrders.IsCustomerOptionFavorited(recipeID) end
 
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_CraftingOrders.ListMyOrders)
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_CraftingOrders.ListMyOrders)
 ---@param request CraftingOrderRequestMyOrdersInfo
 function C_CraftingOrders.ListMyOrders(request) end
 
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_CraftingOrders.OpenCrafterCraftingOrders)
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_CraftingOrders.OpenCrafterCraftingOrders)
 function C_CraftingOrders.OpenCrafterCraftingOrders() end
 
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_CraftingOrders.OpenCustomerCraftingOrders)
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_CraftingOrders.OpenCustomerCraftingOrders)
 function C_CraftingOrders.OpenCustomerCraftingOrders() end
 
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_CraftingOrders.OrderCanBeRecrafted)
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_CraftingOrders.OrderCanBeRecrafted)
 ---@param orderID BigUInteger
 ---@return boolean recraftable
 function C_CraftingOrders.OrderCanBeRecrafted(orderID) end
 
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_CraftingOrders.ParseCustomerOptions)
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_CraftingOrders.ParseCustomerOptions)
 function C_CraftingOrders.ParseCustomerOptions() end
 
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_CraftingOrders.PlaceNewOrder)
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_CraftingOrders.PlaceNewOrder)
 ---@param orderInfo NewCraftingOrderInfo
 function C_CraftingOrders.PlaceNewOrder(orderInfo) end
 
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_CraftingOrders.RejectOrder)
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_CraftingOrders.RejectOrder)
 ---@param orderID BigUInteger
 ---@param crafterNote string
 ---@param profession number|Enum.Profession
 function C_CraftingOrders.RejectOrder(orderID, crafterNote, profession) end
 
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_CraftingOrders.ReleaseOrder)
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_CraftingOrders.ReleaseOrder)
 ---@param orderID BigUInteger
 ---@param profession number|Enum.Profession
 function C_CraftingOrders.ReleaseOrder(orderID, profession) end
 
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_CraftingOrders.RequestCrafterOrders)
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_CraftingOrders.RequestCrafterOrders)
 ---@param request CraftingOrderRequestInfo
 function C_CraftingOrders.RequestCrafterOrders(request) end
 
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_CraftingOrders.RequestCustomerOrders)
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_CraftingOrders.RequestCustomerOrders)
 ---@param request CraftingOrderRequestInfo
 function C_CraftingOrders.RequestCustomerOrders(request) end
 
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_CraftingOrders.SetCustomerOptionFavorited)
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_CraftingOrders.SetCustomerOptionFavorited)
 ---@param recipeID number
 ---@param favorited boolean
 function C_CraftingOrders.SetCustomerOptionFavorited(recipeID, favorited) end
 
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_CraftingOrders.ShouldShowCraftingOrderTab)
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_CraftingOrders.ShouldShowCraftingOrderTab)
 ---@return boolean showTab
 function C_CraftingOrders.ShouldShowCraftingOrderTab() end
 
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_CraftingOrders.SkillLineHasOrders)
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_CraftingOrders.SkillLineHasOrders)
 ---@param skillLineID number
 ---@return boolean hasOrders
 function C_CraftingOrders.SkillLineHasOrders(skillLineID) end
 
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_CraftingOrders.UpdateIgnoreList)
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_CraftingOrders.UpdateIgnoreList)
 function C_CraftingOrders.UpdateIgnoreList() end
 
 ---@class CraftingOrderRequestInfo

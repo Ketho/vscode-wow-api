@@ -1,33 +1,33 @@
 ---@meta
 C_QuestLine = {}
 
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_QuestLine.GetAvailableQuestLines)
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_QuestLine.GetAvailableQuestLines)
 ---@param uiMapID number
 ---@return QuestLineInfo[] questLines
 function C_QuestLine.GetAvailableQuestLines(uiMapID) end
 
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_QuestLine.GetForceVisibleQuests)
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_QuestLine.GetForceVisibleQuests)
 ---@param uiMapID number
 ---@return number[] questIDs
 function C_QuestLine.GetForceVisibleQuests(uiMapID) end
 
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_QuestLine.GetQuestLineInfo)
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_QuestLine.GetQuestLineInfo)
 ---@param questID number
 ---@param uiMapID number
 ---@return QuestLineInfo? questLineInfo
 function C_QuestLine.GetQuestLineInfo(questID, uiMapID) end
 
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_QuestLine.GetQuestLineQuests)
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_QuestLine.GetQuestLineQuests)
 ---@param questLineID number
 ---@return number[] questIDs
 function C_QuestLine.GetQuestLineQuests(questLineID) end
 
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_QuestLine.IsComplete)
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_QuestLine.IsComplete)
 ---@param questLineID number
 ---@return boolean isComplete
 function C_QuestLine.IsComplete(questLineID) end
 
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_QuestLine.RequestQuestLinesForMap)
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_QuestLine.RequestQuestLinesForMap)
 ---@param uiMapID number
 function C_QuestLine.RequestQuestLinesForMap(uiMapID) end
 

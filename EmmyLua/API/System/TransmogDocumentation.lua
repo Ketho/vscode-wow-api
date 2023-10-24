@@ -1,17 +1,17 @@
 ---@meta
 C_Transmog = {}
 
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_Transmog.ApplyAllPending)
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_Transmog.ApplyAllPending)
 ---@param currentSpecOnly? boolean Default = false
 ---@return boolean requestSent
 function C_Transmog.ApplyAllPending(currentSpecOnly) end
 
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_Transmog.CanHaveSecondaryAppearanceForSlotID)
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_Transmog.CanHaveSecondaryAppearanceForSlotID)
 ---@param slotID number
 ---@return boolean canHaveSecondaryAppearance
 function C_Transmog.CanHaveSecondaryAppearanceForSlotID(slotID) end
 
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_Transmog.CanTransmogItem)
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_Transmog.CanTransmogItem)
 ---@param itemInfo ItemInfo
 ---@return boolean canBeTransmogged
 ---@return string? selfFailureReason
@@ -19,67 +19,67 @@ function C_Transmog.CanHaveSecondaryAppearanceForSlotID(slotID) end
 ---@return string? othersFailureReason
 function C_Transmog.CanTransmogItem(itemInfo) end
 
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_Transmog.CanTransmogItemWithItem)
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_Transmog.CanTransmogItemWithItem)
 ---@param targetItemInfo ItemInfo
 ---@param sourceItemInfo ItemInfo
 ---@return boolean canTransmog
 ---@return string? failureReason
 function C_Transmog.CanTransmogItemWithItem(targetItemInfo, sourceItemInfo) end
 
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_Transmog.ClearAllPending)
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_Transmog.ClearAllPending)
 function C_Transmog.ClearAllPending() end
 
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_Transmog.ClearPending)
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_Transmog.ClearPending)
 ---@param transmogLocation TransmogLocationMixin
 function C_Transmog.ClearPending(transmogLocation) end
 
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_Transmog.Close)
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_Transmog.Close)
 function C_Transmog.Close() end
 
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_Transmog.ExtractTransmogIDList)
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_Transmog.ExtractTransmogIDList)
 ---@param input string
 ---@return number[] transmogIDList
 function C_Transmog.ExtractTransmogIDList(input) end
 
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_Transmog.GetApplyCost)
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_Transmog.GetApplyCost)
 ---@return number? cost
 function C_Transmog.GetApplyCost() end
 
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_Transmog.GetApplyWarnings)
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_Transmog.GetApplyWarnings)
 ---@return TransmogApplyWarningInfo[] warnings
 function C_Transmog.GetApplyWarnings() end
 
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_Transmog.GetBaseCategory)
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_Transmog.GetBaseCategory)
 ---@param transmogID number
 ---@return Enum.TransmogCollectionType categoryID
 function C_Transmog.GetBaseCategory(transmogID) end
 
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_Transmog.GetCreatureDisplayIDForSource)
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_Transmog.GetCreatureDisplayIDForSource)
 ---@param itemModifiedAppearanceID number
 ---@return number? creatureDisplayID
 function C_Transmog.GetCreatureDisplayIDForSource(itemModifiedAppearanceID) end
 
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_Transmog.GetItemIDForSource)
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_Transmog.GetItemIDForSource)
 ---@param itemModifiedAppearanceID number
 ---@return number? itemID
 function C_Transmog.GetItemIDForSource(itemModifiedAppearanceID) end
 
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_Transmog.GetPending)
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_Transmog.GetPending)
 ---@param transmogLocation TransmogLocationMixin
 ---@return TransmogPendingInfoMixin pendingInfo
 function C_Transmog.GetPending(transmogLocation) end
 
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_Transmog.GetSlotEffectiveCategory)
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_Transmog.GetSlotEffectiveCategory)
 ---@param transmogLocation TransmogLocationMixin
 ---@return Enum.TransmogCollectionType categoryID
 function C_Transmog.GetSlotEffectiveCategory(transmogLocation) end
 
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_Transmog.GetSlotForInventoryType)
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_Transmog.GetSlotForInventoryType)
 ---@param inventoryType number
 ---@return number slot
 function C_Transmog.GetSlotForInventoryType(inventoryType) end
 
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_Transmog.GetSlotInfo)
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_Transmog.GetSlotInfo)
 ---@param transmogLocation TransmogLocationMixin
 ---@return boolean isTransmogrified
 ---@return boolean hasPending
@@ -91,13 +91,13 @@ function C_Transmog.GetSlotForInventoryType(inventoryType) end
 ---@return fileID? texture
 function C_Transmog.GetSlotInfo(transmogLocation) end
 
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_Transmog.GetSlotUseError)
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_Transmog.GetSlotUseError)
 ---@param transmogLocation TransmogLocationMixin
 ---@return number errorCode
 ---@return string errorString
 function C_Transmog.GetSlotUseError(transmogLocation) end
 
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_Transmog.GetSlotVisualInfo)
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_Transmog.GetSlotVisualInfo)
 ---@param transmogLocation TransmogLocationMixin
 ---@return number baseSourceID
 ---@return number baseVisualID
@@ -110,21 +110,21 @@ function C_Transmog.GetSlotUseError(transmogLocation) end
 ---@return number itemSubclass
 function C_Transmog.GetSlotVisualInfo(transmogLocation) end
 
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_Transmog.IsAtTransmogNPC)
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_Transmog.IsAtTransmogNPC)
 ---@return boolean isAtNPC
 function C_Transmog.IsAtTransmogNPC() end
 
 ---Returns true if the only pending for the location's slot is a ToggleOff for the secondary appearance.
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_Transmog.IsSlotBeingCollapsed)
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_Transmog.IsSlotBeingCollapsed)
 ---@param transmogLocation TransmogLocationMixin
 ---@return boolean isBeingCollapsed
 function C_Transmog.IsSlotBeingCollapsed(transmogLocation) end
 
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_Transmog.LoadOutfit)
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_Transmog.LoadOutfit)
 ---@param outfitID number
 function C_Transmog.LoadOutfit(outfitID) end
 
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_Transmog.SetPending)
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_Transmog.SetPending)
 ---@param transmogLocation TransmogLocationMixin
 ---@param pendingInfo TransmogPendingInfoMixin
 function C_Transmog.SetPending(transmogLocation, pendingInfo) end

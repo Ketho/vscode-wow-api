@@ -1,144 +1,144 @@
 ---@meta
 C_ClubFinder = {}
 
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_ClubFinder.ApplicantAcceptClubInvite)
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_ClubFinder.ApplicantAcceptClubInvite)
 ---@param clubFinderGUID WOWGUID
 function C_ClubFinder.ApplicantAcceptClubInvite(clubFinderGUID) end
 
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_ClubFinder.ApplicantDeclineClubInvite)
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_ClubFinder.ApplicantDeclineClubInvite)
 ---@param clubFinderGUID WOWGUID
 function C_ClubFinder.ApplicantDeclineClubInvite(clubFinderGUID) end
 
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_ClubFinder.CancelMembershipRequest)
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_ClubFinder.CancelMembershipRequest)
 ---@param clubFinderGUID WOWGUID
 function C_ClubFinder.CancelMembershipRequest(clubFinderGUID) end
 
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_ClubFinder.CheckAllPlayerApplicantSettings)
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_ClubFinder.CheckAllPlayerApplicantSettings)
 function C_ClubFinder.CheckAllPlayerApplicantSettings() end
 
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_ClubFinder.ClearAllFinderCache)
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_ClubFinder.ClearAllFinderCache)
 function C_ClubFinder.ClearAllFinderCache() end
 
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_ClubFinder.ClearClubApplicantsCache)
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_ClubFinder.ClearClubApplicantsCache)
 function C_ClubFinder.ClearClubApplicantsCache() end
 
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_ClubFinder.ClearClubFinderPostingsCache)
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_ClubFinder.ClearClubFinderPostingsCache)
 function C_ClubFinder.ClearClubFinderPostingsCache() end
 
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_ClubFinder.DoesPlayerBelongToClubFromClubGUID)
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_ClubFinder.DoesPlayerBelongToClubFromClubGUID)
 ---@param clubFinderGUID WOWGUID
 ---@return boolean belongsToClub
 function C_ClubFinder.DoesPlayerBelongToClubFromClubGUID(clubFinderGUID) end
 
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_ClubFinder.GetClubFinderDisableReason)
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_ClubFinder.GetClubFinderDisableReason)
 ---@return Enum.ClubFinderDisableReason? disableReason
 function C_ClubFinder.GetClubFinderDisableReason() end
 
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_ClubFinder.GetClubRecruitmentSettings)
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_ClubFinder.GetClubRecruitmentSettings)
 ---@return ClubSettingsInfo settings
 function C_ClubFinder.GetClubRecruitmentSettings() end
 
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_ClubFinder.GetClubTypeFromFinderGUID)
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_ClubFinder.GetClubTypeFromFinderGUID)
 ---@param clubFinderGUID WOWGUID
 ---@return Enum.ClubFinderRequestType clubType
 function C_ClubFinder.GetClubTypeFromFinderGUID(clubFinderGUID) end
 
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_ClubFinder.GetFocusIndexFromFlag)
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_ClubFinder.GetFocusIndexFromFlag)
 ---@param flags number
 ---@return number index
 function C_ClubFinder.GetFocusIndexFromFlag(flags) end
 
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_ClubFinder.GetPlayerApplicantLocaleFlags)
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_ClubFinder.GetPlayerApplicantLocaleFlags)
 ---@return number localeFlags
 function C_ClubFinder.GetPlayerApplicantLocaleFlags() end
 
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_ClubFinder.GetPlayerApplicantSettings)
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_ClubFinder.GetPlayerApplicantSettings)
 ---@return ClubSettingsInfo settings
 function C_ClubFinder.GetPlayerApplicantSettings() end
 
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_ClubFinder.GetPlayerClubApplicationStatus)
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_ClubFinder.GetPlayerClubApplicationStatus)
 ---@param clubFinderGUID WOWGUID
 ---@return Enum.PlayerClubRequestStatus clubStatus
 function C_ClubFinder.GetPlayerClubApplicationStatus(clubFinderGUID) end
 
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_ClubFinder.GetPlayerSettingsFocusFlagsSelectedCount)
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_ClubFinder.GetPlayerSettingsFocusFlagsSelectedCount)
 ---@return number focusCount
 function C_ClubFinder.GetPlayerSettingsFocusFlagsSelectedCount() end
 
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_ClubFinder.GetPostingIDFromClubFinderGUID)
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_ClubFinder.GetPostingIDFromClubFinderGUID)
 ---@param clubFinderGUID WOWGUID
 ---@return number? postingID
 function C_ClubFinder.GetPostingIDFromClubFinderGUID(clubFinderGUID) end
 
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_ClubFinder.GetRecruitingClubInfoFromClubID)
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_ClubFinder.GetRecruitingClubInfoFromClubID)
 ---@param clubId ClubId
 ---@return RecruitingClubInfo? clubInfo
 function C_ClubFinder.GetRecruitingClubInfoFromClubID(clubId) end
 
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_ClubFinder.GetRecruitingClubInfoFromFinderGUID)
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_ClubFinder.GetRecruitingClubInfoFromFinderGUID)
 ---@param clubFinderGUID WOWGUID
 ---@return RecruitingClubInfo clubInfo
 function C_ClubFinder.GetRecruitingClubInfoFromFinderGUID(clubFinderGUID) end
 
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_ClubFinder.GetStatusOfPostingFromClubId)
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_ClubFinder.GetStatusOfPostingFromClubId)
 ---@param postingID ClubId
 ---@return Enum.ClubFinderClubPostingStatusFlags[] postingFlags
 function C_ClubFinder.GetStatusOfPostingFromClubId(postingID) end
 
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_ClubFinder.GetTotalMatchingCommunityListSize)
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_ClubFinder.GetTotalMatchingCommunityListSize)
 ---@return number totalSize
 function C_ClubFinder.GetTotalMatchingCommunityListSize() end
 
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_ClubFinder.GetTotalMatchingGuildListSize)
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_ClubFinder.GetTotalMatchingGuildListSize)
 ---@return number totalSize
 function C_ClubFinder.GetTotalMatchingGuildListSize() end
 
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_ClubFinder.HasAlreadyAppliedToLinkedPosting)
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_ClubFinder.HasAlreadyAppliedToLinkedPosting)
 ---@param clubFinderGUID WOWGUID
 ---@return boolean hasAlreadyApplied
 function C_ClubFinder.HasAlreadyAppliedToLinkedPosting(clubFinderGUID) end
 
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_ClubFinder.HasPostingBeenDelisted)
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_ClubFinder.HasPostingBeenDelisted)
 ---@param postingID ClubId
 ---@return boolean postingDelisted
 function C_ClubFinder.HasPostingBeenDelisted(postingID) end
 
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_ClubFinder.IsEnabled)
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_ClubFinder.IsEnabled)
 ---@return boolean isEnabled
 function C_ClubFinder.IsEnabled() end
 
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_ClubFinder.IsListingEnabledFromFlags)
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_ClubFinder.IsListingEnabledFromFlags)
 ---@param flags number
 ---@return boolean isListed
 function C_ClubFinder.IsListingEnabledFromFlags(flags) end
 
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_ClubFinder.IsPostingBanned)
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_ClubFinder.IsPostingBanned)
 ---@param postingID ClubId
 ---@return boolean postingBanned
 function C_ClubFinder.IsPostingBanned(postingID) end
 
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_ClubFinder.LookupClubPostingFromClubFinderGUID)
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_ClubFinder.LookupClubPostingFromClubFinderGUID)
 ---@param clubFinderGUID WOWGUID
 ---@param isLinkedPosting boolean
 function C_ClubFinder.LookupClubPostingFromClubFinderGUID(clubFinderGUID, isLinkedPosting) end
 
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_ClubFinder.PlayerGetClubInvitationList)
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_ClubFinder.PlayerGetClubInvitationList)
 ---@return RecruitingClubInfo[] inviteList
 function C_ClubFinder.PlayerGetClubInvitationList() end
 
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_ClubFinder.PlayerRequestPendingClubsList)
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_ClubFinder.PlayerRequestPendingClubsList)
 ---@param type number|Enum.ClubFinderRequestType
 function C_ClubFinder.PlayerRequestPendingClubsList(type) end
 
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_ClubFinder.PlayerReturnPendingCommunitiesList)
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_ClubFinder.PlayerReturnPendingCommunitiesList)
 ---@return RecruitingClubInfo[] info
 function C_ClubFinder.PlayerReturnPendingCommunitiesList() end
 
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_ClubFinder.PlayerReturnPendingGuildsList)
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_ClubFinder.PlayerReturnPendingGuildsList)
 ---@return RecruitingClubInfo[] info
 function C_ClubFinder.PlayerReturnPendingGuildsList() end
 
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_ClubFinder.PostClub)
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_ClubFinder.PostClub)
 ---@param clubId ClubId
 ---@param itemLevelRequirement number
 ---@param name string
@@ -150,44 +150,44 @@ function C_ClubFinder.PlayerReturnPendingGuildsList() end
 ---@return boolean succesful
 function C_ClubFinder.PostClub(clubId, itemLevelRequirement, name, description, avatarId, specs, type, crossFaction) end
 
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_ClubFinder.RequestApplicantList)
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_ClubFinder.RequestApplicantList)
 ---@param type number|Enum.ClubFinderRequestType
 function C_ClubFinder.RequestApplicantList(type) end
 
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_ClubFinder.RequestClubsList)
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_ClubFinder.RequestClubsList)
 ---@param guildListRequested boolean
 ---@param searchString string
 ---@param specIDs number[]
 function C_ClubFinder.RequestClubsList(guildListRequested, searchString, specIDs) end
 
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_ClubFinder.RequestMembershipToClub)
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_ClubFinder.RequestMembershipToClub)
 ---@param clubFinderGUID WOWGUID
 ---@param comment string
 ---@param specIDs number[]
 function C_ClubFinder.RequestMembershipToClub(clubFinderGUID, comment, specIDs) end
 
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_ClubFinder.RequestNextCommunityPage)
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_ClubFinder.RequestNextCommunityPage)
 ---@param startingIndex number
 ---@param pageSize number
 function C_ClubFinder.RequestNextCommunityPage(startingIndex, pageSize) end
 
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_ClubFinder.RequestNextGuildPage)
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_ClubFinder.RequestNextGuildPage)
 ---@param startingIndex number
 ---@param pageSize number
 function C_ClubFinder.RequestNextGuildPage(startingIndex, pageSize) end
 
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_ClubFinder.RequestPostingInformationFromClubId)
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_ClubFinder.RequestPostingInformationFromClubId)
 ---@param clubId ClubId
 ---@return boolean success
 function C_ClubFinder.RequestPostingInformationFromClubId(clubId) end
 
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_ClubFinder.RequestSubscribedClubPostingIDs)
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_ClubFinder.RequestSubscribedClubPostingIDs)
 function C_ClubFinder.RequestSubscribedClubPostingIDs() end
 
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_ClubFinder.ResetClubPostingMapCache)
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_ClubFinder.ResetClubPostingMapCache)
 function C_ClubFinder.ResetClubPostingMapCache() end
 
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_ClubFinder.RespondToApplicant)
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_ClubFinder.RespondToApplicant)
 ---@param clubFinderGUID WOWGUID
 ---@param playerGUID WOWGUID
 ---@param shouldAccept boolean
@@ -197,54 +197,54 @@ function C_ClubFinder.ResetClubPostingMapCache() end
 ---@param reported? boolean
 function C_ClubFinder.RespondToApplicant(clubFinderGUID, playerGUID, shouldAccept, requestType, playerName, forceAccept, reported) end
 
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_ClubFinder.ReturnClubApplicantList)
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_ClubFinder.ReturnClubApplicantList)
 ---@param clubId ClubId
 ---@return ClubFinderApplicantInfo[] info
 function C_ClubFinder.ReturnClubApplicantList(clubId) end
 
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_ClubFinder.ReturnMatchingCommunityList)
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_ClubFinder.ReturnMatchingCommunityList)
 ---@return RecruitingClubInfo[] recruitingClubs
 function C_ClubFinder.ReturnMatchingCommunityList() end
 
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_ClubFinder.ReturnMatchingGuildList)
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_ClubFinder.ReturnMatchingGuildList)
 ---@return RecruitingClubInfo[] recruitingClubs
 function C_ClubFinder.ReturnMatchingGuildList() end
 
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_ClubFinder.ReturnPendingClubApplicantList)
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_ClubFinder.ReturnPendingClubApplicantList)
 ---@param clubId ClubId
 ---@return ClubFinderApplicantInfo[] info
 function C_ClubFinder.ReturnPendingClubApplicantList(clubId) end
 
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_ClubFinder.SendChatWhisper)
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_ClubFinder.SendChatWhisper)
 ---@param clubFinderGUID WOWGUID
 ---@param playerGUID WOWGUID
 ---@param applicantType number|Enum.ClubFinderRequestType
 ---@param name string
 function C_ClubFinder.SendChatWhisper(clubFinderGUID, playerGUID, applicantType, name) end
 
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_ClubFinder.SetAllRecruitmentSettings)
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_ClubFinder.SetAllRecruitmentSettings)
 ---@param value number
 function C_ClubFinder.SetAllRecruitmentSettings(value) end
 
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_ClubFinder.SetPlayerApplicantLocaleFlags)
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_ClubFinder.SetPlayerApplicantLocaleFlags)
 ---@param localeFlags number
 function C_ClubFinder.SetPlayerApplicantLocaleFlags(localeFlags) end
 
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_ClubFinder.SetPlayerApplicantSettings)
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_ClubFinder.SetPlayerApplicantSettings)
 ---@param index number
 ---@param checked boolean
 function C_ClubFinder.SetPlayerApplicantSettings(index, checked) end
 
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_ClubFinder.SetRecruitmentLocale)
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_ClubFinder.SetRecruitmentLocale)
 ---@param locale number
 function C_ClubFinder.SetRecruitmentLocale(locale) end
 
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_ClubFinder.SetRecruitmentSettings)
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_ClubFinder.SetRecruitmentSettings)
 ---@param index number
 ---@param checked boolean
 function C_ClubFinder.SetRecruitmentSettings(index, checked) end
 
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_ClubFinder.ShouldShowClubFinder)
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_ClubFinder.ShouldShowClubFinder)
 ---@return boolean shouldShow
 function C_ClubFinder.ShouldShowClubFinder() end
 

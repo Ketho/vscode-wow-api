@@ -25,7 +25,7 @@ local function GetOutputFile()
 	return file, tempTbl
 end
 
-local fs = "---[Documentation](https://wowpedia.fandom.com/wiki/API_%s)\nfunction %s(%s) end\n\n"
+local fs = "---[Documentation](https://warcraft.wiki.gg/wiki/API_%s)\nfunction %s(%s) end\n\n"
 local outputFile, tempTbl = GetOutputFile()
 
 local countValid = 0
@@ -46,7 +46,7 @@ local sorted = Util:SortTable(nonBlizzDocumented)
 for _, name in pairs(sorted) do
 	if not emmyLuaMulti[name] then
 		if emmyLua[name] then
-			table.insert(tempTbl, string.format("---[Documentation](https://wowpedia.fandom.com/wiki/API_%s)\n", name))
+			table.insert(tempTbl, string.format("---[Documentation](https://warcraft.wiki.gg/wiki/API_%s)\n", name))
 			table.insert(tempTbl, emmyLua[name].."\n\n")
 		elseif convertedApi[name] then
 			table.insert(tempTbl, Emmy:GetFunction(convertedApi[name]).."\n\n")

@@ -1,5 +1,5 @@
 ---@meta
----[Documentation](https://wowpedia.fandom.com/wiki/ItemTransmogInfoMixin)
+---[Documentation](https://warcraft.wiki.gg/wiki/ItemTransmogInfoMixin)
 ---@class ItemTransmogInfoMixin
 ItemTransmogInfoMixin = {}
 

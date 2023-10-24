@@ -1,7 +1,7 @@
 ---@meta
 C_Reputation = {}
 
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_Reputation.GetFactionParagonInfo)
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_Reputation.GetFactionParagonInfo)
 ---@param factionID number
 ---@return number currentValue
 ---@return number threshold
@@ -10,20 +10,20 @@ C_Reputation = {}
 ---@return boolean tooLowLevelForParagon
 function C_Reputation.GetFactionParagonInfo(factionID) end
 
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_Reputation.IsFactionParagon)
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_Reputation.IsFactionParagon)
 ---@param factionID number
 ---@return boolean hasParagon
 function C_Reputation.IsFactionParagon(factionID) end
 
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_Reputation.IsMajorFaction)
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_Reputation.IsMajorFaction)
 ---@param factionID number
 ---@return boolean isMajorFaction
 function C_Reputation.IsMajorFaction(factionID) end
 
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_Reputation.RequestFactionParagonPreloadRewardData)
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_Reputation.RequestFactionParagonPreloadRewardData)
 ---@param factionID number
 function C_Reputation.RequestFactionParagonPreloadRewardData(factionID) end
 
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_Reputation.SetWatchedFaction)
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_Reputation.SetWatchedFaction)
 ---@param factionID number
 function C_Reputation.SetWatchedFaction(factionID) end

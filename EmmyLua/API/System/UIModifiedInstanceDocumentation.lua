@@ -1,7 +1,7 @@
 ---@meta
 C_ModifiedInstance = {}
 
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_ModifiedInstance.GetModifiedInstanceInfoFromMapID)
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_ModifiedInstance.GetModifiedInstanceInfoFromMapID)
 ---@param mapID number
 ---@return ModifiedInstanceInfo info
 function C_ModifiedInstance.GetModifiedInstanceInfoFromMapID(mapID) end

@@ -15,7 +15,7 @@ local function GetUndocumentedApi()
 end
 
 local function SaveWowpediaExport(path, pages)
-	local url = "https://wowpedia.fandom.com/wiki/Special:Export"
+	local url = "https://warcraft.wiki.gg/wiki/Special:Export"
 	local requestBody = string.format("pages=%s&curonly=1", pages)
 	Util:DownloadFilePost(path, url, requestBody, 10)
 end

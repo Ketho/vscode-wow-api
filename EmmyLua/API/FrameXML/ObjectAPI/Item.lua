@@ -1,7 +1,7 @@
 ---@meta
 Item = {}
 
----[Documentation](https://wowpedia.fandom.com/wiki/ItemMixin)
+---[Documentation](https://warcraft.wiki.gg/wiki/ItemMixin)
 ---@class ItemMixin
 ItemMixin = {}
 

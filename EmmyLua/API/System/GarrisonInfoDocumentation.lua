@@ -1,146 +1,146 @@
 ---@meta
 C_Garrison = {}
 
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_Garrison.AddFollowerToMission)
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_Garrison.AddFollowerToMission)
 ---@param missionID number
 ---@param followerID GarrisonFollower
 ---@param boardIndex? number
 ---@return boolean followerAdded
 function C_Garrison.AddFollowerToMission(missionID, followerID, boardIndex) end
 
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_Garrison.GetAutoCombatDamageClassValues)
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_Garrison.GetAutoCombatDamageClassValues)
 ---@return AutoCombatDamageClassString[] damageClassStrings
 function C_Garrison.GetAutoCombatDamageClassValues() end
 
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_Garrison.GetAutoMissionBoardState)
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_Garrison.GetAutoMissionBoardState)
 ---@param missionID number
 ---@return AutoMissionTargetingInfo[] targetInfo
 function C_Garrison.GetAutoMissionBoardState(missionID) end
 
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_Garrison.GetAutoMissionEnvironmentEffect)
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_Garrison.GetAutoMissionEnvironmentEffect)
 ---@param missionID number
 ---@return AutoMissionEnvironmentEffect? autoMissionEnvEffect
 function C_Garrison.GetAutoMissionEnvironmentEffect(missionID) end
 
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_Garrison.GetAutoMissionTargetingInfo)
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_Garrison.GetAutoMissionTargetingInfo)
 ---@param missionID number
 ---@param followerID GarrisonFollower
 ---@param casterBoardIndex number
 ---@return AutoMissionTargetingInfo[] targetInfo
 function C_Garrison.GetAutoMissionTargetingInfo(missionID, followerID, casterBoardIndex) end
 
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_Garrison.GetAutoMissionTargetingInfoForSpell)
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_Garrison.GetAutoMissionTargetingInfoForSpell)
 ---@param missionID number
 ---@param autoCombatSpellID number
 ---@param casterBoardIndex number
 ---@return AutoMissionTargetingInfo[] targetInfo
 function C_Garrison.GetAutoMissionTargetingInfoForSpell(missionID, autoCombatSpellID, casterBoardIndex) end
 
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_Garrison.GetAutoTroops)
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_Garrison.GetAutoTroops)
 ---@param followerType number
 ---@return AutoCombatTroopInfo[] autoTroopInfo
 function C_Garrison.GetAutoTroops(followerType) end
 
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_Garrison.GetCombatLogSpellInfo)
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_Garrison.GetCombatLogSpellInfo)
 ---@param autoCombatSpellID number
 ---@return AutoCombatSpellInfo? spellInfo
 function C_Garrison.GetCombatLogSpellInfo(autoCombatSpellID) end
 
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_Garrison.GetCurrentCypherEquipmentLevel)
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_Garrison.GetCurrentCypherEquipmentLevel)
 ---@return number equipmentLevel
 function C_Garrison.GetCurrentCypherEquipmentLevel() end
 
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_Garrison.GetCurrentGarrTalentTreeFriendshipFactionID)
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_Garrison.GetCurrentGarrTalentTreeFriendshipFactionID)
 ---@return number? currentGarrTalentTreeFriendshipFactionID
 function C_Garrison.GetCurrentGarrTalentTreeFriendshipFactionID() end
 
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_Garrison.GetCurrentGarrTalentTreeID)
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_Garrison.GetCurrentGarrTalentTreeID)
 ---@return number? currentGarrTalentTreeID
 function C_Garrison.GetCurrentGarrTalentTreeID() end
 
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_Garrison.GetCyphersToNextEquipmentLevel)
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_Garrison.GetCyphersToNextEquipmentLevel)
 ---@return number? cyphersToNext
 function C_Garrison.GetCyphersToNextEquipmentLevel() end
 
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_Garrison.GetFollowerAutoCombatSpells)
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_Garrison.GetFollowerAutoCombatSpells)
 ---@param garrFollowerID GarrisonFollower
 ---@param followerLevel number
 ---@return AutoCombatSpellInfo[] autoCombatSpells
 ---@return AutoCombatSpellInfo? autoCombatAutoAttack
 function C_Garrison.GetFollowerAutoCombatSpells(garrFollowerID, followerLevel) end
 
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_Garrison.GetFollowerAutoCombatStats)
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_Garrison.GetFollowerAutoCombatStats)
 ---@param garrFollowerID GarrisonFollower
 ---@return FollowerAutoCombatStatsInfo? autoCombatInfo
 function C_Garrison.GetFollowerAutoCombatStats(garrFollowerID) end
 
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_Garrison.GetFollowerMissionCompleteInfo)
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_Garrison.GetFollowerMissionCompleteInfo)
 ---@param followerID GarrisonFollower
 ---@return FollowerMissionCompleteInfo followerMissionCompleteInfo
 function C_Garrison.GetFollowerMissionCompleteInfo(followerID) end
 
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_Garrison.GetGarrisonPlotsInstancesForMap)
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_Garrison.GetGarrisonPlotsInstancesForMap)
 ---@param uiMapID number
 ---@return GarrisonPlotInstanceMapInfo[] garrisonPlotInstances
 function C_Garrison.GetGarrisonPlotsInstancesForMap(uiMapID) end
 
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_Garrison.GetGarrisonTalentTreeCurrencyTypes)
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_Garrison.GetGarrisonTalentTreeCurrencyTypes)
 ---@param garrTalentTreeID number
 ---@return number? garrTalentTreeCurrencyType
 function C_Garrison.GetGarrisonTalentTreeCurrencyTypes(garrTalentTreeID) end
 
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_Garrison.GetGarrisonTalentTreeType)
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_Garrison.GetGarrisonTalentTreeType)
 ---@param garrTalentTreeID number
 ---@return number garrTalentTreeType
 function C_Garrison.GetGarrisonTalentTreeType(garrTalentTreeID) end
 
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_Garrison.GetMaxCypherEquipmentLevel)
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_Garrison.GetMaxCypherEquipmentLevel)
 ---@return number maxEquipmentLevel
 function C_Garrison.GetMaxCypherEquipmentLevel() end
 
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_Garrison.GetMissionCompleteEncounters)
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_Garrison.GetMissionCompleteEncounters)
 ---@param missionID number
 ---@return GarrisonEnemyEncounterInfo[] encounters
 function C_Garrison.GetMissionCompleteEncounters(missionID) end
 
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_Garrison.GetMissionDeploymentInfo)
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_Garrison.GetMissionDeploymentInfo)
 ---@param missionID number
 ---@return MissionDeploymentInfo missionDeploymentInfo
 function C_Garrison.GetMissionDeploymentInfo(missionID) end
 
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_Garrison.GetMissionEncounterIconInfo)
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_Garrison.GetMissionEncounterIconInfo)
 ---@param missionID number
 ---@return MissionEncounterIconInfo missionEncounterIconInfo
 function C_Garrison.GetMissionEncounterIconInfo(missionID) end
 
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_Garrison.GetTalentInfo)
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_Garrison.GetTalentInfo)
 ---@param talentID number
 ---@return GarrisonTalentInfo info
 function C_Garrison.GetTalentInfo(talentID) end
 
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_Garrison.GetTalentPointsSpentInTalentTree)
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_Garrison.GetTalentPointsSpentInTalentTree)
 ---@param garrTalentTreeID number
 ---@return number talentPoints
 function C_Garrison.GetTalentPointsSpentInTalentTree(garrTalentTreeID) end
 
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_Garrison.GetTalentTreeIDsByClassID)
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_Garrison.GetTalentTreeIDsByClassID)
 ---@param garrType number
 ---@param classID number
 ---@return number[] treeIDs
 function C_Garrison.GetTalentTreeIDsByClassID(garrType, classID) end
 
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_Garrison.GetTalentTreeInfo)
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_Garrison.GetTalentTreeInfo)
 ---@param treeID number
 ---@return GarrisonTalentTreeInfo info
 function C_Garrison.GetTalentTreeInfo(treeID) end
 
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_Garrison.GetTalentTreeResetInfo)
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_Garrison.GetTalentTreeResetInfo)
 ---@param garrTalentTreeID number
 ---@return number goldCost
 ---@return GarrisonTalentCurrencyCostInfo[] currencyCosts
 function C_Garrison.GetTalentTreeResetInfo(garrTalentTreeID) end
 
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_Garrison.GetTalentTreeTalentPointResearchInfo)
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_Garrison.GetTalentTreeTalentPointResearchInfo)
 ---@param garrTalentID number
 ---@param researchRank number
 ---@param garrTalentTreeID number
@@ -151,55 +151,55 @@ function C_Garrison.GetTalentTreeResetInfo(garrTalentTreeID) end
 ---@return number durationSecs
 function C_Garrison.GetTalentTreeTalentPointResearchInfo(garrTalentID, researchRank, garrTalentTreeID, talentPointIndex, isRespec) end
 
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_Garrison.GetTalentUnlockWorldQuest)
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_Garrison.GetTalentUnlockWorldQuest)
 ---@param talentID number
 ---@return number worldQuestID
 function C_Garrison.GetTalentUnlockWorldQuest(talentID) end
 
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_Garrison.HasAdventures)
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_Garrison.HasAdventures)
 ---@return boolean hasAdventures
 function C_Garrison.HasAdventures() end
 
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_Garrison.IsAtGarrisonMissionNPC)
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_Garrison.IsAtGarrisonMissionNPC)
 ---@return boolean atGarrisonMissionNPC
 function C_Garrison.IsAtGarrisonMissionNPC() end
 
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_Garrison.IsEnvironmentCountered)
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_Garrison.IsEnvironmentCountered)
 ---@param missionID number
 ---@return boolean environmentCountered
 function C_Garrison.IsEnvironmentCountered(missionID) end
 
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_Garrison.IsFollowerOnCompletedMission)
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_Garrison.IsFollowerOnCompletedMission)
 ---@param followerID GarrisonFollower
 ---@return boolean followerOnCompletedMission
 function C_Garrison.IsFollowerOnCompletedMission(followerID) end
 
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_Garrison.IsTalentConditionMet)
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_Garrison.IsTalentConditionMet)
 ---@param talentID number
 ---@return boolean isMet
 ---@return string? failureString
 function C_Garrison.IsTalentConditionMet(talentID) end
 
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_Garrison.RegenerateCombatLog)
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_Garrison.RegenerateCombatLog)
 ---@param missionID number
 ---@return boolean success
 function C_Garrison.RegenerateCombatLog(missionID) end
 
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_Garrison.RemoveFollowerFromMission)
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_Garrison.RemoveFollowerFromMission)
 ---@param missionID number
 ---@param followerID GarrisonFollower
 ---@param boardIndex? number
 function C_Garrison.RemoveFollowerFromMission(missionID, followerID, boardIndex) end
 
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_Garrison.RushHealAllFollowers)
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_Garrison.RushHealAllFollowers)
 ---@param followerType number
 function C_Garrison.RushHealAllFollowers(followerType) end
 
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_Garrison.RushHealFollower)
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_Garrison.RushHealFollower)
 ---@param garrFollowerID GarrisonFollower
 function C_Garrison.RushHealFollower(garrFollowerID) end
 
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_Garrison.SetAutoCombatSpellFastForward)
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_Garrison.SetAutoCombatSpellFastForward)
 ---@param state boolean
 function C_Garrison.SetAutoCombatSpellFastForward(state) end
 

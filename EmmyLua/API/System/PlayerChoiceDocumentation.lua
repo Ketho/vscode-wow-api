@@ -1,29 +1,29 @@
 ---@meta
 C_PlayerChoice = {}
 
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_PlayerChoice.GetCurrentPlayerChoiceInfo)
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_PlayerChoice.GetCurrentPlayerChoiceInfo)
 ---@return PlayerChoiceInfo choiceInfo
 function C_PlayerChoice.GetCurrentPlayerChoiceInfo() end
 
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_PlayerChoice.GetNumRerolls)
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_PlayerChoice.GetNumRerolls)
 ---@return number numRerolls
 function C_PlayerChoice.GetNumRerolls() end
 
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_PlayerChoice.GetRemainingTime)
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_PlayerChoice.GetRemainingTime)
 ---@return number? remainingTime
 function C_PlayerChoice.GetRemainingTime() end
 
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_PlayerChoice.IsWaitingForPlayerChoiceResponse)
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_PlayerChoice.IsWaitingForPlayerChoiceResponse)
 ---@return boolean isWaitingForResponse
 function C_PlayerChoice.IsWaitingForPlayerChoiceResponse() end
 
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_PlayerChoice.OnUIClosed)
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_PlayerChoice.OnUIClosed)
 function C_PlayerChoice.OnUIClosed() end
 
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_PlayerChoice.RequestRerollPlayerChoice)
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_PlayerChoice.RequestRerollPlayerChoice)
 function C_PlayerChoice.RequestRerollPlayerChoice() end
 
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_PlayerChoice.SendPlayerChoiceResponse)
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_PlayerChoice.SendPlayerChoiceResponse)
 ---@param responseID number
 function C_PlayerChoice.SendPlayerChoiceResponse(responseID) end
 

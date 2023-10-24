@@ -1,39 +1,39 @@
 ---@meta
 C_ItemInteraction = {}
 
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_ItemInteraction.ClearPendingItem)
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_ItemInteraction.ClearPendingItem)
 function C_ItemInteraction.ClearPendingItem() end
 
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_ItemInteraction.CloseUI)
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_ItemInteraction.CloseUI)
 function C_ItemInteraction.CloseUI() end
 
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_ItemInteraction.GetChargeInfo)
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_ItemInteraction.GetChargeInfo)
 ---@return ItemInteractionChargeInfo chargeInfo
 function C_ItemInteraction.GetChargeInfo() end
 
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_ItemInteraction.GetItemConversionCurrencyCost)
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_ItemInteraction.GetItemConversionCurrencyCost)
 ---@param item ItemLocationMixin
 ---@return ConversionCurrencyCost conversionCost
 function C_ItemInteraction.GetItemConversionCurrencyCost(item) end
 
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_ItemInteraction.GetItemInteractionInfo)
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_ItemInteraction.GetItemInteractionInfo)
 ---@return ItemInteractionFrameInfo? info
 function C_ItemInteraction.GetItemInteractionInfo() end
 
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_ItemInteraction.GetItemInteractionSpellId)
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_ItemInteraction.GetItemInteractionSpellId)
 ---@return number spellId
 function C_ItemInteraction.GetItemInteractionSpellId() end
 
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_ItemInteraction.InitializeFrame)
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_ItemInteraction.InitializeFrame)
 function C_ItemInteraction.InitializeFrame() end
 
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_ItemInteraction.PerformItemInteraction)
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_ItemInteraction.PerformItemInteraction)
 function C_ItemInteraction.PerformItemInteraction() end
 
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_ItemInteraction.Reset)
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_ItemInteraction.Reset)
 function C_ItemInteraction.Reset() end
 
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_ItemInteraction.SetPendingItem)
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_ItemInteraction.SetPendingItem)
 ---@param item? ItemLocationMixin
 ---@return boolean success
 function C_ItemInteraction.SetPendingItem(item) end

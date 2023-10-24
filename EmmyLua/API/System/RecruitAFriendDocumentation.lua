@@ -1,54 +1,54 @@
 ---@meta
 C_RecruitAFriend = {}
 
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_RecruitAFriend.ClaimActivityReward)
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_RecruitAFriend.ClaimActivityReward)
 ---@param activityID number
 ---@param acceptanceID RecruitAcceptanceID
 ---@return boolean success
 function C_RecruitAFriend.ClaimActivityReward(activityID, acceptanceID) end
 
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_RecruitAFriend.ClaimNextReward)
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_RecruitAFriend.ClaimNextReward)
 ---@param rafVersion? number|Enum.RecruitAFriendRewardsVersion
 ---@return boolean success
 function C_RecruitAFriend.ClaimNextReward(rafVersion) end
 
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_RecruitAFriend.GenerateRecruitmentLink)
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_RecruitAFriend.GenerateRecruitmentLink)
 ---@return boolean success
 function C_RecruitAFriend.GenerateRecruitmentLink() end
 
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_RecruitAFriend.GetRAFInfo)
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_RecruitAFriend.GetRAFInfo)
 ---@return RafInfo info
 function C_RecruitAFriend.GetRAFInfo() end
 
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_RecruitAFriend.GetRAFSystemInfo)
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_RecruitAFriend.GetRAFSystemInfo)
 ---@return RafSystemInfo systemInfo
 function C_RecruitAFriend.GetRAFSystemInfo() end
 
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_RecruitAFriend.GetRecruitActivityRequirementsText)
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_RecruitAFriend.GetRecruitActivityRequirementsText)
 ---@param activityID number
 ---@param acceptanceID RecruitAcceptanceID
 ---@return string[] requirementsText
 function C_RecruitAFriend.GetRecruitActivityRequirementsText(activityID, acceptanceID) end
 
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_RecruitAFriend.GetRecruitInfo)
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_RecruitAFriend.GetRecruitInfo)
 ---@return boolean active
 ---@return number faction
 function C_RecruitAFriend.GetRecruitInfo() end
 
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_RecruitAFriend.IsEnabled)
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_RecruitAFriend.IsEnabled)
 ---@return boolean enabled
 function C_RecruitAFriend.IsEnabled() end
 
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_RecruitAFriend.IsRecruitingEnabled)
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_RecruitAFriend.IsRecruitingEnabled)
 ---@return boolean enabled
 function C_RecruitAFriend.IsRecruitingEnabled() end
 
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_RecruitAFriend.RemoveRAFRecruit)
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_RecruitAFriend.RemoveRAFRecruit)
 ---@param wowAccountGUID WOWGUID
 ---@return boolean success
 function C_RecruitAFriend.RemoveRAFRecruit(wowAccountGUID) end
 
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_RecruitAFriend.RequestUpdatedRecruitmentInfo)
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_RecruitAFriend.RequestUpdatedRecruitmentInfo)
 ---@return boolean success
 function C_RecruitAFriend.RequestUpdatedRecruitmentInfo() end
 

@@ -1,186 +1,186 @@
 ---@meta
 C_UIWidgetManager = {}
 
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_UIWidgetManager.GetAllWidgetsBySetID)
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_UIWidgetManager.GetAllWidgetsBySetID)
 ---@param setID number
 ---@return UIWidgetInfo[] widgets
 function C_UIWidgetManager.GetAllWidgetsBySetID(setID) end
 
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_UIWidgetManager.GetBelowMinimapWidgetSetID)
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_UIWidgetManager.GetBelowMinimapWidgetSetID)
 ---@return number setID
 function C_UIWidgetManager.GetBelowMinimapWidgetSetID() end
 
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_UIWidgetManager.GetBulletTextListWidgetVisualizationInfo)
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_UIWidgetManager.GetBulletTextListWidgetVisualizationInfo)
 ---@param widgetID number
 ---@return BulletTextListWidgetVisualizationInfo? widgetInfo
 function C_UIWidgetManager.GetBulletTextListWidgetVisualizationInfo(widgetID) end
 
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_UIWidgetManager.GetCaptureBarWidgetVisualizationInfo)
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_UIWidgetManager.GetCaptureBarWidgetVisualizationInfo)
 ---@param widgetID number
 ---@return CaptureBarWidgetVisualizationInfo? widgetInfo
 function C_UIWidgetManager.GetCaptureBarWidgetVisualizationInfo(widgetID) end
 
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_UIWidgetManager.GetCaptureZoneVisualizationInfo)
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_UIWidgetManager.GetCaptureZoneVisualizationInfo)
 ---@param widgetID number
 ---@return CaptureZoneVisualizationInfo? widgetInfo
 function C_UIWidgetManager.GetCaptureZoneVisualizationInfo(widgetID) end
 
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_UIWidgetManager.GetDiscreteProgressStepsVisualizationInfo)
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_UIWidgetManager.GetDiscreteProgressStepsVisualizationInfo)
 ---@param widgetID number
 ---@return DiscreteProgressStepsVisualizationInfo? widgetInfo
 function C_UIWidgetManager.GetDiscreteProgressStepsVisualizationInfo(widgetID) end
 
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_UIWidgetManager.GetDoubleIconAndTextWidgetVisualizationInfo)
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_UIWidgetManager.GetDoubleIconAndTextWidgetVisualizationInfo)
 ---@param widgetID number
 ---@return DoubleIconAndTextWidgetVisualizationInfo? widgetInfo
 function C_UIWidgetManager.GetDoubleIconAndTextWidgetVisualizationInfo(widgetID) end
 
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_UIWidgetManager.GetDoubleStateIconRowVisualizationInfo)
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_UIWidgetManager.GetDoubleStateIconRowVisualizationInfo)
 ---@param widgetID number
 ---@return DoubleStateIconRowVisualizationInfo? widgetInfo
 function C_UIWidgetManager.GetDoubleStateIconRowVisualizationInfo(widgetID) end
 
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_UIWidgetManager.GetDoubleStatusBarWidgetVisualizationInfo)
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_UIWidgetManager.GetDoubleStatusBarWidgetVisualizationInfo)
 ---@param widgetID number
 ---@return DoubleStatusBarWidgetVisualizationInfo? widgetInfo
 function C_UIWidgetManager.GetDoubleStatusBarWidgetVisualizationInfo(widgetID) end
 
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_UIWidgetManager.GetFillUpFramesWidgetVisualizationInfo)
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_UIWidgetManager.GetFillUpFramesWidgetVisualizationInfo)
 ---@param widgetID number
 ---@return FillUpFramesWidgetVisualizationInfo? widgetInfo
 function C_UIWidgetManager.GetFillUpFramesWidgetVisualizationInfo(widgetID) end
 
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_UIWidgetManager.GetHorizontalCurrenciesWidgetVisualizationInfo)
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_UIWidgetManager.GetHorizontalCurrenciesWidgetVisualizationInfo)
 ---@param widgetID number
 ---@return HorizontalCurrenciesWidgetVisualizationInfo? widgetInfo
 function C_UIWidgetManager.GetHorizontalCurrenciesWidgetVisualizationInfo(widgetID) end
 
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_UIWidgetManager.GetIconAndTextWidgetVisualizationInfo)
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_UIWidgetManager.GetIconAndTextWidgetVisualizationInfo)
 ---@param widgetID number
 ---@return IconAndTextWidgetVisualizationInfo? widgetInfo
 function C_UIWidgetManager.GetIconAndTextWidgetVisualizationInfo(widgetID) end
 
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_UIWidgetManager.GetIconTextAndBackgroundWidgetVisualizationInfo)
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_UIWidgetManager.GetIconTextAndBackgroundWidgetVisualizationInfo)
 ---@param widgetID number
 ---@return IconTextAndBackgroundWidgetVisualizationInfo? widgetInfo
 function C_UIWidgetManager.GetIconTextAndBackgroundWidgetVisualizationInfo(widgetID) end
 
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_UIWidgetManager.GetIconTextAndCurrenciesWidgetVisualizationInfo)
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_UIWidgetManager.GetIconTextAndCurrenciesWidgetVisualizationInfo)
 ---@param widgetID number
 ---@return IconTextAndCurrenciesWidgetVisualizationInfo? widgetInfo
 function C_UIWidgetManager.GetIconTextAndCurrenciesWidgetVisualizationInfo(widgetID) end
 
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_UIWidgetManager.GetItemDisplayVisualizationInfo)
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_UIWidgetManager.GetItemDisplayVisualizationInfo)
 ---@param widgetID number
 ---@return ItemDisplayVisualizationInfo? widgetInfo
 function C_UIWidgetManager.GetItemDisplayVisualizationInfo(widgetID) end
 
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_UIWidgetManager.GetObjectiveTrackerWidgetSetID)
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_UIWidgetManager.GetObjectiveTrackerWidgetSetID)
 ---@return number setID
 function C_UIWidgetManager.GetObjectiveTrackerWidgetSetID() end
 
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_UIWidgetManager.GetPowerBarWidgetSetID)
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_UIWidgetManager.GetPowerBarWidgetSetID)
 ---@return number setID
 function C_UIWidgetManager.GetPowerBarWidgetSetID() end
 
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_UIWidgetManager.GetScenarioHeaderCurrenciesAndBackgroundWidgetVisualizationInfo)
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_UIWidgetManager.GetScenarioHeaderCurrenciesAndBackgroundWidgetVisualizationInfo)
 ---@param widgetID number
 ---@return ScenarioHeaderCurrenciesAndBackgroundWidgetVisualizationInfo? widgetInfo
 function C_UIWidgetManager.GetScenarioHeaderCurrenciesAndBackgroundWidgetVisualizationInfo(widgetID) end
 
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_UIWidgetManager.GetScenarioHeaderTimerWidgetVisualizationInfo)
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_UIWidgetManager.GetScenarioHeaderTimerWidgetVisualizationInfo)
 ---@param widgetID number
 ---@return ScenarioHeaderTimerWidgetVisualizationInfo? widgetInfo
 function C_UIWidgetManager.GetScenarioHeaderTimerWidgetVisualizationInfo(widgetID) end
 
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_UIWidgetManager.GetSpacerVisualizationInfo)
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_UIWidgetManager.GetSpacerVisualizationInfo)
 ---@param widgetID number
 ---@return SpacerVisualizationInfo? widgetInfo
 function C_UIWidgetManager.GetSpacerVisualizationInfo(widgetID) end
 
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_UIWidgetManager.GetSpellDisplayVisualizationInfo)
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_UIWidgetManager.GetSpellDisplayVisualizationInfo)
 ---@param widgetID number
 ---@return SpellDisplayVisualizationInfo? widgetInfo
 function C_UIWidgetManager.GetSpellDisplayVisualizationInfo(widgetID) end
 
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_UIWidgetManager.GetStackedResourceTrackerWidgetVisualizationInfo)
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_UIWidgetManager.GetStackedResourceTrackerWidgetVisualizationInfo)
 ---@param widgetID number
 ---@return StackedResourceTrackerWidgetVisualizationInfo? widgetInfo
 function C_UIWidgetManager.GetStackedResourceTrackerWidgetVisualizationInfo(widgetID) end
 
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_UIWidgetManager.GetStatusBarWidgetVisualizationInfo)
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_UIWidgetManager.GetStatusBarWidgetVisualizationInfo)
 ---@param widgetID number
 ---@return StatusBarWidgetVisualizationInfo? widgetInfo
 function C_UIWidgetManager.GetStatusBarWidgetVisualizationInfo(widgetID) end
 
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_UIWidgetManager.GetTextColumnRowVisualizationInfo)
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_UIWidgetManager.GetTextColumnRowVisualizationInfo)
 ---@param widgetID number
 ---@return TextColumnRowVisualizationInfo? widgetInfo
 function C_UIWidgetManager.GetTextColumnRowVisualizationInfo(widgetID) end
 
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_UIWidgetManager.GetTextWithStateWidgetVisualizationInfo)
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_UIWidgetManager.GetTextWithStateWidgetVisualizationInfo)
 ---@param widgetID number
 ---@return TextWithStateWidgetVisualizationInfo? widgetInfo
 function C_UIWidgetManager.GetTextWithStateWidgetVisualizationInfo(widgetID) end
 
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_UIWidgetManager.GetTextWithSubtextWidgetVisualizationInfo)
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_UIWidgetManager.GetTextWithSubtextWidgetVisualizationInfo)
 ---@param widgetID number
 ---@return TextWithSubtextWidgetVisualizationInfo? widgetInfo
 function C_UIWidgetManager.GetTextWithSubtextWidgetVisualizationInfo(widgetID) end
 
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_UIWidgetManager.GetTextureAndTextRowVisualizationInfo)
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_UIWidgetManager.GetTextureAndTextRowVisualizationInfo)
 ---@param widgetID number
 ---@return TextureAndTextRowVisualizationInfo? widgetInfo
 function C_UIWidgetManager.GetTextureAndTextRowVisualizationInfo(widgetID) end
 
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_UIWidgetManager.GetTextureAndTextVisualizationInfo)
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_UIWidgetManager.GetTextureAndTextVisualizationInfo)
 ---@param widgetID number
 ---@return TextureAndTextVisualizationInfo? widgetInfo
 function C_UIWidgetManager.GetTextureAndTextVisualizationInfo(widgetID) end
 
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_UIWidgetManager.GetTextureWithAnimationVisualizationInfo)
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_UIWidgetManager.GetTextureWithAnimationVisualizationInfo)
 ---@param widgetID number
 ---@return TextureWithAnimationVisualizationInfo? widgetInfo
 function C_UIWidgetManager.GetTextureWithAnimationVisualizationInfo(widgetID) end
 
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_UIWidgetManager.GetTopCenterWidgetSetID)
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_UIWidgetManager.GetTopCenterWidgetSetID)
 ---@return number setID
 function C_UIWidgetManager.GetTopCenterWidgetSetID() end
 
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_UIWidgetManager.GetTugOfWarWidgetVisualizationInfo)
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_UIWidgetManager.GetTugOfWarWidgetVisualizationInfo)
 ---@param widgetID number
 ---@return TugOfWarWidgetVisualizationInfo? widgetInfo
 function C_UIWidgetManager.GetTugOfWarWidgetVisualizationInfo(widgetID) end
 
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_UIWidgetManager.GetUnitPowerBarWidgetVisualizationInfo)
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_UIWidgetManager.GetUnitPowerBarWidgetVisualizationInfo)
 ---@param widgetID number
 ---@return UnitPowerBarWidgetVisualizationInfo? widgetInfo
 function C_UIWidgetManager.GetUnitPowerBarWidgetVisualizationInfo(widgetID) end
 
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_UIWidgetManager.GetWidgetSetInfo)
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_UIWidgetManager.GetWidgetSetInfo)
 ---@param widgetSetID number
 ---@return UIWidgetSetInfo widgetSetInfo
 function C_UIWidgetManager.GetWidgetSetInfo(widgetSetID) end
 
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_UIWidgetManager.GetZoneControlVisualizationInfo)
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_UIWidgetManager.GetZoneControlVisualizationInfo)
 ---@param widgetID number
 ---@return ZoneControlVisualizationInfo? widgetInfo
 function C_UIWidgetManager.GetZoneControlVisualizationInfo(widgetID) end
 
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_UIWidgetManager.RegisterUnitForWidgetUpdates)
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_UIWidgetManager.RegisterUnitForWidgetUpdates)
 ---@param unitToken string
 ---@param isGuid? boolean Default = false
 function C_UIWidgetManager.RegisterUnitForWidgetUpdates(unitToken, isGuid) end
 
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_UIWidgetManager.SetProcessingUnit)
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_UIWidgetManager.SetProcessingUnit)
 ---@param unit? UnitToken
 function C_UIWidgetManager.SetProcessingUnit(unit) end
 
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_UIWidgetManager.SetProcessingUnitGuid)
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_UIWidgetManager.SetProcessingUnitGuid)
 ---@param unit? WOWGUID
 function C_UIWidgetManager.SetProcessingUnitGuid(unit) end
 
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_UIWidgetManager.UnregisterUnitForWidgetUpdates)
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_UIWidgetManager.UnregisterUnitForWidgetUpdates)
 ---@param unitToken string
 ---@param isGuid? boolean Default = false
 function C_UIWidgetManager.UnregisterUnitForWidgetUpdates(unitToken, isGuid) end

@@ -1,40 +1,40 @@
 ---@meta
 C_PerksActivities = {}
 
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_PerksActivities.AddTrackedPerksActivity)
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_PerksActivities.AddTrackedPerksActivity)
 ---@param perksActivityID number
 function C_PerksActivities.AddTrackedPerksActivity(perksActivityID) end
 
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_PerksActivities.ClearPerksActivitiesPendingCompletion)
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_PerksActivities.ClearPerksActivitiesPendingCompletion)
 function C_PerksActivities.ClearPerksActivitiesPendingCompletion() end
 
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_PerksActivities.GetAllPerksActivityTags)
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_PerksActivities.GetAllPerksActivityTags)
 ---@return PerksActivityTags tags
 function C_PerksActivities.GetAllPerksActivityTags() end
 
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_PerksActivities.GetPerksActivitiesInfo)
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_PerksActivities.GetPerksActivitiesInfo)
 ---@return PerksActivitiesInfo info
 function C_PerksActivities.GetPerksActivitiesInfo() end
 
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_PerksActivities.GetPerksActivitiesPendingCompletion)
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_PerksActivities.GetPerksActivitiesPendingCompletion)
 ---@return PerksActivitiesPending pending
 function C_PerksActivities.GetPerksActivitiesPendingCompletion() end
 
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_PerksActivities.GetPerksActivityChatLink)
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_PerksActivities.GetPerksActivityChatLink)
 ---@param perksActivityID number
 ---@return string link
 function C_PerksActivities.GetPerksActivityChatLink(perksActivityID) end
 
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_PerksActivities.GetPerksActivityInfo)
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_PerksActivities.GetPerksActivityInfo)
 ---@param perksActivityID number
 ---@return PerksActivityInfo? info
 function C_PerksActivities.GetPerksActivityInfo(perksActivityID) end
 
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_PerksActivities.GetTrackedPerksActivities)
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_PerksActivities.GetTrackedPerksActivities)
 ---@return PerksActivitiesTracked trackedPerksActivities
 function C_PerksActivities.GetTrackedPerksActivities() end
 
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_PerksActivities.RemoveTrackedPerksActivity)
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_PerksActivities.RemoveTrackedPerksActivity)
 ---@param perksActivityID number
 function C_PerksActivities.RemoveTrackedPerksActivity(perksActivityID) end
 

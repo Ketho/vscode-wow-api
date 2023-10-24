@@ -1,329 +1,329 @@
 ---@meta
 C_VoiceChat = {}
 
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_VoiceChat.ActivateChannel)
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_VoiceChat.ActivateChannel)
 ---@param channelID number
 function C_VoiceChat.ActivateChannel(channelID) end
 
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_VoiceChat.ActivateChannelTranscription)
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_VoiceChat.ActivateChannelTranscription)
 ---@param channelID number
 function C_VoiceChat.ActivateChannelTranscription(channelID) end
 
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_VoiceChat.BeginLocalCapture)
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_VoiceChat.BeginLocalCapture)
 ---@param listenToLocalUser boolean
 function C_VoiceChat.BeginLocalCapture(listenToLocalUser) end
 
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_VoiceChat.CanPlayerUseVoiceChat)
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_VoiceChat.CanPlayerUseVoiceChat)
 ---@return boolean canUseVoiceChat
 function C_VoiceChat.CanPlayerUseVoiceChat() end
 
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_VoiceChat.CreateChannel)
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_VoiceChat.CreateChannel)
 ---@param channelDisplayName string
 ---@return Enum.VoiceChatStatusCode status
 function C_VoiceChat.CreateChannel(channelDisplayName) end
 
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_VoiceChat.DeactivateChannel)
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_VoiceChat.DeactivateChannel)
 ---@param channelID number
 function C_VoiceChat.DeactivateChannel(channelID) end
 
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_VoiceChat.DeactivateChannelTranscription)
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_VoiceChat.DeactivateChannelTranscription)
 ---@param channelID number
 function C_VoiceChat.DeactivateChannelTranscription(channelID) end
 
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_VoiceChat.EndLocalCapture)
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_VoiceChat.EndLocalCapture)
 function C_VoiceChat.EndLocalCapture() end
 
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_VoiceChat.GetActiveChannelID)
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_VoiceChat.GetActiveChannelID)
 ---@return number? channelID
 function C_VoiceChat.GetActiveChannelID() end
 
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_VoiceChat.GetActiveChannelType)
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_VoiceChat.GetActiveChannelType)
 ---@return Enum.ChatChannelType? channelType
 function C_VoiceChat.GetActiveChannelType() end
 
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_VoiceChat.GetAvailableInputDevices)
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_VoiceChat.GetAvailableInputDevices)
 ---@return VoiceAudioDevice[]? inputDevices
 function C_VoiceChat.GetAvailableInputDevices() end
 
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_VoiceChat.GetAvailableOutputDevices)
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_VoiceChat.GetAvailableOutputDevices)
 ---@return VoiceAudioDevice[]? outputDevices
 function C_VoiceChat.GetAvailableOutputDevices() end
 
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_VoiceChat.GetChannel)
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_VoiceChat.GetChannel)
 ---@param channelID number
 ---@return VoiceChatChannel? channel
 function C_VoiceChat.GetChannel(channelID) end
 
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_VoiceChat.GetChannelForChannelType)
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_VoiceChat.GetChannelForChannelType)
 ---@param channelType number|Enum.ChatChannelType
 ---@return VoiceChatChannel? channel
 function C_VoiceChat.GetChannelForChannelType(channelType) end
 
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_VoiceChat.GetChannelForCommunityStream)
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_VoiceChat.GetChannelForCommunityStream)
 ---@param clubId ClubId
 ---@param streamId ClubStreamId
 ---@return VoiceChatChannel? channel
 function C_VoiceChat.GetChannelForCommunityStream(clubId, streamId) end
 
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_VoiceChat.GetCommunicationMode)
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_VoiceChat.GetCommunicationMode)
 ---@return Enum.CommunicationMode? communicationMode
 function C_VoiceChat.GetCommunicationMode() end
 
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_VoiceChat.GetCurrentVoiceChatConnectionStatusCode)
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_VoiceChat.GetCurrentVoiceChatConnectionStatusCode)
 ---@return Enum.VoiceChatStatusCode? statusCode
 function C_VoiceChat.GetCurrentVoiceChatConnectionStatusCode() end
 
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_VoiceChat.GetInputVolume)
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_VoiceChat.GetInputVolume)
 ---@return number? volume
 function C_VoiceChat.GetInputVolume() end
 
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_VoiceChat.GetJoinClubVoiceChannelError)
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_VoiceChat.GetJoinClubVoiceChannelError)
 ---@param clubId ClubId
 ---@return Enum.VoiceChannelErrorReason? errorReason
 function C_VoiceChat.GetJoinClubVoiceChannelError(clubId) end
 
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_VoiceChat.GetLocalPlayerActiveChannelMemberInfo)
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_VoiceChat.GetLocalPlayerActiveChannelMemberInfo)
 ---@return VoiceChatMember? memberInfo
 function C_VoiceChat.GetLocalPlayerActiveChannelMemberInfo() end
 
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_VoiceChat.GetLocalPlayerMemberID)
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_VoiceChat.GetLocalPlayerMemberID)
 ---@param channelID number
 ---@return number? memberID
 function C_VoiceChat.GetLocalPlayerMemberID(channelID) end
 
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_VoiceChat.GetMasterVolumeScale)
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_VoiceChat.GetMasterVolumeScale)
 ---@return number scale
 function C_VoiceChat.GetMasterVolumeScale() end
 
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_VoiceChat.GetMemberGUID)
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_VoiceChat.GetMemberGUID)
 ---@param memberID number
 ---@param channelID number
 ---@return WOWGUID memberGUID
 function C_VoiceChat.GetMemberGUID(memberID, channelID) end
 
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_VoiceChat.GetMemberID)
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_VoiceChat.GetMemberID)
 ---@param channelID number
 ---@param memberGUID WOWGUID
 ---@return number? memberID
 function C_VoiceChat.GetMemberID(channelID, memberGUID) end
 
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_VoiceChat.GetMemberInfo)
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_VoiceChat.GetMemberInfo)
 ---@param memberID number
 ---@param channelID number
 ---@return VoiceChatMember? memberInfo
 function C_VoiceChat.GetMemberInfo(memberID, channelID) end
 
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_VoiceChat.GetMemberName)
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_VoiceChat.GetMemberName)
 ---@param memberID number
 ---@param channelID number
 ---@return string? memberName
 function C_VoiceChat.GetMemberName(memberID, channelID) end
 
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_VoiceChat.GetMemberVolume)
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_VoiceChat.GetMemberVolume)
 ---@param playerLocation PlayerLocationMixin
 ---@return number? volume
 function C_VoiceChat.GetMemberVolume(playerLocation) end
 
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_VoiceChat.GetOutputVolume)
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_VoiceChat.GetOutputVolume)
 ---@return number? volume
 function C_VoiceChat.GetOutputVolume() end
 
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_VoiceChat.GetPTTButtonPressedState)
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_VoiceChat.GetPTTButtonPressedState)
 ---@return boolean? isPressed
 function C_VoiceChat.GetPTTButtonPressedState() end
 
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_VoiceChat.GetProcesses)
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_VoiceChat.GetProcesses)
 ---@return VoiceChatProcess[] processes
 function C_VoiceChat.GetProcesses() end
 
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_VoiceChat.GetPushToTalkBinding)
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_VoiceChat.GetPushToTalkBinding)
 ---@return string[]? keys
 function C_VoiceChat.GetPushToTalkBinding() end
 
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_VoiceChat.GetRemoteTtsVoices)
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_VoiceChat.GetRemoteTtsVoices)
 ---@return VoiceTtsVoiceType[] ttsVoices
 function C_VoiceChat.GetRemoteTtsVoices() end
 
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_VoiceChat.GetTtsVoices)
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_VoiceChat.GetTtsVoices)
 ---@return VoiceTtsVoiceType[] ttsVoices
 function C_VoiceChat.GetTtsVoices() end
 
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_VoiceChat.GetVADSensitivity)
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_VoiceChat.GetVADSensitivity)
 ---@return number? sensitivity
 function C_VoiceChat.GetVADSensitivity() end
 
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_VoiceChat.IsChannelJoinPending)
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_VoiceChat.IsChannelJoinPending)
 ---@param channelType number|Enum.ChatChannelType
 ---@param clubId? ClubId
 ---@param streamId? ClubStreamId
 ---@return boolean isPending
 function C_VoiceChat.IsChannelJoinPending(channelType, clubId, streamId) end
 
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_VoiceChat.IsDeafened)
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_VoiceChat.IsDeafened)
 ---@return boolean? isDeafened
 function C_VoiceChat.IsDeafened() end
 
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_VoiceChat.IsEnabled)
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_VoiceChat.IsEnabled)
 ---@return boolean isEnabled
 function C_VoiceChat.IsEnabled() end
 
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_VoiceChat.IsLoggedIn)
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_VoiceChat.IsLoggedIn)
 ---@return boolean isLoggedIn
 function C_VoiceChat.IsLoggedIn() end
 
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_VoiceChat.IsMemberLocalPlayer)
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_VoiceChat.IsMemberLocalPlayer)
 ---@param memberID number
 ---@param channelID number
 ---@return boolean isLocalPlayer
 function C_VoiceChat.IsMemberLocalPlayer(memberID, channelID) end
 
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_VoiceChat.IsMemberMuted)
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_VoiceChat.IsMemberMuted)
 ---@param playerLocation PlayerLocationMixin
 ---@return boolean? mutedForMe
 function C_VoiceChat.IsMemberMuted(playerLocation) end
 
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_VoiceChat.IsMemberMutedForAll)
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_VoiceChat.IsMemberMutedForAll)
 ---@param memberID number
 ---@param channelID number
 ---@return boolean? mutedForAll
 function C_VoiceChat.IsMemberMutedForAll(memberID, channelID) end
 
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_VoiceChat.IsMemberSilenced)
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_VoiceChat.IsMemberSilenced)
 ---@param memberID number
 ---@param channelID number
 ---@return boolean? silenced
 function C_VoiceChat.IsMemberSilenced(memberID, channelID) end
 
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_VoiceChat.IsMuted)
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_VoiceChat.IsMuted)
 ---@return boolean? isMuted
 function C_VoiceChat.IsMuted() end
 
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_VoiceChat.IsParentalDisabled)
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_VoiceChat.IsParentalDisabled)
 ---@return boolean isParentalDisabled
 function C_VoiceChat.IsParentalDisabled() end
 
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_VoiceChat.IsParentalMuted)
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_VoiceChat.IsParentalMuted)
 ---@return boolean isParentalMuted
 function C_VoiceChat.IsParentalMuted() end
 
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_VoiceChat.IsPlayerUsingVoice)
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_VoiceChat.IsPlayerUsingVoice)
 ---@param playerLocation PlayerLocationMixin
 ---@return boolean isUsingVoice
 function C_VoiceChat.IsPlayerUsingVoice(playerLocation) end
 
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_VoiceChat.IsSilenced)
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_VoiceChat.IsSilenced)
 ---@return boolean? isSilenced
 function C_VoiceChat.IsSilenced() end
 
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_VoiceChat.IsSpeakForMeActive)
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_VoiceChat.IsSpeakForMeActive)
 ---@return boolean isActive
 function C_VoiceChat.IsSpeakForMeActive() end
 
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_VoiceChat.IsSpeakForMeAllowed)
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_VoiceChat.IsSpeakForMeAllowed)
 ---@return boolean isAllowed
 function C_VoiceChat.IsSpeakForMeAllowed() end
 
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_VoiceChat.IsTranscriptionAllowed)
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_VoiceChat.IsTranscriptionAllowed)
 ---@return boolean isAllowed
 function C_VoiceChat.IsTranscriptionAllowed() end
 
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_VoiceChat.IsVoiceChatConnected)
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_VoiceChat.IsVoiceChatConnected)
 ---@return boolean connected
 function C_VoiceChat.IsVoiceChatConnected() end
 
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_VoiceChat.LeaveChannel)
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_VoiceChat.LeaveChannel)
 ---@param channelID number
 function C_VoiceChat.LeaveChannel(channelID) end
 
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_VoiceChat.Login)
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_VoiceChat.Login)
 ---@return Enum.VoiceChatStatusCode status
 function C_VoiceChat.Login() end
 
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_VoiceChat.Logout)
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_VoiceChat.Logout)
 ---@return Enum.VoiceChatStatusCode status
 function C_VoiceChat.Logout() end
 
 ---Once the UI has enumerated all channels, use this to reset the channel discovery state, it will be updated again if appropriate
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_VoiceChat.MarkChannelsDiscovered)
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_VoiceChat.MarkChannelsDiscovered)
 function C_VoiceChat.MarkChannelsDiscovered() end
 
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_VoiceChat.RequestJoinAndActivateCommunityStreamChannel)
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_VoiceChat.RequestJoinAndActivateCommunityStreamChannel)
 ---@param clubId ClubId
 ---@param streamId ClubStreamId
 function C_VoiceChat.RequestJoinAndActivateCommunityStreamChannel(clubId, streamId) end
 
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_VoiceChat.RequestJoinChannelByChannelType)
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_VoiceChat.RequestJoinChannelByChannelType)
 ---@param channelType number|Enum.ChatChannelType
 ---@param autoActivate? boolean
 function C_VoiceChat.RequestJoinChannelByChannelType(channelType, autoActivate) end
 
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_VoiceChat.SetCommunicationMode)
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_VoiceChat.SetCommunicationMode)
 ---@param communicationMode number|Enum.CommunicationMode
 function C_VoiceChat.SetCommunicationMode(communicationMode) end
 
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_VoiceChat.SetDeafened)
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_VoiceChat.SetDeafened)
 ---@param isDeafened boolean
 function C_VoiceChat.SetDeafened(isDeafened) end
 
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_VoiceChat.SetInputDevice)
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_VoiceChat.SetInputDevice)
 ---@param deviceID string
 function C_VoiceChat.SetInputDevice(deviceID) end
 
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_VoiceChat.SetInputVolume)
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_VoiceChat.SetInputVolume)
 ---@param volume number
 function C_VoiceChat.SetInputVolume(volume) end
 
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_VoiceChat.SetMasterVolumeScale)
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_VoiceChat.SetMasterVolumeScale)
 ---@param scale number
 function C_VoiceChat.SetMasterVolumeScale(scale) end
 
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_VoiceChat.SetMemberMuted)
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_VoiceChat.SetMemberMuted)
 ---@param playerLocation PlayerLocationMixin
 ---@param muted boolean
 function C_VoiceChat.SetMemberMuted(playerLocation, muted) end
 
 ---Adjusts member volume across all channels
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_VoiceChat.SetMemberVolume)
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_VoiceChat.SetMemberVolume)
 ---@param playerLocation PlayerLocationMixin
 ---@param volume number
 function C_VoiceChat.SetMemberVolume(playerLocation, volume) end
 
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_VoiceChat.SetMuted)
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_VoiceChat.SetMuted)
 ---@param isMuted boolean
 function C_VoiceChat.SetMuted(isMuted) end
 
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_VoiceChat.SetOutputDevice)
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_VoiceChat.SetOutputDevice)
 ---@param deviceID string
 function C_VoiceChat.SetOutputDevice(deviceID) end
 
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_VoiceChat.SetOutputVolume)
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_VoiceChat.SetOutputVolume)
 ---@param volume number
 function C_VoiceChat.SetOutputVolume(volume) end
 
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_VoiceChat.SetPortraitTexture)
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_VoiceChat.SetPortraitTexture)
 ---@param textureObject SimpleTexture
 ---@param memberID number
 ---@param channelID number
 function C_VoiceChat.SetPortraitTexture(textureObject, memberID, channelID) end
 
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_VoiceChat.SetPushToTalkBinding)
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_VoiceChat.SetPushToTalkBinding)
 ---@param keys string[]
 function C_VoiceChat.SetPushToTalkBinding(keys) end
 
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_VoiceChat.SetVADSensitivity)
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_VoiceChat.SetVADSensitivity)
 ---@param sensitivity number
 function C_VoiceChat.SetVADSensitivity(sensitivity) end
 
 ---Use this while loading to determine if the UI should attempt to rediscover the previously joined/active voice channels
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_VoiceChat.ShouldDiscoverChannels)
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_VoiceChat.ShouldDiscoverChannels)
 ---@return boolean shouldDiscoverChannels
 function C_VoiceChat.ShouldDiscoverChannels() end
 
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_VoiceChat.SpeakRemoteTextSample)
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_VoiceChat.SpeakRemoteTextSample)
 ---@param text string
 function C_VoiceChat.SpeakRemoteTextSample(text) end
 
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_VoiceChat.SpeakText)
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_VoiceChat.SpeakText)
 ---@param voiceID number
 ---@param text string
 ---@param destination number|Enum.VoiceTtsDestination
@@ -331,17 +331,17 @@ function C_VoiceChat.SpeakRemoteTextSample(text) end
 ---@param volume number
 function C_VoiceChat.SpeakText(voiceID, text, destination, rate, volume) end
 
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_VoiceChat.StopSpeakingText)
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_VoiceChat.StopSpeakingText)
 function C_VoiceChat.StopSpeakingText() end
 
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_VoiceChat.ToggleDeafened)
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_VoiceChat.ToggleDeafened)
 function C_VoiceChat.ToggleDeafened() end
 
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_VoiceChat.ToggleMemberMuted)
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_VoiceChat.ToggleMemberMuted)
 ---@param playerLocation PlayerLocationMixin
 function C_VoiceChat.ToggleMemberMuted(playerLocation) end
 
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_VoiceChat.ToggleMuted)
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_VoiceChat.ToggleMuted)
 function C_VoiceChat.ToggleMuted() end
 
 ---@class VoiceAudioDevice

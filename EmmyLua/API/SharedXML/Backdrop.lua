@@ -15,7 +15,7 @@
 ---@field bottom number
 
 ---@class BackdropTemplate
----[Documentation](https://wowpedia.fandom.com/wiki/BackdropTemplate)
+---[Documentation](https://warcraft.wiki.gg/wiki/BackdropTemplate)
 BackdropTemplateMixin = {}
 
 ---[FrameXML](https://www.townlong-yak.com/framexml/go/BackdropTemplateMixin:OnBackdropLoaded)

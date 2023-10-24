@@ -1,7 +1,7 @@
 ---@meta
 C_BehavioralMessaging = {}
 
----[Documentation](https://wowpedia.fandom.com/wiki/API_C_BehavioralMessaging.SendNotificationReceipt)
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_BehavioralMessaging.SendNotificationReceipt)
 ---@param dbId NotificationDbId
 ---@param openTimeSeconds number
 ---@param readTimeSeconds number
