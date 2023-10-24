@@ -5,6 +5,10 @@
 - The Classic (TBC) API is not supported ([#13](https://github.com/Ketho/vscode-wow-api/issues/13))
 - Frame templates are not completely supported, only BackdropTemplate ([#15](https://github.com/Ketho/vscode-wow-api/issues/15)) 
 
+## [0.10.8] - 2023-10-24
+- 🌙 Definitions: Fixed `SimpleFrame`
+- 🌙 Definitions: Replaced Wowpedia with wiki.gg
+
 ## [0.10.7] - 2023-09-26
 - 🌙 Definitions: Fixed Texture widget
 
@@ -387,6 +391,7 @@ Libraries
 ### Added
 - 🚧 Wip: Development work
 
+[0.10.8]: https://github.com/Ketho/vscode-wow-api/releases/tag/0.10.8
 [0.10.7]: https://github.com/Ketho/vscode-wow-api/releases/tag/0.10.7
 [0.10.6]: https://github.com/Ketho/vscode-wow-api/releases/tag/0.10.6
 [0.10.5]: https://github.com/Ketho/vscode-wow-api/releases/tag/0.10.5
