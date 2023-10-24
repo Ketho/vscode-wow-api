@@ -32,7 +32,7 @@
 --temporary
 ---@class ScriptRegion
 
----@alias SimpleFrame Texture
+---@alias SimpleFrame Frame
 ---@alias SimpleTexture Texture
 ---@alias ChatBubbleFrame Frame
 ---@alias ModelSceneFrame ModelScene
