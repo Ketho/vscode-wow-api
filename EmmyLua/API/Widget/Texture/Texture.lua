@@ -22,3 +22,8 @@ function Texture:GetNumMaskTextures() end
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_Texture_RemoveMaskTexture)
 ---@param mask SimpleMaskTexture
 function Texture:RemoveMaskTexture(mask) end
+
+---@class MaskTexture : TextureBase
+local MaskTexture = {}
+---@class masktexture : MaskTexture
+---@class MASKTEXTURE : MaskTexture
