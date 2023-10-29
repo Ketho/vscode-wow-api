@@ -137,7 +137,7 @@ function FontString:SetFixedColor(fixedColor) end
 function FontString:SetFont(fontFile, fontHeight, flags) end
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_FontString_SetFontObject)
----@param font SimpleFont
+---@param font? SimpleFont|FontObject
 function FontString:SetFontObject(font) end
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_FontString_SetFormattedText)

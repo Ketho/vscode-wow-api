@@ -67,7 +67,7 @@ function Font:SetAlpha(alpha) end
 function Font:SetFont(fontFile, height, flags) end
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_Font_SetFontObject)
----@param font SimpleFont
+---@param font? SimpleFont|FontObject
 function Font:SetFontObject(font) end
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_Font_SetIndentedWordWrap)
