@@ -1,9 +1,12 @@
 # Change Log
 
 ### Known issues
-- Widget API is not yet updated from 10.0.2 Blizzard_APIDocumentationGenerated
 - The Classic (TBC) API is not supported ([#13](https://github.com/Ketho/vscode-wow-api/issues/13))
 - Frame templates are not completely supported, only BackdropTemplate ([#15](https://github.com/Ketho/vscode-wow-api/issues/15)) 
+
+## [0.10.9] - 2023-10-30
+- 🌙 Definitions: Added `MaskTexture`, `Line` UI Objects
+- 🌙 Definitions: Fixed `:SetFontObject` widget method
 
 ## [0.10.8] - 2023-10-24
 - 🌙 Definitions: Fixed `SimpleFrame`
@@ -391,6 +394,7 @@ Libraries
 ### Added
 - 🚧 Wip: Development work
 
+[0.10.9]: https://github.com/Ketho/vscode-wow-api/releases/tag/0.10.9
 [0.10.8]: https://github.com/Ketho/vscode-wow-api/releases/tag/0.10.8
 [0.10.7]: https://github.com/Ketho/vscode-wow-api/releases/tag/0.10.7
 [0.10.6]: https://github.com/Ketho/vscode-wow-api/releases/tag/0.10.6
