@@ -46,12 +46,12 @@ function ScriptRegionResizing:SetHeight(height) end
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_ScriptRegionResizing_SetPoint)
 ---@param point FramePoint
----@param relativeTo ScriptRegion
----@param relativePoint FramePoint
+---@param relativeTo? ScriptRegion|string
+---@param relativePoint? FramePoint
 ---@param offsetX? uiUnit
 ---@param offsetY? uiUnit
+---@overload fun(self, point: AnchorPoint, relativeTo?: ScriptRegion|string, ofsx?: number, ofsy?: number)
 ---@overload fun(self, point: AnchorPoint, ofsx?: number, ofsy?: number)
----@overload fun(self, point: AnchorPoint, relativeTo: any, ofsx?: number, ofsy?: number)
 function ScriptRegionResizing:SetPoint(point, relativeTo, relativePoint, offsetX, offsetY) end
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_ScriptRegionResizing_SetSize)
