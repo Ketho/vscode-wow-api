@@ -4,6 +4,9 @@
 - The Classic (TBC) API is not supported ([#13](https://github.com/Ketho/vscode-wow-api/issues/13))
 - Frame templates are not completely supported, only BackdropTemplate ([#15](https://github.com/Ketho/vscode-wow-api/issues/15)) 
 
+## [0.10.10] - 2023-11-06
+- 🌙 Definitions: Fixed `:SetPoint` widget method
+
 ## [0.10.9] - 2023-10-30
 - 🌙 Definitions: Added `MaskTexture`, `Line` UI Objects
 - 🌙 Definitions: Fixed `:SetFontObject` widget method
@@ -394,6 +397,7 @@ Libraries
 ### Added
 - 🚧 Wip: Development work
 
+[0.10.10]: https://github.com/Ketho/vscode-wow-api/releases/tag/0.10.10
 [0.10.9]: https://github.com/Ketho/vscode-wow-api/releases/tag/0.10.9
 [0.10.8]: https://github.com/Ketho/vscode-wow-api/releases/tag/0.10.8
 [0.10.7]: https://github.com/Ketho/vscode-wow-api/releases/tag/0.10.7
