@@ -28,6 +28,10 @@ function Frame:HookScript(scriptType, handler, bindingType) end
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_ScriptObject_SetScript)
 function Frame:SetScript(scriptType, handler) end
 
+---[Documentation](https://warcraft.wiki.gg/wiki/API_Object_GetParent)
+---@return Frame? parent
+function Frame:GetParent() end
+
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_Frame_AbortDrag)
 function Frame:AbortDrag() end
