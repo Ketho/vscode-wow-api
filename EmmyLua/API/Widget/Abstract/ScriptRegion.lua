@@ -3,6 +3,11 @@
 ---@class ScriptRegion : Object
 local ScriptRegion = {}
 
+---[Documentation](https://warcraft.wiki.gg/wiki/API_Object_GetParent)
+---@return Frame parent
+function ScriptRegion:GetParent() end
+
+
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_ScriptRegion_CanChangeProtectedState)
 ---@return boolean canChange
 function ScriptRegion:CanChangeProtectedState() end

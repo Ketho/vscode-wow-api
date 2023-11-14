@@ -5,6 +5,11 @@ local Animation = {}
 ---@class animation : Animation
 ---@class ANIMATION : Animation
 
+---[Documentation](https://warcraft.wiki.gg/wiki/API_Object_GetParent)
+---@return AnimationGroup parent
+function Animation:GetParent() end
+
+
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_Animation_GetDuration)
 ---@return number durationSec
 function Animation:GetDuration() end

@@ -37,6 +37,8 @@
 ---@alias ChatBubbleFrame Frame
 ---@alias ModelSceneFrame ModelScene
 ---@alias ModelSceneFrameActor ModelSceneActor
+---@alias SimplePathAnim Path
+---@alias SimpleControlPoint ControlPoint
 
 ---@class UiMapPoint
 ---@field uiMapID number

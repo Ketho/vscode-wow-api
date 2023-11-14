@@ -5,6 +5,11 @@ local AnimationGroup = {}
 ---@class animationgroup : AnimationGroup
 ---@class ANIMATIONGROUP : AnimationGroup
 
+---[Documentation](https://warcraft.wiki.gg/wiki/API_Object_GetParent)
+---@return Frame parent
+function AnimationGroup:GetParent() end
+
+
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_AnimationGroup_CreateAnimation)
 ---@generic T
 ---@param animationType? `T` | AnimationType

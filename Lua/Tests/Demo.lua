@@ -44,3 +44,19 @@ local smooth = Mixin(f2, SmoothStatusBarMixin)
 
 -- accepts enum
 local cat = C_TransmogCollection.GetCategoryInfo(Enum.TransmogCollectionType.Bow)
+
+-- # GetParent
+local animgroup_parent = group:GetParent()
+local anim_parent = anim2:GetParent()
+local frame_parent = f:GetParent()
+local tex_parent = tex:GetParent()
+local fs_parent = fs:GetParent()
+
+-- controlpoint
+local cp = group:CreateAnimation("Path"):CreateControlPoint()
+local cp_parent = cp:GetParent()
+
+-- font
+local font_a = CreateFont("SomeFont")
+local font_b = CreateFont("AnotherFont")
+font_b:SetFont(font_a:GetFont())

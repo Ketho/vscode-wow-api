@@ -4,6 +4,9 @@
 - The Classic (TBC) API is not supported ([#13](https://github.com/Ketho/vscode-wow-api/issues/13))
 - Frame templates are not completely supported, only BackdropTemplate ([#15](https://github.com/Ketho/vscode-wow-api/issues/15)) 
 
+## [0.10.11] - 2023-11-15
+- 🌙 Definitions: Simulate `:GetParent` to return Frame; for Animation it returns AnimationGroup; for ControlPoint it returns Path.
+
 ## [0.10.10] - 2023-11-06
 - 🌙 Definitions: Fixed `:SetPoint` widget method
 
@@ -397,6 +400,7 @@ Libraries
 ### Added
 - 🚧 Wip: Development work
 
+[0.10.11]: https://github.com/Ketho/vscode-wow-api/releases/tag/0.10.11
 [0.10.10]: https://github.com/Ketho/vscode-wow-api/releases/tag/0.10.10
 [0.10.9]: https://github.com/Ketho/vscode-wow-api/releases/tag/0.10.9
 [0.10.8]: https://github.com/Ketho/vscode-wow-api/releases/tag/0.10.8
