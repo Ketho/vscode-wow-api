@@ -11,6 +11,8 @@ or
 ```
 
 ## Environment Setup
+⚠️ This readme is only for users who want to generate the LuaLS annotations themselves in case the extension no longer gets updated.
+
 If using WSL, it is HIGHLY recommended that you setup your WSL instance and handle all git operations within WSL.
 
 While using WSL is not required, the below setups are written around the assumption that WSL is being used. If you do not have WSL setup, you can start the install by running `wsl --install` from an elevated command prompt.  

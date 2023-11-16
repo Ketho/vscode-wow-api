@@ -1,7 +1,7 @@
 ## WoW API
 [![](https://img.shields.io/github/license/Ketho/vscode-wow-api)](https://opensource.org/licenses/MIT)
 [![](https://img.shields.io/github/v/release/Ketho/vscode-wow-api)](https://github.com/Ketho/vscode-wow-api/releases)
-[![](https://img.shields.io/badge/wow-10.1.7-yellow)](https://github.com/Gethe/wow-ui-source/tree/10.1.7)
+[![](https://img.shields.io/badge/wow-10.2.0-yellow)](https://github.com/Gethe/wow-ui-source/tree/10.2.0)
 
 Adds IntelliSense features for World of Warcraft API to VS Code. This is a plugin extension for [Sumneko's](https://marketplace.visualstudio.com/items?itemName=sumneko.lua) Lua [Language Server](https://microsoft.github.io/language-server-protocol/) with [LuaCats](https://github.com/LuaLS/lua-language-server/wiki/Annotations) annotations.
 
@@ -52,7 +52,7 @@ Returns the level of the unit.
 Alternatively, the script will look for a commented block if present.  
 (This only looks for global APIs not documented in [Blizzard_APIDocumentationGenerated](https://github.com/Gethe/wow-ui-source/tree/beta/Interface/AddOns/Blizzard_APIDocumentationGenerated), it won't look for Widget APIs and FrameXML functions)
 ```lua
-<!-- definition
+<!-- emmylua
 ---@param unit UnitId
 ---@return number level
 function UnitLevel(unit) end
