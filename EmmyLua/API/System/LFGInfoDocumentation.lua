@@ -53,6 +53,22 @@ function C_LFGInfo.GetRoleCheckDifficultyDetails() end
 ---@return boolean shouldHide
 function C_LFGInfo.HideNameFromUI(dungeonID) end
 
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_LFGInfo.IsGroupFinderEnabled)
+---@return boolean enabled
+function C_LFGInfo.IsGroupFinderEnabled() end
+
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_LFGInfo.IsLFDEnabled)
+---@return boolean enabled
+function C_LFGInfo.IsLFDEnabled() end
+
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_LFGInfo.IsLFREnabled)
+---@return boolean enabled
+function C_LFGInfo.IsLFREnabled() end
+
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_LFGInfo.IsPremadeGroupEnabled)
+---@return boolean enabled
+function C_LFGInfo.IsPremadeGroupEnabled() end
+
 ---@class LFGDungeonInfo
 ---@field name string
 ---@field iconID fileID

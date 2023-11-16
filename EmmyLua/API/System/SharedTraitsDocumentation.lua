@@ -17,8 +17,9 @@ function C_Traits.CanRefundRank(configID, nodeID) end
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_Traits.CascadeRepurchaseRanks)
 ---@param configID number
 ---@param nodeID number
+---@param entryID? number
 ---@return boolean success
-function C_Traits.CascadeRepurchaseRanks(configID, nodeID) end
+function C_Traits.CascadeRepurchaseRanks(configID, nodeID, entryID) end
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_Traits.ClearCascadeRepurchaseHistory)
 ---@param configID number
@@ -181,8 +182,9 @@ function C_Traits.RefundAllRanks(configID, nodeID) end
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_Traits.RefundRank)
 ---@param configID number
 ---@param nodeID number
+---@param clearEdges? boolean
 ---@return boolean success
-function C_Traits.RefundRank(configID, nodeID) end
+function C_Traits.RefundRank(configID, nodeID, clearEdges) end
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_Traits.ResetTree)
 ---@param configID number
@@ -206,8 +208,9 @@ function C_Traits.RollbackConfig(configID) end
 ---@param configID number
 ---@param nodeID number
 ---@param nodeEntryID? number
+---@param clearEdges? boolean
 ---@return boolean success
-function C_Traits.SetSelection(configID, nodeID, nodeEntryID) end
+function C_Traits.SetSelection(configID, nodeID, nodeEntryID, clearEdges) end
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_Traits.StageConfig)
 ---@param configID number
@@ -301,6 +304,7 @@ function C_Traits.TalentTestUnlearnSpells() end
 ---@field currentRank number?
 ---@field meetsEdgeRequirements boolean?
 ---@field isCascadeRepurchasable boolean?
+---@field activeEntryID number?
 
 ---@class TraitOutEdgeInfo
 ---@field targetNode number

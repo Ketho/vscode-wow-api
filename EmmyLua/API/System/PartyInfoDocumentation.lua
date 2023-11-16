@@ -70,6 +70,12 @@ function C_PartyInfo.GetInviteConfirmationInvalidQueues(inviteGUID) end
 ---@return ClubId outClubId
 function C_PartyInfo.GetInviteReferralInfo(inviteGUID) end
 
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_PartyInfo.GetMinItemLevel)
+---@param avgItemLevelCategory number|Enum.AvgItemLevelCategories
+---@return number minItemLevel
+---@return string playerNameWithLowestItemLevel
+function C_PartyInfo.GetMinItemLevel(avgItemLevelCategory) end
+
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_PartyInfo.GetMinLevel)
 ---@param category? number
 ---@return number minLevel

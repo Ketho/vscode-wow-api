@@ -115,7 +115,8 @@ function C_ItemUpgrade.UpgradeItem(numUpgrades) end
 ---@field failureMessage string?
 
 ---@class ItemUpgradeSeasonalCostType
----@field itemID number
+---@field itemID number?
+---@field currencyID number?
 ---@field orderIndex number
 ---@field sourceString string?
 

@@ -666,9 +666,9 @@ export const data: CVarInterface = {
 	},
 	gxframeendmode: {
 		name: "GxFrameEndMode",
-		default: "0",
+		default: "1",
 		category: 1,
-		help: "Allow GxFrameEnd to overlap next frame (feature not yet available)",
+		help: "Allow GxFrameEnd to overlap next frame (0=Disabled, 1=Safe, 2=Experimental, 3=StressSafe, 4=StressExperimental)",
 	},
 	gxprismenabled: {
 		name: "GxPrismEnabled",
@@ -1868,6 +1868,24 @@ export const data: CVarInterface = {
 		category: 1,
 		help: "Terrain lod divisor",
 	},
+	threadpoollimithp: {
+		name: "ThreadPoolLimitHP",
+		default: "6",
+		category: 1,
+		help: "Limit number of threads allowed to be used for [Low|Mid|High] priority job scheduling",
+	},
+	threadpoollimitlp: {
+		name: "ThreadPoolLimitLP",
+		default: "6",
+		category: 1,
+		help: "Limit number of threads allowed to be used for [Low|Mid|High] priority job scheduling",
+	},
+	threadpoollimitmp: {
+		name: "ThreadPoolLimitMP",
+		default: "6",
+		category: 1,
+		help: "Limit number of threads allowed to be used for [Low|Mid|High] priority job scheduling",
+	},
 	turnspeed: {
 		name: "TurnSpeed",
 		default: "180",
@@ -2213,6 +2231,55 @@ export const data: CVarInterface = {
 		category: 4,
 		scope: "Character",
 		help: "The info for Add Friend has been shown",
+	},
+	advflykeyboardmaxpitchfactor: {
+		name: "advFlyKeyboardMaxPitchFactor",
+		default: "5.0",
+		category: 4,
+		scope: "Character",
+		help: "Modifies the maximum pitch rate when using advFlyKeyboard.",
+	},
+	advflykeyboardmaxturnfactor: {
+		name: "advFlyKeyboardMaxTurnFactor",
+		default: "8.0",
+		category: 4,
+		scope: "Character",
+		help: "Modifies the maximum turn rate when using advFlyKeyboard.",
+	},
+	advflykeyboardminpitchfactor: {
+		name: "advFlyKeyboardMinPitchFactor",
+		default: "2.5",
+		category: 4,
+		scope: "Character",
+		help: "Modifies the minimum pitch rate when using advFlyKeyboard.",
+	},
+	advflykeyboardminturnfactor: {
+		name: "advFlyKeyboardMinTurnFactor",
+		default: "5.0",
+		category: 4,
+		scope: "Character",
+		help: "Modifies the minimum turn rate when using advFlyKeyboard.",
+	},
+	advflypitchcontrol: {
+		name: "advFlyPitchControl",
+		default: "3",
+		category: 4,
+		scope: "Character",
+		help: "Modifies forward/backwards inputs to control pitch when Dragonriding.",
+	},
+	advflypitchcontrolcamerachase: {
+		name: "advFlyPitchControlCameraChase",
+		default: "20.0",
+		category: 4,
+		scope: "Character",
+		help: "Modifies the speed at which camera pitch follows player pitch while dragonriding with forward/backward pitch control.",
+	},
+	advflypitchcontrolgrounddebounce: {
+		name: "advFlyPitchControlGroundDebounce",
+		default: "0",
+		category: 4,
+		scope: "Character",
+		help: "If enabled, will debounce forwards/backwards inputs used to control pitch when transitioning between dragonriding and grounded.",
 	},
 	advjournallastopened: {
 		name: "advJournalLastOpened",
@@ -4736,18 +4803,6 @@ export const data: CVarInterface = {
 		category: 1,
 		help: "Doodad level of detail scale",
 	},
-	dragonridingpitchsensitivity: {
-		name: "dragonRidingPitchSensitivity",
-		default: "2.5",
-		category: 4,
-		help: "Changes the sensitivity of pitch down/up keys",
-	},
-	dragonridingturnsensitivity: {
-		name: "dragonRidingTurnSensitivity",
-		default: "5",
-		category: 4,
-		help: "Changes the sensitivity of turn left/right keys",
-	},
 	dynamiclod: {
 		name: "dynamicLod",
 		default: "1",
@@ -5481,11 +5536,11 @@ export const data: CVarInterface = {
 		category: 1,
 		help: "Render transparent M2 pass in parallel.",
 	},
-	gxmtalphawater: {
-		name: "gxMTAlphaWater",
+	gxmtalphapass: {
+		name: "gxMTAlphaPass",
 		default: "1",
 		category: 1,
-		help: "Render Alpha Water Volumes in parallel.",
+		help: "Render Alpha Pass in parallel.",
 	},
 	gxmtbegindraw: {
 		name: "gxMTBeginDraw",
@@ -5517,17 +5572,17 @@ export const data: CVarInterface = {
 		category: 1,
 		help: "Render opaque WMO in parallel.",
 	},
-	gxmtparticulatevolumes: {
-		name: "gxMTParticulateVolumes",
-		default: "0",
-		category: 1,
-		help: "Render Particulate Volumes in parallel.",
-	},
 	gxmtprepass: {
 		name: "gxMTPrepass",
 		default: "1",
 		category: 1,
 		help: "Render prepass in parallel.",
+	},
+	gxmtrefraction: {
+		name: "gxMTRefraction",
+		default: "1",
+		category: 1,
+		help: "Render refraction pass in parallel",
 	},
 	gxmtshadow: {
 		name: "gxMTShadow",
@@ -5540,6 +5595,12 @@ export const data: CVarInterface = {
 		default: "1",
 		category: 1,
 		help: "Render terrain in parallel.",
+	},
+	gxmtvolfog: {
+		name: "gxMTVolFog",
+		default: "1",
+		category: 1,
+		help: "Render volumetric fog in parallel",
 	},
 	gxmaxframelatency: {
 		name: "gxMaxFrameLatency",
@@ -5746,6 +5807,13 @@ export const data: CVarInterface = {
 		category: 4,
 		scope: "Account",
 		help: "Stores the Loamm Niffen renown when Renown UI is closed",
+	},
+	lastrenownformajorfaction2574: {
+		name: "lastRenownForMajorFaction2574",
+		default: "0",
+		category: 4,
+		scope: "Account",
+		help: "Stores the Dream Warden renown when Renown UI is closed",
 	},
 	lastselectedclubid: {
 		name: "lastSelectedClubId",

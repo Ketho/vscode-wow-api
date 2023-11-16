@@ -273,6 +273,10 @@ function C_PvP.GetSeasonBestInfo() end
 ---@return BattlemasterListInfo battlemasterListInfo
 function C_PvP.GetSkirmishInfo(pvpBracket) end
 
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_PvP.GetSoloRBGMinItemLevel)
+---@return number minItemLevel
+function C_PvP.GetSoloRBGMinItemLevel() end
+
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_PvP.GetSpecialEventBrawlInfo)
 ---@return PvpBrawlInfo? brawlInfo
 function C_PvP.GetSpecialEventBrawlInfo() end
@@ -326,6 +330,10 @@ function C_PvP.IsBattleground() end
 ---@return boolean brawlActive
 function C_PvP.IsBattlegroundEnlistmentBonusActive() end
 
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_PvP.IsBrawlSoloRBG)
+---@return boolean isBrawlSoloRBG
+function C_PvP.IsBrawlSoloRBG() end
+
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_PvP.IsBrawlSoloShuffle)
 ---@return boolean isBrawlSoloShuffle
 function C_PvP.IsBrawlSoloShuffle() end
@@ -373,6 +381,10 @@ function C_PvP.IsRatedMap() end
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_PvP.IsRatedSoloShuffle)
 ---@return boolean isRatedSoloShuffle
 function C_PvP.IsRatedSoloShuffle() end
+
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_PvP.IsSoloRBG)
+---@return boolean isSoloRBG
+function C_PvP.IsSoloRBG() end
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_PvP.IsSoloShuffle)
 ---@return boolean isSoloShuffle
@@ -476,6 +488,7 @@ function C_PvP.ToggleWarMode() end
 ---@field brawlType Enum.BrawlType
 ---@field mapNames string[]
 ---@field includesAllArenas boolean? Default = false
+---@field minItemLevel number? Default = 0
 
 ---@class PVPPersonalRatedInfo
 ---@field personalRating number

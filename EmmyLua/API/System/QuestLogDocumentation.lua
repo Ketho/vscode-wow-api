@@ -443,6 +443,7 @@ function C_QuestLog.UnitIsRelatedToActiveQuest(unit) end
 ---@field overridesSortOrder boolean
 ---@field readyForTranslation boolean? Default = true
 ---@field isLegendarySort boolean
+---@field isInternalOnly boolean
 
 ---@class QuestObjectiveInfo
 ---@field text string

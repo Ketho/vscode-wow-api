@@ -44,6 +44,11 @@ export const data: EventInterface = {
 			{Name: "checksRange", Type: "boolean"},
 		],
 	},
+	ACTION_USABLE_CHANGED: {
+		Payload: [
+			{Name: "changes", Type: "ActionUsableState[]"},
+		],
+	},
 	ACTION_WILL_BIND_ITEM: {},
 	ACTIVATE_GLYPH: {
 		Payload: [
@@ -2831,11 +2836,6 @@ export const data: EventInterface = {
 			{Name: "slot", Type: "number"},
 		],
 	},
-	EXECUTE_CHAT_LINE: {
-		Payload: [
-			{Name: "chatLine", Type: "string"},
-		],
-	},
 	EXPAND_BAG_BAR_CHANGED: {
 		Payload: [
 			{Name: "expandBagBar", Type: "boolean"},
@@ -3171,13 +3171,19 @@ export const data: EventInterface = {
 		],
 	},
 	GLUE_SCREENSHOT_FAILED: {},
+	GLUE_SCREENSHOT_STARTED: {},
+	GLUE_SCREENSHOT_SUCCEEDED: {},
 	GM_PLAYER_INFO: {
 		Payload: [
 			{Name: "name", Type: "string"},
 			{Name: "info", Type: "string"},
 		],
 	},
-	GOSSIP_CLOSED: {},
+	GOSSIP_CLOSED: {
+		Payload: [
+			{Name: "interactionIsContinuing", Type: "boolean"},
+		],
+	},
 	GOSSIP_CONFIRM: {
 		Payload: [
 			{Name: "gossipID", Type: "number"},
@@ -3486,14 +3492,6 @@ export const data: EventInterface = {
 			{Name: "type", Type: "JailersTowerType"},
 		],
 	},
-	KNOWLEDGE_BASE_ARTICLE_LOAD_FAILURE: {},
-	KNOWLEDGE_BASE_ARTICLE_LOAD_SUCCESS: {},
-	KNOWLEDGE_BASE_QUERY_LOAD_FAILURE: {},
-	KNOWLEDGE_BASE_QUERY_LOAD_SUCCESS: {},
-	KNOWLEDGE_BASE_SERVER_MESSAGE: {},
-	KNOWLEDGE_BASE_SETUP_LOAD_FAILURE: {},
-	KNOWLEDGE_BASE_SETUP_LOAD_SUCCESS: {},
-	KNOWLEDGE_BASE_SYSTEM_MOTD_UPDATED: {},
 	KNOWN_TITLES_UPDATE: {
 		Payload: [
 			{Name: "unitTarget", Type: "UnitToken"},
@@ -4448,7 +4446,7 @@ export const data: EventInterface = {
 	PVP_REWARDS_UPDATE: {},
 	PVP_ROLE_POPUP_HIDE: {
 		Payload: [
-			{Name: "readyCheckInfo", Type: "PvpReadyCheckInfo"},
+			{Name: "readyCheckInfo", Type: "PvpReadyCheckInfo", Nilable: true},
 		],
 	},
 	PVP_ROLE_POPUP_SHOW: {
@@ -4911,6 +4909,12 @@ export const data: EventInterface = {
 	SHOW_SUBSCRIPTION_INTERSTITIAL: {
 		Payload: [
 			{Name: "type", Type: "SubscriptionInterstitialType"},
+		],
+	},
+	SHOW_SUBTITLE: {
+		Payload: [
+			{Name: "subtitle", Type: "string"},
+			{Name: "sender", Type: "string", Nilable: true},
 		],
 	},
 	SIMPLE_BROWSER_WEB_ERROR: {

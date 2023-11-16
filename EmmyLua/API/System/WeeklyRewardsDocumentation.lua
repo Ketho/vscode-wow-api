@@ -31,6 +31,11 @@ function C_WeeklyRewards.GetActivityEncounterInfo(type, index) end
 ---@return ConquestWeeklyProgress weeklyProgress
 function C_WeeklyRewards.GetConquestWeeklyProgress() end
 
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_WeeklyRewards.GetDifficultyIDForActivityTier)
+---@param activityTierID number
+---@return number difficultyID
+function C_WeeklyRewards.GetDifficultyIDForActivityTier(activityTierID) end
+
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_WeeklyRewards.GetExampleRewardItemHyperlinks)
 ---@param id number
 ---@return string hyperlink
@@ -42,12 +47,27 @@ function C_WeeklyRewards.GetExampleRewardItemHyperlinks(id) end
 ---@return string hyperlink
 function C_WeeklyRewards.GetItemHyperlink(itemDBID) end
 
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_WeeklyRewards.GetNextActivitiesIncrease)
+---@param activityTierID number
+---@param level number
+---@return boolean hasSeasonData
+---@return number? nextActivityTierID
+---@return number? nextLevel
+---@return number? itemLevel
+function C_WeeklyRewards.GetNextActivitiesIncrease(activityTierID, level) end
+
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_WeeklyRewards.GetNextMythicPlusIncrease)
 ---@param mythicPlusLevel number
 ---@return boolean hasSeasonData
 ---@return number? nextMythicPlusLevel
 ---@return number? itemLevel
 function C_WeeklyRewards.GetNextMythicPlusIncrease(mythicPlusLevel) end
+
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_WeeklyRewards.GetNumCompletedDungeonRuns)
+---@return number numHeroic
+---@return number numMythic
+---@return number numMythicPlus
+function C_WeeklyRewards.GetNumCompletedDungeonRuns() end
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_WeeklyRewards.GetWeeklyRewardTextureKit)
 ---@return textureKit uiTextureKit
@@ -100,6 +120,7 @@ function C_WeeklyRewards.ShouldShowRetirementMessage() end
 ---@field threshold number
 ---@field progress number
 ---@field id number
+---@field activityTierID number
 ---@field level number
 ---@field claimID number?
 ---@field raidString string?

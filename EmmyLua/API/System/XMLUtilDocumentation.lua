@@ -16,6 +16,7 @@ function C_XMLUtil.GetTemplates() end
 ---@field height number
 ---@field keyValues XMLTemplateKeyValue[]
 ---@field inherits string?
+---@field sourceLocation string
 
 ---@class XMLTemplateKeyValue
 ---@field key string

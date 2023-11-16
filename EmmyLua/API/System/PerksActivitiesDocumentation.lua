@@ -30,6 +30,10 @@ function C_PerksActivities.GetPerksActivityChatLink(perksActivityID) end
 ---@return PerksActivityInfo? info
 function C_PerksActivities.GetPerksActivityInfo(perksActivityID) end
 
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_PerksActivities.GetPerksUIThemePrefix)
+---@return string kitPrefix
+function C_PerksActivities.GetPerksUIThemePrefix() end
+
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_PerksActivities.GetTrackedPerksActivities)
 ---@return PerksActivitiesTracked trackedPerksActivities
 function C_PerksActivities.GetTrackedPerksActivities() end

@@ -103,3 +103,8 @@ function C_ActionBar.ShouldOverrideBarShowManaBar() end
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_ActionBar.ToggleAutoCastPetAction)
 ---@param slotID number
 function C_ActionBar.ToggleAutoCastPetAction(slotID) end
+
+---@class ActionUsableState
+---@field slot number
+---@field usable boolean
+---@field noMana boolean

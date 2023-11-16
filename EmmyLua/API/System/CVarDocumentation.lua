@@ -22,6 +22,17 @@ function C_CVar.GetCVarBool(name) end
 ---@return string? defaultValue
 function C_CVar.GetCVarDefault(name) end
 
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_CVar.GetCVarInfo)
+---@param name string
+---@return string value
+---@return string defaultValue
+---@return boolean isStoredServerAccount
+---@return boolean isStoredServerCharacter
+---@return boolean isLockedFromUser
+---@return boolean isSecure
+---@return boolean isReadOnly
+function C_CVar.GetCVarInfo(name) end
+
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_CVar.RegisterCVar)
 ---@param name string
 ---@param value? string|number
@@ -42,3 +53,12 @@ function C_CVar.SetCVar(name, value) end
 ---@param value boolean
 ---@return boolean success
 function C_CVar.SetCVarBitfield(name, index, value) end
+
+---@class CVarInfo
+---@field value string
+---@field defaultValue string
+---@field isStoredServerAccount boolean
+---@field isStoredServerCharacter boolean
+---@field isLockedFromUser boolean
+---@field isSecure boolean
+---@field isReadOnly boolean

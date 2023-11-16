@@ -310,11 +310,6 @@ function BeginTrade() end
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_BindEnchant)
 function BindEnchant() end
 
----[Documentation](https://warcraft.wiki.gg/wiki/API_BreakUpLargeNumbers)
----@param value number
----@return string valueString
-function BreakUpLargeNumbers(value) end
-
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_BuyGuildBankTab)
 function BuyGuildBankTab() end
 
@@ -2088,4 +2083,43 @@ function C_ToyBox.GetToyFromIndex(index) end
 ---@return boolean hasFanfare
 ---@return Enum.ItemQuality itemQuality
 function C_ToyBox.GetToyInfo(itemID) end
+
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_ToyBox.GetToyLink)
+function C_ToyBox.GetToyLink(itemID) end
+
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_ToyBox.GetUncollectedShown)
+function C_ToyBox.GetUncollectedShown() end
+
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_ToyBox.GetUnusableShown)
+function C_ToyBox.GetUnusableShown() end
+
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_ToyBox.HasFavorites)
+function C_ToyBox.HasFavorites() end
+
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_ToyBox.IsExpansionTypeFilterChecked)
+function C_ToyBox.IsExpansionTypeFilterChecked(expansionIndex) end
+
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_ToyBox.IsSourceTypeFilterChecked)
+function C_ToyBox.IsSourceTypeFilterChecked(sourceIndex) end
+
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_ToyBox.IsToyUsable)
+function C_ToyBox.IsToyUsable(itemID) end
+
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_ToyBox.PickupToyBoxItem)
+function C_ToyBox.PickupToyBoxItem(itemID) end
+
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_ToyBox.SetAllExpansionTypeFilters)
+function C_ToyBox.SetAllExpansionTypeFilters(checked) end
+
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_ToyBox.SetAllSourceTypeFilters)
+function C_ToyBox.SetAllSourceTypeFilters(checked) end
+
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_ToyBox.SetCollectedShown)
+function C_ToyBox.SetCollectedShown(checked) end
+
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_ToyBox.SetExpansionTypeFilter)
+function C_ToyBox.SetExpansionTypeFilter(expansionIndex, checked) end
+
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_ToyBox.SetFilterString)
+function C_ToyBox.SetFilterString(searchString) end
 

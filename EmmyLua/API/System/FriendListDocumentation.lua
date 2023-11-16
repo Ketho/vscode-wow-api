@@ -105,7 +105,8 @@ function C_FriendList.RemoveFriendByIndex(index) end
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_FriendList.SendWho)
 ---@param filter string
-function C_FriendList.SendWho(filter) end
+---@param origin? number
+function C_FriendList.SendWho(filter, origin) end
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_FriendList.SetFriendNotes)
 ---@param name string

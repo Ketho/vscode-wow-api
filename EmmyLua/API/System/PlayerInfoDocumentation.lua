@@ -50,6 +50,10 @@ function C_PlayerInfo.GetGlidingInfo() end
 ---@return number[] dungeonID
 function C_PlayerInfo.GetInstancesUnlockedAtLevel(level, isRaid) end
 
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_PlayerInfo.GetNativeDisplayID)
+---@return number nativeDisplayID
+function C_PlayerInfo.GetNativeDisplayID() end
+
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_PlayerInfo.GetPetStableCreatureDisplayInfoID)
 ---@param index number
 ---@return number creatureDisplayInfoID
@@ -70,10 +74,18 @@ function C_PlayerInfo.GetPlayerMythicPlusRatingSummary(playerToken) end
 ---@return boolean isVisible
 function C_PlayerInfo.HasVisibleInvSlot(slot) end
 
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_PlayerInfo.IsDisplayRaceNative)
+---@return boolean isDisplayRaceNative
+function C_PlayerInfo.IsDisplayRaceNative() end
+
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_PlayerInfo.IsExpansionLandingPageUnlockedForPlayer)
 ---@param expansionID number
 ---@return boolean isUnlocked
 function C_PlayerInfo.IsExpansionLandingPageUnlockedForPlayer(expansionID) end
+
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_PlayerInfo.IsMirrorImage)
+---@return boolean isMirrorImage
+function C_PlayerInfo.IsMirrorImage() end
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_PlayerInfo.IsPlayerEligibleForNPE)
 ---@return boolean isEligible

@@ -1,26 +1,44 @@
 ---@meta
-C_Console = {}
+---[Documentation](https://warcraft.wiki.gg/wiki/API_CalculateStringEditDistance)
+---@param firstString stringView
+---@param secondString stringView
+---@return number distance
+function CalculateStringEditDistance(firstString, secondString) end
 
----[Documentation](https://warcraft.wiki.gg/wiki/API_C_Console.GetAllCommands)
+---[Documentation](https://warcraft.wiki.gg/wiki/API_ConsoleAddMessage)
+---@param message string
+function ConsoleAddMessage(message) end
+
+---[Documentation](https://warcraft.wiki.gg/wiki/API_ConsoleExec)
+---@param command string
+---@param addToHistory? boolean Default = false
+---@return boolean result
+function ConsoleExec(command, addToHistory) end
+
+---[Documentation](https://warcraft.wiki.gg/wiki/API_ConsoleGetAllCommands)
 ---@return ConsoleCommandInfo[] commands
-function C_Console.GetAllCommands() end
+function ConsoleGetAllCommands() end
 
----[Documentation](https://warcraft.wiki.gg/wiki/API_C_Console.GetColorFromType)
+---[Documentation](https://warcraft.wiki.gg/wiki/API_ConsoleGetColorFromType)
 ---@param colorType number|Enum.ConsoleColorType
 ---@return ColorMixin color
-function C_Console.GetColorFromType(colorType) end
+function ConsoleGetColorFromType(colorType) end
 
----[Documentation](https://warcraft.wiki.gg/wiki/API_C_Console.GetFontHeight)
+---[Documentation](https://warcraft.wiki.gg/wiki/API_ConsoleGetFontHeight)
 ---@return number fontHeightInPixels
-function C_Console.GetFontHeight() end
+function ConsoleGetFontHeight() end
 
----[Documentation](https://warcraft.wiki.gg/wiki/API_C_Console.PrintAllMatchingCommands)
+---[Documentation](https://warcraft.wiki.gg/wiki/API_ConsoleIsActive)
+---@return boolean consoleIsActive
+function ConsoleIsActive() end
+
+---[Documentation](https://warcraft.wiki.gg/wiki/API_ConsolePrintAllMatchingCommands)
 ---@param partialCommandText string
-function C_Console.PrintAllMatchingCommands(partialCommandText) end
+function ConsolePrintAllMatchingCommands(partialCommandText) end
 
----[Documentation](https://warcraft.wiki.gg/wiki/API_C_Console.SetFontHeight)
+---[Documentation](https://warcraft.wiki.gg/wiki/API_ConsoleSetFontHeight)
 ---@param fontHeightInPixels number
-function C_Console.SetFontHeight(fontHeightInPixels) end
+function ConsoleSetFontHeight(fontHeightInPixels) end
 
 ---@class ConsoleCommandInfo
 ---@field command string

@@ -6,6 +6,7 @@
 ---@field icon textureAtlas
 ---@field selectedIcon textureAtlas
 ---@field undressModel boolean
+---@field subcategory boolean
 ---@field cameraZoomLevel number
 ---@field cameraDistanceOffset number
 ---@field spellShapeshiftFormID number?

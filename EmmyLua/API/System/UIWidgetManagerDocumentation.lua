@@ -557,6 +557,10 @@ function C_UIWidgetManager.UnregisterUnitForWidgetUpdates(unitToken, isGuid) end
 ---@field textEnabledState Enum.WidgetEnabledState
 ---@field textFontType Enum.UIWidgetFontType
 ---@field textSizeType Enum.UIWidgetTextSizeType
+---@field glowAnimType Enum.WidgetGlowAnimType
+---@field showGlowState Enum.WidgetShowGlowState
+---@field fillMinOpacity Enum.WidgetOpacityType
+---@field fillMaxOpacity Enum.WidgetOpacityType
 ---@field widgetSizeSetting number
 ---@field textureKit textureKit
 ---@field frameTextureKit textureKit
@@ -762,6 +766,7 @@ function C_UIWidgetManager.UnregisterUnitForWidgetUpdates(unitToken, isGuid) end
 ---@field tooltipEnabled boolean
 ---@field iconSizeType Enum.WidgetIconSizeType
 ---@field infoTextEnabledState Enum.WidgetEnabledState
+---@field showAsEarned boolean
 
 ---@class UIWidgetSetInfo
 ---@field layoutDirection Enum.UIWidgetSetLayoutDirection

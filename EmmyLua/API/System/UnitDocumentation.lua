@@ -108,6 +108,45 @@ function SetUnitCursorTexture(textureObject, unit, style, includeLowPriority) en
 ---@return boolean hasHeritageArmorUnlocked
 function UnitAlliedRaceInfo(unit) end
 
+---[Documentation](https://warcraft.wiki.gg/wiki/API_UnitBattlePetLevel)
+---@param unit UnitToken
+---@return number? result
+function UnitBattlePetLevel(unit) end
+
+---[Documentation](https://warcraft.wiki.gg/wiki/API_UnitBattlePetSpeciesID)
+---@param unit UnitToken
+---@return number? result
+function UnitBattlePetSpeciesID(unit) end
+
+---[Documentation](https://warcraft.wiki.gg/wiki/API_UnitBattlePetType)
+---@param unit UnitToken
+---@return number? result
+function UnitBattlePetType(unit) end
+
+---[Documentation](https://warcraft.wiki.gg/wiki/API_UnitCanAssist)
+---@param unit UnitToken
+---@param target UnitToken
+---@return boolean result
+function UnitCanAssist(unit, target) end
+
+---[Documentation](https://warcraft.wiki.gg/wiki/API_UnitCanAttack)
+---@param unit UnitToken
+---@param target UnitToken
+---@return boolean result
+function UnitCanAttack(unit, target) end
+
+---[Documentation](https://warcraft.wiki.gg/wiki/API_UnitCanCooperate)
+---@param unit UnitToken
+---@param target UnitToken
+---@return boolean result
+function UnitCanCooperate(unit, target) end
+
+---[Documentation](https://warcraft.wiki.gg/wiki/API_UnitCanPetBattle)
+---@param unit UnitToken
+---@param target UnitToken
+---@return boolean result
+function UnitCanPetBattle(unit, target) end
+
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_UnitChromieTimeID)
 ---@param unit UnitToken
 ---@return number ID
@@ -132,10 +171,51 @@ function UnitClassBase(unit) end
 ---@return boolean checkedDistance
 function UnitDistanceSquared(unit) end
 
+---[Documentation](https://warcraft.wiki.gg/wiki/API_UnitExists)
+---@param unit? UnitToken Default = WOWGUID_NULL
+---@return boolean result
+function UnitExists(unit) end
+
+---[Documentation](https://warcraft.wiki.gg/wiki/API_UnitFactionGroup)
+---@param unitName string
+---@param checkDisplayRace? boolean Default = false
+---@return string factionGroupTag
+---@return string localized
+function UnitFactionGroup(unitName, checkDisplayRace) end
+
+---[Documentation](https://warcraft.wiki.gg/wiki/API_UnitGroupRolesAssigned)
+---@param unit? UnitToken Default = WOWGUID_NULL
+---@return string result
+function UnitGroupRolesAssigned(unit) end
+
+---[Documentation](https://warcraft.wiki.gg/wiki/API_UnitInAnyGroup)
+---@param unit? UnitToken Default = WOWGUID_NULL
+---@param partyIndex? number
+---@return boolean result
+function UnitInAnyGroup(unit, partyIndex) end
+
+---[Documentation](https://warcraft.wiki.gg/wiki/API_UnitInBattleground)
+---@param unit? UnitToken Default = WOWGUID_NULL
+---@param partyIndex? number
+---@return number? result
+function UnitInBattleground(unit, partyIndex) end
+
+---[Documentation](https://warcraft.wiki.gg/wiki/API_UnitInParty)
+---@param unit? UnitToken Default = WOWGUID_NULL
+---@param partyIndex? number
+---@return boolean result
+function UnitInParty(unit, partyIndex) end
+
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_UnitInPartyShard)
 ---@param unit UnitToken
 ---@return boolean inPartyShard
 function UnitInPartyShard(unit) end
+
+---[Documentation](https://warcraft.wiki.gg/wiki/API_UnitInRaid)
+---@param unit? UnitToken Default = WOWGUID_NULL
+---@param partyIndex? number
+---@return number? result
+function UnitInRaid(unit, partyIndex) end
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_UnitInRange)
 ---@param unit UnitToken
@@ -143,16 +223,136 @@ function UnitInPartyShard(unit) end
 ---@return boolean checkedRange
 function UnitInRange(unit) end
 
+---[Documentation](https://warcraft.wiki.gg/wiki/API_UnitInSubgroup)
+---@param unit? UnitToken Default = WOWGUID_NULL
+---@param partyIndex? number
+---@return boolean result
+function UnitInSubgroup(unit, partyIndex) end
+
+---[Documentation](https://warcraft.wiki.gg/wiki/API_UnitIsAFK)
+---@param unit UnitToken
+---@return boolean result
+function UnitIsAFK(unit) end
+
+---[Documentation](https://warcraft.wiki.gg/wiki/API_UnitIsBattlePet)
+---@param unit UnitToken
+---@return boolean? result
+function UnitIsBattlePet(unit) end
+
+---[Documentation](https://warcraft.wiki.gg/wiki/API_UnitIsBattlePetCompanion)
+---@param unit UnitToken
+---@return boolean result
+function UnitIsBattlePetCompanion(unit) end
+
+---[Documentation](https://warcraft.wiki.gg/wiki/API_UnitIsCharmed)
+---@param unit? UnitToken Default = WOWGUID_NULL
+---@return boolean result
+function UnitIsCharmed(unit) end
+
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_UnitIsConnected)
 ---@param unit UnitToken
 ---@return boolean isConnected
 function UnitIsConnected(unit) end
+
+---[Documentation](https://warcraft.wiki.gg/wiki/API_UnitIsCorpse)
+---@param unit? UnitToken Default = WOWGUID_NULL
+---@return boolean result
+function UnitIsCorpse(unit) end
+
+---[Documentation](https://warcraft.wiki.gg/wiki/API_UnitIsDND)
+---@param unit UnitToken
+---@return boolean result
+function UnitIsDND(unit) end
+
+---[Documentation](https://warcraft.wiki.gg/wiki/API_UnitIsEnemy)
+---@param unit UnitToken
+---@param target UnitToken
+---@return boolean result
+function UnitIsEnemy(unit, target) end
+
+---[Documentation](https://warcraft.wiki.gg/wiki/API_UnitIsFriend)
+---@param unit UnitToken
+---@param target UnitToken
+---@return boolean result
+function UnitIsFriend(unit, target) end
+
+---[Documentation](https://warcraft.wiki.gg/wiki/API_UnitIsGameObject)
+---@param unit? UnitToken Default = WOWGUID_NULL
+---@return boolean result
+function UnitIsGameObject(unit) end
+
+---[Documentation](https://warcraft.wiki.gg/wiki/API_UnitIsInMyGuild)
+---@param unit string
+---@return boolean result
+function UnitIsInMyGuild(unit) end
+
+---[Documentation](https://warcraft.wiki.gg/wiki/API_UnitIsInteractable)
+---@param unit? UnitToken Default = WOWGUID_NULL
+---@return boolean result
+function UnitIsInteractable(unit) end
+
+---[Documentation](https://warcraft.wiki.gg/wiki/API_UnitIsOtherPlayersBattlePet)
+---@param unit? UnitToken Default = WOWGUID_NULL
+---@return boolean result
+function UnitIsOtherPlayersBattlePet(unit) end
+
+---[Documentation](https://warcraft.wiki.gg/wiki/API_UnitIsOtherPlayersPet)
+---@param unit? UnitToken Default = WOWGUID_NULL
+---@return boolean result
+function UnitIsOtherPlayersPet(unit) end
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_UnitIsOwnerOrControllerOfUnit)
 ---@param controllingUnit UnitToken
 ---@param controlledUnit UnitToken
 ---@return boolean unitIsOwnerOrControllerOfUnit
 function UnitIsOwnerOrControllerOfUnit(controllingUnit, controlledUnit) end
+
+---[Documentation](https://warcraft.wiki.gg/wiki/API_UnitIsPVP)
+---@param unit UnitToken
+---@return boolean result
+function UnitIsPVP(unit) end
+
+---[Documentation](https://warcraft.wiki.gg/wiki/API_UnitIsPVPFreeForAll)
+---@param unit UnitToken
+---@return boolean result
+function UnitIsPVPFreeForAll(unit) end
+
+---[Documentation](https://warcraft.wiki.gg/wiki/API_UnitIsPVPSanctuary)
+---@param unit? UnitToken Default = WOWGUID_NULL
+---@return boolean result
+function UnitIsPVPSanctuary(unit) end
+
+---[Documentation](https://warcraft.wiki.gg/wiki/API_UnitIsPlayer)
+---@param unit? UnitToken Default = WOWGUID_NULL
+---@param partyIndex? number
+---@return boolean result
+function UnitIsPlayer(unit, partyIndex) end
+
+---[Documentation](https://warcraft.wiki.gg/wiki/API_UnitIsPossessed)
+---@param unit? UnitToken Default = WOWGUID_NULL
+---@return boolean result
+function UnitIsPossessed(unit) end
+
+---[Documentation](https://warcraft.wiki.gg/wiki/API_UnitIsRaidOfficer)
+---@param unit? UnitToken Default = WOWGUID_NULL
+---@return boolean result
+function UnitIsRaidOfficer(unit) end
+
+---[Documentation](https://warcraft.wiki.gg/wiki/API_UnitIsUnit)
+---@param unitName1 string
+---@param unitName2 string
+---@return boolean result
+function UnitIsUnit(unitName1, unitName2) end
+
+---[Documentation](https://warcraft.wiki.gg/wiki/API_UnitIsVisible)
+---@param unit? UnitToken Default = WOWGUID_NULL
+---@return boolean result
+function UnitIsVisible(unit) end
+
+---[Documentation](https://warcraft.wiki.gg/wiki/API_UnitIsWildBattlePet)
+---@param unit UnitToken
+---@return boolean result
+function UnitIsWildBattlePet(unit) end
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_UnitNameplateShowsWidgetsOnly)
 ---@param unit UnitToken
@@ -175,6 +375,23 @@ function UnitPercentHealthFromGUID(unitGUID) end
 ---@param unit UnitToken
 ---@return Enum.PhaseReason? reason
 function UnitPhaseReason(unit) end
+
+---[Documentation](https://warcraft.wiki.gg/wiki/API_UnitPlayerControlled)
+---@param unit? UnitToken Default = WOWGUID_NULL
+---@return boolean result
+function UnitPlayerControlled(unit) end
+
+---[Documentation](https://warcraft.wiki.gg/wiki/API_UnitPlayerOrPetInParty)
+---@param unit? UnitToken Default = WOWGUID_NULL
+---@param partyIndex? number
+---@return boolean result
+function UnitPlayerOrPetInParty(unit, partyIndex) end
+
+---[Documentation](https://warcraft.wiki.gg/wiki/API_UnitPlayerOrPetInRaid)
+---@param unit? UnitToken Default = WOWGUID_NULL
+---@param partyIndex? number
+---@return boolean result
+function UnitPlayerOrPetInRaid(unit, partyIndex) end
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_UnitPower)
 ---@param unitToken UnitToken
@@ -214,6 +431,12 @@ function UnitQuestTrivialLevelRange(unit) end
 ---@param unit UnitToken
 ---@return number levelRange
 function UnitQuestTrivialLevelRangeScaling(unit) end
+
+---[Documentation](https://warcraft.wiki.gg/wiki/API_UnitReaction)
+---@param unit UnitToken
+---@param target UnitToken
+---@return number? result
+function UnitReaction(unit, target) end
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_UnitSex)
 ---@param unit UnitToken

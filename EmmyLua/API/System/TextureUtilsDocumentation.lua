@@ -5,6 +5,16 @@ C_Texture = {}
 ---@param texture SimpleTexture
 function C_Texture.ClearTitleIconTexture(texture) end
 
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_Texture.GetAtlasElementID)
+---@param atlas textureAtlas
+---@return number elementID
+function C_Texture.GetAtlasElementID(atlas) end
+
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_Texture.GetAtlasID)
+---@param atlas textureAtlas
+---@return number atlasID
+function C_Texture.GetAtlasID(atlas) end
+
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_Texture.GetAtlasInfo)
 ---@param atlas textureAtlas
 ---@return AtlasInfo info
@@ -41,6 +51,7 @@ function C_Texture.SetTitleIconTexture(texture, titleID, version) end
 ---@class AtlasInfo
 ---@field width number
 ---@field height number
+---@field rawSize Vector2DMixin
 ---@field leftTexCoord number
 ---@field rightTexCoord number
 ---@field topTexCoord number
@@ -49,3 +60,4 @@ function C_Texture.SetTitleIconTexture(texture, titleID, version) end
 ---@field tilesVertically boolean
 ---@field file fileID?
 ---@field filename string?
+---@field sliceData UITextureSliceData?

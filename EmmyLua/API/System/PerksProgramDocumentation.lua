@@ -56,6 +56,11 @@ function C_PerksProgram.GetVendorItemInfo(vendorItemID) end
 ---@return time_t refundTimeRemaining
 function C_PerksProgram.GetVendorItemInfoRefundTimeLeft(vendorItemID) end
 
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_PerksProgram.IsFrozenPerksVendorItem)
+---@param perksVendorItemID number
+---@return boolean isFrozen
+function C_PerksProgram.IsFrozenPerksVendorItem(perksVendorItemID) end
+
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_PerksProgram.ItemSelectedTelemetry)
 ---@param perksVendorItemID number
 function C_PerksProgram.ItemSelectedTelemetry(perksVendorItemID) end
@@ -129,7 +134,7 @@ function C_PerksProgram.SetFrozenPerksVendorItem() end
 ---@field timeRemaining time_t
 ---@field purchased boolean
 ---@field refundable boolean
----@field pending boolean
+---@field isPurchasePending boolean
 ---@field price number
 ---@field perksVendorItemID number
 ---@field itemID number
@@ -138,3 +143,9 @@ function C_PerksProgram.SetFrozenPerksVendorItem() end
 ---@field speciesID number
 ---@field transmogSetID number
 ---@field itemModifiedAppearanceID number
+---@field uiGroupInfo PerksVendorItemUIGroupInfo?
+
+---@class PerksVendorItemUIGroupInfo
+---@field ID number
+---@field name string
+---@field priority number

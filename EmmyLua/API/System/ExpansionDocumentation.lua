@@ -68,6 +68,10 @@ function GetNumExpansions() end
 ---@return number serverExpansionLevel
 function GetServerExpansionLevel() end
 
+---[Documentation](https://warcraft.wiki.gg/wiki/API_IsDemonHunterAvailable)
+---@return boolean available
+function IsDemonHunterAvailable() end
+
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_IsExpansionTrial)
 ---@return boolean isExpansionTrialAccount
 function IsExpansionTrial() end
