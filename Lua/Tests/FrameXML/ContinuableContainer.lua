@@ -1,0 +1,5 @@
+local itemLoc = ItemLocation:CreateEmpty()
+local continuableContainer = ContinuableContainer:Create()
+local item = Item:CreateFromItemLocation(itemLoc)
+continuableContainer:AddContinuable(item)
+continuableContainer:ContinueOnLoad(function() end)
