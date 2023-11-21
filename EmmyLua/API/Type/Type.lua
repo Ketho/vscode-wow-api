@@ -30,6 +30,7 @@
 ---|"MONK"        # 10
 ---|"DRUID"       # 11
 ---|"DEMONHUNTER" # 12
+---|"EVOKER"      # 13
 
 ---@alias HyperlinkType -- #41
 ---|"achievement"
