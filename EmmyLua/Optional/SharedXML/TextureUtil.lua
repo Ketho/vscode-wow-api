@@ -70,6 +70,16 @@ function CreateTextureMarkup(file, fileWidth, fileHeight, width, height, left, r
 ---@return string
 function CreateAtlasMarkup(atlasName, width, height, offsetX, offsetY, rVertexColor, gVertexColor, bVertexColor) end
 
+---[FrameXML](https://www.townlong-yak.com/framexml/go/CreateAtlasMarkupWithAtlasSize)
+---@param atlasName number|string
+---@param offsetX? number
+---@param offsetY? number
+---@param rVertexColor? number
+---@param gVertexColor? number
+---@param bVertexColor? number
+---@return string
+function CreateAtlasMarkupWithAtlasSize(atlasName, offsetX, offsetY, rVertexColor, gVertexColor, bVertexColor, scale) end
+
 ---[FrameXML](https://www.townlong-yak.com/framexml/go/SetupAtlasesOnRegions)
 --- Pass in a frame and a table containing parentKeys (on frame) as keys and atlas member names as the values
 ---@param frame Frame
