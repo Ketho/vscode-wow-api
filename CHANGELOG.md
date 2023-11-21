@@ -4,53 +4,58 @@
 - The Classic (TBC) API is not supported ([#13](https://github.com/Ketho/vscode-wow-api/issues/13))
 - Frame templates are not completely supported, only BackdropTemplate ([#15](https://github.com/Ketho/vscode-wow-api/issues/15)) 
 
+## [0.11.2] - 2023-11-21
+- 🌙 Annotations: PR [#116](https://github.com/Ketho/vscode-wow-api/pull/116) File IDs are integers
+- 🌙 Annotations: PR [#115](https://github.com/Ketho/vscode-wow-api/pull/115) Add Evoker to classfile union
+- 🌙 Annotations: Fixed deprecated addon API params
+
 ## [0.11.1] - 2023-11-16
-- 🌙 Definitions: Update most API for 10.2.0 (52106)
+- 🌙 Annotations: Update most API for 10.2.0 (52106)
 
 ## [0.10.11] - 2023-11-15
-- 🌙 Definitions: Simulate `:GetParent` to return Frame; for Animation it returns AnimationGroup; for ControlPoint it returns Path.
+- 🌙 Annotations: Simulate `:GetParent` to return Frame; for Animation it returns AnimationGroup; for ControlPoint it returns Path.
 
 ## [0.10.10] - 2023-11-06
-- 🌙 Definitions: Fixed `:SetPoint` widget method
+- 🌙 Annotations: Fixed `:SetPoint` widget method
 
 ## [0.10.9] - 2023-10-30
-- 🌙 Definitions: Added `MaskTexture`, `Line` UI Objects
-- 🌙 Definitions: Fixed `:SetFontObject` widget method
+- 🌙 Annotations: Added `MaskTexture`, `Line` UI Objects
+- 🌙 Annotations: Fixed `:SetFontObject` widget method
 
 ## [0.10.8] - 2023-10-24
-- 🌙 Definitions: Fixed `SimpleFrame`
-- 🌙 Definitions: Replaced Wowpedia with wiki.gg
+- 🌙 Annotations: Fixed `SimpleFrame`
+- 🌙 Annotations: Replaced Wowpedia with wiki.gg
 
 ## [0.10.7] - 2023-09-26
-- 🌙 Definitions: Fixed Texture widget
+- 🌙 Annotations: Fixed Texture widget
 
 ## [0.10.6] - 2023-09-25
-- 🌙 Definitions: Fixed `:SetAllPoints()`, `MouseButton` type, `Scale` widget, `C_Heirloom.GetHeirloomItemIDs()`
+- 🌙 Annotations: Fixed `:SetAllPoints()`, `MouseButton` type, `Scale` widget, `C_Heirloom.GetHeirloomItemIDs()`
 
 ## [0.10.5] - 2023-09-20
-- 🌙 Definitions: Added `C_ToyBox.GetToyFromIndex()`, `C_ToyBox.GetNumToys()`
+- 🌙 Annotations: Added `C_ToyBox.GetToyFromIndex()`, `C_ToyBox.GetNumToys()`
 
 ## [0.10.4] - 2023-09-19
-- 🌙 Definitions: Updated `AuraUtil.ForEachAura()` usePackedAura arg, `GetBinding()`, `TooltipData.lines`
+- 🌙 Annotations: Updated `AuraUtil.ForEachAura()` usePackedAura arg, `GetBinding()`, `TooltipData.lines`
 
 ## [0.10.3] - 2023-09-15
-- 🌙 Definitions: Partially updated Widget API for base objects, Frame, Animation, Texture, AnimationGroup, ModelScene. This may be rough and untested.
+- 🌙 Annotations: Partially updated Widget API for base objects, Frame, Animation, Texture, AnimationGroup, ModelScene. This may be rough and untested.
 
 ## [0.10.2] - 2023-09-13
-- 🌙 Definitions: Update for 10.1.7 (51261)
+- 🌙 Annotations: Update for 10.1.7 (51261)
 
 ## [0.10.1] - 2023-08-18
-- 🌙 Definitions: Update for PTR Patch 10.1.7.50893
-- 🌙 Definitions: [#110](https://github.com/Ketho/vscode-wow-api/issues/110) Add missing unitIds
-- 🌙 Definitions: [#108](https://github.com/Ketho/vscode-wow-api/issues/108) Update UnitAttackPower
-- 🌙 Definitions: [#107](https://github.com/Ketho/vscode-wow-api/issues/107) Fix UnitAura documentation
+- 🌙 Annotations: Update for PTR Patch 10.1.7.50893
+- 🌙 Annotations: [#110](https://github.com/Ketho/vscode-wow-api/issues/110) Add missing unitIds
+- 🌙 Annotations: [#108](https://github.com/Ketho/vscode-wow-api/issues/108) Update UnitAttackPower
+- 🌙 Annotations: [#107](https://github.com/Ketho/vscode-wow-api/issues/107) Fix UnitAura documentation
 
 ## [0.9.14] - 2023-05-28
 - 🐞 Bug Fixes: Fixed hover tooltip for CVars and GlobalStrings
 
 ## [0.9.13] - 2023-05-28
-- 🌙 Definitions: [#106](https://github.com/Ketho/vscode-wow-api/issues/106) Made `GameTooltip` class global
-- 🌙 Definitions: [#105](https://github.com/Ketho/vscode-wow-api/issues/105) Update Globals and GlobalStrings for patch 10.1.0
+- 🌙 Annotations: [#106](https://github.com/Ketho/vscode-wow-api/issues/106) Made `GameTooltip` class global
+- 🌙 Annotations: [#105](https://github.com/Ketho/vscode-wow-api/issues/105) Update Globals and GlobalStrings for patch 10.1.0
 
 ## [0.9.12] - 2023-05-27
 - 📦 Package: Test release workflow
@@ -58,26 +63,26 @@
 
 ## [0.9.11] - 2023-05-27
 - 🐞 Bug Fixes: PR [#101](https://github.com/Ketho/vscode-wow-api/pull/101), [#100](https://github.com/Ketho/vscode-wow-api/issues/100) Fix loading of Lua definitions
-- 🌙 Definitions: Update to patch 10.1.0 from Wowpedia and Blizzard_APIDocumentation
-- 🌙 Definitions: PR [#98](https://github.com/Ketho/vscode-wow-api/pull/98), [#99](https://github.com/Ketho/vscode-wow-api/pull/99) Update LibDBIcon, AceGUI
+- 🌙 Annotations: Update to patch 10.1.0 from Wowpedia and Blizzard_APIDocumentation
+- 🌙 Annotations: PR [#98](https://github.com/Ketho/vscode-wow-api/pull/98), [#99](https://github.com/Ketho/vscode-wow-api/pull/99) Update LibDBIcon, AceGUI
 
 ## [0.9.10] - 2023-04-19
-- 🌙 Definitions: Updated Ace3, LibSink, HereBeDragons by [Torhal](https://github.com/Ketho/vscode-wow-api/pulls?q=is%3Apr+author%3ATorhal)
-- 🌙 Definitions: [#76](https://github.com/Ketho/vscode-wow-api/pull/76) Added "questnpc" UnitId
+- 🌙 Annotations: Updated Ace3, LibSink, HereBeDragons by [Torhal](https://github.com/Ketho/vscode-wow-api/pulls?q=is%3Apr+author%3ATorhal)
+- 🌙 Annotations: [#76](https://github.com/Ketho/vscode-wow-api/pull/76) Added "questnpc" UnitId
 
 ## [0.9.9] - 2023-03-21
-- 🌙 Definitions: PR [#75](https://github.com/Ketho/vscode-wow-api/pull/75) AceConfig-3.0 Update
-- 🌙 Definitions: PR [#74](https://github.com/Ketho/vscode-wow-api/pull/74) Add type definitions for HereBeDragons-2.0
+- 🌙 Annotations: PR [#75](https://github.com/Ketho/vscode-wow-api/pull/75) AceConfig-3.0 Update
+- 🌙 Annotations: PR [#74](https://github.com/Ketho/vscode-wow-api/pull/74) Add type definitions for HereBeDragons-2.0
 
 ## [0.9.8] - 2023-03-13
 ### Added
-- 🌙 Definitions: Cumulative updates for patch 10.0.5 (48397)
-- 🌙 Definitions: Updated `FrameXML/Constants.lua`
-- 🌙 Definitions: PR [#73](https://github.com/Ketho/vscode-wow-api/pull/73) Add type definitions for LibQTip-1.0
-- 🌙 Definitions: PR [#72](https://github.com/Ketho/vscode-wow-api/pull/72) Add type definitions for LibDialog-1.0
-- 🌙 Definitions: PR [#71](https://github.com/Ketho/vscode-wow-api/pull/71) Add type definitions for LibTextDump-1.0
-- 🌙 Definitions: PR [#70](https://github.com/Ketho/vscode-wow-api/pull/70) Fix the event and message parameter for for RegisterBucketEvent
-- 🌙 Definitions: PR [#69](https://github.com/Ketho/vscode-wow-api/pull/69) Add RegisterCallback to AceDBObject-3.0
+- 🌙 Annotations: Cumulative updates for patch 10.0.5 (48397)
+- 🌙 Annotations: Updated `FrameXML/Constants.lua`
+- 🌙 Annotations: PR [#73](https://github.com/Ketho/vscode-wow-api/pull/73) Add type definitions for LibQTip-1.0
+- 🌙 Annotations: PR [#72](https://github.com/Ketho/vscode-wow-api/pull/72) Add type definitions for LibDialog-1.0
+- 🌙 Annotations: PR [#71](https://github.com/Ketho/vscode-wow-api/pull/71) Add type definitions for LibTextDump-1.0
+- 🌙 Annotations: PR [#70](https://github.com/Ketho/vscode-wow-api/pull/70) Fix the event and message parameter for for RegisterBucketEvent
+- 🌙 Annotations: PR [#69](https://github.com/Ketho/vscode-wow-api/pull/69) Add RegisterCallback to AceDBObject-3.0
 
 ## [0.9.7] - 2023-01-21
 ### Added
@@ -99,21 +104,21 @@
 - 📦 Package: Skipped 0.9.1 and 0.9.2 because of packaging issues
 
 ### Changed
-- 🌙 Definitions: PR [#67](https://github.com/Ketho/vscode-wow-api/pull/67) Fix warning on AceConfigOptionsTable get and set
-- 🌙 Definitions: PR [#66](https://github.com/Ketho/vscode-wow-api/pull/66) Added missing Ace3 components, AceComm-3.0 and AceBucket-3.0
-- 🌙 Definitions: PR [#65](https://github.com/Ketho/vscode-wow-api/pull/65) Fixed UIFrameFadeIn/Out
-- 🌙 Definitions: PR [#63](https://github.com/Ketho/vscode-wow-api/pull/63), [#64](https://github.com/Ketho/vscode-wow-api/pull/64) Update GetPvpTalentInfoByID, UnitEffectiveLevel
-- 🌙 Definitions: PR [#62](https://github.com/Ketho/vscode-wow-api/pull/62) LibDBIcon organize and move all return & input type classes to bottom
+- 🌙 Annotations: PR [#67](https://github.com/Ketho/vscode-wow-api/pull/67) Fix warning on AceConfigOptionsTable get and set
+- 🌙 Annotations: PR [#66](https://github.com/Ketho/vscode-wow-api/pull/66) Added missing Ace3 components, AceComm-3.0 and AceBucket-3.0
+- 🌙 Annotations: PR [#65](https://github.com/Ketho/vscode-wow-api/pull/65) Fixed UIFrameFadeIn/Out
+- 🌙 Annotations: PR [#63](https://github.com/Ketho/vscode-wow-api/pull/63), [#64](https://github.com/Ketho/vscode-wow-api/pull/64) Update GetPvpTalentInfoByID, UnitEffectiveLevel
+- 🌙 Annotations: PR [#62](https://github.com/Ketho/vscode-wow-api/pull/62) LibDBIcon organize and move all return & input type classes to bottom
 
 ## [0.9.0] - 2022-11-13
 ### Added
-- 🌙 Definitions: Updated for Patch 10.0.2 (46619)
+- 🌙 Annotations: Updated for Patch 10.0.2 (46619)
 
 Libraries
-- 🌙 Definitions: PR [#58](https://github.com/Ketho/vscode-wow-api/pull/58), [#61](https://github.com/Ketho/vscode-wow-api/pull/61) Added LibSharedMedia-3.0
-- 🌙 Definitions: PR [#55](https://github.com/Ketho/vscode-wow-api/pull/55), [#62](https://github.com/Ketho/vscode-wow-api/pull/62) Added LibDBIcon-1.0
-- 🌙 Definitions: PR [#52](https://github.com/Ketho/vscode-wow-api/pull/52), [#57](https://github.com/Ketho/vscode-wow-api/pull/57), [#54](https://github.com/Ketho/vscode-wow-api/pull/54) Updated Ace3 libraries
-- 🌙 Definitions: PR [#53](https://github.com/Ketho/vscode-wow-api/pull/53) Update LibStub:NewLibrary
+- 🌙 Annotations: PR [#58](https://github.com/Ketho/vscode-wow-api/pull/58), [#61](https://github.com/Ketho/vscode-wow-api/pull/61) Added LibSharedMedia-3.0
+- 🌙 Annotations: PR [#55](https://github.com/Ketho/vscode-wow-api/pull/55), [#62](https://github.com/Ketho/vscode-wow-api/pull/62) Added LibDBIcon-1.0
+- 🌙 Annotations: PR [#52](https://github.com/Ketho/vscode-wow-api/pull/52), [#57](https://github.com/Ketho/vscode-wow-api/pull/57), [#54](https://github.com/Ketho/vscode-wow-api/pull/54) Updated Ace3 libraries
+- 🌙 Annotations: PR [#53](https://github.com/Ketho/vscode-wow-api/pull/53) Update LibStub:NewLibrary
 ### Changed
 - 🐞 Bug Fixes: Fixed event hover tooltip formatting (regression)
 - 🐞 Bug Fixes: PR [#59](https://github.com/Ketho/vscode-wow-api/pull/59) Fixed file path casing
@@ -403,6 +408,7 @@ Libraries
 ### Added
 - 🚧 Wip: Development work
 
+[0.11.2]: https://github.com/Ketho/vscode-wow-api/releases/tag/0.11.2
 [0.11.1]: https://github.com/Ketho/vscode-wow-api/releases/tag/0.11.1
 [0.10.11]: https://github.com/Ketho/vscode-wow-api/releases/tag/0.10.11
 [0.10.10]: https://github.com/Ketho/vscode-wow-api/releases/tag/0.10.10
