@@ -5,7 +5,7 @@
 ---@alias ClubId string
 ---@alias ClubInvitationId string
 ---@alias ClubStreamId string
----@alias fileID string
+---@alias fileID integer
 ---@alias GarrisonFollower string
 ---@alias HTMLTextType string
 ---@alias ItemInfo number|string
