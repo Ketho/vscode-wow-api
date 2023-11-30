@@ -1742,7 +1742,12 @@ function GetChannelDisplayInfo(channelID) end
 function GetChannelList() end
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_GetChannelName)
-function GetChannelName() end
+---@param name string|number
+---@return number id
+---@return string name
+---@return number instanceID
+---@return boolean isCommunitiesChannel
+function GetChannelName(name) end
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_GetChatTypeIndex)
 function GetChatTypeIndex(type) end

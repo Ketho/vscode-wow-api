@@ -1275,8 +1275,8 @@ function SetCurrentGuildBankTab(tab) end
 function SetCurrentTitle(titleId) end
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_SetCursor)
----@param cursor string
----@return boolean changed
+---@param cursor string|nil
+---@return boolean? changed
 function SetCursor(cursor) end
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_SetCursorVirtualItem)
