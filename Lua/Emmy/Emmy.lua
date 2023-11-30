@@ -1,4 +1,5 @@
 local Util = require("Lua.Util.Util")
+local BlizzWidget = require("Lua.Emmy.BlizzWidget")
 
 local Emmy = {}
 
@@ -20,12 +21,13 @@ end
 
 function Emmy:GetSystem(system)
 	local tbl = {}
+	local widgetName = system.Type == "ScriptObject" and BlizzWidget[system.Name]
 	if system.Functions and #system.Functions>0 then
 		if system.Namespace then
 			table.insert(tbl, string.format("%s = {}", system.Namespace))
 		end
 		for _, func in pairs(system.Functions) do
-			table.insert(tbl, self:GetFunction(func))
+			table.insert(tbl, self:GetFunction(func, widgetName))
 		end
 	end
 	if system.Tables then
@@ -41,12 +43,19 @@ end
 
 local fs_doc = "---[Documentation](https://warcraft.wiki.gg/wiki/%s)"
 
-function Emmy:GetFunction(func)
+function Emmy:GetFunction(func, widgetName)
 	local tbl = {}
+	local docLine = {}
+	local funcLine = {}
 	if func.Documentation then
 		table.insert(tbl, "---"..table.concat(func.Documentation, "; "))
 	end
-	table.insert(tbl, fs_doc:format("API_"..Util:GetFullName(func)))
+	table.insert(docLine, "API_")
+	if widgetName then
+		table.insert(docLine, string.format("%s_", widgetName))
+	end
+	table.insert(docLine, Util:GetFullName(func))
+	table.insert(tbl, fs_doc:format(table.concat(docLine)))
 	if func.Arguments then
 		for _, arg in pairs(func.Arguments) do
 			table.insert(tbl, self:GetField("param", arg, "function_arg"))
@@ -57,7 +66,12 @@ function Emmy:GetFunction(func)
 			table.insert(tbl, self:GetField("return", ret))
 		end
 	end
-	table.insert(tbl, string.format("function %s end", func:GetFullName(false, false)))
+	table.insert(funcLine, "function ")
+	if widgetName then
+		table.insert(funcLine, string.format("%s:", widgetName))
+	end
+	table.insert(funcLine, string.format("%s end", func:GetFullName(false, false)))
+	table.insert(tbl, table.concat(funcLine))
 	return table.concat(tbl, "\n")
 end
 
