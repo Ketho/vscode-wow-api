@@ -6,7 +6,11 @@ local ScenarioPOIFrame = {}
 ---@class SCENARIOPOIFRAME : ScenarioPOIFrame
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_ScenarioPOIFrame_GetScenarioTooltipText)
+---@return string? tooltipText
 function ScenarioPOIFrame:GetScenarioTooltipText() end
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_ScenarioPOIFrame_UpdateMouseOverTooltip)
-function ScenarioPOIFrame:UpdateMouseOverTooltip() end
+---@param x number
+---@param y number
+---@return boolean hasTooltip
+function ScenarioPOIFrame:UpdateMouseOverTooltip(x, y) end

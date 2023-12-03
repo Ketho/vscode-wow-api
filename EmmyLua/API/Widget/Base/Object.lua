@@ -3,6 +3,9 @@
 ---@class Object : FrameScriptObject
 local Object = {}
 
+---[Documentation](https://warcraft.wiki.gg/wiki/API_Object_ClearParentKey)
+function Object:ClearParentKey() end
+
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_Object_GetDebugName)
 ---@param preferParentKey? boolean Default = false
 ---@return string debugName

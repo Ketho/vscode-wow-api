@@ -6,10 +6,17 @@ local QuestPOIFrame = {}
 ---@class QUESTPOIFRAME : QuestPOIFrame
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_QuestPOIFrame_GetNumTooltips)
+---@return number numObjectives
 function QuestPOIFrame:GetNumTooltips() end
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_QuestPOIFrame_GetTooltipIndex)
-function QuestPOIFrame:GetTooltipIndex() end
+---@param index number
+---@return number objectiveIndex
+function QuestPOIFrame:GetTooltipIndex(index) end
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_QuestPOIFrame_UpdateMouseOverTooltip)
-function QuestPOIFrame:UpdateMouseOverTooltip() end
+---@param x number
+---@param y number
+---@return number? questID
+---@return number? numObjectives
+function QuestPOIFrame:UpdateMouseOverTooltip(x, y) end

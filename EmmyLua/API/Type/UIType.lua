@@ -115,3 +115,24 @@
 ---@alias Orientation
 ---|"HORIZONTAL"
 ---|"VERTICAL"
+
+---@alias CurveType
+---|"NONE"
+---|"SMOOTH"
+
+---@alias SimpleButtonStateToken
+---|"DISABLED"
+---|"NORMAL"
+---|"PUSHED"
+
+---@enum InsertMode
+local InsertMode = {
+    SCROLLING_MESSAGE_FRAME_INSERT_MODE_TOP = 1,
+    SCROLLING_MESSAGE_FRAME_INSERT_MODE_BOTTOM = 2,
+}
+
+---@alias StatusBarFillStyle
+---|"STANDARD"
+---|"STANDARD_NO_RANGE_FILL"
+---|"CENTER"
+---|"REVERSE"

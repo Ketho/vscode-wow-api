@@ -30,29 +30,35 @@ function ScrollFrame:SetScript(scriptType, handler) end
 
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_ScrollFrame_GetHorizontalScroll)
+---@return uiUnit offset
 function ScrollFrame:GetHorizontalScroll() end
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_ScrollFrame_GetHorizontalScrollRange)
+---@return uiUnit range
 function ScrollFrame:GetHorizontalScrollRange() end
 
----@return Frame
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_ScrollFrame_GetScrollChild)
+---@return SimpleFrame scrollChild
 function ScrollFrame:GetScrollChild() end
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_ScrollFrame_GetVerticalScroll)
+---@return uiUnit offset
 function ScrollFrame:GetVerticalScroll() end
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_ScrollFrame_GetVerticalScrollRange)
+---@return uiUnit range
 function ScrollFrame:GetVerticalScrollRange() end
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_ScrollFrame_SetHorizontalScroll)
+---@param offset uiUnit
 function ScrollFrame:SetHorizontalScroll(offset) end
 
----@param frame Frame
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_ScrollFrame_SetScrollChild)
-function ScrollFrame:SetScrollChild(frame) end
+---@param scrollChild SimpleFrame
+function ScrollFrame:SetScrollChild(scrollChild) end
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_ScrollFrame_SetVerticalScroll)
+---@param offset uiUnit
 function ScrollFrame:SetVerticalScroll(offset) end
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_ScrollFrame_UpdateScrollChildRect)

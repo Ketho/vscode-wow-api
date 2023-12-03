@@ -5,14 +5,19 @@ local Alpha = {}
 ---@class alpha : Alpha
 ---@class ALPHA : Alpha
 
+---@meta
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_Alpha_GetFromAlpha)
+---@return number normalizedAlpha
 function Alpha:GetFromAlpha() end
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_Alpha_GetToAlpha)
+---@return number normalizedAlpha
 function Alpha:GetToAlpha() end
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_Alpha_SetFromAlpha)
-function Alpha:SetFromAlpha(fromAlpha) end
+---@param normalizedAlpha number
+function Alpha:SetFromAlpha(normalizedAlpha) end
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_Alpha_SetToAlpha)
-function Alpha:SetToAlpha(toAlpha) end
+---@param normalizedAlpha number
+function Alpha:SetToAlpha(normalizedAlpha) end

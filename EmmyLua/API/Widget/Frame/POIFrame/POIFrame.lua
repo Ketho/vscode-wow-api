@@ -1,49 +1,62 @@
 ---@meta
 ---[Documentation](https://warcraft.wiki.gg/wiki/UIOBJECT_POIFrame)
 ---@class POIFrame : Frame
-local POIFrame = {}
+local Blob = {}
 ---@class poiframe : POIFrame
 ---@class POIFRAME : POIFrame
 ---@class ArchaeologyDigSiteFrame : POIFrame
 
----[Documentation](https://warcraft.wiki.gg/wiki/API_POIFrame_DrawAll)
-function POIFrame:DrawAll() end
+---[Documentation](https://warcraft.wiki.gg/wiki/API_Blob_DrawAll)
+function Blob:DrawAll() end
 
----[Documentation](https://warcraft.wiki.gg/wiki/API_POIFrame_DrawBlob)
-function POIFrame:DrawBlob() end
+---[Documentation](https://warcraft.wiki.gg/wiki/API_Blob_DrawBlob)
+---@param questID number
+---@param draw? boolean Default = false
+function Blob:DrawBlob(questID, draw) end
 
----[Documentation](https://warcraft.wiki.gg/wiki/API_POIFrame_DrawNone)
-function POIFrame:DrawNone() end
+---[Documentation](https://warcraft.wiki.gg/wiki/API_Blob_DrawNone)
+function Blob:DrawNone() end
 
----[Documentation](https://warcraft.wiki.gg/wiki/API_POIFrame_EnableMerging)
-function POIFrame:EnableMerging() end
+---[Documentation](https://warcraft.wiki.gg/wiki/API_Blob_EnableMerging)
+---@param enable? boolean Default = false
+function Blob:EnableMerging(enable) end
 
----[Documentation](https://warcraft.wiki.gg/wiki/API_POIFrame_EnableSmoothing)
-function POIFrame:EnableSmoothing() end
+---[Documentation](https://warcraft.wiki.gg/wiki/API_Blob_EnableSmoothing)
+---@param enable? boolean Default = false
+function Blob:EnableSmoothing(enable) end
 
----[Documentation](https://warcraft.wiki.gg/wiki/API_POIFrame_GetMapID)
-function POIFrame:GetMapID() end
+---[Documentation](https://warcraft.wiki.gg/wiki/API_Blob_GetMapID)
+---@return number uiMapID
+function Blob:GetMapID() end
 
----[Documentation](https://warcraft.wiki.gg/wiki/API_POIFrame_SetBorderAlpha)
-function POIFrame:SetBorderAlpha() end
+---[Documentation](https://warcraft.wiki.gg/wiki/API_Blob_SetBorderAlpha)
+---@param alpha number
+function Blob:SetBorderAlpha(alpha) end
 
----[Documentation](https://warcraft.wiki.gg/wiki/API_POIFrame_SetBorderScalar)
-function POIFrame:SetBorderScalar() end
+---[Documentation](https://warcraft.wiki.gg/wiki/API_Blob_SetBorderScalar)
+---@param scalar number
+function Blob:SetBorderScalar(scalar) end
 
----[Documentation](https://warcraft.wiki.gg/wiki/API_POIFrame_SetBorderTexture)
-function POIFrame:SetBorderTexture(texture) end
+---[Documentation](https://warcraft.wiki.gg/wiki/API_Blob_SetBorderTexture)
+---@param asset FileAsset
+function Blob:SetBorderTexture(asset) end
 
----[Documentation](https://warcraft.wiki.gg/wiki/API_POIFrame_SetFillAlpha)
-function POIFrame:SetFillAlpha() end
+---[Documentation](https://warcraft.wiki.gg/wiki/API_Blob_SetFillAlpha)
+---@param alpha number
+function Blob:SetFillAlpha(alpha) end
 
----[Documentation](https://warcraft.wiki.gg/wiki/API_POIFrame_SetFillTexture)
-function POIFrame:SetFillTexture() end
+---[Documentation](https://warcraft.wiki.gg/wiki/API_Blob_SetFillTexture)
+---@param asset FileAsset
+function Blob:SetFillTexture(asset) end
 
----[Documentation](https://warcraft.wiki.gg/wiki/API_POIFrame_SetMapID)
-function POIFrame:SetMapID() end
+---[Documentation](https://warcraft.wiki.gg/wiki/API_Blob_SetMapID)
+---@param uiMapID number
+function Blob:SetMapID(uiMapID) end
 
----[Documentation](https://warcraft.wiki.gg/wiki/API_POIFrame_SetMergeThreshold)
-function POIFrame:SetMergeThreshold() end
+---[Documentation](https://warcraft.wiki.gg/wiki/API_Blob_SetMergeThreshold)
+---@param threshold number
+function Blob:SetMergeThreshold(threshold) end
 
----[Documentation](https://warcraft.wiki.gg/wiki/API_POIFrame_SetNumSplinePoints)
-function POIFrame:SetNumSplinePoints() end
+---[Documentation](https://warcraft.wiki.gg/wiki/API_Blob_SetNumSplinePoints)
+---@param numSplinePoints number
+function Blob:SetNumSplinePoints(numSplinePoints) end

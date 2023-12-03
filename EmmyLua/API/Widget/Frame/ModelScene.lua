@@ -9,8 +9,8 @@ local ModelScene = {}
 function ModelScene:ClearFog() end
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_ModelScene_CreateActor)
----@param name string
----@param template string
+---@param name string?
+---@param template string?
 ---@return ModelSceneActor actor
 function ModelScene:CreateActor(name, template) end
 

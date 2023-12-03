@@ -32,35 +32,47 @@ function Cooldown:SetScript(scriptType, handler) end
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_Cooldown_Clear)
 function Cooldown:Clear() end
 
+---The returned duration unit is milliseconds, unaffected by modRate.
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_Cooldown_GetCooldownDisplayDuration)
+---@return number duration
 function Cooldown:GetCooldownDisplayDuration() end
 
+---The returned duration unit is milliseconds and is multiplied by the modRate.
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_Cooldown_GetCooldownDuration)
+---@return number duration
 function Cooldown:GetCooldownDuration() end
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_Cooldown_GetCooldownTimes)
+---@return number start
+---@return number duration
 function Cooldown:GetCooldownTimes() end
 
----@return boolean drawBling
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_Cooldown_GetDrawBling)
+---@return boolean drawBling
 function Cooldown:GetDrawBling() end
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_Cooldown_GetDrawEdge)
+---@return boolean drawEdge
 function Cooldown:GetDrawEdge() end
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_Cooldown_GetDrawSwipe)
+---@return boolean drawSwipe
 function Cooldown:GetDrawSwipe() end
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_Cooldown_GetEdgeScale)
+---@return number edgeScale
 function Cooldown:GetEdgeScale() end
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_Cooldown_GetReverse)
+---@return boolean reverse
 function Cooldown:GetReverse() end
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_Cooldown_GetRotation)
+---@return number rotationRadians
 function Cooldown:GetRotation() end
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_Cooldown_IsPaused)
+---@return boolean isPaused
 function Cooldown:IsPaused() end
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_Cooldown_Pause)
@@ -70,53 +82,94 @@ function Cooldown:Pause() end
 function Cooldown:Resume() end
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_Cooldown_SetBlingTexture)
-function Cooldown:SetBlingTexture(file_or_fileDataID,r, g, b, a) end
+---@param texture FileAsset
+---@param colorR number
+---@param colorG number
+---@param colorB number
+---@param colorA number
+function Cooldown:SetBlingTexture(texture, colorR, colorG, colorB, colorA) end
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_Cooldown_SetCooldown)
+---@param start number
+---@param duration number
+---@param modRate? number Default = 1
 function Cooldown:SetCooldown(start, duration, modRate) end
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_Cooldown_SetCooldownDuration)
+---@param duration number
+---@param modRate? number Default = 1
 function Cooldown:SetCooldownDuration(duration, modRate) end
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_Cooldown_SetCooldownUNIX)
+---@param start number
+---@param duration number
+---@param modRate? number Default = 1
 function Cooldown:SetCooldownUNIX(start, duration, modRate) end
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_Cooldown_SetCountdownAbbrevThreshold)
+---@param seconds number
 function Cooldown:SetCountdownAbbrevThreshold(seconds) end
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_Cooldown_SetCountdownFont)
-function Cooldown:SetCountdownFont(font) end
+---@param fontName string
+function Cooldown:SetCountdownFont(fontName) end
 
----@param drawBling boolean
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_Cooldown_SetDrawBling)
+---@param drawBling? boolean Default = false
 function Cooldown:SetDrawBling(drawBling) end
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_Cooldown_SetDrawEdge)
-function Cooldown:SetDrawEdge(enable) end
+---@param drawEdge? boolean Default = false
+function Cooldown:SetDrawEdge(drawEdge) end
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_Cooldown_SetDrawSwipe)
-function Cooldown:SetDrawSwipe() end
+---@param drawSwipe? boolean Default = false
+function Cooldown:SetDrawSwipe(drawSwipe) end
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_Cooldown_SetEdgeScale)
-function Cooldown:SetEdgeScale(edgeScale) end
+---@param scale number
+function Cooldown:SetEdgeScale(scale) end
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_Cooldown_SetEdgeTexture)
-function Cooldown:SetEdgeTexture(file_or_fileDataID,r, g, b, a) end
+---@param texture FileAsset
+---@param colorR number
+---@param colorG number
+---@param colorB number
+---@param colorA number
+function Cooldown:SetEdgeTexture(texture, colorR, colorG, colorB, colorA) end
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_Cooldown_SetHideCountdownNumbers)
-function Cooldown:SetHideCountdownNumbers(hide) end
+---@param hideNumbers? boolean Default = false
+function Cooldown:SetHideCountdownNumbers(hideNumbers) end
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_Cooldown_SetReverse)
-function Cooldown:SetReverse(boolean) end
+---@param reverse? boolean Default = false
+function Cooldown:SetReverse(reverse) end
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_Cooldown_SetRotation)
+---@param rotationRadians number
 function Cooldown:SetRotation(rotationRadians) end
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_Cooldown_SetSwipeColor)
-function Cooldown:SetSwipeColor(r, g, b,a) end
+---@param colorR number
+---@param colorG number
+---@param colorB number
+---@param a? SingleColorValue
+function Cooldown:SetSwipeColor(colorR, colorG, colorB, a) end
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_Cooldown_SetSwipeTexture)
-function Cooldown:SetSwipeTexture(file_or_fileDataID,r, g, b, a) end
+---@param texture FileAsset
+---@param colorR number
+---@param colorG number
+---@param colorB number
+---@param colorA number
+function Cooldown:SetSwipeTexture(texture, colorR, colorG, colorB, colorA) end
+
+---[Documentation](https://warcraft.wiki.gg/wiki/API_Cooldown_SetTexCoordRange)
+---@param low Vector2DMixin
+---@param high Vector2DMixin
+function Cooldown:SetTexCoordRange(low, high) end
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_Cooldown_SetUseCircularEdge)
-function Cooldown:SetUseCircularEdge(boolean) end
+---@param useCircularEdge? boolean Default = false
+function Cooldown:SetUseCircularEdge(useCircularEdge) end

@@ -33,31 +33,86 @@ function DressUpModel:SetScript(scriptType, handler) end
 function DressUpModel:Dress() end
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_DressUpModel_GetAutoDress)
+---@return boolean enabled
 function DressUpModel:GetAutoDress() end
 
+---[Documentation](https://warcraft.wiki.gg/wiki/API_DressUpModel_GetItemTransmogInfo)
+---@param inventorySlot number
+---@return ItemTransmogInfoMixin itemTransmogInfo
+function DressUpModel:GetItemTransmogInfo(inventorySlot) end
+
+---[Documentation](https://warcraft.wiki.gg/wiki/API_DressUpModel_GetItemTransmogInfoList)
+---@return ItemTransmogInfo[] infoList
+function DressUpModel:GetItemTransmogInfoList() end
+
+---[Documentation](https://warcraft.wiki.gg/wiki/API_DressUpModel_GetObeyHideInTransmogFlag)
+---@return boolean enabled
+function DressUpModel:GetObeyHideInTransmogFlag() end
+
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_DressUpModel_GetSheathed)
+---@return boolean sheathed
 function DressUpModel:GetSheathed() end
 
----[Documentation](https://warcraft.wiki.gg/wiki/API_DressUpModel_GetSlotTransmogSources)
-function DressUpModel:GetSlotTransmogSources(slotIndex) end
+---[Documentation](https://warcraft.wiki.gg/wiki/API_DressUpModel_GetUseTransmogChoices)
+---@return boolean enabled
+function DressUpModel:GetUseTransmogChoices() end
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_DressUpModel_GetUseTransmogSkin)
+---@return boolean enabled
 function DressUpModel:GetUseTransmogSkin() end
 
+---[Documentation](https://warcraft.wiki.gg/wiki/API_DressUpModel_IsGeoReady)
+---@return boolean ready
+function DressUpModel:IsGeoReady() end
+
+---[Documentation](https://warcraft.wiki.gg/wiki/API_DressUpModel_IsSlotAllowed)
+---@param slot number
+---@return boolean allowed
+function DressUpModel:IsSlotAllowed(slot) end
+
+---[Documentation](https://warcraft.wiki.gg/wiki/API_DressUpModel_IsSlotVisible)
+---@param slot number
+---@return boolean visible
+function DressUpModel:IsSlotVisible(slot) end
+
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_DressUpModel_SetAutoDress)
-function DressUpModel:SetAutoDress(bool) end
+---@param enabled? boolean Default = false
+function DressUpModel:SetAutoDress(enabled) end
+
+---[Documentation](https://warcraft.wiki.gg/wiki/API_DressUpModel_SetItemTransmogInfo)
+---@param itemTransmogInfo ItemTransmogInfoMixin
+---@param inventorySlot? number
+---@param ignoreChildItems? boolean Default = false
+---@return Enum.ItemTryOnReason result
+function DressUpModel:SetItemTransmogInfo(itemTransmogInfo, inventorySlot, ignoreChildItems) end
+
+---[Documentation](https://warcraft.wiki.gg/wiki/API_DressUpModel_SetObeyHideInTransmogFlag)
+---@param enabled? boolean Default = false
+function DressUpModel:SetObeyHideInTransmogFlag(enabled) end
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_DressUpModel_SetSheathed)
-function DressUpModel:SetSheathed(bool) end
+---@param sheathed? boolean Default = false
+---@param hideWeapons? boolean Default = false
+function DressUpModel:SetSheathed(sheathed, hideWeapons) end
+
+---[Documentation](https://warcraft.wiki.gg/wiki/API_DressUpModel_SetUseTransmogChoices)
+---@param enabled? boolean Default = false
+function DressUpModel:SetUseTransmogChoices(enabled) end
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_DressUpModel_SetUseTransmogSkin)
-function DressUpModel:SetUseTransmogSkin(bool) end
+---@param enabled? boolean Default = false
+function DressUpModel:SetUseTransmogSkin(enabled) end
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_DressUpModel_TryOn)
-function DressUpModel:TryOn(sourceID) end
+---@param linkOrItemModifiedAppearanceID IDOrLink
+---@param handSlotName? string
+---@param spellEnchantID? number
+---@return Enum.ItemTryOnReason? result
+function DressUpModel:TryOn(linkOrItemModifiedAppearanceID, handSlotName, spellEnchantID) end
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_DressUpModel_Undress)
 function DressUpModel:Undress() end
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_DressUpModel_UndressSlot)
-function DressUpModel:UndressSlot(slotIndex) end
+---@param inventorySlot number
+function DressUpModel:UndressSlot(inventorySlot) end

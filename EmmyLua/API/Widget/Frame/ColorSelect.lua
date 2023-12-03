@@ -29,50 +29,61 @@ function ColorSelect:HookScript(scriptType, handler, bindingType) end
 function ColorSelect:SetScript(scriptType, handler) end
 
 
----@return number h
----@return number s
----@return number v
+---[Documentation](https://warcraft.wiki.gg/wiki/API_ColorSelect_ClearColorWheelTexture)
+function ColorSelect:ClearColorWheelTexture() end
+
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_ColorSelect_GetColorHSV)
+---@return number hsvX
+---@return number hsvY
+---@return number hsvZ
 function ColorSelect:GetColorHSV() end
 
----@return number r
----@return number g
----@return number b
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_ColorSelect_GetColorRGB)
+---@return number rgbR
+---@return number rgbG
+---@return number rgbB
 function ColorSelect:GetColorRGB() end
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_ColorSelect_GetColorValueTexture)
+---@return SimpleTexture texture
 function ColorSelect:GetColorValueTexture() end
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_ColorSelect_GetColorValueThumbTexture)
+---@return SimpleTexture texture
 function ColorSelect:GetColorValueThumbTexture() end
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_ColorSelect_GetColorWheelTexture)
+---@return SimpleTexture texture
 function ColorSelect:GetColorWheelTexture() end
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_ColorSelect_GetColorWheelThumbTexture)
+---@return SimpleTexture texture
 function ColorSelect:GetColorWheelThumbTexture() end
 
----@param h number
----@param s number
----@param v number
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_ColorSelect_SetColorHSV)
-function ColorSelect:SetColorHSV(h, s, v) end
+---@param hsvX number
+---@param hsvY number
+---@param hsvZ number
+function ColorSelect:SetColorHSV(hsvX, hsvY, hsvZ) end
 
----@param r number
----@param g number
----@param b number
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_ColorSelect_SetColorRGB)
-function ColorSelect:SetColorRGB(r, g, b) end
+---@param rgbR number
+---@param rgbG number
+---@param rgbB number
+function ColorSelect:SetColorRGB(rgbR, rgbG, rgbB) end
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_ColorSelect_SetColorValueTexture)
-function ColorSelect:SetColorValueTexture(texturebool) end
+---@param texture SimpleTexture
+function ColorSelect:SetColorValueTexture(texture) end
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_ColorSelect_SetColorValueThumbTexture)
-function ColorSelect:SetColorValueThumbTexture(texturebool) end
+---@param texture TextureAsset
+function ColorSelect:SetColorValueThumbTexture(texture) end
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_ColorSelect_SetColorWheelTexture)
-function ColorSelect:SetColorWheelTexture(texturebool) end
+---@param texture SimpleTexture
+function ColorSelect:SetColorWheelTexture(texture) end
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_ColorSelect_SetColorWheelThumbTexture)
-function ColorSelect:SetColorWheelThumbTexture(texturebool) end
+---@param texture TextureAsset
+function ColorSelect:SetColorWheelThumbTexture(texture) end

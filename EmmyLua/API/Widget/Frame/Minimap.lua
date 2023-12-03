@@ -1,7 +1,7 @@
 ---@meta
 ---[Documentation](https://warcraft.wiki.gg/wiki/UIOBJECT_Minimap)
 ---@class Minimap : Frame
-Minimap  = {}
+Minimap = {}
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_Minimap_GetPingPosition)
 function Minimap:GetPingPosition() end

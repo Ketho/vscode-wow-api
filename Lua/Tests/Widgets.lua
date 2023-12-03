@@ -38,3 +38,7 @@ font_b:SetFont(font_a:GetFont())
 
 -- intrinsics
 local eframe = CreateFrame("EventFrame")
+
+-- modelscenactor
+local modelscene = CreateFrame("ModelScene")
+local actor = modelscene:CreateActor()

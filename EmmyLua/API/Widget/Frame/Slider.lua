@@ -36,52 +36,72 @@ function Slider:Disable() end
 function Slider:Enable() end
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_Slider_GetMinMaxValues)
+---@return number minValue
+---@return number maxValue
 function Slider:GetMinMaxValues() end
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_Slider_GetObeyStepOnDrag)
+---@return boolean isObeyStepOnDrag
 function Slider:GetObeyStepOnDrag() end
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_Slider_GetOrientation)
+---@return Orientation orientation
 function Slider:GetOrientation() end
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_Slider_GetStepsPerPage)
+---@return number stepsPerPage
 function Slider:GetStepsPerPage() end
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_Slider_GetThumbTexture)
+---@return SimpleTexture texture
 function Slider:GetThumbTexture() end
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_Slider_GetValue)
+---@return number value
 function Slider:GetValue() end
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_Slider_GetValueStep)
+---@return number valueStep
 function Slider:GetValueStep() end
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_Slider_IsDraggingThumb)
+---@return boolean isDraggingThumb
 function Slider:IsDraggingThumb() end
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_Slider_IsEnabled)
+---@return boolean enabled
 function Slider:IsEnabled() end
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_Slider_SetEnabled)
-function Slider:SetEnabled() end
+---@param enabled boolean
+function Slider:SetEnabled(enabled) end
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_Slider_SetMinMaxValues)
-function Slider:SetMinMaxValues(min, max) end
+---@param minValue number
+---@param maxValue number
+function Slider:SetMinMaxValues(minValue, maxValue) end
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_Slider_SetObeyStepOnDrag)
-function Slider:SetObeyStepOnDrag(obeyStep) end
+---@param obeyStepOnDrag boolean
+function Slider:SetObeyStepOnDrag(obeyStepOnDrag) end
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_Slider_SetOrientation)
+---@param orientation Orientation
 function Slider:SetOrientation(orientation) end
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_Slider_SetStepsPerPage)
-function Slider:SetStepsPerPage(steps) end
+---@param stepsPerPage number
+function Slider:SetStepsPerPage(stepsPerPage) end
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_Slider_SetThumbTexture)
-function Slider:SetThumbTexture(texture_or_fileDataIDbool) end
+---@param asset TextureAsset
+function Slider:SetThumbTexture(asset) end
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_Slider_SetValue)
-function Slider:SetValue(value) end
+---@param value number
+---@param treatAsMouseEvent? boolean Default = false
+function Slider:SetValue(value, treatAsMouseEvent) end
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_Slider_SetValueStep)
-function Slider:SetValueStep(value) end
+---@param valueStep number
+function Slider:SetValueStep(valueStep) end

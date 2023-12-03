@@ -29,8 +29,22 @@ function Button:HookScript(scriptType, handler, bindingType) end
 function Button:SetScript(scriptType, handler) end
 
 
+---[Documentation](https://warcraft.wiki.gg/wiki/API_Button_ClearDisabledTexture)
+function Button:ClearDisabledTexture() end
+
+---[Documentation](https://warcraft.wiki.gg/wiki/API_Button_ClearHighlightTexture)
+function Button:ClearHighlightTexture() end
+
+---[Documentation](https://warcraft.wiki.gg/wiki/API_Button_ClearNormalTexture)
+function Button:ClearNormalTexture() end
+
+---[Documentation](https://warcraft.wiki.gg/wiki/API_Button_ClearPushedTexture)
+function Button:ClearPushedTexture() end
+
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_Button_Click)
-function Button:Click() end
+---@param button? string Default = LeftButton
+---@param isDown? boolean Default = false
+function Button:Click(button, isDown) end
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_Button_Disable)
 function Button:Disable() end
@@ -39,136 +53,146 @@ function Button:Disable() end
 function Button:Enable() end
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_Button_GetButtonState)
+---@return SimpleButtonStateToken buttonState
 function Button:GetButtonState() end
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_Button_GetDisabledFontObject)
+---@return SimpleFont font
 function Button:GetDisabledFontObject() end
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_Button_GetDisabledTexture)
+---@return SimpleTexture texture
 function Button:GetDisabledTexture() end
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_Button_GetFontString)
+---@return SimpleFontString fontString
 function Button:GetFontString() end
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_Button_GetHighlightFontObject)
+---@return SimpleFont font
 function Button:GetHighlightFontObject() end
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_Button_GetHighlightTexture)
+---@return SimpleTexture texture
 function Button:GetHighlightTexture() end
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_Button_GetMotionScriptsWhileDisabled)
+---@return boolean motionScriptsWhileDisabled
 function Button:GetMotionScriptsWhileDisabled() end
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_Button_GetNormalFontObject)
+---@return SimpleFont font
 function Button:GetNormalFontObject() end
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_Button_GetNormalTexture)
+---@return SimpleTexture texture
 function Button:GetNormalTexture() end
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_Button_GetPushedTextOffset)
+---@return uiUnit offsetX
+---@return uiUnit offsetY
 function Button:GetPushedTextOffset() end
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_Button_GetPushedTexture)
+---@return SimpleTexture texture
 function Button:GetPushedTexture() end
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_Button_GetText)
+---@return string text
 function Button:GetText() end
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_Button_GetTextHeight)
+---@return uiUnit height
 function Button:GetTextHeight() end
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_Button_GetTextWidth)
+---@return uiUnit width
 function Button:GetTextWidth() end
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_Button_IsEnabled)
+---@return boolean isEnabled
 function Button:IsEnabled() end
 
----[Documentation](https://warcraft.wiki.gg/wiki/API_Button_LockHighlight)
-function Button:LockHighlight() end
-
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_Button_RegisterForClicks)
-function Button:RegisterForClicks(clickType1, clickType2) end
+---@param unpackedPrimitiveType number
+function Button:RegisterForClicks(unpackedPrimitiveType) end
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_Button_RegisterForMouse)
-function Button:RegisterForMouse() end
+---@param unpackedPrimitiveType number
+function Button:RegisterForMouse(unpackedPrimitiveType) end
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_Button_SetButtonState)
-function Button:SetButtonState(state, lock) end
+---@param buttonState SimpleButtonStateToken
+---@param lock? boolean Default = false
+function Button:SetButtonState(buttonState, lock) end
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_Button_SetDisabledAtlas)
-function Button:SetDisabledAtlas(atlasName) end
+---@param atlas textureAtlas
+function Button:SetDisabledAtlas(atlas) end
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_Button_SetDisabledFontObject)
+---@param font SimpleFont
 function Button:SetDisabledFontObject(font) end
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_Button_SetDisabledTexture)
-function Button:SetDisabledTexture(texture_or_texturePath) end
+---@param asset TextureAsset
+function Button:SetDisabledTexture(asset) end
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_Button_SetEnabled)
-function Button:SetEnabled(boolean) end
+---@param enabled? boolean Default = false
+function Button:SetEnabled(enabled) end
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_Button_SetFontString)
+---@param fontString SimpleFontString
 function Button:SetFontString(fontString) end
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_Button_SetFormattedText)
----@param formatstring string A string containing format specifiers (as with string.format()).
----@param ... any arg A list of values to be included in the formatted string.
-function Button:SetFormattedText(formatstring, ...) end
+---@param text string
+function Button:SetFormattedText(text) end
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_Button_SetHighlightAtlas)
-function Button:SetHighlightAtlas(atlasName, blendmode) end
+---@param atlas textureAtlas
+---@param blendMode? BlendMode
+function Button:SetHighlightAtlas(atlas, blendMode) end
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_Button_SetHighlightFontObject)
+---@param font SimpleFont
 function Button:SetHighlightFontObject(font) end
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_Button_SetHighlightTexture)
-function Button:SetHighlightTexture(texture_or_texturePath,alphaMode) end
+---@param asset TextureAsset
+---@param blendMode? BlendMode
+function Button:SetHighlightTexture(asset, blendMode) end
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_Button_SetMotionScriptsWhileDisabled)
-function Button:SetMotionScriptsWhileDisabled(bool) end
+---@param motionScriptsWhileDisabled boolean
+function Button:SetMotionScriptsWhileDisabled(motionScriptsWhileDisabled) end
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_Button_SetNormalAtlas)
-function Button:SetNormalAtlas(atlasName) end
+---@param atlas textureAtlas
+function Button:SetNormalAtlas(atlas) end
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_Button_SetNormalFontObject)
-function Button:SetNormalFontObject(FontObject) end
+---@param font SimpleFont
+function Button:SetNormalFontObject(font) end
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_Button_SetNormalTexture)
-function Button:SetNormalTexture(texture_or_texturePath) end
+---@param asset TextureAsset
+function Button:SetNormalTexture(asset) end
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_Button_SetPushedAtlas)
-function Button:SetPushedAtlas(atlasName) end
+---@param atlas textureAtlas
+function Button:SetPushedAtlas(atlas) end
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_Button_SetPushedTextOffset)
-function Button:SetPushedTextOffset(x, y) end
+---@param offsetX uiUnit
+---@param offsetY uiUnit
+function Button:SetPushedTextOffset(offsetX, offsetY) end
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_Button_SetPushedTexture)
-function Button:SetPushedTexture(texture_or_texturePath) end
+---@param asset TextureAsset
+function Button:SetPushedTexture(asset) end
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_Button_SetText)
+---@param text? string Default = 
 function Button:SetText(text) end
-
----[Documentation](https://warcraft.wiki.gg/wiki/API_Button_UnlockHighlight)
-function Button:UnlockHighlight() end
-
-
----@class CheckButton : Button
-local CheckButton = {}
-
----[Documentation](https://warcraft.wiki.gg/wiki/API_CheckButton_GetChecked)
-function CheckButton:GetChecked() end
-
----[Documentation](https://warcraft.wiki.gg/wiki/API_CheckButton_GetCheckedTexture)
-function CheckButton:GetCheckedTexture() end
-
----[Documentation](https://warcraft.wiki.gg/wiki/API_CheckButton_GetDisabledCheckedTexture)
-function CheckButton:GetDisabledCheckedTexture() end
-
----[Documentation](https://warcraft.wiki.gg/wiki/API_CheckButton_SetChecked)
-function CheckButton:SetChecked(boolean) end
-
----[Documentation](https://warcraft.wiki.gg/wiki/API_CheckButton_SetCheckedTexture)
-function CheckButton:SetCheckedTexture(texture) end
-
----[Documentation](https://warcraft.wiki.gg/wiki/API_CheckButton_SetDisabledCheckedTexture)
-function CheckButton:SetDisabledCheckedTexture(texture) end
