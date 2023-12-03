@@ -17341,6 +17341,7 @@ export const data: GlobalStringInterface = {
 	SPELL_FAILED_SUMMON_MAP_CONDITION: String.raw`대상이 조건을 충족하지 않아 소환할 수 없습니다.`,
 	SPELL_FAILED_SUMMON_PENDING: String.raw`이미 소환 중입니다.`,
 	SPELL_FAILED_TARGETS_DEAD: String.raw`대상이 죽었습니다.`,
+	SPELL_FAILED_TARGETS_NOT_PROFESSION: String.raw`대상이 알맞은 전문 기술을 배우고 있지 않습니다.`,
 	SPELL_FAILED_TARGET_AFFECTING_COMBAT: String.raw`대상이 전투 중입니다.`,
 	SPELL_FAILED_TARGET_AURASTATE: String.raw`아직 사용할 수 없습니다.`,
 	SPELL_FAILED_TARGET_CANNOT_BE_RESURRECTED: String.raw`대상을 부활시킬 수 없습니다.`,

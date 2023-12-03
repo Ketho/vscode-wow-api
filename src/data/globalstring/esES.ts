@@ -17337,6 +17337,7 @@ Los hechizos potenciados, al contrario que un lanzamiento o un hechizo canalizad
 	SPELL_FAILED_SUMMON_MAP_CONDITION: String.raw`El objetivo no reúne los requisitos para ser invocado aquí.`,
 	SPELL_FAILED_SUMMON_PENDING: String.raw`Ya hay una invocación pendiente`,
 	SPELL_FAILED_TARGETS_DEAD: String.raw`Tu objetivo está muerto`,
+	SPELL_FAILED_TARGETS_NOT_PROFESSION: String.raw`El objetivo no tiene la profesión correcta.`,
 	SPELL_FAILED_TARGET_AFFECTING_COMBAT: String.raw`El objetivo está combatiendo`,
 	SPELL_FAILED_TARGET_AURASTATE: String.raw`Aún no puedes hacer eso`,
 	SPELL_FAILED_TARGET_CANNOT_BE_RESURRECTED: String.raw`El objetivo no se puede resucitar`,

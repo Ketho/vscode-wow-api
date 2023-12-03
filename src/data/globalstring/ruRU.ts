@@ -17340,6 +17340,7 @@ export const data: GlobalStringInterface = {
 	SPELL_FAILED_SUMMON_MAP_CONDITION: String.raw`Цель не может быть призвана в этой области.`,
 	SPELL_FAILED_SUMMON_PENDING: String.raw`Призыв уже начат.`,
 	SPELL_FAILED_TARGETS_DEAD: String.raw`Цель мертва.`,
+	SPELL_FAILED_TARGETS_NOT_PROFESSION: String.raw`У цели нет подходящей профессии.`,
 	SPELL_FAILED_TARGET_AFFECTING_COMBAT: String.raw`Цель сражается.`,
 	SPELL_FAILED_TARGET_AURASTATE: String.raw`Вы пока не можете это сделать.`,
 	SPELL_FAILED_TARGET_CANNOT_BE_RESURRECTED: String.raw`Цель нельзя воскресить.`,

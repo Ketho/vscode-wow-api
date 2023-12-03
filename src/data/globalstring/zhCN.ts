@@ -17335,6 +17335,7 @@ export const data: GlobalStringInterface = {
 	SPELL_FAILED_SUMMON_MAP_CONDITION: String.raw`目标不具备被召唤到此处的资格。`,
 	SPELL_FAILED_SUMMON_PENDING: String.raw`已经进行了召唤`,
 	SPELL_FAILED_TARGETS_DEAD: String.raw`目标已经死亡`,
+	SPELL_FAILED_TARGETS_NOT_PROFESSION: String.raw`目标没有合适的专业。`,
 	SPELL_FAILED_TARGET_AFFECTING_COMBAT: String.raw`目标正处于战斗状态中`,
 	SPELL_FAILED_TARGET_AURASTATE: String.raw`你还不能那么做`,
 	SPELL_FAILED_TARGET_CANNOT_BE_RESURRECTED: String.raw`目标无法被复活`,

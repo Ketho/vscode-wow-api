@@ -17334,6 +17334,7 @@ export const data: GlobalStringInterface = {
 	SPELL_FAILED_SUMMON_MAP_CONDITION: String.raw`不能在此召喚目標。`,
 	SPELL_FAILED_SUMMON_PENDING: String.raw`召喚仍在進行中`,
 	SPELL_FAILED_TARGETS_DEAD: String.raw`你的目標已經死了`,
+	SPELL_FAILED_TARGETS_NOT_PROFESSION: String.raw`目標不具備正確的專業技能。`,
 	SPELL_FAILED_TARGET_AFFECTING_COMBAT: String.raw`目標正處於戰鬥狀態中`,
 	SPELL_FAILED_TARGET_AURASTATE: String.raw`你還不能這麼做`,
 	SPELL_FAILED_TARGET_CANNOT_BE_RESURRECTED: String.raw`無法復活該目標。`,

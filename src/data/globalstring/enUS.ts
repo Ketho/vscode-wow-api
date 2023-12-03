@@ -17336,6 +17336,7 @@ Empowered spells, as opposed to a cast or a channeled spell, require a second in
 	SPELL_FAILED_SUMMON_MAP_CONDITION: String.raw`Target is not eligible to be summoned here.`,
 	SPELL_FAILED_SUMMON_PENDING: String.raw`A summon is already pending`,
 	SPELL_FAILED_TARGETS_DEAD: String.raw`Your target is dead`,
+	SPELL_FAILED_TARGETS_NOT_PROFESSION: String.raw`Target does not have the correct profession.`,
 	SPELL_FAILED_TARGET_AFFECTING_COMBAT: String.raw`Target is in combat`,
 	SPELL_FAILED_TARGET_AURASTATE: String.raw`You can't do that yet`,
 	SPELL_FAILED_TARGET_CANNOT_BE_RESURRECTED: String.raw`Target cannot be resurrected`,
