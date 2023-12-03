@@ -1,4 +1,5 @@
 ---@meta
+---@class CallbackRegistryMixin
 CallbackRegistryMixin = {}
 
 function CallbackRegistryMixin:SetUndefinedEventsAllowed(allowed) end

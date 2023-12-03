@@ -22,7 +22,7 @@ end
 ---@param ... T2
 ---@return T1|T2 mixin
 function CreateFromMixins(mixin, ...)
-	return Mixin({}, ...)
+	return Mixin({}, mixin, ...)
 end
 
 ---[FrameXML](https://www.townlong-yak.com/framexml/go/CreateAndInitFromMixin)

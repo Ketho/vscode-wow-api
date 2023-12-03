@@ -36,3 +36,5 @@ local font_a = CreateFont("SomeFont")
 local font_b = CreateFont("AnotherFont")
 font_b:SetFont(font_a:GetFont())
 
+-- intrinsics
+local eframe = CreateFrame("EventFrame")
