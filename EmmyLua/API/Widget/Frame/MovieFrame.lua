@@ -30,10 +30,23 @@ function MovieFrame:SetScript(scriptType, handler) end
 
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_MovieFrame_EnableSubtitles)
+---@param enable boolean
 function MovieFrame:EnableSubtitles(enable) end
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_MovieFrame_StartMovie)
-function MovieFrame:StartMovie(movieID, loop) end
+---@param movieID number
+---@param looping? boolean Default = false
+---@return boolean success
+---@return number returnCode
+function MovieFrame:StartMovie(movieID, looping) end
+
+---[Documentation](https://warcraft.wiki.gg/wiki/API_MovieFrame_StartMovieByName)
+---@param movieName string
+---@param looping? boolean Default = false
+---@param resolution? number Default = 0
+---@return boolean success
+---@return number returnCode
+function MovieFrame:StartMovieByName(movieName, looping, resolution) end
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_MovieFrame_StopMovie)
-function MovieFrame:StopMovie(enable) end
+function MovieFrame:StopMovie() end

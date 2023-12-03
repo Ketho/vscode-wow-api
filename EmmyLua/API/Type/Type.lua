@@ -152,6 +152,7 @@
 ---@alias SimpleMaskTexture MaskTexture
 ---@alias SimpleFontString FontString
 ---@alias SimpleLine Line
+---@alias SimpleWindow unk
 
 ---@alias luaFunction function
 ---@alias SingleColorValue number
@@ -161,3 +162,11 @@
 ---@alias size number
 ---@alias SmoothingType string
 ---@alias LoopType string
+---@alias TextureAsset fileID|string|Texture
+---@alias TextureAssetDisk fileID|string
+---@alias stringView string
+---@alias mouseButton MouseButton
+---@alias AnimationDataEnum number
+---@alias IDOrLink number|string
+---@alias FileAsset string
+---@alias ModelAsset string

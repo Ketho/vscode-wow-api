@@ -6,11 +6,15 @@ local Translation = {}
 ---@class TRANSLATION : Translation
 ---@class LineTranslation : Translation
 
---[Documentation](https://wow.gamepedia.com/API_Translation_GetOffset)
+---[Documentation](https://warcraft.wiki.gg/wiki/API_Translation_GetOffset)
+---@return uiUnit offsetX
+---@return uiUnit offsetY
 function Translation:GetOffset() end
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_Translation_SetOffset)
-function Translation:SetOffset(x, y) end
+---@param offsetX uiUnit
+---@param offsetY uiUnit
+function Translation:SetOffset(offsetX, offsetY) end
 
 ---@class LineTranslation : Translation
 local LineTranslation = {}

@@ -16,14 +16,14 @@ function Path:CreateControlPoint(name, templateName, order) end
 ---@return ControlPoint ...
 function Path:GetControlPoints() end
 
----[Documentation](https://warcraft.wiki.gg/wiki/API_Path_GetCurve)
+---[Documentation](https://warcraft.wiki.gg/wiki/API_Path_GetCurveType)
 ---@return CurveType curveType
-function Path:GetCurve() end
+function Path:GetCurveType() end
 
----[Documentation](https://warcraft.wiki.gg/wiki/API_Path_GetMaxOrder)
+---[Documentation](https://warcraft.wiki.gg/wiki/API_Path_GetMaxControlPointOrder)
 ---@return number maxOrder
-function Path:GetMaxOrder() end
+function Path:GetMaxControlPointOrder() end
 
----[Documentation](https://warcraft.wiki.gg/wiki/API_Path_SetCurve)
+---[Documentation](https://warcraft.wiki.gg/wiki/API_Path_SetCurveType)
 ---@param curveType CurveType
-function Path:SetCurve(curveType) end
+function Path:SetCurveType(curveType) end

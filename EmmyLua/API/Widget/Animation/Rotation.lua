@@ -6,19 +6,29 @@ local Rotation = {}
 ---@class ROTATION : Rotation
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_Rotation_GetDegrees)
+---@return number angle
 function Rotation:GetDegrees() end
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_Rotation_GetOrigin)
+---@return FramePoint point
+---@return number originX
+---@return number originY
 function Rotation:GetOrigin() end
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_Rotation_GetRadians)
+---@return number angle
 function Rotation:GetRadians() end
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_Rotation_SetDegrees)
-function Rotation:SetDegrees(degrees) end
+---@param angle number
+function Rotation:SetDegrees(angle) end
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_Rotation_SetOrigin)
-function Rotation:SetOrigin(point, offsetX, offsetY) end
+---@param point FramePoint
+---@param originX number
+---@param originY number
+function Rotation:SetOrigin(point, originX, originY) end
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_Rotation_SetRadians)
-function Rotation:SetRadians(radians) end
+---@param angle number
+function Rotation:SetRadians(angle) end

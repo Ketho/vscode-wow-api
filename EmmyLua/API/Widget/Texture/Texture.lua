@@ -5,7 +5,6 @@ local Texture = {}
 ---@class texture : Texture
 ---@class TEXTURE : Texture
 
----@meta
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_Texture_AddMaskTexture)
 ---@param mask SimpleMaskTexture
 function Texture:AddMaskTexture(mask) end

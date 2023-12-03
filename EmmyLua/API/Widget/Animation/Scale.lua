@@ -6,7 +6,6 @@ local Scale = {}
 ---@class SCALE : Scale
 ---@class LineScale : Scale
 
----@meta
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_Scale_GetOrigin)
 ---@return FramePoint point
 ---@return number originX

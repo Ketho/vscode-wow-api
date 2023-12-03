@@ -28,38 +28,52 @@ function FogOfWarFrame:HookScript(scriptType, handler, bindingType) end
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_ScriptObject_SetScript)
 function FogOfWarFrame:SetScript(scriptType, handler) end
 
----[Documentation](https://warcraft.wiki.gg/wiki/API_FogOfWarFrame_GetFogOfWarBackgroundAtlas)
+
+---@return textureAtlas atlas
 function FogOfWarFrame:GetFogOfWarBackgroundAtlas() end
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_FogOfWarFrame_GetFogOfWarBackgroundTexture)
+---@return FileAsset? asset
 function FogOfWarFrame:GetFogOfWarBackgroundTexture() end
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_FogOfWarFrame_GetFogOfWarMaskAtlas)
+---@return textureAtlas atlas
 function FogOfWarFrame:GetFogOfWarMaskAtlas() end
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_FogOfWarFrame_GetFogOfWarMaskTexture)
+---@return FileAsset? asset
 function FogOfWarFrame:GetFogOfWarMaskTexture() end
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_FogOfWarFrame_GetMaskScalar)
+---@return number scalar
 function FogOfWarFrame:GetMaskScalar() end
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_FogOfWarFrame_GetUiMapID)
+---@return number uiMapID
 function FogOfWarFrame:GetUiMapID() end
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_FogOfWarFrame_SetFogOfWarBackgroundAtlas)
-function FogOfWarFrame:SetFogOfWarBackgroundAtlas(atlasName) end
+---@param atlas textureAtlas
+function FogOfWarFrame:SetFogOfWarBackgroundAtlas(atlas) end
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_FogOfWarFrame_SetFogOfWarBackgroundTexture)
-function FogOfWarFrame:SetFogOfWarBackgroundTexture(texture, horizontalTile, verticalTile) end
+---@param asset FileAsset
+---@param horizontalTile boolean
+---@param verticalTile boolean
+function FogOfWarFrame:SetFogOfWarBackgroundTexture(asset, horizontalTile, verticalTile) end
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_FogOfWarFrame_SetFogOfWarMaskAtlas)
-function FogOfWarFrame:SetFogOfWarMaskAtlas(atlasName) end
+---@param atlas textureAtlas
+function FogOfWarFrame:SetFogOfWarMaskAtlas(atlas) end
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_FogOfWarFrame_SetFogOfWarMaskTexture)
-function FogOfWarFrame:SetFogOfWarMaskTexture(textureName) end
+---@param asset FileAsset
+function FogOfWarFrame:SetFogOfWarMaskTexture(asset) end
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_FogOfWarFrame_SetMaskScalar)
-function FogOfWarFrame:SetMaskScalar(mapID) end
+---@param scalar number
+function FogOfWarFrame:SetMaskScalar(scalar) end
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_FogOfWarFrame_SetUiMapID)
-function FogOfWarFrame:SetUiMapID() end
+---@param uiMapID number
+function FogOfWarFrame:SetUiMapID(uiMapID) end
