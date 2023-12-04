@@ -98,27 +98,7 @@
 ---|"RANGEDSLOT"
 ---|"TABARDSLOT"
 
----@alias UnitId
----|"player"
----|"target"
----|"focus"
----|"mouseover"
----|"pet"
----|"vehicle"
----|"npc"
----|"questnpc"
----|"none"
----|"party1"
----|"raid1"
----|"nameplate1"
----|"arena1"
----|"boss1"
----|"anyenemy"
----|"anyfriend"
----|"anyinteract"
----|"softenemy"
----|"softfriend"
----|"softinteract"
+---@alias UnitId string https://warcraft.wiki.gg/wiki/UnitId
 
 ---@alias FramePoint
 ---|"TOPLEFT"
