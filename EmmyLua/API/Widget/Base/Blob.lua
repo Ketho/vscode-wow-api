@@ -1,10 +1,7 @@
 ---@meta
 ---[Documentation](https://warcraft.wiki.gg/wiki/UIOBJECT_POIFrame)
----@class POIFrame : Frame
+---@class Blob : Frame
 local Blob = {}
----@class poiframe : POIFrame
----@class POIFRAME : POIFrame
----@class ArchaeologyDigSiteFrame : POIFrame
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_Blob_DrawAll)
 function Blob:DrawAll() end

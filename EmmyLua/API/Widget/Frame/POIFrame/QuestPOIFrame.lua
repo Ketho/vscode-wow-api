@@ -1,6 +1,6 @@
 ---@meta
 ---[Documentation](https://warcraft.wiki.gg/wiki/UIOBJECT_QuestPOIFrame)
----@class QuestPOIFrame : POIFrame
+---@class QuestPOIFrame : Blob
 local QuestPOIFrame = {}
 ---@class questpoiframe : QuestPOIFrame
 ---@class QUESTPOIFRAME : QuestPOIFrame
