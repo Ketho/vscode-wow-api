@@ -98,7 +98,7 @@
 ---|"RANGEDSLOT"
 ---|"TABARDSLOT"
 
----@alias UnitId string https://warcraft.wiki.gg/wiki/UnitId
+---@alias UnitId string
 
 ---@alias FramePoint
 ---|"TOPLEFT"
