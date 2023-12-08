@@ -71,7 +71,7 @@ function newproxy(bool) end
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_strcmputf8i)
 ---@param str1 string
 ---@param str2 string
----@return string
+---@return number result <= -1: smaller, 0: equal, >= 1: larger
 function strcmputf8i(str1, str2) end
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_strconcat)
