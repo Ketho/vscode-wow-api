@@ -114,8 +114,8 @@ function Button:GetTextWidth() end
 function Button:IsEnabled() end
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_Button_RegisterForClicks)
----@param unpackedPrimitiveType number
-function Button:RegisterForClicks(unpackedPrimitiveType) end
+---@param ... ClickButton
+function Button:RegisterForClicks(...) end
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_Button_RegisterForMouse)
 ---@param unpackedPrimitiveType number

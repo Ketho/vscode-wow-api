@@ -124,6 +124,20 @@
 ---|"Button4"
 ---|"Button5"
 
+---@alias ClickButton
+---|"AnyUp"
+---|"AnyDown"
+---|"LeftButtonUp"
+---|"LeftButtonDown"
+---|"RightButtonUp"
+---|"RightButtonDown"
+---|"MiddleButtonUp"
+---|"MiddleButtonDown"
+---|"Button4Up"
+---|"Button4Down"
+---|"Button5Up"
+---|"Button5Down"
+
 ---@alias InventorySlots number
 
 ---@alias CScriptObject Object
