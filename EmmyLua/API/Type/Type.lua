@@ -124,7 +124,7 @@
 ---|"Button4"
 ---|"Button5"
 
----@alias ClickButton
+---@alias MouseAction
 ---|"AnyUp"
 ---|"AnyDown"
 ---|"LeftButtonUp"
