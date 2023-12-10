@@ -205,4 +205,4 @@ strupper = str.upper
 -- Add custom string functions to the string table
 strtrim = str.trim
 strsplit = str.split
-join = str.join
+strjoin = str.join
