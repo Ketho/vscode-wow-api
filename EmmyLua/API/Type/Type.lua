@@ -98,7 +98,7 @@
 ---|"RANGEDSLOT"
 ---|"TABARDSLOT"
 
----@alias UnitId string https://warcraft.wiki.gg/wiki/UnitId
+---@alias UnitId string
 
 ---@alias FramePoint
 ---|"TOPLEFT"
@@ -123,6 +123,20 @@
 ---|"MiddleButton"
 ---|"Button4"
 ---|"Button5"
+
+---@alias MouseAction
+---|"AnyUp"
+---|"AnyDown"
+---|"LeftButtonUp"
+---|"LeftButtonDown"
+---|"RightButtonUp"
+---|"RightButtonDown"
+---|"MiddleButtonUp"
+---|"MiddleButtonDown"
+---|"Button4Up"
+---|"Button4Down"
+---|"Button5Up"
+---|"Button5Down"
 
 ---@alias InventorySlots number
 

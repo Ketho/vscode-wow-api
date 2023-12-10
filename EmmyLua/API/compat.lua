@@ -25,13 +25,13 @@ function table.wipe(tbl) end
 ---@param str string
 ---@param chars? string
 ---@return string
-function strtrim(str, chars) end
+function string.trim(str, chars) end
 
 ---@param delimiter string
 ---@param str string
 ---@param pieces? number
 ---@return ...
-function strsplit(delimiter, str, pieces) end
+function string.split(delimiter, str, pieces) end
 
 ---@param delimiter string
 ---@param str string
@@ -44,7 +44,7 @@ function strsplittable(delimiter, str, pieces) end
 ---@param str1 string
 ---@param ... string
 ---@return string
-function strjoin(delim, str1, ...) end
+function string.join(delim, str1, ...) end
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_difftime)
 ---@param time1 number
@@ -71,7 +71,7 @@ function newproxy(bool) end
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_strcmputf8i)
 ---@param str1 string
 ---@param str2 string
----@return string
+---@return number result <= -1: smaller, 0: equal, >= 1: larger
 function strcmputf8i(str1, str2) end
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_strconcat)
@@ -203,6 +203,6 @@ strsub = str.sub
 strupper = str.upper
 -------------------------------------------------------------------
 -- Add custom string functions to the string table
-str.trim = strtrim
-str.split = strsplit
-str.join = strjoin
+strtrim = str.trim
+strsplit = str.split
+strjoin = str.join

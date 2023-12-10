@@ -57,7 +57,7 @@
 ---|"StatusBar"
 ---|"TabardModel"
 ---|"UnitPositionFrame"
----|"EventFrame"
+---|"EventFrame" Frame|EventFrameMixin
 
 ---@alias FilterMode
 ---|"LINEAR"

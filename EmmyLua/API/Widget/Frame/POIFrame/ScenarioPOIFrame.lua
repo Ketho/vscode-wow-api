@@ -1,6 +1,6 @@
 ---@meta
 ---[Documentation](https://warcraft.wiki.gg/wiki/UIOBJECT_ScenarioPOIFrame)
----@class ScenarioPOIFrame : POIFrame
+---@class ScenarioPOIFrame : Blob
 local ScenarioPOIFrame = {}
 ---@class scenariopoiframe : ScenarioPOIFrame
 ---@class SCENARIOPOIFRAME : ScenarioPOIFrame
