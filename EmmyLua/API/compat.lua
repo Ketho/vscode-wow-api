@@ -187,6 +187,7 @@ tan = function (x) return math.tan(math.rad(x)) end
 
 -------------------------------------------------------------------
 -- string library
+---@class stringlib
 local str = string
 strbyte = str.byte
 strchar = str.char
