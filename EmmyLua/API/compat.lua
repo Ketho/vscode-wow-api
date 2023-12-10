@@ -25,13 +25,13 @@ function table.wipe(tbl) end
 ---@param str string
 ---@param chars? string
 ---@return string
-function strtrim(str, chars) end
+function string.trim(str, chars) end
 
 ---@param delimiter string
 ---@param str string
 ---@param pieces? number
 ---@return ...
-function strsplit(delimiter, str, pieces) end
+function string.split(delimiter, str, pieces) end
 
 ---@param delimiter string
 ---@param str string
@@ -44,7 +44,7 @@ function strsplittable(delimiter, str, pieces) end
 ---@param str1 string
 ---@param ... string
 ---@return string
-function strjoin(delim, str1, ...) end
+function string.join(delim, str1, ...) end
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_difftime)
 ---@param time1 number
@@ -187,7 +187,6 @@ tan = function (x) return math.tan(math.rad(x)) end
 
 -------------------------------------------------------------------
 -- string library
----@class stringlib
 local str = string
 strbyte = str.byte
 strchar = str.char
@@ -204,6 +203,6 @@ strsub = str.sub
 strupper = str.upper
 -------------------------------------------------------------------
 -- Add custom string functions to the string table
-str.trim = strtrim
-str.split = strsplit
-str.join = strjoin
+strtrim = str.trim
+strsplit = str.split
+join = str.join
