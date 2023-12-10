@@ -4,6 +4,10 @@
 - The Classic (TBC) API is not supported ([#13](https://github.com/Ketho/vscode-wow-api/issues/13))
 - Frame templates are not completely supported, only BackdropTemplate ([#15](https://github.com/Ketho/vscode-wow-api/issues/15)) 
 
+## [0.12.1] - 2023-12-10
+- 🌙 Annotations: Update `Button:RegisterForClicks`, `Button:RegisterForMouse`
+- 🌙 Annotations: Fixed `string.trim`, `strcmputf8i`
+
 ## [0.12.0] - 2023-12-03
 - 🌙 Annotations: Fully updated the widgets from Blizzard_APIDocumentationGenerated
 - 🌙 Annotations: Added `EventFrame` intrinsic
@@ -412,6 +416,7 @@ Libraries
 ### Added
 - 🚧 Wip: Development work
 
+[0.12.1]: https://github.com/Ketho/vscode-wow-api/releases/tag/0.12.1
 [0.12.0]: https://github.com/Ketho/vscode-wow-api/releases/tag/0.12.0
 [0.11.2]: https://github.com/Ketho/vscode-wow-api/releases/tag/0.11.2
 [0.11.1]: https://github.com/Ketho/vscode-wow-api/releases/tag/0.11.1
