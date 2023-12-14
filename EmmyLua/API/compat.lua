@@ -79,6 +79,11 @@ function strcmputf8i(str1, str2) end
 ---@return string
 function strconcat(...) end
 
+---[Documentation](https://warcraft.wiki.gg/wiki/API_tostringall)
+---@param ... any
+---@return string ...
+function tostringall(...) end
+
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_strlenutf8)
 ---@param str string
 ---@return number
