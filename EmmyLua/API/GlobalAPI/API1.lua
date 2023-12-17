@@ -1388,7 +1388,10 @@ function C_NamePlate.GetNamePlateEnemyPreferredClickInsets() end
 function C_NamePlate.GetNamePlateEnemySize() end
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_NamePlate.GetNamePlateForUnit)
-function C_NamePlate.GetNamePlateForUnit(unitToken, includeForbidden) end
+---@param unitId UnitId
+---@param isSecure? boolean
+---@return NameplateBase? nameplate
+function C_NamePlate.GetNamePlateForUnit(unitId, isSecure) end
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_NamePlate.GetNamePlateFriendlyClickThrough)
 function C_NamePlate.GetNamePlateFriendlyClickThrough() end
@@ -1409,7 +1412,9 @@ function C_NamePlate.GetNamePlateSelfPreferredClickInsets() end
 function C_NamePlate.GetNamePlateSelfSize() end
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_NamePlate.GetNamePlates)
-function C_NamePlate.GetNamePlates(includeForbidden) end
+---@param isSecure? boolean
+---@return NameplateBase nameplates
+function C_NamePlate.GetNamePlates(isSecure) end
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_NamePlate.GetNumNamePlateMotionTypes)
 function C_NamePlate.GetNumNamePlateMotionTypes() end
@@ -2119,7 +2124,4 @@ function C_ToyBox.SetCollectedShown(checked) end
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_ToyBox.SetExpansionTypeFilter)
 function C_ToyBox.SetExpansionTypeFilter(expansionIndex, checked) end
-
----[Documentation](https://warcraft.wiki.gg/wiki/API_C_ToyBox.SetFilterString)
-function C_ToyBox.SetFilterString(searchString) end
 
