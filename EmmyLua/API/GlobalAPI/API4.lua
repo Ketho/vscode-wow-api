@@ -2453,7 +2453,8 @@ function UnlearnSpecialization(specIndex, isPet) end
 function UnlockVoidStorage() end
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_UnmuteSoundFile)
-function UnmuteSoundFile() end
+---@param sound number|string FileID of a game sound or file path to an addon sound
+function UnmuteSoundFile(sound) end
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_UpdateAddOnCPUUsage)
 function UpdateAddOnCPUUsage() end

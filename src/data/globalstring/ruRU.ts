@@ -14394,7 +14394,7 @@ export const data: GlobalStringInterface = {
 	RAF_LEGACY_REWARDS_HELP_TEXT: String.raw`Приглашенные друзья из предыдущей программы: |cnHIGHLIGHT_FONT_COLOR:%d|r|nНеполученные награды: |cnHIGHLIGHT_FONT_COLOR:%d|r`,
 	RAF_LINK_REMAINING_USES: String.raw`Воспользовавшихся ссылкой друзей: %d/%d.`,
 	RAF_MONTHS: String.raw`%d |4месяц:месяца:месяцев;`,
-	RAF_MONTHS_EARNED: String.raw`Друзья подарили вам %d |4месяц:месяца:месяцев; подписки`,
+	RAF_MONTHS_EARNED: String.raw`Друзья оформили подписку на %d |4месяц:месяца:месяцев;`,
 	RAF_MORE_DETAILS: String.raw`[Щелкните, чтобы узнать подробнее.]`,
 	RAF_NEW_VERSION_PROMPT: String.raw`Добавьте друзей, чтобы получить награды в этом сезоне!`,
 	RAF_NEXT_EARN_DATE: String.raw`Следующая награда: %1$s`,

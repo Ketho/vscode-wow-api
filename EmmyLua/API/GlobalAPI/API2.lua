@@ -1,4 +1,7 @@
 ---@meta
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_ToyBox.SetFilterString)
+function C_ToyBox.SetFilterString(searchString) end
+
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_ToyBox.SetIsFavorite)
 function C_ToyBox.SetIsFavorite(itemID, value) end
 
