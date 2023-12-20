@@ -48,7 +48,7 @@ function AceConfig:RegisterOptionsTable(appName, options, slashcmd) end
 
 ---@class AceConfig.OptionsTable
 ---@field args table<string, AceConfig.OptionsTable> a table containing a list of options
----@field childGroups AceConfig.OptionsTable.ChildGroup decides how children groups of this group are displayed
+---@field childGroups? AceConfig.OptionsTable.ChildGroup decides how children groups of this group are displayed
 ---@field cmdHidden? boolean hide this from commandline
 ---@field confirm? string|function|boolean prompt for confirmation before changing a value if true display "name - desc", or contents of .confirmText if supplied.
 ---@field confirmText? string text to display in the confirmation dialog
