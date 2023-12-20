@@ -24,6 +24,10 @@ function AceDB:New(tbl, defaults, defaultProfile) end
 -- AceDBObject-3.0
 -- ----------------------------------------------------------------------------
 ---@class AceDBObject-3.0: AceDB.Schema
+---@field keys table
+---@field sv table
+---@field defaults AceDB.Schema Cache of defaults
+---@field parent table
 local DBObjectLib = {}
 
 -- Copies a named profile into the current profile, overwriting any conflicting settings.
@@ -131,17 +135,14 @@ function DBObjectLib.UnregisterCallback(target, eventName) end
 ---|"OnProfileShutdown"
 
 ---@class AceDB.Schema
----@field char table Character-specific data. Every character has its own database.
----@field realm table Realm-specific data. All of the players characters on the same realm share this database.
----@field class table Class-specific data. All of the players characters of the same class share this database.
----@field race table Race-specific data. All of the players characters of the same race share this database.
----@field faction table Faction-specific data. All of the players characters of the same faction share this database.
----@field factionrealm table Faction and realm specific data. All of the players characters on the same realm and of the same faction share this database.
----@field locale table Locale specific data, based on the locale of the players game client.
----@field global table Global Data. All characters on the same account share this database.
----@field profile table Profile-specific data. All characters using the same profile share this database. The user can control which profile should be used.
----@field profiles table Contains all profiles
----@field keys table
----@field sv table
----@field defaults table Cache of defaults
----@field parent table
+---@field char? table Character-specific data. Every character has its own database.
+---@field realm? table Realm-specific data. All of the players characters on the same realm share this database.
+---@field class? table Class-specific data. All of the players characters of the same class share this database.
+---@field race? table Race-specific data. All of the players characters of the same race share this database.
+---@field faction? table Faction-specific data. All of the players characters of the same faction share this database.
+---@field factionrealm? table Faction and realm specific data. All of the players characters on the same realm and of the same faction share this database.
+---@field factionrealmregion? table Faction, realm and region specific data. All of the players characters on the same realm, of the same faction and in the same region share this database.
+---@field locale? table Locale specific data, based on the locale of the players game client.
+---@field global? table Global Data. All characters on the same account share this database.
+---@field profile? table Profile-specific data. All characters using the same profile share this database. The user can control which profile should be used.
+---@field profiles? table Contains all profiles
