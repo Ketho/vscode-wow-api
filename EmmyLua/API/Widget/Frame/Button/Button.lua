@@ -173,7 +173,7 @@ function Button:SetMotionScriptsWhileDisabled(motionScriptsWhileDisabled) end
 function Button:SetNormalAtlas(atlas) end
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_Button_SetNormalFontObject)
----@param font SimpleFont
+---@param font SimpleFont|string
 function Button:SetNormalFontObject(font) end
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_Button_SetNormalTexture)
