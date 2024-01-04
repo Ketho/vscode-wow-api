@@ -156,7 +156,7 @@ function Button:SetFormattedText(text) end
 function Button:SetHighlightAtlas(atlas, blendMode) end
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_Button_SetHighlightFontObject)
----@param font SimpleFont
+---@param font SimpleFont|string
 function Button:SetHighlightFontObject(font) end
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_Button_SetHighlightTexture)
