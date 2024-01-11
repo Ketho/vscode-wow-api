@@ -7,7 +7,7 @@ Adds IntelliSense features for World of Warcraft API to VS Code. This is a plugi
 
 ### Features
 #### [API](https://warcraft.wiki.gg/wiki/World_of_Warcraft_API)
-* Parses Wowpedia pages for API documentation
+* Parses Warcraft Wiki pages for API documentation
 * Lua shorthand references e.g. `format` (string.format) and `tinsert` (table.insert)
 * Custom WoW Lua functions e.g. `wipe` and `strsplit`
 
@@ -73,4 +73,4 @@ Refer to [SETUP.md](SETUP.md) if you want to run the Lua scripts which generate 
 * [Torhal](https://github.com/Torhal), [Wutname](https://github.com/Wutname1), [Yuyuli](https://www.curseforge.com/members/yuyuli/projects)
 * [Xelnath](https://warcraft.wiki.gg/wiki/Alexander_Brazie)
 * [Blizzard Entertainment](https://www.blizzard.com/), [Townlong Yak](https://www.townlong-yak.com/), [WoW.tools](https://wow.tools/)
-* [WoWInterface](https://wowinterface.com/), [Wowpedia](https://wowpedia.fandom.com/), [Wowprogramming](https://wowprogramming.com/)
+* [WoWInterface](https://wowinterface.com/), [Warcraft Wiki](https://warcraft.wiki.gg/), [Wowprogramming](https://wowprogramming.com/)
