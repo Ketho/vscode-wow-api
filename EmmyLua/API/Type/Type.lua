@@ -163,4 +163,4 @@
 ---@alias AnimationDataEnum number
 ---@alias IDOrLink number|string
 ---@alias FileAsset string
----@alias ModelAsset string
+---@alias ModelAsset number FileID
