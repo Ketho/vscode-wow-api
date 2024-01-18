@@ -6,11 +6,14 @@
 
 ## [0.13.0] - 2024-01-18
 - 🎉 Update to patch 10.2.5 (52902)
-- 🌙 Annotations: Added FlipBook and VertexColor animation widgets
-- 🌙 Annotations: Marked LibDataBroker optional dataobject fields
-- 🌙 Annotations: Update CopyTable `shallow` param from patch 9.1.0
-- 🌙 Annotations: Fixed [#125](https://github.com/Ketho/vscode-wow-api/issues/125) SetNormalFontObject param-type-mismatch
-- 🐞 Bug Fixes: Fixed `param-type-mismatch` diagnostic for BackdropTemplate
+- 🐞 Fixed `param-type-mismatch` diagnostic for BackdropTemplate
+- PR [#120](https://github.com/Ketho/vscode-wow-api/pull/120) Add definition for tostringall()
+- Fixed [#122](https://github.com/Ketho/vscode-wow-api/issues/122) C_NamePlate.GetNamePlates is missing return type
+- Fixed [#125](https://github.com/Ketho/vscode-wow-api/issues/125) SetNormalFontObject param-type-mismatch
+- Added FlipBook and VertexColor animation widgets
+- Marked LibDataBroker optional dataobject fields
+- Update CopyTable `shallow` param from patch 9.1.0
+- Update UnmuteSoundFile param
 
 ## [0.12.1] - 2023-12-10
 - 🌙 Annotations: Update `Button:RegisterForClicks`, `Button:RegisterForMouse`
