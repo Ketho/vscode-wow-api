@@ -12,6 +12,10 @@ function GetBuildInfo() end
 ---@return boolean is64Bit
 function Is64BitClient() end
 
+---[Documentation](https://warcraft.wiki.gg/wiki/API_IsDebugBuild)
+---@return boolean isDebugBuild
+function IsDebugBuild() end
+
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_IsLinuxClient)
 ---@return boolean isLinux
 function IsLinuxClient() end

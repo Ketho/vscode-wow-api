@@ -5,6 +5,11 @@
 ---@return string result
 function BreakUpLargeNumbers(largeNumber, natural) end
 
+---[Documentation](https://warcraft.wiki.gg/wiki/API_CaseAccentInsensitiveParse)
+---@param name string
+---@return string result
+function CaseAccentInsensitiveParse(name) end
+
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_DeclineName)
 ---@param name string
 ---@param gender? number
@@ -17,3 +22,8 @@ function DeclineName(name, gender, declensionSet) end
 ---@param gender? number
 ---@return number numDeclensionSets
 function GetNumDeclensionSets(name, gender) end
+
+---[Documentation](https://warcraft.wiki.gg/wiki/API_LocalizedClassList)
+---@param isFemale? boolean Default = false
+---@return LuaValueVariant result
+function LocalizedClassList(isFemale) end

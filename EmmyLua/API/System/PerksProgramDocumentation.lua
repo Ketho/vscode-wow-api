@@ -113,6 +113,8 @@ function C_PerksProgram.SetFrozenPerksVendorItem() end
 ---@class PerksProgramItemDisplayInfo
 ---@field overrideModelSceneID number?
 ---@field creatureDisplayInfoID number?
+---@field mainHandItemModifiedAppearanceID number?
+---@field offHandItemModifiedAppearanceID number?
 
 ---@class PerksProgramPendingChestRewards
 ---@field rewardTypeID number
@@ -134,6 +136,7 @@ function C_PerksProgram.SetFrozenPerksVendorItem() end
 ---@field timeRemaining time_t
 ---@field purchased boolean
 ---@field refundable boolean
+---@field subItemsLoaded boolean
 ---@field isPurchasePending boolean
 ---@field price number
 ---@field perksVendorItemID number
@@ -143,9 +146,17 @@ function C_PerksProgram.SetFrozenPerksVendorItem() end
 ---@field speciesID number
 ---@field transmogSetID number
 ---@field itemModifiedAppearanceID number
+---@field subItems PerksVendorSubItemInfo[]
 ---@field uiGroupInfo PerksVendorItemUIGroupInfo?
 
 ---@class PerksVendorItemUIGroupInfo
 ---@field ID number
 ---@field name string
 ---@field priority number
+
+---@class PerksVendorSubItemInfo
+---@field name string
+---@field itemID number
+---@field itemAppearanceID number
+---@field invType string
+---@field quality Enum.ItemQuality

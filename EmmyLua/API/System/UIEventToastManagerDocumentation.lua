@@ -38,3 +38,4 @@ function C_EventToastManager.RemoveCurrentToast() end
 ---@field showSoundKitID number?
 ---@field hideSoundKitID number?
 ---@field colorTint ColorMixin?
+---@field flags number

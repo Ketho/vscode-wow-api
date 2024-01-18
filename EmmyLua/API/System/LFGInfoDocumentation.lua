@@ -57,9 +57,18 @@ function C_LFGInfo.HideNameFromUI(dungeonID) end
 ---@return boolean enabled
 function C_LFGInfo.IsGroupFinderEnabled() end
 
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_LFGInfo.IsInLFGFollowerDungeon)
+---@return boolean result
+function C_LFGInfo.IsInLFGFollowerDungeon() end
+
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_LFGInfo.IsLFDEnabled)
 ---@return boolean enabled
 function C_LFGInfo.IsLFDEnabled() end
+
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_LFGInfo.IsLFGFollowerDungeon)
+---@param dungeonID number
+---@return boolean result
+function C_LFGInfo.IsLFGFollowerDungeon(dungeonID) end
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_LFGInfo.IsLFREnabled)
 ---@return boolean enabled
