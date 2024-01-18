@@ -17,17 +17,11 @@ function AcceptDuel() end
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_AcceptGroup)
 function AcceptGroup() end
 
----[Documentation](https://warcraft.wiki.gg/wiki/API_AcceptGuild)
-function AcceptGuild() end
-
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_AcceptProposal)
 function AcceptProposal() end
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_AcceptQuest)
 function AcceptQuest() end
-
----[Documentation](https://warcraft.wiki.gg/wiki/API_AcceptResurrect)
-function AcceptResurrect() end
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_AcceptSockets)
 function AcceptSockets() end
@@ -104,21 +98,11 @@ function AreTalentsLocked() end
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_AscendStop)
 function AscendStop() end
 
----[Documentation](https://warcraft.wiki.gg/wiki/API_AssistUnit)
----@param unit UnitId
-function AssistUnit(unit) end
-
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_AttachGlyphToSpell)
 function AttachGlyphToSpell(spellID) end
 
----[Documentation](https://warcraft.wiki.gg/wiki/API_AttackTarget)
-function AttackTarget() end
-
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_AutoChooseCurrentGraphicsSetting)
 function AutoChooseCurrentGraphicsSetting() end
-
----[Documentation](https://warcraft.wiki.gg/wiki/API_AutoEquipCursorItem)
-function AutoEquipCursorItem() end
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_AutoLootMailItem)
 function AutoLootMailItem(index) end
@@ -1423,34 +1407,57 @@ function C_NamePlate.GetNumNamePlateMotionTypes() end
 function C_NamePlate.GetTargetClampingInsets() end
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_NamePlate.SetNamePlateEnemyClickThrough)
+---@param clickthrough boolean
 function C_NamePlate.SetNamePlateEnemyClickThrough(clickthrough) end
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_NamePlate.SetNamePlateEnemyPreferredClickInsets)
-function C_NamePlate.SetNamePlateEnemyPreferredClickInsets() end
+---@param left number
+---@param right number
+---@param top number
+---@param bottom number
+function C_NamePlate.SetNamePlateEnemyPreferredClickInsets(left, right, top, bottom) end
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_NamePlate.SetNamePlateEnemySize)
+---@param width number
+---@param height number
 function C_NamePlate.SetNamePlateEnemySize(width, height) end
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_NamePlate.SetNamePlateFriendlyClickThrough)
-function C_NamePlate.SetNamePlateFriendlyClickThrough() end
+---@param clickthrough boolean
+function C_NamePlate.SetNamePlateFriendlyClickThrough(clickthrough) end
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_NamePlate.SetNamePlateFriendlyPreferredClickInsets)
+---@param left number
+---@param right number
+---@param top number
+---@param bottom number
 function C_NamePlate.SetNamePlateFriendlyPreferredClickInsets(left, right, top, bottom) end
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_NamePlate.SetNamePlateFriendlySize)
+---@param width number
+---@param height number
 function C_NamePlate.SetNamePlateFriendlySize(width, height) end
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_NamePlate.SetNamePlateSelfClickThrough)
+---@param clickthrough boolean
 function C_NamePlate.SetNamePlateSelfClickThrough(clickthrough) end
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_NamePlate.SetNamePlateSelfPreferredClickInsets)
+---@param left number
+---@param right number
+---@param top number
+---@param bottom number
 function C_NamePlate.SetNamePlateSelfPreferredClickInsets(left, right, top, bottom) end
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_NamePlate.SetNamePlateSelfSize)
+---@param width number
+---@param height number
 function C_NamePlate.SetNamePlateSelfSize(width, height) end
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_NamePlate.SetTargetClampingInsets)
-function C_NamePlate.SetTargetClampingInsets(clickthrough) end
+---@param verticalInset number
+---@param unk number
+function C_NamePlate.SetTargetClampingInsets(verticalInset, unk) end
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_PetBattles.AcceptPVPDuel)
 function C_PetBattles.AcceptPVPDuel() end

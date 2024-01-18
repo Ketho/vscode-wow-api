@@ -1,118 +1,4 @@
 ---@meta
----[Documentation](https://warcraft.wiki.gg/wiki/API_GetItemInfoInstant)
----@param item number|string
----@return number itemID
----@return string itemType
----@return string itemSubType
----@return string itemEquipLoc
----@return number icon
----@return number classID
----@return number subclassID
-function GetItemInfoInstant(item) end
-
----[Documentation](https://warcraft.wiki.gg/wiki/API_GetItemInventorySlotInfo)
-function GetItemInventorySlotInfo(inventorySlot) end
-
----[Documentation](https://warcraft.wiki.gg/wiki/API_GetItemLevelColor)
-function GetItemLevelColor() end
-
----[Documentation](https://warcraft.wiki.gg/wiki/API_GetItemQualityColor)
----@param quality Enum.ItemQuality
----@return number r
----@return number g
----@return number b
----@return string hex
-function GetItemQualityColor(quality) end
-
----[Documentation](https://warcraft.wiki.gg/wiki/API_GetItemSetInfo)
-function GetItemSetInfo(setID) end
-
----[Documentation](https://warcraft.wiki.gg/wiki/API_GetItemSpecInfo)
-function GetItemSpecInfo(item, specTable) end
-
----[Documentation](https://warcraft.wiki.gg/wiki/API_GetItemSpell)
-function GetItemSpell(item) end
-
----[Documentation](https://warcraft.wiki.gg/wiki/API_GetItemStatDelta)
-function GetItemStatDelta(itemLink1, itemLink2, statTable) end
-
----[Documentation](https://warcraft.wiki.gg/wiki/API_GetItemStats)
-function GetItemStats(itemLink, statTable) end
-
----[Documentation](https://warcraft.wiki.gg/wiki/API_GetItemSubClassInfo)
----@param classID number
----@param subClassID number
----@return string name
----@return boolean isArmorType
-function GetItemSubClassInfo(classID, subClassID) end
-
----[Documentation](https://warcraft.wiki.gg/wiki/API_GetItemUniqueness)
-function GetItemUniqueness(item) end
-
----[Documentation](https://warcraft.wiki.gg/wiki/API_GetJailersTowerLevel)
-function GetJailersTowerLevel() end
-
----[Documentation](https://warcraft.wiki.gg/wiki/API_GetJournalInfoForSpellConfirmation)
-function GetJournalInfoForSpellConfirmation(spellID) end
-
----[Documentation](https://warcraft.wiki.gg/wiki/API_GetLFDChoiceCollapseState)
-function GetLFDChoiceCollapseState(LFGCollapseList) end
-
----[Documentation](https://warcraft.wiki.gg/wiki/API_GetLFDChoiceEnabledState)
-function GetLFDChoiceEnabledState(LFGEnabledList) end
-
----[Documentation](https://warcraft.wiki.gg/wiki/API_GetLFDChoiceOrder)
-function GetLFDChoiceOrder(LFDDungeonList) end
-
----[Documentation](https://warcraft.wiki.gg/wiki/API_GetLFDLockInfo)
-function GetLFDLockInfo(dungeonID, playerIndex) end
-
----[Documentation](https://warcraft.wiki.gg/wiki/API_GetLFDLockPlayerCount)
-function GetLFDLockPlayerCount() end
-
----[Documentation](https://warcraft.wiki.gg/wiki/API_GetLFDRoleLockInfo)
-function GetLFDRoleLockInfo(dungeonID, roleID) end
-
----[Documentation](https://warcraft.wiki.gg/wiki/API_GetLFDRoleRestrictions)
-function GetLFDRoleRestrictions(dungeonID) end
-
----[Documentation](https://warcraft.wiki.gg/wiki/API_GetLFGBootProposal)
-function GetLFGBootProposal() end
-
----[Documentation](https://warcraft.wiki.gg/wiki/API_GetLFGCategoryForID)
-function GetLFGCategoryForID(partySlot) end
-
----[Documentation](https://warcraft.wiki.gg/wiki/API_GetLFGCompletionReward)
-function GetLFGCompletionReward() end
-
----[Documentation](https://warcraft.wiki.gg/wiki/API_GetLFGCompletionRewardItem)
-function GetLFGCompletionRewardItem(rewardIndex) end
-
----[Documentation](https://warcraft.wiki.gg/wiki/API_GetLFGCompletionRewardItemLink)
-function GetLFGCompletionRewardItemLink(rewardIndex) end
-
----[Documentation](https://warcraft.wiki.gg/wiki/API_GetLFGDeserterExpiration)
----@return number? expiryTime
-function GetLFGDeserterExpiration() end
-
----[Documentation](https://warcraft.wiki.gg/wiki/API_GetLFGDungeonEncounterInfo)
----@param dungeonID number
----@param encounterIndex number
----@return string bossName
----@return string texture
----@return boolean isKilled
----@return boolean unknown4
-function GetLFGDungeonEncounterInfo(dungeonID, encounterIndex) end
-
----[Documentation](https://warcraft.wiki.gg/wiki/API_GetLFGDungeonInfo)
-function GetLFGDungeonInfo(dungeonID) end
-
----[Documentation](https://warcraft.wiki.gg/wiki/API_GetLFGDungeonNumEncounters)
----@param dungeonID number
----@return number numEncounters
----@return number numCompleted
-function GetLFGDungeonNumEncounters(dungeonID) end
-
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_GetLFGDungeonRewardCapBarInfo)
 function GetLFGDungeonRewardCapBarInfo(dungeonID) end
 
@@ -239,10 +125,6 @@ function GetLatestUpdatedStats() end
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_GetLegacyRaidDifficultyID)
 function GetLegacyRaidDifficultyID() end
 
----[Documentation](https://warcraft.wiki.gg/wiki/API_GetLifesteal)
----@return number lifesteal
-function GetLifesteal() end
-
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_GetLooseMacroIcons)
 function GetLooseMacroIcons() end
 
@@ -338,25 +220,11 @@ function GetMacroItemIcons(table) end
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_GetMacroSpell)
 function GetMacroSpell() end
 
----[Documentation](https://warcraft.wiki.gg/wiki/API_GetManaRegen)
----@return number base
----@return number casting
-function GetManaRegen() end
-
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_GetMasterLootCandidate)
 ---@param slot number
 ---@param index number
 ---@return string candidate
 function GetMasterLootCandidate(slot, index) end
-
----[Documentation](https://warcraft.wiki.gg/wiki/API_GetMastery)
----@return number mastery
-function GetMastery() end
-
----[Documentation](https://warcraft.wiki.gg/wiki/API_GetMasteryEffect)
----@return number mastery
----@return number coefficient
-function GetMasteryEffect() end
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_GetMawPowerLinkBySpellID)
 function GetMawPowerLinkBySpellID(spellID) end
@@ -365,14 +233,8 @@ function GetMawPowerLinkBySpellID(spellID) end
 ---@return number maxBattlefieldID
 function GetMaxBattlefieldID() end
 
----[Documentation](https://warcraft.wiki.gg/wiki/API_GetMaxCombatRatingBonus)
-function GetMaxCombatRatingBonus(ratingIndex) end
-
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_GetMaxNumCUFProfiles)
 function GetMaxNumCUFProfiles() end
-
----[Documentation](https://warcraft.wiki.gg/wiki/API_GetMaxPlayerLevel)
-function GetMaxPlayerLevel() end
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_GetMaxRenderScale)
 function GetMaxRenderScale() end
@@ -386,10 +248,6 @@ function GetMaxSpellStartRecoveryOffset() end
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_GetMaxTalentTier)
 ---@return number tiers
 function GetMaxTalentTier() end
-
----[Documentation](https://warcraft.wiki.gg/wiki/API_GetMeleeHaste)
----@return number meleeHaste
-function GetMeleeHaste() end
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_GetMerchantCurrencies)
 function GetMerchantCurrencies() end
@@ -448,9 +306,6 @@ function GetMirrorTimerInfo(id) end
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_GetMirrorTimerProgress)
 function GetMirrorTimerProgress(id) end
 
----[Documentation](https://warcraft.wiki.gg/wiki/API_GetModResilienceDamageReduction)
-function GetModResilienceDamageReduction() end
-
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_GetModifiedClick)
 ---@param action string
 ---@return string key
@@ -458,10 +313,6 @@ function GetModifiedClick(action) end
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_GetModifiedClickAction)
 function GetModifiedClickAction(index) end
-
----[Documentation](https://warcraft.wiki.gg/wiki/API_GetMoney)
----@return number money
-function GetMoney() end
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_GetMonitorAspectRatio)
 function GetMonitorAspectRatio() end
@@ -791,55 +642,17 @@ function GetObjectiveText() end
 ---@return boolean optedOut
 function GetOptOutOfLoot() end
 
----[Documentation](https://warcraft.wiki.gg/wiki/API_GetOverrideAPBySpellPower)
-function GetOverrideAPBySpellPower() end
-
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_GetOverrideBarIndex)
 function GetOverrideBarIndex() end
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_GetOverrideBarSkin)
 function GetOverrideBarSkin() end
 
----[Documentation](https://warcraft.wiki.gg/wiki/API_GetOverrideSpellPowerByAP)
-function GetOverrideSpellPowerByAP() end
-
----[Documentation](https://warcraft.wiki.gg/wiki/API_GetPVPDesired)
----@return boolean ispvp
-function GetPVPDesired() end
-
----[Documentation](https://warcraft.wiki.gg/wiki/API_GetPVPGearStatRules)
-function GetPVPGearStatRules() end
-
----[Documentation](https://warcraft.wiki.gg/wiki/API_GetPVPLifetimeStats)
----@return number honorableKills
----@return number dishonorableKills
----@return number highestRank
-function GetPVPLifetimeStats() end
-
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_GetPVPRoles)
 ---@return boolean tank
 ---@return boolean healer
 ---@return boolean dps
 function GetPVPRoles() end
-
----[Documentation](https://warcraft.wiki.gg/wiki/API_GetPVPSessionStats)
-function GetPVPSessionStats() end
-
----[Documentation](https://warcraft.wiki.gg/wiki/API_GetPVPTimer)
-function GetPVPTimer() end
-
----[Documentation](https://warcraft.wiki.gg/wiki/API_GetPVPYesterdayStats)
----@return number hk
----@return number dk
----@return number contribution
-function GetPVPYesterdayStats() end
-
----[Documentation](https://warcraft.wiki.gg/wiki/API_GetParryChance)
----@return number parryChance
-function GetParryChance() end
-
----[Documentation](https://warcraft.wiki.gg/wiki/API_GetParryChanceFromAttribute)
-function GetParryChanceFromAttribute() end
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_GetPartyAssignment)
 ---@param assignment string
@@ -893,12 +706,6 @@ function GetPetFoodTypes() end
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_GetPetIcon)
 function GetPetIcon() end
 
----[Documentation](https://warcraft.wiki.gg/wiki/API_GetPetMeleeHaste)
-function GetPetMeleeHaste() end
-
----[Documentation](https://warcraft.wiki.gg/wiki/API_GetPetSpellBonusDamage)
-function GetPetSpellBonusDamage() end
-
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_GetPetTalentTree)
 function GetPetTalentTree() end
 
@@ -918,21 +725,6 @@ function GetPetitionInfo() end
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_GetPetitionNameInfo)
 function GetPetitionNameInfo(index) end
 
----[Documentation](https://warcraft.wiki.gg/wiki/API_GetPlayerFacing)
----@return number facing
-function GetPlayerFacing() end
-
----[Documentation](https://warcraft.wiki.gg/wiki/API_GetPlayerInfoByGUID)
----@param guid string
----@return string localizedClass
----@return string englishClass
----@return string localizedRace
----@return string englishRace
----@return number sex
----@return string name
----@return string realm
-function GetPlayerInfoByGUID(guid) end
-
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_GetPlayerTradeCurrency)
 function GetPlayerTradeCurrency() end
 
@@ -945,12 +737,6 @@ function GetPlayerTradeMoney() end
 ---@return number spellID
 ---@return boolean enabled
 function GetPossessInfo(index) end
-
----[Documentation](https://warcraft.wiki.gg/wiki/API_GetPowerRegen)
-function GetPowerRegen() end
-
----[Documentation](https://warcraft.wiki.gg/wiki/API_GetPowerRegenForPowerType)
-function GetPowerRegenForPowerType(POWER_TYPE) end
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_GetPrevCompleatedTutorial)
 function GetPrevCompleatedTutorial(tutorial) end
@@ -993,14 +779,6 @@ function GetProgressText() end
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_GetPromotionRank)
 function GetPromotionRank(index) end
-
----[Documentation](https://warcraft.wiki.gg/wiki/API_GetPvpPowerDamage)
----@return number pvpDamage
-function GetPvpPowerDamage() end
-
----[Documentation](https://warcraft.wiki.gg/wiki/API_GetPvpPowerHealing)
----@return number pvpHealing
-function GetPvpPowerHealing() end
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_GetPvpTalentInfoByID)
 ---@param talentID number
@@ -1275,14 +1053,6 @@ function GetRandomScenarioBestChoice() end
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_GetRandomScenarioInfo)
 function GetRandomScenarioInfo(index) end
 
----[Documentation](https://warcraft.wiki.gg/wiki/API_GetRangedCritChance)
----@return number critChance
-function GetRangedCritChance() end
-
----[Documentation](https://warcraft.wiki.gg/wiki/API_GetRangedHaste)
----@return number haste
-function GetRangedHaste() end
-
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_GetRatedBattleGroundInfo)
 function GetRatedBattleGroundInfo() end
 
@@ -1316,15 +1086,6 @@ function GetReleaseTimeRemaining() end
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_GetRepairAllCost)
 function GetRepairAllCost() end
-
----[Documentation](https://warcraft.wiki.gg/wiki/API_GetResSicknessDuration)
-function GetResSicknessDuration() end
-
----[Documentation](https://warcraft.wiki.gg/wiki/API_GetRestState)
----@return number id
----@return string name
----@return number mult
-function GetRestState() end
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_GetRestrictedAccountData)
 ---@return number rLevel
@@ -1377,18 +1138,6 @@ function GetRewardTitle() end
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_GetRewardXP)
 ---@return number xp
 function GetRewardXP() end
-
----[Documentation](https://warcraft.wiki.gg/wiki/API_GetRuneCooldown)
----@param id number
----@return number start
----@return number duration
----@return boolean runeReady
-function GetRuneCooldown(id) end
-
----[Documentation](https://warcraft.wiki.gg/wiki/API_GetRuneCount)
----@param slot number
----@return number count
-function GetRuneCount(slot) end
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_GetRunningMacro)
 function GetRunningMacro() end
@@ -1478,9 +1227,6 @@ function GetSendMailMoney() end
 ---@return number sendPrice
 function GetSendMailPrice() end
 
----[Documentation](https://warcraft.wiki.gg/wiki/API_GetSetBonusesForSpecializationByItemID)
-function GetSetBonusesForSpecializationByItemID(specID, itemID) end
-
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_GetShapeshiftForm)
 ---@param flag? boolean
 ---@return number index
@@ -1500,14 +1246,6 @@ function GetShapeshiftFormID() end
 ---@return boolean castable
 ---@return number spellID
 function GetShapeshiftFormInfo(index) end
-
----[Documentation](https://warcraft.wiki.gg/wiki/API_GetSheathState)
----@return number sheathState
-function GetSheathState() end
-
----[Documentation](https://warcraft.wiki.gg/wiki/API_GetShieldBlock)
----@return number damageReduction
-function GetShieldBlock() end
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_GetSocketItemBoundTradeable)
 ---@return boolean isBoundTradeable
@@ -1552,7 +1290,7 @@ function GetSpecialization(isInspect, isPet, specGroup) end
 ---@return number primaryStat
 function GetSpecializationInfo(specID, isInspect, isPet, inspectTarget, sex) end
 
----[Documentation](https://wowpedia.fandom.com/wiki/API_GetSpecializationInfo)
+---[Documentation](https://warcraft.wiki.gg/wiki/API_GetSpecializationInfo)
 ---@param specID number
 ---@return number id
 ---@return string name
@@ -1563,7 +1301,7 @@ function GetSpecializationInfo(specID, isInspect, isPet, inspectTarget, sex) end
 ---@return string className
 function GetSpecializationInfoByID(specID) end
 
----[Documentation](https://wowpedia.fandom.com/wiki/API_GetSpecializationInfo)
+---[Documentation](https://warcraft.wiki.gg/wiki/API_GetSpecializationInfo)
 ---@param classID number
 ---@param specIndex number
 ---@return number specID
@@ -1575,7 +1313,7 @@ function GetSpecializationInfoByID(specID) end
 ---@return boolean isAllowed
 function GetSpecializationInfoForClassID(classID, specIndex) end
 
----[Documentation](https://wowpedia.fandom.com/wiki/API_GetSpecializationInfo)
+---[Documentation](https://warcraft.wiki.gg/wiki/API_GetSpecializationInfo)
 ---@param specID number
 ---@param sex? number
 ---@return number specID
@@ -1598,14 +1336,17 @@ function GetSpecializationRole(specIndex, isInspect, isPet) end
 ---@return string roleToken
 function GetSpecializationRoleByID(specID) end
 
+---[Documentation](https://warcraft.wiki.gg/wiki/API_GetSpecializationRoleEnum)
+function GetSpecializationRoleEnum() end
+
+---[Documentation](https://warcraft.wiki.gg/wiki/API_GetSpecializationRoleEnumByID)
+function GetSpecializationRoleEnumByID() end
+
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_GetSpecializationSpells)
 function GetSpecializationSpells(specIndex, isInspect, isPet) end
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_GetSpecsForSpell)
 function GetSpecsForSpell() end
-
----[Documentation](https://warcraft.wiki.gg/wiki/API_GetSpeed)
-function GetSpeed() end
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_GetSpellAutocast)
 function GetSpellAutocast() end
@@ -1618,13 +1359,6 @@ function GetSpellAvailableLevel(spellSlot) end
 ---@return number cooldownMS
 ---@return number gcdMS
 function GetSpellBaseCooldown(spellid) end
-
----[Documentation](https://warcraft.wiki.gg/wiki/API_GetSpellBonusDamage)
-function GetSpellBonusDamage(spellTreeID) end
-
----[Documentation](https://warcraft.wiki.gg/wiki/API_GetSpellBonusHealing)
----@return number bonusHeal
-function GetSpellBonusHealing() end
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_GetSpellBookItemInfo)
 ---@param spellName string
@@ -1675,17 +1409,10 @@ function GetSpellCooldown(spell) end
 ---@overload fun(index: number, bookType: string)
 function GetSpellCount(spell) end
 
----[Documentation](https://warcraft.wiki.gg/wiki/API_GetSpellCritChance)
-function GetSpellCritChance(school) end
-
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_GetSpellDescription)
 ---@param spellID number
 ---@return string desc
 function GetSpellDescription(spellID) end
-
----[Documentation](https://warcraft.wiki.gg/wiki/API_GetSpellHitModifier)
----@return number hitModifier
-function GetSpellHitModifier() end
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_GetSpellInfo)
 ---@param spell number|string
@@ -1715,10 +1442,6 @@ function GetSpellLink(spell) end
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_GetSpellLossOfControlCooldown)
 function GetSpellLossOfControlCooldown(spellSlot) end
-
----[Documentation](https://warcraft.wiki.gg/wiki/API_GetSpellPenetration)
----@return number spellPen
-function GetSpellPenetration() end
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_GetSpellPowerCost)
 ---@param spell number|string
@@ -1790,9 +1513,6 @@ function GetStatistic(category, index) end
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_GetStatisticsCategoryList)
 ---@return table categories
 function GetStatisticsCategoryList() end
-
----[Documentation](https://warcraft.wiki.gg/wiki/API_GetSturdiness)
-function GetSturdiness() end
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_GetSubZoneText)
 ---@return string subzone
@@ -1896,9 +1616,6 @@ function GetTaskPOIs() end
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_GetTasksTable)
 function GetTasksTable() end
 
----[Documentation](https://warcraft.wiki.gg/wiki/API_GetTaxiBenchmarkMode)
-function GetTaxiBenchmarkMode() end
-
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_GetTaxiMapID)
 function GetTaxiMapID() end
 
@@ -1911,9 +1628,6 @@ function GetTempShapeshiftBarIndex() end
 ---@return number g
 ---@return number b
 function GetThreatStatusColor(status) end
-
----[Documentation](https://warcraft.wiki.gg/wiki/API_GetTimeToWellRested)
-function GetTimeToWellRested() end
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_GetTitleName)
 ---@param titleId number
@@ -2030,34 +1744,8 @@ function GetTutorialsEnabled() end
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_GetUICameraInfo)
 function GetUICameraInfo(uiCameraID) end
 
----[Documentation](https://warcraft.wiki.gg/wiki/API_GetUnitHealthModifier)
-function GetUnitHealthModifier(unit) end
-
----[Documentation](https://warcraft.wiki.gg/wiki/API_GetUnitMaxHealthModifier)
-function GetUnitMaxHealthModifier(unit) end
-
----[Documentation](https://warcraft.wiki.gg/wiki/API_GetUnitPowerModifier)
-function GetUnitPowerModifier(unit) end
-
----[Documentation](https://warcraft.wiki.gg/wiki/API_GetUnitSpeed)
----@param unit UnitId
----@return number currentSpeed
----@return number runSpeed
----@return number flightSpeed
----@return number swimSpeed
-function GetUnitSpeed(unit) end
-
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_GetVehicleBarIndex)
 function GetVehicleBarIndex() end
-
----[Documentation](https://warcraft.wiki.gg/wiki/API_GetVehicleUIIndicator)
-function GetVehicleUIIndicator(indicatorID) end
-
----[Documentation](https://warcraft.wiki.gg/wiki/API_GetVehicleUIIndicatorSeat)
-function GetVehicleUIIndicatorSeat(indicatorID, indicatorSeatIndex) end
-
----[Documentation](https://warcraft.wiki.gg/wiki/API_GetVersatilityBonus)
-function GetVersatilityBonus(COMBAT_RATING) end
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_GetVideoCaps)
 function GetVideoCaps() end
@@ -2152,10 +1840,6 @@ function GetWorldPVPAreaInfo(index) end
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_GetWorldPVPQueueStatus)
 function GetWorldPVPQueueStatus(queueId) end
-
----[Documentation](https://warcraft.wiki.gg/wiki/API_GetXPExhaustion)
----@return number exhaustionThreshold
-function GetXPExhaustion() end
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_GetZonePVPInfo)
 ---@return string pvpType
@@ -2256,9 +1940,6 @@ function GuildUninvite(name) end
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_HandleAtlasMemberCommand)
 function HandleAtlasMemberCommand() end
 
----[Documentation](https://warcraft.wiki.gg/wiki/API_HasAPEffectsSpellPower)
-function HasAPEffectsSpellPower() end
-
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_HasAction)
 ---@param actionSlot number
 ---@return boolean hasAction
@@ -2279,16 +1960,9 @@ function HasBoundGemProposed() end
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_HasCompletedAnyAchievement)
 function HasCompletedAnyAchievement(achievementID) end
 
----[Documentation](https://warcraft.wiki.gg/wiki/API_HasDualWieldPenalty)
-function HasDualWieldPenalty() end
-
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_HasExtraActionBar)
 ---@return boolean hasBar
 function HasExtraActionBar() end
-
----[Documentation](https://warcraft.wiki.gg/wiki/API_HasFullControl)
----@return boolean hasControl
-function HasFullControl() end
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_HasIgnoreDualWieldWeapon)
 function HasIgnoreDualWieldWeapon() end
@@ -2306,9 +1980,6 @@ function HasLoadedCUFProfiles() end
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_HasNewMail)
 function HasNewMail() end
 
----[Documentation](https://warcraft.wiki.gg/wiki/API_HasNoReleaseAura)
-function HasNoReleaseAura() end
-
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_HasOverrideActionBar)
 function HasOverrideActionBar() end
 
@@ -2322,9 +1993,6 @@ function HasPetSpells() end
 ---@return boolean hasUI
 ---@return boolean isHunterPet
 function HasPetUI() end
-
----[Documentation](https://warcraft.wiki.gg/wiki/API_HasSPEffectsAttackPower)
-function HasSPEffectsAttackPower() end
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_HasSendMailItem)
 function HasSendMailItem(index) end
@@ -2371,16 +2039,9 @@ function InRepairMode() end
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_InboxItemCanDelete)
 function InboxItemCanDelete(index) end
 
----[Documentation](https://warcraft.wiki.gg/wiki/API_InitiateRolePoll)
-function InitiateRolePoll() end
-
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_InitiateTrade)
 ---@param unit UnitId
 function InitiateTrade(unit) end
-
----[Documentation](https://warcraft.wiki.gg/wiki/API_IsAccountSecured)
----@return boolean accountSecured
-function IsAccountSecured() end
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_IsAchievementEligible)
 ---@param achievementID number
@@ -2403,19 +2064,12 @@ function IsActiveQuestLegendary(index) end
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_IsActiveQuestTrivial)
 function IsActiveQuestTrivial(index) end
 
----[Documentation](https://warcraft.wiki.gg/wiki/API_IsAdvancedFlyableArea)
----@return boolean flyable
-function IsAdvancedFlyableArea() end
-
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_IsAllowedToUserTeleport)
 ---@return boolean allowedToTeleport
 function IsAllowedToUserTeleport() end
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_IsArenaSkirmish)
 function IsArenaSkirmish() end
-
----[Documentation](https://warcraft.wiki.gg/wiki/API_IsArenaTeamCaptain)
-function IsArenaTeamCaptain(teamIndex) end
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_IsArtifactCompletionHistoryAvailable)
 function IsArtifactCompletionHistoryAvailable() end
@@ -2504,9 +2158,6 @@ function IsCurrentQuestFailed() end
 ---@return boolean isCurrent
 function IsCurrentSpell(spellID) end
 
----[Documentation](https://warcraft.wiki.gg/wiki/API_IsDebugBuild)
-function IsDebugBuild() end
-
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_IsDesaturateSupported)
 function IsDesaturateSupported() end
 
@@ -2515,10 +2166,6 @@ function IsDisplayChannelModerator() end
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_IsDisplayChannelOwner)
 function IsDisplayChannelOwner() end
-
----[Documentation](https://warcraft.wiki.gg/wiki/API_IsDualWielding)
----@return boolean isDualWield
-function IsDualWielding() end
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_IsEncounterInProgress)
 function IsEncounterInProgress() end
@@ -2556,20 +2203,8 @@ function IsEveryoneAssistant() end
 ---@return boolean inactive
 function IsFactionInactive(index) end
 
----[Documentation](https://warcraft.wiki.gg/wiki/API_IsFalling)
----@param unit? UnitId
----@return boolean falling
-function IsFalling(unit) end
-
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_IsFishingLoot)
 function IsFishingLoot() end
-
----[Documentation](https://warcraft.wiki.gg/wiki/API_IsFlyableArea)
----@return boolean flyable
-function IsFlyableArea() end
-
----[Documentation](https://warcraft.wiki.gg/wiki/API_IsFlying)
-function IsFlying() end
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_IsGMClient)
 function IsGMClient() end
@@ -2589,10 +2224,6 @@ function IsGraphicsCVarValueSupported() end
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_IsGraphicsSettingValueSupported)
 function IsGraphicsSettingValueSupported() end
 
----[Documentation](https://warcraft.wiki.gg/wiki/API_IsGuildLeader)
----@return boolean isGuildLeader
-function IsGuildLeader() end
-
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_IsGuildMember)
 function IsGuildMember() end
 
@@ -2604,4 +2235,366 @@ function IsHarmfulItem(item) end
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_IsHarmfulSpell)
 function IsHarmfulSpell(spellSlot) end
+
+---[Documentation](https://warcraft.wiki.gg/wiki/API_IsHelpfulItem)
+function IsHelpfulItem(item) end
+
+---[Documentation](https://warcraft.wiki.gg/wiki/API_IsHelpfulSpell)
+function IsHelpfulSpell(spellSlot) end
+
+---[Documentation](https://warcraft.wiki.gg/wiki/API_IsInActiveWorldPVP)
+function IsInActiveWorldPVP() end
+
+---[Documentation](https://warcraft.wiki.gg/wiki/API_IsInAuthenticatedRank)
+function IsInAuthenticatedRank() end
+
+---[Documentation](https://warcraft.wiki.gg/wiki/API_IsInCinematicScene)
+---@return boolean inCinematicScene
+function IsInCinematicScene() end
+
+---[Documentation](https://warcraft.wiki.gg/wiki/API_IsInGroup)
+---@param groupType? number
+---@return boolean inGroup
+function IsInGroup(groupType) end
+
+---[Documentation](https://warcraft.wiki.gg/wiki/API_IsInGuildGroup)
+---@return boolean inGuildGroup
+function IsInGuildGroup() end
+
+---[Documentation](https://warcraft.wiki.gg/wiki/API_IsInInstance)
+---@return boolean inInstance
+---@return string instanceType
+function IsInInstance() end
+
+---[Documentation](https://warcraft.wiki.gg/wiki/API_IsInLFGDungeon)
+function IsInLFGDungeon() end
+
+---[Documentation](https://warcraft.wiki.gg/wiki/API_IsInRaid)
+---@param groupType? number
+---@return boolean isInRaid
+function IsInRaid(groupType) end
+
+---[Documentation](https://warcraft.wiki.gg/wiki/API_IsInScenarioGroup)
+function IsInScenarioGroup() end
+
+---[Documentation](https://warcraft.wiki.gg/wiki/API_IsInventoryItemLocked)
+function IsInventoryItemLocked(id) end
+
+---[Documentation](https://warcraft.wiki.gg/wiki/API_IsInventoryItemProfessionBag)
+function IsInventoryItemProfessionBag(unit, slot) end
+
+---[Documentation](https://warcraft.wiki.gg/wiki/API_IsItemAction)
+function IsItemAction(slot) end
+
+---[Documentation](https://warcraft.wiki.gg/wiki/API_IsItemInRange)
+---@param item number|string
+---@param unit? UnitId
+---@return boolean inRange
+function IsItemInRange(item, unit) end
+
+---[Documentation](https://warcraft.wiki.gg/wiki/API_IsLFGComplete)
+---@return boolean isComplete
+function IsLFGComplete() end
+
+---[Documentation](https://warcraft.wiki.gg/wiki/API_IsLFGDungeonJoinable)
+function IsLFGDungeonJoinable() end
+
+---[Documentation](https://warcraft.wiki.gg/wiki/API_IsLegacyDifficulty)
+function IsLegacyDifficulty(difficultyID) end
+
+---[Documentation](https://warcraft.wiki.gg/wiki/API_IsMasterLooter)
+function IsMasterLooter() end
+
+---[Documentation](https://warcraft.wiki.gg/wiki/API_IsModifiedClick)
+---@param action? string
+---@return boolean isHeld
+function IsModifiedClick(action) end
+
+---[Documentation](https://warcraft.wiki.gg/wiki/API_IsMouselooking)
+function IsMouselooking() end
+
+---[Documentation](https://warcraft.wiki.gg/wiki/API_IsOnTournamentRealm)
+function IsOnTournamentRealm() end
+
+---[Documentation](https://warcraft.wiki.gg/wiki/API_IsOutlineModeSupported)
+function IsOutlineModeSupported() end
+
+---[Documentation](https://warcraft.wiki.gg/wiki/API_IsPartyLFG)
+function IsPartyLFG() end
+
+---[Documentation](https://warcraft.wiki.gg/wiki/API_IsPartyWorldPVP)
+function IsPartyWorldPVP() end
+
+---[Documentation](https://warcraft.wiki.gg/wiki/API_IsPassiveSpell)
+function IsPassiveSpell(spellID, bookType) end
+
+---[Documentation](https://warcraft.wiki.gg/wiki/API_IsPendingGlyphRemoval)
+function IsPendingGlyphRemoval() end
+
+---[Documentation](https://warcraft.wiki.gg/wiki/API_IsPetActive)
+function IsPetActive() end
+
+---[Documentation](https://warcraft.wiki.gg/wiki/API_IsPetAttackAction)
+function IsPetAttackAction(index) end
+
+---[Documentation](https://warcraft.wiki.gg/wiki/API_IsPetAttackActive)
+---@return boolean isActive
+function IsPetAttackActive() end
+
+---[Documentation](https://warcraft.wiki.gg/wiki/API_IsPlayerInWorld)
+function IsPlayerInWorld() end
+
+---[Documentation](https://warcraft.wiki.gg/wiki/API_IsPlayerMoving)
+function IsPlayerMoving() end
+
+---[Documentation](https://warcraft.wiki.gg/wiki/API_IsPlayerNeutral)
+---@return boolean isNeutral
+function IsPlayerNeutral() end
+
+---[Documentation](https://warcraft.wiki.gg/wiki/API_IsPlayerSpell)
+---@param spellID number
+---@return boolean isKnown
+function IsPlayerSpell(spellID) end
+
+---[Documentation](https://warcraft.wiki.gg/wiki/API_IsPossessBarVisible)
+function IsPossessBarVisible() end
+
+---[Documentation](https://warcraft.wiki.gg/wiki/API_IsPressHoldReleaseSpell)
+function IsPressHoldReleaseSpell() end
+
+---[Documentation](https://warcraft.wiki.gg/wiki/API_IsPvpTalentSpell)
+function IsPvpTalentSpell() end
+
+---[Documentation](https://warcraft.wiki.gg/wiki/API_IsQuestCompletable)
+---@return boolean isQuestCompletable
+function IsQuestCompletable() end
+
+---[Documentation](https://warcraft.wiki.gg/wiki/API_IsQuestIDValidSpellTarget)
+function IsQuestIDValidSpellTarget(questID) end
+
+---[Documentation](https://warcraft.wiki.gg/wiki/API_IsQuestItemHidden)
+function IsQuestItemHidden(index) end
+
+---[Documentation](https://warcraft.wiki.gg/wiki/API_IsQuestLogSpecialItemInRange)
+function IsQuestLogSpecialItemInRange(index, target) end
+
+---[Documentation](https://warcraft.wiki.gg/wiki/API_IsQuestSequenced)
+function IsQuestSequenced(questID) end
+
+---[Documentation](https://warcraft.wiki.gg/wiki/API_IsRaidMarkerActive)
+function IsRaidMarkerActive(index) end
+
+---[Documentation](https://warcraft.wiki.gg/wiki/API_IsReagentBankUnlocked)
+function IsReagentBankUnlocked() end
+
+---[Documentation](https://warcraft.wiki.gg/wiki/API_IsRecognizedName)
+---@param text string
+---@param includeBitfield number
+---@param excludeBitfield number
+---@return boolean isRecognized
+function IsRecognizedName(text, includeBitfield, excludeBitfield) end
+
+---[Documentation](https://warcraft.wiki.gg/wiki/API_IsRecruitAFriendLinked)
+---@return boolean isRafLinked
+function IsRecruitAFriendLinked() end
+
+---[Documentation](https://warcraft.wiki.gg/wiki/API_IsRestrictedAccount)
+function IsRestrictedAccount() end
+
+---[Documentation](https://warcraft.wiki.gg/wiki/API_IsSelectedSpellBookItem)
+function IsSelectedSpellBookItem(spellSlot) end
+
+---[Documentation](https://warcraft.wiki.gg/wiki/API_IsServerControlledBackfill)
+function IsServerControlledBackfill() end
+
+---[Documentation](https://warcraft.wiki.gg/wiki/API_IsSpecializationActivateSpell)
+function IsSpecializationActivateSpell() end
+
+---[Documentation](https://warcraft.wiki.gg/wiki/API_IsSpellClassOrSpec)
+function IsSpellClassOrSpec() end
+
+---[Documentation](https://warcraft.wiki.gg/wiki/API_IsSpellInRange)
+function IsSpellInRange(spellName, unit) end
+
+---[Documentation](https://warcraft.wiki.gg/wiki/API_IsSpellKnown)
+---@param spellID number
+---@param isPetSpell? boolean
+---@return boolean isKnown
+function IsSpellKnown(spellID, isPetSpell) end
+
+---[Documentation](https://warcraft.wiki.gg/wiki/API_IsSpellKnownOrOverridesKnown)
+function IsSpellKnownOrOverridesKnown(spellID, isPet) end
+
+---[Documentation](https://warcraft.wiki.gg/wiki/API_IsSpellOverlayed)
+---@param spellID number
+---@return boolean isTrue
+function IsSpellOverlayed(spellID) end
+
+---[Documentation](https://warcraft.wiki.gg/wiki/API_IsSpellValidForPendingGlyph)
+function IsSpellValidForPendingGlyph(spellID) end
+
+---[Documentation](https://warcraft.wiki.gg/wiki/API_IsSplashFramePrimaryFeatureUnlocked)
+function IsSplashFramePrimaryFeatureUnlocked() end
+
+---[Documentation](https://warcraft.wiki.gg/wiki/API_IsStackableAction)
+function IsStackableAction(slot) end
+
+---[Documentation](https://warcraft.wiki.gg/wiki/API_IsStoryQuest)
+function IsStoryQuest(questID) end
+
+---[Documentation](https://warcraft.wiki.gg/wiki/API_IsSubZonePVPPOI)
+function IsSubZonePVPPOI() end
+
+---[Documentation](https://warcraft.wiki.gg/wiki/API_IsTalentSpell)
+function IsTalentSpell(slot, bookType) end
+
+---[Documentation](https://warcraft.wiki.gg/wiki/API_IsThreatWarningEnabled)
+function IsThreatWarningEnabled() end
+
+---[Documentation](https://warcraft.wiki.gg/wiki/API_IsTitleKnown)
+---@param titleId number
+---@return boolean isKnown
+function IsTitleKnown(titleId) end
+
+---[Documentation](https://warcraft.wiki.gg/wiki/API_IsTradeskillTrainer)
+function IsTradeskillTrainer() end
+
+---[Documentation](https://warcraft.wiki.gg/wiki/API_IsTutorialFlagged)
+function IsTutorialFlagged(tutorial) end
+
+---[Documentation](https://warcraft.wiki.gg/wiki/API_IsUsableAction)
+---@param slot number
+---@return boolean isUsable
+---@return boolean notEnoughMana
+function IsUsableAction(slot) end
+
+---[Documentation](https://warcraft.wiki.gg/wiki/API_IsUsableItem)
+function IsUsableItem(item) end
+
+---[Documentation](https://warcraft.wiki.gg/wiki/API_IsUsableSpell)
+---@param spell number|string
+---@return boolean usable
+---@return boolean noMana
+---@overload fun(index: number, bookType: string)
+function IsUsableSpell(spell) end
+
+---[Documentation](https://warcraft.wiki.gg/wiki/API_IsUsingVehicleControls)
+function IsUsingVehicleControls() end
+
+---[Documentation](https://warcraft.wiki.gg/wiki/API_IsVehicleAimAngleAdjustable)
+function IsVehicleAimAngleAdjustable() end
+
+---[Documentation](https://warcraft.wiki.gg/wiki/API_IsVehicleAimPowerAdjustable)
+function IsVehicleAimPowerAdjustable() end
+
+---[Documentation](https://warcraft.wiki.gg/wiki/API_IsVoidStorageReady)
+function IsVoidStorageReady() end
+
+---[Documentation](https://warcraft.wiki.gg/wiki/API_IsWargame)
+---@return boolean isWargame
+function IsWargame() end
+
+---[Documentation](https://warcraft.wiki.gg/wiki/API_IsWorldLootObject)
+function IsWorldLootObject() end
+
+---[Documentation](https://warcraft.wiki.gg/wiki/API_ItemAddedToArtifact)
+function ItemAddedToArtifact(keystoneindex) end
+
+---[Documentation](https://warcraft.wiki.gg/wiki/API_ItemCanTargetGarrisonFollowerAbility)
+function ItemCanTargetGarrisonFollowerAbility() end
+
+---[Documentation](https://warcraft.wiki.gg/wiki/API_ItemHasRange)
+function ItemHasRange(item) end
+
+---[Documentation](https://warcraft.wiki.gg/wiki/API_ItemTextGetCreator)
+function ItemTextGetCreator() end
+
+---[Documentation](https://warcraft.wiki.gg/wiki/API_ItemTextGetItem)
+function ItemTextGetItem() end
+
+---[Documentation](https://warcraft.wiki.gg/wiki/API_ItemTextGetMaterial)
+function ItemTextGetMaterial() end
+
+---[Documentation](https://warcraft.wiki.gg/wiki/API_ItemTextGetPage)
+function ItemTextGetPage() end
+
+---[Documentation](https://warcraft.wiki.gg/wiki/API_ItemTextGetText)
+function ItemTextGetText() end
+
+---[Documentation](https://warcraft.wiki.gg/wiki/API_ItemTextHasNextPage)
+function ItemTextHasNextPage() end
+
+---[Documentation](https://warcraft.wiki.gg/wiki/API_ItemTextIsFullPage)
+function ItemTextIsFullPage() end
+
+---[Documentation](https://warcraft.wiki.gg/wiki/API_ItemTextNextPage)
+function ItemTextNextPage() end
+
+---[Documentation](https://warcraft.wiki.gg/wiki/API_ItemTextPrevPage)
+function ItemTextPrevPage() end
+
+---[Documentation](https://warcraft.wiki.gg/wiki/API_JoinArena)
+function JoinArena() end
+
+---[Documentation](https://warcraft.wiki.gg/wiki/API_JoinBattlefield)
+---@param index number
+---@param asGroup boolean
+---@param isRated boolean
+function JoinBattlefield(index, asGroup, isRated) end
+
+---[Documentation](https://warcraft.wiki.gg/wiki/API_JoinChannelByName)
+---@param channelName string
+---@param password? string
+---@param frameID? number
+---@param hasVoice boolean
+---@return number type
+---@return string? name
+function JoinChannelByName(channelName, password, frameID, hasVoice) end
+
+---[Documentation](https://warcraft.wiki.gg/wiki/API_JoinLFG)
+function JoinLFG(category) end
+
+---[Documentation](https://warcraft.wiki.gg/wiki/API_JoinPermanentChannel)
+function JoinPermanentChannel(channelName, password, frameID, hasVoice) end
+
+---[Documentation](https://warcraft.wiki.gg/wiki/API_JoinRatedBattlefield)
+function JoinRatedBattlefield() end
+
+---[Documentation](https://warcraft.wiki.gg/wiki/API_JoinRatedSoloShuffle)
+function JoinRatedSoloShuffle() end
+
+---[Documentation](https://warcraft.wiki.gg/wiki/API_JoinSingleLFG)
+function JoinSingleLFG(category, lfgID) end
+
+---[Documentation](https://warcraft.wiki.gg/wiki/API_JoinSkirmish)
+---@param arenaID number
+---@param joinAsGroup? boolean
+function JoinSkirmish(arenaID, joinAsGroup) end
+
+---[Documentation](https://warcraft.wiki.gg/wiki/API_JoinTemporaryChannel)
+function JoinTemporaryChannel(channelName, password, frameID, hasVoice) end
+
+---[Documentation](https://warcraft.wiki.gg/wiki/API_JumpOrAscendStart)
+function JumpOrAscendStart() end
+
+---[Documentation](https://warcraft.wiki.gg/wiki/API_LFGTeleport)
+---@param toSafety boolean
+function LFGTeleport(toSafety) end
+
+---[Documentation](https://warcraft.wiki.gg/wiki/API_LearnPvpTalent)
+function LearnPvpTalent() end
+
+---[Documentation](https://warcraft.wiki.gg/wiki/API_LearnPvpTalents)
+function LearnPvpTalents() end
+
+---[Documentation](https://warcraft.wiki.gg/wiki/API_LearnTalent)
+---@param talentID number
+---@return boolean success
+function LearnTalent(talentID) end
+
+---[Documentation](https://warcraft.wiki.gg/wiki/API_LearnTalents)
+function LearnTalents() end
+
+---[Documentation](https://warcraft.wiki.gg/wiki/API_LeaveBattlefield)
+function LeaveBattlefield() end
 

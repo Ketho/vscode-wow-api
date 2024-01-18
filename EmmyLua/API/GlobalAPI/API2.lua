@@ -327,9 +327,6 @@ function CanEditMOTD() end
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_CanEditPublicNote)
 function CanEditPublicNote() end
 
----[Documentation](https://warcraft.wiki.gg/wiki/API_CanEjectPassengerFromSeat)
-function CanEjectPassengerFromSeat(seat) end
-
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_CanExitVehicle)
 function CanExitVehicle() end
 
@@ -418,9 +415,6 @@ function CanSummonFriend(unit) end
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_CanSurrenderArena)
 function CanSurrenderArena() end
 
----[Documentation](https://warcraft.wiki.gg/wiki/API_CanSwitchVehicleSeat)
-function CanSwitchVehicleSeat() end
-
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_CanSwitchVehicleSeats)
 function CanSwitchVehicleSeats() end
 
@@ -485,11 +479,6 @@ function CancelUnitBuff(unit, buffIndex, filter) end
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_CannotBeResurrected)
 function CannotBeResurrected() end
-
----[Documentation](https://warcraft.wiki.gg/wiki/API_CaseAccentInsensitiveParse)
----@param string string
----@return string lower
-function CaseAccentInsensitiveParse(string) end
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_CastPetAction)
 ---@param index number
@@ -601,9 +590,6 @@ function ClearRaidMarker(index) end
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_ClearSendMail)
 function ClearSendMail() end
 
----[Documentation](https://warcraft.wiki.gg/wiki/API_ClearTarget)
-function ClearTarget() end
-
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_ClearTutorials)
 function ClearTutorials() end
 
@@ -694,16 +680,6 @@ function CloseTrade() end
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_CloseTrainer)
 function CloseTrainer() end
-
----[Documentation](https://warcraft.wiki.gg/wiki/API_ClosestGameObjectPosition)
-function ClosestGameObjectPosition(gameObjectID) end
-
----[Documentation](https://warcraft.wiki.gg/wiki/API_ClosestUnitPosition)
----@param creatureID number
----@return number x
----@return number y
----@return number distance
-function ClosestUnitPosition(creatureID) end
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_CollapseAllFactionHeaders)
 function CollapseAllFactionHeaders() end
@@ -801,9 +777,6 @@ function ConfirmOnUse() end
 ---@param isReady? number
 function ConfirmReadyCheck(isReady) end
 
----[Documentation](https://warcraft.wiki.gg/wiki/API_ConfirmTalentWipe)
-function ConfirmTalentWipe() end
-
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_CreateFont)
 ---@param name string
 ---@return Font fontObject
@@ -859,14 +832,8 @@ function DeclineChannelInvite(channel) end
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_DeclineGroup)
 function DeclineGroup() end
 
----[Documentation](https://warcraft.wiki.gg/wiki/API_DeclineGuild)
-function DeclineGuild() end
-
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_DeclineQuest)
 function DeclineQuest() end
-
----[Documentation](https://warcraft.wiki.gg/wiki/API_DeclineResurrect)
-function DeclineResurrect() end
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_DeclineSpellConfirmationPrompt)
 ---@param spellID number
@@ -913,9 +880,6 @@ function DisableSpellAutocast() end
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_DismissCompanion)
 ---@param type string
 function DismissCompanion(type) end
-
----[Documentation](https://warcraft.wiki.gg/wiki/API_Dismount)
-function Dismount() end
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_DisplayChannelOwner)
 function DisplayChannelOwner(channel) end
@@ -1143,9 +1107,6 @@ function EJ_SetSearch(text) end
 ---@return number macroID
 function EditMacro(macroInfo, name, icon, body) end
 
----[Documentation](https://warcraft.wiki.gg/wiki/API_EjectPassengerFromSeat)
-function EjectPassengerFromSeat(seat) end
-
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_EnableSpellAutocast)
 function EnableSpellAutocast() end
 
@@ -1196,9 +1157,6 @@ function ExpandWarGameHeader(index) end
 ---@param rowIndex number
 function FactionToggleAtWar(rowIndex) end
 
----[Documentation](https://warcraft.wiki.gg/wiki/API_FillLocalizedClassList)
-function FillLocalizedClassList(classTable, isFemale) end
-
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_FindBaseSpellByID)
 ---@param spellID number
 ---@return number baseSpellID
@@ -1230,10 +1188,6 @@ function FlipCameraYaw(angle) end
 ---@param spellID number
 ---@return boolean hasSpell
 function FlyoutHasSpell(flyoutID, spellID) end
-
----[Documentation](https://warcraft.wiki.gg/wiki/API_FocusUnit)
----@param unit UnitId
-function FocusUnit(unit) end
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_FollowUnit)
 ---@param unit UnitId
@@ -1443,9 +1397,6 @@ function GetAddOnCPUUsage(index) end
 ---@overload fun(name: string)
 function GetAddOnMemoryUsage(index) end
 
----[Documentation](https://warcraft.wiki.gg/wiki/API_GetAllowLowLevelRaid)
-function GetAllowLowLevelRaid() end
-
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_GetAlternativeDefaultLanguage)
 function GetAlternativeDefaultLanguage() end
 
@@ -1499,12 +1450,6 @@ function GetArtifactInfoByRace(raceIndex, artifactIndex) end
 ---@return number numFragmentsRequired
 function GetArtifactProgress() end
 
----[Documentation](https://warcraft.wiki.gg/wiki/API_GetAttackPowerForStat)
----@param statId number
----@param amount number
----@return number ap
-function GetAttackPowerForStat(statId, amount) end
-
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_GetAutoCompletePresenceID)
 function GetAutoCompletePresenceID(name) end
 
@@ -1522,10 +1467,6 @@ function GetAutoCompleteRealms(realmNames) end
 ---@param excludeBitField number
 ---@return table[] results
 function GetAutoCompleteResults(text, numResults, cursorPosition, allowFullMatch, includeBitField, excludeBitField) end
-
----[Documentation](https://warcraft.wiki.gg/wiki/API_GetAutoDeclineGuildInvites)
----@return number enabled
-function GetAutoDeclineGuildInvites() end
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_GetAutoQuestPopUp)
 ---@param index number
@@ -1556,9 +1497,6 @@ function GetAvailableTitle(index) end
 ---@return number avgItemLevelEquipped
 ---@return number avgItemLevelPvp
 function GetAverageItemLevel() end
-
----[Documentation](https://warcraft.wiki.gg/wiki/API_GetAvoidance)
-function GetAvoidance() end
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_GetBackgroundLoadingStatus)
 function GetBackgroundLoadingStatus() end
@@ -1682,10 +1620,6 @@ function GetBindingKey(command) end
 ---@return string text
 function GetBindingText(key, prefix, abbreviate) end
 
----[Documentation](https://warcraft.wiki.gg/wiki/API_GetBlockChance)
----@return number blockChance
-function GetBlockChance() end
-
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_GetBonusBarIndex)
 function GetBonusBarIndex() end
 
@@ -1797,25 +1731,6 @@ function GetCoinText(amount, separator) end
 ---@return string formattedAmount
 function GetCoinTextureString(amount, fontHeight) end
 
----[Documentation](https://warcraft.wiki.gg/wiki/API_GetCombatRating)
----@param combatRatingIdentifier number
----@return number rating
-function GetCombatRating(combatRatingIdentifier) end
-
----[Documentation](https://warcraft.wiki.gg/wiki/API_GetCombatRatingBonus)
----@param combatRatingIdentifier number
----@return number bonus
-function GetCombatRatingBonus(combatRatingIdentifier) end
-
----[Documentation](https://warcraft.wiki.gg/wiki/API_GetCombatRatingBonusForCombatRatingValue)
-function GetCombatRatingBonusForCombatRatingValue(ratingIndex, value) end
-
----[Documentation](https://warcraft.wiki.gg/wiki/API_GetComboPoints)
----@param unit UnitId
----@param target UnitId
----@return number comboPoints
-function GetComboPoints(unit, target) end
-
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_GetCompanionInfo)
 ---@param type string
 ---@param id number
@@ -1840,21 +1755,6 @@ function GetComparisonStatistic(achievementID) end
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_GetCorpseRecoveryDelay)
 function GetCorpseRecoveryDelay() end
-
----[Documentation](https://warcraft.wiki.gg/wiki/API_GetCorruption)
----@return number corruption
-function GetCorruption() end
-
----[Documentation](https://warcraft.wiki.gg/wiki/API_GetCorruptionResistance)
----@return number corruptionResistance
-function GetCorruptionResistance() end
-
----[Documentation](https://warcraft.wiki.gg/wiki/API_GetCritChance)
----@return number critChance
-function GetCritChance() end
-
----[Documentation](https://warcraft.wiki.gg/wiki/API_GetCritChanceProvidesParryEffect)
-function GetCritChanceProvidesParryEffect() end
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_GetCriteriaSpell)
 function GetCriteriaSpell() end
@@ -1932,13 +1832,6 @@ function GetDetailedItemLevelInfo(item) end
 ---@return number toggleDifficultyID
 function GetDifficultyInfo(id) end
 
----[Documentation](https://warcraft.wiki.gg/wiki/API_GetDodgeChance)
----@return number dodgeChance
-function GetDodgeChance() end
-
----[Documentation](https://warcraft.wiki.gg/wiki/API_GetDodgeChanceFromAttribute)
-function GetDodgeChanceFromAttribute() end
-
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_GetDownloadedPercentage)
 function GetDownloadedPercentage() end
 
@@ -1964,12 +1857,6 @@ function GetExistingSocketInfo(id) end
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_GetExistingSocketLink)
 function GetExistingSocketLink(id) end
-
----[Documentation](https://warcraft.wiki.gg/wiki/API_GetExpertise)
----@return number expertise
----@return number offhandExpertise
----@return number rangedExpertise
-function GetExpertise() end
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_GetExtraBarIndex)
 ---@return number extraPage
@@ -2283,14 +2170,6 @@ function GetGuildTabardFiles() end
 ---@return number isAway
 function GetGuildTradeSkillInfo(index) end
 
----[Documentation](https://warcraft.wiki.gg/wiki/API_GetHaste)
----@return number haste
-function GetHaste() end
-
----[Documentation](https://warcraft.wiki.gg/wiki/API_GetHitModifier)
----@return number hitModifier
-function GetHitModifier() end
-
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_GetHomePartyInfo)
 ---@param homePlayers table
 ---@return table homePlayers
@@ -2527,4 +2406,109 @@ function GetItemIcon(itemID) end
 ---@return number? setID
 ---@return boolean isCraftingReagent
 function GetItemInfo(item) end
+
+---[Documentation](https://warcraft.wiki.gg/wiki/API_GetItemInfoInstant)
+---@param item number|string
+---@return number itemID
+---@return string itemType
+---@return string itemSubType
+---@return string itemEquipLoc
+---@return number icon
+---@return number classID
+---@return number subclassID
+function GetItemInfoInstant(item) end
+
+---[Documentation](https://warcraft.wiki.gg/wiki/API_GetItemInventorySlotInfo)
+function GetItemInventorySlotInfo(inventorySlot) end
+
+---[Documentation](https://warcraft.wiki.gg/wiki/API_GetItemLevelColor)
+function GetItemLevelColor() end
+
+---[Documentation](https://warcraft.wiki.gg/wiki/API_GetItemQualityColor)
+---@param quality Enum.ItemQuality
+---@return number r
+---@return number g
+---@return number b
+---@return string hex
+function GetItemQualityColor(quality) end
+
+---[Documentation](https://warcraft.wiki.gg/wiki/API_GetItemSetInfo)
+function GetItemSetInfo(setID) end
+
+---[Documentation](https://warcraft.wiki.gg/wiki/API_GetItemSpecInfo)
+function GetItemSpecInfo(item, specTable) end
+
+---[Documentation](https://warcraft.wiki.gg/wiki/API_GetItemSpell)
+function GetItemSpell(item) end
+
+---[Documentation](https://warcraft.wiki.gg/wiki/API_GetItemSubClassInfo)
+---@param classID number
+---@param subClassID number
+---@return string name
+---@return boolean isArmorType
+function GetItemSubClassInfo(classID, subClassID) end
+
+---[Documentation](https://warcraft.wiki.gg/wiki/API_GetItemUniqueness)
+function GetItemUniqueness(item) end
+
+---[Documentation](https://warcraft.wiki.gg/wiki/API_GetJournalInfoForSpellConfirmation)
+function GetJournalInfoForSpellConfirmation(spellID) end
+
+---[Documentation](https://warcraft.wiki.gg/wiki/API_GetLFDChoiceCollapseState)
+function GetLFDChoiceCollapseState(LFGCollapseList) end
+
+---[Documentation](https://warcraft.wiki.gg/wiki/API_GetLFDChoiceEnabledState)
+function GetLFDChoiceEnabledState(LFGEnabledList) end
+
+---[Documentation](https://warcraft.wiki.gg/wiki/API_GetLFDChoiceOrder)
+function GetLFDChoiceOrder(LFDDungeonList) end
+
+---[Documentation](https://warcraft.wiki.gg/wiki/API_GetLFDLockInfo)
+function GetLFDLockInfo(dungeonID, playerIndex) end
+
+---[Documentation](https://warcraft.wiki.gg/wiki/API_GetLFDLockPlayerCount)
+function GetLFDLockPlayerCount() end
+
+---[Documentation](https://warcraft.wiki.gg/wiki/API_GetLFDRoleLockInfo)
+function GetLFDRoleLockInfo(dungeonID, roleID) end
+
+---[Documentation](https://warcraft.wiki.gg/wiki/API_GetLFDRoleRestrictions)
+function GetLFDRoleRestrictions(dungeonID) end
+
+---[Documentation](https://warcraft.wiki.gg/wiki/API_GetLFGBootProposal)
+function GetLFGBootProposal() end
+
+---[Documentation](https://warcraft.wiki.gg/wiki/API_GetLFGCategoryForID)
+function GetLFGCategoryForID(partySlot) end
+
+---[Documentation](https://warcraft.wiki.gg/wiki/API_GetLFGCompletionReward)
+function GetLFGCompletionReward() end
+
+---[Documentation](https://warcraft.wiki.gg/wiki/API_GetLFGCompletionRewardItem)
+function GetLFGCompletionRewardItem(rewardIndex) end
+
+---[Documentation](https://warcraft.wiki.gg/wiki/API_GetLFGCompletionRewardItemLink)
+function GetLFGCompletionRewardItemLink(rewardIndex) end
+
+---[Documentation](https://warcraft.wiki.gg/wiki/API_GetLFGDeserterExpiration)
+---@return number? expiryTime
+function GetLFGDeserterExpiration() end
+
+---[Documentation](https://warcraft.wiki.gg/wiki/API_GetLFGDungeonEncounterInfo)
+---@param dungeonID number
+---@param encounterIndex number
+---@return string bossName
+---@return string texture
+---@return boolean isKilled
+---@return boolean unknown4
+function GetLFGDungeonEncounterInfo(dungeonID, encounterIndex) end
+
+---[Documentation](https://warcraft.wiki.gg/wiki/API_GetLFGDungeonInfo)
+function GetLFGDungeonInfo(dungeonID) end
+
+---[Documentation](https://warcraft.wiki.gg/wiki/API_GetLFGDungeonNumEncounters)
+---@param dungeonID number
+---@return number numEncounters
+---@return number numCompleted
+function GetLFGDungeonNumEncounters(dungeonID) end
 
