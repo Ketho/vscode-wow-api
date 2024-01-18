@@ -11,14 +11,16 @@
 ---|"CENTER"
 
 ---@alias AnimationType
----|"Animation"
 ---|"Alpha"
+---|"Animation"
+---|"FlipBook"
 ---|"LineScale"
 ---|"LineTranslation"
 ---|"Path"
 ---|"Rotation"
 ---|"Scale"
 ---|"Translation"
+---|"VertexColor"
 
 ---@alias DrawLayer
 ---|"BACKGROUND"
