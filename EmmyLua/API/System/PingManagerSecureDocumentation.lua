@@ -11,14 +11,6 @@ function C_PingSecure.CreateFrame() end
 ---@param error string
 function C_PingSecure.DisplayError(error) end
 
----[Documentation](https://warcraft.wiki.gg/wiki/API_C_PingSecure.GetCooldownInfo)
----@return PingCooldownInfo cooldownInfo
-function C_PingSecure.GetCooldownInfo() end
-
----[Documentation](https://warcraft.wiki.gg/wiki/API_C_PingSecure.GetDefaultPingOptions)
----@return PingTypeInfo[] pingTypes
-function C_PingSecure.GetDefaultPingOptions() end
-
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_PingSecure.GetTargetPingReceiver)
 ---@param mousePosX number
 ---@param mousePosY number
@@ -34,11 +26,6 @@ function C_PingSecure.GetTargetWorldPing(mousePosX, mousePosY) end
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_PingSecure.GetTargetWorldPingAndSend)
 ---@return ContextualWorldPingResult result
 function C_PingSecure.GetTargetWorldPingAndSend() end
-
----[Documentation](https://warcraft.wiki.gg/wiki/API_C_PingSecure.GetTextureKitForType)
----@param type number|Enum.PingSubjectType
----@return textureKit uiTextureKitID
-function C_PingSecure.GetTextureKitForType(type) end
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_PingSecure.SendPing)
 ---@param type number|Enum.PingSubjectType

@@ -28,6 +28,7 @@ local widget = {
     SimpleAnimTextureCoordTranslationAPI = "TextureCoordTranslation",
     SimpleAnimTranslationAPI = "Translation",
     SimpleAnimTranslationLineAPI = "LineTranslation", -- empty
+    SimpleAnimVertexColorAPI = "VertexColor",
     SimpleAnimatableObjectAPI = "AnimatableObject",
     SimpleBrowserAPI = "Browser",
     SimpleButtonAPI = "Button",

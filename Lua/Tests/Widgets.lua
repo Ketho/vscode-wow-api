@@ -42,3 +42,8 @@ local eframe = CreateFrame("EventFrame")
 -- modelscenactor
 local modelscene = CreateFrame("ModelScene")
 local actor = modelscene:CreateActor()
+
+-- flipbook
+local flipbook = group:CreateAnimation("FlipBook")
+-- vertexcolor
+local vertexcolor = group:CreateAnimation("VertexColor")

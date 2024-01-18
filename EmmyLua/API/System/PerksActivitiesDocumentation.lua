@@ -55,6 +55,11 @@ function C_PerksActivities.RemoveTrackedPerksActivity(perksActivityID) end
 ---@class PerksActivitiesTracked
 ---@field trackedIDs number[]
 
+---@class PerksActivityCondition
+---@field isMet boolean
+---@field text string
+---@field uiPriority number
+
 ---@class PerksActivityCriteria
 ---@field criteriaID number
 ---@field requiredValue number
@@ -65,9 +70,13 @@ function C_PerksActivities.RemoveTrackedPerksActivity(perksActivityID) end
 ---@field description string
 ---@field thresholdContributionAmount number
 ---@field completed boolean
+---@field inProgress boolean
 ---@field tracked boolean
 ---@field supersedes number
 ---@field uiPriority number
+---@field areAllConditionsMet boolean
+---@field conditions PerksActivityCondition[]
+---@field eventName string?
 ---@field eventStartTime time_t?
 ---@field eventEndTime time_t?
 ---@field requirementsList PerksActivityRequirement[]

@@ -223,6 +223,10 @@ function C_VoiceChat.IsSpeakForMeActive() end
 ---@return boolean isAllowed
 function C_VoiceChat.IsSpeakForMeAllowed() end
 
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_VoiceChat.IsTranscribing)
+---@return boolean isTranscribing
+function C_VoiceChat.IsTranscribing() end
+
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_VoiceChat.IsTranscriptionAllowed)
 ---@return boolean isAllowed
 function C_VoiceChat.IsTranscriptionAllowed() end

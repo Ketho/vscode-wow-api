@@ -54,11 +54,14 @@ function m:main()
 	Util:MakeDir(Path.join("EmmyLua", "API", "System"))
 	require(Path.join(WowDocLoader_Path, "Compat"))
 	LoadAddon(Path.join(WowDocLoader_Path, API_DOC), API_DOC)
+
 	local old = APIDocumentation.AddDocumentationTable
+	---@diagnostic disable-next-line: duplicate-set-field
 	APIDocumentation.AddDocumentationTable = function(APIDocumentation, info)
 		old(APIDocumentation, info)
 		self.documentationInfo = info -- set current apidoc
 	end
+
 	require(Path.join(WowDocLoader_Path, "MissingDocumentation"))
 	LoadAddon(Path.join(WowDocLoader_Path, GEN_DOC), GEN_DOC)
 end

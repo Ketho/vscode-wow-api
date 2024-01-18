@@ -723,6 +723,8 @@ function C_UIWidgetManager.UnregisterUnitForWidgetUpdates(unitToken, isGuid) end
 ---@field glowAnimType Enum.WidgetGlowAnimType
 ---@field tooltip string
 ---@field tooltipLoc Enum.UIWidgetTooltipLocation
+---@field neutralFillStyle Enum.TugOfWarStyleValue
+---@field markerArrowShownState Enum.TugOfWarMarkerArrowShownState
 ---@field widgetSizeSetting number
 ---@field textureKit textureKit
 ---@field frameTextureKit textureKit
@@ -767,6 +769,10 @@ function C_UIWidgetManager.UnregisterUnitForWidgetUpdates(unitToken, isGuid) end
 ---@field iconSizeType Enum.WidgetIconSizeType
 ---@field infoTextEnabledState Enum.WidgetEnabledState
 ---@field showAsEarned boolean
+---@field itemNameTextFontType Enum.UIWidgetFontType
+---@field itemNameTextSizeType Enum.UIWidgetTextSizeType
+---@field infoTextFontType Enum.UIWidgetFontType
+---@field infoTextSizeType Enum.UIWidgetTextSizeType
 
 ---@class UIWidgetSetInfo
 ---@field layoutDirection Enum.UIWidgetSetLayoutDirection

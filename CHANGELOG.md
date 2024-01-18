@@ -4,6 +4,17 @@
 - The Classic (TBC) API is not supported ([#13](https://github.com/Ketho/vscode-wow-api/issues/13))
 - Frame templates are not completely supported, only BackdropTemplate ([#15](https://github.com/Ketho/vscode-wow-api/issues/15)) 
 
+## [0.13.0] - 2024-01-18
+- 🎉 Update to patch 10.2.5 (52902)
+- 🐞 Fixed `param-type-mismatch` diagnostic for BackdropTemplate
+- PR [#120](https://github.com/Ketho/vscode-wow-api/pull/120) Add definition for tostringall()
+- Fixed [#122](https://github.com/Ketho/vscode-wow-api/issues/122) C_NamePlate.GetNamePlates is missing return type
+- Fixed [#125](https://github.com/Ketho/vscode-wow-api/issues/125) SetNormalFontObject param-type-mismatch
+- Added FlipBook and VertexColor animation widgets
+- Marked LibDataBroker optional dataobject fields
+- Update CopyTable `shallow` param from patch 9.1.0
+- Update UnmuteSoundFile param
+
 ## [0.12.1] - 2023-12-10
 - 🌙 Annotations: Update `Button:RegisterForClicks`, `Button:RegisterForMouse`
 - 🌙 Annotations: Fixed `string.trim`, `strcmputf8i`
@@ -416,6 +427,7 @@ Libraries
 ### Added
 - 🚧 Wip: Development work
 
+[0.13.0]: https://github.com/Ketho/vscode-wow-api/releases/tag/0.13.0
 [0.12.1]: https://github.com/Ketho/vscode-wow-api/releases/tag/0.12.1
 [0.12.0]: https://github.com/Ketho/vscode-wow-api/releases/tag/0.12.0
 [0.11.2]: https://github.com/Ketho/vscode-wow-api/releases/tag/0.11.2

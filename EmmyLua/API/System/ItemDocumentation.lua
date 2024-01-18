@@ -147,6 +147,17 @@ function C_Item.GetItemQuality(itemLocation) end
 ---@return Enum.ItemQuality? itemQuality
 function C_Item.GetItemQualityByID(itemInfo) end
 
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_Item.GetItemStatDelta)
+---@param itemLink1 string
+---@param itemLink2 string
+---@return LuaValueVariant statTable
+function C_Item.GetItemStatDelta(itemLink1, itemLink2) end
+
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_Item.GetItemStats)
+---@param itemLink string
+---@return LuaValueVariant statTable
+function C_Item.GetItemStats(itemLink) end
+
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_Item.GetItemUniquenessByID)
 ---@param itemInfo ItemInfo
 ---@return boolean isUnique
@@ -163,6 +174,12 @@ function C_Item.GetItemUniquenessByID(itemInfo) end
 ---@return number maxQuantity
 ---@return number totalEarned
 function C_Item.GetLimitedCurrencyItemInfo(itemInfo) end
+
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_Item.GetSetBonusesForSpecializationByItemID)
+---@param specID number
+---@param itemID number
+---@return number[] itemSetSpellIDs
+function C_Item.GetSetBonusesForSpecializationByItemID(specID, itemID) end
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_Item.GetStackCount)
 ---@param itemLocation ItemLocationMixin

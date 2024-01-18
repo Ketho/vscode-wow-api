@@ -1,6 +1,9 @@
 ---@meta
 C_PetJournal = {}
 
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_PetJournal.ClearHoveredBattlePet)
+function C_PetJournal.ClearHoveredBattlePet() end
+
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_PetJournal.GetDisplayIDByIndex)
 ---@param speciesID number
 ---@param index number
@@ -77,6 +80,10 @@ function C_PetJournal.PetUsesRandomDisplay(speciesID) end
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_PetJournal.SetDefaultFilters)
 function C_PetJournal.SetDefaultFilters() end
+
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_PetJournal.SetHoveredBattlePet)
+---@param battlePetGUID WOWGUID
+function C_PetJournal.SetHoveredBattlePet(battlePetGUID) end
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_PetJournal.SpellTargetBattlePet)
 ---@param battlePetGUID WOWGUID

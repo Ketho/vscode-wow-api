@@ -62,7 +62,7 @@ Enum = {
 		ItemCollectionsLoaded = 16384,
 		AuctionableTokensLoaded = 32768,
 		ConsumableTokensLoaded = 65536,
-		PerkTablesLoaded = 131072,
+		PerksPastRewardsLoaded = 131072,
 		VasTransactionsLoaded = 262144,
 		BpayProductitemObjectsLoaded = 524288,
 		TrialBoostHistoryLoaded = 1048576,
@@ -79,7 +79,11 @@ Enum = {
 		PerksPendingPurchaseLoaded = 2147483648,
 		AccountWowlabsLoaded = 4294967296,
 		AccountUpgradeComplete = 8589934592,
+		PerksHeldItemLoaded = 17179869184,
+		PerksPendingRewardsLoaded = 34359738368,
 		WoWTokenPurchaseLoaded = 68719476736,
+		PerksRefundsLoaded = 137438953472,
+		BitVectorsLoaded = 274877906944,
 	},
 	---@enum Enum.ActionBarOrientation
 	ActionBarOrientation = {
@@ -1477,7 +1481,7 @@ Enum = {
 		AccountHwmUpdate = 61,
 		ConvertItemsToCurrencyAndReputation = 62,
 		PhBuffer_63 = 63,
-		PhBuffer_64 = 64,
+		SpellSkipLinkedCurrency = 64,
 		Last = 65,
 	},
 	---@enum Enum.CurrencyTokenCategoryFlags
@@ -1921,6 +1925,10 @@ Enum = {
 		TreasureItem = 22,
 		WeeklyRewardUnlock = 23,
 		WeeklyRewardUpgrade = 24,
+	},
+	---@enum Enum.EventToastFlags
+	EventToastFlags = {
+		DisableRightClickDismiss = 1,
 	},
 	---@enum Enum.ExcludedCensorSources
 	ExcludedCensorSources = {
@@ -2962,6 +2970,12 @@ Enum = {
 		PvE = 4,
 		PvP = 8,
 	},
+	---@enum Enum.LFGRole
+	LFGRole = {
+		Tank = 0,
+		Healer = 1,
+		Damage = 2,
+	},
 	---@enum Enum.LanguageFlag
 	LanguageFlag = {
 		IsExotic = 1,
@@ -3098,6 +3112,11 @@ Enum = {
 		WorldMapThreat = 17,
 		Soulbinds = 18,
 		JailersTowerAnimaGlow = 19,
+	},
+	---@enum Enum.ModelSoundTagType
+	ModelSoundTagType = {
+		Oneshot = 1,
+		Looping = 2,
 	},
 	---@enum Enum.MountType
 	MountType = {
@@ -4604,6 +4623,17 @@ Enum = {
 		Standard = 0,
 		Alternate = 1,
 	},
+	---@enum Enum.TugOfWarMarkerArrowShownState
+	TugOfWarMarkerArrowShownState = {
+		Never = 0,
+		Always = 1,
+		FlashOnMove = 2,
+	},
+	---@enum Enum.TugOfWarStyleValue
+	TugOfWarStyleValue = {
+		DefaultYellow = 0,
+		ArchaeologyBrown = 1,
+	},
 	---@enum Enum.UICursorType
 	UICursorType = {
 		Default = 0,
@@ -4660,7 +4690,7 @@ Enum = {
 		ShowTaskObjectives = 64,
 		NoWorldPositions = 128,
 		HideArchaeologyDigs = 256,
-		Deprecated = 512,
+		DoNotTranslateBranches = 512,
 		HideIcons = 1024,
 		HideVignettes = 2048,
 		ForceAllOverlayExplored = 4096,
@@ -5188,6 +5218,10 @@ Constants = {
 	ItemConsts = {
 		NUM_ITEM_ENCHANTMENT_SOCKETS = 3,
 		MAX_LOOT_OBJECT_ITEMS = 31,
+	},
+	LFG_ROLEConstants = {
+		LFG_ROLE_NO_ROLE = -1,
+		LFG_ROLE_ANY = 3,
 	},
 	LevelConstsExposed = {
 		MIN_ACHIEVEMENT_LEVEL = 10,
