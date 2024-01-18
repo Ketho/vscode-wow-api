@@ -2,7 +2,7 @@ local Path = require "path"
 
 BRANCH = "mainline"
 CONSTANTS = {
-	LATEST_MAINLINE = "10.2.0",
+	LATEST_MAINLINE = "10.2.5",
 	LATEST_CLASSIC = "3.4.3",
 }
 
@@ -27,6 +27,7 @@ Util:DownloadAndRun(
 	string.format(Path.join(path_luadata, "cache", "LuaEnum_%s.lua"), BRANCH),
 	string.format("https://raw.githubusercontent.com/Ketho/BlizzardInterfaceResources/%s/Resources/LuaEnum.lua", BRANCH)
 )
+Enum.LFGRoleMeta = {NumValue = 3}
 
 -- load blizzard apidocs
 local WowDocLoader_path = Path.join("Lua", "WowDocLoader")
