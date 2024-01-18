@@ -2480,6 +2480,7 @@ export const data: EventInterface = {
 			{Name: "itemID", Type: "number"},
 		],
 	},
+	COMMODITY_SEARCH_RESULTS_RECEIVED: {},
 	COMMODITY_SEARCH_RESULTS_UPDATED: {
 		Payload: [
 			{Name: "itemID", Type: "number"},
@@ -3509,6 +3510,7 @@ export const data: EventInterface = {
 	LEAVING_TUTORIAL_AREA: {},
 	LFG_BOOT_PROPOSAL_UPDATE: {},
 	LFG_COMPLETION_REWARD: {},
+	LFG_ENABLED_STATE_CHANGED: {},
 	LFG_GROUP_DELISTED_LEADERSHIP_CHANGE: {
 		Payload: [
 			{Name: "listingName", Type: "string"},
@@ -3642,6 +3644,12 @@ export const data: EventInterface = {
 	LOOT_HISTORY_GO_TO_ENCOUNTER: {
 		Payload: [
 			{Name: "encounterID", Type: "number"},
+		],
+	},
+	LOOT_HISTORY_ONE_HUNDRED_ROLL: {
+		Payload: [
+			{Name: "encounterID", Type: "number"},
+			{Name: "lootListID", Type: "number"},
 		],
 	},
 	LOOT_HISTORY_UPDATE_DROP: {
@@ -3990,16 +3998,8 @@ export const data: EventInterface = {
 			{Name: "essenceID", Type: "number", Nilable: true},
 		],
 	},
-	PERKS_ACTIVITIES_TRACKED_UPDATED: {
-		Payload: [
-			{Name: "trackedPerksActivities", Type: "PerksActivitiesTracked"},
-		],
-	},
-	PERKS_ACTIVITIES_UPDATED: {
-		Payload: [
-			{Name: "info", Type: "PerksActivitiesInfo"},
-		],
-	},
+	PERKS_ACTIVITIES_TRACKED_UPDATED: {},
+	PERKS_ACTIVITIES_UPDATED: {},
 	PERKS_ACTIVITY_COMPLETED: {
 		Payload: [
 			{Name: "perksActivityID", Type: "number"},
@@ -4045,6 +4045,7 @@ export const data: EventInterface = {
 			{Name: "vendorItemID", Type: "number"},
 		],
 	},
+	PERKS_PROGRAM_RESULT_ERROR: {},
 	PERKS_PROGRAM_SET_FROZEN_ITEM: {
 		Payload: [
 			{Name: "vendorItemID", Type: "number"},
@@ -4295,6 +4296,7 @@ export const data: EventInterface = {
 			{Name: "unitTarget", Type: "UnitToken"},
 		],
 	},
+	PLAYER_IMPULSE_APPLIED: {},
 	PLAYER_INTERACTION_MANAGER_FRAME_HIDE: {
 		Payload: [
 			{Name: "type", Type: "PlayerInteractionType"},
@@ -4303,6 +4305,11 @@ export const data: EventInterface = {
 	PLAYER_INTERACTION_MANAGER_FRAME_SHOW: {
 		Payload: [
 			{Name: "type", Type: "PlayerInteractionType"},
+		],
+	},
+	PLAYER_IS_GLIDING_CHANGED: {
+		Payload: [
+			{Name: "isGliding", Type: "boolean"},
 		],
 	},
 	PLAYER_JOINED_PVP_MATCH: {},
@@ -5304,7 +5311,11 @@ export const data: EventInterface = {
 	TRADE_SKILL_DATA_SOURCE_CHANGED: {},
 	TRADE_SKILL_DATA_SOURCE_CHANGING: {},
 	TRADE_SKILL_DETAILS_UPDATE: {},
-	TRADE_SKILL_FAVORITES_CHANGED: {},
+	TRADE_SKILL_FAVORITES_CHANGED: {
+		Payload: [
+			{Name: "isFavorite", Type: "boolean"},
+		],
+	},
 	TRADE_SKILL_ITEM_CRAFTED_RESULT: {
 		Payload: [
 			{Name: "data", Type: "CraftingItemResultData"},
@@ -5397,6 +5408,12 @@ export const data: EventInterface = {
 		],
 	},
 	TRANSMOG_COLLECTION_CAMERA_UPDATE: {},
+	TRANSMOG_COLLECTION_ITEM_FAVORITE_UPDATE: {
+		Payload: [
+			{Name: "itemAppearanceID", Type: "number"},
+			{Name: "isFavorite", Type: "boolean"},
+		],
+	},
 	TRANSMOG_COLLECTION_ITEM_UPDATE: {},
 	TRANSMOG_COLLECTION_SOURCE_ADDED: {
 		Payload: [

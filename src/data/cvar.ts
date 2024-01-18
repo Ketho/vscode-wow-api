@@ -296,6 +296,13 @@ export const data: CVarInterface = {
 		category: 1,
 		help: "Enable/Disable Soft Edge Effect",
 	},
+	disableadvancedflyingfullscreeneffects: {
+		name: "DisableAdvancedFlyingFullScreenEffects",
+		default: "0",
+		category: 4,
+		scope: "Character",
+		help: "Disable the advanced flying full screen effects",
+	},
 	disableadvancedflyingvelocityvfx: {
 		name: "DisableAdvancedFlyingVelocityVFX",
 		default: "0",
@@ -668,7 +675,7 @@ export const data: CVarInterface = {
 		name: "GxFrameEndMode",
 		default: "1",
 		category: 1,
-		help: "Allow GxFrameEnd to overlap next frame (0=Disabled, 1=Safe, 2=Experimental, 3=StressSafe, 4=StressExperimental)",
+		help: "Allow GxFrameEnd to overlap next frame",
 	},
 	gxprismenabled: {
 		name: "GxPrismEnabled",
@@ -2024,6 +2031,11 @@ export const data: CVarInterface = {
 		category: 4,
 		scope: "Character",
 	},
+	unitvisibility: {
+		name: "UnitVisibility",
+		default: "0",
+		category: 5,
+	},
 	usekeyheldspellerrorpolltime: {
 		name: "UseKeyHeldSpellErrorPollTime",
 		default: "500",
@@ -2691,7 +2703,7 @@ export const data: CVarInterface = {
 	cameradistancemaxzoomfactor: {
 		name: "cameraDistanceMaxZoomFactor",
 		default: "1.900000",
-		category: 5,
+		category: 4,
 		scope: "Character",
 	},
 	cameradistanceratemult: {
@@ -4377,7 +4389,7 @@ export const data: CVarInterface = {
 	cameraview: {
 		name: "cameraView",
 		default: "2",
-		category: 5,
+		category: 4,
 		scope: "Character",
 	},
 	cameraviewblendstyle: {
@@ -5327,12 +5339,6 @@ export const data: CVarInterface = {
 		default: "1",
 		category: 0,
 		help: "0: Hide Regions, 1: Show Regions (Default).",
-	},
-	fulldump: {
-		name: "fullDump",
-		default: "0",
-		category: 0,
-		help: "When you crash, generate a full memory dump",
 	},
 	gametip: {
 		name: "gameTip",
