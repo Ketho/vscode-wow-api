@@ -16,7 +16,8 @@
 
 ---@class BackdropTemplate
 ---[Documentation](https://warcraft.wiki.gg/wiki/BackdropTemplate)
-BackdropTemplateMixin = {}
+local BackdropTemplateMixin = {}
+_G.BackdropTemplateMixin = BackdropTemplateMixin
 
 ---[FrameXML](https://www.townlong-yak.com/framexml/go/BackdropTemplateMixin:OnBackdropLoaded)
 function BackdropTemplateMixin:OnBackdropLoaded() end
