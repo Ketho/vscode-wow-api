@@ -159,11 +159,12 @@ end
 ---[FrameXML](https://www.townlong-yak.com/framexml/go/CopyTable)
 -- Returns a deep copy of a table.
 ---@param settings table
+---@param shallow? boolean
 ---@return table
-function CopyTable(settings)
+function CopyTable(settings, shallow)
 	local copy = {};
 	for k, v in pairs(settings) do
-		if ( type(v) == "table" ) then
+		if type(v) == "table" and not shallow then
 			copy[k] = CopyTable(v);
 		else
 			copy[k] = v;
