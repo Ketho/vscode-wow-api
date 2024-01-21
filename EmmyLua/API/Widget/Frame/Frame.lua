@@ -313,7 +313,7 @@ function Frame:SetAlpha(alpha) end
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_Frame_SetAttribute)
 ---@param attributeName string
----@param value string
+---@param value any
 function Frame:SetAttribute(attributeName, value) end
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_Frame_SetAttributeNoHandler)
