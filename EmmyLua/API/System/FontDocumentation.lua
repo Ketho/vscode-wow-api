@@ -1,6 +1,6 @@
 ---@meta
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_GetFontInfo)
----@param fontObject SimpleFont
+---@param fontObject SimpleFont|FontObject
 ---@return FontScriptInfo? info
 function GetFontInfo(fontObject) end
 

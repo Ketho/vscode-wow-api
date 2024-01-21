@@ -4,7 +4,7 @@
 local Font = {}
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_Font_CopyFontObject)
----@param sourceFont SimpleFont
+---@param sourceFont SimpleFont|FontObject
 function Font:CopyFontObject(sourceFont) end
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_Font_GetAlpha)

@@ -51,4 +51,6 @@ local vertexcolor = group:CreateAnimation("VertexColor")
 -- editbox
 local eb = CreateFrame("EditBox")
 eb:SetFontObject(font_a)
+eb:SetFontObject(GameFontHighlight)
 eb:SetFontObject("GameFontNormal")
+local fontObject = eb:GetFontObject()

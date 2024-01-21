@@ -258,7 +258,7 @@ function EditBox:SetFocus() end
 function EditBox:SetFont(fontFile, height, flags) end
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_EditBox_SetFontObject)
----@param font SimpleFont
+---@param font SimpleFont|FontObject
 function EditBox:SetFontObject(font) end
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_EditBox_SetHighlightColor)

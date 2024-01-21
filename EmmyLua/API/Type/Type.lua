@@ -142,7 +142,7 @@
 
 ---@alias CScriptObject Object
 ---@alias SimpleAnimGroup AnimationGroup
----@alias SimpleFont Font|FontObject|string
+---@alias SimpleFont Font
 ---@alias SimpleMaskTexture MaskTexture
 ---@alias SimpleFontString FontString
 ---@alias SimpleLine Line
