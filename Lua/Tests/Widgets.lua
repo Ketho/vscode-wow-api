@@ -47,3 +47,8 @@ local actor = modelscene:CreateActor()
 local flipbook = group:CreateAnimation("FlipBook")
 -- vertexcolor
 local vertexcolor = group:CreateAnimation("VertexColor")
+
+-- editbox
+local eb = CreateFrame("EditBox")
+eb:SetFontObject(font_a)
+eb:SetFontObject("GameFontNormal")
