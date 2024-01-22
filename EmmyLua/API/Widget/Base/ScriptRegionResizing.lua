@@ -46,7 +46,7 @@ function ScriptRegionResizing:SetHeight(height) end
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_ScriptRegionResizing_SetPoint)
 ---@param point FramePoint
----@param relativeTo? ScriptRegion|string
+---@param relativeTo? any
 ---@param relativePoint? FramePoint
 ---@param offsetX? uiUnit
 ---@param offsetY? uiUnit

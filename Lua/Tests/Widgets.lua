@@ -54,3 +54,7 @@ eb:SetFontObject(font_a)
 eb:SetFontObject(GameFontHighlight)
 eb:SetFontObject("GameFontNormal")
 local fontObject = eb:GetFontObject()
+
+-- relativeTo in SetPoint
+local bd = CreateFrame("Frame", nil, UIParent, "BackdropTemplate")
+f:SetPoint("TOPLEFT", bd, "TOPLEFT", 0, 0)
