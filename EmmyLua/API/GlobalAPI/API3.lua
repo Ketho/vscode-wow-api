@@ -162,7 +162,9 @@ function GetLootRollItemInfo(rollID) end
 function GetLootRollItemLink(id) end
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_GetLootRollTimeLeft)
-function GetLootRollTimeLeft(rollid) end
+---@param rollID number
+---@return number? timeLeft
+function GetLootRollTimeLeft(rollID) end
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_GetLootSlotInfo)
 function GetLootSlotInfo(slot) end
