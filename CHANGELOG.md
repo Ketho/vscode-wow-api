@@ -4,6 +4,12 @@
 - The Classic (TBC) API is not supported ([#13](https://github.com/Ketho/vscode-wow-api/issues/13))
 - Frame templates are not completely supported, only BackdropTemplate ([#15](https://github.com/Ketho/vscode-wow-api/issues/15)) 
 
+## [0.13.2] - 2024-01-23
+- Fixed ScriptRegionResizing:SetPoint `relativeTo` param when using templates
+- Fixed Frame:SetAttribute `value` param
+- Fixed FontObject params
+- Fixed ModelAsset type
+
 ## [0.13.1] - 2024-01-18
 - 🎉 Update to patch 10.2.5 (52902)
 - 🐞 Fixed `param-type-mismatch` diagnostic for BackdropTemplate
@@ -428,6 +434,7 @@ Libraries
 ### Added
 - 🚧 Wip: Development work
 
+[0.13.2]: https://github.com/Ketho/vscode-wow-api/releases/tag/0.13.2
 [0.13.1]: https://github.com/Ketho/vscode-wow-api/releases/tag/0.13.1
 [0.13.0]: https://github.com/Ketho/vscode-wow-api/releases/tag/0.13.0
 [0.12.1]: https://github.com/Ketho/vscode-wow-api/releases/tag/0.12.1

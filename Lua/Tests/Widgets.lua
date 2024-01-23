@@ -47,3 +47,14 @@ local actor = modelscene:CreateActor()
 local flipbook = group:CreateAnimation("FlipBook")
 -- vertexcolor
 local vertexcolor = group:CreateAnimation("VertexColor")
+
+-- editbox
+local eb = CreateFrame("EditBox")
+eb:SetFontObject(font_a)
+eb:SetFontObject(GameFontHighlight)
+eb:SetFontObject("GameFontNormal")
+local fontObject = eb:GetFontObject()
+
+-- relativeTo in SetPoint
+local bd = CreateFrame("Frame", nil, UIParent, "BackdropTemplate")
+f:SetPoint("TOPLEFT", bd, "TOPLEFT", 0, 0)

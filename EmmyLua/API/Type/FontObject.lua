@@ -1,5 +1,6 @@
 ---@meta
 ---@alias FontObject
+---|string
 ---|"AchievementCriteriaFont"
 ---|"AchievementDateFont"
 ---|"AchievementDescriptionFont"

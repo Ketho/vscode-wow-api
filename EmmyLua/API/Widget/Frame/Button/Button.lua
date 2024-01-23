@@ -131,7 +131,7 @@ function Button:SetButtonState(buttonState, lock) end
 function Button:SetDisabledAtlas(atlas) end
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_Button_SetDisabledFontObject)
----@param font SimpleFont
+---@param font SimpleFont|FontObject
 function Button:SetDisabledFontObject(font) end
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_Button_SetDisabledTexture)
@@ -156,7 +156,7 @@ function Button:SetFormattedText(text) end
 function Button:SetHighlightAtlas(atlas, blendMode) end
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_Button_SetHighlightFontObject)
----@param font SimpleFont|string
+---@param font SimpleFont|FontObject
 function Button:SetHighlightFontObject(font) end
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_Button_SetHighlightTexture)
@@ -173,7 +173,7 @@ function Button:SetMotionScriptsWhileDisabled(motionScriptsWhileDisabled) end
 function Button:SetNormalAtlas(atlas) end
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_Button_SetNormalFontObject)
----@param font SimpleFont|string
+---@param font SimpleFont|FontObject
 function Button:SetNormalFontObject(font) end
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_Button_SetNormalTexture)

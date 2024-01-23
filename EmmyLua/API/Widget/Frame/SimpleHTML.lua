@@ -80,7 +80,7 @@ function SimpleHTML:SetFont(textType, fontFile, height, flags) end
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_SimpleHTML_SetFontObject)
 ---@param textType HTMLTextType
----@param font SimpleFont
+---@param font SimpleFont|FontObject
 function SimpleHTML:SetFontObject(textType, font) end
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_SimpleHTML_SetHyperlinkFormat)
