@@ -1622,10 +1622,16 @@ function pcallwithenv(func, env) end
 function scrub() end
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_securecall)
-function securecall() end
+---@param func function|string
+---@param ... any
+---@return any ...
+function securecall(func, ...) end
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_securecallfunction)
-function securecallfunction() end
+---@param func function
+---@param ... any
+---@return any ...
+function securecallfunction(func, ...) end
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_secureexecuterange)
 ---@param tbl table
