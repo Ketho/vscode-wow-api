@@ -89,7 +89,7 @@ function Util:HttpPostRequest(url, request)
 		sink = ltn12.sink.table(response)
 	}
 	if not res then
-		error(string.format("HTTP error: %d, %s", code, url))
+		error(string.format("HTTP error: %s, %s", code, url))
 	end
 	return table.concat(response)
 end
