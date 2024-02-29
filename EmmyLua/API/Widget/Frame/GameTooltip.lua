@@ -343,10 +343,13 @@ function GameTooltip:SetUnitAura(unit, auraIndex, filter) end
 function GameTooltip:SetUnitBuff(unit, buffIndex, raidFilter) end
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_GameTooltip_SetUnitBuffByAuraInstanceID)
-function GameTooltip:SetUnitBuffByAuraInstanceID(unit, auraInstanceID, filter) end
+function GameTooltip:SetUnitBuffByAuraInstanceID(unitTokenString, auraInstanceID, filter) end
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_GameTooltip_SetUnitDebuff)
 function GameTooltip:SetUnitDebuff(unit, buffIndex, raidFilter) end
+
+---[Documentation](https://warcraft.wiki.gg/wiki/API_GameTooltip_SetUnitDebuffByAuraInstanceID)
+function GameTooltip:SetUnitDebuffByAuraInstanceID(unitTokenString, auraInstanceID, filter) end
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_GameTooltip_SetUpgradeItem)
 function GameTooltip:SetUpgradeItem() end
