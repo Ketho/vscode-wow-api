@@ -1935,7 +1935,8 @@ function C_PetJournal.SetFilterChecked(filter, value) end
 function C_PetJournal.SetPetLoadOutInfo(slotIndex, petID) end
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_PetJournal.SetPetSortParameter)
-function C_PetJournal.SetPetSortParameter() end
+---@param sortParameter number
+function C_PetJournal.SetPetSortParameter(sortParameter) end
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_PetJournal.SetPetSourceChecked)
 ---@param index number
