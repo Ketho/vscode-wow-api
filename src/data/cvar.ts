@@ -3243,7 +3243,7 @@ export const data: CVarInterface = {
 	camerasmoothstyle: {
 		name: "cameraSmoothStyle",
 		default: "4",
-		category: 5,
+		category: 4,
 		scope: "Character",
 	},
 	camerasmoothtimemax: {
@@ -5521,7 +5521,7 @@ export const data: CVarInterface = {
 	gxapi: {
 		name: "gxApi",
 		default: "auto",
-		category: 5,
+		category: 1,
 		help: "graphics api",
 	},
 	gxaspect: {
@@ -6175,6 +6175,11 @@ export const data: CVarInterface = {
 		category: 4,
 		scope: "Account",
 		help: "Stores whether to show the quest blobs on the minimap.",
+	},
+	minimaptrackedinfov2: {
+		name: "minimapTrackedInfov2",
+		default: "",
+		category: 5,
 	},
 	minimaptrackedinfov3: {
 		name: "minimapTrackedInfov3",
@@ -8043,17 +8048,6 @@ export const data: CVarInterface = {
 		name: "synchronizeConfig",
 		default: "1",
 		category: 5,
-	},
-	synchronizemacros: {
-		name: "synchronizeMacros",
-		default: "1",
-		category: 5,
-	},
-	synchronizesettings: {
-		name: "synchronizeSettings",
-		default: "1",
-		category: 5,
-		help: "Whether client settings should be stored on the server",
 	},
 	taintlog: {
 		name: "taintLog",
