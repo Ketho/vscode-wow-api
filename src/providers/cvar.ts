@@ -37,6 +37,10 @@ function getMarkdown(name: string) {
 	if (cvar.scope) {
         s += "\n- Scope: "+cvar.scope;
     }
+
+	if (cvar.secure) {
+        s += "\n- Secure: ✔️";
+    }
 	s += "\n```";
 
 	let doc = `\n[GitHub](https://github.com/Gethe/wow-ui-source/search?q=${cvar.name})`;

@@ -4,6 +4,7 @@ interface CVarInterface {
 		default: string,
 		category: number,
 		scope?: string,
+		secure?: boolean,
 		help?: string,
 	}
 }
@@ -720,16 +721,19 @@ export const data: CVarInterface = {
 		name: "KioskCanSessionExpire",
 		default: "",
 		category: 5,
+		secure: true,
 	},
 	kioskcharactertemplateset: {
 		name: "KioskCharacterTemplateSet",
 		default: "",
 		category: 5,
+		secure: true,
 	},
 	kiosklobbykickseconds: {
 		name: "KioskLobbyKickSeconds",
 		default: "",
 		category: 5,
+		secure: true,
 	},
 	lowlatencymode: {
 		name: "LowLatencyMode",
@@ -795,6 +799,7 @@ export const data: CVarInterface = {
 		default: "1.0",
 		category: 4,
 		scope: "Account",
+		secure: true,
 		help: "Applied to the classification icon for nameplates.",
 	},
 	nameplatehorizontalscale: {
@@ -802,6 +807,7 @@ export const data: CVarInterface = {
 		default: "1.0",
 		category: 4,
 		scope: "Account",
+		secure: true,
 		help: "Applied to horizontal size of all nameplates.",
 	},
 	nameplatemaximumclassificationscale: {
@@ -809,6 +815,7 @@ export const data: CVarInterface = {
 		default: "1.25",
 		category: 4,
 		scope: "Account",
+		secure: true,
 		help: "This is the maximum effective scale of the classification icon for nameplates.",
 	},
 	nameplateverticalscale: {
@@ -816,6 +823,7 @@ export const data: CVarInterface = {
 		default: "1.0",
 		category: 4,
 		scope: "Account",
+		secure: true,
 		help: "Applied to vertical size of all nameplates.",
 	},
 	nameplatepersonalclickthrough: {
@@ -830,6 +838,7 @@ export const data: CVarInterface = {
 		default: "0.45",
 		category: 4,
 		scope: "Account",
+		secure: true,
 		help: "Determines the alpha of the personal nameplate after no visibility conditions are met (during the period of time specified by NameplatePersonalHideDelaySeconds).",
 	},
 	nameplatepersonalhidedelayseconds: {
@@ -837,6 +846,7 @@ export const data: CVarInterface = {
 		default: "3.0",
 		category: 4,
 		scope: "Account",
+		secure: true,
 		help: "Determines the length of time in seconds that the personal nameplate will be visible after no visibility conditions are met.",
 	},
 	nameplatepersonalshowalways: {
@@ -844,6 +854,7 @@ export const data: CVarInterface = {
 		default: "0",
 		category: 4,
 		scope: "Account",
+		secure: true,
 		help: "Determines if the the personal nameplate is always shown.",
 	},
 	nameplatepersonalshowincombat: {
@@ -851,6 +862,7 @@ export const data: CVarInterface = {
 		default: "1",
 		category: 4,
 		scope: "Account",
+		secure: true,
 		help: "Determines if the the personal nameplate is shown when you enter combat.",
 	},
 	nameplatepersonalshowwithtarget: {
@@ -858,6 +870,7 @@ export const data: CVarInterface = {
 		default: "0",
 		category: 4,
 		scope: "Account",
+		secure: true,
 		help: "Determines if the personal nameplate is shown when selecting a target. 0 = targeting has no effect, 1 = show on hostile target, 2 = show on any target",
 	},
 	nonemittercombatrange: {
@@ -1318,6 +1331,7 @@ export const data: CVarInterface = {
 		default: "1",
 		category: 4,
 		scope: "Account",
+		secure: true,
 		help: "Sets when enemy soft targeting should be enabled. 0=off, 1=gamepad, 2=KBM, 3=always",
 	},
 	softtargetenemyarc: {
@@ -1332,12 +1346,14 @@ export const data: CVarInterface = {
 		default: "45.000000",
 		category: 4,
 		scope: "Account",
+		secure: true,
 		help: "Max range to soft target enemies (limited to tab targeting range)",
 	},
 	softtargetforce: {
 		name: "SoftTargetForce",
 		default: "1",
 		category: 4,
+		secure: true,
 		help: "Auto-set target to match soft target. 1 = for enemies, 2 = for friends",
 	},
 	softtargetfriend: {
@@ -1394,6 +1410,7 @@ export const data: CVarInterface = {
 		default: "1",
 		category: 4,
 		scope: "Character",
+		secure: true,
 		help: "Sets when soft interact should be enabled. 0=off, 1=gamepad, 2=KBM, 3=always",
 	},
 	softtargetinteractarc: {
@@ -1408,6 +1425,7 @@ export const data: CVarInterface = {
 		default: "10.000000",
 		category: 4,
 		scope: "Character",
+		secure: true,
 		help: "Max range to soft target interacts (limited to tab targeting and individual interact ranges)",
 	},
 	softtargetinteractrangeishard: {
@@ -2337,6 +2355,7 @@ export const data: CVarInterface = {
 		default: "0",
 		category: 4,
 		scope: "Character",
+		secure: true,
 		help: "Whether to always show the action bar grid",
 	},
 	animframeskiplod: {
@@ -2578,6 +2597,7 @@ export const data: CVarInterface = {
 		default: "1",
 		category: 4,
 		scope: "Character",
+		secure: true,
 		help: "Automatically stand when needed",
 	},
 	autounshift: {
@@ -2585,6 +2605,7 @@ export const data: CVarInterface = {
 		default: "1",
 		category: 4,
 		scope: "Character",
+		secure: true,
 		help: "Automatically leave shapeshift form when needed",
 	},
 	autojoinbgvoice: {
@@ -4551,12 +4572,14 @@ export const data: CVarInterface = {
 		name: "colorblindSimulator",
 		default: "0",
 		category: 1,
+		secure: true,
 		help: "Type of color blindness",
 	},
 	colorblindweaknessfactor: {
 		name: "colorblindWeaknessFactor",
 		default: "0.5",
 		category: 1,
+		secure: true,
 		help: "Amount of sensitivity. e.g. Protanope (red-weakness) 0.0 = not colorblind, 1.0 = full weakness(Protanopia), 0.5 = mid weakness(Protanomaly)",
 	},
 	combatlogretentiontime: {
@@ -4721,6 +4744,7 @@ export const data: CVarInterface = {
 		name: "daltonize",
 		default: "1",
 		category: 1,
+		secure: true,
 		help: "Attempt to correct for color blindness (set colorblindSimulator to type of colorblindness)",
 	},
 	dangerousshipyardmissionwarningalreadyshown: {
@@ -4865,6 +4889,7 @@ export const data: CVarInterface = {
 		default: "0",
 		category: 4,
 		scope: "Account",
+		secure: true,
 		help: "Whether mouseover casting is enabled (optionally with a modifier key).",
 	},
 	enablemovepad: {
@@ -5350,12 +5375,14 @@ export const data: CVarInterface = {
 		default: "0",
 		category: 4,
 		scope: "Account",
+		secure: true,
 	},
 	garrisoncompletetalenttype: {
 		name: "garrisonCompleteTalentType",
 		default: "0",
 		category: 4,
 		scope: "Account",
+		secure: true,
 	},
 	graphicscomputeeffects: {
 		name: "graphicsComputeEffects",
@@ -5875,6 +5902,7 @@ export const data: CVarInterface = {
 		default: "0",
 		category: 4,
 		scope: "Account",
+		secure: true,
 		help: "The ID of the latest splash screen from the UISPLASHSCREEN table.",
 	},
 	latesttransmogsetsource: {
@@ -6284,6 +6312,7 @@ export const data: CVarInterface = {
 		default: ".03",
 		category: 1,
 		scope: "Account",
+		secure: true,
 		help: "The inset from the top (in screen percent) that nameplates are clamped to when class resources are being displayed on them.",
 	},
 	nameplategameobjectmaxdistance: {
@@ -6291,6 +6320,7 @@ export const data: CVarInterface = {
 		default: "30",
 		category: 1,
 		scope: "Account",
+		secure: true,
 		help: "The max distance to show player nameplates for game objects",
 	},
 	nameplateglobalscale: {
@@ -6298,6 +6328,7 @@ export const data: CVarInterface = {
 		default: "1.0",
 		category: 1,
 		scope: "Account",
+		secure: true,
 		help: "Applies global scaling to non-self nameplates, this is applied AFTER selected, min, and max scale.",
 	},
 	nameplatehidehealthandpower: {
@@ -6305,12 +6336,14 @@ export const data: CVarInterface = {
 		default: "0",
 		category: 4,
 		scope: "Account",
+		secure: true,
 	},
 	nameplatelargebottominset: {
 		name: "nameplateLargeBottomInset",
 		default: "0.15",
 		category: 1,
 		scope: "Account",
+		secure: true,
 		help: "The inset from the bottom (in screen percent) that large nameplates are clamped to.",
 	},
 	nameplatelargetopinset: {
@@ -6318,6 +6351,7 @@ export const data: CVarInterface = {
 		default: "0.1",
 		category: 1,
 		scope: "Account",
+		secure: true,
 		help: "The inset from the top (in screen percent) that large nameplates are clamped to.",
 	},
 	nameplatelargerscale: {
@@ -6325,6 +6359,7 @@ export const data: CVarInterface = {
 		default: "1.2",
 		category: 1,
 		scope: "Account",
+		secure: true,
 		help: "An additional scale modifier for important monsters.",
 	},
 	nameplatemaxalpha: {
@@ -6332,6 +6367,7 @@ export const data: CVarInterface = {
 		default: "1.0",
 		category: 1,
 		scope: "Account",
+		secure: true,
 		help: "The max alpha of nameplates.",
 	},
 	nameplatemaxalphadistance: {
@@ -6339,6 +6375,7 @@ export const data: CVarInterface = {
 		default: "40",
 		category: 1,
 		scope: "Account",
+		secure: true,
 		help: "The distance from the camera that nameplates will reach their maximum alpha.",
 	},
 	nameplatemaxdistance: {
@@ -6346,6 +6383,7 @@ export const data: CVarInterface = {
 		default: "60",
 		category: 1,
 		scope: "Account",
+		secure: true,
 		help: "The max distance to show nameplates.",
 	},
 	nameplatemaxscale: {
@@ -6353,6 +6391,7 @@ export const data: CVarInterface = {
 		default: "1.0",
 		category: 1,
 		scope: "Account",
+		secure: true,
 		help: "The max scale of nameplates.",
 	},
 	nameplatemaxscaledistance: {
@@ -6360,6 +6399,7 @@ export const data: CVarInterface = {
 		default: "10",
 		category: 1,
 		scope: "Account",
+		secure: true,
 		help: "The distance from the camera that nameplates will reach their maximum scale.",
 	},
 	nameplateminalpha: {
@@ -6367,6 +6407,7 @@ export const data: CVarInterface = {
 		default: "0.6",
 		category: 1,
 		scope: "Account",
+		secure: true,
 		help: "The minimum alpha of nameplates.",
 	},
 	nameplateminalphadistance: {
@@ -6374,6 +6415,7 @@ export const data: CVarInterface = {
 		default: "10",
 		category: 1,
 		scope: "Account",
+		secure: true,
 		help: "The distance from the max distance that nameplates will reach their minimum alpha.",
 	},
 	nameplateminscale: {
@@ -6381,6 +6423,7 @@ export const data: CVarInterface = {
 		default: "0.8",
 		category: 1,
 		scope: "Account",
+		secure: true,
 		help: "The minimum scale of nameplates.",
 	},
 	nameplateminscaledistance: {
@@ -6388,6 +6431,7 @@ export const data: CVarInterface = {
 		default: "10",
 		category: 1,
 		scope: "Account",
+		secure: true,
 		help: "The distance from the max distance that nameplates will reach their minimum scale.",
 	},
 	nameplatemotion: {
@@ -6395,6 +6439,7 @@ export const data: CVarInterface = {
 		default: "0",
 		category: 1,
 		scope: "Account",
+		secure: true,
 		help: "Defines the movement/collision model for nameplates",
 	},
 	nameplatemotionspeed: {
@@ -6402,6 +6447,7 @@ export const data: CVarInterface = {
 		default: "0.025",
 		category: 1,
 		scope: "Account",
+		secure: true,
 		help: "Controls the rate at which nameplate animates into their target locations [0.0-1.0]",
 	},
 	nameplateoccludedalphamult: {
@@ -6409,6 +6455,7 @@ export const data: CVarInterface = {
 		default: "0.4",
 		category: 1,
 		scope: "Account",
+		secure: true,
 		help: "Alpha multiplier of nameplates for occluded targets.",
 	},
 	nameplateotheratbase: {
@@ -6416,6 +6463,7 @@ export const data: CVarInterface = {
 		default: "0",
 		category: 4,
 		scope: "Character",
+		secure: true,
 		help: "Position other nameplates at the base, rather than overhead",
 	},
 	nameplateotherbottominset: {
@@ -6423,6 +6471,7 @@ export const data: CVarInterface = {
 		default: "0.1",
 		category: 1,
 		scope: "Account",
+		secure: true,
 		help: "The inset from the bottom (in screen percent) that the non-self nameplates are clamped to.",
 	},
 	nameplateothertopinset: {
@@ -6430,6 +6479,7 @@ export const data: CVarInterface = {
 		default: "0.08",
 		category: 1,
 		scope: "Account",
+		secure: true,
 		help: "The inset from the top (in screen percent) that the non-self nameplates are clamped to.",
 	},
 	nameplateoverlaph: {
@@ -6437,6 +6487,7 @@ export const data: CVarInterface = {
 		default: "0.8",
 		category: 1,
 		scope: "Character",
+		secure: true,
 		help: "Percentage amount for horizontal overlap of nameplates",
 	},
 	nameplateoverlapv: {
@@ -6444,6 +6495,7 @@ export const data: CVarInterface = {
 		default: "1.1",
 		category: 1,
 		scope: "Character",
+		secure: true,
 		help: "Percentage amount for vertical overlap of nameplates",
 	},
 	nameplateplayerlargerscale: {
@@ -6451,6 +6503,7 @@ export const data: CVarInterface = {
 		default: "1.8",
 		category: 1,
 		scope: "Account",
+		secure: true,
 		help: "An additional scale modifier for players.",
 	},
 	nameplateplayermaxdistance: {
@@ -6458,6 +6511,7 @@ export const data: CVarInterface = {
 		default: "60",
 		category: 1,
 		scope: "Account",
+		secure: true,
 		help: "The max distance to show player nameplates.",
 	},
 	nameplateresourceontarget: {
@@ -6465,6 +6519,7 @@ export const data: CVarInterface = {
 		default: "0",
 		category: 4,
 		scope: "Account",
+		secure: true,
 		help: "Nameplate class resource overlay mode. 0=self, 1=target",
 	},
 	nameplateselectedalpha: {
@@ -6472,6 +6527,7 @@ export const data: CVarInterface = {
 		default: "1.0",
 		category: 1,
 		scope: "Account",
+		secure: true,
 		help: "The alpha of the selected nameplate.",
 	},
 	nameplateselectedscale: {
@@ -6479,6 +6535,7 @@ export const data: CVarInterface = {
 		default: "1.2",
 		category: 1,
 		scope: "Account",
+		secure: true,
 		help: "The scale of the selected nameplate.",
 	},
 	nameplateselfalpha: {
@@ -6486,6 +6543,7 @@ export const data: CVarInterface = {
 		default: "0.75",
 		category: 1,
 		scope: "Account",
+		secure: true,
 		help: "The alpha of the self nameplate.",
 	},
 	nameplateselfbottominset: {
@@ -6493,6 +6551,7 @@ export const data: CVarInterface = {
 		default: "0.2",
 		category: 1,
 		scope: "Account",
+		secure: true,
 		help: "The inset from the bottom (in screen percent) that the self nameplate is clamped to.",
 	},
 	nameplateselfscale: {
@@ -6500,6 +6559,7 @@ export const data: CVarInterface = {
 		default: "1.0",
 		category: 1,
 		scope: "Account",
+		secure: true,
 		help: "The scale of the self nameplate.",
 	},
 	nameplateselftopinset: {
@@ -6507,6 +6567,7 @@ export const data: CVarInterface = {
 		default: "0.5",
 		category: 1,
 		scope: "Account",
+		secure: true,
 		help: "The inset from the top (in screen percent) that the self nameplate is clamped to.",
 	},
 	nameplateshowall: {
@@ -6514,90 +6575,105 @@ export const data: CVarInterface = {
 		default: "0",
 		category: 4,
 		scope: "Account",
+		secure: true,
 	},
 	nameplateshowdebuffsonfriendly: {
 		name: "nameplateShowDebuffsOnFriendly",
 		default: "1",
 		category: 4,
 		scope: "Account",
+		secure: true,
 	},
 	nameplateshowenemies: {
 		name: "nameplateShowEnemies",
 		default: "1",
 		category: 4,
 		scope: "Account",
+		secure: true,
 	},
 	nameplateshowenemyguardians: {
 		name: "nameplateShowEnemyGuardians",
 		default: "0",
 		category: 4,
 		scope: "Account",
+		secure: true,
 	},
 	nameplateshowenemyminions: {
 		name: "nameplateShowEnemyMinions",
 		default: "0",
 		category: 4,
 		scope: "Account",
+		secure: true,
 	},
 	nameplateshowenemyminus: {
 		name: "nameplateShowEnemyMinus",
 		default: "1",
 		category: 4,
 		scope: "Account",
+		secure: true,
 	},
 	nameplateshowenemypets: {
 		name: "nameplateShowEnemyPets",
 		default: "0",
 		category: 4,
 		scope: "Account",
+		secure: true,
 	},
 	nameplateshowenemytotems: {
 		name: "nameplateShowEnemyTotems",
 		default: "0",
 		category: 4,
 		scope: "Account",
+		secure: true,
 	},
 	nameplateshowfriendlybuffs: {
 		name: "nameplateShowFriendlyBuffs",
 		default: "0",
 		category: 4,
 		scope: "Account",
+		secure: true,
 	},
 	nameplateshowfriendlyguardians: {
 		name: "nameplateShowFriendlyGuardians",
 		default: "0",
 		category: 4,
 		scope: "Account",
+		secure: true,
 	},
 	nameplateshowfriendlyminions: {
 		name: "nameplateShowFriendlyMinions",
 		default: "0",
 		category: 4,
 		scope: "Account",
+		secure: true,
 	},
 	nameplateshowfriendlynpcs: {
 		name: "nameplateShowFriendlyNPCs",
 		default: "0",
 		category: 4,
 		scope: "Account",
+		secure: true,
 	},
 	nameplateshowfriendlypets: {
 		name: "nameplateShowFriendlyPets",
 		default: "0",
 		category: 4,
 		scope: "Account",
+		secure: true,
 	},
 	nameplateshowfriendlytotems: {
 		name: "nameplateShowFriendlyTotems",
 		default: "0",
 		category: 4,
 		scope: "Account",
+		secure: true,
 	},
 	nameplateshowfriends: {
 		name: "nameplateShowFriends",
 		default: "0",
 		category: 4,
 		scope: "Account",
+		secure: true,
 	},
 	nameplateshowonlynames: {
 		name: "nameplateShowOnlyNames",
@@ -6610,18 +6686,21 @@ export const data: CVarInterface = {
 		default: "0",
 		category: 4,
 		scope: "Account",
+		secure: true,
 	},
 	nameplateshowself: {
 		name: "nameplateShowSelf",
 		default: "1",
 		category: 4,
 		scope: "Account",
+		secure: true,
 	},
 	nameplatetargetbehindmaxdistance: {
 		name: "nameplateTargetBehindMaxDistance",
 		default: "15",
 		category: 1,
 		scope: "Account",
+		secure: true,
 		help: "The max distance to show the target nameplate when the target is behind the camera.",
 	},
 	nameplatetargetradialposition: {
@@ -6629,6 +6708,7 @@ export const data: CVarInterface = {
 		default: "0",
 		category: 4,
 		scope: "Character",
+		secure: true,
 		help: "When target is off screen, position its nameplate radially around sides and bottom. 1: Target Only. 2: All In Combat",
 	},
 	nearclip: {
@@ -6642,6 +6722,7 @@ export const data: CVarInterface = {
 		default: "1",
 		category: 4,
 		scope: "Account",
+		secure: true,
 		help: "Signals a new mythic+ season for the user, so when they open the UI it shows them the info about the season",
 	},
 	newpvpseason: {
@@ -6649,6 +6730,7 @@ export const data: CVarInterface = {
 		default: "1",
 		category: 4,
 		scope: "Account",
+		secure: true,
 		help: "Signals a new pvp season for the user, so when they open the UI it shows them the info about the season",
 	},
 	nobuffdebufffilterontarget: {
@@ -7441,6 +7523,7 @@ export const data: CVarInterface = {
 		default: "0",
 		category: 4,
 		scope: "Character",
+		secure: true,
 		help: "Seen the free character upgrade popup (Asia)",
 	},
 	seencharacterupgradepopup: {
@@ -7568,6 +7651,7 @@ export const data: CVarInterface = {
 		default: "1",
 		category: 4,
 		scope: "Account",
+		secure: true,
 		help: "Show arena enemy frames while in an Arena",
 	},
 	showarenaenemypets: {
@@ -7575,6 +7659,7 @@ export const data: CVarInterface = {
 		default: "1",
 		category: 4,
 		scope: "Account",
+		secure: true,
 		help: "Show the enemy team's pets on the ArenaEnemy frames",
 	},
 	showbattlefieldminimap: {
@@ -7655,6 +7740,7 @@ export const data: CVarInterface = {
 		default: "0",
 		category: 4,
 		scope: "Account",
+		secure: true,
 		help: "Whether to show pets in the party UI",
 	},
 	showpingsinchat: {
@@ -7701,6 +7787,7 @@ export const data: CVarInterface = {
 		default: "0",
 		category: 4,
 		scope: "Character",
+		secure: true,
 		help: "Whether the target of target frame should be shown",
 	},
 	showtimestamps: {
@@ -7942,6 +8029,7 @@ export const data: CVarInterface = {
 		default: "0",
 		category: 4,
 		scope: "Account",
+		secure: true,
 		help: "Show boost splash screen id ",
 	},
 	splashscreennormal: {
@@ -7949,6 +8037,7 @@ export const data: CVarInterface = {
 		default: "0",
 		category: 4,
 		scope: "Account",
+		secure: true,
 		help: "Show normal splash screen id",
 	},
 	splashscreenseason: {
@@ -7956,6 +8045,7 @@ export const data: CVarInterface = {
 		default: "1",
 		category: 4,
 		scope: "Account",
+		secure: true,
 		help: "Show season splash screen id",
 	},
 	ssaomagicnormals: {
@@ -8431,12 +8521,14 @@ export const data: CVarInterface = {
 		name: "uiScale",
 		default: "1.0",
 		category: 4,
+		secure: true,
 		help: "The current UI scale",
 	},
 	uiscalemultiplier: {
 		name: "uiScaleMultiplier",
 		default: "-1",
 		category: 4,
+		secure: true,
 		help: "A multiplier for the default UI scale. -1=determine based on system/monitor DPI, 0.5-2.0=multiplier to use when calculating UI scale. Only applied when useUIScale is 0.",
 	},
 	unitclutter: {
@@ -8523,6 +8615,7 @@ export const data: CVarInterface = {
 		name: "useUiScale",
 		default: "0",
 		category: 4,
+		secure: true,
 		help: "Whether or not the UI scale should be used",
 	},
 	validateframexml: {
