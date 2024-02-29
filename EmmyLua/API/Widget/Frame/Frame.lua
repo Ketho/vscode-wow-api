@@ -277,6 +277,9 @@ function Frame:IsUserPlaced() end
 ---@return boolean isVisible
 function Frame:IsVisible() end
 
+---[Documentation](https://warcraft.wiki.gg/wiki/API_Frame_LockHighlight)
+function Frame:LockHighlight() end
+
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_Frame_Lower)
 function Frame:Lower() end
 
@@ -441,6 +444,9 @@ function Frame:StartSizing(resizePoint, alwaysStartFromMouse) end
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_Frame_StopMovingOrSizing)
 function Frame:StopMovingOrSizing() end
+
+---[Documentation](https://warcraft.wiki.gg/wiki/API_Frame_UnlockHighlight)
+function Frame:UnlockHighlight() end
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_Frame_UnregisterAllEvents)
 function Frame:UnregisterAllEvents() end
