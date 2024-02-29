@@ -133,7 +133,7 @@ function FontString:SetFixedColor(fixedColor) end
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_FontString_SetFont)
 ---@param fontFile string
 ---@param fontHeight uiUnit
----@param flags TBFFlags
+---@param flags? TBFFlags
 function FontString:SetFont(fontFile, fontHeight, flags) end
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_FontString_SetFontObject)
