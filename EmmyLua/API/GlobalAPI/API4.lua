@@ -229,7 +229,8 @@ function PickupGuildBankItem(tab, slot) end
 function PickupGuildBankMoney(money) end
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_PickupInventoryItem)
-function PickupInventoryItem(invSlot) end
+---@param slotId number
+function PickupInventoryItem(slotId) end
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_PickupItem)
 function PickupItem(item) end
