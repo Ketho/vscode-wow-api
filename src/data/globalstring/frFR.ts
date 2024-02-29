@@ -10387,8 +10387,13 @@ Toutes les configurations pour lesquelles cette option est activée partagent le
 	KILLS_PVP: String.raw`Tués`,
 	KIOSK_PLEASE_TAKE_THE_SURVEY: String.raw`Veuillez remplir le questionnaire juste avant la sortie.`,
 	KIOSK_SESSION_EXPIRED_BODY: String.raw`Nous serions ravis de connaître votre avis. N’hésitez pas à participer à notre sondage avant de partir.`,
+	KIOSK_SESSION_EXPIRED_SUBTITLE: String.raw`Gardiens du Rêve`,
 	KIOSK_SESSION_EXPIRED_TITLE: String.raw`Merci d’avoir joué`,
 	KIOSK_SESSION_EXPIRE_WARNING: String.raw`Cette démo prendra fin dans %d |4minute:minutes;.`,
+	KIOSK_SESSION_STARTED_BODY: String.raw`Un nouvel Arbre-Monde pousse au milieu du Rêve.
+Fyrakka convoite la puissance de l’Afflux
+afin de s’emparer du cœur de l’arbre
+et répandre sa flamme partout sur Azeroth.`,
 	KIOSK_SESSION_TIMER_CHANGED: String.raw`Délai de session modifié.`,
 	KIOSK_THANK_YOU_FOR_PLAYING: String.raw`Merci d’avoir joué !`,
 	KNOWLEDGEBASE_FRAME_TITLE: String.raw`Base de connaissances`,
@@ -19310,7 +19315,7 @@ de la discipline.`,
 	VISITABLE_URL30: String.raw`https://www.battlenet.com.cn/support/zh/article/494`,
 	VISITABLE_URL31: String.raw`https://battle.net/support/article/34787`,
 	VISITABLE_URL32: String.raw`https://www.battlenet.com.cn/support/zh/article/215`,
-	VISITABLE_URL37: String.raw`https://battle.net/support/article/000251513`,
+	VISITABLE_URL37: String.raw`https://eu.battle.net/support/fr/article/000345591`,
 	VISITABLE_URL38: String.raw`https://www.battlenet.com.cn/support/zh/article/000251513`,
 	VISITABLE_URL39: String.raw`https://nydus.battle.net/WoW/%s/client/product-requirements?targetRegion=%s`,
 	VISITABLE_URL40: String.raw`https://nydus.battle.net/WoW/%s/client/product-requirements-expac?targetRegion=%s`,

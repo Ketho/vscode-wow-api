@@ -4,6 +4,15 @@
 - The Classic (TBC) API is not supported ([#13](https://github.com/Ketho/vscode-wow-api/issues/13))
 - Frame templates are not completely supported, only BackdropTemplate ([#15](https://github.com/Ketho/vscode-wow-api/issues/15)) 
 
+## [0.13.3] - 2024-03-01
+- Added `Frame:LockHighlight`, `:UnlockHighlight`
+- Added `GameTooltip:SetUnitDebuffByAuraInstanceID`
+- Fixed `C_PetJournal.SetPetSortParameter`
+- Fixed `FontString:SetFont` optional flags
+- 🛠 Improvements: Shows if a cvar is secure
+
+![](img/changelog_cvar1.png)
+
 ## [0.13.2] - 2024-01-23
 - Fixed ScriptRegionResizing:SetPoint `relativeTo` param when using templates
 - Fixed Frame:SetAttribute `value` param
@@ -434,6 +443,7 @@ Libraries
 ### Added
 - 🚧 Wip: Development work
 
+[0.13.3]: https://github.com/Ketho/vscode-wow-api/releases/tag/0.13.3
 [0.13.2]: https://github.com/Ketho/vscode-wow-api/releases/tag/0.13.2
 [0.13.1]: https://github.com/Ketho/vscode-wow-api/releases/tag/0.13.1
 [0.13.0]: https://github.com/Ketho/vscode-wow-api/releases/tag/0.13.0

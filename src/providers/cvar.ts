@@ -24,18 +24,17 @@ function getMarkdown(name: string) {
         s += " - "+cvar.help;
     }
 	s += "\n```";
-
-	// need to use the whole line for a code block, cannot mix it with normal text
 	if (cvar.default) {
         s += "\n- Default: "+cvar.default;
     }
-
 	if (cvar.category !== 5) {
         s += "\n- Category: "+ConsoleCategory[cvar.category];
     }
-
 	if (cvar.scope) {
         s += "\n- Scope: "+cvar.scope;
+    }
+	if (cvar.secure) {
+        s += "\n- Secure: ✔️";
     }
 	s += "\n```";
 

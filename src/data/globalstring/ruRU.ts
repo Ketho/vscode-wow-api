@@ -10387,8 +10387,13 @@ export const data: GlobalStringInterface = {
 	KILLS_PVP: String.raw`Побед`,
 	KIOSK_PLEASE_TAKE_THE_SURVEY: String.raw`Пожалуйста, пройдите опрос перед выходом.`,
 	KIOSK_SESSION_EXPIRED_BODY: String.raw`Будем рады вашим отзывам. Пожалуйста, пройдите опрос.`,
+	KIOSK_SESSION_EXPIRED_SUBTITLE: String.raw`Хранители Сна`,
 	KIOSK_SESSION_EXPIRED_TITLE: String.raw`Благодарим за игру!`,
 	KIOSK_SESSION_EXPIRE_WARNING: String.raw`Осталось: %d |4минута:минуты:минут;.`,
+	KIOSK_SESSION_STARTED_BODY: String.raw`Новое Древо Жизни цветет в Изумрудном Сне.
+Фиракку нужна сила Источника,
+чтобы завладеть сердцем Древа
+и сжечь в огне весь Азерот.`,
 	KIOSK_SESSION_TIMER_CHANGED: String.raw`Таймер сеанса изменен.`,
 	KIOSK_THANK_YOU_FOR_PLAYING: String.raw`Спасибо за игру!`,
 	KNOWLEDGEBASE_FRAME_TITLE: String.raw`Энциклопедия`,
@@ -19313,7 +19318,7 @@ export const data: GlobalStringInterface = {
 	VISITABLE_URL30: String.raw`https://www.battlenet.com.cn/support/zh/article/494`,
 	VISITABLE_URL31: String.raw`https://battle.net/support/article/34787`,
 	VISITABLE_URL32: String.raw`https://www.battlenet.com.cn/support/zh/article/215`,
-	VISITABLE_URL37: String.raw`https://battle.net/support/article/000251513`,
+	VISITABLE_URL37: String.raw`https://eu.battle.net/support/ru/article/000345591`,
 	VISITABLE_URL38: String.raw`https://www.battlenet.com.cn/support/zh/article/000251513`,
 	VISITABLE_URL39: String.raw`https://nydus.battle.net/WoW/%s/client/product-requirements?targetRegion=%s`,
 	VISITABLE_URL40: String.raw`https://nydus.battle.net/WoW/%s/client/product-requirements-expac?targetRegion=%s`,

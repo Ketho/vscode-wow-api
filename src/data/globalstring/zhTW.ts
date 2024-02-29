@@ -10385,8 +10385,13 @@ export const data: GlobalStringInterface = {
 	KILLS_PVP: String.raw`殺敵`,
 	KIOSK_PLEASE_TAKE_THE_SURVEY: String.raw`離開前請別忘了填寫問卷。`,
 	KIOSK_SESSION_EXPIRED_BODY: String.raw`我們希望能夠知道你對遊戲的想法。離開時請幫我們填寫問卷。`,
+	KIOSK_SESSION_EXPIRED_SUBTITLE: String.raw`夢境守護者`,
 	KIOSK_SESSION_EXPIRED_TITLE: String.raw`謝謝你的參與`,
 	KIOSK_SESSION_EXPIRE_WARNING: String.raw`試玩將在%d分鐘後結束。`,
+	KIOSK_SESSION_STARTED_BODY: String.raw`一棵新的世界之樹在夢境當中茂盛生長。
+菲拉卡需要泉湧的力量，
+以獲取世界之樹的心，
+並將他的烈焰擴散至整個艾澤拉斯。`,
 	KIOSK_SESSION_TIMER_CHANGED: String.raw`遊戲計時器變動。`,
 	KIOSK_THANK_YOU_FOR_PLAYING: String.raw`謝謝你的參與！`,
 	KNOWLEDGEBASE_FRAME_TITLE: String.raw`知識庫`,
@@ -19305,7 +19310,7 @@ export const data: GlobalStringInterface = {
 	VISITABLE_URL30: String.raw`https://www.battlenet.com.cn/support/zh/article/494`,
 	VISITABLE_URL31: String.raw`https://battle.net/support/article/34787`,
 	VISITABLE_URL32: String.raw`https://www.battlenet.com.cn/support/zh/article/215`,
-	VISITABLE_URL37: String.raw`https://battle.net/support/article/000251513`,
+	VISITABLE_URL37: String.raw`https://tw.battle.net/support/zh/article/000345591`,
 	VISITABLE_URL38: String.raw`https://www.battlenet.com.cn/support/zh/article/000251513`,
 	VISITABLE_URL39: String.raw`https://nydus.battle.net/WoW/%s/client/product-requirements?targetRegion=%s`,
 	VISITABLE_URL40: String.raw`https://nydus.battle.net/WoW/%s/client/product-requirements-expac?targetRegion=%s`,

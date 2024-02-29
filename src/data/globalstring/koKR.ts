@@ -10385,8 +10385,13 @@ export const data: GlobalStringInterface = {
 	KILLS_PVP: String.raw`승수`,
 	KIOSK_PLEASE_TAKE_THE_SURVEY: String.raw`나가실 때 설문 조사에 참여해 주십시오.`,
 	KIOSK_SESSION_EXPIRED_BODY: String.raw`여러분의 의견을 듣고 싶습니다. 부디 나가실 때 설문조사에 응해주십시오.`,
+	KIOSK_SESSION_EXPIRED_SUBTITLE: String.raw`꿈의 수호자`,
 	KIOSK_SESSION_EXPIRED_TITLE: String.raw`플레이해 주셔서 감사합니다.`,
 	KIOSK_SESSION_EXPIRE_WARNING: String.raw`%d분 후에 데모가 종료됩니다.`,
+	KIOSK_SESSION_STARTED_BODY: String.raw`꿈에서 새로운 세계수가 개화하려 합니다.
+나무의 심장을 취해 아제로스 전역에
+불길을 퍼뜨릴 속셈인 피락은
+수원지의 힘을 노리고 있습니다.`,
 	KIOSK_SESSION_TIMER_CHANGED: String.raw`접속 타이머가 변경되었습니다.`,
 	KIOSK_THANK_YOU_FOR_PLAYING: String.raw`플레이해 주셔서 감사합니다!`,
 	KNOWLEDGEBASE_FRAME_TITLE: String.raw`지식 보관소`,
@@ -19313,7 +19318,7 @@ export const data: GlobalStringInterface = {
 	VISITABLE_URL30: String.raw`https://www.battlenet.com.cn/support/zh/article/494`,
 	VISITABLE_URL31: String.raw`https://battle.net/support/article/34787`,
 	VISITABLE_URL32: String.raw`https://www.battlenet.com.cn/support/zh/article/215`,
-	VISITABLE_URL37: String.raw`https://battle.net/support/article/000251513`,
+	VISITABLE_URL37: String.raw`https://kr.battle.net/support/ko/article/000345591`,
 	VISITABLE_URL38: String.raw`https://www.battlenet.com.cn/support/zh/article/000251513`,
 	VISITABLE_URL39: String.raw`https://nydus.battle.net/WoW/%s/client/product-requirements?targetRegion=%s`,
 	VISITABLE_URL40: String.raw`https://nydus.battle.net/WoW/%s/client/product-requirements-expac?targetRegion=%s`,

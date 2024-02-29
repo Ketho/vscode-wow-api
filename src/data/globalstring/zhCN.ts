@@ -10387,8 +10387,13 @@ export const data: GlobalStringInterface = {
 	KILLS_PVP: String.raw`杀敌`,
 	KIOSK_PLEASE_TAKE_THE_SURVEY: String.raw`请在出口附近完成调查问卷。`,
 	KIOSK_SESSION_EXPIRED_BODY: String.raw`我们很乐意听到你的反馈意见。请在离开时参与我们的调查活动。`,
+	KIOSK_SESSION_EXPIRED_SUBTITLE: String.raw`梦境守护者`,
 	KIOSK_SESSION_EXPIRED_TITLE: String.raw`感谢体验`,
 	KIOSK_SESSION_EXPIRE_WARNING: String.raw`演示将在%d分钟后结束。`,
+	KIOSK_SESSION_STARTED_BODY: String.raw`新的世界之树在梦境中盛放。
+菲莱克需要圣泉的力量
+才能夺取巨树之心，
+并将他的烈焰散播到整个艾泽拉斯。`,
 	KIOSK_SESSION_TIMER_CHANGED: String.raw`计时器已变动。`,
 	KIOSK_THANK_YOU_FOR_PLAYING: String.raw`感谢您的参与！`,
 	KNOWLEDGEBASE_FRAME_TITLE: String.raw`知识库`,
@@ -19311,7 +19316,7 @@ export const data: GlobalStringInterface = {
 	VISITABLE_URL30: String.raw`https://www.battlenet.com.cn/support/zh/article/494`,
 	VISITABLE_URL31: String.raw`https://www.battlenet.com.cn/support/zh/article/215`,
 	VISITABLE_URL32: String.raw`https://www.battlenet.com.cn/support/zh/article/215`,
-	VISITABLE_URL37: String.raw`https://battle.net/support/article/000251513`,
+	VISITABLE_URL37: String.raw`https://us.battle.net/support/en/article/000345591`,
 	VISITABLE_URL38: String.raw`https://www.battlenet.com.cn/support/zh/article/000251513`,
 	VISITABLE_URL39: String.raw`https://www.battlenet.com.cn/shop/zh/product/world-of-warcraft-game-time-cn`,
 	VISITABLE_URL40: String.raw`https://www.battlenet.com.cn/shop/zh/product/world-of-warcraft-game-time-cn`,

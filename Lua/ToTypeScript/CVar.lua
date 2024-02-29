@@ -8,6 +8,7 @@ interface CVarInterface {
 		default: string,
 		category: number,
 		scope?: string,
+		secure?: boolean,
 		help?: string,
 	}
 }
@@ -30,6 +31,9 @@ local function ToTypeScript(branch)
 		local scope = server and "Account" or character and "Character"
 		if scope then
 			table.insert(t, string.format('\t\tscope: "%s",', scope))
+		end
+		if secure then
+			table.insert(t, string.format('\t\tsecure: true,', secure))
 		end
 		if #help > 0 then
 			table.insert(t, string.format('\t\thelp: "%s",', help:gsub('"', '\\"')))
