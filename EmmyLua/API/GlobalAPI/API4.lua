@@ -1620,6 +1620,8 @@ function issecurevariable(table, variable) end
 function pcallwithenv(func, env) end
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_scrub)
+---@param ... any
+---@return string|boolean|number|nil ...
 function scrub() end
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_securecall)
@@ -1637,7 +1639,8 @@ function securecallfunction(func, ...) end
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_secureexecuterange)
 ---@param tbl table
 ---@param func function
-function secureexecuterange(tbl, func) end
+---@param ... any
+function secureexecuterange(tbl, func, ...) end
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_seterrorhandler)
 ---@param errFunc function
