@@ -1,4 +1,15 @@
 ---@meta
+---[Documentation](https://warcraft.wiki.gg/wiki/API_LearnTalent)
+---@param talentID number
+---@return boolean success
+function LearnTalent(talentID) end
+
+---[Documentation](https://warcraft.wiki.gg/wiki/API_LearnTalents)
+function LearnTalents() end
+
+---[Documentation](https://warcraft.wiki.gg/wiki/API_LeaveBattlefield)
+function LeaveBattlefield() end
+
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_LeaveChannelByLocalID)
 function LeaveChannelByLocalID(localID) end
 
@@ -1620,7 +1631,9 @@ function issecurevariable(table, variable) end
 function pcallwithenv(func, env) end
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_scrub)
-function scrub() end
+---@param ... any
+---@return string|boolean|number|nil ...
+function scrub(...) end
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_securecall)
 ---@param func function|string
@@ -1637,7 +1650,8 @@ function securecallfunction(func, ...) end
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_secureexecuterange)
 ---@param tbl table
 ---@param func function
-function secureexecuterange(tbl, func) end
+---@param ... any
+function secureexecuterange(tbl, func, ...) end
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_seterrorhandler)
 ---@param errFunc function
