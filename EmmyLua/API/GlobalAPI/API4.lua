@@ -1,4 +1,15 @@
 ---@meta
+---[Documentation](https://warcraft.wiki.gg/wiki/API_LearnTalent)
+---@param talentID number
+---@return boolean success
+function LearnTalent(talentID) end
+
+---[Documentation](https://warcraft.wiki.gg/wiki/API_LearnTalents)
+function LearnTalents() end
+
+---[Documentation](https://warcraft.wiki.gg/wiki/API_LeaveBattlefield)
+function LeaveBattlefield() end
+
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_LeaveChannelByLocalID)
 function LeaveChannelByLocalID(localID) end
 
@@ -1622,7 +1633,7 @@ function pcallwithenv(func, env) end
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_scrub)
 ---@param ... any
 ---@return string|boolean|number|nil ...
-function scrub() end
+function scrub(...) end
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_securecall)
 ---@param func function|string

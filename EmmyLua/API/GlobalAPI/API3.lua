@@ -1,4 +1,13 @@
 ---@meta
+---[Documentation](https://warcraft.wiki.gg/wiki/API_GetLFGDungeonInfo)
+function GetLFGDungeonInfo(dungeonID) end
+
+---[Documentation](https://warcraft.wiki.gg/wiki/API_GetLFGDungeonNumEncounters)
+---@param dungeonID number
+---@return number numEncounters
+---@return number numCompleted
+function GetLFGDungeonNumEncounters(dungeonID) end
+
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_GetLFGDungeonRewardCapBarInfo)
 function GetLFGDungeonRewardCapBarInfo(dungeonID) end
 
@@ -2588,15 +2597,4 @@ function LearnPvpTalent() end
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_LearnPvpTalents)
 function LearnPvpTalents() end
-
----[Documentation](https://warcraft.wiki.gg/wiki/API_LearnTalent)
----@param talentID number
----@return boolean success
-function LearnTalent(talentID) end
-
----[Documentation](https://warcraft.wiki.gg/wiki/API_LearnTalents)
-function LearnTalents() end
-
----[Documentation](https://warcraft.wiki.gg/wiki/API_LeaveBattlefield)
-function LeaveBattlefield() end
 

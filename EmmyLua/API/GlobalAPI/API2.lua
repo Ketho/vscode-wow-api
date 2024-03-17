@@ -850,7 +850,8 @@ function DeleteGMTicket() end
 function DeleteInboxItem(index) end
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_DeleteMacro)
-function DeleteMacro() end
+---@param indexOrName number|string
+function DeleteMacro(indexOrName) end
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_DeleteRaidProfile)
 function DeleteRaidProfile(profile) end
@@ -1830,6 +1831,9 @@ function GetDetailedItemLevelInfo(item) end
 ---@return boolean displayHeroic
 ---@return boolean displayMythic
 ---@return number toggleDifficultyID
+---@return boolean isLFR
+---@return number minPlayers
+---@return number maxPlayers
 function GetDifficultyInfo(id) end
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_GetDownloadedPercentage)
@@ -2401,7 +2405,7 @@ function GetItemIcon(itemID) end
 ---@return number sellPrice
 ---@return number classID
 ---@return number subclassID
----@return number bindType
+---@return number itemBindTypeID
 ---@return number expacID
 ---@return number? setID
 ---@return boolean isCraftingReagent
@@ -2502,13 +2506,4 @@ function GetLFGDeserterExpiration() end
 ---@return boolean isKilled
 ---@return boolean unknown4
 function GetLFGDungeonEncounterInfo(dungeonID, encounterIndex) end
-
----[Documentation](https://warcraft.wiki.gg/wiki/API_GetLFGDungeonInfo)
-function GetLFGDungeonInfo(dungeonID) end
-
----[Documentation](https://warcraft.wiki.gg/wiki/API_GetLFGDungeonNumEncounters)
----@param dungeonID number
----@return number numEncounters
----@return number numCompleted
-function GetLFGDungeonNumEncounters(dungeonID) end
 
