@@ -798,9 +798,9 @@ function UnitPlayerOrPetInRaid(unit, partyIndex) end
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_UnitPosition)
 ---@param unit UnitToken
----@return number positionX
----@return number positionY
----@return number positionZ
+---@return number? x
+---@return number? y
+---@return number? z
 ---@return number mapID
 function UnitPosition(unit) end
 
@@ -1045,7 +1045,7 @@ function UnitXP(unit) end
 function UnitXPMax(unit) end
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_WorldLootObjectExists)
----@param unit UnitToken
+---@param unit? UnitToken Default = WOWGUID_NULL
 ---@return boolean result
 function WorldLootObjectExists(unit) end
 

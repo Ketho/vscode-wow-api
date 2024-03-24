@@ -1,12 +1,63 @@
 ---@meta
+---[Documentation](https://warcraft.wiki.gg/wiki/API_AcceptAreaSpiritHeal)
+function AcceptAreaSpiritHeal() end
+
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_AcceptGuild)
 function AcceptGuild() end
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_AcceptResurrect)
 function AcceptResurrect() end
 
+---[Documentation](https://warcraft.wiki.gg/wiki/API_Ambiguate)
+---@param fullName string
+---@param context string
+---@return string result
+function Ambiguate(fullName, context) end
+
+---[Documentation](https://warcraft.wiki.gg/wiki/API_AreAccountAchievementsHidden)
+---@return boolean result
+function AreAccountAchievementsHidden() end
+
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_AutoEquipCursorItem)
 function AutoEquipCursorItem() end
+
+---[Documentation](https://warcraft.wiki.gg/wiki/API_BeginTrade)
+function BeginTrade() end
+
+---[Documentation](https://warcraft.wiki.gg/wiki/API_CanDualWield)
+---@return boolean result
+function CanDualWield() end
+
+---[Documentation](https://warcraft.wiki.gg/wiki/API_CanInspect)
+---@param targetGUID UnitToken
+---@return boolean result
+function CanInspect(targetGUID) end
+
+---[Documentation](https://warcraft.wiki.gg/wiki/API_CanLootUnit)
+---@param targetUnit WOWGUID
+---@return boolean hasLoot
+---@return boolean canLoot
+function CanLootUnit(targetUnit) end
+
+---[Documentation](https://warcraft.wiki.gg/wiki/API_CancelAreaSpiritHeal)
+function CancelAreaSpiritHeal() end
+
+---[Documentation](https://warcraft.wiki.gg/wiki/API_CancelPendingEquip)
+---@param index number
+function CancelPendingEquip(index) end
+
+---[Documentation](https://warcraft.wiki.gg/wiki/API_CancelTrade)
+function CancelTrade() end
+
+---[Documentation](https://warcraft.wiki.gg/wiki/API_CheckInteractDistance)
+---@param unitGUID UnitToken
+---@param distIndex number
+---@return boolean result
+function CheckInteractDistance(unitGUID, distIndex) end
+
+---[Documentation](https://warcraft.wiki.gg/wiki/API_CheckTalentMasterDist)
+---@return boolean result
+function CheckTalentMasterDist() end
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_ConfirmTalentWipe)
 function ConfirmTalentWipe() end
@@ -20,9 +71,22 @@ function DeclineResurrect() end
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_Dismount)
 function Dismount() end
 
+---[Documentation](https://warcraft.wiki.gg/wiki/API_EquipPendingItem)
+---@param index number
+function EquipPendingItem(index) end
+
+---[Documentation](https://warcraft.wiki.gg/wiki/API_FollowUnit)
+---@param name? string Default = 0
+---@param exactMatch? boolean Default = false
+function FollowUnit(name, exactMatch) end
+
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_GetAllowLowLevelRaid)
 ---@return boolean result
 function GetAllowLowLevelRaid() end
+
+---[Documentation](https://warcraft.wiki.gg/wiki/API_GetAreaSpiritHealerTime)
+---@return number result
+function GetAreaSpiritHealerTime() end
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_GetAttackPowerForStat)
 ---@param stat number
@@ -38,9 +102,17 @@ function GetAutoDeclineGuildInvites() end
 ---@return number result
 function GetAvoidance() end
 
+---[Documentation](https://warcraft.wiki.gg/wiki/API_GetBindLocation)
+---@return string result
+function GetBindLocation() end
+
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_GetBlockChance)
 ---@return number result
 function GetBlockChance() end
+
+---[Documentation](https://warcraft.wiki.gg/wiki/API_GetCemeteryPreference)
+---@return number result
+function GetCemeteryPreference() end
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_GetCombatRating)
 ---@param ratingIndex number
@@ -57,6 +129,10 @@ function GetCombatRatingBonus(ratingIndex) end
 ---@param value number
 ---@return number? result
 function GetCombatRatingBonusForCombatRatingValue(ratingIndex, value) end
+
+---[Documentation](https://warcraft.wiki.gg/wiki/API_GetCorpseRecoveryDelay)
+---@return number result
+function GetCorpseRecoveryDelay() end
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_GetCorruption)
 ---@return number result
@@ -103,6 +179,10 @@ function GetJailersTowerLevel() end
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_GetLifesteal)
 ---@return number result
 function GetLifesteal() end
+
+---[Documentation](https://warcraft.wiki.gg/wiki/API_GetLootSpecialization)
+---@return number specializationID
+function GetLootSpecialization() end
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_GetManaRegen)
 ---@return number baseManaRegen
@@ -236,6 +316,10 @@ function GetRangedCritChance() end
 ---@return number result
 function GetRangedHaste() end
 
+---[Documentation](https://warcraft.wiki.gg/wiki/API_GetReleaseTimeRemaining)
+---@return number result
+function GetReleaseTimeRemaining() end
+
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_GetResSicknessDuration)
 ---@return string? result
 function GetResSicknessDuration() end
@@ -245,6 +329,12 @@ function GetResSicknessDuration() end
 ---@return string name
 ---@return number factor
 function GetRestState() end
+
+---[Documentation](https://warcraft.wiki.gg/wiki/API_GetRestrictedAccountData)
+---@return number maxLevel
+---@return WOWMONEY maxMoney
+---@return number professionCap
+function GetRestrictedAccountData() end
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_GetRuneCooldown)
 ---@param runeIndex number
@@ -320,6 +410,14 @@ function HasDualWieldPenalty() end
 ---@return boolean result
 function HasFullControl() end
 
+---[Documentation](https://warcraft.wiki.gg/wiki/API_HasIgnoreDualWieldWeapon)
+---@return boolean result
+function HasIgnoreDualWieldWeapon() end
+
+---[Documentation](https://warcraft.wiki.gg/wiki/API_HasKey)
+---@return boolean hasKey
+function HasKey() end
+
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_HasNoReleaseAura)
 ---@return boolean hasCannotReleaseEffect
 ---@return number longestDuration
@@ -330,6 +428,10 @@ function HasNoReleaseAura() end
 ---@return boolean result
 function HasSPEffectsAttackPower() end
 
+---[Documentation](https://warcraft.wiki.gg/wiki/API_InitiateTrade)
+---@param guid UnitToken
+function InitiateTrade(guid) end
+
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_IsAccountSecured)
 ---@return boolean result
 function IsAccountSecured() end
@@ -337,6 +439,14 @@ function IsAccountSecured() end
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_IsAdvancedFlyableArea)
 ---@return boolean result
 function IsAdvancedFlyableArea() end
+
+---[Documentation](https://warcraft.wiki.gg/wiki/API_IsCemeterySelectionAvailable)
+---@return boolean result
+function IsCemeterySelectionAvailable() end
+
+---[Documentation](https://warcraft.wiki.gg/wiki/API_IsCharacterNewlyBoosted)
+---@return boolean newlyBoosted
+function IsCharacterNewlyBoosted() end
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_IsDualWielding)
 ---@return boolean result
@@ -395,6 +505,14 @@ function IsOutdoors() end
 ---@return boolean result
 function IsPVPTimerRunning() end
 
+---[Documentation](https://warcraft.wiki.gg/wiki/API_IsPlayerInWorld)
+---@return boolean result
+function IsPlayerInWorld() end
+
+---[Documentation](https://warcraft.wiki.gg/wiki/API_IsPlayerMoving)
+---@return boolean result
+function IsPlayerMoving() end
+
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_IsRangedWeapon)
 ---@return boolean result
 function IsRangedWeapon() end
@@ -402,6 +520,10 @@ function IsRangedWeapon() end
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_IsResting)
 ---@return boolean result
 function IsResting() end
+
+---[Documentation](https://warcraft.wiki.gg/wiki/API_IsRestrictedAccount)
+---@return boolean result
+function IsRestrictedAccount() end
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_IsStealthed)
 ---@return boolean result
@@ -414,6 +536,10 @@ function IsXPUserDisabled() end
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_NoPlayTime)
 ---@return boolean? result
 function NoPlayTime() end
+
+---[Documentation](https://warcraft.wiki.gg/wiki/API_NotifyInspect)
+---@param targetGUID UnitToken
+function NotifyInspect(targetGUID) end
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_PartialPlayTime)
 ---@return boolean? result
@@ -429,12 +555,35 @@ function PlayerCanTeleport() end
 ---@return number rangedAttackPower
 function PlayerEffectiveAttackPower() end
 
+---[Documentation](https://warcraft.wiki.gg/wiki/API_PortGraveyard)
+function PortGraveyard() end
+
+---[Documentation](https://warcraft.wiki.gg/wiki/API_RandomRoll)
+---@param min number
+---@param max number
+function RandomRoll(min, max) end
+
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_RepopMe)
 function RepopMe() end
+
+---[Documentation](https://warcraft.wiki.gg/wiki/API_RequestTimePlayed)
+function RequestTimePlayed() end
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_RespondInstanceLock)
 ---@param acceptLock boolean
 function RespondInstanceLock(acceptLock) end
+
+---[Documentation](https://warcraft.wiki.gg/wiki/API_ResurrectGetOfferer)
+---@return string name
+function ResurrectGetOfferer() end
+
+---[Documentation](https://warcraft.wiki.gg/wiki/API_ResurrectHasSickness)
+---@return boolean result
+function ResurrectHasSickness() end
+
+---[Documentation](https://warcraft.wiki.gg/wiki/API_ResurrectHasTimer)
+---@return boolean result
+function ResurrectHasTimer() end
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_RetrieveCorpse)
 function RetrieveCorpse() end
@@ -447,12 +596,70 @@ function SetAllowLowLevelRaid(allow) end
 ---@param allow? boolean Default = false
 function SetAutoDeclineGuildInvites(allow) end
 
+---[Documentation](https://warcraft.wiki.gg/wiki/API_SetCemeteryPreference)
+---@param cemetaryID number
+function SetCemeteryPreference(cemetaryID) end
+
+---[Documentation](https://warcraft.wiki.gg/wiki/API_SetLootSpecialization)
+---@param specializationID number
+function SetLootSpecialization(specializationID) end
+
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_SetTaxiBenchmarkMode)
 ---@param enable? boolean Default = false
 function SetTaxiBenchmarkMode(enable) end
 
+---[Documentation](https://warcraft.wiki.gg/wiki/API_ShouldShowIslandsWeeklyPOI)
+---@return boolean result
+function ShouldShowIslandsWeeklyPOI() end
+
+---[Documentation](https://warcraft.wiki.gg/wiki/API_ShouldShowSpecialSplashScreen)
+---@return boolean result
+function ShouldShowSpecialSplashScreen() end
+
+---[Documentation](https://warcraft.wiki.gg/wiki/API_ShowAccountAchievements)
+---@param hide? boolean Default = false
+function ShowAccountAchievements(hide) end
+
+---[Documentation](https://warcraft.wiki.gg/wiki/API_ShowCloak)
+---@param show boolean
+function ShowCloak(show) end
+
+---[Documentation](https://warcraft.wiki.gg/wiki/API_ShowHelm)
+---@param show boolean
+function ShowHelm(show) end
+
+---[Documentation](https://warcraft.wiki.gg/wiki/API_ShowingCloak)
+---@return boolean result
+function ShowingCloak() end
+
+---[Documentation](https://warcraft.wiki.gg/wiki/API_ShowingHelm)
+---@return boolean result
+function ShowingHelm() end
+
+---[Documentation](https://warcraft.wiki.gg/wiki/API_SitStandOrDescendStart)
+function SitStandOrDescendStart() end
+
+---[Documentation](https://warcraft.wiki.gg/wiki/API_SplashFrameCanBeShown)
+---@return boolean result
+function SplashFrameCanBeShown() end
+
+---[Documentation](https://warcraft.wiki.gg/wiki/API_StartAttack)
+---@param name string
+---@param exactMatch? boolean Default = false
+function StartAttack(name, exactMatch) end
+
+---[Documentation](https://warcraft.wiki.gg/wiki/API_StopAttack)
+function StopAttack() end
+
+---[Documentation](https://warcraft.wiki.gg/wiki/API_Stuck)
+function Stuck() end
+
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_TimeoutResurrect)
 function TimeoutResurrect() end
+
+---[Documentation](https://warcraft.wiki.gg/wiki/API_ToggleSelfHighlight)
+---@return boolean enabled
+function ToggleSelfHighlight() end
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_ToggleSheath)
 function ToggleSheath() end

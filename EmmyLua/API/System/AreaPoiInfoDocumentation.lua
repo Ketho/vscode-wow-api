@@ -31,13 +31,14 @@ function C_AreaPoiInfo.IsAreaPOITimed(areaPoiID) end
 ---@field name string
 ---@field description string?
 ---@field textureIndex number?
----@field widgetSetID number?
+---@field tooltipWidgetSet number?
+---@field iconWidgetSet number?
 ---@field atlasName string?
 ---@field uiTextureKit textureKit?
 ---@field shouldGlow boolean
 ---@field factionID number?
 ---@field isPrimaryMapForPOI boolean
 ---@field isAlwaysOnFlightmap boolean
----@field addPaddingAboveWidgets boolean?
+---@field addPaddingAboveTooltipWidgets boolean?
 ---@field highlightWorldQuestsOnHover boolean
 ---@field highlightVignettesOnHover boolean

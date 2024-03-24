@@ -40,6 +40,10 @@ function ConsolePrintAllMatchingCommands(partialCommandText) end
 ---@param fontHeightInPixels number
 function ConsoleSetFontHeight(fontHeightInPixels) end
 
+---[Documentation](https://warcraft.wiki.gg/wiki/API_SetConsoleKey)
+---@param keystring string
+function SetConsoleKey(keystring) end
+
 ---@class ConsoleCommandInfo
 ---@field command string
 ---@field help string

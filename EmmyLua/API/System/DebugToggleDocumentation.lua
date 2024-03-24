@@ -1,9 +1,15 @@
 ---@meta
+---[Documentation](https://warcraft.wiki.gg/wiki/API_ToggleAnimKitDisplay)
+function ToggleAnimKitDisplay() end
+
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_ToggleCollision)
 function ToggleCollision() end
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_ToggleCollisionDisplay)
 function ToggleCollisionDisplay() end
+
+---[Documentation](https://warcraft.wiki.gg/wiki/API_ToggleDebugAIDisplay)
+function ToggleDebugAIDisplay() end
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_ToggleGravity)
 function ToggleGravity() end

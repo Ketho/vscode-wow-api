@@ -15,3 +15,7 @@ function C_Sound.IsPlaying(soundHandle) end
 ---@param soundType number|Enum.ItemSoundType
 ---@param itemLocation ItemLocationMixin
 function C_Sound.PlayItemSound(soundType, itemLocation) end
+
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_Sound.PlayVocalErrorSound)
+---@param vocalErrorSoundID number|Enum.Vocalerrorsounds
+function C_Sound.PlayVocalErrorSound(vocalErrorSoundID) end

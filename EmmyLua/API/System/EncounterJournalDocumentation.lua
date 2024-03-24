@@ -109,6 +109,7 @@ function C_EncounterJournal.SetTab(tabIdx) end
 ---@field displayAsPerPlayerLoot boolean?
 ---@field displayAsVeryRare boolean?
 ---@field displayAsExtremelyRare boolean?
+---@field displaySeasonID number?
 
 ---@class EncounterJournalMapEncounterInfo
 ---@field encounterID number

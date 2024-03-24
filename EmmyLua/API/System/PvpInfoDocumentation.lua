@@ -305,6 +305,12 @@ function C_PvP.GetWarModeRewardBonusDefault() end
 ---@return number pvpTierMaxFromWins
 function C_PvP.GetWeeklyChestInfo() end
 
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_PvP.GetZonePVPInfo)
+---@return string pvpType
+---@return boolean isSubZonePvP
+---@return string? factionName
+function C_PvP.GetZonePVPInfo() end
+
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_PvP.HasArenaSkirmishWinToday)
 ---@return boolean hasArenaSkirmishWinToday
 function C_PvP.HasArenaSkirmishWinToday() end
@@ -390,6 +396,10 @@ function C_PvP.IsSoloRBG() end
 ---@return boolean isSoloShuffle
 function C_PvP.IsSoloShuffle() end
 
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_PvP.IsSubZonePVPPOI)
+---@return boolean result
+function C_PvP.IsSubZonePVPPOI() end
+
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_PvP.IsWarModeActive)
 ---@return boolean warModeActive
 function C_PvP.IsWarModeActive() end
@@ -410,9 +420,16 @@ function C_PvP.JoinBrawl(isSpecialBrawl) end
 ---@param playerToken UnitToken
 function C_PvP.RequestCrowdControlSpell(playerToken) end
 
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_PvP.SetPVP)
+---@param enablePVP? boolean Default = false
+function C_PvP.SetPVP(enablePVP) end
+
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_PvP.SetWarModeDesired)
 ---@param warModeDesired boolean
 function C_PvP.SetWarModeDesired(warModeDesired) end
+
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_PvP.TogglePVP)
+function C_PvP.TogglePVP() end
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_PvP.ToggleWarMode)
 function C_PvP.ToggleWarMode() end

@@ -37,5 +37,6 @@ function C_VignetteInfo.GetVignettes() end
 ---@field vignetteID number
 ---@field type Enum.VignetteType
 ---@field rewardQuestID number
----@field widgetSetID number?
----@field addPaddingAboveWidgets boolean?
+---@field tooltipWidgetSet number?
+---@field iconWidgetSet number?
+---@field addPaddingAboveTooltipWidgets boolean?

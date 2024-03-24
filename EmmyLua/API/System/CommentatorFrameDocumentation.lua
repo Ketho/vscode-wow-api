@@ -673,8 +673,16 @@ function C_Commentator.UpdatePlayerInfo() end
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_Commentator.ZoomIn)
 function C_Commentator.ZoomIn() end
 
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_Commentator.ZoomIn_Position)
+---@param zoomAmount? number
+function C_Commentator.ZoomIn_Position(zoomAmount) end
+
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_Commentator.ZoomOut)
 function C_Commentator.ZoomOut() end
+
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_Commentator.ZoomOut_Position)
+---@param zoomAmount? number
+function C_Commentator.ZoomOut_Position(zoomAmount) end
 
 ---@class CommentatorHistory
 ---@field series CommentatorSeries[]
