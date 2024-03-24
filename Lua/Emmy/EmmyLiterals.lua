@@ -54,14 +54,14 @@ function EmmyLiterals:GetEnumTable()
 		string.format("https://raw.githubusercontent.com/Ketho/BlizzardInterfaceResources/%s/Resources/LuaEnum.lua", BRANCH)
 	)
 	local t = {}
-	table.insert(t, "Enum = {")
+	table.insert(t, "Enum = {}\n")
 	for _, name in pairs(Util:SortTable(Enum)) do
-		table.insert(t, string.format("\t---@enum Enum.%s", name))
-		table.insert(t, string.format("\t%s = {", name))
+		table.insert(t, string.format("---@enum Enum.%s", name))
+		table.insert(t, string.format("Enum.%s = {", name))
 		for _, enumTbl in pairs(SortByValue(Enum[name])) do
-			table.insert(t, string.format("\t\t%s = %d,", enumTbl.key, enumTbl.value))
+			table.insert(t, string.format("\t%s = %d,", enumTbl.key, enumTbl.value))
 		end
-		table.insert(t, "\t},")
+		table.insert(t, "}\n")
 	end
 	table.insert(t, "}\n")
 
