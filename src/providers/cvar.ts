@@ -34,7 +34,7 @@ function getMarkdown(name: string) {
         s += "\n- Scope: "+cvar.scope;
     }
 	if (cvar.secure) {
-        s += "\n- Secure: ✔️";
+        s += "\n- Protected in combat";
     }
 	s += "\n```";
 
