@@ -684,6 +684,12 @@ export const data: CVarInterface = {
 		category: 1,
 		help: "0: Prism backends Disabled. 1: Default Prism backends Enabled. 2: Experimental Prism backends Enabled.",
 	},
+	gxslowshaderwarnthreshold: {
+		name: "GxSlowShaderWarnThreshold",
+		default: "30000",
+		category: 1,
+		help: "Max time (in milliseconds) the shader compile can take before warning via a popup message",
+	},
 	hardwarecursor: {
 		name: "HardwareCursor",
 		default: "1",
@@ -5581,11 +5587,23 @@ export const data: CVarInterface = {
 		category: 1,
 		help: "Do BeginDraw multithreaded.",
 	},
+	gxmtdecals: {
+		name: "gxMTDecals",
+		default: "1",
+		category: 1,
+		help: "Sort and Render decal passes in parallel",
+	},
 	gxmtdisable: {
 		name: "gxMTDisable",
 		default: "0",
 		category: 1,
 		help: "Disable all render multithreading",
+	},
+	gxmtmisc: {
+		name: "gxMTMisc",
+		default: "1",
+		category: 1,
+		help: "Render miscelleous passes in parallel",
 	},
 	gxmtopaquem2: {
 		name: "gxMTOpaqueM2",
@@ -5604,6 +5622,12 @@ export const data: CVarInterface = {
 		default: "1",
 		category: 1,
 		help: "Render opaque WMO in parallel.",
+	},
+	gxmtoutlines: {
+		name: "gxMTOutlines",
+		default: "1",
+		category: 1,
+		help: "Render outline passes in parallel",
 	},
 	gxmtprepass: {
 		name: "gxMTPrepass",
@@ -5628,6 +5652,12 @@ export const data: CVarInterface = {
 		default: "1",
 		category: 1,
 		help: "Render terrain in parallel.",
+	},
+	gxmttriggeronbegindrawcomplete: {
+		name: "gxMTTriggerOnBeginDrawComplete",
+		default: "1",
+		category: 1,
+		help: "Use Begin Draw Complete Trigger Mechanism",
 	},
 	gxmtvolfog: {
 		name: "gxMTVolFog",
@@ -5848,6 +5878,13 @@ export const data: CVarInterface = {
 		scope: "Account",
 		help: "Stores the Dream Warden renown when Renown UI is closed",
 	},
+	lastrenownformajorfaction2593: {
+		name: "lastRenownForMajorFaction2593",
+		default: "0",
+		category: 4,
+		scope: "Character",
+		help: "Stores the Keg Leg's Crew renown when Renown UI is closed",
+	},
 	lastselectedclubid: {
 		name: "lastSelectedClubId",
 		default: "0",
@@ -5896,6 +5933,12 @@ export const data: CVarInterface = {
 		category: 4,
 		scope: "Account",
 		help: "Stores the last void storage tutorial the player has accepted",
+	},
+	last_matchmaking_party_size: {
+		name: "last_matchmaking_party_size",
+		default: "0",
+		category: 4,
+		help: "0=Solo,1=Duo,2=Trio",
 	},
 	latestsplashscreen: {
 		name: "latestSplashScreen",
@@ -6241,6 +6284,16 @@ export const data: CVarInterface = {
 		category: 4,
 		scope: "Account",
 		help: "Whether to show if you have collected the appearance of an item but not from that item itself",
+	},
+	modellightshaftscolor: {
+		name: "modelLightShaftsColor",
+		default: "0xFFFFFFFF",
+		category: 5,
+	},
+	modellightshaftsspread: {
+		name: "modelLightShaftsSpread",
+		default: "32.0",
+		category: 5,
 	},
 	motionsicknessfocalcircle: {
 		name: "motionSicknessFocalCircle",
@@ -6826,8 +6879,8 @@ export const data: CVarInterface = {
 		scope: "Character",
 		help: "The opacity of the party background",
 	},
-	partyinvitescollapsed_wowlabs: {
-		name: "partyInvitesCollapsed_WowLabs",
+	partyinvitescollapsed_glue: {
+		name: "partyInvitesCollapsed_Glue",
 		default: "0",
 		category: 4,
 		help: "The info for pending invites has been shown",
@@ -7006,13 +7059,6 @@ export const data: CVarInterface = {
 		default: "0",
 		category: 0,
 		help: "Sets which core(s) WoW may execute on - changes require restart to take effect",
-	},
-	profanityfilter: {
-		name: "profanityFilter",
-		default: "1",
-		category: 4,
-		scope: "Character",
-		help: "Whether to enable mature language filtering",
 	},
 	professionaccessoryslotsexampleshown: {
 		name: "professionAccessorySlotsExampleShown",
@@ -8165,11 +8211,17 @@ export const data: CVarInterface = {
 		category: 1,
 		help: "Set target FPS. Dynamic actions will be taken if you fall below the FPS target",
 	},
-	telemetrytargetpackage: {
-		name: "telemetryTargetPackage",
+	telemetrywowpackage: {
+		name: "telemetryWowPackage",
 		default: "Blizzard.Telemetry.Wow_Mainline",
 		category: 5,
-		help: "The Package we want to send telemetry to e.g. Wow_Mainline or Wow_Classic",
+		help: "The primary package we want to send telemetry to e.g. Wow_Mainline or Wow_Classic",
+	},
+	telemetrywowlabspackage: {
+		name: "telemetryWowlabsPackage",
+		default: "Blizzard.Telemetry.Wow_Labs",
+		category: 5,
+		help: "The secondary package we want to send telemetry to e.g. Wow_Wowlabs",
 	},
 	teleportmaxnoloaddist: {
 		name: "teleportMaxNoLoadDist",
