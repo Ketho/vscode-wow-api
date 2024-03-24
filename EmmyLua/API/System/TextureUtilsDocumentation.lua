@@ -32,20 +32,20 @@ function C_Texture.GetFilenameFromFileDataID(fileDataID) end
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_Texture.GetTitleIconTexture)
 ---@param titleID string
----@param version number|Enum.TitleIconVersion
+---@param version Enum.TitleIconVersion
 ---@param callback GetTitleIconTextureCallback
 function C_Texture.GetTitleIconTexture(titleID, version, callback) end
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_Texture.IsTitleIconTextureReady)
 ---@param titleID string
----@param version number|Enum.TitleIconVersion
+---@param version Enum.TitleIconVersion
 ---@return boolean ready
 function C_Texture.IsTitleIconTextureReady(titleID, version) end
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_Texture.SetTitleIconTexture)
 ---@param texture SimpleTexture
 ---@param titleID string
----@param version number|Enum.TitleIconVersion
+---@param version Enum.TitleIconVersion
 function C_Texture.SetTitleIconTexture(texture, titleID, version) end
 
 ---@class AtlasInfo

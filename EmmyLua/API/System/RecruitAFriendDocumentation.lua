@@ -1,6 +1,11 @@
 ---@meta
 C_RecruitAFriend = {}
 
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_RecruitAFriend.CanSummonFriend)
+---@param guid WOWGUID
+---@return boolean result
+function C_RecruitAFriend.CanSummonFriend(guid) end
+
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_RecruitAFriend.ClaimActivityReward)
 ---@param activityID number
 ---@param acceptanceID RecruitAcceptanceID
@@ -8,7 +13,7 @@ C_RecruitAFriend = {}
 function C_RecruitAFriend.ClaimActivityReward(activityID, acceptanceID) end
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_RecruitAFriend.ClaimNextReward)
----@param rafVersion? number|Enum.RecruitAFriendRewardsVersion
+---@param rafVersion? Enum.RecruitAFriendRewardsVersion
 ---@return boolean success
 function C_RecruitAFriend.ClaimNextReward(rafVersion) end
 
@@ -35,9 +40,20 @@ function C_RecruitAFriend.GetRecruitActivityRequirementsText(activityID, accepta
 ---@return number faction
 function C_RecruitAFriend.GetRecruitInfo() end
 
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_RecruitAFriend.GetSummonFriendCooldown)
+---@return number startTimeSeconds
+---@return number durationSeconds
+---@return boolean enableCooldownTimer
+function C_RecruitAFriend.GetSummonFriendCooldown() end
+
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_RecruitAFriend.IsEnabled)
 ---@return boolean enabled
 function C_RecruitAFriend.IsEnabled() end
+
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_RecruitAFriend.IsRecruitAFriendLinked)
+---@param guid WOWGUID
+---@return boolean result
+function C_RecruitAFriend.IsRecruitAFriendLinked(guid) end
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_RecruitAFriend.IsRecruitingEnabled)
 ---@return boolean enabled
@@ -51,6 +67,11 @@ function C_RecruitAFriend.RemoveRAFRecruit(wowAccountGUID) end
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_RecruitAFriend.RequestUpdatedRecruitmentInfo)
 ---@return boolean success
 function C_RecruitAFriend.RequestUpdatedRecruitmentInfo() end
+
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_RecruitAFriend.SummonFriend)
+---@param target WOWGUID
+---@param name string
+function C_RecruitAFriend.SummonFriend(target, name) end
 
 ---@class RafAppearanceInfo
 ---@field appearanceID number

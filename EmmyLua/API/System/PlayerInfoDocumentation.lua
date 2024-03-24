@@ -105,6 +105,10 @@ function C_PlayerInfo.IsPlayerInChromieTime() end
 ---@return boolean isRestricted
 function C_PlayerInfo.IsPlayerNPERestricted() end
 
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_PlayerInfo.IsSelfFoundActive)
+---@return boolean active
+function C_PlayerInfo.IsSelfFoundActive() end
+
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_PlayerInfo.IsTradingPostAvailable)
 ---@return boolean isAvailable
 function C_PlayerInfo.IsTradingPostAvailable() end

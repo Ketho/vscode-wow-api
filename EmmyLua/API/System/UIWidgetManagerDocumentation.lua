@@ -75,6 +75,11 @@ function C_UIWidgetManager.GetIconTextAndCurrenciesWidgetVisualizationInfo(widge
 ---@return ItemDisplayVisualizationInfo? widgetInfo
 function C_UIWidgetManager.GetItemDisplayVisualizationInfo(widgetID) end
 
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_UIWidgetManager.GetMapPinAnimationWidgetVisualizationInfo)
+---@param widgetID number
+---@return MapPinAnimationWidgetVisualizationInfo? widgetInfo
+function C_UIWidgetManager.GetMapPinAnimationWidgetVisualizationInfo(widgetID) end
+
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_UIWidgetManager.GetObjectiveTrackerWidgetSetID)
 ---@return number setID
 function C_UIWidgetManager.GetObjectiveTrackerWidgetSetID() end
@@ -373,6 +378,7 @@ function C_UIWidgetManager.UnregisterUnitForWidgetUpdates(unitToken, isGuid) end
 ---@field layoutDirection Enum.UIWidgetLayoutDirection
 ---@field modelSceneLayer Enum.UIWidgetModelSceneLayer
 ---@field scriptedAnimationEffectID number
+---@field updateAnimType Enum.UIWidgetUpdateAnimType
 
 ---@class IconAndTextWidgetVisualizationInfo
 ---@field state Enum.IconAndTextWidgetState
@@ -435,6 +441,22 @@ function C_UIWidgetManager.UnregisterUnitForWidgetUpdates(unitToken, isGuid) end
 ---@field shownState Enum.WidgetShownState
 ---@field tooltipLoc Enum.UIWidgetTooltipLocation
 ---@field itemInfo UIWidgetItemInfo
+---@field widgetSizeSetting number
+---@field textureKit textureKit
+---@field frameTextureKit textureKit
+---@field hasTimer boolean
+---@field orderIndex number
+---@field widgetTag string
+---@field inAnimType Enum.WidgetAnimationType
+---@field outAnimType Enum.WidgetAnimationType
+---@field widgetScale Enum.UIWidgetScale
+---@field layoutDirection Enum.UIWidgetLayoutDirection
+---@field modelSceneLayer Enum.UIWidgetModelSceneLayer
+---@field scriptedAnimationEffectID number
+
+---@class MapPinAnimationWidgetVisualizationInfo
+---@field shownState Enum.WidgetShownState
+---@field animType Enum.MapPinAnimationType
 ---@field widgetSizeSetting number
 ---@field textureKit textureKit
 ---@field frameTextureKit textureKit
@@ -681,6 +703,7 @@ function C_UIWidgetManager.UnregisterUnitForWidgetUpdates(unitToken, isGuid) end
 ---@field text string
 ---@field tooltip string
 ---@field tooltipLoc Enum.UIWidgetTooltipLocation
+---@field textSizeType Enum.UIWidgetTextureAndTextSizeType
 ---@field widgetSizeSetting number
 ---@field textureKit textureKit
 ---@field frameTextureKit textureKit
@@ -744,6 +767,8 @@ function C_UIWidgetManager.UnregisterUnitForWidgetUpdates(unitToken, isGuid) end
 ---@field text string
 ---@field tooltip string
 ---@field isCurrencyMaxed boolean
+---@field textFontType Enum.UIWidgetFontType
+---@field textSizeType Enum.UIWidgetTextSizeType
 
 ---@class UIWidgetIconInfo
 ---@field sourceType Enum.WidgetIconSourceType

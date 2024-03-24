@@ -12,23 +12,23 @@ function C_ReportSystem.CanReportPlayer(playerLocation) end
 function C_ReportSystem.CanReportPlayerForLanguage(playerLocation) end
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_ReportSystem.GetMajorCategoriesForReportType)
----@param reportType number|Enum.ReportType
+---@param reportType Enum.ReportType
 ---@return Enum.ReportMajorCategory[] majorCategories
 function C_ReportSystem.GetMajorCategoriesForReportType(reportType) end
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_ReportSystem.GetMajorCategoryString)
----@param majorCategory number|Enum.ReportMajorCategory
+---@param majorCategory Enum.ReportMajorCategory
 ---@return string majorCategoryString
 function C_ReportSystem.GetMajorCategoryString(majorCategory) end
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_ReportSystem.GetMinorCategoriesForReportTypeAndMajorCategory)
----@param reportType number|Enum.ReportType
----@param majorCategory number|Enum.ReportMajorCategory
+---@param reportType Enum.ReportType
+---@param majorCategory Enum.ReportMajorCategory
 ---@return Enum.ReportMinorCategory[] minorCategories
 function C_ReportSystem.GetMinorCategoriesForReportTypeAndMajorCategory(reportType, majorCategory) end
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_ReportSystem.GetMinorCategoryString)
----@param minorCategory number|Enum.ReportMinorCategory
+---@param minorCategory Enum.ReportMinorCategory
 ---@return string minorCategoryString
 function C_ReportSystem.GetMinorCategoryString(minorCategory) end
 

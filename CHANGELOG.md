@@ -4,6 +4,13 @@
 - The Classic (TBC) API is not supported ([#13](https://github.com/Ketho/vscode-wow-api/issues/13))
 - Frame templates are not completely supported, only BackdropTemplate ([#15](https://github.com/Ketho/vscode-wow-api/issues/15)) 
 
+## [0.13.4] - 2024-03-24
+- 🎉 Update to patch 10.2.6 (53877)
+- 🌙 Added latest Blizzard_Deprecated additions
+- 🛠 Improvements: Enums are now properly shown in code completion
+
+![](img/changelog_enum1.png)
+
 ## [0.13.3] - 2024-03-01
 - Added `Frame:LockHighlight`, `:UnlockHighlight`
 - Added `GameTooltip:SetUnitDebuffByAuraInstanceID`
@@ -443,6 +450,7 @@ Libraries
 ### Added
 - 🚧 Wip: Development work
 
+[0.13.4]: https://github.com/Ketho/vscode-wow-api/releases/tag/0.13.4
 [0.13.3]: https://github.com/Ketho/vscode-wow-api/releases/tag/0.13.3
 [0.13.2]: https://github.com/Ketho/vscode-wow-api/releases/tag/0.13.2
 [0.13.1]: https://github.com/Ketho/vscode-wow-api/releases/tag/0.13.1

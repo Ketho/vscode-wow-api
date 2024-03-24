@@ -24,7 +24,7 @@ function C_ContributionCollector.GetBuffs(contributionID) end
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_ContributionCollector.GetContributionAppearance)
 ---@param contributionID number
----@param contributionState number|Enum.ContributionState
+---@param contributionState Enum.ContributionState
 ---@return ContributionAppearance? appearance
 function C_ContributionCollector.GetContributionAppearance(contributionID, contributionState) end
 

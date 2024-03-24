@@ -6,6 +6,11 @@ C_TaskQuest = {}
 ---@return boolean showsTaskQuestObjectives
 function C_TaskQuest.DoesMapShowTaskQuestObjectives(uiMapID) end
 
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_TaskQuest.GetQuestIconUIWidgetSet)
+---@param questID number
+---@return number widgetSet
+function C_TaskQuest.GetQuestIconUIWidgetSet(questID) end
+
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_TaskQuest.GetQuestInfoByQuestID)
 ---@param questID number
 ---@return string questTitle
@@ -36,6 +41,11 @@ function C_TaskQuest.GetQuestTimeLeftMinutes(questID) end
 ---@return number secondsLeft
 function C_TaskQuest.GetQuestTimeLeftSeconds(questID) end
 
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_TaskQuest.GetQuestTooltipUIWidgetSet)
+---@param questID number
+---@return number widgetSet
+function C_TaskQuest.GetQuestTooltipUIWidgetSet(questID) end
+
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_TaskQuest.GetQuestZoneID)
 ---@param questID number
 ---@return number uiMapID
@@ -49,11 +59,6 @@ function C_TaskQuest.GetQuestsForPlayerByMapID(uiMapID) end
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_TaskQuest.GetThreatQuests)
 ---@return number[] quests
 function C_TaskQuest.GetThreatQuests() end
-
----[Documentation](https://warcraft.wiki.gg/wiki/API_C_TaskQuest.GetUIWidgetSetIDFromQuestID)
----@param questID number
----@return number UiWidgetSetID
-function C_TaskQuest.GetUIWidgetSetIDFromQuestID(questID) end
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_TaskQuest.IsActive)
 ---@param questID number

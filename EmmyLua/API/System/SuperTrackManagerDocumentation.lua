@@ -38,7 +38,7 @@ function C_SuperTrack.IsSuperTrackingQuest() end
 function C_SuperTrack.IsSuperTrackingUserWaypoint() end
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_SuperTrack.SetSuperTrackedContent)
----@param trackableType number|Enum.ContentTrackingType
+---@param trackableType Enum.ContentTrackingType
 ---@param trackableID number
 function C_SuperTrack.SetSuperTrackedContent(trackableType, trackableID) end
 

@@ -64,7 +64,7 @@ function C_LegendaryCrafting.GetRuneforgePowerSlots(runeforgePowerID) end
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_LegendaryCrafting.GetRuneforgePowers)
 ---@param baseItem? ItemLocationMixin
----@param filter? number|Enum.RuneforgePowerFilter
+---@param filter? Enum.RuneforgePowerFilter
 ---@return number[] primaryRuneforgePowerIDs
 ---@return number[] otherRuneforgePowerIDs
 function C_LegendaryCrafting.GetRuneforgePowers(baseItem, filter) end
@@ -73,7 +73,7 @@ function C_LegendaryCrafting.GetRuneforgePowers(baseItem, filter) end
 ---@param classID? number
 ---@param specID? number
 ---@param covenantID? number
----@param filter? number|Enum.RuneforgePowerFilter
+---@param filter? Enum.RuneforgePowerFilter
 ---@return number[] runeforgePowerIDs
 function C_LegendaryCrafting.GetRuneforgePowersByClassSpecAndCovenant(classID, specID, covenantID, filter) end
 

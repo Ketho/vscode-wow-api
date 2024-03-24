@@ -9,6 +9,10 @@ function C_Navigation.GetDistance() end
 ---@return ScriptRegion? frame
 function C_Navigation.GetFrame() end
 
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_Navigation.GetNearestPartyMemberToken)
+---@return string unitToken
+function C_Navigation.GetNearestPartyMemberToken() end
+
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_Navigation.GetTargetState)
 ---@return Enum.NavigationState state
 function C_Navigation.GetTargetState() end

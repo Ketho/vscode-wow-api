@@ -6,13 +6,13 @@ function C_QuestLog.AbandonQuest() end
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_QuestLog.AddQuestWatch)
 ---@param questID number
----@param watchType? number|Enum.QuestWatchType
+---@param watchType? Enum.QuestWatchType
 ---@return boolean wasWatched
 function C_QuestLog.AddQuestWatch(questID, watchType) end
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_QuestLog.AddWorldQuestWatch)
 ---@param questID number
----@param watchType? number|Enum.QuestWatchType
+---@param watchType? Enum.QuestWatchType
 ---@return boolean wasWatched
 function C_QuestLog.AddWorldQuestWatch(questID, watchType) end
 

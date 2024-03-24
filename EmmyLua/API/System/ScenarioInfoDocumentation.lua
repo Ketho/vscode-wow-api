@@ -2,7 +2,7 @@
 C_ScenarioInfo = {}
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_ScenarioInfo.GetJailersTowerTypeString)
----@param runType number|Enum.JailersTowerType
+---@param runType Enum.JailersTowerType
 ---@return string? typeString
 function C_ScenarioInfo.GetJailersTowerTypeString(runType) end
 

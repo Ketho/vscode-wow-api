@@ -2,7 +2,7 @@ local Path = require "path"
 
 BRANCH = "mainline"
 CONSTANTS = {
-	LATEST_MAINLINE = "10.2.5",
+	LATEST_MAINLINE = "10.2.6",
 	LATEST_CLASSIC = "3.4.3",
 }
 

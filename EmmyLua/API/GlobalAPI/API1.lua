@@ -3,9 +3,6 @@
 ---@param skillLineID number
 function AbandonSkill(skillLineID) end
 
----[Documentation](https://warcraft.wiki.gg/wiki/API_AcceptAreaSpiritHeal)
-function AcceptAreaSpiritHeal() end
-
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_AcceptBattlefieldPort)
 ---@param index number
 ---@param accept boolean
@@ -39,9 +36,6 @@ function AcknowledgeAutoAcceptQuest() end
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_AcknowledgeSurvey)
 function AcknowledgeSurvey(caseIndex) end
 
----[Documentation](https://warcraft.wiki.gg/wiki/API_ActionBindsItem)
-function ActionBindsItem() end
-
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_ActionHasRange)
 ---@param slotID number
 ---@return boolean hasRange
@@ -65,12 +59,6 @@ function AddChatWindowMessages(index, messageGroup) end
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_AddTradeMoney)
 function AddTradeMoney() end
 
----[Documentation](https://warcraft.wiki.gg/wiki/API_Ambiguate)
----@param fullName string
----@param context string
----@return string name
-function Ambiguate(fullName, context) end
-
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_AntiAliasingSupported)
 function AntiAliasingSupported() end
 
@@ -84,13 +72,6 @@ function ArchaeologyMapUpdateAll(uiMapID) end
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_ArcheologyGetVisibleBlobID)
 function ArcheologyGetVisibleBlobID(index) end
-
----[Documentation](https://warcraft.wiki.gg/wiki/API_AreAccountAchievementsHidden)
----@return boolean hidden
-function AreAccountAchievementsHidden() end
-
----[Documentation](https://warcraft.wiki.gg/wiki/API_AreDangerousScriptsAllowed)
-function AreDangerousScriptsAllowed() end
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_AreTalentsLocked)
 function AreTalentsLocked() end
@@ -287,12 +268,6 @@ function BattlefieldMgrQueueInviteResponse(queueId, accept) end
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_BattlefieldMgrQueueRequest)
 function BattlefieldMgrQueueRequest() end
-
----[Documentation](https://warcraft.wiki.gg/wiki/API_BeginTrade)
-function BeginTrade() end
-
----[Documentation](https://warcraft.wiki.gg/wiki/API_BindEnchant)
-function BindEnchant() end
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_BuyGuildBankTab)
 function BuyGuildBankTab() end
@@ -495,6 +470,11 @@ function C_ClassTrial.IsClassTrialCharacter() end
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_Debug.DashboardIsEnabled)
 function C_Debug.DashboardIsEnabled() end
 
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_Debug.FrameXMLDebug)
+---@param newDebugLevel? number
+---@return number result
+function C_Debug.FrameXMLDebug(newDebugLevel) end
+
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_Debug.GetAllPortLocsForMap)
 function C_Debug.GetAllPortLocsForMap(uiMapID) end
 
@@ -515,6 +495,17 @@ function C_Debug.ViewInDebugWindow() end
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_FunctionContainers.CreateCallback)
 function C_FunctionContainers.CreateCallback() end
+
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_GameEnvironmentManager.GetCurrentEventRealmQueues)
+function C_GameEnvironmentManager.GetCurrentEventRealmQueues() end
+
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_GameEnvironmentManager.GetCurrentGameEnvironment)
+---@return Enum.GameEnvironment gameEnvironment
+function C_GameEnvironmentManager.GetCurrentGameEnvironment() end
+
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_GameEnvironmentManager.RequestGameEnvironment)
+---@param gameEnvironment Enum.GameEnvironment
+function C_GameEnvironmentManager.RequestGameEnvironment(gameEnvironment) end
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_Garrison.AllowMissionStartAboveSoftCap)
 function C_Garrison.AllowMissionStartAboveSoftCap(garrFollowerTypeID) end
@@ -2039,8 +2030,20 @@ function C_SharedCharacterServices.SetExpansionTrialPopupSeen(expansion_id) end
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_SharedCharacterServices.SetPromotionalPopupSeen)
 function C_SharedCharacterServices.SetPromotionalPopupSeen(seen) end
 
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_SpectatingUI.GetSpectateTargetInfo)
+function C_SpectatingUI.GetSpectateTargetInfo() end
+
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_SpectatingUI.GetSpectatingPlayerSpellItemQuality)
+function C_SpectatingUI.GetSpectatingPlayerSpellItemQuality() end
+
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_SpectatingUI.IsSpectating)
 function C_SpectatingUI.IsSpectating() end
+
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_SpectatingUI.LeaveSpectateMode)
+function C_SpectatingUI.LeaveSpectateMode() end
+
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_SpectatingUI.SpectateChange)
+function C_SpectatingUI.SpectateChange() end
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_TalkingHead.GetConversationsDeferred)
 function C_TalkingHead.GetConversationsDeferred() end
@@ -2120,16 +2123,4 @@ function C_ToyBox.IsToyUsable(itemID) end
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_ToyBox.PickupToyBoxItem)
 function C_ToyBox.PickupToyBoxItem(itemID) end
-
----[Documentation](https://warcraft.wiki.gg/wiki/API_C_ToyBox.SetAllExpansionTypeFilters)
-function C_ToyBox.SetAllExpansionTypeFilters(checked) end
-
----[Documentation](https://warcraft.wiki.gg/wiki/API_C_ToyBox.SetAllSourceTypeFilters)
-function C_ToyBox.SetAllSourceTypeFilters(checked) end
-
----[Documentation](https://warcraft.wiki.gg/wiki/API_C_ToyBox.SetCollectedShown)
-function C_ToyBox.SetCollectedShown(checked) end
-
----[Documentation](https://warcraft.wiki.gg/wiki/API_C_ToyBox.SetExpansionTypeFilter)
-function C_ToyBox.SetExpansionTypeFilter(expansionIndex, checked) end
 

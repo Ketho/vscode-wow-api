@@ -55,7 +55,7 @@ function C_VoiceChat.GetAvailableOutputDevices() end
 function C_VoiceChat.GetChannel(channelID) end
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_VoiceChat.GetChannelForChannelType)
----@param channelType number|Enum.ChatChannelType
+---@param channelType Enum.ChatChannelType
 ---@return VoiceChatChannel? channel
 function C_VoiceChat.GetChannelForChannelType(channelType) end
 
@@ -153,7 +153,7 @@ function C_VoiceChat.GetTtsVoices() end
 function C_VoiceChat.GetVADSensitivity() end
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_VoiceChat.IsChannelJoinPending)
----@param channelType number|Enum.ChatChannelType
+---@param channelType Enum.ChatChannelType
 ---@param clubId? ClubId
 ---@param streamId? ClubStreamId
 ---@return boolean isPending
@@ -257,12 +257,12 @@ function C_VoiceChat.MarkChannelsDiscovered() end
 function C_VoiceChat.RequestJoinAndActivateCommunityStreamChannel(clubId, streamId) end
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_VoiceChat.RequestJoinChannelByChannelType)
----@param channelType number|Enum.ChatChannelType
+---@param channelType Enum.ChatChannelType
 ---@param autoActivate? boolean
 function C_VoiceChat.RequestJoinChannelByChannelType(channelType, autoActivate) end
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_VoiceChat.SetCommunicationMode)
----@param communicationMode number|Enum.CommunicationMode
+---@param communicationMode Enum.CommunicationMode
 function C_VoiceChat.SetCommunicationMode(communicationMode) end
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_VoiceChat.SetDeafened)
@@ -330,7 +330,7 @@ function C_VoiceChat.SpeakRemoteTextSample(text) end
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_VoiceChat.SpeakText)
 ---@param voiceID number
 ---@param text string
----@param destination number|Enum.VoiceTtsDestination
+---@param destination Enum.VoiceTtsDestination
 ---@param rate number
 ---@param volume number
 function C_VoiceChat.SpeakText(voiceID, text, destination, rate, volume) end

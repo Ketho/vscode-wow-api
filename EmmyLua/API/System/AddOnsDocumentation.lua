@@ -61,6 +61,10 @@ function C_AddOns.GetAddOnOptionalDependencies(name) end
 ---@return number numAddOns
 function C_AddOns.GetNumAddOns() end
 
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_AddOns.GetScriptsDisallowedForBeta)
+---@return boolean disallowed
+function C_AddOns.GetScriptsDisallowedForBeta() end
+
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_AddOns.IsAddOnLoadOnDemand)
 ---@param name uiAddon
 ---@return boolean loadOnDemand

@@ -164,3 +164,4 @@
 ---@alias IDOrLink number|string
 ---@alias FileAsset string
 ---@alias ModelAsset number FileID
+---@alias LuaValueVariant table

@@ -30,3 +30,4 @@ function C_PartyPose.HasExtraAction(partyPoseID) end
 ---@field defeatSoundKitID number
 ---@field uiTextureKit textureKit?
 ---@field titleText string?
+---@field extraButtonText string?

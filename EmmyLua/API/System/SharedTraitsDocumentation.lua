@@ -70,7 +70,7 @@ function C_Traits.GetConfigIDByTreeID(treeID) end
 function C_Traits.GetConfigInfo(configID) end
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_Traits.GetConfigsByType)
----@param configType number|Enum.TraitConfigType
+---@param configType Enum.TraitConfigType
 ---@return number[] configIDs
 function C_Traits.GetConfigsByType(configType) end
 

@@ -20,7 +20,7 @@ function ConsoleExec(command, addToHistory) end
 function ConsoleGetAllCommands() end
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_ConsoleGetColorFromType)
----@param colorType number|Enum.ConsoleColorType
+---@param colorType Enum.ConsoleColorType
 ---@return ColorMixin color
 function ConsoleGetColorFromType(colorType) end
 
@@ -39,6 +39,10 @@ function ConsolePrintAllMatchingCommands(partialCommandText) end
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_ConsoleSetFontHeight)
 ---@param fontHeightInPixels number
 function ConsoleSetFontHeight(fontHeightInPixels) end
+
+---[Documentation](https://warcraft.wiki.gg/wiki/API_SetConsoleKey)
+---@param keystring string
+function SetConsoleKey(keystring) end
 
 ---@class ConsoleCommandInfo
 ---@field command string

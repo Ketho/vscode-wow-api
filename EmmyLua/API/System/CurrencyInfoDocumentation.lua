@@ -27,6 +27,23 @@ function C_CurrencyInfo.GetBackpackCurrencyInfo(index) end
 ---@return CurrencyDisplayInfo info
 function C_CurrencyInfo.GetBasicCurrencyInfo(currencyType, quantity) end
 
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_CurrencyInfo.GetCoinIcon)
+---@param amount WOWMONEY
+---@return fileID result
+function C_CurrencyInfo.GetCoinIcon(amount) end
+
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_CurrencyInfo.GetCoinText)
+---@param amount WOWMONEY
+---@param separator? string Default = , 
+---@return string result
+function C_CurrencyInfo.GetCoinText(amount, separator) end
+
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_CurrencyInfo.GetCoinTextureString)
+---@param amount WOWMONEY
+---@param fontHeight? number Default = 14
+---@return string result
+function C_CurrencyInfo.GetCoinTextureString(amount, fontHeight) end
+
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_CurrencyInfo.GetCurrencyContainerInfo)
 ---@param currencyType number
 ---@param quantity number

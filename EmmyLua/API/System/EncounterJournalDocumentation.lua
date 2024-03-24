@@ -7,7 +7,7 @@ C_EncounterJournal = {}
 function C_EncounterJournal.GetDungeonEntrancesForMap(uiMapID) end
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_EncounterJournal.GetEncounterJournalLink)
----@param linkType number|Enum.JournalLinkTypes
+---@param linkType Enum.JournalLinkTypes
 ---@param ID number
 ---@param displayText string
 ---@param difficultyID number
@@ -79,7 +79,7 @@ function C_EncounterJournal.SetPreviewMythicPlusLevel(level) end
 function C_EncounterJournal.SetPreviewPvpTier(tier) end
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_EncounterJournal.SetSlotFilter)
----@param filterSlot number|Enum.ItemSlotFilterType
+---@param filterSlot Enum.ItemSlotFilterType
 function C_EncounterJournal.SetSlotFilter(filterSlot) end
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_EncounterJournal.SetTab)
@@ -109,6 +109,7 @@ function C_EncounterJournal.SetTab(tabIdx) end
 ---@field displayAsPerPlayerLoot boolean?
 ---@field displayAsVeryRare boolean?
 ---@field displayAsExtremelyRare boolean?
+---@field displaySeasonID number?
 
 ---@class EncounterJournalMapEncounterInfo
 ---@field encounterID number

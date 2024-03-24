@@ -124,10 +124,10 @@ function TextureBase:SetSnapToPixelGrid(snap) end
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_TextureBase_SetTexCoord)
 ---@param left number
 ---@param right number
----@param bottom number
 ---@param top number
+---@param bottom number
 ---@overload fun(self, ULx:number, ULy:number, LLx:number, LLy:number, URx:number, URy:number, LRx:number, LRy:number)
-function TextureBase:SetTexCoord(left, right, bottom, top) end
+function TextureBase:SetTexCoord(left, right, top, bottom) end
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_TextureBase_SetTexelSnappingBias)
 ---@param bias normalizedValue

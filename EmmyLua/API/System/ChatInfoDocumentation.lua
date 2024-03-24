@@ -115,7 +115,7 @@ function C_ChatInfo.IsChannelRegionalForChannelID(channelID) end
 function C_ChatInfo.IsChatLineCensored(chatLine) end
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_ChatInfo.IsPartyChannelType)
----@param channelType number|Enum.ChatChannelType
+---@param channelType Enum.ChatChannelType
 ---@return boolean isPartyChannelType
 function C_ChatInfo.IsPartyChannelType(channelType) end
 

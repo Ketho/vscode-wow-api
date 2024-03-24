@@ -2050,9 +2050,9 @@ local Unit =
 
 			Returns =
 			{
-				{ Name = "positionX", Type = "number", Nilable = false },
-				{ Name = "positionY", Type = "number", Nilable = false },
-				{ Name = "positionZ", Type = "number", Nilable = false },
+				{ Name = "x", Type = "number", Nilable = true },
+				{ Name = "y", Type = "number", Nilable = true },
+				{ Name = "z", Type = "number", Nilable = true },
 				{ Name = "mapID", Type = "number", Nilable = false },
 			},
 		},
@@ -2649,7 +2649,7 @@ local Unit =
 
 			Arguments =
 			{
-				{ Name = "unit", Type = "UnitToken", Nilable = false },
+				{ Name = "unit", Type = "UnitToken", Nilable = false, Default = "WOWGUID_NULL" },
 			},
 
 			Returns =

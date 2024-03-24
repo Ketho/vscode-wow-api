@@ -165,12 +165,12 @@ function C_TradeSkillUI.GetProfessionInventorySlots() end
 function C_TradeSkillUI.GetProfessionNameForSkillLineAbility(skillLineAbilityID) end
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_TradeSkillUI.GetProfessionSkillLineID)
----@param profession number|Enum.Profession
+---@param profession Enum.Profession
 ---@return number skillLineID
 function C_TradeSkillUI.GetProfessionSkillLineID(profession) end
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_TradeSkillUI.GetProfessionSlots)
----@param profession number|Enum.Profession
+---@param profession Enum.Profession
 ---@return number[] slots
 function C_TradeSkillUI.GetProfessionSlots(profession) end
 
@@ -325,7 +325,7 @@ function C_TradeSkillUI.IsEnchantTargetValid(recipeID, itemGUID, craftingReagent
 function C_TradeSkillUI.IsNPCCrafting() end
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_TradeSkillUI.IsNearProfessionSpellFocus)
----@param profession number|Enum.Profession
+---@param profession Enum.Profession
 ---@return boolean nearFocus
 function C_TradeSkillUI.IsNearProfessionSpellFocus(profession) end
 

@@ -127,7 +127,7 @@ function C_ClubFinder.LookupClubPostingFromClubFinderGUID(clubFinderGUID, isLink
 function C_ClubFinder.PlayerGetClubInvitationList() end
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_ClubFinder.PlayerRequestPendingClubsList)
----@param type number|Enum.ClubFinderRequestType
+---@param type Enum.ClubFinderRequestType
 function C_ClubFinder.PlayerRequestPendingClubsList(type) end
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_ClubFinder.PlayerReturnPendingCommunitiesList)
@@ -145,13 +145,13 @@ function C_ClubFinder.PlayerReturnPendingGuildsList() end
 ---@param description string
 ---@param avatarId number
 ---@param specs number[]
----@param type number|Enum.ClubFinderRequestType
+---@param type Enum.ClubFinderRequestType
 ---@param crossFaction? boolean Default = false
 ---@return boolean succesful
 function C_ClubFinder.PostClub(clubId, itemLevelRequirement, name, description, avatarId, specs, type, crossFaction) end
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_ClubFinder.RequestApplicantList)
----@param type number|Enum.ClubFinderRequestType
+---@param type Enum.ClubFinderRequestType
 function C_ClubFinder.RequestApplicantList(type) end
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_ClubFinder.RequestClubsList)
@@ -191,7 +191,7 @@ function C_ClubFinder.ResetClubPostingMapCache() end
 ---@param clubFinderGUID WOWGUID
 ---@param playerGUID WOWGUID
 ---@param shouldAccept boolean
----@param requestType number|Enum.ClubFinderRequestType
+---@param requestType Enum.ClubFinderRequestType
 ---@param playerName string
 ---@param forceAccept boolean
 ---@param reported? boolean
@@ -218,7 +218,7 @@ function C_ClubFinder.ReturnPendingClubApplicantList(clubId) end
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_ClubFinder.SendChatWhisper)
 ---@param clubFinderGUID WOWGUID
 ---@param playerGUID WOWGUID
----@param applicantType number|Enum.ClubFinderRequestType
+---@param applicantType Enum.ClubFinderRequestType
 ---@param name string
 function C_ClubFinder.SendChatWhisper(clubFinderGUID, playerGUID, applicantType, name) end
 

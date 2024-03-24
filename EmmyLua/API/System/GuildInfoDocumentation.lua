@@ -13,6 +13,13 @@ function C_GuildInfo.CanSpeakInGuildChat() end
 ---@return boolean canViewOfficerNote
 function C_GuildInfo.CanViewOfficerNote() end
 
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_GuildInfo.Demote)
+---@param name string
+function C_GuildInfo.Demote(name) end
+
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_GuildInfo.Disband)
+function C_GuildInfo.Disband() end
+
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_GuildInfo.GetGuildNewsInfo)
 ---@param index number
 ---@return GuildNewsInfo newsInfo
@@ -36,6 +43,10 @@ function C_GuildInfo.GuildControlGetRankFlags(rankOrder) end
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_GuildInfo.GuildRoster)
 function C_GuildInfo.GuildRoster() end
 
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_GuildInfo.Invite)
+---@param name string
+function C_GuildInfo.Invite(name) end
+
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_GuildInfo.IsGuildOfficer)
 ---@return boolean isOfficer
 function C_GuildInfo.IsGuildOfficer() end
@@ -46,10 +57,17 @@ function C_GuildInfo.IsGuildOfficer() end
 ---@return boolean isGuildRankAssignmentAllowed
 function C_GuildInfo.IsGuildRankAssignmentAllowed(guid, rankOrder) end
 
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_GuildInfo.Leave)
+function C_GuildInfo.Leave() end
+
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_GuildInfo.MemberExistsByName)
 ---@param name string
 ---@return boolean exists
 function C_GuildInfo.MemberExistsByName(name) end
+
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_GuildInfo.Promote)
+---@param name string
+function C_GuildInfo.Promote(name) end
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_GuildInfo.QueryGuildMemberRecipes)
 ---@param guildMemberGUID WOWGUID
@@ -72,11 +90,23 @@ function C_GuildInfo.RemoveFromGuild(guid) end
 ---@param rankOrder number
 function C_GuildInfo.SetGuildRankOrder(guid, rankOrder) end
 
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_GuildInfo.SetLeader)
+---@param name string
+function C_GuildInfo.SetLeader(name) end
+
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_GuildInfo.SetMOTD)
+---@param motd string
+function C_GuildInfo.SetMOTD(motd) end
+
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_GuildInfo.SetNote)
 ---@param guid WOWGUID
 ---@param note string
 ---@param isPublic boolean
 function C_GuildInfo.SetNote(guid, note, isPublic) end
+
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_GuildInfo.Uninvite)
+---@param name string
+function C_GuildInfo.Uninvite(name) end
 
 ---@class GuildNewsInfo
 ---@field isSticky boolean
