@@ -316,13 +316,16 @@ function C_WorldLootObject.GetCurrentWorldLootObjectSwapInventoryType() end
 function C_WorldLootObject.GetWorldLootObjectInfo() end
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_WorldLootObject.IsWorldLootObject)
-function C_WorldLootObject.IsWorldLootObject() end
+---@param nameplateString string
+---@return boolean isWorldLootObject
+function C_WorldLootObject.IsWorldLootObject(nameplateString) end
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_WorldLootObject.IsWorldLootObjectInRange)
 function C_WorldLootObject.IsWorldLootObjectInRange() end
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_WorldLootObject.OnWorldLootObjectClick)
-function C_WorldLootObject.OnWorldLootObjectClick() end
+---@param nameplateString string
+function C_WorldLootObject.OnWorldLootObjectClick(nameplateString) end
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_WowLabsDataManager.PushCircleInfoToLua)
 function C_WowLabsDataManager.PushCircleInfoToLua() end
