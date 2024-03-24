@@ -5820,8 +5820,6 @@ Enum.ZoneControlState = {
 	State2 = 1,
 }
 
-}
-
 Constants = {
 	AuctionConstants = {
 		DEFAULT_AUCTION_PRICE_MULTIPLIER = 1.5,

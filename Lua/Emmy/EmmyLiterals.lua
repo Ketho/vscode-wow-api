@@ -63,7 +63,6 @@ function EmmyLiterals:GetEnumTable()
 		end
 		table.insert(t, "}\n")
 	end
-	table.insert(t, "}\n")
 
 	table.insert(t, "Constants = {")
 	for _, name in pairs(Util:SortTable(Constants)) do
