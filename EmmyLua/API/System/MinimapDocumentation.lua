@@ -60,7 +60,7 @@ function C_Minimap.GetUiMapID() end
 function C_Minimap.GetViewRadius() end
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_Minimap.IsFilteredOut)
----@param filterType number|Enum.MinimapTrackingFilter
+---@param filterType Enum.MinimapTrackingFilter
 ---@return boolean isFiltered
 function C_Minimap.IsFilteredOut(filterType) end
 

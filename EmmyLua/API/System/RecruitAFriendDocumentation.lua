@@ -13,7 +13,7 @@ function C_RecruitAFriend.CanSummonFriend(guid) end
 function C_RecruitAFriend.ClaimActivityReward(activityID, acceptanceID) end
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_RecruitAFriend.ClaimNextReward)
----@param rafVersion? number|Enum.RecruitAFriendRewardsVersion
+---@param rafVersion? Enum.RecruitAFriendRewardsVersion
 ---@return boolean success
 function C_RecruitAFriend.ClaimNextReward(rafVersion) end
 

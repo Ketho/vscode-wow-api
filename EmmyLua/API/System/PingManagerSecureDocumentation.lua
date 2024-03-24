@@ -28,7 +28,7 @@ function C_PingSecure.GetTargetWorldPing(mousePosX, mousePosY) end
 function C_PingSecure.GetTargetWorldPingAndSend() end
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_PingSecure.SendPing)
----@param type number|Enum.PingSubjectType
+---@param type Enum.PingSubjectType
 ---@param target? WOWGUID
 ---@return Enum.PingResult result
 function C_PingSecure.SendPing(type, target) end

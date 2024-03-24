@@ -37,7 +37,7 @@ function C_EditMode.OnLayoutDeleted(deletedLayoutIndex) end
 function C_EditMode.SaveLayouts(saveInfo) end
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_EditMode.SetAccountSetting)
----@param setting number|Enum.EditModeAccountSetting
+---@param setting Enum.EditModeAccountSetting
 ---@param value number
 function C_EditMode.SetAccountSetting(setting, value) end
 

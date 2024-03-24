@@ -221,7 +221,7 @@ function C_Item.GetItemInfo(itemInfo) end
 function C_Item.GetItemInfoInstant(itemInfo) end
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_Item.GetItemInventorySlotInfo)
----@param inventorySlot number|Enum.InventoryType
+---@param inventorySlot Enum.InventoryType
 ---@return string result
 function C_Item.GetItemInventorySlotInfo(inventorySlot) end
 

@@ -27,7 +27,7 @@ function C_TooltipInfo.GetArtifactPowerByID(powerID) end
 function C_TooltipInfo.GetAzeriteEssence(essenceID, rank) end
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_TooltipInfo.GetAzeriteEssenceSlot)
----@param slot number|Enum.AzeriteEssenceSlot
+---@param slot Enum.AzeriteEssenceSlot
 ---@return TooltipData data
 function C_TooltipInfo.GetAzeriteEssenceSlot(slot) end
 
@@ -45,13 +45,13 @@ function C_TooltipInfo.GetAzeritePower(itemID, itemLevel, powerID, owningItemLin
 function C_TooltipInfo.GetBackpackToken(index) end
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_TooltipInfo.GetBagItem)
----@param bagIndex number|Enum.BagIndex
+---@param bagIndex Enum.BagIndex
 ---@param slotIndex number
 ---@return TooltipData data
 function C_TooltipInfo.GetBagItem(bagIndex, slotIndex) end
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_TooltipInfo.GetBagItemChild)
----@param bagIndex number|Enum.BagIndex
+---@param bagIndex Enum.BagIndex
 ---@param slotIndex number
 ---@param equipSlotIndex number
 ---@return TooltipData data

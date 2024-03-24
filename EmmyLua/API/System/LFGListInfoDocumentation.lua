@@ -25,7 +25,7 @@ function C_LFGList.CopyActiveEntryInfoToCreationFields() end
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_LFGList.DoesEntryTitleMatchPrebuiltTitle)
 ---@param activityID number
 ---@param groupID number
----@param playstyle? number|Enum.LFGEntryPlaystyle
+---@param playstyle? Enum.LFGEntryPlaystyle
 ---@return boolean matches
 function C_LFGList.DoesEntryTitleMatchPrebuiltTitle(activityID, groupID, playstyle) end
 
@@ -95,7 +95,7 @@ function C_LFGList.GetLfgCategoryInfo(categoryID) end
 function C_LFGList.GetOwnedKeystoneActivityAndGroupAndLevel(getTimewalking) end
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_LFGList.GetPlaystyleString)
----@param playstyle number|Enum.LFGEntryPlaystyle
+---@param playstyle Enum.LFGEntryPlaystyle
 ---@param activityInfo GroupFinderActivityInfo
 ---@return string playstyleString
 function C_LFGList.GetPlaystyleString(playstyle, activityInfo) end
@@ -135,7 +135,7 @@ function C_LFGList.Search(categoryID, filter, preferredFilters, languageFilter, 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_LFGList.SetEntryTitle)
 ---@param activityID number
 ---@param groupID number
----@param playstyle? number|Enum.LFGEntryPlaystyle
+---@param playstyle? Enum.LFGEntryPlaystyle
 function C_LFGList.SetEntryTitle(activityID, groupID, playstyle) end
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_LFGList.SetSearchToActivity)

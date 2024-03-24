@@ -117,7 +117,7 @@ function C_PvP.GetBattlefieldVehicleInfo(vehicleIndex, uiMapID) end
 function C_PvP.GetBattlefieldVehicles(uiMapID) end
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_PvP.GetBrawlRewards)
----@param brawlType number|Enum.BrawlType
+---@param brawlType Enum.BrawlType
 ---@return number honor
 ---@return number experience
 ---@return BattlefieldItemReward[]? itemRewards

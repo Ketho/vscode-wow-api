@@ -15,12 +15,12 @@ function C_Ping.GetCooldownInfo() end
 function C_Ping.GetDefaultPingOptions() end
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_Ping.GetTextureKitForType)
----@param type number|Enum.PingSubjectType
+---@param type Enum.PingSubjectType
 ---@return textureKit uiTextureKitID
 function C_Ping.GetTextureKitForType(type) end
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_Ping.SendMacroPing)
----@param type? number|Enum.PingSubjectType
+---@param type? Enum.PingSubjectType
 ---@param targetToken? string
 function C_Ping.SendMacroPing(type, targetToken) end
 

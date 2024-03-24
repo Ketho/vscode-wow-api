@@ -149,7 +149,7 @@ function C_Calendar.EventGetSelectedInvite() end
 function C_Calendar.EventGetStatusOptions(eventIndex) end
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_Calendar.EventGetTextures)
----@param eventType number|Enum.CalendarEventType
+---@param eventType Enum.CalendarEventType
 ---@return CalendarEventTextureInfo[] textures
 function C_Calendar.EventGetTextures(eventType) end
 
@@ -204,7 +204,7 @@ function C_Calendar.EventSetDescription(description) end
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_Calendar.EventSetInviteStatus)
 ---@param eventIndex number
----@param status number|Enum.CalendarStatus
+---@param status Enum.CalendarStatus
 function C_Calendar.EventSetInviteStatus(eventIndex, status) end
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_Calendar.EventSetLocked)
@@ -228,7 +228,7 @@ function C_Calendar.EventSetTime(hour, minute) end
 function C_Calendar.EventSetTitle(title) end
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_Calendar.EventSetType)
----@param typeIndex number|Enum.CalendarEventType
+---@param typeIndex Enum.CalendarEventType
 function C_Calendar.EventSetType(typeIndex) end
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_Calendar.EventSignUp)

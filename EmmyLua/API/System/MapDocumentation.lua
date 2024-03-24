@@ -65,7 +65,7 @@ function C_Map.GetMapBannersForMap(uiMapID) end
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_Map.GetMapChildrenInfo)
 ---@param uiMapID number
----@param mapType? number|Enum.UIMapType
+---@param mapType? Enum.UIMapType
 ---@param allDescendants? boolean
 ---@return UiMapDetails[] info
 function C_Map.GetMapChildrenInfo(uiMapID, mapType, allDescendants) end

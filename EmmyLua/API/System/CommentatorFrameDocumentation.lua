@@ -376,13 +376,13 @@ function C_Commentator.GetTrackedSpellID(indirectSpellID) end
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_Commentator.GetTrackedSpells)
 ---@param teamIndex number
 ---@param playerIndex number
----@param category number|Enum.TrackedSpellCategory
+---@param category Enum.TrackedSpellCategory
 ---@return number[]? spells
 function C_Commentator.GetTrackedSpells(teamIndex, playerIndex, category) end
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_Commentator.GetTrackedSpellsByUnit)
 ---@param unitToken UnitToken
----@param category number|Enum.TrackedSpellCategory
+---@param category Enum.TrackedSpellCategory
 ---@return number[]? spells
 function C_Commentator.GetTrackedSpellsByUnit(unitToken, category) end
 
@@ -427,14 +427,14 @@ function C_Commentator.IsTrackedOffensiveAura(spellID) end
 ---@param teamIndex number
 ---@param playerIndex number
 ---@param spellID number
----@param category number|Enum.TrackedSpellCategory
+---@param category Enum.TrackedSpellCategory
 ---@return boolean isTracked
 function C_Commentator.IsTrackedSpell(teamIndex, playerIndex, spellID, category) end
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_Commentator.IsTrackedSpellByUnit)
 ---@param unitToken UnitToken
 ---@param spellID number
----@param category number|Enum.TrackedSpellCategory
+---@param category Enum.TrackedSpellCategory
 ---@return boolean isTracked
 function C_Commentator.IsTrackedSpellByUnit(unitToken, spellID, category) end
 

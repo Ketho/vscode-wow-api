@@ -52,5 +52,5 @@ function SetCursor(name) end
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_SetCursorVirtualItem)
 ---@param itemInfo ItemInfo
----@param cursorType number|Enum.UICursorType
+---@param cursorType Enum.UICursorType
 function SetCursorVirtualItem(itemInfo, cursorType) end

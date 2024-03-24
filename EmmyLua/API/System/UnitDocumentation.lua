@@ -206,7 +206,7 @@ function SetPortraitTextureFromCreatureDisplayID(textureObject, creatureDisplayI
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_SetUnitCursorTexture)
 ---@param textureObject SimpleTexture
 ---@param unit UnitToken
----@param style? number|Enum.CursorStyle
+---@param style? Enum.CursorStyle
 ---@param includeLowPriority? boolean
 ---@return boolean hasCursor
 function SetUnitCursorTexture(textureObject, unit, style, includeLowPriority) end
@@ -764,7 +764,7 @@ function UnitPVPName(unit) end
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_UnitPartialPower)
 ---@param unitToken UnitToken
----@param powerType? number|Enum.PowerType Default = NumPowerTypes
+---@param powerType? Enum.PowerType Default = NumPowerTypes
 ---@param unmodified? boolean Default = false
 ---@return number partialPower
 function UnitPartialPower(unitToken, powerType, unmodified) end
@@ -806,7 +806,7 @@ function UnitPosition(unit) end
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_UnitPower)
 ---@param unitToken UnitToken
----@param powerType? number|Enum.PowerType Default = NumPowerTypes
+---@param powerType? Enum.PowerType Default = NumPowerTypes
 ---@param unmodified? boolean Default = false
 ---@return number power
 function UnitPower(unitToken, powerType, unmodified) end
@@ -826,13 +826,13 @@ function UnitPowerBarID(unitToken) end
 function UnitPowerBarTimerInfo(unit, index) end
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_UnitPowerDisplayMod)
----@param powerType number|Enum.PowerType
+---@param powerType Enum.PowerType
 ---@return number displayMod
 function UnitPowerDisplayMod(powerType) end
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_UnitPowerMax)
 ---@param unitToken UnitToken
----@param powerType? number|Enum.PowerType Default = NumPowerTypes
+---@param powerType? Enum.PowerType Default = NumPowerTypes
 ---@param unmodified? boolean Default = false
 ---@return number maxPower
 function UnitPowerMax(unitToken, powerType, unmodified) end
@@ -920,7 +920,7 @@ function UnitSetRole(unit, roleStr) end
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_UnitSetRoleEnum)
 ---@param unit UnitToken
----@param role? number|Enum.LFGRole
+---@param role? Enum.LFGRole
 ---@return boolean result
 function UnitSetRoleEnum(unit, role) end
 
