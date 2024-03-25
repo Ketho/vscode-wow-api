@@ -1,7 +1,15 @@
 ---@meta
 ---@deprecated
 --- Deprecated by [C_CVar.GetCVarInfo](https://warcraft.wiki.gg/wiki/API_C_CVar.GetCVarInfo)
-function GetCVarInfo() end
+---@param name string
+---@return string value
+---@return string defaultValue
+---@return boolean isStoredServerAccount
+---@return boolean isStoredServerCharacter
+---@return boolean isLockedFromUser
+---@return boolean isSecure
+---@return boolean isReadOnly
+function GetCVarInfo(name) end
 
 ---@deprecated
 --- Deprecated by [C_AddOns.EnableAddOn](https://warcraft.wiki.gg/wiki/API_C_AddOns.EnableAddOn)
@@ -38,11 +46,13 @@ function IsAddOnLoaded(name) end
 
 ---@deprecated
 --- Deprecated by [C_AddOns.EnableAllAddOns](https://warcraft.wiki.gg/wiki/API_C_AddOns.EnableAllAddOns)
-function EnableAllAddOns() end
+---@param character? string
+function EnableAllAddOns(character) end
 
 ---@deprecated
 --- Deprecated by [C_AddOns.DisableAllAddOns](https://warcraft.wiki.gg/wiki/API_C_AddOns.DisableAllAddOns)
-function DisableAllAddOns() end
+---@param character? string
+function DisableAllAddOns(character) end
 
 ---@deprecated
 --- Deprecated by [C_AddOns.GetAddOnInfo](https://warcraft.wiki.gg/wiki/API_C_AddOns.GetAddOnInfo)
@@ -92,7 +102,8 @@ function IsAddonVersionCheckEnabled() end
 
 ---@deprecated
 --- Deprecated by [C_AddOns.SetAddonVersionCheck](https://warcraft.wiki.gg/wiki/API_C_AddOns.SetAddonVersionCheck)
-function SetAddonVersionCheck(boolean) end
+---@param enabled boolean
+function SetAddonVersionCheck(enabled) end
 
 ---@deprecated
 --- Deprecated by [C_AddOns.IsAddOnLoadOnDemand](https://warcraft.wiki.gg/wiki/API_C_AddOns.IsAddOnLoadOnDemand)

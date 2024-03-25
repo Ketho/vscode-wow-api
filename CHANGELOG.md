@@ -1,8 +1,7 @@
 # Change Log
 
-### Known issues
-- The Classic (TBC) API is not supported ([#13](https://github.com/Ketho/vscode-wow-api/issues/13))
-- Frame templates are not completely supported, only BackdropTemplate ([#15](https://github.com/Ketho/vscode-wow-api/issues/15)) 
+## [0.13.5] - 2024-03-25
+- Fixed Blizzard_Deprecated annotations for UnitAura and similar
 
 ## [0.13.4] - 2024-03-24
 - 🎉 Update to patch 10.2.6 (53877)
@@ -450,6 +449,7 @@ Libraries
 ### Added
 - 🚧 Wip: Development work
 
+[0.13.5]: https://github.com/Ketho/vscode-wow-api/releases/tag/0.13.5
 [0.13.4]: https://github.com/Ketho/vscode-wow-api/releases/tag/0.13.4
 [0.13.3]: https://github.com/Ketho/vscode-wow-api/releases/tag/0.13.3
 [0.13.2]: https://github.com/Ketho/vscode-wow-api/releases/tag/0.13.2

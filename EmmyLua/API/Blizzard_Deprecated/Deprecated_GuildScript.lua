@@ -16,6 +16,7 @@ function GuildPromote(name) end
 
 ---@deprecated
 --- Deprecated by [C_GuildInfo.Demote](https://warcraft.wiki.gg/wiki/API_C_GuildInfo.Demote)
+---@param name string
 function GuildDemote(name) end
 
 ---@deprecated
