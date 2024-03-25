@@ -18,7 +18,7 @@
 ---@alias textureAtlas string
 ---@alias textureKit string
 ---@alias time_t number
----@alias uiAddon number|string
+---@alias uiAddon string|number
 ---@alias uiUnit number
 ---@alias UnitToken UnitId
 ---@alias WeeklyRewardItemDBID string
