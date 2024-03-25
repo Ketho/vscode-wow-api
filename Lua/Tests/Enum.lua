@@ -11,3 +11,10 @@ local quality = C_Item.GetItemQualityByID(1234)
 if quality == Enum.ItemQuality.Epic then
     print("epic")
 end
+
+---@param value Enum.ItemGemColor 
+local function foo(value) end
+
+-- flag-type enums
+local bitfield = bit.bor(Enum.ItemGemColor.Meta, Enum.ItemGemColor.Red)
+foo(bitfield)
