@@ -32,6 +32,18 @@ function ColorSelect:SetScript(scriptType, handler) end
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_ColorSelect_ClearColorWheelTexture)
 function ColorSelect:ClearColorWheelTexture() end
 
+---[Documentation](https://warcraft.wiki.gg/wiki/API_ColorSelect_GetColorAlpha)
+---@return number alpha
+function ColorSelect:GetColorAlpha() end
+
+---[Documentation](https://warcraft.wiki.gg/wiki/API_ColorSelect_GetColorAlphaTexture)
+---@return SimpleTexture texture
+function ColorSelect:GetColorAlphaTexture() end
+
+---[Documentation](https://warcraft.wiki.gg/wiki/API_ColorSelect_GetColorAlphaThumbTexture)
+---@return SimpleTexture texture
+function ColorSelect:GetColorAlphaThumbTexture() end
+
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_ColorSelect_GetColorHSV)
 ---@return number hsvX
 ---@return number hsvY
@@ -59,6 +71,18 @@ function ColorSelect:GetColorWheelTexture() end
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_ColorSelect_GetColorWheelThumbTexture)
 ---@return SimpleTexture texture
 function ColorSelect:GetColorWheelThumbTexture() end
+
+---[Documentation](https://warcraft.wiki.gg/wiki/API_ColorSelect_SetColorAlpha)
+---@param alpha number
+function ColorSelect:SetColorAlpha(alpha) end
+
+---[Documentation](https://warcraft.wiki.gg/wiki/API_ColorSelect_SetColorAlphaTexture)
+---@param texture SimpleTexture
+function ColorSelect:SetColorAlphaTexture(texture) end
+
+---[Documentation](https://warcraft.wiki.gg/wiki/API_ColorSelect_SetColorAlphaThumbTexture)
+---@param texture TextureAsset
+function ColorSelect:SetColorAlphaThumbTexture(texture) end
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_ColorSelect_SetColorHSV)
 ---@param hsvX number
