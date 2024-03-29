@@ -189,6 +189,10 @@ function Frame:GetNumRegions() end
 ---@return boolean propagate
 function Frame:GetPropagateKeyboardInput() end
 
+---[Documentation](https://warcraft.wiki.gg/wiki/API_Frame_GetRaisedFrameLevel)
+---@return number frameLevel
+function Frame:GetRaisedFrameLevel() end
+
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_Frame_GetRegions)
 ---@return ScriptObject scriptObject
 function Frame:GetRegions() end
