@@ -20,13 +20,7 @@ function lib:IconCallback(event, name, key, value)
 end
 
 ---@param name string
----@param object LibDBIcon.dataObject
----@param db LibDBIcon.button.DB
-local function createButton(name, object, db)
-end
-
----@param name string
----@param object LibDBIcon.dataObject
+---@param object LibDataBroker.DataObject
 ---@param db? LibDBIcon.button.DB
 function lib:Register(name, object, db)
 end
