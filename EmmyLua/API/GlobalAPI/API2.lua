@@ -1596,7 +1596,7 @@ function GetCategoryList() end
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_GetCategoryNumAchievements)
 ---@param categoryId number
----@param includeAll boolean
+---@param includeAll boolean?
 ---@return number total
 ---@return number completed
 ---@return number incompleted
