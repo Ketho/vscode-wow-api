@@ -111,6 +111,9 @@ export async function activate(context: vscode.ExtensionContext) {
 	const diag_globals: string[] = config.get("diagnostics.globals")!;
 
 	vscode.languages.onDidChangeDiagnostics((event: vscode.DiagnosticChangeEvent) => {
+		if (!vscode.workspace.getConfiguration("wowAPI").get("autoAddGlobals")) {
+			return;
+		}
 		let hasUpdate = false;
 		event.uris.forEach(function(uri) {
 			let diags = vscode.languages.getDiagnostics(uri);
