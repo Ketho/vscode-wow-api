@@ -12,13 +12,13 @@ function AceGUIInteractiveLabel:SetText(text) end
 function AceGUIInteractiveLabel:SetColor(r, g, b) end
 
 ---[Documentation](https://www.wowace.com/projects/ace3/pages/ace-gui-3-0-widgets#title-2-8-1)
----@param font string
+---@param font FontFile
 ---@param height number
 ---@param flags string?
 function AceGUIInteractiveLabel:SetFont(font, height, flags) end
 
 ---[Documentation](https://www.wowace.com/projects/ace3/pages/ace-gui-3-0-widgets#title-2-8-1)
----@param font? Font|string
+---@param font? FontObject
 function AceGUIInteractiveLabel:SetFontObject(font) end
 
 ---[Documentation](https://www.wowace.com/projects/ace3/pages/ace-gui-3-0-widgets#title-2-8-1)

@@ -131,13 +131,13 @@ function FontString:SetAlphaGradient(start, length) end
 function FontString:SetFixedColor(fixedColor) end
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_FontString_SetFont)
----@param fontFile string
+---@param fontFile FontFile
 ---@param fontHeight uiUnit
 ---@param flags? TBFFlags
 function FontString:SetFont(fontFile, fontHeight, flags) end
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_FontString_SetFontObject)
----@param font? SimpleFont|FontObject
+---@param font? FontObject
 function FontString:SetFontObject(font) end
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_FontString_SetFormattedText)
