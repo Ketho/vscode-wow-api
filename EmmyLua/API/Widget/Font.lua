@@ -61,13 +61,13 @@ function Font:GetTextColor() end
 function Font:SetAlpha(alpha) end
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_Font_SetFont)
----@param fontFile string
+---@param fontFile FontFile
 ---@param height uiFontHeight
 ---@param flags TBFFlags
 function Font:SetFont(fontFile, height, flags) end
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_Font_SetFontObject)
----@param font? SimpleFont|FontObject
+---@param font? FontObject
 function Font:SetFontObject(font) end
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_Font_SetIndentedWordWrap)

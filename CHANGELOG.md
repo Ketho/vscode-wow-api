@@ -1,5 +1,21 @@
 # Change Log
 
+## [0.13.6] - 2024-04-24
+- PR [#140](https://github.com/Ketho/vscode-wow-api/pull/140) Define `WOW_PROJECT_CATACLYSM_CLASSIC`
+- PR [#139](https://github.com/Ketho/vscode-wow-api/pull/139) Add option `autoAddGlobals`
+
+![](img/changelog/0_13_6_autoAddGlobals.png)
+
+- PR [#138](https://github.com/Ketho/vscode-wow-api/pull/138) fix arguments of `GetCategoryNumAchievements`
+- Updated `:SetFont` to use `FontFile|string` types.
+
+![](img/changelog/0_13_6_font1.png)
+
+- Updated `:SetFontObject` to use `FontObject|string` types. Completion only works as a string type but it also accepts (global) Font objects, so both `GameFontNormal` and `"GameFontNormal"` are valid.
+
+![](img/changelog/0_13_6_font2.png)
+
+
 ## [0.13.5] - 2024-03-25
 - Fixed Blizzard_Deprecated annotations for UnitAura and similar
 
@@ -449,6 +465,7 @@ Libraries
 ### Added
 - 🚧 Wip: Development work
 
+[0.13.6]: https://github.com/Ketho/vscode-wow-api/releases/tag/0.13.6
 [0.13.5]: https://github.com/Ketho/vscode-wow-api/releases/tag/0.13.5
 [0.13.4]: https://github.com/Ketho/vscode-wow-api/releases/tag/0.13.4
 [0.13.3]: https://github.com/Ketho/vscode-wow-api/releases/tag/0.13.3

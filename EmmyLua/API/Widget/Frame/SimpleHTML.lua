@@ -73,14 +73,14 @@ function SimpleHTML:GetTextData() end
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_SimpleHTML_SetFont)
 ---@param textType HTMLTextType
----@param fontFile string
+---@param fontFile FontFile
 ---@param height uiFontHeight
 ---@param flags TBFFlags
 function SimpleHTML:SetFont(textType, fontFile, height, flags) end
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_SimpleHTML_SetFontObject)
 ---@param textType HTMLTextType
----@param font SimpleFont|FontObject
+---@param font FontObject
 function SimpleHTML:SetFontObject(textType, font) end
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_SimpleHTML_SetHyperlinkFormat)

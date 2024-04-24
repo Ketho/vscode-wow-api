@@ -251,14 +251,14 @@ function EditBox:SetEnabled(enabled) end
 function EditBox:SetFocus() end
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_EditBox_SetFont)
----@param fontFile string
+---@param fontFile FontFile
 ---@param height uiFontHeight
 ---@param flags TBFFlags
 ---@return boolean success
 function EditBox:SetFont(fontFile, height, flags) end
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_EditBox_SetFontObject)
----@param font SimpleFont|FontObject
+---@param font FontObject
 function EditBox:SetFontObject(font) end
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_EditBox_SetHighlightColor)
