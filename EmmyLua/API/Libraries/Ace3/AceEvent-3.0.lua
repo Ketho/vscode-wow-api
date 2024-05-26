@@ -49,3 +49,7 @@ function AceEvent:Embed(target) end
 --- ---
 ---[Documentation](https://www.wowace.com/projects/ace3/pages/api/ace-event-3-0)
 function AceEvent:OnEmbedDisable(target) end
+
+function AceEvent:UnregisterAllEvents() end
+
+function AceEvent:UnregisterAllMessages() end
