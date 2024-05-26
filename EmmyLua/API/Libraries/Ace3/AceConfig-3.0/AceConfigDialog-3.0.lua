@@ -1,6 +1,15 @@
 ---@meta
 ---@class AceConfigDialog-3.0
+---@field OpenFrames table<string, table>
+---@field Status table<string, table>
+---@field tooltip GameTooltip
 local AceConfigDialog = {}
+
+---@class AceConfigDialog-3.0.frame : Frame
+---@field apps table
+---@field closing table
+---@field closeAllOverride table
+AceConfigDialog.frame = {}
 
 ---@paramsig appName, name, parent, ...
 --- Add an option table into the Blizzard Interface Options panel
