@@ -14,7 +14,6 @@ local AceTimer = {}
 function AceTimer:CancelAllTimers() end
 
 ---@param id AceTimerObj The id of the timer, as returned by `:ScheduleTimer` or `:ScheduleRepeatingTimer`
---- ---
 ---[Documentation](https://www.wowace.com/projects/ace3/pages/api/ace-timer-3-0#title-2)
 function AceTimer:CancelTimer(id) end
 
@@ -22,20 +21,17 @@ function AceTimer:CancelTimer(id) end
 ---@param delay number Delay for the timer, in seconds.
 ---@param ... any An optional, unlimited amount of arguments to pass to the callback function.
 ---@return AceTimerObj
---- ---
 ---[Documentation](https://www.wowace.com/projects/ace3/pages/api/ace-timer-3-0#title-3)
 function AceTimer:ScheduleRepeatingTimer(func, delay, ...) end
 
----@param func function callback Callback function for the timer pulse (funcref or method name).
+---@param func function|string callback Callback function for the timer pulse (funcref or method name).
 ---@param delay number Delay for the timer, in seconds.
 ---@param ... any An optional, unlimited amount of arguments to pass to the callback function.
 ---@return AceTimerObj
---- ---
 ---[Documentation](https://www.wowace.com/projects/ace3/pages/api/ace-timer-3-0#title-4)
 function AceTimer:ScheduleTimer(func, delay, ...) end
 
 ---@param id AceTimerObj The id of the timer, as returned by `:ScheduleTimer` or `:ScheduleRepeatingTimer`
 ---@return number -- The time left on the timer.
---- ---
 ---[Documentation](https://www.wowace.com/projects/ace3/pages/api/ace-timer-3-0#title-5)
 function AceTimer:TimeLeft(id) end
