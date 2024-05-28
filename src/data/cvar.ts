@@ -2268,6 +2268,12 @@ export const data: CVarInterface = {
 		scope: "Character",
 		help: "The info for Add Friend has been shown",
 	},
+	addonloaddebugging: {
+		name: "addonLoadDebugging",
+		default: "0",
+		category: 0,
+		help: "0: Disable addon load logging (Default), 1: Enable addon load logging to AddOnLoad.log.",
+	},
 	advflykeyboardmaxpitchfactor: {
 		name: "advFlyKeyboardMaxPitchFactor",
 		default: "5.0",
@@ -4845,6 +4851,13 @@ export const data: CVarInterface = {
 		category: 1,
 		help: "Doodad level of detail scale",
 	},
+	dragonridingracesfilter: {
+		name: "dragonRidingRacesFilter",
+		default: "0",
+		category: 4,
+		scope: "Account",
+		help: "If enabled, dragonriding races will display on the world map at zone level.",
+	},
 	dynamiclod: {
 		name: "dynamicLod",
 		default: "1",
@@ -5589,7 +5602,7 @@ export const data: CVarInterface = {
 	},
 	gxmtdecals: {
 		name: "gxMTDecals",
-		default: "1",
+		default: "0",
 		category: 1,
 		help: "Sort and Render decal passes in parallel",
 	},
@@ -6003,6 +6016,27 @@ export const data: CVarInterface = {
 		scope: "Character",
 		help: "Whether to automatically join a party while looking for a group",
 	},
+	lfglistadvancedfilterminrating: {
+		name: "lfgListAdvancedFilterMinRating",
+		default: "0",
+		category: 4,
+		scope: "Character",
+		help: "Minimum mythic plus rating of the leader of the group to find",
+	},
+	lfglistadvancedfilters: {
+		name: "lfgListAdvancedFilters",
+		default: "0",
+		category: 4,
+		scope: "Character",
+		help: "Advanced LFG filters for dungeons that are booleans",
+	},
+	lfglistadvancedfiltersactivities: {
+		name: "lfgListAdvancedFiltersActivities",
+		default: "",
+		category: 4,
+		scope: "Character",
+		help: "list of activity IDs to filter for",
+	},
 	lfglistsearchlanguages: {
 		name: "lfgListSearchLanguages",
 		default: "0",
@@ -6016,6 +6050,13 @@ export const data: CVarInterface = {
 		category: 4,
 		scope: "Account",
 		help: "Stores what roles the player is willing to take on.",
+	},
+	loaddeprecationfallbacks: {
+		name: "loadDeprecationFallbacks",
+		default: "1",
+		category: 4,
+		secure: true,
+		help: "When enabled, Deprecation_* addons are loaded to provide fallbacks for deprecated script APIs.",
 	},
 	locale: {
 		name: "locale",
@@ -6966,6 +7007,20 @@ export const data: CVarInterface = {
 		scope: "Character",
 		help: "Bitfield for which type filters are applied in the pet journal",
 	},
+	petstableshowexoticonly: {
+		name: "petStableShowExoticOnly",
+		default: "0",
+		category: 4,
+		scope: "Account",
+		help: "Filter value for hunter pet stable. Will only show exotic pets in stable if true",
+	},
+	petstablesort: {
+		name: "petStableSort",
+		default: "1",
+		category: 4,
+		scope: "Account",
+		help: "Sorting value for the hunter pet stable",
+	},
 	physicslevel: {
 		name: "physicsLevel",
 		default: "1",
@@ -7059,6 +7114,13 @@ export const data: CVarInterface = {
 		default: "0",
 		category: 0,
 		help: "Sets which core(s) WoW may execute on - changes require restart to take effect",
+	},
+	profanityfilter: {
+		name: "profanityFilter",
+		default: "1",
+		category: 4,
+		scope: "Character",
+		help: "Whether to enable mature language filtering",
 	},
 	professionaccessoryslotsexampleshown: {
 		name: "professionAccessorySlotsExampleShown",
@@ -7602,6 +7664,11 @@ export const data: CVarInterface = {
 		category: 4,
 		scope: "Character",
 		help: "Seen the alert indicating chat has been disabled by default. (UK AADC)",
+	},
+	seentimerunningfirstloginpopup: {
+		name: "seenTimerunningFirstLoginPopup",
+		default: "0",
+		category: 5,
 	},
 	serveralert: {
 		name: "serverAlert",

@@ -138,6 +138,11 @@
 ---|"Button5Up"
 ---|"Button5Down"
 
+---@alias JustifyHorizontal
+---|"LEFT"
+---|"RIGHT"
+---|"CENTER"
+
 ---@alias InventorySlots number
 
 ---@alias CScriptObject Object
@@ -165,3 +170,4 @@
 ---@alias FileAsset string
 ---@alias ModelAsset number FileID
 ---@alias LuaValueVariant table
+---@alias ConnectionIptype number 1=IPv4, 2=IPv6

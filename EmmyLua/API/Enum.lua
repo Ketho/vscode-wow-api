@@ -196,16 +196,17 @@ Enum.AuctionHouseFilter = {
 	None = 0,
 	UncollectedOnly = 1,
 	UsableOnly = 2,
-	UpgradesOnly = 3,
-	ExactMatch = 4,
-	PoorQuality = 5,
-	CommonQuality = 6,
-	UncommonQuality = 7,
-	RareQuality = 8,
-	EpicQuality = 9,
-	LegendaryQuality = 10,
-	ArtifactQuality = 11,
-	LegendaryCraftedItemOnly = 12,
+	CurrentExpansionOnly = 3,
+	UpgradesOnly = 4,
+	ExactMatch = 5,
+	PoorQuality = 6,
+	CommonQuality = 7,
+	UncommonQuality = 8,
+	RareQuality = 9,
+	EpicQuality = 10,
+	LegendaryQuality = 11,
+	ArtifactQuality = 12,
+	LegendaryCraftedItemOnly = 13,
 }
 
 ---@enum Enum.AuctionHouseFilterCategory
@@ -492,6 +493,7 @@ Enum.BattlePetSources = {
 	Tcg = 8,
 	PetStore = 9,
 	Discovery = 10,
+	TradingPost = 11,
 }
 
 ---@enum Enum.BattlePetSpeciesFlags
@@ -857,6 +859,28 @@ Enum.CampaignState = {
 Enum.CaptureBarWidgetFillDirectionType = {
 	RightToLeft = 0,
 	LeftToRight = 1,
+}
+
+---@enum Enum.Causeofdeath
+Enum.Causeofdeath = {
+	None = 0,
+	PlayerPvP = 1,
+	PlayerDuel = 2,
+	Creature = 3,
+	Falling = 4,
+	Drowning = 5,
+	Fatigue = 6,
+	Slime = 7,
+	Lava = 8,
+	Fire = 9,
+}
+
+---@enum Enum.CauseofdeathFlags
+Enum.CauseofdeathFlags = {
+	NoneNeeded = 0,
+	PlayerNameNeeded = 1,
+	CreatureNameNeeded = 2,
+	ZoneNameNeeded = 4,
 }
 
 ---@enum Enum.CharCustomizationType
@@ -1500,7 +1524,8 @@ Enum.CurrencyDestroyReason = {
 	BonusRoll = 9,
 	FactionConversion = 10,
 	FulfillCraftingOrder = 11,
-	Last = 12,
+	Script = 12,
+	Last = 13,
 }
 
 ---@enum Enum.CurrencyFlags
@@ -1547,6 +1572,7 @@ Enum.CurrencyFlagsB = {
 	CurrencyBBattlenetVirtualCurrency = 8,
 	FutureCurrencyFlag = 16,
 	CurrencyBDontDisplayIfZero = 32,
+	CurrencyBScaleMaxQuantityBySeasonWeeks = 64,
 }
 
 ---@enum Enum.CurrencyGainFlags
@@ -1555,6 +1581,7 @@ Enum.CurrencyGainFlags = {
 	BonusAward = 1,
 	DroppedFromDeath = 2,
 	FromAccountServer = 4,
+	Autotracking = 8,
 }
 
 ---@enum Enum.CurrencySource
@@ -2187,65 +2214,66 @@ Enum.GameMode = {
 ---@enum Enum.GameModeFeatureSetting
 Enum.GameModeFeatureSetting = {
 	MicroBarScale = 0,
-	MaxNameplateDistance = 1,
-	ScaleNonPlayerNamePlates = 2,
-	ForcedPartyFrameScale = 3,
-	CustomActionBarOverlayHeightOffset = 4,
-	CollectionsPanel = 5,
-	CharacterPanel = 6,
-	SpellbookPanel = 7,
-	TalentsPanel = 8,
-	AchievementsPanel = 9,
-	CommunitiesPanel = 10,
-	EncounterJournal = 11,
-	FinderPanel = 12,
-	Store = 13,
-	HelpPanel = 14,
-	Guilds = 15,
-	QuestLogMicroButton = 16,
-	ActionBarIconIntro = 17,
-	ReleaseSpiritGhost = 18,
-	DeleteItemConfirmation = 19,
-	ForcedChatLanguage = 20,
-	ChatLinkLevelToasts = 21,
-	Bags = 22,
-	PetBattles = 23,
-	PerksProgramActivityTracking = 24,
-	MaximizeWorldMap = 25,
-	WorldMapTrackingOptions = 26,
-	WorldMapTrackingPin = 27,
-	WorldMapHelpPlate = 28,
-	QuestLogPanel = 29,
-	QuestSuperTracking = 30,
-	MapPlunderstormCircle = 31,
-	SpectatingUI = 32,
-	TutorialFrame = 33,
-	UniversalNameplateOcclusion = 34,
-	InGameMailNotification = 35,
-	InGameCalendar = 36,
-	InGameTracking = 37,
-	InGameWhoList = 38,
-	FastAreaTriggerTick = 39,
-	IgnoreChrClassDisabledFlag = 40,
-	AllPlayersAreFastMovers = 41,
-	RaceAlteredFormsEnabled = 42,
-	FrontEndChat = 43,
-	InGameFriendsList = 44,
-	Macros = 45,
-	CompactRaidFrameManager = 46,
-	EditMode = 47,
-	InstanceDifficultyBanner = 48,
-	UserAddOns = 49,
-	UserScripts = 50,
-	CharacterCreateFullEnabled = 51,
-	CharacterCreateUseFixedBackgroundModel = 52,
-	ForceAlteredFormsOn = 53,
-	PlayerNamePlateDifficultyIcon = 54,
-	PlayerNamePlateAlternateHealthColor = 55,
-	TargetFrameBuffs = 56,
-	UnitFramePvPContextual = 57,
-	LandingPageFactionID = 58,
-	AlwaysAllowAlliedRaces = 59,
+	MaxUnitNameDistance = 1,
+	MaxNameplateDistance = 2,
+	ScaleNonPlayerNamePlates = 3,
+	ForcedPartyFrameScale = 4,
+	CustomActionBarOverlayHeightOffset = 5,
+	CollectionsPanel = 6,
+	CharacterPanel = 7,
+	SpellbookPanel = 8,
+	TalentsPanel = 9,
+	AchievementsPanel = 10,
+	CommunitiesPanel = 11,
+	EncounterJournal = 12,
+	FinderPanel = 13,
+	Store = 14,
+	HelpPanel = 15,
+	Guilds = 16,
+	QuestLogMicroButton = 17,
+	ActionBarIconIntro = 18,
+	ReleaseSpiritGhost = 19,
+	DeleteItemConfirmation = 20,
+	ForcedChatLanguage = 21,
+	ChatLinkLevelToasts = 22,
+	Bags = 23,
+	PetBattles = 24,
+	PerksProgramActivityTracking = 25,
+	MaximizeWorldMap = 26,
+	WorldMapTrackingOptions = 27,
+	WorldMapTrackingPin = 28,
+	WorldMapHelpPlate = 29,
+	QuestLogPanel = 30,
+	QuestSuperTracking = 31,
+	MapPlunderstormCircle = 32,
+	SpectatingUI = 33,
+	TutorialFrame = 34,
+	UniversalNameplateOcclusion = 35,
+	InGameMailNotification = 36,
+	InGameCalendar = 37,
+	InGameTracking = 38,
+	InGameWhoList = 39,
+	FastAreaTriggerTick = 40,
+	IgnoreChrClassDisabledFlag = 41,
+	AllPlayersAreFastMovers = 42,
+	RaceAlteredFormsEnabled = 43,
+	FrontEndChat = 44,
+	InGameFriendsList = 45,
+	Macros = 46,
+	CompactRaidFrameManager = 47,
+	EditMode = 48,
+	InstanceDifficultyBanner = 49,
+	UserAddOns = 50,
+	UserScripts = 51,
+	CharacterCreateFullEnabled = 52,
+	CharacterCreateUseFixedBackgroundModel = 53,
+	ForceAlteredFormsOn = 54,
+	PlayerNamePlateDifficultyIcon = 55,
+	PlayerNamePlateAlternateHealthColor = 56,
+	TargetFrameBuffs = 57,
+	UnitFramePvPContextual = 58,
+	LandingPageFactionID = 59,
+	AlwaysAllowAlliedRaces = 60,
 }
 
 ---@enum Enum.GamePadPowerLevel
@@ -2512,6 +2540,7 @@ Enum.GossipNpcOption = {
 	BarbersChoice = 52,
 	MajorFactionRenown = 53,
 	PersonalTabardVendor = 54,
+	ForgeMaster = 55,
 }
 
 ---@enum Enum.GossipNpcOptionDisplayFlags
@@ -2840,6 +2869,8 @@ Enum.ItemCreationContext = {
 	DungeonNormalJackpot = 101,
 	DungeonHeroicJackpot = 102,
 	DungeonMythicJackpot = 103,
+	Delves = 104,
+	Timerunning = 105,
 }
 
 ---@enum Enum.ItemDisplayTextDisplayStyle
@@ -2884,6 +2915,7 @@ Enum.ItemGemColor = {
 	Cypher = 8388608,
 	Tinker = 16777216,
 	Primordial = 33554432,
+	FutureUse = 67108864,
 }
 
 ---@enum Enum.ItemGemSubclass
@@ -2973,6 +3005,7 @@ Enum.ItemModification = {
 	CraftingReagentSlot_12 = 55,
 	CraftingReagentSlot_13 = 56,
 	CraftingReagentSlot_14 = 57,
+	Reforge = 58,
 }
 
 ---@enum Enum.ItemProfessionSubclass
@@ -3103,6 +3136,7 @@ Enum.ItemSocketType = {
 	Cypher = 23,
 	Tinker = 24,
 	Primordial = 25,
+	FutureUse = 26,
 }
 
 ---@enum Enum.ItemSoundType
@@ -3276,6 +3310,7 @@ Enum.JournalEncounterSectionFlags = {
 Enum.JournalInstanceFlags = {
 	Timewalker = 1,
 	HideUserSelectableDifficulty = 2,
+	DoNotDisplayInstance = 4,
 }
 
 ---@enum Enum.JournalLinkTypes
@@ -3310,6 +3345,10 @@ Enum.LFGListFilter = {
 	NotRecommended = 2,
 	PvE = 4,
 	PvP = 8,
+	Timerunning = 16,
+	CurrentExpansion = 32,
+	CurrentSeason = 64,
+	NotCurrentSeason = 128,
 }
 
 ---@enum Enum.LFGRole
@@ -3963,6 +4002,7 @@ Enum.PlayerInteractionType = {
 	JailersTowerBuffs = 63,
 	MajorFactionRenown = 64,
 	PersonalTabardVendor = 65,
+	ForgeMaster = 66,
 }
 
 ---@enum Enum.PlayerMentorshipApplicationResult
@@ -4079,7 +4119,8 @@ Enum.PowerType = {
 	AlternateQuest = 23,
 	AlternateEncounter = 24,
 	AlternateMount = 25,
-	NumPowerTypes = 26,
+	Balance = 26,
+	NumPowerTypes = 27,
 }
 
 ---@enum Enum.ProfTraitPerkNodeFlags
@@ -4397,6 +4438,14 @@ Enum.RecruitAFriendRewardsVersion = {
 	VersionThree = 3,
 }
 
+---@enum Enum.RegisterAddonMessagePrefixResult
+Enum.RegisterAddonMessagePrefixResult = {
+	Success = 0,
+	DuplicatePrefix = 1,
+	InvalidPrefix = 2,
+	MaxPrefixes = 3,
+}
+
 ---@enum Enum.RelativeContentDifficulty
 Enum.RelativeContentDifficulty = {
 	Trivial = 0,
@@ -4513,6 +4562,20 @@ Enum.ScrubStringFlags = {
 Enum.SelfResurrectOptionType = {
 	Spell = 0,
 	Item = 1,
+}
+
+---@enum Enum.SendAddonMessageResult
+Enum.SendAddonMessageResult = {
+	Success = 0,
+	InvalidPrefix = 1,
+	InvalidMessage = 2,
+	AddonMessageThrottle = 3,
+	InvalidChatType = 4,
+	NotInGroup = 5,
+	TargetRequired = 6,
+	InvalidChannel = 7,
+	ChannelThrottle = 8,
+	GeneralError = 9,
 }
 
 ---@enum Enum.SharedStringFlag
@@ -4771,6 +4834,7 @@ Enum.TooltipDataLineType = {
 	ToyFlavorText = 37,
 	ToyDescription = 38,
 	ToySource = 39,
+	GemSocketEnchantment = 40,
 }
 
 ---@enum Enum.TooltipDataType
@@ -5112,6 +5176,7 @@ Enum.TransmogSource = {
 	Achievement = 7,
 	Profession = 8,
 	NotValidForTransmog = 9,
+	TradingPost = 10,
 }
 
 ---@enum Enum.TransmogType
@@ -5845,7 +5910,10 @@ Constants = {
 	CurrencyConsts = {
 		HONOR_PER_CURRENCY = 10,
 		PLAYER_CURRENCY_CLIENT_FLAGS = 12,
+		CONQUEST_POINTS_CURRENCY_ID = 390,
 		CONQUEST_ARENA_AND_BG_META_CURRENCY_ID = 483,
+		CONQUEST_ARENA_META_CURRENCY_ID = 483,
+		CONQUEST_BG_META_CURRENCY_ID = 484,
 		CONQUEST_RATED_BG_META_CURRENCY_ID = 484,
 		CONQUEST_ASHRAN_META_CURRENCY_ID = 692,
 		ARTIFACT_KNOWLEDGE_CURRENCY_ID = 1171,
@@ -5907,6 +5975,15 @@ Constants = {
 		WORLD_STATE_RENOWN_CAP_10_0 = 19735,
 		WORLD_STATE_RAPID_RENOWN_CAP_10_0 = 20851,
 	},
+	PetConsts = {
+		EXTRA_PET_STABLE_SLOT = 5,
+		MAX_SUMMONABLE_HUNTER_PETS = 5,
+		NUM_PET_SLOTS_THAT_NEED_LEARNED_SPELL = 5,
+		STABLED_PETS_FIRST_SLOT_INDEX = 6,
+		MAX_SUMMONABLE_PETS = 25,
+		MAX_STABLE_SLOTS = 200,
+		NUM_PET_SLOTS = 205,
+	},
 	ProfessionConsts = {
 		NUM_PRIMARY_PROFESSIONS = 2,
 		CLASSIC_PROFESSION_PARENT_TIER_INDEX = 4,
@@ -5924,6 +6001,10 @@ Constants = {
 		MAX_WORLD_QUEST_WATCHES_AUTOMATIC = 1,
 		MAX_WORLD_QUEST_WATCHES_MANUAL = 5,
 		MAX_QUEST_WATCHES = 25,
+	},
+	TimerunningConsts = {
+		TIMERUNNING_SEASON_NONE = 0,
+		TIMERUNNING_SEASON_PANDARIA = 1,
 	},
 	TraitConsts = {
 		VIEW_TRAIT_CONFIG_ID = -3,

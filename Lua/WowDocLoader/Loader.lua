@@ -3,6 +3,7 @@ local Path = require "path"
 local Util = require("Lua.Util.Util")
 local Emmy = require("Lua.Emmy.Emmy")
 local patches = require("Lua.WowDocLoader.Patches")
+require("Lua.WowDocLoader.Fixes")
 local m = {}
 
 local API_DOC = "Blizzard_APIDocumentation"

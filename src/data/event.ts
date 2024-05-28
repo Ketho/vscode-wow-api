@@ -650,6 +650,11 @@ export const data: EventInterface = {
 			{Name: "rollID", Type: "number"},
 		],
 	},
+	CANCEL_PLAYER_COUNTDOWN: {
+		Payload: [
+			{Name: "initiatedBy", Type: "WOWGUID"},
+		],
+	},
 	CANCEL_SUMMON: {},
 	CAN_LOCAL_WHISPER_TARGET_RESPONSE: {
 		Payload: [
@@ -2752,6 +2757,11 @@ export const data: EventInterface = {
 		],
 	},
 	DYNAMIC_GOSSIP_POI_UPDATED: {},
+	ECLIPSE_DIRECTION_CHANGE: {
+		Payload: [
+			{Name: "direction", Type: "string"},
+		],
+	},
 	EDIT_MODE_LAYOUTS_UPDATED: {
 		Payload: [
 			{Name: "layoutInfo", Type: "EditModeLayouts"},
@@ -2872,6 +2882,11 @@ export const data: EventInterface = {
 		],
 	},
 	FRIENDLIST_UPDATE: {},
+	GAME_ENVIRONMENT_SWITCHED: {
+		Payload: [
+			{Name: "gameEnvironment", Type: "GameEnvironment"},
+		],
+	},
 	GAME_PAD_ACTIVE_CHANGED: {
 		Payload: [
 			{Name: "isActive", Type: "boolean"},
@@ -3292,6 +3307,11 @@ export const data: EventInterface = {
 	},
 	GUILD_TRADESKILL_UPDATE: {},
 	GX_RESTARTED: {},
+	HARDCORE_DEATHS: {
+		Payload: [
+			{Name: "memberName", Type: "string"},
+		],
+	},
 	HEARTHSTONE_BOUND: {},
 	HEIRLOOMS_UPDATED: {
 		Payload: [
@@ -4184,6 +4204,7 @@ export const data: EventInterface = {
 	PET_FORCE_NAME_DECLENSION: {
 		Payload: [
 			{Name: "name", Type: "string"},
+			{Name: "petNumber", Type: "number", Nilable: true},
 			{Name: "declinedName1", Type: "string", Nilable: true},
 			{Name: "declinedName2", Type: "string", Nilable: true},
 			{Name: "declinedName3", Type: "string", Nilable: true},
@@ -4191,6 +4212,7 @@ export const data: EventInterface = {
 			{Name: "declinedName5", Type: "string", Nilable: true},
 		],
 	},
+	PET_INFO_UPDATE: {},
 	PET_JOURNAL_AUTO_SLOTTED_PET: {
 		Payload: [
 			{Name: "slotIndex", Type: "number"},
@@ -4224,9 +4246,9 @@ export const data: EventInterface = {
 	PET_SPECIALIZATION_CHANGED: {},
 	PET_SPELL_POWER_UPDATE: {},
 	PET_STABLE_CLOSED: {},
+	PET_STABLE_FAVORITES_UPDATED: {},
 	PET_STABLE_SHOW: {},
 	PET_STABLE_UPDATE: {},
-	PET_STABLE_UPDATE_PAPERDOLL: {},
 	PET_UI_CLOSE: {},
 	PET_UI_UPDATE: {},
 	PING_SYSTEM_ERROR: {
@@ -4806,7 +4828,12 @@ export const data: EventInterface = {
 			{Name: "newStep", Type: "boolean", Nilable: true},
 		],
 	},
-	SCRAPPING_MACHINE_ITEM_REMOVED_OR_CANCELLED: {
+	SCRAPPING_MACHINE_ITEM_ADDED: {
+		Payload: [
+			{Name: "index", Type: "number"},
+		],
+	},
+	SCRAPPING_MACHINE_ITEM_REMOVED: {
 		Payload: [
 			{Name: "index", Type: "number"},
 		],
@@ -5101,6 +5128,13 @@ export const data: EventInterface = {
 			{Name: "lootHandle", Type: "number", Nilable: true},
 		],
 	},
+	START_PLAYER_COUNTDOWN: {
+		Payload: [
+			{Name: "initiatedBy", Type: "WOWGUID"},
+			{Name: "timeRemaining", Type: "time_t"},
+			{Name: "totalTime", Type: "time_t"},
+		],
+	},
 	START_TIMER: {
 		Payload: [
 			{Name: "timerType", Type: "number"},
@@ -5314,6 +5348,7 @@ export const data: EventInterface = {
 	TRADE_SKILL_FAVORITES_CHANGED: {
 		Payload: [
 			{Name: "isFavorite", Type: "boolean"},
+			{Name: "recipeSpellID", Type: "number"},
 		],
 	},
 	TRADE_SKILL_ITEM_CRAFTED_RESULT: {
@@ -6295,6 +6330,12 @@ export const data: EventInterface = {
 			{Name: "anchorType", Type: "WorldCursorAnchorType"},
 		],
 	},
+	WORLD_LOOT_OBJECT_INFO_UPDATED: {
+		Payload: [
+			{Name: "guid", Type: "WOWGUID"},
+		],
+	},
+	WORLD_LOOT_OBJECT_SWAP_INVENTORY_TYPE_UPDATED: {},
 	WORLD_MAP_OPEN: {
 		Payload: [
 			{Name: "uiMapID", Type: "number"},
