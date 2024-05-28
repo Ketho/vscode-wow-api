@@ -204,10 +204,10 @@ function BNSendFriendInvite(text, noteText) end
 function BNSendFriendInviteByID(ID, noteText) end
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_BNSendGameData)
----@param presenceID number
----@param addonPrefix string
----@param message string
-function BNSendGameData(presenceID, addonPrefix, message) end
+---@param gameAccountID number
+---@param prefix string
+---@param text string
+function BNSendGameData(gameAccountID, prefix, text) end
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_BNSendVerifiedBattleTagInvite)
 function BNSendVerifiedBattleTagInvite() end
@@ -495,17 +495,6 @@ function C_Debug.ViewInDebugWindow() end
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_FunctionContainers.CreateCallback)
 function C_FunctionContainers.CreateCallback() end
-
----[Documentation](https://warcraft.wiki.gg/wiki/API_C_GameEnvironmentManager.GetCurrentEventRealmQueues)
-function C_GameEnvironmentManager.GetCurrentEventRealmQueues() end
-
----[Documentation](https://warcraft.wiki.gg/wiki/API_C_GameEnvironmentManager.GetCurrentGameEnvironment)
----@return Enum.GameEnvironment gameEnvironment
-function C_GameEnvironmentManager.GetCurrentGameEnvironment() end
-
----[Documentation](https://warcraft.wiki.gg/wiki/API_C_GameEnvironmentManager.RequestGameEnvironment)
----@param gameEnvironment Enum.GameEnvironment
-function C_GameEnvironmentManager.RequestGameEnvironment(gameEnvironment) end
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_Garrison.AllowMissionStartAboveSoftCap)
 function C_Garrison.AllowMissionStartAboveSoftCap(garrFollowerTypeID) end
@@ -1959,6 +1948,18 @@ function C_PrototypeDialog.EnsureRemoved(instanceID) end
 ---@param instanceID number
 ---@param optionIndex number
 function C_PrototypeDialog.SelectOption(instanceID, optionIndex) end
+
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_Reincarnation.GetReincarnatingCharacter)
+function C_Reincarnation.GetReincarnatingCharacter() end
+
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_Reincarnation.IsReincarnating)
+function C_Reincarnation.IsReincarnating() end
+
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_Reincarnation.StartReincarnation)
+function C_Reincarnation.StartReincarnation() end
+
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_Reincarnation.StopReincarnation)
+function C_Reincarnation.StopReincarnation() end
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_Scenario.GetBonusStepRewardQuestID)
 function C_Scenario.GetBonusStepRewardQuestID(stepIndex) end

@@ -23,6 +23,5 @@ C_AccountServices = {} -- no doc
 C_ArrowCalloutManager = {} -- no doc
 C_SpectatingUI = {} -- no doc
 C_WoWLabsMatchmaking = {} -- no doc
-C_WorldLootObject = {} -- WorldLootObjectDocumentation.lua missing from TOC
 C_WowLabsDataManager = {} -- no doc
 C_Reincarnation = {} -- no doc

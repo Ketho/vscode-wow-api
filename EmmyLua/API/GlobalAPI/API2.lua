@@ -309,24 +309,6 @@ function C_WoWLabsMatchmaking.SetPartyPlaylistEntry() end
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_WoWLabsMatchmaking.SetPlayerReady)
 function C_WoWLabsMatchmaking.SetPlayerReady() end
 
----[Documentation](https://warcraft.wiki.gg/wiki/API_C_WorldLootObject.GetCurrentWorldLootObjectSwapInventoryType)
-function C_WorldLootObject.GetCurrentWorldLootObjectSwapInventoryType() end
-
----[Documentation](https://warcraft.wiki.gg/wiki/API_C_WorldLootObject.GetWorldLootObjectInfo)
-function C_WorldLootObject.GetWorldLootObjectInfo() end
-
----[Documentation](https://warcraft.wiki.gg/wiki/API_C_WorldLootObject.IsWorldLootObject)
----@param nameplateString string
----@return boolean isWorldLootObject
-function C_WorldLootObject.IsWorldLootObject(nameplateString) end
-
----[Documentation](https://warcraft.wiki.gg/wiki/API_C_WorldLootObject.IsWorldLootObjectInRange)
-function C_WorldLootObject.IsWorldLootObjectInRange() end
-
----[Documentation](https://warcraft.wiki.gg/wiki/API_C_WorldLootObject.OnWorldLootObjectClick)
----@param nameplateString string
-function C_WorldLootObject.OnWorldLootObjectClick(nameplateString) end
-
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_WowLabsDataManager.PushCircleInfoToLua)
 function C_WowLabsDataManager.PushCircleInfoToLua() end
 
@@ -699,9 +681,6 @@ function CloseMail() end
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_CloseMerchant)
 function CloseMerchant() end
-
----[Documentation](https://warcraft.wiki.gg/wiki/API_ClosePetStables)
-function ClosePetStables() end
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_ClosePetition)
 function ClosePetition() end
@@ -1108,7 +1087,7 @@ function EJ_SetSearch(text) end
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_EditMacro)
 ---@param macroInfo number|string index or name
 ---@param name string
----@param icon? number
+---@param icon? number|string
 ---@param body? string
 ---@return number macroID
 function EditMacro(macroInfo, name, icon, body) end
@@ -1492,6 +1471,7 @@ function GetBattlefieldStatData(playerIndex, slotIndex) end
 ---@return unknown asGroup
 ---@return string shortDescription
 ---@return string longDescription
+---@return boolean isSoloQueue
 function GetBattlefieldStatus(index) end
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_GetBattlefieldTeamInfo)
@@ -1505,12 +1485,19 @@ function GetBattlefieldWinner() end
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_GetBattlegroundInfo)
 ---@param index number
----@return string name
+---@return string localizedName
 ---@return boolean canEnter
 ---@return boolean isHoliday
 ---@return boolean isRandom
 ---@return number battleGroundID
----@return string info
+---@return string mapDescription
+---@return number bgInstanceID
+---@return number maxPlayers
+---@return string gameType
+---@return number iconTexture
+---@return string shortDescription
+---@return string longDescription
+---@return number hasControllingHoliday
 function GetBattlegroundInfo(index) end
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_GetBattlegroundPoints)
@@ -1596,7 +1583,7 @@ function GetCategoryList() end
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_GetCategoryNumAchievements)
 ---@param categoryId number
----@param includeAll boolean?
+---@param includeAll? boolean
 ---@return number total
 ---@return number completed
 ---@return number incompleted
@@ -2167,6 +2154,10 @@ function GetInventoryItemQuality(unitId, invSlotId) end
 function GetInventoryItemTexture(unit, invSlot) end
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_GetInventoryItemsForSlot)
+---@param slot number
+---@param returnTable table
+---@param transmogrify? boolean
+---@return table returnTable
 function GetInventoryItemsForSlot(slot, returnTable, transmogrify) end
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_GetInventorySlotInfo)
@@ -2408,6 +2399,16 @@ function GetLootRollItemLink(id) end
 function GetLootRollTimeLeft(rollID) end
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_GetLootSlotInfo)
+---@param slot number
+---@return string lootIcon
+---@return string lootName
+---@return number lootQuantity
+---@return number currencyID
+---@return number lootQuality
+---@return boolean locked
+---@return boolean isQuestItem
+---@return number questID
+---@return boolean isActive
 function GetLootSlotInfo(slot) end
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_GetLootSlotLink)
@@ -2449,4 +2450,10 @@ function GetMacroIndexByName(name) end
 ---@return fileID icon
 ---@return string body
 function GetMacroInfo(macro) end
+
+---[Documentation](https://warcraft.wiki.gg/wiki/API_GetMacroItem)
+function GetMacroItem() end
+
+---[Documentation](https://warcraft.wiki.gg/wiki/API_GetMacroItemIcons)
+function GetMacroItemIcons(table) end
 

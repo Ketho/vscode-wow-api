@@ -1,10 +1,4 @@
 ---@meta
----[Documentation](https://warcraft.wiki.gg/wiki/API_GetMacroItem)
-function GetMacroItem() end
-
----[Documentation](https://warcraft.wiki.gg/wiki/API_GetMacroItemIcons)
-function GetMacroItemIcons(table) end
-
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_GetMacroSpell)
 function GetMacroSpell() end
 
@@ -379,9 +373,6 @@ function GetNumVoidTransferWithdrawal() end
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_GetNumWarGameTypes)
 function GetNumWarGameTypes() end
 
----[Documentation](https://warcraft.wiki.gg/wiki/API_GetNumWorldPVPAreas)
-function GetNumWorldPVPAreas() end
-
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_GetObjectiveText)
 function GetObjectiveText() end
 
@@ -734,7 +725,7 @@ function GetQuestUiMapID(questID) end
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_GetRFDungeonInfo)
 ---@param index number
----@return number ID
+---@return number id
 ---@return string name
 ---@return number typeID
 ---@return number subtypeID
@@ -752,6 +743,11 @@ function GetQuestUiMapID(questID) end
 ---@return boolean isHoliday
 ---@return number bonusRepAmount
 ---@return number minPlayers
+---@return boolean isTimewalking
+---@return string name2
+---@return number minGearLevel
+---@return boolean isScaling
+---@return number lfgMapID
 function GetRFDungeonInfo(index) end
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_GetRaidProfileFlattenedOptions)
@@ -1003,6 +999,7 @@ function GetSpecialization(isInspect, isPet, specGroup) end
 ---@return number primaryStat
 function GetSpecializationInfo(specID, isInspect, isPet, inspectTarget, sex) end
 
+---[Documentation](https://warcraft.wiki.gg/wiki/API_GetSpecializationInfoByID)
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_GetSpecializationInfo)
 ---@param specID number
 ---@return number id
@@ -1013,30 +1010,6 @@ function GetSpecializationInfo(specID, isInspect, isPet, inspectTarget, sex) end
 ---@return string classFile
 ---@return string className
 function GetSpecializationInfoByID(specID) end
-
----[Documentation](https://warcraft.wiki.gg/wiki/API_GetSpecializationInfo)
----@param classID number
----@param specIndex number
----@return number specID
----@return string name
----@return string description
----@return number iconID
----@return string role
----@return boolean isRecommended
----@return boolean isAllowed
-function GetSpecializationInfoForClassID(classID, specIndex) end
-
----[Documentation](https://warcraft.wiki.gg/wiki/API_GetSpecializationInfo)
----@param specID number
----@param sex? number
----@return number specID
----@return string name
----@return string description
----@return number iconID
----@return string role
----@return boolean isRecommended
----@return boolean isAllowed
-function GetSpecializationInfoForSpecID(specID, sex) end
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_GetSpecializationMasterySpells)
 function GetSpecializationMasterySpells(specIndex, isInspect, isPet) end
@@ -1199,18 +1172,6 @@ function GetSpellTradeSkillLink() end
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_GetSpellsForCharacterUpgradeTier)
 function GetSpellsForCharacterUpgradeTier(tierIndex) end
-
----[Documentation](https://warcraft.wiki.gg/wiki/API_GetStablePetFoodTypes)
-function GetStablePetFoodTypes(index) end
-
----[Documentation](https://warcraft.wiki.gg/wiki/API_GetStablePetInfo)
----@param index number
----@return string petIcon
----@return string petName
----@return number petLevel
----@return string petType
----@return string petTalents
-function GetStablePetInfo(index) end
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_GetStatistic)
 ---@param category number
@@ -1486,6 +1447,10 @@ function GetWatchedFactionInfo() end
 ---@return number offHandExpiration
 ---@return number offHandCharges
 ---@return number offHandEnchantID
+---@return boolean hasRangedEnchant
+---@return number rangedExpiration
+---@return number rangedCharges
+---@return number rangedEnchantID
 function GetWeaponEnchantInfo() end
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_GetWebTicket)
@@ -1499,18 +1464,6 @@ function GetWorldElapsedTimers() end
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_GetWorldMapActionButtonSpellInfo)
 function GetWorldMapActionButtonSpellInfo() end
-
----[Documentation](https://warcraft.wiki.gg/wiki/API_GetWorldPVPAreaInfo)
----@param index number
----@return number pvpID
----@return string localizedName
----@return boolean isActive
----@return boolean canQueue
----@return number startTime
----@return boolean canEnter
----@return number minLevel
----@return number maxLevel
-function GetWorldPVPAreaInfo(index) end
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_GetWorldPVPQueueStatus)
 function GetWorldPVPQueueStatus(queueId) end
@@ -1697,9 +1650,6 @@ function IsArtifactCompletionHistoryAvailable() end
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_IsArtifactRelicItem)
 function IsArtifactRelicItem(item) end
 
----[Documentation](https://warcraft.wiki.gg/wiki/API_IsAtStableMaster)
-function IsAtStableMaster() end
-
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_IsAttackAction)
 function IsAttackAction(slot) end
 
@@ -1789,6 +1739,7 @@ function IsFactionInactive(index) end
 function IsFishingLoot() end
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_IsGMClient)
+---@return boolean isGM
 function IsGMClient() end
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_IsGUIDInGroup)
@@ -2257,9 +2208,6 @@ function OpenTrainer() end
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_PartyLFGStartBackfill)
 function PartyLFGStartBackfill() end
 
----[Documentation](https://warcraft.wiki.gg/wiki/API_PetAbandon)
-function PetAbandon() end
-
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_PetAggressiveMode)
 function PetAggressiveMode() end
 
@@ -2275,10 +2223,6 @@ function PetCanBeAbandoned() end
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_PetCanBeDismissed)
 function PetCanBeDismissed() end
-
----[Documentation](https://warcraft.wiki.gg/wiki/API_PetCanBeRenamed)
----@return boolean canRename
-function PetCanBeRenamed() end
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_PetDefensiveAssistMode)
 function PetDefensiveAssistMode() end
@@ -2303,10 +2247,6 @@ function PetMoveTo(target) end
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_PetPassiveMode)
 function PetPassiveMode() end
-
----[Documentation](https://warcraft.wiki.gg/wiki/API_PetRename)
----@param name string
-function PetRename(name) end
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_PetStopAttack)
 function PetStopAttack() end
@@ -2362,10 +2302,9 @@ function PickupPvpTalent() end
 function PickupSpell(spellID) end
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_PickupSpellBookItem)
-function PickupSpellBookItem(spellSlot) end
-
----[Documentation](https://warcraft.wiki.gg/wiki/API_PickupStablePet)
-function PickupStablePet(index) end
+---@param spell number|string
+---@overload fun(index: number, bookType: string)
+function PickupSpellBookItem(spell) end
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_PickupTalent)
 function PickupTalent(talentID) end
@@ -2396,7 +2335,9 @@ function PlaceRaidMarker(index) end
 function PlayAutoAcceptQuestSound() end
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_PlayMusic)
-function PlayMusic() end
+---@param sound number|string
+---@return boolean willPlay
+function PlayMusic(sound) end
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_PlaySound)
 ---@param soundKitID number
@@ -2415,7 +2356,9 @@ function PlaySound(soundKitID, channel, forceNoDuplicates, runFinishCallback) en
 function PlaySoundFile(sound, channel) end
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_PlayerHasToy)
-function PlayerHasToy(itemID) end
+---@param itemId number
+---@return boolean hasToy
+function PlayerHasToy(itemId) end
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_PrevView)
 function PrevView() end
@@ -2595,4 +2538,52 @@ function RequestGuildRewards() end
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_RequestLFDPartyLockInfo)
 function RequestLFDPartyLockInfo() end
+
+---[Documentation](https://warcraft.wiki.gg/wiki/API_RequestLFDPlayerLockInfo)
+function RequestLFDPlayerLockInfo() end
+
+---[Documentation](https://warcraft.wiki.gg/wiki/API_RequestPVPOptionsEnabled)
+function RequestPVPOptionsEnabled() end
+
+---[Documentation](https://warcraft.wiki.gg/wiki/API_RequestPVPRewards)
+function RequestPVPRewards() end
+
+---[Documentation](https://warcraft.wiki.gg/wiki/API_RequestRaidInfo)
+function RequestRaidInfo() end
+
+---[Documentation](https://warcraft.wiki.gg/wiki/API_RequestRandomBattlegroundInstanceInfo)
+function RequestRandomBattlegroundInstanceInfo() end
+
+---[Documentation](https://warcraft.wiki.gg/wiki/API_RequestRatedInfo)
+function RequestRatedInfo() end
+
+---[Documentation](https://warcraft.wiki.gg/wiki/API_RequeueSkirmish)
+function RequeueSkirmish() end
+
+---[Documentation](https://warcraft.wiki.gg/wiki/API_ResetChatColors)
+function ResetChatColors() end
+
+---[Documentation](https://warcraft.wiki.gg/wiki/API_ResetChatWindows)
+function ResetChatWindows() end
+
+---[Documentation](https://warcraft.wiki.gg/wiki/API_ResetSetMerchantFilter)
+function ResetSetMerchantFilter() end
+
+---[Documentation](https://warcraft.wiki.gg/wiki/API_ResetTutorials)
+function ResetTutorials() end
+
+---[Documentation](https://warcraft.wiki.gg/wiki/API_ResetView)
+function ResetView(index) end
+
+---[Documentation](https://warcraft.wiki.gg/wiki/API_RespondMailLockSendItem)
+function RespondMailLockSendItem(slot, keepItem) end
+
+---[Documentation](https://warcraft.wiki.gg/wiki/API_RespondToInviteConfirmation)
+function RespondToInviteConfirmation(guid, accept) end
+
+---[Documentation](https://warcraft.wiki.gg/wiki/API_RestoreRaidProfileFromCopy)
+function RestoreRaidProfileFromCopy() end
+
+---[Documentation](https://warcraft.wiki.gg/wiki/API_ReturnInboxItem)
+function ReturnInboxItem(index) end
 

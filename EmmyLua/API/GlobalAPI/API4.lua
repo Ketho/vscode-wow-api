@@ -1,52 +1,4 @@
 ---@meta
----[Documentation](https://warcraft.wiki.gg/wiki/API_RequestLFDPlayerLockInfo)
-function RequestLFDPlayerLockInfo() end
-
----[Documentation](https://warcraft.wiki.gg/wiki/API_RequestPVPOptionsEnabled)
-function RequestPVPOptionsEnabled() end
-
----[Documentation](https://warcraft.wiki.gg/wiki/API_RequestPVPRewards)
-function RequestPVPRewards() end
-
----[Documentation](https://warcraft.wiki.gg/wiki/API_RequestRaidInfo)
-function RequestRaidInfo() end
-
----[Documentation](https://warcraft.wiki.gg/wiki/API_RequestRandomBattlegroundInstanceInfo)
-function RequestRandomBattlegroundInstanceInfo() end
-
----[Documentation](https://warcraft.wiki.gg/wiki/API_RequestRatedInfo)
-function RequestRatedInfo() end
-
----[Documentation](https://warcraft.wiki.gg/wiki/API_RequeueSkirmish)
-function RequeueSkirmish() end
-
----[Documentation](https://warcraft.wiki.gg/wiki/API_ResetChatColors)
-function ResetChatColors() end
-
----[Documentation](https://warcraft.wiki.gg/wiki/API_ResetChatWindows)
-function ResetChatWindows() end
-
----[Documentation](https://warcraft.wiki.gg/wiki/API_ResetSetMerchantFilter)
-function ResetSetMerchantFilter() end
-
----[Documentation](https://warcraft.wiki.gg/wiki/API_ResetTutorials)
-function ResetTutorials() end
-
----[Documentation](https://warcraft.wiki.gg/wiki/API_ResetView)
-function ResetView(index) end
-
----[Documentation](https://warcraft.wiki.gg/wiki/API_RespondMailLockSendItem)
-function RespondMailLockSendItem(slot, keepItem) end
-
----[Documentation](https://warcraft.wiki.gg/wiki/API_RespondToInviteConfirmation)
-function RespondToInviteConfirmation(guid, accept) end
-
----[Documentation](https://warcraft.wiki.gg/wiki/API_RestoreRaidProfileFromCopy)
-function RestoreRaidProfileFromCopy() end
-
----[Documentation](https://warcraft.wiki.gg/wiki/API_ReturnInboxItem)
-function ReturnInboxItem(index) end
-
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_RollOnLoot)
 ---@param rollID number
 ---@param rollType? number
@@ -54,7 +6,7 @@ function RollOnLoot(rollID, rollType) end
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_RunBinding)
 ---@param command string
----@param up string
+---@param up? string
 function RunBinding(command, up) end
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_RunMacro)
@@ -381,12 +333,6 @@ function SetPVPRoles(tank, healer, dps) end
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_SetPartyAssignment)
 function SetPartyAssignment(assignment, player) end
-
----[Documentation](https://warcraft.wiki.gg/wiki/API_SetPetSlot)
-function SetPetSlot(index, slot) end
-
----[Documentation](https://warcraft.wiki.gg/wiki/API_SetPetStablePaperdoll)
-function SetPetStablePaperdoll(modelObject) end
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_SetRaidProfileOption)
 function SetRaidProfileOption(profile, optionName, value) end
@@ -931,6 +877,9 @@ function hooksecurefunc(tbl, name, hook) end
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_issecure)
 ---@return boolean secure
 function issecure() end
+
+---[Documentation](https://warcraft.wiki.gg/wiki/API_issecurevalue)
+function issecurevalue() end
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_issecurevariable)
 ---@param table? table
