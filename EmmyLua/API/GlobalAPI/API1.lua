@@ -1350,7 +1350,7 @@ function C_LFGList.SetApplicantMemberRole(applicantID, memberIndex, role) end
 ---@param pvpRating number?
 ---@param selectedPlaystyle number?
 ---@param isCrossFaction boolean?
-function C_LFGList.UpdateListing(activityID, itemLevel, honorLevel, autoAccept, privateGroup[, questID, mythicPlusRating, pvpRating, selectedPlaystyle, isCrossFaction) end
+function C_LFGList.UpdateListing(activityID, itemLevel, honorLevel, autoAccept, privateGroup, questID, mythicPlusRating, pvpRating, selectedPlaystyle, isCrossFaction) end
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_NamePlate.GetNamePlateEnemyClickThrough)
 function C_NamePlate.GetNamePlateEnemyClickThrough() end

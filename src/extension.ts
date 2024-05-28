@@ -25,6 +25,12 @@ const globalstrings = {
 	hover: globalstring_provider.getHover,
 };
 
+import flavor_provider = require("./providers/flavor");
+const flavors = {
+	data: require("./data/flavor").data,
+	hover: flavor_provider.getHover,
+};
+
 const wow_globals = require("./data/globals").data;
 
 function isHoverString(document: vscode.TextDocument, range: vscode.Range) { 
@@ -71,7 +77,7 @@ export async function activate(context: vscode.ExtensionContext) {
 		"lua",
 		{
 			provideHover(document: vscode.TextDocument, position: vscode.Position) {
-				const range = document.getWordRangeAtPosition(position);
+				const range = document.getWordRangeAtPosition(position, /[\w\.]+/);
 				if (range) {
 					const word = document.getText(range);
 					const lword = word.toLowerCase();
@@ -88,6 +94,14 @@ export async function activate(context: vscode.ExtensionContext) {
 					}
 					else if (globalstrings.data[word]) {
 						return globalstrings.hover(word);
+					}
+				}
+				const rangeWithDot = document.getWordRangeAtPosition(position, /[\w\.]+/);
+				if (rangeWithDot) {
+					const word = document.getText(rangeWithDot);
+					// dont show for the left part of a namespaced function like C_AchievementInfo.IsGuildAchievement
+					if (flavors.data[word] && position.character > rangeWithDot.start.character + word.indexOf(".")) {
+						return flavors.hover(word);
 					}
 				}
 			}

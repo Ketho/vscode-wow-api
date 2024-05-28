@@ -49,6 +49,7 @@ Util:WriteFile(Path.join(path_tsdata, "cvar.ts"), require("Lua.ToTypeScript.CVar
 Util:WriteFile(Path.join(path_tsdata, "enum.ts"), require("Lua.ToTypeScript.LuaEnum")(BRANCH))
 Util:MakeDir(Path.join(path_luadata, "cache", "globalstrings"))
 require("Lua.ToTypeScript.GlobalString"):WriteLocales(GetWagoBranch(BRANCH))
+require(Path.join("Lua", "ToTypeScript", "Flavor")) -- todo: refactor
 
 -- parse the wiki
 require("Lua.WikiParser.WikiParser")
