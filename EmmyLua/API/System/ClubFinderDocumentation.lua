@@ -103,6 +103,10 @@ function C_ClubFinder.HasAlreadyAppliedToLinkedPosting(clubFinderGUID) end
 ---@return boolean postingDelisted
 function C_ClubFinder.HasPostingBeenDelisted(postingID) end
 
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_ClubFinder.IsCommunityFinderEnabled)
+---@return boolean isEnabled
+function C_ClubFinder.IsCommunityFinderEnabled() end
+
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_ClubFinder.IsEnabled)
 ---@return boolean isEnabled
 function C_ClubFinder.IsEnabled() end

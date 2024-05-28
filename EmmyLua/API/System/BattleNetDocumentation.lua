@@ -79,3 +79,4 @@ function C_BattleNet.GetGameAccountInfoByID(id) end
 ---@field hasFocus boolean
 ---@field regionID number
 ---@field isInCurrentRegion boolean
+---@field timerunningSeasonID number?

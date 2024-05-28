@@ -4,6 +4,10 @@
 ---@return boolean result
 function CanEjectPassengerFromSeat(virtualSeatIndex) end
 
+---[Documentation](https://warcraft.wiki.gg/wiki/API_CanShowSetRoleButton)
+---@return boolean result
+function CanShowSetRoleButton() end
+
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_CanSwitchVehicleSeat)
 ---@return boolean result
 function CanSwitchVehicleSeat() end
@@ -798,9 +802,9 @@ function UnitPlayerOrPetInRaid(unit, partyIndex) end
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_UnitPosition)
 ---@param unit UnitToken
----@return number? x
----@return number? y
----@return number? z
+---@return number positionX
+---@return number positionY
+---@return number positionZ
 ---@return number mapID
 function UnitPosition(unit) end
 

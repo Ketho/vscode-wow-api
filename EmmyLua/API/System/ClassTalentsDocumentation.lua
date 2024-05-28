@@ -5,7 +5,7 @@ C_ClassTalents = {}
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_ClassTalents.CanChangeTalents)
 ---@return boolean canChange
 ---@return boolean canAdd
----@return string changeError
+---@return string? changeError
 function C_ClassTalents.CanChangeTalents() end
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_ClassTalents.CanCreateNewConfig)
@@ -89,7 +89,7 @@ function C_ClassTalents.IsConfigPopulated(configID) end
 ---@param configID number
 ---@param autoApply boolean
 ---@return Enum.LoadConfigResult result
----@return string changeError
+---@return string? changeError
 ---@return number[] newLearnedNodeIDs
 function C_ClassTalents.LoadConfig(configID, autoApply) end
 

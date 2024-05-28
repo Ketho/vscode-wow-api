@@ -10,6 +10,11 @@ function C_LFGList.CanActiveEntryUseAutoAccept() end
 ---@return boolean canCreate
 function C_LFGList.CanCreateQuestGroup(questID) end
 
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_LFGList.CanCreateScenarioGroup)
+---@param scenarioID number
+---@return boolean canCreate
+function C_LFGList.CanCreateScenarioGroup(scenarioID) end
+
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_LFGList.ClearApplicationTextFields)
 function C_LFGList.ClearApplicationTextFields() end
 
@@ -21,6 +26,15 @@ function C_LFGList.ClearSearchTextFields() end
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_LFGList.CopyActiveEntryInfoToCreationFields)
 function C_LFGList.CopyActiveEntryInfoToCreationFields() end
+
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_LFGList.CreateScenarioListing)
+---@param activityID number
+---@param itemLevel number
+---@param autoAccept boolean
+---@param privateGroup boolean
+---@param scenarioID number
+---@return boolean canCreate
+function C_LFGList.CreateScenarioListing(activityID, itemLevel, autoAccept, privateGroup, scenarioID) end
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_LFGList.DoesEntryTitleMatchPrebuiltTitle)
 ---@param activityID number
@@ -52,6 +66,16 @@ function C_LFGList.GetActivityGroupInfo(groupID) end
 ---@param showWarmode? boolean
 ---@return GroupFinderActivityInfo activityInfo
 function C_LFGList.GetActivityInfoTable(activityID, questID, showWarmode) end
+
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_LFGList.GetAdvancedFilter)
+---@return AdvancedFilterOptions options
+function C_LFGList.GetAdvancedFilter() end
+
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_LFGList.GetApplicantBestDungeonScore)
+---@param localID number
+---@param applicantIndex number
+---@return BestDungeonScoreMapInfo bestDungeonScoreForListing
+function C_LFGList.GetApplicantBestDungeonScore(localID, applicantIndex) end
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_LFGList.GetApplicantDungeonScoreForListing)
 ---@param localID number
@@ -124,13 +148,18 @@ function C_LFGList.HasSearchResultInfo(searchResultID) end
 ---@return boolean isAuthenticated
 function C_LFGList.IsPlayerAuthenticatedForLFG(activityID) end
 
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_LFGList.SaveAdvancedFilter)
+---@param options AdvancedFilterOptions
+function C_LFGList.SaveAdvancedFilter(options) end
+
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_LFGList.Search)
 ---@param categoryID number
 ---@param filter? number Default = 0
 ---@param preferredFilters? number Default = 0
 ---@param languageFilter? WowLocale
 ---@param searchCrossFactionListings? boolean Default = false
-function C_LFGList.Search(categoryID, filter, preferredFilters, languageFilter, searchCrossFactionListings) end
+---@param advancedFilter? AdvancedFilterOptions
+function C_LFGList.Search(categoryID, filter, preferredFilters, languageFilter, searchCrossFactionListings, advancedFilter) end
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_LFGList.SetEntryTitle)
 ---@param activityID number
@@ -146,6 +175,10 @@ function C_LFGList.SetSearchToActivity(activityID) end
 ---@param questID number
 function C_LFGList.SetSearchToQuestID(questID) end
 
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_LFGList.SetSearchToScenarioID)
+---@param scenarioID number
+function C_LFGList.SetSearchToScenarioID(scenarioID) end
+
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_LFGList.ValidateRequiredDungeonScore)
 ---@param dungeonScore number
 ---@return boolean passes
@@ -157,11 +190,27 @@ function C_LFGList.ValidateRequiredDungeonScore(dungeonScore) end
 ---@return boolean passes
 function C_LFGList.ValidateRequiredPvpRatingForActivity(activityID, rating) end
 
+---@class AdvancedFilterOptions
+---@field needsTank boolean? Default = false
+---@field needsHealer boolean? Default = false
+---@field needsDamage boolean? Default = false
+---@field needsMyClass boolean? Default = false
+---@field hasTank boolean? Default = false
+---@field hasHealer boolean? Default = false
+---@field activities number[]
+---@field minimumRating number? Default = 0
+---@field difficultyNormal boolean? Default = false
+---@field difficultyHeroic boolean? Default = false
+---@field difficultyMythic boolean? Default = false
+---@field difficultyMythicPlus boolean? Default = false
+
 ---@class BestDungeonScoreMapInfo
 ---@field mapScore number
 ---@field mapName string
 ---@field bestRunLevel number
 ---@field finishedSuccess boolean
+---@field bestRunDurationMs number
+---@field bestLevelIncrement number
 
 ---@class GroupFinderActivityInfo
 ---@field fullName string
@@ -182,6 +231,8 @@ function C_LFGList.ValidateRequiredPvpRatingForActivity(activityID, rating) end
 ---@field isPvpActivity boolean
 ---@field isMythicActivity boolean
 ---@field allowCrossFaction boolean
+---@field isHeroicActivity boolean
+---@field isNormalActivity boolean
 ---@field useDungeonRoleExpectations boolean
 
 ---@class LfgApplicantData
@@ -239,6 +290,7 @@ function C_LFGList.ValidateRequiredPvpRatingForActivity(activityID, rating) end
 ---@field questID number?
 ---@field leaderOverallDungeonScore number?
 ---@field leaderDungeonScoreInfo BestDungeonScoreMapInfo?
+---@field leaderBestDungeonScoreInfo BestDungeonScoreMapInfo?
 ---@field leaderPvpRatingInfo PvpRatingInfo?
 ---@field requiredDungeonScore number?
 ---@field requiredPvpRating number?

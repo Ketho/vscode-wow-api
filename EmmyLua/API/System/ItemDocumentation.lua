@@ -163,6 +163,12 @@ function C_Item.GetItemGUID(itemLocation) end
 ---@return string gemLink
 function C_Item.GetItemGem(hyperlink, index) end
 
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_Item.GetItemGemID)
+---@param itemInfo ItemInfo
+---@param index number
+---@return number gemID
+function C_Item.GetItemGemID(itemInfo, index) end
+
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_Item.GetItemID)
 ---@param itemLocation ItemLocationMixin
 ---@return number itemID
@@ -225,6 +231,11 @@ function C_Item.GetItemInfoInstant(itemInfo) end
 ---@return string result
 function C_Item.GetItemInventorySlotInfo(inventorySlot) end
 
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_Item.GetItemInventorySlotKey)
+---@param inventorySlot Enum.InventoryType
+---@return string result
+function C_Item.GetItemInventorySlotKey(inventorySlot) end
+
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_Item.GetItemInventoryType)
 ---@param itemLocation ItemLocationMixin
 ---@return Enum.InventoryType? inventoryType
@@ -234,6 +245,11 @@ function C_Item.GetItemInventoryType(itemLocation) end
 ---@param itemInfo ItemInfo
 ---@return Enum.InventoryType? inventoryType
 function C_Item.GetItemInventoryTypeByID(itemInfo) end
+
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_Item.GetItemLearnTransmogSet)
+---@param itemInfo ItemInfo
+---@return number? setID
+function C_Item.GetItemLearnTransmogSet(itemInfo) end
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_Item.GetItemLink)
 ---@param itemLocation ItemLocationMixin
@@ -269,6 +285,16 @@ function C_Item.GetItemName(itemLocation) end
 ---@param itemInfo ItemInfo
 ---@return string? itemName
 function C_Item.GetItemNameByID(itemInfo) end
+
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_Item.GetItemNumAddedSockets)
+---@param itemInfo ItemInfo
+---@return number socketCount
+function C_Item.GetItemNumAddedSockets(itemInfo) end
+
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_Item.GetItemNumSockets)
+---@param itemInfo ItemInfo
+---@return number socketCount
+function C_Item.GetItemNumSockets(itemInfo) end
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_Item.GetItemQuality)
 ---@param itemLocation ItemLocationMixin

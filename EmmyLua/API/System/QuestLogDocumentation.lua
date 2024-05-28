@@ -308,6 +308,11 @@ function C_QuestLog.IsQuestDisabledForSession(questID) end
 ---@return boolean isCompleted
 function C_QuestLog.IsQuestFlaggedCompleted(questID) end
 
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_QuestLog.IsQuestFromContentPush)
+---@param questID number
+---@return boolean isFromContentPush
+function C_QuestLog.IsQuestFromContentPush(questID) end
+
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_QuestLog.IsQuestInvasion)
 ---@param questID number
 ---@return boolean isInvasion
@@ -419,6 +424,9 @@ function C_QuestLog.SortQuestWatches() end
 ---@return boolean isRelatedToActiveQuest
 function C_QuestLog.UnitIsRelatedToActiveQuest(unit) end
 
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_QuestLog.UpdateCampaignHeaders)
+function C_QuestLog.UpdateCampaignHeaders() end
+
 ---@class QuestInfo
 ---@field title string
 ---@field questLogIndex number
@@ -444,6 +452,7 @@ function C_QuestLog.UnitIsRelatedToActiveQuest(unit) end
 ---@field readyForTranslation boolean? Default = true
 ---@field isLegendarySort boolean
 ---@field isInternalOnly boolean
+---@field isAbandonOnDisable boolean
 
 ---@class QuestObjectiveInfo
 ---@field text string

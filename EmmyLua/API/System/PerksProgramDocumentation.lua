@@ -56,10 +56,18 @@ function C_PerksProgram.GetVendorItemInfo(vendorItemID) end
 ---@return time_t refundTimeRemaining
 function C_PerksProgram.GetVendorItemInfoRefundTimeLeft(vendorItemID) end
 
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_PerksProgram.IsAttackAnimToggleEnabled)
+---@return boolean isAttackAnimToggleEnabled
+function C_PerksProgram.IsAttackAnimToggleEnabled() end
+
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_PerksProgram.IsFrozenPerksVendorItem)
 ---@param perksVendorItemID number
 ---@return boolean isFrozen
 function C_PerksProgram.IsFrozenPerksVendorItem(perksVendorItemID) end
+
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_PerksProgram.IsMountSpecialAnimToggleEnabled)
+---@return boolean isMountSpecialAnimToggleEnabled
+function C_PerksProgram.IsMountSpecialAnimToggleEnabled() end
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_PerksProgram.ItemSelectedTelemetry)
 ---@param perksVendorItemID number
@@ -138,11 +146,13 @@ function C_PerksProgram.SetFrozenPerksVendorItem() end
 ---@field refundable boolean
 ---@field subItemsLoaded boolean
 ---@field isPurchasePending boolean
+---@field doesNotExpire boolean
 ---@field price number
 ---@field perksVendorItemID number
 ---@field itemID number
 ---@field iconTexture string
 ---@field mountID number
+---@field mountTypeName string
 ---@field speciesID number
 ---@field transmogSetID number
 ---@field itemModifiedAppearanceID number

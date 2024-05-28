@@ -11,6 +11,16 @@ function C_PetInfo.GetPetTamersForMap(uiMapID) end
 ---@return number? spellID
 function C_PetInfo.GetSpellForPetAction(actionID) end
 
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_PetInfo.PetAbandon)
+---@param petNumber? number
+function C_PetInfo.PetAbandon(petNumber) end
+
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_PetInfo.PetRename)
+---@param name string
+---@param petNumber? number
+---@param declensions? string[]
+function C_PetInfo.PetRename(name, petNumber, declensions) end
+
 ---@class PetTamerMapInfo
 ---@field areaPoiID number
 ---@field position Vector2DMixin

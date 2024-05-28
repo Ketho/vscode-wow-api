@@ -51,6 +51,9 @@ function C_EncounterJournal.GetSectionInfo(sectionID) end
 ---@return Enum.ItemSlotFilterType filter
 function C_EncounterJournal.GetSlotFilter() end
 
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_EncounterJournal.InitalizeSelectedTier)
+function C_EncounterJournal.InitalizeSelectedTier() end
+
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_EncounterJournal.InstanceHasLoot)
 ---@param instanceID? number
 ---@return boolean hasLoot

@@ -2,4 +2,4 @@
 ---@class HTMLContentNode
 ---@field text string
 ---@field type HTMLTextType
----@field align TBFStyleFlags
+---@field align JustifyHorizontal

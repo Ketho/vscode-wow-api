@@ -555,6 +555,10 @@ function PlayerCanTeleport() end
 ---@return number rangedAttackPower
 function PlayerEffectiveAttackPower() end
 
+---[Documentation](https://warcraft.wiki.gg/wiki/API_PlayerGetTimerunningSeasonID)
+---@return number? timerunningSeasonID
+function PlayerGetTimerunningSeasonID() end
+
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_PortGraveyard)
 function PortGraveyard() end
 
@@ -644,7 +648,7 @@ function SitStandOrDescendStart() end
 function SplashFrameCanBeShown() end
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_StartAttack)
----@param name string
+---@param name? string Default = 0
 ---@param exactMatch? boolean Default = false
 function StartAttack(name, exactMatch) end
 

@@ -154,6 +154,11 @@ function C_TooltipInfo.GetItemByGUID(guid) end
 ---@return TooltipData data
 function C_TooltipInfo.GetItemByID(itemID, quality) end
 
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_TooltipInfo.GetItemByItemModifiedAppearanceID)
+---@param itemModifiedAppearanceID number
+---@return TooltipData data
+function C_TooltipInfo.GetItemByItemModifiedAppearanceID(itemModifiedAppearanceID) end
+
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_TooltipInfo.GetItemInteractionItem)
 ---@return TooltipData data
 function C_TooltipInfo.GetItemInteractionItem() end

@@ -123,6 +123,11 @@ function C_ChatInfo.IsPartyChannelType(channelType) end
 ---@return boolean available
 function C_ChatInfo.IsRegionalServiceAvailable() end
 
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_ChatInfo.IsTimerunningPlayer)
+---@param playerGUID WOWGUID
+---@return boolean isTimerunning
+function C_ChatInfo.IsTimerunningPlayer(playerGUID) end
+
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_ChatInfo.IsValidChatLine)
 ---@param chatLine? number
 ---@return boolean isValid
@@ -131,7 +136,7 @@ function C_ChatInfo.IsValidChatLine(chatLine) end
 ---Registers interest in addon messages with this prefix, cannot be an empty string.
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_ChatInfo.RegisterAddonMessagePrefix)
 ---@param prefix string
----@return boolean successfulRequest
+---@return Enum.RegisterAddonMessagePrefixResult result
 function C_ChatInfo.RegisterAddonMessagePrefix(prefix) end
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_ChatInfo.ReplaceIconAndGroupExpressions)
@@ -154,7 +159,7 @@ function C_ChatInfo.ResetDefaultZoneChannels() end
 ---@param message string
 ---@param chatType? string
 ---@param target? string
----@return boolean success
+---@return Enum.SendAddonMessageResult result
 function C_ChatInfo.SendAddonMessage(prefix, message, chatType, target) end
 
 ---Sends a text payload to other clients specified by chatChannel and target which are registered to listen for prefix. Intended for plain text payloads; logged and throttled.
@@ -163,7 +168,7 @@ function C_ChatInfo.SendAddonMessage(prefix, message, chatType, target) end
 ---@param message string
 ---@param chatType? string
 ---@param target? string
----@return boolean success
+---@return Enum.SendAddonMessageResult? result
 function C_ChatInfo.SendAddonMessageLogged(prefix, message, chatType, target) end
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_ChatInfo.SwapChatChannelsByChannelIndex)

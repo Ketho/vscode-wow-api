@@ -429,6 +429,10 @@ function C_Club.SetClubPresenceSubscription(clubId) end
 ---@param settings ClubStreamNotificationSetting[]
 function C_Club.SetClubStreamNotificationSettings(clubId, settings) end
 
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_Club.SetCommunityID)
+---@param communityID BigUInteger
+function C_Club.SetCommunityID(communityID) end
+
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_Club.SetFavorite)
 ---@param clubId ClubId
 ---@param isFavorite boolean
@@ -519,6 +523,7 @@ function C_Club.ValidateText(clubType, text, clubFieldType) end
 ---@field isRemoteChat boolean?
 ---@field overallDungeonScore number?
 ---@field faction Enum.PvPFaction?
+---@field timerunningSeasonID number?
 
 ---@class ClubMessageIdentifier
 ---@field epoch BigUInteger

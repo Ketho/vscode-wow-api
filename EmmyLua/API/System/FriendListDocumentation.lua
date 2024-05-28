@@ -160,3 +160,4 @@ function C_FriendList.SortWho(sorting) end
 ---@field area string
 ---@field filename string?
 ---@field gender number
+---@field timerunningSeasonID number?

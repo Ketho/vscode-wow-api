@@ -41,6 +41,11 @@ function C_ActionBar.GetPetActionPetBarIndices(petActionID) end
 ---@return number? quality
 function C_ActionBar.GetProfessionQuality(actionID) end
 
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_ActionBar.GetSpell)
+---@param actionID number
+---@return number spellID
+function C_ActionBar.GetSpell(actionID) end
+
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_ActionBar.HasFlyoutActionButtons)
 ---@param flyoutID number
 ---@return boolean hasFlyoutActionButtons

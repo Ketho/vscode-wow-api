@@ -41,6 +41,11 @@ function C_Transmog.Close() end
 ---@return number[] transmogIDList
 function C_Transmog.ExtractTransmogIDList(input) end
 
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_Transmog.GetAllSetAppearancesByID)
+---@param setID number
+---@return TransmogSetItemInfo[]? setItems
+function C_Transmog.GetAllSetAppearancesByID(setID) end
+
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_Transmog.GetApplyCost)
 ---@return number? cost
 function C_Transmog.GetApplyCost() end
@@ -132,6 +137,12 @@ function C_Transmog.SetPending(transmogLocation, pendingInfo) end
 ---@class TransmogApplyWarningInfo
 ---@field itemLink string
 ---@field text string
+
+---@class TransmogSetItemInfo
+---@field itemID number
+---@field itemModifiedAppearanceID number
+---@field invSlot number
+---@field invType string
 
 ---@class TransmogSlotInfo
 ---@field isTransmogrified boolean

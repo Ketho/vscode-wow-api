@@ -26,6 +26,11 @@ function C_LFGInfo.CanPlayerUsePVP() end
 ---@return string failureReason
 function C_LFGInfo.CanPlayerUsePremadeGroup() end
 
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_LFGInfo.CanPlayerUseScenarioFinder)
+---@return boolean canUse
+---@return string failureReason
+function C_LFGInfo.CanPlayerUseScenarioFinder() end
+
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_LFGInfo.ConfirmLfgExpandSearch)
 function C_LFGInfo.ConfirmLfgExpandSearch() end
 

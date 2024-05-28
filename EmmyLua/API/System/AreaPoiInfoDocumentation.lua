@@ -18,6 +18,12 @@ function C_AreaPoiInfo.GetAreaPOIInfo(uiMapID, areaPoiID) end
 ---@return number secondsLeft
 function C_AreaPoiInfo.GetAreaPOISecondsLeft(areaPoiID) end
 
+---Returns all area POIInfos flagged as dragonriding races for the given map.
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_AreaPoiInfo.GetDragonridingRacesForMap)
+---@param uiMapID number
+---@return number[] areaPoiIDs
+function C_AreaPoiInfo.GetDragonridingRacesForMap(uiMapID) end
+
 ---This statically determines if the POI is timed, GetAreaPOITimeLeft retrieves the value from the server and may return nothing for long intervals
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_AreaPoiInfo.IsAreaPOITimed)
 ---@param areaPoiID number

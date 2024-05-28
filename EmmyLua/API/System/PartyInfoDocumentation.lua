@@ -50,6 +50,7 @@ function C_PartyInfo.ConvertToRaid() end
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_PartyInfo.DoCountdown)
 ---@param seconds number
+---@return boolean success
 function C_PartyInfo.DoCountdown(seconds) end
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_PartyInfo.GetActiveCategories)
