@@ -1,4 +1,30 @@
 ---@meta
+---[Documentation](https://warcraft.wiki.gg/wiki/API_GetMacroBody)
+---@param macro number|string
+---@return string? body
+function GetMacroBody(macro) end
+
+---[Documentation](https://warcraft.wiki.gg/wiki/API_GetMacroIcons)
+function GetMacroIcons(table) end
+
+---[Documentation](https://warcraft.wiki.gg/wiki/API_GetMacroIndexByName)
+---@param name string
+---@return number macroSlot
+function GetMacroIndexByName(name) end
+
+---[Documentation](https://warcraft.wiki.gg/wiki/API_GetMacroInfo)
+---@param macro number|string
+---@return string name
+---@return fileID icon
+---@return string body
+function GetMacroInfo(macro) end
+
+---[Documentation](https://warcraft.wiki.gg/wiki/API_GetMacroItem)
+function GetMacroItem() end
+
+---[Documentation](https://warcraft.wiki.gg/wiki/API_GetMacroItemIcons)
+function GetMacroItemIcons(table) end
+
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_GetMacroSpell)
 function GetMacroSpell() end
 
@@ -303,6 +329,7 @@ function GetNumRFDungeons() end
 function GetNumRaidProfiles() end
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_GetNumRandomDungeons)
+---@return number numRandomDungeons
 function GetNumRandomDungeons() end
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_GetNumRandomScenarios)
@@ -743,7 +770,7 @@ function GetQuestUiMapID(questID) end
 ---@return boolean isHoliday
 ---@return number bonusRepAmount
 ---@return number minPlayers
----@return boolean isTimewalking
+---@return boolean isTimeWalking
 ---@return string name2
 ---@return number minGearLevel
 ---@return boolean isScaling
@@ -2562,28 +2589,4 @@ function RequeueSkirmish() end
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_ResetChatColors)
 function ResetChatColors() end
-
----[Documentation](https://warcraft.wiki.gg/wiki/API_ResetChatWindows)
-function ResetChatWindows() end
-
----[Documentation](https://warcraft.wiki.gg/wiki/API_ResetSetMerchantFilter)
-function ResetSetMerchantFilter() end
-
----[Documentation](https://warcraft.wiki.gg/wiki/API_ResetTutorials)
-function ResetTutorials() end
-
----[Documentation](https://warcraft.wiki.gg/wiki/API_ResetView)
-function ResetView(index) end
-
----[Documentation](https://warcraft.wiki.gg/wiki/API_RespondMailLockSendItem)
-function RespondMailLockSendItem(slot, keepItem) end
-
----[Documentation](https://warcraft.wiki.gg/wiki/API_RespondToInviteConfirmation)
-function RespondToInviteConfirmation(guid, accept) end
-
----[Documentation](https://warcraft.wiki.gg/wiki/API_RestoreRaidProfileFromCopy)
-function RestoreRaidProfileFromCopy() end
-
----[Documentation](https://warcraft.wiki.gg/wiki/API_ReturnInboxItem)
-function ReturnInboxItem(index) end
 

@@ -1,4 +1,10 @@
 ---@meta
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_ToyBox.IsToyUsable)
+function C_ToyBox.IsToyUsable(itemID) end
+
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_ToyBox.PickupToyBoxItem)
+function C_ToyBox.PickupToyBoxItem(itemID) end
+
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_ToyBox.SetAllExpansionTypeFilters)
 function C_ToyBox.SetAllExpansionTypeFilters(checked) end
 
@@ -2284,6 +2290,29 @@ function GetLFGQueuedList(category, table) end
 function GetLFGRandomCooldownExpiration() end
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_GetLFGRandomDungeonInfo)
+---@param index number
+---@return number id
+---@return string name
+---@return number typeID
+---@return number subtypeID
+---@return number minLevel
+---@return number maxLevel
+---@return number recLevel
+---@return number minRecLevel
+---@return number maxRecLevel
+---@return number expansionLevel
+---@return number groupID
+---@return string textureFilename
+---@return number difficultyID
+---@return number maxPlayers
+---@return string description
+---@return boolean isHoliday
+---@return number bonusRepAmount
+---@return number minPlayers
+---@return boolean isTimeWalker
+---@return string name2
+---@return number minGearLevel
+---@return boolean isScalingDungeon
 function GetLFGRandomDungeonInfo(index) end
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_GetLFGReadyCheckUpdate)
@@ -2430,30 +2459,4 @@ function GetLootSourceInfo(lootSlot) end
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_GetLootThreshold)
 ---@return number threshold
 function GetLootThreshold() end
-
----[Documentation](https://warcraft.wiki.gg/wiki/API_GetMacroBody)
----@param macro number|string
----@return string? body
-function GetMacroBody(macro) end
-
----[Documentation](https://warcraft.wiki.gg/wiki/API_GetMacroIcons)
-function GetMacroIcons(table) end
-
----[Documentation](https://warcraft.wiki.gg/wiki/API_GetMacroIndexByName)
----@param name string
----@return number macroSlot
-function GetMacroIndexByName(name) end
-
----[Documentation](https://warcraft.wiki.gg/wiki/API_GetMacroInfo)
----@param macro number|string
----@return string name
----@return fileID icon
----@return string body
-function GetMacroInfo(macro) end
-
----[Documentation](https://warcraft.wiki.gg/wiki/API_GetMacroItem)
-function GetMacroItem() end
-
----[Documentation](https://warcraft.wiki.gg/wiki/API_GetMacroItemIcons)
-function GetMacroItemIcons(table) end
 

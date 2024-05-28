@@ -1340,7 +1340,17 @@ function C_LFGList.SaveLanguageSearchFilter(enabled) end
 function C_LFGList.SetApplicantMemberRole(applicantID, memberIndex, role) end
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_LFGList.UpdateListing)
-function C_LFGList.UpdateListing(lfgID, itemLevel, honorLevel, autoAccept, private, questID) end
+---@param activityID number
+---@param itemLevel number
+---@param honorLevel number
+---@param autoAccept boolean
+---@param privateGroup boolean
+---@param questID number?
+---@param mythicPlusRating number?
+---@param pvpRating number?
+---@param selectedPlaystyle number?
+---@param isCrossFaction boolean?
+function C_LFGList.UpdateListing(activityID, itemLevel, honorLevel, autoAccept, privateGroup[, questID, mythicPlusRating, pvpRating, selectedPlaystyle, isCrossFaction) end
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_NamePlate.GetNamePlateEnemyClickThrough)
 function C_NamePlate.GetNamePlateEnemyClickThrough() end
@@ -2118,10 +2128,4 @@ function C_ToyBox.IsExpansionTypeFilterChecked(expansionIndex) end
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_ToyBox.IsSourceTypeFilterChecked)
 function C_ToyBox.IsSourceTypeFilterChecked(sourceIndex) end
-
----[Documentation](https://warcraft.wiki.gg/wiki/API_C_ToyBox.IsToyUsable)
-function C_ToyBox.IsToyUsable(itemID) end
-
----[Documentation](https://warcraft.wiki.gg/wiki/API_C_ToyBox.PickupToyBoxItem)
-function C_ToyBox.PickupToyBoxItem(itemID) end
 

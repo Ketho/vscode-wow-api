@@ -1,4 +1,28 @@
 ---@meta
+---[Documentation](https://warcraft.wiki.gg/wiki/API_ResetChatWindows)
+function ResetChatWindows() end
+
+---[Documentation](https://warcraft.wiki.gg/wiki/API_ResetSetMerchantFilter)
+function ResetSetMerchantFilter() end
+
+---[Documentation](https://warcraft.wiki.gg/wiki/API_ResetTutorials)
+function ResetTutorials() end
+
+---[Documentation](https://warcraft.wiki.gg/wiki/API_ResetView)
+function ResetView(index) end
+
+---[Documentation](https://warcraft.wiki.gg/wiki/API_RespondMailLockSendItem)
+function RespondMailLockSendItem(slot, keepItem) end
+
+---[Documentation](https://warcraft.wiki.gg/wiki/API_RespondToInviteConfirmation)
+function RespondToInviteConfirmation(guid, accept) end
+
+---[Documentation](https://warcraft.wiki.gg/wiki/API_RestoreRaidProfileFromCopy)
+function RestoreRaidProfileFromCopy() end
+
+---[Documentation](https://warcraft.wiki.gg/wiki/API_ReturnInboxItem)
+function ReturnInboxItem(index) end
+
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_RollOnLoot)
 ---@param rollID number
 ---@param rollType? number
