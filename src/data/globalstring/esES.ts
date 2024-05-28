@@ -10408,7 +10408,7 @@ Todas las configuraciones que tengan esta opción habilitada podrán compartir l
 	KEY_OEM1: String.raw`;`,
 	KEY_OEM2: String.raw`-`,
 	KEY_OEM3: String.raw`º`,
-	KEY_OEM4: String.raw```,
+	KEY_OEM4: String.raw`\``,
 	KEY_OEM5: String.raw`<`,
 	KEY_OEM6: String.raw`+`,
 	KEY_OEM7: String.raw`'`,

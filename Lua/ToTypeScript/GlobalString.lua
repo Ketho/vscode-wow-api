@@ -55,8 +55,12 @@ function m:ToTypeScript(locale, build)
 	for _, tbl in pairs(stringsTable) do
 		local key, value = tbl.BaseTag, tbl.TagText
 		value = value:gsub("\\32", " ") -- space char
-		if fixes[key] and value == fixes[key] then
-			value = [[\]]..value
+		-- if fixes[key] and value == fixes[key] then
+		-- 	value = [[\]]..value
+		-- end
+		if key:find("^KEY_") and value:len() == 1 then
+			value = value:gsub([[\]], [[\\]])
+			value = value:gsub([[`]], [[\`]])
 		end
 		local fs = IsValidTableKey(key) and fs1 or fs2
 		table.insert(t, fs:format(key, value))
