@@ -316,8 +316,8 @@ end
 
 local function ValidationError(info, msg)
 	info.hasError = true
-	if info.debug then
-	-- if true then
+	-- if info.debug then
+	if true then
 		print(msg)
 	end
 end
