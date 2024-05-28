@@ -18,6 +18,10 @@ function ModelSceneActor:CalculateMountScale(rider) end
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_ModelSceneActor_Dress)
 function ModelSceneActor:Dress() end
 
+---[Documentation](https://warcraft.wiki.gg/wiki/API_ModelSceneActor_DressPlayerSlot)
+---@param invSlot number
+function ModelSceneActor:DressPlayerSlot(invSlot) end
+
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_ModelSceneActor_GetAutoDress)
 ---@return boolean autoDress
 function ModelSceneActor:GetAutoDress() end

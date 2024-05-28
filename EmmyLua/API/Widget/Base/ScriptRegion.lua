@@ -12,6 +12,10 @@ function ScriptRegion:GetParent() end
 ---@return boolean canChange
 function ScriptRegion:CanChangeProtectedState() end
 
+---[Documentation](https://warcraft.wiki.gg/wiki/API_ScriptRegion_CollapsesLayout)
+---@return boolean collapsesLayout
+function ScriptRegion:CollapsesLayout() end
+
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_ScriptRegion_EnableMouse)
 ---@param enable? boolean Default = false
 function ScriptRegion:EnableMouse(enable) end
@@ -103,6 +107,10 @@ function ScriptRegion:HookScript(scriptTypeName, script, bindingType) end
 ---@return boolean isRestricted
 function ScriptRegion:IsAnchoringRestricted() end
 
+---[Documentation](https://warcraft.wiki.gg/wiki/API_ScriptRegion_IsCollapsed)
+---@return boolean isCollapsed
+function ScriptRegion:IsCollapsed() end
+
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_ScriptRegion_IsDragging)
 ---@return boolean isDragging
 function ScriptRegion:IsDragging() end
@@ -152,6 +160,10 @@ function ScriptRegion:IsShown() end
 ---@return boolean isVisible
 function ScriptRegion:IsVisible() end
 
+---[Documentation](https://warcraft.wiki.gg/wiki/API_ScriptRegion_SetCollapsesLayout)
+---@param collapsesLayout boolean
+function ScriptRegion:SetCollapsesLayout(collapsesLayout) end
+
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_ScriptRegion_SetMouseClickEnabled)
 ---@param enabled? boolean Default = false
 function ScriptRegion:SetMouseClickEnabled(enabled) end
@@ -167,9 +179,6 @@ function ScriptRegion:SetParent(parent) end
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_ScriptRegion_SetPassThroughButtons)
 ---@param ... MouseButton
 function ScriptRegion:SetPassThroughButtons(...) end
-
----[Documentation](https://warcraft.wiki.gg/wiki/API_ScriptRegion_SetProtected)
-function ScriptRegion:SetProtected() end
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_ScriptRegion_SetScript)
 ---@param scriptTypeName ScriptType
