@@ -1,8 +1,8 @@
 # Change Log
 
 ## [0.14.0] - 2024-05-28
-- 🎉 Update to patch 10.2.7 (52902)
-- Fixed [#145](Updated annotations of some Ace3 libraries.) Updated annotations of some Ace3 libraries
+- 🎉 Update to patch 10.2.7 (54847)
+- Fixed [#145](https://github.com/Ketho/vscode-wow-api/issues/145) Updated annotations of some Ace3 libraries
 - Fixed [#144](https://github.com/Ketho/vscode-wow-api/issues/144) EditMacro icon param typings
 - ✨ Feature: Shows for which flavors API functions exist in the tooltip
 
