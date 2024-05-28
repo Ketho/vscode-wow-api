@@ -1469,12 +1469,12 @@ function GetBattlefieldStatData(playerIndex, slotIndex) end
 ---@return string status
 ---@return string mapName
 ---@return number teamSize
----@return number registeredMatch
----@return unknown suspendedQueue
+---@return boolean registeredMatch
+---@return boolean suspendedQueue
 ---@return string queueType
 ---@return string gameType
 ---@return string role
----@return unknown asGroup
+---@return boolean asGroup
 ---@return string shortDescription
 ---@return string longDescription
 ---@return boolean isSoloQueue
