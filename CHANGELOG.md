@@ -1,19 +1,27 @@
 # Change Log
 
+## [0.14.0] - 2024-05-28
+- 🎉 Update to patch 10.2.7 (52902)
+- Fixed [#145](Updated annotations of some Ace3 libraries.) Updated annotations of some Ace3 libraries
+- Fixed [#144](https://github.com/Ketho/vscode-wow-api/issues/144) EditMacro icon param typings
+- ✨ Feature: Shows for which flavors API functions exist in the tooltip
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;![](img/changelog/0_14_0_flavors.png)
+
 ## [0.13.6] - 2024-04-24
 - PR [#140](https://github.com/Ketho/vscode-wow-api/pull/140) Define `WOW_PROJECT_CATACLYSM_CLASSIC`
 - PR [#139](https://github.com/Ketho/vscode-wow-api/pull/139) Add option `autoAddGlobals`
 
-![](img/changelog/0_13_6_autoAddGlobals.png)
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;![](img/changelog/0_13_6_autoAddGlobals.png)
 
 - PR [#138](https://github.com/Ketho/vscode-wow-api/pull/138) fix arguments of `GetCategoryNumAchievements`
 - Updated `:SetFont` to use `FontFile|string` types.
 
-![](img/changelog/0_13_6_font1.png)
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;![](img/changelog/0_13_6_font1.png)
 
 - Updated `:SetFontObject` to use `FontObject|string` types. Completion only works as a string type but it also accepts (global) Font objects, so both `GameFontNormal` and `"GameFontNormal"` are valid.
 
-![](img/changelog/0_13_6_font2.png)
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;![](img/changelog/0_13_6_font2.png)
 
 
 ## [0.13.5] - 2024-03-25
@@ -24,7 +32,7 @@
 - 🌙 Added latest Blizzard_Deprecated additions
 - 🛠 Improvements: Enums are now properly shown in code completion
 
-![](img/changelog_enum1.png)
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;![](img/changelog_enum1.png)
 
 ## [0.13.3] - 2024-03-01
 - Added `Frame:LockHighlight`, `:UnlockHighlight`
@@ -465,6 +473,7 @@ Libraries
 ### Added
 - 🚧 Wip: Development work
 
+[0.14.0]: https://github.com/Ketho/vscode-wow-api/releases/tag/0.14.0
 [0.13.6]: https://github.com/Ketho/vscode-wow-api/releases/tag/0.13.6
 [0.13.5]: https://github.com/Ketho/vscode-wow-api/releases/tag/0.13.5
 [0.13.4]: https://github.com/Ketho/vscode-wow-api/releases/tag/0.13.4
