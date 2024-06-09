@@ -142,7 +142,8 @@ function FontString:SetFontObject(font) end
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_FontString_SetFormattedText)
 ---@param text string
-function FontString:SetFormattedText(text) end
+---@param ... string|number
+function FontString:SetFormattedText(text, ...) end
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_FontString_SetIndentedWordWrap)
 ---@param wrap boolean
