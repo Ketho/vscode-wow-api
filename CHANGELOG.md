@@ -1,5 +1,8 @@
 # Change Log
 
+## [0.14.1] - 2024-06-09
+- Fixed [#146](https://github.com/Ketho/vscode-wow-api/issues/146) FontString:SetFormattedText is claimed to not accept vararg
+
 ## [0.14.0] - 2024-05-28
 - 🎉 Update to patch 10.2.7 (54847)
 - Fixed [#145](https://github.com/Ketho/vscode-wow-api/issues/145) Updated annotations of some Ace3 libraries
@@ -473,6 +476,7 @@ Libraries
 ### Added
 - 🚧 Wip: Development work
 
+[0.14.1]: https://github.com/Ketho/vscode-wow-api/releases/tag/0.14.1
 [0.14.0]: https://github.com/Ketho/vscode-wow-api/releases/tag/0.14.0
 [0.13.6]: https://github.com/Ketho/vscode-wow-api/releases/tag/0.13.6
 [0.13.5]: https://github.com/Ketho/vscode-wow-api/releases/tag/0.13.5
