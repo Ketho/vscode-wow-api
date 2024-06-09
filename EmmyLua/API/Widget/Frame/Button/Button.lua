@@ -148,7 +148,8 @@ function Button:SetFontString(fontString) end
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_Button_SetFormattedText)
 ---@param text string
-function Button:SetFormattedText(text) end
+---@param ... string|number
+function Button:SetFormattedText(text, ...) end
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_Button_SetHighlightAtlas)
 ---@param atlas textureAtlas
