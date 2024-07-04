@@ -33,6 +33,26 @@ Shows completion for GlobalStrings at >3 uppercase letters to declutter fuzzy se
 
 ![](https://github.com/Ketho/vscode-wow-api/raw/master/img/globalstring.gif)
 
+### AddOn Namespace
+LuaLS doesn't know about the [AddOn Namespace](https://warcraft.wiki.gg/wiki/Using_the_AddOn_namespace), so this needs to be annotated with [@class](https://luals.github.io/wiki/annotations/#class) in each file. This way the language server knows about the shared table and also allows you to mutate it, which would not be possible with a single `@class` and then `@type` in other files.
+
+- `file1.lua`
+```lua
+---@class ns
+local ns = select(2, ...)
+
+ns.foo = "hello"
+```
+
+- `file2.lua`
+```lua
+---@class ns
+local ns = select(2, ...)
+
+ns.bar = "world"
+```
+![](https://github.com/Ketho/vscode-wow-api/assets/1073877/ec0d7c95-201c-4b4a-a378-29b058df558a)
+
 ### Contributing
 The extension *reflects* the state of the wiki, so if you create/update the wiki pages, it will be updated in the extension on the next release. Otherwise feel free to create an [issue](https://github.com/Ketho/vscode-wow-api/issues) with the false errors.
 
