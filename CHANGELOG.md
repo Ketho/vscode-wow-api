@@ -1,5 +1,9 @@
 # Change Log
 
+## [0.14.2] - 2024-07-18
+- Fixed `inject-field` warning when defining fields on Frames
+- Readded completion for `UnitId` type
+
 ## [0.14.1] - 2024-06-09
 - Fixed [#146](https://github.com/Ketho/vscode-wow-api/issues/146) FontString:SetFormattedText is claimed to not accept vararg
 
@@ -476,6 +480,7 @@ Libraries
 ### Added
 - 🚧 Wip: Development work
 
+[0.14.2]: https://github.com/Ketho/vscode-wow-api/releases/tag/0.14.2
 [0.14.1]: https://github.com/Ketho/vscode-wow-api/releases/tag/0.14.1
 [0.14.0]: https://github.com/Ketho/vscode-wow-api/releases/tag/0.14.0
 [0.13.6]: https://github.com/Ketho/vscode-wow-api/releases/tag/0.13.6

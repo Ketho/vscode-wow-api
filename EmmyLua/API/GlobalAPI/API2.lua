@@ -811,7 +811,7 @@ function CreateFont(name) end
 ---@param parent? any
 ---@param template? `Tp` | TemplateType
 ---@param id? number
----@return T|Tp frame
+---@return table|T|Tp frame
 function CreateFrame(frameType, name, parent, template, id) end
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_CreateMacro)
