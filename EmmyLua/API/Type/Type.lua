@@ -98,8 +98,6 @@
 ---|"RANGEDSLOT"
 ---|"TABARDSLOT"
 
----@alias UnitId string
-
 ---@alias FramePoint
 ---|"TOPLEFT"
 ---|"TOPRIGHT"
