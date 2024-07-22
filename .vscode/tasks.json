@@ -17,16 +17,6 @@
 			}
 		},
 		{
-			"label": "Lua 5.4",
-			"type": "shell",
-			"command": "lua54 '${file}'",
-			"presentation": {
-				"showReuseMessage": false,
-				"clear": true
-			},
-			"problemMatcher": []
-		},
-		{
 			"label": "Lua 5.4 main",
 			"type": "shell",
 			"command": "lua54 Lua\\main.lua",
