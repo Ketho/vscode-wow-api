@@ -1,4 +1,8 @@
 ---@meta
+---[Documentation](https://warcraft.wiki.gg/wiki/API_GetLootThreshold)
+---@return number threshold
+function GetLootThreshold() end
+
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_GetMacroBody)
 ---@param macro number|string
 ---@return string? body
@@ -132,6 +136,7 @@ function GetNextCompleatedTutorial(tutorial) end
 function GetNextPendingInviteConfirmation() end
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_GetNumActiveQuests)
+---@return number numActiveQuests
 function GetNumActiveQuests() end
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_GetNumArchaeologyRaces)
@@ -305,14 +310,17 @@ function GetNumQuestLeaderBoards(questIndex) end
 function GetNumQuestLogChoices() end
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_GetNumQuestLogRewardCurrencies)
-function GetNumQuestLogRewardCurrencies() end
+---@param questID? number
+---@return number numCurrencies
+function GetNumQuestLogRewardCurrencies(questID) end
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_GetNumQuestLogRewardFactions)
 function GetNumQuestLogRewardFactions() end
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_GetNumQuestLogRewards)
+---@param questID? number
 ---@return number numQuestRewards
-function GetNumQuestLogRewards() end
+function GetNumQuestLogRewards(questID) end
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_GetNumQuestLogTasks)
 function GetNumQuestLogTasks() end
@@ -678,7 +686,9 @@ function GetQuestLogRewardHonor() end
 function GetQuestLogRewardInfo(itemIndex, questID) end
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_GetQuestLogRewardMoney)
-function GetQuestLogRewardMoney() end
+---@param questID? number
+---@return number money
+function GetQuestLogRewardMoney(questID) end
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_GetQuestLogRewardSkillPoints)
 function GetQuestLogRewardSkillPoints() end
@@ -1138,7 +1148,7 @@ function GetSpellDescription(spellID) end
 ---@return number spellID
 ---@return number originalIcon
 ---@overload fun(index: number, bookType: string)
-function GetSpellInfo(spell) end
+function C_Spell.GetSpellInfo(spell) end
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_GetSpellLevelLearned)
 ---@param spell number|string
@@ -1599,6 +1609,8 @@ function HasOverrideActionBar() end
 function HasPendingGlyphCast() end
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_HasPetSpells)
+---@return number numSpells
+---@return string petToken
 function HasPetSpells() end
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_HasPetUI)
@@ -2455,6 +2467,7 @@ function QuestIsDaily() end
 function QuestIsFromAdventureMap() end
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_QuestIsFromAreaTrigger)
+---@return boolean isFromArea
 function QuestIsFromAreaTrigger() end
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_QuestIsWeekly)
@@ -2580,13 +2593,4 @@ function RequestRaidInfo() end
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_RequestRandomBattlegroundInstanceInfo)
 function RequestRandomBattlegroundInstanceInfo() end
-
----[Documentation](https://warcraft.wiki.gg/wiki/API_RequestRatedInfo)
-function RequestRatedInfo() end
-
----[Documentation](https://warcraft.wiki.gg/wiki/API_RequeueSkirmish)
-function RequeueSkirmish() end
-
----[Documentation](https://warcraft.wiki.gg/wiki/API_ResetChatColors)
-function ResetChatColors() end
 

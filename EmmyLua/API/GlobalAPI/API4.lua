@@ -1,4 +1,13 @@
 ---@meta
+---[Documentation](https://warcraft.wiki.gg/wiki/API_RequestRatedInfo)
+function RequestRatedInfo() end
+
+---[Documentation](https://warcraft.wiki.gg/wiki/API_RequeueSkirmish)
+function RequeueSkirmish() end
+
+---[Documentation](https://warcraft.wiki.gg/wiki/API_ResetChatColors)
+function ResetChatColors() end
+
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_ResetChatWindows)
 function ResetChatWindows() end
 

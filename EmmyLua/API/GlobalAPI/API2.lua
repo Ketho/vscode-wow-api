@@ -1419,6 +1419,7 @@ function GetAvailableLevel(index) end
 ---@return boolean isRepeatable
 ---@return boolean isLegendary
 ---@return number questID
+---@return boolean isImportant
 function GetAvailableQuestInfo(index) end
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_GetAvailableTitle)
@@ -2455,8 +2456,4 @@ function GetLootSlotType(slotIndex) end
 ---@return string guid
 ---@return number quantity
 function GetLootSourceInfo(lootSlot) end
-
----[Documentation](https://warcraft.wiki.gg/wiki/API_GetLootThreshold)
----@return number threshold
-function GetLootThreshold() end
 
