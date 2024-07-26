@@ -1,6 +1,6 @@
 local Path = require "path"
 
-BRANCH = "mainline"
+BRANCH = "mainline_beta"
 CONSTANTS = {
 	LATEST_MAINLINE = "10.2.7",
 	LATEST_CLASSIC = "4.4.0",
@@ -8,6 +8,7 @@ CONSTANTS = {
 
 local wagoBranch = {
 	mainline = "wow",
+	mainline_beta = "wow_beta",
 	mainline_ptr = "wowt",
 }
 

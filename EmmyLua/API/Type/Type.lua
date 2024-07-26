@@ -169,3 +169,5 @@
 ---@alias ModelAsset number FileID
 ---@alias LuaValueVariant table
 ---@alias ConnectionIptype number 1=IPv4, 2=IPv6
+---@alias ArtifactTiers number
+---@alias SpellIdentifier number|string
