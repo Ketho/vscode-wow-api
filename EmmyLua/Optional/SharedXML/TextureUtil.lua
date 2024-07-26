@@ -22,6 +22,11 @@ function SetClampedTextureRotation(texture, rotationDegrees) end
 ---@param texture Texture
 function ClearClampedTextureRotation(texture) end
 
+---[FrameXML](https://www.townlong-yak.com/framexml/go/GetMicroIconForRole
+---@param role string
+---@return string icon
+function GetMicroIconForRole(role) end
+
 ---[FrameXML](https://www.townlong-yak.com/framexml/go/GetTexCoordsByGrid)
 ---@param xOffset number
 ---@param yOffset number

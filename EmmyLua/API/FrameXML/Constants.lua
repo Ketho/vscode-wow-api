@@ -22,13 +22,6 @@ WORLD_QUEST_ICONS_BY_PROFESSION = {
 	[C_TradeSkillUI.GetProfessionSkillLineID(Enum.Profession.Skinning)] = "worldquest-icon-skinning",
 };
 
-CHAT_FONT_HEIGHTS = {
-	[1] = 12,
-	[2] = 14,
-	[3] = 16,
-	[4] = 18
-};
-
 HTML_START = "<html><body><p>";
 HTML_START_CENTERED = "<html><body><p align=\"center\">";
 HTML_END = "</p></body></html>";
@@ -59,10 +52,8 @@ CLASS_SORT_ORDER = {
 };
 MAX_CLASSES = #CLASS_SORT_ORDER;
 
-LOCALIZED_CLASS_NAMES_MALE = {};
-LOCALIZED_CLASS_NAMES_FEMALE = {};
-FillLocalizedClassList(LOCALIZED_CLASS_NAMES_MALE, false);
-FillLocalizedClassList(LOCALIZED_CLASS_NAMES_FEMALE, true);
+LOCALIZED_CLASS_NAMES_MALE = LocalizedClassList(false);
+LOCALIZED_CLASS_NAMES_FEMALE = LocalizedClassList(true);
 
 --
 -- Spell
@@ -103,6 +94,10 @@ SPEC_MONK_WINDWALKER = 3;
 SPEC_PALADIN_RETRIBUTION = 3;
 SPEC_MAGE_ARCANE = 1;
 SPEC_SHAMAN_RESTORATION = 3;
+SPEC_DRUID_BALANCE = 1;
+SPEC_DRUID_FERAL = 2;
+SPEC_DRUID_GUARDIAN = 3;
+SPEC_EVOKER_AUGMENTATION = 3;
 
 TALENT_SORT_ORDER = {
 	"spec1",
@@ -118,18 +113,16 @@ TALENT_ACTIVATION_SPELLS = {
 -- Achievement
 --
 
-MAX_TRACKED_ACHIEVEMENTS = 10;
-
 -- Criteria Types
 CRITERIA_TYPE_ACHIEVEMENT = 8;
 
 -- Achievement Flags
-ACHIEVEMENT_FLAGS_HAS_PROGRESS_BAR 		= 0x00000080;
-ACHIEVEMENT_FLAGS_GUILD					= 0x00004000;
-ACHIEVEMENT_FLAGS_SHOW_GUILD_MEMBERS	= 0x00008000;
-ACHIEVEMENT_FLAGS_SHOW_CRITERIA_MEMBERS = 0x00010000;
-ACHIEVEMENT_FLAGS_ACCOUNT 				= 0x00020000;
-NUM_ACHIEVEMENT_FLAGS			= 3;
+ACHIEVEMENT_FLAGS_HAS_PROGRESS_BAR 				= 0x00000080;
+ACHIEVEMENT_FLAGS_GUILD							= 0x00004000;
+ACHIEVEMENT_FLAGS_SHOW_GUILD_MEMBERS			= 0x00008000;
+ACHIEVEMENT_FLAGS_SHOW_CRITERIA_MEMBERS 		= 0x00010000;
+ACHIEVEMENT_FLAGS_ACCOUNT 						= 0x00020000;
+ACHIEVEMENT_FLAGS_TOAST_ON_REPEAT_COMPLETION	= 0x02000000;
 
 -- Eval Tree Flags
 EVALUATION_TREE_FLAG_PROGRESS_BAR		= 0x00000001;
@@ -210,6 +203,7 @@ INVSLOT_OFFHAND		= 17;
 INVSLOT_RANGED		= 18;
 INVSLOT_TABARD		= 19;
 INVSLOT_LAST_EQUIPPED = INVSLOT_TABARD;
+NUM_INVSLOTS = (INVSLOT_LAST_EQUIPPED - INVSLOT_FIRST_EQUIPPED) + 1;
 
 INVSLOTS_EQUIPABLE_IN_COMBAT = {
 [INVSLOT_MAINHAND] = true,
@@ -477,9 +471,9 @@ PANEL_DEFAULT_WIDTH = 338;
 PANEL_DEFAULT_HEIGHT = 424;
 
 --Inline role icons
-INLINE_TANK_ICON = "|TInterface\\LFGFrame\\UI-LFG-ICON-PORTRAITROLES.blp:16:16:0:0:64:64:0:19:22:41|t";
-INLINE_HEALER_ICON = "|TInterface\\LFGFrame\\UI-LFG-ICON-PORTRAITROLES.blp:16:16:0:0:64:64:20:39:1:20|t";
-INLINE_DAMAGER_ICON = "|TInterface\\LFGFrame\\UI-LFG-ICON-PORTRAITROLES.blp:16:16:0:0:64:64:20:39:22:41|t"
+INLINE_TANK_ICON = CreateAtlasMarkup(GetMicroIconForRole("TANK"), 16, 16);
+INLINE_HEALER_ICON = CreateAtlasMarkup(GetMicroIconForRole("HEALER"), 16, 16);
+INLINE_DAMAGER_ICON = CreateAtlasMarkup(GetMicroIconForRole("DAMAGER"), 16, 16);
 
 -- Guild
 MAX_GUILDBANK_TABS = 8;
@@ -676,10 +670,10 @@ LFG_CATEGORY_NAMES = {
 -- PVP
 MAX_ARENA_TEAMS = 2;
 MAX_WORLD_PVP_QUEUES = 2;
-CONQUEST_SIZE_STRINGS = { RATED_SOLO_SHUFFLE_SIZE, ARENA_2V2, ARENA_3V3, BATTLEGROUND_10V10 };
-CONQUEST_TYPE_STRINGS = { ARENA, ARENA, ARENA, BATTLEGROUNDS };
-CONQUEST_SIZES = { 1, 2, 3, 10 };
-CONQUEST_BRACKET_INDEXES = { 7, 1, 2, 4 }; -- 5v5 was removed
+CONQUEST_SIZE_STRINGS = { RATED_SOLO_SHUFFLE_SIZE, RATED_BG_BLITZ_SIZE, ARENA_2V2, ARENA_3V3, BATTLEGROUND_10V10 };
+CONQUEST_TYPE_STRINGS = { ARENA, BATTLEGROUNDS, ARENA, ARENA, BATTLEGROUNDS };
+CONQUEST_SIZES = { 1, 1, 2, 3, 10 };
+CONQUEST_BRACKET_INDEXES = { 7, 9, 1, 2, 4 }; -- 5v5 was removed
 
 -- Chat
 CHANNEL_INVITE_TIMEOUT = 60;
@@ -694,36 +688,32 @@ SCENARIO_FLAG_DEPRECATED3			= 0x00000008;
 LUA_WARNING_TREAT_AS_ERROR = 0;
 
 -- Quest Tags
-QUEST_ICONS_FILE = "Interface\\QuestFrame\\QuestTypeIcons";
-QUEST_ICONS_FILE_WIDTH = 128;
-QUEST_ICONS_FILE_HEIGHT = 64;
-
-QUEST_TAG_TCOORDS = {
-	["COMPLETED"] = { 0.140625, 0.28125, 0, 0.28125 },
-	["DAILY"] = { 0.28125, 0.421875, 0, 0.28125 },
-	["WEEKLY"] = { 0.28125, 0.421875, 0.5625, 0.84375 },
-	["FAILED"] = { 0.84375, 0.984375, 0.28125, 0.5625 },
-	["STORY"] = { 0.703125, 0.84375, 0.28125, 0.5625 },
-	["ALLIANCE"] = { 0.421875, 0.5625, 0.28125, 0.5625 },
-	["HORDE"] = { 0.5625, 0.703125, 0.28125, 0.5625 },
-	["EXPIRING_SOON"] = { 0.84375, 0.984375, 0.5625, 0.84375 },
-	["EXPIRING"] = { 0.703125, 0.84375, 0.5625, 0.84375 },
-	[Enum.QuestTag.Dungeon] = { 0.421875, 0.5625, 0, 0.28125 },
-	[Enum.QuestTag.Scenario] = { 0.5625, 0.703125, 0, 0.28125 },
-	[Enum.QuestTag.Account] = { 0.84375, 0.984375, 0, 0.28125 },
-	[Enum.QuestTag.Legendary] = { 0, 0.140625, 0.28125, 0.5625 },
-	[Enum.QuestTag.Group] = { 0.140625, 0.28125, 0.28125, 0.5625 },
-	[Enum.QuestTag.PvP] = { 0.28125, 0.421875, 0.28125, 0.5625 },
-	[Enum.QuestTag.Heroic] = { 0, 0.140625, 0.5625, 0.84375 },
+QUEST_TAG_ATLAS = {
+	["COMPLETED"] = "questlog-questtypeicon-quest",
+	["COMPLETED_LEGENDARY"] = "questlog-questtypeicon-legendaryturnin",
+	["DAILY"] = "questlog-questtypeicon-daily",
+	["WEEKLY"] = "questlog-questtypeicon-weekly",
+	["FAILED"] = "questlog-questtypeicon-questfailed",
+	["STORY"] = "questlog-questtypeicon-story",
+	["ALLIANCE"] = "questlog-questtypeicon-alliance",
+	["HORDE"] = "questlog-questtypeicon-horde",
+	["EXPIRING_SOON"] = "questlog-questtypeicon-expiringsoon",
+	["EXPIRING"] = "questlog-questtypeicon-expiring",
+	[Enum.QuestTag.Dungeon] = "questlog-questtypeicon-dungeon",
+	[Enum.QuestTag.Scenario] = "questlog-questtypeicon-scenario",
+	[Enum.QuestTag.Group] = "questlog-questtypeicon-group",
+	[Enum.QuestTag.PvP] = "questlog-questtypeicon-pvp",
+	[Enum.QuestTag.Heroic] = "questlog-questtypeicon-heroic",
 	-- same texture for all raids
-	[Enum.QuestTag.Raid] = { 0.703125, 0.84375, 0, 0.28125 },
-	[Enum.QuestTag.Raid10] = { 0.703125, 0.84375, 0, 0.28125 },
-	[Enum.QuestTag.Raid25] = { 0.703125, 0.84375, 0, 0.28125 },
+	[Enum.QuestTag.Raid] = "questlog-questtypeicon-raid",
+	[Enum.QuestTag.Raid10] = "questlog-questtypeicon-raid",
+	[Enum.QuestTag.Raid25] = "questlog-questtypeicon-raid",
+	[Enum.QuestTag.Delve] = "questlog-questtypeicon-delves",
 };
 
-WORLD_QUEST_TYPE_TCOORDS = {
-	[Enum.QuestTagType.Dungeon] = { 0.421875, 0.5625, 0, 0.28125 },
-	[Enum.QuestTagType.Raid] = { 0.703125, 0.84375, 0, 0.28125 },
+WORLD_QUEST_TYPE_ATLAS = {
+	[Enum.QuestTagType.Dungeon] = "questlog-questtypeicon-dungeon",
+	[Enum.QuestTagType.Raid] = "questlog-questtypeicon-raid",
 };
 
 -- MATCH CONDITIONS
@@ -825,49 +815,6 @@ Enum.ChatChannelType = {
 	Private_Party = 2,
 	Public_Party = 3,
 	Communities = 4,
-};
-
-CALENDAR_INVITESTATUS_INFO = {
-	["UNKNOWN"] = {
-		name		= UNKNOWN,
-		color		= NORMAL_FONT_COLOR,
-	},
-	[Enum.CalendarStatus.Confirmed] = {
-		name		= CALENDAR_STATUS_CONFIRMED,
-		color		= GREEN_FONT_COLOR,
-	},
-	[Enum.CalendarStatus.Available] = {
-		name		= CALENDAR_STATUS_ACCEPTED,
-		color		= GREEN_FONT_COLOR,
-	},
-	[Enum.CalendarStatus.Declined] = {
-		name		= CALENDAR_STATUS_DECLINED,
-		color		= RED_FONT_COLOR,
-	},
-	[Enum.CalendarStatus.Out] = {
-		name		= CALENDAR_STATUS_OUT,
-		color		= RED_FONT_COLOR,
-	},
-	[Enum.CalendarStatus.Standby] = {
-		name		= CALENDAR_STATUS_STANDBY,
-		color		= ORANGE_FONT_COLOR,
-	},
-	[Enum.CalendarStatus.Invited] = {
-		name		= CALENDAR_STATUS_INVITED,
-		color		= NORMAL_FONT_COLOR,
-	},
-	[Enum.CalendarStatus.Signedup] = {
-		name		= CALENDAR_STATUS_SIGNEDUP,
-		color		= GREEN_FONT_COLOR,
-	},
-	[Enum.CalendarStatus.NotSignedup] = {
-		name		= CALENDAR_STATUS_NOT_SIGNEDUP,
-		color		= GRAY_FONT_COLOR,
-	},
-	[Enum.CalendarStatus.Tentative] = {
-		name		= CALENDAR_STATUS_TENTATIVE,
-		color		= ORANGE_FONT_COLOR,
-	},
 };
 
 TOOLTIP_INDENT_OFFSET = 10;

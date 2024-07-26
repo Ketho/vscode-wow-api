@@ -100,6 +100,14 @@ function Util:Wipe(tbl)
 	end
 end
 
+function Util:tInvert(a)
+	local t = {}
+	for k, v in pairs(a) do
+		t[v] = k
+	end
+	return t
+end
+
 function Util:SortTable(tbl, func)
 	local t = {}
 	for k in pairs(tbl) do
