@@ -13,6 +13,8 @@ interface EventInterface {
 }
 
 export const data: EventInterface = {
+	ACCOUNT_CHARACTER_CURRENCY_DATA_RECEIVED: {},
+	ACCOUNT_MONEY: {},
 	ACHIEVEMENT_EARNED: {
 		Payload: [
 			{Name: "achievementID", Type: "number"},
@@ -59,6 +61,9 @@ export const data: EventInterface = {
 		Payload: [
 			{Name: "configID", Type: "number"},
 		],
+	},
+	ACTIVE_DELVE_DATA_UPDATE: {
+		Documentation: "Signaled when SpellScript calls change the data for players/parties owning a delve or when the delve is shut down.",
 	},
 	ACTIVE_PLAYER_SPECIALIZATION_CHANGED: {},
 	ACTIVE_TALENT_GROUP_CHANGED: {
@@ -200,7 +205,7 @@ export const data: EventInterface = {
 	ARTIFACT_ENDGAME_REFUND: {
 		Payload: [
 			{Name: "numRefundedPowers", Type: "number"},
-			{Name: "refundedTier", Type: "number"},
+			{Name: "refundedTier", Type: "ArtifactTiers"},
 			{Name: "bagOrSlotIndex", Type: "number"},
 			{Name: "slotIndex", Type: "number", Nilable: true},
 		],
@@ -419,6 +424,16 @@ export const data: EventInterface = {
 	BANK_BAG_SLOT_FLAGS_UPDATED: {
 		Payload: [
 			{Name: "slot", Type: "number"},
+		],
+	},
+	BANK_TABS_CHANGED: {
+		Payload: [
+			{Name: "bankType", Type: "BankType"},
+		],
+	},
+	BANK_TAB_SETTINGS_UPDATED: {
+		Payload: [
+			{Name: "bankType", Type: "BankType"},
 		],
 	},
 	BARBER_SHOP_APPEARANCE_APPLIED: {},
@@ -653,6 +668,8 @@ export const data: EventInterface = {
 	CANCEL_PLAYER_COUNTDOWN: {
 		Payload: [
 			{Name: "initiatedBy", Type: "WOWGUID"},
+			{Name: "informChat", Type: "boolean"},
+			{Name: "initiatedByName", Type: "string", Nilable: true},
 		],
 	},
 	CANCEL_SUMMON: {},
@@ -2259,6 +2276,13 @@ export const data: EventInterface = {
 	CLUB_FINDER_ENABLED_OR_DISABLED: {
 		Documentation: "Sends an update to the UI that the club finder feature has been enabled or disabled.",
 	},
+	CLUB_FINDER_GUILD_REALM_NAME_UPDATED: {
+		Documentation: "Sends an update to the UI if the realm name of a guild was found asynchronously.",
+		Payload: [
+			{Name: "clubFinderGUID", Type: "WOWGUID"},
+			{Name: "realmName", Type: "string"},
+		],
+	},
 	CLUB_FINDER_LINKED_CLUB_RETURNED: {
 		Documentation: "When a player clicks a club link, this returns that information back about the club they clicked on",
 		Payload: [
@@ -2439,6 +2463,7 @@ export const data: EventInterface = {
 			{Name: "combatTextType", Type: "string"},
 		],
 	},
+	COMBO_TARGET_CHANGED: {},
 	COMMENTATOR_ENTER_WORLD: {},
 	COMMENTATOR_HISTORY_FLUSHED: {},
 	COMMENTATOR_IMMEDIATE_FOV_UPDATE: {
@@ -2584,6 +2609,7 @@ export const data: EventInterface = {
 			{Name: "contributionID", Type: "number"},
 		],
 	},
+	CONVERT_TO_BIND_TO_ACCOUNT_CONFIRM: {},
 	CONVERT_TO_RAID_CONFIRMATION: {},
 	CORPSE_IN_INSTANCE: {},
 	CORPSE_IN_RANGE: {},
@@ -2620,6 +2646,12 @@ export const data: EventInterface = {
 		],
 	},
 	CRAFTINGORDERS_CLAIM_ORDER_RESPONSE: {
+		Payload: [
+			{Name: "result", Type: "CraftingOrderResult"},
+			{Name: "orderID", Type: "BigUInteger"},
+		],
+	},
+	CRAFTINGORDERS_CRAFT_ORDER_RESPONSE: {
 		Payload: [
 			{Name: "result", Type: "CraftingOrderResult"},
 			{Name: "orderID", Type: "BigUInteger"},
@@ -2682,6 +2714,12 @@ export const data: EventInterface = {
 		],
 	},
 	CRAFTINGORDERS_UPDATE_PERSONAL_ORDER_COUNTS: {},
+	CRAFTINGORDERS_UPDATE_REWARDS: {
+		Payload: [
+			{Name: "npcOrderRewards", Type: "CraftingOrderRewardInfo[]"},
+			{Name: "orderID", Type: "BigUInteger"},
+		],
+	},
 	CRAFTING_DETAILS_UPDATE: {},
 	CRAFTING_HOUSE_DISABLED: {},
 	CRITERIA_COMPLETE: {
@@ -2702,9 +2740,11 @@ export const data: EventInterface = {
 			{Name: "quantity", Type: "number", Nilable: true},
 			{Name: "quantityChange", Type: "number", Nilable: true},
 			{Name: "quantityGainSource", Type: "number", Nilable: true},
-			{Name: "quantityLostSource", Type: "number", Nilable: true},
+			{Name: "destroyReason", Type: "number", Nilable: true},
 		],
 	},
+	CURRENCY_TRANSFER_FAILED: {},
+	CURRENCY_TRANSFER_LOG_UPDATE: {},
 	CURRENT_SPELL_CAST_CHANGED: {
 		Payload: [
 			{Name: "cancelledCast", Type: "boolean"},
@@ -2724,6 +2764,12 @@ export const data: EventInterface = {
 			{Name: "value", Type: "string"},
 		],
 	},
+	DAILY_RESET_INSTANCE_WELCOME: {
+		Payload: [
+			{Name: "mapname", Type: "string"},
+			{Name: "timeLeft", Type: "number"},
+		],
+	},
 	DELETE_ITEM_CONFIRM: {
 		Payload: [
 			{Name: "itemName", Type: "string"},
@@ -2731,6 +2777,9 @@ export const data: EventInterface = {
 			{Name: "bonding", Type: "number"},
 			{Name: "questWarn", Type: "number"},
 		],
+	},
+	DELVES_ACCOUNT_DATA_ELEMENT_CHANGED: {
+		Documentation: "Signaled when player account data element(s) have changed. This drives curio ranks, and the UI should update when this is sent.",
 	},
 	DISABLE_DECLINE_GUILD_INVITE: {},
 	DISABLE_LOW_LEVEL_RAID: {},
@@ -2782,6 +2831,13 @@ export const data: EventInterface = {
 	ENABLE_LOW_LEVEL_RAID: {},
 	ENABLE_TAXI_BENCHMARK: {},
 	ENABLE_XP_GAIN: {},
+	ENCHANT_SPELL_COMPLETED: {
+		Payload: [
+			{Name: "successful", Type: "boolean"},
+			{Name: "enchantedItem", Type: "ItemLocationMixin", Nilable: true},
+		],
+	},
+	ENCHANT_SPELL_SELECTED: {},
 	ENCOUNTER_END: {
 		Payload: [
 			{Name: "encounterID", Type: "number"},
@@ -2835,16 +2891,19 @@ export const data: EventInterface = {
 	EQUIP_BIND_CONFIRM: {
 		Payload: [
 			{Name: "slot", Type: "number"},
+			{Name: "itemLocation", Type: "ItemLocationMixin"},
 		],
 	},
 	EQUIP_BIND_REFUNDABLE_CONFIRM: {
 		Payload: [
 			{Name: "slot", Type: "number"},
+			{Name: "itemLocation", Type: "ItemLocationMixin"},
 		],
 	},
 	EQUIP_BIND_TRADEABLE_CONFIRM: {
 		Payload: [
 			{Name: "slot", Type: "number"},
+			{Name: "itemLocation", Type: "ItemLocationMixin"},
 		],
 	},
 	EXPAND_BAG_BAR_CHANGED: {
@@ -3338,6 +3397,8 @@ export const data: EventInterface = {
 		],
 	},
 	IGNORELIST_UPDATE: {},
+	IMMERSIVE_INTERACTION_BEGIN: {},
+	IMMERSIVE_INTERACTION_END: {},
 	INCOMING_RESURRECT_CHANGED: {
 		Payload: [
 			{Name: "unitTarget", Type: "UnitToken"},
@@ -3390,6 +3451,12 @@ export const data: EventInterface = {
 	INSTANCE_LOCK_START: {},
 	INSTANCE_LOCK_STOP: {},
 	INSTANCE_LOCK_WARNING: {},
+	INSTANCE_RESET_WARNING: {
+		Payload: [
+			{Name: "warningMessage", Type: "string"},
+			{Name: "timeLeft", Type: "number"},
+		],
+	},
 	INVENTORY_SEARCH_UPDATE: {},
 	INVITE_TO_PARTY_CONFIRMATION: {
 		Payload: [
@@ -3519,6 +3586,13 @@ export const data: EventInterface = {
 		],
 	},
 	LANGUAGE_LIST_CHANGED: {},
+	LEARNED_SPELL_IN_SKILL_LINE: {
+		Payload: [
+			{Name: "spellID", Type: "number"},
+			{Name: "skillLineIndex", Type: "number"},
+			{Name: "isGuildPerkSpell", Type: "boolean"},
+		],
+	},
 	LEARNED_SPELL_IN_TAB: {
 		Payload: [
 			{Name: "spellID", Type: "number"},
@@ -3800,7 +3874,6 @@ export const data: EventInterface = {
 	},
 	MAJOR_FACTION_INTERACTION_ENDED: {},
 	MAJOR_FACTION_INTERACTION_STARTED: {},
-	MAJOR_FACTION_RENOWN_CATCH_UP_STATE_UPDATE: {},
 	MAJOR_FACTION_RENOWN_LEVEL_CHANGED: {
 		Payload: [
 			{Name: "majorFactionID", Type: "number"},
@@ -4016,6 +4089,12 @@ export const data: EventInterface = {
 	PENDING_AZERITE_ESSENCE_CHANGED: {
 		Payload: [
 			{Name: "essenceID", Type: "number", Nilable: true},
+		],
+	},
+	PERKS_ACTIVITIES_TRACKED_LIST_CHANGED: {
+		Payload: [
+			{Name: "perksActivityID", Type: "number"},
+			{Name: "added", Type: "boolean"},
 		],
 	},
 	PERKS_ACTIVITIES_TRACKED_UPDATED: {},
@@ -4267,6 +4346,11 @@ export const data: EventInterface = {
 			{Name: "slot", Type: "number"},
 		],
 	},
+	PLAYER_ACCOUNT_BANK_TAB_SLOTS_CHANGED: {
+		Payload: [
+			{Name: "slot", Type: "number"},
+		],
+	},
 	PLAYER_ALIVE: {},
 	PLAYER_AVG_ITEM_LEVEL_UPDATE: {},
 	PLAYER_CAMPING: {},
@@ -4365,6 +4449,12 @@ export const data: EventInterface = {
 	PLAYER_LOSES_VEHICLE_DATA: {
 		Payload: [
 			{Name: "unitTarget", Type: "UnitToken"},
+		],
+	},
+	PLAYER_MAP_CHANGED: {
+		Payload: [
+			{Name: "oldMapID", Type: "number"},
+			{Name: "newMapID", Type: "number"},
 		],
 	},
 	PLAYER_MONEY: {},
@@ -4496,6 +4586,7 @@ export const data: EventInterface = {
 			{Name: "ratedBattlegrounds", Type: "boolean"},
 			{Name: "ratedArenas", Type: "boolean"},
 			{Name: "ratedSoloShuffle", Type: "boolean"},
+			{Name: "ratedBGBlitz", Type: "boolean"},
 		],
 	},
 	PVP_VEHICLE_INFO_UPDATED: {},
@@ -4706,6 +4797,7 @@ export const data: EventInterface = {
 			{Name: "name", Type: "string"},
 		],
 	},
+	REMIX_END_OF_EVENT: {},
 	REPLACE_ENCHANT: {
 		Payload: [
 			{Name: "existingStr", Type: "string"},
@@ -4874,6 +4966,12 @@ export const data: EventInterface = {
 			{Name: "shipmentStarted", Type: "boolean", Nilable: true},
 			{Name: "hasAttachedFollower", Type: "boolean", Nilable: true},
 		],
+	},
+	SHOW_DELVES_COMPANION_CONFIGURATION_UI: {
+		Documentation: "Signaled when SpellScript indicates that a curio has been learned or upgraded. Will show the companion config UI.",
+	},
+	SHOW_DELVES_DISPLAY_UI: {
+		Documentation: "Signaled when the UI needs to display the Delves dashbaord.",
 	},
 	SHOW_FACTION_SELECT_UI: {},
 	SHOW_HYPERLINK_TOOLTIP: {
@@ -5133,11 +5231,13 @@ export const data: EventInterface = {
 			{Name: "initiatedBy", Type: "WOWGUID"},
 			{Name: "timeRemaining", Type: "time_t"},
 			{Name: "totalTime", Type: "time_t"},
+			{Name: "informChat", Type: "boolean"},
+			{Name: "initiatedByName", Type: "string", Nilable: true},
 		],
 	},
 	START_TIMER: {
 		Payload: [
-			{Name: "timerType", Type: "number"},
+			{Name: "timerType", Type: "StartTimerType"},
 			{Name: "timeRemaining", Type: "time_t"},
 			{Name: "totalTime", Type: "time_t"},
 		],
@@ -5146,7 +5246,7 @@ export const data: EventInterface = {
 	STOP_MOVIE: {},
 	STOP_TIMER_OF_TYPE: {
 		Payload: [
-			{Name: "timerType", Type: "number"},
+			{Name: "timerType", Type: "StartTimerType"},
 		],
 	},
 	STREAMING_ICON: {
@@ -5188,6 +5288,7 @@ export const data: EventInterface = {
 			{Name: "system", Type: "number"},
 		],
 	},
+	TAXI_NODE_STATUS_CHANGED: {},
 	TIME_PLAYED_MSG: {
 		Payload: [
 			{Name: "totalTimePlayed", Type: "number"},
@@ -5410,6 +5511,11 @@ export const data: EventInterface = {
 	TRAIT_NODE_ENTRY_UPDATED: {
 		Payload: [
 			{Name: "nodeEntryID", Type: "number"},
+		],
+	},
+	TRAIT_SUB_TREE_CHANGED: {
+		Payload: [
+			{Name: "subTreeID", Type: "number"},
 		],
 	},
 	TRAIT_SYSTEM_INTERACTION_STARTED: {
@@ -5692,6 +5798,12 @@ export const data: EventInterface = {
 		Payload: [
 			{Name: "unitTarget", Type: "UnitToken"},
 			{Name: "powerType", Type: "string"},
+		],
+	},
+	UNIT_MAX_HEALTH_MODIFIERS_CHANGED: {
+		Payload: [
+			{Name: "unitTarget", Type: "UnitToken"},
+			{Name: "percentMaxHealthAdjusted", Type: "number"},
 		],
 	},
 	UNIT_MODEL_CHANGED: {
@@ -5979,6 +6091,7 @@ export const data: EventInterface = {
 	UPDATE_SHAPESHIFT_FORM: {},
 	UPDATE_SHAPESHIFT_FORMS: {},
 	UPDATE_SHAPESHIFT_USABLE: {},
+	UPDATE_SPELL_TARGET_ITEM_CONTEXT: {},
 	UPDATE_STEALTH: {},
 	UPDATE_SUMMONPETS_ACTION: {},
 	UPDATE_TRADESKILL_CAST_STOPPED: {
@@ -6290,6 +6403,9 @@ export const data: EventInterface = {
 			{Name: "name", Type: "string"},
 			{Name: "resultGUID", Type: "WOWGUID"},
 		],
+	},
+	WALK_IN_DATA_UPDATE: {
+		Documentation: "Signaled when the player or a private party member join a new walk-in instance or when the instance is shut down.",
 	},
 	WARFRONT_COMPLETED: {
 		Payload: [

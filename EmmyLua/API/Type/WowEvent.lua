@@ -1,5 +1,7 @@
 ---@meta
 ---@alias WowEvent
+---|"ACCOUNT_CHARACTER_CURRENCY_DATA_RECEIVED"
+---|"ACCOUNT_MONEY"
 ---|"ACHIEVEMENT_EARNED" # `achievementID, alreadyEarned`
 ---|"ACHIEVEMENT_PLAYER_NAME" # `achievementID`
 ---|"ACHIEVEMENT_SEARCH_UPDATED"
@@ -16,6 +18,7 @@
 ---|"ACTION_WILL_BIND_ITEM"
 ---|"ACTIVATE_GLYPH" # `spellID`
 ---|"ACTIVE_COMBAT_CONFIG_CHANGED" # `configID`
+---|"ACTIVE_DELVE_DATA_UPDATE"
 ---|"ACTIVE_PLAYER_SPECIALIZATION_CHANGED"
 ---|"ACTIVE_TALENT_GROUP_CHANGED" # `curr, prev`
 ---|"ADAPTER_LIST_CHANGED"
@@ -128,6 +131,8 @@
 ---|"BANKFRAME_CLOSED"
 ---|"BANKFRAME_OPENED"
 ---|"BANK_BAG_SLOT_FLAGS_UPDATED" # `slot`
+---|"BANK_TABS_CHANGED" # `bankType`
+---|"BANK_TAB_SETTINGS_UPDATED" # `bankType`
 ---|"BARBER_SHOP_APPEARANCE_APPLIED"
 ---|"BARBER_SHOP_CAMERA_VALUES_UPDATED"
 ---|"BARBER_SHOP_CLOSE"
@@ -196,7 +201,7 @@
 ---|"CANCEL_ALL_LOOT_ROLLS"
 ---|"CANCEL_GLYPH_CAST"
 ---|"CANCEL_LOOT_ROLL" # `rollID`
----|"CANCEL_PLAYER_COUNTDOWN" # `initiatedBy`
+---|"CANCEL_PLAYER_COUNTDOWN" # `initiatedBy, informChat, initiatedByName`
 ---|"CANCEL_SUMMON"
 ---|"CAN_LOCAL_WHISPER_TARGET_RESPONSE" # `whisperTarget, status`
 ---|"CAN_PLAYER_SPEAK_LANGUAGE_CHANGED" # `languageId, canSpeakLanguage`
@@ -317,6 +322,7 @@
 ---|"CLUB_FINDER_CLUB_REPORTED" # `type, clubFinderGUID`
 ---|"CLUB_FINDER_COMMUNITY_OFFLINE_JOIN" # `clubId`
 ---|"CLUB_FINDER_ENABLED_OR_DISABLED"
+---|"CLUB_FINDER_GUILD_REALM_NAME_UPDATED" # `clubFinderGUID, realmName`
 ---|"CLUB_FINDER_LINKED_CLUB_RETURNED" # `clubInfo`
 ---|"CLUB_FINDER_MEMBERSHIP_LIST_CHANGED"
 ---|"CLUB_FINDER_PLAYER_PENDING_LIST_RECIEVED" # `type`
@@ -352,6 +358,7 @@
 ---|"COMBAT_LOG_EVENT_UNFILTERED"
 ---|"COMBAT_RATING_UPDATE"
 ---|"COMBAT_TEXT_UPDATE" # `combatTextType`
+---|"COMBO_TARGET_CHANGED"
 ---|"COMMENTATOR_ENTER_WORLD"
 ---|"COMMENTATOR_HISTORY_FLUSHED"
 ---|"COMMENTATOR_IMMEDIATE_FOV_UPDATE" # `fov`
@@ -393,6 +400,7 @@
 ---|"CONTRIBUTION_COLLECTOR_PENDING" # `contributionID, isPending, result`
 ---|"CONTRIBUTION_COLLECTOR_UPDATE"
 ---|"CONTRIBUTION_COLLECTOR_UPDATE_SINGLE" # `contributionID`
+---|"CONVERT_TO_BIND_TO_ACCOUNT_CONFIRM"
 ---|"CONVERT_TO_RAID_CONFIRMATION"
 ---|"CORPSE_IN_INSTANCE"
 ---|"CORPSE_IN_RANGE"
@@ -408,6 +416,7 @@
 ---|"CRAFTINGORDERS_CLAIMED_ORDER_REMOVED"
 ---|"CRAFTINGORDERS_CLAIMED_ORDER_UPDATED" # `orderID`
 ---|"CRAFTINGORDERS_CLAIM_ORDER_RESPONSE" # `result, orderID`
+---|"CRAFTINGORDERS_CRAFT_ORDER_RESPONSE" # `result, orderID`
 ---|"CRAFTINGORDERS_CUSTOMER_FAVORITES_CHANGED"
 ---|"CRAFTINGORDERS_CUSTOMER_OPTIONS_PARSED"
 ---|"CRAFTINGORDERS_DISPLAY_CRAFTER_FULFILLED_MSG" # `orderTypeString, itemNameString, playerNameString, tipAmount, quantityCrafted`
@@ -424,16 +433,21 @@
 ---|"CRAFTINGORDERS_UPDATE_CUSTOMER_NAME" # `customerName, orderID`
 ---|"CRAFTINGORDERS_UPDATE_ORDER_COUNT" # `orderType, numOrders`
 ---|"CRAFTINGORDERS_UPDATE_PERSONAL_ORDER_COUNTS"
+---|"CRAFTINGORDERS_UPDATE_REWARDS" # `npcOrderRewards, orderID`
 ---|"CRAFTING_DETAILS_UPDATE"
 ---|"CRAFTING_HOUSE_DISABLED"
 ---|"CRITERIA_COMPLETE" # `criteriaID`
 ---|"CRITERIA_EARNED" # `achievementID, description`
 ---|"CRITERIA_UPDATE"
----|"CURRENCY_DISPLAY_UPDATE" # `currencyType, quantity, quantityChange, quantityGainSource, quantityLostSource`
+---|"CURRENCY_DISPLAY_UPDATE" # `currencyType, quantity, quantityChange, quantityGainSource, destroyReason`
+---|"CURRENCY_TRANSFER_FAILED"
+---|"CURRENCY_TRANSFER_LOG_UPDATE"
 ---|"CURRENT_SPELL_CAST_CHANGED" # `cancelledCast`
 ---|"CURSOR_CHANGED" # `isDefault, newCursorType, oldCursorType, oldCursorVirtualID`
 ---|"CVAR_UPDATE" # `eventName, value`
+---|"DAILY_RESET_INSTANCE_WELCOME" # `mapname, timeLeft`
 ---|"DELETE_ITEM_CONFIRM" # `itemName, qualityID, bonding, questWarn`
+---|"DELVES_ACCOUNT_DATA_ELEMENT_CHANGED"
 ---|"DISABLE_DECLINE_GUILD_INVITE"
 ---|"DISABLE_LOW_LEVEL_RAID"
 ---|"DISABLE_TAXI_BENCHMARK"
@@ -455,6 +469,8 @@
 ---|"ENABLE_LOW_LEVEL_RAID"
 ---|"ENABLE_TAXI_BENCHMARK"
 ---|"ENABLE_XP_GAIN"
+---|"ENCHANT_SPELL_COMPLETED" # `successful, enchantedItem`
+---|"ENCHANT_SPELL_SELECTED"
 ---|"ENCOUNTER_END" # `encounterID, encounterName, difficultyID, groupSize, success`
 ---|"ENCOUNTER_LOOT_RECEIVED" # `encounterID, itemID, itemLink, quantity, itemName, fileName`
 ---|"ENCOUNTER_START" # `encounterID, encounterName, difficultyID, groupSize`
@@ -464,9 +480,9 @@
 ---|"EQUIPMENT_SETS_CHANGED"
 ---|"EQUIPMENT_SWAP_FINISHED" # `result, setID`
 ---|"EQUIPMENT_SWAP_PENDING"
----|"EQUIP_BIND_CONFIRM" # `slot`
----|"EQUIP_BIND_REFUNDABLE_CONFIRM" # `slot`
----|"EQUIP_BIND_TRADEABLE_CONFIRM" # `slot`
+---|"EQUIP_BIND_CONFIRM" # `slot, itemLocation`
+---|"EQUIP_BIND_REFUNDABLE_CONFIRM" # `slot, itemLocation`
+---|"EQUIP_BIND_TRADEABLE_CONFIRM" # `slot, itemLocation`
 ---|"EXPAND_BAG_BAR_CHANGED" # `expandBagBar`
 ---|"EXTRA_BROWSE_INFO_RECEIVED" # `itemID`
 ---|"FIRST_FRAME_RENDERED"
@@ -603,6 +619,8 @@
 ---|"HONOR_LEVEL_UPDATE" # `isHigherLevel`
 ---|"HONOR_XP_UPDATE" # `unitTarget`
 ---|"IGNORELIST_UPDATE"
+---|"IMMERSIVE_INTERACTION_BEGIN"
+---|"IMMERSIVE_INTERACTION_END"
 ---|"INCOMING_RESURRECT_CHANGED" # `unitTarget`
 ---|"INCOMING_SUMMON_CHANGED" # `unitTarget`
 ---|"INITIAL_CLUBS_LOADED"
@@ -621,6 +639,7 @@
 ---|"INSTANCE_LOCK_START"
 ---|"INSTANCE_LOCK_STOP"
 ---|"INSTANCE_LOCK_WARNING"
+---|"INSTANCE_RESET_WARNING" # `warningMessage, timeLeft`
 ---|"INVENTORY_SEARCH_UPDATE"
 ---|"INVITE_TO_PARTY_CONFIRMATION" # `targetName, willConvertToRaid, questSessionActive`
 ---|"INVITE_TRAVEL_PASS_CONFIRMATION" # `targetName, targetGUID, willConvertToRaid, questSessionActive`
@@ -652,6 +671,7 @@
 ---|"JAILERS_TOWER_LEVEL_UPDATE" # `level, type`
 ---|"KNOWN_TITLES_UPDATE" # `unitTarget`
 ---|"LANGUAGE_LIST_CHANGED"
+---|"LEARNED_SPELL_IN_SKILL_LINE" # `spellID, skillLineIndex, isGuildPerkSpell`
 ---|"LEARNED_SPELL_IN_TAB" # `spellID, skillInfoIndex, isGuildPerkSpell`
 ---|"LEAVE_PARTY_CONFIRMATION"
 ---|"LEAVING_TUTORIAL_AREA"
@@ -735,7 +755,6 @@
 ---|"MAIN_SPEC_NEED_ROLL" # `rollID, roll, isWinning`
 ---|"MAJOR_FACTION_INTERACTION_ENDED"
 ---|"MAJOR_FACTION_INTERACTION_STARTED"
----|"MAJOR_FACTION_RENOWN_CATCH_UP_STATE_UPDATE"
 ---|"MAJOR_FACTION_RENOWN_LEVEL_CHANGED" # `majorFactionID, newRenownLevel, oldRenownLevel`
 ---|"MAJOR_FACTION_UNLOCKED" # `majorFactionID`
 ---|"MAP_EXPLORATION_UPDATED"
@@ -798,6 +817,7 @@
 ---|"PARTY_MEMBER_DISABLE" # `unitTarget`
 ---|"PARTY_MEMBER_ENABLE" # `unitTarget`
 ---|"PENDING_AZERITE_ESSENCE_CHANGED" # `essenceID`
+---|"PERKS_ACTIVITIES_TRACKED_LIST_CHANGED" # `perksActivityID, added`
 ---|"PERKS_ACTIVITIES_TRACKED_UPDATED"
 ---|"PERKS_ACTIVITIES_UPDATED"
 ---|"PERKS_ACTIVITY_COMPLETED" # `perksActivityID`
@@ -874,6 +894,7 @@
 ---|"PLAYERBANKBAGSLOTS_CHANGED"
 ---|"PLAYERBANKSLOTS_CHANGED" # `slot`
 ---|"PLAYERREAGENTBANKSLOTS_CHANGED" # `slot`
+---|"PLAYER_ACCOUNT_BANK_TAB_SLOTS_CHANGED" # `slot`
 ---|"PLAYER_ALIVE"
 ---|"PLAYER_AVG_ITEM_LEVEL_UPDATE"
 ---|"PLAYER_CAMPING"
@@ -909,6 +930,7 @@
 ---|"PLAYER_LOGOUT"
 ---|"PLAYER_LOOT_SPEC_UPDATED"
 ---|"PLAYER_LOSES_VEHICLE_DATA" # `unitTarget`
+---|"PLAYER_MAP_CHANGED" # `oldMapID, newMapID`
 ---|"PLAYER_MONEY"
 ---|"PLAYER_MOUNT_DISPLAY_CHANGED"
 ---|"PLAYER_PVP_KILLS_CHANGED" # `unitTarget`
@@ -961,7 +983,7 @@
 ---|"PVP_ROLE_UPDATE"
 ---|"PVP_SPECIAL_EVENT_INFO_UPDATED"
 ---|"PVP_TIMER_UPDATE" # `unitTarget`
----|"PVP_TYPES_ENABLED" # `wargameBattlegrounds, ratedBattlegrounds, ratedArenas, ratedSoloShuffle`
+---|"PVP_TYPES_ENABLED" # `wargameBattlegrounds, ratedBattlegrounds, ratedArenas, ratedSoloShuffle, ratedBGBlitz`
 ---|"PVP_VEHICLE_INFO_UPDATED"
 ---|"PVP_WORLDSTATE_UPDATE"
 ---|"QUESTLINE_UPDATE" # `requestRequired`
@@ -1015,6 +1037,7 @@
 ---|"RECEIVED_ACHIEVEMENT_LIST"
 ---|"RECEIVED_ACHIEVEMENT_MEMBER_LIST" # `achievementID`
 ---|"REJECTED_MATCHMAKING_PARTY_INVITE" # `name`
+---|"REMIX_END_OF_EVENT"
 ---|"REPLACE_ENCHANT" # `existingStr, replacementStr`
 ---|"REPLACE_TRADESKILL_ENCHANT" # `existing, replacement`
 ---|"REPLICATE_ITEM_LIST_UPDATE"
@@ -1065,6 +1088,8 @@
 ---|"SHIPMENT_CRAFTER_OPENED" # `charShipmentContainerID`
 ---|"SHIPMENT_CRAFTER_REAGENT_UPDATE"
 ---|"SHIPMENT_UPDATE" # `shipmentStarted, hasAttachedFollower`
+---|"SHOW_DELVES_COMPANION_CONFIGURATION_UI"
+---|"SHOW_DELVES_DISPLAY_UI"
 ---|"SHOW_FACTION_SELECT_UI"
 ---|"SHOW_HYPERLINK_TOOLTIP" # `hyperlink`
 ---|"SHOW_LFG_EXPAND_SEARCH_PROMPT"
@@ -1128,7 +1153,7 @@
 ---|"STARTER_BUILD_ACTIVATION_FAILED"
 ---|"START_AUTOREPEAT_SPELL"
 ---|"START_LOOT_ROLL" # `rollID, rollTime, lootHandle`
----|"START_PLAYER_COUNTDOWN" # `initiatedBy, timeRemaining, totalTime`
+---|"START_PLAYER_COUNTDOWN" # `initiatedBy, timeRemaining, totalTime, informChat, initiatedByName`
 ---|"START_TIMER" # `timerType, timeRemaining, totalTime`
 ---|"STOP_AUTOREPEAT_SPELL"
 ---|"STOP_MOVIE"
@@ -1147,6 +1172,7 @@
 ---|"TASK_PROGRESS_UPDATE"
 ---|"TAXIMAP_CLOSED"
 ---|"TAXIMAP_OPENED" # `system`
+---|"TAXI_NODE_STATUS_CHANGED"
 ---|"TIME_PLAYED_MSG" # `totalTimePlayed, timePlayedThisLevel`
 ---|"TOGGLE_CONSOLE" # `showConsole`
 ---|"TOKEN_AUCTION_SOLD"
@@ -1210,6 +1236,7 @@
 ---|"TRAIT_NODE_CHANGED" # `nodeID`
 ---|"TRAIT_NODE_CHANGED_PARTIAL" # `ID, info`
 ---|"TRAIT_NODE_ENTRY_UPDATED" # `nodeEntryID`
+---|"TRAIT_SUB_TREE_CHANGED" # `subTreeID`
 ---|"TRAIT_SYSTEM_INTERACTION_STARTED" # `treeID`
 ---|"TRAIT_SYSTEM_NPC_CLOSED"
 ---|"TRAIT_TREE_CHANGED" # `treeID`
@@ -1271,6 +1298,7 @@
 ---|"UNIT_MANA" # `unitTarget`
 ---|"UNIT_MAXHEALTH" # `unitTarget`
 ---|"UNIT_MAXPOWER" # `unitTarget, powerType`
+---|"UNIT_MAX_HEALTH_MODIFIERS_CHANGED" # `unitTarget, percentMaxHealthAdjusted`
 ---|"UNIT_MODEL_CHANGED" # `unitTarget`
 ---|"UNIT_NAME_UPDATE" # `unitTarget`
 ---|"UNIT_OTHER_PARTY_CHANGED" # `unitTarget`
@@ -1340,6 +1368,7 @@
 ---|"UPDATE_SHAPESHIFT_FORM"
 ---|"UPDATE_SHAPESHIFT_FORMS"
 ---|"UPDATE_SHAPESHIFT_USABLE"
+---|"UPDATE_SPELL_TARGET_ITEM_CONTEXT"
 ---|"UPDATE_STEALTH"
 ---|"UPDATE_SUMMONPETS_ACTION"
 ---|"UPDATE_TRADESKILL_CAST_STOPPED" # `isScrapping`
@@ -1412,6 +1441,7 @@
 ---|"VOID_TRANSFER_DONE"
 ---|"VOID_TRANSFER_SUCCESS"
 ---|"VOTE_KICK_REASON_NEEDED" # `name, resultGUID`
+---|"WALK_IN_DATA_UPDATE"
 ---|"WARFRONT_COMPLETED" # `mapID, winner`
 ---|"WARGAME_INVITE_SENT"
 ---|"WARGAME_REQUESTED" # `opposingPartyMemberName, battlegroundName, timeoutSeconds, tournamentRules`
