@@ -19,6 +19,11 @@ function C_EditMode.GetAccountSettings() end
 ---@return EditModeLayouts layoutInfo
 function C_EditMode.GetLayouts() end
 
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_EditMode.IsValidLayoutName)
+---@param name string
+---@return boolean isApproved
+function C_EditMode.IsValidLayoutName(name) end
+
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_EditMode.OnEditModeExit)
 function C_EditMode.OnEditModeExit() end
 

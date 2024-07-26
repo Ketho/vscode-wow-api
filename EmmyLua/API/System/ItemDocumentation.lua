@@ -101,6 +101,12 @@ function C_Item.GetCurrentItemLevel(itemLocation) end
 ---@return ItemTransmogInfoMixin? info
 function C_Item.GetCurrentItemTransmogInfo(itemLoc) end
 
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_Item.GetDelvePreviewItemLink)
+---@param itemID number
+---@param context Enum.ItemCreationContext
+---@return string? itemLink
+function C_Item.GetDelvePreviewItemLink(itemID, context) end
+
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_Item.GetDetailedItemLevelInfo)
 ---@param itemInfo ItemInfo
 ---@return number actualItemLevel

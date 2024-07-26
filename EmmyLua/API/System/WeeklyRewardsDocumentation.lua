@@ -69,10 +69,6 @@ function C_WeeklyRewards.GetNextMythicPlusIncrease(mythicPlusLevel) end
 ---@return number numMythicPlus
 function C_WeeklyRewards.GetNumCompletedDungeonRuns() end
 
----[Documentation](https://warcraft.wiki.gg/wiki/API_C_WeeklyRewards.GetWeeklyRewardTextureKit)
----@return textureKit uiTextureKit
-function C_WeeklyRewards.GetWeeklyRewardTextureKit() end
-
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_WeeklyRewards.HasAvailableRewards)
 ---@return boolean hasAvailableRewards
 function C_WeeklyRewards.HasAvailableRewards() end

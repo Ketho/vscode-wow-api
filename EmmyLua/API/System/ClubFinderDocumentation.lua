@@ -121,6 +121,11 @@ function C_ClubFinder.IsListingEnabledFromFlags(flags) end
 ---@return boolean postingBanned
 function C_ClubFinder.IsPostingBanned(postingID) end
 
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_ClubFinder.IsValidSearchString)
+---@param name string
+---@return boolean isApproved
+function C_ClubFinder.IsValidSearchString(name) end
+
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_ClubFinder.LookupClubPostingFromClubFinderGUID)
 ---@param clubFinderGUID WOWGUID
 ---@param isLinkedPosting boolean

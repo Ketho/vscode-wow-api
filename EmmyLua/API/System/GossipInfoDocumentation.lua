@@ -118,6 +118,7 @@ function C_GossipInfo.SelectOptionByIndex(optionID, text, confirmed) end
 ---@field id number
 ---@field quantity number
 ---@field rewardType Enum.GossipOptionRewardType
+---@field context Enum.ItemCreationContext
 
 ---@class GossipOptionUIInfo
 ---@field gossipOptionID number?

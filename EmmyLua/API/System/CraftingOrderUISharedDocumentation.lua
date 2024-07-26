@@ -121,7 +121,7 @@
 ---@class CraftingOrderRewardInfo
 ---@field itemLink string?
 ---@field currencyType number?
----@field currencyAmount number?
+---@field count number
 
 ---@class CraftingOrderSortInfo
 ---@field sortType Enum.CraftingOrderSortType

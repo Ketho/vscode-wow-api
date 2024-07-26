@@ -58,6 +58,11 @@ function C_Map.GetMapArtLayerTextures(uiMapID, layerIndex) end
 ---@return UiMapLayerInfo[] layerInfo
 function C_Map.GetMapArtLayers(uiMapID) end
 
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_Map.GetMapArtZoneTextPosition)
+---@param uiMapID number
+---@return Enum.MapCanvasPosition position
+function C_Map.GetMapArtZoneTextPosition(uiMapID) end
+
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_Map.GetMapBannersForMap)
 ---@param uiMapID number
 ---@return MapBannerInfo[] mapBanners

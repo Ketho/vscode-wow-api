@@ -93,6 +93,11 @@ function C_UIWidgetManager.GetPowerBarWidgetSetID() end
 ---@return ScenarioHeaderCurrenciesAndBackgroundWidgetVisualizationInfo? widgetInfo
 function C_UIWidgetManager.GetScenarioHeaderCurrenciesAndBackgroundWidgetVisualizationInfo(widgetID) end
 
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_UIWidgetManager.GetScenarioHeaderDelvesWidgetVisualizationInfo)
+---@param widgetID number
+---@return ScenarioHeaderDelvesWidgetVisualizationInfo? widgetInfo
+function C_UIWidgetManager.GetScenarioHeaderDelvesWidgetVisualizationInfo(widgetID) end
+
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_UIWidgetManager.GetScenarioHeaderTimerWidgetVisualizationInfo)
 ---@param widgetID number
 ---@return ScenarioHeaderTimerWidgetVisualizationInfo? widgetInfo
@@ -378,7 +383,6 @@ function C_UIWidgetManager.UnregisterUnitForWidgetUpdates(unitToken, isGuid) end
 ---@field layoutDirection Enum.UIWidgetLayoutDirection
 ---@field modelSceneLayer Enum.UIWidgetModelSceneLayer
 ---@field scriptedAnimationEffectID number
----@field updateAnimType Enum.UIWidgetUpdateAnimType
 
 ---@class IconAndTextWidgetVisualizationInfo
 ---@field state Enum.IconAndTextWidgetState
@@ -487,6 +491,29 @@ function C_UIWidgetManager.UnregisterUnitForWidgetUpdates(unitToken, isGuid) end
 ---@field modelSceneLayer Enum.UIWidgetModelSceneLayer
 ---@field scriptedAnimationEffectID number
 
+---@class ScenarioHeaderDelvesWidgetVisualizationInfo
+---@field shownState Enum.WidgetShownState
+---@field headerText string
+---@field tooltip string
+---@field tooltipLoc Enum.UIWidgetTooltipLocation
+---@field tierText string
+---@field tierTooltipSpellID number?
+---@field currencies UIWidgetCurrencyInfo[]
+---@field spells UIWidgetSpellInfo[]
+---@field rewardInfo UIWidgetRewardInfo
+---@field widgetSizeSetting number
+---@field textureKit textureKit
+---@field frameTextureKit textureKit
+---@field hasTimer boolean
+---@field orderIndex number
+---@field widgetTag string
+---@field inAnimType Enum.WidgetAnimationType
+---@field outAnimType Enum.WidgetAnimationType
+---@field widgetScale Enum.UIWidgetScale
+---@field layoutDirection Enum.UIWidgetLayoutDirection
+---@field modelSceneLayer Enum.UIWidgetModelSceneLayer
+---@field scriptedAnimationEffectID number
+
 ---@class ScenarioHeaderTimerWidgetVisualizationInfo
 ---@field shownState Enum.WidgetShownState
 ---@field timerMin number
@@ -525,8 +552,6 @@ function C_UIWidgetManager.UnregisterUnitForWidgetUpdates(unitToken, isGuid) end
 ---@field scriptedAnimationEffectID number
 
 ---@class SpellDisplayVisualizationInfo
----@field shownState Enum.WidgetShownState
----@field enabledState Enum.WidgetEnabledState
 ---@field spellInfo UIWidgetSpellInfo
 ---@field tooltipLoc Enum.UIWidgetTooltipLocation
 ---@field widgetSizeSetting number
@@ -770,6 +795,9 @@ function C_UIWidgetManager.UnregisterUnitForWidgetUpdates(unitToken, isGuid) end
 ---@field isCurrencyMaxed boolean
 ---@field textFontType Enum.UIWidgetFontType
 ---@field textSizeType Enum.UIWidgetTextSizeType
+---@field textEnabledState Enum.WidgetEnabledState
+---@field iconSizeType Enum.WidgetIconSizeType
+---@field updateAnimType Enum.UIWidgetUpdateAnimType
 
 ---@class UIWidgetIconInfo
 ---@field sourceType Enum.WidgetIconSourceType
@@ -799,6 +827,13 @@ function C_UIWidgetManager.UnregisterUnitForWidgetUpdates(unitToken, isGuid) end
 ---@field itemNameTextSizeType Enum.UIWidgetTextSizeType
 ---@field infoTextFontType Enum.UIWidgetFontType
 ---@field infoTextSizeType Enum.UIWidgetTextSizeType
+---@field itemNameCustomColor Enum.WidgetEnabledState
+---@field itemNameCustomColorOverrideState Enum.UIWidgetOverrideState
+
+---@class UIWidgetRewardInfo
+---@field shownState Enum.UIWidgetRewardShownState
+---@field earnedTooltip string
+---@field unearnedTooltip string
 
 ---@class UIWidgetSetInfo
 ---@field layoutDirection Enum.UIWidgetSetLayoutDirection
@@ -806,6 +841,8 @@ function C_UIWidgetManager.UnregisterUnitForWidgetUpdates(unitToken, isGuid) end
 
 ---@class UIWidgetSpellInfo
 ---@field spellID number
+---@field shownState Enum.WidgetShownState
+---@field enabledState Enum.WidgetEnabledState
 ---@field tooltip string
 ---@field text string
 ---@field stackDisplay number
@@ -817,6 +854,7 @@ function C_UIWidgetManager.UnregisterUnitForWidgetUpdates(unitToken, isGuid) end
 ---@field textSizeType Enum.UIWidgetTextSizeType
 ---@field hAlignType Enum.WidgetTextHorizontalAlignmentType
 ---@field tint Enum.SpellDisplayTint
+---@field showGlowState Enum.WidgetShowGlowState
 
 ---@class UIWidgetStateIconInfo
 ---@field iconState Enum.IconState

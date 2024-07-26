@@ -167,6 +167,10 @@ function C_VoiceChat.IsDeafened() end
 ---@return boolean isEnabled
 function C_VoiceChat.IsEnabled() end
 
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_VoiceChat.IsInitialized)
+---@return boolean isInitialized
+function C_VoiceChat.IsInitialized() end
+
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_VoiceChat.IsLoggedIn)
 ---@return boolean isLoggedIn
 function C_VoiceChat.IsLoggedIn() end

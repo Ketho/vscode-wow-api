@@ -67,6 +67,7 @@ function C_PlayerChoice.SendPlayerChoiceResponse(responseID) end
 ---@field typeArtID number?
 ---@field headerIconAtlasElement string?
 ---@field subHeader string?
+---@field consolidateWidgets boolean
 
 ---@class PlayerChoiceOptionRewardInfo
 ---@field currencyRewards PlayerChoiceRewardCurrencyInfo[]

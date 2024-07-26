@@ -67,3 +67,4 @@ function C_CampaignInfo.SortAsNormalQuest(campaignID) end
 ---@field isWarCampaign boolean
 ---@field usesNormalQuestIcons boolean
 ---@field isContainerCampaign boolean
+---@field sortAsNormalQuest boolean

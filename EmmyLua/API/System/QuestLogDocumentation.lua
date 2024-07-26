@@ -396,6 +396,11 @@ function C_QuestLog.IsWorldQuest(questID) end
 ---@return boolean hasBonus
 function C_QuestLog.QuestCanHaveWarModeBonus(questID) end
 
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_QuestLog.QuestContainsFirstTimeRepBonusForPlayer)
+---@param questID number
+---@return boolean questContainsFirstTimeRepBonusForPlayer
+function C_QuestLog.QuestContainsFirstTimeRepBonusForPlayer(questID) end
+
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_QuestLog.QuestHasQuestSessionBonus)
 ---@param questID number
 ---@return boolean hasBonus
@@ -474,6 +479,7 @@ function C_QuestLog.UpdateCampaignHeaders() end
 ---@field frequency Enum.QuestFrequency?
 ---@field isHeader boolean
 ---@field useMinimalHeader boolean
+---@field sortAsNormalQuest boolean
 ---@field isCollapsed boolean
 ---@field startEvent boolean
 ---@field isTask boolean
@@ -486,10 +492,10 @@ function C_QuestLog.UpdateCampaignHeaders() end
 ---@field isAutoComplete boolean
 ---@field overridesSortOrder boolean
 ---@field readyForTranslation boolean? Default = true
----@field isLegendarySort boolean
 ---@field isInternalOnly boolean
 ---@field isAbandonOnDisable boolean
 ---@field headerSortKey number?
+---@field questClassification Enum.QuestClassification
 
 ---@class QuestObjectiveInfo
 ---@field text string

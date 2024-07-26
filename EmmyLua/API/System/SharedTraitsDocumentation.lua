@@ -240,6 +240,8 @@ function C_Traits.TalentTestUnlearnSpells() end
 ---@field isAlwaysMet boolean
 ---@field isMet boolean
 ---@field isGate boolean
+---@field isSufficient boolean
+---@field type number
 ---@field questID number?
 ---@field achievementID number?
 ---@field specSetID number?
@@ -296,6 +298,7 @@ function C_Traits.TalentTestUnlearnSpells() end
 ---@field canRefundRank boolean
 ---@field isAvailable boolean
 ---@field isVisible boolean
+---@field isDisplayError boolean
 ---@field ranksPurchased number
 ---@field activeRank number
 ---@field currentRank number

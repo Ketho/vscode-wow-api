@@ -1,6 +1,10 @@
 ---@meta
 C_GuildInfo = {}
 
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_GuildInfo.AreGuildEventsEnabled)
+---@return boolean enabled
+function C_GuildInfo.AreGuildEventsEnabled() end
+
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_GuildInfo.CanEditOfficerNote)
 ---@return boolean canEditOfficerNote
 function C_GuildInfo.CanEditOfficerNote() end
