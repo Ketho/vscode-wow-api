@@ -20,6 +20,11 @@ function IsMovieLocal(movieId) end
 ---@return boolean isPlayable
 function IsMoviePlayable(movieId) end
 
+---[Documentation](https://warcraft.wiki.gg/wiki/API_IsMovieReadable)
+---@param movieId number
+---@return boolean readable
+function IsMovieReadable(movieId) end
+
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_PreloadMovie)
 ---@param movieId number
 function PreloadMovie(movieId) end

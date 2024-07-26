@@ -47,6 +47,10 @@ function C_GuildInfo.GuildRoster() end
 ---@param name string
 function C_GuildInfo.Invite(name) end
 
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_GuildInfo.IsEncounterGuildNewsEnabled)
+---@return boolean enabled
+function C_GuildInfo.IsEncounterGuildNewsEnabled() end
+
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_GuildInfo.IsGuildOfficer)
 ---@return boolean isOfficer
 function C_GuildInfo.IsGuildOfficer() end
@@ -56,6 +60,10 @@ function C_GuildInfo.IsGuildOfficer() end
 ---@param rankOrder number
 ---@return boolean isGuildRankAssignmentAllowed
 function C_GuildInfo.IsGuildRankAssignmentAllowed(guid, rankOrder) end
+
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_GuildInfo.IsGuildReputationEnabled)
+---@return boolean enabled
+function C_GuildInfo.IsGuildReputationEnabled() end
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_GuildInfo.Leave)
 function C_GuildInfo.Leave() end

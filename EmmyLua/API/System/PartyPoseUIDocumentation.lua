@@ -31,3 +31,4 @@ function C_PartyPose.HasExtraAction(partyPoseID) end
 ---@field uiTextureKit textureKit?
 ---@field titleText string?
 ---@field extraButtonText string?
+---@field flags Enum.PartyPoseFlags

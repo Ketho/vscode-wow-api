@@ -1,6 +1,17 @@
 ---@meta
 C_ScenarioInfo = {}
 
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_ScenarioInfo.GetCriteriaInfo)
+---@param criteriaIndex number
+---@return ScenarioCriteriaInfo scenarioCriteriaInfo
+function C_ScenarioInfo.GetCriteriaInfo(criteriaIndex) end
+
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_ScenarioInfo.GetCriteriaInfoByStep)
+---@param stepID number
+---@param criteriaIndex number
+---@return ScenarioCriteriaInfo scenarioCriteriaInfo
+function C_ScenarioInfo.GetCriteriaInfoByStep(stepID, criteriaIndex) end
+
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_ScenarioInfo.GetJailersTowerTypeString)
 ---@param runType Enum.JailersTowerType
 ---@return string? typeString
@@ -14,6 +25,21 @@ function C_ScenarioInfo.GetScenarioInfo() end
 ---@param scenarioStepID? number
 ---@return ScenarioStepInfo scenarioStepInfo
 function C_ScenarioInfo.GetScenarioStepInfo(scenarioStepID) end
+
+---@class ScenarioCriteriaInfo
+---@field description string
+---@field criteriaType number? Default = 0
+---@field completed boolean? Default = false
+---@field quantity number? Default = 0
+---@field totalQuantity number? Default = 0
+---@field flags number? Default = 0
+---@field assetID number? Default = 0
+---@field criteriaID number
+---@field duration number? Default = 0
+---@field elapsed number? Default = 0
+---@field failed boolean? Default = false
+---@field isWeightedProgress boolean? Default = false
+---@field isFormatted boolean? Default = false
 
 ---@class ScenarioInformation
 ---@field name string

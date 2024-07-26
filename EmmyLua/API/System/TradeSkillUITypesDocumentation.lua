@@ -22,6 +22,10 @@
 ---@field operationID number? Default = 0
 ---@field firstCraftReward boolean? Default = false
 ---@field isEnchant boolean? Default = false
+---@field hasIngenuityProc boolean? Default = false
+---@field concentrationCurrencyID number? Default = 0
+---@field concentrationSpent number? Default = 0
+---@field ingenuityRefund number? Default = 0
 
 ---@class CraftingItemSlotModification
 ---@field dataSlotIndex number
@@ -49,6 +53,9 @@
 ---@field upperSkillTreshold number
 ---@field guaranteedCraftingQualityID number
 ---@field bonusStats CraftingOperationBonusStatInfo[]
+---@field concentrationCurrencyID number
+---@field concentrationCost number
+---@field ingenuityRefund number
 
 ---@class CraftingReagent
 ---@field itemID number?

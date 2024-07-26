@@ -25,6 +25,7 @@ function C_TaxiMap.ShouldMapShowTaxiNodes(uiMapID) end
 ---@field atlasName string
 ---@field faction Enum.FlightPathFaction
 ---@field textureKit textureKit
+---@field isUndiscovered boolean
 
 ---@class TaxiNodeInfo
 ---@field nodeID number

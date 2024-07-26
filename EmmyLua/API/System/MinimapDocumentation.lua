@@ -8,6 +8,11 @@ function C_Minimap.CanTrackBattlePets() end
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_Minimap.ClearAllTracking)
 function C_Minimap.ClearAllTracking() end
 
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_Minimap.GetDefaultTrackingValue)
+---@param filterType Enum.MinimapTrackingFilter
+---@return boolean defaultValue
+function C_Minimap.GetDefaultTrackingValue(filterType) end
+
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_Minimap.GetDrawGroundTextures)
 ---@return boolean draw
 function C_Minimap.GetDrawGroundTextures() end
@@ -43,12 +48,7 @@ function C_Minimap.GetTrackingFilter(spellIndex) end
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_Minimap.GetTrackingInfo)
 ---@param spellIndex number
----@return string name
----@return fileID textureFileID
----@return boolean active
----@return string type
----@return number subType
----@return number? spellID
+---@return MinimapScriptTrackingInfo? trackingInfo
 function C_Minimap.GetTrackingInfo(spellIndex) end
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_Minimap.GetUiMapID)
@@ -67,6 +67,10 @@ function C_Minimap.IsFilteredOut(filterType) end
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_Minimap.IsRotateMinimapIgnored)
 ---@return boolean isIgnored
 function C_Minimap.IsRotateMinimapIgnored() end
+
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_Minimap.IsTrackingAccountCompletedQuests)
+---@return boolean IsTrackingAccountCompletedQuests
+function C_Minimap.IsTrackingAccountCompletedQuests() end
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_Minimap.IsTrackingBattlePets)
 ---@return boolean isTrackingBattlePets
@@ -99,7 +103,7 @@ function C_Minimap.ShouldUseHybridMinimap() end
 
 ---@class MinimapScriptTrackingInfo
 ---@field name string
----@field textureFileID fileID
+---@field texture fileID
 ---@field active boolean
 ---@field type string
 ---@field subType number

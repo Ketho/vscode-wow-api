@@ -28,3 +28,4 @@ function C_SplashScreen.RequestLatestSplashScreen(fromGameMenu) end
 ---@field rightFeatureDesc string
 ---@field shouldShowQuest boolean
 ---@field screenType Enum.SplashScreenType
+---@field gameMenuRequest boolean

@@ -6,9 +6,8 @@ function C_QuestLog.AbandonQuest() end
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_QuestLog.AddQuestWatch)
 ---@param questID number
----@param watchType? Enum.QuestWatchType
 ---@return boolean wasWatched
-function C_QuestLog.AddQuestWatch(questID, watchType) end
+function C_QuestLog.AddQuestWatch(questID) end
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_QuestLog.AddWorldQuestWatch)
 ---@param questID number
@@ -61,6 +60,11 @@ function C_QuestLog.GetBountySetInfoForMapID(uiMapID) end
 ---@return number distanceSq
 ---@return boolean onContinent
 function C_QuestLog.GetDistanceSqToQuest(questID) end
+
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_QuestLog.GetHeaderIndexForQuest)
+---@param questID number
+---@return number? index
+function C_QuestLog.GetHeaderIndexForQuest(questID) end
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_QuestLog.GetInfo)
 ---@param questLogIndex number
@@ -161,7 +165,7 @@ function C_QuestLog.GetQuestIDForWorldQuestWatchIndex(questWatchIndex) end
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_QuestLog.GetQuestLogMajorFactionReputationRewards)
 ---@param questID number
----@return QuestReputationRewardInfo[] reputationRewards
+---@return QuestRewardReputationInfo[] reputationRewards
 function C_QuestLog.GetQuestLogMajorFactionReputationRewards(questID) end
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_QuestLog.GetQuestLogPortraitGiver)
@@ -177,6 +181,18 @@ function C_QuestLog.GetQuestLogPortraitGiver(questLogIndex) end
 ---@param questID number
 ---@return QuestObjectiveInfo[] objectives
 function C_QuestLog.GetQuestObjectives(questID) end
+
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_QuestLog.GetQuestRewardCurrencies)
+---@param questID number
+---@return QuestRewardCurrencyInfo[] questRewardCurrencies
+function C_QuestLog.GetQuestRewardCurrencies(questID) end
+
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_QuestLog.GetQuestRewardCurrencyInfo)
+---@param questID number
+---@param currencyIndex number
+---@param isChoice boolean
+---@return QuestRewardCurrencyInfo? questRewardCurrencyInfo
+function C_QuestLog.GetQuestRewardCurrencyInfo(questID, currencyIndex, isChoice) end
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_QuestLog.GetQuestTagInfo)
 ---@param questID number
@@ -266,6 +282,11 @@ function C_QuestLog.IsImportantQuest(questID) end
 ---@return boolean isLegendaryQuest
 function C_QuestLog.IsLegendaryQuest(questID) end
 
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_QuestLog.IsMetaQuest)
+---@param questID number
+---@return boolean isMeta
+function C_QuestLog.IsMetaQuest(questID) end
+
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_QuestLog.IsOnMap)
 ---@param questID number
 ---@return boolean onMap
@@ -308,6 +329,11 @@ function C_QuestLog.IsQuestDisabledForSession(questID) end
 ---@return boolean isCompleted
 function C_QuestLog.IsQuestFlaggedCompleted(questID) end
 
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_QuestLog.IsQuestFlaggedCompletedOnAccount)
+---@param questID number
+---@return boolean isCompletedOnAccount
+function C_QuestLog.IsQuestFlaggedCompletedOnAccount(questID) end
+
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_QuestLog.IsQuestFromContentPush)
 ---@param questID number
 ---@return boolean isFromContentPush
@@ -317,6 +343,11 @@ function C_QuestLog.IsQuestFromContentPush(questID) end
 ---@param questID number
 ---@return boolean isInvasion
 function C_QuestLog.IsQuestInvasion(questID) end
+
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_QuestLog.IsQuestRepeatableType)
+---@param questID number
+---@return boolean isRepeatableType
+function C_QuestLog.IsQuestRepeatableType(questID) end
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_QuestLog.IsQuestReplayable)
 ---@param questID number
@@ -375,6 +406,11 @@ function C_QuestLog.QuestHasQuestSessionBonus(questID) end
 ---@param questID number
 ---@return boolean hasBonus
 function C_QuestLog.QuestHasWarModeBonus(questID) end
+
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_QuestLog.QuestIgnoresAccountCompletedFiltering)
+---@param questID number
+---@return boolean questIgnoresAccountCompletedFiltering
+function C_QuestLog.QuestIgnoresAccountCompletedFiltering(questID) end
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_QuestLog.ReadyForTurnIn)
 ---@param questID number
@@ -453,6 +489,7 @@ function C_QuestLog.UpdateCampaignHeaders() end
 ---@field isLegendarySort boolean
 ---@field isInternalOnly boolean
 ---@field isAbandonOnDisable boolean
+---@field headerSortKey number?
 
 ---@class QuestObjectiveInfo
 ---@field text string

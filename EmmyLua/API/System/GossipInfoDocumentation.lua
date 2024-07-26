@@ -8,6 +8,10 @@ function C_GossipInfo.CloseGossip() end
 ---@return boolean forceGossip
 function C_GossipInfo.ForceGossip() end
 
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_GossipInfo.GetActiveDelveGossip)
+---@return GossipOptionUIInfo gossip
+function C_GossipInfo.GetActiveDelveGossip() end
+
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_GossipInfo.GetActiveQuests)
 ---@return GossipQuestUIInfo[] info
 function C_GossipInfo.GetActiveQuests() end
@@ -34,6 +38,10 @@ function C_GossipInfo.GetFriendshipReputation(friendshipFactionID) end
 ---@return FriendshipReputationRankInfo rankInfo
 function C_GossipInfo.GetFriendshipReputationRanks(friendshipFactionID) end
 
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_GossipInfo.GetGossipDelveMapID)
+---@return number mapID
+function C_GossipInfo.GetGossipDelveMapID() end
+
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_GossipInfo.GetNumActiveQuests)
 ---@return number numQuests
 function C_GossipInfo.GetNumActiveQuests() end
@@ -41,6 +49,11 @@ function C_GossipInfo.GetNumActiveQuests() end
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_GossipInfo.GetNumAvailableQuests)
 ---@return number numQuests
 function C_GossipInfo.GetNumAvailableQuests() end
+
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_GossipInfo.GetOptionUIWidgetSetsAndTypesByOptionID)
+---@param gossipOptionID number
+---@return GossipOptionUIWidgetSetAndType[]? gossipOptionUIWidgetSetsAndTypes
+function C_GossipInfo.GetOptionUIWidgetSetsAndTypesByOptionID(gossipOptionID) end
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_GossipInfo.GetOptions)
 ---@return GossipOptionUIInfo[] info
@@ -117,6 +130,11 @@ function C_GossipInfo.SelectOptionByIndex(optionID, text, confirmed) end
 ---@field overrideIconID fileID?
 ---@field selectOptionWhenOnlyOption boolean
 ---@field orderIndex number
+---@field failureDescription string?
+
+---@class GossipOptionUIWidgetSetAndType
+---@field widgetType number
+---@field uiWidgetSetID number
 
 ---@class GossipPoiInfo
 ---@field name string
@@ -135,3 +153,4 @@ function C_GossipInfo.SelectOptionByIndex(optionID, text, confirmed) end
 ---@field isIgnored boolean
 ---@field questID number
 ---@field isImportant boolean
+---@field isMeta boolean

@@ -307,3 +307,4 @@ function C_ClubFinder.ShouldShowClubFinder() end
 ---@field clubId ClubId
 ---@field lastUpdatedTime BigInteger
 ---@field isCrossFaction boolean
+---@field realmName string?

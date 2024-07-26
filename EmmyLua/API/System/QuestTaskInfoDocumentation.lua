@@ -79,4 +79,5 @@ function C_TaskQuest.RequestPreloadRewardData(questID) end
 ---@field isQuestStart boolean
 ---@field isDaily boolean
 ---@field isCombatAllyQuest boolean
+---@field isMeta boolean
 ---@field childDepth number?

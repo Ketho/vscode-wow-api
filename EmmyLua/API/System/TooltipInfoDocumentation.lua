@@ -355,10 +355,10 @@ function C_TooltipInfo.GetSocketedItem() end
 function C_TooltipInfo.GetSocketedRelic(slotIndex) end
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_TooltipInfo.GetSpellBookItem)
----@param slot number
----@param spellBookType string
+---@param spellBookItemSlotIndex number
+---@param spellBookItemSpellBank Enum.SpellBookSpellBank
 ---@return TooltipData data
-function C_TooltipInfo.GetSpellBookItem(slot, spellBookType) end
+function C_TooltipInfo.GetSpellBookItem(spellBookItemSlotIndex, spellBookItemSpellBank) end
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_TooltipInfo.GetSpellByID)
 ---@param spellID number

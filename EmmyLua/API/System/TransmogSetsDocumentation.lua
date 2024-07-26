@@ -31,11 +31,6 @@ function C_TransmogSets.GetBaseSetID(transmogSetID) end
 ---@return TransmogSetInfo[] sets
 function C_TransmogSets.GetBaseSets() end
 
----[Documentation](https://warcraft.wiki.gg/wiki/API_C_TransmogSets.GetBaseSetsCounts)
----@return number numCollected
----@return number numTotal
-function C_TransmogSets.GetBaseSetsCounts() end
-
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_TransmogSets.GetBaseSetsFilter)
 ---@param index number
 ---@return boolean isChecked
@@ -45,6 +40,16 @@ function C_TransmogSets.GetBaseSetsFilter(index) end
 ---@return number? detailsCameraID
 ---@return number? vendorCameraID
 function C_TransmogSets.GetCameraIDs() end
+
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_TransmogSets.GetFilteredBaseSetsCounts)
+---@return number numCollected
+---@return number numTotal
+function C_TransmogSets.GetFilteredBaseSetsCounts() end
+
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_TransmogSets.GetFullBaseSetsCounts)
+---@return number numCollected
+---@return number numTotal
+function C_TransmogSets.GetFullBaseSetsCounts() end
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_TransmogSets.GetIsFavorite)
 ---@param transmogSetID number
@@ -88,9 +93,18 @@ function C_TransmogSets.GetSourceIDsForSlot(transmogSetID, slot) end
 ---@return AppearanceSourceInfo[] sources
 function C_TransmogSets.GetSourcesForSlot(transmogSetID, slot) end
 
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_TransmogSets.GetTransmogSetsClassFilter)
+---@return number classID
+function C_TransmogSets.GetTransmogSetsClassFilter() end
+
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_TransmogSets.GetUsableSets)
 ---@return TransmogSetInfo[] sets
 function C_TransmogSets.GetUsableSets() end
+
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_TransmogSets.GetValidBaseSetsCountsForCharacter)
+---@return number numCollected
+---@return number numTotal
+function C_TransmogSets.GetValidBaseSetsCountsForCharacter() end
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_TransmogSets.GetVariantSets)
 ---@param transmogSetID number
@@ -144,6 +158,10 @@ function C_TransmogSets.SetHasNewSourcesForSlot(transmogSetID, slot) end
 ---@param isFavorite boolean
 function C_TransmogSets.SetIsFavorite(transmogSetID, isFavorite) end
 
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_TransmogSets.SetTransmogSetsClassFilter)
+---@param classID number
+function C_TransmogSets.SetTransmogSetsClassFilter(classID) end
+
 ---@class TransmogSetInfo
 ---@field setID number
 ---@field name string
@@ -159,6 +177,7 @@ function C_TransmogSets.SetIsFavorite(transmogSetID, isFavorite) end
 ---@field collected boolean
 ---@field favorite boolean
 ---@field limitedTimeSet boolean
+---@field validForCharacter boolean
 
 ---@class TransmogSetPrimaryAppearanceInfo
 ---@field appearanceID number

@@ -129,6 +129,11 @@ function GetUnitPowerModifier(unit) end
 ---@return number swimSpeed
 function GetUnitSpeed(unit) end
 
+---[Documentation](https://warcraft.wiki.gg/wiki/API_GetUnitTotalModifiedMaxHealthPercent)
+---@param unit UnitToken
+---@return number result
+function GetUnitTotalModifiedMaxHealthPercent(unit) end
+
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_GetVehicleUIIndicator)
 ---@param vehicleIndicatorID number
 ---@return fileID backgroundTextureID
@@ -768,7 +773,7 @@ function UnitPVPName(unit) end
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_UnitPartialPower)
 ---@param unitToken UnitToken
----@param powerType? Enum.PowerType Default = NumPowerTypes
+---@param powerType? Enum.PowerType
 ---@param unmodified? boolean Default = false
 ---@return number partialPower
 function UnitPartialPower(unitToken, powerType, unmodified) end
@@ -810,7 +815,7 @@ function UnitPosition(unit) end
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_UnitPower)
 ---@param unitToken UnitToken
----@param powerType? Enum.PowerType Default = NumPowerTypes
+---@param powerType? Enum.PowerType
 ---@param unmodified? boolean Default = false
 ---@return number power
 function UnitPower(unitToken, powerType, unmodified) end
@@ -836,7 +841,7 @@ function UnitPowerDisplayMod(powerType) end
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_UnitPowerMax)
 ---@param unitToken UnitToken
----@param powerType? Enum.PowerType Default = NumPowerTypes
+---@param powerType? Enum.PowerType
 ---@param unmodified? boolean Default = false
 ---@return number maxPower
 function UnitPowerMax(unitToken, powerType, unmodified) end

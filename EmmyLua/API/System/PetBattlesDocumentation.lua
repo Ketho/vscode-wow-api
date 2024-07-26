@@ -2,19 +2,19 @@
 C_PetBattles = {}
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_PetBattles.GetBreedQuality)
----@param petOwner number
+---@param petOwner Enum.BattlePetOwner
 ---@param slot number
----@return number quality
+---@return Enum.BattlePetBreedQuality quality
 function C_PetBattles.GetBreedQuality(petOwner, slot) end
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_PetBattles.GetIcon)
----@param petOwner number
+---@param petOwner Enum.BattlePetOwner
 ---@param slot number
 ---@return fileID iconFileID
 function C_PetBattles.GetIcon(petOwner, slot) end
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_PetBattles.GetName)
----@param petOwner number
+---@param petOwner Enum.BattlePetOwner
 ---@param slot number
 ---@return string customName
 ---@return string speciesName

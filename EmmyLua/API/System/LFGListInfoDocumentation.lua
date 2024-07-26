@@ -297,6 +297,7 @@ function C_LFGList.ValidateRequiredPvpRatingForActivity(activityID, rating) end
 ---@field playstyle Enum.LFGEntryPlaystyle?
 ---@field crossFactionListing boolean?
 ---@field leaderFactionGroup number
+---@field partyGUID WOWGUID
 
 ---@class PvpRatingInfo
 ---@field bracket number

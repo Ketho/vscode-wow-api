@@ -205,6 +205,9 @@ function C_Container.ShowContainerSellCursor(containerIndex, slotIndex) end
 ---@return boolean success
 function C_Container.SocketContainerItem(containerIndex, slotIndex) end
 
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_Container.SortAccountBankBags)
+function C_Container.SortAccountBankBags() end
+
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_Container.SortBags)
 function C_Container.SortBags() end
 
@@ -224,8 +227,9 @@ function C_Container.SplitContainerItem(containerIndex, slotIndex, amount) end
 ---@param containerIndex Enum.BagIndex
 ---@param slotIndex number
 ---@param unitToken? UnitToken
+---@param bankType? Enum.BankType
 ---@param reagentBankOpen? boolean Default = false
-function C_Container.UseContainerItem(containerIndex, slotIndex, unitToken, reagentBankOpen) end
+function C_Container.UseContainerItem(containerIndex, slotIndex, unitToken, bankType, reagentBankOpen) end
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_Container.UseHearthstone)
 ---@return boolean used

@@ -59,8 +59,14 @@ function CheckInteractDistance(unitGUID, distIndex) end
 ---@return boolean result
 function CheckTalentMasterDist() end
 
+---[Documentation](https://warcraft.wiki.gg/wiki/API_ClearPendingBindConversionItem)
+function ClearPendingBindConversionItem() end
+
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_ConfirmTalentWipe)
 function ConfirmTalentWipe() end
+
+---[Documentation](https://warcraft.wiki.gg/wiki/API_ConvertItemToBindToAccount)
+function ConvertItemToBindToAccount() end
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_DeclineGuild)
 function DeclineGuild() end
@@ -475,6 +481,11 @@ function IsIndoors() end
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_IsInsane)
 ---@return boolean result
 function IsInsane() end
+
+---[Documentation](https://warcraft.wiki.gg/wiki/API_IsItemPreferredArmorType)
+---@param itemLocation ItemLocationMixin
+---@return boolean isItemPreferredArmorType
+function IsItemPreferredArmorType(itemLocation) end
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_IsJailersTowerLayerTimeLocked)
 ---@param layerLevel number

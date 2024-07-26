@@ -48,6 +48,9 @@ function C_PartyInfo.ConvertToParty() end
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_PartyInfo.ConvertToRaid)
 function C_PartyInfo.ConvertToRaid() end
 
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_PartyInfo.DelveTeleportOut)
+function C_PartyInfo.DelveTeleportOut() end
+
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_PartyInfo.DoCountdown)
 ---@param seconds number
 ---@return boolean success
@@ -83,7 +86,7 @@ function C_PartyInfo.GetMinItemLevel(avgItemLevelCategory) end
 function C_PartyInfo.GetMinLevel(category) end
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_PartyInfo.GetRestrictPings)
----@return boolean restrictToAssistants
+---@return Enum.RestrictPingsTo restrictTo
 function C_PartyInfo.GetRestrictPings() end
 
 ---Attempt to invite the named unit to a party, requires confirmation in some cases (e.g. the party will convert to a raid, or if there is a party sync in progress).
@@ -96,6 +99,14 @@ function C_PartyInfo.InviteUnit(targetName) end
 ---@return boolean isCrossFactionParty
 function C_PartyInfo.IsCrossFactionParty(category) end
 
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_PartyInfo.IsDelveComplete)
+---@return boolean isDelveComplete
+function C_PartyInfo.IsDelveComplete() end
+
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_PartyInfo.IsDelveInProgress)
+---@return boolean isDelveComplete
+function C_PartyInfo.IsDelveInProgress() end
+
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_PartyInfo.IsPartyFull)
 ---@param category? number
 ---@return boolean isFull
@@ -104,6 +115,10 @@ function C_PartyInfo.IsPartyFull(category) end
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_PartyInfo.IsPartyInJailersTower)
 ---@return boolean isPartyInJailersTower
 function C_PartyInfo.IsPartyInJailersTower() end
+
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_PartyInfo.IsPartyWalkIn)
+---@return boolean isPartyWalkIn
+function C_PartyInfo.IsPartyWalkIn() end
 
 ---Usually this will leave the party immediately. In some cases (e.g. PartySync) the user will be prompted to confirm leaving the party, because it's potentially destructive
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_PartyInfo.LeaveParty)
@@ -119,5 +134,5 @@ function C_PartyInfo.LeaveParty(category) end
 function C_PartyInfo.RequestInviteFromUnit(targetName, tank, healer, dps) end
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_PartyInfo.SetRestrictPings)
----@param restrictToAssistants boolean
-function C_PartyInfo.SetRestrictPings(restrictToAssistants) end
+---@param restrictTo Enum.RestrictPingsTo
+function C_PartyInfo.SetRestrictPings(restrictTo) end

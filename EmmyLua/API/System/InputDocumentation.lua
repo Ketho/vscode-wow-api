@@ -18,9 +18,9 @@ function GetMouseButtonClicked() end
 ---@return string buttonName
 function GetMouseButtonName(button) end
 
----[Documentation](https://warcraft.wiki.gg/wiki/API_GetMouseFocus)
----@return ScriptRegion region
-function GetMouseFocus() end
+---[Documentation](https://warcraft.wiki.gg/wiki/API_GetMouseFoci)
+---@return ScriptRegion[] region
+function GetMouseFoci() end
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_IsAltKeyDown)
 ---@return boolean down

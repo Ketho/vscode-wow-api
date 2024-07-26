@@ -11,6 +11,11 @@ function C_PetInfo.GetPetTamersForMap(uiMapID) end
 ---@return number? spellID
 function C_PetInfo.GetSpellForPetAction(actionID) end
 
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_PetInfo.IsPetActionPassive)
+---@param actionID number
+---@return boolean isPassive
+function C_PetInfo.IsPetActionPassive(actionID) end
+
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_PetInfo.PetAbandon)
 ---@param petNumber? number
 function C_PetInfo.PetAbandon(petNumber) end

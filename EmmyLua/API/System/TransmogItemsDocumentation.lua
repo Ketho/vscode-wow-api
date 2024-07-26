@@ -15,6 +15,11 @@ function C_TransmogCollection.AreAllCollectionTypeFiltersChecked() end
 ---@return boolean areAllSourceTypeFiltersChecked
 function C_TransmogCollection.AreAllSourceTypeFiltersChecked() end
 
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_TransmogCollection.CanAppearanceBeDisplayedOnPlayer)
+---@param itemAppearanceID number
+---@return boolean canAppearanceBeDisplayedOnPlayer
+function C_TransmogCollection.CanAppearanceBeDisplayedOnPlayer(itemAppearanceID) end
+
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_TransmogCollection.CanAppearanceHaveIllusion)
 ---@param appearanceID number
 ---@return boolean canHaveIllusion
@@ -40,6 +45,14 @@ function C_TransmogCollection.EndSearch() end
 ---@param itemAppearanceID number
 ---@return number[] itemModifiedAppearanceIDs
 function C_TransmogCollection.GetAllAppearanceSources(itemAppearanceID) end
+
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_TransmogCollection.GetAllFactionsShown)
+---@return boolean shown
+function C_TransmogCollection.GetAllFactionsShown() end
+
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_TransmogCollection.GetAllRacesShown)
+---@return boolean shown
+function C_TransmogCollection.GetAllRacesShown() end
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_TransmogCollection.GetAppearanceCameraID)
 ---@param itemAppearanceID number
@@ -119,6 +132,10 @@ function C_TransmogCollection.GetCategoryInfo(category) end
 ---@return number total
 function C_TransmogCollection.GetCategoryTotal(category) end
 
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_TransmogCollection.GetClassFilter)
+---@return number classID
+function C_TransmogCollection.GetClassFilter() end
+
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_TransmogCollection.GetCollectedShown)
 ---@return boolean shown
 function C_TransmogCollection.GetCollectedShown() end
@@ -126,6 +143,16 @@ function C_TransmogCollection.GetCollectedShown() end
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_TransmogCollection.GetFallbackWeaponAppearance)
 ---@return number? appearanceID
 function C_TransmogCollection.GetFallbackWeaponAppearance() end
+
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_TransmogCollection.GetFilteredCategoryCollectedCount)
+---@param category Enum.TransmogCollectionType
+---@return number count
+function C_TransmogCollection.GetFilteredCategoryCollectedCount(category) end
+
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_TransmogCollection.GetFilteredCategoryTotal)
+---@param category Enum.TransmogCollectionType
+---@return number total
+function C_TransmogCollection.GetFilteredCategoryTotal(category) end
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_TransmogCollection.GetIllusionInfo)
 ---@param illusionID number
@@ -225,6 +252,14 @@ function C_TransmogCollection.GetSourceRequiredHoliday(itemModifiedAppearanceID)
 ---@return boolean shown
 function C_TransmogCollection.GetUncollectedShown() end
 
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_TransmogCollection.GetValidAppearanceSourcesForClass)
+---@param appearanceID number
+---@param classID number
+---@param categoryType? Enum.TransmogCollectionType
+---@param transmogLocation? TransmogLocationMixin
+---@return AppearanceSourceInfo[] sources
+function C_TransmogCollection.GetValidAppearanceSourcesForClass(appearanceID, classID, categoryType, transmogLocation) end
+
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_TransmogCollection.HasFavorites)
 ---@return boolean hasFavorites
 function C_TransmogCollection.HasFavorites() end
@@ -321,9 +356,21 @@ function C_TransmogCollection.SearchSize(searchType) end
 ---@param checked boolean
 function C_TransmogCollection.SetAllCollectionTypeFilters(checked) end
 
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_TransmogCollection.SetAllFactionsShown)
+---@param shown boolean
+function C_TransmogCollection.SetAllFactionsShown(shown) end
+
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_TransmogCollection.SetAllRacesShown)
+---@param shown boolean
+function C_TransmogCollection.SetAllRacesShown(shown) end
+
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_TransmogCollection.SetAllSourceTypeFilters)
 ---@param checked boolean
 function C_TransmogCollection.SetAllSourceTypeFilters(checked) end
+
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_TransmogCollection.SetClassFilter)
+---@param classID number
+function C_TransmogCollection.SetClassFilter(classID) end
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_TransmogCollection.SetCollectedShown)
 ---@param shown boolean
@@ -371,6 +418,8 @@ function C_TransmogCollection.UpdateUsableAppearances() end
 ---@field appearanceIsUsable boolean
 ---@field appearanceNumSources number
 ---@field sourceIsKnown boolean
+---@field canDisplayOnPlayer boolean
+---@field isAnySourceValidForPlayer boolean
 
 ---@class TransmogAppearanceJournalEncounterInfo
 ---@field instance string
@@ -395,6 +444,7 @@ function C_TransmogCollection.UpdateUsableAppearances() end
 ---@field isCollected boolean
 ---@field isFavorite boolean
 ---@field isHideVisual boolean
+---@field canDisplayOnPlayer boolean
 ---@field uiOrder number
 ---@field exclusions number
 ---@field restrictedSlotID number?

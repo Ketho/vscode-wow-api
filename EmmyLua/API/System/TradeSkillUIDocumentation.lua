@@ -14,7 +14,8 @@ function C_TradeSkillUI.CloseTradeSkill() end
 ---@param numCasts? number Default = 1
 ---@param craftingReagents? CraftingReagentInfo[]
 ---@param itemTarget? ItemLocationMixin
-function C_TradeSkillUI.CraftEnchant(recipeSpellID, numCasts, craftingReagents, itemTarget) end
+---@param applyConcentration? boolean
+function C_TradeSkillUI.CraftEnchant(recipeSpellID, numCasts, craftingReagents, itemTarget, applyConcentration) end
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_TradeSkillUI.CraftRecipe)
 ---@param recipeSpellID number
@@ -22,13 +23,16 @@ function C_TradeSkillUI.CraftEnchant(recipeSpellID, numCasts, craftingReagents, 
 ---@param craftingReagents? CraftingReagentInfo[]
 ---@param recipeLevel? number
 ---@param orderID? BigUInteger
-function C_TradeSkillUI.CraftRecipe(recipeSpellID, numCasts, craftingReagents, recipeLevel, orderID) end
+---@param applyConcentration? boolean
+function C_TradeSkillUI.CraftRecipe(recipeSpellID, numCasts, craftingReagents, recipeLevel, orderID, applyConcentration) end
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_TradeSkillUI.CraftSalvage)
 ---@param recipeSpellID number
 ---@param numCasts? number Default = 1
 ---@param itemTarget ItemLocationMixin
-function C_TradeSkillUI.CraftSalvage(recipeSpellID, numCasts, itemTarget) end
+---@param craftingReagents? CraftingReagentInfo[]
+---@param applyConcentration? boolean
+function C_TradeSkillUI.CraftSalvage(recipeSpellID, numCasts, itemTarget, craftingReagents, applyConcentration) end
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_TradeSkillUI.DoesRecraftingRecipeAcceptItem)
 ---@param itemLocation ItemLocationMixin
@@ -52,6 +56,11 @@ function C_TradeSkillUI.GetChildProfessionInfo() end
 ---@return ProfessionInfo[] infos
 function C_TradeSkillUI.GetChildProfessionInfos() end
 
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_TradeSkillUI.GetConcentrationCurrencyID)
+---@param skillLineID number
+---@return number currencyType
+function C_TradeSkillUI.GetConcentrationCurrencyID(skillLineID) end
+
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_TradeSkillUI.GetCraftableCount)
 ---@param recipeSpellID number
 ---@param recipeLevel? number
@@ -62,15 +71,17 @@ function C_TradeSkillUI.GetCraftableCount(recipeSpellID, recipeLevel) end
 ---@param recipeID number
 ---@param craftingReagents CraftingReagentInfo[]
 ---@param allocationItemGUID? WOWGUID
+---@param applyConcentration boolean
 ---@return CraftingOperationInfo? info
-function C_TradeSkillUI.GetCraftingOperationInfo(recipeID, craftingReagents, allocationItemGUID) end
+function C_TradeSkillUI.GetCraftingOperationInfo(recipeID, craftingReagents, allocationItemGUID, applyConcentration) end
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_TradeSkillUI.GetCraftingOperationInfoForOrder)
 ---@param recipeID number
 ---@param craftingReagents CraftingReagentInfo[]
 ---@param orderID BigUInteger
+---@param applyConcentration boolean
 ---@return CraftingOperationInfo? info
-function C_TradeSkillUI.GetCraftingOperationInfoForOrder(recipeID, craftingReagents, orderID) end
+function C_TradeSkillUI.GetCraftingOperationInfoForOrder(recipeID, craftingReagents, orderID, applyConcentration) end
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_TradeSkillUI.GetCraftingReagentBonusText)
 ---@param recipeSpellID number
@@ -320,6 +331,10 @@ function C_TradeSkillUI.HasFavoriteOrderRecipes() end
 ---@return boolean valid
 function C_TradeSkillUI.IsEnchantTargetValid(recipeID, itemGUID, craftingReagents) end
 
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_TradeSkillUI.IsGuildTradeSkillsEnabled)
+---@return boolean enabled
+function C_TradeSkillUI.IsGuildTradeSkillsEnabled() end
+
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_TradeSkillUI.IsNPCCrafting)
 ---@return boolean result
 function C_TradeSkillUI.IsNPCCrafting() end
@@ -394,16 +409,18 @@ function C_TradeSkillUI.RecraftLimitCategoryValid(reagentItemID) end
 ---@param itemGUID WOWGUID
 ---@param craftingReagents? CraftingReagentInfo[]
 ---@param removedModifications? CraftingItemSlotModification[]
+---@param applyConcentration? boolean
 ---@return boolean result
-function C_TradeSkillUI.RecraftRecipe(itemGUID, craftingReagents, removedModifications) end
+function C_TradeSkillUI.RecraftRecipe(itemGUID, craftingReagents, removedModifications, applyConcentration) end
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_TradeSkillUI.RecraftRecipeForOrder)
 ---@param orderID BigUInteger
 ---@param itemGUID WOWGUID
 ---@param craftingReagents? CraftingReagentInfo[]
 ---@param removedModifications? CraftingItemSlotModification[]
+---@param applyConcentration? boolean
 ---@return boolean result
-function C_TradeSkillUI.RecraftRecipeForOrder(orderID, itemGUID, craftingReagents, removedModifications) end
+function C_TradeSkillUI.RecraftRecipeForOrder(orderID, itemGUID, craftingReagents, removedModifications, applyConcentration) end
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_TradeSkillUI.SetOnlyShowAvailableForOrders)
 ---@param flag boolean

@@ -111,7 +111,7 @@ function C_ArtifactUI.GetArtifactArtInfo() end
 ---@return number? itemAppearanceID
 ---@return number? altItemAppearanceID
 ---@return boolean altOnTop
----@return number tier
+---@return ArtifactTiers tier
 function C_ArtifactUI.GetArtifactInfo() end
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_ArtifactUI.GetArtifactItemID)
@@ -119,7 +119,7 @@ function C_ArtifactUI.GetArtifactInfo() end
 function C_ArtifactUI.GetArtifactItemID() end
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_ArtifactUI.GetArtifactTier)
----@return number? tier
+---@return ArtifactTiers? tier
 function C_ArtifactUI.GetArtifactTier() end
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_ArtifactUI.GetArtifactXPRewardTargetInfo)
@@ -130,7 +130,7 @@ function C_ArtifactUI.GetArtifactXPRewardTargetInfo(artifactCategoryID) end
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_ArtifactUI.GetCostForPointAtRank)
 ---@param rank number
----@param tier number
+---@param tier ArtifactTiers
 ---@return number cost
 function C_ArtifactUI.GetCostForPointAtRank(rank, tier) end
 
@@ -151,7 +151,7 @@ function C_ArtifactUI.GetEquippedArtifactArtInfo() end
 ---@return number? itemAppearanceID
 ---@return number? altItemAppearanceID
 ---@return boolean altOnTop
----@return number tier
+---@return ArtifactTiers tier
 function C_ArtifactUI.GetEquippedArtifactInfo() end
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_ArtifactUI.GetEquippedArtifactItemID)
@@ -286,7 +286,7 @@ function C_ArtifactUI.GetRespecArtifactArtInfo() end
 ---@return number? itemAppearanceID
 ---@return number? altItemAppearanceID
 ---@return boolean altOnTop
----@return number tier
+---@return ArtifactTiers tier
 function C_ArtifactUI.GetRespecArtifactInfo() end
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_ArtifactUI.GetRespecCost)
@@ -296,7 +296,7 @@ function C_ArtifactUI.GetRespecCost() end
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_ArtifactUI.GetTotalPowerCost)
 ---@param startingTrait number
 ---@param numTraits number
----@param artifactTier number
+---@param artifactTier ArtifactTiers
 ---@return number totalArtifactPowerCost
 function C_ArtifactUI.GetTotalPowerCost(startingTrait, numTraits, artifactTier) end
 
@@ -401,7 +401,7 @@ function C_ArtifactUI.ShouldSuppressForgeRotation() end
 ---@field itemAppearanceID number?
 ---@field altItemAppearanceID number?
 ---@field altOnTop boolean
----@field tier number
+---@field tier ArtifactTiers
 
 ---@class ArtifactMetaPowerInfo
 ---@field spellID number

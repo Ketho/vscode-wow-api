@@ -101,15 +101,29 @@ function C_Traits.GetNodeCost(configID, nodeID) end
 ---@return TraitNodeInfo nodeInfo
 function C_Traits.GetNodeInfo(configID, nodeID) end
 
+---Returns IDs of Trait Nodes with pending changes, grouped by the type of change; Returns nothing if there are no pending changes
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_Traits.GetStagedChanges)
+---@param configID number
+---@return number[] nodeIDsWithPurchases
+---@return number[] nodeIDsWithRefunds
+---@return number[] nodeIDsWithSelectionSwaps
+function C_Traits.GetStagedChanges(configID) end
+
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_Traits.GetStagedChangesCost)
 ---@param configID number
 ---@return TraitCurrencyCost[] costs
 function C_Traits.GetStagedChangesCost(configID) end
 
----[Documentation](https://warcraft.wiki.gg/wiki/API_C_Traits.GetStagedPurchases)
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_Traits.GetSubTreeInfo)
 ---@param configID number
----@return number[] nodeIDsWithPurchases
-function C_Traits.GetStagedPurchases(configID) end
+---@param subTreeID number
+---@return TraitSubTreeInfo subTreeInfo
+function C_Traits.GetSubTreeInfo(configID, subTreeID) end
+
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_Traits.GetSystemIDByTreeID)
+---@param treeID number
+---@return number systemID
+function C_Traits.GetSystemIDByTreeID(treeID) end
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_Traits.GetTraitCurrencyInfo)
 ---@param traitCurrencyID number
@@ -233,6 +247,7 @@ function C_Traits.TalentTestUnlearnSpells() end
 ---@field traitCurrencyID number?
 ---@field spentAmountRequired number?
 ---@field tooltipFormat string?
+---@field traitCondAccountElementID number?
 
 ---@class TraitConfigInfo
 ---@field ID number
@@ -255,7 +270,8 @@ function C_Traits.TalentTestUnlearnSpells() end
 ---@field subType Enum.TraitDefinitionSubType?
 
 ---@class TraitEntryInfo
----@field definitionID number
+---@field definitionID number?
+---@field subTreeID number?
 ---@field type Enum.TraitNodeEntryType
 ---@field maxRanks number
 ---@field isAvailable boolean
@@ -293,6 +309,8 @@ function C_Traits.TalentTestUnlearnSpells() end
 ---@field conditionIDs number[]
 ---@field isCascadeRepurchasable boolean
 ---@field cascadeRepurchaseEntryID number?
+---@field subTreeID number?
+---@field subTreeActive boolean?
 
 ---@class TraitNodeInfoPartial
 ---@field canPurchaseRank boolean?
@@ -305,12 +323,24 @@ function C_Traits.TalentTestUnlearnSpells() end
 ---@field meetsEdgeRequirements boolean?
 ---@field isCascadeRepurchasable boolean?
 ---@field activeEntryID number?
+---@field subTreeActive boolean?
 
 ---@class TraitOutEdgeInfo
 ---@field targetNode number
 ---@field type number
 ---@field visualStyle number
 ---@field isActive boolean
+
+---@class TraitSubTreeInfo
+---@field ID number
+---@field name string?
+---@field description string?
+---@field iconElementID textureAtlas?
+---@field traitCurrencyID number?
+---@field isActive boolean
+---@field subTreeSelectionNodeIDs number[]
+---@field posX number
+---@field posY number
 
 ---@class TraitTreeInfo
 ---@field ID number

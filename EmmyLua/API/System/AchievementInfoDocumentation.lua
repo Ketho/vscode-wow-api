@@ -1,6 +1,10 @@
 ---@meta
 C_AchievementInfo = {}
 
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_AchievementInfo.AreGuildAchievementsEnabled)
+---@return boolean enabled
+function C_AchievementInfo.AreGuildAchievementsEnabled() end
+
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_AchievementInfo.GetRewardItemID)
 ---@param achievementID number
 ---@return number? rewardItemID

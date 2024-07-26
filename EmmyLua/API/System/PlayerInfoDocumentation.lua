@@ -69,6 +69,10 @@ function C_PlayerInfo.GetPlayerCharacterData() end
 ---@return MythicPlusRatingSummary ratingSummary
 function C_PlayerInfo.GetPlayerMythicPlusRatingSummary(playerToken) end
 
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_PlayerInfo.HasAccountInventoryLock)
+---@return boolean hasAccountInventoryLock
+function C_PlayerInfo.HasAccountInventoryLock() end
+
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_PlayerInfo.HasVisibleInvSlot)
 ---@param slot number
 ---@return boolean isVisible

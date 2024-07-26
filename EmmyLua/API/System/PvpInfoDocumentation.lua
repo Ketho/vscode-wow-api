@@ -126,6 +126,10 @@ function C_PvP.GetBattlefieldVehicles(uiMapID) end
 ---@return boolean hasWon
 function C_PvP.GetBrawlRewards(brawlType) end
 
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_PvP.GetBrawlSoloRBGMinItemLevel)
+---@return number minItemLevel
+function C_PvP.GetBrawlSoloRBGMinItemLevel() end
+
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_PvP.GetCustomVictoryStatID)
 ---@return number statID
 function C_PvP.GetCustomVictoryStatID() end
@@ -175,6 +179,10 @@ function C_PvP.GetPVPActiveRatedMatchDeserterPenalty() end
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_PvP.GetPVPSeasonRewardAchievementID)
 ---@return number achievementID
 function C_PvP.GetPVPSeasonRewardAchievementID() end
+
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_PvP.GetPersonalRatedBGBlitzSpecStats)
+---@return RatedBGBlitzSpecStats? specStats
+function C_PvP.GetPersonalRatedBGBlitzSpecStats() end
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_PvP.GetPersonalRatedSoloShuffleSpecStats)
 ---@return RatedSoloShuffleSpecStats? specStats
@@ -235,6 +243,18 @@ function C_PvP.GetRandomEpicBGRewards() end
 ---@return RoleShortageReward? roleShortageBonus
 function C_PvP.GetRatedBGRewards() end
 
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_PvP.GetRatedSoloRBGMinItemLevel)
+---@return number minItemLevel
+function C_PvP.GetRatedSoloRBGMinItemLevel() end
+
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_PvP.GetRatedSoloRBGRewards)
+---@return number honor
+---@return number experience
+---@return BattlefieldItemReward[]? itemRewards
+---@return BattlefieldCurrencyReward[]? currencyRewards
+---@return RoleShortageReward? roleShortageBonus
+function C_PvP.GetRatedSoloRBGRewards() end
+
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_PvP.GetRatedSoloShuffleMinItemLevel)
 ---@return number minItemLevel
 function C_PvP.GetRatedSoloShuffleMinItemLevel() end
@@ -272,10 +292,6 @@ function C_PvP.GetSeasonBestInfo() end
 ---@param pvpBracket number
 ---@return BattlemasterListInfo battlemasterListInfo
 function C_PvP.GetSkirmishInfo(pvpBracket) end
-
----[Documentation](https://warcraft.wiki.gg/wiki/API_C_PvP.GetSoloRBGMinItemLevel)
----@return number minItemLevel
-function C_PvP.GetSoloRBGMinItemLevel() end
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_PvP.GetSpecialEventBrawlInfo)
 ---@return PvpBrawlInfo? brawlInfo
@@ -384,6 +400,10 @@ function C_PvP.IsRatedBattleground() end
 ---@return boolean isRatedMap
 function C_PvP.IsRatedMap() end
 
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_PvP.IsRatedSoloRBG)
+---@return boolean isRatedSoloRBG
+function C_PvP.IsRatedSoloRBG() end
+
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_PvP.IsRatedSoloShuffle)
 ---@return boolean isRatedSoloShuffle
 function C_PvP.IsRatedSoloShuffle() end
@@ -416,6 +436,9 @@ function C_PvP.IsWarModeFeatureEnabled() end
 ---@param isSpecialBrawl? boolean Default = false
 function C_PvP.JoinBrawl(isSpecialBrawl) end
 
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_PvP.JoinRatedBGBlitz)
+function C_PvP.JoinRatedBGBlitz() end
+
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_PvP.RequestCrowdControlSpell)
 ---@param playerToken UnitToken
 function C_PvP.RequestCrowdControlSpell(playerToken) end
@@ -427,6 +450,19 @@ function C_PvP.SetPVP(enablePVP) end
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_PvP.SetWarModeDesired)
 ---@param warModeDesired boolean
 function C_PvP.SetWarModeDesired(warModeDesired) end
+
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_PvP.StartSoloRBGWarGameByName)
+---@param args string
+---@return number success
+function C_PvP.StartSoloRBGWarGameByName(args) end
+
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_PvP.StartSpectatorSoloRBGWarGame)
+---@param opaqueID1 number
+---@param opaqueID2 number
+---@param specifiedMap string
+---@param tournamentRules boolean
+---@return number success
+function C_PvP.StartSpectatorSoloRBGWarGame(opaqueID1, opaqueID2, specifiedMap, tournamentRules) end
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_PvP.TogglePVP)
 function C_PvP.TogglePVP() end
@@ -607,6 +643,12 @@ function C_PvP.ToggleWarMode() end
 ---@field hasRandomWinToday boolean
 ---@field minLevel number
 ---@field maxLevel number
+
+---@class RatedBGBlitzSpecStats
+---@field weeklyMostPlayedSpecID number
+---@field weeklyMostPlayedSpecGames number
+---@field seasonMostPlayedSpecID number
+---@field seasonMostPlayedSpecGames number
 
 ---@class RatedMatchDeserterPenalty
 ---@field personalRatingChange number

@@ -2,6 +2,9 @@
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_ClearCursor)
 function ClearCursor() end
 
+---[Documentation](https://warcraft.wiki.gg/wiki/API_ClearCursorHoveredItem)
+function ClearCursorHoveredItem() end
+
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_CursorHasItem)
 ---@return boolean result
 function CursorHasItem() end
@@ -49,6 +52,14 @@ function SellCursorItem() end
 ---@param name? string
 ---@return boolean result
 function SetCursor(name) end
+
+---[Documentation](https://warcraft.wiki.gg/wiki/API_SetCursorHoveredItem)
+---@param item ItemLocationMixin
+function SetCursorHoveredItem(item) end
+
+---[Documentation](https://warcraft.wiki.gg/wiki/API_SetCursorHoveredItemTradeItem)
+---@param enabled boolean
+function SetCursorHoveredItemTradeItem(enabled) end
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_SetCursorVirtualItem)
 ---@param itemInfo ItemInfo

@@ -62,7 +62,7 @@ function C_MountJournal.GetDisplayedMountID(displayIndex) end
 ---@return boolean shouldHideOnChar
 ---@return boolean isCollected
 ---@return number mountID
----@return boolean isForDragonriding
+---@return boolean isSteadyFlight
 function C_MountJournal.GetDisplayedMountInfo(displayIndex) end
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_MountJournal.GetDisplayedMountInfoExtra)
@@ -77,6 +77,10 @@ function C_MountJournal.GetDisplayedMountInfo(displayIndex) end
 ---@return number spellVisualKitID
 ---@return boolean disablePlayerMountPreview
 function C_MountJournal.GetDisplayedMountInfoExtra(mountIndex) end
+
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_MountJournal.GetDynamicFlightModeSpellID)
+---@return number spellID
+function C_MountJournal.GetDynamicFlightModeSpellID() end
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_MountJournal.GetIsFavorite)
 ---@param mountIndex number
@@ -121,7 +125,7 @@ function C_MountJournal.GetMountIDs() end
 ---@return boolean shouldHideOnChar
 ---@return boolean isCollected
 ---@return number mountID
----@return boolean isForDragonriding
+---@return boolean isSteadyFlight
 function C_MountJournal.GetMountInfoByID(mountID) end
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_MountJournal.GetMountInfoExtraByID)
@@ -160,6 +164,11 @@ function C_MountJournal.GetNumMounts() end
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_MountJournal.GetNumMountsNeedingFanfare)
 ---@return number numMountsNeedingFanfare
 function C_MountJournal.GetNumMountsNeedingFanfare() end
+
+---Returns whether the player has unlocked the ability to switch between Skyriding and steady flight styles for flying mounts .
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_MountJournal.IsDragonridingUnlocked)
+---@return boolean isUnlocked
+function C_MountJournal.IsDragonridingUnlocked() end
 
 ---Determines if the item is mount equipment based on its class and subclass.
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_MountJournal.IsItemMountEquipment)
@@ -204,6 +213,9 @@ function C_MountJournal.NeedsFanfare(mountID) end
 ---@param displayIndex number
 function C_MountJournal.Pickup(displayIndex) end
 
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_MountJournal.PickupDynamicFlightMode)
+function C_MountJournal.PickupDynamicFlightMode() end
+
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_MountJournal.SetAllSourceFilters)
 ---@param isChecked boolean
 function C_MountJournal.SetAllSourceFilters(isChecked) end
@@ -243,6 +255,9 @@ function C_MountJournal.SetTypeFilter(filterIndex, isChecked) end
 ---@param mountID number
 function C_MountJournal.SummonByID(mountID) end
 
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_MountJournal.SwapDynamicFlightMode)
+function C_MountJournal.SwapDynamicFlightMode() end
+
 ---@class MountCreatureDisplayInfo
 ---@field creatureDisplayID number
 ---@field isVisible boolean
@@ -260,7 +275,7 @@ function C_MountJournal.SummonByID(mountID) end
 ---@field shouldHideOnChar boolean
 ---@field isCollected boolean
 ---@field mountID number
----@field isForDragonriding boolean
+---@field isSteadyFlight boolean
 
 ---@class MountInfoExtra
 ---@field creatureDisplayInfoID number?

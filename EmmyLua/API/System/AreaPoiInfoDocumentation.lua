@@ -18,11 +18,29 @@ function C_AreaPoiInfo.GetAreaPOIInfo(uiMapID, areaPoiID) end
 ---@return number secondsLeft
 function C_AreaPoiInfo.GetAreaPOISecondsLeft(areaPoiID) end
 
+---Returns all area POIInfos flagged as delves for the given map.
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_AreaPoiInfo.GetDelvesForMap)
+---@param uiMapID number
+---@return number[] areaPoiIDs
+function C_AreaPoiInfo.GetDelvesForMap(uiMapID) end
+
 ---Returns all area POIInfos flagged as dragonriding races for the given map.
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_AreaPoiInfo.GetDragonridingRacesForMap)
 ---@param uiMapID number
 ---@return number[] areaPoiIDs
 function C_AreaPoiInfo.GetDragonridingRacesForMap(uiMapID) end
+
+---Returns all area POIInfos flagged as events for the given map.
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_AreaPoiInfo.GetEventsForMap)
+---@param uiMapID number
+---@return number[] areaPoiIDs
+function C_AreaPoiInfo.GetEventsForMap(uiMapID) end
+
+---Returns all area POIInfos flagged as quest hubs for the given map.
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_AreaPoiInfo.GetQuestHubsForMap)
+---@param uiMapID number
+---@return number[] areaPoiIDs
+function C_AreaPoiInfo.GetQuestHubsForMap(uiMapID) end
 
 ---This statically determines if the POI is timed, GetAreaPOITimeLeft retrieves the value from the server and may return nothing for long intervals
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_AreaPoiInfo.IsAreaPOITimed)
@@ -36,6 +54,7 @@ function C_AreaPoiInfo.IsAreaPOITimed(areaPoiID) end
 ---@field position Vector2DMixin
 ---@field name string
 ---@field description string?
+---@field linkedUiMapID number?
 ---@field textureIndex number?
 ---@field tooltipWidgetSet number?
 ---@field iconWidgetSet number?
@@ -48,3 +67,4 @@ function C_AreaPoiInfo.IsAreaPOITimed(areaPoiID) end
 ---@field addPaddingAboveTooltipWidgets boolean?
 ---@field highlightWorldQuestsOnHover boolean
 ---@field highlightVignettesOnHover boolean
+---@field isCurrentEvent boolean

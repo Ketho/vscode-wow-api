@@ -7,6 +7,8 @@
 ---@field itemModID number
 ---@field invType number? Default = 0
 ---@field categoryID Enum.TransmogCollectionType? Default = None
+---@field playerCanCollect boolean
+---@field isValidSourceForPlayer boolean
 ---@field inventorySlot number?
 ---@field sourceType number?
 ---@field name string?

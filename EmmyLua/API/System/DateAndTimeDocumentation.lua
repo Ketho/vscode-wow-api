@@ -45,3 +45,7 @@ function C_DateAndTime.GetSecondsUntilWeeklyReset() end
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_DateAndTime.GetServerTimeLocal)
 ---@return time_t serverTimeLocal
 function C_DateAndTime.GetServerTimeLocal() end
+
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_DateAndTime.GetWeeklyResetStartTime)
+---@return time_t seconds
+function C_DateAndTime.GetWeeklyResetStartTime() end

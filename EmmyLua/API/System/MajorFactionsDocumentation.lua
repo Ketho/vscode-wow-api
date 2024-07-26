@@ -11,10 +11,6 @@ function C_MajorFactions.GetCovenantIDForMajorFaction(majorFactionID) end
 ---@return number level
 function C_MajorFactions.GetCurrentRenownLevel(majorFactionID) end
 
----[Documentation](https://warcraft.wiki.gg/wiki/API_C_MajorFactions.GetFeatureAbilities)
----@return MajorFactionFeatureAbilityInfo[] featureAbilities
-function C_MajorFactions.GetFeatureAbilities() end
-
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_MajorFactions.GetMajorFactionData)
 ---@param majorFactionID number
 ---@return MajorFactionData? data
@@ -24,6 +20,11 @@ function C_MajorFactions.GetMajorFactionData(majorFactionID) end
 ---@param expansionID? number
 ---@return number[] majorFactionIDs
 function C_MajorFactions.GetMajorFactionIDs(expansionID) end
+
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_MajorFactions.GetMajorFactionRenownInfo)
+---@param majorFactionID number
+---@return MajorFactionRenownInfo? data
+function C_MajorFactions.GetMajorFactionRenownInfo(majorFactionID) end
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_MajorFactions.GetRenownLevels)
 ---@param majorFactionID number
@@ -45,17 +46,10 @@ function C_MajorFactions.GetRenownRewardsForLevel(majorFactionID, renownLevel) e
 ---@return boolean hasMaxRenown
 function C_MajorFactions.HasMaximumRenown(majorFactionID) end
 
----[Documentation](https://warcraft.wiki.gg/wiki/API_C_MajorFactions.IsPlayerInRenownCatchUpMode)
----@return boolean isInCatchUpMode
-function C_MajorFactions.IsPlayerInRenownCatchUpMode() end
-
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_MajorFactions.IsWeeklyRenownCapped)
 ---@param majorFactionID number
 ---@return boolean isWeeklyCapped
 function C_MajorFactions.IsWeeklyRenownCapped(majorFactionID) end
-
----[Documentation](https://warcraft.wiki.gg/wiki/API_C_MajorFactions.RequestCatchUpState)
-function C_MajorFactions.RequestCatchUpState() end
 
 ---@class MajorFactionData
 ---@field name string
@@ -72,9 +66,10 @@ function C_MajorFactions.RequestCatchUpState() end
 ---@field celebrationSoundKit number
 ---@field renownFanfareSoundKitID number
 
----@class MajorFactionFeatureAbilityInfo
----@field featureAbilityType number
----@field uiOrder number
+---@class MajorFactionRenownInfo
+---@field renownLevel number
+---@field renownReputationEarned number
+---@field renownLevelThreshold number
 
 ---@class MajorFactionRenownLevelInfo
 ---@field factionID number
@@ -86,6 +81,7 @@ function C_MajorFactions.RequestCatchUpState() end
 ---@class MajorFactionRenownRewardInfo
 ---@field renownRewardID number
 ---@field uiOrder number
+---@field isAccountUnlock boolean
 ---@field itemID number?
 ---@field spellID number?
 ---@field mountID number?

@@ -683,6 +683,7 @@ function C_UIWidgetManager.UnregisterUnitForWidgetUpdates(unitToken, isGuid) end
 ---@field shownState Enum.WidgetShownState
 ---@field entries TextureAndTextEntryInfo[]
 ---@field textSizeType Enum.UIWidgetTextureAndTextSizeType
+---@field groupAlignment Enum.UIWidgetHorizontalDirection
 ---@field fixedWidth number?
 ---@field tooltipLoc Enum.UIWidgetTooltipLocation
 ---@field widgetSizeSetting number
@@ -815,7 +816,7 @@ function C_UIWidgetManager.UnregisterUnitForWidgetUpdates(unitToken, isGuid) end
 ---@field textFontType Enum.UIWidgetFontType
 ---@field textSizeType Enum.UIWidgetTextSizeType
 ---@field hAlignType Enum.WidgetTextHorizontalAlignmentType
----@field isLootObject boolean
+---@field tint Enum.SpellDisplayTint
 
 ---@class UIWidgetStateIconInfo
 ---@field iconState Enum.IconState

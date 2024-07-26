@@ -133,6 +133,11 @@ function C_ChatInfo.IsTimerunningPlayer(playerGUID) end
 ---@return boolean isValid
 function C_ChatInfo.IsValidChatLine(chatLine) end
 
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_ChatInfo.IsValidCombatFilterName)
+---@param name string
+---@return boolean isApproved
+function C_ChatInfo.IsValidCombatFilterName(name) end
+
 ---Registers interest in addon messages with this prefix, cannot be an empty string.
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_ChatInfo.RegisterAddonMessagePrefix)
 ---@param prefix string

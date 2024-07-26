@@ -54,6 +54,11 @@ function C_Item.DoesItemExistByID(itemInfo) end
 ---@return boolean matchesBonusTree
 function C_Item.DoesItemMatchBonusTreeReplacement(itemLoc) end
 
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_Item.DoesItemMatchTargetEnchantingSpell)
+---@param itemLoc ItemLocationMixin
+---@return boolean matchesTargetEnchantingSpell
+function C_Item.DoesItemMatchTargetEnchantingSpell(itemLoc) end
+
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_Item.DoesItemMatchTrackJump)
 ---@param itemLoc ItemLocationMixin
 ---@return boolean matchesTrackJump
@@ -137,8 +142,9 @@ function C_Item.GetItemCooldown(itemInfo) end
 ---@param includeBank? boolean Default = false
 ---@param includeUses? boolean Default = false
 ---@param includeReagentBank? boolean Default = false
+---@param includeAccountBank? boolean Default = false
 ---@return number count
-function C_Item.GetItemCount(itemInfo, includeBank, includeUses, includeReagentBank) end
+function C_Item.GetItemCount(itemInfo, includeBank, includeUses, includeReagentBank, includeAccountBank) end
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_Item.GetItemCreationContext)
 ---@param itemInfo ItemInfo
@@ -397,6 +403,11 @@ function C_Item.IsArtifactPowerItem(itemInfo) end
 ---@return boolean isBound
 function C_Item.IsBound(itemLocation) end
 
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_Item.IsBoundToAccountUntilEquip)
+---@param itemLocation ItemLocationMixin
+---@return boolean isBoundToAccountUntilEquip
+function C_Item.IsBoundToAccountUntilEquip(itemLocation) end
+
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_Item.IsConsumableItem)
 ---@param itemInfo ItemInfo
 ---@return boolean result
@@ -411,6 +422,12 @@ function C_Item.IsCorruptedItem(itemInfo) end
 ---@param itemInfo ItemInfo
 ---@return boolean? result
 function C_Item.IsCosmeticItem(itemInfo) end
+
+---Returns whether the item is a consumable curio that can be applied to a delves companion.
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_Item.IsCurioItem)
+---@param itemInfo ItemInfo
+---@return boolean? result
+function C_Item.IsCurioItem(itemInfo) end
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_Item.IsCurrentItem)
 ---@param itemInfo ItemInfo

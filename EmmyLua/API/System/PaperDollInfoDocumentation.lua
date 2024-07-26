@@ -27,10 +27,22 @@ function C_PaperDollInfo.GetArmorEffectivenessAgainstTarget(armor) end
 ---@return number[] azeritePowerIDs
 function C_PaperDollInfo.GetInspectAzeriteItemEmpoweredChoices(unit, equipmentSlotIndex) end
 
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_PaperDollInfo.GetInspectGuildInfo)
+---@param unitString string
+---@return number achievementPoints
+---@return number numMembers
+---@return string guildName
+---@return string realmName
+function C_PaperDollInfo.GetInspectGuildInfo(unitString) end
+
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_PaperDollInfo.GetInspectItemLevel)
 ---@param unit UnitToken
 ---@return number equippedItemLevel
 function C_PaperDollInfo.GetInspectItemLevel(unit) end
+
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_PaperDollInfo.GetInspectRatedBGBlitzData)
+---@return InspectPVPData ratedBGBlitzData
+function C_PaperDollInfo.GetInspectRatedBGBlitzData() end
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_PaperDollInfo.GetInspectRatedSoloShuffleData)
 ---@return InspectPVPData ratedSoloShuffleData
@@ -53,6 +65,12 @@ function C_PaperDollInfo.OffhandHasShield() end
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_PaperDollInfo.OffhandHasWeapon)
 ---@return boolean offhandHasWeapon
 function C_PaperDollInfo.OffhandHasWeapon() end
+
+---@class InspectGuildInfo
+---@field achievementPoints number
+---@field numMembers number
+---@field guildName string
+---@field realmName string
 
 ---@class InspectPVPData
 ---@field rating number

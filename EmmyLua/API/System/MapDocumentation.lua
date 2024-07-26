@@ -197,10 +197,15 @@ function C_Map.GetWorldPosFromMapPos(uiMapID, mapPosition) end
 ---@return boolean hasUserWaypoint
 function C_Map.HasUserWaypoint() end
 
----[Documentation](https://warcraft.wiki.gg/wiki/API_C_Map.IsMapValidForNavBarDropDown)
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_Map.IsCityMap)
+---@param uiMapID number
+---@return boolean isCityMap
+function C_Map.IsCityMap(uiMapID) end
+
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_Map.IsMapValidForNavBarDropdown)
 ---@param uiMapID number
 ---@return boolean isValid
-function C_Map.IsMapValidForNavBarDropDown(uiMapID) end
+function C_Map.IsMapValidForNavBarDropdown(uiMapID) end
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_Map.MapHasArt)
 ---@param uiMapID number
