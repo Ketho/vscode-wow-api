@@ -1,7 +1,6 @@
 ---@meta
 -- these namespaces didnt document any functions
 C_AdventureJournal = {} -- AdventureJournalDocumentation.lua
-C_AdventureMap = {} -- AdventureMapDocumentation.lua
 C_BlackMarket = {} -- BlackMarketInfoDocumentation.lua
 C_CharacterServices = {} -- no doc
 C_CharacterServicesPublic = {} -- no doc
@@ -9,7 +8,6 @@ C_ClassTrial = {} -- ClassTrialDocumentation.lua
 C_Debug = {} -- no doc
 C_FunctionContainers = {} -- no doc
 C_Heirloom = {} -- HeirloomInfoDocumentation.lua
-C_LootHistory = {} -- no doc
 C_NamePlate = {} -- NamePlateManagerDocumentation.lua; C_NamePlateManager
 C_PrototypeDialog = {} -- no doc
 C_Scenario = {} -- ScenarioInfoDocumentation.lua; C_ScenarioInfo
@@ -23,5 +21,6 @@ C_AccountServices = {} -- no doc
 C_ArrowCalloutManager = {} -- no doc
 C_SpectatingUI = {} -- no doc
 C_WoWLabsMatchmaking = {} -- no doc
+-- 11.0.2
 C_WowLabsDataManager = {} -- no doc
 C_Reincarnation = {} -- no doc
