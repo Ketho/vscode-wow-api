@@ -404,6 +404,9 @@ function C_BlackMarket.ItemPlaceBid(marketID, bid) end
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_BlackMarket.RequestItems)
 function C_BlackMarket.RequestItems() end
 
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_CharacterServices.ArePaidCharacterTransfersBetweenBnetAccountsEnabled)
+function C_CharacterServices.ArePaidCharacterTransfersBetweenBnetAccountsEnabled() end
+
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_CharacterServices.AssignNameChangeDistribution)
 function C_CharacterServices.AssignNameChangeDistribution() end
 
@@ -489,6 +492,9 @@ function C_Debug.TeleportToMapDebugObject(pinIndex) end
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_Debug.TeleportToMapLocation)
 function C_Debug.TeleportToMapLocation(uiMapID, mapX, mapY) end
+
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_Debug.ToggleWindDebugMenu)
+function C_Debug.ToggleWindDebugMenu() end
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_Debug.ViewInDebugWindow)
 function C_Debug.ViewInDebugWindow() end
@@ -1977,12 +1983,6 @@ function C_Scenario.GetBonusStepRewardQuestID(stepIndex) end
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_Scenario.GetBonusSteps)
 function C_Scenario.GetBonusSteps() end
 
----[Documentation](https://warcraft.wiki.gg/wiki/API_C_Scenario.GetCriteriaInfo)
-function C_Scenario.GetCriteriaInfo(criteriaIndex) end
-
----[Documentation](https://warcraft.wiki.gg/wiki/API_C_Scenario.GetCriteriaInfoByStep)
-function C_Scenario.GetCriteriaInfoByStep(stepID, criteriaIndex) end
-
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_Scenario.GetInfo)
 function C_Scenario.GetInfo() end
 
@@ -2125,7 +2125,4 @@ function C_ToyBox.HasFavorites() end
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_ToyBox.IsExpansionTypeFilterChecked)
 function C_ToyBox.IsExpansionTypeFilterChecked(expansionIndex) end
-
----[Documentation](https://warcraft.wiki.gg/wiki/API_C_ToyBox.IsSourceTypeFilterChecked)
-function C_ToyBox.IsSourceTypeFilterChecked(sourceIndex) end
 

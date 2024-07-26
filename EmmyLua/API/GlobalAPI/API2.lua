@@ -1,4 +1,7 @@
 ---@meta
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_ToyBox.IsSourceTypeFilterChecked)
+function C_ToyBox.IsSourceTypeFilterChecked(sourceIndex) end
+
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_ToyBox.IsToyUsable)
 function C_ToyBox.IsToyUsable(itemID) end
 
@@ -663,9 +666,6 @@ function ClickVoidTransferWithdrawalSlot(slotIndex, isRightClick) end
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_ClickWorldMapActionButton)
 function ClickWorldMapActionButton() end
 
----[Documentation](https://warcraft.wiki.gg/wiki/API_CloseBankFrame)
-function CloseBankFrame() end
-
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_CloseGuildBankFrame)
 function CloseGuildBankFrame() end
 
@@ -711,13 +711,6 @@ function CloseTrade() end
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_CloseTrainer)
 function CloseTrainer() end
-
----[Documentation](https://warcraft.wiki.gg/wiki/API_CollapseAllFactionHeaders)
-function CollapseAllFactionHeaders() end
-
----[Documentation](https://warcraft.wiki.gg/wiki/API_CollapseFactionHeader)
----@param rowIndex number
-function CollapseFactionHeader(rowIndex) end
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_CollapseGuildTradeSkillHeader)
 function CollapseGuildTradeSkillHeader(tradeSkillID) end
@@ -877,9 +870,6 @@ function DescendStop() end
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_DetectWowMouse)
 function DetectWowMouse() end
 
----[Documentation](https://warcraft.wiki.gg/wiki/API_DisableSpellAutocast)
-function DisableSpellAutocast() end
-
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_DismissCompanion)
 ---@param type string
 function DismissCompanion(type) end
@@ -899,11 +889,6 @@ function DoMasterLootRoll(slot) end
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_DoReadyCheck)
 function DoReadyCheck() end
-
----[Documentation](https://warcraft.wiki.gg/wiki/API_DoesSpellExist)
----@param spellName string
----@return boolean spellExists
-function DoesSpellExist(spellName) end
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_DoesTemplateExist)
 function DoesTemplateExist(template) end
@@ -1098,9 +1083,6 @@ function EJ_SetSearch(text) end
 ---@return number macroID
 function EditMacro(macroInfo, name, icon, body) end
 
----[Documentation](https://warcraft.wiki.gg/wiki/API_EnableSpellAutocast)
-function EnableSpellAutocast() end
-
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_EnumerateFrames)
 ---@param currentFrame? Frame
 ---@return Frame? nextFrame
@@ -1112,13 +1094,6 @@ function EnumerateServerChannels() end
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_ExecuteVoidTransfer)
 function ExecuteVoidTransfer() end
 
----[Documentation](https://warcraft.wiki.gg/wiki/API_ExpandAllFactionHeaders)
-function ExpandAllFactionHeaders() end
-
----[Documentation](https://warcraft.wiki.gg/wiki/API_ExpandFactionHeader)
----@param rowIndex number
-function ExpandFactionHeader(rowIndex) end
-
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_ExpandGuildTradeSkillHeader)
 function ExpandGuildTradeSkillHeader(tradeSkillID) end
 
@@ -1127,10 +1102,6 @@ function ExpandQuestHeader() end
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_ExpandWarGameHeader)
 function ExpandWarGameHeader(index) end
-
----[Documentation](https://warcraft.wiki.gg/wiki/API_FactionToggleAtWar)
----@param rowIndex number
-function FactionToggleAtWar(rowIndex) end
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_FindBaseSpellByID)
 ---@param spellID number
@@ -1734,12 +1705,6 @@ function GetExistingSocketLink(id) end
 ---@return number extraPage
 function GetExtraBarIndex() end
 
----[Documentation](https://warcraft.wiki.gg/wiki/API_GetFactionInfo)
-function GetFactionInfo(index) end
-
----[Documentation](https://warcraft.wiki.gg/wiki/API_GetFactionInfoByID)
-function GetFactionInfoByID(factionID) end
-
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_GetFailedPVPTalentIDs)
 function GetFailedPVPTalentIDs() end
 
@@ -1901,14 +1866,8 @@ function GetGuildCharterCost() end
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_GetGuildEventInfo)
 function GetGuildEventInfo(index) end
 
----[Documentation](https://warcraft.wiki.gg/wiki/API_GetGuildExpirationTime)
-function GetGuildExpirationTime() end
-
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_GetGuildFactionGroup)
 function GetGuildFactionGroup() end
-
----[Documentation](https://warcraft.wiki.gg/wiki/API_GetGuildFactionInfo)
-function GetGuildFactionInfo() end
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_GetGuildInfo)
 ---@param unit UnitId
@@ -2083,9 +2042,6 @@ function GetInboxText(index) end
 ---@return number weeklyPlayed
 ---@return number weeklyWon
 function GetInspectArenaData(bracketId) end
-
----[Documentation](https://warcraft.wiki.gg/wiki/API_GetInspectGuildInfo)
-function GetInspectGuildInfo(unit) end
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_GetInspectHonorData)
 ---@return number todayHK
@@ -2456,4 +2412,53 @@ function GetLootSlotType(slotIndex) end
 ---@return string guid
 ---@return number quantity
 function GetLootSourceInfo(lootSlot) end
+
+---[Documentation](https://warcraft.wiki.gg/wiki/API_GetLootThreshold)
+---@return number threshold
+function GetLootThreshold() end
+
+---[Documentation](https://warcraft.wiki.gg/wiki/API_GetMacroBody)
+---@param macro number|string
+---@return string? body
+function GetMacroBody(macro) end
+
+---[Documentation](https://warcraft.wiki.gg/wiki/API_GetMacroIcons)
+function GetMacroIcons(table) end
+
+---[Documentation](https://warcraft.wiki.gg/wiki/API_GetMacroIndexByName)
+---@param name string
+---@return number macroSlot
+function GetMacroIndexByName(name) end
+
+---[Documentation](https://warcraft.wiki.gg/wiki/API_GetMacroInfo)
+---@param macro number|string
+---@return string name
+---@return fileID icon
+---@return string body
+function GetMacroInfo(macro) end
+
+---[Documentation](https://warcraft.wiki.gg/wiki/API_GetMacroItem)
+function GetMacroItem() end
+
+---[Documentation](https://warcraft.wiki.gg/wiki/API_GetMacroItemIcons)
+function GetMacroItemIcons(table) end
+
+---[Documentation](https://warcraft.wiki.gg/wiki/API_GetMacroSpell)
+function GetMacroSpell() end
+
+---[Documentation](https://warcraft.wiki.gg/wiki/API_GetMasterLootCandidate)
+---@param slot number
+---@param index number
+---@return string candidate
+function GetMasterLootCandidate(slot, index) end
+
+---[Documentation](https://warcraft.wiki.gg/wiki/API_GetMaxBattlefieldID)
+---@return number maxBattlefieldID
+function GetMaxBattlefieldID() end
+
+---[Documentation](https://warcraft.wiki.gg/wiki/API_GetMaxNumCUFProfiles)
+function GetMaxNumCUFProfiles() end
+
+---[Documentation](https://warcraft.wiki.gg/wiki/API_GetMaxRenderScale)
+function GetMaxRenderScale() end
 
