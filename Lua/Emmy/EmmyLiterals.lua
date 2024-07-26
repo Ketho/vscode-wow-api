@@ -48,6 +48,23 @@ local function SortByValue(tbl)
 	return t
 end
 
+-- pretty dumb way without even using bitwise op
+local function IsBitEnum(tbl, name)
+	local t = Util:tInvert(tbl)
+	if name == "Damageclass" then
+		return true
+	end
+	for i = 1, 3 do
+		if not t[2^i] then
+			return false
+		end
+	end
+	if t[3] or t[5] or t[7] then
+		return false
+	end
+	return true
+end
+
 function EmmyLiterals:GetEnumTable()
 	Util:DownloadAndRun(
 		string.format("Lua/Data/cache/Enum_%s.lua", BRANCH),
@@ -58,8 +75,14 @@ function EmmyLiterals:GetEnumTable()
 	for _, name in pairs(Util:SortTable(Enum)) do
 		table.insert(t, string.format("---@enum Enum.%s", name))
 		table.insert(t, string.format("Enum.%s = {", name))
+		local numberFormat = IsBitEnum(Enum[name], name) and "0x%X" or "%u"
 		for _, enumTbl in pairs(SortByValue(Enum[name])) do
-			table.insert(t, string.format("\t%s = %d,", enumTbl.key, enumTbl.value))
+			if type(enumTbl.value) == "string" then -- 64 bit enum
+				numberFormat = '"%s"'
+			elseif enumTbl.value < 0 then
+				numberFormat = "%d"
+			end
+			table.insert(t, string.format("\t%s = %s,", enumTbl.key, string.format(numberFormat, enumTbl.value)))
 		end
 		table.insert(t, "}\n")
 	end
