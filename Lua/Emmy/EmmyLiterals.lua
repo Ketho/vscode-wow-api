@@ -75,12 +75,10 @@ function EmmyLiterals:GetEnumTable()
 	for _, name in pairs(Util:SortTable(Enum)) do
 		table.insert(t, string.format("---@enum Enum.%s", name))
 		table.insert(t, string.format("Enum.%s = {", name))
-		local numberFormat = IsBitEnum(Enum[name], name) and "0x%X" or "%u"
+		local numberFormat = IsBitEnum(Enum[name], name) and "0x%X" or "%d"
 		for _, enumTbl in pairs(SortByValue(Enum[name])) do
 			if type(enumTbl.value) == "string" then -- 64 bit enum
 				numberFormat = '"%s"'
-			elseif enumTbl.value < 0 then
-				numberFormat = "%d"
 			end
 			table.insert(t, string.format("\t%s = %s,", enumTbl.key, string.format(numberFormat, enumTbl.value)))
 		end
