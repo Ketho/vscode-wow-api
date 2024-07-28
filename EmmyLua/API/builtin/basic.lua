@@ -1,4 +1,6 @@
 ---@meta _
+--- removed: dofile, load, loadfile, module, rawlen, warn
+--- edited: xpcall, getfenv
 
 ---
 ---Command-line arguments of Lua Standalone.
@@ -40,15 +42,6 @@ function assert(v, message, ...) end
 ---@param arg? integer
 ---@return any
 function collectgarbage(opt, arg) end
-
----
----Opens the named file and executes its content as a Lua chunk. When called without arguments, `dofile` executes the content of the standard input (`stdin`). Returns all values returned by the chunk. In case of errors, `dofile` propagates the error to its caller. (That is, `dofile` does not run in protected mode.)
----
----[View documents](command:extension.lua.doc?["en-us/51/manual.html/pdf-dofile"])
----
----@param filename? string
----@return any ...
-function dofile(filename) end
 
 ---
 ---Terminates the last protected function called and returns message as the error object.
@@ -111,29 +104,6 @@ function ipairs(t) end
 ---| "t"  # Only text chunks.
 ---|>"bt" # Both binary and text.
 
----
----Loads a chunk using function `func` to get its pieces. Each call to `func` must return a string that concatenates with previous results.
----
----[View documents](command:extension.lua.doc?["en-us/51/manual.html/pdf-load"])
----
----@param func       function
----@param chunkname? string
----@return function?
----@return string?   error_message
----@nodiscard
-function load(func, chunkname) end
-
----
----Loads a chunk from file `filename` or from the standard input, if no file name is given.
----
----[View documents](command:extension.lua.doc?["en-us/51/manual.html/pdf-loadfile"])
----
----@param filename? string
----@return function?
----@return string?  error_message
----@nodiscard
-function loadfile(filename) end
-
 ---Loads a chunk from the given string.
 ---
 ---[View documents](command:extension.lua.doc?["en-us/51/manual.html/pdf-loadstring"])
@@ -149,14 +119,6 @@ function loadstring(text, chunkname) end
 ---@return userdata
 ---@nodiscard
 function newproxy(proxy) end
-
----Creates a module.
----
----[View documents](command:extension.lua.doc?["en-us/51/manual.html/pdf-module"])
----
----@param name string
----@param ...  any
-function module(name, ...) end
 
 ---
 ---Allows a program to traverse all fields of a table. Its first argument is a table and its second argument is an index in this table. A call to `next` returns the next index of the table and its associated value. When called with `nil` as its second argument, `next` returns an initial index and its associated value. When called with the last index, or with `nil` in an empty table, `next` returns `nil`. If the second argument is absent, then it is interpreted as `nil`. In particular, you can use `next(t)` to check whether a table is empty.
@@ -241,16 +203,6 @@ function rawequal(v1, v2) end
 ---@return any
 ---@nodiscard
 function rawget(table, index) end
-
----
----Returns the length of the object `v`, without invoking the `__len` metamethod.
----
----[View documents](command:extension.lua.doc?["en-us/51/manual.html/pdf-rawlen"])
----
----@param v table|string
----@return integer len
----@nodiscard
-function rawlen(v) end
 
 ---
 ---Sets the real value of `table[index]` to `value`, without using the `__newindex` metavalue. `table` must be a table, `index` any value different from `nil` and `NaN`, and `value` any Lua value.
@@ -378,16 +330,6 @@ function type(v) end
 ---[View documents](command:extension.lua.doc?["en-us/51/manual.html/pdf-_VERSION"])
 ---
 _VERSION = "Lua 5.1"
-
----@version >5.4
----
----Emits a warning with a message composed by the concatenation of all its arguments (which should be strings).
----
----[View documents](command:extension.lua.doc?["en-us/51/manual.html/pdf-warn"])
----
----@param message string
----@param ...     any
-function warn(message, ...) end
 
 ---
 ---Calls function `f` with the given arguments in protected mode with a new message handler.
