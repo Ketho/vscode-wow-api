@@ -32,6 +32,7 @@ end
 
 local sorted = Util:SortTable(nonBlizzDocumented)
 local wiki_tbl = {}
+table.insert(wiki_tbl, "---@meta _\n")
 for _, name in pairs(sorted) do
 	if emmyLua[name] then
 		table.insert(wiki_tbl, string.format("---[Documentation](https://warcraft.wiki.gg/wiki/API_%s)\n", name))
