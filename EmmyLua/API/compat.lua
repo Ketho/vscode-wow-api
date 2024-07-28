@@ -138,14 +138,6 @@ function bit.arshift(a, n) end
 ---@return number
 function bit.mod(a, n) end
 
----[Documentation](https://warcraft.wiki.gg/wiki/API_xpcall)
----@param f function
----@param err function
----@vararg any
----@return boolean status
----@return ...
-function xpcall(f, err, ...) end
-
 -- os.date
 date = os.date
 
