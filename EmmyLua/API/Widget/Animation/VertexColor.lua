@@ -1,11 +1,11 @@
----@meta
+---@meta _
 ---[Documentation](https://warcraft.wiki.gg/wiki/UIOBJECT_VertexColor)
 ---@class VertexColor : Animation
 local VertexColor = {}
 ---@class vertexcolor : VertexColor
 ---@class VERTEXCOLOR : VertexColor
 
----@meta
+---@meta _
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_VertexColor_GetEndColor)
 ---@return ColorMixin color
 function VertexColor:GetEndColor() end

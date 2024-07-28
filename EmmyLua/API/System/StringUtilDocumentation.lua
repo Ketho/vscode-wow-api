@@ -1,4 +1,4 @@
----@meta
+---@meta _
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_StripHyperlinks)
 ---@param text string
 ---@param maintainColor? boolean Default = false

@@ -1,4 +1,4 @@
----@meta
+---@meta _
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_GetDefaultScale)
 ---@return number scale
 function GetDefaultScale() end

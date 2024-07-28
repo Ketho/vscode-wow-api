@@ -19,9 +19,10 @@ function Util:WriteFile(path, text)
 end
 
 -- while in a file with the meta tag it will not show completion context and ignores find references
--- https://github.com/sumneko/lua-language-server/wiki/EmmyLua-Annotations#meta
+-- Giving the name _ will make it unable to be required.
+-- https://luals.github.io/wiki/annotations/#meta
 function Util:WriteFileMeta(path, text)
-	text = "---@meta\n"..text
+	text = "---@meta _\n"..text
 	self:WriteFile(path, text)
 end
 

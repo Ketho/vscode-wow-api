@@ -1,4 +1,4 @@
----@meta
+---@meta _
 ---@class BountyInfo
 ---@field questID number
 ---@field factionID number

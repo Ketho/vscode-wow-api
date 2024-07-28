@@ -1,4 +1,4 @@
----@meta
+---@meta _
 ---@class LibDBIcon-1.0
 ---@field loggedIn boolean
 ---@field callbackRegistered boolean

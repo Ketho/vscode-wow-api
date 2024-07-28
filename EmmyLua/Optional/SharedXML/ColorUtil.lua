@@ -1,4 +1,4 @@
----@meta
+---@meta _
 ---@class ColorMixin_RCC : ColorMixin
 ---@field colorStr string
 

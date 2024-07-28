@@ -1,11 +1,11 @@
----@meta
+---@meta _
 ---[Documentation](https://warcraft.wiki.gg/wiki/UIOBJECT_FontString)
 ---@class FontString : Region
 local FontString = {}
 ---@class fontstring : FontString
 ---@class FONTSTRING : FontString
 
----@meta
+---@meta _
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_FontString_CalculateScreenAreaFromCharacterSpan)
 ---@param leftIndex number
 ---@param rightIndex number

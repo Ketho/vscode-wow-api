@@ -1,4 +1,4 @@
----@meta
+---@meta _
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_GetAddOnCPUUsage)
 ---@param name uiAddon
 ---@return number result

@@ -1,4 +1,4 @@
----@meta
+---@meta _
 ---@class AceGUIButton : AceGUIWidget
 local AceGUIButton = {}
 ---[Documentation](https://www.wowace.com/projects/ace3/pages/ace-gui-3-0-widgets#title-2-1-1)

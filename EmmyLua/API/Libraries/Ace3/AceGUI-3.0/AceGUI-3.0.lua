@@ -1,4 +1,4 @@
----@meta
+---@meta _
 ---@alias AceGUILayoutType
 ---|"Flow"
 ---|"List"
@@ -87,7 +87,7 @@ function AceGUI:Release(widget) end
 ---[Documentation](https://www.wowace.com/projects/ace3/pages/api/ace-gui-3-0#title-13)
 function AceGUI:SetFocus(widget) end
 
----@meta
+---@meta _
 ---[Documentation](https://www.wowace.com/projects/ace3/pages/ace-gui-3-0-widgets)
 ---@class AceGUIWidget
 local AceGUIWidget = {}
@@ -185,7 +185,7 @@ function AceGUIWidget:Fire(name, ...) end
 ---@return boolean
 function AceGUIWidget:IsReleasing() end
 
----@meta
+---@meta _
 ---[Documentation](https://www.wowace.com/projects/ace3/pages/ace-gui-3-0-widgets)
 ---@class AceGUIContainer : AceGUIWidget
 local AceGUIContainer = {}

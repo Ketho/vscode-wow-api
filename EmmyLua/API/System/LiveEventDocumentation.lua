@@ -1,4 +1,4 @@
----@meta
+---@meta _
 C_LiveEvent = {}
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_LiveEvent.OnLiveEventBannerClicked)

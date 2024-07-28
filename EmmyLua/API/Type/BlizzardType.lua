@@ -1,4 +1,4 @@
----@meta
+---@meta _
 ---@alias BigInteger number
 ---@alias BigUInteger number
 ---@alias CalendarEventID number

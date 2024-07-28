@@ -1,4 +1,4 @@
----@meta
+---@meta _
 ---@class SpellChargeInfo
 ---@field currentCharges number
 ---@field maxCharges number

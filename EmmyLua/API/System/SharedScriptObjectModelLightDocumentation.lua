@@ -1,4 +1,4 @@
----@meta
+---@meta _
 ---@class ModelLight
 ---@field omnidirectional boolean? Default = false
 ---@field point Vector3DMixin

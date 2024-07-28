@@ -1,4 +1,4 @@
----@meta
+---@meta _
 ---[Documentation](https://warcraft.wiki.gg/wiki/UIOBJECT_ScriptRegion)
 ---@class ScriptRegionResizing : Object
 local ScriptRegionResizing = {}

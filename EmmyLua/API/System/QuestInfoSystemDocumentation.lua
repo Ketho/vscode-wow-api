@@ -1,4 +1,4 @@
----@meta
+---@meta _
 C_QuestInfoSystem = {}
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_QuestInfoSystem.GetQuestClassification)

@@ -1,4 +1,4 @@
----@meta
+---@meta _
 C_PerksProgram = {}
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_PerksProgram.ClearFrozenPerksVendorItem)

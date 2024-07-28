@@ -1,4 +1,4 @@
----@meta
+---@meta _
 ---@class QueueSpecificInfo
 ---@field queueType string
 ---@field lfgIDs number[]?

@@ -1,4 +1,4 @@
----@meta
+---@meta _
 C_VoiceChat = {}
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_VoiceChat.ActivateChannel)

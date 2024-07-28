@@ -1,4 +1,4 @@
----@meta
+---@meta _
 ---@class GuildTabardInfo
 ---@field backgroundColor ColorMixin
 ---@field borderColor ColorMixin

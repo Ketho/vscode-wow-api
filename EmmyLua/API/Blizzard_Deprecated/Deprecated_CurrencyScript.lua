@@ -1,4 +1,4 @@
----@meta
+---@meta _
 ---@deprecated
 --- Deprecated by [C_CurrencyInfo.GetCoinIcon](https://warcraft.wiki.gg/wiki/API_C_CurrencyInfo.GetCoinIcon)
 ---@param amount WOWMONEY

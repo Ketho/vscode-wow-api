@@ -1,9 +1,9 @@
----@meta
+---@meta _
 ---[Documentation](https://warcraft.wiki.gg/wiki/UIOBJECT_Region)
 ---@class Region : ScriptRegion, ScriptRegionResizing, AnimatableObject
 local Region = {}
 
----@meta
+---@meta _
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_Region_GetAlpha)
 ---@return SingleColorValue alpha
 function Region:GetAlpha() end

@@ -1,4 +1,4 @@
----@meta
+---@meta _
 unpack = table.unpack ---@diagnostic disable-line: deprecated
 tinsert = table.insert
 format = string.format

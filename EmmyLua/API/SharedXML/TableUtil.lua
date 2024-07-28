@@ -1,4 +1,4 @@
----@meta
+---@meta _
 local function ripairsiter(table, index)
 	index = index - 1;
 	if index > 0 then

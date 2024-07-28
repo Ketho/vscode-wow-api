@@ -1,4 +1,4 @@
----@meta
+---@meta _
 ---[FrameXML](https://www.townlong-yak.com/framexml/go/ColorMixin)
 ---@class ColorMixin
 ---@field r number|nil

@@ -1,4 +1,4 @@
----@meta
+---@meta _
 C_UI = {}
 
 ---True if any display attached has a notch. This does not mean the current view intersects the notch.

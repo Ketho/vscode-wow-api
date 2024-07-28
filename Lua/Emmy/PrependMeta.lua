@@ -45,4 +45,4 @@ local function PrependText(path, text)
     end
 end
 
-IterateFiles("EmmyLua/API", PrependText, "---@meta\n")
+IterateFiles("EmmyLua/API", PrependText, "---@meta _\n")

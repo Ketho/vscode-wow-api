@@ -1,4 +1,4 @@
----@meta
+---@meta _
 ---@class QuestRewardCurrencyInfo
 ---@field texture fileID
 ---@field name string

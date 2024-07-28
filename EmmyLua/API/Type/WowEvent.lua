@@ -1,4 +1,4 @@
----@meta
+---@meta _
 ---@alias WowEvent
 ---|"ACCOUNT_CHARACTER_CURRENCY_DATA_RECEIVED"
 ---|"ACCOUNT_MONEY"

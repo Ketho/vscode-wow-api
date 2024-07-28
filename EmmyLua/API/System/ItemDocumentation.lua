@@ -1,4 +1,4 @@
----@meta
+---@meta _
 C_Item = {}
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_Item.ActionBindsItem)

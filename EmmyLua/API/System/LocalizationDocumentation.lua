@@ -1,4 +1,4 @@
----@meta
+---@meta _
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_BreakUpLargeNumbers)
 ---@param largeNumber number
 ---@param natural? boolean Default = false

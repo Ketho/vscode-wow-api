@@ -1,4 +1,4 @@
----@meta
+---@meta _
 ---@class AddPrivateAuraAnchorArgs
 ---@field unitToken string
 ---@field auraIndex number

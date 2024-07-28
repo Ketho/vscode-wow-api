@@ -1,4 +1,4 @@
----@meta
+---@meta _
 ---@class ChatChannelInfo
 ---@field name string
 ---@field shortcut string

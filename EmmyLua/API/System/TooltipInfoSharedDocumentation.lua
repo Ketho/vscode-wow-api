@@ -1,4 +1,4 @@
----@meta
+---@meta _
 ---@class TooltipComparisonLine
 ---@field text string
 ---@field color ColorMixin

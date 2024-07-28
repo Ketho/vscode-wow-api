@@ -1,4 +1,4 @@
----@meta
+---@meta _
 ---@alias ScriptType
 ---|"OnLoad"   # ScriptObject
 ---|"OnUpdate" # ScriptObject

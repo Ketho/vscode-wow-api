@@ -1,11 +1,11 @@
----@meta
+---@meta _
 ---[Documentation](https://warcraft.wiki.gg/wiki/UIOBJECT_Line)
 ---@class Line : TextureBase
 local Line = {}
 ---@class line : Line
 ---@class LINE : Line
 
----@meta
+---@meta _
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_Line_ClearAllPoints)
 function Line:ClearAllPoints() end
 

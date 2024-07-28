@@ -1,4 +1,4 @@
----@meta
+---@meta _
 C_ClassTalents = {}
 
 ---Returns true only if the player has staged changes and can commit their talents in their current state.

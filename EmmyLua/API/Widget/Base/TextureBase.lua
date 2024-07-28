@@ -1,9 +1,9 @@
----@meta
+---@meta _
 ---[Documentation](https://warcraft.wiki.gg/wiki/UIOBJECT_TextureBase)
 ---@class TextureBase : Region
 local TextureBase = {}
 
----@meta
+---@meta _
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_TextureBase_GetAtlas)
 ---@return textureAtlas atlas
 function TextureBase:GetAtlas() end

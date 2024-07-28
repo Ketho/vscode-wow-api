@@ -1,4 +1,4 @@
----@meta
+---@meta _
 Enum = {}
 
 ---@enum Enum.AccountCurrencyTransferResult

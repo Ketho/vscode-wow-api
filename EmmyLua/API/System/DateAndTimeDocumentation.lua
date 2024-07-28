@@ -1,4 +1,4 @@
----@meta
+---@meta _
 C_DateAndTime = {}
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_DateAndTime.AdjustTimeByDays)

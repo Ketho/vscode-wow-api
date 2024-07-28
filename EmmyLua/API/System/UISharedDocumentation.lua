@@ -1,4 +1,4 @@
----@meta
+---@meta _
 ---@class AnchorBinding
 ---@field point FramePoint
 ---@field relativeTo ScriptRegion

@@ -1,4 +1,4 @@
----@meta
+---@meta _
 ---@class CharacterAlternateFormData
 ---@field raceID number
 ---@field name string

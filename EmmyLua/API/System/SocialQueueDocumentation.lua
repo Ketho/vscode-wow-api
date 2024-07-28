@@ -1,4 +1,4 @@
----@meta
+---@meta _
 C_SocialQueue = {}
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_SocialQueue.GetAllGroups)

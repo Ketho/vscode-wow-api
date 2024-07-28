@@ -1,4 +1,4 @@
----@meta
+---@meta _
 ---[FrameXML](https://www.townlong-yak.com/framexml/go/ExtractHyperlinkString)
 ---@param linkString string
 ---@return boolean containsHyperlink

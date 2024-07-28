@@ -1,4 +1,4 @@
----@meta
+---@meta _
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_AbandonSkill)
 ---@param skillLineID number
 function AbandonSkill(skillLineID) end

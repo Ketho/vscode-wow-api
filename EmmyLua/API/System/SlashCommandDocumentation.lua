@@ -1,4 +1,4 @@
----@meta
+---@meta _
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_AreDangerousScriptsAllowed)
 ---@return boolean allowed
 function AreDangerousScriptsAllowed() end

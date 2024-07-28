@@ -1,4 +1,4 @@
----@meta
+---@meta _
 AuraUtil = {}
 
 ---[FrameXML](https://github.com/Gethe/wow-ui-source/blob/live/Interface/FrameXML/AuraUtil.lua#L32)

@@ -1,4 +1,4 @@
----@meta
+---@meta _
 ---@class AceConsole-3.0
 ---@field embeds table ---table containing objects AceConsole is embedded in.
 ---@field commands table ---table containing commands registered

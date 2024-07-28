@@ -1,4 +1,4 @@
----@meta
+---@meta _
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_GetCursorDelta)
 ---@return number deltaX
 ---@return number deltaY

@@ -1,4 +1,4 @@
----@meta
+---@meta _
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_AssistUnit)
 ---@param name? string Default = 
 ---@param exactMatch? boolean Default = false

@@ -1,4 +1,4 @@
----@meta
+---@meta _
 Item = {}
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/ItemMixin)

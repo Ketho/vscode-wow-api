@@ -1,4 +1,4 @@
----@meta
+---@meta _
 PowerBarColor = {};
 PowerBarColor["MANA"] = { r = 0.00, g = 0.00, b = 1.00 };
 PowerBarColor["RAGE"] = { r = 1.00, g = 0.00, b = 0.00, fullPowerAnim=true };

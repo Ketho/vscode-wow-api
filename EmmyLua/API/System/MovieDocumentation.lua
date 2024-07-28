@@ -1,4 +1,4 @@
----@meta
+---@meta _
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_CancelPreloadingMovie)
 ---@param movieId number
 function CancelPreloadingMovie(movieId) end

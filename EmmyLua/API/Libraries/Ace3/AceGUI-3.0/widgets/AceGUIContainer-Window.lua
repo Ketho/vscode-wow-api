@@ -1,4 +1,4 @@
----@meta
+---@meta _
 ---@class AceGUIWindow
 local AceGUIWindow = {}
 ---@param title string

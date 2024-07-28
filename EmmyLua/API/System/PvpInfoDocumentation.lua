@@ -1,4 +1,4 @@
----@meta
+---@meta _
 C_PvP = {}
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_PvP.ArePvpTalentsUnlocked)

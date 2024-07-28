@@ -1,4 +1,4 @@
----@meta
+---@meta _
 ---@class AppearanceSourceInfo
 ---@field visualID number
 ---@field sourceID number

@@ -1,11 +1,11 @@
----@meta
+---@meta _
 ---[Documentation](https://warcraft.wiki.gg/wiki/UIOBJECT_Alpha)
 ---@class Alpha : Animation
 local Alpha = {}
 ---@class alpha : Alpha
 ---@class ALPHA : Alpha
 
----@meta
+---@meta _
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_Alpha_GetFromAlpha)
 ---@return number normalizedAlpha
 function Alpha:GetFromAlpha() end

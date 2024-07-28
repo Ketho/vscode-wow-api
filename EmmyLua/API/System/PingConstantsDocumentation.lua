@@ -1,4 +1,4 @@
----@meta
+---@meta _
 ---@class ContextualWorldPingResult
 ---@field contextualPingType Enum.PingSubjectType?
 ---@field result Enum.PingResult

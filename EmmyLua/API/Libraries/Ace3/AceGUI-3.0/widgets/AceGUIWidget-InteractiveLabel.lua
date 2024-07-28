@@ -1,4 +1,4 @@
----@meta
+---@meta _
 ---@class AceGUIInteractiveLabel : AceGUIWidget
 local AceGUIInteractiveLabel = {}
 ---[Documentation](https://www.wowace.com/projects/ace3/pages/ace-gui-3-0-widgets#title-2-8-1)

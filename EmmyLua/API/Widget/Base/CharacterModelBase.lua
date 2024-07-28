@@ -1,4 +1,4 @@
----@meta
+---@meta _
 ---[Documentation](https://warcraft.wiki.gg/wiki/UIOBJECT_PlayerModel)
 ---@class CharacterModelBase : Model
 local CharacterModelBase = {}

@@ -1,4 +1,4 @@
----@meta
+---@meta _
 C_GameRules = {}
 
 ---Returns the numeric value specified in the Game Rule, multiplied by 0.1 for every decimal place requested

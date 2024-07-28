@@ -1,4 +1,4 @@
----@meta
+---@meta _
 ---@class AceGUIDropdown : AceGUIWidget
 local AceGUIDropdown = {}
 ---[Documentation](https://www.wowace.com/projects/ace3/pages/ace-gui-3-0-widgets#title-2-4-1)

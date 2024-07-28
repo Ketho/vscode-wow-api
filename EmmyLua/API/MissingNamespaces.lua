@@ -1,4 +1,4 @@
----@meta
+---@meta _
 -- these namespaces didnt document any functions
 C_AdventureJournal = {} -- AdventureJournalDocumentation.lua
 C_BlackMarket = {} -- BlackMarketInfoDocumentation.lua

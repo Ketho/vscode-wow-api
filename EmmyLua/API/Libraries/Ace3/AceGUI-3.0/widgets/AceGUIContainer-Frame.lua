@@ -1,4 +1,4 @@
----@meta
+---@meta _
 ---@class AceGUIFrame : AceGUIContainer
 local AceGUIFrame = {}
 ---[Documentation](https://www.wowace.com/projects/ace3/pages/ace-gui-3-0-widgets#title-4-2-1)

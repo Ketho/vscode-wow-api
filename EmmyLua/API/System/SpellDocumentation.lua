@@ -1,4 +1,4 @@
----@meta
+---@meta _
 C_Spell = {}
 
 ---Returns true if the spell exists, regardless of whether the player has learned it

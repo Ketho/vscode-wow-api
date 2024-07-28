@@ -1,4 +1,4 @@
----@meta
+---@meta _
 -- does not include pet and target suffices and spectated<T><N>
 -- but any string is accepted anyway
 

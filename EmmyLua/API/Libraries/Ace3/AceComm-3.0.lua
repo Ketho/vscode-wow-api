@@ -1,4 +1,4 @@
----@meta
+---@meta _
 ---[Documentation](https://www.wowace.com/projects/ace3/pages/api/ace-comm-3-0)
 ---@class AceComm-3.0
 local AceComm = {}

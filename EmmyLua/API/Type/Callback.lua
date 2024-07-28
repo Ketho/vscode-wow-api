@@ -1,4 +1,4 @@
----@meta
+---@meta _
 ---@alias TimerCallback fun()
 ---@alias TickerCallback fun(self: cbObject)
 ---@alias CraftingOrderRequestCallback fun(result: Enum.CraftingOrderResult, orderType: Enum.CraftingOrderType, displayBuckets: boolean, expectMoreRows: boolean, offset: number, isSorted: boolean)

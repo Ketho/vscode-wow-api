@@ -1,4 +1,4 @@
----@meta
+---@meta _
 ---[Documentation](https://warcraft.wiki.gg/wiki/UIOBJECT_UnitPositionFrame)
 ---@class UnitPositionFrame : Frame
 local UnitPositionFrame = {}

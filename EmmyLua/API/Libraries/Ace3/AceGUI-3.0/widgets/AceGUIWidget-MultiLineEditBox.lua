@@ -1,4 +1,4 @@
----@meta
+---@meta _
 ---@class AceGUIMultiLineEditBox : AceGUIWidget
 local AceGUIMultiLineEditBox = {}
 ---[Documentation](https://www.wowace.com/projects/ace3/pages/ace-gui-3-0-widgets#title-2-11-1)

@@ -1,7 +1,7 @@
 -- ----------------------------------------------------------------------------
 -- LibDialog-1.0
 -- ----------------------------------------------------------------------------
----@meta
+---@meta _
 ---@class LibDialog-1.0
 local lib = {}
 
@@ -33,7 +33,7 @@ end
 -- ----------------------------------------------------------------------------
 -- LibDialog.Dialog
 -- ----------------------------------------------------------------------------
----@meta
+---@meta _
 ---@class LibDialog.Dialog
 local dialog = {}
 
@@ -48,7 +48,7 @@ end
 -- ----------------------------------------------------------------------------
 -- LibDialog.Delegate
 -- ----------------------------------------------------------------------------
----@meta
+---@meta _
 ---@class LibDialog.Delegate
 ---@field buttons LibDialog.Delegate.Button[] List of Buttons to define in the Dialog.
 ---@field cancels_on_spawn string[] When the Dialog is spawned, it will cancel all other Dialogs named in the list.
@@ -98,7 +98,7 @@ end
 -- ----------------------------------------------------------------------------
 -- LibDialog.Delegate.Button
 -- ----------------------------------------------------------------------------
----@meta
+---@meta _
 ---@class LibDialog.Delegate.Button: Button
 ---@field text string The text displayed on the Button. Required.
 local button = {}
@@ -112,7 +112,7 @@ end
 -- ----------------------------------------------------------------------------
 -- LibDialog.Delegate.CheckBox
 -- ----------------------------------------------------------------------------
----@meta
+---@meta _
 ---@class LibDialog.Delegate.CheckBox: CheckButton
 ---@field label string The CheckBox label. Required.
 local checkBox = {}
@@ -126,7 +126,7 @@ end
 -- ----------------------------------------------------------------------------
 -- LibDialog.Delegate.EditBox
 -- ----------------------------------------------------------------------------
----@meta
+---@meta _
 ---@class LibDialog.Delegate.EditBox: EditBox
 ---@field auto_focus boolean Sets whether the EditBox automatically acquires keyboard input focus.
 ---@field label string The EditBox label.

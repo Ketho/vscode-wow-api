@@ -1,4 +1,4 @@
----@meta
+---@meta _
 SmoothStatusBarMixin = {}
 function SmoothStatusBarMixin:ResetSmoothedValue(value) end
 function SmoothStatusBarMixin:SetSmoothedValue(value) end

@@ -1,4 +1,4 @@
----@meta
+---@meta _
 ---@class ProfTabHighlight
 ---@field description string
 

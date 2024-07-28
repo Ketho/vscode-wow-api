@@ -1,4 +1,4 @@
----@meta
+---@meta _
 C_VignetteInfo = {}
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_VignetteInfo.FindBestUniqueVignette)

@@ -1,4 +1,4 @@
----@meta
+---@meta _
 C_TaxiMap = {}
 
 ---Returns information on taxi nodes at the current flight master.

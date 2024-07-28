@@ -1,4 +1,4 @@
----@meta
+---@meta _
 C_PartyPose = {}
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_PartyPose.ExtraAction)
