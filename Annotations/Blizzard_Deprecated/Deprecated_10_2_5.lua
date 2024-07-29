@@ -1,4 +1,4 @@
----@meta
+---@meta _
 ---@deprecated
 --- Deprecated by [LocalizedClassList](https://warcraft.wiki.gg/wiki/API_LocalizedClassList)
 ---@param tbl table

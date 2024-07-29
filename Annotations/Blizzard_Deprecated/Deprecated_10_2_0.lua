@@ -1,4 +1,4 @@
----@meta
+---@meta _
 ---@deprecated
 --- Deprecated by [C_CVar.GetCVarInfo](https://warcraft.wiki.gg/wiki/API_C_CVar.GetCVarInfo)
 ---@param name string

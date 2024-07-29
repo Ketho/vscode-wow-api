@@ -1,4 +1,4 @@
----@meta
+---@meta _
 ---@deprecated
 --- Deprecated by [C_GuildInfo.Invite](https://warcraft.wiki.gg/wiki/API_C_GuildInfo.Invite)
 ---@param name string

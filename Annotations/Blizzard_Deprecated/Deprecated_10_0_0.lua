@@ -1,4 +1,4 @@
----@meta
+---@meta _
 ---@deprecated
 --- Deprecated by [C_PaperDollInfo.CanCursorCanGoInSlot](https://warcraft.wiki.gg/wiki/API_C_PaperDollInfo.CanCursorCanGoInSlot)
 ---@param slotIndex number
