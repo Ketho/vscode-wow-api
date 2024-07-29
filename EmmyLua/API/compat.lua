@@ -27,12 +27,14 @@ function table.wipe(tbl) end
 ---@return string
 function string.trim(str, chars) end
 
+---[Documentation](https://warcraft.wiki.gg/wiki/API_strsplit)
 ---@param delimiter string
 ---@param str string
 ---@param pieces? number
 ---@return ...
 function string.split(delimiter, str, pieces) end
 
+---[Documentation](https://warcraft.wiki.gg/index.php?title=API_strsplittable)
 ---@param delimiter string
 ---@param str string
 ---@param pieces? number
@@ -46,7 +48,8 @@ function strsplittable(delimiter, str, pieces) end
 ---@return string
 function string.join(delim, str1, ...) end
 
----[Documentation](https://warcraft.wiki.gg/wiki/API_difftime)
+---Returns the difference, in seconds, from time `t1` to time `t2`.
+---[View documents](command:extension.lua.doc?["en-us/51/manual.html/pdf-os.difftime"]), [Wiki](https://warcraft.wiki.gg/wiki/API_difftime)
 ---@param time1 number
 ---@param time2 number
 ---@return number
@@ -137,12 +140,6 @@ function bit.arshift(a, n) end
 ---@param n number
 ---@return number
 function bit.mod(a, n) end
-
--- os.date
-date = os.date
-
--- os.time
-time = os.time
 
 -- Table library
 local tab = table
