@@ -1,7 +1,6 @@
 out
 node_modules
 .vscode-test/
-.vscode/settings.json
 *.vsix
 *.xml
 Lua/Data
