@@ -138,3 +138,7 @@
 ---@field minCraftingQualityID number?
 ---@field orderTarget string?
 ---@field recraftItem WOWGUID?
+
+---@alias CraftingOrderRequestCallback fun(result: Enum.CraftingOrderResult, orderType: Enum.CraftingOrderType, displayBuckets: boolean, expectMoreRows: boolean, offset: number, isSorted: boolean)
+
+---@alias CraftingOrderRequestMyOrdersCallback fun(result: Enum.CraftingOrderResult, expectMoreRows: boolean, offset: number, isSorted: boolean)

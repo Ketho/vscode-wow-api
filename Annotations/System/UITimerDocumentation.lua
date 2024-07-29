@@ -10,11 +10,15 @@ function C_Timer.After(seconds, callback) end
 ---@param seconds number
 ---@param callback TickerCallback
 ---@param iterations? number
----@return cbObject cbObject
+---@return TickerCallback cbObject
 function C_Timer.NewTicker(seconds, callback, iterations) end
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_Timer.NewTimer)
 ---@param seconds number
 ---@param callback TickerCallback
----@return cbObject cbObject
+---@return TickerCallback cbObject
 function C_Timer.NewTimer(seconds, callback) end
+
+---@alias TickerCallback fun(cb: TimerCallback)
+
+---@alias TimerCallback fun()

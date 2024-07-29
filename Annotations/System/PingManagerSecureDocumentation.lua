@@ -64,3 +64,19 @@ function C_PingSecure.SetSendMacroPingCallback(cb) end
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_PingSecure.SetTogglePingListenerCallback)
 ---@param cb TogglePingListenerCallback
 function C_PingSecure.SetTogglePingListenerCallback(cb) end
+
+---@alias PendingPingOffScreenCallback fun()
+
+---@alias PingCooldownStartedCallback fun(info: PingCooldownInfo)
+
+---@alias PingPinFrameAddedCallback fun(region: ScriptRegion, uiTextureKit: textureKit, isWorldPoint: boolean)
+
+---@alias PingPinFrameRemovedCallback fun(region: ScriptRegion)
+
+---@alias PingPinFrameScreenClampStateUpdatedCallback fun(region: ScriptRegion, state: boolean)
+
+---@alias PingRadialWheelCreatedCallback fun(region: ScriptRegion)
+
+---@alias SendMacroPingCallback fun(type?: Enum.PingSubjectType, targetToken?: string)
+
+---@alias TogglePingListenerCallback fun(down: boolean)

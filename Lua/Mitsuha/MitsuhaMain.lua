@@ -34,6 +34,8 @@ function Mitsuha:GetSystem(system)
 		for _, apiTable in pairs(system.Tables) do
 			if apiTable.Type == "Structure" then
 				table.insert(tbl, self:GetTable(apiTable))
+			elseif apiTable.Type == "CallbackType" then
+				table.insert(tbl, self:GetCallbackType(apiTable))
 			end
 		end
 	end
@@ -110,6 +112,25 @@ function Mitsuha:GetField(annotation, apiTable)
 		str = str.." Default = "..tostring(apiTable.Default)
 	end
 	return str
+end
+
+local fs_callback = "---@alias %s fun(%s)"
+local fs_callback_param = "%s: %s"
+
+function Mitsuha:GetCallbackType(apiTable)
+	local tbl = {}
+	if apiTable.Arguments then
+		for _, param in pairs(apiTable.Arguments) do
+			local param_name = param.Name
+			local param_type = GetType(param.Type)
+			if param.Nilable or param.Default ~= nil then
+				param_name = param_name.."?"
+			end
+			table.insert(tbl, fs_callback_param:format(param_name, param_type))
+		end
+	end
+	local params = table.concat(tbl, ", ")
+	return fs_callback:format(apiTable.Name, params)
 end
 
 return Mitsuha
