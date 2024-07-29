@@ -1,4 +1,4 @@
----@meta _
+---@meta
 ---@deprecated
 --- Deprecated by [C_Item.GetItemQualityColor](https://warcraft.wiki.gg/wiki/API_C_Item.GetItemQualityColor)
 ---@param quality number

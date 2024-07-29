@@ -1,4 +1,4 @@
----@meta _
+---@meta
 ---@deprecated
 --- Deprecated by [C_Spell.TargetSpellReplacesBonusTree](https://warcraft.wiki.gg/wiki/API_C_Spell.TargetSpellReplacesBonusTree)
 ---@return boolean result
