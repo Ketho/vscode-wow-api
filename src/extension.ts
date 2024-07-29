@@ -48,9 +48,7 @@ function isHoverString(document: vscode.TextDocument, range: vscode.Range) {
 export async function activate(context: vscode.ExtensionContext) {
 	console.log("loaded ketho.wow-api", context.extension.id);
 
-	await setExternalLibrary("API", true);
-	const loadFrameXML = vscode.workspace.getConfiguration("wowAPI").get("emmyLua.loadFrameXML");
-	await setExternalLibrary("Optional", loadFrameXML ? true : false);
+	await setExternalLibrary(true);
 
 	const completion = vscode.languages.registerCompletionItemProvider(
 		"lua",
@@ -111,11 +109,7 @@ export async function activate(context: vscode.ExtensionContext) {
 	context.subscriptions.push(completion, hover);
 
 	vscode.workspace.onDidChangeConfiguration((event: vscode.ConfigurationChangeEvent) => {
-		if (event.affectsConfiguration("wowAPI.emmyLua.loadFrameXML")) {
-			const loadFrameXML = vscode.workspace.getConfiguration("wowAPI").get("emmyLua.loadFrameXML");
-			setExternalLibrary("Optional", loadFrameXML ? true : false);
-		}
-		else if (event.affectsConfiguration("wowAPI.locale")) {
+		if (event.affectsConfiguration("wowAPI.locale")) {
 			const wowapi = vscode.workspace.getConfiguration("wowAPI");
 			globalstrings.data = require("./data/globalstring/"+wowapi.get("locale")).data;
 		}
@@ -150,13 +144,11 @@ export async function activate(context: vscode.ExtensionContext) {
 
 export async function deactivate() {
 	console.log("deactivated ketho.wow-api");
-
-	await setExternalLibrary("API", false);
-	await setExternalLibrary("Optional", false);
+	await setExternalLibrary(false);
 }
 
 // Sets external library and then returns a Thenable to the consumer.
-export function setExternalLibrary(folder: string, enable: boolean): Thenable<void> {
+export function setExternalLibrary(enable: boolean): Thenable<void> {
 	// console.log("setExternalLibrary", folder, enable);
 	const config = vscode.workspace.getConfiguration("Lua");
 	const library: string[] = config.get("workspace.library")!;
@@ -164,7 +156,7 @@ export function setExternalLibrary(folder: string, enable: boolean): Thenable<vo
 	const extensionId = "ketho.wow-api";
 	const extensionPath = vscode.extensions.getExtension(extensionId)!.extensionPath;
 	// Use path.join to ensure the proper path seperators (\ for windows, / for anything else) are used.
-	const folderPath = path.join(extensionPath, "EmmyLua", folder);
+	const folderPath = path.join(extensionPath, "Annotations");
 
 	// remove any older versions of our path e.g. "publisher.name-0.0.1"
 	for (let i = library.length-1; i >= 0; i--) {
