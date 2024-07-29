@@ -1,5 +1,5 @@
 local Util = require("Lua.Util.Util")
-local Emmy = require("Lua.Emmy.Emmy")
+local Mitsuha = require("Lua.Mitsuha.MitsuhaMain")
 local Path = require "path"
 
 -- this place is a mess
@@ -39,7 +39,7 @@ for _, name in pairs(sorted) do
 		table.insert(wiki_tbl, string.format("---[Documentation](https://warcraft.wiki.gg/wiki/API_%s)\n", name))
 		table.insert(wiki_tbl, emmyLua[name].."\n\n")
 	elseif convertedApi[name] then
-		table.insert(wiki_tbl, Emmy:GetFunction(convertedApi[name]).."\n\n")
+		table.insert(wiki_tbl, Mitsuha:GetFunction(convertedApi[name]).."\n\n")
 		countValid = countValid + 1
 	else
 		table.insert(wiki_tbl, fs:format(name, name, wowpedia_arguments[name] or ""))

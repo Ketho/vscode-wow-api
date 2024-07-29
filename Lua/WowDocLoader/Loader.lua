@@ -1,7 +1,7 @@
 local lfs = require "lfs"
 local Path = require "path"
 local Util = require("Lua.Util.Util")
-local Emmy = require("Lua.Emmy.Emmy")
+local Mitsuha = require("Lua.Mitsuha.MitsuhaMain")
 local patches = require("Lua.WowDocLoader.Patches")
 require("Lua.WowDocLoader.Fixes")
 local m = {}
@@ -36,7 +36,7 @@ local function LoadAddon(path, name)
 				if patch then
 					patches:ApplyPatch(docInfo, patch)
 				end
-				local text = Emmy:GetSystem(docInfo)
+				local text = Mitsuha:GetSystem(docInfo)
 				if #text > 0 then -- try not to create empty files as they take up the maxPreload limit
 					if docInfo.Type == "System" or not docInfo.Type then
 						Util:WriteFileMeta(Path.join("Annotations", "System", line), text.."\n")

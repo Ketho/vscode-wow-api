@@ -34,14 +34,13 @@ Enum.LFGRoleMeta = {NumValue = 3}
 local WowDocLoader_path = Path.join("Lua", "WowDocLoader")
 local WowDocLoader = require(Path.join(WowDocLoader_path, "WowDocLoader"))
 WowDocLoader:main(WowDocLoader_path)
--- require("Lua", "Tests", "Emmy"):Run()
 
 -- annotations
-local EmmyLiterals = require("Lua.Emmy.EmmyLiterals")
+local MitsuhaLiterals = require("Lua.Mitsuha.MitsuhaLiterals")
 local path_api = "Annotations"
-Util:WriteFileMeta(Path.join(path_api, "Type", "WowEvent.lua"), EmmyLiterals:GetEventLiterals())
-Util:WriteFileMeta(Path.join(path_api, "Type", "CVar.lua"), EmmyLiterals:GetCVarLiterals())
-Util:WriteFileMeta(Path.join(path_api, "Enum.lua"), EmmyLiterals:GetEnumTable())
+Util:WriteFileMeta(Path.join(path_api, "Type", "WowEvent.lua"), MitsuhaLiterals:GetEventLiterals())
+Util:WriteFileMeta(Path.join(path_api, "Type", "CVar.lua"), MitsuhaLiterals:GetCVarLiterals())
+Util:WriteFileMeta(Path.join(path_api, "Enum.lua"), MitsuhaLiterals:GetEnumTable())
 
 -- typescript data
 local path_tsdata = Path.join("src", "data")
@@ -56,6 +55,6 @@ require(Path.join("Lua", "ToTypeScript", "Flavor")) -- todo: refactor
 require("Lua.WikiParser.WikiParser")
 
 -- add @meta to annotations
-require("Lua.Emmy.PrependMeta")
+require("Lua.Mitsuha.PrependMeta")
 
 print("done")

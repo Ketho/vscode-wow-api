@@ -1,7 +1,7 @@
 local Util = require("Lua.Util.Util")
-local BlizzWidget = require("Lua.Emmy.BlizzWidget")
+local BlizzWidget = require("Lua.Mitsuha.BlizzWidget")
 
-local Emmy = {}
+local Mitsuha = {}
 
 local types = {
 	bool = "boolean",
@@ -19,7 +19,7 @@ local function GetType(paramType)
 	end
 end
 
-function Emmy:GetSystem(system)
+function Mitsuha:GetSystem(system)
 	local tbl = {}
 	local widgetName = system.Type == "ScriptObject" and BlizzWidget[system.Name]
 	if system.Functions and #system.Functions>0 then
@@ -43,7 +43,7 @@ end
 
 local fs_doc = "---[Documentation](https://warcraft.wiki.gg/wiki/%s)"
 
-function Emmy:GetFunction(func, widgetName)
+function Mitsuha:GetFunction(func, widgetName)
 	local tbl = {}
 	local docLine = {}
 	local funcLine = {}
@@ -75,7 +75,7 @@ function Emmy:GetFunction(func, widgetName)
 	return table.concat(tbl, "\n")
 end
 
-function Emmy:GetTable(apiTable)
+function Mitsuha:GetTable(apiTable)
 	local tbl = {}
 	table.insert(tbl, string.format("---@class %s", apiTable.Name))
 	for _, field in pairs(apiTable.Fields) do
@@ -86,7 +86,7 @@ end
 
 local fs_field = "---@%s %s %s"
 
-function Emmy:GetField(annotation, apiTable)
+function Mitsuha:GetField(annotation, apiTable)
 	local str, paramType
 	if apiTable.Mixin then
 		paramType = apiTable.Mixin
@@ -112,4 +112,4 @@ function Emmy:GetField(annotation, apiTable)
 	return str
 end
 
-return Emmy
+return Mitsuha

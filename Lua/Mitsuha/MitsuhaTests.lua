@@ -1,5 +1,5 @@
 local Util = require("Lua.Util.Util")
-local Emmy = require("Lua.Emmy.Emmy")
+local Mitsuha = require("Lua.Mitsuha.MitsuhaMain")
 
 local Tests = {}
 
@@ -7,7 +7,7 @@ local function TestFunction(name)
 	for _, func in ipairs(APIDocumentation.functions) do
 		local fullName = Util:GetFullName(func)
 		if fullName == name then
-			print(Emmy:GetFunction(func))
+			print(Mitsuha:GetFunction(func))
 			break
 		end
 	end
