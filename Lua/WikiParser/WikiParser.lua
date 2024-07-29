@@ -1,11 +1,12 @@
 local Util = require("Lua.Util.Util")
 local Emmy = require("Lua.Emmy.Emmy")
+local Path = require "path"
 
 -- this place is a mess
 local wowpedia_arguments = require("Lua.WikiParser.WikiText.FunctionArgument")
 local nonBlizzDocumented = require("Lua.WikiParser.WikiText.NonBlizzardDocumented")[1]
 
-local PATH = "EmmyLua/API/wiki.lua"
+local PATH = Path.join("Annotations", "wiki.lua")
 
 local parserData = require("Lua.WikiParser.XmlParser")
 local validated, nonvalidated, emmyLua
@@ -52,10 +53,12 @@ end
 WriteToFile(table.concat(wiki_tbl))
 
 local total = countValid+countNonValid+countNonDoc
+print("total", total)
 print("valid api", countValid, string.format("%.2f%%", 100*countValid/total))
 print("invalid api", countNonValid, string.format("%.2f%%", 100*countNonValid/total))
 print("not documented", countNonDoc, string.format("%.2f%%", 100*countNonDoc/total))
 
--- valid api       763     27.51%
--- not valid       533     19.21%
--- not documented  1478    53.28%
+-- total			2023
+-- valid api		649     32.08%
+-- invalid api		237     11.72%
+-- not documented	1137    56.20%

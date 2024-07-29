@@ -36,13 +36,14 @@ local function WriteFile(path, text)
 end
 
 --- remove the original file and write a new file
-local function PrependText(path, text)
+local function PrependText(path)
     local contents = ReadFile(path)
-    if not contents:find(text) then
+	-- dont overwrite files with that have a named meta
+    if not contents:find("---@meta") then
 		print("rewriting", path)
         os.remove(path)
-        WriteFile(path, text..contents)
+        WriteFile(path, "---@meta _\n"..contents)
     end
 end
 
-IterateFiles("EmmyLua/API", PrependText, "---@meta _\n")
+IterateFiles("Annotations", PrependText)

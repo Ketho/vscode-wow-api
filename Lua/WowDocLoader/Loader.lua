@@ -39,7 +39,7 @@ local function LoadAddon(path, name)
 				local text = Emmy:GetSystem(docInfo)
 				if #text > 0 then -- try not to create empty files as they take up the maxPreload limit
 					if docInfo.Type == "System" or not docInfo.Type then
-						Util:WriteFileMeta(Path.join("EmmyLua", "API", "System", line), text.."\n")
+						Util:WriteFileMeta(Path.join("Annotations", "System", line), text.."\n")
 					elseif docInfo.Type == "ScriptObject" then
 						Util:WriteFileMeta(Path.join("Lua", "Data", "widget", line), text.."\n")
 					end
@@ -52,7 +52,7 @@ local function LoadAddon(path, name)
 end
 
 function m:main()
-	Util:MakeDir(Path.join("EmmyLua", "API", "System"))
+	Util:MakeDir(Path.join("Annotations", "System"))
 	require(Path.join(WowDocLoader_Path, "Compat"))
 	LoadAddon(Path.join(WowDocLoader_Path, API_DOC), API_DOC)
 

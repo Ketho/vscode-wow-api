@@ -36,9 +36,9 @@ local WowDocLoader = require(Path.join(WowDocLoader_path, "WowDocLoader"))
 WowDocLoader:main(WowDocLoader_path)
 -- require("Lua", "Tests", "Emmy"):Run()
 
--- emmylua data
+-- annotations
 local EmmyLiterals = require("Lua.Emmy.EmmyLiterals")
-local path_api = Path.join("EmmyLua", "API")
+local path_api = "Annotations"
 Util:WriteFileMeta(Path.join(path_api, "Type", "WowEvent.lua"), EmmyLiterals:GetEventLiterals())
 Util:WriteFileMeta(Path.join(path_api, "Type", "CVar.lua"), EmmyLiterals:GetCVarLiterals())
 Util:WriteFileMeta(Path.join(path_api, "Enum.lua"), EmmyLiterals:GetEnumTable())
@@ -55,7 +55,7 @@ require(Path.join("Lua", "ToTypeScript", "Flavor")) -- todo: refactor
 -- parse the wiki
 require("Lua.WikiParser.WikiParser")
 
--- add @meta to emmylua files
+-- add @meta to annotations
 require("Lua.Emmy.PrependMeta")
 
 print("done")

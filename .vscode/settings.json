@@ -12,7 +12,6 @@
         "utf8": "disable",
     },
     "Lua.diagnostics.disable": [
-        "deprecated",
         "lowercase-global",
         "need-check-nil"
     ],

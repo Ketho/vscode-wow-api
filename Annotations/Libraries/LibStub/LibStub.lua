@@ -19,7 +19,7 @@ function LibStub:GetLibrary(major, silent) end
 ---@return table invariant
 function LibStub:IterateLibraries() end
 
--- not sure how to annotate this in emmylua
+-- not sure how to annotate this
 --setmetatable(LibStub, { __call = LibStub.GetLibrary })
 
 ---@generic T
