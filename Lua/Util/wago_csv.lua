@@ -127,6 +127,7 @@ end
 
 function parser:PrintCSV(iter)
 	for line in iter:lines() do
+		---@diagnostic disable-next-line: deprecated
 		print(table.unpack(line))
 	end
 end
