@@ -62,4 +62,4 @@ function C_Texture.SetTitleIconTexture(texture, titleID, version) end
 ---@field filename string?
 ---@field sliceData UITextureSliceData?
 
----@alias GetTitleIconTextureCallback fun(success: boolean, texture: fileID)
+---@alias GetTitleIconTextureCallback FunctionContainer|fun(success: boolean, texture: fileID)

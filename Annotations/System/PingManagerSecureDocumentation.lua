@@ -65,18 +65,18 @@ function C_PingSecure.SetSendMacroPingCallback(cb) end
 ---@param cb TogglePingListenerCallback
 function C_PingSecure.SetTogglePingListenerCallback(cb) end
 
----@alias PendingPingOffScreenCallback fun()
+---@alias PendingPingOffScreenCallback FunctionContainer|fun()
 
----@alias PingCooldownStartedCallback fun(info: PingCooldownInfo)
+---@alias PingCooldownStartedCallback FunctionContainer|fun(info: PingCooldownInfo)
 
----@alias PingPinFrameAddedCallback fun(region: ScriptRegion, uiTextureKit: textureKit, isWorldPoint: boolean)
+---@alias PingPinFrameAddedCallback FunctionContainer|fun(region: ScriptRegion, uiTextureKit: textureKit, isWorldPoint: boolean)
 
----@alias PingPinFrameRemovedCallback fun(region: ScriptRegion)
+---@alias PingPinFrameRemovedCallback FunctionContainer|fun(region: ScriptRegion)
 
----@alias PingPinFrameScreenClampStateUpdatedCallback fun(region: ScriptRegion, state: boolean)
+---@alias PingPinFrameScreenClampStateUpdatedCallback FunctionContainer|fun(region: ScriptRegion, state: boolean)
 
----@alias PingRadialWheelCreatedCallback fun(region: ScriptRegion)
+---@alias PingRadialWheelCreatedCallback FunctionContainer|fun(region: ScriptRegion)
 
----@alias SendMacroPingCallback fun(type?: Enum.PingSubjectType, targetToken?: string)
+---@alias SendMacroPingCallback FunctionContainer|fun(type?: Enum.PingSubjectType, targetToken?: string)
 
----@alias TogglePingListenerCallback fun(down: boolean)
+---@alias TogglePingListenerCallback FunctionContainer|fun(down: boolean)

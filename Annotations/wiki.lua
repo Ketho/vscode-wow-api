@@ -500,7 +500,9 @@ function C_Debug.ToggleWindDebugMenu() end
 function C_Debug.ViewInDebugWindow() end
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_FunctionContainers.CreateCallback)
-function C_FunctionContainers.CreateCallback() end
+---@param func function
+---@return FunctionContainer
+function C_FunctionContainers.CreateCallback(func) end
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_Garrison.AllowMissionStartAboveSoftCap)
 function C_Garrison.AllowMissionStartAboveSoftCap(garrFollowerTypeID) end

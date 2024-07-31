@@ -114,7 +114,7 @@ function Mitsuha:GetField(annotation, apiTable)
 	return str
 end
 
-local fs_callback = "---@alias %s fun(%s)"
+local fs_callback = "---@alias %s FunctionContainer|fun(%s)"
 local fs_callback_param = "%s: %s"
 
 function Mitsuha:GetCallbackType(apiTable)

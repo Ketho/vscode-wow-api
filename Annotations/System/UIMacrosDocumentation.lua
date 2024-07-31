@@ -10,4 +10,4 @@ function C_Macro.RunMacroText(text, button) end
 ---@param cb MacroExecuteLineCallback
 function C_Macro.SetMacroExecuteLineCallback(cb) end
 
----@alias MacroExecuteLineCallback fun(macroLine: string)
+---@alias MacroExecuteLineCallback FunctionContainer|fun(macroLine: string)
