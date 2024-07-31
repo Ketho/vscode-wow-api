@@ -1,4 +1,6 @@
 ---@meta os
+--- removed: os.clock, os.execute, os.exit, os.getenv, os.remove, os.rename, os.setlocale, os.tmpname
+--- no namespace: os.date, os.difftime, os.time
 
 ---@class osdate
 ---
@@ -66,6 +68,17 @@
 ---@return string|osdate
 ---@nodiscard
 function date(format, time) end
+
+---
+---Returns the difference, in seconds, from time `t1` to time `t2`.
+---
+---[View documents](command:extension.lua.doc?["en-us/51/manual.html/pdf-os.difftime"]), [Wiki](https://warcraft.wiki.gg/wiki/API_difftime)
+---
+---@param t2 integer
+---@param t1 integer
+---@return integer
+---@nodiscard
+function difftime(t2, t1) end
 
 ---@class osdateparam
 ---

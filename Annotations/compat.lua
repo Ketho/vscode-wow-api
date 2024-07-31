@@ -28,13 +28,6 @@ function strsplittable(delimiter, str, pieces) end
 ---@return string
 function string.join(delim, str1, ...) end
 
----Returns the difference, in seconds, from time `t1` to time `t2`.
----[View documents](command:extension.lua.doc?["en-us/51/manual.html/pdf-os.difftime"]), [Wiki](https://warcraft.wiki.gg/wiki/API_difftime)
----@param time1 number
----@param time2 number
----@return number
-function difftime(time1, time2) end
-
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_fastrandom)
 ---@param lower? number
 ---@param upper? number

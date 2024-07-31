@@ -1,4 +1,4 @@
----@diagnostic disable: unused-local
+---@diagnostic disable: unused-local, deprecated
 -- todo: use unit testing
 local t = {"hello", "world"}
 local s1 = table.concat(t, ", ")
