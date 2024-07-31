@@ -9,6 +9,7 @@
         "io": "disable",
         "os": "disable",
         "package": "disable",
+        "table": "disable",
         "utf8": "disable",
     },
     "Lua.diagnostics.disable": [
