@@ -1,6 +1,7 @@
 ---@meta _
---- removed: dofile, load, loadfile, module, rawlen, warn
+--- added: gcinfo
 --- edited: xpcall, getfenv
+--- removed: dofile, load, loadfile, module, rawlen, warn
 
 ---
 ---Command-line arguments of Lua Standalone.
@@ -115,6 +116,9 @@ function ipairs(t) end
 ---@nodiscard
 function loadstring(text, chunkname) end
 
+---Creates a zero-size "userdata" object, optionally swith a sharable empty metatable.
+---
+---[Documentation](https://warcraft.wiki.gg/wiki/API_newproxy)
 ---@param proxy boolean|table|userdata
 ---@return userdata
 ---@nodiscard
@@ -334,7 +338,7 @@ _VERSION = "Lua 5.1"
 ---
 ---Calls function `f` with the given arguments in protected mode with a new message handler.
 ---
----[View documents](command:extension.lua.doc?["en-us/52/manual.html/pdf-xpcall"]), [Wiki](https://warcraft.wiki.gg/wiki/API_getfenv)
+---[View documents](command:extension.lua.doc?["en-us/52/manual.html/pdf-xpcall"]), [Wiki](https://warcraft.wiki.gg/wiki/API_xpcall)
 ---
 ---@param f     async fun(...):...
 ---@param msgh  function
@@ -351,7 +355,7 @@ function xpcall(f, msgh, arg1, ...) end
 ---```
 ---
 ---
----[View documents](command:extension.lua.doc?["en-us/51/manual.html/pdf-unpack"])
+---[View documents](command:extension.lua.doc?["en-us/51/manual.html/pdf-unpack"]), [Wiki](https://warcraft.wiki.gg/wiki/API_gcinfo)
 ---
 ---@generic T
 ---@param list T[]
@@ -360,3 +364,7 @@ function xpcall(f, msgh, arg1, ...) end
 ---@return T   ...
 ---@nodiscard
 function unpack(list, i, j) end
+
+---[Documentation](https://warcraft.wiki.gg/wiki/API_gcinfo)
+---@return number memoryInUse
+function gcinfo() end

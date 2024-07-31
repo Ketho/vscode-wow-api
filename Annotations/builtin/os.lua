@@ -1,4 +1,4 @@
----@meta os
+---@meta os_wow
 --- removed: os.clock, os.execute, os.exit, os.getenv, os.remove, os.rename, os.setlocale, os.tmpname
 --- no namespace: os.date, os.difftime, os.time
 
