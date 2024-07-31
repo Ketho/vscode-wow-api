@@ -10,6 +10,7 @@
         "math": "disable",
         "os": "disable",
         "package": "disable",
+        "string": "disable",
         "table": "disable",
         "utf8": "disable",
     },

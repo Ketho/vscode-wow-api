@@ -1,7 +1,7 @@
 ---@meta table_wow
 --- added: table.removemulti, table.wipe
 --- removed: table.move, table.pack, table.unpack
---- obsolete: table.setn
+--- obsolete: table.setn (lua 5.0)
 --- unpack is in basic.lua
 
 ---

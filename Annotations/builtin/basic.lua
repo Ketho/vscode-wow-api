@@ -1,6 +1,6 @@
 ---@meta _
 --- added: gcinfo
---- edited: xpcall, getfenv
+--- edited: xpcall (lua 5.2), getfenv
 --- removed: dofile, load, loadfile, module, rawlen, warn
 
 ---
