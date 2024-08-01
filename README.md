@@ -11,27 +11,27 @@ Adds IntelliSense features for World of Warcraft API to VS Code. This is a plugi
 * Loads the official Blizzard [API documentation](https://github.com/Gethe/wow-ui-source/tree/live/Interface/AddOns/Blizzard_APIDocumentationGenerated)
 * Parses [Warcraft Wiki](https://warcraft.wiki.gg/wiki/World_of_Warcraft_API) API documentation
 
-![](https://github.com/Ketho/vscode-wow-api/raw/master/img/api.gif)
+![](https://github.com/Ketho/vscode-wow-api/raw/master/img/readme/api.gif)
 
 #### [Widgets](https://warcraft.wiki.gg/wiki/Widget_API)
-![](https://github.com/Ketho/vscode-wow-api/raw/master/img/widget.gif)
+![](https://github.com/Ketho/vscode-wow-api/raw/master/img/readme/widget.gif)
 
 #### [Events](https://warcraft.wiki.gg/wiki/Events)
-![](https://github.com/Ketho/vscode-wow-api/raw/master/img/event.gif)
+![](https://github.com/Ketho/vscode-wow-api/raw/master/img/readme/event.gif)
 
 #### [CVars](https://warcraft.wiki.gg/wiki/Console_variables)
-![](https://github.com/Ketho/vscode-wow-api/raw/master/img/cvar.png)
+![](https://github.com/Ketho/vscode-wow-api/raw/master/img/readme/cvar.png)
 
 #### [Enums](https://github.com/Ketho/BlizzardInterfaceResources/blob/mainline/Resources/LuaEnum.lua)
 * `Enum` and `Constants` table
 * `LE_` Lua Enums
 
-![](https://github.com/Ketho/vscode-wow-api/raw/master/img/enum.gif)
+![](https://github.com/Ketho/vscode-wow-api/raw/master/img/readme/enum.gif)
 
 #### [GlobalStrings](https://github.com/Ketho/BlizzardInterfaceResources/blob/mainline/Resources/GlobalStrings.lua)
 Shows completion for GlobalStrings at >3 uppercase letters to declutter fuzzy search.
 
-![](https://github.com/Ketho/vscode-wow-api/raw/master/img/globalstring.gif)
+![](https://github.com/Ketho/vscode-wow-api/raw/master/img/readme/globalstring.gif)
 
 ### AddOn Namespace
 LuaLS doesn't know about the [AddOn Namespace](https://warcraft.wiki.gg/wiki/Using_the_AddOn_namespace), so this needs to be annotated with [@class](https://luals.github.io/wiki/annotations/#class) in each file. This way the language server knows about the shared table and also allows you to mutate it, which would not be possible with a single `@class` and then `@type` in other files.
