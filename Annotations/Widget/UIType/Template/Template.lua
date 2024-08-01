@@ -1,0 +1,3 @@
+---@meta _
+---@alias Template
+---|"BackdropTemplate"

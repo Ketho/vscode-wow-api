@@ -3,4 +3,4 @@ node_modules
 .vscode-test/
 *.vsix
 *.xml
-Lua/Data
+LuaScripts/Data

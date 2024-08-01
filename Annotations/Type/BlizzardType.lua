@@ -1,103 +1,51 @@
 ---@meta _
+
+---@alias AnimationDataEnum number
+---@alias ArtifactTiers number
 ---@alias BigInteger number
 ---@alias BigUInteger number
 ---@alias CalendarEventID number
 ---@alias ClubId string
 ---@alias ClubInvitationId string
 ---@alias ClubStreamId string
+---@alias colorRGB ColorMixin
+---@alias ConnectionIptype number 1=IPv4, 2=IPv6
+---@alias FileAsset string
 ---@alias fileID integer
 ---@alias GarrisonFollower string
 ---@alias HTMLTextType string
+---@alias IDOrLink number|string
+---@alias InventorySlots number
 ---@alias ItemInfo number|string
+---@alias ItemTransmogInfo ItemTransmogInfoMixin
 ---@alias kstringClubMessage string
 ---@alias kstringLfgListApplicant string
 ---@alias kstringLfgListSearch string
+---@alias LoopType string
+---@alias luaFunction function
+---@alias LuaValueVariant table
+---@alias ModelAsset number FileID
+---@alias mouseButton MouseButton
+---@alias normalizedValue number [0.0 - 1.0]
 ---@alias NotificationDbId string
 ---@alias RecruitAcceptanceID string
+---@alias SingleColorValue number
+---@alias size number
+---@alias SmoothingType string
+---@alias SpellIdentifier number|string
+---@alias stringView string
+---@alias TBFFlags string
 ---@alias TBFStyleFlags string
+---@alias TextureAsset fileID|string|Texture
+---@alias TextureAssetDisk fileID|string
 ---@alias textureAtlas string
 ---@alias textureKit string
 ---@alias time_t number
 ---@alias uiAddon string|number
+---@alias uiFontHeight number
 ---@alias uiUnit number
 ---@alias UnitToken UnitId
+---@alias vector2 Vector2DMixin
 ---@alias WeeklyRewardItemDBID string
 ---@alias WOWGUID string
 ---@alias WOWMONEY number
-
----@alias vector2 Vector2DMixin
----@alias colorRGB ColorMixin
----@alias ItemTransmogInfo ItemTransmogInfoMixin
-
---temporary
----@class ScriptRegion
-
----@alias SimpleFrame Frame
----@alias SimpleTexture Texture
----@alias ChatBubbleFrame Frame
----@alias ModelSceneFrame ModelScene
----@alias ModelSceneFrameActor ModelSceneActor
----@alias SimplePathAnim Path
----@alias SimpleControlPoint ControlPoint
-
----@class UiMapPoint
----@field uiMapID number
----@field position Vector2DMixin
----@field z number?
-
----@class TooltipComparisonItem
----@field guid WOWGUID?
----@field hyperlink string?
----@field overrideItemLevel number
-
----@class TooltipData
----@field type Enum.TooltipDataType?
----@field dataInstanceID number
----@field lines TooltipDataLine[]
----@field hyperlink string?
----@field guid WOWGUID?
----@field isAzeriteItem boolean?
----@field isAzeriteEmpoweredItem boolean?
----@field isCorruptedItem boolean?
----@field overrideItemLevel number?
----@field repairCost number?
----@field healthGUID WOWGUID?
-
----@class TooltipDataLine
----@field type Enum.TooltipDataLineType
----@field leftColor colorRGB
----@field leftText string
----@field rightColor colorRGB
----@field rightText string
----@field wrapText boolean
----@field unitToken string?
----@field price WOWMONEY?
----@field maxPrice WOWMONEY?
----@field tooltipType number?
----@field tooltipID number?
----@field bonding number?
-
----@class AuraData
----@field applications number
----@field auraInstanceID number
----@field canApplyAura boolean
----@field charges number
----@field dispelName string?
----@field duration number
----@field expirationTime number
----@field icon number
----@field isBossAura boolean
----@field isFromPlayerOrPlayerPet boolean
----@field isHarmful boolean
----@field isHelpful boolean
----@field isNameplateOnly boolean
----@field isRaid boolean
----@field isStealable boolean
----@field maxCharges number
----@field name string
----@field nameplateShowAll boolean
----@field nameplateShowPersonal boolean
----@field points number[]
----@field sourceUnit string?
----@field spellId number
----@field timeMod number
