@@ -49,7 +49,7 @@ export function autoAddGlobals() {
 	});
 }
 
-// any deprecated APIs in globals do not trigger the deprecated warning
+// if deprecated APIs are defined as globals they will not trigger the deprecated warning
 export function removeDeprecatedGlobals() {
 	const diag_globals: string[] = config.get("diagnostics.globals")!;
 	deprecated.forEach(function(deprecated: string) {
