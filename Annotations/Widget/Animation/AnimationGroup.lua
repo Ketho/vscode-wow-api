@@ -15,7 +15,7 @@ function AnimationGroup:GetParent() end
 ---@param animationType? `T` | AnimationType
 ---@param name? string
 ---@param templateName? string
----@return T animation
+---@return table|T animation
 ---@overload fun(): Animation
 function AnimationGroup:CreateAnimation(animationType, name, templateName) end
 
