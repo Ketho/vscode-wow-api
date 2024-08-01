@@ -48,6 +48,5 @@ function PetAbandon(petNumber) end
 function PetRename(name, declensions) end
 
 ---@deprecated
----Deprecated
 ---@return boolean canRename
 function PetCanBeRenamed() end

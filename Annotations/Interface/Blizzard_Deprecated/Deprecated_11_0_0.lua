@@ -1,75 +1,89 @@
--- These are functions that were deprecated in 11.0.0 and will be removed before it ships.
--- Please upgrade to the updated APIs as soon as possible.
+---@meta _
 
--- Notices
--- UIDropDownMenu has been deprecated. There are currently no plans to delete it, but it will no longer be used in any future implementations. For information on the replacement, please see Blizzard_Menu\11_0_0_MenuImplementationGuide.lua
+---@deprecated
+---Deprecated by [C_Spell.GetSpellInfo](https://warcraft.wiki.gg/wiki/API_C_Spell.GetSpellInfo)
+---@param spell number|string
+---@return string name
+---@return string rank
+---@return number icon
+---@return number castTime
+---@return number minRange
+---@return number maxRange
+---@return number spellID
+---@return number originalIcon
+---@overload fun(index: number, bookType: string)
+function GetSpellInfo(spell) end
 
-if not GetCVarBool("loadDeprecationFallbacks") then
-	return;
-end
+---@deprecated
+---Deprecated by [C_SpellBook.GetNumSpellBookSkillLines](https://warcraft.wiki.gg/wiki/API_C_SpellBook.GetNumSpellBookSkillLines)
+---@return number numTabs
+function GetNumSpellTabs(numTabs) end
 
-do
-	GetSpellInfo = function(spellID)
-		if not spellID then
-			return nil;
-		end
+---@deprecated
+---Deprecated by [C_SpellBook.GetSpellBookSkillLineInfo](https://warcraft.wiki.gg/wiki/API_C_SpellBook.GetSpellBookSkillLineInfo)
+---@param tabIndex number
+---@return string name
+---@return string texture
+---@return number offset
+---@return number numSlots
+---@return boolean isGuild
+---@return number offspecID
+function GetSpellTabInfo(tabIndex) end
 
-		local spellInfo = C_Spell.GetSpellInfo(spellID);
-		if spellInfo then
-			return spellInfo.name, nil, spellInfo.iconID, spellInfo.castTime, spellInfo.minRange, spellInfo.maxRange, spellInfo.spellID, spellInfo.originalIconID;
-		end
-	end
+---@deprecated
+---Deprecated by [C_Spell.GetSpellCooldown](https://warcraft.wiki.gg/wiki/API_C_Spell.GetSpellCooldown)
+---@param spell number|string
+---@return number start
+---@return number duration
+---@return number enabled
+---@return number modRate
+---@overload fun(index: number, bookType: string)
+function GetSpellCooldown(spell) end
 
-	GetNumSpellTabs = C_SpellBook.GetNumSpellBookSkillLines;
+---@deprecated
+---Deprecated by [C_SpellBook.GetSpellBookItemName](https://warcraft.wiki.gg/wiki/API_C_SpellBook.GetSpellBookItemName)
+---@param spellName string
+---@return string spellName
+---@return string spellSubName
+---@return number spellID
+---@overload fun(index: number, bookType: string)
+function GetSpellBookItemName(spellName) end
 
-	GetSpellTabInfo = function(index)
-		local skillLineInfo = C_SpellBook.GetSpellBookSkillLineInfo(index);
-		if skillLineInfo then
-			return	skillLineInfo.name, 
-					skillLineInfo.iconID, 
-					skillLineInfo.itemIndexOffset, 
-					skillLineInfo.numSpellBookItems, 
-					skillLineInfo.isGuild, 
-					skillLineInfo.offSpecID,
-					skillLineInfo.shouldHide,
-					skillLineInfo.specID;
-		end
-	end
+---@deprecated
+---Deprecated by [C_Spell.GetSpellTexture](https://warcraft.wiki.gg/wiki/API_C_Spell.GetSpellTexture)
+---@param spell number|string
+---@return number icon
+---@overload fun(index: number, bookType: string)
+function GetSpellTexture(spell) end
 
-	GetSpellCooldown = function(spellID)
-		local spellCooldownInfo = C_Spell.GetSpellCooldown(spellID);
-		if spellCooldownInfo then
-			return spellCooldownInfo.startTime, spellCooldownInfo.duration, spellCooldownInfo.isEnabled, spellCooldownInfo.modRate;
-		end
-	end
+---@deprecated
+---Deprecated by [C_Spell.GetSpellCharges](https://warcraft.wiki.gg/wiki/API_C_Spell.GetSpellCharges)
+---@param spell number|string
+---@return number currentCharges
+---@return number maxCharges
+---@return number cooldownStart
+---@return number cooldownDuration
+---@return number chargeModRate
+---@overload fun(index: number, bookType: string)
+function GetSpellCharges(spell) end
 
-	BOOKTYPE_SPELL = "spell";
+---@deprecated
+---Deprecated by [C_Spell.GetSpellDescription(](https://warcraft.wiki.gg/wiki/API_C_Spell.GetSpellDescription)
+---@param spellID number
+---@return string desc
+function GetSpellDescription(spellID) end
 
-	GetSpellBookItemName = function(index, bookType)
-		local spellBank = (bookType == BOOKTYPE_SPELL) and Enum.SpellBookSpellBank.Player or Enum.SpellBookSpellBank.Pet;
-		return C_SpellBook.GetSpellBookItemName(index, spellBank);
-	end
+---@deprecated
+---Deprecated by [C_Spell.GetSpellCastCount](https://warcraft.wiki.gg/wiki/API_C_Spell.GetSpellCastCount)
+---@param spell number|string
+---@return number numCasts
+---@overload fun(index: number, bookType: string)
+function GetSpellCount(spell) end
 
-	GetSpellTexture = function(spellID)
-		return C_Spell.GetSpellTexture(spellID);
-	end
-
-	GetSpellCharges = function(spellID)
-		local spellChargeInfo = C_Spell.GetSpellCharges(spellID);
-		if spellChargeInfo then
-			return spellChargeInfo.currentCharges, spellChargeInfo.maxCharges, spellChargeInfo.cooldownStartTime, spellChargeInfo.cooldownDuration, spellChargeInfo.chargeModRate;
-		end
-	end
-
-	GetSpellDescription = function(spellID)
-		return C_Spell.GetSpellDescription(spellID);
-	end
-
-	GetSpellCount = function(spellID)
-		return C_Spell.GetSpellCastCount(spellID);
-	end
-
-	IsUsableSpell = function(spellID)
-		return C_Spell.IsSpellUsable(spellID);
-	end
-end
+---@deprecated
+---Deprecated by [C_Spell.IsSpellUsable](https://warcraft.wiki.gg/wiki/API_C_Spell.IsSpellUsable)
+---@param spell number|string
+---@return boolean usable
+---@return boolean noMana
+---@overload fun(index: number, bookType: string)
+function IsUsableSpell(spell) end
