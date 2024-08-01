@@ -3,9 +3,10 @@ import * as path from "path";
 
 const wow_globals = require("./data/globals").data;
 const deprecated = require("./data/deprecated").data;
+const config = vscode.workspace.getConfiguration("Lua");
 
 // disable the lua libraries so we can load our customized libraries
-const wowapi_builtin = {
+const builtin = {
 	basic: "disable",
 	debug: "disable",
 	io: "disable",
@@ -17,15 +18,14 @@ const wowapi_builtin = {
 	utf8: "disable",
 }
 
-export function updateRuntime(config: vscode.WorkspaceConfiguration) { 
+export function updateRuntime() { 
 	config.update("runtime.version", "Lua 5.1", false)
-	config.update("runtime.builtin", wowapi_builtin, false)
+	config.update("runtime.builtin", builtin, false)
 }
 
 // automatically mark wow globals as defined if there is a language server warning
-export function autoAddGlobals(config: vscode.WorkspaceConfiguration) {
+export function autoAddGlobals() {
 	const diag_globals: string[] = config.get("diagnostics.globals")!;
-	
 	vscode.languages.onDidChangeDiagnostics((event: vscode.DiagnosticChangeEvent) => {
 		if (!vscode.workspace.getConfiguration("wowAPI").get("autoAddGlobals")) {
 			return;
@@ -50,7 +50,7 @@ export function autoAddGlobals(config: vscode.WorkspaceConfiguration) {
 }
 
 // any deprecated APIs in globals do not trigger the deprecated warning
-export function removeDeprecatedGlobals(config: vscode.WorkspaceConfiguration) {
+export function removeDeprecatedGlobals() {
 	const diag_globals: string[] = config.get("diagnostics.globals")!;
 	deprecated.forEach(function(deprecated: string) {
 		const index = diag_globals.indexOf(deprecated);
@@ -62,16 +62,10 @@ export function removeDeprecatedGlobals(config: vscode.WorkspaceConfiguration) {
 }
 
 // sets external library and then returns a Thenable to the consumer.
-export function setExternalLibrary(enable: boolean): Thenable<void> {
-	// console.log("setExternalLibrary", folder, enable);
-	const config = vscode.workspace.getConfiguration("Lua");
+export function setExternalLibrary(extensionId: string, enable: boolean): Thenable<void> {
 	const library: string[] = config.get("workspace.library")!;
-
-	const extensionId = "ketho.wow-api";
 	const extensionPath = vscode.extensions.getExtension(extensionId)!.extensionPath;
-	// use path.join to ensure the proper path seperators (\ for windows, / for anything else) are used.
 	const folderPath = path.join(extensionPath, "Annotations");
-
 	// remove any older versions of our path e.g. "publisher.name-0.0.1"
 	for (let i = library.length-1; i >= 0; i--) {
 		const el = library[i];
@@ -92,6 +86,5 @@ export function setExternalLibrary(enable: boolean): Thenable<void> {
 			library.splice(index, 1);
 		}
 	}
-
 	return config.update("workspace.library", library, false);
 }
