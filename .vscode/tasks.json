@@ -17,7 +17,7 @@
 			}
 		},
 		{
-			"label": "Lua 5.4 main",
+			"label": "Lua 5.4 wow-api",
 			"type": "shell",
 			"command": "lua54 LuaScripts/main.lua",
 			"presentation": {
@@ -25,6 +25,6 @@
 				"clear": true
 			},
 			"problemMatcher": []
-		},
+		}
 	]
 }
