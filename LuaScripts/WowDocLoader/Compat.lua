@@ -1,5 +1,6 @@
 ---@meta _
-unpack = table.unpack ---@diagnostic disable-line: deprecated
+---@diagnostic disable-next-line: undefined-field
+unpack = table.unpack
 tinsert = table.insert
 format = string.format
 

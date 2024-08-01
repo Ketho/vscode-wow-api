@@ -31,6 +31,18 @@
 ---|"UnitPositionFrame"
 ---|"EventFrame" Frame|EventFrameMixin
 
+---@alias AnimationType
+---|"Alpha"
+---|"Animation"
+---|"FlipBook"
+---|"LineScale"
+---|"LineTranslation"
+---|"Path"
+---|"Rotation"
+---|"Scale"
+---|"Translation"
+---|"VertexColor"
+
 ---@alias ChatBubbleFrame Frame
 ---@alias CScriptObject Object
 ---@alias ModelSceneFrame ModelScene
