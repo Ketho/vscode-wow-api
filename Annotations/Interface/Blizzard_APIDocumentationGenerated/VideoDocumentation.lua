@@ -2,12 +2,12 @@
 C_VideoOptions = {}
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_VideoOptions.GetCurrentGameWindowSize)
----@return Vector2DMixin size
+---@return vector2 size
 function C_VideoOptions.GetCurrentGameWindowSize() end
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_VideoOptions.GetDefaultGameWindowSize)
 ---@param monitor number
----@return Vector2DMixin size
+---@return vector2 size
 function C_VideoOptions.GetDefaultGameWindowSize(monitor) end
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_VideoOptions.GetGameWindowSizes)

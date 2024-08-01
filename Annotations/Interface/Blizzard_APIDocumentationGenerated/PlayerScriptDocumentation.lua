@@ -483,7 +483,7 @@ function IsIndoors() end
 function IsInsane() end
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_IsItemPreferredArmorType)
----@param itemLocation ItemLocationMixin
+---@param itemLocation ItemLocation
 ---@return boolean isItemPreferredArmorType
 function IsItemPreferredArmorType(itemLocation) end
 

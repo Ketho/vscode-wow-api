@@ -140,7 +140,7 @@ function C_GossipInfo.SelectOptionByIndex(optionID, text, confirmed) end
 ---@class GossipPoiInfo
 ---@field name string
 ---@field textureIndex number
----@field position Vector2DMixin
+---@field position vector2
 ---@field inBattleMap boolean
 
 ---@class GossipQuestUIInfo

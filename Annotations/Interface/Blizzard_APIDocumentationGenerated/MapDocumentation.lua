@@ -144,10 +144,10 @@ function C_Map.GetMapLinksForMap(uiMapID) end
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_Map.GetMapPosFromWorldPos)
 ---@param continentID number
----@param worldPosition Vector2DMixin
+---@param worldPosition vector2
 ---@param overrideUiMapID? number
 ---@return number uiMapID
----@return Vector2DMixin mapPosition
+---@return vector2 mapPosition
 function C_Map.GetMapPosFromWorldPos(continentID, worldPosition, overrideUiMapID) end
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_Map.GetMapRectOnMap)
@@ -170,7 +170,7 @@ function C_Map.GetMapWorldSize(uiMapID) end
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_Map.GetPlayerMapPosition)
 ---@param uiMapID number
 ---@param unitToken UnitToken
----@return Vector2DMixin? position
+---@return vector2? position
 function C_Map.GetPlayerMapPosition(uiMapID, unitToken) end
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_Map.GetUserWaypoint)
@@ -188,14 +188,14 @@ function C_Map.GetUserWaypointHyperlink() end
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_Map.GetUserWaypointPositionForMap)
 ---@param uiMapID number
----@return Vector2DMixin mapPosition
+---@return vector2 mapPosition
 function C_Map.GetUserWaypointPositionForMap(uiMapID) end
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_Map.GetWorldPosFromMapPos)
 ---@param uiMapID number
----@param mapPosition Vector2DMixin
+---@param mapPosition vector2
 ---@return number continentID
----@return Vector2DMixin worldPosition
+---@return vector2 worldPosition
 function C_Map.GetWorldPosFromMapPos(uiMapID, mapPosition) end
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_Map.HasUserWaypoint)
@@ -233,7 +233,7 @@ function C_Map.SetUserWaypoint(point) end
 
 ---@class MapLinkInfo
 ---@field areaPoiID number
----@field position Vector2DMixin
+---@field position vector2
 ---@field name string
 ---@field atlasName string
 ---@field linkedUiMapID number

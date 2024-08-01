@@ -3,7 +3,7 @@ C_MapExplorationInfo = {}
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_MapExplorationInfo.GetExploredAreaIDsAtPosition)
 ---@param uiMapID number
----@param normalizedPosition Vector2DMixin
+---@param normalizedPosition vector2
 ---@return number[]? areaID
 function C_MapExplorationInfo.GetExploredAreaIDsAtPosition(uiMapID, normalizedPosition) end
 

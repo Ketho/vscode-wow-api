@@ -372,7 +372,7 @@ function C_Garrison.SetAutoCombatSpellFastForward(state) end
 
 ---@class GarrisonPlotInstanceMapInfo
 ---@field buildingPlotInstanceID number
----@field position Vector2DMixin
+---@field position vector2
 ---@field name string
 ---@field atlasName textureAtlas
 

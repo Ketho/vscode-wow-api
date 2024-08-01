@@ -22,7 +22,7 @@ function C_AlliedRaces.GetRaceInfoByID(raceID) end
 ---@field raceFileString string
 ---@field crestAtlas textureAtlas
 ---@field modelBackgroundAtlas textureAtlas
----@field bannerColor ColorMixin
+---@field bannerColor colorRGB
 
 ---@class AlliedRaceRacialAbility
 ---@field description string

@@ -12,7 +12,7 @@ function C_PlayerMentorship.GetMentorLevelRequirement() end
 function C_PlayerMentorship.GetMentorRequirements() end
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_PlayerMentorship.GetMentorshipStatus)
----@param playerLocation PlayerLocationMixin
+---@param playerLocation PlayerLocation
 ---@return Enum.PlayerMentorshipStatus status
 function C_PlayerMentorship.GetMentorshipStatus(playerLocation) end
 

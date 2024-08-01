@@ -12,7 +12,7 @@ function C_ItemInteraction.CloseUI() end
 function C_ItemInteraction.GetChargeInfo() end
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_ItemInteraction.GetItemConversionCurrencyCost)
----@param item ItemLocationMixin
+---@param item ItemLocation
 ---@return ConversionCurrencyCost conversionCost
 function C_ItemInteraction.GetItemConversionCurrencyCost(item) end
 
@@ -34,7 +34,7 @@ function C_ItemInteraction.PerformItemInteraction() end
 function C_ItemInteraction.Reset() end
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_ItemInteraction.SetPendingItem)
----@param item? ItemLocationMixin
+---@param item? ItemLocation
 ---@return boolean success
 function C_ItemInteraction.SetPendingItem(item) end
 

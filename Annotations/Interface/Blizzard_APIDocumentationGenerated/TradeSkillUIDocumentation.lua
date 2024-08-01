@@ -13,7 +13,7 @@ function C_TradeSkillUI.CloseTradeSkill() end
 ---@param recipeSpellID number
 ---@param numCasts? number Default = 1
 ---@param craftingReagents? CraftingReagentInfo[]
----@param itemTarget? ItemLocationMixin
+---@param itemTarget? ItemLocation
 ---@param applyConcentration? boolean
 function C_TradeSkillUI.CraftEnchant(recipeSpellID, numCasts, craftingReagents, itemTarget, applyConcentration) end
 
@@ -29,13 +29,13 @@ function C_TradeSkillUI.CraftRecipe(recipeSpellID, numCasts, craftingReagents, r
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_TradeSkillUI.CraftSalvage)
 ---@param recipeSpellID number
 ---@param numCasts? number Default = 1
----@param itemTarget ItemLocationMixin
+---@param itemTarget ItemLocation
 ---@param craftingReagents? CraftingReagentInfo[]
 ---@param applyConcentration? boolean
 function C_TradeSkillUI.CraftSalvage(recipeSpellID, numCasts, itemTarget, craftingReagents, applyConcentration) end
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_TradeSkillUI.DoesRecraftingRecipeAcceptItem)
----@param itemLocation ItemLocationMixin
+---@param itemLocation ItemLocation
 ---@param recipeID number
 ---@return boolean result
 function C_TradeSkillUI.DoesRecraftingRecipeAcceptItem(itemLocation, recipeID) end

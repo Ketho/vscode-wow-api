@@ -2,7 +2,7 @@
 C_ItemUpgrade = {}
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_ItemUpgrade.CanUpgradeItem)
----@param baseItem ItemLocationMixin
+---@param baseItem ItemLocation
 ---@return boolean isValid
 function C_ItemUpgrade.CanUpgradeItem(baseItem) end
 
@@ -67,7 +67,7 @@ function C_ItemUpgrade.IsItemBound() end
 function C_ItemUpgrade.SetItemUpgradeFromCursorItem() end
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_ItemUpgrade.SetItemUpgradeFromLocation)
----@param itemToSet ItemLocationMixin
+---@param itemToSet ItemLocation
 function C_ItemUpgrade.SetItemUpgradeFromLocation(itemToSet) end
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_ItemUpgrade.UpgradeItem)

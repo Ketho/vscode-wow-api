@@ -8,7 +8,7 @@ function C_ResearchInfo.GetDigSitesForMap(uiMapID) end
 
 ---@class DigSiteMapInfo
 ---@field researchSiteID number
----@field position Vector2DMixin
+---@field position vector2
 ---@field name string
 ---@field poiBlobID number
 ---@field textureIndex number

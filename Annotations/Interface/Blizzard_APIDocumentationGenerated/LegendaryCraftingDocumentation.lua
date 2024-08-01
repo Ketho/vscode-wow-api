@@ -9,19 +9,19 @@ function C_LegendaryCrafting.CloseRuneforgeInteraction() end
 function C_LegendaryCrafting.CraftRuneforgeLegendary(description) end
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_LegendaryCrafting.GetRuneforgeItemPreviewInfo)
----@param baseItem ItemLocationMixin
+---@param baseItem ItemLocation
 ---@param runeforgePowerID? number
 ---@param modifiers? number[]
 ---@return RuneforgeItemPreviewInfo? info
 function C_LegendaryCrafting.GetRuneforgeItemPreviewInfo(baseItem, runeforgePowerID, modifiers) end
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_LegendaryCrafting.GetRuneforgeLegendaryComponentInfo)
----@param runeforgeLegendary ItemLocationMixin
+---@param runeforgeLegendary ItemLocation
 ---@return RuneforgeLegendaryComponentInfo componentInfo
 function C_LegendaryCrafting.GetRuneforgeLegendaryComponentInfo(runeforgeLegendary) end
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_LegendaryCrafting.GetRuneforgeLegendaryCost)
----@param baseItem ItemLocationMixin
+---@param baseItem ItemLocation
 ---@return CurrencyCost[] cost
 function C_LegendaryCrafting.GetRuneforgeLegendaryCost(baseItem) end
 
@@ -34,13 +34,13 @@ function C_LegendaryCrafting.GetRuneforgeLegendaryCraftSpellID() end
 function C_LegendaryCrafting.GetRuneforgeLegendaryCurrencies() end
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_LegendaryCrafting.GetRuneforgeLegendaryUpgradeCost)
----@param runeforgeLegendary ItemLocationMixin
----@param upgradeItem ItemLocationMixin
+---@param runeforgeLegendary ItemLocation
+---@param upgradeItem ItemLocation
 ---@return CurrencyCost[] cost
 function C_LegendaryCrafting.GetRuneforgeLegendaryUpgradeCost(runeforgeLegendary, upgradeItem) end
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_LegendaryCrafting.GetRuneforgeModifierInfo)
----@param baseItem ItemLocationMixin
+---@param baseItem ItemLocation
 ---@param powerID? number
 ---@param addedModifierIndex number
 ---@param modifiers number[]
@@ -63,7 +63,7 @@ function C_LegendaryCrafting.GetRuneforgePowerInfo(runeforgePowerID) end
 function C_LegendaryCrafting.GetRuneforgePowerSlots(runeforgePowerID) end
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_LegendaryCrafting.GetRuneforgePowers)
----@param baseItem? ItemLocationMixin
+---@param baseItem? ItemLocation
 ---@param filter? Enum.RuneforgePowerFilter
 ---@return number[] primaryRuneforgePowerIDs
 ---@return number[] otherRuneforgePowerIDs
@@ -78,34 +78,34 @@ function C_LegendaryCrafting.GetRuneforgePowers(baseItem, filter) end
 function C_LegendaryCrafting.GetRuneforgePowersByClassSpecAndCovenant(classID, specID, covenantID, filter) end
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_LegendaryCrafting.IsRuneforgeLegendary)
----@param item ItemLocationMixin
+---@param item ItemLocation
 ---@return boolean isRuneforgeLegendary
 function C_LegendaryCrafting.IsRuneforgeLegendary(item) end
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_LegendaryCrafting.IsRuneforgeLegendaryMaxLevel)
----@param runeforgeLegendary ItemLocationMixin
+---@param runeforgeLegendary ItemLocation
 ---@return boolean isMaxLevel
 function C_LegendaryCrafting.IsRuneforgeLegendaryMaxLevel(runeforgeLegendary) end
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_LegendaryCrafting.IsUpgradeItemValidForRuneforgeLegendary)
----@param runeforgeLegendary ItemLocationMixin
----@param upgradeItem ItemLocationMixin
+---@param runeforgeLegendary ItemLocation
+---@param upgradeItem ItemLocation
 ---@return boolean isValid
 function C_LegendaryCrafting.IsUpgradeItemValidForRuneforgeLegendary(runeforgeLegendary, upgradeItem) end
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_LegendaryCrafting.IsValidRuneforgeBaseItem)
----@param baseItem ItemLocationMixin
+---@param baseItem ItemLocation
 ---@return boolean isValid
 function C_LegendaryCrafting.IsValidRuneforgeBaseItem(baseItem) end
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_LegendaryCrafting.MakeRuneforgeCraftDescription)
----@param baseItem ItemLocationMixin
+---@param baseItem ItemLocation
 ---@param runeforgePowerID number
 ---@param modifiers number[]
 ---@return RuneforgeLegendaryCraftDescription description
 function C_LegendaryCrafting.MakeRuneforgeCraftDescription(baseItem, runeforgePowerID, modifiers) end
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_LegendaryCrafting.UpgradeRuneforgeLegendary)
----@param runeforgeLegendary ItemLocationMixin
----@param upgradeItem ItemLocationMixin
+---@param runeforgeLegendary ItemLocation
+---@param upgradeItem ItemLocation
 function C_LegendaryCrafting.UpgradeRuneforgeLegendary(runeforgeLegendary, upgradeItem) end

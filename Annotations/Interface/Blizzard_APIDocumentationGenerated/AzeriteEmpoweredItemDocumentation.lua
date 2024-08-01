@@ -2,17 +2,17 @@
 C_AzeriteEmpoweredItem = {}
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_AzeriteEmpoweredItem.CanSelectPower)
----@param azeriteEmpoweredItemLocation ItemLocationMixin
+---@param azeriteEmpoweredItemLocation AzeriteEmpoweredItemLocation
 ---@param powerID number
 ---@return boolean canSelect
 function C_AzeriteEmpoweredItem.CanSelectPower(azeriteEmpoweredItemLocation, powerID) end
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_AzeriteEmpoweredItem.ConfirmAzeriteEmpoweredItemRespec)
----@param azeriteEmpoweredItemLocation ItemLocationMixin
+---@param azeriteEmpoweredItemLocation AzeriteEmpoweredItemLocation
 function C_AzeriteEmpoweredItem.ConfirmAzeriteEmpoweredItemRespec(azeriteEmpoweredItemLocation) end
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_AzeriteEmpoweredItem.GetAllTierInfo)
----@param azeriteEmpoweredItemLocation ItemLocationMixin
+---@param azeriteEmpoweredItemLocation AzeriteEmpoweredItemLocation
 ---@return AzeriteEmpoweredItemTierInfo[] tierInfo
 function C_AzeriteEmpoweredItem.GetAllTierInfo(azeriteEmpoweredItemLocation) end
 
@@ -32,7 +32,7 @@ function C_AzeriteEmpoweredItem.GetAzeriteEmpoweredItemRespecCost() end
 function C_AzeriteEmpoweredItem.GetPowerInfo(powerID) end
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_AzeriteEmpoweredItem.GetPowerText)
----@param azeriteEmpoweredItemLocation ItemLocationMixin
+---@param azeriteEmpoweredItemLocation AzeriteEmpoweredItemLocation
 ---@param powerID number
 ---@param level Enum.AzeritePowerLevel
 ---@return AzeriteEmpoweredItemPowerText powerText
@@ -44,17 +44,17 @@ function C_AzeriteEmpoweredItem.GetPowerText(azeriteEmpoweredItemLocation, power
 function C_AzeriteEmpoweredItem.GetSpecsForPower(powerID) end
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_AzeriteEmpoweredItem.HasAnyUnselectedPowers)
----@param azeriteEmpoweredItemLocation ItemLocationMixin
+---@param azeriteEmpoweredItemLocation AzeriteEmpoweredItemLocation
 ---@return boolean hasAnyUnselectedPowers
 function C_AzeriteEmpoweredItem.HasAnyUnselectedPowers(azeriteEmpoweredItemLocation) end
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_AzeriteEmpoweredItem.HasBeenViewed)
----@param azeriteEmpoweredItemLocation ItemLocationMixin
+---@param azeriteEmpoweredItemLocation AzeriteEmpoweredItemLocation
 ---@return boolean hasBeenViewed
 function C_AzeriteEmpoweredItem.HasBeenViewed(azeriteEmpoweredItemLocation) end
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_AzeriteEmpoweredItem.IsAzeriteEmpoweredItem)
----@param itemLocation ItemLocationMixin
+---@param itemLocation ItemLocation
 ---@return boolean isAzeriteEmpoweredItem
 function C_AzeriteEmpoweredItem.IsAzeriteEmpoweredItem(itemLocation) end
 
@@ -80,19 +80,19 @@ function C_AzeriteEmpoweredItem.IsHeartOfAzerothEquipped() end
 function C_AzeriteEmpoweredItem.IsPowerAvailableForSpec(powerID, specID) end
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_AzeriteEmpoweredItem.IsPowerSelected)
----@param azeriteEmpoweredItemLocation ItemLocationMixin
+---@param azeriteEmpoweredItemLocation AzeriteEmpoweredItemLocation
 ---@param powerID number
 ---@return boolean isSelected
 function C_AzeriteEmpoweredItem.IsPowerSelected(azeriteEmpoweredItemLocation, powerID) end
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_AzeriteEmpoweredItem.SelectPower)
----@param azeriteEmpoweredItemLocation ItemLocationMixin
+---@param azeriteEmpoweredItemLocation AzeriteEmpoweredItemLocation
 ---@param powerID number
 ---@return boolean success
 function C_AzeriteEmpoweredItem.SelectPower(azeriteEmpoweredItemLocation, powerID) end
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_AzeriteEmpoweredItem.SetHasBeenViewed)
----@param azeriteEmpoweredItemLocation ItemLocationMixin
+---@param azeriteEmpoweredItemLocation AzeriteEmpoweredItemLocation
 function C_AzeriteEmpoweredItem.SetHasBeenViewed(azeriteEmpoweredItemLocation) end
 
 ---@class AzeriteEmpoweredItemPowerInfo

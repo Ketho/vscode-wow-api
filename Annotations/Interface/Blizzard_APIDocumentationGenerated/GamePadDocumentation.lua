@@ -69,7 +69,7 @@ function C_GamePad.GetDeviceMappedState(deviceID) end
 function C_GamePad.GetDeviceRawState(deviceID) end
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_GamePad.GetLedColor)
----@return ColorMixin color
+---@return colorRGB color
 function C_GamePad.GetLedColor() end
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_GamePad.GetPowerLevel)
@@ -86,7 +86,7 @@ function C_GamePad.IsEnabled() end
 function C_GamePad.SetConfig(config) end
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_GamePad.SetLedColor)
----@param color ColorMixin
+---@param color colorRGB
 function C_GamePad.SetLedColor(color) end
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_GamePad.SetVibration)

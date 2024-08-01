@@ -38,7 +38,7 @@ function DressUpModel:GetAutoDress() end
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_DressUpModel_GetItemTransmogInfo)
 ---@param inventorySlot number
----@return ItemTransmogInfoMixin itemTransmogInfo
+---@return ItemTransmogInfo itemTransmogInfo
 function DressUpModel:GetItemTransmogInfo(inventorySlot) end
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_DressUpModel_GetItemTransmogInfoList)
@@ -80,7 +80,7 @@ function DressUpModel:IsSlotVisible(slot) end
 function DressUpModel:SetAutoDress(enabled) end
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_DressUpModel_SetItemTransmogInfo)
----@param itemTransmogInfo ItemTransmogInfoMixin
+---@param itemTransmogInfo ItemTransmogInfo
 ---@param inventorySlot? number
 ---@param ignoreChildItems? boolean Default = false
 ---@return Enum.ItemTryOnReason result

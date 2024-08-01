@@ -92,7 +92,7 @@ function C_TransmogCollection.GetAppearanceSourceInfo(itemModifiedAppearanceID) 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_TransmogCollection.GetAppearanceSources)
 ---@param appearanceID number
 ---@param categoryType? Enum.TransmogCollectionType
----@param transmogLocation? TransmogLocationMixin
+---@param transmogLocation? TransmogLocation
 ---@return AppearanceSourceInfo[] sources
 function C_TransmogCollection.GetAppearanceSources(appearanceID, categoryType, transmogLocation) end
 
@@ -104,7 +104,7 @@ function C_TransmogCollection.GetArtifactAppearanceStrings(appearanceID) end
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_TransmogCollection.GetCategoryAppearances)
 ---@param category Enum.TransmogCollectionType
----@param transmogLocation? TransmogLocationMixin
+---@param transmogLocation? TransmogLocation
 ---@return TransmogCategoryAppearanceInfo[] appearances
 function C_TransmogCollection.GetCategoryAppearances(category, transmogLocation) end
 
@@ -256,7 +256,7 @@ function C_TransmogCollection.GetUncollectedShown() end
 ---@param appearanceID number
 ---@param classID number
 ---@param categoryType? Enum.TransmogCollectionType
----@param transmogLocation? TransmogLocationMixin
+---@param transmogLocation? TransmogLocation
 ---@return AppearanceSourceInfo[] sources
 function C_TransmogCollection.GetValidAppearanceSourcesForClass(appearanceID, classID, categoryType, transmogLocation) end
 

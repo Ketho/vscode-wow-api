@@ -120,7 +120,7 @@ function C_VoiceChat.GetMemberInfo(memberID, channelID) end
 function C_VoiceChat.GetMemberName(memberID, channelID) end
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_VoiceChat.GetMemberVolume)
----@param playerLocation PlayerLocationMixin
+---@param playerLocation PlayerLocation
 ---@return number? volume
 function C_VoiceChat.GetMemberVolume(playerLocation) end
 
@@ -182,7 +182,7 @@ function C_VoiceChat.IsLoggedIn() end
 function C_VoiceChat.IsMemberLocalPlayer(memberID, channelID) end
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_VoiceChat.IsMemberMuted)
----@param playerLocation PlayerLocationMixin
+---@param playerLocation PlayerLocation
 ---@return boolean? mutedForMe
 function C_VoiceChat.IsMemberMuted(playerLocation) end
 
@@ -211,7 +211,7 @@ function C_VoiceChat.IsParentalDisabled() end
 function C_VoiceChat.IsParentalMuted() end
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_VoiceChat.IsPlayerUsingVoice)
----@param playerLocation PlayerLocationMixin
+---@param playerLocation PlayerLocation
 ---@return boolean isUsingVoice
 function C_VoiceChat.IsPlayerUsingVoice(playerLocation) end
 
@@ -286,13 +286,13 @@ function C_VoiceChat.SetInputVolume(volume) end
 function C_VoiceChat.SetMasterVolumeScale(scale) end
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_VoiceChat.SetMemberMuted)
----@param playerLocation PlayerLocationMixin
+---@param playerLocation PlayerLocation
 ---@param muted boolean
 function C_VoiceChat.SetMemberMuted(playerLocation, muted) end
 
 ---Adjusts member volume across all channels
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_VoiceChat.SetMemberVolume)
----@param playerLocation PlayerLocationMixin
+---@param playerLocation PlayerLocation
 ---@param volume number
 function C_VoiceChat.SetMemberVolume(playerLocation, volume) end
 
@@ -346,7 +346,7 @@ function C_VoiceChat.StopSpeakingText() end
 function C_VoiceChat.ToggleDeafened() end
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_VoiceChat.ToggleMemberMuted)
----@param playerLocation PlayerLocationMixin
+---@param playerLocation PlayerLocation
 function C_VoiceChat.ToggleMemberMuted(playerLocation) end
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_VoiceChat.ToggleMuted)

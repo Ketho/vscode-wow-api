@@ -54,7 +54,7 @@ function SellCursorItem() end
 function SetCursor(name) end
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_SetCursorHoveredItem)
----@param item ItemLocationMixin
+---@param item ItemLocation
 function SetCursorHoveredItem(item) end
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_SetCursorHoveredItemTradeItem)

@@ -21,7 +21,7 @@ function ConsoleGetAllCommands() end
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_ConsoleGetColorFromType)
 ---@param colorType Enum.ConsoleColorType
----@return ColorMixin color
+---@return colorRGB color
 function ConsoleGetColorFromType(colorType) end
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_ConsoleGetFontHeight)

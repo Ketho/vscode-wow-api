@@ -14,7 +14,7 @@ function C_VignetteInfo.GetVignetteInfo(vignetteGUID) end
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_VignetteInfo.GetVignettePosition)
 ---@param vignetteGUID WOWGUID
 ---@param uiMapID number
----@return Vector2DMixin vignettePosition
+---@return vector2 vignettePosition
 ---@return number? vignetteFacing
 function C_VignetteInfo.GetVignettePosition(vignetteGUID, uiMapID) end
 

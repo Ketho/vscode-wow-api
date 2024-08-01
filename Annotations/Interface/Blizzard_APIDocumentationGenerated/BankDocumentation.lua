@@ -70,7 +70,7 @@ function C_Bank.HasMaxBankTabs(bankType) end
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_Bank.IsItemAllowedInBankType)
 ---@param bankType Enum.BankType
----@param itemLocation ItemLocationMixin
+---@param itemLocation ItemLocation
 ---@return boolean isItemAllowedInBankType
 function C_Bank.IsItemAllowedInBankType(bankType, itemLocation) end
 

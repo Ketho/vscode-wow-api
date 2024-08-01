@@ -409,7 +409,7 @@ function C_TooltipInfo.GetTrainerService(serviceIndex) end
 function C_TooltipInfo.GetTraitEntry(entryID, rank) end
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_TooltipInfo.GetTransmogrifyItem)
----@param transmogLocation TransmogLocationMixin
+---@param transmogLocation TransmogLocation
 ---@return TooltipData data
 function C_TooltipInfo.GetTransmogrifyItem(transmogLocation) end
 

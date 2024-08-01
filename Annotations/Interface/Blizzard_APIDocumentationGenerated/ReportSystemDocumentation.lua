@@ -2,12 +2,12 @@
 C_ReportSystem = {}
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_ReportSystem.CanReportPlayer)
----@param playerLocation PlayerLocationMixin
+---@param playerLocation PlayerLocation
 ---@return boolean canReport
 function C_ReportSystem.CanReportPlayer(playerLocation) end
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_ReportSystem.CanReportPlayerForLanguage)
----@param playerLocation PlayerLocationMixin
+---@param playerLocation PlayerLocation
 ---@return boolean canReport
 function C_ReportSystem.CanReportPlayerForLanguage(playerLocation) end
 
@@ -40,6 +40,6 @@ function C_ReportSystem.ReportStuckInCombat() end
 
 ---Not allowed to be called by addons
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_ReportSystem.SendReport)
----@param reportInfo ReportInfoMixin
----@param playerLocation? PlayerLocationMixin
+---@param reportInfo ReportInfo
+---@param playerLocation? PlayerLocation
 function C_ReportSystem.SendReport(reportInfo, playerLocation) end

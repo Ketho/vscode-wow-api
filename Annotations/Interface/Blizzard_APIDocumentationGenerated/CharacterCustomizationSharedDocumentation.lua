@@ -20,8 +20,8 @@
 ---@field name string
 ---@field ineligibleChoice boolean
 ---@field isNew boolean
----@field swatchColor1 ColorMixin?
----@field swatchColor2 ColorMixin?
+---@field swatchColor1 colorRGB?
+---@field swatchColor2 colorRGB?
 ---@field soundKit number?
 ---@field isLocked boolean
 ---@field lockedText string?

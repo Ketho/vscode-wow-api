@@ -8,7 +8,6 @@
 ---@alias ClubId string
 ---@alias ClubInvitationId string
 ---@alias ClubStreamId string
----@alias colorRGB ColorMixin
 ---@alias ConnectionIptype number 1=IPv4, 2=IPv6
 ---@alias FileAsset string
 ---@alias fileID integer
@@ -17,7 +16,6 @@
 ---@alias IDOrLink number|string
 ---@alias InventorySlots number
 ---@alias ItemInfo number|string
----@alias ItemTransmogInfo ItemTransmogInfoMixin
 ---@alias kstringClubMessage string
 ---@alias kstringLfgListApplicant string
 ---@alias kstringLfgListSearch string
@@ -45,7 +43,6 @@
 ---@alias uiFontHeight number
 ---@alias uiUnit number
 ---@alias UnitToken UnitId
----@alias vector2 Vector2DMixin
 ---@alias WeeklyRewardItemDBID string
 ---@alias WOWGUID string
 ---@alias WOWMONEY number

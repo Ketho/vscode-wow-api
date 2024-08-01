@@ -8,18 +8,18 @@ function C_Item.ActionBindsItem() end
 function C_Item.BindEnchant() end
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_Item.CanItemTransmogAppearance)
----@param itemLoc ItemLocationMixin
+---@param itemLoc ItemLocation
 ---@return boolean canTransmog
 ---@return number errorCode
 function C_Item.CanItemTransmogAppearance(itemLoc) end
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_Item.CanScrapItem)
----@param itemLoc ItemLocationMixin
+---@param itemLoc ItemLocation
 ---@return boolean canBeScrapped
 function C_Item.CanScrapItem(itemLoc) end
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_Item.CanViewItemPowers)
----@param itemLoc ItemLocationMixin
+---@param itemLoc ItemLocation
 ---@return boolean isItemViewable
 function C_Item.CanViewItemPowers(itemLoc) end
 
@@ -40,7 +40,7 @@ function C_Item.ConfirmOnUse() end
 function C_Item.DoesItemContainSpec(itemInfo, classID, specID) end
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_Item.DoesItemExist)
----@param emptiableItemLocation ItemLocationMixin
+---@param emptiableItemLocation EmptiableItemLocation
 ---@return boolean itemExists
 function C_Item.DoesItemExist(emptiableItemLocation) end
 
@@ -50,17 +50,17 @@ function C_Item.DoesItemExist(emptiableItemLocation) end
 function C_Item.DoesItemExistByID(itemInfo) end
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_Item.DoesItemMatchBonusTreeReplacement)
----@param itemLoc ItemLocationMixin
+---@param itemLoc ItemLocation
 ---@return boolean matchesBonusTree
 function C_Item.DoesItemMatchBonusTreeReplacement(itemLoc) end
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_Item.DoesItemMatchTargetEnchantingSpell)
----@param itemLoc ItemLocationMixin
+---@param itemLoc ItemLocation
 ---@return boolean matchesTargetEnchantingSpell
 function C_Item.DoesItemMatchTargetEnchantingSpell(itemLoc) end
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_Item.DoesItemMatchTrackJump)
----@param itemLoc ItemLocationMixin
+---@param itemLoc ItemLocation
 ---@return boolean matchesTrackJump
 function C_Item.DoesItemMatchTrackJump(itemLoc) end
 
@@ -82,23 +82,23 @@ function C_Item.EndRefund(type) end
 function C_Item.EquipItemByName(itemInfo, dstSlot) end
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_Item.GetAppliedItemTransmogInfo)
----@param itemLoc ItemLocationMixin
----@return ItemTransmogInfoMixin? info
+---@param itemLoc ItemLocation
+---@return ItemTransmogInfo? info
 function C_Item.GetAppliedItemTransmogInfo(itemLoc) end
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_Item.GetBaseItemTransmogInfo)
----@param itemLoc ItemLocationMixin
----@return ItemTransmogInfoMixin? info
+---@param itemLoc ItemLocation
+---@return ItemTransmogInfo? info
 function C_Item.GetBaseItemTransmogInfo(itemLoc) end
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_Item.GetCurrentItemLevel)
----@param itemLocation ItemLocationMixin
+---@param itemLocation ItemLocation
 ---@return number? currentItemLevel
 function C_Item.GetCurrentItemLevel(itemLocation) end
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_Item.GetCurrentItemTransmogInfo)
----@param itemLoc ItemLocationMixin
----@return ItemTransmogInfoMixin? info
+---@param itemLoc ItemLocation
+---@return ItemTransmogInfo? info
 function C_Item.GetCurrentItemTransmogInfo(itemLoc) end
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_Item.GetDelvePreviewItemLink)
@@ -132,7 +132,7 @@ function C_Item.GetItemChildInfo(itemInfo, slotID) end
 function C_Item.GetItemClassInfo(itemClassID) end
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_Item.GetItemConversionOutputIcon)
----@param itemLoc ItemLocationMixin
+---@param itemLoc ItemLocation
 ---@return fileID? icon
 function C_Item.GetItemConversionOutputIcon(itemLoc) end
 
@@ -164,7 +164,7 @@ function C_Item.GetItemCreationContext(itemInfo) end
 function C_Item.GetItemFamily(itemInfo) end
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_Item.GetItemGUID)
----@param itemLocation ItemLocationMixin
+---@param itemLocation ItemLocation
 ---@return WOWGUID itemGUID
 function C_Item.GetItemGUID(itemLocation) end
 
@@ -182,7 +182,7 @@ function C_Item.GetItemGem(hyperlink, index) end
 function C_Item.GetItemGemID(itemInfo, index) end
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_Item.GetItemID)
----@param itemLocation ItemLocationMixin
+---@param itemLocation ItemLocation
 ---@return number itemID
 function C_Item.GetItemID(itemLocation) end
 
@@ -197,7 +197,7 @@ function C_Item.GetItemIDByGUID(itemGUID) end
 function C_Item.GetItemIDForItemInfo(itemInfo) end
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_Item.GetItemIcon)
----@param itemLocation ItemLocationMixin
+---@param itemLocation ItemLocation
 ---@return fileID? icon
 function C_Item.GetItemIcon(itemLocation) end
 
@@ -249,7 +249,7 @@ function C_Item.GetItemInventorySlotInfo(inventorySlot) end
 function C_Item.GetItemInventorySlotKey(inventorySlot) end
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_Item.GetItemInventoryType)
----@param itemLocation ItemLocationMixin
+---@param itemLocation ItemLocation
 ---@return Enum.InventoryType? inventoryType
 function C_Item.GetItemInventoryType(itemLocation) end
 
@@ -264,7 +264,7 @@ function C_Item.GetItemInventoryTypeByID(itemInfo) end
 function C_Item.GetItemLearnTransmogSet(itemInfo) end
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_Item.GetItemLink)
----@param itemLocation ItemLocationMixin
+---@param itemLocation ItemLocation
 ---@return string? itemLink
 function C_Item.GetItemLink(itemLocation) end
 
@@ -275,11 +275,11 @@ function C_Item.GetItemLinkByGUID(itemGUID) end
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_Item.GetItemLocation)
 ---@param itemGUID WOWGUID
----@return ItemLocationMixin? itemLocation
+---@return ItemLocation? itemLocation
 function C_Item.GetItemLocation(itemGUID) end
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_Item.GetItemMaxStackSize)
----@param itemLocation ItemLocationMixin
+---@param itemLocation ItemLocation
 ---@return number? stackSize
 function C_Item.GetItemMaxStackSize(itemLocation) end
 
@@ -289,7 +289,7 @@ function C_Item.GetItemMaxStackSize(itemLocation) end
 function C_Item.GetItemMaxStackSizeByID(itemInfo) end
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_Item.GetItemName)
----@param itemLocation ItemLocationMixin
+---@param itemLocation ItemLocation
 ---@return string? itemName
 function C_Item.GetItemName(itemLocation) end
 
@@ -309,7 +309,7 @@ function C_Item.GetItemNumAddedSockets(itemInfo) end
 function C_Item.GetItemNumSockets(itemInfo) end
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_Item.GetItemQuality)
----@param itemLocation ItemLocationMixin
+---@param itemLocation ItemLocation
 ---@return Enum.ItemQuality? itemQuality
 function C_Item.GetItemQuality(itemLocation) end
 
@@ -390,7 +390,7 @@ function C_Item.GetLimitedCurrencyItemInfo(itemInfo) end
 function C_Item.GetSetBonusesForSpecializationByItemID(specID, itemID) end
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_Item.GetStackCount)
----@param itemLocation ItemLocationMixin
+---@param itemLocation ItemLocation
 ---@return number stackCount
 function C_Item.GetStackCount(itemLocation) end
 
@@ -405,12 +405,12 @@ function C_Item.IsAnimaItemByID(itemInfo) end
 function C_Item.IsArtifactPowerItem(itemInfo) end
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_Item.IsBound)
----@param itemLocation ItemLocationMixin
+---@param itemLocation ItemLocation
 ---@return boolean isBound
 function C_Item.IsBound(itemLocation) end
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_Item.IsBoundToAccountUntilEquip)
----@param itemLocation ItemLocationMixin
+---@param itemLocation ItemLocation
 ---@return boolean isBoundToAccountUntilEquip
 function C_Item.IsBoundToAccountUntilEquip(itemLocation) end
 
@@ -471,32 +471,32 @@ function C_Item.IsHarmfulItem(itemInfo) end
 function C_Item.IsHelpfulItem(itemInfo) end
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_Item.IsItemConduit)
----@param itemLoc ItemLocationMixin
+---@param itemLoc ItemLocation
 ---@return boolean isConduit
 function C_Item.IsItemConduit(itemLoc) end
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_Item.IsItemConvertibleAndValidForPlayer)
----@param itemLoc ItemLocationMixin
+---@param itemLoc ItemLocation
 ---@return boolean isItemConvertibleAndValidForPlayer
 function C_Item.IsItemConvertibleAndValidForPlayer(itemLoc) end
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_Item.IsItemCorrupted)
----@param itemLoc ItemLocationMixin
+---@param itemLoc ItemLocation
 ---@return boolean isCorrupted
 function C_Item.IsItemCorrupted(itemLoc) end
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_Item.IsItemCorruptionRelated)
----@param itemLoc ItemLocationMixin
+---@param itemLoc ItemLocation
 ---@return boolean isCorruptionRelated
 function C_Item.IsItemCorruptionRelated(itemLoc) end
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_Item.IsItemCorruptionResistant)
----@param itemLoc ItemLocationMixin
+---@param itemLoc ItemLocation
 ---@return boolean isCorruptionResistant
 function C_Item.IsItemCorruptionResistant(itemLoc) end
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_Item.IsItemDataCached)
----@param itemLocation ItemLocationMixin
+---@param itemLocation ItemLocation
 ---@return boolean isCached
 function C_Item.IsItemDataCached(itemLocation) end
 
@@ -527,7 +527,7 @@ function C_Item.IsItemKeystoneByID(itemInfo) end
 function C_Item.IsItemSpecificToPlayerClass(itemInfo) end
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_Item.IsLocked)
----@param itemLocation ItemLocationMixin
+---@param itemLocation ItemLocation
 ---@return boolean isLocked
 function C_Item.IsLocked(itemLocation) end
 
@@ -543,7 +543,7 @@ function C_Item.IsUsableItem(itemInfo) end
 function C_Item.ItemHasRange(itemInfo) end
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_Item.LockItem)
----@param itemLocation ItemLocationMixin
+---@param itemLocation ItemLocation
 function C_Item.LockItem(itemLocation) end
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_Item.LockItemByGUID)
@@ -564,7 +564,7 @@ function C_Item.ReplaceTradeEnchant() end
 function C_Item.ReplaceTradeskillEnchant() end
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_Item.RequestLoadItemData)
----@param itemLocation ItemLocationMixin
+---@param itemLocation ItemLocation
 function C_Item.RequestLoadItemData(itemLocation) end
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_Item.RequestLoadItemDataByID)
@@ -572,7 +572,7 @@ function C_Item.RequestLoadItemData(itemLocation) end
 function C_Item.RequestLoadItemDataByID(itemInfo) end
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_Item.UnlockItem)
----@param itemLocation ItemLocationMixin
+---@param itemLocation ItemLocation
 function C_Item.UnlockItem(itemLocation) end
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_Item.UnlockItemByGUID)

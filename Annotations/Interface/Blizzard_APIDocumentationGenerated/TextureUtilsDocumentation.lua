@@ -51,7 +51,7 @@ function C_Texture.SetTitleIconTexture(texture, titleID, version) end
 ---@class AtlasInfo
 ---@field width number
 ---@field height number
----@field rawSize Vector2DMixin
+---@field rawSize vector2
 ---@field leftTexCoord number
 ---@field rightTexCoord number
 ---@field topTexCoord number

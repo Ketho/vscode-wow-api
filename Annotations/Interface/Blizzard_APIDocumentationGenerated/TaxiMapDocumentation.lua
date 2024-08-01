@@ -20,7 +20,7 @@ function C_TaxiMap.ShouldMapShowTaxiNodes(uiMapID) end
 
 ---@class MapTaxiNodeInfo
 ---@field nodeID number
----@field position Vector2DMixin
+---@field position vector2
 ---@field name string
 ---@field atlasName string
 ---@field faction Enum.FlightPathFaction
@@ -29,7 +29,7 @@ function C_TaxiMap.ShouldMapShowTaxiNodes(uiMapID) end
 
 ---@class TaxiNodeInfo
 ---@field nodeID number
----@field position Vector2DMixin
+---@field position vector2
 ---@field name string
 ---@field state Enum.FlightPathState
 ---@field slotIndex number

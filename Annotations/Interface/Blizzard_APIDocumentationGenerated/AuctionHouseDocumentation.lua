@@ -9,7 +9,7 @@ C_AuctionHouse = {}
 function C_AuctionHouse.CalculateCommodityDeposit(itemID, duration, quantity) end
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_AuctionHouse.CalculateItemDeposit)
----@param item ItemLocationMixin
+---@param item ItemLocation
 ---@param duration number
 ---@param quantity number
 ---@return number? depositCost
@@ -39,14 +39,14 @@ function C_AuctionHouse.CloseAuctionHouse() end
 function C_AuctionHouse.ConfirmCommoditiesPurchase(itemID, quantity) end
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_AuctionHouse.ConfirmPostCommodity)
----@param item ItemLocationMixin
+---@param item ItemLocation
 ---@param duration number
 ---@param quantity number
 ---@param unitPrice BigUInteger
 function C_AuctionHouse.ConfirmPostCommodity(item, duration, quantity, unitPrice) end
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_AuctionHouse.ConfirmPostItem)
----@param item ItemLocationMixin
+---@param item ItemLocation
 ---@param duration number
 ---@param quantity number
 ---@param bid? BigUInteger
@@ -68,7 +68,7 @@ function C_AuctionHouse.GetAuctionInfoByID(auctionID) end
 function C_AuctionHouse.GetAuctionItemSubClasses(classID) end
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_AuctionHouse.GetAvailablePostCount)
----@param item ItemLocationMixin
+---@param item ItemLocation
 ---@return number listCount
 function C_AuctionHouse.GetAvailablePostCount(item) end
 
@@ -116,12 +116,12 @@ function C_AuctionHouse.GetExtraBrowseInfo(itemKey) end
 function C_AuctionHouse.GetFilterGroups() end
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_AuctionHouse.GetItemCommodityStatus)
----@param item ItemLocationMixin
+---@param item ItemLocation
 ---@return Enum.ItemCommodityStatus isCommodity
 function C_AuctionHouse.GetItemCommodityStatus(item) end
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_AuctionHouse.GetItemKeyFromItem)
----@param item ItemLocationMixin
+---@param item ItemLocation
 ---@return ItemKey itemKey
 function C_AuctionHouse.GetItemKeyFromItem(item) end
 
@@ -311,7 +311,7 @@ function C_AuctionHouse.HasSearchResults(itemKey) end
 function C_AuctionHouse.IsFavoriteItem(itemKey) end
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_AuctionHouse.IsSellItemValid)
----@param item ItemLocationMixin
+---@param item ItemLocation
 ---@param displayError? boolean Default = true
 ---@return boolean valid
 function C_AuctionHouse.IsSellItemValid(item, displayError) end
@@ -334,7 +334,7 @@ function C_AuctionHouse.MakeItemKey(itemID, itemLevel, itemSuffix, battlePetSpec
 function C_AuctionHouse.PlaceBid(auctionID, bidAmount) end
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_AuctionHouse.PostCommodity)
----@param item ItemLocationMixin
+---@param item ItemLocation
 ---@param duration number
 ---@param quantity number
 ---@param unitPrice BigUInteger
@@ -342,7 +342,7 @@ function C_AuctionHouse.PlaceBid(auctionID, bidAmount) end
 function C_AuctionHouse.PostCommodity(item, duration, quantity, unitPrice) end
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_AuctionHouse.PostItem)
----@param item ItemLocationMixin
+---@param item ItemLocation
 ---@param duration number
 ---@param quantity number
 ---@param bid? BigUInteger

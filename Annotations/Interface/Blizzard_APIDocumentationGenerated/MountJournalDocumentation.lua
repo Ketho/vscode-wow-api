@@ -2,7 +2,7 @@
 C_MountJournal = {}
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_MountJournal.ApplyMountEquipment)
----@param itemLocation ItemLocationMixin
+---@param itemLocation ItemLocation
 ---@return boolean canContinue
 function C_MountJournal.ApplyMountEquipment(itemLocation) end
 
@@ -172,7 +172,7 @@ function C_MountJournal.IsDragonridingUnlocked() end
 
 ---Determines if the item is mount equipment based on its class and subclass.
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_MountJournal.IsItemMountEquipment)
----@param itemLocation ItemLocationMixin
+---@param itemLocation ItemLocation
 ---@return boolean isMountEquipment
 function C_MountJournal.IsItemMountEquipment(itemLocation) end
 

@@ -7,33 +7,33 @@ C_PlayerInfo = {}
 function C_PlayerInfo.GUIDIsPlayer(guid) end
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_PlayerInfo.GetClass)
----@param playerLocation PlayerLocationMixin
+---@param playerLocation PlayerLocation
 ---@return string? className
 ---@return string? classFilename
 ---@return number? classID
 function C_PlayerInfo.GetClass(playerLocation) end
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_PlayerInfo.GetName)
----@param playerLocation PlayerLocationMixin
+---@param playerLocation PlayerLocation
 ---@return string? name
 function C_PlayerInfo.GetName(playerLocation) end
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_PlayerInfo.GetRace)
----@param playerLocation PlayerLocationMixin
+---@param playerLocation PlayerLocation
 ---@return number? raceID
 function C_PlayerInfo.GetRace(playerLocation) end
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_PlayerInfo.GetSex)
----@param playerLocation PlayerLocationMixin
+---@param playerLocation PlayerLocation
 ---@return number? sex
 function C_PlayerInfo.GetSex(playerLocation) end
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_PlayerInfo.IsConnected)
----@param playerLocation? PlayerLocationMixin
+---@param playerLocation? PlayerLocation
 ---@return boolean? isConnected
 function C_PlayerInfo.IsConnected(playerLocation) end
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_PlayerInfo.UnitIsSameServer)
----@param playerLocation PlayerLocationMixin
+---@param playerLocation PlayerLocation
 ---@return boolean unitIsSameServer
 function C_PlayerInfo.UnitIsSameServer(playerLocation) end

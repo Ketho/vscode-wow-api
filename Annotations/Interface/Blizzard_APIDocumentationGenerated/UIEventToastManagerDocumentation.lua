@@ -37,5 +37,5 @@ function C_EventToastManager.RemoveCurrentToast() end
 ---@field hideDefaultAtlas boolean?
 ---@field showSoundKitID number?
 ---@field hideSoundKitID number?
----@field colorTint ColorMixin?
+---@field colorTint colorRGB?
 ---@field flags number

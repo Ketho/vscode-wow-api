@@ -2,7 +2,7 @@
 C_QuestItemUse = {}
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_QuestItemUse.CanUseQuestItemOnObject)
----@param item ItemLocationMixin
+---@param item ItemLocation
 ---@param unit UnitToken
 ---@param checkRange? boolean
 ---@return boolean canUse

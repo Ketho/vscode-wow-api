@@ -28,7 +28,7 @@ function ModelSceneActor:GetAutoDress() end
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_ModelSceneActor_GetItemTransmogInfo)
 ---@param inventorySlots number
----@return ItemTransmogInfoMixin? itemTransmogInfo
+---@return ItemTransmogInfo? itemTransmogInfo
 function ModelSceneActor:GetItemTransmogInfo(inventorySlots) end
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_ModelSceneActor_GetItemTransmogInfoList)
@@ -87,7 +87,7 @@ function ModelSceneActor:SetAutoDress(autoDress) end
 function ModelSceneActor:SetFrontEndLobbyModelFromDefaultCharacterDisplay(characterIndex) end
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_ModelSceneActor_SetItemTransmogInfo)
----@param transmogInfo ItemTransmogInfoMixin
+---@param transmogInfo ItemTransmogInfo
 ---@param inventorySlots? number
 ---@param ignoreChildItems? boolean Default = false
 ---@return Enum.ItemTryOnReason result

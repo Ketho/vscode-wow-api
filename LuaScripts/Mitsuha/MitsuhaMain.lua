@@ -90,9 +90,7 @@ local fs_field = "---@%s %s %s"
 
 function Mitsuha:GetField(annotation, apiTable)
 	local str, paramType
-	if apiTable.Mixin then
-		paramType = apiTable.Mixin
-	elseif apiTable.InnerType then
+	if apiTable.InnerType then
 		paramType = GetType(apiTable.InnerType).."[]"
 	else
 		paramType = GetType(apiTable.Type)

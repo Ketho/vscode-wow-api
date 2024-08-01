@@ -10,7 +10,7 @@ function C_ScrappingMachineUI.DropPendingScrapItemFromCursor(index) end
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_ScrappingMachineUI.GetCurrentPendingScrapItemLocationByIndex)
 ---@param index number
----@return ItemLocationMixin itemLoc
+---@return ItemLocation itemLoc
 function C_ScrappingMachineUI.GetCurrentPendingScrapItemLocationByIndex(index) end
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_ScrappingMachineUI.GetScrapSpellID)

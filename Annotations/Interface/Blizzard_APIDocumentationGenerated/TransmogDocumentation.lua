@@ -30,7 +30,7 @@ function C_Transmog.CanTransmogItemWithItem(targetItemInfo, sourceItemInfo) end
 function C_Transmog.ClearAllPending() end
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_Transmog.ClearPending)
----@param transmogLocation TransmogLocationMixin
+---@param transmogLocation TransmogLocation
 function C_Transmog.ClearPending(transmogLocation) end
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_Transmog.Close)
@@ -70,12 +70,12 @@ function C_Transmog.GetCreatureDisplayIDForSource(itemModifiedAppearanceID) end
 function C_Transmog.GetItemIDForSource(itemModifiedAppearanceID) end
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_Transmog.GetPending)
----@param transmogLocation TransmogLocationMixin
----@return TransmogPendingInfoMixin pendingInfo
+---@param transmogLocation TransmogLocation
+---@return TransmogPendingInfo pendingInfo
 function C_Transmog.GetPending(transmogLocation) end
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_Transmog.GetSlotEffectiveCategory)
----@param transmogLocation TransmogLocationMixin
+---@param transmogLocation TransmogLocation
 ---@return Enum.TransmogCollectionType categoryID
 function C_Transmog.GetSlotEffectiveCategory(transmogLocation) end
 
@@ -85,7 +85,7 @@ function C_Transmog.GetSlotEffectiveCategory(transmogLocation) end
 function C_Transmog.GetSlotForInventoryType(inventoryType) end
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_Transmog.GetSlotInfo)
----@param transmogLocation TransmogLocationMixin
+---@param transmogLocation TransmogLocation
 ---@return boolean isTransmogrified
 ---@return boolean hasPending
 ---@return boolean isPendingCollected
@@ -97,13 +97,13 @@ function C_Transmog.GetSlotForInventoryType(inventoryType) end
 function C_Transmog.GetSlotInfo(transmogLocation) end
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_Transmog.GetSlotUseError)
----@param transmogLocation TransmogLocationMixin
+---@param transmogLocation TransmogLocation
 ---@return number errorCode
 ---@return string errorString
 function C_Transmog.GetSlotUseError(transmogLocation) end
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_Transmog.GetSlotVisualInfo)
----@param transmogLocation TransmogLocationMixin
+---@param transmogLocation TransmogLocation
 ---@return number baseSourceID
 ---@return number baseVisualID
 ---@return number appliedSourceID
@@ -121,7 +121,7 @@ function C_Transmog.IsAtTransmogNPC() end
 
 ---Returns true if the only pending for the location's slot is a ToggleOff for the secondary appearance.
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_Transmog.IsSlotBeingCollapsed)
----@param transmogLocation TransmogLocationMixin
+---@param transmogLocation TransmogLocation
 ---@return boolean isBeingCollapsed
 function C_Transmog.IsSlotBeingCollapsed(transmogLocation) end
 
@@ -130,8 +130,8 @@ function C_Transmog.IsSlotBeingCollapsed(transmogLocation) end
 function C_Transmog.LoadOutfit(outfitID) end
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_Transmog.SetPending)
----@param transmogLocation TransmogLocationMixin
----@param pendingInfo TransmogPendingInfoMixin
+---@param transmogLocation TransmogLocation
+---@param pendingInfo TransmogPendingInfo
 function C_Transmog.SetPending(transmogLocation, pendingInfo) end
 
 ---@class TransmogApplyWarningInfo

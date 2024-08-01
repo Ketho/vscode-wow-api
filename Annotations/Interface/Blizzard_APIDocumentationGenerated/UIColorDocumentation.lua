@@ -7,4 +7,4 @@ function C_UIColor.GetColors() end
 
 ---@class DBColorExport
 ---@field baseTag string
----@field color ColorMixin
+---@field color colorRGBA

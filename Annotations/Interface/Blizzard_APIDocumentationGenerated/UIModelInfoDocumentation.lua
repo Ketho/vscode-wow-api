@@ -58,7 +58,7 @@ function C_ModelInfo.GetModelSceneInfoByID(modelSceneID) end
 ---@class UIModelSceneActorInfo
 ---@field modelActorID number
 ---@field scriptTag string
----@field position Vector3DMixin
+---@field position vector3
 ---@field yaw number
 ---@field pitch number
 ---@field roll number
@@ -72,14 +72,14 @@ function C_ModelInfo.GetModelSceneInfoByID(modelSceneID) end
 ---@field modelSceneCameraID number
 ---@field scriptTag string
 ---@field cameraType string
----@field target Vector3DMixin
+---@field target vector3
 ---@field yaw number
 ---@field pitch number
 ---@field roll number
 ---@field zoomDistance number
 ---@field minZoomDistance number
 ---@field maxZoomDistance number
----@field zoomedTargetOffset Vector3DMixin
+---@field zoomedTargetOffset vector3
 ---@field zoomedYawOffset number
 ---@field zoomedPitchOffset number
 ---@field zoomedRollOffset number

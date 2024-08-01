@@ -284,8 +284,8 @@ function Model:SetSequenceTime(sequence, timeOffset) end
 function Model:SetShadowEffect(strength) end
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_Model_SetTransform)
----@param translation? Vector3DMixin
----@param rotation? Vector3DMixin
+---@param translation? vector3
+---@param rotation? vector3
 ---@param scale? number
 function Model:SetTransform(translation, rotation, scale) end
 
@@ -302,8 +302,8 @@ function Model:SetViewInsets(left, right, top, bottom) end
 function Model:SetViewTranslation(x, y) end
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_Model_TransformCameraSpaceToModelSpace)
----@param cameraPosition Vector3DMixin
----@return Vector3DMixin modelPosition
+---@param cameraPosition vector3
+---@return vector3 modelPosition
 function Model:TransformCameraSpaceToModelSpace(cameraPosition) end
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_Model_UseModelCenterToTransform)

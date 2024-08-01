@@ -51,7 +51,7 @@ function C_AreaPoiInfo.IsAreaPOITimed(areaPoiID) end
 
 ---@class AreaPOIInfo
 ---@field areaPoiID number
----@field position Vector2DMixin
+---@field position vector2
 ---@field name string
 ---@field description string?
 ---@field linkedUiMapID number?

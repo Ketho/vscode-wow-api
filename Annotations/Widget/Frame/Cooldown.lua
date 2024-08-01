@@ -166,8 +166,8 @@ function Cooldown:SetSwipeColor(colorR, colorG, colorB, a) end
 function Cooldown:SetSwipeTexture(texture, colorR, colorG, colorB, colorA) end
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_Cooldown_SetTexCoordRange)
----@param low Vector2DMixin
----@param high Vector2DMixin
+---@param low vector2
+---@param high vector2
 function Cooldown:SetTexCoordRange(low, high) end
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_Cooldown_SetUseCircularEdge)

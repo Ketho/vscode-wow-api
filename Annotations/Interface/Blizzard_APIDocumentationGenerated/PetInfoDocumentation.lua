@@ -28,7 +28,7 @@ function C_PetInfo.PetRename(name, petNumber, declensions) end
 
 ---@class PetTamerMapInfo
 ---@field areaPoiID number
----@field position Vector2DMixin
+---@field position vector2
 ---@field name string
 ---@field atlasName string?
 ---@field textureIndex number?

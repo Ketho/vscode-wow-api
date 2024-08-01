@@ -22,7 +22,7 @@ function TextureBase:GetHorizTile() end
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_TextureBase_GetRotation)
 ---@return number radians
----@return Vector2DMixin normalizedRotationPoint
+---@return vector2 normalizedRotationPoint
 function TextureBase:GetRotation() end
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_TextureBase_GetTexCoord)
@@ -100,8 +100,8 @@ function TextureBase:SetDesaturation(desaturation) end
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_TextureBase_SetGradient)
 ---@param orientation Orientation
----@param minColor ColorMixin
----@param maxColor ColorMixin
+---@param minColor colorRGBA
+---@param maxColor colorRGBA
 function TextureBase:SetGradient(orientation, minColor, maxColor) end
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_TextureBase_SetHorizTile)
@@ -114,7 +114,7 @@ function TextureBase:SetMask(file) end
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_TextureBase_SetRotation)
 ---@param radians number
----@param normalizedRotationPoint? Vector2DMixin
+---@param normalizedRotationPoint? vector2
 function TextureBase:SetRotation(radians, normalizedRotationPoint) end
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_TextureBase_SetSnapToPixelGrid)

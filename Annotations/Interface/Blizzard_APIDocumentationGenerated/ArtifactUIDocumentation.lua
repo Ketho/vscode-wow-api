@@ -309,7 +309,7 @@ function C_ArtifactUI.GetTotalPurchasedRanks() end
 function C_ArtifactUI.IsArtifactDisabled() end
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_ArtifactUI.IsArtifactItem)
----@param itemLocation ItemLocationMixin
+---@param itemLocation ItemLocation
 ---@return boolean isArtifact
 function C_ArtifactUI.IsArtifactItem(itemLocation) end
 
@@ -368,7 +368,7 @@ function C_ArtifactUI.ShouldSuppressForgeRotation() end
 ---@field failureDescription string?
 ---@field uiCameraID number
 ---@field altHandCameraID number?
----@field swatchColor ColorMixin
+---@field swatchColor colorRGB
 ---@field modelOpacity number
 ---@field modelSaturation number
 ---@field obtainable boolean
@@ -382,9 +382,9 @@ function C_ArtifactUI.ShouldSuppressForgeRotation() end
 ---@class ArtifactArtInfo
 ---@field textureKit textureKit
 ---@field titleName string
----@field titleColor ColorMixin
----@field barConnectedColor ColorMixin
----@field barDisconnectedColor ColorMixin
+---@field titleColor colorRGB
+---@field barConnectedColor colorRGB
+---@field barDisconnectedColor colorRGB
 ---@field uiModelSceneID number
 ---@field spellVisualKitID number
 
@@ -420,8 +420,8 @@ function C_ArtifactUI.ShouldSuppressForgeRotation() end
 ---@field isGoldMedal boolean
 ---@field isFinal boolean
 ---@field tier number
----@field position Vector2DMixin
----@field offset Vector2DMixin?
+---@field position vector2
+---@field offset vector2?
 ---@field linearIndex number?
 
 ---@class ArtifactRelicInfo

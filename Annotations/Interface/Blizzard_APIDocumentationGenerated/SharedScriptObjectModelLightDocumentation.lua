@@ -1,8 +1,8 @@
 ---@meta _
 ---@class ModelLight
 ---@field omnidirectional boolean? Default = false
----@field point Vector3DMixin
+---@field point vector3
 ---@field ambientIntensity number? Default = 0
----@field ambientColor ColorMixin?
+---@field ambientColor colorRGB?
 ---@field diffuseIntensity number? Default = 0
----@field diffuseColor ColorMixin?
+---@field diffuseColor colorRGB?

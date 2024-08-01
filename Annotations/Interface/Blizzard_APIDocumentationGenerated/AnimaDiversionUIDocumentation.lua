@@ -9,7 +9,7 @@ function C_AnimaDiversion.CloseUI() end
 function C_AnimaDiversion.GetAnimaDiversionNodes() end
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_AnimaDiversion.GetOriginPosition)
----@return Vector2DMixin? normalizedPosition
+---@return vector2? normalizedPosition
 function C_AnimaDiversion.GetOriginPosition() end
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_AnimaDiversion.GetReinforceProgress)
@@ -44,5 +44,5 @@ function C_AnimaDiversion.SelectAnimaNode(talentID, temporary) end
 ---@field costs AnimaDiversionCostInfo[]
 ---@field currencyID number
 ---@field icon number
----@field normalizedPosition Vector2DMixin
+---@field normalizedPosition vector2
 ---@field state Enum.AnimaDiversionNodeState

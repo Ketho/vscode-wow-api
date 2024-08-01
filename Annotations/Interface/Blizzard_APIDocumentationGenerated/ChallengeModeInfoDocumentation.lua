@@ -2,7 +2,7 @@
 C_ChallengeMode = {}
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_ChallengeMode.CanUseKeystoneInCurrentMap)
----@param itemLocation ItemLocationMixin
+---@param itemLocation ItemLocation
 ---@return boolean canUse
 function C_ChallengeMode.CanUseKeystoneInCurrentMap(itemLocation) end
 
@@ -53,7 +53,7 @@ function C_ChallengeMode.GetDeathCount() end
 ---Returns a color value from the passed in overall season M+ rating.
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_ChallengeMode.GetDungeonScoreRarityColor)
 ---@param dungeonScore number
----@return ColorMixin scoreColor
+---@return colorRGB scoreColor
 function C_ChallengeMode.GetDungeonScoreRarityColor(dungeonScore) end
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_ChallengeMode.GetGuildLeaders)
@@ -63,7 +63,7 @@ function C_ChallengeMode.GetGuildLeaders() end
 ---Returns a color value from the passed in keystone level.
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_ChallengeMode.GetKeystoneLevelRarityColor)
 ---@param level number
----@return ColorMixin levelScore
+---@return colorRGB levelScore
 function C_ChallengeMode.GetKeystoneLevelRarityColor(level) end
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_ChallengeMode.GetMapScoreInfo)
@@ -103,13 +103,13 @@ function C_ChallengeMode.GetSlottedKeystoneInfo() end
 ---Returns a color value from the passed in mythic+ rating from the combined affix scores for a specific dungeon
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_ChallengeMode.GetSpecificDungeonOverallScoreRarityColor)
 ---@param specificDungeonOverallScore number
----@return ColorMixin specificDungeonOverallScoreColor
+---@return colorRGB specificDungeonOverallScoreColor
 function C_ChallengeMode.GetSpecificDungeonOverallScoreRarityColor(specificDungeonOverallScore) end
 
 ---Returns a color value from the passed in mythic+ rating for a specific dungeon.
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_ChallengeMode.GetSpecificDungeonScoreRarityColor)
 ---@param specificDungeonScore number
----@return ColorMixin specificDungeonScoreColor
+---@return colorRGB specificDungeonScoreColor
 function C_ChallengeMode.GetSpecificDungeonScoreRarityColor(specificDungeonScore) end
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_ChallengeMode.HasSlottedKeystone)

@@ -13,7 +13,7 @@
 ---@field modifiers number[]
 
 ---@class RuneforgeLegendaryCraftDescription
----@field baseItem ItemLocationMixin
+---@field baseItem ItemLocation
 ---@field runeforgePowerID number
 ---@field modifiers number[]
 

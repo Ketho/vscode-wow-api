@@ -95,7 +95,7 @@ function C_ContributionCollector.IsAwaitingRewardQuestData(contributionID) end
 
 ---@class ContributionAppearance
 ---@field stateName string
----@field stateColor ColorMixin
+---@field stateColor colorRGB
 ---@field tooltipLine string
 ---@field tooltipUseTimeRemaining boolean
 ---@field statusBarAtlas textureAtlas
@@ -104,7 +104,7 @@ function C_ContributionCollector.IsAwaitingRewardQuestData(contributionID) end
 
 ---@class ContributionMapInfo
 ---@field areaPoiID number
----@field position Vector2DMixin
+---@field position vector2
 ---@field name string
 ---@field atlasName string
 ---@field collectorCreatureID number

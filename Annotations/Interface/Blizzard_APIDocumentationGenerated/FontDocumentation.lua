@@ -9,12 +9,12 @@ function GetFontInfo(fontObject) end
 function GetFonts() end
 
 ---@class FontScriptInfo
----@field color ColorMixin
+---@field color colorRGBA
 ---@field height number
 ---@field outline string
 ---@field shadow FontScriptShadowInfo?
 
 ---@class FontScriptShadowInfo
----@field color ColorMixin
+---@field color colorRGBA
 ---@field x number
 ---@field y number

@@ -7,17 +7,17 @@ local VertexColor = {}
 
 ---@meta _
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_VertexColor_GetEndColor)
----@return ColorMixin color
+---@return colorRGBA color
 function VertexColor:GetEndColor() end
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_VertexColor_GetStartColor)
----@return ColorMixin color
+---@return colorRGBA color
 function VertexColor:GetStartColor() end
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_VertexColor_SetEndColor)
----@param color ColorMixin
+---@param color colorRGBA
 function VertexColor:SetEndColor(color) end
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_VertexColor_SetStartColor)
----@param color ColorMixin
+---@param color colorRGBA
 function VertexColor:SetStartColor(color) end

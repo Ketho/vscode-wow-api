@@ -67,7 +67,7 @@ function C_ChatInfo.GetClubStreamIDs(clubID) end
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_ChatInfo.GetColorForChatType)
 ---@param chatType string
----@return ColorMixin? color
+---@return colorRGB? color
 function C_ChatInfo.GetColorForChatType(chatType) end
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_ChatInfo.GetGeneralChannelID)

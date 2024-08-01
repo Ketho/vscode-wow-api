@@ -7,8 +7,8 @@ local ModelSceneFrameActorBase = {}
 function ModelSceneFrameActorBase:ClearModel() end
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_ModelSceneFrameActorBase_GetActiveBoundingBox)
----@return Vector3DMixin boxBottom
----@return Vector3DMixin boxTop
+---@return vector3 boxBottom
+---@return vector3 boxTop
 function ModelSceneFrameActorBase:GetActiveBoundingBox() end
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_ModelSceneFrameActorBase_GetAlpha)
@@ -32,8 +32,8 @@ function ModelSceneFrameActorBase:GetAnimationVariation() end
 function ModelSceneFrameActorBase:GetDesaturation() end
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_ModelSceneFrameActorBase_GetMaxBoundingBox)
----@return Vector3DMixin boxBottom
----@return Vector3DMixin boxTop
+---@return vector3 boxBottom
+---@return vector3 boxTop
 function ModelSceneFrameActorBase:GetMaxBoundingBox() end
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_ModelSceneFrameActorBase_GetModelFileID)

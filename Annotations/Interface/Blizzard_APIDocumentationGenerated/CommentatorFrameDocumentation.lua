@@ -351,17 +351,17 @@ function C_Commentator.GetSpeedFactor() end
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_Commentator.GetStartLocation)
 ---@param mapID number
----@return Vector3DMixin pos
+---@return vector3 pos
 function C_Commentator.GetStartLocation(mapID) end
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_Commentator.GetTeamColor)
 ---@param teamIndex number
----@return ColorMixin color
+---@return colorRGB color
 function C_Commentator.GetTeamColor(teamIndex) end
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_Commentator.GetTeamColorByUnit)
 ---@param unitToken UnitToken
----@return ColorMixin color
+---@return colorRGB color
 function C_Commentator.GetTeamColorByUnit(unitToken) end
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_Commentator.GetTimeLeftInMatch)
