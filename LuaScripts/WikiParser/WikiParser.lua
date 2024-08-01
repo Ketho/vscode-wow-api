@@ -9,9 +9,9 @@ local nonBlizzDocumented = require("LuaScripts.WikiParser.WikiText.NonBlizzardDo
 local PATH = Path.join("Annotations", "Data", "Wiki.lua")
 
 local parserData = require("LuaScripts.WikiParser.XmlParser")
-local validated, nonvalidated, emmyLua
+local validated, nonvalidated, annotations
 if type(parserData) == "table" then
-	validated, nonvalidated, emmyLua, emmyLuaMulti = unpack(parserData)
+	validated, nonvalidated, annotations, multi = unpack(parserData)
 else
 	return
 end
@@ -35,18 +35,25 @@ local sorted = Util:SortTable(nonBlizzDocumented)
 local wiki_tbl = {}
 table.insert(wiki_tbl, "---@meta _\n")
 for _, name in pairs(sorted) do
-	if emmyLua[name] then
-		table.insert(wiki_tbl, string.format("---[Documentation](https://warcraft.wiki.gg/wiki/API_%s)\n", name))
-		table.insert(wiki_tbl, emmyLua[name].."\n\n")
-	elseif convertedApi[name] then
-		table.insert(wiki_tbl, Mitsuha:GetFunction(convertedApi[name]).."\n\n")
-		countValid = countValid + 1
-	else
-		table.insert(wiki_tbl, fs:format(name, name, wowpedia_arguments[name] or ""))
-		if nonvalidated[name] then
-			countNonValid = countNonValid + 1
+	if not multi[name] then
+		if annotations[name] then
+			table.insert(wiki_tbl, string.format("---[Documentation](https://warcraft.wiki.gg/wiki/API_%s)\n", name))
+			table.insert(wiki_tbl, annotations[name].."\n\n")
+		elseif convertedApi[name] then
+			table.insert(wiki_tbl, Mitsuha:GetFunction(convertedApi[name]).."\n\n")
+			countValid = countValid + 1
 		else
-			countNonDoc = countNonDoc + 1
+			if nonvalidated[name] then
+				table.insert(wiki_tbl, string.format("---#invalidpage  \n", name))
+			else
+				table.insert(wiki_tbl, string.format("---#nopage  \n", name))
+			end
+			table.insert(wiki_tbl, fs:format(name, name, wowpedia_arguments[name] or ""))
+			if nonvalidated[name] then
+				countNonValid = countNonValid + 1
+			else
+				countNonDoc = countNonDoc + 1
+			end
 		end
 	end
 end

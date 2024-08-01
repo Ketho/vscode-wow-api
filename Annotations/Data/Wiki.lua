@@ -33,6 +33,7 @@ function AcceptTrade() end
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_AcknowledgeAutoAcceptQuest)
 function AcknowledgeAutoAcceptQuest() end
 
+---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_AcknowledgeSurvey)
 function AcknowledgeSurvey(caseIndex) end
 
@@ -59,9 +60,11 @@ function AddChatWindowMessages(index, messageGroup) end
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_AddTradeMoney)
 function AddTradeMoney() end
 
+---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_AntiAliasingSupported)
 function AntiAliasingSupported() end
 
+---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_ArchaeologyGetIconInfo)
 function ArchaeologyGetIconInfo(index) end
 
@@ -70,21 +73,26 @@ function ArchaeologyGetIconInfo(index) end
 ---@return number numSites
 function ArchaeologyMapUpdateAll(uiMapID) end
 
+---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_ArcheologyGetVisibleBlobID)
 function ArcheologyGetVisibleBlobID(index) end
 
+---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_AreTalentsLocked)
 function AreTalentsLocked() end
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_AscendStop)
 function AscendStop() end
 
+---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_AttachGlyphToSpell)
 function AttachGlyphToSpell(spellID) end
 
+---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_AutoChooseCurrentGraphicsSetting)
 function AutoChooseCurrentGraphicsSetting() end
 
+---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_AutoLootMailItem)
 function AutoLootMailItem(index) end
 
@@ -93,12 +101,15 @@ function AutoLootMailItem(index) end
 ---@param slot number
 function AutoStoreGuildBankItem(tab, slot) end
 
+---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_BNAcceptFriendInvite)
 function BNAcceptFriendInvite(ID) end
 
+---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_BNCheckBattleTagInviteToGuildMember)
 function BNCheckBattleTagInviteToGuildMember(fullname) end
 
+---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_BNCheckBattleTagInviteToUnit)
 function BNCheckBattleTagInviteToUnit(unit) end
 
@@ -106,18 +117,23 @@ function BNCheckBattleTagInviteToUnit(unit) end
 ---@return boolean connected
 function BNConnected() end
 
+---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_BNDeclineFriendInvite)
 function BNDeclineFriendInvite(ID) end
 
+---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_BNFeaturesEnabled)
 function BNFeaturesEnabled() end
 
+---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_BNFeaturesEnabledAndConnected)
 function BNFeaturesEnabledAndConnected() end
 
+---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_BNGetBlockedInfo)
 function BNGetBlockedInfo(index) end
 
+---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_BNGetDisplayName)
 function BNGetDisplayName(bnetIdAccount) end
 
@@ -154,12 +170,15 @@ function BNGetFriendInviteInfo(inviteIndex) end
 ---@return boolean isRIDEnabled
 function BNGetInfo() end
 
+---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_BNGetNumBlocked)
 function BNGetNumBlocked() end
 
+---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_BNGetNumFOF)
 function BNGetNumFOF(ID, mutual, non) end
 
+---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_BNGetNumFriendInvites)
 function BNGetNumFriendInvites() end
 
@@ -170,36 +189,47 @@ function BNGetNumFriendInvites() end
 ---@return number numBNetFavoriteOnline
 function BNGetNumFriends() end
 
+---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_BNGetSelectedBlock)
 function BNGetSelectedBlock() end
 
+---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_BNGetSelectedFriend)
 function BNGetSelectedFriend() end
 
+---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_BNInviteFriend)
 function BNInviteFriend(bnetIDGameAccount) end
 
+---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_BNIsBlocked)
 function BNIsBlocked(ID) end
 
+---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_BNIsFriend)
 function BNIsFriend(presenceID) end
 
+---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_BNIsSelf)
 function BNIsSelf(presenceID) end
 
+---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_BNRemoveFriend)
 function BNRemoveFriend(ID) end
 
+---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_BNRequestFOFInfo)
 function BNRequestFOFInfo(bnetIDAccount) end
 
+---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_BNRequestInviteFriend)
 function BNRequestInviteFriend(presenceID, tank, heal, dps) end
 
+---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_BNSendFriendInvite)
 function BNSendFriendInvite(text, noteText) end
 
+---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_BNSendFriendInviteByID)
 function BNSendFriendInviteByID(ID, noteText) end
 
@@ -209,6 +239,7 @@ function BNSendFriendInviteByID(ID, noteText) end
 ---@param text string
 function BNSendGameData(gameAccountID, prefix, text) end
 
+---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_BNSendVerifiedBattleTagInvite)
 function BNSendVerifiedBattleTagInvite() end
 
@@ -221,6 +252,7 @@ function BNSendWhisper(bnetAccountID, message) end
 ---@param bool boolean
 function BNSetAFK(bool) end
 
+---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_BNSetBlocked)
 function BNSetBlocked(ID, bool) end
 
@@ -242,33 +274,43 @@ function BNSetFriendFavoriteFlag(id, isFavorite) end
 ---@param noteText string
 function BNSetFriendNote(bnetIDAccount, noteText) end
 
+---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_BNSetSelectedBlock)
 function BNSetSelectedBlock(index) end
 
+---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_BNSetSelectedFriend)
 function BNSetSelectedFriend(index) end
 
+---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_BNSummonFriendByIndex)
 function BNSummonFriendByIndex(id) end
 
+---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_BNTokenFindName)
 function BNTokenFindName(target) end
 
+---#invalidpage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_BankButtonIDToInvSlotID)
 function BankButtonIDToInvSlotID(buttonID, isBag) end
 
+---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_BattlefieldMgrEntryInviteResponse)
 function BattlefieldMgrEntryInviteResponse(queueId, accept) end
 
+---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_BattlefieldMgrExitRequest)
 function BattlefieldMgrExitRequest(queueId) end
 
+---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_BattlefieldMgrQueueInviteResponse)
 function BattlefieldMgrQueueInviteResponse(queueId, accept) end
 
+---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_BattlefieldMgrQueueRequest)
 function BattlefieldMgrQueueRequest() end
 
+---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_BuyGuildBankTab)
 function BuyGuildBankTab() end
 
@@ -281,6 +323,7 @@ function BuyGuildCharter(guildName) end
 ---@param quantity? number
 function BuyMerchantItem(index, quantity) end
 
+---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_BuyReagentBank)
 function BuyReagentBank() end
 
@@ -292,99 +335,130 @@ function BuyTrainerService(index) end
 ---@param slot number
 function BuybackItem(slot) end
 
+---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_AccountServices.IsAccountLockedPostSave)
 function C_AccountServices.IsAccountLockedPostSave() end
 
+---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_AccountServices.IsAccountSaveEnabled)
 function C_AccountServices.IsAccountSaveEnabled() end
 
+---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_AccountServices.IsAccountSaveInProgress)
 function C_AccountServices.IsAccountSaveInProgress() end
 
+---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_AccountServices.SaveAccountData)
 function C_AccountServices.SaveAccountData() end
 
+---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_AdventureJournal.ActivateEntry)
 function C_AdventureJournal.ActivateEntry(index) end
 
+---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_AdventureJournal.CanBeShown)
 function C_AdventureJournal.CanBeShown() end
 
+---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_AdventureJournal.GetNumAvailableSuggestions)
 function C_AdventureJournal.GetNumAvailableSuggestions() end
 
+---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_AdventureJournal.GetPrimaryOffset)
 function C_AdventureJournal.GetPrimaryOffset() end
 
+---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_AdventureJournal.GetReward)
 function C_AdventureJournal.GetReward() end
 
+---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_AdventureJournal.GetSuggestions)
 function C_AdventureJournal.GetSuggestions(suggestions) end
 
+---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_AdventureJournal.SetPrimaryOffset)
 function C_AdventureJournal.SetPrimaryOffset(offset) end
 
+---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_AdventureJournal.UpdateSuggestions)
 function C_AdventureJournal.UpdateSuggestions(levelUp) end
 
+---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_AdventureMap.Close)
 function C_AdventureMap.Close() end
 
+---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_AdventureMap.GetMapID)
 function C_AdventureMap.GetMapID() end
 
+---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_AdventureMap.GetMapInsetDetailTileInfo)
 function C_AdventureMap.GetMapInsetDetailTileInfo(insetIndex, tileIndex) end
 
+---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_AdventureMap.GetMapInsetInfo)
 function C_AdventureMap.GetMapInsetInfo(insetIndex) end
 
+---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_AdventureMap.GetNumMapInsets)
 function C_AdventureMap.GetNumMapInsets() end
 
+---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_AdventureMap.GetNumQuestOffers)
 function C_AdventureMap.GetNumQuestOffers() end
 
+---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_AdventureMap.GetNumZoneChoices)
 function C_AdventureMap.GetNumZoneChoices() end
 
+---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_AdventureMap.GetQuestInfo)
 function C_AdventureMap.GetQuestInfo(questID) end
 
+---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_AdventureMap.GetQuestOfferInfo)
 function C_AdventureMap.GetQuestOfferInfo(offerIndex) end
 
+---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_AdventureMap.GetZoneChoiceInfo)
 function C_AdventureMap.GetZoneChoiceInfo(choiceIndex) end
 
+---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_AdventureMap.StartQuest)
 function C_AdventureMap.StartQuest(questID) end
 
+---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_ArrowCalloutManager.AcknowledgeCallout)
 function C_ArrowCalloutManager.AcknowledgeCallout() end
 
+---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_ArrowCalloutManager.HideCallout)
 function C_ArrowCalloutManager.HideCallout() end
 
+---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_ArrowCalloutManager.HideWorldLootObjectCallout)
 function C_ArrowCalloutManager.HideWorldLootObjectCallout() end
 
+---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_ArrowCalloutManager.SetWorldLootObjectCalloutFromGUID)
 function C_ArrowCalloutManager.SetWorldLootObjectCalloutFromGUID() end
 
+---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_ArrowCalloutManager.SwapWorldLootObjectCallout)
 function C_ArrowCalloutManager.SwapWorldLootObjectCallout() end
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_BlackMarket.Close)
 function C_BlackMarket.Close() end
 
+---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_BlackMarket.GetHotItem)
 function C_BlackMarket.GetHotItem() end
 
+---#invalidpage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_BlackMarket.GetItemInfoByID)
 function C_BlackMarket.GetItemInfoByID(marketID) end
 
+---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_BlackMarket.GetItemInfoByIndex)
 function C_BlackMarket.GetItemInfoByIndex(index) end
 
@@ -404,72 +478,95 @@ function C_BlackMarket.ItemPlaceBid(marketID, bid) end
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_BlackMarket.RequestItems)
 function C_BlackMarket.RequestItems() end
 
+---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_CharacterServices.ArePaidCharacterTransfersBetweenBnetAccountsEnabled)
 function C_CharacterServices.ArePaidCharacterTransfersBetweenBnetAccountsEnabled() end
 
+---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_CharacterServices.AssignNameChangeDistribution)
 function C_CharacterServices.AssignNameChangeDistribution() end
 
+---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_CharacterServices.AssignPCTDistribution)
 function C_CharacterServices.AssignPCTDistribution() end
 
+---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_CharacterServices.AssignRaceOrFactionChangeDistribution)
 function C_CharacterServices.AssignRaceOrFactionChangeDistribution() end
 
+---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_CharacterServices.AssignUpgradeDistribution)
 function C_CharacterServices.AssignUpgradeDistribution() end
 
+---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_CharacterServices.CapitalizeCharName)
 function C_CharacterServices.CapitalizeCharName() end
 
+---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_CharacterServices.GetActiveCharacterUpgradeBoostType)
 function C_CharacterServices.GetActiveCharacterUpgradeBoostType() end
 
+---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_CharacterServices.GetActiveClassTrialBoostType)
 function C_CharacterServices.GetActiveClassTrialBoostType() end
 
+---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_CharacterServices.GetAutomaticBoost)
 function C_CharacterServices.GetAutomaticBoost() end
 
+---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_CharacterServices.GetAutomaticBoostCharacter)
 function C_CharacterServices.GetAutomaticBoostCharacter() end
 
+---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_CharacterServices.GetCharacterServiceDisplayData)
 function C_CharacterServices.GetCharacterServiceDisplayData() end
 
+---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_CharacterServices.GetCharacterServiceDisplayDataByVASType)
 function C_CharacterServices.GetCharacterServiceDisplayDataByVASType() end
 
+---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_CharacterServices.GetCharacterServiceDisplayInfo)
 function C_CharacterServices.GetCharacterServiceDisplayInfo() end
 
+---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_CharacterServices.GetVASDistributions)
 function C_CharacterServices.GetVASDistributions() end
 
+---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_CharacterServices.HasRequiredBoostForClassTrial)
 function C_CharacterServices.HasRequiredBoostForClassTrial() end
 
+---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_CharacterServices.HasRequiredBoostForUnrevoke)
 function C_CharacterServices.HasRequiredBoostForUnrevoke() end
 
+---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_CharacterServices.RPEResetCharacter)
 function C_CharacterServices.RPEResetCharacter() end
 
+---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_CharacterServices.SetAutomaticBoost)
 function C_CharacterServices.SetAutomaticBoost() end
 
+---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_CharacterServices.SetAutomaticBoostCharacter)
 function C_CharacterServices.SetAutomaticBoostCharacter() end
 
+---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_CharacterServicesPublic.ShouldSeeControlPopup)
 function C_CharacterServicesPublic.ShouldSeeControlPopup() end
 
+---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_ClassTrial.GetClassTrialLogoutTimeSeconds)
 function C_ClassTrial.GetClassTrialLogoutTimeSeconds() end
 
+---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_ClassTrial.IsClassTrialCharacter)
 function C_ClassTrial.IsClassTrialCharacter() end
 
+---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_Debug.DashboardIsEnabled)
 function C_Debug.DashboardIsEnabled() end
 
@@ -478,24 +575,31 @@ function C_Debug.DashboardIsEnabled() end
 ---@return number result
 function C_Debug.FrameXMLDebug(newDebugLevel) end
 
+---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_Debug.GetAllPortLocsForMap)
 function C_Debug.GetAllPortLocsForMap(uiMapID) end
 
+---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_Debug.GetMapDebugObjects)
 function C_Debug.GetMapDebugObjects(uiMapID) end
 
+---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_Debug.PrintToDebugWindow)
 function C_Debug.PrintToDebugWindow() end
 
+---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_Debug.TeleportToMapDebugObject)
 function C_Debug.TeleportToMapDebugObject(pinIndex) end
 
+---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_Debug.TeleportToMapLocation)
 function C_Debug.TeleportToMapLocation(uiMapID, mapX, mapY) end
 
+---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_Debug.ToggleWindDebugMenu)
 function C_Debug.ToggleWindDebugMenu() end
 
+---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_Debug.ViewInDebugWindow)
 function C_Debug.ViewInDebugWindow() end
 
@@ -504,129 +608,171 @@ function C_Debug.ViewInDebugWindow() end
 ---@return FunctionContainer
 function C_FunctionContainers.CreateCallback(func) end
 
+---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_Garrison.AllowMissionStartAboveSoftCap)
 function C_Garrison.AllowMissionStartAboveSoftCap(garrFollowerTypeID) end
 
+---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_Garrison.AreMissionFollowerRequirementsMet)
 function C_Garrison.AreMissionFollowerRequirementsMet(missionRecID) end
 
+---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_Garrison.AssignFollowerToBuilding)
 function C_Garrison.AssignFollowerToBuilding(plotInstanceID, followerID) end
 
+---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_Garrison.CanGenerateRecruits)
 function C_Garrison.CanGenerateRecruits() end
 
+---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_Garrison.CanOpenMissionChest)
 function C_Garrison.CanOpenMissionChest(missionID) end
 
+---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_Garrison.CanSetRecruitmentPreference)
 function C_Garrison.CanSetRecruitmentPreference() end
 
+---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_Garrison.CanSpellTargetFollowerIDWithAddAbility)
 function C_Garrison.CanSpellTargetFollowerIDWithAddAbility(followerID) end
 
+---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_Garrison.CanUpgradeGarrison)
 function C_Garrison.CanUpgradeGarrison() end
 
+---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_Garrison.CancelConstruction)
 function C_Garrison.CancelConstruction(plotInstanceID) end
 
+---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_Garrison.CastItemSpellOnFollowerAbility)
 function C_Garrison.CastItemSpellOnFollowerAbility(followerID, abilityID) end
 
+---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_Garrison.CastSpellOnFollower)
 function C_Garrison.CastSpellOnFollower(followerID) end
 
+---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_Garrison.CastSpellOnFollowerAbility)
 function C_Garrison.CastSpellOnFollowerAbility(followerID, abilityID) end
 
+---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_Garrison.CastSpellOnMission)
 function C_Garrison.CastSpellOnMission(missionID) end
 
+---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_Garrison.ClearCompleteTalent)
 function C_Garrison.ClearCompleteTalent(garrisonType) end
 
+---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_Garrison.CloseArchitect)
 function C_Garrison.CloseArchitect() end
 
+---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_Garrison.CloseGarrisonTradeskillNPC)
 function C_Garrison.CloseGarrisonTradeskillNPC() end
 
+---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_Garrison.CloseMissionNPC)
 function C_Garrison.CloseMissionNPC() end
 
+---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_Garrison.CloseRecruitmentNPC)
 function C_Garrison.CloseRecruitmentNPC() end
 
+---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_Garrison.CloseTalentNPC)
 function C_Garrison.CloseTalentNPC() end
 
+---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_Garrison.CloseTradeskillCrafter)
 function C_Garrison.CloseTradeskillCrafter() end
 
+---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_Garrison.GenerateRecruits)
 function C_Garrison.GenerateRecruits(mechanicTypeID, traitID) end
 
+---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_Garrison.GetAllBonusAbilityEffects)
 function C_Garrison.GetAllBonusAbilityEffects() end
 
+---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_Garrison.GetAllEncounterThreats)
 function C_Garrison.GetAllEncounterThreats(garrFollowerTypeID) end
 
+---#invalidpage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_Garrison.GetAvailableMissions)
 function C_Garrison.GetAvailableMissions(missionList, garrFollowerTypeID) end
 
+---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_Garrison.GetAvailableRecruits)
 function C_Garrison.GetAvailableRecruits() end
 
+---#invalidpage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_Garrison.GetBasicMissionInfo)
 function C_Garrison.GetBasicMissionInfo(missionID) end
 
+---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_Garrison.GetBuffedFollowersForMission)
 function C_Garrison.GetBuffedFollowersForMission(missionID, displayingAbilities) end
 
+---#invalidpage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_Garrison.GetBuildingInfo)
 function C_Garrison.GetBuildingInfo(buildingID) end
 
+---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_Garrison.GetBuildingLockInfo)
 function C_Garrison.GetBuildingLockInfo() end
 
+---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_Garrison.GetBuildingSizes)
 function C_Garrison.GetBuildingSizes() end
 
+---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_Garrison.GetBuildingSpecInfo)
 function C_Garrison.GetBuildingSpecInfo() end
 
+---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_Garrison.GetBuildingTimeRemaining)
 function C_Garrison.GetBuildingTimeRemaining(plotInstanceID) end
 
+---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_Garrison.GetBuildingTooltip)
 function C_Garrison.GetBuildingTooltip(buildingID) end
 
+---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_Garrison.GetBuildingUpgradeInfo)
 function C_Garrison.GetBuildingUpgradeInfo(buildingID) end
 
+---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_Garrison.GetBuildings)
 function C_Garrison.GetBuildings(garrisonType) end
 
+---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_Garrison.GetBuildingsForPlot)
 function C_Garrison.GetBuildingsForPlot(plotInstanceID) end
 
+---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_Garrison.GetBuildingsForSize)
 function C_Garrison.GetBuildingsForSize(garrisonType, uiCategoryID) end
 
+---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_Garrison.GetClassSpecCategoryInfo)
 function C_Garrison.GetClassSpecCategoryInfo(garrFollowerType) end
 
+---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_Garrison.GetCombatAllyMission)
 function C_Garrison.GetCombatAllyMission(garrFollowerTypeID) end
 
+---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_Garrison.GetCompleteMissions)
 function C_Garrison.GetCompleteMissions(missionList, garrFollowerTypeID) end
 
+---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_Garrison.GetCompleteTalent)
 function C_Garrison.GetCompleteTalent(garrisonType) end
 
+---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_Garrison.GetCurrencyTypes)
 function C_Garrison.GetCurrencyTypes(garrType) end
 
@@ -635,66 +781,87 @@ function C_Garrison.GetCurrencyTypes(garrType) end
 ---@return table abilities
 function C_Garrison.GetFollowerAbilities(followerID) end
 
+---#invalidpage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_Garrison.GetFollowerAbilityAtIndex)
 function C_Garrison.GetFollowerAbilityAtIndex(followerID, index) end
 
+---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_Garrison.GetFollowerAbilityAtIndexByID)
 function C_Garrison.GetFollowerAbilityAtIndexByID(garrFollowerID, index) end
 
+---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_Garrison.GetFollowerAbilityCounterMechanicInfo)
 function C_Garrison.GetFollowerAbilityCounterMechanicInfo(garrAbilityID) end
 
+---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_Garrison.GetFollowerAbilityCountersForMechanicTypes)
 function C_Garrison.GetFollowerAbilityCountersForMechanicTypes(garrFollowerTypeID) end
 
+---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_Garrison.GetFollowerAbilityDescription)
 function C_Garrison.GetFollowerAbilityDescription(garrAbilityID) end
 
+---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_Garrison.GetFollowerAbilityIcon)
 function C_Garrison.GetFollowerAbilityIcon(garrAbilityID) end
 
+---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_Garrison.GetFollowerAbilityInfo)
 function C_Garrison.GetFollowerAbilityInfo(garrAbilityID) end
 
+---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_Garrison.GetFollowerAbilityIsTrait)
 function C_Garrison.GetFollowerAbilityIsTrait(garrAbilityID) end
 
+---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_Garrison.GetFollowerAbilityLink)
 function C_Garrison.GetFollowerAbilityLink(abilityID) end
 
+---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_Garrison.GetFollowerAbilityName)
 function C_Garrison.GetFollowerAbilityName(garrAbilityID) end
 
+---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_Garrison.GetFollowerActivationCost)
 function C_Garrison.GetFollowerActivationCost() end
 
+---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_Garrison.GetFollowerBiasForMission)
 function C_Garrison.GetFollowerBiasForMission(missionID, followerID) end
 
+---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_Garrison.GetFollowerClassSpec)
 function C_Garrison.GetFollowerClassSpec(followerID) end
 
+---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_Garrison.GetFollowerClassSpecAtlas)
 function C_Garrison.GetFollowerClassSpecAtlas(garrSpecID) end
 
+---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_Garrison.GetFollowerClassSpecByID)
 function C_Garrison.GetFollowerClassSpecByID(garrFollowerID) end
 
+---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_Garrison.GetFollowerClassSpecName)
 function C_Garrison.GetFollowerClassSpecName(garrFollowerID) end
 
+---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_Garrison.GetFollowerDisplayID)
 function C_Garrison.GetFollowerDisplayID(followerID) end
 
+---#invalidpage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_Garrison.GetFollowerInfo)
 function C_Garrison.GetFollowerInfo() end
 
+---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_Garrison.GetFollowerInfoForBuilding)
 function C_Garrison.GetFollowerInfoForBuilding() end
 
+---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_Garrison.GetFollowerIsTroop)
 function C_Garrison.GetFollowerIsTroop() end
 
+---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_Garrison.GetFollowerItemLevelAverage)
 function C_Garrison.GetFollowerItemLevelAverage(followerID) end
 
@@ -706,117 +873,155 @@ function C_Garrison.GetFollowerItemLevelAverage(followerID) end
 ---@return number armorItemLevel
 function C_Garrison.GetFollowerItems(followerID) end
 
+---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_Garrison.GetFollowerLevel)
 function C_Garrison.GetFollowerLevel(followerID) end
 
+---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_Garrison.GetFollowerLevelXP)
 function C_Garrison.GetFollowerLevelXP(followerID) end
 
+---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_Garrison.GetFollowerLink)
 function C_Garrison.GetFollowerLink(followerID) end
 
+---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_Garrison.GetFollowerLinkByID)
 function C_Garrison.GetFollowerLinkByID(garrFollowerID) end
 
+---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_Garrison.GetFollowerMissionTimeLeft)
 function C_Garrison.GetFollowerMissionTimeLeft(followerID) end
 
+---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_Garrison.GetFollowerMissionTimeLeftSeconds)
 function C_Garrison.GetFollowerMissionTimeLeftSeconds(followerID) end
 
+---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_Garrison.GetFollowerModelItems)
 function C_Garrison.GetFollowerModelItems(followerID) end
 
+---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_Garrison.GetFollowerName)
 function C_Garrison.GetFollowerName(followerID) end
 
+---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_Garrison.GetFollowerNameByID)
 function C_Garrison.GetFollowerNameByID(garrFollowerID) end
 
+---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_Garrison.GetFollowerPortraitIconID)
 function C_Garrison.GetFollowerPortraitIconID(followerID) end
 
+---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_Garrison.GetFollowerPortraitIconIDByID)
 function C_Garrison.GetFollowerPortraitIconIDByID(garrFollowerID) end
 
+---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_Garrison.GetFollowerQuality)
 function C_Garrison.GetFollowerQuality(followerID) end
 
+---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_Garrison.GetFollowerQualityTable)
 function C_Garrison.GetFollowerQualityTable(garrFollowerTypeID) end
 
+---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_Garrison.GetFollowerRecentlyGainedAbilityIDs)
 function C_Garrison.GetFollowerRecentlyGainedAbilityIDs(followerID) end
 
+---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_Garrison.GetFollowerRecentlyGainedTraitIDs)
 function C_Garrison.GetFollowerRecentlyGainedTraitIDs(followerID) end
 
+---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_Garrison.GetFollowerShipments)
 function C_Garrison.GetFollowerShipments(garrTypeID) end
 
+---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_Garrison.GetFollowerSoftCap)
 function C_Garrison.GetFollowerSoftCap(garrFollowerTypeID) end
 
+---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_Garrison.GetFollowerSourceTextByID)
 function C_Garrison.GetFollowerSourceTextByID(garrFollowerID) end
 
+---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_Garrison.GetFollowerSpecializationAtIndex)
 function C_Garrison.GetFollowerSpecializationAtIndex(followerID, index) end
 
+---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_Garrison.GetFollowerStatus)
 function C_Garrison.GetFollowerStatus(followerID) end
 
+---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_Garrison.GetFollowerTraitAtIndex)
 function C_Garrison.GetFollowerTraitAtIndex(followerID, index) end
 
+---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_Garrison.GetFollowerTraitAtIndexByID)
 function C_Garrison.GetFollowerTraitAtIndexByID(garrFollowerID, index) end
 
+---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_Garrison.GetFollowerTypeByID)
 function C_Garrison.GetFollowerTypeByID(garrFollowerID) end
 
+---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_Garrison.GetFollowerTypeByMissionID)
 function C_Garrison.GetFollowerTypeByMissionID(missionID) end
 
+---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_Garrison.GetFollowerUnderBiasReason)
 function C_Garrison.GetFollowerUnderBiasReason(missionID, followerID) end
 
+---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_Garrison.GetFollowerXP)
 function C_Garrison.GetFollowerXP(followerID) end
 
+---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_Garrison.GetFollowerXPTable)
 function C_Garrison.GetFollowerXPTable(garrFollowerTypeID) end
 
+---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_Garrison.GetFollowerZoneSupportAbilities)
 function C_Garrison.GetFollowerZoneSupportAbilities() end
 
+---#invalidpage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_Garrison.GetFollowers)
 function C_Garrison.GetFollowers() end
 
+---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_Garrison.GetFollowersSpellsForMission)
 function C_Garrison.GetFollowersSpellsForMission(missionID) end
 
+---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_Garrison.GetFollowersTraitsForMission)
 function C_Garrison.GetFollowersTraitsForMission(missionID) end
 
+---#invalidpage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_Garrison.GetGarrisonInfo)
 function C_Garrison.GetGarrisonInfo(garrisonType) end
 
+---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_Garrison.GetGarrisonUpgradeCost)
 function C_Garrison.GetGarrisonUpgradeCost(followerType) end
 
+---#invalidpage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_Garrison.GetInProgressMissions)
 function C_Garrison.GetInProgressMissions(missionList, garrFollowerTypeID) end
 
+---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_Garrison.GetLandingPageGarrisonType)
 function C_Garrison.GetLandingPageGarrisonType() end
 
+---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_Garrison.GetLandingPageItems)
 function C_Garrison.GetLandingPageItems(garrTypeID, noSort) end
 
+---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_Garrison.GetLandingPageShipmentCount)
 function C_Garrison.GetLandingPageShipmentCount() end
 
+---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_Garrison.GetLandingPageShipmentInfo)
 function C_Garrison.GetLandingPageShipmentInfo(buildingID) end
 
@@ -842,66 +1047,87 @@ function C_Garrison.GetLandingPageShipmentInfoByContainerID(containerID) end
 ---@return table looseShipments
 function C_Garrison.GetLooseShipments(garrisonType) end
 
+---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_Garrison.GetMissionBonusAbilityEffects)
 function C_Garrison.GetMissionBonusAbilityEffects(missionID) end
 
+---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_Garrison.GetMissionCost)
 function C_Garrison.GetMissionCost(missionID) end
 
+---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_Garrison.GetMissionDisplayIDs)
 function C_Garrison.GetMissionDisplayIDs(missionID) end
 
+---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_Garrison.GetMissionLink)
 function C_Garrison.GetMissionLink(missionID) end
 
+---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_Garrison.GetMissionMaxFollowers)
 function C_Garrison.GetMissionMaxFollowers(garrMissionID) end
 
+---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_Garrison.GetMissionName)
 function C_Garrison.GetMissionName(garrMissionID) end
 
+---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_Garrison.GetMissionRewardInfo)
 function C_Garrison.GetMissionRewardInfo(garrMissionID, missionDBID) end
 
+---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_Garrison.GetMissionSuccessChance)
 function C_Garrison.GetMissionSuccessChance(missionID) end
 
+---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_Garrison.GetMissionTexture)
 function C_Garrison.GetMissionTexture(offeredGarrMissionTextureID) end
 
+---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_Garrison.GetMissionTimes)
 function C_Garrison.GetMissionTimes(missionID) end
 
+---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_Garrison.GetMissionUncounteredMechanics)
 function C_Garrison.GetMissionUncounteredMechanics(missionID) end
 
+---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_Garrison.GetNumActiveFollowers)
 function C_Garrison.GetNumActiveFollowers() end
 
+---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_Garrison.GetNumFollowerActivationsRemaining)
 function C_Garrison.GetNumFollowerActivationsRemaining(garrTypeID) end
 
+---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_Garrison.GetNumFollowerDailyActivations)
 function C_Garrison.GetNumFollowerDailyActivations() end
 
+---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_Garrison.GetNumFollowers)
 function C_Garrison.GetNumFollowers() end
 
+---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_Garrison.GetNumFollowersForMechanic)
 function C_Garrison.GetNumFollowersForMechanic(followerType, mechanicID) end
 
+---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_Garrison.GetNumFollowersOnMission)
 function C_Garrison.GetNumFollowersOnMission(missionID) end
 
+---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_Garrison.GetNumPendingShipments)
 function C_Garrison.GetNumPendingShipments() end
 
+---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_Garrison.GetNumShipmentCurrencies)
 function C_Garrison.GetNumShipmentCurrencies() end
 
+---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_Garrison.GetNumShipmentReagents)
 function C_Garrison.GetNumShipmentReagents() end
 
+---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_Garrison.GetOwnedBuildingInfo)
 function C_Garrison.GetOwnedBuildingInfo(plotInstanceID) end
 
@@ -920,96 +1146,127 @@ function C_Garrison.GetOwnedBuildingInfo(plotInstanceID) end
 ---@return boolean isPrebuilt
 function C_Garrison.GetOwnedBuildingInfoAbbrev(plotID) end
 
+---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_Garrison.GetPartyBuffs)
 function C_Garrison.GetPartyBuffs(missionID) end
 
+---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_Garrison.GetPartyMentorLevels)
 function C_Garrison.GetPartyMentorLevels(missionID) end
 
+---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_Garrison.GetPartyMissionInfo)
 function C_Garrison.GetPartyMissionInfo(missionID) end
 
+---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_Garrison.GetPendingShipmentInfo)
 function C_Garrison.GetPendingShipmentInfo(index) end
 
+---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_Garrison.GetPlots)
 function C_Garrison.GetPlots(followerType) end
 
+---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_Garrison.GetPlotsForBuilding)
 function C_Garrison.GetPlotsForBuilding(buildingID) end
 
+---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_Garrison.GetPossibleFollowersForBuilding)
 function C_Garrison.GetPossibleFollowersForBuilding(followerType, plotInstanceID) end
 
+---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_Garrison.GetRecruitAbilities)
 function C_Garrison.GetRecruitAbilities(index) end
 
+---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_Garrison.GetRecruiterAbilityCategories)
 function C_Garrison.GetRecruiterAbilityCategories() end
 
+---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_Garrison.GetRecruiterAbilityList)
 function C_Garrison.GetRecruiterAbilityList(traits) end
 
+---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_Garrison.GetRecruitmentPreferences)
 function C_Garrison.GetRecruitmentPreferences() end
 
+---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_Garrison.GetShipDeathAnimInfo)
 function C_Garrison.GetShipDeathAnimInfo() end
 
+---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_Garrison.GetShipmentContainerInfo)
 function C_Garrison.GetShipmentContainerInfo() end
 
+---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_Garrison.GetShipmentItemInfo)
 function C_Garrison.GetShipmentItemInfo() end
 
+---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_Garrison.GetShipmentReagentCurrencyInfo)
 function C_Garrison.GetShipmentReagentCurrencyInfo(currencyIndex) end
 
+---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_Garrison.GetShipmentReagentInfo)
 function C_Garrison.GetShipmentReagentInfo(reagentIndex) end
 
+---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_Garrison.GetShipmentReagentItemLink)
 function C_Garrison.GetShipmentReagentItemLink(reagentIndex) end
 
+---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_Garrison.GetSpecChangeCost)
 function C_Garrison.GetSpecChangeCost() end
 
+---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_Garrison.GetTabForPlot)
 function C_Garrison.GetTabForPlot(plotInstanceID) end
 
+---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_Garrison.HasGarrison)
 function C_Garrison.HasGarrison(garrisonType) end
 
+---#invalidpage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_Garrison.HasShipyard)
 function C_Garrison.HasShipyard() end
 
+---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_Garrison.IsAboveFollowerSoftCap)
 function C_Garrison.IsAboveFollowerSoftCap(garrFollowerTypeID) end
 
+---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_Garrison.IsFollowerCollected)
 function C_Garrison.IsFollowerCollected(garrFollowerID) end
 
+---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_Garrison.IsInvasionAvailable)
 function C_Garrison.IsInvasionAvailable() end
 
+---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_Garrison.IsMechanicFullyCountered)
 function C_Garrison.IsMechanicFullyCountered(missionID, followerID, mechanicID) end
 
+---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_Garrison.IsOnGarrisonMap)
 function C_Garrison.IsOnGarrisonMap() end
 
+---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_Garrison.IsOnShipmentQuestForNPC)
 function C_Garrison.IsOnShipmentQuestForNPC() end
 
+---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_Garrison.IsOnShipyardMap)
 function C_Garrison.IsOnShipyardMap() end
 
+---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_Garrison.IsPlayerInGarrison)
 function C_Garrison.IsPlayerInGarrison(garrType) end
 
+---#invalidpage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_Garrison.IsUsingPartyGarrison)
 function C_Garrison.IsUsingPartyGarrison() end
 
+---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_Garrison.IsVisitGarrisonAvailable)
 function C_Garrison.IsVisitGarrisonAvailable() end
 
@@ -1021,54 +1278,71 @@ function C_Garrison.MarkMissionComplete(missionID) end
 ---@param missionID number
 function C_Garrison.MissionBonusRoll(missionID) end
 
+---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_Garrison.PlaceBuilding)
 function C_Garrison.PlaceBuilding(plotInstanceID, buildingID) end
 
+---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_Garrison.RecruitFollower)
 function C_Garrison.RecruitFollower(followerIndex) end
 
+---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_Garrison.RemoveFollower)
 function C_Garrison.RemoveFollower(dbID) end
 
+---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_Garrison.RemoveFollowerFromBuilding)
 function C_Garrison.RemoveFollowerFromBuilding() end
 
+---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_Garrison.RenameFollower)
 function C_Garrison.RenameFollower(followerID, name) end
 
+---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_Garrison.RequestClassSpecCategoryInfo)
 function C_Garrison.RequestClassSpecCategoryInfo(garrFollowerTypeID) end
 
+---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_Garrison.RequestGarrisonUpgradeable)
 function C_Garrison.RequestGarrisonUpgradeable(followerType) end
 
+---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_Garrison.RequestLandingPageShipmentInfo)
 function C_Garrison.RequestLandingPageShipmentInfo() end
 
+---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_Garrison.RequestShipmentCreation)
 function C_Garrison.RequestShipmentCreation() end
 
+---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_Garrison.RequestShipmentInfo)
 function C_Garrison.RequestShipmentInfo() end
 
+---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_Garrison.ResearchTalent)
 function C_Garrison.ResearchTalent(garrTalentID) end
 
+---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_Garrison.SearchForFollower)
 function C_Garrison.SearchForFollower() end
 
+---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_Garrison.SetBuildingActive)
 function C_Garrison.SetBuildingActive(plotInstanceID) end
 
+---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_Garrison.SetBuildingSpecialization)
 function C_Garrison.SetBuildingSpecialization() end
 
+---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_Garrison.SetFollowerFavorite)
 function C_Garrison.SetFollowerFavorite() end
 
+---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_Garrison.SetFollowerInactive)
 function C_Garrison.SetFollowerInactive(followerID, inactive) end
 
+---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_Garrison.SetRecruitmentPreferences)
 function C_Garrison.SetRecruitmentPreferences(mechanicTypeID, traitID) end
 
@@ -1076,9 +1350,11 @@ function C_Garrison.SetRecruitmentPreferences(mechanicTypeID, traitID) end
 ---@param enabled boolean
 function C_Garrison.SetUsingPartyGarrison(enabled) end
 
+---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_Garrison.ShouldShowMapTab)
 function C_Garrison.ShouldShowMapTab(garrType) end
 
+---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_Garrison.ShowFollowerNameInErrorMessage)
 function C_Garrison.ShowFollowerNameInErrorMessage(missionRecID) end
 
@@ -1086,33 +1362,43 @@ function C_Garrison.ShowFollowerNameInErrorMessage(missionRecID) end
 ---@param missionID number
 function C_Garrison.StartMission(missionID) end
 
+---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_Garrison.SwapBuildings)
 function C_Garrison.SwapBuildings(plotInstanceID1, plotInstanceID2) end
 
+---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_Garrison.TargetSpellHasFollowerItemLevelUpgrade)
 function C_Garrison.TargetSpellHasFollowerItemLevelUpgrade() end
 
+---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_Garrison.TargetSpellHasFollowerReroll)
 function C_Garrison.TargetSpellHasFollowerReroll() end
 
+---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_Garrison.TargetSpellHasFollowerTemporaryAbility)
 function C_Garrison.TargetSpellHasFollowerTemporaryAbility() end
 
+---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_Garrison.UpgradeBuilding)
 function C_Garrison.UpgradeBuilding(plotInstanceID) end
 
+---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_Garrison.UpgradeGarrison)
 function C_Garrison.UpgradeGarrison(followerType) end
 
+---#invalidpage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_Heirloom.CanHeirloomUpgradeFromPending)
 function C_Heirloom.CanHeirloomUpgradeFromPending(itemID) end
 
+---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_Heirloom.CreateHeirloom)
 function C_Heirloom.CreateHeirloom(itemID) end
 
+---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_Heirloom.GetClassAndSpecFilters)
 function C_Heirloom.GetClassAndSpecFilters() end
 
+---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_Heirloom.GetCollectedHeirloomFilter)
 function C_Heirloom.GetCollectedHeirloomFilter() end
 
@@ -1130,6 +1416,7 @@ function C_Heirloom.GetCollectedHeirloomFilter() end
 ---@return number maxLevel
 function C_Heirloom.GetHeirloomInfo(itemID) end
 
+---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_Heirloom.GetHeirloomItemIDFromDisplayedIndex)
 function C_Heirloom.GetHeirloomItemIDFromDisplayedIndex(heirloomIndex) end
 
@@ -1137,57 +1424,75 @@ function C_Heirloom.GetHeirloomItemIDFromDisplayedIndex(heirloomIndex) end
 ---@return number[] itemIDs
 function C_Heirloom.GetHeirloomItemIDs() end
 
+---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_Heirloom.GetHeirloomLink)
 function C_Heirloom.GetHeirloomLink(itemID) end
 
+---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_Heirloom.GetHeirloomMaxUpgradeLevel)
 function C_Heirloom.GetHeirloomMaxUpgradeLevel(itemID) end
 
+---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_Heirloom.GetHeirloomSourceFilter)
 function C_Heirloom.GetHeirloomSourceFilter(source) end
 
+---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_Heirloom.GetNumDisplayedHeirlooms)
 function C_Heirloom.GetNumDisplayedHeirlooms() end
 
+---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_Heirloom.GetNumHeirlooms)
 function C_Heirloom.GetNumHeirlooms() end
 
+---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_Heirloom.GetNumKnownHeirlooms)
 function C_Heirloom.GetNumKnownHeirlooms() end
 
+---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_Heirloom.GetUncollectedHeirloomFilter)
 function C_Heirloom.GetUncollectedHeirloomFilter() end
 
+---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_Heirloom.IsItemHeirloom)
 function C_Heirloom.IsItemHeirloom(itemID) end
 
+---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_Heirloom.IsPendingHeirloomUpgrade)
 function C_Heirloom.IsPendingHeirloomUpgrade() end
 
+---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_Heirloom.PlayerHasHeirloom)
 function C_Heirloom.PlayerHasHeirloom(itemID) end
 
+---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_Heirloom.SetClassAndSpecFilters)
 function C_Heirloom.SetClassAndSpecFilters(classID, specID) end
 
+---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_Heirloom.SetCollectedHeirloomFilter)
 function C_Heirloom.SetCollectedHeirloomFilter(boolean) end
 
+---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_Heirloom.SetHeirloomSourceFilter)
 function C_Heirloom.SetHeirloomSourceFilter(source, filtered) end
 
+---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_Heirloom.SetSearch)
 function C_Heirloom.SetSearch(searchValue) end
 
+---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_Heirloom.SetUncollectedHeirloomFilter)
 function C_Heirloom.SetUncollectedHeirloomFilter(boolean) end
 
+---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_Heirloom.ShouldShowHeirloomHelp)
 function C_Heirloom.ShouldShowHeirloomHelp() end
 
+---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_Heirloom.UpgradeHeirloom)
 function C_Heirloom.UpgradeHeirloom(itemID) end
 
+---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_LFGList.AcceptInvite)
 function C_LFGList.AcceptInvite(resultID) end
 
@@ -1198,6 +1503,7 @@ function C_LFGList.AcceptInvite(resultID) end
 ---@param damageOK? boolean
 function C_LFGList.ApplyToGroup(resultID, tankOK, healerOK, damageOK) end
 
+---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_LFGList.CancelApplication)
 function C_LFGList.CancelApplication(resultID) end
 
@@ -1214,12 +1520,15 @@ function C_LFGList.ClearSearchResults() end
 ---@return boolean success
 function C_LFGList.CreateListing(activityID, itemLevel, honorLevel, autoAccept, privateGroup, questID) end
 
+---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_LFGList.DeclineApplicant)
 function C_LFGList.DeclineApplicant(applicantID) end
 
+---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_LFGList.DeclineInvite)
 function C_LFGList.DeclineInvite(searchResultID) end
 
+---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_LFGList.GetActivityIDForQuestID)
 function C_LFGList.GetActivityIDForQuestID(questID) end
 
@@ -1256,9 +1565,11 @@ function C_LFGList.GetApplicantMemberStats(applicantID, memberIndex) end
 ---@return table applicants
 function C_LFGList.GetApplicants() end
 
+---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_LFGList.GetApplicationInfo)
 function C_LFGList.GetApplicationInfo(searchResultID) end
 
+---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_LFGList.GetApplications)
 function C_LFGList.GetApplications() end
 
@@ -1280,45 +1591,59 @@ function C_LFGList.GetAvailableActivityGroups(categoryID, filter) end
 ---@return table categories
 function C_LFGList.GetAvailableCategories(filter) end
 
+---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_LFGList.GetAvailableLanguageSearchFilter)
 function C_LFGList.GetAvailableLanguageSearchFilter() end
 
+---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_LFGList.GetAvailableRoles)
 function C_LFGList.GetAvailableRoles() end
 
+---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_LFGList.GetDefaultLanguageSearchFilter)
 function C_LFGList.GetDefaultLanguageSearchFilter() end
 
+---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_LFGList.GetLanguageSearchFilter)
 function C_LFGList.GetLanguageSearchFilter() end
 
+---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_LFGList.GetNumApplicants)
 function C_LFGList.GetNumApplicants() end
 
+---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_LFGList.GetNumApplications)
 function C_LFGList.GetNumApplications() end
 
+---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_LFGList.GetNumInvitedApplicantMembers)
 function C_LFGList.GetNumInvitedApplicantMembers() end
 
+---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_LFGList.GetNumPendingApplicantMembers)
 function C_LFGList.GetNumPendingApplicantMembers() end
 
+---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_LFGList.GetRoleCheckInfo)
 function C_LFGList.GetRoleCheckInfo() end
 
+---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_LFGList.GetSearchResultEncounterInfo)
 function C_LFGList.GetSearchResultEncounterInfo(searchResultID) end
 
+---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_LFGList.GetSearchResultFriends)
 function C_LFGList.GetSearchResultFriends(searchResultID) end
 
+---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_LFGList.GetSearchResultMemberCounts)
 function C_LFGList.GetSearchResultMemberCounts(searchResultID) end
 
+---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_LFGList.GetSearchResultMemberInfo)
 function C_LFGList.GetSearchResultMemberInfo(searchResultID, memberIndex) end
 
+---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_LFGList.HasActivityList)
 function C_LFGList.HasActivityList() end
 
@@ -1326,12 +1651,15 @@ function C_LFGList.HasActivityList() end
 ---@param applicantID number
 function C_LFGList.InviteApplicant(applicantID) end
 
+---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_LFGList.IsCurrentlyApplying)
 function C_LFGList.IsCurrentlyApplying() end
 
+---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_LFGList.RefreshApplicants)
 function C_LFGList.RefreshApplicants() end
 
+---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_LFGList.RemoveApplicant)
 function C_LFGList.RemoveApplicant(applicantID) end
 
@@ -1341,9 +1669,11 @@ function C_LFGList.RemoveListing() end
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_LFGList.RequestAvailableActivities)
 function C_LFGList.RequestAvailableActivities() end
 
+---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_LFGList.SaveLanguageSearchFilter)
 function C_LFGList.SaveLanguageSearchFilter(enabled) end
 
+---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_LFGList.SetApplicantMemberRole)
 function C_LFGList.SetApplicantMemberRole(applicantID, memberIndex, role) end
 
@@ -1360,12 +1690,15 @@ function C_LFGList.SetApplicantMemberRole(applicantID, memberIndex, role) end
 ---@param isCrossFaction boolean?
 function C_LFGList.UpdateListing(activityID, itemLevel, honorLevel, autoAccept, privateGroup, questID, mythicPlusRating, pvpRating, selectedPlaystyle, isCrossFaction) end
 
+---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_NamePlate.GetNamePlateEnemyClickThrough)
 function C_NamePlate.GetNamePlateEnemyClickThrough() end
 
+---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_NamePlate.GetNamePlateEnemyPreferredClickInsets)
 function C_NamePlate.GetNamePlateEnemyPreferredClickInsets() end
 
+---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_NamePlate.GetNamePlateEnemySize)
 function C_NamePlate.GetNamePlateEnemySize() end
 
@@ -1375,21 +1708,27 @@ function C_NamePlate.GetNamePlateEnemySize() end
 ---@return NameplateBase? nameplate
 function C_NamePlate.GetNamePlateForUnit(unitId, isSecure) end
 
+---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_NamePlate.GetNamePlateFriendlyClickThrough)
 function C_NamePlate.GetNamePlateFriendlyClickThrough() end
 
+---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_NamePlate.GetNamePlateFriendlyPreferredClickInsets)
 function C_NamePlate.GetNamePlateFriendlyPreferredClickInsets() end
 
+---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_NamePlate.GetNamePlateFriendlySize)
 function C_NamePlate.GetNamePlateFriendlySize() end
 
+---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_NamePlate.GetNamePlateSelfClickThrough)
 function C_NamePlate.GetNamePlateSelfClickThrough() end
 
+---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_NamePlate.GetNamePlateSelfPreferredClickInsets)
 function C_NamePlate.GetNamePlateSelfPreferredClickInsets() end
 
+---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_NamePlate.GetNamePlateSelfSize)
 function C_NamePlate.GetNamePlateSelfSize() end
 
@@ -1398,9 +1737,11 @@ function C_NamePlate.GetNamePlateSelfSize() end
 ---@return NameplateBase nameplates
 function C_NamePlate.GetNamePlates(isSecure) end
 
+---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_NamePlate.GetNumNamePlateMotionTypes)
 function C_NamePlate.GetNumNamePlateMotionTypes() end
 
+---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_NamePlate.GetTargetClampingInsets)
 function C_NamePlate.GetTargetClampingInsets() end
 
@@ -1511,6 +1852,7 @@ function C_PetBattles.GetAbilityEffectInfo(abilityID, turnIndex, effectIndex, ef
 ---@return boolean noStrongWeakHints
 function C_PetBattles.GetAbilityInfo(petOwner, petIndex, abilityIndex) end
 
+---#invalidpage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_PetBattles.GetAbilityInfoByID)
 function C_PetBattles.GetAbilityInfoByID(abilityID) end
 
@@ -1540,9 +1882,11 @@ function C_PetBattles.GetAbilityStateModification(abilityID, stateID) end
 ---@return number petIndex
 function C_PetBattles.GetActivePet(petOwner) end
 
+---#invalidpage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_PetBattles.GetAllEffectNames)
 function C_PetBattles.GetAllEffectNames() end
 
+---#invalidpage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_PetBattles.GetAllStates)
 function C_PetBattles.GetAllStates() end
 
@@ -1714,9 +2058,11 @@ function C_PetBattles.UseTrap() end
 ---@param petID string
 function C_PetJournal.CagePetByID(petID) end
 
+---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_PetJournal.ClearFanfare)
 function C_PetJournal.ClearFanfare() end
 
+---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_PetJournal.ClearRecentFanfares)
 function C_PetJournal.ClearRecentFanfares() end
 
@@ -1753,6 +2099,7 @@ function C_PetJournal.GetNumPetTypes() end
 ---@return number numOwned
 function C_PetJournal.GetNumPets() end
 
+---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_PetJournal.GetNumPetsNeedingFanfare)
 function C_PetJournal.GetNumPetsNeedingFanfare() end
 
@@ -1776,18 +2123,23 @@ function C_PetJournal.GetPetAbilityList(speciesID, idTable, levelTable) end
 ---@return number isEnabled
 function C_PetJournal.GetPetCooldownByGUID(GUID) end
 
+---#invalidpage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_PetJournal.GetPetInfoByIndex)
 function C_PetJournal.GetPetInfoByIndex(index) end
 
+---#invalidpage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_PetJournal.GetPetInfoByItemID)
 function C_PetJournal.GetPetInfoByItemID(itemID) end
 
+---#invalidpage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_PetJournal.GetPetInfoByPetID)
 function C_PetJournal.GetPetInfoByPetID(petID) end
 
+---#invalidpage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_PetJournal.GetPetInfoBySpeciesID)
 function C_PetJournal.GetPetInfoBySpeciesID(speciesID) end
 
+---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_PetJournal.GetPetModelSceneInfoBySpeciesID)
 function C_PetJournal.GetPetModelSceneInfoBySpeciesID(speciesID) end
 
@@ -1808,9 +2160,11 @@ function C_PetJournal.GetPetStats(petID) end
 ---@return number avgLevel
 function C_PetJournal.GetPetTeamAverageLevel() end
 
+---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_PetJournal.GetSummonBattlePetCooldown)
 function C_PetJournal.GetSummonBattlePetCooldown() end
 
+---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_PetJournal.GetSummonRandomFavoritePetGUID)
 function C_PetJournal.GetSummonRandomFavoritePetGUID() end
 
@@ -1827,9 +2181,11 @@ function C_PetJournal.IsFilterChecked(filter) end
 ---@return boolean isEnabled
 function C_PetJournal.IsFindBattleEnabled() end
 
+---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_PetJournal.IsJournalReadOnly)
 function C_PetJournal.IsJournalReadOnly() end
 
+---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_PetJournal.IsJournalUnlocked)
 function C_PetJournal.IsJournalUnlocked() end
 
@@ -1863,6 +2219,7 @@ function C_PetJournal.PetIsFavorite(petGUID) end
 ---@return boolean isHurt
 function C_PetJournal.PetIsHurt(petID) end
 
+---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_PetJournal.PetIsLockedForConvert)
 function C_PetJournal.PetIsLockedForConvert(petID) end
 
@@ -1881,9 +2238,11 @@ function C_PetJournal.PetIsSlotted(petID) end
 ---@return boolean isTradable
 function C_PetJournal.PetIsTradable(petID) end
 
+---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_PetJournal.PetIsUsable)
 function C_PetJournal.PetIsUsable(petID) end
 
+---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_PetJournal.PetNeedsFanfare)
 function C_PetJournal.PetNeedsFanfare() end
 
@@ -1891,6 +2250,7 @@ function C_PetJournal.PetNeedsFanfare() end
 ---@param petID string
 function C_PetJournal.PickupPet(petID) end
 
+---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_PetJournal.PickupSummonRandomPet)
 function C_PetJournal.PickupSummonRandomPet() end
 
@@ -1967,24 +2327,31 @@ function C_PrototypeDialog.EnsureRemoved(instanceID) end
 ---@param optionIndex number
 function C_PrototypeDialog.SelectOption(instanceID, optionIndex) end
 
+---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_Reincarnation.GetReincarnatingCharacter)
 function C_Reincarnation.GetReincarnatingCharacter() end
 
+---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_Reincarnation.IsReincarnating)
 function C_Reincarnation.IsReincarnating() end
 
+---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_Reincarnation.StartReincarnation)
 function C_Reincarnation.StartReincarnation() end
 
+---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_Reincarnation.StopReincarnation)
 function C_Reincarnation.StopReincarnation() end
 
+---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_Scenario.GetBonusStepRewardQuestID)
 function C_Scenario.GetBonusStepRewardQuestID(stepIndex) end
 
+---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_Scenario.GetBonusSteps)
 function C_Scenario.GetBonusSteps() end
 
+---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_Scenario.GetInfo)
 function C_Scenario.GetInfo() end
 
@@ -1995,102 +2362,135 @@ function C_Scenario.GetInfo() end
 ---@return number duration
 function C_Scenario.GetProvingGroundsInfo() end
 
+---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_Scenario.GetScenarioIconInfo)
 function C_Scenario.GetScenarioIconInfo(uiMapID) end
 
+---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_Scenario.GetStepInfo)
 function C_Scenario.GetStepInfo(bonusStepIndex) end
 
+---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_Scenario.GetSupersededObjectives)
 function C_Scenario.GetSupersededObjectives() end
 
+---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_Scenario.IsInScenario)
 function C_Scenario.IsInScenario() end
 
+---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_Scenario.ShouldShowCriteria)
 function C_Scenario.ShouldShowCriteria() end
 
+---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_Scenario.TreatScenarioAsDungeon)
 function C_Scenario.TreatScenarioAsDungeon() end
 
+---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_SharedCharacterServices.GetLastSeenCharacterUpgradePopup)
 function C_SharedCharacterServices.GetLastSeenCharacterUpgradePopup() end
 
+---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_SharedCharacterServices.GetLastSeenExpansionTrialPopup)
 function C_SharedCharacterServices.GetLastSeenExpansionTrialPopup() end
 
+---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_SharedCharacterServices.GetUpgradeDistributions)
 function C_SharedCharacterServices.GetUpgradeDistributions() end
 
+---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_SharedCharacterServices.HasFreePromotionalUpgrade)
 function C_SharedCharacterServices.HasFreePromotionalUpgrade() end
 
+---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_SharedCharacterServices.HasSeenFreePromotionalUpgradePopup)
 function C_SharedCharacterServices.HasSeenFreePromotionalUpgradePopup() end
 
+---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_SharedCharacterServices.IsPurchaseIDPendingUpgrade)
 function C_SharedCharacterServices.IsPurchaseIDPendingUpgrade() end
 
+---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_SharedCharacterServices.QueryClassTrialBoostResult)
 function C_SharedCharacterServices.QueryClassTrialBoostResult() end
 
+---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_SharedCharacterServices.SetCharacterUpgradePopupSeen)
 function C_SharedCharacterServices.SetCharacterUpgradePopupSeen(expansion_id) end
 
+---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_SharedCharacterServices.SetExpansionTrialPopupSeen)
 function C_SharedCharacterServices.SetExpansionTrialPopupSeen(expansion_id) end
 
+---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_SharedCharacterServices.SetPromotionalPopupSeen)
 function C_SharedCharacterServices.SetPromotionalPopupSeen(seen) end
 
+---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_SpectatingUI.GetSpectateTargetInfo)
 function C_SpectatingUI.GetSpectateTargetInfo() end
 
+---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_SpectatingUI.GetSpectatingPlayerSpellItemQuality)
 function C_SpectatingUI.GetSpectatingPlayerSpellItemQuality() end
 
+---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_SpectatingUI.IsSpectating)
 function C_SpectatingUI.IsSpectating() end
 
+---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_SpectatingUI.LeaveSpectateMode)
 function C_SpectatingUI.LeaveSpectateMode() end
 
+---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_SpectatingUI.SpectateChange)
 function C_SpectatingUI.SpectateChange() end
 
+---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_TalkingHead.GetConversationsDeferred)
 function C_TalkingHead.GetConversationsDeferred() end
 
+---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_TalkingHead.GetCurrentLineAnimationInfo)
 function C_TalkingHead.GetCurrentLineAnimationInfo() end
 
+---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_TalkingHead.GetCurrentLineInfo)
 function C_TalkingHead.GetCurrentLineInfo() end
 
+---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_TalkingHead.IgnoreCurrentTalkingHead)
 function C_TalkingHead.IgnoreCurrentTalkingHead() end
 
+---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_TalkingHead.IsCurrentTalkingHeadIgnored)
 function C_TalkingHead.IsCurrentTalkingHeadIgnored() end
 
+---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_TalkingHead.SetConversationsDeferred)
 function C_TalkingHead.SetConversationsDeferred(deferred) end
 
+---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_ToyBox.ForceToyRefilter)
 function C_ToyBox.ForceToyRefilter() end
 
+---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_ToyBox.GetCollectedShown)
 function C_ToyBox.GetCollectedShown() end
 
+---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_ToyBox.GetIsFavorite)
 function C_ToyBox.GetIsFavorite(itemID) end
 
+---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_ToyBox.GetNumFilteredToys)
 function C_ToyBox.GetNumFilteredToys() end
 
+---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_ToyBox.GetNumLearnedDisplayedToys)
 function C_ToyBox.GetNumLearnedDisplayedToys() end
 
+---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_ToyBox.GetNumTotalDisplayedToys)
 function C_ToyBox.GetNumTotalDisplayedToys() end
 
@@ -2113,90 +2513,119 @@ function C_ToyBox.GetToyFromIndex(index) end
 ---@return Enum.ItemQuality itemQuality
 function C_ToyBox.GetToyInfo(itemID) end
 
+---#invalidpage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_ToyBox.GetToyLink)
 function C_ToyBox.GetToyLink(itemID) end
 
+---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_ToyBox.GetUncollectedShown)
 function C_ToyBox.GetUncollectedShown() end
 
+---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_ToyBox.GetUnusableShown)
 function C_ToyBox.GetUnusableShown() end
 
+---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_ToyBox.HasFavorites)
 function C_ToyBox.HasFavorites() end
 
+---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_ToyBox.IsExpansionTypeFilterChecked)
 function C_ToyBox.IsExpansionTypeFilterChecked(expansionIndex) end
 
+---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_ToyBox.IsSourceTypeFilterChecked)
 function C_ToyBox.IsSourceTypeFilterChecked(sourceIndex) end
 
+---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_ToyBox.IsToyUsable)
 function C_ToyBox.IsToyUsable(itemID) end
 
+---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_ToyBox.PickupToyBoxItem)
 function C_ToyBox.PickupToyBoxItem(itemID) end
 
+---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_ToyBox.SetAllExpansionTypeFilters)
 function C_ToyBox.SetAllExpansionTypeFilters(checked) end
 
+---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_ToyBox.SetAllSourceTypeFilters)
 function C_ToyBox.SetAllSourceTypeFilters(checked) end
 
+---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_ToyBox.SetCollectedShown)
 function C_ToyBox.SetCollectedShown(checked) end
 
+---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_ToyBox.SetExpansionTypeFilter)
 function C_ToyBox.SetExpansionTypeFilter(expansionIndex, checked) end
 
+---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_ToyBox.SetFilterString)
 function C_ToyBox.SetFilterString(searchString) end
 
+---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_ToyBox.SetIsFavorite)
 function C_ToyBox.SetIsFavorite(itemID, value) end
 
+---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_ToyBox.SetSourceTypeFilter)
 function C_ToyBox.SetSourceTypeFilter(sourceIndex, checked) end
 
+---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_ToyBox.SetUncollectedShown)
 function C_ToyBox.SetUncollectedShown(checked) end
 
+---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_ToyBox.SetUnusableShown)
 function C_ToyBox.SetUnusableShown(checked) end
 
+---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_TradeSkillUI.AnyRecipeCategoriesFiltered)
 function C_TradeSkillUI.AnyRecipeCategoriesFiltered() end
 
+---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_TradeSkillUI.AreAnyInventorySlotsFiltered)
 function C_TradeSkillUI.AreAnyInventorySlotsFiltered() end
 
+---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_TradeSkillUI.CanObliterateCursorItem)
 function C_TradeSkillUI.CanObliterateCursorItem() end
 
+---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_TradeSkillUI.CanTradeSkillListLink)
 function C_TradeSkillUI.CanTradeSkillListLink() end
 
+---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_TradeSkillUI.ClearInventorySlotFilter)
 function C_TradeSkillUI.ClearInventorySlotFilter() end
 
+---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_TradeSkillUI.ClearPendingObliterateItem)
 function C_TradeSkillUI.ClearPendingObliterateItem() end
 
+---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_TradeSkillUI.ClearRecipeCategoryFilter)
 function C_TradeSkillUI.ClearRecipeCategoryFilter() end
 
+---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_TradeSkillUI.ClearRecipeSourceTypeFilter)
 function C_TradeSkillUI.ClearRecipeSourceTypeFilter() end
 
+---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_TradeSkillUI.CloseObliterumForge)
 function C_TradeSkillUI.CloseObliterumForge() end
 
+---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_TradeSkillUI.DropPendingObliterateItemFromCursor)
 function C_TradeSkillUI.DropPendingObliterateItemFromCursor() end
 
+---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_TradeSkillUI.GetAllFilterableInventorySlots)
 function C_TradeSkillUI.GetAllFilterableInventorySlots() end
 
+---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_TradeSkillUI.GetAllFilterableInventorySlotsCount)
 function C_TradeSkillUI.GetAllFilterableInventorySlotsCount() end
 
@@ -2214,51 +2643,67 @@ function C_TradeSkillUI.GetCategories() end
 ---@return table categoryInfo
 function C_TradeSkillUI.GetCategoryInfo(categoryID, returnTable) end
 
+---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_TradeSkillUI.GetFilterableInventorySlotName)
 function C_TradeSkillUI.GetFilterableInventorySlotName() end
 
+---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_TradeSkillUI.GetFilterableInventorySlots)
 function C_TradeSkillUI.GetFilterableInventorySlots() end
 
+---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_TradeSkillUI.GetFilteredRecipeIDs)
 function C_TradeSkillUI.GetFilteredRecipeIDs() end
 
+---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_TradeSkillUI.GetObliterateSpellID)
 function C_TradeSkillUI.GetObliterateSpellID() end
 
+---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_TradeSkillUI.GetOnlyShowFirstCraftRecipes)
 function C_TradeSkillUI.GetOnlyShowFirstCraftRecipes() end
 
+---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_TradeSkillUI.GetOnlyShowMakeableRecipes)
 function C_TradeSkillUI.GetOnlyShowMakeableRecipes() end
 
+---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_TradeSkillUI.GetOnlyShowSkillUpRecipes)
 function C_TradeSkillUI.GetOnlyShowSkillUpRecipes() end
 
+---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_TradeSkillUI.GetPendingObliterateItemID)
 function C_TradeSkillUI.GetPendingObliterateItemID() end
 
+---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_TradeSkillUI.GetPendingObliterateItemLink)
 function C_TradeSkillUI.GetPendingObliterateItemLink() end
 
+---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_TradeSkillUI.GetRecipeCooldown)
 function C_TradeSkillUI.GetRecipeCooldown(recipeID) end
 
+---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_TradeSkillUI.GetRecipeItemLevelFilter)
 function C_TradeSkillUI.GetRecipeItemLevelFilter() end
 
+---#invalidpage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_TradeSkillUI.GetRecipeItemLink)
 function C_TradeSkillUI.GetRecipeItemLink(recipeID) end
 
+---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_TradeSkillUI.GetRecipeItemNameFilter)
 function C_TradeSkillUI.GetRecipeItemNameFilter() end
 
+---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_TradeSkillUI.GetRecipeLink)
 function C_TradeSkillUI.GetRecipeLink(recipeID) end
 
+---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_TradeSkillUI.GetRecipeSourceText)
 function C_TradeSkillUI.GetRecipeSourceText(recipeID) end
 
+---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_TradeSkillUI.GetSubCategories)
 function C_TradeSkillUI.GetSubCategories(categoryID) end
 
@@ -2273,30 +2718,39 @@ function C_TradeSkillUI.GetTradeSkillLineForRecipe(recipeID) end
 ---@return string? link
 function C_TradeSkillUI.GetTradeSkillListLink() end
 
+---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_TradeSkillUI.GetTradeSkillTexture)
 function C_TradeSkillUI.GetTradeSkillTexture(tradeSkillID) end
 
+---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_TradeSkillUI.IsAnyRecipeFromSource)
 function C_TradeSkillUI.IsAnyRecipeFromSource(sourceType) end
 
+---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_TradeSkillUI.IsDataSourceChanging)
 function C_TradeSkillUI.IsDataSourceChanging() end
 
+---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_TradeSkillUI.IsInventorySlotFiltered)
 function C_TradeSkillUI.IsInventorySlotFiltered(index) end
 
+---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_TradeSkillUI.IsRecipeCategoryFiltered)
 function C_TradeSkillUI.IsRecipeCategoryFiltered(categoryID, subCategoryID) end
 
+---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_TradeSkillUI.IsRecipeFavorite)
 function C_TradeSkillUI.IsRecipeFavorite(recipeID) end
 
+---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_TradeSkillUI.IsRecipeRepeating)
 function C_TradeSkillUI.IsRecipeRepeating() end
 
+---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_TradeSkillUI.IsRecipeSearchInProgress)
 function C_TradeSkillUI.IsRecipeSearchInProgress() end
 
+---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_TradeSkillUI.IsRecipeSourceTypeFiltered)
 function C_TradeSkillUI.IsRecipeSourceTypeFiltered(sourceType) end
 
@@ -2304,6 +2758,7 @@ function C_TradeSkillUI.IsRecipeSourceTypeFiltered(sourceType) end
 ---@return boolean isGuild
 function C_TradeSkillUI.IsTradeSkillGuild() end
 
+---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_TradeSkillUI.IsTradeSkillGuildMember)
 function C_TradeSkillUI.IsTradeSkillGuildMember() end
 
@@ -2315,171 +2770,227 @@ function C_TradeSkillUI.IsTradeSkillLinked() end
 ---@return boolean isReady
 function C_TradeSkillUI.IsTradeSkillReady() end
 
+---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_TradeSkillUI.ObliterateItem)
 function C_TradeSkillUI.ObliterateItem() end
 
+---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_TradeSkillUI.SetInventorySlotFilter)
 function C_TradeSkillUI.SetInventorySlotFilter(index, enable, exclusive) end
 
+---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_TradeSkillUI.SetOnlyShowFirstCraftRecipes)
 function C_TradeSkillUI.SetOnlyShowFirstCraftRecipes() end
 
+---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_TradeSkillUI.SetOnlyShowMakeableRecipes)
 function C_TradeSkillUI.SetOnlyShowMakeableRecipes(onlyMakable) end
 
+---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_TradeSkillUI.SetOnlyShowSkillUpRecipes)
 function C_TradeSkillUI.SetOnlyShowSkillUpRecipes() end
 
+---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_TradeSkillUI.SetRecipeCategoryFilter)
 function C_TradeSkillUI.SetRecipeCategoryFilter(categoryID, subCategoryID) end
 
+---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_TradeSkillUI.SetRecipeFavorite)
 function C_TradeSkillUI.SetRecipeFavorite(recipeID, favorite) end
 
+---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_TradeSkillUI.SetRecipeItemLevelFilter)
 function C_TradeSkillUI.SetRecipeItemLevelFilter(minLevel, maxLevel) end
 
+---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_TradeSkillUI.SetRecipeItemNameFilter)
 function C_TradeSkillUI.SetRecipeItemNameFilter() end
 
+---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_TradeSkillUI.SetRecipeSourceTypeFilter)
 function C_TradeSkillUI.SetRecipeSourceTypeFilter(sourceType, filtered) end
 
+---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_TradeSkillUI.StopRecipeRepeat)
 function C_TradeSkillUI.StopRecipeRepeat() end
 
+---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_Trophy.MonumentChangeAppearanceToTrophyID)
 function C_Trophy.MonumentChangeAppearanceToTrophyID(trophyID) end
 
+---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_Trophy.MonumentCloseMonumentUI)
 function C_Trophy.MonumentCloseMonumentUI() end
 
+---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_Trophy.MonumentGetCount)
 function C_Trophy.MonumentGetCount() end
 
+---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_Trophy.MonumentGetSelectedTrophyID)
 function C_Trophy.MonumentGetSelectedTrophyID() end
 
+---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_Trophy.MonumentGetTrophyInfoByIndex)
 function C_Trophy.MonumentGetTrophyInfoByIndex(index) end
 
+---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_Trophy.MonumentLoadList)
 function C_Trophy.MonumentLoadList() end
 
+---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_Trophy.MonumentLoadSelectedTrophyID)
 function C_Trophy.MonumentLoadSelectedTrophyID() end
 
+---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_Trophy.MonumentRevertAppearanceToSaved)
 function C_Trophy.MonumentRevertAppearanceToSaved() end
 
+---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_Trophy.MonumentSaveSelection)
 function C_Trophy.MonumentSaveSelection(trophyID) end
 
+---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_Widget.IsFrameWidget)
 function C_Widget.IsFrameWidget() end
 
+---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_Widget.IsRenderableWidget)
 function C_Widget.IsRenderableWidget() end
 
+---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_Widget.IsWidget)
 function C_Widget.IsWidget(object) end
 
+---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_WoWLabsMatchmaking.AcceptPartyInvite)
 function C_WoWLabsMatchmaking.AcceptPartyInvite() end
 
+---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_WoWLabsMatchmaking.CanEnterMatchmaking)
 function C_WoWLabsMatchmaking.CanEnterMatchmaking() end
 
+---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_WoWLabsMatchmaking.DeclinePartyInvite)
 function C_WoWLabsMatchmaking.DeclinePartyInvite() end
 
+---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_WoWLabsMatchmaking.GetCurrentParty)
 function C_WoWLabsMatchmaking.GetCurrentParty() end
 
+---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_WoWLabsMatchmaking.GetInQueueTimeStart)
 function C_WoWLabsMatchmaking.GetInQueueTimeStart() end
 
+---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_WoWLabsMatchmaking.GetNumPartyInvites)
 function C_WoWLabsMatchmaking.GetNumPartyInvites() end
 
+---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_WoWLabsMatchmaking.GetPartyInviteByIndex)
 function C_WoWLabsMatchmaking.GetPartyInviteByIndex() end
 
+---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_WoWLabsMatchmaking.GetPartyPlaylistEntry)
 function C_WoWLabsMatchmaking.GetPartyPlaylistEntry() end
 
+---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_WoWLabsMatchmaking.GetPartySize)
 function C_WoWLabsMatchmaking.GetPartySize() end
 
+---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_WoWLabsMatchmaking.IsAloneInWoWLabsParty)
 function C_WoWLabsMatchmaking.IsAloneInWoWLabsParty() end
 
+---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_WoWLabsMatchmaking.IsFindingMatch)
 function C_WoWLabsMatchmaking.IsFindingMatch() end
 
+---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_WoWLabsMatchmaking.IsPartyFull)
 function C_WoWLabsMatchmaking.IsPartyFull() end
 
+---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_WoWLabsMatchmaking.IsPartyLeader)
 function C_WoWLabsMatchmaking.IsPartyLeader() end
 
+---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_WoWLabsMatchmaking.IsPlayer)
 function C_WoWLabsMatchmaking.IsPlayer() end
 
+---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_WoWLabsMatchmaking.IsPlayerReady)
 function C_WoWLabsMatchmaking.IsPlayerReady() end
 
+---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_WoWLabsMatchmaking.IsWowLabsMatchmakingMember)
 function C_WoWLabsMatchmaking.IsWowLabsMatchmakingMember() end
 
+---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_WoWLabsMatchmaking.LeaveParty)
 function C_WoWLabsMatchmaking.LeaveParty() end
 
+---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_WoWLabsMatchmaking.RemovePlayerFromParty)
 function C_WoWLabsMatchmaking.RemovePlayerFromParty() end
 
+---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_WoWLabsMatchmaking.SendPartyInvite)
 function C_WoWLabsMatchmaking.SendPartyInvite() end
 
+---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_WoWLabsMatchmaking.SetPartyPlaylistEntry)
 function C_WoWLabsMatchmaking.SetPartyPlaylistEntry() end
 
+---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_WoWLabsMatchmaking.SetPlayerReady)
 function C_WoWLabsMatchmaking.SetPlayerReady() end
 
+---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_WowLabsDataManager.PushCircleInfoToLua)
 function C_WowLabsDataManager.PushCircleInfoToLua() end
 
+---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_WowTokenPublic.BuyToken)
 function C_WowTokenPublic.BuyToken() end
 
+---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_WowTokenPublic.GetCommerceSystemStatus)
 function C_WowTokenPublic.GetCommerceSystemStatus() end
 
+---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_WowTokenPublic.GetCurrentMarketPrice)
 function C_WowTokenPublic.GetCurrentMarketPrice() end
 
+---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_WowTokenPublic.GetGuaranteedPrice)
 function C_WowTokenPublic.GetGuaranteedPrice() end
 
+---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_WowTokenPublic.GetListedAuctionableTokenInfo)
 function C_WowTokenPublic.GetListedAuctionableTokenInfo(index) end
 
+---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_WowTokenPublic.GetNumListedAuctionableTokens)
 function C_WowTokenPublic.GetNumListedAuctionableTokens() end
 
+---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_WowTokenPublic.IsAuctionableWowToken)
 function C_WowTokenPublic.IsAuctionableWowToken(itemID) end
 
+---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_WowTokenPublic.IsConsumableWowToken)
 function C_WowTokenPublic.IsConsumableWowToken() end
 
+---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_WowTokenPublic.UpdateListedAuctionableTokens)
 function C_WowTokenPublic.UpdateListedAuctionableTokens() end
 
+---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_WowTokenPublic.UpdateMarketPrice)
 function C_WowTokenPublic.UpdateMarketPrice() end
 
+---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_WowTokenPublic.UpdateTokenCount)
 function C_WowTokenPublic.UpdateTokenCount() end
 
@@ -2491,18 +3002,23 @@ function CallCompanion(type, id) end
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_CameraOrSelectOrMoveStart)
 function CameraOrSelectOrMoveStart() end
 
+---#invalidpage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_CameraOrSelectOrMoveStop)
 function CameraOrSelectOrMoveStop(stickyFlag) end
 
+---#invalidpage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_CameraZoomIn)
 function CameraZoomIn(increment) end
 
+---#invalidpage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_CameraZoomOut)
 function CameraZoomOut(increment) end
 
+---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_CanAffordMerchantItem)
 function CanAffordMerchantItem(index) end
 
+---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_CanAutoSetGamePadCursorControl)
 function CanAutoSetGamePadCursorControl() end
 
@@ -2511,21 +3027,27 @@ function CanAutoSetGamePadCursorControl() end
 ---@return boolean canBeRaidTarget
 function CanBeRaidTarget(unit) end
 
+---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_CanCancelScene)
 function CanCancelScene() end
 
+---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_CanComplainInboxItem)
 function CanComplainInboxItem(index) end
 
+---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_CanEditGuildBankTabInfo)
 function CanEditGuildBankTabInfo() end
 
+---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_CanEditGuildEvent)
 function CanEditGuildEvent() end
 
+---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_CanEditGuildInfo)
 function CanEditGuildInfo() end
 
+---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_CanEditGuildTabInfo)
 function CanEditGuildTabInfo(tab) end
 
@@ -2533,15 +3055,19 @@ function CanEditGuildTabInfo(tab) end
 ---@return boolean canEdit
 function CanEditMOTD() end
 
+---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_CanEditPublicNote)
 function CanEditPublicNote() end
 
+---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_CanExitVehicle)
 function CanExitVehicle() end
 
+---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_CanGamePadControlCursor)
 function CanGamePadControlCursor() end
 
+---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_CanGuildBankRepair)
 function CanGuildBankRepair() end
 
@@ -2557,15 +3083,19 @@ function CanGuildInvite() end
 ---@return boolean canPromote
 function CanGuildPromote() end
 
+---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_CanGuildRemove)
 function CanGuildRemove() end
 
+---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_CanHearthAndResurrectFromArea)
 function CanHearthAndResurrectFromArea() end
 
+---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_CanInitiateWarGame)
 function CanInitiateWarGame() end
 
+---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_CanItemBeSocketedToArtifact)
 function CanItemBeSocketedToArtifact(itemID) end
 
@@ -2573,9 +3103,11 @@ function CanItemBeSocketedToArtifact(itemID) end
 ---@return boolean isTrue
 function CanJoinBattlefieldAsGroup() end
 
+---#invalidpage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_CanMerchantRepair)
 function CanMerchantRepair() end
 
+---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_CanPartyLFGBackfill)
 function CanPartyLFGBackfill() end
 
@@ -2583,6 +3115,7 @@ function CanPartyLFGBackfill() end
 ---@return boolean canReplace
 function CanReplaceGuildMaster() end
 
+---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_CanResetTutorials)
 function CanResetTutorials() end
 
@@ -2594,15 +3127,19 @@ function CanScanResearchSite() end
 ---@return boolean canShow
 function CanShowAchievementUI() end
 
+---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_CanSignPetition)
 function CanSignPetition() end
 
+---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_CanSolveArtifact)
 function CanSolveArtifact() end
 
+---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_CanSurrenderArena)
 function CanSurrenderArena() end
 
+---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_CanSwitchVehicleSeats)
 function CanSwitchVehicleSeats() end
 
@@ -2615,12 +3152,14 @@ function CanUseVoidStorage() end
 ---@return boolean canView
 function CanViewGuildRecipes(skillID) end
 
+---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_CanWithdrawGuildBankMoney)
 function CanWithdrawGuildBankMoney() end
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_CancelDuel)
 function CancelDuel() end
 
+---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_CancelEmote)
 function CancelEmote() end
 
@@ -2628,21 +3167,26 @@ function CancelEmote() end
 ---@param weaponHand number
 function CancelItemTempEnchantment(weaponHand) end
 
+---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_CancelMasterLootRoll)
 function CancelMasterLootRoll(slot) end
 
+---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_CancelPetPossess)
 function CancelPetPossess() end
 
+---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_CancelScene)
 function CancelScene() end
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_CancelShapeshiftForm)
 function CancelShapeshiftForm() end
 
+---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_CancelSpellByName)
 function CancelSpellByName(name) end
 
+---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_CancelTradeAccept)
 function CancelTradeAccept() end
 
@@ -2652,6 +3196,7 @@ function CancelTradeAccept() end
 ---@param filter string
 function CancelUnitBuff(unit, buffIndex, filter) end
 
+---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_CannotBeResurrected)
 function CannotBeResurrected() end
 
@@ -2669,18 +3214,23 @@ function CastShapeshiftForm(index) end
 ---@param spellbookType string
 function CastSpell(spellIndex, spellbookType) end
 
+---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_CastSpellByID)
 function CastSpellByID(spellID, target) end
 
+---#invalidpage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_CastSpellByName)
 function CastSpellByName(name, target) end
 
+---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_CenterCamera)
 function CenterCamera() end
 
+---#invalidpage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_ChangeActionBarPage)
 function ChangeActionBarPage(page) end
 
+---#invalidpage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_ChangeChatColor)
 function ChangeChatColor(channelName, r, g, b) end
 
@@ -2699,63 +3249,81 @@ function ChannelInvite(channelName, playerName) end
 ---@param playerName string
 function ChannelKick(channelName, playerName) end
 
+---#invalidpage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_ChannelModerator)
 function ChannelModerator(channel, name) end
 
+---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_ChannelSetAllSilent)
 function ChannelSetAllSilent() end
 
+---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_ChannelSetPartyMemberSilent)
 function ChannelSetPartyMemberSilent(partyMemberName, silenceOn) end
 
+---#invalidpage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_ChannelToggleAnnouncements)
 function ChannelToggleAnnouncements(channel) end
 
+---#invalidpage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_ChannelUnban)
 function ChannelUnban(channel, name) end
 
+---#invalidpage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_ChannelUnmoderator)
 function ChannelUnmoderator(channel, name) end
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_CheckInbox)
 function CheckInbox() end
 
+---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_ClearAchievementComparisonUnit)
 function ClearAchievementComparisonUnit() end
 
+---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_ClearAchievementSearchString)
 function ClearAchievementSearchString() end
 
+---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_ClearAllLFGDungeons)
 function ClearAllLFGDungeons(category) end
 
+---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_ClearAutoAcceptQuestSound)
 function ClearAutoAcceptQuestSound() end
 
+---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_ClearBattlemaster)
 function ClearBattlemaster() end
 
+---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_ClearFailedPVPTalentIDs)
 function ClearFailedPVPTalentIDs() end
 
+---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_ClearFailedTalentIDs)
 function ClearFailedTalentIDs() end
 
+---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_ClearInspectPlayer)
 function ClearInspectPlayer() end
 
+---#invalidpage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_ClearOverrideBindings)
 function ClearOverrideBindings(owner) end
 
+---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_ClearPartyAssignment)
 function ClearPartyAssignment() end
 
+---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_ClearRaidMarker)
 function ClearRaidMarker(index) end
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_ClearSendMail)
 function ClearSendMail() end
 
+---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_ClearTutorials)
 function ClearTutorials() end
 
@@ -2768,12 +3336,15 @@ function ClearVoidTransferDepositSlot(slotIndex) end
 ---@param clearItem? boolean
 function ClickSendMailItemButton(itemIndex, clearItem) end
 
+---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_ClickSocketButton)
 function ClickSocketButton(id) end
 
+---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_ClickTargetTradeButton)
 function ClickTargetTradeButton(index) end
 
+---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_ClickTradeButton)
 function ClickTradeButton(index) end
 
@@ -2792,15 +3363,19 @@ function ClickVoidTransferDepositSlot(slotIndex, isRightClick) end
 ---@param isRightClick boolean
 function ClickVoidTransferWithdrawalSlot(slotIndex, isRightClick) end
 
+---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_ClickWorldMapActionButton)
 function ClickWorldMapActionButton() end
 
+---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_CloseGuildBankFrame)
 function CloseGuildBankFrame() end
 
+---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_CloseGuildRegistrar)
 function CloseGuildRegistrar() end
 
+---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_CloseGuildRoster)
 function CloseGuildRoster() end
 
@@ -2820,15 +3395,18 @@ function CloseMerchant() end
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_ClosePetition)
 function ClosePetition() end
 
+---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_CloseQuest)
 function CloseQuest() end
 
+---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_CloseResearch)
 function CloseResearch() end
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_CloseSocketInfo)
 function CloseSocketInfo() end
 
+---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_CloseTabardCreation)
 function CloseTabardCreation() end
 
@@ -2841,45 +3419,59 @@ function CloseTrade() end
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_CloseTrainer)
 function CloseTrainer() end
 
+---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_CollapseGuildTradeSkillHeader)
 function CollapseGuildTradeSkillHeader(tradeSkillID) end
 
+---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_CollapseQuestHeader)
 function CollapseQuestHeader() end
 
+---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_CollapseWarGameHeader)
 function CollapseWarGameHeader(index) end
 
+---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_CombatLogAddFilter)
 function CombatLogAddFilter(eList, sourceFlags, destFlags) end
 
+---#invalidpage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_CombatLogAdvanceEntry)
 function CombatLogAdvanceEntry(count, ignoreFilter) end
 
+---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_CombatLogClearEntries)
 function CombatLogClearEntries() end
 
+---#invalidpage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_CombatLogGetCurrentEntry)
 function CombatLogGetCurrentEntry() end
 
+---#invalidpage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_CombatLogGetCurrentEventInfo)
 function CombatLogGetCurrentEventInfo() end
 
+---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_CombatLogGetNumEntries)
 function CombatLogGetNumEntries() end
 
+---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_CombatLogGetRetentionTime)
 function CombatLogGetRetentionTime() end
 
+---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_CombatLogResetFilter)
 function CombatLogResetFilter() end
 
+---#invalidpage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_CombatLogSetCurrentEntry)
 function CombatLogSetCurrentEntry(index, ignoreFilter) end
 
+---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_CombatLogSetRetentionTime)
 function CombatLogSetRetentionTime(seconds) end
 
+---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_CombatLogShowCurrentEntry)
 function CombatLogShowCurrentEntry() end
 
@@ -2893,9 +3485,11 @@ function CombatLog_Object_IsA(unitFlags, mask) end
 ---@param unit UnitId
 function CombatTextSetActiveUnit(unit) end
 
+---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_CompleteLFGReadyCheck)
 function CompleteLFGReadyCheck(isReady) end
 
+---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_CompleteLFGRoleCheck)
 function CompleteLFGRoleCheck(isReady) end
 
@@ -2905,6 +3499,7 @@ function CompleteQuest() end
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_ConfirmAcceptQuest)
 function ConfirmAcceptQuest() end
 
+---#invalidpage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_ConfirmBNRequestInviteFriend)
 function ConfirmBNRequestInviteFriend(presenceID, tank, heal, dps) end
 
@@ -2944,6 +3539,7 @@ function CreateFrame(frameType, name, parent, template, id) end
 ---@return number macroId
 function CreateMacro(name, iconFileID, body, perCharacter) end
 
+---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_CreateNewRaidProfile)
 function CreateNewRaidProfile(name, baseOnProfile) end
 
@@ -2970,6 +3566,7 @@ function DeclineQuest() end
 ---@param spellID number
 function DeclineSpellConfirmationPrompt(spellID) end
 
+---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_DeleteGMTicket)
 function DeleteGMTicket() end
 
@@ -2981,21 +3578,26 @@ function DeleteInboxItem(index) end
 ---@param indexOrName number|string
 function DeleteMacro(indexOrName) end
 
+---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_DeleteRaidProfile)
 function DeleteRaidProfile(profile) end
 
+---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_DemoteAssistant)
 function DemoteAssistant(unit) end
 
+---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_DepositGuildBankMoney)
 function DepositGuildBankMoney(money) end
 
+---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_DepositReagentBank)
 function DepositReagentBank() end
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_DescendStop)
 function DescendStop() end
 
+---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_DetectWowMouse)
 function DetectWowMouse() end
 
@@ -3003,6 +3605,7 @@ function DetectWowMouse() end
 ---@param type string
 function DismissCompanion(type) end
 
+---#invalidpage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_DisplayChannelOwner)
 function DisplayChannelOwner(channel) end
 
@@ -3013,15 +3616,18 @@ function DisplayChannelOwner(channel) end
 ---@return boolean? restricted
 function DoEmote(token, unit, hold) end
 
+---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_DoMasterLootRoll)
 function DoMasterLootRoll(slot) end
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_DoReadyCheck)
 function DoReadyCheck() end
 
+---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_DoesTemplateExist)
 function DoesTemplateExist(template) end
 
+---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_DungeonAppearsInRandomLFD)
 function DungeonAppearsInRandomLFD(dungeonID) end
 
@@ -3054,9 +3660,11 @@ function EJ_GetCurrentTier() end
 ---@return number difficultyId
 function EJ_GetDifficulty() end
 
+---#invalidpage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_EJ_GetEncounterInfo)
 function EJ_GetEncounterInfo(encounterID) end
 
+---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_EJ_GetEncounterInfoByIndex)
 function EJ_GetEncounterInfoByIndex(index, journalInstanceID) end
 
@@ -3105,6 +3713,7 @@ function EJ_GetInvTypeSortOrder(invType) end
 ---@return number specID
 function EJ_GetLootFilter() end
 
+---#invalidpage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_EJ_GetMapEncounter)
 function EJ_GetMapEncounter(mapID, index, fromJournal) end
 
@@ -3156,6 +3765,7 @@ function EJ_GetSectionPath(sectionID) end
 ---@return string link
 function EJ_GetTierInfo(index) end
 
+---#invalidpage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_EJ_HandleLinkPath)
 function EJ_HandleLinkPath(jtype, id) end
 
@@ -3217,18 +3827,22 @@ function EditMacro(macroInfo, name, icon, body) end
 ---@return Frame? nextFrame
 function EnumerateFrames(currentFrame) end
 
+---#invalidpage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_EnumerateServerChannels)
 function EnumerateServerChannels() end
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_ExecuteVoidTransfer)
 function ExecuteVoidTransfer() end
 
+---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_ExpandGuildTradeSkillHeader)
 function ExpandGuildTradeSkillHeader(tradeSkillID) end
 
+---#invalidpage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_ExpandQuestHeader)
 function ExpandQuestHeader() end
 
+---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_ExpandWarGameHeader)
 function ExpandWarGameHeader(index) end
 
@@ -3237,9 +3851,11 @@ function ExpandWarGameHeader(index) end
 ---@return number baseSpellID
 function FindBaseSpellByID(spellID) end
 
+---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_FindFlyoutSlotBySpellID)
 function FindFlyoutSlotBySpellID(spellID) end
 
+---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_FindSpellBookSlotBySpellID)
 function FindSpellBookSlotBySpellID(spellID, isPet) end
 
@@ -3248,6 +3864,7 @@ function FindSpellBookSlotBySpellID(spellID, isPet) end
 ---@return number overrideSpellID
 function FindSpellOverrideByID(spellID) end
 
+---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_FlagTutorial)
 function FlagTutorial(tutorial) end
 
@@ -3261,54 +3878,70 @@ function FlipCameraYaw(angle) end
 ---@return boolean hasSpell
 function FlyoutHasSpell(flyoutID, spellID) end
 
+---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_ForfeitDuel)
 function ForfeitDuel() end
 
+---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_GMEuropaBugsEnabled)
 function GMEuropaBugsEnabled() end
 
+---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_GMEuropaComplaintsEnabled)
 function GMEuropaComplaintsEnabled() end
 
+---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_GMEuropaSuggestionsEnabled)
 function GMEuropaSuggestionsEnabled() end
 
+---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_GMEuropaTicketsEnabled)
 function GMEuropaTicketsEnabled() end
 
+---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_GMItemRestorationButtonEnabled)
 function GMItemRestorationButtonEnabled() end
 
+---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_GMQuickTicketSystemEnabled)
 function GMQuickTicketSystemEnabled() end
 
+---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_GMQuickTicketSystemThrottled)
 function GMQuickTicketSystemThrottled() end
 
+---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_GMReportLag)
 function GMReportLag() end
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_GMRequestPlayerInfo)
 function GMRequestPlayerInfo() end
 
+---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_GMResponseResolve)
 function GMResponseResolve() end
 
+---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_GMSurveyAnswer)
 function GMSurveyAnswer() end
 
+---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_GMSurveyAnswerSubmit)
 function GMSurveyAnswerSubmit(question, rank, comment) end
 
+---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_GMSurveyCommentSubmit)
 function GMSurveyCommentSubmit(comment) end
 
+---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_GMSurveyNumAnswers)
 function GMSurveyNumAnswers() end
 
+---#invalidpage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_GMSurveyQuestion)
 function GMSurveyQuestion() end
 
+---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_GMSurveySubmit)
 function GMSurveySubmit() end
 
@@ -3325,12 +3958,15 @@ function GetAchievementCategory(achievementID) end
 ---@return number year
 function GetAchievementComparisonInfo(achievementID) end
 
+---#invalidpage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_GetAchievementCriteriaInfo)
 function GetAchievementCriteriaInfo(achievementID, criteriaNum) end
 
+---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_GetAchievementCriteriaInfoByID)
 function GetAchievementCriteriaInfoByID(achievementID, criteriaIndex) end
 
+---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_GetAchievementGuildRep)
 function GetAchievementGuildRep() end
 
@@ -3354,24 +3990,31 @@ function GetAchievementGuildRep() end
 ---@overload fun(categoryID: number, index: number)
 function GetAchievementInfo(achievementID) end
 
+---#invalidpage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_GetAchievementLink)
 function GetAchievementLink(achievementID) end
 
+---#invalidpage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_GetAchievementNumCriteria)
 function GetAchievementNumCriteria(achievementID) end
 
+---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_GetAchievementNumRewards)
 function GetAchievementNumRewards(achievementID) end
 
+---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_GetAchievementReward)
 function GetAchievementReward(achievementID, rewardIndex) end
 
+---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_GetAchievementSearchProgress)
 function GetAchievementSearchProgress() end
 
+---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_GetAchievementSearchSize)
 function GetAchievementSearchSize() end
 
+---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_GetActionAutocast)
 function GetActionAutocast(slot) end
 
@@ -3379,6 +4022,7 @@ function GetActionAutocast(slot) end
 ---@return number index
 function GetActionBarPage() end
 
+---#invalidpage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_GetActionBarToggles)
 function GetActionBarToggles() end
 
@@ -3404,6 +4048,7 @@ function GetActionCooldown(slot) end
 ---@return number text
 function GetActionCount(actionSlot) end
 
+---#invalidpage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_GetActionInfo)
 function GetActionInfo(slot) end
 
@@ -3413,21 +4058,27 @@ function GetActionInfo(slot) end
 ---@return number duration
 function GetActionLossOfControlCooldown(slot) end
 
+---#invalidpage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_GetActionText)
 function GetActionText(slot) end
 
+---#invalidpage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_GetActionTexture)
 function GetActionTexture(slot) end
 
+---#invalidpage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_GetActiveArtifactByRace)
 function GetActiveArtifactByRace(raceIndex) end
 
+---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_GetActiveLevel)
 function GetActiveLevel(index) end
 
+---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_GetActiveLootRollIDs)
 function GetActiveLootRollIDs() end
 
+---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_GetActiveQuestID)
 function GetActiveQuestID(index) end
 
@@ -3436,9 +4087,11 @@ function GetActiveQuestID(index) end
 ---@return number activeSpec
 function GetActiveSpecGroup(isInspect) end
 
+---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_GetActiveTitle)
 function GetActiveTitle(index) end
 
+---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_GetAlternativeDefaultLanguage)
 function GetAlternativeDefaultLanguage() end
 
@@ -3456,6 +4109,7 @@ function GetArchaeologyInfo() end
 ---@return number maxFragments
 function GetArchaeologyRaceInfo(raceIndex) end
 
+---#invalidpage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_GetArchaeologyRaceInfoByID)
 function GetArchaeologyRaceInfoByID(researchBranchID) end
 
@@ -3485,6 +4139,7 @@ function GetArtifactInfoByRace(raceIndex, artifactIndex) end
 ---@return number numFragmentsRequired
 function GetArtifactProgress() end
 
+---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_GetAutoCompletePresenceID)
 function GetAutoCompletePresenceID(name) end
 
@@ -3509,6 +4164,7 @@ function GetAutoCompleteResults(text, numResults, cursorPosition, allowFullMatch
 ---@return string type
 function GetAutoQuestPopUp(index) end
 
+---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_GetAvailableLevel)
 function GetAvailableLevel(index) end
 
@@ -3522,6 +4178,7 @@ function GetAvailableLevel(index) end
 ---@return boolean isImportant
 function GetAvailableQuestInfo(index) end
 
+---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_GetAvailableTitle)
 function GetAvailableTitle(index) end
 
@@ -3536,6 +4193,7 @@ function GetAverageItemLevel() end
 ---@return number cost
 function GetBankSlotCost(numSlots) end
 
+---#invalidpage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_GetBattlefieldArenaFaction)
 function GetBattlefieldArenaFaction() end
 
@@ -3551,6 +4209,7 @@ function GetBattlefieldInstanceExpiration() end
 ---@return number time
 function GetBattlefieldInstanceRunTime() end
 
+---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_GetBattlefieldMapIconScale)
 function GetBattlefieldMapIconScale() end
 
@@ -3559,9 +4218,11 @@ function GetBattlefieldMapIconScale() end
 ---@return number expiration
 function GetBattlefieldPortExpiration(index) end
 
+---#invalidpage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_GetBattlefieldScore)
 function GetBattlefieldScore(index) end
 
+---#invalidpage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_GetBattlefieldStatData)
 function GetBattlefieldStatData(playerIndex, slotIndex) end
 
@@ -3581,12 +4242,15 @@ function GetBattlefieldStatData(playerIndex, slotIndex) end
 ---@return boolean isSoloQueue
 function GetBattlefieldStatus(index) end
 
+---#invalidpage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_GetBattlefieldTeamInfo)
 function GetBattlefieldTeamInfo(index) end
 
+---#invalidpage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_GetBattlefieldTimeWaited)
 function GetBattlefieldTimeWaited(index) end
 
+---#invalidpage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_GetBattlefieldWinner)
 function GetBattlefieldWinner() end
 
@@ -3617,6 +4281,7 @@ function GetBattlegroundPoints(team) end
 ---@return number flexDungeonID
 function GetBestFlexRaidChoice() end
 
+---#invalidpage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_GetBestRFChoice)
 function GetBestRFChoice() end
 
@@ -3641,6 +4306,7 @@ function GetBindingAction(binding, checkOverride) end
 ---@return string bindingAction
 function GetBindingByKey(key) end
 
+---#invalidpage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_GetBindingKey)
 function GetBindingKey(command) end
 
@@ -3651,9 +4317,11 @@ function GetBindingKey(command) end
 ---@return string text
 function GetBindingText(key, prefix, abbreviate) end
 
+---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_GetBonusBarIndex)
 function GetBonusBarIndex() end
 
+---#invalidpage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_GetBonusBarOffset)
 function GetBonusBarOffset() end
 
@@ -3661,12 +4329,15 @@ function GetBonusBarOffset() end
 ---@return table metatable
 function GetButtonMetatable() end
 
+---#invalidpage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_GetBuybackItemInfo)
 function GetBuybackItemInfo(index) end
 
+---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_GetBuybackItemLink)
 function GetBuybackItemLink(index) end
 
+---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_GetCallPetSpellInfo)
 function GetCallPetSpellInfo(spellID) end
 
@@ -3674,6 +4345,7 @@ function GetCallPetSpellInfo(spellID) end
 ---@return number zoom
 function GetCameraZoom() end
 
+---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_GetCategoryAchievementPoints)
 function GetCategoryAchievementPoints(categoryID, includeSubCategories) end
 
@@ -3696,6 +4368,7 @@ function GetCategoryList() end
 ---@return number incompleted
 function GetCategoryNumAchievements(categoryId, includeAll) end
 
+---#invalidpage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_GetChannelDisplayInfo)
 function GetChannelDisplayInfo(channelID) end
 
@@ -3714,21 +4387,27 @@ function GetChannelList() end
 ---@return boolean isCommunitiesChannel
 function GetChannelName(name) end
 
+---#invalidpage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_GetChatTypeIndex)
 function GetChatTypeIndex(type) end
 
+---#invalidpage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_GetChatWindowChannels)
 function GetChatWindowChannels(index) end
 
+---#invalidpage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_GetChatWindowInfo)
 function GetChatWindowInfo(index) end
 
+---#invalidpage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_GetChatWindowMessages)
 function GetChatWindowMessages(index) end
 
+---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_GetChatWindowSavedDimensions)
 function GetChatWindowSavedDimensions(index) end
 
+---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_GetChatWindowSavedPosition)
 function GetChatWindowSavedPosition(index) end
 
@@ -3755,9 +4434,11 @@ function GetClickFrame(name) end
 ---@return number mountType
 function GetCompanionInfo(type, id) end
 
+---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_GetComparisonAchievementPoints)
 function GetComparisonAchievementPoints() end
 
+---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_GetComparisonCategoryNumAchievements)
 function GetComparisonCategoryNumAchievements(achievementID) end
 
@@ -3766,9 +4447,11 @@ function GetComparisonCategoryNumAchievements(achievementID) end
 ---@return string value
 function GetComparisonStatistic(achievementID) end
 
+---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_GetCriteriaSpell)
 function GetCriteriaSpell() end
 
+---#invalidpage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_GetCurrentArenaSeason)
 function GetCurrentArenaSeason() end
 
@@ -3776,33 +4459,43 @@ function GetCurrentArenaSeason() end
 ---@return number which
 function GetCurrentBindingSet() end
 
+---#invalidpage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_GetCurrentCombatTextEventInfo)
 function GetCurrentCombatTextEventInfo() end
 
+---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_GetCurrentGlyphNameForSpell)
 function GetCurrentGlyphNameForSpell(spellID) end
 
+---#invalidpage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_GetCurrentGraphicsAPI)
 function GetCurrentGraphicsAPI() end
 
+---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_GetCurrentGraphicsSetting)
 function GetCurrentGraphicsSetting() end
 
+---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_GetCurrentGuildBankTab)
 function GetCurrentGuildBankTab() end
 
+---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_GetCurrentKeyBoardFocus)
 function GetCurrentKeyBoardFocus() end
 
+---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_GetCurrentLevelFeatures)
 function GetCurrentLevelFeatures(level) end
 
+---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_GetCurrentScaledResolution)
 function GetCurrentScaledResolution() end
 
+---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_GetDailyQuestsCompleted)
 function GetDailyQuestsCompleted() end
 
+---#invalidpage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_GetDeathRecapLink)
 function GetDeathRecapLink(recapID) end
 
@@ -3811,9 +4504,11 @@ function GetDeathRecapLink(recapID) end
 ---@return number languageID
 function GetDefaultLanguage() end
 
+---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_GetDemotionRank)
 function GetDemotionRank(index) end
 
+---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_GetDungeonForRandomSlot)
 function GetDungeonForRandomSlot(randomID, index) end
 
@@ -3821,12 +4516,15 @@ function GetDungeonForRandomSlot(randomID, index) end
 ---@return table metatable
 function GetEditBoxMetatable() end
 
+---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_GetEquipmentNameFromSpell)
 function GetEquipmentNameFromSpell() end
 
+---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_GetExistingSocketInfo)
 function GetExistingSocketInfo(id) end
 
+---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_GetExistingSocketLink)
 function GetExistingSocketLink(id) end
 
@@ -3834,9 +4532,11 @@ function GetExistingSocketLink(id) end
 ---@return number extraPage
 function GetExtraBarIndex() end
 
+---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_GetFailedPVPTalentIDs)
 function GetFailedPVPTalentIDs() end
 
+---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_GetFailedTalentIDs)
 function GetFailedTalentIDs() end
 
@@ -3845,9 +4545,11 @@ function GetFailedTalentIDs() end
 ---@return number achievementID
 function GetFilteredAchievementID(index) end
 
+---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_GetFlexRaidDungeonInfo)
 function GetFlexRaidDungeonInfo(index) end
 
+---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_GetFlyoutID)
 function GetFlyoutID(index) end
 
@@ -3869,6 +4571,7 @@ function GetFlyoutInfo(flyoutID) end
 ---@return number slotSpecID
 function GetFlyoutSlotInfo(flyoutID, slot) end
 
+---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_GetFollowerTypeIDFromSpell)
 function GetFollowerTypeIDFromSpell() end
 
@@ -3880,12 +4583,15 @@ function GetFontStringMetatable() end
 ---@return table metatable
 function GetFrameMetatable() end
 
+---#invalidpage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_GetFramesRegisteredForEvent)
 function GetFramesRegisteredForEvent(event) end
 
+---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_GetGMStatus)
 function GetGMStatus() end
 
+---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_GetGMTicket)
 function GetGMTicket() end
 
@@ -3893,24 +4599,31 @@ function GetGMTicket() end
 ---@return string cvarValues
 function GetGraphicsAPIs() end
 
+---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_GetGraphicsCVarValueForQualityLevel)
 function GetGraphicsCVarValueForQualityLevel() end
 
+---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_GetGreetingText)
 function GetGreetingText() end
 
+---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_GetGroupMemberCounts)
 function GetGroupMemberCounts() end
 
+---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_GetGuildAchievementMemberInfo)
 function GetGuildAchievementMemberInfo(achievementID, index) end
 
+---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_GetGuildAchievementMembers)
 function GetGuildAchievementMembers(achievementID) end
 
+---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_GetGuildAchievementNumMembers)
 function GetGuildAchievementNumMembers(achievementID) end
 
+---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_GetGuildBankBonusDepositMoney)
 function GetGuildBankBonusDepositMoney() end
 
@@ -3934,9 +4647,11 @@ function GetGuildBankItemLink(tab, slot) end
 ---@return number retVal1
 function GetGuildBankMoney() end
 
+---#invalidpage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_GetGuildBankMoneyTransaction)
 function GetGuildBankMoneyTransaction(index) end
 
+---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_GetGuildBankTabCost)
 function GetGuildBankTabCost() end
 
@@ -3959,6 +4674,7 @@ function GetGuildBankTabInfo(tab) end
 ---@return number stacksPerDay
 function GetGuildBankTabPermissions(tab) end
 
+---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_GetGuildBankText)
 function GetGuildBankText(tab) end
 
@@ -3977,24 +4693,31 @@ function GetGuildBankText(tab) end
 ---@return number hour
 function GetGuildBankTransaction(tab, index) end
 
+---#invalidpage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_GetGuildBankWithdrawGoldLimit)
 function GetGuildBankWithdrawGoldLimit() end
 
+---#invalidpage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_GetGuildBankWithdrawMoney)
 function GetGuildBankWithdrawMoney() end
 
+---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_GetGuildCategoryList)
 function GetGuildCategoryList() end
 
+---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_GetGuildChallengeInfo)
 function GetGuildChallengeInfo(index) end
 
+---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_GetGuildCharterCost)
 function GetGuildCharterCost() end
 
+---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_GetGuildEventInfo)
 function GetGuildEventInfo(index) end
 
+---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_GetGuildFactionGroup)
 function GetGuildFactionGroup() end
 
@@ -4006,27 +4729,35 @@ function GetGuildFactionGroup() end
 ---@return string? realm
 function GetGuildInfo(unit) end
 
+---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_GetGuildInfoText)
 function GetGuildInfoText() end
 
+---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_GetGuildLogoInfo)
 function GetGuildLogoInfo() end
 
+---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_GetGuildMemberRecipes)
 function GetGuildMemberRecipes(name, skillLineID) end
 
+---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_GetGuildNewsFilters)
 function GetGuildNewsFilters() end
 
+---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_GetGuildNewsMemberName)
 function GetGuildNewsMemberName(index, nameIndex) end
 
+---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_GetGuildNewsSort)
 function GetGuildNewsSort() end
 
+---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_GetGuildPerkInfo)
 function GetGuildPerkInfo() end
 
+---#invalidpage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_GetGuildRecipeInfoPostQuery)
 function GetGuildRecipeInfoPostQuery() end
 
@@ -4036,9 +4767,11 @@ function GetGuildRecipeInfoPostQuery() end
 ---@return boolean online
 function GetGuildRecipeMember(index) end
 
+---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_GetGuildRenameRequired)
 function GetGuildRenameRequired() end
 
+---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_GetGuildRewardInfo)
 function GetGuildRewardInfo(index) end
 
@@ -4063,9 +4796,11 @@ function GetGuildRewardInfo(index) end
 ---@return string guid
 function GetGuildRosterInfo(index) end
 
+---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_GetGuildRosterLargestAchievementPoints)
 function GetGuildRosterLargestAchievementPoints() end
 
+---#invalidpage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_GetGuildRosterLastOnline)
 function GetGuildRosterLastOnline(index) end
 
@@ -4073,9 +4808,11 @@ function GetGuildRosterLastOnline(index) end
 ---@return string motd
 function GetGuildRosterMOTD() end
 
+---#invalidpage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_GetGuildRosterSelection)
 function GetGuildRosterSelection() end
 
+---#invalidpage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_GetGuildRosterShowOffline)
 function GetGuildRosterShowOffline() end
 
@@ -4152,6 +4889,7 @@ function GetInboxInvoiceInfo(index) end
 ---@return boolean canUse
 function GetInboxItem(index, itemIndex) end
 
+---#invalidpage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_GetInboxItemLink)
 function GetInboxItemLink(index, itemIndex) end
 
@@ -4160,6 +4898,7 @@ function GetInboxItemLink(index, itemIndex) end
 ---@return number totalItems
 function GetInboxNumItems() end
 
+---#invalidpage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_GetInboxText)
 function GetInboxText(index) end
 
@@ -4181,6 +4920,7 @@ function GetInspectArenaData(bracketId) end
 ---@return number lifetimeRank
 function GetInspectHonorData() end
 
+---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_GetInspectRatedBGData)
 function GetInspectRatedBGData() end
 
@@ -4189,6 +4929,7 @@ function GetInspectRatedBGData() end
 ---@return number id
 function GetInspectSpecialization(unit) end
 
+---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_GetInspectTalent)
 function GetInspectTalent() end
 
@@ -4197,6 +4938,7 @@ function GetInspectTalent() end
 ---@return number alertStatus
 function GetInventoryAlertStatus(index) end
 
+---#invalidpage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_GetInventoryItemBroken)
 function GetInventoryItemBroken(unit, invSlot) end
 
@@ -4220,6 +4962,7 @@ function GetInventoryItemCount(unit, invSlotId) end
 ---@return number maximum
 function GetInventoryItemDurability(invSlotId) end
 
+---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_GetInventoryItemEquippedUnusable)
 function GetInventoryItemEquippedUnusable(unit, slot) end
 
@@ -4242,6 +4985,7 @@ function GetInventoryItemLink(unit, invSlotId) end
 ---@return Enum.ItemQuality quality
 function GetInventoryItemQuality(unitId, invSlotId) end
 
+---#invalidpage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_GetInventoryItemTexture)
 function GetInventoryItemTexture(unit, invSlot) end
 
@@ -4259,48 +5003,63 @@ function GetInventoryItemsForSlot(slot, returnTable, transmogrify) end
 ---@return boolean checkRelic
 function GetInventorySlotInfo(invSlotName) end
 
+---#invalidpage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_GetInviteConfirmationInfo)
 function GetInviteConfirmationInfo(guid) end
 
+---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_GetItemLevelColor)
 function GetItemLevelColor() end
 
+---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_GetJournalInfoForSpellConfirmation)
 function GetJournalInfoForSpellConfirmation(spellID) end
 
+---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_GetLFDChoiceCollapseState)
 function GetLFDChoiceCollapseState(LFGCollapseList) end
 
+---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_GetLFDChoiceEnabledState)
 function GetLFDChoiceEnabledState(LFGEnabledList) end
 
+---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_GetLFDChoiceOrder)
 function GetLFDChoiceOrder(LFDDungeonList) end
 
+---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_GetLFDLockInfo)
 function GetLFDLockInfo(dungeonID, playerIndex) end
 
+---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_GetLFDLockPlayerCount)
 function GetLFDLockPlayerCount() end
 
+---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_GetLFDRoleLockInfo)
 function GetLFDRoleLockInfo(dungeonID, roleID) end
 
+---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_GetLFDRoleRestrictions)
 function GetLFDRoleRestrictions(dungeonID) end
 
+---#invalidpage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_GetLFGBootProposal)
 function GetLFGBootProposal() end
 
+---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_GetLFGCategoryForID)
 function GetLFGCategoryForID(partySlot) end
 
+---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_GetLFGCompletionReward)
 function GetLFGCompletionReward() end
 
+---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_GetLFGCompletionRewardItem)
 function GetLFGCompletionRewardItem(rewardIndex) end
 
+---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_GetLFGCompletionRewardItemLink)
 function GetLFGCompletionRewardItemLink(rewardIndex) end
 
@@ -4317,6 +5076,7 @@ function GetLFGDeserterExpiration() end
 ---@return boolean unknown4
 function GetLFGDungeonEncounterInfo(dungeonID, encounterIndex) end
 
+---#invalidpage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_GetLFGDungeonInfo)
 function GetLFGDungeonInfo(dungeonID) end
 
@@ -4326,48 +5086,63 @@ function GetLFGDungeonInfo(dungeonID) end
 ---@return number numCompleted
 function GetLFGDungeonNumEncounters(dungeonID) end
 
+---#invalidpage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_GetLFGDungeonRewardCapBarInfo)
 function GetLFGDungeonRewardCapBarInfo(dungeonID) end
 
+---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_GetLFGDungeonRewardCapInfo)
 function GetLFGDungeonRewardCapInfo(dungeonID) end
 
+---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_GetLFGDungeonRewardInfo)
 function GetLFGDungeonRewardInfo(dungeonID, rewardIndex) end
 
+---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_GetLFGDungeonRewardLink)
 function GetLFGDungeonRewardLink(dungeonID, rewardIndex) end
 
+---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_GetLFGDungeonRewards)
 function GetLFGDungeonRewards(dungeonID) end
 
+---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_GetLFGDungeonShortageRewardInfo)
 function GetLFGDungeonShortageRewardInfo(dungeonID, shortageIndex, rewardIndex) end
 
+---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_GetLFGDungeonShortageRewardLink)
 function GetLFGDungeonShortageRewardLink(dungeonID, shortageIndex, rewardIndex) end
 
+---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_GetLFGInfoServer)
 function GetLFGInfoServer(category, lfgID) end
 
+---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_GetLFGInviteRoleAvailability)
 function GetLFGInviteRoleAvailability(roleID) end
 
+---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_GetLFGInviteRoleRestrictions)
 function GetLFGInviteRoleRestrictions(roleID) end
 
+---#invalidpage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_GetLFGProposal)
 function GetLFGProposal() end
 
+---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_GetLFGProposalEncounter)
 function GetLFGProposalEncounter(encounterIndex) end
 
+---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_GetLFGProposalMember)
 function GetLFGProposalMember(memberIndex) end
 
+---#invalidpage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_GetLFGQueueStats)
 function GetLFGQueueStats(category, lfgID) end
 
+---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_GetLFGQueuedList)
 function GetLFGQueuedList(category, table) end
 
@@ -4401,9 +5176,11 @@ function GetLFGRandomCooldownExpiration() end
 ---@return boolean isScalingDungeon
 function GetLFGRandomDungeonInfo(index) end
 
+---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_GetLFGReadyCheckUpdate)
 function GetLFGReadyCheckUpdate() end
 
+---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_GetLFGReadyCheckUpdateBattlegroundInfo)
 function GetLFGReadyCheckUpdateBattlegroundInfo() end
 
@@ -4419,6 +5196,7 @@ function GetLFGReadyCheckUpdateBattlegroundInfo() end
 ---@return number xp
 function GetLFGRoleShortageRewards(dungeonID, shortageSeverity) end
 
+---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_GetLFGRoleUpdate)
 function GetLFGRoleUpdate() end
 
@@ -4426,6 +5204,7 @@ function GetLFGRoleUpdate() end
 ---@return string queueName
 function GetLFGRoleUpdateBattlegroundInfo() end
 
+---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_GetLFGRoleUpdateMember)
 function GetLFGRoleUpdateMember(memberIndex) end
 
@@ -4443,6 +5222,7 @@ function GetLFGRoleUpdateSlot(index) end
 ---@return boolean isDPS
 function GetLFGRoles() end
 
+---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_GetLFGSuspendedPlayers)
 function GetLFGSuspendedPlayers(category) end
 
@@ -4457,24 +5237,31 @@ function GetLFRChoiceOrder(LFRRaidList) end
 ---@return number languageID
 function GetLanguageByIndex(index) end
 
+---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_GetLatestCompletedAchievements)
 function GetLatestCompletedAchievements() end
 
+---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_GetLatestCompletedComparisonAchievements)
 function GetLatestCompletedComparisonAchievements() end
 
+---#invalidpage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_GetLatestThreeSenders)
 function GetLatestThreeSenders() end
 
+---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_GetLatestUpdatedComparisonStats)
 function GetLatestUpdatedComparisonStats() end
 
+---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_GetLatestUpdatedStats)
 function GetLatestUpdatedStats() end
 
+---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_GetLooseMacroIcons)
 function GetLooseMacroIcons() end
 
+---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_GetLooseMacroItemIcons)
 function GetLooseMacroItemIcons() end
 
@@ -4505,6 +5292,7 @@ function GetLootMethod() end
 ---@return boolean canTransmog
 function GetLootRollItemInfo(rollID) end
 
+---#invalidpage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_GetLootRollItemLink)
 function GetLootRollItemLink(id) end
 
@@ -4551,6 +5339,7 @@ function GetLootThreshold() end
 ---@return string? body
 function GetMacroBody(macro) end
 
+---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_GetMacroIcons)
 function GetMacroIcons(table) end
 
@@ -4566,12 +5355,15 @@ function GetMacroIndexByName(name) end
 ---@return string body
 function GetMacroInfo(macro) end
 
+---#invalidpage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_GetMacroItem)
 function GetMacroItem() end
 
+---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_GetMacroItemIcons)
 function GetMacroItemIcons(table) end
 
+---#invalidpage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_GetMacroSpell)
 function GetMacroSpell() end
 
@@ -4585,12 +5377,15 @@ function GetMasterLootCandidate(slot, index) end
 ---@return number maxBattlefieldID
 function GetMaxBattlefieldID() end
 
+---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_GetMaxNumCUFProfiles)
 function GetMaxNumCUFProfiles() end
 
+---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_GetMaxRenderScale)
 function GetMaxRenderScale() end
 
+---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_GetMaxRewardCurrencies)
 function GetMaxRewardCurrencies() end
 
@@ -4598,9 +5393,11 @@ function GetMaxRewardCurrencies() end
 ---@return number tiers
 function GetMaxTalentTier() end
 
+---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_GetMerchantCurrencies)
 function GetMerchantCurrencies() end
 
+---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_GetMerchantFilter)
 function GetMerchantFilter() end
 
@@ -4618,12 +5415,15 @@ function GetMerchantItemCostInfo(index) end
 ---@return string currencyName
 function GetMerchantItemCostItem(index, itemIndex) end
 
+---#invalidpage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_GetMerchantItemID)
 function GetMerchantItemID(index) end
 
+---#invalidpage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_GetMerchantItemInfo)
 function GetMerchantItemInfo(index) end
 
+---#invalidpage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_GetMerchantItemLink)
 function GetMerchantItemLink(index) end
 
@@ -4632,9 +5432,11 @@ function GetMerchantItemLink(index) end
 ---@return number maxStack
 function GetMerchantItemMaxStack(index) end
 
+---#invalidpage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_GetMerchantNumItems)
 function GetMerchantNumItems() end
 
+---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_GetMinRenderScale)
 function GetMinRenderScale() end
 
@@ -4643,27 +5445,35 @@ function GetMinRenderScale() end
 ---@return string key
 function GetModifiedClick(action) end
 
+---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_GetModifiedClickAction)
 function GetModifiedClickAction(index) end
 
+---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_GetMonitorAspectRatio)
 function GetMonitorAspectRatio() end
 
+---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_GetMonitorCount)
 function GetMonitorCount() end
 
+---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_GetMonitorName)
 function GetMonitorName() end
 
+---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_GetMultiCastBarIndex)
 function GetMultiCastBarIndex() end
 
+---#invalidpage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_GetMultiCastTotemSpells)
 function GetMultiCastTotemSpells(totemslot) end
 
+---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_GetNewSocketInfo)
 function GetNewSocketInfo(id) end
 
+---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_GetNewSocketLink)
 function GetNewSocketLink(id) end
 
@@ -4672,9 +5482,11 @@ function GetNewSocketLink(id) end
 ---@return number nextAchievementID
 function GetNextAchievement(achievementID) end
 
+---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_GetNextCompleatedTutorial)
 function GetNextCompleatedTutorial(tutorial) end
 
+---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_GetNextPendingInviteConfirmation)
 function GetNextPendingInviteConfirmation() end
 
@@ -4686,9 +5498,11 @@ function GetNumActiveQuests() end
 ---@return number numRaces
 function GetNumArchaeologyRaces() end
 
+---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_GetNumArenaOpponentSpecs)
 function GetNumArenaOpponentSpecs() end
 
+---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_GetNumArenaOpponents)
 function GetNumArenaOpponents() end
 
@@ -4701,6 +5515,7 @@ function GetNumArtifactsByRace(raceIndex) end
 ---@return number numPopups
 function GetNumAutoQuestPopUps() end
 
+---#invalidpage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_GetNumAvailableQuests)
 function GetNumAvailableQuests() end
 
@@ -4709,12 +5524,15 @@ function GetNumAvailableQuests() end
 ---@return boolean full
 function GetNumBankSlots() end
 
+---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_GetNumBattlefieldFlagPositions)
 function GetNumBattlefieldFlagPositions() end
 
+---#invalidpage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_GetNumBattlefieldScores)
 function GetNumBattlefieldScores() end
 
+---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_GetNumBattlefieldVehicles)
 function GetNumBattlefieldVehicles(index) end
 
@@ -4722,6 +5540,7 @@ function GetNumBattlefieldVehicles(index) end
 ---@return number numBattlegrounds
 function GetNumBattlegroundTypes() end
 
+---#invalidpage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_GetNumBindings)
 function GetNumBindings() end
 
@@ -4729,6 +5548,7 @@ function GetNumBindings() end
 ---@return number numItems
 function GetNumBuybackItems() end
 
+---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_GetNumChannelMembers)
 function GetNumChannelMembers() end
 
@@ -4752,9 +5572,11 @@ function GetNumComparisonCompletedAchievements(achievementID) end
 ---@return number completed
 function GetNumCompletedAchievements() end
 
+---#invalidpage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_GetNumDisplayChannels)
 function GetNumDisplayChannels() end
 
+---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_GetNumDungeonForRandomSlot)
 function GetNumDungeonForRandomSlot(randomID) end
 
@@ -4766,42 +5588,55 @@ function GetNumFilteredAchievements() end
 ---@return number numInstances
 function GetNumFlexRaidDungeons() end
 
+---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_GetNumFlyouts)
 function GetNumFlyouts() end
 
+---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_GetNumGroupChannels)
 function GetNumGroupChannels() end
 
+---#invalidpage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_GetNumGroupMembers)
 function GetNumGroupMembers(groupType) end
 
+---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_GetNumGuildBankMoneyTransactions)
 function GetNumGuildBankMoneyTransactions() end
 
+---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_GetNumGuildBankTabs)
 function GetNumGuildBankTabs() end
 
+---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_GetNumGuildBankTransactions)
 function GetNumGuildBankTransactions(tab) end
 
+---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_GetNumGuildChallenges)
 function GetNumGuildChallenges() end
 
+---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_GetNumGuildEvents)
 function GetNumGuildEvents() end
 
+---#invalidpage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_GetNumGuildMembers)
 function GetNumGuildMembers() end
 
+---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_GetNumGuildNews)
 function GetNumGuildNews() end
 
+---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_GetNumGuildPerks)
 function GetNumGuildPerks() end
 
+---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_GetNumGuildRewards)
 function GetNumGuildRewards() end
 
+---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_GetNumGuildTradeSkill)
 function GetNumGuildTradeSkill() end
 
@@ -4818,9 +5653,11 @@ function GetNumLootItems() end
 ---@return number perChar
 function GetNumMacros() end
 
+---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_GetNumMembersInRank)
 function GetNumMembersInRank(index) end
 
+---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_GetNumModifiedClickActions)
 function GetNumModifiedClickActions() end
 
@@ -4832,9 +5669,11 @@ function GetNumPetitionNames() end
 ---@return number numChoices
 function GetNumQuestChoices() end
 
+---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_GetNumQuestCurrencies)
 function GetNumQuestCurrencies() end
 
+---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_GetNumQuestItemDrops)
 function GetNumQuestItemDrops() end
 
@@ -4842,12 +5681,15 @@ function GetNumQuestItemDrops() end
 ---@return number numRequiredItems
 function GetNumQuestItems() end
 
+---#invalidpage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_GetNumQuestLeaderBoards)
 function GetNumQuestLeaderBoards(questIndex) end
 
+---#invalidpage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_GetNumQuestLogChoices)
 function GetNumQuestLogChoices() end
 
+---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_GetNumQuestLogRewardFactions)
 function GetNumQuestLogRewardFactions() end
 
@@ -4856,6 +5698,7 @@ function GetNumQuestLogRewardFactions() end
 ---@return number numQuestRewards
 function GetNumQuestLogRewards(questID) end
 
+---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_GetNumQuestLogTasks)
 function GetNumQuestLogTasks() end
 
@@ -4867,6 +5710,7 @@ function GetNumQuestRewards() end
 ---@return number numRFDungeons
 function GetNumRFDungeons() end
 
+---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_GetNumRaidProfiles)
 function GetNumRaidProfiles() end
 
@@ -4874,9 +5718,11 @@ function GetNumRaidProfiles() end
 ---@return number numRandomDungeons
 function GetNumRandomDungeons() end
 
+---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_GetNumRandomScenarios)
 function GetNumRandomScenarios() end
 
+---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_GetNumRoutes)
 function GetNumRoutes(slot) end
 
@@ -4888,12 +5734,15 @@ function GetNumSavedInstances() end
 ---@return number numSavedWorldBosses
 function GetNumSavedWorldBosses() end
 
+---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_GetNumScenarios)
 function GetNumScenarios() end
 
+---#invalidpage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_GetNumShapeshiftForms)
 function GetNumShapeshiftForms() end
 
+---#invalidpage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_GetNumSockets)
 function GetNumSockets() end
 
@@ -4902,6 +5751,7 @@ function GetNumSockets() end
 ---@return number numSpecGroups
 function GetNumSpecGroups(b) end
 
+---#invalidpage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_GetNumSpecializations)
 function GetNumSpecializations(isInspect, isPet) end
 
@@ -4910,12 +5760,15 @@ function GetNumSpecializations(isInspect, isPet) end
 ---@return number numSubgroupMembers
 function GetNumSubgroupMembers(groupType) end
 
+---#invalidpage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_GetNumTrainerServices)
 function GetNumTrainerServices() end
 
+---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_GetNumTreasurePickerItems)
 function GetNumTreasurePickerItems() end
 
+---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_GetNumUnspentPvpTalents)
 function GetNumUnspentPvpTalents() end
 
@@ -4931,9 +5784,11 @@ function GetNumVoidTransferDeposit() end
 ---@return number numWithdrawals
 function GetNumVoidTransferWithdrawal() end
 
+---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_GetNumWarGameTypes)
 function GetNumWarGameTypes() end
 
+---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_GetObjectiveText)
 function GetObjectiveText() end
 
@@ -4941,9 +5796,11 @@ function GetObjectiveText() end
 ---@return boolean optedOut
 function GetOptOutOfLoot() end
 
+---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_GetOverrideBarIndex)
 function GetOverrideBarIndex() end
 
+---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_GetOverrideBarSkin)
 function GetOverrideBarSkin() end
 
@@ -4960,15 +5817,19 @@ function GetPVPRoles() end
 ---@return boolean isAssigned
 function GetPartyAssignment(assignment, raidmember, exactMatch) end
 
+---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_GetPartyLFGBackfillInfo)
 function GetPartyLFGBackfillInfo() end
 
+---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_GetPartyLFGID)
 function GetPartyLFGID() end
 
+---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_GetPendingGlyphName)
 function GetPendingGlyphName() end
 
+---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_GetPendingInviteConfirmations)
 function GetPendingInviteConfirmations() end
 
@@ -4984,30 +5845,39 @@ function GetPendingInviteConfirmations() end
 ---@return number cap
 function GetPersonalRatedInfo(index) end
 
+---#invalidpage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_GetPetActionCooldown)
 function GetPetActionCooldown(index) end
 
+---#invalidpage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_GetPetActionInfo)
 function GetPetActionInfo(index) end
 
+---#invalidpage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_GetPetActionSlotUsable)
 function GetPetActionSlotUsable(slot) end
 
+---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_GetPetActionsUsable)
 function GetPetActionsUsable() end
 
+---#invalidpage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_GetPetExperience)
 function GetPetExperience() end
 
+---#invalidpage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_GetPetFoodTypes)
 function GetPetFoodTypes() end
 
+---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_GetPetIcon)
 function GetPetIcon() end
 
+---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_GetPetTalentTree)
 function GetPetTalentTree() end
 
+---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_GetPetTimeRemaining)
 function GetPetTimeRemaining() end
 
@@ -5021,12 +5891,15 @@ function GetPetTimeRemaining() end
 ---@return number minSigs
 function GetPetitionInfo() end
 
+---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_GetPetitionNameInfo)
 function GetPetitionNameInfo(index) end
 
+---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_GetPlayerTradeCurrency)
 function GetPlayerTradeCurrency() end
 
+---#invalidpage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_GetPlayerTradeMoney)
 function GetPlayerTradeMoney() end
 
@@ -5037,6 +5910,7 @@ function GetPlayerTradeMoney() end
 ---@return boolean enabled
 function GetPossessInfo(index) end
 
+---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_GetPrevCompleatedTutorial)
 function GetPrevCompleatedTutorial(tutorial) end
 
@@ -5045,9 +5919,11 @@ function GetPrevCompleatedTutorial(tutorial) end
 ---@return number previousAchievementID
 function GetPreviousAchievement(achievementID) end
 
+---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_GetPreviousArenaSeason)
 function GetPreviousArenaSeason() end
 
+---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_GetPrimarySpecialization)
 function GetPrimarySpecialization() end
 
@@ -5073,9 +5949,11 @@ function GetProfessionInfo(index) end
 ---@return number cooking
 function GetProfessions() end
 
+---#invalidpage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_GetProgressText)
 function GetProgressText() end
 
+---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_GetPromotionRank)
 function GetPromotionRank(index) end
 
@@ -5097,9 +5975,11 @@ function GetPromotionRank(index) end
 ---@return boolean grantedByAura
 function GetPvpTalentInfoByID(talentID, specGroupIndex, isInspect, inspectUnit) end
 
+---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_GetPvpTalentInfoBySpecialization)
 function GetPvpTalentInfoBySpecialization() end
 
+---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_GetPvpTalentLink)
 function GetPvpTalentLink() end
 
@@ -5107,9 +5987,11 @@ function GetPvpTalentLink() end
 ---@return string? material
 function GetQuestBackgroundMaterial() end
 
+---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_GetQuestCurrencyID)
 function GetQuestCurrencyID(type, index) end
 
+---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_GetQuestExpansion)
 function GetQuestExpansion(questID) end
 
@@ -5133,27 +6015,35 @@ function GetQuestID() end
 ---@return number itemID
 function GetQuestItemInfo(type, index) end
 
+---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_GetQuestItemInfoLootType)
 function GetQuestItemInfoLootType(type, index) end
 
+---#invalidpage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_GetQuestItemLink)
 function GetQuestItemLink(type, index) end
 
+---#invalidpage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_GetQuestLink)
 function GetQuestLink(index) end
 
+---#invalidpage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_GetQuestLogChoiceInfo)
 function GetQuestLogChoiceInfo() end
 
+---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_GetQuestLogChoiceInfoLootType)
 function GetQuestLogChoiceInfoLootType(index) end
 
+---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_GetQuestLogCompletionText)
 function GetQuestLogCompletionText() end
 
+---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_GetQuestLogCriteriaSpell)
 function GetQuestLogCriteriaSpell() end
 
+---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_GetQuestLogItemDrop)
 function GetQuestLogItemDrop(index) end
 
@@ -5163,9 +6053,11 @@ function GetQuestLogItemDrop(index) end
 ---@return string itemLink
 function GetQuestLogItemLink(type, index) end
 
+---#invalidpage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_GetQuestLogLeaderBoard)
 function GetQuestLogLeaderBoard(ldrIndex, questIndex) end
 
+---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_GetQuestLogPortraitTurnIn)
 function GetQuestLogPortraitTurnIn() end
 
@@ -5175,15 +6067,19 @@ function GetQuestLogPortraitTurnIn() end
 ---@return string questObjectives
 function GetQuestLogQuestText(questLogIndex) end
 
+---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_GetQuestLogQuestType)
 function GetQuestLogQuestType() end
 
+---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_GetQuestLogRewardArtifactXP)
 function GetQuestLogRewardArtifactXP() end
 
+---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_GetQuestLogRewardFactionInfo)
 function GetQuestLogRewardFactionInfo(questIndex) end
 
+---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_GetQuestLogRewardHonor)
 function GetQuestLogRewardHonor() end
 
@@ -5204,12 +6100,15 @@ function GetQuestLogRewardInfo(itemIndex, questID) end
 ---@return number money
 function GetQuestLogRewardMoney(questID) end
 
+---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_GetQuestLogRewardSkillPoints)
 function GetQuestLogRewardSkillPoints() end
 
+---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_GetQuestLogRewardTitle)
 function GetQuestLogRewardTitle() end
 
+---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_GetQuestLogRewardXP)
 function GetQuestLogRewardXP() end
 
@@ -5228,30 +6127,39 @@ function GetQuestLogSpecialItemCooldown(questLogIndex) end
 ---@return boolean showItemWhenComplete
 function GetQuestLogSpecialItemInfo(questLogIndex) end
 
+---#invalidpage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_GetQuestLogTimeLeft)
 function GetQuestLogTimeLeft() end
 
+---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_GetQuestMoneyToGet)
 function GetQuestMoneyToGet() end
 
+---#invalidpage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_GetQuestObjectiveInfo)
 function GetQuestObjectiveInfo(questID, index, displayComplete) end
 
+---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_GetQuestPOIBlobCount)
 function GetQuestPOIBlobCount(questID) end
 
+---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_GetQuestPOILeaderBoard)
 function GetQuestPOILeaderBoard(index) end
 
+---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_GetQuestPOIs)
 function GetQuestPOIs() end
 
+---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_GetQuestPortraitGiver)
 function GetQuestPortraitGiver() end
 
+---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_GetQuestPortraitTurnIn)
 function GetQuestPortraitTurnIn() end
 
+---#invalidpage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_GetQuestProgressBarPercent)
 function GetQuestProgressBarPercent(questID) end
 
@@ -5268,9 +6176,11 @@ function GetQuestReward(itemChoice) end
 ---@return number sortIndex
 function GetQuestSortIndex(questLogIndex) end
 
+---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_GetQuestText)
 function GetQuestText() end
 
+---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_GetQuestUiMapID)
 function GetQuestUiMapID(questID) end
 
@@ -5301,15 +6211,19 @@ function GetQuestUiMapID(questID) end
 ---@return number lfgMapID
 function GetRFDungeonInfo(index) end
 
+---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_GetRaidProfileFlattenedOptions)
 function GetRaidProfileFlattenedOptions(profile) end
 
+---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_GetRaidProfileName)
 function GetRaidProfileName(index) end
 
+---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_GetRaidProfileOption)
 function GetRaidProfileOption(profile, optionName) end
 
+---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_GetRaidProfileSavedPosition)
 function GetRaidProfileSavedPosition(profile) end
 
@@ -5334,69 +6248,91 @@ function GetRaidRosterInfo(raidIndex) end
 ---@return number? index
 function GetRaidTargetIndex(unit) end
 
+---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_GetRandomDungeonBestChoice)
 function GetRandomDungeonBestChoice() end
 
+---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_GetRandomScenarioBestChoice)
 function GetRandomScenarioBestChoice() end
 
+---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_GetRandomScenarioInfo)
 function GetRandomScenarioInfo(index) end
 
+---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_GetRatedBattleGroundInfo)
 function GetRatedBattleGroundInfo() end
 
+---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_GetReadyCheckStatus)
 function GetReadyCheckStatus(unit) end
 
+---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_GetReadyCheckTimeLeft)
 function GetReadyCheckTimeLeft() end
 
+---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_GetReagentBankCost)
 function GetReagentBankCost() end
 
+---#invalidpage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_GetRepairAllCost)
 function GetRepairAllCost() end
 
+---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_GetRewardArtifactXP)
 function GetRewardArtifactXP() end
 
+---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_GetRewardHonor)
 function GetRewardHonor() end
 
+---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_GetRewardMoney)
 function GetRewardMoney() end
 
+---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_GetRewardNumSkillUps)
 function GetRewardNumSkillUps() end
 
+---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_GetRewardPackArtifactPower)
 function GetRewardPackArtifactPower(rewardPackID) end
 
+---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_GetRewardPackCurrencies)
 function GetRewardPackCurrencies(rewardPackID) end
 
+---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_GetRewardPackItems)
 function GetRewardPackItems(rewardPackID) end
 
+---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_GetRewardPackMoney)
 function GetRewardPackMoney(rewardPackID) end
 
+---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_GetRewardPackTitle)
 function GetRewardPackTitle(rewardPackID) end
 
+---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_GetRewardPackTitleName)
 function GetRewardPackTitleName(titleID) end
 
+---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_GetRewardSkillLineID)
 function GetRewardSkillLineID() end
 
+---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_GetRewardSkillPoints)
 function GetRewardSkillPoints() end
 
+---#invalidpage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_GetRewardText)
 function GetRewardText() end
 
+---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_GetRewardTitle)
 function GetRewardTitle() end
 
@@ -5404,12 +6340,15 @@ function GetRewardTitle() end
 ---@return number xp
 function GetRewardXP() end
 
+---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_GetRunningMacro)
 function GetRunningMacro() end
 
+---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_GetRunningMacroButton)
 function GetRunningMacroButton() end
 
+---#invalidpage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_GetSavedInstanceChatLink)
 function GetSavedInstanceChatLink(index) end
 
@@ -5447,6 +6386,7 @@ function GetSavedInstanceInfo(index) end
 ---@return number reset
 function GetSavedWorldBossInfo(index) end
 
+---#invalidpage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_GetScenariosChoiceOrder)
 function GetScenariosChoiceOrder() end
 
@@ -5461,9 +6401,11 @@ function GetScenariosChoiceOrder() end
 ---@return number spellID
 function GetSelectedArtifactInfo() end
 
+---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_GetSelectedDisplayChannel)
 function GetSelectedDisplayChannel() end
 
+---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_GetSelectedWarGameType)
 function GetSelectedWarGameType() end
 
@@ -5471,12 +6413,15 @@ function GetSelectedWarGameType() end
 ---@return number amount
 function GetSendMailCOD() end
 
+---#invalidpage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_GetSendMailItem)
 function GetSendMailItem(index) end
 
+---#invalidpage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_GetSendMailItemLink)
 function GetSendMailItemLink(index) end
 
+---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_GetSendMailMoney)
 function GetSendMailMoney() end
 
@@ -5489,6 +6434,7 @@ function GetSendMailPrice() end
 ---@return number index
 function GetShapeshiftForm(flag) end
 
+---#invalidpage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_GetShapeshiftFormCooldown)
 function GetShapeshiftFormCooldown(index) end
 
@@ -5508,6 +6454,7 @@ function GetShapeshiftFormInfo(index) end
 ---@return boolean isBoundTradeable
 function GetSocketItemBoundTradeable() end
 
+---#invalidpage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_GetSocketItemInfo)
 function GetSocketItemInfo() end
 
@@ -5515,6 +6462,7 @@ function GetSocketItemInfo() end
 ---@return boolean isRefundable
 function GetSocketItemRefundable() end
 
+---#invalidpage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_GetSocketTypes)
 function GetSocketTypes(id) end
 
@@ -5523,6 +6471,7 @@ function GetSocketTypes(id) end
 ---@return number? entryCount
 function GetSoundEntryCount(soundKit) end
 
+---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_GetSpecChangeCost)
 function GetSpecChangeCost() end
 
@@ -5548,7 +6497,6 @@ function GetSpecialization(isInspect, isPet, specGroup) end
 function GetSpecializationInfo(specID, isInspect, isPet, inspectTarget, sex) end
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_GetSpecializationInfoByID)
----[Documentation](https://warcraft.wiki.gg/wiki/API_GetSpecializationInfo)
 ---@param specID number
 ---@return number id
 ---@return string name
@@ -5559,9 +6507,11 @@ function GetSpecializationInfo(specID, isInspect, isPet, inspectTarget, sex) end
 ---@return string className
 function GetSpecializationInfoByID(specID) end
 
+---#invalidpage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_GetSpecializationMasterySpells)
 function GetSpecializationMasterySpells(specIndex, isInspect, isPet) end
 
+---#invalidpage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_GetSpecializationRole)
 function GetSpecializationRole(specIndex, isInspect, isPet) end
 
@@ -5570,15 +6520,19 @@ function GetSpecializationRole(specIndex, isInspect, isPet) end
 ---@return string roleToken
 function GetSpecializationRoleByID(specID) end
 
+---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_GetSpecializationRoleEnum)
 function GetSpecializationRoleEnum() end
 
+---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_GetSpecializationRoleEnumByID)
 function GetSpecializationRoleEnumByID() end
 
+---#invalidpage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_GetSpecializationSpells)
 function GetSpecializationSpells(specIndex, isInspect, isPet) end
 
+---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_GetSpecsForSpell)
 function GetSpecsForSpell() end
 
@@ -5588,9 +6542,11 @@ function GetSpecsForSpell() end
 ---@return number gcdMS
 function GetSpellBaseCooldown(spellid) end
 
+---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_GetSpellConfirmationPromptsInfo)
 function GetSpellConfirmationPromptsInfo() end
 
+---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_GetSpellsForCharacterUpgradeTier)
 function GetSpellsForCharacterUpgradeTier(tierIndex) end
 
@@ -5606,12 +6562,15 @@ function GetStatistic(category, index) end
 ---@return table categories
 function GetStatisticsCategoryList() end
 
+---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_GetSuggestedGroupSize)
 function GetSuggestedGroupSize() end
 
+---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_GetTabardCreationCost)
 function GetTabardCreationCost() end
 
+---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_GetTabardInfo)
 function GetTabardInfo() end
 
@@ -5667,12 +6626,7 @@ function GetTalentInfoByID(talentID, specGroupIndex, isInspect, inspectUnit) end
 ---@return boolean grantedByAura
 function GetTalentInfoBySpecialization(specIndex, tier, column) end
 
----[Documentation](https://warcraft.wiki.gg/wiki/API_GetTalentInfoByID)
-function GetTalentInfoByID(talentID, specGroupIndex, isInspect, inspectUnit) end
-
----[Documentation](https://warcraft.wiki.gg/wiki/API_GetTalentInfoBySpecialization)
-function GetTalentInfoBySpecialization(specGroupIndex, tier, column) end
-
+---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_GetTalentLink)
 function GetTalentLink(talentID, isInspect, specGroup, inspectID, classID) end
 
@@ -5686,9 +6640,11 @@ function GetTalentLink(talentID, isInspect, specGroup, inspectID, classID) end
 ---@return number tierUnlockLevel
 function GetTalentTierInfo(tier, specGroupIndex, isInspect, inspectedUnit) end
 
+---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_GetTargetTradeCurrency)
 function GetTargetTradeCurrency() end
 
+---#invalidpage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_GetTargetTradeMoney)
 function GetTargetTradeMoney() end
 
@@ -5699,15 +6655,19 @@ function GetTargetTradeMoney() end
 ---@return number numObjectives
 function GetTaskInfo(questID) end
 
+---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_GetTaskPOIs)
 function GetTaskPOIs() end
 
+---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_GetTasksTable)
 function GetTasksTable() end
 
+---#invalidpage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_GetTaxiMapID)
 function GetTaxiMapID() end
 
+---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_GetTempShapeshiftBarIndex)
 function GetTempShapeshiftBarIndex() end
 
@@ -5729,6 +6689,7 @@ function GetTotalAchievementPoints() end
 ---@return boolean canLoseTransmog
 function GetTradePlayerItemInfo(id) end
 
+---#invalidpage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_GetTradePlayerItemLink)
 function GetTradePlayerItemLink(id) end
 
@@ -5742,12 +6703,15 @@ function GetTradePlayerItemLink(id) end
 ---@return string enchant
 function GetTradeTargetItemInfo(index) end
 
+---#invalidpage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_GetTradeTargetItemLink)
 function GetTradeTargetItemLink(id) end
 
+---#invalidpage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_GetTrainerGreetingText)
 function GetTrainerGreetingText() end
 
+---#invalidpage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_GetTrainerSelectionIndex)
 function GetTrainerSelectionIndex() end
 
@@ -5758,6 +6722,7 @@ function GetTrainerSelectionIndex() end
 ---@return boolean hasReq
 function GetTrainerServiceAbilityReq(trainerIndex, reqIndex) end
 
+---#invalidpage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_GetTrainerServiceCost)
 function GetTrainerServiceCost(index) end
 
@@ -5766,9 +6731,11 @@ function GetTrainerServiceCost(index) end
 ---@return string serviceDescription
 function GetTrainerServiceDescription(index) end
 
+---#invalidpage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_GetTrainerServiceIcon)
 function GetTrainerServiceIcon(index) end
 
+---#invalidpage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_GetTrainerServiceInfo)
 function GetTrainerServiceInfo(index) end
 
@@ -5782,33 +6749,43 @@ function GetTrainerServiceItemLink(index) end
 ---@return number reqLevel
 function GetTrainerServiceLevelReq(id) end
 
+---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_GetTrainerServiceNumAbilityReq)
 function GetTrainerServiceNumAbilityReq() end
 
+---#invalidpage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_GetTrainerServiceSkillLine)
 function GetTrainerServiceSkillLine(index) end
 
+---#invalidpage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_GetTrainerServiceSkillReq)
 function GetTrainerServiceSkillReq(index) end
 
+---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_GetTrainerServiceStepIndex)
 function GetTrainerServiceStepIndex() end
 
+---#invalidpage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_GetTrainerServiceTypeFilter)
 function GetTrainerServiceTypeFilter(filter) end
 
+---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_GetTrainerTradeskillRankValues)
 function GetTrainerTradeskillRankValues() end
 
+---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_GetTreasurePickerItemInfo)
 function GetTreasurePickerItemInfo(index, questID) end
 
+---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_GetTutorialsEnabled)
 function GetTutorialsEnabled() end
 
+---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_GetVehicleBarIndex)
 function GetVehicleBarIndex() end
 
+---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_GetVideoCaps)
 function GetVideoCaps() end
 
@@ -5828,6 +6805,7 @@ function GetVoidItemHyperlinkString(voidSlot) end
 ---@return number quality
 function GetVoidItemInfo(tabIndex, slotIndex) end
 
+---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_GetVoidStorageSlotPageIndex)
 function GetVoidStorageSlotPageIndex(slot) end
 
@@ -5847,12 +6825,15 @@ function GetVoidTransferDepositInfo(slotIndex) end
 ---@return string textureName
 function GetVoidTransferWithdrawalInfo(slotIndex) end
 
+---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_GetVoidUnlockCost)
 function GetVoidUnlockCost() end
 
+---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_GetWarGameQueueStatus)
 function GetWarGameQueueStatus() end
 
+---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_GetWarGameTypeInfo)
 function GetWarGameTypeInfo(index) end
 
@@ -5874,42 +6855,55 @@ function GetWeaponEnchantInfo() end
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_GetWebTicket)
 function GetWebTicket() end
 
+---#invalidpage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_GetWorldElapsedTime)
 function GetWorldElapsedTime(timerID) end
 
+---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_GetWorldElapsedTimers)
 function GetWorldElapsedTimers() end
 
+---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_GetWorldMapActionButtonSpellInfo)
 function GetWorldMapActionButtonSpellInfo() end
 
+---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_GetWorldPVPQueueStatus)
 function GetWorldPVPQueueStatus(queueId) end
 
+---#invalidpage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_GiveMasterLoot)
 function GiveMasterLoot(slot, index) end
 
+---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_GroupHasOfflineMember)
 function GroupHasOfflineMember() end
 
+---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_GuildControlAddRank)
 function GuildControlAddRank(name) end
 
+---#invalidpage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_GuildControlDelRank)
 function GuildControlDelRank(name) end
 
+---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_GuildControlGetAllowedShifts)
 function GuildControlGetAllowedShifts(rankOrder) end
 
+---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_GuildControlGetNumRanks)
 function GuildControlGetNumRanks() end
 
+---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_GuildControlGetRank)
 function GuildControlGetRank() end
 
+---#invalidpage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_GuildControlGetRankName)
 function GuildControlGetRankName(index) end
 
+---#invalidpage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_GuildControlSaveRank)
 function GuildControlSaveRank(name) end
 
@@ -5922,30 +6916,39 @@ function GuildControlSetRank(rankOrder) end
 ---@param enabled boolean
 function GuildControlSetRankFlag(index, enabled) end
 
+---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_GuildControlShiftRankDown)
 function GuildControlShiftRankDown(rankOrder) end
 
+---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_GuildControlShiftRankUp)
 function GuildControlShiftRankUp(rankOrder) end
 
+---#invalidpage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_GuildInfo)
 function GuildInfo() end
 
+---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_GuildMasterAbsent)
 function GuildMasterAbsent() end
 
+---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_GuildNewsSetSticky)
 function GuildNewsSetSticky(index, bool) end
 
+---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_GuildNewsSort)
 function GuildNewsSort(byDate) end
 
+---#invalidpage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_GuildRosterSetOfficerNote)
 function GuildRosterSetOfficerNote(index, note) end
 
+---#invalidpage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_GuildRosterSetPublicNote)
 function GuildRosterSetPublicNote(index, note) end
 
+---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_HandleAtlasMemberCommand)
 function HandleAtlasMemberCommand() end
 
@@ -5954,18 +6957,23 @@ function HandleAtlasMemberCommand() end
 ---@return boolean hasAction
 function HasAction(actionSlot) end
 
+---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_HasArtifactEquipped)
 function HasArtifactEquipped() end
 
+---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_HasAttachedGlyph)
 function HasAttachedGlyph(spellID) end
 
+---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_HasBonusActionBar)
 function HasBonusActionBar() end
 
+---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_HasBoundGemProposed)
 function HasBoundGemProposed() end
 
+---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_HasCompletedAnyAchievement)
 function HasCompletedAnyAchievement(achievementID) end
 
@@ -5973,6 +6981,7 @@ function HasCompletedAnyAchievement(achievementID) end
 ---@return boolean hasBar
 function HasExtraActionBar() end
 
+---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_HasInboxItem)
 function HasInboxItem() end
 
@@ -5980,15 +6989,19 @@ function HasInboxItem() end
 ---@return boolean isRestricted
 function HasLFGRestrictions() end
 
+---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_HasLoadedCUFProfiles)
 function HasLoadedCUFProfiles() end
 
+---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_HasNewMail)
 function HasNewMail() end
 
+---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_HasOverrideActionBar)
 function HasOverrideActionBar() end
 
+---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_HasPendingGlyphCast)
 function HasPendingGlyphCast() end
 
@@ -5997,24 +7010,31 @@ function HasPendingGlyphCast() end
 ---@return boolean isHunterPet
 function HasPetUI() end
 
+---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_HasSendMailItem)
 function HasSendMailItem(index) end
 
+---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_HasTempShapeshiftActionBar)
 function HasTempShapeshiftActionBar() end
 
+---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_HasVehicleActionBar)
 function HasVehicleActionBar() end
 
+---#invalidpage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_HasWandEquipped)
 function HasWandEquipped() end
 
+---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_HaveQuestData)
 function HaveQuestData(questID) end
 
+---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_HaveQuestRewardData)
 function HaveQuestRewardData(questID) end
 
+---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_HearthAndResurrectFromArea)
 function HearthAndResurrectFromArea() end
 
@@ -6028,9 +7048,11 @@ function HideRepairCursor() end
 ---@return number xpMultiplier
 function InGuildParty() end
 
+---#invalidpage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_InRepairMode)
 function InRepairMode() end
 
+---#invalidpage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_InboxItemCanDelete)
 function InboxItemCanDelete(index) end
 
@@ -6049,9 +7071,11 @@ function IsActionInRange(actionSlot) end
 ---@return boolean isRegistered
 function IsActiveBattlefieldArena() end
 
+---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_IsActiveQuestLegendary)
 function IsActiveQuestLegendary(index) end
 
+---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_IsActiveQuestTrivial)
 function IsActiveQuestTrivial(index) end
 
@@ -6059,15 +7083,19 @@ function IsActiveQuestTrivial(index) end
 ---@return boolean allowedToTeleport
 function IsAllowedToUserTeleport() end
 
+---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_IsArenaSkirmish)
 function IsArenaSkirmish() end
 
+---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_IsArtifactCompletionHistoryAvailable)
 function IsArtifactCompletionHistoryAvailable() end
 
+---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_IsArtifactRelicItem)
 function IsArtifactRelicItem(item) end
 
+---#invalidpage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_IsAttackAction)
 function IsAttackAction(slot) end
 
@@ -6076,33 +7104,43 @@ function IsAttackAction(slot) end
 ---@return boolean isRepeating
 function IsAutoRepeatAction(actionSlot) end
 
+---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_IsAvailableQuestTrivial)
 function IsAvailableQuestTrivial(index) end
 
+---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_IsBNLogin)
 function IsBNLogin() end
 
+---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_IsBindingForGamePad)
 function IsBindingForGamePad(KEY) end
 
+---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_IsBreadcrumbQuest)
 function IsBreadcrumbQuest(questID) end
 
+---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_IsCastingGlyph)
 function IsCastingGlyph() end
 
+---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_IsChatAFK)
 function IsChatAFK() end
 
+---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_IsChatChannelRaid)
 function IsChatChannelRaid() end
 
+---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_IsChatDND)
 function IsChatDND() end
 
+---#invalidpage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_IsConsumableAction)
 function IsConsumableAction(slot) end
 
+---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_IsConsumableSpell)
 function IsConsumableSpell() end
 
@@ -6111,21 +7149,27 @@ function IsConsumableSpell() end
 ---@return boolean isCurrent
 function IsCurrentAction(actionSlot) end
 
+---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_IsCurrentQuestFailed)
 function IsCurrentQuestFailed() end
 
+---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_IsDisplayChannelModerator)
 function IsDisplayChannelModerator() end
 
+---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_IsDisplayChannelOwner)
 function IsDisplayChannelOwner() end
 
+---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_IsEncounterInProgress)
 function IsEncounterInProgress() end
 
+---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_IsEncounterLimitingResurrections)
 function IsEncounterLimitingResurrections() end
 
+---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_IsEncounterSuppressingRelease)
 function IsEncounterSuppressingRelease() end
 
@@ -6134,9 +7178,11 @@ function IsEncounterSuppressingRelease() end
 ---@return boolean isEquipped
 function IsEquippedAction(slotID) end
 
+---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_IsEveryoneAssistant)
 function IsEveryoneAssistant() end
 
+---#invalidpage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_IsFishingLoot)
 function IsFishingLoot() end
 
@@ -6144,30 +7190,39 @@ function IsFishingLoot() end
 ---@return boolean isGM
 function IsGMClient() end
 
+---#invalidpage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_IsGUIDInGroup)
 function IsGUIDInGroup(guid, groupType) end
 
+---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_IsGamePadCursorControlEnabled)
 function IsGamePadCursorControlEnabled() end
 
+---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_IsGamePadFreelookEnabled)
 function IsGamePadFreelookEnabled() end
 
+---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_IsGraphicsCVarValueSupported)
 function IsGraphicsCVarValueSupported() end
 
+---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_IsGraphicsSettingValueSupported)
 function IsGraphicsSettingValueSupported() end
 
+---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_IsGuildMember)
 function IsGuildMember() end
 
+---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_IsGuildRankAssignmentAllowed)
 function IsGuildRankAssignmentAllowed(playerIndex, rankIndex) end
 
+---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_IsInActiveWorldPVP)
 function IsInActiveWorldPVP() end
 
+---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_IsInAuthenticatedRank)
 function IsInAuthenticatedRank() end
 
@@ -6184,6 +7239,7 @@ function IsInGroup(groupType) end
 ---@return boolean inGuildGroup
 function IsInGuildGroup() end
 
+---#invalidpage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_IsInLFGDungeon)
 function IsInLFGDungeon() end
 
@@ -6192,15 +7248,19 @@ function IsInLFGDungeon() end
 ---@return boolean isInRaid
 function IsInRaid(groupType) end
 
+---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_IsInScenarioGroup)
 function IsInScenarioGroup() end
 
+---#invalidpage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_IsInventoryItemLocked)
 function IsInventoryItemLocked(id) end
 
+---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_IsInventoryItemProfessionBag)
 function IsInventoryItemProfessionBag(unit, slot) end
 
+---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_IsItemAction)
 function IsItemAction(slot) end
 
@@ -6208,9 +7268,11 @@ function IsItemAction(slot) end
 ---@return boolean isComplete
 function IsLFGComplete() end
 
+---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_IsLFGDungeonJoinable)
 function IsLFGDungeonJoinable() end
 
+---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_IsMasterLooter)
 function IsMasterLooter() end
 
@@ -6219,24 +7281,31 @@ function IsMasterLooter() end
 ---@return boolean isHeld
 function IsModifiedClick(action) end
 
+---#invalidpage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_IsMouselooking)
 function IsMouselooking() end
 
+---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_IsOutlineModeSupported)
 function IsOutlineModeSupported() end
 
+---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_IsPartyLFG)
 function IsPartyLFG() end
 
+---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_IsPartyWorldPVP)
 function IsPartyWorldPVP() end
 
+---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_IsPendingGlyphRemoval)
 function IsPendingGlyphRemoval() end
 
+---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_IsPetActive)
 function IsPetActive() end
 
+---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_IsPetAttackAction)
 function IsPetAttackAction(index) end
 
@@ -6253,6 +7322,7 @@ function IsPlayerNeutral() end
 ---@return boolean isKnown
 function IsPlayerSpell(spellID) end
 
+---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_IsPossessBarVisible)
 function IsPossessBarVisible() end
 
@@ -6260,21 +7330,27 @@ function IsPossessBarVisible() end
 ---@return boolean isQuestCompletable
 function IsQuestCompletable() end
 
+---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_IsQuestIDValidSpellTarget)
 function IsQuestIDValidSpellTarget(questID) end
 
+---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_IsQuestItemHidden)
 function IsQuestItemHidden(index) end
 
+---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_IsQuestLogSpecialItemInRange)
 function IsQuestLogSpecialItemInRange(index, target) end
 
+---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_IsQuestSequenced)
 function IsQuestSequenced(questID) end
 
+---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_IsRaidMarkerActive)
 function IsRaidMarkerActive(index) end
 
+---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_IsReagentBankUnlocked)
 function IsReagentBankUnlocked() end
 
@@ -6285,15 +7361,19 @@ function IsReagentBankUnlocked() end
 ---@return boolean isRecognized
 function IsRecognizedName(text, includeBitfield, excludeBitfield) end
 
+---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_IsSelectedSpellBookItem)
 function IsSelectedSpellBookItem(spellSlot) end
 
+---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_IsServerControlledBackfill)
 function IsServerControlledBackfill() end
 
+---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_IsSpecializationActivateSpell)
 function IsSpecializationActivateSpell() end
 
+---#invalidpage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_IsSpellClassOrSpec)
 function IsSpellClassOrSpec() end
 
@@ -6303,6 +7383,7 @@ function IsSpellClassOrSpec() end
 ---@return boolean isKnown
 function IsSpellKnown(spellID, isPetSpell) end
 
+---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_IsSpellKnownOrOverridesKnown)
 function IsSpellKnownOrOverridesKnown(spellID, isPet) end
 
@@ -6311,18 +7392,23 @@ function IsSpellKnownOrOverridesKnown(spellID, isPet) end
 ---@return boolean isTrue
 function IsSpellOverlayed(spellID) end
 
+---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_IsSpellValidForPendingGlyph)
 function IsSpellValidForPendingGlyph(spellID) end
 
+---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_IsStackableAction)
 function IsStackableAction(slot) end
 
+---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_IsStoryQuest)
 function IsStoryQuest(questID) end
 
+---#invalidpage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_IsTradeskillTrainer)
 function IsTradeskillTrainer() end
 
+---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_IsTutorialFlagged)
 function IsTutorialFlagged(tutorial) end
 
@@ -6332,15 +7418,19 @@ function IsTutorialFlagged(tutorial) end
 ---@return boolean notEnoughMana
 function IsUsableAction(slot) end
 
+---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_IsUsingVehicleControls)
 function IsUsingVehicleControls() end
 
+---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_IsVehicleAimAngleAdjustable)
 function IsVehicleAimAngleAdjustable() end
 
+---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_IsVehicleAimPowerAdjustable)
 function IsVehicleAimPowerAdjustable() end
 
+---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_IsVoidStorageReady)
 function IsVoidStorageReady() end
 
@@ -6348,30 +7438,39 @@ function IsVoidStorageReady() end
 ---@return boolean isWargame
 function IsWargame() end
 
+---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_ItemAddedToArtifact)
 function ItemAddedToArtifact(keystoneindex) end
 
+---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_ItemCanTargetGarrisonFollowerAbility)
 function ItemCanTargetGarrisonFollowerAbility() end
 
+---#invalidpage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_ItemTextGetCreator)
 function ItemTextGetCreator() end
 
+---#invalidpage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_ItemTextGetItem)
 function ItemTextGetItem() end
 
+---#invalidpage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_ItemTextGetMaterial)
 function ItemTextGetMaterial() end
 
+---#invalidpage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_ItemTextGetPage)
 function ItemTextGetPage() end
 
+---#invalidpage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_ItemTextGetText)
 function ItemTextGetText() end
 
+---#invalidpage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_ItemTextHasNextPage)
 function ItemTextHasNextPage() end
 
+---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_ItemTextIsFullPage)
 function ItemTextIsFullPage() end
 
@@ -6381,6 +7480,7 @@ function ItemTextNextPage() end
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_ItemTextPrevPage)
 function ItemTextPrevPage() end
 
+---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_JoinArena)
 function JoinArena() end
 
@@ -6399,18 +7499,23 @@ function JoinBattlefield(index, asGroup, isRated) end
 ---@return string? name
 function JoinChannelByName(channelName, password, frameID, hasVoice) end
 
+---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_JoinLFG)
 function JoinLFG(category) end
 
+---#invalidpage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_JoinPermanentChannel)
 function JoinPermanentChannel(channelName, password, frameID, hasVoice) end
 
+---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_JoinRatedBattlefield)
 function JoinRatedBattlefield() end
 
+---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_JoinRatedSoloShuffle)
 function JoinRatedSoloShuffle() end
 
+---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_JoinSingleLFG)
 function JoinSingleLFG(category, lfgID) end
 
@@ -6419,6 +7524,7 @@ function JoinSingleLFG(category, lfgID) end
 ---@param joinAsGroup? boolean
 function JoinSkirmish(arenaID, joinAsGroup) end
 
+---#invalidpage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_JoinTemporaryChannel)
 function JoinTemporaryChannel(channelName, password, frameID, hasVoice) end
 
@@ -6429,9 +7535,11 @@ function JumpOrAscendStart() end
 ---@param toSafety boolean
 function LFGTeleport(toSafety) end
 
+---#invalidpage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_LearnPvpTalent)
 function LearnPvpTalent() end
 
+---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_LearnPvpTalents)
 function LearnPvpTalents() end
 
@@ -6440,12 +7548,15 @@ function LearnPvpTalents() end
 ---@return boolean success
 function LearnTalent(talentID) end
 
+---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_LearnTalents)
 function LearnTalents() end
 
+---#invalidpage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_LeaveBattlefield)
 function LeaveBattlefield() end
 
+---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_LeaveChannelByLocalID)
 function LeaveChannelByLocalID(localID) end
 
@@ -6453,9 +7564,11 @@ function LeaveChannelByLocalID(localID) end
 ---@param channelName string
 function LeaveChannelByName(channelName) end
 
+---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_LeaveLFG)
 function LeaveLFG(category) end
 
+---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_LeaveSingleLFG)
 function LeaveSingleLFG(category, lfgID) end
 
@@ -6470,15 +7583,19 @@ function ListChannels() end
 ---@param bindingSet number
 function LoadBindings(bindingSet) end
 
+---#invalidpage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_LoggingChat)
 function LoggingChat(newState) end
 
+---#invalidpage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_LoggingCombat)
 function LoggingCombat(newState) end
 
+---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_LootMoneyNotify)
 function LootMoneyNotify(money, soleLooter) end
 
+---#invalidpage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_LootSlot)
 function LootSlot(slot) end
 
@@ -6493,9 +7610,11 @@ function MouselookStart() end
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_MouselookStop)
 function MouselookStop() end
 
+---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_MoveAndSteerStart)
 function MoveAndSteerStart() end
 
+---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_MoveAndSteerStop)
 function MoveAndSteerStop() end
 
@@ -6503,6 +7622,7 @@ function MoveAndSteerStop() end
 ---@param startTime number
 function MoveBackwardStart(startTime) end
 
+---#invalidpage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_MoveBackwardStop)
 function MoveBackwardStop() end
 
@@ -6510,6 +7630,7 @@ function MoveBackwardStop() end
 ---@param startTime number
 function MoveForwardStart(startTime) end
 
+---#invalidpage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_MoveForwardStop)
 function MoveForwardStop() end
 
@@ -6555,6 +7676,7 @@ function MoveViewUpStart(speed) end
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_MoveViewUpStop)
 function MoveViewUpStop() end
 
+---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_MultiSampleAntiAliasingSupported)
 function MultiSampleAntiAliasingSupported() end
 
@@ -6566,6 +7688,7 @@ function MuteSoundFile(sound) end
 ---@param factionIndex number
 function NeutralPlayerSelectFaction(factionIndex) end
 
+---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_NextView)
 function NextView() end
 
@@ -6576,9 +7699,11 @@ function NumTaxiNodes() end
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_OfferPetition)
 function OfferPetition() end
 
+---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_OpenTrainer)
 function OpenTrainer() end
 
+---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_PartyLFGStartBackfill)
 function PartyLFGStartBackfill() end
 
@@ -6595,6 +7720,7 @@ function PetAttack() end
 ---@return boolean canAbandon
 function PetCanBeAbandoned() end
 
+---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_PetCanBeDismissed)
 function PetCanBeDismissed() end
 
@@ -6610,12 +7736,15 @@ function PetDismiss() end
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_PetFollow)
 function PetFollow() end
 
+---#invalidpage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_PetHasActionBar)
 function PetHasActionBar() end
 
+---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_PetHasSpellbook)
 function PetHasSpellbook() end
 
+---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_PetMoveTo)
 function PetMoveTo(target) end
 
@@ -6625,15 +7754,18 @@ function PetPassiveMode() end
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_PetStopAttack)
 function PetStopAttack() end
 
+---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_PetUsesPetFrame)
 function PetUsesPetFrame() end
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_PetWait)
 function PetWait() end
 
+---#invalidpage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_PickupAction)
 function PickupAction(slot) end
 
+---#invalidpage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_PickupBagFromSlot)
 function PickupBagFromSlot(slot) end
 
@@ -6642,9 +7774,11 @@ function PickupBagFromSlot(slot) end
 ---@param index number
 function PickupCompanion(type, index) end
 
+---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_PickupGuildBankItem)
 function PickupGuildBankItem(tab, slot) end
 
+---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_PickupGuildBankMoney)
 function PickupGuildBankMoney(money) end
 
@@ -6657,6 +7791,7 @@ function PickupInventoryItem(slotId) end
 ---@overload fun(name: string)
 function PickupMacro(index) end
 
+---#invalidpage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_PickupMerchantItem)
 function PickupMerchantItem(index) end
 
@@ -6668,9 +7803,11 @@ function PickupPetAction(petActionSlot) end
 ---@param spellID number
 function PickupPetSpell(spellID) end
 
+---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_PickupPvpTalent)
 function PickupPvpTalent() end
 
+---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_PickupTalent)
 function PickupTalent(talentID) end
 
@@ -6678,24 +7815,31 @@ function PickupTalent(talentID) end
 ---@param copper number
 function PickupTradeMoney(copper) end
 
+---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_PitchDownStart)
 function PitchDownStart() end
 
+---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_PitchDownStop)
 function PitchDownStop() end
 
+---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_PitchUpStart)
 function PitchUpStart() end
 
+---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_PitchUpStop)
 function PitchUpStop() end
 
+---#invalidpage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_PlaceAction)
 function PlaceAction(slot) end
 
+---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_PlaceRaidMarker)
 function PlaceRaidMarker(index) end
 
+---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_PlayAutoAcceptQuestSound)
 function PlayAutoAcceptQuestSound() end
 
@@ -6725,6 +7869,7 @@ function PlaySoundFile(sound, channel) end
 ---@return boolean hasToy
 function PlayerHasToy(itemId) end
 
+---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_PrevView)
 function PrevView() end
 
@@ -6732,15 +7877,19 @@ function PrevView() end
 ---@param description string
 function ProcessExceptionClient(description) end
 
+---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_ProcessQuestLogRewardFactions)
 function ProcessQuestLogRewardFactions() end
 
+---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_PromoteToAssistant)
 function PromoteToAssistant(unit) end
 
+---#invalidpage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_PromoteToLeader)
 function PromoteToLeader(unit) end
 
+---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_PurchaseSlot)
 function PurchaseSlot() end
 
@@ -6752,36 +7901,46 @@ function PutItemInBackpack() end
 ---@return boolean? hadItem
 function PutItemInBag(inventoryID) end
 
+---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_QueryGuildBankLog)
 function QueryGuildBankLog(tab) end
 
+---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_QueryGuildBankTab)
 function QueryGuildBankTab(tab) end
 
+---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_QueryGuildBankText)
 function QueryGuildBankText() end
 
+---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_QueryGuildEventLog)
 function QueryGuildEventLog() end
 
+---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_QueryGuildNews)
 function QueryGuildNews() end
 
+---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_QueryGuildRecipes)
 function QueryGuildRecipes() end
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_QuestChooseRewardError)
 function QuestChooseRewardError() end
 
+---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_QuestFlagsPVP)
 function QuestFlagsPVP() end
 
+---#invalidpage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_QuestGetAutoAccept)
 function QuestGetAutoAccept() end
 
+---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_QuestGetAutoLaunched)
 function QuestGetAutoLaunched() end
 
+---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_QuestHasPOIInfo)
 function QuestHasPOIInfo(questID) end
 
@@ -6789,6 +7948,7 @@ function QuestHasPOIInfo(questID) end
 ---@return boolean isDaily
 function QuestIsDaily() end
 
+---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_QuestIsFromAdventureMap)
 function QuestIsFromAdventureMap() end
 
@@ -6803,42 +7963,54 @@ function QuestIsWeekly() end
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_QuestLogPushQuest)
 function QuestLogPushQuest() end
 
+---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_QuestLogRewardHasTreasurePicker)
 function QuestLogRewardHasTreasurePicker() end
 
+---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_QuestLogShouldShowPortrait)
 function QuestLogShouldShowPortrait() end
 
+---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_QuestMapUpdateAllQuests)
 function QuestMapUpdateAllQuests() end
 
+---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_QuestPOIUpdateIcons)
 function QuestPOIUpdateIcons() end
 
+---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_RaidProfileExists)
 function RaidProfileExists(profile) end
 
+---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_RaidProfileHasUnsavedChanges)
 function RaidProfileHasUnsavedChanges() end
 
+---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_ReagentBankButtonIDToInvSlotID)
 function ReagentBankButtonIDToInvSlotID() end
 
+---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_RedockChatWindows)
 function RedockChatWindows() end
 
+---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_RefreshLFGList)
 function RefreshLFGList() end
 
+---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_RegisterStaticConstants)
 function RegisterStaticConstants(table) end
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_RejectProposal)
 function RejectProposal() end
 
+---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_ReleaseAction)
 function ReleaseAction() end
 
+---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_RemoveAutoQuestPopUp)
 function RemoveAutoQuestPopUp() end
 
@@ -6852,12 +8024,15 @@ function RemoveChatWindowChannel(windowId, channelName) end
 ---@param messageGroup string
 function RemoveChatWindowMessages(index, messageGroup) end
 
+---#invalidpage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_RemoveItemFromArtifact)
 function RemoveItemFromArtifact() end
 
+---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_RemovePvpTalent)
 function RemovePvpTalent() end
 
+---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_RemoveTalent)
 function RemoveTalent(talentID) end
 
@@ -6879,27 +8054,35 @@ function RequestBattlefieldScoreData() end
 ---@param index number
 function RequestBattlegroundInstanceInfo(index) end
 
+---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_RequestBottomLeftActionBar)
 function RequestBottomLeftActionBar() end
 
+---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_RequestGuildChallengeInfo)
 function RequestGuildChallengeInfo() end
 
+---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_RequestGuildPartyState)
 function RequestGuildPartyState() end
 
+---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_RequestGuildRewards)
 function RequestGuildRewards() end
 
+---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_RequestLFDPartyLockInfo)
 function RequestLFDPartyLockInfo() end
 
+---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_RequestLFDPlayerLockInfo)
 function RequestLFDPlayerLockInfo() end
 
+---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_RequestPVPOptionsEnabled)
 function RequestPVPOptionsEnabled() end
 
+---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_RequestPVPRewards)
 function RequestPVPRewards() end
 
@@ -6912,33 +8095,42 @@ function RequestRandomBattlegroundInstanceInfo() end
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_RequestRatedInfo)
 function RequestRatedInfo() end
 
+---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_RequeueSkirmish)
 function RequeueSkirmish() end
 
+---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_ResetChatColors)
 function ResetChatColors() end
 
+---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_ResetChatWindows)
 function ResetChatWindows() end
 
+---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_ResetSetMerchantFilter)
 function ResetSetMerchantFilter() end
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_ResetTutorials)
 function ResetTutorials() end
 
+---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_ResetView)
 function ResetView(index) end
 
+---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_RespondMailLockSendItem)
 function RespondMailLockSendItem(slot, keepItem) end
 
+---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_RespondToInviteConfirmation)
 function RespondToInviteConfirmation(guid, accept) end
 
+---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_RestoreRaidProfileFromCopy)
 function RestoreRaidProfileFromCopy() end
 
+---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_ReturnInboxItem)
 function ReturnInboxItem(index) end
 
@@ -6952,6 +8144,7 @@ function RollOnLoot(rollID, rollType) end
 ---@param up? string
 function RunBinding(command, up) end
 
+---#invalidpage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_RunMacro)
 function RunMacro() end
 
@@ -6959,6 +8152,7 @@ function RunMacro() end
 ---@param which number
 function SaveBindings(which) end
 
+---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_SaveRaidProfileCopy)
 function SaveRaidProfileCopy(profile) end
 
@@ -6966,9 +8160,11 @@ function SaveRaidProfileCopy(profile) end
 ---@param viewIndex number
 function SaveView(viewIndex) end
 
+---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_SearchLFGGetEncounterResults)
 function SearchLFGGetEncounterResults(index, encounterIndex) end
 
+---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_SearchLFGGetJoinedID)
 function SearchLFGGetJoinedID() end
 
@@ -6977,9 +8173,11 @@ function SearchLFGGetJoinedID() end
 ---@return number totalResults
 function SearchLFGGetNumResults() end
 
+---#invalidpage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_SearchLFGGetPartyResults)
 function SearchLFGGetPartyResults(index, memberIndex) end
 
+---#invalidpage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_SearchLFGGetResults)
 function SearchLFGGetResults(index) end
 
@@ -6988,9 +8186,11 @@ function SearchLFGGetResults(index) end
 ---@param lfgID number
 function SearchLFGJoin(typeID, lfgID) end
 
+---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_SearchLFGLeave)
 function SearchLFGLeave() end
 
+---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_SearchLFGSort)
 function SearchLFGSort(type) end
 
@@ -7000,9 +8200,11 @@ function SearchLFGSort(type) end
 ---@return string target
 function SecureCmdOptionParse(options) end
 
+---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_SelectActiveQuest)
 function SelectActiveQuest() end
 
+---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_SelectAvailableQuest)
 function SelectAvailableQuest() end
 
@@ -7037,12 +8239,15 @@ function SetAchievementComparisonUnit(unit) end
 ---@return boolean searchFinished
 function SetAchievementSearchString(searchText) end
 
+---#invalidpage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_SetActionBarToggles)
 function SetActionBarToggles(show1, show2, show3, show4, alwaysShow) end
 
+---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_SetActionUIButton)
 function SetActionUIButton(checkboxFrame, actionSlot, cooldownFrame) end
 
+---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_SetBarSlotFromIntro)
 function SetBarSlotFromIntro(slot) end
 
@@ -7070,6 +8275,7 @@ function SetBindingClick(key, buttonName, button) end
 ---@return boolean ok
 function SetBindingItem(key, item) end
 
+---#invalidpage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_SetBindingMacro)
 function SetBindingMacro() end
 
@@ -7079,60 +8285,79 @@ function SetBindingMacro() end
 ---@return boolean ok
 function SetBindingSpell(key, spell) end
 
+---#invalidpage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_SetChannelOwner)
 function SetChannelOwner(channel, name) end
 
+---#invalidpage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_SetChannelPassword)
 function SetChannelPassword(channel, password) end
 
+---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_SetChatColorNameByClass)
 function SetChatColorNameByClass(chatType, colorNameByClass) end
 
+---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_SetChatWindowAlpha)
 function SetChatWindowAlpha(index, alpha) end
 
+---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_SetChatWindowColor)
 function SetChatWindowColor(index, r, g, b) end
 
+---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_SetChatWindowDocked)
 function SetChatWindowDocked(index, docked) end
 
+---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_SetChatWindowLocked)
 function SetChatWindowLocked(index, locked) end
 
+---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_SetChatWindowName)
 function SetChatWindowName(index, name) end
 
+---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_SetChatWindowSavedDimensions)
 function SetChatWindowSavedDimensions(index, width, height) end
 
+---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_SetChatWindowSavedPosition)
 function SetChatWindowSavedPosition(index, point, xOffsetRatio, yOffsetRatio) end
 
+---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_SetChatWindowShown)
 function SetChatWindowShown(index, shown) end
 
+---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_SetChatWindowSize)
 function SetChatWindowSize(index, size) end
 
+---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_SetChatWindowUninteractable)
 function SetChatWindowUninteractable(id, isUninteractable) end
 
+---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_SetCurrentGraphicsSetting)
 function SetCurrentGraphicsSetting() end
 
+---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_SetCurrentGuildBankTab)
 function SetCurrentGuildBankTab(tab) end
 
+---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_SetEveryoneIsAssistant)
 function SetEveryoneIsAssistant() end
 
+---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_SetFocusedAchievement)
 function SetFocusedAchievement(achievementID) end
 
+---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_SetGamePadCursorControl)
 function SetGamePadCursorControl() end
 
+---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_SetGamePadFreeLook)
 function SetGamePadFreeLook() end
 
@@ -7142,6 +8367,7 @@ function SetGamePadFreeLook() end
 ---@param icon number
 function SetGuildBankTabInfo(tab, name, icon) end
 
+---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_SetGuildBankTabItemWithdraw)
 function SetGuildBankTabItemWithdraw() end
 
@@ -7156,51 +8382,67 @@ function SetGuildBankTabPermissions(tab, index, enabled) end
 ---@param infoText string
 function SetGuildBankText(tab, infoText) end
 
+---#invalidpage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_SetGuildBankWithdrawGoldLimit)
 function SetGuildBankWithdrawGoldLimit(amount) end
 
+---#invalidpage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_SetGuildInfoText)
 function SetGuildInfoText() end
 
+---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_SetGuildMemberRank)
 function SetGuildMemberRank(playerIndex, rankIndex) end
 
+---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_SetGuildNewsFilter)
 function SetGuildNewsFilter(index, bool) end
 
+---#invalidpage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_SetGuildRosterSelection)
 function SetGuildRosterSelection(index) end
 
+---#invalidpage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_SetGuildRosterShowOffline)
 function SetGuildRosterShowOffline(enabled) end
 
+---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_SetGuildTradeSkillCategoryFilter)
 function SetGuildTradeSkillCategoryFilter(tradeSkillID) end
 
+---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_SetGuildTradeSkillItemNameFilter)
 function SetGuildTradeSkillItemNameFilter(itemName) end
 
+---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_SetLFGBootVote)
 function SetLFGBootVote(shouldKick) end
 
+---#invalidpage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_SetLFGComment)
 function SetLFGComment(comment) end
 
+---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_SetLFGDungeon)
 function SetLFGDungeon(LE_LFG_CATEGORY, type) end
 
+---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_SetLFGDungeonEnabled)
 function SetLFGDungeonEnabled(dungeonID, isEnabled) end
 
+---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_SetLFGHeaderCollapsed)
 function SetLFGHeaderCollapsed(headerID, isCollapsed) end
 
+---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_SetLFGRoles)
 function SetLFGRoles(leader, tank, healer, dps) end
 
+---#invalidpage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_SetLootMethod)
 function SetLootMethod() end
 
+---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_SetLootPortrait)
 function SetLootPortrait() end
 
@@ -7208,12 +8450,15 @@ function SetLootPortrait() end
 ---@param threshold number
 function SetLootThreshold(threshold) end
 
+---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_SetMacroItem)
 function SetMacroItem(macro, item, target) end
 
+---#invalidpage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_SetMacroSpell)
 function SetMacroSpell(macro, spell, target) end
 
+---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_SetMerchantFilter)
 function SetMerchantFilter() end
 
@@ -7222,12 +8467,14 @@ function SetMerchantFilter() end
 ---@param key string
 function SetModifiedClick(action, key) end
 
+---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_SetMouselookOverrideBinding)
 function SetMouselookOverrideBinding(key, command) end
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_SetMoveEnabled)
 function SetMoveEnabled() end
 
+---#invalidpage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_SetMultiCastSpell)
 function SetMultiCastSpell(actionID, spellID) end
 
@@ -7235,24 +8482,31 @@ function SetMultiCastSpell(actionID, spellID) end
 ---@param optOut boolean
 function SetOptOutOfLoot(optOut) end
 
+---#invalidpage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_SetOverrideBinding)
 function SetOverrideBinding(owner, isPriority, key, command) end
 
+---#invalidpage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_SetOverrideBindingClick)
 function SetOverrideBindingClick(owner, isPriority, key, buttonName, mouseClick) end
 
+---#invalidpage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_SetOverrideBindingItem)
 function SetOverrideBindingItem(owner, isPriority, key, itemname) end
 
+---#invalidpage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_SetOverrideBindingMacro)
 function SetOverrideBindingMacro() end
 
+---#invalidpage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_SetOverrideBindingSpell)
 function SetOverrideBindingSpell(owner, isPriority, key, spellname) end
 
+---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_SetPOIIconOverlapDistance)
 function SetPOIIconOverlapDistance(index) end
 
+---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_SetPOIIconOverlapPushDistance)
 function SetPOIIconOverlapPushDistance(index) end
 
@@ -7262,15 +8516,19 @@ function SetPOIIconOverlapPushDistance(index) end
 ---@param dps boolean
 function SetPVPRoles(tank, healer, dps) end
 
+---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_SetPartyAssignment)
 function SetPartyAssignment(assignment, player) end
 
+---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_SetRaidProfileOption)
 function SetRaidProfileOption(profile, optionName, value) end
 
+---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_SetRaidProfileSavedPosition)
 function SetRaidProfileSavedPosition(profile, isDynamic, topPoint, topOffset, bottomPoint, bottomOffset, leftPoint, leftOffset) end
 
+---#invalidpage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_SetRaidSubgroup)
 function SetRaidSubgroup(index, subgroup) end
 
@@ -7279,30 +8537,39 @@ function SetRaidSubgroup(index, subgroup) end
 ---@param index number
 function SetRaidTarget(unit, index) end
 
+---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_SetRaidTargetProtected)
 function SetRaidTargetProtected(unit, index) end
 
+---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_SetSavedInstanceExtend)
 function SetSavedInstanceExtend(index, extend) end
 
+---#invalidpage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_SetSelectedArtifact)
 function SetSelectedArtifact(raceIndex) end
 
+---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_SetSelectedDisplayChannel)
 function SetSelectedDisplayChannel(channelID) end
 
+---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_SetSelectedScreenResolutionIndex)
 function SetSelectedScreenResolutionIndex(integerIndex) end
 
+---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_SetSelectedWarGameType)
 function SetSelectedWarGameType(index) end
 
+---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_SetSendMailCOD)
 function SetSendMailCOD(amount) end
 
+---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_SetSendMailMoney)
 function SetSendMailMoney(amount) end
 
+---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_SetSendMailShowing)
 function SetSendMailShowing() end
 
@@ -7311,6 +8578,7 @@ function SetSendMailShowing() end
 ---@param isPet? boolean
 function SetSpecialization(specIndex, isPet) end
 
+---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_SetSpellbookPetAction)
 function SetSpellbookPetAction(slot, target) end
 
@@ -7318,6 +8586,7 @@ function SetSpellbookPetAction(slot, target) end
 ---@param texture string
 function SetTaxiMap(texture) end
 
+---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_SetTradeCurrency)
 function SetTradeCurrency(type, amount) end
 
@@ -7325,6 +8594,7 @@ function SetTradeCurrency(type, amount) end
 ---@param copper number
 function SetTradeMoney(copper) end
 
+---#invalidpage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_SetTrainerServiceTypeFilter)
 function SetTrainerServiceTypeFilter(filter, state) end
 
@@ -7335,9 +8605,11 @@ function SetTurnEnabled() end
 ---@param viewIndex number
 function SetView(viewIndex) end
 
+---#invalidpage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_SetupFullscreenScale)
 function SetupFullscreenScale(frame) end
 
+---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_ShowBuybackSellCursor)
 function ShowBuybackSellCursor(index) end
 
@@ -7345,6 +8617,7 @@ function ShowBuybackSellCursor(index) end
 ---@param questID number
 function ShowQuestComplete(questID) end
 
+---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_ShowQuestOffer)
 function ShowQuestOffer(index) end
 
@@ -7354,75 +8627,99 @@ function ShowRepairCursor() end
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_SignPetition)
 function SignPetition() end
 
+---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_SocketInventoryItem)
 function SocketInventoryItem(slot) end
 
+---#invalidpage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_SocketItemToArtifact)
 function SocketItemToArtifact() end
 
+---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_SolveArtifact)
 function SolveArtifact() end
 
+---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_SortBGList)
 function SortBGList() end
 
+---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_SortBattlefieldScoreData)
 function SortBattlefieldScoreData(type) end
 
+---#invalidpage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_SortGuildRoster)
 function SortGuildRoster(sort) end
 
+---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_SortGuildTradeSkill)
 function SortGuildTradeSkill(type) end
 
+---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_SortQuestSortTypes)
 function SortQuestSortTypes() end
 
+---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_SortQuests)
 function SortQuests() end
 
+---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_Sound_ChatSystem_GetInputDriverNameByIndex)
 function Sound_ChatSystem_GetInputDriverNameByIndex(InputDriverIndex) end
 
+---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_Sound_ChatSystem_GetNumInputDrivers)
 function Sound_ChatSystem_GetNumInputDrivers() end
 
+---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_Sound_ChatSystem_GetNumOutputDrivers)
 function Sound_ChatSystem_GetNumOutputDrivers() end
 
+---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_Sound_ChatSystem_GetOutputDriverNameByIndex)
 function Sound_ChatSystem_GetOutputDriverNameByIndex(OutputDriverIndex) end
 
+---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_Sound_GameSystem_GetInputDriverNameByIndex)
 function Sound_GameSystem_GetInputDriverNameByIndex(InputDriverIndex) end
 
+---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_Sound_GameSystem_GetNumInputDrivers)
 function Sound_GameSystem_GetNumInputDrivers() end
 
+---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_Sound_GameSystem_GetNumOutputDrivers)
 function Sound_GameSystem_GetNumOutputDrivers() end
 
+---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_Sound_GameSystem_GetOutputDriverNameByIndex)
 function Sound_GameSystem_GetOutputDriverNameByIndex(OutputDriverIndex) end
 
+---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_Sound_GameSystem_RestartSoundSystem)
 function Sound_GameSystem_RestartSoundSystem() end
 
+---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_SpellCanTargetGarrisonFollower)
 function SpellCanTargetGarrisonFollower() end
 
+---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_SpellCanTargetGarrisonFollowerAbility)
 function SpellCanTargetGarrisonFollowerAbility() end
 
+---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_SpellCanTargetGarrisonMission)
 function SpellCanTargetGarrisonMission() end
 
+---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_SpellCanTargetItem)
 function SpellCanTargetItem() end
 
+---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_SpellCanTargetItemID)
 function SpellCanTargetItemID() end
 
+---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_SpellCanTargetQuest)
 function SpellCanTargetQuest() end
 
@@ -7431,6 +8728,7 @@ function SpellCanTargetQuest() end
 ---@return boolean canTarget
 function SpellCanTargetUnit(unitId) end
 
+---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_SpellCancelQueuedSpell)
 function SpellCancelQueuedSpell() end
 
@@ -7442,12 +8740,15 @@ function SpellCancelQueuedSpell() end
 ---@return boolean showForMySpec
 function SpellGetVisibilityInfo(spellId, visType) end
 
+---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_SpellIsAlwaysShown)
 function SpellIsAlwaysShown(spellID) end
 
+---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_SpellIsPriorityAura)
 function SpellIsPriorityAura(spellID) end
 
+---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_SpellIsSelfBuff)
 function SpellIsSelfBuff(spellID) end
 
@@ -7462,6 +8763,7 @@ function SpellStopCasting() end
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_SpellStopTargeting)
 function SpellStopTargeting() end
 
+---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_SpellTargetItem)
 function SpellTargetItem(item) end
 
@@ -7469,9 +8771,11 @@ function SpellTargetItem(item) end
 ---@param unitId UnitId
 function SpellTargetUnit(unitId) end
 
+---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_SplitGuildBankItem)
 function SplitGuildBankItem(tab, slot, amount) end
 
+---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_StartAutoRun)
 function StartAutoRun() end
 
@@ -7480,24 +8784,31 @@ function StartAutoRun() end
 ---@overload fun(name: string, exactMatch?: boolean)
 function StartDuel(unit) end
 
+---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_StartSoloShuffleWarGameByName)
 function StartSoloShuffleWarGameByName() end
 
+---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_StartSpectatorSoloShuffleWarGame)
 function StartSpectatorSoloShuffleWarGame() end
 
+---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_StartSpectatorWarGame)
 function StartSpectatorWarGame(target1, target2, size, area, isTournamentMode) end
 
+---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_StartWarGame)
 function StartWarGame(target, name, isTournament) end
 
+---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_StartWarGameByName)
 function StartWarGameByName(msg) end
 
+---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_StopAutoRun)
 function StopAutoRun() end
 
+---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_StopMacro)
 function StopMacro() end
 
@@ -7509,12 +8820,15 @@ function StopMusic() end
 ---@param fadeoutTime? number
 function StopSound(soundHandle, fadeoutTime) end
 
+---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_StoreSecureReference)
 function StoreSecureReference(name, obj) end
 
+---#invalidpage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_StrafeLeftStart)
 function StrafeLeftStart() end
 
+---#invalidpage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_StrafeLeftStop)
 function StrafeLeftStop() end
 
@@ -7522,15 +8836,18 @@ function StrafeLeftStop() end
 ---@param startTime number
 function StrafeRightStart(startTime) end
 
+---#invalidpage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_StrafeRightStop)
 function StrafeRightStop() end
 
+---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_SubmitRequiredGuildRename)
 function SubmitRequiredGuildRename() end
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_SummonRandomCritter)
 function SummonRandomCritter() end
 
+---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_SurrenderArena)
 function SurrenderArena() end
 
@@ -7539,9 +8856,11 @@ function SurrenderArena() end
 ---@param index2 number
 function SwapRaidSubgroup(index1, index2) end
 
+---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_SwitchAchievementSearchTab)
 function SwitchAchievementSearchTab(index) end
 
+---#invalidpage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_TakeInboxItem)
 function TakeInboxItem(index, itemIndex) end
 
@@ -7549,6 +8868,7 @@ function TakeInboxItem(index, itemIndex) end
 ---@param index number
 function TakeInboxMoney(index) end
 
+---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_TakeInboxTextItem)
 function TakeInboxTextItem(index) end
 
@@ -7556,21 +8876,27 @@ function TakeInboxTextItem(index) end
 ---@param index number
 function TakeTaxiNode(index) end
 
+---#invalidpage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_TaxiGetDestX)
 function TaxiGetDestX(slot, hop) end
 
+---#invalidpage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_TaxiGetDestY)
 function TaxiGetDestY(slot, hop) end
 
+---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_TaxiGetNodeSlot)
 function TaxiGetNodeSlot() end
 
+---#invalidpage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_TaxiGetSrcX)
 function TaxiGetSrcX(slot, hop) end
 
+---#invalidpage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_TaxiGetSrcY)
 function TaxiGetSrcY(slot, hop) end
 
+---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_TaxiIsDirectFlight)
 function TaxiIsDirectFlight() end
 
@@ -7589,27 +8915,34 @@ function TaxiNodeGetType(index) end
 ---@return string name
 function TaxiNodeName(index) end
 
+---#invalidpage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_TaxiNodePosition)
 function TaxiNodePosition(slot) end
 
+---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_TaxiRequestEarlyLanding)
 function TaxiRequestEarlyLanding() end
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_ToggleAutoRun)
 function ToggleAutoRun() end
 
+---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_TogglePetAutocast)
 function TogglePetAutocast(index) end
 
+---#invalidpage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_ToggleRun)
 function ToggleRun() end
 
+---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_ToggleWindowed)
 function ToggleWindowed() end
 
+---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_TriggerTutorial)
 function TriggerTutorial(tutorial) end
 
+---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_TurnInGuildCharter)
 function TurnInGuildCharter() end
 
@@ -7617,6 +8950,7 @@ function TurnInGuildCharter() end
 ---@param startTime number
 function TurnLeftStart(startTime) end
 
+---#invalidpage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_TurnLeftStop)
 function TurnLeftStop() end
 
@@ -7630,6 +8964,7 @@ function TurnOrActionStop() end
 ---@param startTime number
 function TurnRightStart(startTime) end
 
+---#invalidpage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_TurnRightStop)
 function TurnRightStop() end
 
@@ -7645,6 +8980,7 @@ function UninviteUnit(name, reason) end
 ---@return boolean dps
 function UnitGetAvailableRoles(unit) end
 
+---#invalidpage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_UnitHasIncomingResurrection)
 function UnitHasIncomingResurrection(unit) end
 
@@ -7658,6 +8994,7 @@ function UnitHasLFGDeserter(unit) end
 ---@return boolean hasRandomCooldown
 function UnitHasLFGRandomCooldown(unit) end
 
+---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_UnitInOtherParty)
 function UnitInOtherParty() end
 
@@ -7672,9 +9009,11 @@ function UnitIsGroupAssistant(unit) end
 ---@return boolean isLeader
 function UnitIsGroupLeader(unit, partyCategory) end
 
+---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_UnitLeadsAnyGroup)
 function UnitLeadsAnyGroup() end
 
+---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_UnlearnSpecialization)
 function UnlearnSpecialization(specIndex, isPet) end
 
@@ -7685,21 +9024,27 @@ function UnlockVoidStorage() end
 ---@param sound number|string FileID of a game sound or file path to an addon sound
 function UnmuteSoundFile(sound) end
 
+---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_UpdateInventoryAlertStatus)
 function UpdateInventoryAlertStatus() end
 
+---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_UpdateUIParentPosition)
 function UpdateUIParentPosition() end
 
+---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_UpdateWarGamesList)
 function UpdateWarGamesList() end
 
+---#invalidpage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_UseAction)
 function UseAction(slot, checkCursor, onSelf) end
 
+---#invalidpage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_UseInventoryItem)
 function UseInventoryItem(invSlot) end
 
+---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_UseQuestLogSpecialItem)
 function UseQuestLogSpecialItem(index) end
 
@@ -7711,51 +9056,67 @@ function UseToy(itemId) end
 ---@param name string
 function UseToyByName(name) end
 
+---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_UseWorldMapActionButtonSpellOnQuest)
 function UseWorldMapActionButtonSpellOnQuest() end
 
+---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_VehicleAimDecrement)
 function VehicleAimDecrement() end
 
+---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_VehicleAimDownStart)
 function VehicleAimDownStart() end
 
+---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_VehicleAimDownStop)
 function VehicleAimDownStop() end
 
+---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_VehicleAimGetNormPower)
 function VehicleAimGetNormPower() end
 
+---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_VehicleAimIncrement)
 function VehicleAimIncrement() end
 
+---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_VehicleAimRequestAngle)
 function VehicleAimRequestAngle() end
 
+---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_VehicleAimSetNormPower)
 function VehicleAimSetNormPower() end
 
+---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_VehicleAimUpStart)
 function VehicleAimUpStart() end
 
+---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_VehicleAimUpStop)
 function VehicleAimUpStop() end
 
+---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_VehicleExit)
 function VehicleExit() end
 
+---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_VehicleNextSeat)
 function VehicleNextSeat() end
 
+---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_VehiclePrevSeat)
 function VehiclePrevSeat() end
 
+---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_ViewGuildRecipes)
 function ViewGuildRecipes(skillLineID) end
 
+---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_WarGameRespond)
 function WarGameRespond(accept) end
 
+---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_WithdrawGuildBankMoney)
 function WithdrawGuildBankMoney(money) end
 
@@ -7775,6 +9136,7 @@ function debugprofilestart() end
 ---@return number elapsedMilliseconds
 function debugprofilestop() end
 
+---#invalidpage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_debugstack)
 function debugstack(start, count1, count2) end
 
@@ -7796,6 +9158,7 @@ function hooksecurefunc(tbl, name, hook) end
 ---@return boolean secure
 function issecure() end
 
+---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_issecurevalue)
 function issecurevalue() end
 
@@ -7828,9 +9191,6 @@ function securecall(func, ...) end
 ---@param ... any
 ---@return any ...
 function securecallfunction(func, ...) end
-
----[Documentation](https://warcraft.wiki.gg/wiki/API_securecallfunction)
-function securecallfunction() end
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_secureexecuterange)
 ---@param tbl table

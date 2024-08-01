@@ -1,6 +1,7 @@
 ---@meta _
 ---@diagnostic disable: deprecated
 
+-------------------------------------------------------------------
 -- Table library
 local tab = table
 foreach = tab.foreach

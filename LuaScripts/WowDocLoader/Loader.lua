@@ -14,6 +14,10 @@ local gluesSystems = {
 	["ConfigurationWarningsDocumentation.lua"] = true,
 }
 
+local skippedSystem = {
+	UITimer = true,
+}
+
 Util:MakeDir(Path.join("LuaScripts", "Data", "widget"))
 
 local function LoadFile(path)
@@ -40,7 +44,9 @@ local function LoadAddon(path, name)
 				local text = Mitsuha:GetSystem(docInfo)
 				if #text > 0 then -- try not to create empty files as they take up the maxPreload limit
 					if docInfo.Type == "System" or not docInfo.Type then
-						Util:WriteFileMeta(Path.join(GEN_PATH, line), text.."\n")
+						if not skippedSystem[docInfo.Name] then
+							Util:WriteFileMeta(Path.join(GEN_PATH, line), text.."\n")
+						end
 					elseif docInfo.Type == "ScriptObject" then
 						Util:WriteFileMeta(Path.join("LuaScripts", "Data", "widget", line), text.."\n")
 					end

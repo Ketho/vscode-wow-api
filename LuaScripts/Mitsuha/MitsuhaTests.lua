@@ -1,5 +1,5 @@
-local Util = require("Lua.Util.Util")
-local Mitsuha = require("Lua.Mitsuha.MitsuhaMain")
+local Util = require("LuaScripts.Util.Util")
+local Mitsuha = require("LuaScripts.Mitsuha.MitsuhaMain")
 
 local Tests = {}
 
