@@ -16,8 +16,10 @@ function AnimationGroup:GetParent() end
 ---@param name? string
 ---@param templateName? string
 ---@return table|T animation
----@overload fun(): Animation
 function AnimationGroup:CreateAnimation(animationType, name, templateName) end
+
+---@return Animation
+function AnimationGroup:CreateAnimation() end
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_AnimationGroup_Finish)
 function AnimationGroup:Finish() end
