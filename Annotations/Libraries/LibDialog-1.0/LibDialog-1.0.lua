@@ -67,8 +67,8 @@ end
 ---@field sound string Plays an audio file at the given path when the Dialog is shown.
 ---@field static_size number Sets the Dialog's width to the specified size. Ignores contained widgets for resizing purposes.
 ---@field text string The text displayed on the Dialog, before its widgets.
----@field text_justify_h JustifyH Sets the Dialog's horizontal text alignment style.
----@field text_justify_v JustifyV Sets the Dialog's vertical text alignment style.
+---@field text_justify_h JustifyHorizontal Sets the Dialog's horizontal text alignment style.
+---@field text_justify_v JustifyVertical Sets the Dialog's vertical text alignment style.
 ---@field width number Width for the Dialog (in pixels); if omitted or 0, causes the Dialog's height to be determined automatically based on its contents.
 local delegate = {}
 

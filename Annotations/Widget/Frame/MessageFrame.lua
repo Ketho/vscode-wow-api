@@ -53,11 +53,11 @@ function MessageFrame:GetIndentedWordWrap() end
 function MessageFrame:GetInsertMode() end
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_MessageFrame_GetJustifyH)
----@return TBFStyleFlags justifyH
+---@return JustifyHorizontal justifyH
 function MessageFrame:GetJustifyH() end
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_MessageFrame_GetJustifyV)
----@return TBFStyleFlags justifyV
+---@return JustifyVertical justifyV
 function MessageFrame:GetJustifyV() end
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_MessageFrame_GetShadowColor)
@@ -127,11 +127,11 @@ function MessageFrame:SetIndentedWordWrap(wordWrap) end
 function MessageFrame:SetInsertMode(mode) end
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_MessageFrame_SetJustifyH)
----@param justifyH TBFStyleFlags
+---@param justifyH JustifyHorizontal
 function MessageFrame:SetJustifyH(justifyH) end
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_MessageFrame_SetJustifyV)
----@param justifyV TBFStyleFlags
+---@param justifyV JustifyVertical
 function MessageFrame:SetJustifyV(justifyV) end
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_MessageFrame_SetShadowColor)

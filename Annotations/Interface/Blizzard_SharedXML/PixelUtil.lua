@@ -29,9 +29,9 @@ function PixelUtil.SetHeight(region, height, minPixels) end
 function PixelUtil.SetSize(region, width, height, minWidthPixels, minHeightPixels) end
 
 ---@param region Region
----@param point AnchorPoint
+---@param point FramePoint
 ---@param relativeTo Region|string
----@param relativePoint AnchorPoint
+---@param relativePoint FramePoint
 ---@param offsetX number
 ---@param offsetY number
 ---@param minOffsetXPixels? number

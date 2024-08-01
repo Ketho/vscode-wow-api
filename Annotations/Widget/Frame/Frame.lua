@@ -102,9 +102,9 @@ function Frame:EnableKeyboard(enable) end
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_Frame_ExecuteAttribute)
 ---@param attributeName string
----@param ... MouseButton
+---@param ... mouseButton
 ---@return boolean success
----@return MouseButton ...
+---@return mouseButton ...
 function Frame:ExecuteAttribute(attributeName, ...) end
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_Frame_GetAlpha)
@@ -299,7 +299,7 @@ function Frame:RegisterAllEvents() end
 function Frame:RegisterEvent(eventName) end
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_Frame_RegisterForDrag)
----@param ... MouseButton
+---@param ... mouseButton
 function Frame:RegisterForDrag(...) end
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_Frame_RegisterUnitEvent)

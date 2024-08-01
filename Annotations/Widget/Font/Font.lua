@@ -26,11 +26,11 @@ function Font:GetFontObject() end
 function Font:GetIndentedWordWrap() end
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_Font_GetJustifyH)
----@return JustifyH justifyH
+---@return JustifyHorizontal justifyH
 function Font:GetJustifyH() end
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_Font_GetJustifyV)
----@return JustifyV justifyV
+---@return JustifyVertical justifyV
 function Font:GetJustifyV() end
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_Font_GetShadowColor)
@@ -75,11 +75,11 @@ function Font:SetFontObject(font) end
 function Font:SetIndentedWordWrap(wordWrap) end
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_Font_SetJustifyH)
----@param justifyH JustifyH
+---@param justifyH JustifyHorizontal
 function Font:SetJustifyH(justifyH) end
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_Font_SetJustifyV)
----@param justifyV JustifyV
+---@param justifyV JustifyVertical
 function Font:SetJustifyV(justifyV) end
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_Font_SetShadowColor)

@@ -42,8 +42,8 @@ function AceGUIInteractiveLabel:SetHighlightTexCoord(...) end
 ---@param disabled boolean
 function AceGUIInteractiveLabel:SetDisabled(disabled) end
 
----@param justifyH "LEFT"|"RIGHT"|"CENTER"
+---@param justifyH JustifyHorizontal
 function AceGUIInteractiveLabel:SetJustifyH(justifyH) end
 
----@param justifyV "TOP"|"BOTTOM"|"MIDDLE"
+---@param justifyV JustifyVertical
 function AceGUIInteractiveLabel:SetJustifyV(justifyV) end

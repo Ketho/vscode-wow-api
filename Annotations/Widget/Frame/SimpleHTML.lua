@@ -32,12 +32,12 @@ function SimpleHTML:GetIndentedWordWrap(textType) end
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_SimpleHTML_GetJustifyH)
 ---@param textType HTMLTextType
----@return TBFStyleFlags justifyH
+---@return JustifyHorizontal justifyH
 function SimpleHTML:GetJustifyH(textType) end
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_SimpleHTML_GetJustifyV)
 ---@param textType HTMLTextType
----@return TBFStyleFlags justifyV
+---@return JustifyVertical justifyV
 function SimpleHTML:GetJustifyV(textType) end
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_SimpleHTML_GetShadowColor)
@@ -94,12 +94,12 @@ function SimpleHTML:SetIndentedWordWrap(textType, wordWrap) end
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_SimpleHTML_SetJustifyH)
 ---@param textType HTMLTextType
----@param justifyH TBFStyleFlags
+---@param justifyH JustifyHorizontal
 function SimpleHTML:SetJustifyH(textType, justifyH) end
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_SimpleHTML_SetJustifyV)
 ---@param textType HTMLTextType
----@param justifyV TBFStyleFlags
+---@param justifyV JustifyVertical
 function SimpleHTML:SetJustifyV(textType, justifyV) end
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_SimpleHTML_SetShadowColor)

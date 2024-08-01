@@ -15,22 +15,22 @@
 ---|"DND"
 ---|"VOICE_TEXT"
 
----@alias ClassFile -- #41
----|"WARRIOR"     # 1
----|"PALADIN"     # 2
----|"HUNTER"      # 3
----|"ROGUE"       # 4
----|"PRIEST"      # 5
----|"DEATHKNIGHT" # 6
----|"SHAMAN"      # 7
----|"MAGE"        # 8
----|"WARLOCK"     # 9
----|"MONK"        # 10
----|"DRUID"       # 11
----|"DEMONHUNTER" # 12
----|"EVOKER"      # 13
+---@alias ClassFile #41
+---|"WARRIOR"
+---|"PALADIN"
+---|"HUNTER"
+---|"ROGUE"
+---|"PRIEST"
+---|"DEATHKNIGHT"
+---|"SHAMAN"
+---|"MAGE"
+---|"WARLOCK"
+---|"MONK"
+---|"DRUID"
+---|"DEMONHUNTER"
+---|"EVOKER"
 
----@alias HyperlinkType -- #41
+---@alias HyperlinkType #41
 ---|"achievement"
 ---|"api"
 ---|"azessence"

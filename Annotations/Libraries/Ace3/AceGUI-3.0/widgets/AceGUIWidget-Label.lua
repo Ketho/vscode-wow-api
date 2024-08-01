@@ -31,8 +31,8 @@ function AceGUILabel:SetImage(image, ...) end
 ---@param height number
 function AceGUILabel:SetImageSize(width, height) end
 
----@param justifyH "LEFT"|"RIGHT"|"CENTER"
+---@param justifyH JustifyHorizontal
 function AceGUILabel:SetJustifyH(justifyH) end
 
----@param justifyV "TOP"|"BOTTOM"|"MIDDLE"
+---@param justifyV JustifyVertical
 function AceGUILabel:SetJustifyV(justifyV) end

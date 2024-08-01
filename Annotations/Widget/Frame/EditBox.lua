@@ -94,11 +94,11 @@ function EditBox:GetIndentedWordWrap() end
 function EditBox:GetInputLanguage() end
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_EditBox_GetJustifyH)
----@return TBFStyleFlags justifyH
+---@return JustifyHorizontal justifyH
 function EditBox:GetJustifyH() end
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_EditBox_GetJustifyV)
----@return TBFStyleFlags justifyV
+---@return JustifyVertical justifyV
 function EditBox:GetJustifyV() end
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_EditBox_GetMaxBytes)
@@ -277,11 +277,11 @@ function EditBox:SetHistoryLines(numHistoryLines) end
 function EditBox:SetIndentedWordWrap(isIndented) end
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_EditBox_SetJustifyH)
----@param justifyH TBFStyleFlags
+---@param justifyH JustifyHorizontal
 function EditBox:SetJustifyH(justifyH) end
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_EditBox_SetJustifyV)
----@param justifyV TBFStyleFlags
+---@param justifyV JustifyVertical
 function EditBox:SetJustifyV(justifyV) end
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_EditBox_SetMaxBytes)

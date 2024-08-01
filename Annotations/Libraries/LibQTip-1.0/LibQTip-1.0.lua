@@ -13,7 +13,7 @@ local lib = {}
 ---@param key string|table - The tooltip key. Any value that can be used as a table key is accepted though you should try to provide unique keys to avoid conflicts.
 ---Numbers and booleans should be avoided and strings should be carefully chosen to avoid namespace clashes - no "MyTooltip" - you have been warned!
 ---@param numColumns? number Minimum number of columns
----@param ... JustifyH Column horizontal justifications ("CENTER", "LEFT" or "RIGHT"). Defaults to "LEFT".
+---@param ... JustifyHorizontal Column horizontal justifications ("CENTER", "LEFT" or "RIGHT"). Defaults to "LEFT".
 --- Example tooltip with 5 columns justified as left, center, left, left, left:
 ---
 --- local tip = LibStub('LibQTip-1.0'):Acquire('MyFooBarTooltip', 5, "LEFT", "CENTER")
@@ -61,7 +61,7 @@ function lib:Release(tooltip) end
 local tooltip = {}
 
 --- Add a new column to the right of the tooltip.
----@param justification? JustifyH The horizontal justification of cells in this column ("CENTER", "LEFT" or "RIGHT"). Defaults to "LEFT".
+---@param justification? JustifyHorizontal The horizontal justification of cells in this column ("CENTER", "LEFT" or "RIGHT"). Defaults to "LEFT".
 function tooltip:AddColumn(justification) end
 
 --- Add a new header line at the bottom of the tooltip.
@@ -124,7 +124,7 @@ function tooltip:SetAutoHideDelay(delay, alternateFrame, releaseHandler) end
 ---@param colNum number The column index of the cell. Indexes greater than tooltip:GetColumnCount() raise an error.
 ---@param value unknown The value to display in the cell.
 ---@param font? FontObject|Font The rendering font. Defaults to regular font.
----@param justification? JustifyH Cell-specific justification to use ("CENTER", "LEFT" or "RIGHT"). Defaults to column justification.
+---@param justification? JustifyHorizontal Cell-specific justification to use ("CENTER", "LEFT" or "RIGHT"). Defaults to column justification.
 ---@param colSpan? number The number of columns the cell will span. Defaults to 1.
 ---@param provider? LibQTip.CellProvider CellProvider to use instead of the default one. Defaults to LibQTip.LabelProvider.
 ---@param leftPadding? number Pixel padding on the left side of the cell's value. Defaults to 0.
@@ -166,7 +166,7 @@ function tooltip:SetColumnColor(colNum, r, g, b, a) end
 ---
 --- The justification of existing columns is reset to the passed values.
 ---@param numColumns number Minimum number of columns
----@param ... JustifyH? Column horizontal justifications ("CENTER", "LEFT" or "RIGHT"). Defaults to "LEFT".
+---@param ... JustifyHorizontal? Column horizontal justifications ("CENTER", "LEFT" or "RIGHT"). Defaults to "LEFT".
 --- Example tooltip with 5 columns justified as left, center, left, left, left:
 ---
 --- tooltip:SetColumnLayout(5, "LEFT", "CENTER")
@@ -272,7 +272,7 @@ function cell:InitializeCell() end
 --- Setup the cell with the given arguments.
 ---@param tooltip LibQTip.Tooltip The tooltip the cell belongs to.
 ---@param value unknown The value to display in the cell.
----@param justification JustifyH Cell-specific justification to use ("CENTER", "LEFT" or "RIGHT").
+---@param justification JustifyHorizontal Cell-specific justification to use ("CENTER", "LEFT" or "RIGHT").
 ---@param font? FontObject|Font The rendering font. Defaults to regular or header font, depending on the cell's designation.
 ---@param leftPadding? number Pixel padding on the left side of the cell's value. Defaults to 0.
 ---@param rightPadding? number Pixel padding on the right side of the cell's value. Defaults to 0.

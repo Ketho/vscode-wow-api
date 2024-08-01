@@ -120,13 +120,13 @@ function AceGUIWidget:IsShown() end
 ---[Documentation](https://www.wowace.com/projects/ace3/pages/ace-gui-3-0-widgets#title-1-7)
 function AceGUIWidget:Release() end
 
----@param point AnchorPoint
+---@param point FramePoint
 ---@param relativeTo Region|string
 ---@param relativePoint string
 ---@param ofsx? number
 ---@param ofsy? number
----@overload fun(self, point: AnchorPoint, relativeTo: Region|string, ofsx?: number, ofsy?: number)
----@overload fun(self, point: AnchorPoint, ofsx?: number, ofsy?: number)
+---@overload fun(self, point: FramePoint, relativeTo: Region|string, ofsx?: number, ofsy?: number)
+---@overload fun(self, point: FramePoint, ofsx?: number, ofsy?: number)
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_Region_SetPoint)
 function AceGUIWidget:SetPoint(point, relativeTo, relativePoint, ofsx, ofsy) end
 

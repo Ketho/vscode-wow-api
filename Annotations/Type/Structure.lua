@@ -28,7 +28,7 @@
 
 ---@class UiMapPoint
 ---@field uiMapID number
----@field position Vector2DMixin
+---@field position vector2
 ---@field z number?
 
 ---@class TooltipComparisonItem

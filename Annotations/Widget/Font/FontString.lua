@@ -46,11 +46,11 @@ function FontString:GetFontObject() end
 function FontString:GetIndentedWordWrap() end
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_FontString_GetJustifyH)
----@return TBFStyleFlags justifyH
+---@return JustifyHorizontal justifyH
 function FontString:GetJustifyH() end
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_FontString_GetJustifyV)
----@return TBFStyleFlags justifyH
+---@return JustifyVertical justifyH
 function FontString:GetJustifyV() end
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_FontString_GetLineHeight)
@@ -150,11 +150,11 @@ function FontString:SetFormattedText(text, ...) end
 function FontString:SetIndentedWordWrap(wrap) end
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_FontString_SetJustifyH)
----@param justifyH TBFStyleFlags
+---@param justifyH JustifyHorizontal
 function FontString:SetJustifyH(justifyH) end
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_FontString_SetJustifyV)
----@param justifyV TBFStyleFlags
+---@param justifyV JustifyVertical
 function FontString:SetJustifyV(justifyV) end
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_FontString_SetMaxLines)
