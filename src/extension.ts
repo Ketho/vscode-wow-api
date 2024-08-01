@@ -10,6 +10,7 @@ export async function activate(context: vscode.ExtensionContext) {
 	const config = vscode.workspace.getConfiguration("Lua");
 	luals_config.updateRuntime(config);
 	luals_config.autoAddGlobals(config);
+	luals_config.removeDeprecatedGlobals(config);
 
 	subscriptions.registerCompletion(context);
 	subscriptions.registerHover(context);

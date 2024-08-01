@@ -2,6 +2,7 @@ import * as vscode from "vscode";
 import * as path from "path";
 
 const wow_globals = require("./data/globals").data;
+const deprecated = require("./data/deprecated").data;
 
 // disable the lua libraries so we can load our customized libraries
 const wowapi_builtin = {
@@ -46,6 +47,18 @@ export function autoAddGlobals(config: vscode.WorkspaceConfiguration) {
 			config.update("diagnostics.globals", diag_globals);
 		};
 	});
+}
+
+// any deprecated APIs in globals do not trigger the deprecated warning
+export function removeDeprecatedGlobals(config: vscode.WorkspaceConfiguration) {
+	const diag_globals: string[] = config.get("diagnostics.globals")!;
+	deprecated.forEach(function(deprecated: string) {
+		const index = diag_globals.indexOf(deprecated);
+		if (index > -1) {
+			diag_globals.splice(index, 1);
+		}
+	});
+	config.update("diagnostics.globals", diag_globals);
 }
 
 // sets external library and then returns a Thenable to the consumer.
