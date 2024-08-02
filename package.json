@@ -2,7 +2,7 @@
 	"name": "wow-api",
 	"displayName": "WoW API",
 	"description": "World of Warcraft API",
-	"version": "0.9.11",
+	"version": "0.15.0",
 	"publisher": "Ketho",
 	"repository": {
 		"type": "git",
@@ -55,7 +55,19 @@
 				"wowAPI.locale": {
 					"type": "string",
 					"default": "enUS",
-					"enum": ["enUS", "deDE", "esES", "esMX", "frFR", "itIT", "koKR", "ptBR", "ruRU", "zhCN", "zhTW"],
+					"enum": [
+						"enUS",
+						"deDE",
+						"esES",
+						"esMX",
+						"frFR",
+						"itIT",
+						"koKR",
+						"ptBR",
+						"ruRU",
+						"zhCN",
+						"zhTW"
+					],
 					"markdownDescription": "Sets the GlobalStrings locale for code completion and hover."
 				},
 				"wowAPI.autoAddGlobals": {
