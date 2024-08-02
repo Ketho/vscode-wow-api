@@ -5,10 +5,13 @@ import * as subscriptions from './subscriptions';
 export async function activate(context: vscode.ExtensionContext) {
 	console.log("loaded", context.extension.id);
 
-	await luals.setExternalLibrary(context.extension.id, true);
+	// update luals configuration
 	luals.updateRuntime();
-	luals.autoAddGlobals();
-	luals.removeDeprecatedGlobals();
+	await luals.addWorkspaceLibrary();
+	await luals.cleanUserLibrary();
+	// sometimes there are already diagnostic warnings before the workspace has loaded
+	// trying to find out why luals just gives up when that happens
+	setTimeout(luals.autoAddGlobals, 2000);
 
 	subscriptions.registerCompletion(context);
 	subscriptions.registerHover(context);

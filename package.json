@@ -55,25 +55,13 @@
 				"wowAPI.locale": {
 					"type": "string",
 					"default": "enUS",
-					"enum": [
-						"enUS",
-						"deDE",
-						"esES",
-						"esMX",
-						"frFR",
-						"itIT",
-						"koKR",
-						"ptBR",
-						"ruRU",
-						"zhCN",
-						"zhTW"
-					],
+					"enum": ["enUS", "deDE", "esES", "esMX", "frFR", "itIT", "koKR", "ptBR", "ruRU", "zhCN", "zhTW"],
 					"markdownDescription": "Sets the GlobalStrings locale for code completion and hover."
 				},
 				"wowAPI.autoAddGlobals": {
 					"type": "boolean",
 					"default": true,
-					"markdownDescription": "Automatically add known WoW globals to Lua.diagnostics.globals."
+					"markdownDescription": "Automatically add known WoW globals to `Lua.diagnostics.globals`."
 				}
 			}
 		}
