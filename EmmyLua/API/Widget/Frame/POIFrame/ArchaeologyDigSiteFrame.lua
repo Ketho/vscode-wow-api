@@ -1,4 +1,0 @@
----@meta
----@class ArchaeologyDigSiteFrame : Blob
----@class archaeologydigsiteframe : ArchaeologyDigSiteFrame
----@class ARCHAEOLOGYDIGSITEFRAME : ArchaeologyDigSiteFrame

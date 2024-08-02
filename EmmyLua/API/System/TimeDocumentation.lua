@@ -1,8 +1,0 @@
----@meta
----@class CalendarTime
----@field monthDay number
----@field month number
----@field weekday number
----@field year number
----@field hour number
----@field minute number

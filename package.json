@@ -10,7 +10,7 @@
 	},
 	"license": "MIT",
 	"engines": {
-		"vscode": "^1.60.0"
+		"vscode": "^1.91.0"
 	},
 	"categories": [
 		"Linters",
@@ -35,19 +35,15 @@
 		"test": "node ./out/test/runTest.js"
 	},
 	"devDependencies": {
-		"@types/chai": "^4.3.5",
-		"@types/glob": "^7.1.4",
-		"@types/mocha": "^10.0.0",
-		"@types/node": "^16.10.2",
-		"@types/vscode": "^1.60.0",
-		"@typescript-eslint/eslint-plugin": "^4.33.0",
-		"@typescript-eslint/parser": "^4.33.0",
-		"@vscode/test-electron": "^2.3.2",
-		"chai": "^4.3.7",
-		"eslint": "^7.32.0",
-		"glob": "^7.2.0",
-		"mocha": "^10.2.0",
-		"typescript": "^4.4.3"
+		"@types/vscode": "^1.91.0",
+		"@types/mocha": "^10.0.7",
+		"@types/node": "20.x",
+		"@typescript-eslint/eslint-plugin": "^7.14.1",
+		"@typescript-eslint/parser": "^7.11.0",
+		"eslint": "^8.57.0",
+		"typescript": "^5.4.5",
+		"@vscode/test-cli": "^0.0.9",
+		"@vscode/test-electron": "^2.4.0"
 	},
 	"extensionDependencies": [
 		"sumneko.lua"
@@ -56,33 +52,16 @@
 		"configuration": {
 			"title": "WoW API",
 			"properties": {
-				"wowAPI.emmyLua.loadFrameXML": {
-					"type": "boolean",
-					"default": true,
-					"markdownDescription": "Load manually updated documentation for [FrameXML](https://github.com/Ketho/vscode-wow-api/tree/master/EmmyLua/Optional) globals and functions."
-				},
 				"wowAPI.locale": {
 					"type": "string",
 					"default": "enUS",
-					"enum": [
-						"enUS",
-						"deDE",
-						"esES",
-						"esMX",
-						"frFR",
-						"itIT",
-						"koKR",
-						"ptBR",
-						"ruRU",
-						"zhCN",
-						"zhTW"
-					],
+					"enum": ["enUS", "deDE", "esES", "esMX", "frFR", "itIT", "koKR", "ptBR", "ruRU", "zhCN", "zhTW"],
 					"markdownDescription": "Sets the GlobalStrings locale for code completion and hover."
 				},
 				"wowAPI.autoAddGlobals": {
 					"type": "boolean",
 					"default": true,
-					"markdownDescription": "Automatically add known WoW globals to Lua.diagnostics.globals."
+					"markdownDescription": "Automatically add known WoW globals to `Lua.diagnostics.globals`."
 				}
 			}
 		}

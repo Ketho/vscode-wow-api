@@ -17,14 +17,14 @@
 			}
 		},
 		{
-			"label": "Lua 5.4 main",
+			"label": "Lua 5.4 wow-api",
 			"type": "shell",
-			"command": "lua54 Lua\\main.lua",
+			"command": "lua54 LuaScripts/main.lua",
 			"presentation": {
 				"showReuseMessage": false,
 				"clear": true
 			},
 			"problemMatcher": []
-		},
+		}
 	]
 }

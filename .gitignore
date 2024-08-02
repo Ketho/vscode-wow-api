@@ -1,7 +1,8 @@
 out
+dist
 node_modules
 .vscode-test/
-.vscode/settings.json
 *.vsix
+
 *.xml
-Lua/Data
+LuaScripts/Data
