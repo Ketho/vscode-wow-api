@@ -2,7 +2,7 @@
 
 ## [0.15.0] - 2024-08-02 (pre-release)
 - 🎉 Updated for patch 11.0.2 (55763)
-- ✨ The Lua API now more closely matches the WoW environment
+- ✨ The Lua API now more closely resembles the WoW environment
 - 📝 API functions are marked if they have invalid or missing documentation from the wiki
 - 🛠 Code refactoring
 - 🐞 Fixed `:CreateAnimation` inject-field warning
