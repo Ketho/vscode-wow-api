@@ -1,5 +1,14 @@
 # Change Log
 
+## [0.15.0] - 2024-08-02 (pre-release)
+- 🎉 Updated for patch 11.0.2 (55763)
+- ✨ The Lua API now more closely matches the WoW environment
+- 📝 API functions are marked if they have invalid or missing documentation from the wiki
+- 🛠 Code refactoring
+- 🐞 Fixed `:CreateAnimation` inject-field warning
+- 🐞 Fixed deprecated APIs not showing the deprecated warning
+- Deprecated APIs will be kept around until patch 11.1.0
+
 ## [0.14.2] - 2024-07-18
 - Fixed `inject-field` warning when defining fields on Frames
 - Readded completion for `UnitId` type
@@ -68,6 +77,7 @@
 - PR [#123](https://github.com/Ketho/vscode-wow-api/pull/123) Make childGroups optional in AceConfig.OptionsTable
 - PR [#120](https://github.com/Ketho/vscode-wow-api/pull/120) Add definition for tostringall()
 
+[0.15.0]: https://github.com/Ketho/vscode-wow-api/releases/tag/0.15.0
 [0.14.2]: https://github.com/Ketho/vscode-wow-api/releases/tag/0.14.2
 [0.14.1]: https://github.com/Ketho/vscode-wow-api/releases/tag/0.14.1
 [0.14.0]: https://github.com/Ketho/vscode-wow-api/releases/tag/0.14.0
