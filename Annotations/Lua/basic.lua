@@ -355,7 +355,7 @@ function xpcall(f, msgh, arg1, ...) end
 ---```
 ---
 ---
----[View documents](command:extension.lua.doc?["en-us/51/manual.html/pdf-unpack"]), [Wiki](https://warcraft.wiki.gg/wiki/API_gcinfo)
+---[View documents](command:extension.lua.doc?["en-us/51/manual.html/pdf-unpack"]), [Wiki](https://warcraft.wiki.gg/wiki/API_unpack)
 ---
 ---@generic T
 ---@param list T[]
