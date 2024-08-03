@@ -11,7 +11,8 @@ local AceConfig = {}
 ---@param options table|function|AceConfig.OptionsTable The option table (or a function to generate one on demand). [Options table documentation](http://www.wowace.com/addons/ace3/pages/ace-config-3-0-options-tables/)
 ---@param slashcmd? string|table A slash command to register for the option table, or a table of slash commands.
 ---[Documentation](https://www.wowace.com/projects/ace3/pages/api/ace-config-3-0#title-1)
-function AceConfig:RegisterOptionsTable(appName, options, slashcmd) end
+function AceConfig:RegisterOptionsTable(appName, options, slashcmd)
+end
 
 -- ----------------------------------------------------------------------------
 -- AceConfig.OptionsTable
@@ -47,7 +48,7 @@ function AceConfig:RegisterOptionsTable(appName, options, slashcmd) end
 ---|number
 
 ---@class AceConfig.OptionsTable
----@field args table<string, AceConfig.OptionsTable> a table containing a list of options
+---@field args? table<string, AceConfig.OptionsTable> a table containing a list of options
 ---@field childGroups? AceConfig.OptionsTable.ChildGroup decides how children groups of this group are displayed
 ---@field cmdHidden? boolean hide this from commandline
 ---@field confirm? string|function|boolean prompt for confirmation before changing a value if true display "name - desc", or contents of .confirmText if supplied.
