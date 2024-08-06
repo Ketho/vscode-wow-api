@@ -14,7 +14,6 @@ local flavors = {
     "mainline",
     "vanilla",
     "cata",
-    "mainline_beta",
 }
 
 local function tInverse(tbl)
@@ -43,8 +42,7 @@ local function GetData()
         local mainline = flavorMap.mainline[name] and 0x1 or 0
         local vanilla = flavorMap.vanilla[name] and 0x2 or 0
         local cata = flavorMap.cata[name] and 0x4 or 0
-        local mainline_beta = flavorMap.mainline_beta[name] and 0x8 or 0
-        combinedFlags[name] = mainline | vanilla | cata | mainline_beta
+        combinedFlags[name] = mainline | vanilla | cata
     end
     return combinedFlags
 end

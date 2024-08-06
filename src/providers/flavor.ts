@@ -6,7 +6,6 @@ export const completion: vscode.CompletionItem[] = [];
 export function getHover(name: string) {
 	const el = data[name];
 	const array = [
-		(el & 0x8) > 0 && "TWW",
 		(el & 0x1) > 0 && "Mainline",
 		(el & 0x4) > 0 && "Cata",
 		(el & 0x2) > 0 && "Vanilla",

@@ -1,5 +1,8 @@
 # Change Log
 
+## [0.15.3] - 2024-08-06
+- Updated flavor data for hover tooltip; "mainline" now refers to TWW
+
 ## [0.15.2] - 2024-08-06
 - 🐞 Fixed `:CreateAnimation` generic
 
@@ -14,7 +17,7 @@ To avoid loading for Lua projects not related to World of Warcraft, all settings
     - *details: a `settings.json` with `Lua.workspace.library` containing a path with the substring `wow-api` exists in the workspace.*
 - a [.toc](https://warcraft.wiki.gg/wiki/TOC_format) file exists.
     - *details: a `.toc` file with the `## Interface:` directive exists in the workspace.*
-- the `Activate WoW API extension` command is used.
+- the "Activate WoW API extension" command is used.
 
 ## [0.15.0] - 2024-08-02
 - 🎉 Updated for patch 11.0.2 (55763)
@@ -94,6 +97,7 @@ To avoid loading for Lua projects not related to World of Warcraft, all settings
 - PR [#123](https://github.com/Ketho/vscode-wow-api/pull/123) Make childGroups optional in AceConfig.OptionsTable
 - PR [#120](https://github.com/Ketho/vscode-wow-api/pull/120) Add definition for tostringall()
 
+[0.15.3]: https://github.com/Ketho/vscode-wow-api/releases/tag/0.15.3
 [0.15.2]: https://github.com/Ketho/vscode-wow-api/releases/tag/0.15.2
 [0.15.1]: https://github.com/Ketho/vscode-wow-api/releases/tag/0.15.1
 [0.15.0]: https://github.com/Ketho/vscode-wow-api/releases/tag/0.15.0
