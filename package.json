@@ -49,6 +49,12 @@
 		"sumneko.lua"
 	],
 	"contributes": {
+		"commands": [
+			{
+				"command": "wowAPI.activateExtension",
+				"title": "Activate WoW API extension"
+			}
+		],
 		"configuration": {
 			"title": "WoW API",
 			"properties": {

@@ -33,8 +33,18 @@ Shows completion for GlobalStrings at >3 uppercase letters to declutter fuzzy se
 
 ![](https://github.com/Ketho/vscode-wow-api/raw/master/img/readme/globalstring.gif)
 
-### AddOn Namespace
-LuaLS doesn't know about the [AddOn Namespace](https://warcraft.wiki.gg/wiki/Using_the_AddOn_namespace), so this needs to be annotated with [@class](https://luals.github.io/wiki/annotations/#class) in each file. This way the language server knows about the shared table and also allows you to mutate it, which would not be possible with a single `@class` and then `@type` in other files.
+### Workspace detection
+To avoid loading for Lua projects not related to World of Warcraft, all settings will be specific to the workspace instead of the global user settings.
+
+This extension will only activate when either:
+- the extension was previously loaded in the workspace.
+    - *details: a `settings.json` with `Lua.workspace.library` containing a path with the substring `wow-api` exists in the workspace.*
+- a [.toc](https://warcraft.wiki.gg/wiki/TOC_format) file exists.
+    - *details: a `.toc` or `.TOC` file with the `## Interface:` directive exists in the workspace.*
+- the `Activate WoW API extension` command is used.
+
+### AddOn namespace
+LuaLS doesn't know about the [AddOn namespace](https://warcraft.wiki.gg/wiki/Using_the_AddOn_namespace), so this needs to be annotated with [@class](https://luals.github.io/wiki/annotations/#class) in each file. This way the language server knows about the shared table and also allows you to mutate it, which would not be possible with a single `@class` and then `@type` in other files.
 
 - `file1.lua`
 ```lua
@@ -82,6 +92,11 @@ function UnitLevel(unit) end
 Refer to [SETUP.md](SETUP.md) if you want to run the Lua scripts which generate the documentation.
 
 ### Acknowledgements
+* [Blizzard Entertainment](https://www.blizzard.com/)
+* [Townlong Yak](https://www.townlong-yak.com/), [Wago Tools](https://wago.tools/), [WoW.tools](https://wow.tools/)
+* [WoWInterface](https://wowinterface.com/), [Warcraft Wiki](https://warcraft.wiki.gg/), [Wowprogramming](https://wowprogramming.com/)
+
+People who have contributed to the WoW API documentation or the VS Code extension, or have written tools to make this possible.
 * [Andols](https://www.curseforge.com/members/andols/projects), [Buds](https://github.com/mrbuds), [ChrisKader](https://github.com/ChrisKader)
 * [DahkCeles](https://www.curseforge.com/members/dahkceles/projects), [DakJaniels](https://github.com/DakJaniels), [Ellypse](https://github.com/Ellypse)
 * [Ferronn](https://github.com/ferronn-dev), [Foxlit](https://www.townlong-yak.com/), [Gethe](https://github.com/Gethe)
@@ -90,6 +105,4 @@ Refer to [SETUP.md](SETUP.md) if you want to run the Lua scripts which generate 
 * [nebula](https://github.com/nebularg), [thatnerdjosh](https://github.com/thatnerdjosh), [Nevcairiel](https://github.com/Nevcairiel)
 * [Oppzippy](https://github.com/Oppzippy), [Resike](https://github.com/Resike), [Stanzilla](https://github.com/Stanzilla)
 * [Sumneko](https://github.com/Sumneko), [Torhal](https://github.com/Torhal), [Wutname](https://github.com/Wutname1)
-* [Yuyuli](https://www.curseforge.com/members/yuyuli/projects), [Xelnath](https://warcraft.wiki.gg/wiki/Alexander_Brazie)
-* [Blizzard Entertainment](https://www.blizzard.com/), [Townlong Yak](https://www.townlong-yak.com/), [WoW.tools](https://wow.tools/)
-* [WoWInterface](https://wowinterface.com/), [Warcraft Wiki](https://warcraft.wiki.gg/), [Wowprogramming](https://wowprogramming.com/)
+* [Xelnath](https://warcraft.wiki.gg/wiki/Alexander_Brazie), [Yuyuli](https://www.curseforge.com/members/yuyuli/projects)
