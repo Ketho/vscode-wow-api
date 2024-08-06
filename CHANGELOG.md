@@ -1,5 +1,8 @@
 # Change Log
 
+## [0.15.2] - 2024-08-06
+- 🐞 Fixed `:CreateAnimation` generic
+
 ## [0.15.1] - 2024-08-06
 - ✨ The extension now only loads if a World of Warcraft addon is detected in the workspace
 - 👻 Added [GlobalColors.lua](https://www.townlong-yak.com/framexml/live/Helix/GlobalColors.lua) from Townlong Yak
@@ -91,6 +94,7 @@ To avoid loading for Lua projects not related to World of Warcraft, all settings
 - PR [#123](https://github.com/Ketho/vscode-wow-api/pull/123) Make childGroups optional in AceConfig.OptionsTable
 - PR [#120](https://github.com/Ketho/vscode-wow-api/pull/120) Add definition for tostringall()
 
+[0.15.2]: https://github.com/Ketho/vscode-wow-api/releases/tag/0.15.2
 [0.15.1]: https://github.com/Ketho/vscode-wow-api/releases/tag/0.15.1
 [0.15.0]: https://github.com/Ketho/vscode-wow-api/releases/tag/0.15.0
 [0.14.2]: https://github.com/Ketho/vscode-wow-api/releases/tag/0.14.2
