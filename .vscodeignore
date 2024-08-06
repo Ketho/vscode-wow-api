@@ -11,10 +11,10 @@ vsc-extension-quickstart.md
 **/.vscode-test.*
 
 # images and scripts
-/img
+img
 LuaScripts/**
 
 # hererocks 
-/bin
+bin
 SETUP.md
 *.rockspec
