@@ -78,5 +78,6 @@ export function cleanUserLibrary(): Thenable<void> {
 	const lib = lua_config.inspect("workspace.library");
 	const gv = lib?.globalValue as string[];
 	const res = gv?.filter(el => !el.includes("wow-api"));
-	return lua_config.update("workspace.library", res, vscode.ConfigurationTarget.Global);
+	// remove global user config if its empty
+	return lua_config.update("workspace.library", res && res.length ? res : undefined, vscode.ConfigurationTarget.Global);
 }
