@@ -38,7 +38,7 @@ function GetItemStatDelta(itemLink1, itemLink2, existingTable) end
 ---@return string? dispelType
 ---@return number duration
 ---@return number expirationTime
----@return UnitId source
+---@return string source
 ---@return boolean isStealable
 ---@return boolean nameplateShowPersonal
 ---@return number spellId
@@ -61,7 +61,7 @@ function UnitAura(unitToken, index, filter) end
 ---@return string? dispelType
 ---@return number duration
 ---@return number expirationTime
----@return UnitId source
+---@return string source
 ---@return boolean isStealable
 ---@return boolean nameplateShowPersonal
 ---@return number spellId
@@ -84,7 +84,7 @@ function UnitBuff(unitToken, index, filter) end
 ---@return string? dispelType
 ---@return number duration
 ---@return number expirationTime
----@return UnitId source
+---@return string source
 ---@return boolean isStealable
 ---@return boolean nameplateShowPersonal
 ---@return number spellId
@@ -106,7 +106,7 @@ function UnitDebuff(unitToken, index, filter) end
 ---@return string? dispelType
 ---@return number duration
 ---@return number expirationTime
----@return UnitId source
+---@return string source
 ---@return boolean isStealable
 ---@return boolean nameplateShowPersonal
 ---@return number spellId
