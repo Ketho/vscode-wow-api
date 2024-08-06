@@ -1,9 +1,23 @@
 # Change Log
 
-## [0.15.0] - 2024-08-02 (pre-release)
+## [0.15.1] - 2024-08-06
+- ✨ The extension now only loads if a World of Warcraft addon is detected in the workspace
+- 👻 Added [GlobalColors.lua](https://www.townlong-yak.com/framexml/live/Helix/GlobalColors.lua) from Townlong Yak
+- PR [#154](https://github.com/Ketho/vscode-wow-api/pull/154) Updated definition for Ace3 OptionsTable, `args` to be an optional
+
+### Workspace detection
+To avoid loading for Lua projects not related to World of Warcraft, all settings will be specific to the workspace instead of the global user settings; and this extension will only activate when either:
+- the extension was previously loaded in the workspace.
+    - *details: a `settings.json` with `Lua.workspace.library` containing a path with the substring `wow-api` exists in the workspace.*
+- a [.toc](https://warcraft.wiki.gg/wiki/TOC_format) file exists.
+    - *details: a `.toc` file with the `## Interface:` directive exists in the workspace.*
+- the `Activate WoW API extension` command is used.
+
+## [0.15.0] - 2024-08-02
 - 🎉 Updated for patch 11.0.2 (55763)
 - ✨ The Lua API now more closely resembles the WoW environment
 - 📝 API functions are marked if they have invalid or missing documentation from the wiki
+- ❗ Notice: moved `EmmyLua` folder to [Annotations](https://github.com/Ketho/vscode-wow-api/tree/master/Annotations), for users with other IDEs
 - 🛠 Code refactoring
 - 🐞 Fixed `:CreateAnimation` inject-field warning
 - 🐞 Fixed deprecated APIs not showing the deprecated warning
@@ -77,6 +91,7 @@
 - PR [#123](https://github.com/Ketho/vscode-wow-api/pull/123) Make childGroups optional in AceConfig.OptionsTable
 - PR [#120](https://github.com/Ketho/vscode-wow-api/pull/120) Add definition for tostringall()
 
+[0.15.1]: https://github.com/Ketho/vscode-wow-api/releases/tag/0.15.1
 [0.15.0]: https://github.com/Ketho/vscode-wow-api/releases/tag/0.15.0
 [0.14.2]: https://github.com/Ketho/vscode-wow-api/releases/tag/0.14.2
 [0.14.1]: https://github.com/Ketho/vscode-wow-api/releases/tag/0.14.1

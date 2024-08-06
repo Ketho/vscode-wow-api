@@ -34,13 +34,11 @@ Shows completion for GlobalStrings at >3 uppercase letters to declutter fuzzy se
 ![](https://github.com/Ketho/vscode-wow-api/raw/master/img/readme/globalstring.gif)
 
 ### Workspace detection
-To avoid loading for Lua projects not related to World of Warcraft, all settings will be specific to the workspace instead of the global user settings.
-
-This extension will only activate when either:
+To avoid loading for Lua projects not related to World of Warcraft, all settings will be specific to the workspace instead of the global user settings; and this extension will only activate when either:
 - the extension was previously loaded in the workspace.
     - *details: a `settings.json` with `Lua.workspace.library` containing a path with the substring `wow-api` exists in the workspace.*
 - a [.toc](https://warcraft.wiki.gg/wiki/TOC_format) file exists.
-    - *details: a `.toc` or `.TOC` file with the `## Interface:` directive exists in the workspace.*
+    - *details: a `.toc` file with the `## Interface:` directive exists in the workspace.*
 - the `Activate WoW API extension` command is used.
 
 ### AddOn namespace
