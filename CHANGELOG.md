@@ -1,12 +1,9 @@
 # Change Log
 
-## [0.15.3] - 2024-08-06
-- Updated flavor data for hover tooltip; "mainline" now refers to TWW
-
-## [0.15.2] - 2024-08-06
-- 🐞 Fixed `:CreateAnimation` generic
-
-## [0.15.1] - 2024-08-06
+## [0.15.4] - 2024-08-06
+- 0.15.4: Fix vscodeignore for vscode packager 
+- 0.15.3: Updated flavor data for hover tooltip; "mainline" now refers to TWW
+- 0.15.2: 🐞 Fixed `:CreateAnimation` generic
 - ✨ The extension now only loads if a World of Warcraft addon is detected in the workspace
 - 👻 Added [GlobalColors.lua](https://www.townlong-yak.com/framexml/live/Helix/GlobalColors.lua) from Townlong Yak
 - PR [#154](https://github.com/Ketho/vscode-wow-api/pull/154) Updated definition for Ace3 OptionsTable, `args` to be an optional
@@ -97,6 +94,7 @@ To avoid loading for Lua projects not related to World of Warcraft, all settings
 - PR [#123](https://github.com/Ketho/vscode-wow-api/pull/123) Make childGroups optional in AceConfig.OptionsTable
 - PR [#120](https://github.com/Ketho/vscode-wow-api/pull/120) Add definition for tostringall()
 
+[0.15.4]: https://github.com/Ketho/vscode-wow-api/releases/tag/0.15.4
 [0.15.3]: https://github.com/Ketho/vscode-wow-api/releases/tag/0.15.3
 [0.15.2]: https://github.com/Ketho/vscode-wow-api/releases/tag/0.15.2
 [0.15.1]: https://github.com/Ketho/vscode-wow-api/releases/tag/0.15.1

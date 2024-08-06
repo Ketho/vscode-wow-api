@@ -11,7 +11,8 @@ vsc-extension-quickstart.md
 **/.vscode-test.*
 
 # images and scripts
-img
+img/changelog
+img/readme
 LuaScripts/**
 
 # hererocks 
