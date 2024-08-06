@@ -5479,7 +5479,8 @@ function GetNewSocketLink(id) end
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_GetNextAchievement)
 ---@param achievementID number
----@return number nextAchievementID
+---@return number? nextID
+---@return boolean? completed
 function GetNextAchievement(achievementID) end
 
 ---#nopage  
@@ -6552,7 +6553,7 @@ function GetSpellsForCharacterUpgradeTier(tierIndex) end
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_GetStatistic)
 ---@param category number
----@param index number
+---@param index? number
 ---@return string value
 ---@return boolean skip
 ---@return string id
@@ -6676,8 +6677,9 @@ function GetTempShapeshiftBarIndex() end
 function GetTitleText() end
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_GetTotalAchievementPoints)
+---@param guild? boolean
 ---@return number points
-function GetTotalAchievementPoints() end
+function GetTotalAchievementPoints(guild) end
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_GetTradePlayerItemInfo)
 ---@param id number
