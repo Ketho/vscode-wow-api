@@ -35,7 +35,7 @@ function lib:GetZoneSize(uiMapID) end
 ---@param x number X coordinates in the World Coordinate system
 ---@param y number Y coordinates in the World Coordinate system
 ---@param instance number InstanceID of the continent these coordinates belong to
----@param allowOutOfBounds boolean If true, do not clip the coordinates into the 0-1 range if the point is outside of the current map.
+---@param allowOutOfBounds? boolean If true, do not clip the coordinates into the 0-1 range if the point is outside of the current map.
 ---@return number x X coordinate in the Zone Coordinate system
 ---@return number y Y coordinate in the Zone Coordinate system
 function lib:GetAzerothWorldMapCoordinatesFromWorld(x, y, instance, allowOutOfBounds) end
@@ -83,7 +83,7 @@ function lib:GetWorldVector(instanceID, oX, oY, dX, dY) end
 ---@param x number X coordinates in the World Coordinate system
 ---@param y number Y coordinates in the World Coordinate system
 ---@param zone number UIMapID of the zone of the destination Zone Coordinate system
----@param allowOutOfBounds boolean If true, do not clip the coordinates into the 0-1 range if the point is outside of the current map.
+---@param allowOutOfBounds? boolean If true, do not clip the coordinates into the 0-1 range if the point is outside of the current map.
 ---@return number x X coordinate in the Zone Coordinate system
 ---@return number y Y coordinate in the Zone Coordinate system
 function lib:GetZoneCoordinatesFromWorld(x, y, zone, allowOutOfBounds) end
@@ -107,7 +107,7 @@ function lib:GetZoneDistance(oZone, oX, oY, dZone, dX, dY) end
 ---@param y number Y coordinate in the origin zone
 ---@param oZone number UIMapID of the origin zone
 ---@param dZone number UIMapID of the destination zone
----@param allowOutOfBounds boolean If true, do not clip the coordinates into the 0-1 range if the point is outside of the destination map.
+---@param allowOutOfBounds? boolean If true, do not clip the coordinates into the 0-1 range if the point is outside of the destination map.
 ---@return number x X coordinate in the destination Zone Coordinate system
 ---@return number y Y coordinate in the destination Zone Coordinate system
 function lib:TranslateZoneCoordinates(x, y, oZone, dZone, allowOutOfBounds) end
