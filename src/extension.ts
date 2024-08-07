@@ -1,15 +1,24 @@
 import * as vscode from "vscode";
-import * as luals from './luals';
-import * as subscriptions from './subscriptions';
+import * as luals from "./luals";
+import * as subscriptions from "./subscriptions";
 
 let isLoaded = false;
 
 export async function activate(context: vscode.ExtensionContext) {
 	console.log("loaded", context.extension.id);
-
 	registerActivationCommand(context);
-	if (isWowWorkspace() || await hasTocFile()) {
+	if (await shouldLoad()) {
 		activateWowExtension(context);
+	}
+}
+
+async function shouldLoad() {
+	const wow_config = vscode.workspace.getConfiguration("wowAPI");
+	if (await luals.isFrameXmlFolder()) {
+		return wow_config.get("activateOnFramexml");
+	}
+	else if (isWowWorkspace() || await hasTocFile()) {
+		return true;
 	}
 }
 
@@ -17,7 +26,7 @@ export async function activate(context: vscode.ExtensionContext) {
 function isWowWorkspace() {
 	const config = vscode.workspace.getConfiguration("Lua");
 	// note config.get returns the workspace config if it exists, otherwise the global user config
-	const lib : string[] = config.get('workspace.library')!;
+	const lib : string[] = config.get("workspace.library")!;
 	return lib.find((value) => value.includes("wow-api"));
 }
 
@@ -50,21 +59,50 @@ function registerActivationCommand(context: vscode.ExtensionContext) {
 			vscode.window.showInformationMessage("WoW API extension is already activated.");
 		}
 	};
-	context.subscriptions.push(vscode.commands.registerCommand('wowAPI.activateExtension', handler));
+	context.subscriptions.push(vscode.commands.registerCommand("wowAPI.activateExtension", handler));
 }
 
-async function activateWowExtension(context: vscode.ExtensionContext) {
-	if (!isLoaded) {
+function intializeWowExtension(context?: vscode.ExtensionContext) {
+	if (!isLoaded && context) {
 		isLoaded = true;
-		// update luals configuration
-		luals.updateRuntime();
-		await luals.addWorkspaceLibrary();
-		await luals.cleanUserLibrary();
-		// sometimes there are already diagnostic warnings before the workspace has loaded
-		// not sure if the delay actually helps against this specific issue
-		setTimeout(luals.autoAddGlobals, 1000);
-
 		subscriptions.registerCompletion(context);
 		subscriptions.registerHover(context);
+		setTimeout(luals.autoAddGlobals, 1000); // sometimes there are already diagnostic warnings before the workspace has loaded
+		luals.cleanUserLibrary();
 	}
 }
+
+async function activateWowExtension(context?: vscode.ExtensionContext) {
+	intializeWowExtension(context);
+	luals.updateRuntime();
+	luals.addWorkspaceLibrary();
+	if (await luals.isFrameXmlFolder()) {
+		luals.disableFrameXmlWarnings();
+	}
+}
+
+const configs = [
+	"runtime.version",
+	"runtime.builtin",
+	"workspace.library",
+	"diagnostics.globals",
+	"diagnostics.disable",
+];
+
+async function deactivateWowExtension() {
+	const lua_config = vscode.workspace.getConfiguration("Lua");
+	for (const v in configs) {
+		lua_config.update(configs[v], undefined, vscode.ConfigurationTarget.Workspace);
+	}
+}
+
+vscode.workspace.onDidChangeConfiguration((event: vscode.ConfigurationChangeEvent) => {
+	if (event.affectsConfiguration("wowAPI.activateOnFramexml")) {
+		const wow_config = vscode.workspace.getConfiguration("wowAPI");
+		if (wow_config.get("activateOnFramexml")) {
+			activateWowExtension();
+		} else {
+			deactivateWowExtension();
+		}
+	}
+});

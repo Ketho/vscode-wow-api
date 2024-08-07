@@ -1,7 +1,13 @@
 # Change Log
 
+## [0.15.5] - 2024-08-07
+- ✨ Improved support for loading FrameXML mirrors by disabling most diagnostic warnings.
+- Added an option to enable/disable the extension when loading a FrameXML mirror.
+
+![](img/changelog/0_15_5_framexml.png)
+
 ## [0.15.4] - 2024-08-06
-- 0.15.4: Fix vscodeignore for vscode packager 
+- 0.15.4: 📦 Fix vscodeignore for vscode packager 
 - 0.15.3: Updated flavor data for hover tooltip; "mainline" now refers to TWW
 - 0.15.2: 🐞 Fixed `:CreateAnimation` generic
 - ✨ The extension now only loads if a World of Warcraft addon is detected in the workspace
@@ -94,6 +100,7 @@ To avoid loading for Lua projects not related to World of Warcraft, all settings
 - PR [#123](https://github.com/Ketho/vscode-wow-api/pull/123) Make childGroups optional in AceConfig.OptionsTable
 - PR [#120](https://github.com/Ketho/vscode-wow-api/pull/120) Add definition for tostringall()
 
+[0.15.5]: https://github.com/Ketho/vscode-wow-api/releases/tag/0.15.5
 [0.15.4]: https://github.com/Ketho/vscode-wow-api/releases/tag/0.15.4
 [0.15.3]: https://github.com/Ketho/vscode-wow-api/releases/tag/0.15.3
 [0.15.2]: https://github.com/Ketho/vscode-wow-api/releases/tag/0.15.2

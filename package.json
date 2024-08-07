@@ -79,7 +79,12 @@
 				"wowAPI.autoAddGlobals": {
 					"type": "boolean",
 					"default": true,
-					"markdownDescription": "Automatically add known WoW globals to `Lua.diagnostics.globals`."
+					"markdownDescription": "Automatically add known WoW globals to `Lua.diagnostics.globals`. _(requires reloading vscode)_"
+				},
+				"wowAPI.activateOnFramexml": {
+					"type": "boolean",
+					"default": true,
+					"markdownDescription": "Activates the extension when opening a FrameXML mirror."
 				}
 			}
 		}
