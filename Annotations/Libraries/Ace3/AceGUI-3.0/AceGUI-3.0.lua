@@ -3,8 +3,10 @@
 ---|"Flow"
 ---|"List"
 ---|"Fill"
+---|"Table"
 
 ---@alias AceGUIWidgetType
+---|"BlizOptionsGroup"
 ---|"Button"
 ---|"CheckBox"
 ---|"ColorPicker"
@@ -30,6 +32,7 @@
 
 ---[Documentation](https://www.wowace.com/projects/ace3/pages/api/ace-gui-3-0)
 ---@class AceGUI-3.0
+---@field tooltip GameTooltip
 local AceGUI = {}
 
 ---[Documentation](https://www.wowace.com/projects/ace3/pages/api/ace-gui-3-0#title-2)
@@ -90,6 +93,12 @@ function AceGUI:SetFocus(widget) end
 ---@meta _
 ---[Documentation](https://www.wowace.com/projects/ace3/pages/ace-gui-3-0-widgets)
 ---@class AceGUIWidget
+---@field public type string
+---@field protected frame Frame
+---@field protected userdata table
+---@field protected events table<string,function>
+---@field protected width? string|number
+---@field protected height? string|number
 local AceGUIWidget = {}
 
 ---@param name string
@@ -188,6 +197,8 @@ function AceGUIWidget:IsReleasing() end
 ---@meta _
 ---[Documentation](https://www.wowace.com/projects/ace3/pages/ace-gui-3-0-widgets)
 ---@class AceGUIContainer : AceGUIWidget
+---@field protected children AceGUIWidget[]
+---@field protected content Frame
 local AceGUIContainer = {}
 
 ---@param widget AceGUIWidget

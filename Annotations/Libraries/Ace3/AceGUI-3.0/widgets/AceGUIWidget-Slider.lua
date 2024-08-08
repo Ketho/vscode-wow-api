@@ -1,6 +1,13 @@
 ---@meta _
 ---@class AceGUISlider : AceGUIWidget
+---@field protected label FontString
+---@field protected slider Slider|BackdropTemplate
+---@field protected lowtext FontString
+---@field protected hightext FontString
+---@field protected editbox EditBox|BackdropTemplate
+---@field protected alignoffset number
 local AceGUISlider = {}
+
 ---[Documentation](https://www.wowace.com/projects/ace3/pages/ace-gui-3-0-widgets#title-2-12-1)
 ---@param value number
 function AceGUISlider:SetValue(value) end

@@ -1,6 +1,9 @@
 ---@meta _
 ---@class AceGUIIcon : AceGUIWidget
+---@field protected label FontString
+---@field protected image Texture
 local AceGUIIcon = {}
+
 ---[Documentation](https://www.wowace.com/projects/ace3/pages/ace-gui-3-0-widgets#title-2-7-1)
 ---@param image string|number
 ---@param ...? unknown

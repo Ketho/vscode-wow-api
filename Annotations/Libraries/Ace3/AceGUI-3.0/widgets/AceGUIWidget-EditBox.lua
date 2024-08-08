@@ -1,5 +1,9 @@
 ---@meta _
 ---@class AceGUIEditBox : AceGUIWidget
+---@field protected alignoffset number
+---@field protected editbox EditBox
+---@field protected label FontString
+---@field protected button Button
 local AceGUIEditBox = {}
 ---[Documentation](https://www.wowace.com/projects/ace3/pages/ace-gui-3-0-widgets#title-2-5-1)
 ---@param text string

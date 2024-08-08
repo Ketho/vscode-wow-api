@@ -1,6 +1,9 @@
 ---@meta _
 ---@class AceGUILabel : AceGUIWidget
+---@field protected label FontString
+---@field protected image Texture
 local AceGUILabel = {}
+
 ---[Documentation](https://www.wowace.com/projects/ace3/pages/ace-gui-3-0-widgets#title-2-10-1)
 ---@param text string
 function AceGUILabel:SetText(text) end

@@ -1,6 +1,8 @@
 ---@meta _
 ---@class AceGUIInteractiveLabel : AceGUIWidget
+---@field protected highlight Texture
 local AceGUIInteractiveLabel = {}
+
 ---[Documentation](https://www.wowace.com/projects/ace3/pages/ace-gui-3-0-widgets#title-2-8-1)
 ---@param text string
 function AceGUIInteractiveLabel:SetText(text) end
