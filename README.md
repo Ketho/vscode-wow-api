@@ -90,17 +90,20 @@ function UnitLevel(unit) end
 Refer to [SETUP.md](SETUP.md) if you want to run the Lua scripts which generate the documentation.
 
 ### Acknowledgements
-* [Blizzard Entertainment](https://www.blizzard.com/)
-* [Townlong Yak](https://www.townlong-yak.com/), [Wago Tools](https://wago.tools/), [WoW.tools](https://wow.tools/)
-* [WoWInterface](https://wowinterface.com/), [Warcraft Wiki](https://warcraft.wiki.gg/), [Wowprogramming](https://wowprogramming.com/)
-
-People who have contributed to the WoW API documentation or the VS Code extension, or have written tools to make this possible.
-* [Andols](https://www.curseforge.com/members/andols/projects), [Buds](https://github.com/mrbuds), [ChrisKader](https://github.com/ChrisKader)
-* [DahkCeles](https://www.curseforge.com/members/dahkceles/projects), [DakJaniels](https://github.com/DakJaniels), [Ellypse](https://github.com/Ellypse)
-* [Ferronn](https://github.com/ferronn-dev), [Foxlit](https://www.townlong-yak.com/), [Gethe](https://github.com/Gethe)
-* [Iriel](https://warcraft.wiki.gg/wiki/Iriel), [jnwhiteh](https://twitter.com/jnwhiteh), [Kaydeethree](https://github.com/kaydeethree)
-* [Kozoaku](https://github.com/Kozoaku), [Marlamin](https://github.com/Marlamin), [Meorawr](https://github.com/Meorawr)
-* [nebula](https://github.com/nebularg), [thatnerdjosh](https://github.com/thatnerdjosh), [Nevcairiel](https://github.com/Nevcairiel)
-* [Oppzippy](https://github.com/Oppzippy), [Resike](https://github.com/Resike), [Stanzilla](https://github.com/Stanzilla)
-* [Sumneko](https://github.com/Sumneko), [Torhal](https://github.com/Torhal), [Wutname](https://github.com/Wutname1)
-* [Xelnath](https://warcraft.wiki.gg/wiki/Alexander_Brazie), [Yuyuli](https://www.curseforge.com/members/yuyuli/projects)
+- [Blizzard Entertainment](https://www.blizzard.com/)
+- [Townlong Yak](https://www.townlong-yak.com/) - [Foxlit](https://www.townlong-yak.com/)
+- [Wago Tools](https://wago.tools/) - [QartemisT](https://github.com/QartemisT)
+- [Warcraft Wiki](https://warcraft.wiki.gg/) - [Kaydeethree](https://github.com/kaydeethree)
+- [WoWInterface](https://wowinterface.com/)
+- [Wowprogramming](https://wowprogramming.com/) - [jnwhiteh](https://twitter.com/jnwhiteh)
+- [WoW.tools](https://wow.tools/) - [Marlamin](https://github.com/Marlamin)  
+&nbsp;
+- [DeadlyBossMods](https://www.curseforge.com/wow/addons/deadly-boss-mods): [emmericp](https://github.com/emmericp), [MysticalOS](https://github.com/MysticalOS)
+- [WeakAuras](https://wago.io/weakauras): [Buds](https://github.com/mrbuds), [Stanzilla](https://github.com/Stanzilla)
+- **Documentation**: [DahkCeles](https://www.curseforge.com/members/dahkceles/projects), [Ellypse](https://github.com/Ellypse), [Foxlit](https://www.townlong-yak.com/), [Iriel](https://warcraft.wiki.gg/wiki/Iriel), [Resike](https://github.com/Resike), [Xelnath](https://warcraft.wiki.gg/wiki/Alexander_Brazie)
+- **FrameXML**: [funkydude](https://github.com/funkydude), [Gethe](https://github.com/Gethe)
+- **LuaLS**: [Sumneko](https://github.com/Sumneko)
+- **VS Code extension**: [Andols](https://www.curseforge.com/members/andols/projects), [ChrisKader](https://github.com/ChrisKader), [DakJaniels](https://github.com/DakJaniels), [thatnerdjosh](https://github.com/thatnerdjosh), [Yuyuli](https://www.curseforge.com/members/yuyuli)
+- **Annotations**: [Kozoaku](https://github.com/Kozoaku), [Oppzippy](https://github.com/Oppzippy), [Torhal](https://github.com/Torhal), [Wutname](https://github.com/Wutname1)
+- **Algalon**: [Ghost](https://github.com/Ghostopheles)
+- **Amazing people**: [Cidan](https://github.com/Cidan), [Ferronn](https://github.com/ferronn-dev), [Meorawr](https://github.com/Meorawr), [Nevcairiel](https://github.com/Nevcairiel)
