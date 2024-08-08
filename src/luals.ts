@@ -68,7 +68,7 @@ export function addWorkspaceLibrary(context: vscode.ExtensionContext): Thenable<
 	const extension = vscode.extensions.getExtension("ketho.wow-api")!;
 	let folderPath = "";
 	if (context.extensionMode === vscode.ExtensionMode.Production && process.platform === "win32") {
-		folderPath = `${process.env.USERPROFILE}\\.vscode\\extensions\\ketho.wow-api-${extension.packageJSON.version}\\Annotations`;
+		folderPath = `$USERPROFILE\\.vscode\\extensions\\ketho.wow-api-${extension.packageJSON.version}\\Annotations`;
 	}
 	else {
 		folderPath = path.join(extension.extensionPath, "Annotations");
