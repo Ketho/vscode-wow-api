@@ -187,6 +187,6 @@ function codec:Encode(str)
 end
 
 ---@param str string
----@return string decoded The decoded string if succeeds. nil if fails.
+---@return string? decoded The decoded string if succeeds. nil if fails.
 function codec:Decode(str)
 end
