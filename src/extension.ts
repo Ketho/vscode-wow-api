@@ -5,7 +5,7 @@ import * as subscriptions from "./subscriptions";
 let isLoaded = false;
 
 export async function activate(context: vscode.ExtensionContext) {
-	console.log("loaded", context.extension.id);
+	console.log("loaded", context.extension.id);	
 	registerActivationCommand(context);
 	if (await shouldLoad()) {
 		activateWowExtension(context);
@@ -13,8 +13,8 @@ export async function activate(context: vscode.ExtensionContext) {
 }
 
 async function shouldLoad() {
-	const wow_config = vscode.workspace.getConfiguration("wowAPI");
 	if (await luals.isFrameXmlFolder()) {
+		const wow_config = vscode.workspace.getConfiguration("wowAPI");
 		return wow_config.get("activateOnFramexml");
 	}
 	else if (isWowWorkspace() || await hasTocFile()) {
@@ -62,8 +62,8 @@ function registerActivationCommand(context: vscode.ExtensionContext) {
 	context.subscriptions.push(vscode.commands.registerCommand("wowAPI.activateExtension", handler));
 }
 
-function intializeWowExtension(context?: vscode.ExtensionContext) {
-	if (!isLoaded && context) {
+function intializeWowExtension(context: vscode.ExtensionContext) {
+	if (!isLoaded) {
 		isLoaded = true;
 		subscriptions.registerCompletion(context);
 		subscriptions.registerHover(context);
@@ -73,9 +73,11 @@ function intializeWowExtension(context?: vscode.ExtensionContext) {
 }
 
 async function activateWowExtension(context?: vscode.ExtensionContext) {
-	intializeWowExtension(context);
 	luals.updateRuntime();
-	luals.addWorkspaceLibrary();
+	if (context) {
+		intializeWowExtension(context);
+		luals.addWorkspaceLibrary(context);
+	}
 	if (await luals.isFrameXmlFolder()) {
 		luals.disableFrameXmlWarnings();
 	}

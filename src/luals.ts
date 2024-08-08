@@ -64,9 +64,15 @@ export function removeDeprecatedGlobals() {
 }
 
 // add path to workspace settings
-export function addWorkspaceLibrary(): Thenable<void> {
-	const extensionPath = vscode.extensions.getExtension("ketho.wow-api")!.extensionPath;
-	const folderPath = path.join(extensionPath, "Annotations");
+export function addWorkspaceLibrary(context: vscode.ExtensionContext): Thenable<void> {
+	const extension = vscode.extensions.getExtension("ketho.wow-api")!;
+	let folderPath = "";
+	if (context.extensionMode === vscode.ExtensionMode.Production && process.platform === "win32") {
+		folderPath = `${process.env.USERPROFILE}\\.vscode\\extensions\\ketho.wow-api-${extension.packageJSON.version}\\Annotations`;
+	}
+	else {
+		folderPath = path.join(extension.extensionPath, "Annotations");
+	}
 
 	const lua_config = vscode.workspace.getConfiguration("Lua");
 	const lib = lua_config.inspect("workspace.library");
@@ -76,7 +82,7 @@ export function addWorkspaceLibrary(): Thenable<void> {
 	res.push(folderPath);
 	return lua_config.update("workspace.library", res, vscode.ConfigurationTarget.Workspace);
 }
-
+	const extensionPath = vscode.extensions.getExtension("ketho.wow-api")!.extensionPath;
 // remove any old paths from global user settings
 export function cleanUserLibrary(): Thenable<void> {
 	const lua_config = vscode.workspace.getConfiguration("Lua");
@@ -107,7 +113,8 @@ const framexml_warnings = [
 	"param-type-mismatch",
 	"redundant-parameter",
 	"unbalanced-assignments",
-	"undefined-global",
+	"undefined-field",
+	"undefined-global"
 ];
 
 export function disableFrameXmlWarnings() {
