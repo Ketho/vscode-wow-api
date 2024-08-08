@@ -2,7 +2,6 @@
 ---@class AceGUIIcon : AceGUIWidget
 ---@field protected label FontString
 ---@field protected image Texture
----@field protected highlight Texture
 local AceGUIIcon = {}
 
 ---[Documentation](https://www.wowace.com/projects/ace3/pages/ace-gui-3-0-widgets#title-2-7-1)
