@@ -3,6 +3,7 @@
 ---|"Flow"
 ---|"List"
 ---|"Fill"
+---|"Table"
 
 ---@alias AceGUIWidgetType
 ---|"Button"
