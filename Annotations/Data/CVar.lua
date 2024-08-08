@@ -1,5 +1,5 @@
 ---@meta _
----@alias CVar
+---@alias CVar string
 ---|"AIBrain"
 ---|"AIController"
 ---|"AIControllerEventLog"

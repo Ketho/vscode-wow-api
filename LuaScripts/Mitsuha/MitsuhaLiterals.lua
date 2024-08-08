@@ -25,7 +25,7 @@ function MitsuhaLiterals:GetCVarLiterals()
 		string.format("https://raw.githubusercontent.com/Ketho/BlizzardInterfaceResources/%s/Resources/CVars.lua", BRANCH)
 	)
 	local t = {}
-	table.insert(t, "---@alias CVar")
+	table.insert(t, "---@alias CVar string")
 	local sorted = Util:SortTable(data[1].var)
 	for _, cvar in pairs(sorted) do
 		table.insert(t, string.format([["%s"]], cvar))
