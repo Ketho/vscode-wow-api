@@ -116,6 +116,7 @@ function C_CurrencyInfo.GetCurrencyListSize() end
 function C_CurrencyInfo.GetDragonIslesSuppliesCurrencyID() end
 
 ---Gets the faction ID for currency that is immediately converted into reputation with that faction instead.
+---
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_CurrencyInfo.GetFactionGrantedByCurrency)
 ---@param currencyID number
 ---@return number? factionID

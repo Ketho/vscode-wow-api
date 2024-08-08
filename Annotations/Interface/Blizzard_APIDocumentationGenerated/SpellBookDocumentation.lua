@@ -8,11 +8,13 @@ C_SpellBook = {}
 function C_SpellBook.CastSpellBookItem(spellBookItemSlotIndex, spellBookItemSpellBank, targetSelf) end
 
 ---Returns true if player knows any Disenchant spells
+---
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_SpellBook.ContainsAnyDisenchantSpell)
 ---@return boolean contains
 function C_SpellBook.ContainsAnyDisenchantSpell() end
 
 ---If found, returns the first slot position of a SpellBookItem matching the specified spell and criteria
+---
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_SpellBook.FindSpellBookSlotForSpell)
 ---@param spellIdentifier SpellIdentifier
 ---@param includeHidden? boolean Default = false
@@ -24,6 +26,7 @@ function C_SpellBook.ContainsAnyDisenchantSpell() end
 function C_SpellBook.FindSpellBookSlotForSpell(spellIdentifier, includeHidden, includeFlyouts, includeFutureSpells, includeOffSpec) end
 
 ---Returns general, class, and active spec spells that are learned at the specified level
+---
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_SpellBook.GetCurrentLevelSpells)
 ---@param level number
 ---@return number[] spellIDs
@@ -39,6 +42,7 @@ function C_SpellBook.GetNumSpellBookSkillLines() end
 function C_SpellBook.GetSkillLineIndexByID(skillLineID) end
 
 ---Returns nothing if item doesn't exist or isn't a spell
+---
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_SpellBook.GetSpellBookItemAutoCast)
 ---@param spellBookItemSlotIndex number
 ---@param spellBookItemSpellBank Enum.SpellBookSpellBank
@@ -47,6 +51,7 @@ function C_SpellBook.GetSkillLineIndexByID(skillLineID) end
 function C_SpellBook.GetSpellBookItemAutoCast(spellBookItemSlotIndex, spellBookItemSpellBank) end
 
 ---Returns number of times a SpellBookItem can be cast, typically based on availability of things like required reagent items; Always returns 0 if item is not found or is not a spell
+---
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_SpellBook.GetSpellBookItemCastCount)
 ---@param spellBookItemSlotIndex number
 ---@param spellBookItemSpellBank Enum.SpellBookSpellBank
@@ -54,6 +59,7 @@ function C_SpellBook.GetSpellBookItemAutoCast(spellBookItemSlotIndex, spellBookI
 function C_SpellBook.GetSpellBookItemCastCount(spellBookItemSlotIndex, spellBookItemSpellBank) end
 
 ---Returns a table of info about the charges of a charge-accumulating SpellBookItem; May return nil if item is not found or is not charge-based
+---
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_SpellBook.GetSpellBookItemCharges)
 ---@param spellBookItemSlotIndex number
 ---@param spellBookItemSpellBank Enum.SpellBookSpellBank
@@ -61,6 +67,7 @@ function C_SpellBook.GetSpellBookItemCastCount(spellBookItemSlotIndex, spellBook
 function C_SpellBook.GetSpellBookItemCharges(spellBookItemSlotIndex, spellBookItemSpellBank) end
 
 ---Returns nil if item doesn't exist or if this kind of item doesn't display cooldowns (ex: future or offspec spells)
+---
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_SpellBook.GetSpellBookItemCooldown)
 ---@param spellBookItemSlotIndex number
 ---@param spellBookItemSpellBank Enum.SpellBookSpellBank
@@ -80,6 +87,7 @@ function C_SpellBook.GetSpellBookItemDescription(spellBookItemSlotIndex, spellBo
 function C_SpellBook.GetSpellBookItemInfo(spellBookItemSlotIndex, spellBookItemSpellBank) end
 
 ---Returns the level the spell is learned at; May return a different value if the player is currently Level Linked with another player; Returns 0 if item is not a Spell
+---
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_SpellBook.GetSpellBookItemLevelLearned)
 ---@param spellBookItemSlotIndex number
 ---@param spellBookItemSpellBank Enum.SpellBookSpellBank
@@ -94,6 +102,7 @@ function C_SpellBook.GetSpellBookItemLevelLearned(spellBookItemSlotIndex, spellB
 function C_SpellBook.GetSpellBookItemLink(spellBookItemSlotIndex, spellBookItemSpellBank, glyphID) end
 
 ---Returns nil if item doesn't exist or if this kind of item doesn't display cooldowns (ex: future or offspec spells)
+---
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_SpellBook.GetSpellBookItemLossOfControlCooldown)
 ---@param spellBookItemSlotIndex number
 ---@param spellBookItemSpellBank Enum.SpellBookSpellBank
@@ -109,6 +118,7 @@ function C_SpellBook.GetSpellBookItemLossOfControlCooldown(spellBookItemSlotInde
 function C_SpellBook.GetSpellBookItemName(spellBookItemSlotIndex, spellBookItemSpellBank) end
 
 ---Returns a table containing one or more SpellPowerCostInfos, one for each power type a SpellBookItem costs; May return nil if item is not found or has no resource costs
+---
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_SpellBook.GetSpellBookItemPowerCost)
 ---@param spellBookItemSlotIndex number
 ---@param spellBookItemSpellBank Enum.SpellBookSpellBank
@@ -116,6 +126,7 @@ function C_SpellBook.GetSpellBookItemName(spellBookItemSlotIndex, spellBookItemS
 function C_SpellBook.GetSpellBookItemPowerCost(spellBookItemSlotIndex, spellBookItemSpellBank) end
 
 ---Get the index of the SkillLine this SpellBookItem is part of
+---
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_SpellBook.GetSpellBookItemSkillLineIndex)
 ---@param spellBookItemSlotIndex number
 ---@param spellBookItemSpellBank Enum.SpellBookSpellBank
@@ -129,6 +140,7 @@ function C_SpellBook.GetSpellBookItemSkillLineIndex(spellBookItemSlotIndex, spel
 function C_SpellBook.GetSpellBookItemTexture(spellBookItemSlotIndex, spellBookItemSpellBank) end
 
 ---Returns nil if SpellBookItem is not associated with a trade skill
+---
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_SpellBook.GetSpellBookItemTradeSkillLink)
 ---@param spellBookItemSlotIndex number
 ---@param spellBookItemSpellBank Enum.SpellBookSpellBank
@@ -153,12 +165,14 @@ function C_SpellBook.GetSpellBookSkillLineInfo(skillLineIndex) end
 function C_SpellBook.GetTrackedNameplateCooldownSpells() end
 
 ---Returns nothing if player has no pet spells
+---
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_SpellBook.HasPetSpells)
 ---@return number numPetSpells
 ---@return string petNameToken
 function C_SpellBook.HasPetSpells() end
 
 ---Returns true if the SpellBookItem is the player's melee Auto Attack spell
+---
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_SpellBook.IsAutoAttackSpellBookItem)
 ---@param spellBookItemSlotIndex number
 ---@param spellBookItemSpellBank Enum.SpellBookSpellBank
@@ -166,6 +180,7 @@ function C_SpellBook.HasPetSpells() end
 function C_SpellBook.IsAutoAttackSpellBookItem(spellBookItemSlotIndex, spellBookItemSpellBank) end
 
 ---Returns true if the SpellBookItem comes from a Class Talent
+---
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_SpellBook.IsClassTalentSpellBookItem)
 ---@param spellBookItemSlotIndex number
 ---@param spellBookItemSpellBank Enum.SpellBookSpellBank
@@ -173,6 +188,7 @@ function C_SpellBook.IsAutoAttackSpellBookItem(spellBookItemSlotIndex, spellBook
 function C_SpellBook.IsClassTalentSpellBookItem(spellBookItemSlotIndex, spellBookItemSpellBank) end
 
 ---Returns true if the SpellBookItem comes from a PvP Talent
+---
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_SpellBook.IsPvPTalentSpellBookItem)
 ---@param spellBookItemSlotIndex number
 ---@param spellBookItemSpellBank Enum.SpellBookSpellBank
@@ -180,6 +196,7 @@ function C_SpellBook.IsClassTalentSpellBookItem(spellBookItemSlotIndex, spellBoo
 function C_SpellBook.IsPvPTalentSpellBookItem(spellBookItemSlotIndex, spellBookItemSpellBank) end
 
 ---Returns true if the SpellBookItem is the player's ranged Auto Attack spell (ex: Shoot, Auto Shot, etc)
+---
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_SpellBook.IsRangedAutoAttackSpellBookItem)
 ---@param spellBookItemSlotIndex number
 ---@param spellBookItemSpellBank Enum.SpellBookSpellBank
@@ -187,6 +204,7 @@ function C_SpellBook.IsPvPTalentSpellBookItem(spellBookItemSlotIndex, spellBookI
 function C_SpellBook.IsRangedAutoAttackSpellBookItem(spellBookItemSlotIndex, spellBookItemSpellBank) end
 
 ---Returns true if the SpellBookIem can be cast on hostile targets
+---
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_SpellBook.IsSpellBookItemHarmful)
 ---@param spellBookItemSlotIndex number
 ---@param spellBookItemSpellBank Enum.SpellBookSpellBank
@@ -194,6 +212,7 @@ function C_SpellBook.IsRangedAutoAttackSpellBookItem(spellBookItemSlotIndex, spe
 function C_SpellBook.IsSpellBookItemHarmful(spellBookItemSlotIndex, spellBookItemSpellBank) end
 
 ---Returns true if the SpellBookIem can be cast on the player or other friendly targets
+---
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_SpellBook.IsSpellBookItemHelpful)
 ---@param spellBookItemSlotIndex number
 ---@param spellBookItemSpellBank Enum.SpellBookSpellBank
@@ -201,6 +220,7 @@ function C_SpellBook.IsSpellBookItemHarmful(spellBookItemSlotIndex, spellBookIte
 function C_SpellBook.IsSpellBookItemHelpful(spellBookItemSlotIndex, spellBookItemSpellBank) end
 
 ---Returns true if the current target is within range of the SpellBookIem; False if out of range; Nil if range check was invalid
+---
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_SpellBook.IsSpellBookItemInRange)
 ---@param spellBookItemSlotIndex number
 ---@param spellBookItemSpellBank Enum.SpellBookSpellBank
@@ -209,6 +229,7 @@ function C_SpellBook.IsSpellBookItemHelpful(spellBookItemSlotIndex, spellBookIte
 function C_SpellBook.IsSpellBookItemInRange(spellBookItemSlotIndex, spellBookItemSpellBank, targetUnit) end
 
 ---Returns true if the SpellBookItem belongs to a non-active class specialization
+---
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_SpellBook.IsSpellBookItemOffSpec)
 ---@param spellBookItemSlotIndex number
 ---@param spellBookItemSpellBank Enum.SpellBookSpellBank
@@ -216,6 +237,7 @@ function C_SpellBook.IsSpellBookItemInRange(spellBookItemSlotIndex, spellBookIte
 function C_SpellBook.IsSpellBookItemOffSpec(spellBookItemSlotIndex, spellBookItemSpellBank) end
 
 ---Returns true if the SpellBookItem is a passive spell; Will always return false if it is not a spell
+---
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_SpellBook.IsSpellBookItemPassive)
 ---@param spellBookItemSlotIndex number
 ---@param spellBookItemSpellBank Enum.SpellBookSpellBank
@@ -223,6 +245,7 @@ function C_SpellBook.IsSpellBookItemOffSpec(spellBookItemSlotIndex, spellBookIte
 function C_SpellBook.IsSpellBookItemPassive(spellBookItemSlotIndex, spellBookItemSpellBank) end
 
 ---Returns whether the SpellBookIem is currently castable; Typically based on things like learned status, required resources, etc
+---
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_SpellBook.IsSpellBookItemUsable)
 ---@param spellBookItemSlotIndex number
 ---@param spellBookItemSpellBank Enum.SpellBookSpellBank
@@ -242,6 +265,7 @@ function C_SpellBook.PickupSpellBookItem(spellBookItemSlotIndex, spellBookItemSp
 function C_SpellBook.SetSpellBookItemAutoCastEnabled(spellBookItemSlotIndex, spellBookItemSpellBank, enabled) end
 
 ---Returns true if the SpellBookIem has a min and/or max range greater than 0; Will always return false if it is not a spell
+---
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_SpellBook.SpellBookItemHasRange)
 ---@param spellBookItemSlotIndex number
 ---@param spellBookItemSpellBank Enum.SpellBookSpellBank

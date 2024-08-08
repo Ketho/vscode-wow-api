@@ -51,6 +51,7 @@ function Mitsuha:GetFunction(func, widgetName)
 	local funcLine = {}
 	if func.Documentation then
 		table.insert(tbl, "---"..table.concat(func.Documentation, "; "))
+		table.insert(tbl, "---")
 	end
 	table.insert(docLine, "API_")
 	if widgetName then

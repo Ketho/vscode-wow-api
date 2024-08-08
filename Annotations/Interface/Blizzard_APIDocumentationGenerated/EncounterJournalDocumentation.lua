@@ -20,6 +20,7 @@ function C_EncounterJournal.GetEncounterJournalLink(linkType, ID, displayText, d
 function C_EncounterJournal.GetEncountersOnMap(uiMapID) end
 
 ---GameMap as opposed to UIMap since we use a mapID not a uiMapID.
+---
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_EncounterJournal.GetInstanceForGameMap)
 ---@param mapID number
 ---@return number? journalInstanceID
@@ -37,6 +38,7 @@ function C_EncounterJournal.GetLootInfo(id) end
 function C_EncounterJournal.GetLootInfoByIndex(index, encounterIndex) end
 
 ---Represents the icon indices for this EJ section.  An icon index can be used to arrive at texture coordinates for specific encounter types, e.g.: EncounterJournal_SetFlagIcon
+---
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_EncounterJournal.GetSectionIconFlags)
 ---@param sectionID number
 ---@return number[]? iconFlags

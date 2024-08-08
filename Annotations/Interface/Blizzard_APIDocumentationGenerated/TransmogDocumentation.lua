@@ -120,6 +120,7 @@ function C_Transmog.GetSlotVisualInfo(transmogLocation) end
 function C_Transmog.IsAtTransmogNPC() end
 
 ---Returns true if the only pending for the location's slot is a ToggleOff for the secondary appearance.
+---
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_Transmog.IsSlotBeingCollapsed)
 ---@param transmogLocation TransmogLocation
 ---@return boolean isBeingCollapsed

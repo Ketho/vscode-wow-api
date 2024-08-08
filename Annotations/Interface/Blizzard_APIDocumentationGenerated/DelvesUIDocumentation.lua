@@ -30,6 +30,7 @@ function C_DelvesUI.GetDelvesAffixSpellsForSeason() end
 function C_DelvesUI.GetDelvesFactionForSeason() end
 
 ---Players must be at or above the min level + offset to enter Delves. This function returns that min level.
+---
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_DelvesUI.GetDelvesMinRequiredLevel)
 ---@return number? minRequiredLevel
 function C_DelvesUI.GetDelvesMinRequiredLevel() end

@@ -39,6 +39,7 @@ function GetExpansionLevel() end
 function GetExpansionTrialInfo() end
 
 ---Maps an expansion level to a maximum character level for that expansion.
+---
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_GetMaxLevelForExpansionLevel)
 ---@param expansionLevel number
 ---@return number maxLevel

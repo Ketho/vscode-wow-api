@@ -166,11 +166,13 @@ function C_MountJournal.GetNumMounts() end
 function C_MountJournal.GetNumMountsNeedingFanfare() end
 
 ---Returns whether the player has unlocked the ability to switch between Skyriding and steady flight styles for flying mounts .
+---
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_MountJournal.IsDragonridingUnlocked)
 ---@return boolean isUnlocked
 function C_MountJournal.IsDragonridingUnlocked() end
 
 ---Determines if the item is mount equipment based on its class and subclass.
+---
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_MountJournal.IsItemMountEquipment)
 ---@param itemLocation ItemLocation
 ---@return boolean isMountEquipment

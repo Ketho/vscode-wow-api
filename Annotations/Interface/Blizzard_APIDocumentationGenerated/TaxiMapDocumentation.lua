@@ -2,12 +2,14 @@
 C_TaxiMap = {}
 
 ---Returns information on taxi nodes at the current flight master.
+---
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_TaxiMap.GetAllTaxiNodes)
 ---@param uiMapID number
 ---@return TaxiNodeInfo[] taxiNodes
 function C_TaxiMap.GetAllTaxiNodes(uiMapID) end
 
 ---Returns information on taxi nodes for a given map, without considering the current flight master.
+---
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_TaxiMap.GetTaxiNodesForMap)
 ---@param uiMapID number
 ---@return MapTaxiNodeInfo[] mapTaxiNodes

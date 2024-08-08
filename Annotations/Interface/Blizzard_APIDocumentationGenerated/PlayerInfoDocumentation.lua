@@ -64,6 +64,7 @@ function C_PlayerInfo.GetPetStableCreatureDisplayInfoID(index) end
 function C_PlayerInfo.GetPlayerCharacterData() end
 
 ---Returns the players mythic+ rating summary which includes the runs they've completed as well as their current season m+ rating
+---
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_PlayerInfo.GetPlayerMythicPlusRatingSummary)
 ---@param playerToken UnitToken
 ---@return MythicPlusRatingSummary ratingSummary

@@ -51,6 +51,7 @@ function C_ChallengeMode.GetCompletionInfo() end
 function C_ChallengeMode.GetDeathCount() end
 
 ---Returns a color value from the passed in overall season M+ rating.
+---
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_ChallengeMode.GetDungeonScoreRarityColor)
 ---@param dungeonScore number
 ---@return colorRGB scoreColor
@@ -61,6 +62,7 @@ function C_ChallengeMode.GetDungeonScoreRarityColor(dungeonScore) end
 function C_ChallengeMode.GetGuildLeaders() end
 
 ---Returns a color value from the passed in keystone level.
+---
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_ChallengeMode.GetKeystoneLevelRarityColor)
 ---@param level number
 ---@return colorRGB levelScore
@@ -84,6 +86,7 @@ function C_ChallengeMode.GetMapTable() end
 function C_ChallengeMode.GetMapUIInfo(mapChallengeModeID) end
 
 ---Gets the overall season mythic+ rating for the player.
+---
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_ChallengeMode.GetOverallDungeonScore)
 ---@return number overallDungeonScore
 function C_ChallengeMode.GetOverallDungeonScore() end
@@ -101,12 +104,14 @@ function C_ChallengeMode.GetPowerLevelDamageHealthMod(powerLevel) end
 function C_ChallengeMode.GetSlottedKeystoneInfo() end
 
 ---Returns a color value from the passed in mythic+ rating from the combined affix scores for a specific dungeon
+---
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_ChallengeMode.GetSpecificDungeonOverallScoreRarityColor)
 ---@param specificDungeonOverallScore number
 ---@return colorRGB specificDungeonOverallScoreColor
 function C_ChallengeMode.GetSpecificDungeonOverallScoreRarityColor(specificDungeonOverallScore) end
 
 ---Returns a color value from the passed in mythic+ rating for a specific dungeon.
+---
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_ChallengeMode.GetSpecificDungeonScoreRarityColor)
 ---@param specificDungeonScore number
 ---@return colorRGB specificDungeonScoreColor

@@ -102,6 +102,7 @@ function C_Traits.GetNodeCost(configID, nodeID) end
 function C_Traits.GetNodeInfo(configID, nodeID) end
 
 ---Returns IDs of Trait Nodes with pending changes, grouped by the type of change; Returns nothing if there are no pending changes
+---
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_Traits.GetStagedChanges)
 ---@param configID number
 ---@return number[] nodeIDsWithPurchases
@@ -168,6 +169,7 @@ function C_Traits.GetTreeHash(treeID) end
 function C_Traits.GetTreeInfo(configID, treeID) end
 
 ---Returns a list of nodeIDs, sorted ascending, for a given treeID. Contains nodes for all class specializations.
+---
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_Traits.GetTreeNodes)
 ---@param treeID number
 ---@return number[] nodeIDs

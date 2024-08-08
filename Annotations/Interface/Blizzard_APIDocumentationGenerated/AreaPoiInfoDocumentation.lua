@@ -13,36 +13,42 @@ function C_AreaPoiInfo.GetAreaPOIForMap(uiMapID) end
 function C_AreaPoiInfo.GetAreaPOIInfo(uiMapID, areaPoiID) end
 
 ---Returns the number of seconds until the POI expires.
+---
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_AreaPoiInfo.GetAreaPOISecondsLeft)
 ---@param areaPoiID number
 ---@return number secondsLeft
 function C_AreaPoiInfo.GetAreaPOISecondsLeft(areaPoiID) end
 
 ---Returns all area POIInfos flagged as delves for the given map.
+---
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_AreaPoiInfo.GetDelvesForMap)
 ---@param uiMapID number
 ---@return number[] areaPoiIDs
 function C_AreaPoiInfo.GetDelvesForMap(uiMapID) end
 
 ---Returns all area POIInfos flagged as dragonriding races for the given map.
+---
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_AreaPoiInfo.GetDragonridingRacesForMap)
 ---@param uiMapID number
 ---@return number[] areaPoiIDs
 function C_AreaPoiInfo.GetDragonridingRacesForMap(uiMapID) end
 
 ---Returns all area POIInfos flagged as events for the given map.
+---
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_AreaPoiInfo.GetEventsForMap)
 ---@param uiMapID number
 ---@return number[] areaPoiIDs
 function C_AreaPoiInfo.GetEventsForMap(uiMapID) end
 
 ---Returns all area POIInfos flagged as quest hubs for the given map.
+---
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_AreaPoiInfo.GetQuestHubsForMap)
 ---@param uiMapID number
 ---@return number[] areaPoiIDs
 function C_AreaPoiInfo.GetQuestHubsForMap(uiMapID) end
 
 ---This statically determines if the POI is timed, GetAreaPOITimeLeft retrieves the value from the server and may return nothing for long intervals
+---
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_AreaPoiInfo.IsAreaPOITimed)
 ---@param areaPoiID number
 ---@return boolean isTimed

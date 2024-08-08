@@ -2,6 +2,7 @@
 C_InvasionInfo = {}
 
 ---Returns true if invasions are active in the same physical area as the player.
+---
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_InvasionInfo.AreInvasionsAvailable)
 ---@return boolean areInvasionsAvailable
 function C_InvasionInfo.AreInvasionsAvailable() end

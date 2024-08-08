@@ -2,6 +2,7 @@
 C_ClassTalents = {}
 
 ---Returns true only if the player has staged changes and can commit their talents in their current state.
+---
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_ClassTalents.CanChangeTalents)
 ---@return boolean canChange
 ---@return boolean canAdd
@@ -13,6 +14,7 @@ function C_ClassTalents.CanChangeTalents() end
 function C_ClassTalents.CanCreateNewConfig() end
 
 ---Returns true if the player could switch talents if they staged a proper loadout.
+---
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_ClassTalents.CanEditTalents)
 ---@return boolean canEdit
 ---@return string changeError
@@ -33,6 +35,7 @@ function C_ClassTalents.DeleteConfig(configID) end
 function C_ClassTalents.GetActiveConfigID() end
 
 ---Returns the SubTreeID of the player's active Hero Talent Specialization SubTree.
+---
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_ClassTalents.GetActiveHeroTalentSpec)
 ---@return number? heroSpecID
 function C_ClassTalents.GetActiveHeroTalentSpec() end
@@ -47,6 +50,7 @@ function C_ClassTalents.GetConfigIDsBySpecID(specID) end
 function C_ClassTalents.GetHasStarterBuild() end
 
 ---Returns the SubTreeIDs of the Hero Talent Specializations available to a Class Specialization and config; Returns nothing if none available
+---
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_ClassTalents.GetHeroTalentSpecsForClassSpec)
 ---@param configID? number
 ---@param classSpecID? number
@@ -74,12 +78,14 @@ function C_ClassTalents.GetStarterBuildActive() end
 function C_ClassTalents.GetTraitTreeForSpec(specID) end
 
 ---Returns whether the player has any unspent talent points in their active hero talent tree. If hasUnspentPoints is true, numHeroPoints will be greater than zero.
+---
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_ClassTalents.HasUnspentHeroTalentPoints)
 ---@return boolean hasUnspentPoints
 ---@return number numHeroPoints
 function C_ClassTalents.HasUnspentHeroTalentPoints() end
 
 ---Returns whether the player has any unspent talent points in their class or spec talent trees. If hasUnspentPoints is true, the number of unspent points for at least one of the trees will be greater than zero. Hero talent points are not included by this function.
+---
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_ClassTalents.HasUnspentTalentPoints)
 ---@return boolean hasUnspentPoints
 ---@return number numClassPoints
@@ -100,6 +106,7 @@ function C_ClassTalents.ImportLoadout(configID, entries, name) end
 function C_ClassTalents.InitializeViewLoadout(specID, level) end
 
 ---New configs may or may not be populated and ready to load immediately after creation. Avoid calling for configs intentionally created empty.
+---
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_ClassTalents.IsConfigPopulated)
 ---@param configID number
 ---@return boolean isPopulated

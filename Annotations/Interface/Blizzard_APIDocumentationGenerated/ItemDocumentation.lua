@@ -430,6 +430,7 @@ function C_Item.IsCorruptedItem(itemInfo) end
 function C_Item.IsCosmeticItem(itemInfo) end
 
 ---Returns whether the item is a consumable curio that can be applied to a delves companion.
+---
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_Item.IsCurioItem)
 ---@param itemInfo ItemInfo
 ---@return boolean? result

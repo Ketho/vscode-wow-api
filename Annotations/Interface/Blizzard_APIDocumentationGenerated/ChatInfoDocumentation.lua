@@ -139,6 +139,7 @@ function C_ChatInfo.IsValidChatLine(chatLine) end
 function C_ChatInfo.IsValidCombatFilterName(name) end
 
 ---Registers interest in addon messages with this prefix, cannot be an empty string.
+---
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_ChatInfo.RegisterAddonMessagePrefix)
 ---@param prefix string
 ---@return Enum.RegisterAddonMessagePrefixResult result
@@ -159,6 +160,7 @@ function C_ChatInfo.RequestCanLocalWhisperTarget(whisperTarget) end
 function C_ChatInfo.ResetDefaultZoneChannels() end
 
 ---Sends a text payload to other clients specified by chatChannel and target which are registered to listen for prefix.
+---
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_ChatInfo.SendAddonMessage)
 ---@param prefix string
 ---@param message string
@@ -168,6 +170,7 @@ function C_ChatInfo.ResetDefaultZoneChannels() end
 function C_ChatInfo.SendAddonMessage(prefix, message, chatType, target) end
 
 ---Sends a text payload to other clients specified by chatChannel and target which are registered to listen for prefix. Intended for plain text payloads; logged and throttled.
+---
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_ChatInfo.SendAddonMessageLogged)
 ---@param prefix string
 ---@param message string

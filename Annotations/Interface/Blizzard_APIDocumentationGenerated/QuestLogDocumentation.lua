@@ -72,6 +72,7 @@ function C_QuestLog.GetHeaderIndexForQuest(questID) end
 function C_QuestLog.GetInfo(questLogIndex) end
 
 ---Only returns a log index for actual quests, not headers
+---
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_QuestLog.GetLogIndexForQuestID)
 ---@param questID number
 ---@return number? questLogIndex
@@ -82,11 +83,13 @@ function C_QuestLog.GetLogIndexForQuestID(questID) end
 function C_QuestLog.GetMapForQuestPOIs() end
 
 ---This is the maximum number of quests a player can be on, including hidden quests, world quests, emissaries etc
+---
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_QuestLog.GetMaxNumQuests)
 ---@return number maxNumQuests
 function C_QuestLog.GetMaxNumQuests() end
 
 ---This is the maximum number of standard quests a player can accept. These are quests that are normally visible in the quest log.
+---
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_QuestLog.GetMaxNumQuestsCanAccept)
 ---@return number maxNumQuestsCanAccept
 function C_QuestLog.GetMaxNumQuestsCanAccept() end
@@ -148,6 +151,7 @@ function C_QuestLog.GetQuestDetailsTheme(questID) end
 function C_QuestLog.GetQuestDifficultyLevel(questID) end
 
 ---Only returns a questID for actual quests, not headers
+---
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_QuestLog.GetQuestIDForLogIndex)
 ---@param questLogIndex number
 ---@return number? questID
@@ -215,6 +219,7 @@ function C_QuestLog.GetQuestWatchType(questID) end
 function C_QuestLog.GetQuestsOnMap(uiMapID) end
 
 ---Uses the selected quest if no questID is provided
+---
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_QuestLog.GetRequiredMoney)
 ---@param questID? number
 ---@return number requiredMoney
@@ -236,12 +241,14 @@ function C_QuestLog.GetSuggestedGroupSize(questID) end
 function C_QuestLog.GetTimeAllowed(questID) end
 
 ---Returns a valid title for anything that is in the quest log.
+---
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_QuestLog.GetTitleForLogIndex)
 ---@param questLogIndex number
 ---@return string? title
 function C_QuestLog.GetTitleForLogIndex(questLogIndex) end
 
 ---Only returns a valid title for quests, header titles cannot be discovered using this.
+---
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_QuestLog.GetTitleForQuestID)
 ---@param questID number
 ---@return string? title
@@ -391,6 +398,7 @@ function C_QuestLog.IsUnitOnQuest(unit, questID) end
 function C_QuestLog.IsWorldQuest(questID) end
 
 ---Tests whether a quest is eligible for warmode bonuses (e.g. most world quests, some daily quests
+---
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_QuestLog.QuestCanHaveWarModeBonus)
 ---@param questID number
 ---@return boolean hasBonus
@@ -407,6 +415,7 @@ function C_QuestLog.QuestContainsFirstTimeRepBonusForPlayer(questID) end
 function C_QuestLog.QuestHasQuestSessionBonus(questID) end
 
 ---Tests whether a quest in the player's quest log that is eligible for warmode bonuses (see 'QuestCanHaveWarModeBOnus') has been completed in warmode (including accepting it)
+---
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_QuestLog.QuestHasWarModeBonus)
 ---@param questID number
 ---@return boolean hasBonus

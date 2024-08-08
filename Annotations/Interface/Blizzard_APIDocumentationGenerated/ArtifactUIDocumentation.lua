@@ -352,6 +352,7 @@ function C_ArtifactUI.SetForgeCamera() end
 function C_ArtifactUI.SetForgeRotation(forgeRotationX, forgeRotationY, forgeRotationZ) end
 
 ---Call without an argument to clear the preview.
+---
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_ArtifactUI.SetPreviewAppearance)
 ---@param artifactAppearanceID? number Default = 0
 function C_ArtifactUI.SetPreviewAppearance(artifactAppearanceID) end

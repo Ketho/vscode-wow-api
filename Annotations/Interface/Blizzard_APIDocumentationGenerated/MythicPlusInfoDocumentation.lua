@@ -59,6 +59,7 @@ function C_MythicPlus.GetRewardLevelFromKeystoneLevel(keystoneLevel) end
 function C_MythicPlus.GetRunHistory(includePreviousWeeks, includeIncompleteRuns) end
 
 ---Gets the active players best runs by the seasonal tracked affixes as well as their overall score for the current season.
+---
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_MythicPlus.GetSeasonBestAffixScoreInfoForMap)
 ---@param mapChallengeModeID number
 ---@return MythicPlusAffixScoreInfo[] affixScores

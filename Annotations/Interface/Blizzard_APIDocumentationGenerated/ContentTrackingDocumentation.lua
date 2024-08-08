@@ -74,6 +74,7 @@ function C_ContentTracking.GetVendorTrackingInfo(collectableEntryID) end
 function C_ContentTracking.GetWaypointText(trackableType, trackableID) end
 
 ---If successful, returns if the trackable is either on your current map, or if we're able to determine a route to that map from your location via waypoints.
+---
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_ContentTracking.IsNavigable)
 ---@param trackableType Enum.ContentTrackingType
 ---@param trackableID number

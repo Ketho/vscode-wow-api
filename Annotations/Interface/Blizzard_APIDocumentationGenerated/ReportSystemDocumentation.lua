@@ -39,6 +39,7 @@ function C_ReportSystem.ReportServerLag() end
 function C_ReportSystem.ReportStuckInCombat() end
 
 ---Not allowed to be called by addons
+---
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_ReportSystem.SendReport)
 ---@param reportInfo ReportInfo
 ---@param playerLocation? PlayerLocation

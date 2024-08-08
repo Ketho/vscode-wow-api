@@ -52,6 +52,7 @@ function C_Club.CompareBattleNetDisplayName(clubId, lhsMemberId, rhsMemberId) en
 function C_Club.CreateClub(name, shortName, description, clubType, avatarId, isCrossFaction) end
 
 ---Check the canCreateStream privilege.
+---
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_Club.CreateStream)
 ---@param clubId ClubId
 ---@param name string
@@ -60,6 +61,7 @@ function C_Club.CreateClub(name, shortName, description, clubType, avatarId, isC
 function C_Club.CreateStream(clubId, name, subject, leadersAndModeratorsOnly) end
 
 ---Check canCreateTicket privilege.
+---
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_Club.CreateTicket)
 ---@param clubId ClubId
 ---@param allowedRedeemCount? number
@@ -73,6 +75,7 @@ function C_Club.CreateTicket(clubId, allowedRedeemCount, duration, defaultStream
 function C_Club.DeclineInvitation(clubId) end
 
 ---Check the canDestroy privilege.
+---
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_Club.DestroyClub)
 ---@param clubId ClubId
 function C_Club.DestroyClub(clubId) end
@@ -84,12 +87,14 @@ function C_Club.DestroyClub(clubId) end
 function C_Club.DestroyMessage(clubId, streamId, messageId) end
 
 ---Check canDestroyStream privilege.
+---
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_Club.DestroyStream)
 ---@param clubId ClubId
 ---@param streamId ClubStreamId
 function C_Club.DestroyStream(clubId, streamId) end
 
 ---Check canDestroyTicket privilege.
+---
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_Club.DestroyTicket)
 ---@param clubId ClubId
 ---@param ticketId string
@@ -105,6 +110,7 @@ function C_Club.DoesAnyCommunityHaveUnreadMessages() end
 function C_Club.DoesCommunityHaveMembersOfTheOppositeFaction(clubId) end
 
 ---nil arguments will not change existing club data
+---
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_Club.EditClub)
 ---@param clubId ClubId
 ---@param name? string
@@ -123,6 +129,7 @@ function C_Club.EditClub(clubId, name, shortName, description, avatarId, broadca
 function C_Club.EditMessage(clubId, streamId, messageId, message) end
 
 ---Check the canSetStreamName, canSetStreamSubject, canSetStreamAccess privileges. nil arguments will not change existing stream data.
+---
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_Club.EditStream)
 ---@param clubId ClubId
 ---@param streamId ClubStreamId
@@ -150,6 +157,7 @@ function C_Club.FocusStream(clubId, streamId) end
 function C_Club.GetAssignableRoles(clubId, memberId) end
 
 ---listen for AVATAR_LIST_UPDATED event. This can happen if we haven't downloaded the battle.net avatar list yet
+---
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_Club.GetAvatarIdList)
 ---@param clubType Enum.ClubType
 ---@return number[]? avatarIds
@@ -176,6 +184,7 @@ function C_Club.GetClubLimits(clubType) end
 function C_Club.GetClubMembers(clubId, streamId) end
 
 ---The privileges for the logged in user for this club
+---
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_Club.GetClubPrivileges)
 ---@param clubId ClubId
 ---@return ClubPrivilegeInfo privilegeInfo
@@ -203,6 +212,7 @@ function C_Club.GetGuildClubId() end
 function C_Club.GetInfoFromLastCommunityChatLine() end
 
 ---Returns a list of players that you can send a request to a Battle.net club. Returns an empty list for Character based clubs
+---
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_Club.GetInvitationCandidates)
 ---@param filter? string
 ---@param maxResults? number
@@ -213,18 +223,21 @@ function C_Club.GetInfoFromLastCommunityChatLine() end
 function C_Club.GetInvitationCandidates(filter, maxResults, cursorPosition, allowFullMatch, clubId) end
 
 ---Get info about a specific club the active player has been invited to.
+---
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_Club.GetInvitationInfo)
 ---@param clubId ClubId
 ---@return ClubSelfInvitationInfo? invitation
 function C_Club.GetInvitationInfo(clubId) end
 
 ---Get the pending invitations for this club. Call RequestInvitationsForClub() to retrieve invitations from server.
+---
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_Club.GetInvitationsForClub)
 ---@param clubId ClubId
 ---@return ClubInvitationInfo[] invitations
 function C_Club.GetInvitationsForClub(clubId) end
 
 ---These are the clubs the active player has been invited to.
+---
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_Club.GetInvitationsForSelf)
 ---@return ClubSelfInvitationInfo[] invitations
 function C_Club.GetInvitationsForSelf() end
@@ -243,12 +256,14 @@ function C_Club.GetLastTicketResponse(ticket) end
 function C_Club.GetMemberInfo(clubId, memberId) end
 
 ---Info for the logged in user for this club
+---
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_Club.GetMemberInfoForSelf)
 ---@param clubId ClubId
 ---@return ClubMemberInfo? info
 function C_Club.GetMemberInfoForSelf(clubId) end
 
 ---Get info about a particular message.
+---
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_Club.GetMessageInfo)
 ---@param clubId ClubId
 ---@param streamId ClubStreamId
@@ -257,6 +272,7 @@ function C_Club.GetMemberInfoForSelf(clubId) end
 function C_Club.GetMessageInfo(clubId, streamId, messageId) end
 
 ---Get the ranges of the messages currently downloaded.
+---
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_Club.GetMessageRanges)
 ---@param clubId ClubId
 ---@param streamId ClubStreamId
@@ -264,6 +280,7 @@ function C_Club.GetMessageInfo(clubId, streamId, messageId) end
 function C_Club.GetMessageRanges(clubId, streamId) end
 
 ---Get downloaded messages before (and including) the specified messageId limited by count. These are filtered by ignored players
+---
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_Club.GetMessagesBefore)
 ---@param clubId ClubId
 ---@param streamId ClubStreamId
@@ -273,6 +290,7 @@ function C_Club.GetMessageRanges(clubId, streamId) end
 function C_Club.GetMessagesBefore(clubId, streamId, newest, count) end
 
 ---Get downloaded messages in the given range. These are filtered by ignored players
+---
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_Club.GetMessagesInRange)
 ---@param clubId ClubId
 ---@param streamId ClubStreamId
@@ -303,6 +321,7 @@ function C_Club.GetStreams(clubId) end
 function C_Club.GetSubscribedClubs() end
 
 ---Get the existing tickets for this club. Call RequestTickets() to retrieve tickets from server.
+---
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_Club.GetTickets)
 ---@param clubId ClubId
 ---@return ClubTicketInfo[] tickets
@@ -314,6 +333,7 @@ function C_Club.GetTickets(clubId) end
 function C_Club.IsAccountMuted(clubId) end
 
 ---Returns whether the given message is the first message in the stream, taking into account ignored messages
+---
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_Club.IsBeginningOfStream)
 ---@param clubId ClubId
 ---@param streamId ClubStreamId
@@ -336,6 +356,7 @@ function C_Club.IsRestricted() end
 function C_Club.IsSubscribedToStream(clubId, streamId) end
 
 ---Check kickableRoleIds privilege.
+---
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_Club.KickMember)
 ---@param clubId ClubId
 ---@param memberId number
@@ -350,11 +371,13 @@ function C_Club.LeaveClub(clubId) end
 function C_Club.RedeemTicket(ticketId) end
 
 ---Request invitations for this club from server. Check canGetInvitation privilege.
+---
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_Club.RequestInvitationsForClub)
 ---@param clubId ClubId
 function C_Club.RequestInvitationsForClub(clubId) end
 
 ---Call this when the user scrolls near the top of the message view, and more need to be displayed. The history will be downloaded backwards (newest to oldest).
+---
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_Club.RequestMoreMessagesBefore)
 ---@param clubId ClubId
 ---@param streamId ClubStreamId
@@ -368,11 +391,13 @@ function C_Club.RequestMoreMessagesBefore(clubId, streamId, messageId, count) en
 function C_Club.RequestTicket(ticketId) end
 
 ---Request tickets from server. Check canGetTicket privilege.
+---
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_Club.RequestTickets)
 ---@param clubId ClubId
 function C_Club.RequestTickets(clubId) end
 
 ---Check canRevokeOwnInvitation or canRevokeOtherInvitation
+---
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_Club.RevokeInvitation)
 ---@param clubId ClubId
 ---@param memberId number
@@ -389,6 +414,7 @@ function C_Club.SendBattleTagFriendRequest(guildClubId, memberId) end
 function C_Club.SendCharacterInvitation(clubId, character) end
 
 ---Check the canSendInvitation privilege.
+---
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_Club.SendInvitation)
 ---@param clubId ClubId
 ---@param memberId number
@@ -401,6 +427,7 @@ function C_Club.SendInvitation(clubId, memberId) end
 function C_Club.SendMessage(clubId, streamId, message) end
 
 ---Only one stream can be set for auto-advance at a time. Focused streams will have their view times advanced automatically.
+---
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_Club.SetAutoAdvanceStreamViewMarker)
 ---@param clubId ClubId
 ---@param streamId ClubStreamId
@@ -413,6 +440,7 @@ function C_Club.SetAutoAdvanceStreamViewMarker(clubId, streamId) end
 function C_Club.SetAvatarTexture(texture, avatarId, clubType) end
 
 ---Check the canSetOwnMemberNote and canSetOtherMemberNote privileges.
+---
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_Club.SetClubMemberNote)
 ---@param clubId ClubId
 ---@param memberId number
@@ -420,6 +448,7 @@ function C_Club.SetAvatarTexture(texture, avatarId, clubType) end
 function C_Club.SetClubMemberNote(clubId, memberId, note) end
 
 ---You can only be subscribed to 0 or 1 clubs for presence.  Subscribing to a new club automatically unsuscribes you to existing subscription.
+---
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_Club.SetClubPresenceSubscription)
 ---@param clubId ClubId
 function C_Club.SetClubPresenceSubscription(clubId) end

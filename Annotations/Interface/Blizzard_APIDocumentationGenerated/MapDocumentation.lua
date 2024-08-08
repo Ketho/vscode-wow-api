@@ -18,6 +18,7 @@ function C_Map.CloseWorldMapInteraction() end
 function C_Map.GetAreaInfo(areaID) end
 
 ---Only works for the player and party members.
+---
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_Map.GetBestMapForUnit)
 ---@param unitToken UnitToken
 ---@return number? uiMapID
@@ -160,6 +161,7 @@ function C_Map.GetMapPosFromWorldPos(continentID, worldPosition, overrideUiMapID
 function C_Map.GetMapRectOnMap(uiMapID, topUiMapID) end
 
 ---Returns the size in yards of the area represented by the map.
+---
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_Map.GetMapWorldSize)
 ---@param uiMapID number
 ---@return number width
@@ -167,6 +169,7 @@ function C_Map.GetMapRectOnMap(uiMapID, topUiMapID) end
 function C_Map.GetMapWorldSize(uiMapID) end
 
 ---Only works for the player and party members.
+---
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_Map.GetPlayerMapPosition)
 ---@param uiMapID number
 ---@param unitToken UnitToken

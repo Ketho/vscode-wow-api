@@ -93,6 +93,7 @@ function C_PvP.GetArenaSkirmishRewards() end
 function C_PvP.GetAssignedSpecForBattlefieldQueue(queueID) end
 
 ---If nil is returned, PVP_BRAWL_INFO_UPDATED event will be sent when the data is ready.
+---
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_PvP.GetAvailableBrawlInfo)
 ---@return PvpBrawlInfo? brawlInfo
 function C_PvP.GetAvailableBrawlInfo() end
