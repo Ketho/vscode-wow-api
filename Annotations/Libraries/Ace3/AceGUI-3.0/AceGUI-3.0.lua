@@ -32,6 +32,7 @@
 
 ---[Documentation](https://www.wowace.com/projects/ace3/pages/api/ace-gui-3-0)
 ---@class AceGUI-3.0
+---@field tooltip GameTooltip
 local AceGUI = {}
 
 ---[Documentation](https://www.wowace.com/projects/ace3/pages/api/ace-gui-3-0#title-2)
