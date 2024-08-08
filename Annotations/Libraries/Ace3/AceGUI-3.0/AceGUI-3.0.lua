@@ -6,6 +6,7 @@
 ---|"Table"
 
 ---@alias AceGUIWidgetType
+---|"BlizOptionsGroup"
 ---|"Button"
 ---|"CheckBox"
 ---|"ColorPicker"
