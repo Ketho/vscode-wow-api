@@ -1,6 +1,13 @@
 ---@meta _
 ---@class AceGUIDropdown : AceGUIWidget
+---@field protected dropdown Frame
+---@field protected count number
+---@field protected button Button
+---@field protected button_cover Button
+---@field protected text FontString
+---@field protected label FontString
 local AceGUIDropdown = {}
+
 ---[Documentation](https://www.wowace.com/projects/ace3/pages/ace-gui-3-0-widgets#title-2-4-1)
 ---@param key unknown
 function AceGUIDropdown:SetValue(key) end

@@ -1,6 +1,15 @@
 ---@meta _
 ---@class AceGUIMultiLineEditBox : AceGUIWidget
+---@field protected button Button
+---@field protected editBox EditBox
+---@field protected label FontString
+---@field protected labelHeight number
+---@field protected numlines number
+---@field protected scrollBar Frame
+---@field protected scrollBG Frame|BackdropTemplate
+---@field protected scrollFrame ScrollFrame
 local AceGUIMultiLineEditBox = {}
+
 ---[Documentation](https://www.wowace.com/projects/ace3/pages/ace-gui-3-0-widgets#title-2-11-1)
 ---@param text string
 function AceGUIMultiLineEditBox:SetText(text) end

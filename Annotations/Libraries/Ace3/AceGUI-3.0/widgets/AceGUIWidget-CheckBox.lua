@@ -1,6 +1,12 @@
 ---@meta _
 ---@class AceGUICheckBox : AceGUIWidget
+---@field protected checkbg Texture
+---@field protected check Texture
+---@field protected text FontString
+---@field protected highlight Texture
+---@field protected image Texture
 local AceGUICheckBox = {}
+
 ---[Documentation](https://www.wowace.com/projects/ace3/pages/ace-gui-3-0-widgets#title-2-2-1)
 ---@param flag boolean|nil
 function AceGUICheckBox:SetValue(flag) end
