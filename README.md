@@ -34,7 +34,7 @@ Shows completion for GlobalStrings at >3 uppercase letters to declutter fuzzy se
 ![](https://github.com/Ketho/vscode-wow-api/raw/master/img/readme/globalstring.gif)
 
 ### AddOn namespace
-The [AddOn namespace](https://warcraft.wiki.gg/wiki/Using_the_AddOn_namespace) needs to be annotated with @class in each file. This way the language server knows about the shared table and also allows you to mutate it.
+The [AddOn namespace](https://warcraft.wiki.gg/wiki/Using_the_AddOn_namespace) needs to be annotated with [@class](https://luals.github.io/wiki/annotations/#class) in each file. This way the language server knows about the shared table and also allows you to mutate it.
 
 - `file1.lua`
 ```lua
