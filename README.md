@@ -34,7 +34,7 @@ Shows completion for GlobalStrings at >3 uppercase letters to declutter fuzzy se
 ![](https://github.com/Ketho/vscode-wow-api/raw/master/img/readme/globalstring.gif)
 
 ### AddOn namespace
-LuaLS doesn't know about the [AddOn namespace](https://warcraft.wiki.gg/wiki/Using_the_AddOn_namespace), so this needs to be annotated with [@class](https://luals.github.io/wiki/annotations/#class) in each file. This way the language server knows about the shared table and also allows you to mutate it, which would not be possible with a single `@class` and then `@type` in other files.
+The [AddOn namespace](https://warcraft.wiki.gg/wiki/Using_the_AddOn_namespace) needs to be annotated with @class in each file. This way the language server knows about the shared table and also allows you to mutate it.
 
 - `file1.lua`
 ```lua
@@ -54,7 +54,7 @@ ns.bar = "world"
 ![](https://github.com/Ketho/vscode-wow-api/assets/1073877/ec0d7c95-201c-4b4a-a378-29b058df558a)
 
 ### Deprecated API
-If you use deprecated APIs to support Classic, the warning and strikethrough can be removed by disabling its diagnostic.
+If you intend to use deprecated APIs for Classic, the warning and strikethrough can be removed by disabling its diagnostic.
 
 ![](img/readme/deprecated.png)
 
@@ -98,12 +98,15 @@ Refer to [SETUP.md](SETUP.md) if you want to run the Lua scripts which generate 
 - [Wowprogramming](https://wowprogramming.com/) - [jnwhiteh](https://twitter.com/jnwhiteh)
 - [WoW.tools](https://wow.tools/) - [Marlamin](https://github.com/Marlamin)  
 &nbsp;
-- [DeadlyBossMods](https://www.curseforge.com/wow/addons/deadly-boss-mods): [Tandanu](https://github.com/emmericp), [MysticalOS](https://github.com/MysticalOS)
-- [WeakAuras](https://wago.io/weakauras): [Buds](https://github.com/mrbuds), [Stanzilla](https://github.com/Stanzilla)
-- **Documentation**: [DahkCeles](https://www.curseforge.com/members/dahkceles/projects), [Ellypse](https://github.com/Ellypse), [Foxlit](https://www.townlong-yak.com/), [Iriel](https://warcraft.wiki.gg/wiki/Iriel), [Resike](https://github.com/Resike), [Xelnath](https://warcraft.wiki.gg/wiki/Alexander_Brazie)
-- **FrameXML**: [funkydude](https://github.com/funkydude), [Gethe](https://github.com/Gethe)
-- **LuaLS**: [Sumneko](https://github.com/Sumneko)
-- **VS Code extension**: [Andols](https://www.curseforge.com/members/andols/projects), [ChrisKader](https://github.com/ChrisKader), [DakJaniels](https://github.com/DakJaniels), [thatnerdjosh](https://github.com/thatnerdjosh), [Yuyuli](https://www.curseforge.com/members/yuyuli)
 - **Annotations**: [Kozoaku](https://github.com/Kozoaku), [Oppzippy](https://github.com/Oppzippy), [Snakybo](https://github.com/Snakybo), [Torhal](https://github.com/Torhal), [Wutname](https://github.com/Wutname1)
+- **FrameXML**: [funkydude](https://github.com/funkydude), [Gethe](https://github.com/Gethe), [Tekkub](https://github.com/tekkub)
+- **LuaLS**: [Sumneko](https://github.com/Sumneko)
+- **VS Code extension**: [ChrisKader](https://github.com/ChrisKader), [DakJaniels](https://github.com/DakJaniels), [thatnerdjosh](https://github.com/thatnerdjosh), [Yuyuli](https://www.curseforge.com/members/yuyuli)
+- **Wiki**: [DahkCeles](https://www.curseforge.com/members/dahkceles/projects), [Foxlit](https://www.townlong-yak.com/), [Iriel](https://warcraft.wiki.gg/wiki/Iriel), [Xelnath](https://warcraft.wiki.gg/wiki/Alexander_Brazie)  
+&nbsp;
 - **Algalon**: [Ghost](https://github.com/Ghostopheles)
-- **Amazing people**: [Cidan](https://github.com/Cidan), [Ferronn](https://github.com/ferronn-dev), [Meorawr](https://github.com/Meorawr), [Nevcairiel](https://github.com/Nevcairiel)
+- **Amazing people**: [Andols](https://www.curseforge.com/members/andols/projects), [Cidan](https://github.com/Cidan), [Ferronn](https://github.com/ferronn-dev), [Meorawr](https://github.com/Meorawr), [Nevcairiel](https://github.com/Nevcairiel)
+- **BlizzardInterfaceResources**: [Resike](https://github.com/Resike)
+- **DeadlyBossMods**: [Tandanu](https://github.com/emmericp), [MysticalOS](https://github.com/MysticalOS)
+- **IntelliJ-IDEA-Lua-IDE-WoW-API**: [Ellypse](https://github.com/Ellypse)
+- **WeakAuras**: [Buds](https://github.com/mrbuds), [Stanzilla](https://github.com/Stanzilla)
