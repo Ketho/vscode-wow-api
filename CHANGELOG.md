@@ -1,14 +1,24 @@
 # Change Log
 
+## [0.15.8] - 2024-08-09
+- ✨ Added an option for choosing whether to automatically configure user or workspace settings
+
+![](img/changelog/0_15_8_configscope.png)
+
+- 🐞 Fixed a bug where known globals were not automatically defined
+- ❗ Renamed the `wowAPI.autoAddGlobals` option to `wowAPI.luals.defineKnownGlobals`
+- PR [#158](https://github.com/Ketho/vscode-wow-api/pull/158) Update AceComm documentation
+- PR [#157](https://github.com/Ketho/vscode-wow-api/pull/157) Update AceGUI documentation
+- PR [#156](https://github.com/Ketho/vscode-wow-api/pull/156) Add documentation for LibDeflate
+- Removed the "Activate on FrameXML" option since it was unneeded
+- Updated acknowledgements
+
 ## [0.15.7] - 2024-08-08
 - 0.15.7 Forgot to actually use `$USERPROFILE`
 - Changed `Lua.workspace.library` to use the `$USERPROFILE` env variable instead of an absolute path
-
 ## [0.15.5] - 2024-08-07
 - ✨ Improved support for loading FrameXML mirrors by disabling most diagnostic warnings
 - Added an option to enable/disable the extension when loading a FrameXML mirror
-
-![](img/changelog/0_15_5_framexml.png)
 
 ## [0.15.4] - 2024-08-06
 - 0.15.4: 📦 Fix vscodeignore for vscode packager 
@@ -104,6 +114,7 @@ To avoid loading for Lua projects not related to World of Warcraft, all settings
 - PR [#123](https://github.com/Ketho/vscode-wow-api/pull/123) Make childGroups optional in AceConfig.OptionsTable
 - PR [#120](https://github.com/Ketho/vscode-wow-api/pull/120) Add definition for tostringall()
 
+[0.15.8]: https://github.com/Ketho/vscode-wow-api/releases/tag/0.15.8
 [0.15.7]: https://github.com/Ketho/vscode-wow-api/releases/tag/0.15.7
 [0.15.6]: https://github.com/Ketho/vscode-wow-api/releases/tag/0.15.6
 [0.15.5]: https://github.com/Ketho/vscode-wow-api/releases/tag/0.15.5
