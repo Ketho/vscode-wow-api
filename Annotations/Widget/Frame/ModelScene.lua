@@ -108,10 +108,10 @@ function ModelScene:GetLightType() end
 function ModelScene:GetNumActors() end
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_ModelScene_GetViewInsets)
----@return number left
----@return number bottom
----@return number width
----@return number height
+---@return uiUnit left
+---@return uiUnit right
+---@return uiUnit top
+---@return uiUnit bottom
 function ModelScene:GetViewInsets() end
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_ModelScene_GetViewTranslation)
@@ -229,11 +229,11 @@ function ModelScene:SetLightVisible(visible) end
 function ModelScene:SetPaused(paused, affectsGlobalPause) end
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_ModelScene_SetViewInsets)
----@param left number
----@param bottom number
----@param width number
----@param height number
-function ModelScene:SetViewInsets(left, bottom, width, height) end
+---@param left uiUnit
+---@param right uiUnit
+---@param top uiUnit
+---@param bottom uiUnit
+function ModelScene:SetViewInsets(left, right, top, bottom) end
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_ModelScene_SetViewTranslation)
 ---@param translationX number

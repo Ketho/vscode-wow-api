@@ -3,7 +3,11 @@
 ---@class TextureBase : Region
 local TextureBase = {}
 
----@meta _
+---Disable shader based nineslice texture rendering. Since SetAtlas will automatically load slice data for the atlas from the DB, can be useful if you want to disable nineslice after setting an atlas.
+---
+---[Documentation](https://warcraft.wiki.gg/wiki/API_TextureBase_ClearTextureSlice)
+function TextureBase:ClearTextureSlice() end
+
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_TextureBase_GetAtlas)
 ---@return textureAtlas atlas
 function TextureBase:GetAtlas() end
@@ -45,6 +49,17 @@ function TextureBase:GetTextureFileID() end
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_TextureBase_GetTextureFilePath)
 ---@return string? textureFile
 function TextureBase:GetTextureFilePath() end
+
+---[Documentation](https://warcraft.wiki.gg/wiki/API_TextureBase_GetTextureSliceMargins)
+---@return number left
+---@return number top
+---@return number right
+---@return number bottom
+function TextureBase:GetTextureSliceMargins() end
+
+---[Documentation](https://warcraft.wiki.gg/wiki/API_TextureBase_GetTextureSliceMode)
+---@return Enum.UITextureSliceMode sliceMode
+function TextureBase:GetTextureSliceMode() end
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_TextureBase_GetVertTile)
 ---@return boolean tiling
@@ -139,6 +154,21 @@ function TextureBase:SetTexelSnappingBias(bias) end
 ---@param wrapModeVertical? WrapMode
 ---@param filterMode? FilterMode
 function TextureBase:SetTexture(textureAsset, wrapModeHorizontal, wrapModeVertical, filterMode) end
+
+---Enables nineslice texture rendering using the specified pixel margins. Preferred over legacy nineslice approach that uses 9 separate textures.
+---
+---[Documentation](https://warcraft.wiki.gg/wiki/API_TextureBase_SetTextureSliceMargins)
+---@param left number
+---@param top number
+---@param right number
+---@param bottom number
+function TextureBase:SetTextureSliceMargins(left, top, right, bottom) end
+
+---Controls whether the center and sides are Stretched or Tiled when using nineslice texture rendering. Defaults to Stretched.
+---
+---[Documentation](https://warcraft.wiki.gg/wiki/API_TextureBase_SetTextureSliceMode)
+---@param sliceMode Enum.UITextureSliceMode
+function TextureBase:SetTextureSliceMode(sliceMode) end
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_TextureBase_SetVertTile)
 ---@param tiling? boolean Default = false
