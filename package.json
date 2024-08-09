@@ -61,6 +61,7 @@
 				"wowAPI.locale": {
 					"type": "string",
 					"default": "enUS",
+					"markdownDescription": "Sets the GlobalStrings locale for code completion and hover tooltips.",
 					"enum": [
 						"enUS",
 						"deDE",
@@ -73,18 +74,25 @@
 						"ruRU",
 						"zhCN",
 						"zhTW"
+					]
+				},
+				"wowAPI.luals.configurationScope": {
+					"type": "string",
+					"default": "Workspace",
+					"markdownDescription": "The configuration scope for automatically configured [LuaLS settings](https://github.com/Ketho/vscode-wow-api/wiki/Configurations#configuration-scope).  \nWorkspace settings take [precedence](https://code.visualstudio.com/docs/getstarted/settings#_settings-precedence) over user settings. Requires restarting VS Code to take effect; any old settings will *not* be cleaned up.",
+					"enum": [
+						"User",
+						"Workspace"
 					],
-					"markdownDescription": "Sets the GlobalStrings locale for code completion and hover."
+					"enumDescriptions": [
+						"Settings that apply globally to any instance of VS Code you open.",
+						"Settings stored inside your workspace and only apply when the workspace is opened."
+					]
 				},
-				"wowAPI.autoAddGlobals": {
+				"wowAPI.luals.defineKnownGlobals": {
 					"type": "boolean",
 					"default": true,
-					"markdownDescription": "Automatically add known WoW globals to `Lua.diagnostics.globals`. _(requires reloading vscode)_"
-				},
-				"wowAPI.activateOnFramexml": {
-					"type": "boolean",
-					"default": true,
-					"markdownDescription": "Activates the extension when opening a FrameXML mirror."
+					"markdownDescription": "Automatically adds known WoW globals to workspace `Lua.diagnostics.globals`. Requires restarting VS Code to take effect."
 				}
 			}
 		}

@@ -27,7 +27,7 @@
         "lowercase-global",
         "need-check-nil"
     ],
-    "wowAPI.autoAddGlobals": false,
+    "wowAPI.luals.defineKnownGlobals": false,
     "Lua.diagnostics.globals": [
         "ARENA_2V2",
         "ARENA_3V3",

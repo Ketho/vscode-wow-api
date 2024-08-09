@@ -5,20 +5,11 @@ import * as subscriptions from "./subscriptions";
 let isLoaded = false;
 
 export async function activate(context: vscode.ExtensionContext) {
-	console.log("loaded", context.extension.id);	
+	console.log("loaded", context.extension.id);
 	registerActivationCommand(context);
-	if (await shouldLoad()) {
-		activateWowExtension(context);
-	}
-}
 
-async function shouldLoad() {
-	if (await luals.isFrameXmlFolder()) {
-		const wow_config = vscode.workspace.getConfiguration("wowAPI");
-		return wow_config.get("activateOnFramexml");
-	}
-	else if (isWowWorkspace() || await hasTocFile()) {
-		return true;
+	if (isWowWorkspace() || await hasTocFile()) {
+		activateWowExtension(context);
 	}
 }
 
@@ -30,7 +21,7 @@ function isWowWorkspace() {
 	return lib.find((value) => value.includes("wow-api"));
 }
 
-async function hasTocFile() { 
+async function hasTocFile() {
 	// the glob pattern appears to be case sensitive
 	const tocFiles = await vscode.workspace.findFiles("**/*.{toc,TOC}");
 	for (const toc of tocFiles) {
@@ -41,7 +32,7 @@ async function hasTocFile() {
 			// directives are case insensitive
 			const hasDirective = line.text.startsWith("##");
 			const isInterface = line.text.toLowerCase().includes("interface");
-			const hasColon = line.text.includes(":"); 
+			const hasColon = line.text.includes(":");
 			if (hasDirective && isInterface && hasColon) {
 				return true;
 			}
@@ -62,49 +53,19 @@ function registerActivationCommand(context: vscode.ExtensionContext) {
 	context.subscriptions.push(vscode.commands.registerCommand("wowAPI.activateExtension", handler));
 }
 
-function intializeWowExtension(context: vscode.ExtensionContext) {
-	if (!isLoaded) {
-		isLoaded = true;
-		subscriptions.registerCompletion(context);
-		subscriptions.registerHover(context);
-		setTimeout(luals.autoAddGlobals, 1000); // sometimes there are already diagnostic warnings before the workspace has loaded
-		luals.cleanUserLibrary();
-	}
-}
-
-async function activateWowExtension(context?: vscode.ExtensionContext) {
-	luals.updateRuntime();
-	if (context) {
-		intializeWowExtension(context);
-		luals.addWorkspaceLibrary(context);
-	}
+async function activateWowExtension(context: vscode.ExtensionContext) {
+	subscriptions.registerCompletion(context);
+	subscriptions.registerHover(context);
+	
+	luals.setRuntime();
+	luals.setWowLibrary(context);
+	
 	if (await luals.isFrameXmlFolder()) {
 		luals.disableFrameXmlWarnings();
 	}
-}
-
-const configs = [
-	"runtime.version",
-	"runtime.builtin",
-	"workspace.library",
-	"diagnostics.globals",
-	"diagnostics.disable",
-];
-
-async function deactivateWowExtension() {
-	const lua_config = vscode.workspace.getConfiguration("Lua");
-	for (const v in configs) {
-		lua_config.update(configs[v], undefined, vscode.ConfigurationTarget.Workspace);
+	else {
+		luals.defineKnownGlobals();
+		luals.removeDeprecatedGlobals();
 	}
+	isLoaded = true;
 }
-
-vscode.workspace.onDidChangeConfiguration((event: vscode.ConfigurationChangeEvent) => {
-	if (event.affectsConfiguration("wowAPI.activateOnFramexml")) {
-		const wow_config = vscode.workspace.getConfiguration("wowAPI");
-		if (wow_config.get("activateOnFramexml")) {
-			activateWowExtension();
-		} else {
-			deactivateWowExtension();
-		}
-	}
-});
