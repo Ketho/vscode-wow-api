@@ -68,7 +68,7 @@ function GetSpellTexture(spell) end
 function GetSpellCharges(spell) end
 
 ---@deprecated
----Deprecated by [C_Spell.GetSpellDescription(](https://warcraft.wiki.gg/wiki/API_C_Spell.GetSpellDescription)
+---Deprecated by [C_Spell.GetSpellDescription](https://warcraft.wiki.gg/wiki/API_C_Spell.GetSpellDescription)
 ---@param spellID number
 ---@return string desc
 function GetSpellDescription(spellID) end
