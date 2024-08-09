@@ -8218,7 +8218,7 @@ function SelectTrainerService(index) end
 ---@param msg string
 ---@param chatType? ChatType
 ---@param languageID? number
----@param target? string
+---@param target? number|string
 function SendChatMessage(msg, chatType, languageID, target) end
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_SendMail)
