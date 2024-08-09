@@ -5,14 +5,14 @@ LibStub = {}
 ---@generic T
 ---@param major `T`
 ---@param minor number
----@return T library
+---@return table|T library
 ---@return number? oldMinor
 function LibStub:NewLibrary(major, minor) end
 
 ---@generic T
 ---@param major `T`
 ---@param silent? boolean
----@return T library
+---@return table|T library
 function LibStub:GetLibrary(major, silent) end
 
 ---@return function iter
@@ -25,5 +25,5 @@ function LibStub:IterateLibraries() end
 ---@generic T
 ---@param major `T`
 ---@param silent? boolean
----@return T library
+---@return table|T library
 function LibStub(major, silent) end
