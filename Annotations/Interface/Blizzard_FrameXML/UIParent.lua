@@ -38,6 +38,7 @@ function UIFrameFadeOut(frame, timeToFade, startAlpha, endAlpha) end
 
 ---[FrameXML](https://www.townlong-yak.com/framexml/go/getglobal)
 ---@param varr string
+---@return any
 function getglobal(varr) end
 
 ---[FrameXML](https://www.townlong-yak.com/framexml/go/setglobal)
