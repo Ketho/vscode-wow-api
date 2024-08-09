@@ -2,7 +2,7 @@
 --- added: string.join, string.rtgsub, string.split, strsplittable, string.trim
 --- added: strcmputf8i, strlenutf8, strconcat, tostringall
 --- removed: string.dump, string.pack, string.packsize, string.unpack
---- obsolete: string.gfind (lua 5.0) -> renamed to string.gmatch
+--- obsolete-removed: string.gfind -> renamed to string.gmatch
 --- string.rtgsub is from RestrictedTable_rtgsub
 
 ---
