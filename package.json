@@ -93,6 +93,11 @@
 					"type": "boolean",
 					"default": true,
 					"markdownDescription": "Automatically adds known WoW globals to workspace `Lua.diagnostics.globals`. Requires restarting VS Code to take effect."
+				},
+				"wowAPI.luals.setLuaRuntime": {
+					"type": "boolean",
+					"default": true,
+					"markdownDescription": "Replaces the standard Lua libraries with the [WoW Lua](https://github.com/Ketho/vscode-wow-api/wiki/Configuration#lua-runtime) version. Requires restarting VS Code to take effect."
 				}
 			}
 		}

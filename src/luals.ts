@@ -28,11 +28,14 @@ function getConfigurationTarget() {
 }
 
 // disable lua libraries so we can load our version
-export function setRuntime() { 
-	const lua_config = vscode.workspace.getConfiguration("Lua");
-	const configTarget = getConfigurationTarget();
-	lua_config.update("runtime.version", "Lua 5.1", configTarget);
-	lua_config.update("runtime.builtin", builtin, configTarget);
+export function setRuntime() {
+	const wow_config = vscode.workspace.getConfiguration("wowAPI");
+	if (wow_config.get("luals.setLuaRuntime")) {
+		const lua_config = vscode.workspace.getConfiguration("Lua");
+		const configTarget = getConfigurationTarget();
+		lua_config.update("runtime.version", "Lua 5.1", configTarget);
+		lua_config.update("runtime.builtin", builtin, configTarget);
+	}
 }
 
 // automatically mark wow globals as defined if there is a language server warning
