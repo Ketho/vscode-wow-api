@@ -28,11 +28,14 @@ function getConfigurationTarget() {
 }
 
 // disable lua libraries so we can load our version
-export function setRuntime() { 
-	const lua_config = vscode.workspace.getConfiguration("Lua");
-	const configTarget = getConfigurationTarget();
-	lua_config.update("runtime.version", "Lua 5.1", configTarget);
-	lua_config.update("runtime.builtin", builtin, configTarget);
+export function setRuntime() {
+	const wow_config = vscode.workspace.getConfiguration("wowAPI");
+	if (wow_config.get("luals.setLuaRuntime")) {
+		const lua_config = vscode.workspace.getConfiguration("Lua");
+		const configTarget = getConfigurationTarget();
+		lua_config.update("runtime.version", "Lua 5.1", configTarget);
+		lua_config.update("runtime.builtin", builtin, configTarget);
+	}
 }
 
 // automatically mark wow globals as defined if there is a language server warning
@@ -88,12 +91,16 @@ export function setWowLibrary(context: vscode.ExtensionContext): Thenable<void> 
 	}
 	const lua_config = vscode.workspace.getConfiguration("Lua");
 	const lib = lua_config.inspect("workspace.library");
-	const wv = lib?.workspaceValue as string[];
-	// evil way by always filtering it out and then adding the current version path
-	const res = wv?.filter(el => !el.includes("wow-api")) ?? [];
-	res.push(folderPath);
-
 	const configTarget = getConfigurationTarget();
+	let libraryPath: string[] = [];
+	if (configTarget === vscode.ConfigurationTarget.Global) {
+		libraryPath = lib?.globalValue as string[];
+	}
+	else if (configTarget === vscode.ConfigurationTarget.Workspace) {
+		libraryPath = lib?.workspaceValue as string[];
+	}
+	const res = libraryPath?.filter(el => !el.includes("wow-api")) ?? [];
+	res.push(folderPath);
 	return lua_config.update("workspace.library", res, configTarget);
 }
 
