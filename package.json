@@ -78,7 +78,7 @@
 				},
 				"wowAPI.luals.configurationScope": {
 					"type": "string",
-					"default": "User",
+					"default": "Workspace",
 					"markdownDescription": "The configuration scope for automatically configured [LuaLS settings](https://github.com/Ketho/vscode-wow-api/wiki/Configuration#configuration-scope).  \nWorkspace settings take precedence over user settings. Requires restarting VS Code to take effect; any old settings will *not* be cleaned up.",
 					"enum": [
 						"User",
