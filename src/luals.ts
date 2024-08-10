@@ -88,12 +88,16 @@ export function setWowLibrary(context: vscode.ExtensionContext): Thenable<void> 
 	}
 	const lua_config = vscode.workspace.getConfiguration("Lua");
 	const lib = lua_config.inspect("workspace.library");
-	const wv = lib?.workspaceValue as string[];
-	// evil way by always filtering it out and then adding the current version path
-	const res = wv?.filter(el => !el.includes("wow-api")) ?? [];
-	res.push(folderPath);
-
 	const configTarget = getConfigurationTarget();
+	let libraryPath: string[] = [];
+	if (configTarget === vscode.ConfigurationTarget.Global) {
+		libraryPath = lib?.globalValue as string[];
+	}
+	else if (configTarget === vscode.ConfigurationTarget.Workspace) {
+		libraryPath = lib?.workspaceValue as string[];
+	}
+	const res = libraryPath?.filter(el => !el.includes("wow-api")) ?? [];
+	res.push(folderPath);
 	return lua_config.update("workspace.library", res, configTarget);
 }
 
