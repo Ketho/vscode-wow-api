@@ -1,5 +1,8 @@
 # Change Log
 
+## [0.16.0] - 2024-08-10
+- 🐞 Fixed paths for `.vscode-insiders` and non-Windows machines
+
 ## [0.15.9] - 2024-08-09
 - Fixed `inject-field` and `duplicate-set-field` warnings for Ace3 and LibStub
 
@@ -117,6 +120,7 @@ To avoid loading for Lua projects not related to World of Warcraft, all settings
 - PR [#123](https://github.com/Ketho/vscode-wow-api/pull/123) Make childGroups optional in AceConfig.OptionsTable
 - PR [#120](https://github.com/Ketho/vscode-wow-api/pull/120) Add definition for tostringall()
 
+[0.16.0]: https://github.com/Ketho/vscode-wow-api/releases/tag/0.16.0
 [0.15.9]: https://github.com/Ketho/vscode-wow-api/releases/tag/0.15.9
 [0.15.8]: https://github.com/Ketho/vscode-wow-api/releases/tag/0.15.8
 [0.15.7]: https://github.com/Ketho/vscode-wow-api/releases/tag/0.15.7

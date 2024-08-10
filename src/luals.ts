@@ -78,9 +78,10 @@ export function removeDeprecatedGlobals() {
 // add wow-api path to luals
 export function setWowLibrary(context: vscode.ExtensionContext): Thenable<void> {
 	const extension = vscode.extensions.getExtension("ketho.wow-api")!;
-	let folderPath = "";
-	if (context.extensionMode === vscode.ExtensionMode.Production && process.platform === "win32") {
-		folderPath = `$USERPROFILE\\.vscode\\extensions\\ketho.wow-api-${extension.packageJSON.version}\\Annotations`;
+	let folderPath;
+	if (context.extensionMode === vscode.ExtensionMode.Production) {
+		const pos = extension.extensionPath.indexOf(".vscode"); // should also work for .vscode-insiders
+		folderPath = path.join("$USERPROFILE", extension.extensionPath.substring(pos), "Annotations");
 	}
 	else {
 		folderPath = path.join(extension.extensionPath, "Annotations");
