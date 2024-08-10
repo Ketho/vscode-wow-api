@@ -75,26 +75,13 @@ export function removeDeprecatedGlobals() {
 	}
 }
 
-function anonymizePath(s: string) {
-	const platform = process.platform;
-	const pos = s.indexOf(".vscode"); // should also work for .vscode-insiders
-	if (platform === "win32") {
-		return path.join("$USERPROFILE", s.substring(pos), "Annotations");
-	}
-	else if (platform === "linux" || platform === "darwin") {
-		return path.join("~", s.substring(pos), "Annotations");
-	}
-	else {
-		return path.join(s, "Annotations");
-	}
-}
-
 // add wow-api path to luals
 export function setWowLibrary(context: vscode.ExtensionContext): Thenable<void> {
 	const extension = vscode.extensions.getExtension("ketho.wow-api")!;
 	let folderPath;
 	if (context.extensionMode === vscode.ExtensionMode.Production) {
-		folderPath = anonymizePath(extension.extensionPath);
+		const pos = extension.extensionPath.indexOf(".vscode"); // should also work for .vscode-insiders
+		folderPath = path.join("~", extension.extensionPath.substring(pos), "Annotations");
 	}
 	else {
 		folderPath = path.join(extension.extensionPath, "Annotations");

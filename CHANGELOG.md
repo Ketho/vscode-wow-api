@@ -1,6 +1,7 @@
 # Change Log
 
-## [0.16.3] - 2024-08-10
+## [0.16.4] - 2024-08-10
+- 0.16.4: Apparently `~` works fine as home path on Windows too
 - 0.16.3: 🍎 Fixed library paths for macOS
 - 0.16.2: 🐧 Fixed library paths for Linux
 - 0.16.1: 🙇 Fixed the default for `wowAPI.luals.configurationScope` back to Workspace
@@ -123,6 +124,7 @@ To avoid loading for Lua projects not related to World of Warcraft, all settings
 - PR [#123](https://github.com/Ketho/vscode-wow-api/pull/123) Make childGroups optional in AceConfig.OptionsTable
 - PR [#120](https://github.com/Ketho/vscode-wow-api/pull/120) Add definition for tostringall()
 
+[0.16.4]: https://github.com/Ketho/vscode-wow-api/releases/tag/0.16.4
 [0.16.3]: https://github.com/Ketho/vscode-wow-api/releases/tag/0.16.3
 [0.16.2]: https://github.com/Ketho/vscode-wow-api/releases/tag/0.16.2
 [0.16.1]: https://github.com/Ketho/vscode-wow-api/releases/tag/0.16.1
