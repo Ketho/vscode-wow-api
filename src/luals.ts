@@ -81,7 +81,7 @@ function anonymizePath(s: string) {
 	if (platform === "win32") {
 		return path.join("$USERPROFILE", s.substring(pos), "Annotations");
 	}
-	else if (platform === "linux") {
+	else if (platform === "linux" || platform === "darwin") {
 		return path.join("~", s.substring(pos), "Annotations");
 	}
 	else {
