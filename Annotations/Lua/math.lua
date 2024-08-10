@@ -1,6 +1,6 @@
 ---@meta math_wow
 --- added: fastrandom
---- removed: math.tointeger, math.type, math.ult
+--- removed: math.randomseed, math.tointeger, math.type, math.ult
 
 ---
 ---
@@ -252,14 +252,6 @@ function math.rad(x) end
 ---@return integer
 ---@nodiscard
 function math.random(m, n) end
-
----
----Sets `x` as the "seed" for the pseudo-random generator.
----
----[View documents](command:extension.lua.doc?["en-us/51/manual.html/pdf-math.randomseed"])
----
----@param x integer
-function math.randomseed(x) end
 
 ---
 ---Returns the sine of `x` (assumed to be in radians).
