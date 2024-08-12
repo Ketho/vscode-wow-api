@@ -9165,11 +9165,12 @@ function issecure() end
 function issecurevalue() end
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_issecurevariable)
----@param table? table
+---@param tbl table
 ---@param variable string
 ---@return boolean isSecure
 ---@return string? taint
-function issecurevariable(table, variable) end
+---@overload fun(variable: string): isSecure: boolean, taint: string?
+function issecurevariable(tbl, variable) end
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_pcallwithenv)
 ---@param func string
