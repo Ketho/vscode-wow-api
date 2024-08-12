@@ -17,8 +17,10 @@ export async function activate(context: vscode.ExtensionContext) {
 function isWowWorkspace() {
 	const config = vscode.workspace.getConfiguration("Lua");
 	// note config.get returns the workspace config if it exists, otherwise the global user config
-	const lib : string[] = config.get("workspace.library")!;
-	return lib.find((value) => value.includes("wow-api"));
+	const workspaceValue = config.inspect("workspace.library")?.workspaceValue as string[];
+	if (workspaceValue) {
+		return workspaceValue.find((value) => value.includes("wow-api"));
+	}
 }
 
 async function hasTocFile() {
