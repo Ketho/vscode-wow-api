@@ -3,7 +3,7 @@
 [![](https://img.shields.io/github/v/release/Ketho/vscode-wow-api)](https://github.com/Ketho/vscode-wow-api/releases)
 [![](https://img.shields.io/badge/wow-11.0.2-yellow)](https://github.com/Gethe/wow-ui-source/tree/11.0.2)
 
-Adds IntelliSense features for World of Warcraft API to VS Code. This is a third party extension for [Sumneko's](https://marketplace.visualstudio.com/items?itemName=sumneko.lua) Lua [Language Server](https://microsoft.github.io/language-server-protocol/) with [annotations](https://luals.github.io/wiki/annotations/).
+Adds IntelliSense features for World of Warcraft API to VS Code. This is a third party extension for [LuaLS](https://marketplace.visualstudio.com/items?itemName=sumneko.lua) with [annotations](https://luals.github.io/wiki/annotations/).
 
 #### API
 * Includes the WoW Lua 5.1 environment
