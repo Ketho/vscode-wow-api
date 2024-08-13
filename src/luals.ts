@@ -16,6 +16,15 @@ const builtin = {
 	utf8: "disable",
 };
 
+const annotationFolders = [
+	"Data",
+	"Interface",
+	"Libraries",
+	// "Lua",
+	"Type",
+	"Widget",
+];
+
 function getConfigurationTarget() {
 	const wow_config = vscode.workspace.getConfiguration("wowAPI");
 	const scope = wow_config.get("luals.configurationScope");
@@ -100,7 +109,15 @@ export function setWowLibrary(context: vscode.ExtensionContext): Thenable<void> 
 		libraryPath = lib?.workspaceValue as string[];
 	}
 	const res = libraryPath?.filter(el => !el.includes("wow-api")) ?? [];
-	res.push(folderPath);
+	const wow_config = vscode.workspace.getConfiguration("wowAPI");
+	if (!wow_config.get("luals.setLuaRuntime")) {
+		for (const [i, v] of annotationFolders.entries()) {
+			res.push(path.join(folderPath, v));
+		}
+	}
+	else {
+		res.push(folderPath);
+	}
 	return lua_config.update("workspace.library", res, configTarget);
 }
 

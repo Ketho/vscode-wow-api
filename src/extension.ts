@@ -58,10 +58,9 @@ function registerActivationCommand(context: vscode.ExtensionContext) {
 async function activateWowExtension(context: vscode.ExtensionContext) {
 	subscriptions.registerCompletion(context);
 	subscriptions.registerHover(context);
-	
+
 	luals.setRuntime();
 	luals.setWowLibrary(context);
-	
 	if (await luals.isFrameXmlFolder()) {
 		luals.disableFrameXmlWarnings();
 	}

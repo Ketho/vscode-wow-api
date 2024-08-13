@@ -79,7 +79,7 @@
 				"wowAPI.luals.configurationScope": {
 					"type": "string",
 					"default": "Workspace",
-					"markdownDescription": "The configuration scope for automatically configured [LuaLS settings](https://github.com/Ketho/vscode-wow-api/wiki/Configuration#configuration-scope).  \nWorkspace settings take precedence over user settings. Requires restarting VS Code to take effect; any old settings will *not* be cleaned up.",
+					"markdownDescription": "The configuration scope for automatically configured [LuaLS settings](https://github.com/Ketho/vscode-wow-api/wiki/Configuration#configuration-scope).  \nRequires restarting VS Code to take effect; any old settings will *not* be cleaned up.",
 					"enum": [
 						"User",
 						"Workspace"
@@ -97,7 +97,7 @@
 				"wowAPI.luals.setLuaRuntime": {
 					"type": "boolean",
 					"default": true,
-					"markdownDescription": "Replaces the standard Lua libraries with the [WoW Lua](https://github.com/Ketho/vscode-wow-api/wiki/Configuration#lua-runtime) version. Requires restarting VS Code to take effect."
+					"markdownDescription": "Replaces the standard Lua libraries with the [WoW Lua](https://github.com/Ketho/vscode-wow-api/wiki/Configuration#lua-runtime) version. Requires restarting VS Code to take effect; any old settings will *not* be cleaned up."
 				}
 			}
 		}
