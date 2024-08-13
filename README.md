@@ -1,12 +1,11 @@
-## WoW API
+## WoW API for VS Code
 [![](https://img.shields.io/github/license/Ketho/vscode-wow-api)](https://opensource.org/licenses/MIT)
 [![](https://img.shields.io/github/v/release/Ketho/vscode-wow-api)](https://github.com/Ketho/vscode-wow-api/releases)
 [![](https://img.shields.io/badge/wow-11.0.2-yellow)](https://github.com/Gethe/wow-ui-source/tree/11.0.2)
 
-Adds IntelliSense features for World of Warcraft API to VS Code. This is a plugin extension for [Sumneko's](https://marketplace.visualstudio.com/items?itemName=sumneko.lua) Lua [Language Server](https://microsoft.github.io/language-server-protocol/) with [annotations](https://luals.github.io/wiki/annotations/).
+Adds IntelliSense features for World of Warcraft API to VS Code. This is a third party extension for [Sumneko's](https://marketplace.visualstudio.com/items?itemName=sumneko.lua) Lua [Language Server](https://microsoft.github.io/language-server-protocol/) with [annotations](https://luals.github.io/wiki/annotations/).
 
-### Features
-#### [API](https://warcraft.wiki.gg/wiki/World_of_Warcraft_API)
+#### API
 * Includes the WoW Lua 5.1 environment
 * Loads the official Blizzard [API documentation](https://github.com/Gethe/wow-ui-source/tree/live/Interface/AddOns/Blizzard_APIDocumentationGenerated)
 * Parses [Warcraft Wiki](https://warcraft.wiki.gg/wiki/World_of_Warcraft_API) API documentation
@@ -33,7 +32,7 @@ Shows completion for GlobalStrings at >3 uppercase letters to declutter fuzzy se
 
 ![](https://github.com/Ketho/vscode-wow-api/raw/master/img/readme/globalstring.gif)
 
-### AddOn namespace
+## AddOn namespace
 The [AddOn namespace](https://warcraft.wiki.gg/wiki/Using_the_AddOn_namespace) needs to be annotated with [@class](https://luals.github.io/wiki/annotations/#class) in each file. This way the language server knows about the shared table and also allows you to mutate it.
 
 - `file1.lua`
@@ -53,7 +52,7 @@ ns.bar = "world"
 ```
 ![](https://github.com/Ketho/vscode-wow-api/assets/1073877/ec0d7c95-201c-4b4a-a378-29b058df558a)
 
-### Deprecated API
+## Deprecated API
 If you intend to use deprecated APIs for Classic, the warning and strikethrough can be removed by disabling its diagnostic.
 
 ![](img/readme/deprecated.png)
@@ -61,7 +60,7 @@ If you intend to use deprecated APIs for Classic, the warning and strikethrough 
 ### Documentation
 More documentation is available on the [project wiki](https://github.com/Ketho/vscode-wow-api/wiki).
 
-### Contributing
+## Contributing
 The extension *reflects* the state of the wiki, so if you create/update the wiki pages, it will be updated in the extension on the next release. Otherwise feel free to create an [issue](https://github.com/Ketho/vscode-wow-api/issues) with the false errors.
 
 For example [UnitLevel](https://warcraft.wiki.gg/wiki/API_UnitLevel) would be documented like so.
@@ -86,10 +85,10 @@ function UnitLevel(unit) end
 -->
 ```
 
-#### Developing
+### Developing
 Refer to [SETUP.md](SETUP.md) if you want to run the Lua scripts which generate the documentation.
 
-### Acknowledgements
+## Acknowledgements
 - [Blizzard Entertainment](https://www.blizzard.com/)
 - [Townlong Yak](https://www.townlong-yak.com/) - [Foxlit](https://www.townlong-yak.com/)
 - [Wago Tools](https://wago.tools/) - [QartemisT](https://github.com/QartemisT)

@@ -1,5 +1,9 @@
 # Change Log
 
+## [0.16.6] - 2024-08-13
+- 🐞 Fixed inadvertently activating the extension when `Lua.workspace.library` exists in user settings.
+- 🐞 Fixed the `Set Lua Runtime` option - if this is disabled then WoW Lua will not be loaded.
+
 ## [0.16.5] - 2024-08-10
 - 🐞 Fixed [#159](https://github.com/Ketho/vscode-wow-api/issues/159) `Lua.workspace.library` user settings being overwritten from workspace settings
 - Added an option for replacing the standard Lua libraries
@@ -15,7 +19,7 @@
 - Fixed `inject-field` and `duplicate-set-field` warnings for Ace3 and LibStub
 
 ## [0.15.8] - 2024-08-09
-- ✨ Added an option for choosing whether to automatically configure user or workspace settings
+- ✨ Added an option whether to automatically configure user or workspace settings
 
 ![](img/changelog/0_15_8_configscope.png)
 
@@ -128,6 +132,7 @@ To avoid loading for Lua projects not related to World of Warcraft, all settings
 - PR [#123](https://github.com/Ketho/vscode-wow-api/pull/123) Make childGroups optional in AceConfig.OptionsTable
 - PR [#120](https://github.com/Ketho/vscode-wow-api/pull/120) Add definition for tostringall()
 
+[0.16.6]: https://github.com/Ketho/vscode-wow-api/releases/tag/0.16.6
 [0.16.5]: https://github.com/Ketho/vscode-wow-api/releases/tag/0.16.5
 [0.16.4]: https://github.com/Ketho/vscode-wow-api/releases/tag/0.16.4
 [0.16.3]: https://github.com/Ketho/vscode-wow-api/releases/tag/0.16.3
