@@ -156,3 +156,38 @@ export function disableFrameXmlWarnings() {
 	}
 	lua_config.update("diagnostics.disable", diag_disable, vscode.ConfigurationTarget.Workspace);
 }
+
+// clunky migration code for configs
+vscode.workspace.onDidChangeConfiguration((event: vscode.ConfigurationChangeEvent) => {
+	const wow_config = vscode.workspace.getConfiguration("wowAPI");
+	const lua_config = vscode.workspace.getConfiguration("Lua");
+	if (event.affectsConfiguration("wowAPI.luals.configurationScope")) {
+		const configScope = wow_config.get("luals.configurationScope");
+		const lib = lua_config.inspect("workspace.library");
+		const wv = (lib?.workspaceValue as string[]) ?? [];
+		const gv = (lib?.globalValue as string[] ?? []);
+		if (configScope === "User") {
+			const containsCfg = wv?.filter(el => el.includes("wow-api"));
+			const nocontainsCfg = wv?.filter(el => !el.includes("wow-api"));
+			lua_config.update("workspace.library", gv.concat(containsCfg), vscode.ConfigurationTarget.Global);
+			lua_config.update("workspace.library", nocontainsCfg.length>0 ? nocontainsCfg : undefined, vscode.ConfigurationTarget.Workspace);
+		}
+		else if (configScope === "Workspace") {
+			const containsCfg = gv?.filter(el => el.includes("wow-api"));
+			const nocontainsCfg = gv?.filter(el => !el.includes("wow-api"));
+			lua_config.update("workspace.library", wv.concat(containsCfg), vscode.ConfigurationTarget.Workspace);
+			lua_config.update("workspace.library", nocontainsCfg.length>0 ? nocontainsCfg : undefined, vscode.ConfigurationTarget.Global);
+		}
+	}
+	else if (event.affectsConfiguration("wowAPI.luals.setLuaRuntime")) {
+		if (!wow_config.get("luals.setLuaRuntime")) {
+			const lua_config = vscode.workspace.getConfiguration("Lua");
+			const configTarget = getConfigurationTarget();
+			lua_config.update("runtime.version", undefined, configTarget);
+			lua_config.update("runtime.builtin", undefined, configTarget);
+		}
+		else {
+			setRuntime();
+		}
+	}
+});

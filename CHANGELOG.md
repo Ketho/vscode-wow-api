@@ -1,5 +1,9 @@
 # Change Log
 
+## [0.16.7] - 2024-08-14
+- 🐞 Fix diagnostics taking too long when a window with the `WowEvent` type is open
+- 🛠  Changing the settings should no longer require restarting VS Code to take effect
+
 ## [0.16.6] - 2024-08-13
 - 🐞 Fixed inadvertently activating the extension when `Lua.workspace.library` exists in user settings.
 - 🐞 Fixed the `Set Lua Runtime` option - if this is disabled then WoW Lua will not be loaded.
