@@ -15496,7 +15496,7 @@ Items from the event have been removed.
 	RPE_INFO_TEXT3: String.raw`Teleport to your home city`,
 	RPE_INFO_TEXT4: String.raw`Reset your talents any time!`,
 	RPE_KEEP_QUESTS: String.raw`Keep Quests`,
-	RPE_SKIP_UPGRADE_CONFIRMATION: String.raw`Are you sure you want to enter world? You will not be able to get the free Gear Update.`,
+	RPE_SKIP_UPGRADE_CONFIRMATION: String.raw`Are you sure you want to enter world? You will not be able to get the free Gear Update.\n\nTo update gear, switch to this character's realm using the "Realms" button in the top menu.`,
 	RPE_TOOLTIP_LINE1: String.raw`Gear Update Available!`,
 	RPE_TOOLTIP_LINE2: String.raw`- Requires level 10-70`,
 	RPE_TOOLTIP_LINE3: String.raw`- Expires on %s`,
