@@ -1,5 +1,8 @@
 # Change Log
 
+## [0.16.8] - 2024-08-14
+- Fixed FontInstance `TBFFlags` type to match empty strings
+
 ## [0.16.7] - 2024-08-14
 - 🐞 Fix diagnostics taking too long when a window with the `WowEvent` type is open
 - 🛠  Changing the settings should no longer require restarting VS Code to take effect
@@ -136,6 +139,8 @@ To avoid loading for Lua projects not related to World of Warcraft, all settings
 - PR [#123](https://github.com/Ketho/vscode-wow-api/pull/123) Make childGroups optional in AceConfig.OptionsTable
 - PR [#120](https://github.com/Ketho/vscode-wow-api/pull/120) Add definition for tostringall()
 
+[0.16.8]: https://github.com/Ketho/vscode-wow-api/releases/tag/0.16.8
+[0.16.7]: https://github.com/Ketho/vscode-wow-api/releases/tag/0.16.7
 [0.16.6]: https://github.com/Ketho/vscode-wow-api/releases/tag/0.16.6
 [0.16.5]: https://github.com/Ketho/vscode-wow-api/releases/tag/0.16.5
 [0.16.4]: https://github.com/Ketho/vscode-wow-api/releases/tag/0.16.4

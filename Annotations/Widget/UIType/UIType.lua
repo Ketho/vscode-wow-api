@@ -92,6 +92,7 @@
 ---|"REVERSE"
 
 ---@alias TBFFlags
+---|""
 ---|"OUTLINE"
 ---|"THICK
 ---|"MONOCHROME
