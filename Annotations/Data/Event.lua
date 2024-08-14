@@ -1,5 +1,5 @@
 ---@meta _
----@alias WowEvent
+---@alias WowEvent string
 ---|"ACCOUNT_CHARACTER_CURRENCY_DATA_RECEIVED"
 ---|"ACCOUNT_MONEY"
 ---|"ACHIEVEMENT_EARNED" # `achievementID, alreadyEarned`

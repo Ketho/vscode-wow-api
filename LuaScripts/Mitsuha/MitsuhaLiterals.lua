@@ -7,7 +7,7 @@ function MitsuhaLiterals:GetEventLiterals()
 		return a.LiteralName < b.LiteralName
 	end)
 	local t = {}
-	table.insert(t, "---@alias WowEvent")
+	table.insert(t, "---@alias WowEvent string")
 	for _, event in ipairs(APIDocumentation.events) do
 		local line = string.format([["%s"]], event.LiteralName)
 		local payload = event:GetPayloadString(false, false)
