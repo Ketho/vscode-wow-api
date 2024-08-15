@@ -80,7 +80,7 @@ export function cleanupGlobals() {
 	if (diag_globals.length > 0) {
 		for (let i=diag_globals.length-1; i>=0; i--) {
 			const el = diag_globals[i];
-			if (deprecated.includes(el) || wow_globalapi[el] || el.startsWith("C_")) {
+			if (deprecated.includes(el) || wow_globalapi[el]) {
 				diag_globals.splice(i, 1);
 			}
 		}
