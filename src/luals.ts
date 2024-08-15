@@ -93,8 +93,8 @@ export function cleanupGlobals() {
 export function setWowLibrary(context: vscode.ExtensionContext): Thenable<void> {
 	const extension = vscode.extensions.getExtension("ketho.wow-api")!;
 	let folderPath;
-	if (context.extensionMode === vscode.ExtensionMode.Production) {
-		const pos = extension.extensionPath.indexOf(".vscode"); // should also work for .vscode-insiders
+	const pos = extension.extensionPath.indexOf(".vscode"); // should also work for .vscode-insiders
+	if (pos > -1) {
 		folderPath = path.join("~", extension.extensionPath.substring(pos), "Annotations");
 	}
 	else {

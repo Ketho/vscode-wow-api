@@ -1,26 +1,23 @@
 # Change Log
 
-## [0.17.1] - 2024-08-15
+## [0.17.2] - 2024-08-15
+- 0.17.2: Fixed [#163](https://github.com/Ketho/vscode-wow-api/issues/163) non-user paths for `Lua.workspace.library`
 - 0.17.1: Fixed `ScriptType` param-type-mismatch
 - 0.17.0: Updated for release patch 11.0.2 (56071)
 - 0.16.9: Fixed and cleaned up globals being marked as defined for most API functions
 
 ## [0.16.8] - 2024-08-14
-- Fixed FontInstance `TBFFlags` type to match empty strings
-
-## [0.16.7] - 2024-08-14
-- 🐞 Fix diagnostics taking too long when a window with the `WowEvent` type is open
-- 🛠  Changing the settings should no longer require restarting VS Code to take effect
+- 0.16.8: Fixed FontInstance `TBFFlags` type to match empty strings
+- 0.16.7: 🐞 Fix diagnostics taking too long when a window with the `WowEvent` type is open
+- 0.16.7: 🛠  Changing the settings should no longer require restarting VS Code to take effect
 
 ## [0.16.6] - 2024-08-13
 - 🐞 Fixed inadvertently activating the extension when `Lua.workspace.library` exists in user settings.
 - 🐞 Fixed the `Set Lua Runtime` option - if this is disabled then WoW Lua will not be loaded.
 
 ## [0.16.5] - 2024-08-10
-- 🐞 Fixed [#159](https://github.com/Ketho/vscode-wow-api/issues/159) `Lua.workspace.library` user settings being overwritten from workspace settings
-- Added an option for replacing the standard Lua libraries
-
-## [0.16.4] - 2024-08-10
+- 0.16.5: 🐞 Fixed [#159](https://github.com/Ketho/vscode-wow-api/issues/159) `Lua.workspace.library` user settings being overwritten from workspace settings
+- 0.16.5: Added an option for replacing the standard Lua libraries
 - 0.16.4: Apparently `~` works fine as home path on Windows too
 - 0.16.3: 🍎 Fixed library paths for macOS
 - 0.16.2: 🐧 Fixed library paths for Linux
@@ -28,10 +25,8 @@
 - 0.16.0: 🐞 Fixed library paths for `.vscode-insiders`
 
 ## [0.15.9] - 2024-08-09
-- Fixed `inject-field` and `duplicate-set-field` warnings for Ace3 and LibStub
-
-## [0.15.8] - 2024-08-09
-- ✨ Added an option whether to automatically configure user or workspace settings
+- 0.15.9: Fixed `inject-field` and `duplicate-set-field` warnings for Ace3 and LibStub
+- 0.15.8: ✨ Added an option whether to automatically configure user or workspace settings
 
 ![](img/changelog/0_15_8_configscope.png)
 
@@ -144,6 +139,7 @@ To avoid loading for Lua projects not related to World of Warcraft, all settings
 - PR [#123](https://github.com/Ketho/vscode-wow-api/pull/123) Make childGroups optional in AceConfig.OptionsTable
 - PR [#120](https://github.com/Ketho/vscode-wow-api/pull/120) Add definition for tostringall()
 
+[0.17.2]: https://github.com/Ketho/vscode-wow-api/releases/tag/0.17.2
 [0.17.1]: https://github.com/Ketho/vscode-wow-api/releases/tag/0.17.1
 [0.17.0]: https://github.com/Ketho/vscode-wow-api/releases/tag/0.17.0
 [0.16.9]: https://github.com/Ketho/vscode-wow-api/releases/tag/0.16.9
