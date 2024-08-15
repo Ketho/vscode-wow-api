@@ -1,5 +1,5 @@
 ---@meta _
----@alias ScriptType
+---@alias ScriptType string
 ---|"OnLoad"               # ScriptObject
 ---|"OnUpdate"             # ScriptObject
 ---@alias ScriptAnimation      ScriptType | "OnFinished" | "OnPause" | "OnPlay" | "OnStop"
