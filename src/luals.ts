@@ -2,6 +2,7 @@ import * as vscode from "vscode";
 import * as path from "path";
 
 const wow_globals = require("./data/globals").data;
+const wow_globalapi = require("./data/globalapi").data;
 const deprecated = require("./data/deprecated").data as string[];
 
 const builtin = {
@@ -59,7 +60,7 @@ export function defineKnownGlobals() {
 			vscode.languages.getDiagnostics(uri).forEach(function(diag) {
 				if (diag.code === "undefined-global") {
 					const name = diag.message.match("`(.+)`");
-					if (name && wow_globals[name[1]] && !diag_globals.includes(name[1])) {
+					if (name && !diag_globals.includes(name[1]) && wow_globals[name[1]] && !wow_globalapi[name[1]]) {
 						hasUpdate = true;
 						diag_globals.push(name[1]);
 					}
@@ -73,19 +74,20 @@ export function defineKnownGlobals() {
 }
 
 // if deprecated APIs are defined as globals they will not trigger the deprecated warning
-export function removeDeprecatedGlobals() {
+export function cleanupGlobals() {
 	const lua_config = vscode.workspace.getConfiguration("Lua");
 	const diag_globals: string[] = lua_config.get("diagnostics.globals")!;
 	if (diag_globals.length > 0) {
-		for (let i=diag_globals.length; i>=0; i--) {
+		for (let i=diag_globals.length-1; i>=0; i--) {
 			const el = diag_globals[i];
-			if (deprecated.includes(el)) {
+			if (deprecated.includes(el) || wow_globalapi[el] || el.startsWith("C_")) {
 				diag_globals.splice(i, 1);
 			}
 		}
 		lua_config.update("diagnostics.globals", diag_globals, vscode.ConfigurationTarget.Workspace);
 	}
 }
+
 
 // add wow-api path to luals
 export function setWowLibrary(context: vscode.ExtensionContext): Thenable<void> {

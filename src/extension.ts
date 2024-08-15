@@ -66,7 +66,7 @@ async function activateWowExtension(context: vscode.ExtensionContext) {
 	}
 	else {
 		luals.defineKnownGlobals();
-		luals.removeDeprecatedGlobals();
+		luals.cleanupGlobals();
 	}
 	isLoaded = true;
 }
