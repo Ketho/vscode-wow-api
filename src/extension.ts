@@ -2,13 +2,11 @@ import * as vscode from "vscode";
 import * as luals from "./luals";
 import * as subscriptions from "./subscriptions";
 
-let isLoaded = false;
-
 export async function activate(context: vscode.ExtensionContext) {
 	console.log("loaded", context.extension.id);
 	registerActivationCommand(context);
 
-	if (!isLoaded && (isWowWorkspace() || await hasTocFile())) {
+	if (isWowWorkspace() || await hasTocFile()) {
 		activateWowExtension(context);
 	}
 }
@@ -43,9 +41,10 @@ async function hasTocFile() {
 }
 
 function registerActivationCommand(context: vscode.ExtensionContext) {
+	let isLoaded = false;
 	const handler = () => {
 		if (!isLoaded) {
-			activateWowExtension(context);
+			isLoaded = true; // using a command already activates the extension
 			vscode.window.showInformationMessage("Activated WoW API extension.");
 		}
 		else {
@@ -68,5 +67,4 @@ async function activateWowExtension(context: vscode.ExtensionContext) {
 		luals.defineKnownGlobals();
 		luals.cleanupGlobals();
 	}
-	isLoaded = true;
 }

@@ -1,6 +1,7 @@
 # Change Log
 
-## [0.17.3] - 2024-08-15
+## [0.17.4] - 2024-08-15
+- 0.17.4: Properly fixed loading the extension twice
 - 0.17.3: Fixed loading the extension twice when the "Activate WoW API extension" command is used
 - 0.17.2: Fixed [#163](https://github.com/Ketho/vscode-wow-api/issues/163) non-user paths for `Lua.workspace.library`
 - 0.17.1: Fixed `ScriptType` param-type-mismatch
@@ -140,6 +141,7 @@ To avoid loading for Lua projects not related to World of Warcraft, all settings
 - PR [#123](https://github.com/Ketho/vscode-wow-api/pull/123) Make childGroups optional in AceConfig.OptionsTable
 - PR [#120](https://github.com/Ketho/vscode-wow-api/pull/120) Add definition for tostringall()
 
+[0.17.4]: https://github.com/Ketho/vscode-wow-api/releases/tag/0.17.4
 [0.17.3]: https://github.com/Ketho/vscode-wow-api/releases/tag/0.17.3
 [0.17.2]: https://github.com/Ketho/vscode-wow-api/releases/tag/0.17.2
 [0.17.1]: https://github.com/Ketho/vscode-wow-api/releases/tag/0.17.1
