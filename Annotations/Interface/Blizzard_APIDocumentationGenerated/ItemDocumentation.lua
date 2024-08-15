@@ -409,6 +409,8 @@ function C_Item.IsArtifactPowerItem(itemInfo) end
 ---@return boolean isBound
 function C_Item.IsBound(itemLocation) end
 
+---You can use IsItemBindToAccountUntilEquip instead if the item is not in your inventory
+---
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_Item.IsBoundToAccountUntilEquip)
 ---@param itemLocation ItemLocation
 ---@return boolean isBoundToAccountUntilEquip
@@ -470,6 +472,13 @@ function C_Item.IsHarmfulItem(itemInfo) end
 ---@param itemInfo ItemInfo
 ---@return boolean result
 function C_Item.IsHelpfulItem(itemInfo) end
+
+---You can use IsBoundToAccountUntilEquip instead if the item exists in your inventory
+---
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_Item.IsItemBindToAccountUntilEquip)
+---@param itemInfo ItemInfo
+---@return boolean isItemBindToAccountUntilEquip
+function C_Item.IsItemBindToAccountUntilEquip(itemInfo) end
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_Item.IsItemConduit)
 ---@param itemLoc ItemLocation

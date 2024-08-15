@@ -4060,6 +4060,13 @@ export const data: EventInterface = {
 			{Name: "bidderName", Type: "string"},
 		],
 	},
+	PARTY_ELIGIBILITY_FOR_DELVE_TIERS_CHANGED: {
+		Documentation: "Signaled when responses come in from RequestPartyEligibilityForDelveTiers.",
+		Payload: [
+			{Name: "playerName", Type: "string"},
+			{Name: "maxEligibleLevel", Type: "number"},
+		],
+	},
 	PARTY_INVITE_CANCEL: {},
 	PARTY_INVITE_REQUEST: {
 		Payload: [

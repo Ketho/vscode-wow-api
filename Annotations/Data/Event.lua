@@ -809,6 +809,7 @@
 ---|"OPEN_TABARD_FRAME"
 ---|"OWNED_AUCTIONS_UPDATED"
 ---|"OWNED_AUCTION_BIDDER_INFO_RECEIVED" # `auctionID, bidderName`
+---|"PARTY_ELIGIBILITY_FOR_DELVE_TIERS_CHANGED" # `playerName, maxEligibleLevel`
 ---|"PARTY_INVITE_CANCEL"
 ---|"PARTY_INVITE_REQUEST" # `name, isTank, isHealer, isDamage, isNativeRealm, allowMultipleRoles, inviterGUID, questSessionActive`
 ---|"PARTY_LEADER_CHANGED"

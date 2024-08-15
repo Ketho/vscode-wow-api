@@ -92,6 +92,9 @@
         "WEEKDAY_THURSDAY",
         "WEEKDAY_TUESDAY",
         "WEEKDAY_WEDNESDAY",
-        "WORLD_PVP"
+        "WORLD_PVP",
+        "MAX_SUMMONABLE_HUNTER_PETS",
+        "MAX_SUMMONABLE_PETS",
+        "NUM_PET_SLOTS_HUNTER"
     ],
 }

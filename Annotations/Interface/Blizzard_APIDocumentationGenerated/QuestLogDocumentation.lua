@@ -22,9 +22,9 @@ function C_QuestLog.CanAbandonQuest(questID) end
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_QuestLog.DoesQuestAwardReputationWithFaction)
 ---@param questID number
----@param factionID number
+---@param targetFactionID number
 ---@return boolean awardsReputation
-function C_QuestLog.DoesQuestAwardReputationWithFaction(questID, factionID) end
+function C_QuestLog.DoesQuestAwardReputationWithFaction(questID, targetFactionID) end
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_QuestLog.GetAbandonQuest)
 ---@return number questID

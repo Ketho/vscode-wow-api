@@ -77,6 +77,12 @@ function C_DelvesUI.HasActiveDelve(mapID) end
 ---@return boolean result
 function C_DelvesUI.IsEligibleForActiveDelveRewards(unit) end
 
+---Queries private party members to see what level they have unlocked for the Delve. Ineligible members are added to the tooltip of dropdown entries.
+---
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_DelvesUI.RequestPartyEligibilityForDelveTiers)
+---@param gossipOption number
+function C_DelvesUI.RequestPartyEligibilityForDelveTiers(gossipOption) end
+
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_DelvesUI.SaveSeenCuriosBySlotType)
 ---@param slotType Enum.CompanionConfigSlotTypes
 ---@param ownedCurioNodeIDs number[]

@@ -198,6 +198,7 @@ function C_CurrencyInfo.SetCurrencyUnused(index, unused) end
 ---@class CharacterCurrencyData
 ---@field characterGUID WOWGUID
 ---@field characterName string
+---@field fullCharacterName string
 ---@field currencyID number
 ---@field quantity number
 
@@ -239,8 +240,10 @@ function C_CurrencyInfo.SetCurrencyUnused(index, unused) end
 ---@class CurrencyTransferTransaction
 ---@field sourceCharacterGUID WOWGUID
 ---@field sourceCharacterName string? Default = 
+---@field fullSourceCharacterName string? Default = 
 ---@field destinationCharacterGUID WOWGUID
 ---@field destinationCharacterName string? Default = 
+---@field fullDestinationCharacterName string? Default = 
 ---@field currencyType number
 ---@field quantityTransferred number
 ---@field totalQuantityConsumed number

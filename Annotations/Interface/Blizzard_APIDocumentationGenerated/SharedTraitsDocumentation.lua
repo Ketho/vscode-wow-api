@@ -279,6 +279,7 @@ function C_Traits.TalentTestUnlearnSpells() end
 ---@field type Enum.TraitNodeEntryType
 ---@field maxRanks number
 ---@field isAvailable boolean
+---@field isDisplayError boolean
 ---@field conditionIDs number[]
 
 ---@class TraitEntryRankInfo

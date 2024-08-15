@@ -13,6 +13,10 @@ function C_VoiceChat.ActivateChannelTranscription(channelID) end
 ---@param listenToLocalUser boolean
 function C_VoiceChat.BeginLocalCapture(listenToLocalUser) end
 
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_VoiceChat.CanAccessSettings)
+---@return boolean canAccess
+function C_VoiceChat.CanAccessSettings() end
+
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_VoiceChat.CanPlayerUseVoiceChat)
 ---@return boolean canUseVoiceChat
 function C_VoiceChat.CanPlayerUseVoiceChat() end
@@ -166,10 +170,6 @@ function C_VoiceChat.IsDeafened() end
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_VoiceChat.IsEnabled)
 ---@return boolean isEnabled
 function C_VoiceChat.IsEnabled() end
-
----[Documentation](https://warcraft.wiki.gg/wiki/API_C_VoiceChat.IsInitialized)
----@return boolean isInitialized
-function C_VoiceChat.IsInitialized() end
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_VoiceChat.IsLoggedIn)
 ---@return boolean isLoggedIn

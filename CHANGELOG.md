@@ -1,5 +1,8 @@
 # Change Log
 
+## [0.17.0] - 2024-08-15
+- Updated for release patch 11.0.2 (56071)
+
 ## [0.16.9] - 2024-08-15
 - Fixed and cleaned up globals being marked as defined for most API functions
 
@@ -142,6 +145,7 @@ To avoid loading for Lua projects not related to World of Warcraft, all settings
 - PR [#123](https://github.com/Ketho/vscode-wow-api/pull/123) Make childGroups optional in AceConfig.OptionsTable
 - PR [#120](https://github.com/Ketho/vscode-wow-api/pull/120) Add definition for tostringall()
 
+[0.17.0]: https://github.com/Ketho/vscode-wow-api/releases/tag/0.17.0
 [0.16.9]: https://github.com/Ketho/vscode-wow-api/releases/tag/0.16.9
 [0.16.8]: https://github.com/Ketho/vscode-wow-api/releases/tag/0.16.8
 [0.16.7]: https://github.com/Ketho/vscode-wow-api/releases/tag/0.16.7
