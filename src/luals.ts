@@ -169,14 +169,14 @@ vscode.workspace.onDidChangeConfiguration((event: vscode.ConfigurationChangeEven
 		const wv = (lib?.workspaceValue as string[]) ?? [];
 		const gv = (lib?.globalValue as string[] ?? []);
 		if (configScope === "User") {
-			const containsCfg = wv?.filter(el => el.includes("wow-api"));
-			const nocontainsCfg = wv?.filter(el => !el.includes("wow-api"));
+			const containsCfg = wv.filter(el => el.includes("wow-api"));
+			const nocontainsCfg = wv.filter(el => !el.includes("wow-api"));
 			lua_config.update("workspace.library", gv.concat(containsCfg), vscode.ConfigurationTarget.Global);
 			lua_config.update("workspace.library", nocontainsCfg.length>0 ? nocontainsCfg : undefined, vscode.ConfigurationTarget.Workspace);
 		}
 		else if (configScope === "Workspace") {
-			const containsCfg = gv?.filter(el => el.includes("wow-api"));
-			const nocontainsCfg = gv?.filter(el => !el.includes("wow-api"));
+			const containsCfg = gv.filter(el => el.includes("wow-api"));
+			const nocontainsCfg = gv.filter(el => !el.includes("wow-api"));
 			lua_config.update("workspace.library", wv.concat(containsCfg), vscode.ConfigurationTarget.Workspace);
 			lua_config.update("workspace.library", nocontainsCfg.length>0 ? nocontainsCfg : undefined, vscode.ConfigurationTarget.Global);
 		}

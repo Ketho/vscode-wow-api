@@ -8,7 +8,7 @@ export async function activate(context: vscode.ExtensionContext) {
 	console.log("loaded", context.extension.id);
 	registerActivationCommand(context);
 
-	if (isWowWorkspace() || await hasTocFile()) {
+	if (!isLoaded && (isWowWorkspace() || await hasTocFile())) {
 		activateWowExtension(context);
 	}
 }
