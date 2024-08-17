@@ -304,9 +304,9 @@ function Frame:RegisterForDrag(...) end
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_Frame_RegisterUnitEvent)
 ---@param eventName WowEvent
----@param units UnitId
+---@param ... UnitId
 ---@return boolean registered
-function Frame:RegisterUnitEvent(eventName, units) end
+function Frame:RegisterUnitEvent(eventName, ...) end
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_Frame_RotateTextures)
 ---@param radians number
