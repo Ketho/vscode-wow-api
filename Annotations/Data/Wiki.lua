@@ -1705,10 +1705,10 @@ function C_NamePlate.GetNamePlateEnemyPreferredClickInsets() end
 function C_NamePlate.GetNamePlateEnemySize() end
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_NamePlate.GetNamePlateForUnit)
----@param UnitToken UnitToken
+---@param unit UnitToken
 ---@param isSecure? boolean
 ---@return Nameplate? nameplate
-function C_NamePlate.GetNamePlateForUnit(UnitToken, isSecure) end
+function C_NamePlate.GetNamePlateForUnit(unit, isSecure) end
 
 ---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_NamePlate.GetNamePlateFriendlyClickThrough)
@@ -4982,10 +4982,10 @@ function GetInventoryItemID(unit, invSlotId) end
 function GetInventoryItemLink(unit, invSlotId) end
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_GetInventoryItemQuality)
----@param UnitToken UnitToken
+---@param unit UnitToken
 ---@param invSlotId number
 ---@return Enum.ItemQuality quality
-function GetInventoryItemQuality(UnitToken, invSlotId) end
+function GetInventoryItemQuality(unit, invSlotId) end
 
 ---#invalidpage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_GetInventoryItemTexture)
@@ -6489,7 +6489,7 @@ function GetSpecialization(isInspect, isPet, specGroup) end
 ---@param specIndex number
 ---@param isInspect? boolean
 ---@param isPet? boolean
----@param inspectTarget? string
+---@param inspectTarget? UnitToken
 ---@param sex? number
 ---@return number id
 ---@return string name
@@ -6596,6 +6596,7 @@ function GetTabardInfo() end
 ---@return boolean grantedByAura
 function GetTalentInfo(tier, column, specGroupIndex, isInspect, inspectUnit) end
 
+---[Documentation](https://warcraft.wiki.gg/wiki/API_GetTalentInfoByID)
 ---@param talentID number
 ---@param specGroupIndex number
 ---@param isInspect? boolean
@@ -6613,6 +6614,7 @@ function GetTalentInfo(tier, column, specGroupIndex, isInspect, inspectUnit) end
 ---@return boolean grantedByAura
 function GetTalentInfoByID(talentID, specGroupIndex, isInspect, inspectUnit) end
 
+---[Documentation](https://warcraft.wiki.gg/wiki/API_GetTalentInfoBySpecialization)
 ---@param specIndex number
 ---@param tier number
 ---@param column number
@@ -6637,11 +6639,11 @@ function GetTalentLink(talentID, isInspect, specGroup, inspectID, classID) end
 ---@param tier number
 ---@param specGroupIndex number
 ---@param isInspect? boolean
----@param inspectedUnit? string
+---@param inspectUnit? string
 ---@return boolean tierAvailable
 ---@return number selectedTalent
 ---@return number tierUnlockLevel
-function GetTalentTierInfo(tier, specGroupIndex, isInspect, inspectedUnit) end
+function GetTalentTierInfo(tier, specGroupIndex, isInspect, inspectUnit) end
 
 ---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_GetTargetTradeCurrency)
@@ -7685,7 +7687,7 @@ function MoveViewUpStop() end
 function MultiSampleAntiAliasingSupported() end
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_MuteSoundFile)
----@param sound number|string FileID of a game sound or file path to an addon sound
+---@param sound number|string
 function MuteSoundFile(sound) end
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_NeutralPlayerSelectFaction)
@@ -7791,9 +7793,8 @@ function PickupGuildBankMoney(money) end
 function PickupInventoryItem(slotId) end
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_PickupMacro)
----@param index number
----@overload fun(name: string)
-function PickupMacro(index) end
+---@param name number|string
+function PickupMacro(name) end
 
 ---#invalidpage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_PickupMerchantItem)
@@ -8728,9 +8729,9 @@ function SpellCanTargetItemID() end
 function SpellCanTargetQuest() end
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_SpellCanTargetUnit)
----@param UnitToken string
+---@param unit UnitToken
 ---@return boolean canTarget
-function SpellCanTargetUnit(UnitToken) end
+function SpellCanTargetUnit(unit) end
 
 ---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_SpellCancelQueuedSpell)
@@ -8772,8 +8773,8 @@ function SpellStopTargeting() end
 function SpellTargetItem(item) end
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_SpellTargetUnit)
----@param UnitToken UnitToken
-function SpellTargetUnit(UnitToken) end
+---@param unit UnitToken
+function SpellTargetUnit(unit) end
 
 ---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_SplitGuildBankItem)
@@ -9025,7 +9026,7 @@ function UnlearnSpecialization(specIndex, isPet) end
 function UnlockVoidStorage() end
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_UnmuteSoundFile)
----@param sound number|string FileID of a game sound or file path to an addon sound
+---@param sound number|string
 function UnmuteSoundFile(sound) end
 
 ---#nopage  
@@ -9171,7 +9172,7 @@ function issecurevalue() end
 ---@param variable string
 ---@return boolean isSecure
 ---@return string? taint
----@overload fun(variable: string): isSecure: boolean, taint: string?
+---@overload fun(variable: string)
 function issecurevariable(tbl, variable) end
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_pcallwithenv)

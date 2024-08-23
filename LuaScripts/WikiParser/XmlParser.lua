@@ -66,11 +66,12 @@ local validTypes = {
 
 local subTypeAlias = {
 	-- ClassId = true,
-	ClassFile = true,
-	UnitToken = true,
+	ClassFile = "ClassFile",
+	UnitId = "UnitToken",
+	UnitToken = "UnitToken",
 
 	-- enums
-	PowerType = true,
+	PowerType = "PowerType",
 }
 
 for k in pairs(subTypeAlias) do
@@ -267,7 +268,7 @@ function m:ParseParam(line, info)
 		if subType then
 			subType = StripHyperlink(subType)
 			if subTypeAlias[subType] then
-				apiType = subType
+				apiType = subTypeAlias[subType]
 			end
 		end
 		local t = {
