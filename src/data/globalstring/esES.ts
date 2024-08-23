@@ -49,7 +49,7 @@ export const data: GlobalStringInterface = {
 	ACCESSIBILITY_MOUNT_LABEL: String.raw`Monturas`,
 	ACCESSIBILITY_SUBTEXT: String.raw`Estas opciones pueden mejorar la accesibilidad.`,
 	ACCOUNT_BANK_CONFIRM_CLEANUP_PROMPT: String.raw`¿Seguro que quieres ordenar automáticamente los objetos?|nEsto afectará a todas las pestañas de la banda guerrera.`,
-	ACCOUNT_BANK_DEPOSIT_BUTTON_LABEL: String.raw`Depositar todos los objetos ligados a la banda guerrera`,
+	ACCOUNT_BANK_DEPOSIT_BUTTON_LABEL: String.raw`Depositar todos los obj. de b. guerrera`,
 	ACCOUNT_BANK_ERROR_NO_LOCK: String.raw`No puedes acceder al banco de la banda guerrera al mismo tiempo que otro personaje`,
 	ACCOUNT_BANK_LOCKED_PROMPT: String.raw`Otro miembro de tu banda guerrera está usando el banco.`,
 	ACCOUNT_BANK_PANEL_TITLE: String.raw`Banco de la banda guerrera`,

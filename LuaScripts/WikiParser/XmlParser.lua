@@ -60,6 +60,8 @@ local validTypes = {
 	FontInfo = true,
 	fileID = true,
 	UnitToken = true,
+	FunctionContainer = true,
+	Nameplate = true,
 }
 
 local subTypeAlias = {

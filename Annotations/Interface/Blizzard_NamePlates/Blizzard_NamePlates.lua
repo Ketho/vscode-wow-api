@@ -29,7 +29,7 @@ function NamePlateBaseMixin:GetPreferredInsets() end
 
 function NamePlateBaseMixin:OnSizeChanged() end
 
----@class NameplateBase : Frame, NamePlateBaseMixin
+---@class Nameplate : Frame, NamePlateBaseMixin
 ---@field UnitFrame Button
 ---@field driverFrame NamePlateDriverFrame
 ---@field namePlateUnitToken UnitId

@@ -290,8 +290,10 @@ function BNSummonFriendByIndex(id) end
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_BNTokenFindName)
 function BNTokenFindName(target) end
 
----#invalidpage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_BankButtonIDToInvSlotID)
+---@param buttonID number
+---@param isBag? number
+---@return number invSlot
 function BankButtonIDToInvSlotID(buttonID, isBag) end
 
 ---#nopage  
@@ -605,7 +607,7 @@ function C_Debug.ViewInDebugWindow() end
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_FunctionContainers.CreateCallback)
 ---@param func function
----@return FunctionContainer
+---@return FunctionContainer container
 function C_FunctionContainers.CreateCallback(func) end
 
 ---#nopage  
@@ -1703,9 +1705,9 @@ function C_NamePlate.GetNamePlateEnemyPreferredClickInsets() end
 function C_NamePlate.GetNamePlateEnemySize() end
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_NamePlate.GetNamePlateForUnit)
----@param unitId UnitId
+---@param unitId UnitToken
 ---@param isSecure? boolean
----@return NameplateBase? nameplate
+---@return Nameplate? nameplate
 function C_NamePlate.GetNamePlateForUnit(unitId, isSecure) end
 
 ---#nopage  
@@ -1734,7 +1736,7 @@ function C_NamePlate.GetNamePlateSelfSize() end
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_NamePlate.GetNamePlates)
 ---@param isSecure? boolean
----@return NameplateBase nameplates
+---@return Nameplate[] nameplates
 function C_NamePlate.GetNamePlates(isSecure) end
 
 ---#nopage  
@@ -3611,7 +3613,7 @@ function DisplayChannelOwner(channel) end
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_DoEmote)
 ---@param token EmoteToken
----@param unit? string
+---@param unit? UnitToken
 ---@param hold? boolean
 ---@return boolean? restricted
 function DoEmote(token, unit, hold) end
@@ -3815,8 +3817,8 @@ function EJ_SetLootFilter(classID, specID) end
 function EJ_SetSearch(text) end
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_EditMacro)
----@param macroInfo number|string index or name
----@param name string
+---@param macroInfo number|string
+---@param name? string
 ---@param icon? number|string
 ---@param body? string
 ---@return number macroID
@@ -5962,10 +5964,10 @@ function GetPromotionRank(index) end
 ---@param talentID number
 ---@param specGroupIndex? number
 ---@param isInspect? boolean
----@param inspectUnit? UnitId
+---@param inspectedUnit? string
 ---@return number talentID
 ---@return string name
----@return number texture
+---@return number icon
 ---@return boolean selected
 ---@return boolean available
 ---@return number spellID
@@ -5974,7 +5976,7 @@ function GetPromotionRank(index) end
 ---@return number column
 ---@return boolean known
 ---@return boolean grantedByAura
-function GetPvpTalentInfoByID(talentID, specGroupIndex, isInspect, inspectUnit) end
+function GetPvpTalentInfoByID(talentID, specGroupIndex, isInspect, inspectedUnit) end
 
 ---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_GetPvpTalentInfoBySpecialization)
@@ -6484,25 +6486,25 @@ function GetSpecChangeCost() end
 function GetSpecialization(isInspect, isPet, specGroup) end
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_GetSpecializationInfo)
----@param specID number
+---@param specIndex number
 ---@param isInspect? boolean
 ---@param isPet? boolean
----@param inspectTarget? number
+---@param inspectTarget? string
 ---@param sex? number
 ---@return number id
 ---@return string name
 ---@return string description
----@return string icon
+---@return number icon
 ---@return string role
 ---@return number primaryStat
-function GetSpecializationInfo(specID, isInspect, isPet, inspectTarget, sex) end
+function GetSpecializationInfo(specIndex, isInspect, isPet, inspectTarget, sex) end
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_GetSpecializationInfoByID)
 ---@param specID number
 ---@return number id
 ---@return string name
 ---@return string description
----@return string icon
+---@return number icon
 ---@return string role
 ---@return string classFile
 ---@return string className
