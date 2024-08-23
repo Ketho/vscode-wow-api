@@ -115,6 +115,20 @@ local function IsSearchResult(options, info)
 	end
 end
 
+local function getLuals(wikiText, info)
+	local annotations = wikiText:match("<!%-%- luals\n(.*)\n%-%->")
+	if annotations then
+		-- copy annotations from pages and avoid making duplicates
+		for name in annotations:gmatch("function (.-)%(") do
+			if name ~= info.apiName then
+				luals_multiapi[name] = true
+			end
+		end
+		luals_api[info.apiName] = annotations
+		return true
+	end
+end
+
 local m = {}
 
 function m:ParsePages(options)
@@ -133,10 +147,11 @@ function m:ParsePages(options)
 			})
 		end
 		if IsSearchResult(options or {}, info) and not v.redirect then
+			local wikiText = v.revision.text[1]
+			local hasLuaLs = getLuals(wikiText, info)
 			info.params = {arguments = {}, returns = {}}
 			info.signature = {lines = {}}
 			local parsingCodeBlock
-			local wikiText = v.revision.text[1]
 			for line in wikiText:gmatch("[^\r\n]+") do
 				local lineLower = line:lower()
 				local isCodeBlock = line:find("^%s")
@@ -176,22 +191,14 @@ function m:ParsePages(options)
 				self:PrintApi(info)
 			end
 			if options then info.debug = options.debug end
-			local hasError = self:ValidateApi(info)
-			if not hasError then
+			local hasError
+			if not hasLuaLs then
+				hasError = self:ValidateApi(info)
+			end
+			if not hasError or hasLuaLs then
 				validatedApi[info.apiName] = info
 			else
 				nonValidatedApi[info.apiName] = info
-			end
-
-			local annotations = wikiText:match("<!%-%- luals\n(.*)\n%-%->")
-			if annotations then
-				-- copy annotations from pages and avoid making duplicates
-				for name in annotations:gmatch("function (.-)%(") do
-					if name ~= info.apiName then
-						luals_multiapi[name] = true
-					end
-				end
-				luals_api[info.apiName] = annotations
 			end
 		end
 	end

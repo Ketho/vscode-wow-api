@@ -452,17 +452,67 @@ function C_ArrowCalloutManager.SwapWorldLootObjectCallout() end
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_BlackMarket.Close)
 function C_BlackMarket.Close() end
 
----#nopage  
----[Documentation](https://warcraft.wiki.gg/wiki/API_C_BlackMarket.GetHotItem)
-function C_BlackMarket.GetHotItem() end
-
----#invalidpage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_BlackMarket.GetItemInfoByID)
+---@param marketID number
+---@return string name
+---@return string texture
+---@return number quantity
+---@return string itemType
+---@return boolean usable
+---@return number level
+---@return string levelType
+---@return string sellerName
+---@return number minBid
+---@return number minIncrement
+---@return number currBid
+---@return boolean youHaveHighBid
+---@return number numBids
+---@return number timeLeft
+---@return string link
+---@return number marketID
+---@return number quality
 function C_BlackMarket.GetItemInfoByID(marketID) end
 
----#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_BlackMarket.GetItemInfoByIndex)
+---@param index number
+---@return string name
+---@return string texture
+---@return number quantity
+---@return string itemType
+---@return boolean usable
+---@return number level
+---@return string levelType
+---@return string sellerName
+---@return number minBid
+---@return number minIncrement
+---@return number currBid
+---@return boolean youHaveHighBid
+---@return number numBids
+---@return number timeLeft
+---@return string link
+---@return number marketID
+---@return number quality
 function C_BlackMarket.GetItemInfoByIndex(index) end
+
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_BlackMarket.GetHotItem)
+---@return string name
+---@return string texture
+---@return number quantity
+---@return string itemType
+---@return boolean usable
+---@return number level
+---@return string levelType
+---@return string sellerName
+---@return number minBid
+---@return number minIncrement
+---@return number currBid
+---@return boolean youHaveHighBid
+---@return number numBids
+---@return number timeLeft
+---@return string link
+---@return number marketID
+---@return number quality
+function C_BlackMarket.GetHotItem() end
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_BlackMarket.GetNumItems)
 ---@return number numItems
