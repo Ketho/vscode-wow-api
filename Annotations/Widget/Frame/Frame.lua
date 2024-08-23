@@ -230,7 +230,7 @@ function Frame:IsClampedToScreen() end
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_Frame_IsEventRegistered)
 ---@param eventName FrameEvent
 ---@return boolean isRegistered
----@return UnitId? units
+---@return UnitToken? units
 function Frame:IsEventRegistered(eventName) end
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_Frame_IsGamePadButtonEnabled)
@@ -304,7 +304,7 @@ function Frame:RegisterForDrag(...) end
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_Frame_RegisterUnitEvent)
 ---@param eventName FrameEvent
----@param ... UnitId
+---@param ... UnitToken
 ---@return boolean registered
 function Frame:RegisterUnitEvent(eventName, ...) end
 

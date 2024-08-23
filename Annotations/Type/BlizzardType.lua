@@ -37,7 +37,6 @@
 ---@alias uiAddon string|number
 ---@alias uiFontHeight number
 ---@alias uiUnit number
----@alias UnitToken UnitId
 ---@alias WeeklyRewardItemDBID string
 ---@alias WOWGUID string
 ---@alias WOWMONEY number

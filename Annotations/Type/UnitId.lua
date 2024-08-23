@@ -2,14 +2,14 @@
 -- does not include pet and target suffices and spectated<T><N>
 -- but any string is accepted anyway
 
----@alias UnitId string
----|UnitId.base
----|UnitId.group
----|UnitId.boss
----|UnitId.nameplate
----|UnitId.softtarget
+---@alias UnitToken string
+---|UnitToken.base
+---|UnitToken.group
+---|UnitToken.boss
+---|UnitToken.nameplate
+---|UnitToken.softtarget
 
----@alias UnitId.base
+---@alias UnitToken.base
 ---|"player"
 ---|"target"
 ---|"focus"
@@ -20,7 +20,7 @@
 ---|"questnpc"
 ---|"none"
 
----@alias UnitId.group
+---@alias UnitToken.group
 ---|"party1"
 ---|"party2"
 ---|"party3"
@@ -71,7 +71,7 @@
 ---|"arena4"
 ---|"arena5"
 
----@alias UnitId.boss
+---@alias UnitToken.boss
 ---|"boss1"
 ---|"boss2"
 ---|"boss3"
@@ -83,7 +83,7 @@
 ---|"boss9"
 ---|"boss10"
 
----@alias UnitId.nameplate
+---@alias UnitToken.nameplate
 ---|"nameplate1"
 ---|"nameplate2"
 ---|"nameplate3"
@@ -125,7 +125,7 @@
 ---|"nameplate39"
 ---|"nameplate40"
 
----@alias UnitId.softtarget
+---@alias UnitToken.softtarget
 ---|"anyenemy"
 ---|"anyfriend"
 ---|"anyinteract"

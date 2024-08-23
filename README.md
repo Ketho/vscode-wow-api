@@ -70,7 +70,7 @@ Returns the level of the unit.
  level = UnitLevel(unit)
 
 ==Arguments==
-:;unit:{{apitype|string}} : [[UnitId]]
+:;unit:{{apitype|string}} : [[UnitToken]]
 
 ==Returns==
 :;level:{{apitype|number}}
@@ -79,7 +79,7 @@ Returns the level of the unit.
 Alternatively, the script will look for a commented block for API pages not documented in [Blizzard_APIDocumentationGenerated](https://github.com/Gethe/wow-ui-source/tree/live/Interface/AddOns/Blizzard_APIDocumentationGenerated).
 ```lua
 <!-- luals
----@param unit UnitId
+---@param unit UnitToken
 ---@return number level
 function UnitLevel(unit) end
 -->

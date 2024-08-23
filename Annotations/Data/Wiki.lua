@@ -1705,10 +1705,10 @@ function C_NamePlate.GetNamePlateEnemyPreferredClickInsets() end
 function C_NamePlate.GetNamePlateEnemySize() end
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_NamePlate.GetNamePlateForUnit)
----@param unitId UnitToken
+---@param UnitToken UnitToken
 ---@param isSecure? boolean
 ---@return Nameplate? nameplate
-function C_NamePlate.GetNamePlateForUnit(unitId, isSecure) end
+function C_NamePlate.GetNamePlateForUnit(UnitToken, isSecure) end
 
 ---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_NamePlate.GetNamePlateFriendlyClickThrough)
@@ -2030,7 +2030,7 @@ function C_PetBattles.IsWaitingOnOpponent() end
 function C_PetBattles.SetPendingReportBattlePetTarget(petIndex) end
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_PetBattles.SetPendingReportTargetFromUnit)
----@param unit UnitId
+---@param unit UnitToken
 function C_PetBattles.SetPendingReportTargetFromUnit(unit) end
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_PetBattles.ShouldShowPetSelect)
@@ -3025,7 +3025,7 @@ function CanAffordMerchantItem(index) end
 function CanAutoSetGamePadCursorControl() end
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_CanBeRaidTarget)
----@param unit UnitId
+---@param unit UnitToken
 ---@return boolean canBeRaidTarget
 function CanBeRaidTarget(unit) end
 
@@ -3193,7 +3193,7 @@ function CancelSpellByName(name) end
 function CancelTradeAccept() end
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_CancelUnitBuff)
----@param unit UnitId
+---@param unit UnitToken
 ---@param buffIndex number
 ---@param filter string
 function CancelUnitBuff(unit, buffIndex, filter) end
@@ -3204,7 +3204,7 @@ function CannotBeResurrected() end
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_CastPetAction)
 ---@param index number
----@param target? UnitId
+---@param target? UnitToken
 function CastPetAction(index, target) end
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_CastShapeshiftForm)
@@ -3484,7 +3484,7 @@ function CombatLogShowCurrentEntry() end
 function CombatLog_Object_IsA(unitFlags, mask) end
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_CombatTextSetActiveUnit)
----@param unit UnitId
+---@param unit UnitToken
 function CombatTextSetActiveUnit(unit) end
 
 ---#nopage  
@@ -4724,7 +4724,7 @@ function GetGuildEventInfo(index) end
 function GetGuildFactionGroup() end
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_GetGuildInfo)
----@param unit UnitId
+---@param unit UnitToken
 ---@return string guildName
 ---@return string guildRankName
 ---@return number guildRankIndex
@@ -4927,7 +4927,7 @@ function GetInspectHonorData() end
 function GetInspectRatedBGData() end
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_GetInspectSpecialization)
----@param unit UnitId
+---@param unit UnitToken
 ---@return number id
 function GetInspectSpecialization(unit) end
 
@@ -4945,7 +4945,7 @@ function GetInventoryAlertStatus(index) end
 function GetInventoryItemBroken(unit, invSlot) end
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_GetInventoryItemCooldown)
----@param unit UnitId
+---@param unit UnitToken
 ---@param invSlotId number
 ---@return number start
 ---@return number duration
@@ -4953,7 +4953,7 @@ function GetInventoryItemBroken(unit, invSlot) end
 function GetInventoryItemCooldown(unit, invSlotId) end
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_GetInventoryItemCount)
----@param unit UnitId
+---@param unit UnitToken
 ---@param invSlotId number
 ---@return number count
 function GetInventoryItemCount(unit, invSlotId) end
@@ -4969,23 +4969,23 @@ function GetInventoryItemDurability(invSlotId) end
 function GetInventoryItemEquippedUnusable(unit, slot) end
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_GetInventoryItemID)
----@param unit UnitId
+---@param unit UnitToken
 ---@param invSlotId number
 ---@return number itemId
 ---@return number unknown
 function GetInventoryItemID(unit, invSlotId) end
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_GetInventoryItemLink)
----@param unit UnitId
+---@param unit UnitToken
 ---@param invSlotId number
 ---@return string? itemLink
 function GetInventoryItemLink(unit, invSlotId) end
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_GetInventoryItemQuality)
----@param unitId UnitId
+---@param UnitToken UnitToken
 ---@param invSlotId number
 ---@return Enum.ItemQuality quality
-function GetInventoryItemQuality(unitId, invSlotId) end
+function GetInventoryItemQuality(UnitToken, invSlotId) end
 
 ---#invalidpage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_GetInventoryItemTexture)
@@ -5815,7 +5815,7 @@ function GetPVPRoles() end
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_GetPartyAssignment)
 ---@param assignment string
----@param raidmember UnitId
+---@param raidmember UnitToken
 ---@param exactMatch boolean
 ---@return boolean isAssigned
 function GetPartyAssignment(assignment, raidmember, exactMatch) end
@@ -6247,7 +6247,7 @@ function GetRaidProfileSavedPosition(profile) end
 function GetRaidRosterInfo(raidIndex) end
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_GetRaidTargetIndex)
----@param unit UnitId
+---@param unit UnitToken
 ---@return number? index
 function GetRaidTargetIndex(unit) end
 
@@ -6582,7 +6582,7 @@ function GetTabardInfo() end
 ---@param column number
 ---@param specGroupIndex? number
 ---@param isInspect? boolean
----@param inspectUnit? UnitId
+---@param inspectUnit? UnitToken
 ---@return number talentID
 ---@return string name
 ---@return number texture
@@ -6599,7 +6599,7 @@ function GetTalentInfo(tier, column, specGroupIndex, isInspect, inspectUnit) end
 ---@param talentID number
 ---@param specGroupIndex number
 ---@param isInspect? boolean
----@param inspectUnit? UnitId
+---@param inspectUnit? UnitToken
 ---@return number talentID
 ---@return string name
 ---@return number texture
@@ -8234,7 +8234,7 @@ function SendMail(recipient, subject, body) end
 function SendSystemMessage(msg) end
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_SetAchievementComparisonUnit)
----@param unit UnitId
+---@param unit UnitToken
 ---@return boolean success
 function SetAchievementComparisonUnit(unit) end
 
@@ -8537,7 +8537,7 @@ function SetRaidProfileSavedPosition(profile, isDynamic, topPoint, topOffset, bo
 function SetRaidSubgroup(index, subgroup) end
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_SetRaidTarget)
----@param unit UnitId
+---@param unit UnitToken
 ---@param index number
 function SetRaidTarget(unit, index) end
 
@@ -8728,9 +8728,9 @@ function SpellCanTargetItemID() end
 function SpellCanTargetQuest() end
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_SpellCanTargetUnit)
----@param unitId string
+---@param UnitToken string
 ---@return boolean canTarget
-function SpellCanTargetUnit(unitId) end
+function SpellCanTargetUnit(UnitToken) end
 
 ---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_SpellCancelQueuedSpell)
@@ -8772,8 +8772,8 @@ function SpellStopTargeting() end
 function SpellTargetItem(item) end
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_SpellTargetUnit)
----@param unitId UnitId
-function SpellTargetUnit(unitId) end
+---@param UnitToken UnitToken
+function SpellTargetUnit(UnitToken) end
 
 ---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_SplitGuildBankItem)
@@ -8978,7 +8978,7 @@ function TurnRightStop() end
 function UninviteUnit(name, reason) end
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_UnitGetAvailableRoles)
----@param unit UnitId
+---@param unit UnitToken
 ---@return boolean tank
 ---@return boolean heal
 ---@return boolean dps
@@ -8989,12 +8989,12 @@ function UnitGetAvailableRoles(unit) end
 function UnitHasIncomingResurrection(unit) end
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_UnitHasLFGDeserter)
----@param unit UnitId
+---@param unit UnitToken
 ---@return boolean isDeserter
 function UnitHasLFGDeserter(unit) end
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_UnitHasLFGRandomCooldown)
----@param unit UnitId
+---@param unit UnitToken
 ---@return boolean hasRandomCooldown
 function UnitHasLFGRandomCooldown(unit) end
 
@@ -9003,12 +9003,12 @@ function UnitHasLFGRandomCooldown(unit) end
 function UnitInOtherParty() end
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_UnitIsGroupAssistant)
----@param unit UnitId
+---@param unit UnitToken
 ---@return boolean isAssistant
 function UnitIsGroupAssistant(unit) end
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_UnitIsGroupLeader)
----@param unit UnitId
+---@param unit UnitToken
 ---@param partyCategory? number
 ---@return boolean isLeader
 function UnitIsGroupLeader(unit, partyCategory) end

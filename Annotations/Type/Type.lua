@@ -95,3 +95,7 @@
 ---|"SECONDARYHANDSLOT"
 ---|"RANGEDSLOT"
 ---|"TABARDSLOT"
+
+-- backwards compat
+---@alias UnitId UnitToken
+---@alias WowEvent FrameEvent

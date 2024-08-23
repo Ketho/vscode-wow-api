@@ -29,7 +29,7 @@ function GetItemStatDelta(itemLink1, itemLink2, existingTable) end
 
 ---@deprecated
 ---Deprecated by [C_UnitAuras.GetAuraDataByIndex](https://warcraft.wiki.gg/wiki/API_C_UnitAuras.GetAuraDataByIndex)
----@param unitToken UnitId
+---@param unitToken UnitToken
 ---@param index number
 ---@param filter? string
 ---@return string name
@@ -52,7 +52,7 @@ function UnitAura(unitToken, index, filter) end
 
 ---@deprecated
 ---Deprecated by [C_UnitAuras.GetBuffDataByIndex](https://warcraft.wiki.gg/wiki/API_C_UnitAuras.GetBuffDataByIndex)
----@param unitToken UnitId
+---@param unitToken UnitToken
 ---@param index number
 ---@param filter? string
 ---@return string name
@@ -75,7 +75,7 @@ function UnitBuff(unitToken, index, filter) end
 
 ---@deprecated
 ---Deprecated by [C_UnitAuras.GetDebuffDataByIndex](https://warcraft.wiki.gg/wiki/API_C_UnitAuras.GetDebuffDataByIndex)
----@param unitToken UnitId
+---@param unitToken UnitToken
 ---@param index number
 ---@param filter? string
 ---@return string name
@@ -98,7 +98,7 @@ function UnitDebuff(unitToken, index, filter) end
 
 ---@deprecated
 ---Deprecated by [C_UnitAuras.GetAuraDataBySlot](https://warcraft.wiki.gg/wiki/API_C_UnitAuras.GetAuraDataBySlot)
----@param unitToken UnitId
+---@param unitToken UnitToken
 ---@param index number
 ---@return string name
 ---@return number icon

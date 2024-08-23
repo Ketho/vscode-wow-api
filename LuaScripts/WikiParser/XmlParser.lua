@@ -67,7 +67,7 @@ local validTypes = {
 local subTypeAlias = {
 	-- ClassId = true,
 	ClassFile = true,
-	UnitId = true,
+	UnitToken = true,
 
 	-- enums
 	PowerType = true,

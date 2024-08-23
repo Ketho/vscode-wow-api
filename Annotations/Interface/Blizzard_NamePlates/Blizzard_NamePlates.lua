@@ -32,5 +32,5 @@ function NamePlateBaseMixin:OnSizeChanged() end
 ---@class Nameplate : Frame, NamePlateBaseMixin
 ---@field UnitFrame Button
 ---@field driverFrame NamePlateDriverFrame
----@field namePlateUnitToken UnitId
+---@field namePlateUnitToken UnitToken
 ---@field template string

@@ -141,7 +141,7 @@ function lib:GetPlayerZone() end
 function lib:GetPlayerZonePosition() end
 
 --- Get the world position of any unit eligible for UnitPosition
----@param unitID UnitId Supports player, party, raid only
+---@param unitID UnitToken Supports player, party, raid only
 ---@return number x X coordinate of the unit's position
 ---@return number y Y coordinate of the unit's position
 ---@return number instance Instance ID of the World Coordinate system the unit is in
