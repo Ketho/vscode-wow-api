@@ -6,7 +6,7 @@
 ---@class AceBucket-3.0
 local AceBucket = {}
 
----@param event WowEvent|WowEvent[] The event to listen for, or a table of events.
+---@param event FrameEvent|FrameEvent[] The event to listen for, or a table of events.
 ---@param interval number The Bucket interval (burst interval)
 ---@param callback? function|string The callback function to call when the event is triggered (funcref or method, defaults to a method with the event name)
 --- ---

@@ -228,7 +228,7 @@ function Frame:InterceptStartDrag(delegate) end
 function Frame:IsClampedToScreen() end
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_Frame_IsEventRegistered)
----@param eventName WowEvent
+---@param eventName FrameEvent
 ---@return boolean isRegistered
 ---@return UnitId? units
 function Frame:IsEventRegistered(eventName) end
@@ -294,7 +294,7 @@ function Frame:Raise() end
 function Frame:RegisterAllEvents() end
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_Frame_RegisterEvent)
----@param eventName WowEvent
+---@param eventName FrameEvent
 ---@return boolean registered
 function Frame:RegisterEvent(eventName) end
 
@@ -303,7 +303,7 @@ function Frame:RegisterEvent(eventName) end
 function Frame:RegisterForDrag(...) end
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_Frame_RegisterUnitEvent)
----@param eventName WowEvent
+---@param eventName FrameEvent
 ---@param ... UnitId
 ---@return boolean registered
 function Frame:RegisterUnitEvent(eventName, ...) end
@@ -456,6 +456,6 @@ function Frame:UnlockHighlight() end
 function Frame:UnregisterAllEvents() end
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_Frame_UnregisterEvent)
----@param eventName WowEvent
+---@param eventName FrameEvent
 ---@return boolean registered
 function Frame:UnregisterEvent(eventName) end

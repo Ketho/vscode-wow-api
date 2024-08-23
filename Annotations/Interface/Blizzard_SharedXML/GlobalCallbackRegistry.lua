@@ -4,25 +4,25 @@ EventRegistry = CreateFromMixins(CallbackRegistryMixin)
 
 -- function EventRegistry:OnLoad() end
 
----@param frameEvent WowEvent
+---@param frameEvent FrameEvent
 ---@param value number
 function EventRegistry:OnAttributeChanged(frameEvent, value) end
 
----@param frameEvent WowEvent
+---@param frameEvent FrameEvent
 function EventRegistry:RegisterFrameEvent(frameEvent) end
 
----@param frameEvent WowEvent
+---@param frameEvent FrameEvent
 function EventRegistry:UnregisterFrameEvent(frameEvent) end
 
----@param frameEvent WowEvent
+---@param frameEvent FrameEvent
 ---@return any owner
 function EventRegistry:RegisterFrameEventAndCallback(frameEvent, ...) end
 
----@param frameEvent WowEvent
+---@param frameEvent FrameEvent
 ---@return table
 function EventRegistry:RegisterFrameEventAndCallbackWithHandle(frameEvent, ...) end
 
----@param frameEvent WowEvent
+---@param frameEvent FrameEvent
 function EventRegistry:UnregisterFrameEventAndCallback(frameEvent, ...) end
 
 ---@return string

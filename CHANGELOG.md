@@ -10,7 +10,7 @@
 
 ## [0.16.8] - 2024-08-14
 - 0.16.8: Fixed FontInstance `TBFFlags` type to match empty strings
-- 0.16.7: 🐞 Fix diagnostics taking too long when a window with the `WowEvent` type is open
+- 0.16.7: 🐞 Fix diagnostics taking too long when a window with the `FrameEvent` type is open
 - 0.16.7: 🛠  Changing the settings should no longer require restarting VS Code to take effect
 
 ## [0.16.6] - 2024-08-13
