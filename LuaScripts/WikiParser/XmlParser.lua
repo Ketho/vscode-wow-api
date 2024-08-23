@@ -87,7 +87,7 @@ end
 local redirects = {}
 local validatedApi = {}
 local nonValidatedApi = {}
-local EmmyLuaApi, EmmyLuaMultiApi = {}, {}
+local luals_api, luals_multiapi = {}, {}
 
 local function GetApiName(name)
 	return name:match("API (.+)"):gsub(" ", "_")
@@ -180,15 +180,15 @@ function m:ParsePages(options)
 				nonValidatedApi[info.apiName] = info
 			end
 
-			local emmylua = wikiText:match("<!%-%- emmylua\n(.*)\n%-%->")
-			if emmylua then
-				-- copy emmylua from wowpedia pages and avoid making duplicates
-				for name in emmylua:gmatch("function (.-)%(") do
+			local annotations = wikiText:match("<!%-%- luals\n(.*)\n%-%->")
+			if annotations then
+				-- copy annotations from pages and avoid making duplicates
+				for name in annotations:gmatch("function (.-)%(") do
 					if name ~= info.apiName then
-						EmmyLuaMultiApi[name] = true
+						luals_multiapi[name] = true
 					end
 				end
-				EmmyLuaApi[info.apiName] = emmylua
+				luals_api[info.apiName] = annotations
 			end
 		end
 	end
@@ -385,4 +385,4 @@ m:ParsePages()
 -- end
 
 print("Parsed XML")
-return {validatedApi, nonValidatedApi, EmmyLuaApi, EmmyLuaMultiApi}
+return {validatedApi, nonValidatedApi, luals_api, luals_multiapi}
