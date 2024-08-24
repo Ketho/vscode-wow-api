@@ -40,6 +40,7 @@ function C_ScenarioInfo.GetScenarioStepInfo(scenarioStepID) end
 ---@field failed boolean? Default = false
 ---@field isWeightedProgress boolean? Default = false
 ---@field isFormatted boolean? Default = false
+---@field quantityString string
 
 ---@class ScenarioInformation
 ---@field name string

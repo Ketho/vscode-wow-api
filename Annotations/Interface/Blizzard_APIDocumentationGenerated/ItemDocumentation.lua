@@ -7,6 +7,11 @@ function C_Item.ActionBindsItem() end
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_Item.BindEnchant)
 function C_Item.BindEnchant() end
 
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_Item.CanBeRefunded)
+---@param itemLocation ItemLocation
+---@return boolean canBeRefunded
+function C_Item.CanBeRefunded(itemLocation) end
+
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_Item.CanItemTransmogAppearance)
 ---@param itemLoc ItemLocation
 ---@return boolean canTransmog
