@@ -8110,7 +8110,7 @@ export const data: GlobalStringInterface = {
 	FACTION_NEUTRAL: String.raw`중립 지역`,
 	FACTION_OTHER: String.raw`제 3 세력`,
 	FACTION_STANDING_CHANGED: String.raw`%2$s에 대해 %1$s 평판이 되었습니다.`,
-	FACTION_STANDING_CHANGED_ACCOUNT_WIDE: String.raw`당신의 전투부대는 이제 %s|1과;와; %s|1이;가; 됩니다.`,
+	FACTION_STANDING_CHANGED_ACCOUNT_WIDE: String.raw`당신의 전투부대는 이제 %2$s|1과;와; %1$s|1이;가; 됩니다.`,
 	FACTION_STANDING_CHANGED_GUILD: String.raw`길드와 %s|1이;가; 되었습니다.`,
 	FACTION_STANDING_CHANGED_GUILDNAME: String.raw`%2$s에 대해 %1$s 평판이 되었습니다.`,
 	FACTION_STANDING_DECREASED: String.raw`%s에 대한 평판이 %d만큼 하락했습니다.`,

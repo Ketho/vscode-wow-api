@@ -763,11 +763,6 @@ export const data: CVarInterface = {
 		category: 1,
 		help: "maximum number of frames ahead of GPU the CPU can be",
 	},
-	gxmaximize: {
-		name: "GxMaximize",
-		default: "1",
-		category: 5,
-	},
 	gxmonitor: {
 		name: "GxMonitor",
 		default: "0",
@@ -1122,7 +1117,8 @@ export const data: CVarInterface = {
 	raidclusteredshading: {
 		name: "RAIDclusteredShading",
 		default: "1",
-		category: 5,
+		category: 1,
+		help: "Allow forward transparent lighting",
 	},
 	raidcomponenttexturelevel: {
 		name: "RAIDcomponentTextureLevel",
@@ -2472,7 +2468,7 @@ export const data: CVarInterface = {
 	},
 	agentuid: {
 		name: "agentUID",
-		default: "wow_beta",
+		default: "",
 		category: 4,
 		help: "The UID provided by Battle.net to be passed to Agent",
 	},
@@ -2507,6 +2503,7 @@ export const data: CVarInterface = {
 		name: "arachnophobiaMode",
 		default: "0",
 		category: 4,
+		scope: "Character",
 		help: "swaps out spider creatures for other variants",
 	},
 	assaoadaptivequalitylimit: {
@@ -4727,7 +4724,8 @@ export const data: CVarInterface = {
 	clusteredshading: {
 		name: "clusteredShading",
 		default: "1",
-		category: 5,
+		category: 1,
+		help: "Allow forward transparent lighting",
 	},
 	collapsedcurrencycategorydefaults: {
 		name: "collapsedCurrencyCategoryDefaults",
@@ -5872,6 +5870,11 @@ export const data: CVarInterface = {
 		category: 1,
 		help: "Render volumetric fog in parallel",
 	},
+	gxmaximize: {
+		name: "gxMaximize",
+		default: "1",
+		category: 5,
+	},
 	hardtrackedquests: {
 		name: "hardTrackedQuests",
 		default: "",
@@ -6274,7 +6277,7 @@ export const data: CVarInterface = {
 	},
 	loaddeprecationfallbacks: {
 		name: "loadDeprecationFallbacks",
-		default: "0",
+		default: "1",
 		category: 4,
 		secure: true,
 		help: "When enabled, Deprecation_* addons are loaded to provide fallbacks for deprecated script APIs.",
@@ -6509,11 +6512,6 @@ export const data: CVarInterface = {
 		scope: "Account",
 		help: "Stores whether to show the quest blobs on the minimap.",
 	},
-	minimaptrackedinfov2: {
-		name: "minimapTrackedInfov2",
-		default: "",
-		category: 5,
-	},
 	minimaptrackedinfov3: {
 		name: "minimapTrackedInfov3",
 		default: "1006319",
@@ -6589,10 +6587,11 @@ export const data: CVarInterface = {
 		scope: "Character",
 		help: "Bitfield for which type filters are applied in the mount journal",
 	},
-	mouseaccel: {
-		name: "mouseAccel",
-		default: "1",
+	mouseacceleration: {
+		name: "mouseAcceleration",
+		default: "-1",
 		category: 4,
+		help: "-1: use desktop mouse acceleration, 0: disable mouse acceleration, 1: enable mouse acceleration",
 	},
 	mouseinvertpitch: {
 		name: "mouseInvertPitch",
@@ -6608,7 +6607,7 @@ export const data: CVarInterface = {
 	},
 	mousespeed: {
 		name: "mouseSpeed",
-		default: "0.5",
+		default: "0.0",
 		category: 4,
 	},
 	moviesubtitle: {
@@ -6959,7 +6958,7 @@ export const data: CVarInterface = {
 	},
 	nameplateshowfriendlynpcs: {
 		name: "nameplateShowFriendlyNPCs",
-		default: "1",
+		default: "0",
 		category: 4,
 		scope: "Account",
 		secure: true,
@@ -7472,7 +7471,7 @@ export const data: CVarInterface = {
 	},
 	questpoilocalstory: {
 		name: "questPOILocalStory",
-		default: "0",
+		default: "1",
 		category: 4,
 		scope: "Account",
 		help: "Worldmap filter setting for showing any local story quest offers on the map, this is an independent setting for the world map only.",
@@ -7822,7 +7821,7 @@ export const data: CVarInterface = {
 	},
 	scripterrors: {
 		name: "scriptErrors",
-		default: "1",
+		default: "0",
 		category: 5,
 		scope: "Character",
 		help: "Whether or not the UI shows Lua errors",
@@ -7921,7 +7920,7 @@ export const data: CVarInterface = {
 	},
 	serveralert: {
 		name: "serverAlert",
-		default: "https://breaking-news.support.blizzard.com/service/wow-client/ptr/us/en-US",
+		default: "https://breaking-news.support.blizzard.com/service/wow-client/live/eu/en-US",
 		category: 6,
 		help: "Get the glue-string tag for the URL",
 	},
@@ -8181,7 +8180,7 @@ export const data: CVarInterface = {
 	},
 	showtempmaxhealthloss: {
 		name: "showTempMaxHealthLoss",
-		default: "0",
+		default: "1",
 		category: 4,
 		scope: "Character",
 		help: "Weather or not to show temporary max health changes on unit health bars",
@@ -8572,13 +8571,13 @@ export const data: CVarInterface = {
 	},
 	telemetrywowpackage: {
 		name: "telemetryWowPackage",
-		default: "Blizzard.Telemetry.Wow_Mainline_PTR",
+		default: "Blizzard.Telemetry.Wow_Mainline",
 		category: 5,
 		help: "The primary package we want to send telemetry to e.g. Wow_Mainline or Wow_Classic",
 	},
 	telemetrywowlabspackage: {
 		name: "telemetryWowlabsPackage",
-		default: "Blizzard.Telemetry.Wow_Labs_PTR",
+		default: "Blizzard.Telemetry.Wow_Labs",
 		category: 5,
 		help: "The secondary package we want to send telemetry to e.g. Wow_Wowlabs",
 	},
@@ -9032,6 +9031,11 @@ export const data: CVarInterface = {
 		category: 4,
 		help: "Determines whether to use the commentator selection circles or the default selection circles while spectating or commentating a wargame",
 	},
+	usecompactpartyframes: {
+		name: "useCompactPartyFrames",
+		default: "",
+		category: 5,
+	},
 	useipv6: {
 		name: "useIPv6",
 		default: "0",
@@ -9240,11 +9244,6 @@ export const data: CVarInterface = {
 		scope: "Character",
 		help: "Stores Objectives frame locked and collapsed states",
 	},
-	watchdogfreezeseconds: {
-		name: "watchdogFreezeSeconds",
-		default: "20",
-		category: 0,
-	},
 	waterdetail: {
 		name: "waterDetail",
 		default: "0",
@@ -9302,7 +9301,7 @@ export const data: CVarInterface = {
 	},
 	wmoportalinteriorfade: {
 		name: "wmoPortalInteriorFade",
-		default: "0",
+		default: "1",
 		category: 1,
 		help: "Wmo portal interior fade",
 	},
