@@ -752,24 +752,100 @@ function C_Garrison.GetAllBonusAbilityEffects() end
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_Garrison.GetAllEncounterThreats)
 function C_Garrison.GetAllEncounterThreats(garrFollowerTypeID) end
 
----#invalidpage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_Garrison.GetAvailableMissions)
-function C_Garrison.GetAvailableMissions(missionList, garrFollowerTypeID) end
+---@param garrFollowerTypeID Enum.GarrisonFollowerType
+---@return MissionInfo[]
+---@overload fun(missionList: MissionInfo[], garrFollowerTypeID: Enum.GarrisonFollowerType)
+function C_Garrison.GetAvailableMissions(garrFollowerTypeID) end
+
+---@class MissionInfo
+---@field areaID number
+---@field basecost number
+---@field canStart boolean
+---@field completed boolean
+---@field cost number
+---@field costCurrencyTypesID number
+---@field description string
+---@field duration string
+---@field durationSeconds number
+---@field followers table
+---@field followerTypeID Enum.GarrisonFollowerType
+---@field hasBonusEffect boolean
+---@field iLevel number
+---@field inProgress boolean
+---@field isMaxLevel boolean
+---@field isRare boolean
+---@field isTutorialMission boolean
+---@field isZoneSupport boolean
+---@field level number
+---@field location string
+---@field locTextureKit string
+---@field mapPosX number
+---@field mapPosY number
+---@field missionEndTime? number
+---@field missionID number
+---@field missionScalar number
+---@field name string
+---@field numFollowers number
+---@field offeredGarrMissionTextureID number
+---@field offerEndTime number
+---@field offerTimeRemaining string
+---@field overmaxRewards MissionOvermaxRewards
+---@field overmaxSucceeded boolean
+---@field requiredChampionCount number
+---@field requiredSuccessChance number
+---@field rewards MissionRewards
+---@field timeLeft? string
+---@field timeLeftSeconds? number
+---@field type string
+---@field typeAtlas string
+---@field xp number
+
+---@class MissionOvermaxRewards
+---@field followerXP number
+---@field icon string
+---@field name string
+---@field title string
+---@field tooltip string
+
+---@class MissionRewards
+---@field currencyID number
+---@field icon number
+---@field quantity number
+---@field title string
 
 ---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_Garrison.GetAvailableRecruits)
 function C_Garrison.GetAvailableRecruits() end
 
----#invalidpage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_Garrison.GetBasicMissionInfo)
+---@param missionID number
+---@return MissionInfo info
 function C_Garrison.GetBasicMissionInfo(missionID) end
 
 ---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_Garrison.GetBuffedFollowersForMission)
 function C_Garrison.GetBuffedFollowersForMission(missionID, displayingAbilities) end
 
----#invalidpage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_Garrison.GetBuildingInfo)
+---@param buildingID number
+---@return number id
+---@return string name
+---@return string textureKit
+---@return fileID icon
+---@return string description
+---@return number rank
+---@return number currencyID
+---@return number currencyQty
+---@return number goldQty
+---@return string buildTime
+---@return boolean needsPlan
+---@return boolean isPrebuilt
+---@return table possSpecs
+---@return number[] upgrades
+---@return boolean canUpgrade
+---@return boolean isMaxLevel
+---@return boolean hasFollowerSlot
 function C_Garrison.GetBuildingInfo(buildingID) end
 
 ---#nopage  
@@ -829,12 +905,34 @@ function C_Garrison.GetCompleteTalent(garrisonType) end
 function C_Garrison.GetCurrencyTypes(garrType) end
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_Garrison.GetFollowerAbilities)
----@param followerID number
----@return table abilities
+---@param followerID number|string
+---@return AbilityInfo[] abilities
+---@return AbilityInfo[]? extraAbilities
 function C_Garrison.GetFollowerAbilities(followerID) end
 
----#invalidpage  
+---@class AbilityInfo
+---@field category? string
+---@field counters table<number, AbilityCounter>
+---@field description string
+---@field icon? fileID
+---@field id number
+---@field isEmptySlot boolean
+---@field isSpecialization boolean
+---@field isTrait boolean
+---@field name string
+---@field requiredQualityLevel? number
+---@field temporary boolean
+
+---@class AbilityCounter
+---@field description string
+---@field factor number
+---@field icon fileID
+---@field name string
+
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_Garrison.GetFollowerAbilityAtIndex)
+---@param followerID string
+---@param index number
+---@return number abilityID
 function C_Garrison.GetFollowerAbilityAtIndex(followerID, index) end
 
 ---#nopage  
@@ -901,9 +999,43 @@ function C_Garrison.GetFollowerClassSpecName(garrFollowerID) end
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_Garrison.GetFollowerDisplayID)
 function C_Garrison.GetFollowerDisplayID(followerID) end
 
----#invalidpage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_Garrison.GetFollowerInfo)
-function C_Garrison.GetFollowerInfo() end
+---@param followerID number|string
+---@return GarrFollowerInfo info
+function C_Garrison.GetFollowerInfo(followerID) end
+
+---@class GarrFollowerInfo
+---@field classAtlas string
+---@field className string
+---@field classSpec number
+---@field displayHeight number
+---@field displayIDs DisplayInfo[]
+---@field displayScale number
+---@field followerID string|number
+---@field followerTypeID number
+---@field garrFollowerID? number
+---@field height number
+---@field iLevel number
+---@field isAutoTroop? boolean
+---@field isCollected? boolean
+---@field isFavorite boolean
+---@field isMaxLevel boolean
+---@field isSoulbind? boolean
+---@field isTroop? boolean
+---@field level number
+---@field levelXP? number
+---@field name string
+---@field portraitIconID number
+---@field quality Enum.ItemQuality
+---@field scale number
+---@field slotSoundKitID? number
+---@field status? string
+---@field xp? number
+
+---@class DisplayInfo
+---@field followerPageScale number
+---@field id number
+---@field showWeapon? boolean
 
 ---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_Garrison.GetFollowerInfoForBuilding)
@@ -1037,9 +1169,10 @@ function C_Garrison.GetFollowerXPTable(garrFollowerTypeID) end
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_Garrison.GetFollowerZoneSupportAbilities)
 function C_Garrison.GetFollowerZoneSupportAbilities() end
 
----#invalidpage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_Garrison.GetFollowers)
-function C_Garrison.GetFollowers() end
+---@param followerType? Enum.GarrisonFollowerType
+---@return GarrFollowerInfo[] info
+function C_Garrison.GetFollowers(followerType) end
 
 ---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_Garrison.GetFollowersSpellsForMission)
@@ -1049,17 +1182,22 @@ function C_Garrison.GetFollowersSpellsForMission(missionID) end
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_Garrison.GetFollowersTraitsForMission)
 function C_Garrison.GetFollowersTraitsForMission(missionID) end
 
----#invalidpage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_Garrison.GetGarrisonInfo)
+---@param garrisonType Enum.GarrisonType
+---@return number? garrisonLevel
+---@return string? mapTexture
+---@return number? townHallX
+---@return number? townHallY
 function C_Garrison.GetGarrisonInfo(garrisonType) end
 
 ---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_Garrison.GetGarrisonUpgradeCost)
 function C_Garrison.GetGarrisonUpgradeCost(followerType) end
 
----#invalidpage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_Garrison.GetInProgressMissions)
-function C_Garrison.GetInProgressMissions(missionList, garrFollowerTypeID) end
+---@param garrFollowerTypeID Enum.GarrisonFollowerType
+---@return MissionInfo[] info
+function C_Garrison.GetInProgressMissions(garrFollowerTypeID) end
 
 ---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_Garrison.GetLandingPageGarrisonType)
@@ -1095,8 +1233,8 @@ function C_Garrison.GetLandingPageShipmentInfo(buildingID) end
 function C_Garrison.GetLandingPageShipmentInfoByContainerID(containerID) end
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_Garrison.GetLooseShipments)
----@param garrisonType number
----@return table looseShipments
+---@param garrisonType Enum.GarrisonType
+---@return number[] looseShipments
 function C_Garrison.GetLooseShipments(garrisonType) end
 
 ---#nopage  
@@ -1278,8 +1416,8 @@ function C_Garrison.GetTabForPlot(plotInstanceID) end
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_Garrison.HasGarrison)
 function C_Garrison.HasGarrison(garrisonType) end
 
----#invalidpage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_Garrison.HasShipyard)
+---@return boolean hasShipyard
 function C_Garrison.HasShipyard() end
 
 ---#nopage  
@@ -1314,8 +1452,8 @@ function C_Garrison.IsOnShipyardMap() end
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_Garrison.IsPlayerInGarrison)
 function C_Garrison.IsPlayerInGarrison(garrType) end
 
----#invalidpage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_Garrison.IsUsingPartyGarrison)
+---@return boolean usingPartyGarrison
 function C_Garrison.IsUsingPartyGarrison() end
 
 ---#nopage  
@@ -1438,8 +1576,9 @@ function C_Garrison.UpgradeBuilding(plotInstanceID) end
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_Garrison.UpgradeGarrison)
 function C_Garrison.UpgradeGarrison(followerType) end
 
----#invalidpage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_Heirloom.CanHeirloomUpgradeFromPending)
+---@param itemID number
+---@return boolean canUpgrade
 function C_Heirloom.CanHeirloomUpgradeFromPending(itemID) end
 
 ---#nopage  
@@ -1735,10 +1874,10 @@ function C_LFGList.SetApplicantMemberRole(applicantID, memberIndex, role) end
 ---@param honorLevel number
 ---@param autoAccept boolean
 ---@param privateGroup boolean
----@param questID number?
----@param mythicPlusRating number?
----@param pvpRating number?
----@param selectedPlaystyle number?
+---@param questID? number
+---@param mythicPlusRating? number
+---@param pvpRating? number
+---@param selectedPlaystyle? number
 ---@param isCrossFaction boolean?
 function C_LFGList.UpdateListing(activityID, itemLevel, honorLevel, autoAccept, privateGroup, questID, mythicPlusRating, pvpRating, selectedPlaystyle, isCrossFaction) end
 
@@ -1904,9 +2043,17 @@ function C_PetBattles.GetAbilityEffectInfo(abilityID, turnIndex, effectIndex, ef
 ---@return boolean noStrongWeakHints
 function C_PetBattles.GetAbilityInfo(petOwner, petIndex, abilityIndex) end
 
----#invalidpage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_PetBattles.GetAbilityInfoByID)
-function C_PetBattles.GetAbilityInfoByID(abilityID) end
+---@param id number
+---@return number id
+---@return string name
+---@return string icon
+---@return number maxCooldown
+---@return string unparsedDescription
+---@return number numTurns
+---@return number petType
+---@return boolean noStrongWeakHints
+function C_PetBattles.GetAbilityInfoByID(id) end
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_PetBattles.GetAbilityProcTurnIndex)
 ---@param abilityID number
@@ -1934,13 +2081,14 @@ function C_PetBattles.GetAbilityStateModification(abilityID, stateID) end
 ---@return number petIndex
 function C_PetBattles.GetActivePet(petOwner) end
 
----#invalidpage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_PetBattles.GetAllEffectNames)
+---@return string ...
 function C_PetBattles.GetAllEffectNames() end
 
----#invalidpage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_PetBattles.GetAllStates)
-function C_PetBattles.GetAllStates() end
+---@param stateEnv? table
+---@return table<string, number> stateIDs
+function C_PetBattles.GetAllStates(stateEnv) end
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_PetBattles.GetAttackModifier)
 ---@param petType number
@@ -2175,20 +2323,82 @@ function C_PetJournal.GetPetAbilityList(speciesID, idTable, levelTable) end
 ---@return number isEnabled
 function C_PetJournal.GetPetCooldownByGUID(GUID) end
 
----#invalidpage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_PetJournal.GetPetInfoByIndex)
+---@param index number
+---@return string petID
+---@return number speciesID
+---@return boolean owned
+---@return string customName
+---@return number level
+---@return boolean favorite
+---@return boolean isRevoked
+---@return string speciesName
+---@return fileID icon
+---@return number petType
+---@return number companionID
+---@return string tooltip
+---@return string description
+---@return boolean isWild
+---@return boolean canBattle
+---@return boolean isTradeable
+---@return boolean isUnique
+---@return boolean obtainable
 function C_PetJournal.GetPetInfoByIndex(index) end
 
----#invalidpage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_PetJournal.GetPetInfoByItemID)
+---@param itemID number
+---@return string name
+---@return fileID icon
+---@return number petType
+---@return number creatureID
+---@return string sourceText
+---@return string description
+---@return boolean isWild
+---@return boolean canBattle
+---@return boolean isTradeable
+---@return boolean isUnique
+---@return boolean obtainable
+---@return number displayID
+---@return number speciesID
 function C_PetJournal.GetPetInfoByItemID(itemID) end
 
----#invalidpage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_PetJournal.GetPetInfoByPetID)
+---@param petID string
+---@return number speciesID
+---@return string customName
+---@return number level
+---@return number xp
+---@return number maxXp
+---@return number displayID
+---@return boolean favorite
+---@return string name
+---@return fileID icon
+---@return number petType
+---@return string creatureID
+---@return string sourceText
+---@return string description
+---@return boolean isWild
+---@return boolean canBattle
+---@return boolean isTradeable
+---@return boolean isUnique
+---@return boolean obtainable
 function C_PetJournal.GetPetInfoByPetID(petID) end
 
----#invalidpage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_PetJournal.GetPetInfoBySpeciesID)
+---@param speciesID number
+---@return string speciesName
+---@return fileID speciesIcon
+---@return number petType
+---@return number companionID
+---@return string tooltipSource
+---@return string tooltipDescription
+---@return boolean isWild
+---@return boolean canBattle
+---@return boolean isTradeable
+---@return boolean isUnique
+---@return boolean obtainable
+---@return number creatureDisplayID
+---@return number desiredScale
 function C_PetJournal.GetPetInfoBySpeciesID(speciesID) end
 
 ---#nopage  
@@ -2565,8 +2775,9 @@ function C_ToyBox.GetToyFromIndex(index) end
 ---@return Enum.ItemQuality itemQuality
 function C_ToyBox.GetToyInfo(itemID) end
 
----#invalidpage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_ToyBox.GetToyLink)
+---@param itemID number
+---@return string? itemLink
 function C_ToyBox.GetToyLink(itemID) end
 
 ---#nopage  
@@ -2739,9 +2950,10 @@ function C_TradeSkillUI.GetRecipeCooldown(recipeID) end
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_TradeSkillUI.GetRecipeItemLevelFilter)
 function C_TradeSkillUI.GetRecipeItemLevelFilter() end
 
----#invalidpage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_TradeSkillUI.GetRecipeItemLink)
-function C_TradeSkillUI.GetRecipeItemLink(recipeID) end
+---@param recipeId number
+---@return string itemLink
+function C_TradeSkillUI.GetRecipeItemLink(recipeId) end
 
 ---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_TradeSkillUI.GetRecipeItemNameFilter)

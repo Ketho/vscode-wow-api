@@ -25,6 +25,16 @@
 				"clear": true
 			},
 			"problemMatcher": []
+		},
+		{
+			"label": "Lua 5.4 parseWiki",
+			"type": "shell",
+			"command": "lua54 LuaScripts/parseWiki.lua",
+			"presentation": {
+				"showReuseMessage": false,
+				"clear": true
+			},
+			"problemMatcher": []
 		}
 	]
 }

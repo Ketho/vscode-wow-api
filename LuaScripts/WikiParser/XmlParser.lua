@@ -62,6 +62,8 @@ local validTypes = {
 	UnitToken = true,
 	FunctionContainer = true,
 	Nameplate = true,
+	MissionInfo = true,
+	GarrFollowerInfo = true,
 }
 
 local subTypeAlias = {
