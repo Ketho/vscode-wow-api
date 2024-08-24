@@ -3266,16 +3266,16 @@ function CallCompanion(type, id) end
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_CameraOrSelectOrMoveStart)
 function CameraOrSelectOrMoveStart() end
 
----#invalidpage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_CameraOrSelectOrMoveStop)
+---@param stickyFlag? boolean
 function CameraOrSelectOrMoveStop(stickyFlag) end
 
----#invalidpage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_CameraZoomIn)
+---@param increment number
 function CameraZoomIn(increment) end
 
----#invalidpage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_CameraZoomOut)
+---@param increment number
 function CameraZoomOut(increment) end
 
 ---#nopage  
@@ -3367,8 +3367,8 @@ function CanItemBeSocketedToArtifact(itemID) end
 ---@return boolean isTrue
 function CanJoinBattlefieldAsGroup() end
 
----#invalidpage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_CanMerchantRepair)
+---@return boolean canRepair
 function CanMerchantRepair() end
 
 ---#nopage  
@@ -3482,21 +3482,25 @@ function CastSpell(spellIndex, spellbookType) end
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_CastSpellByID)
 function CastSpellByID(spellID, target) end
 
----#invalidpage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_CastSpellByName)
+---@param name string
+---@param target? UnitToken
 function CastSpellByName(name, target) end
 
 ---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_CenterCamera)
 function CenterCamera() end
 
----#invalidpage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_ChangeActionBarPage)
+---@param page number
 function ChangeActionBarPage(page) end
 
----#invalidpage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_ChangeChatColor)
-function ChangeChatColor(channelName, r, g, b) end
+---@param channelName string
+---@param red number
+---@param green number
+---@param blue number
+function ChangeChatColor(channelName, red, green, blue) end
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_ChannelBan)
 ---@param channelName string
@@ -3513,9 +3517,10 @@ function ChannelInvite(channelName, playerName) end
 ---@param playerName string
 function ChannelKick(channelName, playerName) end
 
----#invalidpage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_ChannelModerator)
-function ChannelModerator(channel, name) end
+---@param channelName string
+---@param playerName string
+function ChannelModerator(channelName, playerName) end
 
 ---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_ChannelSetAllSilent)
@@ -3525,17 +3530,20 @@ function ChannelSetAllSilent() end
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_ChannelSetPartyMemberSilent)
 function ChannelSetPartyMemberSilent(partyMemberName, silenceOn) end
 
----#invalidpage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_ChannelToggleAnnouncements)
-function ChannelToggleAnnouncements(channel) end
+---@param channelName string
+---@param playerName string
+function ChannelToggleAnnouncements(channelName, playerName) end
 
----#invalidpage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_ChannelUnban)
-function ChannelUnban(channel, name) end
+---@param channelName string
+---@param playerName string
+function ChannelUnban(channelName, playerName) end
 
----#invalidpage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_ChannelUnmoderator)
-function ChannelUnmoderator(channel, name) end
+---@param channelName string
+---@param playerName string
+function ChannelUnmoderator(channelName, playerName) end
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_CheckInbox)
 function CheckInbox() end
@@ -3572,8 +3580,8 @@ function ClearFailedTalentIDs() end
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_ClearInspectPlayer)
 function ClearInspectPlayer() end
 
----#invalidpage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_ClearOverrideBindings)
+---@param owner Frame
 function ClearOverrideBindings(owner) end
 
 ---#nopage  
@@ -3687,9 +3695,10 @@ function CloseTrainer() end
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_CollapseGuildTradeSkillHeader)
 function CollapseGuildTradeSkillHeader(tradeSkillID) end
 
----#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_CollapseQuestHeader)
-function CollapseQuestHeader() end
+---@param index number
+---@param isAuto boolean
+function CollapseQuestHeader(index, isAuto) end
 
 ---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_CollapseWarGameHeader)
@@ -3699,20 +3708,44 @@ function CollapseWarGameHeader(index) end
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_CombatLogAddFilter)
 function CombatLogAddFilter(eList, sourceFlags, destFlags) end
 
----#invalidpage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_CombatLogAdvanceEntry)
+---@param count number
+---@param ignoreFilter? boolean
+---@return boolean isValidIndex
 function CombatLogAdvanceEntry(count, ignoreFilter) end
 
 ---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_CombatLogClearEntries)
 function CombatLogClearEntries() end
 
----#invalidpage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_CombatLogGetCurrentEntry)
+---@return number timestamp
+---@return string subevent
+---@return boolean hideCaster
+---@return string sourceGUID
+---@return string sourceName
+---@return number sourceFlags
+---@return number sourceRaidFlags
+---@return string destGUID
+---@return string destName
+---@return number destFlags
+---@return number destRaidFlags
+---@return any ...
 function CombatLogGetCurrentEntry() end
 
----#invalidpage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_CombatLogGetCurrentEventInfo)
+---@return number timestamp
+---@return string subevent
+---@return boolean hideCaster
+---@return string sourceGUID
+---@return string sourceName
+---@return number sourceFlags
+---@return number sourceRaidFlags
+---@return string destGUID
+---@return string destName
+---@return number destFlags
+---@return number destRaidFlags
+---@return any ...
 function CombatLogGetCurrentEventInfo() end
 
 ---#nopage  
@@ -3727,8 +3760,10 @@ function CombatLogGetRetentionTime() end
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_CombatLogResetFilter)
 function CombatLogResetFilter() end
 
----#invalidpage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_CombatLogSetCurrentEntry)
+---@param index number
+---@param ignoreFilter? boolean
+---@return boolean isValidIndex
 function CombatLogSetCurrentEntry(index, ignoreFilter) end
 
 ---#nopage  
@@ -3763,9 +3798,12 @@ function CompleteQuest() end
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_ConfirmAcceptQuest)
 function ConfirmAcceptQuest() end
 
----#invalidpage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_ConfirmBNRequestInviteFriend)
-function ConfirmBNRequestInviteFriend(presenceID, tank, heal, dps) end
+---@param presenceID number
+---@param tank? boolean
+---@param healer? boolean
+---@param dps? boolean
+function ConfirmBNRequestInviteFriend(presenceID, tank, healer, dps) end
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_ConfirmLootRoll)
 ---@param rollID number
@@ -3869,9 +3907,9 @@ function DetectWowMouse() end
 ---@param type string
 function DismissCompanion(type) end
 
----#invalidpage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_DisplayChannelOwner)
-function DisplayChannelOwner(channel) end
+---@param channelName string
+function DisplayChannelOwner(channelName) end
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_DoEmote)
 ---@param token EmoteToken
@@ -3924,12 +3962,29 @@ function EJ_GetCurrentTier() end
 ---@return number difficultyId
 function EJ_GetDifficulty() end
 
----#invalidpage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_EJ_GetEncounterInfo)
-function EJ_GetEncounterInfo(encounterID) end
+---@param journalEncounterID number
+---@return string name
+---@return string description
+---@return number journalEncounterID
+---@return number rootSectionID
+---@return string link
+---@return number journalInstanceID
+---@return number dungeonEncounterID
+---@return number instanceID
+function EJ_GetEncounterInfo(journalEncounterID) end
 
----#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_EJ_GetEncounterInfoByIndex)
+---@param index number
+---@param journalInstanceID number
+---@return string name
+---@return string description
+---@return number journalEncounterID
+---@return number rootSectionID
+---@return string link
+---@return number journalInstanceID
+---@return number dungeonEncounterID
+---@return number instanceID
 function EJ_GetEncounterInfoByIndex(index, journalInstanceID) end
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_EJ_GetInstanceByIndex)
@@ -3977,9 +4032,19 @@ function EJ_GetInvTypeSortOrder(invType) end
 ---@return number specID
 function EJ_GetLootFilter() end
 
----#invalidpage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_EJ_GetMapEncounter)
-function EJ_GetMapEncounter(mapID, index, fromJournal) end
+---@param uiMapID number
+---@param index number
+---@param fromJournal? boolean
+---@return number x
+---@return number y
+---@return number instanceID
+---@return string name
+---@return string description
+---@return number encounterID
+---@return number rootSectionID
+---@return string link
+function EJ_GetMapEncounter(uiMapID, index, fromJournal) end
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_EJ_GetNumEncountersForLootByIndex)
 ---@param index number
@@ -4029,9 +4094,14 @@ function EJ_GetSectionPath(sectionID) end
 ---@return string link
 function EJ_GetTierInfo(index) end
 
----#invalidpage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_EJ_HandleLinkPath)
-function EJ_HandleLinkPath(jtype, id) end
+---@param journalType number
+---@param id number
+---@return number instanceID
+---@return number? encounterID
+---@return number? sectionID
+---@return number? tierIndex
+function EJ_HandleLinkPath(journalType, id) end
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_EJ_InstanceIsRaid)
 ---@return boolean isRaid
@@ -4091,8 +4161,8 @@ function EditMacro(macroInfo, name, icon, body) end
 ---@return Frame? nextFrame
 function EnumerateFrames(currentFrame) end
 
----#invalidpage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_EnumerateServerChannels)
+---@return string ...
 function EnumerateServerChannels() end
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_ExecuteVoidTransfer)
@@ -4102,9 +4172,10 @@ function ExecuteVoidTransfer() end
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_ExpandGuildTradeSkillHeader)
 function ExpandGuildTradeSkillHeader(tradeSkillID) end
 
----#invalidpage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_ExpandQuestHeader)
-function ExpandQuestHeader() end
+---@param index number
+---@param isAuto boolean
+function ExpandQuestHeader(index, isAuto) end
 
 ---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_ExpandWarGameHeader)
@@ -4201,9 +4272,9 @@ function GMSurveyCommentSubmit(comment) end
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_GMSurveyNumAnswers)
 function GMSurveyNumAnswers() end
 
----#invalidpage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_GMSurveyQuestion)
-function GMSurveyQuestion() end
+---@param index number
+function GMSurveyQuestion(index) end
 
 ---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_GMSurveySubmit)

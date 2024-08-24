@@ -258,7 +258,7 @@ function m:ParseParam(line, info)
 		line = line:gsub(" %-.*", "") -- remove any comment text
 		line = line:gsub("^:;%d+%. ", ":;") -- remove any numbering
 		line = StripHyperlink(line)
-		local name, apiType = line:match("(%w+):{{apitype|(.-)}}")
+		local name, apiType = line:match("(%w+):{{apitype|(.-)[|}]")
 		-- if not apiType then
 		-- 	name, apiType = line:match("(%w+):(.-)")
 		-- 	print(line)
