@@ -1,5 +1,11 @@
 # Change Log
 
+## [0.17.5] - 2024-08-25
+- 🎉 Updated for patch 11.0.2 (56263)
+- 📝 Updated all remaining 155 #invalidpage APIs
+- Renamed type `NameplateBase` to `Nameplate`
+- Renamed type `WowEvent` to `FrameEvent`, `UnitId` to `UnitToken` but there is backwards compat
+
 ## [0.17.4] - 2024-08-15
 - 0.17.4: Properly fixed loading the extension twice
 - 0.17.3: Fixed loading the extension twice when the "Activate WoW API extension" command is used
@@ -141,6 +147,7 @@ To avoid loading for Lua projects not related to World of Warcraft, all settings
 - PR [#123](https://github.com/Ketho/vscode-wow-api/pull/123) Make childGroups optional in AceConfig.OptionsTable
 - PR [#120](https://github.com/Ketho/vscode-wow-api/pull/120) Add definition for tostringall()
 
+[0.17.5]: https://github.com/Ketho/vscode-wow-api/releases/tag/0.17.5
 [0.17.4]: https://github.com/Ketho/vscode-wow-api/releases/tag/0.17.4
 [0.17.3]: https://github.com/Ketho/vscode-wow-api/releases/tag/0.17.3
 [0.17.2]: https://github.com/Ketho/vscode-wow-api/releases/tag/0.17.2
