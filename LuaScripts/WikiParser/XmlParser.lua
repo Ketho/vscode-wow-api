@@ -64,6 +64,7 @@ local validTypes = {
 	Nameplate = true,
 	MissionInfo = true,
 	GarrFollowerInfo = true,
+	WOWGUID = true,
 }
 
 local subTypeAlias = {

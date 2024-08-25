@@ -65,7 +65,8 @@ print("valid api", countValid, string.format("%.2f%%", 100*countValid/total))
 print("invalid api", countNonValid, string.format("%.2f%%", 100*countNonValid/total))
 print("not documented", countNonDoc, string.format("%.2f%%", 100*countNonDoc/total))
 
--- total			2023
--- valid api		649     32.08%
--- invalid api		237     11.72%
--- not documented	1137    56.20%
+-- 2024-08-25
+-- total           2000
+-- valid api       872     43.60%
+-- invalid api     0       0.00%
+-- not documented  1128    56.40%
