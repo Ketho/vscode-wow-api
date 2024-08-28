@@ -6,7 +6,7 @@
 local tab = table
 -- foreach = tab.foreach
 -- foreachi = tab.foreachi
--- getn = tab.getn
+getn = tab.getn
 tinsert = tab.insert
 tremove = tab.remove
 sort = tab.sort

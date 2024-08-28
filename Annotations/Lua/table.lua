@@ -66,6 +66,17 @@ function table.remove(list, pos) end
 ---@param comp? fun(a: T, b: T):boolean
 function table.sort(list, comp) end
 
+---Returns the number of elements in the table. This function is equivalent to `#list`.
+---
+---[View documents](command:extension.lua.doc?["en-us/51/manual.html/pdf-table.getn"]), [Wiki](https://warcraft.wiki.gg/wiki/API_table.getn)
+---
+---@generic T
+---@param list T[]
+---@return integer
+---@nodiscard
+---@deprecated
+function table.getn(list) end
+
 ---Removes `count` elements from a table starting at index `pos`.
 ---
 ---[Wiki](https://warcraft.wiki.gg/wiki/API_table.removemulti)
