@@ -12,6 +12,8 @@ Adds IntelliSense features for World of Warcraft API to VS Code. This is a third
 > - The extension was previously loaded in the workspace.
 > - The "Activate WoW API extension" command is used.
 
+![](img/readme/activate.png)
+
 ### Features
 #### API
 * Includes the WoW Lua 5.1 environment
