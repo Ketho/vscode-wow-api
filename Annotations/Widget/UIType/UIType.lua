@@ -34,6 +34,7 @@
 ---|"CENTER"
 
 ---@alias FrameStrata
+---|"PARENT"
 ---|"BACKGROUND"
 ---|"LOW"
 ---|"MEDIUM"
@@ -42,6 +43,7 @@
 ---|"FULLSCREEN"
 ---|"FULLSCREEN_DIALOG"
 ---|"TOOLTIP"
+---|"BLIZZARD"
 
 ---@alias InsertMode
 ---|"TOP"
@@ -134,8 +136,8 @@
 
 ---@alias WrapMode
 ---|"CLAMP"
+---|"REPEAT"
 ---|"CLAMPTOBLACK"
 ---|"CLAMPTOBLACKADDITIVE"
 ---|"CLAMPTOWHITE"
----|"REPEAT"
 ---|"MIRROR"
