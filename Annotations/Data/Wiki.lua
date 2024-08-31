@@ -3977,7 +3977,7 @@ function EJ_GetEncounterInfo(journalEncounterID) end
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_EJ_GetEncounterInfoByIndex)
 ---@param index number
----@param journalInstanceID number
+---@param journalInstanceID? number
 ---@return string name
 ---@return string description
 ---@return number journalEncounterID
@@ -6398,8 +6398,8 @@ function GetPVPRoles() end
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_GetPartyAssignment)
 ---@param assignment string
----@param raidmember UnitToken
----@param exactMatch boolean
+---@param raidmember? UnitToken
+---@param exactMatch? boolean
 ---@return boolean isAssigned
 function GetPartyAssignment(assignment, raidmember, exactMatch) end
 
@@ -7737,8 +7737,9 @@ function IsAchievementEligible(achievementID) end
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_IsActionInRange)
 ---@param actionSlot number
+---@param unit? UnitToken
 ---@return boolean inRange
-function IsActionInRange(actionSlot) end
+function IsActionInRange(actionSlot, unit) end
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_IsActiveBattlefieldArena)
 ---@return boolean isArena
@@ -8129,7 +8130,7 @@ function ItemAddedToArtifact(keystoneindex) end
 function ItemCanTargetGarrisonFollowerAbility() end
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_ItemTextGetCreator)
----@return string creatorName
+---@return string? creatorName
 function ItemTextGetCreator() end
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_ItemTextGetItem)
