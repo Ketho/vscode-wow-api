@@ -5488,8 +5488,10 @@ function GetInventorySlotInfo(invSlotName) end
 ---@return number itemLevel
 function GetInviteConfirmationInfo(guid) end
 
----#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_GetItemLevelColor)
+---@return number r
+---@return number g
+---@return number b
 function GetItemLevelColor() end
 
 ---#nopage  

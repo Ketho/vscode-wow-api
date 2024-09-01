@@ -1,6 +1,14 @@
 ---@meta _
 C_Traits = {}
 
+---Returns whether the player can make changes to the specified talent config.
+---
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_Traits.CanEditConfig)
+---@param configID number
+---@return boolean canEdit
+---@return string errorMessage
+function C_Traits.CanEditConfig(configID) end
+
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_Traits.CanPurchaseRank)
 ---@param configID number
 ---@param nodeID number
