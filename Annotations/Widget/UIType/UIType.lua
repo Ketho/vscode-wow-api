@@ -95,9 +95,9 @@
 
 ---@alias TBFFlags
 ---|""
----|"OUTLINE"
----|"THICK
 ---|"MONOCHROME
+---|"OUTLINE"
+---|"THICKOUTLINE
 
 --- `uiRect` cannot be annotated as a list of numbers
 --- it's the same as Model:GetViewInsets/SetViewInsets params
