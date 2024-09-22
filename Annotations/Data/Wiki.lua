@@ -754,7 +754,7 @@ function C_Garrison.GetAllEncounterThreats(garrFollowerTypeID) end
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_Garrison.GetAvailableMissions)
 ---@param garrFollowerTypeID Enum.GarrisonFollowerType
----@return MissionInfo[]
+---@return MissionInfo[] info
 ---@overload fun(missionList: MissionInfo[], garrFollowerTypeID: Enum.GarrisonFollowerType)
 function C_Garrison.GetAvailableMissions(garrFollowerTypeID) end
 
@@ -4780,7 +4780,7 @@ function GetCategoryAchievementPoints(categoryID, includeSubCategories) end
 function GetCategoryInfo(categoryID) end
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_GetCategoryList)
----@return table idTable
+---@return number[] idTable
 function GetCategoryList() end
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_GetCategoryNumAchievements)
@@ -5369,6 +5369,7 @@ function GetInboxNumItems() end
 ---@return string stationaryEdge
 ---@return boolean isTakeable
 ---@return boolean isInvoice
+---@return boolean isConsortium
 function GetInboxText(index) end
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_GetInspectArenaData)
@@ -7324,6 +7325,13 @@ function GetTaxiMapID() end
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_GetTempShapeshiftBarIndex)
 function GetTempShapeshiftBarIndex() end
 
+---[Documentation](https://warcraft.wiki.gg/wiki/API_GetText)
+---@param token string
+---@param gender number
+---@param ordinal unknown
+---@return string text
+function GetText(token, gender, ordinal) end
+
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_GetTitleText)
 ---@return string title
 function GetTitleText() end
@@ -7950,9 +7958,13 @@ function IsItemAction(slot) end
 ---@return boolean isComplete
 function IsLFGComplete() end
 
----#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_IsLFGDungeonJoinable)
-function IsLFGDungeonJoinable() end
+---@param dungeonID number
+---@return boolean isAvailableForAll
+---@return boolean isAvailableForPlayer
+---@return boolean hideIfNotJoinable
+---@return number totalGroupSizeRequired
+function IsLFGDungeonJoinable(dungeonID) end
 
 ---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_IsMasterLooter)

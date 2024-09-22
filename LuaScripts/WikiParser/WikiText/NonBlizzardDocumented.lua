@@ -8,7 +8,10 @@ local globalApi = Util:DownloadAndRun(
 local blizzDoc = {}
 for _, func in ipairs(APIDocumentation.functions) do
 	local name = Util:GetFullName(func)
-	blizzDoc[name] = true
+	-- dont confuse global GetText with widget method GetText
+	if func.System.Type ~= "ScriptObject" then
+		blizzDoc[name] = true
+	end
 end
 
 local nonBlizzDocumented = {}
