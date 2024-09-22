@@ -4,8 +4,8 @@
 -------------------------------------------------------------------
 -- Table library
 local tab = table
--- foreach = tab.foreach
--- foreachi = tab.foreachi
+foreach = tab.foreach
+foreachi = tab.foreachi
 getn = tab.getn
 tinsert = tab.insert
 tremove = tab.remove
