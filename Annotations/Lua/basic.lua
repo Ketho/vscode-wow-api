@@ -236,7 +236,7 @@ function select(index, ...) end
 ---
 ---[View documents](command:extension.lua.doc?["en-us/51/manual.html/pdf-setfenv"])
 ---
----@param f     async fun(...):...|integer
+---@param f     (async fun(...):...)|integer
 ---@param table table
 ---@return function
 function setfenv(f, table) end
