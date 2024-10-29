@@ -96,7 +96,9 @@ function UnitLevel(unit) end
 ```
 
 ### Developing
-Refer to [SETUP.md](SETUP.md) if you want to run the Lua scripts which generate the documentation.
+- Linux: Refer to [SETUP.md](SETUP.md) if you want to run the Lua scripts which generate the documentation.
+- Windows: I personally use LuaRocks on Windows but I like to shoot myself in the foot too. I should change this to use GitHub Actions or dev containers I suppose.
+  - https://ketho.github.io/2024/07/04/luarocks-on-windows/
 
 ## Acknowledgements
 - [Blizzard Entertainment](https://www.blizzard.com/)
