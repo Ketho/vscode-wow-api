@@ -3,7 +3,7 @@ local Path = require "path"
 local Util = require("LuaScripts.Util.Util")
 local Mitsuha = require("LuaScripts.Mitsuha.MitsuhaMain")
 local patches = require("LuaScripts.WowDocLoader.Patches")
-require("LuaScripts.WowDocLoader.Fixes")
+local Fixes = require("LuaScripts.WowDocLoader.Fixes")
 local m = {}
 
 local API_DOC = "Blizzard_APIDocumentation"
@@ -60,6 +60,7 @@ end
 
 function m:main()
 	Util:MakeDir(GEN_PATH)
+	Fixes:Run()
 	require(Path.join(WowDocLoader_Path, "Compat"))
 	LoadAddon(Path.join(WowDocLoader_Path, API_DOC), API_DOC)
 
