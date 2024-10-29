@@ -449,6 +449,10 @@ function C_ArrowCalloutManager.SetWorldLootObjectCalloutFromGUID() end
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_ArrowCalloutManager.SwapWorldLootObjectCallout)
 function C_ArrowCalloutManager.SwapWorldLootObjectCallout() end
 
+---#nopage  
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_BarberShop.HasAlteredForm)
+function C_BarberShop.HasAlteredForm() end
+
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_BlackMarket.Close)
 function C_BlackMarket.Close() end
 
@@ -529,6 +533,10 @@ function C_BlackMarket.ItemPlaceBid(marketID, bid) end
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_BlackMarket.RequestItems)
 function C_BlackMarket.RequestItems() end
+
+---#invalidpage  
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_ChallengeMode.GetChallengeCompletionInfo)
+function C_ChallengeMode.GetChallengeCompletionInfo() end
 
 ---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_CharacterServices.ArePaidCharacterTransfersBetweenBnetAccountsEnabled)
@@ -611,12 +619,36 @@ function C_CharacterServices.SetAutomaticBoostCharacter() end
 function C_CharacterServicesPublic.ShouldSeeControlPopup() end
 
 ---#nopage  
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_ChatInfo.IsLoggingChat)
+function C_ChatInfo.IsLoggingChat() end
+
+---#nopage  
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_ChatInfo.IsLoggingCombat)
+function C_ChatInfo.IsLoggingCombat() end
+
+---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_ClassTrial.GetClassTrialLogoutTimeSeconds)
 function C_ClassTrial.GetClassTrialLogoutTimeSeconds() end
 
 ---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_ClassTrial.IsClassTrialCharacter)
 function C_ClassTrial.IsClassTrialCharacter() end
+
+---#nopage  
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_CurrencyInfo.DoesCurrentFilterRequireAccountCurrencyData)
+function C_CurrencyInfo.DoesCurrentFilterRequireAccountCurrencyData() end
+
+---#nopage  
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_CurrencyInfo.GetCurrencyFilter)
+function C_CurrencyInfo.GetCurrencyFilter() end
+
+---#nopage  
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_CurrencyInfo.SetCurrencyBackpackByID)
+function C_CurrencyInfo.SetCurrencyBackpackByID() end
+
+---#nopage  
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_CurrencyInfo.SetCurrencyFilter)
+function C_CurrencyInfo.SetCurrencyFilter() end
 
 ---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_Debug.DashboardIsEnabled)
@@ -654,6 +686,10 @@ function C_Debug.ToggleWindDebugMenu() end
 ---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_Debug.ViewInDebugWindow)
 function C_Debug.ViewInDebugWindow() end
+
+---#nopage  
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_DelvesUI.GetCurioLink)
+function C_DelvesUI.GetCurioLink() end
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_FunctionContainers.CreateCallback)
 ---@param func function
@@ -1576,6 +1612,14 @@ function C_Garrison.UpgradeBuilding(plotInstanceID) end
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_Garrison.UpgradeGarrison)
 function C_Garrison.UpgradeGarrison(followerType) end
 
+---#nopage  
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_Glue.IsFirstLoadThisSession)
+function C_Glue.IsFirstLoadThisSession() end
+
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_Glue.IsOnGlueScreen)
+---@return boolean isOnGlueScreen
+function C_Glue.IsOnGlueScreen() end
+
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_Heirloom.CanHeirloomUpgradeFromPending)
 ---@param itemID number
 ---@return boolean canUpgrade
@@ -1880,6 +1924,26 @@ function C_LFGList.SetApplicantMemberRole(applicantID, memberIndex, role) end
 ---@param selectedPlaystyle? number
 ---@param isCrossFaction boolean?
 function C_LFGList.UpdateListing(activityID, itemLevel, honorLevel, autoAccept, privateGroup, questID, mythicPlusRating, pvpRating, selectedPlaystyle, isCrossFaction) end
+
+---#nopage  
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_Macro.GetMacroName)
+function C_Macro.GetMacroName() end
+
+---#nopage  
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_Macro.GetSelectedMacroIcon)
+function C_Macro.GetSelectedMacroIcon() end
+
+---#invalidpage  
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_MerchantFrame.GetItemInfo)
+function C_MerchantFrame.GetItemInfo() end
+
+---#nopage  
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_Minimap.ClearMinimapInsetInfo)
+function C_Minimap.ClearMinimapInsetInfo() end
+
+---#nopage  
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_Minimap.SetMinimapInsetInfo)
+function C_Minimap.SetMinimapInsetInfo() end
 
 ---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_NamePlate.GetNamePlateEnemyClickThrough)
@@ -2689,6 +2753,19 @@ function C_SharedCharacterServices.SetExpansionTrialPopupSeen(expansion_id) end
 function C_SharedCharacterServices.SetPromotionalPopupSeen(seen) end
 
 ---#nopage  
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_SocialRestrictions.CanReceiveChat)
+function C_SocialRestrictions.CanReceiveChat() end
+
+---#nopage  
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_SocialRestrictions.CanSendChat)
+function C_SocialRestrictions.CanSendChat() end
+
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_SpecializationInfo.GetNumSpecializationsForClassID)
+---@param specID number
+---@return number specCount
+function C_SpecializationInfo.GetNumSpecializationsForClassID(specID) end
+
+---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_SpectatingUI.GetSpectateTargetInfo)
 function C_SpectatingUI.GetSpectateTargetInfo() end
 
@@ -2731,6 +2808,10 @@ function C_TalkingHead.IsCurrentTalkingHeadIgnored() end
 ---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_TalkingHead.SetConversationsDeferred)
 function C_TalkingHead.SetConversationsDeferred(deferred) end
+
+---#invalidpage  
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_TaskQuest.GetQuestsOnMap)
+function C_TaskQuest.GetQuestsOnMap() end
 
 ---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_ToyBox.ForceToyRefilter)
@@ -3077,6 +3158,10 @@ function C_TradeSkillUI.SetRecipeSourceTypeFilter(sourceType, filtered) end
 ---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_TradeSkillUI.StopRecipeRepeat)
 function C_TradeSkillUI.StopRecipeRepeat() end
+
+---#nopage  
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_TransmogSets.GetValidClassForSet)
+function C_TransmogSets.GetValidClassForSet() end
 
 ---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_Trophy.MonumentChangeAppearanceToTrophyID)
@@ -3550,6 +3635,10 @@ function ChannelUnmoderator(channelName, playerName) end
 function CheckInbox() end
 
 ---#nopage  
+---[Documentation](https://warcraft.wiki.gg/wiki/API_ClassicExpansionAtMost)
+function ClassicExpansionAtMost() end
+
+---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_ClearAchievementComparisonUnit)
 function ClearAchievementComparisonUnit() end
 
@@ -3628,12 +3717,12 @@ function ClickVoidStorageSlot(slotIndex, isRightClick) end
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_ClickVoidTransferDepositSlot)
 ---@param slotIndex number
----@param isRightClick boolean
+---@param isRightClick? boolean
 function ClickVoidTransferDepositSlot(slotIndex, isRightClick) end
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_ClickVoidTransferWithdrawalSlot)
 ---@param slotIndex number
----@param isRightClick boolean
+---@param isRightClick? boolean
 function ClickVoidTransferWithdrawalSlot(slotIndex, isRightClick) end
 
 ---#nopage  
@@ -5980,20 +6069,6 @@ function GetMerchantItemCostItem(index, itemIndex) end
 ---@param index number
 ---@return number itemID
 function GetMerchantItemID(index) end
-
----[Documentation](https://warcraft.wiki.gg/wiki/API_GetMerchantItemInfo)
----@param index number
----@return string name
----@return fileID texture
----@return number price
----@return number quantity
----@return number numAvailable
----@return boolean isPurchasable
----@return boolean isUsable
----@return boolean extendedCost
----@return number? currencyID
----@return number? spellID
-function GetMerchantItemInfo(index) end
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_GetMerchantItemLink)
 ---@param index number

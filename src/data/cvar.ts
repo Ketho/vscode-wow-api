@@ -225,6 +225,18 @@ export const data: CVarInterface = {
 		category: 7,
 		help: "Sound volume (0.0 to 1.0)",
 	},
+	chromaeffectsenable: {
+		name: "ChromaEffectsEnable",
+		default: "1",
+		category: 5,
+		help: "Enable chroma effects on supported peripherals",
+	},
+	chromaeffectsfactioncolor: {
+		name: "ChromaEffectsFactionColor",
+		default: "1",
+		category: 5,
+		help: "Enable setting chroma base layer color to match current faction",
+	},
 	clientcastdebug: {
 		name: "ClientCastDebug",
 		default: "0",
@@ -2036,7 +2048,7 @@ export const data: CVarInterface = {
 	},
 	turnspeed: {
 		name: "TurnSpeed",
-		default: "180",
+		default: "180.000000",
 		category: 5,
 		help: "Set the keyboard turn rate in degrees per second; capped by the server",
 	},
@@ -2770,6 +2782,13 @@ export const data: CVarInterface = {
 		category: 4,
 		scope: "Account",
 		help: "Stores whether to include reagents when auto depositing items into your bank",
+	},
+	bankconfirmtabcleanup: {
+		name: "bankConfirmTabCleanUp",
+		default: "1",
+		category: 4,
+		scope: "Character",
+		help: "Stores whether to show a confirmation dialog when you click the button to auto clean up your bank tabs",
 	},
 	blockchannelinvites: {
 		name: "blockChannelInvites",
@@ -4741,12 +4760,6 @@ export const data: CVarInterface = {
 		scope: "Account",
 		help: "Stores the IDs of headers that should be collapsed by default in the Reputation Panel",
 	},
-	collapsedwarbandgroups: {
-		name: "collapsedWarbandGroups",
-		default: "",
-		category: 4,
-		help: "Stores the IDs of which warband groups are collapsed.",
-	},
 	colorchatnamesbyclass: {
 		name: "colorChatNamesByClass",
 		default: "0",
@@ -5213,6 +5226,13 @@ export const data: CVarInterface = {
 		default: "1",
 		category: 4,
 		help: "Controls whether the upgrade panel is expanded or collapsed.",
+	},
+	expandwarbandcharacterlist: {
+		name: "expandWarbandCharacterList",
+		default: "1",
+		category: 4,
+		scope: "Character",
+		help: "Stores if the warband character list is expanded or collapsed.",
 	},
 	farclip: {
 		name: "farclip",
@@ -6511,6 +6531,11 @@ export const data: CVarInterface = {
 		category: 4,
 		scope: "Account",
 		help: "Stores whether to show the quest blobs on the minimap.",
+	},
+	minimaptrackedinfov2: {
+		name: "minimapTrackedInfov2",
+		default: "",
+		category: 5,
 	},
 	minimaptrackedinfov3: {
 		name: "minimapTrackedInfov3",
@@ -7910,7 +7935,7 @@ export const data: CVarInterface = {
 		default: "0",
 		category: 4,
 		scope: "Character",
-		help: "Seen the alert indicating chat has been disabled by default. (UK AADC)",
+		help: "Seen the alert indicating chat has been disabled by default. (UK and CA AADC)",
 	},
 	seentimerunningfirstloginpopup: {
 		name: "seenTimerunningFirstLoginPopup",
@@ -9036,6 +9061,12 @@ export const data: CVarInterface = {
 		default: "",
 		category: 5,
 	},
+	usehighrestextures: {
+		name: "useHighResTextures",
+		default: "1",
+		category: 4,
+		help: "Prefer upscaled versions of texture assets when available",
+	},
 	useipv6: {
 		name: "useIPv6",
 		default: "0",
@@ -9141,7 +9172,7 @@ export const data: CVarInterface = {
 	},
 	vrsvalarlpusecornersampling: {
 		name: "vrsValarLPUseCornerSampling",
-		default: "1",
+		default: "0",
 		category: 1,
 		help: "Use corner sampling for VALAR Low Power",
 	},

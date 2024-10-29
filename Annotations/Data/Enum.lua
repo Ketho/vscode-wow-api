@@ -12,6 +12,7 @@ Enum.AccountCurrencyTransferResult = {
 	NoValidSourceCharacter = 6,
 	ServerError = 7,
 	CannotUseCurrency = 8,
+	TransactionInProgress = 9,
 }
 
 ---@enum Enum.AccountData
@@ -165,6 +166,7 @@ Enum.AccountTransType = {
 	BitVectors = 51,
 	CombinedQuestLog = 52,
 	PlayerDataElements = 53,
+	CharacterDataMerge = 54,
 }
 
 ---@enum Enum.ActionBarOrientation
@@ -410,6 +412,7 @@ Enum.BagFlag = {
 	LookInAccountBankOnly = 0x2000000,
 	HasRefund = 0x4000000,
 	SkipValidCountCheck = 0x8000000,
+	AllowSoulboundItemInAccountBank = 0x10000000,
 }
 
 ---@enum Enum.BagIndex
@@ -1842,6 +1845,13 @@ Enum.CurrencyDestroyReason = {
 	AccountTransfer = 14,
 }
 
+---@enum Enum.CurrencyFilterType
+Enum.CurrencyFilterType = {
+	None = 0,
+	DiscoveredOnly = 1,
+	DiscoveredAndAllAccountTransferable = 2,
+}
+
 ---@enum Enum.CurrencyFlags
 Enum.CurrencyFlags = {
 	CurrencyTradable = 0x1,
@@ -1875,7 +1885,7 @@ Enum.CurrencyFlags = {
 	CurrencyIsAllianceOnly = 0x10000000,
 	CurrencyIsHordeOnly = 0x20000000,
 	CurrencyLimitWarmodeBonusOncePerTooltip = 0x40000000,
-	DeprecatedCurrencyFlag = 0x80000000,
+	CurrencyUsesLedgerBalance = 0x80000000,
 }
 
 ---@enum Enum.CurrencyFlagsB
@@ -2644,6 +2654,8 @@ Enum.GameRule = {
 	WoWLabsPlaceholder2 = 88,
 	WoWLabsPlaceholder3 = 89,
 	WoWLabsPlaceholder4 = 90,
+	VanillaAccountMailInstant = 91,
+	ClearMailOnRealmTransfer = 92,
 }
 
 ---@enum Enum.GameRuleFlags
@@ -3006,6 +3018,12 @@ Enum.HolidayFlags = {
 	BeginEventOnlyOnStageChange = 0x40,
 }
 
+---@enum Enum.IconAndTextShiftTextType
+Enum.IconAndTextShiftTextType = {
+	None = 0,
+	ShiftText = 1,
+}
+
 ---@enum Enum.IconAndTextWidgetState
 Enum.IconAndTextWidgetState = {
 	Hidden = 0,
@@ -3204,7 +3222,7 @@ Enum.ItemCreationContext = {
 	WorldQuest_12 = 54,
 	WorldQuest_13 = 55,
 	PvPRankedJackpot = 56,
-	TournamentRealm = 57,
+	TournamentRealm_1 = 57,
 	Relinquished = 58,
 	LegendaryForge = 59,
 	QuestBonusLoot = 60,
@@ -3256,6 +3274,62 @@ Enum.ItemCreationContext = {
 	Delves_2 = 106,
 	Delves_3 = 107,
 	DelvesJackpot = 108,
+	DelvesKey_1 = 109,
+	DelvesKey_2 = 110,
+	DelvesKey_3 = 111,
+	DelvesKey_4 = 112,
+	DelvesKey_5 = 113,
+	DelvesKey_6 = 114,
+	DelvesKey_7 = 115,
+	DelvesKey_8 = 116,
+	DelvesBounty_1 = 117,
+	DelvesBounty_2 = 118,
+	DelvesBounty_3 = 119,
+	DelvesBounty_4 = 120,
+	DelvesBounty_5 = 121,
+	DelvesBounty_6 = 122,
+	DelvesBounty_7 = 123,
+	DelvesBounty_8 = 124,
+	DelvesLevelUp_1 = 125,
+	DelvesLevelUp_2 = 126,
+	DelvesLevelUp_3 = 127,
+	DelvesLevelUp_4 = 128,
+	DelvesBonus_1 = 129,
+	DelvesBonus_2 = 130,
+	DelvesBonus_3 = 131,
+	DelvesBonus_4 = 132,
+	DelvesBonus_5 = 133,
+	DelvesBonus_6 = 134,
+	DelvesBonus_7 = 135,
+	DelvesBonus_8 = 136,
+	DelvesBonus_9 = 137,
+	DelvesBonus_10 = 138,
+	DungeonBonus_1 = 139,
+	DungeonBonus_2 = 140,
+	DungeonBonus_3 = 141,
+	DungeonBonus_4 = 142,
+	DungeonBonus_5 = 143,
+	DungeonBonus_6 = 144,
+	DungeonBonus_7 = 145,
+	DungeonBonus_8 = 146,
+	DungeonBonus_9 = 147,
+	DungeonBonus_10 = 148,
+	RaidBonus_1 = 149,
+	RaidBonus_2 = 150,
+	RaidBonus_3 = 151,
+	RaidBonus_4 = 152,
+	RaidBonus_5 = 153,
+	RaidBonus_6 = 154,
+	RaidBonus_7 = 155,
+	RaidBonus_8 = 156,
+	RaidBonus_9 = 157,
+	RaidBonus_10 = 158,
+	DungeonHardMode_1 = 159,
+	DungeonHardMode_2 = 160,
+	DungeonHardMode_3 = 161,
+	TournamentRealm_2 = 162,
+	TournamentRealm_3 = 163,
+	TournamentRealm_4 = 164,
 }
 
 ---@enum Enum.ItemDisplayTextDisplayStyle
@@ -4523,8 +4597,8 @@ Enum.PowerType = {
 	Maelstrom = 11,
 	Chi = 12,
 	Insanity = 13,
-	Obsolete = 14,
-	Obsolete2 = 15,
+	BurningEmbers = 14,
+	DemonicFury = 15,
 	ArcaneCharges = 16,
 	Fury = 17,
 	Pain = 18,
@@ -4536,6 +4610,9 @@ Enum.PowerType = {
 	AlternateEncounter = 24,
 	AlternateMount = 25,
 	Balance = 26,
+	Happiness = 27,
+	ShadowOrbs = 28,
+	RuneChromatic = 29,
 }
 
 ---@enum Enum.PowerTypeSign
@@ -5026,6 +5103,22 @@ Enum.RuneforgePowerState = {
 	Invalid = 2,
 }
 
+---@enum Enum.ScreenLocationType
+Enum.ScreenLocationType = {
+	Center = 0,
+	Left = 1,
+	Right = 2,
+	Top = 3,
+	Bottom = 4,
+	TopLeft = 5,
+	TopRight = 6,
+	LeftOutside = 7,
+	RightOutside = 8,
+	LeftRight = 9,
+	TopBottom = 10,
+	LeftRightOutside = 11,
+}
+
 ---@enum Enum.ScriptedAnimationBehavior
 Enum.ScriptedAnimationBehavior = {
 	None = 0,
@@ -5314,7 +5407,7 @@ Enum.SubcontainerType = {
 	Bankbag = 3,
 	Mail = 4,
 	Auction = 5,
-	KeyringObsolete = 6,
+	Keyring = 6,
 	GuildBank0 = 7,
 	GuildBank1 = 8,
 	GuildBank2 = 9,
@@ -5706,6 +5799,7 @@ Enum.TraitPointsOperationType = {
 Enum.TraitSystemFlag = {
 	AllowMultipleLoadoutsPerTree = 1,
 	ShowSpendConfirmation = 2,
+	AllowEditInCombat = 4,
 }
 
 ---@enum Enum.TraitTreeFlag
@@ -5755,8 +5849,8 @@ Enum.TransmogCollectionType = {
 	Paired = 29,
 }
 
----@enum Enum.TransmogIllisionFlags
-Enum.TransmogIllisionFlags = {
+---@enum Enum.TransmogIllusionFlags
+Enum.TransmogIllusionFlags = {
 	HideUntilCollected = 1,
 	PlayerConditionGrantsOnLogin = 2,
 }
@@ -6613,6 +6707,8 @@ Constants = {
 	DelvesConsts = {
 		BRANN_COMPANION_INFO_ID = 1,
 		DELVES_COMPANION_TRAIT_SYSTEM_ID = 6,
+		BRANN_MAX_LEVEL = 60,
+		BRANN_XP_FACTION_ID = 1203,
 		DELVES_COMPANION_TOOLTIP_WIDGET_SET_ID = 1331,
 		DELVES_MIN_PLAYER_LEVEL_CONTENT_TUNING_ID = 2677,
 		DELVES_NORMAL_KEY_CURRENCY_ID = 3028,
@@ -6665,6 +6761,10 @@ Constants = {
 		TRAIT_SYSTEM_ID = 1,
 		TREE_ID = 672,
 	},
+	PetConsts = {
+		PETNUMBER_INVALIDSLOT = -1,
+		MAX_SUMMONABLE_PETS = 25,
+	},
 	PetConsts_PostCata = {
 		NUM_PET_SLOTS_DEATHKNIGHT = 1,
 		NUM_PET_SLOTS_MAGE = 1,
@@ -6672,7 +6772,6 @@ Constants = {
 		MAX_SUMMONABLE_HUNTER_PETS = 5,
 		NUM_PET_SLOTS_THAT_NEED_LEARNED_SPELL = 5,
 		STABLED_PETS_FIRST_SLOT_INDEX = 5,
-		MAX_SUMMONABLE_PETS = 25,
 		NUM_PET_SLOTS_WARLOCK = 25,
 		MAX_STABLE_SLOTS = 200,
 		MAX_NUM_PET_SLOTS = 205,
@@ -6687,7 +6786,6 @@ Constants = {
 		MAX_SUMMONABLE_HUNTER_PETS = 5,
 		STABLED_PETS_FIRST_SLOT_INDEX = 5,
 		MAX_NUM_PET_SLOTS = 25,
-		MAX_SUMMONABLE_PETS = 25,
 		NUM_PET_SLOTS_WARLOCK = 25,
 		NUM_PET_SLOTS_HUNTER = 205,
 	},
@@ -6700,7 +6798,6 @@ Constants = {
 		MAX_SUMMONABLE_HUNTER_PETS = 5,
 		STABLED_PETS_FIRST_SLOT_INDEX = 5,
 		MAX_NUM_PET_SLOTS = 25,
-		MAX_SUMMONABLE_PETS = 25,
 		NUM_PET_SLOTS_WARLOCK = 25,
 		NUM_PET_SLOTS_HUNTER = 205,
 	},
