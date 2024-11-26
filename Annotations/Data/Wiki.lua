@@ -3543,7 +3543,7 @@ function CancelTradeAccept() end
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_CancelUnitBuff)
 ---@param unit UnitToken
 ---@param buffIndex number
----@param filter string
+---@param filter string?
 function CancelUnitBuff(unit, buffIndex, filter) end
 
 ---#nopage  
