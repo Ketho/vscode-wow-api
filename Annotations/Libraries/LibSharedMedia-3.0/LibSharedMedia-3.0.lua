@@ -26,7 +26,7 @@ LibSharedMedia.MediaType = {
 
 ---@param mediatype LibSharedMediaTypes
 ---@param key string
----@param data string
+---@param data string|number the data to associate with the handle; a filename or FileID
 ---@param langmask? number
 ---[Documentation](https://www.wowace.com/projects/libsharedmedia-3-0/pages/api-documentation/)
 function LibSharedMedia:Register(mediatype, key, data, langmask) end
