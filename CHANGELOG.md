@@ -1,5 +1,8 @@
 # Change Log
 
+## [0.17.7] - 2024-11-27
+- Update annotations for patch 11.0.5, 4.4.1, 1.15.5
+
 ## [0.17.6] - 2024-09-02
 - Update annotations from wiki and patch 11.0.2 (56421)
 
@@ -150,6 +153,7 @@ To avoid loading for Lua projects not related to World of Warcraft, all settings
 - PR [#123](https://github.com/Ketho/vscode-wow-api/pull/123) Make childGroups optional in AceConfig.OptionsTable
 - PR [#120](https://github.com/Ketho/vscode-wow-api/pull/120) Add definition for tostringall()
 
+[0.17.7]: https://github.com/Ketho/vscode-wow-api/releases/tag/0.17.7
 [0.17.6]: https://github.com/Ketho/vscode-wow-api/releases/tag/0.17.6
 [0.17.5]: https://github.com/Ketho/vscode-wow-api/releases/tag/0.17.5
 [0.17.4]: https://github.com/Ketho/vscode-wow-api/releases/tag/0.17.4

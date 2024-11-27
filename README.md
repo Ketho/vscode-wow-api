@@ -1,18 +1,11 @@
 ## WoW API for VS Code
 [![](https://img.shields.io/github/license/Ketho/vscode-wow-api)](https://opensource.org/licenses/MIT)
 [![](https://img.shields.io/github/v/release/Ketho/vscode-wow-api)](https://github.com/Ketho/vscode-wow-api/releases)
-[![](https://img.shields.io/badge/wow-11.0.2-yellow)](https://github.com/Gethe/wow-ui-source/tree/11.0.2)
+[![](https://img.shields.io/badge/mainline-11.0.5-yellow)](https://github.com/Ketho/BlizzardInterfaceResources/tree/11.0.5)
+[![](https://img.shields.io/badge/cata-4.4.1-yellow)](https://github.com/Ketho/BlizzardInterfaceResources/tree/4.4.1)
+[![](https://img.shields.io/badge/vanilla-1.15.5-yellow)](https://github.com/Ketho/BlizzardInterfaceResources/tree/1.15.5)
 
 Adds IntelliSense features for World of Warcraft API to VS Code. This is a third party extension for [LuaLS](https://marketplace.visualstudio.com/items?itemName=sumneko.lua) with [annotations](https://luals.github.io/wiki/annotations/).
-
-### Activation
-> [!IMPORTANT]  
-> This extension will only activate when either:
-> - A proper [.toc](https://warcraft.wiki.gg/wiki/TOC_format) file exists when the workspace is opened.
-> - The extension was previously loaded in the workspace.
-> - The "Activate WoW API extension" command is used.
-
-![](img/readme/activate.png)
 
 ### Features
 #### API
@@ -41,6 +34,16 @@ Adds IntelliSense features for World of Warcraft API to VS Code. This is a third
 Shows completion for GlobalStrings at >3 uppercase letters to declutter fuzzy search.
 
 ![](https://github.com/Ketho/vscode-wow-api/raw/master/img/readme/globalstring.gif)
+
+### Activation
+This extension will only activate when either:
+> - A proper [.toc](https://warcraft.wiki.gg/wiki/TOC_format) file exists when the workspace is opened.
+> - The extension was previously loaded in the workspace.
+> - The "Activate WoW API extension" command is used.
+
+![](img/readme/activate.png)
+
+Note that if the `Configuration Scope` setting is set to `User` instead of `Workspace` and the extension has loaded once, then it will simply always load for Lua files, just like the old behavior.
 
 ## AddOn namespace
 The [AddOn namespace](https://warcraft.wiki.gg/wiki/Using_the_AddOn_namespace) needs to be annotated with [@class](https://luals.github.io/wiki/annotations/#class) in each file. This way the language server knows about the shared table and also allows you to mutate it.
