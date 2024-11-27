@@ -4,7 +4,9 @@
 ---[Documentation](https://warcraft.wiki.gg/wiki/ChatThrottleLib)
 ChatThrottleLib = {}
 
----@param prio string BULK|NORMAL|ALERT
+---@alias ChatThrottleLib.prio "BULK"|"NORMAL"|"ALERT"
+
+---@param prio ChatThrottleLib.prio
 ---@param prefix string
 ---@param text string
 ---@param chattype string
@@ -16,7 +18,7 @@ ChatThrottleLib = {}
 ---[Documentation](https://warcraft.wiki.gg/wiki/ChatThrottleLib#ChatThrottleLib:SendChatMessage)
 function ChatThrottleLib:SendChatMessage(prio, prefix, text, chattype, languageID, destination, queueName, callbackFn, callbackArg) end
 
----@param prio string BULK|NORMAL|ALERT
+---@param prio ChatThrottleLib.prio
 ---@param prefix string
 ---@param text string
 ---@param chattype string
@@ -27,7 +29,7 @@ function ChatThrottleLib:SendChatMessage(prio, prefix, text, chattype, languageI
 ---[Documentation](https://warcraft.wiki.gg/wiki/ChatThrottleLib#ChatThrottleLib:SendAddonMessage)
 function ChatThrottleLib:SendAddonMessage(prio, prefix, text, chattype, target, queueName, callbackFn, callbackArg) end
 
----@param prio string BULK|NORMAL|ALERT
+---@param prio ChatThrottleLib.prio
 ---@param prefix string
 ---@param text string
 ---@param chattype string
@@ -37,7 +39,7 @@ function ChatThrottleLib:SendAddonMessage(prio, prefix, text, chattype, target, 
 ---@param callbackArg? any
 function ChatThrottleLib:SendAddonMessageLogged(prio, prefix, text, chattype, target, queueName, callbackFn, callbackArg) end
 
----@param prio string BULK|NORMAL|ALERT
+---@param prio ChatThrottleLib.prio
 ---@param prefix string
 ---@param text string
 ---@param chattype string must be WHISPER
