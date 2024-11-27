@@ -390,6 +390,7 @@ function C_UIWidgetManager.UnregisterUnitForWidgetUpdates(unitToken, isGuid) end
 ---@field tooltip string
 ---@field dynamicTooltip string
 ---@field tooltipLoc Enum.UIWidgetTooltipLocation
+---@field shiftTextType Enum.IconAndTextShiftTextType
 ---@field widgetSizeSetting number
 ---@field textureKit textureKit
 ---@field frameTextureKit textureKit

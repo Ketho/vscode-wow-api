@@ -31,6 +31,11 @@ function C_SpecializationInfo.GetClassIDFromSpecID(specID) end
 ---@return number? selectedTalentID
 function C_SpecializationInfo.GetInspectSelectedPvpTalent(inspectedUnit, talentIndex) end
 
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_SpecializationInfo.GetNumSpecializationsForClassID)
+---@param specID number
+---@return number specCount
+function C_SpecializationInfo.GetNumSpecializationsForClassID(specID) end
+
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_SpecializationInfo.GetPvpTalentAlertStatus)
 ---@return boolean hasUnspentSlot
 ---@return boolean hasNewTalent

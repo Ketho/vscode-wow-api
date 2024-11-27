@@ -1,6 +1,7 @@
 ---@meta _
 ---@alias FrameEvent string
 ---|"ACCOUNT_CHARACTER_CURRENCY_DATA_RECEIVED"
+---|"ACCOUNT_CVARS_LOADED"
 ---|"ACCOUNT_MONEY"
 ---|"ACHIEVEMENT_EARNED" # `achievementID, alreadyEarned`
 ---|"ACHIEVEMENT_PLAYER_NAME" # `achievementID`
@@ -39,6 +40,7 @@
 ---|"AJ_PVP_LFG_ACTION"
 ---|"AJ_PVP_RBG_ACTION"
 ---|"AJ_PVP_SKIRMISH_ACTION"
+---|"AJ_PVP_SPECIAL_BG_ACTION"
 ---|"AJ_QUEST_LOG_OPEN" # `questID, uiMapID`
 ---|"AJ_RAID_ACTION" # `lfgDungeonID`
 ---|"AJ_REFRESH_DISPLAY" # `newAdventureNotice`
@@ -230,6 +232,7 @@
 ---|"CHAT_COMBAT_MSG_ARENA_POINTS_GAIN" # `text, playerName, languageName, channelName, playerName2, specialFlags, zoneChannelID, channelIndex, channelBaseName, languageID, lineID, guid, bnSenderID, isMobile, isSubtitle, hideSenderInLetterbox, supressRaidIcons`
 ---|"CHAT_DISABLED_CHANGED" # `disabled`
 ---|"CHAT_DISABLED_CHANGE_FAILED" # `disabled`
+---|"CHAT_LOGGING_CHANGED" # `whichLog, isEnabled`
 ---|"CHAT_MSG_ACHIEVEMENT" # `text, playerName, languageName, channelName, playerName2, specialFlags, zoneChannelID, channelIndex, channelBaseName, languageID, lineID, guid, bnSenderID, isMobile, isSubtitle, hideSenderInLetterbox, supressRaidIcons`
 ---|"CHAT_MSG_ADDON" # `prefix, text, channel, sender, target, zoneChannelID, localID, name, instanceID`
 ---|"CHAT_MSG_ADDON_LOGGED" # `prefix, text, channel, sender, target, zoneChannelID, localID, name, instanceID`
@@ -440,7 +443,7 @@
 ---|"CRITERIA_EARNED" # `achievementID, description`
 ---|"CRITERIA_UPDATE"
 ---|"CURRENCY_DISPLAY_UPDATE" # `currencyType, quantity, quantityChange, quantityGainSource, destroyReason`
----|"CURRENCY_TRANSFER_FAILED"
+---|"CURRENCY_TRANSFER_FAILED" # `failureReason`
 ---|"CURRENCY_TRANSFER_LOG_UPDATE"
 ---|"CURRENT_SPELL_CAST_CHANGED" # `cancelledCast`
 ---|"CURSOR_CHANGED" # `isDefault, newCursorType, oldCursorType, oldCursorVirtualID`
@@ -1139,7 +1142,7 @@
 ---|"SPELL_ACTIVATION_OVERLAY_GLOW_HIDE" # `spellID`
 ---|"SPELL_ACTIVATION_OVERLAY_GLOW_SHOW" # `spellID`
 ---|"SPELL_ACTIVATION_OVERLAY_HIDE" # `spellID`
----|"SPELL_ACTIVATION_OVERLAY_SHOW" # `spellID, overlayFileDataID, locationName, scale, r, g, b`
+---|"SPELL_ACTIVATION_OVERLAY_SHOW" # `spellID, overlayFileDataID, locationType, scale, r, g, b`
 ---|"SPELL_CONFIRMATION_PROMPT" # `spellID, effectValue, message, duration, currencyTypesID, currencyCost, currentDifficulty`
 ---|"SPELL_CONFIRMATION_TIMEOUT" # `spellID, effectValue`
 ---|"SPELL_DATA_LOAD_RESULT" # `spellID, success`
@@ -1375,7 +1378,7 @@
 ---|"UPDATE_TRADESKILL_CAST_STOPPED" # `isScrapping`
 ---|"UPDATE_UI_WIDGET" # `widgetInfo`
 ---|"UPDATE_VEHICLE_ACTIONBAR"
----|"UPDATE_WEB_TICKET" # `hasTicket, numTickets, ticketStatus, caseIndex, waitTimeMinutes, waitMessage`
+---|"UPDATE_WEB_TICKET" # `hasTicket, numTickets, ticketStatus, caseIndex, waitTimeMinutes, waitMessage, caseTitle, caseDescription`
 ---|"USER_WAYPOINT_UPDATED"
 ---|"USE_BIND_CONFIRM"
 ---|"USE_COMBINED_BAGS_CHANGED" # `useCombinedBags`

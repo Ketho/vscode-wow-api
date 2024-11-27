@@ -1,11 +1,6 @@
 ---@meta _
 C_MajorFactions = {}
 
----[Documentation](https://warcraft.wiki.gg/wiki/API_C_MajorFactions.GetCovenantIDForMajorFaction)
----@param majorFactionID number
----@return number covenantID
-function C_MajorFactions.GetCovenantIDForMajorFaction(majorFactionID) end
-
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_MajorFactions.GetCurrentRenownLevel)
 ---@param majorFactionID number
 ---@return number level

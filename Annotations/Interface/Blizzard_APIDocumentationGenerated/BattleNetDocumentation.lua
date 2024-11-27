@@ -74,7 +74,6 @@ function C_BattleNet.GetGameAccountInfoByID(id) end
 ---@field characterLevel number?
 ---@field richPresence string?
 ---@field playerGuid WOWGUID?
----@field isWowMobile boolean
 ---@field canSummon boolean
 ---@field hasFocus boolean
 ---@field regionID number

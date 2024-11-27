@@ -106,6 +106,11 @@ function C_TransmogSets.GetUsableSets() end
 ---@return number numTotal
 function C_TransmogSets.GetValidBaseSetsCountsForCharacter() end
 
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_TransmogSets.GetValidClassForSet)
+---@param transmogSetID number
+---@return number? classID
+function C_TransmogSets.GetValidClassForSet(transmogSetID) end
+
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_TransmogSets.GetVariantSets)
 ---@param transmogSetID number
 ---@return TransmogSetInfo[] sets

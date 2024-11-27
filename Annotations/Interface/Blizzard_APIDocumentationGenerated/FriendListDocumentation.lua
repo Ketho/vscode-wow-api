@@ -149,7 +149,6 @@ function C_FriendList.SortWho(sorting) end
 ---@field dnd boolean
 ---@field afk boolean
 ---@field rafLinkType Enum.RafLinkType
----@field mobile boolean
 
 ---@class WhoInfo
 ---@field fullName string

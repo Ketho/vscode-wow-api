@@ -98,10 +98,6 @@ function C_MythicPlus.GetWeeklyChestRewardLevel() end
 ---@return boolean isMythicPlusActive
 function C_MythicPlus.IsMythicPlusActive() end
 
----[Documentation](https://warcraft.wiki.gg/wiki/API_C_MythicPlus.IsWeeklyRewardAvailable)
----@return boolean weeklyRewardAvailable
-function C_MythicPlus.IsWeeklyRewardAvailable() end
-
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_MythicPlus.RequestCurrentAffixes)
 function C_MythicPlus.RequestCurrentAffixes() end
 

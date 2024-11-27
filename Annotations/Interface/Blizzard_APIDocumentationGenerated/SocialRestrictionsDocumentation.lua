@@ -4,6 +4,18 @@ C_SocialRestrictions = {}
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_SocialRestrictions.AcknowledgeRegionalChatDisabled)
 function C_SocialRestrictions.AcknowledgeRegionalChatDisabled() end
 
+---Returns true if the player meets all conditions that allow them to receive chat messages.
+---
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_SocialRestrictions.CanReceiveChat)
+---@return boolean canReceiveChat
+function C_SocialRestrictions.CanReceiveChat() end
+
+---Returns true if the player meets all conditions that allow them to send chat messages.
+---
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_SocialRestrictions.CanSendChat)
+---@return boolean canSendChat
+function C_SocialRestrictions.CanSendChat() end
+
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_SocialRestrictions.IsChatDisabled)
 ---@return boolean disabled
 function C_SocialRestrictions.IsChatDisabled() end

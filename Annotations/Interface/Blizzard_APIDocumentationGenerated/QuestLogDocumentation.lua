@@ -215,7 +215,7 @@ function C_QuestLog.GetQuestWatchType(questID) end
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_QuestLog.GetQuestsOnMap)
 ---@param uiMapID number
----@return QuestOnMapInfo[] quests
+---@return QuestPOIMapInfo[] quests
 function C_QuestLog.GetQuestsOnMap(uiMapID) end
 
 ---Uses the selected quest if no questID is provided
@@ -512,13 +512,6 @@ function C_QuestLog.UpdateCampaignHeaders() end
 ---@field finished boolean
 ---@field numFulfilled number
 ---@field numRequired number
-
----@class QuestOnMapInfo
----@field questID number
----@field x number
----@field y number
----@field type number
----@field isMapIndicatorQuest boolean
 
 ---@class QuestTagInfo
 ---@field tagName string

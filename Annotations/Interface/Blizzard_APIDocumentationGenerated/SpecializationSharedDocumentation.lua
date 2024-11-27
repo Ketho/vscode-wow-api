@@ -1,9 +1,4 @@
 ---@meta _
----[Documentation](https://warcraft.wiki.gg/wiki/API_GetNumSpecializationsForClassID)
----@param specID number
----@return number specCount
-function GetNumSpecializationsForClassID(specID) end
-
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_GetSpecializationInfoForClassID)
 ---@param classID number
 ---@param index number

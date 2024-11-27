@@ -125,6 +125,7 @@ function C_TransmogCollection.GetCategoryForItem(itemModifiedAppearanceID) end
 ---@return boolean? canHaveIllusions Default = false
 ---@return boolean? canMainHand Default = false
 ---@return boolean? canOffHand Default = false
+---@return boolean? canRanged Default = false
 function C_TransmogCollection.GetCategoryInfo(category) end
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_TransmogCollection.GetCategoryTotal)

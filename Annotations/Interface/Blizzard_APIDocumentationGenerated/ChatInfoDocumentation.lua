@@ -114,6 +114,15 @@ function C_ChatInfo.IsChannelRegionalForChannelID(channelID) end
 ---@return boolean isCensored
 function C_ChatInfo.IsChatLineCensored(chatLine) end
 
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_ChatInfo.IsLoggingChat)
+---@return boolean enabled
+function C_ChatInfo.IsLoggingChat() end
+
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_ChatInfo.IsLoggingCombat)
+---@return boolean enabled
+---@return boolean advanced
+function C_ChatInfo.IsLoggingCombat() end
+
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_ChatInfo.IsPartyChannelType)
 ---@param channelType Enum.ChatChannelType
 ---@return boolean isPartyChannelType

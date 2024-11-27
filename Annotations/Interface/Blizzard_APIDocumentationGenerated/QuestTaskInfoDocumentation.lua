@@ -51,10 +51,10 @@ function C_TaskQuest.GetQuestTooltipUIWidgetSet(questID) end
 ---@return number uiMapID
 function C_TaskQuest.GetQuestZoneID(questID) end
 
----[Documentation](https://warcraft.wiki.gg/wiki/API_C_TaskQuest.GetQuestsForPlayerByMapID)
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_TaskQuest.GetQuestsOnMap)
 ---@param uiMapID number
----@return TaskPOIData[] taskPOIs
-function C_TaskQuest.GetQuestsForPlayerByMapID(uiMapID) end
+---@return QuestPOIMapInfo[] taskPOIs
+function C_TaskQuest.GetQuestsOnMap(uiMapID) end
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_TaskQuest.GetThreatQuests)
 ---@return number[] quests
@@ -68,16 +68,3 @@ function C_TaskQuest.IsActive(questID) end
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_TaskQuest.RequestPreloadRewardData)
 ---@param questID number
 function C_TaskQuest.RequestPreloadRewardData(questID) end
-
----@class TaskPOIData
----@field questId number
----@field x number
----@field y number
----@field inProgress boolean
----@field numObjectives number
----@field mapID number
----@field isQuestStart boolean
----@field isDaily boolean
----@field isCombatAllyQuest boolean
----@field isMeta boolean
----@field childDepth number?

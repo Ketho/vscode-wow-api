@@ -8,6 +8,9 @@ function C_Minimap.CanTrackBattlePets() end
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_Minimap.ClearAllTracking)
 function C_Minimap.ClearAllTracking() end
 
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_Minimap.ClearMinimapInsetInfo)
+function C_Minimap.ClearMinimapInsetInfo() end
+
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_Minimap.GetDefaultTrackingValue)
 ---@param filterType Enum.MinimapTrackingFilter
 ---@return boolean defaultValue
@@ -87,6 +90,12 @@ function C_Minimap.SetDrawGroundTextures(draw) end
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_Minimap.SetIgnoreRotateMinimap)
 ---@param ignore boolean
 function C_Minimap.SetIgnoreRotateMinimap(ignore) end
+
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_Minimap.SetMinimapInsetInfo)
+---@param minAngle number
+---@param maxAngle number
+---@param scalar number
+function C_Minimap.SetMinimapInsetInfo(minAngle, maxAngle, scalar) end
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_Minimap.SetTracking)
 ---@param index number

@@ -29,21 +29,9 @@ function C_ChallengeMode.GetActiveKeystoneInfo() end
 ---@return number filedataid
 function C_ChallengeMode.GetAffixInfo(affixID) end
 
----[Documentation](https://warcraft.wiki.gg/wiki/API_C_ChallengeMode.GetCompletionInfo)
----@return number mapChallengeModeID
----@return number level
----@return number time
----@return boolean onTime
----@return number keystoneUpgradeLevels
----@return boolean practiceRun
----@return number? oldOverallDungeonScore
----@return number? newOverallDungeonScore
----@return boolean IsMapRecord
----@return boolean IsAffixRecord
----@return number PrimaryAffix
----@return boolean isEligibleForScore
----@return ChallengeModeCompletionMemberInfo[] members
-function C_ChallengeMode.GetCompletionInfo() end
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_ChallengeMode.GetChallengeCompletionInfo)
+---@return ChallengeCompletionInfo info
+function C_ChallengeMode.GetChallengeCompletionInfo() end
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_ChallengeMode.GetDeathCount)
 ---@return number numDeaths
@@ -142,6 +130,20 @@ function C_ChallengeMode.SlotKeystone() end
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_ChallengeMode.StartChallengeMode)
 ---@return boolean success
 function C_ChallengeMode.StartChallengeMode() end
+
+---@class ChallengeCompletionInfo
+---@field mapChallengeModeID number? Default = 0
+---@field level number? Default = 0
+---@field time number? Default = 0
+---@field onTime boolean? Default = false
+---@field keystoneUpgradeLevels number? Default = 0
+---@field practiceRun boolean? Default = false
+---@field oldOverallDungeonScore number?
+---@field newOverallDungeonScore number?
+---@field isMapRecord boolean? Default = false
+---@field isAffixRecord boolean? Default = false
+---@field isEligibleForScore boolean? Default = false
+---@field members ChallengeModeCompletionMemberInfo[]
 
 ---@class ChallengeModeCompletionMemberInfo
 ---@field memberGUID WOWGUID

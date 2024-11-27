@@ -36,6 +36,10 @@ function C_BarberShop.GetCustomizationScope() end
 ---@return number? chrModelID
 function C_BarberShop.GetViewingChrModel() end
 
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_BarberShop.HasAlteredForm)
+---@return boolean hasAlteredForm
+function C_BarberShop.HasAlteredForm() end
+
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_BarberShop.HasAnyChanges)
 ---@return boolean hasChanges
 function C_BarberShop.HasAnyChanges() end

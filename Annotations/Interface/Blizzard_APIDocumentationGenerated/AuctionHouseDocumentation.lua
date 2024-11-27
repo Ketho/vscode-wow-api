@@ -374,9 +374,6 @@ function C_AuctionHouse.RefreshItemSearchResults(itemKey, minLevelFilter, maxLev
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_AuctionHouse.ReplicateItems)
 function C_AuctionHouse.ReplicateItems() end
 
----[Documentation](https://warcraft.wiki.gg/wiki/API_C_AuctionHouse.RequestFavorites)
-function C_AuctionHouse.RequestFavorites() end
-
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_AuctionHouse.RequestMoreBrowseResults)
 function C_AuctionHouse.RequestMoreBrowseResults() end
 

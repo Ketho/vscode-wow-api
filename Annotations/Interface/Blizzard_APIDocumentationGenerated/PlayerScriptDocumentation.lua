@@ -564,6 +564,8 @@ function PlayerCanTeleport() end
 ---@return number mainHandAttackPower
 ---@return number offHandAttackPower
 ---@return number rangedAttackPower
+---@return number baseAttackPower
+---@return number baseRangedAttackPower
 function PlayerEffectiveAttackPower() end
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_PlayerGetTimerunningSeasonID)
@@ -678,3 +680,10 @@ function ToggleSelfHighlight() end
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_ToggleSheath)
 function ToggleSheath() end
+
+---@class PlayerAttackPowerInfo
+---@field mainHandAttackPower number
+---@field offHandAttackPower number
+---@field rangedAttackPower number
+---@field baseAttackPower number
+---@field baseRangedAttackPower number

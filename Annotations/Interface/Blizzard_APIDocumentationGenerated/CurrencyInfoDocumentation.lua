@@ -7,6 +7,10 @@ C_CurrencyInfo = {}
 ---@return Enum.AccountCurrencyTransferResult? failureReason
 function C_CurrencyInfo.CanTransferCurrency(currencyID) end
 
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_CurrencyInfo.DoesCurrentFilterRequireAccountCurrencyData)
+---@return boolean doesCurrentFilterRequireAccountCurrencyData
+function C_CurrencyInfo.DoesCurrentFilterRequireAccountCurrencyData() end
+
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_CurrencyInfo.DoesWarModeBonusApply)
 ---@param currencyID number
 ---@return boolean? warModeApplies
@@ -75,6 +79,10 @@ function C_CurrencyInfo.GetCurrencyContainerInfo(currencyType, quantity) end
 ---@param type number
 ---@return string description
 function C_CurrencyInfo.GetCurrencyDescription(type) end
+
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_CurrencyInfo.GetCurrencyFilter)
+---@return Enum.CurrencyFilterType filterType
+function C_CurrencyInfo.GetCurrencyFilter() end
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_CurrencyInfo.GetCurrencyIDFromLink)
 ---@param currencyLink string
@@ -183,6 +191,15 @@ function C_CurrencyInfo.RequestCurrencyFromAccountCharacter(sourceCharacterGUID,
 ---@param index number
 ---@param backpack boolean
 function C_CurrencyInfo.SetCurrencyBackpack(index, backpack) end
+
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_CurrencyInfo.SetCurrencyBackpackByID)
+---@param currencyType number
+---@param backpack boolean
+function C_CurrencyInfo.SetCurrencyBackpackByID(currencyType, backpack) end
+
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_CurrencyInfo.SetCurrencyFilter)
+---@param filterType Enum.CurrencyFilterType
+function C_CurrencyInfo.SetCurrencyFilter(filterType) end
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_CurrencyInfo.SetCurrencyUnused)
 ---@param index number
