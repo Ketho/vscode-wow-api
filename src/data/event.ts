@@ -14,6 +14,7 @@ interface EventInterface {
 
 export const data: EventInterface = {
 	ACCOUNT_CHARACTER_CURRENCY_DATA_RECEIVED: {},
+	ACCOUNT_CVARS_LOADED: {},
 	ACCOUNT_MONEY: {},
 	ACHIEVEMENT_EARNED: {
 		Payload: [
@@ -125,6 +126,7 @@ export const data: EventInterface = {
 	AJ_PVP_LFG_ACTION: {},
 	AJ_PVP_RBG_ACTION: {},
 	AJ_PVP_SKIRMISH_ACTION: {},
+	AJ_PVP_SPECIAL_BG_ACTION: {},
 	AJ_QUEST_LOG_OPEN: {
 		Payload: [
 			{Name: "questID", Type: "number"},
@@ -788,6 +790,12 @@ export const data: EventInterface = {
 	CHAT_DISABLED_CHANGE_FAILED: {
 		Payload: [
 			{Name: "disabled", Type: "boolean"},
+		],
+	},
+	CHAT_LOGGING_CHANGED: {
+		Payload: [
+			{Name: "whichLog", Type: "number"},
+			{Name: "isEnabled", Type: "boolean"},
 		],
 	},
 	CHAT_MSG_ACHIEVEMENT: {
@@ -2743,7 +2751,11 @@ export const data: EventInterface = {
 			{Name: "destroyReason", Type: "number", Nilable: true},
 		],
 	},
-	CURRENCY_TRANSFER_FAILED: {},
+	CURRENCY_TRANSFER_FAILED: {
+		Payload: [
+			{Name: "failureReason", Type: "AccountCurrencyTransferResult"},
+		],
+	},
 	CURRENCY_TRANSFER_LOG_UPDATE: {},
 	CURRENT_SPELL_CAST_CHANGED: {
 		Payload: [
@@ -5170,7 +5182,7 @@ export const data: EventInterface = {
 		Payload: [
 			{Name: "spellID", Type: "number"},
 			{Name: "overlayFileDataID", Type: "number"},
-			{Name: "locationName", Type: "string"},
+			{Name: "locationType", Type: "ScreenLocationType"},
 			{Name: "scale", Type: "number"},
 			{Name: "r", Type: "number"},
 			{Name: "g", Type: "number"},
@@ -6120,6 +6132,8 @@ export const data: EventInterface = {
 			{Name: "caseIndex", Type: "number", Nilable: true},
 			{Name: "waitTimeMinutes", Type: "number", Nilable: true},
 			{Name: "waitMessage", Type: "string", Nilable: true},
+			{Name: "caseTitle", Type: "string", Nilable: true},
+			{Name: "caseDescription", Type: "string", Nilable: true},
 		],
 	},
 	USER_WAYPOINT_UPDATED: {},
