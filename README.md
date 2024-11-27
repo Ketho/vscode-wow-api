@@ -37,9 +37,9 @@ Shows completion for GlobalStrings at >3 uppercase letters to declutter fuzzy se
 
 ### Activation
 This extension will only activate when either:
-> - A proper [.toc](https://warcraft.wiki.gg/wiki/TOC_format) file exists when the workspace is opened.
-> - The extension was previously loaded in the workspace.
-> - The "Activate WoW API extension" command is used.
+- A proper [.toc](https://warcraft.wiki.gg/wiki/TOC_format) file exists when the workspace is opened.
+- The extension was previously loaded in the workspace.
+- The "Activate WoW API extension" command is used.
 
 ![](img/readme/activate.png)
 
