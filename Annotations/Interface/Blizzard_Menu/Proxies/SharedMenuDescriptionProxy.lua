@@ -1,5 +1,5 @@
 ---@meta _
----@
+
 ---@class SharedMenuDescriptionProxy
 local SharedMenuDescriptionProxy = {}
 
