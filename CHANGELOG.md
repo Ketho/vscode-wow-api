@@ -1,5 +1,8 @@
 # Change Log
 
+## [0.17.9] - 2024-11-28
+- Added Blizzard_Menu annotations (by Numy)
+
 ## [0.17.8] - 2024-11-27
 - Added ChatThrottleLib
 
@@ -156,6 +159,7 @@ To avoid loading for Lua projects not related to World of Warcraft, all settings
 - PR [#123](https://github.com/Ketho/vscode-wow-api/pull/123) Make childGroups optional in AceConfig.OptionsTable
 - PR [#120](https://github.com/Ketho/vscode-wow-api/pull/120) Add definition for tostringall()
 
+[0.17.9]: https://github.com/Ketho/vscode-wow-api/releases/tag/0.17.9
 [0.17.8]: https://github.com/Ketho/vscode-wow-api/releases/tag/0.17.8
 [0.17.7]: https://github.com/Ketho/vscode-wow-api/releases/tag/0.17.7
 [0.17.6]: https://github.com/Ketho/vscode-wow-api/releases/tag/0.17.6

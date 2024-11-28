@@ -112,9 +112,9 @@ function UnitLevel(unit) end
 - [Wowprogramming](https://wowprogramming.com/) - [jnwhiteh](https://twitter.com/jnwhiteh)
 - [WoW.tools](https://wow.tools/) - [Marlamin](https://github.com/Marlamin)  
 &nbsp;
-- **Annotations**: [Kozoaku](https://github.com/Kozoaku), [Oppzippy](https://github.com/Oppzippy), [Snakybo](https://github.com/Snakybo), [Torhal](https://github.com/Torhal), [Wutname](https://github.com/Wutname1)
+- **Annotations**: [Kozoaku](https://github.com/Kozoaku), [Numy](https://github.com/Numynum), [Oppzippy](https://github.com/Oppzippy), [Snakybo](https://github.com/Snakybo), [Torhal](https://github.com/Torhal), [Wutname](https://github.com/Wutname1)
 - **FrameXML**: [funkydude](https://github.com/funkydude), [Gethe](https://github.com/Gethe), [Tekkub](https://github.com/tekkub)
-- **LuaLS**: [Sumneko](https://github.com/Sumneko)
+- **LuaLS**: [Sumneko](https://github.com/Sumneko), [carsakiller](https://github.com/carsakiller)
 - **VS Code extension**: [ChrisKader](https://github.com/ChrisKader), [DakJaniels](https://github.com/DakJaniels), [thatnerdjosh](https://github.com/thatnerdjosh), [Yuyuli](https://www.curseforge.com/members/yuyuli)
 - **Wiki**: [DahkCeles](https://www.curseforge.com/members/dahkceles/projects), [Foxlit](https://www.townlong-yak.com/), [Iriel](https://warcraft.wiki.gg/wiki/Iriel), [Xelnath](https://warcraft.wiki.gg/wiki/Alexander_Brazie)  
 &nbsp;
