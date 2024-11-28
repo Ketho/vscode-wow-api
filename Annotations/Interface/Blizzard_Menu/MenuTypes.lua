@@ -1,6 +1,6 @@
 ---@meta _
 
----@alias MenuResponder fun(data: any, menuInputData: MenuInputData, menu: MenuProxy): MenuResponse # data = element:GetData()
+---@alias MenuResponder fun(data: any, menuInputData: MenuInputData, menu: MenuProxy): MenuResponse? # data = element:GetData()
 
 ---@alias MenuDescriptionInitializer fun(frame: Frame, elementDescription: ElementMenuDescriptionProxy, menu: MenuProxy)
 
