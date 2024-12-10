@@ -9,8 +9,13 @@ TransmogPendingInfoMixin = {}
 ---@param category number
 function TransmogPendingInfoMixin:Init(pendingType, transmogID, category) end
 
+---@class TransmogLocationType
+---@field slotID? InventorySlots
+---@field type? Enum.TransmogType
+---@field modification? Enum.TransmogModification
+
 ---[Documentation](https://warcraft.wiki.gg/wiki/TransmogLocationMixin)
----@class TransmogLocationMixin
+---@class TransmogLocationMixin : TransmogLocationType
 TransmogLocationMixin = {}
 
 ---@param slotID number

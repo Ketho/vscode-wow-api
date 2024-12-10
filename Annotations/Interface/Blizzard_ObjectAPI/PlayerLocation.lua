@@ -1,8 +1,13 @@
 ---@meta _
 PlayerLocation = {}
 
+---@class PlayerLocationType
+---@field unit? string
+---@field chatLineID? number
+---@field guid? string
+
 ---[Documentation](https://warcraft.wiki.gg/wiki/PlayerLocationMixin)
----@class PlayerLocationMixin
+---@class PlayerLocationMixin : PlayerLocationType
 PlayerLocationMixin = {}
 
 ---@param guid string

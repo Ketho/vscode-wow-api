@@ -1,7 +1,12 @@
 ---@meta _
 ItemLocation = {}
 
----@class ItemLocationMixin
+---@class ItemLocationType
+---@field equipmentSlotIndex? number
+---@field bagID? number
+---@field slotIndex? number
+
+---@class ItemLocationMixin : ItemLocationType
 ---[Documentation](https://warcraft.wiki.gg/wiki/ItemLocationMixin)
 ItemLocationMixin = {}
 

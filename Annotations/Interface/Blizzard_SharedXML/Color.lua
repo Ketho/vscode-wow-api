@@ -1,10 +1,13 @@
 ---@meta _
+
+---@class ColorType
+---@field r number
+---@field g number
+---@field b number
+---@field a? number
+
 ---[FrameXML](https://www.townlong-yak.com/framexml/go/ColorMixin)
----@class ColorMixin
----@field r number|nil
----@field g number|nil
----@field b number|nil
----@field a number|nil
+---@class ColorMixin : ColorType
 ColorMixin = {}
 
 ---[FrameXML](https://www.townlong-yak.com/framexml/go/CreateColor)
