@@ -2,7 +2,7 @@
 PlayerLocation = {}
 
 ---@class PlayerLocationType
----@field unit? string
+---@field unit? UnitId
 ---@field chatLineID? number
 ---@field guid? string
 
