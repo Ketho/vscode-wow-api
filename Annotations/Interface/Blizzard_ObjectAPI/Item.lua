@@ -96,6 +96,9 @@ function ItemMixin:IsItemDataCached() end
 ---@return boolean
 function ItemMixin:IsDataEvictable() end
 
+---@return number
+function ItemMixin:GetStackCount() end
+
 --- Add a callback to be executed when item data is loaded, if the item data is already loaded then execute it immediately
 ---@param callbackFunction function
 function ItemMixin:ContinueOnItemLoad(callbackFunction) end
