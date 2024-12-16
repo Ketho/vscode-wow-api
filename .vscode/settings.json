@@ -25,7 +25,8 @@
     },
     "Lua.diagnostics.disable": [
         "lowercase-global",
-        "need-check-nil"
+        "need-check-nil",
+        "missing-fields"
     ],
     "wowAPI.luals.defineKnownGlobals": false,
     "Lua.diagnostics.globals": [

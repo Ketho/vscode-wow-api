@@ -1,5 +1,8 @@
 # Change Log
 
+## [0.18.1] - 2024-12-16
+- [#174](https://github.com/Ketho/vscode-wow-api/issues/174) Added ItemRefTooltip
+
 ## [0.18.0] - 2024-12-10
 - Fixed PlayerLocation, ItemLocation and TransmogLocation types to not require the whole mixin
 
@@ -162,6 +165,7 @@ To avoid loading for Lua projects not related to World of Warcraft, all settings
 - PR [#123](https://github.com/Ketho/vscode-wow-api/pull/123) Make childGroups optional in AceConfig.OptionsTable
 - PR [#120](https://github.com/Ketho/vscode-wow-api/pull/120) Add definition for tostringall()
 
+[0.18.1]: https://github.com/Ketho/vscode-wow-api/releases/tag/0.18.1
 [0.18.0]: https://github.com/Ketho/vscode-wow-api/releases/tag/0.18.0
 [0.17.9]: https://github.com/Ketho/vscode-wow-api/releases/tag/0.17.9
 [0.17.8]: https://github.com/Ketho/vscode-wow-api/releases/tag/0.17.8
