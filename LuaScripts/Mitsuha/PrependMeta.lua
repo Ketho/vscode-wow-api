@@ -39,7 +39,7 @@ end
 local function PrependText(path)
     local contents = ReadFile(path)
 	-- dont overwrite files with that have a named meta
-    if not contents:find("---@meta") then
+    if not contents:find("---%s?@meta") then
 		print("rewriting", path)
         os.remove(path)
         WriteFile(path, "---@meta _\n"..contents)

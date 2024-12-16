@@ -1822,8 +1822,11 @@ function C_LFGList.GetRoleCheckInfo() end
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_LFGList.GetSearchResultEncounterInfo)
 function C_LFGList.GetSearchResultEncounterInfo(searchResultID) end
 
----#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_LFGList.GetSearchResultFriends)
+---@param searchResultID number
+---@return string[] bnetFriends
+---@return string[] charFriends
+---@return string[] guildMates
 function C_LFGList.GetSearchResultFriends(searchResultID) end
 
 ---#nopage  
