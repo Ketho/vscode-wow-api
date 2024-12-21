@@ -34,3 +34,5 @@ function CallbackRegistryMixin:GenerateCallbackEvents(events) end
 
 ---@return boolean
 function CallbackRegistryMixin.DoesFrameHaveEvent(frame, event) end
+
+function CallbackRegistryMixin:OnLoad() end
