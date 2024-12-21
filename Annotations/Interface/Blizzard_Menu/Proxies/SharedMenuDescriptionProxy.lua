@@ -105,6 +105,11 @@ function SharedMenuDescriptionProxy:AddInitializer(initializer, index) end
 ---@param initializer MenuDescriptionInitializer
 function SharedMenuDescriptionProxy:SetFinalInitializer(initializer) end
 
+---Registers a callback that will be executed when the MenuDescription's frame is cleaned up on hiding
+---Especially useful if you add customizations in the Initializer that aren't reset automatically
+---@param resetter fun(frame: Frame)
+function SharedMenuDescriptionProxy:AddResetter(resetter) end
+
 ---@see RootMenuDescriptionProxyMixin.GetTag
 ---@return string? tag
 ---@return any? contextData
