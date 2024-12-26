@@ -195,7 +195,7 @@ function string.rtgsub(s, pattern, repl, n) end
 ---@param delimiter string
 ---@param str string
 ---@param pieces? number
----@return ...
+---@return string ...
 function string.split(delimiter, str, pieces) end
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_strsplittable)
