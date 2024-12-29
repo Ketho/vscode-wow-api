@@ -3053,9 +3053,9 @@ function C_TradeSkillUI.SetOnlyShowFirstCraftRecipes() end
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_TradeSkillUI.SetOnlyShowMakeableRecipes)
 function C_TradeSkillUI.SetOnlyShowMakeableRecipes(onlyMakable) end
 
----#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_TradeSkillUI.SetOnlyShowSkillUpRecipes)
-function C_TradeSkillUI.SetOnlyShowSkillUpRecipes() end
+---@param flag boolean
+function C_TradeSkillUI.SetOnlyShowSkillUpRecipes(flag) end
 
 ---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_TradeSkillUI.SetRecipeCategoryFilter)
@@ -3069,9 +3069,9 @@ function C_TradeSkillUI.SetRecipeFavorite(recipeID, favorite) end
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_TradeSkillUI.SetRecipeItemLevelFilter)
 function C_TradeSkillUI.SetRecipeItemLevelFilter(minLevel, maxLevel) end
 
----#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_TradeSkillUI.SetRecipeItemNameFilter)
-function C_TradeSkillUI.SetRecipeItemNameFilter() end
+---@param text? string
+function C_TradeSkillUI.SetRecipeItemNameFilter(text) end
 
 ---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_TradeSkillUI.SetRecipeSourceTypeFilter)
@@ -3608,7 +3608,7 @@ function ClearTutorials() end
 function ClearVoidTransferDepositSlot(slotIndex) end
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_ClickSendMailItemButton)
----@param itemIndex number
+---@param itemIndex? number
 ---@param clearItem? boolean
 function ClickSendMailItemButton(itemIndex, clearItem) end
 
@@ -8683,9 +8683,10 @@ function RaidProfileExists(profile) end
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_RaidProfileHasUnsavedChanges)
 function RaidProfileHasUnsavedChanges() end
 
----#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_ReagentBankButtonIDToInvSlotID)
-function ReagentBankButtonIDToInvSlotID() end
+---@param buttonID number
+---@return number invSlot
+function ReagentBankButtonIDToInvSlotID(buttonID) end
 
 ---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_RedockChatWindows)
@@ -9302,9 +9303,9 @@ function SetSendMailCOD(amount) end
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_SetSendMailMoney)
 function SetSendMailMoney(amount) end
 
----#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_SetSendMailShowing)
-function SetSendMailShowing() end
+---@param shown boolean
+function SetSendMailShowing(shown) end
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_SetSpecialization)
 ---@param specIndex number
