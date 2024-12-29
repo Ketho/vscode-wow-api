@@ -367,4 +367,5 @@ function unpack(list, i, j) end
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_gcinfo)
 ---@return number memoryInUse
+---@nodiscard
 function gcinfo() end

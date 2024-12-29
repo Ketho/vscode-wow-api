@@ -305,6 +305,7 @@ function math.tanh(x) end
 ---@param lower? number
 ---@param upper? number
 ---@return number
+---@nodiscard
 function fastrandom(lower, upper) end
 
 return math

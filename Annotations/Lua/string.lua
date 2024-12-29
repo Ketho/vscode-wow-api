@@ -176,6 +176,7 @@ function string.upper(s) end
 ---@param delim string|number
 ---@param ... string|number
 ---@return string
+---@nodiscard
 function string.join(delim, ...) end
 
 ---string.gsub but for restricted tables
@@ -195,6 +196,7 @@ function string.rtgsub(s, pattern, repl, n) end
 ---@param str string
 ---@param pieces? number
 ---@return string ...
+---@nodiscard
 function string.split(delimiter, str, pieces) end
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_strsplittable)
@@ -202,33 +204,39 @@ function string.split(delimiter, str, pieces) end
 ---@param str string
 ---@param pieces? number
 ---@return string[] chunks
+---@nodiscard
 function strsplittable(delimiter, str, pieces) end
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_strtrim)
 ---@param str string
 ---@param chars? string
 ---@return string
+---@nodiscard
 function string.trim(str, chars) end
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_strcmputf8i)
 ---@param str1 string
 ---@param str2 string
 ---@return number result <= -1: smaller, 0: equal, >= 1: larger
+---@nodiscard
 function strcmputf8i(str1, str2) end
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_strlenutf8)
 ---@param str string
 ---@return number
+---@nodiscard
 function strlenutf8(str) end
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_strconcat)
 ---@param ... string
 ---@return string
+---@nodiscard
 function strconcat(...) end
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_tostringall)
 ---@param ... any
 ---@return string ...
+---@nodiscard
 function tostringall(...) end
 
 return string
