@@ -173,11 +173,10 @@ function string.sub(s, i, j) end
 function string.upper(s) end
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_strjoin)
----@param delim string
----@param str1 string
----@param ... string
+---@param delim string|number
+---@param ... string|number
 ---@return string
-function string.join(delim, str1, ...) end
+function string.join(delim, ...) end
 
 ---string.gsub but for restricted tables
 ---
