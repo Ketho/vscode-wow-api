@@ -74,7 +74,7 @@ If you intend to use deprecated APIs for Classic, the warning and strikethrough 
 More documentation is available on the [project wiki](https://github.com/Ketho/vscode-wow-api/wiki).
 
 ## Contributing
-The extension *reflects* the state of the wiki, so if you create/update the wiki pages, it will be updated in the extension on the next release. Otherwise feel free to create an [issue](https://github.com/Ketho/vscode-wow-api/issues) with the false errors.
+The extension *reflects* the state of the wiki, so if you create/update the wiki pages, it will be updated in the extension on the next release. Note that only global WoW functions which are not documented in [Blizzard_APIDocumentationGenerated](https://github.com/Gethe/wow-ui-source/tree/live/Interface/AddOns/Blizzard_APIDocumentationGenerated) are synchronized.
 
 For example [UnitLevel](https://warcraft.wiki.gg/wiki/API_UnitLevel) would be documented like so.
 ```lua
@@ -89,7 +89,7 @@ Returns the level of the unit.
 :;level:{{apitype|number}}
 ```
 
-Alternatively, the script will look for a commented block for API pages not documented in [Blizzard_APIDocumentationGenerated](https://github.com/Gethe/wow-ui-source/tree/live/Interface/AddOns/Blizzard_APIDocumentationGenerated).
+Alternatively, the script will look for a commented block in the wikitext of the API pages.
 ```lua
 <!-- luals
 ---@param unit UnitToken
