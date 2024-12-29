@@ -83,7 +83,7 @@ Returns the level of the unit.
  level = UnitLevel(unit)
 
 ==Arguments==
-:;unit:{{apitype|string}} : [[UnitToken]]
+:;unit:{{apitype|UnitToken}}
 
 ==Returns==
 :;level:{{apitype|number}}
