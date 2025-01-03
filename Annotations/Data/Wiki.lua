@@ -437,18 +437,6 @@ function C_ArrowCalloutManager.AcknowledgeCallout() end
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_ArrowCalloutManager.HideCallout)
 function C_ArrowCalloutManager.HideCallout() end
 
----#nopage  
----[Documentation](https://warcraft.wiki.gg/wiki/API_C_ArrowCalloutManager.HideWorldLootObjectCallout)
-function C_ArrowCalloutManager.HideWorldLootObjectCallout() end
-
----#nopage  
----[Documentation](https://warcraft.wiki.gg/wiki/API_C_ArrowCalloutManager.SetWorldLootObjectCalloutFromGUID)
-function C_ArrowCalloutManager.SetWorldLootObjectCalloutFromGUID() end
-
----#nopage  
----[Documentation](https://warcraft.wiki.gg/wiki/API_C_ArrowCalloutManager.SwapWorldLootObjectCallout)
-function C_ArrowCalloutManager.SwapWorldLootObjectCallout() end
-
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_BlackMarket.Close)
 function C_BlackMarket.Close() end
 
@@ -659,6 +647,18 @@ function C_Debug.ViewInDebugWindow() end
 ---@param func function
 ---@return FunctionContainer container
 function C_FunctionContainers.CreateCallback(func) end
+
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_GameModeManager.GetCurrentGameMode)
+---@return Enum.GameMode gameMode
+function C_GameModeManager.GetCurrentGameMode() end
+
+---#nopage  
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_GameModeManager.GetCurrentGameModeRecordID)
+function C_GameModeManager.GetCurrentGameModeRecordID() end
+
+---#nopage  
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_GameModeManager.GetGameModeDisplayInfo)
+function C_GameModeManager.GetGameModeDisplayInfo() end
 
 ---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_Garrison.AllowMissionStartAboveSoftCap)
@@ -1701,16 +1701,6 @@ function C_LFGList.CancelApplication(resultID) end
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_LFGList.ClearSearchResults)
 function C_LFGList.ClearSearchResults() end
 
----[Documentation](https://warcraft.wiki.gg/wiki/API_C_LFGList.CreateListing)
----@param activityID number
----@param itemLevel number
----@param honorLevel number
----@param autoAccept? boolean
----@param privateGroup? boolean
----@param questID? number
----@return boolean success
-function C_LFGList.CreateListing(activityID, itemLevel, honorLevel, autoAccept, privateGroup, questID) end
-
 ---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_LFGList.DeclineApplicant)
 function C_LFGList.DeclineApplicant(applicantID) end
@@ -1834,10 +1824,6 @@ function C_LFGList.GetSearchResultFriends(searchResultID) end
 function C_LFGList.GetSearchResultMemberCounts(searchResultID) end
 
 ---#nopage  
----[Documentation](https://warcraft.wiki.gg/wiki/API_C_LFGList.GetSearchResultMemberInfo)
-function C_LFGList.GetSearchResultMemberInfo(searchResultID, memberIndex) end
-
----#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_LFGList.HasActivityList)
 function C_LFGList.HasActivityList() end
 
@@ -1870,19 +1856,6 @@ function C_LFGList.SaveLanguageSearchFilter(enabled) end
 ---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_LFGList.SetApplicantMemberRole)
 function C_LFGList.SetApplicantMemberRole(applicantID, memberIndex, role) end
-
----[Documentation](https://warcraft.wiki.gg/wiki/API_C_LFGList.UpdateListing)
----@param activityID number
----@param itemLevel number
----@param honorLevel number
----@param autoAccept boolean
----@param privateGroup boolean
----@param questID? number
----@param mythicPlusRating? number
----@param pvpRating? number
----@param selectedPlaystyle? number
----@param isCrossFaction boolean?
-function C_LFGList.UpdateListing(activityID, itemLevel, honorLevel, autoAccept, privateGroup, questID, mythicPlusRating, pvpRating, selectedPlaystyle, isCrossFaction) end
 
 ---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_NamePlate.GetNamePlateEnemyClickThrough)
@@ -2712,6 +2685,10 @@ function C_SpectatingUI.LeaveSpectateMode() end
 function C_SpectatingUI.SpectateChange() end
 
 ---#nopage  
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_SpectatingUI.StartSpectating)
+function C_SpectatingUI.StartSpectating() end
+
+---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_TalkingHead.GetConversationsDeferred)
 function C_TalkingHead.GetConversationsDeferred() end
 
@@ -3138,8 +3115,16 @@ function C_WoWLabsMatchmaking.AcceptPartyInvite() end
 function C_WoWLabsMatchmaking.CanEnterMatchmaking() end
 
 ---#nopage  
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_WoWLabsMatchmaking.ClearFastLogin)
+function C_WoWLabsMatchmaking.ClearFastLogin() end
+
+---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_WoWLabsMatchmaking.DeclinePartyInvite)
 function C_WoWLabsMatchmaking.DeclinePartyInvite() end
+
+---#nopage  
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_WoWLabsMatchmaking.GetAutoQueueOnLogout)
+function C_WoWLabsMatchmaking.GetAutoQueueOnLogout() end
 
 ---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_WoWLabsMatchmaking.GetCurrentParty)
@@ -3168,6 +3153,10 @@ function C_WoWLabsMatchmaking.GetPartySize() end
 ---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_WoWLabsMatchmaking.IsAloneInWoWLabsParty)
 function C_WoWLabsMatchmaking.IsAloneInWoWLabsParty() end
+
+---#nopage  
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_WoWLabsMatchmaking.IsFastLogin)
+function C_WoWLabsMatchmaking.IsFastLogin() end
 
 ---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_WoWLabsMatchmaking.IsFindingMatch)
@@ -3206,6 +3195,10 @@ function C_WoWLabsMatchmaking.RemovePlayerFromParty() end
 function C_WoWLabsMatchmaking.SendPartyInvite() end
 
 ---#nopage  
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_WoWLabsMatchmaking.SetAutoQueueOnLogout)
+function C_WoWLabsMatchmaking.SetAutoQueueOnLogout() end
+
+---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_WoWLabsMatchmaking.SetPartyPlaylistEntry)
 function C_WoWLabsMatchmaking.SetPartyPlaylistEntry() end
 
@@ -3214,8 +3207,32 @@ function C_WoWLabsMatchmaking.SetPartyPlaylistEntry() end
 function C_WoWLabsMatchmaking.SetPlayerReady() end
 
 ---#nopage  
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_WowLabsDataManager.GetConfirmedWoWLabsArea)
+function C_WowLabsDataManager.GetConfirmedWoWLabsArea() end
+
+---#nopage  
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_WowLabsDataManager.GetWoWLabsAreaInfo)
+function C_WowLabsDataManager.GetWoWLabsAreaInfo() end
+
+---#nopage  
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_WowLabsDataManager.IsInPrematch)
+function C_WowLabsDataManager.IsInPrematch() end
+
+---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_WowLabsDataManager.PushCircleInfoToLua)
 function C_WowLabsDataManager.PushCircleInfoToLua() end
+
+---#nopage  
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_WowLabsDataManager.QuerySelectedWoWLabsArea)
+function C_WowLabsDataManager.QuerySelectedWoWLabsArea() end
+
+---#nopage  
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_WowLabsDataManager.QueryWoWLabsAreaInfo)
+function C_WowLabsDataManager.QueryWoWLabsAreaInfo() end
+
+---#nopage  
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_WowLabsDataManager.SelectWoWLabsArea)
+function C_WowLabsDataManager.SelectWoWLabsArea() end
 
 ---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_WowTokenPublic.BuyToken)
@@ -7746,10 +7763,6 @@ function IsActionInRange(actionSlot, unit) end
 function IsActiveBattlefieldArena() end
 
 ---#nopage  
----[Documentation](https://warcraft.wiki.gg/wiki/API_IsActiveQuestLegendary)
-function IsActiveQuestLegendary(index) end
-
----#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_IsActiveQuestTrivial)
 function IsActiveQuestTrivial(index) end
 
@@ -8728,6 +8741,10 @@ function RemoveItemFromArtifact() end
 ---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_RemovePvpTalent)
 function RemovePvpTalent() end
+
+---#nopage  
+---[Documentation](https://warcraft.wiki.gg/wiki/API_RemoveRaidTargets)
+function RemoveRaidTargets() end
 
 ---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_RemoveTalent)
@@ -9712,13 +9729,6 @@ function TurnRightStop() end
 ---@param name string
 ---@param reason? string
 function UninviteUnit(name, reason) end
-
----[Documentation](https://warcraft.wiki.gg/wiki/API_UnitGetAvailableRoles)
----@param unit UnitToken
----@return boolean tank
----@return boolean heal
----@return boolean dps
-function UnitGetAvailableRoles(unit) end
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_UnitHasIncomingResurrection)
 ---@param unit UnitToken

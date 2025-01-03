@@ -16,6 +16,16 @@ export const data: EventInterface = {
 	ACCOUNT_CHARACTER_CURRENCY_DATA_RECEIVED: {},
 	ACCOUNT_CVARS_LOADED: {},
 	ACCOUNT_MONEY: {},
+	ACCOUNT_STORE_CURRENCY_AVAILABLE_UPDATED: {
+		Payload: [
+			{Name: "currencyID", Type: "number"},
+		],
+	},
+	ACCOUNT_STORE_ITEM_INFO_UPDATED: {
+		Payload: [
+			{Name: "itemID", Type: "number"},
+		],
+	},
 	ACHIEVEMENT_EARNED: {
 		Payload: [
 			{Name: "achievementID", Type: "number"},
@@ -2739,6 +2749,7 @@ export const data: EventInterface = {
 		Payload: [
 			{Name: "achievementID", Type: "number"},
 			{Name: "description", Type: "string"},
+			{Name: "achievementAlreadyEarnedOnAccount", Type: "boolean"},
 		],
 	},
 	CRITERIA_UPDATE: {},
@@ -3378,6 +3389,11 @@ export const data: EventInterface = {
 	},
 	GUILD_TRADESKILL_UPDATE: {},
 	GX_RESTARTED: {},
+	HANDLE_UI_ACTION: {
+		Payload: [
+			{Name: "actionType", Type: "UIActionType"},
+		],
+	},
 	HARDCORE_DEATHS: {
 		Payload: [
 			{Name: "memberName", Type: "string"},
@@ -3733,6 +3749,11 @@ export const data: EventInterface = {
 	LIFESTEAL_UPDATE: {},
 	LOADING_SCREEN_DISABLED: {},
 	LOADING_SCREEN_ENABLED: {},
+	LOBBY_MATCHMAKER_QUEUE_ABANDONED: {},
+	LOBBY_MATCHMAKER_QUEUE_ERROR: {},
+	LOBBY_MATCHMAKER_QUEUE_EXPIRED: {},
+	LOBBY_MATCHMAKER_QUEUE_POPPED: {},
+	LOBBY_MATCHMAKER_QUEUE_STATUS_UPDATE: {},
 	LOCALPLAYER_PET_RENAMED: {},
 	LOC_RESULT: {
 		Payload: [
@@ -3987,6 +4008,11 @@ export const data: EventInterface = {
 	NAME_PLATE_UNIT_REMOVED: {
 		Payload: [
 			{Name: "unitToken", Type: "string"},
+		],
+	},
+	NAVIGATION_DESTINATION_REACHED: {
+		Payload: [
+			{Name: "isWaypoint", Type: "boolean"},
 		],
 	},
 	NAVIGATION_FRAME_CREATED: {
@@ -4422,6 +4448,12 @@ export const data: EventInterface = {
 		],
 	},
 	PLAYER_IMPULSE_APPLIED: {},
+	PLAYER_INSIDE_QUEST_BLOB_STATE_CHANGED: {
+		Payload: [
+			{Name: "questID", Type: "number"},
+			{Name: "isInside", Type: "boolean"},
+		],
+	},
 	PLAYER_INTERACTION_MANAGER_FRAME_HIDE: {
 		Payload: [
 			{Name: "type", Type: "PlayerInteractionType"},
@@ -4992,6 +5024,7 @@ export const data: EventInterface = {
 	SHOW_DELVES_DISPLAY_UI: {
 		Documentation: "Signaled when the UI needs to display the Delves dashbaord.",
 	},
+	SHOW_END_OF_MATCH_UI: {},
 	SHOW_FACTION_SELECT_UI: {},
 	SHOW_HYPERLINK_TOOLTIP: {
 		Payload: [
@@ -5227,6 +5260,13 @@ export const data: EventInterface = {
 			{Name: "page", Type: "number"},
 		],
 	},
+	SPELL_PUSHED_TO_FLYOUT_ON_ACTIONBAR: {
+		Payload: [
+			{Name: "spellID", Type: "number"},
+			{Name: "flyoutSlot", Type: "number"},
+			{Name: "flyoutPage", Type: "number"},
+		],
+	},
 	SPELL_TEXT_UPDATE: {
 		Payload: [
 			{Name: "spellID", Type: "number"},
@@ -5268,6 +5308,11 @@ export const data: EventInterface = {
 			{Name: "timerType", Type: "StartTimerType"},
 		],
 	},
+	STORE_FRONT_STATE_UPDATED: {
+		Payload: [
+			{Name: "storeFrontID", Type: "number"},
+		],
+	},
 	STREAMING_ICON: {
 		Payload: [
 			{Name: "streamingStatus", Type: "number"},
@@ -5282,6 +5327,7 @@ export const data: EventInterface = {
 	},
 	STURDINESS_UPDATE: {},
 	SUPER_TRACKING_CHANGED: {},
+	SUPER_TRACKING_PATH_UPDATED: {},
 	SYSMSG: {
 		Payload: [
 			{Name: "string", Type: "string"},
@@ -6472,7 +6518,6 @@ export const data: EventInterface = {
 			{Name: "guid", Type: "WOWGUID"},
 		],
 	},
-	WORLD_LOOT_OBJECT_SWAP_INVENTORY_TYPE_UPDATED: {},
 	WORLD_MAP_OPEN: {
 		Payload: [
 			{Name: "uiMapID", Type: "number"},

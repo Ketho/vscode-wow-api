@@ -2,8 +2,8 @@ local Path = require "path"
 
 BRANCH = "mainline"
 CONSTANTS = {
-	LATEST_MAINLINE = "10.2.7",
-	LATEST_CLASSIC = "4.4.0",
+	-- LATEST_MAINLINE = "11.0.7",
+	-- LATEST_CLASSIC = "4.4.0",
 }
 
 local wagoBranch = {

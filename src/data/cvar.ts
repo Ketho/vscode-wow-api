@@ -2933,7 +2933,7 @@ export const data: CVarInterface = {
 	},
 	cameraindirectoffset: {
 		name: "cameraIndirectOffset",
-		default: "3.000000",
+		default: "6.000000",
 		category: 4,
 		scope: "Character",
 	},
@@ -4648,6 +4648,13 @@ export const data: CVarInterface = {
 		category: 5,
 		help: "Approximate limit in GB for the amount of game data to keep on disk at a time",
 	},
+	charactersocialrestrictionsettingsapplied: {
+		name: "characterSocialRestrictionSettingsApplied",
+		default: "0",
+		category: 4,
+		scope: "Account",
+		help: "Have the character stored settings been set to their required values for AADC restrictions.",
+	},
 	chatbubbles: {
 		name: "chatBubbles",
 		default: "1",
@@ -4905,6 +4912,12 @@ export const data: CVarInterface = {
 		scope: "Account",
 		help: "Stores information about which covenant mission/adventures tutorials the player has seen",
 	},
+	craftingordersonlypreferredarmorcollectable: {
+		name: "craftingOrdersOnlyPreferredArmorCollectable",
+		default: "0",
+		category: 4,
+		help: "Determines if crafting orders can treat armor that doesn't match the players best/preferred armor type as collectable",
+	},
 	currencycategoriescollapsed: {
 		name: "currencyCategoriesCollapsed",
 		default: "0",
@@ -4939,6 +4952,12 @@ export const data: CVarInterface = {
 		category: 4,
 		scope: "Account",
 		help: "Currency token types marked as unused.",
+	},
+	currentgamemode: {
+		name: "currentGameMode",
+		default: "-1",
+		category: 4,
+		help: "The record ID of the current realm's GameMode. -1 means none, which may happen before connecting to a realm. 0 means the executable's standard game mode.",
 	},
 	cursorsizepreferred: {
 		name: "cursorSizePreferred",
@@ -5037,6 +5056,12 @@ export const data: CVarInterface = {
 		category: 4,
 		scope: "Character",
 		help: "Do not flash your screen red when you are low on health.",
+	},
+	donotshowtwfraudwarning: {
+		name: "doNotShowTWFraudWarning",
+		default: "0",
+		category: 4,
+		help: "If set, the TW Fraud Warning dialog will not show on startup",
 	},
 	dontshowequipmentsetsonitems: {
 		name: "dontShowEquipmentSetsOnItems",
@@ -5151,6 +5176,12 @@ export const data: CVarInterface = {
 		default: "1",
 		category: 4,
 		help: "Enables ping system.",
+	},
+	enablequestcachelogging: {
+		name: "enableQuestCacheLogging",
+		default: "1",
+		category: 4,
+		help: "Enable logging for requests for the QuestCache",
 	},
 	enablerunespentanim: {
 		name: "enableRuneSpentAnim",
@@ -5936,6 +5967,11 @@ export const data: CVarInterface = {
 		category: 4,
 		scope: "Character",
 		help: "Hide alerts shown on the Adventure Journal Microbutton",
+	},
+	hidefastloginloadingscreen: {
+		name: "hideFastLoginLoadingScreen",
+		default: "0",
+		category: 5,
 	},
 	horizonclip: {
 		name: "horizonClip",
@@ -7320,6 +7356,11 @@ export const data: CVarInterface = {
 		scope: "Account",
 		help: "The player stat selected in the right dropdown",
 	},
+	plunderstormrealm: {
+		name: "plunderstormRealm",
+		default: "0",
+		category: 5,
+	},
 	portal: {
 		name: "portal",
 		default: "",
@@ -7369,12 +7410,6 @@ export const data: CVarInterface = {
 		category: 4,
 		scope: "Account",
 		help: "If enabled, primary profession world quests icons will be shown on world maps",
-	},
-	processaffinitymask: {
-		name: "processAffinityMask",
-		default: "0",
-		category: 0,
-		help: "Sets which core(s) WoW may execute on - changes require restart to take effect",
 	},
 	profanityfilter: {
 		name: "profanityFilter",
@@ -8139,7 +8174,7 @@ export const data: CVarInterface = {
 	},
 	showphotosensitivitywarning: {
 		name: "showPhotosensitivityWarning",
-		default: "0",
+		default: "-1",
 		category: 5,
 	},
 	showpingsinchat: {
@@ -8385,6 +8420,12 @@ export const data: CVarInterface = {
 		category: 4,
 		scope: "Character",
 		help: "Setting for soft targeting that enables sound cues",
+	},
+	sortcharlistbylastactive: {
+		name: "sortCharListByLastActive",
+		default: "0",
+		category: 4,
+		help: "Whether to sort the character list by last active time",
 	},
 	sortdiskreads: {
 		name: "sortDiskReads",
@@ -9101,7 +9142,7 @@ export const data: CVarInterface = {
 	validateframexml: {
 		name: "validateFrameXML",
 		default: "1",
-		category: 5,
+		category: 4,
 		help: "Display warning when FrameXML detects unparsed elements",
 	},
 	videooptionsversion: {

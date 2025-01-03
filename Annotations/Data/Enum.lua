@@ -64,50 +64,133 @@ Enum.AccountExportResult = {
 
 ---@enum Enum.AccountStateFlags
 Enum.AccountStateFlags = {
+	None = 0x0,
+	LoadFailed = 0x1,
+	InPetCombat = 0x2,
+	AccountUpgradeComplete = 0x4,
+	TokenEligCheckComplete = 0x8,
+}
+
+---@enum Enum.AccountStateLoadedFlags
+Enum.AccountStateLoadedFlags = {
 	None = "0x0000000000000000",
-	AchievementsLoaded = "0x0000000000000001",
-	CriteriaLoaded = "0x0000000000000002",
-	MountsLoaded = "0x0000000000000004",
-	PetjournalInitialized = "0x0000000000000008",
-	CurrencyCapsLoaded = "0x0000000000000010",
-	LoadFailed = "0x0000000000000020",
-	QuestLogLoaded = "0x0000000000000040",
-	InPetCombat = "0x0000000000000080",
-	CharactersLoaded = "0x0000000000000100",
-	PurchasesLoaded = "0x0000000000000200",
-	BpayDistributionObjectsLoaded = "0x0000000000000400",
-	ArchivedPurchasesLoaded = "0x0000000000000800",
-	SettingsLoaded = "0x0000000000001000",
-	BpayAddLicenseObjectsLoaded = "0x0000000000002000",
-	ItemCollectionsLoaded = "0x0000000000004000",
-	AuctionableTokensLoaded = "0x0000000000008000",
-	ConsumableTokensLoaded = "0x0000000000010000",
-	PerksPastRewardsLoaded = "0x0000000000020000",
-	VasTransactionsLoaded = "0x0000000000040000",
-	BpayProductitemObjectsLoaded = "0x0000000000080000",
-	TrialBoostHistoryLoaded = "0x0000000000100000",
-	QuestCriteriaLoaded = "0x0000000000200000",
-	BattleNetAccountLoaded = "0x0000000000400000",
-	AccountCurrenciesLoaded = "0x0000000000800000",
-	RafBalanceLoaded = "0x0000000001000000",
-	RafRewardsLoaded = "0x0000000002000000",
-	DynamicCriteriaLoaded = "0x0000000004000000",
-	RafActivityLoaded = "0x0000000008000000",
-	RafFriendMonthsLoaded = "0x0000000010000000",
-	RevokedRafRewardsLoaded = "0x0000000020000000",
-	AccountNotificationsLoaded = "0x0000000040000000",
-	PerksPendingPurchaseLoaded = "0x0000000080000000",
-	AccountWowlabsLoaded = "0x0000000100000000",
-	AccountUpgradeComplete = "0x0000000200000000",
-	PerksHeldItemLoaded = "0x0000000400000000",
-	PerksPendingRewardsLoaded = "0x0000000800000000",
-	WoWTokenPurchaseLoaded = "0x0000001000000000",
-	PerksRefundsLoaded = "0x0000002000000000",
-	BitVectorsLoaded = "0x0000004000000000",
-	AccountFactionsLoaded = "0x0000008000000000",
-	AccountItemsLoaded = "0x0000010000000000",
-	CombinedQuestLogLoaded = "0x0000020000000000",
-	DataElementsLoaded = "0x0000040000000000",
+	AccountStateAchievementsLoaded = "0x0000000000000001",
+	AccountStateCriteriaLoaded = "0x0000000000000002",
+	AccountStateMountsLoaded = "0x0000000000000004",
+	AccountStatePetjournalInitialized = "0x0000000000000008",
+	AccountStateCurrencyCapsLoaded = "0x0000000000000010",
+	AccountStateQuestLogLoaded = "0x0000000000000020",
+	AccountStateCharactersLoaded = "0x0000000000000040",
+	AccountStatePurchasesLoaded = "0x0000000000000080",
+	AccountStateBpayDistributionObjectsLoaded = "0x0000000000000100",
+	AccountStateArchivedPurchasesLoaded = "0x0000000000000200",
+	AccountStateSettingsLoaded = "0x0000000000000400",
+	AccountStateBpayAddLicenseObjectsLoaded = "0x0000000000000800",
+	AccountStateItemCollectionsLoaded = "0x0000000000001000",
+	AccountStateAuctionableTokensLoaded = "0x0000000000002000",
+	AccountStateConsumableTokensLoaded = "0x0000000000004000",
+	AccountStatePerksPastRewardsLoaded = "0x0000000000008000",
+	AccountStateVasTransactionsLoaded = "0x0000000000010000",
+	AccountStateBpayProductitemObjectsLoaded = "0x0000000000020000",
+	AccountStateTrialBoostHistoryLoaded = "0x0000000000040000",
+	AccountStateQuestCriteriaLoaded = "0x0000000000080000",
+	AccountStateBattleNetAccountLoaded = "0x0000000000100000",
+	AccountStateAccountCurrenciesLoaded = "0x0000000000200000",
+	AccountStateRafBalanceLoaded = "0x0000000000400000",
+	AccountStateRafRewardsLoaded = "0x0000000000800000",
+	AccountStateDynamicCriteriaLoaded = "0x0000000001000000",
+	AccountStateRafActivityLoaded = "0x0000000002000000",
+	AccountStateRevokedRafRewardsLoaded = "0x0000000004000000",
+	AccountStateAccountNotificationsLoaded = "0x0000000008000000",
+	AccountStatePerksPendingPurchaseLoaded = "0x0000000010000000",
+	AccountStateAccountWowlabsLoaded = "0x0000000020000000",
+	AccountStatePerksHeldItemLoaded = "0x0000000040000000",
+	AccountStatePerksPendingRewardsLoaded = "0x0000000080000000",
+	AccountStateBitVectorsLoaded = "0x0000000100000000",
+	AccountStateAccountFactionsLoaded = "0x0000000200000000",
+	AccountStateAccountItemsLoaded = "0x0000000400000000",
+	AccountStateCombinedQuestLogLoaded = "0x0000000800000000",
+	AccountStateDataElementsLoaded = "0x0000001000000000",
+	AccountStateWarbandsLoaded = "0x0000002000000000",
+	AccountStateBanktabSettingsLoaded = "0x0000004000000000",
+	AccountStateAccountMappingLoaded = "0x0000008000000000",
+	AccountStateCharacterItemsLoaded = "0x0000010000000000",
+	AccountStateCurrencyTransferLogLoaded = "0x0000020000000000",
+	AccountStateLgVendorPurchaseLoaded = "0x0000040000000000",
+	AccountStateFutureFeature01DataLoaded = "0x0000080000000000",
+}
+
+---@enum Enum.AccountStoreCategoryType
+Enum.AccountStoreCategoryType = {
+	Creature = 1,
+	TransmogSet = 2,
+	Mount = 3,
+	Icon = 4,
+}
+
+---@enum Enum.AccountStoreItemFlag
+Enum.AccountStoreItemFlag = {
+	DisplayDefaultArmor = 1,
+	NotInGameReward = 2,
+	DisplayAsNew = 4,
+}
+
+---@enum Enum.AccountStoreItemRewardType
+Enum.AccountStoreItemRewardType = {
+	Transmog = 1,
+	Mount = 2,
+	Pet = 3,
+	Toy = 5,
+	Illusion = 7,
+	TransmogSet = 8,
+	Tender = 9,
+	Misc = 10,
+}
+
+---@enum Enum.AccountStoreItemStatus
+Enum.AccountStoreItemStatus = {
+	Unowned = 1,
+	Refundable = 2,
+	Owned = 3,
+}
+
+---@enum Enum.AccountStoreSettlementAction
+Enum.AccountStoreSettlementAction = {
+	NotSet = 0,
+	Give = 1,
+	Remove = 2,
+}
+
+---@enum Enum.AccountStoreState
+Enum.AccountStoreState = {
+	Available = 0,
+	Unknown = 1,
+	Unavailable = 2,
+}
+
+---@enum Enum.AccountStoreTransactionResult
+Enum.AccountStoreTransactionResult = {
+	Success = 0,
+	Incomplete = 1,
+	UnknownError = 2,
+	TransactionInProgress = 3,
+	InsufficientFunds = 4,
+	ItemUnknown = 5,
+	ItemAlreadyOwned = 6,
+	ItemNotOwned = 7,
+	InvalidCurrencyType = 8,
+	OwnedButRefundTimeExpired = 9,
+	NotSupported = 10,
+	Unavailable = 11,
+}
+
+---@enum Enum.AccountStoreTransactionType
+Enum.AccountStoreTransactionType = {
+	Undefined = 0,
+	Purchase = 1,
+	Refund = 2,
+	DebugResetHistory = 3,
+	DebugRemoveItem = 4,
 }
 
 ---@enum Enum.AccountTransType
@@ -153,20 +236,25 @@ Enum.AccountTransType = {
 	AccountNotifications = 38,
 	PerkItemHold = 39,
 	PerkPendingRewards = 40,
-	PerkRecentPurchases = 41,
-	PerkPastRewards = 42,
-	PerkTransaction = 43,
-	OutstandingRpc = 44,
-	LoadWowlabs = 45,
-	UpgradeAccount = 46,
-	GetOrderStatusByPurchaseID = 47,
-	Items = 48,
-	BankTab = 49,
-	Factions = 50,
-	BitVectors = 51,
-	CombinedQuestLog = 52,
-	PlayerDataElements = 53,
-	CharacterDataMerge = 54,
+	PerkPastRewards = 41,
+	PerkTransaction = 42,
+	OutstandingRpc = 43,
+	LoadWowlabs = 44,
+	UpgradeAccount = 45,
+	GetOrderStatusByPurchaseID = 46,
+	Items = 47,
+	BankTab = 48,
+	Factions = 49,
+	BitVectors = 50,
+	CombinedQuestLog = 51,
+	PlayerDataElements = 52,
+	CharacterDataMerge = 53,
+	AccountStore = 54,
+	WarbandGroups = 55,
+	Mapping = 56,
+	CharacterItems = 57,
+	CurrencyTransferLog = 58,
+	LgVendorPurchase = 59,
 }
 
 ---@enum Enum.ActionBarOrientation
@@ -188,6 +276,22 @@ Enum.AddOnEnableState = {
 	None = 0,
 	Some = 1,
 	All = 2,
+}
+
+---@enum Enum.AddOnProfilerMetric
+Enum.AddOnProfilerMetric = {
+	SessionAverageTime = 0,
+	RecentAverageTime = 1,
+	EncounterAverageTime = 2,
+	LastTime = 3,
+	PeakTime = 4,
+	CountTimeOver1Ms = 5,
+	CountTimeOver5Ms = 6,
+	CountTimeOver10Ms = 7,
+	CountTimeOver50Ms = 8,
+	CountTimeOver100Ms = 9,
+	CountTimeOver500Ms = 10,
+	CountTimeOver1000Ms = 11,
 }
 
 ---@enum Enum.AddSoulbindConduitReason
@@ -712,6 +816,7 @@ Enum.BattlepetDbFlags = {
 	DisplayOverridden = 0x100,
 	AcquiredViaLicense = 0x200,
 	TradingPost = 0x400,
+	AccountStore = 0x800,
 }
 
 ---@enum Enum.BattlepetDeletedReason
@@ -723,6 +828,7 @@ Enum.BattlepetDeletedReason = {
 	CageError = 4,
 	DelJournal = 5,
 	TradingPost = 6,
+	AccountStore = 7,
 }
 
 ---@enum Enum.BattlepetSlotLockCheat
@@ -1126,6 +1232,15 @@ Enum.CauseofdeathFlags = {
 	PlayerNameNeeded = 1,
 	CreatureNameNeeded = 2,
 	ZoneNameNeeded = 4,
+}
+
+---@enum Enum.ChannelPlayerFlags
+Enum.ChannelPlayerFlags = {
+	ChannelPlayerNone = 0x0,
+	ChannelPlayerOwner = 0x1,
+	ChannelPlayerModerator = 0x2,
+	ChannelPlayerTextAllow = 0x4,
+	ChannelPlayerHidden = 0x8,
 }
 
 ---@enum Enum.CharCustomizationType
@@ -1812,6 +1927,55 @@ Enum.CraftingReagentType = {
 	Automatic = 3,
 }
 
+---@enum Enum.CreateAllAccountData
+Enum.CreateAllAccountData = {
+	CreateAllNone = "0x0000000000000000",
+	CreateAllAchievementsDone = "0x0000000000000001",
+	CreateAllCriteriaDone = "0x0000000000000002",
+	CreateAllMountsDone = "0x0000000000000004",
+	CreateAllBattlepetsDone = "0x0000000000000008",
+	CreateAllCurrencycapsDone = "0x0000000000000010",
+	CreateAllQuestLogDone = "0x0000000000000020",
+	CreateAllCharactersDone = "0x0000000000000040",
+	CreateAllPurchasesDone = "0x0000000000000080",
+	CreateAllBpayDistributionObjectsDone = "0x0000000000000100",
+	CreateAllArchivedPurchasesDone = "0x0000000000000200",
+	CreateAllSettingsDone = "0x0000000000000400",
+	CreateAllBpayAddLicenseObjectsDone = "0x0000000000000800",
+	CreateAllItemCollectionItemsDone = "0x0000000000001000",
+	CreateAllAuctionableTokensDone = "0x0000000000002000",
+	CreateAllConsumableTokensDone = "0x0000000000004000",
+	CreateAllPerkPastRewardsDone = "0x0000000000008000",
+	CreateAllVasTransactionsDone = "0x0000000000010000",
+	CreateAllBpayProductitemObjectsDone = "0x0000000000020000",
+	CreateAllTrialBoostHistoryDone = "0x0000000000040000",
+	CreateAllQuestCriteriaDone = "0x0000000000080000",
+	CreateObject = "0x0000000000100000",
+	CreateAllAccountCurrenciesDone = "0x0000000000200000",
+	CreateAllRafBalanceDone = "0x0000000000400000",
+	CreateAllRafRewardsDone = "0x0000000000800000",
+	CreateAllAccountDynamicCriteriaDone = "0x0000000001000000",
+	CreateAllRafActivitiesDone = "0x0000000002000000",
+	CreateAllRevokedRafRewardsDone = "0x0000000004000000",
+	CreateAllAccountNotificationsDone = "0x0000000008000000",
+	CreateAllPerkPendingPurchasesDone = "0x0000000010000000",
+	CreateAllWowlabsDataDone = "0x0000000020000000",
+	CreateAllPerkHeldItemsDone = "0x0000000040000000",
+	CreateAllPerkPendingRewardsDone = "0x0000000080000000",
+	CreateAllBitVectorsDone = "0x0000000100000000",
+	CreateAllAccountFactionsDone = "0x0000000200000000",
+	CreateAllAccountItemsDone = "0x0000000400000000",
+	CreateAllCombinedQuestLogEntriesDone = "0x0000000800000000",
+	CreateAllDataElementsDone = "0x0000001000000000",
+	CreateAllWarbandGroupsDone = "0x0000002000000000",
+	CreateAllBanktabSettingsDone = "0x0000004000000000",
+	CreateAllAccountMappingDone = "0x0000008000000000",
+	CreateAllCharacterItemsDone = "0x0000010000000000",
+	CreateAllCurrencyTransferLogDone = "0x0000020000000000",
+	CreateAllLgVendorPurchaseDone = "0x0000040000000000",
+	CreateAllFutureFeature01DataDone = "0x0000080000000000",
+}
+
 ---@enum Enum.CurioRarity
 Enum.CurioRarity = {
 	Common = 1,
@@ -2036,48 +2200,50 @@ Enum.Cursormode = {
 	MapPinCursor = 37,
 	PingCursor = 38,
 	EnchantCursor = 39,
-	UIMoveCursor = 40,
-	UIResizeCursor = 41,
-	PointErrorCursor = 42,
-	CastErrorCursor = 43,
-	BuyErrorCursor = 44,
-	AttackErrorCursor = 45,
-	InteractErrorCursor = 46,
-	SpeakErrorCursor = 47,
-	InspectErrorCursor = 48,
-	PickupErrorCursor = 49,
-	TaxiErrorCursor = 50,
-	TrainerErrorCursor = 51,
-	MineErrorCursor = 52,
-	SkinErrorCursor = 53,
-	GatherErrorCursor = 54,
-	LockErrorCursor = 55,
-	MailErrorCursor = 56,
-	LootAllErrorCursor = 57,
-	RepairErrorCursor = 58,
-	RepairnpcErrorCursor = 59,
-	ItemErrorCursor = 60,
-	SkinHordeErrorCursor = 61,
-	SkinAllianceErrorCursor = 62,
-	InnkeeperErrorCursor = 63,
-	CampaignQuestErrorCursor = 64,
-	CampaignQuestTurninErrorCursor = 65,
-	QuestErrorCursor = 66,
-	QuestRepeatableErrorCursor = 67,
-	QuestTurninErrorCursor = 68,
-	QuestLegendaryErrorCursor = 69,
-	QuestLegendaryTurninErrorCursor = 70,
-	QuestImportantErrorCursor = 71,
-	QuestImportantTurninErrorCursor = 72,
-	QuestMetaErrorCursor = 73,
-	QuestMetaTurninErrorCursor = 74,
-	QuestRecurringErrorCursor = 75,
-	QuestRecurringTurninErrorCursor = 76,
-	VehicleErrorCursor = 77,
-	MapPinErrorCursor = 78,
-	PingErrorCursor = 79,
-	EnchantErrorCursor = 80,
-	CustomCursor = 81,
+	StablemasterCursor = 40,
+	UIMoveCursor = 41,
+	UIResizeCursor = 42,
+	PointErrorCursor = 43,
+	CastErrorCursor = 44,
+	BuyErrorCursor = 45,
+	AttackErrorCursor = 46,
+	InteractErrorCursor = 47,
+	SpeakErrorCursor = 48,
+	InspectErrorCursor = 49,
+	PickupErrorCursor = 50,
+	TaxiErrorCursor = 51,
+	TrainerErrorCursor = 52,
+	MineErrorCursor = 53,
+	SkinErrorCursor = 54,
+	GatherErrorCursor = 55,
+	LockErrorCursor = 56,
+	MailErrorCursor = 57,
+	LootAllErrorCursor = 58,
+	RepairErrorCursor = 59,
+	RepairnpcErrorCursor = 60,
+	ItemErrorCursor = 61,
+	SkinHordeErrorCursor = 62,
+	SkinAllianceErrorCursor = 63,
+	InnkeeperErrorCursor = 64,
+	CampaignQuestErrorCursor = 65,
+	CampaignQuestTurninErrorCursor = 66,
+	QuestErrorCursor = 67,
+	QuestRepeatableErrorCursor = 68,
+	QuestTurninErrorCursor = 69,
+	QuestLegendaryErrorCursor = 70,
+	QuestLegendaryTurninErrorCursor = 71,
+	QuestImportantErrorCursor = 72,
+	QuestImportantTurninErrorCursor = 73,
+	QuestMetaErrorCursor = 74,
+	QuestMetaTurninErrorCursor = 75,
+	QuestRecurringErrorCursor = 76,
+	QuestRecurringTurninErrorCursor = 77,
+	VehicleErrorCursor = 78,
+	MapPinErrorCursor = 79,
+	PingErrorCursor = 80,
+	EnchantErrorCursor = 81,
+	StablemasterErrorCursor = 82,
+	CustomCursor = 83,
 }
 
 ---@enum Enum.CustomBindingType
@@ -2408,6 +2574,12 @@ Enum.EncounterLootDropRollState = {
 	Pass = 5,
 }
 
+---@enum Enum.EndOfMatchType
+Enum.EndOfMatchType = {
+	None = 0,
+	Plunderstorm = 1,
+}
+
 ---@enum Enum.EnvironmentalDamageFlags
 Enum.EnvironmentalDamageFlags = {
 	OneTime = 1,
@@ -2426,10 +2598,11 @@ Enum.Environmentaldamagetype = {
 
 ---@enum Enum.EventRealmQueues
 Enum.EventRealmQueues = {
-	None = 0,
-	PlunderstormSolo = 1,
-	PlunderstormDuo = 2,
-	PlunderstormTrio = 4,
+	None = 0x0,
+	PlunderstormSolo = 0x1,
+	PlunderstormDuo = 0x2,
+	PlunderstormTrio = 0x4,
+	PlunderstormTraining = 0x8,
 }
 
 ---@enum Enum.EventToastDisplayType
@@ -2549,6 +2722,7 @@ Enum.GameEnvironment = {
 Enum.GameMode = {
 	Standard = 1,
 	Plunderstorm = 2,
+	Length = 3,
 }
 
 ---@enum Enum.GamePadPowerLevel
@@ -2569,7 +2743,7 @@ Enum.GameRule = {
 	MaxCharReservationsPerRealm = 3,
 	MaxAccountCharReservationsPerContentset = 4,
 	EtaRealmLaunchTime = 5,
-	LFGUIEnabled = 6,
+	DeprecatedLFGUIEnabled = 6,
 	TrivialGroupXPPercent = 7,
 	CharReservationsPerRealmReopenThreshold = 8,
 	DisablePct = 9,
@@ -2587,7 +2761,7 @@ Enum.GameRule = {
 	VanillaRageGenerationModifier = 21,
 	SelfFoundAllowed = 22,
 	DisableHonorDecay = 23,
-	CapHonorRankPerLevelBracket = 24,
+	Deprecated1 = 24,
 	MaxLootDropLevel = 25,
 	MicrobarScale = 26,
 	MaxUnitNameDistance = 27,
@@ -2656,12 +2830,29 @@ Enum.GameRule = {
 	WoWLabsPlaceholder4 = 90,
 	VanillaAccountMailInstant = 91,
 	ClearMailOnRealmTransfer = 92,
+	PremadeGroupFinderStyle = 93,
+	PlunderstormAreaSelection = 94,
+	Deprecated2 = 95,
+	Deprecated3 = 96,
+	Deprecated4 = 97,
+	GroupFinderCapabilities = 98,
+	WorldMapLegendDisabled = 99,
+	WorldMapFrameStrata = 100,
+	MerchantFilterDisabled = 101,
 }
 
 ---@enum Enum.GameRuleFlags
 Enum.GameRuleFlags = {
 	None = 0,
 	AllowClient = 1,
+	RequiresDefault = 2,
+}
+
+---@enum Enum.GameRuleType
+Enum.GameRuleType = {
+	Int = 0,
+	Float = 1,
+	Bool = 2,
 }
 
 ---@enum Enum.GarrAutoBoardIndex
@@ -3375,6 +3566,9 @@ Enum.ItemGemColor = {
 	Tinker = 0x1000000,
 	Primordial = 0x2000000,
 	Fragrance = 0x4000000,
+	SingingThunder = 0x8000000,
+	SingingSea = 0x10000000,
+	SingingWind = 0x20000000,
 }
 
 ---@enum Enum.ItemGemSubclass
@@ -3596,6 +3790,9 @@ Enum.ItemSocketType = {
 	Tinker = 24,
 	Primordial = 25,
 	Fragrance = 26,
+	SingingThunder = 27,
+	SingingSea = 28,
+	SingingWind = 29,
 }
 
 ---@enum Enum.ItemSoundType
@@ -3825,6 +4022,31 @@ Enum.LanguageFlag = {
 	HideLanguageNameInChat = 4,
 }
 
+---@enum Enum.LgVendorPurchaseSettlementState
+Enum.LgVendorPurchaseSettlementState = {
+	Settled = 0,
+	NotSettled = 1,
+}
+
+---@enum Enum.LgVendorPurchaseSqlResults
+Enum.LgVendorPurchaseSqlResults = {
+	Failed = 0,
+	Success = 100,
+	InsufficientFunds = 101,
+	AlreadyOwned = 102,
+	InsufficientSpent = 103,
+	NotOwned = 104,
+	RefundExpired = 105,
+	NoRecord = 106,
+	InvalidState = 107,
+}
+
+---@enum Enum.LgVendorPurchaseState
+Enum.LgVendorPurchaseState = {
+	NotOwned = 0,
+	Owned = 1,
+}
+
 ---@enum Enum.LinkedCurrencyFlags
 Enum.LinkedCurrencyFlags = {
 	IgnoreAdd = 0x1,
@@ -3902,6 +4124,13 @@ Enum.MapOverlayDisplayLocation = {
 Enum.MapPinAnimationType = {
 	None = 0,
 	Pulse = 1,
+}
+
+---@enum Enum.MatchDetailType
+Enum.MatchDetailType = {
+	Placement = 0,
+	Kills = 1,
+	PlunderAcquired = 2,
 }
 
 ---@enum Enum.MicroMenuOrder
@@ -4064,6 +4293,7 @@ Enum.PartyPlaylistEntry = {
 	SoloGameMode = 0,
 	DuoGameMode = 1,
 	TrioGameMode = 2,
+	TrainingGameMode = 3,
 }
 
 ---@enum Enum.PartyPoseFlags
@@ -4096,6 +4326,39 @@ Enum.PermanentChatChannelType = {
 	Zone = 1,
 	Communities = 2,
 	Custom = 3,
+}
+
+---@enum Enum.PetActionFeedback
+Enum.PetActionFeedback = {
+	Success = 0,
+	Dead = 1,
+	InvalidTarget = 2,
+	FriendlyTarget = 3,
+	NoPath = 4,
+}
+
+---@enum Enum.PetActionbuttonType
+Enum.PetActionbuttonType = {
+	None = 0,
+	Spell = 1,
+	Slot1Obsolete = 2,
+	Slot2Obsolete = 3,
+	Slot3Obsolete = 4,
+	Slot4Obsolete = 5,
+	Mode = 6,
+	Orders = 7,
+	Slot1 = 8,
+	Slot2 = 9,
+	Slot3 = 10,
+	Slot4 = 11,
+	Slot5 = 12,
+	Slot6 = 13,
+	Slot7 = 14,
+	Slot8 = 15,
+	Slot9 = 16,
+	Slot10 = 17,
+	Max = 18,
+	VehicleAction = 19,
 }
 
 ---@enum Enum.PetBattleQueueStatus
@@ -4132,6 +4395,31 @@ Enum.PetJournalError = {
 	InvalidFaction = 3,
 	NoFavoritesToSummon = 4,
 	NoValidRandomSummon = 5,
+}
+
+---@enum Enum.PetMode
+Enum.PetMode = {
+	Passive = 0,
+	Defensive = 1,
+	Aggressive = 2,
+	Assist = 3,
+}
+
+---@enum Enum.PetOrders
+Enum.PetOrders = {
+	Wait = 0,
+	Follow = 1,
+	Attack = 2,
+	Dismiss = 3,
+	MoveTo = 4,
+}
+
+---@enum Enum.PetOverride
+Enum.PetOverride = {
+	None = 0,
+	AICombatControl = 1,
+	AICombatPassive = 2,
+	OwnerMounted = 4,
 }
 
 ---@enum Enum.PetbattleAuraStateFlags
@@ -4340,6 +4628,26 @@ Enum.PetbattleType = {
 	Npc = 3,
 }
 
+---@enum Enum.Pettameresult
+Enum.Pettameresult = {
+	Ok = 0,
+	Invalidcreature = 1,
+	Toomany = 2,
+	Creaturealreadyowned = 3,
+	Nottameable = 4,
+	Anothersummonactive = 5,
+	Unitscanttame = 6,
+	Nopetavailable = 7,
+	Internalerror = 8,
+	Toohighlevel = 9,
+	Dead = 10,
+	Notdead = 11,
+	Cantcontrolexotic = 12,
+	Invalidslot = 13,
+	EliteToohighlevel = 14,
+	Numresults = 15,
+}
+
 ---@enum Enum.PhaseReason
 Enum.PhaseReason = {
 	Phasing = 0,
@@ -4510,6 +4818,14 @@ Enum.PlayerMentorshipStatus = {
 	Mentor = 2,
 }
 
+---@enum Enum.PlunderstormQueueState
+Enum.PlunderstormQueueState = {
+	None = 0,
+	Queued = 1,
+	Proposed = 2,
+	Suspended = 3,
+}
+
 ---@enum Enum.PointsModifierSourceType
 Enum.PointsModifierSourceType = {
 	PlayerLevel = 0,
@@ -4634,6 +4950,13 @@ Enum.PowerTypeSlot = {
 	Slot_7 = 7,
 	Slot_8 = 8,
 	Slot_9 = 9,
+}
+
+---@enum Enum.PremadeGroupFinderStyle
+Enum.PremadeGroupFinderStyle = {
+	Disabled = 0,
+	Mainline = 1,
+	Vanilla = 2,
 }
 
 ---@enum Enum.ProfTraitPerkNodeFlags
@@ -5044,6 +5367,7 @@ Enum.ReportMinorCategory = {
 	Description = 0x2000,
 	Name = 0x4000,
 	HarmfulToMinors = 0x8000,
+	Disruption = 0x10000,
 }
 
 ---@enum Enum.ReportSubComplaintTypes
@@ -5151,6 +5475,16 @@ Enum.ScrubStringFlags = {
 	TruncateNewLines = 1,
 	AllowBarCodes = 2,
 	StripControlCodes = 4,
+}
+
+---@enum Enum.SeasonID
+Enum.SeasonID = {
+	NoSeason = 0,
+	SeasonOfMastery = 1,
+	SeasonOfDiscovery = 2,
+	Hardcore = 3,
+	Fresh = 11,
+	FreshHardcore = 12,
 }
 
 ---@enum Enum.SelfResurrectOptionType
@@ -5516,6 +5850,7 @@ Enum.TooltipDataItemBinding = {
 	BindOnEquip = 7,
 	BindOnUse = 8,
 	AccountUntilEquipped = 9,
+	BindToAccountUntilEquipped = 10,
 }
 
 ---@enum Enum.TooltipDataLineType
@@ -5957,6 +6292,12 @@ Enum.TugOfWarStyleValue = {
 	ArchaeologyBrown = 1,
 }
 
+---@enum Enum.UIActionType
+Enum.UIActionType = {
+	DefaultAction = 0,
+	UpdateMapSystem = 1,
+}
+
 ---@enum Enum.UICursorType
 Enum.UICursorType = {
 	Default = 0,
@@ -6250,6 +6591,15 @@ Enum.UIWidgetVisualizationType = {
 	ScenarioHeaderDelves = 29,
 }
 
+---@enum Enum.UnitMirrorPetFlags
+Enum.UnitMirrorPetFlags = {
+	Renameable = 0x1,
+	Dismissable = 0x2,
+	RecentlyTamed = 0x4,
+	Stampede = 0x8,
+	ExtraPet = 0x10,
+}
+
 ---@enum Enum.UnitSex
 Enum.UnitSex = {
 	Male = 0,
@@ -6304,6 +6654,13 @@ Enum.ViewRaidSize = {
 	Ten = 0,
 	TwentyFive = 1,
 	Forty = 2,
+}
+
+---@enum Enum.VignetteObjectiveType
+Enum.VignetteObjectiveType = {
+	None = 0,
+	Defeat = 1,
+	DefeatShowRemainingHealth = 2,
 }
 
 ---@enum Enum.VignetteType
@@ -6589,6 +6946,13 @@ Enum.WoWEntitlementType = {
 	Invalid = 9,
 }
 
+---@enum Enum.WoWLabsAreaType
+Enum.WoWLabsAreaType = {
+	PlunderstormDropSparse = 0,
+	PlunderstormDropMedium = 1,
+	PlunderstormDropDense = 2,
+}
+
 ---@enum Enum.WorldCursorAnchorType
 Enum.WorldCursorAnchorType = {
 	None = 0,
@@ -6647,6 +7011,10 @@ Enum.ZoneControlState = {
 }
 
 Constants = {
+	AccountStoreConsts = {
+		PlunderstormStoreFrontID = 1,
+		PlunderstormPlunderCurrencyID = 3139,
+	},
 	AuctionConstants = {
 		DEFAULT_AUCTION_PRICE_MULTIPLIER = 1.5,
 	},
@@ -6719,9 +7087,6 @@ Constants = {
 		EditModeDefaultGridSpacing = 100,
 		EditModeMaxGridSpacing = 300,
 	},
-	GroupFinderConstants = {
-		MAX_GROUP_FINDER_ACTIVITIES = 41,
-	},
 	ITEM_WEAPON_SUBCLASSConstants = {
 		ITEM_WEAPON_SUBCLASS_NONE = -1,
 	},
@@ -6737,6 +7102,9 @@ Constants = {
 		NUM_ITEM_ENCHANTMENT_SOCKETS = 3,
 		MAX_LOOT_OBJECT_ITEMS = 31,
 		INVALID_TRANSACTION_BANK_TAB_SLOT = 255,
+	},
+	LFGConstsExposed = {
+		GROUP_FINDER_MAX_ACTIVITY_CAPACITY = 16,
 	},
 	LFG_ROLEConstants = {
 		LFG_ROLE_NO_ROLE = -1,
@@ -6763,6 +7131,8 @@ Constants = {
 	},
 	PetConsts = {
 		PETNUMBER_INVALIDSLOT = -1,
+		PETNUMBER_PENDINGPET = -1,
+		PETNUMBER_INVALIDPET = 0,
 		MAX_SUMMONABLE_PETS = 25,
 	},
 	PetConsts_PostCata = {

@@ -1,7 +1,7 @@
 ## WoW API for VS Code
 [![](https://img.shields.io/github/license/Ketho/vscode-wow-api)](https://opensource.org/licenses/MIT)
 [![](https://img.shields.io/github/v/release/Ketho/vscode-wow-api)](https://github.com/Ketho/vscode-wow-api/releases)
-[![](https://img.shields.io/badge/mainline-11.0.5-yellow)](https://github.com/Ketho/BlizzardInterfaceResources/tree/11.0.5)
+[![](https://img.shields.io/badge/mainline-11.0.5-yellow)](https://github.com/Ketho/BlizzardInterfaceResources/tree/11.0.7)
 [![](https://img.shields.io/badge/cata-4.4.1-yellow)](https://github.com/Ketho/BlizzardInterfaceResources/tree/4.4.1)
 [![](https://img.shields.io/badge/vanilla-1.15.5-yellow)](https://github.com/Ketho/BlizzardInterfaceResources/tree/1.15.5)
 
@@ -74,7 +74,7 @@ If you intend to use deprecated APIs for Classic, the warning and strikethrough 
 More documentation is available on the [project wiki](https://github.com/Ketho/vscode-wow-api/wiki).
 
 ## Contributing
-The extension *reflects* the state of the wiki, so if you create/update the wiki pages, it will be updated in the extension on the next release. Note that only global WoW functions which are not documented in [Blizzard_APIDocumentationGenerated](https://github.com/Gethe/wow-ui-source/tree/live/Interface/AddOns/Blizzard_APIDocumentationGenerated) are synchronized.
+The extension *reflects* the state of the wiki, so if you create/update the wiki pages, it will be updated in the extension on the next release. Only functions on https://warcraft.wiki.gg/wiki/World_of_Warcraft_API which are not documented in [Blizzard_APIDocumentationGenerated](https://github.com/Gethe/wow-ui-source/tree/live/Interface/AddOns/Blizzard_APIDocumentationGenerated) will be synchronized.
 
 For example [UnitLevel](https://warcraft.wiki.gg/wiki/API_UnitLevel) would be documented like so.
 ```lua
