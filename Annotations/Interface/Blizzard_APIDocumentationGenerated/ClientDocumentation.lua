@@ -15,6 +15,10 @@ function GetFileIDFromPath(filePath) end
 ---@return number framerate
 function GetFramerate() end
 
+---[Documentation](https://warcraft.wiki.gg/wiki/API_IsCpuBound)
+---@return boolean? isCpuBound
+function IsCpuBound() end
+
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_ReportBug)
 ---@param description string
 function ReportBug(description) end

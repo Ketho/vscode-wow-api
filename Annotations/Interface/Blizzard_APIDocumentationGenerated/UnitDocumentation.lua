@@ -4,10 +4,6 @@
 ---@return boolean result
 function CanEjectPassengerFromSeat(virtualSeatIndex) end
 
----[Documentation](https://warcraft.wiki.gg/wiki/API_CanShowSetRoleButton)
----@return boolean result
-function CanShowSetRoleButton() end
-
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_CanSwitchVehicleSeat)
 ---@return boolean result
 function CanSwitchVehicleSeat() end
@@ -147,10 +143,6 @@ function GetVehicleUIIndicator(vehicleIndicatorID) end
 ---@return number xPos
 ---@return number yPos
 function GetVehicleUIIndicatorSeat(vehicleIndicatorID, indicatorSeatIndex) end
-
----[Documentation](https://warcraft.wiki.gg/wiki/API_InitiateRolePoll)
----@return boolean result
-function InitiateRolePoll() end
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_IsFalling)
 ---@param unit? UnitToken
@@ -920,18 +912,6 @@ function UnitSelectionColor(unit, useExtendedColors) end
 ---@param useExtendedColors? boolean Default = false
 ---@return number result
 function UnitSelectionType(unit, useExtendedColors) end
-
----[Documentation](https://warcraft.wiki.gg/wiki/API_UnitSetRole)
----@param unit UnitToken
----@param roleStr? string
----@return boolean result
-function UnitSetRole(unit, roleStr) end
-
----[Documentation](https://warcraft.wiki.gg/wiki/API_UnitSetRoleEnum)
----@param unit UnitToken
----@param role? Enum.LFGRole
----@return boolean result
-function UnitSetRoleEnum(unit, role) end
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_UnitSex)
 ---@param unit UnitToken

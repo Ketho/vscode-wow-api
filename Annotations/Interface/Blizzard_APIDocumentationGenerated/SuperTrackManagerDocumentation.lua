@@ -14,10 +14,22 @@ function C_SuperTrack.ClearSuperTrackedMapPin() end
 ---@return Enum.SuperTrackingType? type
 function C_SuperTrack.GetHighestPrioritySuperTrackingType() end
 
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_SuperTrack.GetNextWaypointForMap)
+---@param uiMapID number
+---@return number x
+---@return number y
+---@return string waypointDescription
+function C_SuperTrack.GetNextWaypointForMap(uiMapID) end
+
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_SuperTrack.GetSuperTrackedContent)
 ---@return Enum.ContentTrackingType trackableType
 ---@return number trackableID
 function C_SuperTrack.GetSuperTrackedContent() end
+
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_SuperTrack.GetSuperTrackedItemName)
+---@return string name
+---@return string description
+function C_SuperTrack.GetSuperTrackedItemName() end
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_SuperTrack.GetSuperTrackedMapPin)
 ---@return Enum.SuperTrackingMapPinType type

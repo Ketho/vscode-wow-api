@@ -39,6 +39,9 @@ function C_BattleNet.GetGameAccountInfoByGUID(guid) end
 ---@return BNetGameAccountInfo? gameAccountInfo
 function C_BattleNet.GetGameAccountInfoByID(id) end
 
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_BattleNet.InstallHighResTextures)
+function C_BattleNet.InstallHighResTextures() end
+
 ---@class BNetAccountInfo
 ---@field bnetAccountID number
 ---@field accountName string

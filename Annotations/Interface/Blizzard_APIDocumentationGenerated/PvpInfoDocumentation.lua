@@ -538,6 +538,7 @@ function C_PvP.ToggleWarMode() end
 ---@field minLevel number
 ---@field maxLevel number
 ---@field groupsAllowed boolean
+---@field crossFactionAllowed boolean? Default = false
 ---@field timeLeftUntilNextChange number?
 ---@field brawlType Enum.BrawlType
 ---@field mapNames string[]

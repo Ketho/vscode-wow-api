@@ -284,11 +284,6 @@ function C_QuestLog.IsFailed(questID) end
 ---@return boolean isImportant
 function C_QuestLog.IsImportantQuest(questID) end
 
----[Documentation](https://warcraft.wiki.gg/wiki/API_C_QuestLog.IsLegendaryQuest)
----@param questID number
----@return boolean isLegendaryQuest
-function C_QuestLog.IsLegendaryQuest(questID) end
-
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_QuestLog.IsMetaQuest)
 ---@param questID number
 ---@return boolean isMeta
@@ -350,11 +345,6 @@ function C_QuestLog.IsQuestFromContentPush(questID) end
 ---@param questID number
 ---@return boolean isInvasion
 function C_QuestLog.IsQuestInvasion(questID) end
-
----[Documentation](https://warcraft.wiki.gg/wiki/API_C_QuestLog.IsQuestRepeatableType)
----@param questID number
----@return boolean isRepeatableType
-function C_QuestLog.IsQuestRepeatableType(questID) end
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_QuestLog.IsQuestReplayable)
 ---@param questID number

@@ -6,6 +6,17 @@ C_VignetteInfo = {}
 ---@return number? bestUniqueVignetteIndex
 function C_VignetteInfo.FindBestUniqueVignette(vignetteGUIDs) end
 
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_VignetteInfo.GetHealthPercent)
+---@param vignetteGUID WOWGUID
+---@return number? healthPct
+function C_VignetteInfo.GetHealthPercent(vignetteGUID) end
+
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_VignetteInfo.GetRecommendedGroupSize)
+---@param vignetteGUID WOWGUID
+---@return number minGroupSize
+---@return number maxGroupSize
+function C_VignetteInfo.GetRecommendedGroupSize(vignetteGUID) end
+
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_VignetteInfo.GetVignetteInfo)
 ---@param vignetteGUID WOWGUID
 ---@return VignetteInfo? vignetteInfo
@@ -40,3 +51,5 @@ function C_VignetteInfo.GetVignettes() end
 ---@field tooltipWidgetSet number?
 ---@field iconWidgetSet number?
 ---@field addPaddingAboveTooltipWidgets boolean?
+---@field mapPin UIMapPinInfo?
+---@field objectiveType Enum.VignetteObjectiveType?

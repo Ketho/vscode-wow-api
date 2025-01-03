@@ -27,6 +27,11 @@ function C_LFGList.ClearSearchTextFields() end
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_LFGList.CopyActiveEntryInfoToCreationFields)
 function C_LFGList.CopyActiveEntryInfoToCreationFields() end
 
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_LFGList.CreateListing)
+---@param createData LfgListingCreateData
+---@return boolean success
+function C_LFGList.CreateListing(createData) end
+
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_LFGList.CreateScenarioListing)
 ---@param activityID number
 ---@param itemLevel number
@@ -124,10 +129,25 @@ function C_LFGList.GetOwnedKeystoneActivityAndGroupAndLevel(getTimewalking) end
 ---@return string playstyleString
 function C_LFGList.GetPlaystyleString(playstyle, activityInfo) end
 
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_LFGList.GetPremadeGroupFinderStyle)
+---@return Enum.PremadeGroupFinderStyle style
+function C_LFGList.GetPremadeGroupFinderStyle() end
+
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_LFGList.GetSearchResultInfo)
 ---@param searchResultID number
 ---@return LfgSearchResultData searchResultData
 function C_LFGList.GetSearchResultInfo(searchResultID) end
+
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_LFGList.GetSearchResultLeaderInfo)
+---@param searchResultID number
+---@return LfgSearchResultPlayerInfo leaderInfo
+function C_LFGList.GetSearchResultLeaderInfo(searchResultID) end
+
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_LFGList.GetSearchResultPlayerInfo)
+---@param searchResultID number
+---@param memberIndex number
+---@return LfgSearchResultPlayerInfo playerInfo
+function C_LFGList.GetSearchResultPlayerInfo(searchResultID, memberIndex) end
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_LFGList.GetSearchResults)
 ---@return number? totalResultsFound Default = 0
@@ -144,9 +164,13 @@ function C_LFGList.HasActiveEntryInfo() end
 function C_LFGList.HasSearchResultInfo(searchResultID) end
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_LFGList.IsPlayerAuthenticatedForLFG)
----@param activityID? number
+---@param activityCategoryID? number
 ---@return boolean isAuthenticated
-function C_LFGList.IsPlayerAuthenticatedForLFG(activityID) end
+function C_LFGList.IsPlayerAuthenticatedForLFG(activityCategoryID) end
+
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_LFGList.IsPremadeGroupFinderEnabled)
+---@return boolean enabled
+function C_LFGList.IsPremadeGroupFinderEnabled() end
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_LFGList.SaveAdvancedFilter)
 ---@param options AdvancedFilterOptions
@@ -159,7 +183,8 @@ function C_LFGList.SaveAdvancedFilter(options) end
 ---@param languageFilter? WowLocale
 ---@param searchCrossFactionListings? boolean Default = false
 ---@param advancedFilter? AdvancedFilterOptions
-function C_LFGList.Search(categoryID, filter, preferredFilters, languageFilter, searchCrossFactionListings, advancedFilter) end
+---@param activityIDsFilter? number[]
+function C_LFGList.Search(categoryID, filter, preferredFilters, languageFilter, searchCrossFactionListings, advancedFilter, activityIDsFilter) end
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_LFGList.SetEntryTitle)
 ---@param activityID number
@@ -178,6 +203,11 @@ function C_LFGList.SetSearchToQuestID(questID) end
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_LFGList.SetSearchToScenarioID)
 ---@param scenarioID number
 function C_LFGList.SetSearchToScenarioID(scenarioID) end
+
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_LFGList.UpdateListing)
+---@param createData LfgListingCreateData
+---@return boolean success
+function C_LFGList.UpdateListing(createData) end
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_LFGList.ValidateRequiredDungeonScore)
 ---@param dungeonScore number
@@ -220,6 +250,8 @@ function C_LFGList.ValidateRequiredPvpRatingForActivity(activityID, rating) end
 ---@field ilvlSuggestion number
 ---@field filters number
 ---@field minLevel number
+---@field minLevelSuggestion number
+---@field maxLevelSuggestion number
 ---@field maxNumPlayers number
 ---@field displayType Enum.LFGListDisplayType
 ---@field orderIndex number
@@ -233,6 +265,9 @@ function C_LFGList.ValidateRequiredPvpRatingForActivity(activityID, rating) end
 ---@field allowCrossFaction boolean
 ---@field isHeroicActivity boolean
 ---@field isNormalActivity boolean
+---@field mapID number
+---@field difficultyID number
+---@field redirectedDifficultyID number
 ---@field useDungeonRoleExpectations boolean
 
 ---@class LfgApplicantData
@@ -254,7 +289,7 @@ function C_LFGList.ValidateRequiredPvpRatingForActivity(activityID, rating) end
 ---@field allowCrossFaction boolean
 
 ---@class LfgEntryData
----@field activityID number
+---@field activityIDs number[]
 ---@field requiredItemLevel number
 ---@field requiredHonorLevel number
 ---@field name kstringLfgListApplicant
@@ -268,10 +303,23 @@ function C_LFGList.ValidateRequiredPvpRatingForActivity(activityID, rating) end
 ---@field requiredPvpRating number?
 ---@field playstyle Enum.LFGEntryPlaystyle?
 ---@field isCrossFactionListing boolean
+---@field newPlayerFriendly boolean
+
+---@class LfgListingCreateData
+---@field activityIDs number[]
+---@field questID number?
+---@field isAutoAccept boolean? Default = false
+---@field isCrossFactionListing boolean? Default = false
+---@field isPrivateGroup boolean? Default = false
+---@field newPlayerFriendly boolean? Default = false
+---@field playstyle Enum.LFGEntryPlaystyle? Default = None
+---@field requiredDungeonScore number? Default = 0
+---@field requiredItemLevel number? Default = 0
+---@field requiredPvpRating number? Default = 0
 
 ---@class LfgSearchResultData
 ---@field searchResultID number
----@field activityID number
+---@field activityIDs number[]
 ---@field leaderName string?
 ---@field name kstringLfgListSearch
 ---@field comment kstringLfgListSearch
@@ -289,15 +337,27 @@ function C_LFGList.ValidateRequiredPvpRatingForActivity(activityID, rating) end
 ---@field age time_t
 ---@field questID number?
 ---@field leaderOverallDungeonScore number?
----@field leaderDungeonScoreInfo BestDungeonScoreMapInfo?
+---@field leaderDungeonScoreInfo BestDungeonScoreMapInfo[]
 ---@field leaderBestDungeonScoreInfo BestDungeonScoreMapInfo?
----@field leaderPvpRatingInfo PvpRatingInfo?
+---@field leaderPvpRatingInfo PvpRatingInfo[]
 ---@field requiredDungeonScore number?
 ---@field requiredPvpRating number?
 ---@field playstyle Enum.LFGEntryPlaystyle?
 ---@field crossFactionListing boolean?
 ---@field leaderFactionGroup number
+---@field newPlayerFriendly boolean?
 ---@field partyGUID WOWGUID
+
+---@class LfgSearchResultPlayerInfo
+---@field name string?
+---@field level number?
+---@field areaName string?
+---@field className string
+---@field classFilename string
+---@field specName string?
+---@field assignedRole string
+---@field lfgRoles LFGRoles
+---@field isLeader boolean
 
 ---@class PvpRatingInfo
 ---@field bracket number

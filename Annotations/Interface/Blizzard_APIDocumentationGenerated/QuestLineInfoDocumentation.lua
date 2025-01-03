@@ -57,3 +57,4 @@ function C_QuestLine.RequestQuestLinesForMap(uiMapID) end
 ---@field inProgress boolean
 ---@field isQuestStart boolean
 ---@field floorLocation Enum.QuestLineFloorLocation
+---@field startMapID number

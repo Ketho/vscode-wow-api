@@ -3,7 +3,7 @@ C_QuestInfoSystem = {}
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_QuestInfoSystem.GetQuestClassification)
 ---@param questID? number
----@return Enum.QuestClassification? classification
+---@return Enum.QuestClassification classification
 function C_QuestInfoSystem.GetQuestClassification(questID) end
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_QuestInfoSystem.GetQuestRewardCurrencies)

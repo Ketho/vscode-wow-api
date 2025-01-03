@@ -13,6 +13,7 @@ function GetFonts() end
 ---@field height number
 ---@field outline string
 ---@field shadow FontScriptShadowInfo?
+---@field fontObject SimpleFont
 
 ---@class FontScriptShadowInfo
 ---@field color colorRGBA

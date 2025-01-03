@@ -16,6 +16,8 @@ function C_ActionBar.FindFlyoutActionButtons(flyoutID) end
 ---@return number[] slots
 function C_ActionBar.FindPetActionButtons(petActionID) end
 
+---Returns the list of action bar slots that contain a specified spell.
+---
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_ActionBar.FindSpellActionButtons)
 ---@param spellID number
 ---@return number[] slots

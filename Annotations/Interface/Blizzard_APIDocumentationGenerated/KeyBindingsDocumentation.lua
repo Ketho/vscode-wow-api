@@ -10,3 +10,5 @@ function C_KeyBindings.GetBindingIndex(action) end
 ---@param bindingIndex number
 ---@return Enum.CustomBindingType? customBindingType
 function C_KeyBindings.GetCustomBindingType(bindingIndex) end
+
+---@alias InputCommandCallback FunctionContainer|fun(keystate: string)

@@ -9,6 +9,13 @@ C_GameRules = {}
 ---@return number value
 function C_GameRules.GetGameRuleAsFloat(gameRule, decimalPlaces) end
 
+---Returns the value specified in the Game Rule converted to a frame strata
+---
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_GameRules.GetGameRuleAsFrameStrata)
+---@param gameRule Enum.GameRule
+---@return string frameStrata
+function C_GameRules.GetGameRuleAsFrameStrata(gameRule) end
+
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_GameRules.IsGameRuleActive)
 ---@param gameRule Enum.GameRule
 ---@return boolean isActive

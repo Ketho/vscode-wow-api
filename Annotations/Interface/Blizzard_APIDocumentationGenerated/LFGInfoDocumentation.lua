@@ -1,6 +1,11 @@
 ---@meta _
 C_LFGInfo = {}
 
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_LFGInfo.AreCrossFactionGroupQueuesAllowed)
+---@param lfgDungeonID number
+---@return boolean areCrossFactionGroupQueuesAllowed
+function C_LFGInfo.AreCrossFactionGroupQueuesAllowed(lfgDungeonID) end
+
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_LFGInfo.CanPlayerUseGroupFinder)
 ---@return boolean canUse
 ---@return string failureReason
@@ -33,6 +38,16 @@ function C_LFGInfo.CanPlayerUseScenarioFinder() end
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_LFGInfo.ConfirmLfgExpandSearch)
 function C_LFGInfo.ConfirmLfgExpandSearch() end
+
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_LFGInfo.DoesActivePartyMeetPremadeLaunchCount)
+---@param lfgDungeonID number
+---@return boolean doesActivePartyMeetPremadeLaunchCount
+function C_LFGInfo.DoesActivePartyMeetPremadeLaunchCount(lfgDungeonID) end
+
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_LFGInfo.DoesCrossFactionQueueRequireFullPremade)
+---@param lfgDungeonID number
+---@return boolean doesCrossFactionQueueRequireFullPremade
+function C_LFGInfo.DoesCrossFactionQueueRequireFullPremade(lfgDungeonID) end
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_LFGInfo.GetAllEntriesForCategory)
 ---@param category number
@@ -78,10 +93,6 @@ function C_LFGInfo.IsLFGFollowerDungeon(dungeonID) end
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_LFGInfo.IsLFREnabled)
 ---@return boolean enabled
 function C_LFGInfo.IsLFREnabled() end
-
----[Documentation](https://warcraft.wiki.gg/wiki/API_C_LFGInfo.IsPremadeGroupEnabled)
----@return boolean enabled
-function C_LFGInfo.IsPremadeGroupEnabled() end
 
 ---@class LFGDungeonInfo
 ---@field name string

@@ -174,6 +174,11 @@ function C_Garrison.IsEnvironmentCountered(missionID) end
 ---@return boolean followerOnCompletedMission
 function C_Garrison.IsFollowerOnCompletedMission(followerID) end
 
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_Garrison.IsLandingPageMinimapButtonVisible)
+---@param garrType number
+---@return boolean isLandingPageMinimapButtonVisible
+function C_Garrison.IsLandingPageMinimapButtonVisible(garrType) end
+
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_Garrison.IsTalentConditionMet)
 ---@param talentID number
 ---@return boolean isMet

@@ -67,6 +67,11 @@ function C_Minimap.GetViewRadius() end
 ---@return boolean isFiltered
 function C_Minimap.IsFilteredOut(filterType) end
 
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_Minimap.IsInsideQuestBlob)
+---@param questID number
+---@return boolean isInside
+function C_Minimap.IsInsideQuestBlob(questID) end
+
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_Minimap.IsRotateMinimapIgnored)
 ---@return boolean isIgnored
 function C_Minimap.IsRotateMinimapIgnored() end

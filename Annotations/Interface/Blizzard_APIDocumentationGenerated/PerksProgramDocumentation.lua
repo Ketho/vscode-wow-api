@@ -148,6 +148,8 @@ function C_PerksProgram.SetFrozenPerksVendorItem() end
 ---@field isPurchasePending boolean
 ---@field doesNotExpire boolean
 ---@field price number
+---@field originalPrice number?
+---@field showSaleBanner boolean
 ---@field perksVendorItemID number
 ---@field itemID number
 ---@field iconTexture string
