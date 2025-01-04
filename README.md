@@ -1,7 +1,7 @@
 ## WoW API for VS Code
 [![](https://img.shields.io/github/license/Ketho/vscode-wow-api)](https://opensource.org/licenses/MIT)
 [![](https://img.shields.io/github/v/release/Ketho/vscode-wow-api)](https://github.com/Ketho/vscode-wow-api/releases)
-[![](https://img.shields.io/badge/mainline-11.0.5-yellow)](https://github.com/Ketho/BlizzardInterfaceResources/tree/11.0.7)
+[![](https://img.shields.io/badge/mainline-11.0.7-yellow)](https://github.com/Ketho/BlizzardInterfaceResources/tree/11.0.7)
 [![](https://img.shields.io/badge/cata-4.4.1-yellow)](https://github.com/Ketho/BlizzardInterfaceResources/tree/4.4.1)
 [![](https://img.shields.io/badge/vanilla-1.15.5-yellow)](https://github.com/Ketho/BlizzardInterfaceResources/tree/1.15.5)
 
