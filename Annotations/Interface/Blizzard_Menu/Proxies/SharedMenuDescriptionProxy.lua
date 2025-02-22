@@ -6,7 +6,7 @@ local SharedMenuDescriptionProxy = {}
 ---@return boolean
 function SharedMenuDescriptionProxy:HasElements() end
 
----@return fun(): ElementMenuDescriptionProxy
+---@return fun(): number, ElementMenuDescriptionProxy
 function SharedMenuDescriptionProxy:EnumerateElementDescriptions() end
 
 ---@param elementDescription ElementMenuDescriptionProxy
