@@ -51,10 +51,11 @@ export const data: EventInterface = {
 	ACTIONBAR_UPDATE_STATE: {},
 	ACTIONBAR_UPDATE_USABLE: {},
 	ACTION_RANGE_CHECK_UPDATE: {
+		Documentation: "Used in conjunction with EnableActionRangeCheck to inform the UI when an action goes in or out of range with its current target.",
 		Payload: [
 			{Name: "slot", Type: "number"},
-			{Name: "isInRange", Type: "boolean"},
-			{Name: "checksRange", Type: "boolean"},
+			{Name: "isInRange", Type: "boolean", Documentation: "Whether or not the current target is in range of the action. Should not be used if the 'checksRange' parameter is false."},
+			{Name: "checksRange", Type: "boolean", Documentation: "Can be false if a range check was not made for any reason, for example there is not a current target."},
 		],
 	},
 	ACTION_USABLE_CHANGED: {
@@ -75,6 +76,11 @@ export const data: EventInterface = {
 	},
 	ACTIVE_DELVE_DATA_UPDATE: {
 		Documentation: "Signaled when SpellScript calls change the data for players/parties owning a delve or when the delve is shut down.",
+	},
+	ACTIVE_GAME_MODE_UPDATED: {
+		Payload: [
+			{Name: "gameMode", Type: "GameMode"},
+		],
 	},
 	ACTIVE_PLAYER_SPECIALIZATION_CHANGED: {},
 	ACTIVE_TALENT_GROUP_CHANGED: {
@@ -2216,6 +2222,7 @@ export const data: EventInterface = {
 		],
 	},
 	CHAT_SERVER_RECONNECTED: {},
+	CHAT_TOXICITY: {},
 	CHEST_REWARDS_UPDATED_FROM_SERVER: {},
 	CINEMATIC_START: {
 		Payload: [
@@ -2473,6 +2480,12 @@ export const data: EventInterface = {
 			{Name: "clubId", Type: "ClubId"},
 		],
 	},
+	COLOR_OVERRIDES_RESET: {},
+	COLOR_OVERRIDE_UPDATED: {
+		Payload: [
+			{Name: "overrideType", Type: "ColorOverride"},
+		],
+	},
 	COMBAT_LOG_EVENT: {},
 	COMBAT_LOG_EVENT_UNFILTERED: {},
 	COMBAT_RATING_UPDATE: {},
@@ -2566,6 +2579,11 @@ export const data: EventInterface = {
 			{Name: "confirmReason", Type: "string"},
 		],
 	},
+	CONFIRM_PET_UNLEARN: {
+		Payload: [
+			{Name: "cost", Type: "number"},
+		],
+	},
 	CONFIRM_SUMMON: {
 		Payload: [
 			{Name: "summonReason", Type: "number"},
@@ -2629,6 +2647,13 @@ export const data: EventInterface = {
 	},
 	CONVERT_TO_BIND_TO_ACCOUNT_CONFIRM: {},
 	CONVERT_TO_RAID_CONFIRMATION: {},
+	COOLDOWN_VIEWER_SPELL_OVERRIDE_UPDATED: {
+		Payload: [
+			{Name: "baseSpellID", Type: "number", Documentation: "The base spell that is either being overridden or losing its override spell."},
+			{Name: "overrideSpellID", Type: "number", Nilable: true, Documentation: "The spell overriding the base spell. A nil value indicates that the override spell is being removed from the base spell."},
+		],
+	},
+	COOLDOWN_VIEWER_TABLE_HOTFIXED: {},
 	CORPSE_IN_INSTANCE: {},
 	CORPSE_IN_RANGE: {},
 	CORPSE_OUT_OF_RANGE: {},
@@ -2929,6 +2954,12 @@ export const data: EventInterface = {
 			{Name: "itemLocation", Type: "ItemLocationMixin"},
 		],
 	},
+	EVENT_REALM_QUEUES_UPDATED: {
+		Payload: [
+			{Name: "eventRealmQueues", Type: "EventRealmQueues"},
+		],
+	},
+	EVENT_SCHEDULER_UPDATE: {},
 	EXPAND_BAG_BAR_CHANGED: {
 		Payload: [
 			{Name: "expandBagBar", Type: "boolean"},
@@ -2964,11 +2995,7 @@ export const data: EventInterface = {
 		],
 	},
 	FRIENDLIST_UPDATE: {},
-	GAME_ENVIRONMENT_SWITCHED: {
-		Payload: [
-			{Name: "gameEnvironment", Type: "GameEnvironment"},
-		],
-	},
+	GAME_MODE_DISPLAY_INFO_UPDATED: {},
 	GAME_PAD_ACTIVE_CHANGED: {
 		Payload: [
 			{Name: "isActive", Type: "boolean"},
@@ -3263,11 +3290,6 @@ export const data: EventInterface = {
 			{Name: "button", Type: "string"},
 		],
 	},
-	GLUE_CONSOLE_LOG: {
-		Payload: [
-			{Name: "message", Type: "string"},
-		],
-	},
 	GLUE_SCREENSHOT_FAILED: {},
 	GLUE_SCREENSHOT_STARTED: {},
 	GLUE_SCREENSHOT_SUCCEEDED: {},
@@ -3286,7 +3308,7 @@ export const data: EventInterface = {
 		Payload: [
 			{Name: "gossipID", Type: "number"},
 			{Name: "text", Type: "string"},
-			{Name: "cost", Type: "number"},
+			{Name: "cost", Type: "WOWMONEY"},
 		],
 	},
 	GOSSIP_CONFIRM_CANCEL: {},
@@ -3376,12 +3398,31 @@ export const data: EventInterface = {
 	GUILD_RECIPE_KNOWN_BY_MEMBERS: {},
 	GUILD_REGISTRAR_CLOSED: {},
 	GUILD_REGISTRAR_SHOW: {},
+	GUILD_RENAME_NAME_CHECK: {
+		Payload: [
+			{Name: "desiredName", Type: "string"},
+			{Name: "status", Type: "GuildErrorType"},
+			{Name: "nameErrorToken", Type: "string", Nilable: true},
+		],
+	},
+	GUILD_RENAME_REFUND_RESULT: {
+		Payload: [
+			{Name: "guildName", Type: "string"},
+			{Name: "status", Type: "GuildErrorType"},
+		],
+	},
 	GUILD_RENAME_REQUIRED: {
 		Payload: [
 			{Name: "flagSet", Type: "boolean"},
 		],
 	},
+	GUILD_RENAME_STATUS_UPDATE: {
+		Payload: [
+			{Name: "status", Type: "GuildRenameStatus"},
+		],
+	},
 	GUILD_REWARDS_LIST: {},
+	GUILD_REWARDS_LIST_UPDATE: {},
 	GUILD_ROSTER_UPDATE: {
 		Payload: [
 			{Name: "canRequestRosterUpdate", Type: "boolean"},
@@ -3862,7 +3903,6 @@ export const data: EventInterface = {
 	},
 	LUA_WARNING: {
 		Payload: [
-			{Name: "warnType", Type: "number"},
 			{Name: "warningText", Type: "string"},
 		],
 	},
@@ -4055,6 +4095,11 @@ export const data: EventInterface = {
 			{Name: "itemID", Type: "number"},
 		],
 	},
+	NEW_WARBAND_SCENE_ADDED: {
+		Payload: [
+			{Name: "warbandScenID", Type: "number"},
+		],
+	},
 	NEW_WMO_CHUNK: {},
 	NOTCHED_DISPLAY_MODE_CHANGED: {},
 	NOTIFY_CHAT_SUPPRESSED: {},
@@ -4174,6 +4219,11 @@ export const data: EventInterface = {
 	},
 	PERKS_PROGRAM_DISABLED: {},
 	PERKS_PROGRAM_OPEN: {},
+	PERKS_PROGRAM_PURCHASE_CART_SUCCESS: {
+		Payload: [
+			{Name: "vendorItemIDs", Type: "number[]"},
+		],
+	},
 	PERKS_PROGRAM_PURCHASE_SUCCESS: {
 		Payload: [
 			{Name: "vendorItemID", Type: "number"},
@@ -4594,6 +4644,11 @@ export const data: EventInterface = {
 			{Name: "isTool", Type: "boolean"},
 		],
 	},
+	PROFESSION_RESPEC_CONFIRMATION: {
+		Payload: [
+			{Name: "skillName", Type: "string"},
+		],
+	},
 	PROVING_GROUNDS_SCORE_UPDATE: {
 		Payload: [
 			{Name: "points", Type: "number"},
@@ -4866,6 +4921,12 @@ export const data: EventInterface = {
 		Payload: [
 			{Name: "success", Type: "boolean"},
 			{Name: "reportType", Type: "ReportType"},
+		],
+	},
+	REQUESTED_GUILD_RENAME_RESULT: {
+		Payload: [
+			{Name: "newName", Type: "string"},
+			{Name: "status", Type: "GuildErrorType"},
 		],
 	},
 	REQUEST_CEMETERY_LIST_RESPONSE: {
@@ -5267,15 +5328,40 @@ export const data: EventInterface = {
 			{Name: "flyoutPage", Type: "number"},
 		],
 	},
+	SPELL_RANGE_CHECK_UPDATE: {
+		Documentation: "Used in conjunction with EnableSpellRangeCheck to inform the UI when a spell goes in or out of range with the current target.",
+		Payload: [
+			{Name: "spellIdentifier", Type: "SpellIdentifier"},
+			{Name: "isInRange", Type: "boolean", Documentation: "Whether or not the current target is in range of the spell. Should not be used if the 'checksRange' parameter is false."},
+			{Name: "checksRange", Type: "boolean", Documentation: "Can be false if a range check was not made for any reason, for example there is not a current target."},
+		],
+	},
 	SPELL_TEXT_UPDATE: {
 		Payload: [
 			{Name: "spellID", Type: "number"},
 		],
 	},
 	SPELL_UPDATE_CHARGES: {},
-	SPELL_UPDATE_COOLDOWN: {},
-	SPELL_UPDATE_ICON: {},
+	SPELL_UPDATE_COOLDOWN: {
+		Payload: [
+			{Name: "spellID", Type: "number", Nilable: true, Documentation: "Can be a base spell or an override spell. A nil value indicates that all cooldowns should be updated, rather than just a specific one."},
+			{Name: "baseSpellID", Type: "number", Nilable: true, Documentation: "Will be set to the base spell if the spellID parameter is an override spell."},
+			{Name: "category", Type: "number", Nilable: true, Documentation: "If the spellID parameter is set, the cooldown category of the spell. A nil value indicates the spell does not have a cooldown category."},
+			{Name: "startRecoveryCategory", Type: "number", Nilable: true, Documentation: "If the spellID parameter is set, the cooldown start recovery category of the spell. A nil value indicates the spell does not have a cooldown start recovery category."},
+		],
+	},
+	SPELL_UPDATE_ICON: {
+		Payload: [
+			{Name: "spellID", Type: "number", Nilable: true, Documentation: "Always refers to the base spell. A nil value indicates that all icons should be updated, rather than just a specific one."},
+		],
+	},
 	SPELL_UPDATE_USABLE: {},
+	SPELL_UPDATE_USES: {
+		Payload: [
+			{Name: "spellID", Type: "number", Documentation: "Can be a base spell or override spell."},
+			{Name: "baseSpellID", Type: "number", Nilable: true, Documentation: "Will be set to the base spell if the spellID parameter is an override spell."},
+		],
+	},
 	STARTER_BUILD_ACTIVATION_FAILED: {},
 	START_AUTOREPEAT_SPELL: {},
 	START_LOOT_ROLL: {
@@ -6474,6 +6560,7 @@ export const data: EventInterface = {
 	WALK_IN_DATA_UPDATE: {
 		Documentation: "Signaled when the player or a private party member join a new walk-in instance or when the instance is shut down.",
 	},
+	WARBAND_SCENE_FAVORITES_UPDATED: {},
 	WARFRONT_COMPLETED: {
 		Payload: [
 			{Name: "mapID", Type: "number"},
@@ -6520,7 +6607,7 @@ export const data: EventInterface = {
 	},
 	WORLD_MAP_OPEN: {
 		Payload: [
-			{Name: "uiMapID", Type: "number"},
+			{Name: "uiMapID", Type: "number", Nilable: true},
 		],
 	},
 	WORLD_PVP_QUEUE: {},

@@ -636,6 +636,10 @@ function C_Debug.TeleportToMapDebugObject(pinIndex) end
 function C_Debug.TeleportToMapLocation(uiMapID, mapX, mapY) end
 
 ---#nopage  
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_Debug.ToggleDebugCharInfo)
+function C_Debug.ToggleDebugCharInfo() end
+
+---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_Debug.ToggleWindDebugMenu)
 function C_Debug.ToggleWindDebugMenu() end
 
@@ -647,18 +651,6 @@ function C_Debug.ViewInDebugWindow() end
 ---@param func function
 ---@return FunctionContainer container
 function C_FunctionContainers.CreateCallback(func) end
-
----[Documentation](https://warcraft.wiki.gg/wiki/API_C_GameModeManager.GetCurrentGameMode)
----@return Enum.GameMode gameMode
-function C_GameModeManager.GetCurrentGameMode() end
-
----#nopage  
----[Documentation](https://warcraft.wiki.gg/wiki/API_C_GameModeManager.GetCurrentGameModeRecordID)
-function C_GameModeManager.GetCurrentGameModeRecordID() end
-
----#nopage  
----[Documentation](https://warcraft.wiki.gg/wiki/API_C_GameModeManager.GetGameModeDisplayInfo)
-function C_GameModeManager.GetGameModeDisplayInfo() end
 
 ---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_Garrison.AllowMissionStartAboveSoftCap)
@@ -1761,12 +1753,6 @@ function C_LFGList.GetApplications() end
 ---@return table activities
 function C_LFGList.GetAvailableActivities(categoryID, groupID, filter) end
 
----[Documentation](https://warcraft.wiki.gg/wiki/API_C_LFGList.GetAvailableActivityGroups)
----@param categoryID number
----@param filter? number
----@return table groups
-function C_LFGList.GetAvailableActivityGroups(categoryID, filter) end
-
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_LFGList.GetAvailableCategories)
 ---@param filter? number
 ---@return table categories
@@ -2242,9 +2228,6 @@ function C_PetJournal.ClearFanfare() end
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_PetJournal.ClearRecentFanfares)
 function C_PetJournal.ClearRecentFanfares() end
 
----[Documentation](https://warcraft.wiki.gg/wiki/API_C_PetJournal.ClearSearchFilter)
-function C_PetJournal.ClearSearchFilter() end
-
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_PetJournal.FindPetIDByName)
 ---@param petName string
 ---@return number speciesId
@@ -2543,10 +2526,6 @@ function C_PetJournal.SetPetSourceChecked(index, value) end
 ---@param index number
 ---@param value boolean
 function C_PetJournal.SetPetTypeFilter(index, value) end
-
----[Documentation](https://warcraft.wiki.gg/wiki/API_C_PetJournal.SetSearchFilter)
----@param text string
-function C_PetJournal.SetSearchFilter(text) end
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_PetJournal.SummonPetByGUID)
 ---@param petID string
@@ -4931,6 +4910,10 @@ function GetCurrentBindingSet() end
 function GetCurrentCombatTextEventInfo() end
 
 ---#nopage  
+---[Documentation](https://warcraft.wiki.gg/wiki/API_GetCurrentEnvironment)
+function GetCurrentEnvironment() end
+
+---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_GetCurrentGlyphNameForSpell)
 function GetCurrentGlyphNameForSpell(spellID) end
 
@@ -5063,6 +5046,10 @@ function GetGMStatus() end
 ---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_GetGMTicket)
 function GetGMTicket() end
+
+---#nopage  
+---[Documentation](https://warcraft.wiki.gg/wiki/API_GetGlobalEnvironment)
+function GetGlobalEnvironment() end
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_GetGraphicsAPIs)
 ---@return string cvarValues
@@ -7921,6 +7908,10 @@ function IsInAuthenticatedRank() end
 ---@return boolean inCinematicScene
 function IsInCinematicScene() end
 
+---#nopage  
+---[Documentation](https://warcraft.wiki.gg/wiki/API_IsInGlobalEnvironment)
+function IsInGlobalEnvironment() end
+
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_IsInGroup)
 ---@param groupType? number
 ---@return boolean inGroup
@@ -9324,11 +9315,6 @@ function SetSendMailMoney(amount) end
 ---@param shown boolean
 function SetSendMailShowing(shown) end
 
----[Documentation](https://warcraft.wiki.gg/wiki/API_SetSpecialization)
----@param specIndex number
----@param isPet? boolean
-function SetSpecialization(specIndex, isPet) end
-
 ---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_SetSpellbookPetAction)
 function SetSpellbookPetAction(slot, target) end
@@ -9606,6 +9592,10 @@ function SurrenderArena() end
 function SwapRaidSubgroup(index1, index2) end
 
 ---#nopage  
+---[Documentation](https://warcraft.wiki.gg/wiki/API_SwapToGlobalEnvironment)
+function SwapToGlobalEnvironment() end
+
+---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_SwitchAchievementSearchTab)
 function SwitchAchievementSearchTab(index) end
 
@@ -9746,25 +9736,6 @@ function UnitHasLFGDeserter(unit) end
 function UnitHasLFGRandomCooldown(unit) end
 
 ---#nopage  
----[Documentation](https://warcraft.wiki.gg/wiki/API_UnitInOtherParty)
-function UnitInOtherParty() end
-
----[Documentation](https://warcraft.wiki.gg/wiki/API_UnitIsGroupAssistant)
----@param unit UnitToken
----@return boolean isAssistant
-function UnitIsGroupAssistant(unit) end
-
----[Documentation](https://warcraft.wiki.gg/wiki/API_UnitIsGroupLeader)
----@param unit UnitToken
----@param partyCategory? number
----@return boolean isLeader
-function UnitIsGroupLeader(unit, partyCategory) end
-
----#nopage  
----[Documentation](https://warcraft.wiki.gg/wiki/API_UnitLeadsAnyGroup)
-function UnitLeadsAnyGroup() end
-
----#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_UnlearnSpecialization)
 function UnlearnSpecialization(specIndex, isPet) end
 
@@ -9778,10 +9749,6 @@ function UnmuteSoundFile(sound) end
 ---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_UpdateInventoryAlertStatus)
 function UpdateInventoryAlertStatus() end
-
----#nopage  
----[Documentation](https://warcraft.wiki.gg/wiki/API_UpdateUIParentPosition)
-function UpdateUIParentPosition() end
 
 ---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_UpdateWarGamesList)
@@ -9965,4 +9932,8 @@ function secureexecuterange(tbl, func, ...) end
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_seterrorhandler)
 ---@param errFunc function
 function seterrorhandler(errFunc) end
+
+---#nopage  
+---[Documentation](https://warcraft.wiki.gg/wiki/API_setsecurehookforbidden)
+function setsecurehookforbidden() end
 

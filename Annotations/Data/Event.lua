@@ -22,6 +22,7 @@
 ---|"ACTIVATE_GLYPH" # `spellID`
 ---|"ACTIVE_COMBAT_CONFIG_CHANGED" # `configID`
 ---|"ACTIVE_DELVE_DATA_UPDATE"
+---|"ACTIVE_GAME_MODE_UPDATED" # `gameMode`
 ---|"ACTIVE_PLAYER_SPECIALIZATION_CHANGED"
 ---|"ACTIVE_TALENT_GROUP_CHANGED" # `curr, prev`
 ---|"ADAPTER_LIST_CHANGED"
@@ -307,6 +308,7 @@
 ---|"CHAT_REGIONAL_STATUS_CHANGED" # `isServiceAvailable`
 ---|"CHAT_SERVER_DISCONNECTED" # `isInitialMessage`
 ---|"CHAT_SERVER_RECONNECTED"
+---|"CHAT_TOXICITY"
 ---|"CHEST_REWARDS_UPDATED_FROM_SERVER"
 ---|"CINEMATIC_START" # `canBeCancelled, forcedAspectRatio`
 ---|"CINEMATIC_STOP"
@@ -359,6 +361,8 @@
 ---|"CLUB_TICKET_CREATED" # `clubId, ticketInfo`
 ---|"CLUB_TICKET_RECEIVED" # `ticket`
 ---|"CLUB_UPDATED" # `clubId`
+---|"COLOR_OVERRIDES_RESET"
+---|"COLOR_OVERRIDE_UPDATED" # `overrideType`
 ---|"COMBAT_LOG_EVENT"
 ---|"COMBAT_LOG_EVENT_UNFILTERED"
 ---|"COMBAT_RATING_UPDATE"
@@ -390,6 +394,7 @@
 ---|"CONFIRM_BINDER" # `areaName`
 ---|"CONFIRM_DISENCHANT_ROLL" # `rollID, rollType`
 ---|"CONFIRM_LOOT_ROLL" # `rollID, rollType, confirmReason`
+---|"CONFIRM_PET_UNLEARN" # `cost`
 ---|"CONFIRM_SUMMON" # `summonReason, skippingStartExperience`
 ---|"CONFIRM_TALENT_WIPE" # `cost, respecType`
 ---|"CONFIRM_XP_LOSS"
@@ -407,6 +412,8 @@
 ---|"CONTRIBUTION_COLLECTOR_UPDATE_SINGLE" # `contributionID`
 ---|"CONVERT_TO_BIND_TO_ACCOUNT_CONFIRM"
 ---|"CONVERT_TO_RAID_CONFIRMATION"
+---|"COOLDOWN_VIEWER_SPELL_OVERRIDE_UPDATED" # `baseSpellID, overrideSpellID`
+---|"COOLDOWN_VIEWER_TABLE_HOTFIXED"
 ---|"CORPSE_IN_INSTANCE"
 ---|"CORPSE_IN_RANGE"
 ---|"CORPSE_OUT_OF_RANGE"
@@ -488,6 +495,8 @@
 ---|"EQUIP_BIND_CONFIRM" # `slot, itemLocation`
 ---|"EQUIP_BIND_REFUNDABLE_CONFIRM" # `slot, itemLocation`
 ---|"EQUIP_BIND_TRADEABLE_CONFIRM" # `slot, itemLocation`
+---|"EVENT_REALM_QUEUES_UPDATED" # `eventRealmQueues`
+---|"EVENT_SCHEDULER_UPDATE"
 ---|"EXPAND_BAG_BAR_CHANGED" # `expandBagBar`
 ---|"EXTRA_BROWSE_INFO_RECEIVED" # `itemID`
 ---|"FIRST_FRAME_RENDERED"
@@ -498,7 +507,7 @@
 ---|"FRAME_MANAGER_UPDATE_ALL"
 ---|"FRAME_MANAGER_UPDATE_FRAME" # `type, show`
 ---|"FRIENDLIST_UPDATE"
----|"GAME_ENVIRONMENT_SWITCHED" # `gameEnvironment`
+---|"GAME_MODE_DISPLAY_INFO_UPDATED"
 ---|"GAME_PAD_ACTIVE_CHANGED" # `isActive`
 ---|"GAME_PAD_CONFIGS_CHANGED"
 ---|"GAME_PAD_CONNECTED"
@@ -571,7 +580,6 @@
 ---|"GET_ITEM_INFO_RECEIVED" # `itemID, success`
 ---|"GLOBAL_MOUSE_DOWN" # `button`
 ---|"GLOBAL_MOUSE_UP" # `button`
----|"GLUE_CONSOLE_LOG" # `message`
 ---|"GLUE_SCREENSHOT_FAILED"
 ---|"GLUE_SCREENSHOT_STARTED"
 ---|"GLUE_SCREENSHOT_SUCCEEDED"
@@ -610,8 +618,12 @@
 ---|"GUILD_RECIPE_KNOWN_BY_MEMBERS"
 ---|"GUILD_REGISTRAR_CLOSED"
 ---|"GUILD_REGISTRAR_SHOW"
+---|"GUILD_RENAME_NAME_CHECK" # `desiredName, status, nameErrorToken`
+---|"GUILD_RENAME_REFUND_RESULT" # `guildName, status`
 ---|"GUILD_RENAME_REQUIRED" # `flagSet`
+---|"GUILD_RENAME_STATUS_UPDATE" # `status`
 ---|"GUILD_REWARDS_LIST"
+---|"GUILD_REWARDS_LIST_UPDATE"
 ---|"GUILD_ROSTER_UPDATE" # `canRequestRosterUpdate`
 ---|"GUILD_TRADESKILL_UPDATE"
 ---|"GX_RESTARTED"
@@ -751,7 +763,7 @@
 ---|"LOSS_OF_CONTROL_COMMENTATOR_ADDED" # `victim, effectIndex`
 ---|"LOSS_OF_CONTROL_COMMENTATOR_UPDATE" # `victim`
 ---|"LOSS_OF_CONTROL_UPDATE" # `unitTarget`
----|"LUA_WARNING" # `warnType, warningText`
+---|"LUA_WARNING" # `warningText`
 ---|"MACRO_ACTION_BLOCKED" # `function`
 ---|"MACRO_ACTION_FORBIDDEN" # `function`
 ---|"MAIL_CLOSED"
@@ -807,6 +819,7 @@
 ---|"NEW_RECIPE_LEARNED" # `recipeID, recipeLevel, baseRecipeID`
 ---|"NEW_RUNEFORGE_POWER_ADDED" # `powerID`
 ---|"NEW_TOY_ADDED" # `itemID`
+---|"NEW_WARBAND_SCENE_ADDED" # `warbandScenID`
 ---|"NEW_WMO_CHUNK"
 ---|"NOTCHED_DISPLAY_MODE_CHANGED"
 ---|"NOTIFY_CHAT_SUPPRESSED"
@@ -842,6 +855,7 @@
 ---|"PERKS_PROGRAM_DATA_SPECIFIC_ITEM_REFRESH" # `vendorItemID`
 ---|"PERKS_PROGRAM_DISABLED"
 ---|"PERKS_PROGRAM_OPEN"
+---|"PERKS_PROGRAM_PURCHASE_CART_SUCCESS" # `vendorItemIDs`
 ---|"PERKS_PROGRAM_PURCHASE_SUCCESS" # `vendorItemID`
 ---|"PERKS_PROGRAM_REFUND_SUCCESS" # `vendorItemID`
 ---|"PERKS_PROGRAM_REMOVE_PENDING_SHOP_ITEM" # `vendorItemID`
@@ -981,6 +995,7 @@
 ---|"POST_MATCH_CURRENCY_REWARD_UPDATE" # `reward`
 ---|"POST_MATCH_ITEM_REWARD_UPDATE"
 ---|"PROFESSION_EQUIPMENT_CHANGED" # `skillLineID, isTool`
+---|"PROFESSION_RESPEC_CONFIRMATION" # `skillName`
 ---|"PROVING_GROUNDS_SCORE_UPDATE" # `points`
 ---|"PVPQUEUE_ANYWHERE_SHOW"
 ---|"PVPQUEUE_ANYWHERE_UPDATE_AVAILABLE"
@@ -1056,6 +1071,7 @@
 ---|"REPLACE_TRADESKILL_ENCHANT" # `existing, replacement`
 ---|"REPLICATE_ITEM_LIST_UPDATE"
 ---|"REPORT_PLAYER_RESULT" # `success, reportType`
+---|"REQUESTED_GUILD_RENAME_RESULT" # `newName, status`
 ---|"REQUEST_CEMETERY_LIST_RESPONSE" # `isGossipTriggered`
 ---|"REQUEST_INVITE_CONFIRMATION" # `targetName, partyLevelLink, questSessionActive, tank, healer, dps`
 ---|"REQUIRED_GUILD_RENAME_RESULT" # `success`
@@ -1161,11 +1177,13 @@
 ---|"SPELL_POWER_CHANGED"
 ---|"SPELL_PUSHED_TO_ACTIONBAR" # `spellID, slot, page`
 ---|"SPELL_PUSHED_TO_FLYOUT_ON_ACTIONBAR" # `spellID, flyoutSlot, flyoutPage`
+---|"SPELL_RANGE_CHECK_UPDATE" # `spellIdentifier, isInRange, checksRange`
 ---|"SPELL_TEXT_UPDATE" # `spellID`
 ---|"SPELL_UPDATE_CHARGES"
----|"SPELL_UPDATE_COOLDOWN"
----|"SPELL_UPDATE_ICON"
+---|"SPELL_UPDATE_COOLDOWN" # `spellID, baseSpellID, category, startRecoveryCategory`
+---|"SPELL_UPDATE_ICON" # `spellID`
 ---|"SPELL_UPDATE_USABLE"
+---|"SPELL_UPDATE_USES" # `spellID, baseSpellID`
 ---|"STARTER_BUILD_ACTIVATION_FAILED"
 ---|"START_AUTOREPEAT_SPELL"
 ---|"START_LOOT_ROLL" # `rollID, rollTime, lootHandle`
@@ -1460,6 +1478,7 @@
 ---|"VOID_TRANSFER_SUCCESS"
 ---|"VOTE_KICK_REASON_NEEDED" # `name, resultGUID`
 ---|"WALK_IN_DATA_UPDATE"
+---|"WARBAND_SCENE_FAVORITES_UPDATED"
 ---|"WARFRONT_COMPLETED" # `mapID, winner`
 ---|"WARGAME_INVITE_SENT"
 ---|"WARGAME_REQUESTED" # `opposingPartyMemberName, battlegroundName, timeoutSeconds, tournamentRules`
