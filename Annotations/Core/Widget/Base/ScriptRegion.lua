@@ -103,6 +103,11 @@ function ScriptRegion:Hide() end
 ---@param bindingType? LE_SCRIPT_BINDING_TYPE
 function ScriptRegion:HookScript(scriptTypeName, script, bindingType) end
 
+---[Documentation](https://warcraft.wiki.gg/wiki/API_ScriptRegion_Intersects)
+---@param region ScriptRegion
+---@return boolean intersects
+function ScriptRegion:Intersects(region) end
+
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_ScriptRegion_IsAnchoringRestricted)
 ---@return boolean isRestricted
 function ScriptRegion:IsAnchoringRestricted() end

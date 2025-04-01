@@ -21,6 +21,11 @@ function Font:GetFont() end
 ---@return SimpleFont font
 function Font:GetFontObject() end
 
+---[Documentation](https://warcraft.wiki.gg/wiki/API_Font_GetFontObjectForAlphabet)
+---@param alphabet FontAlphabet
+---@return SimpleFont font
+function Font:GetFontObjectForAlphabet(alphabet) end
+
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_Font_GetIndentedWordWrap)
 ---@return boolean wordWrap
 function Font:GetIndentedWordWrap() end
@@ -65,6 +70,10 @@ function Font:SetAlpha(alpha) end
 ---@param height uiFontHeight
 ---@param flags TBFFlags
 function Font:SetFont(fontFile, height, flags) end
+
+---[Documentation](https://warcraft.wiki.gg/wiki/API_Font_SetFontHeight)
+---@param height number
+function Font:SetFontHeight(height) end
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_Font_SetFontObject)
 ---@param font? FontObject

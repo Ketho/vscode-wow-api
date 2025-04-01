@@ -118,6 +118,7 @@ function StatusBar:SetStatusBarDesaturation(desaturation) end
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_StatusBar_SetStatusBarTexture)
 ---@param asset TextureAsset
+---@return boolean success
 function StatusBar:SetStatusBarTexture(asset) end
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_StatusBar_SetValue)

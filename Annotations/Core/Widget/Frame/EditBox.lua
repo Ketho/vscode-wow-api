@@ -113,6 +113,10 @@ function EditBox:GetMaxLetters() end
 ---@return number numLetters
 function EditBox:GetNumLetters() end
 
+---[Documentation](https://warcraft.wiki.gg/wiki/API_EditBox_GetNumLines)
+---@return number lines
+function EditBox:GetNumLines() end
+
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_EditBox_GetNumber)
 ---@return number? number
 function EditBox:GetNumber() end

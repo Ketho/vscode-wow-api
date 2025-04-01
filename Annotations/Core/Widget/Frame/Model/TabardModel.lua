@@ -1,33 +1,30 @@
 ---@meta _
 ---[Documentation](https://warcraft.wiki.gg/wiki/UIOBJECT_TabardModel)
----@class TabardModel : PlayerModel
+---@class TabardModel : TabardModelBase
 local TabardModel = {}
 ---@class tabardmodel : TabardModel
 ---@class TABARDMODEL : TabardModel
 
----[Documentation](https://warcraft.wiki.gg/wiki/API_TabardModelBase_CanSaveTabardNow)
----@return boolean canSave
-function TabardModel:CanSaveTabardNow() end
+---[Documentation](https://warcraft.wiki.gg/wiki/API_TabardModel_GetLowerBackgroundFileName)
+---@return fileID file
+function TabardModel:GetLowerBackgroundFileName() end
 
----[Documentation](https://warcraft.wiki.gg/wiki/API_TabardModelBase_CycleVariation)
----@param variationIndex number
----@param delta number
-function TabardModel:CycleVariation(variationIndex, delta) end
+---[Documentation](https://warcraft.wiki.gg/wiki/API_TabardModel_GetLowerBorderFile)
+---@return fileID file
+function TabardModel:GetLowerBorderFile() end
 
----[Documentation](https://warcraft.wiki.gg/wiki/API_TabardModelBase_GetLowerEmblemTexture)
----@param texture SimpleTexture
-function TabardModel:GetLowerEmblemTexture(texture) end
+---[Documentation](https://warcraft.wiki.gg/wiki/API_TabardModel_GetLowerEmblemFile)
+---@return fileID file
+function TabardModel:GetLowerEmblemFile() end
 
----[Documentation](https://warcraft.wiki.gg/wiki/API_TabardModelBase_GetUpperEmblemTexture)
----@param texture SimpleTexture
-function TabardModel:GetUpperEmblemTexture(texture) end
+---[Documentation](https://warcraft.wiki.gg/wiki/API_TabardModel_GetUpperBackgroundFileName)
+---@return fileID file
+function TabardModel:GetUpperBackgroundFileName() end
 
----[Documentation](https://warcraft.wiki.gg/wiki/API_TabardModelBase_InitializeTabardColors)
-function TabardModel:InitializeTabardColors() end
+---[Documentation](https://warcraft.wiki.gg/wiki/API_TabardModel_GetUpperBorderFile)
+---@return fileID file
+function TabardModel:GetUpperBorderFile() end
 
----[Documentation](https://warcraft.wiki.gg/wiki/API_TabardModelBase_IsGuildTabard)
----@return boolean isGuildTabard
-function TabardModel:IsGuildTabard() end
-
----[Documentation](https://warcraft.wiki.gg/wiki/API_TabardModelBase_Save)
-function TabardModel:Save() end
+---[Documentation](https://warcraft.wiki.gg/wiki/API_TabardModel_GetUpperEmblemFile)
+---@return fileID file
+function TabardModel:GetUpperEmblemFile() end

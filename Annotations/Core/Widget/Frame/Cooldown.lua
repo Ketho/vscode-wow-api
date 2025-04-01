@@ -63,6 +63,10 @@ function Cooldown:GetDrawSwipe() end
 ---@return number edgeScale
 function Cooldown:GetEdgeScale() end
 
+---[Documentation](https://warcraft.wiki.gg/wiki/API_Cooldown_GetHideCountdownNumbers)
+---@return boolean hideNumbers
+function Cooldown:GetHideCountdownNumbers() end
+
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_Cooldown_GetReverse)
 ---@return boolean reverse
 function Cooldown:GetReverse() end
@@ -70,6 +74,10 @@ function Cooldown:GetReverse() end
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_Cooldown_GetRotation)
 ---@return number rotationRadians
 function Cooldown:GetRotation() end
+
+---[Documentation](https://warcraft.wiki.gg/wiki/API_Cooldown_GetUseAuraDisplayTime)
+---@return boolean useAuraDisplayTime
+function Cooldown:GetUseAuraDisplayTime() end
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_Cooldown_IsPaused)
 ---@return boolean isPaused
@@ -169,6 +177,12 @@ function Cooldown:SetSwipeTexture(texture, colorR, colorG, colorB, colorA) end
 ---@param low vector2
 ---@param high vector2
 function Cooldown:SetTexCoordRange(low, high) end
+
+---Aura durations are displayed slightly differently than cooldown durations. Setting this to true will adjust the display logic to stay in sync with aura timers.
+---
+---[Documentation](https://warcraft.wiki.gg/wiki/API_Cooldown_SetUseAuraDisplayTime)
+---@param useAuraDisplayTime? boolean Default = false
+function Cooldown:SetUseAuraDisplayTime(useAuraDisplayTime) end
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_Cooldown_SetUseCircularEdge)
 ---@param useCircularEdge? boolean Default = false

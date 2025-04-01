@@ -120,6 +120,9 @@ function FontString:GetWrappedWidth() end
 ---@return boolean isTruncated
 function FontString:IsTruncated() end
 
+---[Documentation](https://warcraft.wiki.gg/wiki/API_FontString_OnColorsUpdated)
+function FontString:OnColorsUpdated() end
+
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_FontString_SetAlphaGradient)
 ---@param start number
 ---@param length number
@@ -203,6 +206,10 @@ function FontString:SetTextHeight(height) end
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_FontString_SetTextScale)
 ---@param textScale number
 function FontString:SetTextScale(textScale) end
+
+---[Documentation](https://warcraft.wiki.gg/wiki/API_FontString_SetTextToFit)
+---@param text? string Default = 
+function FontString:SetTextToFit(text) end
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_FontString_SetWordWrap)
 ---@param wrap boolean

@@ -40,6 +40,9 @@ function Frame:AbortDrag() end
 ---@return boolean canChangeAttributes
 function Frame:CanChangeAttribute() end
 
+---[Documentation](https://warcraft.wiki.gg/wiki/API_Frame_ClearAlphaGradient)
+function Frame:ClearAlphaGradient() end
+
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_Frame_CreateFontString)
 ---@param name? string
 ---@param drawLayer? DrawLayer
@@ -83,6 +86,12 @@ function Frame:DisableDrawLayer(layer) end
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_Frame_DoesClipChildren)
 ---@return boolean clipsChildren
 function Frame:DoesClipChildren() end
+
+---Returns whether hyperlink events (ex. OnHyperlinkEnter, OnHyperlinkLeave, OnHyperlinkClick) are propagated to this frame's parent.
+---
+---[Documentation](https://warcraft.wiki.gg/wiki/API_Frame_DoesHyperlinkPropagateToParent)
+---@return boolean canPropagate
+function Frame:DoesHyperlinkPropagateToParent() end
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_Frame_EnableDrawLayer)
 ---@param layer DrawLayer
@@ -221,11 +230,17 @@ function Frame:Hide() end
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_Frame_InterceptStartDrag)
 ---@param delegate SimpleFrame
+---@return boolean success
 function Frame:InterceptStartDrag(delegate) end
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_Frame_IsClampedToScreen)
 ---@return boolean clampedToScreen
 function Frame:IsClampedToScreen() end
+
+---[Documentation](https://warcraft.wiki.gg/wiki/API_Frame_IsDrawLayerEnabled)
+---@param layer DrawLayer
+---@return boolean isEnabled
+function Frame:IsDrawLayerEnabled(layer) end
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_Frame_IsEventRegistered)
 ---@param eventName FrameEvent
@@ -277,6 +292,10 @@ function Frame:IsToplevel() end
 ---@return boolean isUserPlaced
 function Frame:IsUserPlaced() end
 
+---[Documentation](https://warcraft.wiki.gg/wiki/API_Frame_IsUsingParentLevel)
+---@return boolean usingParentLevel
+function Frame:IsUsingParentLevel() end
+
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_Frame_IsVisible)
 ---@return boolean isVisible
 function Frame:IsVisible() end
@@ -317,6 +336,11 @@ function Frame:RotateTextures(radians, x, y) end
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_Frame_SetAlpha)
 ---@param alpha SingleColorValue
 function Frame:SetAlpha(alpha) end
+
+---[Documentation](https://warcraft.wiki.gg/wiki/API_Frame_SetAlphaGradient)
+---@param index number
+---@param gradient vector2
+function Frame:SetAlphaGradient(index, gradient) end
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_Frame_SetAttribute)
 ---@param attributeName string
@@ -379,6 +403,12 @@ function Frame:SetFrameStrata(strata) end
 ---@param bottom uiUnit
 function Frame:SetHitRectInsets(left, right, top, bottom) end
 
+---Enables or disables propagating hyperlink events (ex. OnHyperlinkEnter, OnHyperlinkLeave, OnHyperlinkClick) to this frame's parent.
+---
+---[Documentation](https://warcraft.wiki.gg/wiki/API_Frame_SetHyperlinkPropagateToParent)
+---@param canPropagate boolean
+function Frame:SetHyperlinkPropagateToParent(canPropagate) end
+
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_Frame_SetHyperlinksEnabled)
 ---@param enabled? boolean Default = false
 function Frame:SetHyperlinksEnabled(enabled) end
@@ -433,6 +463,10 @@ function Frame:SetToplevel(topLevel) end
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_Frame_SetUserPlaced)
 ---@param userPlaced boolean
 function Frame:SetUserPlaced(userPlaced) end
+
+---[Documentation](https://warcraft.wiki.gg/wiki/API_Frame_SetUsingParentLevel)
+---@param usingParentLevel boolean
+function Frame:SetUsingParentLevel(usingParentLevel) end
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_Frame_Show)
 function Frame:Show() end

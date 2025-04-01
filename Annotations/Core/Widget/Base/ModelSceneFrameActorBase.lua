@@ -159,6 +159,15 @@ function ModelSceneFrameActorBase:SetParticleOverrideScale(scale) end
 ---@param pitch number
 function ModelSceneFrameActorBase:SetPitch(pitch) end
 
+---[Documentation](https://warcraft.wiki.gg/wiki/API_ModelSceneFrameActorBase_SetPlayerModelFromGlues)
+---@param characterIndex? number
+---@param sheatheWeapons? boolean Default = false
+---@param autoDress? boolean Default = true
+---@param hideWeapons? boolean Default = false
+---@param usePlayerNativeForm? boolean Default = true
+---@return boolean success
+function ModelSceneFrameActorBase:SetPlayerModelFromGlues(characterIndex, sheatheWeapons, autoDress, hideWeapons, usePlayerNativeForm) end
+
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_ModelSceneFrameActorBase_SetPosition)
 ---@param positionX number
 ---@param positionY number
