@@ -12,14 +12,14 @@ function CaseAccentInsensitiveParse(name) end
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_DeclineName)
 ---@param name string
----@param gender? number
+---@param gender? Enum.UnitSex
 ---@param declensionSet number
 ---@return string declinedNames
 function DeclineName(name, gender, declensionSet) end
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_GetNumDeclensionSets)
 ---@param name string
----@param gender? number
+---@param gender? Enum.UnitSex
 ---@return number numDeclensionSets
 function GetNumDeclensionSets(name, gender) end
 

@@ -345,12 +345,14 @@ function UnitControllingVehicle(unit) end
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_UnitCreatureFamily)
 ---@param unit UnitToken
----@return string result
+---@return string name
+---@return number id
 function UnitCreatureFamily(unit) end
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_UnitCreatureType)
 ---@param unit UnitToken
----@return string result
+---@return string name
+---@return number id
 function UnitCreatureType(unit) end
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_UnitDamage)
@@ -492,6 +494,13 @@ function UnitInAnyGroup(unit, partyIndex) end
 ---@return number? result
 function UnitInBattleground(unit, partyIndex) end
 
+---Checks whether this unit cannot see your party chat because it is in an instance group
+---
+---[Documentation](https://warcraft.wiki.gg/wiki/API_UnitInOtherParty)
+---@param unit UnitToken
+---@return boolean inOtherParty
+function UnitInOtherParty(unit) end
+
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_UnitInParty)
 ---@param unit? UnitToken Default = WOWGUID_NULL
 ---@param partyIndex? number
@@ -623,6 +632,17 @@ function UnitIsGameObject(unit) end
 ---@return boolean result
 function UnitIsGhost(unit) end
 
+---[Documentation](https://warcraft.wiki.gg/wiki/API_UnitIsGroupAssistant)
+---@param unit UnitToken
+---@return boolean isAssistant
+function UnitIsGroupAssistant(unit) end
+
+---[Documentation](https://warcraft.wiki.gg/wiki/API_UnitIsGroupLeader)
+---@param unit UnitToken
+---@param partyCategory? number
+---@return boolean isLeader
+function UnitIsGroupLeader(unit, partyCategory) end
+
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_UnitIsInMyGuild)
 ---@param unit string
 ---@return boolean result
@@ -726,6 +746,11 @@ function UnitIsVisible(unit) end
 ---@return boolean result
 function UnitIsWildBattlePet(unit) end
 
+---[Documentation](https://warcraft.wiki.gg/wiki/API_UnitLeadsAnyGroup)
+---@param unit UnitToken
+---@return boolean isLeader
+function UnitLeadsAnyGroup(unit) end
+
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_UnitLevel)
 ---@param name string
 ---@return number result
@@ -757,6 +782,11 @@ function UnitNumPowerBarTimers(unit) end
 ---@param unit UnitToken
 ---@return boolean result
 function UnitOnTaxi(unit) end
+
+---[Documentation](https://warcraft.wiki.gg/wiki/API_UnitOwnerGUID)
+---@param unit UnitToken
+---@return WOWGUID ownerGUID
+function UnitOwnerGUID(unit) end
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_UnitPVPName)
 ---@param unit UnitToken
@@ -1066,6 +1096,14 @@ function WorldLootObjectExists(unit) end
 ---@field isEmpowered boolean
 ---@field numEmpowerStages number
 
+---@class UnitCreatureFamilyResult
+---@field name string
+---@field id number
+
+---@class UnitCreatureTypeResult
+---@field name string
+---@field id number
+
 ---@class UnitPowerBarInfo
 ---@field ID number
 ---@field barType number
@@ -1083,3 +1121,4 @@ function WorldLootObjectExists(unit) end
 ---@field flashAtMinPower boolean
 ---@field fractionalCounter boolean
 ---@field animateNumbers boolean
+---@field attachTooltipToBar boolean

@@ -2,7 +2,7 @@
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_GetSpecializationInfoForClassID)
 ---@param classID number
 ---@param index number
----@param gender? number
+---@param gender? Enum.UnitSex
 ---@return number id
 ---@return string name
 ---@return string description
@@ -16,7 +16,7 @@ function GetSpecializationInfoForClassID(classID, index, gender) end
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_GetSpecializationInfoForSpecID)
 ---@param specID number
----@param gender? number
+---@param gender? Enum.UnitSex
 ---@return number id
 ---@return string name
 ---@return string description
@@ -30,7 +30,7 @@ function GetSpecializationInfoForSpecID(specID, gender) end
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_GetSpecializationNameForSpecID)
 ---@param specID number
----@param gender? number
+---@param gender? Enum.UnitSex
 ---@return string? name
 function GetSpecializationNameForSpecID(specID, gender) end
 

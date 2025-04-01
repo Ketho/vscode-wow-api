@@ -160,10 +160,6 @@ function C_SpellBook.GetSpellBookItemType(spellBookItemSlotIndex, spellBookItemS
 ---@return SpellBookSkillLineInfo skillLineInfo
 function C_SpellBook.GetSpellBookSkillLineInfo(skillLineIndex) end
 
----[Documentation](https://warcraft.wiki.gg/wiki/API_C_SpellBook.GetTrackedNameplateCooldownSpells)
----@return number[] spellIDs
-function C_SpellBook.GetTrackedNameplateCooldownSpells() end
-
 ---Returns nothing if player has no pet spells
 ---
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_SpellBook.HasPetSpells)

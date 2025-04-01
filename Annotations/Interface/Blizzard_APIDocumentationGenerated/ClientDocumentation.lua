@@ -1,6 +1,7 @@
 ---@meta _
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_FlashClientIcon)
-function FlashClientIcon() end
+---@param briefly? boolean Default = false
+function FlashClientIcon(briefly) end
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_GetBillingTimeRested)
 ---@return number billingTimeRested

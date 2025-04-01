@@ -85,10 +85,20 @@ function C_SpecializationInfo.IsPvpTalentLocked(talentID) end
 ---@return boolean matches
 function C_SpecializationInfo.MatchesCurrentSpecSet(specSetID) end
 
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_SpecializationInfo.SetPetSpecialization)
+---@param specIndex number
+---@param petNumber? number
+function C_SpecializationInfo.SetPetSpecialization(specIndex, petNumber) end
+
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_SpecializationInfo.SetPvpTalentLocked)
 ---@param talentID number
 ---@param locked boolean
 function C_SpecializationInfo.SetPvpTalentLocked(talentID, locked) end
+
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_SpecializationInfo.SetSpecialization)
+---@param specIndex number
+---@return boolean success
+function C_SpecializationInfo.SetSpecialization(specIndex) end
 
 ---@class PvpTalentInfo
 ---@field talentID number

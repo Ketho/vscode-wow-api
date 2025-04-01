@@ -428,10 +428,18 @@ function C_AuctionHouse.SendSellSearchQuery(itemKey, sorts, separateOwnerItems) 
 ---@param setFavorite boolean
 function C_AuctionHouse.SetFavoriteItem(itemKey, setFavorite) end
 
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_AuctionHouse.ShouldAutoPopulatePrice)
+---@return boolean shouldAutoPopulatePrice
+function C_AuctionHouse.ShouldAutoPopulatePrice() end
+
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_AuctionHouse.StartCommoditiesPurchase)
 ---@param itemID number
 ---@param quantity number
 function C_AuctionHouse.StartCommoditiesPurchase(itemID, quantity) end
+
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_AuctionHouse.SupportsCopperValues)
+---@return boolean supportsCopperValues
+function C_AuctionHouse.SupportsCopperValues() end
 
 ---@class AuctionHouseBrowseQuery
 ---@field searchString string

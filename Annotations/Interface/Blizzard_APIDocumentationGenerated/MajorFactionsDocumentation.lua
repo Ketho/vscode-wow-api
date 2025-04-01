@@ -41,6 +41,11 @@ function C_MajorFactions.GetRenownRewardsForLevel(majorFactionID, renownLevel) e
 ---@return boolean hasMaxRenown
 function C_MajorFactions.HasMaximumRenown(majorFactionID) end
 
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_MajorFactions.IsMajorFactionHiddenFromExpansionPage)
+---@param majorFactionID number
+---@return boolean isHidden
+function C_MajorFactions.IsMajorFactionHiddenFromExpansionPage(majorFactionID) end
+
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_MajorFactions.IsWeeklyRenownCapped)
 ---@param majorFactionID number
 ---@return boolean isWeeklyCapped
@@ -60,6 +65,8 @@ function C_MajorFactions.IsWeeklyRenownCapped(majorFactionID) end
 ---@field textureKit textureKit
 ---@field celebrationSoundKit number
 ---@field renownFanfareSoundKitID number
+---@field factionFontColor DBColorExport?
+---@field renownTrackLevelEffectID number?
 
 ---@class MajorFactionRenownInfo
 ---@field renownLevel number

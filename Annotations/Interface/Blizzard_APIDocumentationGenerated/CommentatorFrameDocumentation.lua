@@ -649,6 +649,11 @@ function C_Commentator.SetUseSmartCamera(useSmartCamera) end
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_Commentator.SnapCameraLookAtPoint)
 function C_Commentator.SnapCameraLookAtPoint() end
 
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_Commentator.SpellUsesItemCharges)
+---@param spellID number
+---@return boolean spellUsesItemCharges
+function C_Commentator.SpellUsesItemCharges(spellID) end
+
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_Commentator.StartWargame)
 ---@param listID number
 ---@param teamSize number

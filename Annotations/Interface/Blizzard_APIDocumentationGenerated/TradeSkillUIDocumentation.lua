@@ -6,8 +6,18 @@ C_TradeSkillUI = {}
 ---@return boolean canStore
 function C_TradeSkillUI.CanStoreEnchantInItem(itemGUID) end
 
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_TradeSkillUI.CancelProfessionRespec)
+function C_TradeSkillUI.CancelProfessionRespec() end
+
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_TradeSkillUI.CheckRespecNPC)
+---@return boolean canInteract
+function C_TradeSkillUI.CheckRespecNPC() end
+
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_TradeSkillUI.CloseTradeSkill)
 function C_TradeSkillUI.CloseTradeSkill() end
+
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_TradeSkillUI.ConfirmProfessionRespec)
+function C_TradeSkillUI.ConfirmProfessionRespec() end
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_TradeSkillUI.CraftEnchant)
 ---@param recipeSpellID number

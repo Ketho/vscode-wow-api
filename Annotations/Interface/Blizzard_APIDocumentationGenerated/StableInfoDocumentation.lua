@@ -8,6 +8,10 @@ function C_StableInfo.ClosePetStables() end
 ---@return PetInfo[] activePets
 function C_StableInfo.GetActivePetList() end
 
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_StableInfo.GetAvailablePetSpecInfos)
+---@return PetSpecInfo[] petSpecInfos
+function C_StableInfo.GetAvailablePetSpecInfos() end
+
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_StableInfo.GetNumActivePets)
 ---@return number numActivePets
 function C_StableInfo.GetNumActivePets() end
@@ -61,10 +65,17 @@ function C_StableInfo.SetPetSlot(index, slot) end
 ---@field familyName string
 ---@field specialization string
 ---@field type string
----@field abilities number[]
+---@field petAbilities number[]
+---@field specAbilities number[]
 ---@field displayID number
 ---@field isFavorite boolean
 ---@field isExotic boolean
 ---@field uiModelSceneID number? Default = 718
 ---@field petNumber number
 ---@field creatureID number
+---@field specID number
+
+---@class PetSpecInfo
+---@field specID number
+---@field specIndex number
+---@field specializationName string

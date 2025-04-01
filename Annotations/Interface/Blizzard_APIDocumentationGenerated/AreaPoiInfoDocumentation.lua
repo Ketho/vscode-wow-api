@@ -7,7 +7,7 @@ C_AreaPoiInfo = {}
 function C_AreaPoiInfo.GetAreaPOIForMap(uiMapID) end
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_AreaPoiInfo.GetAreaPOIInfo)
----@param uiMapID number
+---@param uiMapID? number
 ---@param areaPoiID number
 ---@return AreaPOIInfo poiInfo
 function C_AreaPoiInfo.GetAreaPOIInfo(uiMapID, areaPoiID) end

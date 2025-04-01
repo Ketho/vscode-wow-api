@@ -502,6 +502,7 @@ function C_QuestLog.UpdateCampaignHeaders() end
 ---@field finished boolean
 ---@field numFulfilled number
 ---@field numRequired number
+---@field objectiveType QuestObjectiveType?
 
 ---@class QuestTagInfo
 ---@field tagName string

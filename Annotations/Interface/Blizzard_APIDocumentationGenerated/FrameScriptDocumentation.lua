@@ -1,8 +1,9 @@
 ---@meta _
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_CreateWindow)
 ---@param popupStyle? boolean Default = true
+---@param topMost? boolean Default = false
 ---@return SimpleWindow? window
-function CreateWindow(popupStyle) end
+function CreateWindow(popupStyle, topMost) end
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_GetCallstackHeight)
 ---@return number height
@@ -23,6 +24,10 @@ function GetErrorCallstackHeight() end
 ---@return string slowestHandlerName
 ---@return number slowestHandlerTime
 function GetEventTime(eventProfileIndex) end
+
+---[Documentation](https://warcraft.wiki.gg/wiki/API_GetSourceLocation)
+---@return string location
+function GetSourceLocation() end
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_RunScript)
 ---@param text string

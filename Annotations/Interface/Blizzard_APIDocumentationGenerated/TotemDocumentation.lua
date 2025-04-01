@@ -15,6 +15,8 @@ function GetTotemCannotDismiss(slot) end
 ---@return number startTime
 ---@return number duration
 ---@return fileID icon
+---@return number modRate
+---@return number spellID
 function GetTotemInfo(slot) end
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_GetTotemTimeLeft)
@@ -32,3 +34,5 @@ function TargetTotem(slot) end
 ---@field startTime number
 ---@field duration number
 ---@field icon fileID
+---@field modRate number
+---@field spellID number

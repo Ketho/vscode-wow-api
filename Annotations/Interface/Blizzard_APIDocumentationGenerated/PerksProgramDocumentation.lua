@@ -77,6 +77,10 @@ function C_PerksProgram.ItemSelectedTelemetry(perksVendorItemID) end
 ---@param perksVendorItemID number
 function C_PerksProgram.PickupPerksVendorItem(perksVendorItemID) end
 
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_PerksProgram.RequestCartCheckout)
+---@param perksVendorItemIDs number[]
+function C_PerksProgram.RequestCartCheckout(perksVendorItemIDs) end
+
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_PerksProgram.RequestPendingChestRewards)
 function C_PerksProgram.RequestPendingChestRewards() end
 
@@ -93,30 +97,6 @@ function C_PerksProgram.ResetHeldItemDragAndDrop() end
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_PerksProgram.SetFrozenPerksVendorItem)
 function C_PerksProgram.SetFrozenPerksVendorItem() end
-
----@class ModelSceneActorData
----@field actorID number?
----@field scriptTag string?
----@field posX number?
----@field posY number?
----@field posZ number?
----@field yaw number?
----@field pitch number?
----@field roll number?
----@field normalizedScale number?
-
----@class ModelSceneCameraData
----@field cameraID number?
----@field scriptTag string?
----@field targetX number?
----@field targetY number?
----@field targetZ number?
----@field yaw number?
----@field pitch number?
----@field roll number?
----@field defaultZoom number?
----@field zoomMin number?
----@field zoomMax number?
 
 ---@class PerksProgramItemDisplayInfo
 ---@field overrideModelSceneID number?
@@ -160,6 +140,8 @@ function C_PerksProgram.SetFrozenPerksVendorItem() end
 ---@field itemModifiedAppearanceID number
 ---@field subItems PerksVendorSubItemInfo[]
 ---@field uiGroupInfo PerksVendorItemUIGroupInfo?
+---@field invType string
+---@field quality Enum.ItemQuality
 
 ---@class PerksVendorItemUIGroupInfo
 ---@field ID number
@@ -169,6 +151,6 @@ function C_PerksProgram.SetFrozenPerksVendorItem() end
 ---@class PerksVendorSubItemInfo
 ---@field name string
 ---@field itemID number
----@field itemAppearanceID number
+---@field itemModifiedAppearanceID number
 ---@field invType string
 ---@field quality Enum.ItemQuality

@@ -9,6 +9,7 @@
 ---@field categoryID Enum.TransmogCollectionType? Default = None
 ---@field playerCanCollect boolean
 ---@field isValidSourceForPlayer boolean
+---@field canDisplayOnPlayer boolean
 ---@field inventorySlot number?
 ---@field sourceType number?
 ---@field name string?

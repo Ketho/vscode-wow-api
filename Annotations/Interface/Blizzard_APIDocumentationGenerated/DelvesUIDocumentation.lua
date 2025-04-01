@@ -1,6 +1,10 @@
 ---@meta _
 C_DelvesUI = {}
 
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_DelvesUI.GetCompanionInfoForActivePlayer)
+---@return number playerCompanionInfoID
+function C_DelvesUI.GetCompanionInfoForActivePlayer() end
+
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_DelvesUI.GetCreatureDisplayInfoForCompanion)
 ---@param companionID? number
 ---@return number creatureDisplayInfoID
@@ -15,10 +19,10 @@ function C_DelvesUI.GetCreatureDisplayInfoForCompanion(companionID) end
 function C_DelvesUI.GetCurioLink(spellID, rarity) end
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_DelvesUI.GetCurioNodeForCompanion)
----@param companionID? number
 ---@param curioType Enum.CurioType
+---@param companionID? number
 ---@return number nodeID
-function C_DelvesUI.GetCurioNodeForCompanion(companionID, curioType) end
+function C_DelvesUI.GetCurioNodeForCompanion(curioType, companionID) end
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_DelvesUI.GetCurioRarityByTraitCondAccountElementID)
 ---@param traitCondAccountElementID number
@@ -59,10 +63,10 @@ function C_DelvesUI.GetModelSceneForCompanion(companionID) end
 function C_DelvesUI.GetRoleNodeForCompanion(companionID) end
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_DelvesUI.GetRoleSubtreeForCompanion)
----@param companionID? number
 ---@param roleType Enum.CompanionRoleType
+---@param companionID? number
 ---@return number subTreeID
-function C_DelvesUI.GetRoleSubtreeForCompanion(companionID, roleType) end
+function C_DelvesUI.GetRoleSubtreeForCompanion(roleType, companionID) end
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_DelvesUI.GetTraitTreeForCompanion)
 ---@param companionID? number

@@ -11,6 +11,7 @@
 ---@field duration number
 ---@field isEnabled boolean
 ---@field modRate number
+---@field activeCategory number?
 
 ---@class SpellPowerCostInfo
 ---@field type Enum.PowerType

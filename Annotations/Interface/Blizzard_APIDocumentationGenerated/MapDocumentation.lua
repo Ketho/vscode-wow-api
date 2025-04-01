@@ -220,6 +220,10 @@ function C_Map.IsMapValidForNavBarDropdown(uiMapID) end
 ---@return boolean hasArt
 function C_Map.MapHasArt(uiMapID) end
 
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_Map.OpenWorldMap)
+---@param uiMapID? number
+function C_Map.OpenWorldMap(uiMapID) end
+
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_Map.RequestPreloadMap)
 ---@param uiMapID number
 function C_Map.RequestPreloadMap(uiMapID) end

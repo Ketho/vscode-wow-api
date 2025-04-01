@@ -112,6 +112,12 @@ function C_Item.GetCurrentItemTransmogInfo(itemLoc) end
 ---@return string? itemLink
 function C_Item.GetDelvePreviewItemLink(itemID, context) end
 
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_Item.GetDelvePreviewItemQuality)
+---@param itemID number
+---@param context Enum.ItemCreationContext
+---@return Enum.ItemQuality itemQuality
+function C_Item.GetDelvePreviewItemQuality(itemID, context) end
+
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_Item.GetDetailedItemLevelInfo)
 ---@param itemInfo ItemInfo
 ---@return number actualItemLevel
@@ -324,7 +330,7 @@ function C_Item.GetItemQuality(itemLocation) end
 function C_Item.GetItemQualityByID(itemInfo) end
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_Item.GetItemQualityColor)
----@param quality number
+---@param quality Enum.ItemQuality
 ---@return number colorRGBR
 ---@return number colorRGBG
 ---@return number colorRGBB
@@ -378,6 +384,11 @@ function C_Item.GetItemUniqueness(itemInfo) end
 ---@return number? limitCategoryCount
 ---@return number? limitCategoryID
 function C_Item.GetItemUniquenessByID(itemInfo) end
+
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_Item.GetItemUpgradeInfo)
+---@param itemInfo ItemInfo
+---@return ItemUpgradeInfo? itemUpgradeInfo
+function C_Item.GetItemUpgradeInfo(itemInfo) end
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_Item.GetLimitedCurrencyItemInfo)
 ---@param itemInfo ItemInfo
@@ -617,3 +628,10 @@ function C_Item.UseItemByName(itemInfo, target) end
 ---@field expansionID number
 ---@field setID number?
 ---@field isCraftingReagent boolean
+
+---@class ItemUpgradeInfo
+---@field currentLevel number
+---@field maxLevel number
+---@field maxItemLevel number
+---@field trackString string?
+---@field trackStringID number?

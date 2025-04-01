@@ -731,6 +731,8 @@ function C_UIWidgetManager.UnregisterUnitForWidgetUpdates(unitToken, isGuid) end
 ---@field tooltip string
 ---@field tooltipLoc Enum.UIWidgetTooltipLocation
 ---@field textSizeType Enum.UIWidgetTextureAndTextSizeType
+---@field textFormatType Enum.UIWidgetTextFormatType
+---@field updateAnimType Enum.UIWidgetUpdateAnimType
 ---@field widgetSizeSetting number
 ---@field textureKit textureKit
 ---@field frameTextureKit textureKit
@@ -856,6 +858,7 @@ function C_UIWidgetManager.UnregisterUnitForWidgetUpdates(unitToken, isGuid) end
 ---@field hAlignType Enum.WidgetTextHorizontalAlignmentType
 ---@field tint Enum.SpellDisplayTint
 ---@field showGlowState Enum.WidgetShowGlowState
+---@field showAsEarned boolean
 
 ---@class UIWidgetStateIconInfo
 ---@field iconState Enum.IconState

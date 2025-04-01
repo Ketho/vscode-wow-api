@@ -58,7 +58,7 @@ function C_MountJournal.GetDisplayedMountID(displayIndex) end
 ---@return number sourceType
 ---@return boolean isFavorite
 ---@return boolean isFactionSpecific
----@return number? faction
+---@return Enum.PvPFaction? faction
 ---@return boolean shouldHideOnChar
 ---@return boolean isCollected
 ---@return number mountID
@@ -121,7 +121,7 @@ function C_MountJournal.GetMountIDs() end
 ---@return number sourceType
 ---@return boolean isFavorite
 ---@return boolean isFactionSpecific
----@return number? faction
+---@return Enum.PvPFaction? faction
 ---@return boolean shouldHideOnChar
 ---@return boolean isCollected
 ---@return number mountID
@@ -273,7 +273,7 @@ function C_MountJournal.SwapDynamicFlightMode() end
 ---@field sourceType number
 ---@field isFavorite boolean
 ---@field isFactionSpecific boolean
----@field faction number?
+---@field faction Enum.PvPFaction?
 ---@field shouldHideOnChar boolean
 ---@field isCollected boolean
 ---@field mountID number

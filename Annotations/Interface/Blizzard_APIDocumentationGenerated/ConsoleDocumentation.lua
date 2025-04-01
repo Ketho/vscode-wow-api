@@ -5,9 +5,12 @@
 ---@return number distance
 function CalculateStringEditDistance(firstString, secondString) end
 
----[Documentation](https://warcraft.wiki.gg/wiki/API_ConsoleAddMessage)
----@param message string
-function ConsoleAddMessage(message) end
+---[Documentation](https://warcraft.wiki.gg/wiki/API_ConsoleEcho)
+---@param command string
+---@param addToHistory? boolean Default = false
+---@param prefix? string
+---@return boolean result
+function ConsoleEcho(command, addToHistory, prefix) end
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_ConsoleExec)
 ---@param command string

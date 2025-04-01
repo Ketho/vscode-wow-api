@@ -10,6 +10,10 @@ function C_Texture.ClearTitleIconTexture(texture) end
 ---@return number elementID
 function C_Texture.GetAtlasElementID(atlas) end
 
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_Texture.GetAtlasElements)
+---@return textureAtlas[] atlases
+function C_Texture.GetAtlasElements() end
+
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_Texture.GetAtlasID)
 ---@param atlas textureAtlas
 ---@return number atlasID
@@ -49,6 +53,7 @@ function C_Texture.IsTitleIconTextureReady(titleID, version) end
 function C_Texture.SetTitleIconTexture(texture, titleID, version) end
 
 ---@class AtlasInfo
+---@field elementName string
 ---@field width number
 ---@field height number
 ---@field rawSize vector2

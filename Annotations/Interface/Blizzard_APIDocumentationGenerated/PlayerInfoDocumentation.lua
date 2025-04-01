@@ -9,6 +9,10 @@ function C_PlayerInfo.CanPlayerEnterChromieTime() end
 ---@return boolean canUseAreaLoot
 function C_PlayerInfo.CanPlayerUseAreaLoot() end
 
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_PlayerInfo.CanPlayerUseEventScheduler)
+---@return boolean canUseEventScheduler
+function C_PlayerInfo.CanPlayerUseEventScheduler() end
+
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_PlayerInfo.CanPlayerUseMountEquipment)
 ---@return boolean canUseMountEquipment
 ---@return string failureReason

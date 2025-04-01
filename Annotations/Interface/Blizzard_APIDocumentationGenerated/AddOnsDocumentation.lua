@@ -15,6 +15,11 @@ function C_AddOns.DisableAllAddOns(character) end
 ---@return boolean exists
 function C_AddOns.DoesAddOnExist(name) end
 
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_AddOns.DoesAddOnHaveLoadError)
+---@param name uiAddon
+---@return boolean hadError
+function C_AddOns.DoesAddOnHaveLoadError(name) end
+
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_AddOns.EnableAddOn)
 ---@param name uiAddon
 ---@param character? string Default = 0
@@ -46,6 +51,11 @@ function C_AddOns.GetAddOnEnableState(name, character) end
 ---@return boolean updateAvailable
 function C_AddOns.GetAddOnInfo(name) end
 
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_AddOns.GetAddOnInterfaceVersion)
+---@param name uiAddon
+---@return number interfaceVersion
+function C_AddOns.GetAddOnInterfaceVersion(name) end
+
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_AddOns.GetAddOnMetadata)
 ---@param name uiAddon
 ---@param variable string
@@ -64,6 +74,11 @@ function C_AddOns.GetNumAddOns() end
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_AddOns.GetScriptsDisallowedForBeta)
 ---@return boolean disallowed
 function C_AddOns.GetScriptsDisallowedForBeta() end
+
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_AddOns.IsAddOnDefaultEnabled)
+---@param name uiAddon
+---@return boolean defaultEnabled
+function C_AddOns.IsAddOnDefaultEnabled(name) end
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_AddOns.IsAddOnLoadOnDemand)
 ---@param name uiAddon

@@ -101,6 +101,12 @@ function C_LFGList.GetApplicantInfo(applicantID) end
 ---@return PvpRatingInfo pvpRatingInfo
 function C_LFGList.GetApplicantPvpRatingInfoForListing(localID, applicantIndex, activityID) end
 
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_LFGList.GetAvailableActivityGroups)
+---@param categoryID number
+---@param filter? number Default = 0
+---@return number[] activityIDs
+function C_LFGList.GetAvailableActivityGroups(categoryID, filter) end
+
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_LFGList.GetFilteredSearchResults)
 ---@return number? totalResultsFound Default = 0
 ---@return number[] filteredResults

@@ -32,6 +32,12 @@ function IsMacClient() end
 ---@return boolean isPublicBuild
 function IsPublicBuild() end
 
+---Reflects the state of the OnlyBetaAndPTR TOC directive
+---
+---[Documentation](https://warcraft.wiki.gg/wiki/API_IsPublicTestClient)
+---@return boolean isPublicTestClient
+function IsPublicTestClient() end
+
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_IsTestBuild)
 ---@return boolean isTestBuild
 function IsTestBuild() end

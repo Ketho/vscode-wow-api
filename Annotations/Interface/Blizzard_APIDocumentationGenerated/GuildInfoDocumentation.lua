@@ -97,6 +97,21 @@ function C_GuildInfo.QueryGuildMembersForRecipe(skillLineID, recipeSpellID, reci
 ---@param guid WOWGUID
 function C_GuildInfo.RemoveFromGuild(guid) end
 
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_GuildInfo.RequestGuildRename)
+---@param desiredName string
+function C_GuildInfo.RequestGuildRename(desiredName) end
+
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_GuildInfo.RequestGuildRenameRefund)
+function C_GuildInfo.RequestGuildRenameRefund() end
+
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_GuildInfo.RequestRenameNameCheck)
+---@param desiredName string
+function C_GuildInfo.RequestRenameNameCheck(desiredName) end
+
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_GuildInfo.RequestRenameStatus)
+---@return boolean ableToRequest
+function C_GuildInfo.RequestRenameStatus() end
+
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_GuildInfo.SetGuildRankOrder)
 ---@param guid WOWGUID
 ---@param rankOrder number
@@ -133,3 +148,16 @@ function C_GuildInfo.Uninvite(name) end
 ---@field month number
 ---@field year number
 ---@field guildMembersPresent number
+
+---@class GuildRenameStatus
+---@field isNameChangeEnabled boolean
+---@field isPlayerGuildMaster boolean
+---@field refundEligibleEndTime time_t
+---@field nextRenameTime time_t
+---@field renamePrice WOWMONEY
+---@field refundAmount WOWMONEY
+---@field currentGuildMoney WOWMONEY
+---@field result Enum.GuildErrorType
+---@field oldGuildName string
+---@field reservedName string
+---@field reservedNameExpirationTime time_t

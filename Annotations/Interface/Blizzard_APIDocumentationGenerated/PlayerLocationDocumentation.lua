@@ -25,7 +25,7 @@ function C_PlayerInfo.GetRace(playerLocation) end
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_PlayerInfo.GetSex)
 ---@param playerLocation PlayerLocation
----@return number? sex
+---@return Enum.UnitSex? sex
 function C_PlayerInfo.GetSex(playerLocation) end
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_PlayerInfo.IsConnected)

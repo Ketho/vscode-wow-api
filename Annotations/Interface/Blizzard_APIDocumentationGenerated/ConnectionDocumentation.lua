@@ -8,6 +8,10 @@ function ForceLogout() end
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_ForceQuit)
 function ForceQuit() end
 
+---[Documentation](https://warcraft.wiki.gg/wiki/API_GetNativeRealmID)
+---@return number nativeRealmID
+function GetNativeRealmID() end
+
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_GetNetIpTypes)
 ---@return ConnectionIptype ipTypes
 function GetNetIpTypes() end

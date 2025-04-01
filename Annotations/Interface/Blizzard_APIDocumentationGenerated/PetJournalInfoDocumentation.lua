@@ -4,6 +4,9 @@ C_PetJournal = {}
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_PetJournal.ClearHoveredBattlePet)
 function C_PetJournal.ClearHoveredBattlePet() end
 
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_PetJournal.ClearSearchFilter)
+function C_PetJournal.ClearSearchFilter() end
+
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_PetJournal.GetDisplayIDByIndex)
 ---@param speciesID number
 ---@param index number
@@ -26,6 +29,10 @@ function C_PetJournal.GetNumDisplays(speciesID) end
 ---@return number maxAllowed
 ---@return number numPets
 function C_PetJournal.GetNumPetsInJournal(creatureID) end
+
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_PetJournal.GetOwnedPetIDs)
+---@return WOWGUID[] ownedPetIDs
+function C_PetJournal.GetOwnedPetIDs() end
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_PetJournal.GetPetAbilityInfo)
 ---@param abilityID number
@@ -60,6 +67,10 @@ function C_PetJournal.GetPetLoadOutInfo(slot) end
 ---@return string errorText
 function C_PetJournal.GetPetSummonInfo(battlePetGUID) end
 
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_PetJournal.GetSearchFilter)
+---@return string filterText
+function C_PetJournal.GetSearchFilter() end
+
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_PetJournal.HasFavoritePets)
 ---@return boolean hasFavorites
 function C_PetJournal.HasFavoritePets() end
@@ -84,6 +95,10 @@ function C_PetJournal.SetDefaultFilters() end
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_PetJournal.SetHoveredBattlePet)
 ---@param battlePetGUID WOWGUID
 function C_PetJournal.SetHoveredBattlePet(battlePetGUID) end
+
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_PetJournal.SetSearchFilter)
+---@param filterText string
+function C_PetJournal.SetSearchFilter(filterText) end
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_PetJournal.SpellTargetBattlePet)
 ---@param battlePetGUID WOWGUID

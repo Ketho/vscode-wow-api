@@ -28,10 +28,6 @@ function C_BarberShop.GetCurrentCharacterData() end
 ---@return number cost
 function C_BarberShop.GetCurrentCost() end
 
----[Documentation](https://warcraft.wiki.gg/wiki/API_C_BarberShop.GetCustomizationScope)
----@return number customizationScope
-function C_BarberShop.GetCustomizationScope() end
-
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_BarberShop.GetViewingChrModel)
 ---@return number? chrModelID
 function C_BarberShop.GetViewingChrModel() end
@@ -43,6 +39,11 @@ function C_BarberShop.HasAlteredForm() end
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_BarberShop.HasAnyChanges)
 ---@return boolean hasChanges
 function C_BarberShop.HasAnyChanges() end
+
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_BarberShop.HasCustomizationFeature)
+---@param featureMask Enum.ChrModelFeatureFlags
+---@return boolean hasCustomizationFeature
+function C_BarberShop.HasCustomizationFeature(featureMask) end
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_BarberShop.IsViewingAlteredForm)
 ---@return boolean isViewingAlteredForm
@@ -96,7 +97,7 @@ function C_BarberShop.SetCustomizationChoice(optionID, choiceID) end
 function C_BarberShop.SetModelDressState(dressedState) end
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_BarberShop.SetSelectedSex)
----@param sex number
+---@param sex Enum.UnitSex
 function C_BarberShop.SetSelectedSex(sex) end
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_BarberShop.SetViewingAlteredForm)
@@ -105,7 +106,8 @@ function C_BarberShop.SetViewingAlteredForm(isViewingAlteredForm) end
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_BarberShop.SetViewingChrModel)
 ---@param chrModelID? number
-function C_BarberShop.SetViewingChrModel(chrModelID) end
+---@param spellShapeshiftFormID? number
+function C_BarberShop.SetViewingChrModel(chrModelID, spellShapeshiftFormID) end
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_BarberShop.SetViewingShapeshiftForm)
 ---@param shapeshiftFormID? number
