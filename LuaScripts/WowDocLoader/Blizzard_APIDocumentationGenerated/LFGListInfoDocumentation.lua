@@ -110,6 +110,7 @@ local LFGListInfo =
 		{
 			Name = "GetActiveEntryInfo",
 			Type = "Function",
+			MayReturnNothing = true,
 
 			Returns =
 			{
@@ -135,6 +136,7 @@ local LFGListInfo =
 		{
 			Name = "GetActivityGroupInfo",
 			Type = "Function",
+			MayReturnNothing = true,
 
 			Arguments =
 			{
@@ -150,6 +152,7 @@ local LFGListInfo =
 		{
 			Name = "GetActivityInfoTable",
 			Type = "Function",
+			MayReturnNothing = true,
 
 			Arguments =
 			{
@@ -175,6 +178,7 @@ local LFGListInfo =
 		{
 			Name = "GetApplicantBestDungeonScore",
 			Type = "Function",
+			MayReturnNothing = true,
 
 			Arguments =
 			{
@@ -190,6 +194,7 @@ local LFGListInfo =
 		{
 			Name = "GetApplicantDungeonScoreForListing",
 			Type = "Function",
+			MayReturnNothing = true,
 
 			Arguments =
 			{
@@ -206,6 +211,7 @@ local LFGListInfo =
 		{
 			Name = "GetApplicantInfo",
 			Type = "Function",
+			MayReturnNothing = true,
 
 			Arguments =
 			{
@@ -220,6 +226,7 @@ local LFGListInfo =
 		{
 			Name = "GetApplicantPvpRatingInfoForListing",
 			Type = "Function",
+			MayReturnNothing = true,
 
 			Arguments =
 			{
@@ -231,6 +238,21 @@ local LFGListInfo =
 			Returns =
 			{
 				{ Name = "pvpRatingInfo", Type = "PvpRatingInfo", Nilable = false },
+			},
+		},
+		{
+			Name = "GetAvailableActivityGroups",
+			Type = "Function",
+
+			Arguments =
+			{
+				{ Name = "categoryID", Type = "number", Nilable = false },
+				{ Name = "filter", Type = "number", Nilable = false, Default = 0 },
+			},
+
+			Returns =
+			{
+				{ Name = "activityIDs", Type = "table", InnerType = "number", Nilable = false },
 			},
 		},
 		{
@@ -246,6 +268,7 @@ local LFGListInfo =
 		{
 			Name = "GetKeystoneForActivity",
 			Type = "Function",
+			MayReturnNothing = true,
 
 			Arguments =
 			{
@@ -260,6 +283,7 @@ local LFGListInfo =
 		{
 			Name = "GetLfgCategoryInfo",
 			Type = "Function",
+			MayReturnNothing = true,
 
 			Arguments =
 			{
@@ -274,6 +298,7 @@ local LFGListInfo =
 		{
 			Name = "GetOwnedKeystoneActivityAndGroupAndLevel",
 			Type = "Function",
+			MayReturnNothing = true,
 
 			Arguments =
 			{
@@ -314,6 +339,7 @@ local LFGListInfo =
 		{
 			Name = "GetSearchResultInfo",
 			Type = "Function",
+			MayReturnNothing = true,
 
 			Arguments =
 			{
@@ -328,6 +354,7 @@ local LFGListInfo =
 		{
 			Name = "GetSearchResultLeaderInfo",
 			Type = "Function",
+			MayReturnNothing = true,
 
 			Arguments =
 			{
@@ -342,6 +369,7 @@ local LFGListInfo =
 		{
 			Name = "GetSearchResultPlayerInfo",
 			Type = "Function",
+			MayReturnNothing = true,
 
 			Arguments =
 			{
