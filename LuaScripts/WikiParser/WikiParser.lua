@@ -6,7 +6,7 @@ local Path = require "path"
 local wowpedia_arguments = require("LuaScripts.WikiParser.WikiText.FunctionArgument")
 local nonBlizzDocumented = require("LuaScripts.WikiParser.WikiText.NonBlizzardDocumented")[1]
 
-local PATH = Path.join("Annotations", "Data", "Wiki.lua")
+local PATH = Path.join("Annotations", "Core", "Wiki.lua")
 
 local parserData = require("LuaScripts.WikiParser.XmlParser")
 local validated, nonvalidated, annotations

@@ -8,7 +8,7 @@ local m = {}
 
 local API_DOC = "Blizzard_APIDocumentation"
 local GEN_DOC = "Blizzard_APIDocumentationGenerated"
-local GEN_PATH = Path.join("Annotations", "Interface", "Blizzard_APIDocumentationGenerated")
+local GEN_PATH = Path.join("Annotations", "Core", "Blizzard_APIDocumentationGenerated")
 
 local gluesSystems = {
 	["ConfigurationWarningsDocumentation.lua"] = true,

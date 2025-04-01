@@ -38,9 +38,9 @@ WowDocLoader:main(WowDocLoader_path)
 -- annotations
 local MitsuhaLiterals = require("LuaScripts.Mitsuha.MitsuhaLiterals")
 local path_api = "Annotations"
-Util:WriteFileMeta(Path.join(path_api, "Data", "Event.lua"), MitsuhaLiterals:GetEventLiterals())
-Util:WriteFileMeta(Path.join(path_api, "Data", "CVar.lua"), MitsuhaLiterals:GetCVarLiterals())
-Util:WriteFileMeta(Path.join(path_api, "Data", "Enum.lua"), MitsuhaLiterals:GetEnumTable())
+Util:WriteFileMeta(Path.join(path_api, "Core", "Event.lua"), MitsuhaLiterals:GetEventLiterals())
+Util:WriteFileMeta(Path.join(path_api, "Core", "CVar.lua"), MitsuhaLiterals:GetCVarLiterals())
+Util:WriteFileMeta(Path.join(path_api, "Core", "Enum.lua"), MitsuhaLiterals:GetEnumTable())
 
 -- typescript data
 local path_tsdata = Path.join("src", "data")
