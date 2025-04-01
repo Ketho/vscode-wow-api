@@ -17,7 +17,7 @@ function MapUtil.GetMapParentInfo(mapID, mapType, topMost) end
 function MapUtil.ShouldMapTypeShowQuests(mapType) end
 
 ---@param mapID number
----@param info TaskPOIData
+---@param info table
 ---@return boolean
 function MapUtil.ShouldShowTask(mapID, info) end
 

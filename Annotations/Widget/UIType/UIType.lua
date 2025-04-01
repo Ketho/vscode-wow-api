@@ -22,6 +22,13 @@
 ---|"TRILINEAR"
 ---|"NEAREST"
 
+---@alias FontAlphabet
+---|"roman"
+---|"korean"
+---|"simplifiedchinese"
+---|"traditionalchinese"
+---|"russian"
+
 ---@alias FramePoint
 ---|"TOPLEFT"
 ---|"TOPRIGHT"

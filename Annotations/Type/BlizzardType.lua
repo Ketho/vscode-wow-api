@@ -24,6 +24,7 @@
 ---@alias ModelAsset number FileID
 ---@alias normalizedValue number [0.0 - 1.0]
 ---@alias NotificationDbId string
+---@alias QuestObjectiveType number
 ---@alias RecruitAcceptanceID string
 ---@alias SingleColorValue number
 ---@alias size number
