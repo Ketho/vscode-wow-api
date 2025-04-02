@@ -1,9 +1,9 @@
 ## WoW API for VS Code
 [![](https://img.shields.io/github/license/Ketho/vscode-wow-api)](https://opensource.org/licenses/MIT)
 [![](https://img.shields.io/github/v/release/Ketho/vscode-wow-api)](https://github.com/Ketho/vscode-wow-api/releases)
-[![](https://img.shields.io/badge/mainline-11.0.7-yellow)](https://github.com/Ketho/BlizzardInterfaceResources/tree/11.0.7)
-[![](https://img.shields.io/badge/cata-4.4.1-yellow)](https://github.com/Ketho/BlizzardInterfaceResources/tree/4.4.1)
-[![](https://img.shields.io/badge/vanilla-1.15.5-yellow)](https://github.com/Ketho/BlizzardInterfaceResources/tree/1.15.5)
+[![](https://img.shields.io/badge/mainline-11.1.5-yellow)](https://github.com/Ketho/BlizzardInterfaceResources/tree/11.1.5)
+[![](https://img.shields.io/badge/cata-4.4.2-yellow)](https://github.com/Ketho/BlizzardInterfaceResources/tree/4.4.2)
+[![](https://img.shields.io/badge/vanilla-1.15.6-yellow)](https://github.com/Ketho/BlizzardInterfaceResources/tree/1.15.6)
 
 Adds IntelliSense features for World of Warcraft API to VS Code. This is a third party extension for [LuaLS](https://marketplace.visualstudio.com/items?itemName=sumneko.lua) with [annotations](https://luals.github.io/wiki/annotations/).
 
@@ -43,7 +43,9 @@ This extension will only activate when either:
 
 ![](img/readme/activate.png)
 
-Note that if the `Configuration Scope` setting is set to `User` instead of `Workspace` and the extension has loaded once, then it will simply always load for Lua files, just like the old behavior.
+If the `Configuration Scope` setting is set to `User` instead of `Workspace` and the extension has loaded once, then it will simply always load for Lua files.
+
+![](img/readme/userconfig.png)
 
 ## AddOn namespace
 The [AddOn namespace](https://warcraft.wiki.gg/wiki/Using_the_AddOn_namespace) needs to be annotated with [@class](https://luals.github.io/wiki/annotations/#class) in each file. This way the language server knows about the shared table and also allows you to mutate it.
