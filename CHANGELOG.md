@@ -4,8 +4,9 @@
 - 🎉 Updated for PTR patch 11.1.5 (60008)
 - ✨ Added an option (enabled) for loading [NumyAddon/FramexmlAnnotations](https://github.com/NumyAddon/FramexmlAnnotations), this however increases loading time by roughly 4 to 6 seconds
 - ✨ Expanded support for templates but only the most [popular](https://github.com/Ketho/vscode-wow-api/blob/master/Annotations/Core/Widget/UIType/Template.lua) ones are supported due to performance issues
-- 🐞 Fixed [#180](https://github.com/Ketho/vscode-wow-api/issues/180) Workspace settings were not cleaned up while using User settings
+- 🐞 Fixed [#180](https://github.com/Ketho/vscode-wow-api/issues/180) - Workspace settings were not cleaned up while using User settings
 - ⚙️ Added [Dev Mode](https://github.com/Ketho/vscode-wow-api/wiki/Settings#dev-mode) option for manually setting the LuaLS configuration
+- 🧹 Blizzard_Deprecated: Removed 10.x and added up to 11.1.5
 
 ## [0.18.2] - 2025-01-03
 - 🎉 Updated for patch 11.0.7 (58238)
