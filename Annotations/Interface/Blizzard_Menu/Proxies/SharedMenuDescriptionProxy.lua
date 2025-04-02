@@ -30,7 +30,7 @@ function SharedMenuDescriptionProxy:CreateSpacer(extend) end
 
 ---@see MenuUtil.CreateButton
 ---@param text string
----@param callback MenuResponder
+---@param callback MenuResponder?
 ---@param data any? # stored as element's data
 ---@return ElementMenuDescriptionProxy
 function SharedMenuDescriptionProxy:CreateButton(text, callback, data) end
