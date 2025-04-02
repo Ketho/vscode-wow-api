@@ -87,7 +87,7 @@ function cleanConfig() {
 		? vscode.ConfigurationTarget.Workspace 
 		: vscode.ConfigurationTarget.Global;
 	for (const v of settings) {
-		// preserve any other User settings
+		// preserve any user defined paths in User scope
 		if (v === "workspace.library" && otherTarget === vscode.ConfigurationTarget.Global) {
 			const lib = lua_config.inspect("workspace.library")?.globalValue as string[];
 			const res = lib?.filter(el => !el.includes("wow-api")) ?? [];
