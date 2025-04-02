@@ -92,12 +92,12 @@
 				"wowAPI.luals.defineKnownGlobals": {
 					"type": "boolean",
 					"default": true,
-					"markdownDescription": "Automatically adds known WoW globals to workspace `Lua.diagnostics.globals`."
+					"markdownDescription": "Automatically adds known WoW globals to `Lua.diagnostics.globals` in the workspace settings.json."
 				},
-				"wowAPI.luals.setLuaRuntime": {
+				"wowAPI.luals.frameXML": {
 					"type": "boolean",
 					"default": true,
-					"markdownDescription": "Replaces the standard Lua libraries with the [WoW Lua](https://github.com/Ketho/vscode-wow-api/wiki/Settings#set-lua-runtime) version."
+					"markdownDescription": "Loads annotations from [NumyAddon/FramexmlAnnotations](http://github.com/NumyAddon/FramexmlAnnotations) but increases loading time."
 				}
 			}
 		}

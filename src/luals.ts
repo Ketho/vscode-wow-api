@@ -18,12 +18,10 @@ const builtin = {
 };
 
 const annotationFolders = [
-	"Data",
+	"Core",
 	"Interface",
 	"Libraries",
-	// "Lua",
-	"Type",
-	"Widget",
+	"Lua",
 ];
 
 function getConfigurationTarget() {
@@ -38,13 +36,68 @@ function getConfigurationTarget() {
 }
 
 // disable lua libraries so we can load our version
-export function setRuntime() {
+function setRuntime() {
+	const lua_config = vscode.workspace.getConfiguration("Lua");
+	const configTarget = getConfigurationTarget();
+	lua_config.update("runtime.version", "Lua 5.1", configTarget);
+	lua_config.update("runtime.builtin", builtin, configTarget);
+}
+
+// add wow-api path to luals
+function setWowLibrary(): Thenable<void> {
+	const extension = vscode.extensions.getExtension("ketho.wow-api")!;
+	let folderPath;
+	const pos = extension.extensionPath.indexOf(".vscode"); // should also work for .vscode-insiders
+	if (pos > -1) {
+		folderPath = path.join("~", extension.extensionPath.substring(pos), "Annotations");
+	}
+	else {
+		folderPath = path.join(extension.extensionPath, "Annotations");
+	}
+	// edit `workspace.library` without deleting any other paths
+	const lua_config = vscode.workspace.getConfiguration("Lua");
+	const lib = lua_config.inspect("workspace.library");
+	const configTarget = getConfigurationTarget();
+	let libraryPath: string[] = [];
+	if (configTarget === vscode.ConfigurationTarget.Global) {
+		libraryPath = lib?.globalValue as string[];
+	}
+	else if (configTarget === vscode.ConfigurationTarget.Workspace) {
+		libraryPath = lib?.workspaceValue as string[];
+	}
+	const res = libraryPath?.filter(el => !el.includes("wow-api")) ?? [];
+
 	const wow_config = vscode.workspace.getConfiguration("wowAPI");
-	if (wow_config.get("luals.setLuaRuntime")) {
-		const lua_config = vscode.workspace.getConfiguration("Lua");
-		const configTarget = getConfigurationTarget();
-		lua_config.update("runtime.version", "Lua 5.1", configTarget);
-		lua_config.update("runtime.builtin", builtin, configTarget);
+	if (!wow_config.get("luals.frameXML")) {
+		for (const [i, v] of annotationFolders.entries()) {
+			res.push(path.join(folderPath, v));
+		}
+	}
+	else {
+		res.push(folderPath);
+	}
+	return lua_config.update("workspace.library", res, configTarget);
+}
+
+// if we are configured to use user settings we need to delete any workspace settings
+// but it might avoid confusion for the average user if we do it vice versa as well
+function cleanConfig() {
+	const lua_config = vscode.workspace.getConfiguration("Lua");
+	const settings = ["runtime.version", "runtime.builtin", "workspace.library"];
+	const otherTarget = getConfigurationTarget() === vscode.ConfigurationTarget.Global 
+		? vscode.ConfigurationTarget.Workspace 
+		: vscode.ConfigurationTarget.Global;
+	for (const v of settings) {
+		lua_config.update(v, undefined, otherTarget);
+	}
+}
+
+export function configLuaLS() {
+	const wow_config = vscode.workspace.getConfiguration("wowAPI");
+	if (!wow_config.get("devMode")) {
+		setRuntime();
+		setWowLibrary();
+		cleanConfig();
 	}
 }
 
@@ -88,41 +141,6 @@ export function cleanupGlobals() {
 	}
 }
 
-
-// add wow-api path to luals
-export function setWowLibrary(context: vscode.ExtensionContext): Thenable<void> {
-	const extension = vscode.extensions.getExtension("ketho.wow-api")!;
-	let folderPath;
-	const pos = extension.extensionPath.indexOf(".vscode"); // should also work for .vscode-insiders
-	if (pos > -1) {
-		folderPath = path.join("~", extension.extensionPath.substring(pos), "Annotations");
-	}
-	else {
-		folderPath = path.join(extension.extensionPath, "Annotations");
-	}
-	const lua_config = vscode.workspace.getConfiguration("Lua");
-	const lib = lua_config.inspect("workspace.library");
-	const configTarget = getConfigurationTarget();
-	let libraryPath: string[] = [];
-	if (configTarget === vscode.ConfigurationTarget.Global) {
-		libraryPath = lib?.globalValue as string[];
-	}
-	else if (configTarget === vscode.ConfigurationTarget.Workspace) {
-		libraryPath = lib?.workspaceValue as string[];
-	}
-	const res = libraryPath?.filter(el => !el.includes("wow-api")) ?? [];
-	const wow_config = vscode.workspace.getConfiguration("wowAPI");
-	if (!wow_config.get("luals.setLuaRuntime")) {
-		for (const [i, v] of annotationFolders.entries()) {
-			res.push(path.join(folderPath, v));
-		}
-	}
-	else {
-		res.push(folderPath);
-	}
-	return lua_config.update("workspace.library", res, configTarget);
-}
-
 const framexml_warnings = [
 	"ambiguity-1",
 	"cast-local-type",
@@ -161,37 +179,8 @@ export function disableFrameXmlWarnings() {
 	lua_config.update("diagnostics.disable", diag_disable, vscode.ConfigurationTarget.Workspace);
 }
 
-// clunky migration code for configs
 vscode.workspace.onDidChangeConfiguration((event: vscode.ConfigurationChangeEvent) => {
-	const wow_config = vscode.workspace.getConfiguration("wowAPI");
-	const lua_config = vscode.workspace.getConfiguration("Lua");
-	if (event.affectsConfiguration("wowAPI.luals.configurationScope")) {
-		const configScope = wow_config.get("luals.configurationScope");
-		const lib = lua_config.inspect("workspace.library");
-		const wv = (lib?.workspaceValue as string[]) ?? [];
-		const gv = (lib?.globalValue as string[] ?? []);
-		if (configScope === "User") {
-			const containsCfg = wv.filter(el => el.includes("wow-api"));
-			const nocontainsCfg = wv.filter(el => !el.includes("wow-api"));
-			lua_config.update("workspace.library", gv.concat(containsCfg), vscode.ConfigurationTarget.Global);
-			lua_config.update("workspace.library", nocontainsCfg.length>0 ? nocontainsCfg : undefined, vscode.ConfigurationTarget.Workspace);
-		}
-		else if (configScope === "Workspace") {
-			const containsCfg = gv.filter(el => el.includes("wow-api"));
-			const nocontainsCfg = gv.filter(el => !el.includes("wow-api"));
-			lua_config.update("workspace.library", wv.concat(containsCfg), vscode.ConfigurationTarget.Workspace);
-			lua_config.update("workspace.library", nocontainsCfg.length>0 ? nocontainsCfg : undefined, vscode.ConfigurationTarget.Global);
-		}
-	}
-	else if (event.affectsConfiguration("wowAPI.luals.setLuaRuntime")) {
-		if (!wow_config.get("luals.setLuaRuntime")) {
-			const lua_config = vscode.workspace.getConfiguration("Lua");
-			const configTarget = getConfigurationTarget();
-			lua_config.update("runtime.version", undefined, configTarget);
-			lua_config.update("runtime.builtin", undefined, configTarget);
-		}
-		else {
-			setRuntime();
-		}
+	if (event.affectsConfiguration("wowAPI.luals.configurationScope") || event.affectsConfiguration("wowAPI.luals.frameXML")) {
+		configLuaLS();
 	}
 });
