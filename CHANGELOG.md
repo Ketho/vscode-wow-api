@@ -1,5 +1,8 @@
 # Change Log
 
+## [0.19.1] - 2025-04-02
+- 🐞 No longer purges any custom paths from User scope `Lua.workspace.library` if the scope is set to Workspace
+
 ## [0.19.0] - 2025-04-02
 - 🎉 Updated for PTR patch 11.1.5 (60008)
 - ✨ Added an option (enabled) for loading [NumyAddon/FramexmlAnnotations](https://github.com/NumyAddon/FramexmlAnnotations), this however increases loading time by roughly 4 to 6 seconds
@@ -176,6 +179,7 @@ To avoid loading for Lua projects not related to World of Warcraft, all settings
 - PR [#123](https://github.com/Ketho/vscode-wow-api/pull/123) Make childGroups optional in AceConfig.OptionsTable
 - PR [#120](https://github.com/Ketho/vscode-wow-api/pull/120) Add definition for tostringall()
 
+[0.19.1]: https://github.com/Ketho/vscode-wow-api/releases/tag/0.19.1
 [0.19.0]: https://github.com/Ketho/vscode-wow-api/releases/tag/0.19.0
 [0.18.2]: https://github.com/Ketho/vscode-wow-api/releases/tag/0.18.2
 [0.18.1]: https://github.com/Ketho/vscode-wow-api/releases/tag/0.18.1

@@ -80,7 +80,6 @@ function setWowLibrary(): Thenable<void> {
 }
 
 // if we are configured to use user settings we need to delete any workspace settings
-// but it might avoid confusion for the average user if we do it vice versa as well
 function cleanConfig() {
 	const lua_config = vscode.workspace.getConfiguration("Lua");
 	const settings = ["runtime.version", "runtime.builtin", "workspace.library"];
@@ -88,7 +87,15 @@ function cleanConfig() {
 		? vscode.ConfigurationTarget.Workspace 
 		: vscode.ConfigurationTarget.Global;
 	for (const v of settings) {
-		lua_config.update(v, undefined, otherTarget);
+		// preserve any other User settings
+		if (v === "workspace.library" && otherTarget === vscode.ConfigurationTarget.Global) {
+			const lib = lua_config.inspect("workspace.library")?.globalValue as string[];
+			const res = lib?.filter(el => !el.includes("wow-api")) ?? [];
+			lua_config.update(v, res, otherTarget);
+		}
+		else {
+			lua_config.update(v, undefined, otherTarget);
+		}
 	}
 }
 
