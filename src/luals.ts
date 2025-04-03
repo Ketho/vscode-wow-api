@@ -90,8 +90,8 @@ function cleanConfig() {
 		// preserve any user defined paths in User scope
 		if (v === "workspace.library" && otherTarget === vscode.ConfigurationTarget.Global) {
 			const lib = lua_config.inspect("workspace.library")?.globalValue as string[];
-			const res = lib?.filter(el => !el.includes("wow-api")) ?? [];
-			lua_config.update(v, res, otherTarget);
+			const res = lib?.filter(el => !el.includes("wow-api"));
+			lua_config.update(v, res.length>0 ? res : undefined, otherTarget);
 		}
 		else {
 			lua_config.update(v, undefined, otherTarget);
