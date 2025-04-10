@@ -96,7 +96,7 @@
 				},
 				"wowAPI.luals.frameXML": {
 					"type": "boolean",
-					"default": true,
+					"default": false,
 					"markdownDescription": "Loads annotations from [NumyAddon/FramexmlAnnotations](http://github.com/NumyAddon/FramexmlAnnotations) but increases loading time."
 				}
 			}
