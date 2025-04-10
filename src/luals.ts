@@ -112,6 +112,7 @@ export function registerDiagnostics() {
 		const diag_globals: string[] = lua_config.get("diagnostics.globals")!;
 		const defineKnownGlobals = wow_config.get("luals.defineKnownGlobals");
 		let updateGlobals = false;
+		let updateWeakUnion = false;
 		event.uris.forEach(function(uri) {
 			vscode.languages.getDiagnostics(uri).forEach(function(diag) {
 				if (diag.code === "undefined-global") {
@@ -123,10 +124,19 @@ export function registerDiagnostics() {
 						}
 					}
 				}
+				if (diag.code === "param-type-mismatch") {
+					if (diag.message.includes("Template")) {
+						updateWeakUnion = true;
+					}
+				}
 			});
 		});
 		if (updateGlobals) {
 			lua_config.update("diagnostics.globals", diag_globals, vscode.ConfigurationTarget.Workspace);
+		}
+		else if (updateWeakUnion) {
+			lua_config.update("type.weakUnionCheck", updateWeakUnion, getConfigurationTarget());
+			vscode.window.showInformationMessage("WoW API: Enabled `Lua.type.weakUnionCheck` option to prevent the `param-type-mismatch` diagnostic warning when using templates and mixins.");
 		}
 	});
 }
