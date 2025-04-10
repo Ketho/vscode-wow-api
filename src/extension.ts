@@ -1,6 +1,8 @@
 import * as vscode from "vscode";
 import * as luals from "./luals";
 import * as subscriptions from "./subscriptions";
+import * as path from "path";
+import * as fs from "fs";
 
 export async function activate(context: vscode.ExtensionContext) {
 	console.log("loaded", context.extension.id);
@@ -8,7 +10,35 @@ export async function activate(context: vscode.ExtensionContext) {
 
 	if (isWowWorkspace() || await hasTocFile()) {
 		activateWowExtension(context);
+		cleanEmptyWorkspace();
 	}
+}
+
+async function activateWowExtension(context: vscode.ExtensionContext) {
+	subscriptions.registerCompletion(context);
+	subscriptions.registerHover(context);
+	luals.configLuaLS();
+	// luals.filterDeprecatedGlobals();
+	if (await luals.isFrameXmlFolder()) {
+		luals.disableFrameXmlWarnings();
+	}
+	else {
+		luals.registerDiagnostics();
+	}
+}
+
+function registerActivationCommand(context: vscode.ExtensionContext) {
+	let isLoaded = false;
+	const handler = () => {
+		if (!isLoaded) {
+			isLoaded = true; // using a command already activates the extension
+			vscode.window.showInformationMessage("Activated WoW API extension.");
+		}
+		else {
+			vscode.window.showInformationMessage("WoW API extension is already activated.");
+		}
+	};
+	context.subscriptions.push(vscode.commands.registerCommand("wowAPI.activateExtension", handler));
 }
 
 // check if this workspace has already been used with the extension
@@ -40,30 +70,29 @@ async function hasTocFile() {
 	}
 }
 
-function registerActivationCommand(context: vscode.ExtensionContext) {
-	let isLoaded = false;
-	const handler = () => {
-		if (!isLoaded) {
-			isLoaded = true; // using a command already activates the extension
-			vscode.window.showInformationMessage("Activated WoW API extension.");
-		}
-		else {
-			vscode.window.showInformationMessage("WoW API extension is already activated.");
-		}
-	};
-	context.subscriptions.push(vscode.commands.registerCommand("wowAPI.activateExtension", handler));
-}
-
-async function activateWowExtension(context: vscode.ExtensionContext) {
-	subscriptions.registerCompletion(context);
-	subscriptions.registerHover(context);
-	luals.configLuaLS();
-
-	if (await luals.isFrameXmlFolder()) {
-		luals.disableFrameXmlWarnings();
+// check if workspace `settings.json` only has an empty object to fix #186 mistake
+function cleanEmptyWorkspace() {
+	const workspaceFolders = vscode.workspace.workspaceFolders;
+	if (!workspaceFolders) {
+		return false;
+	}
+	const vscodePath = path.join(workspaceFolders[0].uri.fsPath, ".vscode");
+	const settingsPath = path.join(vscodePath, "settings.json");
+	if (!fs.existsSync(settingsPath)) {
+		return false;
+	}
+	const files = fs.readdirSync(vscodePath);
+	// more stable to check amount of files before doing any file operations
+	const soleFile = (files.length === 1);
+	const content = fs.readFileSync(settingsPath, "utf8");
+	const json = JSON.parse(content);
+	if (Object.keys(json).length === 0) {
+		fs.unlinkSync(settingsPath);
 	}
 	else {
-		luals.registerDiagnostics();
-		luals.cleanupGlobals();
+		return false;
+	}
+	if (soleFile) {
+		fs.rmdirSync(vscodePath);
 	}
 }

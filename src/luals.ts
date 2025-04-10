@@ -21,10 +21,24 @@ const builtin = {
 
 const annotationFolders = [
 	"Core",
-	"Interface",
 	"Libraries",
 	"Lua",
 ];
+
+const luaSettings = [
+	"runtime.version",
+	"runtime.builtin",
+	"type.weakUnionCheck",
+	"workspace.library",
+];
+
+export function configLuaLS() {
+	if (!wow_config.get("devMode")) {
+		setRuntime();
+		setWowLibrary();
+		cleanConfigTarget();
+	}
+}
 
 function getConfigurationTarget() {
 	const scope = wow_config.get("luals.configurationScope");
@@ -41,6 +55,8 @@ function setRuntime() {
 	const configTarget = getConfigurationTarget();
 	lua_config.update("runtime.version", "Lua 5.1", configTarget);
 	lua_config.update("runtime.builtin", builtin, configTarget);
+	// prevents "param-type-mismatch" diagnostic for templates with mixins, and probably more
+	lua_config.update("type.weakUnionCheck", true, configTarget);
 }
 
 // add wow-api path to luals
@@ -65,7 +81,6 @@ function setWowLibrary(): Thenable<void> {
 		libraryPath = lib?.workspaceValue as string[];
 	}
 	const res = libraryPath?.filter(el => !el.includes("wow-api")) ?? [];
-
 	if (!wow_config.get("luals.frameXML")) {
 		for (const [i, v] of annotationFolders.entries()) {
 			res.push(path.join(folderPath, v));
@@ -77,56 +92,49 @@ function setWowLibrary(): Thenable<void> {
 	return lua_config.update("workspace.library", res, configTarget);
 }
 
-// if we are configured to use user settings we need to delete any workspace settings
-function cleanConfig() {
-	const settings = ["runtime.version", "runtime.builtin", "workspace.library"];
-	const otherTarget = getConfigurationTarget() === vscode.ConfigurationTarget.Global
-		? vscode.ConfigurationTarget.Workspace
-		: vscode.ConfigurationTarget.Global;
-	for (const v of settings) {
-		// preserve any user defined paths in User scope
-		if (v === "workspace.library" && otherTarget === vscode.ConfigurationTarget.Global) {
-			const lib = lua_config.inspect("workspace.library")?.globalValue as string[];
-			const res = lib?.filter(el => !el.includes("wow-api"));
-			if (res) {
-				lua_config.update(v, res.length>0 ? res : undefined, otherTarget);
+// if we are configured to use user settings we need to delete our workspace settings
+// also do it vice versa to keep things clear
+function cleanConfigTarget() {
+	const configTarget = getConfigurationTarget();
+	if (configTarget === vscode.ConfigurationTarget.Workspace) {
+		for (const v of luaSettings) {
+			if (v === "workspace.library") {
+				// preserve any user defined paths in User scope
+				const lib = lua_config.inspect("workspace.library")?.globalValue as string[];
+				const res = lib?.filter(el => !el.includes("wow-api"));
+				if (res) {
+					lua_config.update(v, res.length>0 ? res : undefined, vscode.ConfigurationTarget.Global);
+				}
+			}
+			else {
+				lua_config.update(v, undefined, vscode.ConfigurationTarget.Global);
 			}
 		}
-		else {
-			lua_config.update(v, undefined, otherTarget);
+	}
+	else if (configTarget === vscode.ConfigurationTarget.Global) {
+		for (const v of luaSettings) {
+			// dont update if there is nothing to delete
+			// otherwise it will create an empty settings.json file if this does not exist yet
+			if (lua_config.inspect(v)?.workspaceValue) {
+				lua_config.update(v, undefined, vscode.ConfigurationTarget.Workspace);
+			}
 		}
 	}
 }
 
-export function configLuaLS() {
-	if (!wow_config.get("devMode")) {
-		setRuntime();
-		setWowLibrary();
-		cleanConfig();
-	}
-}
-
-// automatically mark wow globals as defined if there is a language server warning
 export function registerDiagnostics() {
 	vscode.languages.onDidChangeDiagnostics((event: vscode.DiagnosticChangeEvent) => {
 		const diag_globals: string[] = lua_config.get("diagnostics.globals")!;
 		const defineKnownGlobals = wow_config.get("luals.defineKnownGlobals");
 		let updateGlobals = false;
-		let updateWeakUnion = false;
 		event.uris.forEach(function(uri) {
 			vscode.languages.getDiagnostics(uri).forEach(function(diag) {
-				if (diag.code === "undefined-global") {
-					if (defineKnownGlobals) {
-						const name = diag.message.match("`(.+)`");
-						if (name && !diag_globals.includes(name[1]) && wow_globals[name[1]] && !wow_globalapi[name[1]]) {
-							updateGlobals = true;
-							diag_globals.push(name[1]);
-						}
-					}
-				}
-				if (diag.code === "param-type-mismatch") {
-					if (diag.message.includes("Template")) {
-						updateWeakUnion = true;
+				// automatically mark wow globals as defined if there is a diagnostic warning
+				if (diag.code === "undefined-global" && defineKnownGlobals) {
+					const name = diag.message.match("`(.+)`");
+					if (name && !diag_globals.includes(name[1]) && wow_globals[name[1]] && !wow_globalapi[name[1]]) {
+						updateGlobals = true;
+						diag_globals.push(name[1]);
 					}
 				}
 			});
@@ -134,15 +142,11 @@ export function registerDiagnostics() {
 		if (updateGlobals) {
 			lua_config.update("diagnostics.globals", diag_globals, vscode.ConfigurationTarget.Workspace);
 		}
-		else if (updateWeakUnion) {
-			lua_config.update("type.weakUnionCheck", true, getConfigurationTarget());
-			vscode.window.showInformationMessage("WoW API: Enabled `Lua.type.weakUnionCheck` option to prevent the `param-type-mismatch` diagnostic warning when using templates and mixins.");
-		}
 	});
 }
 
 // if deprecated APIs are defined as globals they will not trigger the deprecated warning
-export function cleanupGlobals() {
+export function filterDeprecatedGlobals() {
 	const diag_globals: string[] = lua_config.get("diagnostics.globals")!;
 	if (diag_globals.length > 0) {
 		for (let i=diag_globals.length-1; i>=0; i--) {
