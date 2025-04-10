@@ -118,4 +118,4 @@ export const data = [
 	"GetMaxSpellStartRecoveryOffset",
 	"GetSpellQueueWindow",
 	"GetSchoolString",
-]
+];
