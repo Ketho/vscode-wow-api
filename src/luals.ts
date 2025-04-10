@@ -80,8 +80,8 @@ function setWowLibrary(): Thenable<void> {
 // if we are configured to use user settings we need to delete any workspace settings
 function cleanConfig() {
 	const settings = ["runtime.version", "runtime.builtin", "workspace.library"];
-	const otherTarget = getConfigurationTarget() === vscode.ConfigurationTarget.Global 
-		? vscode.ConfigurationTarget.Workspace 
+	const otherTarget = getConfigurationTarget() === vscode.ConfigurationTarget.Global
+		? vscode.ConfigurationTarget.Workspace
 		: vscode.ConfigurationTarget.Global;
 	for (const v of settings) {
 		// preserve any user defined paths in User scope
@@ -107,25 +107,25 @@ export function configLuaLS() {
 }
 
 // automatically mark wow globals as defined if there is a language server warning
-export function registerDiagnostic() {
+export function registerDiagnostics() {
 	vscode.languages.onDidChangeDiagnostics((event: vscode.DiagnosticChangeEvent) => {
 		const diag_globals: string[] = lua_config.get("diagnostics.globals")!;
-		const defineKnownGlobals = wow_config.get("luals.defineKnownGlobals")
-		let hasUpdate = false;
+		const defineKnownGlobals = wow_config.get("luals.defineKnownGlobals");
+		let updateGlobals = false;
 		event.uris.forEach(function(uri) {
 			vscode.languages.getDiagnostics(uri).forEach(function(diag) {
 				if (diag.code === "undefined-global") {
 					if (defineKnownGlobals) {
 						const name = diag.message.match("`(.+)`");
 						if (name && !diag_globals.includes(name[1]) && wow_globals[name[1]] && !wow_globalapi[name[1]]) {
-							hasUpdate = true;
+							updateGlobals = true;
 							diag_globals.push(name[1]);
 						}
 					}
 				}
 			});
 		});
-		if (hasUpdate) {
+		if (updateGlobals) {
 			lua_config.update("diagnostics.globals", diag_globals, vscode.ConfigurationTarget.Workspace);
 		}
 	});
@@ -191,6 +191,6 @@ vscode.workspace.onDidChangeConfiguration((event: vscode.ConfigurationChangeEven
 		}
     }
     if (event.affectsConfiguration("Lua")) {
-		lua_config = vscode.workspace.getConfiguration("Lua")
+		lua_config = vscode.workspace.getConfiguration("Lua");
 	}
 });
