@@ -1,0 +1,3 @@
+[submodule "Annotations/FrameXML/Numy"]
+	path = Annotations/FrameXML/Numy
+	url = https://github.com/NumyAddon/FramexmlAnnotations.git
