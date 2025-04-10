@@ -63,7 +63,7 @@ async function activateWowExtension(context: vscode.ExtensionContext) {
 		luals.disableFrameXmlWarnings();
 	}
 	else {
-		luals.defineKnownGlobals();
+		luals.registerDiagnostic();
 		luals.cleanupGlobals();
 	}
 }

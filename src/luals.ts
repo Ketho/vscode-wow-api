@@ -4,6 +4,8 @@ import * as path from "path";
 const wow_globals = require("./data/globals").data;
 const wow_globalapi = require("./data/globalapi").data;
 const deprecated = require("./data/deprecated").data as string[];
+let lua_config = vscode.workspace.getConfiguration("Lua");
+let wow_config = vscode.workspace.getConfiguration("wowAPI");
 
 const builtin = {
 	basic: "disable",
@@ -25,7 +27,6 @@ const annotationFolders = [
 ];
 
 function getConfigurationTarget() {
-	const wow_config = vscode.workspace.getConfiguration("wowAPI");
 	const scope = wow_config.get("luals.configurationScope");
 	if (scope === "User") {
 		return vscode.ConfigurationTarget.Global;
@@ -37,7 +38,6 @@ function getConfigurationTarget() {
 
 // disable lua libraries so we can load our version
 function setRuntime() {
-	const lua_config = vscode.workspace.getConfiguration("Lua");
 	const configTarget = getConfigurationTarget();
 	lua_config.update("runtime.version", "Lua 5.1", configTarget);
 	lua_config.update("runtime.builtin", builtin, configTarget);
@@ -55,7 +55,6 @@ function setWowLibrary(): Thenable<void> {
 		folderPath = path.join(extension.extensionPath, "Annotations");
 	}
 	// edit `workspace.library` without deleting any other paths
-	const lua_config = vscode.workspace.getConfiguration("Lua");
 	const lib = lua_config.inspect("workspace.library");
 	const configTarget = getConfigurationTarget();
 	let libraryPath: string[] = [];
@@ -67,7 +66,6 @@ function setWowLibrary(): Thenable<void> {
 	}
 	const res = libraryPath?.filter(el => !el.includes("wow-api")) ?? [];
 
-	const wow_config = vscode.workspace.getConfiguration("wowAPI");
 	if (!wow_config.get("luals.frameXML")) {
 		for (const [i, v] of annotationFolders.entries()) {
 			res.push(path.join(folderPath, v));
@@ -81,7 +79,6 @@ function setWowLibrary(): Thenable<void> {
 
 // if we are configured to use user settings we need to delete any workspace settings
 function cleanConfig() {
-	const lua_config = vscode.workspace.getConfiguration("Lua");
 	const settings = ["runtime.version", "runtime.builtin", "workspace.library"];
 	const otherTarget = getConfigurationTarget() === vscode.ConfigurationTarget.Global 
 		? vscode.ConfigurationTarget.Workspace 
@@ -91,7 +88,9 @@ function cleanConfig() {
 		if (v === "workspace.library" && otherTarget === vscode.ConfigurationTarget.Global) {
 			const lib = lua_config.inspect("workspace.library")?.globalValue as string[];
 			const res = lib?.filter(el => !el.includes("wow-api"));
-			lua_config.update(v, res.length>0 ? res : undefined, otherTarget);
+			if (res) {
+				lua_config.update(v, res.length>0 ? res : undefined, otherTarget);
+			}
 		}
 		else {
 			lua_config.update(v, undefined, otherTarget);
@@ -100,7 +99,6 @@ function cleanConfig() {
 }
 
 export function configLuaLS() {
-	const wow_config = vscode.workspace.getConfiguration("wowAPI");
 	if (!wow_config.get("devMode")) {
 		setRuntime();
 		setWowLibrary();
@@ -109,20 +107,20 @@ export function configLuaLS() {
 }
 
 // automatically mark wow globals as defined if there is a language server warning
-export function defineKnownGlobals() {
+export function registerDiagnostic() {
 	vscode.languages.onDidChangeDiagnostics((event: vscode.DiagnosticChangeEvent) => {
-		const lua_config = vscode.workspace.getConfiguration("Lua");
 		const diag_globals: string[] = lua_config.get("diagnostics.globals")!;
-		const wow_config = vscode.workspace.getConfiguration("wowAPI");
-		if (!wow_config.get("luals.defineKnownGlobals")) {return;}
+		const defineKnownGlobals = wow_config.get("luals.defineKnownGlobals")
 		let hasUpdate = false;
 		event.uris.forEach(function(uri) {
 			vscode.languages.getDiagnostics(uri).forEach(function(diag) {
 				if (diag.code === "undefined-global") {
-					const name = diag.message.match("`(.+)`");
-					if (name && !diag_globals.includes(name[1]) && wow_globals[name[1]] && !wow_globalapi[name[1]]) {
-						hasUpdate = true;
-						diag_globals.push(name[1]);
+					if (defineKnownGlobals) {
+						const name = diag.message.match("`(.+)`");
+						if (name && !diag_globals.includes(name[1]) && wow_globals[name[1]] && !wow_globalapi[name[1]]) {
+							hasUpdate = true;
+							diag_globals.push(name[1]);
+						}
 					}
 				}
 			});
@@ -135,7 +133,6 @@ export function defineKnownGlobals() {
 
 // if deprecated APIs are defined as globals they will not trigger the deprecated warning
 export function cleanupGlobals() {
-	const lua_config = vscode.workspace.getConfiguration("Lua");
 	const diag_globals: string[] = lua_config.get("diagnostics.globals")!;
 	if (diag_globals.length > 0) {
 		for (let i=diag_globals.length-1; i>=0; i--) {
@@ -175,7 +172,6 @@ export async function isFrameXmlFolder() {
 }
 
 export function disableFrameXmlWarnings() {
-	const lua_config = vscode.workspace.getConfiguration("Lua");
 	const diag_disable : string[] = lua_config.get("diagnostics.disable")!;
 	for (const idx in framexml_warnings) {
 		const el = framexml_warnings[idx];
@@ -186,8 +182,15 @@ export function disableFrameXmlWarnings() {
 	lua_config.update("diagnostics.disable", diag_disable, vscode.ConfigurationTarget.Workspace);
 }
 
+// also update configuration cache
 vscode.workspace.onDidChangeConfiguration((event: vscode.ConfigurationChangeEvent) => {
-	if (event.affectsConfiguration("wowAPI.luals.configurationScope") || event.affectsConfiguration("wowAPI.luals.frameXML")) {
-		configLuaLS();
+    if (event.affectsConfiguration("wowAPI")) {
+        wow_config = vscode.workspace.getConfiguration("wowAPI");
+		if (event.affectsConfiguration("wowAPI.luals.configurationScope") || event.affectsConfiguration("wowAPI.luals.frameXML")) {
+			configLuaLS();
+		}
+    }
+    if (event.affectsConfiguration("Lua")) {
+		lua_config = vscode.workspace.getConfiguration("Lua")
 	}
 });
