@@ -135,7 +135,7 @@ export function registerDiagnostics() {
 			lua_config.update("diagnostics.globals", diag_globals, vscode.ConfigurationTarget.Workspace);
 		}
 		else if (updateWeakUnion) {
-			lua_config.update("type.weakUnionCheck", updateWeakUnion, getConfigurationTarget());
+			lua_config.update("type.weakUnionCheck", true, getConfigurationTarget());
 			vscode.window.showInformationMessage("WoW API: Enabled `Lua.type.weakUnionCheck` option to prevent the `param-type-mismatch` diagnostic warning when using templates and mixins.");
 		}
 	});
