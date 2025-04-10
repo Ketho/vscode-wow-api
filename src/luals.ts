@@ -4,6 +4,7 @@ import * as path from "path";
 const wow_globals = require("./data/globals").data;
 const wow_globalapi = require("./data/globalapi").data;
 const deprecated = require("./data/deprecated").data as string[];
+
 let lua_config = vscode.workspace.getConfiguration("Lua");
 let wow_config = vscode.workspace.getConfiguration("wowAPI");
 
@@ -185,7 +186,7 @@ export async function isFrameXmlFolder() {
 	}
 }
 
-export function disableFrameXmlWarnings() {
+export function setFrameXmlConfig() {
 	const diag_disable : string[] = lua_config.get("diagnostics.disable")!;
 	for (const idx in framexml_warnings) {
 		const el = framexml_warnings[idx];
@@ -194,6 +195,7 @@ export function disableFrameXmlWarnings() {
 		}
 	}
 	lua_config.update("diagnostics.disable", diag_disable, vscode.ConfigurationTarget.Workspace);
+	wow_config.update("luals.frameXML", false, vscode.ConfigurationTarget.Workspace);
 }
 
 // also update configuration cache

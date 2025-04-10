@@ -1,8 +1,9 @@
 import * as vscode from "vscode";
-import * as luals from "./luals";
-import * as subscriptions from "./subscriptions";
 import * as path from "path";
 import * as fs from "fs";
+
+import * as luals from "./luals";
+import * as subscriptions from "./subscriptions";
 
 export async function activate(context: vscode.ExtensionContext) {
 	console.log("loaded", context.extension.id);
@@ -20,7 +21,7 @@ async function activateWowExtension(context: vscode.ExtensionContext) {
 	luals.configLuaLS();
 	// luals.filterDeprecatedGlobals();
 	if (await luals.isFrameXmlFolder()) {
-		luals.disableFrameXmlWarnings();
+		luals.setFrameXmlConfig();
 	}
 	else {
 		luals.registerDiagnostics();
@@ -53,7 +54,7 @@ function isWowWorkspace() {
 
 async function hasTocFile() {
 	// the glob pattern appears to be case sensitive
-	const tocFiles = await vscode.workspace.findFiles("**/*.{toc,TOC}");
+	const tocFiles = await vscode.workspace.findFiles("**/*.{toc,Toc,TOC}");
 	for (const toc of tocFiles) {
 		const document = await vscode.workspace.openTextDocument(toc);
 		for (let i = 0; i < document.lineCount; i++) {
