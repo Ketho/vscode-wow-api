@@ -12,6 +12,12 @@ function C_SplashScreen.CanViewSplashScreen() end
 ---@param fromGameMenu boolean
 function C_SplashScreen.RequestLatestSplashScreen(fromGameMenu) end
 
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_SplashScreen.SendSplashScreenActionLaunchedTelem)
+function C_SplashScreen.SendSplashScreenActionLaunchedTelem() end
+
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_SplashScreen.SendSplashScreenCloseTelem)
+function C_SplashScreen.SendSplashScreenCloseTelem() end
+
 ---@class SplashScreenInfo
 ---@field textureKit textureKit
 ---@field minDisplayCharLevel number

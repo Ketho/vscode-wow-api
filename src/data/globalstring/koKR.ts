@@ -9430,7 +9430,7 @@ export const data: GlobalStringInterface = {
 	GUILD_RENAME_GUILD_BANK_MONEY_TOOLTIP: String.raw`사용 가능한 길드 은행 자금`,
 	GUILD_RENAME_OPTIONS_DESCRIPTION: String.raw`길드 이름 변경 옵션:`,
 	GUILD_RENAME_OPTIONS_DESCRIPTION_DISABLED: String.raw`길드 이름 변경은 현재 비활성화되어 있습니다. 나중에 다시 확인해 주십시오.`,
-	GUILD_RENAME_OPTIONS_REFUND: String.raw`I would like to refund my guild rename purchase|n(Time remaining to refund: %s)`,
+	GUILD_RENAME_OPTIONS_REFUND: String.raw`길드 이름 변경을 환불받고 싶습니다.|n(환불까지 남은 시간: %s)`,
 	GUILD_RENAME_OPTIONS_RENAME_AVAILABLE: String.raw`길드 이름 변경 진행`,
 	GUILD_RENAME_OPTIONS_RENAME_COOLDOWN: String.raw`길드 이름 변경 진행|n(%s 후 진행 가능)`,
 	GUILD_RENAME_REFUND_DIALOG_SUBTEXT: String.raw`남은 환불 가능 시간: %s`,
