@@ -92,12 +92,12 @@
 				"wowAPI.luals.defineKnownGlobals": {
 					"type": "boolean",
 					"default": true,
-					"markdownDescription": "Automatically adds known globals to `Lua.diagnostics.globals` to workspace settings.json."
+					"markdownDescription": "Automatically adds known globals to `Lua.diagnostics.globals` in the workspace settings.json."
 				},
 				"wowAPI.luals.frameXML": {
 					"type": "boolean",
 					"default": false,
-					"markdownDescription": "Loads the Blizzard [FrameXML](http://github.com/NumyAddon/FramexmlAnnotations) source code. This is *experimental* and increases loading time."
+					"markdownDescription": "*(experimental)* Loads the annotated [FrameXML](http://github.com/NumyAddon/FramexmlAnnotations) source code by Numy."
 				}
 			}
 		}
