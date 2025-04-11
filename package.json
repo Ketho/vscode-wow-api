@@ -97,7 +97,7 @@
 				"wowAPI.luals.frameXML": {
 					"type": "boolean",
 					"default": false,
-					"markdownDescription": "Loads the Blizzard [FrameXML](http://github.com/NumyAddon/FramexmlAnnotations) source code but significantly increases loading time."
+					"markdownDescription": "Loads the Blizzard [FrameXML](http://github.com/NumyAddon/FramexmlAnnotations) source code. This is *experimental* and increases loading time."
 				}
 			}
 		}

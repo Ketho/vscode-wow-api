@@ -82,13 +82,14 @@ function setWowLibrary(): Thenable<void> {
 		libraryPath = lib?.workspaceValue as string[];
 	}
 	const res = libraryPath?.filter(el => !el.includes("wow-api")) ?? [];
+	for (const [i, v] of annotationFolders.entries()) {
+		res.push(path.join(folderPath, v));
+	}
 	if (!wow_config.get("luals.frameXML")) {
-		for (const [i, v] of annotationFolders.entries()) {
-			res.push(path.join(folderPath, v));
-		}
+		res.push(path.join(folderPath, "FrameXML", "Manual"));
 	}
 	else {
-		res.push(folderPath);
+		res.push(path.join(folderPath, "FrameXML", "Numy"));
 	}
 	return lua_config.update("workspace.library", res, configTarget);
 }
