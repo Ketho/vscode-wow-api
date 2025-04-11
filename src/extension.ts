@@ -5,17 +5,20 @@ import * as fs from "fs";
 import * as luals from "./luals";
 import * as subscriptions from "./subscriptions";
 
+let isLoaded = false;
+
 export async function activate(context: vscode.ExtensionContext) {
 	console.log("loaded", context.extension.id);
 	registerActivationCommand(context);
 
-	if (isWowWorkspace() || await hasTocFile()) {
+	if (isConfigured() || await hasTocFile()) {
 		activateWowExtension(context);
 		cleanEmptyWorkspace();
 	}
 }
 
 async function activateWowExtension(context: vscode.ExtensionContext) {
+	isLoaded = true;
 	subscriptions.registerCompletion(context);
 	subscriptions.registerHover(context);
 	luals.configLuaLS();
@@ -29,27 +32,36 @@ async function activateWowExtension(context: vscode.ExtensionContext) {
 }
 
 function registerActivationCommand(context: vscode.ExtensionContext) {
-	let isLoaded = false;
 	const handler = () => {
 		if (!isLoaded) {
-			isLoaded = true; // using a command already activates the extension
-			vscode.window.showInformationMessage("Activated WoW API extension.");
+			const wow_config = vscode.workspace.getConfiguration("wowAPI");
+			// some users expect the extension to just work while not in an addon or workspace
+			if (vscode.workspace.workspaceFolders) {
+				wow_config.update("luals.configurationScope", "Workspace", vscode.ConfigurationTarget.Global);
+				vscode.window.showInformationMessage("Activated WoW API extension (Workspace settings).");
+			}
+			else {
+				wow_config.update("luals.configurationScope", "User", vscode.ConfigurationTarget.Global);
+				vscode.window.showInformationMessage("Enabled WoW API extension (User settings).");
+			}
+			activateWowExtension(context);
 		}
 		else {
+			// clarification: when the extension has not loaded yet but is already configured, then
+			// this will erroneously say "it was already activated" while it was only actually activated
+			// by using this command. you can verify in the debug console that the extension only loads when needed
 			vscode.window.showInformationMessage("WoW API extension is already activated.");
 		}
 	};
 	context.subscriptions.push(vscode.commands.registerCommand("wowAPI.activateExtension", handler));
 }
 
-// check if this workspace has already been used with the extension
-function isWowWorkspace() {
+// check if the extension has been configured before in the workspace or user settings
+function isConfigured() {
 	const config = vscode.workspace.getConfiguration("Lua");
-	// note config.get returns the workspace config if it exists, otherwise the global user config
-	const workspaceValue = config.inspect("workspace.library")?.workspaceValue as string[];
-	if (workspaceValue) {
-		return workspaceValue.find((value) => value.includes("wow-api"));
-	}
+	// config.get returns the workspace config if it exists, otherwise the global user config
+	const lib = config.get("workspace.library") as string[];
+	return lib.find((value) => value.includes("wow-api"));
 }
 
 async function hasTocFile() {
