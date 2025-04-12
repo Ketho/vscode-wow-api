@@ -47,9 +47,6 @@ function registerActivationCommand(context: vscode.ExtensionContext) {
 			activateWowExtension(context);
 		}
 		else {
-			// clarification: when the extension has not loaded yet but is already configured, then
-			// this will erroneously say "it was already activated" while it was only actually activated
-			// by using this command. you can verify in the debug console that the extension only loads when needed
 			vscode.window.showInformationMessage("WoW API extension is already activated.");
 		}
 	};
@@ -83,16 +80,16 @@ async function hasTocFile() {
 	}
 }
 
-// check if workspace `settings.json` only has an empty object to fix #186 mistake
+// [temporarily] check if workspace `settings.json` only has an empty object to fix #186 mistake
 function cleanEmptyWorkspace() {
 	const workspaceFolders = vscode.workspace.workspaceFolders;
 	if (!workspaceFolders) {
-		return false;
+		return;
 	}
 	const vscodePath = path.join(workspaceFolders[0].uri.fsPath, ".vscode");
 	const settingsPath = path.join(vscodePath, "settings.json");
 	if (!fs.existsSync(settingsPath)) {
-		return false;
+		return;
 	}
 	const files = fs.readdirSync(vscodePath);
 	// more stable to check amount of files before doing any file operations
@@ -103,7 +100,7 @@ function cleanEmptyWorkspace() {
 		fs.unlinkSync(settingsPath);
 	}
 	else {
-		return false;
+		return;
 	}
 	if (soleFile) {
 		fs.rmdirSync(vscodePath);
