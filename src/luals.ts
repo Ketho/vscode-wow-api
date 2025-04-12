@@ -73,9 +73,11 @@ function setWowLibrary(context?: vscode.ExtensionContext) {
 	else if (configTarget === vscode.ConfigurationTarget.Workspace) {
 		libraryPath = lib?.workspaceValue as string[];
 	}
+	// users were confused why `wow-api` was being filtered out; because of matching development mode path
+	// small edge case when using debugger: name your folder `ketho.wow-api` but otherwise you will
+	// just temporarily have duplicated entries in library path when changing the relevant options
 	let res: string[] = [];
-	// in development mode just start with a clean library path
-	if (context?.extensionMode !== vscode.ExtensionMode.Development) {
+	if (!context || context.extensionMode !== vscode.ExtensionMode.Development) {
 		res = libraryPath?.filter(el => !el.includes("ketho.wow-api")) ?? [];
 	}
 	res.push(path.join(folderPath, "Core"));
@@ -135,10 +137,20 @@ export function registerDiagnostics() {
 						}
 					}
 				}
-				if (diag.code === "param-type-mismatch") {
+				else if (diag.code === "param-type-mismatch") {
 					if (diag.message.includes("Template")) {
-						// prevents "param-type-mismatch" diagnostic for templates with mixins, and probably more
+						// prevents "param-type-mismatch" diagnostic for templates with mixins
 						lua_config.update("type.weakUnionCheck", true, getConfigurationTarget());
+					}
+				}
+				else if (diag.code === "assign-type-mismatch") {
+					if (diag.message.includes("`Frame`") || diag.message.includes("`Region`")) {
+						// when manually annotating e.g. Button type by specializing from Frame to Button
+						const disable: string[] = lua_config.get("diagnostics.disable")!;
+						if (!disable.includes("assign-type-mismatch")) {
+							disable.push("assign-type-mismatch");
+							lua_config.update("diagnostics.disable", disable, getConfigurationTarget());
+						}
 					}
 				}
 			});
