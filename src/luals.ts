@@ -20,22 +20,16 @@ const builtin = {
 	utf8: "disable",
 };
 
-const annotationFolders = [
-	"Core",
-	"Libraries",
-	"Lua",
-];
-
 const luaSettings = [
 	"runtime.version",
 	"runtime.builtin",
 	"workspace.library",
 ];
 
-export function configLuaLS() {
+export function configLuaLS(context?: vscode.ExtensionContext) {
 	if (!wow_config.get("devMode")) {
 		setRuntime();
-		setWowLibrary();
+		setWowLibrary(context);
 		cleanConfigTarget();
 	}
 }
@@ -60,7 +54,7 @@ function setRuntime() {
 }
 
 // add wow-api path to luals
-function setWowLibrary() {
+function setWowLibrary(context?: vscode.ExtensionContext) {
 	const extension = vscode.extensions.getExtension("ketho.wow-api")!;
 	let folderPath;
 	const pos = extension.extensionPath.indexOf(".vscode"); // should also work for .vscode-insiders
@@ -70,7 +64,6 @@ function setWowLibrary() {
 	else {
 		folderPath = path.join(extension.extensionPath, "Annotations");
 	}
-	// edit `workspace.library` without deleting any other paths
 	const lib = lua_config.inspect("workspace.library");
 	const configTarget = getConfigurationTarget();
 	let libraryPath: string[] = [];
@@ -80,10 +73,12 @@ function setWowLibrary() {
 	else if (configTarget === vscode.ConfigurationTarget.Workspace) {
 		libraryPath = lib?.workspaceValue as string[];
 	}
-	const res = libraryPath?.filter(el => !el.includes("wow-api")) ?? [];
-	for (const [i, v] of annotationFolders.entries()) {
-		res.push(path.join(folderPath, v));
+	let res: string[] = [];
+	// in development mode just start with a clean library path
+	if (context?.extensionMode !== vscode.ExtensionMode.Development) {
+		res = libraryPath?.filter(el => !el.includes("ketho.wow-api")) ?? [];
 	}
+	res.push(path.join(folderPath, "Core"));
 	if (!wow_config.get("luals.frameXML")) {
 		res.push(path.join(folderPath, "FrameXML", "Manual"));
 	}
@@ -115,7 +110,7 @@ function cleanConfigTarget() {
 	else if (configTarget === vscode.ConfigurationTarget.Global) {
 		for (const v of luaSettings) {
 			// dont update if there is nothing to delete
-			// otherwise it will create an empty settings.json file if this does not exist yet
+			// otherwise it will create an empty settings.json file if it does not exist yet
 			if (lua_config.inspect(v)?.workspaceValue) {
 				lua_config.update(v, undefined, vscode.ConfigurationTarget.Workspace);
 			}
