@@ -1,5 +1,9 @@
 # Change Log
 
+## [0.20.1] - 2025-04-12
+- 🐞 Fixed [#187](https://github.com/Ketho/vscode-wow-api/issues/187) Improper LuaLS return typings for variable returns from BlizzardAPIDocs 
+- 🐞 The `type.weakUnionCheck` option is now only enabled when needed
+
 ## [0.20.0] - 2025-04-11
 - ✨ The FrameXML option now loads annotated FrameXML source code but is disabled by default
 - 🐞 Fixed [#186](https://github.com/Ketho/vscode-wow-api/issues/186) Empty .vscode folder being created since 0.19.0
@@ -186,6 +190,7 @@ To avoid loading for Lua projects not related to World of Warcraft, all settings
 - PR [#123](https://github.com/Ketho/vscode-wow-api/pull/123) Make childGroups optional in AceConfig.OptionsTable
 - PR [#120](https://github.com/Ketho/vscode-wow-api/pull/120) Add definition for tostringall()
 
+[0.20.1]: https://github.com/Ketho/vscode-wow-api/releases/tag/0.20.1
 [0.20.0]: https://github.com/Ketho/vscode-wow-api/releases/tag/0.20.0
 [0.19.1]: https://github.com/Ketho/vscode-wow-api/releases/tag/0.19.1
 [0.19.0]: https://github.com/Ketho/vscode-wow-api/releases/tag/0.19.0

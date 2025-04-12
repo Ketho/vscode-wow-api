@@ -9,7 +9,7 @@ Adds IntelliSense features for World of Warcraft API to VS Code. This is a third
 
 ## Instructions
 * The extension will automatically load when opening an addon folder with a [.toc](https://warcraft.wiki.gg/wiki/TOC_format) file.
-* Alternatively the `Activate WoW API extension` command manually activates it.
+* Alternatively the `Activate WoW API extension` command manually enables it.
 
 ![](img/readme/activate.png)
 
