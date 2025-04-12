@@ -30,8 +30,14 @@ function TextureBase:GetHorizTile() end
 function TextureBase:GetRotation() end
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_TextureBase_GetTexCoord)
----@return number x
----@return number y
+---@return number ULx
+---@return number ULy
+---@return number LLx
+---@return number LLy
+---@return number URx
+---@return number URy
+---@return number LRx
+---@return number LRy 
 function TextureBase:GetTexCoord() end
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_TextureBase_GetTexelSnappingBias)

@@ -182,7 +182,7 @@ function ScriptRegion:SetMouseMotionEnabled(enabled) end
 function ScriptRegion:SetParent(parent) end
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_ScriptRegion_SetPassThroughButtons)
----@param ... mouseButton
+---@param ... mouseButton unpackedPrimitiveType
 function ScriptRegion:SetPassThroughButtons(...) end
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_ScriptRegion_SetScript)

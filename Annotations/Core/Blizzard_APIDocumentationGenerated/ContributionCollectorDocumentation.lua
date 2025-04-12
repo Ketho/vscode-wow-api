@@ -9,7 +9,7 @@ function C_ContributionCollector.Close() end
 function C_ContributionCollector.Contribute(contributionID) end
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_ContributionCollector.GetActive)
----@return number contributionID
+---@return number ... contributionID
 function C_ContributionCollector.GetActive() end
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_ContributionCollector.GetAtlases)
@@ -19,7 +19,7 @@ function C_ContributionCollector.GetAtlases(contributionID) end
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_ContributionCollector.GetBuffs)
 ---@param contributionID number
----@return number spellID
+---@return number ... spellID
 function C_ContributionCollector.GetBuffs(contributionID) end
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_ContributionCollector.GetContributionAppearance)
@@ -45,7 +45,7 @@ function C_ContributionCollector.GetDescription(contributionID) end
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_ContributionCollector.GetManagedContributionsForCreatureID)
 ---@param creatureID number
----@return number contributionID
+---@return number ... contributionID
 function C_ContributionCollector.GetManagedContributionsForCreatureID(creatureID) end
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_ContributionCollector.GetName)

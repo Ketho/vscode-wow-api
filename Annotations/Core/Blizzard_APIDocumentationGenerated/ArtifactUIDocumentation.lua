@@ -188,9 +188,9 @@ function C_ArtifactUI.GetForgeRotation() end
 function C_ArtifactUI.GetItemLevelIncreaseProvidedByRelic(itemLinkOrID) end
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_ArtifactUI.GetMetaPowerInfo)
----@return number spellID
----@return number powerCost
----@return number currentRank
+---@return number ... spellID
+---@return number ... powerCost
+---@return number ... currentRank
 function C_ArtifactUI.GetMetaPowerInfo() end
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_ArtifactUI.GetNumAppearanceSets)
@@ -231,12 +231,12 @@ function C_ArtifactUI.GetPowers() end
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_ArtifactUI.GetPowersAffectedByRelic)
 ---@param relicSlotIndex number
----@return number powerIDs
+---@return number ... powerIDs
 function C_ArtifactUI.GetPowersAffectedByRelic(relicSlotIndex) end
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_ArtifactUI.GetPowersAffectedByRelicItemLink)
 ---@param relicItemInfo ItemInfo
----@return number powerIDs
+---@return number ... powerIDs
 function C_ArtifactUI.GetPowersAffectedByRelicItemLink(relicItemInfo) end
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_ArtifactUI.GetPreviewAppearance)

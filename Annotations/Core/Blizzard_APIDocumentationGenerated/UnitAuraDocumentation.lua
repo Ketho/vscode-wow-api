@@ -48,7 +48,7 @@ function C_UnitAuras.GetAuraDataBySpellName(unitToken, spellName, filter) end
 ---@param maxSlots? number
 ---@param continuationToken? number
 ---@return number? outContinuationToken
----@return number slots
+---@return number ... slots
 function C_UnitAuras.GetAuraSlots(unitToken, filter, maxSlots, continuationToken) end
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_UnitAuras.GetBuffDataByIndex)

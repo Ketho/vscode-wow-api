@@ -26,7 +26,7 @@ function AnimationGroup:Finish() end
 function AnimationGroup:GetAnimationSpeedMultiplier() end
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_AnimationGroup_GetAnimations)
----@return ScriptObject scriptObject
+---@return Animation ... scriptObject
 function AnimationGroup:GetAnimations() end
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_AnimationGroup_GetDuration)

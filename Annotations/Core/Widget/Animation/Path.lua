@@ -13,7 +13,7 @@ local Path = {}
 function Path:CreateControlPoint(name, templateName, order) end
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_Path_GetControlPoints)
----@return ControlPoint ...
+---@return ControlPoint ... ScriptObject
 function Path:GetControlPoints() end
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_Path_GetCurveType)
