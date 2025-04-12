@@ -13,13 +13,13 @@ function ForceQuit() end
 function GetNativeRealmID() end
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_GetNetIpTypes)
----@return ConnectionIptype ipTypes
+---@return ConnectionIptype ... ipTypes
 function GetNetIpTypes() end
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_GetNetStats)
 ---@return number in
 ---@return number out
----@return number latencyList
+---@return number ... latencyList
 function GetNetStats() end
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_GetRealmID)

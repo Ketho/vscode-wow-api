@@ -29,7 +29,6 @@ const annotationFolders = [
 const luaSettings = [
 	"runtime.version",
 	"runtime.builtin",
-	"type.weakUnionCheck",
 	"workspace.library",
 ];
 
@@ -56,12 +55,12 @@ function setRuntime() {
 	const configTarget = getConfigurationTarget();
 	lua_config.update("runtime.version", "Lua 5.1", configTarget);
 	lua_config.update("runtime.builtin", builtin, configTarget);
-	// prevents "param-type-mismatch" diagnostic for templates with mixins, and probably more
-	lua_config.update("type.weakUnionCheck", true, configTarget);
+	// [temporarily] cleanup this option, since we only set it when needed
+	lua_config.update("type.weakUnionCheck", undefined, configTarget);
 }
 
 // add wow-api path to luals
-function setWowLibrary(): Thenable<void> {
+function setWowLibrary() {
 	const extension = vscode.extensions.getExtension("ketho.wow-api")!;
 	let folderPath;
 	const pos = extension.extensionPath.indexOf(".vscode"); // should also work for .vscode-insiders
@@ -132,11 +131,19 @@ export function registerDiagnostics() {
 		event.uris.forEach(function(uri) {
 			vscode.languages.getDiagnostics(uri).forEach(function(diag) {
 				// automatically mark wow globals as defined if there is a diagnostic warning
-				if (diag.code === "undefined-global" && defineKnownGlobals) {
-					const name = diag.message.match("`(.+)`");
-					if (name && !diag_globals.includes(name[1]) && wow_globals[name[1]] && !wow_globalapi[name[1]]) {
-						updateGlobals = true;
-						diag_globals.push(name[1]);
+				if (diag.code === "undefined-global") {
+					if (defineKnownGlobals) {
+						const name = diag.message.match("`(.+)`");
+						if (name && !diag_globals.includes(name[1]) && wow_globals[name[1]] && !wow_globalapi[name[1]]) {
+							updateGlobals = true;
+							diag_globals.push(name[1]);
+						}
+					}
+				}
+				if (diag.code === "param-type-mismatch") {
+					if (diag.message.includes("Template")) {
+						// prevents "param-type-mismatch" diagnostic for templates with mixins, and probably more
+						lua_config.update("type.weakUnionCheck", true, getConfigurationTarget());
 					}
 				}
 			});
@@ -199,15 +206,15 @@ export function setFrameXmlConfig() {
 	wow_config.update("luals.frameXML", false, vscode.ConfigurationTarget.Workspace);
 }
 
-// also update configuration cache
 vscode.workspace.onDidChangeConfiguration((event: vscode.ConfigurationChangeEvent) => {
-    if (event.affectsConfiguration("wowAPI")) {
-        wow_config = vscode.workspace.getConfiguration("wowAPI");
+    if (event.affectsConfiguration("Lua")) {
+		// update configuration caches
+		lua_config = vscode.workspace.getConfiguration("Lua");
+	}
+	if (event.affectsConfiguration("wowAPI")) {
+		wow_config = vscode.workspace.getConfiguration("wowAPI");
 		if (event.affectsConfiguration("wowAPI.luals.configurationScope") || event.affectsConfiguration("wowAPI.luals.frameXML")) {
 			configLuaLS();
 		}
     }
-    if (event.affectsConfiguration("Lua")) {
-		lua_config = vscode.workspace.getConfiguration("Lua");
-	}
 });

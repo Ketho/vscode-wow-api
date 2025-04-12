@@ -111,9 +111,9 @@ function Frame:EnableKeyboard(enable) end
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_Frame_ExecuteAttribute)
 ---@param attributeName string
----@param ... mouseButton
+---@param ... mouseButton unpackedPrimitiveType
 ---@return boolean success
----@return mouseButton ...
+---@return mouseButton ... unpackedPrimitiveType
 function Frame:ExecuteAttribute(attributeName, ...) end
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_Frame_GetAlpha)
@@ -133,7 +133,7 @@ function Frame:GetAttribute(attributeName) end
 function Frame:GetBoundsRect() end
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_Frame_GetChildren)
----@return ScriptObject scriptObject
+---@return Frame ... scriptObject
 function Frame:GetChildren() end
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_Frame_GetClampRectInsets)
@@ -203,7 +203,7 @@ function Frame:GetPropagateKeyboardInput() end
 function Frame:GetRaisedFrameLevel() end
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_Frame_GetRegions)
----@return ScriptObject scriptObject
+---@return Region ... scriptObject
 function Frame:GetRegions() end
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_Frame_GetResizeBounds)
@@ -245,7 +245,7 @@ function Frame:IsDrawLayerEnabled(layer) end
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_Frame_IsEventRegistered)
 ---@param eventName FrameEvent
 ---@return boolean isRegistered
----@return UnitToken? units
+---@return UnitToken? ... units
 function Frame:IsEventRegistered(eventName) end
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_Frame_IsGamePadButtonEnabled)
@@ -318,12 +318,12 @@ function Frame:RegisterAllEvents() end
 function Frame:RegisterEvent(eventName) end
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_Frame_RegisterForDrag)
----@param ... mouseButton
+---@param ... mouseButton unpackedPrimitiveType
 function Frame:RegisterForDrag(...) end
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_Frame_RegisterUnitEvent)
 ---@param eventName FrameEvent
----@param ... UnitToken
+---@param ... UnitToken units
 ---@return boolean registered
 function Frame:RegisterUnitEvent(eventName, ...) end
 

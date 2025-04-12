@@ -10,7 +10,7 @@ local AnimatableObject = {}
 function AnimatableObject:CreateAnimationGroup(name, templateName) end
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_AnimatableObject_GetAnimationGroups)
----@return ScriptObject scriptObject
+---@return SimpleAnimGroup ... scriptObject
 function AnimatableObject:GetAnimationGroups() end
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_AnimatableObject_StopAnimating)

@@ -100,12 +100,21 @@ function Mitsuha:GetField(annotation, apiTable)
 	if apiTable.Nilable or apiTable.Default ~= nil then
 		nilable = "?"
 	end
+	local name
+	if apiTable.StrideIndex then
+		name = "..."
+	else
+		name = apiTable.Name
+	end
 	if annotation == "field" then
-		str = fs_field:format(annotation, apiTable.Name, paramType..nilable)
+		str = fs_field:format(annotation, name, paramType..nilable)
 	elseif annotation == "param" then
-		str = fs_field:format(annotation, apiTable.Name..nilable, paramType)
+		str = fs_field:format(annotation, name..nilable, paramType)
 	elseif annotation == "return" then
-		str = fs_field:format(annotation, paramType..nilable, apiTable.Name)
+		str = fs_field:format(annotation, paramType..nilable, name)
+	end
+	if apiTable.StrideIndex then
+		str = str.." "..apiTable.Name -- show in description
 	end
 	if apiTable.Default ~= nil then
 		str = str.." Default = "..tostring(apiTable.Default)

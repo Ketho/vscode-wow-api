@@ -31,7 +31,7 @@ function C_AddOns.EnableAllAddOns(character) end
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_AddOns.GetAddOnDependencies)
 ---@param name uiAddon
----@return string unpackedPrimitiveType
+---@return string ... unpackedPrimitiveType
 function C_AddOns.GetAddOnDependencies(name) end
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_AddOns.GetAddOnEnableState)
@@ -64,7 +64,7 @@ function C_AddOns.GetAddOnMetadata(name, variable) end
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_AddOns.GetAddOnOptionalDependencies)
 ---@param name uiAddon
----@return string unpackedPrimitiveType
+---@return string ... unpackedPrimitiveType
 function C_AddOns.GetAddOnOptionalDependencies(name) end
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_AddOns.GetNumAddOns)
