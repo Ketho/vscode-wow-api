@@ -144,8 +144,8 @@ export function registerDiagnostics() {
 					}
 				}
 				else if (diag.code === "assign-type-mismatch") {
-					if (diag.message.includes("`Frame`") || diag.message.includes("`Region`")) {
-						// when manually annotating e.g. Button type by specializing from Frame to Button
+					if (diag.message.includes("table|")) {
+						// disable the diagnostic if assigning any of our types
 						const disable: string[] = lua_config.get("diagnostics.disable")!;
 						if (!disable.includes("assign-type-mismatch")) {
 							disable.push("assign-type-mismatch");
