@@ -7904,9 +7904,10 @@ function IsGraphicsCVarValueSupported() end
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_IsGraphicsSettingValueSupported)
 function IsGraphicsSettingValueSupported() end
 
----#invalidpage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_IsGuildMember)
-function IsGuildMember() end
+---@param player string
+---@return boolean isGuildMember
+function IsGuildMember(player) end
 
 ---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_IsGuildRankAssignmentAllowed)
