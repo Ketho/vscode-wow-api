@@ -7,9 +7,9 @@ local MessageFrame  = {}
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_MessageFrame_AddMessage)
 ---@param text string
----@param colorR number
----@param colorG number
----@param colorB number
+---@param colorR? number
+---@param colorG? number
+---@param colorB? number
 ---@param a? SingleColorValue
 ---@param messageID? number
 function MessageFrame:AddMessage(text, colorR, colorG, colorB, a, messageID) end

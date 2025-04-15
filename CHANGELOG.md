@@ -1,5 +1,12 @@
 # Change Log
 
+## [0.20.2] - 2025-04-16
+- 🐞 Fixed [#189](https://github.com/Ketho/vscode-wow-api/issues/189) `MessageFrame:AddMessage()` optional params are set mandatory
+- ✨ Updated wiki and generated FrameXML annotations
+- ⚙️ Now only filters paths with `ketho.wow-api` instead of `wow-api` from luals library path
+- ⚙️ Moved `Lua` and `Libraries` into the `Core` folder
+- Disables the `assign-type-mismatch` diagnostic but only when manually annotating UI objects with `@type`
+
 ## [0.20.1] - 2025-04-12
 - 🐞 Fixed [#187](https://github.com/Ketho/vscode-wow-api/issues/187) Improper LuaLS return typings for variable returns from BlizzardAPIDocs 
 - 🐞 The `type.weakUnionCheck` option is now only enabled when needed
@@ -190,6 +197,7 @@ To avoid loading for Lua projects not related to World of Warcraft, all settings
 - PR [#123](https://github.com/Ketho/vscode-wow-api/pull/123) Make childGroups optional in AceConfig.OptionsTable
 - PR [#120](https://github.com/Ketho/vscode-wow-api/pull/120) Add definition for tostringall()
 
+[0.20.2]: https://github.com/Ketho/vscode-wow-api/releases/tag/0.20.2
 [0.20.1]: https://github.com/Ketho/vscode-wow-api/releases/tag/0.20.1
 [0.20.0]: https://github.com/Ketho/vscode-wow-api/releases/tag/0.20.0
 [0.19.1]: https://github.com/Ketho/vscode-wow-api/releases/tag/0.19.1

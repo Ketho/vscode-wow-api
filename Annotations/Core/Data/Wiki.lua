@@ -64,8 +64,8 @@ function AddTradeMoney() end
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_AntiAliasingSupported)
 function AntiAliasingSupported() end
 
----#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_ArchaeologyGetIconInfo)
+---@param index number
 function ArchaeologyGetIconInfo(index) end
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_ArchaeologyMapUpdateAll)
@@ -73,8 +73,9 @@ function ArchaeologyGetIconInfo(index) end
 ---@return number numSites
 function ArchaeologyMapUpdateAll(uiMapID) end
 
----#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_ArcheologyGetVisibleBlobID)
+---@param index number
+---@return number blobID
 function ArcheologyGetVisibleBlobID(index) end
 
 ---#nopage  
@@ -3073,16 +3074,18 @@ function C_Trophy.MonumentRevertAppearanceToSaved() end
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_Trophy.MonumentSaveSelection)
 function C_Trophy.MonumentSaveSelection(trophyID) end
 
----#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_Widget.IsFrameWidget)
-function C_Widget.IsFrameWidget() end
+---@param object? Object
+---@return boolean isFrameWidget
+function C_Widget.IsFrameWidget(object) end
 
 ---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_Widget.IsRenderableWidget)
 function C_Widget.IsRenderableWidget() end
 
----#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_Widget.IsWidget)
+---@param object? Object
+---@return boolean isWidget
 function C_Widget.IsWidget(object) end
 
 ---#nopage  
@@ -3359,8 +3362,9 @@ function CanHearthAndResurrectFromArea() end
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_CanInitiateWarGame)
 function CanInitiateWarGame() end
 
----#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_CanItemBeSocketedToArtifact)
+---@param itemID number
+---@return boolean canSocket
 function CanItemBeSocketedToArtifact(itemID) end
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_CanJoinBattlefieldAsGroup)
@@ -3395,16 +3399,16 @@ function CanShowAchievementUI() end
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_CanSignPetition)
 function CanSignPetition() end
 
----#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_CanSolveArtifact)
+---@return boolean canSolve
 function CanSolveArtifact() end
 
 ---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_CanSurrenderArena)
 function CanSurrenderArena() end
 
----#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_CanSwitchVehicleSeats)
+---@return boolean canSwitchSeats
 function CanSwitchVehicleSeats() end
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_CanUseVoidStorage)
@@ -3671,7 +3675,6 @@ function ClosePetition() end
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_CloseQuest)
 function CloseQuest() end
 
----#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_CloseResearch)
 function CloseResearch() end
 
@@ -4330,9 +4333,12 @@ function GetAchievementCriteriaInfo(achievementID, criteriaIndex, countHidden) e
 ---@return number elapsed
 function GetAchievementCriteriaInfoByID(achievementID, criteriaID) end
 
----#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_GetAchievementGuildRep)
-function GetAchievementGuildRep() end
+---@param id number
+---@return boolean requiresRep
+---@return boolean hasRep
+---@return number repLevel
+function GetAchievementGuildRep(id) end
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_GetAchievementInfo)
 ---@param achievementID number
@@ -5067,16 +5073,19 @@ function GetGreetingText() end
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_GetGroupMemberCounts)
 function GetGroupMemberCounts() end
 
----#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_GetGuildAchievementMemberInfo)
+---@param achievementID number
+---@param index number
+---@return string? leftMemberName
 function GetGuildAchievementMemberInfo(achievementID, index) end
 
----#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_GetGuildAchievementMembers)
+---@param achievementID number
 function GetGuildAchievementMembers(achievementID) end
 
----#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_GetGuildAchievementNumMembers)
+---@param achievementID number
+---@return number numMembers
 function GetGuildAchievementNumMembers(achievementID) end
 
 ---#nopage  
@@ -7540,9 +7549,16 @@ function GetWorldElapsedTimers() end
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_GetWorldMapActionButtonSpellInfo)
 function GetWorldMapActionButtonSpellInfo() end
 
----#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_GetWorldPVPQueueStatus)
-function GetWorldPVPQueueStatus(queueId) end
+---@param index number
+---@return string status
+---@return string? mapName
+---@return number queueID
+---@return number expireTime
+---@return number averageWaitTime
+---@return number queuedTime
+---@return boolean suspended
+function GetWorldPVPQueueStatus(index) end
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_GiveMasterLoot)
 ---@param slot number
@@ -7761,8 +7777,8 @@ function IsAllowedToUserTeleport() end
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_IsArenaSkirmish)
 function IsArenaSkirmish() end
 
----#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_IsArtifactCompletionHistoryAvailable)
+---@return boolean available
 function IsArtifactCompletionHistoryAvailable() end
 
 ---#nopage  
@@ -7888,9 +7904,10 @@ function IsGraphicsCVarValueSupported() end
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_IsGraphicsSettingValueSupported)
 function IsGraphicsSettingValueSupported() end
 
----#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_IsGuildMember)
-function IsGuildMember() end
+---@param player string
+---@return boolean isGuildMember
+function IsGuildMember(player) end
 
 ---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_IsGuildRankAssignmentAllowed)
@@ -8112,12 +8129,12 @@ function IsUsableAction(slot) end
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_IsUsingVehicleControls)
 function IsUsingVehicleControls() end
 
----#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_IsVehicleAimAngleAdjustable)
+---@return boolean adjustable
 function IsVehicleAimAngleAdjustable() end
 
----#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_IsVehicleAimPowerAdjustable)
+---@return boolean adjustable
 function IsVehicleAimPowerAdjustable() end
 
 ---#nopage  
@@ -8128,9 +8145,10 @@ function IsVoidStorageReady() end
 ---@return boolean isWargame
 function IsWargame() end
 
----#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_ItemAddedToArtifact)
-function ItemAddedToArtifact(keystoneindex) end
+---@param index number
+---@return boolean added
+function ItemAddedToArtifact(index) end
 
 ---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_ItemCanTargetGarrisonFollowerAbility)
@@ -9068,9 +9086,9 @@ function SetCurrentGuildBankTab(tab) end
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_SetEveryoneIsAssistant)
 function SetEveryoneIsAssistant() end
 
----#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_SetFocusedAchievement)
-function SetFocusedAchievement(achievementID) end
+---@param id? number
+function SetFocusedAchievement(id) end
 
 ---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_SetGamePadCursorControl)
@@ -9374,12 +9392,11 @@ function SocketInventoryItem(slot) end
 ---@return boolean keystoneAdded
 function SocketItemToArtifact() end
 
----#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_SolveArtifact)
 function SolveArtifact() end
 
----#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_SortBGList)
+---@return boolean unk
 function SortBGList() end
 
 ---#nopage  

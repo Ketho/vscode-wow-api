@@ -21,7 +21,7 @@ async function activateWowExtension(context: vscode.ExtensionContext) {
 	isLoaded = true;
 	subscriptions.registerCompletion(context);
 	subscriptions.registerHover(context);
-	luals.configLuaLS();
+	luals.configLuaLS(context);
 	// luals.filterDeprecatedGlobals();
 	if (await luals.isFrameXmlFolder()) {
 		luals.setFrameXmlConfig();

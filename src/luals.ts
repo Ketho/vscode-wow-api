@@ -20,22 +20,16 @@ const builtin = {
 	utf8: "disable",
 };
 
-const annotationFolders = [
-	"Core",
-	"Libraries",
-	"Lua",
-];
-
 const luaSettings = [
 	"runtime.version",
 	"runtime.builtin",
 	"workspace.library",
 ];
 
-export function configLuaLS() {
+export function configLuaLS(context?: vscode.ExtensionContext) {
 	if (!wow_config.get("devMode")) {
 		setRuntime();
-		setWowLibrary();
+		setWowLibrary(context);
 		cleanConfigTarget();
 	}
 }
@@ -60,7 +54,7 @@ function setRuntime() {
 }
 
 // add wow-api path to luals
-function setWowLibrary() {
+function setWowLibrary(context?: vscode.ExtensionContext) {
 	const extension = vscode.extensions.getExtension("ketho.wow-api")!;
 	let folderPath;
 	const pos = extension.extensionPath.indexOf(".vscode"); // should also work for .vscode-insiders
@@ -70,7 +64,6 @@ function setWowLibrary() {
 	else {
 		folderPath = path.join(extension.extensionPath, "Annotations");
 	}
-	// edit `workspace.library` without deleting any other paths
 	const lib = lua_config.inspect("workspace.library");
 	const configTarget = getConfigurationTarget();
 	let libraryPath: string[] = [];
@@ -80,10 +73,14 @@ function setWowLibrary() {
 	else if (configTarget === vscode.ConfigurationTarget.Workspace) {
 		libraryPath = lib?.workspaceValue as string[];
 	}
-	const res = libraryPath?.filter(el => !el.includes("wow-api")) ?? [];
-	for (const [i, v] of annotationFolders.entries()) {
-		res.push(path.join(folderPath, v));
+	// users were confused why `wow-api` was being filtered out; because of matching development mode path
+	// small edge case when using debugger: name your folder `ketho.wow-api` but otherwise you will
+	// just temporarily have duplicated entries in library path when changing the relevant options
+	let res: string[] = [];
+	if (!context || context.extensionMode !== vscode.ExtensionMode.Development) {
+		res = libraryPath?.filter(el => !el.includes("ketho.wow-api")) ?? [];
 	}
+	res.push(path.join(folderPath, "Core"));
 	if (!wow_config.get("luals.frameXML")) {
 		res.push(path.join(folderPath, "FrameXML", "Manual"));
 	}
@@ -115,7 +112,7 @@ function cleanConfigTarget() {
 	else if (configTarget === vscode.ConfigurationTarget.Global) {
 		for (const v of luaSettings) {
 			// dont update if there is nothing to delete
-			// otherwise it will create an empty settings.json file if this does not exist yet
+			// otherwise it will create an empty settings.json file if it does not exist yet
 			if (lua_config.inspect(v)?.workspaceValue) {
 				lua_config.update(v, undefined, vscode.ConfigurationTarget.Workspace);
 			}
@@ -140,10 +137,20 @@ export function registerDiagnostics() {
 						}
 					}
 				}
-				if (diag.code === "param-type-mismatch") {
+				else if (diag.code === "param-type-mismatch") {
 					if (diag.message.includes("Template")) {
-						// prevents "param-type-mismatch" diagnostic for templates with mixins, and probably more
+						// prevents "param-type-mismatch" diagnostic for templates with mixins
 						lua_config.update("type.weakUnionCheck", true, getConfigurationTarget());
+					}
+				}
+				else if (diag.code === "assign-type-mismatch") {
+					if (diag.message.includes("table|")) {
+						// disable the diagnostic if assigning any of our types
+						const disable: string[] = lua_config.get("diagnostics.disable")!;
+						if (!disable.includes("assign-type-mismatch")) {
+							disable.push("assign-type-mismatch");
+							lua_config.update("diagnostics.disable", disable, getConfigurationTarget());
+						}
 					}
 				}
 			});
