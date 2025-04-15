@@ -54,6 +54,7 @@ local validTypes = {
 	["function"] = true,
 	unknown = true,
 	unk = true,
+	Object = true,
 
 	Frame = true,
 	Font = true,
