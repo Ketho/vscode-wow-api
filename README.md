@@ -41,4 +41,4 @@ Adds IntelliSense features for World of Warcraft API to VS Code. This is a third
 ![](https://github.com/Ketho/vscode-wow-api/raw/master/img/readme/globalstring.gif)
 
 ### Documentation
-See the [project wiki](https://github.com/Ketho/vscode-wow-api/wiki).
+The documentation is available on the [project wiki](https://github.com/Ketho/vscode-wow-api/wiki).
