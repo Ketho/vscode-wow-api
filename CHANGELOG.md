@@ -1,5 +1,13 @@
 # Change Log
 
+## [0.20.3] - 2025-04-16
+[Numy/FrameXML](https://github.com/NumyAddon/FramexmlAnnotations) update (requires enabling the FrameXML option)
+- All frame names should now be wrapped in _G if they contain characters forbidden in variable names
+- KeyValues are handled correctly (global lookups are wrapped in _G when needed; Enum.Foo lookups are supported correctly)
+- Bug that caused only the first KeyValues to be processed has been fixed, and overwriting inherited KeyValues is properly supported
+- Generated class names for child frames now default to a frame's global name (if any), and should generally be shorter with less repetition in the name
+- Type inheritance now properly normalizes the class name (fixes things like `@class Foo: Some-WeirdTemplate`)
+
 ## [0.20.2] - 2025-04-16
 - 🐞 Fixed [#189](https://github.com/Ketho/vscode-wow-api/issues/189) `MessageFrame:AddMessage()` optional params are set mandatory
 - ✨ Updated wiki and generated FrameXML annotations
@@ -197,6 +205,7 @@ To avoid loading for Lua projects not related to World of Warcraft, all settings
 - PR [#123](https://github.com/Ketho/vscode-wow-api/pull/123) Make childGroups optional in AceConfig.OptionsTable
 - PR [#120](https://github.com/Ketho/vscode-wow-api/pull/120) Add definition for tostringall()
 
+[0.20.3]: https://github.com/Ketho/vscode-wow-api/releases/tag/0.20.3
 [0.20.2]: https://github.com/Ketho/vscode-wow-api/releases/tag/0.20.2
 [0.20.1]: https://github.com/Ketho/vscode-wow-api/releases/tag/0.20.1
 [0.20.0]: https://github.com/Ketho/vscode-wow-api/releases/tag/0.20.0
