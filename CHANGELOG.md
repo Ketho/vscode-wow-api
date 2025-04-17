@@ -1,7 +1,10 @@
 # Change Log
 
+## [0.20.5] - 2025-04-17
+- ⚙️ The User settings will now only be migrated/cleaned up when changing the configuration scope option from User to Workspace, instead of every single time on startup. This allows users more freedom to use both configuration scopes.
+
 ## [0.20.4] - 2025-04-17
-- ⚙️ The manual/custom `FrameXML` annotations are now always loaded regardless of the load FrameXML option
+- ⚙️ The manual/custom [FrameXML](https://github.com/Ketho/vscode-wow-api/tree/master/Annotations/Core/FrameXML) annotations are now always loaded regardless of the load FrameXML option
 
 ## [0.20.3] - 2025-04-16
 [Numy/FrameXML](https://github.com/NumyAddon/FramexmlAnnotations) update (requires enabling the FrameXML option)
@@ -208,6 +211,7 @@ To avoid loading for Lua projects not related to World of Warcraft, all settings
 - PR [#123](https://github.com/Ketho/vscode-wow-api/pull/123) Make childGroups optional in AceConfig.OptionsTable
 - PR [#120](https://github.com/Ketho/vscode-wow-api/pull/120) Add definition for tostringall()
 
+[0.20.5]: https://github.com/Ketho/vscode-wow-api/releases/tag/0.20.5
 [0.20.4]: https://github.com/Ketho/vscode-wow-api/releases/tag/0.20.4
 [0.20.3]: https://github.com/Ketho/vscode-wow-api/releases/tag/0.20.3
 [0.20.2]: https://github.com/Ketho/vscode-wow-api/releases/tag/0.20.2
