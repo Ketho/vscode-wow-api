@@ -1,6 +1,8 @@
 import * as vscode from "vscode";
 import * as path from "path";
 
+import { getIsDevelopment } from "./state";
+
 const wow_globals = require("./data/globals").data;
 const wow_globalapi = require("./data/globalapi").data;
 const deprecated = require("./data/deprecated").data as string[];
@@ -26,10 +28,10 @@ const luaSettings = [
 	"workspace.library",
 ];
 
-export function configLuaLS(context?: vscode.ExtensionContext) {
+export function configLuaLS() {
 	if (!wow_config.get("devMode")) {
 		setRuntime();
-		setWowLibrary(context);
+		setWowLibrary();
 		cleanConfigTarget();
 	}
 }
@@ -44,7 +46,7 @@ function getConfigurationTarget() {
 	}
 }
 
-// disable lua libraries so we can load our version
+// disable lua libraries so we can load our wow lua version
 function setRuntime() {
 	const configTarget = getConfigurationTarget();
 	lua_config.update("runtime.version", "Lua 5.1", configTarget);
@@ -53,7 +55,7 @@ function setRuntime() {
 	lua_config.update("type.weakUnionCheck", undefined, configTarget);
 }
 
-// add wow-api path to luals
+// add wow-api path to luals library
 function setWowLibrary(context?: vscode.ExtensionContext) {
 	const extension = vscode.extensions.getExtension("ketho.wow-api")!;
 	let folderPath;
@@ -73,25 +75,21 @@ function setWowLibrary(context?: vscode.ExtensionContext) {
 	else if (configTarget === vscode.ConfigurationTarget.Workspace) {
 		libraryPath = lib?.workspaceValue as string[];
 	}
-	// users were confused why `wow-api` was being filtered out; because of matching development mode path
-	// small edge case when using debugger: name your folder `ketho.wow-api` but otherwise you will
-	// just temporarily have duplicated entries in library path when changing the relevant options
 	let res: string[] = [];
-	if (!context || context.extensionMode !== vscode.ExtensionMode.Development) {
+	// clean exclusively our old paths while not in development mode; otherwise yeet everything
+	if (!getIsDevelopment()) {
 		res = libraryPath?.filter(el => !el.includes("ketho.wow-api")) ?? [];
 	}
 	res.push(path.join(folderPath, "Core"));
-	if (!wow_config.get("luals.frameXML")) {
-		res.push(path.join(folderPath, "FrameXML", "Manual"));
-	}
-	else {
-		res.push(path.join(folderPath, "FrameXML", "Numy"));
+	if (wow_config.get("luals.frameXML")) {
+		res.push(path.join(folderPath, "FrameXML"));
 	}
 	return lua_config.update("workspace.library", res, configTarget);
 }
 
 // if we are configured to use user settings we need to delete our workspace settings
-// also do it vice versa to keep things clear
+// also do it vice versa to keep things clear. but it takes away agency from users that
+// want to use a combination or fallback of workspace and user settings across different projects
 function cleanConfigTarget() {
 	const configTarget = getConfigurationTarget();
 	if (configTarget === vscode.ConfigurationTarget.Workspace) {

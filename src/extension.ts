@@ -2,6 +2,7 @@ import * as vscode from "vscode";
 import * as path from "path";
 import * as fs from "fs";
 
+import { setIsDevelopment } from "./state";
 import * as luals from "./luals";
 import * as subscriptions from "./subscriptions";
 
@@ -9,6 +10,7 @@ let isLoaded = false;
 
 export async function activate(context: vscode.ExtensionContext) {
 	console.log("loaded", context.extension.id);
+	setIsDevelopment(context.extensionMode === vscode.ExtensionMode.Development);
 	registerActivationCommand(context);
 
 	if (isConfigured() || await hasTocFile()) {
@@ -21,7 +23,7 @@ async function activateWowExtension(context: vscode.ExtensionContext) {
 	isLoaded = true;
 	subscriptions.registerCompletion(context);
 	subscriptions.registerHover(context);
-	luals.configLuaLS(context);
+	luals.configLuaLS();
 	// luals.filterDeprecatedGlobals();
 	if (await luals.isFrameXmlFolder()) {
 		luals.setFrameXmlConfig();
