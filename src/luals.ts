@@ -28,11 +28,11 @@ const luaSettings = [
 	"workspace.library",
 ];
 
-export function configLuaLS() {
+export function configLuaLS(onDidChange: boolean) {
 	if (!wow_config.get("devMode")) {
 		setRuntime();
 		setWowLibrary();
-		cleanConfigTarget();
+		cleanConfigTarget(onDidChange);
 	}
 }
 
@@ -88,11 +88,10 @@ function setWowLibrary() {
 }
 
 // if we are configured to use user settings we need to delete our workspace settings
-// also do it vice versa to keep things clear. but it takes away agency from users that
-// want to use a combination or fallback of workspace and user settings across different projects
-function cleanConfigTarget() {
+// the other way round we only delete it when actually migrating from user to workspace
+function cleanConfigTarget(onDidChange: boolean) {
 	const configTarget = getConfigurationTarget();
-	if (configTarget === vscode.ConfigurationTarget.Workspace) {
+	if (configTarget === vscode.ConfigurationTarget.Workspace && onDidChange) {
 		for (const v of luaSettings) {
 			if (v === "workspace.library") {
 				// preserve any user defined paths in User scope
@@ -159,6 +158,22 @@ export function registerDiagnostics() {
 	});
 }
 
+vscode.workspace.onDidChangeConfiguration((event: vscode.ConfigurationChangeEvent) => {
+    if (event.affectsConfiguration("Lua")) {
+		// update configuration caches
+		lua_config = vscode.workspace.getConfiguration("Lua");
+	}
+	if (event.affectsConfiguration("wowAPI")) {
+		wow_config = vscode.workspace.getConfiguration("wowAPI");
+		if (event.affectsConfiguration("wowAPI.luals.configurationScope")) {
+			configLuaLS(true);
+		}
+		else if (event.affectsConfiguration("wowAPI.luals.frameXML")) {
+			configLuaLS(false);
+		}
+    }
+});
+
 // if deprecated APIs are defined as globals they will not trigger the deprecated warning
 export function filterDeprecatedGlobals() {
 	const diag_globals: string[] = lua_config.get("diagnostics.globals")!;
@@ -210,16 +225,3 @@ export function setFrameXmlConfig() {
 	lua_config.update("diagnostics.disable", diag_disable, vscode.ConfigurationTarget.Workspace);
 	wow_config.update("luals.frameXML", false, vscode.ConfigurationTarget.Workspace);
 }
-
-vscode.workspace.onDidChangeConfiguration((event: vscode.ConfigurationChangeEvent) => {
-    if (event.affectsConfiguration("Lua")) {
-		// update configuration caches
-		lua_config = vscode.workspace.getConfiguration("Lua");
-	}
-	if (event.affectsConfiguration("wowAPI")) {
-		wow_config = vscode.workspace.getConfiguration("wowAPI");
-		if (event.affectsConfiguration("wowAPI.luals.configurationScope") || event.affectsConfiguration("wowAPI.luals.frameXML")) {
-			configLuaLS();
-		}
-    }
-});
