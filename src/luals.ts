@@ -91,7 +91,16 @@ function setWowLibrary() {
 // the other way round we only delete it when actually migrating from user to workspace
 function cleanConfigTarget(onDidChange: boolean) {
 	const configTarget = getConfigurationTarget();
-	if (configTarget === vscode.ConfigurationTarget.Workspace && onDidChange) {
+	if (configTarget === vscode.ConfigurationTarget.Global) {
+		for (const v of luaSettings) {
+			// dont update if there is nothing to delete
+			// otherwise it will create an empty settings.json file if it does not exist yet
+			if (lua_config.inspect(v)?.workspaceValue) {
+				lua_config.update(v, undefined, vscode.ConfigurationTarget.Workspace);
+			}
+		}
+	}
+	else if (configTarget === vscode.ConfigurationTarget.Workspace && onDidChange) {
 		for (const v of luaSettings) {
 			if (v === "workspace.library") {
 				// preserve any user defined paths in User scope
@@ -103,15 +112,6 @@ function cleanConfigTarget(onDidChange: boolean) {
 			}
 			else {
 				lua_config.update(v, undefined, vscode.ConfigurationTarget.Global);
-			}
-		}
-	}
-	else if (configTarget === vscode.ConfigurationTarget.Global) {
-		for (const v of luaSettings) {
-			// dont update if there is nothing to delete
-			// otherwise it will create an empty settings.json file if it does not exist yet
-			if (lua_config.inspect(v)?.workspaceValue) {
-				lua_config.update(v, undefined, vscode.ConfigurationTarget.Workspace);
 			}
 		}
 	}
