@@ -158,6 +158,22 @@ export function registerDiagnostics() {
 	});
 }
 
+vscode.workspace.onDidChangeConfiguration((event: vscode.ConfigurationChangeEvent) => {
+    if (event.affectsConfiguration("Lua")) {
+		// update configuration caches
+		lua_config = vscode.workspace.getConfiguration("Lua");
+	}
+	if (event.affectsConfiguration("wowAPI")) {
+		wow_config = vscode.workspace.getConfiguration("wowAPI");
+		if (event.affectsConfiguration("wowAPI.luals.configurationScope")) {
+			configLuaLS(true);
+		}
+		else if (event.affectsConfiguration("wowAPI.luals.frameXML")) {
+			configLuaLS(false);
+		}
+    }
+});
+
 // if deprecated APIs are defined as globals they will not trigger the deprecated warning
 export function filterDeprecatedGlobals() {
 	const diag_globals: string[] = lua_config.get("diagnostics.globals")!;
@@ -209,19 +225,3 @@ export function setFrameXmlConfig() {
 	lua_config.update("diagnostics.disable", diag_disable, vscode.ConfigurationTarget.Workspace);
 	wow_config.update("luals.frameXML", false, vscode.ConfigurationTarget.Workspace);
 }
-
-vscode.workspace.onDidChangeConfiguration((event: vscode.ConfigurationChangeEvent) => {
-    if (event.affectsConfiguration("Lua")) {
-		// update configuration caches
-		lua_config = vscode.workspace.getConfiguration("Lua");
-	}
-	if (event.affectsConfiguration("wowAPI")) {
-		wow_config = vscode.workspace.getConfiguration("wowAPI");
-		if (event.affectsConfiguration("wowAPI.luals.configurationScope")) {
-			configLuaLS(true);
-		}
-		else if (event.affectsConfiguration("wowAPI.luals.frameXML")) {
-			configLuaLS(false);
-		}
-    }
-});
