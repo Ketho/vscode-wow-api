@@ -1,5 +1,5 @@
 // just want to share values between files without creating circular dependencies
-// since we cannot easily access `context` from a workspace.onDidChangeConfiguration call stack
+// since we cannot easily access `vscode.ExtensionContext` from a workspace.onDidChangeConfiguration call stack
 let isDevelopment = false;
 
 export function getIsDevelopment() {

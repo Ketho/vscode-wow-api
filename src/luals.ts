@@ -56,7 +56,7 @@ function setRuntime() {
 }
 
 // add wow-api path to luals library
-function setWowLibrary(context?: vscode.ExtensionContext) {
+function setWowLibrary() {
 	const extension = vscode.extensions.getExtension("ketho.wow-api")!;
 	let folderPath;
 	const pos = extension.extensionPath.indexOf(".vscode"); // should also work for .vscode-insiders
