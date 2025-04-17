@@ -1,7 +1,7 @@
 # Change Log
 
 ## [0.20.5] - 2025-04-17
-- ⚙️ The User settings will now only be migrated/cleaned up when changing the configuration scope option from User to Workspace, instead of every single time on startup. This allows users more freedom to use both configuration scopes.
+- ⚙️ The User settings will now only be migrated/cleaned up *while* changing the configuration scope option from User to Workspace, instead of every single time on startup. This allows users more freedom to use both configuration scopes.
 
 ## [0.20.4] - 2025-04-17
 - ⚙️ The manual/custom [FrameXML](https://github.com/Ketho/vscode-wow-api/tree/master/Annotations/Core/FrameXML) annotations are now always loaded regardless of the load FrameXML option
