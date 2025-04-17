@@ -1,5 +1,8 @@
 # Change Log
 
+## [0.20.4] - 2025-04-17
+- ⚙️ The manual/custom `FrameXML` annotations are now always loaded regardless of the load FrameXML option
+
 ## [0.20.3] - 2025-04-16
 [Numy/FrameXML](https://github.com/NumyAddon/FramexmlAnnotations) update (requires enabling the FrameXML option)
 - All frame names should now be wrapped in _G if they contain characters forbidden in variable names
@@ -205,6 +208,7 @@ To avoid loading for Lua projects not related to World of Warcraft, all settings
 - PR [#123](https://github.com/Ketho/vscode-wow-api/pull/123) Make childGroups optional in AceConfig.OptionsTable
 - PR [#120](https://github.com/Ketho/vscode-wow-api/pull/120) Add definition for tostringall()
 
+[0.20.4]: https://github.com/Ketho/vscode-wow-api/releases/tag/0.20.4
 [0.20.3]: https://github.com/Ketho/vscode-wow-api/releases/tag/0.20.3
 [0.20.2]: https://github.com/Ketho/vscode-wow-api/releases/tag/0.20.2
 [0.20.1]: https://github.com/Ketho/vscode-wow-api/releases/tag/0.20.1
