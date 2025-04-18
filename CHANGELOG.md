@@ -1,5 +1,8 @@
 # Change Log
 
+## [0.20.6] - 2025-04-18
+- 📦 Fixed [#193](https://github.com/Ketho/vscode-wow-api/issues/193) Forgot to checkout submodules in the github action for publishing releases
+
 ## [0.20.5] - 2025-04-17
 - ⚙️ The User settings will now only be migrated/cleaned up *while* changing the configuration scope option from User to Workspace, instead of every single time on startup. This allows users more freedom to use both configuration scopes.
 
@@ -211,6 +214,7 @@ To avoid loading for Lua projects not related to World of Warcraft, all settings
 - PR [#123](https://github.com/Ketho/vscode-wow-api/pull/123) Make childGroups optional in AceConfig.OptionsTable
 - PR [#120](https://github.com/Ketho/vscode-wow-api/pull/120) Add definition for tostringall()
 
+[0.20.6]: https://github.com/Ketho/vscode-wow-api/releases/tag/0.20.6
 [0.20.5]: https://github.com/Ketho/vscode-wow-api/releases/tag/0.20.5
 [0.20.4]: https://github.com/Ketho/vscode-wow-api/releases/tag/0.20.4
 [0.20.3]: https://github.com/Ketho/vscode-wow-api/releases/tag/0.20.3
