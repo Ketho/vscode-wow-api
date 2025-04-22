@@ -84,7 +84,7 @@ function setWowLibrary() {
 	if (wow_config.get("luals.frameXML")) {
 		res.push(path.join(folderPath, "FrameXML"));
 	}
-	return lua_config.update("workspace.library", res, configTarget);
+	lua_config.update("workspace.library", res, configTarget);
 }
 
 // if we are configured to use user settings we need to delete our workspace settings

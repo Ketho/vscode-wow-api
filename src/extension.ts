@@ -94,17 +94,16 @@ function cleanEmptyWorkspace() {
 		return;
 	}
 	const files = fs.readdirSync(vscodePath);
-	// more stable to check amount of files before doing any file operations
+	// check amount of files *before* doing any file operations
 	const soleFile = (files.length === 1);
 	const content = fs.readFileSync(settingsPath, "utf8");
 	const json = JSON.parse(content);
 	if (Object.keys(json).length === 0) {
-		fs.unlinkSync(settingsPath);
-	}
-	else {
-		return;
-	}
-	if (soleFile) {
-		fs.rmdirSync(vscodePath);
+		if (soleFile) {
+			fs.rmdirSync(vscodePath);
+		}
+		else {
+			fs.unlinkSync(settingsPath);
+		}
 	}
 }
