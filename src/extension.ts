@@ -94,12 +94,10 @@ function cleanEmptyWorkspace() {
 		return;
 	}
 	const files = fs.readdirSync(vscodePath);
-	// check amount of files *before* doing any file operations
-	const soleFile = (files.length === 1);
 	const content = fs.readFileSync(settingsPath, "utf8");
 	const json = JSON.parse(content);
 	if (Object.keys(json).length === 0) {
-		if (soleFile) {
+		if (files.length === 1) { // the only file in the folder is settings.json
 			fs.rmdirSync(vscodePath);
 		}
 		else {
