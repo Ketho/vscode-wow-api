@@ -5,9 +5,9 @@
 ---@alias colorRGB ColorMixin
 ---@alias colorRGBA ColorMixin
 ---@alias EmptiableItemLocation ItemLocationMixin
----@alias ItemLocation ItemLocationType
+---@alias ItemLocation ItemLocationMixin
 ---@alias ItemTransmogInfo ItemTransmogInfoMixin
----@alias PlayerLocation PlayerLocationType
+---@alias PlayerLocation PlayerLocationMixin
 ---@alias ReportInfo ReportInfoMixin
 ---@alias TransmogLocation TransmogLocationType
 ---@alias TransmogPendingInfo TransmogPendingInfoMixin
