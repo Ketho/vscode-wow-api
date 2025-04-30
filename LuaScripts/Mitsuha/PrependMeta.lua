@@ -14,7 +14,7 @@ local function IterateFiles(folder, func, arg1)
 				IterateFiles(path, func, arg1)
 			end
 		else
-			if fileName:find("%.lua") and not fileName:find("Numy") then
+			if fileName:find("%.lua") and not fileName:find("annotated") then
 				func(path, arg1)
 			end
 		end

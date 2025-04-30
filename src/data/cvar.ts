@@ -6681,6 +6681,11 @@ export const data: CVarInterface = {
 		scope: "Account",
 		help: "Stores whether to show the quest blobs on the minimap.",
 	},
+	minimaptrackedinfov2: {
+		name: "minimapTrackedInfov2",
+		default: "",
+		category: 5,
+	},
 	minimaptrackedinfov3: {
 		name: "minimapTrackedInfov3",
 		default: "",
@@ -7147,7 +7152,7 @@ export const data: CVarInterface = {
 	},
 	nameplateshowfriendlynpcs: {
 		name: "nameplateShowFriendlyNPCs",
-		default: "1",
+		default: "0",
 		category: 4,
 		scope: "Account",
 		secure: true,
@@ -8012,7 +8017,7 @@ export const data: CVarInterface = {
 	},
 	scripterrors: {
 		name: "scriptErrors",
-		default: "1",
+		default: "0",
 		category: 4,
 		scope: "Character",
 		help: "Whether or not the UI shows Lua errors",

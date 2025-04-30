@@ -1072,6 +1072,7 @@
 ---|"minimapShapeshiftTracking"
 ---|"minimapShowArchBlobs"
 ---|"minimapShowQuestBlobs"
+---|"minimapTrackedInfov2"
 ---|"minimapTrackedInfov3"
 ---|"minimapTrackedInfov4"
 ---|"minimapTrackingClosestOnly"
