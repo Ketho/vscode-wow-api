@@ -1,5 +1,9 @@
 # Change Log
 
+## [0.20.7] - 2025-05-30
+- 🎉 Updated (FrameXML) annotations for PTR 11.1.7 (61048)
+- 🐞 Define ItemLocation/PlayerLocation mixin methods optional when passing its minimal object
+
 ## [0.20.6] - 2025-04-18
 - 📦 Fixed [#193](https://github.com/Ketho/vscode-wow-api/issues/193) Forgot to checkout submodules in the github action for publishing releases
 
@@ -10,7 +14,7 @@
 - ⚙️ The manual/custom [FrameXML](https://github.com/Ketho/vscode-wow-api/tree/master/Annotations/Core/FrameXML) annotations are now always loaded regardless of the load FrameXML option
 
 ## [0.20.3] - 2025-04-16
-[Numy/FrameXML](https://github.com/NumyAddon/FramexmlAnnotations) update (requires enabling the FrameXML option)
+- [Numy/FrameXML](https://github.com/NumyAddon/FramexmlAnnotations) update (requires enabling the FrameXML option)
 - All frame names should now be wrapped in _G if they contain characters forbidden in variable names
 - KeyValues are handled correctly (global lookups are wrapped in _G when needed; Enum.Foo lookups are supported correctly)
 - Bug that caused only the first KeyValues to be processed has been fixed, and overwriting inherited KeyValues is properly supported

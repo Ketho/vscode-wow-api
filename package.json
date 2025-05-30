@@ -2,7 +2,7 @@
 	"name": "wow-api",
 	"displayName": "WoW API",
 	"description": "World of Warcraft API",
-	"version": "0.20.6",
+	"version": "0.20.7",
 	"publisher": "Ketho",
 	"repository": {
 		"type": "git",
@@ -97,7 +97,7 @@
 				"wowAPI.luals.frameXML": {
 					"type": "boolean",
 					"default": false,
-					"markdownDescription": "*(experimental)* Loads the annotated [FrameXML](http://github.com/NumyAddon/FramexmlAnnotations) source code by Numy."
+					"markdownDescription": "Loads the annotated [FrameXML](http://github.com/NumyAddon/FramexmlAnnotations) source code by Numy."
 				}
 			}
 		}
