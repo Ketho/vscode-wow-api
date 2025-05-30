@@ -36,3 +36,14 @@ function RunScript(text) end
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_SetErrorCallstackHeight)
 ---@param height? number
 function SetErrorCallstackHeight(height) end
+
+---Starts a timer for profiling. The final time can be obtained by calling debugprofilestop.
+---
+---[Documentation](https://warcraft.wiki.gg/wiki/API_debugprofilestart)
+function debugprofilestart() end
+
+---Returns the time in milliseconds since the last debugprofilestart call.
+---
+---[Documentation](https://warcraft.wiki.gg/wiki/API_debugprofilestop)
+---@return number elapsedMilliseconds
+function debugprofilestop() end

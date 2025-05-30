@@ -12,7 +12,8 @@ function C_CooldownViewer.GetCooldownViewerCategorySet(category) end
 function C_CooldownViewer.GetCooldownViewerCooldownInfo(cooldownID) end
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_CooldownViewer.IsCooldownViewerAvailable)
----@return boolean available
+---@return boolean isAvailable
+---@return string failureReason
 function C_CooldownViewer.IsCooldownViewerAvailable() end
 
 ---@class CooldownViewerCooldown

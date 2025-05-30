@@ -13,6 +13,7 @@ Enum.AccountCurrencyTransferResult = {
 	ServerError = 7,
 	CannotUseCurrency = 8,
 	TransactionInProgress = 9,
+	CurrencyTransferDisabled = 10,
 }
 
 ---@enum Enum.AccountData
@@ -2966,6 +2967,7 @@ Enum.GameRule = {
 	FullCharacterCreateDisabled = 84,
 	TargetFrameBuffsDisabled = 85,
 	UnitFramePvPContextualDisabled = 86,
+	BlockWhileSheathedAllowed = 88,
 	VanillaAccountMailInstant = 91,
 	ClearMailOnRealmTransfer = 92,
 	PremadeGroupFinderStyle = 93,
@@ -4321,6 +4323,21 @@ Enum.LootSlotType = {
 	Currency = 3,
 }
 
+---@enum Enum.LuaOpcodeArgumentMode
+Enum.LuaOpcodeArgumentMode = {
+	Unused = 0,
+	Used = 1,
+	RegisterOrJumpOffset = 2,
+	RegisterOrConstant = 3,
+}
+
+---@enum Enum.LuaOpcodeMode
+Enum.LuaOpcodeMode = {
+	Abc = 0,
+	ABx = 1,
+	AsBx = 2,
+}
+
 ---@enum Enum.MajorFactionFeatureAbility
 Enum.MajorFactionFeatureAbility = {
 	Generic = 0,
@@ -5664,6 +5681,8 @@ Enum.ReportMinorCategory = {
 	Name = 0x4000,
 	HarmfulToMinors = 0x8000,
 	Disruption = 0x10000,
+	TerroristAndViolentExtremistContent = 0x20000,
+	ChildSexualExploitationAndAbuse = 0x40000,
 }
 
 ---@enum Enum.ReportSubComplaintTypes
@@ -6756,6 +6775,15 @@ Enum.UIWidgetBlendModeType = {
 	Additive = 1,
 }
 
+---@enum Enum.UIWidgetButtonIconType
+Enum.UIWidgetButtonIconType = {
+	Exit = 0,
+	Speak = 1,
+	Undo = 2,
+	Checkmark = 3,
+	RedX = 4,
+}
+
 ---@enum Enum.UIWidgetFlag
 Enum.UIWidgetFlag = {
 	UniversalWidget = 1,
@@ -6919,6 +6947,7 @@ Enum.UIWidgetVisualizationType = {
 	ItemDisplay = 27,
 	TugOfWar = 28,
 	ScenarioHeaderDelves = 29,
+	ButtonHeader = 30,
 }
 
 ---@enum Enum.UnitMirrorPetFlags
@@ -7418,6 +7447,7 @@ Constants = {
 	DelvesConsts = {
 		DELVES_COMPANION_INFO_SELECTION_CHARACTER_DATA_ELEMENT_ID = 13,
 		DELVES_MIN_PLAYER_LEVEL_CONTENT_TUNING_ID = 2677,
+		DELVES_NORMAL_KEY_CURRENCY_ID = 3028,
 	},
 	EditModeConsts = {
 		EditModeMaxLayoutsPerType = 5,

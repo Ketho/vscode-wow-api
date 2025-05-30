@@ -246,6 +246,7 @@ export const data: EventInterface = {
 		],
 	},
 	ARTIFACT_XP_UPDATE: {},
+	ASSISTED_COMBAT_ACTION_SPELL_CAST: {},
 	AUCTION_CANCELED: {
 		Payload: [
 			{Name: "auctionID", Type: "number"},
@@ -705,6 +706,17 @@ export const data: EventInterface = {
 	},
 	CAPTUREFRAMES_FAILED: {},
 	CAPTUREFRAMES_SUCCEEDED: {},
+	CAUTIONARY_CHANNEL_MESSAGE: {
+		Payload: [
+			{Name: "confirmNumber", Type: "number"},
+		],
+	},
+	CAUTIONARY_CHAT_MESSAGE: {
+		Payload: [
+			{Name: "chatLineID", Type: "number"},
+			{Name: "confirmNumber", Type: "number"},
+		],
+	},
 	CEMETERY_PREFERENCE_UPDATED: {},
 	CHALLENGE_MODE_COMPLETED: {},
 	CHALLENGE_MODE_DEATH_COUNT_UPDATED: {},
@@ -2222,7 +2234,6 @@ export const data: EventInterface = {
 		],
 	},
 	CHAT_SERVER_RECONNECTED: {},
-	CHAT_TOXICITY: {},
 	CHEST_REWARDS_UPDATED_FROM_SERVER: {},
 	CINEMATIC_START: {
 		Payload: [
@@ -2792,6 +2803,7 @@ export const data: EventInterface = {
 			{Name: "failureReason", Type: "AccountCurrencyTransferResult"},
 		],
 	},
+	CURRENCY_TRANSFER_INITIATED: {},
 	CURRENCY_TRANSFER_LOG_UPDATE: {},
 	CURRENT_SPELL_CAST_CHANGED: {
 		Payload: [

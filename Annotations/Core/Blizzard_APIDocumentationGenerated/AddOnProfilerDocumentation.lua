@@ -1,6 +1,12 @@
 ---@meta _
 C_AddOnProfiler = {}
 
+---Adds a measured event to any ongoing measured calls. If no such calls are currently taking place, this function does nothing.
+---
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_AddOnProfiler.AddMeasuredCallEvent)
+---@param name stringView
+function C_AddOnProfiler.AddMeasuredCallEvent(name) end
+
 ---Internal API for telemetry.
 ---
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_AddOnProfiler.AddPerformanceMessageShown)
@@ -35,6 +41,12 @@ function C_AddOnProfiler.GetApplicationMetric(metric) end
 ---@return number result
 function C_AddOnProfiler.GetOverallMetric(metric) end
 
+---Returns the number of profiling clock ticks that occur within a single real-time second.
+---
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_AddOnProfiler.GetTicksPerSecond)
+---@return BigInteger frequency
+function C_AddOnProfiler.GetTicksPerSecond() end
+
 ---Gets top K AddOns for a given metric.
 ---
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_AddOnProfiler.GetTopKAddOnsForMetric)
@@ -49,12 +61,35 @@ function C_AddOnProfiler.GetTopKAddOnsForMetric(metric, k) end
 ---@return boolean enabled
 function C_AddOnProfiler.IsEnabled() end
 
+---Performs a profiled measurement of a single function call with any supplied arguments.
+---
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_AddOnProfiler.MeasureCall)
+---@param func LuaValueVariant
+---@param ... number unpackedPrimitiveType
+---@return AddOnProfilerCallResults results
+---@return number ... unpackedPrimitiveType
+function C_AddOnProfiler.MeasureCall(func, unpackedPrimitiveType) end
+
 ---@class AddOnPerformanceMessage
 ---@field type Enum.AddOnPerformanceMessageType
 ---@field metric Enum.AddOnProfilerMetric
 ---@field addOnName string?
 ---@field metricValue number
 ---@field thresholdValue number
+
+---@class AddOnProfilerCallEvent
+---@field name string
+---@field allocatedBytes BigUInteger
+---@field deallocatedBytes BigUInteger
+---@field elapsedMilliseconds number
+---@field elapsedTicks BigInteger
+
+---@class AddOnProfilerCallResults
+---@field elapsedMilliseconds number
+---@field elapsedTicks BigInteger
+---@field allocatedBytes BigUInteger
+---@field deallocatedBytes BigUInteger
+---@field events AddOnProfilerCallEvent[]
 
 ---@class AddOnProfilerResult
 ---@field addOnName string

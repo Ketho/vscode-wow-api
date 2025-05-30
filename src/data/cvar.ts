@@ -741,23 +741,17 @@ export const data: CVarInterface = {
 		category: 1,
 		help: "graphics api",
 	},
-	gxcompatasyncframeend: {
-		name: "GxCompatAsyncFrameEnd",
+	gxcompatasyncshadercompilation: {
+		name: "GxCompatAsyncShaderCompilation",
 		default: "1",
 		category: 5,
-		help: "Disables rendering and submit of frame N to overlap with frame N+1",
+		help: "Allows async resource shader loading. Disabling this may cause hitching",
 	},
 	gxcompatcommandlistmultithreading: {
 		name: "GxCompatCommandListMultiThreading",
 		default: "1",
 		category: 5,
 		help: "Allow multi-threaded rendering. Disabling this will significantly reduce framerate",
-	},
-	gxcompatdevicemultithreading: {
-		name: "GxCompatDeviceMultiThreading",
-		default: "1",
-		category: 5,
-		help: "Async resource creation such as texture and shader loading. Disabling this may cause hitching",
 	},
 	gxcompatoptionalgpufeatures: {
 		name: "GxCompatOptionalGpuFeatures",
@@ -769,7 +763,7 @@ export const data: CVarInterface = {
 		name: "GxCompatWorkSubmitOptimizations",
 		default: "1",
 		category: 5,
-		help: "Disables DX11 submission thread",
+		help: "Allows GPU work submission on a secondary thread while the rest of the CPU threads continue on to the next frame",
 	},
 	gxfullscreenresolution: {
 		name: "GxFullscreenResolution",
@@ -2651,6 +2645,21 @@ export const data: CVarInterface = {
 		category: 4,
 		scope: "Account",
 		help: "Whether to start attacking after an assist",
+	},
+	assistedcombathighlight: {
+		name: "assistedCombatHighlight",
+		default: "0",
+		category: 4,
+		scope: "Character",
+		help: "If enabled, a highlight will be displayed on the next spell that should be cast in combat",
+	},
+	assistedcombaticonupdaterate: {
+		name: "assistedCombatIconUpdateRate",
+		default: "0.100000",
+		category: 4,
+		scope: "Character",
+		secure: true,
+		help: "How often (in seconds) to update the icon on the action bar, 0 for every frame, max 1 second",
 	},
 	asynchandlertimeout: {
 		name: "asyncHandlerTimeout",
@@ -6681,6 +6690,11 @@ export const data: CVarInterface = {
 		scope: "Account",
 		help: "Stores whether to show the quest blobs on the minimap.",
 	},
+	minimaptrackedinfov2: {
+		name: "minimapTrackedInfov2",
+		default: "",
+		category: 5,
+	},
 	minimaptrackedinfov3: {
 		name: "minimapTrackedInfov3",
 		default: "",
@@ -7178,6 +7192,14 @@ export const data: CVarInterface = {
 		default: "0",
 		category: 4,
 		help: "Whether to hide the nameplate bars",
+	},
+	nameplateshowpersonalcooldowns: {
+		name: "nameplateShowPersonalCooldowns",
+		default: "0",
+		category: 4,
+		scope: "Account",
+		secure: true,
+		help: "If set, personal buffs/debuffs will appear above the personal resource display",
 	},
 	nameplateshowself: {
 		name: "nameplateShowSelf",

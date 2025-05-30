@@ -625,10 +625,6 @@ function C_Debug.GetAllPortLocsForMap(uiMapID) end
 function C_Debug.GetMapDebugObjects(uiMapID) end
 
 ---#nopage  
----[Documentation](https://warcraft.wiki.gg/wiki/API_C_Debug.PrintToDebugWindow)
-function C_Debug.PrintToDebugWindow() end
-
----#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_Debug.TeleportToMapDebugObject)
 function C_Debug.TeleportToMapDebugObject(pinIndex) end
 
@@ -643,10 +639,6 @@ function C_Debug.ToggleDebugCharInfo() end
 ---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_Debug.ToggleWindDebugMenu)
 function C_Debug.ToggleWindDebugMenu() end
-
----#nopage  
----[Documentation](https://warcraft.wiki.gg/wiki/API_C_Debug.ViewInDebugWindow)
-function C_Debug.ViewInDebugWindow() end
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_FunctionContainers.CreateCallback)
 ---@param func function
@@ -3081,7 +3073,7 @@ function C_Widget.IsFrameWidget(object) end
 
 ---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_Widget.IsRenderableWidget)
-function C_Widget.IsRenderableWidget() end
+function C_Widget.IsRenderableWidget(object) end
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_Widget.IsWidget)
 ---@param object? Object
@@ -3293,8 +3285,8 @@ function CanAutoSetGamePadCursorControl() end
 ---@return boolean canBeRaidTarget
 function CanBeRaidTarget(unit) end
 
----#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_CanCancelScene)
+---@return boolean cancel
 function CanCancelScene() end
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_CanComplainInboxItem)
@@ -3443,7 +3435,6 @@ function CancelMasterLootRoll(slot) end
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_CancelPetPossess)
 function CancelPetPossess() end
 
----#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_CancelScene)
 function CancelScene() end
 
@@ -6205,9 +6196,8 @@ function GetNumGuildChallenges() end
 function GetNumGuildEvents() end
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_GetNumGuildMembers)
----@return number numTotalGuildMembers
----@return number numOnlineGuildMembers
----@return number numOnlineAndMobileMembers
+---@return number numTotal
+---@return number numOnline
 function GetNumGuildMembers() end
 
 ---#nopage  
@@ -9865,13 +9855,6 @@ function addframetext(text) end
 ---@param level number
 ---@return string? locals
 function debuglocals(level) end
-
----[Documentation](https://warcraft.wiki.gg/wiki/API_debugprofilestart)
-function debugprofilestart() end
-
----[Documentation](https://warcraft.wiki.gg/wiki/API_debugprofilestop)
----@return number elapsedMilliseconds
-function debugprofilestop() end
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_debugstack)
 ---@param coroutine thread

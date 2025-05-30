@@ -160,6 +160,10 @@ function C_CurrencyInfo.IsAccountWideCurrency(currencyID) end
 ---@return boolean isCurrencyContainer
 function C_CurrencyInfo.IsCurrencyContainer(currencyID, quantity) end
 
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_CurrencyInfo.IsCurrencyTransferInProgress)
+---@return boolean currencyTransferInProgress
+function C_CurrencyInfo.IsCurrencyTransferInProgress() end
+
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_CurrencyInfo.IsCurrencyTransferTransactionDataReady)
 ---@return boolean isReady
 function C_CurrencyInfo.IsCurrencyTransferTransactionDataReady() end

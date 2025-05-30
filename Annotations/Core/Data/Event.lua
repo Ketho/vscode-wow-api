@@ -78,6 +78,7 @@
 ---|"ARTIFACT_TIER_CHANGED" # `newTier, bagOrSlotIndex, slotIndex`
 ---|"ARTIFACT_UPDATE" # `newItem`
 ---|"ARTIFACT_XP_UPDATE"
+---|"ASSISTED_COMBAT_ACTION_SPELL_CAST"
 ---|"AUCTION_CANCELED" # `auctionID`
 ---|"AUCTION_HOUSE_AUCTIONS_EXPIRED" # `auctionID`
 ---|"AUCTION_HOUSE_AUCTION_CREATED" # `auctionID`
@@ -212,6 +213,8 @@
 ---|"CAN_PLAYER_SPEAK_LANGUAGE_CHANGED" # `languageId, canSpeakLanguage`
 ---|"CAPTUREFRAMES_FAILED"
 ---|"CAPTUREFRAMES_SUCCEEDED"
+---|"CAUTIONARY_CHANNEL_MESSAGE" # `confirmNumber`
+---|"CAUTIONARY_CHAT_MESSAGE" # `chatLineID, confirmNumber`
 ---|"CEMETERY_PREFERENCE_UPDATED"
 ---|"CHALLENGE_MODE_COMPLETED"
 ---|"CHALLENGE_MODE_DEATH_COUNT_UPDATED"
@@ -308,7 +311,6 @@
 ---|"CHAT_REGIONAL_STATUS_CHANGED" # `isServiceAvailable`
 ---|"CHAT_SERVER_DISCONNECTED" # `isInitialMessage`
 ---|"CHAT_SERVER_RECONNECTED"
----|"CHAT_TOXICITY"
 ---|"CHEST_REWARDS_UPDATED_FROM_SERVER"
 ---|"CINEMATIC_START" # `canBeCancelled, forcedAspectRatio`
 ---|"CINEMATIC_STOP"
@@ -453,6 +455,7 @@
 ---|"CRITERIA_UPDATE"
 ---|"CURRENCY_DISPLAY_UPDATE" # `currencyType, quantity, quantityChange, quantityGainSource, destroyReason`
 ---|"CURRENCY_TRANSFER_FAILED" # `failureReason`
+---|"CURRENCY_TRANSFER_INITIATED"
 ---|"CURRENCY_TRANSFER_LOG_UPDATE"
 ---|"CURRENT_SPELL_CAST_CHANGED" # `cancelledCast`
 ---|"CURSOR_CHANGED" # `isDefault, newCursorType, oldCursorType, oldCursorVirtualID`

@@ -8,6 +8,12 @@ C_ActionBar = {}
 ---@param enable boolean
 function C_ActionBar.EnableActionRangeCheck(actionID, enable) end
 
+---Returns the list of action bar slots that contain the Assisted Combat action spell.
+---
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_ActionBar.FindAssistedCombatActionButtons)
+---@return number[] slots
+function C_ActionBar.FindAssistedCombatActionButtons() end
+
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_ActionBar.FindFlyoutActionButtons)
 ---@param flyoutID number
 ---@return number[] slots
@@ -24,6 +30,12 @@ function C_ActionBar.FindPetActionButtons(petActionID) end
 ---@param spellID number
 ---@return number[] slots
 function C_ActionBar.FindSpellActionButtons(spellID) end
+
+---Force updates some internals for an action button slot.
+---
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_ActionBar.ForceUpdateAction)
+---@param slotID number
+function C_ActionBar.ForceUpdateAction(slotID) end
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_ActionBar.GetBonusBarIndexForSlot)
 ---@param slotID number
@@ -50,6 +62,10 @@ function C_ActionBar.GetProfessionQuality(actionID) end
 ---@return number spellID
 function C_ActionBar.GetSpell(actionID) end
 
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_ActionBar.HasAssistedCombatActionButtons)
+---@return boolean hasButtons
+function C_ActionBar.HasAssistedCombatActionButtons() end
+
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_ActionBar.HasFlyoutActionButtons)
 ---@param flyoutID number
 ---@return boolean hasFlyoutActionButtons
@@ -69,6 +85,13 @@ function C_ActionBar.HasPetActionPetBarIndices(petActionID) end
 ---@param spellID number
 ---@return boolean hasSpellActionButtons
 function C_ActionBar.HasSpellActionButtons(spellID) end
+
+---Returns whether the given action button contains the Assisted Combat action spell.
+---
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_ActionBar.IsAssistedCombatAction)
+---@param slotID number
+---@return boolean isAssistedCombatAction
+function C_ActionBar.IsAssistedCombatAction(slotID) end
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_ActionBar.IsAutoCastPetAction)
 ---@param slotID number

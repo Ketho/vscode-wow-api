@@ -46,6 +46,7 @@ function C_PlayerChoice.SendPlayerChoiceResponse(responseID) end
 ---@field disabled boolean
 ---@field showCheckmark boolean
 ---@field hideButtonShowText boolean
+---@field selected boolean
 ---@field confirmation string?
 ---@field tooltip string?
 ---@field rewardQuestID number?

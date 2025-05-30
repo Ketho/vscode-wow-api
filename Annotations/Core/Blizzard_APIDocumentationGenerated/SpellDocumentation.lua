@@ -15,6 +15,12 @@ function C_Spell.DoesSpellExist(spellIdentifier) end
 ---@param enable boolean
 function C_Spell.EnableSpellRangeCheck(spellIdentifier, enable) end
 
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_Spell.GetBaseSpell)
+---@param spellIdentifier SpellIdentifier
+---@param spec? number Default = 0
+---@return number baseSpellID
+function C_Spell.GetBaseSpell(spellIdentifier, spec) end
+
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_Spell.GetDeadlyDebuffInfo)
 ---@param spellIdentifier SpellIdentifier
 ---@return DeadlyDebuffInfo deadlyDebuffInfo

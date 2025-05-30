@@ -443,7 +443,6 @@ function C_TransmogCollection.UpdateUsableAppearances() end
 ---@field canDisplayOnPlayer boolean
 ---@field uiOrder number
 ---@field exclusions number
----@field restrictedSlotID number?
 ---@field isUsable boolean
 ---@field hasRequiredHoliday boolean
 ---@field hasActiveRequiredHoliday boolean

@@ -56,6 +56,13 @@ function C_AddOns.GetAddOnInfo(name) end
 ---@return number interfaceVersion
 function C_AddOns.GetAddOnInterfaceVersion(name) end
 
+---Returns the addon table (passed as the second argument of ... to files) for any addon that opts in through setting AllowAddOnTableAccess: 1 in the toc file. Insecure code cannot query addon tables from Blizzard addons.
+---
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_AddOns.GetAddOnLocalTable)
+---@param name uiAddon
+---@return LuaValueVariant table
+function C_AddOns.GetAddOnLocalTable(name) end
+
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_AddOns.GetAddOnMetadata)
 ---@param name uiAddon
 ---@param variable string
