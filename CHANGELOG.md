@@ -1,5 +1,8 @@
 # Change Log
 
+## [0.20.8] - 2025-06-16
+- 🐞 Cleaned up old code for removing `type.weakUnionCheck` option and any empty settings.json file.
+
 ## [0.20.7] - 2025-05-30
 - 🎉 Updated (FrameXML) annotations for PTR 11.1.7 (61048)
 - 🐞 Define ItemLocation/PlayerLocation mixin methods optional when passing its minimal object
@@ -218,6 +221,8 @@ To avoid loading for Lua projects not related to World of Warcraft, all settings
 - PR [#123](https://github.com/Ketho/vscode-wow-api/pull/123) Make childGroups optional in AceConfig.OptionsTable
 - PR [#120](https://github.com/Ketho/vscode-wow-api/pull/120) Add definition for tostringall()
 
+[0.20.8]: https://github.com/Ketho/vscode-wow-api/releases/tag/0.20.8
+[0.20.7]: https://github.com/Ketho/vscode-wow-api/releases/tag/0.20.7
 [0.20.6]: https://github.com/Ketho/vscode-wow-api/releases/tag/0.20.6
 [0.20.5]: https://github.com/Ketho/vscode-wow-api/releases/tag/0.20.5
 [0.20.4]: https://github.com/Ketho/vscode-wow-api/releases/tag/0.20.4
