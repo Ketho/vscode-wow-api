@@ -51,8 +51,6 @@ function setRuntime() {
 	const configTarget = getConfigurationTarget();
 	lua_config.update("runtime.version", "Lua 5.1", configTarget);
 	lua_config.update("runtime.builtin", builtin, configTarget);
-	// [temporarily] cleanup this option, since we only set it when needed
-	lua_config.update("type.weakUnionCheck", undefined, configTarget);
 }
 
 // add wow-api path to luals library
