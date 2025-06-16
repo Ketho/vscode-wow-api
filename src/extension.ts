@@ -15,7 +15,6 @@ export async function activate(context: vscode.ExtensionContext) {
 
 	if (isConfigured() || await hasTocFile()) {
 		activateWowExtension(context);
-		cleanEmptyWorkspace();
 	}
 }
 
@@ -78,30 +77,6 @@ async function hasTocFile() {
 			if (hasDirective && isInterface && hasColon) {
 				return true;
 			}
-		}
-	}
-}
-
-// [temporarily] check if workspace `settings.json` only has an empty object to fix #186 mistake
-function cleanEmptyWorkspace() {
-	const workspaceFolders = vscode.workspace.workspaceFolders;
-	if (!workspaceFolders) {
-		return;
-	}
-	const vscodePath = path.join(workspaceFolders[0].uri.fsPath, ".vscode");
-	const settingsPath = path.join(vscodePath, "settings.json");
-	if (!fs.existsSync(settingsPath)) {
-		return;
-	}
-	const files = fs.readdirSync(vscodePath);
-	const content = fs.readFileSync(settingsPath, "utf8");
-	const json = JSON.parse(content);
-	if (Object.keys(json).length === 0) {
-		if (files.length === 1) { // the only file in the folder is settings.json
-			fs.rmdirSync(vscodePath);
-		}
-		else {
-			fs.unlinkSync(settingsPath);
 		}
 	}
 }
