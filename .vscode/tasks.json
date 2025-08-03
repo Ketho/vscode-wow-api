@@ -35,6 +35,13 @@
 				"clear": true
 			},
 			"problemMatcher": []
+		},
+		{
+			"label": "Sync wowdoc",
+			"type": "shell",
+			"command": "rsync -av --delete wowdoc/ ~/WowDoc/wowdoc/",
+			"presentation": {"showReuseMessage": false, "clear": true},
+			"problemMatcher": []
 		}
 	]
 }
