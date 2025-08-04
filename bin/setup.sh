@@ -1,7 +1,17 @@
 #!/bin/bash
 set -e
-python3 -m pip install -t .lua hererocks
-PYTHONPATH=.lua .lua/bin/hererocks -l 5.3 -r latest .lua
-eval $(.lua/bin/luarocks path)
-.lua/bin/luarocks install luacheck
-.lua/bin/luarocks build --only-deps
+
+sudo apt update
+# venv
+sudo apt install python3-pip python3-venv -y
+python3 -m venv .venv
+source .venv/bin/activate
+
+# hererocks
+sudo apt install libreadline-dev unzip -y
+pip install git+https://github.com/luarocks/hererocks
+hererocks .lua -l latest -r latest
+source .lua/bin/activate
+
+# modules
+luarocks build --only-deps
