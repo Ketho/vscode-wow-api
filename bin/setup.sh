@@ -14,4 +14,5 @@ hererocks .lua -l latest -r latest
 source .lua/bin/activate
 
 # modules
-luarocks build --only-deps
+sudo apt install libssl-dev -y
+luarocks build
