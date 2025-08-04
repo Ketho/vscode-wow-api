@@ -42,3 +42,6 @@ Adds IntelliSense features for World of Warcraft API to VS Code. This is a third
 
 ### Documentation
 The documentation is available on the [project wiki](https://github.com/Ketho/vscode-wow-api/wiki).
+
+### Development
+See [SETUP.md](SETUP.md) for setting up the environment and generating LuaLS annotations yourself.
