@@ -17,9 +17,9 @@
 			}
 		},
 		{
-			"label": "Lua main",
+			"label": "Lua run",
 			"type": "shell",
-			"command": "source .lua/bin/activate && lua luasrc/main.lua",
+			"command": "source .lua/bin/activate && lua luasrc/init.lua",
 			"presentation": {
 				"showReuseMessage": false,
 				"clear": true

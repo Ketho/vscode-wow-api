@@ -18,13 +18,13 @@ cd vscode-wow-api
 ```
 
 ## Usage
-Generates the LuaLS [annotations](Annotations). This is also available as the `Lua main` VS Code task.
+Generates the LuaLS [annotations](Annotations). This is also available as the `Lua run` VS Code task.
 ```sh
 # wherever the repo is
 cd ~/vscode-wow-api
 
 source .lua/bin/activate
-lua ./luasrc/main.lua
+lua luasrc/init.lua
 ```
 * Blizzard documented functions are read from [Blizzard_APIDocumentationGenerated](https://github.com/Gethe/wow-ui-source/tree/live/Interface/AddOns/Blizzard_APIDocumentationGenerated).
 * Non-Blizzard documented functions are [exported](https://warcraft.wiki.gg/wiki/Special:Export) and parsed from Warcraft Wiki.
