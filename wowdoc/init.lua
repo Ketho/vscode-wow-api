@@ -123,6 +123,14 @@ function m:WriteFile(path, text)
 	end
 end
 
+-- while in a file with the meta tag it will not show completion context and ignores find references
+-- Giving the name _ will make it unable to be required.
+-- https://luals.github.io/wiki/annotations/#meta
+function m:WriteFileMeta(path, text)
+	text = "---@meta _\n"..text
+	self:WriteFile(path, text)
+end
+
 --- Downloads a file
 ---@param url string URL to download from
 ---@param path string Path to write the file to
@@ -153,9 +161,9 @@ end
 ---@param url string URL to download from
 ---@param path string Path to write the file to
 ---@param requestBody string Contents of the request
----@param isCache? boolean If the file should be redownloaded after `INVALIDATION_TIME`
-function m:DownloadFilePost(url, path, requestBody, isCache)
-	if self:ShouldDownload(path, isCache) then
+---@param cacheTime? number|boolean If the file should be redownloaded after `INVALIDATION_TIME`
+function m:DownloadFilePost(url, path, requestBody, cacheTime)
+	if self:ShouldDownload(path, cacheTime) then
 		local body = self:HttpPostRequest(url, requestBody)
 		if body then
 			self:WriteFile(path, body)
@@ -163,11 +171,11 @@ function m:DownloadFilePost(url, path, requestBody, isCache)
 	end
 end
 
-function m:ShouldDownload(path, isCache)
+function m:ShouldDownload(path, cacheTime)
 	local attr = lfs.attributes(path)
 	if not attr then
 		return true
-	elseif isCache and os.time() > attr.modification + (type(isCache) == "number" and isCache or INVALIDATION_TIME) then
+	elseif cacheTime and os.time() > attr.modification + (type(cacheTime) == "number" and cacheTime or INVALIDATION_TIME) then
 		return true
 	end
 end
@@ -283,6 +291,8 @@ function m:GetFullName(apiTable)
 		end
 	elseif system.Type == "ScriptObject" then
 		fullName = format("%s:%s", system.Name, apiTable.Name)
+	else
+		fullName = apiTable.Name
 	end
 	return fullName
 end
@@ -431,6 +441,14 @@ function m:IsBitEnum(apiTbl)
 		return false
 	end
 	return true
+end
+
+function m:tInvert(a)
+	local t = {}
+	for k, v in pairs(a) do
+		t[v] = k
+	end
+	return t
 end
 
 return m
