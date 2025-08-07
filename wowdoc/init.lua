@@ -1,6 +1,6 @@
 ---@diagnostic disable: need-check-nil
 local lfs = require("lfs")
-local Path = require("path")
+local pathlib = require("path")
 local https = require("ssl.https")
 local ltn12 = require("ltn12")
 
@@ -81,7 +81,7 @@ end
 ---@param flavor string
 ---@return string path
 function m:GetLatestBuild(flavor)
-	local folder = Path.join("FrameXML", flavor)
+	local folder = pathlib.join("FrameXML", flavor)
 	if not lfs.attributes(folder) then
 		error("path does not exist: "..folder)
 	end
@@ -95,13 +95,13 @@ function m:GetLatestBuild(flavor)
 	table.sort(t, function(a, b)
 		return tonumber(a.build) > tonumber(b.build)
 	end)
-	local path = Path.join(folder, t[1].name)
+	local path = pathlib.join(folder, t[1].name)
 	log:success("util:GetLatestBuild: "..path)
 	return path
 end
 
 function m:LoadDocumentation(product)
-	require("WowDocLoader"):main(product)
+	require("wowdoc.loader"):main(product)
 end
 
 function m:FolderExists(path)

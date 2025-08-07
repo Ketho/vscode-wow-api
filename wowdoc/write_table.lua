@@ -36,6 +36,7 @@ local function WriteTable(tbl, path)
 	end
 	WriteLine(file, "}\n")
 	WriteLine(file, "return data")
+	---@diagnostic disable-next-line: need-check-nil
 	file:close()
 end
 
