@@ -54,7 +54,7 @@ function C_Bank.DoesBankTypeSupportMoneyTransfer(bankType) end
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_Bank.FetchBankLockedReason)
 ---@param bankType Enum.BankType
----@return BankLockedReason? reason
+---@return Enum.BankLockedReason? reason
 function C_Bank.FetchBankLockedReason(bankType) end
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_Bank.FetchDepositedMoney)

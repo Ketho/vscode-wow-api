@@ -81,6 +81,11 @@ export const data: CVarInterface = {
 		default: "0",
 		category: 5,
 	},
+	asyncassistactions: {
+		name: "AsyncAssistActions",
+		default: "0",
+		category: 5,
+	},
 	auradebugger: {
 		name: "AuraDebugger",
 		default: "0",
@@ -331,6 +336,11 @@ export const data: CVarInterface = {
 		default: "",
 		category: 5,
 	},
+	clientsettings_spellclutter: {
+		name: "ClientSettings_SpellClutter",
+		default: "",
+		category: 5,
+	},
 	clientsettings_volumefog: {
 		name: "ClientSettings_VolumeFog",
 		default: "",
@@ -413,6 +423,12 @@ export const data: CVarInterface = {
 		default: "0",
 		category: 0,
 		help: "Debug visualization for Torso Twist: 1 = Player, 2 = Target, 3 = All",
+	},
+	deprecatedwarningthrottle: {
+		name: "DeprecatedWarningThrottle",
+		default: "0",
+		category: 5,
+		help: "Time since last warning. A value of \"1\" will disable this message",
 	},
 	depthbasedopacity: {
 		name: "DepthBasedOpacity",
@@ -1405,9 +1421,9 @@ export const data: CVarInterface = {
 	},
 	raidspellclutter: {
 		name: "RAIDspellClutter",
-		default: "-1",
+		default: "2",
 		category: 1,
-		help: "Cull unimportant spell effects. -1 means auto based on targetFPS otherwise [0-100], 0 means cull nothing for perf reasons, 100 means cull as much as you can",
+		help: "Spell Density",
 	},
 	raidsunshafts: {
 		name: "RAIDsunShafts",
@@ -1860,6 +1876,12 @@ export const data: CVarInterface = {
 		category: 7,
 		help: "error speech",
 	},
+	sound_enablegameplaysfx: {
+		name: "Sound_EnableGameplaySFX",
+		default: "1",
+		category: 7,
+		help: "enables gameplay-specific sfx",
+	},
 	sound_enablemixmode2: {
 		name: "Sound_EnableMixMode2",
 		default: "0",
@@ -1917,6 +1939,12 @@ export const data: CVarInterface = {
 		default: "",
 		category: 7,
 		help: "The cutoff value to use for the Highpass filter on the Enemy Player bus (default 80 Hz)",
+	},
+	sound_gameplaysfx: {
+		name: "Sound_GameplaySFX",
+		default: "1.000000",
+		category: 7,
+		help: "sound volume (0.0 to 1.0)",
 	},
 	sound_listeneratcharacter: {
 		name: "Sound_ListenerAtCharacter",
@@ -2306,12 +2334,6 @@ export const data: CVarInterface = {
 		scope: "Character",
 		help: "(Internal only) Time between a failed cast and when it should attempt to cast again in ms. (Clamped to 100 and 10000)",
 	},
-	useoldvolumefog: {
-		name: "UseOldVolumeFog",
-		default: "0.000000",
-		category: 1,
-		help: "Use old volume fog system instead of the rework.",
-	},
 	useslug: {
 		name: "UseSlug",
 		default: "1",
@@ -2421,7 +2443,7 @@ export const data: CVarInterface = {
 	},
 	worldtextminsize: {
 		name: "WorldTextMinSize",
-		default: "0",
+		default: "0.000000",
 		category: 4,
 		scope: "Character",
 		help: "Smallest size used for world text like player names",
@@ -2651,7 +2673,7 @@ export const data: CVarInterface = {
 		default: "0",
 		category: 4,
 		scope: "Character",
-		help: "swaps out spider creatures for other variants",
+		help: "Swaps out spider creatures for other variants",
 	},
 	assaoadaptivequalitylimit: {
 		name: "assaoAdaptiveQualityLimit",
@@ -5939,7 +5961,7 @@ export const data: CVarInterface = {
 	},
 	graphicsspelldensity: {
 		name: "graphicsSpellDensity",
-		default: "4",
+		default: "1",
 		category: 1,
 		help: "UI value of the graphics setting",
 	},
@@ -6379,6 +6401,13 @@ export const data: CVarInterface = {
 		scope: "Character",
 		help: "Stores the Cartels of Undermine Rewards renown when Renown UI is closed",
 	},
+	lastrenownformajorfaction2658: {
+		name: "lastRenownForMajorFaction2658",
+		default: "0",
+		category: 4,
+		scope: "Character",
+		help: "Stores the K'aresh Trust renown when Renown UI is closed",
+	},
 	lastrenownformajorfaction2685: {
 		name: "lastRenownForMajorFaction2685",
 		default: "0",
@@ -6392,6 +6421,13 @@ export const data: CVarInterface = {
 		category: 4,
 		scope: "Character",
 		help: "Stores the Flame's Radiance renown when Renown UI is closed",
+	},
+	lastrenownformajorfaction2736: {
+		name: "lastRenownForMajorFaction2736",
+		default: "0",
+		category: 4,
+		scope: "Character",
+		help: "Stores the Manaforge Vandals renown when Renown UI is closed",
 	},
 	lastselectedclubid: {
 		name: "lastSelectedClubId",
@@ -7930,7 +7966,7 @@ export const data: CVarInterface = {
 	},
 	raidgraphicsspelldensity: {
 		name: "raidGraphicsSpellDensity",
-		default: "4",
+		default: "1",
 		category: 1,
 		help: "UI value of the raidGraphics setting",
 	},
@@ -8735,9 +8771,15 @@ export const data: CVarInterface = {
 	},
 	spellclutter: {
 		name: "spellClutter",
-		default: "-1",
+		default: "4",
 		category: 1,
-		help: "Cull unimportant spell effects. -1 means auto based on targetFPS otherwise [0-100], 0 means cull nothing for perf reasons, 100 means cull as much as you can",
+		help: "Spell Density",
+	},
+	spellvisualdensityfiltersetting: {
+		name: "spellVisualDensityFilterSetting",
+		default: "4",
+		category: 4,
+		help: "SVK Density, set by the UI Spell Density setting. 0 - none (dev-only), 1 - minimum, 2 - reduced, 3 - performance, 4 - full",
 	},
 	splashscreenboost: {
 		name: "splashScreenBoost",
@@ -9380,6 +9422,12 @@ export const data: CVarInterface = {
 		secure: true,
 		help: "Whether or not the UI scale should be used",
 	},
+	userfontscale: {
+		name: "userFontScale",
+		default: "1",
+		category: 4,
+		help: "Defines the scale of the font used in places around the UI where readability requires larger defaults which are still customizable by the user.",
+	},
 	validateframexml: {
 		name: "validateFrameXML",
 		default: "1",
@@ -9410,6 +9458,24 @@ export const data: CVarInterface = {
 		category: 1,
 		help: "Volume Fog",
 	},
+	volumefogdisablelightscattering: {
+		name: "volumeFogDisableLightScattering",
+		default: "0",
+		category: 1,
+		help: "0: vf point light scattering enabled. 1: disabled",
+	},
+	volumefogdisablenoise: {
+		name: "volumeFogDisableNoise",
+		default: "0",
+		category: 1,
+		help: "0: vf noise enabled. 1: noise disabled",
+	},
+	volumefogdisableshadows: {
+		name: "volumeFogDisableShadows",
+		default: "0",
+		category: 1,
+		help: "0: vf shadows enabled. 1: shadows disabled",
+	},
 	volumefoginterior: {
 		name: "volumeFogInterior",
 		default: "1",
@@ -9421,6 +9487,12 @@ export const data: CVarInterface = {
 		default: "2",
 		category: 1,
 		help: "Volume Fog Level (0-3)",
+	},
+	volumefoguse16bittexture: {
+		name: "volumeFogUse16BitTexture",
+		default: "0",
+		category: 1,
+		help: "0: 8 bit. 1: 16 bit. REQUIRES gxRestart",
 	},
 	vrsparticles: {
 		name: "vrsParticles",

@@ -4,4 +4,4 @@
 ---@field mapName string?
 ---@field creatureName string?
 ---@field receivedSpellID number?
----@field assistAction AssistActionType
+---@field assistAction Enum.AssistActionType

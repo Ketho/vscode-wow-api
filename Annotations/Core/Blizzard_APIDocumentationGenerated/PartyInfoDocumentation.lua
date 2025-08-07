@@ -76,7 +76,7 @@ function C_PartyInfo.DoCountdown(seconds) end
 function C_PartyInfo.GetActiveCategories() end
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_PartyInfo.GetAvailableLootMethods)
----@return LootMethod[] methods
+---@return Enum.LootMethod[] methods
 function C_PartyInfo.GetAvailableLootMethods() end
 
 ---Returns the total duration of the shutdown time after a vote passes and how much time is left before it ends
@@ -121,7 +121,7 @@ function C_PartyInfo.GetInviteConfirmationInvalidQueues(inviteGUID) end
 function C_PartyInfo.GetInviteReferralInfo(inviteGUID) end
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_PartyInfo.GetLootMethod)
----@return LootMethod method
+---@return Enum.LootMethod method
 ---@return number? masterLootPartyID
 ---@return number? masterLooterRaidID
 function C_PartyInfo.GetLootMethod() end
@@ -209,7 +209,7 @@ function C_PartyInfo.RequestInviteFromUnit(targetName, tank, healer, dps) end
 function C_PartyInfo.SetInstanceAbandonVoteResponse(response) end
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_PartyInfo.SetLootMethod)
----@param method LootMethod
+---@param method Enum.LootMethod
 ---@param lootMaster? string
 ---@return boolean success
 function C_PartyInfo.SetLootMethod(method, lootMaster) end
