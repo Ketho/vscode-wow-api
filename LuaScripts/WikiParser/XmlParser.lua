@@ -58,6 +58,9 @@ local validTypes = {
 
 	Frame = true,
 	Font = true,
+	CheckButton = true,
+	Cooldown = true,
+
 	FontInfo = true,
 	fileID = true,
 	UnitToken = true,
@@ -66,6 +69,8 @@ local validTypes = {
 	MissionInfo = true,
 	GarrFollowerInfo = true,
 	WOWGUID = true,
+	BigUInteger = true,
+	TooltipData = true,
 }
 
 local subTypeAlias = {
