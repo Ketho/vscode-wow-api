@@ -38,11 +38,11 @@ local WowDocLoader = require(pathlib.join(WowDocLoader_path, "WowDocLoader"))
 WowDocLoader:main(WowDocLoader_path)
 
 -- annotations
-local MitsuhaLiterals = require("luasrc.Mitsuha.MitsuhaLiterals")
+local literals = require("luasrc.annotate.literals")
 local path_api = "Annotations"
-Util:WriteFileMeta(pathlib.join(path_api, "Core", "Data", "Event.lua"), MitsuhaLiterals:GetEventLiterals())
-Util:WriteFileMeta(pathlib.join(path_api, "Core", "Data", "CVar.lua"), MitsuhaLiterals:GetCVarLiterals())
-Util:WriteFileMeta(pathlib.join(path_api, "Core", "Data", "Enum.lua"), MitsuhaLiterals:GetEnumTable())
+Util:WriteFileMeta(pathlib.join(path_api, "Core", "Data", "Event.lua"), literals:GetEventLiterals())
+Util:WriteFileMeta(pathlib.join(path_api, "Core", "Data", "CVar.lua"), literals:GetCVarLiterals())
+Util:WriteFileMeta(pathlib.join(path_api, "Core", "Data", "Enum.lua"), literals:GetEnumTable())
 
 -- typescript data
 local path_tsdata = pathlib.join("src", "data")
@@ -57,6 +57,6 @@ require(pathlib.join("luasrc", "ToTypeScript", "Flavor")) -- todo: refactor
 require("luasrc.WikiParser.WikiParser")
 
 -- add @meta to annotations
-require("luasrc.Mitsuha.PrependMeta")
+require("luasrc.annotate.prepend_meta")
 
 print("done")

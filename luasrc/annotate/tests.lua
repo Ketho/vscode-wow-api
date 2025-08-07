@@ -1,5 +1,5 @@
 local Util = require("luasrc.Util.Util")
-local Mitsuha = require("luasrc.Mitsuha.MitsuhaMain")
+local annotate = require("luasrc.annotate")
 
 local Tests = {}
 
@@ -7,7 +7,7 @@ local function TestFunction(name)
 	for _, func in ipairs(APIDocumentation.functions) do
 		local fullName = Util:GetFullName(func)
 		if fullName == name then
-			print(Mitsuha:GetFunction(func))
+			print(annotate:GetFunction(func))
 			break
 		end
 	end

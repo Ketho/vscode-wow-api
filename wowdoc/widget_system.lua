@@ -3,6 +3,7 @@ local widget_systems = {
 	FrameAPICooldown = "Cooldown",
 	-- CooldownFrameAPI = "Cooldown", -- wtf
 	MinimapFrameAPI = "Minimap",
+    PingPinFrameAPI = "PingPin",
 	SimpleAnimAPI = "Animation",
 	SimpleAnimAlphaAPI = "Alpha",
 	SimpleAnimFlipBookAPI = "FlipBook",

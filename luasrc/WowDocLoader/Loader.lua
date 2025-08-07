@@ -1,7 +1,7 @@
 local lfs = require "lfs"
 local Path = require "path"
 local Util = require("luasrc.Util.Util")
-local Mitsuha = require("luasrc.Mitsuha.MitsuhaMain")
+local annotate = require("luasrc.annotate")
 local patches = require("luasrc.WowDocLoader.Patches")
 local Fixes = require("luasrc.WowDocLoader.Fixes")
 local m = {}
@@ -41,7 +41,7 @@ local function LoadAddon(path, name)
 				if patch then
 					patches:ApplyPatch(docInfo, patch)
 				end
-				local text = Mitsuha:GetSystem(docInfo)
+				local text = annotate:GetSystem(docInfo)
 				if #text > 0 then -- try not to create empty files as they take up the maxPreload limit
 					if docInfo.Type == "System" or not docInfo.Type then
 						if not skippedSystem[docInfo.Name] then

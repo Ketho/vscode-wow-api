@@ -1,7 +1,7 @@
 local Util = require("luasrc.Util.Util")
-local BlizzWidget = require("luasrc.Mitsuha.BlizzWidget")
+local widget_system = require("wowdoc.widget_system")
 
-local Mitsuha = {}
+local m = {}
 
 local types = {
 	bool = "boolean",
@@ -19,9 +19,9 @@ local function GetType(paramType)
 	end
 end
 
-function Mitsuha:GetSystem(system)
+function m:GetSystem(system)
 	local tbl = {}
-	local widgetName = system.Type == "ScriptObject" and BlizzWidget[system.Name]
+	local widgetName = system.Type == "ScriptObject" and widget_system[system.Name]
 	if system.Functions and #system.Functions>0 then
 		if system.Namespace then
 			table.insert(tbl, string.format("%s = {}", system.Namespace))
@@ -45,7 +45,7 @@ end
 
 local fs_doc = "---[Documentation](https://warcraft.wiki.gg/wiki/%s)"
 
-function Mitsuha:GetFunction(func, widgetName)
+function m:GetFunction(func, widgetName)
 	local tbl = {}
 	local docLine = {}
 	local funcLine = {}
@@ -78,7 +78,7 @@ function Mitsuha:GetFunction(func, widgetName)
 	return table.concat(tbl, "\n")
 end
 
-function Mitsuha:GetTable(apiTable)
+function m:GetTable(apiTable)
 	local tbl = {}
 	table.insert(tbl, string.format("---@class %s", apiTable.Name))
 	for _, field in pairs(apiTable.Fields) do
@@ -89,7 +89,7 @@ end
 
 local fs_field = "---@%s %s %s"
 
-function Mitsuha:GetField(annotation, apiTable)
+function m:GetField(annotation, apiTable)
 	local str, paramType
 	if apiTable.InnerType then
 		paramType = GetType(apiTable.InnerType).."[]"
@@ -125,7 +125,7 @@ end
 local fs_callback = "---@alias %s FunctionContainer|fun(%s)"
 local fs_callback_param = "%s: %s"
 
-function Mitsuha:GetCallbackType(apiTable)
+function m:GetCallbackType(apiTable)
 	local tbl = {}
 	if apiTable.Arguments then
 		for _, param in pairs(apiTable.Arguments) do
@@ -141,4 +141,4 @@ function Mitsuha:GetCallbackType(apiTable)
 	return fs_callback:format(apiTable.Name, params)
 end
 
-return Mitsuha
+return m

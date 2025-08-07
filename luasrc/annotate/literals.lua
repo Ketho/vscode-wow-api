@@ -1,8 +1,8 @@
 local Util = require("luasrc.Util.Util")
 
-local MitsuhaLiterals = {}
+local m = {}
 
-function MitsuhaLiterals:GetEventLiterals()
+function m:GetEventLiterals()
 	table.sort(APIDocumentation.events, function(a, b)
 		return a.LiteralName < b.LiteralName
 	end)
@@ -19,7 +19,7 @@ function MitsuhaLiterals:GetEventLiterals()
 	return table.concat(t, "\n---|").."\n"
 end
 
-function MitsuhaLiterals:GetCVarLiterals()
+function m:GetCVarLiterals()
 	local data = Util:DownloadAndRun(
 		string.format("luasrc/out/cache/CVars_%s.lua", BRANCH),
 		string.format("https://raw.githubusercontent.com/Ketho/BlizzardInterfaceResources/%s/Resources/CVars.lua", BRANCH)
@@ -65,7 +65,7 @@ local function IsBitEnum(tbl, name)
 	return true
 end
 
-function MitsuhaLiterals:GetEnumTable()
+function m:GetEnumTable()
 	Util:DownloadAndRun(
 		string.format("luasrc/out/cache/Enum_%s.lua", BRANCH),
 		string.format("https://raw.githubusercontent.com/Ketho/BlizzardInterfaceResources/%s/Resources/LuaEnum.lua", BRANCH)
@@ -97,4 +97,4 @@ function MitsuhaLiterals:GetEnumTable()
 	return table.concat(t, "\n")
 end
 
-return MitsuhaLiterals
+return m

@@ -1,5 +1,5 @@
 local Util = require("luasrc.Util.Util")
-local Mitsuha = require("luasrc.Mitsuha.MitsuhaMain")
+local annotate = require("luasrc.annotate")
 local Path = require "path"
 
 -- this place is a mess
@@ -40,7 +40,7 @@ for _, name in pairs(sorted) do
 			table.insert(wiki_tbl, string.format("---[Documentation](https://warcraft.wiki.gg/wiki/API_%s)\n", name))
 			table.insert(wiki_tbl, annotations[name].."\n\n")
 		elseif convertedApi[name] then
-			table.insert(wiki_tbl, Mitsuha:GetFunction(convertedApi[name]).."\n\n")
+			table.insert(wiki_tbl, annotate:GetFunction(convertedApi[name]).."\n\n")
 			countValid = countValid + 1
 		else
 			if nonvalidated[name] then
