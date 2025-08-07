@@ -19,7 +19,7 @@
 		{
 			"label": "Lua main",
 			"type": "shell",
-			"command": "source .lua/bin/activate && lua LuaScripts/main.lua",
+			"command": "source .lua/bin/activate && lua luasrc/main.lua",
 			"presentation": {
 				"showReuseMessage": false,
 				"clear": true
@@ -29,7 +29,7 @@
 		{
 			"label": "Lua parseWiki",
 			"type": "shell",
-			"command": "source .lua/bin/activate && lua LuaScripts/parseWiki.lua",
+			"command": "source .lua/bin/activate && lua luasrc/parseWiki.lua",
 			"presentation": {
 				"showReuseMessage": false,
 				"clear": true

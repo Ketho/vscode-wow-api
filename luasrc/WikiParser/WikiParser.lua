@@ -1,21 +1,21 @@
-local Util = require("LuaScripts.Util.Util")
-local Mitsuha = require("LuaScripts.Mitsuha.MitsuhaMain")
+local Util = require("luasrc.Util.Util")
+local Mitsuha = require("luasrc.Mitsuha.MitsuhaMain")
 local Path = require "path"
 
 -- this place is a mess
-local wowpedia_arguments = require("LuaScripts.WikiParser.WikiText.FunctionArgument")
-local nonBlizzDocumented = require("LuaScripts.WikiParser.WikiText.NonBlizzardDocumented")[1]
+local wowpedia_arguments = require("luasrc.WikiParser.WikiText.FunctionArgument")
+local nonBlizzDocumented = require("luasrc.WikiParser.WikiText.NonBlizzardDocumented")[1]
 
 local PATH = Path.join("Annotations", "Core", "Data", "Wiki.lua")
 
-local parserData = require("LuaScripts.WikiParser.XmlParser")
+local parserData = require("luasrc.WikiParser.XmlParser")
 local validated, nonvalidated, annotations
 if type(parserData) == "table" then
 	validated, nonvalidated, annotations, multi = unpack(parserData)
 else
 	return
 end
-local converter = require("LuaScripts.WikiParser.WikiText.WowpediaConverter")
+local converter = require("luasrc.WikiParser.WikiText.WowpediaConverter")
 local convertedApi = converter:ConvertApi(validated)
 
 local fs = "---[Documentation](https://warcraft.wiki.gg/wiki/API_%s)\nfunction %s(%s) end\n\n"

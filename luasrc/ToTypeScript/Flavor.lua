@@ -1,6 +1,6 @@
-local Util = require("LuaScripts.Util.Util")
-Util:MakeDir("LuaScripts/Data/cache/flavor")
-local PATH = "LuaScripts/Data/cache/flavor/%s_%s.lua"
+local Util = require("luasrc.Util.Util")
+Util:MakeDir("luasrc/Data/cache/flavor")
+local PATH = "luasrc/Data/cache/flavor/%s_%s.lua"
 
 local pre = [[
 interface FlavorInterface {

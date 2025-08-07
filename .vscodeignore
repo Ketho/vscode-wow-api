@@ -13,7 +13,7 @@ vsc-extension-quickstart.md
 # images and scripts
 img/changelog
 img/readme
-LuaScripts/**
+luasrc/**
 .github
 
 # hererocks 

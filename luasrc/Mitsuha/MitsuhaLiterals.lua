@@ -1,4 +1,4 @@
-local Util = require("LuaScripts.Util.Util")
+local Util = require("luasrc.Util.Util")
 
 local MitsuhaLiterals = {}
 
@@ -21,7 +21,7 @@ end
 
 function MitsuhaLiterals:GetCVarLiterals()
 	local data = Util:DownloadAndRun(
-		string.format("LuaScripts/Data/cache/CVars_%s.lua", BRANCH),
+		string.format("luasrc/Data/cache/CVars_%s.lua", BRANCH),
 		string.format("https://raw.githubusercontent.com/Ketho/BlizzardInterfaceResources/%s/Resources/CVars.lua", BRANCH)
 	)
 	local t = {}
@@ -67,7 +67,7 @@ end
 
 function MitsuhaLiterals:GetEnumTable()
 	Util:DownloadAndRun(
-		string.format("LuaScripts/Data/cache/Enum_%s.lua", BRANCH),
+		string.format("luasrc/Data/cache/Enum_%s.lua", BRANCH),
 		string.format("https://raw.githubusercontent.com/Ketho/BlizzardInterfaceResources/%s/Resources/LuaEnum.lua", BRANCH)
 	)
 	local t = {}

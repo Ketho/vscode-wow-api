@@ -1,9 +1,9 @@
 local lfs = require "lfs"
 local Path = require "path"
-local Util = require("LuaScripts.Util.Util")
-local Mitsuha = require("LuaScripts.Mitsuha.MitsuhaMain")
-local patches = require("LuaScripts.WowDocLoader.Patches")
-local Fixes = require("LuaScripts.WowDocLoader.Fixes")
+local Util = require("luasrc.Util.Util")
+local Mitsuha = require("luasrc.Mitsuha.MitsuhaMain")
+local patches = require("luasrc.WowDocLoader.Patches")
+local Fixes = require("luasrc.WowDocLoader.Fixes")
 local m = {}
 
 local API_DOC = "Blizzard_APIDocumentation"
@@ -18,7 +18,7 @@ local skippedSystem = {
 	UITimer = true,
 }
 
-Util:MakeDir(Path.join("LuaScripts", "Data", "widget"))
+Util:MakeDir(Path.join("luasrc", "Data", "widget"))
 
 local function LoadFile(path)
 	if lfs.attributes(path) then
@@ -48,7 +48,7 @@ local function LoadAddon(path, name)
 							Util:WriteFileMeta(Path.join(GEN_PATH, line), text.."\n")
 						end
 					elseif docInfo.Type == "ScriptObject" then
-						Util:WriteFileMeta(Path.join("LuaScripts", "Data", "widget", line), text.."\n")
+						Util:WriteFileMeta(Path.join("luasrc", "Data", "widget", line), text.."\n")
 					end
 				end
 				m.documentationInfo = nil

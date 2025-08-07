@@ -1,9 +1,9 @@
 local xml2lua = require "xml2lua"
 local handler = require "xmlhandler.tree"
-local Util = require("LuaScripts.Util.Util")
+local Util = require("luasrc.Util.Util")
 --Util:MakeDir("cache_lua")
 
-local INPUT = "LuaScripts/Data/cache/World_of_Warcraft_API.xml"
+local INPUT = "luasrc/Data/cache/World_of_Warcraft_API.xml"
 local m = {}
 
 function m:SaveExport()

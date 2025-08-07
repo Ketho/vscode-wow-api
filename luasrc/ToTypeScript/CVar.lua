@@ -1,4 +1,4 @@
-local Util = require("LuaScripts.Util.Util")
+local Util = require("luasrc.Util.Util")
 -- cache should already be created at this point
 
 local pre = [[
@@ -18,7 +18,7 @@ export const data: CVarInterface = {
 ]]
 
 local function ToTypeScript(branch)
-	local data = require("LuaScripts.Data.cache.CVars_"..branch)
+	local data = require("luasrc.Data.cache.CVars_"..branch)
 
 	local t = {}
 	local sorted = Util:SortTable(data[1].var)

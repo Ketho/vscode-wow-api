@@ -24,8 +24,8 @@ Generates the LuaLS [annotations](Annotations). This is also available as the `L
 cd ~/vscode-wow-api
 
 source .lua/bin/activate
-lua ./LuaScripts/main.lua
+lua ./luasrc/main.lua
 ```
 * Blizzard documented functions are read from [Blizzard_APIDocumentationGenerated](https://github.com/Gethe/wow-ui-source/tree/live/Interface/AddOns/Blizzard_APIDocumentationGenerated).
 * Non-Blizzard documented functions are [exported](https://warcraft.wiki.gg/wiki/Special:Export) and parsed from Warcraft Wiki.
-* JSON data for the hover provider (Events, CVars and Enums) is generated from [Lua/ToTypeScript](LuaScripts/ToTypeScript).
+* JSON data for the hover provider (Events, CVars and Enums) is generated from [Lua/ToTypeScript](luasrc/ToTypeScript).

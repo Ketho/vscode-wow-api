@@ -1,7 +1,7 @@
-local Util = require("LuaScripts.Util.Util")
+local Util = require("luasrc.Util.Util")
 
 local globalApi = Util:DownloadAndRun(
-	string.format("LuaScripts/Data/cache/GlobalAPI_%s.lua", BRANCH),
+	string.format("luasrc/Data/cache/GlobalAPI_%s.lua", BRANCH),
 	string.format("https://raw.githubusercontent.com/Ketho/BlizzardInterfaceResources/%s/Resources/GlobalAPI.lua", BRANCH)
 )
 

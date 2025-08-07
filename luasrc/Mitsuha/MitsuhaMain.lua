@@ -1,5 +1,5 @@
-local Util = require("LuaScripts.Util.Util")
-local BlizzWidget = require("LuaScripts.Mitsuha.BlizzWidget")
+local Util = require("luasrc.Util.Util")
+local BlizzWidget = require("luasrc.Mitsuha.BlizzWidget")
 
 local Mitsuha = {}
 
