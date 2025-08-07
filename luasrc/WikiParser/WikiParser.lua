@@ -1,4 +1,4 @@
-local Util = require("luasrc.Util.Util")
+local Util = require("wowdoc")
 local annotate = require("luasrc.annotate")
 local Path = require "path"
 

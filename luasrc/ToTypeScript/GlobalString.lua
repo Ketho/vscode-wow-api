@@ -1,6 +1,6 @@
 local lfs = require "lfs"
 
-local Util = require("luasrc.Util.Util")
+local Util = require("wowdoc")
 local parser = require("wowdoc.wago")
 
 Util:MakeDir("src/data/globalstring")

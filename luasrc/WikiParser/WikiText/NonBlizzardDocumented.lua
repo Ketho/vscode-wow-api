@@ -1,8 +1,8 @@
-local Util = require("luasrc.Util.Util")
+local Util = require("wowdoc")
 
 local globalApi = Util:DownloadAndRun(
-	string.format("luasrc/out/cache/GlobalAPI_%s.lua", BRANCH),
-	string.format("https://raw.githubusercontent.com/Ketho/BlizzardInterfaceResources/%s/Resources/GlobalAPI.lua", BRANCH)
+	string.format("https://raw.githubusercontent.com/Ketho/BlizzardInterfaceResources/%s/Resources/GlobalAPI.lua", BRANCH),
+	string.format("luasrc/out/cache/GlobalAPI_%s.lua", BRANCH)
 )
 
 local blizzDoc = {}

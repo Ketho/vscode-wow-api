@@ -1,4 +1,4 @@
-local Util = require("luasrc.Util.Util")
+local Util = require("wowdoc")
 Util:MakeDir("luasrc/out/cache/flavor")
 local PATH = "luasrc/out/cache/flavor/%s_%s.lua"
 
@@ -28,7 +28,7 @@ local function GetData()
     local flavorMap = {}
     for _, branch in pairs(flavors) do
         local URL = string.format("https://raw.githubusercontent.com/Ketho/BlizzardInterfaceResources/%s/Resources/GlobalAPI.lua", branch)
-        local data = Util:DownloadAndRun(PATH:format("GlobalAPI", branch), URL)
+        local data = Util:DownloadAndRun(URL, PATH:format("GlobalAPI", branch))
         flavorMap[branch] = tInverse(data[1])
     end
     local combinedFlavor = {}

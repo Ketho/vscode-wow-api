@@ -1,4 +1,4 @@
-local Util = require("luasrc.Util.Util")
+local Util = require("wowdoc")
 -- cache should already be created at this point
 
 local pre = [[

@@ -1,4 +1,4 @@
-local Util = require("luasrc.Util.Util")
+local Util = require("wowdoc")
 local widget_system = require("wowdoc.widget_system")
 
 local m = {}

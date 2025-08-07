@@ -1,6 +1,6 @@
 local xml2lua = require "xml2lua"
 local handler = require "xmlhandler.tree"
-local Util = require("luasrc.Util.Util")
+local Util = require("wowdoc")
 --Util:MakeDir("cache_lua")
 
 local INPUT = "luasrc/out/cache/World_of_Warcraft_API.xml"
@@ -9,7 +9,7 @@ local m = {}
 function m:SaveExport()
 	local url = "https://warcraft.wiki.gg/wiki/Special:Export"
 	local requestBody = "pages=World_of_Warcraft_API&curonly=1"
-	Util:DownloadFilePost(INPUT, url, requestBody, 300)
+	Util:DownloadFilePost(url, INPUT, requestBody, 300)
 end
 
 local symbols = {

@@ -1,6 +1,6 @@
 local xml2lua = require "xml2lua"
 local handler = require "xmlhandler.tree"
-local Util = require("luasrc.Util.Util")
+local Util = require("wowdoc")
 
 local PATH = "luasrc/out/cache/Wowpedia_API.xml"
 
@@ -17,7 +17,7 @@ end
 local function SaveWowpediaExport(path, pages)
 	local url = "https://warcraft.wiki.gg/wiki/Special:Export"
 	local requestBody = string.format("pages=%s&curonly=1", pages)
-	Util:DownloadFilePost(path, url, requestBody, 10)
+	Util:DownloadFilePost(url, path, requestBody, 10)
 end
 
 local undoc = GetUndocumentedApi()

@@ -1,4 +1,4 @@
-local Util = require("luasrc.Util.Util")
+local Util = require("wowdoc")
 
 local m = {}
 
@@ -21,8 +21,8 @@ end
 
 function m:GetCVarLiterals()
 	local data = Util:DownloadAndRun(
-		string.format("luasrc/out/cache/CVars_%s.lua", BRANCH),
-		string.format("https://raw.githubusercontent.com/Ketho/BlizzardInterfaceResources/%s/Resources/CVars.lua", BRANCH)
+		string.format("https://raw.githubusercontent.com/Ketho/BlizzardInterfaceResources/%s/Resources/CVars.lua", BRANCH),
+		string.format("luasrc/out/cache/CVars_%s.lua", BRANCH)
 	)
 	local t = {}
 	table.insert(t, "---@alias CVar string")
@@ -67,8 +67,8 @@ end
 
 function m:GetEnumTable()
 	Util:DownloadAndRun(
-		string.format("luasrc/out/cache/Enum_%s.lua", BRANCH),
-		string.format("https://raw.githubusercontent.com/Ketho/BlizzardInterfaceResources/%s/Resources/LuaEnum.lua", BRANCH)
+		string.format("https://raw.githubusercontent.com/Ketho/BlizzardInterfaceResources/%s/Resources/LuaEnum.lua", BRANCH),
+		string.format("luasrc/out/cache/Enum_%s.lua", BRANCH)
 	)
 	local t = {}
 	table.insert(t, "Enum = {}\n")

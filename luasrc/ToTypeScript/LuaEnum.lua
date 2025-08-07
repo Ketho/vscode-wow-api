@@ -1,4 +1,4 @@
-local Util = require("luasrc.Util.Util")
+local Util = require("wowdoc")
 
 local PATH = "luasrc/out/cache/LuaEnum.lua"
 
@@ -11,7 +11,7 @@ export const data: LuaEnumInterface = {
 
 local function ToTypeScript(branch)
 	local URL = string.format("https://raw.githubusercontent.com/Ketho/BlizzardInterfaceResources/%s/Resources/LuaEnum.lua", branch)
-	Util:DownloadFile(PATH, URL)
+	Util:DownloadFile(URL, PATH)
 	local file = io.open(PATH)
 
 	local t = {}

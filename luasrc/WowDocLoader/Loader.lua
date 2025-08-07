@@ -1,6 +1,6 @@
 local lfs = require "lfs"
 local Path = require "path"
-local Util = require("luasrc.Util.Util")
+local Util = require("wowdoc")
 local annotate = require("luasrc.annotate")
 local patches = require("luasrc.WowDocLoader.Patches")
 local Fixes = require("luasrc.WowDocLoader.Fixes")
