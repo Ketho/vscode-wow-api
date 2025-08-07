@@ -288,12 +288,6 @@ function BNSummonFriendByIndex(id) end
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_BNTokenFindName)
 function BNTokenFindName(target) end
 
----[Documentation](https://warcraft.wiki.gg/wiki/API_BankButtonIDToInvSlotID)
----@param buttonID number
----@param isBag? number
----@return number invSlot
-function BankButtonIDToInvSlotID(buttonID, isBag) end
-
 ---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_BattlefieldMgrEntryInviteResponse)
 function BattlefieldMgrEntryInviteResponse(queueId, accept) end
@@ -322,10 +316,6 @@ function BuyGuildCharter(guildName) end
 ---@param index number
 ---@param quantity? number
 function BuyMerchantItem(index, quantity) end
-
----#nopage  
----[Documentation](https://warcraft.wiki.gg/wiki/API_BuyReagentBank)
-function BuyReagentBank() end
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_BuyTrainerService)
 ---@param index number
@@ -434,11 +424,6 @@ function C_ArrowCalloutManager.AcknowledgeCallout() end
 ---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_ArrowCalloutManager.HideCallout)
 function C_ArrowCalloutManager.HideCallout() end
-
----[Documentation](https://warcraft.wiki.gg/wiki/API_C_Bank.FetchNextPurchasableBankTabCost)
----@param bankType Enum.BankType
----@return BigUInteger? nextPurchasableTabCost
-function C_Bank.FetchNextPurchasableBankTabCost(bankType) end
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_BlackMarket.Close)
 function C_BlackMarket.Close() end
@@ -608,9 +593,6 @@ function C_ClassTrial.GetClassTrialLogoutTimeSeconds() end
 ---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_ClassTrial.IsClassTrialCharacter)
 function C_ClassTrial.IsClassTrialCharacter() end
-
----[Documentation](https://warcraft.wiki.gg/wiki/API_C_Container.SortReagentBankBags)
-function C_Container.SortReagentBankBags() end
 
 ---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_Debug.DashboardIsEnabled)
@@ -2689,22 +2671,6 @@ function C_TalkingHead.IsCurrentTalkingHeadIgnored() end
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_TalkingHead.SetConversationsDeferred)
 function C_TalkingHead.SetConversationsDeferred(deferred) end
 
----[Documentation](https://warcraft.wiki.gg/wiki/API_C_TooltipInfo.GetVoidDepositItem)
----@param slot number
----@return TooltipData data
-function C_TooltipInfo.GetVoidDepositItem(slot) end
-
----[Documentation](https://warcraft.wiki.gg/wiki/API_C_TooltipInfo.GetVoidItem)
----@param tab number
----@param slot number
----@return TooltipData data
-function C_TooltipInfo.GetVoidItem(tab, slot) end
-
----[Documentation](https://warcraft.wiki.gg/wiki/API_C_TooltipInfo.GetVoidWithdrawalItem)
----@param slot number
----@return TooltipData data
-function C_TooltipInfo.GetVoidWithdrawalItem(slot) end
-
 ---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_ToyBox.ForceToyRefilter)
 function C_ToyBox.ForceToyRefilter() end
@@ -3424,10 +3390,6 @@ function CanSurrenderArena() end
 ---@return boolean canSwitchSeats
 function CanSwitchVehicleSeats() end
 
----[Documentation](https://warcraft.wiki.gg/wiki/API_CanUseVoidStorage)
----@return number canUse
-function CanUseVoidStorage() end
-
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_CanViewGuildRecipes)
 ---@param skillID number
 ---@return boolean canView
@@ -3615,10 +3577,6 @@ function ClearSendMail() end
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_ClearTutorials)
 function ClearTutorials() end
 
----[Documentation](https://warcraft.wiki.gg/wiki/API_ClearVoidTransferDepositSlot)
----@param slotIndex number
-function ClearVoidTransferDepositSlot(slotIndex) end
-
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_ClickSendMailItemButton)
 ---@param itemIndex? number
 ---@param clearItem? boolean
@@ -3635,21 +3593,6 @@ function ClickTargetTradeButton(index) end
 ---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_ClickTradeButton)
 function ClickTradeButton(index) end
-
----[Documentation](https://warcraft.wiki.gg/wiki/API_ClickVoidStorageSlot)
----@param slotIndex number
----@param isRightClick? boolean
-function ClickVoidStorageSlot(slotIndex, isRightClick) end
-
----[Documentation](https://warcraft.wiki.gg/wiki/API_ClickVoidTransferDepositSlot)
----@param slotIndex number
----@param isRightClick? boolean
-function ClickVoidTransferDepositSlot(slotIndex, isRightClick) end
-
----[Documentation](https://warcraft.wiki.gg/wiki/API_ClickVoidTransferWithdrawalSlot)
----@param slotIndex number
----@param isRightClick? boolean
-function ClickVoidTransferWithdrawalSlot(slotIndex, isRightClick) end
 
 ---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_ClickWorldMapActionButton)
@@ -3906,10 +3849,6 @@ function DemoteAssistant(unit) end
 ---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_DepositGuildBankMoney)
 function DepositGuildBankMoney(money) end
-
----#nopage  
----[Documentation](https://warcraft.wiki.gg/wiki/API_DepositReagentBank)
-function DepositReagentBank() end
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_DescendStop)
 function DescendStop() end
@@ -4183,9 +4122,6 @@ function EnumerateFrames(currentFrame) end
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_EnumerateServerChannels)
 ---@return string ...
 function EnumerateServerChannels() end
-
----[Documentation](https://warcraft.wiki.gg/wiki/API_ExecuteVoidTransfer)
-function ExecuteVoidTransfer() end
 
 ---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_ExpandGuildTradeSkillHeader)
@@ -4489,11 +4425,6 @@ function GetActiveLootRollIDs() end
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_GetActiveQuestID)
 function GetActiveQuestID(index) end
 
----[Documentation](https://warcraft.wiki.gg/wiki/API_GetActiveSpecGroup)
----@param isInspect? boolean
----@return number activeSpec
-function GetActiveSpecGroup(isInspect) end
-
 ---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_GetActiveTitle)
 function GetActiveTitle(index) end
@@ -4600,11 +4531,6 @@ function GetAvailableTitle(index) end
 ---@return number avgItemLevelEquipped
 ---@return number avgItemLevelPvp
 function GetAverageItemLevel() end
-
----[Documentation](https://warcraft.wiki.gg/wiki/API_GetBankSlotCost)
----@param numSlots number
----@return number cost
-function GetBankSlotCost(numSlots) end
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_GetBattlefieldArenaFaction)
 ---@return number myFaction
@@ -5422,10 +5348,6 @@ function GetInspectArenaData(bracketId) end
 ---@return number lifetimeRank
 function GetInspectHonorData() end
 
----#nopage  
----[Documentation](https://warcraft.wiki.gg/wiki/API_GetInspectRatedBGData)
-function GetInspectRatedBGData() end
-
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_GetInspectSpecialization)
 ---@param unit UnitToken
 ---@return number id
@@ -5858,12 +5780,6 @@ function GetLooseMacroItemIcons() end
 ---@return table[] info
 function GetLootInfo() end
 
----[Documentation](https://warcraft.wiki.gg/wiki/API_GetLootMethod)
----@return string lootmethod
----@return number masterlooterPartyID
----@return number masterlooterRaidID
-function GetLootMethod() end
-
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_GetLootRollItemInfo)
 ---@param rollID number
 ---@return string texture
@@ -6117,11 +6033,6 @@ function GetNumAutoQuestPopUps() end
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_GetNumAvailableQuests)
 ---@return number nbrAvailableQuests
 function GetNumAvailableQuests() end
-
----[Documentation](https://warcraft.wiki.gg/wiki/API_GetNumBankSlots)
----@return number numSlots
----@return boolean full
-function GetNumBankSlots() end
 
 ---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_GetNumBattlefieldFlagPositions)
@@ -6381,14 +6292,6 @@ function GetNumUnspentPvpTalents() end
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_GetNumUnspentTalents)
 ---@return number numUnspentTalents
 function GetNumUnspentTalents() end
-
----[Documentation](https://warcraft.wiki.gg/wiki/API_GetNumVoidTransferDeposit)
----@return number numDeposits
-function GetNumVoidTransferDeposit() end
-
----[Documentation](https://warcraft.wiki.gg/wiki/API_GetNumVoidTransferWithdrawal)
----@return number numWithdrawals
-function GetNumVoidTransferWithdrawal() end
 
 ---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_GetNumWarGameTypes)
@@ -6914,10 +6817,6 @@ function GetReadyCheckStatus(unit) end
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_GetReadyCheckTimeLeft)
 function GetReadyCheckTimeLeft() end
 
----#nopage  
----[Documentation](https://warcraft.wiki.gg/wiki/API_GetReagentBankCost)
-function GetReagentBankCost() end
-
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_GetRepairAllCost)
 ---@return number repairAllCost
 ---@return boolean? canRepair
@@ -7132,27 +7031,6 @@ function GetSoundEntryCount(soundKit) end
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_GetSpecChangeCost)
 function GetSpecChangeCost() end
 
----[Documentation](https://warcraft.wiki.gg/wiki/API_GetSpecialization)
----@param isInspect? boolean
----@param isPet? boolean
----@param specGroup? number
----@return number currentSpec
-function GetSpecialization(isInspect, isPet, specGroup) end
-
----[Documentation](https://warcraft.wiki.gg/wiki/API_GetSpecializationInfo)
----@param specIndex number
----@param isInspect? boolean
----@param isPet? boolean
----@param inspectTarget? UnitToken
----@param sex? number
----@return number id
----@return string name
----@return string description
----@return number icon
----@return string role
----@return number primaryStat
-function GetSpecializationInfo(specIndex, isInspect, isPet, inspectTarget, sex) end
-
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_GetSpecializationInfoByID)
 ---@param specID number
 ---@return number id
@@ -7163,14 +7041,6 @@ function GetSpecializationInfo(specIndex, isInspect, isPet, inspectTarget, sex) 
 ---@return string classFile
 ---@return string className
 function GetSpecializationInfoByID(specID) end
-
----[Documentation](https://warcraft.wiki.gg/wiki/API_GetSpecializationMasterySpells)
----@param specIndex number
----@param isInspect? boolean
----@param isPet? boolean
----@return number masterySpell
----@return number masterySpell2
-function GetSpecializationMasterySpells(specIndex, isInspect, isPet) end
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_GetSpecializationRole)
 ---@param specIndex number
@@ -7243,58 +7113,12 @@ function GetTabardCreationCost() end
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_GetTabardInfo)
 function GetTabardInfo() end
 
----[Documentation](https://warcraft.wiki.gg/wiki/API_GetTalentInfo)
----@param tier number
----@param column number
----@param specGroupIndex? number
----@param isInspect? boolean
----@param inspectUnit? UnitToken
----@return number talentID
----@return string name
----@return number texture
----@return boolean selected
----@return boolean available
----@return number spellID
----@return any unknown
----@return number row
----@return number column
----@return boolean known
----@return boolean grantedByAura
-function GetTalentInfo(tier, column, specGroupIndex, isInspect, inspectUnit) end
-
+---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_GetTalentInfoByID)
----@param talentID number
----@param specGroupIndex number
----@param isInspect? boolean
----@param inspectUnit? UnitToken
----@return number talentID
----@return string name
----@return number texture
----@return boolean selected
----@return boolean available
----@return number spellID
----@return any unknown
----@return number row
----@return number column
----@return boolean known
----@return boolean grantedByAura
 function GetTalentInfoByID(talentID, specGroupIndex, isInspect, inspectUnit) end
 
+---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_GetTalentInfoBySpecialization)
----@param specIndex number
----@param tier number
----@param column number
----@return number talentID
----@return string name
----@return number texture
----@return boolean selected
----@return boolean available
----@return number spellID
----@return any unknown
----@return number row
----@return number column
----@return boolean known
----@return boolean grantedByAura
 function GetTalentInfoBySpecialization(specIndex, tier, column) end
 
 ---#nopage  
@@ -7482,46 +7306,6 @@ function GetVehicleBarIndex() end
 ---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_GetVideoCaps)
 function GetVideoCaps() end
-
----[Documentation](https://warcraft.wiki.gg/wiki/API_GetVoidItemHyperlinkString)
----@param voidSlot number
----@return string itemLink
-function GetVoidItemHyperlinkString(voidSlot) end
-
----[Documentation](https://warcraft.wiki.gg/wiki/API_GetVoidItemInfo)
----@param tabIndex number
----@param slotIndex number
----@return number itemID
----@return string textureName
----@return boolean locked
----@return boolean recentDeposit
----@return boolean isFiltered
----@return number quality
-function GetVoidItemInfo(tabIndex, slotIndex) end
-
----#nopage  
----[Documentation](https://warcraft.wiki.gg/wiki/API_GetVoidStorageSlotPageIndex)
-function GetVoidStorageSlotPageIndex() end
-
----[Documentation](https://warcraft.wiki.gg/wiki/API_GetVoidTransferCost)
----@return number cost
-function GetVoidTransferCost() end
-
----[Documentation](https://warcraft.wiki.gg/wiki/API_GetVoidTransferDepositInfo)
----@param slotIndex number
----@return number itemID
----@return string textureName
-function GetVoidTransferDepositInfo(slotIndex) end
-
----[Documentation](https://warcraft.wiki.gg/wiki/API_GetVoidTransferWithdrawalInfo)
----@param slotIndex number
----@return number itemID
----@return string textureName
-function GetVoidTransferWithdrawalInfo(slotIndex) end
-
----#nopage  
----[Documentation](https://warcraft.wiki.gg/wiki/API_GetVoidUnlockCost)
-function GetVoidUnlockCost() end
 
 ---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_GetWarGameQueueStatus)
@@ -8036,11 +7820,6 @@ function IsPetAttackActive() end
 ---@return boolean isNeutral
 function IsPlayerNeutral() end
 
----[Documentation](https://warcraft.wiki.gg/wiki/API_IsPlayerSpell)
----@param spellID number
----@return boolean isKnown
-function IsPlayerSpell(spellID) end
-
 ---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_IsPossessBarVisible)
 function IsPossessBarVisible() end
@@ -8069,10 +7848,6 @@ function IsQuestSequenced(questID) end
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_IsRaidMarkerActive)
 function IsRaidMarkerActive(index) end
 
----#nopage  
----[Documentation](https://warcraft.wiki.gg/wiki/API_IsReagentBankUnlocked)
-function IsReagentBankUnlocked() end
-
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_IsRecognizedName)
 ---@param text string
 ---@param includeBitfield number
@@ -8098,23 +7873,6 @@ function IsSpecializationActivateSpell() end
 ---@return string class
 ---@overload fun(spellIndex: number, bookType: string)
 function IsSpellClassOrSpec(spellName) end
-
----[Documentation](https://warcraft.wiki.gg/wiki/API_IsSpellKnown)
----@param spellID number
----@param isPetSpell? boolean
----@return boolean isKnown
-function IsSpellKnown(spellID, isPetSpell) end
-
----[Documentation](https://warcraft.wiki.gg/wiki/API_IsSpellKnownOrOverridesKnown)
----@param spellID number
----@param isPet? boolean
----@return boolean isKnown
-function IsSpellKnownOrOverridesKnown(spellID, isPet) end
-
----[Documentation](https://warcraft.wiki.gg/wiki/API_IsSpellOverlayed)
----@param spellID number
----@return boolean isTrue
-function IsSpellOverlayed(spellID) end
 
 ---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_IsSpellValidForPendingGlyph)
@@ -8153,10 +7911,6 @@ function IsVehicleAimAngleAdjustable() end
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_IsVehicleAimPowerAdjustable)
 ---@return boolean adjustable
 function IsVehicleAimPowerAdjustable() end
-
----#nopage  
----[Documentation](https://warcraft.wiki.gg/wiki/API_IsVoidStorageReady)
-function IsVoidStorageReady() end
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_IsWargame)
 ---@return boolean isWargame
@@ -8545,10 +8299,6 @@ function PickupPvpTalent() end
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_PickupTalent)
 function PickupTalent(talentID) end
 
----[Documentation](https://warcraft.wiki.gg/wiki/API_PickupTradeMoney)
----@param copper number
-function PickupTradeMoney(copper) end
-
 ---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_PitchDownStart)
 function PitchDownStart() end
@@ -8623,10 +8373,6 @@ function PromoteToAssistant(unit) end
 ---@param unit UnitToken
 ---@overload fun(name: string, exactmatch: boolean)
 function PromoteToLeader(unit) end
-
----#nopage  
----[Documentation](https://warcraft.wiki.gg/wiki/API_PurchaseSlot)
-function PurchaseSlot() end
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_PutItemInBackpack)
 function PutItemInBackpack() end
@@ -8721,11 +8467,6 @@ function RaidProfileExists(profile) end
 ---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_RaidProfileHasUnsavedChanges)
 function RaidProfileHasUnsavedChanges() end
-
----[Documentation](https://warcraft.wiki.gg/wiki/API_ReagentBankButtonIDToInvSlotID)
----@param buttonID number
----@return number invSlot
-function ReagentBankButtonIDToInvSlotID(buttonID) end
 
 ---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_RedockChatWindows)
@@ -8954,13 +8695,6 @@ function SelectAvailableQuest() end
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_SelectTrainerService)
 ---@param index number
 function SelectTrainerService(index) end
-
----[Documentation](https://warcraft.wiki.gg/wiki/API_SendChatMessage)
----@param msg string
----@param chatType? ChatType
----@param languageID? number
----@param target? number|string
-function SendChatMessage(msg, chatType, languageID, target) end
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_SendMail)
 ---@param recipient string
@@ -9194,12 +8928,6 @@ function SetLFGHeaderCollapsed(headerID, isCollapsed) end
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_SetLFGRoles)
 function SetLFGRoles(leader, tank, healer, dps) end
 
----[Documentation](https://warcraft.wiki.gg/wiki/API_SetLootMethod)
----@param method string
----@param playerName string
----@param threshold Enum.ItemQuality
-function SetLootMethod(method, playerName, threshold) end
-
 ---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_SetLootPortrait)
 function SetLootPortrait() end
@@ -9380,11 +9108,6 @@ function SetView(viewIndex) end
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_SetupFullscreenScale)
 ---@param frame Frame
 function SetupFullscreenScale(frame) end
-
----[Documentation](https://warcraft.wiki.gg/wiki/API_ShowBossFrameWhenUninteractable)
----@param unit UnitToken
----@return boolean show
-function ShowBossFrameWhenUninteractable(unit) end
 
 ---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_ShowBuybackSellCursor)
@@ -9775,9 +9498,6 @@ function UnitHasLFGRandomCooldown(unit) end
 ---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_UnlearnSpecialization)
 function UnlearnSpecialization(specIndex, isPet) end
-
----[Documentation](https://warcraft.wiki.gg/wiki/API_UnlockVoidStorage)
-function UnlockVoidStorage() end
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_UnmuteSoundFile)
 ---@param sound number|string
