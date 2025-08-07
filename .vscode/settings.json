@@ -8,21 +8,10 @@
 	},
 	// Turn off tsc task auto detection since we have the necessary tasks as npm scripts
 	"typescript.tsc.autoDetect": "off",
-    "Lua.runtime.version": "Lua 5.1",
+    "Lua.runtime.version": "Lua 5.4",
     "Lua.workspace.library": [
         "${3rd}/lfs/library"
     ],
-    "Lua.runtime.builtin": {
-        "basic": "disable",
-        "debug": "disable",
-        "io": "disable",
-        "math": "disable",
-        "os": "disable",
-        "package": "disable",
-        "string": "disable",
-        "table": "disable",
-        "utf8": "disable",
-    },
     "Lua.diagnostics.disable": [
         "lowercase-global",
         "need-check-nil"
