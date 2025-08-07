@@ -719,6 +719,15 @@ export const data: EventInterface = {
 	},
 	CEMETERY_PREFERENCE_UPDATED: {},
 	CHALLENGE_MODE_COMPLETED: {},
+	CHALLENGE_MODE_COMPLETED_REWARDS: {
+		Payload: [
+			{Name: "mapID", Type: "number"},
+			{Name: "medal", Type: "number"},
+			{Name: "timeMS", Type: "number"},
+			{Name: "money", Type: "number"},
+			{Name: "rewards", Type: "ChallengeModeReward[]"},
+		],
+	},
 	CHALLENGE_MODE_DEATH_COUNT_UPDATED: {},
 	CHALLENGE_MODE_KEYSTONE_RECEPTABLE_OPEN: {},
 	CHALLENGE_MODE_KEYSTONE_SLOTTED: {
@@ -727,8 +736,17 @@ export const data: EventInterface = {
 		],
 	},
 	CHALLENGE_MODE_LEADERS_UPDATE: {},
+	CHALLENGE_MODE_LEAVER_TIMER_ENDED: {},
+	CHALLENGE_MODE_LEAVER_TIMER_STARTED: {},
 	CHALLENGE_MODE_MAPS_UPDATE: {},
 	CHALLENGE_MODE_MEMBER_INFO_UPDATED: {},
+	CHALLENGE_MODE_NEW_RECORD: {
+		Payload: [
+			{Name: "mapID", Type: "number"},
+			{Name: "timeMS", Type: "number"},
+			{Name: "medal", Type: "number"},
+		],
+	},
 	CHALLENGE_MODE_RESET: {
 		Payload: [
 			{Name: "mapID", Type: "number"},
@@ -2364,6 +2382,11 @@ export const data: EventInterface = {
 			{Name: "invitationId", Type: "ClubInvitationId"},
 		],
 	},
+	CLUB_MEMBERS_UPDATED: {
+		Payload: [
+			{Name: "clubId", Type: "ClubId"},
+		],
+	},
 	CLUB_MEMBER_ADDED: {
 		Payload: [
 			{Name: "clubId", Type: "ClubId"},
@@ -2805,6 +2828,7 @@ export const data: EventInterface = {
 	},
 	CURRENCY_TRANSFER_INITIATED: {},
 	CURRENCY_TRANSFER_LOG_UPDATE: {},
+	CURRENCY_TRANSFER_SUCCESS: {},
 	CURRENT_SPELL_CAST_CHANGED: {
 		Payload: [
 			{Name: "cancelledCast", Type: "boolean"},
@@ -2840,6 +2864,12 @@ export const data: EventInterface = {
 	},
 	DELVES_ACCOUNT_DATA_ELEMENT_CHANGED: {
 		Documentation: "Signaled when player account data element(s) have changed. This drives curio ranks, and the UI should update when this is sent.",
+	},
+	DELVE_ASSIST_ACTION: {
+		Documentation: "Signaled when an assist action occurs in a delve.",
+		Payload: [
+			{Name: "data", Type: "DelveAssistActionData"},
+		],
 	},
 	DISABLE_DECLINE_GUILD_INVITE: {},
 	DISABLE_LOW_LEVEL_RAID: {},
@@ -3503,6 +3533,13 @@ export const data: EventInterface = {
 			{Name: "inspecteeGUID", Type: "WOWGUID"},
 		],
 	},
+	INSTANCE_ABANDON_VOTE_FINISHED: {
+		Payload: [
+			{Name: "votePassed", Type: "boolean"},
+		],
+	},
+	INSTANCE_ABANDON_VOTE_STARTED: {},
+	INSTANCE_ABANDON_VOTE_UPDATED: {},
 	INSTANCE_BOOT_START: {},
 	INSTANCE_BOOT_STOP: {},
 	INSTANCE_ENCOUNTER_ADD_TIMER: {
@@ -3529,6 +3566,11 @@ export const data: EventInterface = {
 		],
 	},
 	INSTANCE_GROUP_SIZE_CHANGED: {},
+	INSTANCE_LEAVER_STATUS_CHANGED: {
+		Payload: [
+			{Name: "isLeaver", Type: "boolean"},
+		],
+	},
 	INSTANCE_LOCK_START: {},
 	INSTANCE_LOCK_STOP: {},
 	INSTANCE_LOCK_WARNING: {},
@@ -3655,6 +3697,7 @@ export const data: EventInterface = {
 	},
 	ITEM_UPGRADE_FAILED: {},
 	ITEM_UPGRADE_MASTER_SET_ITEM: {},
+	ITEM_UPGRADE_MASTER_UPDATE: {},
 	JAILERS_TOWER_LEVEL_UPDATE: {
 		Payload: [
 			{Name: "level", Type: "number"},
@@ -3681,7 +3724,11 @@ export const data: EventInterface = {
 			{Name: "isGuildPerkSpell", Type: "boolean"},
 		],
 	},
-	LEAVE_PARTY_CONFIRMATION: {},
+	LEAVE_PARTY_CONFIRMATION: {
+		Payload: [
+			{Name: "reason", Type: "LeavePartyConfirmReason"},
+		],
+	},
 	LEAVING_TUTORIAL_AREA: {},
 	LFG_BOOT_PROPOSAL_UPDATE: {},
 	LFG_COMPLETION_REWARD: {},
@@ -4442,13 +4489,7 @@ export const data: EventInterface = {
 			{Name: "error", Type: "string"},
 		],
 	},
-	PLAYERBANKBAGSLOTS_CHANGED: {},
 	PLAYERBANKSLOTS_CHANGED: {
-		Payload: [
-			{Name: "slot", Type: "number"},
-		],
-	},
-	PLAYERREAGENTBANKSLOTS_CHANGED: {
 		Payload: [
 			{Name: "slot", Type: "number"},
 		],
@@ -4524,6 +4565,11 @@ export const data: EventInterface = {
 	PLAYER_INTERACTION_MANAGER_FRAME_SHOW: {
 		Payload: [
 			{Name: "type", Type: "PlayerInteractionType"},
+		],
+	},
+	PLAYER_IN_COMBAT_CHANGED: {
+		Payload: [
+			{Name: "inCombat", Type: "boolean"},
 		],
 	},
 	PLAYER_IS_GLIDING_CHANGED: {
@@ -4902,8 +4948,6 @@ export const data: EventInterface = {
 			{Name: "preempted", Type: "boolean"},
 		],
 	},
-	REAGENTBANK_PURCHASED: {},
-	REAGENTBANK_UPDATE: {},
 	RECEIVED_ACHIEVEMENT_LIST: {},
 	RECEIVED_ACHIEVEMENT_MEMBER_LIST: {
 		Payload: [
@@ -4931,7 +4975,7 @@ export const data: EventInterface = {
 	REPLICATE_ITEM_LIST_UPDATE: {},
 	REPORT_PLAYER_RESULT: {
 		Payload: [
-			{Name: "success", Type: "boolean"},
+			{Name: "result", Type: "SendReportResult"},
 			{Name: "reportType", Type: "ReportType"},
 		],
 	},
@@ -5916,6 +5960,11 @@ export const data: EventInterface = {
 			{Name: "unitTarget", Type: "UnitToken"},
 		],
 	},
+	UNIT_GUILD_LEVEL: {
+		Payload: [
+			{Name: "newLevel", Type: "number"},
+		],
+	},
 	UNIT_HEALTH: {
 		Payload: [
 			{Name: "unitTarget", Type: "UnitToken"},
@@ -6548,21 +6597,6 @@ export const data: EventInterface = {
 	},
 	VOICE_CHAT_TTS_VOICES_UPDATE: {},
 	VOICE_CHAT_VAD_SETTINGS_UPDATED: {},
-	VOID_DEPOSIT_WARNING: {
-		Payload: [
-			{Name: "slot", Type: "number"},
-			{Name: "link", Type: "string"},
-		],
-	},
-	VOID_STORAGE_CONTENTS_UPDATE: {},
-	VOID_STORAGE_DEPOSIT_UPDATE: {
-		Payload: [
-			{Name: "slot", Type: "number"},
-		],
-	},
-	VOID_STORAGE_UPDATE: {},
-	VOID_TRANSFER_DONE: {},
-	VOID_TRANSFER_SUCCESS: {},
 	VOTE_KICK_REASON_NEEDED: {
 		Payload: [
 			{Name: "name", Type: "string"},
