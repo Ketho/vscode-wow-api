@@ -4,8 +4,8 @@ local WikiText = require("luasrc.WikiParser.WikiText.WikiText")
 -- this has to be done manually because symbols get turned into HTML char codes when downloaded
 -- local file			= io.open("Lua/DataInput/World_of_Warcraft_API.txt", "r")
 
-local file_valid	= io.open("luasrc/Data/output/World_of_Warcraft_API_valid.txt", "w")
-local file_invalid	= io.open("luasrc/Data/output/World_of_Warcraft_API_invalid.txt", "w")
+local file_valid	= io.open("luasrc/out/output/World_of_Warcraft_API_valid.txt", "w")
+local file_invalid	= io.open("luasrc/out/output/World_of_Warcraft_API_invalid.txt", "w")
 
 local api = {}
 

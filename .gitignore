@@ -5,7 +5,7 @@ node_modules
 *.vsix
 
 *.xml
-luasrc/Data
+luasrc/out
 
 # python
 /.venv

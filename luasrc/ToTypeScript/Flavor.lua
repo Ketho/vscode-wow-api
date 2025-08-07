@@ -1,6 +1,6 @@
 local Util = require("luasrc.Util.Util")
-Util:MakeDir("luasrc/Data/cache/flavor")
-local PATH = "luasrc/Data/cache/flavor/%s_%s.lua"
+Util:MakeDir("luasrc/out/cache/flavor")
+local PATH = "luasrc/out/cache/flavor/%s_%s.lua"
 
 local pre = [[
 interface FlavorInterface {

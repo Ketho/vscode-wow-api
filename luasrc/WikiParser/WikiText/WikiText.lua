@@ -3,7 +3,7 @@ local handler = require "xmlhandler.tree"
 local Util = require("luasrc.Util.Util")
 --Util:MakeDir("cache_lua")
 
-local INPUT = "luasrc/Data/cache/World_of_Warcraft_API.xml"
+local INPUT = "luasrc/out/cache/World_of_Warcraft_API.xml"
 local m = {}
 
 function m:SaveExport()

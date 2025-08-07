@@ -18,7 +18,7 @@ export const data: CVarInterface = {
 ]]
 
 local function ToTypeScript(branch)
-	local data = require("luasrc.Data.cache.CVars_"..branch)
+	local data = require("luasrc.out.cache.CVars_"..branch)
 
 	local t = {}
 	local sorted = Util:SortTable(data[1].var)

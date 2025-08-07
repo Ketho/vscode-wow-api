@@ -18,7 +18,7 @@ local skippedSystem = {
 	UITimer = true,
 }
 
-Util:MakeDir(Path.join("luasrc", "Data", "widget"))
+Util:MakeDir(Path.join("luasrc", "out", "widget"))
 
 local function LoadFile(path)
 	if lfs.attributes(path) then
@@ -48,7 +48,7 @@ local function LoadAddon(path, name)
 							Util:WriteFileMeta(Path.join(GEN_PATH, line), text.."\n")
 						end
 					elseif docInfo.Type == "ScriptObject" then
-						Util:WriteFileMeta(Path.join("luasrc", "Data", "widget", line), text.."\n")
+						Util:WriteFileMeta(Path.join("luasrc", "out", "widget", line), text.."\n")
 					end
 				end
 				m.documentationInfo = nil

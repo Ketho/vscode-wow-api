@@ -21,7 +21,7 @@ end
 
 function MitsuhaLiterals:GetCVarLiterals()
 	local data = Util:DownloadAndRun(
-		string.format("luasrc/Data/cache/CVars_%s.lua", BRANCH),
+		string.format("luasrc/out/cache/CVars_%s.lua", BRANCH),
 		string.format("https://raw.githubusercontent.com/Ketho/BlizzardInterfaceResources/%s/Resources/CVars.lua", BRANCH)
 	)
 	local t = {}
@@ -67,7 +67,7 @@ end
 
 function MitsuhaLiterals:GetEnumTable()
 	Util:DownloadAndRun(
-		string.format("luasrc/Data/cache/Enum_%s.lua", BRANCH),
+		string.format("luasrc/out/cache/Enum_%s.lua", BRANCH),
 		string.format("https://raw.githubusercontent.com/Ketho/BlizzardInterfaceResources/%s/Resources/LuaEnum.lua", BRANCH)
 	)
 	local t = {}

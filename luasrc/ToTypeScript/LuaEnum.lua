@@ -1,6 +1,6 @@
 local Util = require("luasrc.Util.Util")
 
-local PATH = "luasrc/Data/cache/LuaEnum.lua"
+local PATH = "luasrc/out/cache/LuaEnum.lua"
 
 local pre = [[interface LuaEnumInterface {
 	[key: string]: number

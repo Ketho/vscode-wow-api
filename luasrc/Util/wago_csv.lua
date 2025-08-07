@@ -5,7 +5,7 @@ local cjson = require "cjson"
 local cjsonutil = require "cjson.util"
 local csv = require "luasrc/Util/csv/csv"
 
-local cache_folder = "luasrc/Data/cache"
+local cache_folder = "luasrc/out/cache"
 local listfile_path = PATH.join(cache_folder, "listfile.csv")
 
 local wago_csv_url = "https://wago.tools/db2/%s/csv"

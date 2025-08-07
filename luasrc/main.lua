@@ -18,7 +18,7 @@ end
 
 local Util = require(Path.join("luasrc", "Util", "Util"))
 
-local path_luadata = Path.join("luasrc", "Data")
+local path_luadata = Path.join("luasrc", "out")
 Util:MakeDir(path_luadata)
 Util:MakeDir(Path.join(path_luadata, "cache"))
 Util:MakeDir(Path.join(path_luadata, "output"))
