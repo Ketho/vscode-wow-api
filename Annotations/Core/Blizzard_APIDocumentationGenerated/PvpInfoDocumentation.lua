@@ -503,7 +503,7 @@ function C_PvP.ToggleWarMode() end
 
 ---@class BattlemasterListInfo
 ---@field name string
----@field instanceType number
+---@field matchmakingType Enum.PvPMatchmakingType
 ---@field minPlayers number
 ---@field maxPlayers number
 ---@field icon fileID
@@ -642,9 +642,11 @@ function C_PvP.ToggleWarMode() end
 ---@class RandomBGInfo
 ---@field canQueue boolean
 ---@field bgID number
+---@field bgIndex number
 ---@field hasRandomWinToday boolean
 ---@field minLevel number
 ---@field maxLevel number
+---@field name string
 
 ---@class RatedBGBlitzSpecStats
 ---@field weeklyMostPlayedSpecID number
@@ -667,3 +669,13 @@ function C_PvP.ToggleWarMode() end
 ---@field validRoles string[]
 ---@field rewardSpellID number
 ---@field rewardItemID number
+
+---@class WorldPVPBattlegroundInfo
+---@field bgID number
+---@field name string
+---@field isActive boolean
+---@field canQueue boolean
+---@field canEnter boolean
+---@field startTime time_t
+---@field minLevel number
+---@field maxLevel number

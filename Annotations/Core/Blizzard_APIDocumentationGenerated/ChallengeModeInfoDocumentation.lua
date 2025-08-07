@@ -56,6 +56,12 @@ function C_ChallengeMode.GetGuildLeaders() end
 ---@return colorRGB levelScore
 function C_ChallengeMode.GetKeystoneLevelRarityColor(level) end
 
+---Returns how much time is left before player is automatically flagged as a leaver (and removed from the group) for exiting a restricted challenge mode instance
+---
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_ChallengeMode.GetLeaverPenaltyWarningTimeLeft)
+---@return number? timeLeftSeconds Default = 0
+function C_ChallengeMode.GetLeaverPenaltyWarningTimeLeft() end
+
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_ChallengeMode.GetMapScoreInfo)
 ---@return MythicPlusRatingLinkInfo[] displayScores
 function C_ChallengeMode.GetMapScoreInfo() end
@@ -71,6 +77,7 @@ function C_ChallengeMode.GetMapTable() end
 ---@return number timeLimit
 ---@return number? texture
 ---@return number backgroundTexture
+---@return number mapID
 function C_ChallengeMode.GetMapUIInfo(mapChallengeModeID) end
 
 ---Gets the overall season mythic+ rating for the player.
@@ -105,6 +112,10 @@ function C_ChallengeMode.GetSpecificDungeonOverallScoreRarityColor(specificDunge
 ---@return colorRGB specificDungeonScoreColor
 function C_ChallengeMode.GetSpecificDungeonScoreRarityColor(specificDungeonScore) end
 
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_ChallengeMode.GetStartTime)
+---@return number startTime
+function C_ChallengeMode.GetStartTime() end
+
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_ChallengeMode.HasSlottedKeystone)
 ---@return boolean hasSlottedKeystone
 function C_ChallengeMode.HasSlottedKeystone() end
@@ -112,6 +123,10 @@ function C_ChallengeMode.HasSlottedKeystone() end
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_ChallengeMode.IsChallengeModeActive)
 ---@return boolean challengeModeActive
 function C_ChallengeMode.IsChallengeModeActive() end
+
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_ChallengeMode.IsChallengeModeResettable)
+---@return boolean canReset
+function C_ChallengeMode.IsChallengeModeResettable() end
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_ChallengeMode.RemoveKeystone)
 ---@return boolean removalSuccessful
@@ -145,6 +160,17 @@ function C_ChallengeMode.StartChallengeMode() end
 ---@field isEligibleForScore boolean? Default = false
 ---@field members ChallengeModeCompletionMemberInfo[]
 
+---@class ChallengeModeBestTime
+---@field mapChallengeModeID number
+---@field durationMs number
+---@field members ChallengeModeBestTimeMember[]
+
+---@class ChallengeModeBestTimeMember
+---@field name string
+---@field classFileName string
+---@field className string
+---@field specializationID number
+
 ---@class ChallengeModeCompletionMemberInfo
 ---@field memberGUID WOWGUID
 ---@field name string
@@ -160,3 +186,9 @@ function C_ChallengeMode.StartChallengeMode() end
 ---@field mapChallengeModeID number
 ---@field isYou boolean
 ---@field members ChallengeModeGuildAttemptMember[]
+
+---@class ChallengeModeReward
+---@field rewardID number
+---@field displayInfoID number
+---@field quantity number
+---@field isCurrency boolean

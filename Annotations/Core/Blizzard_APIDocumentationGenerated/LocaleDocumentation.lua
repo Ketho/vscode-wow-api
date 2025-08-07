@@ -6,7 +6,7 @@ function GetAvailableLocaleInfo(ignoreLocaleRestrictions) end
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_GetAvailableLocales)
 ---@param ignoreLocaleRestrictions? boolean Default = false
----@return string ... unpackedPrimitiveType
+---@return string ... localeName
 function GetAvailableLocales(ignoreLocaleRestrictions) end
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_GetCurrentRegion)

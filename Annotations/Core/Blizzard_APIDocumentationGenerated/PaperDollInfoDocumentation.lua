@@ -44,6 +44,10 @@ function C_PaperDollInfo.GetInspectItemLevel(unit) end
 ---@return InspectPVPData ratedBGBlitzData
 function C_PaperDollInfo.GetInspectRatedBGBlitzData() end
 
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_PaperDollInfo.GetInspectRatedBGData)
+---@return InspectRatedBGData ratedBGData
+function C_PaperDollInfo.GetInspectRatedBGData() end
+
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_PaperDollInfo.GetInspectRatedSoloShuffleData)
 ---@return InspectPVPData ratedSoloShuffleData
 function C_PaperDollInfo.GetInspectRatedSoloShuffleData() end
@@ -57,6 +61,11 @@ function C_PaperDollInfo.GetMinItemLevel() end
 ---@return number stagger
 ---@return number? staggerAgainstTarget
 function C_PaperDollInfo.GetStaggerPercentage(unit) end
+
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_PaperDollInfo.IsInventorySlotEnabled)
+---@param slotName stringView
+---@return boolean isEnabled
+function C_PaperDollInfo.IsInventorySlotEnabled(slotName) end
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_PaperDollInfo.OffhandHasShield)
 ---@return boolean offhandHasShield
@@ -78,3 +87,8 @@ function C_PaperDollInfo.OffhandHasWeapon() end
 ---@field gamesPlayed number
 ---@field roundsWon number
 ---@field roundsPlayed number
+
+---@class InspectRatedBGData
+---@field rating number
+---@field played number
+---@field won number

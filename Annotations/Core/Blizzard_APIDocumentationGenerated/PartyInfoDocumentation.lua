@@ -14,6 +14,16 @@ function C_PartyInfo.CanFormCrossFactionParties() end
 ---@return boolean allowedToInvite
 function C_PartyInfo.CanInvite() end
 
+---Returns whether it's possible to start a vote at this time
+---
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_PartyInfo.CanStartInstanceAbandonVote)
+---@return boolean canStart
+function C_PartyInfo.CanStartInstanceAbandonVote() end
+
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_PartyInfo.ChallengeModeRestrictionsActive)
+---@return boolean restrictionsActive
+function C_PartyInfo.ChallengeModeRestrictionsActive() end
+
 ---Immediately convert to raid with no regard for potentially destructive actions.
 ---
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_PartyInfo.ConfirmConvertToRaid)
@@ -65,6 +75,37 @@ function C_PartyInfo.DoCountdown(seconds) end
 ---@return number[] categories
 function C_PartyInfo.GetActiveCategories() end
 
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_PartyInfo.GetAvailableLootMethods)
+---@return LootMethod[] methods
+function C_PartyInfo.GetAvailableLootMethods() end
+
+---Returns the total duration of the shutdown time after a vote passes and how much time is left before it ends
+---
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_PartyInfo.GetInstanceAbandonShutdownTime)
+---@return number? durationSeconds Default = 0
+---@return number? timeLeftSeconds Default = 0
+function C_PartyInfo.GetInstanceAbandonShutdownTime() end
+
+---Returns values controlling the vote
+---
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_PartyInfo.GetInstanceAbandonVoteRequirements)
+---@return number? votesRequired Default = 0
+---@return number? keystoneOwnerVoteWeight Default = 0
+function C_PartyInfo.GetInstanceAbandonVoteRequirements() end
+
+---Returns how the player voted, nil for not yet
+---
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_PartyInfo.GetInstanceAbandonVoteResponse)
+---@return boolean? response
+function C_PartyInfo.GetInstanceAbandonVoteResponse() end
+
+---Returns the total duration of the vote and how much time is left before it ends
+---
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_PartyInfo.GetInstanceAbandonVoteTime)
+---@return number? durationSeconds Default = 0
+---@return number? timeLeftSeconds Default = 0
+function C_PartyInfo.GetInstanceAbandonVoteTime() end
+
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_PartyInfo.GetInviteConfirmationInvalidQueues)
 ---@param inviteGUID WOWGUID
 ---@return QueueSpecificInfo[] invalidQueues
@@ -79,6 +120,12 @@ function C_PartyInfo.GetInviteConfirmationInvalidQueues(inviteGUID) end
 ---@return ClubId outClubId
 function C_PartyInfo.GetInviteReferralInfo(inviteGUID) end
 
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_PartyInfo.GetLootMethod)
+---@return LootMethod method
+---@return number? masterLootPartyID
+---@return number? masterLooterRaidID
+function C_PartyInfo.GetLootMethod() end
+
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_PartyInfo.GetMinItemLevel)
 ---@param avgItemLevelCategory Enum.AvgItemLevelCategories
 ---@return number minItemLevel
@@ -90,6 +137,12 @@ function C_PartyInfo.GetMinItemLevel(avgItemLevelCategory) end
 ---@return number minLevel
 function C_PartyInfo.GetMinLevel(category) end
 
+---Returns how many players have voted either way
+---
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_PartyInfo.GetNumInstanceAbandonGroupVoteResponses)
+---@return number count
+function C_PartyInfo.GetNumInstanceAbandonGroupVoteResponses() end
+
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_PartyInfo.GetRestrictPings)
 ---@return Enum.RestrictPingsTo restrictTo
 function C_PartyInfo.GetRestrictPings() end
@@ -99,6 +152,14 @@ function C_PartyInfo.GetRestrictPings() end
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_PartyInfo.InviteUnit)
 ---@param targetName string
 function C_PartyInfo.InviteUnit(targetName) end
+
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_PartyInfo.IsChallengeModeActive)
+---@return boolean active
+function C_PartyInfo.IsChallengeModeActive() end
+
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_PartyInfo.IsChallengeModeKeystoneOwner)
+---@return boolean isKeystoneOwner
+function C_PartyInfo.IsChallengeModeKeystoneOwner() end
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_PartyInfo.IsCrossFactionParty)
 ---@param category? number
@@ -141,6 +202,23 @@ function C_PartyInfo.LeaveParty(category) end
 ---@param dps? boolean
 function C_PartyInfo.RequestInviteFromUnit(targetName, tank, healer, dps) end
 
+---Vote on whether to abandon instance, true for yes, false for no
+---
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_PartyInfo.SetInstanceAbandonVoteResponse)
+---@param response boolean
+function C_PartyInfo.SetInstanceAbandonVoteResponse(response) end
+
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_PartyInfo.SetLootMethod)
+---@param method LootMethod
+---@param lootMaster? string
+---@return boolean success
+function C_PartyInfo.SetLootMethod(method, lootMaster) end
+
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_PartyInfo.SetRestrictPings)
 ---@param restrictTo Enum.RestrictPingsTo
 function C_PartyInfo.SetRestrictPings(restrictTo) end
+
+---Start the vote
+---
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_PartyInfo.StartInstanceAbandonVote)
+function C_PartyInfo.StartInstanceAbandonVote() end

@@ -26,6 +26,7 @@ function GetFonts() end
 ---@field outline string
 ---@field shadow FontScriptShadowInfo?
 ---@field fontObject SimpleFont
+---@field canBeUserScaled boolean
 
 ---@class FontScriptShadowInfo
 ---@field color colorRGBA

@@ -1,4 +1,9 @@
 ---@meta _
+---[Documentation](https://warcraft.wiki.gg/wiki/API_CreateFromMixins)
+---@param ... LuaValueVariant mixins
+---@return LuaValueVariant object
+function CreateFromMixins(mixins) end
+
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_CreateWindow)
 ---@param popupStyle? boolean Default = true
 ---@param topMost? boolean Default = false
@@ -28,6 +33,12 @@ function GetEventTime(eventProfileIndex) end
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_GetSourceLocation)
 ---@return string location
 function GetSourceLocation() end
+
+---[Documentation](https://warcraft.wiki.gg/wiki/API_Mixin)
+---@param object LuaValueVariant
+---@param ... LuaValueVariant mixins
+---@return LuaValueVariant outObject
+function Mixin(object, mixins) end
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_RunScript)
 ---@param text string

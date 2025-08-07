@@ -137,3 +137,8 @@ function C_MythicPlus.RequestRewards() end
 ---@field thisWeek boolean
 ---@field completed boolean
 ---@field runScore number
+
+---@class SeasonTimeInfo
+---@field bestTime number
+---@field lastTime number
+---@field medal number

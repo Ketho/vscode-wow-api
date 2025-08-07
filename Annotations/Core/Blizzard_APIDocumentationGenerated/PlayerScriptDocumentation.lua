@@ -166,6 +166,12 @@ function GetDodgeChanceFromAttribute() end
 ---@return number rangedExpertise
 function GetExpertise() end
 
+---[Documentation](https://warcraft.wiki.gg/wiki/API_GetExpertisePercent)
+---@return number mainhandExpertisePercent
+---@return number offhandExpertisePercent
+---@return number rangedExpertisePercent
+function GetExpertisePercent() end
+
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_GetHaste)
 ---@return number result
 function GetHaste() end
@@ -571,6 +577,10 @@ function PlayerEffectiveAttackPower() end
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_PlayerGetTimerunningSeasonID)
 ---@return number? timerunningSeasonID
 function PlayerGetTimerunningSeasonID() end
+
+---[Documentation](https://warcraft.wiki.gg/wiki/API_PlayerIsInCombat)
+---@return boolean playerIsInCombat
+function PlayerIsInCombat() end
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_PortGraveyard)
 function PortGraveyard() end

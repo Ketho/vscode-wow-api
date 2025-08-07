@@ -15,6 +15,11 @@ function C_Club.AddClubStreamChatChannel(clubId, streamId) end
 ---@param streamId ClubStreamId
 function C_Club.AdvanceStreamViewMarker(clubId, streamId) end
 
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_Club.AreMembersReady)
+---@param clubId ClubId
+---@return boolean membersReady
+function C_Club.AreMembersReady(clubId) end
+
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_Club.AssignMemberRole)
 ---@param clubId ClubId
 ---@param memberId number
@@ -143,6 +148,10 @@ function C_Club.Flush() end
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_Club.FocusCommunityStreams)
 function C_Club.FocusCommunityStreams() end
+
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_Club.FocusMembers)
+---@param clubId ClubId
+function C_Club.FocusMembers(clubId) end
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_Club.FocusStream)
 ---@param clubId ClubId
@@ -480,6 +489,10 @@ function C_Club.ShouldAllowClubType(clubType) end
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_Club.UnfocusAllStreams)
 ---@param unsubscribe boolean
 function C_Club.UnfocusAllStreams(unsubscribe) end
+
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_Club.UnfocusMembers)
+---@param clubId ClubId
+function C_Club.UnfocusMembers(clubId) end
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_Club.UnfocusStream)
 ---@param clubId ClubId

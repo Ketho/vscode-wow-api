@@ -212,11 +212,6 @@ function SetPortraitTextureFromCreatureDisplayID(textureObject, creatureDisplayI
 ---@return boolean hasCursor
 function SetUnitCursorTexture(textureObject, unit, style, includeLowPriority) end
 
----[Documentation](https://warcraft.wiki.gg/wiki/API_ShowBossFrameWhenUninteractable)
----@param unit UnitToken
----@return boolean result
-function ShowBossFrameWhenUninteractable(unit) end
-
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_UnitAffectingCombat)
 ---@param unit UnitToken
 ---@return boolean result

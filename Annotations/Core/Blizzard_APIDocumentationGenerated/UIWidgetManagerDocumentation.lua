@@ -870,6 +870,8 @@ function C_UIWidgetManager.UnregisterUnitForWidgetUpdates(unitToken, isGuid) end
 ---@field spellID number
 ---@field tooltip string
 ---@field icon Enum.UIWidgetButtonIconType
+---@field enabledState Enum.UIWidgetButtonEnabledState
+---@field cooldownType Enum.UIWidgetSpellButtonCooldownType
 
 ---@class UIWidgetSpellInfo
 ---@field spellID number

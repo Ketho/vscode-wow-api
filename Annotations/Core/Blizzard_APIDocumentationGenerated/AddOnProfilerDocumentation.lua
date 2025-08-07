@@ -65,10 +65,10 @@ function C_AddOnProfiler.IsEnabled() end
 ---
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_AddOnProfiler.MeasureCall)
 ---@param func LuaValueVariant
----@param ... number unpackedPrimitiveType
+---@param ... LuaValueVariant arguments
 ---@return AddOnProfilerCallResults results
----@return number ... unpackedPrimitiveType
-function C_AddOnProfiler.MeasureCall(func, unpackedPrimitiveType) end
+---@return LuaValueVariant ... returns
+function C_AddOnProfiler.MeasureCall(func, arguments) end
 
 ---@class AddOnPerformanceMessage
 ---@field type Enum.AddOnPerformanceMessageType

@@ -458,22 +458,6 @@ function C_TooltipInfo.GetUnitDebuffByAuraInstanceID(unitTokenString, auraInstan
 ---@return TooltipData data
 function C_TooltipInfo.GetUpgradeItem() end
 
----[Documentation](https://warcraft.wiki.gg/wiki/API_C_TooltipInfo.GetVoidDepositItem)
----@param slot number
----@return TooltipData data
-function C_TooltipInfo.GetVoidDepositItem(slot) end
-
----[Documentation](https://warcraft.wiki.gg/wiki/API_C_TooltipInfo.GetVoidItem)
----@param tab number
----@param slot number
----@return TooltipData data
-function C_TooltipInfo.GetVoidItem(tab, slot) end
-
----[Documentation](https://warcraft.wiki.gg/wiki/API_C_TooltipInfo.GetVoidWithdrawalItem)
----@param slot number
----@return TooltipData data
-function C_TooltipInfo.GetVoidWithdrawalItem(slot) end
-
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_TooltipInfo.GetWeeklyReward)
 ---@param itemDBID WeeklyRewardItemDBID
 ---@return TooltipData data

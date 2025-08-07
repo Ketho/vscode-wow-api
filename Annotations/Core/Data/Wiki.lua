@@ -57,9 +57,6 @@ function AddChatWindowChannel(windowId, channelName) end
 ---@param messageGroup string
 function AddChatWindowMessages(index, messageGroup) end
 
----[Documentation](https://warcraft.wiki.gg/wiki/API_AddTradeMoney)
-function AddTradeMoney() end
-
 ---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_AntiAliasingSupported)
 function AntiAliasingSupported() end
@@ -438,6 +435,11 @@ function C_ArrowCalloutManager.AcknowledgeCallout() end
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_ArrowCalloutManager.HideCallout)
 function C_ArrowCalloutManager.HideCallout() end
 
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_Bank.FetchNextPurchasableBankTabCost)
+---@param bankType Enum.BankType
+---@return BigUInteger? nextPurchasableTabCost
+function C_Bank.FetchNextPurchasableBankTabCost(bankType) end
+
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_BlackMarket.Close)
 function C_BlackMarket.Close() end
 
@@ -606,6 +608,9 @@ function C_ClassTrial.GetClassTrialLogoutTimeSeconds() end
 ---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_ClassTrial.IsClassTrialCharacter)
 function C_ClassTrial.IsClassTrialCharacter() end
+
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_Container.SortReagentBankBags)
+function C_Container.SortReagentBankBags() end
 
 ---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_Debug.DashboardIsEnabled)
@@ -2684,6 +2689,22 @@ function C_TalkingHead.IsCurrentTalkingHeadIgnored() end
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_TalkingHead.SetConversationsDeferred)
 function C_TalkingHead.SetConversationsDeferred(deferred) end
 
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_TooltipInfo.GetVoidDepositItem)
+---@param slot number
+---@return TooltipData data
+function C_TooltipInfo.GetVoidDepositItem(slot) end
+
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_TooltipInfo.GetVoidItem)
+---@param tab number
+---@param slot number
+---@return TooltipData data
+function C_TooltipInfo.GetVoidItem(tab, slot) end
+
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_TooltipInfo.GetVoidWithdrawalItem)
+---@param slot number
+---@return TooltipData data
+function C_TooltipInfo.GetVoidWithdrawalItem(slot) end
+
 ---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_ToyBox.ForceToyRefilter)
 function C_ToyBox.ForceToyRefilter() end
@@ -3995,6 +4016,8 @@ function EJ_GetEncounterInfoByIndex(index, journalInstanceID) end
 ---@return string link
 ---@return boolean shouldDisplayDifficulty
 ---@return number mapID
+---@return number covenantID
+---@return boolean isRaid
 function EJ_GetInstanceByIndex(index, isRaid) end
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_EJ_GetInstanceForMap)
@@ -4014,6 +4037,8 @@ function EJ_GetInstanceForMap(mapID) end
 ---@return string link
 ---@return boolean shouldDisplayDifficulty
 ---@return number mapID
+---@return number covenantID
+---@return boolean isRaid
 function EJ_GetInstanceInfo(journalInstanceID) end
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_EJ_GetInvTypeSortOrder)
@@ -7476,7 +7501,7 @@ function GetVoidItemInfo(tabIndex, slotIndex) end
 
 ---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_GetVoidStorageSlotPageIndex)
-function GetVoidStorageSlotPageIndex(slot) end
+function GetVoidStorageSlotPageIndex() end
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_GetVoidTransferCost)
 ---@return number cost
@@ -8080,8 +8105,10 @@ function IsSpellClassOrSpec(spellName) end
 ---@return boolean isKnown
 function IsSpellKnown(spellID, isPetSpell) end
 
----#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_IsSpellKnownOrOverridesKnown)
+---@param spellID number
+---@param isPet? boolean
+---@return boolean isKnown
 function IsSpellKnownOrOverridesKnown(spellID, isPet) end
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_IsSpellOverlayed)
@@ -8966,8 +8993,10 @@ function SetAchievementSearchString(searchText) end
 ---@param alwaysShow string
 function SetActionBarToggles(bar1, bar2, bar3, bar4, bar5, bar6, bar7, alwaysShow) end
 
----#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_SetActionUIButton)
+---@param checkboxFrame CheckButton
+---@param actionSlot number
+---@param cooldownFrame Cooldown
 function SetActionUIButton(checkboxFrame, actionSlot, cooldownFrame) end
 
 ---#nopage  
@@ -9335,10 +9364,6 @@ function SetTaxiMap(texture) end
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_SetTradeCurrency)
 function SetTradeCurrency(type, amount) end
 
----[Documentation](https://warcraft.wiki.gg/wiki/API_SetTradeMoney)
----@param copper number
-function SetTradeMoney(copper) end
-
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_SetTrainerServiceTypeFilter)
 ---@param type string
 ---@param enable boolean
@@ -9355,6 +9380,11 @@ function SetView(viewIndex) end
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_SetupFullscreenScale)
 ---@param frame Frame
 function SetupFullscreenScale(frame) end
+
+---[Documentation](https://warcraft.wiki.gg/wiki/API_ShowBossFrameWhenUninteractable)
+---@param unit UnitToken
+---@return boolean show
+function ShowBossFrameWhenUninteractable(unit) end
 
 ---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_ShowBuybackSellCursor)

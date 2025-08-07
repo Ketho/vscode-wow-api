@@ -249,6 +249,32 @@ function C_SpellBook.IsSpellBookItemPassive(spellBookItemSlotIndex, spellBookIte
 ---@return boolean insufficientPower
 function C_SpellBook.IsSpellBookItemUsable(spellBookItemSlotIndex, spellBookItemSpellBank) end
 
+---Returns true if a spell should be found in the spellbook. This function can also return true for spells that aren't known, such as override spells granted by an aura linked to class talents
+---
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_SpellBook.IsSpellInSpellBook)
+---@param spellID number
+---@param spellBank? Enum.SpellBookSpellBank Default = Player
+---@param includeOverrides? boolean Default = true
+---@return boolean isInSpellBook
+function C_SpellBook.IsSpellInSpellBook(spellID, spellBank, includeOverrides) end
+
+---Returns true if a player knows a spell. This function can also return true for spells that aren't in the spellbook, such as temporarily-granted abilities
+---
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_SpellBook.IsSpellKnown)
+---@param spellID number
+---@param spellBank? Enum.SpellBookSpellBank Default = Player
+---@return boolean isKnown
+function C_SpellBook.IsSpellKnown(spellID, spellBank) end
+
+---Returns true if a spell is considered to be known or present in the spellbook
+---
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_SpellBook.IsSpellKnownOrInSpellBook)
+---@param spellID number
+---@param spellBank? Enum.SpellBookSpellBank Default = Player
+---@param includeOverrides? boolean Default = true
+---@return boolean isKnownOrInSpellBook
+function C_SpellBook.IsSpellKnownOrInSpellBook(spellID, spellBank, includeOverrides) end
+
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_SpellBook.PickupSpellBookItem)
 ---@param spellBookItemSlotIndex number
 ---@param spellBookItemSpellBank Enum.SpellBookSpellBank

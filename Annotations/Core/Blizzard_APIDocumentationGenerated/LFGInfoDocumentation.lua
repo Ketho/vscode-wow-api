@@ -63,6 +63,12 @@ function C_LFGInfo.GetDungeonInfo(lfgDungeonID) end
 ---@return LFGLockInfo[] lockInfo
 function C_LFGInfo.GetLFDLockStates() end
 
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_LFGInfo.GetLevelUpInstances)
+---@param currPlayerLevel number
+---@param isRaid boolean
+---@return number[] instances
+function C_LFGInfo.GetLevelUpInstances(currPlayerLevel, isRaid) end
+
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_LFGInfo.GetRoleCheckDifficultyDetails)
 ---@return number? maxLevel
 ---@return boolean isLevelReduced

@@ -95,6 +95,7 @@ function SendSubscriptionInterstitialResponse(response) end
 ---@field features ExpansionDisplayInfoFeature[]
 ---@field highResBackgroundID fileID
 ---@field lowResBackgroundID fileID
+---@field textureKit textureKit
 
 ---@class ExpansionDisplayInfoFeature
 ---@field icon fileID

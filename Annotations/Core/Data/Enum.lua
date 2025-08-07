@@ -1315,6 +1315,7 @@ Enum.CharCustomizationType = {
 ---@enum Enum.CharacterServiceInfoFlag
 Enum.CharacterServiceInfoFlag = {
 	RestrictToRecommendedSpecs = 1,
+	AllowMaxLevelBoost = 2,
 }
 
 ---@enum Enum.ChatChannelRuleset
@@ -2977,6 +2978,7 @@ Enum.GameRule = {
 	WorldMapFrameStrata = 100,
 	MerchantFilterDisabled = 101,
 	SummoningStones = 108,
+	MailGameRule = 132,
 }
 
 ---@enum Enum.GameRuleFlags
@@ -4323,21 +4325,6 @@ Enum.LootSlotType = {
 	Currency = 3,
 }
 
----@enum Enum.LuaOpcodeArgumentMode
-Enum.LuaOpcodeArgumentMode = {
-	Unused = 0,
-	Used = 1,
-	RegisterOrJumpOffset = 2,
-	RegisterOrConstant = 3,
-}
-
----@enum Enum.LuaOpcodeMode
-Enum.LuaOpcodeMode = {
-	Abc = 0,
-	ABx = 1,
-	AsBx = 2,
-}
-
 ---@enum Enum.MajorFactionFeatureAbility
 Enum.MajorFactionFeatureAbility = {
 	Generic = 0,
@@ -5371,6 +5358,12 @@ Enum.PvPMatchState = {
 	Complete = 5,
 }
 
+---@enum Enum.PvPMatchmakingType
+Enum.PvPMatchmakingType = {
+	Battleground = 0,
+	Arena = 1,
+}
+
 ---@enum Enum.PvPRanks
 Enum.PvPRanks = {
 	RankNone = 0,
@@ -5821,6 +5814,15 @@ Enum.SendAddonMessageResult = {
 	ChannelThrottle = 8,
 	GeneralError = 9,
 	NotInGuild = 10,
+}
+
+---@enum Enum.SendReportResult
+Enum.SendReportResult = {
+	Success = 0,
+	GeneralError = 1,
+	TooManyReports = 2,
+	RequiresChatLine = 3,
+	RequiresChatLineOrVoice = 4,
 }
 
 ---@enum Enum.SharedStringFlag
@@ -6775,6 +6777,12 @@ Enum.UIWidgetBlendModeType = {
 	Additive = 1,
 }
 
+---@enum Enum.UIWidgetButtonEnabledState
+Enum.UIWidgetButtonEnabledState = {
+	Disabled = 0,
+	Enabled = 1,
+}
+
 ---@enum Enum.UIWidgetButtonIconType
 Enum.UIWidgetButtonIconType = {
 	Exit = 0,
@@ -6862,6 +6870,13 @@ Enum.UIWidgetSetLayoutDirection = {
 	Vertical = 0,
 	Horizontal = 1,
 	Overlap = 2,
+}
+
+---@enum Enum.UIWidgetSpellButtonCooldownType
+Enum.UIWidgetSpellButtonCooldownType = {
+	HideCooldown = 0,
+	ShowCooldown = 1,
+	ShowCooldownAndDisableOnCooldown = 2,
 }
 
 ---@enum Enum.UIWidgetTextFormatType
@@ -7446,6 +7461,7 @@ Constants = {
 	},
 	DelvesConsts = {
 		DELVES_COMPANION_INFO_SELECTION_CHARACTER_DATA_ELEMENT_ID = 13,
+		DELVES_COMPANION_TOOLTIP_WIDGET_SET_ID = 1331,
 		DELVES_MIN_PLAYER_LEVEL_CONTENT_TUNING_ID = 2677,
 		DELVES_NORMAL_KEY_CURRENCY_ID = 3028,
 	},
