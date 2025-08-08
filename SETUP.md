@@ -2,7 +2,7 @@
 > [!IMPORTANT]  
 > This readme is for if you want to generate the LuaLS annotations yourself or contribute with development.
 
-While using [WSL](https://code.visualstudio.com/docs/remote/wsl) instead of Linux is not required, this project has only been tested with WSL and developed with the remote [WSL extension](https://marketplace.visualstudio.com/items?itemName=ms-vscode-remote.remote-wsl).
+You can use Linux but this project has only been tested with [WSL](https://code.visualstudio.com/docs/remote/wsl) and developed with the remote [WSL extension](https://marketplace.visualstudio.com/items?itemName=ms-vscode-remote.remote-wsl).
 ```sh
 wsl --install
 ```
