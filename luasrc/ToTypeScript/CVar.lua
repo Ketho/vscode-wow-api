@@ -1,4 +1,5 @@
 local Util = require("wowdoc")
+local pathlib = require("path")
 -- cache should already be created at this point
 
 local pre = [[
@@ -18,7 +19,7 @@ export const data: CVarInterface = {
 ]]
 
 local function ToTypeScript(branch)
-	local data = require("luasrc.out.cache.CVars_"..branch)
+	local data = require(pathlib.join(CVAR_CACHE, "CVars_"..branch))
 
 	local t = {}
 	local sorted = Util:SortTable(data[1].var)

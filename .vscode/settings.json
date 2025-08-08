@@ -84,6 +84,8 @@
         "WORLD_PVP",
         "MAX_SUMMONABLE_HUNTER_PETS",
         "MAX_SUMMONABLE_PETS",
-        "NUM_PET_SLOTS_HUNTER"
+        "NUM_PET_SLOTS_HUNTER",
+        "ENUM_CACHE",
+        "CVAR_CACHE"
     ],
 }

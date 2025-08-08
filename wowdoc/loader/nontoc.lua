@@ -7,6 +7,7 @@ local docTables = {}
 
 APIDocumentation = {}
 
+---@diagnostic disable-next-line: duplicate-set-field
 function APIDocumentation:AddDocumentationTable(info)
 	table.insert(docTables, info)
 end

@@ -1,5 +1,5 @@
 local Util = require("wowdoc")
-local widget_system = require("wowdoc.widget_system")
+local widget_system = require("wowdoc.loader.doc_widgets")
 
 local m = {}
 

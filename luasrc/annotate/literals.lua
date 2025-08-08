@@ -1,6 +1,9 @@
 local Util = require("wowdoc")
+local pathlib = require("path")
 
 local m = {}
+
+local PATH = CVAR_CACHE or "cache_cvar"
 
 function m:GetEventLiterals()
 	table.sort(APIDocumentation.events, function(a, b)
@@ -21,8 +24,8 @@ end
 
 function m:GetCVarLiterals()
 	local data = Util:DownloadAndRun(
-		string.format("https://raw.githubusercontent.com/Ketho/BlizzardInterfaceResources/%s/Resources/CVars.lua", BRANCH),
-		string.format("luasrc/out/cache/CVars_%s.lua", BRANCH)
+		string.format("https://raw.githubusercontent.com/Ketho/BlizzardInterfaceResources/%s/Resources/CVars.lua", BLIZZRES_BRANCH),
+		pathlib.join(PATH, string.format("CVars_%s.lua", BLIZZRES_BRANCH))
 	)
 	local t = {}
 	table.insert(t, "---@alias CVar string")
@@ -67,8 +70,8 @@ end
 
 function m:GetEnumTable()
 	Util:DownloadAndRun(
-		string.format("https://raw.githubusercontent.com/Ketho/BlizzardInterfaceResources/%s/Resources/LuaEnum.lua", BRANCH),
-		string.format("luasrc/out/cache/Enum_%s.lua", BRANCH)
+		string.format("https://raw.githubusercontent.com/Ketho/BlizzardInterfaceResources/%s/Resources/LuaEnum.lua", BLIZZRES_BRANCH),
+		string.format("luasrc/out/cache/Enum_%s.lua", BLIZZRES_BRANCH)
 	)
 	local t = {}
 	table.insert(t, "Enum = {}\n")

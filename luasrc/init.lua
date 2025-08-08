@@ -1,13 +1,13 @@
 local pathlib = require("path")
 
 require("luasrc.config")
+local util = require("wowdoc")
 local log = require("wowdoc.log")
+local products = require("wowdoc.products")
+local loader = require("wowdoc.loader")
 
-BRANCH = "mainline"
-CONSTANTS = {
-	-- LATEST_MAINLINE = "11.0.7",
-	-- LATEST_CLASSIC = "4.4.0",
-}
+local PRODUCT = "wow" ---@type TactProduct
+GETHE_BRANCH, BLIZZRES_BRANCH = products:GetBranch(PRODUCT)
 
 local wagoBranch = {
 	mainline = "wow",
@@ -19,39 +19,28 @@ local function GetWagoBranch(flavor)
 	return wagoBranch[flavor]
 end
 
-local Util = require("wowdoc")
-
 local path_luadata = pathlib.join("luasrc", "out")
-Util:MakeDir(path_luadata)
-Util:MakeDir(pathlib.join(path_luadata, "cache"))
-Util:MakeDir(pathlib.join(path_luadata, "output"))
-
--- load Enum table
-Util:DownloadAndRun(
-	string.format("https://raw.githubusercontent.com/Ketho/BlizzardInterfaceResources/%s/Resources/LuaEnum.lua", BRANCH),
-	string.format(pathlib.join(path_luadata, "cache", "LuaEnum_%s.lua"), BRANCH)
-)
-Enum.LFGRoleMeta = {NumValue = 3}
+util:MakeDir(path_luadata)
+util:MakeDir(pathlib.join(path_luadata, "cache"))
+util:MakeDir(pathlib.join(path_luadata, "output"))
 
 -- load blizzard apidocs
-local WowDocLoader_path = pathlib.join("luasrc", "WowDocLoader")
-local WowDocLoader = require(pathlib.join(WowDocLoader_path, "WowDocLoader"))
-WowDocLoader:main(WowDocLoader_path)
+loader:main(PRODUCT, true)
 
 -- annotations
 local literals = require("luasrc.annotate.literals")
 local core_data = pathlib.join("Annotations", "Core", "Data")
-Util:WriteFileMeta(pathlib.join(core_data, "Event.lua"), literals:GetEventLiterals())
-Util:WriteFileMeta(pathlib.join(core_data, "CVar.lua"), literals:GetCVarLiterals())
-Util:WriteFileMeta(pathlib.join(core_data, "Enum.lua"), literals:GetEnumTable())
+util:WriteFileMeta(pathlib.join(core_data, "Event.lua"), literals:GetEventLiterals())
+util:WriteFileMeta(pathlib.join(core_data, "CVar.lua"), literals:GetCVarLiterals())
+util:WriteFileMeta(pathlib.join(core_data, "Enum.lua"), literals:GetEnumTable())
 
 -- typescript data
 local path_tsdata = pathlib.join("src", "data")
-Util:WriteFile(pathlib.join(path_tsdata, "event.ts"), require("luasrc.ToTypeScript.Event")())
-Util:WriteFile(pathlib.join(path_tsdata, "cvar.ts"), require("luasrc.ToTypeScript.CVar")(BRANCH))
-Util:WriteFile(pathlib.join(path_tsdata, "enum.ts"), require("luasrc.ToTypeScript.LuaEnum")(BRANCH))
-Util:MakeDir(pathlib.join(path_luadata, "cache", "globalstrings"))
-require("luasrc.ToTypeScript.GlobalString"):WriteLocales(GetWagoBranch(BRANCH))
+util:WriteFile(pathlib.join(path_tsdata, "event.ts"), require("luasrc.ToTypeScript.Event")())
+util:WriteFile(pathlib.join(path_tsdata, "cvar.ts"), require("luasrc.ToTypeScript.CVar")(BLIZZRES_BRANCH))
+util:WriteFile(pathlib.join(path_tsdata, "enum.ts"), require("luasrc.ToTypeScript.LuaEnum")(BLIZZRES_BRANCH))
+util:MakeDir(pathlib.join(path_luadata, "cache", "globalstrings"))
+require("luasrc.ToTypeScript.GlobalString"):WriteLocales(GetWagoBranch(BLIZZRES_BRANCH))
 require(pathlib.join("luasrc", "ToTypeScript", "Flavor")) -- todo: refactor
 
 -- parse the wiki

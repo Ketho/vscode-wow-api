@@ -5,6 +5,7 @@ local log = require("wowdoc.log")
 
 local m = {}
 local REPO = "https://raw.githubusercontent.com/Ketho/BlizzardInterfaceResources"
+local PATH = ENUM_CACHE or "cache_lua"
 
 local function ApplyFixes()
 	-- Meta fields are not written to LuaEnum.lua
@@ -18,8 +19,7 @@ function m:LoadLuaEnums(branch)
 	else
 		log:success("WowDocLoader: Loading Enum")
 	end
-	util:MakeDir("cache_lua")
-	local path = pathlib.join("cache_lua", string.format("LuaEnum_%s.lua", branch))
+	local path = pathlib.join(PATH, string.format("LuaEnum_%s.lua", branch))
 	local url = string.format("%s/%s/Resources/LuaEnum.lua", REPO, branch)
 	util:DownloadAndRun(url, path)
 	ApplyFixes()

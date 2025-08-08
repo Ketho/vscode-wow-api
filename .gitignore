@@ -12,3 +12,6 @@ luasrc/out
 
 # hererocks
 /.lua
+
+# framexml
+/wow-ui-source
