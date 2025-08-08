@@ -81,6 +81,7 @@
 ---@field slotIndex number
 ---@field orderSource Enum.CraftingOrderReagentSource?
 ---@field required boolean
+---@field hiddenInCraftingForm boolean
 
 ---@class CraftingRecipeOutputInfo
 ---@field icon number

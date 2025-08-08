@@ -139,6 +139,12 @@ function C_Container.GetMaxArenaCurrency() end
 ---@return boolean isEnabled
 function C_Container.GetSortBagsRightToLeft() end
 
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_Container.HasContainerItem)
+---@param containerIndex Enum.BagIndex
+---@param slotIndex number
+---@return boolean hasItem
+function C_Container.HasContainerItem(containerIndex, slotIndex) end
+
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_Container.IsBattlePayItem)
 ---@param containerIndex Enum.BagIndex
 ---@param slotIndex number
@@ -211,11 +217,12 @@ function C_Container.SortAccountBankBags() end
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_Container.SortBags)
 function C_Container.SortBags() end
 
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_Container.SortBank)
+---@param bankType Enum.BankType
+function C_Container.SortBank(bankType) end
+
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_Container.SortBankBags)
 function C_Container.SortBankBags() end
-
----[Documentation](https://warcraft.wiki.gg/wiki/API_C_Container.SortReagentBankBags)
-function C_Container.SortReagentBankBags() end
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_Container.SplitContainerItem)
 ---@param containerIndex Enum.BagIndex

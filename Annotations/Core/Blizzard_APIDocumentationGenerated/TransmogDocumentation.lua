@@ -126,6 +126,10 @@ function C_Transmog.IsAtTransmogNPC() end
 ---@return boolean isBeingCollapsed
 function C_Transmog.IsSlotBeingCollapsed(transmogLocation) end
 
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_Transmog.IsTransmogEnabled)
+---@return boolean isTransmogEnabled
+function C_Transmog.IsTransmogEnabled() end
+
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_Transmog.LoadOutfit)
 ---@param outfitID number
 function C_Transmog.LoadOutfit(outfitID) end

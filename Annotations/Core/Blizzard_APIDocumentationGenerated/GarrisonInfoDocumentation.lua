@@ -145,7 +145,7 @@ function C_Garrison.GetTalentTreeResetInfo(garrTalentTreeID) end
 ---@param researchRank number
 ---@param garrTalentTreeID number
 ---@param talentPointIndex number
----@param isRespec number
+---@param isRespec boolean
 ---@return number goldCost
 ---@return GarrisonTalentCurrencyCostInfo[] currencyCosts
 ---@return number durationSecs

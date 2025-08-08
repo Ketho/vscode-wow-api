@@ -83,6 +83,14 @@ function C_PlayerInfo.HasAccountInventoryLock() end
 ---@return boolean isVisible
 function C_PlayerInfo.HasVisibleInvSlot(slot) end
 
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_PlayerInfo.IsAccountBankEnabled)
+---@return boolean isAccountBankEnabled
+function C_PlayerInfo.IsAccountBankEnabled() end
+
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_PlayerInfo.IsCharacterBankEnabled)
+---@return boolean isCharacterBankEnabled
+function C_PlayerInfo.IsCharacterBankEnabled() end
+
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_PlayerInfo.IsDisplayRaceNative)
 ---@return boolean isDisplayRaceNative
 function C_PlayerInfo.IsDisplayRaceNative() end

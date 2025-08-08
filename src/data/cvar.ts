@@ -81,6 +81,11 @@ export const data: CVarInterface = {
 		default: "0",
 		category: 5,
 	},
+	asyncassistactions: {
+		name: "AsyncAssistActions",
+		default: "0",
+		category: 5,
+	},
 	auradebugger: {
 		name: "AuraDebugger",
 		default: "0",
@@ -256,6 +261,96 @@ export const data: CVarInterface = {
 		default: "0",
 		category: 5,
 	},
+	clientsettings_cmaa2: {
+		name: "ClientSettings_CMAA2",
+		default: "",
+		category: 5,
+	},
+	clientsettings_cmd_list_mt: {
+		name: "ClientSettings_CMD_LIST_MT",
+		default: "",
+		category: 5,
+	},
+	clientsettings_ctexasynccreate: {
+		name: "ClientSettings_CTexAsyncCreate",
+		default: "",
+		category: 5,
+	},
+	clientsettings_clusteredshading: {
+		name: "ClientSettings_ClusteredShading",
+		default: "",
+		category: 5,
+	},
+	clientsettings_fsr: {
+		name: "ClientSettings_FSR",
+		default: "",
+		category: 5,
+	},
+	clientsettings_high_mem_features: {
+		name: "ClientSettings_HIGH_MEM_FEATURES",
+		default: "",
+		category: 5,
+	},
+	clientsettings_lowlatency: {
+		name: "ClientSettings_LowLatency",
+		default: "",
+		category: 5,
+	},
+	clientsettings_msaa: {
+		name: "ClientSettings_MSAA",
+		default: "",
+		category: 5,
+	},
+	clientsettings_memoryallocationtraces: {
+		name: "ClientSettings_MemoryAllocationTraces",
+		default: "",
+		category: 5,
+	},
+	clientsettings_needsgxrestart: {
+		name: "ClientSettings_NeedsGxRestart",
+		default: "",
+		category: 5,
+	},
+	clientsettings_opt_features: {
+		name: "ClientSettings_OPT_FEATURES",
+		default: "",
+		category: 5,
+	},
+	clientsettings_ray_tracing: {
+		name: "ClientSettings_RAY_TRACING",
+		default: "",
+		category: 5,
+	},
+	clientsettings_rtshadows: {
+		name: "ClientSettings_RTShadows",
+		default: "",
+		category: 5,
+	},
+	clientsettings_shader_mt: {
+		name: "ClientSettings_SHADER_MT",
+		default: "",
+		category: 5,
+	},
+	clientsettings_sm6: {
+		name: "ClientSettings_SM6",
+		default: "",
+		category: 5,
+	},
+	clientsettings_spellclutter: {
+		name: "ClientSettings_SpellClutter",
+		default: "",
+		category: 5,
+	},
+	clientsettings_volumefog: {
+		name: "ClientSettings_VolumeFog",
+		default: "",
+		category: 5,
+	},
+	clientsettings_work_optims: {
+		name: "ClientSettings_WORK_OPTIMS",
+		default: "",
+		category: 5,
+	},
 	clipcursor: {
 		name: "ClipCursor",
 		default: "0",
@@ -328,6 +423,12 @@ export const data: CVarInterface = {
 		default: "0",
 		category: 0,
 		help: "Debug visualization for Torso Twist: 1 = Player, 2 = Target, 3 = All",
+	},
+	deprecatedwarningthrottle: {
+		name: "DeprecatedWarningThrottle",
+		default: "0",
+		category: 5,
+		help: "Time since last warning. A value of \"1\" will disable this message",
 	},
 	depthbasedopacity: {
 		name: "DepthBasedOpacity",
@@ -741,6 +842,12 @@ export const data: CVarInterface = {
 		category: 1,
 		help: "graphics api",
 	},
+	gxcompatallowsm6: {
+		name: "GxCompatAllowSM6",
+		default: "1",
+		category: 5,
+		help: "When disabled, DX12 will use Shader Model 5 shaders instead of Shader Model 6",
+	},
 	gxcompatasyncshadercompilation: {
 		name: "GxCompatAsyncShaderCompilation",
 		default: "1",
@@ -781,6 +888,7 @@ export const data: CVarInterface = {
 		name: "GxMaximize",
 		default: "1",
 		category: 5,
+		help: "toggle fullscreen/window",
 	},
 	gxmonitor: {
 		name: "GxMonitor",
@@ -848,26 +956,29 @@ export const data: CVarInterface = {
 	kioskcansessionexpire: {
 		name: "KioskCanSessionExpire",
 		default: "",
-		category: 5,
+		category: 8,
 		secure: true,
+		help: "Determines if a Kiosk session can expire. 0: No, 1: Yes (default).",
 	},
 	kioskcharactertemplateset: {
 		name: "KioskCharacterTemplateSet",
 		default: "",
-		category: 5,
+		category: 8,
 		secure: true,
+		help: "Character template set ID to select at character creation. Defaults to 0.",
 	},
 	kiosklobbykickseconds: {
 		name: "KioskLobbyKickSeconds",
 		default: "",
-		category: 5,
+		category: 8,
 		secure: true,
+		help: "Seconds until an expired session kicks the player back to the lobby. Defaults to 30 seconds.",
 	},
 	lowlatencymode: {
 		name: "LowLatencyMode",
 		default: "0",
 		category: 1,
-		help: "0=None, 1=BuiltIn, 2=Reflex",
+		help: "0=None, 1=BuiltIn, 2=Reflex, 3=Reflex+Boost, 4=XeLL",
 	},
 	m2forceadditiveparticlesort: {
 		name: "M2ForceAdditiveParticleSort",
@@ -1029,7 +1140,8 @@ export const data: CVarInterface = {
 	outlineenginemode: {
 		name: "OutlineEngineMode",
 		default: "0",
-		category: 5,
+		category: 1,
+		help: "Mode for the OutlineBuffer for the engine",
 	},
 	poishiftcomplete: {
 		name: "POIShiftComplete",
@@ -1130,7 +1242,7 @@ export const data: CVarInterface = {
 	raidwaterdetail: {
 		name: "RAIDWaterDetail",
 		default: "0",
-		category: 5,
+		category: 1,
 		help: "Raid Water surface detail",
 	},
 	raidclusteredshading: {
@@ -1184,7 +1296,7 @@ export const data: CVarInterface = {
 	raidgroundeffectdist: {
 		name: "RAIDgroundEffectDist",
 		default: "70",
-		category: 5,
+		category: 1,
 		help: "Raid Ground effect dist",
 	},
 	raidgroundeffectfade: {
@@ -1232,7 +1344,7 @@ export const data: CVarInterface = {
 	raidparticledensity: {
 		name: "RAIDparticleDensity",
 		default: "100",
-		category: 5,
+		category: 1,
 		help: "Particle density",
 	},
 	raidparticlemtdensity: {
@@ -1250,7 +1362,7 @@ export const data: CVarInterface = {
 	raidreflectionmode: {
 		name: "RAIDreflectionMode",
 		default: "3",
-		category: 5,
+		category: 1,
 		help: "Reflection mode",
 	},
 	raidrefraction: {
@@ -1280,13 +1392,14 @@ export const data: CVarInterface = {
 	raidshadowmode: {
 		name: "RAIDshadowMode",
 		default: "0",
-		category: 5,
+		category: 1,
 		help: "Raid Quality of shadows (0-3)",
 	},
 	raidshadownumcascades: {
 		name: "RAIDshadowNumCascades",
 		default: "1",
-		category: 5,
+		category: 1,
+		help: "Number of shadow cascades (1-4)",
 	},
 	raidshadowrt: {
 		name: "RAIDshadowRt",
@@ -1308,14 +1421,14 @@ export const data: CVarInterface = {
 	},
 	raidspellclutter: {
 		name: "RAIDspellClutter",
-		default: "-1",
+		default: "2",
 		category: 1,
-		help: "Cull unimportant spell effects. -1 means auto based on targetFPS otherwise [0-100], 0 means cull nothing for perf reasons, 100 means cull as much as you can",
+		help: "Spell Density",
 	},
 	raidsunshafts: {
 		name: "RAIDsunShafts",
 		default: "0",
-		category: 5,
+		category: 1,
 		help: "SunShafts",
 	},
 	raidterrainloddist: {
@@ -1394,7 +1507,7 @@ export const data: CVarInterface = {
 	ssao: {
 		name: "SSAO",
 		default: "0",
-		category: 5,
+		category: 1,
 		help: "Screen-Space Ambient Occlusion",
 	},
 	ssaotype: {
@@ -1763,6 +1876,12 @@ export const data: CVarInterface = {
 		category: 7,
 		help: "error speech",
 	},
+	sound_enablegameplaysfx: {
+		name: "Sound_EnableGameplaySFX",
+		default: "1",
+		category: 7,
+		help: "enables gameplay-specific sfx",
+	},
 	sound_enablemixmode2: {
 		name: "Sound_EnableMixMode2",
 		default: "0",
@@ -1820,6 +1939,12 @@ export const data: CVarInterface = {
 		default: "",
 		category: 7,
 		help: "The cutoff value to use for the Highpass filter on the Enemy Player bus (default 80 Hz)",
+	},
+	sound_gameplaysfx: {
+		name: "Sound_GameplaySFX",
+		default: "1.000000",
+		category: 7,
+		help: "sound volume (0.0 to 1.0)",
 	},
 	sound_listeneratcharacter: {
 		name: "Sound_ListenerAtCharacter",
@@ -2209,12 +2334,6 @@ export const data: CVarInterface = {
 		scope: "Character",
 		help: "(Internal only) Time between a failed cast and when it should attempt to cast again in ms. (Clamped to 100 and 10000)",
 	},
-	useoldvolumefog: {
-		name: "UseOldVolumeFog",
-		default: "0.000000",
-		category: 1,
-		help: "Use old volume fog system instead of the rework.",
-	},
 	useslug: {
 		name: "UseSlug",
 		default: "1",
@@ -2324,9 +2443,10 @@ export const data: CVarInterface = {
 	},
 	worldtextminsize: {
 		name: "WorldTextMinSize",
-		default: "0",
+		default: "0.000000",
 		category: 4,
 		scope: "Character",
+		help: "Smallest size used for world text like player names",
 	},
 	worldtextnonrandomz: {
 		name: "WorldTextNonRandomZ",
@@ -2511,7 +2631,7 @@ export const data: CVarInterface = {
 	},
 	agentuid: {
 		name: "agentUID",
-		default: "wow_ptr",
+		default: "",
 		category: 4,
 		help: "The UID provided by Battle.net to be passed to Agent",
 	},
@@ -2553,7 +2673,7 @@ export const data: CVarInterface = {
 		default: "0",
 		category: 4,
 		scope: "Character",
-		help: "swaps out spider creatures for other variants",
+		help: "Swaps out spider creatures for other variants",
 	},
 	assaoadaptivequalitylimit: {
 		name: "assaoAdaptiveQualityLimit",
@@ -2650,7 +2770,7 @@ export const data: CVarInterface = {
 		name: "assistedCombatHighlight",
 		default: "0",
 		category: 4,
-		scope: "Character",
+		scope: "Account",
 		help: "If enabled, a highlight will be displayed on the next spell that should be cast in combat",
 	},
 	assistedcombaticonupdaterate: {
@@ -5359,7 +5479,7 @@ export const data: CVarInterface = {
 	farclip: {
 		name: "farclip",
 		default: "1000",
-		category: 5,
+		category: 1,
 		help: "Far clip plane distance",
 	},
 	ffxantialiasingmode: {
@@ -5776,7 +5896,8 @@ export const data: CVarInterface = {
 	graphicscomputeeffects: {
 		name: "graphicsComputeEffects",
 		default: "3",
-		category: 5,
+		category: 1,
+		help: "UI value of the graphics setting",
 	},
 	graphicsdeptheffects: {
 		name: "graphicsDepthEffects",
@@ -5829,25 +5950,25 @@ export const data: CVarInterface = {
 	graphicsssao: {
 		name: "graphicsSSAO",
 		default: "3",
-		category: 5,
+		category: 1,
 		help: "UI value of the graphics setting",
 	},
 	graphicsshadowquality: {
 		name: "graphicsShadowQuality",
 		default: "3",
-		category: 5,
+		category: 1,
 		help: "UI value of the graphics setting",
 	},
 	graphicsspelldensity: {
 		name: "graphicsSpellDensity",
-		default: "4",
-		category: 5,
+		default: "1",
+		category: 1,
 		help: "UI value of the graphics setting",
 	},
 	graphicstextureresolution: {
 		name: "graphicsTextureResolution",
 		default: "2",
-		category: 5,
+		category: 1,
 		help: "UI value of the graphics setting",
 	},
 	graphicsviewdistance: {
@@ -5865,7 +5986,7 @@ export const data: CVarInterface = {
 	groundeffectdist: {
 		name: "groundEffectDist",
 		default: "70",
-		category: 5,
+		category: 1,
 		help: "Ground effect dist",
 	},
 	groundeffectfade: {
@@ -6076,12 +6197,13 @@ export const data: CVarInterface = {
 	horizonclip: {
 		name: "horizonClip",
 		default: "1600",
-		category: 5,
+		category: 1,
+		help: "Horizon end distance",
 	},
 	horizonstart: {
 		name: "horizonStart",
 		default: "800",
-		category: 5,
+		category: 1,
 		help: "Horizon start distance",
 	},
 	hotreloadmodels: {
@@ -6279,6 +6401,13 @@ export const data: CVarInterface = {
 		scope: "Character",
 		help: "Stores the Cartels of Undermine Rewards renown when Renown UI is closed",
 	},
+	lastrenownformajorfaction2658: {
+		name: "lastRenownForMajorFaction2658",
+		default: "0",
+		category: 4,
+		scope: "Character",
+		help: "Stores the K'aresh Trust renown when Renown UI is closed",
+	},
 	lastrenownformajorfaction2685: {
 		name: "lastRenownForMajorFaction2685",
 		default: "0",
@@ -6292,6 +6421,13 @@ export const data: CVarInterface = {
 		category: 4,
 		scope: "Character",
 		help: "Stores the Flame's Radiance renown when Renown UI is closed",
+	},
+	lastrenownformajorfaction2736: {
+		name: "lastRenownForMajorFaction2736",
+		default: "0",
+		category: 4,
+		scope: "Character",
+		help: "Stores the Manaforge Vandals renown when Renown UI is closed",
 	},
 	lastselectedclubid: {
 		name: "lastSelectedClubId",
@@ -6488,7 +6624,7 @@ export const data: CVarInterface = {
 	lodobjectcullsize: {
 		name: "lodObjectCullSize",
 		default: "15",
-		category: 5,
+		category: 1,
 		help: "Lod object culling size",
 	},
 	lodobjectfadescale: {
@@ -6689,17 +6825,6 @@ export const data: CVarInterface = {
 		category: 4,
 		scope: "Account",
 		help: "Stores whether to show the quest blobs on the minimap.",
-	},
-	minimaptrackedinfov2: {
-		name: "minimapTrackedInfov2",
-		default: "",
-		category: 5,
-	},
-	minimaptrackedinfov3: {
-		name: "minimapTrackedInfov3",
-		default: "",
-		category: 4,
-		help: "Stores the minimap tracking that was active last session.",
 	},
 	minimaptrackedinfov4: {
 		name: "minimapTrackedInfov4",
@@ -7161,7 +7286,7 @@ export const data: CVarInterface = {
 	},
 	nameplateshowfriendlynpcs: {
 		name: "nameplateShowFriendlyNPCs",
-		default: "1",
+		default: "0",
 		category: 4,
 		scope: "Account",
 		secure: true,
@@ -7782,78 +7907,79 @@ export const data: CVarInterface = {
 	raidgraphicscomputeeffects: {
 		name: "raidGraphicsComputeEffects",
 		default: "3",
-		category: 5,
+		category: 1,
+		help: "UI value of the raidGraphics setting",
 	},
 	raidgraphicsdeptheffects: {
 		name: "raidGraphicsDepthEffects",
 		default: "3",
-		category: 5,
+		category: 1,
 		help: "UI value of the raidGraphics setting",
 	},
 	raidgraphicsenvironmentdetail: {
 		name: "raidGraphicsEnvironmentDetail",
 		default: "6",
-		category: 5,
+		category: 1,
 		help: "UI value of the raidGraphics setting",
 	},
 	raidgraphicsgroundclutter: {
 		name: "raidGraphicsGroundClutter",
 		default: "6",
-		category: 5,
+		category: 1,
 		help: "UI value of the raidGraphics setting",
 	},
 	raidgraphicsliquiddetail: {
 		name: "raidGraphicsLiquidDetail",
 		default: "2",
-		category: 5,
+		category: 1,
 		help: "UI value of the raidGraphics setting",
 	},
 	raidgraphicsoutlinemode: {
 		name: "raidGraphicsOutlineMode",
 		default: "2",
-		category: 5,
+		category: 1,
 		help: "UI value of the raidGraphics setting",
 	},
 	raidgraphicsparticledensity: {
 		name: "raidGraphicsParticleDensity",
 		default: "4",
-		category: 5,
+		category: 1,
 		help: "UI value of the raidGraphics setting",
 	},
 	raidgraphicsprojectedtextures: {
 		name: "raidGraphicsProjectedTextures",
 		default: "1",
-		category: 5,
+		category: 1,
 		help: "UI value of the raidGraphics setting",
 	},
 	raidgraphicsssao: {
 		name: "raidGraphicsSSAO",
 		default: "3",
-		category: 5,
+		category: 1,
 		help: "UI value of the raidGraphics setting",
 	},
 	raidgraphicsshadowquality: {
 		name: "raidGraphicsShadowQuality",
 		default: "3",
-		category: 5,
+		category: 1,
 		help: "UI value of the raidGraphics setting",
 	},
 	raidgraphicsspelldensity: {
 		name: "raidGraphicsSpellDensity",
-		default: "4",
-		category: 5,
+		default: "1",
+		category: 1,
 		help: "UI value of the raidGraphics setting",
 	},
 	raidgraphicstextureresolution: {
 		name: "raidGraphicsTextureResolution",
 		default: "2",
-		category: 5,
+		category: 1,
 		help: "UI value of the raidGraphics setting",
 	},
 	raidgraphicsviewdistance: {
 		name: "raidGraphicsViewDistance",
 		default: "6",
-		category: 5,
+		category: 1,
 		help: "UI value of the raidGraphics setting",
 	},
 	raidoptiondisplaymaintankandassist: {
@@ -8034,7 +8160,7 @@ export const data: CVarInterface = {
 	},
 	scripterrors: {
 		name: "scriptErrors",
-		default: "1",
+		default: "0",
 		category: 4,
 		scope: "Character",
 		help: "Whether or not the UI shows Lua errors",
@@ -8140,7 +8266,7 @@ export const data: CVarInterface = {
 	},
 	serveralert: {
 		name: "serverAlert",
-		default: "https://breaking-news.support.blizzard.com/service/wow-client/ptr/us/en-US",
+		default: "https://breaking-news.support.blizzard.com/service/wow-client/live/eu/en-US",
 		category: 6,
 		help: "Get the glue-string tag for the URL",
 	},
@@ -8166,7 +8292,8 @@ export const data: CVarInterface = {
 	shadownumcascades: {
 		name: "shadowNumCascades",
 		default: "1",
-		category: 5,
+		category: 1,
+		help: "Number of shadow cascades (1-4)",
 	},
 	shadowrt: {
 		name: "shadowRt",
@@ -8328,7 +8455,8 @@ export const data: CVarInterface = {
 	showphotosensitivitywarning: {
 		name: "showPhotosensitivityWarning",
 		default: "-1",
-		category: 5,
+		category: 4,
+		help: "Showing photosensitivity warning on startup",
 	},
 	showpingsinchat: {
 		name: "showPingsInChat",
@@ -8643,9 +8771,15 @@ export const data: CVarInterface = {
 	},
 	spellclutter: {
 		name: "spellClutter",
-		default: "-1",
+		default: "4",
 		category: 1,
-		help: "Cull unimportant spell effects. -1 means auto based on targetFPS otherwise [0-100], 0 means cull nothing for perf reasons, 100 means cull as much as you can",
+		help: "Spell Density",
+	},
+	spellvisualdensityfiltersetting: {
+		name: "spellVisualDensityFilterSetting",
+		default: "4",
+		category: 4,
+		help: "SVK Density, set by the UI Spell Density setting. 0 - none (dev-only), 1 - minimum, 2 - reduced, 3 - performance, 4 - full",
 	},
 	splashscreenboost: {
 		name: "splashScreenBoost",
@@ -8783,13 +8917,13 @@ export const data: CVarInterface = {
 	},
 	telemetrywowpackage: {
 		name: "telemetryWowPackage",
-		default: "Blizzard.Telemetry.Wow_Mainline_PTR",
+		default: "Blizzard.Telemetry.Wow_Mainline",
 		category: 5,
 		help: "The primary package we want to send telemetry to e.g. Wow_Mainline or Wow_Classic",
 	},
 	telemetrywowlabspackage: {
 		name: "telemetryWowlabsPackage",
-		default: "Blizzard.Telemetry.Wow_Mainline_PTR",
+		default: "Blizzard.Telemetry.Wow_Mainline",
 		category: 5,
 		help: "The secondary package we want to send telemetry to e.g. Wow_Wowlabs",
 	},
@@ -9288,6 +9422,12 @@ export const data: CVarInterface = {
 		secure: true,
 		help: "Whether or not the UI scale should be used",
 	},
+	userfontscale: {
+		name: "userFontScale",
+		default: "1",
+		category: 4,
+		help: "Defines the scale of the font used in places around the UI where readability requires larger defaults which are still customizable by the user.",
+	},
 	validateframexml: {
 		name: "validateFrameXML",
 		default: "1",
@@ -9318,6 +9458,24 @@ export const data: CVarInterface = {
 		category: 1,
 		help: "Volume Fog",
 	},
+	volumefogdisablelightscattering: {
+		name: "volumeFogDisableLightScattering",
+		default: "0",
+		category: 1,
+		help: "0: vf point light scattering enabled. 1: disabled",
+	},
+	volumefogdisablenoise: {
+		name: "volumeFogDisableNoise",
+		default: "0",
+		category: 1,
+		help: "0: vf noise enabled. 1: noise disabled",
+	},
+	volumefogdisableshadows: {
+		name: "volumeFogDisableShadows",
+		default: "0",
+		category: 1,
+		help: "0: vf shadows enabled. 1: shadows disabled",
+	},
 	volumefoginterior: {
 		name: "volumeFogInterior",
 		default: "1",
@@ -9329,6 +9487,12 @@ export const data: CVarInterface = {
 		default: "2",
 		category: 1,
 		help: "Volume Fog Level (0-3)",
+	},
+	volumefoguse16bittexture: {
+		name: "volumeFogUse16BitTexture",
+		default: "0",
+		category: 1,
+		help: "0: 8 bit. 1: 16 bit. REQUIRES gxRestart",
 	},
 	vrsparticles: {
 		name: "vrsParticles",
@@ -9468,7 +9632,7 @@ export const data: CVarInterface = {
 	waterdetail: {
 		name: "waterDetail",
 		default: "0",
-		category: 5,
+		category: 1,
 		help: "Water surface detail",
 	},
 	weatherdensity: {
@@ -9543,12 +9707,6 @@ export const data: CVarInterface = {
 		default: "1",
 		category: 1,
 		help: "Sort objects by distance when loading",
-	},
-	worldmaxmiplevel: {
-		name: "worldMaxMipLevel",
-		default: "12",
-		category: 1,
-		help: "World maximum texture mip level",
 	},
 	worldpreloadhighrestextures: {
 		name: "worldPreloadHighResTextures",

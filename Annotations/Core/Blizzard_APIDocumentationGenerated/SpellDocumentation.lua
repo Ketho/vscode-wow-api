@@ -1,6 +1,10 @@
 ---@meta _
 C_Spell = {}
 
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_Spell.CancelSpellByID)
+---@param spellID number
+function C_Spell.CancelSpellByID(spellID) end
+
 ---Returns true if the spell exists, regardless of whether the player has learned it
 ---
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_Spell.DoesSpellExist)

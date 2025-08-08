@@ -17,9 +17,9 @@
 			}
 		},
 		{
-			"label": "Lua 5.4 wow-api",
+			"label": "Lua run",
 			"type": "shell",
-			"command": "lua54 LuaScripts/main.lua",
+			"command": "source .lua/bin/activate && lua luasrc/init.lua",
 			"presentation": {
 				"showReuseMessage": false,
 				"clear": true
@@ -27,13 +27,20 @@
 			"problemMatcher": []
 		},
 		{
-			"label": "Lua 5.4 parseWiki",
+			"label": "Lua parseWiki",
 			"type": "shell",
-			"command": "lua54 LuaScripts/parseWiki.lua",
+			"command": "source .lua/bin/activate && lua luasrc/parseWiki.lua",
 			"presentation": {
 				"showReuseMessage": false,
 				"clear": true
 			},
+			"problemMatcher": []
+		},
+		{
+			"label": "Sync wowdoc",
+			"type": "shell",
+			"command": "rsync -av --delete wowdoc/ ~/WowDoc/wowdoc/",
+			"presentation": {"showReuseMessage": false, "clear": true},
 			"problemMatcher": []
 		}
 	]

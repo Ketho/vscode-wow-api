@@ -1,6 +1,10 @@
 ---@meta _
 C_Bank = {}
 
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_Bank.AreAnyBankTypesViewable)
+---@return boolean areAnyBankTypesViewable
+function C_Bank.AreAnyBankTypesViewable() end
+
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_Bank.AutoDepositItemsIntoBank)
 ---@param bankType Enum.BankType
 function C_Bank.AutoDepositItemsIntoBank(bankType) end
@@ -38,15 +42,30 @@ function C_Bank.CloseBankFrame() end
 ---@param amount WOWMONEY
 function C_Bank.DepositMoney(bankType, amount) end
 
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_Bank.DoesBankTypeSupportAutoDeposit)
+---@param bankType Enum.BankType
+---@return boolean doesBankTypeSupportAutoDeposit
+function C_Bank.DoesBankTypeSupportAutoDeposit(bankType) end
+
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_Bank.DoesBankTypeSupportMoneyTransfer)
+---@param bankType Enum.BankType
+---@return boolean doesBankTypeSupportMoneyTransfer
+function C_Bank.DoesBankTypeSupportMoneyTransfer(bankType) end
+
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_Bank.FetchBankLockedReason)
+---@param bankType Enum.BankType
+---@return Enum.BankLockedReason? reason
+function C_Bank.FetchBankLockedReason(bankType) end
+
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_Bank.FetchDepositedMoney)
 ---@param bankType Enum.BankType
 ---@return WOWMONEY amount
 function C_Bank.FetchDepositedMoney(bankType) end
 
----[Documentation](https://warcraft.wiki.gg/wiki/API_C_Bank.FetchNextPurchasableBankTabCost)
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_Bank.FetchNextPurchasableBankTabData)
 ---@param bankType Enum.BankType
----@return BigUInteger? nextPurchasableTabCost
-function C_Bank.FetchNextPurchasableBankTabCost(bankType) end
+---@return PurchasableBankTabData? nextPurchasableTabData
+function C_Bank.FetchNextPurchasableBankTabData(bankType) end
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_Bank.FetchNumPurchasedBankTabs)
 ---@param bankType Enum.BankType
@@ -62,6 +81,10 @@ function C_Bank.FetchPurchasedBankTabData(bankType) end
 ---@param bankType Enum.BankType
 ---@return Enum.BagIndex[] purchasedBankTabIDs
 function C_Bank.FetchPurchasedBankTabIDs(bankType) end
+
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_Bank.FetchViewableBankTypes)
+---@return Enum.BankType[] viewableBankTypes
+function C_Bank.FetchViewableBankTypes() end
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_Bank.HasMaxBankTabs)
 ---@param bankType Enum.BankType
@@ -97,3 +120,12 @@ function C_Bank.WithdrawMoney(bankType, amount) end
 ---@field name string
 ---@field icon fileID
 ---@field depositFlags Enum.BagSlotFlags
+---@field tabCleanupConfirmation string
+---@field tabNameEditBoxHeader string
+
+---@class PurchasableBankTabData
+---@field tabCost BigUInteger
+---@field canAfford boolean
+---@field purchasePromptTitle string
+---@field purchasePromptBody string
+---@field purchasePromptConfirmation string

@@ -34,6 +34,10 @@ function GetSpecializationInfoForSpecID(specID, gender) end
 ---@return string? name
 function GetSpecializationNameForSpecID(specID, gender) end
 
+---[Documentation](https://warcraft.wiki.gg/wiki/API_HasLootSpecializations)
+---@return boolean hasLootSpecializations
+function HasLootSpecializations() end
+
 ---@class SpecializationInfoResult
 ---@field id number
 ---@field name string

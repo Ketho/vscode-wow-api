@@ -14,7 +14,7 @@ function C_AssistedCombat.GetNextCastSpell(checkForVisibleButton) end
 ---@return number[] spellIDs
 function C_AssistedCombat.GetRotationSpells() end
 
----[Documentation](https://warcraft.wiki.gg/wiki/API_C_AssistedCombat.IsAssistedCombatHighlightAvailable)
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_AssistedCombat.IsAvailable)
 ---@return boolean isAvailable
 ---@return string failureReason
-function C_AssistedCombat.IsAssistedCombatHighlightAvailable() end
+function C_AssistedCombat.IsAvailable() end

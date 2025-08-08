@@ -1,4 +1,6 @@
 ---@meta _
+---@diagnostic disable: duplicate-doc-field
+---@diagnostic disable: duplicate-doc-alias
 --- added: gcinfo
 --- edited: xpcall (lua 5.2), getfenv
 --- removed: dofile, load, loadfile, module, rawlen, warn

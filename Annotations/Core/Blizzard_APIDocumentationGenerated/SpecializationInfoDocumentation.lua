@@ -16,6 +16,12 @@ function C_SpecializationInfo.CanPlayerUseTalentSpecUI() end
 ---@return string failureReason
 function C_SpecializationInfo.CanPlayerUseTalentUI() end
 
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_SpecializationInfo.GetActiveSpecGroup)
+---@param isInspect? boolean
+---@param isPet? boolean
+---@return number groupIndex
+function C_SpecializationInfo.GetActiveSpecGroup(isInspect, isPet) end
+
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_SpecializationInfo.GetAllSelectedPvpTalentIDs)
 ---@return number[] selectedPvpTalentIDs
 function C_SpecializationInfo.GetAllSelectedPvpTalentIDs() end
@@ -32,9 +38,9 @@ function C_SpecializationInfo.GetClassIDFromSpecID(specID) end
 function C_SpecializationInfo.GetInspectSelectedPvpTalent(inspectedUnit, talentIndex) end
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_SpecializationInfo.GetNumSpecializationsForClassID)
----@param specID number
+---@param classID number
 ---@return number specCount
-function C_SpecializationInfo.GetNumSpecializationsForClassID(specID) end
+function C_SpecializationInfo.GetNumSpecializationsForClassID(classID) end
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_SpecializationInfo.GetPvpTalentAlertStatus)
 ---@return boolean hasUnspentSlot
@@ -66,10 +72,48 @@ function C_SpecializationInfo.GetPvpTalentUnlockLevel(talentID) end
 ---@return number[] specIDs
 function C_SpecializationInfo.GetSpecIDs(specSetID) end
 
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_SpecializationInfo.GetSpecialization)
+---@param isInspect? boolean
+---@param isPet? boolean
+---@param specGroupIndex? number
+---@return number specializationIndex
+function C_SpecializationInfo.GetSpecialization(isInspect, isPet, specGroupIndex) end
+
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_SpecializationInfo.GetSpecializationInfo)
+---@param specializationIndex number
+---@param isInspect? boolean Default = false
+---@param isPet? boolean Default = false
+---@param inspectTarget? string
+---@param sex? number
+---@param groupIndex? number
+---@return number? specId Default = 0
+---@return string? name
+---@return string? description
+---@return fileID? icon
+---@return string? role
+---@return number? primaryStat
+---@return number? pointsSpent Default = 0
+---@return string? background
+---@return number? previewPointsSpent Default = 0
+---@return boolean? isUnlocked Default = true
+function C_SpecializationInfo.GetSpecializationInfo(specializationIndex, isInspect, isPet, inspectTarget, sex, groupIndex) end
+
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_SpecializationInfo.GetSpecializationMasterySpells)
+---@param specializationIndex number
+---@param isInspect? boolean
+---@param isPet? boolean
+---@return number[] spellIDs
+function C_SpecializationInfo.GetSpecializationMasterySpells(specializationIndex, isInspect, isPet) end
+
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_SpecializationInfo.GetSpellsDisplay)
 ---@param specializationID number
 ---@return number[] spellID
 function C_SpecializationInfo.GetSpellsDisplay(specializationID) end
+
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_SpecializationInfo.GetTalentInfo)
+---@param query TalentInfoQuery
+---@return TalentInfoResult? result
+function C_SpecializationInfo.GetTalentInfo(query) end
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_SpecializationInfo.IsInitialized)
 ---@return boolean isSpecializationDataInitialized
@@ -118,3 +162,53 @@ function C_SpecializationInfo.SetSpecialization(specIndex) end
 ---@field level number
 ---@field selectedTalentID number?
 ---@field availableTalentIDs number[]
+
+---@class SpecializationInfoOutput
+---@field specId number? Default = 0
+---@field name string?
+---@field description string?
+---@field icon fileID?
+---@field role string?
+---@field primaryStat number?
+---@field pointsSpent number? Default = 0
+---@field background string?
+---@field previewPointsSpent number? Default = 0
+---@field isUnlocked boolean? Default = true
+
+---@class SpecializationInfoQuery
+---@field specializationIndex number
+---@field isInspect boolean? Default = false
+---@field isPet boolean? Default = false
+---@field inspectTarget string?
+---@field sex number?
+---@field groupIndex number?
+
+---@class TalentInfoQuery
+---@field groupIndex number?
+---@field isInspect boolean? Default = false
+---@field tier number?
+---@field column number?
+---@field target UnitToken?
+---@field specializationIndex number?
+---@field talentIndex number?
+---@field isPet boolean? Default = false
+
+---@class TalentInfoResult
+---@field talentID number? Default = 0
+---@field name string
+---@field icon fileID
+---@field tier number
+---@field column number
+---@field selected boolean? Default = false
+---@field available boolean? Default = false
+---@field spellID number? Default = 0
+---@field isPVPTalentUnlocked boolean? Default = false
+---@field known boolean? Default = false
+---@field grantedByAura boolean? Default = false
+---@field rank number
+---@field maxRank number
+---@field meetsPrereq boolean? Default = false
+---@field previewRank number
+---@field meetsPreviewPrereq boolean? Default = false
+---@field isExceptional boolean? Default = false
+---@field hasGoldBorder boolean? Default = false

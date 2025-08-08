@@ -5,5 +5,13 @@ node_modules
 *.vsix
 
 *.xml
-LuaScripts/Data
+luasrc/out
+
+# python
+/.venv
+
+# hererocks
 /.lua
+
+# framexml
+/wow-ui-source

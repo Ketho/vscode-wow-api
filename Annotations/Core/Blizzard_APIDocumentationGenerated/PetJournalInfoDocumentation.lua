@@ -7,6 +7,10 @@ function C_PetJournal.ClearHoveredBattlePet() end
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_PetJournal.ClearSearchFilter)
 function C_PetJournal.ClearSearchFilter() end
 
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_PetJournal.DismissSummonedPet)
+---@param petID WOWGUID
+function C_PetJournal.DismissSummonedPet(petID) end
+
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_PetJournal.GetDisplayIDByIndex)
 ---@param speciesID number
 ---@param index number
@@ -74,6 +78,11 @@ function C_PetJournal.GetSearchFilter() end
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_PetJournal.HasFavoritePets)
 ---@return boolean hasFavorites
 function C_PetJournal.HasFavoritePets() end
+
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_PetJournal.IsCurrentlySummoned)
+---@param petID WOWGUID
+---@return boolean isSummoned
+function C_PetJournal.IsCurrentlySummoned(petID) end
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_PetJournal.IsUsingDefaultFilters)
 ---@return boolean isUsingDefaultFilters
