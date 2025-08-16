@@ -7,8 +7,8 @@ local products = require("wowdoc.products")
 local git = require("wowdoc.git")
 local enum = require("wowdoc.enum")
 local patches = require("wowdoc.loader.patches")
-local annotate = require("luasrc.annotate")
-local custom_doc = require("luasrc.custom_doc")
+local annotate
+local custom_doc
 
 local LOADER_PATH = pathlib.join("wowdoc", "loader")
 local OUTPUT_PATH = pathlib.join("Annotations", "Core", "Blizzard_APIDocumentationGenerated")
@@ -106,6 +106,8 @@ function m:main(product, isAnnotate)
 	local addons_path = pathlib.join("wow-ui-source", "Interface", "AddOns")
 	LoadAddon(addons_path, "Blizzard_APIDocumentation")
 	if isAnnotate then
+		annotate = require("luasrc.annotate")
+		custom_doc = require("luasrc.custom_doc")
 		LoadAnnotationAddon(addons_path, "Blizzard_APIDocumentationGenerated")
 	else
 		LoadAddon(addons_path, "Blizzard_APIDocumentationGenerated")
