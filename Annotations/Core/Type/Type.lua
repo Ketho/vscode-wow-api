@@ -96,6 +96,22 @@
 ---|"RANGEDSLOT"
 ---|"TABARDSLOT"
 
+---@alias SendChatMessageType
+---|"SAY"
+---|"EMOTE"
+---|"YELL"
+---|"PARTY"
+---|"RAID"
+---|"RAID_WARNING"
+---|"INSTANCE_CHAT"
+---|"GUILD"
+---|"OFFICER"
+---|"WHISPER"
+---|"CHANNEL"
+---|"AFK"
+---|"DND"
+---|"VOICE_TEXT"
+
 -- backwards compat
 ---@alias UnitId UnitToken
 ---@alias WowEvent FrameEvent
