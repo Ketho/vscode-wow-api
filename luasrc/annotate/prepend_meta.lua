@@ -1,4 +1,5 @@
 local lfs = require "lfs"
+local pathlib = require "path"
 local log = require("wowdoc.log")
 
 local skipDir = {
@@ -15,7 +16,7 @@ local function IterateFiles(folder, func, arg1)
 				IterateFiles(path, func, arg1)
 			end
 		else
-			if fileName:find("%.lua") and not fileName:find("Numy") then
+			if fileName:find("%.lua") then
 				func(path, arg1)
 			end
 		end
@@ -47,4 +48,4 @@ local function PrependText(path)
     end
 end
 
-IterateFiles("Annotations", PrependText)
+IterateFiles(pathlib.join("Annotations", "Core"), PrependText)
