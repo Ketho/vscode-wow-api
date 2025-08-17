@@ -2,6 +2,11 @@
 set -e
 
 sudo apt update
+
+# npm
+sudo apt install npm -y
+npm install
+
 # venv
 sudo apt install python3-pip python3-venv -y
 python3 -m venv .venv

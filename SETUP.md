@@ -7,7 +7,7 @@ You can use Linux but this project has only been tested with [WSL](https://code.
 wsl --install
 ```
 
-The [setup.sh](setup.sh) script installs Lua 5.4 and LuaRocks via [hererocks](https://github.com/luarocks/hererocks) which is self-contained. The module dependencies are in the [rockspec](https://github.com/Ketho/vscode-wow-api/blob/master/vscode-wow-api-scm-0.rockspec).
+The [setup.sh](setup.sh) script installs Lua 5.4 and LuaRocks via [hererocks](https://github.com/luarocks/hererocks) which is self-contained. The module dependencies are in the [rockspec](https://github.com/Ketho/vscode-wow-api/blob/master/vscode-wow-api-scm-0.rockspec). It also installs npm packages for TypeScript definitions and ESLint.
 ```sh
 # wherever you want to clone the repo
 cd ~
