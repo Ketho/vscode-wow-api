@@ -21,3 +21,5 @@ source .lua/bin/activate
 # modules
 sudo apt install libssl-dev -y
 luarocks build
+
+echo "Setup complete for vscode-wow-api"

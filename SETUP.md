@@ -14,7 +14,7 @@ cd ~
 git clone https://github.com/Ketho/vscode-wow-api
 cd vscode-wow-api
 
-./setup
+./setup.sh
 ```
 
 > [!NOTE]  
