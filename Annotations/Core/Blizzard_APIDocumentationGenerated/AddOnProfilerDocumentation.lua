@@ -68,7 +68,7 @@ function C_AddOnProfiler.IsEnabled() end
 ---@param ... LuaValueVariant arguments
 ---@return AddOnProfilerCallResults results
 ---@return LuaValueVariant ... returns
-function C_AddOnProfiler.MeasureCall(func, arguments) end
+function C_AddOnProfiler.MeasureCall(func, ...) end
 
 ---@class AddOnPerformanceMessage
 ---@field type Enum.AddOnPerformanceMessageType

@@ -2,7 +2,7 @@
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_CreateFromMixins)
 ---@param ... LuaValueVariant mixins
 ---@return LuaValueVariant object
-function CreateFromMixins(mixins) end
+function CreateFromMixins(...) end
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_CreateWindow)
 ---@param popupStyle? boolean Default = true
@@ -38,7 +38,7 @@ function GetSourceLocation() end
 ---@param object LuaValueVariant
 ---@param ... LuaValueVariant mixins
 ---@return LuaValueVariant outObject
-function Mixin(object, mixins) end
+function Mixin(object, ...) end
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_RunScript)
 ---@param text string

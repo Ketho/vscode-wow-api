@@ -42,6 +42,28 @@ function m:GetSystem(system)
 	return table.concat(tbl, "\n\n")
 end
 
+local function HasVararg(tbl)
+	for _, v in pairs(tbl or {}) do
+		if v.StrideIndex then
+			return true
+		end
+	end
+end
+
+local function GetFuncFullNameVararg(tbl)
+	local t = {}
+	for _, v in pairs(tbl.Arguments) do
+		if v.StrideIndex then
+			table.insert(t, "...")
+		else
+			table.insert(t, v.Name)
+		end
+	end
+	local arguments = table.concat(t, ", ")
+	local fullName = Util:GetFullName(tbl)
+	local signature = string.format("%s(%s)", fullName, arguments)
+	return signature
+end
 
 local fs_doc = "---[Documentation](https://warcraft.wiki.gg/wiki/%s)"
 
@@ -73,7 +95,14 @@ function m:GetFunction(func, widgetName)
 	if widgetName then
 		table.insert(funcLine, string.format("%s:", widgetName))
 	end
-	table.insert(funcLine, string.format("%s end", func:GetFullName(false, false)))
+	local funcArguments
+	if HasVararg(func.Arguments) then
+		-- luals varargs need to be annotated with "..."
+		funcArguments = GetFuncFullNameVararg(func)
+	else
+		funcArguments = func:GetFullName(false, false)
+	end
+	table.insert(funcLine, string.format("%s end", funcArguments))
 	table.insert(tbl, table.concat(funcLine))
 	return table.concat(tbl, "\n")
 end
