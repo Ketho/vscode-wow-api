@@ -111,22 +111,7 @@ local Types =
 		-- 11.2.0
 		{ Name = "MouseButton", Type = "string", Values = {"LeftButton", "RightButton", "MiddleButton", "Button4", "Button5"} },
 		{ Name = "ClickButton", Type = "string", Values = {"AnyUp", "AnyDown", "LeftButtonUp", "LeftButtonDown", "RightButtonUp", "RightButtonDown", "MiddleButtonUp", "MiddleButtonDown", "Button4Up", "Button4Down", "Button5Up", "Button5Down"} },
-		{ Name = "SendChatMessageType", Type = "string", Values = {
-			"SAY",
-			"EMOTE",
-			"YELL",
-			"PARTY",
-			"RAID",
-			"RAID_WARNING",
-			"INSTANCE_CHAT",
-			"GUILD",
-			"OFFICER",
-			"WHISPER",
-			"CHANNEL",
-			"AFK",
-			"DND",
-			"VOICE_TEXT",
-		} },
+		{ Name = "SendChatMessageType", Type = "string", Values = {"SAY", "EMOTE", "YELL", "PARTY", "RAID", "RAID_WARNING", "INSTANCE_CHAT", "GUILD", "OFFICER", "WHISPER", "CHANNEL", "AFK", "DND", "VOICE_TEXT"} },
 
 		-- widgets
 		-- defined: ScriptObject

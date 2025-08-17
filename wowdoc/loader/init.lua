@@ -80,7 +80,7 @@ local function LoadAnnotationAddon(path, name)
 					if docInfo.Type == "System" or not docInfo.Type then
 						wowdoc:WriteFileMeta(pathlib.join(OUTPUT_PATH, line), text.."\n")
 					elseif docInfo.Type == "ScriptObject" then
-						wowdoc:WriteFileMeta(pathlib.join("LuaScripts", "Data", "widget", line), text.."\n")
+						wowdoc:WriteFileMeta(pathlib.join(OUT_WIDGET, line), text.."\n")
 					end
 				end
 				documentationInfo = nil

@@ -1,20 +1,17 @@
 local pathlib = require("path")
 
--- folder configuration
-local folders = {
-	OUT_PATH = {"luasrc", "out"},
-	OUT_CACHE = {"luasrc", "out", "cache"},
-	OUT_OUTPUT = {"luasrc", "out", "output"},
-	WAGO_CACHE = {"luasrc", "out", "wago"},
-	ENUM_CACHE = {"luasrc", "out", "enum"},
-	CVAR_CACHE = {"luasrc", "out", "cvar"},
-	ANNOTATIONS_DATA = {"Annotations", "Core", "Data"},
-}
-
-for k, v in pairs(folders) do
-	local path = pathlib.join(table.unpack(v))
+local function CreatePath(name, path)
 	if not pathlib.exists(path) then
 		pathlib.mkdir(path)
 	end
-	_G[k] = path
+	_G[name] = path
 end
+
+CreatePath("OUT_PATH", pathlib.join("luasrc", "out"))
+CreatePath("OUT_CACHE", pathlib.join(OUT_PATH, "cache"))
+CreatePath("OUT_OUTPUT", pathlib.join(OUT_PATH, "output"))
+CreatePath("WAGO_CACHE", pathlib.join(OUT_PATH, "wago"))
+CreatePath("ENUM_CACHE", pathlib.join(OUT_PATH, "enum"))
+CreatePath("CVAR_CACHE", pathlib.join(OUT_PATH, "cvar"))
+CreatePath("OUT_WIDGET", pathlib.join(OUT_PATH, "widget"))
+CreatePath("ANNOTATIONS_DATA", pathlib.join("Annotations", "Core", "Data"))
