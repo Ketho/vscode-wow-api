@@ -14,15 +14,14 @@ end
 
 function m:LoadLuaEnums(branch)
 	if Enum then
-		log:warn("WowDocLoader: Enum already loaded")
+		log:warn("WowDocLoader: Enum table already loaded")
 		return
-	else
-		log:success("WowDocLoader: Loading Enum")
 	end
 	local path = pathlib.join(PATH, string.format("LuaEnum_%s.lua", branch))
 	local url = string.format("%s/%s/Resources/LuaEnum.lua", REPO, branch)
 	util:DownloadAndRun(url, path)
 	ApplyFixes()
+	log:success("WowDocLoader: Loaded Enum table")
 end
 
 return m

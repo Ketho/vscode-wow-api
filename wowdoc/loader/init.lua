@@ -114,6 +114,7 @@ function m:main(product, isAnnotate)
 	end
 
 	require(pathlib.join(LOADER_PATH, "TypeDocumentation"))
+	log:success("WowDocLoader: Loaded APIDocumentation")
 	-- self:PrintSystems()
 end
 

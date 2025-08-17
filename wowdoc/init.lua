@@ -68,7 +68,7 @@ m.RelativePath = {
 ---@param cmd string
 ---@return string result
 function m:run_command(cmd)
-	log:info("Running command: "..cmd)
+	log:important("Running command: "..cmd)
 	local handle = io.popen(cmd)
 	local result = handle:read("a")
 	handle:close()

@@ -1,7 +1,5 @@
-local lfs = require "lfs"
-
 local Util = require("wowdoc")
-local parser = require("wowdoc.wago")
+local wago = require("wowdoc.wago")
 
 Util:MakeDir("src/data/globalstring")
 
@@ -35,7 +33,7 @@ local function IsValidTableKey(s)
 end
 
 function m:ToTypeScript(locale, build)
-	local globalstrings = parser:ReadCSV("globalstrings", {header = true, locale = locale, build = build})
+	local globalstrings = wago:ReadCSV("globalstrings", {header = true, locale = locale, build = build})
 	local stringsTable = {}
 	for line in globalstrings:lines() do
 		local flags = tonumber(line.Flags)
@@ -69,8 +67,8 @@ function m:ToTypeScript(locale, build)
 	return pre..table.concat(t, "\n")
 end
 
-function m:WriteLocales(branch)
-	local latestBuild = parser:FindBuild(branch)
+function m:WriteLocales(product)
+	local latestBuild = wago:GetLatestBuild(product)
 	for _, locale in pairs(locales) do
 		local path = string.format("src/data/globalstring/%s.ts", locale)
 		local data = self:ToTypeScript(locale, latestBuild)

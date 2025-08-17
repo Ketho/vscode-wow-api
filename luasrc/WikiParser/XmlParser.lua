@@ -1,6 +1,7 @@
 local xml2lua = require "xml2lua"
 local handler = require "xmlhandler.tree"
 local Util = require("wowdoc")
+local log = require("wowdoc.log")
 
 local PATH = "luasrc/out/cache/Wowpedia_API.xml"
 
@@ -403,5 +404,5 @@ m:ParsePages()
 -- 	print(k, v[1], v[2])
 -- end
 
-print("Parsed XML")
+log:success("Parsed XML")
 return {validatedApi, nonValidatedApi, luals_api, luals_multiapi}

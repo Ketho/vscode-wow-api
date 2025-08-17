@@ -86,6 +86,8 @@
         "MAX_SUMMONABLE_PETS",
         "NUM_PET_SLOTS_HUNTER",
         "ENUM_CACHE",
-        "CVAR_CACHE"
+        "CVAR_CACHE",
+        "ANNOTATIONS_DATA",
+        "WAGO_CACHE"
     ],
 }

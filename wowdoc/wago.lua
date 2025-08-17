@@ -115,7 +115,7 @@ function m:ReadCSV(name, options)
 		DownloadFile(url, path)
 	end
 	if PathExists(path) then
-		print("reading", path)
+		log:info(string.format('Reading CSV "%s"', path))
 		local iter = csv.open(path, {header = options and options.header})
 		return iter
 	end

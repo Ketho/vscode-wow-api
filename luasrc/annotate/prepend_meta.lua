@@ -1,4 +1,5 @@
 local lfs = require "lfs"
+local log = require("wowdoc.log")
 
 local skipDir = {
 	["."] = true,
@@ -40,7 +41,7 @@ local function PrependText(path)
     local contents = ReadFile(path)
 	-- dont overwrite files with that have a named meta
     if not contents:find("---%s?@meta") then
-		print("rewriting", path)
+		log:info(string.format('Prepending meta "%s"', path))
         os.remove(path)
         WriteFile(path, "---@meta _\n"..contents)
     end
