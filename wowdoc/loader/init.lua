@@ -96,7 +96,7 @@ function m:main(product, isAnnotate)
 		log:warn("WoWDocLoader: APIDocumentation already loaded")
 		return
 	else
-		log:success("WowDocLoader: Loading APIDocumentation")
+		log:info("WowDocLoader: Loading APIDocumentation")
 	end
 	local framexml_branch, blizzres_branch = products:GetBranch(product)
 	git:checkout("https://github.com/Gethe/wow-ui-source", framexml_branch)
