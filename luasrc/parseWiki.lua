@@ -1,14 +1,8 @@
-local Path = require "path"
-local Util = require(Path.join("luasrc", "Util", "Util"))
+require("luasrc.config")
+local PRODUCT = "wow" ---@type TactProduct
+GETHE_BRANCH, BLIZZRES_BRANCH = require("wowdoc.products"):GetBranch(PRODUCT)
 
-local path_luadata = Path.join("luasrc", "Data")
-Util:DownloadAndRun(
-	string.format(Path.join(path_luadata, "cache", "LuaEnum_%s.lua"), BLIZZRES_BRANCH),
-	string.format("https://raw.githubusercontent.com/Ketho/BlizzardInterfaceResources/%s/Resources/LuaEnum.lua", BLIZZRES_BRANCH)
-)
-Enum.LFGRoleMeta = {NumValue = 3}
-local WowDocLoader_path = Path.join("luasrc", "WowDocLoader")
-local WowDocLoader = require(Path.join(WowDocLoader_path, "WowDocLoader"))
-WowDocLoader:main(WowDocLoader_path)
+local loader = require("wowdoc.loader")
+loader:main(PRODUCT)
 
 require("luasrc.WikiParser.WikiParser")
