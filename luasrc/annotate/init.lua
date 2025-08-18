@@ -1,5 +1,4 @@
 local Util = require("wowdoc")
-local widget_system = require("wowdoc.loader.doc_widgets")
 
 local m = {}
 
@@ -21,13 +20,12 @@ end
 
 function m:GetSystem(system)
 	local tbl = {}
-	local widgetName = system.Type == "ScriptObject" and widget_system[system.Name]
 	if system.Functions and #system.Functions>0 then
 		if system.Namespace then
 			table.insert(tbl, string.format("%s = {}", system.Namespace))
 		end
 		for _, func in pairs(system.Functions) do
-			table.insert(tbl, self:GetFunction(func, widgetName))
+			table.insert(tbl, self:GetFunction(func))
 		end
 	end
 	if system.Tables then
@@ -42,45 +40,19 @@ function m:GetSystem(system)
 	return table.concat(tbl, "\n\n")
 end
 
-local function HasVararg(tbl)
-	for _, v in pairs(tbl or {}) do
-		if v.StrideIndex then
-			return true
-		end
-	end
-end
-
-local function GetFuncFullNameVararg(tbl)
-	local t = {}
-	for _, v in pairs(tbl.Arguments) do
-		if v.StrideIndex then
-			table.insert(t, "...")
-		else
-			table.insert(t, v.Name)
-		end
-	end
-	local arguments = table.concat(t, ", ")
-	local fullName = Util:GetFullName(tbl)
-	local signature = string.format("%s(%s)", fullName, arguments)
-	return signature
-end
-
 local fs_doc = "---[Documentation](https://warcraft.wiki.gg/wiki/%s)"
 
-function m:GetFunction(func, widgetName)
+function m:GetFunction(func)
 	local tbl = {}
-	local docLine = {}
-	local funcLine = {}
 	if func.Documentation then
 		table.insert(tbl, "---"..table.concat(func.Documentation, "; "))
 		table.insert(tbl, "---")
 	end
+	local docLine = {}
 	table.insert(docLine, "API_")
-	if widgetName then
-		table.insert(docLine, string.format("%s_", widgetName))
-	end
-	table.insert(docLine, Util:GetFullName(func))
+	table.insert(docLine, Util:GetFullName(func, true))
 	table.insert(tbl, fs_doc:format(table.concat(docLine)))
+
 	if func.Arguments then
 		for _, arg in pairs(func.Arguments) do
 			table.insert(tbl, self:GetField("param", arg))
@@ -91,18 +63,10 @@ function m:GetFunction(func, widgetName)
 			table.insert(tbl, self:GetField("return", ret))
 		end
 	end
-	table.insert(funcLine, "function ")
-	if widgetName then
-		table.insert(funcLine, string.format("%s:", widgetName))
-	end
-	local funcArguments
-	if HasVararg(func.Arguments) then
-		-- luals varargs need to be annotated with "..."
-		funcArguments = GetFuncFullNameVararg(func)
-	else
-		funcArguments = func:GetFullName(false, false)
-	end
-	table.insert(funcLine, string.format("%s end", funcArguments))
+
+	local funcLine = {}
+	local fullName = Util:GetFullName(func)
+	table.insert(funcLine, string.format("function %s end", fullName))
 	table.insert(tbl, table.concat(funcLine))
 	return table.concat(tbl, "\n")
 end

@@ -6,6 +6,7 @@ local ltn12 = require("ltn12")
 
 local parser = require("wowdoc.wago")
 local log = require("wowdoc.log")
+local doc_widgets = require("wowdoc.loader.doc_widgets")
 
 local m = {}
 local INVALIDATION_TIME = 60*60
@@ -280,21 +281,50 @@ function m:CombineTable(...)
 	return t
 end
 
-function m:GetFullName(apiTable)
-	local fullName
+function m:GetFullName(apiTable, isWikiLink)
+	if isWikiLink then
+		local baseName = self:GetBaseName(apiTable, true)
+		return baseName
+	else
+		local baseName = self:GetBaseName(apiTable)
+		local arguments = self:GetArguments(apiTable)
+		local signature = string.format("%s(%s)", baseName, arguments)
+		return signature
+	end
+end
+
+function m:GetBaseName(apiTable, isWikiLink)
+	local baseName
 	local system = apiTable.System
 	if system.Type == "System" then
 		if system.Namespace then
-			fullName = format("%s.%s", system.Namespace, apiTable.Name)
+			baseName = string.format("%s.%s", system.Namespace, apiTable.Name)
 		else
-			fullName = apiTable.Name
+			baseName = apiTable.Name
 		end
 	elseif system.Type == "ScriptObject" then
-		fullName = format("%s:%s", system.Name, apiTable.Name)
+		local widget_system = doc_widgets[system.Name] or system.Name
+		local sep = isWikiLink and "_" or ":"
+		baseName = string.format("%s%s%s", widget_system, sep, apiTable.Name)
 	else
-		fullName = apiTable.Name
+		baseName = apiTable.Name
 	end
-	return fullName
+	return baseName
+end
+
+-- keep note this is also being called indirectly from the wikiparser
+-- with "converted" api tables which dont include the mixins
+function m:GetArguments(apiTable, isWikiLink)
+	local t = {}
+	for _, v in pairs(apiTable.Arguments or {}) do
+		-- luals varargs need to be annotated with "..."
+		if v.StrideIndex and isWikiLink then
+			table.insert(t, "...")
+		else
+			table.insert(t, v.Name)
+		end
+	end
+	return table.concat(t, ", ")
 end
 
 function m:GetPatchVersion(v)
