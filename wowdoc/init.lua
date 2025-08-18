@@ -314,11 +314,11 @@ end
 
 -- keep note this is also being called indirectly from the wikiparser
 -- with "converted" api tables which dont include the mixins
-function m:GetArguments(apiTable, isWikiLink)
+function m:GetArguments(apiTable)
 	local t = {}
 	for _, v in pairs(apiTable.Arguments or {}) do
 		-- luals varargs need to be annotated with "..."
-		if v.StrideIndex and isWikiLink then
+		if v.StrideIndex then
 			table.insert(t, "...")
 		else
 			table.insert(t, v.Name)
