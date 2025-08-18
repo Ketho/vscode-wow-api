@@ -89,6 +89,7 @@
         "CVAR_CACHE",
         "ANNOTATIONS_DATA",
         "WAGO_CACHE",
-        "OUT_WIDGET"
+        "OUT_WIDGET",
+        "OUT_PATH"
     ],
 }
