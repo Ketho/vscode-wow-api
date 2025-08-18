@@ -22,3 +22,8 @@ function FrameScriptObject:IsObjectType(objectType) end
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_FrameScriptObject_SetForbidden)
 function FrameScriptObject:SetForbidden() end
+
+---Reset all script accessible values to their default values.
+---
+---[Documentation](https://warcraft.wiki.gg/wiki/API_FrameScriptObject_SetToDefaults)
+function FrameScriptObject:SetToDefaults() end

@@ -3,6 +3,12 @@
 ---@class ScriptRegionResizing : Object
 local ScriptRegionResizing = {}
 
+---@param x uiUnit
+---@param y uiUnit
+function ScriptRegionResizing:AdjustPointsOffset(x, y) end
+
+---Clears all points and immediately invalidates the rect. (Prior to 11.2.0, this would only invalidate rect immediately for AnchoringRestricted regions.)
+---
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_ScriptRegionResizing_ClearAllPoints)
 function ScriptRegionResizing:ClearAllPoints() end
 
@@ -19,21 +25,23 @@ function ScriptRegionResizing:GetNumPoints() end
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_ScriptRegionResizing_GetPoint)
 ---@param anchorIndex? number Default = 0
+---@param resolveCollapsed? boolean Default = false
 ---@return FramePoint point
 ---@return ScriptRegion relativeTo
 ---@return FramePoint relativePoint
 ---@return uiUnit offsetX
 ---@return uiUnit offsetY
-function ScriptRegionResizing:GetPoint(anchorIndex) end
+function ScriptRegionResizing:GetPoint(anchorIndex, resolveCollapsed) end
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_ScriptRegionResizing_GetPointByName)
 ---@param point FramePoint
+---@param resolveCollapsed? boolean Default = false
 ---@return FramePoint point
 ---@return ScriptRegion relativeTo
 ---@return FramePoint relativePoint
 ---@return uiUnit offsetX
 ---@return uiUnit offsetY
-function ScriptRegionResizing:GetPointByName(point) end
+function ScriptRegionResizing:GetPointByName(point, resolveCollapsed) end
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_ScriptRegionResizing_SetAllPoints)
 ---@param relativeTo? ScriptRegion

@@ -33,11 +33,13 @@ function Cooldown:SetScript(scriptType, handler) end
 function Cooldown:Clear() end
 
 ---The returned duration unit is milliseconds, unaffected by modRate.
+---
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_Cooldown_GetCooldownDisplayDuration)
 ---@return number duration
 function Cooldown:GetCooldownDisplayDuration() end
 
 ---The returned duration unit is milliseconds and is multiplied by the modRate.
+---
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_Cooldown_GetCooldownDuration)
 ---@return number duration
 function Cooldown:GetCooldownDuration() end
@@ -133,6 +135,13 @@ function Cooldown:SetDrawEdge(drawEdge) end
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_Cooldown_SetDrawSwipe)
 ---@param drawSwipe? boolean Default = false
 function Cooldown:SetDrawSwipe(drawSwipe) end
+
+---[Documentation](https://warcraft.wiki.gg/wiki/API_Cooldown_SetEdgeColor)
+---@param colorR number
+---@param colorG number
+---@param colorB number
+---@param a? SingleColorValue
+function Cooldown:SetEdgeColor(colorR, colorG, colorB, a) end
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_Cooldown_SetEdgeScale)
 ---@param scale number

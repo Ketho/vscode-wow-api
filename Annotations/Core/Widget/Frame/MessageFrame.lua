@@ -115,7 +115,7 @@ function MessageFrame:SetFading(fading) end
 function MessageFrame:SetFont(fontFile, height, flags) end
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_MessageFrame_SetFontObject)
----@param font FontObject
+---@param font FontObject|nil
 function MessageFrame:SetFontObject(font) end
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_MessageFrame_SetIndentedWordWrap)

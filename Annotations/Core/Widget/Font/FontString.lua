@@ -5,7 +5,6 @@ local FontString = {}
 ---@class fontstring : FontString
 ---@class FONTSTRING : FontString
 
----@meta _
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_FontString_CalculateScreenAreaFromCharacterSpan)
 ---@param leftIndex number
 ---@param rightIndex number
@@ -20,12 +19,20 @@ function FontString:CanNonSpaceWrap() end
 ---@return boolean wrap
 function FontString:CanWordWrap() end
 
+---[Documentation](https://warcraft.wiki.gg/wiki/API_FontString_ClearAlphaGradient)
+function FontString:ClearAlphaGradient() end
+
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_FontString_FindCharacterIndexAtCoordinate)
 ---@param x uiUnit
 ---@param y uiUnit
 ---@return number characterIndex
 ---@return boolean inside
 function FontString:FindCharacterIndexAtCoordinate(x, y) end
+
+---[Documentation](https://warcraft.wiki.gg/wiki/API_FontString_GetAlphaGradient)
+---@return number start
+---@return number length
+function FontString:GetAlphaGradient() end
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_FontString_GetFieldSize)
 ---@return number fieldSize
@@ -36,6 +43,11 @@ function FontString:GetFieldSize() end
 ---@return uiUnit fontHeight
 ---@return TBFFlags flags
 function FontString:GetFont() end
+
+---[Documentation](https://warcraft.wiki.gg/wiki/API_FontString_GetFontHeight)
+---@param calculated? boolean Default = true
+---@return uiUnit height
+function FontString:GetFontHeight(calculated) end
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_FontString_GetFontObject)
 ---@return SimpleFont font
@@ -50,7 +62,7 @@ function FontString:GetIndentedWordWrap() end
 function FontString:GetJustifyH() end
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_FontString_GetJustifyV)
----@return JustifyVertical justifyH
+---@return JustifyVertical justifyV
 function FontString:GetJustifyV() end
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_FontString_GetLineHeight)
@@ -139,8 +151,12 @@ function FontString:SetFixedColor(fixedColor) end
 ---@param flags? TBFFlags
 function FontString:SetFont(fontFile, fontHeight, flags) end
 
+---[Documentation](https://warcraft.wiki.gg/wiki/API_FontString_SetFontHeight)
+---@param height uiUnit
+function FontString:SetFontHeight(height) end
+
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_FontString_SetFontObject)
----@param font? FontObject
+---@param font FontObject|nil
 function FontString:SetFontObject(font) end
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_FontString_SetFormattedText)

@@ -55,5 +55,6 @@
 ---@alias SimpleLine Line
 ---@alias SimpleMaskTexture MaskTexture
 ---@alias SimplePathAnim Path
+---@alias SimpleRegion Region
 ---@alias SimpleTexture Texture
 ---@alias SimpleWindow table
