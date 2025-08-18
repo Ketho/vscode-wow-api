@@ -25,6 +25,13 @@ table = {}
 ---@nodiscard
 function table.concat(list, sep, i, j) end
 
+---[Documentation](https://warcraft.wiki.gg/wiki/API_table.create)
+---@param arraySizeHint number
+---@param nodeSizeHint? number
+---@return table
+---@nodiscard
+function table.create(arraySizeHint, nodeSizeHint) end
+
 ---
 ---Inserts element `value` at position `pos` in `list`.
 ---
