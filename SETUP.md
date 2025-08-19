@@ -35,15 +35,10 @@ source .lua/bin/activate
 lua luasrc/init.lua
 ```
 
-### Overview
-- Blizzard documented functions are read from [Blizzard_APIDocumentationGenerated](https://github.com/Gethe/wow-ui-source/tree/live/Interface/AddOns/Blizzard_APIDocumentationGenerated).
-- Non-Blizzard documented functions are [exported](https://warcraft.wiki.gg/wiki/Special:Export) and parsed from Warcraft Wiki.
-- JSON data for the hover provider (Events, CVars and Enums) is generated from [Lua/ToTypeScript](luasrc/ToTypeScript).
-
 ## VS Code Extension
 The [setup_npm.sh](setup_npm.sh) script installs the npm packages for TypeScript definitions and ESLint.
 ```sh
-./setup_vscode.sh
+./setup_npm.sh
 ```
 
 ### Debugging
