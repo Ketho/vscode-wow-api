@@ -1,7 +1,7 @@
 ---@meta _
 
 ---@deprecated
----Deprecated by [C_Log.LogMessage](https://warcraft.wiki.gg/wiki/API_C_Log.LogMessagen)
+---Deprecated by [C_Log.LogMessage](https://warcraft.wiki.gg/wiki/API_C_Log.LogMessage)
 ---@param ... string
 function ConsolePrint(...) end
 
