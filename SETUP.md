@@ -10,13 +10,12 @@ wsl --install
 ## Lua
 - The [setup_lua.sh](setup_lua.sh) script installs Lua 5.4 and LuaRocks via [hererocks](https://github.com/luarocks/hererocks) which is self-contained.
 - The module dependencies are in the [rockspec](https://github.com/Ketho/vscode-wow-api/blob/master/vscode-wow-api-scm-0.rockspec).
-- This also checks out [NumyAddon/FramexmlAnnotations](https://github.com/NumyAddon/FramexmlAnnotations) as a submodule.
+- This also checks out [NumyAddon/FramexmlAnnotations](https://github.com/NumyAddon/FramexmlAnnotations/tree/live-mix-into-source) as a submodule.
 ```sh
 # wherever you want to clone the repo
 cd ~
 git clone https://github.com/Ketho/vscode-wow-api
 cd vscode-wow-api
-## update NumyAddon/FramexmlAnnotations submodule `live-mix-into-source` branch
 git submodule update --init --remote
 
 ./setup_lua.sh
