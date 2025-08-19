@@ -1,17 +1,14 @@
-out
-dist
+# vscode
+/out
 node_modules
-.vscode-test/
 *.vsix
-
-*.xml
-luasrc/out
 
 # python
 /.venv
-
 # hererocks
 /.lua
 
+# output/cache files
+/luasrc/out
 # framexml
 /wow-ui-source
