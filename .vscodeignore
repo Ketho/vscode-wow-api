@@ -1,22 +1,12 @@
-.vscode/**
-.vscode-test/**
-src/**
-.gitignore
-.yarnrc
-vsc-extension-quickstart.md
-**/tsconfig.json
-**/.eslintrc.json
-**/*.map
-**/*.ts
-**/.vscode-test.*
+# exclude everything
+**
 
-# images and scripts
-img/changelog
-img/readme
-luasrc/**
-.github
+# except the essential files
+!package.json
+!img/wow-logo.png
+!out/**
+!Annotations/**
 
-# hererocks 
-bin
-SETUP.md
-*.rockspec
+!LICENSE
+!README.md
+!CHANGELOG.md
