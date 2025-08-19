@@ -1,6 +1,6 @@
 # Change Log
 
-## [0.21.0] - 2025-08-17
+## [0.21.0] - 2025-08-19
 - ✨ Updated annotations for patch 11.2.0
   - Manually updated Widget API and Blizzard_Deprecated for 11.2.0
   - Updated Game Type tooltip data for 5.5.0 (MoP Classic)
