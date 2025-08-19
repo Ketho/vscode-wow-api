@@ -4,7 +4,7 @@
 # except the essential files
 !package.json
 !img/wow-logo.png
-!out/**
+!dist/extension.js
 !Annotations/**
 
 !LICENSE

@@ -47,7 +47,7 @@ The [setup_npm.sh](setup_npm.sh) script installs the npm packages for TypeScript
 ```
 
 ### Debugging
-To debug the extension, pressing `F5` (which runs the default [build task](https://github.com/Ketho/vscode-wow-api/blob/master/.vscode/tasks.json#L7-L17)) and then opening a folder and looking at a Lua file should activate the extension.
+To debug the extension, pressing `F5` and then opening a folder and looking at a Lua file should activate the extension.
 
 ![](img/setup/debugging_loaded.png)
 

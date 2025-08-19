@@ -4,10 +4,11 @@
 	"version": "2.0.0",
 	"tasks": [
 		{
-			"type": "npm",
-			"script": "watch",
-			"problemMatcher": "$tsc-watch",
-			"isBackground": true,
+			"label": "watch",
+			"dependsOn": [
+				"npm: watch:tsc",
+				"npm: watch:esbuild"
+			],
 			"presentation": {
 				"reveal": "never"
 			},
@@ -17,23 +18,41 @@
 			}
 		},
 		{
+			"type": "npm",
+			"script": "watch:esbuild",
+			"group": "build",
+			"problemMatcher": "$esbuild-watch",
+			"isBackground": true,
+			"label": "npm: watch:esbuild",
+			"presentation": {
+				"group": "watch",
+				"reveal": "never"
+			}
+		},
+		{
+			"type": "npm",
+			"script": "watch:tsc",
+			"group": "build",
+			"problemMatcher": "$tsc-watch",
+			"isBackground": true,
+			"label": "npm: watch:tsc",
+			"presentation": {
+				"group": "watch",
+				"reveal": "never"
+			}
+		},
+		{
 			"label": "Lua run",
 			"type": "shell",
 			"command": "source .lua/bin/activate && lua luasrc/init.lua",
-			"presentation": {
-				"showReuseMessage": false,
-				"clear": true
-			},
+			"presentation": {"showReuseMessage": false, "clear": true},
 			"problemMatcher": []
 		},
 		{
 			"label": "Lua parseWiki",
 			"type": "shell",
 			"command": "source .lua/bin/activate && lua luasrc/parseWiki.lua",
-			"presentation": {
-				"showReuseMessage": false,
-				"clear": true
-			},
+			"presentation": {"showReuseMessage": false, "clear": true},
 			"problemMatcher": []
 		},
 		{
