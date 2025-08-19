@@ -6314,4 +6314,4 @@ export const data = {
 	["secureexecuterange"]: 0x7,
 	["seterrorhandler"]: 0x7,
 	["setsecurehookforbidden"]: 0x5,
-}
+};
