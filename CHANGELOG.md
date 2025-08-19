@@ -2,8 +2,10 @@
 
 ## [0.21.0] - 2025-08-17
 - ✨ Updated annotations for patch 11.2.0
-- ✨ Updated Game Type tooltip data for 5.5.0 (MoP Classic)
+  - Manually updated Widget API and Blizzard_Deprecated for 11.2.0
+  - Updated Game Type tooltip data for 5.5.0 (MoP Classic)
 - 🛠 Refactoring and rewriting of lua scripts
+- 📝 Updated [SETUP.md](SETUP.md) readme for developers
 
 ## [0.20.8] - 2025-06-16
 - 🐞 Cleaned up old code for removing `type.weakUnionCheck` option and any empty settings.json file.
