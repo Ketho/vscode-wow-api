@@ -1,7 +1,7 @@
 ---@meta _
 ItemLocation = {}
 
----@class ItemLocationMixin
+---@class ItemLocation
 ---@field equipmentSlotIndex? number
 ---@field bagID? number
 ---@field slotIndex? number
@@ -20,16 +20,16 @@ ItemLocation = {}
 ---[Documentation](https://warcraft.wiki.gg/wiki/ItemLocationMixin)
 ItemLocationMixin = {}
 
----@return ItemLocationMixin
+---@return ItemLocation
 function ItemLocation:CreateEmpty() end
 
 ---@param bagID number
 ---@param slotIndex number
----@return ItemLocationMixin
+---@return ItemLocation
 function ItemLocation:CreateFromBagAndSlot(bagID, slotIndex) end
 
 ---@param equipmentSlotIndex number
----@return ItemLocationMixin
+---@return ItemLocation
 function ItemLocation:CreateFromEquipmentSlot(equipmentSlotIndex) end
 
 function ItemLocationMixin:Clear() end
@@ -69,6 +69,6 @@ function ItemLocationMixin:IsEqualToBagAndSlot(otherBagID, otherSlotIndex) end
 ---@return boolean
 function ItemLocationMixin:IsEqualToEquipmentSlot(otherEquipmentSlotIndex) end
 
----@param otherItemLocation ItemLocationMixin
+---@param otherItemLocation ItemLocation
 ---@return boolean
 function ItemLocationMixin:IsEqualTo(otherItemLocation) end

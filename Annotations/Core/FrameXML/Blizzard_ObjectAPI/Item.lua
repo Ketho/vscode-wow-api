@@ -5,7 +5,7 @@ Item = {}
 ---@class ItemMixin
 ItemMixin = {}
 
----@param itemLocation ItemLocationMixin
+---@param itemLocation ItemLocation
 ---@return ItemMixin
 function Item:CreateFromItemLocation(itemLocation) end
 
@@ -26,7 +26,7 @@ function Item:CreateFromItemLink(itemLink) end
 ---@return ItemMixin
 function Item:CreateFromItemID(itemID) end
 
----@param itemLocation ItemLocationMixin
+---@param itemLocation ItemLocation
 function ItemMixin:SetItemLocation(itemLocation) end
 
 ---@param itemLink string
@@ -35,7 +35,7 @@ function ItemMixin:SetItemLink(itemLink) end
 ---@param itemID number
 function ItemMixin:SetItemID(itemID) end
 
----@return ItemLocationMixin
+---@return ItemLocation
 function ItemMixin:GetItemLocation() end
 
 ---@return boolean
