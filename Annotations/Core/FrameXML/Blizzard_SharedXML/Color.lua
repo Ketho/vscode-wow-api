@@ -1,13 +1,15 @@
 ---@meta _
 
----@class colorRGBA : ColorMixin
+---@class ColorRGBData
 ---@field r number
 ---@field g number
 ---@field b number
----@field a? number
----@field colorStr? string
 
----@alias colorRGB colorRGBA
+---@class ColorRGBAData : ColorRGBData
+---@field a number
+
+---@class colorRGB : ColorMixin, ColorRGBData
+---@class colorRGBA : colorRGB, ColorRGBAData
 
 ---[FrameXML](https://www.townlong-yak.com/framexml/go/ColorMixin)
 ---@class ColorMixin
