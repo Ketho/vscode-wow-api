@@ -3,12 +3,6 @@ local playerLoc = PlayerLocation:CreateFromUnit("player")
 local class1 = C_PlayerInfo.GetClass({unit = "player"})
 local class2 = C_PlayerInfo.GetClass(playerLoc)
 
--- ItemLocation
-local itemLoc = ItemLocation:CreateFromEquipmentSlot(1)
-local name1 = C_Item.GetItemName(itemLoc)
-local name2 = C_Item.GetItemName({equipmentSlotIndex = 1})
-local cursor = C_Cursor.GetCursorItem()
-
 -- TransmogLocation
 local TransmogUtil = {}
 ---@type TransmogLocation
