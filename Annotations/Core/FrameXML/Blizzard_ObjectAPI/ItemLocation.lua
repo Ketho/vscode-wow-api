@@ -5,18 +5,6 @@ ItemLocation = {}
 ---@field equipmentSlotIndex? number
 ---@field bagID? number
 ---@field slotIndex? number
----@field Clear? function
----@field SetBagAndSlot? function
----@field GetBagAndSlot? function
----@field SetEquipmentSlot? function
----@field GetEquipmentSlot? function
----@field IsEquipmentSlot? function
----@field IsBagAndSlot? function
----@field HasAnyLocation? function
----@field IsValid? function
----@field IsEqualToBagAndSlot? function
----@field IsEqualToEquipmentSlot? function
----@field IsEqualTo? function
 ---[Documentation](https://warcraft.wiki.gg/wiki/ItemLocationMixin)
 ItemLocationMixin = {}
 
