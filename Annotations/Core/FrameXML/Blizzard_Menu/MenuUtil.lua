@@ -66,7 +66,7 @@ function MenuUtil.CreateTemplate(template) end
 
 ---[FrameXML](https://www.townlong-yak.com/framexml/go/MenuUtil.CreateTitle)
 ---@param text string
----@param color ColorMixin? # defaults to NORMAL_FONT_COLOR
+---@param color colorRGBA? # defaults to NORMAL_FONT_COLOR
 ---@return ElementMenuDescriptionProxy
 function MenuUtil.CreateTitle(text, color) end
 
@@ -96,7 +96,7 @@ function MenuUtil.CreateRadio(text, isSelected, setSelected, data) end
 ---[FrameXML](https://www.townlong-yak.com/framexml/go/MenuUtil.CreateColorSwatch)
 ---@param text string
 ---@param callback MenuResponder
----@param colorInfo ColorMixin # stored as element's data
+---@param colorInfo colorRGBA # stored as element's data
 ---@return ElementMenuDescriptionProxy
 function MenuUtil.CreateColorSwatch(text, callback, colorInfo) end
 

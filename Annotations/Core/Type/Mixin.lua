@@ -2,8 +2,6 @@
 
 ---@alias AzeriteEmpoweredItemLocation ItemLocation
 ---@alias AzeriteItemLocation ItemLocation
----@alias colorRGB ColorMixin
----@alias colorRGBA ColorMixin
 ---@alias EmptiableItemLocation ItemLocation
 ---@alias ItemTransmogInfo ItemTransmogInfoMixin
 ---@alias PlayerLocation PlayerLocationMixin

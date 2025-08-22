@@ -15,7 +15,7 @@ function SharedMenuDescriptionProxy:Insert(elementDescription, index) end
 
 ---@see MenuUtil.CreateTitle
 ---@param text string
----@param color ColorMixin? # defaults to NORMAL_FONT_COLOR
+---@param color colorRGBA? # defaults to NORMAL_FONT_COLOR
 ---@return ElementMenuDescriptionProxy
 function SharedMenuDescriptionProxy:CreateTitle(text, color) end
 
@@ -54,7 +54,7 @@ function SharedMenuDescriptionProxy:CreateRadio(text, isSelected, setSelected, d
 ---@see MenuUtil.CreateColorSwatch
 ---@param text string
 ---@param callback MenuResponder
----@param colorInfo ColorMixin # stored as element's data
+---@param colorInfo colorRGBA # stored as element's data
 ---@return ElementMenuDescriptionProxy
 function SharedMenuDescriptionProxy:CreateColorSwatch(text, callback, colorInfo) end
 
@@ -76,7 +76,7 @@ function SharedMenuDescriptionProxy:ClearQueueDescriptions() end
 
 ---@see MenuUtilPrivate.Utilities.QueueTitle
 ---@param text string
----@param color ColorMixin? # defaults to NORMAL_FONT_COLOR
+---@param color colorRGBA? # defaults to NORMAL_FONT_COLOR
 ---@param clearQueue boolean? # if true, all previously queued descriptions are cleared
 function SharedMenuDescriptionProxy:QueueTitle(text, color, clearQueue) end
 

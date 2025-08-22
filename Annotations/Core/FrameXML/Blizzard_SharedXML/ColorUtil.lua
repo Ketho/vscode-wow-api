@@ -1,10 +1,8 @@
 ---@meta _
----@class ColorMixin_RCC : ColorMixin
----@field colorStr string
 
 ---[FrameXML](https://www.townlong-yak.com/framexml/go/CreateColorFromHexString)
 ---@param hexColor string
----@return ColorMixin
+---@return colorRGBA
 function CreateColorFromHexString(hexColor) end
 
 ---[FrameXML](https://www.townlong-yak.com/framexml/go/CreateColorFromBytes)
@@ -12,12 +10,12 @@ function CreateColorFromHexString(hexColor) end
 ---@param g number
 ---@param b number
 ---@param a number
----@return ColorMixin
+---@return colorRGBA
 function CreateColorFromBytes(r, g, b, a) end
 
 ---[FrameXML](https://www.townlong-yak.com/framexml/go/AreColorsEqual)
----@param left ColorMixin
----@param right ColorMixin
+---@param left colorRGBA
+---@param right colorRGBA
 ---@return boolean
 function AreColorsEqual(left, right) end
 
@@ -31,7 +29,7 @@ function GetClassColor(classFilename) end
 
 ---[FrameXML](https://www.townlong-yak.com/framexml/go/GetClassColorObj)
 ---@param classFilename string
----@return ColorMixin_RCC
+---@return colorRGB
 function GetClassColorObj(classFilename) end
 
 ---[FrameXML](https://www.townlong-yak.com/framexml/go/GetClassColoredTextForUnit)
@@ -42,5 +40,5 @@ function GetClassColoredTextForUnit(unit, text) end
 
 ---[FrameXML](https://www.townlong-yak.com/framexml/go/GetFactionColor)
 ---@param factionGroupTag string
----@return ColorMixin
+---@return colorRGBA
 function GetFactionColor(factionGroupTag) end
