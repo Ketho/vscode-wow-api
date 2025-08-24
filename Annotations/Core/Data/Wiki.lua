@@ -1706,6 +1706,10 @@ function C_LFGList.GetActivityInfoExpensive(activityID) end
 ---@return boolean? relationship
 ---@return number dungeonScore
 ---@return number pvpItemLevel
+---@return unknown factionGroup
+---@return number raceID
+---@return number specID
+---@return boolean isLeaver
 function C_LFGList.GetApplicantMemberInfo(applicantID, memberIndex) end
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_LFGList.GetApplicantMemberStats)

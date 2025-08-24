@@ -55,7 +55,7 @@ local function WriteData(data)
     for _, v in pairs(Util:SortTable(data)) do
         table.insert(t, fs:format(v, data[v]))
     end
-    table.insert(t, "}")
+    table.insert(t, "};\n")
     Util:WriteFile(path, table.concat(t, "\n"))
 end
 
