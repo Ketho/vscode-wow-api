@@ -2846,8 +2846,20 @@ function C_TradeSkillUI.GetCategories() end
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_TradeSkillUI.GetCategoryInfo)
 ---@param categoryID number
 ---@param returnTable? table
----@return table categoryInfo
+---@return TradeSkillCategoryInfo categoryInfo
 function C_TradeSkillUI.GetCategoryInfo(categoryID, returnTable) end
+
+---@class TradeSkillCategoryInfo
+---@field name string
+---@field enabled boolean
+---@field categoryID number
+---@field parentCategoryID number
+---@field type string
+---@field hasProgressBar boolean
+---@field numIndents number
+---@field skillLineStartingRank number
+---@field skillLineMaxLevel number
+---@field skillLineCurrentLevel number
 
 ---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_TradeSkillUI.GetFilterableInventorySlotName)
