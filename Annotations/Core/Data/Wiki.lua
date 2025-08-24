@@ -2841,7 +2841,7 @@ function C_TradeSkillUI.GetCategories() end
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_TradeSkillUI.GetCategoryInfo)
 ---@param categoryID number
----@param returnTable table
+---@param returnTable? table
 ---@return table categoryInfo
 function C_TradeSkillUI.GetCategoryInfo(categoryID, returnTable) end
 
