@@ -1,6 +1,6 @@
 ---@meta _
 ---[Documentation](https://warcraft.wiki.gg/wiki/UIOBJECT_Font)
----@class Font
+---@class Font : FrameScriptObject
 local Font = {}
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_Font_CopyFontObject)
