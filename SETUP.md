@@ -57,4 +57,4 @@ If you want to package the extension locally into a `.vsix` file.
 npx vsce package
 ```
 > [!NOTE]  
-> The [package.json](package.json) includes [vsce](https://code.visualstudio.com/api/working-with-extensions/publishing-extension) as a dev dependency so you won't need to install it first.
+> The [package.json](package.json) already includes [vsce](https://code.visualstudio.com/api/working-with-extensions/publishing-extension) as a dev dependency so you won't need to install it first.
