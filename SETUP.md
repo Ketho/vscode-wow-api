@@ -2,7 +2,7 @@
 > [!IMPORTANT]  
 > This readme is for if you want to generate the LuaLS annotations yourself and/or contribute with development.
 
-This project has only been tested with [WSL](https://code.visualstudio.com/docs/remote/wsl) (Ubuntu 24.04) and developed with the remote [WSL extension](https://marketplace.visualstudio.com/items?itemName=ms-vscode-remote.remote-wsl).
+This project has only been tested with [WSL](https://code.visualstudio.com/docs/remote/wsl) (Ubuntu 24.04) and developed with the remote [WSL extension](https://marketplace.visualstudio.com/items?itemName=ms-vscode-remote.remote-wsl). Setting up LuaRocks on Windows is *strongly* discouraged but it may work with a lot of [headaches](https://ketho.github.io/2024/07/04/luarocks-on-windows/).
 ```sh
 wsl --install
 ```
@@ -18,9 +18,6 @@ cd vscode-wow-api
 
 ./setup_lua.sh
 ```
-
-> [!NOTE]  
-> Setting up LuaRocks on Windows is *strongly* discouraged but it may work with a lot of [headaches](https://ketho.github.io/2024/07/04/luarocks-on-windows/).
 
 ### Usage
 Generates the LuaLS [annotations](Annotations). This is also available as the [Lua run](https://github.com/Ketho/vscode-wow-api/blob/master/.vscode/tasks.json#L19-L28) VS Code task.
