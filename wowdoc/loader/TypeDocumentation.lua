@@ -88,7 +88,7 @@ local Types =
 		-- WeeklyRewardItemDBID in WeeklyRewardActivityRewardInfo
 		  -- /dump C_WeeklyRewards.GetActivities()[1].rewards
 		{ Name = "WeeklyRewardItemDBID", Type = "string" },
-		
+
 		-- 10.2.7
 		{ Name = "JustifyHorizontal", Type = "string" }, -- LEFT, RIGHT, CENTER
 		{ Name = "JustifyVertical", Type = "string" },
@@ -112,6 +112,10 @@ local Types =
 		{ Name = "MouseButton", Type = "string", Values = {"LeftButton", "RightButton", "MiddleButton", "Button4", "Button5"} },
 		{ Name = "ClickButton", Type = "string", Values = {"AnyUp", "AnyDown", "LeftButtonUp", "LeftButtonDown", "RightButtonUp", "RightButtonDown", "MiddleButtonUp", "MiddleButtonDown", "Button4Up", "Button4Down", "Button5Up", "Button5Down"} },
 		{ Name = "SendChatMessageType", Type = "string", Values = {"SAY", "EMOTE", "YELL", "PARTY", "RAID", "RAID_WARNING", "INSTANCE_CHAT", "GUILD", "OFFICER", "WHISPER", "CHANNEL", "AFK", "DND", "VOICE_TEXT"} },
+
+		-- 11.2.5
+		{ Name = "StoreError", Type = "number"},
+		{ Name = "LuaValueReference", Type = "any"}, -- used in the `table` library for tables
 
 		-- widgets
 		-- defined: ScriptObject

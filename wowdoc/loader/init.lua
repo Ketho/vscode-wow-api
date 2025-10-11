@@ -1,5 +1,6 @@
 local lfs = require("lfs")
 local pathlib = require("path")
+require("wowdoc.config")
 
 local wowdoc = require("wowdoc")
 local log = require("wowdoc.log")
@@ -48,7 +49,6 @@ local function LoadAddon(framexml_path, name)
 	end
 	file:close()
 end
-
 
 local function LoadAnnotationAddon(path, name)
 	local folder = pathlib.join(path, name)

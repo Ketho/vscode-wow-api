@@ -4,6 +4,7 @@ local pathlib = require("path")
 local https = require("ssl.https")
 local ltn12 = require("ltn12")
 
+require("wowdoc.config")
 local parser = require("wowdoc.wago")
 local log = require("wowdoc.log")
 local doc_widgets = require("wowdoc.loader.doc_widgets")
@@ -109,10 +110,21 @@ function m:FolderExists(path)
 	return lfs.attributes(path, "mode") == "directory"
 end
 
-function m:MakeDir(path)
-	if not lfs.attributes(path) then
-		lfs.mkdir(path)
+-- use pathlib.mkdir instead of lfs.mkdir since creates parent folders as needed
+-- also returns the path for the created folder
+---@param ... string
+---@return string path
+function m:mkdir(path, ...)
+	local p
+	if ... then
+		p = pathlib.join(path, ...)
+	else
+		p = path
 	end
+	if not pathlib.exists(p) then
+		pathlib.mkdir(p)
+	end
+	return p
 end
 
 function m:WriteFile(path, text)

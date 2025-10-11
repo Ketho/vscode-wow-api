@@ -5,7 +5,7 @@ local log = require("wowdoc.log")
 
 local m = {}
 local REPO = "https://raw.githubusercontent.com/Ketho/BlizzardInterfaceResources"
-local PATH = ENUM_CACHE or "cache_lua"
+local PATH = PATHS.CACHE or "cache_lua"
 
 local function ApplyFixes()
 	-- Meta fields are not written to LuaEnum.lua

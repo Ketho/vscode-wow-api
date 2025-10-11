@@ -10,7 +10,7 @@ local csv = require("wowdoc.lua-csv")
 local products = require("wowdoc.products")
 
 ---@diagnostic disable-next-line: undefined-global
-local cache_folder = WAGO_CACHE or "wago"
+local cache_folder = PATHS.WAGO or "wago"
 local listfile_path = PATH.join(cache_folder, "community-listfile.csv")
 
 local wago_builds_latest_url = "https://wago.tools/api/builds/%s/latest"
