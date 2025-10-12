@@ -5,11 +5,11 @@ local log = require("wowdoc.log")
 
 local m = {}
 local REPO = "https://raw.githubusercontent.com/Ketho/BlizzardInterfaceResources"
-local PATH = PATHS.CACHE or "cache_lua"
+local PATH = PATHS.BLIZZRES
 
 local function ApplyFixes()
 	-- Meta fields are not written to LuaEnum.lua
-	Enum.LFGRoleMeta = {NumValue = 3} -- 10.2.5 LFGConstantsDocumentation.lua
+	Enum.LFGRoleMeta = {NumValue = 0} -- 10.2.5 LFGConstantsDocumentation.lua
 end
 
 function m:LoadLuaEnums(branch)

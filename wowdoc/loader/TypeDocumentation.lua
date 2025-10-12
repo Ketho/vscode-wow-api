@@ -117,6 +117,17 @@ local Types =
 		{ Name = "StoreError", Type = "number"},
 		{ Name = "LuaValueReference", Type = "any"}, -- used in the `table` library for tables
 
+		-- 12.0.0
+		{ Name = "DurationSeconds", Type = "number"},
+		{ Name = "EncounterTimelineEventID", Type = "number"},
+		{ Name = "UnitTokenVariant", Type = "string"},
+		{ Name = "HousingFixturePointFrame", Type = "Frame"},
+		{ Name = "HousingCatalogSearcher", Type = "HousingCatalogSearcher"},
+		{ Name = "HousingLayoutPinFrame", Type = "HousingLayoutPin"},
+		{ Name = "UISoundSubType", Type = "string"},
+		{ Name = "SoundHandle", Type = "number"},
+		{ Name = "AuraFilters", Type = "string"},
+
 		-- widgets
 		-- defined: ScriptObject
 		{ Name = "CScriptObject", Type = "FrameScriptObject", Replace = true },

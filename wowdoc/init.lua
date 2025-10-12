@@ -1,6 +1,7 @@
 ---@diagnostic disable: need-check-nil
-local lfs = require("lfs")
-local pathlib = require("path")
+lfs = require("lfs")
+pathlib = require("path")
+
 local https = require("ssl.https")
 local ltn12 = require("ltn12")
 
@@ -40,7 +41,7 @@ function m.SortBuild(a, b)
 	end
 end
 
-m.PtrVersion = "11.1.7"
+m.PtrVersion = "11.2.7"
 
 local flavorInfo = {
 	mainline = {flavor = "mainline", branch = "wow", header = true},

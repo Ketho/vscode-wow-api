@@ -58,6 +58,10 @@ local doc_widgets = {
 	FrameAPIArchaeologyDigSiteFrame = "ArchaeologyDigSiteFrame",
 	FrameAPIQuestPOI = "QuestPOIFrame",
 	FrameAPIScenarioPOI = "ScenarioPOIFrame",
+	FrameAPITooltip = "GameTooltip",
+	HousingCatalogSearcherAPI = "HousingCatalogSearcher",
+	HousingFixturePointFrameAPI = "HousingFixturePoint",
+	HousingLayoutPinFrameAPI = "HousingLayoutPin",
 
 	-- special cases
 	FrameAPISimpleCheckout = "SimpleCheckout",
