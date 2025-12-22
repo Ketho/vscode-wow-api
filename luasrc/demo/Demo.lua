@@ -8,3 +8,6 @@ C_CVar.GetCVar("autoClearAFK")
 
 local f2 = CreateFrame("Frame")
 local smooth = Mixin(f2, SmoothStatusBarMixin)
+
+---@type TBFFlags
+local x = ""
