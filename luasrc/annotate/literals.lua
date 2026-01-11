@@ -43,7 +43,11 @@ local function SortByValue(tbl)
 	end
 	table.sort(t, function(a, b)
 		if a.value ~= b.value then
-			return a.value < b.value
+			if type(a.value) == "boolean" or type(b.value) == "boolean" then
+				return a and not b
+			else
+				return a.value < b.value
+			end
 		else
 			return a.key < b.key
 		end
@@ -78,10 +82,14 @@ function m:GetEnumTable()
 	for _, name in pairs(Util:SortTable(Enum)) do
 		table.insert(t, string.format("---@enum Enum.%s", name))
 		table.insert(t, string.format("Enum.%s = {", name))
-		local numberFormat = IsBitEnum(Enum[name], name) and "0x%X" or "%d"
+		local numberFormat = IsBitEnum(Enum[name], name) and "0x%X" or "%u"
 		for _, enumTbl in pairs(SortByValue(Enum[name])) do
 			if type(enumTbl.value) == "string" then -- 64 bit enum
 				numberFormat = '"%s"'
+			elseif type(enumTbl.value) == "boolean" then
+				numberFormat = "%s"
+			elseif enumTbl.value < 0 then
+				numberFormat = "%d"
 			end
 			table.insert(t, string.format("\t%s = %s,", enumTbl.key, string.format(numberFormat, enumTbl.value)))
 		end

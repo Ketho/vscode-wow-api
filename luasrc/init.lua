@@ -7,7 +7,7 @@ local log = require("wowdoc.log")
 local products = require("wowdoc.products")
 local loader = require("wowdoc.loader")
 
-local PRODUCT = "wow" ---@type TactProduct
+local PRODUCT = CONFIG.TACT_PRODUCT
 GETHE_BRANCH, BLIZZRES_BRANCH = products:GetBranch(PRODUCT)
 
 local function exportAnnotations()
