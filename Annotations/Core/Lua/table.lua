@@ -47,10 +47,10 @@ function table.insert(list, pos, value) end
 ---
 ---[View documents](command:extension.lua.doc?["en-us/51/manual.html/pdf-table.maxn"])
 ---
----@param table table
+---@param tbl table
 ---@return integer
 ---@nodiscard
-function table.maxn(table) end
+function table.maxn(tbl) end
 
 ---
 ---Removes from `list` the element at position `pos`, returning the value of the removed element.
