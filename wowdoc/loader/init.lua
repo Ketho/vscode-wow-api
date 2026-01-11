@@ -91,8 +91,8 @@ local function LoadAnnotationAddon(path, name)
 	custom_doc:copy() -- overwrite with custom annotations
 end
 
-function m:main(product, isAnnotate)
-	if APIDocumentation then
+function m:main(product, isAnnotate, force, enumHackFunc)
+	if APIDocumentation and not force then
 		log:warn("WoWDocLoader: APIDocumentation already loaded")
 		return
 	else
@@ -100,7 +100,10 @@ function m:main(product, isAnnotate)
 	end
 	local framexml_branch, blizzres_branch = products:GetBranch(product)
 	git:checkout("https://github.com/Gethe/wow-ui-source", framexml_branch)
-	enum:LoadLuaEnums(blizzres_branch)
+	enum:LoadLuaEnums(blizzres_branch, force)
+	if enumHackFunc then
+		enumHackFunc()
+	end
 	require(pathlib.join(LOADER_PATH, "compat"))
 
 	local addons_path = pathlib.join("wow-ui-source", "Interface", "AddOns")

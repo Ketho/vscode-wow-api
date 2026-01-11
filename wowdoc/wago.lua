@@ -155,6 +155,8 @@ local function IsValidBuild(branch, version)
 	end
 end
 
+---@param product TactProduct
+---@return number
 function m:GetLatestBuild(product)
 	local url = wago_builds_latest_url:format(product)
 	local json = https.request(url)

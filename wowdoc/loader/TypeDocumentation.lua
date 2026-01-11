@@ -121,12 +121,18 @@ local Types =
 		{ Name = "DurationSeconds", Type = "number"},
 		{ Name = "EncounterTimelineEventID", Type = "number"},
 		{ Name = "UnitTokenVariant", Type = "string"},
-		{ Name = "HousingFixturePointFrame", Type = "Frame"},
+		{ Name = "HousingFixturePointFrame", Type = "HousingFixturePointFrame"},
 		{ Name = "HousingCatalogSearcher", Type = "HousingCatalogSearcher"},
-		{ Name = "HousingLayoutPinFrame", Type = "HousingLayoutPin"},
+		{ Name = "HousingLayoutPinFrame", Type = "HousingLayoutPinFrame"},
 		{ Name = "UISoundSubType", Type = "string"},
 		{ Name = "SoundHandle", Type = "number"},
 		{ Name = "AuraFilters", Type = "string"},
+		{ Name = "AbbreviateConfig", Type = "AbbreviateConfig"},
+		{ Name = "LuaDurationObject", Type = "DurationObject"},
+		{ Name = "LuaCurveObjectBase", Type = "CurveObjectBase"},
+		{ Name = "LuaCurveEvaluatedResult", Type = "CurveEvaluatedResult"},
+		{ Name = "FrameTime", Type = "number"},
+		{ Name = "FrameScriptObject", Type = "FrameScriptObject"},
 
 		-- widgets
 		-- defined: ScriptObject
@@ -145,6 +151,12 @@ local Types =
 		{ Name = "SimpleMaskTexture", Type = "MaskTexture", Replace = true },
 		{ Name = "SimplePathAnim", Type = "Path", Replace = true },
 		{ Name = "SimpleTexture", Type = "Texture", Replace = true },
+		-- 12.0.0
+		{ Name = "SimpleCheckbox", Type = "CheckButton", Replace = true },
+		{ Name = "CooldownFrame", Type = "Cooldown", Replace = true },
+		{ Name = "LuaColorCurveObject", Type = "ColorCurve", Replace = true },
+		{ Name = "LuaCurveObject", Type = "Curve", Replace = true },
+		{ Name = "UnitHealPredictionCalculator", Type = "UnitHealPredictionCalculator", Replace = true },
 		-- frame widgets
 		{ Name = "ChatBubbleFrame", Type = "Frame" },
 		{ Name = "NamePlateFrame", Type = "Frame", Mixin = "NamePlateBaseMixin" },

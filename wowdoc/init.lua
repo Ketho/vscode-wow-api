@@ -6,7 +6,7 @@ local https = require("ssl.https")
 local ltn12 = require("ltn12")
 
 require("wowdoc.config")
-local parser = require("wowdoc.wago")
+local wago = require("wowdoc.wago")
 local log = require("wowdoc.log")
 local doc_widgets = require("wowdoc.loader.doc_widgets")
 
@@ -79,11 +79,11 @@ function m:run_command(cmd)
 end
 
 --- Looks through the FrameXML folder and returns
---- the copy of the FrameXML with the highest build number number
+--- the copy of the FrameXML with the highest build number
 --- it does not look at the semantic version (major,minor,patch) but only at the build number
----@param flavor string
+---@param flavor "live"|"classic"|"classic_era"
 ---@return string path
-function m:GetLatestBuild(flavor)
+function m:GetLatestLocalBuild(flavor)
 	local folder = pathlib.join("FrameXML", flavor)
 	if not lfs.attributes(folder) then
 		error("path does not exist: "..folder)
@@ -148,7 +148,7 @@ end
 --- Downloads a file
 ---@param url string URL to download from
 ---@param path string Path to write the file to
----@param isCache? boolean If the file should be redownloaded after `INVALIDATION_TIME`
+---@param isCache? number|boolean If the file should be redownloaded after `INVALIDATION_TIME`
 function m:DownloadFile(url, path, isCache)
 	if self:ShouldDownload(path, isCache) then
 		log:info(string.format('Downloading %s to "%s"', url, path))
@@ -371,7 +371,7 @@ function m:GetFlavorOptions(info)
 		local t = flavorInfo[info]
 		if t.branch then
 			-- need to know what the latest build is when downloading
-			t.build = parser:GetWagoVersions(t.branch)[1] -- latest build for a branch
+			t.build = wago:GetWagoVersions(t.branch)[1] -- latest build for a branch
 		end
 		t.sort = m.SortPatch
 		return t

@@ -47,6 +47,10 @@ EXTRA_PET_STABLE_SLOT = 0
 Constants.PetConsts.MAX_STABLE_SLOTS = 0
 Constants.PetConsts.NUM_PET_SLOTS_THAT_NEED_LEARNED_SPELL = 0
 Constants.PetConsts.EXTRA_PET_STABLE_SLOT = 0
+-- 11.2.7 hack
+Constants.HousingCatalogConsts.HOUSING_CATALOG_OPTIONS_EXPECTED = 0
+Constants.HousingCatalogConsts.HOUSING_CATALOG_CATEGORIES_EXPECTED = 0
+Constants.HousingCatalogConsts.HOUSING_CATALOG_SUBCATEGORIES_EXPECTED = 0
 
 -- only checks for :AddDocumentationTable files
 function m:LoadBlizzardDocs(folder)

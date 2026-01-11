@@ -13,6 +13,10 @@ function m:info(msg) -- blue
 	print(fs:format(34, "*", msg))
 end
 
+function m:debug(msg) -- teal
+	print(fs:format(36, "D", msg))
+end
+
 function m:warn(msg) -- yellow
 	print(fs:format(33, "!", msg))
 end

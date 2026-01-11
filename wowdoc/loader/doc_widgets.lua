@@ -41,7 +41,7 @@ local doc_widgets = {
 	SimpleStatusBarAPI = "StatusBar",
 	SimpleTextureAPI = "Texture",
 	SimpleTextureBaseAPI = "TextureBase",
-	FrameAPICharacterModelBase = "PlayerModel", -- CharacterModelBase
+	FrameAPICharacterModelBase = "CharacterModelBase", -- PlayerModel
 	FrameAPIDressUpModel = "DressUpModel",
 	-- ScriptRegionSharedDocumentation
 	-- SharedScriptObjectModelLightDocumentation
@@ -59,9 +59,16 @@ local doc_widgets = {
 	FrameAPIQuestPOI = "QuestPOIFrame",
 	FrameAPIScenarioPOI = "ScenarioPOIFrame",
 	FrameAPITooltip = "GameTooltip",
+	-- 12.0.0
 	HousingCatalogSearcherAPI = "HousingCatalogSearcher",
-	HousingFixturePointFrameAPI = "HousingFixturePoint",
-	HousingLayoutPinFrameAPI = "HousingLayoutPin",
+	HousingFixturePointFrameAPI = "HousingFixturePointFrame",
+	HousingLayoutPinFrameAPI = "HousingLayoutPinFrame",
+	LuaColorCurveObjectAPI = "ColorCurveObject",
+	LuaCurveObjectAPI = "CurveObject",
+	AbbreviateConfigAPI = "AbbreviateConfig",
+	LuaDurationObjectAPI = "DurationObject",
+	LuaCurveObjectBaseAPI = "CurveObjectBase",
+	UnitHealPredictionCalculatorAPI = "UnitHealPredictionCalculator",
 
 	-- special cases
 	FrameAPISimpleCheckout = "SimpleCheckout",
