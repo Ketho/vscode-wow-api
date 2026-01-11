@@ -21,9 +21,19 @@ export const data: EventInterface = {
 			{Name: "currencyID", Type: "number"},
 		],
 	},
+	ACCOUNT_STORE_FRONT_UPDATED: {
+		Payload: [
+			{Name: "storeFrontID", Type: "number"},
+		],
+	},
 	ACCOUNT_STORE_ITEM_INFO_UPDATED: {
 		Payload: [
 			{Name: "itemID", Type: "number"},
+		],
+	},
+	ACCOUNT_STORE_TRANSACTION_ERROR: {
+		Payload: [
+			{Name: "result", Type: "AccountStoreTransactionResult"},
 		],
 	},
 	ACHIEVEMENT_EARNED: {
@@ -113,6 +123,18 @@ export const data: EventInterface = {
 			{Name: "containsBindings", Type: "boolean"},
 		],
 	},
+	ADDON_RESTRICTION_STATE_CHANGED: {
+		Documentation: "Fired when the state of an addon restriction type is changing. This event is sequenced such that it will always be fired before a restriction becomes active, or after it is deactivated.",
+		Payload: [
+			{Name: "type", Type: "AddOnRestrictionType"},
+			{Name: "state", Type: "AddOnRestrictionState"},
+		],
+	},
+	ADD_NEIGHBORHOOD_CHARTER_SIGNATURE: {
+		Payload: [
+			{Name: "signature", Type: "string"},
+		],
+	},
 	ADVENTURE_MAP_CLOSE: {},
 	ADVENTURE_MAP_OPEN: {
 		Payload: [
@@ -197,12 +219,12 @@ export const data: EventInterface = {
 	AREA_SPIRIT_HEALER_OUT_OF_RANGE: {},
 	ARENA_COOLDOWNS_UPDATE: {
 		Payload: [
-			{Name: "unitTarget", Type: "UnitToken"},
+			{Name: "unitTarget", Type: "UnitTokenVariant"},
 		],
 	},
 	ARENA_CROWD_CONTROL_SPELL_UPDATE: {
 		Payload: [
-			{Name: "unitTarget", Type: "UnitToken"},
+			{Name: "unitTarget", Type: "UnitTokenVariant"},
 			{Name: "spellID", Type: "number"},
 		],
 	},
@@ -345,6 +367,7 @@ export const data: EventInterface = {
 		],
 	},
 	AUTOFOLLOW_END: {},
+	AVAILABLE_GAME_MODES_UPDATED: {},
 	AVATAR_LIST_UPDATED: {
 		Payload: [
 			{Name: "clubType", Type: "ClubType"},
@@ -502,6 +525,7 @@ export const data: EventInterface = {
 			{Name: "bidID", Type: "number"},
 		],
 	},
+	BINDINGS_LOADED: {},
 	BIND_ENCHANT: {},
 	BLACK_MARKET_BID_RESULT: {
 		Payload: [
@@ -628,6 +652,18 @@ export const data: EventInterface = {
 			{Name: "encounterName", Type: "string"},
 		],
 	},
+	BULK_PURCHASE_RESULT_RECEIVED: {
+		Payload: [
+			{Name: "result", Type: "BulkPurchaseResult"},
+			{Name: "productResults", Type: "BulkPurchaseIndividualProductResult[]"},
+		],
+	},
+	B_NET_NEIGHBORHOOD_LIST_UPDATED: {
+		Payload: [
+			{Name: "result", Type: "HousingResult"},
+			{Name: "neighborhoodInfos", Type: "NeighborhoodInfo[]", Nilable: true},
+		],
+	},
 	CALENDAR_ACTION_PENDING: {
 		Payload: [
 			{Name: "pending", Type: "boolean"},
@@ -684,6 +720,12 @@ export const data: EventInterface = {
 			{Name: "rollID", Type: "number"},
 		],
 	},
+	CANCEL_NEIGHBORHOOD_INVITE_RESPONSE: {
+		Payload: [
+			{Name: "result", Type: "NeighborhoodInviteResult"},
+			{Name: "playerName", Type: "string", Nilable: true},
+		],
+	},
 	CANCEL_PLAYER_COUNTDOWN: {
 		Payload: [
 			{Name: "initiatedBy", Type: "WOWGUID"},
@@ -706,6 +748,66 @@ export const data: EventInterface = {
 	},
 	CAPTUREFRAMES_FAILED: {},
 	CAPTUREFRAMES_SUCCEEDED: {},
+	CATALOG_SHOP_ADD_PENDING_PRODUCT: {
+		Payload: [
+			{Name: "productID", Type: "number"},
+		],
+	},
+	CATALOG_SHOP_DATA_REFRESH: {
+		Payload: [
+			{Name: "shoppingSessionUUIDStr", Type: "string", Nilable: true},
+		],
+	},
+	CATALOG_SHOP_DISABLED: {},
+	CATALOG_SHOP_FETCH_FAILURE: {
+		Payload: [
+			{Name: "shoppingSessionUUIDStr", Type: "string", Nilable: true},
+		],
+	},
+	CATALOG_SHOP_FETCH_SUCCESS: {
+		Payload: [
+			{Name: "shoppingSessionUUIDStr", Type: "string", Nilable: true},
+		],
+	},
+	CATALOG_SHOP_OPEN_SIMPLE_CHECKOUT: {
+		Payload: [
+			{Name: "checkoutID", Type: "number"},
+		],
+	},
+	CATALOG_SHOP_PMT_IMAGE_DOWNLOADED: {
+		Payload: [
+			{Name: "catalogProductID", Type: "number"},
+		],
+	},
+	CATALOG_SHOP_PURCHASE_SUCCESS: {
+		Payload: [
+			{Name: "productID", Type: "number"},
+		],
+	},
+	CATALOG_SHOP_REBUILD_SCROLL_BOX: {},
+	CATALOG_SHOP_REFUNDABLE_DECORS_UPDATED: {},
+	CATALOG_SHOP_REMOVE_PENDING_PRODUCT: {
+		Payload: [
+			{Name: "productID", Type: "number"},
+		],
+	},
+	CATALOG_SHOP_RESULT_ERROR: {},
+	CATALOG_SHOP_SPECIFIC_PRODUCT_REFRESH: {
+		Payload: [
+			{Name: "productID", Type: "number"},
+		],
+	},
+	CATALOG_SHOP_VIRTUAL_CURRENCY_BALANCE_UPDATE: {
+		Payload: [
+			{Name: "currencyCode", Type: "string"},
+			{Name: "balance", Type: "string"},
+		],
+	},
+	CATALOG_SHOP_VIRTUAL_CURRENCY_BALANCE_UPDATE_FAILURE: {
+		Payload: [
+			{Name: "currencyCode", Type: "string"},
+		],
+	},
 	CAUTIONARY_CHANNEL_MESSAGE: {
 		Payload: [
 			{Name: "confirmNumber", Type: "number"},
@@ -733,6 +835,14 @@ export const data: EventInterface = {
 	CHALLENGE_MODE_KEYSTONE_SLOTTED: {
 		Payload: [
 			{Name: "keystoneID", Type: "number"},
+		],
+	},
+	CHALLENGE_MODE_LEADERBOARD_RESULT: {
+		Payload: [
+			{Name: "mapID", Type: "number"},
+			{Name: "challengeModeID", Type: "number"},
+			{Name: "page", Type: "number"},
+			{Name: "results", Type: "MythicPlusLeaderboardResult[]"},
 		],
 	},
 	CHALLENGE_MODE_LEADERS_UPDATE: {},
@@ -825,7 +935,7 @@ export const data: EventInterface = {
 			{Name: "isMobile", Type: "boolean"},
 			{Name: "isSubtitle", Type: "boolean"},
 			{Name: "hideSenderInLetterbox", Type: "boolean"},
-			{Name: "supressRaidIcons", Type: "boolean"},
+			{Name: "suppressRaidIcons", Type: "boolean"},
 		],
 	},
 	CHAT_DISABLED_CHANGED: {
@@ -862,7 +972,7 @@ export const data: EventInterface = {
 			{Name: "isMobile", Type: "boolean"},
 			{Name: "isSubtitle", Type: "boolean"},
 			{Name: "hideSenderInLetterbox", Type: "boolean"},
-			{Name: "supressRaidIcons", Type: "boolean"},
+			{Name: "suppressRaidIcons", Type: "boolean"},
 		],
 	},
 	CHAT_MSG_ADDON: {
@@ -909,7 +1019,7 @@ export const data: EventInterface = {
 			{Name: "isMobile", Type: "boolean"},
 			{Name: "isSubtitle", Type: "boolean"},
 			{Name: "hideSenderInLetterbox", Type: "boolean"},
-			{Name: "supressRaidIcons", Type: "boolean"},
+			{Name: "suppressRaidIcons", Type: "boolean"},
 		],
 	},
 	CHAT_MSG_BG_SYSTEM_ALLIANCE: {
@@ -930,7 +1040,7 @@ export const data: EventInterface = {
 			{Name: "isMobile", Type: "boolean"},
 			{Name: "isSubtitle", Type: "boolean"},
 			{Name: "hideSenderInLetterbox", Type: "boolean"},
-			{Name: "supressRaidIcons", Type: "boolean"},
+			{Name: "suppressRaidIcons", Type: "boolean"},
 		],
 	},
 	CHAT_MSG_BG_SYSTEM_HORDE: {
@@ -951,7 +1061,7 @@ export const data: EventInterface = {
 			{Name: "isMobile", Type: "boolean"},
 			{Name: "isSubtitle", Type: "boolean"},
 			{Name: "hideSenderInLetterbox", Type: "boolean"},
-			{Name: "supressRaidIcons", Type: "boolean"},
+			{Name: "suppressRaidIcons", Type: "boolean"},
 		],
 	},
 	CHAT_MSG_BG_SYSTEM_NEUTRAL: {
@@ -972,7 +1082,7 @@ export const data: EventInterface = {
 			{Name: "isMobile", Type: "boolean"},
 			{Name: "isSubtitle", Type: "boolean"},
 			{Name: "hideSenderInLetterbox", Type: "boolean"},
-			{Name: "supressRaidIcons", Type: "boolean"},
+			{Name: "suppressRaidIcons", Type: "boolean"},
 		],
 	},
 	CHAT_MSG_BN: {
@@ -993,7 +1103,7 @@ export const data: EventInterface = {
 			{Name: "isMobile", Type: "boolean"},
 			{Name: "isSubtitle", Type: "boolean"},
 			{Name: "hideSenderInLetterbox", Type: "boolean"},
-			{Name: "supressRaidIcons", Type: "boolean"},
+			{Name: "suppressRaidIcons", Type: "boolean"},
 		],
 	},
 	CHAT_MSG_BN_INLINE_TOAST_ALERT: {
@@ -1014,7 +1124,7 @@ export const data: EventInterface = {
 			{Name: "isMobile", Type: "boolean"},
 			{Name: "isSubtitle", Type: "boolean"},
 			{Name: "hideSenderInLetterbox", Type: "boolean"},
-			{Name: "supressRaidIcons", Type: "boolean"},
+			{Name: "suppressRaidIcons", Type: "boolean"},
 		],
 	},
 	CHAT_MSG_BN_INLINE_TOAST_BROADCAST: {
@@ -1035,7 +1145,7 @@ export const data: EventInterface = {
 			{Name: "isMobile", Type: "boolean"},
 			{Name: "isSubtitle", Type: "boolean"},
 			{Name: "hideSenderInLetterbox", Type: "boolean"},
-			{Name: "supressRaidIcons", Type: "boolean"},
+			{Name: "suppressRaidIcons", Type: "boolean"},
 		],
 	},
 	CHAT_MSG_BN_INLINE_TOAST_BROADCAST_INFORM: {
@@ -1056,7 +1166,7 @@ export const data: EventInterface = {
 			{Name: "isMobile", Type: "boolean"},
 			{Name: "isSubtitle", Type: "boolean"},
 			{Name: "hideSenderInLetterbox", Type: "boolean"},
-			{Name: "supressRaidIcons", Type: "boolean"},
+			{Name: "suppressRaidIcons", Type: "boolean"},
 		],
 	},
 	CHAT_MSG_BN_INLINE_TOAST_CONVERSATION: {
@@ -1077,7 +1187,7 @@ export const data: EventInterface = {
 			{Name: "isMobile", Type: "boolean"},
 			{Name: "isSubtitle", Type: "boolean"},
 			{Name: "hideSenderInLetterbox", Type: "boolean"},
-			{Name: "supressRaidIcons", Type: "boolean"},
+			{Name: "suppressRaidIcons", Type: "boolean"},
 		],
 	},
 	CHAT_MSG_BN_WHISPER: {
@@ -1098,7 +1208,7 @@ export const data: EventInterface = {
 			{Name: "isMobile", Type: "boolean"},
 			{Name: "isSubtitle", Type: "boolean"},
 			{Name: "hideSenderInLetterbox", Type: "boolean"},
-			{Name: "supressRaidIcons", Type: "boolean"},
+			{Name: "suppressRaidIcons", Type: "boolean"},
 		],
 	},
 	CHAT_MSG_BN_WHISPER_INFORM: {
@@ -1119,7 +1229,7 @@ export const data: EventInterface = {
 			{Name: "isMobile", Type: "boolean"},
 			{Name: "isSubtitle", Type: "boolean"},
 			{Name: "hideSenderInLetterbox", Type: "boolean"},
-			{Name: "supressRaidIcons", Type: "boolean"},
+			{Name: "suppressRaidIcons", Type: "boolean"},
 		],
 	},
 	CHAT_MSG_BN_WHISPER_PLAYER_OFFLINE: {
@@ -1140,7 +1250,7 @@ export const data: EventInterface = {
 			{Name: "isMobile", Type: "boolean"},
 			{Name: "isSubtitle", Type: "boolean"},
 			{Name: "hideSenderInLetterbox", Type: "boolean"},
-			{Name: "supressRaidIcons", Type: "boolean"},
+			{Name: "suppressRaidIcons", Type: "boolean"},
 		],
 	},
 	CHAT_MSG_CHANNEL: {
@@ -1161,7 +1271,7 @@ export const data: EventInterface = {
 			{Name: "isMobile", Type: "boolean"},
 			{Name: "isSubtitle", Type: "boolean"},
 			{Name: "hideSenderInLetterbox", Type: "boolean"},
-			{Name: "supressRaidIcons", Type: "boolean"},
+			{Name: "suppressRaidIcons", Type: "boolean"},
 		],
 	},
 	CHAT_MSG_CHANNEL_JOIN: {
@@ -1182,7 +1292,7 @@ export const data: EventInterface = {
 			{Name: "isMobile", Type: "boolean"},
 			{Name: "isSubtitle", Type: "boolean"},
 			{Name: "hideSenderInLetterbox", Type: "boolean"},
-			{Name: "supressRaidIcons", Type: "boolean"},
+			{Name: "suppressRaidIcons", Type: "boolean"},
 		],
 	},
 	CHAT_MSG_CHANNEL_LEAVE: {
@@ -1203,7 +1313,7 @@ export const data: EventInterface = {
 			{Name: "isMobile", Type: "boolean"},
 			{Name: "isSubtitle", Type: "boolean"},
 			{Name: "hideSenderInLetterbox", Type: "boolean"},
-			{Name: "supressRaidIcons", Type: "boolean"},
+			{Name: "suppressRaidIcons", Type: "boolean"},
 		],
 	},
 	CHAT_MSG_CHANNEL_LEAVE_PREVENTED: {
@@ -1229,7 +1339,7 @@ export const data: EventInterface = {
 			{Name: "isMobile", Type: "boolean"},
 			{Name: "isSubtitle", Type: "boolean"},
 			{Name: "hideSenderInLetterbox", Type: "boolean"},
-			{Name: "supressRaidIcons", Type: "boolean"},
+			{Name: "suppressRaidIcons", Type: "boolean"},
 		],
 	},
 	CHAT_MSG_CHANNEL_NOTICE: {
@@ -1250,7 +1360,7 @@ export const data: EventInterface = {
 			{Name: "isMobile", Type: "boolean"},
 			{Name: "isSubtitle", Type: "boolean"},
 			{Name: "hideSenderInLetterbox", Type: "boolean"},
-			{Name: "supressRaidIcons", Type: "boolean"},
+			{Name: "suppressRaidIcons", Type: "boolean"},
 		],
 	},
 	CHAT_MSG_CHANNEL_NOTICE_USER: {
@@ -1271,7 +1381,7 @@ export const data: EventInterface = {
 			{Name: "isMobile", Type: "boolean"},
 			{Name: "isSubtitle", Type: "boolean"},
 			{Name: "hideSenderInLetterbox", Type: "boolean"},
-			{Name: "supressRaidIcons", Type: "boolean"},
+			{Name: "suppressRaidIcons", Type: "boolean"},
 		],
 	},
 	CHAT_MSG_COMBAT_FACTION_CHANGE: {
@@ -1292,7 +1402,7 @@ export const data: EventInterface = {
 			{Name: "isMobile", Type: "boolean"},
 			{Name: "isSubtitle", Type: "boolean"},
 			{Name: "hideSenderInLetterbox", Type: "boolean"},
-			{Name: "supressRaidIcons", Type: "boolean"},
+			{Name: "suppressRaidIcons", Type: "boolean"},
 		],
 	},
 	CHAT_MSG_COMBAT_HONOR_GAIN: {
@@ -1313,7 +1423,7 @@ export const data: EventInterface = {
 			{Name: "isMobile", Type: "boolean"},
 			{Name: "isSubtitle", Type: "boolean"},
 			{Name: "hideSenderInLetterbox", Type: "boolean"},
-			{Name: "supressRaidIcons", Type: "boolean"},
+			{Name: "suppressRaidIcons", Type: "boolean"},
 		],
 	},
 	CHAT_MSG_COMBAT_MISC_INFO: {
@@ -1334,7 +1444,7 @@ export const data: EventInterface = {
 			{Name: "isMobile", Type: "boolean"},
 			{Name: "isSubtitle", Type: "boolean"},
 			{Name: "hideSenderInLetterbox", Type: "boolean"},
-			{Name: "supressRaidIcons", Type: "boolean"},
+			{Name: "suppressRaidIcons", Type: "boolean"},
 		],
 	},
 	CHAT_MSG_COMBAT_XP_GAIN: {
@@ -1355,7 +1465,7 @@ export const data: EventInterface = {
 			{Name: "isMobile", Type: "boolean"},
 			{Name: "isSubtitle", Type: "boolean"},
 			{Name: "hideSenderInLetterbox", Type: "boolean"},
-			{Name: "supressRaidIcons", Type: "boolean"},
+			{Name: "suppressRaidIcons", Type: "boolean"},
 		],
 	},
 	CHAT_MSG_COMMUNITIES_CHANNEL: {
@@ -1376,7 +1486,7 @@ export const data: EventInterface = {
 			{Name: "isMobile", Type: "boolean"},
 			{Name: "isSubtitle", Type: "boolean"},
 			{Name: "hideSenderInLetterbox", Type: "boolean"},
-			{Name: "supressRaidIcons", Type: "boolean"},
+			{Name: "suppressRaidIcons", Type: "boolean"},
 		],
 	},
 	CHAT_MSG_CURRENCY: {
@@ -1397,7 +1507,7 @@ export const data: EventInterface = {
 			{Name: "isMobile", Type: "boolean"},
 			{Name: "isSubtitle", Type: "boolean"},
 			{Name: "hideSenderInLetterbox", Type: "boolean"},
-			{Name: "supressRaidIcons", Type: "boolean"},
+			{Name: "suppressRaidIcons", Type: "boolean"},
 		],
 	},
 	CHAT_MSG_DND: {
@@ -1418,7 +1528,7 @@ export const data: EventInterface = {
 			{Name: "isMobile", Type: "boolean"},
 			{Name: "isSubtitle", Type: "boolean"},
 			{Name: "hideSenderInLetterbox", Type: "boolean"},
-			{Name: "supressRaidIcons", Type: "boolean"},
+			{Name: "suppressRaidIcons", Type: "boolean"},
 		],
 	},
 	CHAT_MSG_EMOTE: {
@@ -1439,7 +1549,28 @@ export const data: EventInterface = {
 			{Name: "isMobile", Type: "boolean"},
 			{Name: "isSubtitle", Type: "boolean"},
 			{Name: "hideSenderInLetterbox", Type: "boolean"},
-			{Name: "supressRaidIcons", Type: "boolean"},
+			{Name: "suppressRaidIcons", Type: "boolean"},
+		],
+	},
+	CHAT_MSG_ENCOUNTER_EVENT: {
+		Payload: [
+			{Name: "text", Type: "string"},
+			{Name: "playerName", Type: "string"},
+			{Name: "languageName", Type: "string"},
+			{Name: "channelName", Type: "string"},
+			{Name: "playerName2", Type: "string"},
+			{Name: "specialFlags", Type: "string"},
+			{Name: "zoneChannelID", Type: "number"},
+			{Name: "channelIndex", Type: "number"},
+			{Name: "channelBaseName", Type: "string"},
+			{Name: "languageID", Type: "number"},
+			{Name: "lineID", Type: "number"},
+			{Name: "guid", Type: "WOWGUID"},
+			{Name: "bnSenderID", Type: "number"},
+			{Name: "isMobile", Type: "boolean"},
+			{Name: "isSubtitle", Type: "boolean"},
+			{Name: "hideSenderInLetterbox", Type: "boolean"},
+			{Name: "suppressRaidIcons", Type: "boolean"},
 		],
 	},
 	CHAT_MSG_FILTERED: {
@@ -1460,7 +1591,7 @@ export const data: EventInterface = {
 			{Name: "isMobile", Type: "boolean"},
 			{Name: "isSubtitle", Type: "boolean"},
 			{Name: "hideSenderInLetterbox", Type: "boolean"},
-			{Name: "supressRaidIcons", Type: "boolean"},
+			{Name: "suppressRaidIcons", Type: "boolean"},
 		],
 	},
 	CHAT_MSG_GUILD: {
@@ -1481,7 +1612,7 @@ export const data: EventInterface = {
 			{Name: "isMobile", Type: "boolean"},
 			{Name: "isSubtitle", Type: "boolean"},
 			{Name: "hideSenderInLetterbox", Type: "boolean"},
-			{Name: "supressRaidIcons", Type: "boolean"},
+			{Name: "suppressRaidIcons", Type: "boolean"},
 		],
 	},
 	CHAT_MSG_GUILD_ACHIEVEMENT: {
@@ -1502,7 +1633,7 @@ export const data: EventInterface = {
 			{Name: "isMobile", Type: "boolean"},
 			{Name: "isSubtitle", Type: "boolean"},
 			{Name: "hideSenderInLetterbox", Type: "boolean"},
-			{Name: "supressRaidIcons", Type: "boolean"},
+			{Name: "suppressRaidIcons", Type: "boolean"},
 		],
 	},
 	CHAT_MSG_GUILD_ITEM_LOOTED: {
@@ -1523,7 +1654,7 @@ export const data: EventInterface = {
 			{Name: "isMobile", Type: "boolean"},
 			{Name: "isSubtitle", Type: "boolean"},
 			{Name: "hideSenderInLetterbox", Type: "boolean"},
-			{Name: "supressRaidIcons", Type: "boolean"},
+			{Name: "suppressRaidIcons", Type: "boolean"},
 		],
 	},
 	CHAT_MSG_IGNORED: {
@@ -1544,7 +1675,7 @@ export const data: EventInterface = {
 			{Name: "isMobile", Type: "boolean"},
 			{Name: "isSubtitle", Type: "boolean"},
 			{Name: "hideSenderInLetterbox", Type: "boolean"},
-			{Name: "supressRaidIcons", Type: "boolean"},
+			{Name: "suppressRaidIcons", Type: "boolean"},
 		],
 	},
 	CHAT_MSG_INSTANCE_CHAT: {
@@ -1565,7 +1696,7 @@ export const data: EventInterface = {
 			{Name: "isMobile", Type: "boolean"},
 			{Name: "isSubtitle", Type: "boolean"},
 			{Name: "hideSenderInLetterbox", Type: "boolean"},
-			{Name: "supressRaidIcons", Type: "boolean"},
+			{Name: "suppressRaidIcons", Type: "boolean"},
 		],
 	},
 	CHAT_MSG_INSTANCE_CHAT_LEADER: {
@@ -1586,7 +1717,7 @@ export const data: EventInterface = {
 			{Name: "isMobile", Type: "boolean"},
 			{Name: "isSubtitle", Type: "boolean"},
 			{Name: "hideSenderInLetterbox", Type: "boolean"},
-			{Name: "supressRaidIcons", Type: "boolean"},
+			{Name: "suppressRaidIcons", Type: "boolean"},
 		],
 	},
 	CHAT_MSG_LOOT: {
@@ -1607,7 +1738,7 @@ export const data: EventInterface = {
 			{Name: "isMobile", Type: "boolean"},
 			{Name: "isSubtitle", Type: "boolean"},
 			{Name: "hideSenderInLetterbox", Type: "boolean"},
-			{Name: "supressRaidIcons", Type: "boolean"},
+			{Name: "suppressRaidIcons", Type: "boolean"},
 		],
 	},
 	CHAT_MSG_MONEY: {
@@ -1628,7 +1759,7 @@ export const data: EventInterface = {
 			{Name: "isMobile", Type: "boolean"},
 			{Name: "isSubtitle", Type: "boolean"},
 			{Name: "hideSenderInLetterbox", Type: "boolean"},
-			{Name: "supressRaidIcons", Type: "boolean"},
+			{Name: "suppressRaidIcons", Type: "boolean"},
 		],
 	},
 	CHAT_MSG_MONSTER_EMOTE: {
@@ -1649,7 +1780,7 @@ export const data: EventInterface = {
 			{Name: "isMobile", Type: "boolean"},
 			{Name: "isSubtitle", Type: "boolean"},
 			{Name: "hideSenderInLetterbox", Type: "boolean"},
-			{Name: "supressRaidIcons", Type: "boolean"},
+			{Name: "suppressRaidIcons", Type: "boolean"},
 		],
 	},
 	CHAT_MSG_MONSTER_PARTY: {
@@ -1670,7 +1801,7 @@ export const data: EventInterface = {
 			{Name: "isMobile", Type: "boolean"},
 			{Name: "isSubtitle", Type: "boolean"},
 			{Name: "hideSenderInLetterbox", Type: "boolean"},
-			{Name: "supressRaidIcons", Type: "boolean"},
+			{Name: "suppressRaidIcons", Type: "boolean"},
 		],
 	},
 	CHAT_MSG_MONSTER_SAY: {
@@ -1691,7 +1822,7 @@ export const data: EventInterface = {
 			{Name: "isMobile", Type: "boolean"},
 			{Name: "isSubtitle", Type: "boolean"},
 			{Name: "hideSenderInLetterbox", Type: "boolean"},
-			{Name: "supressRaidIcons", Type: "boolean"},
+			{Name: "suppressRaidIcons", Type: "boolean"},
 		],
 	},
 	CHAT_MSG_MONSTER_WHISPER: {
@@ -1712,7 +1843,7 @@ export const data: EventInterface = {
 			{Name: "isMobile", Type: "boolean"},
 			{Name: "isSubtitle", Type: "boolean"},
 			{Name: "hideSenderInLetterbox", Type: "boolean"},
-			{Name: "supressRaidIcons", Type: "boolean"},
+			{Name: "suppressRaidIcons", Type: "boolean"},
 		],
 	},
 	CHAT_MSG_MONSTER_YELL: {
@@ -1733,7 +1864,7 @@ export const data: EventInterface = {
 			{Name: "isMobile", Type: "boolean"},
 			{Name: "isSubtitle", Type: "boolean"},
 			{Name: "hideSenderInLetterbox", Type: "boolean"},
-			{Name: "supressRaidIcons", Type: "boolean"},
+			{Name: "suppressRaidIcons", Type: "boolean"},
 		],
 	},
 	CHAT_MSG_OFFICER: {
@@ -1754,7 +1885,7 @@ export const data: EventInterface = {
 			{Name: "isMobile", Type: "boolean"},
 			{Name: "isSubtitle", Type: "boolean"},
 			{Name: "hideSenderInLetterbox", Type: "boolean"},
-			{Name: "supressRaidIcons", Type: "boolean"},
+			{Name: "suppressRaidIcons", Type: "boolean"},
 		],
 	},
 	CHAT_MSG_OPENING: {
@@ -1775,7 +1906,7 @@ export const data: EventInterface = {
 			{Name: "isMobile", Type: "boolean"},
 			{Name: "isSubtitle", Type: "boolean"},
 			{Name: "hideSenderInLetterbox", Type: "boolean"},
-			{Name: "supressRaidIcons", Type: "boolean"},
+			{Name: "suppressRaidIcons", Type: "boolean"},
 		],
 	},
 	CHAT_MSG_PARTY: {
@@ -1796,7 +1927,7 @@ export const data: EventInterface = {
 			{Name: "isMobile", Type: "boolean"},
 			{Name: "isSubtitle", Type: "boolean"},
 			{Name: "hideSenderInLetterbox", Type: "boolean"},
-			{Name: "supressRaidIcons", Type: "boolean"},
+			{Name: "suppressRaidIcons", Type: "boolean"},
 		],
 	},
 	CHAT_MSG_PARTY_LEADER: {
@@ -1817,7 +1948,7 @@ export const data: EventInterface = {
 			{Name: "isMobile", Type: "boolean"},
 			{Name: "isSubtitle", Type: "boolean"},
 			{Name: "hideSenderInLetterbox", Type: "boolean"},
-			{Name: "supressRaidIcons", Type: "boolean"},
+			{Name: "suppressRaidIcons", Type: "boolean"},
 		],
 	},
 	CHAT_MSG_PET_BATTLE_COMBAT_LOG: {
@@ -1838,7 +1969,7 @@ export const data: EventInterface = {
 			{Name: "isMobile", Type: "boolean"},
 			{Name: "isSubtitle", Type: "boolean"},
 			{Name: "hideSenderInLetterbox", Type: "boolean"},
-			{Name: "supressRaidIcons", Type: "boolean"},
+			{Name: "suppressRaidIcons", Type: "boolean"},
 		],
 	},
 	CHAT_MSG_PET_BATTLE_INFO: {
@@ -1859,7 +1990,7 @@ export const data: EventInterface = {
 			{Name: "isMobile", Type: "boolean"},
 			{Name: "isSubtitle", Type: "boolean"},
 			{Name: "hideSenderInLetterbox", Type: "boolean"},
-			{Name: "supressRaidIcons", Type: "boolean"},
+			{Name: "suppressRaidIcons", Type: "boolean"},
 		],
 	},
 	CHAT_MSG_PET_INFO: {
@@ -1880,7 +2011,7 @@ export const data: EventInterface = {
 			{Name: "isMobile", Type: "boolean"},
 			{Name: "isSubtitle", Type: "boolean"},
 			{Name: "hideSenderInLetterbox", Type: "boolean"},
-			{Name: "supressRaidIcons", Type: "boolean"},
+			{Name: "suppressRaidIcons", Type: "boolean"},
 		],
 	},
 	CHAT_MSG_PING: {
@@ -1901,7 +2032,7 @@ export const data: EventInterface = {
 			{Name: "isMobile", Type: "boolean"},
 			{Name: "isSubtitle", Type: "boolean"},
 			{Name: "hideSenderInLetterbox", Type: "boolean"},
-			{Name: "supressRaidIcons", Type: "boolean"},
+			{Name: "suppressRaidIcons", Type: "boolean"},
 		],
 	},
 	CHAT_MSG_RAID: {
@@ -1922,7 +2053,7 @@ export const data: EventInterface = {
 			{Name: "isMobile", Type: "boolean"},
 			{Name: "isSubtitle", Type: "boolean"},
 			{Name: "hideSenderInLetterbox", Type: "boolean"},
-			{Name: "supressRaidIcons", Type: "boolean"},
+			{Name: "suppressRaidIcons", Type: "boolean"},
 		],
 	},
 	CHAT_MSG_RAID_BOSS_EMOTE: {
@@ -1943,7 +2074,7 @@ export const data: EventInterface = {
 			{Name: "isMobile", Type: "boolean"},
 			{Name: "isSubtitle", Type: "boolean"},
 			{Name: "hideSenderInLetterbox", Type: "boolean"},
-			{Name: "supressRaidIcons", Type: "boolean"},
+			{Name: "suppressRaidIcons", Type: "boolean"},
 		],
 	},
 	CHAT_MSG_RAID_BOSS_WHISPER: {
@@ -1964,7 +2095,7 @@ export const data: EventInterface = {
 			{Name: "isMobile", Type: "boolean"},
 			{Name: "isSubtitle", Type: "boolean"},
 			{Name: "hideSenderInLetterbox", Type: "boolean"},
-			{Name: "supressRaidIcons", Type: "boolean"},
+			{Name: "suppressRaidIcons", Type: "boolean"},
 		],
 	},
 	CHAT_MSG_RAID_LEADER: {
@@ -1985,7 +2116,7 @@ export const data: EventInterface = {
 			{Name: "isMobile", Type: "boolean"},
 			{Name: "isSubtitle", Type: "boolean"},
 			{Name: "hideSenderInLetterbox", Type: "boolean"},
-			{Name: "supressRaidIcons", Type: "boolean"},
+			{Name: "suppressRaidIcons", Type: "boolean"},
 		],
 	},
 	CHAT_MSG_RAID_WARNING: {
@@ -2006,7 +2137,7 @@ export const data: EventInterface = {
 			{Name: "isMobile", Type: "boolean"},
 			{Name: "isSubtitle", Type: "boolean"},
 			{Name: "hideSenderInLetterbox", Type: "boolean"},
-			{Name: "supressRaidIcons", Type: "boolean"},
+			{Name: "suppressRaidIcons", Type: "boolean"},
 		],
 	},
 	CHAT_MSG_RESTRICTED: {
@@ -2027,7 +2158,7 @@ export const data: EventInterface = {
 			{Name: "isMobile", Type: "boolean"},
 			{Name: "isSubtitle", Type: "boolean"},
 			{Name: "hideSenderInLetterbox", Type: "boolean"},
-			{Name: "supressRaidIcons", Type: "boolean"},
+			{Name: "suppressRaidIcons", Type: "boolean"},
 		],
 	},
 	CHAT_MSG_SAY: {
@@ -2048,7 +2179,7 @@ export const data: EventInterface = {
 			{Name: "isMobile", Type: "boolean"},
 			{Name: "isSubtitle", Type: "boolean"},
 			{Name: "hideSenderInLetterbox", Type: "boolean"},
-			{Name: "supressRaidIcons", Type: "boolean"},
+			{Name: "suppressRaidIcons", Type: "boolean"},
 		],
 	},
 	CHAT_MSG_SKILL: {
@@ -2069,7 +2200,7 @@ export const data: EventInterface = {
 			{Name: "isMobile", Type: "boolean"},
 			{Name: "isSubtitle", Type: "boolean"},
 			{Name: "hideSenderInLetterbox", Type: "boolean"},
-			{Name: "supressRaidIcons", Type: "boolean"},
+			{Name: "suppressRaidIcons", Type: "boolean"},
 		],
 	},
 	CHAT_MSG_SYSTEM: {
@@ -2090,7 +2221,7 @@ export const data: EventInterface = {
 			{Name: "isMobile", Type: "boolean"},
 			{Name: "isSubtitle", Type: "boolean"},
 			{Name: "hideSenderInLetterbox", Type: "boolean"},
-			{Name: "supressRaidIcons", Type: "boolean"},
+			{Name: "suppressRaidIcons", Type: "boolean"},
 		],
 	},
 	CHAT_MSG_TARGETICONS: {
@@ -2111,7 +2242,7 @@ export const data: EventInterface = {
 			{Name: "isMobile", Type: "boolean"},
 			{Name: "isSubtitle", Type: "boolean"},
 			{Name: "hideSenderInLetterbox", Type: "boolean"},
-			{Name: "supressRaidIcons", Type: "boolean"},
+			{Name: "suppressRaidIcons", Type: "boolean"},
 		],
 	},
 	CHAT_MSG_TEXT_EMOTE: {
@@ -2132,7 +2263,7 @@ export const data: EventInterface = {
 			{Name: "isMobile", Type: "boolean"},
 			{Name: "isSubtitle", Type: "boolean"},
 			{Name: "hideSenderInLetterbox", Type: "boolean"},
-			{Name: "supressRaidIcons", Type: "boolean"},
+			{Name: "suppressRaidIcons", Type: "boolean"},
 		],
 	},
 	CHAT_MSG_TRADESKILLS: {
@@ -2153,7 +2284,7 @@ export const data: EventInterface = {
 			{Name: "isMobile", Type: "boolean"},
 			{Name: "isSubtitle", Type: "boolean"},
 			{Name: "hideSenderInLetterbox", Type: "boolean"},
-			{Name: "supressRaidIcons", Type: "boolean"},
+			{Name: "suppressRaidIcons", Type: "boolean"},
 		],
 	},
 	CHAT_MSG_VOICE_TEXT: {
@@ -2174,7 +2305,7 @@ export const data: EventInterface = {
 			{Name: "isMobile", Type: "boolean"},
 			{Name: "isSubtitle", Type: "boolean"},
 			{Name: "hideSenderInLetterbox", Type: "boolean"},
-			{Name: "supressRaidIcons", Type: "boolean"},
+			{Name: "suppressRaidIcons", Type: "boolean"},
 		],
 	},
 	CHAT_MSG_WHISPER: {
@@ -2195,7 +2326,7 @@ export const data: EventInterface = {
 			{Name: "isMobile", Type: "boolean"},
 			{Name: "isSubtitle", Type: "boolean"},
 			{Name: "hideSenderInLetterbox", Type: "boolean"},
-			{Name: "supressRaidIcons", Type: "boolean"},
+			{Name: "suppressRaidIcons", Type: "boolean"},
 		],
 	},
 	CHAT_MSG_WHISPER_INFORM: {
@@ -2216,7 +2347,7 @@ export const data: EventInterface = {
 			{Name: "isMobile", Type: "boolean"},
 			{Name: "isSubtitle", Type: "boolean"},
 			{Name: "hideSenderInLetterbox", Type: "boolean"},
-			{Name: "supressRaidIcons", Type: "boolean"},
+			{Name: "suppressRaidIcons", Type: "boolean"},
 		],
 	},
 	CHAT_MSG_YELL: {
@@ -2237,7 +2368,7 @@ export const data: EventInterface = {
 			{Name: "isMobile", Type: "boolean"},
 			{Name: "isSubtitle", Type: "boolean"},
 			{Name: "hideSenderInLetterbox", Type: "boolean"},
-			{Name: "supressRaidIcons", Type: "boolean"},
+			{Name: "suppressRaidIcons", Type: "boolean"},
 		],
 	},
 	CHAT_REGIONAL_SEND_FAILED: {},
@@ -2274,11 +2405,15 @@ export const data: EventInterface = {
 			{Name: "sceneType", Type: "ClientSceneType"},
 		],
 	},
+	CLOSE_CHARTER_CONFIRMATION_UI: {},
+	CLOSE_CREATE_CHARTER_NEIGHBORHOOD_UI: {},
+	CLOSE_CREATE_GUILD_NEIGHBORHOOD_UI: {},
 	CLOSE_INBOX_ITEM: {
 		Payload: [
 			{Name: "mailIndex", Type: "number"},
 		],
 	},
+	CLOSE_PLOT_CORNERSTONE: {},
 	CLOSE_TABARD_FRAME: {},
 	CLUB_ADDED: {
 		Payload: [
@@ -2520,8 +2655,30 @@ export const data: EventInterface = {
 			{Name: "overrideType", Type: "ColorOverride"},
 		],
 	},
+	COMBAT_LOG_APPLY_FILTER_SETTINGS: {
+		Payload: [
+			{Name: "filterSettings", Type: "LuaValueVariant"},
+		],
+	},
+	COMBAT_LOG_ENTRIES_CLEARED: {},
 	COMBAT_LOG_EVENT: {},
+	COMBAT_LOG_EVENT_INTERNAL_UNFILTERED: {},
 	COMBAT_LOG_EVENT_UNFILTERED: {},
+	COMBAT_LOG_MESSAGE: {
+		Payload: [
+			{Name: "message", Type: "string", Documentation: "A preformatted combat log message protected by a |K string wrapper."},
+			{Name: "colorR", Type: "number"},
+			{Name: "colorG", Type: "number"},
+			{Name: "colorB", Type: "number"},
+			{Name: "order", Type: "CombatLogMessageOrder"},
+		],
+	},
+	COMBAT_LOG_MESSAGE_LIMIT_CHANGED: {
+		Payload: [
+			{Name: "messageLimit", Type: "number"},
+		],
+	},
+	COMBAT_LOG_REFILTER_ENTRIES: {},
 	COMBAT_RATING_UPDATE: {},
 	COMBAT_TEXT_UPDATE: {
 		Payload: [
@@ -2529,6 +2686,7 @@ export const data: EventInterface = {
 		],
 	},
 	COMBO_TARGET_CHANGED: {},
+	COMMENTATOR_COMBAT_EVENT: {},
 	COMMENTATOR_ENTER_WORLD: {},
 	COMMENTATOR_HISTORY_FLUSHED: {},
 	COMMENTATOR_IMMEDIATE_FOV_UPDATE: {
@@ -2681,6 +2839,7 @@ export const data: EventInterface = {
 	},
 	CONVERT_TO_BIND_TO_ACCOUNT_CONFIRM: {},
 	CONVERT_TO_RAID_CONFIRMATION: {},
+	COOLDOWN_VIEWER_DATA_LOADED: {},
 	COOLDOWN_VIEWER_SPELL_OVERRIDE_UPDATED: {
 		Payload: [
 			{Name: "baseSpellID", Type: "number", Documentation: "The base spell that is either being overridden or losing its override spell."},
@@ -2799,6 +2958,12 @@ export const data: EventInterface = {
 	},
 	CRAFTING_DETAILS_UPDATE: {},
 	CRAFTING_HOUSE_DISABLED: {},
+	CREATE_NEIGHBORHOOD_RESULT: {
+		Payload: [
+			{Name: "result", Type: "HousingResult"},
+			{Name: "neighborhoodName", Type: "string", Nilable: true},
+		],
+	},
 	CRITERIA_COMPLETE: {
 		Payload: [
 			{Name: "criteriaID", Type: "number"},
@@ -2829,6 +2994,16 @@ export const data: EventInterface = {
 	CURRENCY_TRANSFER_INITIATED: {},
 	CURRENCY_TRANSFER_LOG_UPDATE: {},
 	CURRENCY_TRANSFER_SUCCESS: {},
+	CURRENT_HOUSE_INFO_RECIEVED: {
+		Payload: [
+			{Name: "houseInfo", Type: "HouseInfo"},
+		],
+	},
+	CURRENT_HOUSE_INFO_UPDATED: {
+		Payload: [
+			{Name: "houseInfo", Type: "HouseInfo"},
+		],
+	},
 	CURRENT_SPELL_CAST_CHANGED: {
 		Payload: [
 			{Name: "cancelledCast", Type: "boolean"},
@@ -2852,6 +3027,19 @@ export const data: EventInterface = {
 		Payload: [
 			{Name: "mapname", Type: "string"},
 			{Name: "timeLeft", Type: "number"},
+		],
+	},
+	DAMAGE_METER_COMBAT_SESSION_UPDATED: {
+		Payload: [
+			{Name: "type", Type: "DamageMeterType"},
+			{Name: "sessionID", Type: "number"},
+		],
+	},
+	DAMAGE_METER_CURRENT_SESSION_UPDATED: {},
+	DAMAGE_METER_RESET: {},
+	DECLINE_NEIGHBORHOOD_INVITATION_RESPONSE: {
+		Payload: [
+			{Name: "success", Type: "boolean"},
 		],
 	},
 	DELETE_ITEM_CONFIRM: {
@@ -2893,6 +3081,16 @@ export const data: EventInterface = {
 	DUEL_TO_THE_DEATH_REQUESTED: {
 		Payload: [
 			{Name: "playerName", Type: "string"},
+		],
+	},
+	DYE_COLOR_CATEGORY_UPDATED: {
+		Payload: [
+			{Name: "dyeColorCategoryID", Type: "number"},
+		],
+	},
+	DYE_COLOR_UPDATED: {
+		Payload: [
+			{Name: "dyeColorID", Type: "number"},
 		],
 	},
 	DYNAMIC_GOSSIP_POI_UPDATED: {},
@@ -2955,6 +3153,59 @@ export const data: EventInterface = {
 			{Name: "groupSize", Type: "number"},
 		],
 	},
+	ENCOUNTER_STATE_CHANGED: {
+		Documentation: "Signaled when the in-progress state of an encounter changes.",
+		Payload: [
+			{Name: "isInProgress", Type: "boolean"},
+		],
+	},
+	ENCOUNTER_TIMELINE_EVENT_ADDED: {
+		Documentation: "Fired when an event has been added to the timeline.",
+		Payload: [
+			{Name: "eventInfo", Type: "EncounterTimelineEventInfo"},
+		],
+	},
+	ENCOUNTER_TIMELINE_EVENT_BLOCK_STATE_CHANGED: {
+		Documentation: "Fired when an event has transitioned into or out of a 'blocked' status.",
+		Payload: [
+			{Name: "eventID", Type: "EncounterTimelineEventID"},
+		],
+	},
+	ENCOUNTER_TIMELINE_EVENT_HIGHLIGHT: {
+		Documentation: "Fired when an event has met a condition that should trigger its highlight glow animation.",
+		Payload: [
+			{Name: "eventID", Type: "EncounterTimelineEventID"},
+		],
+	},
+	ENCOUNTER_TIMELINE_EVENT_REMOVED: {
+		Documentation: "Fired when an event has been removed from the timeline. This is guaranteed to fire after an event has transitioned to a 'final' state such as Canceled or Finished, and will be delayed at least one game tick to allow for API queries to still access event data in OnUpdate scripts. This is fired post-removal of the event, and so queries using the supplied event ID will return nil.",
+		Payload: [
+			{Name: "eventID", Type: "EncounterTimelineEventID"},
+		],
+	},
+	ENCOUNTER_TIMELINE_EVENT_STATE_CHANGED: {
+		Documentation: "Fired when an event has changed state.",
+		Payload: [
+			{Name: "eventID", Type: "EncounterTimelineEventID"},
+		],
+	},
+	ENCOUNTER_TIMELINE_EVENT_TRACK_CHANGED: {
+		Documentation: "Fired when an event has changed track, or has been re-ordered within its existing track.",
+		Payload: [
+			{Name: "eventID", Type: "EncounterTimelineEventID"},
+		],
+	},
+	ENCOUNTER_TIMELINE_LAYOUT_UPDATED: {
+		Documentation: "Fired when the layout of tracks on the timeline has been updated. This can include changes to the minimum or maximum durations of tracks.",
+	},
+	ENCOUNTER_TIMELINE_STATE_UPDATED: {
+		Documentation: "Signaled when conditions controlling the visibility of the encounter timeline are updated.",
+	},
+	ENCOUNTER_WARNING: {
+		Payload: [
+			{Name: "encounterWarningInfo", Type: "EncounterWarningInfo"},
+		],
+	},
 	END_BOUND_TRADEABLE: {
 		Payload: [
 			{Name: "reason", Type: "string"},
@@ -3012,6 +3263,12 @@ export const data: EventInterface = {
 			{Name: "itemID", Type: "number"},
 		],
 	},
+	FACTION_STANDING_CHANGED: {
+		Payload: [
+			{Name: "factionID", Type: "number"},
+			{Name: "updatedStanding", Type: "number"},
+		],
+	},
 	FIRST_FRAME_RENDERED: {},
 	FOG_OF_WAR_UPDATED: {},
 	FORBIDDEN_NAME_PLATE_CREATED: {
@@ -3029,6 +3286,7 @@ export const data: EventInterface = {
 			{Name: "unitToken", Type: "string"},
 		],
 	},
+	FORCE_REFRESH_HOUSE_FINDER: {},
 	FRAME_MANAGER_UPDATE_ALL: {},
 	FRAME_MANAGER_UPDATE_FRAME: {
 		Payload: [
@@ -3038,6 +3296,12 @@ export const data: EventInterface = {
 	},
 	FRIENDLIST_UPDATE: {},
 	GAME_MODE_DISPLAY_INFO_UPDATED: {},
+	GAME_MODE_DISPLAY_MODE_TOGGLE_DISABLED: {
+		Payload: [
+			{Name: "gameModeRecordID", Type: "number"},
+			{Name: "disabled", Type: "boolean"},
+		],
+	},
 	GAME_PAD_ACTIVE_CHANGED: {
 		Payload: [
 			{Name: "isActive", Type: "boolean"},
@@ -3504,24 +3768,391 @@ export const data: EventInterface = {
 	},
 	HONOR_XP_UPDATE: {
 		Payload: [
-			{Name: "unitTarget", Type: "UnitToken"},
+			{Name: "unitTarget", Type: "UnitTokenVariant"},
 		],
 	},
+	HOUSE_DECOR_ADDED_TO_CHEST: {
+		Payload: [
+			{Name: "decorGUID", Type: "WOWGUID"},
+			{Name: "decorID", Type: "number"},
+		],
+	},
+	HOUSE_EDITOR_AVAILABILITY_CHANGED: {},
+	HOUSE_EDITOR_MODE_CHANGED: {
+		Payload: [
+			{Name: "currentEditMode", Type: "HouseEditorMode"},
+		],
+	},
+	HOUSE_EDITOR_MODE_CHANGE_FAILURE: {
+		Payload: [
+			{Name: "result", Type: "HousingResult"},
+		],
+	},
+	HOUSE_EXTERIOR_POSITION_FAILURE: {
+		Payload: [
+			{Name: "housingResult", Type: "HousingResult"},
+		],
+	},
+	HOUSE_EXTERIOR_POSITION_SUCCESS: {},
+	HOUSE_EXTERIOR_TYPE_UNLOCKED: {
+		Payload: [
+			{Name: "fixtureID", Type: "number"},
+		],
+	},
+	HOUSE_FINDER_NEIGHBORHOOD_DATA_RECIEVED: {
+		Payload: [
+			{Name: "neighborhoodPlots", Type: "NeighborhoodPlotMapInfo[]"},
+		],
+	},
+	HOUSE_INFO_UPDATED: {},
+	HOUSE_LEVEL_CHANGED: {
+		Payload: [
+			{Name: "newHouseLevelInfo", Type: "HouseLevelInfo", Nilable: true},
+		],
+	},
+	HOUSE_LEVEL_FAVOR_UPDATED: {
+		Payload: [
+			{Name: "houseLevelFavor", Type: "HouseLevelFavor"},
+		],
+	},
+	HOUSE_PLOT_ENTERED: {},
+	HOUSE_PLOT_EXITED: {},
+	HOUSE_RESERVATION_RESPONSE_RECIEVED: {
+		Payload: [
+			{Name: "result", Type: "HousingResult"},
+		],
+	},
+	HOUSING_BASIC_MODE_HOVERED_TARGET_CHANGED: {
+		Payload: [
+			{Name: "hasHoveredTarget", Type: "boolean"},
+			{Name: "targetType", Type: "HousingBasicModeTargetType"},
+		],
+	},
+	HOUSING_BASIC_MODE_PLACEMENT_FLAGS_UPDATED: {
+		Payload: [
+			{Name: "targetType", Type: "HousingBasicModeTargetType"},
+			{Name: "activeFlags", Type: "HousingDecorPlacementRestriction"},
+		],
+	},
+	HOUSING_BASIC_MODE_SELECTED_TARGET_CHANGED: {
+		Payload: [
+			{Name: "hasSelectedTarget", Type: "boolean"},
+			{Name: "targetType", Type: "HousingBasicModeTargetType"},
+			{Name: "isPreview", Type: "boolean"},
+		],
+	},
+	HOUSING_CATALOG_CATEGORY_UPDATED: {
+		Payload: [
+			{Name: "categoryID", Type: "number"},
+		],
+	},
+	HOUSING_CATALOG_SUBCATEGORY_UPDATED: {
+		Payload: [
+			{Name: "subcategoryID", Type: "number"},
+		],
+	},
+	HOUSING_CLEANUP_MODE_HOVERED_TARGET_CHANGED: {
+		Payload: [
+			{Name: "hasHoveredTarget", Type: "boolean"},
+		],
+	},
+	HOUSING_CLEANUP_MODE_TARGET_SELECTED: {},
+	HOUSING_CORE_FIXTURE_CHANGED: {
+		Payload: [
+			{Name: "coreFixtureType", Type: "HousingFixtureType"},
+		],
+	},
+	HOUSING_CUSTOMIZE_MODE_HOVERED_TARGET_CHANGED: {
+		Payload: [
+			{Name: "hasHoveredTarget", Type: "boolean"},
+			{Name: "targetType", Type: "HousingCustomizeModeTargetType"},
+		],
+	},
+	HOUSING_CUSTOMIZE_MODE_SELECTED_TARGET_CHANGED: {
+		Payload: [
+			{Name: "hasSelectedTarget", Type: "boolean"},
+			{Name: "targetType", Type: "HousingCustomizeModeTargetType"},
+		],
+	},
+	HOUSING_DECOR_ADD_TO_PREVIEW_LIST: {
+		Payload: [
+			{Name: "previewItemData", Type: "HousingPreviewItemData"},
+		],
+	},
+	HOUSING_DECOR_CUSTOMIZATION_CHANGED: {
+		Payload: [
+			{Name: "decorGUID", Type: "WOWGUID"},
+		],
+	},
+	HOUSING_DECOR_DYE_FAILURE: {
+		Payload: [
+			{Name: "decorGUID", Type: "WOWGUID"},
+			{Name: "housingResult", Type: "HousingResult"},
+		],
+	},
+	HOUSING_DECOR_FREE_PLACE_STATUS_CHANGED: {
+		Payload: [
+			{Name: "isFreePlaceEnabled", Type: "boolean"},
+		],
+	},
+	HOUSING_DECOR_GRID_SNAP_OCCURRED: {},
+	HOUSING_DECOR_GRID_SNAP_STATUS_CHANGED: {
+		Payload: [
+			{Name: "isGridSnapEnabled", Type: "boolean"},
+		],
+	},
+	HOUSING_DECOR_GRID_VISIBILITY_STATUS_CHANGED: {
+		Payload: [
+			{Name: "isGridVisible", Type: "boolean"},
+		],
+	},
+	HOUSING_DECOR_PLACE_FAILURE: {
+		Payload: [
+			{Name: "housingResult", Type: "HousingResult"},
+		],
+	},
+	HOUSING_DECOR_PLACE_SUCCESS: {
+		Payload: [
+			{Name: "decorGUID", Type: "WOWGUID"},
+			{Name: "size", Type: "HousingCatalogEntrySize"},
+			{Name: "isNew", Type: "boolean", Documentation: "Will be true if the decor is newly placed from storage, false if it was already placed and just moved"},
+			{Name: "isPreview", Type: "boolean"},
+		],
+	},
+	HOUSING_DECOR_PRECISION_MANIPULATION_EVENT: {
+		Payload: [
+			{Name: "event", Type: "TransformManipulatorEvent"},
+		],
+	},
+	HOUSING_DECOR_PRECISION_MANIPULATION_STATUS_CHANGED: {
+		Payload: [
+			{Name: "isManipulatingSelection", Type: "boolean"},
+		],
+	},
+	HOUSING_DECOR_PRECISION_SUBMODE_CHANGED: {
+		Payload: [
+			{Name: "activeSubmode", Type: "HousingPrecisionSubmode", Nilable: true},
+		],
+	},
+	HOUSING_DECOR_PREVIEW_LIST_REMOVE_FROM_WORLD: {
+		Payload: [
+			{Name: "decorGUID", Type: "WOWGUID"},
+		],
+	},
+	HOUSING_DECOR_PREVIEW_LIST_UPDATED: {},
+	HOUSING_DECOR_PREVIEW_STATE_CHANGED: {
+		Payload: [
+			{Name: "isPreviewState", Type: "boolean"},
+		],
+	},
+	HOUSING_DECOR_REMOVED: {
+		Payload: [
+			{Name: "decorGUID", Type: "WOWGUID"},
+		],
+	},
+	HOUSING_DECOR_SELECT_RESPONSE: {
+		Payload: [
+			{Name: "result", Type: "HousingResult"},
+		],
+	},
+	HOUSING_EXPERT_MODE_HOVERED_TARGET_CHANGED: {
+		Payload: [
+			{Name: "hasHoveredTarget", Type: "boolean"},
+			{Name: "targetType", Type: "HousingExpertModeTargetType"},
+		],
+	},
+	HOUSING_EXPERT_MODE_PLACEMENT_FLAGS_UPDATED: {
+		Payload: [
+			{Name: "targetType", Type: "HousingExpertModeTargetType"},
+			{Name: "activeFlags", Type: "HousingDecorPlacementRestriction"},
+		],
+	},
+	HOUSING_EXPERT_MODE_SELECTED_TARGET_CHANGED: {
+		Payload: [
+			{Name: "hasSelectedTarget", Type: "boolean"},
+			{Name: "targetType", Type: "HousingExpertModeTargetType"},
+		],
+	},
+	HOUSING_FIXTURE_HOVER_CHANGED: {
+		Payload: [
+			{Name: "anyHovered", Type: "boolean"},
+		],
+	},
+	HOUSING_FIXTURE_POINT_FRAMES_RELEASED: {},
+	HOUSING_FIXTURE_POINT_FRAME_ADDED: {
+		Payload: [
+			{Name: "pointFrame", Type: "HousingFixturePointFrame"},
+		],
+	},
+	HOUSING_FIXTURE_POINT_FRAME_RELEASED: {
+		Payload: [
+			{Name: "pointFrame", Type: "HousingFixturePointFrame"},
+		],
+	},
+	HOUSING_FIXTURE_POINT_SELECTION_CHANGED: {
+		Payload: [
+			{Name: "hasSelection", Type: "boolean"},
+		],
+	},
+	HOUSING_FIXTURE_UNLOCKED: {
+		Payload: [
+			{Name: "fixtureID", Type: "number"},
+		],
+	},
+	HOUSING_LAYOUT_DOOR_SELECTED: {
+		Documentation: "Fired when one of the door nodes of an already placed room has been selected",
+		Payload: [
+			{Name: "roomGUID", Type: "WOWGUID"},
+			{Name: "componentID", Type: "number"},
+		],
+	},
+	HOUSING_LAYOUT_DOOR_SELECTION_CHANGED: {
+		Documentation: "Fired when one of the door nodes of an already placed room has been selected or deselected",
+		Payload: [
+			{Name: "hasSelection", Type: "boolean"},
+		],
+	},
+	HOUSING_LAYOUT_DRAG_TARGET_CHANGED: {
+		Documentation: "Fired when an already placed room has either started or stopped being dragged",
+		Payload: [
+			{Name: "isDraggingRoom", Type: "boolean"},
+		],
+	},
+	HOUSING_LAYOUT_FLOORPLAN_SELECTION_CHANGED: {
+		Documentation: "Fired when a room option in the House Chest has been selected or deselected",
+		Payload: [
+			{Name: "hasSelection", Type: "boolean"},
+			{Name: "roomID", Type: "number"},
+		],
+	},
+	HOUSING_LAYOUT_NUM_FLOORS_CHANGED: {
+		Payload: [
+			{Name: "prevNumFloors", Type: "number"},
+			{Name: "numFloors", Type: "number"},
+		],
+	},
+	HOUSING_LAYOUT_PIN_FRAMES_RELEASED: {},
+	HOUSING_LAYOUT_PIN_FRAME_ADDED: {
+		Payload: [
+			{Name: "pinFrame", Type: "HousingLayoutPinFrame"},
+		],
+	},
+	HOUSING_LAYOUT_PIN_FRAME_RELEASED: {
+		Payload: [
+			{Name: "pinFrame", Type: "HousingLayoutPinFrame"},
+		],
+	},
+	HOUSING_LAYOUT_ROOM_COMPONENT_THEME_SET_CHANGED: {
+		Payload: [
+			{Name: "roomGUID", Type: "WOWGUID"},
+			{Name: "componentID", Type: "number"},
+			{Name: "newThemeSet", Type: "number"},
+			{Name: "result", Type: "HousingResult"},
+		],
+	},
+	HOUSING_LAYOUT_ROOM_MOVED: {
+		Documentation: "Fired when a previously placed room has been moved to a different position or rotation",
+	},
+	HOUSING_LAYOUT_ROOM_MOVE_INVALID: {},
+	HOUSING_LAYOUT_ROOM_RECEIVED: {
+		Documentation: "Fired when info for a newly placed room has been recieved while in Layout Mode",
+		Payload: [
+			{Name: "prevNumFloors", Type: "number"},
+			{Name: "currNumFloors", Type: "number"},
+			{Name: "isUpstairs", Type: "boolean"},
+		],
+	},
+	HOUSING_LAYOUT_ROOM_REMOVED: {
+		Documentation: "Fired when a previously placed room has been removed while in Layout Mode",
+	},
+	HOUSING_LAYOUT_ROOM_RETURNED: {
+		Documentation: "Fired when a room that was being dragged is let go of without being placed, and is returned to the House Chest",
+	},
+	HOUSING_LAYOUT_ROOM_SELECTION_CHANGED: {
+		Documentation: "Fired when an already placed room has been selected or deselected",
+		Payload: [
+			{Name: "hasSelection", Type: "boolean"},
+		],
+	},
+	HOUSING_LAYOUT_ROOM_SNAPPED: {
+		Documentation: "Fired when a room being dragged has been snapped to a particular door connection",
+	},
+	HOUSING_LAYOUT_VIEWED_FLOOR_CHANGED: {
+		Payload: [
+			{Name: "floor", Type: "number"},
+		],
+	},
+	HOUSING_MARKET_AVAILABILITY_UPDATED: {},
+	HOUSING_NUM_DECOR_PLACED_CHANGED: {},
+	HOUSING_REFUND_LIST_UPDATED: {},
+	HOUSING_ROOM_COMPONENT_CUSTOMIZATION_CHANGED: {
+		Payload: [
+			{Name: "roomGUID", Type: "WOWGUID"},
+			{Name: "componentID", Type: "number"},
+		],
+	},
+	HOUSING_ROOM_COMPONENT_CUSTOMIZATION_CHANGE_FAILED: {
+		Payload: [
+			{Name: "roomGUID", Type: "WOWGUID"},
+			{Name: "componentID", Type: "number"},
+			{Name: "housingResult", Type: "HousingResult"},
+		],
+	},
+	HOUSING_SERVICES_AVAILABILITY_UPDATED: {},
+	HOUSING_SET_EXTERIOR_HOUSE_SIZE_RESPONSE: {
+		Payload: [
+			{Name: "result", Type: "HousingResult"},
+		],
+	},
+	HOUSING_SET_EXTERIOR_HOUSE_TYPE_RESPONSE: {
+		Payload: [
+			{Name: "result", Type: "HousingResult"},
+		],
+	},
+	HOUSING_SET_FIXTURE_RESPONSE: {
+		Payload: [
+			{Name: "result", Type: "HousingResult"},
+		],
+	},
+	HOUSING_STORAGE_ENTRY_UPDATED: {
+		Payload: [
+			{Name: "entryID", Type: "HousingCatalogEntryID"},
+		],
+	},
+	HOUSING_STORAGE_UPDATED: {},
 	IGNORELIST_UPDATE: {},
 	IMMERSIVE_INTERACTION_BEGIN: {},
 	IMMERSIVE_INTERACTION_END: {},
 	INCOMING_RESURRECT_CHANGED: {
 		Payload: [
-			{Name: "unitTarget", Type: "UnitToken"},
+			{Name: "unitTarget", Type: "UnitTokenVariant"},
 		],
 	},
 	INCOMING_SUMMON_CHANGED: {
 		Payload: [
-			{Name: "unitTarget", Type: "UnitToken"},
+			{Name: "unitTarget", Type: "UnitTokenVariant"},
 		],
 	},
 	INITIAL_CLUBS_LOADED: {},
 	INITIAL_HOTFIXES_APPLIED: {},
+	INITIATIVE_ACTIVITY_LOG_UPDATED: {},
+	INITIATIVE_COMPLETED: {
+		Payload: [
+			{Name: "initiativeTitle", Type: "string"},
+		],
+	},
+	INITIATIVE_TASKS_TRACKED_LIST_CHANGED: {
+		Payload: [
+			{Name: "initiativeTaskID", Type: "number"},
+			{Name: "added", Type: "boolean"},
+		],
+	},
+	INITIATIVE_TASKS_TRACKED_UPDATED: {},
+	INITIATIVE_TASK_COMPLETED: {
+		Payload: [
+			{Name: "taskName", Type: "string"},
+		],
+	},
 	INSPECT_ACHIEVEMENT_READY: {
 		Payload: [
 			{Name: "guid", Type: "WOWGUID"},
@@ -3706,7 +4337,7 @@ export const data: EventInterface = {
 	},
 	KNOWN_TITLES_UPDATE: {
 		Payload: [
-			{Name: "unitTarget", Type: "UnitToken"},
+			{Name: "unitTarget", Type: "UnitTokenVariant"},
 		],
 	},
 	LANGUAGE_LIST_CHANGED: {},
@@ -3717,21 +4348,21 @@ export const data: EventInterface = {
 			{Name: "isGuildPerkSpell", Type: "boolean"},
 		],
 	},
-	LEARNED_SPELL_IN_TAB: {
-		Payload: [
-			{Name: "spellID", Type: "number"},
-			{Name: "skillInfoIndex", Type: "number"},
-			{Name: "isGuildPerkSpell", Type: "boolean"},
-		],
-	},
 	LEAVE_PARTY_CONFIRMATION: {
 		Payload: [
 			{Name: "reason", Type: "LeavePartyConfirmReason"},
 		],
 	},
 	LEAVING_TUTORIAL_AREA: {},
+	LEGACY_LOOT_RULES_CHANGED: {
+		Payload: [
+			{Name: "isLegacyLootModeEnabled", Type: "boolean"},
+		],
+	},
+	LET_RECENT_ALLIES_SEE_LOCATION_SETTING_UPDATED: {},
 	LFG_BOOT_PROPOSAL_UPDATE: {},
 	LFG_COMPLETION_REWARD: {},
+	LFG_COOLDOWNS_UPDATED: {},
 	LFG_ENABLED_STATE_CHANGED: {},
 	LFG_GROUP_DELISTED_LEADERSHIP_CHANGE: {
 		Payload: [
@@ -3791,6 +4422,7 @@ export const data: EventInterface = {
 			{Name: "searchResultID", Type: "number"},
 		],
 	},
+	LFG_LIST_UPDATE_SEARCH_RESULTS: {},
 	LFG_LOCK_INFO_RECEIVED: {},
 	LFG_OFFER_CONTINUE: {
 		Payload: [
@@ -3940,7 +4572,7 @@ export const data: EventInterface = {
 	},
 	LOSS_OF_CONTROL_ADDED: {
 		Payload: [
-			{Name: "unitTarget", Type: "UnitToken"},
+			{Name: "unitTarget", Type: "UnitTokenVariant"},
 			{Name: "effectIndex", Type: "number"},
 		],
 	},
@@ -3957,7 +4589,7 @@ export const data: EventInterface = {
 	},
 	LOSS_OF_CONTROL_UPDATE: {
 		Payload: [
-			{Name: "unitTarget", Type: "UnitToken"},
+			{Name: "unitTarget", Type: "UnitTokenVariant"},
 		],
 	},
 	LUA_WARNING: {
@@ -4042,7 +4674,7 @@ export const data: EventInterface = {
 	MERCHANT_UPDATE: {},
 	MINIMAP_PING: {
 		Payload: [
-			{Name: "unitTarget", Type: "UnitToken"},
+			{Name: "unitTarget", Type: "UnitTokenVariant"},
 			{Name: "y", Type: "number"},
 			{Name: "x", Type: "number"},
 		],
@@ -4085,6 +4717,7 @@ export const data: EventInterface = {
 	},
 	MOUNT_JOURNAL_SEARCH_UPDATED: {},
 	MOUNT_JOURNAL_USABILITY_CHANGED: {},
+	MOVE_OUT_RESERVATION_UPDATED: {},
 	MUTELIST_UPDATE: {},
 	MYTHIC_PLUS_CURRENT_AFFIX_UPDATE: {},
 	MYTHIC_PLUS_NEW_WEEKLY_RECORD: {
@@ -4104,6 +4737,12 @@ export const data: EventInterface = {
 			{Name: "unitToken", Type: "string"},
 		],
 	},
+	NAME_PLATE_UNIT_BEHIND_CAMERA_CHANGED: {
+		Payload: [
+			{Name: "unitTarget", Type: "UnitTokenVariant"},
+			{Name: "isBehindCamera", Type: "boolean"},
+		],
+	},
 	NAME_PLATE_UNIT_REMOVED: {
 		Payload: [
 			{Name: "unitToken", Type: "string"},
@@ -4120,12 +4759,53 @@ export const data: EventInterface = {
 		],
 	},
 	NAVIGATION_FRAME_DESTROYED: {},
+	NEIGHBORHOOD_GUILD_SIZE_VALIDATED: {
+		Payload: [
+			{Name: "approved", Type: "boolean"},
+		],
+	},
+	NEIGHBORHOOD_INFO_UPDATED: {
+		Payload: [
+			{Name: "neighborhoodInfo", Type: "NeighborhoodInfo"},
+		],
+	},
+	NEIGHBORHOOD_INITIATIVE_UPDATED: {},
+	NEIGHBORHOOD_INVITE_RESPONSE: {
+		Payload: [
+			{Name: "result", Type: "NeighborhoodInviteResult"},
+		],
+	},
+	NEIGHBORHOOD_LIST_UPDATED: {
+		Payload: [
+			{Name: "result", Type: "HousingResult"},
+			{Name: "neighborhoodInfos", Type: "NeighborhoodInfo[]", Nilable: true},
+		],
+	},
+	NEIGHBORHOOD_MAP_DATA_UPDATED: {},
+	NEIGHBORHOOD_NAME_UPDATED: {
+		Payload: [
+			{Name: "neighborhoodGuid", Type: "WOWGUID"},
+			{Name: "neighborhoodName", Type: "string"},
+		],
+	},
+	NEIGHBORHOOD_NAME_VALIDATED: {
+		Payload: [
+			{Name: "approved", Type: "boolean"},
+		],
+	},
 	NEUTRAL_FACTION_SELECT_RESULT: {
 		Payload: [
 			{Name: "success", Type: "boolean"},
 		],
 	},
 	NEWCOMER_GRADUATION: {},
+	NEW_HOUSING_ITEM_ACQUIRED: {
+		Payload: [
+			{Name: "itemType", Type: "HousingItemToastType"},
+			{Name: "itemName", Type: "string"},
+			{Name: "icon", Type: "fileID", Nilable: true},
+		],
+	},
 	NEW_MATCHMAKING_PARTY_INVITE: {},
 	NEW_MOUNT_ADDED: {
 		Payload: [
@@ -4169,6 +4849,7 @@ export const data: EventInterface = {
 			{Name: "numPlayersIHaveReported", Type: "number"},
 		],
 	},
+	NOTIFY_TURN_STRAFE_CHANGE: {},
 	NPE_TUTORIAL_UPDATE: {},
 	OBJECT_ENTERED_AOI: {
 		Payload: [
@@ -4181,7 +4862,36 @@ export const data: EventInterface = {
 		],
 	},
 	OBLITERUM_FORGE_PENDING_ITEM_CHANGED: {},
+	OPEN_CHARTER_CONFIRMATION_UI: {
+		Payload: [
+			{Name: "neighborhoodName", Type: "string"},
+			{Name: "locationName", Type: "string"},
+		],
+	},
+	OPEN_CREATE_CHARTER_NEIGHBORHOOD_UI: {
+		Payload: [
+			{Name: "locationName", Type: "string"},
+		],
+	},
+	OPEN_CREATE_GUILD_NEIGHBORHOOD_UI: {
+		Payload: [
+			{Name: "locationName", Type: "string"},
+		],
+	},
 	OPEN_MASTER_LOOT_LIST: {},
+	OPEN_NEIGHBORHOOD_CHARTER: {
+		Payload: [
+			{Name: "neighborhoodInfo", Type: "NeighborhoodInfo"},
+			{Name: "signatures", Type: "string[]"},
+			{Name: "requiredSignatures", Type: "number"},
+		],
+	},
+	OPEN_NEIGHBORHOOD_CHARTER_SIGNATURE_REQUEST: {
+		Payload: [
+			{Name: "neighborhoodInfo", Type: "NeighborhoodInfo"},
+		],
+	},
+	OPEN_PLOT_CORNERSTONE: {},
 	OPEN_RECIPE_RESPONSE: {
 		Payload: [
 			{Name: "recipeID", Type: "number"},
@@ -4222,22 +4932,34 @@ export const data: EventInterface = {
 			{Name: "questSessionActive", Type: "boolean"},
 		],
 	},
+	PARTY_KILL: {
+		Payload: [
+			{Name: "attackerGUID", Type: "WOWGUID"},
+			{Name: "targetGUID", Type: "WOWGUID"},
+		],
+	},
 	PARTY_LEADER_CHANGED: {},
 	PARTY_LFG_RESTRICTED: {},
 	PARTY_LOOT_METHOD_CHANGED: {},
 	PARTY_MEMBER_DISABLE: {
 		Payload: [
-			{Name: "unitTarget", Type: "UnitToken"},
+			{Name: "unitTarget", Type: "UnitTokenVariant"},
 		],
 	},
 	PARTY_MEMBER_ENABLE: {
 		Payload: [
-			{Name: "unitTarget", Type: "UnitToken"},
+			{Name: "unitTarget", Type: "UnitTokenVariant"},
 		],
 	},
 	PENDING_AZERITE_ESSENCE_CHANGED: {
 		Payload: [
 			{Name: "essenceID", Type: "number", Nilable: true},
+		],
+	},
+	PENDING_NEIGHBORHOOD_INVITES_RECIEVED: {
+		Payload: [
+			{Name: "result", Type: "NeighborhoodInviteResult"},
+			{Name: "pendingInviteList", Type: "string[]", Nilable: true},
 		],
 	},
 	PERKS_ACTIVITIES_TRACKED_LIST_CHANGED: {
@@ -4507,13 +5229,19 @@ export const data: EventInterface = {
 			{Name: "canGlide", Type: "boolean"},
 		],
 	},
+	PLAYER_CHARACTER_LIST_UPDATED: {
+		Payload: [
+			{Name: "characterInfos", Type: "HouseOwnerCharacterInfo[]"},
+			{Name: "ownerListIndex", Type: "number"},
+		],
+	},
 	PLAYER_CHOICE_CLOSE: {},
 	PLAYER_CHOICE_UPDATE: {},
 	PLAYER_CONTROL_GAINED: {},
 	PLAYER_CONTROL_LOST: {},
 	PLAYER_DAMAGE_DONE_MODS: {
 		Payload: [
-			{Name: "unitTarget", Type: "UnitToken"},
+			{Name: "unitTarget", Type: "UnitTokenVariant"},
 		],
 	},
 	PLAYER_DEAD: {},
@@ -4535,19 +5263,24 @@ export const data: EventInterface = {
 	PLAYER_FARSIGHT_FOCUS_CHANGED: {},
 	PLAYER_FLAGS_CHANGED: {
 		Payload: [
-			{Name: "unitTarget", Type: "UnitToken"},
+			{Name: "unitTarget", Type: "UnitTokenVariant"},
 		],
 	},
 	PLAYER_FOCUS_CHANGED: {},
 	PLAYER_GAINS_VEHICLE_DATA: {
 		Payload: [
-			{Name: "unitTarget", Type: "UnitToken"},
+			{Name: "unitTarget", Type: "UnitTokenVariant"},
 			{Name: "vehicleUIIndicatorID", Type: "number"},
 		],
 	},
 	PLAYER_GUILD_UPDATE: {
 		Payload: [
-			{Name: "unitTarget", Type: "UnitToken"},
+			{Name: "unitTarget", Type: "UnitTokenVariant"},
+		],
+	},
+	PLAYER_HOUSE_LIST_UPDATED: {
+		Payload: [
+			{Name: "houseInfos", Type: "HouseInfo[]"},
 		],
 	},
 	PLAYER_IMPULSE_APPLIED: {},
@@ -4607,7 +5340,7 @@ export const data: EventInterface = {
 	PLAYER_LOOT_SPEC_UPDATED: {},
 	PLAYER_LOSES_VEHICLE_DATA: {
 		Payload: [
-			{Name: "unitTarget", Type: "UnitToken"},
+			{Name: "unitTarget", Type: "UnitTokenVariant"},
 		],
 	},
 	PLAYER_MAP_CHANGED: {
@@ -4620,12 +5353,12 @@ export const data: EventInterface = {
 	PLAYER_MOUNT_DISPLAY_CHANGED: {},
 	PLAYER_PVP_KILLS_CHANGED: {
 		Payload: [
-			{Name: "unitTarget", Type: "UnitToken"},
+			{Name: "unitTarget", Type: "UnitTokenVariant"},
 		],
 	},
 	PLAYER_PVP_RANK_CHANGED: {
 		Payload: [
-			{Name: "unitTarget", Type: "UnitToken"},
+			{Name: "unitTarget", Type: "UnitTokenVariant"},
 		],
 	},
 	PLAYER_PVP_TALENT_UPDATE: {},
@@ -4654,7 +5387,7 @@ export const data: EventInterface = {
 	PLAYER_SOFT_TARGET_INTERACTION: {},
 	PLAYER_SPECIALIZATION_CHANGED: {
 		Payload: [
-			{Name: "unitTarget", Type: "UnitToken"},
+			{Name: "unitTarget", Type: "UnitTokenVariant"},
 		],
 	},
 	PLAYER_STARTED_LOOKING: {},
@@ -4665,6 +5398,7 @@ export const data: EventInterface = {
 	PLAYER_STOPPED_TURNING: {},
 	PLAYER_TALENT_UPDATE: {},
 	PLAYER_TARGET_CHANGED: {},
+	PLAYER_TARGET_DIED: {},
 	PLAYER_TOTEM_UPDATE: {
 		Payload: [
 			{Name: "totemSlot", Type: "number"},
@@ -4674,14 +5408,14 @@ export const data: EventInterface = {
 	PLAYER_TRADE_MONEY: {},
 	PLAYER_TRIAL_XP_UPDATE: {
 		Payload: [
-			{Name: "unitTarget", Type: "UnitToken"},
+			{Name: "unitTarget", Type: "UnitTokenVariant"},
 		],
 	},
 	PLAYER_UNGHOST: {},
 	PLAYER_UPDATE_RESTING: {},
 	PLAYER_XP_UPDATE: {
 		Payload: [
-			{Name: "unitTarget", Type: "UnitToken"},
+			{Name: "unitTarget", Type: "UnitTokenVariant"},
 		],
 	},
 	PLAY_MOVIE: {
@@ -4710,6 +5444,11 @@ export const data: EventInterface = {
 	PROVING_GROUNDS_SCORE_UPDATE: {
 		Payload: [
 			{Name: "points", Type: "number"},
+		],
+	},
+	PURCHASE_PLOT_RESULT: {
+		Payload: [
+			{Name: "result", Type: "number"},
 		],
 	},
 	PVPQUEUE_ANYWHERE_SHOW: {},
@@ -4741,7 +5480,7 @@ export const data: EventInterface = {
 	PVP_SPECIAL_EVENT_INFO_UPDATED: {},
 	PVP_TIMER_UPDATE: {
 		Payload: [
-			{Name: "unitTarget", Type: "UnitToken"},
+			{Name: "unitTarget", Type: "UnitTokenVariant"},
 		],
 	},
 	PVP_TYPES_ENABLED: {
@@ -4939,7 +5678,7 @@ export const data: EventInterface = {
 	},
 	READY_CHECK_CONFIRM: {
 		Payload: [
-			{Name: "unitTarget", Type: "UnitToken"},
+			{Name: "unitTarget", Type: "UnitTokenVariant"},
 			{Name: "isReady", Type: "boolean"},
 		],
 	},
@@ -4954,12 +5693,37 @@ export const data: EventInterface = {
 			{Name: "achievementID", Type: "number"},
 		],
 	},
+	RECEIVED_HOUSE_LEVEL_REWARDS: {
+		Payload: [
+			{Name: "level", Type: "number"},
+			{Name: "rewards", Type: "HouseLevelReward[]"},
+		],
+	},
+	RECENT_ALLIES_CACHE_UPDATE: {},
+	RECENT_ALLIES_DATA_READY: {},
+	RECENT_ALLIES_SYSTEM_STATUS_UPDATED: {},
+	RECENT_ALLY_DATA_UPDATED: {
+		Payload: [
+			{Name: "characterGUID", Type: "WOWGUID"},
+		],
+	},
 	REJECTED_MATCHMAKING_PARTY_INVITE: {
 		Payload: [
 			{Name: "name", Type: "string"},
 		],
 	},
+	REMIX_ARTIFACT_ITEM_SPECS_LOADED: {
+		Payload: [
+			{Name: "success", Type: "boolean"},
+		],
+	},
+	REMIX_ARTIFACT_UPDATE: {},
 	REMIX_END_OF_EVENT: {},
+	REMOVE_NEIGHBORHOOD_CHARTER_SIGNATURE: {
+		Payload: [
+			{Name: "signature", Type: "string"},
+		],
+	},
 	REPLACE_ENCHANT: {
 		Payload: [
 			{Name: "existingStr", Type: "string"},
@@ -4979,6 +5743,7 @@ export const data: EventInterface = {
 			{Name: "reportType", Type: "ReportType"},
 		],
 	},
+	REPORT_SCREENSHOT_READY: {},
 	REQUESTED_GUILD_RENAME_RESULT: {
 		Payload: [
 			{Name: "newName", Type: "string"},
@@ -5017,7 +5782,6 @@ export const data: EventInterface = {
 			{Name: "inviter", Type: "string"},
 		],
 	},
-	RETURNING_PLAYER_PROMPT: {},
 	ROLE_CHANGED_INFORM: {
 		Payload: [
 			{Name: "changedName", Type: "string"},
@@ -5106,13 +5870,26 @@ export const data: EventInterface = {
 	SCRIPTED_ANIMATIONS_UPDATE: {},
 	SEARCH_DB_LOADED: {},
 	SECURE_TRANSFER_CANCEL: {},
+	SECURE_TRANSFER_CONFIRM_HOUSING_PURCHASE: {},
 	SECURE_TRANSFER_CONFIRM_SEND_MAIL: {},
 	SECURE_TRANSFER_CONFIRM_TRADE_ACCEPT: {},
+	SECURE_TRANSFER_HOUSING_CURRENCY_PURCHASE_CONFIRMATION: {},
 	SELECTED_LOADOUT_CHANGED: {},
 	SELF_RES_SPELL_CHANGED: {},
 	SEND_MAIL_COD_CHANGED: {},
 	SEND_MAIL_MONEY_CHANGED: {},
 	SETTINGS_LOADED: {},
+	SETTINGS_PANEL_OPEN: {
+		Payload: [
+			{Name: "openToCategoryID", Type: "number", Nilable: true},
+			{Name: "scrollToElementName", Type: "stringView", Nilable: true},
+		],
+	},
+	SET_SEEN_PRODUCTS: {
+		Payload: [
+			{Name: "productIds", Type: "number[]"},
+		],
+	},
 	SHIPMENT_CRAFTER_CLOSED: {},
 	SHIPMENT_CRAFTER_INFO: {
 		Payload: [
@@ -5138,14 +5915,17 @@ export const data: EventInterface = {
 	SHOW_DELVES_COMPANION_CONFIGURATION_UI: {
 		Documentation: "Signaled when SpellScript indicates that a curio has been learned or upgraded. Will show the companion config UI.",
 	},
-	SHOW_DELVES_DISPLAY_UI: {
-		Documentation: "Signaled when the UI needs to display the Delves dashbaord.",
-	},
 	SHOW_END_OF_MATCH_UI: {},
 	SHOW_FACTION_SELECT_UI: {},
 	SHOW_HYPERLINK_TOOLTIP: {
 		Payload: [
 			{Name: "hyperlink", Type: "string"},
+		],
+	},
+	SHOW_JOURNEYS_UI: {
+		Documentation: "Signaled when the UI needs to display the journeys dashboard at a specific faction.",
+		Payload: [
+			{Name: "factionID", Type: "number"},
 		],
 	},
 	SHOW_LFG_EXPAND_SEARCH_PROMPT: {},
@@ -5179,12 +5959,20 @@ export const data: EventInterface = {
 			{Name: "lessAwesome", Type: "boolean"},
 		],
 	},
+	SHOW_NEIGHBORHOOD_OWNERSHIP_TRANSFER_DIALOG: {
+		Payload: [
+			{Name: "neighborhoodName", Type: "string"},
+			{Name: "cosmeticOwnerName", Type: "string"},
+		],
+	},
+	SHOW_NEW_PRODUCT_NOTIFICATION: {},
 	SHOW_PARTY_POSE_UI: {
 		Payload: [
 			{Name: "mapID", Type: "number"},
 			{Name: "won", Type: "boolean"},
 		],
 	},
+	SHOW_PLAYER_EVICTED_DIALOG: {},
 	SHOW_PVP_FACTION_LOOT_TOAST: {
 		Payload: [
 			{Name: "typeIdentifier", Type: "string"},
@@ -5207,6 +5995,7 @@ export const data: EventInterface = {
 			{Name: "lessAwesome", Type: "boolean"},
 		],
 	},
+	SHOW_STAIR_DIRECTION_CONFIRMATION: {},
 	SHOW_SUBSCRIPTION_INTERSTITIAL: {
 		Payload: [
 			{Name: "type", Type: "SubscriptionInterstitialType"},
@@ -5246,6 +6035,11 @@ export const data: EventInterface = {
 	SOCKET_INFO_FAILURE: {},
 	SOCKET_INFO_REFUNDABLE_CONFIRM: {},
 	SOCKET_INFO_SUCCESS: {},
+	SOCKET_INFO_UI_EVENT_REGISTRATION_UPDATE: {
+		Payload: [
+			{Name: "uiType", Type: "ItemSocketInfoUIType"},
+		],
+	},
 	SOCKET_INFO_UPDATE: {},
 	SOULBIND_ACTIVATED: {
 		Payload: [
@@ -5470,6 +6264,7 @@ export const data: EventInterface = {
 	STURDINESS_UPDATE: {},
 	SUPER_TRACKING_CHANGED: {},
 	SUPER_TRACKING_PATH_UPDATED: {},
+	SURVEY_DELIVERED: {},
 	SYSMSG: {
 		Payload: [
 			{Name: "string", Type: "string"},
@@ -5584,6 +6379,11 @@ export const data: EventInterface = {
 			{Name: "duration", Type: "number", Nilable: true},
 		],
 	},
+	TRACKED_HOUSE_CHANGED: {
+		Payload: [
+			{Name: "trackedHouse", Type: "WOWGUID", Nilable: true},
+		],
+	},
 	TRACKED_RECIPE_UPDATE: {
 		Payload: [
 			{Name: "recipeID", Type: "number"},
@@ -5683,6 +6483,7 @@ export const data: EventInterface = {
 	TRAINER_SERVICE_INFO_NAME_UPDATE: {},
 	TRAINER_SHOW: {},
 	TRAINER_UPDATE: {},
+	TRAINING_GROUNDS_ENABLED_STATUS_UPDATED: {},
 	TRAIT_COND_INFO_CHANGED: {
 		Payload: [
 			{Name: "condID", Type: "number"},
@@ -5786,7 +6587,13 @@ export const data: EventInterface = {
 			{Name: "itemModifiedAppearanceID", Type: "number"},
 		],
 	},
-	TRANSMOG_OUTFITS_CHANGED: {},
+	TRANSMOG_CUSTOM_SETS_CHANGED: {},
+	TRANSMOG_DISPLAYED_OUTFIT_CHANGED: {},
+	TRANSMOG_OUTFITS_CHANGED: {
+		Payload: [
+			{Name: "newOutfitID", Type: "number", Nilable: true},
+		],
+	},
 	TRANSMOG_SEARCH_UPDATED: {
 		Payload: [
 			{Name: "searchType", Type: "TransmogSearchType"},
@@ -5802,6 +6609,12 @@ export const data: EventInterface = {
 	},
 	TREASURE_PICKER_CACHE_FLUSH: {},
 	TRIAL_CAP_REACHED_MONEY: {},
+	TRY_PURCHASE_TO_NODE_PARTIAL_SUCCESS: {
+		Payload: [
+			{Name: "nodeFinishedOn", Type: "number"},
+		],
+	},
+	TUTORIAL_COMBAT_EVENT: {},
 	TUTORIAL_HIGHLIGHT_SPELL: {
 		Payload: [
 			{Name: "spellID", Type: "number"},
@@ -5837,44 +6650,44 @@ export const data: EventInterface = {
 	UI_SCALE_CHANGED: {},
 	UNIT_ABSORB_AMOUNT_CHANGED: {
 		Payload: [
-			{Name: "unitTarget", Type: "UnitToken"},
+			{Name: "unitTarget", Type: "UnitTokenVariant"},
 		],
 	},
 	UNIT_AREA_CHANGED: {
 		Payload: [
-			{Name: "unitTarget", Type: "UnitToken"},
+			{Name: "unitTarget", Type: "UnitTokenVariant"},
 		],
 	},
 	UNIT_ATTACK: {
 		Payload: [
-			{Name: "unitTarget", Type: "UnitToken"},
+			{Name: "unitTarget", Type: "UnitTokenVariant"},
 		],
 	},
 	UNIT_ATTACK_POWER: {
 		Payload: [
-			{Name: "unitTarget", Type: "UnitToken"},
+			{Name: "unitTarget", Type: "UnitTokenVariant"},
 		],
 	},
 	UNIT_ATTACK_SPEED: {
 		Payload: [
-			{Name: "unitTarget", Type: "UnitToken"},
+			{Name: "unitTarget", Type: "UnitTokenVariant"},
 		],
 	},
 	UNIT_AURA: {
 		Payload: [
-			{Name: "unitTarget", Type: "UnitToken"},
+			{Name: "unitTarget", Type: "UnitTokenVariant"},
 			{Name: "updateInfo", Type: "UnitAuraUpdateInfo"},
 		],
 	},
 	UNIT_CHEAT_TOGGLE_EVENT: {},
 	UNIT_CLASSIFICATION_CHANGED: {
 		Payload: [
-			{Name: "unitTarget", Type: "UnitToken"},
+			{Name: "unitTarget", Type: "UnitTokenVariant"},
 		],
 	},
 	UNIT_COMBAT: {
 		Payload: [
-			{Name: "unitTarget", Type: "UnitToken"},
+			{Name: "unitTarget", Type: "UnitTokenVariant"},
 			{Name: "event", Type: "string"},
 			{Name: "flagText", Type: "string"},
 			{Name: "amount", Type: "number"},
@@ -5883,39 +6696,44 @@ export const data: EventInterface = {
 	},
 	UNIT_CONNECTION: {
 		Payload: [
-			{Name: "unitTarget", Type: "UnitToken"},
+			{Name: "unitTarget", Type: "UnitTokenVariant"},
 			{Name: "isConnected", Type: "boolean"},
 		],
 	},
 	UNIT_CTR_OPTIONS: {
 		Payload: [
-			{Name: "unitTarget", Type: "UnitToken"},
+			{Name: "unitTarget", Type: "UnitTokenVariant"},
 		],
 	},
 	UNIT_DAMAGE: {
 		Payload: [
-			{Name: "unitTarget", Type: "UnitToken"},
+			{Name: "unitTarget", Type: "UnitTokenVariant"},
 		],
 	},
 	UNIT_DEFENSE: {
 		Payload: [
-			{Name: "unitTarget", Type: "UnitToken"},
+			{Name: "unitTarget", Type: "UnitTokenVariant"},
+		],
+	},
+	UNIT_DIED: {
+		Payload: [
+			{Name: "unitGUID", Type: "WOWGUID"},
 		],
 	},
 	UNIT_DISPLAYPOWER: {
 		Payload: [
-			{Name: "unitTarget", Type: "UnitToken"},
+			{Name: "unitTarget", Type: "UnitTokenVariant"},
 		],
 	},
 	UNIT_DISTANCE_CHECK_UPDATE: {
 		Payload: [
-			{Name: "unitTarget", Type: "UnitToken"},
+			{Name: "unitTarget", Type: "UnitTokenVariant"},
 			{Name: "isInDistance", Type: "boolean"},
 		],
 	},
 	UNIT_ENTERED_VEHICLE: {
 		Payload: [
-			{Name: "unitTarget", Type: "UnitToken"},
+			{Name: "unitTarget", Type: "UnitTokenVariant"},
 			{Name: "showVehicleFrame", Type: "boolean"},
 			{Name: "isControlSeat", Type: "boolean"},
 			{Name: "vehicleUIIndicatorID", Type: "number"},
@@ -5926,7 +6744,7 @@ export const data: EventInterface = {
 	},
 	UNIT_ENTERING_VEHICLE: {
 		Payload: [
-			{Name: "unitTarget", Type: "UnitToken"},
+			{Name: "unitTarget", Type: "UnitTokenVariant"},
 			{Name: "showVehicleFrame", Type: "boolean"},
 			{Name: "isControlSeat", Type: "boolean"},
 			{Name: "vehicleUIIndicatorID", Type: "number"},
@@ -5937,27 +6755,27 @@ export const data: EventInterface = {
 	},
 	UNIT_EXITED_VEHICLE: {
 		Payload: [
-			{Name: "unitTarget", Type: "UnitToken"},
+			{Name: "unitTarget", Type: "UnitTokenVariant"},
 		],
 	},
 	UNIT_EXITING_VEHICLE: {
 		Payload: [
-			{Name: "unitTarget", Type: "UnitToken"},
+			{Name: "unitTarget", Type: "UnitTokenVariant"},
 		],
 	},
 	UNIT_FACTION: {
 		Payload: [
-			{Name: "unitTarget", Type: "UnitToken"},
+			{Name: "unitTarget", Type: "UnitTokenVariant"},
 		],
 	},
 	UNIT_FLAGS: {
 		Payload: [
-			{Name: "unitTarget", Type: "UnitToken"},
+			{Name: "unitTarget", Type: "UnitTokenVariant"},
 		],
 	},
 	UNIT_FORM_CHANGED: {
 		Payload: [
-			{Name: "unitTarget", Type: "UnitToken"},
+			{Name: "unitTarget", Type: "UnitTokenVariant"},
 		],
 	},
 	UNIT_GUILD_LEVEL: {
@@ -5967,242 +6785,261 @@ export const data: EventInterface = {
 	},
 	UNIT_HEALTH: {
 		Payload: [
-			{Name: "unitTarget", Type: "UnitToken"},
+			{Name: "unitTarget", Type: "UnitTokenVariant"},
 		],
 	},
 	UNIT_HEAL_ABSORB_AMOUNT_CHANGED: {
 		Payload: [
-			{Name: "unitTarget", Type: "UnitToken"},
+			{Name: "unitTarget", Type: "UnitTokenVariant"},
 		],
 	},
 	UNIT_HEAL_PREDICTION: {
 		Payload: [
-			{Name: "unitTarget", Type: "UnitToken"},
+			{Name: "unitTarget", Type: "UnitTokenVariant"},
 		],
 	},
 	UNIT_INVENTORY_CHANGED: {
 		Payload: [
-			{Name: "unitTarget", Type: "UnitToken"},
+			{Name: "unitTarget", Type: "UnitTokenVariant"},
 		],
 	},
 	UNIT_IN_RANGE_UPDATE: {
 		Payload: [
-			{Name: "unitTarget", Type: "UnitToken"},
+			{Name: "unitTarget", Type: "UnitTokenVariant"},
 			{Name: "isInRange", Type: "boolean"},
 		],
 	},
 	UNIT_LEVEL: {
 		Payload: [
-			{Name: "unitTarget", Type: "UnitToken"},
+			{Name: "unitTarget", Type: "UnitTokenVariant"},
+		],
+	},
+	UNIT_LOOT: {
+		Payload: [
+			{Name: "unitGUID", Type: "WOWGUID"},
+			{Name: "hasLoot", Type: "boolean"},
 		],
 	},
 	UNIT_MANA: {
 		Payload: [
-			{Name: "unitTarget", Type: "UnitToken"},
+			{Name: "unitTarget", Type: "UnitTokenVariant"},
 		],
 	},
 	UNIT_MAXHEALTH: {
 		Payload: [
-			{Name: "unitTarget", Type: "UnitToken"},
+			{Name: "unitTarget", Type: "UnitTokenVariant"},
 		],
 	},
 	UNIT_MAXPOWER: {
 		Payload: [
-			{Name: "unitTarget", Type: "UnitToken"},
+			{Name: "unitTarget", Type: "UnitTokenVariant"},
 			{Name: "powerType", Type: "string"},
 		],
 	},
 	UNIT_MAX_HEALTH_MODIFIERS_CHANGED: {
 		Payload: [
-			{Name: "unitTarget", Type: "UnitToken"},
+			{Name: "unitTarget", Type: "UnitTokenVariant"},
 			{Name: "percentMaxHealthAdjusted", Type: "number"},
 		],
 	},
 	UNIT_MODEL_CHANGED: {
 		Payload: [
-			{Name: "unitTarget", Type: "UnitToken"},
+			{Name: "unitTarget", Type: "UnitTokenVariant"},
 		],
 	},
 	UNIT_NAME_UPDATE: {
 		Payload: [
-			{Name: "unitTarget", Type: "UnitToken"},
+			{Name: "unitTarget", Type: "UnitTokenVariant"},
 		],
 	},
 	UNIT_OTHER_PARTY_CHANGED: {
 		Payload: [
-			{Name: "unitTarget", Type: "UnitToken"},
+			{Name: "unitTarget", Type: "UnitTokenVariant"},
 		],
 	},
 	UNIT_PET: {
 		Payload: [
-			{Name: "unitTarget", Type: "UnitToken"},
+			{Name: "unitTarget", Type: "UnitTokenVariant"},
 		],
 	},
 	UNIT_PET_EXPERIENCE: {
 		Payload: [
-			{Name: "unitTarget", Type: "UnitToken"},
+			{Name: "unitTarget", Type: "UnitTokenVariant"},
 		],
 	},
 	UNIT_PHASE: {
 		Payload: [
-			{Name: "unitTarget", Type: "UnitToken"},
+			{Name: "unitTarget", Type: "UnitTokenVariant"},
 		],
 	},
 	UNIT_PORTRAIT_UPDATE: {
 		Payload: [
-			{Name: "unitTarget", Type: "UnitToken"},
+			{Name: "unitTarget", Type: "UnitTokenVariant"},
 		],
 	},
 	UNIT_POWER_BAR_HIDE: {
 		Payload: [
-			{Name: "unitTarget", Type: "UnitToken"},
+			{Name: "unitTarget", Type: "UnitTokenVariant"},
 		],
 	},
 	UNIT_POWER_BAR_SHOW: {
 		Payload: [
-			{Name: "unitTarget", Type: "UnitToken"},
+			{Name: "unitTarget", Type: "UnitTokenVariant"},
 		],
 	},
 	UNIT_POWER_BAR_TIMER_UPDATE: {
 		Payload: [
-			{Name: "unitTarget", Type: "UnitToken"},
+			{Name: "unitTarget", Type: "UnitTokenVariant"},
 		],
 	},
 	UNIT_POWER_FREQUENT: {
 		Payload: [
-			{Name: "unitTarget", Type: "UnitToken"},
+			{Name: "unitTarget", Type: "UnitTokenVariant"},
 			{Name: "powerType", Type: "string"},
 		],
 	},
 	UNIT_POWER_POINT_CHARGE: {
 		Payload: [
-			{Name: "unitTarget", Type: "UnitToken"},
+			{Name: "unitTarget", Type: "UnitTokenVariant"},
 		],
 	},
 	UNIT_POWER_UPDATE: {
 		Payload: [
-			{Name: "unitTarget", Type: "UnitToken"},
+			{Name: "unitTarget", Type: "UnitTokenVariant"},
 			{Name: "powerType", Type: "string"},
 		],
 	},
 	UNIT_QUEST_LOG_CHANGED: {
 		Payload: [
-			{Name: "unitTarget", Type: "UnitToken"},
+			{Name: "unitTarget", Type: "UnitTokenVariant"},
 		],
 	},
 	UNIT_RANGEDDAMAGE: {
 		Payload: [
-			{Name: "unitTarget", Type: "UnitToken"},
+			{Name: "unitTarget", Type: "UnitTokenVariant"},
 		],
 	},
 	UNIT_RANGED_ATTACK_POWER: {
 		Payload: [
-			{Name: "unitTarget", Type: "UnitToken"},
+			{Name: "unitTarget", Type: "UnitTokenVariant"},
 		],
 	},
 	UNIT_RESISTANCES: {
 		Payload: [
-			{Name: "unitTarget", Type: "UnitToken"},
+			{Name: "unitTarget", Type: "UnitTokenVariant"},
 		],
 	},
 	UNIT_SPELLCAST_CHANNEL_START: {
 		Payload: [
-			{Name: "unitTarget", Type: "UnitToken"},
+			{Name: "unitTarget", Type: "UnitTokenVariant"},
 			{Name: "castGUID", Type: "WOWGUID"},
 			{Name: "spellID", Type: "number"},
+			{Name: "castBarID", Type: "number", Nilable: true},
 		],
 	},
 	UNIT_SPELLCAST_CHANNEL_STOP: {
 		Payload: [
-			{Name: "unitTarget", Type: "UnitToken"},
+			{Name: "unitTarget", Type: "UnitTokenVariant"},
 			{Name: "castGUID", Type: "WOWGUID"},
 			{Name: "spellID", Type: "number"},
+			{Name: "interruptedBy", Type: "WOWGUID"},
+			{Name: "castBarID", Type: "number", Nilable: true},
 		],
 	},
 	UNIT_SPELLCAST_CHANNEL_UPDATE: {
 		Payload: [
-			{Name: "unitTarget", Type: "UnitToken"},
+			{Name: "unitTarget", Type: "UnitTokenVariant"},
 			{Name: "castGUID", Type: "WOWGUID"},
 			{Name: "spellID", Type: "number"},
+			{Name: "castBarID", Type: "number", Nilable: true},
 		],
 	},
 	UNIT_SPELLCAST_DELAYED: {
 		Payload: [
-			{Name: "unitTarget", Type: "UnitToken"},
+			{Name: "unitTarget", Type: "UnitTokenVariant"},
 			{Name: "castGUID", Type: "WOWGUID"},
 			{Name: "spellID", Type: "number"},
+			{Name: "castBarID", Type: "number", Nilable: true},
 		],
 	},
 	UNIT_SPELLCAST_EMPOWER_START: {
 		Payload: [
-			{Name: "unitTarget", Type: "UnitToken"},
+			{Name: "unitTarget", Type: "UnitTokenVariant"},
 			{Name: "castGUID", Type: "WOWGUID"},
 			{Name: "spellID", Type: "number"},
+			{Name: "castBarID", Type: "number", Nilable: true},
 		],
 	},
 	UNIT_SPELLCAST_EMPOWER_STOP: {
 		Payload: [
-			{Name: "unitTarget", Type: "UnitToken"},
+			{Name: "unitTarget", Type: "UnitTokenVariant"},
 			{Name: "castGUID", Type: "WOWGUID"},
 			{Name: "spellID", Type: "number"},
 			{Name: "complete", Type: "boolean"},
+			{Name: "interruptedBy", Type: "WOWGUID"},
+			{Name: "castBarID", Type: "number", Nilable: true},
 		],
 	},
 	UNIT_SPELLCAST_EMPOWER_UPDATE: {
 		Payload: [
-			{Name: "unitTarget", Type: "UnitToken"},
+			{Name: "unitTarget", Type: "UnitTokenVariant"},
 			{Name: "castGUID", Type: "WOWGUID"},
 			{Name: "spellID", Type: "number"},
+			{Name: "castBarID", Type: "number", Nilable: true},
 		],
 	},
 	UNIT_SPELLCAST_FAILED: {
 		Payload: [
-			{Name: "unitTarget", Type: "UnitToken"},
+			{Name: "unitTarget", Type: "UnitTokenVariant"},
 			{Name: "castGUID", Type: "WOWGUID"},
 			{Name: "spellID", Type: "number"},
+			{Name: "castBarID", Type: "number", Nilable: true},
 		],
 	},
 	UNIT_SPELLCAST_FAILED_QUIET: {
 		Payload: [
-			{Name: "unitTarget", Type: "UnitToken"},
+			{Name: "unitTarget", Type: "UnitTokenVariant"},
 			{Name: "castGUID", Type: "WOWGUID"},
 			{Name: "spellID", Type: "number"},
+			{Name: "castBarID", Type: "number", Nilable: true},
 		],
 	},
 	UNIT_SPELLCAST_INTERRUPTED: {
 		Payload: [
-			{Name: "unitTarget", Type: "UnitToken"},
+			{Name: "unitTarget", Type: "UnitTokenVariant"},
 			{Name: "castGUID", Type: "WOWGUID"},
 			{Name: "spellID", Type: "number"},
+			{Name: "interruptedBy", Type: "WOWGUID"},
+			{Name: "castBarID", Type: "number", Nilable: true},
 		],
 	},
 	UNIT_SPELLCAST_INTERRUPTIBLE: {
 		Payload: [
-			{Name: "unitTarget", Type: "UnitToken"},
+			{Name: "unitTarget", Type: "UnitTokenVariant"},
 		],
 	},
 	UNIT_SPELLCAST_NOT_INTERRUPTIBLE: {
 		Payload: [
-			{Name: "unitTarget", Type: "UnitToken"},
+			{Name: "unitTarget", Type: "UnitTokenVariant"},
 		],
 	},
 	UNIT_SPELLCAST_RETICLE_CLEAR: {
 		Payload: [
-			{Name: "unitTarget", Type: "UnitToken"},
+			{Name: "unitTarget", Type: "UnitTokenVariant"},
 			{Name: "castGUID", Type: "WOWGUID"},
 			{Name: "spellID", Type: "number"},
 		],
 	},
 	UNIT_SPELLCAST_RETICLE_TARGET: {
 		Payload: [
-			{Name: "unitTarget", Type: "UnitToken"},
+			{Name: "unitTarget", Type: "UnitTokenVariant"},
 			{Name: "castGUID", Type: "WOWGUID"},
 			{Name: "spellID", Type: "number"},
 		],
 	},
 	UNIT_SPELLCAST_SENT: {
 		Payload: [
-			{Name: "unit", Type: "string"},
+			{Name: "unitTarget", Type: "UnitTokenVariant"},
 			{Name: "target", Type: "string"},
 			{Name: "castGUID", Type: "WOWGUID"},
 			{Name: "spellID", Type: "number"},
@@ -6210,53 +7047,62 @@ export const data: EventInterface = {
 	},
 	UNIT_SPELLCAST_START: {
 		Payload: [
-			{Name: "unitTarget", Type: "UnitToken"},
+			{Name: "unitTarget", Type: "UnitTokenVariant"},
 			{Name: "castGUID", Type: "WOWGUID"},
 			{Name: "spellID", Type: "number"},
+			{Name: "castBarID", Type: "number", Nilable: true},
 		],
 	},
 	UNIT_SPELLCAST_STOP: {
 		Payload: [
-			{Name: "unitTarget", Type: "UnitToken"},
+			{Name: "unitTarget", Type: "UnitTokenVariant"},
 			{Name: "castGUID", Type: "WOWGUID"},
 			{Name: "spellID", Type: "number"},
+			{Name: "castBarID", Type: "number", Nilable: true},
 		],
 	},
 	UNIT_SPELLCAST_SUCCEEDED: {
 		Payload: [
-			{Name: "unitTarget", Type: "UnitToken"},
+			{Name: "unitTarget", Type: "UnitTokenVariant"},
 			{Name: "castGUID", Type: "WOWGUID"},
 			{Name: "spellID", Type: "number"},
+			{Name: "castBarID", Type: "number", Nilable: true},
+		],
+	},
+	UNIT_SPELL_DIMINISH_CATEGORY_STATE_UPDATED: {
+		Payload: [
+			{Name: "unitTarget", Type: "UnitTokenVariant"},
+			{Name: "trackerInfo", Type: "SpellDiminishTrackerInfo"},
 		],
 	},
 	UNIT_SPELL_HASTE: {
 		Payload: [
-			{Name: "unitTarget", Type: "UnitToken"},
+			{Name: "unitTarget", Type: "UnitTokenVariant"},
 		],
 	},
 	UNIT_STATS: {
 		Payload: [
-			{Name: "unitTarget", Type: "UnitToken"},
+			{Name: "unitTarget", Type: "UnitTokenVariant"},
 		],
 	},
 	UNIT_TARGET: {
 		Payload: [
-			{Name: "unitTarget", Type: "UnitToken"},
+			{Name: "unitTarget", Type: "UnitTokenVariant"},
 		],
 	},
 	UNIT_TARGETABLE_CHANGED: {
 		Payload: [
-			{Name: "unitTarget", Type: "UnitToken"},
+			{Name: "unitTarget", Type: "UnitTokenVariant"},
 		],
 	},
 	UNIT_THREAT_LIST_UPDATE: {
 		Payload: [
-			{Name: "unitTarget", Type: "UnitToken"},
+			{Name: "unitTarget", Type: "UnitTokenVariant"},
 		],
 	},
 	UNIT_THREAT_SITUATION_UPDATE: {
 		Payload: [
-			{Name: "unitTarget", Type: "UnitToken"},
+			{Name: "unitTarget", Type: "UnitTokenVariant"},
 		],
 	},
 	UPDATE_ACTIVE_BATTLEFIELD: {},
@@ -6269,6 +7115,23 @@ export const data: EventInterface = {
 	},
 	UPDATE_BINDINGS: {},
 	UPDATE_BONUS_ACTIONBAR: {},
+	UPDATE_BULLETIN_BOARD_MEMBER_TYPE: {
+		Payload: [
+			{Name: "player", Type: "WOWGUID"},
+			{Name: "residentType", Type: "ResidentType"},
+		],
+	},
+	UPDATE_BULLETIN_BOARD_ROSTER: {
+		Payload: [
+			{Name: "neighborhoodInfo", Type: "NeighborhoodInfo"},
+			{Name: "rosterMemberList", Type: "NeighborhoodRosterMemberInfo[]"},
+		],
+	},
+	UPDATE_BULLETIN_BOARD_ROSTER_STATUSES: {
+		Payload: [
+			{Name: "rosterMemberList", Type: "NeighborhoodRosterMemberUpdateInfo[]"},
+		],
+	},
 	UPDATE_CHAT_COLOR: {
 		Payload: [
 			{Name: "name", Type: "string"},
@@ -6361,6 +7224,28 @@ export const data: EventInterface = {
 		],
 	},
 	VEHICLE_UPDATE: {},
+	VIEWED_TRANSMOG_OUTFIT_CHANGED: {},
+	VIEWED_TRANSMOG_OUTFIT_SECONDARY_SLOTS_CHANGED: {},
+	VIEWED_TRANSMOG_OUTFIT_SITUATIONS_CHANGED: {},
+	VIEWED_TRANSMOG_OUTFIT_SLOT_REFRESH: {},
+	VIEWED_TRANSMOG_OUTFIT_SLOT_SAVE_SUCCESS: {
+		Payload: [
+			{Name: "slot", Type: "TransmogOutfitSlot"},
+			{Name: "type", Type: "TransmogType"},
+			{Name: "option", Type: "TransmogOutfitSlotOption"},
+		],
+	},
+	VIEWED_TRANSMOG_OUTFIT_SLOT_WEAPON_OPTION_CHANGED: {
+		Payload: [
+			{Name: "slot", Type: "TransmogOutfitSlot"},
+			{Name: "weaponOption", Type: "TransmogOutfitSlotOption"},
+		],
+	},
+	VIEW_HOUSES_LIST_RECIEVED: {
+		Payload: [
+			{Name: "houseInfos", Type: "HouseInfo[]"},
+		],
+	},
 	VIGNETTES_UPDATED: {},
 	VIGNETTE_MINIMAP_UPDATED: {
 		Payload: [
@@ -6567,26 +7452,26 @@ export const data: EventInterface = {
 	},
 	VOICE_CHAT_SPEAK_FOR_ME_ACTIVE_STATUS_UPDATED: {},
 	VOICE_CHAT_SPEAK_FOR_ME_FEATURE_STATUS_UPDATED: {},
+	VOICE_CHAT_TTS_PLAYBACK_BOOKMARK: {
+		Payload: [
+			{Name: "utteranceID", Type: "number"},
+			{Name: "bookmarkName", Type: "string"},
+		],
+	},
 	VOICE_CHAT_TTS_PLAYBACK_FAILED: {
 		Payload: [
-			{Name: "status", Type: "VoiceTtsStatusCode"},
 			{Name: "utteranceID", Type: "number"},
-			{Name: "destination", Type: "VoiceTtsDestination"},
+			{Name: "status", Type: "VoiceTtsStatusCode"},
 		],
 	},
 	VOICE_CHAT_TTS_PLAYBACK_FINISHED: {
 		Payload: [
-			{Name: "numConsumers", Type: "number"},
 			{Name: "utteranceID", Type: "number"},
-			{Name: "destination", Type: "VoiceTtsDestination"},
 		],
 	},
 	VOICE_CHAT_TTS_PLAYBACK_STARTED: {
 		Payload: [
-			{Name: "numConsumers", Type: "number"},
 			{Name: "utteranceID", Type: "number"},
-			{Name: "durationMS", Type: "number"},
-			{Name: "destination", Type: "VoiceTtsDestination"},
 		],
 	},
 	VOICE_CHAT_TTS_SPEAK_TEXT_UPDATE: {

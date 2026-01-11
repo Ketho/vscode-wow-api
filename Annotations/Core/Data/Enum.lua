@@ -35,14 +35,17 @@ Enum.AccountData = {
 	UIEditModeChar = 14,
 	FrontendChatSettings = 15,
 	CharacterListOrder = 16,
+	CooldownManager = 17,
+	CooldownManager2 = 18,
+	Shop2PendingOrders = 19,
 }
 
 ---@enum Enum.AccountDataUpdateStatus
 Enum.AccountDataUpdateStatus = {
-	AccountDataUpdateSuccess = 0,
-	AccountDataUpdateFailed = 1,
-	AccountDataUpdateCorrupt = 2,
-	AccountDataUpdateToobig = 3,
+	Success = 0,
+	Failed = 1,
+	Corrupt = 2,
+	Toobig = 3,
 }
 
 ---@enum Enum.AccountExportResult
@@ -63,6 +66,13 @@ Enum.AccountExportResult = {
 	FailedToGenerateFile = 13,
 }
 
+---@enum Enum.AccountSequenceCacheType
+Enum.AccountSequenceCacheType = {
+	Invalid = 0,
+	Local = 1,
+	HouseDecor = 2,
+}
+
 ---@enum Enum.AccountStateFlags
 Enum.AccountStateFlags = {
 	None = 0x0,
@@ -74,52 +84,54 @@ Enum.AccountStateFlags = {
 
 ---@enum Enum.AccountStateLoadedFlags
 Enum.AccountStateLoadedFlags = {
-	None = "0x0000000000000000",
-	AccountStateAchievementsLoaded = "0x0000000000000001",
-	AccountStateCriteriaLoaded = "0x0000000000000002",
-	AccountStateMountsLoaded = "0x0000000000000004",
-	AccountStatePetjournalInitialized = "0x0000000000000008",
-	AccountStateCurrencyCapsLoaded = "0x0000000000000010",
-	AccountStateQuestLogLoaded = "0x0000000000000020",
-	AccountStateCharactersLoaded = "0x0000000000000040",
-	AccountStatePurchasesLoaded = "0x0000000000000080",
-	AccountStateBpayDistributionObjectsLoaded = "0x0000000000000100",
-	AccountStateArchivedPurchasesLoaded = "0x0000000000000200",
-	AccountStateSettingsLoaded = "0x0000000000000400",
-	AccountStateBpayAddLicenseObjectsLoaded = "0x0000000000000800",
-	AccountStateItemCollectionsLoaded = "0x0000000000001000",
-	AccountStateAuctionableTokensLoaded = "0x0000000000002000",
-	AccountStateConsumableTokensLoaded = "0x0000000000004000",
-	AccountStatePerksPastRewardsLoaded = "0x0000000000008000",
-	AccountStateVasTransactionsLoaded = "0x0000000000010000",
-	AccountStateBpayProductitemObjectsLoaded = "0x0000000000020000",
-	AccountStateTrialBoostHistoryLoaded = "0x0000000000040000",
-	AccountStateQuestCriteriaLoaded = "0x0000000000080000",
-	AccountStateBattleNetAccountLoaded = "0x0000000000100000",
-	AccountStateAccountCurrenciesLoaded = "0x0000000000200000",
-	AccountStateRafBalanceLoaded = "0x0000000000400000",
-	AccountStateRafRewardsLoaded = "0x0000000000800000",
-	AccountStateDynamicCriteriaLoaded = "0x0000000001000000",
-	AccountStateRafActivityLoaded = "0x0000000002000000",
-	AccountStateRevokedRafRewardsLoaded = "0x0000000004000000",
-	AccountStateAccountNotificationsLoaded = "0x0000000008000000",
-	AccountStatePerksPendingPurchaseLoaded = "0x0000000010000000",
-	AccountStateAccountWowlabsLoaded = "0x0000000020000000",
-	AccountStatePerksHeldItemLoaded = "0x0000000040000000",
-	AccountStatePerksPendingRewardsLoaded = "0x0000000080000000",
-	AccountStateBitVectorsLoaded = "0x0000000100000000",
-	AccountStateAccountFactionsLoaded = "0x0000000200000000",
-	AccountStateAccountItemsLoaded = "0x0000000400000000",
-	AccountStateCombinedQuestLogLoaded = "0x0000000800000000",
-	AccountStateDataElementsLoaded = "0x0000001000000000",
-	AccountStateWarbandsLoaded = "0x0000002000000000",
-	AccountStateBanktabSettingsLoaded = "0x0000004000000000",
-	AccountStateAccountMappingLoaded = "0x0000008000000000",
-	AccountStateCharacterItemsLoaded = "0x0000010000000000",
-	AccountStateCurrencyTransferLogLoaded = "0x0000020000000000",
-	AccountStateLgVendorPurchaseLoaded = "0x0000040000000000",
-	AccountStateFutureFeature01DataLoaded = "0x0000080000000000",
-	AccountStateWarbandScenesLoaded = "0x0000100000000000",
+	LoadedNone = "0x0000000000000000",
+	AchievementsLoaded = "0x0000000000000001",
+	CriteriaLoaded = "0x0000000000000002",
+	MountsLoaded = "0x0000000000000004",
+	PetjournalInitialized = "0x0000000000000008",
+	CurrencyCapsLoaded = "0x0000000000000010",
+	QuestLogLoaded = "0x0000000000000020",
+	CharactersLoaded = "0x0000000000000040",
+	PurchasesLoaded = "0x0000000000000080",
+	BpayDistributionObjectsLoaded = "0x0000000000000100",
+	ArchivedPurchasesLoaded = "0x0000000000000200",
+	SettingsLoaded = "0x0000000000000400",
+	BpayAddLicenseObjectsLoaded = "0x0000000000000800",
+	ItemCollectionsLoaded = "0x0000000000001000",
+	AuctionableTokensLoaded = "0x0000000000002000",
+	ConsumableTokensLoaded = "0x0000000000004000",
+	PerksPastRewardsLoaded = "0x0000000000008000",
+	VasTransactionsLoaded = "0x0000000000010000",
+	BpayProductitemObjectsLoaded = "0x0000000000020000",
+	TrialBoostHistoryLoaded = "0x0000000000040000",
+	QuestCriteriaLoaded = "0x0000000000080000",
+	BattleNetAccountLoaded = "0x0000000000100000",
+	AccountCurrenciesLoaded = "0x0000000000200000",
+	RafBalanceLoaded = "0x0000000000400000",
+	RafRewardsLoaded = "0x0000000000800000",
+	DynamicCriteriaLoaded = "0x0000000001000000",
+	RafActivityLoaded = "0x0000000002000000",
+	RevokedRafRewardsLoaded = "0x0000000004000000",
+	AccountNotificationsLoaded = "0x0000000008000000",
+	PerksPendingPurchaseLoaded = "0x0000000010000000",
+	AccountWowlabsLoaded = "0x0000000020000000",
+	PerksHeldItemLoaded = "0x0000000040000000",
+	PerksPendingRewardsLoaded = "0x0000000080000000",
+	BitVectorsLoaded = "0x0000000100000000",
+	AccountFactionsLoaded = "0x0000000200000000",
+	AccountItemsLoaded = "0x0000000400000000",
+	CombinedQuestLogLoaded = "0x0000000800000000",
+	DataElementsLoaded = "0x0000001000000000",
+	WarbandsLoaded = "0x0000002000000000",
+	BanktabSettingsLoaded = "0x0000004000000000",
+	AccountMappingLoaded = "0x0000008000000000",
+	CharacterItemsLoaded = "0x0000010000000000",
+	CurrencyTransferLogLoaded = "0x0000020000000000",
+	LgVendorPurchaseLoaded = "0x0000040000000000",
+	HousingDataLoaded = "0x0000080000000000",
+	WarbandScenesLoaded = "0x0000100000000000",
+	EventRecordsLoaded = "0x0000200000000000",
+	TransmogOutfitsLoaded = "0x0000400000000000",
 }
 
 ---@enum Enum.AccountStoreCategoryType
@@ -130,11 +142,26 @@ Enum.AccountStoreCategoryType = {
 	Icon = 4,
 }
 
+---@enum Enum.AccountStoreFrontFlag
+Enum.AccountStoreFrontFlag = {
+	Enabled = 1,
+	PurchaseEnabled = 2,
+	RefundEnabled = 4,
+}
+
 ---@enum Enum.AccountStoreItemFlag
 Enum.AccountStoreItemFlag = {
-	DisplayDefaultArmor = 1,
-	NotInGameReward = 2,
-	DisplayAsNew = 4,
+	DisplayDefaultArmor = 0x1,
+	NotInGameReward = 0x2,
+	DisplayAsNew = 0x4,
+	DisplayOnly = 0x8,
+}
+
+---@enum Enum.AccountStoreItemMode
+Enum.AccountStoreItemMode = {
+	Normal = 1,
+	Hidden = 2,
+	Locked = 3,
 }
 
 ---@enum Enum.AccountStoreItemRewardType
@@ -185,6 +212,7 @@ Enum.AccountStoreTransactionResult = {
 	OwnedButRefundTimeExpired = 9,
 	NotSupported = 10,
 	Unavailable = 11,
+	ProxyError = 12,
 }
 
 ---@enum Enum.AccountStoreTransactionType
@@ -261,6 +289,10 @@ Enum.AccountTransType = {
 	SaveWarbandGroups = 60,
 	Profile = 61,
 	WarbandSceneCollection = 62,
+	EventRecords = 63,
+	HousingItem = 64,
+	TransmogOutfitCollection = 65,
+	HouseInitiativeFavor = 66,
 }
 
 ---@enum Enum.ActionBarOrientation
@@ -305,6 +337,30 @@ Enum.AddOnProfilerMetric = {
 	CountTimeOver100Ms = 9,
 	CountTimeOver500Ms = 10,
 	CountTimeOver1000Ms = 11,
+}
+
+---@enum Enum.AddOnRestrictionState
+Enum.AddOnRestrictionState = {
+	Inactive = 0,
+	Activating = 1,
+	Active = 2,
+}
+
+---@enum Enum.AddOnRestrictionType
+Enum.AddOnRestrictionType = {
+	Combat = 0,
+	Encounter = 1,
+	ChallengeMode = 2,
+	PvPMatch = 3,
+	Map = 4,
+}
+
+---@enum Enum.AddOnSecurityStatus
+Enum.AddOnSecurityStatus = {
+	Secure = 0,
+	Insecure = 1,
+	Banned = 2,
+	NotAvailable = 3,
 }
 
 ---@enum Enum.AddSoulbindConduitReason
@@ -494,6 +550,13 @@ Enum.AuraFrameIconWrap = {
 Enum.AuraFrameOrientation = {
 	Horizontal = 0,
 	Vertical = 1,
+}
+
+---@enum Enum.AuraFrameVisibleSetting
+Enum.AuraFrameVisibleSetting = {
+	Always = 0,
+	InCombat = 1,
+	Hidden = 2,
 }
 
 ---@enum Enum.AvgItemLevelCategories
@@ -910,6 +973,20 @@ Enum.BattlepetSlotLockCheat = {
 	UnlockAll = 1,
 }
 
+---@enum Enum.BindingContext
+Enum.BindingContext = {
+	None = 0,
+	HousingEditor = 1,
+	HousingEditorBasicDecorMode = 2,
+	HousingEditorExpertDecorMode = 3,
+	HousingEditorCustomizeMode = 4,
+	HousingEditorCleanupMode = 5,
+	HousingEditorLayoutMode = 6,
+	HousingEditorBasicAndExpertDecorMode = 7,
+	HousingEditorExteriorCustomizationMode = 8,
+	ReservedFutureFeatureBinding01 = 9,
+}
+
 ---@enum Enum.BindingSet
 Enum.BindingSet = {
 	Default = 0,
@@ -951,7 +1028,7 @@ Enum.BonusStatIndex = {
 	Agility = 3,
 	Strength = 4,
 	Intellect = 5,
-	SpiritUnused = 6,
+	Spirit = 6,
 	Stamina = 7,
 	Energy = 8,
 	Rage = 9,
@@ -1038,6 +1115,34 @@ Enum.BrawlType = {
 	LFG = 3,
 	SoloShuffle = 4,
 	SoloRbg = 5,
+}
+
+---@enum Enum.BulkPurchaseResult
+Enum.BulkPurchaseResult = {
+	ResultOk = 0,
+	ResultInProgress = 1,
+	ResultPartialSuccess = 2,
+	ResultFailed = 3,
+	ResultTooManyProducts = 4,
+	ResultSystemDisabled = 5,
+	ResultInsufficientFunds = 6,
+	ResultPurchaseTimeout = 7,
+}
+
+---@enum Enum.BulkRefundResult
+Enum.BulkRefundResult = {
+	ResultOk = 0,
+	ResultFailed = 1,
+	ResultInvalidRequest = 2,
+	ResultRefundWindowExpired = 3,
+	ResultSystemDisabled = 4,
+	ResultTimeout = 5,
+}
+
+---@enum Enum.CDMLayoutMode
+Enum.CDMLayoutMode = {
+	AllowCreate = true,
+	AccessOnly = false,
 }
 
 ---@enum Enum.CachedRewardType
@@ -1276,6 +1381,12 @@ Enum.CampaignState = {
 	Stalled = 3,
 }
 
+---@enum Enum.CanRedeemTokenForBalanceResult
+Enum.CanRedeemTokenForBalanceResult = {
+	Ok = 0,
+	FailureCap = 1,
+}
+
 ---@enum Enum.CaptureBarWidgetFillDirectionType
 Enum.CaptureBarWidgetFillDirectionType = {
 	RightToLeft = 0,
@@ -1342,9 +1453,6 @@ Enum.CharCustomizationType = {
 	CustomOptionHorn = 6,
 	CustomOptionFacewear = 7,
 	CustomOptionTattooColor = 8,
-	Outfit = 9,
-	Facepaint = 10,
-	FacepaintColor = 11,
 }
 
 ---@enum Enum.CharacterServiceInfoFlag
@@ -1373,6 +1481,13 @@ Enum.ChatChannelType = {
 	PrivateParty = 2,
 	PublicParty = 3,
 	Communities = 4,
+}
+
+---@enum Enum.ChatMessagingLockdownReason
+Enum.ChatMessagingLockdownReason = {
+	ActiveEncounter = 0,
+	ActiveMythicKeystoneOrChallengeMode = 1,
+	ActivePvPMatch = 2,
 }
 
 ---@enum Enum.ChatToxityFilterOptOut
@@ -1444,6 +1559,42 @@ Enum.ClickBindingType = {
 	Macro = 2,
 	Interaction = 3,
 	PetAction = 4,
+}
+
+---@enum Enum.ClientDebugAISpellReadyStatus
+Enum.ClientDebugAISpellReadyStatus = {
+	Ready = 0,
+	Cooldown = 1,
+	InitialDelay = 2,
+	Enabled = 3,
+	Paused = 4,
+	Charmed = 5,
+	Stunned = 6,
+	Silenced = 7,
+	Pacified = 8,
+	NoActions = 9,
+	Fleeing = 10,
+	Confused = 11,
+	Tokenless = 12,
+	EquippedItems = 13,
+	ReadyToCast = 14,
+	PowerCost = 15,
+	ShapeShiftRules = 16,
+	StealthRules = 17,
+	Peaceful = 18,
+	CasterAuraStateRestrictions = 19,
+	ExcludeCasterAuraStateRestrictions = 20,
+	CasterAuraSpellRestrictions = 21,
+	ExcludeCasterSpell = 22,
+	DungeonEncounter = 23,
+	FactionReaction = 24,
+	DungeonEncounterID = 25,
+	CheckArea = 26,
+	CombatCondition = 27,
+	HasTargets = 28,
+	CasterAuraEffectRestrictions = 29,
+	ExcludeCasterAuraEffect = 30,
+	GeneralAuraRestrictions = 31,
 }
 
 ---@enum Enum.ClientPlatformType
@@ -1708,6 +1859,180 @@ Enum.ColorOverride = {
 	ItemQualityAccount = 7,
 }
 
+---@enum Enum.CombatAudioAlertCastState
+Enum.CombatAudioAlertCastState = {
+	Off = 0,
+	OnCastStart = 1,
+	OnCastEnd = 2,
+}
+
+---@enum Enum.CombatAudioAlertPartyPercentValues
+Enum.CombatAudioAlertPartyPercentValues = {
+	Off = 0,
+	Under100Percent = 1,
+	Under90Percent = 2,
+	Under80Percent = 3,
+	Under70Percent = 4,
+	Under60Percent = 5,
+	Under50Percent = 6,
+	Under40Percent = 7,
+	Under30Percent = 8,
+	Under20Percent = 9,
+	Under10Percent = 10,
+}
+
+---@enum Enum.CombatAudioAlertPercentValues
+Enum.CombatAudioAlertPercentValues = {
+	Off = 0,
+	Every10Percent = 1,
+	Every20Percent = 2,
+	Every30Percent = 3,
+	Every40Percent = 4,
+	Every50Percent = 5,
+}
+
+---@enum Enum.CombatAudioAlertPlayerCastFormatValues
+Enum.CombatAudioAlertPlayerCastFormatValues = {
+	CastingSpellname = 0,
+	CastSpellname = 1,
+	Casting = 2,
+	Cast = 3,
+	Spellname = 4,
+}
+
+---@enum Enum.CombatAudioAlertPlayerHealthFormatValues
+Enum.CombatAudioAlertPlayerHealthFormatValues = {
+	HealthFull = 0,
+	HealthNoPercent = 1,
+	HealthNoPercentDiv10 = 2,
+	NoHealthFull = 3,
+	NoHealthNoPercent = 4,
+	NoHealthNoPercentDiv10 = 5,
+}
+
+---@enum Enum.CombatAudioAlertPlayerResourceFormatValues
+Enum.CombatAudioAlertPlayerResourceFormatValues = {
+	ResourceFull = 0,
+	ResourceNoPercent = 1,
+	ResourceNoPercentDiv10 = 2,
+	NoResourceFull = 3,
+	NoResourceNoPercent = 4,
+	NoResourceNoPercentDiv10 = 5,
+}
+
+---@enum Enum.CombatAudioAlertSayIfTargetedType
+Enum.CombatAudioAlertSayIfTargetedType = {
+	None = 0,
+	Aggro = 1,
+	Targeted = 2,
+	TargetedBy = 3,
+}
+
+---@enum Enum.CombatAudioAlertSpecSetting
+Enum.CombatAudioAlertSpecSetting = {
+	Resource1Percent = 0,
+	Resource1Format = 1,
+	Resource2Percent = 2,
+	Resource2Format = 3,
+	SayIfTargeted = 4,
+}
+
+---@enum Enum.CombatAudioAlertTargetCastFormatValues
+Enum.CombatAudioAlertTargetCastFormatValues = {
+	TargetCastingSpellname = 0,
+	TargetCastSpellname = 1,
+	CastingSpellname = 2,
+	CastSpellname = 3,
+	Casting = 4,
+	Cast = 5,
+	Spellname = 6,
+}
+
+---@enum Enum.CombatAudioAlertTargetDeathBehavior
+Enum.CombatAudioAlertTargetDeathBehavior = {
+	Default = 0,
+	SayTargetDead = 1,
+}
+
+---@enum Enum.CombatAudioAlertTargetHealthFormatValues
+Enum.CombatAudioAlertTargetHealthFormatValues = {
+	NoHealthFull = 0,
+	NoHealthNoPercent = 1,
+	NoHealthNoPercentDiv10 = 2,
+	HealthFull = 3,
+	HealthNoPercent = 4,
+	HealthNoPercentDiv10 = 5,
+	TargetFull = 6,
+	TargetNoPercent = 7,
+	TargetNoPercentDiv10 = 8,
+}
+
+---@enum Enum.CombatAudioAlertThrottle
+Enum.CombatAudioAlertThrottle = {
+	Sample = 0,
+	PlayerHealth = 1,
+	TargetHealth = 2,
+	PlayerCast = 3,
+	TargetCast = 4,
+	PlayerResource1 = 5,
+	PlayerResource2 = 6,
+}
+
+---@enum Enum.CombatAudioAlertType
+Enum.CombatAudioAlertType = {
+	Health = 0,
+	Cast = 1,
+}
+
+---@enum Enum.CombatAudioAlertUnit
+Enum.CombatAudioAlertUnit = {
+	Player = 0,
+	Target = 1,
+}
+
+---@enum Enum.CombatLogMessageOrder
+Enum.CombatLogMessageOrder = {
+	Newest = 0,
+	Oldest = 1,
+}
+
+---@enum Enum.CombatLogObject
+Enum.CombatLogObject = {
+	Empty = 0x0,
+	AffiliationMine = 0x1,
+	AffiliationParty = 0x2,
+	AffiliationRaid = 0x4,
+	AffiliationOutsider = 0x8,
+	ReactionFriendly = 0x10,
+	ReactionNeutral = 0x20,
+	ReactionHostile = 0x40,
+	ControlPlayer = 0x100,
+	ControlNpc = 0x200,
+	TypePlayer = 0x400,
+	TypeNpc = 0x800,
+	TypePet = 0x1000,
+	TypeGuardian = 0x2000,
+	TypeObject = 0x4000,
+	Target = 0x10000,
+	Focus = 0x20000,
+	Maintank = 0x40000,
+	Mainassist = 0x80000,
+	None = 0x80000000,
+}
+
+---@enum Enum.CombatLogObjectTarget
+Enum.CombatLogObjectTarget = {
+	Raidtarget1 = 0x1,
+	Raidtarget2 = 0x2,
+	Raidtarget3 = 0x4,
+	Raidtarget4 = 0x8,
+	Raidtarget5 = 0x10,
+	Raidtarget6 = 0x20,
+	Raidtarget7 = 0x40,
+	Raidtarget8 = 0x80,
+	RaidNone = 0x80000000,
+}
+
 ---@enum Enum.CombinedQuestLogStatus
 Enum.CombinedQuestLogStatus = {
 	Available = 0,
@@ -1759,6 +2084,15 @@ Enum.CompressionMethod = {
 	Deflate = 0,
 	Zlib = 1,
 	Gzip = 2,
+}
+
+---@enum Enum.ConfirmationPromptUIType
+Enum.ConfirmationPromptUIType = {
+	StaticText = 0,
+	BonusRoll = 1,
+	SimpleWarning = 2,
+	StaticTextAlert = 3,
+	SimpleWarningAlert = 4,
 }
 
 ---@enum Enum.ConquestProgressBarDisplayType
@@ -1842,6 +2176,7 @@ Enum.ContentTrackingType = {
 	Appearance = 0,
 	Mount = 1,
 	Achievement = 2,
+	Decor = 3,
 }
 
 ---@enum Enum.ContributionAppearanceFlags
@@ -1870,10 +2205,62 @@ Enum.ContributionState = {
 	Destroyed = 4,
 }
 
+---@enum Enum.CooldownLayoutAction
+Enum.CooldownLayoutAction = {
+	ChangeOrder = 0,
+	ChangeCategory = 1,
+	AddLayout = 2,
+	AddAlert = 3,
+}
+
+---@enum Enum.CooldownLayoutStatus
+Enum.CooldownLayoutStatus = {
+	Success = 0,
+	InvalidLayoutName = 1,
+	TooManyLayouts = 2,
+	AttemptToModifyDefaultLayoutWouldCreateTooManyLayouts = 3,
+	TooManyAlerts = 4,
+	InvalidOrderChange = 5,
+	NoValidAlerts = 6,
+}
+
+---@enum Enum.CooldownLayoutType
+Enum.CooldownLayoutType = {
+	Character = 1,
+	Account = 2,
+}
+
+---@enum Enum.CooldownSetLinkedSpellFlags
+Enum.CooldownSetLinkedSpellFlags = {
+	UseAsTooltip = 1,
+}
+
 ---@enum Enum.CooldownSetSpellFlags
 Enum.CooldownSetSpellFlags = {
 	HideAura = 1,
-	PlaceHolder1 = 2,
+	HideByDefault = 2,
+}
+
+---@enum Enum.CooldownViewerAddAlertStatus
+Enum.CooldownViewerAddAlertStatus = {
+	Success = 0,
+	InvalidAlertType = 1,
+	InvalidEventType = 2,
+	DuplicateAlert = 3,
+}
+
+---@enum Enum.CooldownViewerAlertEventType
+Enum.CooldownViewerAlertEventType = {
+	Available = 1,
+	PandemicTime = 2,
+	OnCooldown = 3,
+	ChargeGained = 4,
+}
+
+---@enum Enum.CooldownViewerAlertType
+Enum.CooldownViewerAlertType = {
+	Sound = 1,
+	Visual = 2,
 }
 
 ---@enum Enum.CooldownViewerBarContent
@@ -1885,6 +2272,8 @@ Enum.CooldownViewerBarContent = {
 
 ---@enum Enum.CooldownViewerCategory
 Enum.CooldownViewerCategory = {
+	HiddenAura = -2,
+	HiddenSpell = -1,
 	Essential = 0,
 	Utility = 1,
 	TrackedBuff = 2,
@@ -1908,6 +2297,13 @@ Enum.CooldownViewerVisibleSetting = {
 	Always = 0,
 	InCombat = 1,
 	Hidden = 2,
+}
+
+---@enum Enum.CornerstonePurchaseMode
+Enum.CornerstonePurchaseMode = {
+	Basic = 0,
+	Import = 1,
+	Move = 2,
 }
 
 ---@enum Enum.CovenantAbilityType
@@ -1958,13 +2354,21 @@ Enum.CraftingOrderFlags = {
 	IsFulfillable = 0x10,
 }
 
+---@enum Enum.CraftingOrderItemFlags
+Enum.CraftingOrderItemFlags = {
+	None = 0,
+	NpcProvided = 1,
+	HasEnchantmentData = 2,
+}
+
 ---@enum Enum.CraftingOrderItemType
 Enum.CraftingOrderItemType = {
-	Reagent = 0,
+	Item = 0,
 	Recraft = 1,
 	CraftedResult = 2,
 	RemoveReagent = 3,
-	NpcProvided = 4,
+	Deprecated = 4,
+	Currency = 5,
 }
 
 ---@enum Enum.CraftingOrderReagentSource
@@ -2014,23 +2418,25 @@ Enum.CraftingOrderResult = {
 	InvalidType = 27,
 	MaxOrdersReached = 28,
 	MissingCraftingTable = 29,
-	MissingItem = 30,
-	MissingNpc = 31,
-	MissingOrder = 32,
-	MissingRecraftItem = 33,
-	NoAccountItems = 34,
-	NotClaimed = 35,
-	NotCrafted = 36,
-	NotInGuild = 37,
-	NotYetImplemented = 38,
-	OutOfPublicOrderCapacity = 39,
-	ServerIsNotAvailable = 40,
-	ThrottleViolation = 41,
-	TargetCannotCraft = 42,
-	TargetLocked = 43,
-	Timeout = 44,
-	TooManyItems = 45,
-	WrongVersion = 46,
+	MissingCurrency = 30,
+	MissingItem = 31,
+	MissingNpc = 32,
+	MissingOrder = 33,
+	MissingRecraftItem = 34,
+	NoAccountItems = 35,
+	NotClaimed = 36,
+	NotCrafted = 37,
+	NotInGuild = 38,
+	NotYetImplemented = 39,
+	OutOfPublicOrderCapacity = 40,
+	ServerIsNotAvailable = 41,
+	ThrottleViolation = 42,
+	TargetCannotCraft = 43,
+	TargetLocked = 44,
+	Timeout = 45,
+	TooManyCurrencies = 46,
+	TooManyItems = 47,
+	WrongVersion = 48,
 }
 
 ---@enum Enum.CraftingOrderSortType
@@ -2075,7 +2481,7 @@ Enum.CraftingOrderType = {
 
 ---@enum Enum.CraftingReagentItemFlag
 Enum.CraftingReagentItemFlag = {
-	TooltipShowsAsStatModifications = 0,
+	TooltipShowsAsStatModifications = 1,
 }
 
 ---@enum Enum.CraftingReagentType
@@ -2088,52 +2494,62 @@ Enum.CraftingReagentType = {
 
 ---@enum Enum.CreateAllAccountData
 Enum.CreateAllAccountData = {
-	CreateAllNone = "0x0000000000000000",
-	CreateAllAchievementsDone = "0x0000000000000001",
-	CreateAllCriteriaDone = "0x0000000000000002",
-	CreateAllMountsDone = "0x0000000000000004",
-	CreateAllBattlepetsDone = "0x0000000000000008",
-	CreateAllCurrencycapsDone = "0x0000000000000010",
-	CreateAllQuestLogDone = "0x0000000000000020",
-	CreateAllCharactersDone = "0x0000000000000040",
-	CreateAllPurchasesDone = "0x0000000000000080",
-	CreateAllBpayDistributionObjectsDone = "0x0000000000000100",
-	CreateAllArchivedPurchasesDone = "0x0000000000000200",
-	CreateAllSettingsDone = "0x0000000000000400",
-	CreateAllBpayAddLicenseObjectsDone = "0x0000000000000800",
-	CreateAllItemCollectionItemsDone = "0x0000000000001000",
-	CreateAllAuctionableTokensDone = "0x0000000000002000",
-	CreateAllConsumableTokensDone = "0x0000000000004000",
-	CreateAllPerkPastRewardsDone = "0x0000000000008000",
-	CreateAllVasTransactionsDone = "0x0000000000010000",
-	CreateAllBpayProductitemObjectsDone = "0x0000000000020000",
-	CreateAllTrialBoostHistoryDone = "0x0000000000040000",
-	CreateAllQuestCriteriaDone = "0x0000000000080000",
-	CreateObject = "0x0000000000100000",
-	CreateAllAccountCurrenciesDone = "0x0000000000200000",
-	CreateAllRafBalanceDone = "0x0000000000400000",
-	CreateAllRafRewardsDone = "0x0000000000800000",
-	CreateAllAccountDynamicCriteriaDone = "0x0000000001000000",
-	CreateAllRafActivitiesDone = "0x0000000002000000",
-	CreateAllRevokedRafRewardsDone = "0x0000000004000000",
-	CreateAllAccountNotificationsDone = "0x0000000008000000",
-	CreateAllPerkPendingPurchasesDone = "0x0000000010000000",
-	CreateAllWowlabsDataDone = "0x0000000020000000",
-	CreateAllPerkHeldItemsDone = "0x0000000040000000",
-	CreateAllPerkPendingRewardsDone = "0x0000000080000000",
-	CreateAllBitVectorsDone = "0x0000000100000000",
-	CreateAllAccountFactionsDone = "0x0000000200000000",
-	CreateAllAccountItemsDone = "0x0000000400000000",
-	CreateAllCombinedQuestLogEntriesDone = "0x0000000800000000",
-	CreateAllDataElementsDone = "0x0000001000000000",
-	CreateAllWarbandGroupsDone = "0x0000002000000000",
-	CreateAllBanktabSettingsDone = "0x0000004000000000",
-	CreateAllAccountMappingDone = "0x0000008000000000",
-	CreateAllCharacterItemsDone = "0x0000010000000000",
-	CreateAllCurrencyTransferLogDone = "0x0000020000000000",
-	CreateAllLgVendorPurchaseDone = "0x0000040000000000",
-	CreateAllFutureFeature01DataDone = "0x0000080000000000",
-	CreateAllWarbandScenesLoadedDone = "0x0000100000000000",
+	None = "0x0000000000000000",
+	AchievementsDone = "0x0000000000000001",
+	CriteriaDone = "0x0000000000000002",
+	MountsDone = "0x0000000000000004",
+	BattlepetsDone = "0x0000000000000008",
+	CurrencycapsDone = "0x0000000000000010",
+	QuestLogDone = "0x0000000000000020",
+	CharactersDone = "0x0000000000000040",
+	PurchasesDone = "0x0000000000000080",
+	BpayDistributionObjectsDone = "0x0000000000000100",
+	ArchivedPurchasesDone = "0x0000000000000200",
+	SettingsDone = "0x0000000000000400",
+	BpayAddLicenseObjectsDone = "0x0000000000000800",
+	ItemCollectionItemsDone = "0x0000000000001000",
+	AuctionableTokensDone = "0x0000000000002000",
+	ConsumableTokensDone = "0x0000000000004000",
+	PerkPastRewardsDone = "0x0000000000008000",
+	VasTransactionsDone = "0x0000000000010000",
+	BpayProductitemObjectsDone = "0x0000000000020000",
+	TrialBoostHistoryDone = "0x0000000000040000",
+	QuestCriteriaDone = "0x0000000000080000",
+	Object = "0x0000000000100000",
+	AccountCurrenciesDone = "0x0000000000200000",
+	RafBalanceDone = "0x0000000000400000",
+	RafRewardsDone = "0x0000000000800000",
+	AccountDynamicCriteriaDone = "0x0000000001000000",
+	RafActivitiesDone = "0x0000000002000000",
+	RevokedRafRewardsDone = "0x0000000004000000",
+	AccountNotificationsDone = "0x0000000008000000",
+	PerkPendingPurchasesDone = "0x0000000010000000",
+	WowlabsDataDone = "0x0000000020000000",
+	PerkHeldItemsDone = "0x0000000040000000",
+	PerkPendingRewardsDone = "0x0000000080000000",
+	BitVectorsDone = "0x0000000100000000",
+	AccountFactionsDone = "0x0000000200000000",
+	AccountItemsDone = "0x0000000400000000",
+	CombinedQuestLogEntriesDone = "0x0000000800000000",
+	DataElementsDone = "0x0000001000000000",
+	WarbandGroupsDone = "0x0000002000000000",
+	BanktabSettingsDone = "0x0000004000000000",
+	AccountMappingDone = "0x0000008000000000",
+	CharacterItemsDone = "0x0000010000000000",
+	CurrencyTransferLogDone = "0x0000020000000000",
+	LgVendorPurchaseDone = "0x0000040000000000",
+	AccountStateHousingData = "0x0000080000000000",
+	WarbandScenesLoadedDone = "0x0000100000000000",
+	EventRecordsDone = "0x0000200000000000",
+	TransmogOutfitsLoadedDone = "0x0000400000000000",
+}
+
+---@enum Enum.CreateNeighborhoodErrorType
+Enum.CreateNeighborhoodErrorType = {
+	None = 0,
+	Profanity = 1,
+	UndersizedGuild = 2,
+	OversizedGuild = 3,
 }
 
 ---@enum Enum.CurioRarity
@@ -2168,6 +2584,7 @@ Enum.CurrencyDestroyReason = {
 	ConcentrationCast = 13,
 	AccountTransfer = 14,
 	HonorLoss = 15,
+	CraftingOrderReagent = 16,
 }
 
 ---@enum Enum.CurrencyFilterType
@@ -2225,6 +2642,7 @@ Enum.CurrencyFlagsB = {
 	CurrencyBScaleMaxQuantityByWeeksSinceStart = 0x80,
 	CurrencyBForceMaxQuantityOnConversion = 0x100,
 	CurrencyBUnearnableBeforeMaxQuantityStart = 0x200,
+	CurrencyBAllowReductionByResourcefulness = 0x400,
 }
 
 ---@enum Enum.CurrencyGainFlags
@@ -2267,7 +2685,7 @@ Enum.CurrencySource = {
 	GarrisonBuildingRefund = 26,
 	GarrisonMissionReward = 27,
 	GarrisonResourceOverTime = 28,
-	QuestRewardIgnoreCapsDeprecated = 29,
+	CurrencyWalletClaim = 29,
 	GarrisonTalent = 30,
 	GarrisonWorldQuestBonus = 31,
 	PvPHonorReward = 32,
@@ -2305,6 +2723,7 @@ Enum.CurrencySource = {
 	SpellSkipLinkedCurrency = 64,
 	AccountTransfer = 65,
 	RenownRepGainInitialVisibility = 66,
+	InitiativeReward = 67,
 }
 
 ---@enum Enum.CurrencyTokenCategoryFlags
@@ -2365,54 +2784,131 @@ Enum.Cursormode = {
 	PingCursor = 38,
 	EnchantCursor = 39,
 	StablemasterCursor = 40,
-	UIMoveCursor = 41,
-	UIResizeCursor = 42,
-	PointErrorCursor = 43,
-	CastErrorCursor = 44,
-	BuyErrorCursor = 45,
-	AttackErrorCursor = 46,
-	InteractErrorCursor = 47,
-	SpeakErrorCursor = 48,
-	InspectErrorCursor = 49,
-	PickupErrorCursor = 50,
-	TaxiErrorCursor = 51,
-	TrainerErrorCursor = 52,
-	MineErrorCursor = 53,
-	SkinErrorCursor = 54,
-	GatherErrorCursor = 55,
-	LockErrorCursor = 56,
-	MailErrorCursor = 57,
-	LootAllErrorCursor = 58,
-	RepairErrorCursor = 59,
-	RepairnpcErrorCursor = 60,
-	ItemErrorCursor = 61,
-	SkinHordeErrorCursor = 62,
-	SkinAllianceErrorCursor = 63,
-	InnkeeperErrorCursor = 64,
-	CampaignQuestErrorCursor = 65,
-	CampaignQuestTurninErrorCursor = 66,
-	QuestErrorCursor = 67,
-	QuestRepeatableErrorCursor = 68,
-	QuestTurninErrorCursor = 69,
-	QuestLegendaryErrorCursor = 70,
-	QuestLegendaryTurninErrorCursor = 71,
-	QuestImportantErrorCursor = 72,
-	QuestImportantTurninErrorCursor = 73,
-	QuestMetaErrorCursor = 74,
-	QuestMetaTurninErrorCursor = 75,
-	QuestRecurringErrorCursor = 76,
-	QuestRecurringTurninErrorCursor = 77,
-	VehicleErrorCursor = 78,
-	MapPinErrorCursor = 79,
-	PingErrorCursor = 80,
-	EnchantErrorCursor = 81,
-	StablemasterErrorCursor = 82,
-	CustomCursor = 83,
+	PaletteCursor = 41,
+	BroomCursor = 42,
+	HoldingHandCursor = 43,
+	GrabbingHandCursor = 44,
+	UIMoveCursor = 45,
+	UIResizeCursor = 46,
+	PointErrorCursor = 47,
+	CastErrorCursor = 48,
+	BuyErrorCursor = 49,
+	AttackErrorCursor = 50,
+	InteractErrorCursor = 51,
+	SpeakErrorCursor = 52,
+	InspectErrorCursor = 53,
+	PickupErrorCursor = 54,
+	TaxiErrorCursor = 55,
+	TrainerErrorCursor = 56,
+	MineErrorCursor = 57,
+	SkinErrorCursor = 58,
+	GatherErrorCursor = 59,
+	LockErrorCursor = 60,
+	MailErrorCursor = 61,
+	LootAllErrorCursor = 62,
+	RepairErrorCursor = 63,
+	RepairnpcErrorCursor = 64,
+	ItemErrorCursor = 65,
+	SkinHordeErrorCursor = 66,
+	SkinAllianceErrorCursor = 67,
+	InnkeeperErrorCursor = 68,
+	CampaignQuestErrorCursor = 69,
+	CampaignQuestTurninErrorCursor = 70,
+	QuestErrorCursor = 71,
+	QuestRepeatableErrorCursor = 72,
+	QuestTurninErrorCursor = 73,
+	QuestLegendaryErrorCursor = 74,
+	QuestLegendaryTurninErrorCursor = 75,
+	QuestImportantErrorCursor = 76,
+	QuestImportantTurninErrorCursor = 77,
+	QuestMetaErrorCursor = 78,
+	QuestMetaTurninErrorCursor = 79,
+	QuestRecurringErrorCursor = 80,
+	QuestRecurringTurninErrorCursor = 81,
+	VehicleErrorCursor = 82,
+	MapPinErrorCursor = 83,
+	PingErrorCursor = 84,
+	EnchantErrorCursor = 85,
+	StablemasterErrorCursor = 86,
+	PaletteErrorCursor = 87,
+	BroomErrorCursor = 88,
+	HoldingHandErrorCursor = 89,
+	GrabbingHandErrorCursor = 90,
+	CustomCursor = 91,
 }
 
 ---@enum Enum.CustomBindingType
 Enum.CustomBindingType = {
 	VoicePushToTalk = 0,
+}
+
+---@enum Enum.DamageMeterNumbers
+Enum.DamageMeterNumbers = {
+	Minimal = 0,
+	Compact = 1,
+	Complete = 2,
+}
+
+---@enum Enum.DamageMeterOverrideType
+Enum.DamageMeterOverrideType = {
+	Ignore = 0,
+	AllowFriendlyFire = 1,
+	RedirectSourceToOwner = 2,
+	RedirectSourceToAuraCaster = 3,
+	IgnoreForAbsorbSpell = 4,
+}
+
+---@enum Enum.DamageMeterSessionType
+Enum.DamageMeterSessionType = {
+	Overall = 0,
+	Current = 1,
+	Expired = 2,
+}
+
+---@enum Enum.DamageMeterSpellDetailsDisplayType
+Enum.DamageMeterSpellDetailsDisplayType = {
+	SpellCasted = 0,
+	UnitSpecificSpellCasted = 1,
+	SpellAffected = 2,
+}
+
+---@enum Enum.DamageMeterStorageType
+Enum.DamageMeterStorageType = {
+	Damage = 0,
+	HealingAndAbsorbs = 1,
+	Absorbs = 2,
+	Interrupts = 3,
+	Dispels = 4,
+	DamageTaken = 5,
+	AvoidableDamageTaken = 6,
+}
+
+---@enum Enum.DamageMeterStyle
+Enum.DamageMeterStyle = {
+	Default = 0,
+	Thin = 1,
+	Bordered = 2,
+	FullBackground = 3,
+}
+
+---@enum Enum.DamageMeterType
+Enum.DamageMeterType = {
+	DamageDone = 0,
+	Dps = 1,
+	HealingDone = 2,
+	Hps = 3,
+	Absorbs = 4,
+	Interrupts = 5,
+	Dispels = 6,
+	DamageTaken = 7,
+	AvoidableDamageTaken = 8,
+}
+
+---@enum Enum.DamageMeterVisibility
+Enum.DamageMeterVisibility = {
+	Always = 0,
+	InCombat = 1,
+	Hidden = 2,
 }
 
 ---@enum Enum.Damageclass
@@ -2479,6 +2975,43 @@ Enum.DisableAccountProfilesFlags = {
 	MountsCollections = 0x4,
 	PetsCollections = 0x8,
 	ItemsCollections = 0x10,
+	DecorsCollections = 0x20,
+}
+
+---@enum Enum.DungeonEncounterFlags
+Enum.DungeonEncounterFlags = {
+	StickyNews = 0x1,
+	GuildNews = 0x2,
+	RaidLockPlayers = 0x4,
+	AutoEnd = 0x8,
+	Cosmetic = 0x10,
+	Unused = 0x20,
+	HideUntilCompleted = 0x40,
+	NoAutoStart = 0x80,
+	IgnoreSpawnLimit = 0x100,
+	DisableEncounterEvents = 0x200,
+}
+
+---@enum Enum.DungeonEncounterTriggerType
+Enum.DungeonEncounterTriggerType = {
+	Invalid = 0,
+	OnStart = 1,
+	OnComplete = 2,
+	OnEnd = 3,
+	PreviouslyCompleted = 4,
+}
+
+---@enum Enum.DungeonEncounterXCreatureFlags
+Enum.DungeonEncounterXCreatureFlags = {
+	BossCreature = 1,
+	DropLootImmediately = 2,
+	DoNotDespawnOnSuccess = 4,
+}
+
+---@enum Enum.DurationTimeModifier
+Enum.DurationTimeModifier = {
+	RealTime = 0,
+	BaseTime = 1,
 }
 
 ---@enum Enum.EditModeAccountSetting
@@ -2512,6 +3045,10 @@ Enum.EditModeAccountSetting = {
 	ShowVehicleSeatIndicator = 26,
 	ShowArchaeologyBar = 27,
 	ShowCooldownViewer = 28,
+	ShowPersonalResourceDisplay = 29,
+	ShowEncounterEvents = 30,
+	ShowDamageMeter = 31,
+	ShowExternalDefensives = 32,
 }
 
 ---@enum Enum.EditModeActionBarSetting
@@ -2558,12 +3095,16 @@ Enum.EditModeAuraFrameSetting = {
 	IconSize = 5,
 	IconPadding = 6,
 	DeprecatedShowFull = 7,
+	VisibleSetting = 8,
+	Opacity = 9,
+	ShowDispelType = 10,
 }
 
 ---@enum Enum.EditModeAuraFrameSystemIndices
 Enum.EditModeAuraFrameSystemIndices = {
 	BuffFrame = 1,
 	DebuffFrame = 2,
+	ExternalDefensivesFrame = 3,
 }
 
 ---@enum Enum.EditModeBagsSetting
@@ -2571,6 +3112,7 @@ Enum.EditModeBagsSetting = {
 	Orientation = 0,
 	Direction = 1,
 	Size = 2,
+	BagSlotPadding = 3,
 }
 
 ---@enum Enum.EditModeCastBarSetting
@@ -2607,6 +3149,7 @@ Enum.EditModeCooldownViewerSetting = {
 	HideWhenInactive = 8,
 	ShowTimer = 9,
 	ShowTooltips = 10,
+	BarWidthScale = 11,
 }
 
 ---@enum Enum.EditModeCooldownViewerSystemIndices
@@ -2617,9 +3160,48 @@ Enum.EditModeCooldownViewerSystemIndices = {
 	BuffBar = 4,
 }
 
+---@enum Enum.EditModeDamageMeterSetting
+Enum.EditModeDamageMeterSetting = {
+	Visibility = 0,
+	Style = 1,
+	Numbers = 2,
+	FrameWidth = 3,
+	FrameHeight = 4,
+	Padding = 5,
+	Transparency = 6,
+	ObsoleteReuse1 = 7,
+	ShowSpecIcon = 8,
+	ShowClassColor = 9,
+	BarHeight = 10,
+	TextSize = 11,
+	BackgroundTransparency = 12,
+}
+
 ---@enum Enum.EditModeDurabilityFrameSetting
 Enum.EditModeDurabilityFrameSetting = {
 	Size = 0,
+}
+
+---@enum Enum.EditModeEncounterEventsSetting
+Enum.EditModeEncounterEventsSetting = {
+	Orientation = 0,
+	IconDirection = 1,
+	ShowSpellName = 2,
+	IconSize = 3,
+	OverallSize = 4,
+	BackgroundTransparency = 5,
+	Transparency = 6,
+	Visibility = 7,
+	ShowTooltips = 8,
+	ShowTimer = 9,
+}
+
+---@enum Enum.EditModeEncounterEventsSystemIndices
+Enum.EditModeEncounterEventsSystemIndices = {
+	Timeline = 1,
+	CriticalWarnings = 2,
+	MediumWarnings = 3,
+	NormalWarnings = 4,
 }
 
 ---@enum Enum.EditModeLayoutType
@@ -2650,6 +3232,12 @@ Enum.EditModeObjectiveTrackerSetting = {
 	Height = 0,
 	Opacity = 1,
 	TextSize = 2,
+}
+
+---@enum Enum.EditModePersonalResourceDisplaySetting
+Enum.EditModePersonalResourceDisplaySetting = {
+	HideHealthAndPower = 0,
+	OnlyShowInCombat = 1,
 }
 
 ---@enum Enum.EditModePresetLayouts
@@ -2701,6 +3289,9 @@ Enum.EditModeSystem = {
 	VehicleSeatIndicator = 18,
 	ArchaeologyBar = 19,
 	CooldownViewer = 20,
+	PersonalResourceDisplay = 21,
+	EncounterEvents = 22,
+	DamageMeter = 23,
 }
 
 ---@enum Enum.EditModeTimerBarsSetting
@@ -2728,6 +3319,9 @@ Enum.EditModeUnitFrameSetting = {
 	RowSize = 15,
 	FrameSize = 16,
 	ViewArenaSize = 17,
+	AuraOrganizationType = 18,
+	IconSize = 19,
+	Opacity = 20,
 }
 
 ---@enum Enum.EditModeUnitFrameSystemIndices
@@ -2747,6 +3341,60 @@ Enum.EditModeVehicleSeatIndicatorSetting = {
 	Size = 0,
 }
 
+---@enum Enum.EncounterEventCastState
+Enum.EncounterEventCastState = {
+	Casting = 1,
+	NotCasting = 2,
+	Expired = 3,
+}
+
+---@enum Enum.EncounterEventFlags
+Enum.EncounterEventFlags = {
+	Disabled = 1,
+}
+
+---@enum Enum.EncounterEventIconmask
+Enum.EncounterEventIconmask = {
+	DeadlyEffect = 0x1,
+	EnrageEffect = 0x2,
+	BleedEffect = 0x4,
+	MagicEffect = 0x8,
+	DiseaseEffect = 0x10,
+	CurseEffect = 0x20,
+	PoisonEffect = 0x40,
+	TankRole = 0x80,
+	HealerRole = 0x100,
+	DpsRole = 0x200,
+}
+
+---@enum Enum.EncounterEventSeverity
+Enum.EncounterEventSeverity = {
+	Low = 0,
+	Medium = 1,
+	High = 2,
+}
+
+---@enum Enum.EncounterEventsIconDirection
+Enum.EncounterEventsIconDirection = {
+	Left = 0,
+	Top = 0,
+	Bottom = 1,
+	Right = 1,
+}
+
+---@enum Enum.EncounterEventsOrientation
+Enum.EncounterEventsOrientation = {
+	Horizontal = 0,
+	Vertical = 1,
+}
+
+---@enum Enum.EncounterEventsVisibility
+Enum.EncounterEventsVisibility = {
+	Always = 0,
+	InEncounter = 1,
+	DeprecatedHidden = 2,
+}
+
 ---@enum Enum.EncounterLootDropRollState
 Enum.EncounterLootDropRollState = {
 	NeedMainSpec = 0,
@@ -2755,6 +3403,53 @@ Enum.EncounterLootDropRollState = {
 	Greed = 3,
 	NoRoll = 4,
 	Pass = 5,
+}
+
+---@enum Enum.EncounterTimelineEventSortDirection
+Enum.EncounterTimelineEventSortDirection = {
+	Descending = 0,
+	Ascending = 1,
+}
+
+---@enum Enum.EncounterTimelineEventSource
+Enum.EncounterTimelineEventSource = {
+	Encounter = 0,
+	Script = 1,
+	EditMode = 2,
+}
+
+---@enum Enum.EncounterTimelineEventState
+Enum.EncounterTimelineEventState = {
+	Active = 0,
+	Paused = 1,
+	Finished = 2,
+	Canceled = 3,
+}
+
+---@enum Enum.EncounterTimelineIconSet
+Enum.EncounterTimelineIconSet = {
+	TankAlert = 1,
+	HealerAlert = 2,
+	DamageAlert = 3,
+	Deadly = 4,
+	Dispel = 5,
+	Enrage = 6,
+}
+
+---@enum Enum.EncounterTimelineTrack
+Enum.EncounterTimelineTrack = {
+	Queued = 0,
+	Short = 1,
+	Medium = 2,
+	Long = 3,
+	Indeterminate = 4,
+}
+
+---@enum Enum.EncounterTimelineTrackType
+Enum.EncounterTimelineTrackType = {
+	Hidden = 0,
+	Sorted = 1,
+	Linear = 2,
 }
 
 ---@enum Enum.EndOfMatchType
@@ -2812,6 +3507,7 @@ Enum.EventToastDisplayType = {
 	CapstoneUnlocked = 12,
 	SingleLineWithIcon = 13,
 	Scoreboard = 14,
+	HouseUpgradeAvailable = 15,
 }
 
 ---@enum Enum.EventToastEventType
@@ -2842,6 +3538,7 @@ Enum.EventToastEventType = {
 	WeeklyRewardUnlock = 23,
 	WeeklyRewardUpgrade = 24,
 	FlightpointDiscovered = 25,
+	HouseUpgradeAvailable = 26,
 }
 
 ---@enum Enum.EventToastFlags
@@ -2863,11 +3560,21 @@ Enum.ExcludedCensorSources = {
 	All = 0xFF,
 }
 
----@enum Enum.ExpansionLandingPageType
-Enum.ExpansionLandingPageType = {
+---@enum Enum.ExpansionLevel
+Enum.ExpansionLevel = {
 	None = 0,
-	Dragonflight = 1,
-	WarWithin = 2,
+	BurningCrusade = 1,
+	Northrend = 2,
+	Cataclysm = 3,
+	MistsOfPandaria = 4,
+	Draenor = 5,
+	Legion = 6,
+	BattleForAzeroth = 7,
+	Shadowlands = 8,
+	Dragonflight = 9,
+	WarWithin = 10,
+	Midnight = 11,
+	LastTitan = 12,
 }
 
 ---@enum Enum.FlightPathFaction
@@ -2903,11 +3610,142 @@ Enum.FollowerAbilityCastResult = {
 	CannotTargetNonAutoMissionFollower = 14,
 }
 
+---@enum Enum.FontStringScaleAnimationMode
+Enum.FontStringScaleAnimationMode = {
+	FontSize = 0,
+	Vertex = 1,
+}
+
+---@enum Enum.FragmentID
+Enum.FragmentID = {
+	MirrorState = 0,
+	EntityPosition = 1,
+	CgObject = 2,
+	JamDispatcher = 3,
+	HeartbeatData = 4,
+	FTransportLink = 5,
+	ClientObservablesData = 6,
+	TimerQueues = 7,
+	TransferSuspensionData = 8,
+	DeferredMessages = 9,
+	FPersistableJamServers = 10,
+	FPlayerJamServers = 11,
+	FLootObjectList = 12,
+	FPlayerOwnershipLink = 13,
+	FUnitAreaTriggerLink = 14,
+	Actor = 15,
+	FPhaseShiftData = 16,
+	FVendor = 17,
+	MirroredObjectC = 18,
+	FMeshObjectData = 19,
+	FHousingDecor = 20,
+	FHousingRoom = 21,
+	FHousingRoomComponentMesh = 22,
+	FHousingPlayerHouse = 23,
+	FHousingHouseDecorSet = 24,
+	FHousingHouseRoomSet = 25,
+	FHousingDecorProxy = 26,
+	FJamHousingCornerstone = 27,
+	FHousingDecorActor = 28,
+	FHousingPlotAreaTrigger = 29,
+	FNeighborhoodMirrorData = 30,
+	FMirroredPositionData = 31,
+	FPlayerHouseInfo = 32,
+	FHousingStorageMirrorData = 33,
+	FHousingFixture = 34,
+	FHousingHouseFixtureSet = 35,
+	Timer = 36,
+	FPlayerInitiativeInfo = 37,
+	FNeighborhoodStateData = 38,
+	FUnitAIGroupLink = 39,
+	TagItem = 200,
+	TagContainer = 201,
+	TagAzeriteEmpoweredItem = 202,
+	TagAzeriteItem = 203,
+	TagUnit = 204,
+	TagPlayer = 205,
+	TagGameObject = 206,
+	TagDynamicObject = 207,
+	TagCorpse = 208,
+	TagAreaTrigger = 209,
+	TagSceneObject = 210,
+	TagConversation = 211,
+	TagAIGroup = 212,
+	TagScenario = 213,
+	TagLootObject = 214,
+	TagActivePlayer = 215,
+	TagActiveClientS = 216,
+	TagActiveObjectC = 217,
+	TagVisibleObjectC = 218,
+	TagUnitVehicle = 219,
+	TagHousingRoom = 220,
+	TagMeshObject = 221,
+	TagHousingSubdivisionObject = 222,
+	TagHousingPoolObject = 223,
+	TagHouseExteriorPiece = 224,
+	TagHouseExteriorRoot = 225,
+	TestFragment_1 = 250,
+	TestFragment_2 = 251,
+	TestFragment_3 = 252,
+	TestFragment_4 = 253,
+	TestFragment_5 = 254,
+	ReservedArchetypeSeparator = 255,
+}
+
+---@enum Enum.FrameTutorialAccount
+Enum.FrameTutorialAccount = {
+	HudRevampBagChanges = 1,
+	PerksProgramActivitiesIntro = 2,
+	EditModeManager = 3,
+	TransmogSetsTab = 4,
+	MountCollectionDragonriding = 5,
+	LFGList = 6,
+	HeirloomJournalLevel = 7,
+	TimerunnersAdvantage = 8,
+	AccountWideReputation = 9,
+	TransferableCurrencies = 10,
+	BindToAccountUntilEquip = 11,
+	CompletedQuestsFilter = 12,
+	CompletedQuestsFilterSeen = 13,
+	ConcentrationCurrency = 14,
+	MapLegendOpened = 15,
+	NpcCraftingOrders = 16,
+	NpcCraftingOrderCreateButton = 17,
+	NpcCraftingOrderTabNew = 18,
+	LocalStoriesFilterSeen = 19,
+	EventSchedulerTabSeen = 20,
+	AssistedCombatRotationDragSpell = 21,
+	AssistedCombatRotationActionButton = 22,
+	HousingDecorCleanup = 23,
+	HousingDecorPlace = 24,
+	HousingDecorClippingGrid = 25,
+	HousingDecorCustomization = 26,
+	HousingDecorLayout = 27,
+	HousingHouseFinderMap = 28,
+	HousingHouseFinderVisitHouse = 29,
+	HousingItemAcquisition = 30,
+	HousingNewPip = 31,
+	PerksProgramActivitiesOpen = 32,
+	EnconterJournalTutorialsTabSeen = 33,
+	HousingMarketTab = 34,
+	HousingTeleportButton = 35,
+	RPETalentStarterBuild = 36,
+	HousingInvalidCollision = 37,
+	HousingModesUnlocked = 38,
+	HousingExpertMode = 39,
+	HousingCleanupMode = 40,
+	TransmogOutfits = 41,
+	TransmogSets = 42,
+	TransmogCustomSets = 43,
+	TransmogSituations = 44,
+	TransmogWeaponOptions = 45,
+}
+
 ---@enum Enum.GameMode
 Enum.GameMode = {
 	Standard = 1,
 	Plunderstorm = 2,
-	Length = 3,
+	WoWHack = 3,
 }
 
 ---@enum Enum.GamePadPowerLevel
@@ -3006,6 +3844,7 @@ Enum.GameRule = {
 	FullCharacterCreateDisabled = 84,
 	TargetFrameBuffsDisabled = 85,
 	UnitFramePvPContextualDisabled = 86,
+	ActionCombatTargetLockEnabled = 87,
 	BlockWhileSheathedAllowed = 88,
 	VanillaAccountMailInstant = 91,
 	ClearMailOnRealmTransfer = 92,
@@ -3015,10 +3854,52 @@ Enum.GameRule = {
 	WorldMapLegendDisabled = 99,
 	WorldMapFrameStrata = 100,
 	MerchantFilterDisabled = 101,
+	HousingDashboardDisabled = 102,
+	AutoAttacksDisabled = 103,
+	ObjectiveTrackerDisabled = 104,
+	PlayerCastBarDisabled = 105,
+	TargetCastBarDisabled = 106,
+	NameplateCastBarDisabled = 107,
 	SummoningStones = 108,
 	TransmogEnabled = 109,
+	DisableRealmSelection = 113,
+	DisableCampsites = 114,
+	UseSimpleCharacterSelectList = 115,
+	HideFaction = 116,
+	DisableVas = 119,
+	PersonalResourceDisplayDisabled = 129,
+	TargetFrameDisabled = 130,
+	PlayerFrameDisabled = 131,
 	MailGameRule = 132,
+	ForcedMultiActionBarSetting = 133,
+	HideAllMultiActionBars = 135,
+	TimerunningAllowed = 137,
+	MaxCharactersPerContentSet = 139,
+	MinUndeleteLevelRequired = 140,
+	DoesNotCountTowardAccountCharacterMax = 142,
+	WorldMapDisabled = 145,
+	MinimapDisabled = 146,
+	RepairArmorDisabled = 147,
+	EjSuggestedContentDisabled = 148,
+	EjDungeonsDisabled = 149,
+	EjRaidsDisabled = 150,
+	EjItemSetsDisabled = 151,
+	GdapiCharacterProfileDisabled = 153,
+	HousingEnabled = 154,
+	RestrictedAchievementCategoryID = 155,
+	EjJourneysDisabled = 156,
 	LootMethodStyle = 157,
+	ExperienceBarDisabled = 159,
+	HideUnavailableTransmogSlots = 160,
+	HideTransmogZeroCost = 161,
+	DisableQuickJoin = 162,
+	DisableRaidGroups = 163,
+	UseGameTableVariation = 164,
+	ActionButtonTypeOverlayStrategy = 165,
+	RecommendLeastPopulatedRealm = 169,
+	BagSpaceOverride = 172,
+	UnflaggedPlayersCanAttackPvPFlaggedPlayers = 173,
+	PvPInitialRatingOverride = 190,
 }
 
 ---@enum Enum.GameRuleFlags
@@ -3293,12 +4174,14 @@ Enum.GossipNpcOption = {
 	CharacterBanker = 56,
 	AccountBanker = 57,
 	ProfessionRespec = 58,
-	Placeholder_1 = 59,
-	Placeholder_2 = 60,
-	Placeholder_3 = 61,
+	RenameNeighborhood = 59,
+	HousingCreateGuildNeighborhood = 60,
+	HousingGetNeighborhoodCharter = 61,
 	GuildRename = 62,
-	Placeholder_4 = 63,
+	HousingOpenCharterConfirmation = 63,
 	ItemUpgrade = 64,
+	HouseFinder = 65,
+	TieredEntrance = 66,
 }
 
 ---@enum Enum.GossipNpcOptionDisplayFlags
@@ -3433,6 +4316,8 @@ Enum.GuildErrorType = {
 	RealmMismatch = 48,
 	InCooldown = 49,
 	ReservationExpired = 50,
+	HousingEvictError = 51,
+	Throttled = 52,
 }
 
 ---@enum Enum.HolidayCalendarFlags
@@ -3450,6 +4335,533 @@ Enum.HolidayFlags = {
 	NotAvailableClientSide = 0x10,
 	DurationUseMinutes = 0x20,
 	BeginEventOnlyOnStageChange = 0x40,
+}
+
+---@enum Enum.HouseEditingContext
+Enum.HouseEditingContext = {
+	None = 0,
+	Decor = 1,
+	Room = 2,
+	Fixture = 3,
+}
+
+---@enum Enum.HouseEditorMode
+Enum.HouseEditorMode = {
+	None = 0,
+	BasicDecor = 1,
+	ExpertDecor = 2,
+	Layout = 3,
+	Customize = 4,
+	Cleanup = 5,
+	ExteriorCustomization = 6,
+}
+
+---@enum Enum.HouseExteriorWMODataFlags
+Enum.HouseExteriorWMODataFlags = {
+	None = 0,
+	UnlockedByDefault = 1,
+	AllowedInHordeNeighborhoods = 2,
+	AllowedInAllianceNeighborhoods = 4,
+}
+
+---@enum Enum.HouseFinderSuggestionReason
+Enum.HouseFinderSuggestionReason = {
+	None = 0x0,
+	Owner = 0x1,
+	CharterInvite = 0x2,
+	Guild = 0x4,
+	BNetFriends = 0x8,
+	PartySync = 0x10,
+	Random = 0x20,
+}
+
+---@enum Enum.HouseLevelRewardType
+Enum.HouseLevelRewardType = {
+	Value = 0,
+	Object = 1,
+}
+
+---@enum Enum.HouseLevelRewardValueType
+Enum.HouseLevelRewardValueType = {
+	ExteriorDecor = 0,
+	InteriorDecor = 1,
+	Rooms = 2,
+	Fixtures = 3,
+}
+
+---@enum Enum.HouseOwnerError
+Enum.HouseOwnerError = {
+	None = 0,
+	Faction = 1,
+	Guild = 2,
+	GenericPermission = 3,
+}
+
+---@enum Enum.HouseSettingFlags
+Enum.HouseSettingFlags = {
+	None = 0x0,
+	HouseAccessAnyone = 0x1,
+	HouseAccessNeighbors = 0x2,
+	HouseAccessGuild = 0x4,
+	HouseAccessFriends = 0x8,
+	HouseAccessParty = 0x10,
+	PlotAccessAnyone = 0x20,
+	PlotAccessNeighbors = 0x40,
+	PlotAccessGuild = 0x80,
+	PlotAccessFriends = 0x100,
+	PlotAccessParty = 0x200,
+}
+
+---@enum Enum.HouseVisitType
+Enum.HouseVisitType = {
+	Unknown = 0,
+	Friend = 1,
+	Guild = 2,
+	Party = 3,
+}
+
+---@enum Enum.HousingBasicModeTargetType
+Enum.HousingBasicModeTargetType = {
+	None = 0,
+	Decor = 1,
+	House = 2,
+}
+
+---@enum Enum.HousingCatalogEntryModelScenePresets
+Enum.HousingCatalogEntryModelScenePresets = {
+	DecorDefault = 1317,
+	DecorFlat = 1318,
+	DecorTiny = 1333,
+	DecorSmall = 1334,
+	DecorMedium = 1335,
+	DecorLarge = 1336,
+	DecorHuge = 1337,
+	DecorCeiling = 1338,
+	DecorWall = 1339,
+}
+
+---@enum Enum.HousingCatalogEntrySize
+Enum.HousingCatalogEntrySize = {
+	None = 0,
+	Tiny = 65,
+	Small = 66,
+	Medium = 67,
+	Large = 68,
+	Huge = 69,
+}
+
+---@enum Enum.HousingCatalogEntrySubtype
+Enum.HousingCatalogEntrySubtype = {
+	Invalid = 0,
+	Unowned = 1,
+	OwnedModifiedStack = 2,
+	OwnedUnmodifiedStack = 3,
+}
+
+---@enum Enum.HousingCatalogEntryType
+Enum.HousingCatalogEntryType = {
+	Invalid = 0,
+	Decor = 1,
+	Room = 2,
+}
+
+---@enum Enum.HousingCatalogSortType
+Enum.HousingCatalogSortType = {
+	DateAdded = 0,
+	Alphabetical = 1,
+}
+
+---@enum Enum.HousingCustomizeModeTargetType
+Enum.HousingCustomizeModeTargetType = {
+	None = 0,
+	Decor = 1,
+	RoomComponent = 2,
+	ExteriorHouse = 3,
+}
+
+---@enum Enum.HousingDecorActionFlags
+Enum.HousingDecorActionFlags = {
+	None = 0x0,
+	Add = 0x1,
+	Remove = 0x2,
+	DragMove = 0x4,
+	PrecisionMove = 0x8,
+	ClickTarget = 0x10,
+	HoverTarget = 0x20,
+	TargetRoomComponents = 0x40,
+	TargetHouseExterior = 0x80,
+	MaintainLastTarget = 0x100,
+	IncludeTargetChildren = 0x200,
+	UsePlacedDecorList = 0x400,
+	PreviewDecor = 0x800,
+}
+
+---@enum Enum.HousingDecorModelType
+Enum.HousingDecorModelType = {
+	None = 0,
+	M2 = 1,
+	WMO = 2,
+}
+
+---@enum Enum.HousingDecorPlacementRestriction
+Enum.HousingDecorPlacementRestriction = {
+	TooFarAway = 0x1,
+	OutsideRoomBounds = 0x2,
+	OutsidePlotBounds = 0x4,
+	ChildOutsideBounds = 0x8,
+	InvalidTarget = 0x10,
+	InvalidCollision = 0x20,
+}
+
+---@enum Enum.HousingDecorTheme
+Enum.HousingDecorTheme = {
+	None = 0,
+	Folk = 1,
+	Rugged = 2,
+	Generic = 3,
+	NightElf = 4,
+	BloodElf = 5,
+}
+
+---@enum Enum.HousingDecorType
+Enum.HousingDecorType = {
+	None = 0,
+	Floor = 1,
+	Wall = 2,
+	Ceiling = 3,
+	Flooring = 4,
+}
+
+---@enum Enum.HousingExpertModeTargetType
+Enum.HousingExpertModeTargetType = {
+	None = 0,
+	Decor = 1,
+	House = 2,
+}
+
+---@enum Enum.HousingExpertSubmodeRestriction
+Enum.HousingExpertSubmodeRestriction = {
+	None = 0,
+	NotInExpertMode = 1,
+	NoHouseExteriorScale = 2,
+	NoWMOScale = 3,
+}
+
+---@enum Enum.HousingFavorUpdateSource
+Enum.HousingFavorUpdateSource = {
+	Unknown = 0,
+	DecorCollection = 1,
+	DeferredRewards = 2,
+	RetroactiveDecor = 3,
+	NewHouseDecorFavor = 4,
+	InitiativeTask = 5,
+	InitiativeChest = 6,
+	Quest = 7,
+}
+
+---@enum Enum.HousingFavorUpdateType
+Enum.HousingFavorUpdateType = {
+	Add = 0,
+	InitiativeAdd = 1,
+	Set = 2,
+}
+
+---@enum Enum.HousingFixtureFlags
+Enum.HousingFixtureFlags = {
+	None = 0,
+	IsDefaultFixture = 1,
+	UnlockedByDefault = 2,
+}
+
+---@enum Enum.HousingFixtureSize
+Enum.HousingFixtureSize = {
+	None = 0,
+	Any = 1,
+	Small = 2,
+	Medium = 3,
+	Large = 4,
+}
+
+---@enum Enum.HousingFixtureType
+Enum.HousingFixtureType = {
+	None = 0,
+	Base = 9,
+	Roof = 10,
+	Door = 11,
+	Window = 12,
+	RoofDetail = 13,
+	RoofWindow = 14,
+	Tower = 15,
+	Chimney = 16,
+}
+
+---@enum Enum.HousingIncrementType
+Enum.HousingIncrementType = {
+	Left = 0x1,
+	Right = 0x2,
+	Forward = 0x4,
+	Back = 0x8,
+	Up = 0x10,
+	Down = 0x20,
+	RotateLeft = 0x40,
+	RotateRight = 0x80,
+	ScaleUp = 0x100,
+	ScaleDown = 0x200,
+}
+
+---@enum Enum.HousingItemToastType
+Enum.HousingItemToastType = {
+	Room = 0,
+	Fixture = 1,
+	Customization = 2,
+	Decor = 3,
+	House = 4,
+}
+
+---@enum Enum.HousingLayoutCameraDirection
+Enum.HousingLayoutCameraDirection = {
+	None = 0x0,
+	Up = 0x1,
+	Down = 0x2,
+	Left = 0x4,
+	Right = 0x8,
+}
+
+---@enum Enum.HousingLayoutPinType
+Enum.HousingLayoutPinType = {
+	Door = 0,
+	Room = 1,
+}
+
+---@enum Enum.HousingLayoutRestriction
+Enum.HousingLayoutRestriction = {
+	None = 0,
+	RoomNotFound = 1,
+	NotInsideHouse = 2,
+	NotHouseOwner = 3,
+	IsBaseRoom = 4,
+	RoomNotLeaf = 5,
+	StairwellConnection = 6,
+	LastRoom = 7,
+	UnreachableRoom = 8,
+	SingleDoor = 9,
+}
+
+---@enum Enum.HousingLayoutStairDirection
+Enum.HousingLayoutStairDirection = {
+	Up = 0,
+	Down = 1,
+}
+
+---@enum Enum.HousingPlotOwnerType
+Enum.HousingPlotOwnerType = {
+	None = 0,
+	Stranger = 1,
+	Friend = 2,
+	Self = 3,
+}
+
+---@enum Enum.HousingPrecisionSubmode
+Enum.HousingPrecisionSubmode = {
+	Translate = 0,
+	Rotate = 1,
+	Scale = 2,
+}
+
+---@enum Enum.HousingResult
+Enum.HousingResult = {
+	Success = 0,
+	ActionLockedByCombat = 1,
+	BoundsFailureChildren = 2,
+	BoundsFailurePlot = 3,
+	BoundsFailureRoom = 4,
+	CannotAfford = 5,
+	CharterComplete = 6,
+	CollisionInvalid = 7,
+	DbError = 8,
+	DecorCannotBeRedeemed = 9,
+	DecorItemNotDestroyable = 10,
+	DecorNotFound = 11,
+	DecorNotFoundInStorage = 12,
+	DuplicateCharterSignature = 13,
+	FilterRejected = 14,
+	FixtureCantDeleteDoor = 15,
+	FixtureHookEmpty = 16,
+	FixtureHookOccupied = 17,
+	FixtureHouseTypeMismatch = 18,
+	FixtureNotFound = 19,
+	FixtureSizeMismatch = 20,
+	FixtureTypeMismatch = 21,
+	GenericFailure = 22,
+	GuildMoreAccountsNeeded = 23,
+	GuildMoreActivePlayersNeeded = 24,
+	GuildNotLoaded = 25,
+	HouseEditLockFailed = 26,
+	HouseExteriorAlreadyThatSize = 27,
+	HouseExteriorAlreadyThatType = 28,
+	HouseExteriorRootNotFound = 29,
+	HouseExteriorTypeNeighborhoodMismatch = 30,
+	HouseExteriorTypeNotFound = 31,
+	HouseExteriorTypeSizeMismatch = 32,
+	HouseExteriorSizeNotAvailable = 33,
+	HookNotChildOfFixture = 34,
+	HouseNotFound = 35,
+	IncorrectFaction = 36,
+	InvalidDecorItem = 37,
+	InvalidDistance = 38,
+	InvalidGuild = 39,
+	InvalidHouse = 40,
+	InvalidInstance = 41,
+	InvalidInteraction = 42,
+	InvalidMap = 43,
+	InvalidNeighborhoodName = 44,
+	InvalidRoomLayout = 45,
+	LockedByOtherPlayer = 46,
+	LockOperationFailed = 47,
+	MaxDecorReached = 48,
+	MaxPreviewDecorReached = 49,
+	MissingCoreFixture = 50,
+	MissingDye = 51,
+	MissingExpansionAccess = 52,
+	MissingFactionMap = 53,
+	MissingPrivateNeighborhoodInvite = 54,
+	MoreHouseSlotsNeeded = 55,
+	MoreSignaturesNeeded = 56,
+	NeighborhoodNotFound = 57,
+	NoNeighborhoodOwnershipRequests = 58,
+	NotInDecorEditMode = 59,
+	NotInFixtureEditMode = 60,
+	NotInLayoutEditMode = 61,
+	NotInsideHouse = 62,
+	NotOnOwnedPlot = 63,
+	OperationAborted = 64,
+	OwnerNotInGuild = 65,
+	PermissionDenied = 66,
+	PlacementTargetInvalid = 67,
+	PlayerNotFound = 68,
+	PlayerNotInInstance = 69,
+	PlotNotFound = 70,
+	PlotNotVacant = 71,
+	PlotReservationCooldown = 72,
+	PlotReserved = 73,
+	RoomNotFound = 74,
+	RoomUpdateFailed = 75,
+	RpcFailure = 76,
+	ServiceNotAvailable = 77,
+	StaticDataNotFound = 78,
+	TimeoutLimit = 79,
+	TimerunningNotAllowed = 80,
+	TokenRequired = 81,
+	TooManyRequests = 82,
+	TransactionFailure = 83,
+	UncollectedExteriorFixture = 84,
+	UncollectedHouseType = 85,
+	UncollectedRoom = 86,
+	UncollectedRoomMaterial = 87,
+	UncollectedRoomTheme = 88,
+	UnlockOperationFailed = 89,
+}
+
+---@enum Enum.HousingRoomComponentCeilingType
+Enum.HousingRoomComponentCeilingType = {
+	Flat = 0,
+	Vaulted = 1,
+}
+
+---@enum Enum.HousingRoomComponentDoorType
+Enum.HousingRoomComponentDoorType = {
+	None = 0,
+	Doorway = 1,
+	Threshold = 2,
+}
+
+---@enum Enum.HousingRoomComponentFlags
+Enum.HousingRoomComponentFlags = {
+	None = 0,
+	HiddenInLayoutMode = 1,
+}
+
+---@enum Enum.HousingRoomComponentFloorType
+Enum.HousingRoomComponentFloorType = {
+	Floor = 0,
+}
+
+---@enum Enum.HousingRoomComponentOptionFlags
+Enum.HousingRoomComponentOptionFlags = {
+	None = 0,
+	IsDefault = 1,
+}
+
+---@enum Enum.HousingRoomComponentOptionType
+Enum.HousingRoomComponentOptionType = {
+	Cosmetic = 0,
+	DoorwayWall = 1,
+	Doorway = 2,
+}
+
+---@enum Enum.HousingRoomComponentStairType
+Enum.HousingRoomComponentStairType = {
+	None = 0,
+	StartToEnd = 1,
+	StartToMiddle = 2,
+	MiddleToMiddle = 3,
+	MiddleToEnd = 4,
+}
+
+---@enum Enum.HousingRoomComponentTextureFlags
+Enum.HousingRoomComponentTextureFlags = {
+	None = 0,
+	UnlockedByDefault = 1,
+}
+
+---@enum Enum.HousingRoomComponentType
+Enum.HousingRoomComponentType = {
+	None = 0,
+	Wall = 1,
+	Floor = 2,
+	Ceiling = 3,
+	Stairs = 4,
+	Pillar = 5,
+	DoorwayWall = 6,
+	Doorway = 7,
+}
+
+---@enum Enum.HousingRoomFlags
+Enum.HousingRoomFlags = {
+	None = 0x0,
+	BaseRoom = 0x1,
+	HasStairs = 0x2,
+	UnlockedByDefault = 0x4,
+	HasCustomGeometry = 0x8,
+}
+
+---@enum Enum.HousingTeleportReason
+Enum.HousingTeleportReason = {
+	None = 0,
+	Cheat = 1,
+	UnspecifiedSpellcast = 2,
+	Booted = 3,
+	Homestone = 4,
+	Visit = 5,
+	Friend = 6,
+	GuildMember = 7,
+	PartyMember = 8,
+	ExitingHouse = 9,
+	Portal = 10,
+	Tutorial = 11,
+}
+
+---@enum Enum.HousingThemeFlags
+Enum.HousingThemeFlags = {
+	None = 0,
+	UnlockedByDefault = 1,
+	ShowInStyleSelector = 2,
+}
+
+---@enum Enum.HousingThrottleType
+Enum.HousingThrottleType = {
+	General = 0,
+	Decoration = 1,
 }
 
 ---@enum Enum.IconAndTextShiftTextType
@@ -3473,12 +4885,31 @@ Enum.IconState = {
 	ShowState2 = 2,
 }
 
+---@enum Enum.InitiativeMilestoneFlags
+Enum.InitiativeMilestoneFlags = {
+	FinalMilestone = 1,
+}
+
+---@enum Enum.InitiativeRewardFlags
+Enum.InitiativeRewardFlags = {
+	PermanentWorldState = 1,
+}
+
 ---@enum Enum.InputContext
 Enum.InputContext = {
 	None = 0,
 	Keyboard = 1,
 	Mouse = 2,
 	GamePad = 3,
+}
+
+---@enum Enum.InvalidPlotScreenshotReason
+Enum.InvalidPlotScreenshotReason = {
+	None = 0,
+	OutOfBounds = 1,
+	Facing = 2,
+	NoNeighborhoodFound = 3,
+	NoActivePlayer = 4,
 }
 
 ---@enum Enum.InventoryType
@@ -3572,19 +5003,25 @@ Enum.ItemClass = {
 	Battlepet = 17,
 	WoWToken = 18,
 	Profession = 19,
+	Housing = 20,
 }
 
 ---@enum Enum.ItemCollectionType
 Enum.ItemCollectionType = {
-	ItemCollectionNone = 0,
-	ItemCollectionToy = 1,
-	ItemCollectionHeirloom = 2,
-	ItemCollectionTransmog = 3,
-	ItemCollectionTransmogSetFavorite = 4,
-	ItemCollectionRuneforgeLegendaryAbility = 5,
-	ItemCollectionTransmogIllusion = 6,
-	ItemCollectionWarbandScene = 7,
-	NumItemCollectionTypes = 7,
+	None = 0,
+	Toy = 1,
+	Heirloom = 2,
+	Transmog = 3,
+	TransmogSetFavorite = 4,
+	RuneforgeLegendaryAbility = 5,
+	TransmogIllusion = 6,
+	WarbandScene = 7,
+	Room = 8,
+	ExteriorFixture = 9,
+	RoomTheme = 10,
+	RoomMaterial = 11,
+	TransmogOutfit = 12,
+	HouseType = 13,
 }
 
 ---@enum Enum.ItemCommodityStatus
@@ -3608,6 +5045,7 @@ Enum.ItemConsumableSubclass = {
 	VantusRune = 9,
 	UtilityCurio = 10,
 	CombatCurio = 11,
+	Relic = 12,
 }
 
 ---@enum Enum.ItemCreationContext
@@ -3634,7 +5072,7 @@ Enum.ItemCreationContext = {
 	DungeonLevelUp_3 = 19,
 	DungeonLevelUp_4 = 20,
 	ForceNone = 21,
-	Timewalker = 22,
+	TimewalkerLevelUp = 22,
 	DungeonMythic = 23,
 	PvPHonorReward = 24,
 	WorldQuest_1 = 25,
@@ -3797,6 +5235,8 @@ Enum.ItemCreationContext = {
 	Warbound_18 = 182,
 	Warbound_19 = 183,
 	Warbound_20 = 184,
+	Endeavors = 185,
+	TimewalkerMaxLevel = 186,
 }
 
 ---@enum Enum.ItemDisplayTextDisplayStyle
@@ -3862,6 +5302,16 @@ Enum.ItemGemSubclass = {
 	Other = 9,
 	Multiplestats = 10,
 	Artifactrelic = 11,
+}
+
+---@enum Enum.ItemHousingSubclass
+Enum.ItemHousingSubclass = {
+	Decor = 0,
+	Dye = 1,
+	Room = 2,
+	RoomCustomization = 3,
+	ExteriorCustomization = 4,
+	ServiceItem = 5,
 }
 
 ---@enum Enum.ItemMiscellaneousSubclass
@@ -3938,6 +5388,9 @@ Enum.ItemModification = {
 	Reforge = 58,
 	DbidHigh = 59,
 	DbidLow = 60,
+	CurrencyWalletID = 61,
+	CurrencyWalletQuantity = 62,
+	CurrencyWalletVersion = 63,
 }
 
 ---@enum Enum.ItemProfessionSubclass
@@ -3996,7 +5449,7 @@ Enum.ItemRecipeSubclass = {
 
 ---@enum Enum.ItemRecraftFlags
 Enum.ItemRecraftFlags = {
-	ItemRecraftFlagInvalid = 1,
+	Invalid = 1,
 }
 
 ---@enum Enum.ItemRedundancySlot
@@ -4038,6 +5491,11 @@ Enum.ItemSlotFilterType = {
 	Trinket = 13,
 	Other = 14,
 	NoFilter = 15,
+}
+
+---@enum Enum.ItemSocketInfoUIType
+Enum.ItemSocketInfoUIType = {
+	Default = 0,
 }
 
 ---@enum Enum.ItemSocketType
@@ -4258,6 +5716,15 @@ Enum.JournalLinkTypes = {
 	Tier = 3,
 }
 
+---@enum Enum.LFGEntryGeneralPlaystyle
+Enum.LFGEntryGeneralPlaystyle = {
+	None = 0,
+	Learning = 1,
+	FunRelaxed = 2,
+	FunSerious = 3,
+	Expert = 4,
+}
+
 ---@enum Enum.LFGEntryPlaystyle
 Enum.LFGEntryPlaystyle = {
 	None = 0,
@@ -4357,6 +5824,14 @@ Enum.LgVendorPurchaseState = {
 	Owned = 1,
 }
 
+---@enum Enum.LimitedInputType
+Enum.LimitedInputType = {
+	MouseMove = 0,
+	MouseDown = 1,
+	MouseUp = 2,
+	MouseWheel = 3,
+}
+
 ---@enum Enum.LinkedCurrencyFlags
 Enum.LinkedCurrencyFlags = {
 	IgnoreAdd = 0x1,
@@ -4436,6 +5911,14 @@ Enum.LootSlotType = {
 	Currency = 3,
 }
 
+---@enum Enum.LuaCurveType
+Enum.LuaCurveType = {
+	Linear = 0,
+	Step = 1,
+	Cosine = 2,
+	Cubic = 3,
+}
+
 ---@enum Enum.MajorFactionFeatureAbility
 Enum.MajorFactionFeatureAbility = {
 	Generic = 0,
@@ -4473,6 +5956,7 @@ Enum.MapCanvasPosition = {
 Enum.MapIconUIWidgetSetType = {
 	Tooltip = 0,
 	BehindIcon = 1,
+	AdventureMapDetails = 2,
 }
 
 ---@enum Enum.MapOverlayDisplayLocation
@@ -4489,6 +5973,12 @@ Enum.MapOverlayDisplayLocation = {
 Enum.MapPinAnimationType = {
 	None = 0,
 	Pulse = 1,
+}
+
+---@enum Enum.MapobjEventTypes
+Enum.MapobjEventTypes = {
+	PlayAnim = 0,
+	SetAnimSpeed = 1,
 }
 
 ---@enum Enum.MatchDetailType
@@ -4529,7 +6019,7 @@ Enum.MinimapTrackingFilter = {
 	POI = 0x2000,
 	Target = 0x4000,
 	Focus = 0x8000,
-	QuestPoIs = 0x10000,
+	QuestPOIs = 0x10000,
 	Digsites = 0x20000,
 	Barber = 0x40000,
 	ItemUpgrade = 0x80000,
@@ -4609,12 +6099,192 @@ Enum.MountTypeFlag = {
 	IsRideAlongMount = 0x8,
 }
 
+---@enum Enum.NamePlateCastBarDisplay
+Enum.NamePlateCastBarDisplay = {
+	None = 0,
+	SpellName = 1,
+	SpellIcon = 2,
+	SpellTarget = 3,
+	HighlightImportantCasts = 4,
+	HighlightWhenCastTarget = 5,
+}
+
+---@enum Enum.NamePlateEnemyNpcAuraDisplay
+Enum.NamePlateEnemyNpcAuraDisplay = {
+	None = 0,
+	Buffs = 1,
+	Debuffs = 2,
+	CrowdControl = 3,
+}
+
+---@enum Enum.NamePlateEnemyPlayerAuraDisplay
+Enum.NamePlateEnemyPlayerAuraDisplay = {
+	None = 0,
+	Buffs = 1,
+	Debuffs = 2,
+	LossOfControl = 3,
+}
+
+---@enum Enum.NamePlateFriendlyPlayerAuraDisplay
+Enum.NamePlateFriendlyPlayerAuraDisplay = {
+	None = 0,
+	Buffs = 1,
+	Debuffs = 2,
+	LossOfControl = 3,
+}
+
+---@enum Enum.NamePlateInfoDisplay
+Enum.NamePlateInfoDisplay = {
+	None = 0,
+	CurrentHealthPercent = 1,
+	CurrentHealthValue = 2,
+	RarityIcon = 3,
+}
+
+---@enum Enum.NamePlateSimplifiedType
+Enum.NamePlateSimplifiedType = {
+	None = 0,
+	Minion = 1,
+	MinusMob = 2,
+	FriendlyPlayer = 3,
+	FriendlyNpc = 4,
+}
+
+---@enum Enum.NamePlateSize
+Enum.NamePlateSize = {
+	Small = 1,
+	Medium = 2,
+	Large = 3,
+	ExtraLarge = 4,
+	Huge = 5,
+}
+
+---@enum Enum.NamePlateStackType
+Enum.NamePlateStackType = {
+	None = 0,
+	Enemy = 1,
+	Friendly = 2,
+}
+
+---@enum Enum.NamePlateStyle
+Enum.NamePlateStyle = {
+	Modern = 0,
+	Thin = 1,
+	Block = 2,
+	HealthFocus = 3,
+	CastFocus = 4,
+	Legacy = 5,
+}
+
+---@enum Enum.NamePlateThreatDisplay
+Enum.NamePlateThreatDisplay = {
+	None = 0,
+	Progressive = 1,
+	Flash = 2,
+	HealthBarColor = 3,
+}
+
+---@enum Enum.NamePlateType
+Enum.NamePlateType = {
+	Friendly = 0,
+	Enemy = 1,
+}
+
 ---@enum Enum.NavigationState
 Enum.NavigationState = {
 	Invalid = 0,
 	Occluded = 1,
 	InRange = 2,
 	Disabled = 3,
+}
+
+---@enum Enum.NeighborhoodFlags
+Enum.NeighborhoodFlags = {
+	None = 0,
+	PoolParent = 1,
+	OpenToPublic = 2,
+}
+
+---@enum Enum.NeighborhoodInitiativeChestResult
+Enum.NeighborhoodInitiativeChestResult = {
+	NiSuccess = 0,
+	NiUnspecifiedFailure = 1,
+	NiNoHouseFound = 2,
+	NiNoRewards = 3,
+	NiThrottled = 4,
+	NiServiceDisabled = 5,
+}
+
+---@enum Enum.NeighborhoodInitiativeFlags
+Enum.NeighborhoodInitiativeFlags = {
+	Disabled = 1,
+	NoAbandon = 2,
+	NoRepeat = 4,
+}
+
+---@enum Enum.NeighborhoodInitiativeNeighborhoodTypes
+Enum.NeighborhoodInitiativeNeighborhoodTypes = {
+	NiNeighborhoodTypeSingleton = 0,
+	NiNeighborhoodTypePool = 1,
+}
+
+---@enum Enum.NeighborhoodInitiativeTaskType
+Enum.NeighborhoodInitiativeTaskType = {
+	Single = 0,
+	RepeatableFinite = 1,
+	RepeatableInfinite = 2,
+}
+
+---@enum Enum.NeighborhoodInitiativeUpdateStatus
+Enum.NeighborhoodInitiativeUpdateStatus = {
+	Started = 0,
+	MilestoneCompleted = 1,
+	Completed = 2,
+	Failed = 3,
+}
+
+---@enum Enum.NeighborhoodInitiativesCompletionStates
+Enum.NeighborhoodInitiativesCompletionStates = {
+	NiCompletionStateNotCompleted = 0,
+	NiCompletionStatePlayerCompleted = 1,
+	NiCompletionStateSystemAbandoned = 2,
+}
+
+---@enum Enum.NeighborhoodInviteResult
+Enum.NeighborhoodInviteResult = {
+	Success = 0,
+	DbError = 1,
+	RpcFailure = 2,
+	GenericFailure = 3,
+	Permission = 4,
+	Faction = 5,
+	PendingInvitation = 6,
+	InviteLimit = 7,
+	NotEnoughPlots = 8,
+	NotFound = 9,
+	TooManyRequests = 10,
+}
+
+---@enum Enum.NeighborhoodMapFlags
+Enum.NeighborhoodMapFlags = {
+	None = 0,
+	AlliancePurchasable = 1,
+	HordePurchasable = 2,
+	CanSystemGenerate = 4,
+}
+
+---@enum Enum.NeighborhoodOwnerType
+Enum.NeighborhoodOwnerType = {
+	None = 0,
+	Guild = 1,
+	Charter = 2,
+}
+
+---@enum Enum.NeighborhoodType
+Enum.NeighborhoodType = {
+	Open = 0,
+	Private = 1,
+	Public = 2,
 }
 
 ---@enum Enum.NewCharGear
@@ -4651,12 +6321,13 @@ Enum.NodeOpFailureReason = {
 	TreeFlaggedNoRefund = 23,
 	NodeNeverPurchasable = 24,
 	AccountDataNoMatch = 25,
+	NotEnoughRanksInEntry = 26,
 }
 
 ---@enum Enum.NpcCraftingOrderSetFlags
 Enum.NpcCraftingOrderSetFlags = {
-	CraftingOrderFlagAllowMultiple = 1,
-	CraftingOrderFlagAllowDuplicate = 2,
+	AllowMultiple = 1,
+	AllowDuplicate = 2,
 }
 
 ---@enum Enum.PartyPlaylistEntry
@@ -4694,7 +6365,7 @@ Enum.PerksVendorCategoryType = {
 	Activity = 21,
 	GmAdjustment = 22,
 	Achievement = 23,
-	Refund = 24,
+	RefundUnused = 24,
 }
 
 ---@enum Enum.PermanentChatChannelType
@@ -5031,6 +6702,7 @@ Enum.PhaseReason = {
 	Sharding = 1,
 	WarMode = 2,
 	ChromieTime = 3,
+	TimerunningHwt = 4,
 }
 
 ---@enum Enum.PingMode
@@ -5093,6 +6765,11 @@ Enum.PlayerClubRequestStatus = {
 	Canceled = 7,
 }
 
+---@enum Enum.PlayerCompanionInfoFlags
+Enum.PlayerCompanionInfoFlags = {
+	IgnoreSeasonInScenarios = 1,
+}
+
 ---@enum Enum.PlayerCurrencyFlags
 Enum.PlayerCurrencyFlags = {
 	Incremented = 1,
@@ -5106,6 +6783,12 @@ Enum.PlayerCurrencyFlagsDbFlags = {
 	InBackpack = 0x4,
 	UnusedInUI = 0x8,
 	Reuse2 = 0x10,
+}
+
+---@enum Enum.PlayerDataElementType
+Enum.PlayerDataElementType = {
+	Int = 0,
+	Float = 1,
 }
 
 ---@enum Enum.PlayerInteractionType
@@ -5180,14 +6863,16 @@ Enum.PlayerInteractionType = {
 	CharacterBanker = 67,
 	AccountBanker = 68,
 	ProfessionRespec = 69,
-	PlaceholderType71 = 70,
-	PlaceholderType72 = 71,
-	PlaceholderType73 = 72,
-	PlaceholderType74 = 73,
-	PlaceholderType75 = 74,
-	PlaceholderType76 = 75,
+	CornerstoneInteraction = 70,
+	RenameNeighborhood = 71,
+	HousingBulletinBoard = 72,
+	HousingPedestal = 73,
+	CreateGuildNeighborhood = 74,
+	NeighborhoodCharter = 75,
 	GuildRename = 76,
-	PlaceholderType77 = 77,
+	OpenNeighborhoodCharterConfirmation = 77,
+	OpenHouseFinder = 78,
+	TieredEntrance = 79,
 }
 
 ---@enum Enum.PlayerMentorshipApplicationResult
@@ -5210,79 +6895,6 @@ Enum.PlunderstormQueueState = {
 	Queued = 1,
 	Proposed = 2,
 	Suspended = 3,
-}
-
----@enum Enum.PointsModifierSourceType
-Enum.PointsModifierSourceType = {
-	PlayerLevel = 0,
-	SkillRank = 1,
-	ProgressiveEventMissCount = 2,
-	ProgressiveEventItemWinCount = 3,
-	NumLooters = 4,
-	BaseItemLevel = 5,
-	LootLevel = 6,
-	InstanceGroupSize = 7,
-	QuestItemGroupMissCount = 8,
-	TreasureItemPvalue = 9,
-	FollowerLevelInBuilding = 10,
-	FollowerQualityInBuilding = 11,
-	NumGroupFriends = 12,
-	FollowerLevelForCurrentShipment = 13,
-	FollowerQualityForCurrentShipment = 14,
-	PvPBracketRatingSpecific = 15,
-	ChallengeModeLevel = 16,
-	CurrencyMaxDelta = 17,
-	WorldStateValue = 18,
-	PlayerKeystoneLevel = 19,
-	PlayerCondition = 20,
-	PassesTreasureTrackingQuestEligibility = 21,
-	PvPBracketRatingCurrentInstance = 22,
-	PvPTeamSize = 23,
-	ItemLevelHighWaterMarkAverage = 24,
-	ProgressiveEventNumWinsForLootSpec = 25,
-	ProgressiveEventNumRemainingForLootSpec = 26,
-	WorldStateExpression = 27,
-	ProgressiveEventNumRemainingForClass = 28,
-	CreatureClassification = 29,
-	HonorEarnedThisPvPMatch = 30,
-	NumTappers = 31,
-	PvPJackpotTier = 32,
-	PlayerLevelContentTuningMax = 33,
-	SalvagedItemIsCloth = 34,
-	SalvagedItemIsLeather = 35,
-	SalvagedItemIsMail = 36,
-	SalvagedItemIsPlate = 37,
-	SalvagedItemIsMisc = 38,
-	QuestExpansionID = 39,
-	Reserved_2 = 40,
-	JailersTowerActiveFloorDifficulty = 41,
-	NumLootSourceAuraStacks = 42,
-	HasLegendaryCloakUpdgradeAvailable = 43,
-	ObjectLevel = 44,
-	PercentThroughContentTuning = 45,
-	PvPTier = 46,
-	CurrencyQuantity = 47,
-	AreaGroup = 48,
-	ObjectLabelID = 49,
-	WeeklyMythicPlusCount = 50,
-	PercentThroughExpansion = 51,
-	AutoMissionScalar = 52,
-	RenownCatchup = 53,
-	RenownRapidCatchup = 54,
-	ParagonLevel = 55,
-	NumPlayersThatGainedDungeonScore = 56,
-	ProfessionQualityLevel = 57,
-	CraftSkill = 58,
-	NumWeeklyRewardsThresholdsEarned = 59,
-	SalvagedItemLevel = 60,
-	ProfessionRatingFinessePercent = 61,
-	ProfessionRatingPerceptionPercent = 62,
-	ProfessionTraitRanksByLabel = 63,
-	CreatureHealthMod = 64,
-	FirstTimeQuestCompletionRewards = 65,
-	PointsModifierSet = 66,
-	CurrencyMaxWeeklyDelta = 67,
-	RaidEncounterLevel = 68,
 }
 
 ---@enum Enum.PowerType
@@ -5345,6 +6957,27 @@ Enum.PremadeGroupFinderStyle = {
 	Disabled = 0,
 	Mainline = 1,
 	Vanilla = 2,
+}
+
+---@enum Enum.PreyHuntProgressState
+Enum.PreyHuntProgressState = {
+	Cold = 0,
+	Warm = 1,
+	Hot = 2,
+	Final = 3,
+}
+
+---@enum Enum.ProceduralSpawnInteractionMode
+Enum.ProceduralSpawnInteractionMode = {
+	None = 0,
+	Paint = 1,
+	Manipulate = 2,
+}
+
+---@enum Enum.ProceduralSpawnVolumeChunkFlags
+Enum.ProceduralSpawnVolumeChunkFlags = {
+	None = 0,
+	AllSubChunksSet = 1,
 }
 
 ---@enum Enum.ProfTraitPerkNodeFlags
@@ -5451,6 +7084,20 @@ Enum.ProfessionsSpecTabState = {
 	Locked = 0,
 	Unlocked = 1,
 	Unlockable = 2,
+}
+
+---@enum Enum.PurchaseHouseDisabledReason
+Enum.PurchaseHouseDisabledReason = {
+	None = 0,
+	WrongFaction = 1,
+	WrongGuild = 2,
+	NotInvited = 3,
+	NoExpansion = 4,
+	Reserved = 5,
+	GuildLockout = 6,
+	CharterLockout = 7,
+	MaxHouses = 8,
+	NoGameTimeRemaining = 9,
 }
 
 ---@enum Enum.PvPFaction
@@ -5659,6 +7306,7 @@ Enum.QuestTagType = {
 	DragonRiderRacing = 16,
 	Capstone = 17,
 	WorldBoss = 18,
+	Prey = 19,
 }
 
 ---@enum Enum.QuestTreasurePickerType
@@ -5708,6 +7356,20 @@ Enum.RafRewardType = {
 	Invalid = 7,
 }
 
+---@enum Enum.RaidAuraOrganizationType
+Enum.RaidAuraOrganizationType = {
+	Legacy = 0,
+	BuffsTopDebuffsBottom = 1,
+	BuffsRightDebuffsLeft = 2,
+}
+
+---@enum Enum.RaidDispelDisplayType
+Enum.RaidDispelDisplayType = {
+	Disabled = 0,
+	DispellableByMe = 1,
+	DisplayAll = 2,
+}
+
 ---@enum Enum.RaidGroupDisplayType
 Enum.RaidGroupDisplayType = {
 	SeparateGroupsVertical = 0,
@@ -5718,13 +7380,19 @@ Enum.RaidGroupDisplayType = {
 
 ---@enum Enum.RcoCloseReason
 Enum.RcoCloseReason = {
-	RcoCloseFulfill = 0,
-	RcoCloseExpire = 1,
-	RcoCloseCancel = 2,
-	RcoCloseReject = 3,
-	RcoCloseGmCancel = 4,
-	RcoCloseCrafterFulfill = 5,
-	RcoCloseInvalid = 6,
+	Fulfill = 0,
+	Expire = 1,
+	Cancel = 2,
+	Reject = 3,
+	GmCancel = 4,
+	CrafterFulfill = 5,
+	Invalid = 6,
+}
+
+---@enum Enum.RecentAllyPinResult
+Enum.RecentAllyPinResult = {
+	Success = 0,
+	ServerError = 1,
 }
 
 ---@enum Enum.RecipeRequirementType
@@ -5759,12 +7427,48 @@ Enum.RelativeContentDifficulty = {
 	Impossible = 4,
 }
 
+---@enum Enum.ReleaseType
+Enum.ReleaseType = {
+	Original = 1,
+	Classic = 2,
+}
+
+---@enum Enum.RenownRewardDisplayType
+Enum.RenownRewardDisplayType = {
+	None = 0,
+	Item = 1,
+	Spell = 2,
+	Mount = 3,
+	Transmog = 4,
+	TransmogSet = 5,
+	TransmogIllusion = 6,
+	Title = 7,
+	GarrFollower = 8,
+	Currency = 9,
+}
+
+---@enum Enum.RenownRewardsFlags
+Enum.RenownRewardsFlags = {
+	Milestone = 0x1,
+	Capstone = 0x2,
+	Hidden = 0x4,
+	AccountUnlock = 0x8,
+}
+
+---@enum Enum.ReportEvidenceType
+Enum.ReportEvidenceType = {
+	Invalid = 0,
+	HouseScreenshot = 1,
+	HouseLayoutJson = 2,
+}
+
 ---@enum Enum.ReportMajorCategory
 Enum.ReportMajorCategory = {
 	InappropriateCommunication = 0,
 	GameplaySabotage = 1,
 	Cheating = 2,
 	InappropriateName = 3,
+	InappropriateDecor = 4,
 }
 
 ---@enum Enum.ReportMinorCategory
@@ -5788,12 +7492,20 @@ Enum.ReportMinorCategory = {
 	Disruption = 0x10000,
 	TerroristAndViolentExtremistContent = 0x20000,
 	ChildSexualExploitationAndAbuse = 0x40000,
+	NeighborhoodName = 0x80000,
 }
 
 ---@enum Enum.ReportSubComplaintTypes
 Enum.ReportSubComplaintTypes = {
 	Inappropriate = 0,
 	Advertising = 1,
+}
+
+---@enum Enum.ReportThrottleType
+Enum.ReportThrottleType = {
+	Invalid = 0,
+	General = 1,
+	Expensive = 2,
 }
 
 ---@enum Enum.ReportType
@@ -5815,6 +7527,10 @@ Enum.ReportType = {
 	PvPScoreboard = 14,
 	PvPGroupMember = 15,
 	CraftingOrder = 16,
+	RecentAlly = 17,
+	HousingDecor = 18,
+	Neighborhood = 19,
+	NeighborhoodRoster = 20,
 }
 
 ---@enum Enum.ReputationSortType
@@ -5824,12 +7540,86 @@ Enum.ReputationSortType = {
 	Character = 2,
 }
 
+---@enum Enum.ReservationFlags
+Enum.ReservationFlags = {
+	None = 0,
+	Relinquish = 1,
+	Canceled = 2,
+	Plotless = 4,
+}
+
+---@enum Enum.ResidentType
+Enum.ResidentType = {
+	Resident = 0,
+	Manager = 1,
+	Owner = 2,
+}
+
 ---@enum Enum.RestrictPingsTo
 Enum.RestrictPingsTo = {
 	None = 0,
 	Lead = 1,
 	Assist = 2,
 	TankHealer = 3,
+}
+
+---@enum Enum.RetroactiveDecorRewardFlags
+Enum.RetroactiveDecorRewardFlags = {
+	None = 0,
+	AllCriteriaRequired = 1,
+}
+
+---@enum Enum.RolodexContextIDType
+Enum.RolodexContextIDType = {
+	None = 0,
+	ItemID = 1,
+	AreaID = 2,
+	MapID = 3,
+}
+
+---@enum Enum.RolodexContextLevelType
+Enum.RolodexContextLevelType = {
+	None = 0,
+	Difficulty = 1,
+	KeystoneLevel = 2,
+	DelveTier = 3,
+}
+
+---@enum Enum.RolodexType
+Enum.RolodexType = {
+	None = 0,
+	PartyMember = 1,
+	RaidMember = 2,
+	Trade = 3,
+	Whisper = 4,
+	PublicOrderFilledByOther = 5,
+	PublicOrderFilledByYou = 6,
+	PersonalOrderFilledByOther = 7,
+	PersonalOrderFilledByYou = 8,
+	GuildOrderFilledByOther = 9,
+	GuildOrderFilledByYou = 10,
+	CreatureKill = 11,
+	CompleteDungeon = 12,
+	KillRaidBoss = 13,
+	KillLfrBoss = 14,
+	CompleteDelve = 15,
+	CompleteArena = 16,
+	CompleteBg = 17,
+	Duel = 18,
+	PetBattle = 19,
+	PvPKill = 20,
+}
+
+---@enum Enum.RolodexTypeFlags
+Enum.RolodexTypeFlags = {
+	None = 0,
+	HiddenFromHistory = 1,
+}
+
+---@enum Enum.RoomConnectionType
+Enum.RoomConnectionType = {
+	None = 0,
+	All = 1,
 }
 
 ---@enum Enum.RuneforgePowerFilter
@@ -5861,6 +7651,13 @@ Enum.ScreenLocationType = {
 	LeftRight = 9,
 	TopBottom = 10,
 	LeftRightOutside = 11,
+}
+
+---@enum Enum.ScreenshotSource
+Enum.ScreenshotSource = {
+	Automatic = 0,
+	PlayerReport = 1,
+	Cheat = 2,
 }
 
 ---@enum Enum.ScriptedAnimationBehavior
@@ -5907,6 +7704,41 @@ Enum.SeasonID = {
 	FreshHardcore = 12,
 }
 
+---@enum Enum.SecrecyLevel
+Enum.SecrecyLevel = {
+	NeverSecret = 0,
+	AlwaysSecret = 1,
+	ContextuallySecret = 2,
+}
+
+---@enum Enum.SecretAspect
+Enum.SecretAspect = {
+	Hierarchy = 0x1,
+	ObjectDebug = 0x1,
+	ObjectName = 0x1,
+	ObjectSecrets = 0x1,
+	ObjectSecurity = 0x1,
+	ObjectType = 0x1,
+	ID = 0x2,
+	Toplevel = 0x4,
+	Text = 0x8,
+	SecureText = 0x10,
+	Shown = 0x20,
+	Scale = 0x40,
+	Alpha = 0x80,
+	FrameLevel = 0x100,
+	ScrollRange = 0x200,
+	Cursor = 0x400,
+	VertexColor = 0x800,
+	Desaturation = 0x1000,
+	TexCoords = 0x2000,
+	BarValue = 0x4000,
+	Cooldown = 0x8000,
+	Rotation = 0x10000,
+	MinimumWidth = 0x20000,
+	Padding = 0x40000,
+}
+
 ---@enum Enum.SelfResurrectOptionType
 Enum.SelfResurrectOptionType = {
 	Spell = 0,
@@ -5926,6 +7758,8 @@ Enum.SendAddonMessageResult = {
 	ChannelThrottle = 8,
 	GeneralError = 9,
 	NotInGuild = 10,
+	AddOnMessageLockdown = 11,
+	TargetOffline = 12,
 }
 
 ---@enum Enum.SendReportResult
@@ -5935,11 +7769,23 @@ Enum.SendReportResult = {
 	TooManyReports = 2,
 	RequiresChatLine = 3,
 	RequiresChatLineOrVoice = 4,
+	RequiresScreenshot = 5,
 }
 
 ---@enum Enum.SharedStringFlag
 Enum.SharedStringFlag = {
 	InternalOnly = 1,
+}
+
+---@enum Enum.ShutdownSessionReason
+Enum.ShutdownSessionReason = {
+	SessionEnded = 0,
+	RestartSessionCommand = 1,
+	ForceLogoutCommand = 2,
+	RealmSelectCommand = 3,
+	AccountLoginCommand = 4,
+	LuaScript = 5,
+	Error = 6,
 }
 
 ---@enum Enum.Siflag
@@ -5964,6 +7810,15 @@ Enum.Siflag = {
 	Onlyplayunderwater = 0x10000,
 }
 
+---@enum Enum.SimpleOrderStatus
+Enum.SimpleOrderStatus = {
+	Invalid = 0,
+	Creating = 1,
+	InProgress = 2,
+	Success = 3,
+	Failed = 4,
+}
+
 ---@enum Enum.SkinningState
 Enum.SkinningState = {
 	None = 0,
@@ -5971,6 +7826,15 @@ Enum.SkinningState = {
 	Skinning = 2,
 	Looting = 3,
 	Skinned = 4,
+}
+
+---@enum Enum.SleevesGeoRange
+Enum.SleevesGeoRange = {
+	None = 0,
+	Default = 1,
+	Flared = 2,
+	Puffy = 3,
+	PandaCollar = 4,
 }
 
 ---@enum Enum.SlotRegion
@@ -6065,6 +7929,13 @@ Enum.SpecializationSystem = {
 	ChrSpecialization = 1,
 }
 
+---@enum Enum.SpellAuraVisibilityType
+Enum.SpellAuraVisibilityType = {
+	RaidInCombat = 0,
+	RaidOutOfCombat = 1,
+	EnemyTarget = 2,
+}
+
 ---@enum Enum.SpellBookItemType
 Enum.SpellBookItemType = {
 	None = 0,
@@ -6086,6 +7957,25 @@ Enum.SpellBookSkillLineIndex = {
 Enum.SpellBookSpellBank = {
 	Player = 0,
 	Pet = 1,
+}
+
+---@enum Enum.SpellDiminishCategory
+Enum.SpellDiminishCategory = {
+	Root = 0,
+	Taunt = 1,
+	Stun = 2,
+	AoEKnockback = 3,
+	Incapacitate = 4,
+	Disorient = 5,
+	Silence = 6,
+	Disarm = 7,
+}
+
+---@enum Enum.SpellDiminishRuleset
+Enum.SpellDiminishRuleset = {
+	None = 0,
+	PvE = 1,
+	PvP = 2,
 }
 
 ---@enum Enum.SpellDisplayBorderColor
@@ -6169,12 +8059,32 @@ Enum.StatusBarColorTintValue = {
 	Blue = 8,
 }
 
+---@enum Enum.StatusBarFillStyle
+Enum.StatusBarFillStyle = {
+	Standard = 0,
+	StandardNoRangeFill = 1,
+	Center = 2,
+	Reverse = 3,
+}
+
+---@enum Enum.StatusBarInterpolation
+Enum.StatusBarInterpolation = {
+	Immediate = 0,
+	ExponentialEaseOut = 1,
+}
+
 ---@enum Enum.StatusBarOverrideBarTextShownType
 Enum.StatusBarOverrideBarTextShownType = {
 	Never = 0,
 	Always = 1,
 	OnlyOnMouseover = 2,
 	OnlyNotOnMouseover = 3,
+}
+
+---@enum Enum.StatusBarTimerDirection
+Enum.StatusBarTimerDirection = {
+	ElapsedTime = 0,
+	RemainingTime = 1,
 }
 
 ---@enum Enum.StatusBarValueTextType
@@ -6246,6 +8156,12 @@ Enum.SubscriptionInterstitialType = {
 	MaxLevel = 2,
 }
 
+---@enum Enum.SummonReason
+Enum.SummonReason = {
+	Spell = 0,
+	Scenario = 1,
+}
+
 ---@enum Enum.SummonStatus
 Enum.SummonStatus = {
 	None = 0,
@@ -6260,6 +8176,7 @@ Enum.SuperTrackingMapPinType = {
 	QuestOffer = 1,
 	TaxiNode = 2,
 	DigSite = 3,
+	HousingPlot = 4,
 }
 
 ---@enum Enum.SuperTrackingType
@@ -6272,6 +8189,22 @@ Enum.SuperTrackingType = {
 	PartyMember = 5,
 	MapPin = 6,
 	Vignette = 7,
+}
+
+---@enum Enum.SurveyDeliveryMoment
+Enum.SurveyDeliveryMoment = {
+	Login = 0,
+	ProfessionTable = 1,
+	QuestTurnIn = 2,
+	ChestLooted = 3,
+	MythicPlusCompleted = 4,
+}
+
+---@enum Enum.TableSecurityOption
+Enum.TableSecurityOption = {
+	DisallowTaintedAccess = 0,
+	DisallowSecretKeys = 1,
+	SecretWrapContents = 2,
 }
 
 ---@enum Enum.TimeEventFlag
@@ -6356,6 +8289,8 @@ Enum.TooltipDataLineType = {
 	GemSocketEnchantment = 40,
 	ItemLevel = 41,
 	ItemUpgradeLevel = 42,
+	SpellPassive = 43,
+	SpellDescription = 44,
 }
 
 ---@enum Enum.TooltipDataType
@@ -6387,6 +8322,7 @@ Enum.TooltipDataType = {
 	QuestPartyProgress = 24,
 	Macro = 25,
 	Debug = 26,
+	Outfit = 27,
 }
 
 ---@enum Enum.TooltipSide
@@ -6450,8 +8386,7 @@ Enum.TradeskillRecipeType = {
 	Item = 1,
 	Salvage = 2,
 	Enchant = 3,
-	Recraft = 4,
-	Gathering = 5,
+	Gathering = 4,
 }
 
 ---@enum Enum.TradeskillRelativeDifficulty
@@ -6490,6 +8425,7 @@ Enum.TraitConditionType = {
 	Granted = 2,
 	Increased = 3,
 	DisplayError = 4,
+	RanksAllowed = 5,
 }
 
 ---@enum Enum.TraitConfigDbState
@@ -6521,6 +8457,7 @@ Enum.TraitCurrencyType = {
 	Gold = 0,
 	CurrencyTypesBased = 1,
 	TraitSourced = 2,
+	TraitSourcedPlayerDataElement = 3,
 }
 
 ---@enum Enum.TraitDefinitionSubType
@@ -6560,6 +8497,11 @@ Enum.TraitNodeEntryType = {
 	ProfPath = 7,
 	ProfPerk = 8,
 	ProfPathUnlock = 9,
+	RedButton = 10,
+	ArmorSet = 11,
+	SpendInfinite = 12,
+	SpendCapstoneCircle = 13,
+	SpendCapstoneSquare = 14,
 }
 
 ---@enum Enum.TraitNodeFlag
@@ -6568,6 +8510,11 @@ Enum.TraitNodeFlag = {
 	NeverPurchasable = 0x2,
 	TestPositionLocked = 0x4,
 	TestGridPositioned = 0x8,
+	ActiveAtFirstRank = 0x10,
+	ShowExpandedSelection = 0x20,
+	HideMaxRank = 0x40,
+	HighestChosenRank = 0x80,
+	ShowTierTrack = 0x100,
 }
 
 ---@enum Enum.TraitNodeGroupFlag
@@ -6592,15 +8539,64 @@ Enum.TraitPointsOperationType = {
 
 ---@enum Enum.TraitSystemFlag
 Enum.TraitSystemFlag = {
-	AllowMultipleLoadoutsPerTree = 1,
-	ShowSpendConfirmation = 2,
-	AllowEditInCombat = 4,
+	AllowMultipleLoadoutsPerTree = 0x1,
+	ShowSpendConfirmation = 0x2,
+	AllowEditInCombat = 0x4,
+	AllowEditInChallengeMode = 0x8,
+}
+
+---@enum Enum.TraitSystemVariationType
+Enum.TraitSystemVariationType = {
+	None = 0,
+	Spec = 1,
 }
 
 ---@enum Enum.TraitTreeFlag
 Enum.TraitTreeFlag = {
 	CannotRefund = 1,
 	HideSingleRankNumbers = 2,
+}
+
+---@enum Enum.TransformManipulatorAxis
+Enum.TransformManipulatorAxis = {
+	X = 1,
+	Y = 2,
+	Z = 4,
+}
+
+---@enum Enum.TransformManipulatorControlState
+Enum.TransformManipulatorControlState = {
+	Default = 0,
+	Hidden = 1,
+	Dimmed = 2,
+	ExternallyHighlighted = 3,
+	Hovered = 4,
+	Selected = 5,
+	Moving = 6,
+}
+
+---@enum Enum.TransformManipulatorDirection
+Enum.TransformManipulatorDirection = {
+	Positive = 0,
+	Negative = 1,
+}
+
+---@enum Enum.TransformManipulatorEvent
+Enum.TransformManipulatorEvent = {
+	Start = 0,
+	Change = 1,
+	Complete = 2,
+	Cancel = 3,
+	Hover = 4,
+	MouseDown = 5,
+	MouseUp = 6,
+}
+
+---@enum Enum.TransformManipulatorMode
+Enum.TransformManipulatorMode = {
+	Translate = 0,
+	Rotate = 1,
+	Scale = 2,
 }
 
 ---@enum Enum.TransmogCameraVariation
@@ -6656,6 +8652,165 @@ Enum.TransmogModification = {
 	Secondary = 1,
 }
 
+---@enum Enum.TransmogOutfitDataFlags
+Enum.TransmogOutfitDataFlags = {
+	IsCachedLocally = 1,
+}
+
+---@enum Enum.TransmogOutfitDisplayType
+Enum.TransmogOutfitDisplayType = {
+	Unassigned = 0,
+	Assigned = 1,
+	Equipped = 2,
+	Hidden = 3,
+}
+
+---@enum Enum.TransmogOutfitEntryFlags
+Enum.TransmogOutfitEntryFlags = {
+	AutomaticallyAwardedOnLogin = 0x1,
+	UseOverrideName = 0x2,
+	OnlyAvailableDuringEvent = 0x4,
+	SortedToTopOfList = 0x8,
+	UseOverrideCostModifier = 0x10,
+}
+
+---@enum Enum.TransmogOutfitEntrySource
+Enum.TransmogOutfitEntrySource = {
+	StampedSource = 0,
+	AutomaticallyAwarded = 1,
+	PlayerPurchased = 2,
+}
+
+---@enum Enum.TransmogOutfitEquipAction
+Enum.TransmogOutfitEquipAction = {
+	Equip = 0,
+	EquipAndLock = 1,
+	Remove = 2,
+	RemoveAndLock = 3,
+	Unlock = 4,
+	Lock = 5,
+}
+
+---@enum Enum.TransmogOutfitSetType
+Enum.TransmogOutfitSetType = {
+	Equipped = 0,
+	Outfit = 1,
+	CustomSet = 2,
+}
+
+---@enum Enum.TransmogOutfitSlot
+Enum.TransmogOutfitSlot = {
+	Head = 0,
+	ShoulderRight = 1,
+	ShoulderLeft = 2,
+	Back = 3,
+	Chest = 4,
+	Tabard = 5,
+	Body = 6,
+	Wrist = 7,
+	Hand = 8,
+	Waist = 9,
+	Legs = 10,
+	Feet = 11,
+	WeaponMainHand = 12,
+	WeaponOffHand = 13,
+	WeaponRanged = 14,
+}
+
+---@enum Enum.TransmogOutfitSlotError
+Enum.TransmogOutfitSlotError = {
+	Ok = 0,
+	NoItem = 1,
+	NotSoulbound = 2,
+	Legendary = 3,
+	InvalidItemType = 4,
+	InvalidDestination = 5,
+	Mismatch = 6,
+	SameItem = 7,
+	InvalidSource = 8,
+	InvalidSourceQuality = 9,
+	CannotUseItem = 10,
+	InvalidSlotForRace = 11,
+	NoIllusion = 12,
+	InvalidSlotForForm = 13,
+	IncompatibleWithMainHand = 14,
+}
+
+---@enum Enum.TransmogOutfitSlotFlags
+Enum.TransmogOutfitSlotFlags = {
+	CannotBeHidden = 1,
+	CanHaveIllusions = 2,
+	IsSecondarySlot = 4,
+}
+
+---@enum Enum.TransmogOutfitSlotOption
+Enum.TransmogOutfitSlotOption = {
+	None = 0,
+	OneHandedWeapon = 1,
+	TwoHandedWeapon = 2,
+	RangedWeapon = 3,
+	OffHand = 4,
+	Shield = 5,
+	DeprecatedReuseMe = 6,
+	FuryTwoHandedWeapon = 7,
+	ArtifactSpecOne = 8,
+	ArtifactSpecTwo = 9,
+	ArtifactSpecThree = 10,
+	ArtifactSpecFour = 11,
+}
+
+---@enum Enum.TransmogOutfitSlotOptionFlags
+Enum.TransmogOutfitSlotOptionFlags = {
+	IllusionNotAllowed = 1,
+	DynamicOptionName = 2,
+	DisablesOffhandSlot = 4,
+}
+
+---@enum Enum.TransmogOutfitSlotPosition
+Enum.TransmogOutfitSlotPosition = {
+	Left = 0,
+	Right = 1,
+	Bottom = 2,
+}
+
+---@enum Enum.TransmogOutfitSlotSaveFlags
+Enum.TransmogOutfitSlotSaveFlags = {
+	AppearanceIsNotValid = 1,
+}
+
+---@enum Enum.TransmogOutfitSlotWarning
+Enum.TransmogOutfitSlotWarning = {
+	Ok = 0,
+	InvalidEquippedDestinationItem = 1,
+	WrongWeaponCategoryEquipped = 2,
+	PendingWeaponChanges = 3,
+	WeaponDoesNotSupportIllusions = 4,
+	NothingEquipped = 5,
+}
+
+---@enum Enum.TransmogOutfitTransactionFlags
+Enum.TransmogOutfitTransactionFlags = {
+	UpdateMetadata = 0x1,
+	UpdateOutfitInfo = 0x2,
+	CreateOutfitInfo = 0x4,
+	CreateAndUpdateOutfitInfoMask = 0x6,
+	UpdateSlots = 0x8,
+	UpdateSituations = 0x10,
+	UpdateSituationsMask = 0x12,
+	AddNewOutfitMask = 0x14,
+	FullOutfitUpdateMask = 0x1B,
+	AddOutfitAndUpdateSlots = 0x1C,
+}
+
+---@enum Enum.TransmogOutfitTransactionType
+Enum.TransmogOutfitTransactionType = {
+	UpdateMetadata = 0,
+	UpdateOutfitInfo = 1,
+	CreateOutfitInfo = 2,
+	UpdateSlots = 3,
+	UpdateSituations = 4,
+}
+
 ---@enum Enum.TransmogPendingType
 Enum.TransmogPendingType = {
 	Apply = 0,
@@ -6669,6 +8824,78 @@ Enum.TransmogSearchType = {
 	Items = 1,
 	BaseSets = 2,
 	UsableSets = 3,
+}
+
+---@enum Enum.TransmogSituation
+Enum.TransmogSituation = {
+	AllSpecs = 0,
+	Spec = 1,
+	AllLocations = 2,
+	LocationRested = 3,
+	LocationHouse = 4,
+	LocationCharacterSelect = 5,
+	LocationWorld = 6,
+	LocationDelves = 7,
+	LocationDungeons = 8,
+	LocationRaids = 9,
+	LocationArenas = 10,
+	LocationBattlegrounds = 11,
+	AllMovement = 12,
+	MovementUnmounted = 13,
+	MovementSwimming = 14,
+	MovementGroundMount = 15,
+	MovementFlyingMount = 16,
+	AllEquipmentSets = 17,
+	EquipmentSets = 18,
+	AllRacialForms = 19,
+	FormNative = 20,
+	FormNonNative = 21,
+}
+
+---@enum Enum.TransmogSituationFlags
+Enum.TransmogSituationFlags = {
+	IsPlayerFacing = 0x1,
+	SpecUseTalentLoadout = 0x2,
+	AllSituation = 0x4,
+	DefaultsToOn = 0x8,
+	DynamicallyNamed = 0x10,
+	NoneSituation = 0x20,
+	DisabledSituation = 0x40,
+}
+
+---@enum Enum.TransmogSituationGroupFlags
+Enum.TransmogSituationGroupFlags = {
+	DynamicallyCreatesGroups = 1,
+}
+
+---@enum Enum.TransmogSituationTrigger
+Enum.TransmogSituationTrigger = {
+	None = 0,
+	Manual = 1,
+	TransmogUpdate = 2,
+	Location = 3,
+	Movement = 4,
+	Specialization = 5,
+	EquipmentSet = 6,
+	Forms = 7,
+	EventOutfit = 8,
+}
+
+---@enum Enum.TransmogSituationTriggerFlags
+Enum.TransmogSituationTriggerFlags = {
+	CanLockOutfit = 0x1,
+	CanChangeLockedOutfit = 0x2,
+	IsPlayerFacing = 0x4,
+	SituationsAreExclusive = 0x8,
+	DisabledTrigger = 0x10,
+}
+
+---@enum Enum.TransmogSituationTriggerType
+Enum.TransmogSituationTriggerType = {
+	None = 0,
+	Manual = 1,
+	Automatic = 2,
+	TransmogUpdate = 3,
 }
 
 ---@enum Enum.TransmogSlot
@@ -6752,10 +8979,23 @@ Enum.TugOfWarStyleValue = {
 	ArchaeologyBrown = 1,
 }
 
+---@enum Enum.TurnStrafeStyle
+Enum.TurnStrafeStyle = {
+	Modern = 0,
+	Legacy = 1,
+	Custom = 2,
+}
+
 ---@enum Enum.UIActionType
 Enum.UIActionType = {
 	DefaultAction = 0,
 	UpdateMapSystem = 1,
+}
+
+---@enum Enum.UICovenantDisplayInfoFlags
+Enum.UICovenantDisplayInfoFlags = {
+	DisplayCovenantAsJourney = 1,
+	UseJourneyRewardTrack = 2,
 }
 
 ---@enum Enum.UICursorType
@@ -6781,11 +9021,13 @@ Enum.UICursorType = {
 	Toy = 18,
 	ConduitCollectionItem = 19,
 	PerksProgramVendorItem = 20,
+	Outfit = 21,
 }
 
 ---@enum Enum.UIFrameType
 Enum.UIFrameType = {
 	JailersTowerBuffs = 0,
+	InterruptTutorial = 1,
 }
 
 ---@enum Enum.UIItemInteractionFlags
@@ -6873,9 +9115,10 @@ Enum.UIModelSceneContext = {
 
 ---@enum Enum.UIModelSceneFlags
 Enum.UIModelSceneFlags = {
-	SheatheWeapon = 1,
-	HideWeapon = 2,
-	Autodress = 4,
+	SheatheWeapon = 0x1,
+	HideWeapon = 0x2,
+	Autodress = 0x4,
+	NoCameraSpin = 0x8,
 }
 
 ---@enum Enum.UISystemType
@@ -7081,6 +9324,49 @@ Enum.UIWidgetVisualizationType = {
 	TugOfWar = 28,
 	ScenarioHeaderDelves = 29,
 	ButtonHeader = 30,
+	PreyHuntProgress = 31,
+}
+
+---@enum Enum.UnitAuraSortDirection
+Enum.UnitAuraSortDirection = {
+	Normal = 0,
+	Reverse = 1,
+}
+
+---@enum Enum.UnitAuraSortRule
+Enum.UnitAuraSortRule = {
+	Unsorted = 0,
+	Default = 1,
+	BigDefensive = 2,
+	Expiration = 3,
+	ExpirationOnly = 4,
+	Name = 5,
+	NameOnly = 6,
+}
+
+---@enum Enum.UnitDamageAbsorbClampMode
+Enum.UnitDamageAbsorbClampMode = {
+	MissingHealth = 0,
+	MissingHealthWithoutIncomingHeals = 1,
+	MaximumHealth = 2,
+}
+
+---@enum Enum.UnitHealAbsorbClampMode
+Enum.UnitHealAbsorbClampMode = {
+	CurrentHealth = 0,
+	MaximumHealth = 1,
+}
+
+---@enum Enum.UnitHealAbsorbMode
+Enum.UnitHealAbsorbMode = {
+	ReducedByIncomingHeals = 0,
+	Total = 1,
+}
+
+---@enum Enum.UnitIncomingHealClampMode
+Enum.UnitIncomingHealClampMode = {
+	MissingHealth = 0,
+	MaximumHealth = 1,
 }
 
 ---@enum Enum.UnitMirrorPetFlags
@@ -7271,17 +9557,6 @@ Enum.VoiceChatStatusCode = {
 	InvalidOutputDevice = 24,
 }
 
----@enum Enum.VoiceTtsDestination
-Enum.VoiceTtsDestination = {
-	RemoteTransmission = 0,
-	LocalPlayback = 1,
-	RemoteTransmissionWithLocalPlayback = 2,
-	QueuedRemoteTransmission = 3,
-	QueuedLocalPlayback = 4,
-	QueuedRemoteTransmissionWithLocalPlayback = 5,
-	ScreenReader = 6,
-}
-
 ---@enum Enum.VoiceTtsStatusCode
 Enum.VoiceTtsStatusCode = {
 	Success = 0,
@@ -7468,6 +9743,13 @@ Enum.WorldCursorAnchorType = {
 	Nameplate = 3,
 }
 
+---@enum Enum.WorldElapsedTimerTypes
+Enum.WorldElapsedTimerTypes = {
+	None = 0,
+	ChallengeMode = 1,
+	ProvingGround = 2,
+}
+
 ---@enum Enum.WorldQuestQuality
 Enum.WorldQuestQuality = {
 	Common = 0,
@@ -7520,10 +9802,46 @@ Enum.ZoneControlState = {
 Constants = {
 	AccountStoreConsts = {
 		PlunderstormStoreFrontID = 1,
+		WowhackStoreFrontID = 3,
+		KegLegRenownCurrencyID = 2814,
 		PlunderstormPlunderCurrencyID = 3139,
 	},
 	AuctionConstants = {
 		DEFAULT_AUCTION_PRICE_MULTIPLIER = 1.5,
+	},
+	CAAConstants = {
+		CAAFrequencyMin = -10,
+		CAAFrequencyDefault = 0,
+		CAAInterruptCastDefault = 0,
+		CAAInterruptCastSuccessDefault = 0,
+		CAAMinCastTimeMin = 0,
+		CAAPartyHealthPercentDefault = 0,
+		CAAPlayerCastModeDefault = 0,
+		CAAPlayerHealthPercentDefault = 0,
+		CAAPlayerResourcePercentDefault = 0,
+		CAATargetCastFormatDefault = 0,
+		CAATargetCastModeDefault = 0,
+		CAAEnabledDefault = false,
+		CAATargetDeathBehaviorDefault = 0,
+		CAAThrottleDefault = 0,
+		CAAThrottleMin = 0,
+		CAAVoiceDefault = 0,
+		CAATargetNameDefault = true,
+		CAAMinCastTimeStep = 0.5,
+		CAAThrottleStep = 0.5,
+		CAAPlayerHealthFormatDefault = 1,
+		CAAPlayerResourceFormatDefault = 1,
+		CAASampleTextThrottleTime = 1,
+		CAASayIfTargetedDefault = 1,
+		CAAMinCastTimeDefault = 1.5,
+		CAATargetHealthPercentDefault = 2,
+		CAATargetHealthFormatDefault = 3,
+		CAAPlayerCastFormatDefault = 4,
+		CAAMinCastTimeMax = 5,
+		CAAThrottleMax = 5,
+		CAAFrequencyMax = 10,
+		CAASayCombatEndDefault = true,
+		CAASayCombatStartDefault = true,
 	},
 	CalendarGetEventTypeConstants = {
 		DEFAULT_CALENDAR_GET_EVENT_TYPE = 0,
@@ -7531,11 +9849,35 @@ Constants = {
 	Callings = {
 		MaxCallings = 3,
 	},
+	CatalogShopVirtualCurrencyConstants = {
+		HEARTHSTEEL_VC_CURRENCY_CODE = XVV,
+		TRADERS_TENDER_VC_CURRENCY_CODE = XWP,
+	},
 	CharCustomizationConstants = {
 		NUM_CUSTOM_DISPLAY = 4,
 		CHAR_CUSTOMIZE_CUSTOM_DISPLAY_OPTION_FIRST = 5,
 		CHAR_CUSTOMIZE_CUSTOM_DISPLAY_OPTION_LAST = 8,
 		NAME_RESERVATION_DAYS = 30,
+	},
+	ChatFrameConstants = {
+		MaxChatWindows = 10,
+		MaxChatChannels = 20,
+		MaxCharacterNameBytes = 305,
+	},
+	CombatLogMessageLimits = {
+		CombatLogDefaultMessageLimit = 300,
+		CombatLogMaximumMessageLimit = 1000,
+	},
+	CombatLogObjectMasks = {
+		COMBATLOG_OBJECT_SPECIAL_MASK = -65536,
+		COMBATLOG_OBJECT_AFFILIATION_MASK = 15,
+		COMBATLOG_OBJECT_REACTION_MASK = 240,
+		COMBATLOG_OBJECT_CONTROL_MASK = 768,
+		COMBATLOG_OBJECT_TYPE_MASK = 64512,
+	},
+	CombatLogObjectTargetMasks = {
+		COMBATLOG_OBJECT_RAID_MASK = -1,
+		COMBATLOG_OBJECT_RAID_TARGET_MASK = 255,
 	},
 	ContentTrackingConsts = {
 		MaxTrackedAchievements = 10,
@@ -7550,6 +9892,7 @@ Constants = {
 		MAX_CRAFTING_ORDER_FAVORITE_RECIPES = 100,
 	},
 	CurrencyConsts = {
+		CURRENCY_WALLET_TYPE_WOWMONEY = 0,
 		HONOR_PER_CURRENCY = 10,
 		PLAYER_CURRENCY_CLIENT_FLAGS = 12,
 		CLASSIC_CONQUEST_CURRENCY_ID = 390,
@@ -7596,15 +9939,39 @@ Constants = {
 		EditModeDefaultGridSpacing = 100,
 		EditModeMaxGridSpacing = 300,
 	},
+	EditModeLayoutConsts = {
+		EditModeDefaultLayout = 0,
+	},
 	EncodingLimits = {
 		EncodingStackSizeLimit = 100,
 		EncodingDecompressSizeLimit = 104857600,
+	},
+	EncounterTimelineEventConstants = {
+		ENCOUNTER_TIMELINE_INVALID_EVENT = 0,
+		ENCOUNTER_TIMELINE_RESERVED_EVENT_COUNT = 40,
+	},
+	EncounterTimelineIconMasks = {
+		EncounterTimelineNoIcons = 0,
+		EncounterTimelineDeadlyIcons = 1,
+		EncounterTimelineEnrageIcons = 2,
+		EncounterTimelineDispelIcons = 124,
+		EncounterTimelineOtherIcons = 127,
+		EncounterTimelineTankAlertIcons = 128,
+		EncounterTimelineHealerAlertIcons = 256,
+		EncounterTimelineDamageAlertIcons = 512,
+		EncounterTimelineRoleIcons = 896,
+		EncounterTimelineAllIcons = 1023,
 	},
 	EventScheduler = {
 		SCHEDULED_EVENT_REMINDER_DEAD_SECONDS = 10,
 		SCHEDULED_EVENT_FUTURE_LIMIT = 12,
 		SCHEDULED_EVENT_REMINDER_WARNING_SECONDS = 300,
 		SCHEDULED_EVENT_PAST_LIMIT_SECONDS = 3600,
+	},
+	HousingCatalogConsts = {
+		HOUSING_CATALOG_FEATURED_CATEGORY_ID = 17,
+		HOUSING_CATALOG_ALL_CATEGORY_ID = 18,
+		HOUSING_CATALOG_DECOR_MODELSCENEID_DEFAULT = 1317,
 	},
 	ITEM_WEAPON_SUBCLASSConstants = {
 		ITEM_WEAPON_SUBCLASS_NONE = -1,
@@ -7624,7 +9991,7 @@ Constants = {
 		NUM_ITEM_ENCHANTMENT_SOCKETS = 3,
 		DEFAULT_RETENTION = 7,
 		MAX_LOOT_OBJECT_ITEMS = 31,
-		INVALID_TRANSACTION_BANK_TAB_SLOT = 255,
+		INVALID_BANK_TAB_SLOT = 255,
 	},
 	LFGConstsExposed = {
 		GROUP_FINDER_MAX_ACTIVITY_CAPACITY = 16,
@@ -7652,6 +10019,9 @@ Constants = {
 		TRAIT_SYSTEM_ID = 1,
 		TREE_ID = 672,
 	},
+	PartyCountdownConstants = {
+		MaxCountdownSeconds = 3600,
+	},
 	PetConsts = {
 		PETNUMBER_INVALIDSLOT = -1,
 		PETNUMBER_PENDINGPET = -1,
@@ -7659,40 +10029,17 @@ Constants = {
 		MAX_SUMMONABLE_PETS = 25,
 	},
 	PetConsts_PostCata = {
-		NUM_PET_SLOTS_DEATHKNIGHT = 1,
 		NUM_PET_SLOTS_MAGE = 1,
 		EXTRA_PET_STABLE_SLOT = 5,
 		MAX_SUMMONABLE_HUNTER_PETS = 5,
 		NUM_PET_SLOTS_THAT_NEED_LEARNED_SPELL = 5,
 		STABLED_PETS_FIRST_SLOT_INDEX = 5,
+		NUM_PET_SLOTS_DEATHKNIGHT = 25,
 		NUM_PET_SLOTS_WARLOCK = 25,
 		MAX_STABLE_SLOTS = 200,
 		MAX_NUM_PET_SLOTS = 205,
 		NUM_PET_SLOTS_HUNTER = 205,
-	},
-	PetConsts_PreWrath = {
-		EXTRA_PET_STABLE_SLOT = -1,
-		NUM_PET_SLOTS_DEATHKNIGHT = 0,
-		NUM_PET_SLOTS_MAGE = 1,
-		NUM_PET_SLOTS_THAT_NEED_LEARNED_SPELL = 1,
-		MAX_STABLE_SLOTS = 2,
-		MAX_SUMMONABLE_HUNTER_PETS = 5,
-		STABLED_PETS_FIRST_SLOT_INDEX = 5,
-		MAX_NUM_PET_SLOTS = 25,
-		NUM_PET_SLOTS_WARLOCK = 25,
-		NUM_PET_SLOTS_HUNTER = 205,
-	},
-	PetConsts_Wrath = {
-		EXTRA_PET_STABLE_SLOT = -1,
-		NUM_PET_SLOTS_DEATHKNIGHT = 1,
-		NUM_PET_SLOTS_MAGE = 1,
-		NUM_PET_SLOTS_THAT_NEED_LEARNED_SPELL = 1,
-		MAX_STABLE_SLOTS = 4,
-		MAX_SUMMONABLE_HUNTER_PETS = 5,
-		STABLED_PETS_FIRST_SLOT_INDEX = 5,
-		MAX_NUM_PET_SLOTS = 25,
-		NUM_PET_SLOTS_WARLOCK = 25,
-		NUM_PET_SLOTS_HUNTER = 205,
+		DEATHKNIGHT_PET_CREATURE_ID = 26125,
 	},
 	ProfessionConsts = {
 		NUM_PRIMARY_PROFESSIONS = 2,
@@ -7703,6 +10050,7 @@ Constants = {
 		RUNEFORGING_SKILL_LINE_ID = 960,
 		CRAFTING_ORDER_CLAIM_DURATION = 1800,
 		PUBLIC_CRAFTING_ORDER_STALE_THRESHOLD = 14400,
+		CRAFTING_ORDER_CURRENCY_WALLET_ITEM_ID = 262724,
 	},
 	PvpInfoConsts = {
 		MAX_PVP_LOCK_LIST_MAP = 2,
@@ -7713,18 +10061,29 @@ Constants = {
 		MAX_WORLD_QUEST_WATCHES_MANUAL = 5,
 		MAX_QUEST_WATCHES = 25,
 	},
+	RecentAlliesConsts = {
+		PIN_EXPIRATION_WARNING_DAYS = 5,
+	},
 	SpellBookSpellIDs = {
 		SPELL_ID_DISMISS_PET = 2641,
 	},
 	SpellCooldownConsts = {
 		GLOBAL_RECOVERY_CATEGORY = 133,
 	},
+	TTSConstants = {
+		TTSRateMin = -10,
+		TTSRateDefault = 0,
+		TTSVolumeMin = 0,
+		TTSRateMax = 10,
+		TTSVolumeDefault = 100,
+		TTSVolumeMax = 100,
+	},
 	TimerunningConsts = {
 		TIMERUNNING_SEASON_NONE = 0,
 		TIMERUNNING_SEASON_PANDARIA = 1,
+		TIMERUNNING_SEASON_LEGION = 2,
 		TIMERUNNING_ITEM_CTR = 2905,
-		TIMERUNNING_STARTLOC_ID_ALLIANCE = 10211,
-		TIMERUNNING_STARTLOC_ID_HORDE = 10212,
+		TIMERUNNING_LEGION_ARTIFACT_CTR = 4579,
 	},
 	TraitConsts = {
 		VIEW_TRAIT_CONFIG_ID = -3,
@@ -7737,6 +10096,34 @@ Constants = {
 		MainHandTransmogIsIndividualWeapon = -1,
 		MainHandTransmogIsPairedWeapon = 0,
 		NoTransmogID = 0,
+	},
+	TransmogOutfitDataConsts = {
+		EQUIP_TRANSMOG_OUTFIT_MANUAL_SPELL_ID = 1247613,
+	},
+	UICharacterClasses = {
+		Warrior = 1,
+		Paladin = 2,
+		Hunter = 3,
+		Rogue = 4,
+		Priest = 5,
+		DeathKnight = 6,
+		Shaman = 7,
+		Mage = 8,
+		Warlock = 9,
+		Monk = 10,
+		Druid = 11,
+		DemonHunter = 12,
+		Evoker = 13,
+	},
+	UnitEventConstants = {
+		MAX_UNIT_TOKENS_IN_EVENT = 4,
+	},
+	UnitPowerSpellIDs = {
+		VOID_METAMORPHOSIS_SPELL_ID = 1217607,
+		COLLAPSING_STAR_SPELL_ID = 1221150,
+		COLLAPSING_STAR_PASSIVE_SPELL_ID = 1221167,
+		DARK_HEART_SPELL_ID = 1225789,
+		SILENCE_THE_WHISPERS_SPELL_ID = 1227702,
 	},
 	WeeklyRewardsConsts = {
 		ABORT_ITEM_RETENTION_DAYS = 15,
