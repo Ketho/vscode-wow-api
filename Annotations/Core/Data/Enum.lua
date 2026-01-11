@@ -9810,6 +9810,10 @@ Constants = {
 		DEFAULT_AUCTION_PRICE_MULTIPLIER = 1.5,
 	},
 	CAAConstants = {
+		CAASayCombatEndDefault = true,
+		CAATargetNameDefault = true,
+		CAASayCombatStartDefault = true,
+		CAAEnabledDefault = false,
 		CAAFrequencyMin = -10,
 		CAAFrequencyDefault = 0,
 		CAAInterruptCastDefault = 0,
@@ -9821,12 +9825,10 @@ Constants = {
 		CAAPlayerResourcePercentDefault = 0,
 		CAATargetCastFormatDefault = 0,
 		CAATargetCastModeDefault = 0,
-		CAAEnabledDefault = false,
 		CAATargetDeathBehaviorDefault = 0,
 		CAAThrottleDefault = 0,
 		CAAThrottleMin = 0,
 		CAAVoiceDefault = 0,
-		CAATargetNameDefault = true,
 		CAAMinCastTimeStep = 0.5,
 		CAAThrottleStep = 0.5,
 		CAAPlayerHealthFormatDefault = 1,
@@ -9840,8 +9842,6 @@ Constants = {
 		CAAMinCastTimeMax = 5,
 		CAAThrottleMax = 5,
 		CAAFrequencyMax = 10,
-		CAASayCombatEndDefault = true,
-		CAASayCombatStartDefault = true,
 	},
 	CalendarGetEventTypeConstants = {
 		DEFAULT_CALENDAR_GET_EVENT_TYPE = 0,
@@ -9850,8 +9850,8 @@ Constants = {
 		MaxCallings = 3,
 	},
 	CatalogShopVirtualCurrencyConstants = {
-		HEARTHSTEEL_VC_CURRENCY_CODE = XVV,
-		TRADERS_TENDER_VC_CURRENCY_CODE = XWP,
+		HEARTHSTEEL_VC_CURRENCY_CODE = "XVV",
+		TRADERS_TENDER_VC_CURRENCY_CODE = "XWP",
 	},
 	CharCustomizationConstants = {
 		NUM_CUSTOM_DISPLAY = 4,

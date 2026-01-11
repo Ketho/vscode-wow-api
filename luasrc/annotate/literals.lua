@@ -42,14 +42,18 @@ local function SortByValue(tbl)
 		table.insert(t, {key=key, value=value})
 	end
 	table.sort(t, function(a, b)
-		if a.value ~= b.value then
-			if type(a.value) == "boolean" or type(b.value) == "boolean" then
-				return a and not b
+		if type(a.value) == type(b.value) then
+			if type(a.value) == "boolean" then
+				return a.value and not b.value
 			else
-				return a.value < b.value
+				if a.value == b.value then
+					return a.key < b.key
+				else
+					return a.value < b.value
+				end
 			end
 		else
-			return a.key < b.key
+			return type(a.value) < type(b.value)
 		end
 	end)
 	return t
@@ -70,6 +74,16 @@ local function IsBitEnum(tbl, name)
 		return false
 	end
 	return true
+end
+
+-- sort a table with numbers, strings and booleans as value
+local function SortEnum(a, b)
+	local typeA, typeB = type(a), type(b)
+	if typeA == typeB then
+		return a < b
+	else
+		return a < b
+	end
 end
 
 function m:GetEnumTable()
@@ -100,7 +114,11 @@ function m:GetEnumTable()
 	for _, name in pairs(Util:SortTable(Constants)) do
 		table.insert(t, string.format("\t%s = {", name))
 		for _, constTbl in pairs(SortByValue(Constants[name])) do
-			table.insert(t, string.format("\t\t%s = %s,", constTbl.key, constTbl.value))
+			if type(constTbl.value) == "string" then
+				table.insert(t, string.format('\t\t%s = "%s",', constTbl.key, constTbl.value))
+			else
+				table.insert(t, string.format("\t\t%s = %s,", constTbl.key, constTbl.value))
+			end
 		end
 		table.insert(t, "\t},")
 	end
