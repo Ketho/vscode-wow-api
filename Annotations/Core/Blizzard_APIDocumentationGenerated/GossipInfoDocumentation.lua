@@ -155,3 +155,4 @@ function C_GossipInfo.SelectOptionByIndex(optionID, text, confirmed) end
 ---@field questID number
 ---@field isImportant boolean
 ---@field isMeta boolean
+---@field questInfoID number

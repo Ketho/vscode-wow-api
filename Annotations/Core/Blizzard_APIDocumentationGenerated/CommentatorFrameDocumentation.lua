@@ -120,6 +120,9 @@ function C_Commentator.GetCameraCollision() end
 ---@return number zPos
 function C_Commentator.GetCameraPosition() end
 
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_Commentator.GetCombatEventInfo)
+function C_Commentator.GetCombatEventInfo() end
+
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_Commentator.GetCommentatorHistory)
 ---@return CommentatorHistory history
 function C_Commentator.GetCommentatorHistory() end

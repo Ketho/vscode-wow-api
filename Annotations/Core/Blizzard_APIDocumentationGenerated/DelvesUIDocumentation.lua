@@ -52,6 +52,11 @@ function C_DelvesUI.GetDelvesMinRequiredLevel() end
 ---@return number factionID
 function C_DelvesUI.GetFactionForCompanion(companionID) end
 
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_DelvesUI.GetLockedTextForCompanion)
+---@param companionID? number
+---@return string text
+function C_DelvesUI.GetLockedTextForCompanion(companionID) end
+
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_DelvesUI.GetModelSceneForCompanion)
 ---@param companionID? number
 ---@return number modelSceneID
@@ -88,6 +93,11 @@ function C_DelvesUI.HasActiveDelve(mapID) end
 ---@param unit UnitToken
 ---@return boolean result
 function C_DelvesUI.IsEligibleForActiveDelveRewards(unit) end
+
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_DelvesUI.IsTraitTreeForCompanion)
+---@param traitTreeID number
+---@return boolean isForCompanion
+function C_DelvesUI.IsTraitTreeForCompanion(traitTreeID) end
 
 ---Queries private party members to see what level they have unlocked for the Delve. Ineligible members are added to the tooltip of dropdown entries.
 ---

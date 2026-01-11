@@ -86,6 +86,13 @@ function C_PartyInfo.GetAvailableLootMethods() end
 ---@return number? timeLeftSeconds Default = 0
 function C_PartyInfo.GetInstanceAbandonShutdownTime() end
 
+---Returns the total duration of the abandon vote cooldown and how much time is left before it ends
+---
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_PartyInfo.GetInstanceAbandonVoteCooldownTime)
+---@return number? durationSeconds Default = 0
+---@return number? timeLeftSeconds Default = 0
+function C_PartyInfo.GetInstanceAbandonVoteCooldownTime() end
+
 ---Returns values controlling the vote
 ---
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_PartyInfo.GetInstanceAbandonVoteRequirements)

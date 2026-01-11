@@ -34,6 +34,10 @@ function C_QuestLog.GetAbandonQuest() end
 ---@return number[] itemIDs
 function C_QuestLog.GetAbandonQuestItems() end
 
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_QuestLog.GetActivePreyQuest)
+---@return number questID
+function C_QuestLog.GetActivePreyQuest() end
+
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_QuestLog.GetActiveThreatMaps)
 ---@return number[] uiMapIDs
 function C_QuestLog.GetActiveThreatMaps() end

@@ -96,9 +96,10 @@ function C_ClassTalents.HasUnspentTalentPoints() end
 ---@param configID number
 ---@param entries ImportLoadoutEntryInfo[]
 ---@param name string
+---@param importString? string
 ---@return boolean success
 ---@return string importError
-function C_ClassTalents.ImportLoadout(configID, entries, name) end
+function C_ClassTalents.ImportLoadout(configID, entries, name, importString) end
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_ClassTalents.InitializeViewLoadout)
 ---@param specID number
@@ -153,8 +154,9 @@ function C_ClassTalents.UpdateLastSelectedSavedConfigID(specID, configID) end
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_ClassTalents.ViewLoadout)
 ---@param entries ImportLoadoutEntryInfo[]
+---@param importString? string
 ---@return boolean success
-function C_ClassTalents.ViewLoadout(entries) end
+function C_ClassTalents.ViewLoadout(entries, importString) end
 
 ---@class ImportLoadoutEntryInfo
 ---@field nodeID number

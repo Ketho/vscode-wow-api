@@ -12,6 +12,8 @@
 ---@field isEnabled boolean
 ---@field modRate number
 ---@field activeCategory number?
+---@field timeUntilEndOfStartRecovery number?
+---@field isOnGCD boolean?
 
 ---@class SpellPowerCostInfo
 ---@field type Enum.PowerType

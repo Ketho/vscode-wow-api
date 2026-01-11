@@ -45,8 +45,9 @@ function C_LFGList.CreateScenarioListing(activityID, itemLevel, autoAccept, priv
 ---@param activityID number
 ---@param groupID number
 ---@param playstyle? Enum.LFGEntryPlaystyle
+---@param generalPlaystyle? Enum.LFGEntryGeneralPlaystyle
 ---@return boolean matches
-function C_LFGList.DoesEntryTitleMatchPrebuiltTitle(activityID, groupID, playstyle) end
+function C_LFGList.DoesEntryTitleMatchPrebuiltTitle(activityID, groupID, playstyle, generalPlaystyle) end
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_LFGList.GetActiveEntryInfo)
 ---@return LfgEntryData entryData
@@ -137,9 +138,10 @@ function C_LFGList.GetOwnedKeystoneActivityAndGroupAndLevel(getTimewalking) end
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_LFGList.GetPlaystyleString)
 ---@param playstyle Enum.LFGEntryPlaystyle
+---@param generalPlaystyle Enum.LFGEntryGeneralPlaystyle
 ---@param activityInfo GroupFinderActivityInfo
 ---@return string playstyleString
-function C_LFGList.GetPlaystyleString(playstyle, activityInfo) end
+function C_LFGList.GetPlaystyleString(playstyle, generalPlaystyle, activityInfo) end
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_LFGList.GetPremadeGroupFinderStyle)
 ---@return Enum.PremadeGroupFinderStyle style
@@ -184,6 +186,10 @@ function C_LFGList.IsPlayerAuthenticatedForLFG(activityCategoryID) end
 ---@return boolean enabled
 function C_LFGList.IsPremadeGroupFinderEnabled() end
 
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_LFGList.ReportGroupAsAdvertisement)
+---@param searchResultID number
+function C_LFGList.ReportGroupAsAdvertisement(searchResultID) end
+
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_LFGList.SaveAdvancedFilter)
 ---@param options AdvancedFilterOptions
 function C_LFGList.SaveAdvancedFilter(options) end
@@ -202,7 +208,8 @@ function C_LFGList.Search(categoryID, filter, preferredFilters, languageFilter, 
 ---@param activityID number
 ---@param groupID number
 ---@param playstyle? Enum.LFGEntryPlaystyle
-function C_LFGList.SetEntryTitle(activityID, groupID, playstyle) end
+---@param generalPlaystyle? Enum.LFGEntryGeneralPlaystyle
+function C_LFGList.SetEntryTitle(activityID, groupID, playstyle, generalPlaystyle) end
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_LFGList.SetSearchToActivity)
 ---@param activityID number
@@ -245,6 +252,10 @@ function C_LFGList.ValidateRequiredPvpRatingForActivity(activityID, rating) end
 ---@field difficultyHeroic boolean? Default = false
 ---@field difficultyMythic boolean? Default = false
 ---@field difficultyMythicPlus boolean? Default = false
+---@field generalPlaystyle1 boolean? Default = false
+---@field generalPlaystyle2 boolean? Default = false
+---@field generalPlaystyle3 boolean? Default = false
+---@field generalPlaystyle4 boolean? Default = false
 
 ---@class BestDungeonScoreMapInfo
 ---@field mapScore number
@@ -314,6 +325,7 @@ function C_LFGList.ValidateRequiredPvpRatingForActivity(activityID, rating) end
 ---@field requiredDungeonScore number?
 ---@field requiredPvpRating number?
 ---@field playstyle Enum.LFGEntryPlaystyle?
+---@field generalPlaystyle Enum.LFGEntryGeneralPlaystyle?
 ---@field isCrossFactionListing boolean
 ---@field newPlayerFriendly boolean
 
@@ -325,6 +337,7 @@ function C_LFGList.ValidateRequiredPvpRatingForActivity(activityID, rating) end
 ---@field isPrivateGroup boolean? Default = false
 ---@field newPlayerFriendly boolean? Default = false
 ---@field playstyle Enum.LFGEntryPlaystyle? Default = None
+---@field generalPlaystyle Enum.LFGEntryGeneralPlaystyle? Default = None
 ---@field requiredDungeonScore number? Default = 0
 ---@field requiredItemLevel number? Default = 0
 ---@field requiredPvpRating number? Default = 0
@@ -355,6 +368,7 @@ function C_LFGList.ValidateRequiredPvpRatingForActivity(activityID, rating) end
 ---@field requiredDungeonScore number?
 ---@field requiredPvpRating number?
 ---@field playstyle Enum.LFGEntryPlaystyle?
+---@field generalPlaystyle Enum.LFGEntryGeneralPlaystyle?
 ---@field crossFactionListing boolean?
 ---@field leaderFactionGroup number
 ---@field newPlayerFriendly boolean?

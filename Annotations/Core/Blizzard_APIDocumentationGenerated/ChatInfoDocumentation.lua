@@ -6,6 +6,9 @@ C_ChatInfo = {}
 ---@return boolean canSpeakLanguage
 function C_ChatInfo.CanPlayerSpeakLanguage(languageId) end
 
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_ChatInfo.CancelEmote)
+function C_ChatInfo.CancelEmote() end
+
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_ChatInfo.DropCautionaryChatMessage)
 ---@param confirmNumber number
 function C_ChatInfo.DropCautionaryChatMessage(confirmNumber) end
@@ -98,6 +101,13 @@ function C_ChatInfo.GetNumReservedChatWindows() end
 ---@return string[] registeredPrefixes
 function C_ChatInfo.GetRegisteredAddonMessagePrefixes() end
 
+---Returns true if API security restrictions regarding chat messaging are in effect.
+---
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_ChatInfo.InChatMessagingLockdown)
+---@return boolean isRestricted
+---@return Enum.ChatMessagingLockdownReason? lockdownReason
+function C_ChatInfo.InChatMessagingLockdown() end
+
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_ChatInfo.IsAddonMessagePrefixRegistered)
 ---@param prefix string
 ---@return boolean isRegistered
@@ -150,6 +160,13 @@ function C_ChatInfo.IsValidChatLine(chatLine) end
 ---@param name string
 ---@return boolean isApproved
 function C_ChatInfo.IsValidCombatFilterName(name) end
+
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_ChatInfo.PerformEmote)
+---@param emoteName string
+---@param targetName? string
+---@param suppressMoveError? boolean Default = false
+---@return boolean success
+function C_ChatInfo.PerformEmote(emoteName, targetName, suppressMoveError) end
 
 ---Registers interest in addon messages with this prefix, cannot be an empty string.
 ---
@@ -217,6 +234,25 @@ function C_ChatInfo.UncensorChatLine(chatLine) end
 ---@field message string
 ---@field chatType string?
 ---@field target string?
+
+---@class ChatMessageEventParams
+---@field text string
+---@field playerName string
+---@field languageName string
+---@field channelName string
+---@field playerName2 string
+---@field specialFlags string
+---@field zoneChannelID number
+---@field channelIndex number
+---@field channelBaseName string
+---@field languageID number
+---@field lineID number
+---@field guid WOWGUID
+---@field bnSenderID number
+---@field isMobile boolean
+---@field isSubtitle boolean
+---@field hideSenderInLetterbox boolean
+---@field suppressRaidIcons boolean
 
 ---@class SendChatMessageParams
 ---@field message string
