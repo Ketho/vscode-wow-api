@@ -161,18 +161,10 @@ function m:ParsePages(options)
 			local hasLuaLs = getLuals(wikiText, info)
 			info.params = {arguments = {}, returns = {}}
 			info.signature = {lines = {}}
-			local parsingCodeBlock
 			for line in wikiText:gmatch("[^\r\n]+") do
 				local lineLower = line:lower()
-				local isCodeBlock = line:find("^%s")
-				-- assume the first code block will always be the signature
-				-- signatures can be multi-line
-				if isCodeBlock and not info.signature.found then
-					parsingCodeBlock = true
+				if line:find("{{apisig")  then
 					table.insert(info.signature.lines, line)
-				elseif not isCodeBlock and parsingCodeBlock then
-					info.signature.found = true
-					parsingCodeBlock = false
 					self:ParseSignature(info.signature.lines, info)
 				end
 				-- update current section
@@ -194,9 +186,6 @@ function m:ParsePages(options)
 					end
 				end
 			end
-			if parsingCodeBlock then -- bug, signature was on the last line
-				self:ParseSignature(info.signature.lines, info)
-			end
 			if options and options.debug then
 				self:PrintApi(info)
 			end
@@ -215,23 +204,11 @@ function m:ParsePages(options)
 end
 
 function m:ParseSignature(lines, info)
-	-- print("ParseSignature", info.apiName)
-	local isMultiline = (#lines > 1)
 	local sigRets = ""
 	local sigName, sigArgs
 	-- get signature parts
-	if isMultiline then
-		for _, line in pairs(lines) do
-			if line:find("=") then
-				sigName, sigArgs = line:match("^%s-=%s(%S-)%((.-)%)")
-			else
-				sigRets = sigRets..line
-			end
-		end
-	else
-		-- match everything that is not a space up to the left bracket
-		sigRets, sigName, sigArgs = lines[1]:match("^%s(.-)(%S-)%((.-)%)")
-	end
+	-- match everything that is not a space up to the left bracket
+	sigRets, sigName, sigArgs = lines[1]:match("{{apisig|(.-)(%S-)%((.-)%)")
 	-- parse signature
 	if sigName then
 		info.signature.name = sigName
