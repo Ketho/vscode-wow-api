@@ -25,7 +25,7 @@ local function exportTsData()
 	util:WriteFile(pathlib.join(path_tsdata, "event.ts"), require("luasrc.ToTypeScript.Event")())
 	util:WriteFile(pathlib.join(path_tsdata, "cvar.ts"), require("luasrc.ToTypeScript.CVar")(BLIZZRES_BRANCH))
 	util:WriteFile(pathlib.join(path_tsdata, "enum.ts"), require("luasrc.ToTypeScript.LuaEnum")(BLIZZRES_BRANCH))
-	util:MakeDir(pathlib.join(WAGO_CACHE, "globalstrings"))
+	util:mkdir(pathlib.join(WAGO_CACHE, "globalstrings"))
 	require("luasrc.ToTypeScript.GlobalString"):WriteLocales(PRODUCT)
 	require(pathlib.join("luasrc", "ToTypeScript", "Flavor")) -- todo: refactor
 	log:success("Exported TypeScript data")

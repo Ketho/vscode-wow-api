@@ -12,3 +12,6 @@ node_modules
 /luasrc/out
 # framexml
 /wow-ui-source
+
+# output folder
+.wow

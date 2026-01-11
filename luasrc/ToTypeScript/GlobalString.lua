@@ -1,7 +1,7 @@
 local Util = require("wowdoc")
 local wago = require("wowdoc.wago")
 
-Util:MakeDir("src/data/globalstring")
+Util:mkdir("src/data/globalstring")
 
 local pre = [[import type { GlobalStringInterface } from "./GlobalStringInterface";
 

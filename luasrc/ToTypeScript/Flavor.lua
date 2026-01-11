@@ -1,5 +1,5 @@
 local Util = require("wowdoc")
-Util:MakeDir("luasrc/out/cache/flavor")
+Util:mkdir("luasrc/out/cache/flavor")
 local PATH = "luasrc/out/cache/flavor/%s_%s.lua"
 
 local pre = [[
