@@ -35,4 +35,4 @@ function AceGUIScrollFrame:LayoutFinished(width, height) end
 
 ---@class AceGUIScrollFrameStatus
 ---@field scrollvalue number
----@field offset? integer
+---@field offset integer?
