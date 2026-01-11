@@ -37,7 +37,9 @@ local function ToTypeScript(branch)
 			table.insert(t, string.format('\t\tsecure: true,', secure))
 		end
 		if #help > 0 then
-			table.insert(t, string.format('\t\thelp: "%s",', help:gsub('"', '\\"')))
+			help = help:gsub('"', '\\"')
+			help = help:gsub("\n", "\\n")
+			table.insert(t, string.format('\t\thelp: "%s",', help))
 		end
 		table.insert(t, "\t},")
 	end

@@ -9171,13 +9171,7 @@ export const data: CVarInterface = {
 		name: "taintLog",
 		default: "0",
 		category: 0,
-		help: "Controls debug logging of Lua taint and restricted action events to the 'taint.log' file:
-0: Disable all logging
-1: Log blocked action errors and taint events leading up to them
-2: Log secret or tainted reads and writes of global variables
-3: Log secret or tainted reads and writes of upvalues
-4: Log secret or tainted reads and writes of table fields
-",
+		help: "Controls debug logging of Lua taint and restricted action events to the 'taint.log' file:\n0: Disable all logging\n1: Log blocked action errors and taint events leading up to them\n2: Log secret or tainted reads and writes of global variables\n3: Log secret or tainted reads and writes of upvalues\n4: Log secret or tainted reads and writes of table fields\n",
 	},
 	talentpointsspent: {
 		name: "talentPointsSpent",
