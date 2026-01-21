@@ -71,8 +71,8 @@ function SharedMenuDescriptionProxy:CreateTemplate(template) end
 ---@param queuedDescription ElementMenuDescriptionProxy
 function SharedMenuDescriptionProxy:AddQueuedDescription(queuedDescription) end
 
----@see RootMenuDescriptionProxyMixin.ClearQueueDescriptions
-function SharedMenuDescriptionProxy:ClearQueueDescriptions() end
+---@see RootMenuDescriptionProxyMixin.ClearQueuedDescriptions
+function SharedMenuDescriptionProxy:ClearQueuedDescriptions() end
 
 ---@see MenuUtilPrivate.Utilities.QueueTitle
 ---@param text string
@@ -128,8 +128,6 @@ function SharedMenuDescriptionProxy:SetMinimumWidth(width) end
 
 ---@param width number
 function SharedMenuDescriptionProxy:SetMaximumWidth(width) end
-
-function SharedMenuDescriptionProxy:ClearQueuedDescriptions() end
 
 ---@param direction MenuGridDirection
 ---@param columns number? # if not specified, determines the number of columns based on the number of elements
