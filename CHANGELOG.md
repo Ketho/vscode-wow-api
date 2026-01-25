@@ -233,7 +233,7 @@ To avoid loading for Lua projects not related to World of Warcraft, all settings
 - PR [#120](https://github.com/Ketho/vscode-wow-api/pull/120) Add definition for tostringall()
 
 [0.22.1]: https://github.com/Ketho/vscode-wow-api/releases/tag/0.22.1
-[0.22.0]: https://github.com/Ketho/vscode-wow-api/releases/tag/0.21.2
+[0.22.0]: https://github.com/Ketho/vscode-wow-api/releases/tag/0.22.0
 [0.21.0]: https://github.com/Ketho/vscode-wow-api/releases/tag/0.21.0
 [0.20.8]: https://github.com/Ketho/vscode-wow-api/releases/tag/0.20.8
 [0.20.7]: https://github.com/Ketho/vscode-wow-api/releases/tag/0.20.7
