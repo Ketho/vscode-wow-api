@@ -11,7 +11,7 @@ source .venv/bin/activate
 # hererocks
 sudo apt install libreadline-dev unzip -y
 pip install git+https://github.com/luarocks/hererocks
-hererocks .lua -l latest -r latest
+hererocks .lua -l 5.4 -r latest
 source .lua/bin/activate
 
 # lua modules
