@@ -11,9 +11,9 @@ export const data: FlavorInterface = {
 ]]
 
 local flavors = {
-    "mainline",
-    "vanilla",
-    "mists",
+    "live",
+    "classic_era",
+    "classic",
 }
 
 local function tInverse(tbl)
@@ -39,10 +39,10 @@ local function GetData()
     end
     local combinedFlags = {}
     for name in pairs(combinedFlavor) do
-        local mainline = flavorMap.mainline[name] and 0x1 or 0
-        local vanilla = flavorMap.vanilla[name] and 0x2 or 0
-        local mists = flavorMap.mists[name] and 0x4 or 0
-        combinedFlags[name] = mainline | vanilla | mists
+        local live = flavorMap.live[name] and 0x1 or 0
+        local classicEra = flavorMap.classic_era[name] and 0x2 or 0
+        local classic = flavorMap.classic[name] and 0x4 or 0
+        combinedFlags[name] = live | classicEra | classic
     end
     return combinedFlags
 end

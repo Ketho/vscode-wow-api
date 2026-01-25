@@ -48,6 +48,9 @@ To debug the extension, pressing `F5` (which runs the default [build task](https
 
 ![](img/setup/install_remote_luals.png)
 
+### Update FrameXML references
+Annotations/FrameXML is a gitmodule for the [NumyAddon FramexmlAnnotations Repository](https://github.com/NumyAddon/FramexmlAnnotations.git). Update with: `git submodule update --remote`
+
 ### Packaging
 If you want to package the extension locally into a `.vsix` file.
 ```sh
