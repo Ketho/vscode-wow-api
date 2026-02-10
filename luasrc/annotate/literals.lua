@@ -24,8 +24,8 @@ end
 
 function m:GetCVarLiterals()
 	local data = Util:DownloadAndRun(
-		string.format("https://raw.githubusercontent.com/Ketho/BlizzardInterfaceResources/%s/Resources/CVars.lua", BLIZZRES_BRANCH),
-		pathlib.join(PATH, string.format("CVars_%s.lua", BLIZZRES_BRANCH))
+		string.format("https://raw.githubusercontent.com/Ketho/BlizzardInterfaceResources/%s/Resources/CVars.lua", GETHE_BRANCH),
+		pathlib.join(PATH, string.format("CVars_%s.lua", GETHE_BRANCH))
 	)
 	local t = {}
 	table.insert(t, "---@alias CVar string")
@@ -88,8 +88,8 @@ end
 
 function m:GetEnumTable()
 	Util:DownloadAndRun(
-		string.format("https://raw.githubusercontent.com/Ketho/BlizzardInterfaceResources/%s/Resources/LuaEnum.lua", BLIZZRES_BRANCH),
-		string.format("luasrc/out/cache/Enum_%s.lua", BLIZZRES_BRANCH)
+		string.format("https://raw.githubusercontent.com/Ketho/BlizzardInterfaceResources/%s/Resources/LuaEnum.lua", GETHE_BRANCH),
+		string.format("luasrc/out/cache/Enum_%s.lua", GETHE_BRANCH)
 	)
 	local t = {}
 	table.insert(t, "Enum = {}\n")

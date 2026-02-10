@@ -5,7 +5,6 @@ local log = require("wowdoc.log")
 
 local m = {}
 local REPO = "https://raw.githubusercontent.com/Ketho/BlizzardInterfaceResources"
-local PATH = PATHS.BLIZZRES
 
 local function ApplyFixes()
 	if not Enum.LFGRoleMeta then -- Meta fields are not written to LuaEnum.lua
@@ -32,7 +31,7 @@ function m:LoadLuaEnums(branch, force)
 			return
 		end
 	end
-	local path = pathlib.join(PATH, string.format("LuaEnum_%s.lua", branch))
+	local path = pathlib.join(PATHS.BLIZZRES, string.format("LuaEnum_%s.lua", branch))
 	local url = string.format("%s/%s/Resources/LuaEnum.lua", REPO, branch)
 	util:DownloadAndRun(url, path)
 	ApplyFixes()

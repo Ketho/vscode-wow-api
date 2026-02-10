@@ -8,7 +8,7 @@ local products = require("wowdoc.products")
 local loader = require("wowdoc.loader")
 
 local PRODUCT = CONFIG.TACT_PRODUCT
-GETHE_BRANCH, BLIZZRES_BRANCH = products:GetBranch(PRODUCT)
+GETHE_BRANCH = products:GetBranch(PRODUCT)
 
 local function exportAnnotations()
 	loader:main(PRODUCT, true) -- also exports annotations
@@ -23,8 +23,8 @@ end
 local function exportTsData()
 	local path_tsdata = pathlib.join("src", "data")
 	util:WriteFile(pathlib.join(path_tsdata, "event.ts"), require("luasrc.ToTypeScript.Event")())
-	util:WriteFile(pathlib.join(path_tsdata, "cvar.ts"), require("luasrc.ToTypeScript.CVar")(BLIZZRES_BRANCH))
-	util:WriteFile(pathlib.join(path_tsdata, "enum.ts"), require("luasrc.ToTypeScript.LuaEnum")(BLIZZRES_BRANCH))
+	util:WriteFile(pathlib.join(path_tsdata, "cvar.ts"), require("luasrc.ToTypeScript.CVar")(GETHE_BRANCH))
+	util:WriteFile(pathlib.join(path_tsdata, "enum.ts"), require("luasrc.ToTypeScript.LuaEnum")(GETHE_BRANCH))
 	util:mkdir(pathlib.join(WAGO_CACHE, "globalstrings"))
 	require("luasrc.ToTypeScript.GlobalString"):WriteLocales(PRODUCT)
 	require(pathlib.join("luasrc", "ToTypeScript", "Flavor")) -- todo: refactor
