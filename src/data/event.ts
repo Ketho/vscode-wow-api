@@ -656,6 +656,13 @@ export const data: EventInterface = {
 		Payload: [
 			{Name: "result", Type: "BulkPurchaseResult"},
 			{Name: "productResults", Type: "BulkPurchaseIndividualProductResult[]"},
+			{Name: "bestTopUpProductID", Type: "number", Nilable: true},
+			{Name: "totalCost", Type: "number", Nilable: true},
+		],
+	},
+	BULK_REFUND_RESULT_RECEIVED: {
+		Payload: [
+			{Name: "result", Type: "BulkRefundResult"},
 		],
 	},
 	B_NET_NEIGHBORHOOD_LIST_UPDATED: {
@@ -1532,27 +1539,6 @@ export const data: EventInterface = {
 		],
 	},
 	CHAT_MSG_EMOTE: {
-		Payload: [
-			{Name: "text", Type: "string"},
-			{Name: "playerName", Type: "string"},
-			{Name: "languageName", Type: "string"},
-			{Name: "channelName", Type: "string"},
-			{Name: "playerName2", Type: "string"},
-			{Name: "specialFlags", Type: "string"},
-			{Name: "zoneChannelID", Type: "number"},
-			{Name: "channelIndex", Type: "number"},
-			{Name: "channelBaseName", Type: "string"},
-			{Name: "languageID", Type: "number"},
-			{Name: "lineID", Type: "number"},
-			{Name: "guid", Type: "WOWGUID"},
-			{Name: "bnSenderID", Type: "number"},
-			{Name: "isMobile", Type: "boolean"},
-			{Name: "isSubtitle", Type: "boolean"},
-			{Name: "hideSenderInLetterbox", Type: "boolean"},
-			{Name: "suppressRaidIcons", Type: "boolean"},
-		],
-	},
-	CHAT_MSG_ENCOUNTER_EVENT: {
 		Payload: [
 			{Name: "text", Type: "string"},
 			{Name: "playerName", Type: "string"},
@@ -3201,6 +3187,18 @@ export const data: EventInterface = {
 	ENCOUNTER_TIMELINE_STATE_UPDATED: {
 		Documentation: "Signaled when conditions controlling the visibility of the encounter timeline are updated.",
 	},
+	ENCOUNTER_TIMELINE_VIEW_ACTIVATED: {
+		Documentation: "Fired when a new timeline view is being activated. This is fired after a full layout and timeline data update, allowing the UI to immediately query the API and get usable results.",
+		Payload: [
+			{Name: "viewType", Type: "EncounterTimelineViewType"},
+		],
+	},
+	ENCOUNTER_TIMELINE_VIEW_DEACTIVATED: {
+		Documentation: "Fired when the current timeline view is being deactivated. The UI should clear all stored timeline event data and release all frames back to pools during this event.",
+		Payload: [
+			{Name: "viewType", Type: "EncounterTimelineViewType"},
+		],
+	},
 	ENCOUNTER_WARNING: {
 		Payload: [
 			{Name: "encounterWarningInfo", Type: "EncounterWarningInfo"},
@@ -3854,6 +3852,7 @@ export const data: EventInterface = {
 	HOUSING_CLEANUP_MODE_HOVERED_TARGET_CHANGED: {
 		Payload: [
 			{Name: "hasHoveredTarget", Type: "boolean"},
+			{Name: "targetType", Type: "HousingCleanupModeTargetType"},
 		],
 	},
 	HOUSING_CLEANUP_MODE_TARGET_SELECTED: {},
@@ -5206,6 +5205,19 @@ export const data: EventInterface = {
 	PET_STABLE_UPDATE: {},
 	PET_UI_CLOSE: {},
 	PET_UI_UPDATE: {},
+	PHOTO_SHARING_AUTHORIZATION_NEEDED: {},
+	PHOTO_SHARING_AUTHORIZATION_UPDATED: {},
+	PHOTO_SHARING_PHOTO_UPLOAD_STATUS: {
+		Payload: [
+			{Name: "uploadStatus", Type: "PhotoSharingUploadStatus"},
+		],
+	},
+	PHOTO_SHARING_SCREENSHOT_READY: {},
+	PHOTO_SHARING_THIRD_PARTY_AUTHORIZATION_NEEDED: {
+		Payload: [
+			{Name: "authUrl", Type: "string"},
+		],
+	},
 	PING_SYSTEM_ERROR: {
 		Payload: [
 			{Name: "error", Type: "string"},
@@ -5347,6 +5359,11 @@ export const data: EventInterface = {
 		Payload: [
 			{Name: "oldMapID", Type: "number"},
 			{Name: "newMapID", Type: "number"},
+		],
+	},
+	PLAYER_MAX_LEVEL_UPDATE: {
+		Payload: [
+			{Name: "unitTarget", Type: "UnitTokenVariant"},
 		],
 	},
 	PLAYER_MONEY: {},
@@ -6007,6 +6024,16 @@ export const data: EventInterface = {
 			{Name: "sender", Type: "string", Nilable: true},
 		],
 	},
+	SIMPLE_BROWSER_POPUP: {
+		Payload: [
+			{Name: "url", Type: "string"},
+		],
+	},
+	SIMPLE_BROWSER_SOCIAL_CALLBACK_INVOKED: {
+		Payload: [
+			{Name: "url", Type: "string"},
+		],
+	},
 	SIMPLE_BROWSER_WEB_ERROR: {
 		Payload: [
 			{Name: "errorCode", Type: "number"},
@@ -6350,6 +6377,13 @@ export const data: EventInterface = {
 		Documentation: "Sends an update to the UI that a sparse or cache lookup has resolved",
 		Payload: [
 			{Name: "dataInstanceID", Type: "number", Nilable: true},
+		],
+	},
+	TOOLTIP_SHOW_ITEM_COMPARISON: {
+		Payload: [
+			{Name: "comparisonItem", Type: "TooltipComparisonItem"},
+			{Name: "tooltip", Type: "Tooltip"},
+			{Name: "anchorFrame", Type: "SimpleFrame", Nilable: true},
 		],
 	},
 	TOYS_UPDATED: {

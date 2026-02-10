@@ -197,7 +197,8 @@
 ---|"BONUS_ROLL_RESULT" # `typeIdentifier, itemLink, quantity, specID, sex, personalLootToast, currencyID, isSecondaryResult, corrupted`
 ---|"BONUS_ROLL_STARTED"
 ---|"BOSS_KILL" # `encounterID, encounterName`
----|"BULK_PURCHASE_RESULT_RECEIVED" # `result, productResults`
+---|"BULK_PURCHASE_RESULT_RECEIVED" # `result, productResults, bestTopUpProductID, totalCost`
+---|"BULK_REFUND_RESULT_RECEIVED" # `result`
 ---|"B_NET_NEIGHBORHOOD_LIST_UPDATED" # `result, neighborhoodInfos`
 ---|"CALENDAR_ACTION_PENDING" # `pending`
 ---|"CALENDAR_CLOSE_EVENT"
@@ -298,7 +299,6 @@
 ---|"CHAT_MSG_CURRENCY" # `text, playerName, languageName, channelName, playerName2, specialFlags, zoneChannelID, channelIndex, channelBaseName, languageID, lineID, guid, bnSenderID, isMobile, isSubtitle, hideSenderInLetterbox, suppressRaidIcons`
 ---|"CHAT_MSG_DND" # `text, playerName, languageName, channelName, playerName2, specialFlags, zoneChannelID, channelIndex, channelBaseName, languageID, lineID, guid, bnSenderID, isMobile, isSubtitle, hideSenderInLetterbox, suppressRaidIcons`
 ---|"CHAT_MSG_EMOTE" # `text, playerName, languageName, channelName, playerName2, specialFlags, zoneChannelID, channelIndex, channelBaseName, languageID, lineID, guid, bnSenderID, isMobile, isSubtitle, hideSenderInLetterbox, suppressRaidIcons`
----|"CHAT_MSG_ENCOUNTER_EVENT" # `text, playerName, languageName, channelName, playerName2, specialFlags, zoneChannelID, channelIndex, channelBaseName, languageID, lineID, guid, bnSenderID, isMobile, isSubtitle, hideSenderInLetterbox, suppressRaidIcons`
 ---|"CHAT_MSG_FILTERED" # `text, playerName, languageName, channelName, playerName2, specialFlags, zoneChannelID, channelIndex, channelBaseName, languageID, lineID, guid, bnSenderID, isMobile, isSubtitle, hideSenderInLetterbox, suppressRaidIcons`
 ---|"CHAT_MSG_GUILD" # `text, playerName, languageName, channelName, playerName2, specialFlags, zoneChannelID, channelIndex, channelBaseName, languageID, lineID, guid, bnSenderID, isMobile, isSubtitle, hideSenderInLetterbox, suppressRaidIcons`
 ---|"CHAT_MSG_GUILD_ACHIEVEMENT" # `text, playerName, languageName, channelName, playerName2, specialFlags, zoneChannelID, channelIndex, channelBaseName, languageID, lineID, guid, bnSenderID, isMobile, isSubtitle, hideSenderInLetterbox, suppressRaidIcons`
@@ -552,6 +552,8 @@
 ---|"ENCOUNTER_TIMELINE_EVENT_TRACK_CHANGED" # `eventID`
 ---|"ENCOUNTER_TIMELINE_LAYOUT_UPDATED"
 ---|"ENCOUNTER_TIMELINE_STATE_UPDATED"
+---|"ENCOUNTER_TIMELINE_VIEW_ACTIVATED" # `viewType`
+---|"ENCOUNTER_TIMELINE_VIEW_DEACTIVATED" # `viewType`
 ---|"ENCOUNTER_WARNING" # `encounterWarningInfo`
 ---|"END_BOUND_TRADEABLE" # `reason`
 ---|"ENTERED_DIFFERENT_INSTANCE_FROM_PARTY"
@@ -725,7 +727,7 @@
 ---|"HOUSING_BASIC_MODE_SELECTED_TARGET_CHANGED" # `hasSelectedTarget, targetType, isPreview`
 ---|"HOUSING_CATALOG_CATEGORY_UPDATED" # `categoryID`
 ---|"HOUSING_CATALOG_SUBCATEGORY_UPDATED" # `subcategoryID`
----|"HOUSING_CLEANUP_MODE_HOVERED_TARGET_CHANGED" # `hasHoveredTarget`
+---|"HOUSING_CLEANUP_MODE_HOVERED_TARGET_CHANGED" # `hasHoveredTarget, targetType`
 ---|"HOUSING_CLEANUP_MODE_TARGET_SELECTED"
 ---|"HOUSING_CORE_FIXTURE_CHANGED" # `coreFixtureType`
 ---|"HOUSING_CUSTOMIZE_MODE_HOVERED_TARGET_CHANGED" # `hasHoveredTarget, targetType`
@@ -1098,6 +1100,11 @@
 ---|"PET_STABLE_UPDATE"
 ---|"PET_UI_CLOSE"
 ---|"PET_UI_UPDATE"
+---|"PHOTO_SHARING_AUTHORIZATION_NEEDED"
+---|"PHOTO_SHARING_AUTHORIZATION_UPDATED"
+---|"PHOTO_SHARING_PHOTO_UPLOAD_STATUS" # `uploadStatus`
+---|"PHOTO_SHARING_SCREENSHOT_READY"
+---|"PHOTO_SHARING_THIRD_PARTY_AUTHORIZATION_NEEDED" # `authUrl`
 ---|"PING_SYSTEM_ERROR" # `error`
 ---|"PLAYERBANKSLOTS_CHANGED" # `slot`
 ---|"PLAYER_ACCOUNT_BANK_TAB_SLOTS_CHANGED" # `slot`
@@ -1141,6 +1148,7 @@
 ---|"PLAYER_LOOT_SPEC_UPDATED"
 ---|"PLAYER_LOSES_VEHICLE_DATA" # `unitTarget`
 ---|"PLAYER_MAP_CHANGED" # `oldMapID, newMapID`
+---|"PLAYER_MAX_LEVEL_UPDATE" # `unitTarget`
 ---|"PLAYER_MONEY"
 ---|"PLAYER_MOUNT_DISPLAY_CHANGED"
 ---|"PLAYER_PVP_KILLS_CHANGED" # `unitTarget`
@@ -1330,6 +1338,8 @@
 ---|"SHOW_STAIR_DIRECTION_CONFIRMATION"
 ---|"SHOW_SUBSCRIPTION_INTERSTITIAL" # `type`
 ---|"SHOW_SUBTITLE" # `subtitle, sender`
+---|"SIMPLE_BROWSER_POPUP" # `url`
+---|"SIMPLE_BROWSER_SOCIAL_CALLBACK_INVOKED" # `url`
 ---|"SIMPLE_BROWSER_WEB_ERROR" # `errorCode`
 ---|"SIMPLE_BROWSER_WEB_PROXY_FAILED"
 ---|"SIMPLE_CHECKOUT_CLOSED"
@@ -1427,6 +1437,7 @@
 ---|"TOKEN_SELL_RESULT" # `result`
 ---|"TOKEN_STATUS_CHANGED"
 ---|"TOOLTIP_DATA_UPDATE" # `dataInstanceID`
+---|"TOOLTIP_SHOW_ITEM_COMPARISON" # `comparisonItem, tooltip, anchorFrame`
 ---|"TOYS_UPDATED" # `itemID, isNew, hasFanfare`
 ---|"TRACKABLE_INFO_UPDATE" # `type, id`
 ---|"TRACKED_ACHIEVEMENT_LIST_CHANGED" # `achievementID, added`

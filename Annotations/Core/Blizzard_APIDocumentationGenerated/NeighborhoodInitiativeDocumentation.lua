@@ -47,6 +47,10 @@ function C_NeighborhoodInitiative.IsPlayerInNeighborhoodGroup() end
 ---@return boolean isViewingActiveNeighborhood
 function C_NeighborhoodInitiative.IsViewingActiveNeighborhood() end
 
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_NeighborhoodInitiative.PlayerHasInitiativeAccess)
+---@return boolean success
+function C_NeighborhoodInitiative.PlayerHasInitiativeAccess() end
+
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_NeighborhoodInitiative.PlayerMeetsRequiredLevel)
 ---@return boolean success
 function C_NeighborhoodInitiative.PlayerMeetsRequiredLevel() end

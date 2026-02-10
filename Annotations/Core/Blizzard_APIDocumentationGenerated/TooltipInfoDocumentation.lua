@@ -420,7 +420,7 @@ function C_TooltipInfo.GetTraitEntry(entryID, rank) end
 function C_TooltipInfo.GetUnit(unit, hideStatus) end
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_TooltipInfo.GetUnitAura)
----@param unitToken UnitToken
+---@param unitToken UnitTokenRestrictedForAddOns
 ---@param index number
 ---@param filter? AuraFilters
 ---@return TooltipData data
@@ -436,7 +436,7 @@ function C_TooltipInfo.GetUnitAura(unitToken, index, filter) end
 function C_TooltipInfo.GetUnitAuraByAuraInstanceID(unitToken, auraInstanceID, filter) end
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_TooltipInfo.GetUnitBuff)
----@param unitToken UnitToken
+---@param unitToken UnitTokenRestrictedForAddOns
 ---@param index number
 ---@param filter? AuraFilters
 ---@return TooltipData data
@@ -450,7 +450,7 @@ function C_TooltipInfo.GetUnitBuff(unitToken, index, filter) end
 function C_TooltipInfo.GetUnitBuffByAuraInstanceID(unitToken, auraInstanceID, filter) end
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_TooltipInfo.GetUnitDebuff)
----@param unitToken UnitToken
+---@param unitToken UnitTokenRestrictedForAddOns
 ---@param index number
 ---@param filter? AuraFilters
 ---@return TooltipData data

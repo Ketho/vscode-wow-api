@@ -1,5 +1,5 @@
 ---@meta _
----@class NumberAbbrevData
+---@class NumberAbbreviationBreakpoint
 ---@field breakpoint number
 ---@field abbreviation string
 ---@field significandDivisor number

@@ -29,7 +29,8 @@ function C_TransmogOutfitInfo.ClearAllPendingTransmogs() end
 function C_TransmogOutfitInfo.ClearDisplayedOutfit(trigger, toggleLock) end
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_TransmogOutfitInfo.CommitAndApplyAllPending)
-function C_TransmogOutfitInfo.CommitAndApplyAllPending() end
+---@param useAvailableDiscount boolean
+function C_TransmogOutfitInfo.CommitAndApplyAllPending(useAvailableDiscount) end
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_TransmogOutfitInfo.CommitOutfitInfo)
 ---@param outfitID number
@@ -186,6 +187,10 @@ function C_TransmogOutfitInfo.HasPendingOutfitSituations() end
 ---@return boolean hasPending
 function C_TransmogOutfitInfo.HasPendingOutfitTransmogs() end
 
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_TransmogOutfitInfo.InTransmogEvent)
+---@return boolean inTransmogEvent
+function C_TransmogOutfitInfo.InTransmogEvent() end
+
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_TransmogOutfitInfo.IsEquippedGearOutfitDisplayed)
 ---@return boolean isDisplayed
 function C_TransmogOutfitInfo.IsEquippedGearOutfitDisplayed() end
@@ -203,6 +208,10 @@ function C_TransmogOutfitInfo.IsLockedOutfit(outfitID) end
 ---@param slot Enum.TransmogOutfitSlot
 ---@return boolean isWeaponSlot
 function C_TransmogOutfitInfo.IsSlotWeaponSlot(slot) end
+
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_TransmogOutfitInfo.IsUsableDiscountAvailable)
+---@return boolean isAvailable
+function C_TransmogOutfitInfo.IsUsableDiscountAvailable() end
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_TransmogOutfitInfo.IsValidTransmogOutfitName)
 ---@param name string
@@ -230,6 +239,10 @@ function C_TransmogOutfitInfo.SetOutfitSituationsEnabled(enabled) end
 ---@param transmogCustomSetID number
 function C_TransmogOutfitInfo.SetOutfitToCustomSet(transmogCustomSetID) end
 
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_TransmogOutfitInfo.SetOutfitToOutfit)
+---@param outfitID number
+function C_TransmogOutfitInfo.SetOutfitToOutfit(outfitID) end
+
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_TransmogOutfitInfo.SetOutfitToSet)
 ---@param transmogSetID number
 function C_TransmogOutfitInfo.SetOutfitToSet(transmogSetID) end
@@ -256,6 +269,10 @@ function C_TransmogOutfitInfo.SetViewedWeaponOptionForSlot(slot, weaponOption) e
 ---@param slot Enum.TransmogOutfitSlot
 ---@return boolean hasSecondary
 function C_TransmogOutfitInfo.SlotHasSecondary(slot) end
+
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_TransmogOutfitInfo.TransmogEventActive)
+---@return boolean transmogEventActive
+function C_TransmogOutfitInfo.TransmogEventActive() end
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_TransmogOutfitInfo.UpdatePendingSituation)
 ---@param option TransmogSituationOption

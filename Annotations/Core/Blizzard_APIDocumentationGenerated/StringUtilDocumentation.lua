@@ -46,8 +46,14 @@ function C_StringUtil.RoundToNearestString(number) end
 ---@param maintainBrackets? boolean Default = false
 ---@param stripNewlines? boolean Default = false
 ---@param maintainAtlases? boolean Default = false
+---@param maintainTextures? boolean Default = false
 ---@return stringView stripped
-function C_StringUtil.StripHyperlinks(text, maintainColor, maintainBrackets, stripNewlines, maintainAtlases) end
+function C_StringUtil.StripHyperlinks(text, maintainColor, maintainBrackets, stripNewlines, maintainAtlases, maintainTextures) end
+
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_StringUtil.StripTextureMarkupForLooseFiles)
+---@param text string
+---@return stringView stripped
+function C_StringUtil.StripTextureMarkupForLooseFiles(text) end
 
 ---Returns a string with all bytes in the 'characters' set removed from the start and end.
 ---
@@ -78,3 +84,4 @@ function C_StringUtil.WrapString(infix, prefix, suffix) end
 ---@field maintainBrackets boolean? Default = false
 ---@field stripNewlines boolean? Default = false
 ---@field maintainAtlases boolean? Default = false
+---@field maintainTextures boolean? Default = false

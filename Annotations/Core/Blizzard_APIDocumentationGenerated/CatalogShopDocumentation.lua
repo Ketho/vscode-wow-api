@@ -6,12 +6,22 @@ C_CatalogShop = {}
 ---@return boolean canPurchaseProducts
 function C_CatalogShop.BulkPurchaseProducts(productIDs) end
 
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_CatalogShop.BulkRefundDecors)
+---@param decorGUIDs WOWGUID[]
+function C_CatalogShop.BulkRefundDecors(decorGUIDs) end
+
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_CatalogShop.CloseCatalogShopInteraction)
 function C_CatalogShop.CloseCatalogShopInteraction() end
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_CatalogShop.ConfirmHousingPurchase)
 ---@param productIDs number[]
 function C_CatalogShop.ConfirmHousingPurchase(productIDs) end
+
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_CatalogShop.FindBestCurrencyProductForNeededAmount)
+---@param vcCurrencyCode string
+---@param amountNeeded number
+---@return number? vcProductID
+function C_CatalogShop.FindBestCurrencyProductForNeededAmount(vcCurrencyCode, amountNeeded) end
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_CatalogShop.GetAvailableCategoryIDs)
 ---@return number[] categoryIDs
@@ -99,6 +109,10 @@ function C_CatalogShop.GetSectionIDsForCategory(categoryID) end
 ---@return CatalogShopSpellVisualInfo spellVisualInfo
 function C_CatalogShop.GetSpellVisualInfoForMount(spellVisualID) end
 
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_CatalogShop.GetVCProductInfos)
+---@return CatalogShopVCProductInfo[] vcProductInfos
+function C_CatalogShop.GetVCProductInfos() end
+
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_CatalogShop.GetVirtualCurrencyBalance)
 ---@param currencyCode string
 ---@return string? balance
@@ -115,6 +129,9 @@ function C_CatalogShop.IsShop2Enabled() end
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_CatalogShop.OnLegalDisclaimerClicked)
 ---@param catalogShopProductID number
 function C_CatalogShop.OnLegalDisclaimerClicked(catalogShopProductID) end
+
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_CatalogShop.OnLegalPersonalizedOptOutClicked)
+function C_CatalogShop.OnLegalPersonalizedOptOutClicked() end
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_CatalogShop.OpenCatalogShopInteractionFromHouse)
 ---@return string shoppingSessionUUIDStr
@@ -194,8 +211,8 @@ function C_CatalogShop.StartHousingVCPurchaseConfirmation(productID) end
 ---@field productType string?
 ---@field itemDescription string?
 ---@field hasUnknownLicense boolean
+---@field productPMTURL string?
 ---@field otherProductImageAtlasName string?
----@field otherProductPMTURL string?
 ---@field otherProductGameTitleBaseTag string?
 ---@field otherProductGameType string?
 ---@field customLoopingSoundStart number?
@@ -250,6 +267,7 @@ function C_CatalogShop.StartHousingVCPurchaseConfirmation(productID) end
 ---@field shouldShowOriginalPrice boolean
 ---@field wideCardBGOverrideProductURL string?
 ---@field consumableQuantity number?
+---@field isVCProduct boolean
 
 ---@class CatalogShopSectionInfo
 ---@field ID number
@@ -257,6 +275,7 @@ function C_CatalogShop.StartHousingVCPurchaseConfirmation(productID) end
 ---@field parentCatalogShopCategoryInfoID number?
 ---@field cardType string?
 ---@field scrollGridSize number?
+---@field shouldShowRecommendationOptOutDisclaimer boolean
 
 ---@class CatalogShopSpellVisualInfo
 ---@field animID number?
@@ -269,6 +288,9 @@ function C_CatalogShop.StartHousingVCPurchaseConfirmation(productID) end
 ---@field invType string
 ---@field quality Enum.ItemQuality
 
+---@class CatalogShopVCProductInfo
+---@field vcProductID number
+
 ---@class CatalogShopVirtualCurrency
 ---@field amount number
 ---@field currencyCode string
@@ -276,4 +298,5 @@ function C_CatalogShop.StartHousingVCPurchaseConfirmation(productID) end
 ---@class RefundableDecorInfo
 ---@field decorGUID WOWGUID
 ---@field timeRemainingSeconds time_t
----@field standaloneDecorProductID number
+---@field name string
+---@field price string

@@ -76,6 +76,20 @@ function C_Secrets.ShouldSpellBookItemCooldownBeSecret(spellBookItemSlotIndex, s
 ---@return boolean isCooldownSecret
 function C_Secrets.ShouldSpellCooldownBeSecret(spellIdentifier) end
 
+---Returns true if information about a totem slot will produce secret values if queried.
+---
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_Secrets.ShouldTotemSlotBeSecret)
+---@param slot number
+---@return boolean isTotemSecret
+function C_Secrets.ShouldTotemSlotBeSecret(slot) end
+
+---Returns true if information about a spell when associated with a totem slot will produce secret values if queried.
+---
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_Secrets.ShouldTotemSpellBeSecret)
+---@param spellID number
+---@return boolean isTotemSecret
+function C_Secrets.ShouldTotemSpellBeSecret(spellID) end
+
 ---Returns true if a given aura index will produce secret values if queried.
 ---
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_Secrets.ShouldUnitAuraIndexBeSecret)

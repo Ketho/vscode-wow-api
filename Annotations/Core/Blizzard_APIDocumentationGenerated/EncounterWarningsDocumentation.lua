@@ -1,6 +1,11 @@
 ---@meta _
 C_EncounterWarnings = {}
 
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_EncounterWarnings.GetColorForSeverity)
+---@param severity Enum.EncounterEventSeverity
+---@return colorRGB color
+function C_EncounterWarnings.GetColorForSeverity(severity) end
+
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_EncounterWarnings.GetEditModeWarningInfo)
 ---@param severity Enum.EncounterEventSeverity
 ---@return EncounterWarningInfo warningInfo
@@ -33,6 +38,7 @@ function C_EncounterWarnings.PlaySound(severity) end
 ---@field iconFileID number
 ---@field tooltipSpellID number
 ---@field isDeadly boolean
+---@field color colorRGB
 ---@field duration DurationSeconds
 ---@field severity Enum.EncounterEventSeverity
 ---@field shouldPlaySound boolean

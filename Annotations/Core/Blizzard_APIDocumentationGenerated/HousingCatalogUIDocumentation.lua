@@ -91,6 +91,13 @@ function C_HousingCatalog.GetFeaturedBundles() end
 ---@return HousingFeaturedDecorEntry[] entryInfos
 function C_HousingCatalog.GetFeaturedDecor() end
 
+---Returns market info for a specific decor. This is decor-only for now but should be extended to support entry type and recordID generically
+---
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_HousingCatalog.GetMarketInfoForDecor)
+---@param decorID number
+---@return HousingMarketInfo? marketInfo
+function C_HousingCatalog.GetMarketInfoForDecor(decorID) end
+
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_HousingCatalog.HasFeaturedEntries)
 ---@return boolean hasEntries
 function C_HousingCatalog.HasFeaturedEntries() end
@@ -171,7 +178,6 @@ function C_HousingCatalog.SetPreviewCartItemShown(decorGUID, shown) end
 ---@field quality Enum.ItemQuality?
 ---@field customizations string[]
 ---@field dyeIDs number[]
----@field marketInfo HousingMarketInfo?
 ---@field firstAcquisitionBonus number
 ---@field sourceText string
 

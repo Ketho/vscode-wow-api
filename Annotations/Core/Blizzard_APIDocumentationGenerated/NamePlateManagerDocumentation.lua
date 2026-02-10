@@ -14,14 +14,14 @@ function C_NamePlateManager.GetNamePlateHitTestInsets(type) end
 ---Returns whether the unit to which the nameplate is attached is behind the player's camera.
 ---
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_NamePlateManager.IsNamePlateUnitBehindCamera)
----@param unitToken UnitToken
+---@param unitToken UnitTokenNamePlate
 ---@return boolean isBehindCamera
 function C_NamePlateManager.IsNamePlateUnitBehindCamera(unitToken) end
 
 ---Set the frame used to determine where the mouse should interact with the nameplate. Used to control which part of the nameplate is clickable.
 ---
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_NamePlateManager.SetNamePlateHitTestFrame)
----@param unitToken UnitToken
+---@param unitToken UnitTokenNamePlate
 ---@param hitTestFrame SimpleFrame
 function C_NamePlateManager.SetNamePlateHitTestFrame(unitToken, hitTestFrame) end
 
@@ -38,6 +38,6 @@ function C_NamePlateManager.SetNamePlateHitTestInsets(type, left, right, top, bo
 ---Set whether the nameplate attached to a unit is considered simplified, which can change the way it's displayed.
 ---
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_NamePlateManager.SetNamePlateSimplified)
----@param unitToken UnitToken
+---@param unitToken UnitTokenNamePlate
 ---@param isSimplified boolean
 function C_NamePlateManager.SetNamePlateSimplified(unitToken, isSimplified) end

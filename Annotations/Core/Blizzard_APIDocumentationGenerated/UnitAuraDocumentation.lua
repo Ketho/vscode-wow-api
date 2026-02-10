@@ -49,26 +49,26 @@ function C_UnitAuras.GetAuraApplicationDisplayCount(auraInstanceUnit, auraInstan
 function C_UnitAuras.GetAuraBaseDuration(auraInstanceUnit, auraInstanceID, spellID) end
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_UnitAuras.GetAuraDataByAuraInstanceID)
----@param unit UnitToken
+---@param unit UnitTokenRestrictedForAddOns
 ---@param auraInstanceID number
 ---@return AuraData? aura
 function C_UnitAuras.GetAuraDataByAuraInstanceID(unit, auraInstanceID) end
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_UnitAuras.GetAuraDataByIndex)
----@param unit UnitToken
+---@param unit UnitTokenRestrictedForAddOns
 ---@param index number
 ---@param filter? AuraFilters
 ---@return AuraData? aura
 function C_UnitAuras.GetAuraDataByIndex(unit, index, filter) end
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_UnitAuras.GetAuraDataBySlot)
----@param unit UnitToken
+---@param unit UnitTokenRestrictedForAddOns
 ---@param slot number
 ---@return AuraData? aura
 function C_UnitAuras.GetAuraDataBySlot(unit, slot) end
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_UnitAuras.GetAuraDataBySpellName)
----@param unit UnitToken
+---@param unit UnitTokenRestrictedForAddOns
 ---@param spellName string
 ---@param filter? AuraFilters
 ---@return AuraData? aura
@@ -90,7 +90,7 @@ function C_UnitAuras.GetAuraDispelTypeColor(auraInstanceUnit, auraInstanceID, cu
 function C_UnitAuras.GetAuraDuration(auraInstanceUnit, auraInstanceID) end
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_UnitAuras.GetAuraSlots)
----@param unit UnitToken
+---@param unit UnitTokenRestrictedForAddOns
 ---@param filter? AuraFilters
 ---@param maxSlots? number
 ---@param continuationToken? number
@@ -99,7 +99,7 @@ function C_UnitAuras.GetAuraDuration(auraInstanceUnit, auraInstanceID) end
 function C_UnitAuras.GetAuraSlots(unit, filter, maxSlots, continuationToken) end
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_UnitAuras.GetBuffDataByIndex)
----@param unit UnitToken
+---@param unit UnitTokenRestrictedForAddOns
 ---@param index number
 ---@param filter? AuraFilters
 ---@return AuraData? aura
@@ -111,7 +111,7 @@ function C_UnitAuras.GetBuffDataByIndex(unit, index, filter) end
 function C_UnitAuras.GetCooldownAuraBySpellID(spellID) end
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_UnitAuras.GetDebuffDataByIndex)
----@param unit UnitToken
+---@param unit UnitTokenRestrictedForAddOns
 ---@param index number
 ---@param filter? AuraFilters
 ---@return AuraData? aura
@@ -134,13 +134,13 @@ function C_UnitAuras.GetRefreshExtendedDuration(auraInstanceUnit, auraInstanceID
 ---Returns the first instance of an aura on a unit matching a given spell ID. Returns nil if no such aura is found. Additionally can return nil if querying a unit that is not visible (eg. party members on other maps).
 ---
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_UnitAuras.GetUnitAuraBySpellID)
----@param unit UnitToken
+---@param unit UnitTokenRestrictedForAddOns
 ---@param spellID number
 ---@return AuraData? aura
 function C_UnitAuras.GetUnitAuraBySpellID(unit, spellID) end
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_UnitAuras.GetUnitAuraInstanceIDs)
----@param unit UnitToken
+---@param unit UnitTokenRestrictedForAddOns
 ---@param filter AuraFilters
 ---@param maxCount? number
 ---@param sortRule? Enum.UnitAuraSortRule Default = Unsorted
@@ -149,7 +149,7 @@ function C_UnitAuras.GetUnitAuraBySpellID(unit, spellID) end
 function C_UnitAuras.GetUnitAuraInstanceIDs(unit, filter, maxCount, sortRule, sortDirection) end
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_UnitAuras.GetUnitAuras)
----@param unit UnitToken
+---@param unit UnitTokenRestrictedForAddOns
 ---@param filter AuraFilters
 ---@param maxCount? number
 ---@param sortRule? Enum.UnitAuraSortRule Default = Unsorted
@@ -158,7 +158,7 @@ function C_UnitAuras.GetUnitAuraInstanceIDs(unit, filter, maxCount, sortRule, so
 function C_UnitAuras.GetUnitAuras(unit, filter, maxCount, sortRule, sortDirection) end
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_UnitAuras.IsAuraFilteredOutByInstanceID)
----@param unit UnitToken
+---@param unit UnitTokenRestrictedForAddOns
 ---@param auraInstanceID number
 ---@param filter AuraFilters
 ---@return boolean isFiltered

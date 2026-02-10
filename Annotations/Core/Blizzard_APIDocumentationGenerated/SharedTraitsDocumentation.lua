@@ -360,6 +360,7 @@ function C_Traits.TryRefundToNode(configID, nodeID, entryID) end
 ---@field activeEntry TraitEntryRankInfo?
 ---@field nextEntry TraitEntryRankInfo?
 ---@field maxRanks number
+---@field totalMaxRanks number
 ---@field type Enum.TraitNodeType
 ---@field visibleEdges TraitOutEdgeInfo[]
 ---@field meetsEdgeRequirements boolean
@@ -405,6 +406,8 @@ function C_Traits.TryRefundToNode(configID, nodeID, entryID) end
 ---@field gates TraitGateInfo[]
 ---@field hideSingleRankNumbers boolean
 ---@field rootNodeID number?
+---@field uiTextureKit textureKit
+---@field titleText string?
 
 ---@class TreeCurrencyInfo
 ---@field traitCurrencyID number

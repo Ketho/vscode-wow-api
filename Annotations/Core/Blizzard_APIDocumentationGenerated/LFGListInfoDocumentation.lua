@@ -182,9 +182,18 @@ function C_LFGList.HasSearchResultInfo(searchResultID) end
 ---@return boolean isAuthenticated
 function C_LFGList.IsPlayerAuthenticatedForLFG(activityCategoryID) end
 
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_LFGList.IsPlayerValidForEndgameFieldEdits)
+---@return boolean isValid
+function C_LFGList.IsPlayerValidForEndgameFieldEdits() end
+
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_LFGList.IsPremadeGroupFinderEnabled)
 ---@return boolean enabled
 function C_LFGList.IsPremadeGroupFinderEnabled() end
+
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_LFGList.ListingUsesEndgameEditRestrictions)
+---@param activityID number
+---@return boolean isEndgameListing
+function C_LFGList.ListingUsesEndgameEditRestrictions(activityID) end
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_LFGList.ReportGroupAsAdvertisement)
 ---@param searchResultID number

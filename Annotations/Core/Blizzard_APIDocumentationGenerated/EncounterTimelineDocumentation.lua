@@ -49,6 +49,12 @@ function C_EncounterTimeline.GetCurrentTime() end
 ---@return number count
 function C_EncounterTimeline.GetEventCountBySource(source) end
 
+---Returns the duration at which timeline events will be highlighted for imminency.
+---
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_EncounterTimeline.GetEventHighlightTime)
+---@return DurationSeconds highlightTime
+function C_EncounterTimeline.GetEventHighlightTime() end
+
 ---Returns information about a timeline event. This data is generally expected to be static for the lifetime of an event.
 ---
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_EncounterTimeline.GetEventInfo)
@@ -83,6 +89,13 @@ function C_EncounterTimeline.GetEventTimeElapsed(eventID) end
 ---@return DurationSeconds timeRemaining
 function C_EncounterTimeline.GetEventTimeRemaining(eventID) end
 
+---Returns a Duration object that tracks the elapsed duration of a timeline event. This object tracks the range [0, duration] of the event and automatically pauses its progression based on event state.
+---
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_EncounterTimeline.GetEventTimer)
+---@param eventID EncounterTimelineEventID
+---@return LuaDurationObject? duration
+function C_EncounterTimeline.GetEventTimer(eventID) end
+
 ---Returns information about the position of an event on the timeline.
 ---
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_EncounterTimeline.GetEventTrack)
@@ -90,6 +103,16 @@ function C_EncounterTimeline.GetEventTimeRemaining(eventID) end
 ---@return Enum.EncounterTimelineTrack track
 ---@return number? trackSortIndex
 function C_EncounterTimeline.GetEventTrack(eventID) end
+
+---Returns a sorted list of event IDs present in the timeline from shortest to longest remaining durations, meeting the requirements of the specified filters.
+---
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_EncounterTimeline.GetSortedEventList)
+---@param maxEventCount? number
+---@param maxEventDuration? DurationSeconds
+---@param excludeTerminalStates? boolean Default = true
+---@param excludeHiddenEvents? boolean Default = true
+---@return EncounterTimelineEventID[] events
+function C_EncounterTimeline.GetSortedEventList(maxEventCount, maxEventDuration, excludeTerminalStates, excludeHiddenEvents) end
 
 ---Returns information for a single timeline track.
 ---
@@ -103,6 +126,26 @@ function C_EncounterTimeline.GetTrackInfo(track) end
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_EncounterTimeline.GetTrackList)
 ---@return EncounterTimelineTrackInfo[] tracks
 function C_EncounterTimeline.GetTrackList() end
+
+---Returns the maximum permitted event duration on a single timeline track.
+---
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_EncounterTimeline.GetTrackMaxEventDuration)
+---@param track Enum.EncounterTimelineTrack
+---@return DurationSeconds maxEventDuration
+function C_EncounterTimeline.GetTrackMaxEventDuration(track) end
+
+---Returns the type of a single timeline track.
+---
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_EncounterTimeline.GetTrackType)
+---@param track Enum.EncounterTimelineTrack
+---@return Enum.EncounterTimelineTrackType trackType
+function C_EncounterTimeline.GetTrackType(track) end
+
+---Returns the current view type of the timeline.
+---
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_EncounterTimeline.GetViewType)
+---@return Enum.EncounterTimelineViewType viewType
+function C_EncounterTimeline.GetViewType() end
 
 ---Returns true if the timeline contains any events in the active state.
 ---
@@ -167,16 +210,29 @@ function C_EncounterTimeline.ResumeScriptEvent(eventID) end
 ---@param textures SimpleTexture[]
 function C_EncounterTimeline.SetEventIconTextures(eventID, includeIcons, textures) end
 
+---Changes the view type for the timeline. This adjusts track layouts to be more appropriate for a specific mode and optimizes event processing.
+---
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_EncounterTimeline.SetViewType)
+---@param viewType Enum.EncounterTimelineViewType
+function C_EncounterTimeline.SetViewType(viewType) end
+
+---@class EncounterTimelineEventFilter
+---@field maxEventCount number?
+---@field maxEventDuration DurationSeconds?
+---@field excludeTerminalStates boolean? Default = true
+---@field excludeHiddenEvents boolean? Default = true
+
 ---@class EncounterTimelineEventInfo
 ---@field id EncounterTimelineEventID
 ---@field source Enum.EncounterTimelineEventSource
----@field spellName stringView
+---@field spellName string
 ---@field spellID number
 ---@field iconFileID fileID
 ---@field duration DurationSeconds
 ---@field maxQueueDuration DurationSeconds
 ---@field icons Enum.EncounterEventIconmask
 ---@field severity Enum.EncounterEventSeverity
+---@field color colorRGB
 ---@field isApproximate boolean
 
 ---@class EncounterTimelineScriptEventRequest

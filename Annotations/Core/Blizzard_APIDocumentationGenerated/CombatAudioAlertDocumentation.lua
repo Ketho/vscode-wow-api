@@ -1,6 +1,16 @@
 ---@meta _
 C_CombatAudioAlert = {}
 
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_CombatAudioAlert.GetCategoryVoice)
+---@param category Enum.CombatAudioAlertCategory
+---@return number voice
+function C_CombatAudioAlert.GetCategoryVoice(category) end
+
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_CombatAudioAlert.GetCategoryVolume)
+---@param category Enum.CombatAudioAlertCategory
+---@return number volume
+function C_CombatAudioAlert.GetCategoryVolume(category) end
+
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_CombatAudioAlert.GetFormatSetting)
 ---@param unit Enum.CombatAudioAlertUnit
 ---@param alertType Enum.CombatAudioAlertType
@@ -10,10 +20,6 @@ function C_CombatAudioAlert.GetFormatSetting(unit, alertType) end
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_CombatAudioAlert.GetSpeakerSpeed)
 ---@return number speed
 function C_CombatAudioAlert.GetSpeakerSpeed() end
-
----[Documentation](https://warcraft.wiki.gg/wiki/API_C_CombatAudioAlert.GetSpeakerVolume)
----@return number volume
-function C_CombatAudioAlert.GetSpeakerVolume() end
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_CombatAudioAlert.GetSpecSetting)
 ---@param setting Enum.CombatAudioAlertSpecSetting
@@ -29,6 +35,18 @@ function C_CombatAudioAlert.GetThrottle(throttleType) end
 ---@return boolean isEnabled
 function C_CombatAudioAlert.IsEnabled() end
 
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_CombatAudioAlert.SetCategoryVoice)
+---@param category Enum.CombatAudioAlertCategory
+---@param newVal number
+---@return boolean success
+function C_CombatAudioAlert.SetCategoryVoice(category, newVal) end
+
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_CombatAudioAlert.SetCategoryVolume)
+---@param category Enum.CombatAudioAlertCategory
+---@param newVal number
+---@return boolean success
+function C_CombatAudioAlert.SetCategoryVolume(category, newVal) end
+
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_CombatAudioAlert.SetFormatSetting)
 ---@param unit Enum.CombatAudioAlertUnit
 ---@param alertType Enum.CombatAudioAlertType
@@ -40,11 +58,6 @@ function C_CombatAudioAlert.SetFormatSetting(unit, alertType, newVal) end
 ---@param newVal number
 ---@return boolean success
 function C_CombatAudioAlert.SetSpeakerSpeed(newVal) end
-
----[Documentation](https://warcraft.wiki.gg/wiki/API_C_CombatAudioAlert.SetSpeakerVolume)
----@param newVal number
----@return boolean success
-function C_CombatAudioAlert.SetSpeakerVolume(newVal) end
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_CombatAudioAlert.SetSpecSetting)
 ---@param setting Enum.CombatAudioAlertSpecSetting
@@ -60,5 +73,6 @@ function C_CombatAudioAlert.SetThrottle(throttleType, newVal) end
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_CombatAudioAlert.SpeakText)
 ---@param text string
+---@param category Enum.CombatAudioAlertCategory
 ---@param allowOverlap? boolean Default = true
-function C_CombatAudioAlert.SpeakText(text, allowOverlap) end
+function C_CombatAudioAlert.SpeakText(text, category, allowOverlap) end

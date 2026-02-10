@@ -227,17 +227,9 @@ function BNSendFriendInviteByID(ID, noteText) end
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_BNSendVerifiedBattleTagInvite)
 function BNSendVerifiedBattleTagInvite() end
 
----[Documentation](https://warcraft.wiki.gg/wiki/API_BNSetAFK)
----@param bool boolean
-function BNSetAFK(bool) end
-
 ---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_BNSetBlocked)
 function BNSetBlocked(ID, bool) end
-
----[Documentation](https://warcraft.wiki.gg/wiki/API_BNSetDND)
----@param bool boolean
-function BNSetDND(bool) end
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_BNSetFriendFavoriteFlag)
 ---@param id number
@@ -1831,34 +1823,6 @@ function C_LFGList.SaveLanguageSearchFilter(enabled) end
 ---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_LFGList.SetApplicantMemberRole)
 function C_LFGList.SetApplicantMemberRole(applicantID, memberIndex, role) end
-
----[Documentation](https://warcraft.wiki.gg/wiki/API_C_NamePlate.GetNamePlateForUnit)
----@param unit UnitToken
----@param isSecure? boolean
----@return Nameplate? nameplate
-function C_NamePlate.GetNamePlateForUnit(unit, isSecure) end
-
----#nopage  
----[Documentation](https://warcraft.wiki.gg/wiki/API_C_NamePlate.GetNamePlateSize)
-function C_NamePlate.GetNamePlateSize() end
-
----[Documentation](https://warcraft.wiki.gg/wiki/API_C_NamePlate.GetNamePlates)
----@param isSecure? boolean
----@return Nameplate[] nameplates
-function C_NamePlate.GetNamePlates(isSecure) end
-
----#nopage  
----[Documentation](https://warcraft.wiki.gg/wiki/API_C_NamePlate.GetTargetClampingInsets)
-function C_NamePlate.GetTargetClampingInsets() end
-
----#nopage  
----[Documentation](https://warcraft.wiki.gg/wiki/API_C_NamePlate.SetNamePlateSize)
-function C_NamePlate.SetNamePlateSize() end
-
----[Documentation](https://warcraft.wiki.gg/wiki/API_C_NamePlate.SetTargetClampingInsets)
----@param verticalInset number
----@param unk number
-function C_NamePlate.SetTargetClampingInsets(verticalInset, unk) end
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_PetBattles.AcceptPVPDuel)
 function C_PetBattles.AcceptPVPDuel() end
@@ -4594,10 +4558,6 @@ function GetCurrentGlyphNameForSpell(spellID) end
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_GetCurrentGraphicsAPI)
 ---@return string gxAPI
 function GetCurrentGraphicsAPI() end
-
----#nopage  
----[Documentation](https://warcraft.wiki.gg/wiki/API_GetCurrentGraphicsSetting)
-function GetCurrentGraphicsSetting() end
 
 ---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_GetCurrentGuildBankTab)
@@ -8352,10 +8312,6 @@ function SetChatWindowSize(index, size) end
 ---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_SetChatWindowUninteractable)
 function SetChatWindowUninteractable(id, isUninteractable) end
-
----#nopage  
----[Documentation](https://warcraft.wiki.gg/wiki/API_SetCurrentGraphicsSetting)
-function SetCurrentGraphicsSetting() end
 
 ---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_SetCurrentGuildBankTab)

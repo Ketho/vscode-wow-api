@@ -23,7 +23,7 @@ function BreakUpLargeNumbers(largeNumber, natural) end
 function CaseAccentInsensitiveParse(name) end
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_CreateAbbreviateConfig)
----@param data NumberAbbrevData[]
+---@param data NumberAbbreviationBreakpoint[]
 ---@return AbbreviateConfig config
 function CreateAbbreviateConfig(data) end
 
@@ -54,6 +54,6 @@ function LocalizedClassList(isFemale) end
 function SetEuropeanNumbers(enabled) end
 
 ---@class NumberAbbrevOptions
----@field breakpointData NumberAbbrevData[]?
+---@field breakpointData NumberAbbreviationBreakpoint[]?
 ---@field locale string?
 ---@field config AbbreviateConfig?

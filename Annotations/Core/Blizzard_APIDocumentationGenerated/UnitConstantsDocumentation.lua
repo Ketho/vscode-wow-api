@@ -12,6 +12,7 @@
 ---@field iconAnchor AnchorBinding
 ---@field iconWidth uiUnit
 ---@field iconHeight uiUnit
+---@field borderScale uiUnit?
 
 ---@class UnitAuraUpdateInfo
 ---@field isFullUpdate boolean? Default = false
@@ -27,6 +28,7 @@
 ---@field showCountdownNumbers boolean
 ---@field iconWidth uiUnit?
 ---@field iconHeight uiUnit?
+---@field borderScale uiUnit?
 
 ---@class UnitPrivateAuraAppliedSoundInfo
 ---@field unitToken string

@@ -55,18 +55,18 @@ function C_VoiceChat.GetAvailableOutputDevices() end
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_VoiceChat.GetChannel)
 ---@param channelID number
----@return VoiceChatChannel? channel
+---@return VoiceChatChannel channel
 function C_VoiceChat.GetChannel(channelID) end
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_VoiceChat.GetChannelForChannelType)
 ---@param channelType Enum.ChatChannelType
----@return VoiceChatChannel? channel
+---@return VoiceChatChannel channel
 function C_VoiceChat.GetChannelForChannelType(channelType) end
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_VoiceChat.GetChannelForCommunityStream)
 ---@param clubId ClubId
 ---@param streamId ClubStreamId
----@return VoiceChatChannel? channel
+---@return VoiceChatChannel channel
 function C_VoiceChat.GetChannelForCommunityStream(clubId, streamId) end
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_VoiceChat.GetCommunicationMode)

@@ -125,6 +125,13 @@ export const data: CVarInterface = {
 		category: 1,
 		help: "Brightness adjustment. Range: [0 - 100]",
 	},
+	caadebuffselfalert: {
+		name: "CAADebuffSelfAlert",
+		default: "0",
+		category: 4,
+		scope: "Character",
+		help: "Announce when a dispellable debuff is applied to the player using a special format (0=off)",
+	},
 	caaenabled: {
 		name: "CAAEnabled",
 		default: "0",
@@ -160,6 +167,20 @@ export const data: CVarInterface = {
 		scope: "Character",
 		help: "Announce party member indices to indicate current health when it's below X percent. Frequency of announcements are affected by remaining health and CAAPartyHealthFrequencySpeed",
 	},
+	caapartyhealthvoice: {
+		name: "CAAPartyHealthVoice",
+		default: "0",
+		category: 4,
+		scope: "Character",
+		help: "Voice to use for party health combat audio alerts",
+	},
+	caapartyhealthvolume: {
+		name: "CAAPartyHealthVolume",
+		default: "100",
+		category: 4,
+		scope: "Character",
+		help: "Volume of party health combat audio alerts (0 to 100)",
+	},
 	caaplayercastformat: {
 		name: "CAAPlayerCastFormat",
 		default: "4",
@@ -188,6 +209,20 @@ export const data: CVarInterface = {
 		scope: "Character",
 		help: "The player's casts will only be read every X seconds at most",
 	},
+	caaplayercastvoice: {
+		name: "CAAPlayerCastVoice",
+		default: "0",
+		category: 4,
+		scope: "Character",
+		help: "Voice to use for player cast combat audio alerts",
+	},
+	caaplayercastvolume: {
+		name: "CAAPlayerCastVolume",
+		default: "100",
+		category: 4,
+		scope: "Character",
+		help: "Volume of player cast combat audio alerts (0 to 100)",
+	},
 	caaplayerhealthformat: {
 		name: "CAAPlayerHealthFormat",
 		default: "1",
@@ -208,6 +243,20 @@ export const data: CVarInterface = {
 		category: 4,
 		scope: "Character",
 		help: "The player's health will only be read every X seconds at most",
+	},
+	caaplayerhealthvoice: {
+		name: "CAAPlayerHealthVoice",
+		default: "0",
+		category: 4,
+		scope: "Character",
+		help: "Voice to use for player health combat audio alerts",
+	},
+	caaplayerhealthvolume: {
+		name: "CAAPlayerHealthVolume",
+		default: "100",
+		category: 4,
+		scope: "Character",
+		help: "Volume of player health combat audio alerts (0 to 100)",
 	},
 	caaresource1formats: {
 		name: "CAAResource1Formats",
@@ -230,6 +279,20 @@ export const data: CVarInterface = {
 		scope: "Account",
 		help: "Updates to the player's first resource will only be read every X seconds at most",
 	},
+	caaresource1voice: {
+		name: "CAAResource1Voice",
+		default: "",
+		category: 4,
+		scope: "Account",
+		help: "Stores the voice to use (for each spec) when announcing the player's first resource",
+	},
+	caaresource1volume: {
+		name: "CAAResource1Volume",
+		default: "",
+		category: 4,
+		scope: "Account",
+		help: "Stores the volume to use (for each spec) when announcing the player's first resource (0 to 100)",
+	},
 	caaresource2formats: {
 		name: "CAAResource2Formats",
 		default: "",
@@ -250,6 +313,20 @@ export const data: CVarInterface = {
 		category: 4,
 		scope: "Account",
 		help: "Updates to the player's second resource will only be read every X seconds at most",
+	},
+	caaresource2voice: {
+		name: "CAAResource2Voice",
+		default: "",
+		category: 4,
+		scope: "Account",
+		help: "Stores the voice to use (for each spec) when announcing the player's second resource",
+	},
+	caaresource2volume: {
+		name: "CAAResource2Volume",
+		default: "",
+		category: 4,
+		scope: "Account",
+		help: "Stores the volume to use (for each spec) when announcing the player's second resource (0 to 100)",
 	},
 	caasaycombatend: {
 		name: "CAASayCombatEnd",
@@ -278,6 +355,41 @@ export const data: CVarInterface = {
 		category: 4,
 		scope: "Character",
 		help: "Say the target's name when a new target is selected",
+	},
+	caasayyourdebuffs: {
+		name: "CAASayYourDebuffs",
+		default: "1",
+		category: 4,
+		scope: "Character",
+		help: "Announce when a debuff is applied to the player",
+	},
+	caasayyourdebuffsformat: {
+		name: "CAASayYourDebuffsFormat",
+		default: "0",
+		category: 4,
+		scope: "Character",
+		help: "Format string to use when announcing debuffs applied to the player",
+	},
+	caasayyourdebuffsminduration: {
+		name: "CAASayYourDebuffsMinDuration",
+		default: "1.500000",
+		category: 4,
+		scope: "Character",
+		help: "Minimum duration of debuffs to be announced (0 means all debuffs)",
+	},
+	caasayyourdebuffsvoice: {
+		name: "CAASayYourDebuffsVoice",
+		default: "0",
+		category: 4,
+		scope: "Character",
+		help: "Voice to use for player debuff combat audio alerts",
+	},
+	caasayyourdebuffsvolume: {
+		name: "CAASayYourDebuffsVolume",
+		default: "100",
+		category: 4,
+		scope: "Character",
+		help: "Volume of player debuff combat audio alerts (0 to 100)",
 	},
 	caaspeed: {
 		name: "CAASpeed",
@@ -314,6 +426,20 @@ export const data: CVarInterface = {
 		scope: "Character",
 		help: "The target's casts will only be read every X seconds at most",
 	},
+	caatargetcastvoice: {
+		name: "CAATargetCastVoice",
+		default: "0",
+		category: 4,
+		scope: "Character",
+		help: "Voice to use for target cast combat audio alerts",
+	},
+	caatargetcastvolume: {
+		name: "CAATargetCastVolume",
+		default: "100",
+		category: 4,
+		scope: "Character",
+		help: "Volume of target cast combat audio alerts (0 to 100)",
+	},
 	caatargetdeathbehavior: {
 		name: "CAATargetDeathBehavior",
 		default: "0",
@@ -342,12 +468,26 @@ export const data: CVarInterface = {
 		scope: "Character",
 		help: "The target's health will only be read every X seconds at most",
 	},
+	caatargethealthvoice: {
+		name: "CAATargetHealthVoice",
+		default: "0",
+		category: 4,
+		scope: "Character",
+		help: "Voice to use for target health combat audio alerts",
+	},
+	caatargethealthvolume: {
+		name: "CAATargetHealthVolume",
+		default: "100",
+		category: 4,
+		scope: "Character",
+		help: "Volume of target health combat audio alerts (0 to 100)",
+	},
 	caavoice: {
 		name: "CAAVoice",
 		default: "0",
 		category: 4,
 		scope: "Character",
-		help: "Voice to use for combat audio alerts",
+		help: "Primary voice to use for combat audio alerts",
 	},
 	caavolume: {
 		name: "CAAVolume",
@@ -2634,23 +2774,20 @@ export const data: CVarInterface = {
 		default: "0",
 		category: 5,
 	},
-	worldtextcritscreeny: {
-		name: "WorldTextCritScreenY",
+	worldtextcritscreeny_v2: {
+		name: "WorldTextCritScreenY_v2",
 		default: "0.0275",
 		category: 4,
-		scope: "Character",
 	},
-	worldtextgravity: {
-		name: "WorldTextGravity",
+	worldtextgravity_v2: {
+		name: "WorldTextGravity_v2",
 		default: "0.500000",
 		category: 4,
-		scope: "Character",
 	},
-	worldtextminalpha: {
-		name: "WorldTextMinAlpha",
+	worldtextminalpha_v2: {
+		name: "WorldTextMinAlpha_v2",
 		default: "0.500000",
 		category: 4,
-		scope: "Character",
 	},
 	worldtextminsize: {
 		name: "WorldTextMinSize",
@@ -2659,65 +2796,55 @@ export const data: CVarInterface = {
 		scope: "Character",
 		help: "Smallest size used for world text like player names",
 	},
-	worldtextnonrandomz: {
-		name: "WorldTextNonRandomZ",
+	worldtextnonrandomz_v2: {
+		name: "WorldTextNonRandomZ_v2",
 		default: "2.5",
 		category: 4,
-		scope: "Character",
 	},
-	worldtextrampduration: {
-		name: "WorldTextRampDuration",
+	worldtextrampduration_v2: {
+		name: "WorldTextRampDuration_v2",
 		default: "1.000000",
 		category: 4,
-		scope: "Character",
 	},
-	worldtextramppow: {
-		name: "WorldTextRampPow",
-		default: "1.900000",
-		category: 4,
-		scope: "Character",
-	},
-	worldtextramppowcrit: {
-		name: "WorldTextRampPowCrit",
+	worldtextramppowcrit_v2: {
+		name: "WorldTextRampPowCrit_v2",
 		default: "8.000000",
 		category: 4,
-		scope: "Character",
 	},
-	worldtextrandomxy: {
-		name: "WorldTextRandomXY",
+	worldtextramppow_v2: {
+		name: "WorldTextRampPow_v2",
+		default: "1.900000",
+		category: 4,
+	},
+	worldtextrandomxy_v2: {
+		name: "WorldTextRandomXY_v2",
 		default: "0.0",
 		category: 4,
-		scope: "Character",
 	},
-	worldtextrandomzmax: {
-		name: "WorldTextRandomZMax",
+	worldtextrandomzmax_v2: {
+		name: "WorldTextRandomZMax_v2",
 		default: "1.5",
 		category: 4,
-		scope: "Character",
 	},
-	worldtextrandomzmin: {
-		name: "WorldTextRandomZMin",
+	worldtextrandomzmin_v2: {
+		name: "WorldTextRandomZMin_v2",
 		default: "0.8",
 		category: 4,
-		scope: "Character",
 	},
-	worldtextscale: {
-		name: "WorldTextScale",
+	worldtextscale_v2: {
+		name: "WorldTextScale_v2",
 		default: "1.000000",
 		category: 4,
-		scope: "Character",
 	},
-	worldtextscreeny: {
-		name: "WorldTextScreenY",
+	worldtextscreeny_v2: {
+		name: "WorldTextScreenY_v2",
 		default: "0.015",
 		category: 4,
-		scope: "Character",
 	},
-	worldtextstartposrandomness: {
-		name: "WorldTextStartPosRandomness",
+	worldtextstartposrandomness_v2: {
+		name: "WorldTextStartPosRandomness_v2",
 		default: "1.0",
 		category: 4,
-		scope: "Character",
 	},
 	accountneedsturnstrafedialog: {
 		name: "accountNeedsTurnStrafeDialog",
@@ -2826,13 +2953,6 @@ export const data: CVarInterface = {
 		scope: "Character",
 		help: "If enabled, will debounce forwards/backwards inputs used to control pitch when transitioning between dragonriding and grounded.",
 	},
-	advjournallastopened: {
-		name: "advJournalLastOpened",
-		default: "0",
-		category: 4,
-		scope: "Character",
-		help: "Last time the Adventure Journal opened",
-	},
 	advancedcombatlogging: {
 		name: "advancedCombatLogging",
 		default: "0",
@@ -2841,7 +2961,7 @@ export const data: CVarInterface = {
 	},
 	agentuid: {
 		name: "agentUID",
-		default: "wow_ptr",
+		default: "wow_beta",
 		category: 4,
 		help: "The UID provided by Battle.net to be passed to Agent",
 	},
@@ -5421,6 +5541,13 @@ export const data: CVarInterface = {
 		scope: "Account",
 		help: "If true, show the damage meter UI.",
 	},
+	damagemeterresetonnewinstance: {
+		name: "damageMeterResetOnNewInstance",
+		default: "0",
+		category: 4,
+		scope: "Account",
+		help: "If true, reset the damage meter any time the player enters a new instance.",
+	},
 	dangerousshipyardmissionwarningalreadyshown: {
 		name: "dangerousShipyardMissionWarningAlreadyShown",
 		default: "0",
@@ -5577,12 +5704,18 @@ export const data: CVarInterface = {
 		category: 6,
 		help: "Background Download (on async net thread) Enabled",
 	},
+	enableconnecttophotosharing: {
+		name: "enableConnectToPhotoSharing",
+		default: "0",
+		category: 4,
+		help: "Enables the photo sharing connection feature.",
+	},
 	enablefloatingcombattext: {
 		name: "enableFloatingCombatText",
 		default: "0",
 		category: 4,
 		scope: "Character",
-		help: "Whether to show floating combat text",
+		help: "Whether to show floating combat text for the player",
 	},
 	enablemousespeed: {
 		name: "enableMouseSpeed",
@@ -5619,11 +5752,10 @@ export const data: CVarInterface = {
 		scope: "Character",
 		help: "The ability to shutdown the AFK notification system",
 	},
-	enablepetbattlefloatingcombattext: {
-		name: "enablePetBattleFloatingCombatText",
+	enablepetbattlefloatingcombattext_v2: {
+		name: "enablePetBattleFloatingCombatText_v2",
 		default: "1",
 		category: 4,
-		scope: "Character",
 		help: "Whether to show floating combat text for pet battles",
 	},
 	enablepings: {
@@ -5668,6 +5800,7 @@ export const data: CVarInterface = {
 		default: "0",
 		category: 4,
 		scope: "Character",
+		secure: true,
 		help: "If true, hide encounter timeline events that are relevant for roles other than the player's own group role assignment. Events with no assigned role will always be shown.",
 	},
 	encountertimelinehidelongcountdowns: {
@@ -5684,12 +5817,26 @@ export const data: CVarInterface = {
 		scope: "Character",
 		help: "If true, hide all queued countdowns from the timeline.",
 	},
+	encountertimelinehighlightduration: {
+		name: "encounterTimelineHighlightDuration",
+		default: "5000",
+		category: 4,
+		scope: "Character",
+		help: "Milliseconds at which events will be signaled to trigger a highlight glow animation.",
+	},
 	encountertimelineiconographyenabled: {
 		name: "encounterTimelineIconographyEnabled",
 		default: "1",
 		category: 4,
 		scope: "Character",
 		help: "If true, enable the display of spell support iconography such as role and effect type indicators.",
+	},
+	encountertimelineshowsequencecount: {
+		name: "encounterTimelineShowSequenceCount",
+		default: "0",
+		category: 4,
+		scope: "Character",
+		help: "If true, display the spell sequence count in encounter timeline spell names",
 	},
 	encounterwarningsdefaultmessageduration: {
 		name: "encounterWarningsDefaultMessageDuration",
@@ -5943,178 +6090,136 @@ export const data: CVarInterface = {
 		category: 4,
 		help: "Enables more dynamic attitude adjustments while flying",
 	},
-	floatingcombattextallspellmechanics: {
-		name: "floatingCombatTextAllSpellMechanics",
+	floatingcombattextaurafade_v2: {
+		name: "floatingCombatTextAuraFade_v2",
 		default: "0",
 		category: 4,
-		scope: "Character",
 	},
-	floatingcombattextaurafade: {
-		name: "floatingCombatTextAuraFade",
+	floatingcombattextauras_v2: {
+		name: "floatingCombatTextAuras_v2",
 		default: "0",
 		category: 4,
-		scope: "Character",
 	},
-	floatingcombattextauras: {
-		name: "floatingCombatTextAuras",
-		default: "0",
-		category: 4,
-		scope: "Character",
-	},
-	floatingcombattextcombatdamage: {
-		name: "floatingCombatTextCombatDamage",
+	floatingcombattextcombatdamageallautos_v2: {
+		name: "floatingCombatTextCombatDamageAllAutos_v2",
 		default: "1",
 		category: 4,
-		scope: "Character",
-		help: "Display damage numbers over hostile creatures when damaged",
-	},
-	floatingcombattextcombatdamageallautos: {
-		name: "floatingCombatTextCombatDamageAllAutos",
-		default: "1",
-		category: 4,
-		scope: "Character",
 		help: "Show all auto-attack numbers, rather than hiding non-event numbers",
 	},
-	floatingcombattextcombatdamagedirectionaloffset: {
-		name: "floatingCombatTextCombatDamageDirectionalOffset",
+	floatingcombattextcombatdamagedirectionaloffset_v2: {
+		name: "floatingCombatTextCombatDamageDirectionalOffset_v2",
 		default: "1.000000",
 		category: 4,
-		scope: "Character",
 		help: "Amount to offset directional damage numbers when they start",
 	},
-	floatingcombattextcombatdamagedirectionalscale: {
-		name: "floatingCombatTextCombatDamageDirectionalScale",
+	floatingcombattextcombatdamagedirectionalscale_v2: {
+		name: "floatingCombatTextCombatDamageDirectionalScale_v2",
 		default: "1.000000",
 		category: 4,
-		scope: "Character",
 		help: "Directional damage numbers movement scale (0 = no directional numbers)",
 	},
-	floatingcombattextcombathealing: {
-		name: "floatingCombatTextCombatHealing",
+	floatingcombattextcombatdamage_v2: {
+		name: "floatingCombatTextCombatDamage_v2",
 		default: "1",
 		category: 4,
-		scope: "Character",
-		help: "Display amount of healing you did to the target",
+		help: "Display damage numbers over hostile creatures when damaged",
 	},
-	floatingcombattextcombathealingabsorbself: {
-		name: "floatingCombatTextCombatHealingAbsorbSelf",
+	floatingcombattextcombathealingabsorbself_v2: {
+		name: "floatingCombatTextCombatHealingAbsorbSelf_v2",
 		default: "1",
 		category: 4,
-		scope: "Character",
 		help: "Display amount of shield added to yourself.",
 	},
-	floatingcombattextcombathealingabsorbtarget: {
-		name: "floatingCombatTextCombatHealingAbsorbTarget",
+	floatingcombattextcombathealingabsorbtarget_v2: {
+		name: "floatingCombatTextCombatHealingAbsorbTarget_v2",
 		default: "1",
 		category: 4,
-		scope: "Character",
 		help: "Display amount of shield added to the target.",
 	},
-	floatingcombattextcombatlogperiodicspells: {
-		name: "floatingCombatTextCombatLogPeriodicSpells",
+	floatingcombattextcombathealing_v2: {
+		name: "floatingCombatTextCombatHealing_v2",
 		default: "1",
 		category: 4,
-		scope: "Character",
+		help: "Display amount of healing you did to the target",
+	},
+	floatingcombattextcombatlogperiodicspells_v2: {
+		name: "floatingCombatTextCombatLogPeriodicSpells_v2",
+		default: "1",
+		category: 4,
 		help: "Display damage caused by periodic effects",
 	},
-	floatingcombattextcombatstate: {
-		name: "floatingCombatTextCombatState",
+	floatingcombattextcombatstate_v2: {
+		name: "floatingCombatTextCombatState_v2",
 		default: "0",
 		category: 4,
-		scope: "Character",
 	},
-	floatingcombattextcombopoints: {
-		name: "floatingCombatTextComboPoints",
+	floatingcombattextcombopoints_v2: {
+		name: "floatingCombatTextComboPoints_v2",
 		default: "0",
 		category: 4,
-		scope: "Character",
 	},
-	floatingcombattextdamagereduction: {
-		name: "floatingCombatTextDamageReduction",
+	floatingcombattextdamagereduction_v2: {
+		name: "floatingCombatTextDamageReduction_v2",
 		default: "0",
 		category: 4,
-		scope: "Character",
 	},
-	floatingcombattextdodgeparrymiss: {
-		name: "floatingCombatTextDodgeParryMiss",
+	floatingcombattextdodgeparrymiss_v2: {
+		name: "floatingCombatTextDodgeParryMiss_v2",
 		default: "0",
 		category: 4,
-		scope: "Character",
 	},
-	floatingcombattextenergygains: {
-		name: "floatingCombatTextEnergyGains",
+	floatingcombattextenergygains_v2: {
+		name: "floatingCombatTextEnergyGains_v2",
 		default: "0",
 		category: 4,
-		scope: "Character",
 	},
-	floatingcombattextfloatmode: {
-		name: "floatingCombatTextFloatMode",
+	floatingcombattextfloatmode_v2: {
+		name: "floatingCombatTextFloatMode_v2",
 		default: "1",
 		category: 4,
-		scope: "Character",
-		help: "The combat text float mode",
+		help: "The combat text float mode for the player",
 	},
-	floatingcombattextfriendlyhealers: {
-		name: "floatingCombatTextFriendlyHealers",
+	floatingcombattextfriendlyhealers_v2: {
+		name: "floatingCombatTextFriendlyHealers_v2",
 		default: "0",
 		category: 4,
-		scope: "Character",
 	},
-	floatingcombattexthonorgains: {
-		name: "floatingCombatTextHonorGains",
+	floatingcombattexthonorgains_v2: {
+		name: "floatingCombatTextHonorGains_v2",
 		default: "0",
 		category: 4,
-		scope: "Character",
 	},
-	floatingcombattextlowmanahealth: {
-		name: "floatingCombatTextLowManaHealth",
+	floatingcombattextlowmanahealth_v2: {
+		name: "floatingCombatTextLowManaHealth_v2",
 		default: "1",
 		category: 4,
-		scope: "Character",
 	},
-	floatingcombattextperiodicenergygains: {
-		name: "floatingCombatTextPeriodicEnergyGains",
+	floatingcombattextperiodicenergygains_v2: {
+		name: "floatingCombatTextPeriodicEnergyGains_v2",
 		default: "0",
 		category: 4,
-		scope: "Character",
 	},
-	floatingcombattextpetmeleedamage: {
-		name: "floatingCombatTextPetMeleeDamage",
+	floatingcombattextpetmeleedamage_v2: {
+		name: "floatingCombatTextPetMeleeDamage_v2",
 		default: "1",
 		category: 4,
-		scope: "Character",
 		help: "Display pet melee damage in the world",
 	},
-	floatingcombattextpetspelldamage: {
-		name: "floatingCombatTextPetSpellDamage",
+	floatingcombattextpetspelldamage_v2: {
+		name: "floatingCombatTextPetSpellDamage_v2",
 		default: "1",
 		category: 4,
-		scope: "Character",
 		help: "Display pet spell damage in the world",
 	},
-	floatingcombattextreactives: {
-		name: "floatingCombatTextReactives",
+	floatingcombattextreactives_v2: {
+		name: "floatingCombatTextReactives_v2",
 		default: "1",
 		category: 4,
-		scope: "Character",
 	},
-	floatingcombattextrepchanges: {
-		name: "floatingCombatTextRepChanges",
+	floatingcombattextrepchanges_v2: {
+		name: "floatingCombatTextRepChanges_v2",
 		default: "0",
 		category: 4,
-		scope: "Character",
-	},
-	floatingcombattextspellmechanics: {
-		name: "floatingCombatTextSpellMechanics",
-		default: "0",
-		category: 4,
-		scope: "Character",
-	},
-	floatingcombattextspellmechanicsother: {
-		name: "floatingCombatTextSpellMechanicsOther",
-		default: "0",
-		category: 4,
-		scope: "Character",
 	},
 	forceclusteredshading: {
 		name: "forceClusteredShading",
@@ -6492,13 +6597,6 @@ export const data: CVarInterface = {
 		scope: "Character",
 		help: "Bitfield for which source filters are applied in the heirloom journal",
 	},
-	hideadventurejournalalerts: {
-		name: "hideAdventureJournalAlerts",
-		default: "0",
-		category: 4,
-		scope: "Character",
-		help: "Hide alerts shown on the Adventure Journal Microbutton",
-	},
 	hidefastloginloadingscreen: {
 		name: "hideFastLoginLoadingScreen",
 		default: "0",
@@ -6656,6 +6754,12 @@ export const data: CVarInterface = {
 		category: 1,
 		help: "do hardware detection",
 	},
+	imagesharingpublishcooldown: {
+		name: "imageSharingPublishCooldown",
+		default: "5000",
+		category: 4,
+		help: "Amount of time between allowed photo publish attempts (in milliseconds).",
+	},
 	incompletequestprioritythresholddelta: {
 		name: "incompleteQuestPriorityThresholdDelta",
 		default: "135",
@@ -6760,6 +6864,42 @@ export const data: CVarInterface = {
 		category: 4,
 		scope: "Character",
 		help: "Stores the Delves Season faction renown when Renown UI is closed",
+	},
+	lastrenownformajorfaction2503: {
+		name: "lastRenownForMajorFaction2503",
+		default: "",
+		category: 4,
+		help: "Stores the Maruuk Centaur renown when Renown UI is closed",
+	},
+	lastrenownformajorfaction2507: {
+		name: "lastRenownForMajorFaction2507",
+		default: "",
+		category: 4,
+		help: "Stores the Dragonscale Expedition renown when Renown UI is closed",
+	},
+	lastrenownformajorfaction2510: {
+		name: "lastRenownForMajorFaction2510",
+		default: "",
+		category: 4,
+		help: "Stores the Valdrakken Accord renown when Renown UI is closed",
+	},
+	lastrenownformajorfaction2511: {
+		name: "lastRenownForMajorFaction2511",
+		default: "",
+		category: 4,
+		help: "Stores the Iskaara Tuskarr renown when Renown UI is closed",
+	},
+	lastrenownformajorfaction2564: {
+		name: "lastRenownForMajorFaction2564",
+		default: "",
+		category: 4,
+		help: "Stores the Loamm Niffen renown when Renown UI is closed",
+	},
+	lastrenownformajorfaction2574: {
+		name: "lastRenownForMajorFaction2574",
+		default: "",
+		category: 4,
+		help: "Stores the Dream Warden renown when Renown UI is closed",
 	},
 	lastselectedclubid: {
 		name: "lastSelectedClubId",
@@ -7264,14 +7404,6 @@ export const data: CVarInterface = {
 		secure: true,
 		help: "The max distance to show player nameplates for game objects",
 	},
-	nameplatelargerscale: {
-		name: "nameplateLargerScale",
-		default: "1.200000",
-		category: 4,
-		scope: "Account",
-		secure: true,
-		help: "An additional scale modifier for important monster nameplates.",
-	},
 	nameplatemaxalpha: {
 		name: "nameplateMaxAlpha",
 		default: "1.000000",
@@ -7374,14 +7506,6 @@ export const data: CVarInterface = {
 		secure: true,
 		help: "Percentage amount for vertical overlap of nameplates",
 	},
-	nameplateplayerlargerscale: {
-		name: "nameplatePlayerLargerScale",
-		default: "1.800000",
-		category: 4,
-		scope: "Account",
-		secure: true,
-		help: "An additional scale modifier for player nameplates.",
-	},
 	nameplateplayermaxdistance: {
 		name: "nameplatePlayerMaxDistance",
 		default: "60.000000",
@@ -7405,14 +7529,6 @@ export const data: CVarInterface = {
 		scope: "Account",
 		secure: true,
 		help: "The scale of the selected nameplate.",
-	},
-	nameplateselfalpha: {
-		name: "nameplateSelfAlpha",
-		default: "0.750000",
-		category: 4,
-		scope: "Account",
-		secure: true,
-		help: "The alpha of the self nameplate.",
 	},
 	nameplateshowall: {
 		name: "nameplateShowAll",
@@ -7542,6 +7658,11 @@ export const data: CVarInterface = {
 		scope: "Character",
 		help: "Whether nameplates are shown for friendly players.",
 	},
+	nameplateshowfriends: {
+		name: "nameplateShowFriends",
+		default: "",
+		category: 4,
+	},
 	nameplateshowoffscreen: {
 		name: "nameplateShowOffscreen",
 		default: "0",
@@ -7563,6 +7684,13 @@ export const data: CVarInterface = {
 		scope: "Account",
 		secure: true,
 		help: "Whether the personal resource display is shown.",
+	},
+	nameplatesimplifiedscale: {
+		name: "nameplateSimplifiedScale",
+		default: "0.300000",
+		category: 4,
+		secure: true,
+		help: "Scale used for simplified nameplates.",
 	},
 	nameplatesize: {
 		name: "nameplateSize",
@@ -7593,6 +7721,13 @@ export const data: CVarInterface = {
 		scope: "Character",
 		secure: true,
 		help: "When target is off screen, position its nameplate radially around sides and bottom. 1: Target Only. 2: All In Combat",
+	},
+	nameplateuseclasscolorforfriendlyplayerunitnames: {
+		name: "nameplateUseClassColorForFriendlyPlayerUnitNames",
+		default: "0",
+		category: 4,
+		secure: true,
+		help: "Used to display the class color in friendly player unit nameplate names.",
 	},
 	nearclip: {
 		name: "nearclip",
@@ -8147,7 +8282,14 @@ export const data: CVarInterface = {
 		default: "FF2B9305",
 		category: 4,
 		scope: "Account",
-		help: "Colors raid frames with a custom color if the user doesn't want class colors, ARGB format",
+		help: "Colors raid frame health bars with a custom color if the user doesn't want class colors, ARGB format",
+	},
+	raidframeshealthbarcolorbg: {
+		name: "raidFramesHealthBarColorBG",
+		default: "FF141414",
+		category: 4,
+		scope: "Account",
+		help: "Colors raid frame backgrounds with a custom color, ARGB format",
 	},
 	raidframeshealthtext: {
 		name: "raidFramesHealthText",
@@ -8532,6 +8674,13 @@ export const data: CVarInterface = {
 		default: "0",
 		category: 4,
 		help: "Seen the level squish popup",
+	},
+	seenpurchasableclasscapstone: {
+		name: "seenPurchasableClassCapstone",
+		default: "0",
+		category: 4,
+		scope: "Account",
+		help: "Whether or not the player has ever opened the class talent UI and seen a purchasable capstone node",
 	},
 	seenregionalchatdisabled: {
 		name: "seenRegionalChatDisabled",
@@ -9171,7 +9320,7 @@ export const data: CVarInterface = {
 		name: "taintLog",
 		default: "0",
 		category: 0,
-		help: "Controls debug logging of Lua taint and restricted action events to the 'taint.log' file:\n0: Disable all logging\n1: Log blocked action errors and taint events leading up to them\n2: Log secret or tainted reads and writes of global variables\n3: Log secret or tainted reads and writes of upvalues\n4: Log secret or tainted reads and writes of table fields\n",
+		help: "Controls debug logging of Lua taint and restricted action events to the 'taint.log' file:\n0: Disable all logging\n1: Log blocked action errors and taint events leading up to them\n2: Log tainted reads and writes of global variables\n3: Log tainted reads and writes of upvalues\n4: Log tainted reads and writes of table fields\n5: Log writes of secret values to global variables, upvalues, or table fields",
 	},
 	talentpointsspent: {
 		name: "talentPointsSpent",
@@ -9610,7 +9759,7 @@ export const data: CVarInterface = {
 	},
 	unitclutterplayerthreshold: {
 		name: "unitClutterPlayerThreshold",
-		default: "10",
+		default: "9",
 		category: 4,
 		help: "The number of players that have to be nearby to trigger unit clutter",
 	},

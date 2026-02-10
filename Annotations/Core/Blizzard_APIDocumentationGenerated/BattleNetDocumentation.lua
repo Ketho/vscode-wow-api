@@ -59,10 +59,18 @@ function C_BattleNet.SendGameData(gameAccountID, prefix, data) end
 ---@return boolean success
 function C_BattleNet.SendWhisper(bnetAccountID, text) end
 
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_BattleNet.SetAFK)
+---@param isAFK? boolean Default = true
+function C_BattleNet.SetAFK(isAFK) end
+
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_BattleNet.SetCustomMessage)
 ---@param text string
 ---@return boolean success
 function C_BattleNet.SetCustomMessage(text) end
+
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_BattleNet.SetDND)
+---@param isDND? boolean Default = true
+function C_BattleNet.SetDND(isDND) end
 
 ---@class BNetAccountInfo
 ---@field bnetAccountID number

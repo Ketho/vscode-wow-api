@@ -51,6 +51,13 @@ function CreateWindow(popupStyle, topMost) end
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_dropsecretaccess)
 function dropsecretaccess() end
 
+---Invokes the '__dump' metamethod on any value (if present), returning its result.
+---
+---[Documentation](https://warcraft.wiki.gg/wiki/API_dumpobject)
+---@param value? LuaValueReference
+---@return LuaValueReference? result
+function dumpobject(value) end
+
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_GetCallstackHeight)
 ---@return number height
 function GetCallstackHeight() end
@@ -152,6 +159,15 @@ function secretunwrap(...) end
 ---@param ... LuaValueReference values
 ---@return LuaValueReference ... wrapped
 function secretwrap(...) end
+
+---Invokes a named method on an object with a secure call barrier that prevents errors or taint from function lookup and execution from propagating to the caller.
+---
+---[Documentation](https://warcraft.wiki.gg/wiki/API_securecallmethod)
+---@param object LuaValueReference
+---@param method string
+---@param ... LuaValueReference arguments
+---@return LuaValueReference ... results
+function securecallmethod(object, method, ...) end
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_SetErrorCallstackHeight)
 ---@param height? number

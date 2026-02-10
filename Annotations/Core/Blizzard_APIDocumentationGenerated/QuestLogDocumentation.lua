@@ -522,3 +522,4 @@ function C_QuestLog.UpdateCampaignHeaders() end
 ---@field seal textureAtlas
 ---@field signature string
 ---@field poiIcon textureAtlas
+---@field mapPinInfo UIMapPinInfo?

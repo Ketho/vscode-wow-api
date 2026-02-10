@@ -1,6 +1,15 @@
 ---@meta _
 Enum = {}
 
+---@enum Enum.AbbreviationDataError
+Enum.AbbreviationDataError = {
+	InvalidBreakpoint = 0,
+	InvalidSignificandDivisor = 1,
+	InvalidFractionDivisor = 2,
+	InvalidAbbreviation = 3,
+	NotMultipleOfTen = 4,
+}
+
 ---@enum Enum.AccountCurrencyTransferResult
 Enum.AccountCurrencyTransferResult = {
 	Success = 0,
@@ -1129,6 +1138,15 @@ Enum.BulkPurchaseResult = {
 	ResultPurchaseTimeout = 7,
 }
 
+---@enum Enum.BulkPurchaseStatus
+Enum.BulkPurchaseStatus = {
+	PlacingOrders = 0,
+	PurchasesPending = 1,
+	FetchEntitlements = 2,
+	Done = 3,
+	Failed = 4,
+}
+
 ---@enum Enum.BulkRefundResult
 Enum.BulkRefundResult = {
 	ResultOk = 0,
@@ -1866,6 +1884,25 @@ Enum.CombatAudioAlertCastState = {
 	OnCastEnd = 2,
 }
 
+---@enum Enum.CombatAudioAlertCategory
+Enum.CombatAudioAlertCategory = {
+	General = 0,
+	PlayerHealth = 1,
+	TargetHealth = 2,
+	PlayerCast = 3,
+	TargetCast = 4,
+	PlayerResource1 = 5,
+	PlayerResource2 = 6,
+	PartyHealth = 7,
+	PlayerDebuffs = 8,
+}
+
+---@enum Enum.CombatAudioAlertDebuffSelfAlertValues
+Enum.CombatAudioAlertDebuffSelfAlertValues = {
+	Off = 0,
+	DispelType = 1,
+}
+
 ---@enum Enum.CombatAudioAlertPartyPercentValues
 Enum.CombatAudioAlertPartyPercentValues = {
 	Off = 0,
@@ -1900,6 +1937,12 @@ Enum.CombatAudioAlertPlayerCastFormatValues = {
 	Spellname = 4,
 }
 
+---@enum Enum.CombatAudioAlertPlayerDebuffFormatValues
+Enum.CombatAudioAlertPlayerDebuffFormatValues = {
+	Full = 0,
+	NoSpellname = 1,
+}
+
 ---@enum Enum.CombatAudioAlertPlayerHealthFormatValues
 Enum.CombatAudioAlertPlayerHealthFormatValues = {
 	HealthFull = 0,
@@ -1932,9 +1975,13 @@ Enum.CombatAudioAlertSayIfTargetedType = {
 Enum.CombatAudioAlertSpecSetting = {
 	Resource1Percent = 0,
 	Resource1Format = 1,
-	Resource2Percent = 2,
-	Resource2Format = 3,
-	SayIfTargeted = 4,
+	Resource1Voice = 2,
+	Resource1Volume = 3,
+	Resource2Percent = 4,
+	Resource2Format = 5,
+	Resource2Voice = 6,
+	Resource2Volume = 7,
+	SayIfTargeted = 8,
 }
 
 ---@enum Enum.CombatAudioAlertTargetCastFormatValues
@@ -2255,6 +2302,8 @@ Enum.CooldownViewerAlertEventType = {
 	PandemicTime = 2,
 	OnCooldown = 3,
 	ChargeGained = 4,
+	OnAuraApplied = 5,
+	OnAuraRemoved = 6,
 }
 
 ---@enum Enum.CooldownViewerAlertType
@@ -2842,6 +2891,13 @@ Enum.CustomBindingType = {
 	VoicePushToTalk = 0,
 }
 
+---@enum Enum.DamageMeterCombineSessionType
+Enum.DamageMeterCombineSessionType = {
+	None = 0,
+	ChallengeMode = 1,
+	Arena = 2,
+}
+
 ---@enum Enum.DamageMeterNumbers
 Enum.DamageMeterNumbers = {
 	Minimal = 0,
@@ -2870,6 +2926,8 @@ Enum.DamageMeterSpellDetailsDisplayType = {
 	SpellCasted = 0,
 	UnitSpecificSpellCasted = 1,
 	SpellAffected = 2,
+	Deaths = 3,
+	EnemyDamageTaken = 4,
 }
 
 ---@enum Enum.DamageMeterStorageType
@@ -2881,6 +2939,8 @@ Enum.DamageMeterStorageType = {
 	Dispels = 4,
 	DamageTaken = 5,
 	AvoidableDamageTaken = 6,
+	Deaths = 7,
+	EnemyDamageTaken = 8,
 }
 
 ---@enum Enum.DamageMeterStyle
@@ -2902,6 +2962,8 @@ Enum.DamageMeterType = {
 	Dispels = 6,
 	DamageTaken = 7,
 	AvoidableDamageTaken = 8,
+	Deaths = 9,
+	EnemyDamageTaken = 10,
 }
 
 ---@enum Enum.DamageMeterVisibility
@@ -3192,8 +3254,12 @@ Enum.EditModeEncounterEventsSetting = {
 	BackgroundTransparency = 5,
 	Transparency = 6,
 	Visibility = 7,
-	ShowTooltips = 8,
+	TooltipAnchor = 8,
 	ShowTimer = 9,
+	ViewType = 10,
+	FlipHorizontally = 11,
+	BarWidth = 12,
+	Padding = 13,
 }
 
 ---@enum Enum.EditModeEncounterEventsSystemIndices
@@ -3351,6 +3417,7 @@ Enum.EncounterEventCastState = {
 ---@enum Enum.EncounterEventFlags
 Enum.EncounterEventFlags = {
 	Disabled = 1,
+	IgnoreCastConsume = 2,
 }
 
 ---@enum Enum.EncounterEventIconmask
@@ -3374,6 +3441,13 @@ Enum.EncounterEventSeverity = {
 	High = 2,
 }
 
+---@enum Enum.EncounterEventSoundTrigger
+Enum.EncounterEventSoundTrigger = {
+	OnTextWarningShown = 0,
+	OnTimelineEventFinished = 1,
+	OnTimelineEventHighlight = 2,
+}
+
 ---@enum Enum.EncounterEventsIconDirection
 Enum.EncounterEventsIconDirection = {
 	Left = 0,
@@ -3386,6 +3460,19 @@ Enum.EncounterEventsIconDirection = {
 Enum.EncounterEventsOrientation = {
 	Horizontal = 0,
 	Vertical = 1,
+}
+
+---@enum Enum.EncounterEventsTooltipAnchor
+Enum.EncounterEventsTooltipAnchor = {
+	Hidden = 0,
+	Default = 1,
+	Cursor = 2,
+}
+
+---@enum Enum.EncounterEventsViewType
+Enum.EncounterEventsViewType = {
+	Timeline = 0,
+	Bars = 1,
 }
 
 ---@enum Enum.EncounterEventsVisibility
@@ -3450,6 +3537,13 @@ Enum.EncounterTimelineTrackType = {
 	Hidden = 0,
 	Sorted = 1,
 	Linear = 2,
+}
+
+---@enum Enum.EncounterTimelineViewType
+Enum.EncounterTimelineViewType = {
+	None = 0,
+	Timeline = 1,
+	Bars = 2,
 }
 
 ---@enum Enum.EndOfMatchType
@@ -3739,6 +3833,8 @@ Enum.FrameTutorialAccount = {
 	TransmogCustomSets = 43,
 	TransmogSituations = 44,
 	TransmogWeaponOptions = 45,
+	TransmogTrialOfStyle = 46,
+	TransmogCustomSetsMigration = 47,
 }
 
 ---@enum Enum.GameMode
@@ -4438,6 +4534,7 @@ Enum.HousingCatalogEntryModelScenePresets = {
 	DecorHuge = 1337,
 	DecorCeiling = 1338,
 	DecorWall = 1339,
+	DecorHorizontalSurface = 1452,
 }
 
 ---@enum Enum.HousingCatalogEntrySize
@@ -4469,6 +4566,13 @@ Enum.HousingCatalogEntryType = {
 Enum.HousingCatalogSortType = {
 	DateAdded = 0,
 	Alphabetical = 1,
+}
+
+---@enum Enum.HousingCleanupModeTargetType
+Enum.HousingCleanupModeTargetType = {
+	None = 0,
+	Decor = 1,
+	HouseExterior = 2,
 }
 
 ---@enum Enum.HousingCustomizeModeTargetType
@@ -4883,6 +4987,25 @@ Enum.IconState = {
 	Hidden = 0,
 	ShowState1 = 1,
 	ShowState2 = 2,
+}
+
+---@enum Enum.ImageSharingResult
+Enum.ImageSharingResult = {
+	Failure = 0,
+	Success = 1,
+	NotConfigured = 2,
+	RetrievedExisting = 3,
+	PlatformApiError = 4,
+	MissingFieldApiError = 5,
+	AccountDataRequestFailure = 6,
+	GetAccountDataRequestFailure = 7,
+	SetAccountDataRequestFailure = 8,
+	RefreshTokenExpired = 9,
+	FailedToCreateHeader = 10,
+	EncryptionFailure = 11,
+	InvalidOAuthExpiration = 12,
+	InvalidRefreshExpiration = 13,
+	EncryptionSecretNotSet = 14,
 }
 
 ---@enum Enum.InitiativeMilestoneFlags
@@ -6263,6 +6386,7 @@ Enum.NeighborhoodInviteResult = {
 	NotEnoughPlots = 8,
 	NotFound = 9,
 	TooManyRequests = 10,
+	AlreadyInNeighborhood = 11,
 }
 
 ---@enum Enum.NeighborhoodMapFlags
@@ -6349,7 +6473,7 @@ Enum.PartyRequestJoinRelation = {
 	Friend = 1,
 	Guild = 2,
 	Club = 3,
-	NumPartyRequestJoinRelations = 4,
+	RecentAllies = 4,
 }
 
 ---@enum Enum.PerksVendorCategoryType
@@ -6703,6 +6827,52 @@ Enum.PhaseReason = {
 	WarMode = 2,
 	ChromieTime = 3,
 	TimerunningHwt = 4,
+}
+
+---@enum Enum.PhotoSharingStatus
+Enum.PhotoSharingStatus = {
+	Disabled = 0,
+	NotConfigured = 1,
+	Configured = 2,
+	Expired = 3,
+	ParentalControl = 4,
+	TrialOrVeteran = 5,
+	AADCRestricted = 6,
+	Error = 7,
+	FailedToClear = 8,
+}
+
+---@enum Enum.PhotoSharingUploadStatus
+Enum.PhotoSharingUploadStatus = {
+	Failed = 0,
+	Success = 1,
+	Locked = 2,
+	ListPagesApiCallFailed = 3,
+	ListPagesBadRequest = 4,
+	ListPagesUnauthorized = 5,
+	ListPagesForbidden = 6,
+	ListPagesNotFound = 7,
+	ListPagesTooManyRequests = 8,
+	ListPagesGenericFailure = 9,
+	ListPagesEmptyBoardID = 10,
+	ListPagesInvalidBookmark = 11,
+	CreatePageApiCallFailed = 12,
+	CreatePageBadRequest = 13,
+	CreatePageUnauthorized = 14,
+	CreatePageForbidden = 15,
+	CreatePageNotFound = 16,
+	CreatePageTooManyRequests = 17,
+	CreatePageGenericFailure = 18,
+	CreatePageNoBoardIDFound = 19,
+	CreatePostApiCallFailed = 20,
+	CreatePostBadRequest = 21,
+	CreatePostUnauthorized = 22,
+	CreatePostForbidden = 23,
+	CreatePostNotFound = 24,
+	CreatePostTooManyRequests = 25,
+	CreatePostGenericFailure = 26,
+	CreatePostNoIDFound = 27,
+	CreatePostThrottled = 28,
 }
 
 ---@enum Enum.PingMode
@@ -7713,6 +7883,7 @@ Enum.SecrecyLevel = {
 
 ---@enum Enum.SecretAspect
 Enum.SecretAspect = {
+	Attributes = 0x1,
 	Hierarchy = 0x1,
 	ObjectDebug = 0x1,
 	ObjectName = 0x1,
@@ -8267,30 +8438,29 @@ Enum.TooltipDataLineType = {
 	QuestPlayer = 18,
 	NestedBlock = 19,
 	ItemBinding = 20,
-	RestrictedRaceClass = 21,
-	RestrictedFaction = 22,
-	RestrictedSkill = 23,
-	RestrictedPvPMedal = 24,
-	RestrictedReputation = 25,
-	RestrictedSpellKnown = 26,
-	RestrictedLevel = 27,
-	EquipSlot = 28,
-	ItemName = 29,
-	Separator = 30,
-	ToyName = 31,
-	ToyText = 32,
-	ToyEffect = 33,
-	ToyDuration = 34,
-	RestrictedArena = 35,
-	RestrictedBg = 36,
-	ToyFlavorText = 37,
-	ToyDescription = 38,
-	ToySource = 39,
-	GemSocketEnchantment = 40,
-	ItemLevel = 41,
-	ItemUpgradeLevel = 42,
-	SpellPassive = 43,
-	SpellDescription = 44,
+	EquipSlot = 21,
+	ItemName = 22,
+	Separator = 23,
+	ToyName = 24,
+	ToyText = 25,
+	ToyEffect = 26,
+	ToyDuration = 27,
+	ToyDescription = 28,
+	ToySource = 29,
+	GemSocketEnchantment = 30,
+	ItemLevel = 31,
+	ItemUpgradeLevel = 32,
+	SpellPassive = 33,
+	SpellDescription = 34,
+	ItemQuality = 35,
+	TradeTimeRemaining = 36,
+	FlavorText = 37,
+	ItemSpellTriggerLearn = 38,
+	LearnTransmogSet = 39,
+	LearnTransmogIllusion = 40,
+	ErrorLine = 41,
+	DisabledLine = 42,
+	UsageRequirement = 43,
 }
 
 ---@enum Enum.TooltipDataType
@@ -8323,6 +8493,27 @@ Enum.TooltipDataType = {
 	Macro = 25,
 	Debug = 26,
 	Outfit = 27,
+}
+
+---@enum Enum.TooltipDataUsageRequirementType
+Enum.TooltipDataUsageRequirementType = {
+	RaceClass = 0,
+	Faction = 1,
+	Skill = 2,
+	PvPMedal = 3,
+	Reputation = 4,
+	Level = 5,
+	Guild = 6,
+	Achievement = 7,
+	PvPRank = 8,
+	EquippedItem = 9,
+	ShapeshiftForm = 10,
+	ArenaRating = 11,
+	EarnCurrency = 12,
+	Specialization = 13,
+	NotAlreadyKnown = 14,
+	NotInArena = 15,
+	NotInRatedBg = 16,
 }
 
 ---@enum Enum.TooltipSide
@@ -8652,6 +8843,14 @@ Enum.TransmogModification = {
 	Secondary = 1,
 }
 
+---@enum Enum.TransmogOutfitCostModifiersApplied
+Enum.TransmogOutfitCostModifiersApplied = {
+	DebugOnlyFreeDiscountApplied = 0x1,
+	VoidRacialDiscountApplied = 0x2,
+	OutfitCostModifierApplied = 0x4,
+	AuraDiscountApplied = 0x8,
+}
+
 ---@enum Enum.TransmogOutfitDataFlags
 Enum.TransmogOutfitDataFlags = {
 	IsCachedLocally = 1,
@@ -8663,6 +8862,7 @@ Enum.TransmogOutfitDisplayType = {
 	Assigned = 1,
 	Equipped = 2,
 	Hidden = 3,
+	Disabled = 4,
 }
 
 ---@enum Enum.TransmogOutfitEntryFlags
@@ -8672,6 +8872,7 @@ Enum.TransmogOutfitEntryFlags = {
 	OnlyAvailableDuringEvent = 0x4,
 	SortedToTopOfList = 0x8,
 	UseOverrideCostModifier = 0x10,
+	IsDefaultEquipped = 0x20,
 }
 
 ---@enum Enum.TransmogOutfitEntrySource
@@ -8996,6 +9197,7 @@ Enum.UIActionType = {
 Enum.UICovenantDisplayInfoFlags = {
 	DisplayCovenantAsJourney = 1,
 	UseJourneyRewardTrack = 2,
+	UseJourneyUnlockToastText = 3,
 }
 
 ---@enum Enum.UICursorType
@@ -9367,6 +9569,12 @@ Enum.UnitHealAbsorbMode = {
 Enum.UnitIncomingHealClampMode = {
 	MissingHealth = 0,
 	MaximumHealth = 1,
+}
+
+---@enum Enum.UnitMaximumHealthMode
+Enum.UnitMaximumHealthMode = {
+	Default = 0,
+	WithAbsorbs = 1,
 }
 
 ---@enum Enum.UnitMirrorPetFlags
@@ -9810,11 +10018,13 @@ Constants = {
 		DEFAULT_AUCTION_PRICE_MULTIPLIER = 1.5,
 	},
 	CAAConstants = {
+		CAASayYourDebuffsDefault = true,
 		CAASayCombatEndDefault = true,
-		CAATargetNameDefault = true,
 		CAASayCombatStartDefault = true,
+		CAATargetNameDefault = true,
 		CAAEnabledDefault = false,
 		CAAFrequencyMin = -10,
+		CAADebuffSelfAlertDefault = 0,
 		CAAFrequencyDefault = 0,
 		CAAInterruptCastDefault = 0,
 		CAAInterruptCastSuccessDefault = 0,
@@ -9823,6 +10033,8 @@ Constants = {
 		CAAPlayerCastModeDefault = 0,
 		CAAPlayerHealthPercentDefault = 0,
 		CAAPlayerResourcePercentDefault = 0,
+		CAASayYourDebuffsFormatDefault = 0,
+		CAASayYourDebuffsMinDurationMin = 0,
 		CAATargetCastFormatDefault = 0,
 		CAATargetCastModeDefault = 0,
 		CAATargetDeathBehaviorDefault = 0,
@@ -9830,16 +10042,19 @@ Constants = {
 		CAAThrottleMin = 0,
 		CAAVoiceDefault = 0,
 		CAAMinCastTimeStep = 0.5,
+		CAASayYourDebuffsMinDurationStep = 0.5,
 		CAAThrottleStep = 0.5,
 		CAAPlayerHealthFormatDefault = 1,
 		CAAPlayerResourceFormatDefault = 1,
 		CAASampleTextThrottleTime = 1,
 		CAASayIfTargetedDefault = 1,
 		CAAMinCastTimeDefault = 1.5,
+		CAASayYourDebuffsMinDurationDefault = 1.5,
 		CAATargetHealthPercentDefault = 2,
 		CAATargetHealthFormatDefault = 3,
 		CAAPlayerCastFormatDefault = 4,
 		CAAMinCastTimeMax = 5,
+		CAASayYourDebuffsMinDurationMax = 5,
 		CAAThrottleMax = 5,
 		CAAFrequencyMax = 10,
 	},
@@ -9993,6 +10208,9 @@ Constants = {
 		MAX_LOOT_OBJECT_ITEMS = 31,
 		INVALID_BANK_TAB_SLOT = 255,
 	},
+	ItemConsts_Mainline = {
+		HWM_SQUISH_ERA_PLAYER_DATA_ACCOUNT_ELEMENT_ID = 212,
+	},
 	LFGConstsExposed = {
 		GROUP_FINDER_MAX_ACTIVITY_CAPACITY = 16,
 	},
@@ -10098,6 +10316,7 @@ Constants = {
 		NoTransmogID = 0,
 	},
 	TransmogOutfitDataConsts = {
+		TRANSMOG_OUTFIT_SLOT_NONE = -1,
 		EQUIP_TRANSMOG_OUTFIT_MANUAL_SPELL_ID = 1247613,
 	},
 	UICharacterClasses = {

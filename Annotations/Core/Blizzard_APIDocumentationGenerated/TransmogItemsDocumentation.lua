@@ -282,6 +282,11 @@ function C_TransmogCollection.IsSearchInProgress(searchType) end
 ---@return boolean checked
 function C_TransmogCollection.IsSourceTypeFilterChecked(index) end
 
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_TransmogCollection.IsSpellItemEnchantmentHiddenVisual)
+---@param spellItemEnchantmentID number
+---@return boolean isHiddenVisual
+function C_TransmogCollection.IsSpellItemEnchantmentHiddenVisual(spellItemEnchantmentID) end
+
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_TransmogCollection.IsUsingDefaultFilters)
 ---@return boolean isUsingDefaultFilters
 function C_TransmogCollection.IsUsingDefaultFilters() end

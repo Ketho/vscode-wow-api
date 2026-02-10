@@ -69,6 +69,7 @@ function C_MajorFactions.ShouldUseJourneyRewardTrack(majorFactionID) end
 ---@field expansionID number
 ---@field bountySetID number
 ---@field isUnlocked boolean
+---@field useJourneyUnlockToast boolean
 ---@field unlockDescription string?
 ---@field uiPriority number
 ---@field renownLevel number

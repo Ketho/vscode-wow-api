@@ -23,6 +23,10 @@ function C_HousingLayout.DeselectRoomOrDoor() end
 ---@return number numRooms
 function C_HousingLayout.GetNumActiveRooms() end
 
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_HousingLayout.GetNumFloors)
+---@return number numFloors
+function C_HousingLayout.GetNumFloors() end
+
 ---Returns the max room placement budget for the current house interior; Can be increased via house level
 ---
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_HousingLayout.GetRoomPlacementBudget)
