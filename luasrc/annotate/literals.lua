@@ -76,16 +76,6 @@ local function IsBitEnum(tbl, name)
 	return true
 end
 
--- sort a table with numbers, strings and booleans as value
-local function SortEnum(a, b)
-	local typeA, typeB = type(a), type(b)
-	if typeA == typeB then
-		return a < b
-	else
-		return a < b
-	end
-end
-
 function m:GetEnumTable()
 	Util:DownloadAndRun(
 		string.format("https://raw.githubusercontent.com/Ketho/BlizzardInterfaceResources/%s/Resources/LuaEnum.lua", GETHE_BRANCH),
@@ -110,15 +100,20 @@ function m:GetEnumTable()
 		table.insert(t, "}\n")
 	end
 
+	local SortConstantsValue = {
+		EncounterTimelineIconMasks = true,
+		UICharacterClasses = true,
+	}
+
 	table.insert(t, "Constants = {")
 	for _, name in pairs(Util:SortTable(Constants)) do
 		table.insert(t, string.format("\t%s = {", name))
-		for _, constTbl in pairs(SortByValue(Constants[name])) do
-			if type(constTbl.value) == "string" then
-				table.insert(t, string.format('\t\t%s = "%s",', constTbl.key, constTbl.value))
-			else
-				table.insert(t, string.format("\t\t%s = %s,", constTbl.key, constTbl.value))
+		local sortType = SortConstantsValue[name] and "value" or "key"
+		for _, t2 in pairs(Util:SortTableByType(Constants[name], sortType)) do
+			if type(t2.value) == "string" then
+				t2.value = string.format('"%s"', t2.value)
 			end
+			table.insert(t, format("\t\t%s = %s,", t2.key, tostring(t2.value)))
 		end
 		table.insert(t, "\t},")
 	end

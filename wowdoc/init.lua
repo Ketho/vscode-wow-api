@@ -276,6 +276,41 @@ function m.SortNocase(a, b)
 	return a:lower() < b:lower()
 end
 
+function m:SortTableByType(tbl, sortType)
+	local t = {}
+	for k, v in pairs(tbl) do
+		tinsert(t, {
+			key = k,
+			value = v
+		})
+	end
+	table.sort(t, function(a, b)
+		local va, vb = a[sortType], b[sortType]
+		local ta, tb = type(va), type(vb)
+		if ta ~= tb then
+			if ta == "boolean" and tb == "number" then
+				return true
+			elseif ta == "number" and tb == "boolean" then
+				return false
+			end
+		end
+		if ta == "boolean" then
+			if va ~= vb then
+				return va and not vb
+			end
+		elseif ta == "string" then
+			return va < vb
+		elseif ta == "number" then
+			if va == vb then
+				return a.key < b.key
+			else
+				return va < vb
+			end
+		end
+	end)
+	return t
+end
+
 -- https://stackoverflow.com/a/7615129/1297035
 function m:strsplit(input, sep)
 	local t = {}
