@@ -98,9 +98,9 @@ function m:main(product, isAnnotate, force, enumHackFunc)
 	else
 		log:info("WowDocLoader: Loading APIDocumentation")
 	end
-	local framexml_branch, blizzres_branch = products:GetBranch(product)
-	git:checkout("https://github.com/Gethe/wow-ui-source", framexml_branch)
-	enum:LoadLuaEnums(blizzres_branch, force)
+	local gethe_branch = products:GetBranch(product)
+	git:checkout("https://github.com/Gethe/wow-ui-source", gethe_branch)
+	enum:LoadLuaEnums(gethe_branch, force)
 	if enumHackFunc then
 		enumHackFunc()
 	end

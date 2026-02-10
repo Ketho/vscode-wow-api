@@ -19,6 +19,12 @@ function APIDocumentation:AddDocumentationTable(info)
 	table.insert(docTables, info)
 end
 
+-- 11.2.7 hack
+Constants.HousingCatalogConsts.HOUSING_CATALOG_OPTIONS_EXPECTED = 0
+Constants.HousingCatalogConsts.HOUSING_CATALOG_CATEGORIES_EXPECTED = 0
+Constants.HousingCatalogConsts.HOUSING_CATALOG_OPTIONS_EXPECTED = 0
+Constants.HousingCatalogConsts.HOUSING_CATALOG_SUBCATEGORIES_EXPECTED = 0
+
 -- only checks for :AddDocumentationTable files
 ---@param version string e.g. `12.0.0 (63728)`
 function m:LoadBlizzardDocs(version)

@@ -229,10 +229,15 @@ function m:Wipe(tbl)
 	end
 end
 
-function m:ToMap(tbl)
+---@param ... table
+---@return table
+function m:ToMap(...)
 	local t = {}
-	for _, v in pairs(tbl) do
-		t[v] = true
+	for i = 1, select("#", ...) do
+		local tbl = select(i, ...)
+		for _, v in pairs(tbl) do
+			t[v] = true
+		end
 	end
 	return t
 end
