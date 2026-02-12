@@ -91,6 +91,13 @@ local function LoadAnnotationAddon(path, name)
 	custom_doc:copy() -- overwrite with custom annotations
 end
 
+local function LoadTypeDocumentation()
+	local data = require(pathlib.join(LOADER_PATH, "TypeDocumentation"))
+	local Types = {Tables = data}
+	APIDocumentation:AddDocumentationTable(Types)
+	TypeDocumentation = Types
+end
+
 function m:main(product, isAnnotate, force, enumHackFunc)
 	if APIDocumentation and not force then
 		log:warn("WoWDocLoader: APIDocumentation already loaded")
@@ -116,7 +123,7 @@ function m:main(product, isAnnotate, force, enumHackFunc)
 		LoadAddon(addons_path, "Blizzard_APIDocumentationGenerated")
 	end
 
-	require(pathlib.join(LOADER_PATH, "TypeDocumentation"))
+	LoadTypeDocumentation()
 	log:success("WowDocLoader: Loaded APIDocumentation")
 	-- self:PrintSystems()
 end
