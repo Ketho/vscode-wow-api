@@ -108,6 +108,10 @@ function C_Housing.HouseFinderRequestNeighborhoods() end
 ---@param plotID number
 function C_Housing.HouseFinderRequestReservationAndPort(neighborhoodGuid, plotID) end
 
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_Housing.IsHousingMarketCartFullRemoveEnabled)
+---@return boolean isHousingMarketCartFullRemoveEnabled
+function C_Housing.IsHousingMarketCartFullRemoveEnabled() end
+
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_Housing.IsHousingMarketEnabled)
 ---@return boolean isHousingMarketEnabled
 function C_Housing.IsHousingMarketEnabled() end

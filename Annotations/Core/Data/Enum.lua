@@ -7908,6 +7908,7 @@ Enum.SecretAspect = {
 	Rotation = 0x10000,
 	MinimumWidth = 0x20000,
 	Padding = 0x40000,
+	CooldownStyle = 0x80000,
 }
 
 ---@enum Enum.SelfResurrectOptionType

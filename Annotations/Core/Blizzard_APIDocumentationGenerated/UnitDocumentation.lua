@@ -304,6 +304,7 @@ function UnitCastingDuration(unit) end
 ---@return boolean? notInterruptible
 ---@return number castingSpellID
 ---@return number? castBarID
+---@return number delayTimeMs
 function UnitCastingInfo(unit) end
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_UnitChannelDuration)
@@ -1243,6 +1244,7 @@ function WorldLootObjectExists(unit) end
 ---@field notInterruptible boolean?
 ---@field castingSpellID number
 ---@field castBarID number?
+---@field delayTimeMs number
 
 ---@class UnitChannelInfoResult
 ---@field name string

@@ -166,6 +166,10 @@ function C_CatalogShop.RefreshRefundableDecors() end
 ---@param currencyCode string
 function C_CatalogShop.RefreshVirtualCurrencyBalance(currencyCode) end
 
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_CatalogShop.ShouldShowHousingWarning)
+---@return boolean shouldShowHousingWarning
+function C_CatalogShop.ShouldShowHousingWarning() end
+
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_CatalogShop.StartHousingVCPurchaseConfirmation)
 ---@param productID number
 function C_CatalogShop.StartHousingVCPurchaseConfirmation(productID) end
@@ -184,6 +188,7 @@ function C_CatalogShop.StartHousingVCPurchaseConfirmation(productID) end
 ---@class CatalogShopBundleChildInfo
 ---@field childProductID number
 ---@field displayOrder number
+---@field quantityInBundle number
 
 ---@class CatalogShopCategoryInfo
 ---@field ID number
@@ -268,6 +273,7 @@ function C_CatalogShop.StartHousingVCPurchaseConfirmation(productID) end
 ---@field wideCardBGOverrideProductURL string?
 ---@field consumableQuantity number?
 ---@field isVCProduct boolean
+---@field containsHousingItem boolean
 
 ---@class CatalogShopSectionInfo
 ---@field ID number

@@ -1448,6 +1448,24 @@ export const data: CVarInterface = {
 		default: "0",
 		category: 5,
 	},
+	nameplateclassificationscale: {
+		name: "NamePlateClassificationScale",
+		default: "",
+		category: 4,
+		help: "Applied to the classification icon for nameplates.",
+	},
+	nameplatehorizontalscale: {
+		name: "NamePlateHorizontalScale",
+		default: "",
+		category: 4,
+		help: "Applied to horizontal size of all nameplates.",
+	},
+	nameplateverticalscale: {
+		name: "NamePlateVerticalScale",
+		default: "",
+		category: 4,
+		help: "Applied to vertical size of all nameplates.",
+	},
 	nonemittercombatrange: {
 		name: "NonEmitterCombatRange",
 		default: "6400.000000",
@@ -1888,6 +1906,12 @@ export const data: CVarInterface = {
 		category: 4,
 		scope: "Character",
 		help: "Motion sickness control for how much effects can shake in 2D UI",
+	},
+	showclasscolorinnameplate: {
+		name: "ShowClassColorInNameplate",
+		default: "",
+		category: 4,
+		help: "use this to display the class color in enemy nameplate health bars",
 	},
 	showquestunitcircles: {
 		name: "ShowQuestUnitCircles",
@@ -2867,6 +2891,12 @@ export const data: CVarInterface = {
 		scope: "Character",
 		help: "Which adventure journal entries flagged with ADVENTURE_JOURNAL_HIDE_AFTER_ACTION the user acted upon",
 	},
+	activecufprofile: {
+		name: "activeCUFProfile",
+		default: "",
+		category: 4,
+		help: "The last active CUF Profile.",
+	},
 	addfriendinfoshown: {
 		name: "addFriendInfoShown",
 		default: "0",
@@ -2961,7 +2991,7 @@ export const data: CVarInterface = {
 	},
 	agentuid: {
 		name: "agentUID",
-		default: "wow_beta",
+		default: "",
 		category: 4,
 		help: "The UID provided by Battle.net to be passed to Agent",
 	},
@@ -6448,6 +6478,12 @@ export const data: CVarInterface = {
 		scope: "Account",
 		help: "Show usable guild rewards only",
 	},
+	guildrosterview: {
+		name: "guildRosterView",
+		default: "",
+		category: 4,
+		help: "The current guild roster display mode",
+	},
 	guildshowoffline: {
 		name: "guildShowOffline",
 		default: "1",
@@ -6865,42 +6901,6 @@ export const data: CVarInterface = {
 		scope: "Character",
 		help: "Stores the Delves Season faction renown when Renown UI is closed",
 	},
-	lastrenownformajorfaction2503: {
-		name: "lastRenownForMajorFaction2503",
-		default: "",
-		category: 4,
-		help: "Stores the Maruuk Centaur renown when Renown UI is closed",
-	},
-	lastrenownformajorfaction2507: {
-		name: "lastRenownForMajorFaction2507",
-		default: "",
-		category: 4,
-		help: "Stores the Dragonscale Expedition renown when Renown UI is closed",
-	},
-	lastrenownformajorfaction2510: {
-		name: "lastRenownForMajorFaction2510",
-		default: "",
-		category: 4,
-		help: "Stores the Valdrakken Accord renown when Renown UI is closed",
-	},
-	lastrenownformajorfaction2511: {
-		name: "lastRenownForMajorFaction2511",
-		default: "",
-		category: 4,
-		help: "Stores the Iskaara Tuskarr renown when Renown UI is closed",
-	},
-	lastrenownformajorfaction2564: {
-		name: "lastRenownForMajorFaction2564",
-		default: "",
-		category: 4,
-		help: "Stores the Loamm Niffen renown when Renown UI is closed",
-	},
-	lastrenownformajorfaction2574: {
-		name: "lastRenownForMajorFaction2574",
-		default: "",
-		category: 4,
-		help: "Stores the Dream Warden renown when Renown UI is closed",
-	},
 	lastselectedclubid: {
 		name: "lastSelectedClubId",
 		default: "0",
@@ -6963,6 +6963,12 @@ export const data: CVarInterface = {
 		category: 4,
 		scope: "Account",
 		help: "SetID of the last applied transmog outfit",
+	},
+	lastvoidstoragetutorial: {
+		name: "lastVoidStorageTutorial",
+		default: "",
+		category: 4,
+		help: "Stores the last void storage tutorial the player has accepted",
 	},
 	last_matchmaking_party_size: {
 		name: "last_matchmaking_party_size",
@@ -7250,6 +7256,11 @@ export const data: CVarInterface = {
 		scope: "Account",
 		help: "Stores shapeshift-specific tracking spells that were active last session.",
 	},
+	minimaptrackedinfov2: {
+		name: "minimapTrackedInfov2",
+		default: "",
+		category: 5,
+	},
 	minimaptrackedinfov4: {
 		name: "minimapTrackedInfov4",
 		default: "3103471",
@@ -7491,6 +7502,18 @@ export const data: CVarInterface = {
 		scope: "Character",
 		secure: true,
 		help: "Position other nameplates at the base, rather than overhead",
+	},
+	nameplateotherbottominset: {
+		name: "nameplateOtherBottomInset",
+		default: "",
+		category: 1,
+		help: "The inset from the bottom (in screen percent) that the non-self nameplates are clamped to.",
+	},
+	nameplateothertopinset: {
+		name: "nameplateOtherTopInset",
+		default: "",
+		category: 1,
+		help: "The inset from the top (in screen percent) that the non-self nameplates are clamped to.",
 	},
 	nameplateoverlaph: {
 		name: "nameplateOverlapH",
@@ -8012,6 +8035,18 @@ export const data: CVarInterface = {
 		category: 4,
 		scope: "Character",
 		help: "Any color override values that are different from the default values for an account",
+	},
+	playerstatleftdropdown: {
+		name: "playerStatLeftDropdown",
+		default: "",
+		category: 4,
+		help: "The player stat selected in the left dropdown",
+	},
+	playerstatrightdropdown: {
+		name: "playerStatRightDropdown",
+		default: "",
+		category: 4,
+		help: "The player stat selected in the right dropdown",
 	},
 	plunderstormrealm: {
 		name: "plunderstormRealm",
@@ -8651,6 +8686,24 @@ export const data: CVarInterface = {
 		secure: true,
 		help: "Seen the free character upgrade popup (Asia)",
 	},
+	seencharacterselectaddgrouphelptip: {
+		name: "seenCharacterSelectAddGroupHelpTip",
+		default: "",
+		category: 4,
+		help: "Seen and acknowledged the character select add group help tip",
+	},
+	seencharacterselectnavbarcampshelptip: {
+		name: "seenCharacterSelectNavBarCampsHelpTip",
+		default: "",
+		category: 4,
+		help: "Seen and acknowledged the character select camps nav bar help tip",
+	},
+	seencharacterselectwarbandhelptip: {
+		name: "seenCharacterSelectWarbandHelpTip",
+		default: "",
+		category: 4,
+		help: "Seen and acknowledged the character select warband help tip",
+	},
 	seencharacterupgradepopup: {
 		name: "seenCharacterUpgradePopup",
 		default: "6",
@@ -8697,7 +8750,7 @@ export const data: CVarInterface = {
 	},
 	serveralert: {
 		name: "serverAlert",
-		default: "https://breaking-news.support.blizzard.com/service/wow-client/ptr/us/en-US",
+		default: "https://breaking-news.support.blizzard.com/service/wow-client/live/eu/en-US",
 		category: 6,
 		help: "Get the glue-string tag for the URL",
 	},
@@ -9225,6 +9278,12 @@ export const data: CVarInterface = {
 		category: 4,
 		help: "SVK Density, set by the UI Spell Density setting. 0 - none (dev-only), 1 - minimum, 2 - reduced, 3 - performance, 4 - full",
 	},
+	splashscreennormal: {
+		name: "splashScreenNormal",
+		default: "",
+		category: 4,
+		help: "Show normal splash screen id",
+	},
 	ssaomagicnormals: {
 		name: "ssaoMagicNormals",
 		default: "1",
@@ -9337,13 +9396,13 @@ export const data: CVarInterface = {
 	},
 	telemetrywowpackage: {
 		name: "telemetryWowPackage",
-		default: "Blizzard.Telemetry.Wow_Mainline_PTR",
+		default: "Blizzard.Telemetry.Wow_Mainline",
 		category: 5,
 		help: "The primary package we want to send telemetry to e.g. Wow_Mainline or Wow_Classic",
 	},
 	telemetrywowlabspackage: {
 		name: "telemetryWowlabsPackage",
-		default: "Blizzard.Telemetry.Wow_Labs_PTR",
+		default: "Blizzard.Telemetry.Wow_Labs",
 		category: 5,
 		help: "The secondary package we want to send telemetry to e.g. Wow_Wowlabs",
 	},
@@ -9793,6 +9852,11 @@ export const data: CVarInterface = {
 		default: "1",
 		category: 4,
 		help: "Determines whether to use the commentator selection circles or the default selection circles while spectating or commentating a wargame",
+	},
+	usecompactpartyframes: {
+		name: "useCompactPartyFrames",
+		default: "",
+		category: 5,
 	},
 	usehighrestextures: {
 		name: "useHighResTextures",
