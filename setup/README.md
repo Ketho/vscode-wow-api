@@ -8,7 +8,7 @@ wsl --install
 ```
 
 ## Lua
-- The [setup_lua.sh](setup_lua.sh) script installs Lua 5.4 and LuaRocks via [hererocks](https://github.com/luarocks/hererocks) which is self-contained.
+- The [setup_lua.sh](setup/lua.sh) script installs Lua 5.4 and LuaRocks via [hererocks](https://github.com/luarocks/hererocks) which is self-contained.
 - The module dependencies are in the [rockspec](https://github.com/Ketho/vscode-wow-api/blob/master/vscode-wow-api-scm-0.rockspec).
 ```sh
 # wherever you want to clone the repo
@@ -16,7 +16,7 @@ cd ~
 git clone https://github.com/Ketho/vscode-wow-api
 cd vscode-wow-api
 
-./setup_lua.sh
+./setup/lua.sh
 ```
 
 ### Usage
@@ -30,9 +30,9 @@ lua luasrc/init.lua
 ```
 
 ## VS Code Extension
-The [setup_npm.sh](setup_npm.sh) script installs the npm packages for TypeScript definitions and ESLint.
+The [setup_npm.sh]setup/(npm.sh) script installs the npm packages for TypeScript definitions and ESLint.
 ```sh
-./setup_npm.sh
+./setup/npm.sh
 ```
 
 ### Debugging
