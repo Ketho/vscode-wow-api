@@ -85,6 +85,10 @@ function ModelSceneActorBase:Hide() end
 ---@return boolean isLoaded
 function ModelSceneActorBase:IsLoaded() end
 
+---[Documentation](https://warcraft.wiki.gg/wiki/API_ModelSceneActorBase_IsPreferringModelCollisionBounds)
+---@return boolean preferringCollisionBounds
+function ModelSceneActorBase:IsPreferringModelCollisionBounds() end
+
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_ModelSceneActorBase_IsShown)
 ---@return boolean isShown
 function ModelSceneActorBase:IsShown() end
@@ -122,6 +126,13 @@ function ModelSceneActorBase:SetAnimationBlendOperation(blendOp) end
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_ModelSceneActorBase_SetDesaturation)
 ---@param strength number
 function ModelSceneActorBase:SetDesaturation(strength) end
+
+---[Documentation](https://warcraft.wiki.gg/wiki/API_ModelSceneActorBase_SetGradientMask)
+---@param gradientIndex0 number
+---@param gradientIndex1 number
+---@param gradientIndex2 number
+---@param gradientIndex3 number
+function ModelSceneActorBase:SetGradientMask(gradientIndex0, gradientIndex1, gradientIndex2, gradientIndex3) end
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_ModelSceneActorBase_SetModelByCreatureDisplayID)
 ---@param creatureDisplayID number
@@ -175,6 +186,12 @@ function ModelSceneActorBase:SetPlayerModelFromGlues(characterIndex, sheatheWeap
 ---@param positionY number
 ---@param positionZ number
 function ModelSceneActorBase:SetPosition(positionX, positionY, positionZ) end
+
+---If true, will try to use the collision bounds of models for sizing and centering. Will fall back to default model bounds if set to False, or if collision bounds are unavailable.
+---
+---[Documentation](https://warcraft.wiki.gg/wiki/API_ModelSceneActorBase_SetPreferModelCollisionBounds)
+---@param preferCollisionBounds boolean
+function ModelSceneActorBase:SetPreferModelCollisionBounds(preferCollisionBounds) end
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_ModelSceneActorBase_SetRoll)
 ---@param roll number
