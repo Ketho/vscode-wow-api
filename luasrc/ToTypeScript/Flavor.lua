@@ -1,5 +1,6 @@
-local Util = require("wowdoc")
-Util:mkdir("luasrc/out/cache/flavor")
+local wowdoc = require("wowdoc")
+local util = require("wowdoc.util")
+wowdoc:mkdir("luasrc/out/cache/flavor")
 local PATH = "luasrc/out/cache/flavor/%s_%s.lua"
 
 local pre = [[
@@ -29,7 +30,7 @@ local function GetData()
     local flavorMap = {}
     for _, branch in pairs(flavors) do
         local URL = string.format("https://raw.githubusercontent.com/Ketho/BlizzardInterfaceResources/%s/Resources/GlobalAPI.lua", branch)
-        local data = Util:DownloadAndRun(URL, PATH:format("GlobalAPI", branch))
+        local data = wowdoc:DownloadAndRun(URL, PATH:format("GlobalAPI", branch))
         flavorMap[branch] = tInverse(data[1])
     end
     local combinedFlavor = {}
@@ -54,11 +55,11 @@ local function WriteData(data)
     local t = {}
     local fs = '\t["%s"]: 0x%X,'
     table.insert(t, "export const data = {")
-    for _, v in pairs(Util:SortTable(data)) do
+    for _, v in pairs(util.table.SortTable(data)) do
         table.insert(t, fs:format(v, data[v]))
     end
     table.insert(t, "};\n")
-    Util:WriteFile(path, table.concat(t, "\n"))
+    wowdoc:WriteFile(path, table.concat(t, "\n"))
 end
 
 local function main()

@@ -1,4 +1,5 @@
-local Util = require("wowdoc")
+local wowdoc = require("wowdoc")
+local util = require("wowdoc.util")
 local annotate = require("luasrc.annotate")
 local Path = require "path"
 
@@ -31,7 +32,7 @@ local function WriteToFile(s)
 	f:close()
 end
 
-local sorted = Util:SortTable(nonBlizzDocumented)
+local sorted = util.table.SortTable(nonBlizzDocumented)
 local wiki_tbl = {}
 table.insert(wiki_tbl, "---@meta _\n")
 for _, name in pairs(sorted) do

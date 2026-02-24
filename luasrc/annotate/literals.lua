@@ -1,4 +1,5 @@
-local Util = require("wowdoc")
+local wowdoc = require("wowdoc")
+local util = require("wowdoc.util")
 local pathlib = require("path")
 
 local m = {}
@@ -23,13 +24,13 @@ function m:GetEventLiterals()
 end
 
 function m:GetCVarLiterals()
-	local data = Util:DownloadAndRun(
+	local data = wowdoc:DownloadAndRun(
 		string.format("https://raw.githubusercontent.com/Ketho/BlizzardInterfaceResources/%s/Resources/CVars.lua", GETHE_BRANCH),
 		pathlib.join(PATH, string.format("CVars_%s.lua", GETHE_BRANCH))
 	)
 	local t = {}
 	table.insert(t, "---@alias CVar string")
-	local sorted = Util:SortTable(data[1].var)
+	local sorted = util.table.SortTable(data[1].var)
 	for _, cvar in pairs(sorted) do
 		table.insert(t, string.format([["%s"]], cvar))
 	end
@@ -61,7 +62,7 @@ end
 
 -- pretty dumb way without even using bitwise op
 local function IsBitEnum(tbl, name)
-	local t = Util:tInvert(tbl)
+	local t = util.table.tInvert(tbl)
 	if name == "Damageclass" then
 		return true
 	end
@@ -77,13 +78,13 @@ local function IsBitEnum(tbl, name)
 end
 
 function m:GetEnumTable()
-	Util:DownloadAndRun(
+	wowdoc:DownloadAndRun(
 		string.format("https://raw.githubusercontent.com/Ketho/BlizzardInterfaceResources/%s/Resources/LuaEnum.lua", GETHE_BRANCH),
 		string.format("luasrc/out/cache/Enum_%s.lua", GETHE_BRANCH)
 	)
 	local t = {}
 	table.insert(t, "Enum = {}\n")
-	for _, name in pairs(Util:SortTable(Enum)) do
+	for _, name in pairs(util.table.SortTable(Enum)) do
 		table.insert(t, string.format("---@enum Enum.%s", name))
 		table.insert(t, string.format("Enum.%s = {", name))
 		local numberFormat = IsBitEnum(Enum[name], name) and "0x%X" or "%u"
@@ -106,10 +107,10 @@ function m:GetEnumTable()
 	}
 
 	table.insert(t, "Constants = {")
-	for _, name in pairs(Util:SortTable(Constants)) do
+	for _, name in pairs(util.table.SortTable(Constants)) do
 		table.insert(t, string.format("\t%s = {", name))
 		local sortType = SortConstantsValue[name] and "value" or "key"
-		for _, t2 in pairs(Util:SortTableByType(Constants[name], sortType)) do
+		for _, t2 in pairs(util.table.SortTableByType(Constants[name], sortType)) do
 			if type(t2.value) == "string" then
 				t2.value = string.format('"%s"', t2.value)
 			end

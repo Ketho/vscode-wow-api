@@ -1,6 +1,7 @@
 local xml2lua = require "xml2lua"
 local handler = require "xmlhandler.tree"
-local Util = require("wowdoc")
+local wowdoc = require("wowdoc")
+local util = require("wowdoc.util")
 local log = require("wowdoc.log")
 
 local PATH = "luasrc/out/cache/Wowpedia_API.xml"
@@ -18,7 +19,7 @@ end
 local function SaveWowpediaExport(path, pages)
 	local url = "https://warcraft.wiki.gg/wiki/Special:Export"
 	local requestBody = string.format("pages=%s&curonly=1", pages)
-	Util:DownloadFilePost(url, path, requestBody, 10)
+	wowdoc:DownloadFilePost(url, path, requestBody, 10)
 end
 
 local undoc = GetUndocumentedApi()
@@ -29,11 +30,11 @@ local function WriteApiFiles()
 	local output = "luasrc/out/output/NonBlizzardDocumented.txt"
 	local nonBlizzDocumented, blizzDocumented = unpack(require("luasrc.WikiParser.WikiText.NonBlizzardDocumented"))
 	local file1 = io.open(output, "w")
-	for _, name in pairs(Util:SortTable(nonBlizzDocumented)) do
+	for _, name in pairs(util.table.SortTable(nonBlizzDocumented)) do
 		file1:write("API "..name.."\n")
 	end
 	local file2 = io.open("luasrc/out/output/BlizzardDocumented.txt", "w")
-	for _, name in pairs(Util:SortTable(blizzDocumented)) do
+	for _, name in pairs(util.table.SortTable(blizzDocumented)) do
 		file2:write("API "..name.."\n")
 	end
 end

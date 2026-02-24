@@ -1,4 +1,5 @@
-local Util = require("wowdoc")
+local wowdoc = require("wowdoc")
+local util = require("wowdoc.util")
 local pathlib = require("path")
 -- cache should already be created at this point
 
@@ -22,7 +23,7 @@ local function ToTypeScript(branch)
 	local data = require(pathlib.join(CVAR_CACHE, "CVars_"..branch))
 
 	local t = {}
-	local sorted = Util:SortTable(data[1].var)
+	local sorted = util.table.SortTable(data[1].var)
 	for _, name in pairs(sorted) do
 		local default, category, character, server, secure, help = unpack(data[1].var[name])
 		table.insert(t, string.format("\t%s: {", name:lower()))
