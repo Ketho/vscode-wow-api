@@ -1,5 +1,8 @@
 # Change Log
 
+## [0.22.3] - 2026-02-24
+- ✨ Updated Types and Widget/ScriptObject APIs for 12.0.1
+
 ## [0.22.2] - 2026-02-10
 - ✨ Partial release that *only* contains the Blizzard_APIDocumentationGenerated systems for the 12.0.1 patch
 
@@ -235,6 +238,7 @@ To avoid loading for Lua projects not related to World of Warcraft, all settings
 - PR [#123](https://github.com/Ketho/vscode-wow-api/pull/123) Make childGroups optional in AceConfig.OptionsTable
 - PR [#120](https://github.com/Ketho/vscode-wow-api/pull/120) Add definition for tostringall()
 
+[0.22.3]: https://github.com/Ketho/vscode-wow-api/releases/tag/0.22.3
 [0.22.2]: https://github.com/Ketho/vscode-wow-api/releases/tag/0.22.2
 [0.22.1]: https://github.com/Ketho/vscode-wow-api/releases/tag/0.22.1
 [0.22.0]: https://github.com/Ketho/vscode-wow-api/releases/tag/0.22.0

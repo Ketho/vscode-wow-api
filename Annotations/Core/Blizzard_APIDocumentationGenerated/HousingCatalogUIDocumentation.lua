@@ -1,13 +1,6 @@
 ---@meta _
 C_HousingCatalog = {}
 
----Returns false if the entry can't be deleted from storage; Typically these types of entries are something that doesn't count towards the max storage limit
----
----[Documentation](https://warcraft.wiki.gg/wiki/API_C_HousingCatalog.CanDestroyEntry)
----@param entryID HousingCatalogEntryID
----@return boolean canDelete
-function C_HousingCatalog.CanDestroyEntry(entryID) end
-
 ---Creates a new instance of a HousingCatalog searcher; This can be used to asynchronously search/filter the HousingCatalog without affecting/being restricted by the filter state of other Housing Catalog UI displays
 ---
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_HousingCatalog.CreateCatalogSearcher)
@@ -82,6 +75,13 @@ function C_HousingCatalog.GetDecorMaxOwnedCount() end
 ---@return number totalOwnedCount
 ---@return number exemptDecorCount
 function C_HousingCatalog.GetDecorTotalOwnedCount() end
+
+---Returns the number of instances that can be to be destroyed in storage; These instances count towards the max storage limit
+---
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_HousingCatalog.GetDestroyableInstanceCount)
+---@param entryID HousingCatalogEntryID
+---@return number destroyableInstanceCount
+function C_HousingCatalog.GetDestroyableInstanceCount(entryID) end
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_HousingCatalog.GetFeaturedBundles)
 ---@return HousingBundleInfo[] bundleInfos
@@ -169,6 +169,7 @@ function C_HousingCatalog.SetPreviewCartItemShown(decorGUID, shown) end
 ---@field showQuantity boolean
 ---@field quantity number
 ---@field remainingRedeemable number
+---@field destroyableInstanceCount number
 ---@field numPlaced number
 ---@field isUniqueTrophy boolean
 ---@field isAllowedOutdoors boolean

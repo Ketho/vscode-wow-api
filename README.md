@@ -1,9 +1,9 @@
 ## WoW API for VS Code
 [![](https://img.shields.io/github/license/Ketho/vscode-wow-api)](https://opensource.org/licenses/MIT)
 [![](https://img.shields.io/github/v/release/Ketho/vscode-wow-api)](https://github.com/Ketho/vscode-wow-api/releases)
-[![](https://img.shields.io/badge/mainline-11.2.0-yellow)](https://github.com/Ketho/BlizzardInterfaceResources/tree/11.2.0)
-[![](https://img.shields.io/badge/mists-5.5.0-yellow)](https://github.com/Ketho/BlizzardInterfaceResources/tree/5.5.0)
-[![](https://img.shields.io/badge/vanilla-1.15.7-yellow)](https://github.com/Ketho/BlizzardInterfaceResources/tree/1.15.7)
+[![](https://img.shields.io/badge/mainline-12.0.1-yellow)](https://github.com/Ketho/BlizzardInterfaceResources/tree/12.0.1)
+[![](https://img.shields.io/badge/mists-5.5.3-yellow)](https://github.com/Ketho/BlizzardInterfaceResources/tree/5.5.3)
+[![](https://img.shields.io/badge/vanilla-1.15.8-yellow)](https://github.com/Ketho/BlizzardInterfaceResources/tree/1.15.8)
 
 Adds IntelliSense features for World of Warcraft API to VS Code. This is a third party extension for [LuaLS](https://marketplace.visualstudio.com/items?itemName=sumneko.lua) with [annotations](https://luals.github.io/wiki/annotations/).
 
