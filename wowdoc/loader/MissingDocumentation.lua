@@ -1,3 +1,4 @@
+-- documentation for structures in blizzard format
 local Missing =
 {
 	Tables =

@@ -1,12 +1,13 @@
-local util = require("wowdoc")
+local wowdoc = require("wowdoc")
+local util = require("wowdoc.util")
 local pathlib = require("path")
 
 local m = {}
 
 ---@type GetheBranch[]
 local gethe_branches = {
-	-- "live", -- mainline
-	"beta", -- mainline beta
+	"live", -- mainline
+	-- "beta", -- mainline beta
 	"classic", -- mists
 	"classic_anniversary", -- bc anniversary
 	"classic_era", -- vanilla
@@ -50,13 +51,13 @@ local ToMap = {
 		return t
 	end,
 	Frames = function(tbl)
-		return util:ToMap(table.unpack(tbl)) -- include loadondemand
+		return util.table.ToMap(table.unpack(tbl)) -- include loadondemand
 	end,
 	FrameXML = function(tbl)
-		return util:ToMap(table.unpack(tbl)) -- include loadondemand
+		return util.table.ToMap(table.unpack(tbl)) -- include loadondemand
 	end,
 	GlobalAPI = function(tbl)
-		return util:ToMap(table.unpack(tbl)) -- include lua api
+		return util.table.ToMap(table.unpack(tbl)) -- include lua api
 	end,
 	LuaEnum = function()
 		local t = {}
@@ -64,7 +65,7 @@ local ToMap = {
 		return t
 	end,
 	Mixins = function(tbl)
-		return util:ToMap(tbl)
+		return util.table.ToMap(tbl)
 	end,
 	Templates = function(tbl)
 		local t = {}
@@ -79,7 +80,7 @@ local function GetBranchMap(branches, resource)
 		local url = BLIZZRES:format(branch, resource)
 		local file_branch = string.format("%s_%s.lua", resource, branch)
 		local path = pathlib.join(PATHS.BLIZZRES, file_branch)
-		local file_data = util:DownloadAndRun(url, path)
+		local file_data = wowdoc:DownloadAndRun(url, path)
 		map[branch] = ToMap[resource](file_data)
 	end
 	return map

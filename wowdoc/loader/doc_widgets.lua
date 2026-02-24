@@ -1,4 +1,4 @@
-
+-- system name to condensed name
 local doc_widgets = {
 	FrameAPICooldown = "Cooldown",
 	-- CooldownFrameAPI = "Cooldown", -- wtf
@@ -63,11 +63,11 @@ local doc_widgets = {
 	HousingCatalogSearcherAPI = "HousingCatalogSearcher",
 	HousingFixturePointFrameAPI = "HousingFixturePointFrame",
 	HousingLayoutPinFrameAPI = "HousingLayoutPinFrame",
-	LuaColorCurveObjectAPI = "ColorCurveObject",
+	LuaCurveObjectBaseAPI = "CurveObjectBase",
 	LuaCurveObjectAPI = "CurveObject",
+	LuaColorCurveObjectAPI = "ColorCurveObject",
 	AbbreviateConfigAPI = "AbbreviateConfig",
 	LuaDurationObjectAPI = "DurationObject",
-	LuaCurveObjectBaseAPI = "CurveObjectBase",
 	UnitHealPredictionCalculatorAPI = "UnitHealPredictionCalculator",
 	FrameAPINamePlate = "NamePlate",
 

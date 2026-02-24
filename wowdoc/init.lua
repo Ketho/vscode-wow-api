@@ -215,125 +215,6 @@ function m:HttpPostRequest(url, request)
 	return table.concat(response)
 end
 
-function m:CopyTable(tbl)
-	local t = {}
-	for k, v in pairs(tbl) do
-		t[k] = v
-	end
-	return t
-end
-
-function m:Wipe(tbl)
-	for k in pairs(tbl) do
-		tbl[k] = nil
-	end
-end
-
----@param ... table
----@return table
-function m:ToMap(...)
-	local t = {}
-	for i = 1, select("#", ...) do
-		local tbl = select(i, ...)
-		for _, v in pairs(tbl) do
-			t[v] = true
-		end
-	end
-	return t
-end
-
-function m:ToList(tbl, func)
-	local t = {}
-	for _, v in pairs(tbl) do
-		table.insert(t, v)
-	end
-	table.sort(t, func)
-	return t
-end
-
-function m:SortTable(tbl, func)
-	local t = {}
-	for k in pairs(tbl) do
-		table.insert(t, k)
-	end
-	table.sort(t, func)
-	return t
-end
-
-function m:SortTableCustom(tbl, func)
-	local t = {}
-	for k, v in pairs(tbl) do
-		table.insert(t, {
-			key = k,
-			value = v
-		})
-	end
-	table.sort(t, func)
-	return t
-end
-
-function m.SortNocase(a, b)
-	return a:lower() < b:lower()
-end
-
-function m:SortTableByType(tbl, sortType)
-	local t = {}
-	for k, v in pairs(tbl) do
-		tinsert(t, {
-			key = k,
-			value = v
-		})
-	end
-	table.sort(t, function(a, b)
-		local va, vb = a[sortType], b[sortType]
-		local ta, tb = type(va), type(vb)
-		if ta ~= tb then
-			if ta == "boolean" and tb == "number" then
-				return true
-			elseif ta == "number" and tb == "boolean" then
-				return false
-			end
-		end
-		if ta == "boolean" then
-			if va ~= vb then
-				return va and not vb
-			end
-		elseif ta == "string" then
-			return va < vb
-		elseif ta == "number" then
-			if va == vb then
-				return a.key < b.key
-			else
-				return va < vb
-			end
-		end
-	end)
-	return t
-end
-
--- https://stackoverflow.com/a/7615129/1297035
-function m:strsplit(input, sep)
-	local t = {}
-	for s in string.gmatch(input, "([^"..sep.."]+)") do
-		table.insert(t, s)
-	end
-	return t
-end
-
---- combines table keys
----@vararg string
----@return table
-function m:CombineTable(...)
-	local t = {}
-	for i = 1, select("#", ...) do
-		local tbl = select(i, ...)
-		for k in pairs(tbl) do
-			t[k] = true
-		end
-	end
-	return t
-end
-
 function m:GetFullName(apiTable, isWikiLink)
 	if isWikiLink then
 		local baseName = self:GetBaseName(apiTable, true)
@@ -450,21 +331,6 @@ function m:IterateFiles(folder, func)
 	end
 end
 
--- https://stackoverflow.com/a/32660766/1297035
-function m:equals(a, b)
-	if a == b then return true end
-	local type_a, type_b = type(a), type(b)
-	if type_a ~= type_b then return false end
-	if type_a ~= "table" then return false end
-	for k, v in pairs(a) do
-		if b[k] == nil or not self:equals(v, b[k]) then return false end
-	end
-	for k in pairs(b) do
-		if a[k] == nil then return false end
-	end
-	return true
-end
-
 function m:template_apilink(apitype, apitable)
 	local t = {}
 	table.insert(t, "{{apilink")
@@ -524,14 +390,6 @@ function m:IsBitEnum(apiTbl)
 		return false
 	end
 	return true
-end
-
-function m:tInvert(a)
-	local t = {}
-	for k, v in pairs(a) do
-		t[v] = k
-	end
-	return t
 end
 
 return m
