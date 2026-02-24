@@ -296,6 +296,10 @@ function Model:SetShadowEffect(strength) end
 ---@param scale? number
 function Model:SetTransform(translation, rotation, scale) end
 
+---[Documentation](https://warcraft.wiki.gg/wiki/API_Model_SetUseGBuffer)
+---@param useGBuffer boolean
+function Model:SetUseGBuffer(useGBuffer) end
+
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_Model_SetViewInsets)
 ---@param left uiUnit
 ---@param right uiUnit

@@ -81,6 +81,10 @@ function FontString:GetNumLines() end
 ---@return number radians
 function FontString:GetRotation() end
 
+---[Documentation](https://warcraft.wiki.gg/wiki/API_FontString_GetScaleAnimationMode)
+---@return Enum.FontStringScaleAnimationMode scaleAnimationMode
+function FontString:GetScaleAnimationMode() end
+
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_FontString_GetShadowColor)
 ---@return number colorR
 ---@return number colorG
@@ -187,6 +191,10 @@ function FontString:SetNonSpaceWrap(wrap) end
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_FontString_SetRotation)
 ---@param radians number
 function FontString:SetRotation(radians) end
+
+---[Documentation](https://warcraft.wiki.gg/wiki/API_FontString_SetScaleAnimationMode)
+---@param scaleAnimationMode Enum.FontStringScaleAnimationMode
+function FontString:SetScaleAnimationMode(scaleAnimationMode) end
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_FontString_SetShadowColor)
 ---@param colorR number

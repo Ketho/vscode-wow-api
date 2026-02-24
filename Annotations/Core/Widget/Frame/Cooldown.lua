@@ -49,6 +49,10 @@ function Cooldown:GetCooldownDuration() end
 ---@return number duration
 function Cooldown:GetCooldownTimes() end
 
+---[Documentation](https://warcraft.wiki.gg/wiki/API_Cooldown_GetCountdownFontString)
+---@return SimpleFontString countdownString
+function Cooldown:GetCountdownFontString() end
+
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_Cooldown_GetDrawBling)
 ---@return boolean drawBling
 function Cooldown:GetDrawBling() end
@@ -114,6 +118,17 @@ function Cooldown:SetCooldown(start, duration, modRate) end
 ---@param modRate? number Default = 1
 function Cooldown:SetCooldownDuration(duration, modRate) end
 
+---[Documentation](https://warcraft.wiki.gg/wiki/API_Cooldown_SetCooldownFromDurationObject)
+---@param duration LuaDurationObject
+---@param clearIfZero? boolean Default = true
+function Cooldown:SetCooldownFromDurationObject(duration, clearIfZero) end
+
+---[Documentation](https://warcraft.wiki.gg/wiki/API_Cooldown_SetCooldownFromExpirationTime)
+---@param expirationTime DurationSeconds
+---@param duration DurationSeconds
+---@param modRate? number Default = 1
+function Cooldown:SetCooldownFromExpirationTime(expirationTime, duration, modRate) end
+
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_Cooldown_SetCooldownUNIX)
 ---@param start number
 ---@param duration number
@@ -168,6 +183,10 @@ function Cooldown:SetHideCountdownNumbers(hideNumbers) end
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_Cooldown_SetMinimumCountdownDuration)
 ---@param milliseconds number
 function Cooldown:SetMinimumCountdownDuration(milliseconds) end
+
+---[Documentation](https://warcraft.wiki.gg/wiki/API_Cooldown_SetPaused)
+---@param paused boolean
+function Cooldown:SetPaused(paused) end
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_Cooldown_SetReverse)
 ---@param reverse? boolean Default = false
