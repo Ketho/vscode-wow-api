@@ -69,6 +69,10 @@ function Cooldown:GetEdgeScale() end
 ---@return boolean hideNumbers
 function Cooldown:GetHideCountdownNumbers() end
 
+---[Documentation](https://warcraft.wiki.gg/wiki/API_Cooldown_GetMinimumCountdownDuration)
+---@return number milliseconds
+function Cooldown:GetMinimumCountdownDuration() end
+
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_Cooldown_GetReverse)
 ---@return boolean reverse
 function Cooldown:GetReverse() end
@@ -158,6 +162,12 @@ function Cooldown:SetEdgeTexture(texture, colorR, colorG, colorB, colorA) end
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_Cooldown_SetHideCountdownNumbers)
 ---@param hideNumbers? boolean Default = false
 function Cooldown:SetHideCountdownNumbers(hideNumbers) end
+
+---Controls the minimum duration above which countdown text will be shown. This is applied based upon the total duration of the cooldown, not the remaining duration as it ticks down.
+---
+---[Documentation](https://warcraft.wiki.gg/wiki/API_Cooldown_SetMinimumCountdownDuration)
+---@param milliseconds number
+function Cooldown:SetMinimumCountdownDuration(milliseconds) end
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_Cooldown_SetReverse)
 ---@param reverse? boolean Default = false

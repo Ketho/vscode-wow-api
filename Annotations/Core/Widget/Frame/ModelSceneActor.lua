@@ -15,6 +15,11 @@ function ModelSceneActor:AttachToMount(rider, animation, spellKitVisualID) end
 ---@return number scale
 function ModelSceneActor:CalculateMountScale(rider) end
 
+---[Documentation](https://warcraft.wiki.gg/wiki/API_ModelSceneActor_DetachFromMount)
+---@param rider ModelSceneFrameActor
+---@return boolean success
+function ModelSceneActor:DetachFromMount(rider) end
+
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_ModelSceneActor_Dress)
 function ModelSceneActor:Dress() end
 
