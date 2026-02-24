@@ -1,5 +1,4 @@
 ---@meta _
----[FrameXML](https://www.townlong-yak.com/framexml/live/Frame/EventFrame.lua)
 ---@class EventFrameMixin : CallbackRegistryMixin
 EventFrameMixin = {}
 

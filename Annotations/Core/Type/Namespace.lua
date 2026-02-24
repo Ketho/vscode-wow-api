@@ -4,7 +4,7 @@
 C_AccountServices = {} -- no doc
 C_AdventureJournal = {} -- AdventureJournalDocumentation.lua
 C_ArrowCalloutManager = {} -- no doc
-C_BlackMarket = {} -- BlackMarketInfoDocumentation.lua
+C_BlackMarket = {} -- BlackMarketInfoDocumentation.lua; C_BlackMarketInfo
 C_CharacterServices = {} -- no doc
 C_CharacterServicesPublic = {} -- no doc
 C_ClassTrial = {} -- ClassTrialDocumentation.lua
