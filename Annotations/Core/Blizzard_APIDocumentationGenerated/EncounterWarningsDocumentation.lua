@@ -11,10 +11,22 @@ function C_EncounterWarnings.GetColorForSeverity(severity) end
 ---@return EncounterWarningInfo warningInfo
 function C_EncounterWarnings.GetEditModeWarningInfo(severity) end
 
+---Returns true if custom sound alerts are allowed to play for hidden warning messages.
+---
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_EncounterWarnings.GetPlayCustomSoundsWhenHidden)
+---@return boolean play
+function C_EncounterWarnings.GetPlayCustomSoundsWhenHidden() end
+
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_EncounterWarnings.GetSoundKitForSeverity)
 ---@param severity Enum.EncounterEventSeverity
 ---@return number soundKitID
 function C_EncounterWarnings.GetSoundKitForSeverity(severity) end
+
+---Returns true if text messages for encounter events are allowed to be shown.
+---
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_EncounterWarnings.GetWarningsShown)
+---@return boolean shown
+function C_EncounterWarnings.GetWarningsShown() end
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_EncounterWarnings.IsFeatureAvailable)
 ---@return boolean isAvailable
@@ -28,6 +40,18 @@ function C_EncounterWarnings.IsFeatureEnabled() end
 ---@param severity Enum.EncounterEventSeverity
 ---@return number soundHandle
 function C_EncounterWarnings.PlaySound(severity) end
+
+---Controls whether custom sound alerts for encounter events are allowed to play for warning messages that are hidden.
+---
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_EncounterWarnings.SetPlayCustomSoundsWhenHidden)
+---@param play boolean
+function C_EncounterWarnings.SetPlayCustomSoundsWhenHidden(play) end
+
+---Controls whether text messages for encounter events are allowed to be shown.
+---
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_EncounterWarnings.SetWarningsShown)
+---@param shown boolean
+function C_EncounterWarnings.SetWarningsShown(shown) end
 
 ---@class EncounterWarningInfo
 ---@field text string

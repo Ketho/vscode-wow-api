@@ -9,6 +9,6 @@
 ---@field color colorRGB?
 
 ---@class EncounterEventSoundInfo
----@field file fileID
+---@field file FileAsset
 ---@field channel UISoundSubType? Default = g_defaultSI3UISoundSubTypeForLua
 ---@field volume number? Default = 1

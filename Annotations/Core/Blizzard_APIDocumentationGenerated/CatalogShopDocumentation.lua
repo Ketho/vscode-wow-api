@@ -95,9 +95,10 @@ function C_CatalogShop.GetProductInfo(productID) end
 function C_CatalogShop.GetProductSortOrder(categoryID, sectionID, productID) end
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_CatalogShop.GetRefundableDecors)
----@param productIDOpt? number
+---@param productIdFilterOpt? number
 ---@return RefundableDecorInfo[] refundableDecorInfos
-function C_CatalogShop.GetRefundableDecors(productIDOpt) end
+---@return time_t minTimeRemainingSeconds
+function C_CatalogShop.GetRefundableDecors(productIdFilterOpt) end
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_CatalogShop.GetSectionIDsForCategory)
 ---@param categoryID number

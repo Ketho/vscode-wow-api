@@ -167,3 +167,19 @@ function C_Secrets.ShouldUnitSpellCastBeSecret(unit, spellIdentifier) end
 ---@param unit UnitToken
 ---@return boolean isSpellCastingSecret
 function C_Secrets.ShouldUnitSpellCastingBeSecret(unit) end
+
+---Returns true if queries for unit threat status will produce secret values.
+---
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_Secrets.ShouldUnitThreatStateBeSecret)
+---@param unit UnitToken
+---@param mobUnit? UnitToken
+---@return boolean isUnitThreatSecret
+function C_Secrets.ShouldUnitThreatStateBeSecret(unit, mobUnit) end
+
+---Returns true if queries for unit threat values will produce secret values.
+---
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_Secrets.ShouldUnitThreatValuesBeSecret)
+---@param unit UnitToken
+---@param mobUnit UnitToken
+---@return boolean isUnitThreatSecret
+function C_Secrets.ShouldUnitThreatValuesBeSecret(unit, mobUnit) end

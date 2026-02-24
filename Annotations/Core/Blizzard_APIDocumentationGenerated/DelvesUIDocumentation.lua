@@ -62,6 +62,11 @@ function C_DelvesUI.GetLockedTextForCompanion(companionID) end
 ---@return number modelSceneID
 function C_DelvesUI.GetModelSceneForCompanion(companionID) end
 
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_DelvesUI.GetPlayerCompanionPDEID)
+---@param companionID? number
+---@return number pdeID
+function C_DelvesUI.GetPlayerCompanionPDEID(companionID) end
+
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_DelvesUI.GetRoleNodeForCompanion)
 ---@param companionID? number
 ---@return number nodeID
@@ -72,6 +77,10 @@ function C_DelvesUI.GetRoleNodeForCompanion(companionID) end
 ---@param companionID? number
 ---@return number subTreeID
 function C_DelvesUI.GetRoleSubtreeForCompanion(roleType, companionID) end
+
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_DelvesUI.GetTieredEntrancePDEID)
+---@return number pdeID
+function C_DelvesUI.GetTieredEntrancePDEID() end
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_DelvesUI.GetTraitTreeForCompanion)
 ---@param companionID? number

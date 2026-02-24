@@ -5206,7 +5206,11 @@ export const data: EventInterface = {
 	PET_UI_CLOSE: {},
 	PET_UI_UPDATE: {},
 	PHOTO_SHARING_AUTHORIZATION_NEEDED: {},
-	PHOTO_SHARING_AUTHORIZATION_UPDATED: {},
+	PHOTO_SHARING_AUTHORIZATION_UPDATED: {
+		Payload: [
+			{Name: "showNotification", Type: "boolean"},
+		],
+	},
 	PHOTO_SHARING_PHOTO_UPLOAD_STATUS: {
 		Payload: [
 			{Name: "uploadStatus", Type: "PhotoSharingUploadStatus"},

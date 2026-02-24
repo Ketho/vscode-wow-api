@@ -1364,21 +1364,21 @@ export const data: CVarInterface = {
 	},
 	kioskcansessionexpire: {
 		name: "KioskCanSessionExpire",
-		default: "",
+		default: "1",
 		category: 8,
 		secure: true,
 		help: "Determines if a Kiosk session can expire. 0: No, 1: Yes (default).",
 	},
 	kioskcharactertemplateset: {
 		name: "KioskCharacterTemplateSet",
-		default: "",
+		default: "0",
 		category: 8,
 		secure: true,
 		help: "Character template set ID to select at character creation. Defaults to 0.",
 	},
 	kiosklobbykickseconds: {
 		name: "KioskLobbyKickSeconds",
-		default: "",
+		default: "30",
 		category: 8,
 		secure: true,
 		help: "Seconds until an expired session kicks the player back to the lobby. Defaults to 30 seconds.",
@@ -1447,24 +1447,6 @@ export const data: CVarInterface = {
 		name: "MoveHistoryEventLog",
 		default: "0",
 		category: 5,
-	},
-	nameplateclassificationscale: {
-		name: "NamePlateClassificationScale",
-		default: "",
-		category: 4,
-		help: "Applied to the classification icon for nameplates.",
-	},
-	nameplatehorizontalscale: {
-		name: "NamePlateHorizontalScale",
-		default: "",
-		category: 4,
-		help: "Applied to horizontal size of all nameplates.",
-	},
-	nameplateverticalscale: {
-		name: "NamePlateVerticalScale",
-		default: "",
-		category: 4,
-		help: "Applied to vertical size of all nameplates.",
 	},
 	nonemittercombatrange: {
 		name: "NonEmitterCombatRange",
@@ -1906,12 +1888,6 @@ export const data: CVarInterface = {
 		category: 4,
 		scope: "Character",
 		help: "Motion sickness control for how much effects can shake in 2D UI",
-	},
-	showclasscolorinnameplate: {
-		name: "ShowClassColorInNameplate",
-		default: "",
-		category: 4,
-		help: "use this to display the class color in enemy nameplate health bars",
 	},
 	showquestunitcircles: {
 		name: "ShowQuestUnitCircles",
@@ -2890,12 +2866,6 @@ export const data: CVarInterface = {
 		category: 4,
 		scope: "Character",
 		help: "Which adventure journal entries flagged with ADVENTURE_JOURNAL_HIDE_AFTER_ACTION the user acted upon",
-	},
-	activecufprofile: {
-		name: "activeCUFProfile",
-		default: "",
-		category: 4,
-		help: "The last active CUF Profile.",
 	},
 	addfriendinfoshown: {
 		name: "addFriendInfoShown",
@@ -5887,6 +5857,7 @@ export const data: CVarInterface = {
 		default: "0",
 		category: 4,
 		scope: "Character",
+		secure: true,
 		help: "If true, hide messages that aren't actively targeting the player. Messages that have no explicit target will always be shown",
 	},
 	encounterwarningslevel: {
@@ -6478,12 +6449,6 @@ export const data: CVarInterface = {
 		scope: "Account",
 		help: "Show usable guild rewards only",
 	},
-	guildrosterview: {
-		name: "guildRosterView",
-		default: "",
-		category: 4,
-		help: "The current guild roster display mode",
-	},
 	guildshowoffline: {
 		name: "guildShowOffline",
 		default: "1",
@@ -6646,12 +6611,12 @@ export const data: CVarInterface = {
 		scope: "Account",
 		help: "Stores whether to hide events whose rewards have been claimed",
 	},
-	highestunlockeddelvestier: {
-		name: "highestUnlockedDelvesTier",
-		default: "1",
+	highestunlockedtieredentrancetier: {
+		name: "highestUnlockedTieredEntranceTier",
+		default: "",
 		category: 4,
 		scope: "Account",
-		help: "Stores the highest unlocked delve difficulty tier. Used to notify the player when they have higher difficulty tiers available.",
+		help: "Serialized mapping using a PDE ID. Stores the highest unlocked difficulty tier. Used to notify the player when they have higher difficulty tiers available.",
 	},
 	horizonclip: {
 		name: "horizonClip",
@@ -6859,12 +6824,12 @@ export const data: CVarInterface = {
 		category: 4,
 		scope: "Character",
 	},
-	lastlockeddelvescompanionabilities: {
-		name: "lastLockedDelvesCompanionAbilities",
+	lastlockedtieredentrancecompanionabilities: {
+		name: "lastLockedTieredEntranceCompanionAbilities",
 		default: "",
 		category: 4,
 		scope: "Character",
-		help: "Stores the nodeIDs of the locked delve companion abilities, to highlight them when unlocked.",
+		help: "Serialized mapping using a PDE ID. Stores the nodeIDs of the locked delve companion abilities, to highlight them when unlocked.",
 	},
 	lastrenownforcovenant1: {
 		name: "lastRenownForCovenant1",
@@ -6908,12 +6873,12 @@ export const data: CVarInterface = {
 		scope: "Account",
 		help: "The last club that was selected by the user. We default to this club when the player opens the communities frame if the player isn't in a guild.",
 	},
-	lastselecteddelvestier: {
-		name: "lastSelectedDelvesTier",
-		default: "0",
+	lastselectedtieredentrancetier: {
+		name: "lastSelectedTieredEntranceTier",
+		default: "",
 		category: 4,
 		scope: "Character",
-		help: "Stores the last selected delve difficulty tier. If 0, the player will be forced to select a tier.",
+		help: "Serialized mapping using a PDE ID. Stores the last selected difficulty tier. If 0, the player will be forced to select a tier.",
 	},
 	lasttalkedtogm: {
 		name: "lastTalkedToGM",
@@ -6963,12 +6928,6 @@ export const data: CVarInterface = {
 		category: 4,
 		scope: "Account",
 		help: "SetID of the last applied transmog outfit",
-	},
-	lastvoidstoragetutorial: {
-		name: "lastVoidStorageTutorial",
-		default: "",
-		category: 4,
-		help: "Stores the last void storage tutorial the player has accepted",
 	},
 	last_matchmaking_party_size: {
 		name: "last_matchmaking_party_size",
@@ -7256,11 +7215,6 @@ export const data: CVarInterface = {
 		scope: "Account",
 		help: "Stores shapeshift-specific tracking spells that were active last session.",
 	},
-	minimaptrackedinfov2: {
-		name: "minimapTrackedInfov2",
-		default: "",
-		category: 5,
-	},
 	minimaptrackedinfov4: {
 		name: "minimapTrackedInfov4",
 		default: "3103471",
@@ -7503,18 +7457,6 @@ export const data: CVarInterface = {
 		secure: true,
 		help: "Position other nameplates at the base, rather than overhead",
 	},
-	nameplateotherbottominset: {
-		name: "nameplateOtherBottomInset",
-		default: "",
-		category: 1,
-		help: "The inset from the bottom (in screen percent) that the non-self nameplates are clamped to.",
-	},
-	nameplateothertopinset: {
-		name: "nameplateOtherTopInset",
-		default: "",
-		category: 1,
-		help: "The inset from the top (in screen percent) that the non-self nameplates are clamped to.",
-	},
 	nameplateoverlaph: {
 		name: "nameplateOverlapH",
 		default: "0.800000",
@@ -7680,11 +7622,6 @@ export const data: CVarInterface = {
 		category: 4,
 		scope: "Character",
 		help: "Whether nameplates are shown for friendly players.",
-	},
-	nameplateshowfriends: {
-		name: "nameplateShowFriends",
-		default: "",
-		category: 4,
 	},
 	nameplateshowoffscreen: {
 		name: "nameplateShowOffscreen",
@@ -8035,18 +7972,6 @@ export const data: CVarInterface = {
 		category: 4,
 		scope: "Character",
 		help: "Any color override values that are different from the default values for an account",
-	},
-	playerstatleftdropdown: {
-		name: "playerStatLeftDropdown",
-		default: "",
-		category: 4,
-		help: "The player stat selected in the left dropdown",
-	},
-	playerstatrightdropdown: {
-		name: "playerStatRightDropdown",
-		default: "",
-		category: 4,
-		help: "The player stat selected in the right dropdown",
 	},
 	plunderstormrealm: {
 		name: "plunderstormRealm",
@@ -8686,24 +8611,6 @@ export const data: CVarInterface = {
 		secure: true,
 		help: "Seen the free character upgrade popup (Asia)",
 	},
-	seencharacterselectaddgrouphelptip: {
-		name: "seenCharacterSelectAddGroupHelpTip",
-		default: "",
-		category: 4,
-		help: "Seen and acknowledged the character select add group help tip",
-	},
-	seencharacterselectnavbarcampshelptip: {
-		name: "seenCharacterSelectNavBarCampsHelpTip",
-		default: "",
-		category: 4,
-		help: "Seen and acknowledged the character select camps nav bar help tip",
-	},
-	seencharacterselectwarbandhelptip: {
-		name: "seenCharacterSelectWarbandHelpTip",
-		default: "",
-		category: 4,
-		help: "Seen and acknowledged the character select warband help tip",
-	},
 	seencharacterupgradepopup: {
 		name: "seenCharacterUpgradePopup",
 		default: "6",
@@ -9278,12 +9185,6 @@ export const data: CVarInterface = {
 		category: 4,
 		help: "SVK Density, set by the UI Spell Density setting. 0 - none (dev-only), 1 - minimum, 2 - reduced, 3 - performance, 4 - full",
 	},
-	splashscreennormal: {
-		name: "splashScreenNormal",
-		default: "",
-		category: 4,
-		help: "Show normal splash screen id",
-	},
 	ssaomagicnormals: {
 		name: "ssaoMagicNormals",
 		default: "1",
@@ -9834,12 +9735,6 @@ export const data: CVarInterface = {
 		category: 4,
 		help: "Enables units turning their head to look at players",
 	},
-	unlockedexpansionlandingpages: {
-		name: "unlockedExpansionLandingPages",
-		default: "",
-		category: 4,
-		help: "Bitfield for which expansion landing pages have been unlocked/seen by the user",
-	},
 	unlockedmajorfactions: {
 		name: "unlockedMajorFactions",
 		default: "",
@@ -9852,11 +9747,6 @@ export const data: CVarInterface = {
 		default: "1",
 		category: 4,
 		help: "Determines whether to use the commentator selection circles or the default selection circles while spectating or commentating a wargame",
-	},
-	usecompactpartyframes: {
-		name: "useCompactPartyFrames",
-		default: "",
-		category: 5,
 	},
 	usehighrestextures: {
 		name: "useHighResTextures",

@@ -3827,8 +3827,9 @@ function EJ_GetSearchSize() end
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_EJ_GetSectionPath)
 ---@param sectionID number
 ---@return number sectionID
----@return number? parentSectionID
----@return number? grandParentSectionID
+---@return number? parent1SectionID
+---@return number? parent2SectionID
+---@return number? rootSectionID
 function EJ_GetSectionPath(sectionID) end
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_EJ_GetTierInfo)
@@ -4311,16 +4312,16 @@ function GetBattlefieldStatData(playerIndex, slotIndex) end
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_GetBattlefieldStatus)
 ---@param index number
 ---@return string status
----@return string mapName
+---@return string? mapName
 ---@return number teamSize
 ---@return boolean registeredMatch
 ---@return boolean suspendedQueue
----@return string queueType
----@return string gameType
----@return string role
----@return boolean asGroup
----@return string shortDescription
----@return string longDescription
+---@return string? queueType
+---@return string? gameType
+---@return string? role
+---@return boolean? asGroup
+---@return string? shortDescription
+---@return string? longDescription
 ---@return boolean isSoloQueue
 function GetBattlefieldStatus(index) end
 
@@ -6648,6 +6649,7 @@ function GetSoundEntryCount(soundKit) end
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_GetSpecializationInfoByID)
 ---@param specID number
+---@param gender? number
 ---@return number id
 ---@return string name
 ---@return string description
@@ -6655,7 +6657,7 @@ function GetSoundEntryCount(soundKit) end
 ---@return string role
 ---@return string classFile
 ---@return string className
-function GetSpecializationInfoByID(specID) end
+function GetSpecializationInfoByID(specID, gender) end
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_GetSpecializationRole)
 ---@param specIndex number

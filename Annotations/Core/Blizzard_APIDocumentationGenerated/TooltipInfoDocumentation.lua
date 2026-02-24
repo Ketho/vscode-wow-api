@@ -414,7 +414,7 @@ function C_TooltipInfo.GetTrainerService(serviceIndex) end
 function C_TooltipInfo.GetTraitEntry(entryID, rank) end
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_TooltipInfo.GetUnit)
----@param unit UnitToken
+---@param unit UnitTokenPvPRestrictedForAddOns
 ---@param hideStatus? boolean
 ---@return TooltipData data
 function C_TooltipInfo.GetUnit(unit, hideStatus) end

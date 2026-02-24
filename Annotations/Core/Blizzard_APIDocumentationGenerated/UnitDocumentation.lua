@@ -31,8 +31,8 @@ function CreateUnitHealPredictionCalculator() end
 function EjectPassengerFromSeat(virtualSeatIndex) end
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_GetComboPoints)
----@param unit UnitToken
----@param target UnitToken
+---@param unit UnitTokenPvPRestrictedForAddOns
+---@param target UnitTokenPvPRestrictedForAddOns
 ---@return number result
 function GetComboPoints(unit, target) end
 
@@ -288,12 +288,12 @@ function UnitCanCooperate(unit, target) end
 function UnitCanPetBattle(unit, target) end
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_UnitCastingDuration)
----@param unit UnitToken
+---@param unit UnitTokenPvPRestrictedForAddOns
 ---@return LuaDurationObject duration
 function UnitCastingDuration(unit) end
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_UnitCastingInfo)
----@param unit UnitToken
+---@param unit UnitTokenPvPRestrictedForAddOns
 ---@return string name
 ---@return string displayName
 ---@return fileID textureID
@@ -308,12 +308,12 @@ function UnitCastingDuration(unit) end
 function UnitCastingInfo(unit) end
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_UnitChannelDuration)
----@param unit UnitToken
+---@param unit UnitTokenPvPRestrictedForAddOns
 ---@return LuaDurationObject duration
 function UnitChannelDuration(unit) end
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_UnitChannelInfo)
----@param unit UnitToken
+---@param unit UnitTokenPvPRestrictedForAddOns
 ---@return string name
 ---@return string displayName
 ---@return fileID textureID
@@ -453,29 +453,29 @@ function UnitFactionGroup(unitName, checkDisplayRace) end
 function UnitFullName(unit) end
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_UnitGUID)
----@param unit UnitToken
+---@param unit UnitTokenPvPRestrictedForAddOns
 ---@return WOWGUID? result
 function UnitGUID(unit) end
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_UnitGetDetailedHealPrediction)
----@param unit UnitToken
----@param healerUnit? UnitToken
+---@param unit UnitTokenPvPRestrictedForAddOns
+---@param healerUnit? UnitTokenPvPRestrictedForAddOns
 ---@param healPredictionCalculator UnitHealPredictionCalculator
 function UnitGetDetailedHealPrediction(unit, healerUnit, healPredictionCalculator) end
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_UnitGetIncomingHeals)
----@param unit UnitToken
----@param healerGUID? UnitToken
+---@param unit UnitTokenPvPRestrictedForAddOns
+---@param healerGUID? UnitTokenPvPRestrictedForAddOns
 ---@return number? result
 function UnitGetIncomingHeals(unit, healerGUID) end
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_UnitGetTotalAbsorbs)
----@param unit UnitToken
+---@param unit UnitTokenPvPRestrictedForAddOns
 ---@return number result
 function UnitGetTotalAbsorbs(unit) end
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_UnitGetTotalHealAbsorbs)
----@param unit UnitToken
+---@param unit UnitTokenPvPRestrictedForAddOns
 ---@return number result
 function UnitGetTotalHealAbsorbs(unit) end
 
@@ -510,14 +510,14 @@ function UnitHasVehiclePlayerFrameUI(unit) end
 function UnitHasVehicleUI(unit) end
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_UnitHealthMax)
----@param unit UnitToken
+---@param unit UnitTokenPvPRestrictedForAddOns
 ---@return number result
 function UnitHealthMax(unit) end
 
 ---Result of UnitHealthMax() - UnitHealth()
 ---
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_UnitHealthMissing)
----@param unit UnitToken
+---@param unit UnitTokenPvPRestrictedForAddOns
 ---@param usePredicted? boolean Default = true
 ---@return number result
 function UnitHealthMissing(unit, usePredicted) end
@@ -525,14 +525,14 @@ function UnitHealthMissing(unit, usePredicted) end
 ---Returns percent of health remaining - can be scaled via a curve for display purposes
 ---
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_UnitHealthPercent)
----@param unit UnitToken
+---@param unit UnitTokenPvPRestrictedForAddOns
 ---@param usePredicted? boolean Default = true
 ---@param curve? LuaCurveObjectBase
 ---@return LuaCurveEvaluatedResult result
 function UnitHealthPercent(unit, usePredicted, curve) end
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_UnitHealth)
----@param unit UnitToken
+---@param unit UnitTokenPvPRestrictedForAddOns
 ---@param usePredicted? boolean Default = true
 ---@return number result
 function UnitHealth(unit, usePredicted) end
@@ -891,7 +891,7 @@ function UnitNumPowerBarTimers(unit) end
 function UnitOnTaxi(unit) end
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_UnitOwnerGUID)
----@param unit UnitToken
+---@param unit UnitTokenPvPRestrictedForAddOns
 ---@return WOWGUID ownerGUID
 function UnitOwnerGUID(unit) end
 
@@ -901,7 +901,7 @@ function UnitOwnerGUID(unit) end
 function UnitPVPName(unit) end
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_UnitPartialPower)
----@param unitToken UnitToken
+---@param unitToken UnitTokenPvPRestrictedForAddOns
 ---@param powerType? Enum.PowerType
 ---@param unmodified? boolean Default = false
 ---@return number partialPower
@@ -943,7 +943,7 @@ function UnitPlayerOrPetInRaid(unit, partyIndex) end
 function UnitPosition(unit) end
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_UnitPower)
----@param unitToken UnitToken
+---@param unitToken UnitTokenPvPRestrictedForAddOns
 ---@param powerType? Enum.PowerType
 ---@param unmodified? boolean Default = false
 ---@return number power
@@ -969,7 +969,7 @@ function UnitPowerBarTimerInfo(unit, index) end
 function UnitPowerDisplayMod(powerType) end
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_UnitPowerMax)
----@param unitToken UnitToken
+---@param unitToken UnitTokenPvPRestrictedForAddOns
 ---@param powerType? Enum.PowerType
 ---@param unmodified? boolean Default = false
 ---@return number maxPower
@@ -978,7 +978,7 @@ function UnitPowerMax(unitToken, powerType, unmodified) end
 ---Result of UnitPowerMax() - UnitPower()
 ---
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_UnitPowerMissing)
----@param unitToken UnitToken
+---@param unitToken UnitTokenPvPRestrictedForAddOns
 ---@param powerType? Enum.PowerType
 ---@param unmodified? boolean Default = false
 ---@return number result
@@ -987,7 +987,7 @@ function UnitPowerMissing(unitToken, powerType, unmodified) end
 ---Queries the percent of power remaining, optionally evaluating it against a supplied curve.
 ---
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_UnitPowerPercent)
----@param unitToken UnitToken
+---@param unitToken UnitTokenPvPRestrictedForAddOns
 ---@param powerType? Enum.PowerType
 ---@param unmodified? boolean Default = false
 ---@param curve? LuaCurveObjectBase
@@ -995,7 +995,7 @@ function UnitPowerMissing(unitToken, powerType, unmodified) end
 function UnitPowerPercent(unitToken, powerType, unmodified, curve) end
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_UnitPowerType)
----@param unit UnitToken
+---@param unit UnitTokenPvPRestrictedForAddOns
 ---@param index? number Default = 0
 ---@return Enum.PowerType powerType
 ---@return string powerTypeToken
@@ -1005,7 +1005,7 @@ function UnitPowerPercent(unitToken, powerType, unmodified, curve) end
 function UnitPowerType(unit, index) end
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_UnitPvpClassification)
----@param unit UnitToken
+---@param unit UnitTokenNamePlate
 ---@return Enum.PvPUnitClassification? classification
 function UnitPvpClassification(unit) end
 
@@ -1111,7 +1111,7 @@ function UnitSpellTargetClass(unit) end
 function UnitSpellTargetName(unit) end
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_UnitStagger)
----@param unit UnitToken
+---@param unit UnitTokenPvPRestrictedForAddOns
 ---@return number result
 function UnitStagger(unit) end
 

@@ -73,6 +73,7 @@ function C_MajorFactions.ShouldUseJourneyRewardTrack(majorFactionID) end
 ---@field unlockDescription string?
 ---@field uiPriority number
 ---@field renownLevel number
+---@field maxLevel number
 ---@field renownReputationEarned number
 ---@field renownLevelThreshold number
 ---@field textureKit textureKit
