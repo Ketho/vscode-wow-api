@@ -50,7 +50,7 @@ local data = {
 
 	-- widgets
 	{ Name = "ChatBubbleFrame", Type = {"Frame"} }, -- the only InnerType not documented
-	{ Name = "CooldownFrame", Type = {"Cooldown"}, W_Replace = "Cooldown" },
+	{ Name = "CooldownFrame", W_Replace = "Cooldown", W_Link = "UIOBJECT_Cooldown" },
 	{ Name = "CScriptObject", Type = {"FrameScriptObject"}, W_Alias = "ScriptObject", W_Replace = "FrameScriptObject", W_Link = "UIOBJECT_FrameScriptObject" },
 	{ Name = "FrameScriptObject", Type = {"UIObject"} },
 	{ Name = "ModelSceneFrame", Type = {"ModelScene"}, W_Replace = "ModelScene", W_Link = "UIOBJECT_ModelScene" },
@@ -59,7 +59,7 @@ local data = {
 	{ Name = "ScriptRegion", Type = {"Region"} },
 	{ Name = "SimpleAnim", W_Replace = "Animation", W_Link = "UIOBJECT_Animation" },
 	{ Name = "SimpleAnimGroup", W_Replace = "AnimationGroup", W_Link = "UIOBJECT_AnimationGroup" },
-	{ Name = "SimpleCheckbox", Type = {"CheckButton"} },
+	{ Name = "SimpleCheckbox", W_Replace = "CheckButton", W_Link = "UIOBJECT_CheckButton" },
 	{ Name = "SimpleControlPoint", W_Replace = "ControlPoint", W_Link = "UIOBJECT_ControlPoint" },
 	{ Name = "SimpleFont", W_Replace = "Font", W_Link = "UIOBJECT_Font" },
 	{ Name = "SimpleFontString", W_Replace = "FontString", W_Link = "UIOBJECT_FontString" },

@@ -121,6 +121,7 @@
 ---|"MONOCHROME"
 ---|"OUTLINE"
 ---|"THICKOUTLINE"
+---|"SLUG"
 
 --- `uiRect` cannot be annotated as a list of numbers
 --- it's the same as Model:GetViewInsets/SetViewInsets params

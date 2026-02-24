@@ -111,7 +111,3 @@
 ---|"AFK"
 ---|"DND"
 ---|"VOICE_TEXT"
-
--- backwards compat
----@alias UnitId UnitToken
----@alias WowEvent FrameEvent

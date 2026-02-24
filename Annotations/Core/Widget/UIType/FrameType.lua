@@ -44,10 +44,12 @@
 ---|"VertexColor"
 
 ---@alias ChatBubbleFrame Frame
+---@alias CooldownFrame Cooldown
 ---@alias CScriptObject Object
 ---@alias ModelSceneFrame ModelScene
 ---@alias ModelSceneFrameActor ModelSceneActor
 ---@alias SimpleAnimGroup AnimationGroup
+---@alias SimpleCheckbox CheckButton
 ---@alias SimpleControlPoint ControlPoint
 ---@alias SimpleFont Font
 ---@alias SimpleFontString FontString
@@ -58,3 +60,4 @@
 ---@alias SimpleRegion Region
 ---@alias SimpleTexture Texture
 ---@alias SimpleWindow table
+---@alias Tooltip GameTooltip
