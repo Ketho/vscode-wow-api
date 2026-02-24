@@ -11,7 +11,6 @@ C_ClassTrial = {} -- ClassTrialDocumentation.lua
 C_Debug = {} -- no doc
 C_FunctionContainers = {} -- no doc
 C_Heirloom = {} -- HeirloomInfoDocumentation.lua
-C_NamePlate = {} -- NamePlateManagerDocumentation.lua; C_NamePlateManager
 C_PrototypeDialog = {} -- no doc
 C_Reincarnation = {} -- no doc
 C_Scenario = {} -- ScenarioInfoDocumentation.lua; C_ScenarioInfo
