@@ -1,22 +1,22 @@
 ---@meta _
 ---[Documentation](https://warcraft.wiki.gg/wiki/UIOBJECT_ModelSceneActor)
----@class ModelSceneActor : ModelSceneFrameActorBase
+---@class ModelSceneActor : ModelSceneActorBase
 local ModelSceneActor = {}
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_ModelSceneActor_AttachToMount)
----@param rider ModelSceneFrameActor
+---@param rider ModelSceneActor
 ---@param animation AnimationDataEnum
 ---@param spellKitVisualID? number
 ---@return boolean success
 function ModelSceneActor:AttachToMount(rider, animation, spellKitVisualID) end
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_ModelSceneActor_CalculateMountScale)
----@param rider ModelSceneFrameActor
+---@param rider ModelSceneActor
 ---@return number scale
 function ModelSceneActor:CalculateMountScale(rider) end
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_ModelSceneActor_DetachFromMount)
----@param rider ModelSceneFrameActor
+---@param rider ModelSceneActor
 ---@return boolean success
 function ModelSceneActor:DetachFromMount(rider) end
 

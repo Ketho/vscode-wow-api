@@ -85,6 +85,11 @@ function GameTooltip:AppendText(text) end
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_GameTooltip_ClearLines)
 function GameTooltip:ClearLines() end
 
+---Set all padding values to 0.0 and remove the Padding SecretAspect.
+---
+---[Documentation](https://warcraft.wiki.gg/wiki/API_GameTooltip_ClearPadding)
+function GameTooltip:ClearPadding() end
+
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_GameTooltip_CopyTooltip)
 function GameTooltip:CopyTooltip() end
 

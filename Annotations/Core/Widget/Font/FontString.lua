@@ -22,6 +22,11 @@ function FontString:CanWordWrap() end
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_FontString_ClearAlphaGradient)
 function FontString:ClearAlphaGradient() end
 
+---Sets text to an empty string and removes the Text secret aspect.
+---
+---[Documentation](https://warcraft.wiki.gg/wiki/API_FontString_ClearText)
+function FontString:ClearText() end
+
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_FontString_FindCharacterIndexAtCoordinate)
 ---@param x uiUnit
 ---@param y uiUnit
