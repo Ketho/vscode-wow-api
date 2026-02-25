@@ -16,6 +16,6 @@ source .lua/bin/activate
 
 # lua modules
 sudo apt install libssl-dev -y
-luarocks build
+luarocks build ./setup/vscode-wow-api-scm-0.rockspec
 
 echo "Setup complete for generating LuaLS annotations"

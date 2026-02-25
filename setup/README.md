@@ -8,8 +8,8 @@ wsl --install
 ```
 
 ## Lua
-- The [setup_lua.sh](setup/lua.sh) script installs Lua 5.4 and LuaRocks via [hererocks](https://github.com/luarocks/hererocks) which is self-contained.
-- The module dependencies are in the [rockspec](https://github.com/Ketho/vscode-wow-api/blob/master/vscode-wow-api-scm-0.rockspec).
+- The [setup/lua.sh](lua.sh) script installs Lua 5.4 and LuaRocks via [hererocks](https://github.com/luarocks/hererocks) which is self-contained.
+- The module dependencies are in the [rockspec](vscode-wow-api-scm-0.rockspec).
 ```sh
 # wherever you want to clone the repo
 cd ~
@@ -30,7 +30,7 @@ lua luasrc/init.lua
 ```
 
 ## VS Code Extension
-The [setup_npm.sh]setup/(npm.sh) script installs the npm packages for TypeScript definitions and ESLint.
+The [setup/npm.sh](npm.sh) script installs the npm packages for TypeScript definitions and ESLint.
 ```sh
 ./setup/npm.sh
 ```
@@ -38,7 +38,7 @@ The [setup_npm.sh]setup/(npm.sh) script installs the npm packages for TypeScript
 ### Debugging
 To debug the extension, pressing `F5` (which runs the default [build task](https://github.com/Ketho/vscode-wow-api/blob/master/.vscode/tasks.json#L7-L17)) and then opening a folder and looking at a Lua file should activate the extension.
 
-![](img/setup/debugging_loaded.png)
+![](../img/setup/debugging_loaded.png)
 
 > [!NOTE]  
 > The extension will only fully load and setup the LuaLS configuration, if there is a valid .TOC file in the opened folder or if the "Activate WoW API extension" command is used.
@@ -46,7 +46,7 @@ To debug the extension, pressing `F5` (which runs the default [build task](https
 > [!WARNING]
 > You will probably get a notification first asking to install the Lua Language Server as a remote extension on WSL.
 
-![](img/setup/install_remote_luals.png)
+![](../img/setup/install_remote_luals.png)
 
 ### Update FrameXML references
 Annotations/FrameXML is a gitmodule for the [NumyAddon FramexmlAnnotations Repository](https://github.com/NumyAddon/FramexmlAnnotations.git). Update with: `git submodule update --remote`
