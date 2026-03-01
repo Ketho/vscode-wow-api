@@ -130,7 +130,7 @@ function Frame:GetAlpha() end
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_Frame_GetAttribute)
 ---@param attributeName string
----@return string value
+---@return any value
 function Frame:GetAttribute(attributeName) end
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_Frame_GetBoundsRect)
