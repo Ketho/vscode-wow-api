@@ -65,7 +65,7 @@ function C_AddOns.GetAddOnLocalTable(name) end
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_AddOns.GetAddOnMetadata)
 ---@param name uiAddon
 ---@param variable string
----@return string value
+---@return string? value
 function C_AddOns.GetAddOnMetadata(name, variable) end
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_AddOns.GetAddOnName)

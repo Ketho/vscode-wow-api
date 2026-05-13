@@ -2,6 +2,9 @@ local m = {}
 
 -- previously included the param index but rather do a reverse look up by name now
 m.data = {
+	["AddOnsDocumentation.lua"] = {
+		GetAddOnMetadata = {Returns = {value = {Nilable = "true"}}},
+	},
 	["ClassColorDocumentation.lua"] = {
 		GetClassColor = {Arguments = {className = {Type = "ClassFile"}}},
 	},
