@@ -23,6 +23,11 @@ function C_HousingDecor.ExitPreviewState() end
 ---@return HousingDecorInstanceListEntry[] placedDecor
 function C_HousingDecor.GetAllPlacedDecor() end
 
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_HousingDecor.GetDecorHyperlink)
+---@param decorID number
+---@return string hyperLink
+function C_HousingDecor.GetDecorHyperlink(decorID) end
+
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_HousingDecor.GetDecorIcon)
 ---@param decorID number
 ---@return fileID icon

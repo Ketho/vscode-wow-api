@@ -133,6 +133,10 @@ function C_PartyInfo.GetInviteReferralInfo(inviteGUID) end
 ---@return number? masterLooterRaidID
 function C_PartyInfo.GetLootMethod() end
 
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_PartyInfo.GetLootMethodStyle)
+---@return Enum.LootMethodStyles methodStyle
+function C_PartyInfo.GetLootMethodStyle() end
+
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_PartyInfo.GetMinItemLevel)
 ---@param avgItemLevelCategory Enum.AvgItemLevelCategories
 ---@return number minItemLevel
@@ -180,6 +184,11 @@ function C_PartyInfo.IsDelveComplete() end
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_PartyInfo.IsDelveInProgress)
 ---@return boolean isDelveComplete
 function C_PartyInfo.IsDelveInProgress() end
+
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_PartyInfo.IsLootMethodAvailable)
+---@param method Enum.LootMethod
+---@return boolean available
+function C_PartyInfo.IsLootMethodAvailable(method) end
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_PartyInfo.IsPartyFull)
 ---@param category? number

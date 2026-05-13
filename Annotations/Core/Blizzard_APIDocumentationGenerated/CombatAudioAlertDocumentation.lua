@@ -1,6 +1,11 @@
 ---@meta _
 C_CombatAudioAlert = {}
 
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_CombatAudioAlert.AddToKnownTargetingList)
+---@param unit UnitToken
+---@return boolean added
+function C_CombatAudioAlert.AddToKnownTargetingList(unit) end
+
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_CombatAudioAlert.GetCategoryVoice)
 ---@param category Enum.CombatAudioAlertCategory
 ---@return number voice
@@ -34,6 +39,11 @@ function C_CombatAudioAlert.GetThrottle(throttleType) end
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_CombatAudioAlert.IsEnabled)
 ---@return boolean isEnabled
 function C_CombatAudioAlert.IsEnabled() end
+
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_CombatAudioAlert.RemoveFromKnownTargetingList)
+---@param unit UnitToken
+---@return boolean removed
+function C_CombatAudioAlert.RemoveFromKnownTargetingList(unit) end
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_CombatAudioAlert.SetCategoryVoice)
 ---@param category Enum.CombatAudioAlertCategory

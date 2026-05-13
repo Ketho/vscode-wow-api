@@ -1152,8 +1152,20 @@ function C_Garrison.GetLandingPageItems(garrTypeID, noSort) end
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_Garrison.GetLandingPageShipmentCount)
 function C_Garrison.GetLandingPageShipmentCount() end
 
----#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_Garrison.GetLandingPageShipmentInfo)
+---@param buildingID number
+---@return string name
+---@return string texture
+---@return number shipmentCapacity
+---@return number shipmentsReady
+---@return number shipmentsTotal
+---@return number creationTime
+---@return number duration
+---@return string timeleftString
+---@return string itemName
+---@return number itemIcon
+---@return number itemQuality
+---@return number itemID
 function C_Garrison.GetLandingPageShipmentInfo(buildingID) end
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_Garrison.GetLandingPageShipmentInfoByContainerID)
@@ -2539,6 +2551,10 @@ function C_SpectatingUI.SpectateChange() end
 ---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_SpectatingUI.StartSpectating)
 function C_SpectatingUI.StartSpectating() end
+
+---#nopage  
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_StringUtil.GetDefaultAbbreviationBreakpoints)
+function C_StringUtil.GetDefaultAbbreviationBreakpoints() end
 
 ---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_TalkingHead.GetConversationsDeferred)
@@ -4209,25 +4225,6 @@ function GetArtifactInfoByRace(raceIndex, artifactIndex) end
 ---@return number numFragmentsRequired
 function GetArtifactProgress() end
 
----#nopage  
----[Documentation](https://warcraft.wiki.gg/wiki/API_GetAutoCompletePresenceID)
-function GetAutoCompletePresenceID(name) end
-
----[Documentation](https://warcraft.wiki.gg/wiki/API_GetAutoCompleteRealms)
----@param realmNames? table
----@return table realmNames
-function GetAutoCompleteRealms(realmNames) end
-
----[Documentation](https://warcraft.wiki.gg/wiki/API_GetAutoCompleteResults)
----@param text string
----@param numResults number
----@param cursorPosition number
----@param allowFullMatch boolean
----@param includeBitField number
----@param excludeBitField number
----@return table[] results
-function GetAutoCompleteResults(text, numResults, cursorPosition, allowFullMatch, includeBitField, excludeBitField) end
-
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_GetAutoQuestPopUp)
 ---@param index number
 ---@return number questID
@@ -4282,32 +4279,6 @@ function GetBattlefieldMapIconScale() end
 ---@param index number
 ---@return number expiration
 function GetBattlefieldPortExpiration(index) end
-
----[Documentation](https://warcraft.wiki.gg/wiki/API_GetBattlefieldScore)
----@param index number
----@return string name
----@return number killingBlows
----@return number honorableKills
----@return number deaths
----@return number honorGained
----@return number faction
----@return string race
----@return string class
----@return string classToken
----@return number damageDone
----@return number healingDone
----@return number bgRating
----@return number ratingChange
----@return number preMatchMMR
----@return number mmrChange
----@return string talentSpec
-function GetBattlefieldScore(index) end
-
----[Documentation](https://warcraft.wiki.gg/wiki/API_GetBattlefieldStatData)
----@param playerIndex number
----@param slotIndex number
----@return number columnData
-function GetBattlefieldStatData(playerIndex, slotIndex) end
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_GetBattlefieldStatus)
 ---@param index number
@@ -4559,6 +4530,10 @@ function GetCurrentGlyphNameForSpell(spellID) end
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_GetCurrentGraphicsAPI)
 ---@return string gxAPI
 function GetCurrentGraphicsAPI() end
+
+---#nopage  
+---[Documentation](https://warcraft.wiki.gg/wiki/API_GetCurrentGraphicsSetting)
+function GetCurrentGraphicsSetting() end
 
 ---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_GetCurrentGuildBankTab)
@@ -4814,10 +4789,6 @@ function GetGuildFactionGroup() end
 function GetGuildInfo(unit) end
 
 ---#nopage  
----[Documentation](https://warcraft.wiki.gg/wiki/API_GetGuildInfoText)
-function GetGuildInfoText() end
-
----#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_GetGuildLogoInfo)
 function GetGuildLogoInfo() end
 
@@ -4894,10 +4865,6 @@ function GetGuildRosterLargestAchievementPoints() end
 ---@return number hoursOffline
 function GetGuildRosterLastOnline(index) end
 
----[Documentation](https://warcraft.wiki.gg/wiki/API_GetGuildRosterMOTD)
----@return string motd
-function GetGuildRosterMOTD() end
-
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_GetGuildRosterSelection)
 ---@return number index
 function GetGuildRosterSelection() end
@@ -4966,6 +4933,11 @@ function GetInboxHeaderInfo(index) end
 ---@return number buyout
 ---@return number deposit
 ---@return number consignment
+---@return number moneyDelay
+---@return number etaHour
+---@return number etaMin
+---@return number count
+---@return boolean commerceAuction
 function GetInboxInvoiceInfo(index) end
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_GetInboxItem)
@@ -6096,7 +6068,7 @@ function GetPrimarySpecialization() end
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_GetProfessionInfo)
 ---@param index number
 ---@return string name
----@return string icon
+---@return fileID icon
 ---@return number skillLevel
 ---@return number maxSkillLevel
 ---@return number numAbilities
@@ -6105,6 +6077,7 @@ function GetPrimarySpecialization() end
 ---@return number skillModifier
 ---@return number specializationIndex
 ---@return number specializationOffset
+---@return string skillLineName
 function GetProfessionInfo(index) end
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_GetProfessions)
@@ -6262,7 +6235,7 @@ function GetQuestLogRewardFactionInfo(questIndex) end
 
 ---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_GetQuestLogRewardHonor)
-function GetQuestLogRewardHonor() end
+function GetQuestLogRewardHonor(questID) end
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_GetQuestLogRewardInfo)
 ---@param itemIndex number
@@ -6291,7 +6264,7 @@ function GetQuestLogRewardTitle() end
 
 ---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_GetQuestLogRewardXP)
-function GetQuestLogRewardXP() end
+function GetQuestLogRewardXP(questID) end
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_GetQuestLogSpecialItemCooldown)
 ---@param questLogIndex number
@@ -6371,7 +6344,7 @@ function GetQuestText() end
 
 ---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_GetQuestUiMapID)
-function GetQuestUiMapID(questID) end
+function GetQuestUiMapID() end
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_GetRFDungeonInfo)
 ---@param index number
@@ -7038,16 +7011,6 @@ function GuildNewsSetSticky(index, bool) end
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_GuildNewsSort)
 function GuildNewsSort(byDate) end
 
----[Documentation](https://warcraft.wiki.gg/wiki/API_GuildRosterSetOfficerNote)
----@param index number
----@param note string
-function GuildRosterSetOfficerNote(index, note) end
-
----[Documentation](https://warcraft.wiki.gg/wiki/API_GuildRosterSetPublicNote)
----@param index number
----@param note string
-function GuildRosterSetPublicNote(index, note) end
-
 ---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_HandleAtlasMemberCommand)
 function HandleAtlasMemberCommand() end
@@ -7368,13 +7331,6 @@ function IsQuestLogSpecialItemInRange(index, target) end
 ---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_IsQuestSequenced)
 function IsQuestSequenced(questID) end
-
----[Documentation](https://warcraft.wiki.gg/wiki/API_IsRecognizedName)
----@param text string
----@param includeBitfield number
----@param excludeBitfield number
----@return boolean isRecognized
-function IsRecognizedName(text, includeBitfield, excludeBitfield) end
 
 ---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_IsSelectedSpellBookItem)
@@ -8316,6 +8272,10 @@ function SetChatWindowSize(index, size) end
 function SetChatWindowUninteractable(id, isUninteractable) end
 
 ---#nopage  
+---[Documentation](https://warcraft.wiki.gg/wiki/API_SetCurrentGraphicsSetting)
+function SetCurrentGraphicsSetting() end
+
+---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_SetCurrentGuildBankTab)
 function SetCurrentGuildBankTab(tab) end
 
@@ -8359,10 +8319,6 @@ function SetGuildBankText(tab, infoText) end
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_SetGuildBankWithdrawGoldLimit)
 ---@param amount number
 function SetGuildBankWithdrawGoldLimit(amount) end
-
----[Documentation](https://warcraft.wiki.gg/wiki/API_SetGuildInfoText)
----@param text string
-function SetGuildInfoText(text) end
 
 ---#nopage  
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_SetGuildMemberRank)

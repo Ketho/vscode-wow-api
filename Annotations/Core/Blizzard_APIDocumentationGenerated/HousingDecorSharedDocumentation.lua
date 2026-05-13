@@ -5,6 +5,7 @@
 ---@field orderIndex number
 ---@field channel number
 ---@field dyeColorID number?
+---@field dyeColorName string?
 
 ---@class HousingDecorInstanceInfo
 ---@field decorGUID WOWGUID

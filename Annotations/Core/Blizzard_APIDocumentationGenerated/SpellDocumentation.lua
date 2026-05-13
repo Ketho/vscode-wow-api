@@ -42,12 +42,12 @@ function C_Spell.GetDeadlyDebuffInfo(spellIdentifier) end
 function C_Spell.GetItemModifiedAppearancesApplied(spellID) end
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_Spell.GetMawPowerBorderAtlasBySpellID)
----@param spellID number
+---@param spellID SpellIdentifier
 ---@return textureAtlas rarityBorderAtlas
 function C_Spell.GetMawPowerBorderAtlasBySpellID(spellID) end
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_Spell.GetMawPowerLinkBySpellID)
----@param spellID number
+---@param spellID SpellIdentifier
 ---@return string link
 function C_Spell.GetMawPowerLinkBySpellID(spellID) end
 
@@ -104,8 +104,9 @@ function C_Spell.GetSpellCooldown(spellIdentifier) end
 ---
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_Spell.GetSpellCooldownDuration)
 ---@param spellIdentifier SpellIdentifier
+---@param ignoreGCD? boolean Default = false
 ---@return LuaDurationObject duration
-function C_Spell.GetSpellCooldownDuration(spellIdentifier) end
+function C_Spell.GetSpellCooldownDuration(spellIdentifier, ignoreGCD) end
 
 ---Returns nil if spell is not found
 ---
@@ -152,14 +153,6 @@ function C_Spell.GetSpellLevelLearned(spellIdentifier) end
 ---@return string spellLink
 function C_Spell.GetSpellLink(spellIdentifier, glyphID) end
 
----Returns nil if spell is not found
----
----[Documentation](https://warcraft.wiki.gg/wiki/API_C_Spell.GetSpellLossOfControlCooldown)
----@param spellIdentifier SpellIdentifier
----@return number startTime
----@return number duration
-function C_Spell.GetSpellLossOfControlCooldown(spellIdentifier) end
-
 ---Returns a duration object describing the active loss of control cooldown duration for a spell.
 ---
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_Spell.GetSpellLossOfControlCooldownDuration)
@@ -167,8 +160,15 @@ function C_Spell.GetSpellLossOfControlCooldown(spellIdentifier) end
 ---@return LuaDurationObject duration
 function C_Spell.GetSpellLossOfControlCooldownDuration(spellIdentifier) end
 
+---Returns nil if spell is not found
+---
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_Spell.GetSpellLossOfControlCooldownInfo)
+---@param spellIdentifier SpellIdentifier
+---@return SpellLossOfControlInfo lossOfControlInfo
+function C_Spell.GetSpellLossOfControlCooldownInfo(spellIdentifier) end
+
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_Spell.GetSpellMaxCumulativeAuraApplications)
----@param spellID number
+---@param spellID SpellIdentifier
 ---@return number cumulativeAura
 function C_Spell.GetSpellMaxCumulativeAuraApplications(spellID) end
 

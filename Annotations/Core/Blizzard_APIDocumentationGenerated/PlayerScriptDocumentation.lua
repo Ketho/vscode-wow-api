@@ -218,11 +218,6 @@ function GetMastery() end
 ---@return number bonusCoefficient
 function GetMasteryEffect() end
 
----[Documentation](https://warcraft.wiki.gg/wiki/API_GetMaxCombatRatingBonus)
----@param ratingIndex number
----@return number? result
-function GetMaxCombatRatingBonus(ratingIndex) end
-
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_GetMaxPlayerLevel)
 ---@return number maxPlayerLevel
 function GetMaxPlayerLevel() end

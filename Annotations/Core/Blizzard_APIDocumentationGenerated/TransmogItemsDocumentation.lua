@@ -175,8 +175,9 @@ function C_TransmogCollection.GetIllusionInfo(illusionID) end
 function C_TransmogCollection.GetIllusionStrings(illusionID) end
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_TransmogCollection.GetIllusions)
+---@param category? Enum.TransmogCollectionType
 ---@return TransmogIllusionInfo[] illusions
-function C_TransmogCollection.GetIllusions() end
+function C_TransmogCollection.GetIllusions(category) end
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_TransmogCollection.GetInspectItemTransmogInfoList)
 ---@return ItemTransmogInfo[] list
@@ -441,6 +442,7 @@ function C_TransmogCollection.UpdateUsableAppearances() end
 ---@field transmoglink string
 ---@field sourceType number?
 ---@field itemSubclass number
+---@field ignoreModelAttachmentChecksForIllusion boolean
 
 ---@class TransmogCategoryAppearanceInfo
 ---@field visualID number

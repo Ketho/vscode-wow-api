@@ -1,6 +1,11 @@
 ---@meta _
 C_UnitAuras = {}
 
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_UnitAuras.AddBlockedAura)
+---@param unit UnitTokenRestrictedForAddOns
+---@param auraInstanceID number
+function C_UnitAuras.AddBlockedAura(unit, auraInstanceID) end
+
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_UnitAuras.AddPrivateAuraAnchor)
 ---@param args AddPrivateAuraAnchorArgs
 ---@return number? anchorID
@@ -12,14 +17,18 @@ function C_UnitAuras.AddPrivateAuraAnchor(args) end
 function C_UnitAuras.AddPrivateAuraAppliedSound(sound) end
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_UnitAuras.AuraIsBigDefensive)
----@param spellID number
+---@param spellID SpellIdentifier
 ---@return boolean isBigDefensive
 function C_UnitAuras.AuraIsBigDefensive(spellID) end
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_UnitAuras.AuraIsPrivate)
----@param spellID number
+---@param spellID SpellIdentifier
 ---@return boolean isPrivate
 function C_UnitAuras.AuraIsPrivate(spellID) end
+
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_UnitAuras.ClearBlockedAuras)
+---@param unit UnitTokenRestrictedForAddOns
+function C_UnitAuras.ClearBlockedAuras(unit) end
 
 ---Returns true if an aura instance will expire after a certain amount of time.
 ---
@@ -44,7 +53,7 @@ function C_UnitAuras.GetAuraApplicationDisplayCount(auraInstanceUnit, auraInstan
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_UnitAuras.GetAuraBaseDuration)
 ---@param auraInstanceUnit UnitToken
 ---@param auraInstanceID number
----@param spellID? number
+---@param spellID? SpellIdentifier
 ---@return number? newDuration
 function C_UnitAuras.GetAuraBaseDuration(auraInstanceUnit, auraInstanceID, spellID) end
 
@@ -106,7 +115,7 @@ function C_UnitAuras.GetAuraSlots(unit, filter, maxSlots, continuationToken) end
 function C_UnitAuras.GetBuffDataByIndex(unit, index, filter) end
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_UnitAuras.GetCooldownAuraBySpellID)
----@param spellID number
+---@param spellID SpellIdentifier
 ---@return number? cooldownSpellID
 function C_UnitAuras.GetCooldownAuraBySpellID(spellID) end
 
@@ -118,7 +127,7 @@ function C_UnitAuras.GetCooldownAuraBySpellID(spellID) end
 function C_UnitAuras.GetDebuffDataByIndex(unit, index, filter) end
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_UnitAuras.GetPlayerAuraBySpellID)
----@param spellID number
+---@param spellID SpellIdentifier
 ---@return AuraData? aura
 function C_UnitAuras.GetPlayerAuraBySpellID(spellID) end
 
@@ -127,7 +136,7 @@ function C_UnitAuras.GetPlayerAuraBySpellID(spellID) end
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_UnitAuras.GetRefreshExtendedDuration)
 ---@param auraInstanceUnit UnitToken
 ---@param auraInstanceID number
----@param spellID? number
+---@param spellID? SpellIdentifier
 ---@return number? newDuration
 function C_UnitAuras.GetRefreshExtendedDuration(auraInstanceUnit, auraInstanceID, spellID) end
 
@@ -135,7 +144,7 @@ function C_UnitAuras.GetRefreshExtendedDuration(auraInstanceUnit, auraInstanceID
 ---
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_UnitAuras.GetUnitAuraBySpellID)
 ---@param unit UnitTokenRestrictedForAddOns
----@param spellID number
+---@param spellID SpellIdentifier
 ---@return AuraData? aura
 function C_UnitAuras.GetUnitAuraBySpellID(unit, spellID) end
 
@@ -172,10 +181,16 @@ function C_UnitAuras.RemovePrivateAuraAnchor(anchorID) end
 ---@param privateAuraSoundID number
 function C_UnitAuras.RemovePrivateAuraAppliedSound(privateAuraSoundID) end
 
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_UnitAuras.ResetAuraDataProvider)
+function C_UnitAuras.ResetAuraDataProvider() end
+
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_UnitAuras.SetPrivateWarningTextAnchor)
 ---@param parent SimpleFrame
 ---@param anchor? AnchorBinding
 function C_UnitAuras.SetPrivateWarningTextAnchor(parent, anchor) end
+
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_UnitAuras.SwitchAuraDataProvider)
+function C_UnitAuras.SwitchAuraDataProvider() end
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_UnitAuras.TriggerPrivateAuraShowDispelType)
 ---@param show boolean

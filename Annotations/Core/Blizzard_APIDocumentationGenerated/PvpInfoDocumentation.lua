@@ -60,6 +60,11 @@ function C_PvP.GetActiveMatchState() end
 ---@return number winner
 function C_PvP.GetActiveMatchWinner() end
 
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_PvP.GetArenaCrowdControlDuration)
+---@param playerToken UnitToken
+---@return LuaDurationObject duration
+function C_PvP.GetArenaCrowdControlDuration(playerToken) end
+
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_PvP.GetArenaCrowdControlInfo)
 ---@param playerToken UnitToken
 ---@return number spellID
@@ -595,6 +600,7 @@ function C_PvP.ToggleWarMode() end
 ---@field mapNames string[]
 ---@field includesAllArenas boolean? Default = false
 ---@field minItemLevel number? Default = 0
+---@field shouldHideRewardIcon boolean? Default = false
 
 ---@class PVPPersonalRatedInfo
 ---@field personalRating number

@@ -105,8 +105,8 @@ function C_HousingBasicMode.SetGridSnapEnabled(isGridSnapEnabled) end
 function C_HousingBasicMode.SetGridVisible(gridVisible) end
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_HousingBasicMode.StartPlacingNewDecor)
----@param catalogEntryID HousingCatalogEntryID
-function C_HousingBasicMode.StartPlacingNewDecor(catalogEntryID) end
+---@param catalogEntryVariantID HousingCatalogEntryVariantID
+function C_HousingBasicMode.StartPlacingNewDecor(catalogEntryVariantID) end
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_HousingBasicMode.StartPlacingPreviewDecor)
 ---@param decorRecordID number

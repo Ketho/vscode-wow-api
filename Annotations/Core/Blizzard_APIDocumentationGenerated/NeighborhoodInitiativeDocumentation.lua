@@ -9,6 +9,10 @@ function C_NeighborhoodInitiative.AddTrackedInitiativeTask(initiativeTaskID) end
 ---@return WOWGUID neighborhoodGUID
 function C_NeighborhoodInitiative.GetActiveNeighborhood() end
 
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_NeighborhoodInitiative.GetAvailableHouseXP)
+---@return number availabeXP
+function C_NeighborhoodInitiative.GetAvailableHouseXP() end
+
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_NeighborhoodInitiative.GetInitiativeActivityLogInfo)
 ---@return InitiativeActivityLogInfo? info
 function C_NeighborhoodInitiative.GetInitiativeActivityLogInfo() end

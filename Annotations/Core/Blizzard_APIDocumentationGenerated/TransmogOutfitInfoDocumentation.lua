@@ -13,6 +13,11 @@ function C_TransmogOutfitInfo.AddNewOutfit(name, icon) end
 ---@param allowRemoveOutfit boolean
 function C_TransmogOutfitInfo.ChangeDisplayedOutfit(outfitID, trigger, toggleLock, allowRemoveOutfit) end
 
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_TransmogOutfitInfo.ChangeToOutfit)
+---@param playerFacingOutfitIndex number
+---@param allowRemoveOutfit boolean
+function C_TransmogOutfitInfo.ChangeToOutfit(playerFacingOutfitIndex, allowRemoveOutfit) end
+
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_TransmogOutfitInfo.ChangeViewedOutfit)
 ---@param outfitID number
 function C_TransmogOutfitInfo.ChangeViewedOutfit(outfitID) end
@@ -27,6 +32,9 @@ function C_TransmogOutfitInfo.ClearAllPendingTransmogs() end
 ---@param trigger Enum.TransmogSituationTrigger
 ---@param toggleLock boolean
 function C_TransmogOutfitInfo.ClearDisplayedOutfit(trigger, toggleLock) end
+
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_TransmogOutfitInfo.ClearOutfit)
+function C_TransmogOutfitInfo.ClearOutfit() end
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_TransmogOutfitInfo.CommitAndApplyAllPending)
 ---@param useAvailableDiscount boolean
@@ -49,6 +57,11 @@ function C_TransmogOutfitInfo.GetActiveOutfitID() end
 ---@return TransmogOutfitSlotInfo[] appearanceSlotInfo
 ---@return TransmogOutfitSlotInfo[] illusionSlotInfo
 function C_TransmogOutfitInfo.GetAllSlotLocationInfo() end
+
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_TransmogOutfitInfo.GetAllTransmogOutfitOptionSheatheCategoryInfo)
+---@param imaID number
+---@return TransmogOutfitOptionSheatheCategoryInfo[] categoryInfo
+function C_TransmogOutfitInfo.GetAllTransmogOutfitOptionSheatheCategoryInfo(imaID) end
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_TransmogOutfitInfo.GetCollectionInfoForSlotAndOption)
 ---@param slot Enum.TransmogOutfitSlot
@@ -101,8 +114,18 @@ function C_TransmogOutfitInfo.GetNumberOfOutfitsUnlockedForSource(source) end
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_TransmogOutfitInfo.GetOutfitInfo)
 ---@param outfitID number
----@return TransmogOutfitEntryInfo outfitsInfo
+---@return TransmogOutfitEntryInfo outfitInfo
 function C_TransmogOutfitInfo.GetOutfitInfo(outfitID) end
+
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_TransmogOutfitInfo.GetOutfitInfoByName)
+---@param name string
+---@return TransmogOutfitEntryInfo outfitInfo
+function C_TransmogOutfitInfo.GetOutfitInfoByName(name) end
+
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_TransmogOutfitInfo.GetOutfitInfoByPlayerFacingIndex)
+---@param playerFacingOutfitIndex number
+---@return TransmogOutfitEntryInfo outfitInfo
+function C_TransmogOutfitInfo.GetOutfitInfoByPlayerFacingIndex(playerFacingOutfitIndex) end
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_TransmogOutfitInfo.GetOutfitSituation)
 ---@param option TransmogSituationOption
@@ -119,6 +142,7 @@ function C_TransmogOutfitInfo.GetOutfitsInfo() end
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_TransmogOutfitInfo.GetPendingTransmogCost)
 ---@return BigUInteger cost
+---@return number modifierFlags
 function C_TransmogOutfitInfo.GetPendingTransmogCost() end
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_TransmogOutfitInfo.GetSecondarySlotState)
@@ -255,6 +279,12 @@ function C_TransmogOutfitInfo.SetOutfitToSet(transmogSetID) end
 ---@param displayType Enum.TransmogOutfitDisplayType
 function C_TransmogOutfitInfo.SetPendingTransmog(slot, type, option, transmogID, displayType) end
 
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_TransmogOutfitInfo.SetPendingTransmogSheatheCategory)
+---@param slot Enum.TransmogOutfitSlot
+---@param option Enum.TransmogOutfitSlotOption
+---@param category Enum.TransmogOutfitSlotOptionSheatheCategory
+function C_TransmogOutfitInfo.SetPendingTransmogSheatheCategory(slot, option, category) end
+
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_TransmogOutfitInfo.SetSecondarySlotState)
 ---@param slot Enum.TransmogOutfitSlot
 ---@param state boolean
@@ -286,10 +316,15 @@ function C_TransmogOutfitInfo.UpdatePendingSituation(option, value) end
 ---@field icon fileID
 ---@field isEventOutfit boolean
 ---@field isDisabled boolean
+---@field playerFacingOutfitIndex number
 
 ---@class TransmogOutfitLinkedSlotInfo
 ---@field primarySlotInfo TransmogOutfitSlotInfo
 ---@field secondarySlotInfo TransmogOutfitSlotInfo
+
+---@class TransmogOutfitOptionSheatheCategoryInfo
+---@field sheatheCategory Enum.TransmogOutfitSlotOptionSheatheCategory
+---@field categoryName string
 
 ---@class TransmogOutfitSlotGroup
 ---@field position Enum.TransmogOutfitSlotPosition
@@ -348,3 +383,4 @@ function C_TransmogOutfitInfo.UpdatePendingSituation(option, value) end
 ---@field error Enum.TransmogOutfitSlotError
 ---@field errorText string
 ---@field texture fileID?
+---@field sheatheCategory Enum.TransmogOutfitSlotOptionSheatheCategory

@@ -90,6 +90,7 @@ function C_DamageMeter.ResetAllCombatSessions() end
 ---@field deathRecapID number
 ---@field deathTimeSeconds number
 ---@field classification string
+---@field sourceDisplayType Enum.DamageMeterSourceDisplayType
 
 ---@class DamageMeterCombatSpell
 ---@field spellID number

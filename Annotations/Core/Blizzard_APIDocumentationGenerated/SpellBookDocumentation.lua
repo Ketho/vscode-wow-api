@@ -102,8 +102,9 @@ function C_SpellBook.GetSpellBookItemCooldown(spellBookItemSlotIndex, spellBookI
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_SpellBook.GetSpellBookItemCooldownDuration)
 ---@param spellBookItemSlotIndex number
 ---@param spellBookItemSpellBank Enum.SpellBookSpellBank
+---@param ignoreGCD? boolean Default = false
 ---@return LuaDurationObject duration
-function C_SpellBook.GetSpellBookItemCooldownDuration(spellBookItemSlotIndex, spellBookItemSpellBank) end
+function C_SpellBook.GetSpellBookItemCooldownDuration(spellBookItemSlotIndex, spellBookItemSpellBank, ignoreGCD) end
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_SpellBook.GetSpellBookItemDescription)
 ---@param spellBookItemSlotIndex number
@@ -132,15 +133,6 @@ function C_SpellBook.GetSpellBookItemLevelLearned(spellBookItemSlotIndex, spellB
 ---@return string spellLink
 function C_SpellBook.GetSpellBookItemLink(spellBookItemSlotIndex, spellBookItemSpellBank, glyphID) end
 
----Returns nil if item doesn't exist or if this kind of item doesn't display cooldowns (ex: future or offspec spells)
----
----[Documentation](https://warcraft.wiki.gg/wiki/API_C_SpellBook.GetSpellBookItemLossOfControlCooldown)
----@param spellBookItemSlotIndex number
----@param spellBookItemSpellBank Enum.SpellBookSpellBank
----@return number startTime
----@return number duration
-function C_SpellBook.GetSpellBookItemLossOfControlCooldown(spellBookItemSlotIndex, spellBookItemSpellBank) end
-
 ---Returns a duration object describing the active loss of control cooldown duration for a spellbook item.
 ---
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_SpellBook.GetSpellBookItemLossOfControlCooldownDuration)
@@ -148,6 +140,14 @@ function C_SpellBook.GetSpellBookItemLossOfControlCooldown(spellBookItemSlotInde
 ---@param spellBookItemSpellBank Enum.SpellBookSpellBank
 ---@return LuaDurationObject duration
 function C_SpellBook.GetSpellBookItemLossOfControlCooldownDuration(spellBookItemSlotIndex, spellBookItemSpellBank) end
+
+---Returns nil if item doesn't exist or if this kind of item doesn't display cooldowns (ex: future or offspec spells)
+---
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_SpellBook.GetSpellBookItemLossOfControlCooldownInfo)
+---@param spellBookItemSlotIndex number
+---@param spellBookItemSpellBank Enum.SpellBookSpellBank
+---@return SpellLossOfControlInfo lossOfControlInfo
+function C_SpellBook.GetSpellBookItemLossOfControlCooldownInfo(spellBookItemSlotIndex, spellBookItemSpellBank) end
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_SpellBook.GetSpellBookItemName)
 ---@param spellBookItemSlotIndex number

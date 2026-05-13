@@ -96,5 +96,5 @@ function C_RecentAllies.TryRequestRecentAlliesData() end
 ---@field isDND boolean
 ---@field isAFK boolean
 ---@field pinExpirationDate time_t?
----@field hasFriendRequestPending boolean
+---@field friendRequestSentThisSession boolean
 ---@field currentLocation string?

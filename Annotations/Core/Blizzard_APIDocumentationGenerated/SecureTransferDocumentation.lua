@@ -17,6 +17,10 @@ function C_SecureTransfer.CompleteHousingVCPurchase() end
 ---@return number totalCost
 function C_SecureTransfer.GetHousingPurchaseCost() end
 
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_SecureTransfer.GetHousingPurchaseQuantity)
+---@return number quantity
+function C_SecureTransfer.GetHousingPurchaseQuantity() end
+
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_SecureTransfer.GetHousingVCPurchaseProductID)
 ---@return number productID
 function C_SecureTransfer.GetHousingVCPurchaseProductID() end
@@ -25,8 +29,16 @@ function C_SecureTransfer.GetHousingVCPurchaseProductID() end
 ---@return MailInfo mailInfo
 function C_SecureTransfer.GetMailInfo() end
 
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_SecureTransfer.GetTradePartner)
+---@return string? name
+function C_SecureTransfer.GetTradePartner() end
+
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_SecureTransfer.SendMail)
 function C_SecureTransfer.SendMail() end
+
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_SecureTransfer.ShouldShowTradeOfferWarning)
+---@return boolean shouldShow
+function C_SecureTransfer.ShouldShowTradeOfferWarning() end
 
 ---@class MailInfo
 ---@field target string

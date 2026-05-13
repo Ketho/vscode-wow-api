@@ -48,6 +48,7 @@
 ---|"AJ_PVP_RBG_ACTION"
 ---|"AJ_PVP_SKIRMISH_ACTION"
 ---|"AJ_PVP_SPECIAL_BG_ACTION"
+---|"AJ_PVP_TRAINING_GROUNDS_ACTION"
 ---|"AJ_QUEST_LOG_OPEN" # `questID, uiMapID`
 ---|"AJ_RAID_ACTION" # `lfgDungeonID`
 ---|"AJ_REFRESH_DISPLAY" # `newAdventureNotice`
@@ -66,7 +67,7 @@
 ---|"AREA_POIS_UPDATED"
 ---|"AREA_SPIRIT_HEALER_IN_RANGE"
 ---|"AREA_SPIRIT_HEALER_OUT_OF_RANGE"
----|"ARENA_COOLDOWNS_UPDATE" # `unitTarget`
+---|"ARENA_COOLDOWNS_UPDATE"
 ---|"ARENA_CROWD_CONTROL_SPELL_UPDATE" # `unitTarget, spellID`
 ---|"ARENA_OPPONENT_UPDATE" # `unitToken, updateReason`
 ---|"ARENA_PREP_OPPONENT_SPECIALIZATIONS"
@@ -112,6 +113,7 @@
 ---|"AUCTION_MULTISELL_FAILURE"
 ---|"AUCTION_MULTISELL_START" # `numRepetitions`
 ---|"AUCTION_MULTISELL_UPDATE" # `createdCount, totalToCreate`
+---|"AURA_DATA_PROVIDER_SWITCH" # `useRealDataProvider`
 ---|"AUTOFOLLOW_BEGIN" # `name`
 ---|"AUTOFOLLOW_END"
 ---|"AVAILABLE_GAME_MODES_UPDATED"
@@ -229,7 +231,6 @@
 ---|"CATALOG_SHOP_FETCH_FAILURE" # `shoppingSessionUUIDStr`
 ---|"CATALOG_SHOP_FETCH_SUCCESS" # `shoppingSessionUUIDStr`
 ---|"CATALOG_SHOP_OPEN_SIMPLE_CHECKOUT" # `checkoutID`
----|"CATALOG_SHOP_PMT_IMAGE_DOWNLOADED" # `catalogProductID`
 ---|"CATALOG_SHOP_PURCHASE_SUCCESS" # `productID`
 ---|"CATALOG_SHOP_REBUILD_SCROLL_BOX"
 ---|"CATALOG_SHOP_REFUNDABLE_DECORS_UPDATED"
@@ -344,6 +345,10 @@
 ---|"CHEST_REWARDS_UPDATED_FROM_SERVER"
 ---|"CINEMATIC_START" # `canBeCancelled, forcedAspectRatio`
 ---|"CINEMATIC_STOP"
+---|"CLASS_TALENTS_SWITCH_TO_LOADOUT_BY_INDEX" # `loadoutIndex`
+---|"CLASS_TALENTS_SWITCH_TO_LOADOUT_BY_NAME" # `loadoutName`
+---|"CLASS_TALENTS_SWITCH_TO_SPECIALIZATION_BY_INDEX" # `specIndex`
+---|"CLASS_TALENTS_SWITCH_TO_SPECIALIZATION_BY_NAME" # `specName`
 ---|"CLASS_TRIAL_TIMER_START"
 ---|"CLASS_TRIAL_UPGRADE_COMPLETE"
 ---|"CLEAR_BOSS_EMOTES"
@@ -712,6 +717,7 @@
 ---|"HOUSE_EDITOR_AVAILABILITY_CHANGED"
 ---|"HOUSE_EDITOR_MODE_CHANGED" # `currentEditMode`
 ---|"HOUSE_EDITOR_MODE_CHANGE_FAILURE" # `result`
+---|"HOUSE_EXTERIOR_DECOR_HIDDEN_CHANGED" # `isDecorHidden`
 ---|"HOUSE_EXTERIOR_POSITION_FAILURE" # `housingResult`
 ---|"HOUSE_EXTERIOR_POSITION_SUCCESS"
 ---|"HOUSE_EXTERIOR_TYPE_UNLOCKED" # `fixtureID`
@@ -758,6 +764,8 @@
 ---|"HOUSING_FIXTURE_POINT_FRAME_RELEASED" # `pointFrame`
 ---|"HOUSING_FIXTURE_POINT_SELECTION_CHANGED" # `hasSelection`
 ---|"HOUSING_FIXTURE_UNLOCKED" # `fixtureID`
+---|"HOUSING_INSPECT_MODE_DECOR_HOVERED_CHANGED"
+---|"HOUSING_INSPECT_MODE_STATE_UPDATED"
 ---|"HOUSING_LAYOUT_DOOR_SELECTED" # `roomGUID, componentID`
 ---|"HOUSING_LAYOUT_DOOR_SELECTION_CHANGED" # `hasSelection`
 ---|"HOUSING_LAYOUT_DRAG_TARGET_CHANGED" # `isDraggingRoom`
@@ -784,7 +792,7 @@
 ---|"HOUSING_SET_EXTERIOR_HOUSE_SIZE_RESPONSE" # `result`
 ---|"HOUSING_SET_EXTERIOR_HOUSE_TYPE_RESPONSE" # `result`
 ---|"HOUSING_SET_FIXTURE_RESPONSE" # `result`
----|"HOUSING_STORAGE_ENTRY_UPDATED" # `entryID`
+---|"HOUSING_STORAGE_ENTRY_UPDATED" # `entryVariantID`
 ---|"HOUSING_STORAGE_UPDATED"
 ---|"IGNORELIST_UPDATE"
 ---|"IMMERSIVE_INTERACTION_BEGIN"
@@ -1209,7 +1217,7 @@
 ---|"PVP_WORLDSTATE_UPDATE"
 ---|"QUESTLINE_UPDATE" # `requestRequired`
 ---|"QUEST_ACCEPTED" # `questId`
----|"QUEST_ACCEPT_CONFIRM" # `name, questTitle`
+---|"QUEST_ACCEPT_CONFIRM" # `name, questTitle, questID`
 ---|"QUEST_AUTOCOMPLETE" # `questId`
 ---|"QUEST_BOSS_EMOTE" # `text, playerName, displayTime, enableBossEmoteWarningSound`
 ---|"QUEST_COMPLETE"
@@ -1379,7 +1387,7 @@
 ---|"SPELL_ACTIVATION_OVERLAY_GLOW_SHOW" # `spellID`
 ---|"SPELL_ACTIVATION_OVERLAY_HIDE" # `spellID`
 ---|"SPELL_ACTIVATION_OVERLAY_SHOW" # `spellID, overlayFileDataID, locationType, scale, r, g, b`
----|"SPELL_CONFIRMATION_PROMPT" # `spellID, effectValue, message, duration, currencyTypesID, currencyCost, currentDifficulty`
+---|"SPELL_CONFIRMATION_PROMPT" # `spellID, effectValue, message, duration, currencyTypesID, currencyCost, currentDifficulty, displayItemID, itemContext, treasureContextLevel`
 ---|"SPELL_CONFIRMATION_TIMEOUT" # `spellID, effectValue`
 ---|"SPELL_DATA_LOAD_RESULT" # `spellID, success`
 ---|"SPELL_FLYOUT_UPDATE" # `flyoutID, spellID, isLearned`
@@ -1471,6 +1479,7 @@
 ---|"TRADE_SKILL_SHOW"
 ---|"TRADE_TARGET_ITEM_CHANGED" # `tradeSlotIndex`
 ---|"TRADE_UPDATE"
+---|"TRADE_UPDATE_WARNINGS"
 ---|"TRAINER_CLOSED"
 ---|"TRAINER_DESCRIPTION_UPDATE"
 ---|"TRAINER_SERVICE_INFO_NAME_UPDATE"
@@ -1522,10 +1531,13 @@
 ---|"UI_SCALE_CHANGED"
 ---|"UNIT_ABSORB_AMOUNT_CHANGED" # `unitTarget`
 ---|"UNIT_AREA_CHANGED" # `unitTarget`
+---|"UNIT_ARENA_COOLDOWNS_UPDATE" # `unitTarget`
 ---|"UNIT_ATTACK" # `unitTarget`
 ---|"UNIT_ATTACK_POWER" # `unitTarget`
 ---|"UNIT_ATTACK_SPEED" # `unitTarget`
 ---|"UNIT_AURA" # `unitTarget, updateInfo`
+---|"UNIT_AURA_BLOCKED" # `unitTarget, auraInstanceID`
+---|"UNIT_AURA_BLOCK_LIST_CLEARED" # `unitTarget`
 ---|"UNIT_CHEAT_TOGGLE_EVENT"
 ---|"UNIT_CLASSIFICATION_CHANGED" # `unitTarget`
 ---|"UNIT_COMBAT" # `unitTarget, event, flagText, amount, schoolMask`

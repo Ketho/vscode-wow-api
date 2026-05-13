@@ -165,6 +165,7 @@ export const data: EventInterface = {
 	AJ_PVP_RBG_ACTION: {},
 	AJ_PVP_SKIRMISH_ACTION: {},
 	AJ_PVP_SPECIAL_BG_ACTION: {},
+	AJ_PVP_TRAINING_GROUNDS_ACTION: {},
 	AJ_QUEST_LOG_OPEN: {
 		Payload: [
 			{Name: "questID", Type: "number"},
@@ -217,11 +218,7 @@ export const data: EventInterface = {
 	AREA_POIS_UPDATED: {},
 	AREA_SPIRIT_HEALER_IN_RANGE: {},
 	AREA_SPIRIT_HEALER_OUT_OF_RANGE: {},
-	ARENA_COOLDOWNS_UPDATE: {
-		Payload: [
-			{Name: "unitTarget", Type: "UnitTokenVariant"},
-		],
-	},
+	ARENA_COOLDOWNS_UPDATE: {},
 	ARENA_CROWD_CONTROL_SPELL_UPDATE: {
 		Payload: [
 			{Name: "unitTarget", Type: "UnitTokenVariant"},
@@ -359,6 +356,11 @@ export const data: EventInterface = {
 		Payload: [
 			{Name: "createdCount", Type: "number"},
 			{Name: "totalToCreate", Type: "number"},
+		],
+	},
+	AURA_DATA_PROVIDER_SWITCH: {
+		Payload: [
+			{Name: "useRealDataProvider", Type: "boolean"},
 		],
 	},
 	AUTOFOLLOW_BEGIN: {
@@ -779,11 +781,6 @@ export const data: EventInterface = {
 	CATALOG_SHOP_OPEN_SIMPLE_CHECKOUT: {
 		Payload: [
 			{Name: "checkoutID", Type: "number"},
-		],
-	},
-	CATALOG_SHOP_PMT_IMAGE_DOWNLOADED: {
-		Payload: [
-			{Name: "catalogProductID", Type: "number"},
 		],
 	},
 	CATALOG_SHOP_PURCHASE_SUCCESS: {
@@ -2377,6 +2374,26 @@ export const data: EventInterface = {
 		],
 	},
 	CINEMATIC_STOP: {},
+	CLASS_TALENTS_SWITCH_TO_LOADOUT_BY_INDEX: {
+		Payload: [
+			{Name: "loadoutIndex", Type: "number"},
+		],
+	},
+	CLASS_TALENTS_SWITCH_TO_LOADOUT_BY_NAME: {
+		Payload: [
+			{Name: "loadoutName", Type: "string"},
+		],
+	},
+	CLASS_TALENTS_SWITCH_TO_SPECIALIZATION_BY_INDEX: {
+		Payload: [
+			{Name: "specIndex", Type: "number"},
+		],
+	},
+	CLASS_TALENTS_SWITCH_TO_SPECIALIZATION_BY_NAME: {
+		Payload: [
+			{Name: "specName", Type: "string"},
+		],
+	},
 	CLASS_TRIAL_TIMER_START: {},
 	CLASS_TRIAL_UPGRADE_COMPLETE: {},
 	CLEAR_BOSS_EMOTES: {},
@@ -3276,12 +3293,12 @@ export const data: EventInterface = {
 	},
 	FORBIDDEN_NAME_PLATE_UNIT_ADDED: {
 		Payload: [
-			{Name: "unitToken", Type: "string"},
+			{Name: "unitToken", Type: "UnitTokenType"},
 		],
 	},
 	FORBIDDEN_NAME_PLATE_UNIT_REMOVED: {
 		Payload: [
-			{Name: "unitToken", Type: "string"},
+			{Name: "unitToken", Type: "UnitTokenType"},
 		],
 	},
 	FORCE_REFRESH_HOUSE_FINDER: {},
@@ -3786,6 +3803,11 @@ export const data: EventInterface = {
 			{Name: "result", Type: "HousingResult"},
 		],
 	},
+	HOUSE_EXTERIOR_DECOR_HIDDEN_CHANGED: {
+		Payload: [
+			{Name: "isDecorHidden", Type: "boolean"},
+		],
+	},
 	HOUSE_EXTERIOR_POSITION_FAILURE: {
 		Payload: [
 			{Name: "housingResult", Type: "HousingResult"},
@@ -3998,6 +4020,8 @@ export const data: EventInterface = {
 			{Name: "fixtureID", Type: "number"},
 		],
 	},
+	HOUSING_INSPECT_MODE_DECOR_HOVERED_CHANGED: {},
+	HOUSING_INSPECT_MODE_STATE_UPDATED: {},
 	HOUSING_LAYOUT_DOOR_SELECTED: {
 		Documentation: "Fired when one of the door nodes of an already placed room has been selected",
 		Payload: [
@@ -4115,7 +4139,7 @@ export const data: EventInterface = {
 	},
 	HOUSING_STORAGE_ENTRY_UPDATED: {
 		Payload: [
-			{Name: "entryID", Type: "HousingCatalogEntryID"},
+			{Name: "entryVariantID", Type: "HousingCatalogEntryVariantID"},
 		],
 	},
 	HOUSING_STORAGE_UPDATED: {},
@@ -4733,7 +4757,7 @@ export const data: EventInterface = {
 	},
 	NAME_PLATE_UNIT_ADDED: {
 		Payload: [
-			{Name: "unitToken", Type: "string"},
+			{Name: "unitToken", Type: "UnitTokenType"},
 		],
 	},
 	NAME_PLATE_UNIT_BEHIND_CAMERA_CHANGED: {
@@ -4744,7 +4768,7 @@ export const data: EventInterface = {
 	},
 	NAME_PLATE_UNIT_REMOVED: {
 		Payload: [
-			{Name: "unitToken", Type: "string"},
+			{Name: "unitToken", Type: "UnitTokenType"},
 		],
 	},
 	NAVIGATION_DESTINATION_REACHED: {
@@ -5529,6 +5553,7 @@ export const data: EventInterface = {
 		Payload: [
 			{Name: "name", Type: "string"},
 			{Name: "questTitle", Type: "string"},
+			{Name: "questID", Type: "number"},
 		],
 	},
 	QUEST_AUTOCOMPLETE: {
@@ -6173,6 +6198,9 @@ export const data: EventInterface = {
 			{Name: "currencyTypesID", Type: "number"},
 			{Name: "currencyCost", Type: "number"},
 			{Name: "currentDifficulty", Type: "number"},
+			{Name: "displayItemID", Type: "number"},
+			{Name: "itemContext", Type: "number"},
+			{Name: "treasureContextLevel", Type: "number"},
 		],
 	},
 	SPELL_CONFIRMATION_TIMEOUT: {
@@ -6516,6 +6544,7 @@ export const data: EventInterface = {
 		],
 	},
 	TRADE_UPDATE: {},
+	TRADE_UPDATE_WARNINGS: {},
 	TRAINER_CLOSED: {},
 	TRAINER_DESCRIPTION_UPDATE: {},
 	TRAINER_SERVICE_INFO_NAME_UPDATE: {},
@@ -6696,6 +6725,12 @@ export const data: EventInterface = {
 			{Name: "unitTarget", Type: "UnitTokenVariant"},
 		],
 	},
+	UNIT_ARENA_COOLDOWNS_UPDATE: {
+		Documentation: "Only signaled when the active player is a commentator or spectator.",
+		Payload: [
+			{Name: "unitTarget", Type: "UnitTokenVariant"},
+		],
+	},
 	UNIT_ATTACK: {
 		Payload: [
 			{Name: "unitTarget", Type: "UnitTokenVariant"},
@@ -6715,6 +6750,17 @@ export const data: EventInterface = {
 		Payload: [
 			{Name: "unitTarget", Type: "UnitTokenVariant"},
 			{Name: "updateInfo", Type: "UnitAuraUpdateInfo"},
+		],
+	},
+	UNIT_AURA_BLOCKED: {
+		Payload: [
+			{Name: "unitTarget", Type: "UnitTokenVariant"},
+			{Name: "auraInstanceID", Type: "number"},
+		],
+	},
+	UNIT_AURA_BLOCK_LIST_CLEARED: {
+		Payload: [
+			{Name: "unitTarget", Type: "UnitTokenVariant"},
 		],
 	},
 	UNIT_CHEAT_TOGGLE_EVENT: {},

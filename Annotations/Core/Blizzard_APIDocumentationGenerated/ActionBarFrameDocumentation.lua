@@ -27,7 +27,7 @@ function C_ActionBar.FindPetActionButtons(petActionID) end
 ---Returns the list of action bar slots that contain a specified spell.
 ---
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_ActionBar.FindSpellActionButtons)
----@param spellID number
+---@param spellID SpellIdentifier
 ---@return number[] slots
 function C_ActionBar.FindSpellActionButtons(spellID) end
 
@@ -56,20 +56,21 @@ function C_ActionBar.GetActionChargeDuration(actionID) end
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_ActionBar.GetActionCharges)
 ---@param actionID number
----@return ActionBarChargeInfo chargeInfo
+---@return SpellChargeInfo chargeInfo
 function C_ActionBar.GetActionCharges(actionID) end
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_ActionBar.GetActionCooldown)
 ---@param actionID number
----@return ActionBarCooldownInfo cooldownInfo
+---@return SpellCooldownInfo cooldownInfo
 function C_ActionBar.GetActionCooldown(actionID) end
 
 ---Returns a duration object describing the active cooldown duration for an action.
 ---
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_ActionBar.GetActionCooldownDuration)
 ---@param actionID number
+---@param ignoreGCD? boolean Default = false
 ---@return LuaDurationObject duration
-function C_ActionBar.GetActionCooldownDuration(actionID) end
+function C_ActionBar.GetActionCooldownDuration(actionID, ignoreGCD) end
 
 ---Depending on the action type, return a string that is either the use count or number of charges. If value is beyond the display count parameter, returns the replacementString (defaults to '*').
 ---
@@ -80,18 +81,17 @@ function C_ActionBar.GetActionCooldownDuration(actionID) end
 ---@return string displayCount
 function C_ActionBar.GetActionDisplayCount(actionID, maxDisplayCount, replacementString) end
 
----[Documentation](https://warcraft.wiki.gg/wiki/API_C_ActionBar.GetActionLossOfControlCooldown)
----@param actionID number
----@return number startTime
----@return number duration
-function C_ActionBar.GetActionLossOfControlCooldown(actionID) end
-
 ---Returns a duration object describing the active loss of control cooldown duration for an action.
 ---
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_ActionBar.GetActionLossOfControlCooldownDuration)
 ---@param actionID number
 ---@return LuaDurationObject duration
 function C_ActionBar.GetActionLossOfControlCooldownDuration(actionID) end
+
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_ActionBar.GetActionLossOfControlCooldownInfo)
+---@param actionID number
+---@return SpellLossOfControlInfo lossOfControlInfo
+function C_ActionBar.GetActionLossOfControlCooldownInfo(actionID) end
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_ActionBar.GetActionText)
 ---@param actionID number
@@ -214,7 +214,7 @@ function C_ActionBar.HasPetActionPetBarIndices(petActionID) end
 function C_ActionBar.HasRangeRequirements(actionID) end
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_ActionBar.HasSpellActionButtons)
----@param spellID number
+---@param spellID SpellIdentifier
 ---@return boolean hasSpellActionButtons
 function C_ActionBar.HasSpellActionButtons(spellID) end
 
@@ -304,7 +304,7 @@ function C_ActionBar.IsInterruptAction(slotID) end
 function C_ActionBar.IsItemAction(actionID) end
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_ActionBar.IsOnBarOrSpecialBar)
----@param spellID number
+---@param spellID SpellIdentifier
 ---@return boolean isOnBarOrSpecialBar
 function C_ActionBar.IsOnBarOrSpecialBar(spellID) end
 
@@ -352,3 +352,8 @@ function C_ActionBar.ToggleAutoCastPetAction(slotID) end
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_ActionBar.UnregisterActionUIButton)
 ---@param checkboxFrame SimpleCheckbox
 function C_ActionBar.UnregisterActionUIButton(checkboxFrame) end
+
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_ActionBar.UsesActionText)
+---@param actionID number
+---@return boolean usesActionText
+function C_ActionBar.UsesActionText(actionID) end

@@ -125,6 +125,10 @@ function C_TransmogSets.GetValidClassForSet(transmogSetID) end
 ---@return TransmogSetInfo[] sets
 function C_TransmogSets.GetVariantSets(transmogSetID) end
 
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_TransmogSets.HasAvailableSets)
+---@return boolean hasAvailableSets
+function C_TransmogSets.HasAvailableSets() end
+
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_TransmogSets.HasUsableSets)
 ---@return boolean hasUsableSets
 function C_TransmogSets.HasUsableSets() end

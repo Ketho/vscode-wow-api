@@ -2,8 +2,11 @@
 ---@class HousingCatalogEntryID
 ---@field recordID number
 ---@field entryType Enum.HousingCatalogEntryType
----@field entrySubtype Enum.HousingCatalogEntrySubtype
----@field subtypeIdentifier number
+
+---@class HousingCatalogEntryVariantID
+---@field recordID number
+---@field entryType Enum.HousingCatalogEntryType
+---@field variantIdentifier number
 
 ---@class HousingCatalogFilterTagGroupInfo
 ---@field groupID number

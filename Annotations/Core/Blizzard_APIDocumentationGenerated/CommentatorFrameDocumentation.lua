@@ -127,6 +127,10 @@ function C_Commentator.GetCombatEventInfo() end
 ---@return CommentatorHistory history
 function C_Commentator.GetCommentatorHistory() end
 
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_Commentator.GetCommentatorMatchDataState)
+---@return CommentatorMatchDataState state
+function C_Commentator.GetCommentatorMatchDataState() end
+
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_Commentator.GetCurrentMapID)
 ---@return number? mapID
 function C_Commentator.GetCurrentMapID() end
@@ -381,12 +385,14 @@ function C_Commentator.GetTrackedSpellID(indirectSpellID) end
 ---@param playerIndex number
 ---@param category Enum.TrackedSpellCategory
 ---@return number[]? spells
+---@return TrackedSpellsResult result
 function C_Commentator.GetTrackedSpells(teamIndex, playerIndex, category) end
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_Commentator.GetTrackedSpellsByUnit)
 ---@param unitToken UnitToken
 ---@param category Enum.TrackedSpellCategory
 ---@return number[]? spells
+---@return TrackedSpellsResult result
 function C_Commentator.GetTrackedSpellsByUnit(unitToken, category) end
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_Commentator.GetUnitData)
@@ -476,6 +482,26 @@ function C_Commentator.ResetSettings() end
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_Commentator.ResetTrackedAuras)
 function C_Commentator.ResetTrackedAuras() end
+
+---Works the same as C_ChatInfo.SendAddonMessage but accepts secrets and is only allowed when outgoing addon comms are allowed (i.e. on tournament realms)
+---
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_Commentator.SendAddonMessage)
+---@param prefix string
+---@param message string
+---@param chatType? string
+---@param target? string
+---@return Enum.SendAddonMessageResult result
+function C_Commentator.SendAddonMessage(prefix, message, chatType, target) end
+
+---Works the same as C_ChatInfo.SendAddonMessageLogged but accepts secrets and is only allowed when outgoing addon comms are allowed (i.e. on tournament realms)
+---
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_Commentator.SendAddonMessageLogged)
+---@param prefix string
+---@param message string
+---@param chatType? string
+---@param target? string
+---@return Enum.SendAddonMessageResult? result
+function C_Commentator.SendAddonMessageLogged(prefix, message, chatType, target) end
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_Commentator.SetAdditionalCameraWeight)
 ---@param teamIndex number
@@ -697,6 +723,12 @@ function C_Commentator.ZoomOut_Position(zoomAmount) end
 ---@field teamDirectory CommentatorTeamDirectoryEntry[]
 ---@field overrideNameDirectory CommentatorOverrideNameEntry[]
 
+---@class CommentatorMatchDataState
+---@field receivedPlayerInfo boolean
+---@field setInstancePlayers boolean
+---@field requestedCooldownInfo boolean
+---@field requestedPlayerCooldowns TeamPlayerRequestedCooldownInfo[]
+
 ---@class CommentatorOverrideNameEntry
 ---@field originalName string
 ---@field newName string
@@ -743,3 +775,8 @@ function C_Commentator.ZoomOut_Position(zoomAmount) end
 ---@class NameOverrideEntry
 ---@field originalName string
 ---@field overrideName string
+
+---@class TeamPlayerRequestedCooldownInfo
+---@field teamIndex number
+---@field playerIndex number
+---@field cooldownsRequested number

@@ -71,6 +71,12 @@ export const data: CVarInterface = {
 		category: 1,
 		help: "DX11 software render is used by default, due to issues with the DX12 software renderer",
 	},
+	allowspectatemode: {
+		name: "AllowSpectateMode",
+		default: "1",
+		category: 4,
+		help: "Enables spectate/commentator camera to be used.",
+	},
 	allowwinrt: {
 		name: "AllowWinRT",
 		default: "0",
@@ -638,13 +644,23 @@ export const data: CVarInterface = {
 		default: "0",
 		category: 5,
 	},
-	clientsettings_aftermath: {
-		name: "ClientSettings_AFTERMATH",
+	clientsettings_aftermath_by_api_mask: {
+		name: "ClientSettings_AFTERMATH_BY_API_MASK",
 		default: "",
 		category: 5,
 	},
-	clientsettings_async_compute: {
-		name: "ClientSettings_ASYNC_COMPUTE",
+	clientsettings_aftermath_by_gpu_category: {
+		name: "ClientSettings_AFTERMATH_BY_GPU_CATEGORY",
+		default: "",
+		category: 5,
+	},
+	clientsettings_async_compute_by_api_mask: {
+		name: "ClientSettings_ASYNC_COMPUTE_BY_API_MASK",
+		default: "",
+		category: 5,
+	},
+	clientsettings_async_compute_by_gpu_category: {
+		name: "ClientSettings_ASYNC_COMPUTE_BY_GPU_CATEGORY",
 		default: "",
 		category: 5,
 	},
@@ -653,13 +669,23 @@ export const data: CVarInterface = {
 		default: "",
 		category: 5,
 	},
-	clientsettings_cmd_list_mt: {
-		name: "ClientSettings_CMD_LIST_MT",
+	clientsettings_cmd_list_mt_by_api_mask: {
+		name: "ClientSettings_CMD_LIST_MT_BY_API_MASK",
 		default: "",
 		category: 5,
 	},
-	clientsettings_copy_queue: {
-		name: "ClientSettings_COPY_QUEUE",
+	clientsettings_cmd_list_mt_by_gpu_category: {
+		name: "ClientSettings_CMD_LIST_MT_BY_GPU_CATEGORY",
+		default: "",
+		category: 5,
+	},
+	clientsettings_copy_queue_by_api_mask: {
+		name: "ClientSettings_COPY_QUEUE_BY_API_MASK",
+		default: "",
+		category: 5,
+	},
+	clientsettings_copy_queue_by_gpu_category: {
+		name: "ClientSettings_COPY_QUEUE_BY_GPU_CATEGORY",
 		default: "",
 		category: 5,
 	},
@@ -678,8 +704,13 @@ export const data: CVarInterface = {
 		default: "",
 		category: 5,
 	},
-	clientsettings_high_mem_features: {
-		name: "ClientSettings_HIGH_MEM_FEATURES",
+	clientsettings_high_mem_features_by_api_mask: {
+		name: "ClientSettings_HIGH_MEM_FEATURES_BY_API_MASK",
+		default: "",
+		category: 5,
+	},
+	clientsettings_high_mem_features_by_gpu_category: {
+		name: "ClientSettings_HIGH_MEM_FEATURES_BY_GPU_CATEGORY",
 		default: "",
 		category: 5,
 	},
@@ -708,13 +739,23 @@ export const data: CVarInterface = {
 		default: "",
 		category: 5,
 	},
-	clientsettings_opt_features: {
-		name: "ClientSettings_OPT_FEATURES",
+	clientsettings_opt_features_by_api_mask: {
+		name: "ClientSettings_OPT_FEATURES_BY_API_MASK",
 		default: "",
 		category: 5,
 	},
-	clientsettings_ray_tracing: {
-		name: "ClientSettings_RAY_TRACING",
+	clientsettings_opt_features_by_gpu_category: {
+		name: "ClientSettings_OPT_FEATURES_BY_GPU_CATEGORY",
+		default: "",
+		category: 5,
+	},
+	clientsettings_ray_tracing_by_api_mask: {
+		name: "ClientSettings_RAY_TRACING_BY_API_MASK",
+		default: "",
+		category: 5,
+	},
+	clientsettings_ray_tracing_by_gpu_category: {
+		name: "ClientSettings_RAY_TRACING_BY_GPU_CATEGORY",
 		default: "",
 		category: 5,
 	},
@@ -723,13 +764,23 @@ export const data: CVarInterface = {
 		default: "",
 		category: 5,
 	},
-	clientsettings_shader_mt: {
-		name: "ClientSettings_SHADER_MT",
+	clientsettings_shader_mt_by_api_mask: {
+		name: "ClientSettings_SHADER_MT_BY_API_MASK",
 		default: "",
 		category: 5,
 	},
-	clientsettings_sm6: {
-		name: "ClientSettings_SM6",
+	clientsettings_shader_mt_by_gpu_category: {
+		name: "ClientSettings_SHADER_MT_BY_GPU_CATEGORY",
+		default: "",
+		category: 5,
+	},
+	clientsettings_sm6_by_api_mask: {
+		name: "ClientSettings_SM6_BY_API_MASK",
+		default: "",
+		category: 5,
+	},
+	clientsettings_sm6_by_gpu_category: {
+		name: "ClientSettings_SM6_BY_GPU_CATEGORY",
 		default: "",
 		category: 5,
 	},
@@ -743,8 +794,13 @@ export const data: CVarInterface = {
 		default: "",
 		category: 5,
 	},
-	clientsettings_work_optims: {
-		name: "ClientSettings_WORK_OPTIMS",
+	clientsettings_work_optims_by_api_mask: {
+		name: "ClientSettings_WORK_OPTIMS_BY_API_MASK",
+		default: "",
+		category: 5,
+	},
+	clientsettings_work_optims_by_gpu_category: {
+		name: "ClientSettings_WORK_OPTIMS_BY_GPU_CATEGORY",
 		default: "",
 		category: 5,
 	},
@@ -1364,21 +1420,21 @@ export const data: CVarInterface = {
 	},
 	kioskcansessionexpire: {
 		name: "KioskCanSessionExpire",
-		default: "1",
+		default: "",
 		category: 8,
 		secure: true,
 		help: "Determines if a Kiosk session can expire. 0: No, 1: Yes (default).",
 	},
 	kioskcharactertemplateset: {
 		name: "KioskCharacterTemplateSet",
-		default: "0",
+		default: "",
 		category: 8,
 		secure: true,
 		help: "Character template set ID to select at character creation. Defaults to 0.",
 	},
 	kiosklobbykickseconds: {
 		name: "KioskLobbyKickSeconds",
-		default: "30",
+		default: "",
 		category: 8,
 		secure: true,
 		help: "Seconds until an expired session kicks the player back to the lobby. Defaults to 30 seconds.",
@@ -2533,6 +2589,7 @@ export const data: CVarInterface = {
 		name: "TurnSpeed",
 		default: "180.000000",
 		category: 5,
+		secure: true,
 		help: "Set the keyboard turn rate in degrees per second; capped by the server",
 	},
 	ubertooltips: {
@@ -2874,17 +2931,41 @@ export const data: CVarInterface = {
 		scope: "Character",
 		help: "The info for Add Friend has been shown",
 	},
+	addonchallengemoderestrictionsforced: {
+		name: "addonChallengeModeRestrictionsForced",
+		default: "0",
+		category: 4,
+		help: "If set, APIs guarded by challenge mode and mythic plus status will be restricted, or may return secrets.",
+	},
 	addonchatrestrictionsforced: {
 		name: "addonChatRestrictionsForced",
 		default: "0",
 		category: 4,
-		help: "If true, force the client into the chat lockdown state. This is provided for addon author testing and will not persist across client restarts.",
+		help: "If set, APIs guarded by in lockdown will be restricted, or may return secrets.",
+	},
+	addoncombatrestrictionsforced: {
+		name: "addonCombatRestrictionsForced",
+		default: "0",
+		category: 4,
+		help: "If set, APIs guarded in combat will be restricted, or may return secrets.",
+	},
+	addonencounterrestrictionsforced: {
+		name: "addonEncounterRestrictionsForced",
+		default: "0",
+		category: 4,
+		help: "If set, APIs guarded in active encounters will be restricted, or may return secrets.",
 	},
 	addonloaddebugging: {
 		name: "addonLoadDebugging",
 		default: "0",
 		category: 0,
 		help: "0: Disable addon load logging (Default), 1: Enable addon load logging to AddOnLoad.log.",
+	},
+	addonmaprestrictionsforced: {
+		name: "addonMapRestrictionsForced",
+		default: "0",
+		category: 4,
+		help: "If set, APIs guarded by current map type will be restricted, or may return secrets.",
 	},
 	addonperformancemsgerror: {
 		name: "addonPerformanceMsgError",
@@ -2903,6 +2984,12 @@ export const data: CVarInterface = {
 		default: "0.000000",
 		category: 4,
 		help: "Threshold for when a performance warning is shown for a specific AddOn as a percentage of application performance.",
+	},
+	addonpvpmatchrestrictionsforced: {
+		name: "addonPvPMatchRestrictionsForced",
+		default: "0",
+		category: 4,
+		help: "If set, APIs guarded by PvP match state will be restricted, or may return secrets.",
 	},
 	advflykeyboardmaxpitchfactor: {
 		name: "advFlyKeyboardMaxPitchFactor",
@@ -3410,13 +3497,6 @@ export const data: CVarInterface = {
 		default: "0",
 		category: 4,
 		scope: "Character",
-	},
-	cameradistancefixedvalue: {
-		name: "cameraDistanceFixedValue",
-		default: "-1.000000",
-		category: 4,
-		scope: "Account",
-		help: "Fixed camera distance (in yards)",
 	},
 	cameradistancemaxzoomfactor: {
 		name: "cameraDistanceMaxZoomFactor",
@@ -5867,12 +5947,12 @@ export const data: CVarInterface = {
 		scope: "Character",
 		help: "Minimum level of encounter warning severities to be shown",
 	},
-	endeavorinitiativeslastpoints: {
-		name: "endeavorInitiativesLastPoints",
-		default: "0",
+	endeavorinitiativeslastpointsmap: {
+		name: "endeavorInitiativesLastPointsMap",
+		default: "",
 		category: 4,
 		scope: "Character",
-		help: "Last seen number of endeavor points in the progress bar",
+		help: "Last seen number of endeavor points in the progress bar per initiative ID",
 	},
 	enginesurvey: {
 		name: "engineSurvey",
@@ -6636,6 +6716,13 @@ export const data: CVarInterface = {
 		category: 1,
 		help: "Allow an active model to be reloaded when a new version is detected in the bin folder.  If this is disabled, the model data will only be refreshed after all game objects using the model are deleted",
 	},
+	houseexterior_hide_decor: {
+		name: "houseExterior_Hide_Decor",
+		default: "1",
+		category: 4,
+		scope: "Character",
+		help: "Whether or not to hide all decor on the plot while in Exterior Customization",
+	},
 	housingdecorfreeplaceenabled: {
 		name: "housingDecorFreePlaceEnabled",
 		default: "0",
@@ -6823,6 +6910,12 @@ export const data: CVarInterface = {
 		default: "",
 		category: 4,
 		scope: "Character",
+	},
+	lastlockeddelvescompanionabilities: {
+		name: "lastLockedDelvesCompanionAbilities",
+		default: "",
+		category: 4,
+		help: "Stores the nodeIDs of the locked delve companion abilities, to highlight them when unlocked.",
 	},
 	lastlockedtieredentrancecompanionabilities: {
 		name: "lastLockedTieredEntranceCompanionAbilities",
@@ -7352,6 +7445,7 @@ export const data: CVarInterface = {
 		default: "1.000000",
 		category: 4,
 		scope: "Character",
+		secure: true,
 		help: "Controls the size multiplier for buffs and debuffs on nameplates.",
 	},
 	nameplatedebuffpadding: {
@@ -7359,6 +7453,7 @@ export const data: CVarInterface = {
 		default: "0",
 		category: 4,
 		scope: "Character",
+		secure: true,
 		help: "The padding between the debuff list and the health bar on nameplates.",
 	},
 	nameplategameobjectmaxdistance: {
@@ -7628,6 +7723,7 @@ export const data: CVarInterface = {
 		default: "0",
 		category: 4,
 		scope: "Character",
+		secure: true,
 		help: "When enabled, the nameplate is always shown if owner is in combat with player or player's group member.",
 	},
 	nameplateshowonlynameforfriendlyplayerunits: {
@@ -7657,6 +7753,7 @@ export const data: CVarInterface = {
 		default: "1",
 		category: 4,
 		scope: "Character",
+		secure: true,
 		help: "Provides discrete values that are translated into specific horizontal and vertical scales defined in lua for displaying nameplates.",
 	},
 	nameplatestyle: {
@@ -7664,6 +7761,7 @@ export const data: CVarInterface = {
 		default: "0",
 		category: 4,
 		scope: "Character",
+		secure: true,
 		help: "Determines how nameplate contents are displayed.",
 	},
 	nameplatetargetbehindmaxdistance: {
@@ -8560,36 +8658,6 @@ export const data: CVarInterface = {
 		scope: "Account",
 		help: "If enabled, secondary profession world quests icons will be shown on world maps",
 	},
-	secretchallengemoderestrictionsforced: {
-		name: "secretChallengeModeRestrictionsForced",
-		default: "0",
-		category: 4,
-		help: "If set, APIs guarded by challenge mode and mythic plus restrictions will return secrets.",
-	},
-	secretcombatrestrictionsforced: {
-		name: "secretCombatRestrictionsForced",
-		default: "0",
-		category: 4,
-		help: "If set, APIs guarded by combat restrictions will return secrets.",
-	},
-	secretencounterrestrictionsforced: {
-		name: "secretEncounterRestrictionsForced",
-		default: "0",
-		category: 4,
-		help: "If set, APIs guarded by instance encounter restrictions will return secrets.",
-	},
-	secretmaprestrictionsforced: {
-		name: "secretMapRestrictionsForced",
-		default: "0",
-		category: 4,
-		help: "If set, APIs guarded by map restrictions will return secrets.",
-	},
-	secretpvpmatchrestrictionsforced: {
-		name: "secretPvPMatchRestrictionsForced",
-		default: "0",
-		category: 4,
-		help: "If set, APIs guarded by PvP match restrictions will return secrets.",
-	},
 	secureabilitytoggle: {
 		name: "secureAbilityToggle",
 		default: "1",
@@ -9280,7 +9348,7 @@ export const data: CVarInterface = {
 		name: "taintLog",
 		default: "0",
 		category: 0,
-		help: "Controls debug logging of Lua taint and restricted action events to the 'taint.log' file:\n0: Disable all logging\n1: Log blocked action errors and taint events leading up to them\n2: Log tainted reads and writes of global variables\n3: Log tainted reads and writes of upvalues\n4: Log tainted reads and writes of table fields\n5: Log writes of secret values to global variables, upvalues, or table fields",
+		help: "Controls debug logging of Lua taint and restricted action events to the 'taint.log' file:\n0: Disable all logging\n1: Log blocked action errors and taint events leading up to them\n2: Log tainted reads and writes of global variables\n3: Log tainted reads and writes of upvalues\n4: Log tainted reads and writes of table fields",
 	},
 	talentpointsspent: {
 		name: "talentPointsSpent",
@@ -9656,6 +9724,13 @@ export const data: CVarInterface = {
 		scope: "Character",
 		help: "Whether ignored slots display as hidden or unassigned in the transmog frame",
 	},
+	transmogpreviewedweapontoggle: {
+		name: "transmogPreviewedWeaponToggle",
+		default: "0",
+		category: 4,
+		scope: "Character",
+		help: "Whether the transmog ModelScene should show the MH/OH combo or the RangedWeapon",
+	},
 	transmogshowid: {
 		name: "transmogShowID",
 		default: "0",
@@ -9859,7 +9934,7 @@ export const data: CVarInterface = {
 	},
 	volumefoguse16bittexture: {
 		name: "volumeFogUse16BitTexture",
-		default: "0",
+		default: "1",
 		category: 1,
 		help: "0: 8 bit. 1: 16 bit. REQUIRES gxRestart",
 	},

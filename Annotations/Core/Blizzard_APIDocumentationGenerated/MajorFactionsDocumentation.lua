@@ -111,6 +111,7 @@ function C_MajorFactions.ShouldUseJourneyRewardTrack(majorFactionID) end
 ---@field description string?
 ---@field toastDescription string?
 ---@field rewardType number?
+---@field isCollected boolean?
 
 ---@class RenownHighlightInfo
 ---@field title string

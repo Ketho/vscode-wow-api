@@ -34,6 +34,11 @@ function CreateAbbreviateConfig(data) end
 ---@return string ... declinedNames
 function DeclineName(name, gender, declensionSet) end
 
+---[Documentation](https://warcraft.wiki.gg/wiki/API_GetDefaultAbbreviationBreakpoints)
+---@param locale? WowLocale
+---@return NumberAbbreviationBreakpoint[] breakpoints
+function GetDefaultAbbreviationBreakpoints(locale) end
+
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_GetNumDeclensionSets)
 ---@param name string
 ---@param gender? Enum.UnitSex

@@ -123,6 +123,11 @@ function C_CatalogShop.GetVirtualCurrencyBalance(currencyCode) end
 ---@return boolean hasNewProducts
 function C_CatalogShop.HasNewProducts() end
 
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_CatalogShop.IsProductIncludedInAnyBundle)
+---@param productID number
+---@return boolean isIncludedInAnyBundle
+function C_CatalogShop.IsProductIncludedInAnyBundle(productID) end
+
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_CatalogShop.IsShop2Enabled)
 ---@return boolean? value
 function C_CatalogShop.IsShop2Enabled() end
@@ -218,6 +223,7 @@ function C_CatalogShop.StartHousingVCPurchaseConfirmation(productID) end
 ---@field itemDescription string?
 ---@field hasUnknownLicense boolean
 ---@field productPMTURL string?
+---@field additionalProductPMTURLs string[]
 ---@field otherProductImageAtlasName string?
 ---@field otherProductGameTitleBaseTag string?
 ---@field otherProductGameType string?
@@ -232,6 +238,7 @@ function C_CatalogShop.StartHousingVCPurchaseConfirmation(productID) end
 ---@field gameFlavorID number?
 ---@field decorFileDataID number?
 ---@field quantity number?
+---@field houseTextureAtlas textureAtlas?
 
 ---@class CatalogShopProductInfo
 ---@field catalogShopProductID number
@@ -272,7 +279,9 @@ function C_CatalogShop.StartHousingVCPurchaseConfirmation(productID) end
 ---@field isDynamicallyDiscounted boolean
 ---@field shouldShowOriginalPrice boolean
 ---@field wideCardBGOverrideProductURL string?
----@field consumableQuantity number?
+---@field previewBGOverrideProductURL string?
+---@field previewSmallBGOverrideProductURL string?
+---@field decorQuantity DecorQuantity?
 ---@field isVCProduct boolean
 ---@field containsHousingItem boolean
 
@@ -301,6 +310,10 @@ function C_CatalogShop.StartHousingVCPurchaseConfirmation(productID) end
 ---@class CatalogShopVirtualCurrency
 ---@field amount number
 ---@field currencyCode string
+
+---@class DecorQuantity
+---@field placedQuantity number
+---@field storedQuantity number
 
 ---@class RefundableDecorInfo
 ---@field decorGUID WOWGUID

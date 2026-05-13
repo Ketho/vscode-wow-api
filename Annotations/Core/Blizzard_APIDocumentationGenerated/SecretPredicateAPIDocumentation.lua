@@ -1,6 +1,14 @@
 ---@meta _
 C_Secrets = {}
 
+---Returns true if queries to compare two input unit tokens are permitted. If this returns false, APIs guarded by the RequiresComparableUnitTokens predicate will fail.
+---
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_Secrets.CanCompareUnitTokens)
+---@param unit1 UnitToken
+---@param unit2 UnitToken
+---@return boolean isUnitComparisonPermitted
+function C_Secrets.CanCompareUnitTokens(unit1, unit2) end
+
 ---Queries the base secrecy for a power type.
 ---
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_Secrets.GetPowerTypeSecrecy)
@@ -167,6 +175,12 @@ function C_Secrets.ShouldUnitSpellCastBeSecret(unit, spellIdentifier) end
 ---@param unit UnitToken
 ---@return boolean isSpellCastingSecret
 function C_Secrets.ShouldUnitSpellCastingBeSecret(unit) end
+
+---Returns true if queries for unit statistics will produce secret values.
+---
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_Secrets.ShouldUnitStatsBeSecret)
+---@return boolean hasSecretStats
+function C_Secrets.ShouldUnitStatsBeSecret() end
 
 ---Returns true if queries for unit threat status will produce secret values.
 ---

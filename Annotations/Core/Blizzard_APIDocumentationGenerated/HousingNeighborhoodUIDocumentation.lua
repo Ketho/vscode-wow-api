@@ -111,6 +111,9 @@ function C_HousingNeighborhood.IsPlotOwnedByPlayer() end
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_HousingNeighborhood.OnBulletinBoardClosed)
 function C_HousingNeighborhood.OnBulletinBoardClosed() end
 
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_HousingNeighborhood.OnCornerstoneClosed)
+function C_HousingNeighborhood.OnCornerstoneClosed() end
+
 ---Only available when interacting with a bulletin board game object
 ---
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_HousingNeighborhood.PromoteToManager)

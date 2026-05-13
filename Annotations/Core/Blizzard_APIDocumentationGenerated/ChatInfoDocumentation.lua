@@ -1,6 +1,12 @@
 ---@meta _
 C_ChatInfo = {}
 
+---Returns false if addons are allowed to send outgoing chat messages. This is controlled on a realm-by-realm basis (tournament realms allow it), and the ability for addons to receive comms is controlled separately.
+---
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_ChatInfo.AreOutgoingAddonChatMessagesRestricted)
+---@return boolean isRestricted
+function C_ChatInfo.AreOutgoingAddonChatMessagesRestricted() end
+
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_ChatInfo.CanPlayerSpeakLanguage)
 ---@param languageId number
 ---@return boolean canSpeakLanguage
@@ -105,7 +111,6 @@ function C_ChatInfo.GetRegisteredAddonMessagePrefixes() end
 ---
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_ChatInfo.InChatMessagingLockdown)
 ---@return boolean isRestricted
----@return Enum.ChatMessagingLockdownReason? lockdownReason
 function C_ChatInfo.InChatMessagingLockdown() end
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_ChatInfo.IsAddonMessagePrefixRegistered)
@@ -228,12 +233,6 @@ function C_ChatInfo.SwapChatChannelsByChannelIndex(firstChannelIndex, secondChan
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_ChatInfo.UncensorChatLine)
 ---@param chatLine number
 function C_ChatInfo.UncensorChatLine(chatLine) end
-
----@class AddonMessageParams
----@field prefix string
----@field message string
----@field chatType string?
----@field target string?
 
 ---@class ChatMessageEventParams
 ---@field text string

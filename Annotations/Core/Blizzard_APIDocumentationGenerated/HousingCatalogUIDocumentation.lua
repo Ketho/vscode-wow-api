@@ -14,13 +14,20 @@ function C_HousingCatalog.DeletePreviewCartDecor(decorGUID) end
 ---Attempt to delete the entry from storage
 ---
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_HousingCatalog.DestroyEntry)
----@param entryID HousingCatalogEntryID
+---@param entryVariantID HousingCatalogEntryVariantID
 ---@param destroyAll boolean
-function C_HousingCatalog.DestroyEntry(entryID, destroyAll) end
+function C_HousingCatalog.DestroyEntry(entryVariantID, destroyAll) end
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_HousingCatalog.GetAllFilterTagGroups)
 ---@return HousingCatalogFilterTagGroupInfo[] filterTagGroups
 function C_HousingCatalog.GetAllFilterTagGroups() end
+
+---Returns variant info for all variants of a given catalog entry; Variants represent different visual modifications of the same base entry (ex: dyed versions)
+---
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_HousingCatalog.GetAllVariantInfosForEntry)
+---@param entryID HousingCatalogEntryID
+---@return HousingCatalogEntryVariantInfo[] variantInfos
+function C_HousingCatalog.GetAllVariantInfosForEntry(entryID) end
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_HousingCatalog.GetBundleInfo)
 ---@param bundleCatalogShopProductID number
@@ -43,22 +50,25 @@ function C_HousingCatalog.GetCatalogEntryInfo(entryID) end
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_HousingCatalog.GetCatalogEntryInfoByItem)
 ---@param itemInfo ItemInfo
----@param tryGetOwnedInfo boolean
 ---@return HousingCatalogEntryInfo? info
-function C_HousingCatalog.GetCatalogEntryInfoByItem(itemInfo, tryGetOwnedInfo) end
+function C_HousingCatalog.GetCatalogEntryInfoByItem(itemInfo) end
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_HousingCatalog.GetCatalogEntryInfoByRecordID)
 ---@param entryType Enum.HousingCatalogEntryType
 ---@param recordID number
----@param tryGetOwnedInfo boolean
 ---@return HousingCatalogEntryInfo? info
-function C_HousingCatalog.GetCatalogEntryInfoByRecordID(entryType, recordID, tryGetOwnedInfo) end
+function C_HousingCatalog.GetCatalogEntryInfoByRecordID(entryType, recordID) end
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_HousingCatalog.GetCatalogEntryRefundTimeStampByRecordID)
 ---@param entryType Enum.HousingCatalogEntryType
 ---@param recordID number
 ---@return time_t? refundTimeStamp
 function C_HousingCatalog.GetCatalogEntryRefundTimeStampByRecordID(entryType, recordID) end
+
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_HousingCatalog.GetCatalogEntryVariantInfo)
+---@param entryVariantID HousingCatalogEntryVariantID
+---@return HousingCatalogEntryVariantInfo? info
+function C_HousingCatalog.GetCatalogEntryVariantInfo(entryVariantID) end
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_HousingCatalog.GetCatalogSubcategoryInfo)
 ---@param subcategoryID number
@@ -79,17 +89,17 @@ function C_HousingCatalog.GetDecorTotalOwnedCount() end
 ---Returns the number of instances that can be to be destroyed in storage; These instances count towards the max storage limit
 ---
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_HousingCatalog.GetDestroyableInstanceCount)
----@param entryID HousingCatalogEntryID
+---@param entryVariantID HousingCatalogEntryVariantID
 ---@return number destroyableInstanceCount
-function C_HousingCatalog.GetDestroyableInstanceCount(entryID) end
+function C_HousingCatalog.GetDestroyableInstanceCount(entryVariantID) end
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_HousingCatalog.GetFeaturedBundles)
 ---@return HousingBundleInfo[] bundleInfos
 function C_HousingCatalog.GetFeaturedBundles() end
 
----[Documentation](https://warcraft.wiki.gg/wiki/API_C_HousingCatalog.GetFeaturedDecor)
----@return HousingFeaturedDecorEntry[] entryInfos
-function C_HousingCatalog.GetFeaturedDecor() end
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_HousingCatalog.GetFeaturedSmallProducts)
+---@return HousingFeaturedSmallProductInfo[] infos
+function C_HousingCatalog.GetFeaturedSmallProducts() end
 
 ---Returns market info for a specific decor. This is decor-only for now but should be extended to support entry type and recordID generically
 ---
@@ -101,6 +111,26 @@ function C_HousingCatalog.GetMarketInfoForDecor(decorID) end
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_HousingCatalog.HasFeaturedEntries)
 ---@return boolean hasEntries
 function C_HousingCatalog.HasFeaturedEntries() end
+
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_HousingCatalog.HousingMarketActionAddToCart)
+---@param productID number
+---@param withPreview boolean
+function C_HousingCatalog.HousingMarketActionAddToCart(productID, withPreview) end
+
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_HousingCatalog.HousingMarketActionClearCart)
+function C_HousingCatalog.HousingMarketActionClearCart() end
+
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_HousingCatalog.HousingMarketActionRemoveFromCart)
+---@param productID number
+function C_HousingCatalog.HousingMarketActionRemoveFromCart(productID) end
+
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_HousingCatalog.HousingMarketActionViewBundle)
+---@param productID number
+function C_HousingCatalog.HousingMarketActionViewBundle(productID) end
+
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_HousingCatalog.HousingMarketActionViewInStore)
+---@param productID number
+function C_HousingCatalog.HousingMarketActionViewInStore(productID) end
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_HousingCatalog.IsPreviewCartItemShown)
 ---@param decorGUID WOWGUID
@@ -139,9 +169,10 @@ function C_HousingCatalog.SetPreviewCartItemShown(decorGUID, shown) end
 ---@field quantity number
 
 ---@class HousingBundleInfo
+---@field productID number
 ---@field price number
 ---@field originalPrice number?
----@field productID number
+---@field nonDecorProducts number[]
 ---@field decorEntries HousingBundleDecorEntryInfo[]
 ---@field canPreview boolean? Default = true
 
@@ -151,10 +182,11 @@ function C_HousingCatalog.SetPreviewCartItemShown(decorGUID, shown) end
 ---@field name string?
 ---@field icon textureAtlas?
 ---@field subcategoryIDs number[]
----@field anyOwnedEntries boolean
+---@field anyStoredEntries boolean
 
 ---@class HousingCatalogEntryInfo
----@field entryID HousingCatalogEntryID
+---@field recordID number
+---@field entryType Enum.HousingCatalogEntryType
 ---@field itemID number?
 ---@field name string
 ---@field asset ModelAsset?
@@ -166,21 +198,23 @@ function C_HousingCatalog.SetPreviewCartItemShown(decorGUID, shown) end
 ---@field dataTagsByID LuaValueVariant
 ---@field size Enum.HousingCatalogEntrySize
 ---@field placementCost number
----@field showQuantity boolean
----@field quantity number
+---@field totalNumStored number
 ---@field remainingRedeemable number
+---@field totalNumPlaced number
 ---@field destroyableInstanceCount number
----@field numPlaced number
 ---@field isUniqueTrophy boolean
 ---@field isAllowedOutdoors boolean
 ---@field isAllowedIndoors boolean
 ---@field canCustomize boolean
 ---@field isPrefab boolean
 ---@field quality Enum.ItemQuality?
----@field customizations string[]
----@field dyeIDs number[]
 ---@field firstAcquisitionBonus number
 ---@field sourceText string
+
+---@class HousingCatalogEntryVariantInfo
+---@field entryVariantID HousingCatalogEntryVariantID
+---@field numStored number
+---@field dyeSlots HousingDecorDyeSlot[]
 
 ---@class HousingCatalogSubcategoryInfo
 ---@field ID number
@@ -188,16 +222,19 @@ function C_HousingCatalog.SetPreviewCartItemShown(decorGUID, shown) end
 ---@field parentCategoryID number
 ---@field name string?
 ---@field icon textureAtlas?
----@field anyOwnedEntries boolean
+---@field anyStoredEntries boolean
 
 ---@class HousingCategorySearchInfo
----@field withOwnedEntriesOnly boolean? Default = false
+---@field withStoredEntriesOnly boolean? Default = false
 ---@field includeFeaturedCategory boolean? Default = false
 ---@field editorModeContext Enum.HouseEditorMode?
 
----@class HousingFeaturedDecorEntry
----@field entryID HousingCatalogEntryID
+---@class HousingFeaturedSmallProductInfo
+---@field entryVariantID HousingCatalogEntryVariantID?
 ---@field productID number
+---@field price number
+---@field originalPrice number?
+---@field canPreview boolean
 
 ---@class HousingMarketInfo
 ---@field price number

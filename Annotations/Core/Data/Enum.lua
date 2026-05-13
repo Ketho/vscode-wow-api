@@ -3,11 +3,10 @@ Enum = {}
 
 ---@enum Enum.AbbreviationDataError
 Enum.AbbreviationDataError = {
-	InvalidBreakpoint = 0,
-	InvalidSignificandDivisor = 1,
-	InvalidFractionDivisor = 2,
-	InvalidAbbreviation = 3,
-	NotMultipleOfTen = 4,
+	InvalidBreakpoint = 0x1,
+	InvalidSignificandDivisor = 0x2,
+	InvalidFractionDivisor = 0x4,
+	NotMultipleOfTen = 0x8,
 }
 
 ---@enum Enum.AccountCurrencyTransferResult
@@ -362,6 +361,7 @@ Enum.AddOnRestrictionType = {
 	ChallengeMode = 2,
 	PvPMatch = 3,
 	Map = 4,
+	Chat = 5,
 }
 
 ---@enum Enum.AddOnSecurityStatus
@@ -566,6 +566,30 @@ Enum.AuraFrameVisibleSetting = {
 	Always = 0,
 	InCombat = 1,
 	Hidden = 2,
+}
+
+---@enum Enum.AutoCompleteEntryFlag
+Enum.AutoCompleteEntryFlag = {
+	InGroup = 0x1,
+	InGuild = 0x2,
+	Friend = 0x4,
+	Bnet = 0x8,
+	InteractedWith = 0x10,
+	Online = 0x20,
+	InAOI = 0x40,
+	AccountCharacter = 0x80,
+	RecentPlayer = 0x100,
+}
+
+---@enum Enum.AutoCompletePriority
+Enum.AutoCompletePriority = {
+	Other = 0,
+	Interacted = 1,
+	InGroup = 2,
+	Guild = 3,
+	Friend = 4,
+	AccountCharacter = 5,
+	AccountCharacterSameRealm = 6,
 }
 
 ---@enum Enum.AvgItemLevelCategories
@@ -1501,11 +1525,10 @@ Enum.ChatChannelType = {
 	Communities = 4,
 }
 
----@enum Enum.ChatMessagingLockdownReason
-Enum.ChatMessagingLockdownReason = {
-	ActiveEncounter = 0,
-	ActiveMythicKeystoneOrChallengeMode = 1,
-	ActivePvPMatch = 2,
+---@enum Enum.ChatMessagingLockdownRestriction
+Enum.ChatMessagingLockdownRestriction = {
+	DropIncomingAddonMessages = 1,
+	DropOutgoingAddonMessages = 2,
 }
 
 ---@enum Enum.ChatToxityFilterOptOut
@@ -2023,6 +2046,10 @@ Enum.CombatAudioAlertThrottle = {
 	TargetCast = 4,
 	PlayerResource1 = 5,
 	PlayerResource2 = 6,
+	PlayerHealthSamePercent = 7,
+	TargetHealthSamePercent = 8,
+	PlayerResource1SamePercent = 9,
+	PlayerResource2SamePercent = 10,
 }
 
 ---@enum Enum.CombatAudioAlertType
@@ -2692,6 +2719,7 @@ Enum.CurrencyFlagsB = {
 	CurrencyBForceMaxQuantityOnConversion = 0x100,
 	CurrencyBUnearnableBeforeMaxQuantityStart = 0x200,
 	CurrencyBAllowReductionByResourcefulness = 0x400,
+	CurrencyBNoBonusXP = 0x800,
 }
 
 ---@enum Enum.CurrencyGainFlags
@@ -2921,6 +2949,13 @@ Enum.DamageMeterSessionType = {
 	Expired = 2,
 }
 
+---@enum Enum.DamageMeterSourceDisplayType
+Enum.DamageMeterSourceDisplayType = {
+	None = 0,
+	Ally = 1,
+	Enemy = 2,
+}
+
 ---@enum Enum.DamageMeterSpellDetailsDisplayType
 Enum.DamageMeterSpellDetailsDisplayType = {
 	SpellCasted = 0,
@@ -3111,6 +3146,7 @@ Enum.EditModeAccountSetting = {
 	ShowEncounterEvents = 30,
 	ShowDamageMeter = 31,
 	ShowExternalDefensives = 32,
+	ShowTotemActionBar = 33,
 }
 
 ---@enum Enum.EditModeActionBarSetting
@@ -3324,6 +3360,7 @@ Enum.EditModeStatusTrackingBarSetting = {
 	Height = 0,
 	Width = 1,
 	TextSize = 2,
+	Size = 3,
 }
 
 ---@enum Enum.EditModeStatusTrackingBarSystemIndices
@@ -3358,6 +3395,7 @@ Enum.EditModeSystem = {
 	PersonalResourceDisplay = 21,
 	EncounterEvents = 22,
 	DamageMeter = 23,
+	TotemActionBar = 24,
 }
 
 ---@enum Enum.EditModeTimerBarsSetting
@@ -3388,6 +3426,7 @@ Enum.EditModeUnitFrameSetting = {
 	AuraOrganizationType = 18,
 	IconSize = 19,
 	Opacity = 20,
+	BigDefensiveIconSize = 21,
 }
 
 ---@enum Enum.EditModeUnitFrameSystemIndices
@@ -3752,6 +3791,7 @@ Enum.FragmentID = {
 	FPlayerInitiativeInfo = 37,
 	FNeighborhoodStateData = 38,
 	FUnitAIGroupLink = 39,
+	FPathingDynamicLinks = 40,
 	TagItem = 200,
 	TagContainer = 201,
 	TagAzeriteEmpoweredItem = 202,
@@ -3778,6 +3818,7 @@ Enum.FragmentID = {
 	TagHousingPoolObject = 223,
 	TagHouseExteriorPiece = 224,
 	TagHouseExteriorRoot = 225,
+	TagHousingDecorProxyGameObject = 226,
 	TestFragment_1 = 250,
 	TestFragment_2 = 251,
 	TestFragment_3 = 252,
@@ -3835,6 +3876,7 @@ Enum.FrameTutorialAccount = {
 	TransmogWeaponOptions = 45,
 	TransmogTrialOfStyle = 46,
 	TransmogCustomSetsMigration = 47,
+	HousingEndeavorsTabSeen = 48,
 }
 
 ---@enum Enum.GameMode
@@ -3869,7 +3911,6 @@ Enum.GameRule = {
 	ReplaceGmRankLastOnlineSeconds = 12,
 	GameMode = 13,
 	CharacterlessLogin = 14,
-	NoMultiboxing = 15,
 	VanillaNpcKnockback = 16,
 	Runecarving = 17,
 	TalentRespecCostMin = 18,
@@ -4454,10 +4495,11 @@ Enum.HouseEditorMode = {
 
 ---@enum Enum.HouseExteriorWMODataFlags
 Enum.HouseExteriorWMODataFlags = {
-	None = 0,
-	UnlockedByDefault = 1,
-	AllowedInHordeNeighborhoods = 2,
-	AllowedInAllianceNeighborhoods = 4,
+	None = 0x0,
+	UnlockedByDefault = 0x1,
+	AllowedInHordeNeighborhoods = 0x2,
+	AllowedInAllianceNeighborhoods = 0x4,
+	HiddenUnlessOwned = 0x8,
 }
 
 ---@enum Enum.HouseFinderSuggestionReason
@@ -4469,6 +4511,7 @@ Enum.HouseFinderSuggestionReason = {
 	BNetFriends = 0x8,
 	PartySync = 0x10,
 	Random = 0x20,
+	HomeOwner = 0x40,
 }
 
 ---@enum Enum.HouseLevelRewardType
@@ -4547,14 +4590,6 @@ Enum.HousingCatalogEntrySize = {
 	Huge = 69,
 }
 
----@enum Enum.HousingCatalogEntrySubtype
-Enum.HousingCatalogEntrySubtype = {
-	Invalid = 0,
-	Unowned = 1,
-	OwnedModifiedStack = 2,
-	OwnedUnmodifiedStack = 3,
-}
-
 ---@enum Enum.HousingCatalogEntryType
 Enum.HousingCatalogEntryType = {
 	Invalid = 0,
@@ -4615,6 +4650,7 @@ Enum.HousingDecorPlacementRestriction = {
 	ChildOutsideBounds = 0x8,
 	InvalidTarget = 0x10,
 	InvalidCollision = 0x20,
+	InvalidLightOverlap = 0x40,
 }
 
 ---@enum Enum.HousingDecorTheme
@@ -4670,6 +4706,12 @@ Enum.HousingFavorUpdateType = {
 	Set = 2,
 }
 
+---@enum Enum.HousingFixtureDecorAction
+Enum.HousingFixtureDecorAction = {
+	Store = 0,
+	Detach = 1,
+}
+
 ---@enum Enum.HousingFixtureFlags
 Enum.HousingFixtureFlags = {
 	None = 0,
@@ -4719,7 +4761,7 @@ Enum.HousingItemToastType = {
 	Fixture = 1,
 	Customization = 2,
 	Decor = 3,
-	House = 4,
+	HouseType = 4,
 }
 
 ---@enum Enum.HousingLayoutCameraDirection
@@ -4779,91 +4821,93 @@ Enum.HousingResult = {
 	BoundsFailureChildren = 2,
 	BoundsFailurePlot = 3,
 	BoundsFailureRoom = 4,
-	CannotAfford = 5,
-	CharterComplete = 6,
-	CollisionInvalid = 7,
-	DbError = 8,
-	DecorCannotBeRedeemed = 9,
-	DecorItemNotDestroyable = 10,
-	DecorNotFound = 11,
-	DecorNotFoundInStorage = 12,
-	DuplicateCharterSignature = 13,
-	FilterRejected = 14,
-	FixtureCantDeleteDoor = 15,
-	FixtureHookEmpty = 16,
-	FixtureHookOccupied = 17,
-	FixtureHouseTypeMismatch = 18,
-	FixtureNotFound = 19,
-	FixtureSizeMismatch = 20,
-	FixtureTypeMismatch = 21,
-	GenericFailure = 22,
-	GuildMoreAccountsNeeded = 23,
-	GuildMoreActivePlayersNeeded = 24,
-	GuildNotLoaded = 25,
-	HouseEditLockFailed = 26,
-	HouseExteriorAlreadyThatSize = 27,
-	HouseExteriorAlreadyThatType = 28,
-	HouseExteriorRootNotFound = 29,
-	HouseExteriorTypeNeighborhoodMismatch = 30,
-	HouseExteriorTypeNotFound = 31,
-	HouseExteriorTypeSizeMismatch = 32,
-	HouseExteriorSizeNotAvailable = 33,
-	HookNotChildOfFixture = 34,
-	HouseNotFound = 35,
-	IncorrectFaction = 36,
-	InvalidDecorItem = 37,
-	InvalidDistance = 38,
-	InvalidGuild = 39,
-	InvalidHouse = 40,
-	InvalidInstance = 41,
-	InvalidInteraction = 42,
-	InvalidMap = 43,
-	InvalidNeighborhoodName = 44,
-	InvalidRoomLayout = 45,
-	LockedByOtherPlayer = 46,
-	LockOperationFailed = 47,
-	MaxDecorReached = 48,
-	MaxPreviewDecorReached = 49,
-	MissingCoreFixture = 50,
-	MissingDye = 51,
-	MissingExpansionAccess = 52,
-	MissingFactionMap = 53,
-	MissingPrivateNeighborhoodInvite = 54,
-	MoreHouseSlotsNeeded = 55,
-	MoreSignaturesNeeded = 56,
-	NeighborhoodNotFound = 57,
-	NoNeighborhoodOwnershipRequests = 58,
-	NotInDecorEditMode = 59,
-	NotInFixtureEditMode = 60,
-	NotInLayoutEditMode = 61,
-	NotInsideHouse = 62,
-	NotOnOwnedPlot = 63,
-	OperationAborted = 64,
-	OwnerNotInGuild = 65,
-	PermissionDenied = 66,
-	PlacementTargetInvalid = 67,
-	PlayerNotFound = 68,
-	PlayerNotInInstance = 69,
-	PlotNotFound = 70,
-	PlotNotVacant = 71,
-	PlotReservationCooldown = 72,
-	PlotReserved = 73,
-	RoomNotFound = 74,
-	RoomUpdateFailed = 75,
-	RpcFailure = 76,
-	ServiceNotAvailable = 77,
-	StaticDataNotFound = 78,
-	TimeoutLimit = 79,
-	TimerunningNotAllowed = 80,
-	TokenRequired = 81,
-	TooManyRequests = 82,
-	TransactionFailure = 83,
-	UncollectedExteriorFixture = 84,
-	UncollectedHouseType = 85,
-	UncollectedRoom = 86,
-	UncollectedRoomMaterial = 87,
-	UncollectedRoomTheme = 88,
-	UnlockOperationFailed = 89,
+	BoundToStartingArea = 5,
+	CannotAfford = 6,
+	CharterComplete = 7,
+	CollisionInvalid = 8,
+	DbError = 9,
+	DecorCannotBeRedeemed = 10,
+	DecorItemNotDestroyable = 11,
+	DecorNotFound = 12,
+	DecorNotFoundInStorage = 13,
+	DuplicateCharterSignature = 14,
+	FilterRejected = 15,
+	FixtureCantDeleteDoor = 16,
+	FixtureHookEmpty = 17,
+	FixtureHookOccupied = 18,
+	FixtureHouseTypeMismatch = 19,
+	FixtureNotFound = 20,
+	FixtureSizeMismatch = 21,
+	FixtureTypeMismatch = 22,
+	GenericFailure = 23,
+	GuildMoreAccountsNeeded = 24,
+	GuildMoreActivePlayersNeeded = 25,
+	GuildNotLoaded = 26,
+	HouseEditLockFailed = 27,
+	HouseExteriorAlreadyThatSize = 28,
+	HouseExteriorAlreadyThatType = 29,
+	HouseExteriorRootNotFound = 30,
+	HouseExteriorTypeNeighborhoodMismatch = 31,
+	HouseExteriorTypeNotFound = 32,
+	HouseExteriorTypeSizeMismatch = 33,
+	HouseExteriorSizeNotAvailable = 34,
+	HookNotChildOfFixture = 35,
+	HouseNotFound = 36,
+	IncorrectFaction = 37,
+	InvalidDecorItem = 38,
+	InvalidDistance = 39,
+	InvalidGuild = 40,
+	InvalidHouse = 41,
+	InvalidInstance = 42,
+	InvalidInteraction = 43,
+	InvalidLightOverlap = 44,
+	InvalidMap = 45,
+	InvalidNeighborhoodName = 46,
+	InvalidRoomLayout = 47,
+	LockedByOtherPlayer = 48,
+	LockOperationFailed = 49,
+	MaxDecorReached = 50,
+	MaxPreviewDecorReached = 51,
+	MissingCoreFixture = 52,
+	MissingDye = 53,
+	MissingExpansionAccess = 54,
+	MissingFactionMap = 55,
+	MissingPrivateNeighborhoodInvite = 56,
+	MoreHouseSlotsNeeded = 57,
+	MoreSignaturesNeeded = 58,
+	NeighborhoodNotFound = 59,
+	NoNeighborhoodOwnershipRequests = 60,
+	NotInDecorEditMode = 61,
+	NotInFixtureEditMode = 62,
+	NotInLayoutEditMode = 63,
+	NotInsideHouse = 64,
+	NotOnOwnedPlot = 65,
+	OperationAborted = 66,
+	OwnerNotInGuild = 67,
+	PermissionDenied = 68,
+	PlacementTargetInvalid = 69,
+	PlayerNotFound = 70,
+	PlayerNotInInstance = 71,
+	PlotNotFound = 72,
+	PlotNotVacant = 73,
+	PlotReservationCooldown = 74,
+	PlotReserved = 75,
+	RoomNotFound = 76,
+	RoomUpdateFailed = 77,
+	RpcFailure = 78,
+	ServiceNotAvailable = 79,
+	StaticDataNotFound = 80,
+	TimeoutLimit = 81,
+	TimerunningNotAllowed = 82,
+	TokenRequired = 83,
+	TooManyRequests = 84,
+	TransactionFailure = 85,
+	UncollectedExteriorFixture = 86,
+	UncollectedHouseType = 87,
+	UncollectedRoom = 88,
+	UncollectedRoomMaterial = 89,
+	UncollectedRoomTheme = 90,
+	UnlockOperationFailed = 91,
 }
 
 ---@enum Enum.HousingRoomComponentCeilingType
@@ -6022,7 +6066,7 @@ Enum.LootMethod = {
 
 ---@enum Enum.LootMethodStyles
 Enum.LootMethodStyles = {
-	PersonalOnly = 0,
+	Mainline = 0,
 	Vanilla = 1,
 }
 
@@ -6454,6 +6498,13 @@ Enum.NpcCraftingOrderSetFlags = {
 	AllowDuplicate = 2,
 }
 
+---@enum Enum.NumericRuleFormatRounding
+Enum.NumericRuleFormatRounding = {
+	Nearest = 0,
+	Up = 1,
+	Down = 2,
+}
+
 ---@enum Enum.PartyPlaylistEntry
 Enum.PartyPlaylistEntry = {
 	SoloGameMode = 0,
@@ -6844,35 +6895,36 @@ Enum.PhotoSharingStatus = {
 
 ---@enum Enum.PhotoSharingUploadStatus
 Enum.PhotoSharingUploadStatus = {
-	Failed = 0,
-	Success = 1,
-	Locked = 2,
-	ListPagesApiCallFailed = 3,
-	ListPagesBadRequest = 4,
-	ListPagesUnauthorized = 5,
-	ListPagesForbidden = 6,
-	ListPagesNotFound = 7,
-	ListPagesTooManyRequests = 8,
-	ListPagesGenericFailure = 9,
-	ListPagesEmptyBoardID = 10,
-	ListPagesInvalidBookmark = 11,
-	CreatePageApiCallFailed = 12,
-	CreatePageBadRequest = 13,
-	CreatePageUnauthorized = 14,
-	CreatePageForbidden = 15,
-	CreatePageNotFound = 16,
-	CreatePageTooManyRequests = 17,
-	CreatePageGenericFailure = 18,
-	CreatePageNoBoardIDFound = 19,
-	CreatePostApiCallFailed = 20,
-	CreatePostBadRequest = 21,
-	CreatePostUnauthorized = 22,
-	CreatePostForbidden = 23,
-	CreatePostNotFound = 24,
-	CreatePostTooManyRequests = 25,
-	CreatePostGenericFailure = 26,
-	CreatePostNoIDFound = 27,
-	CreatePostThrottled = 28,
+	Disabled = 0,
+	Failed = 1,
+	Success = 2,
+	Locked = 3,
+	ListPagesApiCallFailed = 4,
+	ListPagesBadRequest = 5,
+	ListPagesUnauthorized = 6,
+	ListPagesForbidden = 7,
+	ListPagesNotFound = 8,
+	ListPagesTooManyRequests = 9,
+	ListPagesGenericFailure = 10,
+	ListPagesEmptyBoardID = 11,
+	ListPagesInvalidBookmark = 12,
+	CreatePageApiCallFailed = 13,
+	CreatePageBadRequest = 14,
+	CreatePageUnauthorized = 15,
+	CreatePageForbidden = 16,
+	CreatePageNotFound = 17,
+	CreatePageTooManyRequests = 18,
+	CreatePageGenericFailure = 19,
+	CreatePageNoBoardIDFound = 20,
+	CreatePostApiCallFailed = 21,
+	CreatePostBadRequest = 22,
+	CreatePostUnauthorized = 23,
+	CreatePostForbidden = 24,
+	CreatePostNotFound = 25,
+	CreatePostTooManyRequests = 26,
+	CreatePostGenericFailure = 27,
+	CreatePostNoIDFound = 28,
+	CreatePostThrottled = 29,
 }
 
 ---@enum Enum.PingMode
@@ -7268,6 +7320,82 @@ Enum.PurchaseHouseDisabledReason = {
 	CharterLockout = 7,
 	MaxHouses = 8,
 	NoGameTimeRemaining = 9,
+}
+
+---@enum Enum.PurchaseResult
+Enum.PurchaseResult = {
+	Ok = 0,
+	ErrorRiskDenied = 1,
+	ErrorOrderFailed = 2,
+	ErrorClientTimeout = 3,
+	ErrorClientDeclined = 4,
+	ErrorFailedToCreatePurchaseRecord = 5,
+	ErrorFailedToGetPurchaseID = 6,
+	ErrorFailedToSaveMopAndRiskStatus = 7,
+	ErrorFailedToSaveMopAndRiskResponse = 8,
+	ErrorClientGone = 9,
+	ErrorFailedToSavePlaceOrderStatus = 10,
+	ErrorBattlepayTimeoutMopAndRisk = 11,
+	ErrorCurrencyInvalidInRegion = 12,
+	ErrorBattlepayTemporarilyUnavailable = 13,
+	ErrorBattlepayDisabled = 14,
+	ErrorServerRestarted = 15,
+	ErrorInvalidProduct = 16,
+	ErrorInvalidRegionGroupMask = 17,
+	ErrorProductInvalidInRegion = 18,
+	ErrorDistributionObjectNotFound = 19,
+	ErrorDistributionObjectAlreadyAssigned = 20,
+	ErrorRiskResponseMissingScore = 21,
+	ErrorMopAndRiskAmqpRpcFailed = 22,
+	ErrorMopAndRiskRpcErrorFromBattlepay = 23,
+	ErrorMopAndRiskUnexpectedResponseFromBattlepay = 24,
+	ErrorMopAndRiskNoValidPaymentMethods = 25,
+	ErrorOrderCanceledPriceChange = 26,
+	ErrorBuyingProductNotAllowedInGlueScreen = 27,
+	ErrorMopAndRiskNotEnoughBalance = 28,
+	ErrorPlaceOrderNotEnoughBalance = 29,
+	ErrorProgrammerManualFail = 30,
+	ErrorThrottledByUserServer = 31,
+	ErrorBuyingProductNotAllowedInWorld = 32,
+	ErrorBlockedByParentalControls = 33,
+	ErrorNoStorePurchaseFlagIsSet = 34,
+	ErrorDistributionObjectInvalidChoice = 35,
+	ErrorInvalidCreditCardExpiryDate = 36,
+	ErrorAuthorizingPayment = 37,
+	ErrorPaymentProviderDeniedPayment = 38,
+	ErrorOverSpendingLimit = 39,
+	ErrorClientTimeoutChallenge = 40,
+	ErrorClientDeclinedChallenge = 41,
+	ErrorDistributionObjectInvalidTarget = 42,
+	ErrorFixedLicenseProductAlreadyExists = 43,
+	ErrorDistributionObjectTrialBlocked = 44,
+	ErrorDistributionObjectExpansionBlocked = 45,
+	ErrorOwnsConsumableToken = 46,
+	ErrorTooManyTokens = 47,
+	ErrorCommerceServerDisabled = 48,
+	ErrorFailedToWriteVasPurchaseID = 49,
+	ErrorFailedToWriteVasLicenseID = 50,
+	ErrorCharacterUpgradeOperationInProgress = 51,
+	ErrorInvalidPlatform = 52,
+	ErrorInvalidDeviceID = 53,
+	ErrorFailedToSaveValidatePurchaseStatus = 54,
+	ErrorFailedToSaveValidatePurchaseResponse = 55,
+	ErrorBattlepayTimeoutValidatePurchase = 56,
+	ErrorProductNotPurchasable = 57,
+	ErrorFailedToSaveClientCheckoutStatus = 58,
+	ErrorFailedOldPurchaseFlow = 59,
+	ErrorClientCheckoutTimeout = 60,
+	ErrorFailedToSaveValidationHashStatus = 61,
+	ErrorBattlepayTimeoutValidationHash = 62,
+	ErrorClientCheckoutCanceledOrFailed = 63,
+	ErrorCouldNotGetValidationHash = 64,
+	ErrorDistributionObjectWrongGameAccount = 65,
+	ErrorClientRestricted = 66,
+	ErrorFailedToSaveRedeemTokenStatus = 67,
+	ErrorInvalidPurchaseID = 68,
+	ErrorTokenRedemptionOrderFailed = 69,
+	ErrorVasTransactionCreateFailed = 70,
+	ErrorInManualReview = 71,
 }
 
 ---@enum Enum.PvPFaction
@@ -7874,6 +8002,28 @@ Enum.SeasonID = {
 	FreshHardcore = 12,
 }
 
+---@enum Enum.SecondsFormatterAbbrevation
+Enum.SecondsFormatterAbbrevation = {
+	None = 0,
+	Truncate = 1,
+	OneLetter = 2,
+}
+
+---@enum Enum.SecondsFormatterInterval
+Enum.SecondsFormatterInterval = {
+	Seconds = 0,
+	Minutes = 1,
+	Hours = 2,
+	Days = 3,
+}
+
+---@enum Enum.SecondsFormatterIntervalWhitespace
+Enum.SecondsFormatterIntervalWhitespace = {
+	Preserve = 0,
+	Strip = 1,
+	StripIgnoreLocale = 2,
+}
+
 ---@enum Enum.SecrecyLevel
 Enum.SecrecyLevel = {
 	NeverSecret = 0,
@@ -7909,6 +8059,7 @@ Enum.SecretAspect = {
 	MinimumWidth = 0x20000,
 	Padding = 0x40000,
 	CooldownStyle = 0x80000,
+	TooltipTexture = 0x100000,
 }
 
 ---@enum Enum.SelfResurrectOptionType
@@ -7958,6 +8109,20 @@ Enum.ShutdownSessionReason = {
 	AccountLoginCommand = 4,
 	LuaScript = 5,
 	Error = 6,
+}
+
+---@enum Enum.Si3UISoundSubType
+Enum.Si3UISoundSubType = {
+	Default = 0,
+	Cinematic = 1,
+	RacialCinematic = 2,
+	Script = 3,
+	ScriptAmbience = 4,
+	ScriptDialog = 5,
+	ScriptMaster = 6,
+	ScriptMusic = 7,
+	ScriptTalkingHead = 8,
+	VocalError = 9,
 }
 
 ---@enum Enum.Siflag
@@ -8363,6 +8528,12 @@ Enum.SuperTrackingType = {
 	Vignette = 7,
 }
 
+---@enum Enum.SurveyDeliveryFlags
+Enum.SurveyDeliveryFlags = {
+	None = 0,
+	EncounterSucccessOnly = 1,
+}
+
 ---@enum Enum.SurveyDeliveryMoment
 Enum.SurveyDeliveryMoment = {
 	Login = 0,
@@ -8370,6 +8541,7 @@ Enum.SurveyDeliveryMoment = {
 	QuestTurnIn = 2,
 	ChestLooted = 3,
 	MythicPlusCompleted = 4,
+	EncounterEnd = 5,
 }
 
 ---@enum Enum.TableSecurityOption
@@ -8377,6 +8549,20 @@ Enum.TableSecurityOption = {
 	DisallowTaintedAccess = 0,
 	DisallowSecretKeys = 1,
 	SecretWrapContents = 2,
+}
+
+---@enum Enum.TieredEntranceRewardType
+Enum.TieredEntranceRewardType = {
+	Item = 0,
+	Currency = 1,
+}
+
+---@enum Enum.TieredEntranceType
+Enum.TieredEntranceType = {
+	Invalid = 0,
+	Delve = 1,
+	Sites = 2,
+	Reserved = 3,
 }
 
 ---@enum Enum.TimeEventFlag
@@ -8836,6 +9022,7 @@ Enum.TransmogCollectionType = {
 Enum.TransmogIllusionFlags = {
 	HideUntilCollected = 1,
 	PlayerConditionGrantsOnLogin = 2,
+	AllowedRangedShieldsHoldables = 4,
 }
 
 ---@enum Enum.TransmogModification
@@ -8968,6 +9155,14 @@ Enum.TransmogOutfitSlotOptionFlags = {
 	DisablesOffhandSlot = 4,
 }
 
+---@enum Enum.TransmogOutfitSlotOptionSheatheCategory
+Enum.TransmogOutfitSlotOptionSheatheCategory = {
+	Default = 0,
+	Back = 1,
+	Side = 2,
+	Hide = 3,
+}
+
 ---@enum Enum.TransmogOutfitSlotPosition
 Enum.TransmogOutfitSlotPosition = {
 	Left = 0,
@@ -9052,6 +9247,16 @@ Enum.TransmogSituation = {
 	AllRacialForms = 19,
 	FormNative = 20,
 	FormNonNative = 21,
+	AllWeather = 22,
+	WeatherClear = 23,
+	WeatherRain = 24,
+	WeatherSnow = 25,
+	WeatherSand = 26,
+	AllTime = 27,
+	TimeMorning = 28,
+	TimeDay = 29,
+	TimeEvening = 30,
+	TimeNight = 31,
 }
 
 ---@enum Enum.TransmogSituationFlags
@@ -9081,6 +9286,8 @@ Enum.TransmogSituationTrigger = {
 	EquipmentSet = 6,
 	Forms = 7,
 	EventOutfit = 8,
+	Weather = 9,
+	TimeOfDay = 10,
 }
 
 ---@enum Enum.TransmogSituationTriggerFlags
@@ -9130,6 +9337,14 @@ Enum.TransmogSource = {
 	Profession = 8,
 	NotValidForTransmog = 9,
 	TradingPost = 10,
+}
+
+---@enum Enum.TransmogTimeOfDayCategory
+Enum.TransmogTimeOfDayCategory = {
+	Morning = 0,
+	Midday = 1,
+	Evening = 2,
+	Night = 3,
 }
 
 ---@enum Enum.TransmogType
@@ -9596,6 +9811,372 @@ Enum.UnitSex = {
 	Neutral = 4,
 }
 
+---@enum Enum.UnitTokenType
+Enum.UnitTokenType = {
+	None = 0,
+	Player = 1,
+	Pet = 2,
+	Vehicle = 3,
+	Mouseover = 4,
+	Target = 5,
+	TargetTarget = 6,
+	SoftEnemy = 7,
+	SoftFriend = 8,
+	SoftInteract = 9,
+	Focus = 10,
+	FocusTarget = 11,
+	AnyTarget = 12,
+	AnyInteract = 13,
+	AnyLeftInteract = 14,
+	AnyEnemy = 15,
+	AnyFriend = 16,
+	Npc = 17,
+	QuestNpc = 18,
+	Raid1 = 19,
+	Raid2 = 20,
+	Raid3 = 21,
+	Raid4 = 22,
+	Raid5 = 23,
+	Raid6 = 24,
+	Raid7 = 25,
+	Raid8 = 26,
+	Raid9 = 27,
+	Raid10 = 28,
+	Raid11 = 29,
+	Raid12 = 30,
+	Raid13 = 31,
+	Raid14 = 32,
+	Raid15 = 33,
+	Raid16 = 34,
+	Raid17 = 35,
+	Raid18 = 36,
+	Raid19 = 37,
+	Raid20 = 38,
+	Raid21 = 39,
+	Raid22 = 40,
+	Raid23 = 41,
+	Raid24 = 42,
+	Raid25 = 43,
+	Raid26 = 44,
+	Raid27 = 45,
+	Raid28 = 46,
+	Raid29 = 47,
+	Raid30 = 48,
+	Raid31 = 49,
+	Raid32 = 50,
+	Raid33 = 51,
+	Raid34 = 52,
+	Raid35 = 53,
+	Raid36 = 54,
+	Raid37 = 55,
+	Raid38 = 56,
+	Raid39 = 57,
+	Raid40 = 58,
+	RaidPet1 = 59,
+	RaidPet2 = 60,
+	RaidPet3 = 61,
+	RaidPet4 = 62,
+	RaidPet5 = 63,
+	RaidPet6 = 64,
+	RaidPet7 = 65,
+	RaidPet8 = 66,
+	RaidPet9 = 67,
+	RaidPet10 = 68,
+	RaidPet11 = 69,
+	RaidPet12 = 70,
+	RaidPet13 = 71,
+	RaidPet14 = 72,
+	RaidPet15 = 73,
+	RaidPet16 = 74,
+	RaidPet17 = 75,
+	RaidPet18 = 76,
+	RaidPet19 = 77,
+	RaidPet20 = 78,
+	RaidPet21 = 79,
+	RaidPet22 = 80,
+	RaidPet23 = 81,
+	RaidPet24 = 82,
+	RaidPet25 = 83,
+	RaidPet26 = 84,
+	RaidPet27 = 85,
+	RaidPet28 = 86,
+	RaidPet29 = 87,
+	RaidPet30 = 88,
+	RaidPet31 = 89,
+	RaidPet32 = 90,
+	RaidPet33 = 91,
+	RaidPet34 = 92,
+	RaidPet35 = 93,
+	RaidPet36 = 94,
+	RaidPet37 = 95,
+	RaidPet38 = 96,
+	RaidPet39 = 97,
+	RaidPet40 = 98,
+	Party1 = 99,
+	Party2 = 100,
+	Party3 = 101,
+	Party4 = 102,
+	PartyPet1 = 103,
+	PartyPet2 = 104,
+	PartyPet3 = 105,
+	PartyPet4 = 106,
+	NamePlate1 = 107,
+	NamePlate2 = 108,
+	NamePlate3 = 109,
+	NamePlate4 = 110,
+	NamePlate5 = 111,
+	NamePlate6 = 112,
+	NamePlate7 = 113,
+	NamePlate8 = 114,
+	NamePlate9 = 115,
+	NamePlate10 = 116,
+	NamePlate11 = 117,
+	NamePlate12 = 118,
+	NamePlate13 = 119,
+	NamePlate14 = 120,
+	NamePlate15 = 121,
+	NamePlate16 = 122,
+	NamePlate17 = 123,
+	NamePlate18 = 124,
+	NamePlate19 = 125,
+	NamePlate20 = 126,
+	NamePlate21 = 127,
+	NamePlate22 = 128,
+	NamePlate23 = 129,
+	NamePlate24 = 130,
+	NamePlate25 = 131,
+	NamePlate26 = 132,
+	NamePlate27 = 133,
+	NamePlate28 = 134,
+	NamePlate29 = 135,
+	NamePlate30 = 136,
+	NamePlate31 = 137,
+	NamePlate32 = 138,
+	NamePlate33 = 139,
+	NamePlate34 = 140,
+	NamePlate35 = 141,
+	NamePlate36 = 142,
+	NamePlate37 = 143,
+	NamePlate38 = 144,
+	NamePlate39 = 145,
+	NamePlate40 = 146,
+	NamePlate41 = 147,
+	NamePlate42 = 148,
+	NamePlate43 = 149,
+	NamePlate44 = 150,
+	NamePlate45 = 151,
+	NamePlate46 = 152,
+	NamePlate47 = 153,
+	NamePlate48 = 154,
+	NamePlate49 = 155,
+	NamePlate50 = 156,
+	NamePlate51 = 157,
+	NamePlate52 = 158,
+	NamePlate53 = 159,
+	NamePlate54 = 160,
+	NamePlate55 = 161,
+	NamePlate56 = 162,
+	NamePlate57 = 163,
+	NamePlate58 = 164,
+	NamePlate59 = 165,
+	NamePlate60 = 166,
+	NamePlate61 = 167,
+	NamePlate62 = 168,
+	NamePlate63 = 169,
+	NamePlate64 = 170,
+	NamePlate65 = 171,
+	NamePlate66 = 172,
+	NamePlate67 = 173,
+	NamePlate68 = 174,
+	NamePlate69 = 175,
+	NamePlate70 = 176,
+	NamePlate71 = 177,
+	NamePlate72 = 178,
+	NamePlate73 = 179,
+	NamePlate74 = 180,
+	NamePlate75 = 181,
+	NamePlate76 = 182,
+	NamePlate77 = 183,
+	NamePlate78 = 184,
+	NamePlate79 = 185,
+	NamePlate80 = 186,
+	NamePlate81 = 187,
+	NamePlate82 = 188,
+	NamePlate83 = 189,
+	NamePlate84 = 190,
+	NamePlate85 = 191,
+	NamePlate86 = 192,
+	NamePlate87 = 193,
+	NamePlate88 = 194,
+	NamePlate89 = 195,
+	NamePlate90 = 196,
+	NamePlate91 = 197,
+	NamePlate92 = 198,
+	NamePlate93 = 199,
+	NamePlate94 = 200,
+	NamePlate95 = 201,
+	NamePlate96 = 202,
+	NamePlate97 = 203,
+	NamePlate98 = 204,
+	NamePlate99 = 205,
+	NamePlate100 = 206,
+	NamePlate101 = 207,
+	NamePlate102 = 208,
+	NamePlate103 = 209,
+	NamePlate104 = 210,
+	NamePlate105 = 211,
+	NamePlate106 = 212,
+	NamePlate107 = 213,
+	NamePlate108 = 214,
+	NamePlate109 = 215,
+	NamePlate110 = 216,
+	NamePlate111 = 217,
+	NamePlate112 = 218,
+	NamePlate113 = 219,
+	NamePlate114 = 220,
+	NamePlate115 = 221,
+	NamePlate116 = 222,
+	NamePlate117 = 223,
+	NamePlate118 = 224,
+	NamePlate119 = 225,
+	NamePlate120 = 226,
+	NamePlate121 = 227,
+	NamePlate122 = 228,
+	NamePlate123 = 229,
+	NamePlate124 = 230,
+	NamePlate125 = 231,
+	NamePlate126 = 232,
+	NamePlate127 = 233,
+	NamePlate128 = 234,
+	NamePlate129 = 235,
+	NamePlate130 = 236,
+	NamePlate131 = 237,
+	NamePlate132 = 238,
+	NamePlate133 = 239,
+	NamePlate134 = 240,
+	NamePlate135 = 241,
+	NamePlate136 = 242,
+	NamePlate137 = 243,
+	NamePlate138 = 244,
+	NamePlate139 = 245,
+	NamePlate140 = 246,
+	NamePlate141 = 247,
+	NamePlate142 = 248,
+	NamePlate143 = 249,
+	NamePlate144 = 250,
+	NamePlate145 = 251,
+	NamePlate146 = 252,
+	NamePlate147 = 253,
+	NamePlate148 = 254,
+	NamePlate149 = 255,
+	NamePlate150 = 256,
+	Boss1 = 257,
+	Boss2 = 258,
+	Boss3 = 259,
+	Boss4 = 260,
+	Boss5 = 261,
+	Arena1 = 262,
+	Arena2 = 263,
+	Arena3 = 264,
+	Arena4 = 265,
+	Arena5 = 266,
+	ArenaPet1 = 267,
+	ArenaPet2 = 268,
+	ArenaPet3 = 269,
+	ArenaPet4 = 270,
+	ArenaPet5 = 271,
+	SpectatedA1 = 272,
+	SpectatedA2 = 273,
+	SpectatedA3 = 274,
+	SpectatedA4 = 275,
+	SpectatedA5 = 276,
+	SpectatedA6 = 277,
+	SpectatedA7 = 278,
+	SpectatedA8 = 279,
+	SpectatedA9 = 280,
+	SpectatedA10 = 281,
+	SpectatedA11 = 282,
+	SpectatedA12 = 283,
+	SpectatedA13 = 284,
+	SpectatedA14 = 285,
+	SpectatedA15 = 286,
+	SpectatedB1 = 287,
+	SpectatedB2 = 288,
+	SpectatedB3 = 289,
+	SpectatedB4 = 290,
+	SpectatedB5 = 291,
+	SpectatedB6 = 292,
+	SpectatedB7 = 293,
+	SpectatedB8 = 294,
+	SpectatedB9 = 295,
+	SpectatedB10 = 296,
+	SpectatedB11 = 297,
+	SpectatedB12 = 298,
+	SpectatedB13 = 299,
+	SpectatedB14 = 300,
+	SpectatedB15 = 301,
+	SpectatedPetA1 = 302,
+	SpectatedPetA2 = 303,
+	SpectatedPetA3 = 304,
+	SpectatedPetA4 = 305,
+	SpectatedPetA5 = 306,
+	SpectatedPetA6 = 307,
+	SpectatedPetA7 = 308,
+	SpectatedPetA8 = 309,
+	SpectatedPetA9 = 310,
+	SpectatedPetA10 = 311,
+	SpectatedPetA11 = 312,
+	SpectatedPetA12 = 313,
+	SpectatedPetA13 = 314,
+	SpectatedPetA14 = 315,
+	SpectatedPetA15 = 316,
+	SpectatedPetB1 = 317,
+	SpectatedPetB2 = 318,
+	SpectatedPetB3 = 319,
+	SpectatedPetB4 = 320,
+	SpectatedPetB5 = 321,
+	SpectatedPetB6 = 322,
+	SpectatedPetB7 = 323,
+	SpectatedPetB8 = 324,
+	SpectatedPetB9 = 325,
+	SpectatedPetB10 = 326,
+	SpectatedPetB11 = 327,
+	SpectatedPetB12 = 328,
+	SpectatedPetB13 = 329,
+	SpectatedPetB14 = 330,
+	SpectatedPetB15 = 331,
+	Commentator1 = 332,
+	Commentator2 = 333,
+	Commentator3 = 334,
+	Commentator4 = 335,
+	Commentator5 = 336,
+	Commentator6 = 337,
+	Commentator7 = 338,
+	Commentator8 = 339,
+	Commentator9 = 340,
+	Commentator10 = 341,
+	Commentator11 = 342,
+	Commentator12 = 343,
+	Commentator13 = 344,
+	Commentator14 = 345,
+	Commentator15 = 346,
+	Commentator16 = 347,
+	Commentator17 = 348,
+	Commentator18 = 349,
+	Commentator19 = 350,
+	Commentator20 = 351,
+	Commentator21 = 352,
+	Commentator22 = 353,
+	Commentator23 = 354,
+	Commentator24 = 355,
+	Commentator25 = 356,
+	Commentator26 = 357,
+	Commentator27 = 358,
+	Commentator28 = 359,
+	Commentator29 = 360,
+	Commentator30 = 361,
+}
+
 ---@enum Enum.ValidateNameResult
 Enum.ValidateNameResult = {
 	Success = 0,
@@ -10037,6 +10618,7 @@ Constants = {
 		CAAPlayerHealthPercentDefault = 0,
 		CAAPlayerResourceFormatDefault = 1,
 		CAAPlayerResourcePercentDefault = 0,
+		CAASamePercentThrottleTime = 10,
 		CAASampleTextThrottleTime = 1,
 		CAASayCombatEndDefault = true,
 		CAASayCombatStartDefault = true,
@@ -10098,6 +10680,13 @@ Constants = {
 	ContentTrackingConsts = {
 		MaxTrackedAchievements = 10,
 		MaxTrackedCollectableSources = 15,
+	},
+	CooldownFrameDefaults = {
+		COOLDOWN_DEFAULT_BLING_DURATION_MS = 1000,
+		COOLDOWN_DEFAULT_COUNTDOWN_ABBREV_THRESHOLD_MS = 120000,
+		COOLDOWN_DEFAULT_COUNTDOWN_MILLISECOND_THRESHOLD_MS = 0,
+		COOLDOWN_DEFAULT_COUNTDOWN_MINIMUM_DURATION_MS = 2000,
+		COOLDOWN_DEFAULT_USE_AURA_DISPLAY_TIME = false,
 	},
 	CooldownViewerUIConstants = {
 		COOLDOWN_VIEWER_CATEGORY_SET_SIZE = 16,
@@ -10190,7 +10779,16 @@ Constants = {
 		HOUSING_CATALOG_FEATURED_CATEGORY_ID = 17,
 	},
 	ITEM_WEAPON_SUBCLASSConstants = {
+		ITEM_WEAPON_SUBCLASS_IS2HWEAPON_MASK = 1049954,
+		ITEM_WEAPON_SUBCLASS_ISMAINHANDWEAPON_NONRANGED_MASK = 1091571,
+		ITEM_WEAPON_SUBCLASS_ISRANGEDWEAPON_MASK = 851980,
+		ITEM_WEAPON_SUBCLASS_ISTWOHANDEDRANGEDWEAPON_MASK = 262156,
+		ITEM_WEAPON_SUBCLASS_MASK = 2097151,
 		ITEM_WEAPON_SUBCLASS_NONE = -1,
+		ITEM_WEAPON_SUBCLASS_USES2HANDS_MASK = 1312110,
+	},
+	ITEM_WEAPON_SUBCLASSConstants_PostMists = {
+		ITEM_WEAPON_SUBCLASS_ISTITANSGRIPWEAPON_MASK = 1378,
 	},
 	InventoryConstants = {
 		MAX_TRANSACTION_BANK_TABS = 6,
@@ -10258,6 +10856,7 @@ Constants = {
 		NUM_PET_SLOTS_MAGE = 1,
 		NUM_PET_SLOTS_THAT_NEED_LEARNED_SPELL = 5,
 		NUM_PET_SLOTS_WARLOCK = 25,
+		PET_MAX_LEVEL_DIFFERENCE = 0,
 		STABLED_PETS_FIRST_SLOT_INDEX = 5,
 	},
 	ProfessionConsts = {
@@ -10296,6 +10895,17 @@ Constants = {
 		TTSVolumeDefault = 100,
 		TTSVolumeMax = 100,
 		TTSVolumeMin = 0,
+	},
+	TalentConsts = {
+		NumTalentColumns = 3,
+	},
+	TalentTierConstants = {
+		MAX_TALENT_TIERS = 7,
+	},
+	TieredEntranceConsts = {
+		TIERED_ENTRANCE_TIER_SCORE_VALUE_MAP_ID = 3,
+		TIERED_ENTRANCE_TIER_SCORE_VALUE_PLAYER_CONDITION_ID = 6,
+		TIERED_ENTRANCE_TIER_SCORE_VALUE_TIER_LEVEL = 1,
 	},
 	TimerunningConsts = {
 		TIMERUNNING_ITEM_CTR = 2905,

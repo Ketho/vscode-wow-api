@@ -183,6 +183,13 @@ function IsUnitModelReadyForUI(unitToken) end
 ---@return boolean result
 function PlayerIsPVPInactive(unit) end
 
+---If the unit is currently casting a spell, returns whether spell's target unit is the player. Returns false if the unit is not casting a spell or the spell has no target.
+---
+---[Documentation](https://warcraft.wiki.gg/wiki/API_PlayerIsSpellTarget)
+---@param unit UnitToken
+---@return boolean result
+function PlayerIsSpellTarget(unit) end
+
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_PlayerVehicleHasComboPoints)
 ---@return boolean vehicleHasComboPoints
 function PlayerVehicleHasComboPoints() end
@@ -493,6 +500,12 @@ function UnitGroupRolesAssignedEnum(unit) end
 ---@param unit UnitToken
 ---@return number result
 function UnitHPPerStamina(unit) end
+
+---[Documentation](https://warcraft.wiki.gg/wiki/API_UnitHasPowerType)
+---@param unitToken UnitTokenPvPRestrictedForAddOns
+---@param powerType Enum.PowerType
+---@return boolean hasPower
+function UnitHasPowerType(unitToken, powerType) end
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_UnitHasRelicSlot)
 ---@param unit UnitToken
@@ -808,14 +821,6 @@ function UnitIsRaidOfficer(unit) end
 ---@return boolean result
 function UnitIsSameServer(unitName) end
 
----If the unit is currently casting a spell, returns whether spell's target unit matches the target param. Returns false if the unit is not casting a spell or the spell has no target.
----
----[Documentation](https://warcraft.wiki.gg/wiki/API_UnitIsSpellTarget)
----@param unit UnitToken
----@param target UnitToken
----@return boolean result
-function UnitIsSpellTarget(unit, target) end
-
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_UnitIsTapDenied)
 ---@param unit UnitToken
 ---@return boolean result
@@ -1005,7 +1010,7 @@ function UnitPowerPercent(unitToken, powerType, unmodified, curve) end
 function UnitPowerType(unit, index) end
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_UnitPvpClassification)
----@param unit UnitTokenNamePlate
+---@param unit UnitTokenPvPRestrictedForAddOns
 ---@return Enum.PvPUnitClassification? classification
 function UnitPvpClassification(unit) end
 

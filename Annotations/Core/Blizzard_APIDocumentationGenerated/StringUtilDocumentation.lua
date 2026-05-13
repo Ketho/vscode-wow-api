@@ -1,6 +1,24 @@
 ---@meta _
 C_StringUtil = {}
 
+---Creates a numeric formatter that converts numbers to abbreviated strings, eg. 123456 -> '123k'.
+---
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_StringUtil.CreateAbbreviatedNumberFormatter)
+---@return AbbreviatedNumberFormatter formatter
+function C_StringUtil.CreateAbbreviatedNumberFormatter() end
+
+---Creates a numeric formatter that converts numbers to strings with flexible rulesets.
+---
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_StringUtil.CreateNumericRuleFormatter)
+---@return NumericRuleFormatter formatter
+function C_StringUtil.CreateNumericRuleFormatter() end
+
+---Creates a numeric formatter that converts numbers measuring durations in seconds to strings, eg. 93 -> '1m 33s'.
+---
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_StringUtil.CreateSecondsFormatter)
+---@return SecondsFormatter formatter
+function C_StringUtil.CreateSecondsFormatter() end
+
 ---Returns a string with Lua format string tokens ('%') escaped.
 ---
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_StringUtil.EscapeLuaFormatString)

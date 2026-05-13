@@ -151,8 +151,10 @@ function C_TooltipInfo.GetItemByGUID(guid) end
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_TooltipInfo.GetItemByID)
 ---@param itemID number
 ---@param quality? number
+---@param itemContext? number
+---@param treasureContextLevel? number
 ---@return TooltipData data
-function C_TooltipInfo.GetItemByID(itemID, quality) end
+function C_TooltipInfo.GetItemByID(itemID, quality, itemContext, treasureContextLevel) end
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_TooltipInfo.GetItemByItemModifiedAppearanceID)
 ---@param itemModifiedAppearanceID number
@@ -215,7 +217,7 @@ function C_TooltipInfo.GetMerchantItem(slot) end
 function C_TooltipInfo.GetMinimapMouseover() end
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_TooltipInfo.GetMountBySpellID)
----@param spellID number
+---@param spellID SpellIdentifier
 ---@param checkIndoors? boolean
 ---@return TooltipData data
 function C_TooltipInfo.GetMountBySpellID(spellID, checkIndoors) end
@@ -366,7 +368,7 @@ function C_TooltipInfo.GetSocketedRelic(slotIndex) end
 function C_TooltipInfo.GetSpellBookItem(spellBookItemSlotIndex, spellBookItemSpellBank) end
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_TooltipInfo.GetSpellByID)
----@param spellID number
+---@param spellID SpellIdentifier
 ---@param isPet? boolean
 ---@param showSubtext? boolean
 ---@param dontOverride? boolean
@@ -429,7 +431,7 @@ function C_TooltipInfo.GetUnitAura(unitToken, index, filter) end
 ---Obtains aura info like other functions with the caveat that the filters will always at least include the typically mutually exclusive HELPFUL|HARMFUL regardless of what the argument value is set to
 ---
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_TooltipInfo.GetUnitAuraByAuraInstanceID)
----@param unitToken UnitToken
+---@param unitToken UnitTokenRestrictedForAddOns
 ---@param auraInstanceID number
 ---@param filter? AuraFilters
 ---@return TooltipData data
@@ -443,7 +445,7 @@ function C_TooltipInfo.GetUnitAuraByAuraInstanceID(unitToken, auraInstanceID, fi
 function C_TooltipInfo.GetUnitBuff(unitToken, index, filter) end
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_TooltipInfo.GetUnitBuffByAuraInstanceID)
----@param unitToken UnitToken
+---@param unitToken UnitTokenRestrictedForAddOns
 ---@param auraInstanceID number
 ---@param filter? AuraFilters
 ---@return TooltipData data
@@ -457,7 +459,7 @@ function C_TooltipInfo.GetUnitBuffByAuraInstanceID(unitToken, auraInstanceID, fi
 function C_TooltipInfo.GetUnitDebuff(unitToken, index, filter) end
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_TooltipInfo.GetUnitDebuffByAuraInstanceID)
----@param unitToken UnitToken
+---@param unitToken UnitTokenRestrictedForAddOns
 ---@param auraInstanceID number
 ---@param filter? AuraFilters
 ---@return TooltipData data

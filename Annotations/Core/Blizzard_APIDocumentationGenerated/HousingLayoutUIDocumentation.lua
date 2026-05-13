@@ -114,6 +114,10 @@ function C_HousingLayout.IsBaseRoom(roomGUID) end
 ---@return boolean isAccessibleDrag
 function C_HousingLayout.IsDraggingRoom() end
 
+---[Documentation](https://warcraft.wiki.gg/wiki/API_C_HousingLayout.IsDraggingStairwell)
+---@return boolean isDraggingStairwell
+function C_HousingLayout.IsDraggingStairwell() end
+
 ---Attempt to move the room currently being dragged to a specific connection point on a specific other room
 ---
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_HousingLayout.MoveDraggedRoom)

@@ -8,7 +8,7 @@ C_QuestInfoSystem = {}
 function C_QuestInfoSystem.GetQuestClassification(questID, questInfoID) end
 
 ---[Documentation](https://warcraft.wiki.gg/wiki/API_C_QuestInfoSystem.GetQuestLogRewardFavor)
----@param questID number
+---@param questID? number
 ---@param clampFavorToCycleCap? boolean
 ---@return number amount
 function C_QuestInfoSystem.GetQuestLogRewardFavor(questID, clampFavorToCycleCap) end
