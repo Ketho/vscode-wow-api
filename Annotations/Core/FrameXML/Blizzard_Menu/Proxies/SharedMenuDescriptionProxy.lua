@@ -30,7 +30,7 @@ function SharedMenuDescriptionProxy:CreateSpacer(extend) end
 
 ---@see MenuUtil.CreateButton
 ---@param text string
----@param callback MenuResponder
+---@param callback MenuResponder?
 ---@param data any? # stored as element's data
 ---@return ElementMenuDescriptionProxy
 function SharedMenuDescriptionProxy:CreateButton(text, callback, data) end
@@ -38,7 +38,7 @@ function SharedMenuDescriptionProxy:CreateButton(text, callback, data) end
 ---@see MenuUtil.CreateCheckbox
 ---@param text string
 ---@param isSelected fun(data: any): boolean # data = data param -> element:GetData()
----@param setSelected MenuResponder
+---@param setSelected MenuResponder?
 ---@param data any? # stored as element's data
 ---@return ElementMenuDescriptionProxy
 function SharedMenuDescriptionProxy:CreateCheckbox(text, isSelected, setSelected, data) end
@@ -46,14 +46,14 @@ function SharedMenuDescriptionProxy:CreateCheckbox(text, isSelected, setSelected
 ---@see MenuUtil.CreateRadio
 ---@param text string
 ---@param isSelected fun(data: any): boolean # data = data param -> element:GetData()
----@param setSelected MenuResponder
+---@param setSelected MenuResponder?
 ---@param data any? # stored as element's data
 ---@return ElementMenuDescriptionProxy
 function SharedMenuDescriptionProxy:CreateRadio(text, isSelected, setSelected, data) end
 
 ---@see MenuUtil.CreateColorSwatch
 ---@param text string
----@param callback MenuResponder
+---@param callback MenuResponder?
 ---@param colorInfo colorRGBA # stored as element's data
 ---@return ElementMenuDescriptionProxy
 function SharedMenuDescriptionProxy:CreateColorSwatch(text, callback, colorInfo) end
