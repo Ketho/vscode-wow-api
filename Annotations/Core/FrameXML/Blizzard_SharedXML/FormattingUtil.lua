@@ -24,8 +24,11 @@ function FormatLargeNumber(amount) end
 ---[FrameXML](https://www.townlong-yak.com/framexml/go/GetMoneyString)
 ---@param money number
 ---@param separateThousands? boolean
+---@param checkGoldThreshold? boolean
+---@param showZeroAsGold? boolean
+---@param color? string|table
 ---@return string
-function GetMoneyString(money, separateThousands) end
+function GetMoneyString(money, separateThousands, checkGoldThreshold, showZeroAsGold, color) end
 
 ---[FrameXML](https://www.townlong-yak.com/framexml/go/FormatPercentage)
 ---@param percentage number
