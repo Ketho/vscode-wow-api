@@ -72,7 +72,7 @@ function MenuUtil.CreateTitle(text, color) end
 
 ---[FrameXML](https://www.townlong-yak.com/framexml/go/MenuUtil.CreateButton)
 ---@param text string
----@param callback MenuResponder
+---@param callback MenuResponder?
 ---@param data any? # stored as element's data
 ---@return ElementMenuDescriptionProxy
 function MenuUtil.CreateButton(text, callback, data) end
@@ -80,7 +80,7 @@ function MenuUtil.CreateButton(text, callback, data) end
 ---[FrameXML](https://www.townlong-yak.com/framexml/go/MenuUtil.CreateCheckbox)
 ---@param text string
 ---@param isSelected fun(data: any): boolean # data = data param -> element:GetData()
----@param setSelected MenuResponder
+---@param setSelected MenuResponder?
 ---@param data any? # stored as element's data
 ---@return ElementMenuDescriptionProxy
 function MenuUtil.CreateCheckbox(text, isSelected, setSelected, data) end
@@ -88,14 +88,14 @@ function MenuUtil.CreateCheckbox(text, isSelected, setSelected, data) end
 ---[FrameXML](https://www.townlong-yak.com/framexml/go/MenuUtil.CreateRadio)
 ---@param text string
 ---@param isSelected fun(data: any): boolean # data = data param -> element:GetData()
----@param setSelected MenuResponder
+---@param setSelected MenuResponder?
 ---@param data any? # stored as element's data
 ---@return ElementMenuDescriptionProxy
 function MenuUtil.CreateRadio(text, isSelected, setSelected, data) end
 
 ---[FrameXML](https://www.townlong-yak.com/framexml/go/MenuUtil.CreateColorSwatch)
 ---@param text string
----@param callback MenuResponder
+---@param callback MenuResponder?
 ---@param colorInfo colorRGBA # stored as element's data
 ---@return ElementMenuDescriptionProxy
 function MenuUtil.CreateColorSwatch(text, callback, colorInfo) end
@@ -111,26 +111,26 @@ function MenuUtil.CreateSpacer(extend) end
 
 ---[FrameXML](https://www.townlong-yak.com/framexml/go/MenuUtil.CreateButtonMenu)
 ---@param dropdown DropdownButton
----@param ... {[1]:string, [2]: MenuResponder, [3]: any?} # list of {text, callback, data}
+---@param ... {[1]:string, [2]: MenuResponder?, [3]: any?} # list of {text, callback, data}
 function MenuUtil.CreateButtonMenu(dropdown, ...) end
 
 ---[FrameXML](https://www.townlong-yak.com/framexml/go/MenuUtil.CreateButtonContextMenu)
 ---@param ownerRegion Region? # if nil, defaults to UIParent
----@param ... {[1]:string, [2]: MenuResponder, [3]: any?} # list of {text, callback, data}
+---@param ... {[1]:string, [2]: MenuResponder?, [3]: any?} # list of {text, callback, data}
 ---@return MenuProxy? menu
 function MenuUtil.CreateButtonContextMenu(ownerRegion, ...) end
 
 ---[FrameXML](https://www.townlong-yak.com/framexml/go/MenuUtil.CreateCheckboxMenu)
 ---@param dropdown DropdownButton
 ---@param isSelected fun(data: any): boolean # shared between all menu items
----@param setSelected MenuResponder # shared between all menu items
+---@param setSelected MenuResponder? # shared between all menu items
 ---@param ... {[1]:string, [2]: any?} # list of {text, data}
 function MenuUtil.CreateCheckboxMenu(dropdown, isSelected, setSelected, ...) end
 
 ---[FrameXML](https://www.townlong-yak.com/framexml/go/MenuUtil.CreateCheckboxContextMenu)
 ---@param ownerRegion Region? # if nil, defaults to UIParent
 ---@param isSelected fun(data: any): boolean # shared between all menu items
----@param setSelected MenuResponder # shared between all menu items
+---@param setSelected MenuResponder? # shared between all menu items
 ---@param ... {[1]:string, [2]: any?} # list of {text, data}
 ---@return MenuProxy? menu
 function MenuUtil.CreateCheckboxContextMenu(ownerRegion, isSelected, setSelected, ...) end
@@ -138,14 +138,14 @@ function MenuUtil.CreateCheckboxContextMenu(ownerRegion, isSelected, setSelected
 ---[FrameXML](https://www.townlong-yak.com/framexml/go/MenuUtil.CreateRadioMenu)
 ---@param dropdown DropdownButton
 ---@param isSelected fun(data: any): boolean # shared between all menu items
----@param setSelected MenuResponder # shared between all menu items
+---@param setSelected MenuResponder? # shared between all menu items
 ---@param ... {[1]:string, [2]: any?} # list of {text, data}
 function MenuUtil.CreateRadioMenu(dropdown, isSelected, setSelected, ...) end
 
 ---[FrameXML](https://www.townlong-yak.com/framexml/go/MenuUtil.CreateRadioContextMenu)
 ---@param ownerRegion Region? # if nil, defaults to UIParent
 ---@param isSelected fun(data: any): boolean # shared between all menu items
----@param setSelected MenuResponder # shared between all menu items
+---@param setSelected MenuResponder? # shared between all menu items
 ---@param ... {[1]:string, [2]: any?} # list of {text, data}
 ---@return MenuProxy? menu
 function MenuUtil.CreateRadioContextMenu(ownerRegion, isSelected, setSelected, ...) end
@@ -156,7 +156,7 @@ function MenuUtil.CreateRadioContextMenu(ownerRegion, isSelected, setSelected, .
 ---@param enum table<V> # a list of values; the value is saved as the element's data
 ---@param enumTranslator fun(enumValue: V): string # translate the enum value into the text to display
 ---@param isSelected fun(data: any): boolean # data = enum value
----@param setSelected MenuResponder
+---@param setSelected MenuResponder?
 ---@param orderTbl table<V, number>? # optional table to specify the order of the menu buttons, defaults to ordering by enum value
 function MenuUtil.CreateEnumRadioMenu(dropdown, enum, enumTranslator, isSelected, setSelected, orderTbl) end
 
@@ -166,7 +166,7 @@ function MenuUtil.CreateEnumRadioMenu(dropdown, enum, enumTranslator, isSelected
 ---@param enum table<V> # a list of values; the value is saved as the element's data
 ---@param enumTranslator fun(enumValue: V): string # translate the enum value into the text to display
 ---@param isSelected fun(data: any): boolean # data = enum value
----@param setSelected MenuResponder
+---@param setSelected MenuResponder?
 ---@param orderTbl table<V, number>? # optional table to specify the order of the menu buttons, defaults to ordering by enum value
 ---@return MenuProxy? menu
 function MenuUtil.CreateEnumRadioContextMenu(dropdown, enum, enumTranslator, isSelected, setSelected, orderTbl) end
