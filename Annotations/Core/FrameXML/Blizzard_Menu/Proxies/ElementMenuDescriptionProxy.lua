@@ -80,11 +80,11 @@ function ElementMenuDescriptionProxy:SetResponse(defaultResponse) end
 ---@return MenuResponse
 function ElementMenuDescriptionProxy:GetDefaultResponse(menuInputContext, menuInputButtonName) end
 
----@param responder MenuResponder
+---@param responder MenuResponder?
 function ElementMenuDescriptionProxy:SetResponder(responder) end
 
 ---hooks responder if it exists, else calls SetResponder
----@param responder MenuResponder
+---@param responder MenuResponder?
 function ElementMenuDescriptionProxy:HookResponder(responder) end
 
 function ElementMenuDescriptionProxy:SetElementFactory(callback) end
